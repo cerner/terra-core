@@ -1,4 +1,8 @@
 {
-  "Terra.Clinical.ActionHeader.close": "Fermer",
-  "Terra.Clinical.ActionHeader.back": "Retour"
+  "Terra.actionHeader.close": "Fermer",
+  "Terra.actionHeader.back": "Retour",
+  "Terra.actionHeader.previous": "Précédent",
+  "Terra.actionHeader.next": "Suivant",
+  "Terra.actionHeader.maximize": "Agrandir",
+  "Terra.actionHeader.minimize": "Réduire"
 }

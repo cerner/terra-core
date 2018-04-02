@@ -14,7 +14,9 @@ import DefaultActionHeader from './DefaultActionHeader';
 import BackActionHeader from './BackActionHeader';
 import BackCloseActionHeader from './BackCloseActionHeader';
 import CloseActionHeader from './CloseActionHeader';
-import CustomButtonActionHeader from './CustomButtonActionHeader';
+import MaximizeCloseActionHeader from './MaximizeCloseActionHeader';
+import MinimizeCustomButtonActionHeader from './MinimizeCustomButtonActionHeader';
+import BackPreviousNextCloseActionHeader from './BackPreviousNextCloseActionHeader';
 
 const ActionHeaderExamples = () => (
   <div>
@@ -26,7 +28,9 @@ const ActionHeaderExamples = () => (
     <BackActionHeader />
     <CloseActionHeader />
     <BackCloseActionHeader />
-    <CustomButtonActionHeader />
+    <MaximizeCloseActionHeader />
+    <MinimizeCustomButtonActionHeader />
+    <BackPreviousNextCloseActionHeader />
   </div>
 );
 

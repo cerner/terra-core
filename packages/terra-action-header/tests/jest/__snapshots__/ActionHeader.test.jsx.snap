@@ -27,43 +27,51 @@ exports[`ActionHeader should render an action header with back and close buttons
   defaultElement={
     <ActionHeaderContainer
       endContent={
-        <Button
-          className="header-close-button"
-          icon={
-            <span
-              className="header-icon close"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Close"
-          type="button"
-          variant="neutral"
-        />
+        <div
+          className="right-buttons"
+        >
+          <Button
+            className="header-close-button"
+            icon={
+              <span
+                className="header-icon close"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Close"
+            type="button"
+            variant="neutral"
+          />
+        </div>
       }
       level={1}
       startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
+        <div
+          className="left-buttons"
+        >
+          <Button
+            className="header-back-button"
+            icon={
+              <span
+                className="header-icon back"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Back"
+            type="button"
+            variant="neutral"
+          />
+        </div>
       }
       title="Action Header"
     />
@@ -72,43 +80,51 @@ exports[`ActionHeader should render an action header with back and close buttons
   small={
     <ActionHeaderContainer
       endContent={
-        <Button
-          className="header-close-button"
-          icon={
-            <span
-              className="header-icon close"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Close"
-          type="button"
-          variant="neutral"
-        />
+        <div
+          className="right-buttons"
+        >
+          <Button
+            className="header-close-button"
+            icon={
+              <span
+                className="header-icon close"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Close"
+            type="button"
+            variant="neutral"
+          />
+        </div>
       }
       level={1}
       startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
+        <div
+          className="left-buttons"
+        >
+          <Button
+            className="header-back-button"
+            icon={
+              <span
+                className="header-icon back"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Back"
+            type="button"
+            variant="neutral"
+          />
+        </div>
       }
       title="Action Header"
     />
@@ -123,23 +139,27 @@ exports[`ActionHeader should render an action header with back button and title 
       endContent={null}
       level={1}
       startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
+        <div
+          className="left-buttons"
+        >
+          <Button
+            className="header-back-button"
+            icon={
+              <span
+                className="header-icon back"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Back"
+            type="button"
+            variant="neutral"
+          />
+        </div>
       }
       title="Action Header"
     />
@@ -150,23 +170,27 @@ exports[`ActionHeader should render an action header with back button and title 
       endContent={null}
       level={1}
       startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
+        <div
+          className="left-buttons"
+        >
+          <Button
+            className="header-back-button"
+            icon={
+              <span
+                className="header-icon back"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Back"
+            type="button"
+            variant="neutral"
+          />
+        </div>
       }
       title="Action Header"
     />
@@ -181,23 +205,27 @@ exports[`ActionHeader should render an action header with close button and title
       endContent={null}
       level={1}
       startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
+        <div
+          className="left-buttons"
+        >
+          <Button
+            className="header-back-button"
+            icon={
+              <span
+                className="header-icon back"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Back"
+            type="button"
+            variant="neutral"
+          />
+        </div>
       }
       title="Action Header"
     />
@@ -206,23 +234,27 @@ exports[`ActionHeader should render an action header with close button and title
   small={
     <ActionHeaderContainer
       endContent={
-        <Button
-          className="header-close-button"
-          icon={
-            <span
-              className="header-icon close"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Close"
-          type="button"
-          variant="neutral"
-        />
+        <div
+          className="right-buttons"
+        >
+          <Button
+            className="header-close-button"
+            icon={
+              <span
+                className="header-icon close"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Close"
+            type="button"
+            variant="neutral"
+          />
+        </div>
       }
       level={1}
       startContent={null}
@@ -300,6 +332,96 @@ exports[`ActionHeader should render an action header with level three header ele
 />
 `;
 
+exports[`ActionHeader should render an action header with maximize button and title 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <ActionHeaderContainer
+      endContent={null}
+      level={1}
+      startContent={null}
+      title="Action Header"
+    />
+  }
+  responsiveTo="window"
+  small={
+    <ActionHeaderContainer
+      endContent={null}
+      level={1}
+      startContent={
+        <div
+          className="left-buttons"
+        >
+          <Button
+            icon={
+              <IconMaximize
+                data-name="Layer 1"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Maximize"
+            type="button"
+            variant="neutral"
+          />
+        </div>
+      }
+      title="Action Header"
+    />
+  }
+/>
+`;
+
+exports[`ActionHeader should render an action header with minimize button and title 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <ActionHeaderContainer
+      endContent={null}
+      level={1}
+      startContent={null}
+      title="Action Header"
+    />
+  }
+  responsiveTo="window"
+  small={
+    <ActionHeaderContainer
+      endContent={null}
+      level={1}
+      startContent={
+        <div
+          className="left-buttons"
+        >
+          <Button
+            icon={
+              <IconMinimize
+                data-name="Layer 1"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={true}
+            isReversed={false}
+            onClick={[Function]}
+            text="Minimize"
+            type="button"
+            variant="neutral"
+          />
+        </div>
+      }
+      title="Action Header"
+    />
+  }
+/>
+`;
+
 exports[`ActionHeader should render an action header with multiple custom buttons and title 1`] = `
 <ResponsiveElement
   defaultElement={
@@ -368,6 +490,102 @@ exports[`ActionHeader should render an action header with multiple custom button
         />
       </span>
     </ActionHeaderContainer>
+  }
+/>
+`;
+
+exports[`ActionHeader should render an action header with next and previous buttons and title 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <ActionHeaderContainer
+      endContent={null}
+      level={1}
+      startContent={
+        <div
+          className="left-buttons"
+        >
+          <ButtonGroup
+            selectedKeys={Array []}
+          >
+            <ButtonGroupButton
+              icon={
+                <IconChevronUp
+                  className=""
+                  data-name="Layer 1"
+                  isBidi={true}
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              }
+              isDisabled={false}
+              onClick={[Function]}
+              text="Previous"
+            />
+            <ButtonGroupButton
+              icon={
+                <IconChevronDown
+                  className=""
+                  data-name="Layer 1"
+                  isBidi={true}
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              }
+              isDisabled={false}
+              onClick={[Function]}
+              text="Next"
+            />
+          </ButtonGroup>
+        </div>
+      }
+      title="Action Header"
+    />
+  }
+  responsiveTo="window"
+  small={
+    <ActionHeaderContainer
+      endContent={null}
+      level={1}
+      startContent={
+        <div
+          className="left-buttons"
+        >
+          <ButtonGroup
+            selectedKeys={Array []}
+          >
+            <ButtonGroupButton
+              icon={
+                <IconChevronUp
+                  className=""
+                  data-name="Layer 1"
+                  isBidi={true}
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              }
+              isDisabled={false}
+              onClick={[Function]}
+              text="Previous"
+            />
+            <ButtonGroupButton
+              icon={
+                <IconChevronDown
+                  className=""
+                  data-name="Layer 1"
+                  isBidi={true}
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              }
+              isDisabled={false}
+              onClick={[Function]}
+              text="Next"
+            />
+          </ButtonGroup>
+        </div>
+      }
+      title="Action Header"
+    />
   }
 />
 `;

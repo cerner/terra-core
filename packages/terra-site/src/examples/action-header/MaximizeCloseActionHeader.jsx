@@ -1,14 +1,15 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import Button from 'terra-button';
 import ActionHeader from 'terra-action-header';
 
 const ActionHeaderExample = () => (
   <div>
     <br />
-    <ActionHeader title="Custom Button Action Header">
-      <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
-    </ActionHeader>
+    <ActionHeader
+      title="Maximize Close Action Header"
+      onClose={() => alert('You clicked close!')}
+      onMaximize={() => alert('You clicked maximize!')}
+    />
     <br />
   </div>
 );

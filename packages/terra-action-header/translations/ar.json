@@ -1,4 +1,8 @@
 {
-  "Terra.Clinical.ActionHeader.close": "إغلاق",
-  "Terra.Clinical.ActionHeader.back": "العودة"
+  "Terra.actionHeader.close": "إغلاق",
+  "Terra.actionHeader.back": "العودة",
+  "Terra.actionHeader.previous": "السابق",
+  "Terra.actionHeader.next": "التّالي",
+  "Terra.actionHeader.maximize": "تكبير",
+  "Terra.actionHeader.minimize": "تصغير"
 }

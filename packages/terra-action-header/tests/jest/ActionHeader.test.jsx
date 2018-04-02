@@ -53,6 +53,24 @@ describe('ActionHeader', () => {
     const wrapper = shallow(actionHeader, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render an action header with maximize button and title', () => {
+    const actionHeader = <ActionHeader title="Action Header" onMaximize={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an action header with minimize button and title', () => {
+    const actionHeader = <ActionHeader title="Action Header" onMinimize={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an action header with next and previous buttons and title', () => {
+    const actionHeader = <ActionHeader title="Action Header" onNext={() => {}} onPrevious={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 
 it('throws error on missing locale prop in Base', () => {

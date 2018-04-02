@@ -1,11 +1,11 @@
 @import '~terra-mixins';
 
 :local {
-  .header-back-button {
+  .left-buttons > * {
     margin-right: var(--terra-action-header-margin-right, 1.429rem);
   }
   
-  .header-close-button {
+  .right-buttons > * {
     margin-left: var(--terra-action-header-margin-left, 1.429rem);
   }
   

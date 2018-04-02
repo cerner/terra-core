@@ -56,8 +56,22 @@ describe('ActionHeader', () => {
     Terra.should.matchScreenshot({ viewports });
   });
 
-  describe('Custom Button', () => {
-    beforeEach(() => browser.url('/#/raw/tests/action-header/custom-button-action-header'));
+  describe('Minimize Custom Button', () => {
+    beforeEach(() => browser.url('/#/raw/tests/action-header/minimize-custom-button-action-header'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
+
+  describe('Maximize Close', () => {
+    beforeEach(() => browser.url('/#/raw/tests/action-header/maximize-close-action-header'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
+
+  describe('Back Close Previous Next', () => {
+    beforeEach(() => browser.url('/#/raw/tests/action-header/back-close-previous-next-action-header'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

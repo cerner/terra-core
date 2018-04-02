@@ -88,9 +88,11 @@ import MultipleActionCenteredActionFooter from './packages/terra-action-footer/e
 import SingleActionCenteredActionFooter from './packages/terra-action-footer/examples/test-examples/centered-action-footer/SingleActionCenteredActionFooter.example';
 import BackActionHeader from './packages/terra-action-header/examples/test-examples/BackActionHeader.example';
 import BackCloseActionHeader from './packages/terra-action-header/examples/test-examples/BackCloseActionHeader.example';
+import BackClosePreviousNextActionHeader from './packages/terra-action-header/examples/test-examples/BackClosePreviousNextActionHeader.example';
 import CloseActionHeader from './packages/terra-action-header/examples/test-examples/CloseActionHeader.example';
-import CustomButtonActionHeader from './packages/terra-action-header/examples/test-examples/CustomButtonActionHeader.example';
 import DefaultActionHeader from './packages/terra-action-header/examples/test-examples/DefaultActionHeader.example';
+import MaximizeCloseActionHeader from './packages/terra-action-header/examples/test-examples/MaximizeCloseActionHeader.example';
+import MinimizeCustomButtonActionHeader from './packages/terra-action-header/examples/test-examples/MinimizeCustomButtonActionHeader.example';
 import WrappedTitleActionHeader from './packages/terra-action-header/examples/test-examples/WrappedTitleActionHeader.example';
 import AlertActionButton from './packages/terra-alert/tests/nightwatch/AlertActionButton';
 import AlertDismissible from './packages/terra-alert/tests/nightwatch/AlertDismissible';
@@ -605,19 +607,29 @@ const componentConfig = {
         component: BackCloseActionHeader,
       },
       {
+        name: 'Back Close Previous Next Action Header',
+        path: '/back-close-previous-next-action-header',
+        component: BackClosePreviousNextActionHeader,
+      },
+      {
         name: 'Close Action Header',
         path: '/close-action-header',
         component: CloseActionHeader,
       },
       {
-        name: 'Custom Button Action Header',
-        path: '/custom-button-action-header',
-        component: CustomButtonActionHeader,
-      },
-      {
         name: 'Default Action Header',
         path: '/default-action-header',
         component: DefaultActionHeader,
+      },
+      {
+        name: 'Maximize Close Action Header',
+        path: '/maximize-close-action-header',
+        component: MaximizeCloseActionHeader,
+      },
+      {
+        name: 'Minimize Custom Button Action Header',
+        path: '/minimize-custom-button-action-header',
+        component: MinimizeCustomButtonActionHeader,
       },
       {
         name: 'Wrapped Title Action Header',
