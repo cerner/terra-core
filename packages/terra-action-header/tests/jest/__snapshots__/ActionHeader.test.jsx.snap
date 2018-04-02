@@ -6,25 +6,7 @@ exports[`ActionHeader should render a default action header 1`] = `
     <ActionHeaderContainer
       endContent={null}
       level={1}
-      startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={undefined}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
-      }
+      startContent={null}
       title={undefined}
     />
   }
@@ -44,7 +26,25 @@ exports[`ActionHeader should render an action header with back and close buttons
 <ResponsiveElement
   defaultElement={
     <ActionHeaderContainer
-      endContent={null}
+      endContent={
+        <Button
+          className="header-close-button"
+          icon={
+            <span
+              className="header-icon close"
+            />
+          }
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isIconOnly={true}
+          isReversed={false}
+          onClick={[Function]}
+          text="Close"
+          type="button"
+          variant="neutral"
+        />
+      }
       level={1}
       startContent={
         <Button
@@ -135,7 +135,7 @@ exports[`ActionHeader should render an action header with back button and title 
           isDisabled={false}
           isIconOnly={true}
           isReversed={false}
-          onClick={undefined}
+          onClick={[Function]}
           text="Back"
           type="button"
           variant="neutral"
@@ -178,25 +178,7 @@ exports[`ActionHeader should render an action header with close button and title
 <ResponsiveElement
   defaultElement={
     <ActionHeaderContainer
-      endContent={
-        <Button
-          className="header-close-button"
-          icon={
-            <span
-              className="header-icon close"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={[Function]}
-          text="Close"
-          type="button"
-          variant="neutral"
-        />
-      }
+      endContent={null}
       level={1}
       startContent={
         <Button
@@ -256,25 +238,7 @@ exports[`ActionHeader should render an action header with custom button and titl
     <ActionHeaderContainer
       endContent={null}
       level={1}
-      startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={undefined}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
-      }
+      startContent={null}
       title="Action Header"
     >
       <Button
@@ -320,25 +284,7 @@ exports[`ActionHeader should render an action header with level three header ele
     <ActionHeaderContainer
       endContent={null}
       level={3}
-      startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={undefined}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
-      }
+      startContent={null}
       title="Action Header"
     />
   }
@@ -360,25 +306,7 @@ exports[`ActionHeader should render an action header with multiple custom button
     <ActionHeaderContainer
       endContent={null}
       level={1}
-      startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={undefined}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
-      }
+      startContent={null}
       title="Action Header"
     >
       <span>
@@ -450,25 +378,7 @@ exports[`ActionHeader should render an action header with title 1`] = `
     <ActionHeaderContainer
       endContent={null}
       level={1}
-      startContent={
-        <Button
-          className="header-back-button"
-          icon={
-            <span
-              className="header-icon back"
-            />
-          }
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={true}
-          isReversed={false}
-          onClick={undefined}
-          text="Back"
-          type="button"
-          variant="neutral"
-        />
-      }
+      startContent={null}
       title="Action Header"
     />
   }

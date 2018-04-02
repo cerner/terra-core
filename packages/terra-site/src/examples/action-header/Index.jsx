@@ -13,7 +13,7 @@ import ActionHeaderSrc from '!raw-loader!terra-action-header/src/ActionHeader';
 import DefaultActionHeader from './DefaultActionHeader';
 import BackActionHeader from './BackActionHeader';
 import BackCloseActionHeader from './BackCloseActionHeader';
-import KeepCloseActionHeader from './KeepCloseActionHeader';
+import CloseActionHeader from './CloseActionHeader';
 import CustomButtonActionHeader from './CustomButtonActionHeader';
 
 const ActionHeaderExamples = () => (
@@ -24,7 +24,7 @@ const ActionHeaderExamples = () => (
     <h2>Examples</h2>
     <DefaultActionHeader />
     <BackActionHeader />
-    <KeepCloseActionHeader />
+    <CloseActionHeader />
     <BackCloseActionHeader />
     <CustomButtonActionHeader />
   </div>

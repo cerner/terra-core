@@ -49,8 +49,8 @@ describe('ActionHeader', () => {
     );
   });
 
-  describe('Keep Closed', () => {
-    beforeEach(() => browser.url('/#/raw/tests/action-header/keep-close-action-header'));
+  describe('Close', () => {
+    beforeEach(() => browser.url('/#/raw/tests/action-header/close-action-header'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

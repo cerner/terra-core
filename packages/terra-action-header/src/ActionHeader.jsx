@@ -28,10 +28,6 @@ const propTypes = {
    */
   onBack: PropTypes.func,
   /**
-   * A Boolean indicating if close button should be displayed on small viewports when separate onBack callback is not set.
-   */
-  keepCloseButton: PropTypes.bool,
-  /**
    * Child element to be displayed on the right end of the header.
    */
   children: PropTypes.element,
@@ -42,7 +38,6 @@ const defaultProps = {
   level: 1,
   onClose: undefined,
   onBack: undefined,
-  keepCloseButton: false,
   children: undefined,
 };
 
@@ -60,7 +55,6 @@ const ActionHeader = ({
   level,
   onClose,
   onBack,
-  keepCloseButton,
   children,
   ...customProps }, {
   intl,
@@ -68,14 +62,11 @@ const ActionHeader = ({
   const backText = intl.formatMessage({ id: 'Terra.actionHeader.back' });
   const closeText = intl.formatMessage({ id: 'Terra.actionHeader.close' });
 
-  const isCloseButtonAllowedOnSmallViewport = keepCloseButton || (onClose && !onBack);
-
   const closeButton = onClose ? <Button className={cx('header-close-button')} isIconOnly icon={<span className={cx(['header-icon', 'close'])} />} text={closeText} onClick={onClose} /> : null;
   const backButton = onBack ? <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx(['header-icon', 'back'])} />} text={backText} onClick={onBack} /> : null;
 
-  const closeButtonSmall = isCloseButtonAllowedOnSmallViewport ? closeButton : null;
-  // Must have a default back button for small viewports even if user does not supply onBack property
-  const backButtonSmall = isCloseButtonAllowedOnSmallViewport && backButton ? backButton : <Button className={cx(['header-back-button'])} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onClose} />;
+  const backButtonSmall = (onClose && !onBack) ? <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx(['header-icon', 'back'])} />} text={backText} onClick={onClose} /> : backButton;
+  const closeButtonSmall = (onClose && !onBack) ? null : closeButton;
 
   const actionHeader = (
     <ActionHeaderContainer
