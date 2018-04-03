@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 -----------------
+
+1.1.0 - (March 30, 2018)
+------------------
 ### Fixed
 * Fix lint errors with the test examples
 

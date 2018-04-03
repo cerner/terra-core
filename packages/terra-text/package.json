@@ -1,7 +1,7 @@
 {
   "name": "terra-text",
   "main": "lib/Text.js",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Component for displaying customizable text in UI.",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.2.0"
+    "terra-base": "^3.3.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
