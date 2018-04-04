@@ -47,7 +47,8 @@
     "terra-button": "^2.4.0",
     "terra-form": "^2.3.0",
     "terra-icon": "^2.3.0",
-    "terra-responsive-element": "^2.3.0"
+    "terra-responsive-element": "^2.3.0",
+    "popper.js": "1.14.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
