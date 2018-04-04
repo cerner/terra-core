@@ -1,5 +1,13 @@
-/* eslint-disable no-alert, import/no-extraneous-dependencies */
+/* eslint-disable no-alert */
 import React from 'react';
 import ActionHeader from '../../lib/ActionHeader';
 
-export default () => <ActionHeader title="Close Action Header" onClose={() => alert('You clicked close!')} />;
+const ActionHeaderExample = () => (
+  <ActionHeader
+    title="Close Action Header"
+    onClose={() => alert('You clicked close!')}
+  />
+);
+
+export default ActionHeaderExample;
+/* eslint-enable no-alert */

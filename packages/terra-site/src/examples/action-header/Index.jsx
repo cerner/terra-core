@@ -28,9 +28,9 @@ const ActionHeaderExamples = () => (
     <BackActionHeader />
     <CloseActionHeader />
     <BackCloseActionHeader />
+    <BackPreviousNextCloseActionHeader />
     <MaximizeCloseActionHeader />
     <MinimizeCustomButtonActionHeader />
-    <BackPreviousNextCloseActionHeader />
   </div>
 );
 

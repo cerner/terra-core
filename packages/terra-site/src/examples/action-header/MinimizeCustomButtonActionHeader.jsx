@@ -6,7 +6,7 @@ import ActionHeader from 'terra-action-header';
 const ActionHeaderExample = () => (
   <div>
     <br />
-    <ActionHeader title="Minimize Custom Button Action Header" onMinimize={() => alert('You clicked minimize!')}>
+    <ActionHeader title="Minimize Custom Button Action Header" onMinimize={() => alert('You clicked minimize!')} onClose={() => alert('You clicked close!')}>
       <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
     </ActionHeader>
     <br />

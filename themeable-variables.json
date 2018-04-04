@@ -13,8 +13,12 @@
     "--terra-action-header-margin-right": "1.429rem",
     "--terra-action-header-margin-left": "1.429rem",
     "--terra-action-header-icon-top": "0.1429rem",
-    "--terra-action-header-back-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%3E%3Cpath%20d%3D%22M48%2021H10.6L27.3%203.9%2023.5.1%200%2024l23.5%2023.9%203.8-3.8L10.6%2027H48z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")",
-    "--terra-action-header-close-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20class%3D%22Icon__icon___XA18N%20Button__icon-svg___D8gRQ%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%3E%3Cpath%20d%3D%22M28.2%2024L42.9%209.1%2040.8%207l-1.7-1.6-.4-.5L24%2019.7%209.4%204.9%207.2%207%205.6%208.6l-.5.5L19.8%2024%205.1%2038.9%207.2%2041l1.7%201.6.5.5L24%2028.3l14.7%2014.8.4-.5%201.7-1.6%202.1-2.1L28.2%2024z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")"
+    "--terra-action-header-back-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M48%2021H10.6L27.3%203.9%2023.5.1%200%2024l23.5%2023.9%203.8-3.8L10.6%2027H48z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")",
+    "--terra-action-header-close-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M28.2%2024L42.9%209.1%2040.8%207l-1.7-1.6-.4-.5L24%2019.7%209.4%204.9%207.2%207%205.6%208.6l-.5.5L19.8%2024%205.1%2038.9%207.2%2041l1.7%201.6.5.5L24%2028.3l14.7%2014.8.4-.5%201.7-1.6%202.1-2.1L28.2%2024z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")",
+    "--terra-action-header-maximize-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M17.7%2026.1L6.9%2036.9%200%2030v18h18l-6.9-6.9%2010.8-10.8zM48%200H30l6.9%206.9-10.8%2010.8%204.2%204.2%2010.8-10.8L48%2018z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")",
+    "--terra-action-header-minimize-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.8%2032.9L0%2043.7%204.2%2048l10.9-10.8%206.9%206.9V26H3.9zM48%204.2L43.8%200%2032.9%2010.8%2026%203.9V22h18.1l-6.9-6.9z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")",
+    "--terra-action-header-next-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M24%2037.7L0%2014.2l3.8-3.9L24%2030l20.2-19.7%203.8%203.9z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")",
+    "--terra-action-header-previous-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M24%2010.3l24%2023.5-3.8%203.9L24%2018%203.8%2037.7%200%2033.8z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")"
   },
   "ActionHeaderContainer": {
     "--terra-action-header-background-color": "#f4f4f4",
@@ -506,6 +510,13 @@
     "--terra-menu-submenu-foreground-color": "#1c1f21"
   },
   "MenuItem": {
+    "--terra-menu-item-hover-color": "#ebf6fd",
+    "--terra-menu-item-text-color": "#1c1f21",
+    "--terra-menu-item-text-font-size": "13px",
+    "--terra-menu-item-checkmark-icon-color": "#1c1f21",
+    "--terra-menu-item-checkmark-icon-font-size": "12px",
+    "--terra-menu-item-chevron-icon-color": "#9b9fa1",
+    "--terra-menu-item-chevron-icon-font-size": "10px",
     "--terra-navigation-side-menu-item-border-bottom": "none",
     "--terra-navigation-side-menu-item-border-left": "none",
     "--terra-navigation-side-menu-item-border-right": "none",
@@ -523,14 +534,7 @@
     "--terra-navigation-side-menu-item-selected-padding-left": "0.7143rem",
     "--terra-navigation-side-menu-item-selected-background-color": "#f4f4f4",
     "--terra-navigation-side-menu-item-box-shadow": "0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)",
-    "--terra-navigation-side-menu-item-chevron-color": "#787879",
-    "--terra-menu-item-hover-color": "#ebf6fd",
-    "--terra-menu-item-text-color": "#1c1f21",
-    "--terra-menu-item-text-font-size": "13px",
-    "--terra-menu-item-checkmark-icon-color": "#1c1f21",
-    "--terra-menu-item-checkmark-icon-font-size": "12px",
-    "--terra-menu-item-chevron-icon-color": "#9b9fa1",
-    "--terra-menu-item-chevron-icon-font-size": "10px"
+    "--terra-navigation-side-menu-item-chevron-color": "#787879"
   },
   "Modal": {
     "--terra-modal-background-color": "#fff",
