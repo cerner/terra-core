@@ -75,7 +75,7 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
   return (
     <div dir="ltr" className="markdown-body">
       <h2>{componentName} Props</h2>
-      <table {...customProps}>
+      <table className={cx('propsTable')} {...customProps}>
         <thead>
           <tr>
             <th className={cx('prop-table-name')}>Prop Name</th>

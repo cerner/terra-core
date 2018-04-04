@@ -3,6 +3,10 @@
         white-space: pre-wrap;
     }
 
+    .propsTable code {
+        white-space: pre-wrap;
+    }
+
     .prop-table-name, .prop-table-required, .prop-table-default {
         width: 10%;
     }
