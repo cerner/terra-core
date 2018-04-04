@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 -----------------
+
+2.4.0 - (March 30, 2018)
+------------------
+### Added
 * Add variable with default for background-color of select and border of select-menu
 
 2.3.0 - (March 14, 2018)

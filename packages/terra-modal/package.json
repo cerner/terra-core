@@ -1,7 +1,7 @@
 {
   "name": "terra-modal",
   "main": "lib/Modal.js",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Modals are used to display content in a layer above the app. Modals consist of an overlay and container. Higher order components can provide the modal dialog with a header, body, and close button.",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-icon": "^2.2.0"
+    "terra-icon": "^2.3.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
@@ -32,7 +32,7 @@
     "focus-trap-react": "^3.1.1",
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
-    "terra-base": "^3.2.0"
+    "terra-base": "^3.3.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

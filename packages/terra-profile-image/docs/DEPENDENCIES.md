@@ -4,8 +4,8 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-base | ^3.2.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-image | ^2.2.0 | ^16.2.0 | terra-image |
+| terra-base | ^3.3.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-image | ^2.3.0 | ^16.2.0 | terra-image |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

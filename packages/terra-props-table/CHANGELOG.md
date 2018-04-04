@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Fixed code blocks in the Description column not line wrapping
 
+2.3.0 - (March 30, 2018)
+------------------
+### Changed
+* Minor version bump
+
 2.2.0 - (March 6, 2018)
 ------------------
 ### Removed

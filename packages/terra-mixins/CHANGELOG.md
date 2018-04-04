@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.8.0 - (March 30, 2018)
+------------------
 ### Changed
 * Fix an issue where CSS custom properties that used the scss inline-svg function were not correctly transpiling the inline-svg function.
 

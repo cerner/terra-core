@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "The select component is a form input with a drop down list of options that allows for single selection.",
   "repository": {
     "type": "git",
@@ -35,9 +35,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^2.3.0",
-    "terra-base": "^3.2.0",
-    "terra-icon": "^2.2.0",
+    "terra-arrange": "^2.4.0",
+    "terra-base": "^3.3.0",
+    "terra-icon": "^2.3.0",
     "terra-popup": "^2.3.0"
   },
   "scripts": {
