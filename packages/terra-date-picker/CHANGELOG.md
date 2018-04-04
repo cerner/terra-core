@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Lock in version of popper to prevent date picker from pointing to an incorrect position when invoked. https://github.com/cerner/terra-core/issues/1402
 
 2.4.0 - (March 30, 2018)
 ------------------
