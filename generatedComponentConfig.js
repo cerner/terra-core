@@ -18,16 +18,17 @@ import TerraSiteIndex12 from './packages/terra-site/src/examples/date-time-picke
 import TerraSiteIndex13 from './packages/terra-site/src/examples/demographics-banner/Index';
 import TerraSiteIndex14 from './packages/terra-site/src/examples/dialog/Index';
 import TerraSiteIndex15 from './packages/terra-site/src/examples/divider/Index';
-import TerraSiteIndex16 from './packages/terra-site/src/examples/dynamic-grid/Index';
-import TerraSiteIndex17 from './packages/terra-site/src/examples/embedded-content-consumer/Index';
-import TerraSiteIndex18 from './packages/terra-site/src/examples/form-checkbox/Index';
-import TerraSiteIndex19 from './packages/terra-site/src/examples/form-field/Index';
-import TerraSiteIndex20 from './packages/terra-site/src/examples/form-fieldset/Index';
-import TerraSiteIndex21 from './packages/terra-site/src/examples/form-input/Index';
-import TerraSiteIndex22 from './packages/terra-site/src/examples/form-radio/Index';
-import TerraSiteIndex23 from './packages/terra-site/src/examples/form-select/Index';
-import TerraSiteIndex24 from './packages/terra-site/src/examples/form-textarea/Index';
-import TerraSiteIndex25 from './packages/terra-site/src/examples/form/Index';
+import TerraSiteIndex16 from './packages/terra-site/src/examples/doc-template/Index';
+import TerraSiteIndex17 from './packages/terra-site/src/examples/dynamic-grid/Index';
+import TerraSiteIndex18 from './packages/terra-site/src/examples/embedded-content-consumer/Index';
+import TerraSiteIndex19 from './packages/terra-site/src/examples/form-checkbox/Index';
+import TerraSiteIndex20 from './packages/terra-site/src/examples/form-field/Index';
+import TerraSiteIndex21 from './packages/terra-site/src/examples/form-fieldset/Index';
+import TerraSiteIndex22 from './packages/terra-site/src/examples/form-input/Index';
+import TerraSiteIndex23 from './packages/terra-site/src/examples/form-radio/Index';
+import TerraSiteIndex24 from './packages/terra-site/src/examples/form-select/Index';
+import TerraSiteIndex25 from './packages/terra-site/src/examples/form-textarea/Index';
+import TerraSiteIndex26 from './packages/terra-site/src/examples/form/Index';
 import TerraSiteControlIndex from './packages/terra-site/src/examples/form/components/ControlIndex';
 import TerraSiteFieldIndex from './packages/terra-site/src/examples/form/components/FieldIndex';
 import TerraSiteFieldsetIndex from './packages/terra-site/src/examples/form/components/FieldsetIndex';
@@ -38,39 +39,39 @@ import TerraSiteSelectIndex from './packages/terra-site/src/examples/form/compon
 import TerraSiteTextFieldIndex from './packages/terra-site/src/examples/form/components/TextFieldIndex';
 import TerraSiteTextareaFieldIndex from './packages/terra-site/src/examples/form/components/TextareaFieldIndex';
 import TerraSiteTextareaIndex from './packages/terra-site/src/examples/form/components/TextareaIndex';
-import TerraSiteIndex26 from './packages/terra-site/src/examples/grid/Index';
-import TerraSiteIndex27 from './packages/terra-site/src/examples/heading/Index';
-import TerraSiteIndex28 from './packages/terra-site/src/examples/i18n/Index';
-import TerraSiteIndex29 from './packages/terra-site/src/examples/icon/Index';
+import TerraSiteIndex27 from './packages/terra-site/src/examples/grid/Index';
+import TerraSiteIndex28 from './packages/terra-site/src/examples/heading/Index';
+import TerraSiteIndex29 from './packages/terra-site/src/examples/i18n/Index';
+import TerraSiteIndex30 from './packages/terra-site/src/examples/icon/Index';
 import TerraSiteIconStatic from './packages/terra-site/src/examples/icon/components/IconStatic';
 import TerraSiteIconThemeable from './packages/terra-site/src/examples/icon/components/IconThemeable';
-import TerraSiteIndex30 from './packages/terra-site/src/examples/image/Index';
-import TerraSiteIndex31 from './packages/terra-site/src/examples/list/Index';
+import TerraSiteIndex31 from './packages/terra-site/src/examples/image/Index';
+import TerraSiteIndex32 from './packages/terra-site/src/examples/list/Index';
 import TerraSiteMultiSelectIndex from './packages/terra-site/src/examples/list/components/MultiSelectIndex';
 import TerraSiteSelectableListIndex from './packages/terra-site/src/examples/list/components/SelectableListIndex';
 import TerraSiteSingleSelectIndex from './packages/terra-site/src/examples/list/components/SingleSelectIndex';
-import TerraSiteIndex32 from './packages/terra-site/src/examples/menu/Index';
-import TerraSiteIndex33 from './packages/terra-site/src/examples/modal/Index';
-import TerraSiteIndex34 from './packages/terra-site/src/examples/overlay/Index';
-import TerraSiteIndex35 from './packages/terra-site/src/examples/profile-image/Index';
-import TerraSiteIndex36 from './packages/terra-site/src/examples/progress-bar/Index';
-import TerraSiteIndex37 from './packages/terra-site/src/examples/responsive-element/Index';
-import TerraSiteIndex38 from './packages/terra-site/src/examples/search-field/Index';
-import TerraSiteIndex39 from './packages/terra-site/src/examples/section-header/Index';
-import TerraSiteIndex40 from './packages/terra-site/src/examples/signature/Index';
-import TerraSiteIndex41 from './packages/terra-site/src/examples/slide-group/Index';
-import TerraSiteIndex42 from './packages/terra-site/src/examples/spacer/Index';
-import TerraSiteIndex43 from './packages/terra-site/src/examples/status-view/Index';
-import TerraSiteIndex44 from './packages/terra-site/src/examples/status/Index';
-import TerraSiteIndex45 from './packages/terra-site/src/examples/table/Index';
+import TerraSiteIndex33 from './packages/terra-site/src/examples/menu/Index';
+import TerraSiteIndex34 from './packages/terra-site/src/examples/modal/Index';
+import TerraSiteIndex35 from './packages/terra-site/src/examples/overlay/Index';
+import TerraSiteIndex36 from './packages/terra-site/src/examples/profile-image/Index';
+import TerraSiteIndex37 from './packages/terra-site/src/examples/progress-bar/Index';
+import TerraSiteIndex38 from './packages/terra-site/src/examples/responsive-element/Index';
+import TerraSiteIndex39 from './packages/terra-site/src/examples/search-field/Index';
+import TerraSiteIndex40 from './packages/terra-site/src/examples/section-header/Index';
+import TerraSiteIndex41 from './packages/terra-site/src/examples/signature/Index';
+import TerraSiteIndex42 from './packages/terra-site/src/examples/slide-group/Index';
+import TerraSiteIndex43 from './packages/terra-site/src/examples/spacer/Index';
+import TerraSiteIndex44 from './packages/terra-site/src/examples/status-view/Index';
+import TerraSiteIndex45 from './packages/terra-site/src/examples/status/Index';
+import TerraSiteIndex46 from './packages/terra-site/src/examples/table/Index';
 import TerraSiteMultiSelectIndex1 from './packages/terra-site/src/examples/table/components/MultiSelectIndex';
-import TerraSiteIndex46 from './packages/terra-site/src/examples/tabs/Index';
-import TerraSiteIndex47 from './packages/terra-site/src/examples/tag/Index';
-import TerraSiteIndex48 from './packages/terra-site/src/examples/text/Index';
-import TerraSiteIndex49 from './packages/terra-site/src/examples/time-input/Index';
-import TerraSiteIndex50 from './packages/terra-site/src/examples/toggle-button/Index';
-import TerraSiteIndex51 from './packages/terra-site/src/examples/toggle-section-header/Index';
-import TerraSiteIndex52 from './packages/terra-site/src/examples/toggle/Index';
+import TerraSiteIndex47 from './packages/terra-site/src/examples/tabs/Index';
+import TerraSiteIndex48 from './packages/terra-site/src/examples/tag/Index';
+import TerraSiteIndex49 from './packages/terra-site/src/examples/text/Index';
+import TerraSiteIndex50 from './packages/terra-site/src/examples/time-input/Index';
+import TerraSiteIndex51 from './packages/terra-site/src/examples/toggle-button/Index';
+import TerraSiteIndex52 from './packages/terra-site/src/examples/toggle-section-header/Index';
+import TerraSiteIndex53 from './packages/terra-site/src/examples/toggle/Index';
 
 // Component Test Examples
 import WithActionsActionFooterContainer from './packages/terra-action-footer/examples/test-examples/action-footer-container/WithActionsActionFooterContainer.example';
@@ -179,6 +180,7 @@ import PopulatedDemographicsBanner from './packages/terra-demographics-banner/te
 import PostMenstrualAgeDemographicsBannerNoLabel from './packages/terra-demographics-banner/tests/nightwatch/PostMenstrualAgeDemographicsBannerNoLabel';
 import DefaultDialog from './packages/terra-dialog/tests/nightwatch/DefaultDialog';
 import DefaultDivider from './packages/terra-divider/tests/nightwatch/DefaultDivider';
+import DefaultDocTemplate from './packages/terra-doc-template/examples/test-examples/DefaultDocTemplate.example';
 import DefaultDynamicGrid from './packages/terra-dynamic-grid/tests/nightwatch/DefaultDynamicGrid';
 import LargeDynamicGrid from './packages/terra-dynamic-grid/tests/nightwatch/LargeDynamicGrid';
 import BasicConsumer from './packages/terra-embedded-content-consumer/tests/nightwatch/consumers/BasicConsumer';
@@ -360,10 +362,10 @@ import LightOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/Ligh
 import OnRequestCloseOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/OnRequestCloseOverlay';
 import DefaultOverlayContainer from './packages/terra-overlay/tests/nightwatch/OverlayContainer/DefaultOverlayContainer';
 import ProfileImageDefault from './packages/terra-profile-image/tests/nightwatch/ProfileImageDefault';
+import ProgressBarGradient from './packages/terra-progress-bar/tests/nightwatch/ProgressBarGradient';
 import ProgressBarColor from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarColor';
 import ProgressBarDefault from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarDefault';
 import ProgressBarSize from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarSize';
-import ProgressBarGradient from './packages/terra-progress-bar/tests/nightwatch/ProgressBarGradient';
 import MockPropsTable from './packages/terra-props-table/tests/nightwatch/MockPropsTable';
 import MockPropsTableWithTitle from './packages/terra-props-table/tests/nightwatch/MockPropsTableWithTitle';
 import DefaultResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/DefaultResponsiveElement';
@@ -1146,6 +1148,17 @@ const componentConfig = {
         name: 'Default Divider',
         path: '/default-divider',
         component: DefaultDivider,
+      },
+    ],
+  },
+  'terra-doc-template': {
+    name: 'Doc Template',
+    path: '/doc-template',
+    tests: [
+      {
+        name: 'Default Doc Template',
+        path: '/default-doc-template',
+        component: DefaultDocTemplate,
       },
     ],
   },
@@ -2717,13 +2730,24 @@ const componentConfig = {
         ],
       },
       {
+        name: 'Doc Template',
+        path: '/doc-template',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteIndex16,
+          },
+        ],
+      },
+      {
         name: 'Dynamic Grid',
         path: '/dynamic-grid',
         pages: [
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex16,
+            component: TerraSiteIndex17,
           },
         ],
       },
@@ -2734,7 +2758,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex17,
+            component: TerraSiteIndex18,
           },
         ],
       },
@@ -2745,7 +2769,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex18,
+            component: TerraSiteIndex19,
           },
         ],
       },
@@ -2756,7 +2780,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex19,
+            component: TerraSiteIndex20,
           },
         ],
       },
@@ -2767,7 +2791,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex20,
+            component: TerraSiteIndex21,
           },
         ],
       },
@@ -2778,7 +2802,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex21,
+            component: TerraSiteIndex22,
           },
         ],
       },
@@ -2789,7 +2813,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex22,
+            component: TerraSiteIndex23,
           },
         ],
       },
@@ -2800,7 +2824,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex23,
+            component: TerraSiteIndex24,
           },
         ],
       },
@@ -2811,7 +2835,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex24,
+            component: TerraSiteIndex25,
           },
         ],
       },
@@ -2822,7 +2846,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex25,
+            component: TerraSiteIndex26,
           },
           {
             name: 'Control Index',
@@ -2883,7 +2907,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex26,
+            component: TerraSiteIndex27,
           },
         ],
       },
@@ -2894,7 +2918,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex27,
+            component: TerraSiteIndex28,
           },
         ],
       },
@@ -2905,7 +2929,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex28,
+            component: TerraSiteIndex29,
           },
         ],
       },
@@ -2916,7 +2940,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex29,
+            component: TerraSiteIndex30,
           },
           {
             name: 'Icon Static',
@@ -2937,7 +2961,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex30,
+            component: TerraSiteIndex31,
           },
         ],
       },
@@ -2948,7 +2972,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex31,
+            component: TerraSiteIndex32,
           },
           {
             name: 'Multi Select Index',
@@ -2974,7 +2998,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex32,
+            component: TerraSiteIndex33,
           },
         ],
       },
@@ -2985,7 +3009,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex33,
+            component: TerraSiteIndex34,
           },
         ],
       },
@@ -2996,7 +3020,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex34,
+            component: TerraSiteIndex35,
           },
         ],
       },
@@ -3007,7 +3031,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex35,
+            component: TerraSiteIndex36,
           },
         ],
       },
@@ -3018,7 +3042,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex36,
+            component: TerraSiteIndex37,
           },
         ],
       },
@@ -3029,7 +3053,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex37,
+            component: TerraSiteIndex38,
           },
         ],
       },
@@ -3040,7 +3064,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex38,
+            component: TerraSiteIndex39,
           },
         ],
       },
@@ -3051,7 +3075,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex39,
+            component: TerraSiteIndex40,
           },
         ],
       },
@@ -3062,7 +3086,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex40,
+            component: TerraSiteIndex41,
           },
         ],
       },
@@ -3073,7 +3097,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex41,
+            component: TerraSiteIndex42,
           },
         ],
       },
@@ -3084,7 +3108,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex42,
+            component: TerraSiteIndex43,
           },
         ],
       },
@@ -3095,7 +3119,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex43,
+            component: TerraSiteIndex44,
           },
         ],
       },
@@ -3106,7 +3130,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex44,
+            component: TerraSiteIndex45,
           },
         ],
       },
@@ -3117,7 +3141,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex45,
+            component: TerraSiteIndex46,
           },
           {
             name: 'Multi Select Index',
@@ -3133,7 +3157,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex46,
+            component: TerraSiteIndex47,
           },
         ],
       },
@@ -3144,7 +3168,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex47,
+            component: TerraSiteIndex48,
           },
         ],
       },
@@ -3155,7 +3179,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex48,
+            component: TerraSiteIndex49,
           },
         ],
       },
@@ -3166,7 +3190,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex49,
+            component: TerraSiteIndex50,
           },
         ],
       },
@@ -3177,7 +3201,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex50,
+            component: TerraSiteIndex51,
           },
         ],
       },
@@ -3188,7 +3212,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex51,
+            component: TerraSiteIndex52,
           },
         ],
       },
@@ -3199,7 +3223,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex52,
+            component: TerraSiteIndex53,
           },
         ],
       },
