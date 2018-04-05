@@ -42,6 +42,10 @@ const propTypes = {
    */
   isFullscreen: PropTypes.bool,
   /**
+   * If set to true, the modal is to be presented at the appropriate z-index for notification dialogs.
+   */
+  isNotificationDialog: PropTypes.bool,
+  /**
    * If set to true, the modal dialog with have overflow-y set to scroll.
    */
   isScrollable: PropTypes.bool,
@@ -59,6 +63,7 @@ const defaultProps = {
   closeOnOutsideClick: true,
   isFocused: true,
   isFullscreen: false,
+  isNotificationDialog: false,
   isScrollable: false,
   role: 'dialog',
 };
@@ -67,21 +72,24 @@ const defaultProps = {
 class ModalContent extends React.Component {
   render() {
     const {
-        ariaLabel,
-        children,
-        classNameModal,
-        classNameOverlay,
-        closeOnOutsideClick,
-        onRequestClose,
-        role,
-        isFocused,
-        isFullscreen,
-        isScrollable,
-        ...customProps } = this.props;
+      ariaLabel,
+      children,
+      classNameModal,
+      classNameOverlay,
+      closeOnOutsideClick,
+      onRequestClose,
+      role,
+      isFocused,
+      isFullscreen,
+      isNotificationDialog,
+      isScrollable,
+      ...customProps
+    } = this.props;
 
     const modalClassName = cx([
       'modal',
       { 'fixed-size': !isFullscreen },
+      { notification: isNotificationDialog },
       { scrollable: isScrollable },
       classNameModal,
     ]);
@@ -96,6 +104,7 @@ class ModalContent extends React.Component {
         <ModalOverlay
           onClick={closeOnOutsideClick ? onRequestClose : null}
           className={classNameOverlay}
+          isNotificationDialog={isNotificationDialog}
         />
         <div
           tabIndex="0"

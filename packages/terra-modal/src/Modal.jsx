@@ -38,6 +38,10 @@ const propTypes = {
    */
   isFullscreen: PropTypes.bool,
   /**
+   * If set to true, the modal is to be presented at the appropriate z-index for notification dialogs.
+   */
+  isNotificationDialog: PropTypes.bool,
+  /**
    * If set to true, the modal will rendered as opened.
    */
   isOpen: PropTypes.bool.isRequired,
@@ -66,6 +70,7 @@ const defaultProps = {
   closeOnOutsideClick: true,
   isFocused: true,
   isFullscreen: false,
+  isNotificationDialog: false,
   isOpen: false,
   isScrollable: false,
   role: 'document',
@@ -107,19 +112,21 @@ class Modal extends React.Component {
 
   render() {
     const {
-          ariaLabel,
-          children,
-          classNameModal,
-          classNameOverlay,
-          closeOnEsc,
-          closeOnOutsideClick,
-          isFocused,
-          isFullscreen,
-          isOpen,
-          isScrollable,
-          role,
-          onRequestClose,
-           ...customProps } = this.props;
+      ariaLabel,
+      children,
+      classNameModal,
+      classNameOverlay,
+      closeOnEsc,
+      closeOnOutsideClick,
+      isFocused,
+      isFullscreen,
+      isNotificationDialog,
+      isOpen,
+      isScrollable,
+      role,
+      onRequestClose,
+      ...customProps
+    } = this.props;
 
     if (!isOpen) {
       return null;
@@ -138,6 +145,7 @@ class Modal extends React.Component {
           role={role}
           isFocused={isFocused}
           isFullscreen={isFullscreen}
+          isNotificationDialog={isNotificationDialog}
           isScrollable={isScrollable}
           onRequestClose={onRequestClose}
         >

@@ -1,9 +1,21 @@
 import React from 'react';
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import styles from './ModalOverlay.scss';
 
 const cx = classNames.bind(styles);
+
+const propTypes = {
+  /**
+   * If set to true, the modal is to be presented at the appropriate z-index for notification dialogs.
+   */
+  isNotificationDialog: PropTypes.bool,
+};
+
+const defaultProps = {
+  isNotificationDialog: false,
+};
 
 class ModalOverlay extends React.Component {
 
@@ -19,9 +31,12 @@ class ModalOverlay extends React.Component {
   }
 
   render() {
-    const { ...customProps } = this.props;
-    return <div {...customProps} className={cx('overlay', customProps.className)} />;
+    const { isNotificationDialog, ...customProps } = this.props;
+    return <div {...customProps} className={cx(['overlay', { notification: isNotificationDialog }, customProps.className])} />;
   }
 }
+
+ModalOverlay.propTypes = propTypes;
+ModalOverlay.defaultProps = defaultProps;
 
 export default ModalOverlay;

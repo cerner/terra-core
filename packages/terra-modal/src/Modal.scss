@@ -28,14 +28,20 @@
       left: 50%;
       margin: var(--terra-modal-fixed-margin, 0 auto);
       max-height: calc(100% - 100px);
-      max-width: 40em;
+      max-width: calc(100% - 100px);
       right: auto;
       top: 50%;
       transform: translate(-50%, -50%);
     }
   }
 
+  .notification {
+    z-index: 8001;
+  }
+
   .scrollable {
-    overflow-y: scroll;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
