@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Switched responsive reference from window to parent.
 
 2.3.0 - (March 30, 2018)
 ------------------
