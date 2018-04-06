@@ -17,7 +17,7 @@ const Index = () => {
     { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }];
 
   return (<div id="DocTemplateContainer">
-    <DocTemplate version="1.9" readme={readme} propsTables={propsTables} examples={examples} />
+    <DocTemplate packageName="test-package-name" readme={readme} propsTables={propsTables} examples={examples} />
   </div>);
 };
 

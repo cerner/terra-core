@@ -26,7 +26,7 @@ it('should render a default component with nothing', () => {
 
 describe('Test', () => {
   it('should show the version', () => {
-    const wrapper = shallow(<DocTemplate version="1.9" />);
+    const wrapper = shallow(<DocTemplate packageName="terra-doc-template" />);
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -38,7 +38,7 @@ it('should show the readme', () => {
 });
 
 it('should show the version and readme', () => {
-  const wrapper = shallow(<DocTemplate version="1.9" readme={readme} />);
+  const wrapper = shallow(<DocTemplate packageName="terra-doc-template" readme={readme} />);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -70,7 +70,7 @@ it('should show multiple props tables', () => {
 
 it('should show the version, readme, examples, and props tables', () => {
   const wrapper = shallow(<DocTemplate
-    version="1.9"
+    packageName="terra-doc-template"
     readme={readme}
     examples={[{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
       { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }]}

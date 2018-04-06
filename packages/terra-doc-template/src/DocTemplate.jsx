@@ -14,7 +14,7 @@ const propTypes = {
    */
   readme: PropTypes.string,
   /**
-   * Holds objects with the following properties:
+   * All of the example(s) that will be displayed. An empty array is supported.
    * ```
    * title: The title of the example
    * description: A description of the example to be displayed below the title
@@ -33,7 +33,7 @@ const propTypes = {
     ),
   ),
   /**
-   * Holds objects with the following properties:
+   * All of the props table(s) that will be displayed. An empty array is supported.
    * ```
    * componentSrc: The source code of the component
    * componentName: The name of the component
@@ -71,11 +71,11 @@ const DocTemplate = (props) => {
     id += 1;
   }
 
-  const version = packageName ? `[![NPM version](http://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})` : undefined;
+  const version = `[![NPM version](http://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})`;
 
   return (
     <div>
-      {version && <Markdown src={version} />}
+      {packageName && <Markdown src={version} />}
       {readme && <Markdown src={readme} />}
 
       {examples.length > 0 && <h1 style={{ paddingBottom: '0.3em', borderBottom: '1px solid #eaecef' }}>Examples</h1>}
