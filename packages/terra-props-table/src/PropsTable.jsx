@@ -71,11 +71,15 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
   const componentProps = componentMetaData.props;
 
   const tableRowClass = cx('prop-table-row');
+  const tableClassNames = cx([
+    'props-table',
+    customProps.className,
+  ]);
 
   return (
     <div dir="ltr" className="markdown-body">
       <h2>{componentName} Props</h2>
-      <table className={cx('props-table')} {...customProps}>
+      <table {...customProps} className={tableClassNames}>
         <thead>
           <tr>
             <th className={cx('prop-table-name')}>Prop Name</th>
