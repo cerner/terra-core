@@ -20,10 +20,17 @@ it('should render a default component with nothing', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should show the version', () => {
-  const wrapper = shallow(<DocTemplate version="1.9" />);
-  expect(wrapper).toMatchSnapshot();
+// const DocTemplate = () => (
+//   <div>Hello</div>
+// );
+
+describe('Test', () => {
+  it('should show the version', () => {
+    const wrapper = shallow(<DocTemplate version="1.9" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
+
 
 it('should show the readme', () => {
   const wrapper = shallow(<DocTemplate readme={readme} />);
