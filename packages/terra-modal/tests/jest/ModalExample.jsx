@@ -1,5 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Modal from '../../src/Modal';
+
+const propTypes = {
+  zIndex: PropTypes.string,
+};
 
 class ModalExample extends React.Component {
   constructor() {
@@ -29,6 +34,7 @@ class ModalExample extends React.Component {
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
+          zIndex={this.props.zIndex}
         >
           <div>
             <h1>Terra Modal</h1>
@@ -40,5 +46,7 @@ class ModalExample extends React.Component {
     );
   }
 }
+
+ModalExample.propTypes = propTypes;
 
 export default ModalExample;
