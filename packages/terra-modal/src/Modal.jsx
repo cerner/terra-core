@@ -4,6 +4,8 @@ import { Portal } from 'react-portal';
 import 'terra-base/lib/baseStyles';
 import ModalContent from './ModalContent';
 
+const zIndexes = ['6000', '8000'];
+
 const propTypes = {
   /**
    * String that labels the modal for screen readers.
@@ -38,10 +40,6 @@ const propTypes = {
    */
   isFullscreen: PropTypes.bool,
   /**
-   * If set to true, the modal is to be presented at the appropriate z-index for notification dialogs.
-   */
-  isNotificationDialog: PropTypes.bool,
-  /**
    * If set to true, the modal will rendered as opened.
    */
   isOpen: PropTypes.bool.isRequired,
@@ -59,6 +57,10 @@ const propTypes = {
    * Role attribute on the modal dialog.
    */
   role: PropTypes.string,
+  /**
+   * Z-Index layer to apply to the ModalContent and ModalOverlay.
+   */
+  zIndex: PropTypes.oneOf(zIndexes),
 };
 
 const defaultProps = {
@@ -70,10 +72,10 @@ const defaultProps = {
   closeOnOutsideClick: true,
   isFocused: true,
   isFullscreen: false,
-  isNotificationDialog: false,
   isOpen: false,
   isScrollable: false,
   role: 'document',
+  zIndex: '6000',
 };
 
 const KEYCODES = {
@@ -120,11 +122,11 @@ class Modal extends React.Component {
       closeOnOutsideClick,
       isFocused,
       isFullscreen,
-      isNotificationDialog,
       isOpen,
       isScrollable,
       role,
       onRequestClose,
+      zIndex,
       ...customProps
     } = this.props;
 
@@ -145,9 +147,9 @@ class Modal extends React.Component {
           role={role}
           isFocused={isFocused}
           isFullscreen={isFullscreen}
-          isNotificationDialog={isNotificationDialog}
           isScrollable={isScrollable}
           onRequestClose={onRequestClose}
+          zIndex={zIndex}
         >
           {children}
         </ModalContent>

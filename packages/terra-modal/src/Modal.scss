@@ -18,7 +18,6 @@
     right: 10px;
     top: 10px;
     width: var(--terra-modal-width);
-    z-index: 6000 + 1;
   }
 
   .fixed-size {
@@ -35,8 +34,12 @@
     }
   }
 
-  .notification {
-    z-index: 8001;
+  .layer-6000 {
+    z-index: 6000 + 1;
+  }
+
+  .layer-8000 {
+    z-index: 8000 + 1;
   }
 
   .scrollable {

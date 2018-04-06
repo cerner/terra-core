@@ -6,15 +6,17 @@ import styles from './ModalOverlay.scss';
 
 const cx = classNames.bind(styles);
 
+const zIndexes = ['6000', '8000'];
+
 const propTypes = {
   /**
-   * If set to true, the modal is to be presented at the appropriate z-index for notification dialogs.
+   * Z-Index layer to apply to the ModalContent and ModalOverlay.
    */
-  isNotificationDialog: PropTypes.bool,
+  zIndex: PropTypes.oneOf(zIndexes),
 };
 
 const defaultProps = {
-  isNotificationDialog: false,
+  zIndex: false,
 };
 
 class ModalOverlay extends React.Component {
@@ -31,8 +33,12 @@ class ModalOverlay extends React.Component {
   }
 
   render() {
-    const { isNotificationDialog, ...customProps } = this.props;
-    return <div {...customProps} className={cx(['overlay', { notification: isNotificationDialog }, customProps.className])} />;
+    const { zIndex, ...customProps } = this.props;
+    let zIndexLayer = '6000';
+    if (zIndexes.indexOf(zIndex) >= 0) {
+      zIndexLayer = zIndex;
+    }
+    return <div {...customProps} className={cx(['overlay', `layer-${zIndexLayer}`, customProps.className])} />;
   }
 }
 

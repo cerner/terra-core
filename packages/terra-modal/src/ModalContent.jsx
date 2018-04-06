@@ -8,6 +8,8 @@ import styles from './Modal.scss';
 
 const cx = classNames.bind(styles);
 
+const zIndexes = ['6000', '8000'];
+
 const propTypes = {
   /**
    * String that labels the modal for screen readers.
@@ -53,6 +55,10 @@ const propTypes = {
    * Role attribute on the modal dialog.
    */
   role: PropTypes.string,
+  /**
+   * Z-Index layer to apply to the ModalContent and ModalOverlay.
+   */
+  zIndex: PropTypes.oneOf(zIndexes),
 };
 
 const defaultProps = {
@@ -63,9 +69,9 @@ const defaultProps = {
   closeOnOutsideClick: true,
   isFocused: true,
   isFullscreen: false,
-  isNotificationDialog: false,
   isScrollable: false,
   role: 'dialog',
+  zIndex: '6000',
 };
 
 /* eslint-disable react/prefer-stateless-function */
@@ -81,16 +87,21 @@ class ModalContent extends React.Component {
       role,
       isFocused,
       isFullscreen,
-      isNotificationDialog,
       isScrollable,
+      zIndex,
       ...customProps
     } = this.props;
+
+    let zIndexLayer = '6000';
+    if (zIndexes.indexOf(zIndex) >= 0) {
+      zIndexLayer = zIndex;
+    }
 
     const modalClassName = cx([
       'modal',
       { 'fixed-size': !isFullscreen },
-      { notification: isNotificationDialog },
       { scrollable: isScrollable },
+      `layer-${zIndexLayer}`,
       classNameModal,
     ]);
 
@@ -104,7 +115,7 @@ class ModalContent extends React.Component {
         <ModalOverlay
           onClick={closeOnOutsideClick ? onRequestClose : null}
           className={classNameOverlay}
-          isNotificationDialog={isNotificationDialog}
+          zIndex={zIndex}
         />
         <div
           tabIndex="0"
