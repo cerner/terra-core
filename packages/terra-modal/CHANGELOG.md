@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Adjust max-width and add ability to set z-index.
 
 2.4.0 - (April 5, 2018)
 ------------------
