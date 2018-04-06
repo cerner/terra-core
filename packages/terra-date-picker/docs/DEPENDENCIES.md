@@ -5,14 +5,15 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | moment | ^2.21.0 | -- | Parse, validate, manipulate, and display dates |
+| popper.js | 1.14.1 | -- | A kickass library to manage your poppers |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-datepicker | ^0.64.0 | ^16.0.0 | A simple and reusable datepicker component for React |
 | react-portal | ^4.1.2 | ^15.0.0-0 \|\| ^16.0.0-0 \|\| ^17.0.0-0 | To make your life with React Portals easier. |
-| terra-base | ^3.3.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-button | ^2.4.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-form | ^2.3.0 | ^16.2.0 | Components for building forms |
-| terra-icon | ^2.3.0 | ^16.2.0 | terra-icon |
-| terra-responsive-element | ^2.3.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-base | ^3.4.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-button | ^2.5.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-form | ^2.4.0 | ^16.2.0 | Components for building forms |
+| terra-icon | ^2.4.0 | ^16.2.0 | terra-icon |
+| terra-responsive-element | ^2.4.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
@@ -29,8 +30,8 @@
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
 | react-portal | ^4.1.2 | ^15.0.0-0 \|\| ^16.0.0-0 \|\| ^17.0.0-0 | To make your life with React Portals easier. |
-| terra-base | ^3.2.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-button | ^2.3.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-form | ^2.2.0 | ^16.2.0 | Components for building forms |
-| terra-icon | ^2.2.0 | ^16.2.0 | terra-icon |
-| terra-responsive-element | ^2.2.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-base | ^3.4.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-button | ^2.5.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-form | ^2.4.0 | ^16.2.0 | Components for building forms |
+| terra-icon | ^2.4.0 | ^16.2.0 | terra-icon |
+| terra-responsive-element | ^2.4.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |

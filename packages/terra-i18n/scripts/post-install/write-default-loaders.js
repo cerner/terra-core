@@ -21,10 +21,10 @@ fse.mkdirpSync('./node_modules');
 
 // write default intl loader module
 const intlLoaderPath = path.resolve('./node_modules', 'intlLoaders.js');
-const intlLoaders = 'module.exports = require(\'../loaders/defaultIntlLoaders\');';
+const intlLoaders = 'module.exports = require(\'../lib/defaultIntlLoaders\');';
 fse.writeFileSync(intlLoaderPath, intlLoaders);
 
 // write default translations loader module
 const translationsPath = path.resolve('./node_modules', 'translationsLoaders.js');
-const translationLoaders = 'module.exports = require(\'../loaders/defaultTranslationsLoaders\');';
+const translationLoaders = 'module.exports = require(\'../lib/defaultTranslationsLoaders\');';
 fse.writeFileSync(translationsPath, translationLoaders);
