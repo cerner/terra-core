@@ -18,6 +18,14 @@
     right: 10px;
     top: 10px;
     width: var(--terra-modal-width);
+
+    &.layer-6000 {
+      z-index: 6000 + 1;
+    }
+  
+    &.layer-8000 {
+      z-index: 8000 + 1;
+    }
   }
 
   .fixed-size {
@@ -32,14 +40,6 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
-  }
-
-  .layer-6000 {
-    z-index: 6000 + 1;
-  }
-
-  .layer-8000 {
-    z-index: 8000 + 1;
   }
 
   .scrollable {
