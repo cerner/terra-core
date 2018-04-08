@@ -8,10 +8,11 @@
     box-shadow: var(--terra-action-header-box-shadow);
     display: flex;
     justify-content: space-between;
+    min-height: var(--terra-action-header-min-height, 3.6428571429rem);
     padding: var(--terra-action-header-padding, 0.714rem);
     position: relative;
     width: 100%;
-    
+
     .flex-collapse {
       align-items: center;
       display: flex;
@@ -48,10 +49,12 @@
     font-size: var(--terra-action-header-font-size, 1.286rem);
     font-weight: normal;
     height: 100%;
+    hyphens: auto;
     margin-bottom: 0;
     margin-top: 0;
+    padding-top: var(--terra-action-header-title-padding-top, 0.1428571429rem);
     width: 100%;
-    word-break: normal;
+    word-break: break-all;
     word-wrap: normal;
   }
 }
