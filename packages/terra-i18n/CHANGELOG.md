@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.4.0 - (April 5, 2018)
+------------------
 ### Fixed
 * Transpile defaultIntlLoaders and defaultTranslationsLoaders.
 
