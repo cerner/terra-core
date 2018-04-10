@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionHeader should render a default action header 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={null}
+/>
+`;
+
+exports[`ActionHeader should render an action header with back and close buttons and title 1`] = `
+<ActionHeaderContainer
+  endContent={
+    <div
+      className="right-buttons"
+    >
+      <Button
+        className="header-close-button"
+        icon={
+          <span
+            className="header-icon close"
+          />
+        }
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        text="Close"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  }
+  level={1}
+  startContent={
+    <div
+      className="left-buttons"
+    >
+      <Button
+        className="header-back-button"
+        icon={
+          <span
+            className="header-icon back"
+          />
+        }
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        text="Back"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  }
+  title="Action Header"
+/>
+`;
+
+exports[`ActionHeader should render an action header with back button and title 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={
+    <div
+      className="left-buttons"
+    >
+      <Button
+        className="header-back-button"
+        icon={
+          <span
+            className="header-icon back"
+          />
+        }
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        text="Back"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  }
+  title="Action Header"
+/>
+`;
+
+exports[`ActionHeader should render an action header with close button and title 1`] = `
+<ActionHeaderContainer
+  endContent={
+    <div
+      className="right-buttons"
+    >
+      <Button
+        className="header-close-button"
+        icon={
+          <span
+            className="header-icon close"
+          />
+        }
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        text="Close"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  }
+  level={1}
+  startContent={null}
+  title="Action Header"
+/>
+`;
+
+exports[`ActionHeader should render an action header with custom button and title 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={null}
+  title="Action Header"
+>
+  <Button
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    onClick={[Function]}
+    text="Custom Button"
+    type="button"
+    variant="neutral"
+  />
+</ActionHeaderContainer>
+`;
+
+exports[`ActionHeader should render an action header with level three header element and title 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={3}
+  startContent={null}
+  title="Action Header"
+/>
+`;
+
+exports[`ActionHeader should render an action header with maximize button and title 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={
+    <div
+      className="left-buttons"
+    >
+      <Button
+        icon={
+          <span
+            className="header-icon maximize"
+          />
+        }
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        text="Maximize"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  }
+  title="Action Header"
+/>
+`;
+
+exports[`ActionHeader should render an action header with minimize button and title 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={
+    <div
+      className="left-buttons"
+    >
+      <Button
+        icon={
+          <span
+            className="header-icon minimize"
+          />
+        }
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        text="Minimize"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  }
+  title="Action Header"
+/>
+`;
+
+exports[`ActionHeader should render an action header with multiple custom buttons and title 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={null}
+  title="Action Header"
+>
+  <span>
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onClick={[Function]}
+      text="Custom Button"
+      type="button"
+      variant="neutral"
+    />
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onClick={[Function]}
+      text="Custom Button"
+      type="button"
+      variant="neutral"
+    />
+  </span>
+</ActionHeaderContainer>
+`;
+
+exports[`ActionHeader should render an action header with next and previous buttons and title 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={
+    <div
+      className="left-buttons"
+    >
+      <ButtonGroup
+        selectedKeys={Array []}
+      >
+        <ButtonGroupButton
+          icon={
+            <span
+              className="header-icon previous"
+            />
+          }
+          isDisabled={false}
+          onClick={[Function]}
+          text="Previous"
+        />
+        <ButtonGroupButton
+          icon={
+            <span
+              className="header-icon next"
+            />
+          }
+          isDisabled={false}
+          onClick={[Function]}
+          text="Next"
+        />
+      </ButtonGroup>
+    </div>
+  }
+  title="Action Header"
+/>
+`;
+
+exports[`ActionHeader should render an action header with title 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={null}
+  title="Action Header"
+/>
+`;
