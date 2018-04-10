@@ -25,6 +25,7 @@
     "react-router": "^3.0.5",
     "redux": "^3.6.0",
     "terra-action-footer": "^1.2.0",
+    "terra-action-header": "^0.x",
     "terra-alert": "^2.5.0",
     "terra-app-delegate": "^1.9.0",
     "terra-arrange": "^2.5.0",
