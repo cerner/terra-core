@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const propTypes = {
   /**
    * An example of type string markup.
+   * `This component contains a very long section of code in it's description column. This component contains a very long section of code in it's description column.`
    */
   string: PropTypes.string.isRequired,
   /**
@@ -12,6 +13,7 @@ const propTypes = {
   number: PropTypes.number,
   /**
    * An example of type boolean markup.
+   * ```This component contains a very long preformatted section in it's description column. This component contains a very long preformatted section in it's description column.```
    */
   bool: PropTypes.bool,
   /**
