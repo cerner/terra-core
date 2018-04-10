@@ -33,11 +33,13 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "commander": "^2.9.0",
     "fs-extra": "^5.0.0",
+    "glob": "^7.1.1",
     "intl": "^1.2.5",
+    "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
-    "react-intl": "^2.4.0",
-    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#migrate-i18n-aggregation"
+    "react-intl": "^2.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
