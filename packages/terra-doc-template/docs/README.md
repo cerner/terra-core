@@ -12,6 +12,7 @@ Provides an easily adjustable template for documentation pages
 ```jsx
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
+import readme from 'README.md'
 
-<DocTemplate {props...} />
+<DocTemplate packageName="terra-doc-template" readme={readme} />
 ```
