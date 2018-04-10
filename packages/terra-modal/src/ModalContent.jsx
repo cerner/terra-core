@@ -99,7 +99,7 @@ class ModalContent extends React.Component {
 
     const modalClassName = cx([
       'modal',
-      { 'fixed-size': !isFullscreen },
+      { 'is-fullscreen': isFullscreen },
       { scrollable: isScrollable },
       `layer-${zIndexLayer}`,
       classNameModal,
