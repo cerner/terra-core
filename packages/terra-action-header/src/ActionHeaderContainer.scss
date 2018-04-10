@@ -1,0 +1,60 @@
+:local {
+  .flex-header {
+    background-color: var(--terra-action-header-background-color, #f4f4f4);
+    border-bottom: var(--terra-action-header-border-bottom, 1px solid #dedfe0);
+    border-left: var(--terra-action-header-border-left);
+    border-right: var(--terra-action-header-border-right);
+    border-top: var(--terra-action-header-border-top);
+    box-shadow: var(--terra-action-header-box-shadow);
+    display: flex;
+    justify-content: space-between;
+    min-height: var(--terra-action-header-min-height, 3.6428571429rem);
+    padding: var(--terra-action-header-padding, 0.714rem);
+    position: relative;
+    width: 100%;
+
+    .flex-collapse {
+      align-items: center;
+      display: flex;
+      flex: 0 0 auto;
+      height: 100%;
+      max-width: 40%;
+      position: relative;
+    }
+  }
+
+  .flex-fill {
+    align-self: center;
+    flex: 1 1 auto;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .flex-end {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    height: 100%;
+    position: relative;
+  }
+
+  .title-container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .title {
+    font-size: var(--terra-action-header-font-size, 1.286rem);
+    font-weight: normal;
+    height: 100%;
+    hyphens: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: var(--terra-action-header-title-padding-top, 0.1428571429rem);
+    width: 100%;
+    word-break: break-all;
+    word-wrap: normal;
+  }
+}
