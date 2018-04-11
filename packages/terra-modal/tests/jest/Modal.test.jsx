@@ -25,3 +25,8 @@ it('should mount an open modal 8000 z-index', () => {
   const modal = mount(<ModalExample zIndex="8000" />);
   expect(modal).toMatchSnapshot();
 });
+
+it('should mount an open modal set to fullscreen', () => {
+  const modal = mount(<ModalExample isFullscreen />);
+  expect(modal).toMatchSnapshot();
+});

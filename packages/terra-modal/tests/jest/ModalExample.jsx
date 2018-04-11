@@ -4,6 +4,7 @@ import Modal from '../../src/Modal';
 
 const propTypes = {
   zIndex: PropTypes.string,
+  isFullscreen: PropTypes.bool,
 };
 
 class ModalExample extends React.Component {
@@ -35,6 +36,7 @@ class ModalExample extends React.Component {
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
           zIndex={this.props.zIndex}
+          isFullscreen={this.props.isFullscreen}
         >
           <div>
             <h1>Terra Modal</h1>
