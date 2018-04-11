@@ -5,7 +5,7 @@ import Image from 'terra-image';
 import demographicsImage from '../../assets/demographicsCat.jpg';
 
 const DemographicsBannerSmallContainer = () => (
-  <div style={{ width: '525px' }}>
+  <div style={{ maxWidth: '525px' }}>
     <DemographicsBanner
       age="25 Years"
       dateOfBirth="May 9, 1992"
