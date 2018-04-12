@@ -18,7 +18,7 @@ const config = {
 
   baseUrl: `http://${localIP.address()}:${webpackPort}`,
   specs,
-  
+
   seleniumDocker: {
     enabled: !process.env.TRAVIS,
   },
