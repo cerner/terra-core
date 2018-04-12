@@ -18,9 +18,11 @@ exports[`should mount with no items 1`] = `
   >
     <List
       isDivided={false}
+      role="listbox"
     >
       <ul
         className="list"
+        role="listbox"
       />
     </List>
   </SelectableList>
@@ -45,9 +47,11 @@ exports[`should mount with one items 1`] = `
   >
     <List
       isDivided={false}
+      role="listbox"
     >
       <ul
         className="list"
+        role="listbox"
       >
         <ListItem
           className="stuff1"

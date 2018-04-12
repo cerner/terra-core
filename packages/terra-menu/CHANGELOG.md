@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added aria-checked attribute to selected menu items.
 
 2.5.0 - (April 5, 2018)
 ------------------

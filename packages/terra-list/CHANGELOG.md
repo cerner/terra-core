@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Listbox role for selectable lists
+* Option role for list items
+* aria-selected attribute on list items
 
 2.5.0 - (April 5, 2018)
 ------------------
