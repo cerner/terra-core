@@ -1,5 +1,5 @@
 const path = require('path');
-const webpackConfig = require('terra-dev-site/src/config/webpack.config');
+const webpackConfig = require('terra-dev-site/src/webpack/webpack.config');
 const aggregateTranslations = require('./packages/terra-i18n/scripts/aggregate-translations/aggregate-translations');
 
 aggregateTranslations({ baseDirectory: __dirname });
