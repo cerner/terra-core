@@ -3,7 +3,7 @@ import Text from '../../lib/Text';
 
 const TextLineHeight = () => (
   <div>
-    <div style={{ 'font-size': '100px' }}>
+    <div style={{ fontSize: '100px' }}>
       Parent font size: 100px
       <Text fontSize={16}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur commodo.
