@@ -19,10 +19,6 @@ const config = {
   baseUrl: `http://${localIP.address()}:${webpackPort}`,
   specs,
 
-  seleniumDocker: {
-    enabled: !process.env.TRAVIS,
-  },
-
   // Ignore deprecation warnings. When chrome supports /actions API we'll update to use those.
   deprecationWarnings: false,
 
