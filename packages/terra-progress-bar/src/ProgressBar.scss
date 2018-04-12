@@ -1,7 +1,7 @@
 :local {
 
   @mixin terra-gradient($from-color, $to-color) {
-    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5));
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
   }
 
   .progress-bar-gradient {
