@@ -21,23 +21,26 @@ describe('Alert', () => {
     beforeEach(() => browser.url('/#/raw/tests/alert/alert-title'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-alert-alert-background-color': 'purple',
-      '--terra-alert-error-background-color': 'purple',
-      '--terra-alert-warning-background-color': 'purple',
-      '--terra-alert-advisory-background-color': 'purple',
-      '--terra-alert-info-background-color': 'purple',
-      '--terra-alert-success-background-color': 'purple',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-alert-alert-background-color': 'purple',
+        '--terra-alert-error-background-color': 'purple',
+        '--terra-alert-warning-background-color': 'purple',
+        '--terra-alert-advisory-background-color': 'purple',
+        '--terra-alert-info-background-color': 'purple',
+        '--terra-alert-success-background-color': 'purple',
 
-      '--terra-alert-alert-shadow-color': 'purple',
-      '--terra-alert-error-shadow-color': 'purple',
-      '--terra-alert-warning-shadow-color': 'purple',
-      '--terra-alert-advisory-shadow-color': 'purple',
-      '--terra-alert-info-shadow-color': 'purple',
-      '--terra-alert-success-shadow-color': 'purple',
+        '--terra-alert-alert-shadow-color': 'purple',
+        '--terra-alert-error-shadow-color': 'purple',
+        '--terra-alert-warning-shadow-color': 'purple',
+        '--terra-alert-advisory-shadow-color': 'purple',
+        '--terra-alert-info-shadow-color': 'purple',
+        '--terra-alert-success-shadow-color': 'purple',
 
-      '--terra-alert-alert-title-color': 'purple',
-      '--terra-alert-error-title-color': 'purple',
+        '--terra-alert-alert-title-color': 'purple',
+        '--terra-alert-error-title-color': 'purple',
+      },
     });
   });
 
@@ -45,10 +48,13 @@ describe('Alert', () => {
     beforeEach(() => browser.url('/#/raw/tests/alert/custom-alert'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-alert-custom-text-color': 'blue',
-      '--terra-alert-custom-background-color': 'purple',
-      '--terra-alert-custom-shadow-color': 'purple',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-alert-custom-text-color': 'blue',
+        '--terra-alert-custom-background-color': 'purple',
+        '--terra-alert-custom-shadow-color': 'purple',
+      },
     });
   });
 
