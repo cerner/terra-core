@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fix
+* Incorrect line-height inheritance.
 
 2.4.0 - (April 5, 2018)
 ------------------
