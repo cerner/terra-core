@@ -9,7 +9,7 @@ branches:
 cache: false
 before_install:
   - docker pull selenium/standalone-chrome:3.11
-  - docker run -v /dev/shm:/dev/shm -e TZ=America/Chicago -d -p 4444:4444 selenium/standalone-chrome:3.8.1-erbium
+  - docker run -v /dev/shm:/dev/shm -e TZ=America/Chicago -d -p 4444:4444 selenium/standalone-chrome:3.11
 before_deploy:
   - npm run compile:prod
 deploy:
