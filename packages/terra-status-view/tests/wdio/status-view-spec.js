@@ -8,11 +8,14 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+      },
     });
   });
 
@@ -21,22 +24,25 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
-      '--terra-status-view-message-color': 'purple',
-      '--terra-status-view-message-font-size': '24px',
-      '--terra-status-view-message-padding-top': '10px',
-      '--terra-status-view-message-text-align': 'left',
-      '--terra-status-view-divider-padding-top': '10px',
-      '--terra-status-view-actions-flex-direction-small-width': 'column',
-      '--terra-status-view-actions-padding-top': '10px',
-      '--terra-status-view-actions-button-flex': 'auto',
-      '--terra-status-view-actions-button-margin-left': '5px',
-      '--terra-status-view-actions-button-margin-right': '5px',
-      '--terra-status-view-actions-button-margin-top': '10px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+        '--terra-status-view-message-color': 'purple',
+        '--terra-status-view-message-font-size': '24px',
+        '--terra-status-view-message-padding-top': '10px',
+        '--terra-status-view-message-text-align': 'left',
+        '--terra-status-view-divider-padding-top': '10px',
+        '--terra-status-view-actions-flex-direction-small-width': 'column',
+        '--terra-status-view-actions-padding-top': '10px',
+        '--terra-status-view-actions-button-flex': 'auto',
+        '--terra-status-view-actions-button-margin-left': '5px',
+        '--terra-status-view-actions-button-margin-right': '5px',
+        '--terra-status-view-actions-button-margin-top': '10px',
+      },
     });
   });
 
@@ -45,11 +51,14 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+      },
     });
   });
 
@@ -58,22 +67,25 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
-      '--terra-status-view-message-color': 'purple',
-      '--terra-status-view-message-font-size': '24px',
-      '--terra-status-view-message-padding-top': '10px',
-      '--terra-status-view-message-text-align': 'left',
-      '--terra-status-view-divider-padding-top': '10px',
-      '--terra-status-view-actions-flex-direction-small-width': 'column',
-      '--terra-status-view-actions-padding-top': '10px',
-      '--terra-status-view-actions-button-flex': 'auto',
-      '--terra-status-view-actions-button-margin-left': '5px',
-      '--terra-status-view-actions-button-margin-right': '5px',
-      '--terra-status-view-actions-button-margin-top': '10px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+        '--terra-status-view-message-color': 'purple',
+        '--terra-status-view-message-font-size': '24px',
+        '--terra-status-view-message-padding-top': '10px',
+        '--terra-status-view-message-text-align': 'left',
+        '--terra-status-view-divider-padding-top': '10px',
+        '--terra-status-view-actions-flex-direction-small-width': 'column',
+        '--terra-status-view-actions-padding-top': '10px',
+        '--terra-status-view-actions-button-flex': 'auto',
+        '--terra-status-view-actions-button-margin-left': '5px',
+        '--terra-status-view-actions-button-margin-right': '5px',
+        '--terra-status-view-actions-button-margin-top': '10px',
+      },
     });
   });
 
@@ -82,11 +94,14 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+      },
     });
   });
 
@@ -95,11 +110,14 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+      },
     });
   });
 
@@ -108,11 +126,14 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+      },
     });
   });
 
@@ -121,11 +142,14 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+      },
     });
   });
 
@@ -134,22 +158,25 @@ describe('StatusView', () => {
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-size': '36px',
-      '--terra-status-view-message-color': 'purple',
-      '--terra-status-view-message-font-size': '24px',
-      '--terra-status-view-message-padding-top': '10px',
-      '--terra-status-view-message-text-align': 'left',
-      '--terra-status-view-divider-padding-top': '10px',
-      '--terra-status-view-actions-flex-direction-small-width': 'column',
-      '--terra-status-view-actions-padding-top': '10px',
-      '--terra-status-view-actions-button-flex': 'auto',
-      '--terra-status-view-actions-button-margin-left': '5px',
-      '--terra-status-view-actions-button-margin-right': '5px',
-      '--terra-status-view-actions-button-margin-top': '10px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-status-view-padding-bottom': '10px',
+        '--terra-status-view-padding-top': '10px',
+        '--terra-status-view-title-color': 'purple',
+        '--terra-status-view-title-font-size': '36px',
+        '--terra-status-view-message-color': 'purple',
+        '--terra-status-view-message-font-size': '24px',
+        '--terra-status-view-message-padding-top': '10px',
+        '--terra-status-view-message-text-align': 'left',
+        '--terra-status-view-divider-padding-top': '10px',
+        '--terra-status-view-actions-flex-direction-small-width': 'column',
+        '--terra-status-view-actions-padding-top': '10px',
+        '--terra-status-view-actions-button-flex': 'auto',
+        '--terra-status-view-actions-button-margin-left': '5px',
+        '--terra-status-view-actions-button-margin-right': '5px',
+        '--terra-status-view-actions-button-margin-top': '10px',
+      },
     });
   });
 });

@@ -8,9 +8,12 @@ describe('Divider', () => {
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
 
-    Terra.should.themeEachCustomProperty({
-      '--terra-divider-border-color': 'blue',
-      '--terra-divider-border-top-width': '10px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-divider-border-color': 'blue',
+        '--terra-divider-border-top-width': '10px',
+      },
     });
   });
 });
