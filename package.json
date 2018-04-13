@@ -64,9 +64,9 @@
     "postinstall:project": "link-parent-bin && npm run compile && npm run bootstrap",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
-    "start": "tds:serve --config webpack.config",
+    "start": "tt:serve --config webpack.config",
     "start:build": "npm run generate-config && npm run start",
-    "start-static": "tds:serve-static -site build",
+    "start-static": "tt:serve-static -site build",
     "test": "jest && nightwatch && wdio",
     "wdio": "wdio"
   },
