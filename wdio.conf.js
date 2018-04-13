@@ -5,6 +5,12 @@ const config = {
   ...wdioConf.config,
 
   webpackConfig,
+
+    // Configuration for SeleniumDocker service
+  seleniumDocker: {
+    enabled: !process.env.TRAVIS,
+  },
+
 };
 
 exports.config = config;
