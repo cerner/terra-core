@@ -68,7 +68,7 @@
     "start": "webpack-dev-server --progress",
     "start:build": "npm run generate-config && npm run start",
     "start:express": "node scripts/express/app.js",
-    "test": "jest && nightwatch && wdio",
+    "test": "jest --config ./jestconfig.json && nightwatch && wdio",
     "wdio": "wdio"
   },
   "devDependencies": {
