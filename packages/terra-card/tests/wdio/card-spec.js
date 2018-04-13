@@ -7,12 +7,15 @@ describe('Badge', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-card-background-color': 'yellow',
-      '--terra-card-border': '10px dashed purple',
-      '--terra-card-border-radius': '50px',
-      '--terra-card-box-shadow': 'inset 0 0 50px purple',
-      '--terra-card-color': 'purple',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-card-background-color': 'yellow',
+        '--terra-card-border': '10px dashed purple',
+        '--terra-card-border-radius': '50px',
+        '--terra-card-box-shadow': 'inset 0 0 50px purple',
+        '--terra-card-color': 'purple',
+      },
     });
   });
 
@@ -35,11 +38,14 @@ describe('Badge', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-card-padding-bottom': '50px',
-      '--terra-card-padding-top': '50px',
-      '--terra-card-padding-left': '50px',
-      '--terra-card-padding-right': '50px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-card-padding-bottom': '50px',
+        '--terra-card-padding-top': '50px',
+        '--terra-card-padding-left': '50px',
+        '--terra-card-padding-right': '50px',
+      },
     });
   });
 

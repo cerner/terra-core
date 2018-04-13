@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added aria-checked attribute to selected menu items.
 
+### Changed
+* Removed redunant peer dependencies.
+
 2.5.0 - (April 5, 2018)
 ------------------
 ### Changed

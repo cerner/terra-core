@@ -7,9 +7,10 @@ describe('Badge', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports, selector: '#default-badge' });
-    Terra.should.themeEachCustomProperty(
-      '#default-badge',
-      {
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      selector: '#default-badge',
+      properties: {
         '--terra-badge-border-radius': '20px',
         '--terra-badge-display': 'block',
         '--terra-badge-font-weight': 'normal',
@@ -20,7 +21,7 @@ describe('Badge', () => {
         '--terra-badge-padding-right': '50px',
         '--terra-badge-text-transform': 'uppercase',
       },
-    );
+    });
   });
 
   describe('Intent', () => {
@@ -28,21 +29,24 @@ describe('Badge', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-badge-background-color-default': 'pink',
-      '--terra-badge-background-color-primary': 'pink',
-      '--terra-badge-background-color-secondary': 'pink',
-      '--terra-badge-background-color-positive': 'pink',
-      '--terra-badge-background-color-negative': 'pink',
-      '--terra-badge-background-color-warning': 'pink',
-      '--terra-badge-background-color-info': 'pink',
-      '--terra-badge-color-default': 'pink',
-      '--terra-badge-color-primary': 'pink',
-      '--terra-badge-color-secondary': 'pink',
-      '--terra-badge-color-positive': 'pink',
-      '--terra-badge-color-negative': 'pink',
-      '--terra-badge-color-warning': 'pink',
-      '--terra-badge-color-info': 'pink',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-badge-background-color-default': 'pink',
+        '--terra-badge-background-color-primary': 'pink',
+        '--terra-badge-background-color-secondary': 'pink',
+        '--terra-badge-background-color-positive': 'pink',
+        '--terra-badge-background-color-negative': 'pink',
+        '--terra-badge-background-color-warning': 'pink',
+        '--terra-badge-background-color-info': 'pink',
+        '--terra-badge-color-default': 'pink',
+        '--terra-badge-color-primary': 'pink',
+        '--terra-badge-color-secondary': 'pink',
+        '--terra-badge-color-positive': 'pink',
+        '--terra-badge-color-negative': 'pink',
+        '--terra-badge-color-warning': 'pink',
+        '--terra-badge-color-info': 'pink',
+      },
     });
   });
 
@@ -51,12 +55,15 @@ describe('Badge', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-badge-font-size-tiny': '50px',
-      '--terra-badge-font-size-small': '50px',
-      '--terra-badge-font-size-medium': '50px',
-      '--terra-badge-font-size-large': '50px',
-      '--terra-badge-font-size-huge': '50px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-badge-font-size-tiny': '50px',
+        '--terra-badge-font-size-small': '50px',
+        '--terra-badge-font-size-medium': '50px',
+        '--terra-badge-font-size-large': '50px',
+        '--terra-badge-font-size-huge': '50px',
+      },
     });
   });
 

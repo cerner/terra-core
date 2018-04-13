@@ -68,23 +68,26 @@ describe('Tabs - Responsive', () => {
         browser.moveToObject('.tabContent');
       });
 
-      Terra.should.themeEachCustomProperty({
-        '--terra-tabs-structural-content-background-color': 'purple',
-        '--terra-tabs-structural-background-color': 'purple',
-        '--terra-tabs-structural-background-image': 'linear-gradient(to bottom, purple, purple)',
-        '--terra-tabs-structural-border-radius': '10px 10px 0 0',
-        '--terra-tabs-structural-color': 'purple',
-        '--terra-tabs-structural-active-background-color': 'purple',
-        '--terra-tabs-structural-active-background-size': '100% 10px',
-        '--terra-tabs-structural-active-color': 'purple',
-        '--terra-tabs-structural-disabled-background-color': 'purple',
-        '--terra-tabs-structural-disabled-color': 'purple',
-        '--terra-tabs-structural-disabled-opacity': '0.1',
-        '--terra-tabs-structural-disabled-label-opacity': '0',
-        '--terra-tabs-structural-border-color': 'purple',
-        '--terra-tabs-structural-last-tab-border-width': '1px',
-        '--terra-tabs-structural-tab-bar-border-color': 'purple',
-        '--terra-tabs-structural-tab-bar-border-width': '10px',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-tabs-structural-content-background-color': 'purple',
+          '--terra-tabs-structural-background-color': 'purple',
+          '--terra-tabs-structural-background-image': 'linear-gradient(to bottom, purple, purple)',
+          '--terra-tabs-structural-border-radius': '10px 10px 0 0',
+          '--terra-tabs-structural-color': 'purple',
+          '--terra-tabs-structural-active-background-color': 'purple',
+          '--terra-tabs-structural-active-background-size': '100% 10px',
+          '--terra-tabs-structural-active-color': 'purple',
+          '--terra-tabs-structural-disabled-background-color': 'purple',
+          '--terra-tabs-structural-disabled-color': 'purple',
+          '--terra-tabs-structural-disabled-opacity': '0.1',
+          '--terra-tabs-structural-disabled-label-opacity': '0',
+          '--terra-tabs-structural-border-color': 'purple',
+          '--terra-tabs-structural-last-tab-border-width': '1px',
+          '--terra-tabs-structural-tab-bar-border-color': 'purple',
+          '--terra-tabs-structural-tab-bar-border-width': '10px',
+        },
       });
 
       describe('Collapsible hover', () => {
@@ -96,11 +99,14 @@ describe('Tabs - Responsive', () => {
         Terra.should.matchScreenshot();
         Terra.should.beAccessible();
 
-        Terra.should.themeEachCustomProperty({
-          '--terra-tabs-structural-hover-background-color': 'purple',
-          '--terra-tabs-structural-hover-color': 'purple',
-          '--terra-tabs-structural-hover-background-size': '100% 3px',
-          '--terra-tabs-structural-hover-background-image': 'linear-gradient(to bottom, purple, purple)',
+        Terra.should.themeCombinationOfCustomProperties({
+          testName: 'themed',
+          properties: {
+            '--terra-tabs-structural-hover-background-color': 'purple',
+            '--terra-tabs-structural-hover-color': 'purple',
+            '--terra-tabs-structural-hover-background-size': '100% 3px',
+            '--terra-tabs-structural-hover-background-image': 'linear-gradient(to bottom, purple, purple)',
+          },
         });
       });
 
@@ -113,10 +119,13 @@ describe('Tabs - Responsive', () => {
         Terra.should.matchScreenshot();
         Terra.should.beAccessible();
 
-        Terra.should.themeEachCustomProperty({
-          '--terra-tabs-structural-active-focus-background-color': 'purple',
-          '--terra-tabs-structural-active-focus-color': 'purple',
-          '--terra-tabs-keyboard-focus-ltr-box-shadow': 'none',
+        Terra.should.themeCombinationOfCustomProperties({
+          testName: 'themed',
+          properties: {
+            '--terra-tabs-structural-active-focus-background-color': 'purple',
+            '--terra-tabs-structural-active-focus-color': 'purple',
+            '--terra-tabs-keyboard-focus-ltr-box-shadow': 'none',
+          },
         });
       });
     });
@@ -138,10 +147,13 @@ describe('Tabs - Responsive', () => {
     describe('Default', () => {
       beforeEach(() => browser.url('/#/raw/tests/tabs/tabs/default-tabs'));
 
-      Terra.should.themeEachCustomProperty({
-        '--terra-tabs-menu-arrow-left-margin': '50px',
-        '--terra-tabs-menu-collapsed-justify-content': 'center',
-        '--terra-tabs-structural-collapsed-menu-bar-border-color': 'purple',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-tabs-menu-arrow-left-margin': '50px',
+          '--terra-tabs-menu-collapsed-justify-content': 'center',
+          '--terra-tabs-structural-collapsed-menu-bar-border-color': 'purple',
+        },
       });
     });
   });
