@@ -12,6 +12,7 @@ const DocTemplateExamples = () => (
   <DocTemplate
     packageName="terra-docs-template"
     readme={readme}
+    srcPath={__filename}
     examples={[{ title: 'DocTemplate', source: SelfSrc, example: (<p>This very page was generated using the DocTemplate. The template supports more than one Props Table and example, even though those were not featured here.</p>) }]}
     propsTables={[{ componentName: 'DocTemplate', componentSource: DocTemplateSrc }]}
   />

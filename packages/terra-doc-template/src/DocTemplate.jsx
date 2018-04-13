@@ -14,6 +14,12 @@ const propTypes = {
    */
   readme: PropTypes.string,
   /**
+   * Either the path from the repository root to the documentation page (acquired by passing
+   * the value `__filename`), or for non-monorepo projects the path from the repository root
+   * to the desired file or folder
+   */
+  srcPath: PropTypes.string,
+  /**
    * All of the example(s) that will be displayed. An empty array is supported.
    * ```
    * title: The title of the example
@@ -52,12 +58,14 @@ const propTypes = {
 const defaultProps = {
   packageName: '',
   readme: '',
+  srcPath: '',
   examples: [],
   propsTables: [],
 };
 
 const DocTemplate = (props) => {
   const { packageName, readme, examples, propsTables } = props;
+  let srcPath = props.srcPath;
   let id = 0;
 
   // Assign unique identifiers to use as keys later
@@ -71,12 +79,26 @@ const DocTemplate = (props) => {
     id += 1;
   }
 
+  /**
+   * Check if the path given is to a documentation page.
+   * Matches the old site layout of having a terra-site package, and the new layout of having pages
+   * distributed with their source packages.
+   */
+  if (srcPath.contains('/packages/') && srcPath.contains('/examples/')) {
+    // If we're using the new format
+    if (srcPath.endsWith('site-page')) {
+      //
+      srcPath = srcPath.substring(0, srcPath.indexOf('/examples/'));
+    }
+  }
+
   const version = `[![NPM version](http://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})`;
 
   return (
     <div>
       {packageName && <Markdown src={version} />}
       {readme && <Markdown src={readme} />}
+      {srcPath && <a href={`https://github.com/cerner/terra-core/tree/master/${srcPath}`}>View component source code</a>}
 
       {examples.length > 0 && <h1 style={{ paddingBottom: '0.3em', borderBottom: '1px solid #eaecef' }}>Examples</h1>}
       {examples.map(example =>

@@ -18,4 +18,10 @@ webpackConfig.resolve.alias.moment = momentAlias;
 const i18nAlias = path.resolve(path.join(rootPath, 'packages', 'terra-i18n'));
 webpackConfig.resolve.alias['terra-i18n'] = i18nAlias;
 
+// Enable __filename for DocTemplate
+webpackConfig.node = {
+  ...webpackConfig.node,
+  __filename: true,
+};
+
 module.exports = webpackConfig;
