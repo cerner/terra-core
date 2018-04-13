@@ -6,10 +6,13 @@
      beforeEach(() => browser.url('/#/raw/tests/tabs/tab-pane/text-only-tab-pane'));
      Terra.should.matchScreenshot();
      Terra.should.beAccessible();
-     Terra.should.themeEachCustomProperty({
-       '--terra-tabs-font-size': '30px',
-       '--terra-tabs-line-height': '2',
-       '--terra-tabs-text-only-padding': '50px',
+     Terra.should.themeCombinationOfCustomProperties({
+       testName: 'themed',
+       properties: {
+         '--terra-tabs-font-size': '30px',
+         '--terra-tabs-line-height': '2',
+         '--terra-tabs-text-only-padding': '50px',
+       },
      });
    });
 
