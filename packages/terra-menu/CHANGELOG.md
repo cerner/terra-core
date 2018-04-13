@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed redunant peer dependencies.
 
 2.5.0 - (April 5, 2018)
 ------------------
