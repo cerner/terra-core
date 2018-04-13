@@ -10,11 +10,15 @@ import exampleSrc from '!raw-loader!./TestComponentExample.jsx';
 import testComponentSrc from '!raw-loader!./TestComponent.jsx';
 
 const Index = () => {
-  const propsTables = [{ componentSource: testComponentSrc, componentName: 'Test Component' },
-    { componentSource: testComponentSrc, componentName: 'Test Component (Again)' }];
+  const propsTables = [
+    { componentSource: testComponentSrc, componentName: 'Test Component' },
+    { componentSource: testComponentSrc, componentName: 'Test Component (Again)' },
+  ];
   const exampleElement = <TestComponentExample />;
-  const examples = [{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
-    { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }];
+  const examples = [
+    { title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
+    { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc },
+  ];
 
   return (
     <div id="DocTemplateContainer">

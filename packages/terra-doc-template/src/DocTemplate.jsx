@@ -6,7 +6,7 @@ import IndexExampleTemplate from './IndexPageTemplate';
 
 const propTypes = {
   /**
-   * The given component's package name
+   * The given component's npm package name
    */
   packageName: PropTypes.string,
   /**

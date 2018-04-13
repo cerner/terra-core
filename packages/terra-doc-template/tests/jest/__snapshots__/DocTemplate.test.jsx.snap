@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test should show the version 1`] = `
-<div>
-  <Markdown
-    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
-  />
-</div>
-`;
-
 exports[`should render a default component with nothing 1`] = `<div />`;
 
 exports[`should show multiple examples 1`] = `
@@ -90,6 +82,14 @@ exports[`should show the readme 1`] = `
 <div>
   <Markdown
     src="test-file-stub"
+  />
+</div>
+`;
+
+exports[`should show the version 1`] = `
+<div>
+  <Markdown
+    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
   />
 </div>
 `;

@@ -1,6 +1,6 @@
 # Terra Doc Template
 
-Provides an easily adjustable template for documentation pages
+Provides a template for documentation
 
 ## Getting Started
 

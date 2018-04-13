@@ -17,8 +17,9 @@ const defaultProps = {
   otherText: 'Bye.',
 };
 
-const TestComponent = props =>
-  (<p>{props.text}, {props.otherText}</p>);
+const TestComponent = props => (
+  <p>{props.text}, {props.otherText}</p>
+);
 
 TestComponent.propTypes = propTypes;
 TestComponent.defaultProps = defaultProps;
