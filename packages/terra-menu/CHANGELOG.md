@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.6.0 - (April 15, 2018)
+------------------
+### Changed
+* Minor version bump
 ### Changed
 * Removed redunant peer dependencies.
 
