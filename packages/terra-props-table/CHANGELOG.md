@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.4.0 - (April 15, 2018)
+------------------
 ### Changed
 * Fixed code blocks in the Description column not line wrapping
 
