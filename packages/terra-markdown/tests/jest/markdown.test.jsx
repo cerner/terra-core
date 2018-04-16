@@ -1,5 +1,5 @@
 import React from 'react';
-import Markdown from '../../lib/Markdown';
+import Markdown from '../../src/Markdown';
 import MockREADME from '../nightwatch/MockREADME.md';
 
 it('should render correctly', () => {
