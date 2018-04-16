@@ -1,8 +1,7 @@
 import React from 'react';
-import Modal from 'terra-modal';
-import styles from '../../site.scss';
+import AbstractModal from 'terra-abstract-modal';
 
-class ModalIsOpen extends React.Component {
+class AbstractModalIsFullscreen extends React.Component {
   constructor() {
     super();
 
@@ -25,31 +24,25 @@ class ModalIsOpen extends React.Component {
   render() {
     return (
       <div>
-        <Modal
-          ariaLabel="Default Modal"
+        <AbstractModal
+          ariaLabel="Fullscreen Modal"
           isOpen={this.state.isOpen}
+          isFullscreen
           onRequestClose={this.handleCloseModal}
         >
-          <div className={styles['demo-modal-content']}>
-            <h1>Default Modal</h1>
+          <div style={{ height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'aquamarine' }}>
+            <h1>Fullscreen Modal</h1>
             <br />
-            <p>You can close the modal by:</p>
-            <ul>
-              <li>- Pressing the ESC key</li>
-              <li>- Clicking on the overlay</li>
-              <li>- Clicking on the close button</li>
-            </ul>
-            <br />
-            <p>On smaller screens, the modal will take up the full screen.</p>
+            <p>This modal will always take up the full screen.</p>
             <p />
             <br />
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
-        </Modal>
+        </AbstractModal>
         <button onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }
 }
 
-export default ModalIsOpen;
+export default AbstractModalIsFullscreen;

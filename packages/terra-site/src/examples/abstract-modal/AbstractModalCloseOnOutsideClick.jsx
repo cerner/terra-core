@@ -1,8 +1,8 @@
 import React from 'react';
-import Modal from 'terra-modal';
-import styles from '../../site.scss';
+import AbstractModal from 'terra-abstract-modal';
+import styles from './ExampleAbstractSize.scss';
 
-class ModalCloseOnOutsideClick extends React.Component {
+class AbstractModalCloseOnOutsideClick extends React.Component {
   constructor() {
     super();
 
@@ -25,13 +25,14 @@ class ModalCloseOnOutsideClick extends React.Component {
   render() {
     return (
       <div>
-        <Modal
+        <AbstractModal
           ariaLabel="Modal disable close on outside click"
           isOpen={this.state.isOpen}
           closeOnOutsideClick={false}
           onRequestClose={this.handleCloseModal}
+          classNameModal={styles['fixed-size']}
         >
-          <div className={styles['demo-modal-content']}>
+          <div style={{ height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'lightgreen' }}>
             <h1>Modal disable close on outside click</h1>
             <br />
             <p>You can close the modal by:</p>
@@ -42,11 +43,11 @@ class ModalCloseOnOutsideClick extends React.Component {
             <br />
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
-        </Modal>
+        </AbstractModal>
         <button onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }
 }
 
-export default ModalCloseOnOutsideClick;
+export default AbstractModalCloseOnOutsideClick;

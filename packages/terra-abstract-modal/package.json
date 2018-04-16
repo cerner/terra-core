@@ -2,7 +2,7 @@
   "name": "terra-abstract-modal",
   "main": "lib/AbstractModal.js",
   "version": "0.0.0",
-  "description": "Modals are used to display content in a layer above the app. Modals consist of an overlay and container. Higher order components can provide the modal dialog with a header, body, and close button.",
+  "description": "The abstract modal is a structural component that provides the ability to display portal'd content in a layer above the app.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"

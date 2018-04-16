@@ -1,19 +1,17 @@
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import ReadMe from 'terra-modal/docs/README.md';
-import { version } from 'terra-modal/package.json';
+import ReadMe from 'terra-abstract-modal/docs/README.md';
+import { version } from 'terra-abstract-modal/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import ModalSrc from '!raw-loader!terra-modal/src/Modal';
+import ModalSrc from '!raw-loader!terra-abstract-modal/src/AbstractModal';
 
 // Example Files
-import ModalIsOpened from './ModalIsOpened';
-import ModalCloseOnOutsideClick from './ModalCloseOnOutsideClick';
-import ModalIsFullscreen from './ModalIsFullscreen';
-import ModalWithDialog from './ModalWithDialog';
-import DefaultWithDialog from './DefaultWithDialog';
+import AbstractModalIsOpened from './AbstractModalIsOpened';
+import AbstractModalCloseOnOutsideClick from './AbstractModalCloseOnOutsideClick';
+import AbstractModalIsFullscreen from './AbstractModalIsFullscreen';
 
 const ModalExamples = () => (
   <div>
@@ -21,18 +19,13 @@ const ModalExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props-table" src={ModalSrc} />
     <h2 id="isOpened">Default Modal</h2>
-    <ModalIsOpened />
+    <AbstractModalIsOpened />
     <br />
-    <h2 id="defaultWithDialog">Default Modal w/ Dialog</h2>
-    <DefaultWithDialog />
     <h2 id="closeOnOutsideClick">Disable closing the modal when clicking on the overlay</h2>
-    <ModalCloseOnOutsideClick />
+    <AbstractModalCloseOnOutsideClick />
     <br />
     <h2 id="isFullscreen">Fullscreen Modal</h2>
-    <ModalIsFullscreen />
-    <br />
-    <h2 id="fullWithDialog">Fullscreen Modal w/ Dialog</h2>
-    <ModalWithDialog />
+    <AbstractModalIsFullscreen />
   </div>
 );
 
