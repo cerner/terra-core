@@ -50,4 +50,9 @@ describe('Text', () => {
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
+
+  describe('Line-height calculated on text font size when parent has a different font size.', () => {
+    beforeEach(() => browser.url('/#/raw/tests/text/text-line-height'));
+    Terra.should.matchScreenshot();
+  });
 });

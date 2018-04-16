@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added page for terra-doc-template
 
+2.6.0 - (April 15, 2018)
+------------------
+### Changed
+* Minor version bump
+
 2.5.0 - (April 5, 2018)
 ------------------
 ### Changed
