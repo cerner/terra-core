@@ -1,5 +1,6 @@
 import React from 'react';
 import AbstractModal from '../../../lib/AbstractModal';
+import './AbstractModalTestStyles.scss';
 
 class ModalOverrideRole extends React.Component {
   constructor() {
@@ -30,6 +31,7 @@ class ModalOverrideRole extends React.Component {
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
           role={newRole}
+          classNameModal="test-background-class"
         >
           <div>
             <p>The role is overriden to <b>{newRole}</b></p>

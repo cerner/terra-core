@@ -1,5 +1,6 @@
 import React from 'react';
 import AbstractModal from '../../../lib/AbstractModal';
+import './AbstractModalTestStyles.scss';
 
 class ModalIsFullscreen extends React.Component {
   constructor() {
@@ -29,6 +30,7 @@ class ModalIsFullscreen extends React.Component {
           isOpen={this.state.isOpen}
           isFullscreen
           onRequestClose={this.handleCloseModal}
+          classNameModal="test-background-class"
         >
           <div>
             <h1>Terra Modal</h1>

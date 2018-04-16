@@ -1,5 +1,6 @@
 import React from 'react';
 import AbstractModal from '../../../lib/AbstractModal';
+import './AbstractModalTestStyles.scss';
 
 class ModalContentOverflow extends React.Component {
   constructor() {
@@ -28,6 +29,7 @@ class ModalContentOverflow extends React.Component {
           ariaLabel="Terra Modal Brett"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
+          classNameModal="test-background-class"
         >
           <div>
             <h1>Terra Modal</h1>

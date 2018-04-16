@@ -1,5 +1,6 @@
 import React from 'react';
 import AbstractModal from '../../../lib/AbstractModal';
+import './AbstractModalTestStyles.scss';
 
 class ModalDisableCloseOnOutsideClick extends React.Component {
   constructor() {
@@ -28,6 +29,7 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
           isOpen={this.state.isOpen}
           closeOnOutsideClick={false}
           onRequestClose={this.handleCloseModal}
+          classNameModal="test-background-class"
         >
           <div>
             <h1>Terra Modal</h1>

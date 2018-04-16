@@ -1,6 +1,6 @@
 import React from 'react';
 import AbstractModal from '../../../lib/AbstractModal';
-import './AbstractModalAppendClass.scss';
+import './AbstractModalTestStyles.scss';
 
 class ModalAppendClass extends React.Component {
   constructor() {
