@@ -74,6 +74,15 @@ import TerraSiteIndex52 from './packages/terra-site/src/examples/toggle-section-
 import TerraSiteIndex53 from './packages/terra-site/src/examples/toggle/Index';
 
 // Component Test Examples
+import AbstractModalAppendClass from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalAppendClass';
+import AbstractModalContentOverflow from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalContentOverflow';
+import AbstractModalCustomProps from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalCustomProps';
+import AbstractModalDisableCloseOnEsc from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalDisableCloseOnEsc';
+import AbstractModalDisableCloseOnOutsideClick from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalDisableCloseOnOutsideClick';
+import AbstractModalIsFullscreen from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalIsFullscreen';
+import AbstractModalIsOpen from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalIsOpen';
+import AbstractModalNoFocusableContent from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalNoFocusableContent';
+import AbstractModalOverrideRole from './packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalOverrideRole';
 import WithActionsActionFooterContainer from './packages/terra-action-footer/examples/test-examples/action-footer-container/WithActionsActionFooterContainer.example';
 import WithoutActionsActionFooterContainer from './packages/terra-action-footer/examples/test-examples/action-footer-container/WithoutActionsActionFooterContainer.example';
 import EmptyActionFooter from './packages/terra-action-footer/examples/test-examples/action-footer/EmptyActionFooter.example';
@@ -339,18 +348,6 @@ import SelectableAndUnselectableItemsMenu from './packages/terra-menu/tests/nigh
 import SelectableMenu from './packages/terra-menu/tests/nightwatch/menu/SelectableMenu';
 import SmallMenu from './packages/terra-menu/tests/nightwatch/menu/SmallMenu';
 import SubMenu from './packages/terra-menu/tests/nightwatch/menu/SubMenu';
-import ModalAppendClass from './packages/terra-modal/tests/nightwatch/components/ModalAppendClass';
-import ModalContentOverflow from './packages/terra-modal/tests/nightwatch/components/ModalContentOverflow';
-import ModalCustomProps from './packages/terra-modal/tests/nightwatch/components/ModalCustomProps';
-import ModalDialog from './packages/terra-modal/tests/nightwatch/components/ModalDialog';
-import ModalDisableCloseOnEsc from './packages/terra-modal/tests/nightwatch/components/ModalDisableCloseOnEsc';
-import ModalDisableCloseOnOutsideClick from './packages/terra-modal/tests/nightwatch/components/ModalDisableCloseOnOutsideClick';
-import ModalIsFullscreen from './packages/terra-modal/tests/nightwatch/components/ModalIsFullscreen';
-import ModalIsOpen from './packages/terra-modal/tests/nightwatch/components/ModalIsOpen';
-import ModalNoFocusableContent from './packages/terra-modal/tests/nightwatch/components/ModalNoFocusableContent';
-import ModalOverrideRole from './packages/terra-modal/tests/nightwatch/components/ModalOverrideRole';
-import ModalScrollableFalse from './packages/terra-modal/tests/nightwatch/components/ModalScrollableFalse';
-import ModalScrollableTrue from './packages/terra-modal/tests/nightwatch/components/ModalScrollableTrue';
 import AnimatedLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/AnimatedLoadingOverlay';
 import ClearLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/ClearLoadingOverlay';
 import ContainerLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/ContainerLoadingOverlay';
@@ -509,6 +506,57 @@ import DefaultToggle from './packages/terra-toggle/tests/nightwatch/DefaultToggl
 import OpenToggle from './packages/terra-toggle/tests/nightwatch/OpenToggle';
 
 const componentConfig = {
+  'terra-abstract-modal': {
+    name: 'Abstract Modal',
+    path: '/abstract-modal',
+    tests: [
+      {
+        name: 'Abstract Modal Append Class',
+        path: '/abstract-modal-append-class',
+        component: AbstractModalAppendClass,
+      },
+      {
+        name: 'Abstract Modal Content Overflow',
+        path: '/abstract-modal-content-overflow',
+        component: AbstractModalContentOverflow,
+      },
+      {
+        name: 'Abstract Modal Custom Props',
+        path: '/abstract-modal-custom-props',
+        component: AbstractModalCustomProps,
+      },
+      {
+        name: 'Abstract Modal Disable Close On Esc',
+        path: '/abstract-modal-disable-close-on-esc',
+        component: AbstractModalDisableCloseOnEsc,
+      },
+      {
+        name: 'Abstract Modal Disable Close On Outside Click',
+        path: '/abstract-modal-disable-close-on-outside-click',
+        component: AbstractModalDisableCloseOnOutsideClick,
+      },
+      {
+        name: 'Abstract Modal Is Fullscreen',
+        path: '/abstract-modal-is-fullscreen',
+        component: AbstractModalIsFullscreen,
+      },
+      {
+        name: 'Abstract Modal Is Open',
+        path: '/abstract-modal-is-open',
+        component: AbstractModalIsOpen,
+      },
+      {
+        name: 'Abstract Modal No Focusable Content',
+        path: '/abstract-modal-no-focusable-content',
+        component: AbstractModalNoFocusableContent,
+      },
+      {
+        name: 'Abstract Modal Override Role',
+        path: '/abstract-modal-override-role',
+        component: AbstractModalOverrideRole,
+      },
+    ],
+  },
   'terra-action-footer': {
     name: 'Action Footer',
     path: '/action-footer',
@@ -2197,72 +2245,6 @@ const componentConfig = {
             component: SubMenu,
           },
         ],
-      },
-    ],
-  },
-  'terra-modal': {
-    name: 'Modal',
-    path: '/modal',
-    tests: [
-      {
-        name: 'Modal Append Class',
-        path: '/modal-append-class',
-        component: ModalAppendClass,
-      },
-      {
-        name: 'Modal Content Overflow',
-        path: '/modal-content-overflow',
-        component: ModalContentOverflow,
-      },
-      {
-        name: 'Modal Custom Props',
-        path: '/modal-custom-props',
-        component: ModalCustomProps,
-      },
-      {
-        name: 'Modal Dialog',
-        path: '/modal-dialog',
-        component: ModalDialog,
-      },
-      {
-        name: 'Modal Disable Close On Esc',
-        path: '/modal-disable-close-on-esc',
-        component: ModalDisableCloseOnEsc,
-      },
-      {
-        name: 'Modal Disable Close On Outside Click',
-        path: '/modal-disable-close-on-outside-click',
-        component: ModalDisableCloseOnOutsideClick,
-      },
-      {
-        name: 'Modal Is Fullscreen',
-        path: '/modal-is-fullscreen',
-        component: ModalIsFullscreen,
-      },
-      {
-        name: 'Modal Is Open',
-        path: '/modal-is-open',
-        component: ModalIsOpen,
-      },
-      {
-        name: 'Modal No Focusable Content',
-        path: '/modal-no-focusable-content',
-        component: ModalNoFocusableContent,
-      },
-      {
-        name: 'Modal Override Role',
-        path: '/modal-override-role',
-        component: ModalOverrideRole,
-      },
-      {
-        name: 'Modal Scrollable False',
-        path: '/modal-scrollable-false',
-        component: ModalScrollableFalse,
-      },
-      {
-        name: 'Modal Scrollable True',
-        path: '/modal-scrollable-true',
-        component: ModalScrollableTrue,
       },
     ],
   },

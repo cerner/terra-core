@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should mount an open modal 1`] = `
+<ModalExample>
+  <div>
+    <Modal
+      ariaLabel="Terra Modal"
+      classNameModal={null}
+      classNameOverlay={null}
+      closeOnEsc={true}
+      closeOnOutsideClick={true}
+      isFocused={true}
+      isFullscreen={false}
+      isOpen={true}
+      onRequestClose={[Function]}
+      role="document"
+      zIndex="6000"
+    >
+      <Portal
+        isOpened={true}
+      >
+        <ModalContent
+          ariaLabel="Terra Modal"
+          classNameModal={null}
+          classNameOverlay={null}
+          closeOnOutsideClick={true}
+          isFocused={true}
+          isFullscreen={false}
+          isScrollable={false}
+          onRequestClose={[Function]}
+          role="document"
+          zIndex="6000"
+        >
+          <FocusTrap
+            _createFocusTrap={[Function]}
+            active={true}
+            focusTrapOptions={Object {}}
+            paused={false}
+            tag="div"
+          >
+            <div>
+              <ModalOverlay
+                className={null}
+                onClick={[Function]}
+                zIndex="6000"
+              >
+                <div
+                  className="overlay layer-6000"
+                  onClick={[Function]}
+                />
+              </ModalOverlay>
+              <div
+                aria-label="Terra Modal"
+                className="abstract-modal layer-6000"
+                role="document"
+                tabIndex="0"
+              >
+                <div>
+                  <h1>
+                    Terra Modal
+                  </h1>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Close Modal
+                  </button>
+                </div>
+              </div>
+            </div>
+          </FocusTrap>
+        </ModalContent>
+      </Portal>
+    </Modal>
+    <button
+      onClick={[Function]}
+    >
+      Open Modal
+    </button>
+  </div>
+</ModalExample>
+`;
+
+exports[`should mount an open modal 8000 z-index 1`] = `
+<ModalExample
+  zIndex="8000"
+>
+  <div>
+    <Modal
+      ariaLabel="Terra Modal"
+      classNameModal={null}
+      classNameOverlay={null}
+      closeOnEsc={true}
+      closeOnOutsideClick={true}
+      isFocused={true}
+      isFullscreen={false}
+      isOpen={true}
+      onRequestClose={[Function]}
+      role="document"
+      zIndex="8000"
+    >
+      <Portal
+        isOpened={true}
+      >
+        <ModalContent
+          ariaLabel="Terra Modal"
+          classNameModal={null}
+          classNameOverlay={null}
+          closeOnOutsideClick={true}
+          isFocused={true}
+          isFullscreen={false}
+          isScrollable={false}
+          onRequestClose={[Function]}
+          role="document"
+          zIndex="8000"
+        >
+          <FocusTrap
+            _createFocusTrap={[Function]}
+            active={true}
+            focusTrapOptions={Object {}}
+            paused={false}
+            tag="div"
+          >
+            <div>
+              <ModalOverlay
+                className={null}
+                onClick={[Function]}
+                zIndex="8000"
+              >
+                <div
+                  className="overlay layer-8000"
+                  onClick={[Function]}
+                />
+              </ModalOverlay>
+              <div
+                aria-label="Terra Modal"
+                className="abstract-modal layer-8000"
+                role="document"
+                tabIndex="0"
+              >
+                <div>
+                  <h1>
+                    Terra Modal
+                  </h1>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Close Modal
+                  </button>
+                </div>
+              </div>
+            </div>
+          </FocusTrap>
+        </ModalContent>
+      </Portal>
+    </Modal>
+    <button
+      onClick={[Function]}
+    >
+      Open Modal
+    </button>
+  </div>
+</ModalExample>
+`;
+
+exports[`should mount an open modal set to fullscreen 1`] = `
+<ModalExample
+  isFullscreen={true}
+>
+  <div>
+    <Modal
+      ariaLabel="Terra Modal"
+      classNameModal={null}
+      classNameOverlay={null}
+      closeOnEsc={true}
+      closeOnOutsideClick={true}
+      isFocused={true}
+      isFullscreen={true}
+      isOpen={true}
+      onRequestClose={[Function]}
+      role="document"
+      zIndex="6000"
+    >
+      <Portal
+        isOpened={true}
+      >
+        <ModalContent
+          ariaLabel="Terra Modal"
+          classNameModal={null}
+          classNameOverlay={null}
+          closeOnOutsideClick={true}
+          isFocused={true}
+          isFullscreen={true}
+          isScrollable={false}
+          onRequestClose={[Function]}
+          role="document"
+          zIndex="6000"
+        >
+          <FocusTrap
+            _createFocusTrap={[Function]}
+            active={true}
+            focusTrapOptions={Object {}}
+            paused={false}
+            tag="div"
+          >
+            <div>
+              <ModalOverlay
+                className={null}
+                onClick={[Function]}
+                zIndex="6000"
+              >
+                <div
+                  className="overlay layer-6000"
+                  onClick={[Function]}
+                />
+              </ModalOverlay>
+              <div
+                aria-label="Terra Modal"
+                className="abstract-modal is-fullscreen layer-6000"
+                role="document"
+                tabIndex="0"
+              >
+                <div>
+                  <h1>
+                    Terra Modal
+                  </h1>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Close Modal
+                  </button>
+                </div>
+              </div>
+            </div>
+          </FocusTrap>
+        </ModalContent>
+      </Portal>
+    </Modal>
+    <button
+      onClick={[Function]}
+    >
+      Open Modal
+    </button>
+  </div>
+</ModalExample>
+`;
+
+exports[`should shallow an open modal 1`] = `
+<div>
+  <Modal
+    ariaLabel="Terra Modal"
+    classNameModal={null}
+    classNameOverlay={null}
+    closeOnEsc={true}
+    closeOnOutsideClick={true}
+    isFocused={true}
+    isFullscreen={false}
+    isOpen={true}
+    onRequestClose={[Function]}
+    role="document"
+    zIndex="6000"
+  >
+    <div>
+      <h1>
+        Terra Modal
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        Close Modal
+      </button>
+    </div>
+  </Modal>
+  <button
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+</div>
+`;
+
+exports[`should shallow an open modal 6000 z-index 1`] = `
+<div>
+  <Modal
+    ariaLabel="Terra Modal"
+    classNameModal={null}
+    classNameOverlay={null}
+    closeOnEsc={true}
+    closeOnOutsideClick={true}
+    isFocused={true}
+    isFullscreen={false}
+    isOpen={true}
+    onRequestClose={[Function]}
+    role="document"
+    zIndex="6000"
+  >
+    <div>
+      <h1>
+        Terra Modal
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        Close Modal
+      </button>
+    </div>
+  </Modal>
+  <button
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+</div>
+`;
+
+exports[`should shallow an open modal 8000 z-index 1`] = `
+<div>
+  <Modal
+    ariaLabel="Terra Modal"
+    classNameModal={null}
+    classNameOverlay={null}
+    closeOnEsc={true}
+    closeOnOutsideClick={true}
+    isFocused={true}
+    isFullscreen={false}
+    isOpen={true}
+    onRequestClose={[Function]}
+    role="document"
+    zIndex="8000"
+  >
+    <div>
+      <h1>
+        Terra Modal
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        Close Modal
+      </button>
+    </div>
+  </Modal>
+  <button
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+</div>
+`;
