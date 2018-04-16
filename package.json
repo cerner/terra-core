@@ -66,7 +66,7 @@
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
     "start": "tt:serve --config webpack.config",
     "start:build": "npm run generate-config && npm run start",
-    "start-heroku": "tt:serve-static -site build",
+    "start-heroku": "tt:serve-static --site build",
     "test": "jest && nightwatch && wdio",
     "wdio": "wdio"
   },
