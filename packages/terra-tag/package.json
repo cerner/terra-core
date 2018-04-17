@@ -1,7 +1,7 @@
 {
   "name": "terra-tag",
   "main": "lib/Tag.js",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "The tag component is used for tagging and provides users a way to trigger actions in the UI. Each tag should have text. It can optionally display an icon along with the text.",
   "repository": {
     "type": "git",
@@ -23,12 +23,12 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.4.0"
+    "terra-base": "^3.5.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.4.0"
+    "terra-base": "^3.5.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

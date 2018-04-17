@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import marked from 'marked';
 /* github-markdown-css's main entry in package.json resolves to a CSS file and this seems to be causing issues with eslint */
 /* eslint-disable import/extensions */
-import 'github-markdown-css';
+import 'github-markdown-css/github-markdown.css';
 /* eslint-enable import/extensions */
 import './Markdown.scss';
 
