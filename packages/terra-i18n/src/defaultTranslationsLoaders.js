@@ -102,6 +102,22 @@ const loadFiFITranslation = (callback, scope) => {
   }, 'fi-FI-translations');
 };
 
+const loadNlTranslation = (callback, scope) => {
+  require.ensure([], (require) => {
+    // eslint-disable-next-line
+    const i18n = require('nl.js');
+    callback.call(scope, i18n);
+  }, 'nl-translations');
+};
+
+const loadNlBETranslation = (callback, scope) => {
+  require.ensure([], (require) => {
+    // eslint-disable-next-line
+    const i18n = require('nl-BE.js');
+    callback.call(scope, i18n);
+  }, 'nl-BE-translations');
+};
+
 const translationLoaders = {
   ar: loadArTranslation,
   en: loadEnTranslation,
@@ -116,6 +132,8 @@ const translationLoaders = {
   'es-US': loadEsUSTranslation,
   'es-ES': loadEsESTranslation,
   'fi-FI': loadFiFITranslation,
+  nl: loadNlTranslation,
+  'nl-BE': loadNlBETranslation,
 };
 
 module.exports = translationLoaders;

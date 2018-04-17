@@ -63,6 +63,16 @@ const loadFiFIIntl = () =>
     require => require('intl/locale-data/jsonp/fi-FI.js'),
     'fi-FI-intl-local');
 
+const loadNlIntl = () =>
+  require.ensure([],
+    require => require('intl/locale-data/jsonp/nl.js'),
+    'nl-intl-local');
+
+const loadNlBEIntl = () =>
+  require.ensure([],
+    require => require('intl/locale-data/jsonp/nl-BE.js'),
+    'nl-BE-intl-local');
+
 const intlLoaders = {
   ar: loadArIntl,
   en: loadEnIntl,
@@ -77,6 +87,8 @@ const intlLoaders = {
   'es-US': loadEsUSIntl,
   'es-ES': loadEsESIntl,
   'fi-FI': loadFiFIIntl,
+  nl: loadNlIntl,
+  'nl-BE': loadNlBEIntl,
 };
 
 module.exports = intlLoaders;
