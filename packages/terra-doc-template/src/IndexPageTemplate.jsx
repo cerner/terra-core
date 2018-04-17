@@ -25,9 +25,7 @@ const codeIndicator = '```';
 class IndexExampleTemplate extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = { panelIsOpen: false };
-
     this.handlePanelToggle = this.handlePanelToggle.bind(this);
   }
 
@@ -36,7 +34,7 @@ class IndexExampleTemplate extends React.Component {
   }
 
   render() {
-    const { title, example, exampleSrc, children, description } = this.props;
+    const { title, example, exampleSrc, children, description, ...customProps } = this.props;
 
     const indexExample = (
       <div>
@@ -61,6 +59,7 @@ class IndexExampleTemplate extends React.Component {
           panelContent={indexExampleSrc}
           isOpen={this.state.panelIsOpen}
           isFullscreen
+          {...customProps}
         />
         {children}
       </div>

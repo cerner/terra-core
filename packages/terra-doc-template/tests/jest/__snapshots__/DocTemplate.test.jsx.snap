@@ -5,12 +5,7 @@ exports[`should render a default component with nothing 1`] = `<div />`;
 exports[`should show multiple examples 1`] = `
 <div>
   <h1
-    style={
-      Object {
-        "borderBottom": "1px solid #eaecef",
-        "paddingBottom": "0.3em",
-      }
-    }
+    className=".examples-header"
   >
     Examples
   </h1>
@@ -49,12 +44,7 @@ exports[`should show multiple props tables 1`] = `
 exports[`should show one example 1`] = `
 <div>
   <h1
-    style={
-      Object {
-        "borderBottom": "1px solid #eaecef",
-        "paddingBottom": "0.3em",
-      }
-    }
+    className=".examples-header"
   >
     Examples
   </h1>
@@ -114,12 +104,7 @@ exports[`should show the version, readme, examples, and props tables 1`] = `
     src="test-file-stub"
   />
   <h1
-    style={
-      Object {
-        "borderBottom": "1px solid #eaecef",
-        "paddingBottom": "0.3em",
-      }
-    }
+    className=".examples-header"
   >
     Examples
   </h1>

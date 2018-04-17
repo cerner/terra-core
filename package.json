@@ -52,8 +52,8 @@
     "generate-config": "generate-config -s 'packages/terra-site/src/examples/**/+(Icon!(*Navigation|*Routes|*Tabs)|*Index).jsx' -s 'packages/terra-*/tests/{nightwatch,nightwatch/*}/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)' -s 'packages/terra-table/tests/nightwatch/*/components/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)'",
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:heroku",
-    "jest": "jest --config ./jestconfig.json",
-    "jest:coverage": "jest --coverage --config ./jestconfig.json",
+    "jest": "jest",
+    "jest:coverage": "jest --coverage",
     "link-parent-bin": "link-parent-bin",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx .",
@@ -68,7 +68,7 @@
     "start": "webpack-dev-server --progress",
     "start:build": "npm run generate-config && npm run start",
     "start:express": "node scripts/express/app.js",
-    "test": "jest --config ./jestconfig.json && nightwatch && wdio",
+    "test": "jest && nightwatch && wdio",
     "wdio": "wdio"
   },
   "devDependencies": {
