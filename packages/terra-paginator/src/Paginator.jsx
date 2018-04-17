@@ -7,27 +7,46 @@ import styles from './Paginator.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
- /*
- * Content to be displayed as the name
- */
-  name: PropTypes.string,
+  /*
+   * Function to be executed when a navigation element is selected.
+   */
+  onPageChange: PropTypes.func.isRequired,
+  /*
+   * The active/selected page.
+   */
+  selectedPage: PropTypes.number,
+  /*
+   * Total number of all items being paginated.
+   */
+  totalCount: PropTypes.number,
+  /*
+   * Total number of items per page.
+   */
+  itemCountPerPage: PropTypes.number,
 };
 
-const defaultProps = {
-  name: 'default',
-};
+class Paginator extends React.Component {
+  constructor(props) {
+    super(props);
 
-const Paginator = ({ name, ...customProps }) => {
-  const attributes = Object.assign({}, customProps);
-  const PaginatorClassNames = cx([
-    'paginator',
-    attributes.className,
-  ]);
+    const { onPageChange, selectedPage, totalCount, itemCountPerPage } = this.props;
 
-  return (<div {...attributes} className={PaginatorClassNames} />);
-};
+    this.state = {
+      selectedPage: selectedPage ? selectedPage : undefined,
+    };
+
+    this.handlePageChange = this.handlePageChange(this);
+  }
+
+  handlePageChange(e) {
+    return true;
+  }
+
+  render() {
+    return (<div onClick={this.handlePageChange}>Hello World!</div>);
+  }
+}
 
 Paginator.propTypes = propTypes;
-Paginator.defaultProps = defaultProps;
 
 export default Paginator;

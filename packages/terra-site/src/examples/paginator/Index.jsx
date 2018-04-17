@@ -10,12 +10,15 @@ import { version } from 'terra-paginator/package.json';
 import PaginatorSrc from '!raw-loader!terra-paginator/src/Paginator';
 
 // Example Files
+import SearchPaginatorExample from './SearchPaginatorExample';
 
 const PaginatorExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={PaginatorSrc} />
+    <h2>Search Paginator Example</h2>
+    <SearchPaginatorExample />
   </div>
 );
 

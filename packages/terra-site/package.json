@@ -65,6 +65,7 @@
     "terra-modal": "^2.5.0",
     "terra-modal-manager": "^1.18.0",
     "terra-overlay": "^2.6.0",
+    "terra-paginator": "^0.0.0",
     "terra-profile-image": "^2.5.0",
     "terra-progress-bar": "^2.5.0",
     "terra-props-table": "^2.4.0",
