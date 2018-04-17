@@ -22,7 +22,7 @@ const Index = () => {
 
   return (
     <div id="DocTemplateContainer">
-      <DocTemplate packageName="test-package-name" readme={readme} propsTables={propsTables} examples={examples} />
+      <DocTemplate packageName="test-package-name" readme={readme} srcPath={__filename} propsTables={propsTables} examples={examples} />
     </div>
   );
 };

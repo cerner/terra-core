@@ -73,3 +73,7 @@ it('should show the version, readme, examples, and props tables', () => {
   />);
   expect(wrapper).toMatchSnapshot();
 });
+
+it('should resolve source links in the new format', () => {
+  const wrapper = shallow(<DocTemplate srcLink="packages/terra-doc-template/" />);
+});
