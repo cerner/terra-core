@@ -143,4 +143,12 @@ describe('Form-Input', () => {
       });
     });
   });
+
+  describe('InputField', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/form-input/input-field');
+    });
+
+    Terra.should.matchScreenshot();
+  });
 });

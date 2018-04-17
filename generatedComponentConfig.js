@@ -25,9 +25,11 @@ import TerraSiteIndex19 from './packages/terra-site/src/examples/form-checkbox/I
 import TerraSiteIndex20 from './packages/terra-site/src/examples/form-field/Index';
 import TerraSiteIndex21 from './packages/terra-site/src/examples/form-fieldset/Index';
 import TerraSiteIndex22 from './packages/terra-site/src/examples/form-input/Index';
+import TerraSiteInputFieldIndex from './packages/terra-site/src/examples/form-input/InputFieldIndex';
 import TerraSiteIndex23 from './packages/terra-site/src/examples/form-radio/Index';
 import TerraSiteIndex24 from './packages/terra-site/src/examples/form-select/Index';
 import TerraSiteIndex25 from './packages/terra-site/src/examples/form-textarea/Index';
+import TerraSiteTextareaFieldIndex from './packages/terra-site/src/examples/form-textarea/TextareaFieldIndex';
 import TerraSiteIndex26 from './packages/terra-site/src/examples/form/Index';
 import TerraSiteControlIndex from './packages/terra-site/src/examples/form/components/ControlIndex';
 import TerraSiteFieldIndex from './packages/terra-site/src/examples/form/components/FieldIndex';
@@ -37,7 +39,7 @@ import TerraSiteNumberFieldIndex from './packages/terra-site/src/examples/form/c
 import TerraSiteSelectFieldIndex from './packages/terra-site/src/examples/form/components/SelectFieldIndex';
 import TerraSiteSelectIndex from './packages/terra-site/src/examples/form/components/SelectIndex';
 import TerraSiteTextFieldIndex from './packages/terra-site/src/examples/form/components/TextFieldIndex';
-import TerraSiteTextareaFieldIndex from './packages/terra-site/src/examples/form/components/TextareaFieldIndex';
+import TerraSiteTextareaFieldIndex1 from './packages/terra-site/src/examples/form/components/TextareaFieldIndex';
 import TerraSiteTextareaIndex from './packages/terra-site/src/examples/form/components/TextareaIndex';
 import TerraSiteIndex27 from './packages/terra-site/src/examples/grid/Index';
 import TerraSiteIndex28 from './packages/terra-site/src/examples/heading/Index';
@@ -216,6 +218,7 @@ import DefaultFieldset from './packages/terra-form-fieldset/tests/nightwatch/Def
 import PopulatedFieldset from './packages/terra-form-fieldset/tests/nightwatch/PopulatedFieldset';
 import DefaultFormInput from './packages/terra-form-input/tests/nightwatch/DefaultFormInput';
 import DisabledFormInput from './packages/terra-form-input/tests/nightwatch/DisabledFormInput';
+import InputField from './packages/terra-form-input/tests/nightwatch/InputField';
 import InvalidFormInput from './packages/terra-form-input/tests/nightwatch/InvalidFormInput';
 import OnChangeFormInput from './packages/terra-form-input/tests/nightwatch/OnChangeFormInput';
 import OnFocusFormInput from './packages/terra-form-input/tests/nightwatch/OnFocusFormInput';
@@ -251,6 +254,7 @@ import MediumTextarea from './packages/terra-form-textarea/tests/nightwatch/Medi
 import PopulatedTextarea from './packages/terra-form-textarea/tests/nightwatch/PopulatedTextarea';
 import RowsTextarea from './packages/terra-form-textarea/tests/nightwatch/RowsTextarea';
 import SmallTextarea from './packages/terra-form-textarea/tests/nightwatch/SmallTextarea';
+import TextareaField from './packages/terra-form-textarea/tests/nightwatch/TextareaField';
 import DefaultControl from './packages/terra-form/tests/nightwatch/control/DefaultControl';
 import PopulatedControl from './packages/terra-form/tests/nightwatch/control/PopulatedControl';
 import DefaultField from './packages/terra-form/tests/nightwatch/field/DefaultField';
@@ -1392,6 +1396,11 @@ const componentConfig = {
         component: DisabledFormInput,
       },
       {
+        name: 'Input Field',
+        path: '/input-field',
+        component: InputField,
+      },
+      {
         name: 'Invalid Form Input',
         path: '/invalid-form-input',
         component: InvalidFormInput,
@@ -1595,6 +1604,11 @@ const componentConfig = {
         name: 'Small Textarea',
         path: '/small-textarea',
         component: SmallTextarea,
+      },
+      {
+        name: 'Textarea Field',
+        path: '/textarea-field',
+        component: TextareaField,
       },
     ],
   },
@@ -2847,6 +2861,11 @@ const componentConfig = {
             path: '/index',
             component: TerraSiteIndex22,
           },
+          {
+            name: 'Input Field Index',
+            path: '/input-field-index',
+            component: TerraSiteInputFieldIndex,
+          },
         ],
       },
       {
@@ -2879,6 +2898,11 @@ const componentConfig = {
             name: 'Index',
             path: '/index',
             component: TerraSiteIndex25,
+          },
+          {
+            name: 'Textarea Field Index',
+            path: '/textarea-field-index',
+            component: TerraSiteTextareaFieldIndex,
           },
         ],
       },
@@ -2934,7 +2958,7 @@ const componentConfig = {
           {
             name: 'Textarea Field Index',
             path: '/textarea-field-index',
-            component: TerraSiteTextareaFieldIndex,
+            component: TerraSiteTextareaFieldIndex1,
           },
           {
             name: 'Textarea Index',

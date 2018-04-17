@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a InputField with props 1`] = `
+<Field
+  error="Text"
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help="Help"
+  hideRequired={true}
+  hideRequiredshowOptional={true}
+  htmlFor="test"
+  isInline={true}
+  isInvalid={true}
+  isLabelHidden={true}
+  label="Label Test"
+  labelAttrs={
+    Object {
+      "className": "label",
+    }
+  }
+  required={false}
+  showOptional={false}
+>
+  <Input
+    defaultValue="Value"
+    disabled={false}
+    id="test"
+    isInvalid={false}
+    name="test"
+    onChange={[Function]}
+    required={false}
+    type="number"
+    value="Value"
+  />
+</Field>
+`;
+
+exports[`should render a default InputField component 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Input
+    disabled={false}
+    isInvalid={false}
+    name={null}
+    required={false}
+  />
+</Field>
+`;
