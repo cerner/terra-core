@@ -3,7 +3,7 @@
 exports[`should mount an open modal 1`] = `
 <ModalExample>
   <div>
-    <Modal
+    <AbstractModal
       ariaLabel="Terra Modal"
       classNameModal={null}
       classNameOverlay={null}
@@ -70,7 +70,7 @@ exports[`should mount an open modal 1`] = `
           </FocusTrap>
         </ModalContent>
       </Portal>
-    </Modal>
+    </AbstractModal>
     <button
       onClick={[Function]}
     >
@@ -85,7 +85,7 @@ exports[`should mount an open modal 8000 z-index 1`] = `
   zIndex="8000"
 >
   <div>
-    <Modal
+    <AbstractModal
       ariaLabel="Terra Modal"
       classNameModal={null}
       classNameOverlay={null}
@@ -152,7 +152,7 @@ exports[`should mount an open modal 8000 z-index 1`] = `
           </FocusTrap>
         </ModalContent>
       </Portal>
-    </Modal>
+    </AbstractModal>
     <button
       onClick={[Function]}
     >
@@ -167,7 +167,7 @@ exports[`should mount an open modal set to fullscreen 1`] = `
   isFullscreen={true}
 >
   <div>
-    <Modal
+    <AbstractModal
       ariaLabel="Terra Modal"
       classNameModal={null}
       classNameOverlay={null}
@@ -234,7 +234,7 @@ exports[`should mount an open modal set to fullscreen 1`] = `
           </FocusTrap>
         </ModalContent>
       </Portal>
-    </Modal>
+    </AbstractModal>
     <button
       onClick={[Function]}
     >
@@ -246,7 +246,7 @@ exports[`should mount an open modal set to fullscreen 1`] = `
 
 exports[`should shallow an open modal 1`] = `
 <div>
-  <Modal
+  <AbstractModal
     ariaLabel="Terra Modal"
     classNameModal={null}
     classNameOverlay={null}
@@ -269,7 +269,7 @@ exports[`should shallow an open modal 1`] = `
         Close Modal
       </button>
     </div>
-  </Modal>
+  </AbstractModal>
   <button
     onClick={[Function]}
   >
@@ -280,7 +280,7 @@ exports[`should shallow an open modal 1`] = `
 
 exports[`should shallow an open modal 6000 z-index 1`] = `
 <div>
-  <Modal
+  <AbstractModal
     ariaLabel="Terra Modal"
     classNameModal={null}
     classNameOverlay={null}
@@ -303,7 +303,7 @@ exports[`should shallow an open modal 6000 z-index 1`] = `
         Close Modal
       </button>
     </div>
-  </Modal>
+  </AbstractModal>
   <button
     onClick={[Function]}
   >
@@ -314,7 +314,7 @@ exports[`should shallow an open modal 6000 z-index 1`] = `
 
 exports[`should shallow an open modal 8000 z-index 1`] = `
 <div>
-  <Modal
+  <AbstractModal
     ariaLabel="Terra Modal"
     classNameModal={null}
     classNameOverlay={null}
@@ -337,7 +337,7 @@ exports[`should shallow an open modal 8000 z-index 1`] = `
         Close Modal
       </button>
     </div>
-  </Modal>
+  </AbstractModal>
   <button
     onClick={[Function]}
   >

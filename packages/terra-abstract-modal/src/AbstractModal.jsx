@@ -75,7 +75,7 @@ const KEYCODES = {
   ESCAPE: 27,
 };
 
-class Modal extends React.Component {
+class AbstractModal extends React.Component {
   constructor() {
     super();
     this.handleKeydown = this.handleKeydown.bind(this);
@@ -149,7 +149,7 @@ class Modal extends React.Component {
   }
 }
 
-Modal.propTypes = propTypes;
-Modal.defaultProps = defaultProps;
+AbstractModal.propTypes = propTypes;
+AbstractModal.defaultProps = defaultProps;
 
-export default Modal;
+export default AbstractModal;
