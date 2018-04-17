@@ -26,6 +26,7 @@ const ModalExamples = () => (
     <br />
     <h2 id="isFullscreen">Fullscreen Modal</h2>
     <AbstractModalIsFullscreen />
+    <br />
   </div>
 );
 

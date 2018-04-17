@@ -16,7 +16,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  zIndex: false,
+  zIndex: '6000',
 };
 
 class ModalOverlay extends React.Component {
