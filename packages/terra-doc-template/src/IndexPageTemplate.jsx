@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import Markdown from 'terra-markdown';
 import Button from 'terra-button';
 import SlidePanel from 'terra-slide-panel';
+import classNames from 'classnames/bind';
+import styles from './IndexPageTemplate.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   example: PropTypes.element,
@@ -36,16 +40,18 @@ class IndexExampleTemplate extends React.Component {
   render() {
     const { title, example, exampleSrc, children, description, ...customProps } = this.props;
 
+    const buttonClassname = cx('slide-panel-control-button');
+
     const indexExample = (
       <div>
-        <Button text="Show Source Code" onClick={this.handlePanelToggle} data-terra-example-hide />
+        <Button text="Show Source Code" onClick={this.handlePanelToggle} className={buttonClassname} data-terra-example-hide />
         {example}
       </div>
     );
 
     const indexExampleSrc = (
       <div>
-        <Button text="Show Example" onClick={this.handlePanelToggle} data-terra-example-show />
+        <Button text="Show Example" onClick={this.handlePanelToggle} className={buttonClassname} data-terra-example-show />
         <Markdown src={`${codeIndicator}jsx\n${exampleSrc}${codeIndicator}`} />
       </div>
     );
