@@ -2,6 +2,16 @@
 
 exports[`should render a default component with nothing 1`] = `<div />`;
 
+exports[`should resolve source links in the new format 1`] = `
+<div>
+  <a
+    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template/"
+  >
+    View component source code
+  </a>
+</div>
+`;
+
 exports[`should show multiple examples 1`] = `
 <div>
   <h1
@@ -95,7 +105,7 @@ exports[`should show the version and readme 1`] = `
 </div>
 `;
 
-exports[`should show the version, readme, examples, and props tables 1`] = `
+exports[`should show the version, readme, source link, examples, and props tables 1`] = `
 <div>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
@@ -103,6 +113,11 @@ exports[`should show the version, readme, examples, and props tables 1`] = `
   <Markdown
     src="test-file-stub"
   />
+  <a
+    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template/"
+  >
+    View component source code
+  </a>
   <h1
     className=".examples-header"
   >

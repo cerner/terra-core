@@ -62,10 +62,11 @@ it('should show multiple props tables', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should show the version, readme, examples, and props tables', () => {
+it('should show the version, readme, source link, examples, and props tables', () => {
   const wrapper = shallow(<DocTemplate
     packageName="terra-doc-template"
     readme={readme}
+    srcPath="packages/terra-site/src/examples/doc-template/Index.jsx"
     examples={[{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
       { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }]}
     propsTables={[{ componentSource: testComponentSrc, componentName: 'Test Component' },
@@ -75,5 +76,6 @@ it('should show the version, readme, examples, and props tables', () => {
 });
 
 it('should resolve source links in the new format', () => {
-  const wrapper = shallow(<DocTemplate srcLink="packages/terra-doc-template/" />);
+  const wrapper = shallow(<DocTemplate srcPath="packages/terra-doc-template/examples/Index.site-page.jsx" />);
+  expect(wrapper).toMatchSnapshot();
 });
