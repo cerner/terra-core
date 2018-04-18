@@ -1,5 +1,5 @@
 const path = require('path');
-const webpackConfig = require('terra-dev-site/src/webpack/webpack.config')();
+const webpackConfig = require('terra-dev-site/config/webpack/webpack.config')();
 
 const processPath = process.cwd();
 const rootPath = processPath.includes('packages') ? processPath.split('packages')[0] : processPath;
