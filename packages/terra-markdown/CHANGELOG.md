@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Import css file inside github-markdown-css instead of importing package.
 
 2.2.0 - (March 30, 2018)
 ------------------

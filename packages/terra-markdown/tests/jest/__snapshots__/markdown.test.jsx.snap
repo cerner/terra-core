@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<Markdown
+  id="Markdown"
+  src="test-file-stub"
+>
+  <div
+    className="markdown-body"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>test-file-stub</p>
+",
+      }
+    }
+    dir="ltr"
+    style={
+      Object {
+        "listStyle": "initial",
+      }
+    }
+  />
+</Markdown>
+`;
