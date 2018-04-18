@@ -480,6 +480,7 @@ import DefaultText from './packages/terra-text/tests/nightwatch/DefaultText';
 import TextColor from './packages/terra-text/tests/nightwatch/TextColor';
 import TextFontSize from './packages/terra-text/tests/nightwatch/TextFontSize';
 import TextItalics from './packages/terra-text/tests/nightwatch/TextItalics';
+import TextLineHeight from './packages/terra-text/tests/nightwatch/TextLineHeight';
 import TextVisualProps from './packages/terra-text/tests/nightwatch/TextVisualProps';
 import TextVisuallyHidden from './packages/terra-text/tests/nightwatch/TextVisuallyHidden';
 import TextWeight from './packages/terra-text/tests/nightwatch/TextWeight';
@@ -3756,6 +3757,11 @@ const componentConfig = {
         name: 'Text Italics',
         path: '/text-italics',
         component: TextItalics,
+      },
+      {
+        name: 'Text Line Height',
+        path: '/text-line-height',
+        component: TextLineHeight,
       },
       {
         name: 'Text Visual Props',

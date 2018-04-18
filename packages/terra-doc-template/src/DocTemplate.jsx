@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
+import classNames from 'classnames/bind';
 import IndexExampleTemplate from './IndexPageTemplate';
+import styles from './DocTemplate.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -63,19 +67,20 @@ const defaultProps = {
   propsTables: [],
 };
 
-const DocTemplate = (props) => {
-  const { packageName, readme, examples, propsTables } = props;
-  let srcPath = props.srcPath;
+const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...customProps }) => {
   let id = 0;
+  let finalSrcPath = srcPath;
+  const localExamples = examples;
+  const localPropsTables = propsTables;
 
   // Assign unique identifiers to use as keys later
-  for (let i = 0; i < examples.length; i += 1) {
-    examples[i].id = id;
+  for (let i = 0; i < localExamples.length; i += 1) {
+    localExamples[i].id = id;
     id += 1;
   }
 
-  for (let i = 0; i < propsTables.length; i += 1) {
-    propsTables[i].id = id;
+  for (let i = 0; i < localPropsTables.length; i += 1) {
+    localPropsTables[i].id = id;
     id += 1;
   }
 
@@ -88,20 +93,20 @@ const DocTemplate = (props) => {
     // If we're using the new format
     if (srcPath.endsWith('site-page')) {
       //
-      srcPath = srcPath.substring(0, srcPath.indexOf('/examples/'));
+      finalSrcPath = srcPath.substring(0, srcPath.indexOf('/examples/'));
     }
   }
 
   const version = `[![NPM version](http://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})`;
 
   return (
-    <div>
+    <div {...customProps}>
       {packageName && <Markdown src={version} />}
       {readme && <Markdown src={readme} />}
       {srcPath && <a href={`https://github.com/cerner/terra-core/tree/master/${srcPath}`}>View component source code</a>}
 
-      {examples.length > 0 && <h1 style={{ paddingBottom: '0.3em', borderBottom: '1px solid #eaecef' }}>Examples</h1>}
-      {examples.map(example =>
+      {localExamples.length > 0 && <h1 className={cx('.examples-header')} >Examples</h1>}
+      {localExamples.map(example =>
         <IndexExampleTemplate
           title={example.title}
           example={example.example}
@@ -111,7 +116,7 @@ const DocTemplate = (props) => {
         />,
       )}
 
-      {propsTables.map(propsTable =>
+      {localPropsTables.map(propsTable =>
         <PropsTable
           src={propsTable.componentSource}
           componentName={propsTable.componentName}

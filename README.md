@@ -44,6 +44,8 @@ Components in beta stage may include breaking changes, new features, and bug fix
 
 | Terra Package      | Version | Status |
 |--------------------|---------|--------|
+| [terra-action-footer](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer) | [![NPM version](http://img.shields.io/npm/v/terra-action-footer.svg)](https://www.npmjs.org/package/terra-action-footer) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
+| [terra-action-header](https://github.com/cerner/terra-core/tree/master/packages/terra-action-header) | [![NPM version](http://img.shields.io/npm/v/terra-action-header.svg)](https://www.npmjs.org/package/terra-action-header) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert) | [![NPM version](http://img.shields.io/npm/v/terra-alert.svg)](https://www.npmjs.org/package/terra-alert) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-arrange](https://github.com/cerner/terra-core/tree/master/packages/terra-arrange) | [![NPM version](http://img.shields.io/npm/v/terra-arrange.svg)](https://www.npmjs.org/package/terra-arrange) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | terra-application | [![NPM version](http://img.shields.io/npm/v/terra-application.svg)](https://www.npmjs.org/package/terra-application) | ![Stable](https://img.shields.io/badge/status-Deprecated-lightgrey.svg) |

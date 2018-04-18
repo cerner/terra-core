@@ -7,8 +7,8 @@ describe('DocTemplate', () => {
 
     Terra.should.matchScreenshot('Readme', { selector: '#DocTemplateContainer > div > div:nth-child(2)' });
     Terra.should.matchScreenshot('Example 1', { selector: '#DocTemplateContainer > div > div:nth-child(4)' });
-    Terra.should.matchScreenshot('PropsTable 1', { selector: '#DocTemplateContainer > div > div:nth-child(6)', viewports: [{ width: 1000, height: 1000 }] });
-    Terra.should.beAccessible(Terra.viewports('huge'));
+    Terra.should.matchScreenshot('PropsTable 1', { selector: '#DocTemplateContainer > div > div:nth-child(6)', viewports: [{ width: 500, height: 1000 }] });
+    Terra.should.beAccessible({ viewports: Terra.viewports('huge') });
   });
 
   describe('Interactivity test', () => {
@@ -17,6 +17,8 @@ describe('DocTemplate', () => {
     it('Reveals the example\'s code', () => {
       const button = browser.element('[data-terra-example-hide]');
       button.click();
+      // Scroll off button so on hover styling doesn't ruin tests
+      browser.scroll(0, 0);
 
       // Give time for the animation to complete
       browser.pause(250);
@@ -34,6 +36,8 @@ describe('DocTemplate', () => {
 
       button = browser.element('[data-terra-example-show]');
       button.click();
+      // Scroll off button so on hover styling doesn't ruin tests
+      browser.scroll(0, 0);
 
       browser.pause(250);
 
