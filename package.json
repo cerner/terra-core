@@ -38,6 +38,8 @@
       "\\.(css|scss)$": "identity-obj-proxy"
     }
   },
+  "workspaces": ["packages/*"],
+  "nohoist": ["**/moment", "**/moment/**"],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean:all": "lerna clean --yes && node scripts/clean-modules/index.js",
@@ -61,8 +63,8 @@
     "nightwatch": "nightwatch",
     "pretest": "npm run lint",
     "postinstall": "node scripts/post-install/index.js",
-    "postinstall:package": "npm run compile && npm run bootstrap",
-    "postinstall:project": "link-parent-bin && npm run compile && npm run bootstrap",
+    "postinstall:package": "npm run compile",
+    "postinstall:project": "npm run compile",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
     "start": "webpack-dev-server --progress",
