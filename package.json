@@ -39,6 +39,7 @@
     }
   },
   "workspaces": ["packages/*"],
+  "nohoist": ["**/moment", "**/moment/**"],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean:all": "lerna clean --yes && node scripts/clean-modules/index.js",
