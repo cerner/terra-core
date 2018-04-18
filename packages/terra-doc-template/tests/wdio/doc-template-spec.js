@@ -17,8 +17,8 @@ describe('DocTemplate', () => {
     it('Reveals the example\'s code', () => {
       const button = browser.element('[data-terra-example-hide]');
       button.click();
-      /* // Scroll off button so on hover styling doesn't ruin tests
-      button.scroll(500, 0);*/
+      // Scroll off button so on hover styling doesn't ruin tests
+      browser.scroll(0, 0);
 
       // Give time for the animation to complete
       browser.pause(250);
@@ -36,8 +36,8 @@ describe('DocTemplate', () => {
 
       button = browser.element('[data-terra-example-show]');
       button.click();
-      /* // Scroll off button so on hover styling doesn't ruin tests
-      button.scroll(500, 0);*/
+      // Scroll off button so on hover styling doesn't ruin tests
+      browser.scroll(0, 0);
 
       browser.pause(250);
 
