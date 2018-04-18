@@ -18,6 +18,10 @@ const customDirectories = (baseDirectory, directories) =>
   (directories.map(dir => path.resolve(baseDirectory, dir)));
 
 const aggregatedTranslations = (options) => {
+  // eslint-disable-next-line no-console
+  console.warn('WARNING: The terra-i18n aggregate-translations command has moved to terra terra-toolkit. Please use the "tt:aggregate-translations" command instead or include it from there. e.x. "require(\'terra-toolkit/scripts/aggregate-translations/aggregate-translations\')"');
+
+
   const baseDir = (options || {}).baseDir || process.cwd();
   const directories = (options || {}).directories || [];
   const fileSystem = (options || {}).outputFileSystem || fse;

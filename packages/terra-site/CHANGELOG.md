@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed stylelint issues
 
 2.6.0 - (April 15, 2018)
 ------------------
