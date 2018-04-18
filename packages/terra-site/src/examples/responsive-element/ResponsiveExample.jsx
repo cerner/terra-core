@@ -26,7 +26,7 @@ class ResponsiveExample extends React.Component {
           <option value="large">Large</option>
           <option value="huge">Huge</option>
         </select>
-        <div className={`terra-ResponsiveExample-container terra-ResponsiveExample-container--${this.state.size}`}>
+        <div className={`terra-responsive-example-container terra-responsive-example-container--${this.state.size}`}>
           <ResponsiveElement {...this.props} />
         </div>
       </div>

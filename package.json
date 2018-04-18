@@ -57,7 +57,7 @@
     "link-parent-bin": "link-parent-bin",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx .",
-    "lint:scss": "lerna run lint:scss",
+    "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
     "nightwatch": "nightwatch",
     "pretest": "npm run lint",
     "postinstall": "node scripts/post-install/index.js",
