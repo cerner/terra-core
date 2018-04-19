@@ -25,7 +25,7 @@ it('should render a TextareaField with props', () => {
       label="Label Test"
       labelAttrs={{ className: 'label' }}
       onChange={() => {}}
-      hideRequiredshowOptional
+      showOptional
       value="Value"
     />
   );

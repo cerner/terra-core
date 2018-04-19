@@ -27,7 +27,7 @@ it('should render a InputField with props', () => {
         className: 'label',
       }}
       onChange={() => {}}
-      hideRequiredshowOptional
+      showOptional
       value="Value"
     />
   );
