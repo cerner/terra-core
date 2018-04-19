@@ -59,7 +59,7 @@ const SelectableList = ({
   });
 
   return (
-    <List isDivided={isDivided} {...customProps}>
+    <List isDivided={isDivided} role="listbox" {...customProps}>
       {clonedChildren}
     </List>
   );

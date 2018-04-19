@@ -152,9 +152,11 @@ class MenuItem extends React.Component {
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
     }
 
+    const markAsSelected = this.state.isSelected || (isGroupItem && isSelected);
+
     const itemClassNames = cx([
       'item',
-      { selected: this.state.isSelected || (isGroupItem && isSelected) },
+      { selected: markAsSelected },
       { 'is-disabled': isDisabled },
       attributes.className,
     ]);
@@ -181,7 +183,7 @@ class MenuItem extends React.Component {
     }
 
     return (
-      <li {...attributes} className={itemClassNames} ref={this.setItemNode} role={role} >
+      <li {...attributes} className={itemClassNames} ref={this.setItemNode} role={role} aria-checked={markAsSelected}>
         {content}
       </li>
     );
