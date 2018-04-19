@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconNext from 'terra-icon/lib/icon/IconNext';
 import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
+import { calculatePages, pageSequence } from './_paginationUtils';
 
 import 'terra-base/lib/baseStyles';
 import styles from './Paginator.scss';
@@ -29,55 +30,67 @@ const propTypes = {
   itemCountPerPage: PropTypes.number,
 };
 
-const calculatePages = (totalCount, itemCountPerPage) => Math.ceil(totalCount / itemCountPerPage);
-
-const pageSequence = (index, totalPages) => {
-  var sequence = [];
-  var numberShiftPoint = 7;
-  var maxPagesDisplayed = 10;
-  var previousSequenceCount = 5;
-  var nextSequenceCount = 4;
-
-  if (index < numberShiftPoint) {
-    for (var i = 1; i <= 10; i++) {
-      sequence.push(i);
-    }
-  } else if (index <= totalPages && index > totalPages - previousSequenceCount) {
-    for (var i = totalPages; i > totalPages - maxPagesDisplayed; i--) {
-      sequence.push(i);
-    }
-  } else {
-    for (var i = index; i >= index - previousSequenceCount; i--) {
-      sequence.push(i);
-    }
-
-    for (var i = index + 1; i <= index + nextSequenceCount; i++) {
-      sequence.push(i);
-    }
-  }
-
-  return sequence.sort((a, b) => a - b);
-}
-
 class Paginator extends React.Component {
   constructor(props) {
     super(props);
 
-    const { onPageChange, selectedPage, totalCount, itemCountPerPage } = this.props;
+    const { selectedPage, totalCount } = this.props;
 
     this.state = {
-      selectedPage: selectedPage ? selectedPage : undefined,
+      selectedPage: selectedPage && totalCount ? selectedPage : undefined,
+      pageSequence: selectedPage && totalCount ? pageSequence(selectedPage, totalCount) : undefined,
     };
 
-    this.handlePageChange = this.handlePageChange(this);
+    this.handlePageChange = this.handlePageChange.bind(this);
+    this.buildPageButtons = this.buildPageButtons.bind(this);
   }
 
-  handlePageChange(e) {
-    return true;
+  handlePageChange(index) {
+    if (index < 1) {
+      index = 1;
+    } else if (index > calculatePages(this.props.totalCount, this.props.itemCountPerPage)) {
+      index = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
+    }
+
+    return (event) => {
+      this.props.onPageChange(event, index);
+      this.setState({ selectedPage: index, pageSequence: pageSequence(index, this.props.totalCount) });
+    }
+  }
+
+  buildPageButtons(totalPages, onClick) {
+    const { pageSequence, selectedPage } = this.state;
+
+    var pageButtons = [];
+
+    pageSequence.forEach((val) => {
+      const paginationLinkClassNames = cx([
+        'nav-link',
+        val === selectedPage ? 'is-selected' : null,
+      ]);
+
+      if (val > totalPages) {
+        return;
+      }
+
+      pageButtons.push(<a className={paginationLinkClassNames} key={`pageButton_${val}`} onClick={onClick(val)}>{val}</a>);
+    });
+
+    return pageButtons;
   }
 
   render() {
-    return (<div onClick={this.handlePageChange}>Hello World!</div>);
+    const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
+
+    return (
+      <div className={cx('paginator')}>
+        <a className={cx('nav-link')} onClick={this.handlePageChange(1)}>First</a>
+        <a className={cx('nav-link')} onClick={this.handlePageChange(this.state.selectedPage - 1)}>{<IconPrevious />} Previous</a>
+        {this.buildPageButtons(totalPages, this.handlePageChange)}
+        <a className={cx('nav-link')} onClick={this.handlePageChange(this.state.selectedPage + 1)}>Next {<IconNext />}</a>
+        <a className={cx('nav-link')} onClick={this.handlePageChange(totalPages)}>Last</a>
+      </div>
+    );
   }
 }
 
