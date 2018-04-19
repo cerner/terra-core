@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Export FormattedMessage from react-intl
 
 2.5.0 - (April 15, 2018)
 ------------------
