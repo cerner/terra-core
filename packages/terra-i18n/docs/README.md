@@ -30,6 +30,8 @@ The `I18nProvider` component configures the react-intl's `IntlProvider` and supp
 | fi-FI | Finnish - Finland |
 | fr | French |
 | fr-FR | French - France|
+| nl | Dutch |
+| nl-BE | Dutch (Belgium)|
 | pt | Portuguese |
 | pt-BR | Portuguese - Brazil|
 
