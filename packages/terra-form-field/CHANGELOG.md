@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* updated doc for error prop type.
 
 2.5.0 - (April 15, 2018)
 ------------------
