@@ -129,7 +129,7 @@ const wrappedOnKeyDownForItem = (item, index, onChange) => {
  */
 const newPropsForItem = (item, index, onClick, onKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems) => {
   const isSelected = selectedIndexes.indexOf(index) >= 0;
-  const newProps = {};
+  const newProps = { role: 'option', 'aria-selected': isSelected };
 
   // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
   if (isSelected !== item.isSelected) {
