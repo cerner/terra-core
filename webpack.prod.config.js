@@ -2,7 +2,7 @@
 // not devDependencies. Disabling this rule in webpack.conig.js
 /* eslint-disable import/no-extraneous-dependencies */
 
-const config = require('./webpack.config');
+const config = require('./webpack.config')();
 const CleanPlugin = require('clean-webpack-plugin');
 const path = require('path');
 

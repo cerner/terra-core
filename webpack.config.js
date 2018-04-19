@@ -1,13 +1,26 @@
 const path = require('path');
-const webpackConfig = require('terra-dev-site/config/webpack/webpack.config')();
+const merge = require('webpack-merge');
+const defaultWebpackConfig = require('terra-dev-site/config/webpack/webpack.config');
 
-const processPath = process.cwd();
-const rootPath = processPath.includes('packages') ? processPath.split('packages')[0] : processPath;
+const coreConfig = () => {
+  const processPath = process.cwd();
+  const rootPath = processPath.includes('packages') ? processPath.split('packages')[0] : processPath;
 
-const momentAlias = path.resolve(path.join(rootPath, 'packages', 'terra-date-time-picker', 'node_modules', 'moment'));
-webpackConfig.resolve.alias.moment = momentAlias;
+  const momentAlias = path.resolve(path.join(rootPath, 'packages', 'terra-date-time-picker', 'node_modules', 'moment'));
 
-const i18nAlias = path.resolve(path.join(rootPath, 'packages', 'terra-i18n'));
-webpackConfig.resolve.alias['terra-i18n'] = i18nAlias;
+  const i18nAlias = path.resolve(path.join(rootPath, 'packages', 'terra-i18n'));
+  return {
+    resolve: {
+      alias: {
+        moment: momentAlias,
+        'terra-i18n': i18nAlias,
+      },
+    },
+  };
+};
 
-module.exports = webpackConfig;
+const mergedConfig = (env, argv) => (
+  merge(defaultWebpackConfig(env, argv), coreConfig())
+);
+
+module.exports = mergedConfig;
