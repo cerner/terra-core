@@ -225,9 +225,9 @@ import FieldInteractiveInvalid from './packages/terra-form-field/tests/nightwatc
 import FieldTextWrap from './packages/terra-form-field/tests/nightwatch/FieldTextWrap';
 import DefaultFieldset from './packages/terra-form-fieldset/tests/nightwatch/DefaultFieldset';
 import PopulatedFieldset from './packages/terra-form-fieldset/tests/nightwatch/PopulatedFieldset';
+import InputField from './packages/terra-form-input/examples/test-examples/InputField.example';
 import DefaultFormInput from './packages/terra-form-input/tests/nightwatch/DefaultFormInput';
 import DisabledFormInput from './packages/terra-form-input/tests/nightwatch/DisabledFormInput';
-import InputField from './packages/terra-form-input/tests/nightwatch/InputField';
 import InvalidFormInput from './packages/terra-form-input/tests/nightwatch/InvalidFormInput';
 import OnChangeFormInput from './packages/terra-form-input/tests/nightwatch/OnChangeFormInput';
 import OnFocusFormInput from './packages/terra-form-input/tests/nightwatch/OnFocusFormInput';
@@ -250,6 +250,7 @@ import DisabledSelect from './packages/terra-form-select/tests/nightwatch/select
 import HiddenPlaceholderSelect from './packages/terra-form-select/tests/nightwatch/select/HiddenPlaceholderSelect';
 import InvalidSelect from './packages/terra-form-select/tests/nightwatch/select/InvalidSelect';
 import SelectLongText from './packages/terra-form-select/tests/nightwatch/select/SelectLongText';
+import TextareaField from './packages/terra-form-textarea/examples/test-examples/TextareaField.example';
 import AutoResizableTextarea from './packages/terra-form-textarea/tests/nightwatch/AutoResizableTextarea';
 import AutoResizableTextareaMobileDocumentTouch from './packages/terra-form-textarea/tests/nightwatch/AutoResizableTextareaMobileDocumentTouch';
 import AutoResizableTextareaMobileMaxTouchPoints from './packages/terra-form-textarea/tests/nightwatch/AutoResizableTextareaMobileMaxTouchPoints';
@@ -263,7 +264,6 @@ import MediumTextarea from './packages/terra-form-textarea/tests/nightwatch/Medi
 import PopulatedTextarea from './packages/terra-form-textarea/tests/nightwatch/PopulatedTextarea';
 import RowsTextarea from './packages/terra-form-textarea/tests/nightwatch/RowsTextarea';
 import SmallTextarea from './packages/terra-form-textarea/tests/nightwatch/SmallTextarea';
-import TextareaField from './packages/terra-form-textarea/tests/nightwatch/TextareaField';
 import DefaultControl from './packages/terra-form/tests/nightwatch/control/DefaultControl';
 import PopulatedControl from './packages/terra-form/tests/nightwatch/control/PopulatedControl';
 import DefaultField from './packages/terra-form/tests/nightwatch/field/DefaultField';
@@ -1434,6 +1434,11 @@ const componentConfig = {
     path: '/form-input',
     tests: [
       {
+        name: 'Input Field',
+        path: '/input-field',
+        component: InputField,
+      },
+      {
         name: 'Default Form Input',
         path: '/default-form-input',
         component: DefaultFormInput,
@@ -1442,11 +1447,6 @@ const componentConfig = {
         name: 'Disabled Form Input',
         path: '/disabled-form-input',
         component: DisabledFormInput,
-      },
-      {
-        name: 'Input Field',
-        path: '/input-field',
-        component: InputField,
       },
       {
         name: 'Invalid Form Input',
@@ -1589,6 +1589,11 @@ const componentConfig = {
     path: '/form-textarea',
     tests: [
       {
+        name: 'Textarea Field',
+        path: '/textarea-field',
+        component: TextareaField,
+      },
+      {
         name: 'Auto Resizable Textarea',
         path: '/auto-resizable-textarea',
         component: AutoResizableTextarea,
@@ -1652,11 +1657,6 @@ const componentConfig = {
         name: 'Small Textarea',
         path: '/small-textarea',
         component: SmallTextarea,
-      },
-      {
-        name: 'Textarea Field',
-        path: '/textarea-field',
-        component: TextareaField,
       },
     ],
   },
