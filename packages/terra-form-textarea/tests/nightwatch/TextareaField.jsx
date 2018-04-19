@@ -20,7 +20,7 @@ const TextareaFieldExample = () => (
       className: 'label',
     }}
     onChange={() => {}}
-    hideRequiredshowOptional
+    showOptional
     value="Value"
   />
 );

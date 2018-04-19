@@ -5,6 +5,14 @@ import Input from './Input';
 
 const propTypes = {
   /**
+   * Id of the input. Populates both the input and the htmlFor prop of the wrapper Field.
+   */
+  inputId: PropTypes.string.isRequired,
+  /**
+   * The label of the form control children.
+   */
+  label: PropTypes.node.isRequired,
+  /**
    * The defaultValue of the input field. Use this to create an uncontrolled input.
    */
   defaultValue: PropTypes.oneOfType([
@@ -28,10 +36,6 @@ const propTypes = {
    */
   inputAttrs: PropTypes.object,
   /**
-   * Id of the input. Populates both the input and the htmlFor prop of the wrapper Field.
-   */
-  inputId: PropTypes.string,
-  /**
    * Whether or not the field is an inline field.
    */
   isInline: PropTypes.bool,
@@ -43,10 +47,6 @@ const propTypes = {
    * Whether or not the label is visible. Use this props to hide a label while still creating it on the DOM for accessibility.
    */
   isLabelHidden: PropTypes.bool,
-  /**
-   * The label of the form control children.
-   */
-  label: PropTypes.node.isRequired,
   /**
    * Attributes to attach to the label.
    */
@@ -78,11 +78,9 @@ const defaultProps = {
   help: null,
   hideRequired: false,
   inputAttrs: {},
-  inputId: undefined,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
-  label: null,
   labelAttrs: {},
   onChange: undefined,
   required: false,

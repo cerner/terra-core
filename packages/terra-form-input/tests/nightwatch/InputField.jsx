@@ -20,7 +20,7 @@ const InputFieldExample = () => (
       className: 'label',
     }}
     onChange={() => {}}
-    hideRequiredshowOptional
+    showOptional
     value="Value"
   />
 );
