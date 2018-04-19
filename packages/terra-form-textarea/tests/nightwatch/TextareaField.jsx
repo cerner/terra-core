@@ -4,6 +4,7 @@ import TextareaField from '../../lib/TextareaField';
 
 const TextareaFieldExample = () => (
   <TextareaField
+    inputId="test-input"
     defaultValue="Value"
     error="Text"
     help="Help"
@@ -12,7 +13,6 @@ const TextareaFieldExample = () => (
       name: 'test',
       type: 'number',
     }}
-    inputId="test"
     isInline
     isInvalid
     label="Label Text"

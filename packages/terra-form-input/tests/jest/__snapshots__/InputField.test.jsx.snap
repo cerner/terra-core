@@ -12,7 +12,7 @@ exports[`should render a InputField with props 1`] = `
   help="Help"
   hideRequired={true}
   hideRequiredshowOptional={true}
-  htmlFor="test"
+  htmlFor="test-input"
   isInline={true}
   isInvalid={true}
   isLabelHidden={true}
@@ -28,7 +28,7 @@ exports[`should render a InputField with props 1`] = `
   <Input
     defaultValue="Value"
     disabled={false}
-    id="test"
+    id="test-input"
     isInvalid={false}
     name="test"
     onChange={[Function]}
@@ -50,6 +50,7 @@ exports[`should render a default InputField component 1`] = `
   }
   help={null}
   hideRequired={false}
+  htmlFor="test-input"
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -60,6 +61,7 @@ exports[`should render a default InputField component 1`] = `
 >
   <Input
     disabled={false}
+    id="test-input"
     isInvalid={false}
     name={null}
     required={false}

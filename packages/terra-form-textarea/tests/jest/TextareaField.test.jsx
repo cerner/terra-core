@@ -2,7 +2,7 @@ import React from 'react';
 import TextareaField from '../../src/TextareaField';
 
 it('should render a default TextareaField component', () => {
-  const textarea = <TextareaField label="Label" />;
+  const textarea = <TextareaField inputId="test-input" label="Label" />;
   const wrapper = shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -10,6 +10,7 @@ it('should render a default TextareaField component', () => {
 it('should render a TextareaField with props', () => {
   const textarea = (
     <TextareaField
+      inputId="test-input"
       defaultValue="Value"
       error="Text"
       help="Help"
@@ -18,7 +19,6 @@ it('should render a TextareaField with props', () => {
         name: 'test',
         rows: 15,
       }}
-      inputId="test"
       isInline
       isInvalid
       isLabelHidden
