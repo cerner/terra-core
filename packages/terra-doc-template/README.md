@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-doc-template component provides an easily adjustable template for documentation pages
+The terra-doc-template component provides an adjustable template for documentation pages.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template/docs)

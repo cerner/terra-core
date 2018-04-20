@@ -2,12 +2,11 @@ import React from 'react';
 
 import DocTemplate from '../../src/DocTemplate';
 import readme from './TestReadme.md';
-// eslint-disable-next-line import/no-duplicates
 import TestComponentExample from './TestComponentExample';
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions, import/no-duplicates
-import exampleSrc from '!raw-loader!./TestComponentExample.jsx';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import testComponentSrc from '!raw-loader!./TestComponent.jsx';
+import exampleSrc from '!raw-loader!./TestComponentExample';
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
+import testComponentSrc from '!raw-loader!./TestComponent';
 
 const Index = () => {
   const propsTables = [

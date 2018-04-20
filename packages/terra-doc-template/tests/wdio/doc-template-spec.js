@@ -7,7 +7,7 @@ describe('DocTemplate', () => {
 
     Terra.should.matchScreenshot('Readme', { selector: '#DocTemplateContainer > div > div:nth-child(2)' });
     Terra.should.matchScreenshot('Example 1', { selector: '#DocTemplateContainer > div > div:nth-child(4)' });
-    Terra.should.matchScreenshot('PropsTable 1', { selector: '#DocTemplateContainer > div > div:nth-child(6)', viewports: [{ width: 500, height: 1000 }] });
+    Terra.should.matchScreenshot('PropsTable 1', { selector: '#DocTemplateContainer > div > div:nth-child(6)', viewports: [{ width: 1000, height: 1000 }] });
     Terra.should.beAccessible({ viewports: Terra.viewports('huge') });
   });
 
@@ -15,7 +15,7 @@ describe('DocTemplate', () => {
     beforeEach(() => browser.url('/#/raw/tests/doc-template/default-doc-template'));
 
     it('Reveals the example\'s code', () => {
-      const button = browser.element('[data-terra-example-hide]');
+      const button = browser.element('[data-terra-example-template-hide]');
       button.click();
       // Scroll off button so on hover styling doesn't ruin tests
       browser.scroll(0, 0);
@@ -28,13 +28,13 @@ describe('DocTemplate', () => {
     });
 
     it('Hides the example\'s code again', () => {
-      let button = browser.element('[data-terra-example-hide]');
+      let button = browser.element('[data-terra-example-template-hide]');
       button.click();
 
       // Ensure the button is revealed so it can be clicked
       browser.pause(100);
 
-      button = browser.element('[data-terra-example-show]');
+      button = browser.element('[data-terra-example-template-show]');
       button.click();
       // Scroll off button so on hover styling doesn't ruin tests
       browser.scroll(0, 0);

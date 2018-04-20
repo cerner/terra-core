@@ -1,0 +1,21 @@
+:local {
+  .overlay {
+    background-color: var(--terra-abstract-modal-overlay-background-color, rgba(0, 0, 0, 0.4));
+    background-image: var(--terra-abstract-modal-overlay-background-image);
+    bottom: 0;
+    color: var(--terra-abstract-modal-overlay-foreground-color);
+    left: 0;
+    opacity: var(--terra-abstract-modal-overlay-opacity);
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    &.layer-6000 {
+      z-index: 6000;
+    }
+  
+    &.layer-8000 {
+      z-index: 8000;
+    }
+  }
+}

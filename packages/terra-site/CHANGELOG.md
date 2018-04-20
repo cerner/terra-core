@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added page for terra-doc-template
 
+### Changed
+* Fixed stylelint issues
+
 2.6.0 - (April 15, 2018)
 ------------------
 ### Changed

@@ -745,9 +745,6 @@
     "--terra-signature-background-color": "#fff",
     "--terra-signature-line-color": "#000"
   },
-  "SlidePanel": {
-    "--terra-slide-panel-panel-width-small": "320px"
-  },
   "Spacer": {
     "--terra-spacer-small-minus-2": "0.21429rem",
     "--terra-spacer-small-minus-1": "0.35714rem",
