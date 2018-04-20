@@ -35,18 +35,18 @@ it('should render with isDivided', () => {
 // Event Tests
 it('should select an item when maxSelectionCount is 2', () => {
   const items = [item1, item2, item3, item4, item5];
-  const multiSelect = shallow(<MultiSelectList maxSelectionCount={2}>{items}</MultiSelectList>);
+  const multiSelect = mount(<MultiSelectList maxSelectionCount={2}>{items}</MultiSelectList>);
 
-  multiSelect.find('.stuff1').simulate('click', { preventDefault() {} });
+  multiSelect.find('.stuff1').first().simulate('click', { preventDefault() {} });
   expect(multiSelect).toMatchSnapshot();
 
-  multiSelect.find('.stuff2').simulate('click', { preventDefault() {} });
+  multiSelect.find('.stuff2').first().simulate('click', { preventDefault() {} });
   expect(multiSelect).toMatchSnapshot();
 
-  multiSelect.find('.stuff3').simulate('click', { preventDefault() {} });
+  multiSelect.find('.stuff3').first().simulate('click', { preventDefault() {} });
   expect(multiSelect).toMatchSnapshot();
 
-  multiSelect.find('.stuff1').simulate('click', { preventDefault() {} });
+  multiSelect.find('.stuff1').first().simulate('click', { preventDefault() {} });
   expect(multiSelect).toMatchSnapshot();
 });
 
