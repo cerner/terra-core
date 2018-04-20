@@ -26,7 +26,7 @@
     "redux": "^3.6.0",
     "terra-app-delegate": "^1.9.0",
     "terra-date-picker": "^2.7.0",
-    "terra-modal-manager": "^1.18.0"
+    "terra-modal-manager": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
