@@ -7,11 +7,17 @@ const pageSequence = (index, totalPages) => {
   var previousSequenceCount = 5;
   var nextSequenceCount = 4;
 
+  if (index < 1) {
+    index = 1;
+  } else if (index > totalPages) {
+    index = totalPages;
+  }
+
   if (index < numberShiftPoint) {
     for (var i = 1; i <= maxPagesDisplayed; i++) {
       sequence.push(i);
     }
-  } else if (index <= totalPages && index > totalPages - previousSequenceCount) {
+  } else if (index <= totalPages && index > totalPages - maxPagesDisplayed && index > totalPages - previousSequenceCount) {
     for (var i = totalPages; i > totalPages - maxPagesDisplayed; i--) {
       sequence.push(i);
     }
@@ -26,6 +32,6 @@ const pageSequence = (index, totalPages) => {
   }
 
   return sequence.sort((a, b) => a - b);
-}
+};
 
 export { calculatePages, pageSequence }

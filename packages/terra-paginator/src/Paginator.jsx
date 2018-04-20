@@ -34,11 +34,11 @@ class Paginator extends React.Component {
   constructor(props) {
     super(props);
 
-    const { selectedPage, totalCount } = this.props;
+    const { selectedPage, totalCount, itemCountPerPage } = this.props;
 
     this.state = {
       selectedPage: selectedPage && totalCount ? selectedPage : undefined,
-      pageSequence: selectedPage && totalCount ? pageSequence(selectedPage, totalCount) : undefined,
+      pageSequence: selectedPage && totalCount ? pageSequence(selectedPage, calculatePages(totalCount, itemCountPerPage)) : undefined,
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
@@ -46,15 +46,9 @@ class Paginator extends React.Component {
   }
 
   handlePageChange(index) {
-    if (index < 1) {
-      index = 1;
-    } else if (index > calculatePages(this.props.totalCount, this.props.itemCountPerPage)) {
-      index = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    }
-
     return (event) => {
       this.props.onPageChange(event, index);
-      this.setState({ selectedPage: index, pageSequence: pageSequence(index, this.props.totalCount) });
+      this.setState({ selectedPage: index, pageSequence: pageSequence(index, calculatePages(this.props.totalCount, this.props.itemCountPerPage)) });
     }
   }
 
@@ -73,7 +67,7 @@ class Paginator extends React.Component {
         return;
       }
 
-      pageButtons.push(<a className={paginationLinkClassNames} key={`pageButton_${val}`} onClick={onClick(val)}>{val}</a>);
+      pageButtons.push(<a className={paginationLinkClassNames} tabIndex={val === selectedPage ? null : '0'} key={`pageButton_${val}`} onClick={onClick(val)}>{val}</a>);
     });
 
     return pageButtons;
@@ -81,14 +75,15 @@ class Paginator extends React.Component {
 
   render() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
+    const { selectedPage } = this.state;
 
     return (
       <div className={cx('paginator')}>
-        <a className={cx('nav-link')} onClick={this.handlePageChange(1)}>First</a>
-        <a className={cx('nav-link')} onClick={this.handlePageChange(this.state.selectedPage - 1)}>{<IconPrevious />} Previous</a>
+        <a className={cx('nav-link')} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
+        <a className={cx('nav-link')} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
         {this.buildPageButtons(totalPages, this.handlePageChange)}
-        <a className={cx('nav-link')} onClick={this.handlePageChange(this.state.selectedPage + 1)}>Next {<IconNext />}</a>
-        <a className={cx('nav-link')} onClick={this.handlePageChange(totalPages)}>Last</a>
+        <a className={cx('nav-link')} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>Next {<IconNext />}</a>
+        <a className={cx('nav-link')} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>
       </div>
     );
   }

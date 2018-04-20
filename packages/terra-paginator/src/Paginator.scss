@@ -1,15 +1,32 @@
 :local {
   .paginator {
     .nav-link {
-      border: 0.5px solid;
+      color: #3a82c0;
       cursor: pointer;
+      display: inline-block;
       padding: 3px;
       margin-left: 2px;
       margin-right: 2px;
+      min-width: 3rem;
+      text-align: center;
+      user-select: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .is-selected {
-      border-color: red;
+      color: initial;
+      cursor: initial;
+
+      &:hover {
+        text-decoration: initial;
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
