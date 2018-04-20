@@ -4,20 +4,25 @@ Changelog
 Unreleased
 ----------
 
+4.6.0 - (April 20, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.5.0 - (April 15, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 4.4.0 - (April 5, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 4.3.0 - (March 30, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 4.2.0 - (March 6, 2018)
 ------------------
@@ -27,7 +32,7 @@ Unreleased
 4.1.0 - (February 26, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 4.0.1 - (February 13, 2018)
 ------------------
@@ -42,27 +47,27 @@ Unreleased
 3.20.0 - (February 1, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.19.0 - (January 18, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.18.0 - (January 5, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.17.0 - (November 28, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.16.0 - (November 16, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.15.0 - (October 6, 2017)
 ------------------
@@ -77,7 +82,7 @@ Unreleased
 3.13.0 - (September 19, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.12.0 - (September 12, 2017)
 ------------------
@@ -87,7 +92,7 @@ Unreleased
 3.11.0 - (September 7, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.10.0 - (September 5, 2017)
 ------------------
@@ -97,17 +102,17 @@ Unreleased
 3.9.0 - (August 31, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.8.0 - (August 15, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.7.0 - (August 8, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.6.0 - (August 1, 2017)
 ------------------
@@ -134,7 +139,7 @@ Unreleased
 3.4.0 - (July 18, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.3.0 (June 27, 2017)
 ------------------
