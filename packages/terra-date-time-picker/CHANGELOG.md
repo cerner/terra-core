@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.8.0 - (April 20, 2018)
+------------------
+### Changed
+* Bumped devDependency on terra-modal-manager to use 2.x version
+
 2.7.0 - (April 20, 2018)
 ------------------
 ### Changed
