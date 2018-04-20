@@ -3,13 +3,11 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Switched responsive reference from window to parent.
 
 2.6.0 - (April 20, 2018)
 ------------------
 ### Changed
-* Minor dependency version bump
+* Switched responsive reference from window to parent.
 
 2.5.0 - (April 15, 2018)
 ------------------
