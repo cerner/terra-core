@@ -4,15 +4,30 @@ import Markdown from 'terra-markdown';
 import Button from 'terra-button';
 import SlidePanel from 'terra-slide-panel';
 import classNames from 'classnames/bind';
-import styles from './IndexPageTemplate.scss';
+import styles from './ExampleTemplate.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * The component that serves as an example to be displayed
+   */
   example: PropTypes.element,
+  /**
+   * The source code for the example displayed
+   */
   exampleSrc: PropTypes.string,
+  /**
+   * The title of the example
+   */
   title: PropTypes.string,
+  /**
+   * An optional description that will be displayed below the title as regular text
+   */
   description: PropTypes.string,
+  /**
+   * The children components for this example which will be displayed below the example
+   */
   children: PropTypes.element,
 };
 
@@ -44,14 +59,14 @@ class IndexExampleTemplate extends React.Component {
 
     const indexExample = (
       <div>
-        <Button text="Show Source Code" onClick={this.handlePanelToggle} className={buttonClassname} data-terra-example-hide />
+        <Button text="Show Source Code" onClick={this.handlePanelToggle} className={buttonClassname} data-terra-example-template-hide />
         {example}
       </div>
     );
 
     const indexExampleSrc = (
       <div>
-        <Button text="Show Example" onClick={this.handlePanelToggle} className={buttonClassname} data-terra-example-show />
+        <Button text="Show Example" onClick={this.handlePanelToggle} className={buttonClassname} data-terra-example-template-show />
         <Markdown src={`${codeIndicator}jsx\n${exampleSrc}${codeIndicator}`} />
       </div>
     );
