@@ -1,7 +1,7 @@
 {
   "name": "terra-core-site",
   "private": true,
-  "version": "2.7.0",
+  "version": "2.8.0",
   "description": "Holds the Site Examples Needed for Functional Verification",
   "repository": {
     "type": "git",
@@ -38,8 +38,8 @@
     "terra-card": "^2.6.0",
     "terra-collapsible-menu-view": "^2.7.0",
     "terra-content-container": "^2.6.0",
-    "terra-date-picker": "^2.7.0",
-    "terra-date-time-picker": "^2.7.0",
+    "terra-date-picker": "^2.8.0",
+    "terra-date-time-picker": "^2.8.0",
     "terra-demographics-banner": "^2.6.0",
     "terra-dialog": "^1.6.0",
     "terra-divider": "^2.6.0",
@@ -47,7 +47,7 @@
     "terra-embedded-content-consumer": "^2.6.0",
     "terra-form": "^2.6.0",
     "terra-form-checkbox": "^2.6.0",
-    "terra-form-field": "^2.6.0",
+    "terra-form-field": "^2.7.0",
     "terra-form-fieldset": "^1.4.0",
     "terra-form-input": "^1.5.0",
     "terra-form-radio": "^2.6.0",
