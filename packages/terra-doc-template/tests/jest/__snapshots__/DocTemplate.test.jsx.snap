@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a default component with nothing 1`] = `<div />`;
+exports[`DocTemplate should render a default component with nothing 1`] = `<div />`;
 
-exports[`should show multiple examples 1`] = `
+exports[`DocTemplate should show multiple examples 1`] = `
 <div>
   <h1
     className=".examples-header"
@@ -11,14 +11,14 @@ exports[`should show multiple examples 1`] = `
   </h1>
   <IndexExampleTemplate
     description="Describing the test"
-    example={<test-file-stub />}
+    example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="0"
     title="Test Example 1"
   />
   <IndexExampleTemplate
     description="Describing the test mk. 2"
-    example={<test-file-stub />}
+    example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="1"
     title="Test Example 2"
@@ -26,7 +26,7 @@ exports[`should show multiple examples 1`] = `
 </div>
 `;
 
-exports[`should show multiple props tables 1`] = `
+exports[`DocTemplate should show multiple props tables 1`] = `
 <div>
   <PropsTable
     componentName="Test Component"
@@ -41,7 +41,7 @@ exports[`should show multiple props tables 1`] = `
 </div>
 `;
 
-exports[`should show one example 1`] = `
+exports[`DocTemplate should show one example 1`] = `
 <div>
   <h1
     className=".examples-header"
@@ -50,7 +50,7 @@ exports[`should show one example 1`] = `
   </h1>
   <IndexExampleTemplate
     description="Describing the test"
-    example={<test-file-stub />}
+    example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="0"
     title="Test Example 1"
@@ -58,7 +58,7 @@ exports[`should show one example 1`] = `
 </div>
 `;
 
-exports[`should show one props table 1`] = `
+exports[`DocTemplate should show one props table 1`] = `
 <div>
   <PropsTable
     componentName="Test Component"
@@ -68,7 +68,7 @@ exports[`should show one props table 1`] = `
 </div>
 `;
 
-exports[`should show the readme 1`] = `
+exports[`DocTemplate should show the readme 1`] = `
 <div>
   <Markdown
     src="test-file-stub"
@@ -76,7 +76,7 @@ exports[`should show the readme 1`] = `
 </div>
 `;
 
-exports[`should show the version 1`] = `
+exports[`DocTemplate should show the version 1`] = `
 <div>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
@@ -84,7 +84,7 @@ exports[`should show the version 1`] = `
 </div>
 `;
 
-exports[`should show the version and readme 1`] = `
+exports[`DocTemplate should show the version and readme 1`] = `
 <div>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
@@ -95,7 +95,7 @@ exports[`should show the version and readme 1`] = `
 </div>
 `;
 
-exports[`should show the version, readme, examples, and props tables 1`] = `
+exports[`DocTemplate should show the version, readme, examples, and props tables 1`] = `
 <div>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
@@ -110,14 +110,14 @@ exports[`should show the version, readme, examples, and props tables 1`] = `
   </h1>
   <IndexExampleTemplate
     description="Describing the test"
-    example={<test-file-stub />}
+    example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="0"
     title="Test Example 1"
   />
   <IndexExampleTemplate
     description="Describing the test mk. 2"
-    example={<test-file-stub />}
+    example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="1"
     title="Test Example 2"

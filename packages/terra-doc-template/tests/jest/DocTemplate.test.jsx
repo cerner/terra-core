@@ -4,7 +4,9 @@ import DocTemplate from '../../src/DocTemplate';
 import TestComponentExample from '../../examples/test-examples/TestComponentExample';
 
 // These cannot be properly imported with jest so substitute this value in instead
-const { readme, exampleSrc, testComponentSrc } = 'test-file-stub';
+const readme = 'test-file-stub';
+const exampleSrc = 'test-file-stub';
+const testComponentSrc = 'test-file-stub';
 
 const exampleElement = <TestComponentExample />;
 
