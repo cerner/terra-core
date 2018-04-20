@@ -10,6 +10,7 @@ import DemographicsBannerAdditionalAges from './DemographicsBannerAdditionalAges
 import DemographicsBannerAdditionalDetails from './DemographicsBannerAdditionalDetails';
 import DemographicsBannerBasic from './DemographicsBannerBasic';
 import DemographicsBannerDeceased from './DemographicsBannerDeceased';
+import DemographicsBannerSmallContainer from './DemographicsBannerSmallContainer';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -34,6 +35,8 @@ const DemographicsBannerExamples = () => (
     <br />
     <h1>Demographics Banner with Additional Details</h1>
     <DemographicsBannerAdditionalDetails />
+    <h1>Demographics Banner in a Small Container</h1>
+    <DemographicsBannerSmallContainer />
   </div>
 );
 
