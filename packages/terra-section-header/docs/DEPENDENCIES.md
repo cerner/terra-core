@@ -7,8 +7,8 @@
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
-| terra-arrange | ^2.6.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
-| terra-base | ^3.5.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-arrange | ^2.7.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
+| terra-base | ^3.6.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 | terra-mixins | ^1.14.0 | -- | terra-mixins |
 
 ## peerDependencies
@@ -16,5 +16,5 @@
 |-|-|-|-|
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
-| terra-base | ^3.5.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-base | ^3.6.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 | terra-mixins | ^1.13.0 | -- | terra-mixins |

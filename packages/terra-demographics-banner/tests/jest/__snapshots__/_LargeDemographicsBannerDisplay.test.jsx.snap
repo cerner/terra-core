@@ -13,7 +13,7 @@ exports[`renders large banner that contains all valid information 1`] = `
       },
     ]
   }
-  className="demographics-banner"
+  className="demographics-banner large-demographics-banner"
 >
   <div
     className="profile-photo"

@@ -545,6 +545,7 @@
     "--terra-modal-fixed-margin": "0 auto"
   },
   "ModalOverlay": {
+    "--terra-abstract-modal-overlay-background-color": "rgba(0, 0, 0, 0.4)",
     "--terra-modal-overlay-background-color": "rgba(0, 0, 0, 0.4)"
   },
   "NavigationSideMenu": {
