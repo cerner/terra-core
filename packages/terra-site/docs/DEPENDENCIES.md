@@ -26,8 +26,8 @@
 | terra-card | ^2.6.0 | ^16.2.0 | Card is a basic container with some base styling to help seperate elements with different content |
 | terra-collapsible-menu-view | ^2.7.0 | ^16.2.0 | The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu. |
 | terra-content-container | ^2.6.0 | ^16.2.0 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
-| terra-date-picker | ^2.7.0 | ^16.2.0 | The terra-date-picker component provides users a way to enter or select a date from the date picker. |
-| terra-date-time-picker | ^2.7.0 | ^16.2.0 | The DateTimePicker component has a date picker for selecting date and a time input for entering time |
+| terra-date-picker | ^2.8.0 | ^16.2.0 | The terra-date-picker component provides users a way to enter or select a date from the date picker. |
+| terra-date-time-picker | ^2.8.0 | ^16.2.0 | The DateTimePicker component has a date picker for selecting date and a time input for entering time |
 | terra-demographics-banner | ^2.6.0 | ^16.2.0 | The demographics component is used to display demographic information about a person in a condensed, easy to read format. |
 | terra-dialog | ^1.6.0 | ^16.2.0 | Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user. |
 | terra-divider | ^2.6.0 | ^16.2.0 | The divider component is used to visually separate content on a layout. |
@@ -35,7 +35,7 @@
 | terra-embedded-content-consumer | ^2.6.0 | ^16.2.0 | The Embedded Content Consumer is the application component which is embedding web content within it. |
 | terra-form | ^2.6.0 | ^16.2.0 | Components for building forms |
 | terra-form-checkbox | ^2.6.0 | ^16.2.0 | The Terra Form Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar. |
-| terra-form-field | ^2.6.0 | ^16.2.0 | The Form Field component handles the layout of the label, help text and error text associated with a form element. |
+| terra-form-field | ^2.7.0 | ^16.2.0 | The Form Field component handles the layout of the label, help text and error text associated with a form element. |
 | terra-form-fieldset | ^1.4.0 | ^16.2.0 | Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement. |
 | terra-form-input | ^1.5.0 | ^16.2.0 | Element for building out inputs in a form. |
 | terra-form-radio | ^2.6.0 | ^16.2.0 | The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Use the `name` attribute to group radio buttons together. Tabbing switches focus between radio button groups; arrow keys switch between radio buttons of the same group. The checked state can be activated with a space. |
@@ -51,7 +51,7 @@
 | terra-markdown | ^2.4.0 | ^16.2.0 | terra-markdown |
 | terra-menu | ^2.7.0 | ^16.2.0 | The menu is a popup component that displays a list of items, item groups, and dividers. Menu Items can be actionable, have toggle-style selection, or have nested submenu items. Menu Item groups are a single-select grouping of menu items. The Menu will determine the height of the popup based on the number of items in the main menu. |
 | terra-mixins | ^1.14.0 | -- | terra-mixins |
-| terra-modal-manager | ^1.18.0 | ^15.4.2 | A Redux-backed Container component that dynamically presents components in a Terra Modal |
+| terra-modal-manager | ^2.0.0 | ^16.2.0 | A Redux-backed Container component that dynamically presents components in a Terra Modal |
 | terra-overlay | ^2.7.0 | ^16.2.0 | The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container. |
 | terra-profile-image | ^2.6.0 | ^16.2.0 | The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image. |
 | terra-progress-bar | ^2.6.0 | ^16.2.0 | terra-progress-bar |
