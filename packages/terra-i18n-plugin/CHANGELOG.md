@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.2.0 - (April 20, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.1.0 - (March 30, 2018)
 ------------------
 ### Added
@@ -17,12 +22,12 @@ Unreleased
 1.10.0 - (January 18, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.9.0 - (November 28, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 * Allow new config options: translationsDirectoryRouters as recursive search transit and translationsDirectories as absolute search path
 
 1.8.0 - (October 24, 2017)
@@ -43,7 +48,7 @@ Unreleased
 1.5.0 - (September 26, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.4.0 - (September 19, 2017)
 ------------------
@@ -56,12 +61,12 @@ Unreleased
 1.3.0 - (September 12, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.2.0 - (August 31, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.1.0 - (July 18, 2017)
 ------------------

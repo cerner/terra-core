@@ -4,15 +4,20 @@ Changelog
 Unreleased
 ----------
 
+3.6.0 - (April 20, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.5.0 - (April 15, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.4.0 - (April 5, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 3.3.0 - (March 30, 2018)
 ------------------
@@ -54,12 +59,12 @@ Unreleased
 2.10.0 - (January 18, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.9.0 - (January 5, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.8.0 - (November 28, 2017)
 ------------------
@@ -69,7 +74,7 @@ Unreleased
 2.7.0 - (November 16, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.6.0 - (October 6, 2017)
 ------------------
@@ -84,17 +89,17 @@ Unreleased
 2.4.0 - (September 19, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.3.0 - (September 12, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.2.0 - (September 7, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.1.0 - (September 5, 2017)
 ------------------
@@ -124,12 +129,12 @@ Unreleased
 1.3.0 - (August 8, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.2.0 - (August 1, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.1.0 - (July 18, 2017)
 ------------------
