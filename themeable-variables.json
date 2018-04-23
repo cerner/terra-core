@@ -565,6 +565,14 @@
     "--terra-overlay-content-padding-right": "1rem",
     "--terra-overlay-content-padding-top": "1rem"
   },
+  "Paginator": {
+    "--terra-button-disabled-opacity": "0.3",
+    "--terra-paginator-nav-link-foreground-color": "#3a82c0",
+    "--terra-paginator-nav-link-margin-left": "2px",
+    "--terra-paginator-nav-link-margin-right": "2px",
+    "--terra-paginator-nav-link-min-width": "3rem",
+    "--terra-paginator-nav-link-padding": "3px"
+  },
   "PopupArrow": {
     "--terra-popup-arrow-size": "11px",
     "--terra-popup-arrow-z-index": "7002",

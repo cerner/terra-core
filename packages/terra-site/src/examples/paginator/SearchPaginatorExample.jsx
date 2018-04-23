@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 import React from 'react';
 import Paginator from 'terra-paginator/src/Paginator';
 
@@ -7,4 +6,3 @@ const SearchPaginatorExample = () => (
 );
 
 export default SearchPaginatorExample;
-/* eslint-enable no-alert */

@@ -1,0 +1,8 @@
+import React from 'react';
+import ProgressivePaginator from 'terra-paginator/src/ProgressivePaginator';
+
+const ProgressivePaginatorExample = () => (
+  <ProgressivePaginator onPageChange={(e, i) => console.log(i)} selectedPage={1} totalCount={2234} itemCountPerPage={20} />
+);
+
+export default ProgressivePaginatorExample;

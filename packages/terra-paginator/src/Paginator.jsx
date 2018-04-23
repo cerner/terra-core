@@ -42,6 +42,7 @@ class Paginator extends React.Component {
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
+    this.hasNavContext = this.hasNavContext.bind(this);
     this.buildPageButtons = this.buildPageButtons.bind(this);
   }
 
@@ -73,17 +74,21 @@ class Paginator extends React.Component {
     return pageButtons;
   }
 
+  hasNavContext() {
+    return this.props.totalCount && this.props.itemCountPerPage;
+  }
+
   render() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
 
     return (
       <div className={cx('paginator')}>
-        <a className={cx('nav-link')} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
-        <a className={cx('nav-link')} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
-        {this.buildPageButtons(totalPages, this.handlePageChange)}
-        <a className={cx('nav-link')} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>Next {<IconNext />}</a>
-        <a className={cx('nav-link')} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>
+        {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>}
+        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
+        {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
+        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>Next {<IconNext />}</a>
+        {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>}
       </div>
     );
   }
