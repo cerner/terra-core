@@ -43,7 +43,7 @@
     "terra-demographics-banner": "^2.6.0",
     "terra-dialog": "^1.6.0",
     "terra-divider": "^2.6.0",
-    "terra-doc-site-template": "^0.x",
+    "terra-doc-template": "^0.x",
     "terra-dynamic-grid": "^2.6.0",
     "terra-embedded-content-consumer": "^2.6.0",
     "terra-form": "^2.6.0",
