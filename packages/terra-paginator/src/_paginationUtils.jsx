@@ -1,32 +1,33 @@
 const calculatePages = (totalCount, itemCountPerPage) => Math.ceil(totalCount / itemCountPerPage);
 
-const pageSequence = (index, totalPages) => {
-  var sequence = [];
-  var numberShiftPoint = 7;
-  var maxPagesDisplayed = 10;
-  var previousSequenceCount = 5;
-  var nextSequenceCount = 4;
+const pageSet = (index, totalPages) => {
+  const sequence = [];
+  const numberShiftPoint = 7;
+  const maxPagesDisplayed = 10;
+  const previousSequenceCount = 5;
+  const nextSequenceCount = 4;
+  let mutableIndex = index;
 
-  if (index < 1) {
-    index = 1;
-  } else if (index > totalPages) {
-    index = totalPages;
+  if (mutableIndex < 1) {
+    mutableIndex = 1;
+  } else if (mutableIndex > totalPages) {
+    mutableIndex = totalPages;
   }
 
-  if (index < numberShiftPoint) {
-    for (var i = 1; i <= maxPagesDisplayed; i++) {
+  if (mutableIndex < numberShiftPoint) {
+    for (let i = 1; i <= maxPagesDisplayed; i += 1) {
       sequence.push(i);
     }
-  } else if (index <= totalPages && index > totalPages - maxPagesDisplayed && index > totalPages - previousSequenceCount) {
-    for (var i = totalPages; i > totalPages - maxPagesDisplayed; i--) {
+  } else if (mutableIndex <= totalPages && mutableIndex > totalPages - maxPagesDisplayed && mutableIndex > totalPages - previousSequenceCount) {
+    for (let i = totalPages; i > totalPages - maxPagesDisplayed; i -= 1) {
       sequence.push(i);
     }
   } else {
-    for (var i = index; i >= index - previousSequenceCount; i--) {
+    for (let i = mutableIndex; i >= mutableIndex - previousSequenceCount; i -= 1) {
       sequence.push(i);
     }
 
-    for (var i = index + 1; i <= index + nextSequenceCount; i++) {
+    for (let i = mutableIndex + 1; i <= mutableIndex + nextSequenceCount; i += 1) {
       sequence.push(i);
     }
   }
@@ -34,4 +35,4 @@ const pageSequence = (index, totalPages) => {
   return sequence.sort((a, b) => a - b);
 };
 
-export { calculatePages, pageSequence }
+export { calculatePages, pageSet };

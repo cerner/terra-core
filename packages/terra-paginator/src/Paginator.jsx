@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
 import IconNext from 'terra-icon/lib/icon/IconNext';
 import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
-import { calculatePages, pageSequence } from './_paginationUtils';
 
 import 'terra-base/lib/baseStyles';
 import styles from './Paginator.scss';
+
+import { calculatePages, pageSet } from './_paginationUtils';
 
 const cx = classNames.bind(styles);
 
@@ -38,7 +38,7 @@ class Paginator extends React.Component {
 
     this.state = {
       selectedPage: selectedPage && totalCount ? selectedPage : undefined,
-      pageSequence: selectedPage && totalCount ? pageSequence(selectedPage, calculatePages(totalCount, itemCountPerPage)) : undefined,
+      pageSequence: selectedPage && totalCount ? pageSet(selectedPage, calculatePages(totalCount, itemCountPerPage)) : undefined,
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
@@ -49,14 +49,14 @@ class Paginator extends React.Component {
   handlePageChange(index) {
     return (event) => {
       this.props.onPageChange(event, index);
-      this.setState({ selectedPage: index, pageSequence: pageSequence(index, calculatePages(this.props.totalCount, this.props.itemCountPerPage)) });
-    }
+      this.setState({ selectedPage: index, pageSequence: pageSet(index, calculatePages(this.props.totalCount, this.props.itemCountPerPage)) });
+    };
   }
 
   buildPageButtons(totalPages, onClick) {
     const { pageSequence, selectedPage } = this.state;
 
-    var pageButtons = [];
+    const pageButtons = [];
 
     pageSequence.forEach((val) => {
       const paginationLinkClassNames = cx([

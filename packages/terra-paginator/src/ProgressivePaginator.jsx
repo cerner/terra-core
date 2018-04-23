@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
 import IconNext from 'terra-icon/lib/icon/IconNext';
 import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
 import NumberField from 'terra-form/lib/NumberField';
-import { calculatePages, pageSequence } from './_paginationUtils';
 
 import 'terra-base/lib/baseStyles';
 import styles from './Paginator.scss';
+
+import { calculatePages } from './_paginationUtils';
 
 const cx = classNames.bind(styles);
 
@@ -35,7 +35,7 @@ class ProgressivePaginator extends React.Component {
   constructor(props) {
     super(props);
 
-    const { selectedPage, totalCount, itemCountPerPage } = this.props;
+    const { selectedPage, totalCount } = this.props;
 
     this.state = {
       pageInput: selectedPage,
@@ -54,20 +54,20 @@ class ProgressivePaginator extends React.Component {
   handlePageChange(index) {
     return (event) => {
       event.preventDefault();
-      
+
       this.props.onPageChange(event, index);
       this.setState({ pageInput: index, selectedPage: index });
-    }
+    };
   }
 
   buildPageSelectorForm(totalPages, onSubmit) {
     const { pageInput } = this.state;
 
-    const pageForm = <div>
-      <form className={cx('page-form')} onSubmit={onSubmit(parseInt(pageInput))}>
+    const pageForm = (<div>
+      <form className={cx('page-form')} onSubmit={onSubmit(parseInt(pageInput, 10))}>
         <div>Page {<NumberField isInline value={pageInput} onChange={this.handlePageInput} min={1} max={totalPages} />} of {totalPages}</div>
       </form>
-    </div>
+    </div>);
 
     return pageForm;
   }

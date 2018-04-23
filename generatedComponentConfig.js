@@ -369,9 +369,9 @@ import FullscreenScrollableOverlay from './packages/terra-overlay/tests/nightwat
 import LightOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/LightOverlay';
 import OnRequestCloseOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/OnRequestCloseOverlay';
 import DefaultOverlayContainer from './packages/terra-overlay/tests/nightwatch/OverlayContainer/DefaultOverlayContainer';
-import DefaultPaginator from './packages/terra-paginator/tests/nightwatch/DefaultPaginator';
-import PaginatorTestRoutes from './packages/terra-paginator/tests/nightwatch/PaginatorTestRoutes';
-import PaginatorTests from './packages/terra-paginator/tests/nightwatch/PaginatorTests';
+import Paginator from './packages/terra-paginator/examples/test-examples/Paginator.example';
+import PaginatorNoPages from './packages/terra-paginator/examples/test-examples/PaginatorNoPages.example';
+import ProgressivePaginator from './packages/terra-paginator/examples/test-examples/ProgressivePaginator.example';
 import ProfileImageDefault from './packages/terra-profile-image/tests/nightwatch/ProfileImageDefault';
 import ProgressBarGradient from './packages/terra-progress-bar/tests/nightwatch/ProgressBarGradient';
 import ProgressBarColor from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarColor';
@@ -2384,19 +2384,19 @@ const componentConfig = {
     path: '/paginator',
     tests: [
       {
-        name: 'Default Paginator',
-        path: '/default-paginator',
-        component: DefaultPaginator,
+        name: 'Paginator',
+        path: '/paginator',
+        component: Paginator,
       },
       {
-        name: 'Paginator Test Routes',
-        path: '/paginator-test-routes',
-        component: PaginatorTestRoutes,
+        name: 'Paginator No Pages',
+        path: '/paginator-no-pages',
+        component: PaginatorNoPages,
       },
       {
-        name: 'Paginator Tests',
-        path: '/paginator-tests',
-        component: PaginatorTests,
+        name: 'Progressive Paginator',
+        path: '/progressive-paginator',
+        component: ProgressivePaginator,
       },
     ],
   },
