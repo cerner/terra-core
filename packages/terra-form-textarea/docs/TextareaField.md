@@ -15,6 +15,7 @@ import React from 'react';
 import TextareaField from 'terra-form-textarea/lib/textarea-field';
 
 <TextareaField
+  inputId="textarea-id"
   name="description"
   value="I'm a software engineer working at Cerner"
   required

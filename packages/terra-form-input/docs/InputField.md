@@ -15,6 +15,7 @@ import React from 'react';
 import InputField from 'terra-form-input/lib/input-field';
 
 <InputField
+  inputId="input-id"
   name="description"
   value="I'm a software engineer working at Cerner"
   required
