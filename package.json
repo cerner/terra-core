@@ -108,7 +108,7 @@
     "stylelint-order": "^0.7.0",
     "stylelint-scss": "^2.0.0",
     "stylelint-suitcss": "^1.0.0",
-    "terra-dev-site": "git://github.com/cerner/terra-dev-site.git#webpack4",
+    "terra-dev-site": "0.5.0",
     "terra-toolkit": "^3.0.0",
     "webpack-merge": "^4.1.2"
   }
