@@ -1,4 +1,6 @@
 import React from 'react';
+import IconHelp from 'terra-icon/lib/icon/IconHelp';
+
 import InputField from '../../src/InputField';
 
 it('should render a default InputField component', () => {
@@ -13,6 +15,7 @@ it('should render a InputField with props', () => {
       inputId="test-input"
       defaultValue="Value"
       error="Text"
+      errorIcon={<IconHelp />}
       help="Help"
       hideRequired
       inputAttrs={{

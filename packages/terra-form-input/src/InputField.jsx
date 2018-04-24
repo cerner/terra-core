@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Field from 'terra-form-field';
+import IconError from 'terra-icon/lib/icon/IconError';
+
 import Input from './Input';
 
 const propTypes = {
@@ -23,6 +25,10 @@ const propTypes = {
    * Error message for when the input is invalid.
    */
   error: PropTypes.node,
+  /**
+   * Error Icon to display when the input is invalid.
+   */
+  errorIcon: PropTypes.element,
   /**
    * Help element to display with the input.
    */
@@ -75,6 +81,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   error: null,
+  errorIcon: <IconError />,
   help: null,
   hideRequired: false,
   inputAttrs: {},
@@ -92,6 +99,7 @@ const InputField = (props) => {
   const {
     defaultValue,
     error,
+    errorIcon,
     help,
     hideRequired,
     inputAttrs,
@@ -113,6 +121,7 @@ const InputField = (props) => {
       label={label}
       labelAttrs={labelAttrs}
       error={error}
+      errorIcon={errorIcon}
       help={help}
       hideRequired={hideRequired}
       required={required}
