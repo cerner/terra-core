@@ -72,3 +72,44 @@ exports[`should render a default TextareaField component 1`] = `
   />
 </Field>
 `;
+
+exports[`should render a valid TextareaField with props 1`] = `
+<Field
+  error="Text"
+  errorIcon={
+    <IconHelp
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help="Help"
+  hideRequired={true}
+  htmlFor="test-input"
+  isInline={true}
+  isInvalid={false}
+  isLabelHidden={true}
+  label="Label Test"
+  labelAttrs={
+    Object {
+      "className": "label",
+    }
+  }
+  required={false}
+  showOptional={true}
+>
+  <Textarea
+    defaultValue="Value"
+    disabled={false}
+    id="test-input"
+    isAutoResizable={false}
+    isInvalid={false}
+    name="test"
+    onChange={[Function]}
+    required={false}
+    rows={null}
+    size="small"
+    type="number"
+    value="Value"
+  />
+</Field>
+`;

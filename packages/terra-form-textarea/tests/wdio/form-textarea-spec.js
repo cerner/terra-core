@@ -1,10 +1,23 @@
 /* global browser, Terra */
+const viewports = Terra.viewports('tiny', 'large');
+
 describe('Form-Textarea', () => {
   describe('TextareaField', () => {
-    beforeEach(() => {
-      browser.url('/#/raw/tests/form-textarea/textarea-field');
+    describe('Valid TextareaField', () => {
+      beforeEach(() => {
+        browser.url('/#/raw/tests/form-textarea/textarea-field');
+      });
+
+      Terra.should.matchScreenshot({ viewports });
     });
 
-    Terra.should.matchScreenshot();
+    describe('Invalid TextareaField', () => {
+      beforeEach(() => {
+        browser.url('/#/raw/tests/form-textarea/textarea-field');
+        browser.click('#validity-toggle');
+      });
+
+      Terra.should.matchScreenshot({ viewports });
+    });
   });
 });

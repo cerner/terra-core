@@ -1,12 +1,14 @@
 /* global browser, Terra */
+const viewports = Terra.viewports('tiny', 'large');
+
 describe('Form-Input', () => {
   describe('Valid', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-input/default-form-input');
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -35,8 +37,8 @@ describe('Form-Input', () => {
       browser.url('/#/raw/tests/form-input/invalid-form-input');
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -52,8 +54,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/form-input/default-form-input');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
     });
 
     describe('Enabled Hovered', () => {
@@ -62,8 +64,8 @@ describe('Form-Input', () => {
         browser.moveToObject('input');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
       Terra.should.themeEachCustomProperty({
         '--terra-form-input-hover-border': '20rem dashed blue',
       });
@@ -80,8 +82,8 @@ describe('Form-Input', () => {
         });
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
@@ -99,8 +101,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/form-input/disabled-form-input');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
@@ -118,8 +120,8 @@ describe('Form-Input', () => {
         browser.moveToObject('input');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
       Terra.should.themeEachCustomProperty({
         '--terra-form-input-hover-border': '20rem dashed red',
       });
@@ -131,8 +133,8 @@ describe('Form-Input', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
@@ -142,13 +144,24 @@ describe('Form-Input', () => {
         },
       });
     });
-  });
 
-  describe('InputField', () => {
-    beforeEach(() => {
-      browser.url('/#/raw/tests/form-input/input-field');
+    describe('InputField', () => {
+      describe('Valid InputField', () => {
+        beforeEach(() => {
+          browser.url('/#/raw/tests/form-input/input-field');
+        });
+
+        Terra.should.matchScreenshot({ viewports });
+      });
+
+      describe('Invalid InputField', () => {
+        beforeEach(() => {
+          browser.url('/#/raw/tests/form-input/input-field');
+          browser.click('#validity-toggle');
+        });
+
+        Terra.should.matchScreenshot({ viewports });
+      });
     });
-
-    Terra.should.matchScreenshot();
   });
 });
