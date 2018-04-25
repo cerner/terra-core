@@ -21,8 +21,8 @@ exports[`renders a banner that has basic information 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="window"
-  small={
+  responsiveTo="parent"
+  tiny={
     <Unknown
       age="24"
       applicationContent={null}
@@ -65,8 +65,8 @@ exports[`renders a blank banner properly 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="window"
-  small={
+  responsiveTo="parent"
+  tiny={
     <Unknown
       age="--"
       applicationContent={null}
@@ -109,8 +109,8 @@ exports[`renders gestational date with a default label when the label is not pro
       preferredFirstName={null}
     />
   }
-  responsiveTo="window"
-  small={
+  responsiveTo="parent"
+  tiny={
     <Unknown
       age="--"
       applicationContent={null}
@@ -153,8 +153,8 @@ exports[`renders post menstrural date with a default label when the label is not
       preferredFirstName={null}
     />
   }
-  responsiveTo="window"
-  small={
+  responsiveTo="parent"
+  tiny={
     <Unknown
       age="--"
       applicationContent={null}
@@ -197,8 +197,8 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="window"
-  small={
+  responsiveTo="parent"
+  tiny={
     <Unknown
       age="24"
       applicationContent={null}
@@ -270,8 +270,8 @@ exports[`renders the banner appropriately for a person with gestational and post
       preferredFirstName="John"
     />
   }
-  responsiveTo="window"
-  small={
+  responsiveTo="parent"
+  tiny={
     <Unknown
       age="25 Years"
       applicationContent={
@@ -372,8 +372,8 @@ exports[`renders the banner properly for a deceased person with additional appli
       preferredFirstName="John"
     />
   }
-  responsiveTo="window"
-  small={
+  responsiveTo="parent"
+  tiny={
     <Unknown
       age="25 Years"
       applicationContent={
@@ -474,8 +474,8 @@ exports[`renders the banner that contains additional information 1`] = `
       preferredFirstName="John"
     />
   }
-  responsiveTo="window"
-  small={
+  responsiveTo="parent"
+  tiny={
     <Unknown
       age="25 Years"
       applicationContent={

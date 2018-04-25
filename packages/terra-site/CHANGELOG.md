@@ -6,18 +6,25 @@ Unreleased
 ### Added
 * Added page for terra-doc-template
 
+2.8.0 - (April 20, 2018)
+------------------
+### Changed
+* Bumped devDependency on terra-modal-manager to use 2.x version
+
+2.7.0 - (April 20, 2018)
+------------------
 ### Changed
 * Fixed stylelint issues
 
 2.6.0 - (April 15, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.5.0 - (April 5, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.4.0 - (March 30, 2018)
 ------------------
@@ -86,14 +93,14 @@ Unreleased
 * Added styles for terra-modal content displaying div.
 
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 * Place site header background on a parent div, instead of collapsible.
 
 
 1.19.0 - (November 28, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.18.0 - (November 16, 2017)
 ------------------
@@ -106,12 +113,12 @@ Unreleased
 1.17.0 - (November 7, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.16.0 - (October 31, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.15.0 - (October 24, 2017)
 ------------------
@@ -132,7 +139,7 @@ Unreleased
 1.13.0 - (October 6, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 * Updated terra-toggle examples
 
 1.12.0 - (September 26, 2017)
@@ -160,12 +167,12 @@ Unreleased
 1.10.0 - (September 12, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.9.0 - (September 7, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.8.0 - (September 5, 2017)
 ------------------
@@ -197,7 +204,7 @@ Unreleased
 1.4.0 - (August 1, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.3.0 - (August 1, 2017)
 ------------------

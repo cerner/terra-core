@@ -2,7 +2,7 @@
   "name": "terra-doc-template",
   "main": "lib/DocTemplate.js",
   "version": "0.0.0",
-  "description": "Provides a template for documentation pages",
+  "description": "Provides an adjustable template for documentation pages.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -23,16 +23,16 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.1.0"
+    "terra-base": "^3.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-base": "^3.1.0",
+    "terra-base": "^3.6.0",
     "prop-types": "^15.5.8",
-    "terra-button": "^2.4.0",
-    "terra-markdown": "^2.3.0",
-    "terra-props-table": "^2.3.0",
-    "terra-slide-panel": "^2.3.0"
+    "terra-button": "^2.7.0",
+    "terra-markdown": "^2.4.0",
+    "terra-props-table": "^2.5.0",
+    "terra-slide-panel": "^2.5.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
