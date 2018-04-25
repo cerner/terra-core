@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import IconNext from 'terra-icon/lib/icon/IconNext';
 import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
+import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
 import styles from './Paginator.scss';
@@ -44,6 +45,7 @@ class Paginator extends React.Component {
     this.handlePageChange = this.handlePageChange.bind(this);
     this.hasNavContext = this.hasNavContext.bind(this);
     this.buildPageButtons = this.buildPageButtons.bind(this);
+    this.reducedPaginator = this.reducedPaginator.bind(this);
   }
 
   handlePageChange(index) {
@@ -55,6 +57,7 @@ class Paginator extends React.Component {
 
   buildPageButtons(totalPages, onClick) {
     const { pageSequence, selectedPage } = this.state;
+    const reducedSizePages = <span>Page {selectedPage}</span>;
 
     const pageButtons = [];
 
@@ -71,6 +74,8 @@ class Paginator extends React.Component {
       pageButtons.push(<a className={paginationLinkClassNames} tabIndex={val === selectedPage ? null : '0'} key={`pageButton_${val}`} onClick={onClick(val)}>{val}</a>);
     });
 
+    const responsivePages = <ResponsiveElement defaultElement={reducedSizePages} tiny={pageButtons} />;
+
     return pageButtons;
   }
 
@@ -78,11 +83,11 @@ class Paginator extends React.Component {
     return this.props.totalCount && this.props.itemCountPerPage;
   }
 
-  render() {
+  reducedPaginator(isReduced = false) {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
 
-    return (
+    const fullView = (
       <div className={cx('paginator')}>
         {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>}
         <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
@@ -91,6 +96,22 @@ class Paginator extends React.Component {
         {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>}
       </div>
     );
+
+    const reducedView = (
+      <div className={cx('paginator')}>
+        {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>}
+        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
+        <span>Page {selectedPage}</span>
+        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>Next {<IconNext />}</a>
+        {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>}
+      </div>
+    );
+
+    return isReduced ? reducedView : fullView;
+  }
+
+  render() {
+    return <ResponsiveElement defaultElement={this.reducedPaginator(true)} tiny={this.reducedPaginator()} />;
   }
 }
 
