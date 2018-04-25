@@ -5,7 +5,7 @@
 
     .nav-link {
       background: var(--terra-paginator-nav-link-background);
-      color: var(--terra-paginator-nav-link-foreground-color, #0059A8);
+      color: var(--terra-paginator-nav-link-foreground-color, #0059a8);
       cursor: pointer;
       display: inline-block;
       margin-left: var(--terra-paginator-nav-link-margin-left, 2px);
@@ -16,7 +16,7 @@
       user-select: none; // Keeps user from highlighting the paging link text.
 
       &:hover {
-        color: var(--terra-paginator-nav-link-foreground-color-hover, #001F67);
+        color: var(--terra-paginator-nav-link-foreground-color-hover, #001f67);
         text-decoration: underline;
       }
     }

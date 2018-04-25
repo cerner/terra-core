@@ -2,7 +2,7 @@ import React from 'react';
 import Paginator from '../../src/Paginator';
 
 describe('Paginator', () => {
-  const defaultRender = <Paginator onPageChange={(e, i) => true} selectedPage={1} totalCount={2234} itemCountPerPage={20} />;
+  const defaultRender = <Paginator onPageChange={() => true} selectedPage={1} totalCount={2234} itemCountPerPage={20} />;
   const noPagesRender = <Paginator />;
 
   // Snapshot Tests
