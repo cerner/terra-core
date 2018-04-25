@@ -24,6 +24,19 @@ const propTypes = {
    */
   srcPath: PropTypes.string,
   /**
+   * package.json repository
+   */
+  repository: PropTypes.shape(
+    {
+      type: PropTypes.string,
+      url: PropTypes.string,
+    },
+  ),
+  /**
+   * The git branch to use
+   */
+  branch: PropTypes.string,
+  /**
    * All of the example(s) that will be displayed. An empty array is supported.
    * ```
    * title: The title of the example
@@ -63,13 +76,16 @@ const defaultProps = {
   packageName: '',
   readme: '',
   srcPath: '',
+  branch: 'master',
+  repository: {},
   examples: [],
   propsTables: [],
 };
 
-const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...customProps }) => {
+const DocTemplate = ({ packageName, readme, srcPath, repository, branch, examples, propsTables, ...customProps }) => {
   let id = 0;
-  let finalSrcPath = srcPath;
+  let processedSrcPath = srcPath;
+  let processedRepositoryURL;
   const localExamples = examples;
   const localPropsTables = propsTables;
 
@@ -84,23 +100,34 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
     id += 1;
   }
 
+  // Both of these props are needed to be able to generate the source path
+  const showSrcPath = repository && srcPath;
+
+  if (showSrcPath) {
+    if (repository.url.startsWith('git+')) {
+      processedRepositoryURL = repository.url.substring(4, repository.url.length);
+    } else if (repository.url.startsWith('github:')) {
+      processedRepositoryURL = `https://github.com/${repository.url.substring(7, repository.url.length)}`;
+    }
+  }
+
   /**
    * Check if the path given is to a documentation page.
    * Matches the old site layout of having a terra-site package, and the new layout of having pages
    * distributed with their source packages.
    */
-  if (srcPath.includes('packages/') && srcPath.includes('/examples/')) {
+  if (showSrcPath && srcPath.includes('packages/') && srcPath.includes('/examples/')) {
     // If we're using the new format
     if (srcPath.endsWith('site-page.jsx')) {
       // We're already in the proper package folder so trim off the extra. Add 1 to preserve a '/'.
-      finalSrcPath = srcPath.substring(0, srcPath.indexOf('/examples/') + 1);
+      processedSrcPath = srcPath.substring(0, srcPath.indexOf('/examples/') + 1);
     // Else we're using the old format
     } else {
       const pathThroughPackages = srcPath.substring(0, srcPath.indexOf('packages/') + 9);
       // Short becuase it doesn't include the assumed terra- prefix. Non-terra components will have to
       // manually specify their path.
       const shortPackageName = srcPath.substring(srcPath.indexOf('/examples/') + 10, srcPath.indexOf('Index.jsx'));
-      finalSrcPath = `${pathThroughPackages}terra-${shortPackageName}`;
+      processedSrcPath = `${pathThroughPackages}terra-${shortPackageName}`;
     }
   }
 
@@ -110,7 +137,8 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
     <div {...customProps}>
       {packageName && <Markdown src={version} />}
       {readme && <Markdown src={readme} />}
-      {srcPath && <a href={`https://github.com/cerner/terra-core/tree/master/${finalSrcPath}`}>View component source code</a>}
+      <p>{srcPath}</p>
+      {showSrcPath && <a href={`${processedRepositoryURL}/tree/${branch}/${processedSrcPath}`}>View component source code</a>}
 
       {localExamples.length > 0 && <h1 className={cx('.examples-header')} >Examples</h1>}
       {localExamples.map(example =>

@@ -3,7 +3,7 @@ import React from 'react';
 import DocTemplate from 'terra-doc-template/src/DocTemplate';
 
 import readme from 'terra-doc-template/docs/README.md';
-import { name } from 'terra-doc-template/package.json';
+import { name, repository } from 'terra-doc-template/package.json';
 
 // Component Source
 import DocTemplateSrc from '!raw-loader!terra-doc-template/src/DocTemplate';
@@ -14,6 +14,7 @@ const DocTemplateExamples = () => (
     packageName={name}
     readme={readme}
     srcPath={__filename}
+    repository={repository}
     examples={[
       {
         title: 'DocTemplate',
