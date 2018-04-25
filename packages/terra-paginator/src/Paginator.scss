@@ -36,7 +36,7 @@
     }
 
     .is-disabled {
-      color: var(--terra-paginator-nav-link-foreground-color-disabled, rgba(28, 31, 33, 0.2))
+      color: var(--terra-paginator-nav-link-foreground-color-disabled, rgba(28, 31, 33, 0.2));
       cursor: default;
       pointer-events: none;
     }

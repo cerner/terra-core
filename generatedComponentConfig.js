@@ -54,6 +54,7 @@ import TerraSiteSingleSelectIndex from './packages/terra-site/src/examples/list/
 import TerraSiteIndex34 from './packages/terra-site/src/examples/menu/Index';
 import TerraSiteIndex35 from './packages/terra-site/src/examples/overlay/Index';
 import TerraSiteIndex36 from './packages/terra-site/src/examples/paginator/Index';
+import TerraSiteProgressivePaginatorIndex from './packages/terra-site/src/examples/paginator/ProgressivePaginatorIndex';
 import TerraSiteIndex37 from './packages/terra-site/src/examples/profile-image/Index';
 import TerraSiteIndex38 from './packages/terra-site/src/examples/progress-bar/Index';
 import TerraSiteIndex39 from './packages/terra-site/src/examples/responsive-element/Index';
@@ -3082,6 +3083,11 @@ const componentConfig = {
             name: 'Index',
             path: '/index',
             component: TerraSiteIndex36,
+          },
+          {
+            name: 'Progressive Paginator Index',
+            path: '/progressive-paginator-index',
+            component: TerraSiteProgressivePaginatorIndex,
           },
         ],
       },

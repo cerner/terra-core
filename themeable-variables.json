@@ -545,8 +545,8 @@
     "--terra-modal-fixed-margin": "0 auto"
   },
   "ModalOverlay": {
-    "--terra-abstract-modal-overlay-background-color": "rgba(0, 0, 0, 0.4)",
-    "--terra-modal-overlay-background-color": "rgba(0, 0, 0, 0.4)"
+    "--terra-modal-overlay-background-color": "rgba(0, 0, 0, 0.4)",
+    "--terra-abstract-modal-overlay-background-color": "rgba(0, 0, 0, 0.4)"
   },
   "NavigationSideMenu": {
     "--terra-navigation-side-menu-list-background-color": "transparent",
@@ -567,12 +567,13 @@
     "--terra-overlay-content-padding-top": "1rem"
   },
   "Paginator": {
-    "--terra-paginator-nav-link-foreground-color": "#3a82c0",
+    "--terra-paginator-nav-link-foreground-color": "#0059A8",
     "--terra-paginator-nav-link-margin-left": "2px",
     "--terra-paginator-nav-link-margin-right": "2px",
     "--terra-paginator-nav-link-min-width": "3rem",
     "--terra-paginator-nav-link-padding": "3px",
-    "--terra-button-disabled-opacity": "0.3"
+    "--terra-paginator-nav-link-foreground-color-hover": "#001F67",
+    "--terra-paginator-nav-link-foreground-color-disabled": "rgba(28, 31, 33, 0.2)"
   },
   "PopupArrow": {
     "--terra-popup-arrow-size": "11px",

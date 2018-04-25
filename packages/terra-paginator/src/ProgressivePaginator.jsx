@@ -13,19 +13,19 @@ import { calculatePages } from './_paginationUtils';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  /*
+  /**
    * Function to be executed when a navigation element is selected.
    */
   onPageChange: PropTypes.func.isRequired,
-  /*
+  /**
    * The active/selected page.
    */
   selectedPage: PropTypes.number.isRequired,
-  /*
+  /**
    * Total number of all items being paginated.
    */
   totalCount: PropTypes.number.isRequired,
-  /*
+  /**
    * Total number of items per page.
    */
   itemCountPerPage: PropTypes.number.isRequired,

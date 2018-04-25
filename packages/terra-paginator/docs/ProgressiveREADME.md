@@ -1,6 +1,6 @@
 # Terra Paginator
 
-Standard paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.
+Paginator to be used for ordered data where the size of the data is known. Provides first, last, previous, next, and paged functionality.
 
 ## Getting Started
 
@@ -11,9 +11,9 @@ Standard paginator to be used for data sets of known and unknown size. Provides 
 
 ```jsx
 import React from 'react';
-import Paginator from 'terra-paginator';
+import ProgressivePaginator from 'terra-paginator';
 
-<Paginator onPageChange={(e, i) => console.log(i)} selectedPage={1} totalCount={2234} itemCountPerPage={20} />
+<ProgressivePaginator onPageChange={(e, i) => console.log(i)} selectedPage={1} totalCount={2234} itemCountPerPage={20} />
 ```
 
 ## Component Features
