@@ -2,18 +2,12 @@ import React from 'react';
 import ProgressivePaginator from '../../src/ProgressivePaginator';
 
 describe('ProgressivePaginator', () => {
-  const defaultRender = <ProgressivePaginator />;
+  const defaultRender = <ProgressivePaginator onPageChange={(e) => typeof(e)} selectedPage={1} totalCount={2234} itemCountPerPage={20} />;
 
   // Snapshot Tests
-  it('should render a default component', () => {
+  it('should render a default ProgressivePaginator', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
-  });
-
-  // Prop Tests
-  it('should use the default value when no value is given', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.paginator').text()).toEqual('defualt');
   });
 
   // Structure Tests

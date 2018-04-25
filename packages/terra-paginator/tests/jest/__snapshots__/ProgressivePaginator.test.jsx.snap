@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] = `
+<div
+  className="paginator"
+>
+  <div>
+    <form
+      className="page-form"
+      onSubmit={[Function]}
+    >
+      <div>
+        Page 
+        <NumberField
+          error={null}
+          help={null}
+          inputAttrs={Object {}}
+          isInline={true}
+          label={null}
+          labelAttrs={Object {}}
+          max={112}
+          min={1}
+          name={null}
+          onChange={[Function]}
+          required={false}
+          step={null}
+          value={1}
+        />
+         of 
+        112
+      </div>
+    </form>
+  </div>
+  <div>
+    <a
+      className="nav-link is-disabled"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      First
+    </a>
+    <a
+      className="nav-link is-disabled"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <IconPrevious
+        className=""
+        data-name="Layer 1"
+        isBidi={true}
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+       Previous
+    </a>
+    <a
+      className="nav-link"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      Next 
+      <IconNext
+        className=""
+        data-name="Layer 1"
+        isBidi={true}
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </a>
+    <a
+      className="nav-link"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      Last
+    </a>
+  </div>
+</div>
+`;
