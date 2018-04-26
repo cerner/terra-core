@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.5.0 - (April 20, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.4.0 - (April 15, 2018)
 ------------------
 ### Changed
@@ -12,7 +17,7 @@ Unreleased
 2.3.0 - (March 30, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 2.2.0 - (March 6, 2018)
 ------------------
@@ -33,7 +38,7 @@ Unreleased
 1.11.0 - (February 1, 2018)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.10.0 - (January 18, 2018)
 ------------------
@@ -48,17 +53,17 @@ Added pre tag to display objects in proper code syntax.
 1.8.0 - (September 26, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.7.0 - (September 19, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.6.0 - (September 7, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.5.0 - (September 5, 2017)
 ------------------
@@ -68,12 +73,12 @@ Added pre tag to display objects in proper code syntax.
 1.4.0 - (August 31, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.3.0 - (August 8, 2017)
 ------------------
 ### Changed
-* Minor version bump
+* Minor dependency version bump
 
 1.2.0 - (August 1, 2017)
 ------------------

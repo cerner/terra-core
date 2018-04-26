@@ -1,7 +1,7 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "The terra-i18n package provides on-demand internationalization of React components.",
   "repository": {
     "type": "git",
@@ -50,6 +50,6 @@
     "postinstall": "node scripts/post-install/write-default-loaders.js",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:wdio": "wdio ../../wdio.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
   }
 }

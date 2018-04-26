@@ -1,7 +1,7 @@
 {
   "name": "terra-form-input",
   "main": "lib/Input.js",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Element for building out inputs in a form.",
   "repository": {
     "type": "git",
@@ -23,12 +23,12 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.5.0"
+    "terra-base": "^3.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.5.0"
+    "terra-base": "^3.6.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -39,6 +39,6 @@
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:wdio": "wdio ../../wdio.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
   }
 }
