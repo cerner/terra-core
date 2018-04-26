@@ -1,5 +1,10 @@
 # Terra I18n-Plugin
 
+This plugin has been **deprecated** in
+favor of the i18n aggregation script provided by [terra-toolkit](https://github.com/cerner/terra-toolkit).
+
+It is not compatible with webpack 4.
+
 The terra-i18n-plugin component is a webpack config plugin that examines all dependencies for translation files and then aggregates all translations for a single language into one file. Each language file is placed into an aggregated-translations directory that is then loaded by terra-i18n.
 
 
