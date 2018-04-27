@@ -15,10 +15,9 @@ describe('DocTemplate', () => {
     beforeEach(() => browser.url('/#/raw/tests/doc-template/default-doc-template'));
 
     it('Reveals the example\'s code', () => {
-      const button = browser.element('[data-terra-example-template-hide]');
-      button.click();
-      // Scroll off button so on hover styling doesn't ruin tests
-      browser.scroll(0, 0);
+      browser.click('[data-terra-example-template-hide]');
+      // Reliably causes on hover styling of button to deactivate
+      browser.click('h1=Examples');
 
       // Give time for the animation to complete
       browser.pause(250);
@@ -28,16 +27,14 @@ describe('DocTemplate', () => {
     });
 
     it('Hides the example\'s code again', () => {
-      let button = browser.element('[data-terra-example-template-hide]');
-      button.click();
+      browser.click('[data-terra-example-template-hide]');
 
       // Ensure the button is revealed so it can be clicked
       browser.pause(100);
 
-      button = browser.element('[data-terra-example-template-show]');
-      button.click();
-      // Scroll off button so on hover styling doesn't ruin tests
-      browser.scroll(0, 0);
+      browser.click('[data-terra-example-template-show]');
+      // Reliably causes on hover styling of button to deactivate
+      browser.click('h1=Examples');
 
       browser.pause(250);
 
