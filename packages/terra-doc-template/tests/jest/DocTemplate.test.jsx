@@ -63,7 +63,7 @@ describe('DocTemplate', () => {
     const wrapper = shallow(<DocTemplate
       packageName="terra-doc-template"
       readme={readme}
-      srcPath="packages/terra-site/src/examples/doc-template/Index.jsx"
+      repositoryURL="git+https://github.com/cerner/terra-core.git"
       examples={[{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
       { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }]}
       propsTables={[{ componentSource: testComponentSrc, componentName: 'Test Component' },
@@ -72,8 +72,11 @@ describe('DocTemplate', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should resolve source links in the new format', () => {
-    const wrapper = shallow(<DocTemplate srcPath="packages/terra-doc-template/examples/Index.site-page.jsx" />);
+  it('should resolve source links when srcPath is specified and using github: format repositoryURL', () => {
+    const wrapper = shallow(<DocTemplate
+      srcPath="path/packages/terra-doc-template"
+      repositoryURL="github:cerner/terra-core"
+    />);
     expect(wrapper).toMatchSnapshot();
   });
 });

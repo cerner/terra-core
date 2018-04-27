@@ -24,14 +24,9 @@ const propTypes = {
    */
   srcPath: PropTypes.string,
   /**
-   * package.json repository
+   * package.json repository.url
    */
-  repository: PropTypes.shape(
-    {
-      type: PropTypes.string,
-      url: PropTypes.string,
-    },
-  ),
+  repositoryURL: PropTypes.string,
   /**
    * The git branch to use
    */
@@ -77,15 +72,15 @@ const defaultProps = {
   readme: '',
   srcPath: '',
   branch: 'master',
-  repository: {},
+  repositoryURL: '',
   examples: [],
   propsTables: [],
 };
 
-const DocTemplate = ({ packageName, readme, srcPath, repository, branch, examples, propsTables, ...customProps }) => {
+const DocTemplate = ({ packageName, readme, srcPath, repositoryURL, branch, examples, propsTables, ...customProps }) => {
   let id = 0;
-  let processedSrcPath = srcPath;
   let processedRepositoryURL;
+  let processedSrcPath;
   const localExamples = examples;
   const localPropsTables = propsTables;
 
@@ -101,33 +96,38 @@ const DocTemplate = ({ packageName, readme, srcPath, repository, branch, example
   }
 
   // Both of these props are needed to be able to generate the source path
-  const showSrcPath = repository && srcPath;
+  const showSrcPath = repositoryURL && (packageName || srcPath);
 
+  // The repository url can be of the format 'provider:user/repository' so process those for the website
   if (showSrcPath) {
-    if (repository.url.startsWith('git+')) {
-      processedRepositoryURL = repository.url.substring(4, repository.url.length);
-    } else if (repository.url.startsWith('github:')) {
-      processedRepositoryURL = `https://github.com/${repository.url.substring(7, repository.url.length)}`;
+    if (repositoryURL.startsWith('git+')) {
+      processedRepositoryURL = repositoryURL.substring(4, repositoryURL.length);
+
+      if (processedRepositoryURL.endsWith('.git')) {
+        processedRepositoryURL = processedRepositoryURL.substring(0, processedRepositoryURL.length - 4);
+      }
+    } else if (repositoryURL.startsWith('github:')) {
+      processedRepositoryURL = `https://github.com/${repositoryURL.substring(7, repositoryURL.length)}`;
+    } else if (repositoryURL.startsWith('bitbucket:')) {
+      processedRepositoryURL = `https://bitbucket.org/${repositoryURL.substring(10, repositoryURL.length)}`;
+    } else if (repositoryURL.startsWith('gitlab:')) {
+      processedRepositoryURL = `https://gitlab.com/${repositoryURL.substring(7, repositoryURL.length)}`;
+    } else if (repositoryURL.startsWith('git://')) {
+      processedRepositoryURL = `https://${repositoryURL.substring(6, repositoryURL.length)}`;
+
+      if (processedRepositoryURL.endsWith('.git')) {
+        processedRepositoryURL = processedRepositoryURL.substring(0, processedRepositoryURL.length - 4);
+      }
+    } else {
+      processedRepositoryURL = repositoryURL;
     }
   }
 
-  /**
-   * Check if the path given is to a documentation page.
-   * Matches the old site layout of having a terra-site package, and the new layout of having pages
-   * distributed with their source packages.
-   */
-  if (showSrcPath && srcPath.includes('packages/') && srcPath.includes('/examples/')) {
-    // If we're using the new format
-    if (srcPath.endsWith('site-page.jsx')) {
-      // We're already in the proper package folder so trim off the extra. Add 1 to preserve a '/'.
-      processedSrcPath = srcPath.substring(0, srcPath.indexOf('/examples/') + 1);
-    // Else we're using the old format
+  if (showSrcPath) {
+    if (srcPath) {
+      processedSrcPath = srcPath;
     } else {
-      const pathThroughPackages = srcPath.substring(0, srcPath.indexOf('packages/') + 9);
-      // Short becuase it doesn't include the assumed terra- prefix. Non-terra components will have to
-      // manually specify their path.
-      const shortPackageName = srcPath.substring(srcPath.indexOf('/examples/') + 10, srcPath.indexOf('Index.jsx'));
-      processedSrcPath = `${pathThroughPackages}terra-${shortPackageName}`;
+      processedSrcPath = `packages/${packageName}`;
     }
   }
 
