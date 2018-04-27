@@ -19,6 +19,6 @@ describe('Paginator', () => {
   // Structure Tests
   it('should have the class paginator', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('paginator');
+    expect(wrapper.dive().children().prop('className')).toContain('paginator');
   });
 });

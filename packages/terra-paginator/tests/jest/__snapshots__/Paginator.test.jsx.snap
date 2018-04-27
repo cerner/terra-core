@@ -1,165 +1,254 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paginator should render a default paginator 1`] = `
-<div
-  className="paginator"
->
-  <a
-    className="nav-link is-disabled"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    First
-  </a>
-  <a
-    className="nav-link is-disabled"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    <IconPrevious
-      className=""
-      data-name="Layer 1"
-      isBidi={true}
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-     Previous
-  </a>
-  <a
-    className="nav-link is-selected"
-    key="pageButton_1"
-    onClick={[Function]}
-    tabIndex={null}
-  >
-    1
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_2"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    2
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_3"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    3
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_4"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    4
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_5"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    5
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_6"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    6
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_7"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    7
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_8"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    8
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_9"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    9
-  </a>
-  <a
-    className="nav-link"
-    key="pageButton_10"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    10
-  </a>
-  <a
-    className="nav-link"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    Next 
-    <IconNext
-      className=""
-      data-name="Layer 1"
-      isBidi={true}
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  </a>
-  <a
-    className="nav-link"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    Last
-  </a>
-</div>
+<ResponsiveElement
+  defaultElement={
+    <div
+      className="paginator"
+    >
+      <a
+        className="nav-link is-disabled"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        First
+      </a>
+      <a
+        className="nav-link is-disabled"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <IconPrevious
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+         Previous
+      </a>
+      <span>
+        Page 
+        1
+      </span>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Next 
+        <IconNext
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Last
+      </a>
+    </div>
+  }
+  responsiveTo="parent"
+  tiny={
+    <div
+      className="paginator"
+    >
+      <a
+        className="nav-link is-disabled"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        First
+      </a>
+      <a
+        className="nav-link is-disabled"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <IconPrevious
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+         Previous
+      </a>
+      <a
+        className="nav-link is-selected"
+        onClick={[Function]}
+        tabIndex={null}
+      >
+        1
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        2
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        3
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        4
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        5
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        6
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        7
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        8
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        9
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        10
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Next 
+        <IconNext
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Last
+      </a>
+    </div>
+  }
+/>
 `;
 
 exports[`Paginator should render a paginator without page links 1`] = `
-<div
-  className="paginator"
->
-  <a
-    className="nav-link"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    <IconPrevious
-      className=""
-      data-name="Layer 1"
-      isBidi={true}
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-     Previous
-  </a>
-  <a
-    className="nav-link"
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    Next 
-    <IconNext
-      className=""
-      data-name="Layer 1"
-      isBidi={true}
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  </a>
-</div>
+<ResponsiveElement
+  defaultElement={
+    <div
+      className="paginator"
+    >
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <IconPrevious
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+         Previous
+      </a>
+      <span>
+        Page 
+      </span>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Next 
+        <IconNext
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </a>
+    </div>
+  }
+  responsiveTo="parent"
+  tiny={
+    <div
+      className="paginator"
+    >
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <IconPrevious
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+         Previous
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Next 
+        <IconNext
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </a>
+    </div>
+  }
+/>
 `;
