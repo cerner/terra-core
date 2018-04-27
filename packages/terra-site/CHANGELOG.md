@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added page for terra-doc-template
 
 2.8.0 - (April 20, 2018)
 ------------------
