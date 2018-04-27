@@ -6,6 +6,7 @@ describe('Toggle', () => {
   it('should render a default toggle', () => {
     const toggle = render(<Toggle>Test</Toggle>);
     expect(toggle).toMatchSnapshot();
+    expect(toggle[0].attribs['aria-hidden']).toBe('true');
   });
 
   it('should render an animated toggle', () => {
@@ -16,6 +17,7 @@ describe('Toggle', () => {
   it('should render an open toggle', () => {
     const toggle = render(<Toggle isOpen>Test</Toggle>);
     expect(toggle).toMatchSnapshot();
+    expect(toggle[0].attribs['aria-hidden']).toBe('false');
   });
 
   // Prop Tests
