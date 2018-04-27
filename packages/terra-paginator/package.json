@@ -34,7 +34,8 @@
     "terra-base": "^2.0.0",
     "terra-button": "^2.7.0",
     "terra-form": "^2.6.0",
-    "terra-icon": "^2.6.0"
+    "terra-icon": "^2.6.0",
+    "terra-responsive-element": "^2.6.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

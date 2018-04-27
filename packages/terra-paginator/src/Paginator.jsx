@@ -57,7 +57,6 @@ class Paginator extends React.Component {
 
   buildPageButtons(totalPages, onClick) {
     const { pageSequence, selectedPage } = this.state;
-    const reducedSizePages = <span>Page {selectedPage}</span>;
 
     const pageButtons = [];
 
@@ -73,8 +72,6 @@ class Paginator extends React.Component {
 
       pageButtons.push(<a className={paginationLinkClassNames} tabIndex={val === selectedPage ? null : '0'} key={`pageButton_${val}`} onClick={onClick(val)}>{val}</a>);
     });
-
-    const responsivePages = <ResponsiveElement defaultElement={reducedSizePages} tiny={pageButtons} />;
 
     return pageButtons;
   }
