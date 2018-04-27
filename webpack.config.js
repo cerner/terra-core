@@ -1,27 +1,26 @@
 const path = require('path');
-const webpackConfig = require('terra-dev-site/src/config/webpack.config');
-const aggregateTranslations = require('terra-toolkit/scripts/aggregate-translations/aggregate-translations');
+const merge = require('webpack-merge');
+const defaultWebpackConfig = require('terra-dev-site/config/webpack/webpack.config');
 
-aggregateTranslations({ baseDirectory: __dirname });
+const coreConfig = () => {
+  const processPath = process.cwd();
+  const rootPath = processPath.includes('packages') ? processPath.split('packages')[0] : processPath;
 
-const processPath = process.cwd();
-const rootPath = processPath.includes('packages') ? processPath.split('packages')[0] : processPath;
+  const momentAlias = path.resolve(path.join(rootPath, 'packages', 'terra-date-time-picker', 'node_modules', 'moment'));
 
-// Remove the terra-i18n-plugin from the configuration
-const startPlugins = webpackConfig.plugins.splice(0, 2);
-const endPlugins = webpackConfig.plugins.splice(1, webpackConfig.plugins.length);
-webpackConfig.plugins = startPlugins.concat(endPlugins);
-
-const momentAlias = path.resolve(path.join(rootPath, 'packages', 'terra-date-time-picker', 'node_modules', 'moment'));
-webpackConfig.resolve.alias.moment = momentAlias;
-
-const i18nAlias = path.resolve(path.join(rootPath, 'packages', 'terra-i18n'));
-webpackConfig.resolve.alias['terra-i18n'] = i18nAlias;
-
-// Enable __filename for DocTemplate
-webpackConfig.node = {
-  ...webpackConfig.node,
-  __filename: true,
+  const i18nAlias = path.resolve(path.join(rootPath, 'packages', 'terra-i18n'));
+  return {
+    resolve: {
+      alias: {
+        moment: momentAlias,
+        'terra-i18n': i18nAlias,
+      },
+    },
+  };
 };
 
-module.exports = webpackConfig;
+const mergedConfig = (env, argv) => (
+  merge(defaultWebpackConfig(env, argv), coreConfig())
+);
+
+module.exports = mergedConfig;
