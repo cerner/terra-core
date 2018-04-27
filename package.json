@@ -40,6 +40,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=moment",
     "clean:all": "lerna clean --yes && node scripts/clean-modules/index.js",
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
@@ -61,7 +62,7 @@
     "pretest": "npm run lint",
     "postinstall": "node scripts/post-install/index.js",
     "postinstall:package": "npm run compile && npm run bootstrap",
-    "postinstall:project": "link-parent-bin && npm run compile && npm run bootstrap",
+    "postinstall:project": "link-parent-bin && npm run compile && npm run bootstrap:hoist",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
     "start": "tt:serve --config webpack.config",
