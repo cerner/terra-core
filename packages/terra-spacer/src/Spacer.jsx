@@ -132,8 +132,10 @@ const Spacer = ({
   return <div {...customProps} className={SpacerClassNames}>{children}</div>;
 };
 
-Spacer.Sizes = SpacerSizes;
 Spacer.propTypes = propTypes;
 Spacer.defaultProps = defaultProps;
+
+Spacer.Opts = {};
+Spacer.Opts.Sizes = SpacerSizes;
 
 export default Spacer;
