@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed default display for image to `inline-block`
 
 2.6.0 - (April 20, 2018)
 ------------------
