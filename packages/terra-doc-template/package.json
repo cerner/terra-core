@@ -27,12 +27,12 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-base": "^3.6.0",
     "prop-types": "^15.5.8",
-    "terra-button": "^2.7.0",
+    "react-syntax-highlighter": "^7.0.2",
+    "terra-base": "^3.6.0",
     "terra-markdown": "^2.4.0",
     "terra-props-table": "^2.5.0",
-    "terra-slide-panel": "^2.5.0"
+    "terra-toggle-button": "^2.7.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
