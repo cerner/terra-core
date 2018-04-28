@@ -23,13 +23,13 @@ describe('CollapsibleMenuViewItem', () => {
 
   it('should render a button group button when in an item group', () => {
     const context = { isCollapsibleGroupItem: true };
-    const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" />, { ...context, ...intlContexts.shallowContext });
+    const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" />, { context });
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should set isSelected on button that is inside item group', () => {
     const context = { isCollapsibleGroupItem: true };
-    const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isSelected />, { ...context, ...intlContexts.shallowContext });
+    const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isSelected />, { context });
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -43,7 +43,7 @@ describe('CollapsibleMenuViewItem', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a button with icon and no text when isIconOnly is set', () => {
+  it('should render a button with icon and text when isIconOnly and text is set', () => {
     const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" icon={<IconTrash />} isIconOnly />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
@@ -60,44 +60,44 @@ describe('CollapsibleMenuViewItem', () => {
 
   it('should render a disabled button group button that is inside a button group when isDisabled is set', () => {
     const context = { isCollapsibleGroupItem: true };
-    const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isDisabled />, { ...context, ...intlContexts.shallowContext });
+    const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isDisabled />, { context });
     expect(wrapper).toMatchSnapshot();
   });
 
   describe('Collapsible Menu Context', () => {
     it('should render a menu item', () => {
       const context = { isCollapsibleMenuItem: true };
-      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" />, { ...context, ...intlContexts.shallowContext });
+      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" />, { context });
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should not set selected prop on menu item outside of item group', () => {
       const context = { isCollapsibleMenuItem: true };
-      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isSelected />, { ...context, ...intlContexts.shallowContext });
+      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isSelected />, { context });
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should set selected prop on menu item when inside item group', () => {
       const context = { isCollapsibleMenuItem: true, isCollapsibleGroupItem: true };
-      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isSelected />, { ...context, ...intlContexts.shallowContext });
+      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isSelected />, { context });
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should not set icon prop menu item, but should render text', () => {
       const context = { isCollapsibleMenuItem: true };
-      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" icon={<IconTrash />} />, { ...context, ...intlContexts.shallowContext });
+      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" icon={<IconTrash />} />, { context });
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should not set isReversed prop on menu item', () => {
       const context = { isCollapsibleMenuItem: true };
-      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" icon={<IconTrash />} isReversed />, { ...context, ...intlContexts.shallowContext });
+      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" icon={<IconTrash />} isReversed />, { context });
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should not set icon on menu item when isIconOnly is set, but should set the text', () => {
       const context = { isCollapsibleMenuItem: true };
-      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" icon={<IconTrash />} isIconOnly />, { ...context, ...intlContexts.shallowContext });
+      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" icon={<IconTrash />} isIconOnly />, { context });
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -108,13 +108,13 @@ describe('CollapsibleMenuViewItem', () => {
           text="Testing"
           subMenuItems={[<CollapsibleMenuViewItem text="Menu Item" key="1" />]}
         />
-    ), { ...context, ...intlContexts.shallowContext });
+    ), { context });
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should render a disabled menu item when isDisabled is set', () => {
       const context = { isCollapsibleMenuItem: true };
-      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isDisabled />, { ...context, ...intlContexts.shallowContext });
+      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isDisabled />, { context });
       expect(wrapper).toMatchSnapshot();
     });
   });

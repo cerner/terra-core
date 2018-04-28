@@ -10,9 +10,8 @@ describe('CollapsibleMenuViewItemGroup', () => {
       <CollapsibleMenuViewItemGroup>
         <CollapsibleMenuViewItem text="Testing" />
         <CollapsibleMenuViewItem text="Testing" />
-      </CollapsibleMenuViewItemGroup>,
-      intlContexts.shallowContext
-    ));
+      </CollapsibleMenuViewItemGroup>
+    ), intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -22,9 +21,8 @@ describe('CollapsibleMenuViewItemGroup', () => {
       <CollapsibleMenuViewItemGroup className="Testing">
         <CollapsibleMenuViewItem text="Testing" />
         <CollapsibleMenuViewItem text="Testing" />
-      </CollapsibleMenuViewItemGroup>,
-      intlContexts.shallowContext
-    ));
+      </CollapsibleMenuViewItemGroup>
+    ), intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -33,9 +31,8 @@ describe('CollapsibleMenuViewItemGroup', () => {
       <CollapsibleMenuViewItemGroup selectedKeys={['key1']}>
         <CollapsibleMenuViewItem text="Testing" key="key1" />
         <CollapsibleMenuViewItem text="Testing" key="key2" />
-      </CollapsibleMenuViewItemGroup>,
-      intlContexts.shallowContext
-    ));
+      </CollapsibleMenuViewItemGroup>
+    ), intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -47,7 +44,7 @@ describe('CollapsibleMenuViewItemGroup', () => {
           <CollapsibleMenuViewItem text="Testing" key="key1" />
           <CollapsibleMenuViewItem text="Testing" key="key2" />
         </CollapsibleMenuViewItemGroup>
-      ), { ...context, ...intlContexts.shallowContext });
+      ), { context });
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -58,7 +55,7 @@ describe('CollapsibleMenuViewItemGroup', () => {
           <CollapsibleMenuViewItem text="Testing" />
           <CollapsibleMenuViewItem text="Testing" />
         </CollapsibleMenuViewItemGroup>
-      ), { ...context, ...intlContexts.shallowContext });
+      ), { context });
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -69,7 +66,7 @@ describe('CollapsibleMenuViewItemGroup', () => {
           <CollapsibleMenuViewItem text="Testing" key="key1" />
           <CollapsibleMenuViewItem text="Testing" key="key2" />
         </CollapsibleMenuViewItemGroup>
-      ), { ...context, ...intlContexts.shallowContext });
+      ), { context });
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -80,7 +77,7 @@ describe('CollapsibleMenuViewItemGroup', () => {
           <CollapsibleMenuViewItem text="Testing" />
           <CollapsibleMenuViewItem text="Testing" />
         </CollapsibleMenuViewItemGroup>
-      ), { ...context, ...intlContexts.shallowContext });
+      ), { context });
       expect(wrapper).toMatchSnapshot();
     });
   });

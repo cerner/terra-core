@@ -11,7 +11,7 @@ describe('CollapsibleMenuViewDivider', () => {
 
   it('should render a menu divider in the context of the collapsible menu', () => {
     const context = { isCollapsibleMenuItem: true };
-    const wrapper = shallow(<CollapsibleMenuViewDivider />, { ...context, ...intlContexts.shallowContext });
+    const wrapper = shallow(<CollapsibleMenuViewDivider />, { context });
     expect(wrapper).toMatchSnapshot();
   });
 });
