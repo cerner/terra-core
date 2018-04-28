@@ -65,9 +65,9 @@ export const shorthandValidator = (props = {}, propName = '') => {
 
     const conflictProp = (
       (propertyConflicts('Top') ? `${propName}Top` : undefined) ||
-      ((propertyConflicts('Right')) ? `${propName}Right` : undefined) ||
-      ((propertyConflicts('Bottom')) ? `${propName}Bottom` : undefined) ||
-      ((propertyConflicts('Left')) ? `${propName}Left` : undefined)
+      (propertyConflicts('Right') ? `${propName}Right` : undefined) ||
+      (propertyConflicts('Bottom') ? `${propName}Bottom` : undefined) ||
+      (propertyConflicts('Left') ? `${propName}Left` : undefined)
     );
 
     return conflictProp;
