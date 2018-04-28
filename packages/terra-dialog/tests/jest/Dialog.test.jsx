@@ -1,4 +1,5 @@
 import React from 'react';
+import intlContexts from './intl-context-setup';
 import Dialog from '../../src/Dialog';
 
 describe('Dialog', () => {
@@ -6,18 +7,26 @@ describe('Dialog', () => {
 
   // Snapshot Test
   it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = shallow(defaultRender, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Structure Tests
   it('should have the class dialog', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = shallow(defaultRender, intlContexts.shallowContext);
     expect(wrapper.prop('className')).toContain('dialog');
   });
 
   it('should render a Dialog with merged attributes', () => {
-    const wrapper = shallow(<Dialog header="Header Content" footer="Footer Content" className="TestClass">some body content</Dialog>);
+    const wrapper = shallow(<Dialog header="Header Content" footer="Footer Content" className="TestClass">some body content</Dialog>, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+});
+
+it('throws error on missing locale prop in Base', () => {
+  try {
+    render(<Dialog header="Header Content" footer="Footer Content" />);
+  } catch (e) {
+    expect(e.message).toContain('add locale prop to Base component');
+  }
 });
