@@ -112,7 +112,6 @@ class CollapsibleMenuViewItem extends React.Component {
 
     const { isCollapsibleGroupItem, isCollapsibleMenuItem } = this.context;
     const attributes = Object.assign({}, customProps);
-    const faceUpText = isIconOnly && !isCollapsibleMenuItem ? '' : text;
     let item;
 
     if (isCollapsibleMenuItem) {
@@ -130,7 +129,7 @@ class CollapsibleMenuViewItem extends React.Component {
         <ButtonGroup.Button
           {...attributes}
           icon={icon}
-          text={faceUpText}
+          text={text}
           isDisabled={isDisabled}
         />
       );
@@ -143,7 +142,7 @@ class CollapsibleMenuViewItem extends React.Component {
             <Button
               {...attributes}
               icon={icon}
-              text={faceUpText}
+              text={text}
               isReversed={isReversed}
               isDisabled={isDisabled}
               onClick={this.handleButtonClick}
@@ -159,7 +158,7 @@ class CollapsibleMenuViewItem extends React.Component {
           <Button
             {...attributes}
             icon={icon}
-            text={faceUpText}
+            text={text}
             isReversed={isReversed}
             isDisabled={isDisabled}
             isIconOnly={isIconOnly}
