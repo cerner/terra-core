@@ -31,8 +31,8 @@ describe('Image', () => {
   describe('Loading', () => {
     before(() => {
       browser.url('/#/tests/image/image-loading');
-      browser.waitForExist('#loadedImage', 1000);
-      browser.waitForExist('#errorImage', 1000);
+      browser.waitForExist('#loadedImage', 3000);
+      browser.waitForExist('#errorImage', 3000);
     });
 
     Terra.should.beAccessible();
