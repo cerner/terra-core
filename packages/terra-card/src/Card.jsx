@@ -13,7 +13,7 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * An option used to flex the change to a different style of card for different use cases
+   * An option used in order to change to a different style of card for different use cases
    */
   variant: PropTypes.oneOf(['default', 'raised']),
 };
