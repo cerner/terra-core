@@ -4,7 +4,7 @@ import Card from 'terra-card';
 
 const CardDefault = () => (
   <div>
-    <Card variant="raised">Hello World!!</Card>
+    <Card variant={Card.Opts.Variants.RAISED}>Hello World!!</Card>
   </div>
 );
 

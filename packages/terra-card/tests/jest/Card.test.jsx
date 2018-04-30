@@ -17,8 +17,14 @@ describe('Card', () => {
     expect(wrapper.find('.default'));
   });
 
+  it('should use the default variant when prop is provided just like default', () => {
+    const wrapper = shallow(<Card variant={Card.Opts.Variants.DEFAULT} />);
+    expect(wrapper.find('.default'));
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should use the raised variant when prop is provided', () => {
-    const wrapper = shallow(<Card variant="raised" />);
+    const wrapper = shallow(<Card variant={Card.Opts.Variants.RAISED} />);
     expect(wrapper.find('.raised'));
     expect(wrapper).toMatchSnapshot();
   });
