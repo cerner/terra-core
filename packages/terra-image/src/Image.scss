@@ -1,14 +1,9 @@
 :local {
   .image {
     border: 0;
-    display: block;
+    display: inline-block;
     margin: 0;
     padding: 0;
-    vertical-align: middle;
-  }
-
-  .default {
-    display: block;
     vertical-align: middle;
   }
 
