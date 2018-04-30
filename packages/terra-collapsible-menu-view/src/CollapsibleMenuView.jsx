@@ -31,6 +31,15 @@ const propTypes = {
   boundingRef: PropTypes.func,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
+};
+
 class CollapsibleMenuView extends React.Component {
   constructor(props) {
     super(props);
@@ -97,6 +106,8 @@ class CollapsibleMenuView extends React.Component {
 
   render() {
     const { children, boundingRef, menuWidth, ...customProps } = this.props;
+    const intl = this.context.intl;
+    const ellipsesText = intl.formatMessage({ id: 'Terra.collapsibleMenuView.more' });
     const visibleChildren = React.Children.toArray(children);
 
     let hiddenChildren = null;
@@ -125,6 +136,7 @@ class CollapsibleMenuView extends React.Component {
             boundingRef={boundingRef}
             menuWidth={menuWidth}
             isIconOnly
+            text={ellipsesText}
           />
         </div>
       </div>
@@ -138,5 +150,6 @@ CollapsibleMenuView.Toggle = CollapsibleMenuViewToggle;
 CollapsibleMenuView.Divider = CollapsibleMenuViewDivider;
 
 CollapsibleMenuView.propTypes = propTypes;
+CollapsibleMenuView.contextTypes = contextTypes;
 
 export default CollapsibleMenuView;
