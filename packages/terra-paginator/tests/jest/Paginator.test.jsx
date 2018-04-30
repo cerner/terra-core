@@ -15,10 +15,4 @@ describe('Paginator', () => {
     const wrapper = shallow(noPagesRender);
     expect(wrapper).toMatchSnapshot();
   });
-
-  // Structure Tests
-  it('should have the class paginator', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.dive().children().prop('className')).toContain('paginator');
-  });
 });

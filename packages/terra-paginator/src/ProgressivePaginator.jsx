@@ -62,12 +62,11 @@ class ProgressivePaginator extends React.Component {
 
   buildPageSelectorForm(totalPages, onSubmit) {
     const { pageInput } = this.state;
+    const inputAttrs = { className: cx('page-input') };
 
-    const pageForm = (<div>
-      <form className={cx('page-form')} onSubmit={onSubmit(parseInt(pageInput, 10))}>
-        <div>Page {<NumberField isInline value={pageInput} onChange={this.handlePageInput} min={1} max={totalPages} />} of {totalPages}</div>
-      </form>
-    </div>);
+    const pageForm = (<form className={cx('page-form')} onSubmit={onSubmit(parseInt(pageInput, 10))}>
+      Page {<NumberField isInline inputAttrs={inputAttrs} value={pageInput} onChange={this.handlePageInput} min={1} max={totalPages} />} of {totalPages}
+    </form>);
 
     return pageForm;
   }

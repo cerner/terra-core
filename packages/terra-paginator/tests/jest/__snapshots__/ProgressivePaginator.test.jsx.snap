@@ -4,33 +4,33 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
 <div
   className="paginator"
 >
-  <div>
-    <form
-      className="page-form"
-      onSubmit={[Function]}
-    >
-      <div>
-        Page 
-        <NumberField
-          error={null}
-          help={null}
-          inputAttrs={Object {}}
-          isInline={true}
-          label={null}
-          labelAttrs={Object {}}
-          max={112}
-          min={1}
-          name={null}
-          onChange={[Function]}
-          required={false}
-          step={null}
-          value={1}
-        />
-         of 
-        112
-      </div>
-    </form>
-  </div>
+  <form
+    className="page-form"
+    onSubmit={[Function]}
+  >
+    Page 
+    <NumberField
+      error={null}
+      help={null}
+      inputAttrs={
+        Object {
+          "className": "page-input",
+        }
+      }
+      isInline={true}
+      label={null}
+      labelAttrs={Object {}}
+      max={112}
+      min={1}
+      name={null}
+      onChange={[Function]}
+      required={false}
+      step={null}
+      value={1}
+    />
+     of 
+    112
+  </form>
   <div>
     <a
       className="nav-link is-disabled"

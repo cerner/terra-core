@@ -8,8 +8,7 @@
       color: var(--terra-paginator-nav-link-foreground-color, #0059a8);
       cursor: pointer;
       display: inline-block;
-      margin-left: var(--terra-paginator-nav-link-margin-left, 2px);
-      margin-right: var(--terra-paginator-nav-link-margin-right, 2px);
+      margin: var(--terra-paginator-nav-link-margin, auto 2px);
       min-width: var(--terra-paginator-nav-link-min-width, 2rem); // Helps ensure limited resizing as you page through large numbers.
       padding: var(--terra-paginator-nav-link-padding, 3px);
       text-align: center;
@@ -39,6 +38,16 @@
       color: var(--terra-paginator-nav-link-foreground-color-disabled, rgba(28, 31, 33, 0.2));
       cursor: default;
       pointer-events: none;
+    }
+
+    .page-form {
+      align-items: baseline;
+      display: flex;
+    }
+
+    .page-input {
+      margin: var(--terra-paginator-progressive-page-input-margin, auto 3px);
+      text-align: center;
     }
   }
 }
