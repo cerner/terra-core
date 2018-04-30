@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import React from 'react';
 import Image from '../../lib/Image';
 import placeholder150x150 from '../assets/150x150.jpg';
@@ -19,22 +21,22 @@ const imagecontainerStyle3 = {
   marginBottom: 100,
 };
 
-const ImageFluid = () => (
+const ImageNonFluid = () => (
   <div>
-    <h2>Fluid Examples</h2>
-    <p>Image width and height are smaller than container. To fill the container, increase the width of the image.</p>
-    <div style={imagecontainerStyle1}>
-      <Image src={placeholder150x150} alt="rounded" variant="rounded" isFluid />
+    <h2>Non Fluid Examples</h2>
+    <p>Image width and height are smaller than container.</p>
+    <div id="smaller" style={imagecontainerStyle1}>
+      <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
     <p>Image width is larger than the container. Image height is smaller than the container.</p>
-    <div style={imagecontainerStyle2}>
-      <Image src={placeholder150x150} alt="rounded" variant="rounded" isFluid />
+    <div id="height-smaller" style={imagecontainerStyle2}>
+      <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
     <p>Image width is smaller than the container. Image height is larger than the container.</p>
-    <div style={imagecontainerStyle3}>
-      <Image src={placeholder150x150} alt="rounded" variant="rounded" isFluid />
+    <div id="width-smaller" style={imagecontainerStyle3}>
+      <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
   </div>
 );
 
-export default ImageFluid;
+export default ImageNonFluid;
