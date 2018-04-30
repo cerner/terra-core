@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+Added localized aria-label to dialog close button
 
 1.6.0 - (April 20, 2018)
 ------------------
