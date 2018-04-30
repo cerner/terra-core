@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+Added localized aria-label to ellipses "view more" button
 
 2.7.0 - (April 20, 2018)
 ------------------

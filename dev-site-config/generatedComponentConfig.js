@@ -504,9 +504,9 @@ import OnOpenToggleButton from '../packages/terra-toggle-button/tests/nightwatch
 import OpenedButtonText from '../packages/terra-toggle-button/tests/nightwatch/OpenedButtonText';
 import DefaultToggleSectionHeader from '../packages/terra-toggle-section-header/examples/test-examples/DefaultToggleSectionHeader.example';
 import OpenToggleSectionHeader from '../packages/terra-toggle-section-header/examples/test-examples/OpenToggleSectionHeader.example';
-import AnimatedToggle from '../packages/terra-toggle/tests/nightwatch/AnimatedToggle';
-import DefaultToggle from '../packages/terra-toggle/tests/nightwatch/DefaultToggle';
-import OpenToggle from '../packages/terra-toggle/tests/nightwatch/OpenToggle';
+import AnimatedToggle from '../packages/terra-toggle/examples/test-examples/AnimatedToggle.example';
+import DefaultToggle from '../packages/terra-toggle/examples/test-examples/DefaultToggle.example';
+import OpenToggle from '../packages/terra-toggle/examples/test-examples/OpenToggle.example';
 
 const componentConfig = {
   'terra-abstract-modal': {
