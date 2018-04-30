@@ -69,7 +69,6 @@
     "start:build": "npm run generate-config && npm run start",
     "start-heroku": "tt:serve-static --site build",
     "test": "jest && npm run wdio && nightwatch",
-    "test-image": "cd packages/terra-image && npm run test:wdio",
     "wdio": "wdio"
   },
   "devDependencies": {
