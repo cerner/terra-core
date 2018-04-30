@@ -3,8 +3,15 @@
     background-color: var(--terra-card-background-color, #fff);
     border: var(--terra-card-border, 1px solid #c8cacb);
     border-radius: var(--terra-card-border-radius, 3px);
-    box-shadow: var(--terra-card-box-shadow, none);
     color: var(--terra-card-color, inherit);
     overflow: hidden;
+  }
+
+  .default {
+    box-shadow: var(--terra-card-box-shadow, none);
+  }
+
+  .raised {
+    box-shadow: var(--terra-card-raised-box-shadow, none);
   }
 }

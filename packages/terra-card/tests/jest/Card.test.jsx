@@ -14,6 +14,13 @@ describe('Card', () => {
   it('should use the default value when no value is given', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper.find('.card'));
+    expect(wrapper.find('.default'));
+  });
+
+  it('should use the raised variant when prop is provided', () => {
+    const wrapper = shallow(<Card variant="raised" />);
+    expect(wrapper.find('.raised'));
+    expect(wrapper).toMatchSnapshot();
   });
 
   // Structure Tests
