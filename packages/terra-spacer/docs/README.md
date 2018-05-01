@@ -49,6 +49,18 @@ import Spacer from 'terra-spacer';
 
 // Shorthand consumption
 
+<Spacer padding="large" margin="medium large+1 tiny">
+  <Image src="someImageSource" alt="example image" />
+</Spacer>
+
+<Spacer padding="large small" margin="medium large+1 tiny">
+  <Image src="someImageSource" alt="example image" />
+</Spacer>
+
+<Spacer padding="large medium small" margin="medium large+1 tiny">
+  <Image src="someImageSource" alt="example image" />
+</Spacer>
+
 <Spacer padding="large none large+1 large+2" margin="none large+3 none large+4">
   <Image src="someImageSource" alt="example image" />
 <Spacer/>
