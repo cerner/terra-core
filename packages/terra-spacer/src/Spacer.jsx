@@ -14,7 +14,7 @@ const cx = classNames.bind(styles);
   as defined. Currently, simply putting `Object.values(SpacerSizes)` causes all other `marginX` and `paddingX` props to be recognized as `undefined`
   in the PropsTable.
 */
-const arrayOfTypes = [...Object.values(SpacerSizes)];
+const arrayOfSpacerSizes = [...Object.values(SpacerSizes)];
 
 const propTypes = {
   /**
@@ -28,19 +28,19 @@ const propTypes = {
   /**
    * Sets top margin. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  marginTop: PropTypes.oneOf(arrayOfTypes),
+  marginTop: PropTypes.oneOf(arrayOfSpacerSizes),
   /**
    * Sets bottom margin. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  marginBottom: PropTypes.oneOf(arrayOfTypes),
+  marginBottom: PropTypes.oneOf(arrayOfSpacerSizes),
   /**
    * Sets left margin One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  marginLeft: PropTypes.oneOf(arrayOfTypes),
+  marginLeft: PropTypes.oneOf(arrayOfSpacerSizes),
   /**
    * Sets right margin. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  marginRight: PropTypes.oneOf(arrayOfTypes),
+  marginRight: PropTypes.oneOf(arrayOfSpacerSizes),
   /**
    * Sets padding in a syntax similar to the standard CSS spec https://developer.mozilla.org/en-US/docs/Web/CSS/padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
@@ -48,19 +48,19 @@ const propTypes = {
   /**
    * Sets top padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  paddingTop: PropTypes.oneOf(arrayOfTypes),
+  paddingTop: PropTypes.oneOf(arrayOfSpacerSizes),
   /**
    * Sets bottom padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  paddingBottom: PropTypes.oneOf(arrayOfTypes),
+  paddingBottom: PropTypes.oneOf(arrayOfSpacerSizes),
   /**
    * Sets left padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  paddingLeft: PropTypes.oneOf(arrayOfTypes),
+  paddingLeft: PropTypes.oneOf(arrayOfSpacerSizes),
   /**
    * Sets right padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  paddingRight: PropTypes.oneOf(arrayOfTypes),
+  paddingRight: PropTypes.oneOf(arrayOfSpacerSizes),
   /**
    * Sets the display to be inline-block.
    */
