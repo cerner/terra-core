@@ -25,7 +25,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  variant: 'default',
+  variant: CardVariants.DEFAULT,
 };
 
 const Card = ({
