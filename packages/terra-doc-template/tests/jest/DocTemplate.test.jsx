@@ -79,4 +79,29 @@ describe('DocTemplate', () => {
     />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should resolve source links when using bitbucket: format repositoryURL', () => {
+    const wrapper = shallow(<DocTemplate
+      packageName="terra-doc-template"
+      branch="288c444a7e3bdd1d04d70003349f33fbd711df4f"
+      repositoryURL="bitbucket:cerner/terra-core"
+    />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should resolve source links when using gitlab: format repositoryURL', () => {
+    const wrapper = shallow(<DocTemplate
+      packageName="terra-doc-template"
+      repositoryURL="gitlab:cerner/terra-core"
+    />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should resolve source links when using git:// format repositoryURL', () => {
+    const wrapper = shallow(<DocTemplate
+      packageName="terra-doc-template"
+      repositoryURL="git://github.com/cerner/terra-core.git"
+    />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

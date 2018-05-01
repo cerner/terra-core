@@ -13,6 +13,7 @@ The terra-doc-template component provides an adjustable template for documentati
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import readme from 'README.md'
+import { name, repository } from 'component/package.json';
 
 import ComponentSrc from '!rawloader!./Component';
 
@@ -27,5 +28,11 @@ const examples = [
   { title: 'Example Component Example 1', description: 'Description of the examples', example: Example, source: ExampleSrc }
 ];
 
-<DocTemplate packageName="terra-doc-template" readme={readme} examples={examples} propsTables={propsTables} />
+<DocTemplate
+  packageName={name}
+  readme={readme}
+  repositoryURL={repository.url}
+  examples={examples}
+  propsTables={propsTables}
+/>
 ```

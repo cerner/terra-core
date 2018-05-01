@@ -2,10 +2,49 @@
 
 exports[`DocTemplate should render a default component with nothing 1`] = `<div />`;
 
-exports[`DocTemplate should resolve source links in the new format 1`] = `
+exports[`DocTemplate should resolve source links when srcPath is specified and using github: format repositoryURL 1`] = `
 <div>
   <a
-    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template/"
+    href="https://github.com/cerner/terra-core/tree/master/path/packages/terra-doc-template"
+  >
+    View component source code
+  </a>
+</div>
+`;
+
+exports[`DocTemplate should resolve source links when using bitbucket: format repositoryURL 1`] = `
+<div>
+  <Markdown
+    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
+  />
+  <a
+    href="https://bitbucket.org/cerner/terra-core/src/288c444a7e3bdd1d04d70003349f33fbd711df4f/packages/terra-doc-template"
+  >
+    View component source code
+  </a>
+</div>
+`;
+
+exports[`DocTemplate should resolve source links when using git:// format repositoryURL 1`] = `
+<div>
+  <Markdown
+    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
+  />
+  <a
+    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
+  >
+    View component source code
+  </a>
+</div>
+`;
+
+exports[`DocTemplate should resolve source links when using gitlab: format repositoryURL 1`] = `
+<div>
+  <Markdown
+    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
+  />
+  <a
+    href="https://gitlab.com/cerner/terra-core/tree/master/packages/terra-doc-template"
   >
     View component source code
   </a>
@@ -105,11 +144,7 @@ exports[`DocTemplate should show the version and readme 1`] = `
 </div>
 `;
 
-<<<<<<< HEAD
 exports[`DocTemplate should show the version, readme, source link, examples, and props tables 1`] = `
-=======
-exports[`DocTemplate should show the version, readme, examples, and props tables 1`] = `
->>>>>>> master
 <div>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
@@ -117,14 +152,11 @@ exports[`DocTemplate should show the version, readme, examples, and props tables
   <Markdown
     src="test-file-stub"
   />
-<<<<<<< HEAD
   <a
-    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template/"
+    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
   >
     View component source code
   </a>
-=======
->>>>>>> master
   <h1
     className=".examples-header"
   >

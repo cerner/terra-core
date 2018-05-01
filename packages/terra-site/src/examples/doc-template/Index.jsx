@@ -13,8 +13,7 @@ const DocTemplateExamples = () => (
   <DocTemplate
     packageName={name}
     readme={readme}
-    srcPath={__filename}
-    repository={repository}
+    repositoryURL={repository.url}
     examples={[
       {
         title: 'DocTemplate',

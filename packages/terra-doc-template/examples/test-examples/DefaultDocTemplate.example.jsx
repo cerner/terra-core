@@ -21,7 +21,13 @@ const Index = () => {
 
   return (
     <div id="DocTemplateContainer">
-      <DocTemplate packageName="test-package-name" readme={readme} srcPath={__filename} propsTables={propsTables} examples={examples} />
+      <DocTemplate
+        packageName="test-package-name"
+        readme={readme}
+        repositoryURL="git+https://github.com/cerner/terra-core.git"
+        propsTables={propsTables}
+        examples={examples}
+      />
     </div>
   );
 };

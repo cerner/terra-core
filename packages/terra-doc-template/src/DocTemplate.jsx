@@ -10,25 +10,26 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The given component's npm package name
+   * The given component's npm package name.
    */
   packageName: PropTypes.string,
   /**
-   * The given component's readme file imported to a string
+   * The given component's readme file imported to a string.
    */
   readme: PropTypes.string,
   /**
-   * Either the path from the repository root to the documentation page (acquired by passing
-   * the value `__filename`), or for non-monorepo projects the path from the repository root
-   * to the desired file or folder
+   * The path from the project root to the folder for the component. Only needs to be specified
+   * if `packages/${packageName}` would be wrong.
    */
   srcPath: PropTypes.string,
   /**
-   * package.json repository.url
+   * The URL for the git repository of the project. Typically found by importing `{ repository }` from
+   * the `package.json` and passing the `repository.url`. This prop and either `packageName` or `srcLink`
+   * are required to be specified for the source link to be displayed on the page.
    */
   repositoryURL: PropTypes.string,
   /**
-   * The git branch to use
+   * The git branch to use. For bitbucket repositories this should be the commit hash to browse from.
    */
   branch: PropTypes.string,
   /**
@@ -81,6 +82,7 @@ const DocTemplate = ({ packageName, readme, srcPath, repositoryURL, branch, exam
   let id = 0;
   let processedRepositoryURL;
   let processedSrcPath;
+  let gitBranchPath;
   const localExamples = examples;
   const localPropsTables = propsTables;
 
@@ -98,8 +100,8 @@ const DocTemplate = ({ packageName, readme, srcPath, repositoryURL, branch, exam
   // Both of these props are needed to be able to generate the source path
   const showSrcPath = repositoryURL && (packageName || srcPath);
 
-  // The repository url can be of the format 'provider:user/repository' so process those for the website
   if (showSrcPath) {
+    // The repository url can be of the format 'provider:user/repository' so process those for the website
     if (repositoryURL.startsWith('git+')) {
       processedRepositoryURL = repositoryURL.substring(4, repositoryURL.length);
 
@@ -118,12 +120,19 @@ const DocTemplate = ({ packageName, readme, srcPath, repositoryURL, branch, exam
       if (processedRepositoryURL.endsWith('.git')) {
         processedRepositoryURL = processedRepositoryURL.substring(0, processedRepositoryURL.length - 4);
       }
+    // Fallback if the repositoryURL doesn't match any expected patterns
     } else {
       processedRepositoryURL = repositoryURL;
     }
-  }
 
-  if (showSrcPath) {
+    // Determines the path from the repositoryURL to the project files browser
+    if (processedRepositoryURL.includes('bitbucket.org')) {
+      gitBranchPath = `src/${branch}`;
+    } else {
+      gitBranchPath = `tree/${branch}`;
+    }
+
+    // Determines where in the project files the folder for the component is
     if (srcPath) {
       processedSrcPath = srcPath;
     } else {
@@ -137,8 +146,7 @@ const DocTemplate = ({ packageName, readme, srcPath, repositoryURL, branch, exam
     <div {...customProps}>
       {packageName && <Markdown src={version} />}
       {readme && <Markdown src={readme} />}
-      <p>{srcPath}</p>
-      {showSrcPath && <a href={`${processedRepositoryURL}/tree/${branch}/${processedSrcPath}`}>View component source code</a>}
+      {showSrcPath && <a href={`${processedRepositoryURL}/${gitBranchPath}/${processedSrcPath}`}>View component source code</a>}
 
       {localExamples.length > 0 && <h1 className={cx('.examples-header')} >Examples</h1>}
       {localExamples.map(example =>
