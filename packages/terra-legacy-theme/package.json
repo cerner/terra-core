@@ -1,6 +1,6 @@
 {
   "name": "terra-legacy-theme",
-  "main": "lib/LegacyTheme.scss",
+  "main": "lib/index.js",
   "version": "1.6.0",
   "description": "terra-legacy-theme",
   "repository": {
@@ -27,7 +27,10 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "test": "npm run test:spec",
-    "test:spec": "echo \"Warning: no test written\" && exit 0"
+    "test": "npm run test:wdio",
+    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
+  },
+  "dependencies": {
+    "terra-mixins": "^1.0.0"
   }
 }

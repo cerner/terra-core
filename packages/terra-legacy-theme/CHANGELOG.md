@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+# Added
+* Add CSS custom property based theme code
+
+# Removed
+* Removed deprecated legacy theme code
 
 1.6.0 - (March 30, 2018)
 ------------------

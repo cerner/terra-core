@@ -3,29 +3,112 @@
 [![NPM version](http://img.shields.io/npm/v/terra-legacy-theme.svg)](https://www.npmjs.org/package/terra-legacy-theme)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-## Deprecation Notice
-
-The terra-legacy-theme npm package is deprecated as of 1.6.0. terra-legacy-theme will be removed from the repo in a future version, but the package will remain on npm.
-
-### What deprecation means
-Any apps that currently use terra-legacy-theme will continue to work as-is.
-However, the terra-legacy-theme package will no longer continue to be supported / developed.
-
-## Why?
-When we started development, we had planned to use scss variables for colors, fonts, etc. Early in development, we switched to using CSS custom properties, though we left this package untouched. This package is not used in any terra-ui components, but we have yet to remove it from the repo. The variables provided in this package are not in sync with what is actually used in terra. The default theme provided by terra components is meant to be the legacy looking theme. We do not recommend using package.
-
-## How to replace this package?
-Instead of using this file, we've opted to hard-code these values as fallback values directly into the source code of our components using the CSS custom property syntax. This has eliminated the need for using this package in the terra-ui components. This approach may be applicable for teams as they move away from using this package as-well.
-
-~~The legacy-theme component sets global variables for the entire application. Global variables are included for responsive breakpoints, colors, and typography.~~
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-legacy-theme/docs)
+- [Usage](#usage)
+  - [Format 1 - Root Theme](#format-1---root-theme)
+    - [Format 1 Setup](#format-1-setup)
+    - [PostCSS Assets Plugin Webpack Config](#postcss-assets-plugin-webpack-config)
+  - [Format 2 - Scoped Theme](#format-2---scoped-theme)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-legacy-theme`
+
+## Usage
+This project offers two formats of terra-legacy-theme based around [browsers support for native CSS custom properties](http://caniuse.com/#search=custom%20properties) .
+
+* One that can be used in browsers that support native support for CSS custom properties as well as browsers that lack support for native CSS custom properties.
+* One that can only be used in browsers that support native support for CSS custom properties.
+
+It is recommended to use the first format when using terra-legacy-theme as your default theme.
+
+### Format 1 - Root Theme
+This theme format can be used to replace terra's default theme variables with custom theme variables and can be compiled turning the themed CSS custom properties into static values. The static values work in both browsers that lack support for native CSS custom properties and browsers that support CSS custom properties.
+
+In your application, import the `terra-legacy-theme` module like so:
+
+```js
+// ES6 import
+import 'terra-legacy-theme';
+```
+
+#### Format 1 Setup
+
+You'll need to set up some PostCSS tools to ensure the terra-legacy-theme can be compiled correctly.
+
+* [postcss-assets-webpack-plugin](https://github.com/klimashkin/postcss-assets-webpack-plugin)
+* [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
+
+`npm install postcss-assets-webpack-plugin --save-dev`
+
+`npm install postcss-custom-properties --save-dev`
+
+The postcss-assets-webpack-plugin gets css, extracted by [ExtractTextPlugin](https://github.com/webpack/extract-text-webpack-plugin) and applies postcss plugins to it.
+
+This means you should also have extract-text-webpack-plugin setup in your webpack config. We recommend setting up the ExtractTextPlugin as outlined in the [Terra Getting Started Guide](https://terra-ui.herokuapp.com/getting-started#configuring-webpack) which includes a sample webpack config.
+
+
+#### PostCSS Assets Plugin Webpack Config
+
+In you webpack config, add the following:
+
+```js
+const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin');
+const PostCSSCustomProperties = require('postcss-custom-properties');
+```
+
+In the plugins section of your webpack config, add the following:
+
+```js
+plugins: [
+  new PostCSSAssetsPlugin({
+    test: /\.css$/,
+    log: false,
+    plugins: [
+      PostCSSCustomProperties(),
+    ],
+  }),
+],
+```
+
+If you want to compile the CSS custom properties to static values while also maintaining them to make dynamic theme changes in browsers that support CSS custom properties, pass the `preserve: true` config option to the `PostCSSCustomProperties` plugin.
+
+```js
+plugins: [
+ new PostCSSAssetsPlugin({
+   test: /\.css$/,
+   log: false,
+   plugins: [
+     PostCSSCustomProperties({ preserve: true }),
+   ],
+ }),
+],
+```
+
+This will compile the custom properties in this order:
+
+```
+color: #f00; // Compiled static value
+color: var(--theme-color, #f00); // CSS custom property
+```
+
+### Format 2 - Scoped Theme
+This format cannot be used to compile the themed CSS custom properties into static values. It is intended to be used to replace terra's default theme variables with custom theme variables in browsers that have native support for CSS custom properties.
+
+In your application, import the `terra-legacy-theme` module. This will apply the themed CSS custom properties under a class name. This class can be used with the [terra-theme-provider](https://www.npmjs.com/package/terra-theme-provider) component to apply the themed CSS custom properties:
+
+```js
+// ES6 import
+import React from 'react';
+import CernerConsumerTheme from 'terra-legacy-theme/scoped-theme';
+import ThemeProvider from 'terra-theme-provider';
+
+<ThemeProvider isGlobalTheme themeName={CernerConsumerTheme.themeName}>
+  <App />
+</ThemeProvider>
+```
 
 ## LICENSE
 
