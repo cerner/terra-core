@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import IconNext from 'terra-icon/lib/icon/IconNext';
 import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
 import NumberField from 'terra-form/lib/NumberField';
+import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
 import styles from './Paginator.scss';
@@ -45,6 +46,8 @@ class ProgressivePaginator extends React.Component {
     this.handlePageChange = this.handlePageChange.bind(this);
     this.handlePageInput = this.handlePageInput.bind(this);
     this.buildPageSelectorForm = this.buildPageSelectorForm.bind(this);
+    this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
+    this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
   }
 
   handlePageInput(e) {
@@ -65,27 +68,46 @@ class ProgressivePaginator extends React.Component {
     const inputAttrs = { className: cx('page-input') };
 
     const pageForm = (<form className={cx('page-form')} onSubmit={onSubmit(parseInt(pageInput, 10))}>
-      Page {<NumberField isInline inputAttrs={inputAttrs} value={pageInput} onChange={this.handlePageInput} min={1} max={totalPages} />} of {totalPages}
+      Page {<NumberField inputAttrs={inputAttrs} value={pageInput} onChange={this.handlePageInput} min={1} max={totalPages} />} of {totalPages}
     </form>);
 
     return pageForm;
   }
 
-  render() {
+  defaultProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
 
-    return (
-      <div className={cx('paginator')}>
-        {this.buildPageSelectorForm(totalPages, this.handlePageChange)}
-        <div>
-          <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
-          <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
-          <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>Next {<IconNext />}</a>
-          <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>
-        </div>
+    return (<div className={cx('paginator')}>
+      {this.buildPageSelectorForm(totalPages, this.handlePageChange)}
+      <div>
+        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
+        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
+        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>Next {<IconNext />}</a>
+        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>
       </div>
-    );
+    </div>);
+  }
+
+  reducedProgressivePaginator() {
+    const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
+    const { selectedPage } = this.state;
+
+    return (<div className={cx(['paginator', 'responsive-progressive'])}>
+      <div>
+        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
+        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />}</a>
+      </div>
+      {this.buildPageSelectorForm(totalPages, this.handlePageChange)}
+      <div>
+        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>{<IconNext />}</a>
+        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>
+      </div>
+    </div>);
+  }
+
+  render() {
+    return <ResponsiveElement defaultElement={this.reducedProgressivePaginator()} tiny={this.defaultProgressivePaginator()} />;
   }
 }
 

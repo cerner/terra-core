@@ -3,6 +3,11 @@
     display: flex;
     justify-content: space-between;
 
+    &.responsive-progressive {
+      align-items: baseline;
+      justify-content: center;
+    }
+
     .nav-link {
       background: var(--terra-paginator-nav-link-background);
       color: var(--terra-paginator-nav-link-foreground-color, #0059a8);
@@ -46,7 +51,9 @@
     }
 
     .page-input {
-      margin: var(--terra-paginator-progressive-page-input-margin, auto 3px);
+      margin-left: var(--terra-paginator-progressive-page-input-margin-left, 0.25rem);
+      margin-right: var(--terra-paginator-progressive-page-input-margin-right, 1rem);
+      max-width: var(--terra-paginator-progressive-page-input-max-width, 4rem);
       text-align: center;
     }
   }

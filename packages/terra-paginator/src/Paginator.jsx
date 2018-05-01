@@ -80,7 +80,7 @@ class Paginator extends React.Component {
     return this.props.totalCount && this.props.itemCountPerPage;
   }
 
-  reducedPaginator(isReduced = false) {
+  defaultPaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
 
@@ -94,21 +94,28 @@ class Paginator extends React.Component {
       </div>
     );
 
+    return fullView;
+  }
+
+  reducedPaginator() {
+    const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
+    const { selectedPage } = this.state;
+
     const reducedView = (
       <div className={cx('paginator')}>
         {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>}
-        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
-        <span>Page {selectedPage}</span>
-        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>Next {<IconNext />}</a>
+        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />}</a>
+        {this.hasNavContext() && <span>Page {selectedPage}</span>}
+        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>{<IconNext />}</a>
         {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>}
       </div>
     );
 
-    return isReduced ? reducedView : fullView;
+    return reducedView;
   }
 
   render() {
-    return <ResponsiveElement defaultElement={this.reducedPaginator(true)} tiny={this.reducedPaginator()} />;
+    return <ResponsiveElement defaultElement={this.reducedPaginator()} tiny={this.defaultPaginator()} />;
   }
 }
 

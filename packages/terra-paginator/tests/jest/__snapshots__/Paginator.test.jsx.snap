@@ -25,7 +25,6 @@ exports[`Paginator should render a default paginator 1`] = `
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         />
-         Previous
       </a>
       <span>
         Page 
@@ -36,7 +35,6 @@ exports[`Paginator should render a default paginator 1`] = `
         onClick={[Function]}
         tabIndex="0"
       >
-        Next 
         <IconNext
           className=""
           data-name="Layer 1"
@@ -194,17 +192,12 @@ exports[`Paginator should render a paginator without page links 1`] = `
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         />
-         Previous
       </a>
-      <span>
-        Page 
-      </span>
       <a
         className="nav-link"
         onClick={[Function]}
         tabIndex="0"
       >
-        Next 
         <IconNext
           className=""
           data-name="Layer 1"

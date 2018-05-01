@@ -1,79 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] = `
-<div
-  className="paginator"
->
-  <form
-    className="page-form"
-    onSubmit={[Function]}
-  >
-    Page 
-    <NumberField
-      error={null}
-      help={null}
-      inputAttrs={
-        Object {
-          "className": "page-input",
-        }
-      }
-      isInline={true}
-      label={null}
-      labelAttrs={Object {}}
-      max={112}
-      min={1}
-      name={null}
-      onChange={[Function]}
-      required={false}
-      step={null}
-      value={1}
-    />
-     of 
-    112
-  </form>
-  <div>
-    <a
-      className="nav-link is-disabled"
-      onClick={[Function]}
-      tabIndex="0"
+<ResponsiveElement
+  defaultElement={
+    <div
+      className="paginator responsive-progressive"
     >
-      First
-    </a>
-    <a
-      className="nav-link is-disabled"
-      onClick={[Function]}
-      tabIndex="0"
+      <div>
+        <a
+          className="nav-link is-disabled"
+          onClick={[Function]}
+          tabIndex="0"
+        >
+          First
+        </a>
+        <a
+          className="nav-link is-disabled"
+          onClick={[Function]}
+          tabIndex="0"
+        >
+          <IconPrevious
+            className=""
+            data-name="Layer 1"
+            isBidi={true}
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </a>
+      </div>
+      <form
+        className="page-form"
+        onSubmit={[Function]}
+      >
+        Page 
+        <NumberField
+          defaultValue={undefined}
+          error={null}
+          help={null}
+          inputAttrs={
+            Object {
+              "className": "page-input",
+            }
+          }
+          inputId={undefined}
+          isInline={false}
+          label={null}
+          labelAttrs={Object {}}
+          max={112}
+          min={1}
+          name={null}
+          onChange={[Function]}
+          required={false}
+          step={null}
+          value={1}
+        />
+         of 
+        112
+      </form>
+      <div>
+        <a
+          className="nav-link"
+          onClick={[Function]}
+          tabIndex="0"
+        >
+          <IconNext
+            className=""
+            data-name="Layer 1"
+            isBidi={true}
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </a>
+        <a
+          className="nav-link"
+          onClick={[Function]}
+          tabIndex="0"
+        >
+          Last
+        </a>
+      </div>
+    </div>
+  }
+  responsiveTo="parent"
+  tiny={
+    <div
+      className="paginator"
     >
-      <IconPrevious
-        className=""
-        data-name="Layer 1"
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-       Previous
-    </a>
-    <a
-      className="nav-link"
-      onClick={[Function]}
-      tabIndex="0"
-    >
-      Next 
-      <IconNext
-        className=""
-        data-name="Layer 1"
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </a>
-    <a
-      className="nav-link"
-      onClick={[Function]}
-      tabIndex="0"
-    >
-      Last
-    </a>
-  </div>
-</div>
+      <form
+        className="page-form"
+        onSubmit={[Function]}
+      >
+        Page 
+        <NumberField
+          defaultValue={undefined}
+          error={null}
+          help={null}
+          inputAttrs={
+            Object {
+              "className": "page-input",
+            }
+          }
+          inputId={undefined}
+          isInline={false}
+          label={null}
+          labelAttrs={Object {}}
+          max={112}
+          min={1}
+          name={null}
+          onChange={[Function]}
+          required={false}
+          step={null}
+          value={1}
+        />
+         of 
+        112
+      </form>
+      <div>
+        <a
+          className="nav-link is-disabled"
+          onClick={[Function]}
+          tabIndex="0"
+        >
+          First
+        </a>
+        <a
+          className="nav-link is-disabled"
+          onClick={[Function]}
+          tabIndex="0"
+        >
+          <IconPrevious
+            className=""
+            data-name="Layer 1"
+            isBidi={true}
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+           Previous
+        </a>
+        <a
+          className="nav-link"
+          onClick={[Function]}
+          tabIndex="0"
+        >
+          Next 
+          <IconNext
+            className=""
+            data-name="Layer 1"
+            isBidi={true}
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </a>
+        <a
+          className="nav-link"
+          onClick={[Function]}
+          tabIndex="0"
+        >
+          Last
+        </a>
+      </div>
+    </div>
+  }
+/>
 `;
