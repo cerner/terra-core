@@ -81,7 +81,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   error: null,
-  errorIcon: <IconError />,
+  errorIcon: Field.defaultProps.errorIcon,
   help: null,
   hideRequired: false,
   inputAttrs: {},
