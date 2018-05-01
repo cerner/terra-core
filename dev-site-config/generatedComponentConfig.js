@@ -303,10 +303,10 @@ import IconAria from '../packages/terra-icon/tests/nightwatch/components/IconAri
 import IconBidi from '../packages/terra-icon/tests/nightwatch/components/IconBidi';
 import IconDefault from '../packages/terra-icon/tests/nightwatch/components/IconDefault';
 import IconHeightWidth from '../packages/terra-icon/tests/nightwatch/components/IconHeightWidth';
-import ImageDefault from '../packages/terra-image/tests/nightwatch/ImageDefault';
-import ImageFluid from '../packages/terra-image/tests/nightwatch/ImageFluid';
-import ImageLoading from '../packages/terra-image/tests/nightwatch/ImageLoading';
-import ImageNonFluid from '../packages/terra-image/tests/nightwatch/ImageNonFluid';
+import ImageDefault from '../packages/terra-image/examples/test-examples/ImageDefault.example';
+import ImageFluid from '../packages/terra-image/examples/test-examples/ImageFluid.example';
+import ImageLoading from '../packages/terra-image/examples/test-examples/ImageLoading.example';
+import ImageNonFluid from '../packages/terra-image/examples/test-examples/ImageNonFluid.example';
 import ChevronListItem from '../packages/terra-list/tests/nightwatch/list-item/ChevronListItem';
 import DefaultListItem from '../packages/terra-list/tests/nightwatch/list-item/DefaultListItem';
 import SelectableListItem from '../packages/terra-list/tests/nightwatch/list-item/SelectableListItem';
@@ -503,9 +503,9 @@ import OnOpenToggleButton from '../packages/terra-toggle-button/tests/nightwatch
 import OpenedButtonText from '../packages/terra-toggle-button/tests/nightwatch/OpenedButtonText';
 import DefaultToggleSectionHeader from '../packages/terra-toggle-section-header/examples/test-examples/DefaultToggleSectionHeader.example';
 import OpenToggleSectionHeader from '../packages/terra-toggle-section-header/examples/test-examples/OpenToggleSectionHeader.example';
-import AnimatedToggle from '../packages/terra-toggle/tests/nightwatch/AnimatedToggle';
-import DefaultToggle from '../packages/terra-toggle/tests/nightwatch/DefaultToggle';
-import OpenToggle from '../packages/terra-toggle/tests/nightwatch/OpenToggle';
+import AnimatedToggle from '../packages/terra-toggle/examples/test-examples/AnimatedToggle.example';
+import DefaultToggle from '../packages/terra-toggle/examples/test-examples/DefaultToggle.example';
+import OpenToggle from '../packages/terra-toggle/examples/test-examples/OpenToggle.example';
 
 const componentConfig = {
   'terra-abstract-modal': {

@@ -105,7 +105,11 @@ exports[`DocTemplate should show the version and readme 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`DocTemplate should show the version, readme, source link, examples, and props tables 1`] = `
+=======
+exports[`DocTemplate should show the version, readme, examples, and props tables 1`] = `
+>>>>>>> master
 <div>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
@@ -113,11 +117,14 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
   <Markdown
     src="test-file-stub"
   />
+<<<<<<< HEAD
   <a
     href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template/"
   >
     View component source code
   </a>
+=======
+>>>>>>> master
   <h1
     className=".examples-header"
   >
