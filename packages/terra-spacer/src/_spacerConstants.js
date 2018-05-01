@@ -1,7 +1,7 @@
 export const SpacerSizes = {
   NONE: 'none',
-  'SMALL-1': 'small-1',
   'SMALL-2': 'small-2',
+  'SMALL-1': 'small-1',
   SMALL: 'small',
   MEDIUM: 'medium',
   LARGE: 'large',
@@ -13,8 +13,8 @@ export const SpacerSizes = {
 
 export const SpacerClassMappings = {
   [SpacerSizes.NONE]: 'none',
-  [SpacerSizes['SMALL-1']]: 'small-minus-1',
   [SpacerSizes['SMALL-2']]: 'small-minus-2',
+  [SpacerSizes['SMALL-1']]: 'small-minus-1',
   [SpacerSizes.SMALL]: 'small',
   [SpacerSizes.MEDIUM]: 'medium',
   [SpacerSizes.LARGE]: 'large',
