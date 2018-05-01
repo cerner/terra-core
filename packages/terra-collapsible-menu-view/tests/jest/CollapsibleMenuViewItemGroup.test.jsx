@@ -1,6 +1,7 @@
 import React from 'react';
 import CollapsibleMenuViewItemGroup from '../../src/CollapsibleMenuViewItemGroup';
 import CollapsibleMenuViewItem from '../../src/CollapsibleMenuViewItem';
+import intlContexts from './intl-context-setup';
 
 describe('CollapsibleMenuViewItemGroup', () => {
   // Snapshot Tests
@@ -10,7 +11,7 @@ describe('CollapsibleMenuViewItemGroup', () => {
         <CollapsibleMenuViewItem text="Testing" />
         <CollapsibleMenuViewItem text="Testing" />
       </CollapsibleMenuViewItemGroup>
-    ));
+    ), intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -21,7 +22,7 @@ describe('CollapsibleMenuViewItemGroup', () => {
         <CollapsibleMenuViewItem text="Testing" />
         <CollapsibleMenuViewItem text="Testing" />
       </CollapsibleMenuViewItemGroup>
-    ));
+    ), intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -31,7 +32,7 @@ describe('CollapsibleMenuViewItemGroup', () => {
         <CollapsibleMenuViewItem text="Testing" key="key1" />
         <CollapsibleMenuViewItem text="Testing" key="key2" />
       </CollapsibleMenuViewItemGroup>
-    ));
+    ), intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
