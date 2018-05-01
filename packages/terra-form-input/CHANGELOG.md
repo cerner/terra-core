@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added InputField to package
 
 1.5.0 - (April 20, 2018)
 ------------------
