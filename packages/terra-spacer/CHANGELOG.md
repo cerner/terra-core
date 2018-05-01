@@ -22,7 +22,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-=======
 
 2.3.0 - (March 30, 2018)
 ------------------
