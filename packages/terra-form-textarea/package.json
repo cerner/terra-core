@@ -28,7 +28,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.6.0"
+    "terra-base": "^3.6.0",
+    "terra-form-field": "^2.5.0",
+    "terra-icon": "^2.6.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -39,6 +41,7 @@
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
+    "test:wdio": "wdio ../../wdio.conf.js"
   }
 }
