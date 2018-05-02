@@ -1,18 +1,17 @@
-/* global browser, Terra */
-const viewports = Terra.viewports('medium');
-
+/* global browser, Terra, before */
 describe('Content Container', () => {
+  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/content-container/default-content-container'));
+    before(() => browser.url('/#/raw/tests/content-container/default-content-container'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
   });
 
   describe('Fill', () => {
-    beforeEach(() => browser.url('/#/raw/tests/content-container/fill-content-container'));
+    before(() => browser.url('/#/raw/tests/content-container/fill-content-container'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
   });
 });
