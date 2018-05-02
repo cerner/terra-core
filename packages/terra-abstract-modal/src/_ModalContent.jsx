@@ -8,7 +8,7 @@ import styles from './AbstractModal.scss';
 
 const cx = classNames.bind(styles);
 
-const zIndexes = ['6000', '8000'];
+const zIndexes = ['6000', '7000', '8000', '9000'];
 
 const propTypes = {
   /**
