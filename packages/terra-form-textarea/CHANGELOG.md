@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added TextareaField to package
 
 2.6.0 - (April 20, 2018)
 ------------------

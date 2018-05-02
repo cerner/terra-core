@@ -27,10 +27,7 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-arrange": "^2.7.0",
-    "terra-base": "^3.6.0",
-    "terra-icon": "^2.6.0",
-    "terra-popup": "^2.3.0"
+    "terra-base": "^3.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -38,7 +35,7 @@
     "terra-arrange": "^2.7.0",
     "terra-base": "^3.6.0",
     "terra-icon": "^2.6.0",
-    "terra-popup": "^2.3.0"
+    "terra-popup": "^3.3.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
