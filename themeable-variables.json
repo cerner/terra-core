@@ -512,13 +512,6 @@
     "--terra-menu-submenu-foreground-color": "#1c1f21"
   },
   "MenuItem": {
-    "--terra-menu-item-hover-color": "#ebf6fd",
-    "--terra-menu-item-text-color": "#1c1f21",
-    "--terra-menu-item-text-font-size": "13px",
-    "--terra-menu-item-checkmark-icon-color": "#1c1f21",
-    "--terra-menu-item-checkmark-icon-font-size": "12px",
-    "--terra-menu-item-chevron-icon-color": "#9b9fa1",
-    "--terra-menu-item-chevron-icon-font-size": "10px",
     "--terra-navigation-side-menu-item-border-bottom": "none",
     "--terra-navigation-side-menu-item-border-left": "none",
     "--terra-navigation-side-menu-item-border-right": "none",
@@ -536,7 +529,14 @@
     "--terra-navigation-side-menu-item-selected-padding-left": "0.7143rem",
     "--terra-navigation-side-menu-item-selected-background-color": "#f4f4f4",
     "--terra-navigation-side-menu-item-box-shadow": "0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)",
-    "--terra-navigation-side-menu-item-chevron-color": "#787879"
+    "--terra-navigation-side-menu-item-chevron-color": "#787879",
+    "--terra-menu-item-hover-color": "#ebf6fd",
+    "--terra-menu-item-text-color": "#1c1f21",
+    "--terra-menu-item-text-font-size": "13px",
+    "--terra-menu-item-checkmark-icon-color": "#1c1f21",
+    "--terra-menu-item-checkmark-icon-font-size": "12px",
+    "--terra-menu-item-chevron-icon-color": "#9b9fa1",
+    "--terra-menu-item-chevron-icon-font-size": "10px"
   },
   "Modal": {
     "--terra-modal-background-color": "#fff",
