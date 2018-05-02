@@ -4,7 +4,7 @@ The abstract modal is a structural component that provides the ability to displa
 
 The AbstractModal component by default will trap focus. For any popup component (e.g; [date picker][1], [popup][2], [menu][3], [select][4]) that can display inside the AbstractModal, the focus trap needs to be released from the abstract modal in order to interact with the popup component. 
 
-Our current recommendation for HOC is the [terra-modal][5], as it provides sizing, responsive behavior, visual styles, focus management, and a disclosure stack.
+Our current recommendation for HOC is the [terra-modal-manager][5], as it provides sizing, responsive behavior, visual styles, focus management, and a disclosure stack.
 
 ## Getting Started
 
@@ -65,7 +65,7 @@ export default MyApp;
 [2]: https://github.com/cerner/terra-framework/tree/master/packages/terra-popup/docs
 [3]: https://github.com/cerner/terra-core/tree/master/packages/terra-menu/docs
 [4]: https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/docs
-[5]: https://github.com/cerner/terra-framework/tree/master/packages/terra-modal/docs
+[5]: https://github.com/cerner/terra-framework/tree/master/packages/terra-modal-manager/docs
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)

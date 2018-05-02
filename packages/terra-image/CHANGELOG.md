@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.7.0 - (May 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Changed
 * Changed default display for image to `inline-block`
 

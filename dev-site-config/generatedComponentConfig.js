@@ -27,9 +27,11 @@ import TerraSiteIndex21 from '../packages/terra-site/src/examples/form-checkbox/
 import TerraSiteIndex22 from '../packages/terra-site/src/examples/form-field/Index';
 import TerraSiteIndex23 from '../packages/terra-site/src/examples/form-fieldset/Index';
 import TerraSiteIndex24 from '../packages/terra-site/src/examples/form-input/Index';
+import TerraSiteInputFieldIndex from '../packages/terra-site/src/examples/form-input/InputFieldIndex';
 import TerraSiteIndex25 from '../packages/terra-site/src/examples/form-radio/Index';
 import TerraSiteIndex26 from '../packages/terra-site/src/examples/form-select/Index';
 import TerraSiteIndex27 from '../packages/terra-site/src/examples/form-textarea/Index';
+import TerraSiteTextareaFieldIndex from '../packages/terra-site/src/examples/form-textarea/TextareaFieldIndex';
 import TerraSiteIndex28 from '../packages/terra-site/src/examples/form/Index';
 import TerraSiteControlIndex from '../packages/terra-site/src/examples/form/components/ControlIndex';
 import TerraSiteFieldIndex from '../packages/terra-site/src/examples/form/components/FieldIndex';
@@ -39,7 +41,7 @@ import TerraSiteNumberFieldIndex from '../packages/terra-site/src/examples/form/
 import TerraSiteSelectFieldIndex from '../packages/terra-site/src/examples/form/components/SelectFieldIndex';
 import TerraSiteSelectIndex from '../packages/terra-site/src/examples/form/components/SelectIndex';
 import TerraSiteTextFieldIndex from '../packages/terra-site/src/examples/form/components/TextFieldIndex';
-import TerraSiteTextareaFieldIndex from '../packages/terra-site/src/examples/form/components/TextareaFieldIndex';
+import TerraSiteTextareaFieldIndex1 from '../packages/terra-site/src/examples/form/components/TextareaFieldIndex';
 import TerraSiteTextareaIndex from '../packages/terra-site/src/examples/form/components/TextareaIndex';
 import TerraSiteIndex29 from '../packages/terra-site/src/examples/grid/Index';
 import TerraSiteIndex30 from '../packages/terra-site/src/examples/heading/Index';
@@ -225,6 +227,7 @@ import FieldInteractiveInvalid from '../packages/terra-form-field/tests/nightwat
 import FieldTextWrap from '../packages/terra-form-field/tests/nightwatch/FieldTextWrap';
 import DefaultFieldset from '../packages/terra-form-fieldset/tests/nightwatch/DefaultFieldset';
 import PopulatedFieldset from '../packages/terra-form-fieldset/tests/nightwatch/PopulatedFieldset';
+import InputField from '../packages/terra-form-input/examples/test-examples/InputField.example';
 import DefaultFormInput from '../packages/terra-form-input/tests/nightwatch/DefaultFormInput';
 import DisabledFormInput from '../packages/terra-form-input/tests/nightwatch/DisabledFormInput';
 import InvalidFormInput from '../packages/terra-form-input/tests/nightwatch/InvalidFormInput';
@@ -249,6 +252,7 @@ import DisabledSelect from '../packages/terra-form-select/tests/nightwatch/selec
 import HiddenPlaceholderSelect from '../packages/terra-form-select/tests/nightwatch/select/HiddenPlaceholderSelect';
 import InvalidSelect from '../packages/terra-form-select/tests/nightwatch/select/InvalidSelect';
 import SelectLongText from '../packages/terra-form-select/tests/nightwatch/select/SelectLongText';
+import TextareaField from '../packages/terra-form-textarea/examples/test-examples/TextareaField.example';
 import AutoResizableTextarea from '../packages/terra-form-textarea/tests/nightwatch/AutoResizableTextarea';
 import AutoResizableTextareaMobileDocumentTouch from '../packages/terra-form-textarea/tests/nightwatch/AutoResizableTextareaMobileDocumentTouch';
 import AutoResizableTextareaMobileMaxTouchPoints from '../packages/terra-form-textarea/tests/nightwatch/AutoResizableTextareaMobileMaxTouchPoints';
@@ -303,10 +307,10 @@ import IconAria from '../packages/terra-icon/tests/nightwatch/components/IconAri
 import IconBidi from '../packages/terra-icon/tests/nightwatch/components/IconBidi';
 import IconDefault from '../packages/terra-icon/tests/nightwatch/components/IconDefault';
 import IconHeightWidth from '../packages/terra-icon/tests/nightwatch/components/IconHeightWidth';
-import ImageDefault from '../packages/terra-image/tests/nightwatch/ImageDefault';
-import ImageFluid from '../packages/terra-image/tests/nightwatch/ImageFluid';
-import ImageLoading from '../packages/terra-image/tests/nightwatch/ImageLoading';
-import ImageNonFluid from '../packages/terra-image/tests/nightwatch/ImageNonFluid';
+import ImageDefault from '../packages/terra-image/examples/test-examples/ImageDefault.example';
+import ImageFluid from '../packages/terra-image/examples/test-examples/ImageFluid.example';
+import ImageLoading from '../packages/terra-image/examples/test-examples/ImageLoading.example';
+import ImageNonFluid from '../packages/terra-image/examples/test-examples/ImageNonFluid.example';
 import ChevronListItem from '../packages/terra-list/tests/nightwatch/list-item/ChevronListItem';
 import DefaultListItem from '../packages/terra-list/tests/nightwatch/list-item/DefaultListItem';
 import SelectableListItem from '../packages/terra-list/tests/nightwatch/list-item/SelectableListItem';
@@ -503,9 +507,9 @@ import OnOpenToggleButton from '../packages/terra-toggle-button/tests/nightwatch
 import OpenedButtonText from '../packages/terra-toggle-button/tests/nightwatch/OpenedButtonText';
 import DefaultToggleSectionHeader from '../packages/terra-toggle-section-header/examples/test-examples/DefaultToggleSectionHeader.example';
 import OpenToggleSectionHeader from '../packages/terra-toggle-section-header/examples/test-examples/OpenToggleSectionHeader.example';
-import AnimatedToggle from '../packages/terra-toggle/tests/nightwatch/AnimatedToggle';
-import DefaultToggle from '../packages/terra-toggle/tests/nightwatch/DefaultToggle';
-import OpenToggle from '../packages/terra-toggle/tests/nightwatch/OpenToggle';
+import AnimatedToggle from '../packages/terra-toggle/examples/test-examples/AnimatedToggle.example';
+import DefaultToggle from '../packages/terra-toggle/examples/test-examples/DefaultToggle.example';
+import OpenToggle from '../packages/terra-toggle/examples/test-examples/OpenToggle.example';
 
 const componentConfig = {
   'terra-abstract-modal': {
@@ -1443,6 +1447,11 @@ const componentConfig = {
     path: '/form-input',
     tests: [
       {
+        name: 'Input Field',
+        path: '/input-field',
+        component: InputField,
+      },
+      {
         name: 'Default Form Input',
         path: '/default-form-input',
         component: DefaultFormInput,
@@ -1592,6 +1601,11 @@ const componentConfig = {
     name: 'Form Textarea',
     path: '/form-textarea',
     tests: [
+      {
+        name: 'Textarea Field',
+        path: '/textarea-field',
+        component: TextareaField,
+      },
       {
         name: 'Auto Resizable Textarea',
         path: '/auto-resizable-textarea',
@@ -2864,6 +2878,11 @@ const componentConfig = {
             path: '/index',
             component: TerraSiteIndex24,
           },
+          {
+            name: 'Input Field Index',
+            path: '/input-field-index',
+            component: TerraSiteInputFieldIndex,
+          },
         ],
       },
       {
@@ -2896,6 +2915,11 @@ const componentConfig = {
             name: 'Index',
             path: '/index',
             component: TerraSiteIndex27,
+          },
+          {
+            name: 'Textarea Field Index',
+            path: '/textarea-field-index',
+            component: TerraSiteTextareaFieldIndex,
           },
         ],
       },
@@ -2951,7 +2975,7 @@ const componentConfig = {
           {
             name: 'Textarea Field Index',
             path: '/textarea-field-index',
-            component: TerraSiteTextareaFieldIndex,
+            component: TerraSiteTextareaFieldIndex1,
           },
           {
             name: 'Textarea Index',
