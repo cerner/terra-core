@@ -1,39 +1,40 @@
-/* global browser, Terra */
-const viewports = Terra.viewports('medium');
+/* global browser, Terra, before */
 
 describe('Status', () => {
-  describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status/status-default'));
+  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+  describe('Default', () => {
+    before(() => browser.url('/#/raw/tests/status/status-default'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
   });
 
   describe('Arrange', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status/status-arrange'));
+    before(() => browser.url('/#/raw/tests/status/status-arrange'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
   });
 
   describe('Icon', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status/status-icon'));
+    before(() => browser.url('/#/raw/tests/status/status-icon'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
   });
 
   describe('Image', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status/status-image'));
+    before(() => browser.url('/#/raw/tests/status/status-image'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
   });
 
   describe('No color', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status/status-no-color'));
+    before(() => browser.url('/#/raw/tests/status/status-no-color'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
   });
 });
