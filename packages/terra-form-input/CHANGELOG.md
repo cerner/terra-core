@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.6.0 - (May 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added InputField to package
 
