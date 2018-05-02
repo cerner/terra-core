@@ -58,7 +58,7 @@ class ProgressivePaginator extends React.Component {
     return (event) => {
       event.preventDefault();
 
-      this.props.onPageChange(event, index);
+      this.props.onPageChange(index);
       this.setState({ pageInput: index, selectedPage: index });
     };
   }

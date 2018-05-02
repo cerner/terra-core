@@ -50,8 +50,18 @@ class Paginator extends React.Component {
 
   handlePageChange(index) {
     return (event) => {
-      this.props.onPageChange(event, index);
+      event.preventDefault();
+
+      if (isNaN(index)) {
+        this.props.onPageChange(event.target.text.trim().toLowerCase());
+
+        return false;
+      }
+
+      this.props.onPageChange(index);
       this.setState({ selectedPage: index, pageSequence: pageSet(index, calculatePages(this.props.totalCount, this.props.itemCountPerPage)) });
+
+      return false;
     };
   }
 
