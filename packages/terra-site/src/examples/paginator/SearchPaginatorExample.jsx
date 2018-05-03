@@ -1,5 +1,5 @@
 import React from 'react';
-import Paginator from 'terra-paginator/src/Paginator';
+import Paginator from 'terra-paginator/lib/Paginator';
 
 const SearchPaginatorExample = () => (
   // eslint-disable-next-line no-console

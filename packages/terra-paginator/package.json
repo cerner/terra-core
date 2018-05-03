@@ -33,7 +33,7 @@
     "prop-types": "^15.5.8",
     "terra-base": "^2.0.0",
     "terra-button": "^2.7.0",
-    "terra-form": "^2.6.0",
+    "terra-form-input": "^1.6.0",
     "terra-icon": "^2.6.0",
     "terra-responsive-element": "^2.6.0"
   },
@@ -45,8 +45,8 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/Paginator.jsx --out-dir ./docs/props-table",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
   }
 }

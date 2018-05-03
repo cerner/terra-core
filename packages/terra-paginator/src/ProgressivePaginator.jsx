@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import IconNext from 'terra-icon/lib/icon/IconNext';
 import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
-import NumberField from 'terra-form/lib/NumberField';
+import InputField from 'terra-form-input/lib/InputField';
 import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
@@ -68,7 +68,7 @@ class ProgressivePaginator extends React.Component {
     const inputAttrs = { className: cx('page-input') };
 
     const pageForm = (<form className={cx('page-form')} onSubmit={onSubmit(parseInt(pageInput, 10))}>
-      Page {<NumberField inputAttrs={inputAttrs} value={pageInput} onChange={this.handlePageInput} min={1} max={totalPages} />} of {totalPages}
+      Page {<InputField inputId="page-input" label="" inputAttrs={inputAttrs} value={pageInput} onChange={this.handlePageInput} />} of {totalPages}
     </form>);
 
     return pageForm;

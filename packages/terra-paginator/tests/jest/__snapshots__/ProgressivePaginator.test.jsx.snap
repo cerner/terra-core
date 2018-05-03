@@ -33,25 +33,31 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
         onSubmit={[Function]}
       >
         Page 
-        <NumberField
+        <InputField
           defaultValue={undefined}
           error={null}
+          errorIcon={
+            <IconError
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          }
           help={null}
+          hideRequired={false}
           inputAttrs={
             Object {
               "className": "page-input",
             }
           }
-          inputId={undefined}
+          inputId="page-input"
           isInline={false}
-          label={null}
+          isInvalid={false}
+          isLabelHidden={false}
+          label=""
           labelAttrs={Object {}}
-          max={112}
-          min={1}
-          name={null}
           onChange={[Function]}
           required={false}
-          step={null}
+          showOptional={false}
           value={1}
         />
          of 
@@ -91,25 +97,31 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
         onSubmit={[Function]}
       >
         Page 
-        <NumberField
+        <InputField
           defaultValue={undefined}
           error={null}
+          errorIcon={
+            <IconError
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          }
           help={null}
+          hideRequired={false}
           inputAttrs={
             Object {
               "className": "page-input",
             }
           }
-          inputId={undefined}
+          inputId="page-input"
           isInline={false}
-          label={null}
+          isInvalid={false}
+          isLabelHidden={false}
+          label=""
           labelAttrs={Object {}}
-          max={112}
-          min={1}
-          name={null}
           onChange={[Function]}
           required={false}
-          step={null}
+          showOptional={false}
           value={1}
         />
          of 
