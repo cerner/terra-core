@@ -1,7 +1,7 @@
 /* global browser, Terra */
 const viewports = Terra.viewports('tiny');
 
-describe('Badge', () => {
+describe('Card', () => {
   describe('Default', () => {
     beforeEach(() => browser.url('/#/raw/tests/card/default-card'));
 
@@ -15,6 +15,19 @@ describe('Badge', () => {
         '--terra-card-border-radius': '50px',
         '--terra-card-box-shadow': 'inset 0 0 50px purple',
         '--terra-card-color': 'purple',
+      },
+    });
+  });
+
+  describe('Raised', () => {
+    beforeEach(() => browser.url('/#/raw/tests/card/raised-card'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-card-raised-box-shadow': 'inset 0 50px 0 red',
       },
     });
   });
