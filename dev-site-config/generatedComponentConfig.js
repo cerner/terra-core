@@ -428,11 +428,11 @@ import StatusViewGlyphHidden from '../packages/terra-status-view/tests/nightwatc
 import StatusViewHeightTooSmall from '../packages/terra-status-view/tests/nightwatch/StatusViewHeightTooSmall';
 import StatusViewNotAuthorized from '../packages/terra-status-view/tests/nightwatch/StatusViewNotAuthorized';
 import StatusViewTextWrapping from '../packages/terra-status-view/tests/nightwatch/StatusViewTextWrapping';
-import StatusArrange from '../packages/terra-status/tests/nightwatch/StatusArrange';
-import StatusDefault from '../packages/terra-status/tests/nightwatch/StatusDefault';
-import StatusIcon from '../packages/terra-status/tests/nightwatch/StatusIcon';
-import StatusImage from '../packages/terra-status/tests/nightwatch/StatusImage';
-import StatusNoColor from '../packages/terra-status/tests/nightwatch/StatusNoColor';
+import StatusArrange from '../packages/terra-status/examples/test-examples/StatusArrange';
+import StatusDefault from '../packages/terra-status/examples/test-examples/StatusDefault';
+import StatusIcon from '../packages/terra-status/examples/test-examples/StatusIcon';
+import StatusImage from '../packages/terra-status/examples/test-examples/StatusImage';
+import StatusNoColor from '../packages/terra-status/examples/test-examples/StatusNoColor';
 import MultiRowSelectableTable from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTable';
 import MultiRowSelectableTableMaxCount from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCount';
 import MultiRowSelectableTableMaxCountInitiallyExceeded from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyExceeded';
