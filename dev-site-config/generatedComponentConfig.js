@@ -156,6 +156,7 @@ import CardPadding from '../packages/terra-card/tests/nightwatch/CardPadding';
 import CardPaddingHorizontal from '../packages/terra-card/tests/nightwatch/CardPaddingHorizontal';
 import CardPaddingVertical from '../packages/terra-card/tests/nightwatch/CardPaddingVertical';
 import DefaultCard from '../packages/terra-card/tests/nightwatch/DefaultCard';
+import RaisedCard from '../packages/terra-card/tests/nightwatch/RaisedCard';
 import DefaultCollapsibleMenuView from '../packages/terra-collapsible-menu-view/tests/nightwatch/DefaultCollapsibleMenuView';
 import FirstHiddenItemIsIcon from '../packages/terra-collapsible-menu-view/tests/nightwatch/FirstHiddenItemIsIcon';
 import DefaultContentContainer from '../packages/terra-content-container/examples/test-examples/DefaultContentContainer.example';
@@ -419,15 +420,15 @@ import SpacerMedium from '../packages/terra-spacer/tests/nightwatch/SpacerMedium
 import SpacerSmall1 from '../packages/terra-spacer/tests/nightwatch/SpacerSmall-1';
 import SpacerSmall2 from '../packages/terra-spacer/tests/nightwatch/SpacerSmall-2';
 import SpacerSmall from '../packages/terra-spacer/tests/nightwatch/SpacerSmall';
-import StatusViewAlignTop from '../packages/terra-status-view/tests/nightwatch/StatusViewAlignTop';
-import StatusViewCenter from '../packages/terra-status-view/tests/nightwatch/StatusViewCenter';
-import StatusViewCustom from '../packages/terra-status-view/tests/nightwatch/StatusViewCustom';
-import StatusViewDefault from '../packages/terra-status-view/tests/nightwatch/StatusViewDefault';
-import StatusViewErrorAllProps from '../packages/terra-status-view/tests/nightwatch/StatusViewErrorAllProps';
-import StatusViewGlyphHidden from '../packages/terra-status-view/tests/nightwatch/StatusViewGlyphHidden';
-import StatusViewHeightTooSmall from '../packages/terra-status-view/tests/nightwatch/StatusViewHeightTooSmall';
-import StatusViewNotAuthorized from '../packages/terra-status-view/tests/nightwatch/StatusViewNotAuthorized';
-import StatusViewTextWrapping from '../packages/terra-status-view/tests/nightwatch/StatusViewTextWrapping';
+import StatusViewAlignTop from '../packages/terra-status-view/examples/test-examples/StatusViewAlignTop.example';
+import StatusViewCenter from '../packages/terra-status-view/examples/test-examples/StatusViewCenter.example';
+import StatusViewCustom from '../packages/terra-status-view/examples/test-examples/StatusViewCustom.example';
+import StatusViewDefault from '../packages/terra-status-view/examples/test-examples/StatusViewDefault.example';
+import StatusViewErrorAllProps from '../packages/terra-status-view/examples/test-examples/StatusViewErrorAllProps.example';
+import StatusViewGlyphHidden from '../packages/terra-status-view/examples/test-examples/StatusViewGlyphHidden.example';
+import StatusViewHeightTooSmall from '../packages/terra-status-view/examples/test-examples/StatusViewHeightTooSmall.example';
+import StatusViewNotAuthorized from '../packages/terra-status-view/examples/test-examples/StatusViewNotAuthorized.example';
+import StatusViewTextWrapping from '../packages/terra-status-view/examples/test-examples/StatusViewTextWrapping.example';
 import StatusArrange from '../packages/terra-status/examples/test-examples/StatusArrange.example';
 import StatusDefault from '../packages/terra-status/examples/test-examples/StatusDefault.example';
 import StatusIcon from '../packages/terra-status/examples/test-examples/StatusIcon.example';
@@ -994,6 +995,11 @@ const componentConfig = {
         name: 'Default Card',
         path: '/default-card',
         component: DefaultCard,
+      },
+      {
+        name: 'Raised Card',
+        path: '/raised-card',
+        component: RaisedCard,
       },
     ],
   },
