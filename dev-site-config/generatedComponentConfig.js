@@ -201,8 +201,8 @@ import PostMenstrualAgeDemographicsBannerNoLabel from '../packages/terra-demogra
 import DefaultDialog from '../packages/terra-dialog/tests/nightwatch/DefaultDialog';
 import DefaultDivider from '../packages/terra-divider/tests/nightwatch/DefaultDivider';
 import DefaultDocTemplate from '../packages/terra-doc-template/examples/test-examples/DefaultDocTemplate.example';
-import DefaultDynamicGrid from '../packages/terra-dynamic-grid/tests/nightwatch/DefaultDynamicGrid';
-import LargeDynamicGrid from '../packages/terra-dynamic-grid/tests/nightwatch/LargeDynamicGrid';
+import DefaultDynamicGrid from '../packages/terra-dynamic-grid/examples/test-examples/DefaultDynamicGrid.example';
+import LargeDynamicGrid from '../packages/terra-dynamic-grid/examples/test-examples/LargeDynamicGrid.example';
 import BasicConsumer from '../packages/terra-embedded-content-consumer/tests/nightwatch/consumers/BasicConsumer';
 import CustomEventConsumer from '../packages/terra-embedded-content-consumer/tests/nightwatch/consumers/CustomEventConsumer';
 import CustomEventsConsumer from '../packages/terra-embedded-content-consumer/tests/nightwatch/consumers/CustomEventsConsumer';
