@@ -192,12 +192,12 @@ import DateTimePickerModalContainer from '../packages/terra-date-time-picker/tes
 import DateTimePickerOnChange from '../packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerOnChange';
 import DateTimePickerOnChangeRaw from '../packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerOnChangeRaw';
 import DateTimePickerTimeInputAttributes from '../packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerTimeInputAttributes';
-import BlankDemographicsBanner from '../packages/terra-demographics-banner/tests/nightwatch/BlankDemographicsBanner';
-import DeceasedDemographicsBanner from '../packages/terra-demographics-banner/tests/nightwatch/DeceasedDemographicsBanner';
-import DeceasedDemographicsBannerNoLabel from '../packages/terra-demographics-banner/tests/nightwatch/DeceasedDemographicsBannerNoLabel';
-import GestationalAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/tests/nightwatch/GestationalAgeDemographicsBannerNoLabel';
-import PopulatedDemographicsBanner from '../packages/terra-demographics-banner/tests/nightwatch/PopulatedDemographicsBanner';
-import PostMenstrualAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/tests/nightwatch/PostMenstrualAgeDemographicsBannerNoLabel';
+import BlankDemographicsBanner from '../packages/terra-demographics-banner/examples/test-examples/BlankDemographicsBanner.example';
+import DeceasedDemographicsBanner from '../packages/terra-demographics-banner/examples/test-examples/DeceasedDemographicsBanner.example';
+import DeceasedDemographicsBannerNoLabel from '../packages/terra-demographics-banner/examples/test-examples/DeceasedDemographicsBannerNoLabel.example';
+import GestationalAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/examples/test-examples/GestationalAgeDemographicsBannerNoLabel.example';
+import PopulatedDemographicsBanner from '../packages/terra-demographics-banner/examples/test-examples/PopulatedDemographicsBanner.example';
+import PostMenstrualAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/examples/test-examples/PostMenstrualAgeDemographicsBannerNoLabel.example';
 import DefaultDialog from '../packages/terra-dialog/tests/nightwatch/DefaultDialog';
 import DefaultDivider from '../packages/terra-divider/tests/nightwatch/DefaultDivider';
 import DefaultDocTemplate from '../packages/terra-doc-template/examples/test-examples/DefaultDocTemplate.example';
@@ -428,11 +428,6 @@ import StatusViewGlyphHidden from '../packages/terra-status-view/tests/nightwatc
 import StatusViewHeightTooSmall from '../packages/terra-status-view/tests/nightwatch/StatusViewHeightTooSmall';
 import StatusViewNotAuthorized from '../packages/terra-status-view/tests/nightwatch/StatusViewNotAuthorized';
 import StatusViewTextWrapping from '../packages/terra-status-view/tests/nightwatch/StatusViewTextWrapping';
-import StatusArrange from '../packages/terra-status/examples/test-examples/StatusArrange';
-import StatusDefault from '../packages/terra-status/examples/test-examples/StatusDefault';
-import StatusIcon from '../packages/terra-status/examples/test-examples/StatusIcon';
-import StatusImage from '../packages/terra-status/examples/test-examples/StatusImage';
-import StatusNoColor from '../packages/terra-status/examples/test-examples/StatusNoColor';
 import MultiRowSelectableTable from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTable';
 import MultiRowSelectableTableMaxCount from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCount';
 import MultiRowSelectableTableMaxCountInitiallyExceeded from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyExceeded';
@@ -3432,37 +3427,6 @@ const componentConfig = {
         name: 'Status View Text Wrapping',
         path: '/status-view-text-wrapping',
         component: StatusViewTextWrapping,
-      },
-    ],
-  },
-  'terra-status': {
-    name: 'Status',
-    path: '/status',
-    tests: [
-      {
-        name: 'Status Arrange',
-        path: '/status-arrange',
-        component: StatusArrange,
-      },
-      {
-        name: 'Status Default',
-        path: '/status-default',
-        component: StatusDefault,
-      },
-      {
-        name: 'Status Icon',
-        path: '/status-icon',
-        component: StatusIcon,
-      },
-      {
-        name: 'Status Image',
-        path: '/status-image',
-        component: StatusImage,
-      },
-      {
-        name: 'Status No Color',
-        path: '/status-no-color',
-        component: StatusNoColor,
       },
     ],
   },
