@@ -158,10 +158,11 @@ import CardPadding from '../packages/terra-card/tests/nightwatch/CardPadding';
 import CardPaddingHorizontal from '../packages/terra-card/tests/nightwatch/CardPaddingHorizontal';
 import CardPaddingVertical from '../packages/terra-card/tests/nightwatch/CardPaddingVertical';
 import DefaultCard from '../packages/terra-card/tests/nightwatch/DefaultCard';
+import RaisedCard from '../packages/terra-card/tests/nightwatch/RaisedCard';
 import DefaultCollapsibleMenuView from '../packages/terra-collapsible-menu-view/tests/nightwatch/DefaultCollapsibleMenuView';
 import FirstHiddenItemIsIcon from '../packages/terra-collapsible-menu-view/tests/nightwatch/FirstHiddenItemIsIcon';
-import DefaultContentContainer from '../packages/terra-content-container/tests/nightwatch/DefaultContentContainer';
-import FillContentContainer from '../packages/terra-content-container/tests/nightwatch/FillContentContainer';
+import DefaultContentContainer from '../packages/terra-content-container/examples/test-examples/DefaultContentContainer.example';
+import FillContentContainer from '../packages/terra-content-container/examples/test-examples/FillContentContainer.example';
 import DatePickerDefault from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefault';
 import DatePickerDefaultDateExcluded from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefaultDateExcluded';
 import DatePickerDefaultDateOutOfRange from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefaultDateOutOfRange';
@@ -433,11 +434,11 @@ import StatusViewGlyphHidden from '../packages/terra-status-view/tests/nightwatc
 import StatusViewHeightTooSmall from '../packages/terra-status-view/tests/nightwatch/StatusViewHeightTooSmall';
 import StatusViewNotAuthorized from '../packages/terra-status-view/tests/nightwatch/StatusViewNotAuthorized';
 import StatusViewTextWrapping from '../packages/terra-status-view/tests/nightwatch/StatusViewTextWrapping';
-import StatusArrange from '../packages/terra-status/examples/test-examples/StatusArrange';
-import StatusDefault from '../packages/terra-status/examples/test-examples/StatusDefault';
-import StatusIcon from '../packages/terra-status/examples/test-examples/StatusIcon';
-import StatusImage from '../packages/terra-status/examples/test-examples/StatusImage';
-import StatusNoColor from '../packages/terra-status/examples/test-examples/StatusNoColor';
+import StatusArrange from '../packages/terra-status/examples/test-examples/StatusArrange.example';
+import StatusDefault from '../packages/terra-status/examples/test-examples/StatusDefault.example';
+import StatusIcon from '../packages/terra-status/examples/test-examples/StatusIcon.example';
+import StatusImage from '../packages/terra-status/examples/test-examples/StatusImage.example';
+import StatusNoColor from '../packages/terra-status/examples/test-examples/StatusNoColor.example';
 import MultiRowSelectableTable from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTable';
 import MultiRowSelectableTableMaxCount from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCount';
 import MultiRowSelectableTableMaxCountInitiallyExceeded from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyExceeded';
@@ -999,6 +1000,11 @@ const componentConfig = {
         name: 'Default Card',
         path: '/default-card',
         component: DefaultCard,
+      },
+      {
+        name: 'Raised Card',
+        path: '/raised-card',
+        component: RaisedCard,
       },
     ],
   },
