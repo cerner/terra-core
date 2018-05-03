@@ -156,6 +156,7 @@ import CardPadding from '../packages/terra-card/tests/nightwatch/CardPadding';
 import CardPaddingHorizontal from '../packages/terra-card/tests/nightwatch/CardPaddingHorizontal';
 import CardPaddingVertical from '../packages/terra-card/tests/nightwatch/CardPaddingVertical';
 import DefaultCard from '../packages/terra-card/tests/nightwatch/DefaultCard';
+import RaisedCard from '../packages/terra-card/tests/nightwatch/RaisedCard';
 import DefaultCollapsibleMenuView from '../packages/terra-collapsible-menu-view/tests/nightwatch/DefaultCollapsibleMenuView';
 import FirstHiddenItemIsIcon from '../packages/terra-collapsible-menu-view/tests/nightwatch/FirstHiddenItemIsIcon';
 import DefaultContentContainer from '../packages/terra-content-container/examples/test-examples/DefaultContentContainer.example';
@@ -994,6 +995,11 @@ const componentConfig = {
         name: 'Default Card',
         path: '/default-card',
         component: DefaultCard,
+      },
+      {
+        name: 'Raised Card',
+        path: '/raised-card',
+        component: RaisedCard,
       },
     ],
   },
