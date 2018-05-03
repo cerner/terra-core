@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.8.0 - (May 2, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Updated dependency on terra-popup.
 
 2.7.0 - (April 20, 2018)
