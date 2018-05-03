@@ -9,6 +9,11 @@ Unreleased
 # Removed
 * Removed deprecated legacy theme code
 
+1.7.0 - (May 2, 2018)
+------------------
+### Changed
+* Added `tests/**/__snapshots__/` to .npmignore to prevent test screenshots being distributed with npm package
+
 1.6.0 - (March 30, 2018)
 ------------------
 ### Changed

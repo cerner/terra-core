@@ -1,7 +1,7 @@
 {
   "name": "terra-form-textarea",
   "main": "lib/Textarea.js",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "Element for building out textareas in a form.",
   "repository": {
     "type": "git",
@@ -23,12 +23,14 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.6.0"
+    "terra-base": "^3.7.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.6.0"
+    "terra-base": "^3.7.0",
+    "terra-form-field": "^2.8.0",
+    "terra-icon": "^2.7.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -39,6 +41,7 @@
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
+    "test:wdio": "wdio ../../wdio.conf.js"
   }
 }
