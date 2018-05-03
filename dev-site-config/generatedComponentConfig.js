@@ -158,8 +158,8 @@ import CardPaddingVertical from '../packages/terra-card/tests/nightwatch/CardPad
 import DefaultCard from '../packages/terra-card/tests/nightwatch/DefaultCard';
 import DefaultCollapsibleMenuView from '../packages/terra-collapsible-menu-view/tests/nightwatch/DefaultCollapsibleMenuView';
 import FirstHiddenItemIsIcon from '../packages/terra-collapsible-menu-view/tests/nightwatch/FirstHiddenItemIsIcon';
-import DefaultContentContainer from '../packages/terra-content-container/tests/nightwatch/DefaultContentContainer';
-import FillContentContainer from '../packages/terra-content-container/tests/nightwatch/FillContentContainer';
+import DefaultContentContainer from '../packages/terra-content-container/examples/test-examples/DefaultContentContainer.example';
+import FillContentContainer from '../packages/terra-content-container/examples/test-examples/FillContentContainer.example';
 import DatePickerDefault from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefault';
 import DatePickerDefaultDateExcluded from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefaultDateExcluded';
 import DatePickerDefaultDateOutOfRange from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefaultDateOutOfRange';
