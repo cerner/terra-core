@@ -428,6 +428,11 @@ import StatusViewGlyphHidden from '../packages/terra-status-view/tests/nightwatc
 import StatusViewHeightTooSmall from '../packages/terra-status-view/tests/nightwatch/StatusViewHeightTooSmall';
 import StatusViewNotAuthorized from '../packages/terra-status-view/tests/nightwatch/StatusViewNotAuthorized';
 import StatusViewTextWrapping from '../packages/terra-status-view/tests/nightwatch/StatusViewTextWrapping';
+import StatusArrange from '../packages/terra-status/examples/test-examples/StatusArrange.example';
+import StatusDefault from '../packages/terra-status/examples/test-examples/StatusDefault.example';
+import StatusIcon from '../packages/terra-status/examples/test-examples/StatusIcon.example';
+import StatusImage from '../packages/terra-status/examples/test-examples/StatusImage.example';
+import StatusNoColor from '../packages/terra-status/examples/test-examples/StatusNoColor.example';
 import MultiRowSelectableTable from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTable';
 import MultiRowSelectableTableMaxCount from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCount';
 import MultiRowSelectableTableMaxCountInitiallyExceeded from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyExceeded';
@@ -3427,6 +3432,37 @@ const componentConfig = {
         name: 'Status View Text Wrapping',
         path: '/status-view-text-wrapping',
         component: StatusViewTextWrapping,
+      },
+    ],
+  },
+  'terra-status': {
+    name: 'Status',
+    path: '/status',
+    tests: [
+      {
+        name: 'Status Arrange',
+        path: '/status-arrange',
+        component: StatusArrange,
+      },
+      {
+        name: 'Status Default',
+        path: '/status-default',
+        component: StatusDefault,
+      },
+      {
+        name: 'Status Icon',
+        path: '/status-icon',
+        component: StatusIcon,
+      },
+      {
+        name: 'Status Image',
+        path: '/status-image',
+        component: StatusImage,
+      },
+      {
+        name: 'Status No Color',
+        path: '/status-no-color',
+        component: StatusNoColor,
       },
     ],
   },
