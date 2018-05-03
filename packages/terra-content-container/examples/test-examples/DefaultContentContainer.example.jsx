@@ -2,9 +2,9 @@ import React from 'react';
 
 import ContentContainer from '../../lib/ContentContainer';
 
-const header = <span>header</span>;
-const footer = <span>footer</span>;
-const content = <span>content</span>;
+const header = <header style={{ height: '100%', backgroundColor: '#f64747' }}>header</header>;
+const footer = <div style={{ height: '100%', backgroundColor: '#98fb98' }}>content</div>;
+const content = <footer style={{ height: '100%', backgroundColor: '#00bfff' }}>footer</footer>;
 
 const container = () => (
   <div style={{ height: '200px' }}>
