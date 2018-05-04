@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Add more z-indexes.
 
 1.1.0 - (May 2, 2018)
 ------------------
