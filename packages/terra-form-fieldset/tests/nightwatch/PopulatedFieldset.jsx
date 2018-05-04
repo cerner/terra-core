@@ -6,6 +6,7 @@ const fieldset = () =>
   <Fieldset
     id="populated-fieldset"
     legend="Do you have any children?"
+    error="This must be filled out in order to progress"
     legendAttrs={{ className: 'healtheintent-application' }}
     name="children_present"
     value="children_present"

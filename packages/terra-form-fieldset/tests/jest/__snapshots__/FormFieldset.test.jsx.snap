@@ -16,6 +16,11 @@ exports[`should render a Fieldset when all the possible props are passed into it
     This is a test input
   </small>
   <div
+    className="error-text"
+  >
+    This is required
+  </div>
+  <div
     className="fieldset-children"
   >
     <input

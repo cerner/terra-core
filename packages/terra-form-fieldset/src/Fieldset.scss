@@ -25,6 +25,15 @@
     width: auto;
   }
 
+  .error-text {
+    color: var(--terra-form-fieldset-error-text-color, #e50000);
+    font-size: var(--terra-form-fieldset-error-text-font-size, 0.857rem);
+    font-weight: var(--terra-form-fieldset-error-text-font-weight, normal);
+    line-height: 1.25;
+    margin-top: var(--terra-form-fieldset-error-text-margin-top, 0.357em);
+    text-align: left;
+  }
+
   .help-text {
     color: var(--terra-form-fieldset-help-text-color, rgba(0, 0, 0, 0.8));
     display: block;

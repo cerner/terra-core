@@ -15,6 +15,10 @@ describe('Fieldset', () => {
         '--terra-form-fieldset-help-text-color': 'green',
         '--terra-form-fieldset-help-text-font-size': '60px',
         '--terra-form-fieldset-help-text-font-weight': '900',
+        '--terra-form-fieldset-error-text-color': '#1A4716',
+        '--terra-form-fieldset-error-text-font-size': '1.5em',
+        '--terra-form-fieldset-error-text-font-weight': '600',
+        '--terra-form-fieldset-error-text-margin-top': '1.5em',
       },
     });
   });
