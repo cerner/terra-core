@@ -1,6 +1,6 @@
 :local {
   .slide {
-    background-color: #fff;
+    background-color: var(--terra-slide-group-slide-background-color, #fff);
     height: 100%;
     position: absolute;
     width: 100%;
