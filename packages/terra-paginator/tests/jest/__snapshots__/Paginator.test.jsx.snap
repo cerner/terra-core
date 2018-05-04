@@ -60,6 +60,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link is-disabled"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         First
@@ -67,6 +68,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link is-disabled"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         <IconPrevious
@@ -81,6 +83,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link is-selected"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex={null}
       >
         1
@@ -88,6 +91,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         2
@@ -95,6 +99,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         3
@@ -102,6 +107,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         4
@@ -109,6 +115,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         5
@@ -116,6 +123,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         6
@@ -123,6 +131,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         7
@@ -130,6 +139,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         8
@@ -137,6 +147,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         9
@@ -144,6 +155,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         10
@@ -151,6 +163,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         Next 
@@ -165,6 +178,7 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         Last
@@ -216,6 +230,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         <IconPrevious
@@ -230,6 +245,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
       <a
         className="nav-link"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         Next 

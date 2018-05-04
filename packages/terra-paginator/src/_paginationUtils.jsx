@@ -35,4 +35,9 @@ const pageSet = (index, totalPages) => {
   return sequence.sort((a, b) => a - b);
 };
 
-export { calculatePages, pageSet };
+const KEYCODES = {
+  ENTER: 13,
+  SPACE: 32,
+};
+
+export { calculatePages, pageSet, KEYCODES };
