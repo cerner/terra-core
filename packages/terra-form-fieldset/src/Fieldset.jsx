@@ -14,9 +14,17 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Error message for when the input is invalid. This will only be displayed if isInvalid is true.
+   */
+  error: PropTypes.node,
+  /**
    * Help element to display with other elements.
    */
   help: PropTypes.node,
+  /**
+   * Whether or not the fieldset is invalid.
+   */
+  isInvalid: PropTypes.bool,
   /**
    * Legend for the input group.
    */
@@ -33,10 +41,12 @@ const propTypes = {
 
 const defaultProps = {
   legendAttrs: {},
+  error: null,
+  isInvalid: false,
   required: false,
 };
 
-const Fieldset = ({ children, help, legend, legendAttrs, required, ...customProps }) => {
+const Fieldset = ({ children, error, help, isInvalid, legend, legendAttrs, required, ...customProps }) => {
   const fieldsetClasses = cx([
     'fieldset',
     { 'fieldset-required': required },
@@ -52,6 +62,7 @@ const Fieldset = ({ children, help, legend, legendAttrs, required, ...customProp
     <fieldset {...customProps} className={fieldsetClasses}>
       {legend && <legend {...legendAttrs} className={legendClasses}>{legend}</legend>}
       {help && <small className={cx('help-text')} tabIndex="-1">{help}</small>}
+      {isInvalid && error && <div className={cx('error-text')}>{error}</div>}
       <div className={cx('fieldset-children')}>
         {children}
       </div>

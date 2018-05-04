@@ -11,6 +11,7 @@ const fieldset = () =>
     name="children_present"
     value="children_present"
     help="Families are eligible for family package plans"
+    isInvalid
     required
   />;
 

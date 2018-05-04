@@ -13,9 +13,29 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   const input = (
     <Fieldset
       legend="Text"
+      error="This is required"
       className="fieldset-custom"
       legendAttrs={{ className: 'healtheintent-legend' }}
       help="This is a test input"
+      required
+    >
+      <input type="radio" value="Test" />
+    </Fieldset>
+  );
+
+  const wrapper = shallow(input);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render an invalid Fieldset', () => {
+  const input = (
+    <Fieldset
+      legend="Text"
+      error="This is required"
+      className="fieldset-custom"
+      legendAttrs={{ className: 'healtheintent-legend' }}
+      help="This is a test input"
+      isInvalid
       required
     >
       <input type="radio" value="Test" />
