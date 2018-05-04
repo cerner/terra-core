@@ -4,7 +4,7 @@ import { Portal } from 'react-portal';
 import 'terra-base/lib/baseStyles';
 import ModalContent from './_ModalContent';
 
-const zIndexes = ['6000', '8000'];
+const zIndexes = ['6000', '7000', '8000', '9000'];
 
 const propTypes = {
   /**
