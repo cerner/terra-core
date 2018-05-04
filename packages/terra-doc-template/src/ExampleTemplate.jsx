@@ -50,7 +50,7 @@ class IndexExampleTemplate extends React.Component {
     const { title, example, exampleSrc, children, description, ...customProps } = this.props;
 
     const indexExampleSrc = (
-      <ToggleButton isAnimated closedButtonText="View Source Code">
+      <ToggleButton isAnimated closedButtonText="View Source Code" data-terra-source-code-toggle>
         <SyntaxHighlighter language="javascript" style={okaidia}>{exampleSrc}</SyntaxHighlighter>
       </ToggleButton>
     );
