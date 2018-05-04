@@ -2,6 +2,18 @@
 
 exports[`Card should render a default component 1`] = `
 <div
-  className="card"
+  className="card default"
+/>
+`;
+
+exports[`Card should use the default variant when prop is provided just like default 1`] = `
+<div
+  className="card default"
+/>
+`;
+
+exports[`Card should use the raised variant when prop is provided 1`] = `
+<div
+  className="card raised"
 />
 `;

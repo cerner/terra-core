@@ -34,13 +34,23 @@ const defaultProps = {
   children: null,
 };
 
-const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
+};
+
+const Dialog = ({ header, footer, onClose, children, ...customProps }, { intl }) => {
   const dialogClassNames = cx([
     'dialog',
     customProps.className,
   ]);
 
-  const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button variant="utility" onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} /></div> : null;
+  const closeText = intl.formatMessage({ id: 'Terra.dialog.close' });
+  const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button variant="utility" text={closeText} onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} /></div> : null;
 
   const dialogHeader = <div className={cx('dialog-header')}><div className={cx('dialog-header-title')}>{header}</div>{closeButton}</div>;
 
@@ -55,5 +65,6 @@ const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
 
 Dialog.propTypes = propTypes;
 Dialog.defaultProps = defaultProps;
+Dialog.contextTypes = contextTypes;
 
 export default Dialog;

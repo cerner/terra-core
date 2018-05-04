@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+1.7.0 - (May 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+Added localized aria-label to dialog close button
+
 1.6.0 - (April 20, 2018)
 ------------------
 ### Changed
