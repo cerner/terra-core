@@ -16,6 +16,16 @@ it('should shallow an open modal 6000 z-index', () => {
   expect(modal).toMatchSnapshot();
 });
 
+it('should shallow an open modal 7000 z-index', () => {
+  const modal = shallow(<AbstractModalExample zIndex="7000" />);
+  expect(modal).toMatchSnapshot();
+});
+
+it('should mount an open modal 7000 z-index', () => {
+  const modal = mount(<AbstractModalExample zIndex="7000" />);
+  expect(modal).toMatchSnapshot();
+});
+
 it('should shallow an open modal 8000 z-index', () => {
   const modal = shallow(<AbstractModalExample zIndex="8000" />);
   expect(modal).toMatchSnapshot();
@@ -23,6 +33,16 @@ it('should shallow an open modal 8000 z-index', () => {
 
 it('should mount an open modal 8000 z-index', () => {
   const modal = mount(<AbstractModalExample zIndex="8000" />);
+  expect(modal).toMatchSnapshot();
+});
+
+it('should shallow an open modal 9000 z-index', () => {
+  const modal = shallow(<AbstractModalExample zIndex="9000" />);
+  expect(modal).toMatchSnapshot();
+});
+
+it('should mount an open modal 9000 z-index', () => {
+  const modal = mount(<AbstractModalExample zIndex="9000" />);
   expect(modal).toMatchSnapshot();
 });
 
