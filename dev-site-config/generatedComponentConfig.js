@@ -227,6 +227,7 @@ import FieldInline from '../packages/terra-form-field/tests/nightwatch/FieldInli
 import FieldInteractiveInvalid from '../packages/terra-form-field/tests/nightwatch/FieldInteractiveInvalid';
 import FieldTextWrap from '../packages/terra-form-field/tests/nightwatch/FieldTextWrap';
 import DefaultFieldset from '../packages/terra-form-fieldset/tests/nightwatch/DefaultFieldset';
+import InvalidFieldset from '../packages/terra-form-fieldset/tests/nightwatch/InvalidFieldset';
 import PopulatedFieldset from '../packages/terra-form-fieldset/tests/nightwatch/PopulatedFieldset';
 import InputField from '../packages/terra-form-input/examples/test-examples/InputField.example';
 import DefaultFormInput from '../packages/terra-form-input/tests/nightwatch/DefaultFormInput';
@@ -1440,6 +1441,11 @@ const componentConfig = {
         name: 'Default Fieldset',
         path: '/default-fieldset',
         component: DefaultFieldset,
+      },
+      {
+        name: 'Invalid Fieldset',
+        path: '/invalid-fieldset',
+        component: InvalidFieldset,
       },
       {
         name: 'Populated Fieldset',

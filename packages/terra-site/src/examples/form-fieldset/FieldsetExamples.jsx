@@ -39,6 +39,7 @@ class FieldsetExamples extends React.Component {
             name="children_present"
             value="children_present"
             error="All fields must be filled out"
+            isInvalid={!this.state.first || !this.state.middle || !this.state.last}
             help="Families are eligible for family package plans"
             required
           >

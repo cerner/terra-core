@@ -22,4 +22,25 @@ describe('Fieldset', () => {
       },
     });
   });
+
+  describe('Invalid Fieldsets', () => {
+    beforeEach(() => browser.url('/#/raw/tests/form-fieldset/invalid-fieldset'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-form-fieldset-legend-color': 'yellow',
+        '--terra-form-fieldset-legend-font-weight': '100',
+        '--terra-form-fieldset-help-text-color': 'green',
+        '--terra-form-fieldset-help-text-font-size': '60px',
+        '--terra-form-fieldset-help-text-font-weight': '900',
+        '--terra-form-fieldset-error-text-color': '#1A4716',
+        '--terra-form-fieldset-error-text-font-size': '1.5em',
+        '--terra-form-fieldset-error-text-font-weight': '600',
+        '--terra-form-fieldset-error-text-margin-top': '1.5em',
+      },
+    });
+  });
 });

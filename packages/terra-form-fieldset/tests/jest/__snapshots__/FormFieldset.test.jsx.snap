@@ -16,11 +16,6 @@ exports[`should render a Fieldset when all the possible props are passed into it
     This is a test input
   </small>
   <div
-    className="error-text"
-  >
-    This is required
-  </div>
-  <div
     className="fieldset-children"
   >
     <input
@@ -38,5 +33,36 @@ exports[`should render a default component 1`] = `
   <div
     className="fieldset-children"
   />
+</fieldset>
+`;
+
+exports[`should render an invalid Fieldset 1`] = `
+<fieldset
+  className="fieldset fieldset-required fieldset-custom"
+>
+  <legend
+    className="legend healtheintent-legend"
+  >
+    Text
+  </legend>
+  <small
+    className="help-text"
+    tabIndex="-1"
+  >
+    This is a test input
+  </small>
+  <div
+    className="error-text"
+  >
+    This is required
+  </div>
+  <div
+    className="fieldset-children"
+  >
+    <input
+      type="radio"
+      value="Test"
+    />
+  </div>
 </fieldset>
 `;
