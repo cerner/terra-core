@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+2.7.0 - (May 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added TextareaField to package
+
 2.6.0 - (April 20, 2018)
 ------------------
 ### Changed

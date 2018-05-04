@@ -1,31 +1,32 @@
 import React from 'react';
 import CollapsibleMenuViewToggle from '../../src/CollapsibleMenuViewToggle';
+import intlContexts from './intl-context-setup';
 
 describe('CollapsibleMenuViewToggle', () => {
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" />);
+    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Props
   it('should merge custom props', () => {
-    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" className="Testing" />);
+    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" className="Testing" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should set defaultChecked prop', () => {
-    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isSelected />);
+    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isSelected />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should disable checkbox when isSelectable is false', () => {
-    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isSelectable={false} />);
+    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isSelectable={false} />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should set isDisabled prop', () => {
-    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isDisabled />);
+    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isDisabled />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 

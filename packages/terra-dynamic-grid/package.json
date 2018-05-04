@@ -1,7 +1,7 @@
 {
   "name": "terra-dynamic-grid",
   "main": "lib/DynamicGrid.js",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids.",
   "repository": {
     "type": "git",
@@ -23,13 +23,13 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.6.0"
+    "terra-base": "^3.7.0"
   },
   "dependencies": {
     "aphrodite": "^1.2.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.6.0"
+    "terra-base": "^3.7.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -38,8 +38,8 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
   }
 }

@@ -132,7 +132,7 @@ exports[`CollapsibleMenuViewItem should render a button group button when in an 
 />
 `;
 
-exports[`CollapsibleMenuViewItem should render a button with icon and no text when isIconOnly is set 1`] = `
+exports[`CollapsibleMenuViewItem should render a button with icon and text when isIconOnly and text is set 1`] = `
 <div
   className="face-up-item"
 >
@@ -149,7 +149,7 @@ exports[`CollapsibleMenuViewItem should render a button with icon and no text wh
     isDisabled={false}
     isIconOnly={true}
     isReversed={false}
-    text=""
+    text="Testing"
     type="button"
     variant="neutral"
   />

@@ -18,6 +18,11 @@ import Card from 'terra-card';
 	...
 </Card>
 
+// A Raised Card variant
+<Card variant="raised">
+	...
+</Card>
+
 // Or we can selectively add padding to child elements
 <Card>
 	<Card.Body>

@@ -68,7 +68,7 @@
     "start": "tt:serve --config webpack.config",
     "start:build": "npm run generate-config && npm run start",
     "start-heroku": "tt:serve-static --site build",
-    "test": "jest && nightwatch && npm run wdio",
+    "test": "jest && npm run wdio && nightwatch",
     "wdio": "wdio"
   },
   "devDependencies": {
@@ -104,11 +104,11 @@
     "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.1",
     "shelljs": "^0.7.7",
-    "stylelint": "^8.0.0",
-    "stylelint-config-sass-guidelines": "^4.0.1",
-    "stylelint-order": "^0.7.0",
-    "stylelint-scss": "^2.0.0",
-    "stylelint-suitcss": "^1.0.0",
+    "stylelint": "^9.0.0",
+    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.0.0",
+    "stylelint-suitcss": "^3.0.0",
     "terra-dev-site": "0.5.0",
     "terra-toolkit": "^3.0.0",
     "webpack-merge": "^4.1.2"

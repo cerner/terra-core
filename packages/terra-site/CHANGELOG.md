@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.9.0 - (May 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added page for terra-doc-template
 

@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* New prop called variant used to flex to different card styles for new use cases. Falls back to default. Currently only adds the option for raised which adds a new css custom attribute for the box shadow.
+
+2.7.0 - (May 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.6.0 - (April 20, 2018)
 ------------------
