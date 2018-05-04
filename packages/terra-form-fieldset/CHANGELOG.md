@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+Add error prop to fieldset
 
 1.5.0 - (May 2, 2018)
 ------------------

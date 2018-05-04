@@ -14,7 +14,7 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Error message for when the input is invalid. This will only be displayed if isInvalid is true.
+   * Error message for when the input is invalid.
    */
   error: PropTypes.node,
   /**
