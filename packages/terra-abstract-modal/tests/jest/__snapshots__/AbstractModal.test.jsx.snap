@@ -80,6 +80,88 @@ exports[`should mount an open modal 1`] = `
 </ModalExample>
 `;
 
+exports[`should mount an open modal 7000 z-index 1`] = `
+<ModalExample
+  zIndex="7000"
+>
+  <div>
+    <AbstractModal
+      ariaLabel="Terra Modal"
+      classNameModal={null}
+      classNameOverlay={null}
+      closeOnEsc={true}
+      closeOnOutsideClick={true}
+      isFocused={true}
+      isFullscreen={false}
+      isOpen={true}
+      onRequestClose={[Function]}
+      role="document"
+      zIndex="7000"
+    >
+      <Portal
+        isOpened={true}
+      >
+        <ModalContent
+          ariaLabel="Terra Modal"
+          classNameModal={null}
+          classNameOverlay={null}
+          closeOnOutsideClick={true}
+          isFocused={true}
+          isFullscreen={false}
+          isScrollable={false}
+          onRequestClose={[Function]}
+          role="document"
+          zIndex="7000"
+        >
+          <FocusTrap
+            _createFocusTrap={[Function]}
+            active={true}
+            focusTrapOptions={Object {}}
+            paused={false}
+            tag="div"
+          >
+            <div>
+              <ModalOverlay
+                className={null}
+                onClick={[Function]}
+                zIndex="7000"
+              >
+                <div
+                  className="overlay layer-7000"
+                  onClick={[Function]}
+                />
+              </ModalOverlay>
+              <div
+                aria-label="Terra Modal"
+                className="abstract-modal layer-7000"
+                role="document"
+                tabIndex="0"
+              >
+                <div>
+                  <h1>
+                    Terra Modal
+                  </h1>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Close Modal
+                  </button>
+                </div>
+              </div>
+            </div>
+          </FocusTrap>
+        </ModalContent>
+      </Portal>
+    </AbstractModal>
+    <button
+      onClick={[Function]}
+    >
+      Open Modal
+    </button>
+  </div>
+</ModalExample>
+`;
+
 exports[`should mount an open modal 8000 z-index 1`] = `
 <ModalExample
   zIndex="8000"
@@ -134,6 +216,88 @@ exports[`should mount an open modal 8000 z-index 1`] = `
               <div
                 aria-label="Terra Modal"
                 className="abstract-modal layer-8000"
+                role="document"
+                tabIndex="0"
+              >
+                <div>
+                  <h1>
+                    Terra Modal
+                  </h1>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Close Modal
+                  </button>
+                </div>
+              </div>
+            </div>
+          </FocusTrap>
+        </ModalContent>
+      </Portal>
+    </AbstractModal>
+    <button
+      onClick={[Function]}
+    >
+      Open Modal
+    </button>
+  </div>
+</ModalExample>
+`;
+
+exports[`should mount an open modal 9000 z-index 1`] = `
+<ModalExample
+  zIndex="9000"
+>
+  <div>
+    <AbstractModal
+      ariaLabel="Terra Modal"
+      classNameModal={null}
+      classNameOverlay={null}
+      closeOnEsc={true}
+      closeOnOutsideClick={true}
+      isFocused={true}
+      isFullscreen={false}
+      isOpen={true}
+      onRequestClose={[Function]}
+      role="document"
+      zIndex="9000"
+    >
+      <Portal
+        isOpened={true}
+      >
+        <ModalContent
+          ariaLabel="Terra Modal"
+          classNameModal={null}
+          classNameOverlay={null}
+          closeOnOutsideClick={true}
+          isFocused={true}
+          isFullscreen={false}
+          isScrollable={false}
+          onRequestClose={[Function]}
+          role="document"
+          zIndex="9000"
+        >
+          <FocusTrap
+            _createFocusTrap={[Function]}
+            active={true}
+            focusTrapOptions={Object {}}
+            paused={false}
+            tag="div"
+          >
+            <div>
+              <ModalOverlay
+                className={null}
+                onClick={[Function]}
+                zIndex="9000"
+              >
+                <div
+                  className="overlay layer-9000"
+                  onClick={[Function]}
+                />
+              </ModalOverlay>
+              <div
+                aria-label="Terra Modal"
+                className="abstract-modal layer-9000"
                 role="document"
                 tabIndex="0"
               >
@@ -312,6 +476,40 @@ exports[`should shallow an open modal 6000 z-index 1`] = `
 </div>
 `;
 
+exports[`should shallow an open modal 7000 z-index 1`] = `
+<div>
+  <AbstractModal
+    ariaLabel="Terra Modal"
+    classNameModal={null}
+    classNameOverlay={null}
+    closeOnEsc={true}
+    closeOnOutsideClick={true}
+    isFocused={true}
+    isFullscreen={false}
+    isOpen={true}
+    onRequestClose={[Function]}
+    role="document"
+    zIndex="7000"
+  >
+    <div>
+      <h1>
+        Terra Modal
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        Close Modal
+      </button>
+    </div>
+  </AbstractModal>
+  <button
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+</div>
+`;
+
 exports[`should shallow an open modal 8000 z-index 1`] = `
 <div>
   <AbstractModal
@@ -326,6 +524,40 @@ exports[`should shallow an open modal 8000 z-index 1`] = `
     onRequestClose={[Function]}
     role="document"
     zIndex="8000"
+  >
+    <div>
+      <h1>
+        Terra Modal
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        Close Modal
+      </button>
+    </div>
+  </AbstractModal>
+  <button
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+</div>
+`;
+
+exports[`should shallow an open modal 9000 z-index 1`] = `
+<div>
+  <AbstractModal
+    ariaLabel="Terra Modal"
+    classNameModal={null}
+    classNameOverlay={null}
+    closeOnEsc={true}
+    closeOnOutsideClick={true}
+    isFocused={true}
+    isFullscreen={false}
+    isOpen={true}
+    onRequestClose={[Function]}
+    role="document"
+    zIndex="9000"
   >
     <div>
       <h1>

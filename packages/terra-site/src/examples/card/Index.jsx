@@ -11,6 +11,7 @@ import CardSrc from '!raw-loader!terra-card/src/Card';
 import CardBodySrc from '!raw-loader!terra-card/src/CardBody';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import CardDefault from './CardDefault';
+import CardRaised from './CardRaised';
 import CardPadding from './CardPadding';
 import CardPaddingVertical from './CardPaddingVertical';
 import CardPaddingHorizontal from './CardPaddingHorizontal';
@@ -27,6 +28,8 @@ const CardExamples = () => (
     <PropsTable componentName="Card Body"src={CardBodySrc} />
     <h2 id="CardDefault">Card basic example</h2>
     <CardDefault />
+    <h2 id="CardRaised">Card basic raised example</h2>
+    <CardRaised />
     <h2 id="CardPadding">Card plus Card Body with default padding</h2>
     <CardPadding />
     <h2 id="CardPaddingVertical">Card plus Card Body with only vertical padding</h2>
