@@ -4,44 +4,43 @@ import Paginator from 'terra-paginator/src/Paginator';
 
 const totalCount = 450;
 
+const fillArray = (value, len) => {
+  const arr = [];
+  for (let i = 0; i < len; i += 1) {
+    arr.push(<p key={Math.floor(Math.random() * Math.floor(100000))}>{value}</p>);
+  }
+  return arr;
+};
+
+const buildPage = () => {
+  let fullContent = [];
+  const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+    'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. ' +
+    'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. ' +
+    'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. ' +
+    'Aliquam eget maximus dui, ut rhoncus augue.');
+
+  fullContent = fillArray(content, 10);
+
+  return (
+    fullContent
+  );
+};
+
 class SearchPaginatorExample extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      content: this.buildPage(),
+      content: buildPage(),
       currentPage: 1,
     };
 
-    this.buildPage = this.buildPage.bind(this);
     this.changePages = this.changePages.bind(this);
-  }
-
-  fillArray(value, len) {
-    var arr = [];
-    for (var i = 0; i < len; i++) {
-      arr.push(<p key={Math.floor(Math.random() * Math.floor(100000))}>{value}</p>);
-    }
-    return arr;
   }
 
   changePages(index) {
     this.setState({ currentPage: index });
-  }
-
-  buildPage() {
-    let fullContent = [];
-    const content = ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-        Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. \
-        Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. \
-        Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. \
-        Aliquam eget maximus dui, ut rhoncus augue.");
-
-    fullContent = this.fillArray(content, 10);
-
-    return (
-      fullContent
-    );
   }
 
   render() {
