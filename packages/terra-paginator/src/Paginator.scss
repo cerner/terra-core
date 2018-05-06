@@ -10,8 +10,7 @@
 
     .nav-link {
       background: var(--terra-paginator-nav-link-background);
-      border: var(--terra-paginator-nav-link-border, thin solid);
-      color: var(--terra-paginator-nav-link-foreground-color, #000);
+      color: var(--terra-paginator-nav-link-foreground-color, #0059a8);
       cursor: pointer;
       display: inline-block;
       margin: var(--terra-paginator-nav-link-margin, auto 2px);
@@ -21,18 +20,12 @@
       user-select: none; // Keeps user from highlighting the paging link text.
 
       &:hover {
-        background: var(--terra-paginator-nav-link-background-hover);
-        color: var(--terra-paginator-nav-link-foreground-color-hover);
+        color: var(--terra-paginator-nav-link-foreground-color-hover, #001f67);
         text-decoration: underline;
-      }
-
-      &:active {
-        background: var(--terra-paginator-nav-link-background-active, #b2b5b6);
       }
     }
 
     .is-selected {
-      border: var(--terra-paginator-nav-link-border-selected, none);
       color: initial;
       cursor: initial;
       pointer-events: none;
@@ -49,7 +42,6 @@
     .is-disabled {
       color: var(--terra-paginator-nav-link-foreground-color-disabled, rgba(28, 31, 33, 0.2));
       cursor: default;
-      outline: none;
       pointer-events: none;
     }
 
