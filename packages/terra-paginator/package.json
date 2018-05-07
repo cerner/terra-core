@@ -21,17 +21,17 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^1.10.1"
+    "terra-props-table": "^2.6.0"
   },
   "peerDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "terra-base": "^2.0.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "terra-base": "^3.7.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.0.0",
+    "terra-base": "^3.7.0",
     "terra-button": "^2.7.0",
     "terra-form-input": "^1.6.0",
     "terra-icon": "^2.6.0",
