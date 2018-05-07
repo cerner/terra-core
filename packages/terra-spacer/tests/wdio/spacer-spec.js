@@ -10,7 +10,7 @@ describe('Spacer', () => {
     Terra.should.matchScreenshot();
   });
 
-  describe('Spacer with small-2 margin', () => {
+  describe('Spacer with size small-2', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-small-2'));
 
     Terra.should.beAccessible();
@@ -23,7 +23,7 @@ describe('Spacer', () => {
     });
   });
 
-  describe('Spacer with small-1 margin', () => {
+  describe('Spacer with size small-1', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-small-1'));
 
     Terra.should.beAccessible();
@@ -36,7 +36,7 @@ describe('Spacer', () => {
     });
   });
 
-  describe('Spacer with small margin', () => {
+  describe('Spacer with size small', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-small'));
 
     Terra.should.beAccessible();
@@ -49,7 +49,7 @@ describe('Spacer', () => {
     });
   });
 
-  describe('Spacer with medium margin', () => {
+  describe('Spacer with size medium', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-medium'));
 
     Terra.should.beAccessible();
@@ -62,7 +62,7 @@ describe('Spacer', () => {
     });
   });
 
-  describe('Spacer with large margin', () => {
+  describe('Spacer with size large', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-large'));
 
     Terra.should.beAccessible();
@@ -75,7 +75,7 @@ describe('Spacer', () => {
     });
   });
 
-  describe('Spacer with large+1 margin', () => {
+  describe('Spacer with size large+1', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-large-1'));
 
     Terra.should.beAccessible();
@@ -88,7 +88,7 @@ describe('Spacer', () => {
     });
   });
 
-  describe('Spacer with large+2 margin', () => {
+  describe('Spacer with size large+2', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-large-2'));
 
     Terra.should.beAccessible();
@@ -101,7 +101,7 @@ describe('Spacer', () => {
     });
   });
 
-  describe('Spacer with large+3 margin', () => {
+  describe('Spacer with size large+3', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-large-3'));
 
     Terra.should.beAccessible();
@@ -114,7 +114,7 @@ describe('Spacer', () => {
     });
   });
 
-  describe('Spacer with large+4 margin', () => {
+  describe('Spacer with size large+4', () => {
     before(() => browser.url('/#/raw/tests/spacer/spacer-large-4'));
 
     Terra.should.beAccessible();
