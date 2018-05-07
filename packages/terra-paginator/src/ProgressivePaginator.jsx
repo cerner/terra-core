@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import IconNext from 'terra-icon/lib/icon/IconNext';
 import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
-import InputField from 'terra-form-input/lib/InputField';
 import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
@@ -45,7 +44,6 @@ class ProgressivePaginator extends React.Component {
 
     this.handlePageChange = this.handlePageChange.bind(this);
     this.handlePageInput = this.handlePageInput.bind(this);
-    this.buildPageSelectorForm = this.buildPageSelectorForm.bind(this);
     this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
     this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
   }
@@ -63,23 +61,14 @@ class ProgressivePaginator extends React.Component {
     };
   }
 
-  buildPageSelectorForm(totalPages, onSubmit) {
-    const { pageInput } = this.state;
-    const inputAttrs = { className: cx('page-input') };
-
-    const pageForm = (<form className={cx('page-form')} onSubmit={onSubmit(parseInt(pageInput, 10))}>
-      Page {<InputField inputId="page-input" label="" inputAttrs={inputAttrs} value={pageInput} onChange={this.handlePageInput} />} of {totalPages}
-    </form>);
-
-    return pageForm;
-  }
-
   defaultProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
 
     return (<div className={cx('paginator')}>
-      {this.buildPageSelectorForm(totalPages, this.handlePageChange)}
+      <div>
+        Page {selectedPage} of {totalPages}
+      </div>
       <div>
         <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
         <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
@@ -98,7 +87,9 @@ class ProgressivePaginator extends React.Component {
         <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
         <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />}</a>
       </div>
-      {this.buildPageSelectorForm(totalPages, this.handlePageChange)}
+      <div>
+        Page {selectedPage} of {totalPages}
+      </div>
       <div>
         <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>{<IconNext />}</a>
         <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>
