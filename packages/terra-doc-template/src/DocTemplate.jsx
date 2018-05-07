@@ -96,7 +96,7 @@ const DocTemplate = ({ packageName, readme, examples, propsTables, ...customProp
 
       {localPropsTables.map(propsTable =>
         <PropsTable
-          src={propsTable.componentSource}
+          src={propsTable.componentSrc}
           componentName={propsTable.componentName}
           key={propsTable.id}
         />,
