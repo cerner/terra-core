@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Alignment bug with missing start content and title, when using an end aligned item.
 
 1.2.0 - (May 2, 2018)
 ------------------
