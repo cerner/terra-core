@@ -106,59 +106,58 @@ import DefaultActionHeader from '../packages/terra-action-header/examples/test-e
 import MaximizeCloseActionHeader from '../packages/terra-action-header/examples/test-examples/MaximizeCloseActionHeader.example';
 import MinimizeCustomButtonActionHeader from '../packages/terra-action-header/examples/test-examples/MinimizeCustomButtonActionHeader.example';
 import WrappedTitleActionHeader from '../packages/terra-action-header/examples/test-examples/WrappedTitleActionHeader.example';
-import AlertActionButton from '../packages/terra-alert/tests/nightwatch/AlertActionButton';
-import AlertDismissible from '../packages/terra-alert/tests/nightwatch/AlertDismissible';
-import AlertResponsiveToParent from '../packages/terra-alert/tests/nightwatch/AlertResponsiveToParent';
-import AlertTitle from '../packages/terra-alert/tests/nightwatch/AlertTitle';
-import AlertType from '../packages/terra-alert/tests/nightwatch/AlertType';
-import CustomAlert from '../packages/terra-alert/tests/nightwatch/CustomAlert';
-import DefaultAlert from '../packages/terra-alert/tests/nightwatch/DefaultAlert';
-import AlignedAllArrange from '../packages/terra-arrange/tests/nightwatch/AlignedAllArrange';
-import AlignedAllLongWords from '../packages/terra-arrange/tests/nightwatch/AlignedAllLongWords';
-import AlignedFitEndFillArrange from '../packages/terra-arrange/tests/nightwatch/AlignedFitEndFillArrange';
-import AlignedFitStartFillArrange from '../packages/terra-arrange/tests/nightwatch/AlignedFitStartFillArrange';
-import IndividuallyAlignedFill from '../packages/terra-arrange/tests/nightwatch/IndividuallyAlignedFill';
-import IndividuallyAlignedFitEnd from '../packages/terra-arrange/tests/nightwatch/IndividuallyAlignedFitEnd';
-import IndividuallyAlignedFitStart from '../packages/terra-arrange/tests/nightwatch/IndividuallyAlignedFitStart';
-import Examplesetup from '../packages/terra-arrange/tests/nightwatch/examplesetup';
-import FacilityAvatar from '../packages/terra-avatar/tests/nightwatch/FacilityAvatar';
-import ImageAvatar from '../packages/terra-avatar/tests/nightwatch/ImageAvatar';
-import ThreeInitialsAvatar from '../packages/terra-avatar/tests/nightwatch/ThreeInitialsAvatar';
-import TwoInitialsAvatar from '../packages/terra-avatar/tests/nightwatch/TwoInitialsAvatar';
-import UserAvatar from '../packages/terra-avatar/tests/nightwatch/UserAvatar';
-import BadgeDefault from '../packages/terra-badge/tests/nightwatch/BadgeDefault';
-import BadgeIcon from '../packages/terra-badge/tests/nightwatch/BadgeIcon';
-import BadgeIntent from '../packages/terra-badge/tests/nightwatch/BadgeIntent';
-import BadgeSize from '../packages/terra-badge/tests/nightwatch/BadgeSize';
-import DefaultBase from '../packages/terra-base/tests/nightwatch/DefaultBase';
-import NoTranslationsLoadedBase from '../packages/terra-base/tests/nightwatch/NoTranslationsLoadedBase';
-import NoTranslationsLoadedStringBase from '../packages/terra-base/tests/nightwatch/NoTranslationsLoadedStringBase';
-import SwitchLocaleBase from '../packages/terra-base/tests/nightwatch/SwitchLocaleBase';
-import ButtonGroupDisabledButtons from '../packages/terra-button-group/tests/nightwatch/ButtonGroupDisabledButtons';
-import ButtonGroupIcon from '../packages/terra-button-group/tests/nightwatch/ButtonGroupIcon';
-import ButtonGroupLongText from '../packages/terra-button-group/tests/nightwatch/ButtonGroupLongText';
-import ButtonGroupMultiSelect from '../packages/terra-button-group/tests/nightwatch/ButtonGroupMultiSelect';
-import ButtonGroupNotSelectable from '../packages/terra-button-group/tests/nightwatch/ButtonGroupNotSelectable';
-import ButtonGroupSingleSelect from '../packages/terra-button-group/tests/nightwatch/ButtonGroupSingleSelect';
-import ButtonGroupText from '../packages/terra-button-group/tests/nightwatch/ButtonGroupText';
-import ActiveVariantButtons from '../packages/terra-button/tests/nightwatch/ActiveVariantButtons';
-import ButtonTypes from '../packages/terra-button/tests/nightwatch/ButtonTypes';
-import CompactButton from '../packages/terra-button/tests/nightwatch/CompactButton';
-import IconButton from '../packages/terra-button/tests/nightwatch/IconButton';
-import LongTextButton from '../packages/terra-button/tests/nightwatch/LongTextButton';
-import ActionButton from '../packages/terra-button/tests/nightwatch/Variants/ActionButton';
-import DeemphasisButton from '../packages/terra-button/tests/nightwatch/Variants/DeemphasisButton';
-import EmphasisButton from '../packages/terra-button/tests/nightwatch/Variants/EmphasisButton';
-import NeutralButton from '../packages/terra-button/tests/nightwatch/Variants/NeutralButton';
-import UtilityButton from '../packages/terra-button/tests/nightwatch/Variants/UtilityButton';
-import CardContentCenter from '../packages/terra-card/tests/nightwatch/CardContentCenter';
-import CardPadding from '../packages/terra-card/tests/nightwatch/CardPadding';
-import CardPaddingHorizontal from '../packages/terra-card/tests/nightwatch/CardPaddingHorizontal';
-import CardPaddingVertical from '../packages/terra-card/tests/nightwatch/CardPaddingVertical';
-import DefaultCard from '../packages/terra-card/tests/nightwatch/DefaultCard';
-import RaisedCard from '../packages/terra-card/tests/nightwatch/RaisedCard';
-import DefaultCollapsibleMenuView from '../packages/terra-collapsible-menu-view/tests/nightwatch/DefaultCollapsibleMenuView';
-import FirstHiddenItemIsIcon from '../packages/terra-collapsible-menu-view/tests/nightwatch/FirstHiddenItemIsIcon';
+import AlertActionButton from '../packages/terra-alert/examples/test-examples/AlertActionButton.example';
+import AlertDismissible from '../packages/terra-alert/examples/test-examples/AlertDismissible.example';
+import AlertResponsiveToParent from '../packages/terra-alert/examples/test-examples/AlertResponsiveToParent.example';
+import AlertTitle from '../packages/terra-alert/examples/test-examples/AlertTitle.example';
+import AlertType from '../packages/terra-alert/examples/test-examples/AlertType.example';
+import CustomAlert from '../packages/terra-alert/examples/test-examples/CustomAlert.example';
+import DefaultAlert from '../packages/terra-alert/examples/test-examples/DefaultAlert.example';
+import AlignedAllArrange from '../packages/terra-arrange/examples/test-examples/AlignedAllArrange.example';
+import AlignedAllLongWords from '../packages/terra-arrange/examples/test-examples/AlignedAllLongWords.example';
+import AlignedFitEndFillArrange from '../packages/terra-arrange/examples/test-examples/AlignedFitEndFillArrange.example';
+import AlignedFitStartFillArrange from '../packages/terra-arrange/examples/test-examples/AlignedFitStartFillArrange.example';
+import IndividuallyAlignedFill from '../packages/terra-arrange/examples/test-examples/IndividuallyAlignedFill.example';
+import IndividuallyAlignedFitEnd from '../packages/terra-arrange/examples/test-examples/IndividuallyAlignedFitEnd.example';
+import IndividuallyAlignedFitStart from '../packages/terra-arrange/examples/test-examples/IndividuallyAlignedFitStart.example';
+import FacilityAvatar from '../packages/terra-avatar/examples/test-examples/FacilityAvatar.example';
+import ImageAvatar from '../packages/terra-avatar/examples/test-examples/ImageAvatar.example';
+import ThreeInitialsAvatar from '../packages/terra-avatar/examples/test-examples/ThreeInitialsAvatar.example';
+import TwoInitialsAvatar from '../packages/terra-avatar/examples/test-examples/TwoInitialsAvatar.example';
+import UserAvatar from '../packages/terra-avatar/examples/test-examples/UserAvatar.example';
+import BadgeDefault from '../packages/terra-badge/examples/test-examples/BadgeDefault.example';
+import BadgeIcon from '../packages/terra-badge/examples/test-examples/BadgeIcon.example';
+import BadgeIntent from '../packages/terra-badge/examples/test-examples/BadgeIntent.example';
+import BadgeSize from '../packages/terra-badge/examples/test-examples/BadgeSize.example';
+import DefaultBase from '../packages/terra-base/examples/test-examples/DefaultBase.example';
+import NoTranslationsLoadedBase from '../packages/terra-base/examples/test-examples/NoTranslationsLoadedBase.example';
+import NoTranslationsLoadedStringBase from '../packages/terra-base/examples/test-examples/NoTranslationsLoadedStringBase.example';
+import SwitchLocaleBase from '../packages/terra-base/examples/test-examples/SwitchLocaleBase.example';
+import ButtonGroupDisabledButtons from '../packages/terra-button-group/examples/test-examples/ButtonGroupDisabledButtons.example';
+import ButtonGroupIcon from '../packages/terra-button-group/examples/test-examples/ButtonGroupIcon.example';
+import ButtonGroupLongText from '../packages/terra-button-group/examples/test-examples/ButtonGroupLongText.example';
+import ButtonGroupMultiSelect from '../packages/terra-button-group/examples/test-examples/ButtonGroupMultiSelect.example';
+import ButtonGroupNotSelectable from '../packages/terra-button-group/examples/test-examples/ButtonGroupNotSelectable.example';
+import ButtonGroupSingleSelect from '../packages/terra-button-group/examples/test-examples/ButtonGroupSingleSelect.example';
+import ButtonGroupText from '../packages/terra-button-group/examples/test-examples/ButtonGroupText.example';
+import ActiveVariantButtons from '../packages/terra-button/examples/test-examples/ActiveVariantButtons.example';
+import ButtonTypes from '../packages/terra-button/examples/test-examples/ButtonTypes.example';
+import CompactButton from '../packages/terra-button/examples/test-examples/CompactButton.example';
+import IconButton from '../packages/terra-button/examples/test-examples/IconButton.example';
+import LongTextButton from '../packages/terra-button/examples/test-examples/LongTextButton.example';
+import ActionButton from '../packages/terra-button/examples/test-examples/Variants/ActionButton.example';
+import DeemphasisButton from '../packages/terra-button/examples/test-examples/Variants/DeemphasisButton.example';
+import EmphasisButton from '../packages/terra-button/examples/test-examples/Variants/EmphasisButton.example';
+import NeutralButton from '../packages/terra-button/examples/test-examples/Variants/NeutralButton.example';
+import UtilityButton from '../packages/terra-button/examples/test-examples/Variants/UtilityButton.example';
+import CardContentCenter from '../packages/terra-card/examples/test-examples/CardContentCenter.example';
+import CardPadding from '../packages/terra-card/examples/test-examples/CardPadding.example';
+import CardPaddingHorizontal from '../packages/terra-card/examples/test-examples/CardPaddingHorizontal.example';
+import CardPaddingVertical from '../packages/terra-card/examples/test-examples/CardPaddingVertical.example';
+import DefaultCard from '../packages/terra-card/examples/test-examples/DefaultCard.example';
+import RaisedCard from '../packages/terra-card/examples/test-examples/RaisedCard.example';
+import DefaultCollapsibleMenuView from '../packages/terra-collapsible-menu-view/examples/test-examples/DefaultCollapsibleMenuView.example';
+import FirstHiddenItemIsIcon from '../packages/terra-collapsible-menu-view/examples/test-examples/FirstHiddenItemIsIcon.example';
 import DefaultContentContainer from '../packages/terra-content-container/examples/test-examples/DefaultContentContainer.example';
 import FillContentContainer from '../packages/terra-content-container/examples/test-examples/FillContentContainer.example';
 import DatePickerDefault from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefault';
@@ -199,8 +198,8 @@ import DeceasedDemographicsBannerNoLabel from '../packages/terra-demographics-ba
 import GestationalAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/examples/test-examples/GestationalAgeDemographicsBannerNoLabel.example';
 import PopulatedDemographicsBanner from '../packages/terra-demographics-banner/examples/test-examples/PopulatedDemographicsBanner.example';
 import PostMenstrualAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/examples/test-examples/PostMenstrualAgeDemographicsBannerNoLabel.example';
-import DefaultDialog from '../packages/terra-dialog/tests/nightwatch/DefaultDialog';
-import DefaultDivider from '../packages/terra-divider/tests/nightwatch/DefaultDivider';
+import DefaultDialog from '../packages/terra-dialog/examples/test-examples/DefaultDialog.example';
+import DefaultDivider from '../packages/terra-divider/examples/test-examples/DefaultDivider.example';
 import DefaultDocTemplate from '../packages/terra-doc-template/examples/test-examples/DefaultDocTemplate.example';
 import DefaultDynamicGrid from '../packages/terra-dynamic-grid/examples/test-examples/DefaultDynamicGrid.example';
 import LargeDynamicGrid from '../packages/terra-dynamic-grid/examples/test-examples/LargeDynamicGrid.example';
@@ -226,21 +225,21 @@ import FieldCombinations from '../packages/terra-form-field/tests/nightwatch/Fie
 import FieldInline from '../packages/terra-form-field/tests/nightwatch/FieldInline';
 import FieldInteractiveInvalid from '../packages/terra-form-field/tests/nightwatch/FieldInteractiveInvalid';
 import FieldTextWrap from '../packages/terra-form-field/tests/nightwatch/FieldTextWrap';
-import DefaultFieldset from '../packages/terra-form-fieldset/tests/nightwatch/DefaultFieldset';
-import PopulatedFieldset from '../packages/terra-form-fieldset/tests/nightwatch/PopulatedFieldset';
+import DefaultFieldset from '../packages/terra-form-fieldset/examples/test-examples/DefaultFieldset.example';
+import PopulatedFieldset from '../packages/terra-form-fieldset/examples/test-examples/PopulatedFieldset.example';
+import DefaultFormInput from '../packages/terra-form-input/examples/test-examples/DefaultFormInput.example';
+import DisabledFormInput from '../packages/terra-form-input/examples/test-examples/DisabledFormInput.example';
 import InputField from '../packages/terra-form-input/examples/test-examples/InputField.example';
-import DefaultFormInput from '../packages/terra-form-input/tests/nightwatch/DefaultFormInput';
-import DisabledFormInput from '../packages/terra-form-input/tests/nightwatch/DisabledFormInput';
-import InvalidFormInput from '../packages/terra-form-input/tests/nightwatch/InvalidFormInput';
-import OnChangeFormInput from '../packages/terra-form-input/tests/nightwatch/OnChangeFormInput';
-import OnFocusFormInput from '../packages/terra-form-input/tests/nightwatch/OnFocusFormInput';
-import RequiredFormInput from '../packages/terra-form-input/tests/nightwatch/RequiredFormInput';
-import DefaultRadio from '../packages/terra-form-radio/tests/nightwatch/DefaultRadio';
-import DisabledRadio from '../packages/terra-form-radio/tests/nightwatch/DisabledRadio';
-import HiddenRadio from '../packages/terra-form-radio/tests/nightwatch/HiddenRadio';
-import LongTextRadio from '../packages/terra-form-radio/tests/nightwatch/LongTextRadio';
-import MultipleRadios from '../packages/terra-form-radio/tests/nightwatch/MultipleRadios';
-import PopulatedRadio from '../packages/terra-form-radio/tests/nightwatch/PopulatedRadio';
+import InvalidFormInput from '../packages/terra-form-input/examples/test-examples/InvalidFormInput.example';
+import OnChangeFormInput from '../packages/terra-form-input/examples/test-examples/OnChangeFormInput.example';
+import OnFocusFormInput from '../packages/terra-form-input/examples/test-examples/OnFocusFormInput.example';
+import RequiredFormInput from '../packages/terra-form-input/examples/test-examples/RequiredFormInput.example';
+import DefaultRadio from '../packages/terra-form-radio/examples/test-examples/DefaultRadio.example';
+import DisabledRadio from '../packages/terra-form-radio/examples/test-examples/DisabledRadio.example';
+import HiddenRadio from '../packages/terra-form-radio/examples/test-examples/HiddenRadio.example';
+import LongTextRadio from '../packages/terra-form-radio/examples/test-examples/LongTextRadio.example';
+import MultipleRadios from '../packages/terra-form-radio/examples/test-examples/MultipleRadios.example';
+import PopulatedRadio from '../packages/terra-form-radio/examples/test-examples/PopulatedRadio.example';
 import DefaultSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/DefaultSelectOption';
 import DisabledSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/DisabledSelectOption';
 import SelectOptionLongText from '../packages/terra-form-select/tests/nightwatch/select-option/SelectOptionLongText';
@@ -294,14 +293,14 @@ import PopulatedTextarea1 from '../packages/terra-form/tests/nightwatch/textarea
 import GridDefault from '../packages/terra-grid/tests/nightwatch/components/GridDefault';
 import GridNested from '../packages/terra-grid/tests/nightwatch/components/GridNested';
 import GridResponsive from '../packages/terra-grid/tests/nightwatch/components/GridResponsive';
-import DefaultHeading from '../packages/terra-heading/tests/nightwatch/DefaultHeading';
-import HeadingColor from '../packages/terra-heading/tests/nightwatch/HeadingColor';
-import HeadingItalics from '../packages/terra-heading/tests/nightwatch/HeadingItalics';
-import HeadingLevels from '../packages/terra-heading/tests/nightwatch/HeadingLevels';
-import HeadingSize from '../packages/terra-heading/tests/nightwatch/HeadingSize';
-import HeadingVisualProps from '../packages/terra-heading/tests/nightwatch/HeadingVisualProps';
-import HeadingVisuallyHidden from '../packages/terra-heading/tests/nightwatch/HeadingVisuallyHidden';
-import HeadingWeight from '../packages/terra-heading/tests/nightwatch/HeadingWeight';
+import DefaultHeading from '../packages/terra-heading/examples/test-examples/DefaultHeading.example';
+import HeadingColor from '../packages/terra-heading/examples/test-examples/HeadingColor.example';
+import HeadingItalics from '../packages/terra-heading/examples/test-examples/HeadingItalics.example';
+import HeadingLevels from '../packages/terra-heading/examples/test-examples/HeadingLevels.example';
+import HeadingSize from '../packages/terra-heading/examples/test-examples/HeadingSize.example';
+import HeadingVisualProps from '../packages/terra-heading/examples/test-examples/HeadingVisualProps.example';
+import HeadingVisuallyHidden from '../packages/terra-heading/examples/test-examples/HeadingVisuallyHidden.example';
+import HeadingWeight from '../packages/terra-heading/examples/test-examples/HeadingWeight.example';
 import DefaultI18N from '../packages/terra-i18n/examples/test-examples/DefaultI18n.example';
 import IconAppendClass from '../packages/terra-icon/tests/nightwatch/components/IconAppendClass';
 import IconAria from '../packages/terra-icon/tests/nightwatch/components/IconAria';
@@ -355,23 +354,23 @@ import SelectableAndUnselectableItemsMenu from '../packages/terra-menu/tests/nig
 import SelectableMenu from '../packages/terra-menu/tests/nightwatch/menu/SelectableMenu';
 import SmallMenu from '../packages/terra-menu/tests/nightwatch/menu/SmallMenu';
 import SubMenu from '../packages/terra-menu/tests/nightwatch/menu/SubMenu';
-import AnimatedLoadingOverlay from '../packages/terra-overlay/tests/nightwatch/LoadingOverlay/AnimatedLoadingOverlay';
-import ClearLoadingOverlay from '../packages/terra-overlay/tests/nightwatch/LoadingOverlay/ClearLoadingOverlay';
-import ContainerLoadingOverlay from '../packages/terra-overlay/tests/nightwatch/LoadingOverlay/ContainerLoadingOverlay';
-import CustomMessageLoadingOverlay from '../packages/terra-overlay/tests/nightwatch/LoadingOverlay/CustomMessageLoadingOverlay';
-import DarkLoadingOverlay from '../packages/terra-overlay/tests/nightwatch/LoadingOverlay/DarkLoadingOverlay';
-import DefaultLoadingOverlay from '../packages/terra-overlay/tests/nightwatch/LoadingOverlay/DefaultLoadingOverlay';
-import LightLoadingOverlay from '../packages/terra-overlay/tests/nightwatch/LoadingOverlay/LightLoadingOverlay';
-import ClearOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/ClearOverlay';
-import ContainerOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/ContainerOverlay';
-import ContainerScrollableOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/ContainerScrollableOverlay';
-import CustomContentOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/CustomContentOverlay';
-import DarkOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/DarkOverlay';
-import DefaultOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/DefaultOverlay';
-import FullscreenScrollableOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/FullscreenScrollableOverlay';
-import LightOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/LightOverlay';
-import OnRequestCloseOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/OnRequestCloseOverlay';
-import DefaultOverlayContainer from '../packages/terra-overlay/tests/nightwatch/OverlayContainer/DefaultOverlayContainer';
+import AnimatedLoadingOverlay from '../packages/terra-overlay/examples/test-examples/LoadingOverlay/AnimatedLoadingOverlay.example';
+import ClearLoadingOverlay from '../packages/terra-overlay/examples/test-examples/LoadingOverlay/ClearLoadingOverlay.example';
+import ContainerLoadingOverlay from '../packages/terra-overlay/examples/test-examples/LoadingOverlay/ContainerLoadingOverlay.example';
+import CustomMessageLoadingOverlay from '../packages/terra-overlay/examples/test-examples/LoadingOverlay/CustomMessageLoadingOverlay.example';
+import DarkLoadingOverlay from '../packages/terra-overlay/examples/test-examples/LoadingOverlay/DarkLoadingOverlay.example';
+import DefaultLoadingOverlay from '../packages/terra-overlay/examples/test-examples/LoadingOverlay/DefaultLoadingOverlay.example';
+import LightLoadingOverlay from '../packages/terra-overlay/examples/test-examples/LoadingOverlay/LightLoadingOverlay.example';
+import ClearOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/ClearOverlay.example';
+import ContainerOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/ContainerOverlay.example';
+import ContainerScrollableOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/ContainerScrollableOverlay.example';
+import CustomContentOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/CustomContentOverlay.example';
+import DarkOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/DarkOverlay.example';
+import DefaultOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/DefaultOverlay.example';
+import FullscreenScrollableOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/FullscreenScrollableOverlay.example';
+import LightOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/LightOverlay.example';
+import OnRequestCloseOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/OnRequestCloseOverlay.example';
+import DefaultOverlayContainer from '../packages/terra-overlay/examples/test-examples/OverlayContainer/DefaultOverlayContainer.example';
 import ProfileImageDefault from '../packages/terra-profile-image/tests/nightwatch/ProfileImageDefault';
 import ProgressBarGradient from '../packages/terra-progress-bar/tests/nightwatch/ProgressBarGradient';
 import ProgressBarColor from '../packages/terra-progress-bar/tests/nightwatch/components/ProgressBarColor';
@@ -399,12 +398,12 @@ import SearchFieldEnter from '../packages/terra-search-field/tests/nightwatch/Se
 import SearchFieldOnChange from '../packages/terra-search-field/tests/nightwatch/SearchFieldOnChange';
 import SearchFieldWithPlaceholder from '../packages/terra-search-field/tests/nightwatch/SearchFieldWithPlaceholder';
 import SearchFieldWithValue from '../packages/terra-search-field/tests/nightwatch/SearchFieldWithValue';
-import ClosedSectionHeader from '../packages/terra-section-header/tests/nightwatch/ClosedSectionHeader';
-import DefaultSectionHeader from '../packages/terra-section-header/tests/nightwatch/DefaultSectionHeader';
-import LongTitleAccordionSectionHeader from '../packages/terra-section-header/tests/nightwatch/LongTitleAccordionSectionHeader';
-import LongTitleSectionHeader from '../packages/terra-section-header/tests/nightwatch/LongTitleSectionHeader';
-import OnClickSectionHeader from '../packages/terra-section-header/tests/nightwatch/OnClickSectionHeader';
-import OpenSectionHeader from '../packages/terra-section-header/tests/nightwatch/OpenSectionHeader';
+import ClosedSectionHeader from '../packages/terra-section-header/examples/test-examples/ClosedSectionHeader.example';
+import DefaultSectionHeader from '../packages/terra-section-header/examples/test-examples/DefaultSectionHeader.example';
+import LongTitleAccordionSectionHeader from '../packages/terra-section-header/examples/test-examples/LongTitleAccordionSectionHeader.example';
+import LongTitleSectionHeader from '../packages/terra-section-header/examples/test-examples/LongTitleSectionHeader.example';
+import OnClickSectionHeader from '../packages/terra-section-header/examples/test-examples/OnClickSectionHeader.example';
+import OpenSectionHeader from '../packages/terra-section-header/examples/test-examples/OpenSectionHeader.example';
 import SignatureDefault from '../packages/terra-signature/tests/nightwatch/SignatureDefault';
 import AnimatedSlideGroup from '../packages/terra-slide-group/tests/nightwatch/AnimatedSlideGroup';
 import DefaultSlideGroup from '../packages/terra-slide-group/tests/nightwatch/DefaultSlideGroup';
@@ -461,31 +460,31 @@ import TableNoRows from '../packages/terra-table/tests/nightwatch/table/componen
 import TableWithHighlightedRows from '../packages/terra-table/tests/nightwatch/table/components/TableWithHighlightedRows';
 import TableWithSortIndicator from '../packages/terra-table/tests/nightwatch/table/components/TableWithSortIndicator';
 import TableWithSubheaders from '../packages/terra-table/tests/nightwatch/table/components/TableWithSubheaders';
-import CustomDisplayTabPane from '../packages/terra-tabs/tests/nightwatch/TabPane/CustomDisplayTabPane';
-import IconAndTextTabPane from '../packages/terra-tabs/tests/nightwatch/TabPane/IconAndTextTabPane';
-import IconOnlyTabPane from '../packages/terra-tabs/tests/nightwatch/TabPane/IconOnlyTabPane';
-import LongTextTabPane from '../packages/terra-tabs/tests/nightwatch/TabPane/LongTextTabPane';
-import TextOnlyTabPane from '../packages/terra-tabs/tests/nightwatch/TabPane/TextOnlyTabPane';
-import ControlledTabs from '../packages/terra-tabs/tests/nightwatch/Tabs/ControlledTabs';
-import DefaultTabs from '../packages/terra-tabs/tests/nightwatch/Tabs/DefaultTabs';
-import ExtendedTabs from '../packages/terra-tabs/tests/nightwatch/Tabs/ExtendedTabs';
-import FillParentTabs from '../packages/terra-tabs/tests/nightwatch/Tabs/FillParentTabs';
-import IconOnlyTabs from '../packages/terra-tabs/tests/nightwatch/Tabs/IconOnlyTabs';
-import DefaultOnClickTag from '../packages/terra-tag/tests/nightwatch/DefaultOnClickTag';
-import DefaultTag from '../packages/terra-tag/tests/nightwatch/DefaultTag';
-import HrefTag from '../packages/terra-tag/tests/nightwatch/HrefTag';
-import IconAndTextTag from '../packages/terra-tag/tests/nightwatch/IconAndTextTag';
-import LongTextTag from '../packages/terra-tag/tests/nightwatch/LongTextTag';
-import MultipleTags from '../packages/terra-tag/tests/nightwatch/MultipleTags';
-import OnClickTag from '../packages/terra-tag/tests/nightwatch/OnClickTag';
-import DefaultText from '../packages/terra-text/tests/nightwatch/DefaultText';
-import TextColor from '../packages/terra-text/tests/nightwatch/TextColor';
-import TextFontSize from '../packages/terra-text/tests/nightwatch/TextFontSize';
-import TextItalics from '../packages/terra-text/tests/nightwatch/TextItalics';
-import TextLineHeight from '../packages/terra-text/tests/nightwatch/TextLineHeight';
-import TextVisualProps from '../packages/terra-text/tests/nightwatch/TextVisualProps';
-import TextVisuallyHidden from '../packages/terra-text/tests/nightwatch/TextVisuallyHidden';
-import TextWeight from '../packages/terra-text/tests/nightwatch/TextWeight';
+import CustomDisplayTabPane from '../packages/terra-tabs/examples/test-examples/TabPane/CustomDisplayTabPane.example';
+import IconAndTextTabPane from '../packages/terra-tabs/examples/test-examples/TabPane/IconAndTextTabPane.example';
+import IconOnlyTabPane from '../packages/terra-tabs/examples/test-examples/TabPane/IconOnlyTabPane.example';
+import LongTextTabPane from '../packages/terra-tabs/examples/test-examples/TabPane/LongTextTabPane.example';
+import TextOnlyTabPane from '../packages/terra-tabs/examples/test-examples/TabPane/TextOnlyTabPane.example';
+import ControlledTabs from '../packages/terra-tabs/examples/test-examples/Tabs/ControlledTabs.example';
+import DefaultTabs from '../packages/terra-tabs/examples/test-examples/Tabs/DefaultTabs.example';
+import ExtendedTabs from '../packages/terra-tabs/examples/test-examples/Tabs/ExtendedTabs.example';
+import FillParentTabs from '../packages/terra-tabs/examples/test-examples/Tabs/FillParentTabs.example';
+import IconOnlyTabs from '../packages/terra-tabs/examples/test-examples/Tabs/IconOnlyTabs.example';
+import DefaultOnClickTag from '../packages/terra-tag/examples/test-examples/DefaultOnClickTag.example';
+import DefaultTag from '../packages/terra-tag/examples/test-examples/DefaultTag.example';
+import HrefTag from '../packages/terra-tag/examples/test-examples/HrefTag.example';
+import IconAndTextTag from '../packages/terra-tag/examples/test-examples/IconAndTextTag.example';
+import LongTextTag from '../packages/terra-tag/examples/test-examples/LongTextTag.example';
+import MultipleTags from '../packages/terra-tag/examples/test-examples/MultipleTags.example';
+import OnClickTag from '../packages/terra-tag/examples/test-examples/OnClickTag.example';
+import DefaultText from '../packages/terra-text/examples/test-examples/DefaultText.example';
+import TextColor from '../packages/terra-text/examples/test-examples/TextColor.example';
+import TextFontSize from '../packages/terra-text/examples/test-examples/TextFontSize.example';
+import TextItalics from '../packages/terra-text/examples/test-examples/TextItalics.example';
+import TextLineHeight from '../packages/terra-text/examples/test-examples/TextLineHeight.example';
+import TextVisualProps from '../packages/terra-text/examples/test-examples/TextVisualProps.example';
+import TextVisuallyHidden from '../packages/terra-text/examples/test-examples/TextVisuallyHidden.example';
+import TextWeight from '../packages/terra-text/examples/test-examples/TextWeight.example';
 import TimeInputDefault from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDefault';
 import TimeInputDefaultTime from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDefaultTime';
 import TimeInputDisabled from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDisabled';
@@ -773,11 +772,6 @@ const componentConfig = {
         name: 'Individually Aligned Fit Start',
         path: '/individually-aligned-fit-start',
         component: IndividuallyAlignedFitStart,
-      },
-      {
-        name: 'Examplesetup',
-        path: '/examplesetup',
-        component: Examplesetup,
       },
     ],
   },
@@ -1453,11 +1447,6 @@ const componentConfig = {
     path: '/form-input',
     tests: [
       {
-        name: 'Input Field',
-        path: '/input-field',
-        component: InputField,
-      },
-      {
         name: 'Default Form Input',
         path: '/default-form-input',
         component: DefaultFormInput,
@@ -1466,6 +1455,11 @@ const componentConfig = {
         name: 'Disabled Form Input',
         path: '/disabled-form-input',
         component: DisabledFormInput,
+      },
+      {
+        name: 'Input Field',
+        path: '/input-field',
+        component: InputField,
       },
       {
         name: 'Invalid Form Input',
