@@ -24,7 +24,7 @@ const DocTemplateExamples = () => (
     propsTables={[
       {
         componentName: 'DocTemplate',
-        componentSource: DocTemplateSrc,
+        componentSrc: DocTemplateSrc,
       },
     ]}
   />

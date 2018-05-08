@@ -10,8 +10,8 @@ import testComponentSrc from '!raw-loader!./TestComponent';
 
 const Index = () => {
   const propsTables = [
-    { componentSource: testComponentSrc, componentName: 'Test Component' },
-    { componentSource: testComponentSrc, componentName: 'Test Component (Again)' },
+    { componentSrc: testComponentSrc, componentName: 'Test Component' },
+    { componentSrc: testComponentSrc, componentName: 'Test Component (Again)' },
   ];
   const exampleElement = <TestComponentExample />;
   const examples = [
