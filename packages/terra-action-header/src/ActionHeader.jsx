@@ -97,8 +97,14 @@ const ActionHeader = ({
   const closeButton = onClose ? <Button className={cx('header-close-button')} isIconOnly icon={<span className={cx(['header-icon', 'close'])} />} text={closeText} onClick={onClose} /> : null;
   const backButton = onBack ? <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx(['header-icon', 'back'])} />} text={backText} onClick={onBack} /> : null;
 
-  const maximizeButton = (!backButton && onMaximize) ? <Button isIconOnly icon={<span className={cx(['header-icon', 'maximize'])} />} text={maximizeText} onClick={onMaximize} /> : null;
-  const minimizeButton = (!backButton && onMinimize) ? <Button isIconOnly icon={<span className={cx(['header-icon', 'minimize'])} />} text={minimizeText} onClick={onMinimize} /> : null;
+  let expandButton;
+  if (!backButton) {
+    if (onMaximize) {
+      expandButton = <Button isIconOnly icon={<span className={cx(['header-icon', 'maximize'])} />} text={maximizeText} onClick={onMaximize} />;
+    } else if (onMinimize) {
+      expandButton = <Button isIconOnly icon={<span className={cx(['header-icon', 'minimize'])} />} text={minimizeText} onClick={onMinimize} />;
+    }
+  }
 
   const previousNextButtonGroup = (onPrevious || onNext) ?
     (<ButtonGroup>
@@ -107,11 +113,10 @@ const ActionHeader = ({
     </ButtonGroup>) :
     null;
 
-  const leftButtons = (backButton || maximizeButton || minimizeButton || previousNextButtonGroup) ?
+  const leftButtons = (backButton || expandButton || previousNextButtonGroup) ?
     (<div className={cx('left-buttons')}>
       {backButton}
-      {maximizeButton}
-      {minimizeButton}
+      {expandButton}
       {previousNextButtonGroup}
     </div>) :
     null;

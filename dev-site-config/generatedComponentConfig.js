@@ -103,6 +103,7 @@ import BackCloseActionHeader from '../packages/terra-action-header/examples/test
 import BackClosePreviousNextActionHeader from '../packages/terra-action-header/examples/test-examples/BackClosePreviousNextActionHeader.example';
 import CloseActionHeader from '../packages/terra-action-header/examples/test-examples/CloseActionHeader.example';
 import DefaultActionHeader from '../packages/terra-action-header/examples/test-examples/DefaultActionHeader.example';
+import EndElementActionHeader from '../packages/terra-action-header/examples/test-examples/EndElementActionHeader.example';
 import MaximizeCloseActionHeader from '../packages/terra-action-header/examples/test-examples/MaximizeCloseActionHeader.example';
 import MinimizeCustomButtonActionHeader from '../packages/terra-action-header/examples/test-examples/MinimizeCustomButtonActionHeader.example';
 import WrappedTitleActionHeader from '../packages/terra-action-header/examples/test-examples/WrappedTitleActionHeader.example';
@@ -676,6 +677,11 @@ const componentConfig = {
         name: 'Default Action Header',
         path: '/default-action-header',
         component: DefaultActionHeader,
+      },
+      {
+        name: 'End Element Action Header',
+        path: '/end-element-action-header',
+        component: EndElementActionHeader,
       },
       {
         name: 'Maximize Close Action Header',
