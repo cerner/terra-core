@@ -13,9 +13,17 @@
     &.layer-6000 {
       z-index: 6000 + 1;
     }
-  
+
+    &.layer-7000 {
+      z-index: 7000 + 1;
+    }
+
     &.layer-8000 {
       z-index: 8000 + 1;
+    }
+
+    &.layer-9000 {
+      z-index: 9000 + 1;
     }
 
     &.is-fullscreen {

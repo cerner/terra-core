@@ -156,10 +156,11 @@ import CardPadding from '../packages/terra-card/tests/nightwatch/CardPadding';
 import CardPaddingHorizontal from '../packages/terra-card/tests/nightwatch/CardPaddingHorizontal';
 import CardPaddingVertical from '../packages/terra-card/tests/nightwatch/CardPaddingVertical';
 import DefaultCard from '../packages/terra-card/tests/nightwatch/DefaultCard';
+import RaisedCard from '../packages/terra-card/tests/nightwatch/RaisedCard';
 import DefaultCollapsibleMenuView from '../packages/terra-collapsible-menu-view/tests/nightwatch/DefaultCollapsibleMenuView';
 import FirstHiddenItemIsIcon from '../packages/terra-collapsible-menu-view/tests/nightwatch/FirstHiddenItemIsIcon';
-import DefaultContentContainer from '../packages/terra-content-container/tests/nightwatch/DefaultContentContainer';
-import FillContentContainer from '../packages/terra-content-container/tests/nightwatch/FillContentContainer';
+import DefaultContentContainer from '../packages/terra-content-container/examples/test-examples/DefaultContentContainer.example';
+import FillContentContainer from '../packages/terra-content-container/examples/test-examples/FillContentContainer.example';
 import DatePickerDefault from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefault';
 import DatePickerDefaultDateExcluded from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefaultDateExcluded';
 import DatePickerDefaultDateOutOfRange from '../packages/terra-date-picker/tests/nightwatch/components/DatePickerDefaultDateOutOfRange';
@@ -192,17 +193,17 @@ import DateTimePickerModalContainer from '../packages/terra-date-time-picker/tes
 import DateTimePickerOnChange from '../packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerOnChange';
 import DateTimePickerOnChangeRaw from '../packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerOnChangeRaw';
 import DateTimePickerTimeInputAttributes from '../packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerTimeInputAttributes';
-import BlankDemographicsBanner from '../packages/terra-demographics-banner/tests/nightwatch/BlankDemographicsBanner';
-import DeceasedDemographicsBanner from '../packages/terra-demographics-banner/tests/nightwatch/DeceasedDemographicsBanner';
-import DeceasedDemographicsBannerNoLabel from '../packages/terra-demographics-banner/tests/nightwatch/DeceasedDemographicsBannerNoLabel';
-import GestationalAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/tests/nightwatch/GestationalAgeDemographicsBannerNoLabel';
-import PopulatedDemographicsBanner from '../packages/terra-demographics-banner/tests/nightwatch/PopulatedDemographicsBanner';
-import PostMenstrualAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/tests/nightwatch/PostMenstrualAgeDemographicsBannerNoLabel';
+import BlankDemographicsBanner from '../packages/terra-demographics-banner/examples/test-examples/BlankDemographicsBanner.example';
+import DeceasedDemographicsBanner from '../packages/terra-demographics-banner/examples/test-examples/DeceasedDemographicsBanner.example';
+import DeceasedDemographicsBannerNoLabel from '../packages/terra-demographics-banner/examples/test-examples/DeceasedDemographicsBannerNoLabel.example';
+import GestationalAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/examples/test-examples/GestationalAgeDemographicsBannerNoLabel.example';
+import PopulatedDemographicsBanner from '../packages/terra-demographics-banner/examples/test-examples/PopulatedDemographicsBanner.example';
+import PostMenstrualAgeDemographicsBannerNoLabel from '../packages/terra-demographics-banner/examples/test-examples/PostMenstrualAgeDemographicsBannerNoLabel.example';
 import DefaultDialog from '../packages/terra-dialog/tests/nightwatch/DefaultDialog';
 import DefaultDivider from '../packages/terra-divider/tests/nightwatch/DefaultDivider';
 import DefaultDocTemplate from '../packages/terra-doc-template/examples/test-examples/DefaultDocTemplate.example';
-import DefaultDynamicGrid from '../packages/terra-dynamic-grid/tests/nightwatch/DefaultDynamicGrid';
-import LargeDynamicGrid from '../packages/terra-dynamic-grid/tests/nightwatch/LargeDynamicGrid';
+import DefaultDynamicGrid from '../packages/terra-dynamic-grid/examples/test-examples/DefaultDynamicGrid.example';
+import LargeDynamicGrid from '../packages/terra-dynamic-grid/examples/test-examples/LargeDynamicGrid.example';
 import BasicConsumer from '../packages/terra-embedded-content-consumer/tests/nightwatch/consumers/BasicConsumer';
 import CustomEventConsumer from '../packages/terra-embedded-content-consumer/tests/nightwatch/consumers/CustomEventConsumer';
 import CustomEventsConsumer from '../packages/terra-embedded-content-consumer/tests/nightwatch/consumers/CustomEventsConsumer';
@@ -409,30 +410,30 @@ import AnimatedSlideGroup from '../packages/terra-slide-group/tests/nightwatch/A
 import DefaultSlideGroup from '../packages/terra-slide-group/tests/nightwatch/DefaultSlideGroup';
 import NonAnimatedSlideGroup from '../packages/terra-slide-group/tests/nightwatch/NonAnimatedSlideGroup';
 import OneItemSlideGroup from '../packages/terra-slide-group/tests/nightwatch/OneItemSlideGroup';
-import DefaultSpacer from '../packages/terra-spacer/tests/nightwatch/DefaultSpacer';
-import SpacerLarge1 from '../packages/terra-spacer/tests/nightwatch/SpacerLarge+1';
-import SpacerLarge2 from '../packages/terra-spacer/tests/nightwatch/SpacerLarge+2';
-import SpacerLarge3 from '../packages/terra-spacer/tests/nightwatch/SpacerLarge+3';
-import SpacerLarge4 from '../packages/terra-spacer/tests/nightwatch/SpacerLarge+4';
-import SpacerLarge from '../packages/terra-spacer/tests/nightwatch/SpacerLarge';
-import SpacerMedium from '../packages/terra-spacer/tests/nightwatch/SpacerMedium';
-import SpacerSmall1 from '../packages/terra-spacer/tests/nightwatch/SpacerSmall-1';
-import SpacerSmall2 from '../packages/terra-spacer/tests/nightwatch/SpacerSmall-2';
-import SpacerSmall from '../packages/terra-spacer/tests/nightwatch/SpacerSmall';
-import StatusViewAlignTop from '../packages/terra-status-view/tests/nightwatch/StatusViewAlignTop';
-import StatusViewCenter from '../packages/terra-status-view/tests/nightwatch/StatusViewCenter';
-import StatusViewCustom from '../packages/terra-status-view/tests/nightwatch/StatusViewCustom';
-import StatusViewDefault from '../packages/terra-status-view/tests/nightwatch/StatusViewDefault';
-import StatusViewErrorAllProps from '../packages/terra-status-view/tests/nightwatch/StatusViewErrorAllProps';
-import StatusViewGlyphHidden from '../packages/terra-status-view/tests/nightwatch/StatusViewGlyphHidden';
-import StatusViewHeightTooSmall from '../packages/terra-status-view/tests/nightwatch/StatusViewHeightTooSmall';
-import StatusViewNotAuthorized from '../packages/terra-status-view/tests/nightwatch/StatusViewNotAuthorized';
-import StatusViewTextWrapping from '../packages/terra-status-view/tests/nightwatch/StatusViewTextWrapping';
-import StatusArrange from '../packages/terra-status/examples/test-examples/StatusArrange';
-import StatusDefault from '../packages/terra-status/examples/test-examples/StatusDefault';
-import StatusIcon from '../packages/terra-status/examples/test-examples/StatusIcon';
-import StatusImage from '../packages/terra-status/examples/test-examples/StatusImage';
-import StatusNoColor from '../packages/terra-status/examples/test-examples/StatusNoColor';
+import DefaultSpacer from '../packages/terra-spacer/examples/test-examples/DefaultSpacer.example';
+import SpacerLarge1 from '../packages/terra-spacer/examples/test-examples/SpacerLarge+1.example';
+import SpacerLarge2 from '../packages/terra-spacer/examples/test-examples/SpacerLarge+2.example';
+import SpacerLarge3 from '../packages/terra-spacer/examples/test-examples/SpacerLarge+3.example';
+import SpacerLarge4 from '../packages/terra-spacer/examples/test-examples/SpacerLarge+4.example';
+import SpacerLarge from '../packages/terra-spacer/examples/test-examples/SpacerLarge.example';
+import SpacerMedium from '../packages/terra-spacer/examples/test-examples/SpacerMedium.example';
+import SpacerSmall1 from '../packages/terra-spacer/examples/test-examples/SpacerSmall-1.example';
+import SpacerSmall2 from '../packages/terra-spacer/examples/test-examples/SpacerSmall-2.example';
+import SpacerSmall from '../packages/terra-spacer/examples/test-examples/SpacerSmall.example';
+import StatusViewAlignTop from '../packages/terra-status-view/examples/test-examples/StatusViewAlignTop.example';
+import StatusViewCenter from '../packages/terra-status-view/examples/test-examples/StatusViewCenter.example';
+import StatusViewCustom from '../packages/terra-status-view/examples/test-examples/StatusViewCustom.example';
+import StatusViewDefault from '../packages/terra-status-view/examples/test-examples/StatusViewDefault.example';
+import StatusViewErrorAllProps from '../packages/terra-status-view/examples/test-examples/StatusViewErrorAllProps.example';
+import StatusViewGlyphHidden from '../packages/terra-status-view/examples/test-examples/StatusViewGlyphHidden.example';
+import StatusViewHeightTooSmall from '../packages/terra-status-view/examples/test-examples/StatusViewHeightTooSmall.example';
+import StatusViewNotAuthorized from '../packages/terra-status-view/examples/test-examples/StatusViewNotAuthorized.example';
+import StatusViewTextWrapping from '../packages/terra-status-view/examples/test-examples/StatusViewTextWrapping.example';
+import StatusArrange from '../packages/terra-status/examples/test-examples/StatusArrange.example';
+import StatusDefault from '../packages/terra-status/examples/test-examples/StatusDefault.example';
+import StatusIcon from '../packages/terra-status/examples/test-examples/StatusIcon.example';
+import StatusImage from '../packages/terra-status/examples/test-examples/StatusImage.example';
+import StatusNoColor from '../packages/terra-status/examples/test-examples/StatusNoColor.example';
 import MultiRowSelectableTable from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTable';
 import MultiRowSelectableTableMaxCount from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCount';
 import MultiRowSelectableTableMaxCountInitiallyExceeded from '../packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyExceeded';
@@ -994,6 +995,11 @@ const componentConfig = {
         name: 'Default Card',
         path: '/default-card',
         component: DefaultCard,
+      },
+      {
+        name: 'Raised Card',
+        path: '/raised-card',
+        component: RaisedCard,
       },
     ],
   },

@@ -59,6 +59,8 @@ Cerner Corporation
 - Alvin Cheung [@pseudofaux]
 - Cody Price [@dev-cprice]
 - Jon Fewins [@jfewins]
+- Sairam Rakshith Bhyravabhotla [@rakshith91]
+- Alex Bezek [@alex-bezek]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -120,3 +122,5 @@ Cerner Corporation
 [@pseudofaux]: https://github.com/pseudofaux
 [@dev-cprice]: https://github.com/dev-cprice
 [@jfewins]: http://github.com/jfewins
+[@rakshith91]: http://github.com/rakshith91
+[@alex-bezek]: https://github.com/alex-bezek
