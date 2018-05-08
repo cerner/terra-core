@@ -112,8 +112,5 @@
     "terra-dev-site": "0.6.0",
     "terra-toolkit": "^3.0.0",
     "webpack-merge": "^4.1.2"
-  },
-  "dependencies": {
-    "replace-in-file": "^3.4.0"
   }
 }
