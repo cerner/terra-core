@@ -31,12 +31,7 @@ describe('Legacy Theme', () => {
       browser.execute('document.body.classList.add("terra-legacy-theme");');
     });
 
-    // aXe picks up the wrong background color of #434a4d and compares it to the selected text color of #78c346
-    const ignoredA11y = {
-      'color-contrast': { enabled: false },
-    };
-
-    Terra.should.beAccessible({ context: '[data-routing-menu]', rules: ignoredA11y });
+    Terra.should.beAccessible({ context: '[data-routing-menu]' });
     Terra.should.matchScreenshot({ selector: '[data-routing-menu]' });
   });
 
