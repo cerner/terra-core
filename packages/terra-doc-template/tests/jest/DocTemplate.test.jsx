@@ -47,26 +47,27 @@ describe('DocTemplate', () => {
   });
 
   it('should show one props table', () => {
-    const wrapper = shallow(<DocTemplate propsTables={[{ componentSource: testComponentSrc, componentName: 'Test Component' }]} />);
+    const wrapper = shallow(<DocTemplate propsTables={[{ componentSrc: testComponentSrc, componentName: 'Test Component' }]} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should show multiple props tables', () => {
     const wrapper = shallow(<DocTemplate
-      propsTables={[{ componentSource: testComponentSrc, componentName: 'Test Component' },
-      { componentSource: testComponentSrc, componentName: 'Test Component (Again)' }]}
+      propsTables={[{ componentSrc: testComponentSrc, componentName: 'Test Component' },
+      { componentSrc: testComponentSrc, componentName: 'Test Component (Again)' }]}
     />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should show the version, readme, examples, and props tables', () => {
+  it('should show the version, readme, source link, examples, and props tables', () => {
     const wrapper = shallow(<DocTemplate
       packageName="terra-doc-template"
       readme={readme}
+      srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
       examples={[{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
       { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }]}
-      propsTables={[{ componentSource: testComponentSrc, componentName: 'Test Component' },
-      { componentSource: testComponentSrc, componentName: 'Test Component (Again)' }]}
+      propsTables={[{ componentSrc: testComponentSrc, componentName: 'Test Component' },
+      { componentSrc: testComponentSrc, componentName: 'Test Component (Again)' }]}
     />);
     expect(wrapper).toMatchSnapshot();
   });
