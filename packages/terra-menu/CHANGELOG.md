@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.0.0 - (May 8, 2018)
+------------------
+### Major Change
+Updated to use terra-popup v4.0.0
+
 2.8.0 - (May 2, 2018)
 ------------------
 ### Changed
