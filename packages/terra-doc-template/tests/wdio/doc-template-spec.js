@@ -6,8 +6,8 @@ describe('DocTemplate', () => {
     beforeEach(() => browser.url('/#/raw/tests/doc-template/default-doc-template'));
 
     Terra.should.matchScreenshot('Readme', { selector: '#DocTemplateContainer > div > div:nth-child(2)' });
-    Terra.should.matchScreenshot('Example 1', { selector: '#DocTemplateContainer > div > div:nth-child(4)' });
-    Terra.should.matchScreenshot('PropsTable 1', { selector: '#DocTemplateContainer > div > div:nth-child(6)', viewports: [{ width: 1000, height: 1000 }] });
+    Terra.should.matchScreenshot('Example 1', { selector: '#DocTemplateContainer > div > div:nth-child(5)' });
+    Terra.should.matchScreenshot('PropsTable 1', { selector: '#DocTemplateContainer > div > div:nth-child(7)', viewports: [{ width: 1000, height: 1000 }] });
     Terra.should.beAccessible({ viewports: Terra.viewports('huge') });
   });
 
@@ -22,7 +22,7 @@ describe('DocTemplate', () => {
       // Give time for the animation to complete
       browser.pause(250);
 
-      const screenshots = browser.checkElement('#DocTemplateContainer > div > div:nth-child(4)', { viewports: Terra.viewports('huge') });
+      const screenshots = browser.checkElement('#DocTemplateContainer > div > div:nth-child(5)', { viewports: Terra.viewports('huge') });
       expect(screenshots).to.matchReference('withinTolerance');
     });
 
@@ -38,7 +38,7 @@ describe('DocTemplate', () => {
 
       browser.pause(250);
 
-      const screenshots = browser.checkElement('#DocTemplateContainer > div > div:nth-child(4)', { viewports: Terra.viewports('huge') });
+      const screenshots = browser.checkElement('#DocTemplateContainer > div > div:nth-child(5)', { viewports: Terra.viewports('huge') });
       expect(screenshots).to.matchReference('withinTolerance');
     });
   });
