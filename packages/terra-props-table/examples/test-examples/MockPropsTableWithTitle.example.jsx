@@ -7,6 +7,7 @@ import IconSrc from '!raw-loader!./MockComponent';
 const IconExamples = () => (
   <div>
     <PropsTable id="PropsTable" src={IconSrc} componentName="Mock Component" />
+    <p data-terra-bottom-scroll-marker>text</p>
   </div>
 );
 
