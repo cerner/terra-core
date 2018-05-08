@@ -109,7 +109,7 @@
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
-    "terra-dev-site": "0.5.0",
+    "terra-dev-site": "0.6.0",
     "terra-toolkit": "^3.0.0",
     "webpack-merge": "^4.1.2"
   }
