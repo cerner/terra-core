@@ -26,10 +26,7 @@ exports[`Paginator should render a default paginator 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         />
       </a>
-      <span>
-        Page 
-        1
-      </span>
+      Page 1
       <a
         className="nav-link"
         onClick={[Function]}

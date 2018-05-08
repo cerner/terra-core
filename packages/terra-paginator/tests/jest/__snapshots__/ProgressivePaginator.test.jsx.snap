@@ -4,7 +4,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
 <ResponsiveElement
   defaultElement={
     <div
-      className="paginator responsive-progressive"
+      className="paginator"
     >
       <div>
         <a
@@ -61,7 +61,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
   responsiveTo="parent"
   tiny={
     <div
-      className="paginator"
+      className="paginator progressive"
     >
       <div>
         Page 
