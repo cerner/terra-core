@@ -7,7 +7,7 @@ import MockSrc from '!raw-loader!./MockComponent';
 const MockExample = () => (
   <div>
     <PropsTable id="PropsTable" src={MockSrc} />
-    <p data-terra-bottom-scroll-marker>text</p>
+    <p data-terra-bottom-scroll-marker>Marker for scrolling during tests</p>
   </div>
 );
 
