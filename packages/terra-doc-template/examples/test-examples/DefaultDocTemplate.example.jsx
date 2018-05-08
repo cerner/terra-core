@@ -24,7 +24,7 @@ const Index = () => {
       <DocTemplate
         packageName="test-package-name"
         readme={readme}
-        repositoryURL="git+https://github.com/cerner/terra-core.git"
+        srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
         propsTables={propsTables}
         examples={examples}
       />

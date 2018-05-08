@@ -3,7 +3,7 @@ import React from 'react';
 import DocTemplate from 'terra-doc-template/src/DocTemplate';
 
 import readme from 'terra-doc-template/docs/README.md';
-import { name, repository } from 'terra-doc-template/package.json';
+import { name } from 'terra-doc-template/package.json';
 
 // Component Source
 import DocTemplateSrc from '!raw-loader!terra-doc-template/src/DocTemplate';
@@ -13,7 +13,7 @@ const DocTemplateExamples = () => (
   <DocTemplate
     packageName={name}
     readme={readme}
-    repositoryURL={repository.url}
+    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
     examples={[
       {
         title: 'DocTemplate',

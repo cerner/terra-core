@@ -18,20 +18,9 @@ const propTypes = {
    */
   readme: PropTypes.string,
   /**
-   * The path from the project root to the folder for the component. Only needs to be specified
-   * if `packages/${packageName}` would be wrong.
+   * The url to the source code for the given component.
    */
   srcPath: PropTypes.string,
-  /**
-   * The URL for the git repository of the project. Typically found by importing `{ repository }` from
-   * the `package.json` and passing the `repository.url`. This prop and either `packageName` or `srcLink`
-   * are required to be specified for the source link to be displayed on the page.
-   */
-  repositoryURL: PropTypes.string,
-  /**
-   * The git branch to use. For bitbucket repositories this should be the commit hash to browse from.
-   */
-  branch: PropTypes.string,
   /**
    * All of the example(s) that will be displayed. An empty array is supported.
    * ```
@@ -72,17 +61,12 @@ const defaultProps = {
   packageName: '',
   readme: '',
   srcPath: '',
-  branch: 'master',
-  repositoryURL: '',
   examples: [],
   propsTables: [],
 };
 
-const DocTemplate = ({ packageName, readme, srcPath, repositoryURL, branch, examples, propsTables, ...customProps }) => {
+const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...customProps }) => {
   let id = 0;
-  let processedRepositoryURL;
-  let processedSrcPath;
-  let gitBranchPath;
   const localExamples = examples;
   const localPropsTables = propsTables;
 
@@ -97,56 +81,13 @@ const DocTemplate = ({ packageName, readme, srcPath, repositoryURL, branch, exam
     id += 1;
   }
 
-  // Both of these props are needed to be able to generate the source path
-  const showSrcPath = repositoryURL && (packageName || srcPath);
-
-  if (showSrcPath) {
-    // The repository url can be of the format 'provider:user/repository' so process those for the website
-    if (repositoryURL.startsWith('git+')) {
-      processedRepositoryURL = repositoryURL.substring(4, repositoryURL.length);
-
-      if (processedRepositoryURL.endsWith('.git')) {
-        processedRepositoryURL = processedRepositoryURL.substring(0, processedRepositoryURL.length - 4);
-      }
-    } else if (repositoryURL.startsWith('github:')) {
-      processedRepositoryURL = `https://github.com/${repositoryURL.substring(7, repositoryURL.length)}`;
-    } else if (repositoryURL.startsWith('bitbucket:')) {
-      processedRepositoryURL = `https://bitbucket.org/${repositoryURL.substring(10, repositoryURL.length)}`;
-    } else if (repositoryURL.startsWith('gitlab:')) {
-      processedRepositoryURL = `https://gitlab.com/${repositoryURL.substring(7, repositoryURL.length)}`;
-    } else if (repositoryURL.startsWith('git://')) {
-      processedRepositoryURL = `https://${repositoryURL.substring(6, repositoryURL.length)}`;
-
-      if (processedRepositoryURL.endsWith('.git')) {
-        processedRepositoryURL = processedRepositoryURL.substring(0, processedRepositoryURL.length - 4);
-      }
-    // Fallback if the repositoryURL doesn't match any expected patterns
-    } else {
-      processedRepositoryURL = repositoryURL;
-    }
-
-    // Determines the path from the repositoryURL to the project files browser
-    if (processedRepositoryURL.includes('bitbucket.org')) {
-      gitBranchPath = `src/${branch}`;
-    } else {
-      gitBranchPath = `tree/${branch}`;
-    }
-
-    // Determines where in the project files the folder for the component is
-    if (srcPath) {
-      processedSrcPath = srcPath;
-    } else {
-      processedSrcPath = `packages/${packageName}`;
-    }
-  }
-
   const version = `[![NPM version](http://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})`;
 
   return (
     <div {...customProps}>
       {packageName && <Markdown src={version} />}
       {readme && <Markdown src={readme} />}
-      {showSrcPath && <a href={`${processedRepositoryURL}/${gitBranchPath}/${processedSrcPath}`}>View component source code</a>}
+      {srcPath && <a href={srcPath}>View component source code</a>}
 
       {localExamples.length > 0 && <h1 className={cx('.examples-header')} >Examples</h1>}
       {localExamples.map(example =>

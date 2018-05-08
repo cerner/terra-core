@@ -2,55 +2,6 @@
 
 exports[`DocTemplate should render a default component with nothing 1`] = `<div />`;
 
-exports[`DocTemplate should resolve source links when srcPath is specified and using github: format repositoryURL 1`] = `
-<div>
-  <a
-    href="https://github.com/cerner/terra-core/tree/master/path/packages/terra-doc-template"
-  >
-    View component source code
-  </a>
-</div>
-`;
-
-exports[`DocTemplate should resolve source links when using bitbucket: format repositoryURL 1`] = `
-<div>
-  <Markdown
-    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
-  />
-  <a
-    href="https://bitbucket.org/cerner/terra-core/src/288c444a7e3bdd1d04d70003349f33fbd711df4f/packages/terra-doc-template"
-  >
-    View component source code
-  </a>
-</div>
-`;
-
-exports[`DocTemplate should resolve source links when using git:// format repositoryURL 1`] = `
-<div>
-  <Markdown
-    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
-  />
-  <a
-    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
-  >
-    View component source code
-  </a>
-</div>
-`;
-
-exports[`DocTemplate should resolve source links when using gitlab: format repositoryURL 1`] = `
-<div>
-  <Markdown
-    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
-  />
-  <a
-    href="https://gitlab.com/cerner/terra-core/tree/master/packages/terra-doc-template"
-  >
-    View component source code
-  </a>
-</div>
-`;
-
 exports[`DocTemplate should show multiple examples 1`] = `
 <div>
   <h1

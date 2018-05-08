@@ -63,44 +63,11 @@ describe('DocTemplate', () => {
     const wrapper = shallow(<DocTemplate
       packageName="terra-doc-template"
       readme={readme}
-      repositoryURL="git+https://github.com/cerner/terra-core.git"
+      srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
       examples={[{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
       { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }]}
       propsTables={[{ componentSrc: testComponentSrc, componentName: 'Test Component' },
       { componentSrc: testComponentSrc, componentName: 'Test Component (Again)' }]}
-    />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should resolve source links when srcPath is specified and using github: format repositoryURL', () => {
-    const wrapper = shallow(<DocTemplate
-      srcPath="path/packages/terra-doc-template"
-      repositoryURL="github:cerner/terra-core"
-    />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should resolve source links when using bitbucket: format repositoryURL', () => {
-    const wrapper = shallow(<DocTemplate
-      packageName="terra-doc-template"
-      branch="288c444a7e3bdd1d04d70003349f33fbd711df4f"
-      repositoryURL="bitbucket:cerner/terra-core"
-    />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should resolve source links when using gitlab: format repositoryURL', () => {
-    const wrapper = shallow(<DocTemplate
-      packageName="terra-doc-template"
-      repositoryURL="gitlab:cerner/terra-core"
-    />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should resolve source links when using git:// format repositoryURL', () => {
-    const wrapper = shallow(<DocTemplate
-      packageName="terra-doc-template"
-      repositoryURL="git://github.com/cerner/terra-core.git"
     />);
     expect(wrapper).toMatchSnapshot();
   });
