@@ -1,6 +1,6 @@
 import React from 'react';
 import Dialog from 'terra-dialog';
-import ProgressivePaginator from 'terra-paginator/src/ProgressivePaginator';
+import ProgressivePaginator from 'terra-paginator/lib/ProgressivePaginator';
 
 const totalCount = 450;
 

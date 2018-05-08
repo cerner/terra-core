@@ -65,7 +65,7 @@ class ProgressivePaginator extends React.Component {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
 
-    return (<div className={cx('paginator')}>
+    return (<div className={cx(['paginator', 'progressive'])}>
       <div>
         Page {selectedPage} of {totalPages}
       </div>
@@ -82,7 +82,7 @@ class ProgressivePaginator extends React.Component {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
 
-    return (<div className={cx(['paginator', 'responsive-progressive'])}>
+    return (<div className={cx(['paginator'])}>
       <div>
         <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
         <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />}</a>

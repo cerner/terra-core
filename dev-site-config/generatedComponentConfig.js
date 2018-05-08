@@ -56,27 +56,27 @@ import TerraSiteSelectableListIndex from '../packages/terra-site/src/examples/li
 import TerraSiteSingleSelectIndex from '../packages/terra-site/src/examples/list/components/SingleSelectIndex';
 import TerraSiteIndex35 from '../packages/terra-site/src/examples/menu/Index';
 import TerraSiteIndex36 from '../packages/terra-site/src/examples/overlay/Index';
-import TerraSiteIndex37 from '../packages/terra-site/src/examples/paginator/Index';
+import TerraSitePaginatorIndex from '../packages/terra-site/src/examples/paginator/PaginatorIndex';
 import TerraSiteProgressivePaginatorIndex from '../packages/terra-site/src/examples/paginator/ProgressivePaginatorIndex';
-import TerraSiteIndex38 from '../packages/terra-site/src/examples/profile-image/Index';
-import TerraSiteIndex39 from '../packages/terra-site/src/examples/progress-bar/Index';
-import TerraSiteIndex40 from '../packages/terra-site/src/examples/responsive-element/Index';
-import TerraSiteIndex41 from '../packages/terra-site/src/examples/search-field/Index';
-import TerraSiteIndex42 from '../packages/terra-site/src/examples/section-header/Index';
-import TerraSiteIndex43 from '../packages/terra-site/src/examples/signature/Index';
-import TerraSiteIndex44 from '../packages/terra-site/src/examples/slide-group/Index';
-import TerraSiteIndex45 from '../packages/terra-site/src/examples/spacer/Index';
-import TerraSiteIndex46 from '../packages/terra-site/src/examples/status-view/Index';
-import TerraSiteIndex47 from '../packages/terra-site/src/examples/status/Index';
-import TerraSiteIndex48 from '../packages/terra-site/src/examples/table/Index';
+import TerraSiteIndex37 from '../packages/terra-site/src/examples/profile-image/Index';
+import TerraSiteIndex38 from '../packages/terra-site/src/examples/progress-bar/Index';
+import TerraSiteIndex39 from '../packages/terra-site/src/examples/responsive-element/Index';
+import TerraSiteIndex40 from '../packages/terra-site/src/examples/search-field/Index';
+import TerraSiteIndex41 from '../packages/terra-site/src/examples/section-header/Index';
+import TerraSiteIndex42 from '../packages/terra-site/src/examples/signature/Index';
+import TerraSiteIndex43 from '../packages/terra-site/src/examples/slide-group/Index';
+import TerraSiteIndex44 from '../packages/terra-site/src/examples/spacer/Index';
+import TerraSiteIndex45 from '../packages/terra-site/src/examples/status-view/Index';
+import TerraSiteIndex46 from '../packages/terra-site/src/examples/status/Index';
+import TerraSiteIndex47 from '../packages/terra-site/src/examples/table/Index';
 import TerraSiteMultiSelectIndex1 from '../packages/terra-site/src/examples/table/components/MultiSelectIndex';
-import TerraSiteIndex49 from '../packages/terra-site/src/examples/tabs/Index';
-import TerraSiteIndex50 from '../packages/terra-site/src/examples/tag/Index';
-import TerraSiteIndex51 from '../packages/terra-site/src/examples/text/Index';
-import TerraSiteIndex52 from '../packages/terra-site/src/examples/time-input/Index';
-import TerraSiteIndex53 from '../packages/terra-site/src/examples/toggle-button/Index';
-import TerraSiteIndex54 from '../packages/terra-site/src/examples/toggle-section-header/Index';
-import TerraSiteIndex55 from '../packages/terra-site/src/examples/toggle/Index';
+import TerraSiteIndex48 from '../packages/terra-site/src/examples/tabs/Index';
+import TerraSiteIndex49 from '../packages/terra-site/src/examples/tag/Index';
+import TerraSiteIndex50 from '../packages/terra-site/src/examples/text/Index';
+import TerraSiteIndex51 from '../packages/terra-site/src/examples/time-input/Index';
+import TerraSiteIndex52 from '../packages/terra-site/src/examples/toggle-button/Index';
+import TerraSiteIndex53 from '../packages/terra-site/src/examples/toggle-section-header/Index';
+import TerraSiteIndex54 from '../packages/terra-site/src/examples/toggle/Index';
 
 // Component Test Examples
 import AbstractModalAppendClass from '../packages/terra-abstract-modal/tests/nightwatch/components/AbstractModalAppendClass';
@@ -3134,9 +3134,9 @@ const componentConfig = {
         path: '/paginator',
         pages: [
           {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteIndex37,
+            name: 'Paginator Index',
+            path: '/paginator-index',
+            component: TerraSitePaginatorIndex,
           },
           {
             name: 'Progressive Paginator Index',
@@ -3152,7 +3152,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex38,
+            component: TerraSiteIndex37,
           },
         ],
       },
@@ -3163,7 +3163,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex39,
+            component: TerraSiteIndex38,
           },
         ],
       },
@@ -3174,7 +3174,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex40,
+            component: TerraSiteIndex39,
           },
         ],
       },
@@ -3185,7 +3185,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex41,
+            component: TerraSiteIndex40,
           },
         ],
       },
@@ -3196,7 +3196,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex42,
+            component: TerraSiteIndex41,
           },
         ],
       },
@@ -3207,7 +3207,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex43,
+            component: TerraSiteIndex42,
           },
         ],
       },
@@ -3218,7 +3218,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex44,
+            component: TerraSiteIndex43,
           },
         ],
       },
@@ -3229,7 +3229,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex45,
+            component: TerraSiteIndex44,
           },
         ],
       },
@@ -3240,7 +3240,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex46,
+            component: TerraSiteIndex45,
           },
         ],
       },
@@ -3251,7 +3251,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex47,
+            component: TerraSiteIndex46,
           },
         ],
       },
@@ -3262,7 +3262,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex48,
+            component: TerraSiteIndex47,
           },
           {
             name: 'Multi Select Index',
@@ -3278,7 +3278,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex49,
+            component: TerraSiteIndex48,
           },
         ],
       },
@@ -3289,7 +3289,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex50,
+            component: TerraSiteIndex49,
           },
         ],
       },
@@ -3300,7 +3300,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex51,
+            component: TerraSiteIndex50,
           },
         ],
       },
@@ -3311,7 +3311,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex52,
+            component: TerraSiteIndex51,
           },
         ],
       },
@@ -3322,7 +3322,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex53,
+            component: TerraSiteIndex52,
           },
         ],
       },
@@ -3333,7 +3333,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex54,
+            component: TerraSiteIndex53,
           },
         ],
       },
@@ -3344,7 +3344,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex55,
+            component: TerraSiteIndex54,
           },
         ],
       },

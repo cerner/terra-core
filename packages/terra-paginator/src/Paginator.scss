@@ -1,11 +1,11 @@
 :local {
   .paginator {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
-    &.responsive-progressive {
-      align-items: baseline;
-      justify-content: center;
+    &.progressive {
+      justify-content: space-between;
     }
 
     .nav-link {

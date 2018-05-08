@@ -1,4 +1,4 @@
-# Terra Paginator
+# Terra Progressive Paginator
 
 Paginator to be used for ordered data where the size of the data is known. Provides first, last, previous, next, and paged functionality.
 
