@@ -23,6 +23,15 @@
         color: var(--terra-paginator-nav-link-foreground-color-hover, #001f67);
         text-decoration: underline;
       }
+
+      &:focus {
+        background: var(--terra-paginator-nav-link-background-focus);
+      }
+
+      &:active {
+        color: var(--terra-paginator-nav-link-foreground-color-active, #0059a8);
+        text-decoration: var(--terra-paginator-nav-link-text-decoration-active);
+      }
     }
 
     .is-selected {
