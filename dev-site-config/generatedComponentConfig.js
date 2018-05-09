@@ -373,10 +373,10 @@ import LightOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/Lig
 import OnRequestCloseOverlay from '../packages/terra-overlay/tests/nightwatch/Overlay/OnRequestCloseOverlay';
 import DefaultOverlayContainer from '../packages/terra-overlay/tests/nightwatch/OverlayContainer/DefaultOverlayContainer';
 import ProfileImageDefault from '../packages/terra-profile-image/tests/nightwatch/ProfileImageDefault';
-import ProgressBarGradient from '../packages/terra-progress-bar/tests/nightwatch/ProgressBarGradient';
-import ProgressBarColor from '../packages/terra-progress-bar/tests/nightwatch/components/ProgressBarColor';
-import ProgressBarDefault from '../packages/terra-progress-bar/tests/nightwatch/components/ProgressBarDefault';
-import ProgressBarSize from '../packages/terra-progress-bar/tests/nightwatch/components/ProgressBarSize';
+import ProgressBarGradient from '../packages/terra-progress-bar/examples/test-examples/ProgressBarGradient';
+import ProgressBarColor from '../packages/terra-progress-bar/examples/test-examples/ProgressBarColor';
+import ProgressBarDefault from '../packages/terra-progress-bar/examples/test-examples/ProgressBarDefault';
+import ProgressBarSize from '../packages/terra-progress-bar/examples/test-examples/ProgressBarSize';
 import MockPropsTable from '../packages/terra-props-table/tests/nightwatch/MockPropsTable';
 import MockPropsTableWithTitle from '../packages/terra-props-table/tests/nightwatch/MockPropsTableWithTitle';
 import DefaultResponsiveElement from '../packages/terra-responsive-element/tests/nightwatch/DefaultResponsiveElement';
