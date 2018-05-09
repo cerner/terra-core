@@ -79,7 +79,7 @@ class Signature extends React.Component {
 
     this.updateDimensions();
 
-    window.addEventListener('resize', this.updateDimensions);
+    this.canvas.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -103,7 +103,7 @@ class Signature extends React.Component {
       document.body.removeEventListener('mouseup', this.mouseUp);
     }
 
-    window.removeEventListener('resize', this.updateDimensions);
+    this.canvas.removeEventListener('resize', this.updateDimensions);
   }
 
   mouseInBounds(event) {
@@ -212,12 +212,14 @@ class Signature extends React.Component {
   }
 
   updateDimensions() {
-    this.canvasRect = this.canvas.getBoundingClientRect();
+    setTimeout(() => {
+      this.canvasRect = this.canvas.getBoundingClientRect();
 
-    this.canvas.width = this.canvasRect.width;
-    this.canvas.height = this.canvasRect.height;
+      this.canvas.width = this.canvasRect.width;
+      this.canvas.height = this.canvasRect.height;
 
-    this.drawSignature(this.state.lineSegments);
+      this.drawSignature(this.state.lineSegments);
+    }, 250);
   }
 
   render() {
