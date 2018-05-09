@@ -5,10 +5,10 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-arrange | ^2.8.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
-| terra-base | ^3.7.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-icon | ^2.7.0 | ^16.2.0 | terra-icon |
-| terra-popup | ^3.3.0 | ^16.2.0 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
+| terra-arrange | ^2.9.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
+| terra-base | ^3.8.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-icon | ^2.8.0 | ^16.2.0 | terra-icon |
+| terra-popup | ^4.0.0 | ^16.2.0 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
