@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+
+2.8.0 - (May 9, 2018)
+------------------
+### Changed
 * Allow background color to be themeable for SlideGroup's Slide component
 
 2.7.0 - (May 2, 2018)
