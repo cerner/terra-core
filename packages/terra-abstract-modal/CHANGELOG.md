@@ -3,8 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+1.2.0 - (May 8, 2018)
+------------------
 ### Changed
-* Add more z-indexes.
+* Add more z-indexes
 
 1.1.0 - (May 2, 2018)
 ------------------

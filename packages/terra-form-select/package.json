@@ -35,7 +35,7 @@
     "terra-arrange": "^2.8.0",
     "terra-base": "^3.7.0",
     "terra-icon": "^2.7.0",
-    "terra-popup": "^3.3.0"
+    "terra-popup": "^4.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

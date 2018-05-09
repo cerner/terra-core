@@ -64,7 +64,7 @@
     "terra-markdown": "^2.5.0",
     "terra-menu": "^2.8.0",
     "terra-mixins": "^1.15.0",
-    "terra-modal-manager": "^2.0.0",
+    "terra-modal-manager": "^3.0.0",
     "terra-overlay": "^2.8.0",
     "terra-profile-image": "^2.7.0",
     "terra-progress-bar": "^2.7.0",
