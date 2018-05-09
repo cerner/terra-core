@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.1.0 - (May 9, 2018)
+------------------
 ### Changed
 * Add syntax highlighting to source code examples
 * Add a link to the component's source code
