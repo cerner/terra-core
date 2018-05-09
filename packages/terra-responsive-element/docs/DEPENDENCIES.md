@@ -5,7 +5,7 @@
 |-|-|-|-|
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | resize-observer-polyfill | ^1.4.1 | -- | A polyfill for the Resize Observer API |
-| terra-base | ^3.7.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-base | ^3.8.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

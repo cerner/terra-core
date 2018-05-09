@@ -9,11 +9,11 @@
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-datepicker | ^0.64.0 | ^16.0.0 | A simple and reusable datepicker component for React |
 | react-portal | ^4.1.2 | ^15.0.0-0 \|\| ^16.0.0-0 \|\| ^17.0.0-0 | To make your life with React Portals easier. |
-| terra-base | ^3.7.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-button | ^2.8.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-form | ^2.7.0 | ^16.2.0 | Components for building forms |
-| terra-icon | ^2.7.0 | ^16.2.0 | terra-icon |
-| terra-responsive-element | ^2.7.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-base | ^3.8.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-button | ^2.9.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-form | ^2.8.0 | ^16.2.0 | Components for building forms |
+| terra-icon | ^2.8.0 | ^16.2.0 | terra-icon |
+| terra-responsive-element | ^2.8.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
@@ -22,7 +22,7 @@
 | react-redux | ^5.0.4 | ^0.14.0 \|\| ^15.0.0-0 \|\| ^16.0.0-0 | Official React bindings for Redux |
 | redux | ^3.6.0 | -- | Predictable state container for JavaScript apps |
 | terra-app-delegate | ^1.9.0 | -- | An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications |
-| terra-modal-manager | ^2.0.0 | ^16.2.0 | A Redux-backed Container component that dynamically presents components in a Terra Modal |
+| terra-modal-manager | ^3.0.0 | ^16.2.0 | The ModalManager is a DisclosureManager implementation that presents disclosed content using an AbstractModal. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
