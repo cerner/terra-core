@@ -32,7 +32,7 @@
     "terra-content-container": "^2.7.0",
     "terra-icon": "^2.7.0",
     "terra-list": "^2.8.0",
-    "terra-popup": "^3.3.0",
+    "terra-popup": "^4.0.0",
     "terra-slide-group": "^2.7.0"
   },
   "scripts": {
