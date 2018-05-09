@@ -120,7 +120,7 @@ function aggregateTranslations(options, compiler) {
     });
 
     // eslint-disable-next-line no-console
-    console.warn('WARNING: The terra-i18n aggregate-translations setup function should be used instead of the terra-i18n-plugin. Terra-i18n-plugin will be deprecated in the future. See https://github.com/cerner/terra-core/blob/master/packages/terra-i18n/docs/AggregateTranslations.md for usage.');
+    console.warn('WARNING: The terra-toolkit aggregate-translations prebuid tool should be used instead of the terra-i18n-plugin. Terra-i18n-plugin will be deprecated in the future. See https://github.com/cerner/terra-toolkit/blob/master/docs/AggregateTranslations.md for usage on the terra-toolkit aggregate-translations tool.');
   });
 }
 

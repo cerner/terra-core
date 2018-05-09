@@ -8,6 +8,11 @@ Unreleased
 ### Changed
 * Added `padding` and `margin` shorthand props.
 
+2.8.0 - (May 9, 2018)
+------------------
+### Changed
+* Changed nightwatch to WebdriverIO tests
+
 2.7.0 - (May 2, 2018)
 ------------------
 ### Changed

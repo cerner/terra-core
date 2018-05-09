@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Markdown from 'terra-markdown';
-import Button from 'terra-button';
-import SlidePanel from 'terra-slide-panel';
-import classNames from 'classnames/bind';
-import styles from './ExampleTemplate.scss';
-
-const cx = classNames.bind(styles);
+import ToggleButton from 'terra-toggle-button';
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { okaidia } from 'react-syntax-highlighter/styles/prism';
 
 const propTypes = {
   /**
@@ -39,8 +35,6 @@ const defaultProps = {
   children: null,
 };
 
-const codeIndicator = '```';
-
 class IndexExampleTemplate extends React.Component {
   constructor(props) {
     super(props);
@@ -55,33 +49,18 @@ class IndexExampleTemplate extends React.Component {
   render() {
     const { title, example, exampleSrc, children, description, ...customProps } = this.props;
 
-    const buttonClassname = cx('slide-panel-control-button');
-
-    const indexExample = (
-      <div>
-        <Button text="Show Source Code" onClick={this.handlePanelToggle} className={buttonClassname} data-terra-example-template-hide />
-        {example}
-      </div>
-    );
-
     const indexExampleSrc = (
-      <div>
-        <Button text="Show Example" onClick={this.handlePanelToggle} className={buttonClassname} data-terra-example-template-show />
-        <Markdown src={`${codeIndicator}jsx\n${exampleSrc}${codeIndicator}`} />
-      </div>
+      <ToggleButton isAnimated closedButtonText="View Source Code" data-terra-source-code-toggle>
+        <SyntaxHighlighter language="javascript" style={okaidia}>{exampleSrc}</SyntaxHighlighter>
+      </ToggleButton>
     );
 
     return (
-      <div>
+      <div {...customProps}>
         <h2>{title}</h2>
         {description}
-        <SlidePanel
-          mainContent={indexExample}
-          panelContent={indexExampleSrc}
-          isOpen={this.state.panelIsOpen}
-          isFullscreen
-          {...customProps}
-        />
+        {example}
+        {indexExampleSrc}
         {children}
       </div>
     );
