@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 
-1.1.0 - (May 8, 2018)
+1.1.0 - (May 9, 2018)
 ------------------
 ### Changed
 * Add syntax highlighting to source code examples

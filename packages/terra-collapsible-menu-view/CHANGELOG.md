@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 
-3.0.0 - (May 8, 2018)
+3.0.0 - (May 9, 2018)
 ------------------
 ### Major Change
 Updated to use terra-menu v3.0.0
