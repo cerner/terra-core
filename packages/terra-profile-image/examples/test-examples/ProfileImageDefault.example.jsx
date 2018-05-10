@@ -1,44 +1,15 @@
 import React from 'react';
-
 import ProfileImage from '../../lib/ProfileImage';
-import exampleProfilePhoto from '../../tests/assets/150x150.jpg';
+import exampleProfileImage from '../../tests/assets/150x150.jpg';
 
-class ProfileImageDefault extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { errorImageId: undefined, loadedImageId: undefined };
-  }
-
-  render() {
-    return (
-      <div>
-        <h2>Profile Image Loading Examples</h2>
-        <p>Profile image is successfully loaded.</p>
-        <div>
-          <ProfileImage
-            id={this.state.loadedImageId}
-            src={exampleProfilePhoto}
-            alt="loaded profile image"
-            width="75"
-            height="75"
-            onLoad={() => { this.setState({ loadedImageId: 'loadedImage' }); }}
-          />
-        </div>
-        <p>Profile image is not found and fails to load.</p>
-        <div>
-          <ProfileImage
-            id={this.state.errorImageId}
-            src="invalid.jpg"
-            alt="could not load profile image"
-            width="75"
-            height="75"
-            onError={() => { this.setState({ errorImageId: 'errorImage' }); }}
-          />
-        </div>
-      </div>
-    );
-  }
-}
+const ProfileImageDefault = () => (
+  <div>
+    <h2>Successful Profile Image</h2>
+    <ProfileImage src={exampleProfileImage} alt="proflie image loaded" width="75" height="75" />
+    <br />
+    <h2>Failed Profile Image</h2>
+    <ProfileImage src="invalid.jpg" alt="could not load proflie image" width="75" height="75" />
+  </div>
+);
 
 export default ProfileImageDefault;
