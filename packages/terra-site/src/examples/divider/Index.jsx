@@ -1,32 +1,26 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-divider/docs/README.md';
-import { version } from 'terra-divider/package.json';
+import { name } from 'terra-divider/package.json';
 
 // Example Files
 import Divider from './DividerExample';
+import DividerSrc from '!raw-loader!./DividerExample';
 
-const DividerExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <h2 id="default">Divider</h2>
-    <br />
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industrys standard
-      dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-      book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-      unchanged.
-    </p>
-    <Divider />
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industrys standard
-      dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-      book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-      unchanged.
-    </p>
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Dialog - Default',
+        example: <Divider />,
+        source: DividerSrc,
+      },
+    ]}
+  />
 );
 
-export default DividerExamples;
+export default DocPage;
