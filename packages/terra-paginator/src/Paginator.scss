@@ -1,8 +1,14 @@
+@import '~terra-mixins';
+
 :local {
   .paginator {
     align-items: center;
     display: flex;
     justify-content: center;
+
+    &.pageless {
+      justify-content: space-between;
+    }
 
     &.progressive {
       justify-content: space-between;
@@ -10,10 +16,13 @@
 
     .nav-link {
       background: var(--terra-paginator-nav-link-background);
+      border: var(--terra-paginator-nav-link-border);
+      border-radius: var(--terra-paginator-nav-link-border-radius);
       color: var(--terra-paginator-nav-link-foreground-color, #0059a8);
       cursor: pointer;
       display: inline-block;
-      margin: var(--terra-paginator-nav-link-margin, auto 2px);
+      margin-left: var(--terra-paginator-nav-link-margin-left, 2px);
+      margin-right: var(--terra-paginator-nav-link-margin-right, 2px);
       min-width: var(--terra-paginator-nav-link-min-width, 2rem); // Helps ensure limited resizing as you page through large numbers.
       padding: var(--terra-paginator-nav-link-padding, 3px);
       text-align: center;
@@ -54,16 +63,37 @@
       pointer-events: none;
     }
 
-    .page-form {
-      align-items: baseline;
-      display: flex;
+    .left-controls {
+      margin-left: var(--terra-paginator-nav-link-margin-left-left-controls, 2px);
+      margin-right: var(--terra-paginator-nav-link-margin-right-left-controls, 8px);
     }
 
-    .page-input {
-      margin-left: var(--terra-paginator-progressive-page-input-margin-left, 0.25rem);
-      margin-right: var(--terra-paginator-progressive-page-input-margin-right, 1rem);
-      max-width: var(--terra-paginator-progressive-page-input-max-width, 4rem);
-      text-align: center;
+    .right-controls {
+      margin-left: var(--terra-paginator-nav-link-margin-left-left-controls, 8px);
+      margin-right: var(--terra-paginator-nav-link-margin-right-left-controls, 2px);
+    }
+
+    .icon {
+      display: inline-block; // IE 10
+      height: 1rem;
+      vertical-align: middle;
+      width: 1rem;
+    }
+
+    &.previous > .icon {
+      content: var(--terra-paginator-nav-link-icon-previous, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#0059a8" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>'));
+    }
+
+    &.previous.is-disabled > .icon {
+      content: var(--terra-paginator-nav-link-icon-previous-disabled, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>'));
+    }
+
+    &.next > .icon {
+      content: var(--terra-paginator-nav-link-icon-next, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#0059a8" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>'));
+    }
+
+    &.next.is-disabled > .icon {
+      content: var(--terra-paginator-nav-link-icon-next-disabled, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>'));
     }
   }
 }

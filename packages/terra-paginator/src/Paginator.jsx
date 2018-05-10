@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import IconNext from 'terra-icon/lib/icon/IconNext';
-import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
 import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
@@ -132,12 +130,44 @@ class Paginator extends React.Component {
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     const fullView = (
-      <div className={cx('paginator')}>
-        {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)} onKeyDown={this.handleOnKeyDown(1)}>First</a>}
-        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(previousPageIndex)} onKeyDown={this.handleOnKeyDown(previousPageIndex)}>{<IconPrevious />} Previous</a>
+      <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])}>
+        {
+          this.hasNavContext() && <a
+            className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
+            tabIndex="0"
+            onClick={this.handlePageChange(1)}
+            onKeyDown={this.handleOnKeyDown(1)}
+          >
+            First
+          </a>
+        }
+        <a
+          className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
+          tabIndex="0"
+          onClick={this.handlePageChange(previousPageIndex)}
+          onKeyDown={this.handleOnKeyDown(previousPageIndex)}
+        >
+          <span className={cx('icon')} />Previous
+        </a>
         {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
-        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(nextPageIndex)} onKeyDown={this.handleOnKeyDown(nextPageIndex)}>Next {<IconNext />}</a>
-        {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)} onKeyDown={this.handleOnKeyDown(totalPages)}>Last</a>}
+        <a
+          className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
+          tabIndex="0"
+          onClick={this.handlePageChange(nextPageIndex)}
+          onKeyDown={this.handleOnKeyDown(nextPageIndex)}
+        >
+          Next<span className={cx('icon')} />
+        </a>
+        {
+          this.hasNavContext() && <a
+            className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
+            tabIndex="0"
+            onClick={this.handlePageChange(totalPages)}
+            onKeyDown={this.handleOnKeyDown(totalPages)}
+          >
+            Last
+          </a>
+        }
       </div>
     );
 
@@ -149,12 +179,40 @@ class Paginator extends React.Component {
     const { selectedPage } = this.state;
 
     const reducedView = (
-      <div className={cx('paginator')}>
-        {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>}
-        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />}</a>
+      <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])}>
+        {
+          this.hasNavContext() && <a
+            className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
+            tabIndex="0"
+            onClick={this.handlePageChange(1)}
+          >
+            First
+          </a>
+        }
+        <a
+          className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
+          tabIndex="0"
+          onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
+        >
+          <span className={cx('icon')} />Previous
+        </a>
         {this.hasNavContext() && `Page ${selectedPage}`}
-        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>{<IconNext />}</a>
-        {this.hasNavContext() && <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>}
+        <a
+          className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
+          tabIndex="0"
+          onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
+        >
+          Next<span className={cx('icon')} />
+        </a>
+        {
+          this.hasNavContext() && <a
+            className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
+            tabIndex="0"
+            onClick={this.handlePageChange(totalPages)}
+          >
+            Last
+          </a>
+        }
       </div>
     );
 

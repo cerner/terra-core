@@ -7,41 +7,35 @@ exports[`Paginator should render a default paginator 1`] = `
       className="paginator"
     >
       <a
-        className="nav-link is-disabled"
+        className="nav-link left-controls is-disabled"
         onClick={[Function]}
         tabIndex="0"
       >
         First
       </a>
       <a
-        className="nav-link is-disabled"
+        className="nav-link left-controls previous is-disabled"
         onClick={[Function]}
         tabIndex="0"
       >
-        <IconPrevious
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="icon"
         />
+        Previous
       </a>
       Page 1
       <a
-        className="nav-link"
+        className="nav-link right-controls next"
         onClick={[Function]}
         tabIndex="0"
       >
-        <IconNext
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        Next
+        <span
+          className="icon"
         />
       </a>
       <a
-        className="nav-link"
+        className="nav-link right-controls"
         onClick={[Function]}
         tabIndex="0"
       >
@@ -55,7 +49,7 @@ exports[`Paginator should render a default paginator 1`] = `
       className="paginator"
     >
       <a
-        className="nav-link is-disabled"
+        className="nav-link left-controls is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -63,19 +57,15 @@ exports[`Paginator should render a default paginator 1`] = `
         First
       </a>
       <a
-        className="nav-link is-disabled"
+        className="nav-link left-controls previous is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
       >
-        <IconPrevious
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="icon"
         />
-         Previous
+        Previous
       </a>
       <a
         className="nav-link is-selected"
@@ -158,22 +148,18 @@ exports[`Paginator should render a default paginator 1`] = `
         10
       </a>
       <a
-        className="nav-link"
+        className="nav-link right-controls next"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
       >
-        Next 
-        <IconNext
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        Next
+        <span
+          className="icon"
         />
       </a>
       <a
-        className="nav-link"
+        className="nav-link right-controls"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -189,32 +175,26 @@ exports[`Paginator should render a paginator without page links 1`] = `
 <ResponsiveElement
   defaultElement={
     <div
-      className="paginator"
+      className="paginator pageless"
     >
       <a
-        className="nav-link"
+        className="nav-link left-controls previous"
         onClick={[Function]}
         tabIndex="0"
       >
-        <IconPrevious
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="icon"
         />
+        Previous
       </a>
       <a
-        className="nav-link"
+        className="nav-link right-controls next"
         onClick={[Function]}
         tabIndex="0"
       >
-        <IconNext
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        Next
+        <span
+          className="icon"
         />
       </a>
     </div>
@@ -222,36 +202,28 @@ exports[`Paginator should render a paginator without page links 1`] = `
   responsiveTo="parent"
   tiny={
     <div
-      className="paginator"
+      className="paginator pageless"
     >
       <a
-        className="nav-link"
+        className="nav-link left-controls previous"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
       >
-        <IconPrevious
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="icon"
         />
-         Previous
+        Previous
       </a>
       <a
-        className="nav-link"
+        className="nav-link right-controls next"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
       >
-        Next 
-        <IconNext
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        Next
+        <span
+          className="icon"
         />
       </a>
     </div>

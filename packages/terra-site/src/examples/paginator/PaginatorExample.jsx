@@ -1,6 +1,6 @@
 import React from 'react';
 import Dialog from 'terra-dialog';
-import Paginator from 'terra-paginator/lib/Paginator';
+import Paginator from 'terra-paginator/src/Paginator';
 
 const totalCount = 450;
 
