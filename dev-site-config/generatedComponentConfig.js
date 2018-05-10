@@ -23,12 +23,14 @@ import TerraSiteIndex17 from '../packages/terra-site/src/examples/divider/Index'
 import TerraSiteIndex18 from '../packages/terra-site/src/examples/doc-template/Index';
 import TerraSiteIndex19 from '../packages/terra-site/src/examples/dynamic-grid/Index';
 import TerraSiteIndex20 from '../packages/terra-site/src/examples/embedded-content-consumer/Index';
+import TerraSiteCheckboxFieldIndex from '../packages/terra-site/src/examples/form-checkbox/CheckboxFieldIndex';
 import TerraSiteIndex21 from '../packages/terra-site/src/examples/form-checkbox/Index';
 import TerraSiteIndex22 from '../packages/terra-site/src/examples/form-field/Index';
 import TerraSiteIndex23 from '../packages/terra-site/src/examples/form-fieldset/Index';
 import TerraSiteIndex24 from '../packages/terra-site/src/examples/form-input/Index';
 import TerraSiteInputFieldIndex from '../packages/terra-site/src/examples/form-input/InputFieldIndex';
 import TerraSiteIndex25 from '../packages/terra-site/src/examples/form-radio/Index';
+import TerraSiteRadioFieldIndex from '../packages/terra-site/src/examples/form-radio/RadioFieldIndex';
 import TerraSiteIndex26 from '../packages/terra-site/src/examples/form-select/Index';
 import TerraSiteIndex27 from '../packages/terra-site/src/examples/form-textarea/Index';
 import TerraSiteTextareaFieldIndex from '../packages/terra-site/src/examples/form-textarea/TextareaFieldIndex';
@@ -216,6 +218,9 @@ import CustomEventsProvider from '../packages/terra-embedded-content-consumer/te
 import DataStatusProvider from '../packages/terra-embedded-content-consumer/tests/nightwatch/providers/DataStatusProvider';
 import FillProvider from '../packages/terra-embedded-content-consumer/tests/nightwatch/providers/FillProvider';
 import OnReadyProvider from '../packages/terra-embedded-content-consumer/tests/nightwatch/providers/OnReadyProvider';
+import ControlledCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/ControlledCheckboxField.example';
+import HiddenLegend from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/HiddenLegend.example';
+import OptionalCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/OptionalCheckboxField.example';
 import DefaultCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/DefaultCheckbox';
 import DisabledCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/DisabledCheckbox';
 import HiddenLabelCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/HiddenLabelCheckbox';
@@ -241,6 +246,9 @@ import HiddenRadio from '../packages/terra-form-radio/examples/test-examples/Hid
 import LongTextRadio from '../packages/terra-form-radio/examples/test-examples/LongTextRadio.example';
 import MultipleRadios from '../packages/terra-form-radio/examples/test-examples/MultipleRadios.example';
 import PopulatedRadio from '../packages/terra-form-radio/examples/test-examples/PopulatedRadio.example';
+import ControlledRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/ControlledRadioField.example';
+import HiddenLegend1 from '../packages/terra-form-radio/examples/test-examples/radio-field/HiddenLegend.example';
+import OptionalRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/OptionalRadioField.example';
 import DefaultSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/DefaultSelectOption';
 import DisabledSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/DisabledSelectOption';
 import SelectOptionLongText from '../packages/terra-form-select/tests/nightwatch/select-option/SelectOptionLongText';
@@ -1375,6 +1383,27 @@ const componentConfig = {
     path: '/form-checkbox',
     tests: [
       {
+        name: 'Checkbox Field',
+        path: '/checkbox-field',
+        tests: [
+          {
+            name: 'Controlled Checkbox Field',
+            path: '/controlled-checkbox-field',
+            component: ControlledCheckboxField,
+          },
+          {
+            name: 'Hidden Legend',
+            path: '/hidden-legend',
+            component: HiddenLegend,
+          },
+          {
+            name: 'Optional Checkbox Field',
+            path: '/optional-checkbox-field',
+            component: OptionalCheckboxField,
+          },
+        ],
+      },
+      {
         name: 'Default Checkbox',
         path: '/default-checkbox',
         component: DefaultCheckbox,
@@ -1522,6 +1551,27 @@ const componentConfig = {
         name: 'Populated Radio',
         path: '/populated-radio',
         component: PopulatedRadio,
+      },
+      {
+        name: 'Radio Field',
+        path: '/radio-field',
+        tests: [
+          {
+            name: 'Controlled Radio Field',
+            path: '/controlled-radio-field',
+            component: ControlledRadioField,
+          },
+          {
+            name: 'Hidden Legend',
+            path: '/hidden-legend',
+            component: HiddenLegend1,
+          },
+          {
+            name: 'Optional Radio Field',
+            path: '/optional-radio-field',
+            component: OptionalRadioField,
+          },
+        ],
       },
     ],
   },
@@ -2847,6 +2897,11 @@ const componentConfig = {
         path: '/form-checkbox',
         pages: [
           {
+            name: 'Checkbox Field Index',
+            path: '/checkbox-field-index',
+            component: TerraSiteCheckboxFieldIndex,
+          },
+          {
             name: 'Index',
             path: '/index',
             component: TerraSiteIndex21,
@@ -2899,6 +2954,11 @@ const componentConfig = {
             name: 'Index',
             path: '/index',
             component: TerraSiteIndex25,
+          },
+          {
+            name: 'Radio Field Index',
+            path: '/radio-field-index',
+            component: TerraSiteRadioFieldIndex,
           },
         ],
       },

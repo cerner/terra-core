@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should hide the legend when requested 1`] = `
+<fieldset
+  className="checkbox-field"
+>
+  <legend
+    className="legend-group legend-group-hidden"
+  >
+    <div
+      class="application-legend"
+      className="legend"
+    >
+      Hidden Legend legend
+    </div>
+  </legend>
+</fieldset>
+`;
+
+exports[`should hide the required indicator when requested 1`] = `
+<fieldset
+  className="checkbox-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      Hidden Required CheckboxField
+      <span
+        className="required-hidden"
+      >
+        *
+      </span>
+    </div>
+  </legend>
+</fieldset>
+`;
+
+exports[`should render a default checkbox field 1`] = `
+<fieldset
+  className="checkbox-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      Default CheckboxField
+    </div>
+  </legend>
+</fieldset>
+`;
+
+exports[`should render a help message 1`] = `
+<fieldset
+  className="checkbox-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      Help CheckboxField
+    </div>
+  </legend>
+  <div
+    className="help-text"
+  >
+    This will help up determine how many chairs to request
+  </div>
+</fieldset>
+`;
+
+exports[`should render an invalid checkbox field 1`] = `
+<fieldset
+  className="checkbox-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      <span
+        className="error-icon"
+      />
+      Invalid CheckboxField
+    </div>
+    <span
+      className="error-icon-hidden"
+    />
+  </legend>
+  <div
+    className="error-text"
+  >
+    Test Error
+  </div>
+</fieldset>
+`;
+
+exports[`should render an optional part on the label 1`] = `
+<fieldset
+  className="checkbox-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      Optional CheckboxField
+      <span
+        className="optional"
+      >
+        (optional)
+      </span>
+    </div>
+  </legend>
+</fieldset>
+`;
+
+exports[`should render required checkbox field 1`] = `
+<fieldset
+  className="checkbox-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      <span
+        className="required"
+      >
+        *
+      </span>
+      Required CheckboxField
+    </div>
+  </legend>
+</fieldset>
+`;
+
+exports[`should render the legend with custom attributes properly 1`] = `
+<fieldset
+  className="checkbox-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      class="application-legend"
+      className="legend"
+    >
+      Custom Legend CheckboxField
+    </div>
+  </legend>
+</fieldset>
+`;
