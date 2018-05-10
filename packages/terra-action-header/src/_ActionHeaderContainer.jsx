@@ -47,18 +47,20 @@ const ActionHeaderContainer = ({ children, title, startContent, endContent, leve
     React.cloneElement(child, { className: cx(['flex-collapse', children.props.className]) })
   ));
 
+  const titleElement = title ? (
+    <div className={cx('title-container')}>
+      <HeaderElement className={cx('title')}>
+        {title}
+      </HeaderElement>
+    </div>
+  ) : undefined;
+
   return (
     <header {...customProps} className={cx(['flex-header', customProps.className])}>
       {startContent && <div className={cx('flex-end')}>{startContent}</div>}
-      {title &&
-        <div className={cx('flex-fill')}>
-          <div className={cx('title-container')}>
-            <HeaderElement className={cx('title')}>
-              {title}
-            </HeaderElement>
-          </div>
-        </div>
-      }
+      <div className={cx('flex-fill')}>
+        {titleElement}
+      </div>
       {content}
       {endContent && <div className={cx('flex-end')}>{endContent}</div>}
     </header>

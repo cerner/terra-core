@@ -60,6 +60,16 @@ exports[`Spacer should render a spacer component with large left padding 1`] = `
 </div>
 `;
 
+exports[`Spacer should render a spacer component with large vertical and small horizontal margin 1`] = `
+<div
+  class="spacer margin-top-large margin-bottom-large margin-left-small margin-right-small padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
 exports[`Spacer should render a spacer component with medium bottom margin 1`] = `
 <div
   class="spacer margin-top-none margin-bottom-medium margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none"
@@ -73,6 +83,86 @@ exports[`Spacer should render a spacer component with medium bottom margin 1`] =
 exports[`Spacer should render a spacer component with small top margin 1`] = `
 <div
   class="spacer margin-top-small margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with top, right, bottom, and left margin set to large 1`] = `
+<div
+  class="spacer margin-top-large margin-bottom-large margin-left-large margin-right-large padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with top, right, bottom, and left padding set to large 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-large padding-bottom-large padding-left-large padding-right-large"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with vertical margin set to large and horizontal margin set to small 1`] = `
+<div
+  class="spacer margin-top-large margin-bottom-large margin-left-small margin-right-small padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with vertical padding set to large and horizontal padding set to small 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-large padding-bottom-large padding-left-small padding-right-small"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with vertical top margin set to large, horizontal margin set to medium, and bottom margin set to small 1`] = `
+<div
+  class="spacer margin-top-large margin-bottom-small margin-left-medium margin-right-medium padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with vertical top margin set to large, right margin set to medium, bottom margin set to small, and left margin set to small-1  1`] = `
+<div
+  class="spacer margin-top-large margin-bottom-small margin-left-small-minus-1 margin-right-medium padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with vertical top padding set to large, horizontal padding set to medium, and bottom padding set to small 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-large padding-bottom-small padding-left-medium padding-right-medium"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with vertical top padding set to large, right padding set to medium, bottom padding set to small, and left padding set to small-1  1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-large padding-bottom-small padding-left-small-minus-1 padding-right-medium"
 >
   <p>
     Test
