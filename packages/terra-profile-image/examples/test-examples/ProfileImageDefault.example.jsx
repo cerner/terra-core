@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ProfileImage from '../../lib/ProfileImage';
-import exampleProfilePhoto from '../assets/150x150.jpg';
+import exampleProfilePhoto from '../../tests/assets/150x150.jpg';
 
 class ProfileImageDefault extends React.Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class ProfileImageDefault extends React.Component {
           <ProfileImage
             id={this.state.loadedImageId}
             src={exampleProfilePhoto}
+            alt="loaded profile image"
             width="75"
             height="75"
             onLoad={() => { this.setState({ loadedImageId: 'loadedImage' }); }}
@@ -29,6 +30,7 @@ class ProfileImageDefault extends React.Component {
           <ProfileImage
             id={this.state.errorImageId}
             src="invalid.jpg"
+            alt="could not load profile image"
             width="75"
             height="75"
             onError={() => { this.setState({ errorImageId: 'errorImage' }); }}
