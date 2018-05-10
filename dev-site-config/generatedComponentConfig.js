@@ -373,10 +373,10 @@ import LightOverlay from '../packages/terra-overlay/examples/test-examples/Overl
 import OnRequestCloseOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/OnRequestCloseOverlay.example';
 import DefaultOverlayContainer from '../packages/terra-overlay/examples/test-examples/OverlayContainer/DefaultOverlayContainer.example';
 import ProfileImageDefault from '../packages/terra-profile-image/tests/nightwatch/ProfileImageDefault';
-import ProgressBarGradient from '../packages/terra-progress-bar/tests/nightwatch/ProgressBarGradient';
-import ProgressBarColor from '../packages/terra-progress-bar/tests/nightwatch/components/ProgressBarColor';
-import ProgressBarDefault from '../packages/terra-progress-bar/tests/nightwatch/components/ProgressBarDefault';
-import ProgressBarSize from '../packages/terra-progress-bar/tests/nightwatch/components/ProgressBarSize';
+import ProgressBarColor from '../packages/terra-progress-bar/examples/test-examples/ProgressBarColor.example';
+import ProgressBarDefault from '../packages/terra-progress-bar/examples/test-examples/ProgressBarDefault.example';
+import ProgressBarGradient from '../packages/terra-progress-bar/examples/test-examples/ProgressBarGradient.example';
+import ProgressBarSize from '../packages/terra-progress-bar/examples/test-examples/ProgressBarSize.example';
 import MockPropsTable from '../packages/terra-props-table/tests/nightwatch/MockPropsTable';
 import MockPropsTableWithTitle from '../packages/terra-props-table/tests/nightwatch/MockPropsTableWithTitle';
 import DefaultResponsiveElement from '../packages/terra-responsive-element/tests/nightwatch/DefaultResponsiveElement';
@@ -2406,11 +2406,6 @@ const componentConfig = {
     path: '/progress-bar',
     tests: [
       {
-        name: 'Progress Bar Gradient',
-        path: '/progress-bar-gradient',
-        component: ProgressBarGradient,
-      },
-      {
         name: 'Progress Bar Color',
         path: '/progress-bar-color',
         component: ProgressBarColor,
@@ -2419,6 +2414,11 @@ const componentConfig = {
         name: 'Progress Bar Default',
         path: '/progress-bar-default',
         component: ProgressBarDefault,
+      },
+      {
+        name: 'Progress Bar Gradient',
+        path: '/progress-bar-gradient',
+        component: ProgressBarGradient,
       },
       {
         name: 'Progress Bar Size',
