@@ -21,7 +21,6 @@ exports[`Paginator should render a default paginator 1`] = `
         <span
           className="icon"
         />
-        Previous
       </a>
       Page 1
       <a
@@ -29,7 +28,6 @@ exports[`Paginator should render a default paginator 1`] = `
         onClick={[Function]}
         tabIndex="0"
       >
-        Next
         <span
           className="icon"
         />
@@ -44,7 +42,7 @@ exports[`Paginator should render a default paginator 1`] = `
     </div>
   }
   responsiveTo="parent"
-  tiny={
+  small={
     <div
       className="paginator"
     >
@@ -185,14 +183,12 @@ exports[`Paginator should render a paginator without page links 1`] = `
         <span
           className="icon"
         />
-        Previous
       </a>
       <a
         className="nav-link right-controls next"
         onClick={[Function]}
         tabIndex="0"
       >
-        Next
         <span
           className="icon"
         />
@@ -200,7 +196,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
     </div>
   }
   responsiveTo="parent"
-  tiny={
+  small={
     <div
       className="paginator pageless"
     >

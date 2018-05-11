@@ -194,7 +194,7 @@ class Paginator extends React.Component {
           tabIndex="0"
           onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
         >
-          <span className={cx('icon')} />Previous
+          <span className={cx('icon')} />
         </a>
         {this.hasNavContext() && `Page ${selectedPage}`}
         <a
@@ -202,7 +202,7 @@ class Paginator extends React.Component {
           tabIndex="0"
           onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
         >
-          Next<span className={cx('icon')} />
+          <span className={cx('icon')} />
         </a>
         {
           this.hasNavContext() && <a
@@ -220,7 +220,7 @@ class Paginator extends React.Component {
   }
 
   render() {
-    return <ResponsiveElement defaultElement={this.reducedPaginator()} tiny={this.defaultPaginator()} />;
+    return <ResponsiveElement defaultElement={this.reducedPaginator()} small={this.defaultPaginator()} />;
   }
 }
 
