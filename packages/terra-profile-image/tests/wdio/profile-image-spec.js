@@ -9,4 +9,11 @@ describe('Profile Image', () => {
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
+
+  describe('Failed', () => {
+    before(() => browser.url('/#/raw/tests/profile-image/profile-image-failed'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
+  });
 });
