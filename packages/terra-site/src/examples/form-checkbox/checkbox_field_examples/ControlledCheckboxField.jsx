@@ -33,7 +33,6 @@ export default class extends React.Component {
         help="These are the core areas we need for graphic designers"
         isInvalid={this.state.selectedAnswers.length <= 0}
         error="You must be willing to work in one of these departments"
-        isInline
         required
       >
         <Checkbox id="ux-dept" name="dept[]" labelText="UX/Interaction Design" onChange={this.handleOnChange} value="ux" />

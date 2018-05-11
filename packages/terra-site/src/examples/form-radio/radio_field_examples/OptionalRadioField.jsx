@@ -23,7 +23,6 @@ export default class extends React.Component {
       <RadioField
         legend="Which Type of Meal are you looking for?"
         help="This cannot be changed when submitted"
-        isInline
         showOptional
       >
         <Radio id="frontend-track" name="track" labelText="Frontend Development" onChange={this.handleOnChange} value="backend" />

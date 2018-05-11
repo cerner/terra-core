@@ -32,7 +32,6 @@ export default class extends React.Component {
         legend="Do you wish to use any of our services for new hires?"
         help="These are not required, but make it easier to transition to our city"
         showOptional
-        isInline
       >
         <Checkbox id="roommate-service" name="service[]" labelText="Roommate Search" onChange={this.handleOnChange} value="roommate" />
         <Checkbox id="location-service" name="service[]" labelText="Relocation Assistance" onChange={this.handleOnChange} value="relocation" />
