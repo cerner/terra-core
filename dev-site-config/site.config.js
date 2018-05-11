@@ -1,6 +1,7 @@
 import homeReadMe from '../README.md';
 import componentConfig from './generatedComponentConfig';
 import '../packages/terra-site/src/cerner-mock-theme.scss';
+import '../packages/terra-legacy-theme/src/scoped-theme';
 
 const siteConfig = {
   /* The component configuration. */
@@ -19,6 +20,7 @@ const siteConfig = {
     /* The themes to toggle in the site. */
     themes: {
       'Default Theme': '',
+      'Legacy Theme': 'terra-legacy-theme',
       'Mock Theme': 'cerner-mock-theme',
     },
 
