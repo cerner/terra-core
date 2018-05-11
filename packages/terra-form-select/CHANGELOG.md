@@ -3,6 +3,27 @@ ChangeLog
 
 Unreleased
 ----------
+### Breaking Changes
+* Removed boundingRef
+* Removed isPlaceholderHidden - The placeholder option is no longer added by default.
+* Removed name - Terra recommends handling validations with [react-final-form](https://github.com/final-form/react-final-form).
+* Removed required - Terra recommends handling validations with [react-final-form](https://github.com/final-form/react-final-form).
+* Removed releaseFocus - Focus no longer needs to be managed.
+* Removed requestFocus - Focus no longer needs to be managed.
+* The onChange callback returns the value as the only parameter.
+  * `onChange(event, value, name)` -> `onChange(value)`
+
+
+### Added
+* dropdownAttrs - Spreads custom attributes onto the dropdown.
+* noResultContent - Displays when no search results are found.
+* onDeselect - Callback invoked when an option is deselected.
+* onSelect - Callback invoked when an option is selected.
+* onSearch - Callback invoked when the search has changed.
+* optionFilter - Custom callback filter invoked for each option during filtering.
+* placeholder - A text placeholder.
+* variant - Added new behavior variants. default, combobox, multiple, search, or tag.
+* Select.OptGroup - Groups options into sections.
 
 3.0.0 - (May 9, 2018)
 ------------------
