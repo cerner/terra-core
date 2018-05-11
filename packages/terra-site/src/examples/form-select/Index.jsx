@@ -1,52 +1,70 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
 import ReadMe from 'terra-form-select/docs/README.md';
-import { version } from 'terra-form-select/package.json';
-
-// Component Source
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+import DocTemplate from 'terra-doc-template';
+import OptionSrc from '!raw-loader!terra-form-select/src/_Option';
+import OptGroupSrc from '!raw-loader!terra-form-select/src/_OptGroup';
 import SelectSrc from '!raw-loader!terra-form-select/src/Select';
-import SelectOptionSrc from '!raw-loader!terra-form-select/src/SelectOption';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+import ControlledExample from './examples/ControlledWrapper';
+import ControlledExampleSrc from '!raw-loader!./examples/Controlled';
+import ComboboxExample from './examples/ComboboxWrapper';
+import ComboboxExampleSrc from '!raw-loader!./examples/Combobox';
+import DefaultExample from './examples/DefaultWrapper';
+import DefaultExampleSrc from '!raw-loader!./examples/Default';
+import MultipleExample from './examples/MultipleWrapper';
+import MultipleExampleSrc from '!raw-loader!./examples/Multiple';
+import OptGroupExample from './examples/OptGroupWrapper';
+import OptGroupExampleSrc from '!raw-loader!./examples/OptGroup';
+import SearchExample from './examples/SearchWrapper';
+import SearchExampleSrc from '!raw-loader!./examples/Search';
+import TagExample from './examples/TagWrapper';
+import TagExampleSrc from '!raw-loader!./examples/Tag';
 
-// Example Files
-import DefaultSelect from './DefaultSelect';
-import InvalidSelect from './InvalidSelect';
-import HiddenPlaceholderSelect from './HiddenPlaceholderSelect';
-import BlankSelect from './BlankSelect';
-import SelectWithoutDefault from './SelectWithoutDefault';
-import DisabledSelect from './DisabledSelect';
-import SelectInsideModal from './SelectInsideModal';
-import BoundedSelect from './BoundedSelect';
-import LongTextSelect from './LongTextSelect';
-
-const SelectExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={SelectSrc} componentName="Select" />
-    <PropsTable id="option-props" src={SelectOptionSrc} componentName="Select.Option" />
-    <h2>Select component with default initial value</h2>
-    <DefaultSelect />
-    <h2>Invalid select component</h2>
-    <InvalidSelect />
-    <h2>Select component with placeholder hidden</h2>
-    <HiddenPlaceholderSelect />
-    <h2>Select component with no default value and placeholder hidden</h2>
-    <BlankSelect />
-    <h2>Select component with no initial value set</h2>
-    <SelectWithoutDefault />
-    <h2>Disabled select component</h2>
-    <DisabledSelect />
-    <h2>Bounded Select</h2>
-    <BoundedSelect />
-    <h2>Long Text Select</h2>
-    <LongTextSelect />
-    <h2>Select inside a modal</h2>
-    <SelectInsideModal />
-  </div>
+const Index = () => (
+  <DocTemplate
+    packageName="terra-form-select"
+    readme={ReadMe}
+    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
+    propsTables={[{
+      componentName: 'Select',
+      componentSrc: SelectSrc,
+    }, {
+      componentName: 'Option',
+      componentSrc: OptionSrc,
+    }, {
+      componentName: 'OptGroup',
+      componentSrc: OptGroupSrc,
+    }]}
+    examples={[{
+      title: 'Default',
+      example: <DefaultExample />,
+      source: DefaultExampleSrc,
+    }, {
+      title: 'Search',
+      example: <SearchExample />,
+      source: SearchExampleSrc,
+    }, {
+      title: 'Multiple',
+      example: <MultipleExample />,
+      source: MultipleExampleSrc,
+    }, {
+      title: 'Tag',
+      example: <TagExample />,
+      source: TagExampleSrc,
+    }, {
+      title: 'Combobox',
+      example: <ComboboxExample />,
+      source: ComboboxExampleSrc,
+    }, {
+      title: 'OptGroup',
+      example: <OptGroupExample />,
+      source: OptGroupExampleSrc,
+    }, {
+      title: 'Controlled',
+      example: <ControlledExample />,
+      source: ControlledExampleSrc,
+    }]}
+  />
 );
 
-export default SelectExamples;
+export default Index;

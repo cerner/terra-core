@@ -1,0 +1,177 @@
+@import '~terra-mixins';
+
+:local {
+  .select {
+    background-color: var(--terra-select-background-color, #fff);
+    color: var(--terra-select-color, #1c1f21);
+    display: flex;
+    font-size: var(--terra-select-font-size, 1.143rem);
+    padding: var(--terra-select-padding, 0);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .default {
+    border: var(--terra-select-border, 1px solid #dedfe0);
+    border-radius: var(--terra-select-border-radius, 3px);
+    cursor: pointer;
+
+    > .display {
+      display: inline-block;
+      flex: 1 1 auto; // IE 10
+      line-height: 1.75;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    &:focus {
+      border-color: var(--terra-select-focus-border-color, #4cb2e9);
+      box-shadow: var(--terra-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+    }
+
+    &.is-open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: var(--terra-select-border-radius, 3px);
+      border-top-right-radius: var(--terra-select-border-radius, 3px);
+      box-shadow: none;
+    }
+
+    &.is-open.is-above {
+      border-bottom-left-radius: var(--terra-select-border-radius, 3px);
+      border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .display {
+    overflow: hidden; // IE 10
+    padding-left: var(--terra-select-display-padding-left, 0.42857rem);
+  }
+
+  .toggle {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: var(--terra-select-toggle-padding, 0 0.42857rem);
+  }
+
+  .tags {
+    display: flex;
+    flex: 1 1 auto; // TODO: Test in IE
+    flex-wrap: wrap; // IE 10
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .arrow-icon {
+    background: var(--terra-select-arrow-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block; // IE 10
+    height: var(--terra-select-arrow-icon-height, 0.715rem);
+    width: var(--terra-select-arrow-icon-width, 1rem);
+  }
+
+  // A reduced, non-zero, height and width allows the input to receive focus using tab.
+  // Browsers disable focus on inputs with a 0 x 0 height and width.
+  .input:not(:first-child) {
+    height: 0.1px;
+    margin: 0;
+    opacity: 0;
+    width: 1px;
+  }
+
+  .input,
+  .input:focus {
+    border: 0;
+    flex: 1 1 auto; // IE 10
+    font-size: var(--terra-select-input-font-size, 1.143rem);
+    height: 1.375em;
+    margin-top: var(--terra-select-input-padding, 0.21428571428571427rem);
+    max-width: 100%; // IE 10
+    min-width: 0; // IE 11
+    opacity: 1;
+    outline: none;
+    padding: 0;
+    text-overflow: ellipsis;
+    width: auto;
+  }
+
+  // Hides the clear buttons in IE.
+  .input::-ms-clear {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .input::placeholder,
+  .placeholder {
+    color: var(--terra-select-input-placeholder-color, #bcbfc0);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .tag,
+  .search,
+  .combobox,
+  .multiple {
+    > .display {
+      border: var(--terra-select-border, 1px solid #dedfe0);
+      border-bottom-left-radius: var(--terra-select-border-radius, 3px);
+      border-top-left-radius: var(--terra-select-border-radius, 3px);
+      cursor: text;
+      display: flex; // TODO: Test in IE
+      flex: 1 1 auto; // IE 10
+      padding-bottom: 0.21428571428571427rem;
+    }
+
+    > .toggle {
+      border: var(--terra-select-toggle-border, 1px solid #dedfe0);
+      border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+      border-left: 0;
+      border-top-right-radius: var(--terra-select-border-radius, 3px);
+    }
+
+    &.is-focused {
+      > .display {
+        border-color: var(--terra-select-focus-border-color, #4cb2e9);
+        box-shadow: var(--terra-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+      }
+    }
+
+    &.is-open {
+      > .display {
+        border-bottom-left-radius: 0;
+        border-color: var(--terra-select-focus-border-color, #4cb2e9);
+        box-shadow: none;
+      }
+
+      > .toggle {
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    &.is-open.is-above {
+      > .display {
+        border-bottom-left-radius: var(--terra-select-border-radius, 3px);
+        border-top-left-radius: 0;
+      }
+
+      > .toggle {
+        border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+        border-top-right-radius: 0;
+      }
+    }
+  }
+}
