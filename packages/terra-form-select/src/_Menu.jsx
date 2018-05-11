@@ -4,7 +4,8 @@ import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
-import Option from './_Option';
+import AddOption from './_AddOption';
+import NoResults from './_NoResults';
 import Util from './_MenuUtil';
 import styles from './_Menu.scss';
 
@@ -17,6 +18,10 @@ const propTypes = {
    * The content of the menu.
    */
   children: PropTypes.node,
+  /**
+   * Content to display when no results are found.
+   */
+  noResultContent: PropTypes.node,
   /**
    * Callback function triggered when an option is deselected.
    */
@@ -46,11 +51,13 @@ const propTypes = {
     Variants.MULTIPLE,
     Variants.SEARCH,
     Variants.TAG,
-  ]),
+  ]).isRequired,
 };
 
 const defaultProps = {
   children: undefined,
+  noResultContent: undefined,
+  onDeselect: undefined,
   optionFilter: undefined,
   searchValue: undefined,
   value: undefined,
@@ -77,11 +84,11 @@ class Menu extends React.Component {
     const children = Util.filter(props.children, props.searchValue, props.optionFilter);
 
     if (Util.shouldAllowFreeText(props, children)) {
-      children.push(<Option value={searchValue} display={`Add "${searchValue}"`} isAddOption />);
+      children.push(<AddOption value={searchValue} />);
     }
 
     if (Util.shouldShowNoResults(props, children)) {
-      children.push(<div className={cx('no-results')}>{noResultContent || `No matching results for "${searchValue}"`}</div>);
+      children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
     }
 
     return {

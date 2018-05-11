@@ -1,3 +1,5 @@
 {
-  "Terra.form.select.defaultDisplay": "- Select -"
+  "Terra.form.select.add": "\"{text}\" إضافة",
+  "Terra.form.select.defaultDisplay": "- Select -",
+  "Terra.form.select.noResults": "لا توجد نتائج مطابقة لـ\"{text}\""
 }

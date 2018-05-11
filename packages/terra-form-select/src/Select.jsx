@@ -46,7 +46,7 @@ const propTypes = {
    */
   onSearch: PropTypes.func,
   /**
-   * Callback function triggered when an option is selected. function(value, option)
+   * Callback function triggered when an option is selected. function(value)
    */
   onSelect: PropTypes.func,
   /**
