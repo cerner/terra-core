@@ -374,6 +374,9 @@ import FullscreenScrollableOverlay from '../packages/terra-overlay/examples/test
 import LightOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/LightOverlay.example';
 import OnRequestCloseOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/OnRequestCloseOverlay.example';
 import DefaultOverlayContainer from '../packages/terra-overlay/examples/test-examples/OverlayContainer/DefaultOverlayContainer.example';
+import Paginator from '../packages/terra-paginator/examples/test-examples/Paginator.example';
+import PaginatorNoPages from '../packages/terra-paginator/examples/test-examples/PaginatorNoPages.example';
+import ProgressivePaginator from '../packages/terra-paginator/examples/test-examples/ProgressivePaginator.example';
 import ProfileImageDefault from '../packages/terra-profile-image/tests/nightwatch/ProfileImageDefault';
 import ProgressBarColor from '../packages/terra-progress-bar/examples/test-examples/ProgressBarColor.example';
 import ProgressBarDefault from '../packages/terra-progress-bar/examples/test-examples/ProgressBarDefault.example';
