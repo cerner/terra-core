@@ -3,4 +3,11 @@
     border-bottom: '1px solid #eaecef';
     padding-bottom: '0.3em';
   }
+
+  .doc-template {
+    height: 100%;
+    padding: 15px;
+    overflow: auto;
+    position: relative;
+  }
 }
