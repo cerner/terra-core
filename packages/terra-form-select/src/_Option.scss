@@ -3,7 +3,7 @@
 :local {
   .option {
     align-items: center;
-    color: var(--terra-select-option-color, #1c1f21);
+    color: var(--terra-select-option-font-color, #1c1f21);
     cursor: pointer;
     display: flex;
     font-size: var(--terra-select-option-font-size, 1.143rem);
@@ -13,10 +13,11 @@
   }
 
   .is-default {
-    &:active,
+    &:active:not(.is-disabled),
     &.is-selected {
-      background-color: var(--terra-select-option-selected-background-color, #0079be);
-      color: var(--terra-select-option-selected-color, #fff);
+      background-color: var(--terra-select-option-selected-color, #0079be);
+      color: var(--terra-select-option-selected-font-color, #fff);
+      font-weight: var(--terra-select-option-selected-font-weight, normal);
     }
 
     &.is-selected.is-active {

@@ -6,31 +6,43 @@
     color: var(--terra-select-color, #1c1f21);
     display: flex;
     font-size: var(--terra-select-font-size, 1.143rem);
-    padding: var(--terra-select-padding, 0);
-
-    &:focus {
-      outline: none;
-    }
+    line-height: var(--terra-select-line-height, 1.75);
   }
 
   .default {
+    background-size: var(--terra-select-focus-background-start, 0 0);
     border: var(--terra-select-border, 1px solid #dedfe0);
     border-radius: var(--terra-select-border-radius, 3px);
     cursor: pointer;
+    padding: var(--terra-select-input-padding, 0 0 0 0.42857rem);
 
     > .display {
       display: inline-block;
       flex: 1 1 auto; // IE 10
-      line-height: 1.75;
       overflow: hidden;
       text-overflow: ellipsis;
       user-select: none;
       white-space: nowrap;
     }
 
-    &:focus {
-      border-color: var(--terra-select-focus-border-color, #4cb2e9);
-      box-shadow: var(--terra-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+    &.is-focused {
+      background-image: var(--terra-select-focus-animation-background, none);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: var(--terra-select-focus-animation-size, 0 0);
+      border-color: var(--terra-select-input-focus-border-color, #4cb2e9);
+      outline: none;
+      transition-duration: var(--terra-select-focus-transition-duration, 0s);
+      transition-property: background-size;
+      transition-timing-function: var(--terra-select-focus-transition-timing, ease);
+    }
+
+    &.is-focused[dir=rtl] {
+      box-shadow: var(--terra-select-focus-box-shadow-trl, 0 0 0 2px rgba(76, 178, 233, 0.25));
+    }
+
+    &.is-focused[dir=ltr] {
+      box-shadow: var(--terra-select-focus-box-shadow-rtl, 0 0 0 2px rgba(76, 178, 233, 0.25));
     }
 
     &.is-open {
@@ -41,17 +53,65 @@
       box-shadow: none;
     }
 
-    &.is-open.is-above {
+    &.is-above {
       border-bottom-left-radius: var(--terra-select-border-radius, 3px);
       border-bottom-right-radius: var(--terra-select-border-radius, 3px);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
+
+    &:hover {
+      border-color: var(--terra-select-input-hover-border-color, #dedfe0);
+    }
+
+    &.is-open:hover {
+      border-color: var(--terra-select-input-focus-border-color, #4cb2e9);
+    }
+
+    &.is-focused:hover {
+      border-color: var(--terra-select-input-focus-border-color, #4cb2e9);
+    }
+
+    &.is-invalid {
+      background-image: var(--terra-select-invalid-focus-animation-background, none);
+      border-color: var(--terra-select-invalid-border-color, #dedfe0);
+    }
+
+    &.is-invalid.is-focused {
+      background-size: var(--terra-select-invalid-focus-animation-size, 0 0);
+      border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
+    }
+
+    &.is-invalid:hover {
+      border-color: var(--terra-select-invalid-hover-border-color, #4cb2e9);
+    }
+
+    &.is-invalid.is-open:hover {
+      border-color: var(--terra-select-invalid-hover-border-color, #4cb2e9);
+    }
   }
 
   .display {
     overflow: hidden; // IE 10
-    padding-left: var(--terra-select-display-padding-left, 0.42857rem);
+  }
+
+  .arrow-icon {
+    background: var(--terra-select-arrow, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block; // IE 10
+    height: var(--terra-select-arrow-height, 0.715rem);
+    width: var(--terra-select-arrow-width, 1rem);
+  }
+
+  .is-disabled {
+    background-color: var(--terra-select-disabled-background-color, rgba(111, 116, 119, 0.2));
+    border-color: var(--terra-select-disabled-border-color, #dedfe0);
+    color: var(--terra-select-disabled-font-color, #1c1f21);
+    cursor: default;
+    opacity: 0.4;
+    pointer-events: none;
   }
 
   .toggle {
@@ -65,39 +125,30 @@
 
   .tags {
     display: flex;
-    flex: 1 1 auto; // TODO: Test in IE
+    flex: 1 1 auto;
     flex-wrap: wrap; // IE 10
     margin: 0;
     overflow: hidden;
     padding: 0;
   }
 
-  .arrow-icon {
-    background: var(--terra-select-arrow-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block; // IE 10
-    height: var(--terra-select-arrow-icon-height, 0.715rem);
-    width: var(--terra-select-arrow-icon-width, 1rem);
-  }
-
   // A reduced, non-zero, height and width allows the input to receive focus using tab.
   // Browsers disable focus on inputs with a 0 x 0 height and width.
-  .input:not(:first-child) {
+  .search-input:not(:first-child) {
     height: 0.1px;
     margin: 0;
     opacity: 0;
     width: 1px;
   }
 
-  .input,
-  .input:focus {
+  .search-input,
+  .search-input:focus {
+    background: transparent;
     border: 0;
     flex: 1 1 auto; // IE 10
-    font-size: var(--terra-select-input-font-size, 1.143rem);
+    font-size: var(--terra-select-search-font-size, 1.143rem);
     height: 1.375em;
-    margin-top: var(--terra-select-input-padding, 0.21428571428571427rem);
+    margin-top: var(--terra-select-search-margin-top, 0.21428571428571427rem);
     max-width: 100%; // IE 10
     min-width: 0; // IE 11
     opacity: 1;
@@ -108,15 +159,15 @@
   }
 
   // Hides the clear buttons in IE.
-  .input::-ms-clear {
+  .search::-ms-clear {
     display: none;
     height: 0;
     width: 0;
   }
 
-  .input::placeholder,
+  .search-input::placeholder,
   .placeholder {
-    color: var(--terra-select-input-placeholder-color, #bcbfc0);
+    color: var(--terra-select-search-placeholder-color, #bcbfc0);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -127,13 +178,14 @@
   .combobox,
   .multiple {
     > .display {
+      background-size: var(--terra-select-focus-background-start, 0 0);
       border: var(--terra-select-border, 1px solid #dedfe0);
       border-bottom-left-radius: var(--terra-select-border-radius, 3px);
       border-top-left-radius: var(--terra-select-border-radius, 3px);
       cursor: text;
-      display: flex; // TODO: Test in IE
+      display: flex;
       flex: 1 1 auto; // IE 10
-      padding-bottom: 0.21428571428571427rem;
+      padding: var(--terra-select-input-padding, 0 0 0.21428571428571427rem 0.42857rem);
     }
 
     > .toggle {
@@ -145,16 +197,29 @@
 
     &.is-focused {
       > .display {
-        border-color: var(--terra-select-focus-border-color, #4cb2e9);
-        box-shadow: var(--terra-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+        background-image: var(--terra-select-focus-animation-background, none);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: var(--terra-select-focus-animation-size, 0 0);
+        border-color: var(--terra-select-input-focus-border-color, #4cb2e9);
+        outline: none;
+        transition-duration: var(--terra-select-focus-transition-duration, 0s);
+        transition-property: background-size;
+        transition-timing-function: var(--terra-select-focus-transition-timing, ease);
       }
+    }
+
+    &.is-focused[dir=rtl] > .display {
+      box-shadow: var(--terra-select-focus-box-shadow-trl, 0 0 0 2px rgba(76, 178, 233, 0.25));
+    }
+
+    &.is-focused[dir=ltr] > .display {
+      box-shadow: var(--terra-select-focus-box-shadow-rtl, 0 0 0 2px rgba(76, 178, 233, 0.25));
     }
 
     &.is-open {
       > .display {
         border-bottom-left-radius: 0;
-        border-color: var(--terra-select-focus-border-color, #4cb2e9);
-        box-shadow: none;
       }
 
       > .toggle {
@@ -162,7 +227,7 @@
       }
     }
 
-    &.is-open.is-above {
+    &.is-above {
       > .display {
         border-bottom-left-radius: var(--terra-select-border-radius, 3px);
         border-top-left-radius: 0;
@@ -173,5 +238,43 @@
         border-top-right-radius: 0;
       }
     }
+
+    &:hover > .display {
+      border-color: var(--terra-select-input-hover-border-color, #dedfe0);
+    }
+
+    &.is-open:hover > .display {
+      border-color: var(--terra-select-input-focus-border-color, #4cb2e9);
+    }
+
+    &.is-focused:hover > .display {
+      border-color: var(--terra-select-input-focus-border-color, #4cb2e9);
+    }
+
+    &.is-invalid > .display {
+      background-image: var(--terra-select-invalid-focus-animation-background, none);
+      border-color: var(--terra-select-invalid-border-color, #dedfe0);
+    }
+
+    &.is-invalid.is-focused > .display {
+      background-size: var(--terra-select-invalid-focus-animation-size, 0 0);
+      border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
+    }
+
+    &.is-invalid:hover > .display {
+      border-color: var(--terra-select-invalid-hover-border-color, #4cb2e9);
+    }
+
+    &.is-invalid.is-open:hover > .display {
+      border-color: var(--terra-select-invalid-hover-border-color, #4cb2e9);
+    }
+  }
+
+  .is-invalid .arrow-icon {
+    background: var(--terra-select-invalid-arrow, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block; // IE 10
   }
 }

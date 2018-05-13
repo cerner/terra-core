@@ -128,11 +128,12 @@ class Frame extends React.Component {
 
   getDisplay() {
     const { hasSearchChanged, searchValue } = this.state;
-    const { display, placeholder, variant } = this.props;
+    const { disabled, display, placeholder, variant } = this.props;
 
     const inputAttrs = {
+      disabled,
       placeholder,
-      className: cx('input'),
+      className: cx('search-input'),
       ref: this.setInput,
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
@@ -155,8 +156,9 @@ class Frame extends React.Component {
    */
   closeDropdown() {
     this.setState({
+      isAbove: false,
+      isFocused: document.activeElement === this.input || document.activeElement === this.select,
       isOpen: false,
-      isFocused: document.activeElement === this.input,
       hasSearchChanged: false,
       searchValue: '',
     });
@@ -195,6 +197,10 @@ class Frame extends React.Component {
    * Handles the focus event.
    */
   handleFocus(event) {
+    if (this.props.disabled) {
+      return;
+    }
+
     if (!this.state.isFocused) {
       this.setState({ isFocused: true });
     }
@@ -296,6 +302,7 @@ class Frame extends React.Component {
   render() {
     const {
       disabled,
+      display,
       dropdown,
       dropdownAttrs,
       isInvalid,
