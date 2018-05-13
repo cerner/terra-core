@@ -1,21 +1,43 @@
-language: node_js
-sudo: required
-script:
-  - npm test
-  - npm run danger
+language: generic
+sudo: required 
+services: 
+  - docker
 branches:
   only:
     - master
 cache: false
-before_install:
-  - docker pull selenium/standalone-chrome:3.11.0-californium
-  - docker run -v /dev/shm:/dev/shm -e TZ=America/Chicago -d -p 4444:4444 selenium/standalone-chrome:3.11.0-californium
-before_deploy:
-  - npm run compile:prod
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local_dir: /build
-  on:
-    branch: master
+script:
+  - 'docker-compose pull'
+  - "docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test npm run $TEST_SUITE"
+env:
+  - TEST_SUITE=lint
+  - TEST_SUITE=jest
+  - TEST_SUITE=nightwatch
+  - TEST_SUITE="wdio -- --suite suite1"
+  - TEST_SUITE="wdio -- --suite suite2"
+  - TEST_SUITE="wdio -- --suite suite3"
+  - TEST_SUITE="wdio -- --suite suite4"
+  - TEST_SUITE=danger
+jobs:
+  include:
+    - stage: build
+      script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "ryanthemanuel" --password-stdin
+        - docker-compose build
+        - docker-compose push
+    - stage: deploy
+      script: skip
+      before_deploy:
+        - 'docker-compose pull'
+        - "docker-compose run --volume=$WORKSPACE/build:/app/build -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test npm run compile:prod"
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+        local_dir: build
+        on:
+          branch: master
+stages:
+  - build
+  - test
+  - deploy
