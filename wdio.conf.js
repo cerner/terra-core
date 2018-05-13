@@ -24,6 +24,8 @@ const numberOfSuites = 4;
   config.suites[`suite${index + 1}`] = [];
 });
 const itemsPerSuite = Math.ceil(packageLocations.length / numberOfSuites);
+console.log(packageLocations);
+console.log(itemsPerSuite);
 packageLocations.forEach((packageLocation, index) => config.suites[`suite${Math.floor(index / itemsPerSuite) + 1}`].concat(`${packageLocation}/tests/wdio/**/*-spec.js`));
 console.log(config);
 
