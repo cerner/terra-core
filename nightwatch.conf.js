@@ -2,8 +2,8 @@
 const webpackConfig = require('./webpack.config');
 const getPackageTestDirectories = require('terra-toolkit/lib/nightwatch/setup-helper.js').getPackageTestDirectories;
 const ip = require('ip');
-const SeleniumDockerService = require('terra-toolkit/lib/wdio/services/SeleniumDockerService');
-const ServeStaticService = require('terra-toolkit/lib/wdio/services/ServeStaticService');
+const SeleniumDockerService = require('terra-toolkit/lib/wdio/services/SeleniumDockerService').default;
+const ServeStaticService = require('terra-toolkit/lib/wdio/services/ServeStaticService').default;
 
 let srcFolders;
 const isRepoTest = !process.cwd().includes('/packages/');
