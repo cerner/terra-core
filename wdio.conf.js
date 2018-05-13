@@ -28,7 +28,7 @@ console.log(packageLocations);
 console.log(itemsPerSuite);
 packageLocations.forEach((packageLocation, index) => {
   const currentSuite = `suite${Math.floor(index / itemsPerSuite) + 1}`;
-  config config.suites[currentSuite] = config config.suites[currentSuite].concat(`${packageLocation}/tests/wdio/**/*-spec.js`);
+  config.suites[currentSuite] = config.suites[currentSuite].concat(`${packageLocation}/tests/wdio/**/*-spec.js`);
 });
 console.log(config);
 
