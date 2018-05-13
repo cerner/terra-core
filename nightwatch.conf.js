@@ -1,5 +1,4 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-const nightwatchConfig = require('terra-toolkit/lib/nightwatch/nightwatch.config.js').default;
 const webpackConfig = require('./webpack.config');
 const getPackageTestDirectories = require('terra-toolkit/lib/nightwatch/setup-helper.js').getPackageTestDirectories;
 const ip = require('ip');
