@@ -3,7 +3,8 @@ const wdioConf = require('terra-dev-site/config/wdio/wdio.conf');
 const PackageUtilities = require('lerna/lib/PackageUtilities');
 const Repository = require('lerna/lib/Repository');
 
-const packageLocations = PackageUtilities.getPackages(new Repository(__dirname)).map((pkg) => pkg._location);
+// eslint-disable-next-line no-underscore-dangle
+const packageLocations = PackageUtilities.getPackages(new Repository(__dirname)).map(pkg => pkg._location);
 
 const config = {
   ...wdioConf.config,
@@ -19,9 +20,9 @@ const config = {
 };
 
 const numberOfSuites = 4;
-[...Array(numberOfSuites)].forEach((_, index) => config.suites[`${index + 1}`] = []);
+[...Array(numberOfSuites)].forEach((_, index) => (config.suites[`${index + 1}`] = []));
 const itemsPerSuite = Math.ceil(packageLocations.length / numberOfSuites);
-packageLocations.forEach((packageLocation, index) => config.suites[`suite${floor(index / itemsPerSuite) + 1}`].concat(`${packageLocation}/tests/wdio/**/*-spec.js`));
+packageLocations.forEach((packageLocation, index) => config.suites[`suite${Math.floor(index / itemsPerSuite) + 1}`].concat(`${packageLocation}/tests/wdio/**/*-spec.js`));
 console.log(config);
 
 exports.config = config;
