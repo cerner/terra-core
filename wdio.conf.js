@@ -24,12 +24,9 @@ const numberOfSuites = 4;
   config.suites[`suite${index + 1}`] = [];
 });
 const itemsPerSuite = Math.ceil(packageLocations.length / numberOfSuites);
-console.log(packageLocations);
-console.log(itemsPerSuite);
 packageLocations.forEach((packageLocation, index) => {
   const currentSuite = `suite${Math.floor(index / itemsPerSuite) + 1}`;
   config.suites[currentSuite] = config.suites[currentSuite].concat(`${packageLocation}/tests/wdio/**/*-spec.js`);
 });
-console.log(config);
 
 exports.config = config;
