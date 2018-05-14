@@ -13,6 +13,7 @@ script:
 env:
   global:
     - DOCKER_IMAGE='ryanthemanuel/terra-core'
+    - TAG=latest
   matrix:
     - TEST_SUITE=lint
     - TEST_SUITE=jest
