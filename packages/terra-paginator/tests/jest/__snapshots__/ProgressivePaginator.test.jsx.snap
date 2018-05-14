@@ -15,16 +15,12 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           First
         </a>
         <a
-          className="nav-link is-disabled"
+          className="nav-link previous is-disabled"
           onClick={[Function]}
           tabIndex="0"
         >
-          <IconPrevious
-            className=""
-            data-name="Layer 1"
-            isBidi={true}
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="icon"
           />
         </a>
       </div>
@@ -36,16 +32,12 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
       </div>
       <div>
         <a
-          className="nav-link"
+          className="nav-link next"
           onClick={[Function]}
           tabIndex="0"
         >
-          <IconNext
-            className=""
-            data-name="Layer 1"
-            isBidi={true}
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="icon"
           />
         </a>
         <a
@@ -78,31 +70,23 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           First
         </a>
         <a
-          className="nav-link is-disabled"
+          className="nav-link previous is-disabled"
           onClick={[Function]}
           tabIndex="0"
         >
-          <IconPrevious
-            className=""
-            data-name="Layer 1"
-            isBidi={true}
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="icon"
           />
-           Previous
+          Previous
         </a>
         <a
-          className="nav-link"
+          className="nav-link next"
           onClick={[Function]}
           tabIndex="0"
         >
-          Next 
-          <IconNext
-            className=""
-            data-name="Layer 1"
-            isBidi={true}
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
+          Next
+          <span
+            className="icon"
           />
         </a>
         <a

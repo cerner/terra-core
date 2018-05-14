@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import IconNext from 'terra-icon/lib/icon/IconNext';
-import IconPrevious from 'terra-icon/lib/icon/IconPrevious';
 import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
@@ -70,10 +68,34 @@ class ProgressivePaginator extends React.Component {
         Page {selectedPage} of {totalPages}
       </div>
       <div>
-        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
-        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />} Previous</a>
-        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>Next {<IconNext />}</a>
-        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>
+        <a
+          className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
+          tabIndex="0"
+          onClick={this.handlePageChange(1)}
+        >
+          First
+        </a>
+        <a
+          className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
+          tabIndex="0"
+          onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
+        >
+          <span className={cx('icon')} />Previous
+        </a>
+        <a
+          className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
+          tabIndex="0"
+          onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
+        >
+          Next<span className={cx('icon')} />
+        </a>
+        <a
+          className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
+          tabIndex="0"
+          onClick={this.handlePageChange(totalPages)}
+        >
+          Last
+        </a>
       </div>
     </div>);
   }
@@ -84,15 +106,39 @@ class ProgressivePaginator extends React.Component {
 
     return (<div className={cx(['paginator'])}>
       <div>
-        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(1)}>First</a>
-        <a className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}>{<IconPrevious />}</a>
+        <a
+          className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
+          tabIndex="0"
+          onClick={this.handlePageChange(1)}
+        >
+          First
+        </a>
+        <a
+          className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
+          tabIndex="0"
+          onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
+        >
+          <span className={cx('icon')} />
+        </a>
       </div>
       <div>
         Page {selectedPage} of {totalPages}
       </div>
       <div>
-        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}>{<IconNext />}</a>
-        <a className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])} tabIndex="0" onClick={this.handlePageChange(totalPages)}>Last</a>
+        <a
+          className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
+          tabIndex="0"
+          onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
+        >
+          <span className={cx('icon')} />
+        </a>
+        <a
+          className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
+          tabIndex="0"
+          onClick={this.handlePageChange(totalPages)}
+        >
+          Last
+        </a>
       </div>
     </div>);
   }

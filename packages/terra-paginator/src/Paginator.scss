@@ -17,34 +17,40 @@
     .nav-link {
       background: var(--terra-paginator-nav-link-background);
       border: var(--terra-paginator-nav-link-border);
-      border-radius: var(--terra-paginator-nav-link-border-radius);
+      border-radius: var(--terra-paginator-nav-link-border-radius, 3px);
       color: var(--terra-paginator-nav-link-foreground-color, #0059a8);
       cursor: pointer;
       display: inline-block;
-      margin-left: var(--terra-paginator-nav-link-margin-left, 2px);
-      margin-right: var(--terra-paginator-nav-link-margin-right, 2px);
+      line-height: var(--terra-paginator-nav-link-line-height, 1.43);
+      margin-left: var(--terra-paginator-nav-link-margin-left, 0.14285rem);
+      margin-right: var(--terra-paginator-nav-link-margin-right, 0.14285rem);
       min-width: var(--terra-paginator-nav-link-min-width, 2rem); // Helps ensure limited resizing as you page through large numbers.
       padding: var(--terra-paginator-nav-link-padding, 3px);
       text-align: center;
       user-select: none; // Keeps user from highlighting the paging link text.
 
       &:hover {
+        background: var(--terra-paginator-nav-link-background-hover);
         color: var(--terra-paginator-nav-link-foreground-color-hover, #001f67);
-        text-decoration: underline;
+        text-decoration: var(--terra-paginator-nav-link-text-decoration-hover, underline);
       }
 
       &:focus {
         background: var(--terra-paginator-nav-link-background-focus);
+        border: var(--terra-paginator-nav-link-border-focus);
+        box-shadow: var(--terra-paginator-nav-link-box-shadow-focus, 0 0 0 2px rgba(76, 178, 233, 0.25), inset 0 0 0 1px #4cb2e9);
+        outline: none;
       }
 
       &:active {
-        color: var(--terra-paginator-nav-link-foreground-color-active, #0059a8);
-        text-decoration: var(--terra-paginator-nav-link-text-decoration-active);
+        background: var(--terra-paginator-nav-link-background-active, rgba(0, 0, 0, 0.07));
+        color: var(--terra-paginator-nav-link-foreground-color-active, #001f67);
+        text-decoration: var(--terra-paginator-nav-link-text-decoration-active, underline);
       }
     }
 
     .is-selected {
-      color: initial;
+      color: var(--terra-paginator-nav-link-selected-color, initial);
       cursor: initial;
       pointer-events: none;
 
@@ -61,16 +67,21 @@
       color: var(--terra-paginator-nav-link-foreground-color-disabled, rgba(28, 31, 33, 0.2));
       cursor: default;
       pointer-events: none;
+
+      &:focus {
+        box-shadow: var(--terra-paginator-nav-link-disabled-box-shadow-focus, initial);
+        outline: none;
+      }
     }
 
     .left-controls {
-      margin-left: var(--terra-paginator-nav-link-left-controls-margin-left, 2px);
-      margin-right: var(--terra-paginator-nav-link-left-controls-margin-right, 8px);
+      margin-left: var(--terra-paginator-nav-link-left-controls-margin-left, 0.14286rem);
+      margin-right: var(--terra-paginator-nav-link-left-controls-margin-right, 0.57143rem);
     }
 
     .right-controls {
-      margin-left: var(--terra-paginator-nav-link-left-controls-margin-left, 8px);
-      margin-right: var(--terra-paginator-nav-link-left-controls-margin-right, 2px);
+      margin-left: var(--terra-paginator-nav-link-right-controls-margin-left, 0.57143rem);
+      margin-right: var(--terra-paginator-nav-link-right-controls-margin-right, 0.14286rem);
     }
   }
 
