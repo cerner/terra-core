@@ -1,5 +1,5 @@
 # use node as base image
-FROM node:8.4.0
+FROM node:8.9.2
 
 # Prepare Directory for Source Code
 ENV APP_HOME /app
