@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import Heading from 'terra-heading';
 import ReadMe from 'terra-collapsible-menu-view/docs/README.md';
 import { name } from 'terra-collapsible-menu-view/package.json';
 
@@ -14,16 +13,6 @@ import CollapsibleMenuViewToggleSrc from '!raw-loader!terra-collapsible-menu-vie
 // Example Files
 import BasicView from './CollapsibleMenuViewDemo';
 import BasicViewSrc from '!raw-loader!./CollapsibleMenuViewDemo';
-
-const divider = (
-  <div>
-    <Heading level={2} size="large">CollapsibleMenuView.Divider Props</Heading>
-    <p>
-    The divider is a purely visual element with no props available.
-    This component should be used to indicate where a divider should be placed between items.
-    </p>
-  </div>
-);
 
 const DocPage = () => (
   <DocTemplate
