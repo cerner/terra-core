@@ -22,10 +22,6 @@ const seleniumHost = ip.address();
 // eslint-disable-next-line no-console
 console.warn('WARNING: WebdriverIO should be used instead of Nightwatch.  Nightwatch will be deprecated in the future.');
 
-if (providedPort) {
-  port = providedPort;
-}
-
 const seleniumDocker = new SeleniumDockerService();
 const expressDevService = new ServeStaticService();
 
