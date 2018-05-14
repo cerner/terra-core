@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ToggleButton from 'terra-toggle-button';
-import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
 import { okaidia } from 'react-syntax-highlighter/styles/prism';
+import jsx from 'react-syntax-highlighter/languages/prism/jsx';
+
+registerLanguage('jsx', jsx);
 
 const propTypes = {
   /**
