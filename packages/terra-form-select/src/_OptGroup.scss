@@ -1,12 +1,12 @@
 :local {
   .opt-group {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: var(--terra-select-optgroup-margin, 0);
+    padding: var(--terra-select-optgroup-padding, 0);
     user-select: none;
 
     &:not(:first-child) > .label {
-      border-top: 0.1428571429rem solid #dedfe0;
+      border-top: var(--terra-select-optgroup-label-border-top, 0.1428571429rem solid #dedfe0);
     }
   }
 
@@ -22,8 +22,8 @@
 
   .options {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: var(--terra-select-optgroup-options-margin, 0);
+    padding: var(--terra-select-optgroup-options-padding, 0);
   }
 
   .is-disabled {

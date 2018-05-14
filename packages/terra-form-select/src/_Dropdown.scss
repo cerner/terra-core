@@ -18,6 +18,6 @@
     border-bottom-right-radius: 0;
     border-top-left-radius: var(--terra-select-dropdown-border-radius, 3px);
     border-top-right-radius: var(--terra-select-dropdown-border-radius, 3px);
-    box-shadow: var(--terra-select-dropdown-box-shadow-above, 0 -3px 12px -5px rgba(0, 0, 0, 0.25));
+    box-shadow: var(--terra-select-dropdown-above-box-shadow, 0 -3px 12px -5px rgba(0, 0, 0, 0.25));
   }
 }

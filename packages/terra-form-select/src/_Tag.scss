@@ -36,8 +36,8 @@
     padding: var(--terra-select-tag-deselect-padding, 0.2142857rem 0.5rem);
 
     &:hover {
-      background: var(--terra-select-tag-deselect-background-hover, #b9bbbc);
-      border-bottom: var(--terra-select-tag-deselect-border-bottom-hover, 0.14286rem solid #8f8f90);
+      background: var(--terra-select-tag-deselect-hover-background, #b9bbbc);
+      border-bottom: var(--terra-select-tag-deselect-hover-border-bottom-hover, 0.14286rem solid #8f8f90);
     }
   }
 
