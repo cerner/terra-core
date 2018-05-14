@@ -206,6 +206,7 @@
     &.is-open {
       > .display {
         border-bottom-left-radius: 0;
+        box-shadow: none;
       }
 
       > .toggle {
