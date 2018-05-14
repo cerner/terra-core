@@ -27,8 +27,8 @@ jobs:
     - stage: build
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "ryanthemanuel" --password-stdin
-        - 'ls'
         - 'curl -o $TRAVIS_BUILD_DIR/docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/wdio/ci-docker-compose.yml'
+        - 'ls'
         - docker-compose build
         - docker-compose push
     - stage: deploy
