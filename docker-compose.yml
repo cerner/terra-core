@@ -13,6 +13,7 @@ services:
       - '/dev/shm:/dev/shm'
     # Necessary to lock down screen sizes for our screen shot comparisons.
     environment:
+      TZ: 'America/Chicago'
       SCREEN_WIDTH: 1070
       SCREEN_HEIGHT: 1020
   test:
