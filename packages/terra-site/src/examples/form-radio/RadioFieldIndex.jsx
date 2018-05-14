@@ -1,9 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
 import ReadMe from 'terra-form-radio/docs/RadioField.md';
-import IndexTemplate from 'terra-dev-site/src/IndexPageTemplate';
+import DocTemplate from 'terra-doc-template';
 
 // Component Source
 import RadioFieldSrc from '!raw-loader!terra-form-radio/src/RadioField';
@@ -19,25 +17,34 @@ import OptionalRadioField from './radio_field_examples/OptionalRadioField';
 import OptionalRadioFieldSrc from '!raw-loader!./radio_field_examples/OptionalRadioField.jsx';
 
 const RadioFieldExamples = () => (
-  <div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={RadioFieldSrc} />
-    <IndexTemplate
-      title="Default RadioField Example"
-      example={<DefaultRadioField />}
-      exampleSrc={DefaultRadioFieldSrc}
-    />
-    <IndexTemplate
-      title="Controlled RadioField Example"
-      example={<ControlledRadioField />}
-      exampleSrc={ControlledRadioFieldSrc}
-    />
-    <IndexTemplate
-      title="Optional RadioField Example"
-      example={<OptionalRadioField />}
-      exampleSrc={OptionalRadioFieldSrc}
-    />
-  </div>
+  <DocTemplate
+    id="props"
+    readme={ReadMe}
+    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-radio/src/RadioField.jsx"
+    examples={[
+      {
+        title: 'Default RadioField Example',
+        example: <DefaultRadioField />,
+        exampleSrc: DefaultRadioFieldSrc,
+      },
+      {
+        title: 'Controlled RadioField Example',
+        example: <ControlledRadioField />,
+        exampleSrc: ControlledRadioFieldSrc,
+      },
+      {
+        title: 'Optional RadioField Example',
+        example: <OptionalRadioField />,
+        exampleSrc: OptionalRadioFieldSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'RadioField',
+        componentSrc: RadioFieldSrc,
+      },
+    ]}
+  />
 );
 
 export default RadioFieldExamples;
