@@ -17,29 +17,13 @@ class DismissibleExample extends React.Component {
   }
 
   render() {
-    const alertStartTagStr = '<Alert type={Alert.Opts.Types.SUCCESS} onDismiss={this.handleDismiss} >';
-    const alertEndTagStr = '</Alert>';
     const alertText = 'This is a success alert. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.';
-    let alertElem = '';
-    if (!this.state.isDismissed) {
-      alertElem = <Alert type={Alert.Opts.Types.SUCCESS} onDismiss={this.handleDismiss} >{alertText}</Alert>;
+    if (this.state.isDismissed) {
+      return null;
     }
+
     return (
-      <div>
-        <div dir="ltr">
-          <h3>Alert of type success that is dismissible</h3>
-          <br />
-          <code>
-            {alertStartTagStr}
-            <br />
-            &nbsp;&nbsp;{alertText}
-            <br />
-            {alertEndTagStr}
-          </code>
-        </div>
-        <br />
-        {alertElem}
-      </div>
+      <Alert type={Alert.Opts.Types.SUCCESS} onDismiss={this.handleDismiss} >{alertText}</Alert>
     );
   }
 }

@@ -3,7 +3,7 @@ import ResponsiveElement from 'terra-responsive-element';
 
 import './ResponsiveExample.scss';
 
-class ResponsiveExample extends React.Component {
+class Example extends React.Component {
   constructor() {
     super();
     this.state = { size: 'medium' };
@@ -27,11 +27,13 @@ class ResponsiveExample extends React.Component {
           <option value="huge">Huge</option>
         </select>
         <div className={`terra-responsive-example-container terra-responsive-example-container--${this.state.size}`}>
-          <ResponsiveElement {...this.props} />
+          <ResponsiveElement
+            medium={<div>Medium</div>}
+          />
         </div>
       </div>
     );
   }
 }
 
-export default ResponsiveExample;
+export default Example;

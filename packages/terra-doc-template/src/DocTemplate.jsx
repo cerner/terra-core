@@ -34,7 +34,7 @@ const propTypes = {
     PropTypes.shape(
       {
         title: PropTypes.string,
-        description: PropTypes.string,
+        description: PropTypes.node,
         example: PropTypes.element,
         source: PropTypes.string,
       },
