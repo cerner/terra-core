@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should display the required icon for fields with hideRequired, but have a state of invalid 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      <span
+        className="error-icon"
+      />
+      <span
+        className="required"
+      >
+        *
+      </span>
+      Hidden Required CheckboxField
+    </div>
+  </legend>
+</fieldset>
+`;
+
 exports[`should hide the legend when requested 1`] = `
 <fieldset
   className="radio-field"
@@ -13,6 +37,9 @@ exports[`should hide the legend when requested 1`] = `
     >
       Hidden Legend legend
     </div>
+    <span
+      className="error-icon-hidden"
+    />
   </legend>
 </fieldset>
 `;
@@ -34,6 +61,9 @@ exports[`should hide the required indicator when requested 1`] = `
         *
       </span>
     </div>
+    <span
+      className="error-icon-hidden"
+    />
   </legend>
 </fieldset>
 `;
@@ -50,6 +80,9 @@ exports[`should render a default radio field 1`] = `
     >
       Default RadioField
     </div>
+    <span
+      className="error-icon-hidden"
+    />
   </legend>
 </fieldset>
 `;
@@ -66,6 +99,9 @@ exports[`should render a help message 1`] = `
     >
       Help RadioField
     </div>
+    <span
+      className="error-icon-hidden"
+    />
   </legend>
   <div
     className="help-text"
@@ -90,9 +126,6 @@ exports[`should render an invalid radio field 1`] = `
       />
       Invalid RadioField
     </div>
-    <span
-      className="error-icon-hidden"
-    />
   </legend>
   <div
     className="error-text"
@@ -119,6 +152,9 @@ exports[`should render an optional part on the label 1`] = `
         (optional)
       </span>
     </div>
+    <span
+      className="error-icon-hidden"
+    />
   </legend>
 </fieldset>
 `;
@@ -140,6 +176,9 @@ exports[`should render required radio field 1`] = `
       </span>
       Required RadioField
     </div>
+    <span
+      className="error-icon-hidden"
+    />
   </legend>
 </fieldset>
 `;
@@ -157,6 +196,9 @@ exports[`should render the legend with custom attributes properly 1`] = `
     >
       Custom Legend RadioField
     </div>
+    <span
+      className="error-icon-hidden"
+    />
   </legend>
 </fieldset>
 `;

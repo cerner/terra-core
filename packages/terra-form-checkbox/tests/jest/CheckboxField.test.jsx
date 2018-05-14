@@ -38,6 +38,12 @@ it('should hide the required indicator when requested', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should display the required icon for fields with hideRequired, but have a state of invalid', () => {
+  const checkBox = (<CheckboxField legend="Hidden Required CheckboxField" required hideRequired isInvalid />);
+  const wrapper = shallow(checkBox, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render the legend with custom attributes properly', () => {
   const checkBox = (<CheckboxField legend="Custom Legend CheckboxField" legendAttrs={{ class: 'application-legend' }} />);
   const wrapper = shallow(checkBox, intlContexts.shallowContext);

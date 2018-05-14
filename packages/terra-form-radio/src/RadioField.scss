@@ -45,10 +45,6 @@
     width: var(--terra-form-radio-field-error-icon-width, 1em);
   }
 
-  .error-icon-hidden {
-    visibility: hidden;
-  }
-
   .required,
   .required-hidden {
     color: var(--terra-form-radio-field-label-required-color , #e50000);
@@ -56,6 +52,11 @@
     padding-right: var(--terra-form-radio-field-label-required-padding-right, 0.357em);
   }
 
+  /**
+   * We need these to be visually hidden so that inputs do not auto expand
+   * or shrink when the elements state changes from valid to invalid.
+   */
+  .error-icon-hidden,
   .required-hidden {
     visibility: hidden;
   }

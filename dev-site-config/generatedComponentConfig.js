@@ -220,6 +220,7 @@ import FillProvider from '../packages/terra-embedded-content-consumer/tests/nigh
 import OnReadyProvider from '../packages/terra-embedded-content-consumer/tests/nightwatch/providers/OnReadyProvider';
 import ControlledCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/ControlledCheckboxField.example';
 import HiddenLegend from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/HiddenLegend.example';
+import HideRequiredInvalidCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/HideRequiredInvalidCheckboxField.example';
 import OptionalCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/OptionalCheckboxField.example';
 import DefaultCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/DefaultCheckbox';
 import DisabledCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/DisabledCheckbox';
@@ -248,6 +249,7 @@ import MultipleRadios from '../packages/terra-form-radio/examples/test-examples/
 import PopulatedRadio from '../packages/terra-form-radio/examples/test-examples/PopulatedRadio.example';
 import ControlledRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/ControlledRadioField.example';
 import HiddenLegend1 from '../packages/terra-form-radio/examples/test-examples/radio-field/HiddenLegend.example';
+import HideRequiredInvalidRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/HideRequiredInvalidRadioField.example';
 import OptionalRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/OptionalRadioField.example';
 import DefaultSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/DefaultSelectOption';
 import DisabledSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/DisabledSelectOption';
@@ -1397,6 +1399,11 @@ const componentConfig = {
             component: HiddenLegend,
           },
           {
+            name: 'Hide Required Invalid Checkbox Field',
+            path: '/hide-required-invalid-checkbox-field',
+            component: HideRequiredInvalidCheckboxField,
+          },
+          {
             name: 'Optional Checkbox Field',
             path: '/optional-checkbox-field',
             component: OptionalCheckboxField,
@@ -1565,6 +1572,11 @@ const componentConfig = {
             name: 'Hidden Legend',
             path: '/hidden-legend',
             component: HiddenLegend1,
+          },
+          {
+            name: 'Hide Required Invalid Radio Field',
+            path: '/hide-required-invalid-radio-field',
+            component: HideRequiredInvalidRadioField,
           },
           {
             name: 'Optional Radio Field',

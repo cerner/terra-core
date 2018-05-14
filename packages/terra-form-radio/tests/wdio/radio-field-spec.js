@@ -3,7 +3,7 @@
 const viewports = Terra.viewports('tiny', 'large');
 
 describe('RadioField', () => {
-  describe('Valid', () => {
+  describe('RadioField Valid', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-radio/radio-field/controlled-radio-field');
     });
@@ -38,7 +38,7 @@ describe('RadioField', () => {
     });
   });
 
-  describe('Interactions - Valid State', () => {
+  describe('RadioField Interactions - Valid State', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-radio/radio-field/controlled-radio-field');
       browser.waitForVisible('#testing-radio-field');
@@ -51,7 +51,31 @@ describe('RadioField', () => {
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
   });
 
-  describe('Optional', () => {
+  describe('RadioField Interactions - Valid State with hideRequired', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/form-radio/radio-field/hide-required-invalid-radio-field');
+      browser.waitForVisible('#testing-radio-field');
+      browser.click('#website-dept');
+      browser.click('#ux-dept');
+    });
+
+    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+  });
+
+  describe('RadioField Interactions - Invalid State with hideRequired', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/form-radio/radio-field/hide-required-invalid-radio-field');
+      browser.waitForVisible('#testing-radio-field');
+      browser.click('#website-dept');
+      browser.click('#ux-dept');
+      browser.click('#website-dept');
+      browser.click('#ux-dept');
+    });
+
+    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+  });
+
+  describe('RadioField Optional', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-radio/radio-field/optional-radio-field');
     });
@@ -60,7 +84,7 @@ describe('RadioField', () => {
     Terra.should.beAccessible({ viewports });
   });
 
-  describe('Hidden Legend', () => {
+  describe('RadioField Hidden Legend', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-radio/radio-field/hidden-legend');
     });

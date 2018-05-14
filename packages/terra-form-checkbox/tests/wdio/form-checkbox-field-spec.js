@@ -3,7 +3,7 @@
 const viewports = Terra.viewports('tiny', 'large');
 
 describe('CheckboxField', () => {
-  describe('Valid', () => {
+  describe('CheckboxField Valid', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-checkbox/checkbox-field/controlled-checkbox-field');
     });
@@ -38,7 +38,7 @@ describe('CheckboxField', () => {
     });
   });
 
-  describe('Interactions - Invalid State', () => {
+  describe('CheckboxField Interactions - Valid State', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-checkbox/checkbox-field/controlled-checkbox-field');
       browser.waitForVisible('#testing-checkbox-field');
@@ -49,7 +49,7 @@ describe('CheckboxField', () => {
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
   });
 
-  describe('Interactions - Valid State', () => {
+  describe('CheckboxField Interactions - Invalid State', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-checkbox/checkbox-field/controlled-checkbox-field');
       browser.waitForVisible('#testing-checkbox-field');
@@ -62,7 +62,31 @@ describe('CheckboxField', () => {
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
   });
 
-  describe('Optional', () => {
+  describe('CheckboxField Interactions - Valid State with hideRequired', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/form-checkbox/checkbox-field/hide-required-invalid-checkbox-field');
+      browser.waitForVisible('#testing-checkbox-field');
+      browser.click('#website-dept');
+      browser.click('#ux-dept');
+    });
+
+    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+  });
+
+  describe('CheckboxField Interactions - Invalid State with hideRequired', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/form-checkbox/checkbox-field/hide-required-invalid-checkbox-field');
+      browser.waitForVisible('#testing-checkbox-field');
+      browser.click('#website-dept');
+      browser.click('#ux-dept');
+      browser.click('#website-dept');
+      browser.click('#ux-dept');
+    });
+
+    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+  });
+
+  describe('CheckboxField Optional', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-checkbox/checkbox-field/optional-checkbox-field');
     });
@@ -71,7 +95,7 @@ describe('CheckboxField', () => {
     Terra.should.beAccessible({ viewports });
   });
 
-  describe('Hidden Legend', () => {
+  describe('CheckboxField Hidden Legend', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/form-checkbox/checkbox-field/hidden-legend');
     });

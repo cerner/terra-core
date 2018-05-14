@@ -44,6 +44,12 @@ it('should render the legend with custom attributes properly', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should display the required icon for fields with hideRequired, but have a state of invalid', () => {
+  const checkBox = (<RadioField legend="Hidden Required CheckboxField" required hideRequired isInvalid />);
+  const wrapper = shallow(checkBox, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should hide the legend when requested', () => {
   const radioField = (<RadioField legend="Hidden Legend legend" legendAttrs={{ class: 'application-legend' }} isLegendHidden />);
   const wrapper = shallow(radioField, intlContexts.shallowContext);
