@@ -195,10 +195,10 @@ class MenuUtil {
    */
   static shouldAllowFreeText(props, children) {
     const { searchValue, value, variant } = props;
-    if (searchValue.trim().length === 0) {
-      return false;
-    } else if (variant === Variants.TAG || variant === Variants.COMBOBOX) {
-      return !(MenuUtil.findByDisplay(children, searchValue) || MenuUtil.includes(value, searchValue));
+
+    if (variant === Variants.TAG || variant === Variants.COMBOBOX) {
+      const option = MenuUtil.findByDisplay(children, searchValue) || MenuUtil.includes(value, searchValue);
+      return !option && (searchValue || '').trim().length > 0;
     }
     return false;
   }
@@ -211,7 +211,11 @@ class MenuUtil {
    */
   static shouldShowNoResults(props, children) {
     const { variant } = props;
-    return children.length === 0 && variant !== Variants.TAG && variant !== Variants.COMBOBOX;
+
+    if (variant !== Variants.TAG && variant !== Variants.COMBOBOX) {
+      return children.length === 0;
+    }
+    return false;
   }
 }
 

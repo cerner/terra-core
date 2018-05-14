@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should render a combobox variant 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="tag"
+/>
+`;
+
+exports[`Select should render a combobox variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Placeholder"
+  value={Array []}
+  variant="tag"
+/>
+`;
+
+exports[`Select should render a default variant 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value=""
+  variant="default"
+/>
+`;
+
+exports[`Select should render a default variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Placeholder"
+  value=""
+  variant="default"
+/>
+`;
+
+exports[`Select should render a disabled combobox variant 1`] = `
+<Frame
+  disabled={true}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="tag"
+/>
+`;
+
+exports[`Select should render a disabled default variant 1`] = `
+<Frame
+  disabled={true}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value=""
+  variant="default"
+/>
+`;
+
+exports[`Select should render a disabled multiple variant 1`] = `
+<Frame
+  disabled={true}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="multiple"
+/>
+`;
+
+exports[`Select should render a disabled search variant 1`] = `
+<Frame
+  disabled={true}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value=""
+  variant="search"
+/>
+`;
+
+exports[`Select should render a disabled tag variant 1`] = `
+<Frame
+  disabled={true}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="tag"
+/>
+`;
+
+exports[`Select should render a multiple variant 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="multiple"
+/>
+`;
+
+exports[`Select should render a multiple variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Placeholder"
+  value={Array []}
+  variant="multiple"
+/>
+`;
+
+exports[`Select should render a search variant 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value=""
+  variant="search"
+/>
+`;
+
+exports[`Select should render a search variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Placeholder"
+  value=""
+  variant="search"
+/>
+`;
+
+exports[`Select should render a tag variant 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="tag"
+/>
+`;
+
+exports[`Select should render a tag variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Placeholder"
+  value={Array []}
+  variant="tag"
+/>
+`;
+
+exports[`Select should render an invalid combobox variant 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={true}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="tag"
+/>
+`;
+
+exports[`Select should render an invalid default variant 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={true}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value=""
+  variant="default"
+/>
+`;
+
+exports[`Select should render an invalid multiple variant 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={true}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="multiple"
+/>
+`;
+
+exports[`Select should render an invalid search variant 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={true}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value=""
+  variant="search"
+/>
+`;
+
+exports[`Select should render an invalid tag variant 1`] = `
+<Frame
+  disabled={false}
+  display={Array []}
+  dropdown={[Function]}
+  isInvalid={true}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value={Array []}
+  variant="tag"
+/>
+`;

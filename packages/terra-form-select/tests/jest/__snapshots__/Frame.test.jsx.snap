@@ -1,0 +1,795 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Frame should render a combobox variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a combobox variant with a placeholder 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        placeholder="Placeholder"
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a custom dropdown 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag is-invalid"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a default variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select default"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="0"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <div
+      className="placeholder"
+    />
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a default variant with a placeholder 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select default"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="0"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <div
+      className="placeholder"
+    >
+      Placeholder
+    </div>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a disabled combobox variant 1`] = `
+<div
+  aria-disabled={true}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag is-disabled"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={true}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a disabled default variant 1`] = `
+<div
+  aria-disabled={true}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select default is-disabled"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <div
+      className="placeholder"
+    />
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a disabled multiple variant 1`] = `
+<div
+  aria-disabled={true}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select multiple is-disabled"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={true}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a disabled search variant 1`] = `
+<div
+  aria-disabled={true}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select search is-disabled"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <input
+      className="search-input"
+      disabled={true}
+      onChange={[Function]}
+      onMouseDown={[Function]}
+    />
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a disabled tag variant 1`] = `
+<div
+  aria-disabled={true}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag is-disabled"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={true}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a multiple variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select multiple"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a multiple variant with a placeholder 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select multiple"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        placeholder="Placeholder"
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a search variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select search"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <input
+      className="search-input"
+      disabled={false}
+      onChange={[Function]}
+      onMouseDown={[Function]}
+    />
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a search variant with a placeholder 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select search"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <input
+      className="search-input"
+      disabled={false}
+      onChange={[Function]}
+      onMouseDown={[Function]}
+      placeholder="Placeholder"
+    />
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a tag variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a tag variant with a placeholder 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        placeholder="Placeholder"
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render an invalid combobox variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag is-invalid"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render an invalid default variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select default is-invalid"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="0"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <div
+      className="placeholder"
+    />
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render an invalid multiple variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select multiple is-invalid"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render an invalid search variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select search is-invalid"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <input
+      className="search-input"
+      disabled={false}
+      onChange={[Function]}
+      onMouseDown={[Function]}
+    />
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render an invalid tag variant 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select tag is-invalid"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="-1"
+>
+  <div
+    className="display"
+    onMouseDown={[Function]}
+  >
+    <ul
+      className="tags"
+    >
+      <input
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </ul>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+</div>
+`;
