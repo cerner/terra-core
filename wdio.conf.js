@@ -10,7 +10,7 @@ const config = {
   ...wdioConf.config,
 
   seleniumDocker: {
-    enabled: false,
+    enabled: !process.env.TRAVIS,
   },
 
   host: 'standalone-chrome',
