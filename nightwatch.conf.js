@@ -14,8 +14,7 @@ if (isRepoTest) {
   srcFolders = 'tests/nightwatch/';
 }
 
-let port = 8080;
-
+const port = 8080;
 const seleniumPort = 4444;
 const seleniumHost = ip.address();
 
@@ -32,7 +31,7 @@ const startDriverAndServer = (done) => {
   });
 
   const dockerPromise = seleniumDocker.onPrepare({
-    host: process.env.TRAVIS ? 'standalone-chrome' : seleniumHost,
+    host: seleniumHost,
     port: seleniumPort,
     path: '/wd/hub',
     seleniumDocker: {
@@ -66,7 +65,7 @@ const config = {
   detailed_output: !process.env.TRAVIS && !process.env.CI,
   test_settings: {
     default: {
-      launch_url: `http://${process.env.TRAVIS ? 'standalone-chrome' : seleniumHost}:${port}`,
+      launch_url: `http://${seleniumHost}:${port}`,
       persist_globals: true,
       selenium_port: seleniumPort,
       selenium_host: process.env.TRAVIS ? 'standalone-chrome' : seleniumHost,
