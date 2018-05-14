@@ -28,7 +28,6 @@ jobs:
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "ryanthemanuel" --password-stdin
         - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/wdio/ci-docker-compose.yml'
-        - 'ls'
         - docker-compose build
         - docker-compose push
     - stage: deploy
