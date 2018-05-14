@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Add 15px padding to template
+* Limit syntax hilighting support to jsx only to limit package size.
 
 1.1.0 - (May 9, 2018)
 ------------------

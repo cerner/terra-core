@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from '../../../lib/ProgressBar';
+import ProgressBar from '../../lib/ProgressBar';
 
 const ProgressBarSize = () => (
   <div>

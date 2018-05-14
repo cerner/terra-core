@@ -621,3 +621,16 @@ $bundled-themes: false !default;
 @mixin terra-inline-svg-var($var, $svg) {
   #{$var}: inline-svg(#{$svg});
 }
+
+
+// stylelint-disable scss/at-mixin-pattern
+@mixin themeStyles {
+  /* stylelint-disable suitcss/custom-property-no-outside-root */
+  :global {
+    #{$selector} {
+      @content;
+    }
+  }
+  /* stylelint-enable suitcss/custom-property-no-outside-root */
+}
+// stylelint-enable scss/at-mixin-pattern
