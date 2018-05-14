@@ -23,4 +23,6 @@ const mergedConfig = (env, argv) => (
   merge(defaultWebpackConfig(env, argv), coreConfig())
 );
 
+console.log('This config has been found.  Through magic!!!!!!!!!!!!!!!!!!!!!');
+
 module.exports = mergedConfig;
