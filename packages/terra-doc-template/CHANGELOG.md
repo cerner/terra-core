@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Add 15px padding to template
 
 1.1.0 - (May 9, 2018)
 ------------------
