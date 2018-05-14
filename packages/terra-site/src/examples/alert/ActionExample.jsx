@@ -18,9 +18,23 @@ class ActionExample extends React.Component {
   }
 
   render() {
+    const alertStartTagStr = '<Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >';
+    const alertEndTagStr = '</Alert>';
     const alertText = 'This is a warning. It is configured with a custom Action button.';
     return (
       <div>
+        <div dir="ltr">
+          <h3>Basic Alert of type warning with action button</h3>
+          <br />
+          <code>
+            {alertStartTagStr}
+            <br />
+            &nbsp;&nbsp;{alertText}.
+            <br />
+            {alertEndTagStr}
+          </code>
+        </div>
+        <br />
         <Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >
           {alertText}
         </Alert>

@@ -138,34 +138,47 @@ class BuildYourOwnAlertExample extends React.Component {
         </Toggle>
       </span>
     );
+    const alertTypePropStr = this.state.type ? `type={Alert.Opts.Types.${this.state.type.toUpperCase()}}` : '';
+    const alertTitlePropStr = this.state.title ? `title="${this.state.title}"` : '';
+    const alertOnDismissPropStr = this.state.isDismissible ? 'onDismiss={this.handleDismiss}' : '';
     const onDismissHandler = this.state.isDismissible ? this.handleDismiss : undefined;
     const actionButton = this.state.showActionButton ? (<Button text="Action" variant="emphasis" onClick={this.actionFunc} />) : undefined;
+    const alertActionPropStr = this.state.showActionButton ? 'action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />}' : '';
     const customPropsDisplayStyle = { display: this.state.type === Alert.Opts.Types.CUSTOM ? 'table-row' : 'none' };
+    const customStatusColorPropStr = this.state.customStatusColor ? `customStatusColor="${this.state.customStatusColor}"` : '';
     const actionCounterText = this.state.showActionButton ? `Action button has been clicked ${this.state.actionButtonClickCount} times.` : '';
     let alertElem = '';
+    let alertContentPropStr = '';
     let textContentEntryField = '';
     let contentValue = '';
     let customIcon = null;
+    let customIconPropStr = '';
 
     if (this.state.contentType === 'enterText') {
       textContentEntryField = (<input type="text" style={{ width: '300px' }} placeholder="Enter Alert content" value={this.state.content} onChange={this.handleTextContentChange} />);
       contentValue = this.state.content;
+      alertContentPropStr = contentValue;
     } else {
       contentValue = gettysburgAddress;
+      alertContentPropStr = '  <span>Four score and seven years ago our fathers brought forth on this continent, a new nation, . . . </span>';
     }
 
     switch (this.state.customIcon) {
       case 'help':
         customIcon = (<IconHelp />);
+        customIconPropStr = 'customIcon={<IconHelp />}';
         break;
       case 'critical':
         customIcon = (<IconCritical />);
+        customIconPropStr = 'customIcon={<IconCritical />}';
         break;
       case 'overdue':
         customIcon = (<IconOverDue />);
+        customIconPropStr = 'customIcon={<IconOverDue />}';
         break;
       case 'clock':
         customIcon = (<IconClock />);
+        customIconPropStr = 'customIcon={<IconClock />}';
         break;
       default:
         break;
@@ -181,8 +194,23 @@ class BuildYourOwnAlertExample extends React.Component {
 
     return (
       <div>
-        {alertElem}
-        <p>{actionCounterText}</p>
+        <div>
+          <div dir="ltr">
+            <h3>Build your own Alert</h3>
+            <br />
+            <code>
+              &lt;Alert {alertTypePropStr} {alertTitlePropStr} {alertOnDismissPropStr} {alertActionPropStr} {customIconPropStr} {customStatusColorPropStr} &gt;
+              <br />
+              &nbsp;&nbsp;{alertContentPropStr}
+              <br />
+              &lt;/Alert&gt;
+            </code>
+          </div>
+          <br />
+          {alertElem}
+          <br />
+          <p>{actionCounterText}</p>
+        </div>
         <br />
         <div style={{ marginTop: '10px' }}>
           <h4>Configure the above Alert by making selections in this form</h4>

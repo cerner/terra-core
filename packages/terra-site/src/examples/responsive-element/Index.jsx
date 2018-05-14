@@ -8,14 +8,7 @@ import { name } from 'terra-responsive-element/package.json';
 import ResponsiveElementSrc from '!raw-loader!terra-responsive-element/src/ResponsiveElement';
 
 // Example Files
-import AllParentResponsiveExample from './AllParentResponsiveExample';
-import AllParentResponsiveExampleSrc from '!raw-loader!./AllParentResponsiveExample';
-import DefaultMediumResponsiveExample from './DefaultMediumResponsiveExample';
-import DefaultMediumResponsiveExampleSrc from '!raw-loader!./DefaultMediumResponsiveExample';
-import MediumResponsiveExample from './MediumResponsiveExample';
-import MediumResponsiveExampleSrc from '!raw-loader!./MediumResponsiveExample';
-import AllWindowResponsiveExample from './AllWindowResponsiveExample';
-import AllWindowResponsiveExampleSrc from '!raw-loader!./AllWindowResponsiveExample';
+import ResponsiveExample from './ResponsiveExample';
 
 const DocPage = () => (
   <DocTemplate
@@ -26,24 +19,45 @@ const DocPage = () => (
       {
         title: 'Responsive to Parent',
         description: 'All Breakpoints',
-        example: <AllParentResponsiveExample />,
-        source: AllParentResponsiveExampleSrc,
+        example: (
+          <ResponsiveExample
+            defaultElement={<div>Default</div>}
+            tiny={<div>Tiny</div>}
+            small={<div>Small</div>}
+            medium={<div>Medium</div>}
+            large={<div>Large</div>}
+            huge={<div>Huge</div>}
+          />
+        ),
       },
       {
         title: 'Default and Medium Breakpoints',
-        example: <DefaultMediumResponsiveExample />,
-        source: DefaultMediumResponsiveExampleSrc,
+        example: (
+          <ResponsiveExample
+            defaultElement={<div>Default</div>}
+            medium={<div>Medium</div>}
+          />
+        ),
       },
       {
         title: 'Medium Breakpoints',
-        example: <MediumResponsiveExample />,
-        source: MediumResponsiveExampleSrc,
+        description: <p>Note: Does not render elements when smaller than medium.</p>,
+        example: <ResponsiveExample medium={<div>Medium</div>} />,
       },
       {
         title: 'Responsive to Window',
-        description: 'Note: Changing the container size has no effect when responsive to window. Resize the window to examine changes.',
-        example: <AllWindowResponsiveExample />,
-        source: AllWindowResponsiveExampleSrc,
+        description: <p>Note: Changing the container size has no effect when responsive to window. Resize the window to examine changes.</p>,
+        example: (
+          <ResponsiveExample
+            responsiveTo="window"
+            defaultElement={<div>Default</div>}
+            tiny={<div>Tiny</div>}
+            small={<div>Small</div>}
+            medium={<div>Medium</div>}
+            large={<div>Large</div>}
+            huge={<div>Huge</div>}
+          />
+        ),
       },
     ]}
     propsTables={[
