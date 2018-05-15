@@ -9,10 +9,10 @@ cache: false
 script:
   - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
   - 'docker-compose pull'
-  - "docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG base npm run $TEST_SUITE"
+  - "docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test-chrome npm run $TEST_SUITE"
 env:
   global:
-    - DOCKER_IMAGE='ryanthemanuel/terra-toolkit'
+    - DOCKER_IMAGE='cerner/terra-core'
     - TAG="${TRAVIS_BUILD_ID:=latest}"
   matrix:
     - TEST_SUITE=lint
@@ -36,7 +36,7 @@ jobs:
       before_deploy:
         - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
         - 'docker-compose pull'
-        - "docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/app/build -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test npm run compile:prod"
+        - "docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/app/build -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test-chrome npm run compile:prod"
       deploy:
         provider: pages
         skip_cleanup: true
