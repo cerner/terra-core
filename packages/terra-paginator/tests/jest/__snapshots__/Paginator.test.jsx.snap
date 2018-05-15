@@ -80,7 +80,7 @@ exports[`Paginator should render a default paginator 1`] = `
         Previous
       </a>
       <a
-        aria-current="Current Page"
+        aria-current="page"
         aria-label="Page 1"
         className="nav-link is-selected"
         onClick={[Function]}
