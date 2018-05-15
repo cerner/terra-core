@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display the required icon for fields with hideRequired, but have a state of invalid 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      <span
+        className="error-icon"
+      />
+      <span
+        className="required"
+      >
+        *
+      </span>
+      Hidden Required CheckboxField
+    </div>
+  </legend>
+</fieldset>
+`;
+
+exports[`should hide the legend when requested 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group legend-group-hidden"
+  >
+    <div
+      class="application-legend"
+      className="legend"
+    >
+      Hidden Legend legend
+    </div>
+    <span
+      className="error-icon-hidden"
+    />
+  </legend>
+</fieldset>
+`;
+
+exports[`should hide the required indicator when requested 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      Hidden Required RadioField
+      <span
+        className="required-hidden"
+      >
+        *
+      </span>
+    </div>
+    <span
+      className="error-icon-hidden"
+    />
+  </legend>
+</fieldset>
+`;
+
+exports[`should render a default radio field 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      Default RadioField
+    </div>
+    <span
+      className="error-icon-hidden"
+    />
+  </legend>
+</fieldset>
+`;
+
+exports[`should render a help message 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      Help RadioField
+    </div>
+    <span
+      className="error-icon-hidden"
+    />
+  </legend>
+  <div
+    className="help-text"
+  >
+    This will help up determine how many chairs to request
+  </div>
+</fieldset>
+`;
+
+exports[`should render an invalid radio field 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      <span
+        className="error-icon"
+      />
+      Invalid RadioField
+    </div>
+  </legend>
+  <div
+    className="error-text"
+  >
+    Test Error
+  </div>
+</fieldset>
+`;
+
+exports[`should render an optional part on the label 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      Optional RadioField
+      <span
+        className="optional"
+      >
+        (optional)
+      </span>
+    </div>
+    <span
+      className="error-icon-hidden"
+    />
+  </legend>
+</fieldset>
+`;
+
+exports[`should render required radio field 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      className="legend"
+    >
+      <span
+        className="required"
+      >
+        *
+      </span>
+      Required RadioField
+    </div>
+    <span
+      className="error-icon-hidden"
+    />
+  </legend>
+</fieldset>
+`;
+
+exports[`should render the legend with custom attributes properly 1`] = `
+<fieldset
+  className="radio-field"
+>
+  <legend
+    className="legend-group"
+  >
+    <div
+      class="application-legend"
+      className="legend"
+    >
+      Custom Legend RadioField
+    </div>
+    <span
+      className="error-icon-hidden"
+    />
+  </legend>
+</fieldset>
+`;
