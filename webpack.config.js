@@ -20,7 +20,7 @@ const coreConfig = () => {
 };
 
 const mergedConfig = (env, argv) => (
-  merge(defaultWebpackConfig(env, argv), coreConfig());
+  merge(defaultWebpackConfig(env, argv), coreConfig())
 );
 
 module.exports = mergedConfig;

@@ -7,7 +7,7 @@ branches:
     - master
 cache: false
 script:
-  - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
+  - 'wget -q -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
   - 'docker-compose pull'
   - "docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test-chrome npm run $TEST_SUITE"
 env:
@@ -28,13 +28,13 @@ jobs:
     - stage: build
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "ryanthemanuel" --password-stdin
-        - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
+        - 'wget -q -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
         - docker-compose build
         - docker-compose push
     - stage: deploy
       script: skip
       before_deploy:
-        - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
+        - 'wget -q -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
         - 'docker-compose pull'
         - "docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/app/build -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test-chrome npm run compile:prod"
       deploy:
