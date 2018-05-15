@@ -8,13 +8,13 @@ import RadioFieldSrc from '!raw-loader!terra-form-radio/src/RadioField';
 
 // Examples
 import DefaultRadioField from './radio_field_examples/DefaultRadioField';
-import DefaultRadioFieldSrc from '!raw-loader!./radio_field_examples/DefaultRadioField.jsx';
+import DefaultRadioFieldSrc from '!raw-loader!./radio_field_examples/DefaultRadioField';
 
 import ControlledRadioField from './radio_field_examples/ControlledRadioField';
-import ControlledRadioFieldSrc from '!raw-loader!./radio_field_examples/ControlledRadioField.jsx';
+import ControlledRadioFieldSrc from '!raw-loader!./radio_field_examples/ControlledRadioField';
 
 import OptionalRadioField from './radio_field_examples/OptionalRadioField';
-import OptionalRadioFieldSrc from '!raw-loader!./radio_field_examples/OptionalRadioField.jsx';
+import OptionalRadioFieldSrc from '!raw-loader!./radio_field_examples/OptionalRadioField';
 
 const RadioFieldExamples = () => (
   <DocTemplate
@@ -25,17 +25,17 @@ const RadioFieldExamples = () => (
       {
         title: 'Default RadioField Example',
         example: <DefaultRadioField />,
-        exampleSrc: DefaultRadioFieldSrc,
-      },
-      {
-        title: 'Controlled RadioField Example',
-        example: <ControlledRadioField />,
-        exampleSrc: ControlledRadioFieldSrc,
+        source: DefaultRadioFieldSrc,
       },
       {
         title: 'Optional RadioField Example',
         example: <OptionalRadioField />,
-        exampleSrc: OptionalRadioFieldSrc,
+        source: OptionalRadioFieldSrc,
+      },
+      {
+        title: 'Controlled RadioField Example',
+        example: <ControlledRadioField />,
+        source: ControlledRadioFieldSrc,
       },
     ]}
     propsTables={[

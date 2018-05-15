@@ -8,13 +8,13 @@ import CheckboxFieldSrc from '!raw-loader!terra-form-checkbox/src/CheckboxField'
 
 // Examples
 import DefaultCheckboxField from './checkbox_field_examples/DefaultCheckboxField';
-import DefaultCheckboxFieldSrc from '!raw-loader!./checkbox_field_examples/DefaultCheckboxField.jsx';
+import DefaultCheckboxFieldSrc from '!raw-loader!./checkbox_field_examples/DefaultCheckboxField';
 
 import ControlledCheckboxField from './checkbox_field_examples/ControlledCheckboxField';
-import ControlledCheckboxFieldSrc from '!raw-loader!./checkbox_field_examples/ControlledCheckboxField.jsx';
+import ControlledCheckboxFieldSrc from '!raw-loader!./checkbox_field_examples/ControlledCheckboxField';
 
 import OptionalCheckboxField from './checkbox_field_examples/OptionalCheckboxField';
-import OptionalCheckboxFieldSrc from '!raw-loader!./checkbox_field_examples/OptionalCheckboxField.jsx';
+import OptionalCheckboxFieldSrc from '!raw-loader!./checkbox_field_examples/OptionalCheckboxField';
 
 const checkboxFieldExamples = () => (
   <DocTemplate
@@ -23,19 +23,19 @@ const checkboxFieldExamples = () => (
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-checkbox/src/CheckboxField.jsx"
     examples={[
       {
-        title: 'Basic Form Validation Example',
+        title: 'Default CheckboxField Example',
         example: <DefaultCheckboxField />,
-        exampleSrc: DefaultCheckboxFieldSrc,
+        source: DefaultCheckboxFieldSrc,
       },
       {
         title: 'Optional CheckboxField Example',
         example: <OptionalCheckboxField />,
-        exampleSrc: OptionalCheckboxFieldSrc,
+        source: OptionalCheckboxFieldSrc,
       },
       {
         title: 'Controlled CheckboxField Example',
         example: <ControlledCheckboxField />,
-        exampleSrc: ControlledCheckboxFieldSrc,
+        source: ControlledCheckboxFieldSrc,
       },
     ]}
     propsTables={[
