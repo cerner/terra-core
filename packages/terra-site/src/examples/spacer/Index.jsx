@@ -1,28 +1,36 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-spacer/docs/README.md';
-import { version } from 'terra-spacer/package.json';
+import { name } from 'terra-spacer/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import SpacerSrc from '!raw-loader!terra-spacer/src/Spacer';
 
 // Example Files
 import Spacer from './SpacerExample';
+import SpacerExampleSrc from '!raw-loader!./SpacerExample';
 
-const SpacerExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={SpacerSrc} />
-    <br />
-    <h2 id="default">Spacer</h2>
-    <p>Spacing default button with a padding value of large+4 and primary button with padding value of large+2</p>
-    <br />
-    <Spacer />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Spacer',
+        description: 'Spacing default button with a padding value of large+4 and primary button with padding value of large+2',
+        example: <Spacer />,
+        source: SpacerExampleSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Spacer',
+        componentSrc: SpacerSrc,
+      },
+    ]}
+  />
 );
 
-export default SpacerExamples;
+export default DocPage;

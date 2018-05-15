@@ -1,37 +1,59 @@
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-grid/docs/README.md';
-import { version } from 'terra-grid/package.json';
+import { name } from 'terra-grid/package.json';
 
 // Component Source
-/* eslint-disable import/no-webpack-loader-syntax, import/no-unresolved, import/extensions */
 import GridSrc from '!raw-loader!terra-grid/src/Grid';
 import GridRowSrc from '!raw-loader!terra-grid/src/GridRow';
 import GridColumnSrc from '!raw-loader!terra-grid/src/GridColumn';
-/* eslint-enable import/no-webpack-loader-syntax, import/no-unresolved, import/extensions */
 
 // Example Files
 import GridDefault from './GridDefault';
+import GridDefaultSrc from '!raw-loader!./GridDefault';
 import GridResponsive from './GridResponsive';
+import GridResponsiveSrc from '!raw-loader!./GridResponsive';
 import GridNested from './GridNested';
+import GridNestedSrc from '!raw-loader!./GridNested';
 
-const GridExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={GridSrc} componentName="Grid" />
-    <PropsTable id="props" src={GridRowSrc} componentName="Grid Row" />
-    <PropsTable id="props" src={GridColumnSrc} componentName="Grid Column" />
-    <h2 id="default">Default Grid</h2>
-    <GridDefault />
-    <br />
-    <h2 id="responsive">Responsive Grid</h2>
-    <GridResponsive />
-    <br />
-    <h2 id="nested">Nested Grid</h2>
-    <GridNested />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Default Grid',
+        example: <GridDefault />,
+        source: GridDefaultSrc,
+      },
+      {
+        title: 'Responsive Grid',
+        example: <GridResponsive />,
+        source: GridResponsiveSrc,
+      },
+      {
+        title: 'Nested Grid',
+        example: <GridNested />,
+        source: GridNestedSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Grid',
+        componentSrc: GridSrc,
+      },
+      {
+        componentName: 'Grid Row',
+        componentSrc: GridRowSrc,
+      },
+      {
+        componentName: 'Grid Column',
+        componentSrc: GridColumnSrc,
+      },
+    ]}
+  />
 );
 
-export default GridExamples;
+export default DocPage;

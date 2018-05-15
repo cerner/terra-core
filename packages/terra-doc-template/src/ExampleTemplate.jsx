@@ -23,7 +23,7 @@ const propTypes = {
   /**
    * An optional description that will be displayed below the title as regular text
    */
-  description: PropTypes.string,
+  description: PropTypes.node,
   /**
    * The children components for this example which will be displayed below the example
    */
@@ -52,11 +52,14 @@ class IndexExampleTemplate extends React.Component {
   render() {
     const { title, example, exampleSrc, children, description, ...customProps } = this.props;
 
-    const indexExampleSrc = (
-      <ToggleButton isAnimated closedButtonText="View Source Code" data-terra-source-code-toggle>
-        <SyntaxHighlighter language="javascript" style={okaidia}>{exampleSrc}</SyntaxHighlighter>
-      </ToggleButton>
-    );
+    let indexExampleSrc;
+    if (exampleSrc) {
+      indexExampleSrc = (
+        <ToggleButton isAnimated closedButtonText="View Source Code" data-terra-source-code-toggle>
+          <SyntaxHighlighter language="javascript" style={okaidia}>{exampleSrc}</SyntaxHighlighter>
+        </ToggleButton>
+      );
+    }
 
     return (
       <div {...customProps}>
