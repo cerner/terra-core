@@ -1,12 +1,10 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-alert/docs/README.md';
-import { version } from 'terra-alert/package.json';
+import { name } from 'terra-alert/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import AlertSrc from '!raw-loader!terra-alert/src/Alert';
 
 // Example Files
@@ -24,45 +22,72 @@ import DismissibleExample from './DismissibleExample';
 import ActionAndDismissibleExample from './ActionAndDismissibleExample';
 import BuildYourOwnAlertExample from './BuildYourOwnAlertExample';
 
-const AlertExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={AlertSrc} />
-    <h2>Alert Examples</h2>
-    <br />
-    <p>
-    PLEASE NOTE: The strings that are internationalized in the following examples are the default titles for each of
-    the alert types (except the custom alert type), and the text for the Dismiss button.
-    </p>
-    <br /><hr /><br />
-    <AlertExample />
-    <br /><hr /><br />
-    <ErrorExample />
-    <br /><hr /><br />
-    <WarningExample />
-    <br /><hr /><br />
-    <AdvisoryExample />
-    <br /><hr /><br />
-    <InfoExample />
-    <br /><hr /><br />
-    <SuccessExample />
-    <br /><hr /><br />
-    <CustomExample />
-    <br /><hr /><br />
-    <LongTextExample />
-    <br /><hr /><br />
-    <ActionExample />
-    <br /><hr /><br />
-    <SmallContainerExample />
-    <br /><hr /><br />
-    <DismissibleExample />
-    <br /><hr /><br />
-    <ActionAndDismissibleExample />
-    <br /><hr /><br />
-    <BuildYourOwnAlertExample />
-    <br /><hr /><br />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Default Alert',
+        example: <AlertExample />,
+      },
+      {
+        title: 'Error Alert',
+        example: <ErrorExample />,
+      },
+      {
+        title: 'Warning Alert',
+        example: <WarningExample />,
+      },
+      {
+        title: 'Advisory Alert',
+        example: <AdvisoryExample />,
+      },
+      {
+        title: 'Information Alert',
+        example: <InfoExample />,
+      },
+      {
+        title: 'Success Alert',
+        example: <SuccessExample />,
+      },
+      {
+        title: 'Custom Alert',
+        example: <CustomExample />,
+      },
+      {
+        title: 'Long Text Alert',
+        example: <LongTextExample />,
+      },
+      {
+        title: 'Alert with Action',
+        example: <ActionExample />,
+      },
+      {
+        title: 'Alert in Small Container',
+        example: <SmallContainerExample />,
+      },
+      {
+        title: 'Dismissible Alert',
+        example: <DismissibleExample />,
+      },
+      {
+        title: 'Dismissible Alert with Actions',
+        example: <ActionAndDismissibleExample />,
+      },
+      {
+        title: 'Build ',
+        example: <BuildYourOwnAlertExample />,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Alert',
+        componentSrc: AlertSrc,
+      },
+    ]}
+  />
 );
 
-export default AlertExamples;
+export default DocPage;

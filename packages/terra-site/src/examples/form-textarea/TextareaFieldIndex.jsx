@@ -1,28 +1,42 @@
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-form-textarea/docs/TextareaField.md';
+import { name } from 'terra-form-textarea/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TextareaFieldSrc from '!raw-loader!terra-form-textarea/src/TextareaField';
 
+// Example Source
 import TextareaField from 'terra-form-textarea/lib/TextareaField';
 
-const PlaceholderExample = () => (
-  <div>
-    <h4>Textarea Field</h4>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={TextareaFieldSrc} />
-    <TextareaField
-      label="Profile Description"
-      help="Every Profile Needs a Description"
-      inputAttrs={{
-        name: 'description',
-        placeholder: 'Enter a profile Description',
-      }}
-    />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        example: (
+          <TextareaField
+            inputId="Profile Description"
+            label="Profile Description"
+            help="Every Profile Needs a Description"
+            inputAttrs={{
+              name: 'description',
+              placeholder: 'Enter a profile Description',
+            }}
+          />
+        ),
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Textarea Field',
+        componentSrc: TextareaFieldSrc,
+      },
+    ]}
+  />
 );
 
-export default PlaceholderExample;
+export default DocPage;

@@ -1,25 +1,28 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-form-radio/docs/README.md';
-import { version } from 'terra-form-radio/package.json';
+import { name } from 'terra-form-radio/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import RadioSrc from '!raw-loader!terra-form-radio/src/Radio';
 
 // Example Files
-
 import DefaultRadio from './DefaultRadioExample';
+import DefaultRadioSrc from '!raw-loader!./DefaultRadioExample';
 import DisabledRadio from './DisabledRadioExample';
+import DisabledRadioSrc from '!raw-loader!./DisabledRadioExample';
 import HiddenLabelRadio from './HiddenLabelRadioExample';
+import HiddenLabelRadioSrc from '!raw-loader!./HiddenLabelRadioExample';
 import LongTextRadio from './LongTextRadioExample';
+import LongTextRadioSrc from '!raw-loader!./LongTextRadioExample';
 import InlineRadios from './InlineRadiosExample';
+import InlineRadiosSrc from '!raw-loader!./InlineRadiosExample';
 import MultipleRadios from './MultipleRadiosExample';
+import MultipleRadiosSrc from '!raw-loader!./MultipleRadiosExample';
 import MobileButton from './MobileButton';
 
-class RadioExamples extends React.Component {
+class DocPage extends React.Component {
   constructor() {
     super();
     this.state = { isMobile: false };
@@ -38,33 +41,55 @@ class RadioExamples extends React.Component {
 
   render() {
     return (
-      <div>
-        <div id="version">Version: {version}</div>
-        <Markdown id="readme" src={ReadMe} />
-        <PropsTable id="props" src={RadioSrc} />
-        <h2 id="default">Default Radio</h2>
-        <DefaultRadio />
-        <br />
-        <h2 id="disabled">Disabled Radio</h2>
-        <DisabledRadio />
-        <br />
-        <h2 id="hidden">Hidden Label Radio</h2>
-        <HiddenLabelRadio />
-        <br />
-        <h2 id="longtext">Long Text Radio</h2>
-        <LongTextRadio />
-        <br />
-        <h2 id="inline">Multiple Inline Radios</h2>
-        <InlineRadios />
-        <br />
-        <h2 id="multiple">Multiple Radios - first defaults to checked</h2>
-        <MultipleRadios />
-        <br />
-        <h2 id="mobile">[Theme Specific] Resize radio buttons on non-desktop touch device</h2>
-        <MobileButton onChange={this.onChange} />
-      </div>
+      <DocTemplate
+        packageName={name}
+        readme={ReadMe}
+        srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+        examples={[
+          {
+            title: 'Default Radio',
+            example: <DefaultRadio />,
+            source: DefaultRadioSrc,
+          },
+          {
+            title: 'Disabled Radio',
+            example: <DisabledRadio />,
+            source: DisabledRadioSrc,
+          },
+          {
+            title: 'Hidden Label Radio',
+            example: <HiddenLabelRadio />,
+            source: HiddenLabelRadioSrc,
+          },
+          {
+            title: 'Long Text Radio',
+            example: <LongTextRadio />,
+            source: LongTextRadioSrc,
+          },
+          {
+            title: 'Multiple Inline Radios',
+            example: <InlineRadios />,
+            source: InlineRadiosSrc,
+          },
+          {
+            title: 'Multiple Radios - first defaults to checked',
+            example: <MultipleRadios />,
+            source: MultipleRadiosSrc,
+          },
+          {
+            title: '[Theme Specific] Resize radio buttons on non-desktop touch device',
+            example: <MobileButton onChange={this.onChange} />,
+          },
+        ]}
+        propsTables={[
+          {
+            componentName: 'Radio',
+            componentSrc: RadioSrc,
+          },
+        ]}
+      />
     );
   }
 }
 
-export default RadioExamples;
+export default DocPage;

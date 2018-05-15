@@ -1,12 +1,10 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-table/docs/README.md';
-import { version } from 'terra-list/package.json';
+import { name } from 'terra-list/package.json';
 
 // Component Source
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import TableSrc from '!raw-loader!terra-table/src/Table';
 import SingleSelectableRowsSrc from '!raw-loader!terra-table/src/SingleSelectableRows';
 import TableHeaderSrc from '!raw-loader!terra-table/src/TableHeader';
@@ -16,68 +14,131 @@ import TableRowsSrc from '!raw-loader!terra-table/src/TableRows';
 import SelectableTableRowsSrc from '!raw-loader!terra-table/src/SelectableTableRows';
 import TableCellSrc from '!raw-loader!terra-table/src/TableCell';
 import TableSubheaderSrc from '!raw-loader!terra-table/src/TableSubheader';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 import NoStripedTable from './examples/NoStripedTable';
+import NoStripedTableSrc from '!raw-loader!./examples/NoStripedTable';
 import NoPaddingTable from './examples/NoPaddingTable';
+import NoPaddingTableSrc from '!raw-loader!./examples/NoPaddingTable';
 import StripedTable from './examples/StripedTable';
+import StripedTableSrc from '!raw-loader!./examples/StripedTable';
 import TableWithMultipleOnClicks from './examples/TableWithMultipleOnClicks';
+import TableWithMultipleOnClicksSrc from '!raw-loader!./examples/TableWithMultipleOnClicks';
 import TableWithHighlightedRows from './examples/TableWithHighlightedRows';
+import TableWithHighlightedRowsSrc from '!raw-loader!./examples/TableWithHighlightedRows';
 import SingleRowSelectableTable from './examples/SingleRowSelectableTable';
+import SingleRowSelectableTableSrc from '!raw-loader!./examples/SingleRowSelectableTable';
 import TableWithNonSelectableRow from './examples/TableWithNonSelectableRow';
+import TableWithNonSelectableRowSrc from '!raw-loader!./examples/TableWithNonSelectableRow';
 import TableWithSortingIndicator from './examples/TableWithSortingIndicator';
+import TableWithSortingIndicatorSrc from '!raw-loader!./examples/TableWithSortingIndicator';
 import TableWithLongContent from './examples/TableWithLongContent';
+import TableWithLongContentSrc from '!raw-loader!./examples/TableWithLongContent';
 import TableWithCustomCells from './examples/TableWithCustomCells';
+import TableWithCustomCellsSrc from '!raw-loader!./examples/TableWithCustomCells';
 import TableWithSubheaders from './examples/TableWithSubheaders';
+import TableWithSubheadersSrc from '!raw-loader!./examples/TableWithSubheaders';
 
-const TableExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props-table" src={TableSrc} componentName="Table" />
-    <PropsTable id="props-tableHeader" src={TableHeaderSrc} componentName="Table Header" />
-    <PropsTable id="props-tableHeaderCell" src={TableHeaderCellSrc} componentName="Table Header Cell" />
-    <PropsTable id="props-tableSubheader" src={TableSubheaderSrc} componentName="Table Subheader" />
-    <PropsTable id="props-tableRows" src={TableRowsSrc} componentName="Table Rows" />
-    <PropsTable id="props-selectabletableRows" src={SelectableTableRowsSrc} componentName="Selectable Table Rows" />
-    <PropsTable id="props-singleSelectableRows" src={SingleSelectableRowsSrc} componentName="Single Selectable Rows" />
-    <PropsTable id="props-tableRow" src={TableRowSrc} componentName="Table Row" />
-    <PropsTable id="props-tablecell" src={TableCellSrc} componentName="Table Cell" />
-    <br />
-    <h1>Examples </h1>
-    <h2>Table without zebra stripes</h2>
-    <NoStripedTable />
-    <br />
-    <h2>Table with zebra stripes</h2>
-    <StripedTable />
-    <br />
-    <h2>Table without padding</h2>
-    <NoPaddingTable />
-    <br />
-    <h2>Table with multiple header onClick handlers (Click &ldquo;Name&rdquo; header to preview)</h2>
-    <TableWithMultipleOnClicks />
-    <br />
-    <h2>Table with some rows selected. Table will not select or deselect any row</h2>
-    <TableWithHighlightedRows />
-    <br />
-    <h2>Single Selectable table</h2>
-    <SingleRowSelectableTable />
-    <br />
-    <h2>Single Selectable table with second row as non selectable</h2>
-    <TableWithNonSelectableRow />
-    <br />
-    <h2>Table with sorting indicator</h2>
-    <TableWithSortingIndicator />
-    <br />
-    <h2>Table with long content</h2>
-    <TableWithLongContent />
-    <br />
-    <h2>Table with custom cells</h2>
-    <TableWithCustomCells />
-    <br />
-    <h2>Table with subheaders</h2>
-    <TableWithSubheaders />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Table without zebra stripes',
+        example: <NoStripedTable />,
+        source: NoStripedTableSrc,
+      },
+      {
+        title: 'Table with zebra stripes',
+        example: <StripedTable />,
+        source: StripedTableSrc,
+      },
+      {
+        title: 'Table without padding',
+        example: <NoPaddingTable />,
+        source: NoPaddingTableSrc,
+      },
+      {
+        title: 'Table with multiple header onClick handlers (Click &ldquo;Name&rdquo; header to preview)',
+        example: <TableWithMultipleOnClicks />,
+        source: TableWithMultipleOnClicksSrc,
+      },
+      {
+        title: 'Table with some rows selected. Table will not select or deselect any row',
+        example: <TableWithHighlightedRows />,
+        source: TableWithHighlightedRowsSrc,
+      },
+      {
+        title: 'Single Selectable table',
+        example: <SingleRowSelectableTable />,
+        source: SingleRowSelectableTableSrc,
+      },
+      {
+        title: 'Single Selectable table with second row as non selectable',
+        example: <TableWithNonSelectableRow />,
+        source: TableWithNonSelectableRowSrc,
+      },
+      {
+        title: 'Table with sorting indicator',
+        example: <TableWithSortingIndicator />,
+        source: TableWithSortingIndicatorSrc,
+      },
+      {
+        title: 'Table with long content',
+        example: <TableWithLongContent />,
+        source: TableWithLongContentSrc,
+      },
+      {
+        title: 'Table with custom cells',
+        example: <TableWithCustomCells />,
+        source: TableWithCustomCellsSrc,
+      },
+      {
+        title: 'Table with subheaders',
+        example: <TableWithSubheaders />,
+        source: TableWithSubheadersSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Table',
+        componentSrc: TableSrc,
+      },
+      {
+        componentName: 'Table Header',
+        componentSrc: TableHeaderSrc,
+      },
+      {
+        componentName: 'Table Header Cell',
+        componentSrc: TableHeaderCellSrc,
+      },
+      {
+        componentName: 'Table Subheader',
+        componentSrc: TableSubheaderSrc,
+      },
+      {
+        componentName: 'Table Rows',
+        componentSrc: TableRowsSrc,
+      },
+      {
+        componentName: 'Selectable Table Rows',
+        componentSrc: SelectableTableRowsSrc,
+      },
+      {
+        componentName: 'Single Selectable Rows',
+        componentSrc: SingleSelectableRowsSrc,
+      },
+      {
+        componentName: 'Table Row',
+        componentSrc: TableRowSrc,
+      },
+      {
+        componentName: 'Table Cell',
+        componentSrc: TableCellSrc,
+      },
+    ]}
+  />
 );
 
-export default TableExamples;
+export default DocPage;
