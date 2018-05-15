@@ -13,5 +13,6 @@ if (isRepoTest) {
 }
 
 const config = nightwatchConfig(webpackConfig, srcFolders);
+config.test_settings.default.selenium_host = '0.0.0.0';
 
 module.exports = config;
