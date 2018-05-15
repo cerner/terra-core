@@ -1,9 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-toggle/docs/README.md';
-import { version } from 'terra-toggle/package.json';
+import { name } from 'terra-toggle/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -11,18 +10,34 @@ import ToggleSrc from '!raw-loader!terra-toggle/src/Toggle';
 
 // Example Files
 import DefaultToggle from './DefaultToggle';
+import DefaultToggleSrc from '!raw-loader!./DefaultToggle';
 import AnimatedToggle from './AnimatedToggle';
+import AnimatedToggleSrc from '!raw-loader!./AnimatedToggle';
 
-const ToggleExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={ToggleSrc} />
-    <h2 id="default">Default Toggle</h2>
-    <DefaultToggle />
-    <h2 id="animated">isAnimated Toggle</h2>
-    <AnimatedToggle />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Default Toggle',
+        example: <DefaultToggle />,
+        source: DefaultToggleSrc,
+      },
+      {
+        title: 'isAnimated Toggle',
+        example: <AnimatedToggle />,
+        source: AnimatedToggleSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Toggle',
+        componentSrc: ToggleSrc,
+      },
+    ]}
+  />
 );
 
-export default ToggleExamples;
+export default DocPage;

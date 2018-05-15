@@ -1,44 +1,73 @@
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-embedded-content-consumer/docs/README.md';
-import { version } from 'terra-embedded-content-consumer/package.json';
+import { name } from 'terra-embedded-content-consumer/package.json';
 import { Consumer } from 'xfc';
 
 // Component Source
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import EmbeddedContentConsumerSrc from '!raw-loader!terra-embedded-content-consumer/src/EmbeddedContentConsumer.jsx';
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 // Example files
 import BasicConsumer from './consumers/BasicConsumer';
+import BasicConsumerSrc from '!raw-loader!./consumers/BasicConsumer';
 import CustomEventConsumer from './consumers/CustomEventConsumer';
+import CustomEventConsumerSrc from '!raw-loader!./consumers/CustomEventConsumer';
 import CustomEventsConsumer from './consumers/CustomEventsConsumer';
+import CustomEventsConsumerSrc from '!raw-loader!./consumers/CustomEventsConsumer';
 import DataStatusConsumer from './consumers/DataStatusConsumer';
+import DataStatusConsumerSrc from '!raw-loader!./consumers/DataStatusConsumer';
 import FillConsumer from './consumers/FillConsumer';
+import FillConsumerSrc from '!raw-loader!./consumers/FillConsumer';
 import OnReadyConsumer from './consumers/OnReadyConsumer';
+import OnReadyConsumerSrc from '!raw-loader!./consumers/OnReadyConsumer';
 
 Consumer.init();
 
-const EmbeddedContentConsumerExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <h2>Embedded Content Consumer</h2>
-    <PropsTable id="embedded_content_consumer_props" src={EmbeddedContentConsumerSrc} />
-    <h2 id="Basic Embedded Content">Basic Embedded Content</h2>
-    <BasicConsumer />
-    <h2 id="Filled Embedded Content">Filled Embedded Content</h2>
-    <FillConsumer />
-    <h2 id="Custom Event Embedded Content">Custom Event Embedded Content</h2>
-    <CustomEventConsumer />
-    <h2 id="Custom Events Embedded Content">Custom Events Embedded Content</h2>
-    <CustomEventsConsumer />
-    <h2 id="Data status Embedded Content">Data Status Embedded Content</h2>
-    <DataStatusConsumer />
-    <h2 id="On Ready Embedded Content">On Ready Embedded Content</h2>
-    <OnReadyConsumer />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Basic Embedded Content',
+        example: <BasicConsumer />,
+        source: BasicConsumerSrc,
+      },
+      {
+        title: 'Filled Embedded Content',
+        example: <FillConsumer />,
+        source: FillConsumerSrc,
+      },
+      {
+        title: 'Custom Event Embedded Content',
+        example: <CustomEventConsumer />,
+        source: CustomEventConsumerSrc,
+      },
+      {
+        title: 'Custom Events Embedded Content',
+        example: <CustomEventsConsumer />,
+        source: CustomEventsConsumerSrc,
+      },
+      {
+        title: 'Data Status Embedded Content',
+        example: <DataStatusConsumer />,
+        source: DataStatusConsumerSrc,
+      },
+      {
+        title: 'On Ready Embedded Content',
+        example: <OnReadyConsumer />,
+        source: OnReadyConsumerSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Embedded Content Consumer',
+        componentSrc: EmbeddedContentConsumerSrc,
+      },
+    ]}
+  />
 );
 
-export default EmbeddedContentConsumerExamples;
+export default DocPage;

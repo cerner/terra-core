@@ -1,57 +1,91 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-search-field/docs/README.md';
-import { version } from 'terra-search-field/package.json';
+import { name } from 'terra-search-field/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import SearchFieldSrc from '!raw-loader!terra-search-field/src/SearchField';
 
 // Example Files
 import SearchFieldBasic from './SearchFieldBasic';
+import SearchFieldBasicSrc from '!raw-loader!./SearchFieldBasic';
 import SearchFieldPlaceholder from './SearchFieldPlaceholder';
+import SearchFieldPlaceholderSrc from '!raw-loader!./SearchFieldPlaceholder';
 import SearchFieldMinimumLength from './SearchFieldMinimumLength';
+import SearchFieldMinimumLengthSrc from '!raw-loader!./SearchFieldMinimumLength';
 import SearchFieldDelayed from './SearchFieldDelayed';
+import SearchFieldDelayedSrc from '!raw-loader!./SearchFieldDelayed';
 import SearchFieldDefaultValue from './SearchFieldDefaultValue';
+import SearchFieldDefaultValueSrc from '!raw-loader!./SearchFieldDefaultValue';
 import SearchFieldDisabled from './SearchFieldDisabled';
+import SearchFieldDisabledSrc from '!raw-loader!./SearchFieldDisabled';
 import SearchFieldBlock from './SearchFieldBlock';
+import SearchFieldBlockSrc from '!raw-loader!./SearchFieldBlock';
 import SearchFieldDisableAutoSearch from './SearchFieldDisableAutoSearch';
+import SearchFieldDisableAutoSearchSrc from '!raw-loader!./SearchFieldDisableAutoSearch';
 import SearchFieldFilterNumeric from './SearchFieldFilterNumeric';
+import SearchFieldFilterNumericSrc from '!raw-loader!./SearchFieldFilterNumeric';
 
-const SearchFieldExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={SearchFieldSrc} />
-    <h2 id="searchField">Search Field</h2>
-    <SearchFieldBasic />
-    <br />
-    <h2 id="searchFieldPlaceholder">Search Field with placeholder text</h2>
-    <SearchFieldPlaceholder />
-    <br />
-    <h2 id="searchFieldMinimumLength">Search Field with minimum search text length of 5 characters</h2>
-    <SearchFieldMinimumLength />
-    <br />
-    <h2 id="searchFieldDelayed">Search Field with delay of 2000ms</h2>
-    <SearchFieldDelayed />
-    <br />
-    <h2 id="searchFieldDefaultValue">Search Field with a default value</h2>
-    <SearchFieldDefaultValue />
-    <br />
-    <h2 id="searchFieldDisabled">Search Field that is disabled</h2>
-    <SearchFieldDisabled />
-    <br />
-    <h2 id="searchFieldBlock">Search Field that displays as block style to fill container</h2>
-    <SearchFieldBlock />
-    <br />
-    <h2 id="searchFieldDisableAutoSearch">Search Field with auto-search turned off</h2>
-    <SearchFieldDisableAutoSearch />
-    <br />
-    <h2 id="searchFieldFilterNumeric">Search Field with onChange event filtering numbers</h2>
-    <SearchFieldFilterNumeric />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Search Field',
+        example: <SearchFieldBasic />,
+        source: SearchFieldBasicSrc,
+      },
+      {
+        title: 'Search Field with Placeholder Text',
+        example: <SearchFieldPlaceholder />,
+        source: SearchFieldPlaceholderSrc,
+      },
+      {
+        title: 'Search Field with Minimum Search Text Length of 5 Characters',
+        example: <SearchFieldMinimumLength />,
+        source: SearchFieldMinimumLengthSrc,
+      },
+      {
+        title: 'Search Field with Delay of 2000ms',
+        example: <SearchFieldDelayed />,
+        source: SearchFieldDelayedSrc,
+      },
+      {
+        title: 'Search Field with a Default Value',
+        example: <SearchFieldDefaultValue />,
+        source: SearchFieldDefaultValueSrc,
+      },
+      {
+        title: 'Search Field that is Disabled',
+        example: <SearchFieldDisabled />,
+        source: SearchFieldDisabledSrc,
+      },
+      {
+        title: 'Search Field that Displays as Block Style to Fill Container',
+        example: <SearchFieldBlock />,
+        source: SearchFieldBlockSrc,
+      },
+      {
+        title: 'Search Field with Auto-search Turned Off',
+        example: <SearchFieldDisableAutoSearch />,
+        source: SearchFieldDisableAutoSearchSrc,
+      },
+      {
+        title: 'Search Field with onChange Event Filtering Numbers',
+        example: <SearchFieldFilterNumeric />,
+        source: SearchFieldFilterNumericSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Search Field',
+        componentSrc: SearchFieldSrc,
+      },
+    ]}
+  />
 );
 
-export default SearchFieldExamples;
+export default DocPage;

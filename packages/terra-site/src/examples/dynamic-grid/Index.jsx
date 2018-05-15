@@ -1,43 +1,69 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-dynamic-grid/docs/README.md';
-import { version } from 'terra-dynamic-grid/package.json';
-
-import OneColumn from './OneColumn';
-import TwoColumn from './TwoColumn';
-import ULayout from './ULayout';
-import Dashboard from './Dashboard';
-import ResponsiveGrid from './ResponsiveGrid';
-
+import { name } from 'terra-dynamic-grid/package.json';
 
 // Component Source
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import DynamicGridSrc from '!raw-loader!terra-dynamic-grid/src/DynamicGrid';
 import RegionSrc from '!raw-loader!terra-dynamic-grid/src/Region';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 // Example Files
+import OneColumn from './OneColumn';
+import OneColumnSrc from '!raw-loader!./OneColumn';
+import TwoColumn from './TwoColumn';
+import TwoColumnSrc from '!raw-loader!./TwoColumn';
+import ULayout from './ULayout';
+import ULayoutSrc from '!raw-loader!./ULayout';
+import Dashboard from './Dashboard';
+import DashboardSrc from '!raw-loader!./Dashboard';
+import ResponsiveGrid from './ResponsiveGrid';
+import ResponsiveGridSrc from '!raw-loader!./ResponsiveGrid';
 
-const DynamicGridExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={DynamicGridSrc} componentName="Dynamic Grid" />
-    <PropsTable id="props" src={RegionSrc} componentName="Region" />
-    <h2>One Column</h2>
-    <OneColumn />
-    <h2>Two Column</h2>
-    <TwoColumn />
-    <h2>U Layout</h2>
-    <ULayout />
-    <h2>Dashboard</h2>
-    <Dashboard />
-    <h2>Responsive Grid</h2>
-    <p>Resize the browser window to see the regions reorder themselves.</p>
-    <ResponsiveGrid />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'One Column',
+        example: <OneColumn />,
+        source: OneColumnSrc,
+      },
+      {
+        title: 'Two Column',
+        example: <TwoColumn />,
+        source: TwoColumnSrc,
+      },
+      {
+        title: 'U Layout',
+        example: <ULayout />,
+        source: ULayoutSrc,
+      },
+      {
+        title: 'Dashboard',
+        example: <Dashboard />,
+        source: DashboardSrc,
+      },
+      {
+        title: 'Responsive Grid',
+        description: 'Resize the browser window to see the regions reorder themselves.',
+        example: <ResponsiveGrid />,
+        source: ResponsiveGridSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Dynamic Grid',
+        componentSrc: DynamicGridSrc,
+      },
+      {
+        componentName: 'Region',
+        componentSrc: RegionSrc,
+      },
+    ]}
+  />
 );
 
-export default DynamicGridExamples;
+export default DocPage;
