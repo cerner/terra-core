@@ -7,44 +7,34 @@ branches:
     - master
 cache: false
 script:
-  - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
+  - 'cp ./config/docker/ci-docker-compose.yml ./docker-compose.yml'
   - 'docker-compose pull'
   - "docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG base npm run $TEST_SUITE"
 env:
   global:
     - DOCKER_IMAGE='ryanthemanuel/terra-core'
-    - TAG=latest
+    - TERRA_NODE_TAG="${TRAVIS_PULL_REQUEST_BRANCH:=latest}"
+    - TAG="${TRAVIS_BUILD_ID:=latest}"
   matrix:
     - TEST_SUITE=lint
     - TEST_SUITE=jest
     - TEST_SUITE=nightwatch
-    - TEST_SUITE="wdio -- --suite suite1"
-    - TEST_SUITE="wdio -- --suite suite2"
-    - TEST_SUITE="wdio -- --suite suite3"
-    - TEST_SUITE="wdio -- --suite suite4"
+    - TEST_SUITE=wdio
     - TEST_SUITE=danger
 jobs:
   include:
+    - stage: release terra-node
+      script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "ryanthemanuel" --password-stdin
+        - "docker build -t ryanthemanuel/terra-node:$TERRA_NODE_TAG -f ./docker/terra-node/Dockerfile ./docker/terra-node/"
+        - "docker push ryanthemanuel/terra-node:$TERRA_NODE_TAG"
     - stage: build
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "ryanthemanuel" --password-stdin
-        - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
+        - 'cp ./config/docker/ci-docker-compose.yml ./docker-compose.yml'
         - docker-compose build
         - docker-compose push
-    - stage: deploy
-      script: skip
-      before_deploy:
-        - 'wget -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/test_parallel/config/docker/ci-docker-compose.yml'
-        - 'docker-compose pull'
-        - "docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/app/build -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test npm run compile:prod"
-      deploy:
-        provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-        local_dir: build
-        on:
-          branch: master
 stages:
+  - release terra-node
   - build
   - test
-  - deploy
