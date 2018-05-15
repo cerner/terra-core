@@ -4,9 +4,13 @@ exports[`Paginator should render a default paginator 1`] = `
 <ResponsiveElement
   defaultElement={
     <div
+      aria-label="pagination"
       className="paginator"
+      role="navigation"
     >
       <a
+        aria-disabled={true}
+        aria-label="first"
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
         tabIndex={null}
@@ -14,6 +18,8 @@ exports[`Paginator should render a default paginator 1`] = `
         First
       </a>
       <a
+        aria-disabled={true}
+        aria-label="previous"
         className="nav-link left-controls previous icon-only is-disabled"
         onClick={[Function]}
         tabIndex={null}
@@ -24,6 +30,8 @@ exports[`Paginator should render a default paginator 1`] = `
       </a>
       Page 1
       <a
+        aria-disabled={false}
+        aria-label="next"
         className="nav-link right-controls next icon-only"
         onClick={[Function]}
         tabIndex="0"
@@ -33,6 +41,8 @@ exports[`Paginator should render a default paginator 1`] = `
         />
       </a>
       <a
+        aria-disabled={false}
+        aria-label="last"
         className="nav-link right-controls"
         onClick={[Function]}
         tabIndex="0"
@@ -47,6 +57,8 @@ exports[`Paginator should render a default paginator 1`] = `
       className="paginator"
     >
       <a
+        aria-disabled={true}
+        aria-label="first"
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -55,6 +67,8 @@ exports[`Paginator should render a default paginator 1`] = `
         First
       </a>
       <a
+        aria-disabled={true}
+        aria-label="previous"
         className="nav-link left-controls previous is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -66,6 +80,8 @@ exports[`Paginator should render a default paginator 1`] = `
         Previous
       </a>
       <a
+        aria-current="Current Page"
+        aria-label="Page 1"
         className="nav-link is-selected"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -74,6 +90,8 @@ exports[`Paginator should render a default paginator 1`] = `
         1
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 2"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -82,6 +100,8 @@ exports[`Paginator should render a default paginator 1`] = `
         2
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 3"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -90,6 +110,8 @@ exports[`Paginator should render a default paginator 1`] = `
         3
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 4"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -98,6 +120,8 @@ exports[`Paginator should render a default paginator 1`] = `
         4
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 5"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -106,6 +130,8 @@ exports[`Paginator should render a default paginator 1`] = `
         5
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 6"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -114,6 +140,8 @@ exports[`Paginator should render a default paginator 1`] = `
         6
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 7"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -122,6 +150,8 @@ exports[`Paginator should render a default paginator 1`] = `
         7
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 8"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -130,6 +160,8 @@ exports[`Paginator should render a default paginator 1`] = `
         8
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 9"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -138,6 +170,8 @@ exports[`Paginator should render a default paginator 1`] = `
         9
       </a>
       <a
+        aria-current={false}
+        aria-label="Page 10"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -146,6 +180,8 @@ exports[`Paginator should render a default paginator 1`] = `
         10
       </a>
       <a
+        aria-disabled={false}
+        aria-label="next"
         className="nav-link right-controls next"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -157,6 +193,8 @@ exports[`Paginator should render a default paginator 1`] = `
         />
       </a>
       <a
+        aria-disabled={false}
+        aria-label="last"
         className="nav-link right-controls"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -173,9 +211,13 @@ exports[`Paginator should render a paginator without page links 1`] = `
 <ResponsiveElement
   defaultElement={
     <div
+      aria-label="pagination"
       className="paginator pageless"
+      role="navigation"
     >
       <a
+        aria-disabled={false}
+        aria-label="previous"
         className="nav-link left-controls previous icon-only"
         onClick={[Function]}
         tabIndex="0"
@@ -185,6 +227,8 @@ exports[`Paginator should render a paginator without page links 1`] = `
         />
       </a>
       <a
+        aria-disabled={false}
+        aria-label="next"
         className="nav-link right-controls next icon-only"
         onClick={[Function]}
         tabIndex="0"
@@ -201,6 +245,8 @@ exports[`Paginator should render a paginator without page links 1`] = `
       className="paginator pageless"
     >
       <a
+        aria-disabled={false}
+        aria-label="previous"
         className="nav-link left-controls previous"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -212,6 +258,8 @@ exports[`Paginator should render a paginator without page links 1`] = `
         Previous
       </a>
       <a
+        aria-disabled={false}
+        aria-label="next"
         className="nav-link right-controls next"
         onClick={[Function]}
         onKeyDown={[Function]}

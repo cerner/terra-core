@@ -4,10 +4,14 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
 <ResponsiveElement
   defaultElement={
     <div
+      aria-label="pagination"
       className="paginator"
+      role="navigation"
     >
       <div>
         <a
+          aria-disabled={true}
+          aria-label="first"
           className="nav-link is-disabled"
           onClick={[Function]}
           tabIndex={null}
@@ -15,6 +19,8 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           First
         </a>
         <a
+          aria-disabled={true}
+          aria-label="previous"
           className="nav-link previous icon-only is-disabled"
           onClick={[Function]}
           tabIndex={null}
@@ -32,6 +38,8 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
       </div>
       <div>
         <a
+          aria-disabled={false}
+          aria-label="next"
           className="nav-link next icon-only"
           onClick={[Function]}
           tabIndex="0"
@@ -41,6 +49,8 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           />
         </a>
         <a
+          aria-disabled={false}
+          aria-label="last"
           className="nav-link"
           onClick={[Function]}
           tabIndex="0"
@@ -53,7 +63,9 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
   responsiveTo="parent"
   tiny={
     <div
+      aria-label="pagination"
       className="paginator progressive"
+      role="navigation"
     >
       <div>
         Page 
@@ -63,6 +75,8 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
       </div>
       <div>
         <a
+          aria-disabled={true}
+          aria-label="first"
           className="nav-link is-disabled"
           onClick={[Function]}
           tabIndex={null}
@@ -70,6 +84,8 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           First
         </a>
         <a
+          aria-disabled={true}
+          aria-label="previous"
           className="nav-link previous is-disabled"
           onClick={[Function]}
           tabIndex={null}
@@ -80,6 +96,8 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           Previous
         </a>
         <a
+          aria-disabled={false}
+          aria-label="next"
           className="nav-link next"
           onClick={[Function]}
           tabIndex="0"
@@ -90,6 +108,8 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           />
         </a>
         <a
+          aria-disabled={false}
+          aria-label="last"
           className="nav-link"
           onClick={[Function]}
           tabIndex="0"

@@ -88,7 +88,8 @@
   .icon {
     display: inline-block; // IE 10
     height: 1rem;
-    vertical-align: middle;
+    position: relative;
+    top: var(--terra-paginator-nav-link-icon-offset-top, 0.1785rem);
     width: 1rem;
   }
 
