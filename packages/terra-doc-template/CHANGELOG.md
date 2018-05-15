@@ -6,6 +6,10 @@ Unreleased
 ### Changed
 * Add 15px padding to template
 * Limit syntax hilighting support to jsx only to limit package size.
+* Open up description prop to accept node
+
+### Fixed
+* Fix example template to only display example source code toggle when source code is provided
 
 1.1.0 - (May 9, 2018)
 ------------------
