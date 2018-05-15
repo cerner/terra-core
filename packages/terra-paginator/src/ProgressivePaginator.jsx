@@ -69,7 +69,7 @@ class ProgressivePaginator extends React.Component {
       </div>
       <div>
         <a
-          aria-disabled={ selectedPage === 1 }
+          aria-disabled={selectedPage === 1}
           aria-label="first"
           className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
           tabIndex={selectedPage === 1 ? null : '0'}
@@ -78,7 +78,7 @@ class ProgressivePaginator extends React.Component {
           First
         </a>
         <a
-          aria-disabled={ selectedPage === 1 }
+          aria-disabled={selectedPage === 1}
           aria-label="previous"
           className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
           tabIndex={selectedPage === 1 ? null : '0'}
@@ -87,7 +87,7 @@ class ProgressivePaginator extends React.Component {
           <span className={cx('icon')} />Previous
         </a>
         <a
-          aria-disabled={ selectedPage === totalPages }
+          aria-disabled={selectedPage === totalPages}
           aria-label="next"
           className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}
@@ -96,7 +96,7 @@ class ProgressivePaginator extends React.Component {
           Next<span className={cx('icon')} />
         </a>
         <a
-          aria-disabled={ selectedPage === totalPages }
+          aria-disabled={selectedPage === totalPages}
           aria-label="last"
           className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}
@@ -115,7 +115,7 @@ class ProgressivePaginator extends React.Component {
     return (<div className={cx(['paginator'])} role="navigation" aria-label="pagination">
       <div>
         <a
-          aria-disabled={ selectedPage === 1 }
+          aria-disabled={selectedPage === 1}
           aria-label="first"
           className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
           tabIndex={selectedPage === 1 ? null : '0'}
@@ -124,7 +124,7 @@ class ProgressivePaginator extends React.Component {
           First
         </a>
         <a
-          aria-disabled={ selectedPage === 1 }
+          aria-disabled={selectedPage === 1}
           aria-label="previous"
           className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
           tabIndex={selectedPage === 1 ? null : '0'}
@@ -138,7 +138,7 @@ class ProgressivePaginator extends React.Component {
       </div>
       <div>
         <a
-          aria-disabled={ selectedPage === totalPages }
+          aria-disabled={selectedPage === totalPages}
           aria-label="next"
           className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}
@@ -147,7 +147,7 @@ class ProgressivePaginator extends React.Component {
           <span className={cx('icon')} />
         </a>
         <a
-          aria-disabled={ selectedPage === totalPages }
+          aria-disabled={selectedPage === totalPages}
           aria-label="last"
           className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}

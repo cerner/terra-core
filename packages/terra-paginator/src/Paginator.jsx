@@ -101,11 +101,11 @@ class Paginator extends React.Component {
       if (val > totalPages) {
         return;
       }
-      /* eslint-disable comma-dangle */
+      /* eslint-disable comma-dangle, jsx-a11y/aria-props */
       pageButtons.push(
         <a
           aria-label={`Page ${val}`}
-          aria-current={ val === selectedPage && 'page' }
+          aria-current={val === selectedPage && 'page'}
           className={paginationLinkClassNames}
           tabIndex={val === selectedPage ? null : '0'}
           key={`pageButton_${val}`}
@@ -115,7 +115,7 @@ class Paginator extends React.Component {
           {val}
         </a>
       );
-      /* eslint-enable comma-dangle */
+      /* eslint-enable comma-dangle, jsx-a11y/aria-props */
     });
 
     return pageButtons;
@@ -135,7 +135,7 @@ class Paginator extends React.Component {
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])}>
         {
           this.hasNavContext() && <a
-            aria-disabled={ selectedPage === 1 }
+            aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
             tabIndex={selectedPage === 1 ? null : '0'}
@@ -146,7 +146,7 @@ class Paginator extends React.Component {
           </a>
         }
         <a
-          aria-disabled={ selectedPage === 1 }
+          aria-disabled={selectedPage === 1}
           aria-label="previous"
           className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
           tabIndex={selectedPage === 1 ? null : '0'}
@@ -157,7 +157,7 @@ class Paginator extends React.Component {
         </a>
         {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
         <a
-          aria-disabled={ selectedPage === totalPages }
+          aria-disabled={selectedPage === totalPages}
           aria-label="next"
           className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
           tabIndex={selectedPage === totalPages ? null : '0'}
@@ -168,7 +168,7 @@ class Paginator extends React.Component {
         </a>
         {
           this.hasNavContext() && <a
-            aria-disabled={ selectedPage === totalPages }
+            aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
             tabIndex={selectedPage === totalPages ? null : '0'}
@@ -192,7 +192,7 @@ class Paginator extends React.Component {
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])} role="navigation" aria-label="pagination">
         {
           this.hasNavContext() && <a
-            aria-disabled={ selectedPage === 1 }
+            aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
             tabIndex={selectedPage === 1 ? null : '0'}
@@ -202,7 +202,7 @@ class Paginator extends React.Component {
           </a>
         }
         <a
-          aria-disabled={ selectedPage === 1 }
+          aria-disabled={selectedPage === 1}
           aria-label="previous"
           className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
           tabIndex={selectedPage === 1 ? null : '0'}
@@ -212,7 +212,7 @@ class Paginator extends React.Component {
         </a>
         {this.hasNavContext() && `Page ${selectedPage}`}
         <a
-          aria-disabled={ selectedPage === totalPages }
+          aria-disabled={selectedPage === totalPages}
           aria-label="next"
           className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
           tabIndex={selectedPage === totalPages ? null : '0'}
@@ -222,7 +222,7 @@ class Paginator extends React.Component {
         </a>
         {
           this.hasNavContext() && <a
-            aria-disabled={ selectedPage === totalPages }
+            aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
             tabIndex={selectedPage === totalPages ? null : '0'}
