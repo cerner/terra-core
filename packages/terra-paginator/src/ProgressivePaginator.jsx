@@ -6,7 +6,7 @@ import ResponsiveElement from 'terra-responsive-element';
 import 'terra-base/lib/baseStyles';
 import styles from './Paginator.scss';
 
-import { calculatePages } from './_paginationUtils';
+import { calculatePages, KEYCODES } from './_paginationUtils';
 
 const cx = classNames.bind(styles);
 
@@ -42,6 +42,7 @@ class ProgressivePaginator extends React.Component {
 
     this.handlePageChange = this.handlePageChange.bind(this);
     this.handlePageInput = this.handlePageInput.bind(this);
+    this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
     this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
   }
@@ -59,9 +60,32 @@ class ProgressivePaginator extends React.Component {
     };
   }
 
+  handleOnKeyDown(index) {
+    return (event) => {
+      if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+        event.preventDefault();
+
+        if (isNaN(index)) {
+          this.props.onPageChange(event.target.text.trim().toLowerCase());
+
+          return false;
+        }
+
+        this.props.onPageChange(index);
+        this.setState({
+          selectedPage: index,
+        });
+      }
+
+      return false;
+    };
+  }
+
   defaultProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
+    const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
+    const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     return (<div className={cx(['paginator', 'progressive'])} role="navigation" aria-label="pagination">
       <div>
@@ -74,6 +98,7 @@ class ProgressivePaginator extends React.Component {
           className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
           tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(1)}
+          onKeyDown={this.handleOnKeyDown(1)}
         >
           First
         </a>
@@ -82,7 +107,8 @@ class ProgressivePaginator extends React.Component {
           aria-label="previous"
           className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
           tabIndex={selectedPage === 1 ? null : '0'}
-          onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
+          onClick={this.handlePageChange(previousPageIndex)}
+          onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
           <span className={cx('icon')} />Previous
         </a>
@@ -91,7 +117,8 @@ class ProgressivePaginator extends React.Component {
           aria-label="next"
           className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}
-          onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
+          onClick={this.handlePageChange(nextPageIndex)}
+          onKeyDown={this.handleOnKeyDown(nextPageIndex)}
         >
           Next<span className={cx('icon')} />
         </a>
@@ -101,6 +128,7 @@ class ProgressivePaginator extends React.Component {
           className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(totalPages)}
+          onKeyDown={this.handleOnKeyDown(totalPages)}
         >
           Last
         </a>
@@ -111,6 +139,8 @@ class ProgressivePaginator extends React.Component {
   reducedProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
+    const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
+    const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     return (<div className={cx(['paginator'])} role="navigation" aria-label="pagination">
       <div>
@@ -120,6 +150,7 @@ class ProgressivePaginator extends React.Component {
           className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
           tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(1)}
+          onKeyDown={this.handleOnKeyDown(1)}
         >
           First
         </a>
@@ -128,7 +159,8 @@ class ProgressivePaginator extends React.Component {
           aria-label="previous"
           className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
           tabIndex={selectedPage === 1 ? null : '0'}
-          onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
+          onClick={this.handlePageChange(previousPageIndex)}
+          onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
           <span className={cx('icon')} />
         </a>
@@ -142,7 +174,8 @@ class ProgressivePaginator extends React.Component {
           aria-label="next"
           className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}
-          onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
+          onClick={this.handlePageChange(nextPageIndex)}
+          onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
           <span className={cx('icon')} />
         </a>
@@ -152,6 +185,7 @@ class ProgressivePaginator extends React.Component {
           className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(totalPages)}
+          onKeyDown={this.handleOnKeyDown(totalPages)}
         >
           Last
         </a>

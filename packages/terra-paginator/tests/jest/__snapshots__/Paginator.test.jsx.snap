@@ -13,6 +13,7 @@ exports[`Paginator should render a default paginator 1`] = `
         aria-label="first"
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex={null}
       >
         First
@@ -22,6 +23,7 @@ exports[`Paginator should render a default paginator 1`] = `
         aria-label="previous"
         className="nav-link left-controls previous icon-only is-disabled"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex={null}
       >
         <span
@@ -34,6 +36,7 @@ exports[`Paginator should render a default paginator 1`] = `
         aria-label="next"
         className="nav-link right-controls next icon-only"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         <span
@@ -45,6 +48,7 @@ exports[`Paginator should render a default paginator 1`] = `
         aria-label="last"
         className="nav-link right-controls"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         Last
@@ -220,6 +224,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
         aria-label="previous"
         className="nav-link left-controls previous icon-only"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         <span
@@ -231,6 +236,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
         aria-label="next"
         className="nav-link right-controls next icon-only"
         onClick={[Function]}
+        onKeyDown={[Function]}
         tabIndex="0"
       >
         <span

@@ -70,6 +70,8 @@ class Paginator extends React.Component {
   handleOnKeyDown(index) {
     return (event) => {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+        event.preventDefault();
+
         if (isNaN(index)) {
           this.props.onPageChange(event.target.text.trim().toLowerCase());
 
@@ -187,6 +189,8 @@ class Paginator extends React.Component {
   reducedPaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
+    const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
+    const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     const reducedView = (
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])} role="navigation" aria-label="pagination">
@@ -197,6 +201,7 @@ class Paginator extends React.Component {
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
+            onKeyDown={this.handleOnKeyDown(1)}
           >
             First
           </a>
@@ -206,7 +211,8 @@ class Paginator extends React.Component {
           aria-label="previous"
           className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
           tabIndex={selectedPage === 1 ? null : '0'}
-          onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
+          onClick={this.handlePageChange(previousPageIndex)}
+          onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
           <span className={cx('icon')} />
         </a>
@@ -216,7 +222,8 @@ class Paginator extends React.Component {
           aria-label="next"
           className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
           tabIndex={selectedPage === totalPages ? null : '0'}
-          onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
+          onClick={this.handlePageChange(nextPageIndex)}
+          onKeyDown={this.handleOnKeyDown(nextPageIndex)}
         >
           <span className={cx('icon')} />
         </a>
@@ -227,6 +234,7 @@ class Paginator extends React.Component {
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
+            onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
           </a>

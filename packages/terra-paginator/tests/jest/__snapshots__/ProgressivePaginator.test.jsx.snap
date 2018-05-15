@@ -14,6 +14,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           aria-label="first"
           className="nav-link is-disabled"
           onClick={[Function]}
+          onKeyDown={[Function]}
           tabIndex={null}
         >
           First
@@ -23,6 +24,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           aria-label="previous"
           className="nav-link previous icon-only is-disabled"
           onClick={[Function]}
+          onKeyDown={[Function]}
           tabIndex={null}
         >
           <span
@@ -42,6 +44,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           aria-label="next"
           className="nav-link next icon-only"
           onClick={[Function]}
+          onKeyDown={[Function]}
           tabIndex="0"
         >
           <span
@@ -53,6 +56,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           aria-label="last"
           className="nav-link"
           onClick={[Function]}
+          onKeyDown={[Function]}
           tabIndex="0"
         >
           Last
@@ -79,6 +83,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           aria-label="first"
           className="nav-link is-disabled"
           onClick={[Function]}
+          onKeyDown={[Function]}
           tabIndex={null}
         >
           First
@@ -88,6 +93,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           aria-label="previous"
           className="nav-link previous is-disabled"
           onClick={[Function]}
+          onKeyDown={[Function]}
           tabIndex={null}
         >
           <span
@@ -100,6 +106,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           aria-label="next"
           className="nav-link next"
           onClick={[Function]}
+          onKeyDown={[Function]}
           tabIndex="0"
         >
           Next
@@ -112,6 +119,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           aria-label="last"
           className="nav-link"
           onClick={[Function]}
+          onKeyDown={[Function]}
           tabIndex="0"
         >
           Last
