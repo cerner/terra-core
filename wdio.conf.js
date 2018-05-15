@@ -11,7 +11,8 @@ const config = {
   seleniumDocker: {
     enabled: !process.env.TRAVIS,
   },
-
+  
+  host: '0.0.0.0',
 };
 
 exports.config = config;
