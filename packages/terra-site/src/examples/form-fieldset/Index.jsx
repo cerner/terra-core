@@ -1,23 +1,32 @@
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-form-fieldset/docs/README.md';
-import { version } from 'terra-form-fieldset/package.json';
+import { name } from 'terra-form-fieldset/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import FieldsetSrc from '!raw-loader!terra-form-fieldset/src/Fieldset';
 
 // Example Files
 import FieldsetExamples from './FieldsetExamples';
 
-const FieldsetIndex = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={FieldsetSrc} />
-    <FieldsetExamples />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        example: <FieldsetExamples />,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Field Set',
+        componentSrc: FieldsetSrc,
+      },
+    ]}
+  />
 );
 
-export default FieldsetIndex;
+export default DocPage;

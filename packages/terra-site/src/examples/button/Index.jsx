@@ -1,39 +1,70 @@
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-button/docs/README.md';
-import { version } from 'terra-button/package.json';
+import { name } from 'terra-button/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import ButtonSrc from '!raw-loader!terra-button/src/Button';
 
 // Example Files
 import ButtonBlock from './ButtonBlock';
+import ButtonBlockSrc from '!raw-loader!./ButtonBlock';
 import ButtonAnchor from './ButtonAnchor';
+import ButtonAnchorSrc from '!raw-loader!./ButtonAnchor';
 import ButtonDisabled from './ButtonDisabled';
+import ButtonDisabledSrc from '!raw-loader!./ButtonDisabled';
 import ButtonOnClick from './ButtonOnClick';
+import ButtonOnClickSrc from '!raw-loader!./ButtonOnClick';
 import ButtonIcon from './ButtonIcon';
+import ButtonIconSrc from '!raw-loader!./ButtonIcon';
 import ButtonVariant from './ButtonVariant';
+import ButtonVariantSrc from '!raw-loader!./ButtonVariant';
 
-const ButtonExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={ButtonSrc} />
-    <h2 id="variant">Variant</h2>
-    <ButtonVariant />
-    <h2 id="block">Block</h2>
-    <ButtonBlock />
-    <h2 id="anchor">Anchor</h2>
-    <ButtonAnchor />
-    <h2 id="disabled">Disabled</h2>
-    <ButtonDisabled />
-    <h2 id="on-click">OnClick</h2>
-    <ButtonOnClick />
-    <h2 id="icon">Icon</h2>
-    <ButtonIcon />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Variant',
+        example: <ButtonVariant />,
+        source: ButtonVariantSrc,
+      },
+      {
+        title: 'Block',
+        example: <ButtonBlock />,
+        source: ButtonBlockSrc,
+      },
+      {
+        title: 'Anchor',
+        example: <ButtonAnchor />,
+        source: ButtonAnchorSrc,
+      },
+      {
+        title: 'Disabled',
+        example: <ButtonDisabled />,
+        source: ButtonDisabledSrc,
+      },
+      {
+        title: 'OnClick',
+        example: <ButtonOnClick />,
+        source: ButtonOnClickSrc,
+      },
+      {
+        title: 'Icon',
+        example: <ButtonIcon />,
+        source: ButtonIconSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Button',
+        componentSrc: ButtonSrc,
+      },
+    ]}
+  />
 );
 
-export default ButtonExamples;
+export default DocPage;
