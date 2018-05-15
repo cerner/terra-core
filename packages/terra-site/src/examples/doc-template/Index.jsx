@@ -13,6 +13,7 @@ const DocTemplateExamples = () => (
   <DocTemplate
     packageName={name}
     readme={readme}
+    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
     examples={[
       {
         title: 'DocTemplate',

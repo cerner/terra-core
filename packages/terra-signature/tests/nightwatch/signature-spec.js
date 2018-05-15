@@ -16,6 +16,7 @@ module.exports = resizeTo(['medium'], {
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
+      .pause(300)
       .moveToElement('canvas#drawline', 0, 0)
       .mouseButtonDown(0)
       .moveToElement('canvas#drawline', 90, 90)
@@ -34,11 +35,12 @@ module.exports = resizeTo(['medium'], {
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
-    .moveToElement('canvas#drawline', 0, 0)
-    .mouseButtonDown(0)
-    .moveToElement('div#othersection', 0, 0)
-    .moveToElement('canvas#drawline', 90, 90)
-    .mouseButtonUp(0);
+      .pause(300)
+      .moveToElement('canvas#drawline', 0, 0)
+      .mouseButtonDown(0)
+      .moveToElement('div#othersection', 0, 0)
+      .moveToElement('canvas#drawline', 90, 90)
+      .mouseButtonUp(0);
 
     browser
     .execute(function () {
@@ -53,6 +55,7 @@ module.exports = resizeTo(['medium'], {
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
+      .pause(300)
       .moveToElement('canvas#drawline', 0, 0)
       .mouseButtonDown(2)
       .moveToElement('canvas#drawline', 90, 90)
@@ -71,6 +74,7 @@ module.exports = resizeTo(['medium'], {
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
+      .pause(300)
       .moveToElement('canvas#drawline', 0, 0)
       .mouseButtonDown(1)
       .moveToElement('canvas#drawline', 90, 90)

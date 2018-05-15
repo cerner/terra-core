@@ -10,13 +10,17 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The given component's npm package name
+   * The given component's npm package name.
    */
   packageName: PropTypes.string,
   /**
-   * The given component's readme file imported to a string
+   * The given component's readme file imported to a string.
    */
   readme: PropTypes.string,
+  /**
+   * The url to the source code for the given component.
+   */
+  srcPath: PropTypes.string,
   /**
    * All of the example(s) that will be displayed. An empty array is supported.
    * ```
@@ -30,7 +34,7 @@ const propTypes = {
     PropTypes.shape(
       {
         title: PropTypes.string,
-        description: PropTypes.string,
+        description: PropTypes.node,
         example: PropTypes.element,
         source: PropTypes.string,
       },
@@ -56,11 +60,12 @@ const propTypes = {
 const defaultProps = {
   packageName: '',
   readme: '',
+  srcPath: '',
   examples: [],
   propsTables: [],
 };
 
-const DocTemplate = ({ packageName, readme, examples, propsTables, ...customProps }) => {
+const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...customProps }) => {
   let id = 0;
   const localExamples = examples;
   const localPropsTables = propsTables;
@@ -78,10 +83,16 @@ const DocTemplate = ({ packageName, readme, examples, propsTables, ...customProp
 
   const version = `[![NPM version](http://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})`;
 
+  const docTemplateClassNames = cx([
+    'doc-template',
+    customProps.className,
+  ]);
+
   return (
-    <div {...customProps}>
+    <div {...customProps} className={docTemplateClassNames}>
       {packageName && <Markdown src={version} />}
       {readme && <Markdown src={readme} />}
+      {srcPath && <a href={srcPath}>View component source code</a>}
 
       {localExamples.length > 0 && <h1 className={cx('.examples-header')} >Examples</h1>}
       {localExamples.map(example =>

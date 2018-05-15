@@ -1,38 +1,59 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-tabs/docs/README.md';
-import { version } from 'terra-tabs/package.json';
+import { name } from 'terra-tabs/package.json';
 
 // Component Source
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import TabsSrc from '!raw-loader!terra-tabs/src/Tabs';
 import PaneSrc from '!raw-loader!terra-tabs/src/TabPane';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 // Example Files
 import TabsTemplate from './examples/TabsTemplate';
+import TabsTemplateSrc from '!raw-loader!./examples/TabsTemplate';
 import TabsWithFilledContent from './examples/TabsWithFilledContent';
+import TabsWithFilledContentSrc from '!raw-loader!./examples/TabsWithFilledContent';
 import IconOnlyTabs from './examples/IconOnlyTabs';
+import IconOnlyTabsSrc from '!raw-loader!./examples/IconOnlyTabs';
 
-const TabsExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={TabsSrc} componentName="Tabs" />
-    <PropsTable id="pane-props" src={PaneSrc} componentName="Tabs.Pane" />
-    <div style={{ backgroundColor: 'lightgrey' }}>
-      <h3>Compact</h3>
-      <TabsTemplate />
-      <h3>Expanded</h3>
-      <TabsTemplate tabFill />
-      <h3>Icon Only</h3>
-      <IconOnlyTabs />
-      <h3>Fill Parent Container</h3>
-      <TabsWithFilledContent fill />
-    </div>
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Compact',
+        example: <TabsTemplate />,
+        source: TabsTemplateSrc,
+      },
+      {
+        title: 'Expanded',
+        example: <TabsTemplate tabFill />,
+        source: TabsTemplateSrc,
+      },
+      {
+        title: 'Icon Only',
+        example: <IconOnlyTabs />,
+        source: IconOnlyTabsSrc,
+      },
+      {
+        title: 'Fill Parent Container',
+        example: <TabsWithFilledContent fill />,
+        source: TabsWithFilledContentSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Tabs',
+        componentSrc: TabsSrc,
+      },
+      {
+        componentName: 'Tabs.Pane',
+        componentSrc: PaneSrc,
+      },
+    ]}
+  />
 );
 
-export default TabsExamples;
+export default DocPage;

@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DocTemplate should render a default component with nothing 1`] = `<div />`;
+exports[`DocTemplate should render a default component with nothing 1`] = `
+<div
+  className="doc-template"
+/>
+`;
 
 exports[`DocTemplate should show multiple examples 1`] = `
-<div>
+<div
+  className="doc-template"
+>
   <h1
     className=".examples-header"
   >
@@ -27,7 +33,9 @@ exports[`DocTemplate should show multiple examples 1`] = `
 `;
 
 exports[`DocTemplate should show multiple props tables 1`] = `
-<div>
+<div
+  className="doc-template"
+>
   <PropsTable
     componentName="Test Component"
     key="0"
@@ -42,7 +50,9 @@ exports[`DocTemplate should show multiple props tables 1`] = `
 `;
 
 exports[`DocTemplate should show one example 1`] = `
-<div>
+<div
+  className="doc-template"
+>
   <h1
     className=".examples-header"
   >
@@ -59,7 +69,9 @@ exports[`DocTemplate should show one example 1`] = `
 `;
 
 exports[`DocTemplate should show one props table 1`] = `
-<div>
+<div
+  className="doc-template"
+>
   <PropsTable
     componentName="Test Component"
     key="0"
@@ -69,7 +81,9 @@ exports[`DocTemplate should show one props table 1`] = `
 `;
 
 exports[`DocTemplate should show the readme 1`] = `
-<div>
+<div
+  className="doc-template"
+>
   <Markdown
     src="test-file-stub"
   />
@@ -77,7 +91,9 @@ exports[`DocTemplate should show the readme 1`] = `
 `;
 
 exports[`DocTemplate should show the version 1`] = `
-<div>
+<div
+  className="doc-template"
+>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
   />
@@ -85,7 +101,9 @@ exports[`DocTemplate should show the version 1`] = `
 `;
 
 exports[`DocTemplate should show the version and readme 1`] = `
-<div>
+<div
+  className="doc-template"
+>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
   />
@@ -95,14 +113,21 @@ exports[`DocTemplate should show the version and readme 1`] = `
 </div>
 `;
 
-exports[`DocTemplate should show the version, readme, examples, and props tables 1`] = `
-<div>
+exports[`DocTemplate should show the version, readme, source link, examples, and props tables 1`] = `
+<div
+  className="doc-template"
+>
   <Markdown
     src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
   />
   <Markdown
     src="test-file-stub"
   />
+  <a
+    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
+  >
+    View component source code
+  </a>
   <h1
     className=".examples-header"
   >
