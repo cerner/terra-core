@@ -134,7 +134,7 @@ class Paginator extends React.Component {
         {
           this.hasNavContext() && <a
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
-            tabIndex="0"
+            tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handleOnKeyDown(1)}
           >
@@ -143,7 +143,7 @@ class Paginator extends React.Component {
         }
         <a
           className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
-          tabIndex="0"
+          tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
@@ -152,7 +152,7 @@ class Paginator extends React.Component {
         {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
         <a
           className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
-          tabIndex="0"
+          tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(nextPageIndex)}
           onKeyDown={this.handleOnKeyDown(nextPageIndex)}
         >
@@ -161,7 +161,7 @@ class Paginator extends React.Component {
         {
           this.hasNavContext() && <a
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
-            tabIndex="0"
+            tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
@@ -183,23 +183,23 @@ class Paginator extends React.Component {
         {
           this.hasNavContext() && <a
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
-            tabIndex="0"
+            tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
           >
             First
           </a>
         }
         <a
-          className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
-          tabIndex="0"
+          className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
+          tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
         >
           <span className={cx('icon')} />
         </a>
         {this.hasNavContext() && `Page ${selectedPage}`}
         <a
-          className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
-          tabIndex="0"
+          className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
+          tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
         >
           <span className={cx('icon')} />
@@ -207,7 +207,7 @@ class Paginator extends React.Component {
         {
           this.hasNavContext() && <a
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
-            tabIndex="0"
+            tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
           >
             Last

@@ -9,14 +9,14 @@ exports[`Paginator should render a default paginator 1`] = `
       <a
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
-        tabIndex="0"
+        tabIndex={null}
       >
         First
       </a>
       <a
-        className="nav-link left-controls previous is-disabled"
+        className="nav-link left-controls previous icon-only is-disabled"
         onClick={[Function]}
-        tabIndex="0"
+        tabIndex={null}
       >
         <span
           className="icon"
@@ -24,7 +24,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </a>
       Page 1
       <a
-        className="nav-link right-controls next"
+        className="nav-link right-controls next icon-only"
         onClick={[Function]}
         tabIndex="0"
       >
@@ -50,7 +50,7 @@ exports[`Paginator should render a default paginator 1`] = `
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex="0"
+        tabIndex={null}
       >
         First
       </a>
@@ -58,7 +58,7 @@ exports[`Paginator should render a default paginator 1`] = `
         className="nav-link left-controls previous is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex="0"
+        tabIndex={null}
       >
         <span
           className="icon"
@@ -176,7 +176,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
       className="paginator pageless"
     >
       <a
-        className="nav-link left-controls previous"
+        className="nav-link left-controls previous icon-only"
         onClick={[Function]}
         tabIndex="0"
       >
@@ -185,7 +185,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
         />
       </a>
       <a
-        className="nav-link right-controls next"
+        className="nav-link right-controls next icon-only"
         onClick={[Function]}
         tabIndex="0"
       >

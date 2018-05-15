@@ -70,28 +70,28 @@ class ProgressivePaginator extends React.Component {
       <div>
         <a
           className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
-          tabIndex="0"
+          tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(1)}
         >
           First
         </a>
         <a
           className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
-          tabIndex="0"
+          tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
         >
           <span className={cx('icon')} />Previous
         </a>
         <a
           className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
-          tabIndex="0"
+          tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
         >
           Next<span className={cx('icon')} />
         </a>
         <a
           className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
-          tabIndex="0"
+          tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(totalPages)}
         >
           Last
@@ -108,14 +108,14 @@ class ProgressivePaginator extends React.Component {
       <div>
         <a
           className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
-          tabIndex="0"
+          tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(1)}
         >
           First
         </a>
         <a
-          className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
-          tabIndex="0"
+          className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
+          tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(selectedPage === 1 ? 1 : selectedPage - 1)}
         >
           <span className={cx('icon')} />
@@ -126,15 +126,15 @@ class ProgressivePaginator extends React.Component {
       </div>
       <div>
         <a
-          className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
-          tabIndex="0"
+          className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
+          tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(selectedPage === totalPages ? totalPages : selectedPage + 1)}
         >
           <span className={cx('icon')} />
         </a>
         <a
           className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
-          tabIndex="0"
+          tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(totalPages)}
         >
           Last

@@ -25,7 +25,7 @@
       margin-left: var(--terra-paginator-nav-link-margin-left, 0.14285rem);
       margin-right: var(--terra-paginator-nav-link-margin-right, 0.14285rem);
       min-width: var(--terra-paginator-nav-link-min-width, 2rem); // Helps ensure limited resizing as you page through large numbers.
-      padding: var(--terra-paginator-nav-link-padding, 3px);
+      padding: var(--terra-paginator-nav-link-padding, 0.35714rem 0.5rem);
       text-align: center;
       user-select: none; // Keeps user from highlighting the paging link text.
 
@@ -108,5 +108,14 @@
 
   .next.is-disabled > .icon {
     content: var(--terra-paginator-nav-link-icon-next-disabled, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>'));
+  }
+
+  .previous.icon-only,
+  .next.icon-only {
+    margin: 0;
+
+    > .icon {
+      margin: 0;
+    }
   }
 }

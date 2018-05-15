@@ -10,14 +10,14 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
         <a
           className="nav-link is-disabled"
           onClick={[Function]}
-          tabIndex="0"
+          tabIndex={null}
         >
           First
         </a>
         <a
-          className="nav-link previous is-disabled"
+          className="nav-link previous icon-only is-disabled"
           onClick={[Function]}
-          tabIndex="0"
+          tabIndex={null}
         >
           <span
             className="icon"
@@ -32,7 +32,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
       </div>
       <div>
         <a
-          className="nav-link next"
+          className="nav-link next icon-only"
           onClick={[Function]}
           tabIndex="0"
         >
@@ -65,14 +65,14 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
         <a
           className="nav-link is-disabled"
           onClick={[Function]}
-          tabIndex="0"
+          tabIndex={null}
         >
           First
         </a>
         <a
           className="nav-link previous is-disabled"
           onClick={[Function]}
-          tabIndex="0"
+          tabIndex={null}
         >
           <span
             className="icon"
