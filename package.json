@@ -92,6 +92,7 @@
     "gh-pages": "^0.12.0",
     "glob": "^7.1.1",
     "identity-obj-proxy": "^3.0.0",
+    "ip": "^1.1.5",
     "jest": "^21.0.2",
     "lerna": "^2.1.2",
     "link-parent-bin": "^0.1.3",
