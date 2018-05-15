@@ -1,19 +1,24 @@
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-icon/docs/README.md';
-import { version } from 'terra-icon/package.json';
+import { name } from 'terra-icon/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import IconSrc from '!raw-loader!terra-icon/src/IconBase';
 
-const IconExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={IconSrc} />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    propsTables={[
+      {
+        componentName: 'Icon',
+        componentSrc: IconSrc,
+      },
+    ]}
+  />
 );
 
-export default IconExamples;
+export default DocPage;

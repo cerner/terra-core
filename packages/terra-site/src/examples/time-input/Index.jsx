@@ -1,34 +1,56 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-time-input/docs/README.md';
-import { version } from 'terra-time-input/package.json';
+import { name } from 'terra-time-input/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TimeInputSrc from '!raw-loader!terra-time-input/src/TimeInput';
 
 // Example Files
 import TimeInputDefaultTime from './TimeInputDefaultTime';
+import TimeInputDefaultTimeSrc from '!raw-loader!./TimeInputDefaultTime';
 import TimeInputDefaultTwelveHour from './TimeInputDefaultTwelveHour';
+import TimeInputDefaultTwelveHourSrc from '!raw-loader!./TimeInputDefaultTwelveHour';
 import TimeInputNoDefaultTime from './TimeInputNoDefaultTime';
+import TimeInputNoDefaultTimeSrc from '!raw-loader!./TimeInputNoDefaultTime';
 import TimeInputNoDefaultTwelveHour from './TimeInputNoDefaultTwelveHour';
+import TimeInputNoDefaultTwelveHourSrc from '!raw-loader!./TimeInputNoDefaultTwelveHour';
 
-const TimeInputExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={TimeInputSrc} />
-    <h2 id="default">Without Default Time</h2>
-    <TimeInputNoDefaultTime />
-    <h2 id="default">With Default Time</h2>
-    <TimeInputDefaultTime />
-    <h2 id="default">Without Default Time - 12 Hour</h2>
-    <TimeInputNoDefaultTwelveHour />
-    <h2 id="default">With Default Time - 12 Hour</h2>
-    <TimeInputDefaultTwelveHour />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Without Default Time',
+        example: <TimeInputNoDefaultTime />,
+        source: TimeInputNoDefaultTimeSrc,
+      },
+      {
+        title: 'With Default Time',
+        example: <TimeInputDefaultTime />,
+        source: TimeInputDefaultTimeSrc,
+      },
+      {
+        title: 'Without Default Time - 12 Hour',
+        example: <TimeInputNoDefaultTwelveHour />,
+        source: TimeInputNoDefaultTwelveHourSrc,
+      },
+      {
+        title: 'With Default Time - 12 Hour',
+        example: <TimeInputDefaultTwelveHour />,
+        source: TimeInputDefaultTwelveHourSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Time Input',
+        componentSrc: TimeInputSrc,
+      },
+    ]}
+  />
 );
 
-export default TimeInputExamples;
+export default DocPage;

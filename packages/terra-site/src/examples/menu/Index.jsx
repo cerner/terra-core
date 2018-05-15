@@ -1,48 +1,64 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import PropsTable from 'terra-props-table';
-import Markdown from 'terra-markdown';
+import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-menu/docs/README.md';
-import { version } from 'terra-menu/package.json';
+import { name } from 'terra-menu/package.json';
 
 // Component Source
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import MenuSrc from '!raw-loader!terra-menu/src/Menu';
 import MenuItemSrc from '!raw-loader!terra-menu/src/MenuItem';
 import MenuItemGroupSrc from '!raw-loader!terra-menu/src/MenuItemGroup';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 // Example Files
 import BasicMenu from './BasicMenu';
+import BasicMenuSrc from '!raw-loader!!raw-loader!./BasicMenu';
 import MenuBounded from './MenuBounded';
+import MenuBoundedSrc from '!raw-loader!./MenuBounded';
 import MenuWidths from './MenuWidths';
+import MenuWidthsSrc from '!raw-loader!./MenuWidths';
 
-const MenuExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="menu-props" src={MenuSrc} componentName="Menu" />
-    <PropsTable id="menu-item-props" src={MenuItemSrc} componentName="Menu.Item" />
-    <PropsTable id="menu-item-group-props" src={MenuItemGroupSrc} componentName="Menu.ItemGroup" />
-    <h2>Menu.Divider</h2>
-    No Props
-    <br />
-    <br />
-    <h2>Menu</h2>
-    <BasicMenu />
-    <br />
-    <br />
-    <h2>Menu With Arrow</h2>
-    <BasicMenu isArrowDisplayed />
-    <br />
-    <br />
-    <h2>Menu Bounded</h2>
-    <MenuBounded />
-    <br />
-    <br />
-    <h2>Menu Widths</h2>
-    <MenuWidths />
-  </div>
+const DocPage = () => (
+  <DocTemplate
+    packageName={name}
+    readme={ReadMe}
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    examples={[
+      {
+        title: 'Default Menu',
+        example: <BasicMenu />,
+        source: BasicMenuSrc,
+      },
+      {
+        title: 'Menu With Arrow',
+        example: <BasicMenu isArrowDisplayed />,
+        source: BasicMenuSrc,
+      },
+      {
+        title: 'Menu Bounded',
+        example: <MenuBounded />,
+        source: MenuBoundedSrc,
+      },
+      {
+        title: 'Menu Widths',
+        example: <MenuWidths />,
+        source: MenuWidthsSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Menu',
+        componentSrc: MenuSrc,
+      },
+      {
+        componentName: 'Menu.Item',
+        componentSrc: MenuItemSrc,
+      },
+      {
+        componentName: 'Menu.ItemGroup',
+        componentSrc: MenuItemGroupSrc,
+      },
+    ]}
+  />
 );
 
-export default MenuExamples;
+export default DocPage;
