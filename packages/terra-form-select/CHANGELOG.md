@@ -25,6 +25,11 @@ Unreleased
 * variant - Added new behavior variants. default, combobox, multiple, search, or tag.
 * Select.OptGroup - Groups options into sections.
 
+3.1.0 - (May 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.0.0 - (May 9, 2018)
 ------------------
 ### Major Change
