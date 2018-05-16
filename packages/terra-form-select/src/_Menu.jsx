@@ -120,7 +120,8 @@ class Menu extends React.Component {
   }
 
   componentWillUnmount() {
-    clearTimeout(this.searchTimeout);
+    this.clearSearch();
+    this.clearScrollTimeout();
     document.removeEventListener('keydown', this.handleKeyDown);
   }
 
@@ -129,6 +130,14 @@ class Menu extends React.Component {
    */
   clearSearch() {
     this.searchString = '';
+    clearTimeout(this.searchTimeout);
+  }
+
+  /**
+   * Clears the scroll timeout.
+   */
+  clearScrollTimeout() {
+    clearTimeout(this.scrollTimeout);
   }
 
   /**
@@ -166,8 +175,10 @@ class Menu extends React.Component {
     const { onSelect, value, variant } = this.props;
 
     if (keyCode === KeyCodes.UP_ARROW) {
+      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 50);
       this.setState({ active: Util.findPrevious(children, active) });
     } else if (keyCode === KeyCodes.DOWN_ARROW) {
+      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 50);
       this.setState({ active: Util.findNext(children, active) });
     } else if (keyCode === KeyCodes.ENTER && active && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
@@ -181,7 +192,7 @@ class Menu extends React.Component {
       this.setState({ active: Util.findLast(children) });
     } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
-      setTimeout(this.clearSearch, 300);
+      this.searchTimeout = setTimeout(this.clearSearch, 300);
       this.setState({ active: Util.findWithStartString(this.state.children, this.searchString) || active });
     }
   }
@@ -211,6 +222,11 @@ class Menu extends React.Component {
    * @param {ReactNode} option - The option that recieved the mouse enter event.
    */
   handleMouseEnter(event, option) {
+    // Prevents setting the active option on mouse enter if the keyboard scrolled the view.
+    if (this.scrollTimeout) {
+      return;
+    }
+
     if (!option.props.disabled) {
       this.setState({ active: option.props.value });
     }
