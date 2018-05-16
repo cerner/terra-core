@@ -54,7 +54,7 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placholder text.
+   * Placeholder text.
    */
   placeholder: PropTypes.string,
   /**
