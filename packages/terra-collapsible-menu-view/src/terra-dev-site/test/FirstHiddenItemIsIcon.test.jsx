@@ -1,6 +1,6 @@
 import React from 'react';
 import IconSend from 'terra-icon/lib/icon/IconSend';
-import CollapsibleMenuView from '../../lib/CollapsibleMenuView';
+import CollapsibleMenuView from '../../CollapsibleMenuView';
 
 const CollapsibleMenuViewDemo = () => (
   <CollapsibleMenuView>
