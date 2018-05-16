@@ -70,7 +70,7 @@
     "start-heroku": "tt:serve-static --site build",
     "start-static": "tt:serve-static --config webpack.config",
     "test": "jest && npm run wdio && nightwatch",
-    "wdio": "wdio"
+    "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -111,7 +111,7 @@
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
     "terra-dev-site": "0.6.0",
-    "terra-toolkit": "^3.0.0",
+    "terra-toolkit": "^3.3.1",
     "webpack-merge": "^4.1.2"
   }
 }

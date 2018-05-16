@@ -6,10 +6,10 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-syntax-highlighter | ^7.0.2 | >= 0.14.0 | syntax highlighting component for react with prismjs or highlightjs ast using inline styles |
-| terra-base | ^3.8.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-base | ^3.9.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 | terra-markdown | ^2.6.0 | ^16.2.0 | terra-markdown |
 | terra-props-table | ^2.7.0 | ^16.2.0 | terra-props-table |
-| terra-toggle-button | ^2.9.0 | ^16.2.0 | Toggle button component that transitions content in and out with the click on a button. |
+| terra-toggle-button | ^2.10.0 | ^16.2.0 | Toggle button component that transitions content in and out with the click on a button. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
