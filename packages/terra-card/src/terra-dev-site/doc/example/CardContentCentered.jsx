@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from 'terra-card';
+import Card from '../../../Card';
 
 const CardContentCentered = () => (
   <Card>

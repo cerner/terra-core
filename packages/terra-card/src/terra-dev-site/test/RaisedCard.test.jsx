@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Card from '../../lib/Card';
+import Card from '../../Card';
 
 export default () => <div style={{ padding: '5px', background: '#F0F0F0' }}>
   <Card id="raisedCard" variant="raised">

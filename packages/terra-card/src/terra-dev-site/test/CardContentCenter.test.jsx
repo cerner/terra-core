@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Card from '../../lib/Card';
-import CardBody from '../../lib/CardBody';
+import Card from '../../Card';
+import CardBody from '../../CardBody';
 
 export default () =>
   <Card>
