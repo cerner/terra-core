@@ -209,23 +209,23 @@ class MenuUtil {
    * @return {string|null} - The active option value. Null if not found.
    */
   static getActiveOptionFromProps(props, children, state) {
+    const { active } = state;
+    const { searchValue, value } = props;
     const options = MenuUtil.flatten(children, true);
+
     if (options.length === 0) {
       return null;
-    } else if (props.variant === Variants.DEFAULT && props.value) {
-      const foundOption = options.find(option => option.props.value === props.value);
-      return foundOption ? foundOption.props.value : null;
-    } else if (props.searchValue !== state.searchValue) {
+    } else if (state.searchValue === undefined) {
+      const selected = options.find(option => (
+        Array.isArray(value) ? MenuUtil.includes(value, option.props.value) : value === option.props.value
+      ));
+      return selected === undefined ? options[0].props.value : selected.props.value;
+    } else if (searchValue !== state.searchValue) {
       return options[0].props.value;
-    } else if ((props.variant === Variants.DEFAULT || props.variant === Variants.COMBOBOX) && props.value) {
-      const foundOption = options.find(option => option.props.value === props.value);
-      return foundOption ? foundOption.props.value : null;
-    } else if (state.active && MenuUtil.findByValue(options, state.active)) {
-      return state.active;
-    } else if (options.length > 0) {
-      return options[0].props.value;
+    } else if (MenuUtil.findByValue(options, active)) {
+      return active;
     }
-    return null;
+    return options[0].props.value;
   }
 
   /**

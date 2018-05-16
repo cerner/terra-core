@@ -514,4 +514,83 @@ describe('MenuUtil', () => {
       expect(MenuUtil.findWithStartString(options, 'Zo')).toBeNull();
     });
   });
+
+  describe('getActiveOptionFromProps', () => {
+    it('should return null if there are no children', () => {
+      const props = {};
+      const state = {};
+      const children = [];
+      expect(MenuUtil.getActiveOptionFromProps(props, children, state)).toBeNull();
+    });
+
+    it('should return the first value if there is no selected option', () => {
+      const props = {};
+      const state = {};
+      const children = [
+        <Option key="1" value="1" display="One" />,
+        <Option key="2" value="2" display="Two" />,
+        <Option key="3" value="3" display="Three" />,
+        <Option key="4" value="4" display="Four" />,
+        <Option key="5" value="5" display="Five" />,
+      ];
+
+      expect(MenuUtil.getActiveOptionFromProps(props, children, state)).toEqual('1');
+    });
+
+    it('should return the selected option', () => {
+      const props = { value: '4' };
+      const state = {};
+      const children = [
+        <Option key="1" value="1" display="One" />,
+        <Option key="2" value="2" display="Two" />,
+        <Option key="3" value="3" display="Three" />,
+        <Option key="4" value="4" display="Four" />,
+        <Option key="5" value="5" display="Five" />,
+      ];
+
+      expect(MenuUtil.getActiveOptionFromProps(props, children, state)).toEqual('4');
+    });
+
+    it('should return the first selected option', () => {
+      const props = { value: ['4', '2'] };
+      const state = {};
+      const children = [
+        <Option key="1" value="1" display="One" />,
+        <Option key="2" value="2" display="Two" />,
+        <Option key="3" value="3" display="Three" />,
+        <Option key="4" value="4" display="Four" />,
+        <Option key="5" value="5" display="Five" />,
+      ];
+
+      expect(MenuUtil.getActiveOptionFromProps(props, children, state)).toEqual('2');
+    });
+
+    it('should return the first value if the search value has changed', () => {
+      const props = { value: ['4', '2'], searchValue: '' };
+      const state = { searchValue: 'O' };
+      const children = [
+        <Option key="1" value="1" display="One" />,
+        <Option key="2" value="2" display="Two" />,
+        <Option key="3" value="3" display="Three" />,
+        <Option key="4" value="4" display="Four" />,
+        <Option key="5" value="5" display="Five" />,
+      ];
+
+      expect(MenuUtil.getActiveOptionFromProps(props, children, state)).toEqual('1');
+    });
+
+    it('should return the current active value if the search value has not changed', () => {
+      const props = { value: ['4', '2'], searchValue: '' };
+      const state = { searchValue: '', active: '5' };
+      const children = [
+        <Option key="1" value="1" display="One" />,
+        <Option key="2" value="2" display="Two" />,
+        <Option key="3" value="3" display="Three" />,
+        <Option key="4" value="4" display="Four" />,
+        <Option key="5" value="5" display="Five" />,
+      ];
+
+      expect(MenuUtil.getActiveOptionFromProps(props, children, state)).toEqual('5');
+    });
+  });
 });
