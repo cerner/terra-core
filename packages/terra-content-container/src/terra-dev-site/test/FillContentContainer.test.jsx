@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContentContainer from '../../lib/ContentContainer';
+import ContentContainer from '../../ContentContainer';
 
 const header = <header>header</header>;
 const content = <div style={{ height: '100%', backgroundColor: '#98fb98' }}>content</div>;

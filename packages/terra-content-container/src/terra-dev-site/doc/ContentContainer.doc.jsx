@@ -8,10 +8,10 @@ import { name } from 'terra-content-container/package.json';
 import ContentContainerSrc from '!raw-loader!terra-content-container/src/ContentContainer.jsx';
 
 // Example Files
-import ContentContainerStandard from './ContentContainerStandard';
-import ContentContainerStandardSrc from '!raw-loader!./ContentContainerStandard';
-import ContentContainerFill from './ContentContainerFill';
-import ContentContainerFillSrc from '!raw-loader!./ContentContainerFill';
+import ContentContainerStandard from './example/ContentContainerStandard';
+import ContentContainerStandardSrc from '!raw-loader!./example/ContentContainerStandard';
+import ContentContainerFill from './example/ContentContainerFill';
+import ContentContainerFillSrc from '!raw-loader!./example/ContentContainerFill';
 
 const DocPage = () => (
   <DocTemplate

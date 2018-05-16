@@ -1,7 +1,6 @@
 import React from 'react';
-
-import ContentContainer from 'terra-content-container';
 import Heading from 'terra-heading';
+import ContentContainer from '../../../ContentContainer';
 
 const display1 = (<p key="1">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
