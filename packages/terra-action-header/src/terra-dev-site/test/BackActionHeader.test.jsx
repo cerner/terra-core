@@ -1,12 +1,11 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import ActionHeader from '../../lib/ActionHeader';
+import ActionHeader from '../../ActionHeader';
 
 const ActionHeaderExample = () => (
   <ActionHeader
-    title="Back Close Action Header"
+    title="Back Action Header"
     onBack={() => alert('You clicked back!')}
-    onClose={() => alert('You clicked close!')}
   />
 );
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ActionHeader from 'terra-action-header';
+import ActionHeader from '../../../ActionHeader';
 
 const ActionHeaderExample = () => (
   <div>

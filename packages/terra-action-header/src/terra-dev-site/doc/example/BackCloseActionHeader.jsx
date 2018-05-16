@@ -1,13 +1,14 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import ActionHeader from 'terra-action-header';
+import ActionHeader from '../../../ActionHeader';
 
 const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
-      title="Close Action Header"
+      title="Back Close Action Header"
       onClose={() => alert('You clicked close!')}
+      onBack={() => alert('You clicked back!')}
     />
     <br />
   </div>

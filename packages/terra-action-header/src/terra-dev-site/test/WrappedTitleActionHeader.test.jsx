@@ -1,6 +1,6 @@
 /* eslint-disable no-alert, import/no-extraneous-dependencies */
 import React from 'react';
-import ActionHeader from '../../lib/ActionHeader';
+import ActionHeader from '../../ActionHeader';
 
 export default () => (
   <ActionHeader

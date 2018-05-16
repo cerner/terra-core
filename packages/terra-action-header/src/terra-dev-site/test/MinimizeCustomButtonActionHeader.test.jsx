@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import Button from 'terra-button';
-import ActionHeader from '../../lib/ActionHeader';
+import ActionHeader from '../../ActionHeader';
 
 const ActionHeaderExample = () => (
   <ActionHeader title="Minimize Custom Button Action Header" onMinimize={() => alert('You clicked minimize!')}>

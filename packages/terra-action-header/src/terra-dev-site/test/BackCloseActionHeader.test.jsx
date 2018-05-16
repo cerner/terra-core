@@ -1,14 +1,12 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import ActionHeader from '../../lib/ActionHeader';
+import ActionHeader from '../../ActionHeader';
 
 const ActionHeaderExample = () => (
   <ActionHeader
-    title="Back Close Previous Next Action Header"
+    title="Back Close Action Header"
     onBack={() => alert('You clicked back!')}
     onClose={() => alert('You clicked close!')}
-    onPrevious={() => alert('You clicked previous!')}
-    onNext={() => alert('You clicked next!')}
   />
 );
 

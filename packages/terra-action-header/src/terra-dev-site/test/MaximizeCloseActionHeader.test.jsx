@@ -1,7 +1,7 @@
 /* eslint-disable no-alert, import/no-extraneous-dependencies */
 import React from 'react';
 import Button from 'terra-button';
-import ActionHeader from '../../lib/ActionHeader';
+import ActionHeader from '../../ActionHeader';
 
 const ActionHeaderExample = () => (
   <div>

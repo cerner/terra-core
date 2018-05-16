@@ -8,20 +8,20 @@ import { name } from 'terra-action-header/package.json';
 import ActionHeaderSrc from '!raw-loader!terra-action-header/src/ActionHeader';
 
 // Example Files
-import DefaultActionHeader from './DefaultActionHeader';
-import DefaultActionHeaderSrc from '!raw-loader!./DefaultActionHeader';
-import BackActionHeader from './BackActionHeader';
-import BackActionHeaderSrc from '!raw-loader!./BackActionHeader';
-import BackCloseActionHeader from './BackCloseActionHeader';
-import BackCloseActionHeaderSrc from '!raw-loader!./BackCloseActionHeader';
-import CloseActionHeader from './CloseActionHeader';
-import CloseActionHeaderSrc from '!raw-loader!./CloseActionHeader';
-import MaximizeCloseActionHeader from './MaximizeCloseActionHeader';
-import MaximizeCloseActionHeaderSrc from '!raw-loader!./MaximizeCloseActionHeader';
-import MinimizeCustomButtonActionHeader from './MinimizeCustomButtonActionHeader';
-import MinimizeCustomButtonActionHeaderSrc from '!raw-loader!./MinimizeCustomButtonActionHeader';
-import BackPreviousNextCloseActionHeader from './BackPreviousNextCloseActionHeader';
-import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!./BackPreviousNextCloseActionHeader';
+import DefaultActionHeader from './example/DefaultActionHeader';
+import DefaultActionHeaderSrc from '!raw-loader!./example/DefaultActionHeader';
+import BackActionHeader from './example/BackActionHeader';
+import BackActionHeaderSrc from '!raw-loader!./example/BackActionHeader';
+import BackCloseActionHeader from './example/BackCloseActionHeader';
+import BackCloseActionHeaderSrc from '!raw-loader!./example/BackCloseActionHeader';
+import CloseActionHeader from './example/CloseActionHeader';
+import CloseActionHeaderSrc from '!raw-loader!./example/CloseActionHeader';
+import MaximizeCloseActionHeader from './example/MaximizeCloseActionHeader';
+import MaximizeCloseActionHeaderSrc from '!raw-loader!./example/MaximizeCloseActionHeader';
+import MinimizeCustomButtonActionHeader from './example/MinimizeCustomButtonActionHeader';
+import MinimizeCustomButtonActionHeaderSrc from '!raw-loader!./example/MinimizeCustomButtonActionHeader';
+import BackPreviousNextCloseActionHeader from './example/BackPreviousNextCloseActionHeader';
+import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!./example/BackPreviousNextCloseActionHeader';
 
 const DocPage = () => (
   <DocTemplate
