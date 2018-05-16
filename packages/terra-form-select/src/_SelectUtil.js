@@ -12,7 +12,7 @@ class SelectUtil {
 
     if (value !== undefined) {
       return null;
-    } else if (SelectUtil.isMultiple(props)) {
+    } else if (SelectUtil.allowsMultipleSelections(props)) {
       // Flatten allows converting a string default into an array.
       return defaultValue ? [defaultValue].flatten() : [];
     }
@@ -46,7 +46,7 @@ class SelectUtil {
    * @param {Object} props - The component props.
    * @return {boolean} - True if the variant allows multiple selections.
    */
-  static isMultiple(props) {
+  static allowsMultipleSelections(props) {
     return props.variant === Variants.MULTIPLE || props.variant === Variants.TAG;
   }
 
@@ -58,7 +58,7 @@ class SelectUtil {
    * @return {array|number|string} - The value resulting from the selection of an option
    */
   static select(props, state, value) {
-    if (SelectUtil.isMultiple(props)) {
+    if (SelectUtil.allowsMultipleSelections(props)) {
       return [...SelectUtil.value(props, state), value];
     }
     return value;

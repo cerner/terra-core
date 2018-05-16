@@ -33,7 +33,7 @@ class MenuUtil {
    * @param {string} variant - The variant.
    * @return {boolean} - True if the variant allows multiple selections.
    */
-  static isMultiple(variant) {
+  static allowsMultipleSelections(variant) {
     return variant === Variants.MULTIPLE || variant === Variants.TAG;
   }
 

@@ -7,7 +7,7 @@ import { KeyCodes, Variants } from './_constants';
 import AddOption from './_AddOption';
 import NoResults from './_NoResults';
 import Util from './_MenuUtil';
-import styles from './_Menu.scss';
+import styles from './_Menu.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -130,8 +130,9 @@ class Menu extends React.Component {
     return React.Children.map(object, (option) => {
       if (option.type.isOption) {
         return React.cloneElement(option, {
+          id: `terra-select-option-${option.props.value}`,
           isActive: option.props.value === this.state.active,
-          isCheckable: Util.isMultiple(this.props.variant),
+          isCheckable: Util.allowsMultipleSelections(this.props.variant),
           isSelected: Util.isSelected(this.props.value, option.props.value),
           onMouseDown: () => { this.downOption = option; },
           onMouseUp: event => this.handleOptionClick(event, option),
@@ -158,7 +159,7 @@ class Menu extends React.Component {
       this.setState({ active: Util.findPrevious(children, active) });
     } else if (keyCode === KeyCodes.DOWN_ARROW) {
       this.setState({ active: Util.findNext(children, active) });
-    } else if (keyCode === KeyCodes.ENTER && active && (!Util.isMultiple(variant) || !Util.includes(value, active))) {
+    } else if (keyCode === KeyCodes.ENTER && active && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
@@ -177,7 +178,7 @@ class Menu extends React.Component {
 
     const { onDeselect, onSelect, value, variant } = this.props;
 
-    if (Util.isMultiple(variant) && Util.includes(value, option.props.value)) {
+    if (Util.allowsMultipleSelections(variant) && Util.includes(value, option.props.value)) {
       onDeselect(option.props.value, option);
     } else {
       onSelect(option.props.value, option);
@@ -223,7 +224,12 @@ class Menu extends React.Component {
 
   render() {
     return (
-      <ul className={cx('menu')} ref={(menu) => { this.menu = menu; }} role="listbox">
+      <ul
+        role="listbox"
+        className={cx('menu')}
+        ref={(menu) => { this.menu = menu; }}
+        aria-activedescendant={`terra-select-option-${this.state.active}`}
+      >
         {this.clone(this.state.children)}
       </ul>
     );

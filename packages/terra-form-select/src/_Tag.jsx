@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './_Tag.scss';
+import styles from './_Tag.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -26,7 +26,7 @@ const Tag = ({ children, onDeselect, value }) => (
     <span className={cx('display')}>
       {children}
     </span>
-    <span className={cx('deselect')} onClick={() => { onDeselect(value); }}>
+    <span className={cx('deselect')} onClick={() => { onDeselect(value); }} role="presentation">
       <span className={cx('icon')} />
     </span>
   </li>

@@ -29,25 +29,25 @@ describe('FrameUtil', () => {
     });
   });
 
-  describe('isMultiple', () => {
+  describe('allowsMultipleSelections', () => {
     it('should return false for a default variant', () => {
-      expect(FrameUtil.isMultiple({ variant: Variants.DEFAULT })).toBeFalsy();
+      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.DEFAULT })).toBeFalsy();
     });
 
     it('should return false for a combobox variant', () => {
-      expect(FrameUtil.isMultiple({ variant: Variants.COMBOBOX })).toBeFalsy();
+      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.COMBOBOX })).toBeFalsy();
     });
 
     it('should return true for a multiple variant', () => {
-      expect(FrameUtil.isMultiple({ variant: Variants.MULTIPLE })).toBeTruthy();
+      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.MULTIPLE })).toBeTruthy();
     });
 
     it('should return false for a search variant', () => {
-      expect(FrameUtil.isMultiple({ variant: Variants.SEARCH })).toBeFalsy();
+      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.SEARCH })).toBeFalsy();
     });
 
     it('should return true for a tag variant', () => {
-      expect(FrameUtil.isMultiple({ variant: Variants.TAG })).toBeTruthy();
+      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.TAG })).toBeTruthy();
     });
   });
 
@@ -66,6 +66,47 @@ describe('FrameUtil', () => {
 
     it('should return true if the query is included in the value', () => {
       expect(FrameUtil.includes({ value: ['blue'] }, 'blue')).toBeTruthy();
+    });
+  });
+
+  describe('shouldHideSearch', () => {
+    it('should return false for a default variant', () => {
+      const props = { variant: Variants.DEFAULT };
+      expect(FrameUtil.shouldHideSearch(props, {})).toBeFalsy();
+    });
+
+    it('should return false for a search variant', () => {
+      const props = { variant: Variants.SEARCH };
+      expect(FrameUtil.shouldHideSearch(props, {})).toBeFalsy();
+    });
+
+    it('should return false for a combobox variant', () => {
+      const props = { variant: Variants.COMBOBOX };
+      expect(FrameUtil.shouldHideSearch(props, {})).toBeFalsy();
+    });
+
+    it('should return false for a non-focused multiple variant with 0 values', () => {
+      const props = { variant: Variants.MULTIPLE, value: [] };
+      const state = { isFocused: false };
+      expect(FrameUtil.shouldHideSearch(props, state)).toBeFalsy();
+    });
+
+    it('should return false for a non-focused tag variant with 0 values', () => {
+      const props = { variant: Variants.MULTIPLE, value: [] };
+      const state = { isFocused: false };
+      expect(FrameUtil.shouldHideSearch(props, state)).toBeFalsy();
+    });
+
+    it('should return true for a non-focused multiple variant with multiple values', () => {
+      const props = { variant: Variants.MULTIPLE, value: ['one', 'two'] };
+      const state = { isFocused: false };
+      expect(FrameUtil.shouldHideSearch(props, state)).toBeTruthy();
+    });
+
+    it('should return false for a focused multiple variant with multiple values', () => {
+      const props = { variant: Variants.MULTIPLE, value: ['one', 'two'] };
+      const state = { isFocused: true };
+      expect(FrameUtil.shouldHideSearch(props, state)).toBeFalsy();
     });
   });
 

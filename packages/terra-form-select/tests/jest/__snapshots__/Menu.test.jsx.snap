@@ -2,11 +2,13 @@
 
 exports[`Menu should render a Menu with an add option 1`] = `
 <ul
+  aria-activedescendant="terra-select-option-Tag"
   className="menu"
   role="listbox"
 >
   <AddOption
     data-select-active={true}
+    id="terra-select-option-Tag"
     isActive={true}
     isCheckable={true}
     isSelected={false}
@@ -21,6 +23,7 @@ exports[`Menu should render a Menu with an add option 1`] = `
 
 exports[`Menu should render a Menu with no results 1`] = `
 <ul
+  aria-activedescendant="terra-select-option-null"
   className="menu"
   role="listbox"
 >
@@ -32,6 +35,7 @@ exports[`Menu should render a Menu with no results 1`] = `
 
 exports[`Menu should render a default Menu 1`] = `
 <ul
+  aria-activedescendant="terra-select-option-null"
   className="menu"
   role="listbox"
 >

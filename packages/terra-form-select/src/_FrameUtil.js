@@ -14,8 +14,8 @@ class FrameUtil {
 
   /**
    * Determines the dropdown position.
-   * @param {Object} props - The component props;
-   * @param {Object} state - The component state;
+   * @param {Object} props - The component props.
+   * @param {Object} state - The component state.
    * @param {ReactNode} target - The select wrapper.
    * @param {ReactNode} dropdown - The dropdown.
    * @return {Object} - The calculated dropdown attributes.
@@ -42,7 +42,7 @@ class FrameUtil {
    * @param {Object} variant - The component props.
    * @return {boolean} - True if the variant allows multiple selections.
    */
-  static isMultiple(props) {
+  static allowsMultipleSelections(props) {
     return props.variant === Variants.MULTIPLE || props.variant === Variants.TAG;
   }
 
@@ -60,11 +60,24 @@ class FrameUtil {
   }
 
   /**
-   * Determines whether the dropdown should be respositioned.
+   * Determines whether the search input should be hidden.
+   * @param {Object} props - The component props;
+   * @param {Object} state - The component state;
+   * @return {Boolean} - True if the search input should be hidden.
+   */
+  static shouldHideSearch(props, state) {
+    if (FrameUtil.allowsMultipleSelections(props)) {
+      return !state.isFocused && props.value && props.value.length > 0;
+    }
+    return false;
+  }
+
+  /**
+   * Determines whether the dropdown should be positioned.
    * @param {Object} previousState - The previous component state.
    * @param {Object} currentState - The current component state.
    * @param {ReactNode} dropdown - The component dropdown.
-   * @return {boolean} - True if the dropdown should be respositioned.
+   * @return {boolean} - True if the dropdown should be positioned.
    */
   static shouldPositionDropdown(previousState, currentState, dropdown) {
     if (!currentState.isOpen) {
@@ -72,10 +85,7 @@ class FrameUtil {
     }
 
     const { bottom } = dropdown.getBoundingClientRect();
-    if (previousState.isOpen === false || bottom > window.innerHeight) {
-      return true;
-    }
-    return false;
+    return previousState.isOpen === false || bottom > window.innerHeight;
   }
 
   /**

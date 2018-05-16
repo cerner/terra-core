@@ -251,6 +251,19 @@ import ControlledRadioField from '../packages/terra-form-radio/examples/test-exa
 import HiddenLegend1 from '../packages/terra-form-radio/examples/test-examples/radio-field/HiddenLegend.example';
 import HideRequiredInvalidRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/HideRequiredInvalidRadioField.example';
 import OptionalRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/OptionalRadioField.example';
+import ControlledCombobox from '../packages/terra-form-select/examples/test-examples/ControlledCombobox.example';
+import ControlledDefault from '../packages/terra-form-select/examples/test-examples/ControlledDefault.example';
+import ControlledMultiple from '../packages/terra-form-select/examples/test-examples/ControlledMultiple.example';
+import ControlledSearch from '../packages/terra-form-select/examples/test-examples/ControlledSearch.example';
+import ControlledTag from '../packages/terra-form-select/examples/test-examples/ControlledTag.example';
+import Disabled from '../packages/terra-form-select/examples/test-examples/Disabled.example';
+import OptGroup from '../packages/terra-form-select/examples/test-examples/OptGroup.example';
+import UncontrolledCombobox from '../packages/terra-form-select/examples/test-examples/UncontrolledCombobox.example';
+import UncontrolledDefault from '../packages/terra-form-select/examples/test-examples/UncontrolledDefault.example';
+import UncontrolledDefaultLongText from '../packages/terra-form-select/examples/test-examples/UncontrolledDefaultLongText.example';
+import UncontrolledMultiple from '../packages/terra-form-select/examples/test-examples/UncontrolledMultiple.example';
+import UncontrolledSearch from '../packages/terra-form-select/examples/test-examples/UncontrolledSearch.example';
+import UncontrolledTag from '../packages/terra-form-select/examples/test-examples/UncontrolledTag.example';
 import TextareaField from '../packages/terra-form-textarea/examples/test-examples/TextareaField.example';
 import AutoResizableTextarea from '../packages/terra-form-textarea/tests/nightwatch/AutoResizableTextarea';
 import AutoResizableTextareaMobileDocumentTouch from '../packages/terra-form-textarea/tests/nightwatch/AutoResizableTextareaMobileDocumentTouch';
@@ -1573,6 +1586,77 @@ const componentConfig = {
             component: OptionalRadioField,
           },
         ],
+      },
+    ],
+  },
+  'terra-form-select': {
+    name: 'Form Select',
+    path: '/form-select',
+    tests: [
+      {
+        name: 'Controlled Combobox',
+        path: '/controlled-combobox',
+        component: ControlledCombobox,
+      },
+      {
+        name: 'Controlled Default',
+        path: '/controlled-default',
+        component: ControlledDefault,
+      },
+      {
+        name: 'Controlled Multiple',
+        path: '/controlled-multiple',
+        component: ControlledMultiple,
+      },
+      {
+        name: 'Controlled Search',
+        path: '/controlled-search',
+        component: ControlledSearch,
+      },
+      {
+        name: 'Controlled Tag',
+        path: '/controlled-tag',
+        component: ControlledTag,
+      },
+      {
+        name: 'Disabled',
+        path: '/disabled',
+        component: Disabled,
+      },
+      {
+        name: 'Opt Group',
+        path: '/opt-group',
+        component: OptGroup,
+      },
+      {
+        name: 'Uncontrolled Combobox',
+        path: '/uncontrolled-combobox',
+        component: UncontrolledCombobox,
+      },
+      {
+        name: 'Uncontrolled Default',
+        path: '/uncontrolled-default',
+        component: UncontrolledDefault,
+      },
+      {
+        name: 'Uncontrolled Default Long Text',
+        path: '/uncontrolled-default-long-text',
+        component: UncontrolledDefaultLongText,
+      },
+      {
+        name: 'Uncontrolled Multiple',
+        path: '/uncontrolled-multiple',
+        component: UncontrolledMultiple,
+      },
+      {
+        name: 'Uncontrolled Search',
+        path: '/uncontrolled-search',
+        component: UncontrolledSearch,
+      },
+      {
+        name: 'Uncontrolled Tag',
+        path: '/uncontrolled-tag',
+        component: UncontrolledTag,
       },
     ],
   },

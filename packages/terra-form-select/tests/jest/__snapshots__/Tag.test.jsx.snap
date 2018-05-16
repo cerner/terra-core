@@ -12,6 +12,7 @@ exports[`Tag should render a default Tag 1`] = `
   <span
     className="deselect"
     onClick={[Function]}
+    role="presentation"
   >
     <span
       className="icon"

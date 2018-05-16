@@ -115,6 +115,7 @@
     display: flex;
     flex: 1 1 auto;
     flex-wrap: wrap; // IE 10
+    list-style-type: none;
     margin: 0;
     overflow: hidden;
     padding: 0;
@@ -122,18 +123,25 @@
 
   // A reduced, non-zero, height and width allows the input to receive focus using tab.
   // Browsers disable focus on inputs with a 0 x 0 height and width.
-  .search-input:not(:first-child) {
+  .search-input.is-hidden {
     height: 0.1px;
     margin: 0;
     opacity: 0;
     width: 1px;
   }
 
+  .search-wrapper {
+    display: flex;
+    flex: 1 1 auto; // IE 10
+    max-width: 100%; // IE 10
+    min-width: 0; // IE 11
+  }
+
   .search-input,
   .search-input:focus {
     background: transparent;
     border: 0;
-    flex: 1 1 auto; // IE 10
+    flex: 1 1 auto;
     font-size: var(--terra-select-search-font-size, 1.143rem);
     height: 1.375em;
     margin-top: var(--terra-select-search-margin-top, 0.21428571428571427rem);
@@ -156,6 +164,7 @@
   .search-input::placeholder,
   .placeholder {
     color: var(--terra-select-search-placeholder-color, #bcbfc0);
+    font-size: 1.143rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

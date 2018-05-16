@@ -5,7 +5,7 @@ import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
 import Dropdown from './_Dropdown';
 import Util from './_FrameUtil';
-import styles from './_Frame.scss';
+import styles from './_Frame.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -133,16 +133,24 @@ class Frame extends React.Component {
     const inputAttrs = {
       disabled,
       placeholder,
-      className: cx('search-input'),
       ref: this.setInput,
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
+      'aria-label': 'search',
+      className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
 
     switch (variant) {
       case Variants.TAG:
       case Variants.MULTIPLE:
-        return <ul className={cx('tags')}>{display}<input {...inputAttrs} value={searchValue} /></ul>;
+        return (
+          <ul className={cx('tags')}>
+            {display}
+            <li className={cx('search-wrapper')}>
+              <input {...inputAttrs} value={searchValue} />
+            </li>
+          </ul>
+        );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
         return <input {...inputAttrs} value={hasSearchChanged ? searchValue : display} />;
@@ -225,7 +233,7 @@ class Frame extends React.Component {
     } else if (keyCode === UP_ARROW || keyCode === DOWN_ARROW) {
       event.preventDefault();
       this.openDropdown();
-    } else if (keyCode === BACKSPACE && Util.isMultiple(this.props) && !this.state.searchValue && value.length > 0) {
+    } else if (keyCode === BACKSPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0) {
       this.props.onDeselect(value[value.length - 1]);
     } else if (keyCode === KeyCodes.ESCAPE) {
       this.closeDropdown();
@@ -280,7 +288,7 @@ class Frame extends React.Component {
     this.setState({
       searchValue: '',
       hasSearchChanged: false,
-      isOpen: Util.isMultiple(this.props),
+      isOpen: Util.allowsMultipleSelections(this.props),
     });
 
     if (this.props.onSelect) {
@@ -335,6 +343,7 @@ class Frame extends React.Component {
         aria-disabled={!!disabled}
         aria-expanded={!!this.state.isOpen}
         aria-haspopup="true"
+        aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
         className={selectClasses}
         onBlur={this.closeDropdown}
         onFocus={this.handleFocus}
@@ -343,7 +352,7 @@ class Frame extends React.Component {
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
-        <div className={cx('display')} onMouseDown={this.openDropdown}>
+        <div className={cx('display')} onMouseDown={this.openDropdown} role="textbox">
           {this.getDisplay()}
         </div>
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
@@ -352,6 +361,7 @@ class Frame extends React.Component {
         {this.state.isOpen &&
           <Dropdown
             {...dropdownAttrs}
+            id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
             onResize={this.positionDropdown}
@@ -360,11 +370,11 @@ class Frame extends React.Component {
           >
             {dropdown &&
                dropdown({
+                 value,
                  variant,
                  onDeselect,
                  optionFilter,
                  noResultContent,
-                 value,
                  onSelect: this.handleSelect,
                  onRequestClose: this.closeDropdown,
                  searchValue: this.state.searchValue,

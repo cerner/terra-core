@@ -15,10 +15,6 @@ describe('MenuUtil', () => {
       expect(MenuUtil.contains('string', 'query')).toBeFalsy();
     });
 
-    it('should return false if the query is not conatained within the string', () => {
-      expect(MenuUtil.contains('string', 'query')).toBeFalsy();
-    });
-
     it('should return true if the query is conatained within the string', () => {
       expect(MenuUtil.contains('string query', 'query')).toBeTruthy();
     });
@@ -46,25 +42,25 @@ describe('MenuUtil', () => {
     });
   });
 
-  describe('isMultiple', () => {
+  describe('allowsMultipleSelections', () => {
     it('should return false for a default variant', () => {
-      expect(MenuUtil.isMultiple(Variants.DEFAULT)).toBeFalsy();
+      expect(MenuUtil.allowsMultipleSelections(Variants.DEFAULT)).toBeFalsy();
     });
 
     it('should return false for a combobox variant', () => {
-      expect(MenuUtil.isMultiple(Variants.COMBOBOX)).toBeFalsy();
+      expect(MenuUtil.allowsMultipleSelections(Variants.COMBOBOX)).toBeFalsy();
     });
 
     it('should return true for a multiple variant', () => {
-      expect(MenuUtil.isMultiple(Variants.MULTIPLE)).toBeTruthy();
+      expect(MenuUtil.allowsMultipleSelections(Variants.MULTIPLE)).toBeTruthy();
     });
 
     it('should return false for a search variant', () => {
-      expect(MenuUtil.isMultiple(Variants.SEARCH)).toBeFalsy();
+      expect(MenuUtil.allowsMultipleSelections(Variants.SEARCH)).toBeFalsy();
     });
 
     it('should return true for a tag variant', () => {
-      expect(MenuUtil.isMultiple(Variants.TAG)).toBeTruthy();
+      expect(MenuUtil.allowsMultipleSelections(Variants.TAG)).toBeTruthy();
     });
   });
 

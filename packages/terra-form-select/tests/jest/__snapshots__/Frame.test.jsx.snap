@@ -16,17 +16,23 @@ exports[`Frame should render a combobox variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -56,18 +62,24 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        placeholder="Placeholder"
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          placeholder="Placeholder"
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -97,17 +109,23 @@ exports[`Frame should render a custom dropdown 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -137,6 +155,7 @@ exports[`Frame should render a default variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <div
       className="placeholder"
@@ -169,6 +188,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <div
       className="placeholder"
@@ -203,17 +223,23 @@ exports[`Frame should render a disabled combobox variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={true}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={true}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -243,6 +269,7 @@ exports[`Frame should render a disabled default variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <div
       className="placeholder"
@@ -275,17 +302,23 @@ exports[`Frame should render a disabled multiple variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={true}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={true}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -315,8 +348,10 @@ exports[`Frame should render a disabled search variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <input
+      aria-label="search"
       className="search-input"
       disabled={true}
       onChange={[Function]}
@@ -350,17 +385,23 @@ exports[`Frame should render a disabled tag variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={true}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={true}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -390,17 +431,23 @@ exports[`Frame should render a multiple variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -430,18 +477,24 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        placeholder="Placeholder"
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          placeholder="Placeholder"
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -471,8 +524,10 @@ exports[`Frame should render a search variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <input
+      aria-label="search"
       className="search-input"
       disabled={false}
       onChange={[Function]}
@@ -506,8 +561,10 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <input
+      aria-label="search"
       className="search-input"
       disabled={false}
       onChange={[Function]}
@@ -542,17 +599,23 @@ exports[`Frame should render a tag variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -582,18 +645,24 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        placeholder="Placeholder"
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          placeholder="Placeholder"
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -623,17 +692,23 @@ exports[`Frame should render an invalid combobox variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -663,6 +738,7 @@ exports[`Frame should render an invalid default variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <div
       className="placeholder"
@@ -695,17 +771,23 @@ exports[`Frame should render an invalid multiple variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
@@ -735,8 +817,10 @@ exports[`Frame should render an invalid search variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <input
+      aria-label="search"
       className="search-input"
       disabled={false}
       onChange={[Function]}
@@ -770,17 +854,23 @@ exports[`Frame should render an invalid tag variant 1`] = `
   <div
     className="display"
     onMouseDown={[Function]}
+    role="textbox"
   >
     <ul
       className="tags"
     >
-      <input
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        value=""
-      />
+      <li
+        className="search-wrapper"
+      >
+        <input
+          aria-label="search"
+          className="search-input"
+          disabled={false}
+          onChange={[Function]}
+          onMouseDown={[Function]}
+          value=""
+        />
+      </li>
     </ul>
   </div>
   <div
