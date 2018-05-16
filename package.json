@@ -69,7 +69,7 @@
     "start:build": "npm run generate-config && npm run start",
     "start-heroku": "tt:serve-static --site build",
     "test": "jest && npm run wdio && nightwatch",
-    "wdio": "wdio"
+    "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -92,7 +92,6 @@
     "gh-pages": "^0.12.0",
     "glob": "^7.1.1",
     "identity-obj-proxy": "^3.0.0",
-    "ip": "^1.1.5",
     "jest": "^21.0.2",
     "lerna": "^2.1.2",
     "link-parent-bin": "^0.1.3",
@@ -111,7 +110,7 @@
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
     "terra-dev-site": "0.6.0",
-    "terra-toolkit": "^3.0.0",
+    "terra-toolkit": "^3.3.1",
     "webpack-merge": "^4.1.2"
   }
 }
