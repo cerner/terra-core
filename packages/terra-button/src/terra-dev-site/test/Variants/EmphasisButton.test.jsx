@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../../lib/Button';
+import Button from '../../../Button';
 
 const EmphasisButton = () => <div id="emphasis" style={{ padding: '5px' }}>
   <Button id="emphasisButton" text="Emphasis" variant="emphasis" />

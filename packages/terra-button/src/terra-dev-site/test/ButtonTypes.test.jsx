@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../lib/Button';
+import Button from '../../Button';
 
 const spacingStyle = { padding: '20px' };
 

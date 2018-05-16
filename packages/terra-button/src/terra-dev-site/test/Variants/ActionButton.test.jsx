@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../../lib/Button';
+import Button from '../../../Button';
 
 const iconStyle = { backgroundColor: 'black' };
 const icon = <svg width="1em" height="1em" style={iconStyle} className="test"><rect width="1em" height="1em" /></svg>;

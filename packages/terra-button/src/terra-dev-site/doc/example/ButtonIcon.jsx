@@ -1,6 +1,6 @@
 import React from 'react';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
-import Button from 'terra-button';
+import Button from '../../../Button';
 
 const Icon = <IconEdit />;
 const buttonStyle = { margin: '5px' };

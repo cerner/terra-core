@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'terra-button';
+import Button from '../../../Button';
 
 const buttonStyle = { margin: '5px' };
 

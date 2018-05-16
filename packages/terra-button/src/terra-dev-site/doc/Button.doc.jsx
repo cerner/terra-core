@@ -8,18 +8,18 @@ import { name } from 'terra-button/package.json';
 import ButtonSrc from '!raw-loader!terra-button/src/Button';
 
 // Example Files
-import ButtonBlock from './ButtonBlock';
-import ButtonBlockSrc from '!raw-loader!./ButtonBlock';
-import ButtonAnchor from './ButtonAnchor';
-import ButtonAnchorSrc from '!raw-loader!./ButtonAnchor';
-import ButtonDisabled from './ButtonDisabled';
-import ButtonDisabledSrc from '!raw-loader!./ButtonDisabled';
-import ButtonOnClick from './ButtonOnClick';
-import ButtonOnClickSrc from '!raw-loader!./ButtonOnClick';
-import ButtonIcon from './ButtonIcon';
-import ButtonIconSrc from '!raw-loader!./ButtonIcon';
-import ButtonVariant from './ButtonVariant';
-import ButtonVariantSrc from '!raw-loader!./ButtonVariant';
+import ButtonBlock from './example/ButtonBlock';
+import ButtonBlockSrc from '!raw-loader!./example/ButtonBlock';
+import ButtonAnchor from './example/ButtonAnchor';
+import ButtonAnchorSrc from '!raw-loader!./example/ButtonAnchor';
+import ButtonDisabled from './example/ButtonDisabled';
+import ButtonDisabledSrc from '!raw-loader!./example/ButtonDisabled';
+import ButtonOnClick from './example/ButtonOnClick';
+import ButtonOnClickSrc from '!raw-loader!./example/ButtonOnClick';
+import ButtonIcon from './example/ButtonIcon';
+import ButtonIconSrc from '!raw-loader!./example/ButtonIcon';
+import ButtonVariant from './example/ButtonVariant';
+import ButtonVariantSrc from '!raw-loader!./example/ButtonVariant';
 
 const DocPage = () => (
   <DocTemplate
