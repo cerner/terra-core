@@ -10,7 +10,7 @@ cache:
     - $HOME/docker
 env:
   global:
-    - DOCKER_IMAGE='cerner/terra-framework'
+    - DOCKER_IMAGE='cerner/terra-core'
     - TERRA_NODE_TAG="${TRAVIS_PULL_REQUEST_BRANCH:=latest}"
     - TAG="${TRAVIS_PULL_REQUEST_SHA:=latest}"
 before_install:
