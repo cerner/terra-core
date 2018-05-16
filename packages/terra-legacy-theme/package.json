@@ -1,7 +1,7 @@
 {
   "name": "terra-legacy-theme",
   "main": "lib/index.js",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "description": "terra-legacy-theme",
   "repository": {
     "type": "git",
@@ -31,6 +31,6 @@
     "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
   },
   "dependencies": {
-    "terra-mixins": "^1.0.0"
+    "terra-mixins": "^1.16.0"
   }
 }
