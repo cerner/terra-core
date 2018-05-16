@@ -52,7 +52,7 @@ class Paginator extends React.Component {
       event.preventDefault();
 
       if (isNaN(index)) {
-        this.props.onPageChange(event.target.text.trim().toLowerCase());
+        this.props.onPageChange(event.currentTarget.attributes['aria-label'].value);
 
         return false;
       }
@@ -73,7 +73,7 @@ class Paginator extends React.Component {
         event.preventDefault();
 
         if (isNaN(index)) {
-          this.props.onPageChange(event.target.text.trim().toLowerCase());
+          this.props.onPageChange(event.currentTarget.attributes['aria-label'].value);
 
           return false;
         }
