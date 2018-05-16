@@ -66,6 +66,7 @@
     "terra-mixins": "^1.16.0",
     "terra-modal-manager": "^3.0.0",
     "terra-overlay": "^2.10.0",
+    "terra-paginator": "^0.0.0",
     "terra-profile-image": "^2.9.0",
     "terra-progress-bar": "^2.9.0",
     "terra-props-table": "^2.7.0",

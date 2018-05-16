@@ -58,6 +58,8 @@ import TerraSiteSelectableListIndex from '../packages/terra-site/src/examples/li
 import TerraSiteSingleSelectIndex from '../packages/terra-site/src/examples/list/components/SingleSelectIndex';
 import TerraSiteIndex35 from '../packages/terra-site/src/examples/menu/Index';
 import TerraSiteIndex36 from '../packages/terra-site/src/examples/overlay/Index';
+import TerraSitePaginatorIndex from '../packages/terra-site/src/examples/paginator/PaginatorIndex';
+import TerraSiteProgressivePaginatorIndex from '../packages/terra-site/src/examples/paginator/ProgressivePaginatorIndex';
 import TerraSiteIndex37 from '../packages/terra-site/src/examples/profile-image/Index';
 import TerraSiteIndex38 from '../packages/terra-site/src/examples/progress-bar/Index';
 import TerraSiteIndex39 from '../packages/terra-site/src/examples/responsive-element/Index';
@@ -383,6 +385,9 @@ import FullscreenScrollableOverlay from '../packages/terra-overlay/examples/test
 import LightOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/LightOverlay.example';
 import OnRequestCloseOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/OnRequestCloseOverlay.example';
 import DefaultOverlayContainer from '../packages/terra-overlay/examples/test-examples/OverlayContainer/DefaultOverlayContainer.example';
+import Paginator from '../packages/terra-paginator/examples/test-examples/Paginator.example';
+import PaginatorNoPages from '../packages/terra-paginator/examples/test-examples/PaginatorNoPages.example';
+import ProgressivePaginator from '../packages/terra-paginator/examples/test-examples/ProgressivePaginator.example';
 import ProfileImageDefault from '../packages/terra-profile-image/examples/test-examples/ProfileImageDefault.example';
 import ProfileImageFailed from '../packages/terra-profile-image/examples/test-examples/ProfileImageFailed.example';
 import ProgressBarColor from '../packages/terra-progress-bar/examples/test-examples/ProgressBarColor.example';
@@ -2447,6 +2452,27 @@ const componentConfig = {
       },
     ],
   },
+  'terra-paginator': {
+    name: 'Paginator',
+    path: '/paginator',
+    tests: [
+      {
+        name: 'Paginator',
+        path: '/paginator',
+        component: Paginator,
+      },
+      {
+        name: 'Paginator No Pages',
+        path: '/paginator-no-pages',
+        component: PaginatorNoPages,
+      },
+      {
+        name: 'Progressive Paginator',
+        path: '/progressive-paginator',
+        component: ProgressivePaginator,
+      },
+    ],
+  },
   'terra-profile-image': {
     name: 'Profile Image',
     path: '/profile-image',
@@ -3172,6 +3198,22 @@ const componentConfig = {
             name: 'Index',
             path: '/index',
             component: TerraSiteIndex36,
+          },
+        ],
+      },
+      {
+        name: 'Paginator',
+        path: '/paginator',
+        pages: [
+          {
+            name: 'Paginator Index',
+            path: '/paginator-index',
+            component: TerraSitePaginatorIndex,
+          },
+          {
+            name: 'Progressive Paginator Index',
+            path: '/progressive-paginator-index',
+            component: TerraSiteProgressivePaginatorIndex,
           },
         ],
       },

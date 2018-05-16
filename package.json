@@ -68,6 +68,7 @@
     "start": "tt:serve --config webpack.config",
     "start:build": "npm run generate-config && npm run start",
     "start-heroku": "tt:serve-static --site build",
+    "start-static": "tt:serve-static --config webpack.config",
     "test": "jest && npm run wdio && nightwatch",
     "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
