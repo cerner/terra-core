@@ -370,7 +370,8 @@ import FullscreenScrollableOverlay from '../packages/terra-overlay/examples/test
 import LightOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/LightOverlay.example';
 import OnRequestCloseOverlay from '../packages/terra-overlay/examples/test-examples/Overlay/OnRequestCloseOverlay.example';
 import DefaultOverlayContainer from '../packages/terra-overlay/examples/test-examples/OverlayContainer/DefaultOverlayContainer.example';
-import ProfileImageDefault from '../packages/terra-profile-image/tests/nightwatch/ProfileImageDefault';
+import ProfileImageDefault from '../packages/terra-profile-image/examples/test-examples/ProfileImageDefault.example';
+import ProfileImageFailed from '../packages/terra-profile-image/examples/test-examples/ProfileImageFailed.example';
 import ProgressBarColor from '../packages/terra-progress-bar/examples/test-examples/ProgressBarColor.example';
 import ProgressBarDefault from '../packages/terra-progress-bar/examples/test-examples/ProgressBarDefault.example';
 import ProgressBarGradient from '../packages/terra-progress-bar/examples/test-examples/ProgressBarGradient.example';
@@ -2370,6 +2371,11 @@ const componentConfig = {
         name: 'Profile Image Default',
         path: '/profile-image-default',
         component: ProfileImageDefault,
+      },
+      {
+        name: 'Profile Image Failed',
+        path: '/profile-image-failed',
+        component: ProfileImageFailed,
       },
     ],
   },
