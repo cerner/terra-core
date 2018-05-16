@@ -118,8 +118,13 @@ class Frame extends React.Component {
 
   componentDidUpdate(previousProps, previousState) {
     if (Util.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
-      this.positionDropdown();
+      clearTimeout(this.debounceTimer);
+      this.debounceTimer = setTimeout(this.positionDropdown, !previousState.isOpen ? 0 : 100);
     }
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.debounceTimer);
   }
 
   setInput(input) {
@@ -196,6 +201,10 @@ class Frame extends React.Component {
    * Positions the dropdown to utilize the most available space.
    */
   positionDropdown() {
+    if (!this.state.isOpen) {
+      return;
+    }
+
     const { dropdownAttrs } = this.props;
     const { select, dropdown, state } = this;
     this.setState(Util.dropdownPosition(dropdownAttrs, state, select, dropdown));
