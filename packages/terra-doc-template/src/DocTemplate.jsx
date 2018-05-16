@@ -81,7 +81,7 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
     id += 1;
   }
 
-  const version = `[![NPM version](http://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})`;
+  const version = `[![NPM version](https://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})`;
 
   const docTemplateClassNames = cx([
     'doc-template',
