@@ -460,4 +460,58 @@ describe('MenuUtil', () => {
       expect(MenuUtil.filter(group, '1').length).toEqual(1);
     });
   });
+
+  describe('findFirst', () => {
+    it('should return the value of the first option in the list', () => {
+      const options = [
+        <Option key="1" value="1" display="1" />,
+        <Option key="2" value="2" display="2" />,
+        <Option key="3" value="3" display="3" />,
+        <Option key="4" value="4" display="4" />,
+        <Option key="5" value="5" display="5" />,
+      ];
+
+      expect(MenuUtil.findFirst(options)).toEqual('1');
+    });
+  });
+
+  describe('findLast', () => {
+    it('should return the value of the last option in the list', () => {
+      const options = [
+        <Option key="1" value="1" display="1" />,
+        <Option key="2" value="2" display="2" />,
+        <Option key="3" value="3" display="3" />,
+        <Option key="4" value="4" display="4" />,
+        <Option key="5" value="5" display="5" />,
+      ];
+
+      expect(MenuUtil.findLast(options)).toEqual('5');
+    });
+  });
+
+  describe('findWithStartString', () => {
+    it('should return the value of the first option that starts with the string', () => {
+      const options = [
+        <Option key="1" value="1" display="One" />,
+        <Option key="2" value="2" display="Two" />,
+        <Option key="3" value="3" display="Three" />,
+        <Option key="4" value="4" display="Four" />,
+        <Option key="5" value="5" display="Five" />,
+      ];
+
+      expect(MenuUtil.findWithStartString(options, 'Fi')).toEqual('5');
+    });
+
+    it('should return null if no option starts with the string', () => {
+      const options = [
+        <Option key="1" value="1" display="One" />,
+        <Option key="2" value="2" display="Two" />,
+        <Option key="3" value="3" display="Three" />,
+        <Option key="4" value="4" display="Four" />,
+        <Option key="5" value="5" display="Five" />,
+      ];
+
+      expect(MenuUtil.findWithStartString(options, 'Zo')).toBeNull();
+    });
+  });
 });

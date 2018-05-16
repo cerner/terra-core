@@ -137,6 +137,47 @@ class MenuUtil {
   }
 
   /**
+   * Finds the first option in the menu.
+   * @param {ReactNode} object - The menu.
+   * @return {string|null} - The value of the first option. Null if not found.
+   */
+  static findFirst(object) {
+    const options = MenuUtil.flatten(object, true);
+
+    if (options.length > 0) {
+      return options[0].props.value;
+    }
+    return null;
+  }
+
+  /**
+   * Finds the first option in the menu.
+   * @param {ReactNode} object - The menu.
+   * @return {string|null} - The value of the last option. Null if not found.
+   */
+  static findLast(object) {
+    const options = MenuUtil.flatten(object, true);
+
+    if (options.length > 0) {
+      return options[options.length - 1].props.value;
+    }
+    return null;
+  }
+
+  /**
+   * Finds the first option in the menu that starts with the string.
+   * @param {ReactNode} object - The menu.
+   * @param {string} string - The start string.
+   * @return {string|null} - The firt option that starts with the provided string.
+   */
+  static findWithStartString(object, string) {
+    const option = MenuUtil.flatten(object, true).find(opt => (
+      opt.props.display || '').toLowerCase().startsWith(string.toLowerCase()),
+    );
+    return option ? option.props.value : null;
+  }
+
+  /**
    * Finds the option following the active option.
    * @param {ReactNode} object - The node being flattened.
    * @param {string} value - The value of the active option.

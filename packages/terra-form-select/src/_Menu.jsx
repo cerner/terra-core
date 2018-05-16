@@ -103,6 +103,8 @@ class Menu extends React.Component {
 
     this.state = {};
 
+    this.searchString = '';
+    this.clearSearch = this.clearSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
@@ -118,7 +120,15 @@ class Menu extends React.Component {
   }
 
   componentWillUnmount() {
+    clearTimeout(this.searchTimeout);
     document.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  /**
+   * Clears the default variant keyboard search.
+   */
+  clearSearch() {
+    this.searchString = '';
   }
 
   /**
@@ -165,14 +175,14 @@ class Menu extends React.Component {
       onSelect(option.props.value, option);
     } else if (keyCode === KeyCodes.HOME) {
       event.preventDefault();
-      const options = Util.flatten(children, true);
-      const activeOption = options.length > 0 ? options[0].props.value : active;
-      this.setState({ active: activeOption });
+      this.setState({ active: Util.findFirst(children) });
     } else if (keyCode === KeyCodes.END) {
       event.preventDefault();
-      const options = Util.flatten(children, true);
-      const activeOption = options.length > 0 ? options[options.length - 1].props.value : active;
-      this.setState({ active: activeOption });
+      this.setState({ active: Util.findLast(children) });
+    } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {
+      this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
+      setTimeout(this.clearSearch, 300);
+      this.setState({ active: Util.findWithStartString(this.state.children, this.searchString) || active });
     }
   }
 
