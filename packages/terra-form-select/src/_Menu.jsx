@@ -178,10 +178,12 @@ class Menu extends React.Component {
     const { onSelect, value, variant } = this.props;
 
     if (keyCode === KeyCodes.UP_ARROW) {
-      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 50);
+      this.clearScrollTimeout();
+      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findPrevious(children, active) });
     } else if (keyCode === KeyCodes.DOWN_ARROW) {
-      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 50);
+      this.clearScrollTimeout();
+      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findNext(children, active) });
     } else if (keyCode === KeyCodes.ENTER && active && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
@@ -195,7 +197,7 @@ class Menu extends React.Component {
       this.setState({ active: Util.findLast(children) });
     } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
-      this.searchTimeout = setTimeout(this.clearSearch, 500);
+      this.searchTimeout = setTimeout(this.clearSearch, 300);
       this.setState({ active: Util.findWithStartString(this.state.children, this.searchString) || active });
     }
   }
