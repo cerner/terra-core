@@ -197,7 +197,8 @@ class Menu extends React.Component {
       this.setState({ active: Util.findLast(children) });
     } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
-      this.searchTimeout = setTimeout(this.clearSearch, 300);
+      clearTimeout(this.searchTimeout);
+      this.searchTimeout = setTimeout(this.clearSearch, 500);
       this.setState({ active: Util.findWithStartString(this.state.children, this.searchString) || active });
     }
   }
