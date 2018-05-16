@@ -1,5 +1,4 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-const ip = require('ip');
 const nightwatchConfig = require('terra-toolkit/lib/nightwatch/nightwatch.config.js').default;
 const webpackConfig = require('./webpack.config');
 const getPackageTestDirectories = require('terra-toolkit/lib/nightwatch/setup-helper.js').getPackageTestDirectories;
@@ -14,6 +13,5 @@ if (isRepoTest) {
 }
 
 const config = nightwatchConfig(webpackConfig, srcFolders);
-config.test_settings.default.selenium_host = ip.address();
 
 module.exports = config;

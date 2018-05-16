@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.9.0 - (May 16, 2018)
+------------------
 ### Changed
 * Bugfix signature listener not correct after device rotation
 
