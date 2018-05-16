@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.4.0 - (May 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Alignment bug with missing start content and title, when using an end aligned item.
 
