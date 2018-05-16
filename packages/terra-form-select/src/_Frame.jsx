@@ -259,6 +259,7 @@ class Frame extends React.Component {
       // The default variant has no search input therefore the mouse down gives the component focus.
       event.preventDefault();
     }
+    this.openDropdown();
   }
 
   /**
