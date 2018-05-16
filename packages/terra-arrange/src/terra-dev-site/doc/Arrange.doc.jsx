@@ -9,8 +9,8 @@ import ArrangeSrc from '!raw-loader!terra-arrange/src/Arrange';
 
 // Example Files
 import Arrange from 'terra-arrange';
-import { icon, image, simpleText } from './examplesetup';
-import ArrangeAlignment from './ArrangeAlignment';
+import { icon, image, simpleText } from './common/examplesetup';
+import ArrangeAlignment from './example/ArrangeAlignment';
 
 const DocPage = () => (
   <DocTemplate

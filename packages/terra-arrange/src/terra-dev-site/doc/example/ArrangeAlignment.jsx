@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Arrange from 'terra-arrange';
-import _ from 'lodash';
-import { ArrangeWrapper, alignLabels, alignOptions } from './examplesetup';
+import uniqueid from 'lodash.uniqueid';
+import Arrange from '../../../Arrange';
+import { ArrangeWrapper, alignLabels, alignOptions } from '../common/examplesetup';
 
 const alignmentTypes = ['all', 'individual'];
 
@@ -40,7 +40,7 @@ class ArrangeAlignment extends React.Component {
   }
 
   componentWillMount() {
-    this.state.id = _.uniqueId();
+    this.state.id = uniqueId();
   }
 
   getId(name) {

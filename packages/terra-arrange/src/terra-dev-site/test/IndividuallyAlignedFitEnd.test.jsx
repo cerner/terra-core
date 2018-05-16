@@ -1,8 +1,8 @@
 import React from 'react';
-import Arrange from '../../lib/Arrange';
-import { ArrangeWrapper, IconWrapper, image, simpleText } from './examplesetup';
+import Arrange from '../../Arrange';
+import { ArrangeWrapper, IconWrapper, image, simpleText } from './common/examplesetup';
 
-const IndividuallyAlignedFitStart = () => (
+const IndividuallyAlignedFitEnd = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
@@ -16,7 +16,7 @@ const IndividuallyAlignedFitStart = () => (
     <ArrangeWrapper>
       <Arrange
         id="center"
-        alignFitStart="center"
+        alignFitEnd="center"
         fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
@@ -26,7 +26,7 @@ const IndividuallyAlignedFitStart = () => (
     <ArrangeWrapper>
       <Arrange
         id="bottom"
-        alignFitStart="bottom"
+        alignFitEnd="bottom"
         fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
@@ -36,7 +36,7 @@ const IndividuallyAlignedFitStart = () => (
     <ArrangeWrapper>
       <Arrange
         id="stretch"
-        alignFitStart="stretch"
+        alignFitEnd="stretch"
         fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
@@ -45,4 +45,4 @@ const IndividuallyAlignedFitStart = () => (
   </div>
 );
 
-export default IndividuallyAlignedFitStart;
+export default IndividuallyAlignedFitEnd;
