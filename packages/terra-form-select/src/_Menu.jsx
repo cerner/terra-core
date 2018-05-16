@@ -163,6 +163,16 @@ class Menu extends React.Component {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
+    } else if (keyCode === KeyCodes.HOME) {
+      event.preventDefault();
+      const options = Util.flatten(children, true);
+      const activeOption = options.length > 0 ? options[0].props.value : active;
+      this.setState({ active: activeOption });
+    } else if (keyCode === KeyCodes.END) {
+      event.preventDefault();
+      const options = Util.flatten(children, true);
+      const activeOption = options.length > 0 ? options[options.length - 1].props.value : active;
+      this.setState({ active: activeOption });
     }
   }
 
