@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from '../../lib/Badge';
+import Badge from '../../Badge';
 
 
 const Icon = (<svg className="terra-Icon" height="4em" width="4em" viewBox="0 0 48 48">

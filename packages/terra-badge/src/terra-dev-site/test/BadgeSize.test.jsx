@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from '../../lib/Badge';
+import Badge from '../../Badge';
 
 const BadgeSize = () => (
   <div>

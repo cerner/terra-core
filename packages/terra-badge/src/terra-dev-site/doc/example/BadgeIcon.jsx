@@ -1,6 +1,6 @@
 import React from 'react';
 import IconBookmark from 'terra-icon/lib/icon/IconBookmark';
-import Badge from 'terra-badge';
+import Badge from '../../../Badge';
 
 const Icon = <IconBookmark />;
 

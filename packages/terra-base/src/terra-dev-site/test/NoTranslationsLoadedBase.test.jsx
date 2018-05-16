@@ -1,5 +1,5 @@
 import React from 'react';
-import Base from '../../lib/Base';
+import Base from '../../Base';
 
 const BaseNoTranslationsLoaded = () => {
   const noTranslations = (
