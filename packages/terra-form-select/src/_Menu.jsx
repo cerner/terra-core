@@ -105,6 +105,7 @@ class Menu extends React.Component {
 
     this.searchString = '';
     this.clearSearch = this.clearSearch.bind(this);
+    this.clearScrollTimeout = this.clearScrollTimeout.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
@@ -131,6 +132,7 @@ class Menu extends React.Component {
   clearSearch() {
     this.searchString = '';
     clearTimeout(this.searchTimeout);
+    this.searchTimeout = null;
   }
 
   /**
@@ -138,6 +140,7 @@ class Menu extends React.Component {
    */
   clearScrollTimeout() {
     clearTimeout(this.scrollTimeout);
+    this.scrollTimeout = null;
   }
 
   /**
