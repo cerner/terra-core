@@ -15,7 +15,6 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "moment": "^2.21.0",
     "postcss": "^6.0.9",
