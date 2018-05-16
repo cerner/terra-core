@@ -1,7 +1,7 @@
 import React from 'react';
 import IconCaretUp from 'terra-icon/lib/icon/IconCaretUp';
 import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
-import ButtonGroup from 'terra-button-group';
+import ButtonGroup from '../../../ButtonGroup';
 
 const iconCaretUp = <IconCaretUp />;
 const iconCaretDown = <IconCaretDown />;

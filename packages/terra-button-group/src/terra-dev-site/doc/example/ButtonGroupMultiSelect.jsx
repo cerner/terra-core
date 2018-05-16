@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonGroup from 'terra-button-group';
+import ButtonGroup from '../../../ButtonGroup';
 
 class ButtonGroupMultiSelect extends React.Component {
   constructor(props) {

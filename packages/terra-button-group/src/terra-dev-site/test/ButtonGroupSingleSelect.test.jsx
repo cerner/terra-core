@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonGroup from '../../lib/ButtonGroup';
+import ButtonGroup from '../../ButtonGroup';
 
 class ButtonGroupSingleSelect extends React.Component {
   constructor(props) {

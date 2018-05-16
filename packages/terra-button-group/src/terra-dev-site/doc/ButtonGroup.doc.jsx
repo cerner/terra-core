@@ -9,14 +9,14 @@ import ButtonGroupSrc from '!raw-loader!terra-button-group/src/ButtonGroup.jsx';
 import ButtonGroupButtonSrc from '!raw-loader!terra-button-group/src/ButtonGroupButton.jsx';
 
 // Examples
-import ButtonGroupWithIcons from './ButtonGroupWithIcons';
-import ButtonGroupWithIconsSrc from '!raw-loader!./ButtonGroupWithIcons';
-import ButtonGroupDisabledButtons from './ButtonGroupDisabledButtons';
-import ButtonGroupDisabledButtonsSrc from '!raw-loader!./ButtonGroupDisabledButtons';
-import ButtonGroupSingleSelect from './ButtonGroupSingleSelect';
-import ButtonGroupSingleSelectSrc from '!raw-loader!./ButtonGroupSingleSelect';
-import ButtonGroupMultiSelect from './ButtonGroupMultiSelect';
-import ButtonGroupMultiSelectSrc from '!raw-loader!./ButtonGroupMultiSelect';
+import ButtonGroupWithIcons from './example/ButtonGroupWithIcons';
+import ButtonGroupWithIconsSrc from '!raw-loader!./example/ButtonGroupWithIcons';
+import ButtonGroupDisabledButtons from './example/ButtonGroupDisabledButtons';
+import ButtonGroupDisabledButtonsSrc from '!raw-loader!./example/ButtonGroupDisabledButtons';
+import ButtonGroupSingleSelect from './example/ButtonGroupSingleSelect';
+import ButtonGroupSingleSelectSrc from '!raw-loader!./example/ButtonGroupSingleSelect';
+import ButtonGroupMultiSelect from './example/ButtonGroupMultiSelect';
+import ButtonGroupMultiSelectSrc from '!raw-loader!./example/ButtonGroupMultiSelect';
 
 
 const DocPage = () => (

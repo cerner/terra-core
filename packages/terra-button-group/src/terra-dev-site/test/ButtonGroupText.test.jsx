@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonGroup from '../../lib/ButtonGroup';
+import ButtonGroup from '../../ButtonGroup';
 
 const TextButtonGroup = () => (
   <ButtonGroup id="button-group-text">
