@@ -8,19 +8,19 @@ import { name } from 'terra-alert/package.json';
 import AlertSrc from '!raw-loader!terra-alert/src/Alert';
 
 // Example Files
-import AlertExample from './AlertExample';
-import ErrorExample from './ErrorExample';
-import WarningExample from './WarningExample';
-import AdvisoryExample from './AdvisoryExample';
-import InfoExample from './InfoExample';
-import SuccessExample from './SuccessExample';
-import CustomExample from './CustomExample';
-import LongTextExample from './LongTextExample';
-import ActionExample from './ActionExample';
-import SmallContainerExample from './SmallContainerExample';
-import DismissibleExample from './DismissibleExample';
-import ActionAndDismissibleExample from './ActionAndDismissibleExample';
-import BuildYourOwnAlertExample from './BuildYourOwnAlertExample';
+import AlertExample from './example/AlertExample';
+import ErrorExample from './example/ErrorExample';
+import WarningExample from './example/WarningExample';
+import AdvisoryExample from './example/AdvisoryExample';
+import InfoExample from './example/InfoExample';
+import SuccessExample from './example/SuccessExample';
+import CustomExample from './example/CustomExample';
+import LongTextExample from './example/LongTextExample';
+import ActionExample from './example/ActionExample';
+import SmallContainerExample from './example/SmallContainerExample';
+import DismissibleExample from './example/DismissibleExample';
+import ActionAndDismissibleExample from './example/ActionAndDismissibleExample';
+import BuildYourOwnAlertExample from './example/BuildYourOwnAlertExample';
 
 const DocPage = () => (
   <DocTemplate

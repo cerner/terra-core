@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from 'terra-base';
-import Alert from '../../lib/Alert';
-import IconHelp from '../../../terra-icon/lib/icon/IconHelp';
+import IconHelp from 'terra-icon/lib/icon/IconHelp';
+import Alert from '../../Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 

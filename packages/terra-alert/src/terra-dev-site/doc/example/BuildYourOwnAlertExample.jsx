@@ -1,11 +1,11 @@
 import React from 'react';
-import Alert from 'terra-alert';
 import Button from 'terra-button';
 import Toggle from 'terra-toggle';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import IconCritical from 'terra-icon/lib/icon/IconCritical';
 import IconOverDue from 'terra-icon/lib/icon/IconOverDue';
 import IconClock from 'terra-icon/lib/icon/IconClock';
+import Alert from '../../../Alert';
 
 class BuildYourOwnAlertExample extends React.Component {
   constructor(props) {

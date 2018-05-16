@@ -1,6 +1,6 @@
 import React from 'react';
-import Alert from 'terra-alert';
 import Button from 'terra-button';
+import Alert from '../../../Alert';
 
 class ActionAndDismissibleExample extends React.Component {
   constructor(props) {

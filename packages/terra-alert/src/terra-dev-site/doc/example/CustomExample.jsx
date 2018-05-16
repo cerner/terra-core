@@ -1,6 +1,6 @@
 import React from 'react';
-import Alert from 'terra-alert';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
+import Alert from '../../../Alert';
 
 const alertStartTagStr = '<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customStatusColor="orange" customIcon={<IconHelp />} >';
 const alertEndTagStr = '</Alert>';

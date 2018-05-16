@@ -1,5 +1,5 @@
 import React from 'react';
-import Alert from 'terra-alert';
+import Alert from '../../../Alert';
 
 class DismissibleExample extends React.Component {
   constructor(props) {

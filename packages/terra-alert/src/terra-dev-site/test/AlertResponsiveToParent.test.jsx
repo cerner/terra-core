@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from 'terra-base';
 import Button from 'terra-button';
-import Alert from '../../lib/Alert';
+import Alert from '../../Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Alert from 'terra-alert';
+import Alert from '../../../Alert';
 
 const alertStartTagStr = '<Alert type={Alert.Opts.Types.ERROR} >';
 const alertEndTagStr = '</Alert>';

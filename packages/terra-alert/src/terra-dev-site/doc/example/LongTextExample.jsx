@@ -1,7 +1,7 @@
 import React from 'react';
-import Alert from 'terra-alert';
 import Button from 'terra-button';
 import Toggle from 'terra-toggle';
+import Alert from '../../../Alert';
 
 const buttonStyle = { textDecoration: 'underline', color: '#1c11f21' };
 
