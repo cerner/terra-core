@@ -40,7 +40,7 @@ class ArrangeAlignment extends React.Component {
   }
 
   componentWillMount() {
-    this.state.id = uniqueId();
+    this.state.id = uniqueid();
   }
 
   getId(name) {

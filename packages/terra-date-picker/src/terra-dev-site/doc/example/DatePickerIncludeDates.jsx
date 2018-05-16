@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import DatePickerExampleTemplate from './DatePickerExampleTemplate';
+import DatePickerExampleTemplate from '../common/DatePickerExampleTemplate';
 
 const DatePickerExample = () => (
   <DatePickerExampleTemplate

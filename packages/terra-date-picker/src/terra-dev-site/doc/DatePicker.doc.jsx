@@ -8,13 +8,13 @@ import { name } from 'terra-date-picker/package.json';
 import DatePickerSrc from '!raw-loader!terra-date-picker/src/DatePicker';
 
 // Example Files
-import DatePickerDefault from './DatePickerDefault';
-import DatePickerExcludeDates from './DatePickerExcludeDates';
-import DatePickerIncludeDates from './DatePickerIncludeDates';
-import DatePickerFilterDates from './DatePickerFilterDates';
-import DatePickerMinMax from './DatePickerMinMax';
-import DatePickerDefaultDate from './DatePickerDefaultDate';
-import DatePickerInsideModal from './DatePickerInsideModal';
+import DatePickerDefault from './example/DatePickerDefault';
+import DatePickerExcludeDates from './example/DatePickerExcludeDates';
+import DatePickerIncludeDates from './example/DatePickerIncludeDates';
+import DatePickerFilterDates from './example/DatePickerFilterDates';
+import DatePickerMinMax from './example/DatePickerMinMax';
+import DatePickerDefaultDate from './example/DatePickerDefaultDate';
+import DatePickerInsideModal from './example/DatePickerInsideModal';
 
 const DocPage = () => (
   <DocTemplate

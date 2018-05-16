@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePickerExampleTemplate from './DatePickerExampleTemplate';
+import DatePickerExampleTemplate from '../common/DatePickerExampleTemplate';
 
 const isWeekday = (date) => {
   const day = date.day();
