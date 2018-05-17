@@ -394,8 +394,8 @@ import ProgressBarColor from '../packages/terra-progress-bar/examples/test-examp
 import ProgressBarDefault from '../packages/terra-progress-bar/examples/test-examples/ProgressBarDefault.example';
 import ProgressBarGradient from '../packages/terra-progress-bar/examples/test-examples/ProgressBarGradient.example';
 import ProgressBarSize from '../packages/terra-progress-bar/examples/test-examples/ProgressBarSize.example';
-import MockPropsTable from '../packages/terra-props-table/tests/nightwatch/MockPropsTable';
-import MockPropsTableWithTitle from '../packages/terra-props-table/tests/nightwatch/MockPropsTableWithTitle';
+import MockPropsTable from '../packages/terra-props-table/examples/test-examples/MockPropsTable.example';
+import MockPropsTableWithTitle from '../packages/terra-props-table/examples/test-examples/MockPropsTableWithTitle.example';
 import DefaultResponsiveElement from '../packages/terra-responsive-element/tests/nightwatch/DefaultResponsiveElement';
 import HugeResponsiveElement from '../packages/terra-responsive-element/tests/nightwatch/HugeResponsiveElement';
 import LargeResponsiveElement from '../packages/terra-responsive-element/tests/nightwatch/LargeResponsiveElement';
