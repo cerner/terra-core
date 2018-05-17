@@ -32,7 +32,7 @@ The onChange callback has been changed to return only the value. To uplift remov
 
 `onChange(event, value, name`) -> `onChange(value)`
 
-```
+```diff
 import React from 'react';
 import Select from 'terra-form-select';
 
@@ -67,7 +67,7 @@ export default Default;
 
 The isPlaceholderHidden hidden prop has been removed. To uplift remove this prop declaration.
 
-```
+```diff
 - <Select isPlaceholderHidden>
 + <Select>
     <Select.Option value="blue" display="Blue" />
@@ -107,7 +107,7 @@ The children and isSelected props have been removed. To uplift remove isSelected
 
 Children should be placed inside of display.
 
-```
+```diff
 - <Select.Option value="value">Display</Select.Option>
 + <Select.Option value="value" display="Display" />
 ```
