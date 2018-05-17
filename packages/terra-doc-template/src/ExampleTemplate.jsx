@@ -1,79 +1,103 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ToggleButton from 'terra-toggle-button';
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
 import { okaidia } from 'react-syntax-highlighter/styles/prism';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
+import classNames from 'classnames/bind';
+import styles from './ExampleTemplate.scss';
 
 registerLanguage('jsx', jsx);
 
+const cx = classNames.bind(styles);
+
 const propTypes = {
   /**
-   * The component that serves as an example to be displayed
+   * The example component.
    */
   example: PropTypes.element,
   /**
-   * The source code for the example displayed
+   * The example source code.
    */
   exampleSrc: PropTypes.string,
   /**
-   * The title of the example
+   * The example title.
    */
   title: PropTypes.string,
   /**
-   * An optional description that will be displayed below the title as regular text
+   * The example description.
    */
   description: PropTypes.node,
   /**
-   * The children components for this example which will be displayed below the example
+   * Additional content.
    */
   children: PropTypes.element,
 };
 
 const defaultProps = {
-  example: null,
-  exampleSrc: null,
-  title: null,
-  description: null,
-  children: null,
+  example: undefined,
+  exampleSrc: undefined,
+  title: undefined,
+  description: undefined,
+  children: undefined,
 };
 
-class IndexExampleTemplate extends React.Component {
+class ExampleTemplate extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { panelIsOpen: false };
-    this.handlePanelToggle = this.handlePanelToggle.bind(this);
+
+    this.state = { isExpanded: false };
+    this.handleCodeToggle = this.handleCodeToggle.bind(this);
   }
 
-  handlePanelToggle() {
-    this.setState({ panelIsOpen: !this.state.panelIsOpen });
+  handleCodeToggle() {
+    this.setState({ isExpanded: !this.state.isExpanded });
   }
 
   render() {
-    const { title, example, exampleSrc, children, description, ...customProps } = this.props;
-
-    let indexExampleSrc;
-    if (exampleSrc) {
-      indexExampleSrc = (
-        <ToggleButton isAnimated closedButtonText="View Source Code" data-terra-source-code-toggle>
-          <SyntaxHighlighter language="javascript" style={okaidia}>{exampleSrc}</SyntaxHighlighter>
-        </ToggleButton>
-      );
-    }
+    const {
+      title,
+      example,
+      exampleSrc,
+      children,
+      description,
+      ...customProps
+    } = this.props;
 
     return (
-      <div {...customProps}>
-        <h2>{title}</h2>
-        {description}
-        {example}
-        {indexExampleSrc}
-        {children}
+      <div {...customProps} className={cx('template', customProps.className)}>
+        {title &&
+          <div className={cx('header')}>
+            <h2 className={cx('title')}>
+              {title}
+            </h2>
+          </div>}
+        <div className={cx('content')}>
+          {description &&
+            <div className={cx('description')}>
+              {description}
+            </div>}
+          {example}
+          {children}
+        </div>
+        {exampleSrc &&
+          <div className={cx('footer')}>
+            <button className={cx('toggle')} onClick={this.handleCodeToggle}>
+              <span className={cx('chevron-left')} />
+              <span>Code</span>
+              <span className={cx('chevron-right')} />
+            </button>
+            <div className={cx('code', { 'is-expanded': this.state.isExpanded })}>
+              <SyntaxHighlighter language="javascript" style={okaidia}>
+                {exampleSrc}
+              </SyntaxHighlighter>
+            </div>
+          </div>}
       </div>
     );
   }
 }
 
-IndexExampleTemplate.propTypes = propTypes;
-IndexExampleTemplate.defaultProps = defaultProps;
+ExampleTemplate.propTypes = propTypes;
+ExampleTemplate.defaultProps = defaultProps;
 
-export default IndexExampleTemplate;
+export default ExampleTemplate;
