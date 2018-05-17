@@ -3,7 +3,14 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added change log to the documentation on terra-dev-site
+* List takes Static List-Section API as children.
+
 ### Changed
+* Added new Prop "hasSections" to MultiSelectList and SingleSelectList
+* Added new Utils to handle selection across Sections for MultiSelectList and SingleSelectList
+* Updated logic to render SelectableList differently if it has sections as children.
 * Formatting changes per eslint v4 update
 
 2.17.0 - (July 10, 2018)
@@ -15,9 +22,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-
-### Added
-* Added change log to the documentation on terra-dev-site
 
 2.15.0 - (June 22, 2018)
 ------------------

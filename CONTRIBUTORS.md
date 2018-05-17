@@ -132,3 +132,4 @@ Cerner Corporation
 [@tomleewu]: https:/github.com/tomleewu
 [@CoryMcDonald]: https://github.com/CoryMcDonald
 [@AnthonyRoss]: https://github.com/AnthonyRoss
+[@DineshSingh9]: https://github.com/DineshSingh9

@@ -1,0 +1,94 @@
+@import '~terra-mixins';
+
+:local {
+  .list-section-header {
+    @include terra-padding-end(var(--terra-list-section-header-padding-end, 0.7142857143rem));
+    @include terra-padding-start(var(--terra-list-section-header-padding-start, 0.7142857143rem));
+
+    background: var(--terra-list-section-header-background, #e8e9ea);
+    border-bottom: var(--terra-list-section-header-border-bottom, 1px solid #c8cacb);
+    border-left: var(--terra-list-section-header-border-left);
+    border-right: var(--terra-list-section-header-border-right);
+    border-top: var(--terra-list-section-header-border-top);
+    box-shadow: var(--terra-list-section-header-box-shadow);
+    color: var(--terra-list-section-header-color, #1c1f21);
+    padding-bottom: var(--terra-list-section-header-padding-bottom, 0.5rem);
+    padding-top: var(--terra-list-section-header-padding-top, 0.5rem);
+    width: 100%;
+    
+    &.is-interactable {
+      @include terra-padding-start(var(--terra-list-section-header-accordion-padding-start, 0.5rem));
+      cursor: pointer;
+      
+      &:hover {
+        background: var(--terra-list-section-header-hover-background, #d7d8d9);
+        border-bottom: var(--terra-list-section-header-hover-border-bottom, 1px solid #c8cacb);
+        border-left: var(--terra-list-section-header-hover-border-left);
+        border-right: var(--terra-list-section-header-hover-border-right);
+        border-top: var(--terra-list-section-header-hover-border-top);
+        box-shadow: var(--terra-list-section-header-hover-box-shadow);
+        color: var(--terra-list-section-header-hover-color, #1c1f21);
+      }
+      
+      &:focus {
+        background: var(--terra-list-section-header-focus-background, #e8e9ea);
+        border-bottom: var(--terra-list-section-header-focus-border-bottom, 1px solid #c8cacb);
+        border-left: var(--terra-list-section-header-focus-border-left);
+        border-right: var(--terra-list-section-header-focus-border-right);
+        border-top: var(--terra-list-section-header-focus-border-top);
+        box-shadow: var(--terra-list-section-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+        color: var(--terra-list-section-header-focus-color, #1c1f21);
+        outline: none;
+      }
+
+      &:active,
+      &.is-active {
+        background: var(--terra-list-section-header-active-background, #d7d8d9);
+        border-bottom: var(--terra-list-section-header-active-border-bottom, 1px solid #c8cacb);
+        border-left: var(--terra-list-section-header-active-border-left);
+        border-right: var(--terra-list-section-header-active-border-right);
+        border-top: var(--terra-list-section-header-active-border-top);
+        box-shadow: var(--terra-list-section-header-active-box-shadow);
+        color: var(--terra-list-section-header-active-color, #1c1f21);
+      }
+    }
+  }
+
+  .title {
+    display: inline;
+    font-size: 1rem;
+    font-size: var(--terra-list-section-header-font-size, 1rem);
+    font-weight: var(--terra-list-section-header-font-weight, bold);
+    line-height: var(--terra-list-section-header-line-height, 1.142857143);
+    text-transform: var(--terra-list-section-header-text-transform);
+  }
+
+  .accordion-icon-wrapper {
+    @include terra-margin-start(var(--terra-list-section-header-accordion-icon-margin-start));
+    @include terra-margin-end(var(--terra-list-section-header-accordion-icon-margin-end, 0.357142857rem));
+    @include terra-padding-start(var(--terra-list-section-header-accordion-icon-padding-start));
+    @include terra-padding-end(var(--terra-list-section-header-accordion-icon-padding-end));
+    padding-bottom: var(--terra-list-section-header-accordion-icon-padding-bottom);
+    padding-top: var(--terra-list-section-header-accordion-icon-padding-top, 0.214285714rem);
+  }
+
+  .accordion-icon {
+    background: var(--terra-list-section-header-accordion-icon, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 0.8571428571rem;
+    transform: rotate(0deg);
+    width: 0.8571428571rem;
+
+    // flips the icon about its vertical axis, presenting it in its mirrored-image form
+    [dir=rtl] & {
+      transform: scaleX(-1);
+    }
+
+    // tells the rtl postcss plugin to not transform this by default
+    [dir] &.is-open {
+      transform: rotate(90deg);
+    }
+  }
+}

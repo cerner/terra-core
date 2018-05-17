@@ -3,11 +3,13 @@
 exports[`should mount with no items 1`] = `
 <SingleSelectList
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
 >
   <SelectableList
     disableUnselectedItems={false}
     hasChevrons={false}
+    hasSections={false}
     isDivided={false}
     onChange={[Function]}
     selectedIndexes={
@@ -32,11 +34,13 @@ exports[`should mount with no items 1`] = `
 exports[`should mount with one items 1`] = `
 <SingleSelectList
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
 >
   <SelectableList
     disableUnselectedItems={false}
     hasChevrons={false}
+    hasSections={false}
     isDivided={false}
     onChange={[Function]}
     selectedIndexes={
@@ -92,6 +96,7 @@ exports[`should render a default component 1`] = `
 <SelectableList
   disableUnselectedItems={false}
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
   onChange={[Function]}
   selectedIndexes={
@@ -106,6 +111,7 @@ exports[`should render with a selectable and non-selectable item 1`] = `
 <SelectableList
   disableUnselectedItems={false}
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
   onChange={[Function]}
   selectedIndexes={
@@ -136,6 +142,7 @@ exports[`should render with hasChevrons 1`] = `
 <SelectableList
   disableUnselectedItems={false}
   hasChevrons={true}
+  hasSections={false}
   isDivided={false}
   onChange={[Function]}
   selectedIndexes={
@@ -161,6 +168,7 @@ exports[`should render with isDivided 1`] = `
 <SelectableList
   disableUnselectedItems={false}
   hasChevrons={false}
+  hasSections={false}
   isDivided={true}
   onChange={[Function]}
   selectedIndexes={
@@ -186,6 +194,7 @@ exports[`should render with items 1`] = `
 <SelectableList
   disableUnselectedItems={false}
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
   onChange={[Function]}
   selectedIndexes={
@@ -250,11 +259,13 @@ exports[`should render with items 1`] = `
 exports[`should select an item 1`] = `
 <SingleSelectList
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
 >
   <SelectableList
     disableUnselectedItems={false}
     hasChevrons={false}
+    hasSections={false}
     isDivided={false}
     onChange={[Function]}
     selectedIndexes={
@@ -425,11 +436,13 @@ exports[`should select an item 1`] = `
 exports[`should select an item 2`] = `
 <SingleSelectList
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
 >
   <SelectableList
     disableUnselectedItems={false}
     hasChevrons={false}
+    hasSections={false}
     isDivided={false}
     onChange={[Function]}
     selectedIndexes={
@@ -600,11 +613,13 @@ exports[`should select an item 2`] = `
 exports[`should select an item 3`] = `
 <SingleSelectList
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
 >
   <SelectableList
     disableUnselectedItems={false}
     hasChevrons={false}
+    hasSections={false}
     isDivided={false}
     onChange={[Function]}
     selectedIndexes={
@@ -775,11 +790,13 @@ exports[`should select an item 3`] = `
 exports[`should select an item 4`] = `
 <SingleSelectList
   hasChevrons={false}
+  hasSections={false}
   isDivided={false}
 >
   <SelectableList
     disableUnselectedItems={false}
     hasChevrons={false}
+    hasSections={false}
     isDivided={false}
     onChange={[Function]}
     selectedIndexes={

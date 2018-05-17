@@ -15,6 +15,22 @@ const validatedMaxCount = (children, maxSelectionCount) => {
   return React.Children.count(children);
 };
 
+const validatedMaxCountForSections = (children, maxSelectionCount) => {
+  if (maxSelectionCount !== undefined) {
+    return maxSelectionCount;
+  }
+
+  const childArray = React.Children.toArray(children);
+
+  let totalNoOfListItems = 0;
+  for (let i = 0; i < childArray.length; i += 1) {
+    const eachSection = childArray[i];
+    const listItems = eachSection.props.listItems;
+    totalNoOfListItems += listItems.length;
+  }
+  return totalNoOfListItems;
+};
+
 /**
  * Returns the first valid index of a child with isSelected set.
  * To be used in the contructor, to set initial state.
@@ -29,12 +45,29 @@ const initialSingleSelectedIndex = (children) => {
   return -1;
 };
 
+const initialSingleSelectedIndexWithSections = (children) => {
+  const childArray = React.Children.toArray(children);
+  // childArray has all the sections.
+  for (let i = 0; i < childArray.length; i += 1) {
+    const eachSection = childArray[i];
+    const listItems = eachSection.props.listItems;
+
+    for (let j = 0; j < listItems.length; j += 1) {
+      if (listItems[i].props.isSelected) {
+        return `${i}-${j}`;
+      }
+    }
+  }
+  return -1;
+};
+
 /**
  * Returns the first valid indexes of children with isSelected set, up to the maxSelectionCount.
 * To be used in the contructor, to set initial state.
  */
 const initialMultiSelectedIndexes = (children, maxSelectionCount) => {
   const selectedIndexes = [];
+  // childArray has all the sections.
   const childArray = React.Children.toArray(children);
   const validMaxCount = validatedMaxCount(children, maxSelectionCount);
 
@@ -49,6 +82,27 @@ const initialMultiSelectedIndexes = (children, maxSelectionCount) => {
   return selectedIndexes;
 };
 
+const initialMultiSelectedIndexesWithSections = (children, maxSelectionCount) => {
+  const selectedIndexes = [];
+  const childArray = React.Children.toArray(children);
+  const validMaxCount = validatedMaxCountForSections(children, maxSelectionCount);
+
+  for (let i = 0; i < childArray.length; i += 1) {
+    const listItems = childArray[i].props.listItems;
+
+    if (selectedIndexes.length >= validMaxCount) {
+      break;
+    }
+
+    for (let j = 0; j < listItems.length; j += 1) {
+      if (listItems[j].props.isSelected) {
+        selectedIndexes.push(`${i}-${j}`);
+      }
+    }
+  }
+  return selectedIndexes;
+};
+
 /**
  * Returns a new array, updated with the newIndex being added or removed from the existing.
  */
@@ -56,6 +110,7 @@ const updatedMultiSelectedIndexes = (currentIndexes, newIndex) => {
   let newIndexes = [];
   if (currentIndexes.length) {
     if (currentIndexes.indexOf(newIndex) >= 0) {
+      // It means its already selected. Trying to de-select it.
       newIndexes = currentIndexes.slice();
       newIndexes.splice(newIndexes.indexOf(newIndex), 1);
     } else {
@@ -71,9 +126,13 @@ const updatedMultiSelectedIndexes = (currentIndexes, newIndex) => {
  * Returns whether not the new index can be added if it adheres to the maxSelectionCount.
  * Or if the index is already present, and can be removed.
  */
-const shouldHandleMultiSelect = (children, maxSelectionCount, currentIndexes, newIndex) => {
-  if (currentIndexes.length < validatedMaxCount(children, maxSelectionCount)) {
+const shouldHandleMultiSelect = (children, maxSelectionCount, currentIndexes, newIndex, hasSections) => {
+  if (!hasSections && currentIndexes.length < validatedMaxCount(children, maxSelectionCount)) {
     return true;
+  } else if (hasSections) {
+    if (currentIndexes.length < validatedMaxCountForSections(children, maxSelectionCount)) {
+      return true;
+    }
   }
   if (currentIndexes.indexOf(newIndex) >= 0) {
     return true;
@@ -91,7 +150,6 @@ const shouldHandleSingleSelect = (currentIndex, newIndex) => newIndex !== curren
  */
 const wrappedOnClickForItem = (item, index, onChange) => {
   const initialOnClick = item.props.onClick;
-
   return (event) => {
     // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
     if (item.props.isSelectable !== false && onChange) {
@@ -165,17 +223,29 @@ const newPropsForItem = (item, index, onClick, onKeyDown, hasChevrons, selectedI
   return newProps;
 };
 
+const newPropsForSection = (section, clonedListItems) => {
+  const newProps = {};
+  newProps.headerContent = section.props.headerContent;
+  newProps.listItems = clonedListItems;
+
+  return newProps;
+};
+
 const SelectableUtils = {
   initialSingleSelectedIndex,
+  initialSingleSelectedIndexWithSections,
   initialMultiSelectedIndexes,
+  initialMultiSelectedIndexesWithSections,
   updatedMultiSelectedIndexes,
   validatedMaxCount,
+  validatedMaxCountForSections,
   shouldHandleMultiSelect,
   shouldHandleSingleSelect,
   KEYCODES,
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   newPropsForItem,
+  newPropsForSection,
 };
 
 export default SelectableUtils;

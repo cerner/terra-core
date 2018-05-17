@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import List from './List';
 import SelectableUtils from './SelectableUtils';
+import Section from './Section';
 
 const propTypes = {
   /**
@@ -24,6 +25,10 @@ const propTypes = {
    */
   hasChevrons: PropTypes.bool,
   /**
+   * Whether or not the child items are represented with header and list-items.
+   */
+  hasSections: PropTypes.bool,
+  /**
    * A callback event that will be triggered when selection state changes.
    */
   onChange: PropTypes.func,
@@ -39,6 +44,7 @@ const defaultProps = {
   disableUnselectedItems: false,
   isDivided: false,
   hasChevrons: false,
+  hasSections: false,
   onChange: undefined,
   selectedIndexes: [],
 };
@@ -49,19 +55,36 @@ const SelectableList = ({
   isDivided,
   onChange,
   hasChevrons,
+  hasSections,
   selectedIndexes,
   ...customProps
 }) => {
-  const clonedChildren = React.Children.map(children, (child, index) => {
-    const wrappedOnClick = SelectableUtils.wrappedOnClickForItem(child, index, onChange);
-    const wrappedOnKeyDown = SelectableUtils.wrappedOnKeyDownForItem(child, index, onChange);
-    const newProps = SelectableUtils.newPropsForItem(child, index, wrappedOnClick, wrappedOnKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems);
-    return React.cloneElement(child, newProps);
-  });
+  let clonedChildren = null;
+  if (!hasSections) {
+    clonedChildren = React.Children.map(children, (child, index) => {
+      const wrappedOnClick = SelectableUtils.wrappedOnClickForItem(child, index, onChange);
+      const wrappedOnKeyDown = SelectableUtils.wrappedOnKeyDownForItem(child, index, onChange);
+      const newProps = SelectableUtils.newPropsForItem(child, index, wrappedOnClick, wrappedOnKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems);
+      return React.cloneElement(child, newProps);
+    });
+  } else {
+    clonedChildren = React.Children.map(children, (section, sectionIndex) => {
+      const sectionListItems = section.props.listItems;
+      const clonedListItems = sectionListItems.map((listItem, listIndex) => {
+        const index = `${sectionIndex}`.concat('-').concat(listIndex);
+        const wrappedOnClick = SelectableUtils.wrappedOnClickForItem(listItem, index, onChange);
+        const wrappedOnKeyDown = SelectableUtils.wrappedOnKeyDownForItem(listItem, index, onChange);
+        const newProps = SelectableUtils.newPropsForItem(listItem, index, wrappedOnClick, wrappedOnKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems);
+        return React.cloneElement(listItem, newProps);
+      });
+      const newProps = SelectableUtils.newPropsForSection(section, clonedListItems);
+      return React.cloneElement(section, newProps);
+    });
+  }
 
   return (
     <List isDivided={isDivided} role="listbox" {...customProps}>
-      {clonedChildren}
+      { clonedChildren }
     </List>
   );
 };
@@ -70,5 +93,6 @@ SelectableList.propTypes = propTypes;
 SelectableList.defaultProps = defaultProps;
 SelectableList.Item = List.Item;
 SelectableList.Utils = SelectableUtils;
+SelectableList.Section = Section;
 
 export default SelectableList;
