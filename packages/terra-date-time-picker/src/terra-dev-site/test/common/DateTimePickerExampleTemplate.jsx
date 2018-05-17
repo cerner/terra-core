@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Base from 'terra-base';
-import DateTimePicker from '../../../lib/DateTimePicker';
+import DateTimePicker from '../../../DateTimePicker';
 
 const propTypes = {
   /**

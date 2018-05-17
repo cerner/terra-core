@@ -1,7 +1,8 @@
 import React from 'react';
-import DateTimePicker from 'terra-date-time-picker';
 import Button from 'terra-button';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import AppDelegate from 'terra-app-delegate';
+import DateTimePicker from '../../DateTimePicker';
 
 class ModalContainer extends React.Component {
   constructor(props) {
@@ -19,10 +20,10 @@ class ModalContainer extends React.Component {
         preferredType: 'modal',
         size,
         content: {
-          key: `DateTimePickerInModalExample-${identifier}`,
-          name: 'DateTimePickerInModalExample',
+          key: `DateTimePickerInModalTest-${identifier}`,
+          name: 'DateTimePickerInModalTest',
           props: {
-            identifier: `DateTimePickerInModalExample-${identifier}`,
+            identifier: `DateTimePickerInModalTest-${identifier}`,
           },
         },
       });
@@ -41,7 +42,7 @@ class ModalContainer extends React.Component {
         <DateTimePicker name="date-time-picker-in-modal" releaseFocus={props.app.releaseFocus} requestFocus={props.app.requestFocus} />
         <br />
         <br />
-        <Button className="close-disclosure" text="Close Disclosure" onClick={this.closeDisclosure} />
+        <Button className="close-disclosure" onClick={this.closeDisclosure}>Close Disclosure</Button>
       </div>
     );
   }
@@ -49,7 +50,7 @@ class ModalContainer extends React.Component {
   render() {
     const { app } = this.props;
     const content = this.modalContent(this.props);
-    const triggerButton = <Button className="disclose" text="Disclose Modal" onClick={this.disclose()} />;
+    const triggerButton = <Button className="disclose"onClick={this.disclose()}>Disclose Modal</Button>;
 
     return (
       app && app.closeDisclosure ? content : triggerButton
@@ -61,6 +62,6 @@ ModalContainer.propTypes = {
   app: AppDelegate.propType,
 };
 
-AppDelegate.registerComponentForDisclosure('DateTimePickerInModalExample', ModalContainer);
+AppDelegate.registerComponentForDisclosure('DateTimePickerInModalTest', ModalContainer);
 
 export default ModalContainer;

@@ -1,5 +1,5 @@
 import React from 'react';
-import DateTimePickerExampleTemplate from './DateTimePickerExampleTemplate';
+import DateTimePickerExampleTemplate from './common/DateTimePickerExampleTemplate';
 
 const DateTimePickerDefaultDateExcluded = () => (
   <DateTimePickerExampleTemplate

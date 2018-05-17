@@ -1,6 +1,6 @@
 import React from 'react';
 import Base from 'terra-base';
-import DateTimePicker from '../../../src/DateTimePicker';
+import DateTimePicker from '../../DateTimePicker';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 

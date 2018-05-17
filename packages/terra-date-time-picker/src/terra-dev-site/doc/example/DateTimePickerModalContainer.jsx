@@ -1,8 +1,7 @@
 import React from 'react';
+import DateTimePicker from 'terra-date-time-picker';
 import Button from 'terra-button';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import AppDelegate from 'terra-app-delegate';
-import DateTimePicker from '../../../lib/DateTimePicker';
 
 class ModalContainer extends React.Component {
   constructor(props) {
@@ -20,10 +19,10 @@ class ModalContainer extends React.Component {
         preferredType: 'modal',
         size,
         content: {
-          key: `DateTimePickerInModalTest-${identifier}`,
-          name: 'DateTimePickerInModalTest',
+          key: `DateTimePickerInModalExample-${identifier}`,
+          name: 'DateTimePickerInModalExample',
           props: {
-            identifier: `DateTimePickerInModalTest-${identifier}`,
+            identifier: `DateTimePickerInModalExample-${identifier}`,
           },
         },
       });
@@ -50,7 +49,7 @@ class ModalContainer extends React.Component {
   render() {
     const { app } = this.props;
     const content = this.modalContent(this.props);
-    const triggerButton = <Button className="disclose"onClick={this.disclose()}>Disclose Modal</Button>;
+    const triggerButton = <Button className="disclose" text="Disclose Modal" onClick={this.disclose()} />;
 
     return (
       app && app.closeDisclosure ? content : triggerButton
@@ -62,6 +61,6 @@ ModalContainer.propTypes = {
   app: AppDelegate.propType,
 };
 
-AppDelegate.registerComponentForDisclosure('DateTimePickerInModalTest', ModalContainer);
+AppDelegate.registerComponentForDisclosure('DateTimePickerInModalExample', ModalContainer);
 
 export default ModalContainer;

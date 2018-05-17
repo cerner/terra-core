@@ -1,8 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 import React from 'react';
 import ModalManager from 'terra-modal-manager';
-import ModalContainer from './common/DatePickerModalContainer';
+import ModalContainer from '../common/DateTimePickerModalContainer';
 
 const ModalManagerDemo = () => (
   <ModalManager>

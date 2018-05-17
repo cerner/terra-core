@@ -45,7 +45,8 @@
     "terra-base": "^3.9.0",
     "terra-button": "^2.10.0",
     "terra-date-picker": "^2.11.0",
-    "terra-modal": "^2.5.0",
+    "terra-modal": "^2.5.0", /// das;ldkfja;lskdjfa
+    "terra-modal-manager": "^3.0.0",
     "terra-time-input": "^2.10.0"
   },
   "scripts": {
