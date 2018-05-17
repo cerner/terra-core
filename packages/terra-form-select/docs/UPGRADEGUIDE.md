@@ -28,7 +28,7 @@
 
 ### Changes to onChange
 
-The onChange callback has been changed to return only the value. To uplift remove the event and name parameter from the callback.
+The `onChange` callback has been changed to return only the value. To uplift remove the event and name parameter from the callback.
 
 `onChange(event, value, name`) -> `onChange(value)`
 
@@ -65,7 +65,7 @@ export default Default;
 
 ### Changes to isPlaceholderHidden
 
-The isPlaceholderHidden hidden prop has been removed. To uplift remove this prop declaration.
+The `isPlaceholderHidden` hidden prop has been removed. To uplift remove this prop declaration.
 
 ```diff
 - <Select isPlaceholderHidden>
@@ -90,20 +90,20 @@ If a placeholder option is necessary it can be added to the list of options.
 
 ### Changes to name and required
 
-The name and required props have been removed. Terra recommends handling form submissions and validations with [react-final-form](https://github.com/final-form/react-final-form).
+The `name` and `required` props have been removed. Terra recommends handling form submissions and validations with [react-final-form](https://github.com/final-form/react-final-form).
 To uplift remove these prop declarations.
 
 ### Changes to releaseFocus and releaseFocus
 
-The releaseFocus and releaseFocus props have been removed. It is no longer necessary for the consumer to manage the focus state. To uplift remove these prop declarations.
+The `releaseFocus` and `releaseFocus` props have been removed. It is no longer necessary for the consumer to manage the focus state. To uplift remove these prop declarations.
 
 ### Changes to boundingRef
 
-The boundingRef prop has been removed. The dropdown has been updated to never expand outside of the available window space. To uplift remove these prop declarations.
+The `boundingRef` prop has been removed. The dropdown has been updated to never expand outside of the available window space. To uplift remove these prop declarations.
 
 ### Changes to Select.Option
 
-The children and isSelected props have been removed. To uplift remove isSelected prop declarations and move children into display.
+The `children` and `isSelected` props have been removed. To uplift remove isSelected prop declarations and move children into display.
 
 Children should be placed inside of display.
 
