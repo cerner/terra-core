@@ -1,5 +1,14 @@
 /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
 :local {
+  .time-clarification{
+    background-color: var(--terra-date-time-clarification-modal-background-color, #fff);
+    border: var(--terra-date-time-clarification-modal-border);
+    border-radius: var(--terra-date-time-clarification-modal-border-radius, 5px);
+    box-shadow: var(--terra-date-time-clarification-modal-box-shadow, 0 3px 7px rgba(0, 0, 0, 0.3));
+    color: var(--terra-date-time-clarification-modal-foreground-color);
+    width: 640px;
+  }
+
   .header {
     background-color: #f4f4f4;
     border-bottom-color: #dedfe0;

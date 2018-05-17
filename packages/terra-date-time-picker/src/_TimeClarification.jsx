@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Modal from 'terra-modal';
+import AbstractModal from 'terra-abstract-modal';
 import Button from 'terra-button';
 import DateTimeUtils from './DateTimeUtils';
 import styles from './_TimeClarification.scss';
@@ -25,6 +25,22 @@ const propTypes = {
    * Callback function indicating the after time change option was selected.
    */
   onStandardTimeButtonClick: PropTypes.func.isRequired,
+  /**
+   * Callback function indicating the DST offset button was selected.
+   */
+  onOffsetButtonClick: PropTypes.func.isRequired,
+  /**
+   * Callback function indicating the modal is requesting to close.
+   */
+  onRequestClose: PropTypes.func.isRequired,
+  /**
+   * A callback function to let the containing component (e.g. modal) to regain focus.
+   */
+  releaseFocus: PropTypes.func,
+  /**
+   * A callback function to request focus from the containing component (e.g. modal).
+   */
+  requestFocus: PropTypes.func,
 };
 
 const defaultProps = {
@@ -32,6 +48,9 @@ const defaultProps = {
   isOffsetButtonHidden: false,
   onDaylightSavingButtonClick: undefined,
   onStandardTimeButtonClick: undefined,
+  onOffsetButtonClick: undefined,
+  releaseFocus: undefined,
+  requestFocus: undefined,
 };
 
 const contextTypes = {
@@ -48,37 +67,36 @@ class TimeClarification extends React.Component {
     super(props);
 
     this.state = {
-      isOpen: props.isOpen,
       offsetDisplay: '',
     };
 
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
     this.handleDaylightSavingButtonClick = this.handleDaylightSavingButtonClick.bind(this);
     this.handleStandardTimeButtonClick = this.handleStandardTimeButtonClick.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps === this.props) {
-      return;
+  componentDidMount() {
+    if (this.props.isOpen && this.props.requestFocus) {
+      this.props.requestFocus();
     }
-
-    this.setState({
-      isOpen: nextProps.isOpen,
-    });
   }
 
-  handleOpenModal() {
-    this.setState({ isOpen: true });
+  componentDidUpdate() {
+    if (this.props.isOpen) {
+      if (this.props.requestFocus) {
+        this.props.requestFocus();
+      }
+    } else if (this.props.releaseFocus) {
+      this.props.releaseFocus();
+    }
   }
 
-  handleCloseModal() {
-    this.setState({ isOpen: false });
+  componentWillUnmount() {
+    if (this.props.releaseFocus) {
+      this.props.releaseFocus();
+    }
   }
 
   handleDaylightSavingButtonClick(event) {
-    this.handleCloseModal();
-
     this.setState({ offsetDisplay: DateTimeUtils.getDaylightSavingTZDisplay() });
 
     if (this.props.onDaylightSavingButtonClick) {
@@ -87,8 +105,6 @@ class TimeClarification extends React.Component {
   }
 
   handleStandardTimeButtonClick(event) {
-    this.handleCloseModal();
-
     this.setState({ offsetDisplay: DateTimeUtils.getStandardTZDisplay() });
 
     if (this.props.onStandardTimeButtonClick) {
@@ -114,13 +130,14 @@ class TimeClarification extends React.Component {
 
     return (
       <div>
-        <Modal
+        <AbstractModal
           classNameModal={cx('time-clarification')}
           ariaLabel="Time Clarification"
-          isOpen={this.state.isOpen}
-          onRequestClose={this.handleCloseModal}
+          isOpen={this.props.isOpen}
+          onRequestClose={this.props.onRequestClose}
           closeOnEsc={false}
           closeOnOutsideClick={false}
+          zIndex="9000"
         >
           <div>
             <header className={cx('header')}>
@@ -144,10 +161,10 @@ class TimeClarification extends React.Component {
               />
             </div>
           </div>
-        </Modal>
+        </AbstractModal>
         <Button
           className={offsetButtonClassNames}
-          onClick={this.handleOpenModal}
+          onClick={this.props.onOffsetButtonClick}
           text={this.state.offsetDisplay}
           isCompact
         />
