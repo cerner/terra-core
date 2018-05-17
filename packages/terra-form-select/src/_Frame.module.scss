@@ -84,7 +84,7 @@
   }
 
   .arrow-icon {
-    background: var(--terra-select-arrow, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background: var(--terra-select-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -258,7 +258,7 @@
   }
 
   .is-invalid .arrow-icon {
-    background: var(--terra-select-invalid-arrow, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background: var(--terra-select-invalid-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

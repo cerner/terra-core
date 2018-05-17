@@ -51,20 +51,20 @@
   }
 
   .is-checkable > .icon {
-    background: var(--terra-select-option-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#1c1f21" opacity="0.12"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0087d1"/></svg>'));
+    background: var(--terra-select-option-icon-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#1c1f21" opacity="0.12"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0087d1"/></svg>'));
   }
 
   .is-selected.is-active > .icon {
-    background: var(--terra-select-option-icon-active, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.5"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
+    background: var(--terra-select-option-icon-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.5"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
   }
 
   .is-checkable:active > .icon {
-    background: var(--terra-select-option-icon-pressed, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.8"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
+    background: var(--terra-select-option-icon-pressed-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.8"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
     visibility: visible;
   }
 
   .is-add-option > .icon {
-    background: var(--terra-select-option-icon-add, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#0079be" d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"/></svg>'));
+    background: var(--terra-select-option-icon-add-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#0079be" d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"/></svg>'));
     visibility: visible;
   }
 
