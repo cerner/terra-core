@@ -1,4 +1,4 @@
-# Terra From Select Upgrade Guide
+# Terra Form Select Upgrade Guide
 
 ## Changes from 3.0 to 4.0
 
