@@ -2,7 +2,7 @@ import React from 'react';
 import DefaultExample from './Default';
 
 const DefaultWrapper = () => (
-  <div style={{ paddingBottom: '15px', width: '300px' }}>
+  <div style={{ width: '300px' }}>
     <DefaultExample />
   </div>
 );
