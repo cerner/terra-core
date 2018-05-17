@@ -37,30 +37,37 @@ const Index = () => (
     }]}
     examples={[{
       title: 'Default',
+      description: 'A default variant allows selecting a single option.',
       example: <DefaultExample />,
       source: DefaultExampleSrc,
     }, {
       title: 'Search',
+      description: 'A search variant provides a searchable single select.',
       example: <SearchExample />,
       source: SearchExampleSrc,
     }, {
       title: 'Multiple',
+      description: 'A multiple variant allows searching and selecting multiple options.',
       example: <MultipleExample />,
       source: MultipleExampleSrc,
     }, {
       title: 'Tag',
+      description: 'A tag variant allows a user to enter multiple custom free text entries or select from the the dropdown.',
       example: <TagExample />,
       source: TagExampleSrc,
     }, {
       title: 'Combobox',
+      description: 'A combobox variant allows a user to enter a single free text entry or select from the the dropdown.',
       example: <ComboboxExample />,
       source: ComboboxExampleSrc,
     }, {
       title: 'OptGroup',
+      description: 'An OptGroup provides a way to group options together.',
       example: <OptGroupExample />,
       source: OptGroupExampleSrc,
     }, {
       title: 'Controlled',
+      description: 'An example of implementing a controlled Select.',
       example: <ControlledExample />,
       source: ControlledExampleSrc,
     }]}
