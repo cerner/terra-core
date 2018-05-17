@@ -75,12 +75,11 @@ jobs:
     - stage: clean up cache
       before_install: true
       script:
-        - docker rmi $(docker images -f "reference=*:$TAG" -q)
+        - 'rm -f $HOME/docker/*.tar.gz'
 stages:
   - build
   - lint jest and danger
   - test
   - name: deploy
     if: type != pull_request
-  - name: clean up cache
-    if: type = pull_request
+  - clean up cache
