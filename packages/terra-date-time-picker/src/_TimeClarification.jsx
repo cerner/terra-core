@@ -49,6 +49,7 @@ const defaultProps = {
   onDaylightSavingButtonClick: undefined,
   onStandardTimeButtonClick: undefined,
   onOffsetButtonClick: undefined,
+  onRequestClose: undefined,
   releaseFocus: undefined,
   requestFocus: undefined,
 };
