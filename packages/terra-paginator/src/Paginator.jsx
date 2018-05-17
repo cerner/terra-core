@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
-import styles from './Paginator.scss';
+import styles from './Paginator.module.scss';
 
 import { calculatePages, pageSet, KEYCODES } from './_paginationUtils';
 
