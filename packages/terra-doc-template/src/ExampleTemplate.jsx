@@ -87,7 +87,7 @@ class ExampleTemplate extends React.Component {
               <span className={cx('chevron-right')} />
             </button>
             <div className={cx('code', { 'is-expanded': this.state.isExpanded })}>
-              <SyntaxHighlighter language="javascript" style={okaidia}>
+              <SyntaxHighlighter language="javascript" style={okaidia} customStyle={{ margin: '0', borderRadius: '0' }}>
                 {exampleSrc}
               </SyntaxHighlighter>
             </div>
