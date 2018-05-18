@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default date time picker 1`] = `
+<TimeClarification
+  isOffsetButtonHidden={true}
+  isOpen={true}
+  onDaylightSavingButtonClick={[Function]}
+  onOffsetButtonClick={[Function]}
+  onRequestClose={[Function]}
+  onStandardTimeButtonClick={[Function]}
+  releaseFocus={[Function]}
+  requestFocus={[Function]}
+/>
+`;
