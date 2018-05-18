@@ -42,6 +42,7 @@
     "moment": "^2.21.0",
     "moment-timezone": "^0.5.13",
     "prop-types": "^15.5.8",
+    "terra-app-delegate": "^2.1.0",
     "terra-base": "^3.9.0",
     "terra-button": "^2.10.0",
     "terra-date-picker": "^2.11.0",
