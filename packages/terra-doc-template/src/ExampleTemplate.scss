@@ -2,13 +2,10 @@
   .template {
     border: 1px solid 	#e8e8e8;
     border-radius: 3px;
+    margin-bottom: 0.9375rem;
     overflow: hidden;
   }
-
-  .template + .template {
-    margin-top: 0.9375rem;
-  }
-
+  
   .header {
     border-bottom: 1px solid #e8e8e8;
     padding: 0.625rem;
