@@ -349,11 +349,11 @@ class DateTimePicker extends React.Component {
     }
   }
 
-  handleOffsetButtonClick(event) {
+  handleOffsetButtonClick() {
     this.setState({ isTimeClarificationOpen: !this.state.isTimeClarificationOpen });
   }
 
-  handleOnRequestClose(event) {
+  handleOnRequestClose() {
     this.setState({ isTimeClarificationOpen: false });
   }
 
