@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Use https to get the shield
 
 1.2.0 - (May 16, 2018)
 ------------------
