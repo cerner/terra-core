@@ -9,6 +9,7 @@
       background-color: var(--terra-tabs-structural-content-background-color, #fff);
       border-radius: var(--terra-tabs-structural-content-border-radius, 0);
       box-shadow: var(--terra-tabs-structural-content-box-shadow, 0);
+      //Used to make the content sit above the tab to block the box shadow that can be applied
       z-index: var(--terra-tabs-structural-content-z-index, 0);
     }
 
