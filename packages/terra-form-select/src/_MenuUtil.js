@@ -12,7 +12,7 @@ class MenuUtil {
     if (!string) {
       return false;
     }
-    return string.toLowerCase().indexOf(query.trim().toLowerCase()) > -1;
+    return string.toString().toLowerCase().indexOf(query.trim().toLowerCase()) > -1;
   }
 
   /**
@@ -22,10 +22,10 @@ class MenuUtil {
    * @return {boolean} - True if the values are equal.
    */
   static isEqual(a, b) {
-    if (!a || !b) {
+    if (a === undefined || b === undefined) {
       return false;
     }
-    return a.toLowerCase() === b.toLowerCase();
+    return a.toString().toLowerCase() === b.toString().toLowerCase();
   }
 
   /**
@@ -46,10 +46,8 @@ class MenuUtil {
   static isSelected(value, option) {
     if (Array.isArray(value)) {
       return MenuUtil.includes(value, option);
-    } else if (value) {
-      return value === option;
     }
-    return false;
+    return MenuUtil.isEqual(value, option);
   }
 
   /**
@@ -62,7 +60,8 @@ class MenuUtil {
     if (!array) {
       return false;
     }
-    return array.indexOf(query) > -1;
+
+    return array.find(option => MenuUtil.isEqual(option, query)) !== undefined;
   }
 
   /**
@@ -123,7 +122,7 @@ class MenuUtil {
    * @return {ReactNode|undefined} - The option. Returns undefined if not found.
    */
   static findByValue(object, value) {
-    return MenuUtil.flatten(object).find(({ props }) => props.value === value);
+    return MenuUtil.flatten(object).find(({ props }) => MenuUtil.isEqual(props.value, value));
   }
 
   /**
@@ -185,7 +184,7 @@ class MenuUtil {
    */
   static findNext(object, value) {
     const options = MenuUtil.flatten(object, true);
-    const index = options.findIndex(({ props }) => props.value === value);
+    const index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
     return index === -1 ? null : options[Math.min(index + 1, options.length - 1)].props.value;
   }
 
@@ -197,7 +196,7 @@ class MenuUtil {
    */
   static findPrevious(object, value) {
     const options = MenuUtil.flatten(object, true);
-    const index = options.findIndex(({ props }) => props.value === value);
+    const index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
     return index === -1 ? null : options[Math.max(index - 1, 0)].props.value;
   }
 
@@ -217,7 +216,7 @@ class MenuUtil {
       return null;
     } else if (state.searchValue === undefined) {
       const selected = options.find(option => (
-        Array.isArray(value) ? MenuUtil.includes(value, option.props.value) : value === option.props.value
+        Array.isArray(value) ? MenuUtil.includes(value, option.props.value) : MenuUtil.isEqual(value, option.props.value)
       ));
       return selected === undefined ? options[0].props.value : selected.props.value;
     } else if (searchValue !== state.searchValue) {

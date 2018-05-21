@@ -37,6 +37,10 @@ describe('MenuUtil', () => {
       expect(MenuUtil.isEqual('Mock', 'Mock')).toBeTruthy();
     });
 
+    it('should return true if a parameter is a number and is equal', () => {
+      expect(MenuUtil.isEqual(1, '1')).toBeTruthy();
+    });
+
     it('should return true if the parameters are equal with different case', () => {
       expect(MenuUtil.isEqual('Mock', 'mock')).toBeTruthy();
     });
@@ -95,16 +99,24 @@ describe('MenuUtil', () => {
     it('should return false if value is not included within the array', () => {
       expect(MenuUtil.isSelected(['One'], 'Two')).toBeFalsy();
     });
+
+    it('should return true for number comparisons', () => {
+      expect(MenuUtil.isSelected([1], '1')).toBeTruthy();
+    });
+
+    it('should return true for 0 comparisons', () => {
+      expect(MenuUtil.isSelected([0], '0')).toBeTruthy();
+    });
   });
 
   describe('shouldAllowFreeText', () => {
     it('should return true if free text is allowed for a tag variant', () => {
-      const props = { searchValue: 'Free Text', variant: Variants.TAG };
+      const props = { searchValue: 'Free Text', variant: Variants.TAG, value: [] };
       expect(MenuUtil.shouldAllowFreeText(props)).toBeTruthy();
     });
 
     it('should return true if free text is allowed for a combobox variant', () => {
-      const props = { searchValue: 'Free Text', variant: Variants.COMBOBOX };
+      const props = { searchValue: 'Free Text', variant: Variants.COMBOBOX, value: 'value' };
       expect(MenuUtil.shouldAllowFreeText(props)).toBeTruthy();
     });
 

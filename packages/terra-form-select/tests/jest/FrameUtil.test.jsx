@@ -195,7 +195,7 @@ describe('FrameUtil', () => {
     });
 
     it('should return false for a combobox variant if the search value is already defined in the value', () => {
-      const props = { variant: Variants.COMBOBOX, onSelect: 'Mock', value: ['Tag'] };
+      const props = { variant: Variants.COMBOBOX, onSelect: 'Mock', value: 'Tag' };
       const state = { hasSearchChanged: true, searchValue: 'Tag' };
       expect(FrameUtil.shouldAddOptionOnBlur(props, state)).toBeFalsy();
     });

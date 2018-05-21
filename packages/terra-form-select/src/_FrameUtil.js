@@ -95,14 +95,15 @@ class FrameUtil {
    * @return {boolean} - True if the option should be added.
    */
   static shouldAddOptionOnBlur(props, state) {
-    const { onSelect, variant } = props;
+    const { onSelect, value, variant } = props;
     const { hasSearchChanged, searchValue } = state;
 
     if ((variant === Variants.TAG || variant === Variants.COMBOBOX)
         && (variant !== Variants.TAG || searchValue.trim().length > 0)
         && hasSearchChanged
         && onSelect
-        && !FrameUtil.includes(props, searchValue)) {
+        && (variant !== Variants.TAG || !FrameUtil.includes(props, searchValue))
+        && (variant !== Variants.COMBOBOX || value !== searchValue)) {
       return true;
     }
     return false;
