@@ -502,15 +502,15 @@ import TextLineHeight from '../packages/terra-text/examples/test-examples/TextLi
 import TextVisualProps from '../packages/terra-text/examples/test-examples/TextVisualProps.example';
 import TextVisuallyHidden from '../packages/terra-text/examples/test-examples/TextVisuallyHidden.example';
 import TextWeight from '../packages/terra-text/examples/test-examples/TextWeight.example';
-import TimeInputDefault from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDefault';
-import TimeInputDefaultTime from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDefaultTime';
-import TimeInputDisabled from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDisabled';
-import TimeInputInvalidDate from '../packages/terra-time-input/tests/nightwatch/component/TimeInputInvalidDate';
-import TimeInputOnChange from '../packages/terra-time-input/tests/nightwatch/component/TimeInputOnChange';
-import TimeInputTwelveHour from '../packages/terra-time-input/tests/nightwatch/component/TimeInputTwelveHour';
-import TimeInputTwelveHourFilledEvening from '../packages/terra-time-input/tests/nightwatch/component/TimeInputTwelveHourFilledEvening';
-import TimeInputTwelveHourFilledMorning from '../packages/terra-time-input/tests/nightwatch/component/TimeInputTwelveHourFilledMorning';
-import TimeInputTwelveHourMobile from '../packages/terra-time-input/tests/nightwatch/component/TimeInputTwelveHourMobile';
+import Default from '../packages/terra-time-input/examples/test-examples/time-input/Default.example';
+import DefaultTime from '../packages/terra-time-input/examples/test-examples/time-input/DefaultTime.example';
+import Disabled from '../packages/terra-time-input/examples/test-examples/time-input/Disabled.example';
+import InvalidTime from '../packages/terra-time-input/examples/test-examples/time-input/InvalidTime.example';
+import OnChange from '../packages/terra-time-input/examples/test-examples/time-input/OnChange.example';
+import Default1 from '../packages/terra-time-input/examples/test-examples/twelve-hour/Default.example';
+import FilledEvening from '../packages/terra-time-input/examples/test-examples/twelve-hour/FilledEvening.example';
+import FilledMorning from '../packages/terra-time-input/examples/test-examples/twelve-hour/FilledMorning.example';
+import Mobile from '../packages/terra-time-input/examples/test-examples/twelve-hour/Mobile.example';
 import Animated from '../packages/terra-toggle-button/tests/nightwatch/Animated';
 import ClosedButtonText from '../packages/terra-toggle-button/tests/nightwatch/ClosedButtonText';
 import CustomIcon from '../packages/terra-toggle-button/tests/nightwatch/CustomIcon';
@@ -3917,53 +3917,59 @@ const componentConfig = {
     path: '/time-input',
     tests: [
       {
-        name: 'Component',
-        path: '/component',
+        name: 'Time Input',
+        path: '/time-input',
         tests: [
           {
-            name: 'Time Input Default',
-            path: '/time-input-default',
-            component: TimeInputDefault,
+            name: 'Default',
+            path: '/default',
+            component: Default,
           },
           {
-            name: 'Time Input Default Time',
-            path: '/time-input-default-time',
-            component: TimeInputDefaultTime,
+            name: 'Default Time',
+            path: '/default-time',
+            component: DefaultTime,
           },
           {
-            name: 'Time Input Disabled',
-            path: '/time-input-disabled',
-            component: TimeInputDisabled,
+            name: 'Disabled',
+            path: '/disabled',
+            component: Disabled,
           },
           {
-            name: 'Time Input Invalid Date',
-            path: '/time-input-invalid-date',
-            component: TimeInputInvalidDate,
+            name: 'Invalid Time',
+            path: '/invalid-time',
+            component: InvalidTime,
           },
           {
-            name: 'Time Input On Change',
-            path: '/time-input-on-change',
-            component: TimeInputOnChange,
+            name: 'On Change',
+            path: '/on-change',
+            component: OnChange,
+          },
+        ],
+      },
+      {
+        name: 'Twelve Hour',
+        path: '/twelve-hour',
+        tests: [
+          {
+            name: 'Default',
+            path: '/default',
+            component: Default1,
           },
           {
-            name: 'Time Input Twelve Hour',
-            path: '/time-input-twelve-hour',
-            component: TimeInputTwelveHour,
+            name: 'Filled Evening',
+            path: '/filled-evening',
+            component: FilledEvening,
           },
           {
-            name: 'Time Input Twelve Hour Filled Evening',
-            path: '/time-input-twelve-hour-filled-evening',
-            component: TimeInputTwelveHourFilledEvening,
+            name: 'Filled Morning',
+            path: '/filled-morning',
+            component: FilledMorning,
           },
           {
-            name: 'Time Input Twelve Hour Filled Morning',
-            path: '/time-input-twelve-hour-filled-morning',
-            component: TimeInputTwelveHourFilledMorning,
-          },
-          {
-            name: 'Time Input Twelve Hour Mobile',
-            path: '/time-input-twelve-hour-mobile',
-            component: TimeInputTwelveHourMobile,
+            name: 'Mobile',
+            path: '/mobile',
+            component: Mobile,
           },
         ],
       },
