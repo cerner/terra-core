@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ToggleButton from '../../lib/ToggleButton';
+import ToggleButton from '../../../ToggleButton';
 
 const ClosedButtonTextToggleButton = () => (
   <ToggleButton id="closedButtonText" closedButtonText="Custom Text">

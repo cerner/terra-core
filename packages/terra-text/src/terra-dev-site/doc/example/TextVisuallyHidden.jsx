@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from 'terra-text';
+import Text from '../../../Text';
 
 const TextVisuallyHidden = () => (
   <div>

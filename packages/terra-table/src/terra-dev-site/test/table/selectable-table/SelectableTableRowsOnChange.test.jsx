@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from '../../../../lib/Table';
+import Table from '../../../../Table';
 
 class SelectableTableRowsExample extends React.Component {
   constructor(props) {

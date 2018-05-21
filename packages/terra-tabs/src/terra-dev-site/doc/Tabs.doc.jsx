@@ -1,20 +1,20 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-tabs/docs/README.md';
-import { name } from 'terra-tabs/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import TabsSrc from '!raw-loader!terra-tabs/src/Tabs';
-import PaneSrc from '!raw-loader!terra-tabs/src/TabPane';
+import TabsSrc from '!raw-loader!../../../src/Tabs';
+import PaneSrc from '!raw-loader!../../../src/TabPane';
 
 // Example Files
-import TabsTemplate from './examples/TabsTemplate';
-import TabsTemplateSrc from '!raw-loader!./examples/TabsTemplate';
-import TabsWithFilledContent from './examples/TabsWithFilledContent';
-import TabsWithFilledContentSrc from '!raw-loader!./examples/TabsWithFilledContent';
-import IconOnlyTabs from './examples/IconOnlyTabs';
-import IconOnlyTabsSrc from '!raw-loader!./examples/IconOnlyTabs';
+import TabsTemplate from './example/TabsTemplate';
+import TabsTemplateSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TabsTemplate';
+import TabsWithFilledContent from './example/TabsWithFilledContent';
+import TabsWithFilledContentSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TabsWithFilledContent';
+import IconOnlyTabs from './example/IconOnlyTabs';
+import IconOnlyTabsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/IconOnlyTabs';
 
 const DocPage = () => (
   <DocTemplate

@@ -1,17 +1,17 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-toggle-section-header/docs/README.md';
-import { name } from 'terra-toggle-section-header/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import ToggleSectionHeaderSrc from '!raw-loader!terra-toggle-section-header/src/ToggleSectionHeader';
+import ToggleSectionHeaderSrc from '!raw-loader!../../../src/ToggleSectionHeader';
 
 // Example Files
-import DefaultToggleSectionHeader from './DefaultToggleSectionHeader';
-import DefaultToggleSectionHeaderSrc from '!raw-loader!./DefaultToggleSectionHeader';
-import AnimatedToggleSectionHeader from './AnimatedToggleSectionHeader';
-import AnimatedToggleSectionHeaderSrc from '!raw-loader!./AnimatedToggleSectionHeader';
+import DefaultToggleSectionHeader from './example/DefaultToggleSectionHeader';
+import DefaultToggleSectionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DefaultToggleSectionHeader';
+import AnimatedToggleSectionHeader from './example/AnimatedToggleSectionHeader';
+import AnimatedToggleSectionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AnimatedToggleSectionHeader';
 
 const DocPage = () => (
   <DocTemplate

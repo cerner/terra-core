@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 
-import Tag from '../../lib/Tag';
+import Tag from '../../../Tag';
 
 const spacingStyle = { padding: '10px' };
 const OnClickTag = () => (

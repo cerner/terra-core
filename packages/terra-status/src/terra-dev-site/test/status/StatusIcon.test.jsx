@@ -1,6 +1,6 @@
 import React from 'react';
 import IconDue from 'terra-icon/lib/icon/IconDue';
-import Status from '../../lib/Status';
+import Status from '../../../Status';
 
 const icon = <IconDue height="60" width="60" />;
 

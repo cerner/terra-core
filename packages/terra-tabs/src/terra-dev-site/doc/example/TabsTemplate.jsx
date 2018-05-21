@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
-import Tabs from 'terra-tabs';
+import Tabs from '../../../Tabs';
 import TabContentTemplate from './TabContentTemplate';
 
 const propTypes = {

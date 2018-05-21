@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Base from 'terra-base';
-import Tabs from '../../../lib/Tabs';
+import Tabs from '../../../../Tabs';
 import TabContent from './TabContentTemplate';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');

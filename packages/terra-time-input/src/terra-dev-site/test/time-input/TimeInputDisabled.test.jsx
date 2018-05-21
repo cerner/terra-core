@@ -1,6 +1,6 @@
 import React from 'react';
 import Base from 'terra-base';
-import TimeInput from '../../../src/TimeInput';
+import TimeInput from '../../../TimeInput';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 

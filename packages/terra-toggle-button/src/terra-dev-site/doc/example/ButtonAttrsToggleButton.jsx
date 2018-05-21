@@ -1,6 +1,6 @@
 import React from 'react';
-import ToggleButton from 'terra-toggle-button/lib/ToggleButton';
 import Button from 'terra-button';
+import ToggleButton from '../../../ToggleButton';
 
 const ButtonAttrsToggleButton = () => (
   <ToggleButton

@@ -1,5 +1,5 @@
 import React from 'react';
-import TabPane from '../../../lib/TabPane';
+import TabPane from '../../../../TabPane';
 
 const LongTextTabPane = () => (
   <div role="tablist" style={{ display: 'flex' }}>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ToggleButton from '../../lib/ToggleButton';
+import ToggleButton from '../../../ToggleButton';
 
 const ButtonAttrsToggleButton = () => (
   <ToggleButton id="emphasisButton" closedButtonText="ToggleButton" buttonAttrs={{ variant: 'emphasis' }}>

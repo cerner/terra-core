@@ -1,5 +1,5 @@
 import React from 'react';
-import Toggle from '../../src/Toggle';
+import Toggle from '../../../Toggle';
 
 class AnimatedToggle extends React.Component {
   constructor() {

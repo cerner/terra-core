@@ -1,19 +1,19 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-tag/docs/README.md';
-import { name } from 'terra-tag/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import TagSrc from '!raw-loader!terra-tag/src/Tag';
+import TagSrc from '!raw-loader!../../../src/Tag';
 
 // Example Files
-import TagDefault from './TagDefault';
-import TagDefaultSrc from '!raw-loader!./TagDefault';
-import TagHref from './HrefTag';
-import TagHrefSrc from '!raw-loader!./HrefTag';
-import TagFallbacks from './TagFallbacks';
-import TagFallbacksSrc from '!raw-loader!./TagFallbacks';
+import TagDefault from './example/TagDefault';
+import TagDefaultSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TagDefault';
+import TagHref from './example/HrefTag';
+import TagHrefSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HrefTag';
+import TagFallbacks from './example/TagFallbacks';
+import TagFallbacksSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TagFallbacks';
 
 const DocPage = () => (
   <DocTemplate

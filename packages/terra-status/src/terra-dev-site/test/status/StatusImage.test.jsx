@@ -1,5 +1,5 @@
 import React from 'react';
-import Status from '../../lib/Status';
+import Status from '../../../Status';
 
 const image = <img style={{ display: 'block' }} height="150" width="300" src="http://placehold.it/350x150" alt="placeholder" />;
 

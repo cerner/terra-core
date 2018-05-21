@@ -1,7 +1,7 @@
 import React from 'react';
 import IconTag from 'terra-icon/lib/icon/IconTag';
-import Tag from 'terra-tag';
 import Alert from 'terra-alert';
+import Tag from '../../../Tag';
 
 const alertTitle = 'Not Reccomended Usage.';
 const alertText = 'These styles are provided for when this compoment is missing recomended elements for best practice use.';

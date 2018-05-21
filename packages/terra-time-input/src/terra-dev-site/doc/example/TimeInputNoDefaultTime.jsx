@@ -1,6 +1,5 @@
 import React from 'react';
-import TimeInput from 'terra-time-input';
-import styles from '../../site.scss';
+import TimeInput from '../../../TimeInput';
 
 class timeInput extends React.Component {
   constructor(props) {
@@ -16,7 +15,7 @@ class timeInput extends React.Component {
   render() {
     return (
       <div>
-        <p>Time Provided: <span className={styles['site-input-display']}>{this.state.time}</span></p>
+        <p>Time Provided: <span style={{ display: 'inline-block' }}>{this.state.time}</span></p>
         <TimeInput
           name="time-input-default"
           onChange={this.handleTimeChange}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Table from 'terra-table';
+import Table from '../../../Table';
 
 const TableExample = () => (
   <Table isStriped={false}>

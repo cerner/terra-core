@@ -1,18 +1,17 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-toggle/docs/README.md';
-import { name } from 'terra-toggle/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import ToggleSrc from '!raw-loader!terra-toggle/src/Toggle';
+import ToggleSrc from '!raw-loader!../../../src/Toggle';
 
 // Example Files
-import DefaultToggle from './DefaultToggle';
-import DefaultToggleSrc from '!raw-loader!./DefaultToggle';
-import AnimatedToggle from './AnimatedToggle';
-import AnimatedToggleSrc from '!raw-loader!./AnimatedToggle';
+import DefaultToggle from './example/DefaultToggle';
+import DefaultToggleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DefaultToggle';
+import AnimatedToggle from './example/AnimatedToggle';
+import AnimatedToggleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AnimatedToggle';
 
 const DocPage = () => (
   <DocTemplate

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StatusView from 'terra-status-view';
-import _ from 'lodash';
+import uniqueid from 'lodash.uniqueid';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import StatusView from 'terra-status-view/lib/StatusView';
 
 const propTypes = {
   children: PropTypes.node,
@@ -19,14 +20,14 @@ class StatusViewTemplate extends React.Component {
     super(props);
     this.state = {
       id: undefined,
-      variant: StatusView.Opts.variants.NODATA,
+      variant: 'no-data',
     };
 
     this.handleSelectChange = this.handleSelectChange.bind(this);
   }
 
   componentWillMount() {
-    this.state.id = _.uniqueId();
+    this.state.id = uniqueid();
   }
 
   getId(name) {
@@ -42,11 +43,11 @@ class StatusViewTemplate extends React.Component {
       <form>
         <label htmlFor={this.getId('variant')}>Variant: </label>
         <select id={this.getId('variant')} name="variant" value={this.state.variant} onChange={this.handleSelectChange}>
-          <option value={StatusView.Opts.variants.NODATA}>{StatusView.Opts.variants.NODATA}</option>
-          <option value={StatusView.Opts.variants.NOMATCHINGRESULTS}>{StatusView.Opts.variants.NOMATCHINGRESULTS}</option>
-          <option value={StatusView.Opts.variants.NOTAUTHORIZED}>{StatusView.Opts.variants.NOTAUTHORIZED}</option>
-          <option value={StatusView.Opts.variants.ERROR}>{StatusView.Opts.variants.ERROR}</option>
-          <option value={StatusView.Opts.variants.CUSTOM}>{StatusView.Opts.variants.CUSTOM}</option>
+          <option value="no-data"> no-data </option>
+          <option value="no-matching-results"> no-matching-results </option>
+          <option value="not-authorized"> not-authorized </option>
+          <option value="error"> error </option>
+          <option value="custom"> custom </option>
         </select>
       </form>
     );

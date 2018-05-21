@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ToggleSectionHeader from '../../lib/ToggleSectionHeader';
+import ToggleSectionHeader from '../../../ToggleSectionHeader';
 
 export default () => (
   <ToggleSectionHeader isInitiallyOpen title="Open Toggle Section Header">

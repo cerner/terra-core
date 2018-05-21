@@ -1,6 +1,6 @@
 import React from 'react';
 import IconTag from 'terra-icon/lib/icon/IconTag';
-import Tag from 'terra-tag';
+import Tag from '../../../Tag';
 
 const TagDefault = () => (
   <div>

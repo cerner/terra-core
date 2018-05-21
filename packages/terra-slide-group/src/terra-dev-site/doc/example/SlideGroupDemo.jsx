@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import SlideGroup from 'terra-slide-group';
+import SlideGroup from 'terra-slide-group/lib/SlideGroup';
 
 const containerStyles = {
   height: '250px',

@@ -1,31 +1,31 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable  import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import Markdown from 'terra-markdown';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-text/docs/README.md';
-import TextFontSizeDocs from 'terra-text/docs/text-font-sizes.md';
-import TextColorDocs from 'terra-text/docs/text-colors.md';
-import TextWeightDocs from 'terra-text/docs/text-weights.md';
-import TextVariationsDocs from 'terra-text/docs/text-variations.md';
-import TextVisuallyHiddenDocs from 'terra-text/docs/text-visually-hidden.md';
-import { name } from 'terra-text/package.json';
+import ReadMe from '../../../docs/README.md';
+import TextFontSizeDocs from '../../../docs/text-font-sizes.md';
+import TextColorDocs from '../../../docs/text-colors.md';
+import TextWeightDocs from '../../../docs/text-weights.md';
+import TextVariationsDocs from '../../../docs/text-variations.md';
+import TextVisuallyHiddenDocs from '../../../docs/text-visually-hidden.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import TextSrc from '!raw-loader!terra-text/src/Text';
+import TextSrc from '!raw-loader!../../../src/Text';
 
 // Example Files
-import TextColors from './TextColors';
-import TextColorsSrc from '!raw-loader!./TextColors';
-import TextDisplays from './TextDisplays';
-import TextDisplaysSrc from '!raw-loader!./TextDisplays';
-import TextFontSizes from './TextFontSizes';
-import TextFontSizesSrc from '!raw-loader!./TextFontSizes';
-import TextVariations from './TextVariations';
-import TextVariationsSrc from '!raw-loader!./TextVariations';
-import TextVisuallyHidden from './TextVisuallyHidden';
-import TextVisuallyHiddenSrc from '!raw-loader!./TextVisuallyHidden';
-import TextWeights from './TextWeights';
-import TextWeightsSrc from '!raw-loader!./TextWeights';
+import TextColors from './example/TextColors';
+import TextColorsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TextColors';
+import TextDisplays from './example/TextDisplays';
+import TextDisplaysSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TextDisplays';
+import TextFontSizes from './example/TextFontSizes';
+import TextFontSizesSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TextFontSizes';
+import TextVariations from './example/TextVariations';
+import TextVariationsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TextVariations';
+import TextVisuallyHidden from './example/TextVisuallyHidden';
+import TextVisuallyHiddenSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TextVisuallyHidden';
+import TextWeights from './example/TextWeights';
+import TextWeightsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TextWeights';
 
 const DocPage = () => (
   <DocTemplate

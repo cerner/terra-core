@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ToggleButton from '../../lib/ToggleButton';
+import ToggleButton from '../../../ToggleButton';
 
 const AnimatedToggleButton = () => (
   <ToggleButton id="animatedToggle" closedButtonText="Custom Text" isAnimated>

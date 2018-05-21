@@ -1,19 +1,19 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-table/docs/MultiSelectableRows.md';
-import { name } from 'terra-table/package.json';
+import ReadMe from '../../../docs/MultiSelectableRows.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import MultiSelectSrc from '!raw-loader!terra-table/src/MultiSelectableRows';
+import MultiSelectSrc from '!raw-loader!../../../src/MultiSelectableRows';
 
 // Example Files
-import MultipleRowSelectableTableExamples from '../examples/MultiSelectableRows';
-import MultipleRowSelectableTableExamplesSrc from '!raw-loader!../examples/MultiSelectableRows';
-import MultipleRowMaxSelectableExample from '../examples/MultiSelectableRowsMaxSelectable';
-import MultipleRowMaxSelectableExampleSrc from '!raw-loader!../examples/MultiSelectableRowsMaxSelectable';
-import MultipleSelectableRowsWithSubheader from '../examples/MultiSelectableRowsWithSubheader';
-import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../examples/MultiSelectableRowsWithSubheader';
+import MultipleRowSelectableTableExamples from './example/MultiSelectableRows';
+import MultipleRowSelectableTableExamplesSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MultiSelectableRows';
+import MultipleRowMaxSelectableExample from './example/MultiSelectableRowsMaxSelectable';
+import MultipleRowMaxSelectableExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MultiSelectableRowsMaxSelectable';
+import MultipleSelectableRowsWithSubheader from './example/MultiSelectableRowsWithSubheader';
+import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MultiSelectableRowsWithSubheader';
 
 const DocPage = () => (
   <DocTemplate

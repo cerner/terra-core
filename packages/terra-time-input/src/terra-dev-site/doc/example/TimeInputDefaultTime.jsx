@@ -1,12 +1,10 @@
 import React from 'react';
-import moment from 'moment';
-import TimeInput from 'terra-time-input';
-import styles from '../../site.scss';
+import TimeInput from '../../../TimeInput';
 
 class timeInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { time: moment().format('HH:mm') };
+    this.state = { time: '12:12' };
     this.handleTimeChange = this.handleTimeChange.bind(this);
   }
 
@@ -17,7 +15,7 @@ class timeInput extends React.Component {
   render() {
     return (
       <div>
-        <p>Time Provided: <span className={styles['site-input-display']}>{this.state.time}</span></p>
+        <p>Time Provided: <span style={{ display: 'inline-block' }}>{this.state.time}</span></p>
         <TimeInput
           name="time-input-value"
           value={this.state.time}

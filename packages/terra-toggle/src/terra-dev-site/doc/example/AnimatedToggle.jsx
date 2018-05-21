@@ -1,6 +1,6 @@
 import React from 'react';
-import Toggle from 'terra-toggle/lib/Toggle';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
+import Toggle from '../../../Toggle';
 
 class ToggleDefault extends React.Component {
   constructor() {

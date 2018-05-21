@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import Table from '../../../../lib/Table';
+import Table from '../../../../Table';
 
 const TableWithSubheaders = () => (
   <Table isStriped>

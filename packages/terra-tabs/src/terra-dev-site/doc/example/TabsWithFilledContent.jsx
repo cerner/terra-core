@@ -1,5 +1,5 @@
 import React from 'react';
-import Tabs from 'terra-tabs';
+import Tabs from '../../../Tabs';
 import TabContent from './TabContentTemplate';
 
 const TabsWithFilledContent = () => {

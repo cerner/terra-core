@@ -1,5 +1,5 @@
 import React from 'react';
 
-import Text from '../../lib/Text';
+import Text from '../../../Text';
 
 export default () => <Text id="text">Default</Text>;

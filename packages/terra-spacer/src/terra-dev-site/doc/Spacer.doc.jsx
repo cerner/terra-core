@@ -1,15 +1,15 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-spacer/docs/README.md';
-import { name } from 'terra-spacer/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import SpacerSrc from '!raw-loader!terra-spacer/src/Spacer';
+import SpacerSrc from '!raw-loader!../../../src/Spacer';
 
 // Example Files
-import Spacer from './SpacerExample';
-import SpacerExampleSrc from '!raw-loader!./SpacerExample';
+import Spacer from './example/SpacerExample';
+import SpacerExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/SpacerExample';
 
 const DocPage = () => (
   <DocTemplate

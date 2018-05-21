@@ -1,15 +1,15 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-slide-group/docs/README.md';
-import { name } from 'terra-slide-group/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import SlideGroupSrc from '!raw-loader!terra-slide-group/src/SlideGroup.jsx';
+import SlideGroupSrc from '!raw-loader!../../../src/SlideGroup.jsx';
 
 // Example Files
-import SlideGroupDemo from './SlideGroupDemo';
-import SlideGroupDemoSrc from '!raw-loader!./SlideGroupDemo';
+import SlideGroupDemo from './example/SlideGroupDemo';
+import SlideGroupDemoSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/SlideGroupDemo';
 
 const DocPage = () => (
   <DocTemplate

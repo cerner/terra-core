@@ -1,21 +1,21 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-time-input/docs/README.md';
-import { name } from 'terra-time-input/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import TimeInputSrc from '!raw-loader!terra-time-input/src/TimeInput';
+import TimeInputSrc from '!raw-loader!../../../src/TimeInput';
 
 // Example Files
-import TimeInputDefaultTime from './TimeInputDefaultTime';
-import TimeInputDefaultTimeSrc from '!raw-loader!./TimeInputDefaultTime';
-import TimeInputDefaultTwelveHour from './TimeInputDefaultTwelveHour';
-import TimeInputDefaultTwelveHourSrc from '!raw-loader!./TimeInputDefaultTwelveHour';
-import TimeInputNoDefaultTime from './TimeInputNoDefaultTime';
-import TimeInputNoDefaultTimeSrc from '!raw-loader!./TimeInputNoDefaultTime';
-import TimeInputNoDefaultTwelveHour from './TimeInputNoDefaultTwelveHour';
-import TimeInputNoDefaultTwelveHourSrc from '!raw-loader!./TimeInputNoDefaultTwelveHour';
+import TimeInputDefaultTime from './example/TimeInputDefaultTime';
+import TimeInputDefaultTimeSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TimeInputDefaultTime';
+import TimeInputDefaultTwelveHour from './example/TimeInputDefaultTwelveHour';
+import TimeInputDefaultTwelveHourSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TimeInputDefaultTwelveHour';
+import TimeInputNoDefaultTime from './example/TimeInputNoDefaultTime';
+import TimeInputNoDefaultTimeSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TimeInputNoDefaultTime';
+import TimeInputNoDefaultTwelveHour from './example/TimeInputNoDefaultTwelveHour';
+import TimeInputNoDefaultTwelveHourSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TimeInputNoDefaultTwelveHour';
 
 const DocPage = () => (
   <DocTemplate

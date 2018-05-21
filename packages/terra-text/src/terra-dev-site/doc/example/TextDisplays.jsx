@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from 'terra-heading';
-import Text from 'terra-text';
 import Arrange from 'terra-arrange';
+import Text from '../../../Text';
 
 const TextDisplays = () => (
   <div>

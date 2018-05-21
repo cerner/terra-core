@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from '../../lib/Text';
+import Text from '../../../Text';
 
 const TextLineHeight = () => (
   <div>

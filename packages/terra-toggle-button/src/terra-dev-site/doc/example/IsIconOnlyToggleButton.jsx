@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleButton from 'terra-toggle-button/lib/ToggleButton';
+import ToggleButton from '../../../ToggleButton';
 
 const IconOnly = () => (
   <ToggleButton isIconOnly closedButtonText="Icon Only ToggleButton">

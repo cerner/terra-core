@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ToggleSectionHeader from 'terra-toggle-section-header';
+import ToggleSectionHeader from '../../../ToggleSectionHeader';
 
 const propTypes = {
   /**

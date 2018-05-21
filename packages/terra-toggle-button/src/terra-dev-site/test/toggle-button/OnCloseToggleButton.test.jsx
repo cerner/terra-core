@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleButton from '../../lib/ToggleButton';
+import ToggleButton from '../../../ToggleButton';
 
 class OnCloseToggleButton extends React.Component {
   constructor(props) {

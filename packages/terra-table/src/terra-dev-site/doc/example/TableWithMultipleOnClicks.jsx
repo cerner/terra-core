@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from 'terra-table';
+import Table from '../../../Table';
 
 class TableWithMultipleOnClicks extends React.Component {
   constructor() {

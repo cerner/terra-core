@@ -1,5 +1,5 @@
 import React from 'react';
-import Toggle from '../../lib/Toggle';
+import Toggle from '../../../Toggle';
 
 class ToggleDefault extends React.Component {
   constructor() {

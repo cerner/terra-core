@@ -1,17 +1,16 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import StatusView from 'terra-status-view';
 import Button from 'terra-button';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
-import ReadMe from 'terra-status-view/docs/README.md';
-import { name } from 'terra-status-view/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import StatusViewSrc from '!raw-loader!terra-status-view/src/StatusView';
+import StatusViewSrc from '!raw-loader!../../../src/StatusView';
 
 // Example Files
-import StatusViewTemplate from './StatusViewTemplate';
+import StatusViewTemplate from './example/StatusViewTemplate';
 
 const DocPage = () => (
   <DocTemplate
@@ -28,7 +27,7 @@ const DocPage = () => (
         example: (
           <StatusViewTemplate
             style={{ width: '500px' }}
-            variant={StatusView.Opts.variants.NODATA}
+            variant="no-data"
             title="500"
             message="An exception was thrown"
             customGlyph={<IconDiamond />}
@@ -43,7 +42,7 @@ const DocPage = () => (
         example: (
           <StatusViewTemplate
             style={{ width: '500px' }}
-            variant={StatusView.Opts.variants.ERROR}
+            variant="error"
             title="A 500 error was thrown from the service.  Retry again later when new service is deployed at a later date in the future."
             message="A null pointer exception was thrown from the input parameters.  The params of min and max-value were not present.  They need to be present for verification purposes for keeping the database clean and consistent"
             customGlyph={<IconDiamond />}
@@ -58,7 +57,7 @@ const DocPage = () => (
         example: (
           <StatusViewTemplate
             style={{ width: '500px' }}
-            variant={StatusView.Opts.variants.ERROR}
+            variant="error"
             message="An exception was thrown"
             isGlyphHidden
             title="500"
@@ -73,7 +72,7 @@ const DocPage = () => (
         example: (
           <StatusViewTemplate
             style={{ height: '500px', width: '500px' }}
-            variant={StatusView.Opts.variants.ERROR}
+            variant="error"
             message="An exception was thrown"
             customGlyph={<IconDiamond />}
             title="500"
@@ -89,7 +88,7 @@ const DocPage = () => (
           <StatusViewTemplate
             style={{ height: '500px', width: '500px' }}
             isAlignedTop
-            variant={StatusView.Opts.variants.ERROR}
+            variant="error"
             message="An exception was thrown"
             customGlyph={<IconDiamond />}
             title="500"
@@ -104,7 +103,7 @@ const DocPage = () => (
         example: (
           <StatusViewTemplate
             style={{ height: '220px', width: '500px', overflow: 'auto' }}
-            variant={StatusView.Opts.variants.ERROR}
+            variant="error"
             message="An exception was thrown"
             customGlyph={<IconDiamond />}
             title="500"

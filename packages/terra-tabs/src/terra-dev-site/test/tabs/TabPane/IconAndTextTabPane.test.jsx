@@ -1,6 +1,6 @@
 import React from 'react';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
-import TabPane from '../../../lib/TabPane';
+import TabPane from '../../../../TabPane';
 
 const IconAndTextTabPane = () => (
   <div role="tablist" style={{ display: 'flex' }}>
