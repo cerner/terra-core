@@ -20,14 +20,7 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "devDependencies": {
-    "react-intl": "^2.3.0",
-    "react-redux": "^5.0.4",
-    "redux": "^3.6.0",
-    "terra-app-delegate": "^1.9.0",
-    "terra-date-picker": "^2.11.0",
-    "terra-modal-manager": "^3.0.0"
-  },
+
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -46,6 +39,7 @@
     "terra-base": "^3.9.0",
     "terra-button": "^2.10.0",
     "terra-date-picker": "^2.11.0",
+    "terra-doc-template": "^1.2.0",
     "terra-modal": "^2.5.0",
     "terra-modal-manager": "^3.0.0",
     "terra-time-input": "^2.10.0"

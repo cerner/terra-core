@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Spacer from '../../lib/Spacer';
+import Spacer from '../../../Spacer';
 
 export default () => (
   <div>

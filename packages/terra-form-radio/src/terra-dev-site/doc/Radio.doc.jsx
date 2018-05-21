@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-form-radio/docs/README.md';
-import { name } from 'terra-form-radio/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import RadioSrc from '!raw-loader!terra-form-radio/src/Radio';
+import RadioSrc from '!raw-loader!../../../src/Radio';
 
 // Example Files
 import DefaultRadio from './example/radio/DefaultRadioExample';

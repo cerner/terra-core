@@ -1,10 +1,10 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
-import ReadMe from 'terra-form-radio/docs/RadioField.md';
+import ReadMe from '../../../docs/RadioField.md';
 import DocTemplate from 'terra-doc-template';
 
 // Component Source
-import RadioFieldSrc from '!raw-loader!terra-form-radio/src/RadioField';
+import RadioFieldSrc from '!raw-loader!../../../src/RadioField';
 
 // Examples
 import DefaultRadioField from './example/field/DefaultRadioField';

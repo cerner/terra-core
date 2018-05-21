@@ -1,21 +1,21 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-action-footer/docs/README.md';
-import { name } from 'terra-action-footer/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import ActionFooterSrc from '!raw-loader!terra-action-footer/src/ActionFooter';
+import ActionFooterSrc from '!raw-loader!../../../src/ActionFooter';
 
 // Example Files
-import EmptyExample from './examples/action-footer/Empty';
-import EmptyExampleSrc from '!raw-loader!./examples/action-footer/Empty';
-import SingleStartActionExample from './examples/action-footer/SingleStartAction';
-import SingleStartActionExampleSrc from '!raw-loader!./examples/action-footer/SingleStartAction';
-import SingleEndActionExample from './examples/action-footer/SingleEndAction';
-import SingleEndActionExampleSrc from '!raw-loader!./examples/action-footer/SingleEndAction';
-import MultipleStartEndActionsExample from './examples/action-footer/MultipleStartEndActions';
-import MultipleStartEndActionsExampleSrc from '!raw-loader!./examples/action-footer/MultipleStartEndActions';
+import EmptyExample from './example/standard/Empty';
+import EmptyExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/standard/Empty';
+import SingleStartActionExample from './example/standard/SingleStartAction';
+import SingleStartActionExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/standard/SingleStartAction';
+import SingleEndActionExample from './example/standard/SingleEndAction';
+import SingleEndActionExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/standard/SingleEndAction';
+import MultipleStartEndActionsExample from './example/standard/MultipleStartEndActions';
+import MultipleStartEndActionsExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/standard/MultipleStartEndActions';
 
 const DocPage = () => (
   <DocTemplate

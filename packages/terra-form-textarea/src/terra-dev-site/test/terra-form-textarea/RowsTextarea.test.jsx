@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Textarea from '../../lib/Textarea';
+import Textarea from '../../../Textarea';
 
 const textarea = () => <Textarea rows={15} size="small" />;
 

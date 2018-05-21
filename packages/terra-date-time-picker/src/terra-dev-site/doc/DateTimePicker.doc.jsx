@@ -1,22 +1,22 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-date-time-picker/docs/README.md';
-import { name } from 'terra-date-time-picker/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import DateTimePickerSrc from '!raw-loader!terra-date-time-picker/src/DateTimePicker';
+import DateTimePickerSrc from '!raw-loader!../../../src/DateTimePicker';
 
 // Example Files
-import DateTimePickerDefault from './DateTimePickerDefault';
-import DateTimePickerDefaultDateTime from './DateTimePickerDefaultDateTime';
-import DateTimePickerDefaultDateOnly from './DateTimePickerDefaultDateOnly';
-import DateTimePickerExcludeDates from './DateTimePickerExcludeDates';
-import DateTimePickerIncludeDates from './DateTimePickerIncludeDates';
-import DateTimePickerFilterDates from './DateTimePickerFilterDates';
-import DateTimePickerMinMax from './DateTimePickerMinMax';
-import DateTimePickerDST from './DateTimePickerDST';
-import DateTimePickerInsideModal from './DateTimePickerInsideModal';
+import DateTimePickerDefault from './example/DateTimePickerDefault';
+import DateTimePickerDefaultDateTime from './example/DateTimePickerDefaultDateTime';
+import DateTimePickerDefaultDateOnly from './example/DateTimePickerDefaultDateOnly';
+import DateTimePickerExcludeDates from './example/DateTimePickerExcludeDates';
+import DateTimePickerIncludeDates from './example/DateTimePickerIncludeDates';
+import DateTimePickerFilterDates from './example/DateTimePickerFilterDates';
+import DateTimePickerMinMax from './example/DateTimePickerMinMax';
+import DateTimePickerDST from './example/DateTimePickerDST';
+import DateTimePickerInsideModal from './example/DateTimePickerInsideModal';
 
 const DocPage = () => (
   <DocTemplate

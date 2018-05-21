@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Textarea from '../../lib/Textarea';
+import Textarea from '../../../Textarea';
 
 export default class textarea extends React.Component {
   componentWillMount() {
-    if (!navigator.msMaxTouchPoints || navigator.msMaxTouchPoints === 0) {
-      this.resetMsMaxTouchPoints = true;
-      this.previousMsMaxTouchPoints = navigator.msMaxTouchPoints;
+    if (!navigator.maxTouchPoints || navigator.maxTouchPoints === 0) {
+      this.resetMaxTouchPoints = true;
+      this.previousMaxTouchPoints = navigator.maxTouchPoints;
 
-      Object.defineProperty(navigator, 'msMaxTouchPoints',
+      Object.defineProperty(navigator, 'maxTouchPoints',
         {
           value: 1,
           configurable: true,
@@ -18,10 +18,10 @@ export default class textarea extends React.Component {
   }
 
   componentWillUnmount() {
-    if (this.resetMsMaxTouchPoints) {
-      Object.defineProperty(navigator, 'msMaxTouchPoints',
+    if (this.resetMaxTouchPoints) {
+      Object.defineProperty(navigator, 'maxTouchPoints',
         {
-          value: this.previousMsMaxTouchPoints,
+          value: this.previousMaxTouchPoints,
           configurable: true,
         },
       );

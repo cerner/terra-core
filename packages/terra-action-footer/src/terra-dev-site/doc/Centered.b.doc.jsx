@@ -1,19 +1,19 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-action-footer/docs/CenteredActionFooter.md';
-import { name } from 'terra-action-footer/package.json';
+import ReadMe from '../../../docs/CenteredActionFooter.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import CenteredActionFooterSrc from '!raw-loader!terra-action-footer/src/CenteredActionFooter';
+import CenteredActionFooterSrc from '!raw-loader!../../../src/CenteredActionFooter';
 
 // Example Files
-import EmptyExample from './examples/centered-action-footer/Empty';
-import EmptyExampleSrc from '!raw-loader!./example/centered/Empty';
+import EmptyExample from './example/centered/Empty';
+import EmptyExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/centered/Empty';
 import SingleActionExample from './example/centered/SingleAction';
-import SingleActionExampleSrc from '!raw-loader!./example/centered/SingleAction';
+import SingleActionExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/centered/SingleAction';
 import MultipleActionsExample from './example/centered/MultipleActions';
-import MultipleActionsExampleSrc from '!raw-loader!./example/centered/MultipleActions';
+import MultipleActionsExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/centered/MultipleActions';
 
 const DocPage = () => (
   <DocTemplate

@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-date-picker/docs/README.md';
-import { name } from 'terra-date-picker/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import DatePickerSrc from '!raw-loader!terra-date-picker/src/DatePicker';
+import DatePickerSrc from '!raw-loader!../../../src/DatePicker';
 
 // Example Files
 import DatePickerDefault from './example/DatePickerDefault';

@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-form-input/docs/README.md';
-import { name } from 'terra-form-input/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import FormInputSrc from '!raw-loader!terra-form-input/src/Input';
+import FormInputSrc from '!raw-loader!../../../src/Input';
 
 // Example Files
 import BlankExample from './common/BlankExample';
@@ -21,13 +21,13 @@ import ControlledDefaultInvalidExampleSrc from '!raw-loader!../../../src/terra-d
 import ControlledDisabledInvalidExample from './example/controlled/DisabledInvalidExample';
 import ControlledDisabledInvalidExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/controlled/DisabledInvalidExample';
 import UncontrolledDefaultExample from './example/uncontrolled/DefaultExample';
-import UncontrolledDefaultExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/example/uncontrolled/DefaultExample';
+import UncontrolledDefaultExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/uncontrolled/DefaultExample';
 import UncontrolledDisabledExample from './example/uncontrolled/DisabledExample';
-import UncontrolledDisabledExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/example/uncontrolled/DisabledExample';
+import UncontrolledDisabledExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/uncontrolled/DisabledExample';
 import UncontrolledDefaultInvalidExample from './example/uncontrolled/DefaultInvalidExample';
-import UncontrolledDefaultInvalidExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/example/uncontrolled/DefaultInvalidExample';
+import UncontrolledDefaultInvalidExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/uncontrolled/DefaultInvalidExample';
 import UncontrolledDisabledInvalidExample from './example/uncontrolled/DisabledInvalidExample';
-import UncontrolledDisabledInvalidExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/example/uncontrolled/DisabledInvalidExample';
+import UncontrolledDisabledInvalidExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/uncontrolled/DisabledInvalidExample';
 
 const DocPage = () => (
   <DocTemplate

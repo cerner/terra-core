@@ -1,19 +1,18 @@
 import React from 'react';
 
-import Textarea from '../../lib/Textarea';
+import Textarea from '../../../Textarea';
 
 export default class textarea extends React.Component {
   componentWillMount() {
-    if (!window.DocumentTouch) {
-      this.resetDocumentTouch = true;
-      window.DocumentTouch = () => {};
-      window.DocumentTouch.prototype = Document.prototype;
+    if (!window.ontouchstart) {
+      this.resetontouchstart = true;
+      window.ontouchstart = 'true';
     }
   }
 
   componentWillUnmount() {
-    if (this.resetDocumentTouch) {
-      delete window.DocumentTouch;
+    if (this.resetontouchstart) {
+      delete window.ontouchstart;
     }
   }
 

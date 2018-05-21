@@ -34,7 +34,7 @@ import TableWithSortingIndicatorSrc from '!raw-loader!../../../src/terra-dev-sit
 import TableWithLongContent from './example/TableWithLongContent';
 import TableWithLongContentSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithLongContent';
 import TableWithCustomCells from './example/TableWithCustomCells';
-import TableWithCustomCellsSrc from '!raw-loader!../../../src/terra-dev-site/doc/examples/TableWithCustomCells';
+import TableWithCustomCellsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithCustomCells';
 import TableWithSubheaders from './example/TableWithSubheaders';
 import TableWithSubheadersSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithSubheaders';
 
