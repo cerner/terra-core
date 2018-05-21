@@ -8,11 +8,10 @@ describe('Checkbox', () => {
     '--terra-form-checkbox-container-margin-bottom': '0.625rem',
     '--terra-form-checkbox-container-margin-right': '1.071rem',
     '--terra-form-checkbox-container-margin-top': '0',
-    '--terra-form-checkbox-container-margin-left': '1.071rem',
     '--terra-form-checkbox-font-size': '1.286rem',
     '--terra-form-checkbox-line-height': '1.4',
     '--terra-form-checkbox-padding-left': '1.2rem',
-    '--terra-form-checkbox-native-input-clip': 'rect(0,0,0,0)',
+    '--terra-form-checkbox-native-input-clip': 'rect(0 0 0 0)',
     '--terra-form-checkbox-native-input-cursor': 'default',
     '--terra-form-checkbox-native-input-font-size': '0',
     '--terra-form-checkbox-native-input-height': '1px',
@@ -20,7 +19,7 @@ describe('Checkbox', () => {
     '--terra-form-checkbox-native-input-margin-right': '-1px',
     '--terra-form-checkbox-native-input-overflow': 'hidden',
     '--terra-form-checkbox-native-input-padding': '0',
-    '--terra-form-checkbox-native-input-width': '1.4px',
+    '--terra-form-checkbox-native-input-width': '1px',
     '--terra-form-checkbox-label-text-margin-left': '0.643rem',
     '--terra-form-checkbox-background-color': '#fff',
     '--terra-form-checkbox-background-image': 'none',
@@ -29,9 +28,6 @@ describe('Checkbox', () => {
     '--terra-form-checkbox-height': '1.286rem',
     '--terra-form-checkbox-margin-top': '0.2857rem',
     '--terra-form-checkbox-width': '1.286rem',
-    '--terra-form-checkbox-symbol': 'x',
-    '--terra-form-checkbox-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
-    '--terra-form-checkbox-disabled-font-opacity': '0.5',
   };
 
   const hoverThemingProperties = {
@@ -64,13 +60,14 @@ describe('Checkbox', () => {
     '--terra-form-checkbox-checked-transform': 'scale(1)',
     '--terra-form-checkbox-checked-transition': 'all 0.2s ease all',
     '--terra-form-checkbox-checked-width': '1.286rem',
+    '--terra-form-checkbox-symbol': 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2016%2016%22%20enable-background%3D%22new%200%200%2016%2016%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20fill%3D%22%23ffffff%22%20points%3D%225.6%2C9.6%202.4%2C6.4%200%2C8.8%205.6%2C14.4%2016%2C4%2013.6%2C1.6%20%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E")',
   };
 
   const disabledThemingProperties = {
+    '--terra-form-checkbox-disabled-font-color': '#9fa1a3',
     '--terra-form-checkbox-disabled-background-color': '#e7e8e8',
     '--terra-form-checkbox-disabled-background-image': 'none',
     '--terra-form-checkbox-disabled-border-color': '#cfd0d1',
-    '--terra-form-checkbox-disabled-font-color': '#9fa1a3',
   };
 
   const disabledHoverThemingProperties = {
@@ -146,10 +143,10 @@ describe('Checkbox', () => {
       properties: { ...themingProperties, ...disabledThemingProperties },
     });
 
-    describe('Hover', () => {
+    describe('Disabled Hover', () => {
       beforeEach(() => {
-        browser.waitForVisible('#default');
-        browser.moveToObject('#default');
+        browser.waitForVisible('#disabled');
+        browser.moveToObject('#disabled');
       });
 
       Terra.should.beAccessible();
