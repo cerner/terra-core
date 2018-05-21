@@ -24,7 +24,7 @@ const propTypes = {
   /**
    * The value of the option.
    */
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 const defaultProps = {

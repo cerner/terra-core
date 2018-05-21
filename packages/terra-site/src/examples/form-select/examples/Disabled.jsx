@@ -1,8 +1,8 @@
 import React from 'react';
 import Select from 'terra-form-select';
 
-const SearchExample = () => (
-  <Select placeholder="Select a color" variant="search" style={{ width: '300px' }}>
+const DisabledExample = () => (
+  <Select placeholder="Select a color" disabled style={{ width: '300px' }} defaultValue="blue">
     <Select.Option value="blue" display="Blue" />
     <Select.Option value="green" display="Green" />
     <Select.Option value="purple" display="Purple" />
@@ -11,4 +11,4 @@ const SearchExample = () => (
   </Select>
 );
 
-export default SearchExample;
+export default DisabledExample;

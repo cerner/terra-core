@@ -5,19 +5,23 @@ import DocTemplate from 'terra-doc-template';
 import OptionSrc from '!raw-loader!terra-form-select/src/_Option';
 import OptGroupSrc from '!raw-loader!terra-form-select/src/_OptGroup';
 import SelectSrc from '!raw-loader!terra-form-select/src/Select';
-import ControlledExample from './examples/ControlledWrapper';
+import ControlledExample from './examples/Controlled';
 import ControlledExampleSrc from '!raw-loader!./examples/Controlled';
-import ComboboxExample from './examples/ComboboxWrapper';
+import ComboboxExample from './examples/Combobox';
 import ComboboxExampleSrc from '!raw-loader!./examples/Combobox';
-import DefaultExample from './examples/DefaultWrapper';
+import DefaultExample from './examples/Default';
 import DefaultExampleSrc from '!raw-loader!./examples/Default';
-import MultipleExample from './examples/MultipleWrapper';
+import DisabledExample from './examples/Disabled';
+import DisabledExampleSrc from '!raw-loader!./examples/Disabled';
+import InvalidExample from './examples/Invalid';
+import InvalidExampleSrc from '!raw-loader!./examples/Invalid';
+import MultipleExample from './examples/Multiple';
 import MultipleExampleSrc from '!raw-loader!./examples/Multiple';
-import OptGroupExample from './examples/OptGroupWrapper';
+import OptGroupExample from './examples/OptGroup';
 import OptGroupExampleSrc from '!raw-loader!./examples/OptGroup';
-import SearchExample from './examples/SearchWrapper';
+import SearchExample from './examples/Search';
 import SearchExampleSrc from '!raw-loader!./examples/Search';
-import TagExample from './examples/TagWrapper';
+import TagExample from './examples/Tag';
 import TagExampleSrc from '!raw-loader!./examples/Tag';
 
 const Index = () => (
@@ -46,6 +50,11 @@ const Index = () => (
       example: <SearchExample />,
       source: SearchExampleSrc,
     }, {
+      title: 'Combobox',
+      description: 'A combobox variant allows a user to enter a single free text entry or select from the the dropdown.',
+      example: <ComboboxExample />,
+      source: ComboboxExampleSrc,
+    }, {
       title: 'Multiple',
       description: 'A multiple variant allows searching and selecting multiple options.',
       example: <MultipleExample />,
@@ -56,10 +65,13 @@ const Index = () => (
       example: <TagExample />,
       source: TagExampleSrc,
     }, {
-      title: 'Combobox',
-      description: 'A combobox variant allows a user to enter a single free text entry or select from the the dropdown.',
-      example: <ComboboxExample />,
-      source: ComboboxExampleSrc,
+      title: 'Disabled',
+      example: <DisabledExample />,
+      source: DisabledExampleSrc,
+    }, {
+      title: 'Invalid',
+      example: <InvalidExample />,
+      source: InvalidExampleSrc,
     }, {
       title: 'OptGroup',
       description: 'An OptGroup provides a way to group options together.',

@@ -1,8 +1,8 @@
 import React from 'react';
 import Select from 'terra-form-select';
 
-const DefaultExample = () => (
-  <Select placeholder="Select a color" dropdownAttrs={{ style: { maxHeight: '300px' } }}>
+const OptGroupExample = () => (
+  <Select placeholder="Select a color" dropdownAttrs={{ style: { maxHeight: '300px' } }} style={{ width: '300px' }}>
     <Select.OptGroup label="Shade of blue">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="cyan" display="Cyan" />
@@ -24,4 +24,4 @@ const DefaultExample = () => (
   </Select>
 );
 
-export default DefaultExample;
+export default OptGroupExample;

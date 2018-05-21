@@ -259,6 +259,7 @@ import ControlledMultiple from '../packages/terra-form-select/examples/test-exam
 import ControlledSearch from '../packages/terra-form-select/examples/test-examples/ControlledSearch.example';
 import ControlledTag from '../packages/terra-form-select/examples/test-examples/ControlledTag.example';
 import Disabled from '../packages/terra-form-select/examples/test-examples/Disabled.example';
+import ManyOptions from '../packages/terra-form-select/examples/test-examples/ManyOptions.example';
 import OptGroup from '../packages/terra-form-select/examples/test-examples/OptGroup.example';
 import UncontrolledCombobox from '../packages/terra-form-select/examples/test-examples/UncontrolledCombobox.example';
 import UncontrolledDefault from '../packages/terra-form-select/examples/test-examples/UncontrolledDefault.example';
@@ -1627,6 +1628,11 @@ const componentConfig = {
         name: 'Disabled',
         path: '/disabled',
         component: Disabled,
+      },
+      {
+        name: 'Many Options',
+        path: '/many-options',
+        component: ManyOptions,
       },
       {
         name: 'Opt Group',
