@@ -18,10 +18,10 @@ class SmallContainerExample extends React.Component {
   }
 
   render() {
-    const alertStartTagStr = '<Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" size="medium" variant="emphasis" onClick={this.actionFunc} />} >';
+    const alertStartTagStr = '<Alert type="warning" action={<Button text="Action" size="medium" variant="emphasis" onClick={this.actionFunc} />} >';
     const alertEndTagStr = '</Alert>';
     const alertText = 'This is a warning. It is configured with a custom Action button.';
-    const alert2StartTagStr = '<Alert type={Alert.Opts.Types.INFO} >';
+    const alert2StartTagStr = '<Alert type="info" >';
     const alert2EndTagStr = '</Alert>';
     const alert2Text = 'This is an information alert';
     return (
@@ -39,7 +39,7 @@ class SmallContainerExample extends React.Component {
           </code>
         </div>
         <br />
-        <Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >
+        <Alert type="warning" action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >
           {alertText}
         </Alert>
         <br />
@@ -53,7 +53,7 @@ class SmallContainerExample extends React.Component {
           </code>
         </div>
         <br />
-        <Alert type={Alert.Opts.Types.INFO} >{alert2Text}</Alert>
+        <Alert type="info" >{alert2Text}</Alert>
       </div>
     );
   }

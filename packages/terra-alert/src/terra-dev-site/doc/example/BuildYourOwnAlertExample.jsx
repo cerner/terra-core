@@ -53,7 +53,7 @@ class BuildYourOwnAlertExample extends React.Component {
     } else {
       this.setState({ type: undefined });
     }
-    if (e.target.value !== Alert.Opts.Types.CUSTOM) {
+    if (e.target.value !== 'custom') {
       this.setState({ customIcon: '', customStatusColor: '' });
     }
   }
@@ -138,13 +138,13 @@ class BuildYourOwnAlertExample extends React.Component {
         </Toggle>
       </span>
     );
-    const alertTypePropStr = this.state.type ? `type={Alert.Opts.Types.${this.state.type.toUpperCase()}}` : '';
+    const alertTypePropStr = this.state.type ? `type="${this.state.type}"` : '';
     const alertTitlePropStr = this.state.title ? `title="${this.state.title}"` : '';
     const alertOnDismissPropStr = this.state.isDismissible ? 'onDismiss={this.handleDismiss}' : '';
     const onDismissHandler = this.state.isDismissible ? this.handleDismiss : undefined;
     const actionButton = this.state.showActionButton ? (<Button text="Action" variant="emphasis" onClick={this.actionFunc} />) : undefined;
     const alertActionPropStr = this.state.showActionButton ? 'action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />}' : '';
-    const customPropsDisplayStyle = { display: this.state.type === Alert.Opts.Types.CUSTOM ? 'table-row' : 'none' };
+    const customPropsDisplayStyle = { display: this.state.type === 'custom' ? 'table-row' : 'none' };
     const customStatusColorPropStr = this.state.customStatusColor ? `customStatusColor="${this.state.customStatusColor}"` : '';
     const actionCounterText = this.state.showActionButton ? `Action button has been clicked ${this.state.actionButtonClickCount} times.` : '';
     let alertElem = '';
@@ -224,13 +224,13 @@ class BuildYourOwnAlertExample extends React.Component {
                   <td>
                     <select id="typeSelector" name="type" value={this.state.type} onChange={this.handleTypeSelectChange}>
                       <option value="">default</option>
-                      <option value={Alert.Opts.Types.ALERT}>Alert.Opts.Types.ALERT</option>
-                      <option value={Alert.Opts.Types.ERROR}>Alert.Opts.Types.ERROR</option>
-                      <option value={Alert.Opts.Types.WARNING}>Alert.Opts.Types.WARNING</option>
-                      <option value={Alert.Opts.Types.ADVISORY}>Alert.Opts.Types.ADVISORY</option>
-                      <option value={Alert.Opts.Types.INFO}>Alert.Opts.Types.INFO</option>
-                      <option value={Alert.Opts.Types.SUCCESS}>Alert.Opts.Types.SUCCESS</option>
-                      <option value={Alert.Opts.Types.CUSTOM}>Alert.Opts.Types.CUSTOM</option>
+                      <option value="alert"> alert </option>
+                      <option value="error"> error </option>
+                      <option value="warning"> warning </option>
+                      <option value="advisory"> advisory </option>
+                      <option value="info"> info </option>
+                      <option value="success"> success </option>
+                      <option value="custom"> custom </option>
                     </select>
                   </td>
                 </tr>

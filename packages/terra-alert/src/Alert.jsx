@@ -49,9 +49,8 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
-   * The type of alert to be rendered. One of Alert.Opts.Types.ALERT, Alert.Opts.Types.ERROR, Alert.Opts.Types.WARNING, Alert.Opts.Types.ADVISORY,
-   * Alert.Opts.Types.INFO, Alert.Opts.Types.SUCCESS, Alert.Opts.Types.CUSTOM.
-   * Use the Alert.Opts.Types attribute of the Alert component for access to these type strings.
+   * The type of alert to be rendered. One of `alert`, `error`, `warning`, `advisory`,
+   * `info`, `success`, `custom`.
    */
   type: PropTypes.oneOf([
     AlertTypes.ALERT,

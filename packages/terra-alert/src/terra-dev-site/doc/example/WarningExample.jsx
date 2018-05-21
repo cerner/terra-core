@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from '../../../Alert';
 
-const alertStartTagStr = '<Alert type={Alert.Opts.Types.WARNING} >';
+const alertStartTagStr = '<Alert type="warning" >';
 const alertEndTagStr = '</Alert>';
 const alertText = 'This is a warning';
 
@@ -15,7 +15,7 @@ const WarningExample = () => (
       </code>
     </div>
     <br />
-    <Alert type={Alert.Opts.Types.WARNING} >{alertText}</Alert>
+    <Alert type="warning" >{alertText}</Alert>
   </div>
 );
 

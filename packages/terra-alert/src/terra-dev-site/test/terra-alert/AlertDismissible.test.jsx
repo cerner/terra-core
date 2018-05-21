@@ -22,7 +22,7 @@ class AlertDismissible extends React.Component {
   render() {
     let alertElem = <div id="dismissed">Alert was dismissed</div>;
     if (!this.state.isDismissed) {
-      alertElem = (<Alert id="dismissibleAlert" type={Alert.Opts.Types.SUCCESS} onDismiss={this.handleDismiss} >
+      alertElem = (<Alert id="dismissibleAlert" type="success" onDismiss={this.handleDismiss} >
         This is a dismissable Alert;
       </Alert>);
     }

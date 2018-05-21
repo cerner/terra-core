@@ -24,7 +24,7 @@ class LongTextExample extends React.Component {
   }
 
   render() {
-    const alertStartTagStr = '<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address:" >';
+    const alertStartTagStr = '<Alert type="info" title="Gettysburg Address:" >';
     const alertContentStr = '<span>Four score and seven years ago our fathers brought forth on this continent, a new nation, . . .</span>';
     const alertEndTagStr = '</Alert>';
     return (
@@ -41,7 +41,7 @@ class LongTextExample extends React.Component {
           </code>
         </div>
         <br />
-        <Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address:" >
+        <Alert type="info" title="Gettysburg Address:" >
           <span>
             Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
             <Toggle isOpen={!this.state.allTextShown}>

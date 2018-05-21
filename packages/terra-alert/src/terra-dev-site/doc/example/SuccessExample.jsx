@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from '../../../Alert';
 
-const alertStartTagStr = '<Alert type={Alert.Opts.Types.SUCCESS} >';
+const alertStartTagStr = '<Alert type="success" >';
 const alertEndTagStr = '</Alert>';
 const alertText = 'This is a success alert';
 
@@ -15,7 +15,7 @@ const SuccessExample = () => (
       </code>
     </div>
     <br />
-    <Alert type={Alert.Opts.Types.SUCCESS} >{alertText}</Alert>
+    <Alert type="success" >{alertText}</Alert>
   </div>
 );
 
