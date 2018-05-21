@@ -95,6 +95,15 @@
           transition-timing-function: var(--terra-tabs-structural-transition-timing, ease);
           width: 100%;
         }
+
+        // Same as the selectors below, but due to the specificity, you can override the variables
+        // scoped specifically to the active tab
+        &:hover {
+          background-color: var(--terra-tabs-structural-active-hover-background-color, #fff);
+          background-image: var(--terra-tabs-structural-active-hover-background-image, linear-gradient(to bottom, #c8cacb, #c8cacb));
+          background-size: var(--terra-tabs-structural-active-hover-background-size, 100% 2px);
+          color: var(--terra-tabs-structural-active-hover-color, #000);
+        }
       }
 
       &.is-disabled,

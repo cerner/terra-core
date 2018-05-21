@@ -56,6 +56,28 @@ describe('Tabs - Responsive', () => {
 
       Terra.should.beAccessible({ rules: ignoredA11y });
       Terra.should.matchScreenshot('1');
+
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed_clicked',
+        properties: {
+          '--terra-tabs-collapsed-tab-menu-active-background-size': '100%',
+        },
+      });
+
+      it('should have style applied when hovered', () => {
+        browser.moveToObject('[data-terra-tabs-menu]');
+      });
+
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed_hover',
+        properties: {
+          '--terra-tabs-collapsed-tab-menu-hover-background-size': '100%',
+          '--terra-tabs-structural-active-hover-background-color': 'orange',
+          '--terra-tabs-structural-active-hover-background-image': 'linear-gradient(to bottom, red, #black)',
+          '--terra-tabs-structural-active-hover-background-size': '50%',
+          '--terra-tabs-structural-active-hover-color': 'purple',
+        },
+      });
     });
   });
 
@@ -87,6 +109,11 @@ describe('Tabs - Responsive', () => {
           '--terra-tabs-structural-last-tab-border-width': '1px',
           '--terra-tabs-structural-tab-bar-border-color': 'purple',
           '--terra-tabs-structural-tab-bar-border-width': '10px',
+          '--terra-tabs-structural-content-box-shadow': 'inset 5px 5px 5px red',
+          '--terra-tabs-structural-content-z-index': '100',
+          '--terra-tabs-structural-position': 'absolute',
+          '--terra-tabs-structural-tab-before-content-background': 'red',
+          '--terra-tabs-structural-tab-before-content-height': '100px',
         },
       });
 
@@ -125,6 +152,7 @@ describe('Tabs - Responsive', () => {
             '--terra-tabs-structural-active-focus-background-color': 'purple',
             '--terra-tabs-structural-active-focus-color': 'purple',
             '--terra-tabs-keyboard-focus-ltr-box-shadow': 'none',
+            '--terra-tabs-structural-active-box-shadow': 'inset 5px 5px 5px red',
           },
         });
       });
