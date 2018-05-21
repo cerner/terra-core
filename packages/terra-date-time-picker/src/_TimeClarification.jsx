@@ -34,11 +34,11 @@ const propTypes = {
    */
   onRequestClose: PropTypes.func.isRequired,
   /**
-   * A callback function to let the containing component (e.g. modal) to regain focus.
+   * Callback function to let the containing component (e.g. modal) to regain focus.
    */
   releaseFocus: PropTypes.func,
   /**
-   * A callback function to request focus from the containing component (e.g. modal).
+   * Callback function to request focus from the containing component (e.g. modal).
    */
   requestFocus: PropTypes.func,
 };
