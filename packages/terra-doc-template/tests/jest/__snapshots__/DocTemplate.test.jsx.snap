@@ -15,14 +15,14 @@ exports[`DocTemplate should show multiple examples 1`] = `
   >
     Examples
   </h1>
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="0"
     title="Test Example 1"
   />
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test mk. 2"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
@@ -58,7 +58,7 @@ exports[`DocTemplate should show one example 1`] = `
   >
     Examples
   </h1>
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
@@ -148,14 +148,14 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
   >
     Examples
   </h1>
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="0"
     title="Test Example 1"
   />
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test mk. 2"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
