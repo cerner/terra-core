@@ -1,5 +1,4 @@
 import React from 'react';
-import Base from 'terra-base';
 import Select from '../../lib/Select';
 
 class ControlledMultiple extends React.Component {
@@ -16,21 +15,19 @@ class ControlledMultiple extends React.Component {
 
   render() {
     return (
-      <Base locale="en-US">
-        <Select
-          id="multiple"
-          onChange={this.handleChange}
-          placeholder="Select a color"
-          value={this.state.value}
-          variant="multiple"
-        >
-          <Select.Option value="blue" display="Blue" />
-          <Select.Option value="green" display="Green" />
-          <Select.Option value="purple" display="Purple" />
-          <Select.Option value="red" display="Red" />
-          <Select.Option value="violet" display="Violet" />
-        </Select>
-      </Base>
+      <Select
+        id="multiple"
+        onChange={this.handleChange}
+        placeholder="Select a color"
+        value={this.state.value}
+        variant="multiple"
+      >
+        <Select.Option value="blue" display="Blue" />
+        <Select.Option value="green" display="Green" />
+        <Select.Option value="purple" display="Purple" />
+        <Select.Option value="red" display="Red" />
+        <Select.Option value="violet" display="Violet" />
+      </Select>
     );
   }
 }
