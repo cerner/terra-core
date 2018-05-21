@@ -315,11 +315,11 @@ import HeadingVisualProps from '../packages/terra-heading/examples/test-examples
 import HeadingVisuallyHidden from '../packages/terra-heading/examples/test-examples/HeadingVisuallyHidden.example';
 import HeadingWeight from '../packages/terra-heading/examples/test-examples/HeadingWeight.example';
 import DefaultI18N from '../packages/terra-i18n/examples/test-examples/DefaultI18n.example';
-import IconAppendClass from '../packages/terra-icon/tests/nightwatch/components/IconAppendClass';
-import IconAria from '../packages/terra-icon/tests/nightwatch/components/IconAria';
-import IconBidi from '../packages/terra-icon/tests/nightwatch/components/IconBidi';
-import IconDefault from '../packages/terra-icon/tests/nightwatch/components/IconDefault';
-import IconHeightWidth from '../packages/terra-icon/tests/nightwatch/components/IconHeightWidth';
+import IconAppendClass from '../packages/terra-icon/examples/test-examples/IconAppendClass.example';
+import IconAria from '../packages/terra-icon/examples/test-examples/IconAria.example';
+import IconBidi from '../packages/terra-icon/examples/test-examples/IconBidi.example';
+import IconDefault from '../packages/terra-icon/examples/test-examples/IconDefault.example';
+import IconHeightWidth from '../packages/terra-icon/examples/test-examples/IconHeightWidth.example';
 import ImageDefault from '../packages/terra-image/examples/test-examples/ImageDefault.example';
 import ImageFluid from '../packages/terra-image/examples/test-examples/ImageFluid.example';
 import ImageLoading from '../packages/terra-image/examples/test-examples/ImageLoading.example';

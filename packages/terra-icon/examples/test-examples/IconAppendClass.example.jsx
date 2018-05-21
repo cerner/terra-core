@@ -1,5 +1,5 @@
 import React from 'react';
-import IconAllergy from '../../../lib/icon/IconAllergy';
+import IconAllergy from '../../lib/icon/IconAllergy';
 
 const IconAppendClass = () => (
   <div>
