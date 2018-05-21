@@ -31,8 +31,7 @@
     "react-syntax-highlighter": "^7.0.2",
     "terra-base": "^3.9.0",
     "terra-markdown": "^2.6.0",
-    "terra-props-table": "^2.7.0",
-    "terra-toggle-button": "^2.10.0"
+    "terra-props-table": "^2.7.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
