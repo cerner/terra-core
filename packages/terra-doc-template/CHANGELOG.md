@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Use https to get the shield
+
+1.2.0 - (May 16, 2018)
+------------------
 ### Changed
 * Add 15px padding to template
 * Limit syntax hilighting support to jsx only to limit package size.

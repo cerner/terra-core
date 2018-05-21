@@ -1,7 +1,7 @@
 {
   "name": "terra-base",
   "main": "lib/Base.js",
-  "version": "3.8.0",
+  "version": "3.9.0",
   "description": "The base component sets minimal global styles for an application.",
   "repository": {
     "type": "git",
@@ -38,6 +38,6 @@
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }

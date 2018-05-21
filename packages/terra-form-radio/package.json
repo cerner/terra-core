@@ -1,7 +1,7 @@
 {
   "name": "terra-form-radio",
   "main": "lib/Radio.js",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Use the `name` attribute to group radio buttons together. Tabbing switches focus between radio button groups; arrow keys switch between radio buttons of the same group. The checked state can be activated with a space.",
   "repository": {
     "type": "git",
@@ -28,7 +28,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.8.0"
+    "terra-base": "^3.9.0",
+    "terra-mixins": "^1.16.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -40,6 +41,6 @@
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
-    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "terra-form-fieldset",
   "main": "lib/Fieldset.js",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.8.0"
+    "terra-base": "^3.9.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -42,6 +42,6 @@
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }

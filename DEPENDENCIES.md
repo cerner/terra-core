@@ -41,5 +41,5 @@
 | stylelint-scss | ^3.0.0 | -- | A collection of SCSS specific rules for stylelint |
 | stylelint-suitcss | ^3.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
 | terra-dev-site | 0.6.0 | ^16.2.0 | Dynamically builds a react-hash-routed site based on site configuration, navigation configuration and component configuration. |
-| terra-toolkit | ^3.0.0 | -- | Utilities to help when developing terra modules. |
+| terra-toolkit | ^3.3.1 | -- | Utilities to help when developing terra modules. |
 | webpack-merge | ^4.1.2 | -- | Variant of merge that's useful for webpack configuration |

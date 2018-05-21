@@ -1,7 +1,7 @@
 {
   "name": "terra-status",
   "main": "lib/Status.js",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "description": "The status component provides a customizable color indictor to signify a specific condition.",
   "repository": {
     "type": "git",
@@ -29,10 +29,10 @@
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
-    "terra-arrange": "^2.9.0"
+    "terra-arrange": "^2.10.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
@@ -42,7 +42,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.8.0",
-    "terra-icon": "^2.8.0"
+    "terra-base": "^3.9.0",
+    "terra-icon": "^2.9.0"
   }
 }
