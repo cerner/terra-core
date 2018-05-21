@@ -238,8 +238,9 @@ class MenuUtil {
     const { searchValue, value, variant } = props;
 
     if (variant === Variants.TAG || variant === Variants.COMBOBOX) {
-      const option = MenuUtil.findByDisplay(children, searchValue) || MenuUtil.includes(value, searchValue);
-      return !option && (searchValue || '').trim().length > 0;
+      const option = MenuUtil.findByDisplay(children, searchValue);
+      const included = Array.isArray(value) ? MenuUtil.includes(value, searchValue) : MenuUtil.isEqual(value, searchValue);
+      return !option && !included && (searchValue || '').trim().length > 0;
     }
     return false;
   }
