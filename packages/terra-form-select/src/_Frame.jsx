@@ -174,6 +174,7 @@ class Frame extends React.Component {
       isOpen: false,
       hasSearchChanged: false,
       searchValue: '',
+      width: 0,
     });
 
     // Tags and Comboboxes will select the current search value when the component loses focus.
@@ -194,7 +195,7 @@ class Frame extends React.Component {
       this.input.focus();
     }
 
-    this.setState({ isOpen: true, isFocused: true });
+    this.setState({ isOpen: true, isFocused: true, width: 0 });
   }
 
   /**

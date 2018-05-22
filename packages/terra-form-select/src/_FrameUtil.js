@@ -9,7 +9,7 @@ class FrameUtil {
    */
   static dropdownStyle(props, state) {
     const { maxHeight, width } = state;
-    return Object.assign({}, Object.assign({}, props).style, { maxHeight, width });
+    return Object.assign({}, Object.assign({}, props).style, { maxHeight, width, ...(width === 0) && { visibility: 'hidden' } });
   }
 
   /**
