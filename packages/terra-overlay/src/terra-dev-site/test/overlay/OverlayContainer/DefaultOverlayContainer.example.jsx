@@ -1,6 +1,6 @@
 import React from 'react';
 
-import OverlayContainer from '../../../lib/OverlayContainer';
+import OverlayContainer from '../../../../OverlayContainer';
 
 const ContainerExample = () => (
   <OverlayContainer id="terra-OverlayContainer">

@@ -1,5 +1,5 @@
 import React from 'react';
-import Overlay from '../../../lib/Overlay';
+import Overlay from '../../../../Overlay';
 
 const OverlayExample = () => (
   <Overlay isOpen isScrollable id="scrollable-overlay" >

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Overlay from '../../../lib/Overlay';
-import OverlayContainer from '../../../lib/OverlayContainer';
+import Overlay from '../../../../Overlay';
+import OverlayContainer from '../../../../OverlayContainer';
 
 class OverlayExample extends React.Component {
   constructor() {

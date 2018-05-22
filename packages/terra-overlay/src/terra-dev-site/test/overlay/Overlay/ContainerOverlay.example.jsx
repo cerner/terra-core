@@ -1,6 +1,6 @@
 import React from 'react';
-import OverlayContainer from '../../../lib/OverlayContainer';
-import Overlay from '../../../lib/Overlay';
+import OverlayContainer from '../../../../OverlayContainer';
+import Overlay from '../../../../Overlay';
 
 const OverlayExample = () => (
   <OverlayContainer style={{ height: '100px', width: '100%' }} id="overlay-container" >
