@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressivePaginator from '../../lib/ProgressivePaginator';
+import ProgressivePaginator from '../../../ProgressivePaginator';
 
 const ProgressivePaginatorExample = () => (
   // eslint-disable-next-line no-console

@@ -1,5 +1,5 @@
 import React from 'react';
-import Paginator from '../../lib/Paginator';
+import Paginator from '../../../Paginator';
 
 const PaginatorExample = () => (
   // eslint-disable-next-line no-console
