@@ -33,6 +33,7 @@
     "react-dom": "^16.2.0",
     "terra-arrange": "^2.10.0",
     "terra-base": "^3.9.0",
+    "terra-doc-template": "^1.2.0",
     "terra-mixins": "^1.16.0"
   },
   "scripts": {

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Button from 'terra-button';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
