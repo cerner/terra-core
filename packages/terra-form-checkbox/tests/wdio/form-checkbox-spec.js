@@ -43,8 +43,8 @@ describe('Checkbox', () => {
   const focusRingThemingProperties = {
     '--terra-form-checkbox-focus-ring-background-color': 'orange',
     '--terra-form-checkbox-focus-ring-height': '10px',
-    '--terra-form-checkbox-focus-ring-left': '2px',
-    '--terra-form-checkbox-focus-ring-top': '2px',
+    '--terra-form-checkbox-focus-ring-left': '16.3px',
+    '--terra-form-checkbox-focus-ring-top': '9.2px',
     '--terra-form-checkbox-focus-ring-width': '10px',
   };
 
@@ -128,7 +128,7 @@ describe('Checkbox', () => {
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'custom - Focus Ring',
-        properties: { ...themingProperties, focusRingThemingProperties },
+        properties: { ...themingProperties, ...focusRingThemingProperties },
       });
     });
   });
