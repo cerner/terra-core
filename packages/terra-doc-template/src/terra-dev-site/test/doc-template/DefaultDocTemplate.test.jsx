@@ -4,9 +4,9 @@ import DocTemplate from '../../../DocTemplate';
 import readme from './common/TestReadme.md';
 import TestComponentExample from './common/TestComponentExample';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import exampleSrc from '!raw-loader!../../../src/terra-dev-site/test/common/TestComponentExample';
+import exampleSrc from '!raw-loader!../../../../src/terra-dev-site/test/doc-template/common/TestComponentExample';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import testComponentSrc from '!raw-loader!../../../src/terra-dev-site/test/common/TestComponent';
+import testComponentSrc from '!raw-loader!../../../../src/terra-dev-site/test/doc-template/common/TestComponent';
 
 const Index = () => {
   const propsTables = [

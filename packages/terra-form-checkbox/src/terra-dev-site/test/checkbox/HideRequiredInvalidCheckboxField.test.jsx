@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Checkbox from '../../Checkbox';
-import CheckboxField from '../../CheckboxField';
+import Checkbox from '../../../Checkbox';
+import CheckboxField from '../../../CheckboxField';
 
 export default class extends React.Component {
   constructor(props) {

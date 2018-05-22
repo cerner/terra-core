@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Checkbox from '../../Checkbox';
-import CheckboxField from '../../CheckboxField';
+import Checkbox from '../../../Checkbox';
+import CheckboxField from '../../../CheckboxField';
 
 const checkboxField = () => (
   <CheckboxField legend="Desired Department" showOptional>
