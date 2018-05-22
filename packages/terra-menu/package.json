@@ -29,6 +29,7 @@
     "prop-types": "^15.5.8",
     "terra-arrange": "^2.10.0",
     "terra-base": "^3.9.0",
+    "terra-button": "^2.10.0",
     "terra-content-container": "^2.9.0",
     "terra-icon": "^2.9.0",
     "terra-list": "^2.10.0",
