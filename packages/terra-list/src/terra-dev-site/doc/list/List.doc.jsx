@@ -9,8 +9,8 @@ import ListItemSrc from '!raw-loader!terra-list/src/ListItem.jsx';
 import ListSrc from '!raw-loader!terra-list/src/List.jsx';
 
 // Example File
-import ListExample from './example/List';
-import ListExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/List';
+import ListExample from '../example/List';
+import ListExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/List';
 
 const DocPage = () => (
   <DocTemplate

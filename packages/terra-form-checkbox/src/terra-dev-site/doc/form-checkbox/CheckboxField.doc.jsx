@@ -7,14 +7,14 @@ import ReadMe from 'terra-form-checkbox/docs/CheckboxField.md';
 import CheckboxFieldSrc from '!raw-loader!terra-form-checkbox/src/CheckboxField';
 
 // Examples
-import DefaultCheckboxField from './example/field/DefaultCheckboxField';
-import DefaultCheckboxFieldSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/field/DefaultCheckboxField';
+import DefaultCheckboxField from '../example/field/DefaultCheckboxField';
+import DefaultCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/DefaultCheckboxField';
 
-import ControlledCheckboxField from './example/field/ControlledCheckboxField';
-import ControlledCheckboxFieldSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/field/ControlledCheckboxField';
+import ControlledCheckboxField from '../example/field/ControlledCheckboxField';
+import ControlledCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/ControlledCheckboxField';
 
-import OptionalCheckboxField from './example/field/OptionalCheckboxField';
-import OptionalCheckboxFieldSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/field/OptionalCheckboxField';
+import OptionalCheckboxField from '../example/field/OptionalCheckboxField';
+import OptionalCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/OptionalCheckboxField';
 
 const checkboxFieldExamples = () => (
   <DocTemplate

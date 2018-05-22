@@ -8,19 +8,19 @@ import { name } from 'terra-form-checkbox/package.json';
 import CheckboxSrc from '!raw-loader!terra-form-checkbox/src/Checkbox';
 
 // Example Files
-import DefaultCheckbox from './example/checkbox/DefaultCheckboxExample';
-import DefaultCheckboxSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/checkbox/DefaultCheckboxExample';
-import DisabledCheckbox from './example/checkbox/DisabledCheckboxExample';
-import DisabledCheckboxSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/checkbox/DisabledCheckboxExample';
-import HiddenLabelCheckbox from './example/checkbox/HiddenLabelCheckboxExample';
-import HiddenLabelCheckboxSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/checkbox/HiddenLabelCheckboxExample';
-import LongTextCheckbox from './example/checkbox/LongTextCheckboxExample';
-import LongTextCheckboxSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/checkbox/LongTextCheckboxExample';
-import InlineCheckboxes from './example/checkbox/InlineCheckboxesExample';
-import InlineCheckboxesSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/checkbox/InlineCheckboxesExample';
-import MultipleCheckboxes from './example/checkbox/MultipleCheckboxesExample';
-import MultipleCheckboxesSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/checkbox/MultipleCheckboxesExample';
-import MobileCheckbox from './example/checkbox/MobileCheckboxExample';
+import DefaultCheckbox from '../example/checkbox/DefaultCheckboxExample';
+import DefaultCheckboxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/checkbox/DefaultCheckboxExample';
+import DisabledCheckbox from '../example/checkbox/DisabledCheckboxExample';
+import DisabledCheckboxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/checkbox/DisabledCheckboxExample';
+import HiddenLabelCheckbox from '../example/checkbox/HiddenLabelCheckboxExample';
+import HiddenLabelCheckboxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/checkbox/HiddenLabelCheckboxExample';
+import LongTextCheckbox from '../example/checkbox/LongTextCheckboxExample';
+import LongTextCheckboxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/checkbox/LongTextCheckboxExample';
+import InlineCheckboxes from '../example/checkbox/InlineCheckboxesExample';
+import InlineCheckboxesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/checkbox/InlineCheckboxesExample';
+import MultipleCheckboxes from '../example/checkbox/MultipleCheckboxesExample';
+import MultipleCheckboxesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/checkbox/MultipleCheckboxesExample';
+import MobileCheckbox from '../example/checkbox/MobileCheckboxExample';
 
 class DocPage extends React.Component {
   constructor() {

@@ -8,8 +8,8 @@ import { name } from 'terra-list/package.json';
 import MultiSelectSrc from '!raw-loader!terra-list/src/MultiSelectList';
 
 // Example Files
-import MultiSelectExamples from './example/MultiSelect';
-import MultiSelectExamplesSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MultiSelect';
+import MultiSelectExamples from '../example/MultiSelect';
+import MultiSelectExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelect';
 
 const DocPage = () => (
   <DocTemplate
