@@ -1,10 +1,10 @@
 import React from 'react';
 import Base from 'terra-base';
-import SearchField from '../../lib/SearchField';
+import SearchField from '../../../SearchField';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
-class DelayedSearchField extends React.Component {
+class MinimumLengthSearchField extends React.Component {
 
   constructor(props) {
     super(props);
@@ -20,11 +20,11 @@ class DelayedSearchField extends React.Component {
         <div id="search-callback-text">
           Search Text: {this.state.searchText}
         </div>
-        <SearchField searchDelay={1000} onSearch={(searchText) => { this.setState({ searchText }); }} />
+        <SearchField id="searchfieldWithMinimumLength" minimumSearchTextLength={5} onSearch={(searchText) => { this.setState({ searchText }); }} />
       </Base>
     );
   }
 
 }
 
-export default DelayedSearchField;
+export default MinimumLengthSearchField;
