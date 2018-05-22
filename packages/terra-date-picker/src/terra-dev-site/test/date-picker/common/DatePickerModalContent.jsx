@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'terra-button';
 import AppDelegate from 'terra-app-delegate';
-import DatePicker from '../../../DatePicker';
+import DatePicker from '../../../../DatePicker';
 
 const ModalContent = (props) => {
   const { app } = props;

@@ -1,17 +1,16 @@
 import React from 'react';
 import Base from 'terra-base';
-import DatePicker from '../../../lib/DatePicker';
+import DatePicker from '../../../../lib/DatePicker';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
-const DatePickerMinMax = () => (
+const DatePickerIncludeDates = () => (
   <Base locale={locale}>
     <DatePicker
       name="date-input"
-      minDate={'2017-04-01'}
-      maxDate={'2017-04-10'}
+      includeDates={['2017-04-01', '2017-04-02', '2017-04-03']}
     />
   </Base>
 );
 
-export default DatePickerMinMax;
+export default DatePickerIncludeDates;

@@ -3,7 +3,7 @@ import Base from 'terra-base';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import AppDelegate from 'terra-app-delegate';
 import Button from 'terra-button';
-import DatePicker from '../../../lib/DatePicker';
+import DatePicker from '../../../../lib/DatePicker';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
