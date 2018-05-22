@@ -1,7 +1,7 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-unresolved, import/extensions
-import Textarea from 'terra-form-textarea/lib/FormTextArea';
+import Textarea from 'terra-form-textarea/lib/TextArea';
 
 class TextareaExamples extends React.Component {
   constructor(props) {
