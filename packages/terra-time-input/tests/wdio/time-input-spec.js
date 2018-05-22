@@ -98,7 +98,7 @@ describe('Time Input onChange operations', () => {
     Terra.should.matchScreenshot({ viewports });
   });
 
-  describe('Time Input does prepends 0 on hour input less than 3', () => {
+  describe('Time Input does prepend 0 on hour input less than 3', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/time-input/time-input/on-change');
 
@@ -143,7 +143,7 @@ describe('Time Input onChange operations', () => {
     Terra.should.matchScreenshot({ viewports });
   });
 
-  describe('Time Input does not prepends 0 on hour input less than 6', () => {
+  describe('Time Input does not prepend 0 on minute input less than 6', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/time-input/time-input/on-change');
 
