@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Checkbox from '../../src/Checkbox';
+import Checkbox from '../../../lib/Checkbox';
 
 const checkbox = () => (
   <div>

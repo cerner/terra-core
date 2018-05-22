@@ -224,12 +224,12 @@ import ControlledCheckboxField from '../packages/terra-form-checkbox/examples/te
 import HiddenLegend from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/HiddenLegend.example';
 import HideRequiredInvalidCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/HideRequiredInvalidCheckboxField.example';
 import OptionalCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/OptionalCheckboxField.example';
-import DefaultCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/DefaultCheckbox';
-import DisabledCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/DisabledCheckbox';
-import HiddenLabelCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/HiddenLabelCheckbox';
-import LongTextCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/LongTextCheckbox';
-import MultipleCheckboxes from '../packages/terra-form-checkbox/tests/nightwatch/MultipleCheckboxes';
-import PopulatedCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/PopulatedCheckbox';
+import DefaultCheckbox from '../packages/terra-form-checkbox/examples/test-examples/checkbox/DefaultCheckbox.example';
+import DisabledCheckbox from '../packages/terra-form-checkbox/examples/test-examples/checkbox/DisabledCheckbox.example';
+import HiddenLabelCheckbox from '../packages/terra-form-checkbox/examples/test-examples/checkbox/HiddenLabelCheckbox.example';
+import LongTextCheckbox from '../packages/terra-form-checkbox/examples/test-examples/checkbox/LongTextCheckbox.example';
+import MultipleCheckboxes from '../packages/terra-form-checkbox/examples/test-examples/checkbox/MultipleCheckboxes.example';
+import PopulatedCheckbox from '../packages/terra-form-checkbox/examples/test-examples/checkbox/PopulatedCheckbox.example';
 import FieldCombinations from '../packages/terra-form-field/tests/nightwatch/FieldCombinations';
 import FieldInline from '../packages/terra-form-field/tests/nightwatch/FieldInline';
 import FieldInteractiveInvalid from '../packages/terra-form-field/tests/nightwatch/FieldInteractiveInvalid';
@@ -1419,34 +1419,40 @@ const componentConfig = {
         ],
       },
       {
-        name: 'Default Checkbox',
-        path: '/default-checkbox',
-        component: DefaultCheckbox,
-      },
-      {
-        name: 'Disabled Checkbox',
-        path: '/disabled-checkbox',
-        component: DisabledCheckbox,
-      },
-      {
-        name: 'Hidden Label Checkbox',
-        path: '/hidden-label-checkbox',
-        component: HiddenLabelCheckbox,
-      },
-      {
-        name: 'Long Text Checkbox',
-        path: '/long-text-checkbox',
-        component: LongTextCheckbox,
-      },
-      {
-        name: 'Multiple Checkboxes',
-        path: '/multiple-checkboxes',
-        component: MultipleCheckboxes,
-      },
-      {
-        name: 'Populated Checkbox',
-        path: '/populated-checkbox',
-        component: PopulatedCheckbox,
+        name: 'Checkbox',
+        path: '/checkbox',
+        tests: [
+          {
+            name: 'Default Checkbox',
+            path: '/default-checkbox',
+            component: DefaultCheckbox,
+          },
+          {
+            name: 'Disabled Checkbox',
+            path: '/disabled-checkbox',
+            component: DisabledCheckbox,
+          },
+          {
+            name: 'Hidden Label Checkbox',
+            path: '/hidden-label-checkbox',
+            component: HiddenLabelCheckbox,
+          },
+          {
+            name: 'Long Text Checkbox',
+            path: '/long-text-checkbox',
+            component: LongTextCheckbox,
+          },
+          {
+            name: 'Multiple Checkboxes',
+            path: '/multiple-checkboxes',
+            component: MultipleCheckboxes,
+          },
+          {
+            name: 'Populated Checkbox',
+            path: '/populated-checkbox',
+            component: PopulatedCheckbox,
+          },
+        ],
       },
     ],
   },
