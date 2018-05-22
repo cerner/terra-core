@@ -100,6 +100,7 @@ class Frame extends React.Component {
       isFocused: false,
       hasSearchChanged: false,
       searchValue: '',
+      width: 0,
     };
 
     this.setInput = this.setInput.bind(this);
@@ -375,6 +376,7 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
+            isEnabled={this.state.width > 0}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}
             style={Util.dropdownStyle(dropdownAttrs, this.state)}

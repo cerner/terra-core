@@ -16,6 +16,10 @@ const propTypes = {
    */
   isAbove: PropTypes.bool,
   /**
+   * Whether the dropdown is visible.
+   */
+  isEnabled: PropTypes.bool,
+  /**
    * Callback function triggered when the dropdown resizes.
    */
   onResize: PropTypes.func.isRequired,
@@ -43,7 +47,7 @@ const BelowAttachment = {
   horizontal: 'start',
 };
 
-const Dropdown = ({ children, isAbove, onResize, target, refCallback, ...customProps }) => {
+const Dropdown = ({ children, isAbove, isEnabled, onResize, target, refCallback, ...customProps }) => {
   /**
    * Prevents default events from removing the focus from the target.
    * @param {event} event - The event invoking the callback.
@@ -61,7 +65,7 @@ const Dropdown = ({ children, isAbove, onResize, target, refCallback, ...customP
   return (
     <Hookshot
       isOpen
-      isEnabled
+      isEnabled={isEnabled}
       targetRef={() => target}
       attachmentBehavior="none"
       contentAttachment={isAbove ? AboveAttachment : BelowAttachment}
