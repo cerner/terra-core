@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveElement from '../../lib/ResponsiveElement';
+import ResponsiveElement from '../../../ResponsiveElement';
 
 export default () => (
   <div style={{ width: '200px', height: '200px', border: '1px dashed grey' }}>

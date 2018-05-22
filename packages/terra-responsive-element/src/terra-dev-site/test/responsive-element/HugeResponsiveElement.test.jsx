@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveElement from '../../lib/ResponsiveElement';
+import ResponsiveElement from '../../../ResponsiveElement';
 
 const windowSizes = {
   default: [470, 768],

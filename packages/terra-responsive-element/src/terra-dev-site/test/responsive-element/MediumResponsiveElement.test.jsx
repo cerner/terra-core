@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveElement from '../../lib/ResponsiveElement';
+import ResponsiveElement from '../../../ResponsiveElement';
 
 const windowSizes = {
   default: [470, 768],
@@ -26,6 +26,6 @@ function getStyle(size) {
   return { width: windowSizes[size][0], height: '200px', border: '1px dashed grey' };
 }
 
-const SmallResponsiveElement = () => <div style={getStyle('small')}>{responsiveElement}</div>;
+const MediumResponsiveElement = () => <div style={getStyle('medium')}>{responsiveElement}</div>;
 
-export default SmallResponsiveElement;
+export default MediumResponsiveElement;
