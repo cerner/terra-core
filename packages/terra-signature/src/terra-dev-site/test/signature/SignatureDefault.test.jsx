@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Signature from '../../lib/Signature';
+import Signature from '../../../Signature';
 
 class SignatureDefault extends React.Component {
   constructor() {
