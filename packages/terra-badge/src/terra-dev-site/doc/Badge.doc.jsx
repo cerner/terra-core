@@ -1,19 +1,19 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-badge/docs/README.md';
-import { name } from 'terra-badge/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import BadgeSrc from '!raw-loader!terra-badge/src/Badge';
+import BadgeSrc from '!raw-loader!../../../src/Badge';
 
 // Example Files
 import BadgeIntent from './example/BadgeIntent';
-import BadgeIntentSrc from '!raw-loader!./example/BadgeIntent';
+import BadgeIntentSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BadgeIntent';
 import BadgeSize from './example/BadgeSize';
-import BadgeSizeSrc from '!raw-loader!./example/BadgeSize';
+import BadgeSizeSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BadgeSize';
 import BadgeIcon from './example/BadgeIcon';
-import BadgeIconSrc from '!raw-loader!./example/BadgeIcon';
+import BadgeIconSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BadgeIcon';
 
 const DocPage = () => (
   <DocTemplate

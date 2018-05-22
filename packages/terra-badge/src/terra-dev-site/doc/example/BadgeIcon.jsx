@@ -1,6 +1,7 @@
 import React from 'react';
 import IconBookmark from 'terra-icon/lib/icon/IconBookmark';
-import Badge from '../../../Badge';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Badge from 'terra-badge/lib/Badge';
 
 const Icon = <IconBookmark />;
 
