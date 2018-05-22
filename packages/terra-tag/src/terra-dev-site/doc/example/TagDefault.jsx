@@ -1,6 +1,7 @@
 import React from 'react';
 import IconTag from 'terra-icon/lib/icon/IconTag';
-import Tag from '../../../Tag';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Tag from 'terra-tag/lib/Tag';
 
 const TagDefault = () => (
   <div>

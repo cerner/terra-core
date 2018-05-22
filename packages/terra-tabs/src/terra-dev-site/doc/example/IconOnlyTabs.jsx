@@ -3,8 +3,10 @@ import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import IconBookmark from 'terra-icon/lib/icon/IconBookmark';
 import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
-import Tabs from '../../../Tabs';
-import TabContent from './TabContentTemplate';
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
+import Tabs from 'terra-tabs/lib/Tabs';
+import TabContent from 'terra-tabs/lib/terra-dev-site/doc/example/TabContentTemplate';
+/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const IconOnlyTabs = () => {
   const searchTab = (

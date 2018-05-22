@@ -1,6 +1,7 @@
 import React from 'react';
 
-import ToggleSectionHeaderExampleTemplate from './ToggleSectionHeaderExampleTemplate';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import ToggleSectionHeaderExampleTemplate from 'terra-toggle-section-header/lib/terra-dev-site/doc/example/ToggleSectionHeaderExampleTemplate';
 
 const componentProps = {
   title: 'Animated Example',

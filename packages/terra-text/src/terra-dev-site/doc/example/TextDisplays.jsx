@@ -1,7 +1,8 @@
 import React from 'react';
 import Heading from 'terra-heading';
 import Arrange from 'terra-arrange';
-import Text from '../../../Text';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Text from 'terra-text/lib/Text';
 
 const TextDisplays = () => (
   <div>

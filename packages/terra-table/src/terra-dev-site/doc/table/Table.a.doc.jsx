@@ -1,42 +1,42 @@
 /* eslint-disable  import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 // Component Source
-import TableSrc from '!raw-loader!../../../src/Table';
-import SingleSelectableRowsSrc from '!raw-loader!../../../src/SingleSelectableRows';
-import TableHeaderSrc from '!raw-loader!../../../src/TableHeader';
-import TableHeaderCellSrc from '!raw-loader!../../../src/TableHeaderCell';
-import TableRowSrc from '!raw-loader!../../../src/TableRow';
-import TableRowsSrc from '!raw-loader!../../../src/TableRows';
-import SelectableTableRowsSrc from '!raw-loader!../../../src/SelectableTableRows';
-import TableCellSrc from '!raw-loader!../../../src/TableCell';
-import TableSubheaderSrc from '!raw-loader!../../../src/TableSubheader';
+import TableSrc from '!raw-loader!../../../../src/Table';
+import SingleSelectableRowsSrc from '!raw-loader!../../../../src/SingleSelectableRows';
+import TableHeaderSrc from '!raw-loader!../../../../src/TableHeader';
+import TableHeaderCellSrc from '!raw-loader!../../../../src/TableHeaderCell';
+import TableRowSrc from '!raw-loader!../../../../src/TableRow';
+import TableRowsSrc from '!raw-loader!../../../../src/TableRows';
+import SelectableTableRowsSrc from '!raw-loader!../../../../src/SelectableTableRows';
+import TableCellSrc from '!raw-loader!../../../../src/TableCell';
+import TableSubheaderSrc from '!raw-loader!../../../../src/TableSubheader';
 
 import NoStripedTable from './example/NoStripedTable';
-import NoStripedTableSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/NoStripedTable';
+import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/NoStripedTable';
 import NoPaddingTable from './example/NoPaddingTable';
-import NoPaddingTableSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/NoPaddingTable';
+import NoPaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/NoPaddingTable';
 import StripedTable from './example/StripedTable';
-import StripedTableSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/StripedTable';
+import StripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/StripedTable';
 import TableWithMultipleOnClicks from './example/TableWithMultipleOnClicks';
-import TableWithMultipleOnClicksSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithMultipleOnClicks';
+import TableWithMultipleOnClicksSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithMultipleOnClicks';
 import TableWithHighlightedRows from './example/TableWithHighlightedRows';
-import TableWithHighlightedRowsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithHighlightedRows';
+import TableWithHighlightedRowsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithHighlightedRows';
 import SingleRowSelectableTable from './example/SingleRowSelectableTable';
-import SingleRowSelectableTableSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/SingleRowSelectableTable';
+import SingleRowSelectableTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/SingleRowSelectableTable';
 import TableWithNonSelectableRow from './example/TableWithNonSelectableRow';
-import TableWithNonSelectableRowSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithNonSelectableRow';
+import TableWithNonSelectableRowSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithNonSelectableRow';
 import TableWithSortingIndicator from './example/TableWithSortingIndicator';
-import TableWithSortingIndicatorSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithSortingIndicator';
+import TableWithSortingIndicatorSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithSortingIndicator';
 import TableWithLongContent from './example/TableWithLongContent';
-import TableWithLongContentSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithLongContent';
+import TableWithLongContentSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithLongContent';
 import TableWithCustomCells from './example/TableWithCustomCells';
-import TableWithCustomCellsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithCustomCells';
+import TableWithCustomCellsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithCustomCells';
 import TableWithSubheaders from './example/TableWithSubheaders';
-import TableWithSubheadersSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TableWithSubheaders';
+import TableWithSubheadersSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithSubheaders';
 
 const DocPage = () => (
   <DocTemplate

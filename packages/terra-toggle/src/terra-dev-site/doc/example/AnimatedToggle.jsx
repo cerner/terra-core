@@ -1,6 +1,7 @@
 import React from 'react';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
-import Toggle from '../../../Toggle';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Toggle from 'terra-toggle/lib/Toggle';
 
 class ToggleDefault extends React.Component {
   constructor() {

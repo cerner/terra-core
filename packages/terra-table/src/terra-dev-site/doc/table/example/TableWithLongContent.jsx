@@ -1,6 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import Table from '../../../Table';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Table from 'terra-table/lib/Table';
 
 const TableWithLongContent = () => (
   <Table isStriped={false}>

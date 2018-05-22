@@ -1,19 +1,19 @@
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/MultiSelectableRows.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/MultiSelectableRows.md';
+import { name } from '../../../../package.json';
 
 // Component Source
-import MultiSelectSrc from '!raw-loader!../../../src/MultiSelectableRows';
+import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelectableRows';
 
 // Example Files
 import MultipleRowSelectableTableExamples from './example/MultiSelectableRows';
-import MultipleRowSelectableTableExamplesSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MultiSelectableRows';
+import MultipleRowSelectableTableExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/MultiSelectableRows';
 import MultipleRowMaxSelectableExample from './example/MultiSelectableRowsMaxSelectable';
-import MultipleRowMaxSelectableExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MultiSelectableRowsMaxSelectable';
+import MultipleRowMaxSelectableExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/MultiSelectableRowsMaxSelectable';
 import MultipleSelectableRowsWithSubheader from './example/MultiSelectableRowsWithSubheader';
-import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MultiSelectableRowsWithSubheader';
+import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/MultiSelectableRowsWithSubheader';
 
 const DocPage = () => (
   <DocTemplate

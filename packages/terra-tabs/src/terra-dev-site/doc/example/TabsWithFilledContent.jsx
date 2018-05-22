@@ -1,6 +1,8 @@
 import React from 'react';
-import Tabs from '../../../Tabs';
-import TabContent from './TabContentTemplate';
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
+import Tabs from 'terra-tabs/lib/Tabs';
+import TabContent from 'terra-tabs/lib/terra-dev-site/doc/example/TabContentTemplate';
+/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TabsWithFilledContent = () => {
   const tab1 = (

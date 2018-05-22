@@ -1,7 +1,8 @@
 import React from 'react';
 import IconTag from 'terra-icon/lib/icon/IconTag';
 import Alert from 'terra-alert';
-import Tag from '../../../Tag';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Tag from 'terra-tag/lib/Tag';
 
 const alertTitle = 'Not Reccomended Usage.';
 const alertText = 'These styles are provided for when this compoment is missing recomended elements for best practice use.';

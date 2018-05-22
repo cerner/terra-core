@@ -1,5 +1,6 @@
 import React from 'react';
-import ToggleButton from '../../../ToggleButton';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import ToggleButton from 'terra-toggle-button/lib/ToggleButton';
 
 const AnimatedToggleButton = () => (
   <ToggleButton isAnimated closedButtonText="Animated ToggleButton">

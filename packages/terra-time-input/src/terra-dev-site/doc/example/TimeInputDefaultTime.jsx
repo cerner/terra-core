@@ -1,5 +1,6 @@
 import React from 'react';
-import TimeInput from '../../../TimeInput';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import TimeInput from 'terra-time-input/lib/TimeInput';
 
 class timeInput extends React.Component {
   constructor(props) {
