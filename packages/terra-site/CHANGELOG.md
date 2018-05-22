@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated Avatar import in the code examples
+* Updated the Overlay examples to use non-transpiled code
 
 2.11.0 - (May 16, 2018)
 ------------------
