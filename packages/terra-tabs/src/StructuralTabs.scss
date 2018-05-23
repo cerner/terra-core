@@ -9,7 +9,7 @@
       background-color: var(--terra-tabs-structural-content-background-color, #fff);
       border-radius: var(--terra-tabs-structural-content-border-radius, 0);
       box-shadow: var(--terra-tabs-structural-content-box-shadow, 0);
-      //Used to make the content sit above the tab to block the box shadow that can be applied
+      // Used to make the content sit above the tab to block the box shadow that can be applied
       z-index: var(--terra-tabs-structural-content-z-index, 0);
     }
 
@@ -45,10 +45,10 @@
         // However in the scenario where you need to also set the background image as a gradient to give a transparent
         // affect and make it 100% height, but you then can't use it for the blue stripe.
         &::before {
-          background: var(--terra-tabs-structural-tab-before-content-background, none);
+          background: var(--terra-tabs-structural-before-content-background, none);
           content: '';
           display: block;
-          height: var(--terra-tabs-structural-tab-before-content-height, 0);
+          height: var(--terra-tabs-structural-before-content-height, 0);
           left: 0;
           position: absolute;
           top: 0;
