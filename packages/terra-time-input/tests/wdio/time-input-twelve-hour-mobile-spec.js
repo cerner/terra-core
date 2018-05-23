@@ -78,4 +78,56 @@ describe('Time Input Twelve Hour Mobile', () => {
 
     Terra.should.matchScreenshot({ viewports });
   });
+
+  describe('Twelve Hour Mobile - Focus Hour Styles', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/time-input/twelve-hour/mobile');
+      browser.click('#timeInput input[name="terra-time-hour-time-input"]');
+      browser.pause(500);
+    });
+
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-time-input-transition-duration': '1s',
+        '--terra-time-input-transition-timing-function': 'ease',
+        '--terra-time-input-animation-background': 'linear-gradient(to bottom, #9fc3b2, #9fc3b2)',
+        '--terra-time-input-background-start': '0 0',
+        '--terra-time-input-focus-keyboard-border-color': '#0000f2',
+        '--terra-time-input-focus-keyboard-border-style': 'solid',
+        '--terra-time-input-focus-keyboard-border-width': '1px',
+        '--terra-time-input-focus-keyboard-opacity': '1',
+        '--terra-time-input-focus-keyboard-animation-size': '100% 10px',
+        '--terra-time-input-focus-keyboard-box-shadow-ltr': '10 10 8px #cccccc',
+        '--terra-time-input-desktop-focused-input-background': '#ab1f02',
+      },
+    });
+  });
+
+  describe('Twelve Hour Mobile - Focus Minute Styles', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/time-input/twelve-hour/mobile');
+      browser.click('#timeInput input[name="terra-time-minute-time-input"]');
+      browser.pause(500);
+    });
+
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-time-input-transition-duration': '1s',
+        '--terra-time-input-transition-timing-function': 'ease',
+        '--terra-time-input-animation-background': 'linear-gradient(to bottom, #9fc3b2, #9fc3b2)',
+        '--terra-time-input-background-start': '0 0',
+        '--terra-time-input-focus-keyboard-border-color': '#0000f2',
+        '--terra-time-input-focus-keyboard-border-style': 'solid',
+        '--terra-time-input-focus-keyboard-border-width': '1px',
+        '--terra-time-input-focus-keyboard-opacity': '1',
+        '--terra-time-input-focus-keyboard-animation-size': '100% 10px',
+        '--terra-time-input-focus-keyboard-box-shadow-ltr': '10 10 8px #cccccc',
+        '--terra-time-input-desktop-focused-input-background': '#ab1f02',
+      },
+    });
+  });
 });
