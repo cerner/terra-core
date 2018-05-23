@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Examples for terra-form-select props and variants.
 
 2.11.0 - (May 16, 2018)
 ------------------
