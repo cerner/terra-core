@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* New variables for theming
 
 3.1.0 - (May 16, 2018)
 ------------------
