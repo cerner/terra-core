@@ -98,9 +98,9 @@ class Frame extends React.Component {
     this.state = {
       isOpen: false,
       isFocused: false,
+      isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
-      width: 0,
     };
 
     this.setInput = this.setInput.bind(this);
@@ -173,9 +173,9 @@ class Frame extends React.Component {
       isAbove: false,
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
       isOpen: false,
+      isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
-      width: 0,
     });
 
     // Tags and Comboboxes will select the current search value when the component loses focus.
@@ -196,7 +196,7 @@ class Frame extends React.Component {
       this.input.focus();
     }
 
-    this.setState({ isOpen: true, isFocused: true, width: 0 });
+    this.setState({ isOpen: true, isFocused: true, isPositioned: false });
   }
 
   /**
@@ -376,7 +376,7 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
-            isEnabled={this.state.width > 0}
+            isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}
             style={Util.dropdownStyle(dropdownAttrs, this.state)}
