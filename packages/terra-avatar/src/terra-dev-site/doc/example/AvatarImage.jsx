@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../../../Avatar';
+import Avatar from 'terra-avatar';
 import exampleAvatarImage from '../../test/avatar/assets/150x150.jpg';
 
 const AvatarImage = () => (

@@ -11,9 +11,9 @@ import LoadingOverlaySrc from '!raw-loader!terra-overlay/src/LoadingOverlay';
 
 // Example Files
 import OverlayExample from './OverlayExample';
-import OverlayExampleSrc from 'raw-loader!./OverlayExample';
+import OverlayExampleSrc from '!raw-loader!./OverlayExample';
 import LoadingOverlayExample from './LoadingOverlayExample';
-import LoadingOverlayExampleSrc from 'raw-loader!./LoadingOverlayExample';
+import LoadingOverlayExampleSrc from '!raw-loader!./LoadingOverlayExample';
 
 const DocPage = () => (
   <DocTemplate

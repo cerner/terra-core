@@ -1,0 +1,32 @@
+:local {
+  .opt-group {
+    list-style: none;
+    margin: var(--terra-select-optgroup-margin, 0);
+    padding: var(--terra-select-optgroup-padding, 0);
+    user-select: none;
+
+    &:not(:first-child) > .label {
+      border-top: var(--terra-select-optgroup-label-border-top, 0.1428571429rem solid #dedfe0);
+    }
+  }
+
+  .label {
+    background-color: var(--terra-select-optgroup-label-background-color, #f4f4f4);
+    color: var(--terra-select-optgroup-label-background-color, #64696c);
+    font-size: var(--terra-select-optgroup-label-color, 0.9286rem);
+    font-weight: var(--terra-select-optgroup-label-font-weight, bold);
+    line-height: var(--terra-select-optgroup-label-line-height, 1.23);
+    padding: var(--terra-select-optgroup-label-line-height, 0.38461538461538464rem);
+    word-break: break-all;
+  }
+
+  .options {
+    list-style: none;
+    margin: var(--terra-select-optgroup-options-margin, 0);
+    padding: var(--terra-select-optgroup-options-padding, 0);
+  }
+
+  .is-disabled {
+    pointer-events: none;
+  }
+}

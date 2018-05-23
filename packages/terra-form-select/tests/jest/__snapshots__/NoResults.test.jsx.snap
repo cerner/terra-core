@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoResults should render NoResults with custom content 1`] = `
+<div
+  className="no-results"
+>
+  <div>
+    Custom
+  </div>
+</div>
+`;
+
+exports[`NoResults should render a default NoResults 1`] = `
+<div
+  className="no-results"
+>
+  No matching results for "value"
+</div>
+`;

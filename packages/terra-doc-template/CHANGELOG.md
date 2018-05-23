@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added a visible CSS layout
+* Removed terra-toggle-button as a dependency
+
+### Fixed
+* Use https to get the shield
 
 1.2.0 - (May 16, 2018)
 ------------------

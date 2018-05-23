@@ -15,7 +15,7 @@ describe('DocTemplate', () => {
     beforeEach(() => browser.url('/#/raw/tests/doc-template/default-doc-template'));
 
     it('Reveals the example\'s code', () => {
-      browser.click('[data-terra-source-code-toggle] > button');
+      browser.click('button');
       // Reliably causes on hover styling of button to deactivate
       browser.click('h1=Examples');
 
@@ -27,12 +27,12 @@ describe('DocTemplate', () => {
     });
 
     it('Hides the example\'s code again', () => {
-      browser.click('[data-terra-source-code-toggle] > button');
+      browser.click('button');
 
       // Ensure the button is revealed so it can be clicked
       browser.pause(100);
 
-      browser.click('[data-terra-source-code-toggle] > button');
+      browser.click('button');
       // Reliably causes on hover styling of button to deactivate
       browser.click('h1=Examples');
 

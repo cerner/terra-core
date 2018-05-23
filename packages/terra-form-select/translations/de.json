@@ -1,3 +1,5 @@
 {
-  "Terra.form.select.defaultDisplay": "- Auswählen -"
+  "Terra.form.select.add": "\"{text}\" hinzufügen",
+  "Terra.form.select.defaultDisplay": "- Auswählen -",
+  "Terra.form.select.noResults": "Keine Übereinstimmungen für \"{text}\""
 }

@@ -15,14 +15,14 @@ exports[`DocTemplate should show multiple examples 1`] = `
   >
     Examples
   </h1>
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="0"
     title="Test Example 1"
   />
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test mk. 2"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
@@ -58,7 +58,7 @@ exports[`DocTemplate should show one example 1`] = `
   >
     Examples
   </h1>
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
@@ -94,9 +94,14 @@ exports[`DocTemplate should show the version 1`] = `
 <div
   className="doc-template"
 >
-  <Markdown
-    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
-  />
+  <a
+    href="https://www.npmjs.org/package/terra-doc-template"
+  >
+    <img
+      alt="NPM version"
+      src="https://img.shields.io/npm/v/terra-doc-template.svg"
+    />
+  </a>
 </div>
 `;
 
@@ -104,9 +109,14 @@ exports[`DocTemplate should show the version and readme 1`] = `
 <div
   className="doc-template"
 >
-  <Markdown
-    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
-  />
+  <a
+    href="https://www.npmjs.org/package/terra-doc-template"
+  >
+    <img
+      alt="NPM version"
+      src="https://img.shields.io/npm/v/terra-doc-template.svg"
+    />
+  </a>
   <Markdown
     src="test-file-stub"
   />
@@ -117,9 +127,14 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
 <div
   className="doc-template"
 >
-  <Markdown
-    src="[![NPM version](http://img.shields.io/npm/v/terra-doc-template.svg)](https://www.npmjs.org/package/terra-doc-template)"
-  />
+  <a
+    href="https://www.npmjs.org/package/terra-doc-template"
+  >
+    <img
+      alt="NPM version"
+      src="https://img.shields.io/npm/v/terra-doc-template.svg"
+    />
+  </a>
   <Markdown
     src="test-file-stub"
   />
@@ -133,14 +148,14 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
   >
     Examples
   </h1>
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"
     key="0"
     title="Test Example 1"
   />
-  <IndexExampleTemplate
+  <ExampleTemplate
     description="Describing the test mk. 2"
     example={<TestComponentExample />}
     exampleSrc="test-file-stub"

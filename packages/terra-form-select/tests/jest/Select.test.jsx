@@ -1,143 +1,105 @@
 import React from 'react';
-import intlContexts from './intl-context-setup';
 import Select from '../../src/Select';
+import intlContexts from './intl-context-setup';
 
-it('should render a default Select component', () => {
-  const select = <Select><div>Child</div></Select>;
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+describe('Select', () => {
+  it('should render a default variant', () => {
+    const wrapper = shallow(<Select />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render a Select with name provided', () => {
-  const select = (
-    <Select
-      name="description"
-    >
-      <div>Child</div>
-    </Select>
-  );
+  it('should render a combobox variant', () => {
+    const wrapper = shallow(<Select variant="tag" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render a multiple variant', () => {
+    const wrapper = shallow(<Select variant="multiple" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render a required Select', () => {
-  const select = (
-    <Select
-      required
-    >
-      <div>Child</div>
-    </Select>
-  );
+  it('should render a search variant', () => {
+    const wrapper = shallow(<Select variant="search" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render a tag variant', () => {
+    const wrapper = shallow(<Select variant="tag" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render a disabled Select', () => {
-  const select = (
-    <Select
-      disabled
-    >
-      <div>Child</div>
-    </Select>
-    );
+  it('should render a default variant with a placeholder', () => {
+    const wrapper = shallow(<Select placeholder="Placeholder" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render a combobox variant with a placeholder', () => {
+    const wrapper = shallow(<Select variant="tag" placeholder="Placeholder" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render an invalid Select', () => {
-  const select = (
-    <Select
-      isInvalid
-    >
-      <div>Child</div>
-    </Select>
-  );
+  it('should render a multiple variant with a placeholder', () => {
+    const wrapper = shallow(<Select variant="multiple" placeholder="Placeholder" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render a search variant with a placeholder', () => {
+    const wrapper = shallow(<Select variant="search" placeholder="Placeholder" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render Select without placeholder', () => {
-  const select = (
-    <Select
-      isPlaceholderHidden
-    >
-      <div>Child</div>
-    </Select>
-  );
+  it('should render a tag variant with a placeholder', () => {
+    const wrapper = shallow(<Select variant="tag" placeholder="Placeholder" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render a disabled default variant', () => {
+    const wrapper = shallow(<Select disabled />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render a blank Select without placeholder', () => {
-  const select = (
-    <Select
-      defaultValue=""
-      isPlaceholderHidden
-    >
-      <div>Child</div>
-    </Select>
-  );
+  it('should render a disabled combobox variant', () => {
+    const wrapper = shallow(<Select variant="tag" disabled />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render a disabled multiple variant', () => {
+    const wrapper = shallow(<Select variant="multiple" disabled />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render Select with default value', () => {
-  const select = (
-    <Select defaultValue="b">
-      <Select.Option value="m" display="moo" key="m" />
-      <Select.Option value="b" display="boo" key="b" />
-    </Select>
-  );
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render a disabled search variant', () => {
+    const wrapper = shallow(<Select variant="search" disabled />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render Select with a value set', () => {
-  const select = (
-    <Select value="b">
-      <Select.Option value="m" display="moo" key="m" />
-      <Select.Option value="b" display="boo" key="b" />
-    </Select>
-  );
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render a disabled tag variant', () => {
+    const wrapper = shallow(<Select variant="tag" disabled />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render Select with onChange', () => {
-  const select = (
-    <Select onChange={() => {}}>
-      <Select.Option value="m" display="moo" key="m" />
-      <Select.Option value="b" display="boo" key="b" />
-    </Select>
-  );
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render an invalid default variant', () => {
+    const wrapper = shallow(<Select isInvalid />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render Select with requestFocus', () => {
-  const select = (
-    <Select requestFocus={() => {}}>
-      <Select.Option value="m" display="moo" key="m" />
-      <Select.Option value="b" display="boo" key="b" />
-    </Select>
-  );
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should render an invalid combobox variant', () => {
+    const wrapper = shallow(<Select variant="tag" isInvalid />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-it('should render Select with releaseFocus', () => {
-  const select = (
-    <Select releaseFocus={() => {}}>
-      <Select.Option value="m" display="moo" key="m" />
-      <Select.Option value="b" display="boo" key="b" />
-    </Select>
-  );
-  const wrapper = shallow(select, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
+  it('should render an invalid multiple variant', () => {
+    const wrapper = shallow(<Select variant="multiple" isInvalid />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an invalid search variant', () => {
+    const wrapper = shallow(<Select variant="search" isInvalid />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an invalid tag variant', () => {
+    const wrapper = shallow(<Select variant="tag" isInvalid />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

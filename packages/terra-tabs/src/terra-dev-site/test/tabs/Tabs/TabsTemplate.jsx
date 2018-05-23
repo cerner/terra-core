@@ -19,7 +19,7 @@ const defaultProps = {
 
 const TabsTemplate = props => (
   <Base locale={locale}>
-    <div style={{ backgroundColor: 'lightgrey', height: props.containerHeight }}>
+    <div style={{ height: props.containerHeight }}>
       <Tabs
         tabFill={props.tabFill}
         fill={props.fill}

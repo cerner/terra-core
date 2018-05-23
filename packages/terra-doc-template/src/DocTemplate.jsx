@@ -81,8 +81,6 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
     id += 1;
   }
 
-  const version = `[![NPM version](http://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.org/package/${packageName})`;
-
   const docTemplateClassNames = cx([
     'doc-template',
     customProps.className,
@@ -90,7 +88,10 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
 
   return (
     <div {...customProps} className={docTemplateClassNames}>
-      {packageName && <Markdown src={version} />}
+      {packageName && <a href={`https://www.npmjs.org/package/${packageName}`}>
+        <img src={`https://img.shields.io/npm/v/${packageName}.svg`} alt="NPM version" />
+      </a>
+      }
       {readme && <Markdown src={readme} />}
       {srcPath && <a href={srcPath}>View component source code</a>}
 

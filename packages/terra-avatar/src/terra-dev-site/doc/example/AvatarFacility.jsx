@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../../../Avatar';
+import Avatar from 'terra-avatar';
 
 const AvatarFacility = () => (
   <Avatar ariaLabel="South Surgical Center" variant="facility" />

@@ -1,3 +1,5 @@
 {
-  "Terra.form.select.defaultDisplay": "- Predeterminado -"
+  "Terra.form.select.add": "Agregar \"{text}\"",
+  "Terra.form.select.defaultDisplay": "- Predeterminado -",
+  "Terra.form.select.noResults": "No se encontró ningún resultado que coincida para \"{text}\""
 }
