@@ -56,14 +56,13 @@ describe('Time Input', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/time-input/time-input/default-time');
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
-      browser.pause(500);
     });
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-time-input-transition-duration': '1s',
+        '--terra-time-input-transition-duration': '0s',
         '--terra-time-input-transition-timing-function': 'ease',
         '--terra-time-input-animation-background': 'linear-gradient(to bottom, #9fc3b2, #9fc3b2)',
         '--terra-time-input-background-start': '0 0',
@@ -82,14 +81,13 @@ describe('Time Input', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/time-input/time-input/default-time');
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
-      browser.pause(500);
     });
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-time-input-transition-duration': '1s',
+        '--terra-time-input-transition-duration': '0s',
         '--terra-time-input-transition-timing-function': 'ease',
         '--terra-time-input-animation-background': 'linear-gradient(to bottom, #9fc3b2, #9fc3b2)',
         '--terra-time-input-background-start': '0 0',
@@ -264,7 +262,7 @@ describe('Time Input up and down arrow operations', () => {
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('23');
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
-      browser.keys(['ArrowDown', 'ArrowDown']);
+      browser.keys(['ArrowDown']);
     });
 
     Terra.should.matchScreenshot({ viewports });
@@ -277,7 +275,7 @@ describe('Time Input up and down arrow operations', () => {
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('00');
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
-      browser.keys(['ArrowDown', 'ArrowDown']);
+      browser.keys(['ArrowDown']);
     });
 
     Terra.should.matchScreenshot({ viewports });
@@ -301,7 +299,7 @@ describe('Time Input up and down arrow operations', () => {
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('23');
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
-      browser.keys(['ArrowUp', 'ArrowUp']);
+      browser.keys(['ArrowUp']);
     });
 
     Terra.should.matchScreenshot({ viewports });

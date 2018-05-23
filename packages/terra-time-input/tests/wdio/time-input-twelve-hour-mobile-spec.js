@@ -73,14 +73,13 @@ describe('Time Input Twelve Hour Mobile', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/time-input/twelve-hour/mobile');
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
-      browser.pause(500);
     });
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-time-input-transition-duration': '1s',
+        '--terra-time-input-transition-duration': '0s',
         '--terra-time-input-transition-timing-function': 'ease',
         '--terra-time-input-animation-background': 'linear-gradient(to bottom, #9fc3b2, #9fc3b2)',
         '--terra-time-input-background-start': '0 0',
@@ -99,14 +98,13 @@ describe('Time Input Twelve Hour Mobile', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/time-input/twelve-hour/mobile');
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
-      browser.pause(500);
     });
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-time-input-transition-duration': '1s',
+        '--terra-time-input-transition-duration': '0s',
         '--terra-time-input-transition-timing-function': 'ease',
         '--terra-time-input-animation-background': 'linear-gradient(to bottom, #9fc3b2, #9fc3b2)',
         '--terra-time-input-background-start': '0 0',
