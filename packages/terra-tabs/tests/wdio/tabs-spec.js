@@ -111,7 +111,7 @@ describe('Tabs - Responsive', () => {
           '--terra-tabs-structural-tab-bar-border-width': '10px',
           '--terra-tabs-structural-content-box-shadow': 'inset 5px 5px 5px red',
           '--terra-tabs-structural-content-z-index': '100',
-          '--terra-tabs-structural-tab-position': 'absolute',
+          '--terra-tabs-structural-position': 'absolute',
           '--terra-tabs-structural-before-content-background': 'red',
           '--terra-tabs-structural-before-content-height': '100px',
         },
