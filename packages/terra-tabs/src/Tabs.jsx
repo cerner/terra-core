@@ -13,7 +13,7 @@ import styles from './Tabs.scss';
 const cx = classNames.bind(styles);
 
 /**
-NOTE: This is being commented out until descussions have been resolved around if modular tabs should be removed.
+NOTE: This is being commented out until discussions have been resolved around if modular tabs should be removed.
 const variants = {
   MODULAR_CENTERED: 'modular-centered',
   MODULAR_LEFT_ALIGNED: 'modular-left-aligned',
@@ -25,7 +25,7 @@ const propTypes = {
 
   /**
    * Tabs style. One of: Tabs.Opts.Variants.MODULAR_CENTERED, Tabs.Opts.Variants.MODULAR_LEFT_ALIGNED, or Tabs.Opts.Variants.STRUCTURAL.
-   * NOTE: This is being commented out until descussions have been resolved around if we want modular tabs.
+   * NOTE: This is being commented out until discussions have been resolved around if we want modular tabs.
   variant: PropTypes.oneOf([variants.MODULAR_CENTERED, variants.MODULAR_LEFT_ALIGNED, variants.STRUCTURAL]),
   */
 
@@ -137,7 +137,7 @@ class Tabs extends React.Component {
       ...customProps
     } = this.props;
 
-    // NOTE: Hardcoding variant to structural until descussions have resolved around if we want modular tabs.
+    // NOTE: Hardcoding variant to structural until discussions have resolved around if we want modular tabs.
     const variant = 'structural';
     const tabsClassNames = cx([
       'tabs-container',
@@ -171,7 +171,7 @@ class Tabs extends React.Component {
       React.cloneElement(contentItem, { isLabelHidden: isIconOnly || this.state.isLabelTruncated })
     ));
 
-    const collasibleTabs = (
+    const collapsibleTabs = (
       <CollapsibleTabs
         activeKey={activeKey || this.state.activeKey}
         activeIndex={this.getActiveTabIndex()}
@@ -197,7 +197,7 @@ class Tabs extends React.Component {
         header={(
           <ResponsiveElement
             defaultElement={collapsedTabs}
-            tiny={collasibleTabs}
+            tiny={collapsibleTabs}
           />
         )}
       >
@@ -217,7 +217,7 @@ Tabs.defaultProps = defaultProps;
 Tabs.Pane = TabPane;
 Tabs.Utils = TabUtils;
 /**
-Note: This is being commented out until descussions have been resolved around if we want modular tabs.
+Note: This is being commented out until discussions have been resolved around if we want modular tabs.
 Tabs.Opts = {
   Variants: variants,
 };

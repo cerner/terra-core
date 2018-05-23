@@ -1,96 +1,90 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import DocTemplate from 'terra-doc-template';
 import ReadMe from 'terra-form-select/docs/README.md';
-import { name } from 'terra-form-select/package.json';
-
-// Component Source
+import DocTemplate from 'terra-doc-template';
+import OptionSrc from '!raw-loader!terra-form-select/src/_Option';
+import OptGroupSrc from '!raw-loader!terra-form-select/src/_OptGroup';
 import SelectSrc from '!raw-loader!terra-form-select/src/Select';
-import SelectOptionSrc from '!raw-loader!terra-form-select/src/SelectOption';
+import ControlledExample from './examples/Controlled';
+import ControlledExampleSrc from '!raw-loader!./examples/Controlled';
+import ComboboxExample from './examples/Combobox';
+import ComboboxExampleSrc from '!raw-loader!./examples/Combobox';
+import DefaultExample from './examples/Default';
+import DefaultExampleSrc from '!raw-loader!./examples/Default';
+import DisabledExample from './examples/Disabled';
+import DisabledExampleSrc from '!raw-loader!./examples/Disabled';
+import InvalidExample from './examples/Invalid';
+import InvalidExampleSrc from '!raw-loader!./examples/Invalid';
+import MultipleExample from './examples/Multiple';
+import MultipleExampleSrc from '!raw-loader!./examples/Multiple';
+import OptGroupExample from './examples/OptGroup';
+import OptGroupExampleSrc from '!raw-loader!./examples/OptGroup';
+import SearchExample from './examples/Search';
+import SearchExampleSrc from '!raw-loader!./examples/Search';
+import TagExample from './examples/Tag';
+import TagExampleSrc from '!raw-loader!./examples/Tag';
 
-// Example Files
-import DefaultSelect from './DefaultSelect';
-import DefaultSelectSrc from '!raw-loader!./DefaultSelect';
-import InvalidSelect from './InvalidSelect';
-import InvalidSelectSrc from '!raw-loader!./InvalidSelect';
-import HiddenPlaceholderSelect from './HiddenPlaceholderSelect';
-import HiddenPlaceholderSelectSrc from '!raw-loader!./HiddenPlaceholderSelect';
-import BlankSelect from './BlankSelect';
-import BlankSelectSrc from '!raw-loader!./BlankSelect';
-import SelectWithoutDefault from './SelectWithoutDefault';
-import SelectWithoutDefaultSrc from '!raw-loader!./SelectWithoutDefault';
-import DisabledSelect from './DisabledSelect';
-import DisabledSelectSrc from '!raw-loader!./DisabledSelect';
-import SelectInsideModal from './SelectInsideModal';
-import SelectInsideModalSrc from '!raw-loader!./SelectInsideModal';
-import BoundedSelect from './BoundedSelect';
-import BoundedSelectSrc from '!raw-loader!./BoundedSelect';
-import LongTextSelect from './LongTextSelect';
-import LongTextSelectSrc from '!raw-loader!./LongTextSelect';
-
-const DocPage = () => (
+const Index = () => (
   <DocTemplate
-    packageName={name}
+    packageName="terra-form-select"
     readme={ReadMe}
-    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    examples={[
-      {
-        title: 'Select component with default initial value',
-        example: <DefaultSelect />,
-        source: DefaultSelectSrc,
-      },
-      {
-        title: 'Invalid select component',
-        example: <InvalidSelect />,
-        source: InvalidSelectSrc,
-      },
-      {
-        title: 'Select component with placeholder hidden',
-        example: <HiddenPlaceholderSelect />,
-        source: HiddenPlaceholderSelectSrc,
-      },
-      {
-        title: 'Select component with no default value and placeholder hidden',
-        example: <BlankSelect />,
-        source: BlankSelectSrc,
-      },
-      {
-        title: 'Select component with no initial value set',
-        example: <SelectWithoutDefault />,
-        source: SelectWithoutDefaultSrc,
-      },
-      {
-        title: 'Disabled select component',
-        example: <DisabledSelect />,
-        source: DisabledSelectSrc,
-      },
-      {
-        title: 'Bounded Select',
-        example: <BoundedSelect />,
-        source: BoundedSelectSrc,
-      },
-      {
-        title: 'Long Text Select',
-        example: <LongTextSelect />,
-        source: LongTextSelectSrc,
-      },
-      {
-        title: 'Select inside a modal',
-        example: <SelectInsideModal />,
-        source: SelectInsideModalSrc,
-      },
-    ]}
-    propsTables={[
-      {
-        componentName: 'Select',
-        componentSrc: SelectSrc,
-      },
-      {
-        componentName: 'Select.Option',
-        componentSrc: SelectOptionSrc,
-      },
-    ]}
+    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
+    propsTables={[{
+      componentName: 'Select',
+      componentSrc: SelectSrc,
+    }, {
+      componentName: 'Option',
+      componentSrc: OptionSrc,
+    }, {
+      componentName: 'OptGroup',
+      componentSrc: OptGroupSrc,
+    }]}
+    examples={[{
+      title: 'Default',
+      description: 'A default variant allows selecting a single option.',
+      example: <DefaultExample />,
+      source: DefaultExampleSrc,
+    }, {
+      title: 'Search',
+      description: 'A search variant provides a searchable single select.',
+      example: <SearchExample />,
+      source: SearchExampleSrc,
+    }, {
+      title: 'Combobox',
+      description: 'A combobox variant allows a user to enter a single free text entry or select a single option from the the dropdown.',
+      example: <ComboboxExample />,
+      source: ComboboxExampleSrc,
+    }, {
+      title: 'Multiple',
+      description: 'A multiple variant allows searching and selecting multiple options.',
+      example: <MultipleExample />,
+      source: MultipleExampleSrc,
+    }, {
+      title: 'Tag',
+      description: 'A tag variant allows a user to enter multiple custom free text entries or select multiple options from the the dropdown.',
+      example: <TagExample />,
+      source: TagExampleSrc,
+    }, {
+      title: 'Disabled',
+      example: <DisabledExample />,
+      source: DisabledExampleSrc,
+    }, {
+      title: 'Invalid',
+      description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',
+      example: <InvalidExample />,
+      source: InvalidExampleSrc,
+    }, {
+      title: 'OptGroup',
+      description: 'An OptGroup provides a way to group options together within the listbox. Can be applied to all select variants (default, search, combobox, multiple, tag).',
+      example: <OptGroupExample />,
+      source: OptGroupExampleSrc,
+    }, {
+      title: 'Controlled',
+      description: 'An example of implementing a controlled Select.',
+      example: <ControlledExample />,
+      source: ControlledExampleSrc,
+    }]}
   />
 );
 
-export default DocPage;
+export default Index;
