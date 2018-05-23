@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render a Menu with an add option 1`] = `
+<ul
+  aria-activedescendant="terra-select-option-Tag"
+  className="menu"
+  role="listbox"
+>
+  <AddOption
+    data-select-active={true}
+    id="terra-select-option-Tag"
+    isActive={true}
+    isCheckable={true}
+    isSelected={false}
+    key=".0"
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseUp={[Function]}
+    value="Tag"
+  />
+</ul>
+`;
+
+exports[`Menu should render a Menu with no results 1`] = `
+<ul
+  aria-activedescendant="terra-select-option-null"
+  className="menu"
+  role="listbox"
+>
+  <NoResults
+    key=".0"
+  />
+</ul>
+`;
+
+exports[`Menu should render a default Menu 1`] = `
+<ul
+  aria-activedescendant="terra-select-option-null"
+  className="menu"
+  role="listbox"
+>
+  <NoResults
+    key=".0"
+  />
+</ul>
+`;

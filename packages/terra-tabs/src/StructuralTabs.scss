@@ -8,6 +8,9 @@
     > :nth-child(2) {
       background-color: var(--terra-tabs-structural-content-background-color, #fff);
       border-radius: var(--terra-tabs-structural-content-border-radius, 0);
+      box-shadow: var(--terra-tabs-structural-content-box-shadow, 0);
+      // Used to make the content sit above the tab to block the box shadow that can be applied
+      z-index: var(--terra-tabs-structural-content-z-index, 0);
     }
 
     .collapsed-tabs-container {
@@ -21,11 +24,11 @@
       }
 
       .tab-menu.is-active {
-        background-size: 0 0;
+        background-size: var(--terra-tabs-collapsed-tab-menu-active-background-size, 0 0);
       }
 
       .tab-menu:hover {
-        background-size: 0 0;
+        background-size: var(--terra-tabs-collapsed-tab-menu-hover-background-size, 0 0);
       }
     }
 
@@ -33,6 +36,25 @@
       border-bottom-color: var(--terra-tabs-structural-tab-bar-border-color, #dddedf);
       border-bottom-style: solid;
       border-bottom-width: var(--terra-tabs-structural-tab-bar-border-width, 1px);
+
+      // Only target the tabs when in collapsible-tabs-container. When it is collapsed, the menu shouldn't have the stripe
+      .tab,
+      .tab-menu {
+        position: var(--terra-tabs-structural-position, static);
+        // Typically we use the background image to set a blue stripe and animate it...
+        // However in the scenario where you need to also set the background image as a gradient to give a transparent
+        // affect and make it 100% height, but you then can't use it for the blue stripe.
+        &::before {
+          background: var(--terra-tabs-structural-before-content-background, none);
+          content: '';
+          display: block;
+          height: var(--terra-tabs-structural-before-content-height, 0);
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 0%;
+        }
+      }
     }
 
     //Extended Tabs
@@ -63,7 +85,25 @@
       &.is-active {
         background-color: var(--terra-tabs-structural-active-background-color, #fff);
         background-size: var(--terra-tabs-structural-active-background-size, 100% 2px);
+        box-shadow: var(--terra-tabs-structural-active-box-shadow, none);
         color: var(--terra-tabs-structural-active-color, #000);
+        position: relative;
+
+        &::before {
+          transition-duration: var(--terra-tabs-structural-transition-duration, 0);
+          transition-property: width;
+          transition-timing-function: var(--terra-tabs-structural-transition-timing, ease);
+          width: 100%;
+        }
+
+        // Same as the selectors below, but due to the specificity, you can override the variables
+        // scoped specifically to the active tab
+        &:hover {
+          background-color: var(--terra-tabs-structural-active-hover-background-color, #fff);
+          background-image: var(--terra-tabs-structural-active-hover-background-image, linear-gradient(to bottom, #c8cacb, #c8cacb));
+          background-size: var(--terra-tabs-structural-active-hover-background-size, 100% 2px);
+          color: var(--terra-tabs-structural-active-hover-color, #000);
+        }
       }
 
       &.is-disabled,
