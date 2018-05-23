@@ -5,7 +5,7 @@ Unreleased
 ----------
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/docs/UPGRADEGUIDE.md)
 * Removed `boundingRef`
-* Removed `isPlaceholderHidden` - The placeholder option is no longer added by default.
+* Removed `isPlaceholderHidden` - A placeholder option is no longer added by default.
 * Removed `name` - Terra recommends handling validations with [react-final-form](https://github.com/final-form/react-final-form).
 * Removed `required` - Terra recommends handling validations with [react-final-form](https://github.com/final-form/react-final-form).
 * Removed `releaseFocus` - Focus no longer needs to be managed.
