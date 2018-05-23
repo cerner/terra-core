@@ -1,3 +1,5 @@
 {
-  "Terra.form.select.defaultDisplay": "- Selecteren -"
+  "Terra.form.select.add": "\"{text}\" toevoegen",
+  "Terra.form.select.defaultDisplay": "- Selecteren -",
+  "Terra.form.select.noResults": "Geen resultaten gevonden voor \"{text}\""
 }

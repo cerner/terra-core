@@ -17,6 +17,7 @@ A Loading Overlay is a specialized Overlay subcomponent that displays an overlay
 import React from 'react';
 import Button from 'terra-button';
 import Overlay from 'terra-overlay';
+import OverlayContainer from 'terra-overlay/lib/OverlayContainer';
 
 class OverlayExample extends React.Component {
   constructor() {
@@ -36,12 +37,12 @@ class OverlayExample extends React.Component {
 
   render() {
     return (
-      <Overlay.OverlayContainer style={{ height: '100px', width: '100%' }} >
+      <OverlayContainer style={{ height: '100px', width: '100%' }} >
         <Overlay isOpen={this.state.show} isRelativeToContainer onRequestClose={this.handleOnRequestESC}>
           <p>Close by clicking the overlay or pressing the ESC key.</p>
         </Overlay>
-        <Button onClick={this.handleTriggerOverlay}>Trigger Overlay</Button>
-      </Overlay.OverlayContainer>
+        <Button onClick={this.handleTriggerOverlay} text="Trigger Overlay" />
+      </OverlayContainer>
     );
   }
 }
@@ -53,7 +54,7 @@ export default OverlayExample;
 ```jsx
 import React from 'react';
 import Button from 'terra-button';
-import Overlay from 'terra-overlay';
+import LoadingOverlay from 'terra-overlay/lib/LoadingOverlay';
 
 class LoadingOverlayExample extends React.Component {
   constructor() {
@@ -73,8 +74,8 @@ class LoadingOverlayExample extends React.Component {
   render() {
     return (
       <div>
-        <Overlay.LoadingOverlay isOpen={this.state.show} isAnimated />
-        <Button onClick={this.handleTriggerOverlay}>Trigger Loading Overlay</Button>
+        <LoadingOverlay isOpen={this.state.show} isAnimated />
+        <Button onClick={this.handleTriggerOverlay} text="Trigger Loading Overlay" />
       </div>
     );
   }
