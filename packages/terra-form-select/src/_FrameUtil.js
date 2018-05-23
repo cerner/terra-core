@@ -34,6 +34,7 @@ class FrameUtil {
       width,
       maxHeight: Math.min(maxHeight, availableSpace - 10),
       isAbove: !canFitBelow,
+      isPositioned: true,
     };
   }
 
