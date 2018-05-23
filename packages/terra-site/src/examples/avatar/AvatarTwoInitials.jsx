@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../../../../../packages/terra-avatar/src/Avatar';
+import Avatar from 'terra-avatar';
 
 const AvatarTwoInitials = () => (
   <Avatar ariaLabel="John Doe" initials="JS" />
