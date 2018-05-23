@@ -40,7 +40,8 @@
 
   .required,
   .required-hidden {
-    color: var(--terra-form-field-label-required-color , #ff232a);
+    //color: var(--terra-form-field-label-required-color , #ff232a);
+    color: var(--terra-form-field-label-required-color , #e50000);
     display: inline-block;
     padding-right: var(--terra-form-field-label-required-padding-right, 0.357em);
   }
