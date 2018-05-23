@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from 'terra-button';
 import AppDelegate from 'terra-app-delegate';
-import DateTimePicker from '../../../DateTimePicker';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import DateTimePicker from 'terra-date-time-picker/lib/DateTimePicker';
 
 const ModalContent = (props) => {
   const { app } = props;
@@ -13,7 +14,7 @@ const ModalContent = (props) => {
       <DateTimePicker name="date-time-picker-in-modal" releaseFocus={app.releaseFocus} requestFocus={app.requestFocus} />
       <br />
       <br />
-      <Button className="close-disclosure" onClick={this.closeDisclosure}>Close Disclosure</Button>
+      <Button className="close-disclosure" onClick={app.closeDisclosure} text="Close Disclosure" />
     </div>
   );
 };

@@ -7,7 +7,7 @@ import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
 import IconFolder from 'terra-icon/lib/icon/IconFolder';
 import IconTrash from 'terra-icon/lib/icon/IconTrash';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import CollapsibleMenuView from 'terra-collapsible-menu-view/CollapsibleMenuView';
+import CollapsibleMenuView from 'terra-collapsible-menu-view/lib/CollapsibleMenuView';
 
 class CollapsibleMenuViewDemo extends React.Component {
   constructor(props) {

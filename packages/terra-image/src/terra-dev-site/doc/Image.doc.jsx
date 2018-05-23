@@ -8,8 +8,8 @@ import { name } from 'terra-image/package.json';
 import ImageSrc from '!raw-loader!terra-image/src/Image';
 
 // Example Files
-import ImageDefault from './ImageDefault';
-import ImageDefaultSrc from '!raw-loader!./ImageDefault';
+import ImageDefault from './example/ImageDefault';
+import ImageDefaultSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ImageDefault';
 
 const DocPage = () => (
   <DocTemplate

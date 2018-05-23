@@ -12,7 +12,7 @@ import CollapsibleMenuViewToggleSrc from '!raw-loader!terra-collapsible-menu-vie
 
 // Example Files
 import BasicView from './example/CollapsibleMenuViewDemo';
-import BasicViewSrc from '!raw-loader!./example/CollapsibleMenuViewDemo';
+import BasicViewSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CollapsibleMenuViewDemo';
 
 const DocPage = () => (
   <DocTemplate
