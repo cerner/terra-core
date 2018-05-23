@@ -16,12 +16,21 @@ describe('Form-field', () => {
     });
   });
 
-  // describe('Label', () => {
-  //   beforeEach(() => browser.url('/#/raw/tests/form-field/field-label'));
-  //
-  //   Terra.should.beAccessible();
-  //   Terra.should.matchScreenshot();
-  // });
+  describe('Label', () => {
+    beforeEach(() => browser.url('/#/raw/tests/form-field/field-label'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-form-field-label-font-size': '18px',
+        '--terra-form-field-label-margin-bottom': '10px',
+        '--terra-form-field-label-color': 'blue',
+        '--terra-form-field-label-font-weight': 'bolder',
+      },
+    });
+  });
   //
   // describe('Label Optional', () => {
   //   beforeEach(() => browser.url('/#/raw/tests/form-field/field-label-optional'));
