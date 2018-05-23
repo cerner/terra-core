@@ -1,12 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable  import/no-webpack-loader-syntax, import/first, = import/extensions */
 import React from 'react';
-import DocTemplate from 'terra-doc-template/src/DocTemplate';
+import DocTemplate from '../../../lib/DocTemplate';
 
-import readme from 'terra-doc-template/docs/README.md';
-import { name } from 'terra-doc-template/package.json';
+import readme from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
 // Component Source
-import DocTemplateSrc from '!raw-loader!terra-doc-template/src/DocTemplate';
+import DocTemplateSrc from '!raw-loader!../../../src/DocTemplate';
 import SelfSrc from '!raw-loader!../../../src/terra-dev-site/doc/DocTemplate.doc';
 
 const DocTemplateExamples = () => (
