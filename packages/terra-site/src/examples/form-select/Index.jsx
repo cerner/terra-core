@@ -51,7 +51,7 @@ const Index = () => (
       source: SearchExampleSrc,
     }, {
       title: 'Combobox',
-      description: 'A combobox variant allows a user to enter a single free text entry or select from the the dropdown.',
+      description: 'A combobox variant allows a user to enter a single free text entry or select a single option from the the dropdown.',
       example: <ComboboxExample />,
       source: ComboboxExampleSrc,
     }, {
@@ -61,7 +61,7 @@ const Index = () => (
       source: MultipleExampleSrc,
     }, {
       title: 'Tag',
-      description: 'A tag variant allows a user to enter multiple custom free text entries or select from the the dropdown.',
+      description: 'A tag variant allows a user to enter multiple custom free text entries or select multiple options from the the dropdown.',
       example: <TagExample />,
       source: TagExampleSrc,
     }, {
@@ -70,11 +70,12 @@ const Index = () => (
       source: DisabledExampleSrc,
     }, {
       title: 'Invalid',
+      description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',
       example: <InvalidExample />,
       source: InvalidExampleSrc,
     }, {
       title: 'OptGroup',
-      description: 'An OptGroup provides a way to group options together.',
+      description: 'An OptGroup provides a way to group options together within the listbox. Can be applied to all select variants (default, search, combobox, multiple, tag).',
       example: <OptGroupExample />,
       source: OptGroupExampleSrc,
     }, {
