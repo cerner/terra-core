@@ -8,20 +8,6 @@ describe('Icon', () => {
     Terra.should.matchScreenshot();
   });
 
-  describe('Append', () => {
-    before(() => browser.url('/#/raw/tests/icon/icon-append-class'));
-
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
-  });
-
-  describe('Aria', () => {
-    before(() => browser.url('/#/raw/tests/icon/icon-aria'));
-
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
-  });
-
   describe('HeightWidth', () => {
     before(() => browser.url('/#/raw/tests/icon/icon-height-width'));
 
