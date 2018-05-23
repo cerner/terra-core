@@ -230,10 +230,18 @@ import HiddenLabelCheckbox from '../packages/terra-form-checkbox/examples/test-e
 import LongTextCheckbox from '../packages/terra-form-checkbox/examples/test-examples/checkbox/LongTextCheckbox.example';
 import MultipleCheckboxes from '../packages/terra-form-checkbox/examples/test-examples/checkbox/MultipleCheckboxes.example';
 import PopulatedCheckbox from '../packages/terra-form-checkbox/examples/test-examples/checkbox/PopulatedCheckbox.example';
-import FieldCombinations from '../packages/terra-form-field/tests/nightwatch/FieldCombinations';
-import FieldInline from '../packages/terra-form-field/tests/nightwatch/FieldInline';
-import FieldInteractiveInvalid from '../packages/terra-form-field/tests/nightwatch/FieldInteractiveInvalid';
-import FieldTextWrap from '../packages/terra-form-field/tests/nightwatch/FieldTextWrap';
+import DefaultField from '../packages/terra-form-field/examples/test-examples/DefaultField.example';
+import FieldErrorText from '../packages/terra-form-field/examples/test-examples/FieldErrorText.example';
+import FieldHelpText from '../packages/terra-form-field/examples/test-examples/FieldHelpText.example';
+import FieldHiddenLabel from '../packages/terra-form-field/examples/test-examples/FieldHiddenLabel.example';
+import FieldInline from '../packages/terra-form-field/examples/test-examples/FieldInline.example';
+import FieldInteractiveInvalid from '../packages/terra-form-field/examples/test-examples/FieldInteractiveInvalid.example';
+import FieldLabel from '../packages/terra-form-field/examples/test-examples/FieldLabel.example';
+import FieldLabelErrorHelpText from '../packages/terra-form-field/examples/test-examples/FieldLabelErrorHelpText.example';
+import FieldLabelOptional from '../packages/terra-form-field/examples/test-examples/FieldLabelOptional.example';
+import FieldLabelRequired from '../packages/terra-form-field/examples/test-examples/FieldLabelRequired.example';
+import FieldLabelRequiredErrorHelpText from '../packages/terra-form-field/examples/test-examples/FieldLabelRequiredErrorHelpText.example';
+import FieldTextWrap from '../packages/terra-form-field/examples/test-examples/FieldTextWrap.example';
 import DefaultFieldset from '../packages/terra-form-fieldset/examples/test-examples/DefaultFieldset.example';
 import PopulatedFieldset from '../packages/terra-form-fieldset/examples/test-examples/PopulatedFieldset.example';
 import DefaultFormInput from '../packages/terra-form-input/examples/test-examples/DefaultFormInput.example';
@@ -281,7 +289,7 @@ import RowsTextarea from '../packages/terra-form-textarea/tests/nightwatch/RowsT
 import SmallTextarea from '../packages/terra-form-textarea/tests/nightwatch/SmallTextarea';
 import DefaultControl from '../packages/terra-form/tests/nightwatch/control/DefaultControl';
 import PopulatedControl from '../packages/terra-form/tests/nightwatch/control/PopulatedControl';
-import DefaultField from '../packages/terra-form/tests/nightwatch/field/DefaultField';
+import DefaultField1 from '../packages/terra-form/tests/nightwatch/field/DefaultField';
 import PopulatedField from '../packages/terra-form/tests/nightwatch/field/PopulatedField';
 import DefaultFieldset1 from '../packages/terra-form/tests/nightwatch/fieldset/DefaultFieldset';
 import PopulatedFieldset1 from '../packages/terra-form/tests/nightwatch/fieldset/PopulatedFieldset';
@@ -1459,9 +1467,24 @@ const componentConfig = {
     path: '/form-field',
     tests: [
       {
-        name: 'Field Combinations',
-        path: '/field-combinations',
-        component: FieldCombinations,
+        name: 'Default Field',
+        path: '/default-field',
+        component: DefaultField,
+      },
+      {
+        name: 'Field Error Text',
+        path: '/field-error-text',
+        component: FieldErrorText,
+      },
+      {
+        name: 'Field Help Text',
+        path: '/field-help-text',
+        component: FieldHelpText,
+      },
+      {
+        name: 'Field Hidden Label',
+        path: '/field-hidden-label',
+        component: FieldHiddenLabel,
       },
       {
         name: 'Field Inline',
@@ -1472,6 +1495,31 @@ const componentConfig = {
         name: 'Field Interactive Invalid',
         path: '/field-interactive-invalid',
         component: FieldInteractiveInvalid,
+      },
+      {
+        name: 'Field Label',
+        path: '/field-label',
+        component: FieldLabel,
+      },
+      {
+        name: 'Field Label Error Help Text',
+        path: '/field-label-error-help-text',
+        component: FieldLabelErrorHelpText,
+      },
+      {
+        name: 'Field Label Optional',
+        path: '/field-label-optional',
+        component: FieldLabelOptional,
+      },
+      {
+        name: 'Field Label Required',
+        path: '/field-label-required',
+        component: FieldLabelRequired,
+      },
+      {
+        name: 'Field Label Required Error Help Text',
+        path: '/field-label-required-error-help-text',
+        component: FieldLabelRequiredErrorHelpText,
       },
       {
         name: 'Field Text Wrap',
@@ -1780,7 +1828,7 @@ const componentConfig = {
           {
             name: 'Default Field',
             path: '/default-field',
-            component: DefaultField,
+            component: DefaultField1,
           },
           {
             name: 'Populated Field',

@@ -6,86 +6,65 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 const FieldExamples = () => (
   <Base locale={locale}>
-    <h3>Field - Label</h3>
     <Field
-      id="label"
+      id="inline-1"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
-    >
-      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
-    </Field>
-
-    <h3>Field - Label + Optional</h3>
-    <Field
-      id="label-optional"
-      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-      label="Field Label"
-      showOptional
-    >
-      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
-    </Field>
-
-    <h3>Field - Label + Required</h3>
-    <Field
-      id="label-required"
-      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-      label="Field Label"
+      isInline
       required
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
 
-    <h3>Field - Hidden Label</h3>
     <Field
-      id="label-hidden"
+      id="inline-2"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
-      isLabelHidden
+      isInline
+      showOptional
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
 
-    <h3>Field - Help Text</h3>
     <Field
-      id="help-text"
+      id="inline-3"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
-      isLabelHidden
-      help="Help Message"
+      isInline
+      required
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
-
-    <h3>Field - Error Text</h3>
+    <br />
     <Field
-      id="error-text"
+      id="inline-1"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
-      isLabelHidden
+      isInline
       error="Error Message"
       isInvalid
+      required
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
 
-    <h3>Field - Label + In Error + Help Text</h3>
     <Field
-      id="optional-invalid"
+      id="inline-2"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
-      help="Help Message"
+      isInline
       error="Error Message"
       isInvalid
+      showOptional
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
 
-    <h3>Field -  Label + Required + In Error + Help Text</h3>
     <Field
-      id="required-invalid"
+      id="inline-3"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
-      help="Help Message"
+      isInline
       error="Error Message"
       isInvalid
       required
