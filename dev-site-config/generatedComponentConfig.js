@@ -506,7 +506,7 @@ import TextVisuallyHidden from '../packages/terra-text/examples/test-examples/Te
 import TextWeight from '../packages/terra-text/examples/test-examples/TextWeight.example';
 import Default from '../packages/terra-time-input/examples/test-examples/time-input/Default.example';
 import DefaultTime from '../packages/terra-time-input/examples/test-examples/time-input/DefaultTime.example';
-import Disabled from '../packages/terra-time-input/examples/test-examples/time-input/Disabled.example';
+import Disabled1 from '../packages/terra-time-input/examples/test-examples/time-input/Disabled.example';
 import InvalidTime from '../packages/terra-time-input/examples/test-examples/time-input/InvalidTime.example';
 import OnChange from '../packages/terra-time-input/examples/test-examples/time-input/OnChange.example';
 import Default1 from '../packages/terra-time-input/examples/test-examples/twelve-hour/Default.example';
@@ -3939,7 +3939,7 @@ const componentConfig = {
           {
             name: 'Disabled',
             path: '/disabled',
-            component: Disabled,
+            component: Disabled1,
           },
           {
             name: 'Invalid Time',
