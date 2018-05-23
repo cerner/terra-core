@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import Dialog from '../../../Dialog';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Dialog from 'terra-dialog/lib/Dialog';
 
 const header = 'Header Stuff';
 

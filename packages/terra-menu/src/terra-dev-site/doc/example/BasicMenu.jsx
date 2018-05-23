@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
 import PropTypes from 'prop-types';
-
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Menu from 'terra-menu';
 

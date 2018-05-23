@@ -1,5 +1,6 @@
 import React from 'react';
-import DemographicsBanner from '../../../DemographicsBanner';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import DemographicsBanner from 'terra-demographics-banner/lib/DemographicsBanner';
 
 const BasicDemographicsBanner = () => (
   <DemographicsBanner

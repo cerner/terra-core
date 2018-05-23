@@ -1,6 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import Divider from '../../../Divider';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Divider from 'terra-divider/lib/Divider';
 
 const DividerExample = () => <Divider />;
 

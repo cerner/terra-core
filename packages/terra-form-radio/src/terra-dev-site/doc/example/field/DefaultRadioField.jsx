@@ -1,7 +1,9 @@
 import React from 'react';
 
-import Radio from '../../../../Radio';
-import RadioField from '../../../../RadioField';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Radio from 'terra-form-radio/lib/Radio';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Radio from 'terra-form-radio/lib/RadioField';
 
 const RadioFieldExample = () => (
   <RadioField legend="Which Type of Meal are you looking for?">

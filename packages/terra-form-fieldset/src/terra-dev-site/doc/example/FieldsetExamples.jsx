@@ -1,7 +1,8 @@
 import React from 'react';
 import Field from 'terra-form-field';
-import Fieldset from '../../../Fieldset';
 import Input from 'terra-form-input';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Fieldset from 'terra-form-fieldset/lib/Fieldset';
 
 class FieldsetExamples extends React.Component {
   constructor(props) {

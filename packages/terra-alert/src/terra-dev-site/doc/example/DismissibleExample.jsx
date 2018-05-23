@@ -1,5 +1,6 @@
 import React from 'react';
-import Alert from '../../../Alert';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Alert from 'terra-alert/lib/Alert';
 
 class DismissibleExample extends React.Component {
   constructor(props) {

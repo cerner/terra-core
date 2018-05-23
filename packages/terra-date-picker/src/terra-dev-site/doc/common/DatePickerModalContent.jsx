@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from 'terra-button';
 import AppDelegate from 'terra-app-delegate';
-import DatePicker from '../../../DatePicker';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import DatePicker from 'terra-date-picker/DatePicker';
 
 const ModalContent = (props) => {
   const { app } = props;

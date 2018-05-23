@@ -1,5 +1,6 @@
 import React from 'react';
-import ButtonGroup from '../../../ButtonGroup';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import ButtonGroup from 'terra-button-group/lib/ButtonGroup';
 
 class ButtonGroupMultiSelect extends React.Component {
   constructor(props) {

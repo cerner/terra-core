@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from '../../../DatePicker';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import DatePicker from 'terra-date-picker/DatePicker';
 
 const propTypes = {
   /**

@@ -1,7 +1,8 @@
 import React from 'react';
 import IconCaretUp from 'terra-icon/lib/icon/IconCaretUp';
 import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
-import ButtonGroup from '../../../ButtonGroup';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import ButtonGroup from 'terra-button-group/lib/ButtonGroup';
 
 const iconCaretUp = <IconCaretUp />;
 const iconCaretDown = <IconCaretDown />;

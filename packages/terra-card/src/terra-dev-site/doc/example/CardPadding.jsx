@@ -1,5 +1,6 @@
 import React from 'react';
-import Card from '../../../Card';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Card from 'terra-card/lib/Card';
 
 const CardPadding = () => (
   <div>

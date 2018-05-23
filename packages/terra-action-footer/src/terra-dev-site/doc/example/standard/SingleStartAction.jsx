@@ -1,5 +1,6 @@
 import React from 'react';
-import ActionFooter from '../../../../ActionFooter';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import ActionFooter from 'terra-action-footer/ActionFooter';
 import ExampleTemplate from '../../common/ExampleTemplate';
 
 export default () => (

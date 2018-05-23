@@ -1,6 +1,7 @@
 import React from 'react';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
-import Button from '../../../Button';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Button from 'terra-button/lib/Button';
 
 const buttonStyle = { margin: '5px' };
 

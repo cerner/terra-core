@@ -1,5 +1,6 @@
 import React from 'react';
-import AbstractModal from '../../../AbstractModal';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import AbstractModal from 'terra-abstract-modal/lib/AbstractModal';
 import styles from './ExampleAbstractSize.scss';
 
 class AbstractModalCloseOnOutsideClick extends React.Component {

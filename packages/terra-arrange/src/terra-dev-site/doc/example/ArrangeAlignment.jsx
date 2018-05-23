@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uniqueid from 'lodash.uniqueid';
-import Arrange from '../../../Arrange';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Arrange from 'terra-arrange/lib/Arrange';
 import { ArrangeWrapper, alignLabels, alignOptions } from '../common/examplesetup';
 
 const alignmentTypes = ['all', 'individual'];

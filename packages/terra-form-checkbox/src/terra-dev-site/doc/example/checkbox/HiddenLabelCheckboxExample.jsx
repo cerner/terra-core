@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Checkbox from '../../../../Checkbox';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Checkbox from 'terra-form-checkbox/lib/Checkbox';
 
 const hiddenLabelCheckboxExample = () => (
   <div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import Field from '../../../Field';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Field from 'terra-form-field/lib/Field';
 
 class FieldExamples extends React.Component {
   constructor(props) {

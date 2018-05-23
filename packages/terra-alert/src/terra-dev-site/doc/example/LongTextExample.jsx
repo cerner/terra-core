@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from 'terra-button';
 import Toggle from 'terra-toggle';
-import Alert from '../../../Alert';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Alert from 'terra-alert/lib/Alert';
 
 const buttonStyle = { textDecoration: 'underline', color: '#1c11f21' };
 

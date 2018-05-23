@@ -8,7 +8,8 @@ import IconSend from 'terra-icon/lib/icon/IconSend';
 import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
 import IconFolder from 'terra-icon/lib/icon/IconFolder';
 import IconTrash from 'terra-icon/lib/icon/IconTrash';
-import ActionHeader from '../../../ActionHeader';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import ActionHeader from 'terra-action-header/lib/ActionHeader';
 
 const ActionHeaderExample = () => (
   <div>

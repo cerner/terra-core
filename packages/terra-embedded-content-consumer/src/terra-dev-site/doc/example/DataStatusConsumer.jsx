@@ -1,6 +1,7 @@
 import React from 'react';
 import { Consumer } from 'xfc';
-import EmbeddedContentConsumer from '../../../EmbeddedContentConsumer';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import EmbeddedContentConsumer from 'terra-embedded-content-consumer/lib/EmbeddedContentConsumer';
 
 Consumer.init();
 
