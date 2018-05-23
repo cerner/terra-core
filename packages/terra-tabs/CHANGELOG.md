@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.2.0 - (May 23, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * New variables for theming
 
