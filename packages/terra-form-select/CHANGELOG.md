@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.0.0 - (May 23, 2018)
+------------------
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/docs/UPGRADEGUIDE.md)
 * Removed `boundingRef`
 * Removed `isPlaceholderHidden` - A placeholder option is no longer added by default.
