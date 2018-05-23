@@ -136,6 +136,8 @@ class DateTimePicker extends React.Component {
     this.handleOnDateInputFocus = this.handleOnDateInputFocus.bind(this);
     this.handleOnTimeInputFocus = this.handleOnTimeInputFocus.bind(this);
     this.handleOnCalendarButtonClick = this.handleOnCalendarButtonClick.bind(this);
+    this.handleOffsetButtonClick = this.handleOffsetButtonClick.bind(this);
+    this.handleOnRequestClose = this.handleOnRequestClose.bind(this);
   }
 
   componentWillMount() {
@@ -347,6 +349,14 @@ class DateTimePicker extends React.Component {
     }
   }
 
+  handleOffsetButtonClick() {
+    this.setState(prevState => ({ isTimeClarificationOpen: !prevState.isTimeClarificationOpen }));
+  }
+
+  handleOnRequestClose() {
+    this.setState({ isTimeClarificationOpen: false });
+  }
+
   renderTimeClarification() {
     return (
       <TimeClarification
@@ -354,6 +364,10 @@ class DateTimePicker extends React.Component {
         isOffsetButtonHidden={!this.state.isAmbiguousTime}
         onDaylightSavingButtonClick={this.handleDaylightSavingButtonClick}
         onStandardTimeButtonClick={this.handleStandardTimeButtonClick}
+        onOffsetButtonClick={this.handleOffsetButtonClick}
+        onRequestClose={this.handleOnRequestClose}
+        releaseFocus={this.props.releaseFocus}
+        requestFocus={this.props.requestFocus}
       />
     );
   }
