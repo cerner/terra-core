@@ -7,7 +7,7 @@ Consumer.init();
 
 const BasicConsumer = () => (
   <EmbeddedContentConsumer
-    src="#/raw/tests/embedded-content-consumer/providers/basic-provider"
+    src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/basic-provider"
   />
 );
 

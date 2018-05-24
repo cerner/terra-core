@@ -9,7 +9,7 @@ const options = { resizeConfig: { fixedHeight: '100%', fixedWidth: '100%' } };
 
 const fillConsumer = () => (
   <EmbeddedContentConsumer
-    src="#/raw/tests/embedded-content-consumer/providers/fill-provider"
+    src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/fill-provider"
     options={options}
     className="embedded-content-fill"
   />

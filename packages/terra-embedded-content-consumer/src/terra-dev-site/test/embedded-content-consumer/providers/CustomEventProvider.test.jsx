@@ -13,6 +13,10 @@ class CustomEventProvider extends React.Component {
     Provider.trigger('EventA');
   }
 
+  componentWillUnmount() {
+    document.body.classList.toggle('embedded-content-body');
+  }
+
   render() {
     return (
       <div>

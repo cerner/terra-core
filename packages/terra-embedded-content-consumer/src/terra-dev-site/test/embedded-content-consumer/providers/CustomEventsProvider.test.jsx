@@ -14,6 +14,10 @@ class CustomEventsProvider extends React.Component {
     setTimeout(() => { Provider.trigger('EventB'); }, 1000);
   }
 
+  componentWillUnmount() {
+    document.body.classList.toggle('embedded-content-body');
+  }
+
   render() {
     return (
       <div>

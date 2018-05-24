@@ -6,6 +6,10 @@ class BasicProvider extends React.Component {
     document.body.classList.toggle('embedded-content-body');
   }
 
+  componentWillUnmount() {
+    document.body.classList.toggle('embedded-content-body');
+  }
+
   render() {
     return (
       <div>

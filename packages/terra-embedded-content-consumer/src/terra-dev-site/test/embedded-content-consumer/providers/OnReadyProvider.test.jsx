@@ -17,6 +17,10 @@ class OnReadyProvider extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    document.body.classList.toggle('embedded-content-body');
+  }
+
   render() {
     return (
       <div>

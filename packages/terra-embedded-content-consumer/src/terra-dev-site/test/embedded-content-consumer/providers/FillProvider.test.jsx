@@ -13,6 +13,10 @@ class FillProvider extends React.Component {
     Provider.init({ acls: [window.location.origin] });
   }
 
+  componentWillUnmount() {
+    document.body.classList.toggle('embedded-content-body');
+  }
+
   render() {
     return (
       <div>
