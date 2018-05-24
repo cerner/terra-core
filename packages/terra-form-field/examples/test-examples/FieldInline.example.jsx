@@ -37,7 +37,7 @@ const FieldExamples = () => (
     </Field>
     <br />
     <Field
-      id="inline-1"
+      id="inline-4"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -49,7 +49,7 @@ const FieldExamples = () => (
     </Field>
 
     <Field
-      id="inline-2"
+      id="inline-5"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -61,7 +61,7 @@ const FieldExamples = () => (
     </Field>
 
     <Field
-      id="inline-3"
+      id="inline-6"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
