@@ -9,25 +9,25 @@ const selectedClasses = ['selected', 'selected', 'selected'];
 module.exports = resizeTo(['medium'], {
   'Displays a multi select list': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/default-multi-select-list`)
+      .url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list`)
       .assert.elementPresent('ul');
   },
 
   'Displays items in the multi select list': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/default-multi-select-list`)
+      .url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list`)
       .assert.containsText('ul li:nth-child(1)', 'test 1')
       .assert.containsText('ul li:nth-child(2)', 'test 2')
       .assert.containsText('ul li:nth-child(3)', 'test 3');
   },
 
   'Displays items in the multi select list with a max selection count of 2': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/max-count-multi-select-list`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/max-count-multi-select-list`);
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, true, false]);
   },
 
   'Display a multi select list and highlights the selected item(s) upon clicking': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/default-multi-select-list`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list`);
 
     browser.click('ul li:nth-child(1)');
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, false, false]);
@@ -46,7 +46,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Display a multi select list and highlights the selected item(s) upon enter': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/default-multi-select-list`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list`);
 
     browser.sendKeys('ul li:nth-child(1)', browser.Keys.ENTER);
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, false, false]);
@@ -65,7 +65,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a multi select list and highlights the selected item(s) upon space keydown': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/default-multi-select-list`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list`);
 
     browser.sendKeys('ul li:nth-child(1)', browser.Keys.SPACE);
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, false, false]);
@@ -84,7 +84,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a multi select list  with max selection of 2 and highlights the selected item(s)': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/max-count-multi-select-list`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/max-count-multi-select-list`);
 
     browser.sendKeys('ul li:nth-child(3)', browser.Keys.ENTER);
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, true, false]);
@@ -97,7 +97,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Triggers onChange for multi select list': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/on-change-multi-select-list`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/on-change-multi-select-list`);
 
     browser.sendKeys('ul li:nth-child(1)', browser.Keys.ENTER);
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, false, false]);
@@ -121,7 +121,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Triggers onChange for multi select list with max selection of 2': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/on-change-multi-select-list-with-max-selection`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/on-change-multi-select-list-with-max-selection`);
 
     browser.sendKeys('ul li:nth-child(1)', browser.Keys.ENTER);
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, false, false]);
@@ -145,7 +145,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a selected item in the multi select list that cannot be deselected': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/multi-select-list-with-no-deselect-item`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-list/list/multi-select-list/multi-select-list-with-no-deselect-item`);
     browser.expect.element('ul li:nth-child(1)').to.have.attribute('class').which.contains('selected');
     browser.expect.element('ul li:nth-child(1)').to.have.attribute('class').which.not.contains('is-selectable');
 

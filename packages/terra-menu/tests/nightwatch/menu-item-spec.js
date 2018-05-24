@@ -5,21 +5,21 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['medium'], {
   'Displays a default Menu.item': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item/menu-item-default`)
+      .url(`${browser.launchUrl}/#/raw/tests/terra-menu/menu/menu-item/menu-item-default`)
       .assert.elementPresent('.TestMenuItem')
       .assert.containsText('.TestMenuItem', 'DefaultMenuItem');
   },
 
   'Displays a Menu.item with wrapped text': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item/menu-item-wrapped-text`)
+      .url(`${browser.launchUrl}/#/raw/tests/terra-menu/menu/menu-item/menu-item-wrapped-text`)
       .assert.elementPresent('.testWrappedItem')
       .assert.cssProperty('.testWrappedItem', 'overflow', 'visible')
       .assert.containsText('.testWrappedItem', 'This menu item has a really long text that should wrap.');
   },
   'Displays a Selectable Menu.Item': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item/menu-item-selectable`)
+      .url(`${browser.launchUrl}/#/raw/tests/terra-menu/menu/menu-item/menu-item-selectable`)
       .assert.elementPresent('.TestSelectableItem')
       .click('.TestSelectableItem')
       .assert.visible('.TestSelectableItem svg[class*="_checkmark"]')
@@ -34,13 +34,13 @@ module.exports = resizeTo(['medium'], {
   },
   'Displays a Menu.Item with a submenu indicator': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item/menu-item-sub-menu`)
+      .url(`${browser.launchUrl}/#/raw/tests/terra-menu/menu/menu-item/menu-item-sub-menu`)
       .assert.elementPresent('.TestSubMenuItem')
       .assert.elementPresent('.TestSubMenuItem svg[class*="_chevron"]');
   },
   'Triggers onClick for Menu.Item': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item/menu-item-on-click`)
+      .url(`${browser.launchUrl}/#/raw/tests/terra-menu/menu/menu-item/menu-item-on-click`)
       .assert.containsText('#clickNumber', '0')
       .click('.TestOnClickItem')
       .assert.containsText('#clickNumber', '1');
@@ -50,7 +50,7 @@ module.exports = resizeTo(['medium'], {
     browser.expect.element('#clickNumber').text.to.contain('3');
   },
   'Disables a Menu.Item when indicated': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/menu/menu-item/menu-item-disabled`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-menu/menu/menu-item/menu-item-disabled`);
     browser.expect.element('.TestDisabledItem').to.be.present;
     browser.expect.element('.TestDisabledItem svg[class*="_checkmark"]').to.not.be.visible;
     browser.click('.TestDisabledItem');
