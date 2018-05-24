@@ -1,8 +1,7 @@
 import React from 'react';
 import Button from 'terra-button';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import AppDelegate from 'terra-app-delegate';
-import DateTimePicker from '../../DateTimePicker';
+import DateTimePicker from '../../../DateTimePicker';
 
 class ModalContainer extends React.Component {
   constructor(props) {
