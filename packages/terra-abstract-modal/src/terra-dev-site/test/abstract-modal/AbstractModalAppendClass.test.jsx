@@ -1,8 +1,8 @@
 import React from 'react';
-import AbstractModal from '../../AbstractModal';
+import AbstractModal from '../../../AbstractModal';
 import './AbstractModalTestStyles.scss';
 
-class ModalIsFullscreen extends React.Component {
+class ModalAppendClass extends React.Component {
   constructor() {
     super();
 
@@ -13,6 +13,7 @@ class ModalIsFullscreen extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
+
 
   handleOpenModal() {
     this.setState({ isOpen: true });
@@ -26,11 +27,11 @@ class ModalIsFullscreen extends React.Component {
     return (
       <div>
         <AbstractModal
+          classNameOverlay="overlay-custom-class"
+          classNameModal="modal-custom-class"
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
-          isFullscreen
           onRequestClose={this.handleCloseModal}
-          classNameModal="test-background-class"
         >
           <div>
             <h1>Terra Modal</h1>
@@ -41,12 +42,10 @@ class ModalIsFullscreen extends React.Component {
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </AbstractModal>
-        <button className="button-open-modal" onClick={this.handleOpenModal}>Open isOpen modal</button>
+        <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }
 }
 
-
-export default ModalIsFullscreen;
-
+export default ModalAppendClass;

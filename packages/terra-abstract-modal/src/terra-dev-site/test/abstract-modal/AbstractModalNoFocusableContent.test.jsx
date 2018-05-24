@@ -1,8 +1,8 @@
 import React from 'react';
-import AbstractModal from '../../AbstractModal';
+import AbstractModal from '../../../AbstractModal';
 import './AbstractModalTestStyles.scss';
 
-class ModalDisableCloseOnEsc extends React.Component {
+class ModalNoFocusableContent extends React.Component {
   constructor() {
     super();
 
@@ -13,6 +13,8 @@ class ModalDisableCloseOnEsc extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
+
+
   handleOpenModal() {
     this.setState({ isOpen: true });
   }
@@ -28,17 +30,9 @@ class ModalDisableCloseOnEsc extends React.Component {
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
-          closeOnEsc={false}
           classNameModal="test-background-class"
         >
-          <div>
-            <h1>Terra Modal</h1>
-            <h2>Subtitle</h2>
-            <hr />
-            <p>The Terra Modal is appended to the document body.</p>
-            <p>{'Modal is assigned a role of \'document\' for accessibility.'}</p>
-            <button onClick={this.handleCloseModal}>Close Modal</button>
-          </div>
+          <div>No focusable content inside the modal.</div>
         </AbstractModal>
         <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
@@ -46,4 +40,4 @@ class ModalDisableCloseOnEsc extends React.Component {
   }
 }
 
-export default ModalDisableCloseOnEsc;
+export default ModalNoFocusableContent;

@@ -1,8 +1,8 @@
 import React from 'react';
-import AbstractModal from '../../AbstractModal';
+import AbstractModal from '../../../AbstractModal';
 import './AbstractModalTestStyles.scss';
 
-class ModalOverrideRole extends React.Component {
+class ModalDisableCloseOnOutsideClick extends React.Component {
   constructor() {
     super();
 
@@ -13,7 +13,6 @@ class ModalOverrideRole extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
-
   handleOpenModal() {
     this.setState({ isOpen: true });
   }
@@ -23,27 +22,28 @@ class ModalOverrideRole extends React.Component {
   }
 
   render() {
-    const newRole = 'button';
     return (
       <div>
         <AbstractModal
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
+          closeOnOutsideClick={false}
           onRequestClose={this.handleCloseModal}
-          role={newRole}
           classNameModal="test-background-class"
         >
           <div>
-            <p>The role is overriden to <b>{newRole}</b></p>
+            <h1>Terra Modal</h1>
+            <h2>Subtitle</h2>
+            <hr />
+            <p>The Terra Modal is appended to the document body.</p>
+            <p>{'Modal is assigned a role of \'document\' for accessibility.'}</p>
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </AbstractModal>
-        <button className="button-open-modal" onClick={this.handleOpenModal}>Open isOpen modal</button>
+        <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }
 }
 
-
-export default ModalOverrideRole;
-
+export default ModalDisableCloseOnOutsideClick;

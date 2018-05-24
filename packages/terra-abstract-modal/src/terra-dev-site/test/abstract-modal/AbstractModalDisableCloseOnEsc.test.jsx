@@ -1,19 +1,18 @@
 import React from 'react';
-import AbstractModal from '../../AbstractModal';
+import AbstractModal from '../../../AbstractModal';
 import './AbstractModalTestStyles.scss';
 
-class ModalIsOpen extends React.Component {
+class ModalDisableCloseOnEsc extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      isOpen: false,
+      isOpen: true,
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
-
   handleOpenModal() {
     this.setState({ isOpen: true });
   }
@@ -24,11 +23,12 @@ class ModalIsOpen extends React.Component {
 
   render() {
     return (
-      <div id="modal">
+      <div>
         <AbstractModal
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
+          closeOnEsc={false}
           classNameModal="test-background-class"
         >
           <div>
@@ -46,4 +46,4 @@ class ModalIsOpen extends React.Component {
   }
 }
 
-export default ModalIsOpen;
+export default ModalDisableCloseOnEsc;

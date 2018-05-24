@@ -1,8 +1,8 @@
 import React from 'react';
-import AbstractModal from '../../AbstractModal';
+import AbstractModal from '../../../AbstractModal';
 import './AbstractModalTestStyles.scss';
 
-class ModalNoFocusableContent extends React.Component {
+class ModalCustomProps extends React.Component {
   constructor() {
     super();
 
@@ -27,12 +27,20 @@ class ModalNoFocusableContent extends React.Component {
     return (
       <div>
         <AbstractModal
+          id="custom-props"
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
           classNameModal="test-background-class"
         >
-          <div>No focusable content inside the modal.</div>
+          <div>
+            <h1>Terra Modal</h1>
+            <h2>Subtitle</h2>
+            <hr />
+            <p>The Terra Modal is appended to the document body.</p>
+            <p>{'Modal is assigned a role of \'document\' for accessibility.'}</p>
+            <button onClick={this.handleCloseModal}>Close Modal</button>
+          </div>
         </AbstractModal>
         <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
@@ -40,4 +48,4 @@ class ModalNoFocusableContent extends React.Component {
   }
 }
 
-export default ModalNoFocusableContent;
+export default ModalCustomProps;

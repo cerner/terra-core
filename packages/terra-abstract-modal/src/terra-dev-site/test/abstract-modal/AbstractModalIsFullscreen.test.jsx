@@ -1,8 +1,8 @@
 import React from 'react';
-import AbstractModal from '../../AbstractModal';
+import AbstractModal from '../../../AbstractModal';
 import './AbstractModalTestStyles.scss';
 
-class ModalDisableCloseOnOutsideClick extends React.Component {
+class ModalIsFullscreen extends React.Component {
   constructor() {
     super();
 
@@ -13,6 +13,7 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
+
   handleOpenModal() {
     this.setState({ isOpen: true });
   }
@@ -27,7 +28,7 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
         <AbstractModal
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
-          closeOnOutsideClick={false}
+          isFullscreen
           onRequestClose={this.handleCloseModal}
           classNameModal="test-background-class"
         >
@@ -40,10 +41,12 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </AbstractModal>
-        <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
+        <button className="button-open-modal" onClick={this.handleOpenModal}>Open isOpen modal</button>
       </div>
     );
   }
 }
 
-export default ModalDisableCloseOnOutsideClick;
+
+export default ModalIsFullscreen;
+

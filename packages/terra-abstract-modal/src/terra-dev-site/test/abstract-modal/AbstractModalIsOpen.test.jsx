@@ -1,19 +1,18 @@
 import React from 'react';
-import AbstractModal from '../../AbstractModal';
+import AbstractModal from '../../../AbstractModal';
 import './AbstractModalTestStyles.scss';
 
-class ModalCustomProps extends React.Component {
+class ModalIsOpen extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      isOpen: true,
+      isOpen: false,
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
-
 
   handleOpenModal() {
     this.setState({ isOpen: true });
@@ -25,9 +24,8 @@ class ModalCustomProps extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="modal">
         <AbstractModal
-          id="custom-props"
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
@@ -48,4 +46,4 @@ class ModalCustomProps extends React.Component {
   }
 }
 
-export default ModalCustomProps;
+export default ModalIsOpen;
