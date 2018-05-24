@@ -1,5 +1,5 @@
 import React from 'react';
-import IconAdd from '../../lib/icon/IconAdd';
+import IconAdd from '../../../icon/IconAdd';
 
 const IconDefault = () => (
   <div>

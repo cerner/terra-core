@@ -37,7 +37,7 @@
     "terra-base": "^3.10.0",
     "terra-button": "^2.11.0",
     "terra-icon": "^2.10.0",
-    "terra-responsive-element": "^2.10.0"
+    "terra-responsive-element": "^2.10.0",
     "terra-toggle": "^2.9.0"
   },
   "scripts": {

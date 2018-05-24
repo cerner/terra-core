@@ -1,6 +1,6 @@
 import React from 'react';
-import IconComment from '../../lib/icon/IconComment';
-import IconDeviceCheck from '../../lib/icon/IconDeviceCheck';
+import IconComment from '../../../icon/IconComment';
+import IconDeviceCheck from '../../../icon/IconDeviceCheck';
 
 const IconBidi = () => (
   <div dir="rtl">
