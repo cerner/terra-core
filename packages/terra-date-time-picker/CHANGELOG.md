@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.12.0 - (May 23, 2018)
+------------------
 ### Changed
 * Dependency on terra-modal removed, now depends on terra-abstract-modal.
 
