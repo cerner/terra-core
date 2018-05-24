@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Update example header to display the singular or pluralized form of example (Example or Examples)
 
 1.3.0 - (May 23, 2018)
 ------------------
