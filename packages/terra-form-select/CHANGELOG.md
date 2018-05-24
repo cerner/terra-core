@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* A SelectField component.
 
 4.0.0 - (May 23, 2018)
 ------------------

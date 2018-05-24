@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Example page for terra-form-select SelectField.
 
 2.12.0 - (May 23, 2018)
 ------------------

@@ -32,6 +32,7 @@ import TerraSiteInputFieldIndex from '../packages/terra-site/src/examples/form-i
 import TerraSiteIndex25 from '../packages/terra-site/src/examples/form-radio/Index';
 import TerraSiteRadioFieldIndex from '../packages/terra-site/src/examples/form-radio/RadioFieldIndex';
 import TerraSiteIndex26 from '../packages/terra-site/src/examples/form-select/Index';
+import TerraSiteSelectFieldIndex from '../packages/terra-site/src/examples/form-select/SelectFieldIndex';
 import TerraSiteIndex27 from '../packages/terra-site/src/examples/form-textarea/Index';
 import TerraSiteTextareaFieldIndex from '../packages/terra-site/src/examples/form-textarea/TextareaFieldIndex';
 import TerraSiteIndex28 from '../packages/terra-site/src/examples/form/Index';
@@ -40,7 +41,7 @@ import TerraSiteFieldIndex from '../packages/terra-site/src/examples/form/compon
 import TerraSiteFieldsetIndex from '../packages/terra-site/src/examples/form/components/FieldsetIndex';
 import TerraSiteInputIndex from '../packages/terra-site/src/examples/form/components/InputIndex';
 import TerraSiteNumberFieldIndex from '../packages/terra-site/src/examples/form/components/NumberFieldIndex';
-import TerraSiteSelectFieldIndex from '../packages/terra-site/src/examples/form/components/SelectFieldIndex';
+import TerraSiteSelectFieldIndex1 from '../packages/terra-site/src/examples/form/components/SelectFieldIndex';
 import TerraSiteSelectIndex from '../packages/terra-site/src/examples/form/components/SelectIndex';
 import TerraSiteTextFieldIndex from '../packages/terra-site/src/examples/form/components/TextFieldIndex';
 import TerraSiteTextareaFieldIndex1 from '../packages/terra-site/src/examples/form/components/TextareaFieldIndex';
@@ -261,6 +262,7 @@ import ControlledTag from '../packages/terra-form-select/examples/test-examples/
 import Disabled from '../packages/terra-form-select/examples/test-examples/Disabled.example';
 import ManyOptions from '../packages/terra-form-select/examples/test-examples/ManyOptions.example';
 import OptGroup from '../packages/terra-form-select/examples/test-examples/OptGroup.example';
+import SelectField from '../packages/terra-form-select/examples/test-examples/SelectField.example';
 import UncontrolledCombobox from '../packages/terra-form-select/examples/test-examples/UncontrolledCombobox.example';
 import UncontrolledDefault from '../packages/terra-form-select/examples/test-examples/UncontrolledDefault.example';
 import UncontrolledDefaultLongText from '../packages/terra-form-select/examples/test-examples/UncontrolledDefaultLongText.example';
@@ -1644,6 +1646,11 @@ const componentConfig = {
         component: OptGroup,
       },
       {
+        name: 'Select Field',
+        path: '/select-field',
+        component: SelectField,
+      },
+      {
         name: 'Uncontrolled Combobox',
         path: '/uncontrolled-combobox',
         component: UncontrolledCombobox,
@@ -3009,6 +3016,11 @@ const componentConfig = {
             path: '/index',
             component: TerraSiteIndex26,
           },
+          {
+            name: 'Select Field Index',
+            path: '/select-field-index',
+            component: TerraSiteSelectFieldIndex,
+          },
         ],
       },
       {
@@ -3064,7 +3076,7 @@ const componentConfig = {
           {
             name: 'Select Field Index',
             path: '/select-field-index',
-            component: TerraSiteSelectFieldIndex,
+            component: TerraSiteSelectFieldIndex1,
           },
           {
             name: 'Select Index',
