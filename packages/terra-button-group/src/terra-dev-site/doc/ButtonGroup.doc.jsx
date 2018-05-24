@@ -10,13 +10,13 @@ import ButtonGroupButtonSrc from '!raw-loader!terra-button-group/src/ButtonGroup
 
 // Examples
 import ButtonGroupWithIcons from './example/ButtonGroupWithIcons';
-import ButtonGroupWithIconsSrc from '!raw-loader!./example/ButtonGroupWithIcons';
+import ButtonGroupWithIconsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonGroupWithIcons';
 import ButtonGroupDisabledButtons from './example/ButtonGroupDisabledButtons';
-import ButtonGroupDisabledButtonsSrc from '!raw-loader!./example/ButtonGroupDisabledButtons';
+import ButtonGroupDisabledButtonsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonGroupDisabledButtons';
 import ButtonGroupSingleSelect from './example/ButtonGroupSingleSelect';
-import ButtonGroupSingleSelectSrc from '!raw-loader!./example/ButtonGroupSingleSelect';
+import ButtonGroupSingleSelectSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonGroupSingleSelect';
 import ButtonGroupMultiSelect from './example/ButtonGroupMultiSelect';
-import ButtonGroupMultiSelectSrc from '!raw-loader!./example/ButtonGroupMultiSelect';
+import ButtonGroupMultiSelectSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonGroupMultiSelect';
 
 
 const DocPage = () => (

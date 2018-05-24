@@ -9,11 +9,11 @@ import ModalSrc from '!raw-loader!terra-abstract-modal/src/AbstractModal';
 
 // Example Files
 import AbstractModalIsOpened from './example/AbstractModalIsOpened';
-import AbstractModalIsOpenedSrc from '!raw-loader!./example/AbstractModalIsOpened';
+import AbstractModalIsOpenedSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AbstractModalIsOpened';
 import AbstractModalCloseOnOutsideClick from './example/AbstractModalCloseOnOutsideClick';
-import AbstractModalCloseOnOutsideClickSrc from '!raw-loader!./example/AbstractModalCloseOnOutsideClick';
+import AbstractModalCloseOnOutsideClickSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AbstractModalCloseOnOutsideClick';
 import AbstractModalIsFullscreen from './example/AbstractModalIsFullscreen';
-import AbstractModalIsFullscreenSrc from '!raw-loader!./example/AbstractModalIsFullscreen';
+import AbstractModalIsFullscreenSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AbstractModalIsFullscreen';
 
 const DocPage = () => (
   <DocTemplate

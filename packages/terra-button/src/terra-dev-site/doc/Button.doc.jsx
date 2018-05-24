@@ -9,17 +9,17 @@ import ButtonSrc from '!raw-loader!terra-button/src/Button';
 
 // Example Files
 import ButtonBlock from './example/ButtonBlock';
-import ButtonBlockSrc from '!raw-loader!./example/ButtonBlock';
+import ButtonBlockSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonBlock';
 import ButtonAnchor from './example/ButtonAnchor';
-import ButtonAnchorSrc from '!raw-loader!./example/ButtonAnchor';
+import ButtonAnchorSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonAnchor';
 import ButtonDisabled from './example/ButtonDisabled';
-import ButtonDisabledSrc from '!raw-loader!./example/ButtonDisabled';
+import ButtonDisabledSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonDisabled';
 import ButtonOnClick from './example/ButtonOnClick';
-import ButtonOnClickSrc from '!raw-loader!./example/ButtonOnClick';
+import ButtonOnClickSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonOnClick';
 import ButtonIcon from './example/ButtonIcon';
-import ButtonIconSrc from '!raw-loader!./example/ButtonIcon';
+import ButtonIconSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonIcon';
 import ButtonVariant from './example/ButtonVariant';
-import ButtonVariantSrc from '!raw-loader!./example/ButtonVariant';
+import ButtonVariantSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonVariant';
 
 const DocPage = () => (
   <DocTemplate

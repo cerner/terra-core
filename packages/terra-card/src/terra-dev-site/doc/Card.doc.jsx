@@ -10,19 +10,19 @@ import CardBodySrc from '!raw-loader!terra-card/src/CardBody';
 
 // Example Files
 import CardDefault from './example/CardDefault';
-import CardDefaultSrc from '!raw-loader!./example/CardDefault';
+import CardDefaultSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardDefault';
 import CardRaised from './example/CardRaised';
-import CardRaisedSrc from '!raw-loader!./example/CardRaised';
+import CardRaisedSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardRaised';
 import CardPadding from './example/CardPadding';
-import CardPaddingSrc from '!raw-loader!./example/CardPadding';
+import CardPaddingSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPadding';
 import CardPaddingVertical from './example/CardPaddingVertical';
-import CardPaddingVerticalSrc from '!raw-loader!./example/CardPaddingVertical';
+import CardPaddingVerticalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPaddingVertical';
 import CardPaddingHorizontal from './example/CardPaddingHorizontal';
-import CardPaddingHorizontalSrc from '!raw-loader!./example/CardPaddingHorizontal';
+import CardPaddingHorizontalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPaddingHorizontal';
 import CardPaddingHR from './example/CardPaddingHR';
-import CardPaddingHRSrc from '!raw-loader!./example/CardPaddingHR';
+import CardPaddingHRSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPaddingHR';
 import CardContentCentered from './example/CardContentCentered';
-import CardContentCenteredSrc from '!raw-loader!./example/CardContentCentered';
+import CardContentCenteredSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardContentCentered';
 
 const DocPage = () => (
   <DocTemplate

@@ -9,15 +9,15 @@ import AvatarSrc from '!raw-loader!terra-avatar/src/Avatar';
 
 // Example Files
 import AvatarUser from './example/AvatarUser';
-import AvatarUserSrc from '!raw-loader!./example/AvatarUser';
+import AvatarUserSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AvatarUser';
 import AvatarFacility from './example/AvatarFacility';
-import AvatarFacilitySrc from '!raw-loader!./example/AvatarFacility';
+import AvatarFacilitySrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AvatarFacility';
 import AvatarTwoInitials from './example/AvatarTwoInitials';
-import AvatarTwoInitialsSrc from '!raw-loader!./example/AvatarTwoInitials';
+import AvatarTwoInitialsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AvatarTwoInitials';
 import AvatarThreeInitials from './example/AvatarThreeInitials';
-import AvatarThreeInitialsSrc from '!raw-loader!./example/AvatarThreeInitials';
+import AvatarThreeInitialsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AvatarThreeInitials';
 import AvatarImage from './example/AvatarImage';
-import AvatarImageSrc from '!raw-loader!./example/AvatarImage';
+import AvatarImageSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AvatarImage';
 
 const DocPage = () => (
   <DocTemplate

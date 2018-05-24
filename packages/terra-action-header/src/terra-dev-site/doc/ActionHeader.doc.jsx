@@ -9,19 +9,19 @@ import ActionHeaderSrc from '!raw-loader!terra-action-header/src/ActionHeader';
 
 // Example Files
 import DefaultActionHeader from './example/DefaultActionHeader';
-import DefaultActionHeaderSrc from '!raw-loader!./example/DefaultActionHeader';
+import DefaultActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DefaultActionHeader';
 import BackActionHeader from './example/BackActionHeader';
-import BackActionHeaderSrc from '!raw-loader!./example/BackActionHeader';
+import BackActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BackActionHeader';
 import BackCloseActionHeader from './example/BackCloseActionHeader';
-import BackCloseActionHeaderSrc from '!raw-loader!./example/BackCloseActionHeader';
+import BackCloseActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BackCloseActionHeader';
 import CloseActionHeader from './example/CloseActionHeader';
-import CloseActionHeaderSrc from '!raw-loader!./example/CloseActionHeader';
+import CloseActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CloseActionHeader';
 import MaximizeCloseActionHeader from './example/MaximizeCloseActionHeader';
-import MaximizeCloseActionHeaderSrc from '!raw-loader!./example/MaximizeCloseActionHeader';
+import MaximizeCloseActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MaximizeCloseActionHeader';
 import MinimizeCustomButtonActionHeader from './example/MinimizeCustomButtonActionHeader';
-import MinimizeCustomButtonActionHeaderSrc from '!raw-loader!./example/MinimizeCustomButtonActionHeader';
+import MinimizeCustomButtonActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MinimizeCustomButtonActionHeader';
 import BackPreviousNextCloseActionHeader from './example/BackPreviousNextCloseActionHeader';
-import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!./example/BackPreviousNextCloseActionHeader';
+import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BackPreviousNextCloseActionHeader';
 
 const DocPage = () => (
   <DocTemplate

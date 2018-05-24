@@ -9,9 +9,9 @@ import ContentContainerSrc from '!raw-loader!terra-content-container/src/Content
 
 // Example Files
 import ContentContainerStandard from './example/ContentContainerStandard';
-import ContentContainerStandardSrc from '!raw-loader!./example/ContentContainerStandard';
+import ContentContainerStandardSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ContentContainerStandard';
 import ContentContainerFill from './example/ContentContainerFill';
-import ContentContainerFillSrc from '!raw-loader!./example/ContentContainerFill';
+import ContentContainerFillSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ContentContainerFill';
 
 const DocPage = () => (
   <DocTemplate
