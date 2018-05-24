@@ -12,7 +12,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Draw a line signature and verify canvas': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-signature/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
