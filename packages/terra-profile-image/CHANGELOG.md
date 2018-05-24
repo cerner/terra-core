@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.10.0 - (May 23, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Converted nightwatch to webdriverIO.
 
 2.9.0 - (May 16, 2018)

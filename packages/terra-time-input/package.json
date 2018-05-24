@@ -1,7 +1,7 @@
 {
   "name": "terra-time-input",
   "main": "lib/TimeInput.js",
-  "version": "2.10.0",
+  "version": "2.11.0",
   "description": "A controlled input component for entering time.",
   "repository": {
     "type": "git",
@@ -30,10 +30,10 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-intl": "^2.4.0",
-    "terra-base": "^3.9.0",
-    "terra-button-group": "^2.10.0",
+    "terra-base": "^3.10.0",
+    "terra-button-group": "^2.11.0",
     "terra-doc-template": "^1.2.0",
-    "terra-form": "^2.9.0"
+    "terra-form": "^2.10.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
