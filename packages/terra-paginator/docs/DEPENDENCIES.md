@@ -5,15 +5,17 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| react-lifecycles-compat | ^3.0.2 | -- | Backwards compatibility polyfill for React class components |
 | terra-base | ^3.10.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-hookshot | ^4.0.0 | ^16.2.0 | The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected. |
-| terra-mixins | ^1.14.0 | -- | terra-mixins |
+| terra-button | ^2.11.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-form-input | ^1.9.0 | ^16.2.0 | Element for building out inputs in a form. |
+| terra-icon | ^2.10.0 | ^16.2.0 | terra-icon |
+| terra-mixins | ^1.15.0 | -- | terra-mixins |
+| terra-responsive-element | ^2.10.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| react-intl | ^2.4.0 | ^0.14.9 \|\| ^15.0.0 \|\| ^16.0.0 | Internationalize React apps. This library provides React components and an API to format dates, numbers, and strings, including pluralization and handling translations. |
+| terra-props-table | ^2.8.0 | ^16.2.0 | terra-props-table |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
@@ -21,3 +23,4 @@
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
 | terra-base | ^3.7.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-mixins | ^1.15.0 | -- | terra-mixins |
