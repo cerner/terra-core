@@ -101,7 +101,7 @@ const defaultProps = {
   selectAttrs: {},
   showOptional: false,
   value: undefined,
-  variant: Variants.DEFAULT,
+  variant: 'default',
 };
 
 const SelectField = ({
