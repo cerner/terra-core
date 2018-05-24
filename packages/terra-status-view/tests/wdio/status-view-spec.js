@@ -4,7 +4,7 @@ const viewports = Terra.viewports('tiny', 'medium');
 
 describe('StatusView', () => {
   describe('Displays a default status view', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-default'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-default'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -20,7 +20,7 @@ describe('StatusView', () => {
   });
 
   describe('Displays an error status view with all props given', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-error-all-props'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-error-all-props'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -47,7 +47,7 @@ describe('StatusView', () => {
   });
 
   describe('Displays an error status view with the glyph being hidden', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-glyph-hidden'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-glyph-hidden'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -63,7 +63,7 @@ describe('StatusView', () => {
   });
 
   describe('Displays an error status view with the glyph being hidden with too small of a height', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-height-too-small'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-height-too-small'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -90,7 +90,7 @@ describe('StatusView', () => {
   });
 
   describe('Displays a no-data status view with the content centered in its container', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-center'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-center'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -106,7 +106,7 @@ describe('StatusView', () => {
   });
 
   describe('Displays a no-matching-results status view with the content aligned at the top in its container', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-align-top'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-align-top'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -122,7 +122,7 @@ describe('StatusView', () => {
   });
 
   describe('Displays a not-authorized status view', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-not-authorized'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-not-authorized'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -138,7 +138,7 @@ describe('StatusView', () => {
   });
 
   describe('Displays a custom status view', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-custom'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-custom'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -154,7 +154,7 @@ describe('StatusView', () => {
   });
 
   describe('Displays an error status view that displays wrapping text', () => {
-    beforeEach(() => browser.url('/#/raw/tests/status-view/status-view-text-wrapping'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-text-wrapping'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
