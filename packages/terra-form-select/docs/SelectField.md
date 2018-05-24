@@ -1,4 +1,4 @@
-# Terra Form Select
+# Terra Form Select Field
 
 A convenience wrapper assembling a [terra-form-select](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select) within a [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field).
 
