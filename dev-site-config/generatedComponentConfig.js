@@ -261,18 +261,20 @@ import ControlledRadioField from '../packages/terra-form-radio/examples/test-exa
 import HiddenLegend1 from '../packages/terra-form-radio/examples/test-examples/radio-field/HiddenLegend.example';
 import HideRequiredInvalidRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/HideRequiredInvalidRadioField.example';
 import OptionalRadioField from '../packages/terra-form-radio/examples/test-examples/radio-field/OptionalRadioField.example';
-import DefaultSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/DefaultSelectOption';
-import DisabledSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/DisabledSelectOption';
-import SelectOptionLongText from '../packages/terra-form-select/tests/nightwatch/select-option/SelectOptionLongText';
-import SelectOptionWithChildren from '../packages/terra-form-select/tests/nightwatch/select-option/SelectOptionWithChildren';
-import SelectedSelectOption from '../packages/terra-form-select/tests/nightwatch/select-option/SelectedSelectOption';
-import BlankSelect from '../packages/terra-form-select/tests/nightwatch/select/BlankSelect';
-import ControlledSelect from '../packages/terra-form-select/tests/nightwatch/select/ControlledSelect';
-import DefaultSelect from '../packages/terra-form-select/tests/nightwatch/select/DefaultSelect';
-import DisabledSelect from '../packages/terra-form-select/tests/nightwatch/select/DisabledSelect';
-import HiddenPlaceholderSelect from '../packages/terra-form-select/tests/nightwatch/select/HiddenPlaceholderSelect';
-import InvalidSelect from '../packages/terra-form-select/tests/nightwatch/select/InvalidSelect';
-import SelectLongText from '../packages/terra-form-select/tests/nightwatch/select/SelectLongText';
+import ControlledCombobox from '../packages/terra-form-select/examples/test-examples/ControlledCombobox.example';
+import ControlledDefault from '../packages/terra-form-select/examples/test-examples/ControlledDefault.example';
+import ControlledMultiple from '../packages/terra-form-select/examples/test-examples/ControlledMultiple.example';
+import ControlledSearch from '../packages/terra-form-select/examples/test-examples/ControlledSearch.example';
+import ControlledTag from '../packages/terra-form-select/examples/test-examples/ControlledTag.example';
+import Disabled from '../packages/terra-form-select/examples/test-examples/Disabled.example';
+import ManyOptions from '../packages/terra-form-select/examples/test-examples/ManyOptions.example';
+import OptGroup from '../packages/terra-form-select/examples/test-examples/OptGroup.example';
+import UncontrolledCombobox from '../packages/terra-form-select/examples/test-examples/UncontrolledCombobox.example';
+import UncontrolledDefault from '../packages/terra-form-select/examples/test-examples/UncontrolledDefault.example';
+import UncontrolledDefaultLongText from '../packages/terra-form-select/examples/test-examples/UncontrolledDefaultLongText.example';
+import UncontrolledMultiple from '../packages/terra-form-select/examples/test-examples/UncontrolledMultiple.example';
+import UncontrolledSearch from '../packages/terra-form-select/examples/test-examples/UncontrolledSearch.example';
+import UncontrolledTag from '../packages/terra-form-select/examples/test-examples/UncontrolledTag.example';
 import TextareaField from '../packages/terra-form-textarea/examples/test-examples/TextareaField.example';
 import AutoResizableTextarea from '../packages/terra-form-textarea/tests/nightwatch/AutoResizableTextarea';
 import AutoResizableTextareaMobileDocumentTouch from '../packages/terra-form-textarea/tests/nightwatch/AutoResizableTextareaMobileDocumentTouch';
@@ -302,7 +304,7 @@ import DefaultSelectField from '../packages/terra-form/tests/nightwatch/select-f
 import PopulatedSelectField from '../packages/terra-form/tests/nightwatch/select-field/PopulatedSelectField';
 import PopulatedSelectFieldControlled from '../packages/terra-form/tests/nightwatch/select-field/PopulatedSelectFieldControlled';
 import ChoicesPropSelect from '../packages/terra-form/tests/nightwatch/select/ChoicesPropSelect';
-import DefaultSelect1 from '../packages/terra-form/tests/nightwatch/select/DefaultSelect';
+import DefaultSelect from '../packages/terra-form/tests/nightwatch/select/DefaultSelect';
 import PopulatedSelect from '../packages/terra-form/tests/nightwatch/select/PopulatedSelect';
 import PopulatedSelectControlled from '../packages/terra-form/tests/nightwatch/select/PopulatedSelectControlled';
 import DefaultTextField from '../packages/terra-form/tests/nightwatch/text-field/DefaultTextField';
@@ -323,11 +325,9 @@ import HeadingVisualProps from '../packages/terra-heading/examples/test-examples
 import HeadingVisuallyHidden from '../packages/terra-heading/examples/test-examples/HeadingVisuallyHidden.example';
 import HeadingWeight from '../packages/terra-heading/examples/test-examples/HeadingWeight.example';
 import DefaultI18N from '../packages/terra-i18n/examples/test-examples/DefaultI18n.example';
-import IconAppendClass from '../packages/terra-icon/tests/nightwatch/components/IconAppendClass';
-import IconAria from '../packages/terra-icon/tests/nightwatch/components/IconAria';
-import IconBidi from '../packages/terra-icon/tests/nightwatch/components/IconBidi';
-import IconDefault from '../packages/terra-icon/tests/nightwatch/components/IconDefault';
-import IconHeightWidth from '../packages/terra-icon/tests/nightwatch/components/IconHeightWidth';
+import IconBidi from '../packages/terra-icon/examples/test-examples/IconBidi.example';
+import IconDefault from '../packages/terra-icon/examples/test-examples/IconDefault.example';
+import IconHeightWidth from '../packages/terra-icon/examples/test-examples/IconHeightWidth.example';
 import ImageDefault from '../packages/terra-image/examples/test-examples/ImageDefault.example';
 import ImageFluid from '../packages/terra-image/examples/test-examples/ImageFluid.example';
 import ImageLoading from '../packages/terra-image/examples/test-examples/ImageLoading.example';
@@ -510,15 +510,15 @@ import TextLineHeight from '../packages/terra-text/examples/test-examples/TextLi
 import TextVisualProps from '../packages/terra-text/examples/test-examples/TextVisualProps.example';
 import TextVisuallyHidden from '../packages/terra-text/examples/test-examples/TextVisuallyHidden.example';
 import TextWeight from '../packages/terra-text/examples/test-examples/TextWeight.example';
-import TimeInputDefault from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDefault';
-import TimeInputDefaultTime from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDefaultTime';
-import TimeInputDisabled from '../packages/terra-time-input/tests/nightwatch/component/TimeInputDisabled';
-import TimeInputInvalidDate from '../packages/terra-time-input/tests/nightwatch/component/TimeInputInvalidDate';
-import TimeInputOnChange from '../packages/terra-time-input/tests/nightwatch/component/TimeInputOnChange';
-import TimeInputTwelveHour from '../packages/terra-time-input/tests/nightwatch/component/TimeInputTwelveHour';
-import TimeInputTwelveHourFilledEvening from '../packages/terra-time-input/tests/nightwatch/component/TimeInputTwelveHourFilledEvening';
-import TimeInputTwelveHourFilledMorning from '../packages/terra-time-input/tests/nightwatch/component/TimeInputTwelveHourFilledMorning';
-import TimeInputTwelveHourMobile from '../packages/terra-time-input/tests/nightwatch/component/TimeInputTwelveHourMobile';
+import Default from '../packages/terra-time-input/examples/test-examples/time-input/Default.example';
+import DefaultTime from '../packages/terra-time-input/examples/test-examples/time-input/DefaultTime.example';
+import Disabled1 from '../packages/terra-time-input/examples/test-examples/time-input/Disabled.example';
+import InvalidTime from '../packages/terra-time-input/examples/test-examples/time-input/InvalidTime.example';
+import OnChange from '../packages/terra-time-input/examples/test-examples/time-input/OnChange.example';
+import Default1 from '../packages/terra-time-input/examples/test-examples/twelve-hour/Default.example';
+import FilledEvening from '../packages/terra-time-input/examples/test-examples/twelve-hour/FilledEvening.example';
+import FilledMorning from '../packages/terra-time-input/examples/test-examples/twelve-hour/FilledMorning.example';
+import Mobile from '../packages/terra-time-input/examples/test-examples/twelve-hour/Mobile.example';
 import Animated from '../packages/terra-toggle-button/tests/nightwatch/Animated';
 import ClosedButtonText from '../packages/terra-toggle-button/tests/nightwatch/ClosedButtonText';
 import CustomIcon from '../packages/terra-toggle-button/tests/nightwatch/CustomIcon';
@@ -1652,76 +1652,74 @@ const componentConfig = {
     path: '/form-select',
     tests: [
       {
-        name: 'Select Option',
-        path: '/select-option',
-        tests: [
-          {
-            name: 'Default Select Option',
-            path: '/default-select-option',
-            component: DefaultSelectOption,
-          },
-          {
-            name: 'Disabled Select Option',
-            path: '/disabled-select-option',
-            component: DisabledSelectOption,
-          },
-          {
-            name: 'Select Option Long Text',
-            path: '/select-option-long-text',
-            component: SelectOptionLongText,
-          },
-          {
-            name: 'Select Option With Children',
-            path: '/select-option-with-children',
-            component: SelectOptionWithChildren,
-          },
-          {
-            name: 'Selected Select Option',
-            path: '/selected-select-option',
-            component: SelectedSelectOption,
-          },
-        ],
+        name: 'Controlled Combobox',
+        path: '/controlled-combobox',
+        component: ControlledCombobox,
       },
       {
-        name: 'Select',
-        path: '/select',
-        tests: [
-          {
-            name: 'Blank Select',
-            path: '/blank-select',
-            component: BlankSelect,
-          },
-          {
-            name: 'Controlled Select',
-            path: '/controlled-select',
-            component: ControlledSelect,
-          },
-          {
-            name: 'Default Select',
-            path: '/default-select',
-            component: DefaultSelect,
-          },
-          {
-            name: 'Disabled Select',
-            path: '/disabled-select',
-            component: DisabledSelect,
-          },
-          {
-            name: 'Hidden Placeholder Select',
-            path: '/hidden-placeholder-select',
-            component: HiddenPlaceholderSelect,
-          },
-          {
-            name: 'Invalid Select',
-            path: '/invalid-select',
-            component: InvalidSelect,
-          },
-          {
-            name: 'Select Long Text',
-            path: '/select-long-text',
-            component: SelectLongText,
-          },
-        ],
+        name: 'Controlled Default',
+        path: '/controlled-default',
+        component: ControlledDefault,
+      },
+      {
+        name: 'Controlled Multiple',
+        path: '/controlled-multiple',
+        component: ControlledMultiple,
+      },
+      {
+        name: 'Controlled Search',
+        path: '/controlled-search',
+        component: ControlledSearch,
+      },
+      {
+        name: 'Controlled Tag',
+        path: '/controlled-tag',
+        component: ControlledTag,
+      },
+      {
+        name: 'Disabled',
+        path: '/disabled',
+        component: Disabled,
+      },
+      {
+        name: 'Many Options',
+        path: '/many-options',
+        component: ManyOptions,
+      },
+      {
+        name: 'Opt Group',
+        path: '/opt-group',
+        component: OptGroup,
+      },
+      {
+        name: 'Uncontrolled Combobox',
+        path: '/uncontrolled-combobox',
+        component: UncontrolledCombobox,
+      },
+      {
+        name: 'Uncontrolled Default',
+        path: '/uncontrolled-default',
+        component: UncontrolledDefault,
+      },
+      {
+        name: 'Uncontrolled Default Long Text',
+        path: '/uncontrolled-default-long-text',
+        component: UncontrolledDefaultLongText,
+      },
+      {
+        name: 'Uncontrolled Multiple',
+        path: '/uncontrolled-multiple',
+        component: UncontrolledMultiple,
+      },
+      {
+        name: 'Uncontrolled Search',
+        path: '/uncontrolled-search',
+        component: UncontrolledSearch,
+      },
+      {
+        name: 'Uncontrolled Tag',
+        path: '/uncontrolled-tag',
+        component: UncontrolledTag,
       },
     ],
   },
@@ -1923,7 +1921,7 @@ const componentConfig = {
           {
             name: 'Default Select',
             path: '/default-select',
-            component: DefaultSelect1,
+            component: DefaultSelect,
           },
           {
             name: 'Populated Select',
@@ -2069,16 +2067,6 @@ const componentConfig = {
     name: 'Icon',
     path: '/icon',
     tests: [
-      {
-        name: 'Icon Append Class',
-        path: '/icon-append-class',
-        component: IconAppendClass,
-      },
-      {
-        name: 'Icon Aria',
-        path: '/icon-aria',
-        component: IconAria,
-      },
       {
         name: 'Icon Bidi',
         path: '/icon-bidi',
@@ -3971,53 +3959,59 @@ const componentConfig = {
     path: '/time-input',
     tests: [
       {
-        name: 'Component',
-        path: '/component',
+        name: 'Time Input',
+        path: '/time-input',
         tests: [
           {
-            name: 'Time Input Default',
-            path: '/time-input-default',
-            component: TimeInputDefault,
+            name: 'Default',
+            path: '/default',
+            component: Default,
           },
           {
-            name: 'Time Input Default Time',
-            path: '/time-input-default-time',
-            component: TimeInputDefaultTime,
+            name: 'Default Time',
+            path: '/default-time',
+            component: DefaultTime,
           },
           {
-            name: 'Time Input Disabled',
-            path: '/time-input-disabled',
-            component: TimeInputDisabled,
+            name: 'Disabled',
+            path: '/disabled',
+            component: Disabled1,
           },
           {
-            name: 'Time Input Invalid Date',
-            path: '/time-input-invalid-date',
-            component: TimeInputInvalidDate,
+            name: 'Invalid Time',
+            path: '/invalid-time',
+            component: InvalidTime,
           },
           {
-            name: 'Time Input On Change',
-            path: '/time-input-on-change',
-            component: TimeInputOnChange,
+            name: 'On Change',
+            path: '/on-change',
+            component: OnChange,
+          },
+        ],
+      },
+      {
+        name: 'Twelve Hour',
+        path: '/twelve-hour',
+        tests: [
+          {
+            name: 'Default',
+            path: '/default',
+            component: Default1,
           },
           {
-            name: 'Time Input Twelve Hour',
-            path: '/time-input-twelve-hour',
-            component: TimeInputTwelveHour,
+            name: 'Filled Evening',
+            path: '/filled-evening',
+            component: FilledEvening,
           },
           {
-            name: 'Time Input Twelve Hour Filled Evening',
-            path: '/time-input-twelve-hour-filled-evening',
-            component: TimeInputTwelveHourFilledEvening,
+            name: 'Filled Morning',
+            path: '/filled-morning',
+            component: FilledMorning,
           },
           {
-            name: 'Time Input Twelve Hour Filled Morning',
-            path: '/time-input-twelve-hour-filled-morning',
-            component: TimeInputTwelveHourFilledMorning,
-          },
-          {
-            name: 'Time Input Twelve Hour Mobile',
-            path: '/time-input-twelve-hour-mobile',
-            component: TimeInputTwelveHourMobile,
+            name: 'Mobile',
+            path: '/mobile',
+            component: Mobile,
           },
         ],
       },

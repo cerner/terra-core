@@ -1,88 +1,93 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-import Popup from 'terra-popup';
-import Arrange from 'terra-arrange';
-import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
-import 'terra-base/lib/baseStyles';
-import SelectOption from './SelectOption';
-import SelectMenu from './_SelectMenu';
-import SelectUtils from './_SelectUtils';
-import styles from './Select.scss';
-
-const cx = classNames.bind(styles);
+import { Variants } from './_constants';
+import DropdownMenu from './_Menu';
+import Frame from './_Frame';
+import Option from './_Option';
+import OptGroup from './_OptGroup';
+import Tag from './_Tag';
+import Util from './_SelectUtil';
 
 const propTypes = {
   /**
-   * Function to trigger when the user changes the select value.
-   * Called with the parameters:
-   *   1) Click event triggering the change
-   *   2) New selected value
-   *   3) Name of the select component
+   * The dropdown menu options.
    */
-  onChange: PropTypes.func,
-
+  children: PropTypes.node,
   /**
-   * Name of the select field.
+   * The default selected value.
    */
-  name: PropTypes.string,
-
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
-   * Whether the select is required or not.
-   */
-  required: PropTypes.bool,
-
-  /**
-   * The value to start the select on.
-   */
-  defaultValue: PropTypes.string,
-
-  /**
-   * The value of the select element. Use this to create a controlled input.
-   */
-  value: PropTypes.string,
-
-  /**
-   * Select options.
-   */
-  children: PropTypes.node.isRequired,
-
-  /**
-   * Indicates if the select is in an invalid state.
-   */
-  isInvalid: PropTypes.bool,
-
-  /**
-   * Indicates if the placeholder is hidden
-   */
-  isPlaceholderHidden: PropTypes.bool,
-
-  /**
-   * Indicates if the select should be disabled.
+   * Whether the select is disabled.
    */
   disabled: PropTypes.bool,
-
   /**
-   * A callback function to let the containing component (e.g. modal) to regain focus.
+   * Additional attributes to spread onto the dropdown. ( Style, ClassNames, etc.. )
    */
-  releaseFocus: PropTypes.func,
-
+  dropdownAttrs: PropTypes.object,
   /**
-   * A callback function to request focus from the containing component (e.g. modal).
+   * Whether the select is in an invalid state.
    */
-  requestFocus: PropTypes.func,
-
+  isInvalid: PropTypes.bool,
   /**
-   * Bounding container for the select menu, will use window if no value provided.
+   * Content to display when no results are found.
    */
-  boundingRef: PropTypes.func,
+  noResultContent: PropTypes.node,
+  /**
+   * Callback function triggered when the value changes. function(value)
+   */
+  onChange: PropTypes.func,
+  /**
+   * Callback function triggered when an option is deselected. function(value)
+   */
+  onDeselect: PropTypes.func,
+  /**
+   * Callback function triggered when the search criteria changes. function(searchValue)
+   */
+  onSearch: PropTypes.func,
+  /**
+   * Callback function triggered when an option is selected. function(value)
+   */
+  onSelect: PropTypes.func,
+  /**
+   * Callback function invoked for each option on search change. function(searchValue, option)
+   */
+  optionFilter: PropTypes.func,
+  /**
+   * Placeholder text.
+   */
+  placeholder: PropTypes.string,
+  /**
+   * The selected value.
+   */
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   * The behavior of the select. One of `default`, `combobox`, `multiple`, `tag`, or `search`.
+   */
+  variant: PropTypes.oneOf([
+    Variants.COMBOBOX,
+    Variants.DEFAULT,
+    Variants.MULTIPLE,
+    Variants.SEARCH,
+    Variants.TAG,
+  ]),
 };
 
 const defaultProps = {
-  required: false,
+  children: undefined,
+  defaultValue: undefined,
   disabled: false,
+  dropdownAttrs: undefined,
   isInvalid: false,
-  isPlaceholderHidden: false,
+  noResultContent: undefined,
+  onChange: undefined,
+  onDeselect: undefined,
+  onSearch: undefined,
+  onSelect: undefined,
+  optionFilter: undefined,
+  placeholder: undefined,
+  value: undefined,
+  variant: 'default',
 };
 
 const contextTypes = {
@@ -95,260 +100,113 @@ const contextTypes = {
 };
 
 class Select extends React.Component {
-  static handleArrowNavigation(event) {
-    if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.UP_ARROW) {
-      let previousFocus = event.target.previousSibling;
-      while (previousFocus && previousFocus.tabIndex < 0) {
-        previousFocus = previousFocus.previousSibling;
-        if (!previousFocus) {
-          return;
-        }
-      }
-      previousFocus.focus();
-    } else if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.DOWN_ARROW) {
-      let nextFocus = event.target.nextSibling;
-      while (nextFocus && nextFocus.tabIndex < 0) {
-        nextFocus = nextFocus.nextSibling;
-        if (!nextFocus) {
-          return;
-        }
-      }
-      nextFocus.focus();
-    }
-  }
+  constructor(props) {
+    super(props);
 
-  constructor(props, context) {
-    super(props, context);
-    this.getInitialState = this.getInitialState.bind(this);
-    this.setTargetRef = this.setTargetRef.bind(this);
-    this.getTargetRef = this.getTargetRef.bind(this);
-    this.handleOnClick = this.handleOnClick.bind(this);
-    this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
-    this.handleKeyboardSearch = this.handleKeyboardSearch.bind(this);
-    this.handleOnRequestClose = this.handleOnRequestClose.bind(this);
-    this.handleSelection = this.handleSelection.bind(this);
-    this.wrapOnClick = this.wrapOnClick.bind(this);
-    this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
     this.state = {
-      selectedValue: this.getInitialState(),
-      isOpen: false,
+      tags: [],
+      value: Util.defaultValue(props),
     };
+
+    this.display = this.display.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleDeselect = this.handleDeselect.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
-  getInitialState() {
-    if (!this.props.value) {
-      const childArray = React.Children.toArray(this.props.children);
-      for (let i = 0; i < childArray.length; i += 1) {
-        const child = childArray[i];
-        if (child.props.isSelected || child.props.value === this.props.defaultValue) {
-          return child.props.value;
-        }
-      }
-    }
-    return '';
-  }
+  /**
+   * Returns the appropriate variant display
+   */
+  display() {
+    const selectValue = Util.value(this.props, this.state);
 
-  setTargetRef(node) {
-    this.targetRef = node;
-  }
-
-  getTargetRef() {
-    return this.targetRef;
-  }
-
-  wrapOnClick(value, onClick) {
-    return (event) => {
-      this.handleSelection(event, value);
-
-      if (onClick) {
-        onClick(event);
-      }
-    };
-  }
-
-  wrapOnKeyDown(value, onKeyDown) {
-    return (event) => {
-      if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.SPACE || event.nativeEvent.keyCode === SelectUtils.KEYCODES.ENTER) {
-        this.handleSelection(event, value);
-      }
-
-      Select.handleArrowNavigation(event);
-
-      if (onKeyDown) {
-        onKeyDown(event);
-      }
-    };
-  }
-
-  handleSelection(event, value) {
-    if (this.props.onChange && value !== this.state.selectedValue) {
-      this.props.onChange(event, value, this.props.name);
-    }
-
-    let newValue = null;
-    if (!this.props.value) {
-      newValue = value;
-    }
-
-    this.setState({ selectedValue: newValue, isOpen: false });
-  }
-
-  handleOnClick() {
-    this.setState({ isOpen: true });
-  }
-
-  handleOnKeyDown(event) {
-    if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.SPACE
-      || event.nativeEvent.keyCode === SelectUtils.KEYCODES.UP_ARROW
-      || event.nativeEvent.keyCode === SelectUtils.KEYCODES.DOWN_ARROW) {
-      this.setState({ isOpen: true });
-    }
-
-    this.handleKeyboardSearch(event);
-  }
-
-  handleKeyboardSearch(event) {
-    const key = String.fromCharCode(event.nativeEvent.keyCode);
-
-    if (!this.state.isOpen) {
-      const childArray = React.Children.toArray(this.props.children);
-      for (let i = 0; i < childArray.length; i += 1) {
-        const child = childArray[i];
-        if (!child.props.disabled && child.props.display.startsWith(key)) {
-          this.setState({ selectedValue: child.props.value });
-          break;
-        }
-      }
+    switch (this.props.variant) {
+      case Variants.TAG:
+      case Variants.MULTIPLE:
+        return selectValue.map(tag => (
+          <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
+            {Util.valueDisplay(this.props, tag)}
+          </Tag>
+        ));
+      default:
+        return Util.valueDisplay(this.props, selectValue);
     }
   }
 
-  handleOnRequestClose() {
-    this.setState({ isOpen: false });
+  /**
+   * Communicates changes to the value.
+   * @param {array|number|string} value - The value resulting from a change.
+   */
+  handleChange(value) {
+    if (this.props.value === undefined) {
+      this.setState({ value });
+    }
+
+    if (this.props.onChange) {
+      this.props.onChange(value);
+    }
+  }
+
+  /**
+   * Communicates the removal of a value from the selected options.
+   * @param {number|string} value - The value to be removed.
+   */
+  handleDeselect(value) {
+    this.handleChange(Util.deselect(this.props, this.state, value));
+
+    if (this.props.onDeselect) {
+      this.props.onDeselect(value);
+    }
+  }
+
+  /**
+   * Communicates the selection of a value.
+   * @param {number|string} value - The value of the selected option.
+   * @param {ReactNode} option - The selected option.
+   */
+  handleSelect(value, option) {
+    this.handleChange(Util.select(this.props, this.state, value));
+
+    // Add new tags for uncontrolled components.
+    if (this.props.value === undefined && !Util.findByValue(this.props, this.state, value)) {
+      this.setState({ tags: [...this.state.tags, <Option key={value} display={value} value={value} />] });
+    }
+
+    if (this.props.onSelect) {
+      this.props.onSelect(value, option);
+    }
   }
 
   render() {
-    const {
-      onChange,
-      name,
-      required,
-      defaultValue,
-      isPlaceholderHidden,
-      value,
-      isInvalid,
-      disabled,
-      children,
-      requestFocus,
-      releaseFocus,
-      boundingRef,
-      ...customProps
-    } = this.props;
-
     const { intl } = this.context;
+    const { children, defaultValue, onChange, placeholder, value, ...otherProps } = this.props;
 
-    const attributes = Object.assign({}, customProps);
-    const selectClasses = cx([
-      'select',
-      { invalid: isInvalid },
-      { 'is-disabled': disabled },
-      { open: this.state.isOpen },
-      attributes.className,
-    ]);
-
-    if (required) {
-      attributes['aria-required'] = 'true';
-    }
-
-    attributes.tabIndex = disabled ? '-1' : '0';
-    attributes['aria-disabled'] = disabled;
-
-    let selectedValue;
-    let display;
-    let isDefaultSelected = false;
-    const clonedChildren = React.Children.map(children, (child) => {
-      let isSelected = false;
-
-      // Check if child is the selected option
-      if (child.props.value === value || child.props.value === this.state.selectedValue) {
-        selectedValue = child.props.value;
-        display = child.props.display || child.props.children;
-        isSelected = true;
-      }
-
-      return React.cloneElement(child, {
-        onClick: this.wrapOnClick(child.props.value, child.props.onClick),
-        onKeyDown: this.wrapOnKeyDown(child.props.value, child.props.onKeyDown),
-        isSelected,
-      });
-    });
-
-    let defaultOptionDisplay;
-    let defaultOptionValue = defaultValue;
-
-    if (!isPlaceholderHidden) {
-      defaultOptionDisplay = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-      defaultOptionValue = '';
-    }
-
-    // If there is no selected option, or none of the options match the selected value, the default option will be selected.
-    if (!selectedValue) {
-      display = defaultOptionDisplay;
-      selectedValue = defaultOptionValue;
-      isDefaultSelected = true;
-    }
+    const defautPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
+    const selectPlaceholder = placeholder === undefined ? defautPlaceholder : placeholder;
 
     return (
-      <div>
-        <Popup
-          contentAttachment="top left"
-          targetAttachment="bottom left"
-          contentHeight="auto"
-          contentWidth="auto"
-          onRequestClose={this.handleOnRequestClose}
-          attachmentBehavior="flip"
-          isOpen={this.state.isOpen}
-          targetRef={this.getTargetRef}
-          classNameContent={cx('select-menu')}
-          requestFocus={requestFocus}
-          releaseFocus={releaseFocus}
-          boundingRef={boundingRef}
-        >
-          <SelectMenu>
-            { !isPlaceholderHidden &&
-              <SelectOption
-                value={defaultOptionValue}
-                display={defaultOptionDisplay}
-                isSelected={isDefaultSelected}
-                onKeyDown={this.wrapOnKeyDown(defaultOptionValue)}
-                onClick={this.wrapOnClick(defaultOptionValue)}
-                className={cx('default-option')}
-              />
-            }
-            {clonedChildren}
-          </SelectMenu>
-        </Popup>
-        {/* eslint-disable jsx-a11y/no-static-element-interactions */}
-        <div
-          {...attributes}
-          className={selectClasses}
-          ref={this.setTargetRef}
-          onClick={!disabled ? this.handleOnClick : null}
-          onKeyDown={!disabled ? this.handleOnKeyDown : null}
-        >
-          {/* eslint-enable jsx-a11y/no-static-element-interactions */}
-          <Arrange
-            fill={<div className={cx(['display', { 'default-option': isDefaultSelected }])}>{display}</div>}
-            fitEnd={<IconCaretDown className={cx('select-arrow')} />}
-          />
-          <input type="hidden" name={name} required={required} disabled={disabled} value={selectedValue} />
-        </div>
-      </div>
+      <Frame
+        {...otherProps}
+        value={Util.value(this.props, this.state)}
+        display={this.display()}
+        onDeselect={this.handleDeselect}
+        onSelect={this.handleSelect}
+        placeholder={selectPlaceholder}
+        dropdown={dropdownProps => (
+          <DropdownMenu {...dropdownProps}>
+            {this.state.tags}
+            {children}
+          </DropdownMenu>
+        )}
+      />
     );
   }
 }
 
+Select.Option = Option;
+Select.OptGroup = OptGroup;
 Select.propTypes = propTypes;
 Select.defaultProps = defaultProps;
 Select.contextTypes = contextTypes;
-Select.Option = SelectOption;
 
 export default Select;

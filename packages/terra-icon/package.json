@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "description": "terra-icon",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.9.0"
+    "terra-base": "^3.10.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
@@ -50,8 +50,8 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }

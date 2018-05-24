@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.3.0 - (May 23, 2018)
+------------------
 ### Changed
 * Added a visible CSS layout
 * Removed terra-toggle-button as a dependency
