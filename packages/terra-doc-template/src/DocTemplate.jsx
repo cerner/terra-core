@@ -91,7 +91,7 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
     const exampleHeaderText = localExamples.length > 1 ? 'Examples' : 'Example';
     exampleHeader = <h1 className={cx('.examples-header')}>{exampleHeaderText}</h1>;
   }
-  
+
   return (
     <div {...customProps} className={docTemplateClassNames}>
       {packageName && <a href={`https://www.npmjs.org/package/${packageName}`}>
