@@ -1,5 +1,6 @@
 import React from 'react';
 import Dialog from 'terra-dialog';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Paginator from 'terra-paginator/lib/Paginator';
 
 const maxPages = 5;

@@ -5,7 +5,6 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['medium'], {
   'Opens and closes a modal correctly': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-open`);
-    console.log('url', `${browser.launchUrl}/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-open`);
     browser.waitForElementPresent('.button-open-modal', 5000);
     browser.expect.element('.button-open-modal').to.be.present;
     browser.expect.element('div[role="document"]').to.not.be.present;

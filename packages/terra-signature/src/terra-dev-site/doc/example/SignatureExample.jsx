@@ -1,8 +1,7 @@
 import React from 'react';
-import Select from 'terra-form/lib/Select';
+import Select from 'terra-form-select';
 // eslint-disable-nex-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Signature from 'terra-signature/lib/Signature';
-
 
 class SignatureExample extends React.Component {
   constructor() {
