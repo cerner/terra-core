@@ -1,7 +1,7 @@
 {
   "name": "terra-legacy-theme",
   "main": "lib/index.js",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "terra-legacy-theme",
   "repository": {
     "type": "git",
