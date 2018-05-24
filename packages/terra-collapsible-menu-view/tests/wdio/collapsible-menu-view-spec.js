@@ -11,7 +11,7 @@ describe('Collapsible Menu View', () => {
   Terra.viewports().forEach((viewport) => {
     describe('Responsive', () => {
       before(() => {
-        browser.url('/#/raw/tests/collapsible-menu-view/default-collapsible-menu-view');
+        browser.url('/#/raw/tests/terra-collapsible-menu-view/collapsible-menu-view/default-collapsible-menu-view');
         browser.setViewportSize(viewport);
       });
 
@@ -24,7 +24,7 @@ describe('Collapsible Menu View', () => {
   Terra.viewports('tiny', 'small', 'medium', 'large').forEach((viewport) => {
     describe('Responsive Hidden Open', () => {
       before(() => {
-        browser.url('/#/raw/tests/collapsible-menu-view/default-collapsible-menu-view');
+        browser.url('/#/raw/tests/terra-collapsible-menu-view/collapsible-menu-view/default-collapsible-menu-view');
         browser.setViewportSize(viewport);
         browser.click('[data-collapsible-menu-toggle]');
       });
@@ -36,7 +36,7 @@ describe('Collapsible Menu View', () => {
 
   describe('First hidden item visible when isIconOnly', () => {
     const viewports = Terra.viewports('medium');
-    before(() => browser.url('/#/raw/tests/collapsible-menu-view/first-hidden-item-is-icon'));
+    before(() => browser.url('/#/raw/tests/terra-collapsible-menu-view/collapsible-menu-view/first-hidden-item-is-icon'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports, rules: ignoredA11y });
   });

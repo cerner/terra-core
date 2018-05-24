@@ -2,7 +2,7 @@
 
 describe('Avatar', () => {
   describe('User', () => {
-    beforeEach(() => browser.url('/#/raw/tests/avatar/user-avatar'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/user-avatar'));
 
     Terra.should.beAccessible({ selector: '#user-avatar' });
     Terra.should.matchScreenshot({ selector: '#user-avatar' });
@@ -24,7 +24,7 @@ describe('Avatar', () => {
   });
 
   describe('Facility', () => {
-    beforeEach(() => browser.url('/#/raw/tests/avatar/facility-avatar'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility-avatar'));
 
     Terra.should.beAccessible({ selector: '#facility-avatar' });
     Terra.should.matchScreenshot({ selector: '#facility-avatar' });
@@ -46,7 +46,7 @@ describe('Avatar', () => {
   });
 
   describe('Image', () => {
-    beforeEach(() => browser.url('/#/raw/tests/avatar/image-avatar'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/image-avatar'));
 
     Terra.should.beAccessible({ selector: '#image-avatar' });
     Terra.should.matchScreenshot({ selector: '#image-avatar' });
@@ -66,7 +66,7 @@ describe('Avatar', () => {
   });
 
   describe('Two Initials', () => {
-    beforeEach(() => browser.url('/#/raw/tests/avatar/two-initials-avatar'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/two-initials-avatar'));
 
     Terra.should.beAccessible({ selector: '#two-initials-avatar' });
     Terra.should.matchScreenshot({ selector: '#two-initials-avatar' });
@@ -89,7 +89,7 @@ describe('Avatar', () => {
   });
 
   describe('Three Initials', () => {
-    beforeEach(() => browser.url('/#/raw/tests/avatar/three-initials-avatar'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/three-initials-avatar'));
 
     Terra.should.beAccessible({ selector: '#three-initials-avatar' });
     Terra.should.matchScreenshot({ selector: '#three-initials-avatar' });

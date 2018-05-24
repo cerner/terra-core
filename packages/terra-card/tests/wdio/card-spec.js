@@ -3,7 +3,7 @@ const viewports = Terra.viewports('tiny');
 
 describe('Card', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/card/default-card'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/default-card'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -20,7 +20,7 @@ describe('Card', () => {
   });
 
   describe('Raised', () => {
-    beforeEach(() => browser.url('/#/raw/tests/card/raised-card'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/raised-card'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -33,21 +33,21 @@ describe('Card', () => {
   });
 
   describe('Card Body Padding Horizontal', () => {
-    beforeEach(() => browser.url('/#/raw/tests/card/card-padding-horizontal'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/card-padding-horizontal'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Card Body Padding Vertical', () => {
-    beforeEach(() => browser.url('/#/raw/tests/card/card-padding-vertical'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/card-padding-vertical'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Card Body Padded', () => {
-    beforeEach(() => browser.url('/#/raw/tests/card/card-padding'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/card-padding'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -63,7 +63,7 @@ describe('Card', () => {
   });
 
   describe('Card Body Centered', () => {
-    beforeEach(() => browser.url('/#/raw/tests/card/card-content-center'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/card-content-center'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

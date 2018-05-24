@@ -3,7 +3,7 @@ describe('Button', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
   describe('Neutral', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/variants/neutral-button'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-button/button/variants/neutral-button'));
 
     Terra.should.beAccessible({ context: '#neutral' });
     Terra.should.matchScreenshot({ selector: '#neutral' });
@@ -62,7 +62,7 @@ describe('Button', () => {
     });
 
     describe('Neutral-Active', () => {
-      beforeEach(() => browser.url('/#/raw/tests/button/active-variant-buttons'));
+      beforeEach(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -82,7 +82,7 @@ describe('Button', () => {
   });
 
   describe('Emphasis', () => {
-    before(() => browser.url('/#/raw/tests/button/variants/emphasis-button'));
+    before(() => browser.url('/#/raw/tests/terra-button/button/variants/emphasis-button'));
 
     Terra.should.beAccessible({ context: '#emphasis' });
     Terra.should.matchScreenshot({ selector: '#emphasis' });
@@ -102,7 +102,7 @@ describe('Button', () => {
     });
 
     describe('Emphasis-Active', () => {
-      beforeEach(() => browser.url('/#/raw/tests/button/active-variant-buttons'));
+      beforeEach(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
       Terra.should.beAccessible({ context: '#emphasisActive' });
       Terra.should.matchScreenshot('active', { selector: '#emphasisActive' });
@@ -113,7 +113,7 @@ describe('Button', () => {
   });
 
   describe('De-emphasis', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/variants/deemphasis-button'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-button/button/variants/deemphasis-button'));
 
     Terra.should.beAccessible({ context: '#de-emphasis' });
     Terra.should.matchScreenshot({ selector: '#de-emphasis' });
@@ -133,7 +133,7 @@ describe('Button', () => {
     });
 
     describe('De-emphasis-Active', () => {
-      beforeEach(() => browser.url('/#/raw/tests/button/active-variant-buttons'));
+      beforeEach(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
       Terra.should.matchScreenshot('active', { selector: '#de-emphasisActive' });
       Terra.should.matchScreenshot('active and focused', { selector: '#de-emphasisActiveFocusSpan' });
@@ -141,7 +141,7 @@ describe('Button', () => {
   });
 
   describe('Action', () => {
-    before(() => browser.url('/#/raw/tests/button/variants/action-button'));
+    before(() => browser.url('/#/raw/tests/terra-button/button/variants/action-button'));
 
     Terra.should.beAccessible({ context: '#action' });
     Terra.should.matchScreenshot({ selector: '#action' });
@@ -165,7 +165,7 @@ describe('Button', () => {
     });
 
     describe('Action-Active', () => {
-      beforeEach(() => browser.url('/#/raw/tests/button/active-variant-buttons'));
+      beforeEach(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
       Terra.should.matchScreenshot('active', { selector: '#actionActive' });
       Terra.should.matchScreenshot('active and focused', { selector: '#actionActiveFocusSpan' });
@@ -173,7 +173,7 @@ describe('Button', () => {
   });
 
   describe('Utility', () => {
-    before(() => browser.url('/#/raw/tests/button/variants/utility-button'));
+    before(() => browser.url('/#/raw/tests/terra-button/button/variants/utility-button'));
 
     Terra.should.beAccessible({ context: '#utility' });
     Terra.should.matchScreenshot({ selector: '#utility' });
@@ -197,7 +197,7 @@ describe('Button', () => {
     });
 
     describe('Utility-Active', () => {
-      beforeEach(() => browser.url('/#/raw/tests/button/active-variant-buttons'));
+      beforeEach(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
       Terra.should.matchScreenshot('active', { selector: '#utilityActive' });
       Terra.should.matchScreenshot('active and focused', { selector: '#utilityActiveFocusSpan' });
@@ -205,21 +205,21 @@ describe('Button', () => {
   });
 
   describe('Long Text', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/long-text-button'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-button/button/long-text-button'));
 
     Terra.should.beAccessible({ context: '#long-text' });
     Terra.should.matchScreenshot({ selector: '#long-text' });
   });
 
   describe('Block', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/long-text-button'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-button/button/long-text-button'));
 
     Terra.should.beAccessible({ context: '#long-text-block' });
     Terra.should.matchScreenshot({ selector: '#long-text-block' });
   });
 
   describe('Button Types', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/button-types'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-button/button/button-types'));
     Terra.should.beAccessible();
 
     describe('Type button', () => {
@@ -240,7 +240,7 @@ describe('Button', () => {
   });
 
   describe('Button with Icon', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/icon-button'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-button/button/icon-button'));
     Terra.should.beAccessible();
 
     describe('Icon and Text', () => {
@@ -276,7 +276,7 @@ describe('Button', () => {
   });
 
   describe('Compact Button', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/compact-button'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-button/button/compact-button'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#compactButton' });

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Checkbox from '../../../Checkbox';
-import CheckboxField from '../../../CheckboxField';
+import Checkbox from '../../../../Checkbox';
+import CheckboxField from '../../../../CheckboxField';
 
 export default class extends React.Component {
   constructor(props) {
@@ -36,7 +36,6 @@ export default class extends React.Component {
         error="You must be willing to work in one of these departments"
         isInline
         required
-        hideRequired
       >
         <Checkbox id="ux-dept" name="dept[]" labelText="UX/Interaction Design" onChange={this.handleOnChange} value="ux" />
         <Checkbox id="magazine-dept" name="dept[]" labelText="Magazine Advertisements" onChange={this.handleOnChange} value="magazine" />

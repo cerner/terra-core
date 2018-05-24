@@ -3,7 +3,7 @@ const viewports = Terra.viewports('medium');
 
 describe('Divider', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/divider/default-divider'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-divider/divider/default-divider'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
