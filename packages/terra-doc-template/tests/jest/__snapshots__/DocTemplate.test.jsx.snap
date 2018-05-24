@@ -56,7 +56,7 @@ exports[`DocTemplate should show one example 1`] = `
   <h1
     className=".examples-header"
   >
-    Examples
+    Example
   </h1>
   <ExampleTemplate
     description="Describing the test"
