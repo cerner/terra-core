@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Radio from '../../../Radio';
-import RadioField from '../../../RadioField';
+import Radio from '../../../../Radio';
+import RadioField from '../../../../RadioField';
 
 const exampleRadioField = () => (
   <RadioField legend="Desired Department" isLegendHidden>

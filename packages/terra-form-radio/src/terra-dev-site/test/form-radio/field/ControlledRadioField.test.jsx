@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Radio from '../../../Radio';
-import RadioField from '../../../RadioField';
+import Radio from '../../../../Radio';
+import RadioField from '../../../../RadioField';
 
 export default class extends React.Component {
   constructor(props) {
@@ -22,7 +22,6 @@ export default class extends React.Component {
         help="Your work falls inline with one of these departments"
         isInvalid={this.state.selectedAnswer === undefined}
         error="One must be selected"
-        hideRequired
         isInline
         required
       >
