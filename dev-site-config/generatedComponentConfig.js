@@ -317,8 +317,6 @@ import HeadingVisualProps from '../packages/terra-heading/examples/test-examples
 import HeadingVisuallyHidden from '../packages/terra-heading/examples/test-examples/HeadingVisuallyHidden.example';
 import HeadingWeight from '../packages/terra-heading/examples/test-examples/HeadingWeight.example';
 import DefaultI18N from '../packages/terra-i18n/examples/test-examples/DefaultI18n.example';
-import IconAppendClass from '../packages/terra-icon/examples/test-examples/IconAppendClass.example';
-import IconAria from '../packages/terra-icon/examples/test-examples/IconAria.example';
 import IconBidi from '../packages/terra-icon/examples/test-examples/IconBidi.example';
 import IconDefault from '../packages/terra-icon/examples/test-examples/IconDefault.example';
 import IconHeightWidth from '../packages/terra-icon/examples/test-examples/IconHeightWidth.example';
@@ -2021,16 +2019,6 @@ const componentConfig = {
     name: 'Icon',
     path: '/icon',
     tests: [
-      {
-        name: 'Icon Append Class',
-        path: '/icon-append-class',
-        component: IconAppendClass,
-      },
-      {
-        name: 'Icon Aria',
-        path: '/icon-aria',
-        component: IconAria,
-      },
       {
         name: 'Icon Bidi',
         path: '/icon-bidi',
