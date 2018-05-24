@@ -86,6 +86,12 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
     customProps.className,
   ]);
 
+  let exampleHeader;
+  if (localExamples.length > 0) {
+    const exampleHeaderText = localExamples.length > 1 ? 'Examples' : 'Example';
+    exampleHeader = <h1 className={cx('.examples-header')} >{exampleHeaderText}</h1>;
+  }
+  
   return (
     <div {...customProps} className={docTemplateClassNames}>
       {packageName && <a href={`https://www.npmjs.org/package/${packageName}`}>
@@ -95,7 +101,7 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
       {readme && <Markdown src={readme} />}
       {srcPath && <a href={srcPath}>View component source code</a>}
 
-      {localExamples.length > 0 && <h1 className={cx('.examples-header')} >Examples</h1>}
+      {exampleHeader}
       {localExamples.map(example =>
         <IndexExampleTemplate
           title={example.title}
