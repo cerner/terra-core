@@ -8,7 +8,7 @@ describe('Radio', () => {
 
   describe('Default', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/default-radio');
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/default-radio');
     });
 
     Terra.should.matchScreenshot();
@@ -234,7 +234,7 @@ describe('Radio', () => {
 
   describe('Disabled', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/disabled-radio');
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/disabled-radio');
     });
 
     Terra.should.matchScreenshot();
@@ -281,7 +281,7 @@ describe('Radio', () => {
   });
 
   describe('Hidden Label', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/hidden-radio'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/hidden-radio'));
 
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
