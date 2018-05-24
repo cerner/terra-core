@@ -13,16 +13,23 @@ function log(error, stdout, stderr) {
 }
 
 var regex = "";
-if (os.type() === 'Linux') 
+var jestcmd = "";
+if (os.type() === 'Linux') {
 	regex = process.env.npm_package_name + "/tests";
-else if (os.type() === 'Darwin') 
+	jestcmd = "jest";
+}
+else if (os.type() === 'Darwin') {
 	regex = process.env.npm_package_name + "/tests";
-else if (os.type() === 'Windows_NT') 
+	jestcmd = "jest";
+}
+else if (os.type() === 'Windows_NT') {
 	regex = process.env.npm_package_name + "\\\\tests";
+	jestcmd = "jest.cmd";
+}
 else
    throw new Error("Unsupported OS found: " + os.type());
 
-var jest = spawn("jest.cmd", [process.env.npm_package_name + "\\\\tests", "--config", "../../jestconfig.json"], {stdio: 'inherit'});
+var jest = spawn(jestcmd, [regex, "--config", "../../jestconfig.json"], {stdio: 'inherit'});
 jest.on('error', function (err) {
   console.log('jest error', err);
 });
