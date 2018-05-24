@@ -74,6 +74,7 @@ describe('Select', () => {
 
       it('default should open the dropdown by clicking the toggle', () => {
         browser.click('#default:last-child');
+        browser.moveToObject('#root', 0, 0);
       });
 
       Terra.should.beAccessible();
