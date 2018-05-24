@@ -4,10 +4,10 @@ import ReadMe from '../../../../docs/InputField.md';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import FormInputFieldSrc from '!raw-loader!../../../src/InputField';
+import FormInputFieldSrc from '!raw-loader!../../../../src/InputField';
 
 // Example Files
-import InputField from 'terra-form-input/lib/InputField';
+import InputField from '../../../InputField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (

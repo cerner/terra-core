@@ -5,7 +5,7 @@ import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import CheckboxSrc from '!raw-loader!../../../src/Checkbox';
+import CheckboxSrc from '!raw-loader!../../../../src/Checkbox';
 
 // Example Files
 import DefaultCheckbox from '../example/checkbox/DefaultCheckboxExample';

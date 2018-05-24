@@ -4,7 +4,7 @@ import ReadMe from '../../../../docs/CheckboxField.md';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import CheckboxFieldSrc from '!raw-loader!../../../src/CheckboxField';
+import CheckboxFieldSrc from '!raw-loader!../../../../src/CheckboxField';
 
 // Examples
 import DefaultCheckboxField from '../example/field/DefaultCheckboxField';
