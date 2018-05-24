@@ -89,7 +89,7 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
   let exampleHeader;
   if (localExamples.length > 0) {
     const exampleHeaderText = localExamples.length > 1 ? 'Examples' : 'Example';
-    exampleHeader = <h1 className={cx('.examples-header')} >{exampleHeaderText}</h1>;
+    exampleHeader = <h1 className={cx('.examples-header')}>{exampleHeaderText}</h1>;
   }
   
   return (
