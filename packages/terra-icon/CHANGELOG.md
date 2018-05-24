@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Replaced nightwatch tests with wdio tests.
 
 2.10.0 - (May 23, 2018)
 ------------------
