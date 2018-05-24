@@ -34,7 +34,8 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.7.0"
+    "terra-base": "^3.7.0",
+    "terra-doc-template": "^1.3.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",

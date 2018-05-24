@@ -1,9 +1,9 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import RadioSrc from '!raw-loader!../../../../src/Radio';
 
@@ -21,6 +21,7 @@ import InlineRadiosSrc from '!raw-loader!../../../../src/terra-dev-site/doc/exam
 import MultipleRadios from '../example/radio/MultipleRadiosExample';
 import MultipleRadiosSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/radio/MultipleRadiosExample';
 import MobileButton from '../example/radio/MobileButton';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 class DocPage extends React.Component {
   constructor() {

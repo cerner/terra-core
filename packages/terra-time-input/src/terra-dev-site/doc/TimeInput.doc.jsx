@@ -1,9 +1,9 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import TimeInputSrc from '!raw-loader!../../../src/TimeInput';
 
@@ -16,6 +16,7 @@ import TimeInputNoDefaultTime from './example/TimeInputNoDefaultTime';
 import TimeInputNoDefaultTimeSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TimeInputNoDefaultTime';
 import TimeInputNoDefaultTwelveHour from './example/TimeInputNoDefaultTwelveHour';
 import TimeInputNoDefaultTwelveHourSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TimeInputNoDefaultTwelveHour';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

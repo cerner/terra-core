@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-alert/docs/README.md';
-import { name } from 'terra-alert/package.json';
+import ReadMe from '../../../README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import AlertSrc from '!raw-loader!terra-alert/src/Alert';
+import AlertSrc from '!raw-loader!../../../src/Alert';
 
 // Example Files
 import AlertExample from './example/AlertExample';
@@ -21,6 +21,7 @@ import SmallContainerExample from './example/SmallContainerExample';
 import DismissibleExample from './example/DismissibleExample';
 import ActionAndDismissibleExample from './example/ActionAndDismissibleExample';
 import BuildYourOwnAlertExample from './example/BuildYourOwnAlertExample';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

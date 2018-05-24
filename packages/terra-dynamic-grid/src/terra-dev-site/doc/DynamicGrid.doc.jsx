@@ -1,12 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-dynamic-grid/docs/README.md';
-import { name } from 'terra-dynamic-grid/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import DynamicGridSrc from '!raw-loader!terra-dynamic-grid/src/DynamicGrid';
-import RegionSrc from '!raw-loader!terra-dynamic-grid/src/Region';
+import DynamicGridSrc from '!raw-loader!../../../src/DynamicGrid';
+import RegionSrc from '!raw-loader!../../../src/Region';
 
 // Example Files
 import OneColumn from './example/OneColumn';
@@ -19,6 +19,7 @@ import Dashboard from './example/Dashboard';
 import DashboardSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Dashboard';
 import ResponsiveGrid from './example/ResponsiveGrid';
 import ResponsiveGridSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ResponsiveGrid';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

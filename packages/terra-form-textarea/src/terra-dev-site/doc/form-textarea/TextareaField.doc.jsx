@@ -1,15 +1,16 @@
-/* eslint-disable  import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/TextareaField.md';
 import { name } from '../../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import TextareaFieldSrc from '!raw-loader!../../../../src/TextareaField';
 
 // Example Source
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import TextareaField from 'terra-form-textarea/lib/TextareaField';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

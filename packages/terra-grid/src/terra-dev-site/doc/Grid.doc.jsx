@@ -1,13 +1,13 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-grid/docs/README.md';
-import { name } from 'terra-grid/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import GridSrc from '!raw-loader!terra-grid/src/Grid';
-import GridRowSrc from '!raw-loader!terra-grid/src/GridRow';
-import GridColumnSrc from '!raw-loader!terra-grid/src/GridColumn';
+import GridSrc from '!raw-loader!../../../src/Grid';
+import GridRowSrc from '!raw-loader!../../../src/GridRow';
+import GridColumnSrc from '!raw-loader!../../../src/GridColumn';
 
 // Example Files
 import GridDefault from './example/GridDefault';
@@ -16,6 +16,7 @@ import GridResponsive from './example/GridResponsive';
 import GridResponsiveSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/GridResponsive';
 import GridNested from './example/GridNested';
 import GridNestedSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/GridNested';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

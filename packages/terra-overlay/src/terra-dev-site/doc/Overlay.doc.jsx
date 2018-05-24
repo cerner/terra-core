@@ -1,9 +1,9 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import OverlayContainerSrc from '!raw-loader!../../../src/OverlayContainer';
 import OverlaySrc from '!raw-loader!../../../src/Overlay';
@@ -14,6 +14,7 @@ import OverlayExample from './example/OverlayExample';
 import OverlayExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/OverlayExample';
 import LoadingOverlayExample from './example/LoadingOverlayExample';
 import LoadingOverlayExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/LoadingOverlayExample';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

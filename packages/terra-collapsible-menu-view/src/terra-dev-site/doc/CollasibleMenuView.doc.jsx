@@ -1,18 +1,19 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-collapsible-menu-view/docs/README.md';
-import { name } from 'terra-collapsible-menu-view/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import CollapsibleMenuViewSrc from '!raw-loader!terra-collapsible-menu-view/src/CollapsibleMenuView';
-import CollapsibleMenuViewItemSrc from '!raw-loader!terra-collapsible-menu-view/src/CollapsibleMenuViewItem';
-import CollapsibleMenuViewItemGroupSrc from '!raw-loader!terra-collapsible-menu-view/src/CollapsibleMenuViewItemGroup';
-import CollapsibleMenuViewToggleSrc from '!raw-loader!terra-collapsible-menu-view/src/CollapsibleMenuViewToggle';
+import CollapsibleMenuViewSrc from '!raw-loader!../../../src/CollapsibleMenuView';
+import CollapsibleMenuViewItemSrc from '!raw-loader!../../../src/CollapsibleMenuViewItem';
+import CollapsibleMenuViewItemGroupSrc from '!raw-loader!../../../src/CollapsibleMenuViewItemGroup';
+import CollapsibleMenuViewToggleSrc from '!raw-loader!../../../src/CollapsibleMenuViewToggle';
 
 // Example Files
 import BasicView from './example/CollapsibleMenuViewDemo';
 import BasicViewSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CollapsibleMenuViewDemo';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

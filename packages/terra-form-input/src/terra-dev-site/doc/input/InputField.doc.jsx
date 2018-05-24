@@ -1,12 +1,14 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-form-input/docs/InputField.md';
+import ReadMe from '../../../../docs/InputField.md';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import FormInputFieldSrc from '!raw-loader!terra-form-input/src/InputField';
+import FormInputFieldSrc from '!raw-loader!../../../src/InputField';
 
+// Example Files
 import InputField from 'terra-form-input/lib/InputField';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

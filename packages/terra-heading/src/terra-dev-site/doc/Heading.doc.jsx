@@ -1,18 +1,18 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import Markdown from 'terra-markdown';
-import ReadMe from 'terra-heading/docs/README.md';
-import HeadingLevelDocs from 'terra-heading/docs/heading-levels.md';
-import HeadingSizeDocs from 'terra-heading/docs/heading-sizes.md';
-import HeadingColorDocs from 'terra-heading/docs/heading-colors.md';
-import HeadingWeightDocs from 'terra-heading/docs/heading-weights.md';
-import HeadingVisuallyHiddenDocs from 'terra-heading/docs/heading-visually-hidden.md';
-import HeadingVariationDocs from 'terra-heading/docs/heading-variations.md';
-import { name } from 'terra-heading/package.json';
+import ReadMe from '../../../docs/README.md';
+import HeadingLevelDocs from '../../../docs/heading-levels.md';
+import HeadingSizeDocs from '../../../docs/heading-sizes.md';
+import HeadingColorDocs from '../../../docs/heading-colors.md';
+import HeadingWeightDocs from '../../../docs/heading-weights.md';
+import HeadingVisuallyHiddenDocs from '../../../docs/heading-visually-hidden.md';
+import HeadingVariationDocs from '../../../docs/heading-variations.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import HeadingSrc from '!raw-loader!terra-heading/src/Heading';
+import HeadingSrc from '!raw-loader!../../../src/Heading';
 
 // Example Files
 import HeadingColors from './example/HeadingColors';
@@ -27,6 +27,7 @@ import HeadingWeights from './example/HeadingWeights';
 import HeadingWeightsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HeadingWeights';
 import HeadingVariations from './example/HeadingVariations';
 import HeadingVariationsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HeadingVariations';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

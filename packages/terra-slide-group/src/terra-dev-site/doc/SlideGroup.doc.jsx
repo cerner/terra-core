@@ -1,15 +1,16 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import SlideGroupSrc from '!raw-loader!../../../src/SlideGroup.jsx';
 
 // Example Files
 import SlideGroupDemo from './example/SlideGroupDemo';
 import SlideGroupDemoSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/SlideGroupDemo';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

@@ -1,12 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-embedded-content-consumer/docs/README.md';
-import { name } from 'terra-embedded-content-consumer/package.json';
 import { Consumer } from 'xfc';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import EmbeddedContentConsumerSrc from '!raw-loader!terra-embedded-content-consumer/src/EmbeddedContentConsumer.jsx';
+import EmbeddedContentConsumerSrc from '!raw-loader!../../../src/EmbeddedContentConsumer.jsx';
 
 // Example files
 import BasicConsumer from './example/BasicConsumer';
@@ -21,6 +21,7 @@ import FillConsumer from './example/FillConsumer';
 import FillConsumerSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/FillConsumer';
 import OnReadyConsumer from './example/OnReadyConsumer';
 import OnReadyConsumerSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/OnReadyConsumer';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 Consumer.init();
 

@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-action-header/docs/README.md';
-import { name } from 'terra-action-header/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import ActionHeaderSrc from '!raw-loader!terra-action-header/src/ActionHeader';
+import ActionHeaderSrc from '!raw-loader!../../../src/ActionHeader';
 
 // Example Files
 import DefaultActionHeader from './example/DefaultActionHeader';
@@ -22,6 +22,7 @@ import MinimizeCustomButtonActionHeader from './example/MinimizeCustomButtonActi
 import MinimizeCustomButtonActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MinimizeCustomButtonActionHeader';
 import BackPreviousNextCloseActionHeader from './example/BackPreviousNextCloseActionHeader';
 import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BackPreviousNextCloseActionHeader';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

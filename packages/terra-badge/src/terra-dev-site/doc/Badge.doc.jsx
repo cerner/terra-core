@@ -1,9 +1,9 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import BadgeSrc from '!raw-loader!../../../src/Badge';
 
@@ -14,6 +14,7 @@ import BadgeSize from './example/BadgeSize';
 import BadgeSizeSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BadgeSize';
 import BadgeIcon from './example/BadgeIcon';
 import BadgeIconSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BadgeIcon';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

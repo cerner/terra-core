@@ -1,10 +1,14 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
-import ReadMe from 'terra-form-select/docs/README.md';
 import DocTemplate from 'terra-doc-template';
-import OptionSrc from '!raw-loader!terra-form-select/src/_Option';
-import OptGroupSrc from '!raw-loader!terra-form-select/src/_OptGroup';
-import SelectSrc from '!raw-loader!terra-form-select/src/Select';
+import ReadMe from '../../../docs/README.md';
+
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+// Component Source
+import OptionSrc from '!raw-loader!../../../src/_Option';
+import OptGroupSrc from '!raw-loader!../../../src/_OptGroup';
+import SelectSrc from '!raw-loader!../../../src/Select';
+
+// Example Files
 import ControlledExample from './example/Controlled';
 import ControlledExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Controlled';
 import ComboboxExample from './example/Combobox';
@@ -23,6 +27,7 @@ import SearchExample from './example/Search';
 import SearchExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Search';
 import TagExample from './example/Tag';
 import TagExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Tag';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const Index = () => (
   <DocTemplate

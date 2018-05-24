@@ -1,9 +1,9 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import ProgressBarSrc from '!raw-loader!../../../src/ProgressBar';
 
@@ -16,6 +16,7 @@ import ProgressBarColor from './example/ProgressBarColor';
 import ProgressBarColorSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ProgressBarColor';
 import ProgressBarGradient from './example/ProgressBarGradient';
 import ProgressBarGradientSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ProgressBarGradient';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

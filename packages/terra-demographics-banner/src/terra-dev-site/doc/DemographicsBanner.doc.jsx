@@ -1,12 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-demographics-banner/docs/README.md';
-import { name } from 'terra-demographics-banner/package.json';
-import DemographicsBanner from 'terra-demographics-banner';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
+import DemographicsBanner from '../../DemographicsBanner';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import DemographicsBannerSrc from '!raw-loader!terra-demographics-banner/src/DemographicsBanner.jsx';
+import DemographicsBannerSrc from '!raw-loader!../../../src/DemographicsBanner.jsx';
 
 // Example Source
 import DemographicsBannerAdditionalAges from './example/DemographicsBannerAdditionalAges';
@@ -19,6 +19,7 @@ import DemographicsBannerDeceased from './example/DemographicsBannerDeceased';
 import DemographicsBannerDeceasedSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DemographicsBannerDeceased';
 import DemographicsBannerSmallContainer from './example/DemographicsBannerSmallContainer';
 import DemographicsBannerSmallContainerSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DemographicsBannerSmallContainer';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

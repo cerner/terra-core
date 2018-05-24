@@ -1,12 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-card/docs/README.md';
-import { name } from 'terra-card/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import CardSrc from '!raw-loader!terra-card/src/Card';
-import CardBodySrc from '!raw-loader!terra-card/src/CardBody';
+import CardSrc from '!raw-loader!../../../src/Card';
+import CardBodySrc from '!raw-loader!../../../src/CardBody';
 
 // Example Files
 import CardDefault from './example/CardDefault';
@@ -23,6 +23,7 @@ import CardPaddingHR from './example/CardPaddingHR';
 import CardPaddingHRSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPaddingHR';
 import CardContentCentered from './example/CardContentCentered';
 import CardContentCenteredSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardContentCentered';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

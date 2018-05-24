@@ -1,20 +1,19 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
-import ReadMe from '../../../../docs/RadioField.md';
 import DocTemplate from 'terra-doc-template';
+import ReadMe from '../../../../docs/RadioField.md';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import RadioFieldSrc from '!raw-loader!../../../../src/RadioField';
 
 // Examples
 import DefaultRadioField from '../example/field/DefaultRadioField';
 import DefaultRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/DefaultRadioField';
-
 import ControlledRadioField from '../example/field/ControlledRadioField';
 import ControlledRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/ControlledRadioField';
-
 import OptionalRadioField from '../example/field/OptionalRadioField';
 import OptionalRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/OptionalRadioField';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const RadioFieldExamples = () => (
   <DocTemplate

@@ -1,13 +1,13 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-menu/docs/README.md';
-import { name } from 'terra-menu/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import MenuSrc from '!raw-loader!terra-menu/src/Menu';
-import MenuItemSrc from '!raw-loader!terra-menu/src/MenuItem';
-import MenuItemGroupSrc from '!raw-loader!terra-menu/src/MenuItemGroup';
+import MenuSrc from '!raw-loader!../../../src/Menu';
+import MenuItemSrc from '!raw-loader!../../../src/MenuItem';
+import MenuItemGroupSrc from '!raw-loader!../../../src/MenuItemGroup';
 
 // Example Files
 import BasicMenu from './example/BasicMenu';
@@ -16,6 +16,7 @@ import MenuBounded from './example/MenuBounded';
 import MenuBoundedSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MenuBounded';
 import MenuWidths from './example/MenuWidths';
 import MenuWidthsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MenuWidths';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

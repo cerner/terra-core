@@ -1,14 +1,15 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-form-field/docs/README.md';
-import { name } from 'terra-form-field/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import FieldSrc from '!raw-loader!terra-form-field/src/Field';
+import FieldSrc from '!raw-loader!../../../src/Field';
 
 // Example Files
 import FieldExamples from './example/FieldExamples';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

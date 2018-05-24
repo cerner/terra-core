@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-avatar/docs/README.md';
-import { name } from 'terra-avatar/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import AvatarSrc from '!raw-loader!terra-avatar/src/Avatar';
+import AvatarSrc from '!raw-loader!../../../src/Avatar';
 
 // Example Files
 import AvatarUser from './example/AvatarUser';
@@ -18,6 +18,7 @@ import AvatarThreeInitials from './example/AvatarThreeInitials';
 import AvatarThreeInitialsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AvatarThreeInitials';
 import AvatarImage from './example/AvatarImage';
 import AvatarImageSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AvatarImage';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

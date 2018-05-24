@@ -1,9 +1,9 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import DateTimePickerSrc from '!raw-loader!../../../src/DateTimePicker';
 
@@ -17,6 +17,7 @@ import DateTimePickerFilterDates from './example/DateTimePickerFilterDates';
 import DateTimePickerMinMax from './example/DateTimePickerMinMax';
 import DateTimePickerDST from './example/DateTimePickerDST';
 import DateTimePickerInsideModal from './example/DateTimePickerInsideModal';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

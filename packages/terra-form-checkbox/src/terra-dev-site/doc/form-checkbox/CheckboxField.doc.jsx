@@ -1,20 +1,19 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-form-checkbox/docs/CheckboxField.md';
+import ReadMe from '../../../../docs/CheckboxField.md';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import CheckboxFieldSrc from '!raw-loader!terra-form-checkbox/src/CheckboxField';
+import CheckboxFieldSrc from '!raw-loader!../../../src/CheckboxField';
 
 // Examples
 import DefaultCheckboxField from '../example/field/DefaultCheckboxField';
 import DefaultCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/DefaultCheckboxField';
-
 import ControlledCheckboxField from '../example/field/ControlledCheckboxField';
 import ControlledCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/ControlledCheckboxField';
-
 import OptionalCheckboxField from '../example/field/OptionalCheckboxField';
 import OptionalCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/OptionalCheckboxField';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const checkboxFieldExamples = () => (
   <DocTemplate

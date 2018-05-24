@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-button/docs/README.md';
-import { name } from 'terra-button/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import ButtonSrc from '!raw-loader!terra-button/src/Button';
+import ButtonSrc from '!raw-loader!../../../src/Button';
 
 // Example Files
 import ButtonBlock from './example/ButtonBlock';
@@ -20,6 +20,7 @@ import ButtonIcon from './example/ButtonIcon';
 import ButtonIconSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonIcon';
 import ButtonVariant from './example/ButtonVariant';
 import ButtonVariantSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonVariant';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

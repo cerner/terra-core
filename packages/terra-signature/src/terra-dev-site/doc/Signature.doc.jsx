@@ -1,15 +1,16 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first,  import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import SignatureSrc from '!raw-loader!../../../src/Signature';
 
 // Example Files
 import SignatureExample from './example/SignatureExample';
 import SignatureExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/SignatureExample';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

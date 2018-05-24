@@ -1,9 +1,9 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/MultiSelectableRows.md';
 import { name } from '../../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelectableRows';
 
@@ -14,6 +14,7 @@ import MultipleRowMaxSelectableExample from './example/MultiSelectableRowsMaxSel
 import MultipleRowMaxSelectableExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/MultiSelectableRowsMaxSelectable';
 import MultipleSelectableRowsWithSubheader from './example/MultiSelectableRowsWithSubheader';
 import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/MultiSelectableRowsWithSubheader';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

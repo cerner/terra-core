@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-abstract-modal/docs/README.md';
-import { name } from 'terra-abstract-modal/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import ModalSrc from '!raw-loader!terra-abstract-modal/src/AbstractModal';
+import ModalSrc from '!raw-loader!../../../src/AbstractModal';
 
 // Example Files
 import AbstractModalIsOpened from './example/AbstractModalIsOpened';
@@ -14,6 +14,7 @@ import AbstractModalCloseOnOutsideClick from './example/AbstractModalCloseOnOuts
 import AbstractModalCloseOnOutsideClickSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AbstractModalCloseOnOutsideClick';
 import AbstractModalIsFullscreen from './example/AbstractModalIsFullscreen';
 import AbstractModalIsFullscreenSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AbstractModalIsFullscreen';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

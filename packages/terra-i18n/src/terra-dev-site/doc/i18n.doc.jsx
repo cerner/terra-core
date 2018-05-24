@@ -1,14 +1,15 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-i18n/docs/README.md';
-import { name } from 'terra-i18n/package.json';
+import ReadMe from '../../../docs/README.md';
+import { name } from '../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import I18nProvider from '!raw-loader!terra-i18n/src/I18nProvider';
+import I18nProvider from '!raw-loader!../../../src/I18nProvider';
 
 // Example Files
 import I18nDemo from './example/I18nDemo';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate

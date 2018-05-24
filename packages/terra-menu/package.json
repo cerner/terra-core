@@ -31,6 +31,7 @@
     "terra-base": "^3.10.0",
     "terra-button": "^2.10.0",
     "terra-content-container": "^2.10.0",
+    "terra-doc-template": "^1.3.0",
     "terra-icon": "^2.10.0",
     "terra-list": "^2.11.0",
     "terra-popup": "^4.0.0",
