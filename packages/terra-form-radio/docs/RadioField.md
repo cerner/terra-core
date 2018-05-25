@@ -8,7 +8,7 @@ RadioField is a component of terra-form-radio that provides a container for rend
 ```jsx
 import React from 'react';
 import Radio from 'terra-form-radio';
-import RadioField from 'terra-form-radio/lib/RadioFieldSrc';
+import RadioField from 'terra-form-radio/lib/RadioField';
 
 <RadioField
   isInline

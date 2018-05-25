@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated the README example code
 
 2.10.0 - (May 23, 2018)
 ------------------
