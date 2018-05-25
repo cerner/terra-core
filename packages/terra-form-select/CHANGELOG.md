@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.1.0 - (May 25, 2018)
+------------------
 ### Added
 * SelectField - A convenience component that wraps a select within a field.
 

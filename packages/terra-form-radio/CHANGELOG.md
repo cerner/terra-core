@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.11.0 - (May 25, 2018)
+------------------
 ### Changed
 * Updated the README example code
 
