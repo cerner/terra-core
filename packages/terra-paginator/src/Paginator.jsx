@@ -16,15 +16,18 @@ const propTypes = {
    */
   onPageChange: PropTypes.func.isRequired,
   /**
-   * The active/selected page.
+   * The active/selected page. Used to set the default selected page or maintain selection across renders.
+   * Required when using totalCount and itemCountPerPage.
    */
   selectedPage: PropTypes.number,
   /**
    * Total number of all items being paginated.
+   * Required when using itemCountPerPage and selectedPage.
    */
   totalCount: PropTypes.number,
   /**
    * Total number of items per page.
+   * Required when using selectedPage and totalCount.
    */
   itemCountPerPage: PropTypes.number,
 };

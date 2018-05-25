@@ -21,11 +21,13 @@ class TimeInputDefault extends React.Component {
         <div id="time-input-value">
           <h3>Time Input: {this.state.input}</h3>
         </div>
-        <TimeInput
-          id="timeInput"
-          name="time-input"
-          onChange={this.handleOnChange}
-        />
+        <div style={{ 'caret-color': 'transparent' }}>
+          <TimeInput
+            id="timeInput"
+            name="time-input"
+            onChange={this.handleOnChange}
+          />
+        </div>
       </Base>
     );
   }

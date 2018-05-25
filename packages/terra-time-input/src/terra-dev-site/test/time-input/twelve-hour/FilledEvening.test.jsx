@@ -6,12 +6,14 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 const TimeInputDefault = () => (
   <Base locale={locale}>
-    <TimeInput
-      id="timeInput"
-      name="time-input"
-      value="21:22"
-      variant="12-hour"
-    />
+    <div style={{ 'caret-color': 'transparent' }}>
+      <TimeInput
+        id="timeInput"
+        name="time-input"
+        value="21:22"
+        variant="12-hour"
+      />
+    </div>
   </Base>
 );
 
