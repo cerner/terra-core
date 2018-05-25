@@ -3,6 +3,7 @@ ChangeLog
 
 Unreleased
 ----------
+* Updated docs.
 
 1.1.0 - (May 25, 2018)
 ------------------

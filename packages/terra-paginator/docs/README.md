@@ -13,7 +13,7 @@ Standard paginator to be used for data sets of known and unknown size. Provides 
 import React from 'react';
 import Paginator from 'terra-paginator';
 
-<Paginator onPageChange={(e, i) => console.log(i)} selectedPage={1} totalCount={2234} itemCountPerPage={20} />
+<Paginator onPageChange={i => console.log(i)} selectedPage={1} totalCount={2234} itemCountPerPage={20} />
 ```
 
 ## Component Features
