@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../scss/_navigation-side-menu.scss';
+import '../../../scss/scoped-theme.scss';
 import './LegacyThemeNavigationSideMenu.scss';
 
 const NavigationSideMenuThemeExamples = () => (

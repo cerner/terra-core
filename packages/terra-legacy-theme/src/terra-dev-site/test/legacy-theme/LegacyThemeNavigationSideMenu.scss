@@ -1,11 +1,11 @@
 .legacy-theme-test > * {
   align-items: center;
   display: flex;
+}
 
-  & > div:first-child {
-    flex-basis: 75px;
-    height: 29px;
-  }
+.legacy-theme-test > * > div:first-child {
+  flex-basis: 75px;
+  height: 29px;
 }
 
 // List - Default

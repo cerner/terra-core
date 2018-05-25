@@ -1,32 +1,32 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
+import ReadMe from '../../../../docs/README.md';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
-import OptionSrc from '!raw-loader!../../../src/_Option';
-import OptGroupSrc from '!raw-loader!../../../src/_OptGroup';
-import SelectSrc from '!raw-loader!../../../src/Select';
+import OptionSrc from '!raw-loader!../../../../src/_Option';
+import OptGroupSrc from '!raw-loader!../../../../src/_OptGroup';
+import SelectSrc from '!raw-loader!../../../../src/Select';
 
 // Example Files
-import ControlledExample from './example/Controlled';
-import ControlledExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Controlled';
-import ComboboxExample from './example/Combobox';
-import ComboboxExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Combobox';
-import DefaultExample from './example/Default';
-import DefaultExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Default';
-import DisabledExample from './example/Disabled';
-import DisabledExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Disabled';
-import InvalidExample from './example/Invalid';
-import InvalidExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Invalid';
-import MultipleExample from './example/Multiple';
-import MultipleExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Multiple';
-import OptGroupExample from './example/OptGroup';
-import OptGroupExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/OptGroup';
-import SearchExample from './example/Search';
-import SearchExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Search';
-import TagExample from './example/Tag';
-import TagExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Tag';
+import ControlledExample from '../example/Controlled';
+import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Controlled';
+import ComboboxExample from '../example/Combobox';
+import ComboboxExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Combobox';
+import DefaultExample from '../example/Default';
+import DefaultExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Default';
+import DisabledExample from '../example/Disabled';
+import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Disabled';
+import InvalidExample from '../example/Invalid';
+import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Invalid';
+import MultipleExample from '../example/Multiple';
+import MultipleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Multiple';
+import OptGroupExample from '../example/OptGroup';
+import OptGroupExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OptGroup';
+import SearchExample from '../example/Search';
+import SearchExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Search';
+import TagExample from '../example/Tag';
+import TagExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Tag';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const Index = () => (

@@ -1,10 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from 'terra-form-select/docs/SelectField.md';
-import SelectFieldSrc from '!raw-loader!terra-form-select/src/SelectField';
-import SelectFieldExample from './examples/SelectField';
-import SelectFieldExampleSrc from '!raw-loader!./examples/SelectField';
+import ReadMe from '../../../../docs/SelectField.md';
+
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+// Component Source
+import SelectFieldSrc from '!raw-loader!../../../../src/SelectField';
+
+// Example Files
+import SelectFieldExample from '../example/SelectField';
+import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SelectField';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate
