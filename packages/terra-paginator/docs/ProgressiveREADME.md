@@ -13,7 +13,7 @@ Paginator to be used for ordered data where the size of the data is known. Provi
 import React from 'react';
 import ProgressivePaginator from 'terra-paginator/lib/ProgressivePaginator';
 
-<ProgressivePaginator onPageChange={(e, i) => console.log(i)} selectedPage={1} totalCount={2234} itemCountPerPage={20} />
+<ProgressivePaginator onPageChange={i => console.log(i)} selectedPage={1} totalCount={2234} itemCountPerPage={20} />
 ```
 
 ## Component Features
