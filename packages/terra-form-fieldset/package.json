@@ -44,7 +44,7 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest && npm run test:wdio",
-    "test:jest": "cross-env jest $npm_package_name\\\\\\tests --config ../../jestconfig.json",
+    "test:jest": "node ../../scripts/run-jest/index.js",
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }
