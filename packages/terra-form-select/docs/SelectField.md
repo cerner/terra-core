@@ -5,7 +5,7 @@ A convenience wrapper assembling a [terra-form-select](https://github.com/cerner
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-form-select/lib/SelectField`
+  - `npm install terra-form-select`
 
 ## Usage
 
