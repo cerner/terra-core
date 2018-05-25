@@ -12,14 +12,14 @@
 
 ```jsx
 import React from 'react';
-import InputField from 'terra-form-input/lib/input-field';
+import InputField from 'terra-form-input/lib/InputField';
 
 <InputField
   inputId="input-id"
   name="description"
   value="I'm a software engineer working at Cerner"
   required
-  label="Enger a Description"
+  label="Enter a Description"
   isInline
 />
 ```
@@ -30,7 +30,7 @@ import InputField from 'terra-form-input/lib/input-field';
  * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
  * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
  * [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
- 
+
 <!-- Uncomment supported features.
  * [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
  * [Localization Support](https://github.com/cerner/terra-core/wiki/Component-Features#localization-support)
