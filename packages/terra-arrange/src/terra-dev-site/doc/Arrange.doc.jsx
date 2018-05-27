@@ -2,16 +2,17 @@ import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
+
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 import Arrange from '../../Arrange';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
 // Component Source
 import ArrangeSrc from '!raw-loader!../../../src/Arrange';
 
 // Example Files
 import { icon, image, simpleText } from './common/examplesetup';
 import ArrangeAlignment from './example/ArrangeAlignment';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

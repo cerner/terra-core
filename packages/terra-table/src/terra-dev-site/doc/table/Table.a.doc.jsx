@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import TableSrc from '!raw-loader!../../../../src/Table';
 import SingleSelectableRowsSrc from '!raw-loader!../../../../src/SingleSelectableRows';
@@ -37,7 +37,7 @@ import TableWithCustomCells from './example/TableWithCustomCells';
 import TableWithCustomCellsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithCustomCells';
 import TableWithSubheaders from './example/TableWithSubheaders';
 import TableWithSubheadersSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/TableWithSubheaders';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

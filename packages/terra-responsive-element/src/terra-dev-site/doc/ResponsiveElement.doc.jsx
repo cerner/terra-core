@@ -3,13 +3,13 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import ResponsiveElementSrc from '!raw-loader!../../../src/ResponsiveElement';
 
 // Example Files
 import ResponsiveExample from './example/ResponsiveExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

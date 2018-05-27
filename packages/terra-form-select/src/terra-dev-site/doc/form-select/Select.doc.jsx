@@ -2,7 +2,7 @@ import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import OptionSrc from '!raw-loader!../../../../src/_Option';
 import OptGroupSrc from '!raw-loader!../../../../src/_OptGroup';
@@ -27,7 +27,7 @@ import SearchExample from '../example/Search';
 import SearchExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Search';
 import TagExample from '../example/Tag';
 import TagExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Tag';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const Index = () => (
   <DocTemplate

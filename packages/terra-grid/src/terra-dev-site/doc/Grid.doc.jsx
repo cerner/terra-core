@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import GridSrc from '!raw-loader!../../../src/Grid';
 import GridRowSrc from '!raw-loader!../../../src/GridRow';
@@ -16,7 +16,7 @@ import GridResponsive from './example/GridResponsive';
 import GridResponsiveSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/GridResponsive';
 import GridNested from './example/GridNested';
 import GridNestedSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/GridNested';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

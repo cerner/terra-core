@@ -9,7 +9,7 @@ import TextVariationsDocs from '../../../docs/text-variations.md';
 import TextVisuallyHiddenDocs from '../../../docs/text-visually-hidden.md';
 import { name } from '../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import TextSrc from '!raw-loader!../../../src/Text';
 
@@ -26,7 +26,7 @@ import TextVisuallyHidden from './example/TextVisuallyHidden';
 import TextVisuallyHiddenSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TextVisuallyHidden';
 import TextWeights from './example/TextWeights';
 import TextWeightsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TextWeights';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

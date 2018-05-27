@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import ActionHeaderSrc from '!raw-loader!../../../src/ActionHeader';
 
@@ -22,7 +22,7 @@ import MinimizeCustomButtonActionHeader from './example/MinimizeCustomButtonActi
 import MinimizeCustomButtonActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/MinimizeCustomButtonActionHeader';
 import BackPreviousNextCloseActionHeader from './example/BackPreviousNextCloseActionHeader';
 import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/BackPreviousNextCloseActionHeader';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

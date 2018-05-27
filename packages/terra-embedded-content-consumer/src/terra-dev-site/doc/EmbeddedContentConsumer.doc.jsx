@@ -4,7 +4,7 @@ import { Consumer } from 'xfc';
 import ReadMe from '../../../docs/README.md';
 import { name } from '../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import EmbeddedContentConsumerSrc from '!raw-loader!../../../src/EmbeddedContentConsumer.jsx';
 
@@ -21,7 +21,7 @@ import FillConsumer from './example/FillConsumer';
 import FillConsumerSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/FillConsumer';
 import OnReadyConsumer from './example/OnReadyConsumer';
 import OnReadyConsumerSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/OnReadyConsumer';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 Consumer.init();
 

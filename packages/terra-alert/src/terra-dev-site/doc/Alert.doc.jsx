@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../README.md';
 import { name } from '../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import AlertSrc from '!raw-loader!../../../src/Alert';
 
@@ -21,7 +21,7 @@ import SmallContainerExample from './example/SmallContainerExample';
 import DismissibleExample from './example/DismissibleExample';
 import ActionAndDismissibleExample from './example/ActionAndDismissibleExample';
 import BuildYourOwnAlertExample from './example/BuildYourOwnAlertExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

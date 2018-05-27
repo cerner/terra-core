@@ -3,14 +3,14 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SingleSelect.md';
 import { name } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import SingleSelectSrc from '!raw-loader!terra-list/src/SingleSelectList';
 
 // Example File
 import SingleSelectExamples from '../example/SingleSelect';
 import SingleSelectExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleSelect';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

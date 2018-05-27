@@ -2,7 +2,7 @@ import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/CheckboxField.md';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import CheckboxFieldSrc from '!raw-loader!../../../../src/CheckboxField';
 
@@ -13,7 +13,7 @@ import ControlledCheckboxField from '../example/field/ControlledCheckboxField';
 import ControlledCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/ControlledCheckboxField';
 import OptionalCheckboxField from '../example/field/OptionalCheckboxField';
 import OptionalCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/OptionalCheckboxField';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const checkboxFieldExamples = () => (
   <DocTemplate
