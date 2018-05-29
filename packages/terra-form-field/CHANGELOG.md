@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Changed nightwatch to webdriverIO tests
 
+2.12.0 - (May 25, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.11.0 - (May 23, 2018)
 ------------------
 ### Changed

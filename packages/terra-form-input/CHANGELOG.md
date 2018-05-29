@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+1.10.0 - (May 25, 2018)
+------------------
+### Changed
+* Updated the README example code
+
 1.9.0 - (May 23, 2018)
 ------------------
 ### Changed

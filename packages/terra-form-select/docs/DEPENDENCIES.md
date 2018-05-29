@@ -7,6 +7,7 @@
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-lifecycles-compat | ^3.0.2 | -- | Backwards compatibility polyfill for React class components |
 | terra-base | ^3.10.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-form-field | ^2.10.0 | ^16.2.0 | The Form Field component handles the layout of the label, help text and error text associated with a form element. |
 | terra-hookshot | ^4.0.0 | ^16.2.0 | The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected. |
 | terra-mixins | ^1.14.0 | -- | terra-mixins |
 

@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+4.1.0 - (May 25, 2018)
+------------------
+### Added
+* SelectField - A convenience component that wraps a select within a field.
+
 4.0.0 - (May 23, 2018)
 ------------------
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/docs/UPGRADEGUIDE.md)
