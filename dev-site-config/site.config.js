@@ -12,7 +12,7 @@ const siteConfig = {
     /* The themes to toggle in the site. */
     themes: {
       'Default Theme': '',
-      'Mock Theme': 'cerner-mock-theme',
+      'Legacy Theme': 'terra-legacy-theme',
     },
   },
 };
