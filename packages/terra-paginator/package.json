@@ -32,7 +32,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "react-router": "^4.2.0",
     "terra-base": "^3.10.0",
     "terra-button": "^2.11.0",
     "terra-dialog": "^1.9.0",
