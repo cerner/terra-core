@@ -35,6 +35,7 @@ const defaultProps = {
   footer: undefined,
   children: undefined,
   fill: false,
+  scrollRefCallback: undefined,
 };
 
 const ContentContainer = ({
