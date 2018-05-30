@@ -20,7 +20,7 @@ const DocPage = () => (
     examples={[
       {
         title: 'Responsive Table',
-        description: 'A table that will render as a list on small view ports.',
+        description: 'A table that will render as a list on small screen sizes.',
         example: <ResponsiveTableExample />,
         source: ResponsiveTableExampleSrc,
       },
