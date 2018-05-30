@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import ScrollableConatiner from 'terra-scrollable-container';
 import styles from './ContentContainer.scss';
 
 const cx = classNames.bind(styles);
@@ -23,6 +24,10 @@ const propTypes = {
    * Whether or not the container should expanded to fill its parent element.
    */
   fill: PropTypes.bool,
+  /**
+   * Ref callback for the scrollable area of the content container.
+   */
+  scrollRefCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -37,6 +42,7 @@ const ContentContainer = ({
   footer,
   children,
   fill,
+  scrollRefCallback,
   ...customProps
   }) => {
   const contentLayoutClassNames = cx([
@@ -45,15 +51,28 @@ const ContentContainer = ({
     customProps.className,
   ]);
 
+  let content;
+  if (fill) {
+    content = (
+      <ScrollableConatiner className={cx('normalizer')} key="container-content" refCallback={scrollRefCallback}>
+        {children}
+      </ScrollableConatiner>
+    );
+  } else {
+    content = (
+      <div className={cx('normalizer')} key="container-content" ref={scrollRefCallback}>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header')}>
         {header}
       </div>}
       <div className={cx('main')}>
-        <div className={cx('normalizer')}>
-          {children}
-        </div>
+        {content}
       </div>
       {footer && <div className={cx('footer')}>
         {footer}

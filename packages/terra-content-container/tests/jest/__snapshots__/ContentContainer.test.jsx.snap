@@ -9,6 +9,7 @@ exports[`should render a default component 1`] = `
   >
     <div
       className="normalizer"
+      key="container-content"
     />
   </div>
 </div>
@@ -23,6 +24,7 @@ exports[`should render a footer 1`] = `
   >
     <div
       className="normalizer"
+      key="container-content"
     />
   </div>
   <div
@@ -51,6 +53,7 @@ exports[`should render a header 1`] = `
   >
     <div
       className="normalizer"
+      key="container-content"
     />
   </div>
 </div>
@@ -63,8 +66,9 @@ exports[`should render as fill 1`] = `
   <div
     className="main"
   >
-    <div
+    <ScrollableContainer
       className="normalizer"
+      key="container-content"
     />
   </div>
 </div>
@@ -79,6 +83,7 @@ exports[`should render content 1`] = `
   >
     <div
       className="normalizer"
+      key="container-content"
     >
       <p>
         test content
@@ -104,6 +109,7 @@ exports[`should render header & footer 1`] = `
   >
     <div
       className="normalizer"
+      key="container-content"
     />
   </div>
   <div
