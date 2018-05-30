@@ -12,6 +12,13 @@
     > .main {
       flex: 1 1 auto;
     }
+
+    > .normalizer {
+      height: initial;
+      overflow: initial;
+      position: initial;
+      width: initial;
+    }
   }
 
   .fill {

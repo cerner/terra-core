@@ -51,28 +51,15 @@ const ContentContainer = ({
     customProps.className,
   ]);
 
-  let content;
-  if (fill) {
-    content = (
-      <ScrollableConatiner className={cx('normalizer')} key="container-content" refCallback={scrollRefCallback}>
-        {children}
-      </ScrollableConatiner>
-    );
-  } else {
-    content = (
-      <div className={cx('normalizer')} key="container-content" ref={scrollRefCallback}>
-        {children}
-      </div>
-    );
-  }
-
   return (
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header')}>
         {header}
       </div>}
       <div className={cx('main')}>
-        {content}
+        <ScrollableConatiner className={cx('normalizer')} refCallback={scrollRefCallback}>
+          {children}
+        </ScrollableConatiner>
       </div>
       {footer && <div className={cx('footer')}>
         {footer}
