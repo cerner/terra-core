@@ -3,6 +3,8 @@
   .content-container {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 
     > .header,
     > .footer {
@@ -11,21 +13,6 @@
 
     > .main {
       flex: 1 1 auto;
-
-      > .normalizer {
-        height: initial;
-        overflow: initial;
-        position: initial;
-        width: initial;
-      }
-    }
-  }
-
-  .fill {
-    height: 100%;
-    width: 100%;
-
-    > .main {
       height: 100%;
       min-height: 50px;
       overflow: hidden;
@@ -34,6 +21,26 @@
 
       > .normalizer {
         position: absolute;
+      }
+    }
+  }
+
+  .static {
+    height: initial;
+    width: initial;
+
+    > .main {
+      height: initial;
+      min-height: initial;
+      overflow: initial;
+      position: initial;
+      width: initial;
+
+      > .normalizer {
+        height: initial;
+        overflow: initial;
+        position: initial;
+        width: initial;
       }
     }
   }
