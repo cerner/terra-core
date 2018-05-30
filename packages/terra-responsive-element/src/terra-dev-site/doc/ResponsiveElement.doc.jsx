@@ -4,7 +4,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../docs/README.md';
 import ResponsiveElementSrc from '!raw-loader!../../../src/ResponsiveElement';
 import ResponsiveTableExample from './example/ResponsiveTable';
-import ResponsiveTableExampleSrc from '!raw-loader!./example/ResponsiveTable';
+import ResponsiveTableExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ResponsiveTable';
 
 const DocPage = () => (
   <DocTemplate
