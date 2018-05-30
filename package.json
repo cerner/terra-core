@@ -30,6 +30,9 @@
       "raf/polyfill",
       "./jestsetup.js"
     ],
+    "testMatch": [
+      "**/jest/**/(*.)(spec|test).js?(x)"
+    ],
     "snapshotSerializers": [
       "<rootDir>/node_modules/enzyme-to-json/serializer"
     ],
@@ -49,7 +52,6 @@
     "danger": "danger",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
-    "generate-config": "generate-config -o 'dev-site-config' -s 'packages/terra-site/src/examples/**/+(Icon!(*Navigation|*Routes|*Tabs)|*Index).jsx' -s 'packages/terra-*/tests/{nightwatch,nightwatch/*}/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)' -s 'packages/terra-table/tests/nightwatch/*/components/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)'",
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
     "jest": "jest",
@@ -66,7 +68,6 @@
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
     "start": "tt:serve --config webpack.config",
-    "start:build": "npm run generate-config && npm run start",
     "start-heroku": "tt:serve-static --site build",
     "start-static": "tt:serve-static --config webpack.config",
     "test": "jest && npm run wdio && nightwatch",
@@ -110,7 +111,7 @@
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
-    "terra-dev-site": "0.6.0",
+    "terra-dev-site": "^1.0.0",
     "terra-toolkit": "^3.3.1",
     "webpack-merge": "^4.1.2"
   }

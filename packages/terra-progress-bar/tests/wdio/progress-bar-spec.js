@@ -4,14 +4,14 @@ describe('Progress Bar', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/progress-bar/progress-bar-default'));
+    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-default'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Size', () => {
-    before(() => browser.url('/#/raw/tests/progress-bar/progress-bar-size'));
+    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-size'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -28,14 +28,14 @@ describe('Progress Bar', () => {
   });
 
   describe('Color', () => {
-    before(() => browser.url('/#/raw/tests/progress-bar/progress-bar-color'));
+    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-color'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Gradient', () => {
-    beforeEach(() => browser.url('/#/raw/tests/progress-bar/progress-bar-gradient'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-gradient'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();

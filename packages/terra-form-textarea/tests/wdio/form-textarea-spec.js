@@ -5,7 +5,7 @@ describe('Form-Textarea', () => {
   describe('TextareaField', () => {
     describe('Valid TextareaField', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/form-textarea/textarea-field');
+        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
       });
 
       Terra.should.matchScreenshot({ viewports });
@@ -13,7 +13,7 @@ describe('Form-Textarea', () => {
 
     describe('Invalid TextareaField', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/form-textarea/textarea-field');
+        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
         browser.click('#validity-toggle');
       });
 

@@ -30,6 +30,10 @@
     "test": "npm run test:wdio",
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
   "dependencies": {
     "terra-mixins": "^1.16.0"
   }

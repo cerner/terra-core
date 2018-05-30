@@ -11,7 +11,7 @@ describe('Tabs - Responsive', () => {
   viewports.forEach((viewport) => {
     describe('Default', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/tabs/tabs/default-tabs');
+        browser.url('/#/raw/tests/terra-tabs/tabs/tabs/default-tabs');
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
@@ -20,7 +20,7 @@ describe('Tabs - Responsive', () => {
     });
     describe('Extended', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/tabs/tabs/extended-tabs');
+        browser.url('/#/raw/tests/terra-tabs/tabs/tabs/extended-tabs');
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
@@ -29,7 +29,7 @@ describe('Tabs - Responsive', () => {
     });
     describe('Icon Only Tabs', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/tabs/tabs/icon-only-tabs');
+        browser.url('/#/raw/tests/terra-tabs/tabs/tabs/icon-only-tabs');
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
@@ -42,7 +42,7 @@ describe('Tabs - Responsive', () => {
   Terra.viewports('tiny', 'small', 'medium', 'large').forEach((viewport) => {
     describe('Responsive Hidden Open', () => {
       before(() => {
-        browser.url('/#/raw/tests/tabs/tabs/default-tabs');
+        browser.url('/#/raw/tests/terra-tabs/tabs/tabs/default-tabs');
         browser.setViewportSize(viewport);
         browser.click('[data-terra-tabs-menu]');
       });
@@ -86,7 +86,7 @@ describe('Tabs - Responsive', () => {
     before(() => browser.setViewportSize(Terra.viewports('large')[0]));
     describe('Default', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/tabs/tabs/default-tabs');
+        browser.url('/#/raw/tests/terra-tabs/tabs/tabs/default-tabs');
         browser.moveToObject('.tabContent');
       });
 
@@ -160,7 +160,7 @@ describe('Tabs - Responsive', () => {
 
     describe('Fill Parent Tabs', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/tabs/tabs/fill-parent-tabs');
+        browser.url('/#/raw/tests/terra-tabs/tabs/tabs/fill-parent-tabs');
         browser.moveToObject('.tabContent');
       });
 
@@ -173,7 +173,7 @@ describe('Tabs - Responsive', () => {
   describe('Collapsed Tabs', () => {
     before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
     describe('Default', () => {
-      beforeEach(() => browser.url('/#/raw/tests/tabs/tabs/default-tabs'));
+      beforeEach(() => browser.url('/#/raw/tests/terra-tabs/tabs/tabs/default-tabs'));
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',

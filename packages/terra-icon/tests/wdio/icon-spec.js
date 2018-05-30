@@ -2,21 +2,21 @@
 describe('Icon', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/icon/icon-default'));
+    before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-default'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('HeightWidth', () => {
-    before(() => browser.url('/#/raw/tests/icon/icon-height-width'));
+    before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-height-width'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Bidi', () => {
-    before(() => browser.url('/#/raw/tests/icon/icon-bidi'));
+    before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-bidi'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();

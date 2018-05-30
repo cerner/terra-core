@@ -4,7 +4,7 @@ const viewports = Terra.viewports('medium', 'large');
 describe('Props Table', () => {
   describe('Default', () => {
     before(() => {
-      browser.url('/#/raw/tests/props-table/mock-props-table');
+      browser.url('/#/raw/tests/terra-props-table/props-table-test/mock-props-table');
       browser.setViewportSize(Terra.viewports('medium')[0]);
     });
 
@@ -42,7 +42,7 @@ describe('Props Table', () => {
 
   describe('With Title', () => {
     before(() => {
-      browser.url('/#/raw/tests/props-table/mock-props-table-with-title');
+      browser.url('/#/raw/tests/terra-props-table/props-table-test/mock-props-table-with-title');
       browser.setViewportSize(Terra.viewports('medium')[0]);
     });
 

@@ -4,7 +4,7 @@ const viewports = Terra.viewports('tiny');
 describe('Select', () => {
   describe('Default Variant', () => {
     describe('default should select an option by click', () => {
-      before(() => browser.url('/#/raw/tests/form-select/uncontrolled-default'));
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
@@ -25,7 +25,7 @@ describe('Select', () => {
     });
 
     describe('default should select an option by pressing enter', () => {
-      before(() => browser.url('/#/raw/tests/form-select/uncontrolled-default'));
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
@@ -46,7 +46,7 @@ describe('Select', () => {
     });
 
     describe('default controlled should select an option by click', () => {
-      before(() => browser.url('/#/raw/tests/form-select/controlled-default'));
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
@@ -67,7 +67,7 @@ describe('Select', () => {
     });
 
     describe('default should truncate and wrap long text', () => {
-      before(() => browser.url('/#/raw/tests/form-select/uncontrolled-default-long-text'));
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default-long-text'));
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
@@ -84,7 +84,7 @@ describe('Select', () => {
   describe('Combobox Variant', () => {
     describe('combobox should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-combobox');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-combobox');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -111,7 +111,7 @@ describe('Select', () => {
 
     describe('combobox should select an option by pressing enter', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-combobox');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-combobox');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -138,7 +138,7 @@ describe('Select', () => {
 
     describe('combobox controlled should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/controlled-combobox');
+        browser.url('/#/raw/tests/terra-form-select/form-select/controlled-combobox');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -165,7 +165,7 @@ describe('Select', () => {
 
     describe('combobox should allow a free text entry', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-combobox');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-combobox');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -198,7 +198,7 @@ describe('Select', () => {
   describe('Multiple Variant', () => {
     describe('multiple should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-multiple');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -225,7 +225,7 @@ describe('Select', () => {
 
     describe('multiple should select an option by pressing enter', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-multiple');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -252,7 +252,7 @@ describe('Select', () => {
 
     describe('multiple controlled should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/controlled-multiple');
+        browser.url('/#/raw/tests/terra-form-select/form-select/controlled-multiple');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -281,7 +281,7 @@ describe('Select', () => {
   describe('Search Variant', () => {
     describe('search should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-search');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -308,7 +308,7 @@ describe('Select', () => {
 
     describe('search should select an option by pressing enter', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-search');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -335,7 +335,7 @@ describe('Select', () => {
 
     describe('search controlled should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/controlled-search');
+        browser.url('/#/raw/tests/terra-form-select/form-select/controlled-search');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -364,7 +364,7 @@ describe('Select', () => {
   describe('Tag Variant', () => {
     describe('tag should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-tag');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -391,7 +391,7 @@ describe('Select', () => {
 
     describe('tag should select an option by pressing enter', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-tag');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -418,7 +418,7 @@ describe('Select', () => {
 
     describe('tag controlled should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/controlled-tag');
+        browser.url('/#/raw/tests/terra-form-select/form-select/controlled-tag');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -445,7 +445,7 @@ describe('Select', () => {
 
     describe('tag should allow a free text entry', () => {
       before(() => {
-        browser.url('/#/raw/tests/form-select/uncontrolled-tag');
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -477,7 +477,7 @@ describe('Select', () => {
 
   describe('OptGroup', () => {
     describe('should render an optgroup', () => {
-      before(() => browser.url('/#/raw/tests/form-select/opt-group'));
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/opt-group'));
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });

@@ -3,7 +3,7 @@ const viewports = Terra.viewports('tiny');
 
 describe('Select Field', () => {
   describe('should select an option by click', () => {
-    before(() => browser.url('/#/raw/tests/form-select/select-field'));
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/select-field'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -24,7 +24,7 @@ describe('Select Field', () => {
   });
 
   describe('should select an option by pressing enter', () => {
-    before(() => browser.url('/#/raw/tests/form-select/select-field'));
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/select-field'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

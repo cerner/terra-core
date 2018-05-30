@@ -4,7 +4,7 @@ const viewports = Terra.viewports('tiny', 'large');
 describe('Form-Input', () => {
   describe('Valid', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/form-input/default-form-input');
+      browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
     });
 
     Terra.should.beAccessible({ viewports });
@@ -34,7 +34,7 @@ describe('Form-Input', () => {
 
   describe('Invalid', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/form-input/invalid-form-input');
+      browser.url('/#/raw/tests/terra-form-input/form-input/invalid-form-input');
     });
 
     Terra.should.beAccessible({ viewports });
@@ -51,7 +51,7 @@ describe('Form-Input', () => {
   describe('Enabled', () => {
     describe('Enabled Non-Selected', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/form-input/default-form-input');
+        browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
       });
 
       Terra.should.beAccessible({ viewports });
@@ -60,7 +60,7 @@ describe('Form-Input', () => {
 
     describe('Enabled Hovered', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/form-input/default-form-input');
+        browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
         browser.moveToObject('input');
       });
 
@@ -73,7 +73,7 @@ describe('Form-Input', () => {
 
     describe('Enabled Keyboard-Focused', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/form-input/default-form-input');
+        browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
         browser.keys('Tab');
         // remove the blinking cursor for the screenshots
         browser.execute(() => {
@@ -98,7 +98,7 @@ describe('Form-Input', () => {
   describe('Disabled', () => {
     describe('Disabled Non-Selected', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/form-input/disabled-form-input');
+        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
       });
 
       Terra.should.beAccessible({ viewports });
@@ -116,7 +116,7 @@ describe('Form-Input', () => {
 
     describe('Disabled Hovered', () => {
       beforeEach(() => {
-        browser.url('/#raw/tests/form-input/disabled-form-input');
+        browser.url('/#raw/tests/terra-form-input/form-input/disabled-form-input');
         browser.moveToObject('input');
       });
 
@@ -129,7 +129,7 @@ describe('Form-Input', () => {
 
     describe('Disabled Keyboard-Focused', () => {
       beforeEach(() => {
-        browser.url('/#/raw/tests/form-input/disabled-form-input');
+        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
         browser.keys('Tab');
       });
 
@@ -148,7 +148,7 @@ describe('Form-Input', () => {
     describe('InputField', () => {
       describe('Valid InputField', () => {
         beforeEach(() => {
-          browser.url('/#/raw/tests/form-input/input-field');
+          browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
         });
 
         Terra.should.matchScreenshot({ viewports });
@@ -156,7 +156,7 @@ describe('Form-Input', () => {
 
       describe('Invalid InputField', () => {
         beforeEach(() => {
-          browser.url('/#/raw/tests/form-input/input-field');
+          browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
           browser.click('#validity-toggle');
         });
 

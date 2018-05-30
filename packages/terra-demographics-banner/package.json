@@ -33,6 +33,8 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-base": "^3.10.0",
+    "terra-doc-template": "^1.3.0",
+    "terra-image": "^2.9.0",
     "terra-responsive-element": "^2.10.0"
   },
   "scripts": {

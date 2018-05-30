@@ -1,0 +1,12 @@
+import React from 'react';
+import Status from '../../../Status';
+
+const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
+
+const StatusNoColor = () => (
+  <div>
+    <Status id="statusNoColor">{simpleText}</Status>
+  </div>
+);
+
+export default StatusNoColor;
