@@ -2,7 +2,7 @@
 
 exports[`should render a default component 1`] = `
 <div
-  className="content-container static"
+  className="content-container-static"
 >
   <div
     className="main"
@@ -16,7 +16,7 @@ exports[`should render a default component 1`] = `
 
 exports[`should render a footer 1`] = `
 <div
-  className="content-container static"
+  className="content-container-static"
 >
   <div
     className="main"
@@ -37,7 +37,7 @@ exports[`should render a footer 1`] = `
 
 exports[`should render a header 1`] = `
 <div
-  className="content-container static"
+  className="content-container-static"
 >
   <div
     className="header"
@@ -58,7 +58,7 @@ exports[`should render a header 1`] = `
 
 exports[`should render as fill 1`] = `
 <div
-  className="content-container"
+  className="content-container-fill"
 >
   <div
     className="main"
@@ -72,7 +72,7 @@ exports[`should render as fill 1`] = `
 
 exports[`should render content 1`] = `
 <div
-  className="content-container static"
+  className="content-container-static"
 >
   <div
     className="main"
@@ -90,7 +90,7 @@ exports[`should render content 1`] = `
 
 exports[`should render header & footer 1`] = `
 <div
-  className="content-container static"
+  className="content-container-static"
 >
   <div
     className="header"

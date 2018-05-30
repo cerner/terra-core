@@ -47,8 +47,7 @@ const ContentContainer = ({
   ...customProps
   }) => {
   const contentLayoutClassNames = cx([
-    'content-container',
-    { static: !fill },
+    `content-container-${fill ? 'fill' : 'static'}`,
     customProps.className,
   ]);
 

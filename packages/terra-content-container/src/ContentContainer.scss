@@ -1,6 +1,18 @@
 /* stylelint-disable selector-max-compound-selectors */
 :local {
-  .content-container {
+  .content-container-static {
+    display: flex;
+    flex-direction: column;
+    
+    > .main > .normalizer {
+      height: initial;
+      overflow: initial;
+      position: initial;
+      width: initial;
+    }
+  }
+  
+  .content-container-fill {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -21,27 +33,6 @@
 
       > .normalizer {
         position: absolute;
-      }
-    }
-  }
-
-  // When not using the fill behavior set all values back to initial.
-  .static {
-    height: initial;
-    width: initial;
-
-    > .main {
-      height: initial;
-      min-height: initial;
-      overflow: initial;
-      position: initial;
-      width: initial;
-
-      > .normalizer {
-        height: initial;
-        overflow: initial;
-        position: initial;
-        width: initial;
       }
     }
   }
