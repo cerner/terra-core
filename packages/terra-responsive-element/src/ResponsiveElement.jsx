@@ -111,6 +111,5 @@ class ResponsiveElement extends React.Component {
 
 ResponsiveElement.propTypes = propTypes;
 ResponsiveElement.defaultProps = defaultProps;
-ResponsiveElement.breakpoints = breakpoints;
 
 export default ResponsiveElement;
