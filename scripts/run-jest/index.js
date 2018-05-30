@@ -3,17 +3,18 @@ const os = require('os');
 
 let regex = '';
 let jestcmd = '';
-if (os.type() === 'Linux') {
-  regex = `${process.env.npm_package_name}/tests`;
-  jestcmd = 'jest';
-} else if (os.type() === 'Darwin') {
-  regex = `${process.env.npm_package_name}/tests`;
-  jestcmd = 'jest';
-} else if (os.type() === 'Windows_NT') {
-  regex = `${process.env.npm_package_name}\\\\tests`;
-  jestcmd = 'jest.cmd';
-} else {
-  throw new Error(`Unsupported OS found: ${os.type()}`);
+switch (os.type()) {
+  case 'Linux':
+  case 'Darwin':
+    regex = `${process.env.npm_package_name}/tests`;
+    jestcmd = 'jest';
+    break;
+  case 'Windows_NT':
+    regex = `${process.env.npm_package_name}\\\\tests`;
+    jestcmd = 'jest.cmd';
+    break;
+  default:
+    throw new Error(`Unsupported OS found: ${os.type()}`);
 }
 
 spawn(jestcmd, [regex, '--config', '../../jestconfig.json'], { stdio: 'inherit' });
