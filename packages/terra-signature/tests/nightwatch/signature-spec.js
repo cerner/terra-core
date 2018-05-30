@@ -7,12 +7,12 @@ const constants = require('./SignatureConstants');
 
 module.exports = resizeTo(['medium'], {
   'Displays a default signature': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-signature/signature/signature-default`);
     browser.expect.element('canvas[class*="signature"]').to.be.present;
   },
 
   'Draw a line signature and verify canvas': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-signature/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
@@ -31,7 +31,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Draw line, exit canvas to another element, then continue drawing': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-signature/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
@@ -51,7 +51,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Validates right click drawing is disabled': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-signature/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
@@ -70,7 +70,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Validates middle click drawing is disabled': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-signature/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser

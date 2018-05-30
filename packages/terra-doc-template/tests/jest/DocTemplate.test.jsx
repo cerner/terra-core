@@ -1,7 +1,7 @@
 import React from 'react';
 
 import DocTemplate from '../../src/DocTemplate';
-import TestComponentExample from '../../examples/test-examples/TestComponentExample';
+import TestComponentExample from '../../src/terra-dev-site/test/doc-template/common/TestComponentExample';
 
 // These cannot be properly imported with jest so substitute this value in instead
 const readme = 'test-file-stub';

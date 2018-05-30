@@ -32,6 +32,7 @@
     "react-intl": "^2.4.0",
     "terra-base": "^3.10.0",
     "terra-button-group": "^2.11.0",
+    "terra-doc-template": "^1.2.0",
     "terra-form": "^2.10.0"
   },
   "scripts": {
@@ -41,7 +42,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }

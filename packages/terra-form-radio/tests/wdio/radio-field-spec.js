@@ -5,7 +5,7 @@ const viewports = Terra.viewports('tiny', 'large');
 describe('RadioField', () => {
   describe('RadioField Valid', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/form-radio/radio-field/controlled-radio-field');
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
     });
 
     Terra.should.matchScreenshot({ viewports });
@@ -40,7 +40,7 @@ describe('RadioField', () => {
 
   describe('RadioField Interactions - Valid State', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/form-radio/radio-field/controlled-radio-field');
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
       browser.waitForVisible('#testing-radio-field');
       browser.click('#website-dept');
       browser.click('#ux-dept');
@@ -53,7 +53,7 @@ describe('RadioField', () => {
 
   describe('RadioField Interactions - Valid State with hideRequired', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/form-radio/radio-field/hide-required-invalid-radio-field');
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
       browser.waitForVisible('#testing-radio-field');
       browser.click('#website-dept');
       browser.click('#ux-dept');
@@ -64,7 +64,7 @@ describe('RadioField', () => {
 
   describe('RadioField Interactions - Invalid State with hideRequired', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/form-radio/radio-field/hide-required-invalid-radio-field');
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
       browser.waitForVisible('#testing-radio-field');
       browser.click('#website-dept');
       browser.click('#ux-dept');
@@ -77,7 +77,7 @@ describe('RadioField', () => {
 
   describe('RadioField Optional', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/form-radio/radio-field/optional-radio-field');
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/optional-radio-field');
     });
 
     Terra.should.matchScreenshot({ viewports });
@@ -86,7 +86,7 @@ describe('RadioField', () => {
 
   describe('RadioField Hidden Legend', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/form-radio/radio-field/hidden-legend');
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hidden-legend');
     });
 
     Terra.should.matchScreenshot({ viewports });

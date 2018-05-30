@@ -3,7 +3,7 @@ const viewports = Terra.viewports('tiny', 'medium', 'large');
 
 describe('Paginator', () => {
   describe('Paginator', () => {
-    beforeEach(() => browser.url('/#/raw/tests/paginator/paginator'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-paginator/paginator/paginator'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -22,7 +22,7 @@ describe('Paginator', () => {
   });
 
   describe('PaginatorNoPages', () => {
-    beforeEach(() => browser.url('/#/raw/tests/paginator/paginator-no-pages'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-paginator/paginator/paginator-no-pages'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -41,7 +41,7 @@ describe('Paginator', () => {
   });
 
   describe('ProgressivePaginator', () => {
-    beforeEach(() => browser.url('/#/raw/tests/paginator/progressive-paginator'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-paginator/paginator/progressive-paginator'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

@@ -1,0 +1,19 @@
+import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Grid from 'terra-grid/lib/Grid';
+import './GridExample.scss';
+
+const GridDefault = () => (
+  <Grid>
+    <Grid.Row>
+      <Grid.Column col={6}>
+        <div className="terra-grid-example">First Column content</div>
+      </Grid.Column>
+      <Grid.Column col={6}>
+        <div className="terra-grid-example">Second Column content</div>
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
+);
+
+export default GridDefault;

@@ -17,24 +17,24 @@ For more details, see [More Information](MoreInformation.md).
 import React from 'react';
 import Alert from 'terra-alert';
 
-<Alert type={Alert.Opts.Types.ALERT} >
+<Alert type="alert" >
   This is an alert with the default title.
 </Alert>
 
-<Alert type={Alert.Opts.Types.SUCCESS} 
-       title="Success!" 
+<Alert type="success"
+       title="Success!"
        onDismiss={this.handleDismiss} >
-  This is a success alert with a custom title. It is configured to be dismissible. 
+  This is a success alert with a custom title. It is configured to be dismissible.
 </Alert>
 
-<Alert type={Alert.Opts.Types.WARNING} 
+<Alert type="warning"
        alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >
   This is a warning with the default title. A Terra Button component is passed as the alert action.
 </Alert>
 
-<Alert type={Alert.Opts.Types.CUSTOM} 
-       title="Help!" 
-       customStatusColor="orange" 
+<Alert type="custom"
+       title="Help!"
+       customStatusColor="orange"
        customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} >
   <span>This is a <u>custom</u> alert with a custom title and icon and the content is HTML instead of text.</span>
 </Alert>
