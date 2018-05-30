@@ -1,12 +1,12 @@
 import React from 'react';
 import Base from 'terra-base';
-import Field from '../../lib/Field';
+import Field from '../../../../lib/Field';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 const FieldHelpText = () => (
   <Base locale={locale}>
-    <b>Field - Help Text</b>
+    <h3>Field - Help Text</h3>
     <Field
       id="help-text"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}

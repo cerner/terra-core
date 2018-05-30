@@ -1,6 +1,6 @@
 import React from 'react';
 import Base from 'terra-base';
-import Field from '../../lib/Field';
+import Field from '../../../../lib/Field';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
