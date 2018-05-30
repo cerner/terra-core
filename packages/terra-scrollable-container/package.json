@@ -1,7 +1,7 @@
 {
   "name": "terra-scrollable-container",
   "main": "lib/ScrollableContainer.js",
-  "version": "2.10.0",
+  "version": "0.0.0",
   "description": "The terra-scrollable-container component scrollable appropriate styling for standard scrolling css and a refCallback.",
   "repository": {
     "type": "git",

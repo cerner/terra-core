@@ -17,16 +17,16 @@ const propTypes = {
   refCallback: PropTypes.func,
 };
 
-const ListItem = ({
+const ScrollableContainer = ({
   children,
   refCallback,
   ...customProps
 }) => (
-  <div {...customProps} classNames={cx(['scrollable-container', customProps.className])} ref={refCallback}>
+  <div {...customProps} className={cx(['scrollable-container', customProps.className])} ref={refCallback}>
     {children}
   </div>
 );
 
-ListItem.propTypes = propTypes;
+ScrollableContainer.propTypes = propTypes;
 
-export default ListItem;
+export default ScrollableContainer;

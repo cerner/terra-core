@@ -8,8 +8,8 @@ import { name } from '../../../package.json';
 import ScrollableContainerSrc from '!raw-loader!terra-scrollable-container/src/ScrollableContainer';
 
 // Example Files
-import ScrollableContainerExample from './ScrollableContainerExample';
-import ScrollableContainerExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollableContainerExample';
+import ScrollableContainerDefault from './example/ScrollableContainerDefault';
+import ScrollableContainerDefaultSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollableContainerDefault';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -19,8 +19,8 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        example: <ScrollableContainerExample />,
-        source: ScrollableContainerExampleSrc,
+        example: <ScrollableContainerDefault />,
+        source: ScrollableContainerDefaultSrc,
       },
     ]}
     propsTables={[

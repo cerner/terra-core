@@ -4,7 +4,7 @@ import ScrollableContainer from 'terra-scrollable-container/lib/ScrollableContai
 
 export default () => (
   <div>
-    <p>300x400 Container</p>
+    <p>Example Parent Container</p>
     <div style={{ height: '300px', width: '400px', border: '1px dashed black' }}>
       <ScrollableContainer>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
