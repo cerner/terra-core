@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from '../../src/Avatar';
-import exampleProfilePhoto from '../../examples/assets/150x150.jpg';
+import exampleProfilePhoto from '../../src/terra-dev-site/assets/150x150.jpg';
 
 describe('Avatar', () => {
   // Snapshot Tests

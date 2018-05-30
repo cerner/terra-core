@@ -34,6 +34,8 @@
     "focus-trap-react": "^3.1.1",
     "prop-types": "^15.5.8",
     "terra-base": "^3.10.0",
+    "terra-button": "^2.10.0",
+    "terra-doc-template": "^1.2.0",
     "terra-icon": "^2.10.0"
   },
   "scripts": {

@@ -39,11 +39,13 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
     "react-intl": "^2.3.0",
     "terra-base": "^3.10.0",
     "terra-button": "^2.11.0",
     "terra-divider": "^2.10.0",
+    "terra-doc-template": "^1.2.0",
     "terra-icon": "^2.10.0",
     "terra-mixins": "^1.16.0"
   }

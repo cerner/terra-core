@@ -3,6 +3,9 @@
     "raf/polyfill",
     "./jestsetup.js"
   ],
+  "testMatch": [
+    "**/jest/**/(*.)(spec|test).js?(x)"
+  ],
   "snapshotSerializers": [
     "./node_modules/enzyme-to-json/serializer"
   ],

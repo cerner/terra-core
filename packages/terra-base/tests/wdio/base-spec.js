@@ -1,7 +1,7 @@
 /* global $, before, browser */
 describe('Base', () => {
   describe('Switching Locales', () => {
-    before(() => browser.url('/#/raw/tests/base/switch-locale-base'));
+    before(() => browser.url('/#/raw/tests/terra-base/base/switch-locale-base'));
     it('Displays a default en locale message', () => {
       expect(browser.getText('#message')).to.equal('en');
     });
@@ -14,12 +14,12 @@ describe('Base', () => {
 
   describe('No Translations- Fallback to En', () => {
     it('Displays a placeholder element', () => {
-      browser.url('/#/raw/tests/base/no-translations-loaded-base');
+      browser.url('/#/raw/tests/terra-base/base/no-translations-loaded-base');
       expect($('div').getText()).to.not.contain('No Translations');
     });
 
     it('Displays a placeholder string', () => {
-      browser.url('/#/raw/tests/base/no-translations-loaded-string-base');
+      browser.url('/#/raw/tests/terra-base/base/no-translations-loaded-string-base');
       expect($('div').getText()).to.not.contain('No Translations String');
     });
   });

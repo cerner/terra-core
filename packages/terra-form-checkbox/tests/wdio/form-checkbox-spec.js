@@ -76,7 +76,7 @@ describe('Checkbox', () => {
   };
 
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/form-checkbox/checkbox/default-checkbox'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/default-checkbox'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -134,7 +134,7 @@ describe('Checkbox', () => {
   });
 
   describe('Disabled', () => {
-    beforeEach(() => browser.url('/#/raw/tests/form-checkbox/checkbox/disabled-checkbox'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/disabled-checkbox'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -159,28 +159,28 @@ describe('Checkbox', () => {
   });
 
   describe('Hidden Label', () => {
-    beforeEach(() => browser.url('/#/raw/tests/form-checkbox/checkbox/hidden-label-checkbox'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/hidden-label-checkbox'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Populated', () => {
-    beforeEach(() => browser.url('/#/raw/tests/form-checkbox/checkbox/populated-checkbox'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/populated-checkbox'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Long Text', () => {
-    beforeEach(() => browser.url('/#/raw/tests/form-checkbox/checkbox/long-text-checkbox'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/long-text-checkbox'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Three Checkboxes, First Defaulted to Checked', () => {
-    beforeEach(() => browser.url('/#/raw/tests/form-checkbox/checkbox/multiple-checkboxes'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/multiple-checkboxes'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();

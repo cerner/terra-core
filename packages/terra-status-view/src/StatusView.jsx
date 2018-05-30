@@ -22,7 +22,7 @@ const propTypes = {
   children: PropTypes.node,
 
   /**
-   * The glyph that is to be displayed for the StatusView.Opts.variants.CUSTOM variant.
+   * The glyph that is to be displayed for the `custom` variant.
    */
   customGlyph: PropTypes.node,
 
@@ -42,18 +42,18 @@ const propTypes = {
   message: PropTypes.string,
 
   /**
-   * The status view's title to display. Status views with variants of type StatusView.Opts.variants.NODATA,
-   * StatusView.Opts.variants.NOMATCHINGRESULTS, StatusView.Opts.variants.NOTAUTHORIZED,
-   * StatusView.Opts.variants.ERROR will have defaulted values unless overridden with this prop.
+   * The status view's title to display. Status views with variants of type `no-data`,
+   * `no-matching-results`, `not-authorized`,
+   * `error` will have defaulted values unless overridden with this prop.
    */
   title: PropTypes.string,
 
   /**
-   * Determines the glyph to display, one of the following: StatusView.Opts.variants.NODATA,
-   * StatusView.Opts.variants.NOMATCHINGRESULTS, StatusView.Opts.variants.NOTAUTHORIZED,
-   * StatusView.Opts.variants.ERROR, or StatusView.Opts.variants.CUSTOM.
+   * Determines the glyph to display, one of the following: `no-data`,
+   * `no-matching-results`, `not-authorized`,
+   * `error`, or `custom`.
    */
-  variant: PropTypes.oneOf(Object.values(variants)),
+  variant: PropTypes.string,
 };
 
 const defaultProps = {

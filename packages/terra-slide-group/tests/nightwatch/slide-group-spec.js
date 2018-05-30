@@ -4,7 +4,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['medium'], {
   'Displays a default SlideGroup with the a few items': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/slide-group/default-slide-group`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-slide-group/slide-group/default-slide-group`);
 
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').to.have.attribute('aria-hidden');
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').to.have.css('visibility').which.equals('hidden');
@@ -13,14 +13,14 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a SlideGroup with one item': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/slide-group/one-item-slide-group`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-slide-group/slide-group/one-item-slide-group`);
 
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').to.not.have.attribute('aria-hidden');
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').text.to.equal('Slide 1');
   },
 
   'Increments a non-animated SlideGroup': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/slide-group/non-animated-slide-group`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-slide-group/slide-group/non-animated-slide-group`);
 
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').to.not.have.attribute('aria-hidden');
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').text.to.contain('Slide 1');
@@ -41,7 +41,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Increments an animated SlideGroup': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/slide-group/animated-slide-group`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-slide-group/slide-group/animated-slide-group`);
 
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').to.not.have.attribute('aria-hidden');
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').text.to.contain('Slide 1');
@@ -67,7 +67,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Disables content on hidden slides for a SlideGroup': (browser) => {
-    browser.url(`${browser.launchUrl}/#/raw/tests/slide-group/non-animated-slide-group`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/terra-slide-group/slide-group/non-animated-slide-group`);
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').to.not.have.attribute('aria-hidden');
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').text.to.contain('Slide 1');
 

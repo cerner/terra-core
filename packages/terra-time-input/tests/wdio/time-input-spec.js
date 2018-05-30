@@ -5,7 +5,7 @@ describe('Time Input', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
   describe('Default with no time provided', () => {
-    beforeEach(() => browser.url('/#/raw/tests/time-input/time-input/default'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/time-input/default'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
@@ -42,19 +42,19 @@ describe('Time Input', () => {
   });
 
   describe('Default with time provided', () => {
-    beforeEach(() => browser.url('/#/raw/tests/time-input/time-input/default-time'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/time-input/default-time'));
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Invalid time provided', () => {
-    beforeEach(() => browser.url('/#/raw/tests/time-input/time-input/invalid-time'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/time-input/invalid-time'));
 
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Focus Hour Styles', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/default-time');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/default-time');
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     });
 
@@ -79,7 +79,7 @@ describe('Time Input', () => {
 
   describe('Focus Minute Styles', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/default-time');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/default-time');
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
     });
 
@@ -106,7 +106,7 @@ describe('Time Input', () => {
 describe('Time Input onChange operations', () => {
   describe('Time Input OnChange', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('1234');
     });
@@ -116,7 +116,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Time Input prepends 0 on single digit hour', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('2');
@@ -128,7 +128,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Time Input prepends 0 on hour input of 3 or more', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('3');
@@ -139,7 +139,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Time Input does prepend 0 on hour input less than 3', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('2');
@@ -150,7 +150,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Time Input does not accept hour input greater than 23', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('24');
@@ -161,7 +161,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Time Input prepends 0 on single digit minute', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
       browser.keys('2');
@@ -173,7 +173,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Time Input prepends 0 on minute input of 6 or more', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
       browser.keys('6');
@@ -184,7 +184,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Time Input does not prepend 0 on minute input less than 6', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
       browser.keys('5');
@@ -195,7 +195,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Time Input does not accept minute input greater than 59', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
       browser.keys('66');
@@ -206,7 +206,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Pressing DELETE in minute with no value focuses to hour', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
       browser.keys(['Delete']);
@@ -217,7 +217,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Triggers an onChange for onBlur on the minute input', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('747');
@@ -228,7 +228,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Does not trigger onChange for an hour with just one digit', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('1223');
@@ -241,7 +241,7 @@ describe('Time Input onChange operations', () => {
 
   describe('Does not trigger onChange for a minute with just one digit', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('1223');
@@ -257,7 +257,7 @@ describe('Time Input onChange operations', () => {
 describe('Time Input up and down arrow operations', () => {
   describe('DOWN_ARROW decrements hour by 1', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('23');
@@ -270,7 +270,7 @@ describe('Time Input up and down arrow operations', () => {
 
   describe('DOWN_ARROW is ignored when the hour has reached 00', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('00');
@@ -283,7 +283,7 @@ describe('Time Input up and down arrow operations', () => {
 
   describe('UP_ARROW increments hour by 1', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys(['ArrowUp', 'ArrowUp']);
@@ -294,7 +294,7 @@ describe('Time Input up and down arrow operations', () => {
 
   describe('UP_ARROW is ignored when the hour has reached 23', () => {
     beforeEach(() => {
-      browser.url('/#/raw/tests/time-input/time-input/on-change');
+      browser.url('/#/raw/tests/terra-time-input/time-input/time-input/on-change');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
       browser.keys('23');

@@ -25,15 +25,14 @@
   },
   "peerDependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "terra-base": "^3.7.0",
-    "terra-menu": "^2.8.0"
+    "react-dom": "^16.2.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
     "terra-base": "^3.10.0",
+    "terra-doc-template": "^1.2.0",
     "terra-content-container": "^2.10.0",
     "terra-icon": "^2.10.0",
     "terra-menu": "^3.2.0",

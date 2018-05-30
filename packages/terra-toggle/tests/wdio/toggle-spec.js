@@ -4,7 +4,7 @@ describe('Toggle', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/toggle/default-toggle'));
+    before(() => browser.url('/#/raw/tests/terra-toggle/toggle/default-toggle'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot('closed');
@@ -17,14 +17,14 @@ describe('Toggle', () => {
   });
 
   describe('Opened', () => {
-    beforeEach(() => browser.url('/#/raw/tests/toggle/open-toggle'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-toggle/toggle/open-toggle'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Animated', () => {
-    beforeEach(() => browser.url('/#/raw/tests/toggle/animated-toggle'));
+    beforeEach(() => browser.url('/#/raw/tests/terra-toggle/toggle/animated-toggle'));
 
     it('disables focusable elements when closed', () => {
       expect(browser.getCssProperty('#toggle', 'visibility').value).to.equal('hidden');

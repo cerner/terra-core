@@ -29,7 +29,9 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-animate-height": "^0",
-    "terra-base": "^3.10.0"
+    "terra-base": "^3.10.0",
+    "terra-doc-template": "^1.2.0",
+    "terra-icon": "^2.9.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
