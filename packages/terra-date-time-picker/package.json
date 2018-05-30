@@ -1,7 +1,7 @@
 {
   "name": "terra-date-time-picker",
   "main": "lib/DateTimePicker.js",
-  "version": "2.13.0",
+  "version": "2.14.0",
   "description": "The DateTimePicker component has a date picker for selecting date and a time input for entering time",
   "repository": {
     "type": "git",
@@ -20,7 +20,6 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -35,14 +34,14 @@
     "moment": "^2.21.0",
     "moment-timezone": "^0.5.13",
     "prop-types": "^15.5.8",
-    "terra-abstract-modal": "^1.4.0",
+    "terra-abstract-modal": "^1.6.0",
     "terra-app-delegate": "^2.1.0",
-    "terra-base": "^3.10.0",
-    "terra-button": "^2.11.0",
-    "terra-date-picker": "^2.12.0",
-    "terra-doc-template": "^1.2.0",
+    "terra-base": "^3.11.0",
+    "terra-button": "^2.12.0",
+    "terra-date-picker": "^2.14.0",
+    "terra-doc-template": "^1.5.0",
     "terra-modal-manager": "^3.0.0",
-    "terra-time-input": "^2.11.0"
+    "terra-time-input": "^2.13.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
