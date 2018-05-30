@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.4.0 - (May 30, 2018)
+------------------
 ### Changed
 * Updated structure to match terra-dev-site 1.0 and moved doc examples internal.
 
