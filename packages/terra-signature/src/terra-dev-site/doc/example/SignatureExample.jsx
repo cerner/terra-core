@@ -25,27 +25,27 @@ class SignatureExample extends React.Component {
     this.setState(newState);
   }
 
-  handleLineWidth(e) {
-    const newState = Object.assign({}, this.state, { lineSegments: [], lineWidth: parseInt(e.target.value, 10) });
+  handleLineWidth(value) {
+    const newState = Object.assign({}, this.state, { lineSegments: [], lineWidth: parseInt(value, 10) });
     this.setState(newState);
   }
 
   render() {
     return (
-      <div style={{ height: '100px', width: '100%', border: '1px solid black' }} >
-        <Signature id="foo" lineWidth={this.state.lineWidth} lineSegments={this.state.lineSegments} />
-        <button onClick={this.handleClear}>Clear </button>
-        <button onClick={this.handleSingleLine}>Sign w/Line </button>
-        <Select
-          options={[{ value: '1', display: 'EXTRA_FINE' },
-                    { value: '2', display: 'FINE' },
-                    { value: '4', display: 'MEDIUM' },
-                    { value: '6', display: 'HEAVY' }]}
-          name="linewidth"
-          defaultValue="2"
-          required
-          onChange={this.handleLineWidth}
-        />
+      <div>
+        <div style={{ height: '100px', width: '100%', padding: '5px', border: '1px solid black' }} >
+          <Signature id="foo" lineWidth={this.state.lineWidth} lineSegments={this.state.lineSegments} />
+        </div>
+        <div>
+          <button onClick={this.handleClear}>Clear </button>
+          <button onClick={this.handleSingleLine}>Sign w/Line </button>
+          <Select placeholder="Select a line width" value={this.state.lineWidth} onChange={this.handleLineWidth}>
+            <Select.Option value="1" display="EXTRAFINE" key="extrafine" />
+            <Select.Option value="2" display="FINE" key="fine" />
+            <Select.Option value="4" display="MEDIUM" key="medium" />
+            <Select.Option value="6" display="HEAVY" key="heavy" />
+          </Select>
+        </div>
       </div>
     );
   }
