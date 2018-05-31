@@ -2,13 +2,13 @@
 
 exports[`should render a default component 1`] = `
 <div
-  className="scrollable-container"
+  className="scroll-view"
 />
 `;
 
 exports[`should render with props 1`] = `
 <div
-  className="scrollable-container"
+  className="scroll-view"
 >
   child content
 </div>

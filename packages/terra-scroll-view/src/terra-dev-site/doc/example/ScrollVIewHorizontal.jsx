@@ -1,12 +1,12 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ScrollableContainer from 'terra-scrollable-container/lib/ScrollableContainer';
+import ScrollView from 'terra-scroll-view/lib/ScrollView';
 
 export default () => (
   <div>
     <p>Overflow-X Container</p>
     <div style={{ height: '200px', width: '400px', border: '1px dashed black' }}>
-      <ScrollableContainer>
+      <ScrollView>
         <p style={{ height: '170px', width: '1100px', paddingLeft: '10px', paddingRight: '10px' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
           eget facilisis nunc ornare in. Vestibulum ut posuere neque. Maecenas nibh lacus, euismod sit amet magna sit amet,
@@ -24,7 +24,7 @@ export default () => (
           a sollicitudin sem risus eu quam. Interdum et malesuada fames ac ante ipsum primis in faucibus.
           In maximus nunc tempus magna iaculis porttitor.
         </p>
-      </ScrollableContainer>
+      </ScrollView>
     </div>
   </div>
 );

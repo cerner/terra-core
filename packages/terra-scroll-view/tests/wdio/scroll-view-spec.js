@@ -1,14 +1,14 @@
 /* global browser, before, Terra */
 
-describe('ScrollableContainer', () => {
+describe('ScrollView', () => {
   before(() => {
-    browser.url('/#/raw/tests/terra-scrollable-container/scrollable-container/default');
+    browser.url('/#/raw/tests/terra-scroll-view/scroll-view/default');
   });
 
   Terra.should.beAccessible({ context: '#scroll-test' });
   Terra.should.matchScreenshot('before-click', { selector: '#scroll-test' });
 
-  it('scroll the container', () => {
+  it('scroll the view', () => {
     browser.click('#scroll');
   });
 

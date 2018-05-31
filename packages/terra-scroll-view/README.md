@@ -1,17 +1,17 @@
-# Terra Scrollable Container
+# Terra Scroll View
 
-[![NPM version](http://img.shields.io/npm/v/terra-scrollable-container.svg)](https://www.npmjs.org/package/terra-scrollable-container)
+[![NPM version](http://img.shields.io/npm/v/terra-scroll-view.svg)](https://www.npmjs.org/package/terra-scroll-view)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-scrollable-container is a content view that hides data accessible with scrolling and provides a refCallback.
+The terra-scroll-view is a content view that hides data accessible with scrolling and provides a refCallback.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-scrollable-container/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-scroll-view/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-scrollable-container`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-scroll-view`
 
 ## LICENSE
 

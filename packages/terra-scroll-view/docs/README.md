@@ -1,12 +1,12 @@
-# Terra Scrollable Container
+# Terra Scroll View
 
-The terra-scrollable-container is a content view that hides data accessible with scrolling and provides a refCallback.
+The terra-scroll-view is a content view that hides data accessible with scrolling and provides a refCallback.
 
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-scrollable-container`
-  - `yarn add terra-scrollable-container`
+  - `npm install terra-scroll-view`
+  - `yarn add terra-scroll-view`
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
