@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Updated to implement the new terra-scrollable-container component.
+* Updated to implement the new terra-scroll-view component.
 
 2.11.0 - (May 30, 2018)
 ------------------
