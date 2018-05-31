@@ -1,4 +1,4 @@
-# Radio Field
+# Terra Form Radio Field
 
 RadioField is a component of terra-form-radio that provides a container for rendering related radio buttons. RadioField include displays for help text, error text, required or optional indication, and invalid states.
 
