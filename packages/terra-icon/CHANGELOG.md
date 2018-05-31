@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Restored documentation pages for themable and static variants.
 
 2.12.0 - (May 30, 2018)
 ------------------
