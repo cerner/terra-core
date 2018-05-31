@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated field documentation to be more inline with other examples
 
 2.11.0 - (May 30, 2018)
 ------------------

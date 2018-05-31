@@ -2,6 +2,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SelectField.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
@@ -14,9 +15,9 @@ import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/do
 
 const DocPage = () => (
   <DocTemplate
-    packageName="terra-form-select"
+    packageName={name}
     readme={ReadMe}
-    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     propsTables={[{
       componentName: 'Select Field',
       componentSrc: SelectFieldSrc,
