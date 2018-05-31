@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added ids to two divs on test pages
 
 2.13.0 - (May 30, 2018)
 ------------------

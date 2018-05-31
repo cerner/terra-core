@@ -14,7 +14,7 @@ class OnCloseToggleButton extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="top-test-div">
         <div id="on-close-event">
           <h3>Times Closed: {this.state.timesClosed}</h3>
         </div>
