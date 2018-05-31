@@ -1,6 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/RadioField.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
@@ -17,9 +18,9 @@ import OptionalRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/do
 
 const RadioFieldExamples = () => (
   <DocTemplate
-    id="props"
+    packageName={name}
     readme={ReadMe}
-    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-radio/src/RadioField.jsx"
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
         title: 'Default RadioField Example',

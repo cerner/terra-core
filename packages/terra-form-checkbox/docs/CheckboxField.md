@@ -1,4 +1,4 @@
-# Checkbox Field
+# Terra Form Checkbox Field
 
 CheckboxField is a component of terra-form-checkbox that provides a container for rendering related checkboxes. CheckboxField include displays for help text, error text, required or optional indication, and invalid states.
 
