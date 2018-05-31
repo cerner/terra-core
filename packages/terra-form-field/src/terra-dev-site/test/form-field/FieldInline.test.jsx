@@ -1,13 +1,12 @@
 import React from 'react';
 import Base from 'terra-base';
-import Field from '../../../../lib/Field';
+import Field from '../../../Field';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 const FieldExamples = () => (
   <Base locale={locale}>
     <Field
-      id="inline-1"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -17,7 +16,6 @@ const FieldExamples = () => (
     </Field>
 
     <Field
-      id="inline-2"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -27,7 +25,6 @@ const FieldExamples = () => (
     </Field>
 
     <Field
-      id="inline-3"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -37,7 +34,6 @@ const FieldExamples = () => (
     </Field>
     <br />
     <Field
-      id="inline-4"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -49,7 +45,6 @@ const FieldExamples = () => (
     </Field>
 
     <Field
-      id="inline-5"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -61,7 +56,6 @@ const FieldExamples = () => (
     </Field>
 
     <Field
-      id="inline-6"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
