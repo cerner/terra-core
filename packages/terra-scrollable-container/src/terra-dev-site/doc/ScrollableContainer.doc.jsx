@@ -8,8 +8,10 @@ import { name } from '../../../package.json';
 import ScrollableContainerSrc from '!raw-loader!terra-scrollable-container/src/ScrollableContainer';
 
 // Example Files
-import ScrollableContainerDefault from './example/ScrollableContainerDefault';
-import ScrollableContainerDefaultSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollableContainerDefault';
+import ScrollableContainerVertical from './example/ScrollableContainerVertical';
+import ScrollableContainerVerticalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollableContainerVertical';
+import ScrollableContainerHorizontal from './example/ScrollableContainerHorizontal';
+import ScrollableContainerHorizontalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollableContainerHorizontal';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -19,8 +21,12 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        example: <ScrollableContainerDefault />,
-        source: ScrollableContainerDefaultSrc,
+        example: <ScrollableContainerVertical />,
+        source: ScrollableContainerVerticalSrc,
+      },
+      {
+        example: <ScrollableContainerHorizontal />,
+        source: ScrollableContainerHorizontalSrc,
       },
     ]}
     propsTables={[

@@ -1,6 +1,6 @@
 # Terra Scrollable Container
 
-The terra-scrollable-container component scrollable appropriate styling for standard scrolling css and a refCallback.
+The terra-scrollable-container is a content view that hides data accessible with scrolling and provides a refCallback.
 
 ## Getting Started
 

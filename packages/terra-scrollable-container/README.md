@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-scrollable-container.svg)](https://www.npmjs.org/package/terra-scrollable-container)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-scrollable-container component scrollable appropriate styling for standard scrolling css and a refCallback.
+The terra-scrollable-container is a content view that hides data accessible with scrolling and provides a refCallback.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-scrollable-container/docs)

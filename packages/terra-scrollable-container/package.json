@@ -2,7 +2,7 @@
   "name": "terra-scrollable-container",
   "main": "lib/ScrollableContainer.js",
   "version": "0.0.0",
-  "description": "The terra-scrollable-container component scrollable appropriate styling for standard scrolling css and a refCallback.",
+  "description": "The terra-scrollable-container is a content view that hides data accessible with scrolling and provides a refCallback.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
