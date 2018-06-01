@@ -404,3 +404,79 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
   </Toggle>
 </div>
 `;
+
+exports[`ToggleButton should set onClose prop correctly 1`] = `
+<div
+  className="button"
+>
+  <Button
+    aria-expanded={false}
+    icon={
+      <span
+        className="icon"
+      >
+        <IconChevronRight
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </span>
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    onClick={[Function]}
+    text="Show"
+    type="button"
+    variant="neutral"
+  />
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+  >
+    Test
+  </Toggle>
+</div>
+`;
+
+exports[`ToggleButton should set onOpen prop correctly 1`] = `
+<div
+  className="button"
+>
+  <Button
+    aria-expanded={false}
+    icon={
+      <span
+        className="icon"
+      >
+        <IconChevronRight
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </span>
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    onClick={[Function]}
+    text="Show"
+    type="button"
+    variant="neutral"
+  />
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+  >
+    Test
+  </Toggle>
+</div>
+`;
