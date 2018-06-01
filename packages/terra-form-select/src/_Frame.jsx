@@ -39,6 +39,10 @@ const propTypes = {
    */
   onDeselect: PropTypes.func,
   /**
+   * Callback function triggered when the frame loses focus.
+   */
+  onBlur: PropTypes.func,
+  /**
    * Callback function triggered when the frame gains focus.
    */
   onFocus: PropTypes.func,
@@ -109,6 +113,7 @@ class Frame extends React.Component {
     this.closeDropdown = this.closeDropdown.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.positionDropdown = this.positionDropdown.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
@@ -210,6 +215,17 @@ class Frame extends React.Component {
     const { dropdownAttrs } = this.props;
     const { select, dropdown, state } = this;
     this.setState(Util.dropdownPosition(dropdownAttrs, state, select, dropdown));
+  }
+
+  /**
+   * Handles the blur event.
+   */
+  handleBlur(event) {
+    this.closeDropdown();
+
+    if (this.props.onBlur) {
+      this.props.onBlur(event);
+    }
   }
 
   /**
@@ -357,7 +373,7 @@ class Frame extends React.Component {
         aria-haspopup="true"
         aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
         className={selectClasses}
-        onBlur={this.closeDropdown}
+        onBlur={this.handleBlur}
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}

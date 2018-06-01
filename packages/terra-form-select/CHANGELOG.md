@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated field documentation to be more inline with other examples
+* Updated to allow a custom onBlur
 
 4.2.0 - (May 30, 2018)
 ------------------
