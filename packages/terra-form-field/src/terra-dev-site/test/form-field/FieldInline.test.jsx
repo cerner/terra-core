@@ -7,7 +7,6 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 const FieldExamples = () => (
   <Base locale={locale}>
     <Field
-      id="inline-1"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -17,7 +16,6 @@ const FieldExamples = () => (
     </Field>
 
     <Field
-      id="inline-2"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
@@ -27,10 +25,42 @@ const FieldExamples = () => (
     </Field>
 
     <Field
-      id="inline-3"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       isInline
+      required
+    >
+      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+    </Field>
+    <br />
+    <Field
+      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+      label="Field Label"
+      isInline
+      error="Error Message"
+      isInvalid
+      required
+    >
+      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+    </Field>
+
+    <Field
+      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+      label="Field Label"
+      isInline
+      error="Error Message"
+      isInvalid
+      showOptional
+    >
+      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+    </Field>
+
+    <Field
+      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+      label="Field Label"
+      isInline
+      error="Error Message"
+      isInvalid
       required
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>

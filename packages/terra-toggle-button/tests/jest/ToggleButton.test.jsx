@@ -81,13 +81,13 @@ describe('ToggleButton', () => {
   it('should set onOpen prop correctly', () => {
     // eslint-disable-next-line no-alert
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" onOpen={() => alert('Opened')}>Test</ToggleButton>);
-    expect(toggleButton.instance().props.onOpen.toString()).toEqual('function onOpen() {return alert(\'Opened\');}');
+    expect(toggleButton).toMatchSnapshot();
   });
 
   it('should set onClose prop correctly', () => {
     // eslint-disable-next-line no-alert
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" onClose={() => alert('Closed')}>Test</ToggleButton>);
-    expect(toggleButton.instance().props.onClose.toString()).toEqual('function onClose() {return alert(\'Closed\');}');
+    expect(toggleButton).toMatchSnapshot();
   });
 
   it('should set openedButtonText prop correctly', () => {
