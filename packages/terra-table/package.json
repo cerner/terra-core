@@ -41,7 +41,7 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "node ../../scripts/run-jest/index.js",
+    "test:jest": "jest --config ../../jestconfig.js",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }
