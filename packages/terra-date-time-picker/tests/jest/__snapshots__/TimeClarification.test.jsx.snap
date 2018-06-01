@@ -4,11 +4,11 @@ exports[`should render a default date time picker 1`] = `
 <TimeClarification
   isOffsetButtonHidden={true}
   isOpen={true}
-  onDaylightSavingButtonClick={[Function]}
-  onOffsetButtonClick={[Function]}
-  onRequestClose={[Function]}
-  onStandardTimeButtonClick={[Function]}
-  releaseFocus={[Function]}
-  requestFocus={[Function]}
+  onDaylightSavingButtonClick={[MockFunction]}
+  onOffsetButtonClick={[MockFunction]}
+  onRequestClose={[MockFunction]}
+  onStandardTimeButtonClick={[MockFunction]}
+  releaseFocus={[MockFunction]}
+  requestFocus={[MockFunction]}
 />
 `;

@@ -1,95 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToggleSectionHeader should call any custom onClick that is provided by the user correctly when clicked 1`] = `
-<ToggleSectionHeader
-  isAnimated={false}
-  isInitiallyOpen={false}
-  level={2}
-  sectionHeaderAttrs={
-    Object {
-      "onClick": [Function],
-    }
-  }
-  title="custom onClick title"
+exports[`ToggleSectionHeader should call any custom onCLose that is provided by the user correctly when clicked 1`] = `
+<div
+  onClose={[Function]}
 >
-  <div>
-    <SectionHeader
-      aria-expanded={true}
-      isOpen={true}
-      level={2}
-      onClick={[Function]}
-      title="custom onClick title"
-    >
-      <div
-        aria-expanded={true}
-        className="section-header is-interactable"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <Arrange
-          fill={
-            <h2
-              className="title"
-            >
-              custom onClick title
-            </h2>
-          }
-          fitStart={
-            <div
-              className="accordion-icon-wrapper"
-            >
-              <span
-                className="accordion-icon is-open"
-              />
-            </div>
-          }
-        >
-          <div
-            className="arrange"
-          >
-            <div
-              className="fit"
-            >
-              <div
-                className="accordion-icon-wrapper"
-              >
-                <span
-                  className="accordion-icon is-open"
-                />
-              </div>
-            </div>
-            <div
-              className="fill"
-            >
-              <h2
-                className="title"
-              >
-                custom onClick title
-              </h2>
-            </div>
-            <div
-              className="fit"
-            />
-          </div>
-        </Arrange>
-      </div>
-    </SectionHeader>
-    <Toggle
-      isAnimated={false}
-      isOpen={true}
-    >
-      <div
-        aria-hidden={false}
-        className="toggle"
-      >
-        triggers a custom onClick when clicked section header
-      </div>
-    </Toggle>
-  </div>
-</ToggleSectionHeader>
+  <SectionHeader
+    aria-expanded={false}
+    isOpen={false}
+    level={2}
+    onClick={[Function]}
+    title="custom title"
+  />
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+  >
+    Test
+  </Toggle>
+</div>
+`;
+
+exports[`ToggleSectionHeader should call any custom onOpen that is provided by the user correctly when clicked 1`] = `
+<div
+  onOpen={[Function]}
+>
+  <SectionHeader
+    aria-expanded={false}
+    isOpen={false}
+    level={2}
+    onClick={[Function]}
+    title="custom title"
+  />
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+  >
+    Test
+  </Toggle>
+</div>
 `;
 
 exports[`ToggleSectionHeader should render a default toggle section header 1`] = `
