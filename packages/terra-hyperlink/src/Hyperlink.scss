@@ -32,7 +32,7 @@
     }
 
     &.is-disabled {
-      color: var(--terra-link-disabled-color, rgba(28, 31, 33, 0.33));
+      color: var(--terra-link-disabled-color, rgba(28, 31, 33, 0.2));
       text-decoration: none;
     }
   }

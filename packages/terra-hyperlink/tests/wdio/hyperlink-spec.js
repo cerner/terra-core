@@ -12,7 +12,11 @@ describe('Hyperlink', () => {
   describe('Disabled', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/disabled-hyperlink'));
 
-    Terra.should.beAccessible({ viewports });
+    const rules = {
+      'color-contrast': { enabled: false },
+    };
+
+    Terra.should.beAccessible({ viewports, rules });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty({
       '--terra-link-disabled-color': 'red',
