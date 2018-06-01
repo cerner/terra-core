@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated the date picker to add its own wrapping div
 
 2.14.0 - (May 30, 2018)
 ------------------
