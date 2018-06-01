@@ -29,20 +29,19 @@ describe('ToggleSectionHeader', () => {
     const customOnClick = jest.fn();
     const toggleSectionHeader = mount(<ToggleSectionHeader sectionHeaderAttrs={{ onClick: customOnClick }} title="custom onClick title">triggers a custom onClick when clicked section header</ToggleSectionHeader>);
     toggleSectionHeader.find('SectionHeader').simulate('click');
-    expect(toggleSectionHeader).toMatchSnapshot();
     expect(customOnClick).toHaveBeenCalled();
   });
 
   it('should call any custom onOpen that is provided by the user correctly when clicked', () => {
     // eslint-disable-next-line no-alert
     const toggleSectionHeader = shallow(<ToggleSectionHeader title="custom title" onOpen={() => alert('Opened')}>Test</ToggleSectionHeader>);
-    expect(toggleSectionHeader.instance().props.onOpen.toString()).toEqual('function onOpen() {return alert(\'Opened\');}');
+    expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   it('should call any custom onCLose that is provided by the user correctly when clicked', () => {
     // eslint-disable-next-line no-alert
-    const toggleSectionHeader = shallow(<ToggleSectionHeader title="custom title" onCLose={() => alert('Closed')}>Test</ToggleSectionHeader>);
-    expect(toggleSectionHeader.instance().props.onCLose.toString()).toEqual('function onCLose() {return alert(\'Closed\');}');
+    const toggleSectionHeader = shallow(<ToggleSectionHeader title="custom title" onClose={() => alert('Closed')}>Test</ToggleSectionHeader>);
+    expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   // Prop Tests
