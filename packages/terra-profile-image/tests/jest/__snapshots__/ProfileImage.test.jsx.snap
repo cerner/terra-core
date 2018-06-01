@@ -8,7 +8,6 @@ exports[`should render a Terra image with a placeholder prop 1`] = `
     isFluid={false}
     placeholder={
       <img
-        alt={undefined}
         height="75"
         src="test-file-stub"
         width="75"
