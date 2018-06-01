@@ -19,44 +19,38 @@ describe('Slide Group', () => {
   describe('Non Animated', () => {
     before(() => browser.url('/#/raw/tests/terra-slide-group/slide-group/non-animated-slide-group'));
 
-    it('should increment', () => {
+    it('should advance the slide', () => {
       browser.click('#increment-1');
-
-      const screenshot = browser.checkElement('#SlideGroup');
-      expect(screenshot).to.matchReference('withinTolerance');
     });
 
-    it('should decrement', () => {
+    Terra.should.matchScreenshot('slide 2', { selector: '#SlideGroup' });
+
+    it('should go back a slide', () => {
       browser.click('#decrement-2');
-
-      const screenshot = browser.checkElement('#SlideGroup');
-      expect(screenshot).to.matchReference('withinTolerance');
     });
 
+    Terra.should.matchScreenshot('slide 1', { selector: '#SlideGroup' });
     Terra.should.beAccessible();
   });
 
   describe('Animated', () => {
     before(() => browser.url('/#/raw/tests/terra-slide-group/slide-group/animated-slide-group'));
 
-    it('should increment', () => {
+    it('should advance the slide', () => {
       browser.click('#increment-1');
 
       browser.pause(350);
-
-      const screenshot = browser.checkElement('#SlideGroup');
-      expect(screenshot).to.matchReference('withinTolerance');
     });
 
-    it('should decrement', () => {
+    Terra.should.matchScreenshot('slide 2', { selector: '#SlideGroup' });
+
+    it('should go back a slide', () => {
       browser.click('#decrement-2');
 
       browser.pause(350);
-
-      const screenshot = browser.checkElement('#SlideGroup');
-      expect(screenshot).to.matchReference('withinTolerance');
     });
 
+    Terra.should.matchScreenshot('slide 1', { selector: '#SlideGroup' });
     Terra.should.beAccessible();
   });
 });
