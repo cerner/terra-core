@@ -7,7 +7,7 @@ export default () => (
     <p>Overflow-X Container</p>
     <div style={{ height: '200px', width: '400px', border: '1px dashed black' }}>
       <ScrollView>
-        <p style={{ height: '170px', width: '1100px', paddingLeft: '10px', paddingRight: '10px' }}>
+        <p style={{ height: '150px', width: '1100px', paddingLeft: '10px', paddingRight: '10px' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
           eget facilisis nunc ornare in. Vestibulum ut posuere neque. Maecenas nibh lacus, euismod sit amet magna sit amet,
           porttitor sollicitudin sapien. Vivamus nec lacus vel tortor ultrices efficitur vitae sit amet ipsum.

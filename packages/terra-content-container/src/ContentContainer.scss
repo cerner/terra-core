@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: column;
     
+    // reset scroll styles to intial defaults to handle stack/block style layout.
     > .main > .normalizer {
-      height: initial;
-      overflow: initial;
-      position: initial;
-      width: initial;
+      height: initial; // auto
+      overflow: initial; // visible
+      position: initial; // static
+      width: initial; // auto
     }
   }
   
