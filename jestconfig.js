@@ -1,4 +1,8 @@
 module.exports = {
+  collectCoverageFrom: [
+    'packages/**/src/*.js',
+    'packages/**/src/*.jsx',
+  ],
   setupFiles: [
     'raf/polyfill',
     './jestsetup.js',
