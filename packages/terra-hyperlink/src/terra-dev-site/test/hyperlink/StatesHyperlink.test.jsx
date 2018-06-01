@@ -2,7 +2,7 @@ import React from 'react';
 import A from '../../../Hyperlink';
 
 const HyperlinkStates = () => (
-  <div style={{ padding: '0 10px' }}>
+  <div role="main" style={{ padding: '0 10px' }} id="link-example">
     <A href="https://my.cerner.com/?">hyperlink</A>
     <br />
     <br />

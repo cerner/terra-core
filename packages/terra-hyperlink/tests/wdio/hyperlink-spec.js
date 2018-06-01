@@ -3,14 +3,14 @@ const viewports = Terra.viewports('tiny', 'medium', 'large');
 
 describe('Hyperlink', () => {
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/default-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/default-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Disabled', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/disabled-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/disabled-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -20,7 +20,7 @@ describe('Hyperlink', () => {
   });
 
   describe('Audio', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/audio-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/audio-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -30,7 +30,7 @@ describe('Hyperlink', () => {
   });
 
   describe('Document', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/document-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/document-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -40,7 +40,7 @@ describe('Hyperlink', () => {
   });
 
   describe('External', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/external-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/external-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -50,7 +50,7 @@ describe('Hyperlink', () => {
   });
 
   describe('Image', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/image-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/image-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -60,7 +60,7 @@ describe('Hyperlink', () => {
   });
 
   describe('Video', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/video-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/video-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -70,21 +70,21 @@ describe('Hyperlink', () => {
   });
 
   describe('Icon Non Wrapping', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/icon-non-wrapping-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/icon-non-wrapping-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Scaled', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/scaled-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/scaled-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('States', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/states-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/states-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -108,7 +108,7 @@ describe('Hyperlink', () => {
   });
 
   describe('Underline Hidden', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/underline-hidden-hyperlink'));
+    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/underline-hidden-hyperlink'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
