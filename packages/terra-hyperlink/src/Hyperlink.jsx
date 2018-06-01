@@ -151,8 +151,19 @@ class Hyperlink extends React.Component {
     ]);
 
     const ComponentType = isDisabled ? 'span' : 'a';
-    const target = variant === 'external' ? '_blank' : undefined;
-    const rel = variant === 'external' ? 'noopener noreferrer' : undefined;
+
+    let target = customProps.target; // Defaults to undefined if not set
+    let rel = customProps.rel; // Defaults to undefined if not set
+
+    // If variant is set to external, we'll add target="_blank" and rel="noopener noreferrer"
+    // unless user passes their own target or rel attribute
+    if (!customProps.target && variant === 'external') {
+      target = '_blank';
+    }
+
+    if (!customProps.rel && variant === 'external') {
+      rel = 'noopener noreferrer';
+    }
 
     return (
       <ComponentType
