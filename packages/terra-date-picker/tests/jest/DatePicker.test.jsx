@@ -8,8 +8,8 @@ import messages from '../../translations/en-US.json';
 
 // Mock the following functions so that they always return a consistent date.
 // Otherwise, a date with a different offset would be created based on the the timezone where the tests are executed.
-DateUtil.createSafeDate = jest.genMockFn();
-DateUtil.filterInvalidDates = jest.genMockFn();
+DateUtil.createSafeDate = jest.fn();
+DateUtil.filterInvalidDates = jest.fn();
 DateUtil.createSafeDate.mockImplementation(() => moment.utc('2017-01-01'));
 DateUtil.filterInvalidDates.mockImplementation(() => [moment.utc('2017-01-01')]);
 
