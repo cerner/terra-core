@@ -12,7 +12,16 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    /* stylelint-disable property-no-vendor-prefix */
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    /* stylelint-enable */
+    hyphens: auto;
     width: 100%;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    /* Non standard for WebKit */
+    word-break: break-word;
   }
 
   .glyph {
