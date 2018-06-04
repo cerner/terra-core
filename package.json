@@ -21,26 +21,6 @@
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "packages/**/src/*.js",
-      "packages/**/src/*.jsx"
-    ],
-    "setupFiles": [
-      "raf/polyfill",
-      "./jestsetup.js"
-    ],
-    "testMatch": [
-      "**/jest/**/(*.)(spec|test).js?(x)"
-    ],
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ],
-    "moduleNameMapper": {
-      "\\.(svg|jpg|png|md)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|scss)$": "identity-obj-proxy"
-    }
-  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=moment",
@@ -54,7 +34,7 @@
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
-    "jest": "jest",
+    "jest": "jest --config jestconfig.js",
     "jest:coverage": "jest --coverage",
     "link-parent-bin": "link-parent-bin",
     "lint": "npm run lint:js && npm run lint:scss",
