@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import ScrollView from 'terra-scroll-view';
+import Scroll from 'terra-scroll';
 import styles from './ContentContainer.scss';
 
 const cx = classNames.bind(styles);
@@ -57,9 +57,9 @@ const ContentContainer = ({
         {header}
       </div>}
       <div className={cx('main')}>
-        <ScrollView className={cx('normalizer')} refCallback={scrollRefCallback}>
+        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback}>
           {children}
-        </ScrollView>
+        </Scroll>
       </div>
       {footer && <div className={cx('footer')}>
         {footer}

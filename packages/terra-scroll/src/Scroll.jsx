@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './ScrollView.scss';
+import styles from './Scroll.scss';
 
 const cx = classNames.bind(styles);
 
@@ -17,16 +17,16 @@ const propTypes = {
   refCallback: PropTypes.func,
 };
 
-const ScrollView = ({
+const Scroll = ({
   children,
   refCallback,
   ...customProps
 }) => (
-  <div {...customProps} className={cx(['scroll-view', customProps.className])} ref={refCallback}>
+  <div {...customProps} className={cx(['scroll', customProps.className])} ref={refCallback}>
     {children}
   </div>
 );
 
-ScrollView.propTypes = propTypes;
+Scroll.propTypes = propTypes;
 
-export default ScrollView;
+export default Scroll;

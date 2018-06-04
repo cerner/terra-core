@@ -1,7 +1,7 @@
 import React from 'react';
-import ScrollView from '../../../ScrollView';
+import Scroll from '../../../Scroll';
 
-class DefaultScrollView extends React.Component {
+class DefaultScroll extends React.Component {
   constructor(props) {
     super(props);
     this.setNode = this.setNode.bind(this);
@@ -23,7 +23,7 @@ class DefaultScrollView extends React.Component {
       <div>
         <button id="scroll" onClick={this.toggleScroll}>Scroll</button>
         <div style={{ height: '300px', width: '400px', border: '1px dashed black' }}>
-          <ScrollView id="scroll-test" refCallback={this.setNode}>
+          <Scroll id="scroll-test" refCallback={this.setNode}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
             eget facilisis nunc ornare in. Vestibulum ut posuere neque. Maecenas nibh lacus, euismod sit amet magna sit amet,
             porttitor sollicitudin sapien. Vivamus nec lacus vel tortor ultrices efficitur vitae sit amet ipsum.
@@ -39,11 +39,11 @@ class DefaultScrollView extends React.Component {
             Vivamus suscipit, erat vitae commodo fermentum, massa dolor egestas arcu,
             a sollicitudin sem risus eu quam. Interdum et malesuada fames ac ante ipsum primis in faucibus.
             In maximus nunc tempus magna iaculis porttitor.
-          </ScrollView>
+          </Scroll>
         </div>
       </div>
     );
   }
 }
 
-export default DefaultScrollView;
+export default DefaultScroll;

@@ -5,13 +5,13 @@ import { name } from '../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import ScrollViewSrc from '!raw-loader!terra-scroll-view/src/ScrollView';
+import ScrollSrc from '!raw-loader!terra-scroll/src/Scroll';
 
 // Example Files
-import ScrollViewVertical from './example/ScrollViewVertical';
-import ScrollViewVerticalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollViewVertical';
-import ScrollViewHorizontal from './example/ScrollViewHorizontal';
-import ScrollViewHorizontalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollViewHorizontal';
+import ScrollVertical from './example/ScrollVertical';
+import ScrollVerticalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollVertical';
+import ScrollHorizontal from './example/ScrollHorizontal';
+import ScrollHorizontalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ScrollHorizontal';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -21,18 +21,18 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        example: <ScrollViewVertical />,
-        source: ScrollViewVerticalSrc,
+        example: <ScrollVertical />,
+        source: ScrollVerticalSrc,
       },
       {
-        example: <ScrollViewHorizontal />,
-        source: ScrollViewHorizontalSrc,
+        example: <ScrollHorizontal />,
+        source: ScrollHorizontalSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'Scroll View',
-        componentSrc: ScrollViewSrc,
+        componentName: 'Scroll',
+        componentSrc: ScrollSrc,
       },
     ]}
   />

@@ -1,8 +1,8 @@
 /* global browser, before, Terra */
 
-describe('ScrollView', () => {
+describe('Scroll', () => {
   before(() => {
-    browser.url('/#/raw/tests/terra-scroll-view/scroll-view/default');
+    browser.url('/#/raw/tests/terra-scroll/scroll/default');
   });
 
   Terra.should.beAccessible({ context: '#scroll-test' });

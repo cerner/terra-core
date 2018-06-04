@@ -1,13 +1,13 @@
 import React from 'react';
-import ScrollView from '../../lib/ScrollView';
+import Scroll from '../../lib/Scroll';
 
 // Snapshot Tests
 it('should render a default component', () => {
-  const scrollable = shallow(<ScrollView />);
+  const scrollable = shallow(<Scroll />);
   expect(scrollable).toMatchSnapshot();
 });
 
 it('should render with props', () => {
-  const scrollable = shallow(<ScrollView refCallback={jest.fn()}>child content</ScrollView>);
+  const scrollable = shallow(<Scroll refCallback={jest.fn()}>child content</Scroll>);
   expect(scrollable).toMatchSnapshot();
 });
