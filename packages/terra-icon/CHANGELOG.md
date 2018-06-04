@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Restored documentation pages for themable and static variants.
+* Updated "test:jest" script to work on windows.
 
 2.12.0 - (May 30, 2018)
 ------------------

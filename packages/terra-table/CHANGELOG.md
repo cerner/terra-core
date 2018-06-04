@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Convert nightwatch tests to wdio.
+* Updated "test:jest" script to work on windows.
 
 2.12.0 - (May 30, 2018)
 ------------------
