@@ -35,7 +35,7 @@
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
     "jest": "jest --config jestconfig.js",
-    "jest:coverage": "jest --coverage",
+    "jest:coverage": "jest --coverage --config jestconfig.js",
     "link-parent-bin": "link-parent-bin",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx .",
