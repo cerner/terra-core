@@ -8,11 +8,8 @@ describe('Grid', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-grid-gutter-width': '35px',
-      },
+    Terra.should.themeEachCustomProperty({
+      '--terra-grid-gutter-width': '35px',
     });
   });
 
