@@ -3,7 +3,8 @@ Changelog
 
 Unreleased
 ----------
-### Added
+### Changed
+* Updated "test:jest" script to work on windows.
 * Added ids to two divs on test pages
 
 2.13.0 - (May 30, 2018)
