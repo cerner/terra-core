@@ -7,6 +7,9 @@ Unreleased
 * Removed the extra div wrapping content when rendered into the dom
 * Removed custom properties
 
+### Changed
+* Updated "test:jest" script to work on windows.
+
 2.11.0 - (May 30, 2018)
 ------------------
 ### Changed

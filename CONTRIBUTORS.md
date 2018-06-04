@@ -61,6 +61,7 @@ Cerner Corporation
 - Jon Fewins [@jfewins]
 - Sairam Rakshith Bhyravabhotla [@rakshith91]
 - Alex Bezek [@alex-bezek]
+- Ben Boersma [@BenBoersma]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -124,3 +125,4 @@ Cerner Corporation
 [@jfewins]: http://github.com/jfewins
 [@rakshith91]: http://github.com/rakshith91
 [@alex-bezek]: https://github.com/alex-bezek
+[@BenBoersma]: https://github.com/BenBoersma
