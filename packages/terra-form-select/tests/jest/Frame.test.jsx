@@ -107,4 +107,14 @@ describe('Frame', () => {
     const wrapper = shallow(<Frame variant="tag" dropdown={() => <div>Custom</div>} />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should call a custom onBlur', () => {
+    const mockBlur = jest.fn();
+    const wrapper = shallow(<Frame onBlur={mockBlur} />, intlContexts.shallowContext);
+
+    wrapper.simulate('focus');
+    wrapper.simulate('blur');
+
+    expect(mockBlur).toBeCalled();
+  });
 });
