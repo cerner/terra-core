@@ -6,7 +6,7 @@ describe('Toggle Button', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/default-toggle-button'));
 
-    Terra.should.matchScreenshot('closed', { selector: '.button' });
+    Terra.should.matchScreenshot('closed');
     Terra.should.beAccessible();
 
 
@@ -17,7 +17,7 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '.button' });
+    Terra.should.matchScreenshot('opened');
     Terra.should.beAccessible();
   });
 
@@ -31,7 +31,7 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '.button' });
+    Terra.should.matchScreenshot('opened');
     Terra.should.beAccessible();
   });
 
@@ -45,7 +45,7 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '.button' });
+    Terra.should.matchScreenshot('opened');
     Terra.should.beAccessible();
   });
 
@@ -59,14 +59,14 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '.button' });
+    Terra.should.matchScreenshot('opened');
     Terra.should.beAccessible();
   });
 
   describe('Closed Button Text', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/closed-button-text'));
 
-    Terra.should.matchScreenshot('closed', { selector: '.button' });
+    Terra.should.matchScreenshot('closed');
     Terra.should.beAccessible();
   });
 
@@ -80,14 +80,14 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '.button' });
+    Terra.should.matchScreenshot('opened');
     Terra.should.beAccessible();
   });
 
   describe('Initially open', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/initially-open'));
 
-    Terra.should.matchScreenshot('opened', { selector: '.button' });
+    Terra.should.matchScreenshot('opened');
     Terra.should.beAccessible();
   });
 
@@ -104,7 +104,7 @@ describe('Toggle Button', () => {
       browser.pause(100);
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '.button' });
+    Terra.should.matchScreenshot('opened');
     Terra.should.beAccessible();
   });
 
@@ -121,7 +121,7 @@ describe('Toggle Button', () => {
       browser.pause(100);
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '.button' });
+    Terra.should.matchScreenshot('opened');
     Terra.should.beAccessible();
   });
 
@@ -135,7 +135,7 @@ describe('Toggle Button', () => {
       browser.click('div*=Times');
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '#top-test-div' });
+    Terra.should.matchScreenshot('opened');
 
     it('should increment', () => {
       browser.click('button');
@@ -144,7 +144,7 @@ describe('Toggle Button', () => {
       browser.click('div*=Times');
     });
 
-    Terra.should.matchScreenshot('closed', { selector: '#top-test-div' });
+    Terra.should.matchScreenshot('closed');
     Terra.should.beAccessible();
   });
 
@@ -158,7 +158,7 @@ describe('Toggle Button', () => {
       browser.click('div*=Times');
     });
 
-    Terra.should.matchScreenshot('opened', { selector: '#top-test-div' });
+    Terra.should.matchScreenshot('opened');
 
     it('should not increment', () => {
       browser.click('button');
@@ -167,7 +167,7 @@ describe('Toggle Button', () => {
       browser.click('div*=Times');
     });
 
-    Terra.should.matchScreenshot('closed', { selector: '#top-test-div' });
+    Terra.should.matchScreenshot('closed');
     Terra.should.beAccessible();
   });
 });
