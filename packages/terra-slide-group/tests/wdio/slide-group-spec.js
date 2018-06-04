@@ -23,13 +23,13 @@ describe('Slide Group', () => {
       browser.click('#increment-1');
     });
 
-    Terra.should.matchScreenshot('slide 2', { selector: '#SlideGroup' });
+    Terra.should.matchScreenshot('slide 2');
 
     it('should go back a slide', () => {
       browser.click('#decrement-2');
     });
 
-    Terra.should.matchScreenshot('slide 1', { selector: '#SlideGroup' });
+    Terra.should.matchScreenshot('slide 1');
     Terra.should.beAccessible();
   });
 
@@ -42,7 +42,7 @@ describe('Slide Group', () => {
       browser.pause(350);
     });
 
-    Terra.should.matchScreenshot('slide 2', { selector: '#SlideGroup' });
+    Terra.should.matchScreenshot('slide 2');
 
     it('should go back a slide', () => {
       browser.click('#decrement-2');
@@ -50,7 +50,7 @@ describe('Slide Group', () => {
       browser.pause(350);
     });
 
-    Terra.should.matchScreenshot('slide 1', { selector: '#SlideGroup' });
+    Terra.should.matchScreenshot('slide 1');
     Terra.should.beAccessible();
   });
 });
