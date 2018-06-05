@@ -68,7 +68,7 @@ const ListItem = ({
   }
 
   return (
-    <li {...customProps} className={listItemClassNames} ref={refCallback}>
+    <li {...customProps} role="option" aria-selected={isSelected} className={listItemClassNames} ref={refCallback}>
       {content}
     </li>
   );
