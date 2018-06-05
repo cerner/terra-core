@@ -8,7 +8,6 @@ const cx = classNames.bind(styles);
 
 const KEYCODES = {
   ENTER: 13,
-  SPACE: 32,
   TAB: 9,
 };
 
@@ -35,7 +34,7 @@ const propTypes = {
    */
   isDisabled: PropTypes.bool,
   /**
-   * Whether or not the link should display and underline by default.
+   * Whether or not the link should display an underline by default. Will still display and underline on hover and focus.
    */
   isUnderlineHidden: PropTypes.bool,
   /**
@@ -87,20 +86,8 @@ class Hyperlink extends React.Component {
   }
 
   handleKeyDown(event) {
-    // Add active state to FF browsers
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
-      this.setState({ active: true });
-
-      // Follow href on space keydown when rendered as an anchor tag
-      if (this.props.href) {
-        // Prevent window scrolling
-        event.preventDefault();
-        window.location.href = this.props.href;
-      }
-    }
-
     // Add focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE || event.nativeEvent.keyCode === KEYCODES.ENTER) {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
       this.setState({ focused: true });
     }
 
@@ -110,11 +97,6 @@ class Hyperlink extends React.Component {
   }
 
   handleKeyUp(event) {
-    // Remove active state from FF broswers
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
-      this.setState({ active: false });
-    }
-
     // Apply focus styles for keyboard navigation
     if (event.nativeEvent.keyCode === KEYCODES.TAB) {
       this.setState({ focused: true });
