@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated "test:jest" script to work on windows.
+* Renamed the doc site template
 
 3.4.0 - (May 30, 2018)
 ------------------
