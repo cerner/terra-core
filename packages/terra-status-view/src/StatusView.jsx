@@ -118,7 +118,7 @@ class StatusView extends React.Component {
     }
 
     if (this.glyphNode && viewHeight >= componentsHeight + this.glyphNode.offsetHeight && this.innerNode.offsetWidth >= this.glyphNode.offsetWidth) {
-      // if have a glyph to show and can fit inside the containers height and width, distribute remaining padding to center
+      // if glyph exists and can fit inside the container's height and width, distribute remaining padding to center
       showGlyph = true;
       if (!this.props.isAlignedTop) {
         const remainingHeight = viewHeight - (componentsHeight + this.glyphNode.offsetHeight);
