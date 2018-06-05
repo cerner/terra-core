@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default component 1`] = `
+<div
+  className="scroll"
+/>
+`;
+
+exports[`should render with props 1`] = `
+<div
+  className="scroll"
+>
+  child content
+</div>
+`;
