@@ -1,8 +1,23 @@
 /* stylelint-disable selector-max-compound-selectors */
 :local {
-  .content-container {
+  .content-container-static {
     display: flex;
     flex-direction: column;
+    
+    // reset scroll styles to intial defaults to handle stack/block style layout.
+    > .main > .normalizer {
+      height: initial; // auto
+      overflow: initial; // visible
+      position: initial; // static
+      width: initial; // auto
+    }
+  }
+  
+  .content-container-fill {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 
     > .header,
     > .footer {
@@ -11,19 +26,6 @@
 
     > .main {
       flex: 1 1 auto;
-
-      > .normalizer {
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar; // Ensures scrollbars do not affect width in IE10
-      }
-    }
-  }
-
-  .fill {
-    height: 100%;
-    width: 100%;
-
-    > .main {
       height: 100%;
       min-height: 50px;
       overflow: hidden;
@@ -31,10 +33,7 @@
       width: 100%;
 
       > .normalizer {
-        height: 100%;
-        overflow: auto;
         position: absolute;
-        width: 100%;
       }
     }
   }
