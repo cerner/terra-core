@@ -62,6 +62,7 @@ Cerner Corporation
 - Sairam Rakshith Bhyravabhotla [@rakshith91]
 - Alex Bezek [@alex-bezek]
 - Ben Boersma [@BenBoersma]
+- Tom Wu [@tomleewu]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -126,3 +127,4 @@ Cerner Corporation
 [@rakshith91]: http://github.com/rakshith91
 [@alex-bezek]: https://github.com/alex-bezek
 [@BenBoersma]: https://github.com/BenBoersma
+[@tomleewu]: https:/github.com/tomleewu
