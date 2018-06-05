@@ -1,10 +1,10 @@
 import React from 'react';
-import A from '../../../Hyperlink';
+import Hyperlink from '../../../Hyperlink';
 
 export default () => (
   <div role="main">
-    <A href="https://www.cerner.com" isDisabled>Disabled hyperlink</A>
+    <Hyperlink href="https://www.cerner.com" isDisabled>Disabled hyperlink</Hyperlink>
     <br />
-    <A href="https://www.cerner.com" isDisabled variant="document">Disabled icon hyperlink</A>
+    <Hyperlink href="https://www.cerner.com" isDisabled variant="document">Disabled icon hyperlink</Hyperlink>
   </div>
 );

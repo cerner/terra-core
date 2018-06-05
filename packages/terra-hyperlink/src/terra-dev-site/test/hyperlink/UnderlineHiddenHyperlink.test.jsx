@@ -1,8 +1,8 @@
 import React from 'react';
-import A from '../../../Hyperlink';
+import Hyperlink from '../../../Hyperlink';
 
 export default () => (
   <div role="main">
-    <A id="link" href="https://www.cerner.com" isUnderlineHidden>Underline hidden hyperlink</A>
+    <Hyperlink id="link" href="https://www.cerner.com" isUnderlineHidden>Underline hidden hyperlink</Hyperlink>
   </div>
 );
