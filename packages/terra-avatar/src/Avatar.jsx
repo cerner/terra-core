@@ -43,56 +43,91 @@ const defaultProps = {
   variant: AvatarVariants.USER,
 };
 
-const Avatar = ({
-  alt,
-  ariaLabel,
-  image,
-  initials,
-  variant,
-  ...customProps
-  }) => {
-  // Checks to run when not in production
-  if (process.env.NODE_ENV !== 'production') {
-    if (image && initials) {
-      // eslint-disable-next-line
-      console.warn('Only one of the props: [image, initials] should be supplied.');
+class Avatar extends React.Component {
+  static generateImage(image, variant, alt) {
+    const avatarIconClassNames = cx([
+      'avatar-icon',
+      variant,
+    ]);
+
+    const icon = <span className={avatarIconClassNames} />;
+
+    return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
+  }
+
+  constructor(props) {
+    super(props);
+
+    if (props.image) {
+      const { alt, image, variant } = props;
+
+      const imageComponent = Avatar.generateImage(image, variant, alt);
+      this.state = { imageComponent };
+    }
+
+    // Checks to run when not in production
+    if (process.env.NODE_ENV !== 'production') {
+      if (props.image && props.initials) {
+        // eslint-disable-next-line
+        console.warn('Only one of the props: [image, initials] should be supplied.');
+      }
     }
   }
 
-  const attributes = Object.assign({}, customProps);
+  componentWillReceiveProps(newProps) {
+    // If we have an image to display (they take precedence) and one of its attributes have changed
+    if (newProps.image && (newProps.image !== this.props.image ||
+      newProps.alt !== this.props.alt || newProps.variant !== this.props.variant)) {
+      const { alt, image, variant } = newProps;
 
-  const avatarClassNames = cx([
-    'avatar',
-    attributes.className,
-  ]);
-
-  const avatarIconClassNames = cx([
-    'avatar-icon',
-    variant,
-  ]);
-
-  const avatarTextClassNames = cx([
-    { 'avatar-text-small': initials && initials.length === 3 },
-    { 'avatar-text-large': initials && initials.length === 2 },
-  ]);
-
-  const icon = <span className={avatarIconClassNames} />;
-
-  let avatarContent;
-  if (image) {
-    avatarContent = <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
-  } else if (initials && (initials.length === 2 || initials.length === 3)) {
-    avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
-  } else {
-    avatarContent = icon;
+      const imageComponent = Avatar.generateImage(image, variant, alt);
+      this.setState({ imageComponent });
+    }
   }
 
-  return (
-    <div {...attributes} aria-label={ariaLabel} className={avatarClassNames}>
-      {avatarContent}
-    </div>
-  );
-};
+  render() {
+    const { alt,
+      ariaLabel,
+      initials,
+      variant,
+      image,
+      ...customProps } = this.props;
+
+    const attributes = Object.assign({}, customProps);
+
+    const avatarIconClassNames = cx([
+      'avatar-icon',
+      variant,
+    ]);
+
+    const avatarClassNames = cx([
+      'avatar',
+      attributes.className,
+    ]);
+
+    const avatarTextClassNames = cx([
+      { 'avatar-text-small': initials && initials.length === 3 },
+      { 'avatar-text-large': initials && initials.length === 2 },
+    ]);
+
+    const icon = <span className={avatarIconClassNames} />;
+
+    let avatarContent;
+    if (image) {
+      avatarContent = this.state.imageComponent;
+    } else if (initials && (initials.length === 2 || initials.length === 3)) {
+      avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
+    } else {
+      avatarContent = icon;
+    }
+
+    return (
+      <div {...attributes} aria-label={ariaLabel} className={avatarClassNames}>
+        {avatarContent}
+      </div>
+    );
+  }
+}
 
 Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;
