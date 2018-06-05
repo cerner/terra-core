@@ -34,7 +34,7 @@ const propTypes = {
    */
   isDisabled: PropTypes.bool,
   /**
-   * Whether or not the link should display an underline by default. Will still display and underline on hover and focus.
+   * Whether or not the link should display an underline by default. Will still display an underline on hover and focus.
    */
   isUnderlineHidden: PropTypes.bool,
   /**
