@@ -70,6 +70,11 @@ const propTypes = {
    * The value of the textarea. Use this to create a controlled textarea.
    */
   value: PropTypes.string,
+  /**
+   * Callback to set ref of the textarea. Useful for advanced functionality
+   * such as managing focus, selection, or animations.
+   */
+  setRef: PropTypes.func,
 };
 
 const defaultProps = {
@@ -83,6 +88,7 @@ const defaultProps = {
   rows: null,
   size: 'small',
   value: undefined,
+  setRef: undefined
 };
 
 class Textarea extends React.Component {
@@ -161,6 +167,7 @@ class Textarea extends React.Component {
       defaultValue,
       rows,
       size,
+      setRef,
       ...customProps
     } = this.props;
 
@@ -188,7 +195,10 @@ class Textarea extends React.Component {
 
     return (
       <textarea
-        ref={(textarea) => { this.textarea = textarea; }}
+        ref={(textarea) => {
+          this.textarea = textarea;
+          setRef && setRef(textarea);
+        }}
         name={name}
         onFocus={this.onFocus}
         onChange={this.onChange}
