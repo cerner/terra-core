@@ -45,13 +45,17 @@ const defaultProps = {
 };
 
 class Avatar extends React.Component {
-  static generateImage(image, variant, alt) {
+  static generateImagePlaceholder(variant) {
     const avatarIconClassNames = cx([
       'avatar-icon',
       variant,
     ]);
 
-    const icon = <span className={avatarIconClassNames} />;
+    return <span className={avatarIconClassNames} />;
+  }
+
+  static generateImage(image, variant, alt) {
+    const icon = Avatar.generateImagePlaceholder(variant);
 
     return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
   }
@@ -97,30 +101,23 @@ class Avatar extends React.Component {
 
     const attributes = Object.assign({}, customProps);
 
-    const avatarIconClassNames = cx([
-      'avatar-icon',
-      variant,
-    ]);
-
     const avatarClassNames = cx([
       'avatar',
       attributes.className,
     ]);
 
-    const avatarTextClassNames = cx([
-      { 'avatar-text-small': initials && initials.length === 3 },
-      { 'avatar-text-large': initials && initials.length === 2 },
-    ]);
-
-    const icon = <span className={avatarIconClassNames} />;
-
     let avatarContent;
     if (image) {
       avatarContent = this.state.imageComponent;
     } else if (initials && (initials.length === 2 || initials.length === 3)) {
+      const avatarTextClassNames = cx([
+        { 'avatar-text-small': initials && initials.length === 3 },
+        { 'avatar-text-large': initials && initials.length === 2 },
+      ]);
+
       avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
     } else {
-      avatarContent = icon;
+      avatarContent = Avatar.generateImagePlaceholder(variant);
     }
 
     return (
