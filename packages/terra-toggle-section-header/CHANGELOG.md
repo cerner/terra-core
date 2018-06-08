@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Removed onOpen and onClose from customProps in ToggleSectionHeader.
+
 ### Changed
 * Updated "test:jest" script to work on windows.
 
