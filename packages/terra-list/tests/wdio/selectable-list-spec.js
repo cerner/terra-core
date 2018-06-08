@@ -10,6 +10,23 @@ describe('Selectable List', () => {
     Terra.should.beAccessible();
   });
 
+  describe('Selectable List Focus', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/terra-list/list/selectable-list/default-selectable-list');
+      browser.waitForExist('ul');
+      browser.click('ul li:nth-child(1)');
+    });
+
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-list-item-focus-background-color': '#fdebeb',
+        '--terra-list-item-focus-box-shadow': '5px 10px #dddddd',
+        '--terra-list-item-focus-outline': '1px dashed #000000',
+      },
+    });
+  });
+
   describe('Selectable List Default', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/selectable-list/default-selectable-list'));
 

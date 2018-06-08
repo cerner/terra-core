@@ -115,6 +115,21 @@ describe('Multi Select List', () => {
     Terra.should.beAccessible();
   });
 
+  describe('Multi Select List Focus', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list');
+      browser.waitForExist('ul');
+      browser.keys(['Tab', 'Enter', 'Tab', 'Enter', 'Shift', 'Tab', 'Shift']);
+    });
+
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-list-item-selected-hover-background-color': '#fdebeb',
+      },
+    });
+  });
+
   describe('Multi Select List On Change', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/multi-select-list/on-change-multi-select-list'));
 

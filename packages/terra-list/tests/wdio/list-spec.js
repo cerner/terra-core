@@ -8,6 +8,12 @@ describe('List', () => {
 
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-list-item-background-color': '#dddddd',
+      },
+    });
   });
 
   describe('List Items Divided', () => {
@@ -15,6 +21,13 @@ describe('List', () => {
 
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-list-item-background-color': '#ffffff',
+        '--terra-list-divider-border': '1px dotted #dddddd',
+      },
+    });
   });
 
   describe('List One Item', () => {
