@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Updated "test:jest" script to work on windows.
 
+### Fixed
+* Fixed image flickering when updating `image`, `alt`, or `variant` props
+
 1.10.0 - (May 30, 2018)
 ------------------
 ### Changed

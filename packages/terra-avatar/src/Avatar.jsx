@@ -7,6 +7,7 @@ import styles from './Avatar.scss';
 
 const cx = classNames.bind(styles);
 
+// Changes the placeholder image for while the image prop, if provided, is loading
 const AvatarVariants = {
   FACILITY: 'facility',
   USER: 'user',
@@ -58,6 +59,7 @@ class Avatar extends React.Component {
   constructor(props) {
     super(props);
 
+    // If image has been provided we need to generate the image to display and store it in the state
     if (props.image) {
       const { alt, image, variant } = props;
 
