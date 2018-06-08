@@ -71,10 +71,10 @@ const propTypes = {
    */
   value: PropTypes.string,
   /**
-   * Callback to set ref of the textarea. Useful for advanced functionality
-   * such as managing focus, selection, or animations.
+   * Function callback for the ref of the textarea. Useful for advanced
+   * functionality such as managing focus, selection, or animations.
    */
-  setRef: PropTypes.func,
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -88,7 +88,7 @@ const defaultProps = {
   rows: null,
   size: 'small',
   value: undefined,
-  setRef: undefined
+  refCallback: undefined,
 };
 
 class Textarea extends React.Component {
@@ -167,7 +167,7 @@ class Textarea extends React.Component {
       defaultValue,
       rows,
       size,
-      setRef,
+      refCallback,
       ...customProps
     } = this.props;
 
@@ -197,7 +197,7 @@ class Textarea extends React.Component {
       <textarea
         ref={(textarea) => {
           this.textarea = textarea;
-          setRef && setRef(textarea);
+          if (refCallback) refCallback(textarea);
         }}
         name={name}
         onFocus={this.onFocus}
