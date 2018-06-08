@@ -138,11 +138,11 @@ it('should set the textarea to invalid when isInvalid is passed into the compone
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should set the ref when setRef is passed into the component', () => {
-  const setRef = jest.fn();
+it('should set the ref when refCallback is passed into the component', () => {
+  const refCallback = jest.fn();
 
-  const textarea = <Textarea setRef={setRef} />;
+  const textarea = <Textarea refCallback={refCallback} />;
   const wrapper = mount(textarea);
 
-  expect(setRef).toHaveBeenCalledWith(wrapper.find('textarea').instance());
+  expect(refCallback).toHaveBeenCalledWith(wrapper.find('textarea').instance());
 });

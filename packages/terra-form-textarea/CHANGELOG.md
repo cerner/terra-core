@@ -7,7 +7,7 @@ Unreleased
 * Updated "test:jest" script to work on windows.
 
 ### Added
-* Ability to get textarea ref via `setRef` prop
+* Ability to get textarea ref via `refCallback` prop
 
 2.12.0 - (May 30, 2018)
 ------------------
