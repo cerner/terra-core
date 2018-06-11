@@ -1,8 +1,5 @@
 import React from 'react';
-import Base from 'terra-base';
 import Field from '../../../Field';
-
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class FieldExamples extends React.Component {
   constructor(props) {
@@ -128,7 +125,7 @@ class FieldExamples extends React.Component {
     );
 
     return (
-      <Base locale={locale}>
+      <div>
         <button id="toggle-is-invalid" onClick={this.handleIsInvalidChange}>Toggle In Error </button>
         <h3>Field</h3>
         {field}
@@ -142,7 +139,7 @@ class FieldExamples extends React.Component {
         {hiddenLabel}
         <h3>Field - Inline</h3>
         {inline}
-      </Base>
+      </div>
     );
   }
 }

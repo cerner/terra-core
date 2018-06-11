@@ -19,12 +19,10 @@ class DatePickerOnChange extends React.Component {
     return (
       <div>
         <h3>Message: <span id="message">{this.state.message}</span></h3>
-        <Base locale={locale}>
-          <DatePicker
-            name="date-input-onclickoutside"
-            onClickOutside={this.handleClickOutside}
-          />
-        </Base>
+        <DatePicker
+          name="date-input-onclickoutside"
+          onClickOutside={this.handleClickOutside}
+        />
       </div>
     );
   }

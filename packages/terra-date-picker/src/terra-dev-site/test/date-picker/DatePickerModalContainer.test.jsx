@@ -1,11 +1,8 @@
 import React from 'react';
-import Base from 'terra-base';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import AppDelegate from 'terra-app-delegate';
 import Button from 'terra-button';
 import DatePicker from '../../../../lib/DatePicker';
-
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class ModalContainer extends React.Component {
   constructor(props) {
@@ -42,13 +39,11 @@ class ModalContainer extends React.Component {
       <div className="content-container" style={{ height: '100%', padding: '10px' }}>
         {props.app && props.app.releaseFocus ? <h4>Modal focus is released!</h4> : null }
         {props.app && props.app.requestFocus ? <h4>Modal focus is trapped!</h4> : null }
-        <Base locale={locale}>
-          <DatePicker
-            name="date-picker-in-modal"
-            releaseFocus={props.app.releaseFocus}
-            requestFocus={props.app.requestFocus}
-          />
-        </Base>
+        <DatePicker
+          name="date-picker-in-modal"
+          releaseFocus={props.app.releaseFocus}
+          requestFocus={props.app.requestFocus}
+        />
         <br />
         <br />
         <Button className="close-disclosure" onClick={this.closeDisclosure}>Close Disclosure</Button>
