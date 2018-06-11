@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import Arrange from 'terra-arrange';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import styles from './List.scss';
 
@@ -58,11 +57,10 @@ const ListItem = ({
 
     return (
       <li {...customProps} role="option" aria-selected={isSelected} className={listItemClassNames} ref={refCallback}>
-        <Arrange
-          fill={content}
-          fitEnd={chevron}
-          align={'center'}
-        />
+        <div>
+          {chevron}
+          {content}
+        </div>
       </li>
     );
   }

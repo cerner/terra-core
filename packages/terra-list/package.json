@@ -34,6 +34,9 @@
     "terra-doc-template": "^1.5.0",
     "terra-icon": "^2.12.0"
   },
+  "devDependencies": {
+    "terra-clinical-item-view": "^2.6.0"
+  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
