@@ -4,7 +4,10 @@ describe('Abstract Modal', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
   describe('Append Class', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-append-class'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-append-class');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
 
     Terra.should.matchScreenshot({ selector: 'div[role=document]' });
     Terra.should.beAccessible();
@@ -12,9 +15,10 @@ describe('Abstract Modal', () => {
 
   describe('Content Overflow', () => {
     before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-content-overflow'));
+    const overflowModal = { height: 1684, width: 1870 };
 
-    Terra.should.matchScreenshot({ selector: 'div[role=document]' });
-    Terra.should.beAccessible();
+    Terra.should.matchScreenshot({ viewports: [overflowModal], selector: 'div[role=document]' });
+    Terra.should.beAccessible({ viewports: [overflowModal] });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -22,18 +26,25 @@ describe('Abstract Modal', () => {
         '--terra-abstract-modal-horizontal-inset': '50px',
       },
       selector: 'div[role=document]',
+      viewports: [overflowModal],
     });
   });
 
   describe('Custom Props', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-custom-props'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-custom-props');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
 
     Terra.should.matchScreenshot({ selector: 'div[role=document]' });
     Terra.should.beAccessible();
   });
 
   describe('Disable Close On Esc', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-disable-close-on-esc'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-disable-close-on-esc');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
 
     Terra.should.matchScreenshot('modal present', { selector: 'div[role=document]' });
 
@@ -46,7 +57,10 @@ describe('Abstract Modal', () => {
   });
 
   describe('Disable Close On Outside Click', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-disable-close-on-outside-click'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-disable-close-on-outside-click');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
 
     Terra.should.matchScreenshot('modal present', { selector: 'div[role=document]' });
 
@@ -58,7 +72,10 @@ describe('Abstract Modal', () => {
   });
 
   describe('Is Fullscreen', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-fullscreen'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-fullscreen');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
 
     Terra.should.matchScreenshot('modal present', { selector: 'div[role=document]' });
     it('clicks outside to close modal', () => {
@@ -80,7 +97,10 @@ describe('Abstract Modal', () => {
   });
 
   describe('Is Open', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-open'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-open');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
 
     Terra.should.matchScreenshot('modal closed');
     it('clicks to open modal', () => {
@@ -97,16 +117,22 @@ describe('Abstract Modal', () => {
   });
 
   describe('No Focusable Content', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-no-focusable-content'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-no-focusable-content');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
 
     Terra.should.matchScreenshot({ selector: 'div[role=document]' });
     Terra.should.beAccessible();
   });
 
   describe('Override Role', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-override-role'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-override-role');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: 'div[role=button]' });
     Terra.should.beAccessible();
   });
 });
