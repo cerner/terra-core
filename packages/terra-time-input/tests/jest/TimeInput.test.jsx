@@ -1,8 +1,13 @@
-/* globals spyOn */
+/* globals spyOn jest */
 
 import React from 'react';
 import intlContexts from './intl-context-setup';
 import TimeInput from '../../src/TimeInput';
+import TimeUtil from '../../src/TimeUtil';
+
+const mockEvent = {
+  preventDefault: jest.fn(),
+};
 
 const handleOnChange = () => {
 };
@@ -95,4 +100,29 @@ it('should render a disabled time input', () => {
   const timeInput = <TimeInput name="time-input" disabled />;
   const wrapper = shallow(timeInput, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
+});
+
+it('should handle focusing on the hour input without error', () => {
+  mockEvent.keyCode = TimeUtil.keyCodes.ARROWRIGHT;
+  const timeInput = <TimeInput name="time-input" disabled />;
+  const wrapper = mount(timeInput, intlContexts.shallowContext);
+  wrapper.instance().handleHourInputKeyDown(mockEvent);
+  expect(mockEvent.preventDefault).toHaveBeenCalled();
+});
+
+it('should handle focusing on the minute input without error', () => {
+  mockEvent.keyCode = TimeUtil.keyCodes.ARROWLEFT;
+  const timeInput = <TimeInput name="time-input" disabled />;
+  const wrapper = mount(timeInput, intlContexts.shallowContext);
+  wrapper.instance().setState({ hour: 2 });
+  wrapper.instance().handleMinuteInputKeyDown(mockEvent);
+  expect(mockEvent.preventDefault).toHaveBeenCalled();
+});
+
+it('should handle focusing on the meridiem input without error', () => {
+  mockEvent.keyCode = TimeUtil.keyCodes.ARROWRIGHT;
+  const timeInput = <TimeInput name="time-input" variant="12-hour" />;
+  const wrapper = mount(timeInput, intlContexts.shallowContext);
+  wrapper.instance().handleMinuteInputKeyDown(mockEvent);
+  expect(mockEvent.preventDefault).toHaveBeenCalled();
 });
