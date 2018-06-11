@@ -32,7 +32,6 @@ exports[`should render a TextArea when all the possible props are passed into it
 <textarea
   aria-required="true"
   class="textarea"
-  cols="15"
   name="description"
   required=""
   rows="5"
