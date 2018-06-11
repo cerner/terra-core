@@ -1,11 +1,10 @@
 /* global before, browser, Terra */
 
 describe('Abstract Modal', () => {
+  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
+
   describe('Append Class', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-append-class');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
-    });
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-append-class'));
 
     Terra.should.matchScreenshot({ selector: 'div[role=document]' });
     Terra.should.beAccessible();
@@ -29,20 +28,15 @@ describe('Abstract Modal', () => {
   });
 
   describe('Custom Props', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-custom-props');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
-    });
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-custom-props'));
+    const viewport = Terra.viewports('medium')[0];
 
-    Terra.should.matchScreenshot({ selector: 'div[role=document]' });
-    Terra.should.beAccessible();
+    Terra.should.matchScreenshot({ viewports: [viewport], selector: 'div[role=document]' });
+    Terra.should.beAccessible({ viewports: [viewport] });
   });
 
   describe('Disable Close On Esc', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-disable-close-on-esc');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
-    });
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-disable-close-on-esc'));
 
     Terra.should.matchScreenshot('modal present', { selector: 'div[role=document]' });
 
@@ -55,10 +49,7 @@ describe('Abstract Modal', () => {
   });
 
   describe('Disable Close On Outside Click', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-disable-close-on-outside-click');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
-    });
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-disable-close-on-outside-click'));
 
     Terra.should.matchScreenshot('modal present', { selector: 'div[role=document]' });
 
@@ -70,10 +61,7 @@ describe('Abstract Modal', () => {
   });
 
   describe('Is Fullscreen', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-fullscreen');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
-    });
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-fullscreen'));
 
     Terra.should.matchScreenshot('modal present', { selector: 'div[role=document]' });
     it('clicks outside to close modal', () => {
@@ -95,10 +83,7 @@ describe('Abstract Modal', () => {
   });
 
   describe('Is Open', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-open');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
-    });
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-is-open'));
 
     Terra.should.matchScreenshot('modal closed');
     it('clicks to open modal', () => {
@@ -115,20 +100,14 @@ describe('Abstract Modal', () => {
   });
 
   describe('No Focusable Content', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-no-focusable-content');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
-    });
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-no-focusable-content'));
 
     Terra.should.matchScreenshot({ selector: 'div[role=document]' });
     Terra.should.beAccessible();
   });
 
   describe('Override Role', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-override-role');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
-    });
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-override-role'));
 
     Terra.should.matchScreenshot({ selector: 'div[role=button]' });
     Terra.should.beAccessible();
