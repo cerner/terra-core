@@ -59,7 +59,7 @@
     "babel-jest": "^23.0.1",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "check-installed-dependencies": "^1.0.0",
     "danger": "^3.7.14",
