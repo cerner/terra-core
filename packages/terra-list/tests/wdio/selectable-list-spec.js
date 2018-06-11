@@ -80,12 +80,12 @@ describe('Selectable List', () => {
   describe('Selectable List Non Selectable Item', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/selectable-list/non-selectable-item-selectable-list'));
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot('before click');
     it('attempts to select non-selectable item', () => {
       browser.click('ul li:nth-child(3)');
     });
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot('after click');
     Terra.should.beAccessible();
   });
 
@@ -102,7 +102,7 @@ describe('Selectable List', () => {
     });
     Terra.should.matchScreenshot('second item selected');
 
-    it('attemps to select the third item', () => {
+    it('selects the first item again', () => {
       browser.click('ul li:nth-child(1)');
     });
     Terra.should.matchScreenshot('first item selected');

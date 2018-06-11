@@ -81,6 +81,7 @@ describe('Multi Select List', () => {
       Terra.should.matchScreenshot('first second and third item highlighted');
 
       it('should highlight the selected items upon space keydown', () => {
+        // Shift-tab combination to go to prev. item, selects that item and then keyup the shift
         browser.keys(['Shift', 'Tab', 'Space', 'Shift']);
       });
       Terra.should.matchScreenshot('first and third item highlighted');
@@ -89,8 +90,8 @@ describe('Multi Select List', () => {
         browser.keys(['Tab', 'Space']);
       });
       Terra.should.matchScreenshot('first item highlighted third item unhighlighted');
+      Terra.should.beAccessible();
     });
-    Terra.should.beAccessible();
   });
 
   describe('Multi Select List Max Count', () => {
@@ -119,6 +120,7 @@ describe('Multi Select List', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list');
       browser.waitForExist('ul');
+      // Selects the first and second item (Tab -> Enter, Tab -> Enter), then focuses back on the first item (Shift -> Tab). Finally, release the shift key
       browser.keys(['Tab', 'Enter', 'Tab', 'Enter', 'Shift', 'Tab', 'Shift']);
     });
 
@@ -183,7 +185,7 @@ describe('Multi Select List', () => {
     it('should unhighlight and deselect the second item', () => {
       browser.addValue('ul li:nth-child(2)', 'Space');
     });
-    Terra.should.matchScreenshot('selected item(s) 0 second item unhighlighted');
+    Terra.should.matchScreenshot('selected item(s) 0 second item deselected');
 
     it('should highlight and select third item', () => {
       browser.click('ul li:nth-child(3)');
@@ -195,12 +197,12 @@ describe('Multi Select List', () => {
 
   describe('Multi Select List No Deselect Item', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/multi-select-list/multi-select-list-with-no-deselect-item'));
-    Terra.should.matchScreenshot();
 
+    Terra.should.matchScreenshot('before click');
     it('should not deselect item one', () => {
       browser.click('ul li:nth-child(1)');
     });
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot('after click');
 
     Terra.should.beAccessible();
   });
