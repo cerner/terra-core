@@ -31,7 +31,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.11.0",
     "terra-doc-template": "^1.5.0",
     "terra-form-field": "^2.13.0",
     "terra-form-input": "^1.11.0"
