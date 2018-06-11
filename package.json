@@ -91,7 +91,7 @@
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
     "terra-dev-site": "^1.0.0",
-    "terra-toolkit": "^3.3.1",
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#webpack-config-fixes",
     "webpack-merge": "^4.1.2"
   }
 }
