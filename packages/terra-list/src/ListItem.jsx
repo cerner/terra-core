@@ -37,40 +37,78 @@ const defaultProps = {
   hasChevron: undefined,
 };
 
-const ListItem = ({
-    content,
-    isSelected,
-    isSelectable,
-    hasChevron,
-    refCallback,
-    ...customProps
-  }) => {
-  const listItemClassNames = cx([
-    'list-item',
-    { selected: isSelected },
-    { 'is-selectable': isSelectable },
-    customProps.className,
-  ]);
+class ListItem extends React.Component {
+  constructor(props) {
+    super(props);
 
-  if (hasChevron) {
-    const chevron = <span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>;
+    this.refHandler = this.refHandler.bind(this);
+    this.adjustWidths = this.adjustWidths.bind(this);
+
+    this.state = { contentMaxWidth: '100%' };
+  }
+
+  componentDidMount() {
+    if (this.innerNode && this.chevron) {
+      this.adjustWidths();
+    }
+  }
+
+  adjustWidths() {
+    const maxWidth = this.innerNode.offsetWidth - this.chevron.offsetWidth;
+    this.setState({ contentMaxWidth: maxWidth });
+  }
+
+  refHandler(element) {
+    this.innerNode = element;
+
+    if (this.props.refCallback) {
+      this.props.refCallback(element);
+    }
+  }
+
+  render() {
+    const {
+      content,
+      isSelected,
+      isSelectable,
+      hasChevron,
+      refCallback,
+      ...customProps
+    } = this.props;
+
+    const listItemClassNames = cx([
+      'list-item',
+      { selected: isSelected },
+      { 'is-selectable': isSelectable },
+      customProps.className,
+    ]);
+
+    if (hasChevron) {
+      const chevron = (
+        <span ref={(element) => { this.chevron = element; }} className={cx('chevron')}>
+          <ChevronRight height="0.8em" width="0.8em" />
+        </span>
+      );
+
+      return (
+        <li {...customProps} role="option" aria-selected={isSelected} className={listItemClassNames} ref={this.refHandler}>
+          <div className={cx('chevron-parent')}>
+            {chevron}
+            <div style={{ maxWidth: this.state.contentMaxWidth }}>
+              {content}
+            </div>
+          </div>
+        </li>
+      );
+    }
 
     return (
-      <li {...customProps} role="option" aria-selected={isSelected} className={listItemClassNames} ref={refCallback}>
-        <div className={cx('chevron-parent')}>
-          {chevron}
-          {content}
-        </div>
+      <li {...customProps} className={listItemClassNames} ref={refCallback}>
+        {content}
       </li>
     );
   }
-
-  return (
-    <li {...customProps} className={listItemClassNames} ref={refCallback}>
-      {content}
-    </li>
-  );
-};
+}
 
 ListItem.propTypes = propTypes;
 ListItem.defaultProps = defaultProps;
