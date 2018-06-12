@@ -454,3 +454,53 @@ exports[`Tabs should set custom props 1`] = `
   />
 </ContentContainer>
 `;
+
+exports[`Tabs should set custom props for child Tab Pane 1`] = `
+<ContentContainer
+  className="tabs-container structural"
+  fill={false}
+  header={
+    <ResponsiveElement
+      defaultElement={
+        <CollapsedTabs
+          activeKey="default"
+          onTruncationChange={[Function]}
+        >
+          <TabPane
+            aria-selected={true}
+            className="is-active customClass"
+            isDisabled={false}
+            isIconOnly={false}
+            label="Default"
+            onClick={[Function]}
+          />
+        </CollapsedTabs>
+      }
+      responsiveTo="parent"
+      tiny={
+        <CollapsibleTabs
+          activeIndex={0}
+          activeKey="default"
+          onChange={[Function]}
+          onTruncationChange={[Function]}
+          variant="structural"
+        >
+          <TabPane
+            aria-selected={true}
+            className="is-active customClass"
+            isDisabled={false}
+            isIconOnly={false}
+            label="Default"
+            onClick={[Function]}
+          />
+        </CollapsibleTabs>
+      }
+    />
+  }
+>
+  <div
+    className="pane-content"
+    role="tabpanel"
+  />
+</ContentContainer>
+`;
