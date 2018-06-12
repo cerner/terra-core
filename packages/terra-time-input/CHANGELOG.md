@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Prevent focus events from causing runtime errors
+
 ### Changed
 * Updated "test:jest" script to work on windows.
 
