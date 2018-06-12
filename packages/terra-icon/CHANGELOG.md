@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.13.0 - (June 12, 2018)
+------------------
 ### Changed
 * Restored documentation pages for themable and static variants.
 * Updated "test:jest" script to work on windows.
