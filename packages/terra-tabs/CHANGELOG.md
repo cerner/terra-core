@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed classNames on Tab Panes not displaying when rendering Tab Panes in Tabs component
+
 ### Changed
 * Updated "test:jest" script to work on windows.
 
