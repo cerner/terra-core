@@ -6,9 +6,9 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-syntax-highlighter | ^7.0.2 | >= 0.14.0 | syntax highlighting component for react with prismjs or highlightjs ast using inline styles |
-| terra-base | ^3.10.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-markdown | ^2.6.0 | ^16.2.0 | terra-markdown |
-| terra-props-table | ^2.8.0 | ^16.2.0 | terra-props-table |
+| terra-base | ^3.12.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-markdown | ^2.9.0 | ^16.2.0 | terra-markdown |
+| terra-props-table | ^2.11.0 | ^16.2.0 | terra-props-table |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
