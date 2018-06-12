@@ -57,7 +57,7 @@ const ListItem = ({
 
     return (
       <li {...customProps} role="option" aria-selected={isSelected} className={listItemClassNames} ref={refCallback}>
-        <div>
+        <div className={cx('chevron-parent')}>
           {chevron}
           {content}
         </div>
