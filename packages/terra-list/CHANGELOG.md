@@ -8,8 +8,12 @@ Unreleased
 * List takes Static List-Section API as children.
 
 ### Changed
+* New Sections API which can be used as children for List.
 * Added new Prop "hasSections" to MultiSelectList and SingleSelectList
 * Added new Utils to handle selection across Sections for MultiSelectList and SingleSelectList
+* Updated logic of helper functions to find selected indexes and initial indexes if list contains sections as children
+
+### Changed
 * Updated logic to render SelectableList differently if it has sections as children.
 * Formatting changes per eslint v4 update
 

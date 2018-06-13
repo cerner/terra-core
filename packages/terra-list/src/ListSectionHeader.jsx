@@ -88,7 +88,7 @@ class ListSectionHeader extends React.Component {
 
     if ((process.env.NODE_ENV !== 'production') && (!onClick && isOpen)) {
       // eslint-disable-next-line no-console
-      console.warn('\'isOpen\' are intended to be used only when \'onClick\' is provided.');
+      console.warn('\'isOpen\' is intended to be used only when \'onClick\' is provided.');
     }
 
     const attributes = Object.assign({}, customProps);

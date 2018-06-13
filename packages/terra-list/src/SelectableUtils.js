@@ -45,6 +45,12 @@ const initialSingleSelectedIndex = (children) => {
   return -1;
 };
 
+
+/**
+ * Returns the first valid index of a child with isSelected set across multiple
+ * sections. If none of the items are selected return -1.
+ * To be used in the contructor, to set initial state.
+ */
 const initialSingleSelectedIndexWithSections = (children) => {
   const childArray = React.Children.toArray(children);
   // childArray has all the sections.
@@ -63,7 +69,7 @@ const initialSingleSelectedIndexWithSections = (children) => {
 
 /**
  * Returns the first valid indexes of children with isSelected set, up to the maxSelectionCount.
-* To be used in the contructor, to set initial state.
+ * To be used in the contructor, to set initial state.
  */
 const initialMultiSelectedIndexes = (children, maxSelectionCount) => {
   const selectedIndexes = [];
@@ -82,6 +88,11 @@ const initialMultiSelectedIndexes = (children, maxSelectionCount) => {
   return selectedIndexes;
 };
 
+
+/**
+ * Returns the first valid indexes of children with isSelected set, up to the maxSelectionCount across sections.
+ * To be used in the contructor, to set initial state.
+ */
 const initialMultiSelectedIndexesWithSections = (children, maxSelectionCount) => {
   const selectedIndexes = [];
   const childArray = React.Children.toArray(children);
@@ -223,6 +234,9 @@ const newPropsForItem = (item, index, onClick, onKeyDown, hasChevrons, selectedI
   return newProps;
 };
 
+/**
+ * Returns an object containing header and list item properties.
+ */
 const newPropsForSection = (section, clonedListItems) => {
   const newProps = {};
   newProps.headerContent = section.props.headerContent;
