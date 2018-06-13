@@ -14,9 +14,9 @@
 
   .is-default {
     &:active:not(.is-disabled) {
-      background-color: var(--terra-select-option-active-background-color, #0079be);
-      color: var(--terra-select-option-active-color, #fff);
-      font-weight: var(--terra-select-option-active-font-weight, normal);
+      background-color: var(--terra-select-option-active-pressed-background-color, #0079be);
+      color: var(--terra-select-option-active-pressed-color, #fff);
+      font-weight: var(--terra-select-option-active-pressed-font-weight, normal);
     }
 
     &.is-selected {
