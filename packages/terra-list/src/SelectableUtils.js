@@ -15,6 +15,9 @@ const validatedMaxCount = (children, maxSelectionCount) => {
   return React.Children.count(children);
 };
 
+/**
+ * The validates the max count prop, and if undefined returns a max of the count of children across sections.
+ */
 const validatedMaxCountForSections = (children, maxSelectionCount) => {
   if (maxSelectionCount !== undefined) {
     return maxSelectionCount;
