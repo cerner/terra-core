@@ -26,13 +26,11 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.7.0",
-    "terra-mixins": "^1.15.0"
+    "terra-base": "^3.7.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.12.0",
     "terra-button": "^2.13.0",
     "terra-dialog": "^1.13.0",
     "terra-doc-template": "^1.6.0",
