@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.12.0 - (June 12, 2018)
+------------------
 ### Changed
 * Updated field documentation to be more inline with other examples
 * Updated "test:jest" script to work on windows.
