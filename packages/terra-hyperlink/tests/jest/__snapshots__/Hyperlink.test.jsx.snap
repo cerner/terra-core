@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hyperlink should render a audio hyperlink 1`] = `
+<a
+  class="hyperlink audio"
+  href="https://www.cerner.com"
+>
+  Audio hyperlink
+</a>
+`;
+
+exports[`Hyperlink should render a default hyperlink 1`] = `
+<a
+  class="hyperlink default"
+  href="https://www.cerner.com"
+>
+  Default hyperlink
+</a>
+`;
+
+exports[`Hyperlink should render a disabled hyperlink 1`] = `
+<span
+  class="hyperlink default is-disabled"
+>
+  Disabled hyperlink
+</span>
+`;
+
+exports[`Hyperlink should render a document hyperlink 1`] = `
+<a
+  class="hyperlink document"
+  href="https://www.cerner.com"
+>
+  Document hyperlink
+</a>
+`;
+
+exports[`Hyperlink should render a external hyperlink 1`] = `
+<a
+  class="hyperlink external"
+  href="https://www.cerner.com"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  External hyperlink
+</a>
+`;
+
+exports[`Hyperlink should render a image hyperlink 1`] = `
+<a
+  class="hyperlink image"
+  href="https://www.cerner.com"
+>
+  Image hyperlink
+</a>
+`;
+
+exports[`Hyperlink should render a underline hidden hyperlink 1`] = `
+<a
+  class="hyperlink default is-underline-hidden"
+  href="https://www.cerner.com"
+>
+  Underline hidden hyperlink
+</a>
+`;
+
+exports[`Hyperlink should render a video hyperlink 1`] = `
+<a
+  class="hyperlink video"
+  href="https://www.cerner.com"
+>
+  Video hyperlink
+</a>
+`;
+
+exports[`Hyperlink should render with custom props 1`] = `
+<a
+  class="hyperlink default"
+  href="https://www.cerner.com"
+  rel="nofollow"
+  target="_self"
+>
+  Custom props hyperlink
+</a>
+`;
+
+exports[`Hyperlink should render with custom props with external variant 1`] = `
+<a
+  class="hyperlink external"
+  href="https://www.cerner.com"
+  rel="external"
+  target="_parent"
+>
+  Custom target and rel props external hyperlink
+</a>
+`;
