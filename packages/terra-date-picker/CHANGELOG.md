@@ -8,6 +8,7 @@ Unreleased
 ------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
+* Updated the date picker to add its own wrapping div
 
 2.14.0 - (May 30, 2018)
 ------------------

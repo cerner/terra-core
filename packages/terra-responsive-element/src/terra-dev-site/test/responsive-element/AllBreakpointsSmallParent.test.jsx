@@ -1,11 +1,9 @@
 import React from 'react';
 import ResponsiveElement from '../../../ResponsiveElement';
 
-export default () => (
-  <div style={{ width: '200px', height: '200px', border: '1px dashed grey' }}>
+const DefaultExample = () => (
+  <div style={{ border: '1px dashed', width: '500px' }}>
     <ResponsiveElement
-      className="terra-ResponsiveElement"
-      responsiveTo="window"
       defaultElement={<div>Default</div>}
       tiny={<div>Tiny</div>}
       small={<div>Small</div>}
@@ -15,3 +13,5 @@ export default () => (
     />
   </div>
 );
+
+export default DefaultExample;
