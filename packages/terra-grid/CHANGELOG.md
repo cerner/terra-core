@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+4.11.0 - (June 12, 2018)
+------------------
 ### Changed
 * Changed nightwatch to WebdriverIO tests.
 * Updated "test:jest" script to work on windows.

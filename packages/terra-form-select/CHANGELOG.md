@@ -3,7 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.3.0 - (June 12, 2018)
+------------------
 ### Changed
+* Updated defaultPlaceholder typo
 * Updated field documentation to be more inline with other examples
 * Updated "test:jest" script to work on windows.
 * Updated to allow a custom onBlur
