@@ -63,6 +63,7 @@ Cerner Corporation
 - Alex Bezek [@alex-bezek]
 - Ben Boersma [@BenBoersma]
 - Cory McDonald [@corymcdonald]
+- Anthony Ross [@AnthonyRoss]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -128,3 +129,4 @@ Cerner Corporation
 [@alex-bezek]: https://github.com/alex-bezek
 [@BenBoersma]: https://github.com/BenBoersma
 [@CoryMcDonald]: https://github.com/CoryMcDonald
+[@AnthonyRoss]: https://github.com/AnthonyRoss
