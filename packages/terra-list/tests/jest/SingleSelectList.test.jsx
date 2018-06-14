@@ -38,10 +38,53 @@ it('should render with hasChevrons', () => {
   expect(singleSelect).toMatchSnapshot();
 });
 
+it('should render with sections', () => {
+  const items = [item1, item2, item3, item4, item5];
+  const section = (
+    <SingleSelectList.Section
+      headerContent="Header1"
+      listItems={items}
+    />
+  );
+  const listSections = shallow(<SingleSelectList hasSections>{section}</SingleSelectList>);
+  expect(listSections).toMatchSnapshot();
+});
+
 // Event Tests
 it('should select an item', () => {
   const items = [item1, item2, item3, item4, item5];
   const singleSelect = mount(<SingleSelectList>{items}</SingleSelectList>);
+
+  singleSelect.find('.stuff1').first().simulate('click', { preventDefault() {} });
+  expect(singleSelect).toMatchSnapshot();
+
+  singleSelect.find('.stuff2').first().simulate('click', { preventDefault() {} });
+  expect(singleSelect).toMatchSnapshot();
+
+  singleSelect.find('.stuff3').first().simulate('click', { preventDefault() {} });
+  expect(singleSelect).toMatchSnapshot();
+
+  singleSelect.find('.stuff1').first().simulate('click', { preventDefault() {} });
+  expect(singleSelect).toMatchSnapshot();
+});
+
+it('should select an item across multiple sections', () => {
+  const sectionItems1 = [item1, item2, item3];
+  const sectionItems2 = [item4, item5];
+  const singleSelectList = (
+    <SingleSelectList hasSections>
+      <SingleSelectList.Section
+        headerContent="Header1"
+        listItems={sectionItems1}
+      />
+      <SingleSelectList.Section
+        headerContent="Header2"
+        listItems={sectionItems2}
+      />
+    </SingleSelectList>
+  );
+
+  const singleSelect = mount(singleSelectList);
 
   singleSelect.find('.stuff1').first().simulate('click', { preventDefault() {} });
   expect(singleSelect).toMatchSnapshot();
@@ -61,7 +104,25 @@ it('should mount with no items', () => {
   expect(singleSelect).toMatchSnapshot();
 });
 
+
 it('should mount with one items', () => {
   const singleSelect = mount(<SingleSelectList>{item1}</SingleSelectList>);
+  expect(singleSelect).toMatchSnapshot();
+});
+
+it('should mount with no items with section headers', () => {
+  const singleSelect = mount(<SingleSelectList hasSections>
+      <SingleSelectList.Section headerContent="Header1" />
+    </SingleSelectList>
+  );
+  expect(singleSelect).toMatchSnapshot();
+});
+
+
+it('should mount with one items with Section Headers', () => {
+  const singleSelect = mount(<SingleSelectList hasSections>
+      <SingleSelectList.Section headerContent="Header1" listItems={[item1]} />
+    </SingleSelectList>
+  );
   expect(singleSelect).toMatchSnapshot();
 });

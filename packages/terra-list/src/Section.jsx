@@ -26,7 +26,7 @@ class Section extends React.Component {
   }
 
   generateHeader() {
-    return <ListItem isSelectable content={<ListSectionHeader id={this.props.headerContent} title={this.props.headerContent} onClick={this.handleClick} />} key={this.props.headerContent} />;
+    return <ListItem content={<ListSectionHeader id={this.props.headerContent} title={this.props.headerContent} onClick={this.handleClick} />} key={this.props.headerContent} />;
   }
 
   render() {
