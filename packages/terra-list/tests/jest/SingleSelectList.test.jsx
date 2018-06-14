@@ -112,17 +112,15 @@ it('should mount with one items', () => {
 
 it('should mount with no items with section headers', () => {
   const singleSelect = mount(<SingleSelectList hasSections>
-      <SingleSelectList.Section headerContent="Header1" />
-    </SingleSelectList>
-  );
+    <SingleSelectList.Section headerContent="Header1" />
+  </SingleSelectList>);
   expect(singleSelect).toMatchSnapshot();
 });
 
 
 it('should mount with one items with Section Headers', () => {
   const singleSelect = mount(<SingleSelectList hasSections>
-      <SingleSelectList.Section headerContent="Header1" listItems={[item1]} />
-    </SingleSelectList>
-  );
+    <SingleSelectList.Section headerContent="Header1" listItems={[item1]} />
+  </SingleSelectList>);
   expect(singleSelect).toMatchSnapshot();
 });
