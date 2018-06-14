@@ -1,5 +1,10 @@
 /* global browser, before, Terra */
 
+const ignoredA11y = {
+  'color-contrast': { enabled: false },
+  label: { enabled: false },
+};
+
 describe('Date Picker', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
@@ -18,7 +23,7 @@ describe('Date Picker', () => {
     });
 
     Terra.should.matchScreenshot({ selector: '[class="react-datepicker"]' });
-    /* Terra.should.beAccessible(); */
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('Default Date Exlcuded', () => {
@@ -30,6 +35,7 @@ describe('Date Picker', () => {
         browser.click('[class*="button"]');
       });
       Terra.should.matchScreenshot('default date cleared');
+      Terra.should.beAccessible({ rules: ignoredA11y });
     });
 
     describe('Default Date Excluded - Clears input focusing on input box', () => {
@@ -52,6 +58,7 @@ describe('Date Picker', () => {
         browser.click('[class*="button"]');
       });
       Terra.should.matchScreenshot('default date cleared');
+      Terra.should.beAccessible({ rules: ignoredA11y });
     });
 
     describe('Default Date Out Of Range - Clears input focusing on input box', () => {
@@ -72,6 +79,7 @@ describe('Date Picker', () => {
     });
 
     Terra.should.matchScreenshot({ selector: '[class="react-datepicker"]' });
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('Filter Dates', () => {
@@ -83,6 +91,7 @@ describe('Date Picker', () => {
     });
 
     Terra.should.matchScreenshot({ selector: '[class="react-datepicker"]' });
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('Include Dates', () => {
@@ -92,6 +101,7 @@ describe('Date Picker', () => {
     });
 
     Terra.should.matchScreenshot({ selector: '[class="react-datepicker"]' });
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('Inside Modal', () => {
@@ -112,6 +122,7 @@ describe('Date Picker', () => {
         browser.click('div[class*="selected"]');
       });
       Terra.should.matchScreenshot('DatePicker closed', { selector: 'div[class="content-container"]' });
+      Terra.should.beAccessible({ rules: ignoredA11y });
     });
 
     describe('Inside Modal - Displays DatePicker inside Modal and dismisses after hitting Enter', () => {
@@ -184,6 +195,7 @@ describe('Date Picker', () => {
     });
 
     Terra.should.matchScreenshot({ selector: '[class="react-datepicker"]' });
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('On Change', () => {
@@ -203,6 +215,7 @@ describe('Date Picker', () => {
       }
     });
     Terra.should.matchScreenshot('no date set');
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('On Change Raw', () => {
@@ -217,6 +230,7 @@ describe('Date Picker', () => {
       browser.addValue('input[name="terra-date-date-input-onchangeraw"]', '/2017');
     });
     Terra.should.matchScreenshot('date set to 06-01-2017');
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('On Click Outside', () => {
@@ -230,6 +244,7 @@ describe('Date Picker', () => {
     });
 
     Terra.should.matchScreenshot('date picker closed with dismissal message');
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('On Select', () => {
@@ -247,6 +262,7 @@ describe('Date Picker', () => {
       browser.click('div[class*="selected"]');
     });
     Terra.should.matchScreenshot('Selected date displayed');
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('Start Date', () => {
@@ -259,5 +275,6 @@ describe('Date Picker', () => {
       expect(browser.getAttribute('[data-terra-date-input-hidden]', 'value')).to.equal('2017-04-01');
     });
     Terra.should.matchScreenshot();
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 });
