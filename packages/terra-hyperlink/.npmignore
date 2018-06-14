@@ -1,0 +1,5 @@
+*.log
+node_modules
+target
+reports
+tests/**/__snapshots__/

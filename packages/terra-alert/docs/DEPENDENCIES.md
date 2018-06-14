@@ -5,10 +5,11 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-base | ^3.10.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-button | ^2.11.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-icon | ^2.10.0 | ^16.2.0 | terra-icon |
-| terra-responsive-element | ^2.10.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-base | ^3.12.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-button | ^2.13.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-icon | ^2.13.0 | ^16.2.0 | terra-icon |
+| terra-responsive-element | ^2.12.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-toggle | ^2.12.0 | ^16.2.0 | Toggle component that transitions content in and out. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
@@ -22,5 +23,6 @@
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
 | terra-base | ^3.7.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 | terra-button | ^2.8.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-doc-template | ^1.3.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 | terra-icon | ^2.7.0 | ^16.2.0 | terra-icon |
 | terra-responsive-element | ^2.7.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
