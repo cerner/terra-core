@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.13.0 - (June 12, 2018)
+------------------
 ### Changed
 * Convert nightwatch tests to wdio.
 * Updated "test:jest" script to work on windows.
