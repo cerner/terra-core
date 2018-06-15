@@ -28,7 +28,7 @@
   // ========================================================
 
   .arrange-content {
-    width: 100%; // Removing this will break things in IE
+    width: 100%; // Removing this will break things in IE See: https://github.com/cerner/terra-core/pull/1592
   }
 
   .chevron {
