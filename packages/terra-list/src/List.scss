@@ -27,22 +27,18 @@
   // List Item Component
   // ========================================================
 
+  .arrange-content {
+    width: 100%; // Removing this will break things in IE
+  }
+
   .chevron {
-    display: block;
+    display: flex;
     padding-left: 10px;
     padding-right: 10px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
 
     > svg {
       color: var(--terra-list-chevron-color, #bcbfc0);
     }
-  }
-
-  .chevron-parent {
-    position: relative;
   }
 
   .selected {
