@@ -76,6 +76,7 @@ class DatePickerInput extends React.Component {
 
     this.handleOnButtonClick = this.handleOnButtonClick.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
+    this.handleOnFocus = this.handleOnFocus.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -112,6 +113,16 @@ class DatePickerInput extends React.Component {
     }
   }
 
+  handleOnFocus(event) {
+    if (this.onFocus) {
+      this.onFocus(event);
+    }
+
+    if (this.onInputFocus) {
+      this.onInputFocus(event);
+    }
+  }
+
   render() {
     const {
       inputAttributes,
@@ -128,6 +139,8 @@ class DatePickerInput extends React.Component {
 
     this.onCalendarButtonClick = customProps.onCalendarButtonClick;
     this.onInputFocus = customProps.onInputFocus;
+    // Is passed in by react-datepicker, overriding this will break things
+    this.onFocus = customProps.onFocus;
     this.shouldShowPicker = customProps.shouldShowPicker;
 
     delete customProps.onCalendarButtonClick;
@@ -161,7 +174,7 @@ class DatePickerInput extends React.Component {
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          onFocus={this.onInputFocus}
+          onFocus={this.handleOnFocus}
         />
         <Button
           className={styles.button}
