@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Added
 * CSS variable for placeholder font size
+* Upgrade Guide and Changelog to terra-dev-site
+* Non-breaking character for empty placeholders
 
 ### Fixed
 * Renamed duplicate CSS variables
