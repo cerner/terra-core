@@ -333,12 +333,13 @@ class DatePicker extends React.Component {
       />);
 
     return (
-      <ResponsiveElement
-        className={styles['date-picker']}
-        responsiveTo="window"
-        defaultElement={portalPicker}
-        small={popupPicker}
-      />
+      <div className={styles['date-picker']}>
+        <ResponsiveElement
+          responsiveTo="window"
+          defaultElement={portalPicker}
+          small={popupPicker}
+        />
+      </div>
     );
   }
 }

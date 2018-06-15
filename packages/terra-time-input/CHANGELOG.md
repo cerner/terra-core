@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.14.0 - (June 12, 2018)
+------------------
 ### Fixed
 * Prevent focus events from causing runtime errors
 

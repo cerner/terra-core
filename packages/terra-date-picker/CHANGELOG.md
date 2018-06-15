@@ -4,8 +4,18 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Updated "test:jest" script to work on windows.
 * Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
+
+2.16.0 - (June 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.15.0 - (June 12, 2018)
+------------------
+### Changed
+* Updated "test:jest" script to work on windows.
+* Updated the date picker to add its own wrapping div
 
 2.14.0 - (May 30, 2018)
 ------------------
