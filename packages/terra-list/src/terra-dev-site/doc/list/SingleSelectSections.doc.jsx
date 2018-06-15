@@ -6,7 +6,7 @@ import { name } from '../../../../package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import SingleSelectSrc from '!raw-loader!terra-list/src/SingleSelectList';
-
+import SingleSelectSectionSrc from '!raw-loader!terra-list/src/Section';
 // Example File
 import SingleSelectSectionsExamples from '../example/SingleSelectSections';
 import SingleSelectSectionsExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleSelectSections';
@@ -28,6 +28,10 @@ const DocPage = () => (
       {
         componentName: 'Single Select List with Sections',
         componentSrc: SingleSelectSrc,
+      },
+      {
+        componentName: 'Single Select List Sections',
+        componentSrc: SingleSelectSectionSrc,
       },
     ]}
   />

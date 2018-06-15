@@ -6,6 +6,7 @@ import { name } from '../../../../package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelectList';
+import MultiSelectSectionSrc from '!raw-loader!../../../../src/Section';
 
 // Example Files
 import MultiSelectSectionExamples from '../example/MultiSelectSections';
@@ -27,6 +28,10 @@ const DocPage = () => (
       {
         componentName: 'Multi-Select',
         componentSrc: MultiSelectSrc,
+      },
+      {
+        componentName: 'Multi-Select Sections',
+        componentSrc: MultiSelectSectionSrc,
       },
     ]}
   />
