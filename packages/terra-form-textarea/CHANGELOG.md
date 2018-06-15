@@ -3,8 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.13.0 - (June 12, 2018)
+------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
+
+### Added
+* Ability to get textarea ref via `refCallback` prop
 
 2.12.0 - (May 30, 2018)
 ------------------

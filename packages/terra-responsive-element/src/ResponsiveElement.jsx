@@ -4,33 +4,35 @@ import ResizeObserver from 'resize-observer-polyfill';
 import 'terra-base/lib/baseStyles';
 import breakpoints from './breakpoints.scss';
 
+/* Disabled for the defaultElement which is used implicitly */
+/* eslint-disable react/no-unused-prop-types */
 const propTypes = {
   /**
-   * An element to be displayed at default breakpoints ( Between 0 and tiny )
+   * An element to be displayed at default breakpoints. ( Between 0 and tiny )
   */
   defaultElement: PropTypes.element,
   /**
-   * An element to be displayed at tiny breakpoints
+   * An element to be displayed at tiny breakpoints.
    */
   tiny: PropTypes.element,
   /**
-   * An element to be displayed at small breakpoints
+   * An element to be displayed at small breakpoints.
    */
   small: PropTypes.element,
   /**
-   * An element to be displayed at medium breakpoints
+   * An element to be displayed at medium breakpoints.
    */
   medium: PropTypes.element,
   /**
-   * An element to be displayed at large breakpoints
+   * An element to be displayed at large breakpoints.
    */
   large: PropTypes.element,
   /**
-   * An element to be displayed at huge breakpoints
+   * An element to be displayed at huge breakpoints.
    */
   huge: PropTypes.element,
   /**
-   * The viewport the element will be responsive to, one of `window` or `parent`
+   * The viewport the element will be responsive to. One of `window` or `parent`.
    */
   responsiveTo: PropTypes.oneOf(['window', 'parent']),
 };
@@ -99,13 +101,11 @@ class ResponsiveElement extends React.Component {
   }
 
   render() {
-    const { defaultElement, tiny, small, medium, large, huge, responsiveTo, ...customProps } = this.props;
+    if (this.state.element) {
+      return this.props[this.state.element] || null;
+    }
 
-    return (
-      <div {...customProps} ref={this.setContainer}>
-        {this.props[this.state.element]}
-      </div>
-    );
+    return <div ref={this.setContainer} />;
   }
 }
 

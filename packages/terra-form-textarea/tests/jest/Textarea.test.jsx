@@ -12,7 +12,6 @@ it('should render a TextArea when all the possible props are passed into it', ()
   const textarea = (
     <Textarea
       name="description"
-      cols={15}
       rows={5}
       required
     />);
@@ -137,4 +136,13 @@ it('should set the textarea to invalid when isInvalid is passed into the compone
   const textarea = <Textarea isInvalid />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
+});
+
+it('should set the ref when refCallback is passed into the component', () => {
+  const refCallback = jest.fn();
+
+  const textarea = <Textarea refCallback={refCallback} />;
+  const wrapper = mount(textarea);
+
+  expect(refCallback).toHaveBeenCalledWith(wrapper.find('textarea').instance());
 });

@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.4.0 - (June 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.3.0 - (June 12, 2018)
+------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
 
