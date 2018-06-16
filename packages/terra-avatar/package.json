@@ -30,7 +30,7 @@
     "prop-types": "^15.5.8",
     "terra-doc-template": "^1.6.0",
     "terra-image": "^2.12.0",
-    "terra-mixins": "^1.17.0"
+    "terra-mixins": "^1.16.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
