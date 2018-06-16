@@ -144,12 +144,12 @@ describe('Menu', () => {
       browser.click('#sub-menu-button');
     });
 
-    it('displays the submenu on right arrow', () => {
+    it('displays the submenu on enter', () => {
       browser.keys(['Tab', 'Tab', 'Enter']);
     });
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 
-    it('returns to the main menu on left arrow', () => {
+    it('returns to the main menu on enter', () => {
       browser.keys(['Tab', 'Enter']);
     });
     Terra.should.matchScreenshot('returned to main menu', { selector: '#root' });
