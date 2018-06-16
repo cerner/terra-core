@@ -159,7 +159,9 @@ exports[`Frame should render a default variant 1`] = `
   >
     <div
       className="placeholder"
-    />
+    >
+       
+    </div>
   </div>
   <div
     className="toggle"
@@ -273,7 +275,9 @@ exports[`Frame should render a disabled default variant 1`] = `
   >
     <div
       className="placeholder"
-    />
+    >
+       
+    </div>
   </div>
   <div
     className="toggle"
@@ -742,7 +746,9 @@ exports[`Frame should render an invalid default variant 1`] = `
   >
     <div
       className="placeholder"
-    />
+    >
+       
+    </div>
   </div>
   <div
     className="toggle"
