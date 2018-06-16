@@ -58,4 +58,10 @@ describe('Tabs', () => {
     const wrapper = shallow(defaultRender, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should set custom props for child Tab Pane', () => {
+    const defaultRender = <Tabs><Tabs.Pane label="Default" key="default" className="customClass" /></Tabs>;
+    const wrapper = shallow(defaultRender, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

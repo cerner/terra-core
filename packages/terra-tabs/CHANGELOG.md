@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed classNames on Tab Panes not displaying when rendering Tab Panes in Tabs component
+
+3.6.0 - (June 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.5.0 - (June 12, 2018)
 ------------------

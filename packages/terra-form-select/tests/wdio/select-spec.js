@@ -79,6 +79,12 @@ describe('Select', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
     });
+
+    describe('should render an empty placeholder', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/empty-placeholder'));
+
+      Terra.should.matchScreenshot({ viewports });
+    });
   });
 
   describe('Combobox Variant', () => {

@@ -3,6 +3,18 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* CSS variable for placeholder font size
+* Upgrade Guide and Changelog to terra-dev-site
+* Non-breaking character for empty placeholders
+
+### Fixed
+* Renamed duplicate CSS variables
+
+4.4.0 - (June 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 
 4.3.0 - (June 12, 2018)
 ------------------

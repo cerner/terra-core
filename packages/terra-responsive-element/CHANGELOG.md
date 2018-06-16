@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.0.0 - (June 13, 2018)
+------------------
 ### Breaking Changes
 * Removed the extra div wrapping content when rendered into the dom
 * Removed custom properties
