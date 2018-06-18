@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed Nightwatch tests to WebdriverIO
 
 2.16.0 - (June 13, 2018)
 ------------------
