@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleSectionHeader should call any custom onCLose that is provided by the user correctly when clicked 1`] = `
-<div
-  onClose={[Function]}
->
+<div>
   <SectionHeader
     aria-expanded={false}
     isOpen={false}
@@ -21,9 +19,7 @@ exports[`ToggleSectionHeader should call any custom onCLose that is provided by 
 `;
 
 exports[`ToggleSectionHeader should call any custom onOpen that is provided by the user correctly when clicked 1`] = `
-<div
-  onOpen={[Function]}
->
+<div>
   <SectionHeader
     aria-expanded={false}
     isOpen={false}

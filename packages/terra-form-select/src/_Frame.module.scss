@@ -164,7 +164,7 @@
   .search-input::placeholder,
   .placeholder {
     color: var(--terra-select-search-placeholder-color, #bcbfc0);
-    font-size: 1.143rem;
+    font-size: var(--terra-select-search-placeholder-font-size, 1.143rem);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

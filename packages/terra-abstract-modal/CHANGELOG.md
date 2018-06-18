@@ -8,6 +8,7 @@ Unreleased
 ------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
+* Converted Nightwatch tests to WebdriverIO.
 
 1.6.0 - (May 30, 2018)
 ------------------
