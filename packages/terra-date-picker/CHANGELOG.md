@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
+* Changed Nightwatch tests to WebdriverIO
 
 2.16.0 - (June 13, 2018)
 ------------------
