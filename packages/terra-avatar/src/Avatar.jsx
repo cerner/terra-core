@@ -92,12 +92,14 @@ class Avatar extends React.Component {
   }
 
   render() {
-    const { alt,
+    const {
+      alt,
       ariaLabel,
       initials,
       variant,
       image,
-      ...customProps } = this.props;
+      ...customProps
+    } = this.props;
 
     const attributes = Object.assign({}, customProps);
 
