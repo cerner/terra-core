@@ -6,9 +6,7 @@ exports[`should mount with isSelectable 1`] = `
   isSelected={false}
 >
   <li
-    aria-selected={false}
     className="list-item is-selectable"
-    role="option"
   />
 </ListItem>
 `;
@@ -17,7 +15,6 @@ exports[`should mount with isSelectable and hasChevron 1`] = `
 <li
   aria-selected={false}
   className="list-item is-selectable"
-  role="option"
 >
   <Arrange
     align="center"
@@ -47,17 +44,13 @@ exports[`should mount with isSelectable and hasChevron 1`] = `
 
 exports[`should render with className 1`] = `
 <li
-  aria-selected={false}
   className="list-item textClass"
-  role="option"
 />
 `;
 
 exports[`should render with content 1`] = `
 <li
-  aria-selected={false}
   className="list-item"
-  role="option"
 >
   <p>
     text
@@ -67,8 +60,6 @@ exports[`should render with content 1`] = `
 
 exports[`should render with selected 1`] = `
 <li
-  aria-selected={true}
   className="list-item selected"
-  role="option"
 />
 `;

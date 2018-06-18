@@ -6,9 +6,6 @@ Unreleased
 ### Changed
 * Changed Nightwatch to WebdriverIO tests.
 
-### Added
-* Listbox role for Lists
-
 ### Removed
 * ListItem tests
 

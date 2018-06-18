@@ -22,6 +22,7 @@ exports[`should mount with no items 1`] = `
     >
       <ul
         className="list"
+        role="listbox"
       />
     </List>
   </SelectableList>

@@ -39,13 +39,8 @@ const List = ({
     customProps.className,
   ]);
 
-  let roleAttr;
-  if (children.length !== 0) {
-    roleAttr = 'listbox';
-  }
-
   return (
-    <ul {...customProps} role={roleAttr} className={listClassNames} ref={refCallback}>
+    <ul {...customProps} className={listClassNames} ref={refCallback}>
       {children}
     </ul>
   );

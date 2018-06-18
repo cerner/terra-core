@@ -16,16 +16,13 @@ exports[`should mount with one items 1`] = `
 >
   <ul
     className="list"
-    role="listbox"
   >
     <ListItem
       isSelected={false}
       key="123"
     >
       <li
-        aria-selected={false}
         className="list-item"
-        role="option"
       />
     </ListItem>
   </ul>
@@ -35,7 +32,6 @@ exports[`should mount with one items 1`] = `
 exports[`should render isDivided 1`] = `
 <ul
   className="list divided"
-  role="listbox"
 >
   <ListItem
     isSelected={false}
@@ -63,7 +59,6 @@ exports[`should render isDivided 1`] = `
 exports[`should render with items 1`] = `
 <ul
   className="list"
-  role="listbox"
 >
   <ListItem
     isSelected={false}

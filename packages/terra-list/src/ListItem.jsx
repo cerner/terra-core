@@ -57,7 +57,7 @@ const ListItem = ({
     const chevron = <span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>;
 
     return (
-      <li {...customProps} role="option" aria-selected={isSelected} className={listItemClassNames} ref={refCallback}>
+      <li {...customProps} aria-selected={isSelected} className={listItemClassNames} ref={refCallback}>
         <Arrange
           fill={content}
           fitEnd={chevron}
@@ -68,7 +68,7 @@ const ListItem = ({
   }
 
   return (
-    <li {...customProps} role="option" aria-selected={isSelected} className={listItemClassNames} ref={refCallback}>
+    <li {...customProps} className={listItemClassNames} ref={refCallback}>
       {content}
     </li>
   );
