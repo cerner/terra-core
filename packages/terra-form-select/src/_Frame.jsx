@@ -166,7 +166,7 @@ class Frame extends React.Component {
       case Variants.COMBOBOX:
         return <input {...inputAttrs} value={hasSearchChanged ? searchValue : display} />;
       default:
-        return display || <div className={cx('placeholder')}>{placeholder}</div>;
+        return display || <div className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
   }
 
