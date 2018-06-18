@@ -1,7 +1,7 @@
 /* global browser, describe, it, before, expect, Terra */
 
 const ignoredA11y = {
-  // Isse logged here: https://github.com/cerner/terra-core/issues/1585
+  // Issue logged here: https://github.com/cerner/terra-core/issues/1585
   'button-name': { enabled: false },
 };
 
