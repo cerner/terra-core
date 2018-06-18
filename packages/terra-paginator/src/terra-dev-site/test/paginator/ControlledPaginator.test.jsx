@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
 import ButtonGroup from 'terra-button-group';
-import Spacer from 'terra-spacer';
 import Paginator from '../../../Paginator';
 
 export default class extends React.Component {
@@ -10,8 +9,8 @@ export default class extends React.Component {
 
     this.state = {
       currentPage: 1,
-      currentTotalCount: ["100"],
-      currentPageCount: ["50"],
+      currentTotalCount: ['100'],
+      currentPageCount: ['50'],
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
@@ -36,15 +35,15 @@ export default class extends React.Component {
 
   resetPage() {
     this.setState({
-      currentPage: 5,
+      currentPage: 3,
     });
   }
 
   render() {
     return (
       <div>
-        <Button onClick={this.resetPage} text={"Set to Page 5"} />
-        <Spacer marginTop="small" marginBottom="small">
+        <Button id="switch-page" onClick={this.resetPage} text="Set to Page 3" />
+        <div>
           <span>Total Count: </span>
           <ButtonGroup
             onChange={this.handleCurrentTotalCountChange}
@@ -54,8 +53,8 @@ export default class extends React.Component {
             <ButtonGroup.Button id="total-count-500" text="500" key="500" />
             <ButtonGroup.Button id="total-count-1000" text="1000" key="1000" />
           </ButtonGroup>
-        </Spacer>
-        <Spacer marginTop="small" marginBottom="small">
+        </div>
+        <div>
           <span>Page Count: </span>
           <ButtonGroup
             onChange={this.handleCurrentPageCountChange}
@@ -65,7 +64,7 @@ export default class extends React.Component {
             <ButtonGroup.Button id="page-count-50" text="50" key="50" />
             <ButtonGroup.Button id="page-count-100" text="100" key="100" />
           </ButtonGroup>
-        </Spacer>
+        </div>
         <Paginator
           onPageChange={this.handlePageChange}
           selectedPage={this.state.currentPage}

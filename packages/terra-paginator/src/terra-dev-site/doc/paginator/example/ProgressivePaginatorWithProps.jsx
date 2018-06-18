@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'terra-button';
 import ButtonGroup from 'terra-button-group';
-import Spacer from 'terra-spacer';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import ProgressivePaginator from 'terra-paginator/lib/ProgressivePaginator';
 
 export default class extends React.Component {
@@ -10,8 +10,8 @@ export default class extends React.Component {
 
     this.state = {
       currentPage: 1,
-      currentTotalCount: ["100"],
-      currentPageCount: ["50"],
+      currentTotalCount: ['100'],
+      currentPageCount: ['50'],
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
@@ -36,15 +36,15 @@ export default class extends React.Component {
 
   resetPage() {
     this.setState({
-      currentPage: 5,
+      currentPage: 3,
     });
   }
 
   render() {
     return (
       <div>
-        <Button onClick={this.resetPage} text={"Set to Page 5"} />
-        <Spacer marginTop="small" marginBottom="small">
+        <Button id="switch-page" onClick={this.resetPage} text="Set to Page 3" />
+        <div>
           <span>Total Count: </span>
           <ButtonGroup
             onChange={this.handleCurrentTotalCountChange}
@@ -54,8 +54,8 @@ export default class extends React.Component {
             <ButtonGroup.Button text="1000" key="1000" />
             <ButtonGroup.Button text="2000" key="2000" />
           </ButtonGroup>
-        </Spacer>
-        <Spacer marginTop="small" marginBottom="small">
+        </div>
+        <div>
           <span>Page Count: </span>
           <ButtonGroup
             onChange={this.handleCurrentPageCountChange}
@@ -65,7 +65,7 @@ export default class extends React.Component {
             <ButtonGroup.Button text="50" key="50" />
             <ButtonGroup.Button text="100" key="100" />
           </ButtonGroup>
-        </Spacer>
+        </div>
         <ProgressivePaginator
           onPageChange={this.handlePageChange}
           selectedPage={this.state.currentPage}
