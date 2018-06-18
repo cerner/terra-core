@@ -44,6 +44,8 @@ describe('Date Picker', () => {
       Terra.should.matchScreenshot('default date displayed');
       it('clears the default date and time after focusing on input box', () => {
         browser.click('input[name="terra-date-date-input"]');
+        // Ensures the mouse pointer doesn't appear in the screenshot
+        browser.click('h3');
       });
       Terra.should.matchScreenshot('default date cleared');
     });
@@ -67,12 +69,14 @@ describe('Date Picker', () => {
       Terra.should.matchScreenshot('default date displayed');
       it('clears the default date and time after focusing on input box', () => {
         browser.click('input[name="terra-date-date-input"]');
+        // Ensures the mouse pointer doesn't appear in the screenshot
+        browser.click('h3');
       });
       Terra.should.matchScreenshot('default date cleared');
     });
   });
 
-  describe('Exlcude Dates', () => {
+  describe('Exclude Dates', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-date-picker/date-picker/date-picker-exclude-dates');
       browser.click('[class*="button"]');
@@ -238,15 +242,24 @@ describe('Date Picker', () => {
     it('sets the date', () => {
       browser.setValue('input[name="terra-date-date-input-onchange"]', '06/01/2017');
       browser.keys('Enter');
+      // Ensures the mouse pointer doesn't appear in the screenshot
+      browser.click('h3');
     });
     Terra.should.matchScreenshot('date set');
 
     it('clears the date', () => {
+      browser.click('input[name="terra-date-date-input-onchange"]');
       // Manually clear the date input -- clearValue command successfully clears the input value,
       // however chromedriver does not trigger the change event.
-      for (let i = 0; i < 10; i += 1) {
+      for (let i = 0; i < 8; i += 1) {
         browser.keys('Backspace');
       }
+      // The date extends past the center of the element so the cursor must be repositioned to remove everything
+      browser.click('input[name="terra-date-date-input-onchange"]');
+      browser.keys('Backspace');
+      browser.keys('Backspace');
+      // Ensures the mouse pointer doesn't appear in the screenshot
+      browser.click('h3');
     });
     Terra.should.matchScreenshot('no date set');
     Terra.should.beAccessible({ rules: ignoredA11y });
@@ -257,11 +270,15 @@ describe('Date Picker', () => {
 
     it('partially sets the date', () => {
       browser.setValue('input[name="terra-date-date-input-onchangeraw"]', '06/01');
+      // Ensures the mouse pointer doesn't appear in the screenshot
+      browser.click('h3');
     });
     Terra.should.matchScreenshot('date set to 06-01');
 
     it('finishes setting the date', () => {
       browser.addValue('input[name="terra-date-date-input-onchangeraw"]', '/2017');
+      // Ensures the mouse pointer doesn't appear in the screenshot
+      browser.click('h3');
     });
     Terra.should.matchScreenshot('date set to 06-01-2017');
     Terra.should.beAccessible({ rules: ignoredA11y });
@@ -271,6 +288,8 @@ describe('Date Picker', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-date-picker/date-picker/date-picker-on-click-outside');
       browser.click('[class*="button"]');
+      // Ensures the mouse pointer doesn't appear in the screenshot
+      browser.click('h3');
     });
 
     it('dismisses the datepicker after clicking outside', () => {
@@ -288,6 +307,8 @@ describe('Date Picker', () => {
 
     it('enters a date through input', () => {
       browser.setValue('input[name="terra-date-date-input-onselect"]', '06/01/2017');
+      // Ensures the mouse pointer doesn't appear in the screenshot
+      browser.click('h3');
     });
     Terra.should.matchScreenshot('Selected date not displayed');
 
