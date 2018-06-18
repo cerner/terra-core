@@ -33,6 +33,19 @@ const propTypes = {
 };
 
 class Paginator extends React.Component {
+  static getDerivedStateFromProps(props, state) {
+    const nextPageSequence = pageSet(props.selectedPage, calculatePages(props.totalCount, props.itemCountPerPage));
+
+    if (props.selectedPage !== state.selectedPage || nextPageSequence !== state.pageSequence) {
+      return {
+        selectedPage: props.selectedPage,
+        pageSequence: nextPageSequence,
+      };
+    }
+
+    return null;
+  }
+
   constructor(props) {
     super(props);
 

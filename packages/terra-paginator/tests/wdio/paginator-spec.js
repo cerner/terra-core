@@ -40,6 +40,17 @@ describe('Paginator', () => {
     });
   });
 
+  describe('Paginator Update with Props', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/controlled-paginator')
+
+      browser.click('#total-count-1000');
+      browser.click('#page-count-50');
+    });
+
+    Terra.should.matchScreenshot({ viewports });
+  });
+
   describe('ProgressivePaginator', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-paginator/paginator/progressive-paginator'));
 
@@ -57,5 +68,16 @@ describe('Paginator', () => {
         '--terra-paginator-nav-link-padding': '2px',
       },
     });
+  });
+
+  describe('Progressive Paginator Update with Props', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/controlled-progressive-paginator')
+
+      browser.click('#total-count-1000');
+      browser.click('#page-count-50');
+    });
+
+    Terra.should.matchScreenshot({ viewports });
   });
 });

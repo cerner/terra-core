@@ -30,25 +30,29 @@ const propTypes = {
 };
 
 class ProgressivePaginator extends React.Component {
+  static getDerivedStateFromProps(props, state) {
+    if (props.selectedPage !== state.selectedPage) {
+      return {
+        selectedPage: props.selectedPage && props.totalCount ? props.selectedPage : undefined,
+      };
+    }
+
+    return null;
+  }
+
   constructor(props) {
     super(props);
 
     const { selectedPage, totalCount } = this.props;
 
     this.state = {
-      pageInput: selectedPage,
       selectedPage: selectedPage && totalCount ? selectedPage : undefined,
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
-    this.handlePageInput = this.handlePageInput.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
     this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
-  }
-
-  handlePageInput(e) {
-    this.setState({ pageInput: e.target.value });
   }
 
   handlePageChange(index) {
@@ -56,7 +60,7 @@ class ProgressivePaginator extends React.Component {
       event.preventDefault();
 
       this.props.onPageChange(index);
-      this.setState({ pageInput: index, selectedPage: index });
+      this.setState({ selectedPage: index });
     };
   }
 

@@ -9,4 +9,10 @@ describe('ProgressivePaginator', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should update the state when a new selectedPage is passed in', () => {
+    const wrapper = shallow(defaultRender);
+    wrapper.setProps({ selectedPage: 5 });
+    expect(wrapper.state().selectedPage).toEqual(5);
+  });
 });

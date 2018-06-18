@@ -10,7 +10,10 @@ import PaginatorSrc from '!raw-loader!../../../../src/ProgressivePaginator';
 // Example Files
 import ProgressivePaginatorExample from './example/ProgressivePaginatorExample';
 import ProgressivePaginatorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/paginator/example/ProgressivePaginatorExample';
+import ProgressivePaginatorWithProps from './example/ProgressivePaginatorWithProps';
+import ProgressivePaginatorWithPropsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/paginator/example/ProgressivePaginatorWithProps';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+
 
 const DocPage = () => (
   <DocTemplate
@@ -22,6 +25,11 @@ const DocPage = () => (
         title: 'Progressive Paginator Example',
         example: <ProgressivePaginatorExample />,
         source: ProgressivePaginatorExampleSrc,
+      },
+      {
+        title: 'Updating Progressive Paginator with Props',
+        example: <ProgressivePaginatorWithProps />,
+        source: ProgressivePaginatorWithPropsSrc,
       },
     ]}
     propsTables={[
