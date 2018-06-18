@@ -99,6 +99,8 @@ class ToggleSectionHeader extends React.Component {
       sectionHeaderAttrs,
       isAnimated,
       isInitiallyOpen,
+      onOpen,
+      onClose,
       ...customProps
     } = this.props;
 
