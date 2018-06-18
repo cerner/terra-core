@@ -288,7 +288,6 @@ class DatePicker extends React.Component {
         showMonthDropdown
         showYearDropdown
         name={name}
-        preventOpenOnFocus
       />);
 
     const popupPicker =
@@ -331,7 +330,6 @@ class DatePicker extends React.Component {
         showMonthDropdown
         showYearDropdown
         name={name}
-        preventOpenOnFocus
       />);
 
     return (

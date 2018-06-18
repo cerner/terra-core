@@ -3,8 +3,6 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Major dependency version bump for `react-datepicker`
 
 2.16.0 - (June 13, 2018)
 ------------------
