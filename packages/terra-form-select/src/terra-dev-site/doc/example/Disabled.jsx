@@ -3,7 +3,7 @@ import React from 'react';
 import Select from 'terra-form-select/lib/Select';
 
 const DisabledExample = () => (
-  <Select placeholder="Select a color" disabled style={{ width: '300px' }} defaultValue="blue">
+  <Select placeholder="Select a color" disabled style={{ maxWidth: '300px' }} defaultValue="blue">
     <Select.Option value="blue" display="Blue" />
     <Select.Option value="green" display="Green" />
     <Select.Option value="purple" display="Purple" />

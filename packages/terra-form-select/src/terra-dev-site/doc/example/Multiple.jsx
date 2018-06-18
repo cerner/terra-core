@@ -3,7 +3,7 @@ import React from 'react';
 import Select from 'terra-form-select/lib/Select';
 
 const MultipleExample = () => (
-  <Select placeholder="Select a color" variant="multiple" style={{ width: '300px' }}>
+  <Select placeholder="Select a color" variant="multiple" style={{ maxWidth: '300px' }}>
     <Select.Option value="blue" display="Blue" />
     <Select.Option value="green" display="Green" />
     <Select.Option value="purple" display="Purple" />
