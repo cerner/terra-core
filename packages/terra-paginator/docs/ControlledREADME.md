@@ -1,6 +1,6 @@
-# Terra Controlled Progressive Paginator
+# Terra Controlled Paginator
 
-Controlled version of the [Paginator]((https://github.com/cerner/terra-core/packages/terra-paginator/docs/README.md)) for when the pagination state needs to be managed by a parent component.
+Controlled version of the [Paginator](https://github.com/cerner/terra-core/packages/terra-paginator/docs/README.md) for when the pagination state needs to be managed by a parent component.
 
 ## Getting Started
 

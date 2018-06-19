@@ -1,6 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/ProgressiveREADME.md';
+import ReadMe from '../../../../docs/ControlledProgressiveREADME.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
@@ -19,14 +19,14 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Progressive Paginator Example',
+        title: 'Controlled Progressive Paginator Example',
         example: <ControlledProgressivePaginatorExample />,
         source: ControlledProgressivePaginatorExampleSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'Progressive Paginator',
+        componentName: 'Controlled Progressive Paginator',
         componentSrc: PaginatorSrc,
       },
     ]}
