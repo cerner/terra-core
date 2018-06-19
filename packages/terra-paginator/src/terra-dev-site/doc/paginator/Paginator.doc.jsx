@@ -12,6 +12,8 @@ import PaginatorExample from './example/PaginatorExample';
 import PaginatorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/paginator/example/PaginatorExample';
 import PaginatorNoPagesExample from './example/PaginatorNoPagesExample';
 import PaginatorNoPagesExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/paginator/example/PaginatorNoPagesExample';
+import PaginatorWithProps from './example/PaginatorWithProps';
+import PaginatorWithPropsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/paginator/example/PaginatorWithProps';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -29,6 +31,11 @@ const DocPage = () => (
         title: 'Paginator Example Without Pages',
         example: <PaginatorNoPagesExample />,
         source: PaginatorNoPagesExampleSrc,
+      },
+      {
+        title: 'Update Paginator With Props',
+        example: <PaginatorWithProps />,
+        source: PaginatorWithPropsSrc,
       },
     ]}
     propsTables={[

@@ -32,6 +32,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-button": "^2.13.0",
+    "terra-button-group": "^2.13.0",
     "terra-dialog": "^1.13.0",
     "terra-doc-template": "^1.6.0",
     "terra-form-input": "^1.12.0",
@@ -50,6 +51,6 @@
     "props-table": "props-table ./src/Paginator.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest --config ../../jestconfig.js",
-    "test:wdio": "../../node_modules/.bin/wdio ../../wdio.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }
