@@ -14,16 +14,16 @@ describe('Search Field', () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h4');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('with text');
 
     it('should scroll text that is too long', () => {
       browser.addValue('input', ' ipsum dolor sit amet');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h4');
     });
 
     Terra.should.matchScreenshot('scrolled text');
@@ -37,8 +37,10 @@ describe('Search Field', () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h4');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('with text');
@@ -69,8 +71,10 @@ describe('Search Field', () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h4');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('with text');
@@ -89,8 +93,10 @@ describe('Search Field', () => {
       }
 
       browser.addValue('input', 'Lorem');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h4');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('with overwritten text');
@@ -109,8 +115,10 @@ describe('Search Field', () => {
       }
 
       browser.addValue('input', 'Lorem');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h4');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('unchanged text');
@@ -121,16 +129,16 @@ describe('Search Field', () => {
 
     it('should enter a short search term', () => {
       browser.setValue('input', 'Lore');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('#search-callback-text');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('with too short text');
 
     it('should enter a long enough search term', () => {
       browser.addValue('input', 'm');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('#search-callback-text');
     });
 
     Terra.should.matchScreenshot('with long enough text');
@@ -143,16 +151,16 @@ describe('Search Field', () => {
 
     it('should enter a short search term', () => {
       browser.setValue('input', 'Lo');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h3');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('with too short text');
 
     it('should enter a short search term', () => {
       browser.addValue('input', 'rem');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h3');
     });
 
     Terra.should.matchScreenshot('with long enough text');
@@ -163,16 +171,16 @@ describe('Search Field', () => {
 
     it('should enter a letter', () => {
       browser.setValue('input', 'L');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('#searchOnChangeCallCount');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('updated once');
 
     it('should enter another letter', () => {
       browser.addValue('input', 'o');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('#searchOnChangeCallCount');
     });
 
     Terra.should.matchScreenshot('updated twice');
@@ -184,8 +192,10 @@ describe('Search Field', () => {
     it('should search with enter', () => {
       browser.click('input');
       browser.keys('Enter');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h3');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot();
@@ -196,15 +206,17 @@ describe('Search Field', () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h3');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('text before search');
 
     it('should search with the button', () => {
       browser.click('button');
-      // Ensure mouse cursor is not visible in screenshot
+      // Ensure button on hover styling is disabled
       browser.click('h3');
     });
 
@@ -213,8 +225,6 @@ describe('Search Field', () => {
     it('should search using enter', () => {
       browser.addValue('input', ' ipsum');
       browser.keys('Enter');
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('h3');
     });
 
     Terra.should.matchScreenshot('extended search');
@@ -230,8 +240,10 @@ describe('Search Field', () => {
     });
 
     it('should search after a delay', () => {
-      // Ensure mouse cursor is not visible in screenshot
-      browser.click('#search-callback-text');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
       browser.pause(1100);
     });
 
