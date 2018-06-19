@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Input text color to inherit base text color
 
 4.5.0 - (June 19, 2018)
 ------------------
