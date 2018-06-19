@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.11.0 - (June 19, 2018)
+------------------
 ### Fixed
 * Removed onOpen and onClose from customProps in ToggleSectionHeader.
 
