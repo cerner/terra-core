@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added clickable text to a few test pages
+
+### Removed
+* Removed a duplicate test page for Search Fields with Placeholders
 
 2.14.0 - (June 12, 2018)
 ------------------

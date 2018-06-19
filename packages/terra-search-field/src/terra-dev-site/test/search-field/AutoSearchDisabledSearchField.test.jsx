@@ -5,7 +5,6 @@ import SearchField from '../../../SearchField';
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class AutoSearchDisabledSearchField extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -37,7 +36,6 @@ class AutoSearchDisabledSearchField extends React.Component {
       </Base>
     );
   }
-
 }
 
 export default AutoSearchDisabledSearchField;
