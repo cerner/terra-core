@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed the `Date Picker Modal Container` test page
+
 ### Changed
+* Split the `Date Picker Input Attributes` test page into `Date Picker Read Only` and `Date Picker Disabled`
 * Changed Nightwatch tests to WebdriverIO
 
 2.16.0 - (June 13, 2018)
