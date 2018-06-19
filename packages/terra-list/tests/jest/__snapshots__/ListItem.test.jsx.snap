@@ -15,6 +15,7 @@ exports[`should mount with isSelectable and hasChevron 1`] = `
 <li
   aria-selected={false}
   className="list-item is-selectable"
+  role="option"
 >
   <Arrange
     align="center"
