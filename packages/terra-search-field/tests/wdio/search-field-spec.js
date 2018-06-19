@@ -156,7 +156,6 @@ describe('Search Field', () => {
     });
 
     Terra.should.matchScreenshot('with long enough text');
-    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('On Change', () => {
