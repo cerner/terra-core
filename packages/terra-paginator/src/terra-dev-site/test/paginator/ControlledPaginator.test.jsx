@@ -1,8 +1,7 @@
 import React from 'react';
-import Dialog from 'terra-dialog';
 import Button from 'terra-button';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ControlledProgressivePaginator from 'terra-paginator/lib/ControlledProgressivePaginator';
+
+import ControlledPaginator from '../../../ControlledPaginator';
 
 const totalCount = 450;
 
@@ -29,7 +28,7 @@ const buildPage = () => {
   );
 };
 
-class ProgressivePaginatorExample extends React.Component {
+class PaginatorExample extends React.Component {
   constructor(props) {
     super(props);
 
@@ -48,15 +47,13 @@ class ProgressivePaginatorExample extends React.Component {
   render() {
     return (
       <div style={{ height: '500px' }}>
-        <Button text="Set Page to 9" onClick={() => { this.setState({ currentPage: 9 }); }} />
-        <Button text="Set Page to 15" onClick={() => { this.setState({ currentPage: 15 }); }} />
-        <Button text="Set Page to 45" onClick={() => { this.setState({ currentPage: 45 }); }} />
-        <Dialog header={<h1>Page {this.state.currentPage}</h1>} footer={<ControlledProgressivePaginator onPageChange={this.changePages} selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} />}>
-          {this.state.content}
-        </Dialog>
+        <Button id="button-9" text="Set Page to 9" onClick={() => { this.setState({ currentPage: 9 }); }} />
+        <Button id="button-15" text="Set Page to 15" onClick={() => { this.setState({ currentPage: 15 }); }} />
+        <Button id="button-45" text="Set Page to 45" onClick={() => { this.setState({ currentPage: 45 }); }} />
+        <ControlledPaginator onPageChange={this.changePages} selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} />
       </div>
     );
   }
 }
 
-export default ProgressivePaginatorExample;
+export default PaginatorExample;
