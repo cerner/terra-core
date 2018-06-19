@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added controlled versions of Paginators
 
 1.4.0 - (June 13, 2018)
 ------------------
