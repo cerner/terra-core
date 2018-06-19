@@ -40,14 +40,10 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-<<<<<<< HEAD
     "test:jest": "jest --config ../../jestconfig.js",
     "test": "npm run test:jest && npm run test:wdio",
-=======
-    "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.js",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
->>>>>>> ed1e286f... Code Review Comments 3 and added new Jest tests.
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }

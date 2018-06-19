@@ -26,7 +26,7 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'Single Select List with Sections',
+        componentName: 'Single Select List',
         componentSrc: SingleSelectSrc,
       },
       {
