@@ -3,9 +3,24 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed the `Date Picker Modal Container` test page
+* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
+
+### Changed
+* Split the `Date Picker Input Attributes` test page into `Date Picker Read Only` and `Date Picker Disabled`
+* Changed Nightwatch tests to WebdriverIO
+
+2.16.0 - (June 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.15.0 - (June 12, 2018)
+------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
-* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
+* Updated the date picker to add its own wrapping div
 
 2.14.0 - (May 30, 2018)
 ------------------

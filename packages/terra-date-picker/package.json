@@ -1,7 +1,7 @@
 {
   "name": "terra-date-picker",
   "main": "lib/DatePicker.js",
-  "version": "2.14.0",
+  "version": "2.16.0",
   "description": "The terra-date-picker component provides users a way to enter or select a date from the date picker.",
   "repository": {
     "type": "git",
@@ -34,13 +34,13 @@
     "react-datepicker": "^0.64.0",
     "react-portal": "^4.1.2",
     "terra-app-delegate": "^2.1.0",
-    "terra-base": "^3.11.0",
-    "terra-button": "^2.12.0",
-    "terra-doc-template": "^1.5.0",
+    "terra-base": "^3.12.0",
+    "terra-button": "^2.13.0",
+    "terra-doc-template": "^1.6.0",
     "terra-form": "^2.10.0",
-    "terra-icon": "^2.12.0",
+    "terra-icon": "^2.13.0",
     "terra-modal-manager": "^3.0.0",
-    "terra-responsive-element": "^2.11.0"
+    "terra-responsive-element": "^3.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -49,8 +49,8 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest --config ../../jestconfig.js",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }

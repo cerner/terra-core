@@ -16,7 +16,7 @@ class ControlledExample extends React.Component {
 
   render() {
     return (
-      <Select placeholder="Select a color" value={this.state.value} onChange={this.handleChange} style={{ width: '300px' }}>
+      <Select placeholder="Select a color" value={this.state.value} onChange={this.handleChange} style={{ maxWidth: '300px' }}>
         <Select.Option value="blue" display="Blue" />
         <Select.Option value="green" display="Green" />
         <Select.Option value="purple" display="Purple" />

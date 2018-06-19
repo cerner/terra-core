@@ -181,8 +181,8 @@ class Select extends React.Component {
     const { intl } = this.context;
     const { children, defaultValue, onChange, placeholder, value, ...otherProps } = this.props;
 
-    const defautPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-    const selectPlaceholder = placeholder === undefined ? defautPlaceholder : placeholder;
+    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
+    const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
 
     return (
       <Frame

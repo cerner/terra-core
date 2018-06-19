@@ -27,13 +27,11 @@ class DefaultMenuItemGroup extends React.Component {
         <div id="selected-index">
           <h3>Selected Button: {this.state.selectedIndex}</h3>
         </div>
-        <ul>
-          <Menu.ItemGroup className="TestGroup" onChange={this.handleSelection}>
-            <Menu.Item text="Group Item 1" key="1" className="TestGroupItem1" />
-            <Menu.Item text="Group Item 2" key="2" className="TestGroupItem2" />
-            <Menu.Item text="Group Item 3" key="3" className="TestGroupItem3" />
-          </Menu.ItemGroup>
-        </ul>
+        <Menu.ItemGroup className="TestGroup" onChange={this.handleSelection}>
+          <Menu.Item text="Group Item 1" key="1" className="TestGroupItem1" />
+          <Menu.Item text="Group Item 2" key="2" className="TestGroupItem2" />
+          <Menu.Item text="Group Item 3" key="3" className="TestGroupItem3" />
+        </Menu.ItemGroup>
       </div>
     );
   }
