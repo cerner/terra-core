@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Refactored classnames that contain 'status-view'.
 
 2.14.0 - (June 12, 2018)
 ------------------
