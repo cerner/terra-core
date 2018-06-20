@@ -6,15 +6,14 @@ export default () => (
   <ActionFooter
     start={
       <div>
-        FakeLink Start Action 1
-        <Button text="Start Action 2" />
+        Start Text
+        <Button text="Start Action" />
       </div>
     }
     end={
       <div>
-        <Button text="End Action 1" />
-        FakeLink End Action 2
-        <Button text="End Action 3" />
+        End Text
+        <Button text="End Action" />
       </div>
     }
   />

@@ -42,8 +42,8 @@ describe('CheckboxField', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/controlled-checkbox-field');
       browser.waitForVisible('#testing-checkbox-field');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
     });
 
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
@@ -53,10 +53,10 @@ describe('CheckboxField', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/controlled-checkbox-field');
       browser.waitForVisible('#testing-checkbox-field');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
     });
 
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
@@ -66,8 +66,8 @@ describe('CheckboxField', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/hide-required-invalid-checkbox-field');
       browser.waitForVisible('#testing-checkbox-field');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
     });
 
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
@@ -77,10 +77,10 @@ describe('CheckboxField', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/hide-required-invalid-checkbox-field');
       browser.waitForVisible('#testing-checkbox-field');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
     });
 
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });

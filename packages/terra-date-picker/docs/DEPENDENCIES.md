@@ -16,7 +16,7 @@
 | terra-form | ^2.10.0 | ^16.2.0 | Components for building forms |
 | terra-icon | ^2.13.0 | ^16.2.0 | terra-icon |
 | terra-modal-manager | ^3.0.0 | ^16.2.0 | The ModalManager is a DisclosureManager implementation that presents disclosed content using an AbstractModal. |
-| terra-responsive-element | ^2.12.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-responsive-element | ^3.0.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
