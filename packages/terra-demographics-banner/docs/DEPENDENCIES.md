@@ -8,7 +8,7 @@
 | terra-base | ^3.12.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 | terra-doc-template | ^1.6.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 | terra-image | ^2.12.0 | ^16.2.0 | terra-image |
-| terra-responsive-element | ^2.12.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-responsive-element | ^3.0.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
