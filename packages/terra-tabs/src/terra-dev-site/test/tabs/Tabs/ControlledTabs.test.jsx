@@ -1,9 +1,6 @@
 import React from 'react';
-import Base from 'terra-base';
 import Tabs from '../../../../Tabs';
 import TabContent from './TabContentTemplate';
-
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class ControlledTabs extends React.Component {
   constructor(props) {
@@ -38,7 +35,7 @@ class ControlledTabs extends React.Component {
     );
 
     return (
-      <Base locale={locale}>
+      <div>
         <div id="current-selection">
           <p>Last Triggered Tab: {this.state.activeKey}</p>
         </div>
@@ -47,7 +44,7 @@ class ControlledTabs extends React.Component {
           {tab2}
           {tab3}
         </Tabs>
-      </Base>
+      </div>
     );
   }
 }
