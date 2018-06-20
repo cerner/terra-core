@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated test so it doesn't go beyond viewport in small and medium viewports
 
 1.12.0 - (June 12, 2018)
 ------------------

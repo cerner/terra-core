@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated test selectors to work with theme repos
 
 2.13.0 - (June 12, 2018)
 ------------------
