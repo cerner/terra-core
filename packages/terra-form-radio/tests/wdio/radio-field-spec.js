@@ -42,10 +42,10 @@ describe('RadioField', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
       browser.waitForVisible('#testing-radio-field');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
     });
 
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
@@ -55,8 +55,8 @@ describe('RadioField', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
       browser.waitForVisible('#testing-radio-field');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
     });
 
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
@@ -66,10 +66,10 @@ describe('RadioField', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
       browser.waitForVisible('#testing-radio-field');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
-      browser.click('#website-dept');
-      browser.click('#ux-dept');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
+      browser.click('[for="website-dept"]');
+      browser.click('[for="ux-dept"]');
     });
 
     Terra.should.matchScreenshot({ viewports: [viewports[0]] });
