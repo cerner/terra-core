@@ -10,8 +10,8 @@
 | terra-content-container | ^2.12.0 | ^16.2.0 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
 | terra-doc-template | ^1.6.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 | terra-icon | ^2.13.0 | ^16.2.0 | terra-icon |
-| terra-menu | ^3.5.0 | ^16.2.0 | The menu is a popup component that displays a list of items, item groups, and dividers. Menu Items can be actionable, have toggle-style selection, or have nested submenu items. Menu Item groups are a single-select grouping of menu items. The Menu will determine the height of the popup based on the number of items in the main menu. |
-| terra-responsive-element | ^2.12.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-menu | ^3.6.0 | ^16.2.0 | The menu is a popup component that displays a list of items, item groups, and dividers. Menu Items can be actionable, have toggle-style selection, or have nested submenu items. Menu Item groups are a single-select grouping of menu items. The Menu will determine the height of the popup based on the number of items in the main menu. |
+| terra-responsive-element | ^3.0.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
