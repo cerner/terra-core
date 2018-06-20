@@ -11,6 +11,7 @@ Unreleased
 ### Changed
 * Updated field documentation to be more inline with other examples
 * Updated "test:jest" script to work on windows.
+* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
 
 2.11.0 - (May 30, 2018)
 ------------------
