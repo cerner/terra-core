@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.7.0 - (June 19, 2018)
+------------------
 ### Fixed
 * Fixed classNames on Tab Panes not displaying when rendering Tab Panes in Tabs component
 
@@ -15,6 +18,7 @@ Unreleased
 ------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
+* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
 
 3.4.0 - (May 30, 2018)
 ------------------

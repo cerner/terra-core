@@ -94,7 +94,7 @@ describe('Radio', () => {
     describe('Checked', () => {
       beforeEach(() => {
         browser.waitForVisible('#default');
-        browser.click('#default');
+        browser.click('[for="default"]');
       });
 
       Terra.should.matchScreenshot();

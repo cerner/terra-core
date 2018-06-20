@@ -1,11 +1,8 @@
 import React from 'react';
-import Base from 'terra-base';
 import Field from '../../../Field';
 
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
-
 const FieldLabelErrorHelpText = () => (
-  <Base locale={locale}>
+  <div>
     <h3>Field - Label + In Error + Help Text</h3>
     <Field
       id="optional-invalid"
@@ -17,7 +14,7 @@ const FieldLabelErrorHelpText = () => (
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
-  </Base>
+  </div>
 );
 
 export default FieldLabelErrorHelpText;

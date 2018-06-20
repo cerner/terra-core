@@ -1,8 +1,5 @@
 import React from 'react';
-import Base from 'terra-base';
 import DatePicker from '../../../../lib/DatePicker';
-
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class DatePickerOnChange extends React.Component {
   constructor(props) {
@@ -19,12 +16,10 @@ class DatePickerOnChange extends React.Component {
     return (
       <div>
         <h3>Message: <span id="message">{this.state.message}</span></h3>
-        <Base locale={locale}>
-          <DatePicker
-            name="date-input-onclickoutside"
-            onClickOutside={this.handleClickOutside}
-          />
-        </Base>
+        <DatePicker
+          name="date-input-onclickoutside"
+          onClickOutside={this.handleClickOutside}
+        />
       </div>
     );
   }
