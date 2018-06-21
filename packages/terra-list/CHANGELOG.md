@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed Nightwatch to WebdriverIO tests.
+
+### Removed
+* ListItem tests
 
 2.14.0 - (June 12, 2018)
 ------------------
