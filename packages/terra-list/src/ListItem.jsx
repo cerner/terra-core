@@ -62,6 +62,7 @@ const ListItem = ({
           fill={content}
           fitEnd={chevron}
           align={'center'}
+          fillAttributes={{ className: cx('arrange-content') }}
         />
       </li>
     );

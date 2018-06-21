@@ -1,9 +1,6 @@
 import React from 'react';
-import Base from 'terra-base';
 import Button from 'terra-button';
 import Alert from '../../../Alert';
-
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class AlertResponsiveToParent extends React.Component {
   constructor(props) {
@@ -39,19 +36,17 @@ class AlertResponsiveToParent extends React.Component {
         <h3>Alerts with actions in a small container (500px wide) that will cause the action section of the alert
             to render below the message instead of beside it.</h3>
         <br />
-        <Base locale={locale}>
-          <Alert id="actionAlert" type="warning" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={this.actionFunc} />} >
-            This is a warning. It is configured with a custom Action button.
-          </Alert>
-          <br />
-          <p>Action button has been clicked {this.state.actionButtonClickCount} times.</p>
-          <br />
-          <br />
-          {alertElem}
-          <br />
-          <br />
-          <Alert id="noActionsAlert" type="info" >This is an info alert</Alert>
-        </Base>
+        <Alert id="actionAlert" type="warning" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={this.actionFunc} />} >
+          This is a warning. It is configured with a custom Action button.
+        </Alert>
+        <br />
+        <p>Action button has been clicked {this.state.actionButtonClickCount} times.</p>
+        <br />
+        <br />
+        {alertElem}
+        <br />
+        <br />
+        <Alert id="noActionsAlert" type="info" >This is an info alert</Alert>
       </div>
     );
   }
