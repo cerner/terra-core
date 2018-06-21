@@ -1,24 +1,24 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import DynamicGridSrc from '!raw-loader!../../../src/DynamicGrid';
-import RegionSrc from '!raw-loader!../../../src/Region';
+import DynamicGridSrc from '!raw-loader!../../../../src/DynamicGrid';
+import RegionSrc from '!raw-loader!../../../../src/Region';
 
 // Example Files
-import OneColumn from './example/OneColumn';
-import OneColumnSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/OneColumn';
-import TwoColumn from './example/TwoColumn';
-import TwoColumnSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/TwoColumn';
-import ULayout from './example/ULayout';
-import ULayoutSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ULayout';
-import Dashboard from './example/Dashboard';
-import DashboardSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/Dashboard';
-import ResponsiveGrid from './example/ResponsiveGrid';
-import ResponsiveGridSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ResponsiveGrid';
+import OneColumn from '../example/OneColumn';
+import OneColumnSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OneColumn';
+import TwoColumn from '../example/TwoColumn';
+import TwoColumnSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TwoColumn';
+import ULayout from '../example/ULayout';
+import ULayoutSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ULayout';
+import Dashboard from '../example/Dashboard';
+import DashboardSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Dashboard';
+import ResponsiveGrid from '../example/ResponsiveGrid';
+import ResponsiveGridSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ResponsiveGrid';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
