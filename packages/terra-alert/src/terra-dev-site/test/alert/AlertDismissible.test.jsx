@@ -1,8 +1,5 @@
 import React from 'react';
-import Base from 'terra-base';
 import Alert from '../../../Alert';
-
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class AlertDismissible extends React.Component {
   constructor(props) {
@@ -27,11 +24,7 @@ class AlertDismissible extends React.Component {
       </Alert>);
     }
     return (
-      <div>
-        <Base locale={locale}>
-          {alertElem}
-        </Base>
-      </div>
+      alertElem
     );
   }
 }
