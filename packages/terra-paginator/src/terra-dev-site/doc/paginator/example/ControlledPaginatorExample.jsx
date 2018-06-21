@@ -48,10 +48,12 @@ class PaginatorExample extends React.Component {
   render() {
     return (
       <div style={{ height: '500px' }}>
-        <Button text="Set Page to 9" onClick={() => { this.setState({ currentPage: 9 }); }} />
-        <Button text="Set Page to 15" onClick={() => { this.setState({ currentPage: 15 }); }} />
-        <Button text="Set Page to 45" onClick={() => { this.setState({ currentPage: 45 }); }} />
         <Dialog header={<h1>Page {this.state.currentPage}</h1>} footer={<ControlledPaginator onPageChange={this.changePages} selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} />}>
+          <div>
+            <Button text="Set Page to 9" onClick={() => { this.setState({ currentPage: 9 }); }} />
+            <Button text="Set Page to 15" onClick={() => { this.setState({ currentPage: 15 }); }} />
+            <Button text="Set Page to 45" onClick={() => { this.setState({ currentPage: 45 }); }} />
+          </div>
           {this.state.content}
         </Dialog>
       </div>
