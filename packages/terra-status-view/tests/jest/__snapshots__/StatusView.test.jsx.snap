@@ -7,10 +7,10 @@ exports[`should render a single child element 1`] = `
   variant="error"
 >
   <div
-    className="status-view"
+    className="outer-view"
   >
     <div
-      className="status-view-inner"
+      className="inner-view"
       style={
         Object {
           "paddingBottom": "0px",
@@ -97,10 +97,10 @@ exports[`should render an image with a custom status-view 1`] = `
   variant="custom"
 >
   <div
-    className="status-view"
+    className="outer-view"
   >
     <div
-      className="status-view-inner"
+      className="inner-view"
       style={
         Object {
           "paddingBottom": "0px",
@@ -161,10 +161,10 @@ exports[`should render an image with a default status view 1`] = `
   variant="error"
 >
   <div
-    className="status-view"
+    className="outer-view"
   >
     <div
-      className="status-view-inner"
+      className="inner-view"
       style={
         Object {
           "paddingBottom": "0px",
@@ -200,10 +200,10 @@ exports[`should render an image with a no-data status view that will hide the gl
   variant="no-data"
 >
   <div
-    className="status-view"
+    className="outer-view"
   >
     <div
-      className="status-view-inner"
+      className="inner-view"
       style={
         Object {
           "paddingBottom": "0px",
@@ -234,10 +234,10 @@ exports[`should render an image with a no-data status view with all message prop
   variant="no-data"
 >
   <div
-    className="status-view"
+    className="outer-view"
   >
     <div
-      className="status-view-inner"
+      className="inner-view"
       style={
         Object {
           "paddingBottom": "0px",
@@ -355,10 +355,10 @@ exports[`should render an image with a no-matching-results status-view that will
   variant="no-matching-results"
 >
   <div
-    className="status-view"
+    className="outer-view"
   >
     <div
-      className="status-view-inner"
+      className="inner-view"
       style={
         Object {
           "paddingBottom": "0px",
@@ -394,10 +394,10 @@ exports[`should render an image with a not-authorized status-view 1`] = `
   variant="not-authorized"
 >
   <div
-    className="status-view"
+    className="outer-view"
   >
     <div
-      className="status-view-inner"
+      className="inner-view"
       style={
         Object {
           "paddingBottom": "0px",
@@ -433,10 +433,10 @@ exports[`should render an image with an error status-view 1`] = `
   variant="error"
 >
   <div
-    className="status-view"
+    className="outer-view"
   >
     <div
-      className="status-view-inner"
+      className="inner-view"
       style={
         Object {
           "paddingBottom": "0px",
