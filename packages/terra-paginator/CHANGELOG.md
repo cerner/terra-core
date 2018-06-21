@@ -3,8 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added controlled versions of Paginators
+
 ### Fixed
 * Fixed icon display
+
 
 1.4.0 - (June 13, 2018)
 ------------------
