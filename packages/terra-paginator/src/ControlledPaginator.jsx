@@ -19,29 +19,22 @@ const propTypes = {
    * The active/selected page. Used to set the default selected page or maintain selection across renders.
    * Required when using totalCount and itemCountPerPage.
    */
-  selectedPage: PropTypes.number,
+  selectedPage: PropTypes.number.isRequired,
   /**
    * Total number of all items being paginated.
    * Required when using itemCountPerPage and selectedPage.
    */
-  totalCount: PropTypes.number,
+  totalCount: PropTypes.number.isRequired,
   /**
    * Total number of items per page.
    * Required when using selectedPage and totalCount.
    */
-  itemCountPerPage: PropTypes.number,
+  itemCountPerPage: PropTypes.number.isRequired,
 };
 
 class Paginator extends React.Component {
   constructor(props) {
     super(props);
-
-    const { selectedPage, totalCount, itemCountPerPage } = this.props;
-
-    this.state = {
-      selectedPage: selectedPage && totalCount ? selectedPage : undefined,
-      pageSequence: selectedPage && totalCount ? pageSet(selectedPage, calculatePages(totalCount, itemCountPerPage)) : undefined,
-    };
 
     this.handlePageChange = this.handlePageChange.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
@@ -61,10 +54,6 @@ class Paginator extends React.Component {
       }
 
       this.props.onPageChange(index);
-      this.setState({
-        selectedPage: index,
-        pageSequence: pageSet(index, calculatePages(this.props.totalCount, this.props.itemCountPerPage)),
-      });
 
       return false;
     };
@@ -82,10 +71,6 @@ class Paginator extends React.Component {
         }
 
         this.props.onPageChange(index);
-        this.setState({
-          selectedPage: index,
-          pageSequence: pageSet(index, calculatePages(this.props.totalCount, this.props.itemCountPerPage)),
-        });
       }
 
       return false;
@@ -93,8 +78,8 @@ class Paginator extends React.Component {
   }
 
   buildPageButtons(totalPages, onClick) {
-    const { pageSequence, selectedPage } = this.state;
-
+    const { totalCount, itemCountPerPage, selectedPage } = this.props;
+    const pageSequence = pageSet(selectedPage, calculatePages(totalCount, itemCountPerPage));
     const pageButtons = [];
 
     pageSequence.forEach((val) => {
@@ -132,7 +117,7 @@ class Paginator extends React.Component {
 
   defaultPaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage } = this.state;
+    const { selectedPage } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
@@ -191,7 +176,7 @@ class Paginator extends React.Component {
 
   reducedPaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage } = this.state;
+    const { selectedPage } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 

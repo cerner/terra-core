@@ -33,22 +33,10 @@ class ProgressivePaginator extends React.Component {
   constructor(props) {
     super(props);
 
-    const { selectedPage, totalCount } = this.props;
-
-    this.state = {
-      pageInput: selectedPage,
-      selectedPage: selectedPage && totalCount ? selectedPage : undefined,
-    };
-
     this.handlePageChange = this.handlePageChange.bind(this);
-    this.handlePageInput = this.handlePageInput.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
     this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
-  }
-
-  handlePageInput(e) {
-    this.setState({ pageInput: e.target.value });
   }
 
   handlePageChange(index) {
@@ -56,7 +44,6 @@ class ProgressivePaginator extends React.Component {
       event.preventDefault();
 
       this.props.onPageChange(index);
-      this.setState({ pageInput: index, selectedPage: index });
     };
   }
 
@@ -72,9 +59,6 @@ class ProgressivePaginator extends React.Component {
         }
 
         this.props.onPageChange(index);
-        this.setState({
-          selectedPage: index,
-        });
       }
 
       return false;
@@ -83,7 +67,7 @@ class ProgressivePaginator extends React.Component {
 
   defaultProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage } = this.state;
+    const { selectedPage } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
@@ -138,7 +122,7 @@ class ProgressivePaginator extends React.Component {
 
   reducedProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage } = this.state;
+    const { selectedPage } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
