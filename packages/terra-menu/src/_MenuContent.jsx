@@ -209,7 +209,6 @@ class MenuContent extends React.Component {
     const backBtnText = intl.formatMessage({ id: 'Terra.menu.back' });
     const closeBtnText = intl.formatMessage({ id: 'Terra.menu.close' });
 
-
     const closeIcon = <IconClose />;
     let closeButton = <div />;
     if (this.props.onRequestClose && isFullScreen) {
