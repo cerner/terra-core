@@ -3,8 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.17.0 - (June 19, 2018)
+------------------
 ### Removed
 * Removed the `Date Picker Modal Container` test page
+* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
 
 ### Changed
 * Split the `Date Picker Input Attributes` test page into `Date Picker Read Only` and `Date Picker Disabled`

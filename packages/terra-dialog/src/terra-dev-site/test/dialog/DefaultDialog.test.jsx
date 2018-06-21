@@ -1,9 +1,5 @@
 import React from 'react';
-import Base from 'terra-base';
-
 import Dialog from '../../../Dialog';
-
-const locale = 'en-US';
 
 const header = 'Header Stuff';
 
@@ -11,4 +7,10 @@ const body = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 
 const footer = <span>Footer Stuff</span>;
 
-export default () => <Base locale={locale}><div id="dialog" style={{ height: '400px', width: '250px' }}><Dialog header={header} footer={footer}>{body}</Dialog></div></Base>;
+export default () => (
+  <div id="dialog" style={{ height: '400px', width: '250px' }}>
+    <Dialog header={header} footer={footer}>
+      {body}
+    </Dialog>
+  </div>
+);

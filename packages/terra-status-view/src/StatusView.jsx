@@ -212,7 +212,7 @@ class StatusView extends React.Component {
     );
 
     const statusViewClassNames = cx([
-      'status-view',
+      'outer-view',
       customProps.className,
     ]);
 
@@ -227,7 +227,7 @@ class StatusView extends React.Component {
         className={statusViewClassNames}
       >
         <div
-          className={cx('status-view-inner')}
+          className={cx('inner-view')}
           style={{ ...statusViewInnerStyles }}
           ref={(element) => { this.innerNode = element; }}
         >

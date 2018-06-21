@@ -13,6 +13,7 @@ Unreleased
 ------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
+* Updated `ListItem`s to set a width on contents when using chevrons
 
 2.13.0 - (May 30, 2018)
 ------------------
