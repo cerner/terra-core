@@ -1,28 +1,28 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import CardSrc from '!raw-loader!../../../src/Card';
-import CardBodySrc from '!raw-loader!../../../src/CardBody';
+import CardSrc from '!raw-loader!../../../../src/Card';
+import CardBodySrc from '!raw-loader!../../../../src/CardBody';
 
 // Example Files
-import CardDefault from './example/CardDefault';
-import CardDefaultSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardDefault';
-import CardRaised from './example/CardRaised';
-import CardRaisedSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardRaised';
-import CardPadding from './example/CardPadding';
-import CardPaddingSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPadding';
-import CardPaddingVertical from './example/CardPaddingVertical';
-import CardPaddingVerticalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPaddingVertical';
-import CardPaddingHorizontal from './example/CardPaddingHorizontal';
-import CardPaddingHorizontalSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPaddingHorizontal';
-import CardPaddingHR from './example/CardPaddingHR';
-import CardPaddingHRSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardPaddingHR';
-import CardContentCentered from './example/CardContentCentered';
-import CardContentCenteredSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/CardContentCentered';
+import CardDefault from '../example/CardDefault';
+import CardDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardDefault';
+import CardRaised from '../example/CardRaised';
+import CardRaisedSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardRaised';
+import CardPadding from '../example/CardPadding';
+import CardPaddingSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardPadding';
+import CardPaddingVertical from '../example/CardPaddingVertical';
+import CardPaddingVerticalSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardPaddingVertical';
+import CardPaddingHorizontal from '../example/CardPaddingHorizontal';
+import CardPaddingHorizontalSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardPaddingHorizontal';
+import CardPaddingHR from '../example/CardPaddingHR';
+import CardPaddingHRSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardPaddingHR';
+import CardContentCentered from '../example/CardContentCentered';
+import CardContentCenteredSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardContentCentered';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
