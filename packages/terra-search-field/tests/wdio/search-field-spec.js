@@ -1,5 +1,9 @@
 /* global browser, Terra, before */
 
+const ignoredA11y = {
+  label: { enabled: false },
+};
+
 describe('Search Field', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
@@ -23,7 +27,7 @@ describe('Search Field', () => {
     });
 
     Terra.should.matchScreenshot('scrolled text');
-    Terra.should.beAccessible();
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('Block', () => {
@@ -40,14 +44,14 @@ describe('Search Field', () => {
     });
 
     Terra.should.matchScreenshot('with text');
-    Terra.should.beAccessible();
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
   describe('Disabled', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-disabled'));
 
     Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.should.beAccessible({ rules: ignoredA11y });
 
     it('should not accept keyboard input', () => {
       expect(browser.setValue.bind(browser, 'input', 'Lorem')).to
@@ -63,7 +67,7 @@ describe('Search Field', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-with-placeholder'));
 
     Terra.should.matchScreenshot('placeholder');
-    Terra.should.beAccessible();
+    Terra.should.beAccessible({ rules: ignoredA11y });
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
@@ -80,7 +84,7 @@ describe('Search Field', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-default-value'));
 
     Terra.should.matchScreenshot('default value');
-    Terra.should.beAccessible();
+    Terra.should.beAccessible({ rules: ignoredA11y });
 
     it('should enter a new search term', () => {
       browser.click('input');
@@ -102,7 +106,7 @@ describe('Search Field', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-with-value'));
 
     Terra.should.matchScreenshot('default value');
-    Terra.should.beAccessible();
+    Terra.should.beAccessible({ rules: ignoredA11y });
 
     it('should try to enter a new search term', () => {
       browser.click('input');

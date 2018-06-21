@@ -6,7 +6,6 @@ exports[`Snapshots renders a basic search field 1`] = `
 >
   <Input
     aria-disabled={false}
-    aria-label="Text to search for"
     className="input"
     disabled={false}
     name={null}
@@ -44,7 +43,6 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
 >
   <Input
     aria-disabled={true}
-    aria-label="Text to search for"
     className="input"
     disabled={true}
     name={null}
@@ -82,7 +80,6 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
 >
   <Input
     aria-disabled={false}
-    aria-label="Text to search for"
     className="input"
     disabled={false}
     name={null}
@@ -120,7 +117,6 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
 >
   <Input
     aria-disabled={false}
-    aria-label="Text to search for"
     className="input"
     defaultValue="Default"
     disabled={false}
@@ -159,7 +155,6 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 >
   <Input
     aria-disabled={false}
-    aria-label="Text to search for"
     className="input"
     disabled={false}
     name={null}
@@ -197,7 +192,6 @@ exports[`Snapshots renders a search field with a value 1`] = `
 >
   <Input
     aria-disabled={false}
-    aria-label="Text to search for"
     className="input"
     disabled={false}
     name={null}
