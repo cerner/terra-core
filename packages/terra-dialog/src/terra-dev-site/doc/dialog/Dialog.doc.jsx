@@ -1,19 +1,19 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import DialogSrc from '!raw-loader!../../../src/Dialog';
+import DialogSrc from '!raw-loader!../../../../src/Dialog';
 
 // Example Files
-import DialogDefault from './example/DialogDefault';
-import DialogDefaultSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DialogDefault';
-import DialogLongContent from './example/DialogLongContent';
-import DialogLongContentSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DialogLongContent';
-import DialogNoClose from './example/DialogNoClose';
-import DialogNoCloseSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DialogNoClose';
+import DialogDefault from '../example/DialogDefault';
+import DialogDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DialogDefault';
+import DialogLongContent from '../example/DialogLongContent';
+import DialogLongContentSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DialogLongContent';
+import DialogNoClose from '../example/DialogNoClose';
+import DialogNoCloseSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DialogNoClose';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
