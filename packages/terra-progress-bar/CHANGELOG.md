@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed height display issue
 
 2.13.0 - (June 12, 2018)
 ------------------
