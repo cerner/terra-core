@@ -145,10 +145,19 @@ describe('Auto Search', () => {
   });
 
   it('uses custom timeout for search delay when provided', () => {
-    const searchField = shallow(<SearchField searchDelay={1000} />, intlContexts.shallowContext);
+    const onSearch = jest.fn();
+    const searchField = shallow(<SearchField searchDelay={1000} onSearch={onSearch} />, intlContexts.shallowContext);
 
     searchField.childAt(0).simulate('change', { target: {} });
-    expect(setTimeout).toBeCalledWith(expect.anything(), 1000);
+
+    for (let i = 0; i < 3; i += 1) {
+      jest.advanceTimersByTime(250);
+      expect(onSearch).not.toBeCalled();
+    }
+
+    jest.advanceTimersByTime(250);
+    // 1000ms has been passed by jest by now
+    expect(setTimeout).toBeCalled();
   });
 
   it('should call onChange when button is selected', () => {

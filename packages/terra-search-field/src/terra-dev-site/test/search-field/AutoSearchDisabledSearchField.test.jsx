@@ -26,7 +26,12 @@ class AutoSearchDisabledSearchField extends React.Component {
     return (
       <div>
         <h3> Auto Searching is Disabled </h3>
-        <SearchField id="searchfield" onSearch={this.handleSearch} onInvalidSearch={this.handleInvalidSearch} disableAutoSearch />
+        <SearchField
+          id="searchfield"
+          onSearch={this.handleSearch}
+          onInvalidSearch={this.handleInvalidSearch}
+          disableAutoSearch
+        />
         <div id="search-callback-text">
           {this.state.message}{this.state.searchText}
         </div>

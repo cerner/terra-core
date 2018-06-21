@@ -198,6 +198,7 @@ class SearchField extends React.Component {
           onChange={this.handleTextChange}
           disabled={isDisabled}
           aria-disabled={isDisabled}
+          aria-label="Text to search for"
           onKeyDown={this.handleKeyDown}
           {...additionalInputAttributes}
         />

@@ -1,9 +1,5 @@
 /* global browser, Terra, before */
 
-const ignoredA11y = {
-  label: { enabled: false },
-};
-
 describe('Search Field', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
@@ -13,7 +9,7 @@ describe('Search Field', () => {
     Terra.should.matchScreenshot('empty');
 
     it('should enter a search term', () => {
-      browser.setValue('input', 'Lorem');
+      browser.setValue('input', 'Lore');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
         document.querySelector('input').style.caretColor = 'transparent';
@@ -23,11 +19,11 @@ describe('Search Field', () => {
     Terra.should.matchScreenshot('with text');
 
     it('should scroll text that is too long', () => {
-      browser.addValue('input', ' ipsum dolor sit amet');
+      browser.addValue('input', ' is a correctly spelled word');
     });
 
     Terra.should.matchScreenshot('scrolled text');
-    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.beAccessible();
   });
 
   describe('Block', () => {
@@ -44,14 +40,14 @@ describe('Search Field', () => {
     });
 
     Terra.should.matchScreenshot('with text');
-    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.beAccessible();
   });
 
   describe('Disabled', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-disabled'));
 
     Terra.should.matchScreenshot();
-    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.beAccessible();
 
     it('should not accept keyboard input', () => {
       expect(browser.setValue.bind(browser, 'input', 'Lorem')).to
@@ -67,7 +63,7 @@ describe('Search Field', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-with-placeholder'));
 
     Terra.should.matchScreenshot('placeholder');
-    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.beAccessible();
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
@@ -84,7 +80,7 @@ describe('Search Field', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-default-value'));
 
     Terra.should.matchScreenshot('default value');
-    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.beAccessible();
 
     it('should enter a new search term', () => {
       browser.click('input');
@@ -106,7 +102,7 @@ describe('Search Field', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-with-value'));
 
     Terra.should.matchScreenshot('default value');
-    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.beAccessible();
 
     it('should try to enter a new search term', () => {
       browser.click('input');
@@ -137,8 +133,16 @@ describe('Search Field', () => {
 
     Terra.should.matchScreenshot('with too short text');
 
+    it('should not search with the button', () => {
+      browser.click('button');
+      // Ensure button on hover styling is disabled
+      browser.click('#search-callback-text');
+    });
+
+    Terra.should.matchScreenshot('with too short text after button press');
+
     it('should enter a long enough search term', () => {
-      browser.addValue('input', 'm');
+      browser.setValue('input', 'Lore is spelled correctly');
     });
 
     Terra.should.matchScreenshot('with long enough text');
@@ -159,8 +163,8 @@ describe('Search Field', () => {
 
     Terra.should.matchScreenshot('with too short text');
 
-    it('should enter a short search term', () => {
-      browser.addValue('input', 'rem');
+    it('should enter a long enough search term', () => {
+      browser.setValue('input', 'Lore is spelled correctly');
     });
 
     Terra.should.matchScreenshot('with long enough text');
@@ -205,7 +209,7 @@ describe('Search Field', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/auto-search-disabled-search-field'));
 
     it('should enter a search term', () => {
-      browser.setValue('input', 'Lorem');
+      browser.setValue('input', 'Lore');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
         document.querySelector('input').style.caretColor = 'transparent';
@@ -223,30 +227,10 @@ describe('Search Field', () => {
     Terra.should.matchScreenshot('searched text');
 
     it('should search using enter', () => {
-      browser.addValue('input', ' ipsum');
+      browser.addValue('input', ' is spelled correctly');
       browser.keys('Enter');
     });
 
     Terra.should.matchScreenshot('extended search');
-  });
-
-  describe('Delayed', () => {
-    before(() => browser.url('/#/raw/tests/terra-search-field/search-field/delayed-search-field'));
-
-    it('should not search immediately', () => {
-      browser.setValue('input', 'Lorem');
-      // Don't take a screenshot because this is time sensitive
-      expect(browser.element('#search-callback-text').getText()).to.not.contain('Lorem');
-    });
-
-    it('should search after a delay', () => {
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
-      browser.pause(1100);
-    });
-
-    Terra.should.matchScreenshot('searched');
   });
 });
