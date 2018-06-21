@@ -1,11 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved
-import BaseSrc from '!raw-loader!../../../src/Base';
+import BaseSrc from '!raw-loader!../../../../src/Base';
 
 const BaseExample = () => (
   <div>
