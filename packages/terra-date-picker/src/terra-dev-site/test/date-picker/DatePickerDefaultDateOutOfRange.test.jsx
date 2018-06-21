@@ -1,18 +1,16 @@
 import React from 'react';
-import Base from 'terra-base';
 import DatePicker from '../../../../lib/DatePicker';
 
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
-
 const DatePickerDefaultDateOutOfRange = () => (
-  <Base locale={locale}>
+  <div>
+    <h3>Extraneous Clickable Text</h3>
     <DatePicker
       name="date-input"
-      minDate={'2017-04-10'}
-      maxDate={'2017-04-20'}
-      selectedDate={'2017-04-01'}
+      minDate="2017-04-10"
+      maxDate="2017-04-20"
+      selectedDate="2017-04-01"
     />
-  </Base>
+  </div>
 );
 
 export default DatePickerDefaultDateOutOfRange;

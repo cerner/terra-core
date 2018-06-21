@@ -1,8 +1,5 @@
 import React from 'react';
-import Base from 'terra-base';
 import SearchField from '../../../SearchField';
-
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class MinimumLengthSearchField extends React.Component {
 
@@ -16,12 +13,12 @@ class MinimumLengthSearchField extends React.Component {
 
   render() {
     return (
-      <Base locale={locale}>
+      <div>
         <div id="search-callback-text">
           Search Text: {this.state.searchText}
         </div>
         <SearchField id="searchfieldWithMinimumLength" minimumSearchTextLength={5} onSearch={(searchText) => { this.setState({ searchText }); }} />
-      </Base>
+      </div>
     );
   }
 
