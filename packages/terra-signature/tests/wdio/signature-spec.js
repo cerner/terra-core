@@ -27,7 +27,6 @@ describe('Signature', () => {
 
   describe('Themed Drawing Lines', () => {
     beforeEach(() => {
-
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
       browser.waitForVisible('#drawline');
       // Theme variables need to be set before drawing on canvas for theme test
