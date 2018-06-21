@@ -1,12 +1,9 @@
 import React from 'react';
-import Base from 'terra-base';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import Alert from '../../../Alert';
 
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
-
 export default () =>
-  <Base locale={locale}>
+  <div>
     <Alert id="custom1" type={Alert.Opts.Types.CUSTOM} >Custom Alert with no icon, title or custom color</Alert>
     <br />
     <Alert id="custom2" type={Alert.Opts.Types.CUSTOM} title="Custom_Alert:" >Custom Alert with title but no icon or custom color</Alert>
@@ -22,4 +19,4 @@ export default () =>
     <Alert id="custom7" type={Alert.Opts.Types.CUSTOM} customStatusColor="orange" customIcon={<IconHelp />} >Custom Alert with custom color and icon but no title</Alert>
     <br />
     <Alert id="custom8" type={Alert.Opts.Types.CUSTOM} title="Custom_Alert:" customStatusColor="orange" customIcon={<IconHelp />} >Custom Alert with title, custom color and icon</Alert>
-  </Base>;
+  </div>;

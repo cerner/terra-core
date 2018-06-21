@@ -3,11 +3,14 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Refactored classnames that contain 'status-view'.
 
 2.14.0 - (June 12, 2018)
 ------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
+* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
 
 ### Fixed
 * Fixed text and glyphs being able to overflow out of the Status View

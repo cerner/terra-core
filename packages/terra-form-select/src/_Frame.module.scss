@@ -141,6 +141,7 @@
   .search-input:focus {
     background: transparent;
     border: 0;
+    color: inherit;
     flex: 1 1 auto;
     font-size: var(--terra-select-search-font-size, 1.143rem);
     height: 1.375em;

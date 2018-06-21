@@ -1,11 +1,8 @@
 import React from 'react';
-import Base from 'terra-base';
 import Field from '../../../Field';
 
-const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
-
 const FieldExamples = () => (
-  <Base locale={locale} style={{ width: '250px' }}>
+  <div style={{ width: '250px' }}>
     <Field
       id="field"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
@@ -16,7 +13,7 @@ const FieldExamples = () => (
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
-  </Base>
+  </div>
  );
 
 export default FieldExamples;

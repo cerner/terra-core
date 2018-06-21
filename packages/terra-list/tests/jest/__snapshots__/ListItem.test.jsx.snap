@@ -24,6 +24,11 @@ exports[`should mount with isSelectable and hasChevron 1`] = `
         test
       </p>
     }
+    fillAttributes={
+      Object {
+        "className": "arrange-content",
+      }
+    }
     fitEnd={
       <span
         className="chevron"
