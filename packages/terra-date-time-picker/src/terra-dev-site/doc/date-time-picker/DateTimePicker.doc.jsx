@@ -1,22 +1,22 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import DateTimePickerSrc from '!raw-loader!../../../src/DateTimePicker';
+import DateTimePickerSrc from '!raw-loader!../../../../src/DateTimePicker';
 
 // Example Files
-import DateTimePickerDefault from './example/DateTimePickerDefault';
-import DateTimePickerDefaultDateTime from './example/DateTimePickerDefaultDateTime';
-import DateTimePickerDefaultDateOnly from './example/DateTimePickerDefaultDateOnly';
-import DateTimePickerExcludeDates from './example/DateTimePickerExcludeDates';
-import DateTimePickerIncludeDates from './example/DateTimePickerIncludeDates';
-import DateTimePickerFilterDates from './example/DateTimePickerFilterDates';
-import DateTimePickerMinMax from './example/DateTimePickerMinMax';
-import DateTimePickerDST from './example/DateTimePickerDST';
-import DateTimePickerInsideModal from './example/DateTimePickerInsideModal';
+import DateTimePickerDefault from '../example/DateTimePickerDefault';
+import DateTimePickerDefaultDateTime from '../example/DateTimePickerDefaultDateTime';
+import DateTimePickerDefaultDateOnly from '../example/DateTimePickerDefaultDateOnly';
+import DateTimePickerExcludeDates from '../example/DateTimePickerExcludeDates';
+import DateTimePickerIncludeDates from '../example/DateTimePickerIncludeDates';
+import DateTimePickerFilterDates from '../example/DateTimePickerFilterDates';
+import DateTimePickerMinMax from '../example/DateTimePickerMinMax';
+import DateTimePickerDST from '../example/DateTimePickerDST';
+import DateTimePickerInsideModal from '../example/DateTimePickerInsideModal';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
