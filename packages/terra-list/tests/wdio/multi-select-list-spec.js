@@ -8,88 +8,88 @@ describe('Multi Select List', () => {
 
     Terra.should.matchScreenshot();
 
-    it('should highlight the first item upon clicking', () => {
+    it('selects the first item upon clicking', () => {
       browser.click('ul li:nth-child(1)');
     });
-    Terra.should.matchScreenshot('first item highlighted');
+    Terra.should.matchScreenshot('first item selected');
 
-    it('should highlight the second item upon clicking', () => {
+    it('selects the second item upon clicking', () => {
       browser.click('ul li:nth-child(2)');
     });
-    Terra.should.matchScreenshot('first and second item highlighted');
+    Terra.should.matchScreenshot('first and second item selected');
 
-    it('should highlight the third item upon clicking', () => {
+    it('selects the third item upon clicking', () => {
       browser.click('ul li:nth-child(3)');
     });
-    Terra.should.matchScreenshot('first second and third item highlighted');
+    Terra.should.matchScreenshot('first second and third item selected');
 
-    it('should unhighlight the second item upon clicking', () => {
+    it('deselects the second item upon clicking', () => {
       browser.click('ul li:nth-child(2)');
     });
-    Terra.should.matchScreenshot('first and third item highlighted');
+    Terra.should.matchScreenshot('first and third item selected');
 
-    it('should unhighlight the third item upon clicking', () => {
+    it('deselects the third item upon clicking', () => {
       browser.click('ul li:nth-child(3)');
     });
-    Terra.should.matchScreenshot('first item highlighted third item unhighlighted');
+    Terra.should.matchScreenshot('first item selected third item focus');
 
     describe('Enter Key', () => {
       before(() => browser.url('/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list'));
 
-      it('should select and highlight the first item upon enter', () => {
+      it('selects the first item upon enter', () => {
         browser.keys(['Tab', 'Enter']);
       });
-      Terra.should.matchScreenshot('first item highlighted');
+      Terra.should.matchScreenshot('first item selected');
 
-      it('should highlight the second item upon enter', () => {
+      it('selects the second item upon enter', () => {
         browser.keys(['Tab', 'Enter']);
       });
-      Terra.should.matchScreenshot('first and second item highlighted');
+      Terra.should.matchScreenshot('first and second item selected');
 
-      it('should highlight the third item upon enter', () => {
+      it('selects the third item upon enter', () => {
         browser.keys(['Tab', 'Enter']);
       });
-      Terra.should.matchScreenshot('first second and third item highlighted');
+      Terra.should.matchScreenshot('first second and third item selected');
 
-      it('should unhighlight the second item upon enter', () => {
+      it('deselects the second item upon enter', () => {
         browser.keys(['Shift', 'Tab', 'Enter', 'Shift']);
       });
-      Terra.should.matchScreenshot('first and third item highlighted');
+      Terra.should.matchScreenshot('first and third item selected');
 
-      it('should unhighlight the third item upon enter', () => {
+      it('deselects the third item upon enter', () => {
         browser.keys(['Tab', 'Enter']);
       });
-      Terra.should.matchScreenshot('first item highlighted third item unhighlighted');
+      Terra.should.matchScreenshot('first item selected third item focused');
     });
 
     describe('Space Bar', () => {
       before(() => browser.url('/#/raw/tests/terra-list/list/multi-select-list/default-multi-select-list'));
 
-      it('should highlight the selected items upon space keydown', () => {
+      it('selects the first item upon space keydown', () => {
         browser.keys(['Tab', 'Space']);
       });
-      Terra.should.matchScreenshot('first item highlighted');
+      Terra.should.matchScreenshot('first item selected');
 
-      it('should highlight the selected items upon space keydown', () => {
+      it('selects the second item upon space keydown', () => {
         browser.keys(['Tab', 'Space']);
       });
-      Terra.should.matchScreenshot('first and second item highlighted');
+      Terra.should.matchScreenshot('first and second item selected');
 
-      it('should highlight the selected items upon space keydown', () => {
+      it('selects the third item upon space keydown', () => {
         browser.keys(['Tab', 'Space']);
       });
-      Terra.should.matchScreenshot('first second and third item highlighted');
+      Terra.should.matchScreenshot('first second and third item selected');
 
-      it('should highlight the selected items upon space keydown', () => {
+      it('deselects the second item upon space keydown', () => {
         // Shift-tab combination to go to prev. item, selects that item and then keyup the shift
         browser.keys(['Shift', 'Tab', 'Space', 'Shift']);
       });
-      Terra.should.matchScreenshot('first and third item highlighted');
+      Terra.should.matchScreenshot('first and third item selected');
 
-      it('should highlight the selected items upon space keydown', () => {
+      it('deselects the third item upon space keydown', () => {
         browser.keys(['Tab', 'Space']);
       });
-      Terra.should.matchScreenshot('first item highlighted third item unhighlighted');
+      Terra.should.matchScreenshot('first item selected third item focus');
       Terra.should.beAccessible();
     });
   });
@@ -98,20 +98,20 @@ describe('Multi Select List', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/multi-select-list/max-count-multi-select-list'));
     Terra.should.matchScreenshot();
 
-    it('should not highlight the third item', () => {
+    it('should not select the third item', () => {
       browser.keys(['Tab', 'Tab', 'Tab', 'Enter']);
     });
-    Terra.should.matchScreenshot('first and second item highlighted');
+    Terra.should.matchScreenshot('first and second item selected');
 
-    it('should unhighlight the second item', () => {
+    it('deselects the second item', () => {
       browser.click('ul li:nth-child(2)');
     });
-    Terra.should.matchScreenshot('first item highlighted');
+    Terra.should.matchScreenshot('first item selected');
 
-    it('should highlight the third item', () => {
+    it('selects the third item', () => {
       browser.keys(['Tab', 'Space']);
     });
-    Terra.should.matchScreenshot('first and third item highlighted');
+    Terra.should.matchScreenshot('first and third item selected');
 
     Terra.should.beAccessible();
   });
@@ -135,31 +135,31 @@ describe('Multi Select List', () => {
   describe('Multi Select List On Change', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/multi-select-list/on-change-multi-select-list'));
 
-    it('should highlight and display the first item', () => {
+    it('selects and displays the first item', () => {
       browser.keys(['Tab', 'Enter']);
     });
     Terra.should.matchScreenshot('selected item(s) 0');
 
-    it('should highlight and display the second item', () => {
+    it('selects and displays the second item', () => {
       browser.click('ul li:nth-child(2)');
     });
     Terra.should.matchScreenshot('selected item(s) 0,1');
 
-    it('should highlight and display the third item', () => {
+    it('selects and displays the third item', () => {
       browser.keys(['Tab', 'Enter']);
     });
     Terra.should.matchScreenshot('selected item(s) 0,1,2');
 
-    it('should unhighlight and deselect the second item', () => {
+    it('deselects the second item', () => {
       // Shift-tab to go back, shift at end to release shift key-down
       browser.keys(['Shift', 'Tab', 'Enter', 'Shift']);
     });
     Terra.should.matchScreenshot('selected item(s) 0,2');
 
-    it('should unhighlight and deselect third item', () => {
+    it('deselects the third item', () => {
       browser.click('ul li:nth-child(3)');
     });
-    Terra.should.matchScreenshot('selected item(s) 0 third item unhighlighted');
+    Terra.should.matchScreenshot('selected item(s) 0 third item focus');
 
     Terra.should.beAccessible();
   });
@@ -167,27 +167,27 @@ describe('Multi Select List', () => {
   describe('Multi Select List On Change with Max Selection', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/multi-select-list/on-change-multi-select-list-with-max-selection'));
 
-    it('should highlight and display the first item', () => {
+    it('selects and displays the first item', () => {
       browser.keys(['Tab', 'Enter']);
     });
     Terra.should.matchScreenshot('selected item(s) 0');
 
-    it('should highlight and display the second item', () => {
+    it('selects and displays the second item', () => {
       browser.click('ul li:nth-child(2)');
     });
     Terra.should.matchScreenshot('selected item(s) 0,1');
 
-    it('should not highlight and not display the third item', () => {
+    it('should not select and not display the third item', () => {
       browser.keys(['Tab', 'Enter']);
     });
     Terra.should.matchScreenshot('selected item(s) 0,1');
 
-    it('should unhighlight and deselect the second item', () => {
+    it('deselects the second item', () => {
       browser.addValue('ul li:nth-child(2)', 'Space');
     });
     Terra.should.matchScreenshot('selected item(s) 0 second item deselected');
 
-    it('should highlight and select third item', () => {
+    it('selects the third item', () => {
       browser.click('ul li:nth-child(3)');
     });
     Terra.should.matchScreenshot('selected item(s) 0,2');
