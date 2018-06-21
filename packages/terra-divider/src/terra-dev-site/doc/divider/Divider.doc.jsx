@@ -1,10 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 // Example Files
-import Divider from './example/DividerExample';
+import Divider from '../example/DividerExample';
 
 const DocPage = () => (
   <DocTemplate
