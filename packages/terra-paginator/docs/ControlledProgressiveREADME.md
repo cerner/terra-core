@@ -1,6 +1,6 @@
 # Terra Controlled Progressive Paginator
 
-Controlled version of the [Progressive Paginator](https://github.com/cerner/terra-core/packages/terra-paginator/docs/ProgressiveREADME.md) for when the pagination state needs to be managed by a parent component.
+Controlled version of the [Progressive Paginator](https://github.com/cerner/terra-core/packages/terra-paginator/docs/ProgressiveREADME.md) for when the pagination state needs to be managed by a parent component. To use this component, the selectedPage must be managed through the state of a parent component, and passed into this paginator through props.
 
 ## Getting Started
 
