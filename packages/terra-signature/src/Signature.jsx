@@ -73,10 +73,6 @@ class Signature extends React.Component {
 
     context.lineWidth = this.props.lineWidth;
 
-    const style = window.getComputedStyle(this.canvas);
-    const color = style.getPropertyValue('color');
-    context.strokeStyle = color;
-
     this.updateDimensions();
 
     this.canvas.addEventListener('resize', this.updateDimensions);
@@ -172,19 +168,23 @@ class Signature extends React.Component {
 
     if (this.state.lineSegments.length > 0) {
       const lastLineSegment = this.state.lineSegments[this.state.lineSegments.length - 1];
+      const style = window.getComputedStyle(this.canvas);
+      const color = style.getPropertyValue('color');
 
       context.lineJoin = 'round';
 
       context.beginPath();
       context.moveTo(lastLineSegment.x1, lastLineSegment.y1);
       context.lineTo(lastLineSegment.x2, lastLineSegment.y2);
-
+      context.strokeStyle = color;
       context.stroke();
     }
   }
 
   drawSignature(lineSegments, lineWidth) {
     const context = this.canvas.getContext('2d');
+    const style = window.getComputedStyle(this.canvas);
+    const color = style.getPropertyValue('color');
 
     context.lineJoin = 'round';
     context.lineWidth = lineWidth;
@@ -198,7 +198,7 @@ class Signature extends React.Component {
       context.beginPath();
       context.moveTo(lineSegments[i].x1, lineSegments[i].y1);
       context.lineTo(lineSegments[i].x2, lineSegments[i].y2);
-
+      context.strokeStyle = color;
       context.stroke();
     }
   }
