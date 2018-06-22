@@ -3,12 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.5.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+
 ### Added
-* Added controlled versions of Paginators
+* Added controlled versions of paginators
 
 ### Fixed
 * Fixed icon display
-
 
 1.4.0 - (June 13, 2018)
 ------------------

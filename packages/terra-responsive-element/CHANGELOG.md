@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.1.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+
 3.0.0 - (June 13, 2018)
 ------------------
 ### Breaking Changes

@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.16.0 - (June 22, 2018)
+------------------
 ### Changed
+* Moved terra-base from dependency to peerDependency
 * Updated readme docs import, fixes mixed http/https issue in doc site
 
 2.15.0 - (June 13, 2018)

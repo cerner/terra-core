@@ -1,7 +1,7 @@
 {
   "name": "terra-list",
   "main": "lib/List.js",
-  "version": "2.14.0",
+  "version": "2.15.0",
   "description": "terra-list",
   "repository": {
     "type": "git",
@@ -28,10 +28,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^2.14.0",
+    "terra-arrange": "^2.15.0",
     "terra-clinical-item-view": "^2.6.0",
-    "terra-doc-template": "^1.6.0",
-    "terra-icon": "^2.13.0"
+    "terra-doc-template": "^1.7.0",
+    "terra-icon": "^2.14.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
