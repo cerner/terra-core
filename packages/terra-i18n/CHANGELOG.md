@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Major dependency version bump for `fs-extra`
 
 2.11.0 - (June 12, 2018)
 ------------------
