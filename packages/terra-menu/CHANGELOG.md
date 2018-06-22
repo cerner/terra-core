@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added localized aria-labels menu buttons when in bounded context
 
 3.6.0 - (June 19, 2018)
 ------------------

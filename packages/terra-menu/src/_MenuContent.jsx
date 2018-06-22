@@ -1,4 +1,5 @@
 import React from 'react';
+import { injectIntl, intlShape } from 'terra-base';
 import PropTypes from 'prop-types';
 import List from 'terra-list';
 import IconLeft from 'terra-icon/lib/icon/IconLeft';
@@ -13,6 +14,10 @@ import styles from './Menu.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * The intl object to be injected for translations. Provided by the injectIntl function.
+   */
+  intl: intlShape.isRequired,
   /**
    * Title the should be displayed in header.
    */
@@ -87,6 +92,7 @@ const defaultProps = {
 const childContextTypes = {
   isSelectableMenu: PropTypes.bool,
 };
+
 
 class MenuContent extends React.Component {
   constructor(props) {
@@ -199,11 +205,15 @@ class MenuContent extends React.Component {
   }
 
   buildHeader(isFullScreen) {
+    const intl = this.props.intl;
+    const backBtnText = intl.formatMessage({ id: 'Terra.menu.back' });
+    const closeBtnText = intl.formatMessage({ id: 'Terra.menu.close' });
+
     const closeIcon = <IconClose />;
     let closeButton = <div />;
     if (this.props.onRequestClose && isFullScreen) {
       closeButton = (
-        <button className={cx(['header-button'])} onClick={this.props.onRequestClose}>
+        <button className={cx(['header-button'])} onClick={this.props.onRequestClose} aria-label={closeBtnText}>
           {closeIcon}
         </button>
       );
@@ -217,6 +227,7 @@ class MenuContent extends React.Component {
         onClick={this.props.onRequestBack}
         onKeyDown={this.onKeyDownBackButton}
         tabIndex="0"
+        aria-label={backBtnText}
       >
         <Arrange
           align="center"
@@ -323,4 +334,4 @@ MenuContent.propTypes = propTypes;
 MenuContent.defaultProps = defaultProps;
 MenuContent.childContextTypes = childContextTypes;
 
-export default MenuContent;
+export default injectIntl(MenuContent);

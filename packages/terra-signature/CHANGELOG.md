@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed issue where stroke color was not themable
 
 1.14.0 - (June 19, 2018)
 ------------------
