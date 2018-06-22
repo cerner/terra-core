@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated readme docs import, fixes mixed http/https issue in doc site
 
 2.15.0 - (June 13, 2018)
 ------------------

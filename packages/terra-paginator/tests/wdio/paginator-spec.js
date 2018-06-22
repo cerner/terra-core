@@ -1,4 +1,4 @@
-/* global browser, Terra */
+/* global browser, Terra, before */
 const viewports = Terra.viewports('tiny', 'medium', 'large');
 
 describe('Paginator', () => {
@@ -57,5 +57,53 @@ describe('Paginator', () => {
         '--terra-paginator-nav-link-padding': '2px',
       },
     });
+  });
+
+  describe('Controlled Paginator', () => {
+    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/controlled-paginator'));
+
+    Terra.should.matchScreenshot('0');
+
+    it('should toggle page change when the props are updated', () => {
+      browser.click('#button-9');
+    });
+
+    Terra.should.matchScreenshot('1');
+
+    it('should toggle the pages when the right arrow is clicked', () => {
+      browser.click('[aria-label="next"]');
+    });
+
+    Terra.should.matchScreenshot('2');
+
+    it('should toggle the pages when the left arrow is clicked', () => {
+      browser.click('[aria-label="previous"]');
+    });
+
+    Terra.should.matchScreenshot('3');
+  });
+
+  describe('Controlled Progressive Paginator', () => {
+    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/controlled-progressive-paginator'));
+
+    Terra.should.matchScreenshot('0');
+
+    it('should toggle page change when the props are updated', () => {
+      browser.click('#button-9');
+    });
+
+    Terra.should.matchScreenshot('1');
+
+    it('should toggle the pages when the right arrow is clicked', () => {
+      browser.click('[aria-label="next"]');
+    });
+
+    Terra.should.matchScreenshot('2');
+
+    it('should toggle the pages when the left arrow is clicked', () => {
+      browser.click('[aria-label="previous"]');
+    });
+
+    Terra.should.matchScreenshot('3');
   });
 });

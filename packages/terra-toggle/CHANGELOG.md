@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Major dependency version bump for `react-animate-height`
 
 2.12.0 - (June 12, 2018)
 ------------------

@@ -6,6 +6,7 @@ exports[`Toggle should have all props set correctly 1`] = `
   className="toggle"
 >
   <AnimateHeight
+    animateOpacity={false}
     animationStateClasses={
       Object {
         "animating": "rah-animating",
@@ -21,6 +22,7 @@ exports[`Toggle should have all props set correctly 1`] = `
       }
     }
     applyInlineTransitions={true}
+    delay={0}
     duration={250}
     easing="ease"
     height="auto"
