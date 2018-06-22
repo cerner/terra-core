@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Major dependency version bump for `aphrodite`
 
 2.11.0 - (June 12, 2018)
 ------------------
