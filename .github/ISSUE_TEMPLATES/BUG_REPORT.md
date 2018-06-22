@@ -18,7 +18,7 @@ about: If something isn't working as expected
 3.
 4.
 
-## Additional context / screenshots
+## Additional Context / Screenshots
 <!-- Add any other context about the problem here. If applicable, add screenshots to help explain. -->
 
 ## Expected Behavior
