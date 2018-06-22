@@ -24,7 +24,7 @@ about: If something isn't working as expected
 ## Expected Behavior
 <!-- A clear and concise description of what you expected to happen. -->
 
-## Possible Solution**
+## Possible Solution
 <!--- If you have suggestions to fix the bug, let us know -->
 
 ## Environment
