@@ -1,32 +1,32 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import Markdown from 'terra-markdown';
-import ReadMe from '../../../docs/README.md';
-import HeadingLevelDocs from '../../../docs/heading-levels.md';
-import HeadingSizeDocs from '../../../docs/heading-sizes.md';
-import HeadingColorDocs from '../../../docs/heading-colors.md';
-import HeadingWeightDocs from '../../../docs/heading-weights.md';
-import HeadingVisuallyHiddenDocs from '../../../docs/heading-visually-hidden.md';
-import HeadingVariationDocs from '../../../docs/heading-variations.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import HeadingLevelDocs from '../../../../docs/heading-levels.md';
+import HeadingSizeDocs from '../../../../docs/heading-sizes.md';
+import HeadingColorDocs from '../../../../docs/heading-colors.md';
+import HeadingWeightDocs from '../../../../docs/heading-weights.md';
+import HeadingVisuallyHiddenDocs from '../../../../docs/heading-visually-hidden.md';
+import HeadingVariationDocs from '../../../../docs/heading-variations.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import HeadingSrc from '!raw-loader!../../../src/Heading';
+import HeadingSrc from '!raw-loader!../../../../src/Heading';
 
 // Example Files
-import HeadingColors from './example/HeadingColors';
-import HeadingColorsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HeadingColors';
-import HeadingLevels from './example/HeadingLevels';
-import HeadingLevelsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HeadingLevels';
-import HeadingSizes from './example/HeadingSizes';
-import HeadingSizesSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HeadingSizes';
-import HeadingVisuallyHidden from './example/HeadingVisuallyHidden';
-import HeadingVisuallyHiddenSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HeadingVisuallyHidden';
-import HeadingWeights from './example/HeadingWeights';
-import HeadingWeightsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HeadingWeights';
-import HeadingVariations from './example/HeadingVariations';
-import HeadingVariationsSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/HeadingVariations';
+import HeadingColors from '../example/HeadingColors';
+import HeadingColorsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingColors';
+import HeadingLevels from '../example/HeadingLevels';
+import HeadingLevelsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingLevels';
+import HeadingSizes from '../example/HeadingSizes';
+import HeadingSizesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingSizes';
+import HeadingVisuallyHidden from '../example/HeadingVisuallyHidden';
+import HeadingVisuallyHiddenSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingVisuallyHidden';
+import HeadingWeights from '../example/HeadingWeights';
+import HeadingWeightsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingWeights';
+import HeadingVariations from '../example/HeadingVariations';
+import HeadingVariationsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingVariations';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
