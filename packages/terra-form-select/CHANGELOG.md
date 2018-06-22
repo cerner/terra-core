@@ -3,7 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
-### Added
+
+4.6.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
 * Input text color to inherit base text color
 
 4.5.0 - (June 19, 2018)

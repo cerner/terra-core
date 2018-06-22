@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.13.0 - (June 22, 2018)
+------------------
 ### Changed
+* Moved terra-base from dependency to peerDependency
 * Major dependency version bump for `react-animate-height`
 
 2.12.0 - (June 12, 2018)

@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.15.0 - (June 22, 2018)
+------------------
 ### Changed
+* Moved terra-base from dependency to peerDependency
 * Changed Nightwatch to WebdriverIO tests.
 
 ### Removed
