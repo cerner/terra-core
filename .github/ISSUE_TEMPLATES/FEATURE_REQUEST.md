@@ -9,5 +9,5 @@ about: Submit a proposal for a new feature
 ## Description
 <!-- A clear and concise description of what the feature is. -->
 
-## Additional context / screenshots
+## Additional Context / Screenshots
 <!-- Add any other context about the feature here. If applicable, add screenshots to help explain. -->
