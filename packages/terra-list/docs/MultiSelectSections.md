@@ -4,7 +4,7 @@ The Terra Multi Select List is a structural component to arrange content within 
 
 ## Usage
 
-```
+```jsx
 const MultiSelectSections = () => (
   <MultiSelectList hasSections>
     <MultiSelectList.Section
