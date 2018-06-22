@@ -4,6 +4,14 @@ Changelog
 Unreleased
 ----------
 
+2.14.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+
+### Fixed
+* Fixed height display issue
+
 2.13.0 - (June 12, 2018)
 ------------------
 ### Changed

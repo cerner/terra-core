@@ -4,6 +4,12 @@ ChangeLog
 Unreleased
 ----------
 
+2.12.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+* Major dependency version bump for `aphrodite`
+
 2.11.0 - (June 12, 2018)
 ------------------
 ### Changed

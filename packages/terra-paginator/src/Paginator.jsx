@@ -106,7 +106,7 @@ class Paginator extends React.Component {
       if (val > totalPages) {
         return;
       }
-      /* eslint-disable comma-dangle, jsx-a11y/aria-props */
+      /* eslint-disable jsx-a11y/aria-props */
       pageButtons.push(
         <a
           aria-label={`Page ${val}`}
@@ -118,9 +118,9 @@ class Paginator extends React.Component {
           onKeyDown={this.handleOnKeyDown(val)}
         >
           {val}
-        </a>
+        </a>,
       );
-      /* eslint-enable comma-dangle, jsx-a11y/aria-props */
+      /* eslint-enable jsx-a11y/aria-props */
     });
 
     return pageButtons;

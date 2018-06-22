@@ -4,6 +4,14 @@ Changelog
 Unreleased
 ----------
 
+1.15.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+
+### Fixed
+* Fixed issue where stroke color was not themable
+
 1.14.0 - (June 19, 2018)
 ------------------
 ### Changed
