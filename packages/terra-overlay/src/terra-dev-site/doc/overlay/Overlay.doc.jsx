@@ -1,19 +1,19 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import OverlayContainerSrc from '!raw-loader!../../../src/OverlayContainer';
-import OverlaySrc from '!raw-loader!../../../src/Overlay';
-import LoadingOverlaySrc from '!raw-loader!../../../src/LoadingOverlay';
+import OverlayContainerSrc from '!raw-loader!../../../../src/OverlayContainer';
+import OverlaySrc from '!raw-loader!../../../../src/Overlay';
+import LoadingOverlaySrc from '!raw-loader!../../../../src/LoadingOverlay';
 
 // Example Files
-import OverlayExample from './example/OverlayExample';
-import OverlayExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/OverlayExample';
-import LoadingOverlayExample from './example/LoadingOverlayExample';
-import LoadingOverlayExampleSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/LoadingOverlayExample';
+import OverlayExample from '../example/OverlayExample';
+import OverlayExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OverlayExample';
+import LoadingOverlayExample from '../example/LoadingOverlayExample';
+import LoadingOverlayExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/LoadingOverlayExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
