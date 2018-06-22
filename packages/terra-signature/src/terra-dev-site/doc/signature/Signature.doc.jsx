@@ -1,15 +1,15 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import SlideGroupSrc from '!raw-loader!../../../src/SlideGroup.jsx';
+import SignatureSrc from '!raw-loader!../../../../src/Signature';
 
 // Example Files
-import SlideGroupDemo from './example/SlideGroupDemo';
-import SlideGroupDemoSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/SlideGroupDemo';
+import SignatureExample from '../example/SignatureExample';
+import SignatureExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SignatureExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -19,20 +19,15 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Non-Animated SlideGroup',
-        example: <SlideGroupDemo />,
-        source: SlideGroupDemoSrc,
-      },
-      {
-        title: 'Animated SlideGroup',
-        example: <SlideGroupDemo isAnimated />,
-        source: SlideGroupDemoSrc,
+        title: 'Default Signature',
+        example: <SignatureExample />,
+        source: SignatureExampleSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'Slide Group',
-        componentSrc: SlideGroupSrc,
+        componentName: 'Signature',
+        componentSrc: SignatureSrc,
       },
     ]}
   />
