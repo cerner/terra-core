@@ -1,27 +1,27 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../docs/README.md';
-import { name } from '../../../package.json';
+import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import ToggleButtonSrc from '!raw-loader!../../../src/ToggleButton';
+import ToggleButtonSrc from '!raw-loader!../../../../src/ToggleButton';
 
 // Example Files
-import DefaultToggleButton from './example/DefaultToggleButton';
-import DefaultToggleButtonSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/DefaultToggleButton';
-import AnimatedToggleButton from './example/AnimatedToggleButton';
-import AnimatedToggleButtonSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/AnimatedToggleButton';
-import ButtonAttrsToggleButton from './example/ButtonAttrsToggleButton';
-import ButtonAttrsToggleButtonSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/ButtonAttrsToggleButton';
-import IsInitiallyOpenToggleButton from './example/IsInitiallyOpenToggleButton';
-import IsInitiallyOpenToggleButtonSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/IsInitiallyOpenToggleButton';
-import IsIconOnlyToggleButton from './example/IsIconOnlyToggleButton';
-import IsIconOnlyToggleButtonSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/IsIconOnlyToggleButton';
-import OpenCloseEventToggleButton from './example/OpenCloseEventToggleButton';
-import OpenCloseEventToggleButtonSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/OpenCloseEventToggleButton';
-import OpenCloseTextToggleButton from './example/OpenCloseTextToggleButton';
-import OpenCloseTextToggleButtonSrc from '!raw-loader!../../../src/terra-dev-site/doc/example/OpenCloseTextToggleButton';
+import DefaultToggleButton from '../example/DefaultToggleButton';
+import DefaultToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggleButton';
+import AnimatedToggleButton from '../example/AnimatedToggleButton';
+import AnimatedToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AnimatedToggleButton';
+import ButtonAttrsToggleButton from '../example/ButtonAttrsToggleButton';
+import ButtonAttrsToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonAttrsToggleButton';
+import IsInitiallyOpenToggleButton from '../example/IsInitiallyOpenToggleButton';
+import IsInitiallyOpenToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/IsInitiallyOpenToggleButton';
+import IsIconOnlyToggleButton from '../example/IsIconOnlyToggleButton';
+import IsIconOnlyToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/IsIconOnlyToggleButton';
+import OpenCloseEventToggleButton from '../example/OpenCloseEventToggleButton';
+import OpenCloseEventToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OpenCloseEventToggleButton';
+import OpenCloseTextToggleButton from '../example/OpenCloseTextToggleButton';
+import OpenCloseTextToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OpenCloseTextToggleButton';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
