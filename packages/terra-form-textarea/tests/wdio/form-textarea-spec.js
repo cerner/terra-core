@@ -205,7 +205,7 @@ describe('Form-Textarea', () => {
     });
   });
 
-  describe('Small Textrea Height Resizing', () => {
+  describe('Small Textarea Height Resizing', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/small-textarea');
     });
