@@ -15,11 +15,11 @@
     padding-bottom: var(--terra-list-section-header-padding-bottom, 0.5rem);
     padding-top: var(--terra-list-section-header-padding-top, 0.5rem);
     width: 100%;
-    
+
     &.is-interactable {
       @include terra-padding-start(var(--terra-list-section-header-accordion-padding-start, 0.5rem));
       cursor: pointer;
-      
+
       &:hover {
         background: var(--terra-list-section-header-hover-background, #d7d8d9);
         border-bottom: var(--terra-list-section-header-hover-border-bottom, 1px solid #c8cacb);
@@ -29,7 +29,7 @@
         box-shadow: var(--terra-list-section-header-hover-box-shadow);
         color: var(--terra-list-section-header-hover-color, #1c1f21);
       }
-      
+
       &:focus {
         background: var(--terra-list-section-header-focus-background, #e8e9ea);
         border-bottom: var(--terra-list-section-header-focus-border-bottom, 1px solid #c8cacb);
@@ -56,7 +56,6 @@
 
   .title {
     display: inline;
-    font-size: 1rem;
     font-size: var(--terra-list-section-header-font-size, 1rem);
     font-weight: var(--terra-list-section-header-font-weight, bold);
     line-height: var(--terra-list-section-header-line-height, 1.142857143);
