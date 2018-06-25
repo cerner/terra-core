@@ -120,11 +120,13 @@ const Alert = (
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const attributes = Object.assign({}, customProps);
   const narrowAlertClassNames = cx([
+    'alert-base',
     type,
     'narrow',
     attributes.className,
   ]);
   const wideAlertClassNames = cx([
+    'alert-base',
     type,
     'wide',
     attributes.className,
@@ -135,7 +137,7 @@ const Alert = (
   const outerDivStyle = {};
   let alertSectionClassName = cx('section');
   let actionsClassName = cx('actions');
-  let bodyClassNameForNarrowParent = 'body-std';
+  let bodyClassNameForNarrowParent = cx(['body', 'body-std']);
 
   if (type === AlertTypes.CUSTOM) {
     // For custom alert, there is no color assigned to the box-shadow style since it is to be specified
@@ -146,15 +148,15 @@ const Alert = (
     // will allow the icon to pick up the color style so that Terra icons will match the color of the
     // status bar.
     outerDivStyle.color = customStatusColor;
-    alertSectionClassName = cx(['section-custom']);
-    actionsClassName = cx(['actions-custom']);
+    alertSectionClassName = cx(['section', 'section-custom']);
+    actionsClassName = cx(['actions', 'actions-custom']);
   }
 
   if (onDismiss) {
     dismissButton = (<Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} onClick={onDismiss} />);
   }
   if (onDismiss || action) {
-    bodyClassNameForNarrowParent = 'body-narrow';
+    bodyClassNameForNarrowParent = cx(['body', 'body-narrow']);
     actionsSection = (
       <div className={actionsClassName}>
         {action}
@@ -177,7 +179,7 @@ const Alert = (
       responsiveTo="parent"
       defaultElement={
         <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle} >
-          <div className={cx(bodyClassNameForNarrowParent)}>
+          <div className={bodyClassNameForNarrowParent}>
             <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
@@ -186,7 +188,7 @@ const Alert = (
       }
       tiny={
         <div {...attributes} className={wideAlertClassNames} style={outerDivStyle} >
-          <div className={cx('body-std')}>
+          <div className={cx(['body', 'body-std'])}>
             <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
