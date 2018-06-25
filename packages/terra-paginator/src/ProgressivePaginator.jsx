@@ -162,6 +162,7 @@ class ProgressivePaginator extends React.Component {
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
+          <span className={cx('visually-hidden')}>Previous</span>
           <span className={cx('icon')} />
         </a>
       </div>
@@ -175,8 +176,9 @@ class ProgressivePaginator extends React.Component {
           className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
           tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(nextPageIndex)}
-          onKeyDown={this.handleOnKeyDown(previousPageIndex)}
+          onKeyDown={this.handleOnKeyDown(nextPageIndex)}
         >
+          <span className={cx('visually-hidden')}>Next</span>
           <span className={cx('icon')} />
         </a>
         <a

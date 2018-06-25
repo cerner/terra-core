@@ -4,11 +4,18 @@ ChangeLog
 Unreleased
 ----------
 
+2.13.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+* Updated test selectors to work with theme repos
+
 2.12.0 - (June 12, 2018)
 ------------------
 ### Changed
 * Updated field documentation to be more inline with other examples
 * Updated "test:jest" script to work on windows.
+* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
 
 2.11.0 - (May 30, 2018)
 ------------------

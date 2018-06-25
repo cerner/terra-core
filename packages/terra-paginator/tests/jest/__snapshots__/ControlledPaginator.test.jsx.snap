@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paginator should render a controlled paginator 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <div
+      aria-label="pagination"
+      className="paginator"
+      role="navigation"
+    >
+      <a
+        aria-disabled={true}
+        aria-label="first"
+        className="nav-link left-controls is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+      >
+        First
+      </a>
+      <a
+        aria-disabled={true}
+        aria-label="previous"
+        className="nav-link left-controls previous icon-only is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+      >
+        <span
+          className="visually-hidden"
+        >
+          Previous
+        </span>
+        <span
+          className="icon"
+        />
+      </a>
+      Page 1
+      <a
+        aria-disabled={false}
+        aria-label="next"
+        className="nav-link right-controls next icon-only"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="visually-hidden"
+        >
+          Next
+        </span>
+        <span
+          className="icon"
+        />
+      </a>
+      <a
+        aria-disabled={false}
+        aria-label="last"
+        className="nav-link right-controls"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        Last
+      </a>
+    </div>
+  }
+  responsiveTo="parent"
+  small={
+    <div
+      className="paginator"
+    >
+      <a
+        aria-disabled={true}
+        aria-label="first"
+        className="nav-link left-controls is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+      >
+        First
+      </a>
+      <a
+        aria-disabled={true}
+        aria-label="previous"
+        className="nav-link left-controls previous is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+      >
+        <span
+          className="icon"
+        />
+        Previous
+      </a>
+      <a
+        aria-current="page"
+        aria-label="Page 1"
+        className="nav-link is-selected"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+      >
+        1
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 2"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        2
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 3"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        3
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 4"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        4
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 5"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        5
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 6"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        6
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 7"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        7
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 8"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        8
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 9"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        9
+      </a>
+      <a
+        aria-current={false}
+        aria-label="Page 10"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        10
+      </a>
+      <a
+        aria-disabled={false}
+        aria-label="next"
+        className="nav-link right-controls next"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        Next
+        <span
+          className="icon"
+        />
+      </a>
+      <a
+        aria-disabled={false}
+        aria-label="last"
+        className="nav-link right-controls"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        Last
+      </a>
+    </div>
+  }
+/>
+`;

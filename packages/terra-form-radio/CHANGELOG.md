@@ -4,6 +4,12 @@ ChangeLog
 Unreleased
 ----------
 
+2.14.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+* Updated test selectors to work with theme repos
+
 2.13.0 - (June 12, 2018)
 ------------------
 ### Changed

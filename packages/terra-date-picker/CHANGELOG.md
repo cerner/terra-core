@@ -3,8 +3,19 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed datepicker third-party styles import from .css file to .scss file
+
+2.18.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+
+2.17.0 - (June 19, 2018)
+------------------
 ### Removed
 * Removed the `Date Picker Modal Container` test page
+* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
 
 ### Changed
 * Split the `Date Picker Input Attributes` test page into `Date Picker Read Only` and `Date Picker Disabled`

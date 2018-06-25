@@ -4,10 +4,16 @@ Changelog
 Unreleased
 ----------
 
+2.15.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+
 2.14.0 - (June 12, 2018)
 ------------------
 ### Changed
 * Updated "test:jest" script to work on windows.
+* Remove Base wrapper from test examples. Terra-dev-site wraps all test examples in Base.
 
 2.13.0 - (May 30, 2018)
 ------------------

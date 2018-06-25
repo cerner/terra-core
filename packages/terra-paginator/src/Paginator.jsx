@@ -106,7 +106,7 @@ class Paginator extends React.Component {
       if (val > totalPages) {
         return;
       }
-      /* eslint-disable comma-dangle, jsx-a11y/aria-props */
+      /* eslint-disable jsx-a11y/aria-props */
       pageButtons.push(
         <a
           aria-label={`Page ${val}`}
@@ -118,9 +118,9 @@ class Paginator extends React.Component {
           onKeyDown={this.handleOnKeyDown(val)}
         >
           {val}
-        </a>
+        </a>,
       );
-      /* eslint-enable comma-dangle, jsx-a11y/aria-props */
+      /* eslint-enable jsx-a11y/aria-props */
     });
 
     return pageButtons;
@@ -217,6 +217,7 @@ class Paginator extends React.Component {
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
+          <span className={cx('visually-hidden')}>Previous</span>
           <span className={cx('icon')} />
         </a>
         {this.hasNavContext() && `Page ${selectedPage}`}
@@ -228,6 +229,7 @@ class Paginator extends React.Component {
           onClick={this.handlePageChange(nextPageIndex)}
           onKeyDown={this.handleOnKeyDown(nextPageIndex)}
         >
+          <span className={cx('visually-hidden')}>Next</span>
           <span className={cx('icon')} />
         </a>
         {

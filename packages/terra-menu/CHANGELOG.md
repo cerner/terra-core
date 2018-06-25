@@ -4,6 +4,17 @@ Changelog
 Unreleased
 ----------
 
+3.7.0 - (June 22, 2018)
+------------------
+### Changed
+* Moved terra-base from dependency to peerDependency
+* Added localized aria-labels menu buttons when in bounded context
+
+3.6.0 - (June 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.5.0 - (June 12, 2018)
 ------------------
 ### Changed

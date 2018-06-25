@@ -1,7 +1,7 @@
 {
   "name": "terra-search-field",
   "main": "lib/SearchField.js",
-  "version": "2.14.0",
+  "version": "2.15.0",
   "description": "A search component with a field that automatically performs a search callback after user input.",
   "repository": {
     "type": "git",
@@ -26,19 +26,15 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.7.0",
-    "terra-button": "^2.8.0",
-    "terra-form": "^2.7.0",
-    "terra-icon": "^2.7.0"
+    "terra-base": "^3.12.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.12.0",
-    "terra-button": "^2.13.0",
-    "terra-doc-template": "^1.6.0",
+    "terra-button": "^2.14.0",
+    "terra-doc-template": "^1.7.0",
     "terra-form": "^2.10.0",
-    "terra-icon": "^2.13.0"
+    "terra-icon": "^2.14.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -47,8 +43,8 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest --config ../../jestconfig.js",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }

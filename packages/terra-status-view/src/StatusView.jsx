@@ -117,8 +117,8 @@ class StatusView extends React.Component {
       componentsHeight += this.dividerNode.offsetHeight;
     }
 
-    if (this.glyphNode && viewHeight >= componentsHeight + this.glyphNode.offsetHeight) {
-      // if have a glyph to show and can fit inside the containers height, distribute remaining padding to center
+    if (this.glyphNode && viewHeight >= componentsHeight + this.glyphNode.offsetHeight && this.innerNode.offsetWidth >= this.glyphNode.offsetWidth) {
+      // if glyph exists and can fit inside the container's height and width, distribute remaining padding to center
       showGlyph = true;
       if (!this.props.isAlignedTop) {
         const remainingHeight = viewHeight - (componentsHeight + this.glyphNode.offsetHeight);
@@ -212,7 +212,7 @@ class StatusView extends React.Component {
     );
 
     const statusViewClassNames = cx([
-      'status-view',
+      'outer-view',
       customProps.className,
     ]);
 
@@ -227,7 +227,7 @@ class StatusView extends React.Component {
         className={statusViewClassNames}
       >
         <div
-          className={cx('status-view-inner')}
+          className={cx('inner-view')}
           style={{ ...statusViewInnerStyles }}
           ref={(element) => { this.innerNode = element; }}
         >
