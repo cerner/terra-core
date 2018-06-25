@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed datepicker third-party styles import from .css file to .scss file
 
 2.18.0 - (June 22, 2018)
 ------------------

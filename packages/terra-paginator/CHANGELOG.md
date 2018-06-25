@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed accessibility issue where where previous and next anchors had no link content on narrow viewports
 
 1.5.0 - (June 22, 2018)
 ------------------
