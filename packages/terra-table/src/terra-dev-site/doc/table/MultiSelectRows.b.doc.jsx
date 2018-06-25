@@ -8,12 +8,12 @@ import { name } from '../../../../package.json';
 import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelectableRows';
 
 // Example Files
-import MultipleRowSelectableTableExamples from './example/MultiSelectableRows';
-import MultipleRowSelectableTableExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/MultiSelectableRows';
-import MultipleRowMaxSelectableExample from './example/MultiSelectableRowsMaxSelectable';
-import MultipleRowMaxSelectableExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/MultiSelectableRowsMaxSelectable';
-import MultipleSelectableRowsWithSubheader from './example/MultiSelectableRowsWithSubheader';
-import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/table/example/MultiSelectableRowsWithSubheader';
+import MultipleRowSelectableTableExamples from '../example/MultiSelectableRows';
+import MultipleRowSelectableTableExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRows';
+import MultipleRowMaxSelectableExample from '../example/MultiSelectableRowsMaxSelectable';
+import MultipleRowMaxSelectableExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsMaxSelectable';
+import MultipleSelectableRowsWithSubheader from '../example/MultiSelectableRowsWithSubheader';
+import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsWithSubheader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
