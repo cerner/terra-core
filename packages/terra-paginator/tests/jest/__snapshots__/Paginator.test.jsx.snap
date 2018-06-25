@@ -27,6 +27,11 @@ exports[`Paginator should render a default paginator 1`] = `
         tabIndex={null}
       >
         <span
+          className="visually-hidden"
+        >
+          Previous
+        </span>
+        <span
           className="icon"
         />
       </a>
@@ -39,6 +44,11 @@ exports[`Paginator should render a default paginator 1`] = `
         onKeyDown={[Function]}
         tabIndex="0"
       >
+        <span
+          className="visually-hidden"
+        >
+          Next
+        </span>
         <span
           className="icon"
         />
@@ -228,6 +238,11 @@ exports[`Paginator should render a paginator without page links 1`] = `
         tabIndex="0"
       >
         <span
+          className="visually-hidden"
+        >
+          Previous
+        </span>
+        <span
           className="icon"
         />
       </a>
@@ -239,6 +254,11 @@ exports[`Paginator should render a paginator without page links 1`] = `
         onKeyDown={[Function]}
         tabIndex="0"
       >
+        <span
+          className="visually-hidden"
+        >
+          Next
+        </span>
         <span
           className="icon"
         />
