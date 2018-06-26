@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.2.0 - (June 25, 2018)
+------------------
+### Fixed
+* Fixed ResizeObserver loop limit exceeded error for Responsive Elements
+
 3.1.0 - (June 22, 2018)
 ------------------
 ### Changed
