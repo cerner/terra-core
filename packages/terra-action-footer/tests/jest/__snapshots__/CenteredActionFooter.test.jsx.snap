@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CenteredActionFooter Prop Tests with a center action should display a center action 1`] = `
+exports[`CenteredActionFooter Prop Tests with a block center action should display a block center action 1`] = `
 <CenteredActionFooter
-  center="Center Action"
+  center={
+    <button>
+      Center Action
+    </button>
+  }
+  isBlock={true}
 >
   <ActionFooterContainer
     className="centered-action-footer"
@@ -10,14 +15,45 @@ exports[`CenteredActionFooter Prop Tests with a center action should display a c
     <div
       className="action-footer-container with-actions centered-action-footer"
     >
+      <button
+        className="is-block"
+      >
+        Center Action
+      </button>
+    </div>
+  </ActionFooterContainer>
+</CenteredActionFooter>
+`;
+
+exports[`CenteredActionFooter Prop Tests with a center action should display a center action 1`] = `
+<CenteredActionFooter
+  center={
+    <button>
       Center Action
+    </button>
+  }
+  isBlock={false}
+>
+  <ActionFooterContainer
+    className="centered-action-footer"
+  >
+    <div
+      className="action-footer-container with-actions centered-action-footer"
+    >
+      <button
+        className=""
+      >
+        Center Action
+      </button>
     </div>
   </ActionFooterContainer>
 </CenteredActionFooter>
 `;
 
 exports[`CenteredActionFooter Prop Tests without a center action should display no actions 1`] = `
-<CenteredActionFooter>
+<CenteredActionFooter
+  isBlock={false}
+>
   <ActionFooterContainer
     className="centered-action-footer"
   >
@@ -28,11 +64,29 @@ exports[`CenteredActionFooter Prop Tests without a center action should display 
 </CenteredActionFooter>
 `;
 
+exports[`CenteredActionFooter Snapshot Tests should render a block footer with two buttons 1`] = `
+<ActionFooterContainer
+  className="centered-action-footer"
+>
+  <div
+    className="is-block"
+  >
+    <button>
+      Button 1
+    </button>
+    <button>
+      Button 2
+    </button>
+  </div>
+</ActionFooterContainer>
+`;
+
 exports[`CenteredActionFooter Snapshot Tests should render a footer with an anchor 1`] = `
 <ActionFooterContainer
   className="centered-action-footer"
 >
   <a
+    className=""
     href="/"
   >
     Test
@@ -44,7 +98,9 @@ exports[`CenteredActionFooter Snapshot Tests should render a footer with two but
 <ActionFooterContainer
   className="centered-action-footer"
 >
-  <div>
+  <div
+    className=""
+  >
     <button>
       Button 1
     </button>
