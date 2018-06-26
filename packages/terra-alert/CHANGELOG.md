@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed CSS modules composes call
 
 2.16.0 - (June 22, 2018)
 ------------------
