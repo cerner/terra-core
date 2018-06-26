@@ -92,7 +92,7 @@ class ResponsiveElement extends React.Component {
     }
 
     if (this.state.element !== element) {
-      window.requestAnimationFrame(function() {
+      window.requestAnimationFrame(() => {
         this.setState({ element });
       });
     }
