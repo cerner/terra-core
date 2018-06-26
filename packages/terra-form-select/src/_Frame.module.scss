@@ -81,6 +81,7 @@
 
   .display {
     overflow: hidden; // IE 10
+    position: relative; // Displays the box-shadow above the toggle border
   }
 
   .arrow-icon {
