@@ -52,8 +52,11 @@ class ResponsiveElement extends React.Component {
 
   componentDidMount() {
     if (this.container) {
-      this.handleResize(this.container.innerWidth);
-      this.resizeObserver = new ResizeObserver((entries) => { this.handleResize(entries[0].contentRect.width); });
+      this.resizeObserver = new ResizeObserver((entries) => {
+        window.requestAnimationFrame(() => {
+          this.handleResize(entries[0].contentRect.width);
+        });
+      });
       this.resizeObserver.observe(this.container);
     } else {
       this.handleResize(window.innerWidth);
