@@ -28,7 +28,6 @@
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
-    "clean:snaps": "lerna run compile",
     "compile:prod": "webpack --config webpack.config.js -p",
     "danger": "danger ci",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
@@ -92,6 +91,6 @@
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
     "terra-dev-site": "git://github.com/cerner/terra-dev-site#use-i18n-locale-testing-tt-v3-and-site-changes",
-    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#master"
+    "terra-toolkit": "^4.0.0"
   }
 }
