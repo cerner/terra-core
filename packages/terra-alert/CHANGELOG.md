@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Removed CSS modules composes call
+### Added
+* Added change log to the documentation on terra-dev-site
 
 2.16.0 - (June 22, 2018)
 ------------------

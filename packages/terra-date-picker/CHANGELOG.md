@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Changed datepicker third-party styles import from .css file to .scss file
+### Added
+* Added change log to the documentation on terra-dev-site
 
 2.18.0 - (June 22, 2018)
 ------------------
