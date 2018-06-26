@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
@@ -30,11 +30,8 @@ const CenteredActionFooter = ({
 }) => {
   const centeredActionFooterClassNames = cx([
     'centered-action-footer',
-    customProps.className,
-  ]);
-
-  const isBlockClassName = cx([
     { 'is-block': isBlock },
+    customProps.className,
   ]);
 
   return (
@@ -42,7 +39,7 @@ const CenteredActionFooter = ({
       {...customProps}
       className={centeredActionFooterClassNames}
     >
-      {center && cloneElement(center, { className: isBlockClassName })}
+      {center}
     </ActionFooterContainer>
   );
 };
