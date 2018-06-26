@@ -4,6 +4,8 @@ ChangeLog
 Unreleased
 ----------
 
+* Enhanced CenteredActionFooter to have isBlock prop that forces the center socket node to fill the entirety of the footer.
+
 1.13.0 - (June 22, 2018)
 ------------------
 ### Changed
