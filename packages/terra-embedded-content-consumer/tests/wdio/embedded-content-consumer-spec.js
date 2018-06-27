@@ -29,11 +29,8 @@ describe('Embedded Content Consumer', () => {
   describe('custom-event', () => {
     before(() => {
       browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/custom-event-consumer');
+      browser.waitForExist('#CustomEvent', 1000);
     });
-
-    var customEventElement = $('#CustomEvent');
-
-    browser.waitUntil(() => customEventElement.getCssProperty('border').value === 'thick dashed #0000FF', 5000, 'expected border to be set but timed out');
 
     Terra.should.matchScreenshot({ viewports });
   });
@@ -41,25 +38,29 @@ describe('Embedded Content Consumer', () => {
   describe('custom-events', () => {
     before(() => {
       browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/custom-events-consumer');
+      browser.waitForExist('#CustomEvents', 1000);
+
+      // Waiting for events to execute.
+      browser.pause(5000);
     });
-
-    var customEventElement = $('#CustomEvents');
-
-    browser.waitUntil(() => customEventElement.getCssProperty('border').value === 'thick dashed #0000FF', 5000, 'expected border to be set but timed out');
-    browser.waitUntil(() => customEventElement.getCssProperty('border').value === 'thick dashed #00FF00', 5000, 'expected border to be updated but timed out');
 
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('data-status', () => {
     before(() => {
-      browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/data-status-consumer');
+      browser.url('#/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/data-status-consumer');
     });
 
-    browser.waitUntil(() => browser.isExisting('li#Mounted'), 5000, 'expected mounted element to be present');
-    browser.waitUntil(() => browser.isExisting('li#Launched'), 5000, 'expected launched element to be present');
-    browser.waitUntil(() => browser.isExisting('li#Authorized'), 5000, 'expected authorized element to be present');
+    it('has mounted, launched, and authorized elements', () => {
+      browser.waitForExist('iframe[src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/data-status-provider"]', 5000);
 
-    Terra.should.matchScreenshot({ viewports });
+      var myFrame = $('iframe[src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/data-status-provider"]').value;
+      browser.frame(myFrame);
+
+      expect(browser.isExisting('#Mounted'));
+      expect(browser.isExisting('#Launched'));
+      expect(browser.isExisting('#Authorized'));
+    });
   });
 });
