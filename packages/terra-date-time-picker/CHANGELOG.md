@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added change log to the documentation on terra-dev-site
+* Added source code for examples on terra-dev-site
 
 2.18.0 - (June 22, 2018)
 ------------------
