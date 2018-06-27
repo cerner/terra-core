@@ -14,6 +14,8 @@ const ignoredA11y = {
 };
 
 describe('DateTimePicker', () => {
+  let sandbox;
+
   describe('Default', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default');
@@ -197,7 +199,7 @@ describe('DateTimePicker', () => {
     Terra.should.matchScreenshot('0', { viewports });
 
     it('Dismissed the modal manager after a click', () => {
-      browser.click('.react-datepicker__today-button');
+      browser.click('[aria-label="day-27"]');
     });
 
     Terra.should.matchScreenshot('1', { viewports });
