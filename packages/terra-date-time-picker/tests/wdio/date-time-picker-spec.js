@@ -102,7 +102,7 @@ describe('DateTimePicker', () => {
 
       Terra.should.matchScreenshot('0', { viewports, selector: '[class*="abstract-modal"]' });
 
-      it('hids the offset button', () => {
+      it('hides the offset button', () => {
         browser.click('[class*="button-daylight"]');
       });
 
@@ -121,7 +121,7 @@ describe('DateTimePicker', () => {
 
       Terra.should.matchScreenshot('0', { viewports, selector: '[class*="abstract-modal"]' });
 
-      it('hids the offset button', () => {
+      it('hides the offset button', () => {
         browser.click('[class*="button-daylight"]');
       });
 
