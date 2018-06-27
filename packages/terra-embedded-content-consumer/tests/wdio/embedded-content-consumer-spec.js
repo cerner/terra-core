@@ -3,7 +3,7 @@ const viewports = Terra.viewports('tiny', 'large');
 
 describe('Embedded Content Consumer', () => {
   describe('default', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/basic-consumer');
     });
 
@@ -11,7 +11,7 @@ describe('Embedded Content Consumer', () => {
   });
 
   describe('fill', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/fill-consumer');
     });
 
@@ -19,7 +19,7 @@ describe('Embedded Content Consumer', () => {
   });
 
   describe('on-ready', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/on-ready-consumer');
     });
 
@@ -27,7 +27,7 @@ describe('Embedded Content Consumer', () => {
   });
 
   describe('custom-event', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/custom-event-consumer');
     });
 
@@ -39,7 +39,7 @@ describe('Embedded Content Consumer', () => {
   });
 
   describe('custom-events', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/custom-events-consumer');
     });
 
@@ -52,7 +52,7 @@ describe('Embedded Content Consumer', () => {
   });
 
   describe('data-status', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/data-status-consumer');
     });
 
