@@ -14,8 +14,6 @@ const ignoredA11y = {
 };
 
 describe('DateTimePicker', () => {
-  let sandbox;
-
   describe('Default', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default');
