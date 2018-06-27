@@ -90,7 +90,7 @@
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
-    "terra-dev-site": "git://github.com/cerner/terra-dev-site#use-i18n-locale-testing-tt-v3-and-site-changes",
+    "terra-dev-site": "^2.0.0",
     "terra-toolkit": "^4.0.0"
   }
 }
