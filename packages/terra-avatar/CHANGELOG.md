@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed bug with extra space showing below image avatar
+### Added
+* Added change log to the documentation on terra-dev-site
 
 1.12.0 - (June 22, 2018)
 ------------------

@@ -26,11 +26,11 @@ exports[`Alert of type advisory with text content should render an Alert compone
     <ResponsiveElement
       defaultElement={
         <div
-          className="advisory narrow"
+          className="alert-base advisory narrow"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -54,11 +54,11 @@ exports[`Alert of type advisory with text content should render an Alert compone
       responsiveTo="parent"
       tiny={
         <div
-          className="advisory wide"
+          className="alert-base advisory wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -112,11 +112,11 @@ exports[`Alert of type alert with text content should render an Alert component 
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow"
+          className="alert-base alert narrow"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -145,11 +145,11 @@ exports[`Alert of type alert with text content should render an Alert component 
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide"
+          className="alert-base alert wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -213,7 +213,7 @@ exports[`Alert of type custom with custom title and text content should render a
     <ResponsiveElement
       defaultElement={
         <div
-          className="custom narrow"
+          className="alert-base custom narrow"
           style={
             Object {
               "color": "orange",
@@ -221,7 +221,7 @@ exports[`Alert of type custom with custom title and text content should render a
           }
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -232,7 +232,7 @@ exports[`Alert of type custom with custom title and text content should render a
               />
             </div>
             <div
-              className="section-custom"
+              className="section section-custom"
             >
               <strong
                 className="title"
@@ -250,7 +250,7 @@ exports[`Alert of type custom with custom title and text content should render a
       responsiveTo="parent"
       tiny={
         <div
-          className="custom wide"
+          className="alert-base custom wide"
           style={
             Object {
               "color": "orange",
@@ -258,7 +258,7 @@ exports[`Alert of type custom with custom title and text content should render a
           }
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -269,7 +269,7 @@ exports[`Alert of type custom with custom title and text content should render a
               />
             </div>
             <div
-              className="section-custom"
+              className="section section-custom"
             >
               <strong
                 className="title"
@@ -317,11 +317,11 @@ exports[`Alert of type error with text content should render an Alert component 
     <ResponsiveElement
       defaultElement={
         <div
-          className="error narrow"
+          className="alert-base error narrow"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -350,11 +350,11 @@ exports[`Alert of type error with text content should render an Alert component 
       responsiveTo="parent"
       tiny={
         <div
-          className="error wide"
+          className="alert-base error wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -413,11 +413,11 @@ exports[`Alert of type info with custom title and HTML content should render an 
     <ResponsiveElement
       defaultElement={
         <div
-          className="info narrow"
+          className="alert-base info narrow"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -448,11 +448,11 @@ exports[`Alert of type info with custom title and HTML content should render an 
       responsiveTo="parent"
       tiny={
         <div
-          className="info wide"
+          className="alert-base info wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -513,11 +513,11 @@ exports[`Alert of type info with text content should render an Alert component o
     <ResponsiveElement
       defaultElement={
         <div
-          className="info narrow"
+          className="alert-base info narrow"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -546,11 +546,11 @@ exports[`Alert of type info with text content should render an Alert component o
       responsiveTo="parent"
       tiny={
         <div
-          className="info wide"
+          className="alert-base info wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -621,11 +621,11 @@ exports[`Alert of type success with an action button text content should render 
     <ResponsiveElement
       defaultElement={
         <div
-          className="success narrow"
+          className="alert-base success narrow"
           style={Object {}}
         >
           <div
-            className="body-narrow"
+            className="body body-narrow"
           >
             <div
               className="icon"
@@ -669,11 +669,11 @@ exports[`Alert of type success with an action button text content should render 
       responsiveTo="parent"
       tiny={
         <div
-          className="success wide"
+          className="alert-base success wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -747,11 +747,11 @@ exports[`Alert of type success with text content should render an Alert componen
     <ResponsiveElement
       defaultElement={
         <div
-          className="success narrow"
+          className="alert-base success narrow"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -780,11 +780,11 @@ exports[`Alert of type success with text content should render an Alert componen
       responsiveTo="parent"
       tiny={
         <div
-          className="success wide"
+          className="alert-base success wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -843,11 +843,11 @@ exports[`Alert of type warning with text content should render an Alert componen
     <ResponsiveElement
       defaultElement={
         <div
-          className="warning narrow"
+          className="alert-base warning narrow"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -876,11 +876,11 @@ exports[`Alert of type warning with text content should render an Alert componen
       responsiveTo="parent"
       tiny={
         <div
-          className="warning wide"
+          className="alert-base warning wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -939,11 +939,11 @@ exports[`Alert with no props should render a default component 1`] = `
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow"
+          className="alert-base alert narrow"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -972,11 +972,11 @@ exports[`Alert with no props should render a default component 1`] = `
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide"
+          className="alert-base alert wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -1052,7 +1052,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
     <ResponsiveElement
       defaultElement={
         <div
-          className="custom narrow"
+          className="alert-base custom narrow"
           style={
             Object {
               "color": "orange",
@@ -1060,7 +1060,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           }
         >
           <div
-            className="body-narrow"
+            className="body body-narrow"
           >
             <div
               className="icon"
@@ -1071,7 +1071,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               />
             </div>
             <div
-              className="section-custom"
+              className="section section-custom"
             >
               <strong
                 className="title"
@@ -1084,7 +1084,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             </div>
           </div>
           <div
-            className="actions-custom"
+            className="actions actions-custom"
           >
             <Button
               isBlock={false}
@@ -1114,7 +1114,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
       responsiveTo="parent"
       tiny={
         <div
-          className="custom wide"
+          className="alert-base custom wide"
           style={
             Object {
               "color": "orange",
@@ -1122,7 +1122,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           }
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"
@@ -1133,7 +1133,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               />
             </div>
             <div
-              className="section-custom"
+              className="section section-custom"
             >
               <strong
                 className="title"
@@ -1146,7 +1146,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             </div>
           </div>
           <div
-            className="actions-custom"
+            className="actions actions-custom"
           >
             <Button
               isBlock={false}
@@ -1206,11 +1206,11 @@ exports[`Dismissible Alert that includes actions section should render an alert 
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow"
+          className="alert-base alert narrow"
           style={Object {}}
         >
           <div
-            className="body-narrow"
+            className="body body-narrow"
           >
             <div
               className="icon"
@@ -1253,11 +1253,11 @@ exports[`Dismissible Alert that includes actions section should render an alert 
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide"
+          className="alert-base alert wide"
           style={Object {}}
         >
           <div
-            className="body-std"
+            className="body body-std"
           >
             <div
               className="icon"

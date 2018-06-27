@@ -35,13 +35,11 @@
   }
 
   .body-narrow {
-    composes: body;
     margin-bottom: 0;
     margin-right: 0.6667rem;
   }
 
   .body-std {
-    composes: body;
     margin-bottom: 0.7143rem;
     margin-right: 0;
   }
@@ -54,7 +52,6 @@
 
   .section-custom {
     color: var(--terra-alert-custom-text-color, #1c1f21);
-    composes: section;
   }
 
   .title {
@@ -73,7 +70,6 @@
 
   .actions-custom {
     color: var(--terra-alert-custom-text-color, #1c1f21);
-    composes: actions;
   }
 
   .actions > :first-child {
@@ -87,44 +83,37 @@
   .alert {
     background-color: var(--terra-alert-alert-background-color, #fedcdc);
     box-shadow: 2px 0 0 var(--terra-alert-alert-shadow-color, #c00) inset;
-    composes: alert-base;
   }
 
   .error {
     background-color: var(--terra-alert-error-background-color, #fedcdc);
     box-shadow: 2px 0 0 var(--terra-alert-error-shadow-color, #c00) inset;
-    composes: alert-base;
   }
 
   .warning {
     background-color: var(--terra-alert-warning-background-color, #fff3ce);
     box-shadow: 2px 0 0 var(--terra-alert-warning-shadow-color, #ffc20a) inset;
-    composes: alert-base;
   }
 
   .advisory {
     background-color: var(--terra-alert-advisory-background-color, #f4f4f4);
     box-shadow: 2px 0 0 var(--terra-alert-advisory-shadow-color, #9b9fa1) inset;
-    composes: alert-base;
   }
 
   .info {
     background-color: var(--terra-alert-info-background-color, #f4f4f4);
     box-shadow: 2px 0 0 var(--terra-alert-info-shadow-color, #0092e0) inset;
-    composes: alert-base;
   }
 
   .success {
     background-color: var(--terra-alert-success-background-color, #f4f4f4);
     box-shadow: 2px 0 0 var(--terra-alert-success-shadow-color, #78c346) inset;
-    composes: alert-base;
   }
 
   .custom {
     background-color: var(--terra-alert-custom-background-color, #f4f4f4);
     box-shadow: 2px 0 0 inset;
     color: var(--terra-alert-custom-shadow-color, #9b9fa1);
-    composes: alert-base;
   }
 
   .alert .title {

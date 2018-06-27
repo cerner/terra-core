@@ -13,6 +13,7 @@
     justify-content: center;
     line-height: 0;
     overflow: hidden;
+    vertical-align: middle; // Fixes gap below image variant
     width: var(--terra-avatar-size, 3.429rem);
   }
 
