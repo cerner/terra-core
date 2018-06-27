@@ -16,7 +16,7 @@ const propTypes = {
   /**
    * Text to be displayed on the ListSectionHeader.
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   /**
    * Callback function triggered when the accordion icon is clicked.
    */
@@ -32,6 +32,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  title: '',
   onClick: undefined,
   isOpen: false,
   level: 2,

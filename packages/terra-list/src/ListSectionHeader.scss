@@ -63,16 +63,16 @@
   }
 
   .accordion-icon-wrapper {
-    @include terra-margin-start(var(--terra-list-section-header-accordion-icon-margin-start));
-    @include terra-margin-end(var(--terra-list-section-header-accordion-icon-margin-end, 0.357142857rem));
-    @include terra-padding-start(var(--terra-list-section-header-accordion-icon-padding-start));
-    @include terra-padding-end(var(--terra-list-section-header-accordion-icon-padding-end));
+    margin-left: var(--terra-list-section-header-accordion-icon-margin-start);
+    margin-end: var(--terra-list-section-header-accordion-icon-margin-end, 0.357142857rem);
+    padding-start: var(--terra-list-section-header-accordion-icon-padding-start);
+    padding-end: var(--terra-list-section-header-accordion-icon-padding-end);
     padding-bottom: var(--terra-list-section-header-accordion-icon-padding-bottom);
     padding-top: var(--terra-list-section-header-accordion-icon-padding-top, 0.214285714rem);
   }
 
   .accordion-icon {
-    background: var(--terra-list-section-header-accordion-icon, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
+    background: var(--terra-list-section-header-accordion-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M12,0l24,24L12,48V0z"/></svg>'));
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
