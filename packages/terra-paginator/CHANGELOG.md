@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Fixed
 * Fixed accessibility issue where where previous and next anchors had no link content on narrow viewports
+### Added
+* Added change log to the documentation on terra-dev-site
 
 1.5.0 - (June 22, 2018)
 ------------------
