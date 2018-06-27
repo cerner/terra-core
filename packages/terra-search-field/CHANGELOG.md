@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added clickable text to a few test pages
+### Added
+* Added change log to the documentation on terra-dev-site
+
+### Removed
+* Removed a duplicate test page for Search Fields with Placeholders
 
 2.15.0 - (June 22, 2018)
 ------------------

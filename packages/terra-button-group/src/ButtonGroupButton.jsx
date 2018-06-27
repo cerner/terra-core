@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './ButtonGroupButton.scss';
+import styles from './ButtonGroup.scss';
 
 const cx = classNames.bind(styles);
 

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added change log to the documentation on terra-dev-site
 
 1.14.0 - (June 22, 2018)
 ------------------

@@ -2,7 +2,6 @@ import React from 'react';
 import SearchField from '../../../SearchField';
 
 class AutoSearchDisabledSearchField extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -38,7 +37,6 @@ class AutoSearchDisabledSearchField extends React.Component {
       </div>
     );
   }
-
 }
 
 export default AutoSearchDisabledSearchField;
