@@ -5,7 +5,6 @@ import DropdownMenu from './_Menu';
 import Frame from './_Frame';
 import Option from './_Option';
 import OptGroup from './_OptGroup';
-import Tag from './_Tag';
 import Util from './_SelectUtil';
 
 const propTypes = {
@@ -57,6 +56,10 @@ const propTypes = {
    * Placeholder text.
    */
   placeholder: PropTypes.string,
+   /**
+   * how long the component should wait (in milliseconds) after input before performing an automatic search.
+   */
+  searchDelay: PropTypes.number,
   /**
    * The selected value.
    */
@@ -101,7 +104,6 @@ class Select extends React.Component {
     super(props);
 
     this.state = {
-      tags: [],
       value: Util.defaultValue(props),
     };
 
@@ -153,11 +155,6 @@ class Select extends React.Component {
   handleSelect(value, option) {
     this.handleChange(Util.select(this.props, this.state, value));
 
-    // Add new tags for uncontrolled components.
-    if (this.props.value === undefined && !Util.findByValue(this.props, this.state, value)) {
-      this.setState({ tags: [...this.state.tags, <Option key={value} display={value} value={value} />] });
-    }
-
     if (this.props.onSelect) {
       this.props.onSelect(value, option);
     }
@@ -181,7 +178,6 @@ class Select extends React.Component {
         variant={variant}
         dropdown={dropdownProps => (
           <DropdownMenu {...dropdownProps}>
-            {this.state.tags}
             {children}
           </DropdownMenu>
         )}

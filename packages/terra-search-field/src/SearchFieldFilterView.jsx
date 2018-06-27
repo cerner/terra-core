@@ -41,6 +41,10 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * Callback function triggered when an option is selected.
+   */
+  onSelect: PropTypes.func,
+  /**
    * callback function triggered when the search criteria changes. function(searchvalue)
    */
   onSearch: PropTypes.func,
@@ -74,7 +78,7 @@ const defaultProps = {
   minimumSearchTextLength: 2,
   noResultContent: undefined,
   onChange: undefined,
-  onSearch: undefined,
+  onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
   searchDelay: 250,
@@ -104,17 +108,24 @@ class SearchFieldFilterView extends React.Component {
     const {
       children,
       defaultValue,
+      disableAutoSearch,
+      isBlock,
+      minimumSearchTextLength,
       onChange,
+      onSelect,
       placeholder,
       variant,
+      searchDelay,
       ...otherProps } = this.props;
     return (
       <Select
         id="search"
-        onChange={onChange}
-        placeholder={placeholder}
         defaultValue={defaultValue}
+        onChange={onChange}
+        onSelect={onSelect}
+        placeholder={placeholder}
         variant={variant}
+        {...otherProps}
       >
         {children}
       </Select>

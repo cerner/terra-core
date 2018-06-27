@@ -93,6 +93,11 @@
     flex: 0 0 auto;
     margin: 0;
 
+    &:hover {
+      background-color: #b9bbbc;
+      border-color: #c8cacb;
+    }
+
     &:active {
       background-color: #6f7477;
       border-color: #52585b;
@@ -104,8 +109,8 @@
     background-color: Transparent;
     border-style: none;
     color: #b9bbbc;
-    margin-left: -30px;
-    margin-right: 2px;
+    margin-left: -2.143rem; // -30px
+    margin-right: 0.143rem; // 2px
 
     &:hover {
       background-color: Transparent;
@@ -182,10 +187,9 @@
   }
 
   .box {
-    /* border: 0.0625rem solid #dedfe0; */
     border: 1px solid #dedfe0;
-    height: 200px;
-    margin-top: 0.5rem;
+    height: 14.286rem; // 200px
+    margin-top: 0.571rem; // 8px
     overflow: auto;
   }
 

@@ -71,6 +71,10 @@ const propTypes = {
    * Placeholder text.
    */
   placeholder: PropTypes.string,
+ /**
+   * how long the component should wait (in milliseconds) after input before performing an automatic search.
+   */
+  searchDelay: PropTypes.number,
   /**
    * The select value.
    */
@@ -79,11 +83,6 @@ const propTypes = {
    * The behavior of the select.
    */
   variant: PropTypes.oneOf([
-    Variants.COMBOBOX,
-    Variants.DEFAULT,
-    Variants.MULTIPLE,
-    Variants.SEARCH,
-    Variants.TAG,
     Variants.DROPDOWN,
     Variants.PERSISTENT,
   ]),
@@ -145,6 +144,7 @@ class Frame extends React.Component {
   }
 
   componentDidMount() {
+    // Populate the persistent result box
     if (this.props.variant === Variants.PERSISTENT) {
       this.setState({ isOpen: true });
     }
@@ -183,13 +183,11 @@ class Frame extends React.Component {
   }
 
   /**
-   * Clears the search-bar.
+   * Clears the search-bar content.
    */
   clearSearch() {
     if (this.state.searchValue !== '') {
-      console.trace();
-      this.input.value = '';
-      this.setState({ searchValue: '' });
+      this.setState({ searchValue: '', hasSearchChanged: true });
     }
   }
 
@@ -352,6 +350,12 @@ class Frame extends React.Component {
 
     if (this.props.onSelect) {
       this.props.onSelect(value, option);
+    }
+  }
+
+  handleTextChange() {
+    if (!this.searchTimeout) {
+      this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
     }
   }
 

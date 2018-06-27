@@ -46,11 +46,6 @@ const propTypes = {
    * The behavior of the select.
    */
   variant: PropTypes.oneOf([
-    Variants.COMBOBOX,
-    Variants.DEFAULT,
-    Variants.MULTIPLE,
-    Variants.SEARCH,
-    Variants.TAG,
     Variants.DROPDOWN,
     Variants.PERSISTENT,
   ]).isRequired,
