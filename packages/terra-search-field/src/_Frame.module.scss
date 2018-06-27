@@ -1,0 +1,284 @@
+@import '~terra-mixins';
+
+:local {
+  .select {
+    background-color: var(--terra-select-background-color, #fff);
+    color: var(--terra-select-color, #1c1f21);
+    display: flex;
+    font-size: var(--terra-select-font-size, 1.143rem);
+    line-height: var(--terra-select-line-height, 1.5);
+  }
+
+  .default {
+    background-size: var(--terra-select-background-size, 0 0);
+    border: var(--terra-select-border, 1px solid #dedfe0);
+    border-radius: var(--terra-select-border-radius, 3px);
+    cursor: pointer;
+    padding-bottom: var(--terra-select-padding-bottom, 0);
+    padding-left: var(--terra-select-padding-left, 0.42857rem);
+    padding-right: var(--terra-select-padding-right, 0);
+    padding-top: var(--terra-select-padding-top, 0);
+
+    > .display {
+      display: inline-block;
+      flex: 1 1 auto; // IE 10
+      overflow: hidden;
+      text-overflow: ellipsis;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    &.is-focused {
+      background-image: var(--terra-select-focus-background-image, none);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: var(--terra-select-focus-background-size, 0 0);
+      border-color: var(--terra-select-focus-border-color, #4cb2e9);
+      box-shadow: var(--terra-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+      outline: none;
+      transition-duration: var(--terra-select-focus-transition-duration, 0s);
+      transition-property: background-size;
+      transition-timing-function: var(--terra-select-focus-transition-timing-function, ease);
+    }
+
+    &.is-open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: var(--terra-select-border-radius, 3px);
+      border-top-right-radius: var(--terra-select-border-radius, 3px);
+      box-shadow: none;
+    }
+
+    &.is-above {
+      border-bottom-left-radius: var(--terra-select-border-radius, 3px);
+      border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:hover {
+      border-color: var(--terra-select-hover-border-color, #dedfe0);
+    }
+
+    &.is-focused:hover {
+      border-color: var(--terra-select-focus-hover-border-color, #4cb2e9);
+    }
+
+    &.is-invalid {
+      background-image: var(--terra-select-invalid-background-image, none);
+      border-color: var(--terra-select-invalid-border-color, #dedfe0);
+    }
+
+    &.is-invalid.is-focused {
+      background-size: var(--terra-select-invalid-focus-background-size, 0 0);
+      border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
+    }
+
+    &.is-invalid:hover {
+      border-color: var(--terra-select-invalid-hover-border-color, #dedfe0);
+    }
+  }
+
+  .display {
+    overflow: hidden; // IE 10
+  }
+
+  .button {
+    border: 0.071em solid #dedfe0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0.25em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.25em;
+    display: inline-block;
+    flex: 0 0 auto;
+    margin: 0;
+
+    &:active {
+      background-color: #6f7477;
+      border-color: #52585b;
+      color: #fff;
+    }
+  }
+
+  .clear-button {
+    background-color: Transparent;
+    border-style: none;
+    color: #b9bbbc;
+    margin-left: -30px;
+    margin-right: 2px;
+
+    &:hover {
+      background-color: Transparent;
+      border-style: none;
+    }
+  }
+
+  .is-disabled {
+    background-color: var(--terra-select-disabled-background-color, rgba(111, 116, 119, 0.2));
+    border-color: var(--terra-select-disabled-border-color, #dedfe0);
+    color: var(--terra-select-disabled-color, #1c1f21);
+    cursor: default;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .toggle {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: var(--terra-select-toggle-padding, 0 0.42857rem);
+  }
+
+  // A reduced, non-zero, height and width allows the input to receive focus using tab.
+  // Browsers disable focus on inputs with a 0 x 0 height and width.
+  .search-input.is-hidden {
+    height: 0.1px;
+    margin: 0;
+    opacity: 0;
+    width: 1px;
+  }
+
+  .search-wrapper {
+    display: flex;
+    flex: 1 1 auto; // IE 10
+    max-width: 100%; // IE 10
+    min-width: 0; // IE 11
+  }
+
+  .search-input,
+  .search-input:focus {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    flex: 1 1 auto;
+    font-size: var(--terra-select-search-font-size, 1.143rem);
+    height: 1.375em;
+    margin-top: var(--terra-select-search-margin-top, 0.21428571428571427rem);
+    max-width: 100%; // IE 10
+    min-width: 0; // IE 11
+    opacity: 1;
+    outline: none;
+    padding: 0;
+    text-overflow: ellipsis;
+    width: auto;
+  }
+
+  // Hides the clear buttons in IE.
+  .search::-ms-clear {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .search-input::placeholder,
+  .placeholder {
+    color: var(--terra-select-search-placeholder-color, #85898b);
+    font-size: var(--terra-select-search-placeholder-font-size, 1.143rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .box {
+    /* border: 0.0625rem solid #dedfe0; */
+    border: 1px solid #dedfe0;
+    height: 200px;
+    margin-top: 0.5rem;
+    overflow: auto;
+  }
+
+  .dropdown,
+  .persistent {
+    > .display {
+      background-size: var(--terra-select-background-size, 0 0);
+      border: var(--terra-select-border, 1px solid #dedfe0);
+      border-bottom-left-radius: var(--terra-select-border-radius, 3px);
+      border-top-left-radius: var(--terra-select-border-radius, 3px);
+      cursor: text;
+      display: flex;
+      flex: 1 1 auto; // IE 10
+      padding-bottom: var(--terra-select-padding-bottom, 0.21428571428571427rem);
+      padding-left: var(--terra-select-padding-left, 0.42857rem);
+      padding-right: var(--terra-select-padding-right, 0);
+      padding-top: var(--terra-select-padding-top, 0);
+    }
+
+    > .toggle {
+      border: var(--terra-select-toggle-border, 1px solid #dedfe0);
+      border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+      border-left: 0;
+      border-top-right-radius: var(--terra-select-border-radius, 3px);
+    }
+
+    &.is-focused {
+      > .display {
+        background-image: var(--terra-select-focus-background-image, none);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: var(--terra-select-focus-background-size, 0 0);
+        border-color: var(--terra-select-focus-border-color, #4cb2e9);
+        box-shadow: var(--terra-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+        outline: none;
+        transition-duration: var(--terra-select-focus-transition-duration, 0s);
+        transition-property: background-size;
+        transition-timing-function: var(--terra-select-focus-transition-timing-function, ease);
+      }
+    }
+
+    &.is-open {
+      > .display {
+        border-bottom-left-radius: 0;
+        box-shadow: none;
+      }
+
+      > .toggle {
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    &.is-above {
+      > .display {
+        border-bottom-left-radius: var(--terra-select-border-radius, 3px);
+        border-top-left-radius: 0;
+      }
+
+      > .toggle {
+        border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+        border-top-right-radius: 0;
+      }
+    }
+
+    &:hover > .display {
+      border-color: var(--terra-select-hover-border-color, #dedfe0);
+    }
+
+    &.is-focused:hover > .display {
+      border-color: var(--terra-select-focus-hover-border-color, #4cb2e9);
+    }
+
+    &.is-invalid > .display {
+      background-image: var(--terra-select-invalid-background-image, none);
+      border-color: var(--terra-select-invalid-border-color, #dedfe0);
+    }
+
+    &.is-invalid.is-focused > .display {
+      background-size: var(--terra-select-invalid-focus-background-size, 0 0);
+      border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
+      box-shadow: var(--terra-select-invalid-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+    }
+
+    &.is-invalid:hover > .display {
+      border-color: var(--terra-select-invalid-hover-border-color, #dedfe0);
+    }
+  }
+
+  .is-invalid .arrow-icon {
+    background: var(--terra-select-invalid-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block; // IE 10
+  }
+}
