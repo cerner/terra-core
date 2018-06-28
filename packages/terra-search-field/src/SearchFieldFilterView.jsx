@@ -95,43 +95,34 @@ const contextTypes = {
 };
 
 
-class SearchFieldFilterView extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      searchText: this.props.defaultValue,
-    };
-  }
-
-  render() {
-    const {
-      children,
-      defaultValue,
-      disableAutoSearch,
-      isBlock,
-      minimumSearchTextLength,
-      onChange,
-      onSelect,
-      placeholder,
-      variant,
-      searchDelay,
-      ...otherProps } = this.props;
-    return (
-      <Select
-        id="search"
-        defaultValue={defaultValue}
-        onChange={onChange}
-        onSelect={onSelect}
-        placeholder={placeholder}
-        variant={variant}
-        {...otherProps}
-      >
-        {children}
-      </Select>
-    );
-  }
+function SearchFieldFilterView(props) {
+  const {
+    children,
+    defaultValue,
+    disableAutoSearch,
+    isBlock,
+    minimumSearchTextLength,
+    onChange,
+    onSelect,
+    placeholder,
+    variant,
+    searchDelay,
+    ...otherProps } = props;
+  return (
+    <Select
+      id="search"
+      defaultValue={defaultValue}
+      onChange={onChange}
+      onSelect={onSelect}
+      placeholder={placeholder}
+      variant={variant}
+      {...otherProps}
+    >
+      {children}
+    </Select>
+  );
 }
+
 
 SearchFieldFilterView.propTypes = propTypes;
 SearchFieldFilterView.defaultProps = defaultProps;
