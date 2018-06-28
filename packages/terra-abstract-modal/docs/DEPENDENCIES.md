@@ -7,12 +7,12 @@
 | focus-trap-react | ^3.1.1 | 0.14.x \|\| ^15.0.0 \|\| ^16.0.0 | A React component that traps focus. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-portal | ^4.1.2 | ^15.0.0-0 \|\| ^16.0.0-0 \|\| ^17.0.0-0 | To make your life with React Portals easier. |
-| terra-doc-template | ^1.7.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| terra-icon | ^2.14.0 | ^16.2.0 | terra-icon |
+| terra-icon | ^2.15.0 | ^16.2.0 | terra-icon |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
