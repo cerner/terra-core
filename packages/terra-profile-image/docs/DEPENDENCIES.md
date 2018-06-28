@@ -4,8 +4,8 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-doc-template | ^1.7.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-image | ^2.13.0 | ^16.2.0 | terra-image |
+| terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-image | ^2.14.0 | ^16.2.0 | terra-image |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

@@ -5,9 +5,9 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-doc-template | ^1.7.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-heading | ^2.13.0 | ^16.2.0 | Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading. |
-| terra-scroll | ^1.1.0 | ^16.2.0 | The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback. |
+| terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-heading | ^2.14.0 | ^16.2.0 | Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading. |
+| terra-scroll | ^1.2.0 | ^16.2.0 | The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
