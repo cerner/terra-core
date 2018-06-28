@@ -1,4 +1,4 @@
-/* global browser, Terra, before */
+/* global browser, Terra, before, $ */
 const viewports = Terra.viewports('tiny', 'large');
 
 describe('Embedded Content Consumer', () => {
@@ -55,7 +55,7 @@ describe('Embedded Content Consumer', () => {
     it('has mounted, launched, and authorized elements', () => {
       browser.waitForExist('iframe[src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/data-status-provider"]', 5000);
 
-      var myFrame = $('iframe[src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/data-status-provider"]').value;
+      const myFrame = $('iframe[src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/data-status-provider"]').value;
       browser.frame(myFrame);
 
       expect(browser.isExisting('#Mounted'));
