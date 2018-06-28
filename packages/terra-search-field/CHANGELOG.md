@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Added clickable text to a few test pages
+* Replace legacy Input with the new terra-form-input package
+
 ### Added
 * Added change log to the documentation on terra-dev-site
 
