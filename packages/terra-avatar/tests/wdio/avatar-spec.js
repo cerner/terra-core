@@ -65,6 +65,11 @@ describe('Avatar', () => {
     });
   });
 
+  describe('Image Spacing', () => {
+    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/image-gap'));
+    Terra.should.matchScreenshot();
+  });
+
   describe('Two Initials', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/two-initials-avatar'));
 

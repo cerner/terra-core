@@ -48,11 +48,17 @@ class ResponsiveElement extends React.Component {
     this.setContainer = this.setContainer.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
+    this.animationFrameID = null;
   }
 
   componentDidMount() {
     if (this.container) {
-      this.resizeObserver = new ResizeObserver((entries) => { this.handleResize(entries[0].contentRect.width); });
+      this.resizeObserver = new ResizeObserver((entries) => {
+        this.animationFrameID = window.requestAnimationFrame(() => {
+          this.animationFrameID = null;
+          this.handleResize(entries[0].contentRect.width);
+        });
+      });
       this.resizeObserver.observe(this.container);
     } else {
       this.handleResize(window.innerWidth);
@@ -62,6 +68,7 @@ class ResponsiveElement extends React.Component {
 
   componentWillUnmount() {
     if (this.container) {
+      window.cancelAnimationFrame(this.animationFrameID);
       this.resizeObserver.disconnect(this.container);
       this.container = null;
     } else {
