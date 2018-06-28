@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added change log to the documentation on terra-dev-site
 
+### Changed
+* Replaced nightwatch tests with wdio
+
 2.18.0 - (June 22, 2018)
 ------------------
 ### Changed
