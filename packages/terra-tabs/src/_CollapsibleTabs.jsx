@@ -48,36 +48,42 @@ class CollapsibleTabs extends React.Component {
     super(props);
     this.setContainer = this.setContainer.bind(this);
     this.setMenuRef = this.setMenuRef.bind(this);
+    this.resetCache = this.resetCache.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.handleSelectionAnimation = this.handleSelectionAnimation.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.handleFocusLeft = this.handleFocusLeft.bind(this);
     this.handleFocusRight = this.handleFocusRight.bind(this);
-    this.state = {
-      hiddenStartIndex: -1,
-      menuHidden: false,
-      isCalculating: true,
-    };
+    this.resetCache();
   }
 
   componentDidMount() {
     this.resizeObserver = new ResizeObserver((entries) => {
-      // Resetting the state so that all elements will be rendered face-up for width calculations
-      if (this.state.hiddenStartIndex !== -1 || this.state.menuHidden || !this.state.isCalculating) {
-        this.setState({ hiddenStartIndex: -1, menuHidden: false, isCalculating: true });
+      this.contentWidth = entries[0].contentRect.width;
+      if (!this.isCalculating) {
+        this.animationFrameID = window.requestAnimationFrame(() => {
+          // Resetting the cache so that all elements will be rendered face-up for width calculations
+          this.resetCache();
+          this.forceUpdate();
+        });
       }
-      this.handleResize(entries[0].contentRect.width);
     });
     this.resizeObserver.observe(this.container);
-
+    this.handleResize(this.contentWidth);
     this.handleSelectionAnimation();
   }
 
   componentDidUpdate() {
-    this.handleSelectionAnimation();
+    if (this.isCalculating) {
+      this.isCalculating = false;
+      this.handleResize(this.contentWidth);
+    } else {
+      this.handleSelectionAnimation();
+    }
   }
 
   componentWillUnmount() {
+    window.cancelAnimationFrame(this.animationFrameID);
     this.resizeObserver.disconnect(this.container);
     this.container = null;
   }
@@ -90,6 +96,13 @@ class CollapsibleTabs extends React.Component {
   setMenuRef(node) {
     if (node === null) { return; }
     this.menuRef = node;
+  }
+
+  resetCache() {
+    this.animationFrameID = null;
+    this.hiddenStartIndex = -1;
+    this.isCalculating = true;
+    this.menuHidden = false;
   }
 
   handleResize(width) {
@@ -130,14 +143,16 @@ class CollapsibleTabs extends React.Component {
 
     this.props.onTruncationChange(isLabelTruncated);
 
-    if (this.state.hiddenStartIndex !== newHideIndex) {
-      this.setState({ hiddenStartIndex: newHideIndex, menuHidden: isMenuHidden, isCalculating: false });
+    if (this.menuHidden !== isMenuHidden || this.hiddenStartIndex !== newHideIndex) {
+      this.menuHidden = isMenuHidden;
+      this.hiddenStartIndex = newHideIndex;
+      this.forceUpdate();
     }
   }
 
   handleSelectionAnimation() {
     if (this.selectionBar && window.getComputedStyle(this.selectionBar, null).getPropertyValue('transition-property').includes('transform')) {
-      const activeIndex = this.props.activeIndex > this.state.hiddenStartIndex ? this.state.hiddenStartIndex : this.props.activeIndex;
+      const activeIndex = this.props.activeIndex > this.hiddenStartIndex ? this.hiddenStartIndex : this.props.activeIndex;
       const selectedTab = this.container.children[activeIndex];
 
       if (selectedTab) {
@@ -180,7 +195,7 @@ class CollapsibleTabs extends React.Component {
   }
 
   handleFocusRight(visibleChildren, event) {
-    if (this.props.activeIndex >= this.state.hiddenStartIndex) {
+    if (this.props.activeIndex >= this.hiddenStartIndex) {
       return;
     }
 
@@ -199,8 +214,8 @@ class CollapsibleTabs extends React.Component {
 
   handleFocusLeft(visibleChildren, event) {
     let startIndex = this.props.activeIndex - 1;
-    if (startIndex >= this.state.hiddenStartIndex || document.activeElement === this.menuRef) {
-      startIndex = this.state.hiddenStartIndex - 1;
+    if (startIndex >= this.hiddenStartIndex || document.activeElement === this.menuRef) {
+      startIndex = this.hiddenStartIndex - 1;
     }
 
     for (let i = startIndex; i >= 0; i -= 1) {
@@ -219,14 +234,14 @@ class CollapsibleTabs extends React.Component {
     const hiddenChildren = [];
 
     React.Children.forEach(this.props.children, (child, index) => {
-      if (index < this.state.hiddenStartIndex || this.state.hiddenStartIndex < 0) {
+      if (index < this.hiddenStartIndex || this.hiddenStartIndex < 0) {
         visibleChildren.push(child);
       } else {
         hiddenChildren.push(child);
       }
     });
 
-    const menu = this.state.menuHidden ? null : (
+    const menu = this.menuHidden ? null : (
       <Menu refCallback={this.setMenuRef} activeKey={this.props.activeKey}>
         {hiddenChildren}
       </Menu>
@@ -240,7 +255,7 @@ class CollapsibleTabs extends React.Component {
       <div>
         {/* eslint-disable jsx-a11y/no-static-element-interactions */}
         <div
-          className={cx(['collapsible-tabs-container', { 'is-calculating': this.state.isCalculating }])}
+          className={cx(['collapsible-tabs-container', { 'is-calculating': this.isCalculating }])}
           ref={this.setContainer}
           tabIndex="0"
           onKeyDown={this.handleOnKeyDown}
