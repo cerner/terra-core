@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Migrate Nightwatch -> wdio testing.
 
 2.14.0 - (June 28, 2018)
 ------------------
