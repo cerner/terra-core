@@ -12,10 +12,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    hyphens: auto;
     width: 100%;
-    word-break: break-all;
-    word-break: break-word;
+    word-wrap: break-word;
   }
 
   .glyph {
