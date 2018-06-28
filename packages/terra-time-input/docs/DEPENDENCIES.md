@@ -6,8 +6,8 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-intl | ^2.4.0 | ^0.14.9 \|\| ^15.0.0 \|\| ^16.0.0 | Internationalize React apps. This library provides React components and an API to format dates, numbers, and strings, including pluralization and handling translations. |
-| terra-button-group | ^2.14.0 | ^16.2.0 | terra-button-group |
-| terra-doc-template | ^1.7.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-button-group | ^2.15.0 | ^16.2.0 | terra-button-group |
+| terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 | terra-form | ^2.10.0 | ^16.2.0 | Components for building forms |
 
 ## devDependencies
