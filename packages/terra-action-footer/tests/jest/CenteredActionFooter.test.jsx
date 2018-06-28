@@ -27,6 +27,21 @@ describe('CenteredActionFooter', () => {
       );
       expect(shallow(component)).toMatchSnapshot();
     });
+
+    it('should render a block footer with two buttons', () => {
+      const component = (
+        <CenteredActionFooter
+          isBlock
+          center={
+            <div>
+              <button>Button 1</button>
+              <button>Button 2</button>
+            </div>
+          }
+        />
+      );
+      expect(shallow(component)).toMatchSnapshot();
+    });
   });
 
   // Prop Tests
@@ -40,9 +55,17 @@ describe('CenteredActionFooter', () => {
     });
 
     describe('with a center action', () => {
-      const centeredActionFooter = mount(<CenteredActionFooter center="Center Action" />);
+      const centeredActionFooter = mount(<CenteredActionFooter center={<button>Center Action</button>} />);
 
       it('should display a center action', () => (
+        expect(centeredActionFooter).toMatchSnapshot()
+      ));
+    });
+
+    describe('with a block center action', () => {
+      const centeredActionFooter = mount(<CenteredActionFooter isBlock center={<button>Center Action</button>} />);
+
+      it('should display a block center action', () => (
         expect(centeredActionFooter).toMatchSnapshot()
       ));
     });
@@ -71,6 +94,14 @@ describe('CenteredActionFooter', () => {
 
       it("should render an 'ActionFooterContainer'", () => (
         expect(centeredActionFooter.find('ActionFooterContainer').length).toBe(1)
+      ));
+    });
+
+    describe('with a block center action', () => {
+      const centeredActionFooter = shallow(<CenteredActionFooter isBlock center="Center Action" />);
+
+      it('should contain the is-block class', () => (
+        expect(centeredActionFooter.find('.is-block').length).toBe(1)
       ));
     });
   });

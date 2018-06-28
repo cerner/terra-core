@@ -8,6 +8,7 @@ import ExampleTemplate from '../../common/ExampleTemplate';
 export default () => (
   <ExampleTemplate>
     <CenteredActionFooter
+      isBlock
       center={
         <div>
           <Spacer paddingBottom="medium">

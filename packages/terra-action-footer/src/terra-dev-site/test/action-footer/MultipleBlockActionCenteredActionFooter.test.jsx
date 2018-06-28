@@ -4,10 +4,11 @@ import CenteredActionFooter from '../../../CenteredActionFooter';
 
 export default () => (
   <CenteredActionFooter
+    isBlock
     center={
       <div>
-        FakeLink Action
-        <Button isBlock text="Button Action" />
+        <Button isBlock text="First Action" />
+        <Button isBlock text="Second Action" />
       </div>
     }
   />

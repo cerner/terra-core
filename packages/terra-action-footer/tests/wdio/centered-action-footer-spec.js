@@ -22,6 +22,13 @@ describe('CenteredActionFooter', () => {
     Terra.should.themeEachCustomProperty(withActionsThemeables);
   });
 
+  describe('Multiple Block Actions', () => {
+    beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-block-action-centered-action-footer'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
+
   describe('Single Action', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/single-action-centered-action-footer'));
 

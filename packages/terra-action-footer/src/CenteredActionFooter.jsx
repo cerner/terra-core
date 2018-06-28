@@ -12,18 +12,25 @@ const propTypes = {
    * Actions to be displayed in the center socket
    */
   center: PropTypes.node,
+  /**
+   * Whether or not the center socket should display as a block.
+   */
+  isBlock: PropTypes.bool,
 };
 
 const defaultProps = {
   center: undefined,
+  isBlock: false,
 };
 
 const CenteredActionFooter = ({
   center,
+  isBlock,
   ...customProps
 }) => {
   const centeredActionFooterClassNames = cx([
     'centered-action-footer',
+    { 'is-block': isBlock },
     customProps.className,
   ]);
 
