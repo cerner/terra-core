@@ -67,7 +67,7 @@ it('should render a date picker with included dates', () => {
 it('should render a date picker with min and max dates', () => {
   const datePicker = shallow(
     <IntlProvider locale={locale} messages={messages}>
-      <DatePicker name="date-input" minDate={'2017-04-01'} maxDate={'2017-04-10'} utcOffset={0} />
+      <DatePicker name="date-input" minDate="2017-04-01" maxDate="2017-04-10" utcOffset={0} />
     </IntlProvider>,
   );
   expect(datePicker).toMatchSnapshot();

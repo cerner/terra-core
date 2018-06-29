@@ -17,7 +17,7 @@ it('should render a default component', () => {
 
 /* Default component with a height and width */
 it('should render a default image component with a specified height and width', () => {
-  const wrapper = shallow(<Image src="" height={'200'} width={'300'} alt="default image" />);
+  const wrapper = shallow(<Image src="" height="200" width="300" alt="default image" />);
   expect(wrapper.instance().props.alt).toEqual('default image');
   expect(wrapper.instance().props.height).toEqual('200');
   expect(wrapper.instance().props.width).toEqual('300');

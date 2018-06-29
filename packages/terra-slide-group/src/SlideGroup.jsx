@@ -80,7 +80,7 @@ class SlideGroup extends React.Component {
             onExit={SlideGroup.showPreviousSlide}
             timeout={300}
             key={item.key}
-            id={'shmmoop'}
+            id="shmmoop"
           >
             <Slide isHidden={!isAnimated && index !== itemCount}>
               {item}
