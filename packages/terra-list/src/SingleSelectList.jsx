@@ -35,22 +35,35 @@ const defaultProps = {
 };
 
 class SingleSelectList extends React.Component {
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.hasSections !== state.hasSections) {
+      return {
+        hasSections: props.hasSections,
+      };
+    }
+    return null;
+  }
+
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
-    if (!this.props.hasSections) {
-      // if it is not sections, then handle it differently.
-      this.state = { selectedIndex: SelectableList.Utils.initialSingleSelectedIndex(this.props.children) };
-    } else {
-      // hasSections, so handle the index differently.
-      this.state = { selectedIndex: SelectableList.Utils.initialSingleSelectedIndexWithSections(this.props.children) };
-    }
+    // state gets updated when getDerivedStateFromProps gets called right before each render.
+    this.state = {
+      selectedIndex: props.hasSections ?
+        SelectableList.Utils.initialSingleSelectedIndexWithSections(props.children) :
+        SelectableList.Utils.initialSingleSelectedIndex(props.children),
+      hasSections: false,
+    };
   }
 
   handleOnChange(event, index) {
     if (SelectableList.Utils.shouldHandleSingleSelect(this.state.selectedIndex, index)) {
       event.preventDefault();
-      this.setState({ selectedIndex: index });
+      this.setState(prevState => ({
+        ...prevState,
+        selectedIndex: index,
+      }));
       if (this.props.onChange) {
         this.props.onChange(event, index);
       }
@@ -65,7 +78,7 @@ class SingleSelectList extends React.Component {
         isDivided={isDivided}
         onChange={this.handleOnChange}
         hasChevrons={hasChevrons}
-        hasSections={hasSections}
+        hasSections={this.state.hasSections}
         selectedIndexes={[this.state.selectedIndex]}
         disableUnselectedItems={false}
       >
