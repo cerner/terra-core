@@ -9,6 +9,10 @@ const propTypes = {
    */
   headerContent: PropTypes.string,
   /**
+   * The header content to be placed for display in a section.
+   */
+  sectionIndex: PropTypes.number,
+  /**
    * The list of elements to be placed for display in a section.
    */
   listItems: PropTypes.array,
@@ -16,6 +20,7 @@ const propTypes = {
 
 const defaultProps = {
   headerContent: '',
+  sectionIndex: 0,
   listItems: [],
 };
 
@@ -26,7 +31,7 @@ class Section extends React.Component {
   }
 
   generateHeader() {
-    return <ListItem content={<ListSectionHeader id={this.props.headerContent} title={this.props.headerContent} onClick={this.handleClick} />} key={this.props.headerContent} />;
+    return <ListItem content={<ListSectionHeader id={`Section-${this.props.sectionIndex + 1}`} title={this.props.headerContent} onClick={this.handleClick} />} key={this.props.headerContent} />;
   }
 
   render() {

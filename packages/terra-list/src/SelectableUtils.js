@@ -6,7 +6,7 @@ const KEYCODES = {
 };
 
 /**
- * The validates the max count prop, and if undefined returns a max of the count of children.
+ * This validates the max count prop, and if undefined returns a max of the count of children.
  */
 const validatedMaxCount = (children, maxSelectionCount) => {
   if (maxSelectionCount !== undefined) {
@@ -16,7 +16,7 @@ const validatedMaxCount = (children, maxSelectionCount) => {
 };
 
 /**
- * The validates the max count prop, and if undefined returns a max of the count of children across sections.
+ * This validates the max count prop, and if undefined returns a max of the count of children across sections.
  */
 const validatedMaxCountForSections = (children, maxSelectionCount) => {
   if (maxSelectionCount !== undefined) {
@@ -240,8 +240,9 @@ const newPropsForItem = (item, index, onClick, onKeyDown, hasChevrons, selectedI
 /**
  * Returns an object containing header and list item properties.
  */
-const newPropsForSection = (section, clonedListItems) => {
+const newPropsForSection = (section, sectionIndex, clonedListItems) => {
   const newProps = {};
+  newProps.sectionIndex = sectionIndex;
   newProps.headerContent = section.props.headerContent;
   newProps.listItems = clonedListItems;
 

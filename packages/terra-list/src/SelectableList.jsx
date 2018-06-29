@@ -77,7 +77,7 @@ const SelectableList = ({
         const newProps = SelectableUtils.newPropsForItem(listItem, index, wrappedOnClick, wrappedOnKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems);
         return React.cloneElement(listItem, newProps);
       });
-      const newProps = SelectableUtils.newPropsForSection(section, clonedListItems);
+      const newProps = SelectableUtils.newPropsForSection(section, sectionIndex, clonedListItems);
       return React.cloneElement(section, newProps);
     });
   }
