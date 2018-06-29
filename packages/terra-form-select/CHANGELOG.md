@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Added CSS style to display the select box-shadow over the toggle border
 
 4.7.0 - (June 28, 2018)
 ------------------
