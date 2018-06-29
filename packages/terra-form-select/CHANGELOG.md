@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Added CSS style to display the select box-shadow over the toggle border
+
+4.7.0 - (June 28, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added change log to the documentation on terra-dev-site
 
