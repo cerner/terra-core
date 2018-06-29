@@ -30,7 +30,7 @@ describe('Image', () => {
 
   describe('Loading', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-image/image/image-loading');
+      browser.url('/#/tests/terra-image/image/image-loading');
       browser.waitForExist('#loadedImage', 1000);
       browser.waitForExist('#errorImage', 1000);
     });
