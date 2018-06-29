@@ -47,10 +47,6 @@ jobs:
     - stage: test
       script:
         - 'wget -q -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/master/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run -e TRAVIS=$TRAVIS -e CI=$CI test-chrome npm run nightwatch"
-    -
-      script:
-        - 'wget -q -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/master/config/docker/ci-docker-compose.yml'
         - "travis_wait docker-compose run -e TRAVIS=$TRAVIS -e CI=$CI test-chrome npm run wdio -- --suite suite1"
     -
       script:
@@ -63,7 +59,7 @@ jobs:
     -
       script:
         - 'wget -q -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/master/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run -e TRAVIS=$TRAVIS -e CI=$CI  test-chrome npm run wdio -- --suite suite4"
+        - "travis_wait docker-compose run -e TRAVIS=$TRAVIS -e CI=$CI test-chrome npm run wdio -- --suite suite4"
     - stage: deploy
       script: skip
       before_deploy:
