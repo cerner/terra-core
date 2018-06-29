@@ -53,8 +53,7 @@
     "start-heroku": "tt:serve-static --site build",
     "start-static": "tt:serve-static --config webpack.config",
     "test": "npm run jest && npm run wdio",
-    "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js",
-    "clean-quotes": "node scripts/quote-clean.js packages/"
+    "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
