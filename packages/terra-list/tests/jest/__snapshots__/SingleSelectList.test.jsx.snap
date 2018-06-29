@@ -61,11 +61,12 @@ exports[`should mount with no items with section headers 1`] = `
           headerContent="Header1"
           key=".0"
           listItems={Array []}
+          sectionIndex={0}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
@@ -78,14 +79,14 @@ exports[`should mount with no items with section headers 1`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
               >
                 <div
                   className="list-section-header"
-                  id="Header1"
+                  id="Section-1"
                 >
                   <Arrange
                     fill={
@@ -236,11 +237,12 @@ exports[`should mount with one items with Section Headers 1`] = `
               />,
             ]
           }
+          sectionIndex={0}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
@@ -253,14 +255,14 @@ exports[`should mount with one items with Section Headers 1`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
               >
                 <div
                   className="list-section-header"
-                  id="Header1"
+                  id="Section-1"
                 >
                   <Arrange
                     fill={
@@ -559,6 +561,7 @@ exports[`should render with sections 1`] = `
         />,
       ]
     }
+    sectionIndex={0}
   />
 </SelectableList>
 `;
@@ -1349,11 +1352,12 @@ exports[`should select an item across multiple sections 1`] = `
               />,
             ]
           }
+          sectionIndex={0}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
@@ -1366,14 +1370,14 @@ exports[`should select an item across multiple sections 1`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
               >
                 <div
                   className="list-section-header"
-                  id="Header1"
+                  id="Section-1"
                 >
                   <Arrange
                     fill={
@@ -1533,11 +1537,12 @@ exports[`should select an item across multiple sections 1`] = `
               />,
             ]
           }
+          sectionIndex={1}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header2"
+                id="Section-2"
                 isOpen={false}
                 level={2}
                 title="Header2"
@@ -1550,14 +1555,14 @@ exports[`should select an item across multiple sections 1`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header2"
+                id="Section-2"
                 isOpen={false}
                 level={2}
                 title="Header2"
               >
                 <div
                   className="list-section-header"
-                  id="Header2"
+                  id="Section-2"
                 >
                   <Arrange
                     fill={
@@ -1735,11 +1740,12 @@ exports[`should select an item across multiple sections 2`] = `
               />,
             ]
           }
+          sectionIndex={0}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
@@ -1752,14 +1758,14 @@ exports[`should select an item across multiple sections 2`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
               >
                 <div
                   className="list-section-header"
-                  id="Header1"
+                  id="Section-1"
                 >
                   <Arrange
                     fill={
@@ -1919,11 +1925,12 @@ exports[`should select an item across multiple sections 2`] = `
               />,
             ]
           }
+          sectionIndex={1}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header2"
+                id="Section-2"
                 isOpen={false}
                 level={2}
                 title="Header2"
@@ -1936,14 +1943,14 @@ exports[`should select an item across multiple sections 2`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header2"
+                id="Section-2"
                 isOpen={false}
                 level={2}
                 title="Header2"
               >
                 <div
                   className="list-section-header"
-                  id="Header2"
+                  id="Section-2"
                 >
                   <Arrange
                     fill={
@@ -2121,11 +2128,12 @@ exports[`should select an item across multiple sections 3`] = `
               />,
             ]
           }
+          sectionIndex={0}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
@@ -2138,14 +2146,14 @@ exports[`should select an item across multiple sections 3`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
               >
                 <div
                   className="list-section-header"
-                  id="Header1"
+                  id="Section-1"
                 >
                   <Arrange
                     fill={
@@ -2305,11 +2313,12 @@ exports[`should select an item across multiple sections 3`] = `
               />,
             ]
           }
+          sectionIndex={1}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header2"
+                id="Section-2"
                 isOpen={false}
                 level={2}
                 title="Header2"
@@ -2322,14 +2331,14 @@ exports[`should select an item across multiple sections 3`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header2"
+                id="Section-2"
                 isOpen={false}
                 level={2}
                 title="Header2"
               >
                 <div
                   className="list-section-header"
-                  id="Header2"
+                  id="Section-2"
                 >
                   <Arrange
                     fill={
@@ -2507,11 +2516,12 @@ exports[`should select an item across multiple sections 4`] = `
               />,
             ]
           }
+          sectionIndex={0}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
@@ -2524,14 +2534,14 @@ exports[`should select an item across multiple sections 4`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header1"
+                id="Section-1"
                 isOpen={false}
                 level={2}
                 title="Header1"
               >
                 <div
                   className="list-section-header"
-                  id="Header1"
+                  id="Section-1"
                 >
                   <Arrange
                     fill={
@@ -2691,11 +2701,12 @@ exports[`should select an item across multiple sections 4`] = `
               />,
             ]
           }
+          sectionIndex={1}
         >
           <ListItem
             content={
               <ListSectionHeader
-                id="Header2"
+                id="Section-2"
                 isOpen={false}
                 level={2}
                 title="Header2"
@@ -2708,14 +2719,14 @@ exports[`should select an item across multiple sections 4`] = `
               className="list-item"
             >
               <ListSectionHeader
-                id="Header2"
+                id="Section-2"
                 isOpen={false}
                 level={2}
                 title="Header2"
               >
                 <div
                   className="list-section-header"
-                  id="Header2"
+                  id="Section-2"
                 >
                   <Arrange
                     fill={

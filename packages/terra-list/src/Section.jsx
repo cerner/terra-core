@@ -31,7 +31,14 @@ class Section extends React.Component {
   }
 
   generateHeader() {
-    return <ListItem content={<ListSectionHeader id={`Section-${this.props.sectionIndex + 1}`} title={this.props.headerContent} onClick={this.handleClick} />} key={this.props.headerContent} />;
+    return (<ListItem
+      content={
+        <ListSectionHeader
+          id={`Section-${this.props.sectionIndex + 1}`}
+          title={this.props.headerContent}
+        />}
+      key={this.props.headerContent}
+    />);
   }
 
   render() {
