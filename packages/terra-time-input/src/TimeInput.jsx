@@ -82,8 +82,7 @@ class TimeInput extends React.Component {
         // eslint-disable-next-line
         console.warn(
           `An invalid time value, ${value}, has been passed to the terra-time-picker.`
-          + 'This value has been ignored and will not be rendered. Time values must be in hh:mm format.',
-        );
+          + 'This value has been ignored and will not be rendered. Time values must be in hh:mm format.');
       }
 
       value = undefined;

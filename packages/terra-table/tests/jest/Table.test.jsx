@@ -21,7 +21,7 @@ it('should render a default table', () => {
       <Table.Header>{header}</Table.Header>
       <Table.Rows>{rows}</Table.Rows>
     </Table>
-    );
+  );
   const table = shallow(defaultTable);
   expect(table).toMatchSnapshot();
 });
@@ -32,7 +32,7 @@ it('should render a table without zebra stripes', () => {
       <Table.Header>{header}</Table.Header>
       <Table.Rows>{rows}</Table.Rows>
     </Table>
-    );
+  );
   const table = shallow(defaultTable);
   expect(table).toMatchSnapshot();
 });
@@ -43,7 +43,7 @@ it('should render a table without padding', () => {
       <Table.Header>{header}</Table.Header>
       <Table.Rows>{rows}</Table.Rows>
     </Table>
-    );
+  );
   const table = shallow(defaultTable);
   expect(table).toMatchSnapshot();
 });

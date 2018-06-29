@@ -31,7 +31,6 @@ const defaultProps = {
 };
 
 class ButtonGroup extends React.Component {
-
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);

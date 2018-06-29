@@ -119,7 +119,9 @@ class SelectableTableRows extends React.Component {
   }
 
   render() {
-    const { children, disableUnselectedRows, onChange, selectedIndexes, ...customProps } = this.props;
+    const {
+      children, disableUnselectedRows, onChange, selectedIndexes, ...customProps
+    } = this.props;
     const clonedChildItems = this.clonedChildItems(children);
 
     return (

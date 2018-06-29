@@ -62,7 +62,7 @@ const Arrange = ({
   fillAttributes,
   fitEndAttributes,
   ...customProps
-  }) => {
+}) => {
   const fitStartProps = Object.assign({}, fitStartAttributes);
   const fillProps = Object.assign({}, fillAttributes);
   const fitEndProps = Object.assign({}, fitEndAttributes);

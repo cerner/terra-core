@@ -127,7 +127,9 @@ class CollapsibleMenuView extends React.Component {
   }
 
   render() {
-    const { children, boundingRef, menuWidth, ...customProps } = this.props;
+    const {
+      children, boundingRef, menuWidth, ...customProps
+    } = this.props;
     const intl = this.context.intl;
     const ellipsesText = intl.formatMessage({ id: 'Terra.collapsibleMenuView.more' });
     const visibleChildren = React.Children.toArray(children);

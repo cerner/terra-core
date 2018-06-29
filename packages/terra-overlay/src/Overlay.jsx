@@ -133,7 +133,9 @@ class Overlay extends React.Component {
   }
 
   render() {
-    const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, ...customProps } = this.props;
+    const {
+      children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, ...customProps
+    } = this.props;
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {

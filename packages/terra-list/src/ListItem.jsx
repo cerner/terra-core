@@ -39,13 +39,13 @@ const defaultProps = {
 };
 
 const ListItem = ({
-    content,
-    isSelected,
-    isSelectable,
-    hasChevron,
-    refCallback,
-    ...customProps
-  }) => {
+  content,
+  isSelected,
+  isSelectable,
+  hasChevron,
+  refCallback,
+  ...customProps
+}) => {
   const listItemClassNames = cx([
     'list-item',
     { selected: isSelected },

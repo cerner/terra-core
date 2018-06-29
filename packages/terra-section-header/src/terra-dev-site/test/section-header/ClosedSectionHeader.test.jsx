@@ -3,7 +3,7 @@ import React from 'react';
 import SectionHeader from '../../../SectionHeader';
 
 export default () =>
-  <SectionHeader
+  (<SectionHeader
     title="Closed Section Header"
     onClick={() => {}}
-  />;
+  />);

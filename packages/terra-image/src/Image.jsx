@@ -52,7 +52,6 @@ const defaultProps = {
 };
 
 class Image extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -88,7 +87,9 @@ class Image extends React.Component {
   }
 
   createImage(customProps, imageClasses) {
-    const { src, alt, height, width } = this.props;
+    const {
+      src, alt, height, width,
+    } = this.props;
     return (
       <img
         {...customProps}
@@ -104,7 +105,9 @@ class Image extends React.Component {
   }
 
   render() {
-    const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
+    const {
+      src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps
+    } = this.props;
 
     const imageClasses = cx([
       'image',

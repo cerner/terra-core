@@ -73,17 +73,15 @@ const contextTypes = {
   },
 };
 
-const DemographicsBanner = (
-  {
-    age,
-    dateOfBirth,
-    gender,
-    personName,
-    ...customProps
-  }, {
-    intl,
-  },
-) => {
+const DemographicsBanner = ({
+  age,
+  dateOfBirth,
+  gender,
+  personName,
+  ...customProps
+}, {
+  intl,
+}) => {
   const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
   return (

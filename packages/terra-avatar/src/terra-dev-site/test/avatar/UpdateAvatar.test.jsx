@@ -11,7 +11,6 @@ let ariaLabel = 'user';
 let id = 'image-avatar';
 
 class UpdateAvatar extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -109,7 +108,6 @@ class UpdateAvatar extends React.Component {
       <button onClick={this.imageToggleButtonHandle} id="image-toggle">Toggle Image</button>
     </div>);
   }
-
 }
 
 export default UpdateAvatar;

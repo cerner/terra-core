@@ -75,20 +75,20 @@ it('should render an image with the supplied onError function', () => {
 
 /* Placeholder image is displayed while the src image is loading */
 it('should render a hidden src image and a visible placeholder image', () => {
-  const wrapper = shallow(<Image src="profile.jpg" height="75" width="75" placeholder={<div>{'placeholder text'}</div>} />);
+  const wrapper = shallow(<Image src="profile.jpg" height="75" width="75" placeholder={<div>placeholder text</div>} />);
   expect(wrapper).toMatchSnapshot();
 });
 
 /* Src image successfully loaded */
 it('should render the src image', () => {
-  const wrapper = shallow(<Image src="profile.jpg" alt="profile" height="75" width="75" placeholder={<div>{'placeholder text'}</div>} />);
+  const wrapper = shallow(<Image src="profile.jpg" alt="profile" height="75" width="75" placeholder={<div>placeholder text</div>} />);
   wrapper.setState({ isLoading: false });
   expect(wrapper).toMatchSnapshot();
 });
 
 /* Src image failed to load */
 it('should render the placeholder image', () => {
-  const wrapper = shallow(<Image src="profile.jpg" alt="avatar" height="75" width="75" placeholder={<div>{'placeholder text'}</div>} />);
+  const wrapper = shallow(<Image src="profile.jpg" alt="avatar" height="75" width="75" placeholder={<div>placeholder text</div>} />);
   wrapper.setState({ isLoading: false, isError: true });
   expect(wrapper).toMatchSnapshot();
 });

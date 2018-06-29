@@ -93,7 +93,6 @@ const contextTypes = {
 };
 
 class SearchField extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -213,7 +212,6 @@ class SearchField extends React.Component {
       </div>
     );
   }
-
 }
 
 SearchField.propTypes = propTypes;

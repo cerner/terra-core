@@ -3,6 +3,6 @@ import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import StatusView from '../../../StatusView';
 
 export default () =>
-  <div>
+  (<div>
     <StatusView id="statusView" title="Custom" variant="custom" customGlyph={<IconDiamond />} />
-  </div>;
+   </div>);

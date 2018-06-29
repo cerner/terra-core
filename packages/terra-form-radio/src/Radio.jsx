@@ -84,22 +84,22 @@ const defaultProps = {
 };
 
 const Radio = ({
-    checked,
-    defaultChecked,
-    inputAttrs,
-    id,
-    disabled,
-    isInline,
-    isLabelHidden,
-    labelText,
-    labelTextAttrs,
-    name,
-    onBlur,
-    onChange,
-    onFocus,
-    value,
-    ...customProps
-  }) => {
+  checked,
+  defaultChecked,
+  inputAttrs,
+  id,
+  disabled,
+  isInline,
+  isLabelHidden,
+  labelText,
+  labelTextAttrs,
+  name,
+  onBlur,
+  onChange,
+  onFocus,
+  value,
+  ...customProps
+}) => {
   const controlInputAttrs = Object.assign({}, inputAttrs);
 
   if (checked !== undefined) {

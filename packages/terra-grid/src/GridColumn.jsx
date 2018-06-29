@@ -52,16 +52,16 @@ const propTypes = {
 };
 
 const GridColumn = ({
-    className,
-    children,
-    col,
-    tiny,
-    small,
-    medium,
-    large,
-    huge,
-    ...customProps
-  }) => {
+  className,
+  children,
+  col,
+  tiny,
+  small,
+  medium,
+  large,
+  huge,
+  ...customProps
+}) => {
   const colClassNames = cx([
     'column', {
       [`column-${col}`]: col,

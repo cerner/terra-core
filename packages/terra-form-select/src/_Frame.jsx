@@ -139,7 +139,9 @@ class Frame extends React.Component {
 
   getDisplay() {
     const { hasSearchChanged, searchValue } = this.state;
-    const { disabled, display, placeholder, variant } = this.props;
+    const {
+      disabled, display, placeholder, variant,
+    } = this.props;
 
     const inputAttrs = {
       disabled,
@@ -252,7 +254,9 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { value } = this.props;
     const { keyCode, target } = event;
-    const { BACKSPACE, SPACE, UP_ARROW, DOWN_ARROW } = KeyCodes;
+    const {
+      BACKSPACE, SPACE, UP_ARROW, DOWN_ARROW,
+    } = KeyCodes;
 
     if (keyCode === SPACE && target !== this.input) {
       event.preventDefault();

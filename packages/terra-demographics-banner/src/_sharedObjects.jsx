@@ -24,33 +24,27 @@ const personDetails = (props) => {
   ];
 
   if (props.gestationalAge) {
-    elements.push(
-      <DemographicsBannerValue
-        key="ga"
-        label={props.gestationalAgeLabel}
-        value={props.gestationalAge}
-      />,
-    );
+    elements.push(<DemographicsBannerValue
+      key="ga"
+      label={props.gestationalAgeLabel}
+      value={props.gestationalAge}
+    />);
   }
 
   if (props.postMenstrualAge) {
-    elements.push(
-      <DemographicsBannerValue
-        key="pma"
-        label={props.postMenstrualAgeLabel}
-        value={props.postMenstrualAge}
-      />,
-    );
+    elements.push(<DemographicsBannerValue
+      key="pma"
+      label={props.postMenstrualAgeLabel}
+      value={props.postMenstrualAge}
+    />);
   }
 
   if (props.deceasedDate) {
-    elements.push(
-      <DemographicsBannerValue
-        key="deceased"
-        label={props.deceasedDateLabel}
-        value={props.deceasedDate}
-      />,
-    );
+    elements.push(<DemographicsBannerValue
+      key="deceased"
+      label={props.deceasedDateLabel}
+      value={props.deceasedDate}
+    />);
   }
 
   return elements;
@@ -61,12 +55,11 @@ const applicationIdentifiers = (props) => {
 
   if (identifiers) {
     return Object.keys(identifiers).map(key =>
-      <DemographicsBannerValue
+      (<DemographicsBannerValue
         key={`identifier-${key}`}
         label={key}
         value={identifiers[key]}
-      />,
-    );
+      />));
   }
 
   return null;

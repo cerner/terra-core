@@ -213,7 +213,9 @@ class Menu extends React.Component {
       return;
     }
 
-    const { onDeselect, onSelect, value, variant } = this.props;
+    const {
+      onDeselect, onSelect, value, variant,
+    } = this.props;
 
     if (Util.allowsMultipleSelections(variant) && Util.includes(value, option.props.value)) {
       onDeselect(option.props.value, option);

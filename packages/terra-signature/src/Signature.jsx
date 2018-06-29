@@ -150,9 +150,13 @@ class Signature extends React.Component {
 
     if (dragging) {
       const lastLineSegment = this.state.lineSegments[this.state.lineSegments.length - 1];
-      newSegment = { x1: lastLineSegment.x2, y1: lastLineSegment.y2, x2: x, y2: y };
+      newSegment = {
+        x1: lastLineSegment.x2, y1: lastLineSegment.y2, x2: x, y2: y,
+      };
     } else {
-      newSegment = { x1: x, y1: y, x2: x, y2: y };
+      newSegment = {
+        x1: x, y1: y, x2: x, y2: y,
+      };
     }
 
     // Record new line segment
@@ -223,7 +227,9 @@ class Signature extends React.Component {
   }
 
   render() {
-    const { lineSegments, lineWidth, onChange, ...custProps } = this.props;
+    const {
+      lineSegments, lineWidth, onChange, ...custProps
+    } = this.props;
 
     return (
       <canvas {...custProps} className={styles.signature} ref={(node) => { this.canvas = node; }} />

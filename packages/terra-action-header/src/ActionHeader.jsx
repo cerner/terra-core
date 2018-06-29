@@ -84,7 +84,8 @@ const ActionHeader = ({
   onPrevious,
   onNext,
   children,
-  ...customProps }, {
+  ...customProps
+}, {
   intl,
 }) => {
   const backText = intl.formatMessage({ id: 'Terra.actionHeader.back' });

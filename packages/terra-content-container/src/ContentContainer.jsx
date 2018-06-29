@@ -45,7 +45,7 @@ const ContentContainer = ({
   fill,
   scrollRefCallback,
   ...customProps
-  }) => {
+}) => {
   const contentLayoutClassNames = cx([
     `content-container-${fill ? 'fill' : 'static'}`,
     customProps.className,

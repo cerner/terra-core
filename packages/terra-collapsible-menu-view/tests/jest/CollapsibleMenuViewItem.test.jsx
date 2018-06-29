@@ -103,12 +103,14 @@ describe('CollapsibleMenuViewItem', () => {
 
     it('should render a menu item when subMenuItems are given', () => {
       const context = { isCollapsibleMenuItem: true };
-      const wrapper = shallow((
-        <CollapsibleMenuViewItem
-          text="Testing"
-          subMenuItems={[<CollapsibleMenuViewItem text="Menu Item" key="1" />]}
-        />
-    ), { context });
+      const wrapper = shallow(
+        (
+          <CollapsibleMenuViewItem
+            text="Testing"
+            subMenuItems={[<CollapsibleMenuViewItem text="Menu Item" key="1" />]}
+          />
+        ), { context },
+      );
       expect(wrapper).toMatchSnapshot();
     });
 

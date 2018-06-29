@@ -92,19 +92,17 @@ class Paginator extends React.Component {
         return;
       }
       /* eslint-disable jsx-a11y/aria-props */
-      pageButtons.push(
-        <a
-          aria-label={`Page ${val}`}
-          aria-current={val === selectedPage && 'page'}
-          className={paginationLinkClassNames}
-          tabIndex={val === selectedPage ? null : '0'}
-          key={`pageButton_${val}`}
-          onClick={onClick(val)}
-          onKeyDown={this.handleOnKeyDown(val)}
-        >
-          {val}
-        </a>,
-      );
+      pageButtons.push(<a
+        aria-label={`Page ${val}`}
+        aria-current={val === selectedPage && 'page'}
+        className={paginationLinkClassNames}
+        tabIndex={val === selectedPage ? null : '0'}
+        key={`pageButton_${val}`}
+        onClick={onClick(val)}
+        onKeyDown={this.handleOnKeyDown(val)}
+      >
+        {val}
+                       </a>);
       /* eslint-enable jsx-a11y/aria-props */
     });
 

@@ -2,6 +2,6 @@ import React from 'react';
 import StatusView from '../../../StatusView';
 
 export default () =>
-  <div>
+  (<div>
     <StatusView id="statusView" />
-  </div>;
+   </div>);

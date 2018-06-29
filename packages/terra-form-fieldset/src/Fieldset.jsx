@@ -36,7 +36,9 @@ const defaultProps = {
   required: false,
 };
 
-const Fieldset = ({ children, help, legend, legendAttrs, required, ...customProps }) => {
+const Fieldset = ({
+  children, help, legend, legendAttrs, required, ...customProps
+}) => {
   const fieldsetClasses = cx([
     'fieldset',
     { 'fieldset-required': required },

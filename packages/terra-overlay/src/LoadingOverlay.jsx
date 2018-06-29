@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
 const BackgroundStyles = Overlay.Opts.BackgroundStyles;
 
 const propTypes = {
- /**
+  /**
  * The message to be displayed within the overlay.
  */
   message: PropTypes.string,
@@ -54,7 +54,8 @@ const contextTypes = {
 const LoadingOverlay = ({
   message,
   isAnimated,
-  ...customProps }, {
+  ...customProps
+}, {
   intl,
 }) => {
   // eslint-disable-next-line no-param-reassign

@@ -4,8 +4,8 @@ import Card from '../../../Card';
 import CardBody from '../../../CardBody';
 
 export default () =>
-  <Card>
+  (<Card>
     <CardBody isContentCentered>
       Centered content
     </CardBody>
-  </Card>;
+   </Card>);
