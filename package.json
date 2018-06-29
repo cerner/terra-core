@@ -21,6 +21,9 @@
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
+  "eslintConfig": {
+    "extends": "terra"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=moment",
@@ -50,7 +53,8 @@
     "start-heroku": "tt:serve-static --site build",
     "start-static": "tt:serve-static --config webpack.config",
     "test": "npm run jest && npm run wdio",
-    "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js",
+    "clean-quotes": "node scripts/quote-clean.js packages/"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -65,11 +69,8 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.2.2",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint": "^4.19.1",
+    "eslint-config-terra": "^1.0.0",
     "gh-pages": "^1.1.0",
     "glob": "^7.1.1",
     "identity-obj-proxy": "^3.0.0",
