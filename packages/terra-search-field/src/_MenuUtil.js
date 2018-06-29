@@ -250,11 +250,12 @@ class MenuUtil {
    * @param {array} children - The menu children.
    * @return {boolean} - True if the no results content should show..
    */
-  static shouldShowNoResults(props, children) {
+  static shouldShowNoResults(props, children, searchValue) {
     const { variant } = props;
 
     if (variant !== Variants.TAG && variant !== Variants.COMBOBOX) {
-      return children.length === 0;
+      // Avoid showing no results on empty string
+      return children.length === 0 && searchValue;
     }
     return false;
   }

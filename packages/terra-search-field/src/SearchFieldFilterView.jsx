@@ -25,6 +25,10 @@ const propTypes = {
    */
   dropdownAttrs: PropTypes.object,
   /**
+   * Whether the result bocx should initially be populated with results.
+   */
+  initiallyEmpty: PropTypes.bool,
+  /**
    * whether or not the field should display as a block.
    */
   isBlock: PropTypes.bool,
@@ -74,6 +78,7 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  initiallyEmpty: false,
   isBlock: false,
   minimumSearchTextLength: 2,
   noResultContent: undefined,
@@ -101,6 +106,7 @@ function SearchFieldFilterView(props) {
     defaultValue,
     disableAutoSearch,
     isBlock,
+    initiallyEmpty,
     minimumSearchTextLength,
     onChange,
     onSelect,
@@ -112,6 +118,7 @@ function SearchFieldFilterView(props) {
     <Select
       id="search"
       defaultValue={defaultValue}
+      initiallyEmpty={initiallyEmpty}
       onChange={onChange}
       onSelect={onSelect}
       placeholder={placeholder}

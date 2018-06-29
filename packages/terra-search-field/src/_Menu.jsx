@@ -77,14 +77,14 @@ class Menu extends React.Component {
    * @return {Object} - The new state object.
    */
   static getDerivedStateFromProps(props, state) {
-    const { searchValue, noResultContent } = props;
-    const children = Util.filter(props.children, props.searchValue, props.optionFilter);
+    const { initiallyEmpty, searchValue, noResultContent } = props;
+    let children = [];
 
-    if (Util.shouldAllowFreeText(props, children)) {
-      children.push(<AddOption value={searchValue} />);
+    if (!initiallyEmpty || searchValue !== '') {
+      children = Util.filter(props.children, props.searchValue, props.optionFilter);
     }
 
-    if (Util.shouldShowNoResults(props, children)) {
+    if (Util.shouldShowNoResults(props, children, searchValue)) {
       children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
     }
 

@@ -376,6 +376,7 @@ class Frame extends React.Component {
       display,
       dropdown,
       dropdownAttrs,
+      initiallyEmpty,
       isInvalid,
       noResultContent,
       onDeselect,
@@ -473,6 +474,7 @@ class Frame extends React.Component {
               {dropdown({
                 value,
                 variant,
+                initiallyEmpty,
                 onDeselect,
                 optionFilter,
                 noResultContent,
