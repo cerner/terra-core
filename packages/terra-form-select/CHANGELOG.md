@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Fixed
 * Added CSS style to display the select box-shadow over the toggle border
+* Added CSS custom property to enable theming of disabled state arrow icon
 
 4.7.0 - (June 28, 2018)
 ------------------
