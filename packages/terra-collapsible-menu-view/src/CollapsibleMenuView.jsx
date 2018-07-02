@@ -45,24 +45,35 @@ class CollapsibleMenuView extends React.Component {
     super(props);
     this.setContainer = this.setContainer.bind(this);
     this.setMenuButton = this.setMenuButton.bind(this);
+    this.resetCache = this.resetCache.bind(this);
     this.handleResize = this.handleResize.bind(this);
-    this.state = {
-      hiddenStartIndex: -1,
-      menuHidden: false,
-      isCalculating: true,
-    };
+    this.resetCache();
   }
 
   componentDidMount() {
     this.resizeObserver = new ResizeObserver((entries) => {
-      // Resetting the state so that all elements will be rendered face-up for width calculations
-      this.setState({ hiddenStartIndex: -1, menuHidden: false, isCalculating: true });
-      this.handleResize(entries[0].contentRect.width);
+      this.contentWidth = entries[0].contentRect.width;
+      if (!this.isCalculating) {
+        this.animationFrameID = window.requestAnimationFrame(() => {
+          // Resetting the cache so that all elements will be rendered face-up for width calculations
+          this.resetCache();
+          this.forceUpdate();
+        });
+      }
     });
+    this.handleResize(this.contentWidth);
     this.resizeObserver.observe(this.container);
   }
 
+  componentDidUpdate() {
+    if (this.isCalculating) {
+      this.isCalculating = false;
+      this.handleResize(this.contentWidth);
+    }
+  }
+
   componentWillUnmount() {
+    window.cancelAnimationFrame(this.animationFrameID);
     this.resizeObserver.disconnect(this.container);
     this.container = null;
   }
@@ -75,6 +86,13 @@ class CollapsibleMenuView extends React.Component {
   setMenuButton(node) {
     if (node === null) { return; }
     this.menuButton = node;
+  }
+
+  resetCache() {
+    this.animationFrameID = null;
+    this.hiddenStartIndex = -1;
+    this.isCalculating = true;
+    this.menuHidden = false;
   }
 
   handleResize(width) {
@@ -101,7 +119,11 @@ class CollapsibleMenuView extends React.Component {
       }
     }
 
-    this.setState({ menuHidden, hiddenStartIndex, isCalculating: false });
+    if (this.menuHidden !== menuHidden || this.hiddenStartIndex !== hiddenStartIndex) {
+      this.menuHidden = menuHidden;
+      this.hiddenStartIndex = hiddenStartIndex;
+      this.forceUpdate();
+    }
   }
 
   render() {
@@ -111,18 +133,18 @@ class CollapsibleMenuView extends React.Component {
     const visibleChildren = React.Children.toArray(children);
 
     let hiddenChildren = null;
-    if (this.state.hiddenStartIndex >= 0) {
-      hiddenChildren = visibleChildren.splice(this.state.hiddenStartIndex);
+    if (this.hiddenStartIndex >= 0) {
+      hiddenChildren = visibleChildren.splice(this.hiddenStartIndex);
     }
 
     const collapsibleMenuViewClassName = cx([
       'collapsible-menu-view',
-      { 'is-calculating': this.state.isCalculating },
+      { 'is-calculating': this.isCalculating },
       customProps.className,
     ]);
     const menuButtonClassName = cx([
       'menu-button',
-      { hidden: this.state.menuHidden },
+      { hidden: this.menuHidden },
     ]);
 
     return (

@@ -4,6 +4,15 @@ ChangeLog
 Unreleased
 ----------
 
+2.19.0 - (June 28, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+* Replaced nightwatch tests with wdio
+
+### Added
+* Added change log to the documentation on terra-dev-site
+
 2.18.0 - (June 22, 2018)
 ------------------
 ### Changed

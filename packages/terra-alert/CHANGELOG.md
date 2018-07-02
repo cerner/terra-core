@@ -3,8 +3,15 @@ Changelog
 
 Unreleased
 ----------
+
+2.17.0 - (June 28, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Removed CSS modules composes call
+
+### Added
+* Added change log to the documentation on terra-dev-site
 
 2.16.0 - (June 22, 2018)
 ------------------

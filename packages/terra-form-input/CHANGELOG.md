@@ -6,6 +6,14 @@ Unreleased
 ### Added
 * Added a prop refCallback for passing refs to the dom input element
 
+1.14.0 - (June 28, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added change log to the documentation on terra-dev-site
+
 1.13.0 - (June 22, 2018)
 ------------------
 ### Changed

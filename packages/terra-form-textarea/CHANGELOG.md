@@ -4,6 +4,17 @@ ChangeLog
 Unreleased
 ----------
 
+2.15.0 - (June 28, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added change log to the documentation on terra-dev-site
+
+### Fixed
+* Fixed broken wdio screenshots
+
 2.14.0 - (June 22, 2018)
 ------------------
 ### Changed

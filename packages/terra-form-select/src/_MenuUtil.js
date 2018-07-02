@@ -221,7 +221,7 @@ class MenuUtil {
       return selected === undefined ? options[0].props.value : selected.props.value;
     } else if (searchValue !== state.searchValue) {
       return options[0].props.value;
-    } else if (MenuUtil.findByValue(options, active)) {
+    } else if (active !== null && MenuUtil.findByValue(options, active)) {
       return active;
     }
     return options[0].props.value;

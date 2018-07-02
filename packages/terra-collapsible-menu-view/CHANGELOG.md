@@ -4,6 +4,17 @@ ChangeLog
 Unreleased
 ----------
 
+3.8.0 - (June 28, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added change log to the documentation on terra-dev-site
+
+### Fixed
+* Corrected the 'resize observer loop limit reached' error with animation frames.
+
 3.7.0 - (June 22, 2018)
 ------------------
 ### Changed
