@@ -107,7 +107,7 @@ class Input extends React.Component {
       <input
         {...attributes}
         ref={(inputRef) => {
-          if(refCallback) refCallback(inputRef);
+          if (refCallback) refCallback(inputRef);
         }}
         name={name}
         onBlur={onBlur}

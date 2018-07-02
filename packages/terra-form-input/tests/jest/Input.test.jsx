@@ -45,4 +45,10 @@ describe('Input', () => {
     const wrapper = render(input);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should pass in refCallback as the ref prop of the input element', () => {
+    const input = <Input refCallback={() => {}} />;
+    const wrapper = render(input);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -11,6 +11,11 @@ class InputFieldExample extends React.Component {
     };
 
     this.toggleInvalid = this.toggleInvalid.bind(this);
+    this.refCallback = this.refCallback.bind(this);
+  }
+
+  refCallback(input) {
+    this.input = input;
   }
 
   toggleInvalid() {
@@ -38,6 +43,7 @@ class InputFieldExample extends React.Component {
           labelAttrs={{
             className: 'label',
           }}
+          refCallback={this.refCallback}
           showOptional
         />
       </div>
