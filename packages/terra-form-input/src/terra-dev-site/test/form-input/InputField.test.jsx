@@ -14,6 +14,10 @@ class InputFieldExample extends React.Component {
     this.refCallback = this.refCallback.bind(this);
   }
 
+  componentDidMount() {
+    this.input.focus();
+  }
+
   refCallback(input) {
     this.input = input;
   }

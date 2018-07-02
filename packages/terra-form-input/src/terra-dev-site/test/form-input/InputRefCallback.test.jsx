@@ -8,6 +8,7 @@ export default class extends React.Component {
 
     this.refCallback = this.refCallback.bind(this);
   }
+
   componentDidMount() {
     this.input.focus();
   }

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added a prop refCallback for passing refs to the dom input element
 
 1.13.0 - (June 22, 2018)
 ------------------
