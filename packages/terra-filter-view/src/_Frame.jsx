@@ -353,12 +353,6 @@ class Frame extends React.Component {
     }
   }
 
-  handleTextChange() {
-    if (!this.searchTimeout) {
-      this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
-    }
-  }
-
   /**
    * Toggles the dropdown open or closed.
    */
@@ -376,7 +370,6 @@ class Frame extends React.Component {
       display,
       dropdown,
       dropdownAttrs,
-      initiallyEmpty,
       isInvalid,
       noResultContent,
       onDeselect,
@@ -384,6 +377,7 @@ class Frame extends React.Component {
       onSelect,
       optionFilter,
       placeholder,
+      searchDelay,
       variant,
       value,
       ...customProps
@@ -463,6 +457,7 @@ class Frame extends React.Component {
                    onSelect: this.handleSelect,
                    onRequestClose: this.closeDropdown,
                    searchValue: this.state.searchValue,
+                   searchDelay,
                  })}
             </Dropdown>
           }
@@ -474,7 +469,6 @@ class Frame extends React.Component {
               {dropdown({
                 value,
                 variant,
-                initiallyEmpty,
                 onDeselect,
                 optionFilter,
                 noResultContent,

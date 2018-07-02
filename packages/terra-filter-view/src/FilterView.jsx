@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'terra-base/lib/baseStyles';
+import classNames from 'classnames/bind';
 import Select from './Select';
 import { Variants } from './_constants';
+import styles from './FilterView.scss';
+
+const cx = classNames.bind(styles);
+
 
 const propTypes = {
   /**
@@ -24,10 +30,6 @@ const propTypes = {
    * additional attributes to spread onto the dropdown. ( style, classnames, etc.. )
    */
   dropdownAttrs: PropTypes.object,
-  /**
-   * Whether the result bocx should initially be populated with results.
-   */
-  initiallyEmpty: PropTypes.bool,
   /**
    * whether or not the field should display as a block.
    */
@@ -78,7 +80,6 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
-  initiallyEmpty: false,
   isBlock: false,
   minimumSearchTextLength: 2,
   noResultContent: undefined,
@@ -86,7 +87,7 @@ const defaultProps = {
   onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
-  searchDelay: 250,
+  searchDelay: 1000,
   variant: Variants.DROPDOWN,
 };
 
@@ -100,13 +101,15 @@ const contextTypes = {
 };
 
 
-function SearchFieldFilterView(props) {
+function FilterView(props) {
+  const FilterViewClassNames = cx([
+    'filter-view',
+  ]);
   const {
     children,
     defaultValue,
     disableAutoSearch,
     isBlock,
-    initiallyEmpty,
     minimumSearchTextLength,
     onChange,
     onSelect,
@@ -116,12 +119,13 @@ function SearchFieldFilterView(props) {
     ...otherProps } = props;
   return (
     <Select
+      className={FilterViewClassNames}
       id="search"
       defaultValue={defaultValue}
-      initiallyEmpty={initiallyEmpty}
       onChange={onChange}
       onSelect={onSelect}
       placeholder={placeholder}
+      searchDelay={searchDelay}
       variant={variant}
       {...otherProps}
     >
@@ -131,10 +135,10 @@ function SearchFieldFilterView(props) {
 }
 
 
-SearchFieldFilterView.propTypes = propTypes;
-SearchFieldFilterView.defaultProps = defaultProps;
-SearchFieldFilterView.contextTypes = contextTypes;
-SearchFieldFilterView.Option = Select.Option;
-SearchFieldFilterView.OptGroup = Select.OptGroup;
+FilterView.propTypes = propTypes;
+FilterView.defaultProps = defaultProps;
+FilterView.contextTypes = contextTypes;
+FilterView.Option = Select.Option;
+FilterView.OptGroup = Select.OptGroup;
 
-export default SearchFieldFilterView;
+export default FilterView;

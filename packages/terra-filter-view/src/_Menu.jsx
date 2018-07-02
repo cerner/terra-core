@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
-import AddOption from './_AddOption';
 import NoResults from './_NoResults';
 import Util from './_MenuUtil';
 import styles from './_Menu.module.scss';
@@ -77,12 +76,8 @@ class Menu extends React.Component {
    * @return {Object} - The new state object.
    */
   static getDerivedStateFromProps(props, state) {
-    const { initiallyEmpty, searchValue, noResultContent } = props;
-    let children = [];
-
-    if (!initiallyEmpty || searchValue !== '') {
-      children = Util.filter(props.children, props.searchValue, props.optionFilter);
-    }
+    const { searchValue, noResultContent } = props;
+    const children = Util.filter(props.children, props.searchValue, props.optionFilter);
 
     if (Util.shouldShowNoResults(props, children, searchValue)) {
       children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
@@ -94,6 +89,7 @@ class Menu extends React.Component {
       active: Util.getActiveOptionFromProps(props, children, state),
     };
   }
+
 
   constructor(props) {
     super(props);
@@ -107,6 +103,9 @@ class Menu extends React.Component {
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.scrollIntoView = this.scrollIntoView.bind(this);
+    this.clearSearchTimeout = this.clearSearchTimeout.bind(this);
+
+    this.searchTimeout = null;
   }
 
   componentDidMount() {
@@ -130,6 +129,13 @@ class Menu extends React.Component {
     this.searchString = '';
     clearTimeout(this.searchTimeout);
     this.searchTimeout = null;
+  }
+
+  clearSearchTimeout() {
+    if (this.searchTimeout) {
+      clearTimeout(this.searchTimeout);
+      this.searchTimeout = null;
+    }
   }
 
   /**
