@@ -20,6 +20,7 @@ export default class extends React.Component {
   render() {
     return (
       <Input
+        style={{ caretColor: 'transparent' }}
         refCallback={this.refCallback}
         defaultValue="Testing Auto Focus"
         showOptional

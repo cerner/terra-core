@@ -30,7 +30,7 @@ class InputFieldExample extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ caretColor: 'transparent' }}>
         <button id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <InputField
           inputId="test-input"
