@@ -101,6 +101,14 @@
     cursor: default;
     opacity: 0.4;
     pointer-events: none;
+
+    .arrow-icon {
+      background: var(--terra-select-disabled-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block; // IE 10
+    }
   }
 
   .toggle {
