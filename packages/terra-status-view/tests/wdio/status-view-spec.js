@@ -164,9 +164,9 @@ describe('StatusView', () => {
         '--terra-status-view-padding-bottom': '10px',
         '--terra-status-view-padding-top': '10px',
         '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
+        '--terra-status-view-title-font-size': '30px',
         '--terra-status-view-message-color': 'purple',
-        '--terra-status-view-message-font-size': '24px',
+        '--terra-status-view-message-font-size': '20px',
         '--terra-status-view-message-padding-top': '10px',
         '--terra-status-view-message-text-align': 'left',
         '--terra-status-view-divider-padding-top': '10px',
@@ -180,7 +180,7 @@ describe('StatusView', () => {
     });
   });
 
-  describe('Displays an error status view that is too thin for a glyph and forces word wrapping', () => {
+  describe('Displays an error status view that is too thin for a glyph', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-thin-constraint'));
 
     // Screenshot is too tall for standard viewports
