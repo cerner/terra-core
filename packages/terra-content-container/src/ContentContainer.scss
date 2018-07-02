@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     
-    // reset scroll styles to intial defaults to handle stack/block style layout.
+    // reset scroll styles to standard div defaults to handle stack/block style layout.
+    // IE10 does not properly support 'initial', so we need to be explicit.
     > .main > .normalizer {
-      height: initial; // auto
-      overflow: initial; // visible
-      position: initial; // static
-      width: initial; // auto
+      height: auto;
+      overflow: visible;
+      position: static;
+      width: auto;
     }
   }
   
