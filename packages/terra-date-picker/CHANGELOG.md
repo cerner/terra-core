@@ -3,8 +3,13 @@ Changelog
 
 Unreleased
 ----------
+
+2.19.0 - (June 28, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Changed datepicker third-party styles import from .css file to .scss file
+
 ### Added
 * Added change log to the documentation on terra-dev-site
 

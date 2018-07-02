@@ -11,7 +11,7 @@
 | lodash.startcase | ^4.4.0 | -- | The lodash method `_.startCase` exported as a module. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-intl | ^2.4.0 | ^0.14.9 \|\| ^15.0.0 \|\| ^16.0.0 | Internationalize React apps. This library provides React components and an API to format dates, numbers, and strings, including pluralization and handling translations. |
-| terra-doc-template | ^1.7.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |

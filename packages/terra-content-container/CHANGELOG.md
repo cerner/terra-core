@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* IE10 bug using static styles with no sized parent. No longer using 'initial'.
+
+2.14.0 - (June 28, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added change log to the documentation on terra-dev-site
 
