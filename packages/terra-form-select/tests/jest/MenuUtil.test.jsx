@@ -604,5 +604,19 @@ describe('MenuUtil', () => {
 
       expect(MenuUtil.getActiveOptionFromProps(props, children, state)).toEqual('5');
     });
+
+    it('should return the first value if the search value has not changed and the active option is null', () => {
+      const props = { value: ['4', '2'], searchValue: '' };
+      const state = { searchValue: '', active: null };
+      const children = [
+        <Option key="1" value="1" display="One" />,
+        <Option key="2" value="2" display="Two" />,
+        <Option key="3" value="3" display="Three" />,
+        <Option key="4" value="4" display="Four" />,
+        <Option key="5" value="5" display="Five" />,
+      ];
+
+      expect(MenuUtil.getActiveOptionFromProps(props, children, state)).toEqual('1');
+    });
   });
 });
