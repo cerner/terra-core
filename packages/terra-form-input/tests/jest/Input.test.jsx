@@ -47,8 +47,9 @@ describe('Input', () => {
   });
 
   it('should pass in refCallback as the ref prop of the input element', () => {
-    const input = <Input refCallback={() => {}} />;
-    const wrapper = render(input);
+    const refCallback = jest.fn();
+    const wrapper = mount(<Input refCallback={refCallback} />);
+    expect(refCallback).toBeCalled();
     expect(wrapper).toMatchSnapshot();
   });
 });

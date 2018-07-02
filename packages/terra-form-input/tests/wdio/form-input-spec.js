@@ -145,12 +145,6 @@ describe('Form-Input', () => {
       });
     });
 
-    describe('RefCallback', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-form-input/form-input/input-ref-callback'));
-
-      Terra.should.matchScreenshot({ viewports });
-    });
-
     describe('InputField', () => {
       describe('Valid InputField', () => {
         beforeEach(() => {

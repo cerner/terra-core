@@ -11,15 +11,6 @@ class InputFieldExample extends React.Component {
     };
 
     this.toggleInvalid = this.toggleInvalid.bind(this);
-    this.refCallback = this.refCallback.bind(this);
-  }
-
-  componentDidMount() {
-    this.input.focus();
-  }
-
-  refCallback(input) {
-    this.input = input;
   }
 
   toggleInvalid() {
@@ -30,7 +21,7 @@ class InputFieldExample extends React.Component {
 
   render() {
     return (
-      <div style={{ caretColor: 'transparent' }}>
+      <div>
         <button id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <InputField
           inputId="test-input"
@@ -47,7 +38,6 @@ class InputFieldExample extends React.Component {
           labelAttrs={{
             className: 'label',
           }}
-          refCallback={this.refCallback}
           showOptional
         />
       </div>
