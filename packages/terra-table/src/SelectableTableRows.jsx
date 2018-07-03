@@ -23,6 +23,7 @@ const propTypes = {
   /**
    * The list of selected row indexes.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   selectedIndexes: PropTypes.array,
 };
 

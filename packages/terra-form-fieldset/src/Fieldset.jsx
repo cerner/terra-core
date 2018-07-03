@@ -24,6 +24,7 @@ const propTypes = {
   /**
    * Attributes to attach to the legend.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   legendAttrs: PropTypes.object,
   /**
    * Determines whether the fieldset is required.

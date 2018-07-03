@@ -23,6 +23,7 @@ const propTypes = {
   /**
   * Line segments that define signature.
   */
+  // eslint-disable-next-line react/forbid-prop-types
   lineSegments: PropTypes.array,
   /**
    * A callback function to execute when a line segment is drawn. The first parameter is the event, the
@@ -41,7 +42,7 @@ class Signature extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { lineSegments: props.lineSegments, lineWidth: props.lineWidth };
+    this.state = { lineSegments: props.lineSegments };
 
     this.mouseInBounds = this.mouseInBounds.bind(this);
     this.mouseDown = this.mouseDown.bind(this);
@@ -80,7 +81,7 @@ class Signature extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if ((this.props.lineSegments !== nextProps.lineSegments) || (this.props.lineWidth !== nextProps.lineWidth)) {
-      this.setState({ lineSegments: nextProps.lineSegments, lineWidth: nextProps.lineWidth });
+      this.setState({ lineSegments: nextProps.lineSegments });
       this.drawSignature(nextProps.lineSegments, nextProps.lineWidth);
     }
   }

@@ -43,7 +43,7 @@ class ButtonGroup extends React.Component {
   }
 
   wrapOnClick(item) {
-    const onClick = item.props.onClick;
+    const { onClick } = item.props;
     return (event) => {
       this.handleOnChange(event, item.key);
 

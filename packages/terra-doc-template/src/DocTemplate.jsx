@@ -86,12 +86,15 @@ const DocTemplate = ({
     exampleHeader = <h1 className={cx('.examples-header')}>{exampleHeaderText}</h1>;
   }
 
+  const badge = (
+    <a href={`https://www.npmjs.org/package/${packageName}`}>
+      <img src={`https://img.shields.io/npm/v/${packageName}.svg`} alt="NPM version" />
+    </a>
+  );
+
   return (
     <div {...customProps} className={docTemplateClassNames}>
-      {packageName && <a href={`https://www.npmjs.org/package/${packageName}`}>
-        <img src={`https://img.shields.io/npm/v/${packageName}.svg`} alt="NPM version" />
-      </a>
-      }
+      {packageName && badge}
       {readme && <Markdown src={readme} />}
       {srcPath && <a href={srcPath}>View component source code</a>}
 

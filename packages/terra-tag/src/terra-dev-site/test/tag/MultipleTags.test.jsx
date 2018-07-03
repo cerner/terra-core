@@ -12,11 +12,13 @@ const DefaultTag = () => <Tag id="default" text="Default Tag" />;
 const OnClickTag = () => <Tag id="on-click" text="Clickable Tag" onClick={() => window.alert('Tag has been clicked!')} />;
 
 const MultipleTags = () =>
-  (<div>
-    <IconTag />
-    <DefaultTag />
-    <OnClickTag />
-    <LongTextIconTag />
-   </div>);
+  (
+    <div>
+      <IconTag />
+      <DefaultTag />
+      <OnClickTag />
+      <LongTextIconTag />
+    </div>
+  );
 
 export default MultipleTags;

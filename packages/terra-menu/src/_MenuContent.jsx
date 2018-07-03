@@ -81,7 +81,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: [],
   isFocused: false,
   title: '',
   isWidthBounded: false,
@@ -161,7 +160,7 @@ class MenuContent extends React.Component {
   }
 
   wrapOnClick(item) {
-    const onClick = item.props.onClick;
+    const { onClick } = item.props;
     return (event) => {
       event.preventDefault();
       if (this.state.focusIndex !== -1) {
@@ -179,7 +178,7 @@ class MenuContent extends React.Component {
   }
 
   wrapOnKeyDown(item, index) {
-    const onKeyDown = item.props.onKeyDown;
+    const { onKeyDown } = item.props;
     return ((event) => {
       event.preventDefault();
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
@@ -205,7 +204,7 @@ class MenuContent extends React.Component {
   }
 
   buildHeader(isFullScreen) {
-    const intl = this.props.intl;
+    const { intl } = this.props;
     const backBtnText = intl.formatMessage({ id: 'Terra.menu.back' });
     const closeBtnText = intl.formatMessage({ id: 'Terra.menu.close' });
 
@@ -317,7 +316,7 @@ class MenuContent extends React.Component {
         ref={this.handleContainerRef}
         className={contentClass}
         style={{ height: contentHeight, width: contentWidth, position: contentPosition }}
-        tabIndex="0"
+        tabIndex="-1"
       >
         <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
           <List className={cx(['list'])} role="menu">

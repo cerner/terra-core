@@ -18,14 +18,17 @@ const propTypes = {
   /**
    * Custom input attributes that apply to both the hour and minute inputs.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   inputAttributes: PropTypes.object,
   /**
    * Custom input attributes to apply to the hour input
    */
+  // eslint-disable-next-line react/forbid-prop-types
   hourAttributes: PropTypes.object,
   /**
    * Custom input attributes to apply to the minutes input
    */
+  // eslint-disable-next-line react/forbid-prop-types
   minuteAttributes: PropTypes.object,
   /**
    * Name of the time input. The name should be unique.
@@ -55,7 +58,6 @@ const defaultProps = {
   inputAttributes: {},
   minuteAttributes: {},
   hourAttributes: {},
-  name: null,
   onBlur: null,
   onChange: null,
   value: undefined,
@@ -75,7 +77,7 @@ class TimeInput extends React.Component {
   constructor(props, context) {
     super(props);
 
-    let value = this.props.value;
+    let { value } = this.props;
 
     if (value && !TimeUtil.validateTime.test(value)) {
       if (process.env !== 'production') {
@@ -123,6 +125,7 @@ class TimeInput extends React.Component {
       if (hour) {
         const parsedHour = TimeUtil.parseTwelveHourTime(hour, this.anteMeridiem, this.postMeridiem);
         hour = parsedHour.hourString;
+        // eslint-disable-next-line prefer-destructuring
         meridiem = parsedHour.meridiem;
       } else {
         meridiem = this.anteMeridiem;
@@ -149,7 +152,7 @@ class TimeInput extends React.Component {
     }
 
     let hour = TimeUtil.splitHour(nextProps.value);
-    let meridiem = this.state.meridiem;
+    let { meridiem } = this.state;
 
     if (nextProps.variant === TimeUtil.FORMAT_12_HOUR) {
       if (!this.context.intl.messages['Terra.timeInput.am'] || !this.context.intl.messages['Terra.timeInput.pm']) {
@@ -168,6 +171,7 @@ class TimeInput extends React.Component {
       if (hour) {
         const parsedHour = TimeUtil.parseTwelveHourTime(hour, this.anteMeridiem, this.postMeridiem);
         hour = parsedHour.hourString;
+        // eslint-disable-next-line prefer-destructuring
         meridiem = parsedHour.meridiem;
       }
     }
@@ -339,7 +343,7 @@ class TimeInput extends React.Component {
    */
   handleHourInputKeyDown(event) {
     let stateValue = this.state.hour;
-    let meridiem = this.state.meridiem;
+    let { meridiem } = this.state;
     const previousStateValue = stateValue;
 
     if (event.keyCode === TimeUtil.keyCodes.ARROWUP) {

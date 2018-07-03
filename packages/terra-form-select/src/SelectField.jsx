@@ -44,6 +44,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the label.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
    * Callback function triggered when the select value changes. function(value)
@@ -60,6 +61,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the select.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   selectAttrs: PropTypes.object,
   /**
    * The Select identifier. Links the htmlFor of the field to the select identifier.

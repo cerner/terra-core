@@ -21,6 +21,7 @@ const propTypes = {
   /**
    * Used to set props and HTML attributes on the toggle-button button
    */
+  // eslint-disable-next-line react/forbid-prop-types
   buttonAttrs: PropTypes.object,
   /**
    * Icon displayed next to text content within the toggle-button button

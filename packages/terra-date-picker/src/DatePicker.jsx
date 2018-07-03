@@ -30,6 +30,7 @@ const propTypes = {
    * Custom input attributes to apply to the date input. Use the name prop to set the name for the input.
    * Do not set the name in inputAttribute as it will be ignored.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   inputAttributes: PropTypes.object,
   /**
    * An ISO 8601 string representation of the maximum date that can be selected.
@@ -84,7 +85,6 @@ const defaultProps = {
   inputAttributes: undefined,
   maxDate: undefined,
   minDate: undefined,
-  name: undefined,
   onChange: undefined,
   onChangeRaw: undefined,
   onClickOutside: undefined,
@@ -248,7 +248,7 @@ class DatePicker extends React.Component {
     delete customProps.onCalendarButtonClick;
     delete customProps.onInputFocus;
 
-    const intl = this.context.intl;
+    const { intl } = this.context;
     const todayString = intl.formatMessage({ id: 'Terra.datePicker.today' });
     const dateFormat = DateUtil.getFormatByLocale(intl.locale);
     const exludeMomentDates = DateUtil.filterInvalidDates(excludeDates);

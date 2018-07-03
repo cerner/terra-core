@@ -25,6 +25,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the dropdown. ( Style, ClassNames, etc.. )
    */
+  // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
    * Whether the select is in an invalid state.
@@ -372,6 +373,7 @@ class Frame extends React.Component {
       <div
         {...customProps}
         role="combobox"
+        aria-controls={this.state.isOpen ? 'terra-select-dropdown' : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!this.state.isOpen}
         aria-haspopup="true"
@@ -384,7 +386,7 @@ class Frame extends React.Component {
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
-        <div className={cx('display')} onMouseDown={this.openDropdown} role="textbox">
+        <div className={cx('display')} onMouseDown={this.openDropdown} role="textbox" tabIndex="-1">
           {this.getDisplay()}
         </div>
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>

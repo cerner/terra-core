@@ -51,7 +51,7 @@ const personDetails = (props) => {
 };
 
 const applicationIdentifiers = (props) => {
-  const identifiers = props.identifiers;
+  const { identifiers } = props;
 
   if (identifiers) {
     return Object.keys(identifiers).map(key =>

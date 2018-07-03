@@ -151,16 +151,16 @@ class Overlay extends React.Component {
       customProps.className,
     ]);
 
-    // Disable linter to pass onClick to div element.
-    /* eslint-disable jsx-a11y/no-static-element-interactions */
+    // Disable linter to pass onClick to div element. Key events are added on mount.
+    /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
     const overlayComponent = (
-      <div {...customProps} ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0" >
+      <div {...customProps} ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="-1" >
         <div className={cx('content')}>
           {children}
         </div>
       </div>
     );
-    /* eslint-enable jsx-a11y/no-static-element-interactions */
+    /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
 
     if (isRelativeToContainer) {
       return overlayComponent;

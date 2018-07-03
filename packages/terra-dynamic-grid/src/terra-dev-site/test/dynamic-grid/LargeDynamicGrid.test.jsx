@@ -17,7 +17,9 @@ const region2 = {
   'grid-row-start': 1,
 };
 
-export default () => (<DynamicGrid id="defaultDynamicGrid" large={template}>
-  <DynamicGrid.Region id="region1" large={region1}>R1</DynamicGrid.Region>
-  <DynamicGrid.Region id="region2" large={region2}>R2</DynamicGrid.Region>
-                      </DynamicGrid>);
+export default () => (
+  <DynamicGrid id="defaultDynamicGrid" large={template}>
+    <DynamicGrid.Region id="region1" large={region1}>R1</DynamicGrid.Region>
+    <DynamicGrid.Region id="region2" large={region2}>R2</DynamicGrid.Region>
+  </DynamicGrid>
+);

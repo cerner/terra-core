@@ -30,6 +30,7 @@ const propTypes = {
   /**
    * The attachment target.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   target: PropTypes.object.isRequired,
 };
 

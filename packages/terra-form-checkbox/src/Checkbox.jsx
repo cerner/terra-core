@@ -23,6 +23,7 @@ const propTypes = {
   /**
     * Additional attributes for the input object.
     */
+  // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
   /**
     * Whether the checkbox element is disabled.
@@ -43,6 +44,7 @@ const propTypes = {
   /**
     * Additional attributes for the text object.
     */
+  // eslint-disable-next-line react/forbid-prop-types
   labelTextAttrs: PropTypes.object,
   /**
     * Name attribute of the input.
@@ -74,7 +76,6 @@ const defaultProps = {
   disabled: false,
   isInline: false,
   isLabelHidden: false,
-  labelText: null,
   labelTextAttrs: {},
   name: null,
   onBlur: undefined,

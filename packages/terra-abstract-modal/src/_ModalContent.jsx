@@ -58,8 +58,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  ariaLabel: null,
-  children: null,
   classNameModal: null,
   classNameOverlay: null,
   closeOnOutsideClick: true,
@@ -113,7 +111,7 @@ class ModalContent extends React.Component {
           zIndex={zIndex}
         />
         <div
-          tabIndex="0"
+          tabIndex="-1"
           aria-label={ariaLabel}
           className={modalClassName}
           role={role}

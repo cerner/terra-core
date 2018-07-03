@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, compat/compat */
 import csv from 'csvtojson';
 import _ from 'lodash';
 import { TerraIcon } from '../config';
@@ -30,3 +30,4 @@ const parseCsv = () => new Promise((resolve, reject) => {
 });
 
 export default parseCsv;
+/* eslint-enable compat/compat */

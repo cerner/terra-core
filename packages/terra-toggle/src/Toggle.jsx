@@ -23,7 +23,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: null,
   isAnimated: false,
   isOpen: false,
 };

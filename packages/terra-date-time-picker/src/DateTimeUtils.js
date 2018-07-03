@@ -20,10 +20,12 @@ class DateTimeUtils {
     let timePart = '';
 
     if (iSODate.indexOf(' ') > 0) {
+      // eslint-disable-next-line prefer-destructuring
       timePart = iSODate.split(' ')[1];
     }
 
     if (iSODate.indexOf('T') > 0) {
+      // eslint-disable-next-line prefer-destructuring
       timePart = iSODate.split('T')[1];
     }
 

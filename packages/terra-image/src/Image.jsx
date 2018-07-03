@@ -48,7 +48,6 @@ const propTypes = {
 const defaultProps = {
   variant: 'default',
   isFluid: false,
-  alt: ' ',
 };
 
 class Image extends React.Component {
@@ -70,7 +69,7 @@ class Image extends React.Component {
 
   handleOnLoad() {
     this.setState({ isLoading: false });
-    const onLoad = this.props.onLoad;
+    const { onLoad } = this.props;
 
     if (onLoad !== undefined) {
       onLoad();
@@ -79,7 +78,7 @@ class Image extends React.Component {
 
   handleOnError() {
     this.setState({ isLoading: false, isError: true });
-    const onError = this.props.onError;
+    const { onError } = this.props;
 
     if (onError !== undefined) {
       onError();

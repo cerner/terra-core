@@ -39,6 +39,7 @@ const propTypes = {
   /**
    * Attributes to attach to the input object
    */
+  // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
   /**
    * Whether or not the field is an inline field.
@@ -55,6 +56,7 @@ const propTypes = {
   /**
    * Attributes to attach to the label.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
    * Function to trigger when user changes the input value. Provide a function to create a controlled input.

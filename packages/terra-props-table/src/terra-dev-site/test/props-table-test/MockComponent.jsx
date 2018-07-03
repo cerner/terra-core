@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+// These props are used to test react-doc-gen, but they only need to be mocked
+/* eslint-disable react/no-unused-prop-types */
 const propTypes = {
   /**
    * An example of type string markup.
@@ -27,6 +28,7 @@ const propTypes = {
   /**
    * An example of type array markup.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   array: PropTypes.array,
   /**
    * A default example of type arrayOf markup.
@@ -56,6 +58,7 @@ const propTypes = {
     numberProp: PropTypes.number,
   }),
 };
+/* eslint-enable react/no-unused-prop-types */
 
 const MockComponent = props => (
   React.createElement('span', JSON.stringify({ props }))

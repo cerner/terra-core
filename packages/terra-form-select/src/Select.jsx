@@ -24,6 +24,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the dropdown. ( Style, ClassNames, etc.. )
    */
+  // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
    * Whether the select is in an invalid state.

@@ -9,7 +9,7 @@ import styles from './Overlay.scss';
 
 const cx = classNames.bind(styles);
 
-const BackgroundStyles = Overlay.Opts.BackgroundStyles;
+const { BackgroundStyles } = Overlay.Opts;
 
 const propTypes = {
   /**

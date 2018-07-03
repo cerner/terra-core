@@ -29,10 +29,6 @@ const IconWrapper = () => (
   </div>
 );
 
-IconWrapper.propTypes = {
-  children: PropTypes.element,
-};
-
 export {
   image,
   simpleText,

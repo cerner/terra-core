@@ -73,6 +73,20 @@ const contextTypes = {
 };
 
 class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+
+    this.searchString = '';
+    this.clearSearch = this.clearSearch.bind(this);
+    this.clearScrollTimeout = this.clearScrollTimeout.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleOptionClick = this.handleOptionClick.bind(this);
+    this.scrollIntoView = this.scrollIntoView.bind(this);
+  }
+
   /**
    * Updates the component state when new props are received.
    * @param {Object} props - The received props.
@@ -96,20 +110,6 @@ class Menu extends React.Component {
       searchValue,
       active: Util.getActiveOptionFromProps(props, children, state),
     };
-  }
-
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-
-    this.searchString = '';
-    this.clearSearch = this.clearSearch.bind(this);
-    this.clearScrollTimeout = this.clearScrollTimeout.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
-    this.handleOptionClick = this.handleOptionClick.bind(this);
-    this.scrollIntoView = this.scrollIntoView.bind(this);
   }
 
   componentDidMount() {
@@ -273,6 +273,7 @@ class Menu extends React.Component {
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
         aria-activedescendant={`terra-select-option-${this.state.active}`}
+        tabIndex="0"
       >
         {this.clone(this.state.children)}
       </ul>
