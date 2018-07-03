@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Input should pass in refCallback as the ref prop of the input element 1`] = `
+<Input
+  disabled={false}
+  isInvalid={false}
+  name={null}
+  refCallback={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          <input
+            class="form-input"
+            value=""
+          />,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  required={false}
+>
+  <input
+    className="form-input"
+    disabled={false}
+    name={null}
+    required={false}
+  />
+</Input>
+`;
+
 exports[`Input should render a default component 1`] = `
 <input
   className="form-input"
