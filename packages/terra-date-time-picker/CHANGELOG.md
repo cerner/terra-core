@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added source code for examples on terra-dev-site
 
 2.19.0 - (June 28, 2018)
 ------------------
