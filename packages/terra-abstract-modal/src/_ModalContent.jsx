@@ -110,8 +110,13 @@ class ModalContent extends React.Component {
           className={classNameOverlay}
           zIndex={zIndex}
         />
+        { /*
+            When an aria-label is set and tabIndex is set to 0, VoiceOver will read
+            the aria-label value when the modal is opened
+           */
+          /* eslint-disable jsx-a11y/no-noninteractive-tabindex */}
         <div
-          tabIndex="-1"
+          tabIndex="0"
           aria-label={ariaLabel}
           className={modalClassName}
           role={role}
@@ -119,6 +124,7 @@ class ModalContent extends React.Component {
         >
           {children}
         </div>
+        {/* eslint-enable jsx-a11y/no-noninteractive-tabindex */}
       </FocusTrap>
     );
   }

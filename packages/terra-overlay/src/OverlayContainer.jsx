@@ -7,7 +7,7 @@ import styles from './Overlay.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  /**
+/**
  * The overlay and the elements the overlay should hide when overlay isRelativeToContainer and isOpen.
  */
   children: PropTypes.node,
