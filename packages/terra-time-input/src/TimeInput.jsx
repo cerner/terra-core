@@ -532,11 +532,11 @@ class TimeInput extends React.Component {
       timeValue = 'T'.concat(hour, ':', this.state.minute);
     }
 
-    if (instanceHoursAttrs && !instanceHoursAttrs.id) {
+    if (!instanceHoursAttrs.id) {
       instanceHoursAttrs.id = 'terra-time-hour-'.concat(name);
     }
 
-    if (instanceMinuteAttrs && !instanceMinuteAttrs.id) {
+    if (!instanceMinuteAttrs.id) {
       instanceMinuteAttrs.id = 'terra-time-minute-'.concat(name);
     }
 
