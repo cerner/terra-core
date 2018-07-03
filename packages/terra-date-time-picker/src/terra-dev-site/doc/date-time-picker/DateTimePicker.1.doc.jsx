@@ -9,14 +9,23 @@ import DateTimePickerSrc from '!raw-loader!../../../../src/DateTimePicker';
 
 // Example Files
 import DateTimePickerDefault from '../example/DateTimePickerDefault';
+import DateTimePickerDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerDefault';
 import DateTimePickerDefaultDateTime from '../example/DateTimePickerDefaultDateTime';
+import DateTimePickerDefaultDateTimeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerDefaultDateTime';
 import DateTimePickerDefaultDateOnly from '../example/DateTimePickerDefaultDateOnly';
+import DateTimePickerDefaultDateOnlySrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerDefaultDateOnly';
 import DateTimePickerExcludeDates from '../example/DateTimePickerExcludeDates';
+import DateTimePickerExcludeDatesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerExcludeDates';
 import DateTimePickerIncludeDates from '../example/DateTimePickerIncludeDates';
+import DateTimePickerIncludeDatesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerIncludeDates';
 import DateTimePickerFilterDates from '../example/DateTimePickerFilterDates';
+import DateTimePickerFilterDatesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerFilterDates';
 import DateTimePickerMinMax from '../example/DateTimePickerMinMax';
+import DateTimePickerMinMaxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerMinMax';
 import DateTimePickerDST from '../example/DateTimePickerDST';
+import DateTimePickerDSTSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerDST';
 import DateTimePickerInsideModal from '../example/DateTimePickerInsideModal';
+import DateTimePickerInsideModalSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DateTimePickerInsideModal';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -28,30 +37,37 @@ const DocPage = () => (
       {
         title: 'Default',
         example: <DateTimePickerDefault />,
+        source: DateTimePickerDefaultSrc,
       },
       {
         title: 'Default Date Time',
         example: <DateTimePickerDefaultDateTime />,
+        source: DateTimePickerDefaultDateTimeSrc,
       },
       {
         title: 'Default Date Only',
         example: <DateTimePickerDefaultDateOnly />,
+        source: DateTimePickerDefaultDateOnlySrc,
       },
       {
         title: 'Exclude Dates',
         example: <DateTimePickerExcludeDates />,
+        source: DateTimePickerExcludeDatesSrc,
       },
       {
         title: 'Include Dates',
         example: <DateTimePickerIncludeDates />,
+        source: DateTimePickerIncludeDatesSrc,
       },
       {
         title: 'Filter Dates',
         example: <DateTimePickerFilterDates />,
+        source: DateTimePickerFilterDatesSrc,
       },
       {
         title: 'Min Max Selection Options',
         example: <DateTimePickerMinMax />,
+        source: DateTimePickerMinMaxSrc,
       },
       {
         title: 'Daylight Saving',
@@ -81,10 +97,12 @@ const DocPage = () => (
           </div>
         ),
         example: <DateTimePickerDST />,
+        source: DateTimePickerDSTSrc,
       },
       {
         title: 'Presented Inside Modal',
         example: <DateTimePickerInsideModal />,
+        source: DateTimePickerInsideModalSrc,
       },
     ]}
     propsTables={[
