@@ -6,9 +6,9 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-button | ^2.15.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-dialog | ^1.15.0 | ^16.2.0 | Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user. |
+| terra-dialog | ^1.16.0 | ^16.2.0 | Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user. |
 | terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-form-input | ^1.14.0 | ^16.2.0 | Element for building out inputs in a form. |
+| terra-form-input | ^1.15.0 | ^16.2.0 | Element for building out inputs in a form. |
 | terra-icon | ^2.15.0 | ^16.2.0 | terra-icon |
 | terra-list | ^2.16.0 | ^16.2.0 | terra-list |
 | terra-mixins | ^1.15.0 | -- | terra-mixins |

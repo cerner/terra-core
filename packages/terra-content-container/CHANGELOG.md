@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.15.0 - (July 3, 2018)
+------------------
 ### Fixed
 * IE10 bug using static styles with no sized parent. No longer using 'initial'.
 

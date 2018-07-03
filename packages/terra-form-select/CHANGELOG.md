@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.8.0 - (July 3, 2018)
+------------------
 ### Added
 * Added CSS style to display the select box-shadow over the toggle border
 * Added CSS custom property to enable theming of disabled state arrow icon
