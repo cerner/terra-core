@@ -15,24 +15,24 @@ class FrameUtil {
   /**
    * Determines the dropdown position.
    * @param {Object} props - The component props.
-   * @param {Object} state - The component state.
    * @param {ReactNode} target - The select wrapper.
    * @param {ReactNode} dropdown - The dropdown.
+   * @param {number} maxHeight - The maxHeight of the dropdown dropdown.
    * @return {Object} - The calculated dropdown attributes.
    */
-  static dropdownPosition(props, state, target, dropdown) {
+  static dropdownPosition(props, target, dropdown, maxHeight) {
     const style = Object.assign({}, props).style || {};
     const { height } = dropdown.getBoundingClientRect();
     const { bottom, width, top } = target.getBoundingClientRect();
 
     const spaceBelow = window.innerHeight - bottom;
-    const maxHeight = style.maxHeight ? parseInt(style.maxHeight, 10) : Infinity;
-    const canFitBelow = maxHeight < spaceBelow || height < spaceBelow || spaceBelow > top;
+    const maximumHeight = parseInt(style.maxHeight || maxHeight, 10) || Infinity;
+    const canFitBelow = maximumHeight < spaceBelow || height < spaceBelow || spaceBelow > top;
     const availableSpace = canFitBelow ? spaceBelow : top;
 
     return {
       width,
-      maxHeight: Math.min(maxHeight, availableSpace - 10),
+      maxHeight: Math.min(maximumHeight, availableSpace - 10),
       isAbove: !canFitBelow,
       isPositioned: true,
     };

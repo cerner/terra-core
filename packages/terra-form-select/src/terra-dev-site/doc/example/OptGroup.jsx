@@ -3,7 +3,7 @@ import React from 'react';
 import Select from 'terra-form-select/lib/Select';
 
 const OptGroupExample = () => (
-  <Select placeholder="Select a color" dropdownAttrs={{ style: { maxHeight: '300px' } }} style={{ maxWidth: '300px' }}>
+  <Select placeholder="Select a color" maxHeight={300} style={{ maxWidth: '300px' }}>
     <Select.OptGroup label="Shade of blue">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="cyan" display="Cyan" />

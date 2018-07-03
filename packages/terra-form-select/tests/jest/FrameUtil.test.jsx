@@ -29,6 +29,43 @@ describe('FrameUtil', () => {
     });
   });
 
+  describe('dropdownPosition', () => {
+    it('should return the position attributes of the dropdown', () => {
+      const props = { style: { maxHeight: '100px' } };
+      const target = document.createElement('div');
+      const dropdown = document.createElement('div');
+
+      dropdown.getBoundingClientRect = () => ({ height: 100 });
+      target.getBoundingClientRect = () => ({ width: 100, bottom: 30, top: 0 });
+
+      const expected = { width: 100, maxHeight: 100, isAbove: false, isPositioned: true };
+
+      expect(FrameUtil.dropdownPosition(props, target, dropdown)).toEqual(expected);
+    });
+
+    it('should return the custom maxHeight set using the style attribute', () => {
+      const props = { style: { maxHeight: '200px' } };
+      const target = document.createElement('div');
+      const dropdown = document.createElement('div');
+
+      dropdown.getBoundingClientRect = () => ({ height: 100 });
+      target.getBoundingClientRect = () => ({ width: 100, bottom: 30, top: 0 });
+
+      expect(FrameUtil.dropdownPosition(props, target, dropdown).maxHeight).toEqual(200);
+    });
+
+    it('should return the custom maxHeight', () => {
+      const props = {};
+      const target = document.createElement('div');
+      const dropdown = document.createElement('div');
+
+      dropdown.getBoundingClientRect = () => ({ height: 100 });
+      target.getBoundingClientRect = () => ({ width: 100, bottom: 30, top: 0 });
+
+      expect(FrameUtil.dropdownPosition(props, target, dropdown, 400).maxHeight).toEqual(400);
+    });
+  });
+
   describe('allowsMultipleSelections', () => {
     it('should return false for a default variant', () => {
       expect(FrameUtil.allowsMultipleSelections({ variant: Variants.DEFAULT })).toBeFalsy();
