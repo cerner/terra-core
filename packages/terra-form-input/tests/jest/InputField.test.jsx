@@ -30,6 +30,7 @@ it('should render a InputField with props', () => {
         className: 'label',
       }}
       onChange={() => {}}
+      refCallback={() => {}}
       showOptional
       value="Value"
     />
@@ -59,6 +60,7 @@ it('should render a valid InputField with props', () => {
         className: 'label',
       }}
       onChange={() => {}}
+      refCallback={() => {}}
       showOptional
       value="Value"
     />
