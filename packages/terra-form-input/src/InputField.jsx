@@ -63,6 +63,10 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * Ref callback to pass into the ref attribute of the html input element.
+   */
+  refCallback: PropTypes.func,
+  /**
    * Whether or not the field is required.
    */
   required: PropTypes.bool,
@@ -91,6 +95,7 @@ const defaultProps = {
   isLabelHidden: false,
   labelAttrs: {},
   onChange: undefined,
+  refCallback: undefined,
   required: false,
   showOptional: false,
   value: undefined,
@@ -110,6 +115,7 @@ const InputField = (props) => {
     isLabelHidden,
     label,
     labelAttrs,
+    refCallback,
     required,
     showOptional,
     onChange,
@@ -139,6 +145,7 @@ const InputField = (props) => {
         onChange={onChange}
         value={value}
         defaultValue={defaultValue}
+        refCallback={refCallback}
       />
     </Field>
   );

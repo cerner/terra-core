@@ -134,7 +134,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-on-change');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
+        document.querySelector('input[name="terra-time-minute-input"]').style.caretColor = 'transparent';
       });
       browser.setValue('input[name="terra-date-input"]', '07/12/2017');
       browser.setValue('input[name="terra-time-hour-input"]', '10');
@@ -149,7 +149,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-on-change');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
+        document.querySelector('input[name="terra-date-input"]').style.caretColor = 'transparent';
       });
       browser.setValue('input[name="terra-date-input"]', '07/12');
       browser.setValue('input[name="terra-time-hour-input"]', '10');
@@ -274,7 +274,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-excluded');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
+        document.querySelector('input[name="terra-time-hour-input"]').style.caretColor = 'transparent';
       });
       browser.click('input[name="terra-time-hour-input"]');
     });
@@ -287,7 +287,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-excluded');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
+        document.querySelector('input[name="terra-time-minute-input"]').style.caretColor = 'transparent';
       });
       browser.click('input[name="terra-time-minute-input"]');
     });
@@ -300,7 +300,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-out-of-range');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
+        document.querySelector('input[name="terra-date-input"]').style.caretColor = 'transparent';
       });
       browser.click('input[name="terra-date-input"]');
     });
@@ -313,7 +313,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-out-of-range');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
+        document.querySelector('input[name="terra-time-hour-input"]').style.caretColor = 'transparent';
       });
 
       browser.click('input[name="terra-time-hour-input"]');
@@ -327,7 +327,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-out-of-range');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
+        document.querySelector('input[name="terra-time-minute-input"]').style.caretColor = 'transparent';
       });
       browser.click('input[name="terra-time-minute-input"]');
     });
