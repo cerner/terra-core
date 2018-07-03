@@ -26,11 +26,11 @@ describe('FilterView', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // Prop Tests
-  it('should use the default value when no value is given', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.filter-view').text()).toEqual('default');
+  it('renders a disabled FilterView with a default value', () => {
+    const wrapper = shallow(<FilterView defaultValue="Test" disabled />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
   });
+  // Prop Tests
 
   // Structure Tests
   it('should have the class filter-view', () => {

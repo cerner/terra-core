@@ -85,11 +85,12 @@ const defaultProps = {
   noResultContent: undefined,
   onChange: undefined,
   onInvalidSearch: undefined,
+  onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
   searchDelay: 250,
-  variant: Variants.DROPDOWN,
+  variant: 'dropdown',
 };
 
 const contextTypes = {

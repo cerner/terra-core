@@ -1,6 +1,6 @@
 # Terra Filter View
 
-{insert description}
+A search component that displays user-provided results in a dropdown or result box.
 
 ## Getting Started
 
@@ -13,7 +13,11 @@
 import React from 'react';
 import FilterView from 'terra-filter-view';
 
-<FilterView {props...} />
+<FilterView>
+  <FilterView.Option value="red" display="Red" key="red" />
+  <FilterView.Option value="blue" display="Blue" key="blue" />
+  <FilterView.Option value="green" display="Green" key="green" />
+</FilterView>
 ```
 
 ## Component Features

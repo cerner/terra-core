@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterView renders a FilterView with a default value 1`] = `
+<Select
+  className="filter-view"
+  defaultValue="Test"
+  disabled={false}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`FilterView renders a FilterView with a placeholder 1`] = `
+<Select
+  className="filter-view"
+  disabled={false}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  placeholder="Test"
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`FilterView renders a default FilterView 1`] = `
+<Select
+  className="filter-view"
+  disabled={false}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`FilterView renders a disabled FilterView with a default value 1`] = `
+<Select
+  className="filter-view"
+  defaultValue="Test"
+  disabled={true}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`FilterView renders a persistent FilterView 1`] = `
+<Select
+  className="filter-view"
+  disabled={false}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="persistent"
+/>
+`;

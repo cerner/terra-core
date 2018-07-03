@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-filter-view.svg)](https://www.npmjs.org/package/terra-filter-view)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-{insert description}
+A search component that displays user-provided results in a dropdown or result box.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-filter-view/docs)
