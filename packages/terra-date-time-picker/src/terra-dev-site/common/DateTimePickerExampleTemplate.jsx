@@ -44,3 +44,4 @@ DatePickerExample.propTypes = propTypes;
 DatePickerExample.defualtProps = defaultProps;
 
 export default DatePickerExample;
+
