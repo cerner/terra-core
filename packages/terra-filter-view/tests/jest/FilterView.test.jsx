@@ -1,12 +1,28 @@
 import React from 'react';
 import FilterView from '../../src/FilterView';
+import intlContexts from './intl-context-setup';
 
 describe('FilterView', () => {
   const defaultRender = <FilterView />;
 
   // Snapshot Tests
-  it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
+  it('renders a default FilterView', () => {
+    const wrapper = shallow(<FilterView />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders a persistent FilterView', () => {
+    const wrapper = shallow(<FilterView variant="persistent" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders a FilterView with a placeholder', () => {
+    const wrapper = shallow(<FilterView placeholder="Test" />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders a FilterView with a default value', () => {
+    const wrapper = shallow(<FilterView defaultValue="Test" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
