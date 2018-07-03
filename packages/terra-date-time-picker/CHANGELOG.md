@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.20.0 - (July 3, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added source code for examples on terra-dev-site
 

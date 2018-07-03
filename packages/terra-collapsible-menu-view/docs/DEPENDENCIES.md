@@ -12,7 +12,7 @@
 | terra-form | ^2.10.0 | ^16.2.0 | Components for building forms |
 | terra-icon | ^2.15.0 | ^16.2.0 | terra-icon |
 | terra-list | ^2.16.0 | ^16.2.0 | terra-list |
-| terra-menu | ^3.8.0 | ^16.2.0 | The menu is a popup component that displays a list of items, item groups, and dividers. Menu Items can be actionable, have toggle-style selection, or have nested submenu items. Menu Item groups are a single-select grouping of menu items. The Menu will determine the height of the popup based on the number of items in the main menu. |
+| terra-menu | ^3.9.0 | ^16.2.0 | The menu is a popup component that displays a list of items, item groups, and dividers. Menu Items can be actionable, have toggle-style selection, or have nested submenu items. Menu Item groups are a single-select grouping of menu items. The Menu will determine the height of the popup based on the number of items in the main menu. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

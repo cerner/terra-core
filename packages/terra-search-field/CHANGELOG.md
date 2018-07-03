@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.17.0 - (July 3, 2018)
+------------------
 ### Changed
 * Replace legacy Input with the new terra-form-input package
 

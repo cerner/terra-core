@@ -7,7 +7,7 @@
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-arrange | ^2.16.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
 | terra-button | ^2.15.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-content-container | ^2.14.0 | ^16.2.0 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
+| terra-content-container | ^2.15.0 | ^16.2.0 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
 | terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 | terra-icon | ^2.15.0 | ^16.2.0 | terra-icon |
 | terra-list | ^2.16.0 | ^16.2.0 | terra-list |
