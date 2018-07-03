@@ -1,7 +1,7 @@
 /* global browser, Terra, before */
 const viewports = Terra.viewports('medium');
 
-// Color contrast will be resolved in https://github.com/cerner/terra-core/pull/1672
+// Color contrast will be resolved in https://github.com/cerner/terra-core/issues/1670
 const ignoredA11y = {
   'color-contrast': { enabled: false },
 };
