@@ -7,7 +7,7 @@
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 | terra-form-field | ^2.16.0 | ^16.2.0 | The Form Field component handles the layout of the label, help text and error text associated with a form element. |
-| terra-form-input | ^1.14.0 | ^16.2.0 | Element for building out inputs in a form. |
+| terra-form-input | ^1.15.0 | ^16.2.0 | Element for building out inputs in a form. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
