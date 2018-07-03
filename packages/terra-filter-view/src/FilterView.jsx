@@ -11,39 +11,35 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * the dropdown/result menu options.
+   * The dropdown/result menu options.
    */
   children: PropTypes.node,
   /**
-   * the default selected value.
+   * The default selected value.
    */
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
-   * whether the select is disabled.
+   * Whether the select is disabled.
    */
   disabled: PropTypes.bool,
   /**
-   * when true, will disable the auto-search.
+   * When true, will disable the auto-search.
    */
   disableAutoSearch: PropTypes.bool,
   /**
-   * additional attributes to spread onto the dropdown. ( style, classnames, etc.. )
+   * Additional attributes to spread onto the dropdown. ( style, classnames, etc.. )
    */
   dropdownAttrs: PropTypes.object,
   /**
-   * whether or not the field should display as a block.
-   */
-  isBlock: PropTypes.bool,
-  /**
-   * the minimum number of characters to perform a search.
+   * The minimum number of characters to perform a search.
    */
   minimumSearchTextLength: PropTypes.number,
   /**
-   * content to display when no results are found.
+   * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
   /**
-   * callback function triggered when the value changes. function(value)
+   * Callback function triggered when the value changes. function(value)
    */
   onChange: PropTypes.func,
   /**
@@ -51,19 +47,23 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * callback function triggered when the search criteria changes. function(searchvalue)
+   * A callback to indicate an invalid search.
+   */
+  onInvalidSearch: PropTypes.func,
+  /**
+   * Callback function triggered when the search criteria changes. function(searchvalue)
    */
   onSearch: PropTypes.func,
   /**
-   * callback function invoked for each option on search change. function(searchvalue, option)
+   * Callback function invoked for each option on search change. function(searchvalue, option)
    */
   optionFilter: PropTypes.func,
   /**
-   * placeholder text.
+   * Placeholder text.
    */
   placeholder: PropTypes.string,
   /**
-   * how long the component should wait (in milliseconds) after input before performing an automatic search.
+   * How long the component should wait (in milliseconds) after input before performing an automatic search.
    */
   searchDelay: PropTypes.number,
   /**
@@ -79,15 +79,16 @@ const defaultProps = {
   children: undefined,
   defaultValue: undefined,
   disabled: false,
+  disableAutoSearch: false,
   dropdownAttrs: undefined,
-  isBlock: false,
   minimumSearchTextLength: 2,
   noResultContent: undefined,
   onChange: undefined,
+  onInvalidSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
-  searchDelay: 1000,
+  searchDelay: 250,
   variant: Variants.DROPDOWN,
 };
 
@@ -105,12 +106,12 @@ function FilterView(props) {
   const FilterViewClassNames = cx([
     'filter-view',
   ]);
+
   const {
     children,
     defaultValue,
     disableAutoSearch,
     isBlock,
-    minimumSearchTextLength,
     onChange,
     onSelect,
     placeholder,

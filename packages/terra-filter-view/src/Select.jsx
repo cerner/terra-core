@@ -57,7 +57,7 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
    /**
-   * how long the component should wait (in milliseconds) after input before performing an automatic search.
+   * How long the component should wait (in milliseconds) after input before performing an automatic search.
    */
   searchDelay: PropTypes.number,
   /**
@@ -127,6 +127,7 @@ class Select extends React.Component {
    */
   handleChange(value) {
     if (this.props.value === undefined) {
+      console.trace();
       this.setState({ value });
     }
 

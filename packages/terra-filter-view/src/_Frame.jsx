@@ -14,15 +14,17 @@ import styles from './_Frame.module.scss';
 const cx = classNames.bind(styles);
 
 const Icon = <IconSearch />;
-
 const IncompleteIcon = <IconIncomplete />;
-
 
 const propTypes = {
   /**
    * Whether the select is disabled.
    */
   disabled: PropTypes.bool,
+  /**
+   * When true, will disable the auto-search.
+   */
+  disableAutoSearch: PropTypes.bool,
   /**
    * The select display.
    */
@@ -40,6 +42,10 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * The minimum number of characters to perform a search.
+   */
+  minimumSearchTextLength: PropTypes.number,
+  /**
    * Content to display when no search results are found.
    */
   noResultContent: PropTypes.node,
@@ -55,6 +61,10 @@ const propTypes = {
    * Callback function triggered when the frame gains focus.
    */
   onFocus: PropTypes.func,
+  /**
+   * A callback to indicate an invalid search.
+   */
+  onInvalidSearch: PropTypes.func,
   /**
    * Callback function triggered when the search criteria changes.
    */
@@ -130,6 +140,8 @@ class Frame extends React.Component {
     this.setInput = this.setInput.bind(this);
     this.getDisplay = this.getDisplay.bind(this);
     this.clearSearch = this.clearSearch.bind(this);
+    this.clearSearchTimeout = this.clearSearchTimeout.bind(this);
+    this.delaySearch = this.delaySearch.bind(this);
     this.openDropdown = this.openDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
@@ -295,12 +307,12 @@ class Frame extends React.Component {
    * @param {event} event - The mouse down event.
    */
   handleMouseDown(event) {
-    if (this.props.variant !== Variants.DEFAULT) {
-      // Preventing default events stops the search input from losing focus.
-      // The default variant has no search input therefore the mouse down gives the component focus.
-      event.preventDefault();
+    // Preventing default events stops the search input from losing focus.
+    // The default variant has no search input therefore the mouse down gives the component focus.
+    event.preventDefault();
+    if (this.props.variant !== Variants.PERSISTENT) {
+      this.openDropdown();
     }
-    this.openDropdown();
   }
 
   /**
@@ -309,9 +321,10 @@ class Frame extends React.Component {
    */
   handleInputMouseDown(event) {
     event.stopPropagation();
-    this.openDropdown();
+    if (this.props.variant !== Variants.PERSISTENT) {
+      this.openDropdown();
+    }
   }
-
   /**
    * Handles changes to the search value.
    * @param {event} event - The input change event.
@@ -325,8 +338,28 @@ class Frame extends React.Component {
       searchValue,
     });
 
-    if (this.props.onSearch) {
+    if (!this.searchTimeout && !this.props.disableAutoSearch) {
+      this.searchTimeout = setTimeout(this.delaySearch, this.props.searchDelay);
+    }
+  }
+
+  delaySearch() {
+    this.clearSearchTimeout();
+
+    const searchValue = this.state.searchValue;
+
+    if (searchValue.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
       this.props.onSearch(searchValue);
+    } else if
+    (this.props.onInvalidSearch) {
+      this.props.onInvalidSearch(searchValue);
+    }
+  }
+
+  clearSearchTimeout() {
+    if (this.searchTimeout) {
+      clearTimeout(this.searchTimeout);
+      this.searchTimeout = null;
     }
   }
 
@@ -357,7 +390,10 @@ class Frame extends React.Component {
    * Toggles the dropdown open or closed.
    */
   toggleDropdown() {
-    if (this.state.isOpen && this.props.variant !== Variants.PERSISTENT) {
+    if (this.props.variant === Variants.PERSISTENT) {
+      return;
+    }
+    if (this.state.isOpen && this.props.variant) {
       this.closeDropdown();
     } else {
       this.openDropdown();
@@ -371,13 +407,13 @@ class Frame extends React.Component {
       dropdown,
       dropdownAttrs,
       isInvalid,
+      minimumSearchTextLength,
       noResultContent,
       onDeselect,
       onSearch,
       onSelect,
       optionFilter,
       placeholder,
-      searchDelay,
       variant,
       value,
       ...customProps
@@ -397,7 +433,7 @@ class Frame extends React.Component {
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
 
     return (
-      <div>
+      <div className={cx('select-parent')}>
         <div
           {...customProps}
           role="combobox"
@@ -457,7 +493,6 @@ class Frame extends React.Component {
                    onSelect: this.handleSelect,
                    onRequestClose: this.closeDropdown,
                    searchValue: this.state.searchValue,
-                   searchDelay,
                  })}
             </Dropdown>
           }
@@ -465,7 +500,7 @@ class Frame extends React.Component {
         {/* If variant is persistent, render the result box */}
         {variant === Variants.PERSISTENT &&
           <div className={cx('box')} id="box">
-            <Box>
+            <Box {...dropdownAttrs}>
               {dropdown({
                 value,
                 variant,

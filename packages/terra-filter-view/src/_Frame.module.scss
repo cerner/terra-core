@@ -1,10 +1,15 @@
 @import '~terra-mixins';
 
 :local {
+  .select-parent {
+    display: flex;
+    flex-direction: column;
+  }
+
   .select {
     background-color: var(--terra-select-background-color, #fff);
     color: var(--terra-select-color, #1c1f21);
-    display: flex;
+    display: inline-flex;
     font-size: var(--terra-select-font-size, 1.143rem);
     line-height: var(--terra-select-line-height, 1.5);
   }

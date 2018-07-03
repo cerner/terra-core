@@ -24,10 +24,10 @@ const DocPage = () => (
       },
     ]}
     propsTables={[
-        {
-          componentName: 'FilterView',
-          componentSrc: FilterViewSrc,
-        },
+      {
+        componentName: 'FilterView',
+        componentSrc: FilterViewSrc,
+      },
     ]}
   />
 );
