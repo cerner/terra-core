@@ -5,7 +5,7 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | commander | ^2.9.0 | -- | the complete solution for node.js command-line programs |
-| fs-extra | ^6.0.1 | | |
+| fs-extra | ^6.0.1 | -- | fs-extra contains methods that aren't included in the vanilla Node.js fs package. Such as mkdir -p, cp -r, and rm -rf. |
 | glob | ^7.1.1 | -- | a little globber |
 | intl | ^1.2.5 | -- | Polyfill the ECMA-402 Intl API (except collation) |
 | lodash.startcase | ^4.4.0 | -- | The lodash method `_.startCase` exported as a module. |

@@ -3,8 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
-### Fixed
+
+4.8.0 - (July 3, 2018)
+------------------
+### Added
 * Added CSS style to display the select box-shadow over the toggle border
+* Added CSS custom property to enable theming of disabled state arrow icon
+* Null check the active state before performing findByValue
 
 4.7.0 - (June 28, 2018)
 ------------------

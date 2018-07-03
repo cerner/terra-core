@@ -27,7 +27,6 @@
 | lerna | ^2.1.2 | -- | Tool for managing JavaScript projects with multiple packages |
 | link-parent-bin | ^0.2.0 | -- | [![Build Status](https://travis-ci.org/nicojs/node-link-parent-bin.svg?branch=master)](https://travis-ci.org/nicojs/node-link-parent-bin) |
 | load-json-file | ^5.0.0 | -- | Read and parse a JSON file |
-| nightwatch | ^0.9.19 | -- | Easy to use Node.js based End-to-End testing solution for browser based apps and websites, using the W3C WebDriver API. |
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
 | react-router-dom | ^4.0.0 | >=15 | DOM bindings for React Router |
