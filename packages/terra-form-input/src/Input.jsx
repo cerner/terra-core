@@ -41,6 +41,10 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
+   * Callback ref to pass into the input dom element.
+   */
+  refCallback: PropTypes.func,
+  /**
    * Whether the input is required.
    */
   required: PropTypes.bool,
@@ -62,6 +66,7 @@ const defaultProps = {
   onFocus: undefined,
   name: null,
   required: false,
+  refCallback: undefined,
   value: undefined,
 };
 
@@ -75,6 +80,7 @@ class Input extends React.Component {
       onChange,
       onFocus,
       name,
+      refCallback,
       required,
       value,
       ...customProps
@@ -100,6 +106,9 @@ class Input extends React.Component {
     return (
       <input
         {...attributes}
+        ref={(inputRef) => {
+          if (refCallback) refCallback(inputRef);
+        }}
         name={name}
         onBlur={onBlur}
         onChange={onChange}
