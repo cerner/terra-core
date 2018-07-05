@@ -1,6 +1,11 @@
 /* global browser, Terra, before */
 const viewports = Terra.viewports('medium');
 
+// Color contrast will be resolved in https://github.com/cerner/terra-core/issues/1670
+const ignoredA11y = {
+  'color-contrast': { enabled: false },
+};
+
 describe('Time Input Twelve Hour Mobile', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
@@ -8,6 +13,7 @@ describe('Time Input Twelve Hour Mobile', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/mobile'));
 
     Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11y });
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -75,6 +81,7 @@ describe('Time Input Twelve Hour Mobile', () => {
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     });
 
+    Terra.should.beAccessible({ viewports, rules: ignoredA11y });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -100,6 +107,7 @@ describe('Time Input Twelve Hour Mobile', () => {
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
     });
 
+    Terra.should.beAccessible({ viewports, rules: ignoredA11y });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',

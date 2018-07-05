@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Replace legacy Input with the new terra-form-input package
 
+### Fixed
+* Prevent modification of passed in attribute props.
+
 2.16.0 - (June 28, 2018)
 ------------------
 ### Changed

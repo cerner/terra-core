@@ -53,6 +53,281 @@ exports[`should ignore invalid times properly 1`] = `
 </div>
 `;
 
+exports[`should not have duplicate ids on the page when multiple date pickers are initialized 1`] = `
+<div>
+  <div
+    class="mobile-time-picker"
+  >
+    <input
+      name="time-input"
+      type="hidden"
+      value=""
+    />
+    <div
+      class="time-input-group"
+    >
+      <input
+        class="form-input time-input-hour"
+        id="terra-time-hour-time-input"
+        maxlength="2"
+        name="terra-time-hour-time-input"
+        pattern="\\\\d*"
+        placeholder="hh"
+        size="2"
+        value=""
+      />
+      <label
+        class="mobile-input-label"
+        for="terra-time-hour-time-input"
+      >
+        Hours
+      </label>
+    </div>
+    <span
+      class="time-spacer"
+    >
+      :
+    </span>
+    <div
+      class="time-input-group"
+    >
+      <input
+        class="form-input time-input-minute"
+        id="terra-time-minute-time-input"
+        maxlength="2"
+        name="terra-time-minute-time-input"
+        pattern="\\\\d*"
+        placeholder="mm"
+        size="2"
+        value=""
+      />
+      <label
+        class="mobile-input-label"
+        for="terra-time-minute-time-input"
+      >
+        Minutes
+      </label>
+    </div>
+    <div
+      class="button-group"
+    >
+      <button
+        aria-disabled="false"
+        aria-pressed="true"
+        class="button neutral button-group-button is-active meridiem-button"
+        type="button"
+      >
+        <span
+          class="text-only"
+        >
+          <span
+            class=""
+          >
+            a.m.
+          </span>
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-pressed="false"
+        class="button neutral button-group-button meridiem-button"
+        type="button"
+      >
+        <span
+          class="text-only"
+        >
+          <span
+            class=""
+          >
+            p.m.
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    class="mobile-time-picker"
+  >
+    <input
+      name="time-input-2"
+      type="hidden"
+      value=""
+    />
+    <div
+      class="time-input-group"
+    >
+      <input
+        class="form-input time-input-hour"
+        id="terra-time-hour-time-input-2"
+        maxlength="2"
+        name="terra-time-hour-time-input-2"
+        pattern="\\\\d*"
+        placeholder="hh"
+        size="2"
+        value=""
+      />
+      <label
+        class="mobile-input-label"
+        for="terra-time-hour-time-input-2"
+      >
+        Hours
+      </label>
+    </div>
+    <span
+      class="time-spacer"
+    >
+      :
+    </span>
+    <div
+      class="time-input-group"
+    >
+      <input
+        class="form-input time-input-minute"
+        id="terra-time-minute-time-input-2"
+        maxlength="2"
+        name="terra-time-minute-time-input-2"
+        pattern="\\\\d*"
+        placeholder="mm"
+        size="2"
+        value=""
+      />
+      <label
+        class="mobile-input-label"
+        for="terra-time-minute-time-input-2"
+      >
+        Minutes
+      </label>
+    </div>
+    <div
+      class="button-group"
+    >
+      <button
+        aria-disabled="false"
+        aria-pressed="true"
+        class="button neutral button-group-button is-active meridiem-button"
+        type="button"
+      >
+        <span
+          class="text-only"
+        >
+          <span
+            class=""
+          >
+            a.m.
+          </span>
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-pressed="false"
+        class="button neutral button-group-button meridiem-button"
+        type="button"
+      >
+        <span
+          class="text-only"
+        >
+          <span
+            class=""
+          >
+            p.m.
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    class="mobile-time-picker"
+  >
+    <input
+      name="time-input-3"
+      type="hidden"
+      value=""
+    />
+    <div
+      class="time-input-group"
+    >
+      <input
+        class="form-input time-input-hour"
+        id="terra-time-hour-time-input-3"
+        maxlength="2"
+        name="terra-time-hour-time-input-3"
+        pattern="\\\\d*"
+        placeholder="hh"
+        size="2"
+        value=""
+      />
+      <label
+        class="mobile-input-label"
+        for="terra-time-hour-time-input-3"
+      >
+        Hours
+      </label>
+    </div>
+    <span
+      class="time-spacer"
+    >
+      :
+    </span>
+    <div
+      class="time-input-group"
+    >
+      <input
+        class="form-input time-input-minute"
+        id="terra-time-minute-time-input-3"
+        maxlength="2"
+        name="terra-time-minute-time-input-3"
+        pattern="\\\\d*"
+        placeholder="mm"
+        size="2"
+        value=""
+      />
+      <label
+        class="mobile-input-label"
+        for="terra-time-minute-time-input-3"
+      >
+        Minutes
+      </label>
+    </div>
+    <div
+      class="button-group"
+    >
+      <button
+        aria-disabled="false"
+        aria-pressed="true"
+        class="button neutral button-group-button is-active meridiem-button"
+        type="button"
+      >
+        <span
+          class="text-only"
+        >
+          <span
+            class=""
+          >
+            a.m.
+          </span>
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        aria-pressed="false"
+        class="button neutral button-group-button meridiem-button"
+        type="button"
+      >
+        <span
+          class="text-only"
+        >
+          <span
+            class=""
+          >
+            p.m.
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`should render a 12 hour timepicker meridiem with buttons when viewed on a mobile device 1`] = `
 <div
   class="mobile-time-picker"
@@ -268,7 +543,6 @@ exports[`should render a disabled time input 1`] = `
   <Input
     className="time-input-hour desktop"
     disabled={true}
-    id="terra-time-minute-time-input"
     isInvalid={false}
     maxLength="2"
     name="terra-time-hour-time-input"
@@ -292,7 +566,6 @@ exports[`should render a disabled time input 1`] = `
   <Input
     className="time-input-minute desktop"
     disabled={true}
-    id="terra-time-minute-time-input"
     isInvalid={false}
     maxLength="2"
     name="terra-time-minute-time-input"

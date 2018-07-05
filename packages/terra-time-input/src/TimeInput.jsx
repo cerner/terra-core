@@ -516,6 +516,9 @@ class TimeInput extends React.Component {
       ...customProps
     } = this.props;
 
+    const instanceHoursAttrs = Object.assign({}, hourAttributes);
+    const instanceMinuteAttrs = Object.assign({}, minuteAttributes);
+
     // Using the state of hour and minute create a time in UTC represented in ISO 8601 format.
     let timeValue = '';
 
@@ -529,12 +532,12 @@ class TimeInput extends React.Component {
       timeValue = 'T'.concat(hour, ':', this.state.minute);
     }
 
-    if (hourAttributes && !hourAttributes.id) {
-      hourAttributes.id = 'terra-time-hour-'.concat(name);
+    if (!instanceHoursAttrs.id) {
+      instanceHoursAttrs.id = 'terra-time-hour-'.concat(name);
     }
 
-    if (minuteAttributes && !minuteAttributes.id) {
-      minuteAttributes.id = 'terra-time-minute-'.concat(name);
+    if (!instanceMinuteAttrs.id) {
+      instanceMinuteAttrs.id = 'terra-time-minute-'.concat(name);
     }
 
     return (
@@ -549,7 +552,7 @@ class TimeInput extends React.Component {
         <div className={cx('time-input-group')}>
           <Input
             {...inputAttributes}
-            {...hourAttributes}
+            {...instanceHoursAttrs}
             refCallback={(inputRef) => { this.hourInput = inputRef; }}
             className={cx('time-input-hour')}
             value={this.state.hour}
@@ -564,7 +567,7 @@ class TimeInput extends React.Component {
             pattern="\d*"
             disabled={disabled}
           />
-          <label htmlFor={hourAttributes.id} className={cx('mobile-input-label')}>
+          <label htmlFor={instanceHoursAttrs.id} className={cx('mobile-input-label')}>
             {this.context.intl.formatMessage({ id: 'Terra.timeInput.hours' })}
           </label>
         </div>
@@ -572,7 +575,7 @@ class TimeInput extends React.Component {
         <div className={cx('time-input-group')}>
           <Input
             {...inputAttributes}
-            {...minuteAttributes}
+            {...instanceMinuteAttrs}
             refCallback={(inputRef) => { this.minuteInput = inputRef; }}
             className={cx('time-input-minute')}
             value={this.state.minute}
@@ -587,7 +590,7 @@ class TimeInput extends React.Component {
             pattern="\d*"
             disabled={disabled}
           />
-          <label htmlFor={minuteAttributes.id} className={cx('mobile-input-label')}>
+          <label htmlFor={instanceMinuteAttrs.id} className={cx('mobile-input-label')}>
             {this.context.intl.formatMessage({ id: 'Terra.timeInput.minutes' })}
           </label>
         </div>
@@ -664,6 +667,7 @@ class TimeInput extends React.Component {
         <Input
           {...inputAttributes}
           {...minuteAttributes}
+          aria-label={this.context.intl.formatMessage({ id: 'Terra.timeInput.hours' })}
           refCallback={(inputRef) => { this.hourInput = inputRef; }}
           className={cx('time-input-hour', 'desktop', { 'initial-focus': this.state.hourInitialFocused })}
           type="text"
@@ -684,6 +688,7 @@ class TimeInput extends React.Component {
           {...inputAttributes}
           {...minuteAttributes}
           refCallback={(inputRef) => { this.minuteInput = inputRef; }}
+          aria-label={this.context.intl.formatMessage({ id: 'Terra.timeInput.minutes' })}
           className={cx('time-input-minute', 'desktop', { 'initial-focus': this.state.minuteInitialFocused })}
           type="text"
           value={this.state.minute}
