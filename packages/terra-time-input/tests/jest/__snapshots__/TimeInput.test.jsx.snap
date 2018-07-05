@@ -10,6 +10,7 @@ exports[`should ignore invalid times properly 1`] = `
     value=""
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={false}
     isInvalid={false}
@@ -33,6 +34,7 @@ exports[`should ignore invalid times properly 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={false}
     isInvalid={false}
@@ -488,6 +490,7 @@ exports[`should render a default time input 1`] = `
     value=""
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={false}
     isInvalid={false}
@@ -511,6 +514,7 @@ exports[`should render a default time input 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={false}
     isInvalid={false}
@@ -541,6 +545,7 @@ exports[`should render a disabled time input 1`] = `
     value=""
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={true}
     isInvalid={false}
@@ -564,6 +569,7 @@ exports[`should render a disabled time input 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={true}
     isInvalid={false}
@@ -594,6 +600,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     value=""
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={false}
     isInvalid={false}
@@ -617,6 +624,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={false}
     isInvalid={false}
@@ -692,6 +700,7 @@ exports[`should render a time input with a default time 1`] = `
     value="T10:45"
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={false}
     isInvalid={false}
@@ -715,6 +724,7 @@ exports[`should render a time input with a default time 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={false}
     isInvalid={false}
@@ -745,6 +755,7 @@ exports[`should render a time input with custom attributes 1`] = `
     value=""
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={false}
     id="terra-time-input"
@@ -769,6 +780,7 @@ exports[`should render a time input with custom attributes 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={false}
     id="terra-time-input"
@@ -800,6 +812,7 @@ exports[`should render a time input with onBlur 1`] = `
     value=""
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={false}
     isInvalid={false}
@@ -823,6 +836,7 @@ exports[`should render a time input with onBlur 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={false}
     isInvalid={false}
@@ -853,6 +867,7 @@ exports[`should render a time input with onChange 1`] = `
     value=""
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={false}
     isInvalid={false}
@@ -876,6 +891,7 @@ exports[`should render a time input with onChange 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={false}
     isInvalid={false}
@@ -906,6 +922,7 @@ exports[`should render a time input with onInputFocus 1`] = `
     value=""
   />
   <Input
+    aria-label="Hours"
     className="time-input-hour desktop"
     disabled={false}
     isInvalid={false}
@@ -929,6 +946,7 @@ exports[`should render a time input with onInputFocus 1`] = `
     :
   </span>
   <Input
+    aria-label="Minutes"
     className="time-input-minute desktop"
     disabled={false}
     isInvalid={false}
