@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed usage of CSS `initial` value because Internet Explorer does not support it
 
 3.10.0 - (July 3, 2018)
 ------------------
