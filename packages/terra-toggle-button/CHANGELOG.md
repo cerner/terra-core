@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Accessibility in Animated Test example
 
 2.15.0 - (June 28, 2018)
 ------------------
