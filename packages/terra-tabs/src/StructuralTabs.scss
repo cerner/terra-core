@@ -140,7 +140,7 @@
     .tab-menu:focus.is-active {
       background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
       background-image: var(--terra-tabs-structural-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
-      color: var(--terra-tabs-structural-active-focus-color, #000);
+      color: #000;
       color: var(--terra-tabs-structural-active-focus-color, initial);
       position: relative;
       z-index: 1;
@@ -156,7 +156,7 @@
 
     .tab-menu:focus {
       background-color: var(--terra-tabs-structural-focus-background-color, #fff);
-      color: var(--terra-tabs-structural-focus-color, #000);
+      color: #000;
       color: var(--terra-tabs-structural-focus-color, initial);
       outline: none;
 
