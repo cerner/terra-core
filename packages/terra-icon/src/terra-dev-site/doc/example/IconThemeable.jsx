@@ -161,6 +161,10 @@ import IconFitScale from 'terra-icon/lib/icon/IconFitScale';
 import IconSecondaryProvider from 'terra-icon/lib/icon/IconSecondaryProvider';
 import IconPartiallyMet from 'terra-icon/lib/icon/IconPartiallyMet';
 import IconSimulation from 'terra-icon/lib/icon/IconSimulation';
+import IconCollapseRow from 'terra-icon/lib/icon/IconCollapseRow';
+import IconExpandRow from 'terra-icon/lib/icon/IconExpandRow';
+import IconDoubleChevronLeft from 'terra-icon/lib/icon/IconDoubleChevronLeft';
+import IconDoubleChevronRight from 'terra-icon/lib/icon/IconDoubleChevronRight';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
 import IconPlusSymbol from 'terra-icon/lib/icon/IconPlusSymbol';
@@ -1608,6 +1612,42 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold' }}>
           <code>
             import IconSimulation from 'terra-icon/lib/icon/IconSimulation';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconCollapseRow height='2em' width='2em' /></td>
+        <td>collapseRow</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconCollapseRow from 'terra-icon/lib/icon/IconCollapseRow';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconExpandRow height='2em' width='2em' /></td>
+        <td>expandRow</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconExpandRow from 'terra-icon/lib/icon/IconExpandRow';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconDoubleChevronLeft height='2em' width='2em' /></td>
+        <td>doubleChevronLeft</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDoubleChevronLeft from 'terra-icon/lib/icon/IconDoubleChevronLeft';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconDoubleChevronRight height='2em' width='2em' /></td>
+        <td>doubleChevronRight</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDoubleChevronRight from 'terra-icon/lib/icon/IconDoubleChevronRight';
           </code>
         </td>
       </tr>
