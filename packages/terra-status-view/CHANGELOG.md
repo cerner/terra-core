@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed words being unnecessarily broken
 
 2.16.0 - (June 28, 2018)
 ------------------
