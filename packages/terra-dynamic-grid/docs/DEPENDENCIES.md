@@ -3,7 +3,7 @@
 ## dependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| aphrodite | ^2.2.2 | | |
+| aphrodite | ^2.2.2 | -- | Framework-agnostic CSS-in-JS with support for server-side rendering, browser prefixing, and minimum CSS generation |
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |

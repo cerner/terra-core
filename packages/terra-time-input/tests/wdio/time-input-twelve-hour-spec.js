@@ -8,7 +8,6 @@ describe('Time Input Twelve Hour', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default'));
 
     Terra.should.matchScreenshot({ viewports });
-
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {

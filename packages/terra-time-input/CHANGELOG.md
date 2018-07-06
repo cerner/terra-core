@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Prevent modification of passed in attribute props.
 
 2.16.0 - (June 28, 2018)
 ------------------
