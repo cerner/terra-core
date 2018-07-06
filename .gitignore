@@ -56,6 +56,7 @@ target
 lib
 props-table
 **/__snapshots__/screen
+**/__snapshots__/latest
 **/__snapshots__/diff
 errorScreenshots
 .DS_Store
