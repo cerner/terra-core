@@ -32,7 +32,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  title: '',
+  title: undefined,
   onClick: undefined,
   isOpen: false,
   level: 2,
@@ -54,7 +54,6 @@ class ListSectionHeader extends React.Component {
       if (isRecognizedKeyPress(event) && !this.state.isActive) {
         this.setState({ isActive: true });
 
-        // Call the same function the user provides for a click event
         if (this.props.onClick) {
           this.props.onClick(event);
         }

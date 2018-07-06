@@ -1,6 +1,6 @@
-# Single Select List
+# Single Select List with Sections
 
-The Terra Single Select List is a structural component to arrange content within list/listitems with a single, selectable item.
+The Terra Single Select List with Sections is a structural component to arrange list of items within sections with a single, selectable item across multiple sections.
 
 ## Usage
 

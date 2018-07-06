@@ -59,7 +59,7 @@ class MultiSelectList extends React.Component {
 
   handleOnChange(event, index) {
     const { children, maxSelectionCount } = this.props;
-    if (SelectableList.Utils.shouldHandleMultiSelect(children, maxSelectionCount, this.state.selectedIndexes, index, this.props.hasSections)) {
+    if (SelectableList.Utils.shouldHandleMultiSelect(children, maxSelectionCount, this.state.selectedIndexes, index, this.state.hasSections)) {
       event.preventDefault();
       const newIndexes = SelectableList.Utils.updatedMultiSelectedIndexes(this.state.selectedIndexes, index);
       this.setState(prevState => ({
