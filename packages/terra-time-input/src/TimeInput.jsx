@@ -636,6 +636,7 @@ class TimeInput extends React.Component {
     delete customProps.onInputFocus;
 
     const timeInputClassNames = cx([
+      { 'disabled': disabled },
       'time-input',
       { 'is-focused': this.state.isFocused },
       customProps.className,
