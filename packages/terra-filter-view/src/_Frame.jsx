@@ -94,7 +94,7 @@ const propTypes = {
    */
   variant: PropTypes.oneOf([
     Variants.DROPDOWN,
-    Variants.PERSISTENT,
+    Variants.LIST,
   ]),
 };
 
@@ -157,7 +157,7 @@ class Frame extends React.Component {
 
   componentDidMount() {
     // Populate the persistent result box
-    if (this.props.variant === Variants.PERSISTENT) {
+    if (this.props.variant === Variants.LIST) {
       this.setState({ isOpen: true });
     }
   }
@@ -207,7 +207,7 @@ class Frame extends React.Component {
    * Closes the dropdown.
    */
   closeDropdown() {
-    if (this.props.variant !== Variants.PERSISTENT) {
+    if (this.props.variant !== Variants.LIST) {
       this.setState({
         isAbove: false,
         isFocused: document.activeElement === this.input || document.activeElement === this.select,
@@ -310,7 +310,7 @@ class Frame extends React.Component {
     // Preventing default events stops the search input from losing focus.
     // The default variant has no search input therefore the mouse down gives the component focus.
     event.preventDefault();
-    if (this.props.variant !== Variants.PERSISTENT) {
+    if (this.props.variant !== Variants.LIST) {
       this.openDropdown();
     }
   }
@@ -321,7 +321,7 @@ class Frame extends React.Component {
    */
   handleInputMouseDown(event) {
     event.stopPropagation();
-    if (this.props.variant !== Variants.PERSISTENT) {
+    if (this.props.variant !== Variants.LIST) {
       this.openDropdown();
     }
   }
@@ -369,11 +369,11 @@ class Frame extends React.Component {
    * @param {ReactNode} option - The option that was selected.
    */
   handleSelect(value, option) {
-    if (this.props.variant !== Variants.PERSISTENT) {
+    if (this.props.variant !== Variants.LIST) {
       this.setState({
         searchValue: '',
         hasSearchChanged: false,
-        isOpen: this.props.variant === Variants.PERSISTENT,
+        isOpen: this.props.variant === Variants.LIST,
       });
     } else {
       this.setState({
@@ -390,7 +390,7 @@ class Frame extends React.Component {
    * Toggles the dropdown open or closed.
    */
   toggleDropdown() {
-    if (this.props.variant === Variants.PERSISTENT) {
+    if (this.props.variant === Variants.LIST) {
       return;
     }
     if (this.state.isOpen && this.props.variant) {
@@ -410,10 +410,12 @@ class Frame extends React.Component {
       minimumSearchTextLength,
       noResultContent,
       onDeselect,
+      onInvalidSearch,
       onSearch,
       onSelect,
       optionFilter,
       placeholder,
+      searchDelay,
       variant,
       value,
       ...customProps
@@ -498,7 +500,7 @@ class Frame extends React.Component {
           }
         </div>
         {/* If variant is persistent, render the result box */}
-        {variant === Variants.PERSISTENT &&
+        {variant === Variants.LIST &&
           <div className={cx('box')} id="box">
             <Box {...dropdownAttrs}>
               {dropdown({

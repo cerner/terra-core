@@ -69,7 +69,7 @@ const propTypes = {
    */
   variant: PropTypes.oneOf([
     Variants.DROPDOWN,
-    Variants.PERSISTENT,
+    Variants.LIST,
   ]),
 };
 
@@ -87,7 +87,7 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   value: undefined,
-  variant: Variants.PERSISTENT,
+  variant: Variants.LIST,
 };
 
 const contextTypes = {
@@ -132,6 +132,7 @@ class Select extends React.Component {
     }
 
     if (this.props.onChange) {
+      console.log('hello');
       this.props.onChange(value);
     }
   }

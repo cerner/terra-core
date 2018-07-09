@@ -7,34 +7,20 @@ const propTypes = {
      * The content of the dropdown.
   */
   children: PropTypes.node,
-  /**
-     * Callback function triggered when the dropdown resizes.
-  */
-  onResize: PropTypes.func,
-  /**
-     * Callback function triggered for setting a ref to the dropdown.
-  */
-  refCallback: PropTypes.func,
-  /**
-     * The attachment target.
-  */
-  target: PropTypes.object,
 };
 
-class Box extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const defaultProps = {
+  children: undefined,
+};
 
-  render() {
-    return (
-      <Portal node={document && document.getElementById('box')}>
-        {this.props.children}
-      </Portal>
-    );
-  }
-}
+const Box = props =>
+  (
+    <Portal node={document && document.getElementById('box')}>
+      {props.children}
+    </Portal>
+  );
 
 Box.propTypes = propTypes;
+Box.defaultProps = defaultProps;
 
 export default Box;

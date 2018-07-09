@@ -14,7 +14,7 @@ const KeyCodes = {
 
 const Variants = {
   DROPDOWN: 'dropdown',
-  PERSISTENT: 'persistent',
+  LIST: 'list',
 };
 
 export { KeyCodes, Variants };

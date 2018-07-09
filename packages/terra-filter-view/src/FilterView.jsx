@@ -71,7 +71,7 @@ const propTypes = {
    */
   variant: PropTypes.oneOf([
     Variants.DROPDOWN,
-    Variants.PERSISTENT,
+    Variants.LIST,
   ]),
 };
 
@@ -112,7 +112,6 @@ function FilterView(props) {
     children,
     defaultValue,
     disableAutoSearch,
-    isBlock,
     onChange,
     onSelect,
     placeholder,

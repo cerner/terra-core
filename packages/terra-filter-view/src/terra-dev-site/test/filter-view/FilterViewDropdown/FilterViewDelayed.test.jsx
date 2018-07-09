@@ -1,5 +1,5 @@
 import React from 'react';
-import FilterView from '../../../FilterView';
+import FilterView from '../../../../FilterView';
 
 class FilterViewDelayed extends React.Component {
   constructor() {
