@@ -33,7 +33,6 @@ import IconErrorDark from 'terra-icon/lib/icon/IconErrorDark';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconErrorLowLight from 'terra-icon/lib/icon/IconErrorLowLight';
 import IconDoNotDisturb from 'terra-icon/lib/icon/IconDoNotDisturb';
-import IconIncompleteLowLight from 'terra-icon/lib/icon/IconIncompleteLowLight';
 import IconIncompleteInverse from 'terra-icon/lib/icon/IconIncompleteInverse';
 import IconIncompleteInverseLowLight from 'terra-icon/lib/icon/IconIncompleteInverseLowLight';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
@@ -361,15 +360,6 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold' }}>
           <code>
             import IconDoNotDisturb from 'terra-icon/lib/icon/IconDoNotDisturb';
-          </code>
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconIncompleteLowLight height='2em' width='2em' /></td>
-        <td>incomplete_low_light</td>
-        <td style={{ fontWeight: 'bold' }}>
-          <code>
-            import IconIncompleteLowLight from 'terra-icon/lib/icon/IconIncompleteLowLight';
           </code>
         </td>
       </tr>
