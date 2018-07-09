@@ -398,11 +398,13 @@ class Frame extends React.Component {
     } else {
       this.openDropdown();
     }
+    this.delaySearch();
   }
 
   render() {
     const {
       disabled,
+      disableAutoSearch,
       display,
       dropdown,
       dropdownAttrs,

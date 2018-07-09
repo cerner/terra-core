@@ -162,4 +162,32 @@ describe('Filter View', () => {
     Terra.should.matchScreenshot('with text');
     Terra.should.beAccessible();
   });
+  describe('Auto Search Disabled', () => {
+    before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-disabled-search-field'));
+
+    it('should enter a search term', () => {
+      browser.setValue('input', 'Lore');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
+    });
+
+    Terra.should.matchScreenshot('text before search');
+
+    it('should search with the button', () => {
+      browser.click('button');
+      // Ensure button on hover styling is disabled
+      browser.click('h3');
+    });
+
+    Terra.should.matchScreenshot('searched text');
+
+    it('should search using enter', () => {
+      browser.addValue('input', ' is spelled correctly');
+      browser.keys('Enter');
+    });
+
+    Terra.should.matchScreenshot('extended search');
+  });
 });

@@ -127,12 +127,10 @@ class Select extends React.Component {
    */
   handleChange(value) {
     if (this.props.value === undefined) {
-      console.trace();
       this.setState({ value });
     }
 
     if (this.props.onChange) {
-      console.log('hello');
       this.props.onChange(value);
     }
   }

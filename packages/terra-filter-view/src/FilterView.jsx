@@ -111,7 +111,6 @@ function FilterView(props) {
   const {
     children,
     defaultValue,
-    disableAutoSearch,
     onChange,
     onSelect,
     placeholder,
