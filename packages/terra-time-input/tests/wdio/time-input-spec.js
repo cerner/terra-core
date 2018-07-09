@@ -7,6 +7,7 @@ describe('Time Input', () => {
   describe('Default with no time provided', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/time-input/default'));
 
+    Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -43,12 +44,15 @@ describe('Time Input', () => {
 
   describe('Default with time provided', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/time-input/default-time'));
+
+    Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Invalid time provided', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/time-input/invalid-time'));
 
+    Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
@@ -58,6 +62,7 @@ describe('Time Input', () => {
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     });
 
+    Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -83,6 +88,7 @@ describe('Time Input', () => {
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
     });
 
+    Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
