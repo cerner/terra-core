@@ -537,7 +537,7 @@ exports[`should render a default time input 1`] = `
 
 exports[`should render a disabled time input 1`] = `
 <div
-  className="time-input"
+  className="disabled time-input"
 >
   <input
     name="time-input"
