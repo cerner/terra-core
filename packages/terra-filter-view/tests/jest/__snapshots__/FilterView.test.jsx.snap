@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilterView renders a FilterView with a default value 1`] = `
+exports[`Snapshots renders a default FilterView 1`] = `
 <Select
   className="filter-view"
-  defaultValue="Test"
+  disableAutoSearch={false}
   disabled={false}
   id="search"
   isInvalid={false}
@@ -13,9 +13,24 @@ exports[`FilterView renders a FilterView with a default value 1`] = `
 />
 `;
 
-exports[`FilterView renders a FilterView with a placeholder 1`] = `
+exports[`Snapshots renders a default FilterView with a default value 1`] = `
 <Select
   className="filter-view"
+  defaultValue="Test"
+  disableAutoSearch={false}
+  disabled={false}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`Snapshots renders a default FilterView with a placeholder 1`] = `
+<Select
+  className="filter-view"
+  disableAutoSearch={false}
   disabled={false}
   id="search"
   isInvalid={false}
@@ -26,22 +41,10 @@ exports[`FilterView renders a FilterView with a placeholder 1`] = `
 />
 `;
 
-exports[`FilterView renders a default FilterView 1`] = `
+exports[`Snapshots renders a disabled default FilterView 1`] = `
 <Select
   className="filter-view"
-  disabled={false}
-  id="search"
-  isInvalid={false}
-  minimumSearchTextLength={2}
-  searchDelay={250}
-  variant="dropdown"
-/>
-`;
-
-exports[`FilterView renders a disabled FilterView with a default value 1`] = `
-<Select
-  className="filter-view"
-  defaultValue="Test"
+  disableAutoSearch={false}
   disabled={true}
   id="search"
   isInvalid={false}
@@ -51,14 +54,84 @@ exports[`FilterView renders a disabled FilterView with a default value 1`] = `
 />
 `;
 
-exports[`FilterView renders a persistent FilterView 1`] = `
+exports[`Snapshots renders a disabled default FilterView with a default value 1`] = `
 <Select
   className="filter-view"
+  defaultValue="default"
+  disableAutoSearch={false}
+  disabled={true}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`Snapshots renders a disabled list FilterView 1`] = `
+<Select
+  className="filter-view"
+  disableAutoSearch={false}
+  disabled={true}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a disabled list FilterView with a default value 1`] = `
+<Select
+  className="filter-view"
+  defaultValue="default"
+  disableAutoSearch={false}
+  disabled={true}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView 1`] = `
+<Select
+  className="filter-view"
+  disableAutoSearch={false}
   disabled={false}
   id="search"
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  variant="persistent"
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView with a default value 1`] = `
+<Select
+  className="filter-view"
+  defaultValue="Test"
+  disableAutoSearch={false}
+  disabled={false}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView with a placeholder 1`] = `
+<Select
+  className="filter-view"
+  disableAutoSearch={false}
+  disabled={false}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  placeholder="Test"
+  searchDelay={250}
+  variant="list"
 />
 `;

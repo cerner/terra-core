@@ -221,7 +221,7 @@ class MenuUtil {
       return selected === undefined ? options[0].props.value : selected.props.value;
     } else if (searchValue !== state.searchValue) {
       return options[0].props.value;
-    } else if (MenuUtil.findByValue(options, active)) {
+    } else if (active !== null && MenuUtil.findByValue(options, active)) {
       return active;
     }
     return options[0].props.value;
@@ -250,14 +250,8 @@ class MenuUtil {
    * @param {array} children - The menu children.
    * @return {boolean} - True if the no results content should show..
    */
-  static shouldShowNoResults(props, children, searchValue) {
-    const { variant } = props;
-
-    if (variant !== Variants.TAG && variant !== Variants.COMBOBOX) {
-      // Avoid showing no results on empty string
-      return children.length === 0 && searchValue;
-    }
-    return false;
+  static shouldShowNoResults(props, children) {
+    return children.length === 0;
   }
 }
 

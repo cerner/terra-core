@@ -1,0 +1,327 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Frame should render a disabled dropdown variant 1`] = `
+<div
+  className="select-parent"
+>
+  <div
+    aria-disabled={true}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select dropdown is-disabled"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={true}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+      />
+    </div>
+    <Button
+      className="button"
+      icon={
+        <IconSearch
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onMouseDown={[Function]}
+      text="Search"
+      type="button"
+      variant="neutral"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a disabled list variant 1`] = `
+<div
+  className="select-parent"
+>
+  <div
+    aria-disabled={true}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select list is-disabled"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={true}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+      />
+    </div>
+    <Button
+      className="button"
+      icon={
+        <IconSearch
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onMouseDown={[Function]}
+      text="Search"
+      type="button"
+      variant="neutral"
+    />
+  </div>
+  <div
+    className="box"
+    id="box"
+  >
+    <Box />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a dropdown variant 1`] = `
+<div
+  className="select-parent"
+>
+  <div
+    aria-disabled={false}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select dropdown"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+      />
+    </div>
+    <Button
+      className="button"
+      icon={
+        <IconSearch
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onMouseDown={[Function]}
+      text="Search"
+      type="button"
+      variant="neutral"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a dropdown variant with a placeholder 1`] = `
+<div
+  className="select-parent"
+>
+  <div
+    aria-disabled={false}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select dropdown"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        placeholder="Placeholder"
+      />
+    </div>
+    <Button
+      className="button"
+      icon={
+        <IconSearch
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onMouseDown={[Function]}
+      text="Search"
+      type="button"
+      variant="neutral"
+    />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a list variant 1`] = `
+<div
+  className="select-parent"
+>
+  <div
+    aria-disabled={false}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select list"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+      />
+    </div>
+    <Button
+      className="button"
+      icon={
+        <IconSearch
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onMouseDown={[Function]}
+      text="Search"
+      type="button"
+      variant="neutral"
+    />
+  </div>
+  <div
+    className="box"
+    id="box"
+  >
+    <Box />
+  </div>
+</div>
+`;
+
+exports[`Frame should render a list variant with a placeholder 1`] = `
+<div
+  className="select-parent"
+>
+  <div
+    aria-disabled={false}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select list"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        placeholder="Placeholder"
+      />
+    </div>
+    <Button
+      className="button"
+      icon={
+        <IconSearch
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={true}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onMouseDown={[Function]}
+      text="Search"
+      type="button"
+      variant="neutral"
+    />
+  </div>
+  <div
+    className="box"
+    id="box"
+  >
+    <Box />
+  </div>
+</div>
+`;

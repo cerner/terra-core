@@ -46,7 +46,7 @@ const propTypes = {
    */
   variant: PropTypes.oneOf([
     Variants.DROPDOWN,
-    Variants.PERSISTENT,
+    Variants.LIST,
   ]).isRequired,
 };
 
@@ -79,7 +79,7 @@ class Menu extends React.Component {
     const { searchValue, noResultContent } = props;
     const children = Util.filter(props.children, props.searchValue, props.optionFilter);
 
-    if (Util.shouldShowNoResults(props, children, searchValue)) {
+    if (Util.shouldShowNoResults(props, children)) {
       children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
     }
 
@@ -273,7 +273,7 @@ class Menu extends React.Component {
         role="listbox"
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
-        aria-activedescendant={`terra-select-option-${this.state.active}`}
+        {...(this.state.active !== null) && { 'aria-activedescendant': `terra-select-option-${this.state.active}` }}
       >
         {this.clone(this.state.children)}
       </ul>

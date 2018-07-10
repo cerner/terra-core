@@ -1,3 +1,4 @@
 {
-  "Terra.searchField.search": "Buscar"
+  "Terra.searchField.search": "Buscar",
+  "Terra.form.select.noResults": "No se encontró ningún resultado que coincida para \"{text}\""
 }

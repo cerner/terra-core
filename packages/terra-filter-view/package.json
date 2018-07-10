@@ -28,8 +28,12 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
+    "react-lifecycles-compat": "^3.0.4",
+    "react-portal": "^4.1.5",
+    "terra-base": "^3.14.0",
     "terra-button": "^2.15.0",
     "terra-doc-template": "^1.2.0",
+    "terra-hookshot": "^4.6.0",
     "terra-icon": "^2.15.0"
   },
   "scripts": {

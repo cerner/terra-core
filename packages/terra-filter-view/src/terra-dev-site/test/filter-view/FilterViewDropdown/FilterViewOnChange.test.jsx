@@ -13,7 +13,6 @@ class FilterViewCallback extends React.Component {
   }
 
   onChange(text) {
-    console.log('hello');
     let searchValue = text;
     if (text && text.length > 0 && /\d/.test(text)) {
       searchValue = text.substring(0, text.length - 1);

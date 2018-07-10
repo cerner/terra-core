@@ -12,8 +12,8 @@ import OptionSrc from '!raw-loader!../../../../src/_Option';
 // Example Files
 import DefaultFilterView from '../example/DefaultFilterView';
 import DefaultFilterViewSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultFilterView.jsx';
-import PersistentFilterView from '../example/PersistentFilterView.jsx';
-import PersistentFilterViewSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/PersistentFilterView.jsx';
+import ListFilterView from '../example/ListFilterView';
+import ListFilterViewSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListFilterView.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -27,9 +27,9 @@ const DocPage = () => (
         source: DefaultFilterViewSrc,
       },
       {
-        title: 'Persistent Filter View',
-        example: <PersistentFilterView />,
-        source: PersistentFilterViewSrc,
+        title: 'List Filter View',
+        example: <ListFilterView />,
+        source: ListFilterViewSrc,
       },
     ]}
     propsTables={[

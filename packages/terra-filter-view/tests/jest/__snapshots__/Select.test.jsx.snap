@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should render a disabled dropdown variant 1`] = `
+<Frame
+  disabled={true}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Search"
+  value=""
+  variant="dropdown"
+/>
+`;
+
+exports[`Select should render a disabled list variant 1`] = `
+<Frame
+  disabled={true}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Search"
+  value=""
+  variant="list"
+/>
+`;
+
+exports[`Select should render a dropdown variant 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Search"
+  value=""
+  variant="dropdown"
+/>
+`;
+
+exports[`Select should render a dropdown variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Placeholder"
+  value=""
+  variant="dropdown"
+/>
+`;
+
+exports[`Select should render a list variant 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Search"
+  value=""
+  variant="list"
+/>
+`;
+
+exports[`Select should render a list variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="Placeholder"
+  value=""
+  variant="list"
+/>
+`;

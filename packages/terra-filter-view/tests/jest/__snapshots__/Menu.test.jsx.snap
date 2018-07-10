@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render a Menu with no results 1`] = `
+<ul
+  className="menu"
+  role="listbox"
+>
+  <NoResults
+    key=".0"
+  />
+</ul>
+`;
+
+exports[`Menu should render a dropdown Menu 1`] = `
+<ul
+  className="menu"
+  role="listbox"
+>
+  <NoResults
+    key=".0"
+  />
+</ul>
+`;

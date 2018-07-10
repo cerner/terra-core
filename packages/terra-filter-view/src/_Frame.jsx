@@ -155,12 +155,12 @@ class Frame extends React.Component {
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
   }
 
-  componentDidMount() {
-    // Populate the persistent result box
-    if (this.props.variant === Variants.LIST) {
-      this.setState({ isOpen: true });
-    }
-  }
+  /* componentDidMount() { */
+  /*   // Populate the persistent result box */
+  /*   if (this.props.variant === Variants.LIST) { */
+  /*     this.setState({ isOpen: true }); */
+  /*   } */
+  /* } */
 
   componentDidUpdate(previousProps, previousState) {
     if (this.props.variant === Variants.DROPDOWN && Util.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
@@ -188,7 +188,7 @@ class Frame extends React.Component {
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
       'aria-label': 'search',
-      className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
+      className: cx('search-input'),
     };
 
     return <input {...inputAttrs} value={hasSearchChanged ? searchValue : display} />;
@@ -216,11 +216,6 @@ class Frame extends React.Component {
         hasSearchChanged: false,
         searchValue: '',
       });
-    }
-
-    // Tags and Comboboxes will select the current search value when the component loses focus.
-    if (Util.shouldAddOptionOnBlur(this.props, this.state)) {
-      this.props.onSelect(this.state.searchValue);
     }
   }
 
@@ -295,7 +290,7 @@ class Frame extends React.Component {
     } else if (keyCode === UP_ARROW || keyCode === DOWN_ARROW) {
       event.preventDefault();
       this.openDropdown();
-    } else if (keyCode === BACKSPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0) {
+    } else if (keyCode === BACKSPACE && !this.state.searchValue && value.length > 0) {
       this.props.onDeselect(value[value.length - 1]);
     } else if (keyCode === KeyCodes.ESCAPE) {
       this.closeDropdown();
@@ -450,7 +445,6 @@ class Frame extends React.Component {
           onFocus={this.handleFocus}
           onKeyDown={this.handleKeyDown}
           onMouseDown={this.handleMouseDown}
-          tabIndex={Util.tabIndex(this.props)}
           ref={(select) => { this.select = select; }}
         >
           <div className={cx('display')} onMouseDown={this.openDropdown} role="textbox">
@@ -505,7 +499,7 @@ class Frame extends React.Component {
         {variant === Variants.LIST &&
           <div className={cx('box')} id="box">
             <Box {...dropdownAttrs}>
-              {dropdown({
+              {dropdown && dropdown({
                 value,
                 variant,
                 onDeselect,

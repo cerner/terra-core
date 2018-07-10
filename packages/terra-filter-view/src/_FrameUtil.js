@@ -1,5 +1,3 @@
-import { Variants } from './_constants';
-
 class FrameUtil {
   /**
    * Returns the dropdown style.
@@ -38,14 +36,6 @@ class FrameUtil {
     };
   }
 
-  /**
-   * Determines whether the variant allows multiple selections.
-   * @param {Object} variant - The component props.
-   * @return {boolean} - True if the variant allows multiple selections.
-   */
-  static allowsMultipleSelections(props) {
-    return props.variant === Variants.MULTIPLE || props.variant === Variants.TAG;
-  }
 
   /**
    * Determines if the query is included in the component value.
@@ -58,19 +48,6 @@ class FrameUtil {
       return false;
     }
     return (props.value || []).indexOf(query) > -1;
-  }
-
-  /**
-   * Determines whether the search input should be hidden.
-   * @param {Object} props - The component props;
-   * @param {Object} state - The component state;
-   * @return {Boolean} - True if the search input should be hidden.
-   */
-  static shouldHideSearch(props, state) {
-    if (FrameUtil.allowsMultipleSelections(props)) {
-      return !state.isFocused && props.value && props.value.length > 0;
-    }
-    return false;
   }
 
   /**
@@ -87,39 +64,6 @@ class FrameUtil {
 
     const { bottom } = dropdown.getBoundingClientRect();
     return previousState.isOpen === false || bottom > window.innerHeight;
-  }
-
-  /**
-   * Determines whether the option should be added on blur.
-   * @param {Object} props - The component props.
-   * @param {Object} state - The component state;
-   * @return {boolean} - True if the option should be added.
-   */
-  static shouldAddOptionOnBlur(props, state) {
-    const { onSelect, value, variant } = props;
-    const { hasSearchChanged, searchValue } = state;
-
-    if ((variant === Variants.TAG || variant === Variants.COMBOBOX)
-        && (variant !== Variants.TAG || searchValue.trim().length > 0)
-        && hasSearchChanged
-        && onSelect
-        && (variant !== Variants.TAG || !FrameUtil.includes(props, searchValue))
-        && (variant !== Variants.COMBOBOX || value !== searchValue)) {
-      return true;
-    }
-    return false;
-  }
-
-  /**
-   * Determines the variant appropriate container tab index.
-   * @param {Object} props - The component props.
-   * @return {string} - A tab index.
-   */
-  static tabIndex(props) {
-    if (props.variant === Variants.DEFAULT && !props.disabled) {
-      return '0';
-    }
-    return '-1';
   }
 }
 

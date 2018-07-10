@@ -1,3 +1,4 @@
 {
-  "Terra.searchField.search": "Search"
+  "Terra.searchField.search": "Search",
+  "Terra.form.select.noResults": "Aucun résultat correspondant pour \"{text}\""
 }

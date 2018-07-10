@@ -163,7 +163,7 @@ describe('Filter View', () => {
     Terra.should.beAccessible();
   });
   describe('Auto Search Disabled', () => {
-    before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-disabled-search-field'));
+    before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-auto-search-disabled'));
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lore');
@@ -177,8 +177,6 @@ describe('Filter View', () => {
 
     it('should search with the button', () => {
       browser.click('button');
-      // Ensure button on hover styling is disabled
-      browser.click('h3');
     });
 
     Terra.should.matchScreenshot('searched text');
