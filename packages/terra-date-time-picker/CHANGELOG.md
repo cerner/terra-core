@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Use datepicker that consumes new form inputs.
 
 2.21.0 - (July 10, 2018)
 ------------------
