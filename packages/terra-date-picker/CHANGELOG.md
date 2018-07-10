@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Replaced the legacy form input with the new terra-form-input package
 
+2.21.0 - (July 10, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.20.0 - (July 3, 2018)
 ------------------
 ### Changed

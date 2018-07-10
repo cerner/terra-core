@@ -85,6 +85,20 @@ describe('Select', () => {
 
       Terra.should.matchScreenshot({ viewports });
     });
+
+    describe('should open the dropdown and honor the set max height', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/max-height'));
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+
+      it('default should open the dropdown by clicking the toggle', () => {
+        browser.click('#maxHeight:last-child');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('open-dropdown-max-height', { viewports, selector: '#root' });
+    });
   });
 
   describe('Combobox Variant', () => {
