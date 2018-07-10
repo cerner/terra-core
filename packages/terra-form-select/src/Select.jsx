@@ -30,6 +30,10 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * The max height of the dropdown.
+   */
+  maxHeight: PropTypes.number,
+  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,

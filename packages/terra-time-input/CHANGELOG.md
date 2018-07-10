@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.17.0 - (July 10, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Prevent modification of passed in attribute props.
 

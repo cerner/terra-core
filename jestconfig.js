@@ -8,8 +8,9 @@ module.exports = {
     './jestsetup.js',
   ],
   testMatch: [
-    `${process.cwd()}/**/jest/**/(*.)(spec|test).js?(x)`,
+    '**/jest/**/(*.)(spec|test).js?(x)',
   ],
+  roots: [process.cwd()],
   snapshotSerializers: [
     './node_modules/enzyme-to-json/serializer',
   ],
