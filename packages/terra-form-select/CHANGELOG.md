@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.9.0 - (July 10, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 ### Added
 * A maxHeight prop for setting a custom max height of the dropdown
 
