@@ -19,6 +19,8 @@ import DisabledExample from '../example/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Disabled';
 import InvalidExample from '../example/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Invalid';
+import MaxHeightExample from '../example/MaxHeight';
+import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MaxHeight';
 import MultipleExample from '../example/Multiple';
 import MultipleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Multiple';
 import OptGroupExample from '../example/OptGroup';
@@ -83,6 +85,11 @@ const Index = () => (
       description: 'An OptGroup provides a way to group options together within the listbox. Can be applied to all select variants (default, search, combobox, multiple, tag).',
       example: <OptGroupExample />,
       source: OptGroupExampleSrc,
+    }, {
+      title: 'Custom Max Height',
+      description: 'An example of implementing a custom max height of the dropdown.',
+      example: <MaxHeightExample />,
+      source: MaxHeightExampleSrc,
     }, {
       title: 'Controlled',
       description: 'An example of implementing a controlled Select.',

@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.16.0 - (July 10, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Accessibility in Animated Test example
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import fs from 'fs';
 
-const outputfile = fs.createWriteStream('../../packages/terra-site/src/examples/icon/components/IconThemeable.jsx', { flags: 'w' });
+const outputfile = fs.createWriteStream('../../packages/terra-icon/src/terra-dev-site/doc/example/IconThemeable.jsx', { flags: 'w' });
 
 const generateIconAll = iconObjs => new Promise((resolve) => {
 
