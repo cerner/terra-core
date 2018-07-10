@@ -85,6 +85,10 @@ const propTypes = {
    * how long the component should wait (in milliseconds) after input before performing an automatic search.
    */
   searchDelay: PropTypes.number,
+    /**
+     * Controls whether or not all results are shown on initial load or after input focus.
+     */
+  showResultsInitially: PropTypes.bool,
   /**
    * The select value.
    */
@@ -303,7 +307,6 @@ class Frame extends React.Component {
    */
   handleMouseDown(event) {
     // Preventing default events stops the search input from losing focus.
-    // The default variant has no search input therefore the mouse down gives the component focus.
     event.preventDefault();
     if (this.props.variant !== Variants.LIST) {
       this.openDropdown();
@@ -385,6 +388,7 @@ class Frame extends React.Component {
    * Toggles the dropdown open or closed.
    */
   toggleDropdown() {
+    this.delaySearch();
     if (this.props.variant === Variants.LIST) {
       return;
     }
@@ -393,7 +397,6 @@ class Frame extends React.Component {
     } else {
       this.openDropdown();
     }
-    this.delaySearch();
   }
 
   render() {
@@ -413,6 +416,7 @@ class Frame extends React.Component {
       optionFilter,
       placeholder,
       searchDelay,
+      showResultsInitially,
       variant,
       value,
       ...customProps
@@ -512,6 +516,9 @@ class Frame extends React.Component {
             </Box>
           </div>
           }
+        {// Load initial results
+          // showResultsInitially && this.openDropdown()
+        }
       </div>
     );
   }

@@ -65,7 +65,7 @@ const propTypes = {
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
-   * The behavior of the select. One of `default`, `combobox`, `multiple`, `tag`, or `search`.
+   * The behavior of the Select. One of `dropdown` or `list`.
    */
   variant: PropTypes.oneOf([
     Variants.DROPDOWN,

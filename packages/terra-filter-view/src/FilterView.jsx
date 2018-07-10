@@ -63,6 +63,10 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
+   * Controls whether or not all results are shown on initial load or after input focus.
+   */
+  showResultsInitially: PropTypes.bool,
+  /**
    * How long the component should wait (in milliseconds) after input before performing an automatic search.
    */
   searchDelay: PropTypes.number,
@@ -90,6 +94,7 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   searchDelay: 250,
+  showResultsInitially: true,
   variant: 'dropdown',
 };
 
