@@ -31,6 +31,10 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * The max height of the dropdown.
+   */
+  maxHeight: PropTypes.number,
+  /**
    * Content to display when no search results are found.
    */
   noResultContent: PropTypes.node,
@@ -212,9 +216,9 @@ class Frame extends React.Component {
       return;
     }
 
-    const { dropdownAttrs } = this.props;
-    const { select, dropdown, state } = this;
-    this.setState(Util.dropdownPosition(dropdownAttrs, state, select, dropdown));
+    const { dropdownAttrs, maxHeight } = this.props;
+    const { select, dropdown } = this;
+    this.setState(Util.dropdownPosition(dropdownAttrs, select, dropdown, maxHeight));
   }
 
   /**
@@ -342,6 +346,7 @@ class Frame extends React.Component {
       dropdown,
       dropdownAttrs,
       isInvalid,
+      maxHeight,
       noResultContent,
       onDeselect,
       onSearch,
