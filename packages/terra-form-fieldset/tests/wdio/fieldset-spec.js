@@ -1,9 +1,9 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 const viewports = Terra.viewports('tiny', 'medium');
 
 describe('Fieldset', () => {
   describe('Populated', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-fieldset/form-fieldset/populated-fieldset'));
+    before(() => browser.url('/#/raw/tests/terra-form-fieldset/form-fieldset/populated-fieldset'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

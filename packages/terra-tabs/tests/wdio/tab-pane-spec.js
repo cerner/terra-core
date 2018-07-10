@@ -3,7 +3,7 @@
    before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
    describe('Text Only', () => {
-     beforeEach(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/text-only-tab-pane'));
+     before(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/text-only-tab-pane'));
      Terra.should.matchScreenshot();
      Terra.should.beAccessible();
      Terra.should.themeCombinationOfCustomProperties({
@@ -17,7 +17,7 @@
    });
 
    describe('Icon Only', () => {
-     beforeEach(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/icon-only-tab-pane'));
+     before(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/icon-only-tab-pane'));
      Terra.should.matchScreenshot();
      Terra.should.beAccessible();
      Terra.should.themeEachCustomProperty({
@@ -26,7 +26,7 @@
    });
 
    describe('Icon and Text', () => {
-     beforeEach(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/icon-and-text-tab-pane'));
+     before(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/icon-and-text-tab-pane'));
      Terra.should.matchScreenshot();
      Terra.should.beAccessible();
      Terra.should.themeEachCustomProperty({
@@ -35,13 +35,13 @@
    });
 
    describe('Custom Display', () => {
-     beforeEach(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/custom-display-tab-pane'));
+     before(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/custom-display-tab-pane'));
      Terra.should.matchScreenshot();
      Terra.should.beAccessible();
    });
 
    describe('Long text', () => {
-     beforeEach(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/long-text-tab-pane'));
+     before(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/long-text-tab-pane'));
      Terra.should.matchScreenshot({ selector: '#longText' });
      Terra.should.beAccessible();
    });

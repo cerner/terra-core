@@ -1,9 +1,9 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 const viewports = Terra.viewports('tiny', 'large');
 
 describe('Alert', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-alert/alert/default-alert'));
+    before(() => browser.url('/#/raw/tests/terra-alert/alert/default-alert'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
     Terra.should.themeEachCustomProperty({
@@ -12,13 +12,13 @@ describe('Alert', () => {
   });
 
   describe('Types', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-alert/alert/alert-type'));
+    before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-type'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
 
   describe('Titles', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-alert/alert/alert-title'));
+    before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-title'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
@@ -45,7 +45,7 @@ describe('Alert', () => {
   });
 
   describe('Custom', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-alert/alert/custom-alert'));
+    before(() => browser.url('/#/raw/tests/terra-alert/alert/custom-alert'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
@@ -60,7 +60,7 @@ describe('Alert', () => {
 
   viewports.forEach((viewport) => {
     describe('Action Button', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-alert/alert/alert-action-button');
         browser.setViewportSize(viewport);
       });
@@ -77,7 +77,7 @@ describe('Alert', () => {
 
 
     describe('Dismissible', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-alert/alert/alert-dismissible');
         browser.setViewportSize(viewport);
       });
