@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Replace legacy Input with the new terra-form-input package
+* Give desktop time input the same styles as terra-form-input.
 
 ### Fixed
 * Prevent modification of passed in attribute props.
