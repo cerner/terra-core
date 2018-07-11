@@ -47,7 +47,7 @@ class Paginator extends React.Component {
     return (event) => {
       event.preventDefault();
 
-      if (Number.isNaN(index)) {
+      if (Number.isNaN(Number(index))) {
         this.props.onPageChange(event.currentTarget.attributes['aria-label'].value);
 
         return false;
@@ -64,7 +64,7 @@ class Paginator extends React.Component {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
         event.preventDefault();
 
-        if (Number.isNaN(index)) {
+        if (Number.isNaN(Number(index))) {
           this.props.onPageChange(event.currentTarget.attributes['aria-label'].value);
 
           return false;

@@ -3,7 +3,7 @@ import ProgressBar from '../../src/ProgressBar';
 
 // Snapshot Tests
 it('should render a default component', () => {
-  const wrapper = shallow(<ProgressBar />);
+  const wrapper = shallow(<ProgressBar value={15} />);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -30,7 +30,7 @@ it('should render a ProgressBar component with gradient', () => {
 // Prop Tests
 describe('Default progress bar', () => {
   it('should have classes progressbar, small and zero fill value', () => {
-    const wrapper = shallow(<ProgressBar color="#8ccc62" />);
+    const wrapper = shallow(<ProgressBar value={0} color="#8ccc62" />);
     expect(wrapper.prop('className')).toContain('progress-bar small');
     expect(wrapper.prop('value')).toEqual(0);
   });
