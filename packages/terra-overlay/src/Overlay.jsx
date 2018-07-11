@@ -155,7 +155,7 @@ class Overlay extends React.Component {
       tabIndex set to 0 allows screen readers like VoiceOver to read overlay content when its displayed.
       Key events are added on mount.
     */
-    /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
+    /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-tabindex */
     const overlayComponent = (
       <div {...customProps} ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0">
         <div className={cx('content')}>
@@ -163,7 +163,7 @@ class Overlay extends React.Component {
         </div>
       </div>
     );
-    /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
+    /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-tabindex */
 
     if (isRelativeToContainer) {
       return overlayComponent;
