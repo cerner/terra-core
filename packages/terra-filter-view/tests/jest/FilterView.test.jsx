@@ -13,6 +13,11 @@ describe('Snapshots', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('renders a list FilterView with dropdownAttrs spread', () => {
+    const wrapper = shallow(<FilterView variant="list" dropdownAttrs={{ onClick: () => {} }} />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('renders a list FilterView without results initially', () => {
     const wrapper = shallow(<FilterView variant="list" showResultsInitially={false} />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();

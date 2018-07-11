@@ -146,6 +146,25 @@ exports[`Snapshots renders a list FilterView with a placeholder 1`] = `
 />
 `;
 
+exports[`Snapshots renders a list FilterView with dropdownAttrs spread 1`] = `
+<Select
+  className="filter-view"
+  disableAutoSearch={false}
+  disabled={false}
+  dropdownAttrs={
+    Object {
+      "onClick": [Function],
+    }
+  }
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  showResultsInitially={true}
+  variant="list"
+/>
+`;
+
 exports[`Snapshots renders a list FilterView without results initially 1`] = `
 <Select
   className="filter-view"

@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import classNames from 'classnames/bind';
-import Select from './Select';
 import { Variants } from './_constants';
-import styles from './FilterView.scss';
+import Select from './Select';
 
-const cx = classNames.bind(styles);
-
+const cx = classNames;
 
 const propTypes = {
   /**
