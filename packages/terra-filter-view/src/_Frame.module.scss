@@ -12,6 +12,7 @@
     display: inline-flex;
     font-size: var(--terra-select-font-size, 1.143rem);
     line-height: var(--terra-select-line-height, 1.5);
+    position: relative;
   }
 
   .default {
@@ -111,16 +112,12 @@
   }
 
   .clear-button {
-    background-color: Transparent;
-    border-style: none;
     color: #b9bbbc;
-    margin-left: -2.143rem; // -30px
-    margin-right: 0.143rem; // 2px
-
-    &:hover {
-      background-color: Transparent;
-      border-style: none;
-    }
+    margin-left: 0.3571428571rem;
+    margin-right: 0.3571428571rem;
+    position: absolute;
+    right: 32px;
+    top: 7px;
   }
 
   .is-disabled {

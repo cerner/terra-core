@@ -14,7 +14,6 @@ import styles from './_Frame.module.scss';
 const cx = classNames.bind(styles);
 
 const Icon = <IconSearch />;
-const IncompleteIcon = <IconIncomplete />;
 
 const propTypes = {
   /**
@@ -454,14 +453,10 @@ class Frame extends React.Component {
           </div>
           {/* Render a clear search button when text is present in input */}
           {this.state.searchValue &&
-            <Button
-              className={cx('clear-button')}
-              icon={IncompleteIcon}
-              text={'Clear'}
-              onClick={this.clearSearch}
-              isIconOnly
-              isCompact
-            />
+          <IconIncomplete
+            className={cx('clear-button')}
+            onClick={this.clearSearch}
+          />
           }
           <Button
             className={cx('button')}
