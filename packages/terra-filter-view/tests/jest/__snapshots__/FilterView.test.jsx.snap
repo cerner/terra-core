@@ -9,6 +9,7 @@ exports[`Snapshots renders a default FilterView 1`] = `
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
+  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -23,6 +24,7 @@ exports[`Snapshots renders a default FilterView with a default value 1`] = `
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
+  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -37,6 +39,7 @@ exports[`Snapshots renders a default FilterView with a placeholder 1`] = `
   minimumSearchTextLength={2}
   placeholder="Test"
   searchDelay={250}
+  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -50,6 +53,7 @@ exports[`Snapshots renders a disabled default FilterView 1`] = `
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
+  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -64,6 +68,7 @@ exports[`Snapshots renders a disabled default FilterView with a default value 1`
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
+  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -77,6 +82,7 @@ exports[`Snapshots renders a disabled list FilterView 1`] = `
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
+  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -91,6 +97,7 @@ exports[`Snapshots renders a disabled list FilterView with a default value 1`] =
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
+  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -104,6 +111,7 @@ exports[`Snapshots renders a list FilterView 1`] = `
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
+  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -118,6 +126,7 @@ exports[`Snapshots renders a list FilterView with a default value 1`] = `
   isInvalid={false}
   minimumSearchTextLength={2}
   searchDelay={250}
+  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -132,6 +141,21 @@ exports[`Snapshots renders a list FilterView with a placeholder 1`] = `
   minimumSearchTextLength={2}
   placeholder="Test"
   searchDelay={250}
+  showResultsInitially={true}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView without results initially 1`] = `
+<Select
+  className="filter-view"
+  disableAutoSearch={false}
+  disabled={false}
+  id="search"
+  isInvalid={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  showResultsInitially={false}
   variant="list"
 />
 `;

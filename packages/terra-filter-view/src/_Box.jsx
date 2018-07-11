@@ -1,5 +1,4 @@
 import React from 'react';
-import { Portal } from 'react-portal';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -15,9 +14,9 @@ const defaultProps = {
 
 const Box = props =>
   (
-    <Portal node={document && document.getElementById('box')}>
+    <React.Fragment>
       {props.children}
-    </Portal>
+    </React.Fragment>
   );
 
 Box.propTypes = propTypes;

@@ -8,14 +8,7 @@ describe('Filter View', () => {
       before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-list/filter-view-default-list'));
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('empty');
-
-      it('should populate the list by clicking the input', () => {
-        browser.click('#search');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('populated');
+      Terra.should.matchScreenshot('none selected');
 
       it('should select an option', () => {
         browser.click('#terra-select-option-blue');
@@ -29,14 +22,7 @@ describe('Filter View', () => {
       before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-list/filter-view-default-list'));
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('empty');
-
-      it('should populate by clicking the input', () => {
-        browser.click('#search');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('populated');
+      Terra.should.matchScreenshot('none selected');
 
       it('should select the first option by pressing enter', () => {
         browser.keys('Enter');
@@ -50,7 +36,7 @@ describe('Filter View', () => {
       before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-list/filter-view-default-list'));
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('empty');
+      Terra.should.matchScreenshot('empty input');
 
       it('should scroll text that is too long', () => {
         browser.addValue('input', ' is a wonderful color to look at. Green is a wonderful color to look at.Green is a wonderful color to look at.Green is a wonderful color to look at.Green is a wonderful color to look at.Green is a wonderful color to look at.Green is a wonderful color to look at.Green is a wonderful color to look at.Green is a wonderful color to look at.Green is a wonderful color to look at.');
@@ -133,11 +119,8 @@ describe('Filter View', () => {
   describe('Opt Group', () => {
     before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-list/filter-view-list-opt-group'));
 
-    it('should display the options by clicking the input', () => {
-      browser.click('#search');
-    });
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('populated');
+    Terra.should.matchScreenshot('none selected');
 
     it('should select the first option', () => {
       browser.click('#terra-select-option-blue');
@@ -189,5 +172,18 @@ describe('Filter View', () => {
     });
 
     Terra.should.matchScreenshot('extended search', { selector: '#root' });
+  });
+
+  describe('No Results Initially', () => {
+    before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-list/filter-view-list-no-results-initially'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot('no results shown');
+
+    it('should focus input to show results', () => {
+      browser.click('#search');
+    });
+
+    Terra.should.matchScreenshot('results shown');
   });
 });

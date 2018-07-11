@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
-import { KeyCodes, Variants } from './_constants';
+import { KeyCodes } from './_constants';
 import NoResults from './_NoResults';
 import Util from './_MenuUtil';
 import styles from './_Menu.module.scss';
@@ -41,13 +41,6 @@ const propTypes = {
    * The value of the selected options.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
-  /**
-   * The behavior of the select.
-   */
-  variant: PropTypes.oneOf([
-    Variants.DROPDOWN,
-    Variants.LIST,
-  ]).isRequired,
 };
 
 const defaultProps = {
@@ -157,7 +150,6 @@ class Menu extends React.Component {
         return React.cloneElement(option, {
           id: `terra-select-option-${option.props.value}`,
           isActive: option.props.value === this.state.active,
-          isCheckable: Util.allowsMultipleSelections(this.props.variant),
           isSelected: Util.isSelected(this.props.value, option.props.value),
           onMouseDown: () => { this.downOption = option; },
           onMouseUp: event => this.handleOptionClick(event, option),
@@ -178,7 +170,7 @@ class Menu extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
     const { active, children } = this.state;
-    const { onSelect, value, variant } = this.props;
+    const { onSelect, value } = this.props;
 
     if (keyCode === KeyCodes.UP_ARROW) {
       this.clearScrollTimeout();
@@ -188,7 +180,7 @@ class Menu extends React.Component {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findNext(children, active) });
-    } else if (keyCode === KeyCodes.ENTER && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
+    } else if (keyCode === KeyCodes.ENTER && active !== null && !Util.includes(value, active)) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
@@ -198,11 +190,6 @@ class Menu extends React.Component {
     } else if (keyCode === KeyCodes.END) {
       event.preventDefault();
       this.setState({ active: Util.findLast(children) });
-    } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {
-      this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
-      clearTimeout(this.searchTimeout);
-      this.searchTimeout = setTimeout(this.clearSearch, 500);
-      this.setState({ active: Util.findWithStartString(this.state.children, this.searchString) || active });
     }
   }
 
@@ -215,14 +202,8 @@ class Menu extends React.Component {
     if (option.props.disabled || option !== this.downOption) {
       return;
     }
-
-    const { onDeselect, onSelect, value, variant } = this.props;
-
-    if (Util.allowsMultipleSelections(variant) && Util.includes(value, option.props.value)) {
-      onDeselect(option.props.value, option);
-    } else {
-      onSelect(option.props.value, option);
-    }
+    const { onSelect } = this.props;
+    onSelect(option.props.value, option);
   }
 
   /**

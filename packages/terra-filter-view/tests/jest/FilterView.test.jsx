@@ -13,6 +13,11 @@ describe('Snapshots', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('renders a list FilterView without results initially', () => {
+    const wrapper = shallow(<FilterView variant="list" showResultsInitially={false} />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('renders a default FilterView with a placeholder', () => {
     const wrapper = shallow(<FilterView placeholder="Test" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
@@ -52,5 +57,4 @@ describe('Snapshots', () => {
     const wrapper = shallow(<FilterView variant="list" disabled defaultValue="default" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
-  // Prop Tests
 });

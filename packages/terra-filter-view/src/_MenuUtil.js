@@ -1,5 +1,4 @@
 import React from 'react';
-import { Variants } from './_constants';
 
 class MenuUtil {
   /**
@@ -26,15 +25,6 @@ class MenuUtil {
       return false;
     }
     return a.toString().toLowerCase() === b.toString().toLowerCase();
-  }
-
-  /**
-   * Determines whether the variant allows multiple selections.
-   * @param {string} variant - The variant.
-   * @return {boolean} - True if the variant allows multiple selections.
-   */
-  static allowsMultipleSelections(variant) {
-    return variant === Variants.MULTIPLE || variant === Variants.TAG;
   }
 
   /**
@@ -225,23 +215,6 @@ class MenuUtil {
       return active;
     }
     return options[0].props.value;
-  }
-
-  /**
-   * Determines if the menu should allow a free text entry.
-   * @param {Object} props - The menu props.
-   * @param {array} children - The menu children.
-   * @return {boolean} - True if a free text entry is allowed.
-   */
-  static shouldAllowFreeText(props, children) {
-    const { searchValue, value, variant } = props;
-
-    if (variant === Variants.TAG || variant === Variants.COMBOBOX) {
-      const option = MenuUtil.findByDisplay(children, searchValue);
-      const included = Array.isArray(value) ? MenuUtil.includes(value, searchValue) : MenuUtil.isEqual(value, searchValue);
-      return !option && !included && (searchValue || '').trim().length > 0;
-    }
-    return false;
   }
 
   /**

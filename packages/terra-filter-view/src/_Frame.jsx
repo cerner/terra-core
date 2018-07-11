@@ -139,6 +139,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
+      showResults: props.showResultsInitially,
     };
 
     this.setInput = this.setInput.bind(this);
@@ -158,13 +159,6 @@ class Frame extends React.Component {
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
   }
-
-  /* componentDidMount() { */
-  /*   // Populate the persistent result box */
-  /*   if (this.props.variant === Variants.LIST) { */
-  /*     this.setState({ isOpen: true }); */
-  /*   } */
-  /* } */
 
   componentDidUpdate(previousProps, previousState) {
     if (this.props.variant === Variants.DROPDOWN && Util.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
@@ -266,6 +260,10 @@ class Frame extends React.Component {
    * Handles the focus event.
    */
   handleFocus(event) {
+    // Show results once input is focused
+    if (!this.state.showResults) {
+      this.setState({ showResults: true });
+    }
     if (this.props.disabled) {
       return;
     }
@@ -488,7 +486,6 @@ class Frame extends React.Component {
               {dropdown &&
                  dropdown({
                    value,
-                   variant,
                    onDeselect,
                    optionFilter,
                    noResultContent,
@@ -503,9 +500,8 @@ class Frame extends React.Component {
         {variant === Variants.LIST &&
           <div className={cx('box')} id="box">
             <Box {...dropdownAttrs}>
-              {dropdown && dropdown({
+              {dropdown && this.state.showResults && dropdown({
                 value,
-                variant,
                 onDeselect,
                 optionFilter,
                 noResultContent,
@@ -515,9 +511,6 @@ class Frame extends React.Component {
               })}
             </Box>
           </div>
-          }
-        {// Load initial results
-          // showResultsInitially && this.openDropdown()
         }
       </div>
     );
