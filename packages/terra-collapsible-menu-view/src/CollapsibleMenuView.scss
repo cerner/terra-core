@@ -1,6 +1,6 @@
+@import '~terra-mixins';
+
 :local {
-  /* stylelint-disable selector-class-pattern  */
-  
   .collapsible-menu-view {
     align-items: center;
     display: flex;
@@ -15,18 +15,25 @@
     align-items: center;
     display: flex;
     flex: 0 0 auto;
-    padding-left: 0.714rem;
+    padding-left: var(--terra-collapsible-menu-view-menu-button-padding-left, 0.714rem);
 
     &.hidden {
       display: none;
       width: 0;
+    }
+
+    .menu-button-icon {
+      background: var(--terra-collapsible-menu-view-menu-button-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M24 18.6a5.4 5.4 0 1 1-5.4 5.4 5.38 5.38 0 0 1 5.4-5.4zm18.6 0a5.4 5.4 0 1 1-5.4 5.4 5.38 5.38 0 0 1 5.4-5.4zm-37.2 0A5.4 5.4 0 1 1 0 24a5.38 5.38 0 0 1 5.4-5.4z"/></svg>'));
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
     }
   }
 
   .face-up-item {
     flex: 0 0 auto;
     max-width: 100%;
-    padding-left: 0.714rem;
+    padding-left: var(--terra-collapsible-menu-view-item-padding-left, 0.714rem);
     position: relative;
 
     .control {
@@ -43,12 +50,13 @@
   }
 
   .divider {
-    border-right: 1px solid #dedfe0;
-    height: 2.143rem;
+    border-right: var(--terra-collapsible-menu-view-divider-border, 1px solid #dedfe0);
+    height: var(--terra-collapsible-menu-view-divider-height, 2.143rem);
   }
 
   .is-calculating {
     visibility: hidden;
   }
-  /* stylelint-enable */
+
+
 }
