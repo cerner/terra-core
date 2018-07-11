@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added themeable variable for setting a background image
 
 3.15.0 - (July 10, 2018)
 ------------------

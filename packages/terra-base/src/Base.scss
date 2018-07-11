@@ -11,6 +11,7 @@ html {
 
 body {
   background-color: var(--terra-base-background-color, #fff);
+  background-image: var(--terra-base-background-image, none);
   color: var(--terra-base-color, #1c1f21);
   font-size: 1rem;
   height: var(--terra-base-body-height, 100%);
