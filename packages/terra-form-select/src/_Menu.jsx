@@ -268,6 +268,8 @@ class Menu extends React.Component {
 
   render() {
     return (
+      // This warns that aria-activedescendant should map to an id
+      // Our implementation maps it to a dynamic id but linter is unable to detect mapping and throws an error
       /* eslint-disable jsx-a11y/aria-proptypes */
       <ul
         role="listbox"
