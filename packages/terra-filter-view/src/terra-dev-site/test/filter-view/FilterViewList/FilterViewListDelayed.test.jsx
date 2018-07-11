@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterView from '../../../../FilterView';
 
-class FilterViewDelayed extends React.Component {
+class FilterViewListDelayed extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -29,4 +29,4 @@ class FilterViewDelayed extends React.Component {
   }
 }
 
-export default FilterViewDelayed;
+export default FilterViewListDelayed;

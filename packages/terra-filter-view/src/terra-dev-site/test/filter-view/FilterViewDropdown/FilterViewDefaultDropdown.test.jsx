@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterView from '../../../../FilterView';
 
-function FilterViewTest() {
+function FilterViewDefaultDropdown() {
   return (
     <FilterView variant="dropdown" >
       <FilterView.Option value="red" display="Red" key={'red'} />
@@ -10,4 +10,4 @@ function FilterViewTest() {
     </FilterView>
   );
 }
-export default () => <FilterViewTest />;
+export default () => <FilterViewDefaultDropdown />;

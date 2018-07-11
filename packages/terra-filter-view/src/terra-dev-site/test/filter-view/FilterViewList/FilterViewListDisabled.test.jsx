@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterView from '../../../../FilterView';
 
-function FilterViewTest() {
+function FilterViewListDisabled() {
   return (
     <FilterView variant="list" disabled >
       <FilterView.OptGroup label="Colors">
@@ -12,4 +12,4 @@ function FilterViewTest() {
     </FilterView>
   );
 }
-export default () => <FilterViewTest />;
+export default () => <FilterViewListDisabled />;

@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterView from '../../../../FilterView';
 
-class FilterViewCallback extends React.Component {
+class FilterViewListCallback extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -35,4 +35,4 @@ class FilterViewCallback extends React.Component {
   }
 }
 
-export default FilterViewCallback;
+export default FilterViewListCallback;

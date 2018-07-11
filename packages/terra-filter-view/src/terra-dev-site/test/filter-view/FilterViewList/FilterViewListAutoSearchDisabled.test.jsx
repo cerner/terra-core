@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterView from '../../../../FilterView';
 
-class FilterViewTest extends React.Component {
+class FilterViewListAutoSearchDisabled extends React.Component {
   constructor(props) {
     super(props);
 
@@ -37,4 +37,4 @@ class FilterViewTest extends React.Component {
     );
   }
 }
-export default () => <FilterViewTest />;
+export default () => <FilterViewListAutoSearchDisabled />;
