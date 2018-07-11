@@ -268,6 +268,7 @@ class Menu extends React.Component {
 
   render() {
     return (
+      /* eslint-disable jsx-a11y/aria-proptypes */
       <ul
         role="listbox"
         className={cx('menu')}
@@ -277,6 +278,7 @@ class Menu extends React.Component {
       >
         {this.clone(this.state.children)}
       </ul>
+      /* eslint-enable jsx-a11y/aria-proptypes */
     );
   }
 }

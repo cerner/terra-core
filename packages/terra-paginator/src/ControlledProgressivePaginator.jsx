@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
-import HyperLink from '../../terra-hyperlink/src/Hyperlink';
 import styles from './Paginator.module.scss';
 
 import { calculatePages, KEYCODES } from './_paginationUtils';
@@ -66,6 +65,8 @@ class ProgressivePaginator extends React.Component {
     };
   }
 
+  // TODO: Resolve lint issues - https://github.com/cerner/terra-core/issues/1689
+  /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
   defaultProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.props;
@@ -78,7 +79,7 @@ class ProgressivePaginator extends React.Component {
           Page {selectedPage} of {totalPages}
         </div>
         <div>
-          <HyperLink
+          <a
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
@@ -87,8 +88,8 @@ class ProgressivePaginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(1)}
           >
             First
-          </HyperLink>
-          <HyperLink
+          </a>
+          <a
             aria-disabled={selectedPage === 1}
             aria-label="previous"
             className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
@@ -97,8 +98,8 @@ class ProgressivePaginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(previousPageIndex)}
           >
             <span className={cx('icon')} />Previous
-          </HyperLink>
-          <HyperLink
+          </a>
+          <a
             aria-disabled={selectedPage === totalPages}
             aria-label="next"
             className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
@@ -107,8 +108,8 @@ class ProgressivePaginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(nextPageIndex)}
           >
             Next<span className={cx('icon')} />
-          </HyperLink>
-          <HyperLink
+          </a>
+          <a
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
@@ -117,7 +118,7 @@ class ProgressivePaginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
-          </HyperLink>
+          </a>
         </div>
       </div>);
   }
@@ -131,7 +132,7 @@ class ProgressivePaginator extends React.Component {
     return (
       <div className={cx(['paginator'])} role="navigation" aria-label="pagination">
         <div>
-          <HyperLink
+          <a
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
@@ -140,8 +141,8 @@ class ProgressivePaginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(1)}
           >
             First
-          </HyperLink>
-          <HyperLink
+          </a>
+          <a
             aria-disabled={selectedPage === 1}
             aria-label="previous"
             className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
@@ -151,13 +152,13 @@ class ProgressivePaginator extends React.Component {
           >
             <span className={cx('visually-hidden')}>Previous</span>
             <span className={cx('icon')} />
-          </HyperLink>
+          </a>
         </div>
         <div>
           Page {selectedPage} of {totalPages}
         </div>
         <div>
-          <HyperLink
+          <a
             aria-disabled={selectedPage === totalPages}
             aria-label="next"
             className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
@@ -167,8 +168,8 @@ class ProgressivePaginator extends React.Component {
           >
             <span className={cx('visually-hidden')}>Next</span>
             <span className={cx('icon')} />
-          </HyperLink>
-          <HyperLink
+          </a>
+          <a
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
@@ -177,10 +178,11 @@ class ProgressivePaginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
-          </HyperLink>
+          </a>
         </div>
       </div>);
   }
+  /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
 
   render() {
     return <ResponsiveElement defaultElement={this.reducedProgressivePaginator()} tiny={this.defaultProgressivePaginator()} />;

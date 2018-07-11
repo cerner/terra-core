@@ -3,6 +3,7 @@ import React from 'react';
 import Radio from '../../../../Radio';
 
 const radio = () => (
+  // eslint-disable-next-line jsx-a11y/aria-proptypes
   <div role="group" aria-labelledby="mainLabel" >
     <div id="mainLabel" aria-label="Main Label" />
     <Radio id="first" labelText="First Radio" name="multiple" defaultChecked />

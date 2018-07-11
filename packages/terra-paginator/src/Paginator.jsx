@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import ResponsiveElement from 'terra-responsive-element';
 
 import 'terra-base/lib/baseStyles';
-import HyperLink from '../../terra-hyperlink/src/Hyperlink';
 import styles from './Paginator.module.scss';
 
 import { calculatePages, pageSet, KEYCODES } from './_paginationUtils';
@@ -93,6 +92,8 @@ class Paginator extends React.Component {
     };
   }
 
+  // TODO: Resolve lint issues - https://github.com/cerner/terra-core/issues/1689
+  /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
   buildPageButtons(totalPages, onClick) {
     const { pageSequence, selectedPage } = this.state;
 
@@ -109,7 +110,7 @@ class Paginator extends React.Component {
       }
       /* eslint-disable jsx-a11y/aria-props */
       pageButtons.push((
-        <HyperLink
+        <a
           aria-label={`Page ${val}`}
           aria-current={val === selectedPage && 'page'}
           className={paginationLinkClassNames}
@@ -119,7 +120,7 @@ class Paginator extends React.Component {
           onKeyDown={this.handleOnKeyDown(val)}
         >
           {val}
-        </HyperLink>
+        </a>
       ));
       /* eslint-enable jsx-a11y/aria-props */
     });
@@ -141,7 +142,7 @@ class Paginator extends React.Component {
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])}>
         {
           this.hasNavContext() && (
-          <HyperLink
+          <a
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
@@ -150,9 +151,9 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(1)}
           >
             First
-          </HyperLink>)
+          </a>)
         }
-        <HyperLink
+        <a
           aria-disabled={selectedPage === 1}
           aria-label="previous"
           className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
@@ -161,9 +162,9 @@ class Paginator extends React.Component {
           onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
           <span className={cx('icon')} />Previous
-        </HyperLink>
+        </a>
         {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
-        <HyperLink
+        <a
           aria-disabled={selectedPage === totalPages}
           aria-label="next"
           className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
@@ -172,10 +173,10 @@ class Paginator extends React.Component {
           onKeyDown={this.handleOnKeyDown(nextPageIndex)}
         >
           Next<span className={cx('icon')} />
-        </HyperLink>
+        </a>
         {
           this.hasNavContext() && (
-          <HyperLink
+          <a
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
@@ -184,7 +185,7 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
-          </HyperLink>)
+          </a>)
         }
       </div>
     );
@@ -202,7 +203,7 @@ class Paginator extends React.Component {
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])} role="navigation" aria-label="pagination">
         {
           this.hasNavContext() && (
-          <HyperLink
+          <a
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
@@ -211,9 +212,9 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(1)}
           >
             First
-          </HyperLink>)
+          </a>)
         }
-        <HyperLink
+        <a
           aria-disabled={selectedPage === 1}
           aria-label="previous"
           className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
@@ -223,9 +224,9 @@ class Paginator extends React.Component {
         >
           <span className={cx('visually-hidden')}>Previous</span>
           <span className={cx('icon')} />
-        </HyperLink>
+        </a>
         {this.hasNavContext() && `Page ${selectedPage}`}
-        <HyperLink
+        <a
           aria-disabled={selectedPage === totalPages}
           aria-label="next"
           className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
@@ -235,10 +236,10 @@ class Paginator extends React.Component {
         >
           <span className={cx('visually-hidden')}>Next</span>
           <span className={cx('icon')} />
-        </HyperLink>
+        </a>
         {
           this.hasNavContext() && (
-          <HyperLink
+          <a
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
@@ -247,7 +248,7 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
-          </HyperLink>)
+          </a>)
         }
       </div>
     );
@@ -255,6 +256,7 @@ class Paginator extends React.Component {
     return reducedView;
   }
 
+  /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
   render() {
     return <ResponsiveElement defaultElement={this.reducedPaginator()} small={this.defaultPaginator()} />;
   }
