@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added more themeable variables to MenuItem
 
 3.10.0 - (July 10, 2018)
 ------------------

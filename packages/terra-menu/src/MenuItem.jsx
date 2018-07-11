@@ -71,15 +71,27 @@ class MenuItem extends React.Component {
     super(props, context);
     this.wrapOnClick = this.wrapOnClick.bind(this);
     this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
+    this.onKeyUp = this.onKeyUp.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.setItemNode = this.setItemNode.bind(this);
-    this.state = { isSelected: props.isSelected && props.isSelectable && !context.isGroupItem };
+    this.state = {
+      isSelected: props.isSelected && props.isSelectable && !context.isGroupItem,
+      isActive: false,
+    };
   }
 
   componentDidUpdate() {
     if (this.props.isActive && this.itemNode) {
       this.itemNode.focus();
     }
+  }
+
+  onKeyUp() {
+    return ((event) => {
+      if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+        this.setState({ isActive: false });
+      }
+    });
   }
 
   setItemNode(node) {
@@ -90,6 +102,7 @@ class MenuItem extends React.Component {
 
   handleSelection(event) {
     event.preventDefault();
+
     if (this.props.isSelectable && !this.context.isGroupItem && !this.props.isDisabled) {
       const newIsSelected = !this.state.isSelected;
       this.setState({ isSelected: newIsSelected });
@@ -113,9 +126,17 @@ class MenuItem extends React.Component {
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
         this.handleSelection(event);
 
+        // If the item has sub menu items onKeyUp will never get called and item will be stuck active
+        if (!this.props.subMenuItems || this.props.subMenuItems.length === 0) {
+          this.setState({ isActive: true });
+        }
+
         if (this.props.onClick) {
           this.props.onClick(event);
         }
+      // Item will become stuck active if the user presses tab while holding space
+      } else if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.TAB) {
+        this.setState({ isActive: false });
       }
 
       if (onKeyDown) {
@@ -150,6 +171,7 @@ class MenuItem extends React.Component {
     } else {
       attributes.onClick = this.wrapOnClick;
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
+      attributes.onKeyUp = this.onKeyUp();
     }
 
     const markAsSelected = this.state.isSelected || (isGroupItem && isSelected);
@@ -158,6 +180,8 @@ class MenuItem extends React.Component {
       'item',
       { selected: markAsSelected },
       { 'is-disabled': isDisabled },
+      // eslint-disable-next-line quote-props
+      { 'active': this.state.isActive },
       attributes.className,
     ]);
 
