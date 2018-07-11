@@ -1,17 +1,17 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 
 const viewports = Terra.viewports('medium');
 
 describe('Signature', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-signature/signature/signature-default'));
+    before(() => browser.url('/#/raw/tests/terra-signature/signature/signature-default'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
 
   describe('Drawing Lines', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
       browser.waitForVisible('#drawline');
 
@@ -26,7 +26,7 @@ describe('Signature', () => {
   });
 
   describe('Themed Drawing Lines', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
       browser.waitForVisible('#drawline');
       // Theme variables need to be set before drawing on canvas for theme test
@@ -42,7 +42,7 @@ describe('Signature', () => {
   });
 
   describe('Right Click does not draw lines', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
       browser.waitForVisible('#drawline');
 
@@ -57,7 +57,7 @@ describe('Signature', () => {
   });
 
   describe('Middle Click does not draw lines', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
       browser.waitForVisible('#drawline');
 

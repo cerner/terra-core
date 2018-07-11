@@ -7,7 +7,7 @@ const ignoredA11y = {
 
 describe('Form-Textarea', () => {
   describe('default', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/default-textarea');
     });
 
@@ -74,7 +74,7 @@ describe('Form-Textarea', () => {
 
 
   describe('Props Populated', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/populated-textarea');
     });
 
@@ -140,7 +140,7 @@ describe('Form-Textarea', () => {
   });
 
   describe('Invalid', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/invalid-textarea');
     });
 
@@ -206,7 +206,7 @@ describe('Form-Textarea', () => {
   });
 
   describe('Small Textarea Height Resizing', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/small-textarea');
     });
 
@@ -215,7 +215,7 @@ describe('Form-Textarea', () => {
   });
 
   describe('Medium Textarea Height Resizing', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
     });
 
@@ -224,7 +224,7 @@ describe('Form-Textarea', () => {
   });
 
   describe('Large Textarea Height Resizing', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/large-textarea');
     });
 
@@ -233,7 +233,7 @@ describe('Form-Textarea', () => {
   });
 
   describe('Full Size Textarea Height Resizing', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/full-textarea');
     });
 
@@ -354,7 +354,7 @@ describe('Form-Textarea', () => {
 
   describe('TextareaField', () => {
     describe('Valid TextareaField', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
       });
 
@@ -362,7 +362,7 @@ describe('Form-Textarea', () => {
     });
 
     describe('Invalid TextareaField', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
         browser.click('#validity-toggle');
       });

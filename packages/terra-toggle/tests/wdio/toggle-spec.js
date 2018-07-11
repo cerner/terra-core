@@ -17,14 +17,14 @@ describe('Toggle', () => {
   });
 
   describe('Opened', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-toggle/toggle/open-toggle'));
+    before(() => browser.url('/#/raw/tests/terra-toggle/toggle/open-toggle'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Animated', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-toggle/toggle/animated-toggle'));
+    before(() => browser.url('/#/raw/tests/terra-toggle/toggle/animated-toggle'));
 
     it('disables focusable elements when closed', () => {
       expect(browser.getCssProperty('#toggle', 'visibility').value).to.equal('hidden');

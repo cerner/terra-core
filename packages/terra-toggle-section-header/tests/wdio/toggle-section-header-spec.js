@@ -1,4 +1,4 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 
 describe('ToggleSectionHeader', () => {
   describe('Default', () => {
@@ -9,7 +9,7 @@ describe('ToggleSectionHeader', () => {
   });
 
   describe('Open', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/open-toggle-section-header'));
+    before(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/open-toggle-section-header'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
