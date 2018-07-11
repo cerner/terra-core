@@ -29,7 +29,7 @@ function determineType(type) {
   // Pull the first value off and use that as type.
   // This assumes all enumerable values are the same type.
   if (typeName === 'enum') {
-    if (isNaN(type.value[0].value)) {
+    if (Number.isNaN(Number(type.value[0].value))) {
       typeName = typeof type.value[0].value;
     } else {
       typeName = 'number';
