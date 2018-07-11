@@ -6,7 +6,7 @@ describe('Tag', () => {
     before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
     describe('Default Tag', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-tag/tag/default-tag'));
+      before(() => browser.url('/#/raw/tests/terra-tag/tag/default-tag'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
@@ -47,7 +47,7 @@ describe('Tag', () => {
   });
 
   describe('Icon and Text Tag', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-tag/tag/icon-and-text-tag'));
+    before(() => browser.url('/#/raw/tests/terra-tag/tag/icon-and-text-tag'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -63,14 +63,14 @@ describe('Tag', () => {
   });
 
   describe('Icon and Text Long Tag', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-tag/tag/long-text-tag'));
+    before(() => browser.url('/#/raw/tests/terra-tag/tag/long-text-tag'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Multiple Tags', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-tag/tag/multiple-tags'));
+    before(() => browser.url('/#/raw/tests/terra-tag/tag/multiple-tags'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -90,7 +90,7 @@ describe('Tag', () => {
     });
 
     describe('OnClick Tag - Keyboard focus', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-tag/tag/on-click-tag');
         browser.keys('Tab');
       });
@@ -109,7 +109,7 @@ describe('Tag', () => {
     });
 
     describe('OnClick Tag - Hover', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-tag/tag/on-click-tag');
         browser.moveToObject('button');
       });

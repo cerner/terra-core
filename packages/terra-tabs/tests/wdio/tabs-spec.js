@@ -10,7 +10,7 @@ const ignoredA11y = {
 describe('Tabs - Responsive', () => {
   viewports.forEach((viewport) => {
     describe('Default', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-tabs/tabs/tabs/default-tabs');
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
@@ -19,7 +19,7 @@ describe('Tabs - Responsive', () => {
       Terra.should.beAccessible();
     });
     describe('Extended', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-tabs/tabs/tabs/extended-tabs');
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
@@ -28,7 +28,7 @@ describe('Tabs - Responsive', () => {
       Terra.should.beAccessible();
     });
     describe('Icon Only Tabs', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-tabs/tabs/tabs/icon-only-tabs');
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
@@ -173,7 +173,7 @@ describe('Tabs - Responsive', () => {
   describe('Collapsed Tabs', () => {
     before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
     describe('Default', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-tabs/tabs/tabs/default-tabs'));
+      before(() => browser.url('/#/raw/tests/terra-tabs/tabs/tabs/default-tabs'));
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',

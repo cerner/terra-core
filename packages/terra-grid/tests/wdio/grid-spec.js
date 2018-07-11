@@ -4,7 +4,7 @@ describe('Grid', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-grid/grid/grid-default'));
+    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-default'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -14,14 +14,14 @@ describe('Grid', () => {
   });
 
   describe('Responsive', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-grid/grid/grid-responsive'));
+    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-responsive'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Nested', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-grid/grid/grid-nested'));
+    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-nested'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
