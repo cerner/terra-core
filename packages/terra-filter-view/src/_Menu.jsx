@@ -180,7 +180,7 @@ class Menu extends React.Component {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findNext(children, active) });
-    } else if (keyCode === KeyCodes.ENTER && active !== null && !Util.includes(value, active)) {
+    } else if (keyCode === KeyCodes.ENTER && active !== null && !Util.includes([value], active)) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);

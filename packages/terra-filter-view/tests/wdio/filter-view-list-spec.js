@@ -182,8 +182,33 @@ describe('Filter View', () => {
 
     it('should focus input to show results', () => {
       browser.click('#search');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
     });
 
     Terra.should.matchScreenshot('results shown');
+  });
+
+  describe('On Change', () => {
+    before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-list/filter-view-list-on-change'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot('no options selected');
+
+    it('should select an option', () => {
+      browser.click('#terra-select-option-hello');
+    });
+
+    Terra.should.matchScreenshot('updated once');
+
+    it('should select another option', () => {
+      // Clears the input so that the second option is rendered
+      browser.click('svg[class*="clear-button"]');
+      browser.click('#terra-select-option-goodbye');
+    });
+
+    Terra.should.matchScreenshot('updated twice');
   });
 });

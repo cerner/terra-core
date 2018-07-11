@@ -303,9 +303,9 @@ class Frame extends React.Component {
    * @param {event} event - The mouse down event.
    */
   handleMouseDown(event) {
-    // Preventing default events stops the search input from losing focus.
-    event.preventDefault();
     if (this.props.variant !== Variants.LIST) {
+      // Preventing default events stops the search input from losing focus.
+      event.preventDefault();
       this.openDropdown();
     }
   }
@@ -385,6 +385,7 @@ class Frame extends React.Component {
    * Toggles the dropdown open or closed.
    */
   toggleDropdown() {
+    // Trigger search callback on press
     this.delaySearch();
     if (this.props.variant === Variants.LIST) {
       return;

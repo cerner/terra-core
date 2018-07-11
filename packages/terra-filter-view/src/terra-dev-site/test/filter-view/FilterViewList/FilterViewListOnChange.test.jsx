@@ -1,38 +1,33 @@
 import React from 'react';
 import FilterView from '../../../../FilterView';
 
-class FilterViewCallback extends React.Component {
+class FilterViewListOnChange extends React.Component {
   constructor() {
     super();
     this.state = {
-      searchValue: '',
-      message: '',
+      value: '',
+      callCount: 0,
     };
 
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleInvalidSearch = this.handleInvalidSearch.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
-  handleSearch(searchValue) {
-    this.setState({ searchValue, message: 'Search text: ' });
-  }
-
-  handleInvalidSearch(searchValue) {
-    this.setState({ searchValue, message: 'INVALID search: ' });
+  onChange(value) {
+    this.setState({ value, callCount: this.state.callCount + 1 });
   }
 
   render() {
     return (
       <div>
-        <h3>Minimum search length: 3</h3>
-        <FilterView variant="list" minimumSearchTextLength={3} onSearch={this.handleSearch} onInvalidSearch={this.handleInvalidSearch}>
+        <p>{this.state.callCount}</p>
+        <p>{this.state.value}</p>
+        <FilterView variant="list" onChange={this.onChange}>
           <FilterView.Option value="hello" display="Hello" key="hello" />
           <FilterView.Option value="goodbye" display="Good Bye" key="goodbye" />
         </FilterView>
-        <p style={{ marginTop: '10px' }}>{this.state.message}{this.state.searchValue}</p>
       </div>
     );
   }
 }
 
-export default FilterViewCallback;
+export default FilterViewListOnChange;
