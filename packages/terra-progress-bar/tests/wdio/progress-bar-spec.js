@@ -35,7 +35,7 @@ describe('Progress Bar', () => {
   });
 
   describe('Gradient', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-gradient'));
+    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-gradient'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();

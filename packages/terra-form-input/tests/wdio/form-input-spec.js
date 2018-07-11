@@ -1,9 +1,9 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 const viewports = Terra.viewports('tiny', 'large');
 
 describe('Form-Input', () => {
   describe('Valid', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
     });
 
@@ -50,7 +50,7 @@ describe('Form-Input', () => {
 
   describe('Enabled', () => {
     describe('Enabled Non-Selected', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
       });
 
@@ -72,7 +72,7 @@ describe('Form-Input', () => {
     });
 
     describe('Enabled Keyboard-Focused', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
         browser.keys('Tab');
         // remove the blinking cursor for the screenshots
@@ -97,7 +97,7 @@ describe('Form-Input', () => {
 
   describe('Disabled', () => {
     describe('Disabled Non-Selected', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
       });
 
@@ -115,7 +115,7 @@ describe('Form-Input', () => {
     });
 
     describe('Disabled Hovered', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#raw/tests/terra-form-input/form-input/disabled-form-input');
         browser.moveToObject('input');
       });
@@ -128,7 +128,7 @@ describe('Form-Input', () => {
     });
 
     describe('Disabled Keyboard-Focused', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
         browser.keys('Tab');
       });
@@ -147,7 +147,7 @@ describe('Form-Input', () => {
 
     describe('InputField', () => {
       describe('Valid InputField', () => {
-        beforeEach(() => {
+        before(() => {
           browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
         });
 
@@ -155,7 +155,7 @@ describe('Form-Input', () => {
       });
 
       describe('Invalid InputField', () => {
-        beforeEach(() => {
+        before(() => {
           browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
           browser.click('#validity-toggle');
         });

@@ -15,7 +15,7 @@ const ignoredA11y = {
 
 describe('DateTimePicker', () => {
   describe('Default', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default');
     });
 
@@ -34,7 +34,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Default with Date', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-only');
     });
 
@@ -43,7 +43,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Default with Date and Time', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-time');
     });
 
@@ -52,7 +52,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Time Clarification Dialog', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-dst');
       browser.click('input[name="terra-time-hour-input"]');
       browser.click('input[name="terra-time-minute-input"]');
@@ -252,7 +252,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Clears the default date and time on the calendar button click when default date is excluded', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-excluded');
       browser.click('[class*="button"]');
     });
@@ -261,7 +261,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Clears the default date and time on date input focus when default date is excluded', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-excluded');
       browser.click('input[name="terra-date-input"]');
     });
@@ -270,7 +270,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Clears the default date and time on hour input focus when default date is excluded', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-excluded');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
@@ -283,7 +283,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Clears the default date and time on minute input focus when default date is excluded', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-excluded');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
@@ -296,7 +296,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Clears the default date and time on date input focus when default date is out of range', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-out-of-range');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
@@ -309,7 +309,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Clears the default date and time on hour input focus when default date is out of range', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-out-of-range');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
@@ -323,7 +323,7 @@ describe('DateTimePicker', () => {
   });
 
   describe('Clears the default date and time on minute input focus when default date is out of range', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-default-date-out-of-range');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.

@@ -1,8 +1,8 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 
 describe('SectionHeader', () => {
   describe('Default Section Header', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-section-header/section-header/default-section-header'));
+    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/default-section-header'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -29,14 +29,14 @@ describe('SectionHeader', () => {
   });
 
   describe('Long Title Default Section Header', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-section-header/section-header/long-title-section-header'));
+    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/long-title-section-header'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Long Title Accordion Section Header', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header'));
+    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -55,7 +55,7 @@ describe('SectionHeader', () => {
     });
 
     describe('Hovered - Long Title Accordion Section Header', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
         browser.moveToObject('.accordionContent');
       });
@@ -78,7 +78,7 @@ describe('SectionHeader', () => {
     });
 
     describe('Keyboard Focus - Long Title Accordion Section Header', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
         browser.keys('Tab');
       });
@@ -101,7 +101,7 @@ describe('SectionHeader', () => {
     });
 
     describe('Active - Long Title Accordion Section Header', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
         browser.moveToObject('.accordionContent');
         browser.buttonDown('.accordionContent');
@@ -126,21 +126,21 @@ describe('SectionHeader', () => {
   });
 
   describe('Closed Section Header', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-section-header/section-header/closed-section-header'));
+    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/closed-section-header'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Open Section Header', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-section-header/section-header/open-section-header'));
+    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/open-section-header'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('On Click Section Header', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-section-header/section-header/on-click-section-header'));
+    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/on-click-section-header'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();

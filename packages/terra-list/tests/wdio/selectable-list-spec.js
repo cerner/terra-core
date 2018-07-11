@@ -11,7 +11,7 @@ describe('Selectable List', () => {
   });
 
   describe('Selectable List Chevron Styled', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-list/list/selectable-list/chevron-selectable-list');
       browser.waitForExist('ul');
       browser.click('ul li:nth-child(1)');
@@ -26,7 +26,7 @@ describe('Selectable List', () => {
   });
 
   describe('Selectable List Hover', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-list/list/selectable-list/default-selectable-list');
       browser.waitForExist('ul');
       browser.moveToObject('ul li:nth-child(1)');
@@ -38,7 +38,7 @@ describe('Selectable List', () => {
   });
 
   describe('Selectable List Focus', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-list/list/selectable-list/default-selectable-list');
       browser.waitForExist('ul');
       browser.click('ul li:nth-child(1)');

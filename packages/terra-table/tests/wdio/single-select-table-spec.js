@@ -104,13 +104,13 @@ describe('Single-Select Table', () => {
   });
 
   describe('Single-Select Table - Preselected', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/single-select-table/single-row-selectable-table-preselected'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/single-select-table/single-row-selectable-table-preselected'));
 
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Single-Select Table - No Rows', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/single-select-table/single-row-selectable-table-non-selectable'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/single-select-table/single-row-selectable-table-non-selectable'));
 
     Terra.should.matchScreenshot({ viewports });
   });

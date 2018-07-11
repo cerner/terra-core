@@ -4,7 +4,7 @@ describe('Form-field', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/default-field'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/default-field'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -17,7 +17,7 @@ describe('Form-field', () => {
   });
 
   describe('Label', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -33,7 +33,7 @@ describe('Form-field', () => {
   });
 
   describe('Label Optional', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-optional'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-optional'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -47,7 +47,7 @@ describe('Form-field', () => {
   });
 
   describe('Label Required', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-required'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-required'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -61,7 +61,7 @@ describe('Form-field', () => {
   });
 
   describe('Error Text', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-error-text'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-error-text'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -77,7 +77,7 @@ describe('Form-field', () => {
   });
 
   describe('Help Text', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-help-text'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-help-text'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -93,28 +93,28 @@ describe('Form-field', () => {
   });
 
   describe('Label Required Error Help Text', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-required-error-help-text'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-required-error-help-text'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Hidden Label', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-hidden-label'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-hidden-label'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Text Wrap', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-text-wrap'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-text-wrap'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Inline', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-inline'));
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-inline'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
