@@ -1,11 +1,3 @@
-// :root {
-//   --terra-base-background-image: url("https://github.com/cerner/terra-core/raw/master/terra.png");
-//   --terra-base-background-repeat: no-repeat;
-//   --terra-base-background-size: 200%;
-//   --terra-base-background-position: top 70px left 45px;
-//   --terra-base-background-attachment: fixed;
-// }
-
 html {
   background-attachment: var(--terra-base-background-attachment);
   background-color: var(--terra-base-background-color, #fff);
