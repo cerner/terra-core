@@ -28,6 +28,19 @@ describe('Search Field', () => {
 
     Terra.should.matchScreenshot('scrolled text');
     Terra.should.beAccessible({ rules: ignoredA11y });
+
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-search-field-border-bottom-left-radius': '1em',
+        '--terra-search-field-border-top-left-radius': '1em',
+        '--terra-search-field-border-bottom-right-radius': '1em',
+        '--terra-search-field-border-top-right-radius': '1em',
+        '--terra-search-field-button-border': '2px dotted red',
+        '--terra-search-field-input-margin': '10px',
+        '--terra-search-field-button-margin': '10px 10px 10px -10px',
+      },
+    });
   });
 
   describe('Block', () => {
