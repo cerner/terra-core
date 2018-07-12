@@ -28,7 +28,7 @@ const BaseDefault = () => (
       </li>
       <li>Ordered list item</li>
     </ol>
-    <ul>
+    <ul id="bottom-section">
       <li>Unordered list item</li>
       <li>Unordered list item
        <ol>
@@ -36,8 +36,9 @@ const BaseDefault = () => (
          <li>Nested unordered list item</li>
        </ol>
       </li>
-      <li>Unordered list item</li>
+      <li> Unordered list item</li>
     </ul>
+    <p id="bottom">Bottom sample paragraph</p>
   </Base>
 );
 

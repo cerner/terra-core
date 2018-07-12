@@ -1,7 +1,18 @@
+// :root {
+//   --terra-base-background-image: url("https://github.com/cerner/terra-core/raw/master/terra.png");
+//   --terra-base-background-repeat: no-repeat;
+//   --terra-base-background-size: 200%;
+//   --terra-base-background-position: top 70px left 45px;
+//   --terra-base-background-attachment: fixed;
+// }
+
 html {
+  background-attachment: var(--terra-base-background-attachment);
   background-color: var(--terra-base-background-color, #fff);
-  background-image: var(--terra-base-background-image, none);
-  background-repeat: var(--terra-base-background-repeat, repeat);
+  background-image: var(--terra-base-background-image);
+  background-position: var(--terra-base-background-position);
+  background-repeat: var(--terra-base-background-repeat);
+  background-size: var(--terra-base-background-size);
   // Normalize box-sizing.
   // More info: https://css-tricks.com/box-sizing/#article-header-id-6
   box-sizing: border-box;
