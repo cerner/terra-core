@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added more themeable variables
 
 2.18.0 - (July 10, 2018)
 ------------------
