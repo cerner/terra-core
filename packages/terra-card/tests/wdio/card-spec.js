@@ -1,9 +1,9 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 const viewports = Terra.viewports('tiny');
 
 describe('Card', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/default-card'));
+    before(() => browser.url('/#/raw/tests/terra-card/card/default-card'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -20,7 +20,7 @@ describe('Card', () => {
   });
 
   describe('Raised', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/raised-card'));
+    before(() => browser.url('/#/raw/tests/terra-card/card/raised-card'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -33,21 +33,21 @@ describe('Card', () => {
   });
 
   describe('Card Body Padding Horizontal', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/card-padding-horizontal'));
+    before(() => browser.url('/#/raw/tests/terra-card/card/card-padding-horizontal'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Card Body Padding Vertical', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/card-padding-vertical'));
+    before(() => browser.url('/#/raw/tests/terra-card/card/card-padding-vertical'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Card Body Padded', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/card-padding'));
+    before(() => browser.url('/#/raw/tests/terra-card/card/card-padding'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -63,7 +63,7 @@ describe('Card', () => {
   });
 
   describe('Card Body Centered', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-card/card/card-content-center'));
+    before(() => browser.url('/#/raw/tests/terra-card/card/card-content-center'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

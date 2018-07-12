@@ -8,63 +8,63 @@ viewports.forEach((viewport) => {
     });
 
     describe('Default', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/default-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/default-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('Back', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('Back Close', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-close-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-close-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('Close', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/close-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/close-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('Minimize Custom Button', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/minimize-custom-button-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/minimize-custom-button-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('Maximize Close', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/maximize-close-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/maximize-close-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('Back Close Previous Next', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-close-previous-next-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-close-previous-next-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('Wrapped Title', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/wrapped-title-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/wrapped-title-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('End Element Only', () => {
-      beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/end-element-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/end-element-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
@@ -78,7 +78,7 @@ describe('ActionHeader - Themeable', () => {
   });
 
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/default-action-header'));
+    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/default-action-header'));
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -96,7 +96,7 @@ describe('ActionHeader - Themeable', () => {
   });
 
   describe('Back', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-action-header'));
+    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-action-header'));
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -109,7 +109,7 @@ describe('ActionHeader - Themeable', () => {
   });
 
   describe('Back Close', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-close-action-header'));
+    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-close-action-header'));
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',

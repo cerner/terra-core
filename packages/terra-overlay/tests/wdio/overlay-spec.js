@@ -2,14 +2,14 @@
 
 describe('Overlay', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/default-overlay'));
+    before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/default-overlay'));
 
     Terra.should.beAccessible({ selector: '#default-overlay' });
     Terra.should.matchScreenshot({ selector: '#default-overlay' });
   });
 
   describe('Overlay container', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/container-overlay'));
+    before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/container-overlay'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -191,7 +191,7 @@ describe('Overlay', () => {
   });
 
   describe('Light Themed', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/light-overlay'));
+    before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/light-overlay'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#light-overlay' });
@@ -207,7 +207,7 @@ describe('Overlay', () => {
   });
 
   describe('Dark Themed', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/dark-overlay'));
+    before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/dark-overlay'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#dark-overlay' });
@@ -223,7 +223,7 @@ describe('Overlay', () => {
   });
 
   describe('Clear Themed', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/clear-overlay'));
+    before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/clear-overlay'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#clear-overlay' });
