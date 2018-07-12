@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Make placeholder image themeable
 
 2.15.0 - (July 10, 2018)
 ------------------
