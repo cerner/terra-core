@@ -204,14 +204,14 @@ class Frame extends React.Component {
    * Closes the dropdown.
    */
   closeDropdown() {
+    // Don't clear the search value when closing the dropdown
     if (this.props.variant !== Variants.LIST) {
       this.setState({
         isAbove: false,
         isFocused: document.activeElement === this.input || document.activeElement === this.select,
         isOpen: false,
         isPositioned: false,
-        hasSearchChanged: false,
-        searchValue: '',
+        hasSearchChanged: true,
       });
     }
   }
@@ -281,9 +281,8 @@ class Frame extends React.Component {
    * @param {event} event - The onKeyDown event.
    */
   handleKeyDown(event) {
-    const { value } = this.props;
     const { keyCode, target } = event;
-    const { BACKSPACE, SPACE, UP_ARROW, DOWN_ARROW } = KeyCodes;
+    const { SPACE, UP_ARROW, DOWN_ARROW } = KeyCodes;
 
     if (keyCode === SPACE && target !== this.input) {
       event.preventDefault();
@@ -291,8 +290,6 @@ class Frame extends React.Component {
     } else if (keyCode === UP_ARROW || keyCode === DOWN_ARROW) {
       event.preventDefault();
       this.openDropdown();
-    } else if (keyCode === BACKSPACE && !this.state.searchValue && value.length > 0) {
-      this.props.onDeselect(value[value.length - 1]);
     } else if (keyCode === KeyCodes.ESCAPE) {
       this.closeDropdown();
     }
@@ -365,10 +362,11 @@ class Frame extends React.Component {
    */
   handleSelect(value, option) {
     if (this.props.variant !== Variants.LIST) {
+      // Set the search value to the option selected (so that input is clearable)
       this.setState({
-        searchValue: '',
-        hasSearchChanged: false,
-        isOpen: this.props.variant === Variants.LIST,
+        searchValue: option.props.display,
+        hasSearchChanged: true,
+        isOpen: false,
       });
     } else {
       this.setState({

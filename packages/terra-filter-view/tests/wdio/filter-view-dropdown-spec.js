@@ -220,8 +220,8 @@ describe('Filter View', () => {
 
     Terra.should.matchScreenshot('updated once');
 
-    it('should enter another letter', () => {
-      browser.click('button');
+    it('should select another option', () => {
+      browser.click('svg[class*="clear-button"]');
       browser.click('#terra-select-option-goodbye');
     });
 

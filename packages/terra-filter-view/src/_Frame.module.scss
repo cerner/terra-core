@@ -173,7 +173,7 @@
   }
 
   // Hides the clear buttons in IE.
-  .search::-ms-clear {
+  .search-input::-ms-clear {
     display: none;
     height: 0;
     width: 0;
