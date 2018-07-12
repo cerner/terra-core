@@ -27,7 +27,15 @@ function determineType(type) {
   let typeName = type.name;
 
   if (typeName === 'enum') {
+<<<<<<< HEAD
+    if (Number.isNaN(Number(type.value[0].value))) {
+      typeName = typeof type.value[0].value;
+    } else {
+      typeName = 'number';
+    }
+=======
     typeName = 'enum';
+>>>>>>> c55554b1... ISSUE-1463: Fixed undefined prop type error
   } else if (typeName === 'arrayOf') {
     if (type.value.name === 'shape') {
       typeName = <span> array of objects structured like: <pre className={cx('props-table-pre')}> {formatShape(type.value.value)} </pre></span>;
