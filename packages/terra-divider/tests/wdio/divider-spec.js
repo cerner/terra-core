@@ -1,9 +1,9 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 const viewports = Terra.viewports('medium');
 
 describe('Divider', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-divider/divider/default-divider'));
+    before(() => browser.url('/#/raw/tests/terra-divider/divider/default-divider'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

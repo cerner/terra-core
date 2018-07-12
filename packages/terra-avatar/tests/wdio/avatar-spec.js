@@ -1,8 +1,8 @@
-/* global beforeEach, browser, Terra */
+/* global before, browser, Terra */
 
 describe('Avatar', () => {
   describe('User', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/user-avatar'));
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/user-avatar'));
 
     Terra.should.beAccessible({ selector: '#user-avatar' });
     Terra.should.matchScreenshot({ selector: '#user-avatar' });
@@ -24,7 +24,7 @@ describe('Avatar', () => {
   });
 
   describe('Facility', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility-avatar'));
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility-avatar'));
 
     Terra.should.beAccessible({ selector: '#facility-avatar' });
     Terra.should.matchScreenshot({ selector: '#facility-avatar' });
@@ -46,7 +46,7 @@ describe('Avatar', () => {
   });
 
   describe('Image', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/image-avatar'));
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/image-avatar'));
 
     Terra.should.beAccessible({ selector: '#image-avatar' });
     Terra.should.matchScreenshot({ selector: '#image-avatar' });
@@ -66,12 +66,12 @@ describe('Avatar', () => {
   });
 
   describe('Image Spacing', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/image-gap'));
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/image-gap'));
     Terra.should.matchScreenshot();
   });
 
   describe('Two Initials', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/two-initials-avatar'));
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/two-initials-avatar'));
 
     Terra.should.beAccessible({ selector: '#two-initials-avatar' });
     Terra.should.matchScreenshot({ selector: '#two-initials-avatar' });
@@ -94,7 +94,7 @@ describe('Avatar', () => {
   });
 
   describe('Three Initials', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-avatar/avatar/three-initials-avatar'));
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/three-initials-avatar'));
 
     Terra.should.beAccessible({ selector: '#three-initials-avatar' });
     Terra.should.matchScreenshot({ selector: '#three-initials-avatar' });

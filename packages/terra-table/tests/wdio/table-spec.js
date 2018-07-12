@@ -1,10 +1,10 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 
 const viewports = Terra.viewports('medium');
 
 describe('Table', () => {
   describe('Non Striped Table', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/table/no-striped-table'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/table/no-striped-table'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -43,7 +43,7 @@ describe('Table', () => {
   });
 
   describe('Striped', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/table/striped-table'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/table/striped-table'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
@@ -63,42 +63,42 @@ describe('Table', () => {
   });
 
   describe('Non Padded Table', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/table/no-padding-table'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/table/no-padding-table'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
 
   describe('Sort Indicator', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-sort-indicator'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-sort-indicator'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
 
   describe('Highlighted Rows', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-highlighted-rows'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-highlighted-rows'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
 
   describe('Subheaders', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-subheaders'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-subheaders'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
 
   describe('Single Row', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/table/single-row-table'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/table/single-row-table'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
 
   describe('No Rows', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-table/table/table/table-no-rows'));
+    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-no-rows'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });

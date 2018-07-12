@@ -10,7 +10,7 @@ describe('Time Input Twelve Hour Mobile', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
   describe('Twelve Hour Mobile - Default with no time', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/mobile'));
+    before(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/mobile'));
 
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports, rules: ignoredA11y });
@@ -66,7 +66,7 @@ describe('Time Input Twelve Hour Mobile', () => {
   });
 
   describe('Twelve Hour Mobile - Clicking Meridiem updates the time', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/mobile');
 
       browser.click('#timeInputValueProvided button[aria-pressed="false"]');
@@ -76,7 +76,7 @@ describe('Time Input Twelve Hour Mobile', () => {
   });
 
   describe('Twelve Hour Mobile - Focus Hour Styles', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/mobile');
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     });
@@ -102,7 +102,7 @@ describe('Time Input Twelve Hour Mobile', () => {
   });
 
   describe('Twelve Hour Mobile - Focus Minute Styles', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/mobile');
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
     });

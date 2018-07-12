@@ -3,7 +3,7 @@ describe('DocTemplate', () => {
   before(() => browser.setViewportSize(Terra.viewports('huge')[0]));
 
   describe('Fully filled out doc', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-doc-template/doc-template/default-doc-template'));
+    before(() => browser.url('/#/raw/tests/terra-doc-template/doc-template/default-doc-template'));
 
     Terra.should.matchScreenshot('Readme', { selector: '#DocTemplateContainer > div > div:nth-child(2)' });
     Terra.should.matchScreenshot('Example 1', { selector: '#DocTemplateContainer > div > div:nth-child(5)' });
@@ -12,7 +12,7 @@ describe('DocTemplate', () => {
   });
 
   describe('Interactivity test', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-doc-template/doc-template/default-doc-template'));
+    before(() => browser.url('/#/raw/tests/terra-doc-template/doc-template/default-doc-template'));
 
     it('Reveals the example\'s code', () => {
       browser.click('button');
@@ -27,11 +27,6 @@ describe('DocTemplate', () => {
     });
 
     it('Hides the example\'s code again', () => {
-      browser.click('button');
-
-      // Ensure the button is revealed so it can be clicked
-      browser.pause(100);
-
       browser.click('button');
       // Reliably causes on hover styling of button to deactivate
       browser.click('h1=Examples');
