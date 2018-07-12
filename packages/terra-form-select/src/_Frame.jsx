@@ -391,7 +391,8 @@ class Frame extends React.Component {
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
-        <div className={cx('display')} onMouseDown={this.openDropdown}>
+        {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
+        <div role="textbox" className={cx('display')} onMouseDown={this.openDropdown}>
           {this.getDisplay()}
         </div>
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
