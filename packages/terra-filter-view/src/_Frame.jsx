@@ -7,7 +7,6 @@ import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import IconIncomplete from 'terra-icon/lib/icon/IconIncomplete';
 import { KeyCodes, Variants } from './_constants';
 import Dropdown from './_Dropdown';
-import Box from './_Box';
 import Util from './_FrameUtil';
 import styles from './_Frame.module.scss';
 
@@ -492,18 +491,16 @@ class Frame extends React.Component {
         </div>
         {/* If variant is persistent, render the result box */}
         {variant === Variants.LIST &&
-          <div className={cx('box')} id="box">
-            <Box {...dropdownAttrs}>
-              {dropdown && this.state.showResults && dropdown({
-                value,
-                onDeselect,
-                optionFilter,
-                noResultContent,
-                onSelect: this.handleSelect,
-                onRequestClose: this.closeDropdown,
-                searchValue: this.state.searchValue,
-              })}
-            </Box>
+          <div {...dropdownAttrs} className={cx('box')} id="box">
+            {dropdown && this.state.showResults && dropdown({
+              value,
+              onDeselect,
+              optionFilter,
+              noResultContent,
+              onSelect: this.handleSelect,
+              onRequestClose: this.closeDropdown,
+              searchValue: this.state.searchValue,
+            })}
           </div>
         }
       </div>

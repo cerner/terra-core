@@ -102,9 +102,7 @@ exports[`Frame should render a disabled list variant 1`] = `
   <div
     className="box"
     id="box"
-  >
-    <Box />
-  </div>
+  />
 </div>
 `;
 
@@ -262,9 +260,7 @@ exports[`Frame should render a list variant 1`] = `
   <div
     className="box"
     id="box"
-  >
-    <Box />
-  </div>
+  />
 </div>
 `;
 
@@ -320,8 +316,6 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
   <div
     className="box"
     id="box"
-  >
-    <Box />
-  </div>
+  />
 </div>
 `;
