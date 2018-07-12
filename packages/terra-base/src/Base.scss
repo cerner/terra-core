@@ -1,6 +1,7 @@
 html {
   background-color: var(--terra-base-background-color, #fff);
   background-image: var(--terra-base-background-image, none);
+  background-repeat: var(--terra-base-background-repeat, repeat);
   // Normalize box-sizing.
   // More info: https://css-tricks.com/box-sizing/#article-header-id-6
   box-sizing: border-box;
