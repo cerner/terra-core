@@ -15,7 +15,6 @@ const propTypes = {
 };
 
 class StatusViewTemplate extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -55,14 +54,15 @@ class StatusViewTemplate extends React.Component {
 
   render() {
     const {
-    children,
-    customGlyph,
-    isAlignedTop,
-    isGlyphHidden,
-    message,
-    title,
-    variant,
-    ...customProps }
+      children,
+      customGlyph,
+      isAlignedTop,
+      isGlyphHidden,
+      message,
+      title,
+      variant,
+      ...customProps
+    }
     = this.props;
 
     const styleAttributes = Object.assign({}, customProps.style);

@@ -4,7 +4,10 @@ Changelog
 Unreleased
 ----------
 ### Added
-* Added themeable variable for setting a background image
+* Added themeable variable for setting a background styles
+
+### Changed
+* Formatting changes per eslint v4 update
 
 3.15.0 - (July 10, 2018)
 ------------------

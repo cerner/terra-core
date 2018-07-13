@@ -44,7 +44,9 @@ const defaultProps = {
   weight: 700,
 };
 
-const Heading = ({ level, color, children, isVisuallyHidden, isItalic, size, weight, ...customProps }) => {
+const Heading = ({
+  level, color, children, isVisuallyHidden, isItalic, size, weight, ...customProps
+}) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
     'heading',

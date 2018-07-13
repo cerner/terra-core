@@ -40,7 +40,7 @@ const Table = ({
   isStriped,
   isPadded,
   ...customProps
-  }) => {
+}) => {
   const tableClassNames = cx([
     'table',
     { striped: isStriped },

@@ -5,7 +5,7 @@ const DatePickerExcludeDates = () => (
   <DatePicker
     name="date-input"
     excludeDates={['2017-04-01', '2017-04-03']}
-    selectedDate={'2017-04-02'}
+    selectedDate="2017-04-02"
   />
 );
 

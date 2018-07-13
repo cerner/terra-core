@@ -25,6 +25,7 @@ const templateShape = {
   /**
   * Additional CSS properties to apply to the grid.
   */
+  // eslint-disable-next-line react/forbid-prop-types
   style: PropTypes.object,
 };
 

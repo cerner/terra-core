@@ -44,6 +44,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the label.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
    * Callback function triggered when the select value changes. function(value)
@@ -60,6 +61,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the select.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   selectAttrs: PropTypes.object,
   /**
    * The Select identifier. Links the htmlFor of the field to the select identifier.
@@ -105,54 +107,54 @@ const defaultProps = {
 };
 
 const SelectField = ({
-    children,
-    defaultValue,
-    error,
-    help,
-    hideRequired,
-    isInline,
-    isInvalid,
-    isLabelHidden,
-    label,
-    labelAttrs,
-    onChange,
-    placeholder,
-    required,
-    selectAttrs,
-    selectId,
-    showOptional,
-    value,
-    variant,
-    ...customProps
-  }) => (
-    <Field
-      {...customProps}
-      label={label}
-      labelAttrs={labelAttrs}
-      error={error}
-      help={help}
-      hideRequired={hideRequired}
-      required={required}
-      showOptional={showOptional}
+  children,
+  defaultValue,
+  error,
+  help,
+  hideRequired,
+  isInline,
+  isInvalid,
+  isLabelHidden,
+  label,
+  labelAttrs,
+  onChange,
+  placeholder,
+  required,
+  selectAttrs,
+  selectId,
+  showOptional,
+  value,
+  variant,
+  ...customProps
+}) => (
+  <Field
+    {...customProps}
+    label={label}
+    labelAttrs={labelAttrs}
+    error={error}
+    help={help}
+    hideRequired={hideRequired}
+    required={required}
+    showOptional={showOptional}
+    isInvalid={isInvalid}
+    isInline={isInline}
+    isLabelHidden={isLabelHidden}
+    htmlFor={selectId}
+  >
+    <Select
+      {...selectAttrs}
+      id={selectId}
       isInvalid={isInvalid}
-      isInline={isInline}
-      isLabelHidden={isLabelHidden}
-      htmlFor={selectId}
+      defaultValue={defaultValue}
+      onChange={onChange}
+      placeholder={placeholder}
+      value={value}
+      variant={variant}
     >
-      <Select
-        {...selectAttrs}
-        id={selectId}
-        isInvalid={isInvalid}
-        defaultValue={defaultValue}
-        onChange={onChange}
-        placeholder={placeholder}
-        value={value}
-        variant={variant}
-      >
-        {children}
-      </Select>
-    </Field>
-  );
+      {children}
+    </Select>
+  </Field>
+);
 
 SelectField.propTypes = propTypes;
 SelectField.defaultProps = defaultProps;

@@ -13,19 +13,23 @@ it('should render an image with a default status view', () => {
 });
 
 it('should render a single child element', () => {
-  const statusView = (<StatusView>
-    <Button text="OK" key="1" />
-  </StatusView>);
+  const statusView = (
+    <StatusView>
+      <Button text="OK" key="1" />
+    </StatusView>
+  );
 
   const wrapper = mount(statusView, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an image with a no-data status view with all message props given', () => {
-  const statusView = (<StatusView variant={StatusView.Opts.variants.NODATA} title="Test Title" message="Test Message">
-    <Button text="OK" key="1" />
-    <Button text="Cancel" key="2" />
-  </StatusView>);
+  const statusView = (
+    <StatusView variant={StatusView.Opts.variants.NODATA} title="Test Title" message="Test Message">
+      <Button text="OK" key="1" />
+      <Button text="Cancel" key="2" />
+    </StatusView>
+  );
 
   const wrapper = mount(statusView, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();

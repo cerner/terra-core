@@ -36,19 +36,13 @@ class ProgressivePaginator extends React.Component {
     const { selectedPage, totalCount } = this.props;
 
     this.state = {
-      pageInput: selectedPage,
       selectedPage: selectedPage && totalCount ? selectedPage : undefined,
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
-    this.handlePageInput = this.handlePageInput.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
     this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
-  }
-
-  handlePageInput(e) {
-    this.setState({ pageInput: e.target.value });
   }
 
   handlePageChange(index) {
@@ -56,7 +50,7 @@ class ProgressivePaginator extends React.Component {
       event.preventDefault();
 
       this.props.onPageChange(index);
-      this.setState({ pageInput: index, selectedPage: index });
+      this.setState({ selectedPage: index });
     };
   }
 
@@ -65,7 +59,7 @@ class ProgressivePaginator extends React.Component {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
         event.preventDefault();
 
-        if (isNaN(index)) {
+        if (Number.isNaN(Number(index))) {
           this.props.onPageChange(event.target.text.trim().toLowerCase());
 
           return false;
@@ -81,59 +75,62 @@ class ProgressivePaginator extends React.Component {
     };
   }
 
+  // TODO: Resolve lint issues - https://github.com/cerner/terra-core/issues/1689
+  /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
   defaultProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
-    return (<div className={cx(['paginator', 'progressive'])} role="navigation" aria-label="pagination">
-      <div>
-        Page {selectedPage} of {totalPages}
-      </div>
-      <div>
-        <a
-          aria-disabled={selectedPage === 1}
-          aria-label="first"
-          className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
-          tabIndex={selectedPage === 1 ? null : '0'}
-          onClick={this.handlePageChange(1)}
-          onKeyDown={this.handleOnKeyDown(1)}
-        >
-          First
-        </a>
-        <a
-          aria-disabled={selectedPage === 1}
-          aria-label="previous"
-          className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
-          tabIndex={selectedPage === 1 ? null : '0'}
-          onClick={this.handlePageChange(previousPageIndex)}
-          onKeyDown={this.handleOnKeyDown(previousPageIndex)}
-        >
-          <span className={cx('icon')} />Previous
-        </a>
-        <a
-          aria-disabled={selectedPage === totalPages}
-          aria-label="next"
-          className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
-          tabIndex={selectedPage === totalPages ? null : '0'}
-          onClick={this.handlePageChange(nextPageIndex)}
-          onKeyDown={this.handleOnKeyDown(nextPageIndex)}
-        >
-          Next<span className={cx('icon')} />
-        </a>
-        <a
-          aria-disabled={selectedPage === totalPages}
-          aria-label="last"
-          className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
-          tabIndex={selectedPage === totalPages ? null : '0'}
-          onClick={this.handlePageChange(totalPages)}
-          onKeyDown={this.handleOnKeyDown(totalPages)}
-        >
-          Last
-        </a>
-      </div>
-    </div>);
+    return (
+      <div className={cx(['paginator', 'progressive'])} role="navigation" aria-label="pagination">
+        <div>
+          Page {selectedPage} of {totalPages}
+        </div>
+        <div>
+          <a
+            aria-disabled={selectedPage === 1}
+            aria-label="first"
+            className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
+            tabIndex={selectedPage === 1 ? null : '0'}
+            onClick={this.handlePageChange(1)}
+            onKeyDown={this.handleOnKeyDown(1)}
+          >
+            First
+          </a>
+          <a
+            aria-disabled={selectedPage === 1}
+            aria-label="previous"
+            className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
+            tabIndex={selectedPage === 1 ? null : '0'}
+            onClick={this.handlePageChange(previousPageIndex)}
+            onKeyDown={this.handleOnKeyDown(previousPageIndex)}
+          >
+            <span className={cx('icon')} />Previous
+          </a>
+          <a
+            aria-disabled={selectedPage === totalPages}
+            aria-label="next"
+            className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
+            tabIndex={selectedPage === totalPages ? null : '0'}
+            onClick={this.handlePageChange(nextPageIndex)}
+            onKeyDown={this.handleOnKeyDown(nextPageIndex)}
+          >
+            Next<span className={cx('icon')} />
+          </a>
+          <a
+            aria-disabled={selectedPage === totalPages}
+            aria-label="last"
+            className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
+            tabIndex={selectedPage === totalPages ? null : '0'}
+            onClick={this.handlePageChange(totalPages)}
+            onKeyDown={this.handleOnKeyDown(totalPages)}
+          >
+            Last
+          </a>
+        </div>
+      </div>);
   }
 
   reducedProgressivePaginator() {
@@ -142,58 +139,60 @@ class ProgressivePaginator extends React.Component {
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
-    return (<div className={cx(['paginator'])} role="navigation" aria-label="pagination">
-      <div>
-        <a
-          aria-disabled={selectedPage === 1}
-          aria-label="first"
-          className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
-          tabIndex={selectedPage === 1 ? null : '0'}
-          onClick={this.handlePageChange(1)}
-          onKeyDown={this.handleOnKeyDown(1)}
-        >
-          First
-        </a>
-        <a
-          aria-disabled={selectedPage === 1}
-          aria-label="previous"
-          className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
-          tabIndex={selectedPage === 1 ? null : '0'}
-          onClick={this.handlePageChange(previousPageIndex)}
-          onKeyDown={this.handleOnKeyDown(previousPageIndex)}
-        >
-          <span className={cx('visually-hidden')}>Previous</span>
-          <span className={cx('icon')} />
-        </a>
-      </div>
-      <div>
-        Page {selectedPage} of {totalPages}
-      </div>
-      <div>
-        <a
-          aria-disabled={selectedPage === totalPages}
-          aria-label="next"
-          className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
-          tabIndex={selectedPage === totalPages ? null : '0'}
-          onClick={this.handlePageChange(nextPageIndex)}
-          onKeyDown={this.handleOnKeyDown(nextPageIndex)}
-        >
-          <span className={cx('visually-hidden')}>Next</span>
-          <span className={cx('icon')} />
-        </a>
-        <a
-          aria-disabled={selectedPage === totalPages}
-          aria-label="last"
-          className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
-          tabIndex={selectedPage === totalPages ? null : '0'}
-          onClick={this.handlePageChange(totalPages)}
-          onKeyDown={this.handleOnKeyDown(totalPages)}
-        >
-          Last
-        </a>
-      </div>
-    </div>);
+    return (
+      <div className={cx(['paginator'])} role="navigation" aria-label="pagination">
+        <div>
+          <a
+            aria-disabled={selectedPage === 1}
+            aria-label="first"
+            className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
+            tabIndex={selectedPage === 1 ? null : '0'}
+            onClick={this.handlePageChange(1)}
+            onKeyDown={this.handleOnKeyDown(1)}
+          >
+            First
+          </a>
+          <a
+            aria-disabled={selectedPage === 1}
+            aria-label="previous"
+            className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
+            tabIndex={selectedPage === 1 ? null : '0'}
+            onClick={this.handlePageChange(previousPageIndex)}
+            onKeyDown={this.handleOnKeyDown(previousPageIndex)}
+          >
+            <span className={cx('visually-hidden')}>Previous</span>
+            <span className={cx('icon')} />
+          </a>
+        </div>
+        <div>
+          Page {selectedPage} of {totalPages}
+        </div>
+        <div>
+          <a
+            aria-disabled={selectedPage === totalPages}
+            aria-label="next"
+            className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
+            tabIndex={selectedPage === totalPages ? null : '0'}
+            onClick={this.handlePageChange(nextPageIndex)}
+            onKeyDown={this.handleOnKeyDown(nextPageIndex)}
+          >
+            <span className={cx('visually-hidden')}>Next</span>
+            <span className={cx('icon')} />
+          </a>
+          <a
+            aria-disabled={selectedPage === totalPages}
+            aria-label="last"
+            className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
+            tabIndex={selectedPage === totalPages ? null : '0'}
+            onClick={this.handlePageChange(totalPages)}
+            onKeyDown={this.handleOnKeyDown(totalPages)}
+          >
+            Last
+          </a>
+        </div>
+      </div>);
   }
+  /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
 
   render() {
     return <ResponsiveElement defaultElement={this.reducedProgressivePaginator()} tiny={this.defaultProgressivePaginator()} />;

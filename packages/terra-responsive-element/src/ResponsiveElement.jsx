@@ -83,7 +83,9 @@ class ResponsiveElement extends React.Component {
 
   handleResize(width) {
     let element;
-    const { tiny, small, medium, large, huge } = breakpoints;
+    const {
+      tiny, small, medium, large, huge,
+    } = breakpoints;
     if (width >= huge && this.props.huge) {
       element = 'huge';
     } else if (width >= large && this.props.large) {

@@ -21,7 +21,7 @@ exports[`Avatar should render fallback facility avatar when invalid image is pas
       class="hidden"
     >
       <img
-        alt=" "
+        alt="placeholder"
         class="image default avatar-image"
         src="https://path/to/invalid_image.jpg"
       />
@@ -67,7 +67,7 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
       class="hidden"
     >
       <img
-        alt=" "
+        alt="placeholder"
         class="image default avatar-image"
         src="https://path/to/invalid_image.jpg"
       />
