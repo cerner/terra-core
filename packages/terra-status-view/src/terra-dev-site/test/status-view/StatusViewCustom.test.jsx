@@ -2,7 +2,8 @@ import React from 'react';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import StatusView from '../../../StatusView';
 
-export default () =>
+export default () => (
   <div>
     <StatusView id="statusView" title="Custom" variant="custom" customGlyph={<IconDiamond />} />
-  </div>;
+  </div>
+);

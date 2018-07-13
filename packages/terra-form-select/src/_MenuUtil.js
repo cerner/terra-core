@@ -171,8 +171,7 @@ class MenuUtil {
    */
   static findWithStartString(object, string) {
     const option = MenuUtil.flatten(object, true).find(opt => (
-      opt.props.display || '').toLowerCase().startsWith(string.toLowerCase()),
-    );
+      opt.props.display || '').toLowerCase().startsWith(string.toLowerCase()));
     return option ? option.props.value : null;
   }
 

@@ -13,21 +13,30 @@ describe('generateMarkdown with invalid input', () => {
 
 describe('generateMarkdown with valid input', () => {
   it('should generate a markdown table', () => {
-    const validInput = { description: '',
+    const validInput = {
+      description: '',
       methods: [],
       props:
-      { children:
-      { type: { name: 'string', value: 'asdf' },
+      {
+        children:
+      {
+        type: { name: 'string', value: 'asdf' },
         required: true,
-        description: 'The component that will be wrapped by i18n provider.' },
+        description: 'The component that will be wrapped by i18n provider.',
+      },
         locale:
-        { type: { name: 'string', value: 'asdf' },
+        {
+          type: { name: 'string', value: 'asdf' },
           required: true,
-          description: 'The locale name.' },
+          description: 'The locale name.',
+        },
         messages:
-        { type: { name: 'string', value: 'asdf' },
+        {
+          type: { name: 'string', value: 'asdf' },
           required: true,
-          description: 'Translations messages object.' } },
+          description: 'Translations messages object.',
+        },
+      },
     };
 
     expect(generateMarkdown('ComponentName', validInput)).toMatchSnapshot();

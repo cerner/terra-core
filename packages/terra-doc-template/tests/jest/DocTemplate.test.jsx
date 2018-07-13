@@ -34,14 +34,20 @@ describe('DocTemplate', () => {
   });
 
   it('should show one example', () => {
-    const wrapper = shallow(<DocTemplate examples={[{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc }]} />);
+    const wrapper = shallow(<DocTemplate examples={[{
+ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc,
+}]} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should show multiple examples', () => {
     const wrapper = shallow(<DocTemplate
-      examples={[{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
-      { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }]}
+      examples={[{
+ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc,
+},
+      {
+ title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc,
+}]}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -64,8 +70,12 @@ describe('DocTemplate', () => {
       packageName="terra-doc-template"
       readme={readme}
       srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
-      examples={[{ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc },
-      { title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc }]}
+      examples={[{
+ title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc,
+},
+      {
+ title: 'Test Example 2', description: 'Describing the test mk. 2', example: exampleElement, source: exampleSrc,
+}]}
       propsTables={[{ componentSrc: testComponentSrc, componentName: 'Test Component' },
       { componentSrc: testComponentSrc, componentName: 'Test Component (Again)' }]}
     />);

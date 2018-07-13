@@ -75,7 +75,6 @@ const contextTypes = {
 const defaultProps = {
   isSelected: false,
   isReversed: false,
-  text: '',
   shouldCloseOnClick: true,
   isIconOnly: false,
 };

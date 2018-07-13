@@ -1,77 +1,107 @@
 const loadArIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/ar.js'),
-    'ar-intl-local');
+    'ar-intl-local',
+  );
 
 const loadEnIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/en.js'),
-    'en-intl-local');
+    'en-intl-local',
+  );
 
 const loadEnGBIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/en-GB.js'),
-    'en-GB-intl-local');
+    'en-GB-intl-local',
+  );
 
 const loadEnUSIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/en-US.js'),
-    'en-US-intl-local');
+    'en-US-intl-local',
+  );
 
 const loadDeIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/de.js'),
-    'de-intl-local');
+    'de-intl-local',
+  );
 
 const loadPtIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/pt.js'),
-    'pt-intl-local');
+    'pt-intl-local',
+  );
 
 const loadPtBRIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/pt-BR.js'),
-    'pt-BR-intl-local');
+    'pt-BR-intl-local',
+  );
 
 const loadFrIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/fr.js'),
-    'fr-intl-local');
+    'fr-intl-local',
+  );
 
 const loadFrFRIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/fr-FR.js'),
-    'fr-FR-intl-local');
+    'fr-FR-intl-local',
+  );
 
 const loadEsIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/es.js'),
-    'es-intl-local');
+    'es-intl-local',
+  );
 
 const loadEsUSIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/es-US.js'),
-    'es-US-intl-local');
+    'es-US-intl-local',
+  );
 
 const loadEsESIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/es-ES.js'),
-    'es-ES-intl-local');
+    'es-ES-intl-local',
+  );
 
 const loadFiFIIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/fi-FI.js'),
-    'fi-FI-intl-local');
+    'fi-FI-intl-local',
+  );
 
 const loadNlIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/nl.js'),
-    'nl-intl-local');
+    'nl-intl-local',
+  );
 
 const loadNlBEIntl = () =>
-  require.ensure([],
+  require.ensure(
+    [],
     require => require('intl/locale-data/jsonp/nl-BE.js'),
-    'nl-BE-intl-local');
+    'nl-BE-intl-local',
+  );
 
 const intlLoaders = {
   ar: loadArIntl,

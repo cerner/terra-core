@@ -2,7 +2,6 @@ import React from 'react';
 import SearchField from '../../../SearchField';
 
 class CallbackSearchField extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -39,7 +38,6 @@ class CallbackSearchField extends React.Component {
       </div>
     );
   }
-
 }
 
 export default CallbackSearchField;

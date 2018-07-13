@@ -35,7 +35,6 @@ class DefaultMenuItemGroup extends React.Component {
       </div>
     );
   }
-
 }
 
 DefaultMenuItemGroup.childContextTypes = childContextTypes;

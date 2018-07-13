@@ -43,7 +43,9 @@ const contextTypes = {
   },
 };
 
-const Dialog = ({ header, footer, onClose, children, ...customProps }, { intl }) => {
+const Dialog = ({
+  header, footer, onClose, children, ...customProps
+}, { intl }) => {
   const dialogClassNames = cx([
     'dialog',
     customProps.className,

@@ -4,7 +4,7 @@ import DatePicker from '../../../../lib/DatePicker';
 const DatePickerReadOnlyDate = () => (
   <DatePicker
     name="date-input"
-    selectedDate={'2017-04-01'}
+    selectedDate="2017-04-01"
     inputAttributes={{ readOnly: true }}
   />
 );

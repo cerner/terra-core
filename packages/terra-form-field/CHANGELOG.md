@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Formatting changes per eslint v4 update
+* Required props no longer set a default prop
 
 2.17.0 - (July 10, 2018)
 ------------------

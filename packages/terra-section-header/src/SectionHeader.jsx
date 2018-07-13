@@ -121,6 +121,9 @@ class SectionHeader extends React.Component {
     const Element = `h${level}`;
 
     // allows us to set an onClick on the div
+    // We set key events and role conditionally set if onClick is set
+    // eslint doesn't know about this and so it marks this as a lint error
+    /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <div {...attributes} onClick={onClick} className={sectionHeaderClassNames}>

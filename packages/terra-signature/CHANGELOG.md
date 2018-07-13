@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Formatting changes per eslint v4 update
+* Required props no longer set a default prop
+* Removed unused state lineWidth key
 
 1.18.0 - (July 10, 2018)
 ------------------

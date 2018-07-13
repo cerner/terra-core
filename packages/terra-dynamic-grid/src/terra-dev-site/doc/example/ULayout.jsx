@@ -27,7 +27,7 @@ const region3 = {
 };
 
 const ULayout = () => (
-  (<DynamicGrid defaultTemplate={template}>
+  <DynamicGrid defaultTemplate={template}>
     <DynamicGrid.Region defaultPosition={region1}>
       <Card>Region 1</Card>
     </DynamicGrid.Region>
@@ -37,7 +37,7 @@ const ULayout = () => (
     <DynamicGrid.Region defaultPosition={region3}>
       <Card>Region 3</Card>
     </DynamicGrid.Region>
-  </DynamicGrid>)
+  </DynamicGrid>
 );
 
 export default ULayout;

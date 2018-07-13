@@ -14,6 +14,6 @@ const FieldExamples = () => (
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
   </div>
- );
+);
 
 export default FieldExamples;

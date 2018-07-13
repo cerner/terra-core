@@ -25,6 +25,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the dropdown. ( Style, ClassNames, etc.. )
    */
+  // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
    * Whether the select is in an invalid state.
@@ -143,7 +144,9 @@ class Frame extends React.Component {
 
   getDisplay() {
     const { hasSearchChanged, searchValue } = this.state;
-    const { disabled, display, placeholder, variant } = this.props;
+    const {
+      disabled, display, placeholder, variant,
+    } = this.props;
 
     const inputAttrs = {
       disabled,
@@ -256,7 +259,9 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { value } = this.props;
     const { keyCode, target } = event;
-    const { BACKSPACE, SPACE, UP_ARROW, DOWN_ARROW } = KeyCodes;
+    const {
+      BACKSPACE, SPACE, UP_ARROW, DOWN_ARROW,
+    } = KeyCodes;
 
     if (keyCode === SPACE && target !== this.input) {
       event.preventDefault();
@@ -373,6 +378,7 @@ class Frame extends React.Component {
       <div
         {...customProps}
         role="combobox"
+        aria-controls={this.state.isOpen ? 'terra-select-dropdown' : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!this.state.isOpen}
         aria-haspopup="true"
@@ -385,7 +391,8 @@ class Frame extends React.Component {
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
-        <div className={cx('display')} onMouseDown={this.openDropdown} role="textbox">
+        {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
+        <div role="textbox" className={cx('display')} onMouseDown={this.openDropdown}>
           {this.getDisplay()}
         </div>
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>

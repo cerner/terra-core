@@ -29,9 +29,7 @@ const propTypes = {
 
 const defaultProps = {
   endDate: undefined,
-  endName: undefined,
   startDate: undefined,
-  startName: undefined,
   onChange: undefined,
 };
 
@@ -39,7 +37,6 @@ class DateRange extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      format: 'MM/DD/YYYY', // TODO: Get the format from i18n
       startDate: props.startDate,
       endDate: props.endDate,
     };
@@ -80,26 +77,27 @@ class DateRange extends React.Component {
       ...customProps
     } = this.props;
 
-    return (<div className="terra-DatePicker-range">
-      <DatePicker
-        {...customProps}
-        selectedDate={this.state.startDate}
-        isStartDateRange
-        startDate={this.state.startDate}
-        endDate={this.state.endDate}
-        name={startName}
-        onChange={this.handleChangeStart}
-      />
-      <DatePicker
-        {...customProps}
-        selectedDate={this.state.endDate}
-        isEndDateRange
-        startDate={this.state.startDate}
-        endDate={this.state.endDate}
-        name={endName}
-        onChange={this.handleChangeEnd}
-      />
-    </div>);
+    return (
+      <div className="terra-DatePicker-range">
+        <DatePicker
+          {...customProps}
+          selectedDate={this.state.startDate}
+          isStartDateRange
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          name={startName}
+          onChange={this.handleChangeStart}
+        />
+        <DatePicker
+          {...customProps}
+          selectedDate={this.state.endDate}
+          isEndDateRange
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          name={endName}
+          onChange={this.handleChangeEnd}
+        />
+      </div>);
   }
 }
 
