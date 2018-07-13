@@ -74,7 +74,7 @@ class CollapsibleTabs extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.children.length !== this.props.length) {
+    if (nextProps.children.length !== this.props.children.length) {
       this.resetCache();
       this.forceUpdate();
     }

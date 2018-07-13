@@ -17,9 +17,9 @@ class AdditionalTabs extends React.Component {
   }
 
   handleClick() {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       showAdditionalTab: !prevState.showAdditionalTab,
-      activeKey: prevState.activeKey === 'Tab4' ? 'Tab1' : prevState.activeKey
+      activeKey: prevState.activeKey === 'Tab4' ? 'Tab1' : prevState.activeKey,
     }));
   }
 
@@ -57,7 +57,7 @@ class AdditionalTabs extends React.Component {
 
     return (
       <div>
-        <button id="toggleButton" onClick={this.handleClick}>{this.state.showAdditionalTab ? "Hide" : "Show"}</button>
+        <button id="toggleButton" onClick={this.handleClick}>{this.state.showAdditionalTab ? 'Hide' : 'Show'}</button>
         <Tabs id="addtionalTabs" onChange={this.handleSelection} activeKey={this.state.activeKey}>
           {tabs}
         </Tabs>
