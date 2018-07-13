@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Allowing additional tabs after initial mount
+
 ### Changed
 * Formatting changes per eslint v4 update
 
