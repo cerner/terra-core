@@ -27,12 +27,6 @@ const propTypes = {
   button: PropTypes.element.isRequired,
 };
 
-const defaultProps = {
-  isArrowDisplayed: false,
-  children: [],
-  isOpen: false,
-};
-
 const childContextTypes = {
   isCollapsibleMenuItem: PropTypes.bool,
 };
@@ -133,7 +127,6 @@ class CollapsibleMenu extends React.Component {
 }
 
 CollapsibleMenu.propTypes = propTypes;
-CollapsibleMenu.defaultProps = defaultProps;
 CollapsibleMenu.childContextTypes = childContextTypes;
 CollapsibleMenu.Item = Menu.Item;
 CollapsibleMenu.ItemGroup = Menu.ItemGroup;

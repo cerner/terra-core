@@ -93,7 +93,9 @@ class TabMenu extends React.Component {
     let menuActive = false;
 
     React.Children.forEach(this.props.children, (child) => {
-      const { label, customDisplay, icon, isIconOnly, ...otherProps } = child.props;
+      const {
+        label, customDisplay, icon, isIconOnly, ...otherProps
+      } = child.props;
       let isSelected = false;
 
       if (this.props.activeKey === child.key) {

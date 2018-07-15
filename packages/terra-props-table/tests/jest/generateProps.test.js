@@ -2,18 +2,26 @@ const generateProps = require('../../bin/generateMarkdown/generateProps');
 
 describe('generateProps', () => {
   it('should return a props markdown table', () => {
-    const props = { children:
-    { type: { name: 'node' },
+    const props = {
+      children:
+    {
+      type: { name: 'node' },
       required: true,
-      description: 'The component that will be wrapped by i18n provider.' },
+      description: 'The component that will be wrapped by i18n provider.',
+    },
       locale:
-      { type: { name: 'string' },
+      {
+        type: { name: 'string' },
         required: true,
-        description: 'The locale name.' },
+        description: 'The locale name.',
+      },
       messages:
-      { type: { name: 'object' },
+      {
+        type: { name: 'object' },
         required: true,
-        description: 'Translations messages object.' } };
+        description: 'Translations messages object.',
+      },
+    };
 
     expect(generateProps(props)).toMatchSnapshot();
   });

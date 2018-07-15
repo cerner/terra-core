@@ -6,6 +6,7 @@ Unreleased
 ### Changed
 * Replace legacy Input with the new terra-form-input package
 * Give desktop time input the same styles as terra-form-input.
+* Formatting changes per eslint v4 update
 
 2.17.0 - (July 10, 2018)
 ------------------

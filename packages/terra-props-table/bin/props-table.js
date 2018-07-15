@@ -7,8 +7,7 @@ const commander = require('commander');
 const glob = require('glob');
 const uniq = require('lodash/uniq');
 const generateMarkdown = require('./generateMarkdown/generateMarkdown');
-const parse = require('react-docgen').parse;
-
+const { parse } = require('react-docgen');
 
 commander
   .version(pkg.version)

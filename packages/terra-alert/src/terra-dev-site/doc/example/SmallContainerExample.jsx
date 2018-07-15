@@ -29,7 +29,8 @@ class SmallContainerExample extends React.Component {
       <div style={{ width: '500px', border: '1px solid black', padding: '5px' }}>
         <div dir="ltr">
           <h3>Basic Alert of type warning with action button in a small container (500px wide) that will cause the action button section of the alert
-              to render below the message instead of beside it.</h3>
+              to render below the message instead of beside it.
+          </h3>
           <br />
           <code>
             {alertStartTagStr}

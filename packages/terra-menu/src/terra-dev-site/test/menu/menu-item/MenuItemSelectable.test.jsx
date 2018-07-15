@@ -33,7 +33,6 @@ class MenuItemSelectable extends React.Component {
       </div>
     );
   }
-
 }
 
 MenuItemSelectable.childContextTypes = childContextTypes;

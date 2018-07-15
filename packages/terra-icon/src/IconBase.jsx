@@ -59,7 +59,7 @@ const IconBase = ({
   ariaLabel,
   focusable,
   ...customProps
-  }) => {
+}) => {
   const attributes = Object.assign({}, customProps);
 
   // append to existing classNames

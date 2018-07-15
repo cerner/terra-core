@@ -51,6 +51,7 @@ const propTypes = {
   /**
    * Attributes to attach to the label.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
    * Whether or not the field is required.
@@ -72,7 +73,6 @@ const defaultProps = {
   isInvalid: false,
   isInline: false,
   isLabelHidden: false,
-  label: null,
   labelAttrs: {},
   required: false,
   showOptional: false,
@@ -119,12 +119,14 @@ const Field = (props, { intl }) => {
   const labelGroup = (
     <div className={cx(['label-group', { 'label-group-hidden': isLabelHidden }])}>
       {isInvalid && <div className={cx('error-icon')}>{errorIcon}</div>}
-      {<label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
-        {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
-        {label}
-        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
-        {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
-      </label>}
+      {
+        <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
+          {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
+          {label}
+          {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
+          {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
+        </label>
+      }
       {!isInvalid && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
     </div>
   );

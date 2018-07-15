@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 const fs = require('fs');
 
 const readSvg = csvObject => new Promise((resolve, reject) => {
@@ -13,3 +14,4 @@ const readSvg = csvObject => new Promise((resolve, reject) => {
 });
 
 export default readSvg;
+/* eslint-enable compat/compat */

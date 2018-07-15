@@ -28,11 +28,11 @@ const defaultProps = {
 };
 
 const List = ({
-    children,
-    isDivided,
-    refCallback,
-    ...customProps
-  }) => {
+  children,
+  isDivided,
+  refCallback,
+  ...customProps
+}) => {
   const listClassNames = cx([
     'list',
     { divided: isDivided },

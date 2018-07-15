@@ -58,7 +58,6 @@ const propTypes = {
 
 const defaultProps = {
   isArrowDisplayed: false,
-  children: [],
   isOpen: false,
   contentWidth: '240',
 };

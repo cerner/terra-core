@@ -10,4 +10,5 @@ export default () => (
       <Button text={ipsum} key="1" id="button1" />
       <Button text={ipsum} key="2" id="button2" />
     </StatusView>
-  </div>);
+  </div>
+);

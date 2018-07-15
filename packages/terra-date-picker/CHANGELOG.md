@@ -5,6 +5,9 @@ Unreleased
 ----------
 ### Changed
 * Replaced the legacy form input with the new terra-form-input package
+* Fixed Focus Styles on the input element
+* Formatting changes per eslint v4 update
+* Removed unused state format key
 
 2.21.0 - (July 10, 2018)
 ------------------

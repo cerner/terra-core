@@ -14,12 +14,12 @@ describe('Snapshots', () => {
   });
 
   it('renders a search field with a value', () => {
-    const searchField = shallow(<SearchField value={'Test'} />, intlContexts.shallowContext);
+    const searchField = shallow(<SearchField value="Test" />, intlContexts.shallowContext);
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a defaulted value', () => {
-    const searchField = shallow(<SearchField defaultValue={'Default'} />, intlContexts.shallowContext);
+    const searchField = shallow(<SearchField defaultValue="Default" />, intlContexts.shallowContext);
     expect(searchField).toMatchSnapshot();
   });
 

@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 const fs = require('fs');
 
 const writeSvg = csvObject => new Promise((resolve, reject) => {
@@ -12,3 +13,4 @@ const writeSvg = csvObject => new Promise((resolve, reject) => {
 });
 
 module.exports = writeSvg;
+/* eslint-enable compat/compat */

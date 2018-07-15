@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Formatting changes per eslint v4 update
+* Added tabIndex="0" to role="listbox"
+* Reordered react methods to match preferred linter order
 
 4.9.0 - (July 10, 2018)
 ------------------

@@ -31,6 +31,7 @@ const propTypes = {
   /**
    * Additional key value identifiers of a person's demographic information
    */
+  // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
    * Full Name of the person
@@ -73,17 +74,15 @@ const contextTypes = {
   },
 };
 
-const DemographicsBanner = (
-  {
-    age,
-    dateOfBirth,
-    gender,
-    personName,
-    ...customProps
-  }, {
-    intl,
-  },
-) => {
+const DemographicsBanner = ({
+  age,
+  dateOfBirth,
+  gender,
+  personName,
+  ...customProps
+}, {
+  intl,
+}) => {
   const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
   return (
