@@ -8,14 +8,17 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   children: PropTypes.node,
+  isBorderless: PropTypes.bool,
 };
 
 const defaultProps = {
   children: undefined,
+  isBorderless: false,
 };
 
 const ActionFooterContainer = ({
   children,
+  isBorderless,
   ...customProps
 }) => {
   const isEmpty = !React.Children.toArray(children).length;
@@ -23,6 +26,7 @@ const ActionFooterContainer = ({
   const actionFooterContainerClassNames = cx([
     'action-footer-container',
     { 'with-actions': !isEmpty },
+    { 'with-border': !isBorderless },
     customProps.className,
   ]);
 

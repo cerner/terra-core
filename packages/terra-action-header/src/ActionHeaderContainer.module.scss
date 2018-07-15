@@ -1,7 +1,6 @@
 :local {
   .flex-header {
     background-color: var(--terra-action-header-background-color, #f4f4f4);
-    border-bottom: var(--terra-action-header-border-bottom, 1px solid #dedfe0);
     border-left: var(--terra-action-header-border-left);
     border-right: var(--terra-action-header-border-right);
     border-top: var(--terra-action-header-border-top);
@@ -20,6 +19,10 @@
       height: 100%;
       max-width: 40%;
       position: relative;
+    }
+
+    &.with-border {
+      border-bottom: var(--terra-action-header-border-bottom, 1px solid #dedfe0);
     }
   }
 

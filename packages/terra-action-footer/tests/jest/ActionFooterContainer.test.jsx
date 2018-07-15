@@ -66,4 +66,28 @@ describe('ActionFooterContainer', () => {
       ));
     });
   });
+
+  describe('with isBorderless not set', () => {
+    const actionFooterContainer = shallow(<ActionFooterContainer />);
+
+    it('should contain the with-border class', () => {
+      expect(actionFooterContainer.find('.with-border').length).toBe(1);
+    });
+  });
+
+  describe('with isBorderless set to false', () => {
+    const actionFooterContainer = shallow(<ActionFooterContainer isBorderless={false} />);
+
+    it('should contain the with-border class', () => {
+      expect(actionFooterContainer.find('.with-border').length).toBe(1);
+    });
+  });
+
+  describe('with isBorderless set to true', () => {
+    const actionFooterContainer = shallow(<ActionFooterContainer isBorderless />);
+
+    it('should contain the with-border class', () => {
+      expect(actionFooterContainer.find('.with-border').length).toBe(0);
+    });
+  });
 });

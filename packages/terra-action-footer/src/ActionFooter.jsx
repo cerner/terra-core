@@ -16,19 +16,25 @@ const propTypes = {
    * Actions to be displayed in the end socket
    */
   end: PropTypes.node,
+  /**
+   * Determines whether or not a border is shown
+   */
+  isBorderless: PropTypes.bool,
 };
 
 const defaultProps = {
   start: undefined,
   end: undefined,
+  isBorderless: false,
 };
 
 const ActionFooter = ({
   start,
   end,
+  isBorderless,
   ...customProps
 }) => (
-  <ActionFooterContainer {...customProps} className={cx(customProps.className)}>
+  <ActionFooterContainer isBorderless={isBorderless} {...customProps} className={cx(customProps.className)}>
     {start && <div className={cx('socket')}>{start}</div>}
     {(start || end) && <div className={cx('empty-center')} />}
     {end && <div className={cx('socket')}>{end}</div>}

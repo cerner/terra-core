@@ -3,13 +3,15 @@
 exports[`ActionFooter Prop Tests with both start and end actions should display both start and end actions 1`] = `
 <ActionFooter
   end="End Action"
+  isBorderless={false}
   start="Start Action"
 >
   <ActionFooterContainer
     className=""
+    isBorderless={false}
   >
     <div
-      className="action-footer-container with-actions"
+      className="action-footer-container with-actions with-border"
     >
       <div
         className="socket"
@@ -29,15 +31,32 @@ exports[`ActionFooter Prop Tests with both start and end actions should display 
 </ActionFooter>
 `;
 
+exports[`ActionFooter Prop Tests with no border should not display a border 1`] = `
+<ActionFooter
+  isBorderless={true}
+>
+  <ActionFooterContainer
+    className=""
+    isBorderless={true}
+  >
+    <div
+      className="action-footer-container"
+    />
+  </ActionFooterContainer>
+</ActionFooter>
+`;
+
 exports[`ActionFooter Prop Tests with only a start action should only display a start action 1`] = `
 <ActionFooter
+  isBorderless={false}
   start="Start Action"
 >
   <ActionFooterContainer
     className=""
+    isBorderless={false}
   >
     <div
-      className="action-footer-container with-actions"
+      className="action-footer-container with-actions with-border"
     >
       <div
         className="socket"
@@ -55,12 +74,14 @@ exports[`ActionFooter Prop Tests with only a start action should only display a 
 exports[`ActionFooter Prop Tests with only an end action should only display an end action 1`] = `
 <ActionFooter
   end="End Action"
+  isBorderless={false}
 >
   <ActionFooterContainer
     className=""
+    isBorderless={false}
   >
     <div
-      className="action-footer-container with-actions"
+      className="action-footer-container with-actions with-border"
     >
       <div
         className="empty-center"
@@ -76,20 +97,42 @@ exports[`ActionFooter Prop Tests with only an end action should only display an 
 `;
 
 exports[`ActionFooter Prop Tests without start or end actions should display no actions 1`] = `
-<ActionFooter>
+<ActionFooter
+  isBorderless={false}
+>
   <ActionFooterContainer
     className=""
+    isBorderless={false}
   >
     <div
-      className="action-footer-container"
+      className="action-footer-container with-border"
     />
   </ActionFooterContainer>
 </ActionFooter>
 `;
 
+exports[`ActionFooter Snapshot Tests should render a borderless footer 1`] = `
+<ActionFooterContainer
+  className=""
+  isBorderless={true}
+>
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  >
+    <button>
+      End Socket
+    </button>
+  </div>
+</ActionFooterContainer>
+`;
+
 exports[`ActionFooter Snapshot Tests should render a footer with both start and end socket buttons 1`] = `
 <ActionFooterContainer
   className=""
+  isBorderless={false}
 >
   <div
     className="socket"
@@ -114,6 +157,7 @@ exports[`ActionFooter Snapshot Tests should render a footer with both start and 
 exports[`ActionFooter Snapshot Tests should render a footer with only an end socket button 1`] = `
 <ActionFooterContainer
   className=""
+  isBorderless={false}
 >
   <div
     className="empty-center"
@@ -131,6 +175,7 @@ exports[`ActionFooter Snapshot Tests should render a footer with only an end soc
 exports[`ActionFooter Snapshot Tests should render a footer with only one start socket button 1`] = `
 <ActionFooterContainer
   className=""
+  isBorderless={false}
 >
   <div
     className="socket"
@@ -148,6 +193,7 @@ exports[`ActionFooter Snapshot Tests should render a footer with only one start 
 exports[`ActionFooter Snapshot Tests should render a footer with only two end socket buttons 1`] = `
 <ActionFooterContainer
   className=""
+  isBorderless={false}
 >
   <div
     className="empty-center"
@@ -170,6 +216,7 @@ exports[`ActionFooter Snapshot Tests should render a footer with only two end so
 exports[`ActionFooter Snapshot Tests should render a footer with only two start socket buttons 1`] = `
 <ActionFooterContainer
   className=""
+  isBorderless={false}
 >
   <div
     className="socket"
@@ -192,5 +239,6 @@ exports[`ActionFooter Snapshot Tests should render a footer with only two start 
 exports[`ActionFooter Snapshot Tests should render an empty footer 1`] = `
 <ActionFooterContainer
   className=""
+  isBorderless={false}
 />
 `;

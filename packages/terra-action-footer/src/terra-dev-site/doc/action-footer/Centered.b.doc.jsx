@@ -14,6 +14,8 @@ import SingleActionExample from '../example/centered/SingleAction';
 import SingleActionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/centered/SingleAction';
 import MultipleActionsExample from '../example/centered/MultipleActions';
 import MultipleActionsExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/centered/MultipleActions';
+import BorderlessExample from '../example/centered/Borderless';
+import BorderlessExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/centered/Borderless';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -36,6 +38,11 @@ const DocPage = () => (
         title: 'Multiple Actions',
         example: <MultipleActionsExample />,
         source: MultipleActionsExampleSrc,
+      },
+      {
+        title: 'Borderless',
+        example: <BorderlessExample />,
+        source: BorderlessExampleSrc,
       },
     ]}
     propsTables={[

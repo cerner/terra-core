@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionHeaderContainer Snapshot Tests should render a container with a border 1`] = `
+<header
+  className="flex-header with-border"
+>
+  <div
+    className="flex-fill"
+  >
+    <div
+      className="title-container"
+    >
+      <h1
+        className="title"
+      >
+        Action Header
+      </h1>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`ActionHeaderContainer Snapshot Tests should render a container with no border 1`] = `
+<header
+  className="flex-header"
+>
+  <div
+    className="flex-fill"
+  >
+    <div
+      className="title-container"
+    >
+      <h1
+        className="title"
+      >
+        Action Header
+      </h1>
+    </div>
+  </div>
+</header>
+`;

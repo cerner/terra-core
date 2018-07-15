@@ -12,14 +12,20 @@ const propTypes = {
    * Actions to be displayed in the center socket
    */
   center: PropTypes.node,
+  /**
+   * Determines whether or not a border is shown
+   */
+  isBorderless: PropTypes.bool,
 };
 
 const defaultProps = {
   center: undefined,
+  isBorderless: false,
 };
 
 const CenteredActionFooter = ({
   center,
+  isBorderless,
   ...customProps
 }) => {
   const centeredActionFooterClassNames = cx([
@@ -29,6 +35,7 @@ const CenteredActionFooter = ({
 
   return (
     <ActionFooterContainer
+      isBorderless={isBorderless}
       {...customProps}
       className={centeredActionFooterClassNames}
     >

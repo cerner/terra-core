@@ -21,4 +21,11 @@ describe('ActionFooterContainer', () => {
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty(withActionsThemeables);
   });
+
+  describe('Borderless', () => {
+    beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/borderless-action-footer-container'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
 });

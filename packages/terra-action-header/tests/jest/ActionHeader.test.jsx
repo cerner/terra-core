@@ -83,6 +83,12 @@ describe('ActionHeader', () => {
     const wrapper = shallow(actionHeader, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a borderless action header', () => {
+    const actionHeader = <ActionHeader title="Action Header" isBorderless />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 
 it('throws error on missing locale prop in Base', () => {

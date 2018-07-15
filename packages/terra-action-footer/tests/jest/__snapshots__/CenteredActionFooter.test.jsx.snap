@@ -3,12 +3,14 @@
 exports[`CenteredActionFooter Prop Tests with a center action should display a center action 1`] = `
 <CenteredActionFooter
   center="Center Action"
+  isBorderless={false}
 >
   <ActionFooterContainer
     className="centered-action-footer"
+    isBorderless={false}
   >
     <div
-      className="action-footer-container with-actions centered-action-footer"
+      className="action-footer-container with-actions with-border centered-action-footer"
     >
       Center Action
     </div>
@@ -17,12 +19,15 @@ exports[`CenteredActionFooter Prop Tests with a center action should display a c
 `;
 
 exports[`CenteredActionFooter Prop Tests without a center action should display no actions 1`] = `
-<CenteredActionFooter>
+<CenteredActionFooter
+  isBorderless={false}
+>
   <ActionFooterContainer
     className="centered-action-footer"
+    isBorderless={false}
   >
     <div
-      className="action-footer-container centered-action-footer"
+      className="action-footer-container with-border centered-action-footer"
     />
   </ActionFooterContainer>
 </CenteredActionFooter>
@@ -31,6 +36,7 @@ exports[`CenteredActionFooter Prop Tests without a center action should display 
 exports[`CenteredActionFooter Snapshot Tests should render a footer with an anchor 1`] = `
 <ActionFooterContainer
   className="centered-action-footer"
+  isBorderless={false}
 >
   <a
     href="/"
@@ -43,6 +49,7 @@ exports[`CenteredActionFooter Snapshot Tests should render a footer with an anch
 exports[`CenteredActionFooter Snapshot Tests should render a footer with two buttons 1`] = `
 <ActionFooterContainer
   className="centered-action-footer"
+  isBorderless={false}
 >
   <div>
     <button>
@@ -58,5 +65,6 @@ exports[`CenteredActionFooter Snapshot Tests should render a footer with two but
 exports[`CenteredActionFooter Snapshot Tests should render an empty footer 1`] = `
 <ActionFooterContainer
   className="centered-action-footer"
+  isBorderless={false}
 />
 `;

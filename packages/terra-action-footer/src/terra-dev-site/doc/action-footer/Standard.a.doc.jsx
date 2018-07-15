@@ -16,6 +16,8 @@ import SingleEndActionExample from '../example/standard/SingleEndAction';
 import SingleEndActionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/standard/SingleEndAction';
 import MultipleStartEndActionsExample from '../example/standard/MultipleStartEndActions';
 import MultipleStartEndActionsExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/standard/MultipleStartEndActions';
+import BorderlessExample from '../example/standard/Borderless';
+import BorderlessExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/standard/Borderless';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -43,6 +45,11 @@ const DocPage = () => (
         title: 'Multiple Start and End Actions',
         example: <MultipleStartEndActionsExample />,
         source: MultipleStartEndActionsExampleSrc,
+      },
+      {
+        title: 'Borderless',
+        example: <BorderlessExample />,
+        source: BorderlessExampleSrc,
       },
     ]}
     propsTables={[
