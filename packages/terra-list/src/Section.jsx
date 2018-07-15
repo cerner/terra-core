@@ -15,7 +15,7 @@ const propTypes = {
   /**
    * The list of elements to be placed for display in a section.
    */
-  listItems: PropTypes.array,
+  listItems: PropTypes.arrayOf(PropTypes.node),
 };
 
 const defaultProps = {

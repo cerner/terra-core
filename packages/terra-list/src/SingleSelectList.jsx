@@ -35,16 +35,6 @@ const defaultProps = {
 };
 
 class SingleSelectList extends React.Component {
-
-  static getDerivedStateFromProps(props, state) {
-    if (props.hasSections !== state.hasSections) {
-      return {
-        hasSections: props.hasSections,
-      };
-    }
-    return null;
-  }
-
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -55,6 +45,15 @@ class SingleSelectList extends React.Component {
         SelectableList.Utils.initialSingleSelectedIndex(props.children),
       hasSections: false,
     };
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.hasSections !== state.hasSections) {
+      return {
+        hasSections: props.hasSections,
+      };
+    }
+    return null;
   }
 
   handleOnChange(event, index) {
@@ -71,7 +70,14 @@ class SingleSelectList extends React.Component {
   }
 
   render() {
-    const { children, isDivided, onChange, hasChevrons, hasSections, ...customProps } = this.props;
+    const {
+      children,
+      isDivided,
+      onChange,
+      hasChevrons,
+      hasSections,
+      ...customProps
+    } = this.props;
     return (
       <SelectableList
         {...customProps}

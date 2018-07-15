@@ -123,7 +123,13 @@ class ListSectionHeader extends React.Component {
     // allows us to set an onClick on the div
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
-      <div {...attributes} onClick={onClick} className={ListSectionHeaderClassNames}>
+      <div
+        {...attributes}
+        onClick={onClick}
+        onKeyDown={this.wrapOnKeyDown(attributes.onKeyDown)}
+        onKeyUp={this.wrapOnKeyUp(attributes.onKeyUp)}
+        className={ListSectionHeaderClassNames}
+      >
         <Arrange
           fitStart={onClick && accordionIcon}
           fill={<Element className={cx('title')}>{title}</Element>}

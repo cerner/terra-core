@@ -50,6 +50,13 @@ const defaultProps = {
 };
 
 class SelectableList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasSections: false,
+    };
+  }
+
   static getDerivedStateFromProps(props, state) {
     if (props.hasSections !== state.hasSections) {
       return {
@@ -57,13 +64,6 @@ class SelectableList extends React.Component {
       };
     }
     return null;
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      hasSections: false,
-    };
   }
 
   render() {

@@ -28,7 +28,7 @@ const validatedMaxCountForSections = (children, maxSelectionCount) => {
   let totalNoOfListItems = 0;
   for (let i = 0; i < childArray.length; i += 1) {
     const eachSection = childArray[i];
-    const listItems = eachSection.props.listItems;
+    const { listItems } = eachSection.props;
     totalNoOfListItems += listItems.length;
   }
   return totalNoOfListItems;
@@ -59,7 +59,7 @@ const initialSingleSelectedIndexWithSections = (children) => {
   // childArray has all the sections.
   for (let i = 0; i < childArray.length; i += 1) {
     const eachSection = childArray[i];
-    const listItems = eachSection.props.listItems;
+    const { listItems } = eachSection.props;
 
     for (let j = 0; j < listItems.length; j += 1) {
       if (listItems[i].props.isSelected) {
@@ -102,7 +102,7 @@ const initialMultiSelectedIndexesWithSections = (children, maxSelectionCount) =>
   const validMaxCount = validatedMaxCountForSections(children, maxSelectionCount);
 
   for (let i = 0; i < childArray.length; i += 1) {
-    const listItems = childArray[i].props.listItems;
+    const { listItems } = childArray[i].props;
 
     if (selectedIndexes.length >= validMaxCount) {
       break;

@@ -77,6 +77,8 @@ exports[`should mount with no items with section headers 1`] = `
                 <div
                   className="list-section-header"
                   id="Section-1"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -243,6 +245,8 @@ exports[`should mount with one items with Section Headers 1`] = `
                 <div
                   className="list-section-header"
                   id="Section-1"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -524,6 +528,8 @@ exports[`should select an item across multiple sections when maxSelectionCount i
                 <div
                   className="list-section-header"
                   id="Section-1"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -695,6 +701,8 @@ exports[`should select an item across multiple sections when maxSelectionCount i
                 <div
                   className="list-section-header"
                   id="Section-2"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -910,6 +918,8 @@ exports[`should select an item across multiple sections when maxSelectionCount i
                 <div
                   className="list-section-header"
                   id="Section-1"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -1069,6 +1079,8 @@ exports[`should select an item across multiple sections when maxSelectionCount i
                 <div
                   className="list-section-header"
                   id="Section-2"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -1272,6 +1284,8 @@ exports[`should select an item across multiple sections when maxSelectionCount i
                 <div
                   className="list-section-header"
                   id="Section-1"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -1431,6 +1445,8 @@ exports[`should select an item across multiple sections when maxSelectionCount i
                 <div
                   className="list-section-header"
                   id="Section-2"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -1634,6 +1650,8 @@ exports[`should select an item across multiple sections when maxSelectionCount i
                 <div
                   className="list-section-header"
                   id="Section-1"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
@@ -1793,6 +1811,8 @@ exports[`should select an item across multiple sections when maxSelectionCount i
                 <div
                   className="list-section-header"
                   id="Section-2"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                 >
                   <Arrange
                     fill={
