@@ -28,7 +28,7 @@ describe('Collapsible Menu View', () => {
           '--terra-collapsible-menu-view-menu-button-background': 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M39.6%2033.9V22.5H25.4v-8.4h5.5V0h-14v14.1h5.5v8.4H8.5v11.4H2.9V48H17V33.9h-5.5v-8.4h25.1v8.4H31V48h14.1V33.9z%22%2F%3E%3C%2Fsvg%3E")',
           '--terra-collapsible-menu-view-menu-button-padding-left': '4em',
           '--terra-collapsible-menu-view-item-padding-left': '2em',
-          '--terra-collapsible-menu-view-divider-border': '1px solid red',
+          '--terra-collapsible-menu-view-divider-border-right': '1px solid red',
           '--terra-collapsible-menu-view-divider-height': '4.143rem',
         },
       });
