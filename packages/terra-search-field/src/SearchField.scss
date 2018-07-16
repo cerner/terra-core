@@ -10,7 +10,10 @@
       border-top-left-radius: var(--terra-search-field-border-top-left-radius, 0.25em);
       border-top-right-radius: 0;
       flex: 1 1 auto;
-      margin: var(--terra-search-field-input-margin, 0);
+      margin-bottom: var(--terra-search-field-input-margin-bottom, 0);
+      margin-left: var(--terra-search-field-input-margin-left, 0);
+      margin-right: var(--terra-search-field-input-margin-right, 0);
+      margin-top: var(--terra-search-field-input-margin-top, 0);
       min-width: 0;
       outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
     }
@@ -23,7 +26,10 @@
       border-top-right-radius: var(--terra-search-field-border-top-right-radius, 0.25em);
       display: inline-block;
       flex: 0 0 auto;
-      margin: var(--terra-search-field-button-margin, 0);
+      margin-bottom: var(--terra-search-field-button-margin-bottom, 0);
+      margin-left: var(--terra-search-field-button-margin-left, 0);
+      margin-right: var(--terra-search-field-button-margin-right, 0);
+      margin-top: var(--terra-search-field-button-margin-top, 0);
     }
   }
 

@@ -37,8 +37,14 @@ describe('Search Field', () => {
         '--terra-search-field-border-bottom-right-radius': '1em',
         '--terra-search-field-border-top-right-radius': '1em',
         '--terra-search-field-button-border': '2px dotted red',
-        '--terra-search-field-input-margin': '10px',
-        '--terra-search-field-button-margin': '10px 10px 10px -10px',
+        '--terra-search-field-input-margin-bottom': '10px',
+        '--terra-search-field-input-margin-left': '10px',
+        '--terra-search-field-input-margin-right': '10px',
+        '--terra-search-field-input-margin-top': '10px',
+        '--terra-search-field-button-margin-bottom': '10px',
+        '--terra-search-field-button-margin-left': '-10px',
+        '--terra-search-field-button-margin-right': '10px',
+        '--terra-search-field-button-margin-top': '10px',
       },
     });
   });
