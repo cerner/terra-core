@@ -4,10 +4,10 @@
 
     .input {
       appearance: none;
-      border-bottom-left-radius: var(--terra-search-field-border-bottom-left-radius, 0.25em);
+      border-bottom-left-radius: var(--terra-search-field-input-border-bottom-left-radius, 0.25em);
       border-bottom-right-radius: 0;
       border-right: 0;
-      border-top-left-radius: var(--terra-search-field-border-top-left-radius, 0.25em);
+      border-top-left-radius: var(--terra-search-field-input-border-top-left-radius, 0.25em);
       border-top-right-radius: 0;
       flex: 1 1 auto;
       margin-bottom: var(--terra-search-field-input-margin-bottom, 0);
@@ -21,9 +21,9 @@
     .button {
       border: var(--terra-search-field-button-border, 0.071em solid #dedfe0);
       border-bottom-left-radius: 0;
-      border-bottom-right-radius: var(--terra-search-field-border-bottom-right-radius, 0.25em);
+      border-bottom-right-radius: var(--terra-search-field-button-border-bottom-right-radius, 0.25em);
       border-top-left-radius: 0;
-      border-top-right-radius: var(--terra-search-field-border-top-right-radius, 0.25em);
+      border-top-right-radius: var(--terra-search-field-button-border-top-right-radius, 0.25em);
       display: inline-block;
       flex: 0 0 auto;
       margin-bottom: var(--terra-search-field-button-margin-bottom, 0);

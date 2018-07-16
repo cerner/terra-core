@@ -32,19 +32,19 @@ describe('Search Field', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-search-field-border-bottom-left-radius': '1em',
-        '--terra-search-field-border-top-left-radius': '1em',
-        '--terra-search-field-border-bottom-right-radius': '1em',
-        '--terra-search-field-border-top-right-radius': '1em',
+        '--terra-search-field-border-input-bottom-left-radius': '1em',
+        '--terra-search-field-border-input-top-left-radius': '1em',
+        '--terra-search-field-border-button-bottom-right-radius': '1em',
+        '--terra-search-field-border-button-top-right-radius': '1em',
         '--terra-search-field-button-border': '2px dotted red',
-        '--terra-search-field-input-margin-bottom': '10px',
-        '--terra-search-field-input-margin-left': '10px',
-        '--terra-search-field-input-margin-right': '10px',
-        '--terra-search-field-input-margin-top': '10px',
         '--terra-search-field-button-margin-bottom': '10px',
         '--terra-search-field-button-margin-left': '-10px',
         '--terra-search-field-button-margin-right': '10px',
         '--terra-search-field-button-margin-top': '10px',
+        '--terra-search-field-input-margin-bottom': '10px',
+        '--terra-search-field-input-margin-left': '10px',
+        '--terra-search-field-input-margin-right': '10px',
+        '--terra-search-field-input-margin-top': '10px',
       },
     });
   });
