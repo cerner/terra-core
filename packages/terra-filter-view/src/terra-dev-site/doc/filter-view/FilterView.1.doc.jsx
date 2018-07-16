@@ -23,11 +23,13 @@ const DocPage = () => (
     examples={[
       {
         title: 'Default Filter View',
+        description: 'A default variant provides a dropdown to view results.',
         example: <DefaultFilterView />,
         source: DefaultFilterViewSrc,
       },
       {
         title: 'List Filter View',
+        description: 'A list variant provides a list view to display results.',
         example: <ListFilterView />,
         source: ListFilterViewSrc,
       },

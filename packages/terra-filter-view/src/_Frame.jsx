@@ -132,7 +132,7 @@ class Frame extends React.Component {
     super(props);
 
     this.state = {
-      isOpen: false,
+      isOpen: props.variant === Variants.LIST,
       isFocused: false,
       isPositioned: false,
       hasSearchChanged: false,
@@ -468,7 +468,7 @@ class Frame extends React.Component {
           {variant === Variants.DROPDOWN && this.state.isOpen &&
             <Dropdown
               {...dropdownAttrs}
-              id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+              id={'terra-select-dropdown'}
               target={this.select}
               isAbove={this.state.isAbove}
               isEnabled={this.state.isPositioned}
