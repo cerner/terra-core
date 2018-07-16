@@ -16,9 +16,9 @@
 
   .item:active:not(.is-disabled),
   .active {
-    background-color: var(--terra-menu-item-active-color, #ebf6fd);
+    background-color: var(--terra-menu-item-active-background-color, #ebf6fd);
 
-    .title {
+    .text {
       color: var(--terra-menu-item-active-text-color, #1c1f21);
     }
   }
@@ -26,7 +26,7 @@
   .is-disabled {
     outline: 0;
     
-    .title {
+    .text {
       color: var(--terra-menu-item-disabled-text-color, #1c1f21);
       opacity: 0.3;
     }
@@ -36,7 +36,7 @@
     }
   }
 
-  .title {
+  .text {
     color: var(--terra-menu-item-text-color, #1c1f21);
     font-size: var(--terra-menu-item-text-font-size, 13px);
     line-height: 1.2;

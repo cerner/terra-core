@@ -71,7 +71,7 @@ class MenuItem extends React.Component {
     super(props, context);
     this.wrapOnClick = this.wrapOnClick.bind(this);
     this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
-    this.onKeyUp = this.onKeyUp.bind(this);
+    this.wrapOnKeyUp = this.wrapOnKeyUp.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.setItemNode = this.setItemNode.bind(this);
     this.state = {
@@ -84,14 +84,6 @@ class MenuItem extends React.Component {
     if (this.props.isActive && this.itemNode) {
       this.itemNode.focus();
     }
-  }
-
-  onKeyUp() {
-    return ((event) => {
-      if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
-        this.setState({ isActive: false });
-      }
-    });
   }
 
   setItemNode(node) {
@@ -126,21 +118,33 @@ class MenuItem extends React.Component {
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
         this.handleSelection(event);
 
-        // If the item has sub menu items onKeyUp will never get called and item will be stuck active
-        if (!this.props.subMenuItems || this.props.subMenuItems.length === 0) {
+        // Only add active style if the menu doesn't have a sub menu to avoid active style being stuck enabled
+        if (!(this.props.subMenuItems && this.props.subMenuItems.length > 0)) {
           this.setState({ isActive: true });
         }
 
         if (this.props.onClick) {
           this.props.onClick(event);
         }
-      // Item will become stuck active if the user presses tab while holding space
+      // Remove active state when tab key is released while while holding the space key to avoid active style being stuck enabled
       } else if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.TAB) {
         this.setState({ isActive: false });
       }
 
       if (onKeyDown) {
         onKeyDown(event);
+      }
+    });
+  }
+
+  wrapOnKeyUp(onKeyUp) {
+    return ((event) => {
+      if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+        this.setState({ isActive: false });
+      }
+
+      if (onKeyUp) {
+        onKeyUp(event);
       }
     });
   }
@@ -171,7 +175,7 @@ class MenuItem extends React.Component {
     } else {
       attributes.onClick = this.wrapOnClick;
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
-      attributes.onKeyUp = this.onKeyUp();
+      attributes.onKeyUp = this.wrapOnKeyUp(attributes.Up);
     }
 
     const markAsSelected = this.state.isSelected || (isGroupItem && isSelected);
@@ -185,7 +189,7 @@ class MenuItem extends React.Component {
       attributes.className,
     ]);
 
-    const textContainer = <div className={cx(['title'])}>{text}</div>;
+    const textContainer = <div className={cx(['text'])}>{text}</div>;
     const hasChevron = subMenuItems.length > 0;
     let content = textContainer;
     if (hasChevron || isSelectableMenu) {
