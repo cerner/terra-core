@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added more themeable variables to MenuItem
+* Added an active style to MenuItem
+
 ### Changed
 * Formatting changes per eslint v4 update
 * Required props no longer set a default prop
