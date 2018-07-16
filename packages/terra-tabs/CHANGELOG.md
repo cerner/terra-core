@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Formatting changes per eslint v4 update
 
+### Fixed
+* Removed usage of CSS `initial` value because Internet Explorer does not support it
+
 3.11.0 - (July 10, 2018)
 ------------------
 ### Changed

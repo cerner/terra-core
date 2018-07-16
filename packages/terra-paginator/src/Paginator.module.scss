@@ -51,8 +51,8 @@
     }
 
     .is-selected {
-      color: var(--terra-paginator-nav-link-selected-color, initial);
-      cursor: initial;
+      color: var(--terra-paginator-nav-link-selected-color, inherit);
+      cursor: auto;
       pointer-events: none;
 
       &:hover {
@@ -70,7 +70,7 @@
       pointer-events: none;
 
       &:focus {
-        box-shadow: var(--terra-paginator-nav-link-disabled-box-shadow-focus, initial);
+        box-shadow: var(--terra-paginator-nav-link-disabled-box-shadow-focus, none);
         outline: none;
       }
     }
