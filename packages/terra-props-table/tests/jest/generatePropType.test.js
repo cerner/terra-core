@@ -15,31 +15,34 @@ describe('generatePropType', () => {
 
   it('should return "string" for enum', () => {
     const enumProp =
-      { name: 'enum',
+      {
+        name: 'enum',
         value:
         [{ value: '\'default\'' },
-       { value: '\'link\'' },
-       { value: '\'primary\'' },
-       { value: '\'secondary\'' }],
+          { value: '\'link\'' },
+          { value: '\'primary\'' },
+          { value: '\'secondary\'' }],
       };
     expect(generatePropType(enumProp)).toEqual('`string`');
   });
 
   it('should return "number" for enum', () => {
     const enumProp =
-      { name: 'enum',
+      {
+        name: 'enum',
         value:
         [{ value: '2' },
-       { value: '4' },
-       { value: '6' },
-       { value: '3' }],
+          { value: '4' },
+          { value: '6' },
+          { value: '3' }],
       };
     expect(generatePropType(enumProp)).toEqual('`number`');
   });
 
   it('should return list of types for oneOfType', () => {
     const propType =
-      { name: 'union',
+      {
+        name: 'union',
         value:
         [{ name: 'string' }, { name: 'number' }],
       };
@@ -48,7 +51,8 @@ describe('generatePropType', () => {
 
   it('should return type for arrayOf', () => {
     const propType =
-      { name: 'arrayOf',
+      {
+        name: 'arrayOf',
         value:
         { name: 'string' },
       };
@@ -57,7 +61,8 @@ describe('generatePropType', () => {
 
   it('should return object format for arrayOf shapes', () => {
     const propType =
-      { name: 'arrayOf',
+      {
+        name: 'arrayOf',
         value: {
           name: 'shape',
           value: { row: 'string', icon: 'element' },
@@ -68,7 +73,8 @@ describe('generatePropType', () => {
 
   it('should return object format for shape', () => {
     const propType =
-      { name: 'shape',
+      {
+        name: 'shape',
         value: { row: 'string', icon: 'element' },
       };
     expect(generatePropType(propType)).toEqual('`an object structured like: {"row":"string","icon":"element"}`');

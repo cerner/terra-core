@@ -93,7 +93,7 @@ const region5 = {
 
 
 const ResponsiveGrid = () => (
-  (<DynamicGrid defaultTemplate={template}>
+  <DynamicGrid defaultTemplate={template}>
     <DynamicGrid.Region {...region1}>
       <Card>1</Card>
     </DynamicGrid.Region>
@@ -109,8 +109,7 @@ const ResponsiveGrid = () => (
     <DynamicGrid.Region {...region5}>
       <Card>5</Card>
     </DynamicGrid.Region>
-
-  </DynamicGrid>)
+  </DynamicGrid>
 );
 
 export default ResponsiveGrid;

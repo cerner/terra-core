@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed unused state mouseWasClicked key
 
 2.16.0 - (July 10, 2018)
 ------------------

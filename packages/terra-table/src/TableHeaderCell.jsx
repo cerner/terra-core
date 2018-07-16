@@ -35,7 +35,7 @@ const TableHeaderCell = ({
   minWidth,
   sort,
   ...customProps
-  }) => {
+}) => {
   const contentClassName = cx([
     { [`min-width-${minWidth}`]: minWidth },
     customProps.className,

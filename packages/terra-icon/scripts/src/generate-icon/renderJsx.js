@@ -1,8 +1,9 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies, compat/compat */
 import template from 'lodash/template';
 import fs from 'fs';
 import path from 'path';
 import ReactIcon from './ReactIcon';
+/* eslint-enable import/no-extraneous-dependencies */
 
 const templatePath = path.join(__dirname, './template.txt');
 
@@ -22,3 +23,4 @@ const renderJsx = icon => new Promise((resolve, reject) => {
 });
 
 export default renderJsx;
+/* eslint-enable compat/compat */

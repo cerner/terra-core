@@ -51,10 +51,11 @@ const Badge = ({
   ...customProps
 }) => {
   const badgeClassNames = cx(
-      'badge',
-      size,
-      intent,
-      customProps.className);
+    'badge',
+    size,
+    intent,
+    customProps.className,
+  );
 
   const textContent = text ? <span className={styles.text}>{text}</span> : null;
   const content = isReversed ? [textContent, icon, customProps.children] : [icon, textContent, customProps.children];

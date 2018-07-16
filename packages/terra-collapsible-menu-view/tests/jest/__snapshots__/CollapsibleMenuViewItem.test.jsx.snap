@@ -211,8 +211,6 @@ exports[`CollapsibleMenuViewItem should render a menu when subMenuItems are give
       variant="neutral"
     />
   }
-  isArrowDisplayed={false}
-  isOpen={false}
 >
   <CollapsibleMenuViewItem
     isIconOnly={false}

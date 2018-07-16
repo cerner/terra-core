@@ -65,7 +65,7 @@ describe('Abstract Modal', () => {
     Terra.should.matchScreenshot('modal present', { selector: 'div[role="document"]' });
     it('clicks outside to close modal', () => {
       browser.moveToObject('[class*="ModalOverlay"]', 235, 5)
-      .leftClick();
+        .leftClick();
     });
     Terra.should.matchScreenshot('modal closed');
 

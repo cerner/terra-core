@@ -34,7 +34,8 @@ class AlertResponsiveToParent extends React.Component {
     return (
       <div style={{ width: '500px', border: '1px solid black', padding: '5px' }}>
         <h3>Alerts with actions in a small container (500px wide) that will cause the action section of the alert
-            to render below the message instead of beside it.</h3>
+            to render below the message instead of beside it.
+        </h3>
         <br />
         <Alert id="actionAlert" type="warning" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={this.actionFunc} />} >
           This is a warning. It is configured with a custom Action button.

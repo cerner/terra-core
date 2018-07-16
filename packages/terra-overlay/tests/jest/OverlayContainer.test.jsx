@@ -5,7 +5,7 @@ import Overlay from '../../src/Overlay';
 describe('OverlayContainer', () => {
   const defaultRender = <OverlayContainer />;
   const standardRender = (
-    <OverlayContainer className={'user-defined-class'}>
+    <OverlayContainer className="user-defined-class">
       <Overlay />
       Some Text Content
     </OverlayContainer>

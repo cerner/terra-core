@@ -23,6 +23,7 @@ const propTypes = {
   /**
   * Line segments that define signature.
   */
+  // eslint-disable-next-line react/forbid-prop-types
   lineSegments: PropTypes.array,
   /**
    * A callback function to execute when a line segment is drawn. The first parameter is the event, the
@@ -41,7 +42,7 @@ class Signature extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { lineSegments: props.lineSegments, lineWidth: props.lineWidth };
+    this.state = { lineSegments: props.lineSegments };
 
     this.mouseInBounds = this.mouseInBounds.bind(this);
     this.mouseDown = this.mouseDown.bind(this);
@@ -80,7 +81,7 @@ class Signature extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if ((this.props.lineSegments !== nextProps.lineSegments) || (this.props.lineWidth !== nextProps.lineWidth)) {
-      this.setState({ lineSegments: nextProps.lineSegments, lineWidth: nextProps.lineWidth });
+      this.setState({ lineSegments: nextProps.lineSegments });
       this.drawSignature(nextProps.lineSegments, nextProps.lineWidth);
     }
   }
@@ -150,9 +151,13 @@ class Signature extends React.Component {
 
     if (dragging) {
       const lastLineSegment = this.state.lineSegments[this.state.lineSegments.length - 1];
-      newSegment = { x1: lastLineSegment.x2, y1: lastLineSegment.y2, x2: x, y2: y };
+      newSegment = {
+        x1: lastLineSegment.x2, y1: lastLineSegment.y2, x2: x, y2: y,
+      };
     } else {
-      newSegment = { x1: x, y1: y, x2: x, y2: y };
+      newSegment = {
+        x1: x, y1: y, x2: x, y2: y,
+      };
     }
 
     // Record new line segment
@@ -223,7 +228,9 @@ class Signature extends React.Component {
   }
 
   render() {
-    const { lineSegments, lineWidth, onChange, ...custProps } = this.props;
+    const {
+      lineSegments, lineWidth, onChange, ...custProps
+    } = this.props;
 
     return (
       <canvas {...custProps} className={styles.signature} ref={(node) => { this.canvas = node; }} />

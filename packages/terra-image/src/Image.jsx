@@ -48,11 +48,9 @@ const propTypes = {
 const defaultProps = {
   variant: 'default',
   isFluid: false,
-  alt: ' ',
 };
 
 class Image extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -71,7 +69,7 @@ class Image extends React.Component {
 
   handleOnLoad() {
     this.setState({ isLoading: false });
-    const onLoad = this.props.onLoad;
+    const { onLoad } = this.props;
 
     if (onLoad !== undefined) {
       onLoad();
@@ -80,7 +78,7 @@ class Image extends React.Component {
 
   handleOnError() {
     this.setState({ isLoading: false, isError: true });
-    const onError = this.props.onError;
+    const { onError } = this.props;
 
     if (onError !== undefined) {
       onError();
@@ -88,7 +86,9 @@ class Image extends React.Component {
   }
 
   createImage(customProps, imageClasses) {
-    const { src, alt, height, width } = this.props;
+    const {
+      src, alt, height, width,
+    } = this.props;
     return (
       <img
         {...customProps}
@@ -104,7 +104,9 @@ class Image extends React.Component {
   }
 
   render() {
-    const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
+    const {
+      src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps
+    } = this.props;
 
     const imageClasses = cx([
       'image',

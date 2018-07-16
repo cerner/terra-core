@@ -22,7 +22,6 @@ class MobileButton extends React.Component {
       <Button id="mobileButton" text="Toggle" onClick={onChange} />
     );
   }
-
 }
 
 MobileButton.propTypes = propTypes;

@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added more themeable variables
 
+### Changed
+* Formatting changes per eslint v4 update
+
 2.18.0 - (July 10, 2018)
 ------------------
 ### Changed
