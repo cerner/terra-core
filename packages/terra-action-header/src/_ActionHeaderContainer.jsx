@@ -40,7 +40,9 @@ const defaultProps = {
   endContent: undefined,
 };
 
-const ActionHeaderContainer = ({ children, title, startContent, endContent, level, ...customProps }) => {
+const ActionHeaderContainer = ({
+  children, title, startContent, endContent, level, ...customProps
+}) => {
   const HeaderElement = `h${level}`;
 
   const content = React.Children.map(children, child => (

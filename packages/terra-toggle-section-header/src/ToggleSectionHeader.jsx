@@ -30,6 +30,7 @@ const propTypes = {
   /**
    * Used to set props and HTML attributes on the underlying section-header.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   sectionHeaderAttrs: PropTypes.object,
   /**
    * Sets the toggle-section-header to be animated when it is opened or closed.

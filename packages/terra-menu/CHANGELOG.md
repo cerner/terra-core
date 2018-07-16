@@ -6,6 +6,10 @@ Unreleased
 ### Added
 * Added more themeable variables to MenuItem
 
+### Changed
+* Formatting changes per eslint v4 update
+* Required props no longer set a default prop
+
 3.10.0 - (July 10, 2018)
 ------------------
 ### Changed

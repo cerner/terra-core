@@ -3,8 +3,8 @@ import React from 'react';
 import SectionHeader from '../../../SectionHeader';
 
 export default () =>
-  <SectionHeader
+  (<SectionHeader
     title="Open Section Header"
     onClick={() => {}}
     isOpen
-  />;
+  />);

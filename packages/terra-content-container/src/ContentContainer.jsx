@@ -45,7 +45,7 @@ const ContentContainer = ({
   fill,
   scrollRefCallback,
   ...customProps
-  }) => {
+}) => {
   const contentLayoutClassNames = cx([
     `content-container-${fill ? 'fill' : 'static'}`,
     customProps.className,
@@ -53,17 +53,13 @@ const ContentContainer = ({
 
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      {header && <div className={cx('header')}>
-        {header}
-      </div>}
+      {header && <div className={cx('header')}>{header}</div>}
       <div className={cx('main')}>
         <Scroll className={cx('normalizer')} refCallback={scrollRefCallback}>
           {children}
         </Scroll>
       </div>
-      {footer && <div className={cx('footer')}>
-        {footer}
-      </div>}
+      {footer && <div className={cx('footer')}>{footer}</div>}
     </div>
   );
 };

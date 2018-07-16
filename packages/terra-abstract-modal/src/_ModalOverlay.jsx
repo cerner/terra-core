@@ -20,7 +20,6 @@ const defaultProps = {
 };
 
 class ModalOverlay extends React.Component {
-
   componentDidMount() {
     this.overflow = document.documentElement.style.overflow;
     // Disable scrolling on the page when Overlay is displayed

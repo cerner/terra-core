@@ -38,7 +38,12 @@ describe('FrameUtil', () => {
       dropdown.getBoundingClientRect = () => ({ height: 100 });
       target.getBoundingClientRect = () => ({ width: 100, bottom: 30, top: 0 });
 
-      const expected = { width: 100, maxHeight: 100, isAbove: false, isPositioned: true };
+      const expected = {
+        width: 100,
+        maxHeight: 100,
+        isAbove: false,
+        isPositioned: true,
+      };
 
       expect(FrameUtil.dropdownPosition(props, target, dropdown)).toEqual(expected);
     });

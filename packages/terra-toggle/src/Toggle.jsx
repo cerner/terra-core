@@ -23,12 +23,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: null,
   isAnimated: false,
   isOpen: false,
 };
 
-const Toggle = ({ isAnimated, isOpen, children, ...customProps }) => {
+const Toggle = ({
+  isAnimated, isOpen, children, ...customProps
+}) => {
   const height = isOpen ? 'auto' : '0';
   let body;
 

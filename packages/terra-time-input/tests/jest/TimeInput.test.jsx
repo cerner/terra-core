@@ -28,7 +28,7 @@ it('should render a time input with custom attributes', () => {
 });
 
 it('should render a time input with a default time', () => {
-  const timeInput = <TimeInput name="time-input" value={'10:45'} />;
+  const timeInput = <TimeInput name="time-input" value="10:45" />;
   const wrapper = shallow(timeInput, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });

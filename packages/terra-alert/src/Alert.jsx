@@ -103,20 +103,18 @@ const contextTypes = {
   },
 };
 
-const Alert = (
-  {
-    type,
-    children,
-    title,
-    customIcon,
-    customStatusColor,
-    onDismiss,
-    action,
-    ...customProps
-  }, {
-    intl,
-  },
-) => {
+const Alert = ({
+  type,
+  children,
+  title,
+  customIcon,
+  customStatusColor,
+  onDismiss,
+  action,
+  ...customProps
+}, {
+  intl,
+}) => {
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const attributes = Object.assign({}, customProps);
   const narrowAlertClassNames = cx([

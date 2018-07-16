@@ -12,7 +12,7 @@ it('should render a default date input', () => {
 });
 
 it('should render a default date input with all props', () => {
-  const dateInput = render(
+  const dateInput = render((
     <IntlProvider locale={locale} messages={messages}>
       <DateInput
         inputAttributes={{ id: 'terra-date-input' }}
@@ -23,8 +23,7 @@ it('should render a default date input with all props', () => {
         onClick={() => {}}
         onKeyDown={() => {}}
       />
-    </IntlProvider>,
-  );
+    </IntlProvider>));
 
   expect(dateInput).toMatchSnapshot();
 });

@@ -4,7 +4,7 @@ import DateTimePickerExampleTemplate from '../../common/DateTimePickerExampleTem
 const DateTimePickerExample = () => (
   <DateTimePickerExampleTemplate
     excludeDates={['2017-08-14']}
-    value={'2017-08-15'}
+    value="2017-08-15"
   />
 );
 

@@ -1,12 +1,13 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies, compat/compat */
 import jsdom from 'jsdom';
 import fs from 'fs';
 import path from 'path';
 import Icon from './Icon';
+/* eslint-enable import/no-extraneous-dependencies */
 
 const parseSvg = filepath => new Promise((resolve, reject) => {
   const source = fs.readFileSync(filepath, 'utf-8');
-  const name = path.parse(filepath).name;
+  const { name } = path.parse(filepath);
 
   jsdom.env(source, (error, window) => {
     if (error) {
@@ -18,3 +19,4 @@ const parseSvg = filepath => new Promise((resolve, reject) => {
 });
 
 export default parseSvg;
+/* eslint-enable compat/compat */

@@ -23,6 +23,7 @@ const propTypes = {
   /**
     * Additional attributes for the input object.
     */
+  // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
   /**
     * Whether the radio button is disabled.
@@ -43,6 +44,7 @@ const propTypes = {
   /**
     * Additional attributes for the text object.
     */
+  // eslint-disable-next-line react/forbid-prop-types
   labelTextAttrs: PropTypes.object,
   /**
     * Name attribute of the input.
@@ -74,7 +76,6 @@ const defaultProps = {
   disabled: false,
   isInline: false,
   isLabelHidden: false,
-  labelText: null,
   labelTextAttrs: {},
   name: null,
   onBlur: undefined,
@@ -84,22 +85,22 @@ const defaultProps = {
 };
 
 const Radio = ({
-    checked,
-    defaultChecked,
-    inputAttrs,
-    id,
-    disabled,
-    isInline,
-    isLabelHidden,
-    labelText,
-    labelTextAttrs,
-    name,
-    onBlur,
-    onChange,
-    onFocus,
-    value,
-    ...customProps
-  }) => {
+  checked,
+  defaultChecked,
+  inputAttrs,
+  id,
+  disabled,
+  isInline,
+  isLabelHidden,
+  labelText,
+  labelTextAttrs,
+  name,
+  onBlur,
+  onChange,
+  onFocus,
+  value,
+  ...customProps
+}) => {
   const controlInputAttrs = Object.assign({}, inputAttrs);
 
   if (checked !== undefined) {

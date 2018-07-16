@@ -21,14 +21,14 @@ const region2 = {
 };
 
 const TwoColumn = () => (
-  (<DynamicGrid defaultTemplate={template}>
+  <DynamicGrid defaultTemplate={template}>
     <DynamicGrid.Region defaultPosition={region1}>
       <Card>Region 1</Card>
     </DynamicGrid.Region>
     <DynamicGrid.Region defaultPosition={region2}>
       <Card>Region 2</Card>
     </DynamicGrid.Region>
-  </DynamicGrid>)
+  </DynamicGrid>
 );
 
 export default TwoColumn;

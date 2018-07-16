@@ -84,7 +84,8 @@ const ActionHeader = ({
   onPrevious,
   onNext,
   children,
-  ...customProps }, {
+  ...customProps
+}, {
   intl,
 }) => {
   const backText = intl.formatMessage({ id: 'Terra.actionHeader.back' });
@@ -107,18 +108,22 @@ const ActionHeader = ({
   }
 
   const previousNextButtonGroup = (onPrevious || onNext) ?
-    (<ButtonGroup>
-      <ButtonGroup.Button icon={<span className={cx(['header-icon', 'previous'])} />} text={previousText} onClick={onPrevious} key="ActionHeaderPrevious" />
-      <ButtonGroup.Button icon={<span className={cx(['header-icon', 'next'])} />} text={nextText} onClick={onNext} key="ActionHeaderNext" />
-    </ButtonGroup>) :
+    (
+      <ButtonGroup>
+        <ButtonGroup.Button icon={<span className={cx(['header-icon', 'previous'])} />} text={previousText} onClick={onPrevious} key="ActionHeaderPrevious" />
+        <ButtonGroup.Button icon={<span className={cx(['header-icon', 'next'])} />} text={nextText} onClick={onNext} key="ActionHeaderNext" />
+      </ButtonGroup>
+    ) :
     null;
 
   const leftButtons = (backButton || expandButton || previousNextButtonGroup) ?
-    (<div className={cx('left-buttons')}>
-      {backButton}
-      {expandButton}
-      {previousNextButtonGroup}
-    </div>) :
+    (
+      <div className={cx('left-buttons')}>
+        {backButton}
+        {expandButton}
+        {previousNextButtonGroup}
+      </div>
+    ) :
     null;
 
   const rightButtons = closeButton ? <div className={cx('right-buttons')}>{closeButton}</div> : null;

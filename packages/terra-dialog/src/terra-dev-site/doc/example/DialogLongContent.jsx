@@ -7,34 +7,36 @@ const header = 'Header Stuff';
 
 const footer = <div><span>Footer Stuff</span><span>Footer Stuff</span><span>Footer Stuff</span><span>Footer Stuff</span><span>Footer Stuff</span></div>;
 
-const body = (<div>
-  <p>This is my body content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-  <p>This is some more content.</p>
-</div>);
+const body = (
+  <div>
+    <p>This is my body content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+    <p>This is some more content.</p>
+  </div>
+);
 
 const DialogLongContent = () => (
   <div style={{ height: '200px', width: '350px', border: 'dashed' }}>

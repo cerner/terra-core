@@ -194,7 +194,7 @@ class MenuItem extends React.Component {
           fitStart={isSelectableMenu ? <CheckIcon className={cx(['checkmark'])} /> : null}
           fill={textContainer}
           fitEnd={hasChevron ? <ChevronIcon className={cx(['chevron'])} /> : null}
-          align={'center'}
+          align="center"
         />
       );
     }

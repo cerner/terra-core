@@ -1,8 +1,10 @@
 import classNames from 'classnames';
 
 const svgoConfig = (csvObject) => {
-  const classes = classNames({ 'is-spin': csvObject.isSpin },
-                             { 'is-bidi': csvObject.isBidi });
+  const classes = classNames(
+    { 'is-spin': csvObject.isSpin },
+    { 'is-bidi': csvObject.isBidi },
+  );
   const config = {
     plugins: [
       {

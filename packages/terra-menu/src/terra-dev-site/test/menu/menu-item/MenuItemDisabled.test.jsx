@@ -40,7 +40,6 @@ class MenuItemDisabled extends React.Component {
       </div>
     );
   }
-
 }
 
 MenuItemDisabled.childContextTypes = childContextTypes;

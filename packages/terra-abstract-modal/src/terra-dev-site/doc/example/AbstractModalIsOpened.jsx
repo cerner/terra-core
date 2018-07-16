@@ -32,7 +32,10 @@ class AbstractModalIsOpen extends React.Component {
           onRequestClose={this.handleCloseModal}
           classNameModal={styles['fixed-size']}
         >
-          <div style={{ height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'antiquewhite' }}>
+          <div style={{
+ height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'antiquewhite',
+}}
+          >
             <h1>Default Modal</h1>
             <br />
             <p>You can close the modal by:</p>
