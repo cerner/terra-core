@@ -14,7 +14,7 @@ it('renders a blank banner wrapper', () => {
 });
 
 it('renders the banner wrapper with all props', () => {
-  const banner = shallow(
+  const banner = shallow((
     <IntlProvider locale={locale} messages={messages}>
       <DemographicsBanner
         applicationContent={<span className="risk-score">5%</span>}
@@ -29,8 +29,7 @@ it('renders the banner wrapper with all props', () => {
         postMenstrualAge="April 7, 2016"
         preferredFirstName="John"
       />
-    </IntlProvider>,
-  );
+    </IntlProvider>));
 
   expect(banner).toMatchSnapshot();
 });

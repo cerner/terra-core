@@ -76,7 +76,6 @@ const contextTypes = {
 };
 
 class StatusView extends React.Component {
-
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -144,14 +143,14 @@ class StatusView extends React.Component {
 
   render() {
     const {
-    children,
-    customGlyph,
-    isAlignedTop,
-    isGlyphHidden,
-    message,
-    title,
-    variant,
-    ...customProps
+      children,
+      customGlyph,
+      isAlignedTop,
+      isGlyphHidden,
+      message,
+      title,
+      variant,
+      ...customProps
     } = this.props;
 
     const { intl } = this.context;

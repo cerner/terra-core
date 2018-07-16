@@ -47,19 +47,19 @@ describe('Avatar', () => {
   });
 
   it('should render fallback user avatar when invalid image is passed in with user variant', () => {
-    const avatar = <Avatar image="https://path/to/invalid_image.jpg" variant="user" ariaLabel="user" />;
+    const avatar = <Avatar image="https://path/to/invalid_image.jpg" alt="placeholder" variant="user" ariaLabel="user" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render fallback facility avatar when invalid image is passed in with facility variant', () => {
-    const avatar = <Avatar image="https://path/to/invalid_image.jpg" variant="facility" ariaLabel="facility" />;
+    const avatar = <Avatar image="https://path/to/invalid_image.jpg" alt="placeholder" variant="facility" ariaLabel="facility" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should display warning when both image and initials props are provided', () => {
-    const avatar = <Avatar image="https://path/to/invalid_image.jpg" initials="JS" ariaLabel="user" />;
+    const avatar = <Avatar image="https://path/to/invalid_image.jpg" alt="placeholder" initials="JS" ariaLabel="user" />;
     try {
       render(avatar);
     } catch (object) {

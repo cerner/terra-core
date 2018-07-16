@@ -3,9 +3,9 @@ import Table from '../../src/Table';
 
 // Constants
 const clickHandler = e => e;
-const headerData1 = <Table.HeaderCell content={'Name'} key={'NAME'} onClick={clickHandler} />;
-const headerData2 = <Table.HeaderCell content={'Address'} key={'ADDRESS'} />;
-const headerData3 = <Table.HeaderCell content={'Phone Number'} key={'PHONE_NUMBER'} />;
+const headerData1 = <Table.HeaderCell content="Name" key="NAME" onClick={clickHandler} />;
+const headerData2 = <Table.HeaderCell content="Address" key="ADDRESS" />;
+const headerData3 = <Table.HeaderCell content="Phone Number" key="PHONE_NUMBER" />;
 const header = [headerData1, headerData2, headerData3];
 
 // Snapshot test

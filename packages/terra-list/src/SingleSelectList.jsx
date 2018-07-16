@@ -30,7 +30,6 @@ const defaultProps = {
 };
 
 class SingleSelectList extends React.Component {
-
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -48,7 +47,9 @@ class SingleSelectList extends React.Component {
   }
 
   render() {
-    const { children, isDivided, onChange, hasChevrons, ...customProps } = this.props;
+    const {
+      children, isDivided, onChange, hasChevrons, ...customProps
+    } = this.props;
     return (
       <SelectableList
         {...customProps}

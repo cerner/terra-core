@@ -8,6 +8,6 @@ const list = () => (
     <SingleSelectList.Item content={<p>test 2</p>} key="124" />
     <SingleSelectList.Item content={<p>test 3</p>} key="125" />
   </SingleSelectList>
- );
+);
 
 export default list;

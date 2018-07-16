@@ -17,11 +17,11 @@ const region1 = {
 };
 
 const OneColumn = () => (
-  (<DynamicGrid defaultTemplate={template}>
+  <DynamicGrid defaultTemplate={template}>
     <DynamicGrid.Region defaultPosition={region1}>
       <Card>Region 1</Card>
     </DynamicGrid.Region>
-  </DynamicGrid>)
+  </DynamicGrid>
 );
 
 export default OneColumn;

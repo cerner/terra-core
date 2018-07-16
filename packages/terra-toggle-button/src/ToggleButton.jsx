@@ -21,6 +21,7 @@ const propTypes = {
   /**
    * Used to set props and HTML attributes on the toggle-button button
    */
+  // eslint-disable-next-line react/forbid-prop-types
   buttonAttrs: PropTypes.object,
   /**
    * Icon displayed next to text content within the toggle-button button
@@ -111,7 +112,7 @@ class ToggleButton extends React.Component {
       onOpen,
       openedButtonText,
       ...customProps
-     } = this.props;
+    } = this.props;
     // Set openHeaderText to the same value as closedHeaderText if its not already set
     const normalizedOpenButtonText = openedButtonText || closedButtonText;
     const buttonText = !this.state.isOpen ? closedButtonText : normalizedOpenButtonText;

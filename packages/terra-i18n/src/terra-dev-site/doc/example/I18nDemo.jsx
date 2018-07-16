@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
@@ -50,13 +49,5 @@ class Demo extends React.Component {
     );
   }
 }
-
-Demo.propTypes = {
-  locale: PropTypes.string,
-};
-
-Demo.defaultProps = {
-  locale: 'en',
-};
 
 export default () => <Demo />;

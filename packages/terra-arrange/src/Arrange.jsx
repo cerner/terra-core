@@ -39,14 +39,17 @@ const propTypes = {
   /**
    * The attributes to be set on the fitStart wrapper element
    */
+  // eslint-disable-next-line react/forbid-prop-types
   fitStartAttributes: PropTypes.object,
   /**
    * The attributes to be set on the fill wrapper element
    */
+  // eslint-disable-next-line react/forbid-prop-types
   fillAttributes: PropTypes.object,
   /**
    * The attributes to be set on the fitEnd wrapper element
    */
+  // eslint-disable-next-line react/forbid-prop-types
   fitEndAttributes: PropTypes.object,
 };
 
@@ -62,7 +65,7 @@ const Arrange = ({
   fillAttributes,
   fitEndAttributes,
   ...customProps
-  }) => {
+}) => {
   const fitStartProps = Object.assign({}, fitStartAttributes);
   const fillProps = Object.assign({}, fillAttributes);
   const fitEndProps = Object.assign({}, fitEndAttributes);

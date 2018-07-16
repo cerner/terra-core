@@ -44,7 +44,7 @@ DateTimePickerExample.defualtProps = defaultProps;
 
 const DateTimePickerExampleDefaultDate = () => (
   <DateTimePickerExample
-    value={'2017-08-08'}
+    value="2017-08-08"
   />
 );
 

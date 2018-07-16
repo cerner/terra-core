@@ -71,7 +71,7 @@ const defaultProps = {
 class Hyperlink extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false, focused: false, mouseWasClicked: false };
+    this.state = { active: false, focused: false };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
@@ -134,8 +134,8 @@ class Hyperlink extends React.Component {
 
     const ComponentType = isDisabled ? 'span' : 'a';
 
-    let target = customProps.target; // Defaults to undefined if not set
-    let rel = customProps.rel; // Defaults to undefined if not set
+    let { target } = customProps; // Defaults to undefined if not set
+    let { rel } = customProps; // Defaults to undefined if not set
 
     // If variant is set to external, we'll add target="_blank" and rel="noopener noreferrer"
     // unless user passes their own target or rel attribute

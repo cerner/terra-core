@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 import fs from 'fs';
 
 /**
@@ -17,3 +18,4 @@ const writeIcon = reactIcon => new Promise((resolve, reject) => {
 });
 
 export default writeIcon;
+/* eslint-enable compat/compat */
