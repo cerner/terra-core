@@ -30,7 +30,8 @@ describe('Base', () => {
   describe('Background color', () => {
     before(() => browser.url('/#/raw/tests/terra-base/base/default-base'));
 
-    Terra.should.themeEachCustomProperty('#root',
+    Terra.should.themeEachCustomProperty(
+      '#root',
       {
         '--terra-base-background-color': 'red',
       },
