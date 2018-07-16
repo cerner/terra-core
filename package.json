@@ -88,8 +88,8 @@
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
-    "terra-dev-site": "^2.0.0",
-    "terra-toolkit": "^4.1.0",
+    "terra-dev-site": "git://github.com/cerner/terra-dev-site.git#swedish-translation-test",
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#swedish-translations-support",
     "webpack-merge": "^4.1.2"
   }
 }
