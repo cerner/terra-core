@@ -17,6 +17,7 @@
         &:focus {
           border-color: #26a2e5;
           outline: none;
+          z-index: 1;
         }
       }
 
@@ -27,6 +28,7 @@
         border-top-left-radius: 0;
         border-top-right-radius: 0.25em;
         margin-bottom: 0;
+        margin-left: -0.071em;
         margin-top: 0;
 
         &:focus {
