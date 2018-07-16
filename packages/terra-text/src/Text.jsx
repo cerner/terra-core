@@ -39,7 +39,9 @@ const defaultProps = {
   isVisuallyHidden: false,
 };
 
-const Text = ({ color, children, isVisuallyHidden, isItalic, fontSize, weight, ...customProps }) => {
+const Text = ({
+  color, children, isVisuallyHidden, isItalic, fontSize, weight, ...customProps
+}) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
     'text',

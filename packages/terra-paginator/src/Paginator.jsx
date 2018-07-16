@@ -54,7 +54,7 @@ class Paginator extends React.Component {
     return (event) => {
       event.preventDefault();
 
-      if (isNaN(index)) {
+      if (Number.isNaN(Number(index))) {
         this.props.onPageChange(event.currentTarget.attributes['aria-label'].value);
 
         return false;
@@ -75,7 +75,7 @@ class Paginator extends React.Component {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
         event.preventDefault();
 
-        if (isNaN(index)) {
+        if (Number.isNaN(Number(index))) {
           this.props.onPageChange(event.currentTarget.attributes['aria-label'].value);
 
           return false;
@@ -92,6 +92,8 @@ class Paginator extends React.Component {
     };
   }
 
+  // TODO: Resolve lint issues - https://github.com/cerner/terra-core/issues/1689
+  /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
   buildPageButtons(totalPages, onClick) {
     const { pageSequence, selectedPage } = this.state;
 
@@ -107,7 +109,7 @@ class Paginator extends React.Component {
         return;
       }
       /* eslint-disable jsx-a11y/aria-props */
-      pageButtons.push(
+      pageButtons.push((
         <a
           aria-label={`Page ${val}`}
           aria-current={val === selectedPage && 'page'}
@@ -118,8 +120,8 @@ class Paginator extends React.Component {
           onKeyDown={this.handleOnKeyDown(val)}
         >
           {val}
-        </a>,
-      );
+        </a>
+      ));
       /* eslint-enable jsx-a11y/aria-props */
     });
 
@@ -139,7 +141,8 @@ class Paginator extends React.Component {
     const fullView = (
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])}>
         {
-          this.hasNavContext() && <a
+          this.hasNavContext() && (
+          <a
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
@@ -148,7 +151,7 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(1)}
           >
             First
-          </a>
+          </a>)
         }
         <a
           aria-disabled={selectedPage === 1}
@@ -172,7 +175,8 @@ class Paginator extends React.Component {
           Next<span className={cx('icon')} />
         </a>
         {
-          this.hasNavContext() && <a
+          this.hasNavContext() && (
+          <a
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
@@ -181,7 +185,7 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
-          </a>
+          </a>)
         }
       </div>
     );
@@ -198,7 +202,8 @@ class Paginator extends React.Component {
     const reducedView = (
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])} role="navigation" aria-label="pagination">
         {
-          this.hasNavContext() && <a
+          this.hasNavContext() && (
+          <a
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
@@ -207,7 +212,7 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(1)}
           >
             First
-          </a>
+          </a>)
         }
         <a
           aria-disabled={selectedPage === 1}
@@ -233,7 +238,8 @@ class Paginator extends React.Component {
           <span className={cx('icon')} />
         </a>
         {
-          this.hasNavContext() && <a
+          this.hasNavContext() && (
+          <a
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
@@ -242,7 +248,7 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
-          </a>
+          </a>)
         }
       </div>
     );
@@ -250,6 +256,7 @@ class Paginator extends React.Component {
     return reducedView;
   }
 
+  /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
   render() {
     return <ResponsiveElement defaultElement={this.reducedPaginator()} small={this.defaultPaginator()} />;
   }

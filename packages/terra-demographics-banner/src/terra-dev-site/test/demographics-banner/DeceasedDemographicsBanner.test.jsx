@@ -2,7 +2,7 @@ import React from 'react';
 import DemographicsBanner from '../../../DemographicsBanner';
 
 export default () =>
-  <DemographicsBanner
+  (<DemographicsBanner
     id="deceased-demographics"
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
@@ -12,4 +12,4 @@ export default () =>
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
     personName="Johnathon Doe"
     preferredFirstName="John"
-  />;
+  />);

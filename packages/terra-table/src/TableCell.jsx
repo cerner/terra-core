@@ -6,6 +6,7 @@ const propTypes = {
   /**
    * Content to be displayed for the row cell
    */
+  // eslint-disable-next-line react/forbid-prop-types
   content: PropTypes.any.isRequired,
 };
 

@@ -30,16 +30,12 @@ const propTypes = {
    * source: The source code of the example
    * ```
    */
-  examples: PropTypes.arrayOf(
-    PropTypes.shape(
-      {
-        title: PropTypes.string,
-        description: PropTypes.node,
-        example: PropTypes.element,
-        source: PropTypes.string,
-      },
-    ),
-  ),
+  examples: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.node,
+    example: PropTypes.element,
+    source: PropTypes.string,
+  })),
   /**
    * All of the props table(s) that will be displayed. An empty array is supported.
    * ```
@@ -47,14 +43,10 @@ const propTypes = {
    * componentName: The name of the component
    * ```
    */
-  propsTables: PropTypes.arrayOf(
-    PropTypes.shape(
-      {
-        componentSrc: PropTypes.string,
-        componentName: PropTypes.string,
-      },
-    ),
-  ),
+  propsTables: PropTypes.arrayOf(PropTypes.shape({
+    componentSrc: PropTypes.string,
+    componentName: PropTypes.string,
+  })),
 };
 
 const defaultProps = {
@@ -65,7 +57,9 @@ const defaultProps = {
   propsTables: [],
 };
 
-const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...customProps }) => {
+const DocTemplate = ({
+  packageName, readme, srcPath, examples, propsTables, ...customProps
+}) => {
   let id = 0;
   const localExamples = examples;
   const localPropsTables = propsTables;
@@ -92,33 +86,34 @@ const DocTemplate = ({ packageName, readme, srcPath, examples, propsTables, ...c
     exampleHeader = <h1 className={cx('.examples-header')}>{exampleHeaderText}</h1>;
   }
 
+  const badge = (
+    <a href={`https://www.npmjs.org/package/${packageName}`}>
+      <img src={`https://img.shields.io/npm/v/${packageName}.svg`} alt="NPM version" />
+    </a>
+  );
+
   return (
     <div {...customProps} className={docTemplateClassNames}>
-      {packageName && <a href={`https://www.npmjs.org/package/${packageName}`}>
-        <img src={`https://img.shields.io/npm/v/${packageName}.svg`} alt="NPM version" />
-      </a>
-      }
+      {packageName && badge}
       {readme && <Markdown src={readme} />}
       {srcPath && <a href={srcPath}>View component source code</a>}
 
       {exampleHeader}
       {localExamples.map(example =>
-        <IndexExampleTemplate
+        (<IndexExampleTemplate
           title={example.title}
           example={example.example}
           exampleSrc={example.source}
           description={example.description}
           key={example.id}
-        />,
-      )}
+        />))}
 
       {localPropsTables.map(propsTable =>
-        <PropsTable
+        (<PropsTable
           src={propsTable.componentSrc}
           componentName={propsTable.componentName}
           key={propsTable.id}
-        />,
-      )}
+        />))}
     </div>
   );
 };

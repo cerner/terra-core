@@ -58,15 +58,12 @@ const propTypes = {
 };
 
 const defaultProps = {
-  ariaLabel: null,
-  children: null,
   classNameModal: null,
   classNameOverlay: null,
   closeOnEsc: true,
   closeOnOutsideClick: true,
   isFocused: true,
   isFullscreen: false,
-  isOpen: false,
   role: 'document',
   zIndex: '6000',
 };

@@ -4,7 +4,7 @@ import SearchFieldExampleTemplate from 'terra-search-field/lib/terra-dev-site/do
 
 const SearchFieldExample = () => (
   <SearchFieldExampleTemplate
-    defaultValue={'Default'}
+    defaultValue="Default"
   />
 );
 

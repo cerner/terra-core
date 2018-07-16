@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, compat/compat */
 import SVGO from 'svgo';
 import optimizeConfig from './optimizeConfig';
 /* eslint-enable import/no-extraneous-dependencies */
@@ -20,3 +20,4 @@ const optimizeSvg = csvObject => new Promise((resolve, reject) => {
 });
 
 export default optimizeSvg;
+/* eslint-enable compat/compat */
