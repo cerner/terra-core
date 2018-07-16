@@ -22,8 +22,13 @@ const defaultProps = {
 const Markdown = props => (
   <div
     dir="ltr"
+<<<<<<< HEAD
     className={'markdown-body'}
     style={{ listStyle: 'disc outside none' }}
+=======
+    className="markdown-body"
+    style={{ listStyle: 'initial' }}
+>>>>>>> master
     dangerouslySetInnerHTML={{ __html: marked(props.src) }}
   />
 );

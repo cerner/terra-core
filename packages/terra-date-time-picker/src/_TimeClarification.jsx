@@ -44,12 +44,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isOpen: false,
-  isOffsetButtonHidden: false,
-  onDaylightSavingButtonClick: undefined,
-  onStandardTimeButtonClick: undefined,
-  onOffsetButtonClick: undefined,
-  onRequestClose: undefined,
   releaseFocus: undefined,
   requestFocus: undefined,
 };
@@ -123,7 +117,7 @@ class TimeClarification extends React.Component {
       { 'button-offset-hidden': this.props.isOffsetButtonHidden || !this.state.offsetDisplay },
     ]);
 
-    const intl = this.context.intl;
+    const { intl } = this.context;
     const title = intl.formatMessage({ id: 'Terra.dateTimePicker.timeClarification.title' });
     const message = intl.formatMessage({ id: 'Terra.dateTimePicker.timeClarification.message' });
     const daylightSavingButtonLabel = intl.formatMessage({ id: 'Terra.dateTimePicker.timeClarification.button.daylightSaving' });

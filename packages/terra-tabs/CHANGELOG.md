@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Formatting changes per eslint v4 update
+
 ### Fixed
 * Removed usage of CSS `initial` value because Internet Explorer does not support it
 

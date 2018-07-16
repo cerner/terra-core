@@ -95,7 +95,7 @@ describe('ToggleButton', () => {
     expect(toggleButton.instance().props.openedButtonText).toEqual('Hide');
   });
 
- // Attributes
+  // Attributes
   it('should merge classes passed in with attributes', () => {
     const toggleButton = shallow(<ToggleButton className="TestClass" closedButtonText="Show">Test</ToggleButton>);
     expect(toggleButton.prop('className')).toContain('TestClass');

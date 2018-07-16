@@ -15,10 +15,6 @@ const propTypes = {
   onChange: PropTypes.func,
 };
 
-const defaultProps = {
-  children: [],
-};
-
 const childContextTypes = {
   isGroupItem: PropTypes.bool,
 };
@@ -38,9 +34,7 @@ class MenuItemGroup extends React.Component {
   }
 }
 
-
 MenuItemGroup.propTypes = propTypes;
-MenuItemGroup.defaultProps = defaultProps;
 MenuItemGroup.childContextTypes = childContextTypes;
 
 export default MenuItemGroup;

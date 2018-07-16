@@ -5,6 +5,6 @@ import generateStaticIcons from './generateStaticIcons';
 /* eslint-enable import/no-extraneous-dependencies */
 
 parseCsv()
-.then(generateStaticIcons)
-.then(generateThemeableIcons);
+  .then(generateStaticIcons)
+  .then(generateThemeableIcons);
 

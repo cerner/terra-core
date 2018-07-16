@@ -1,5 +1,4 @@
 class TimeUtil {
-
   /**
    * Determines if a provided nuermic input value is valid.
    * Valid inputs are either empty strings or numeric.

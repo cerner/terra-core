@@ -3,7 +3,9 @@ const generatePropRow = require('../../bin/generateMarkdown/generatePropRow');
 
 it('should return a markdown row', () => {
   const propName = 'children';
-  const prop = { type: { name: 'node' }, required: true, defaultValue: { value: 'center' }, description: 'The component(s) that will be wrapped by `<Base />`.' };
+  const prop = {
+    type: { name: 'node' }, required: true, defaultValue: { value: 'center' }, description: 'The component(s) that will be wrapped by `<Base />`.',
+  };
 
   expect(generatePropRow(propName, prop)).toMatchSnapshot();
 });
@@ -47,7 +49,9 @@ describe('when description is not present', () => {
 describe('when propName is an empty string', () => {
   it('should return a markdown row with an empty propName', () => {
     const propName = '';
-    const prop = { type: { name: 'node' }, required: true, defaultValue: { value: 'center' }, description: 'The component(s) that will be wrapped by `<Base />`.' };
+    const prop = {
+      type: { name: 'node' }, required: true, defaultValue: { value: 'center' }, description: 'The component(s) that will be wrapped by `<Base />`.',
+    };
 
     expect(generatePropRow(propName, prop)).toMatchSnapshot();
   });
@@ -57,7 +61,9 @@ describe('when propName is an empty string', () => {
 describe('when propName is null', () => {
   it('should return a markdown row with an empty propName', () => {
     const propName = null;
-    const prop = { type: { name: 'node' }, required: true, defaultValue: { value: 'center' }, description: 'The component(s) that will be wrapped by `<Base />`.' };
+    const prop = {
+      type: { name: 'node' }, required: true, defaultValue: { value: 'center' }, description: 'The component(s) that will be wrapped by `<Base />`.',
+    };
 
     expect(generatePropRow(propName, prop)).toMatchSnapshot();
   });
@@ -66,7 +72,9 @@ describe('when propName is null', () => {
 describe('when propName is undefined', () => {
   it('should return a markdown row with an empty propName', () => {
     let propName;
-    const prop = { type: { name: 'node' }, required: true, defaultValue: { value: 'center' }, description: 'The component(s) that will be wrapped by `<Base />`.' };
+    const prop = {
+      type: { name: 'node' }, required: true, defaultValue: { value: 'center' }, description: 'The component(s) that will be wrapped by `<Base />`.',
+    };
 
     expect(generatePropRow(propName, prop)).toMatchSnapshot();
   });

@@ -33,8 +33,10 @@ class MultiSelectableRows extends React.Component {
     super(props);
 
     this.state = {
-      selectedIndexes: SelectableTableRows.Utils.initialMultiSelectRowIndexes(this.props.children,
-        this.props.maxSelectionCount),
+      selectedIndexes: SelectableTableRows.Utils.initialMultiSelectRowIndexes(
+        this.props.children,
+        this.props.maxSelectionCount,
+      ),
     };
 
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -60,7 +62,9 @@ class MultiSelectableRows extends React.Component {
   }
 
   render() {
-    const { children, maxSelectionCount, onChange, ...customProps } = this.props;
+    const {
+      children, maxSelectionCount, onChange, ...customProps
+    } = this.props;
 
     return (
       <SelectableTableRows

@@ -3,7 +3,7 @@ import DateTimePickerExampleTemplate from '../../common/DateTimePickerExampleTem
 
 const DateTimePickerExample = () => (
   <DateTimePickerExampleTemplate
-    value={'2017-08-08T10:30:00'}
+    value="2017-08-08T10:30:00"
   />
 );
 

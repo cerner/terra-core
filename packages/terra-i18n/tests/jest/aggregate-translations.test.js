@@ -74,10 +74,7 @@ describe('aggregate-translations', () => {
   it('aggregates on the terra-supported locales by default', () => {
     const translationsFiles = [];
     i18nSupportedLocales.forEach(locale =>
-      translationsFiles.push(
-        expect.stringContaining(`aggregated-translations${path.sep}${locale}.js`,
-      ),
-    ));
+      translationsFiles.push(expect.stringContaining(`aggregated-translations${path.sep}${locale}.js`)));
 
     aggregateTranslations();
 
