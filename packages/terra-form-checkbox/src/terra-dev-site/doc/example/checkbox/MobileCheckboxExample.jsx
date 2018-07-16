@@ -24,7 +24,6 @@ class MobileCheckbox extends React.Component {
       <Checkbox id="mobileCheckbox" labelText="Toggle to trigger resize. Window size needs to be less than or equal to 1024px." onChange={onChange} />
     );
   }
-
 }
 
 MobileCheckbox.propTypes = propTypes;

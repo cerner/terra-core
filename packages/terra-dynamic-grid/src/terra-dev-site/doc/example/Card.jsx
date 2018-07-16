@@ -10,5 +10,6 @@ export default props => (<div
     height: '100%',
     wordWrap: 'break-word',
     verticalAlign: 'middle',
-  }} {...props}
+  }}
+  {...props}
 />);

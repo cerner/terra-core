@@ -69,6 +69,6 @@ const NavigationSideMenuThemeExamples = () => (
       <p>--terra-navigation-side-menu-action-header-color: #dedfe0</p>
     </div>
   </div>
- );
+);
 
 export default NavigationSideMenuThemeExamples;

@@ -2,7 +2,6 @@
 import moment from 'moment';
 
 class DateUtil {
-
   // Converts an ISO 8601 date into a moment object. If the date is invalid and unable to convert, the originally provided date is returned.
   static createSafeDate(date) {
     if (date) {
@@ -84,7 +83,6 @@ class DateUtil {
 
     return undefined;
   }
-
 }
 
 export default DateUtil;

@@ -2,7 +2,6 @@ import React from 'react';
 import SearchField from '../../../SearchField';
 
 class DelayedSearchField extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -21,7 +20,6 @@ class DelayedSearchField extends React.Component {
       </div>
     );
   }
-
 }
 
 export default DelayedSearchField;

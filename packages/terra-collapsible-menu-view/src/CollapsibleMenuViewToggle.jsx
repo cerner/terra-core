@@ -42,7 +42,6 @@ const contextTypes = {
 const defaultProps = {
   isSelected: false,
   isSelectable: true,
-  text: '',
   shouldCloseOnClick: true,
 };
 

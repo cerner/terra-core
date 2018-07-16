@@ -45,9 +45,7 @@ export default (props) => {
         <div className={cx('row')}>
           <h1 className={cx('person-name')}>
             { personName }
-            { preferredFirstName && <span className={cx('preferred-first-name')}>
-              { preferredFirstName }
-            </span> }
+            { preferredFirstName && <span className={cx('preferred-first-name')}>{ preferredFirstName }</span> }
           </h1>
           <div className={cx('application-content')}>
             {applicationContent}

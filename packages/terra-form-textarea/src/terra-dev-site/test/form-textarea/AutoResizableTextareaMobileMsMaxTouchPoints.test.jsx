@@ -8,7 +8,8 @@ export default class textarea extends React.Component {
       this.resetMsMaxTouchPoints = true;
       this.previousMsMaxTouchPoints = navigator.msMaxTouchPoints;
 
-      Object.defineProperty(navigator, 'msMaxTouchPoints',
+      Object.defineProperty(
+        navigator, 'msMaxTouchPoints',
         {
           value: 1,
           configurable: true,
@@ -19,7 +20,8 @@ export default class textarea extends React.Component {
 
   componentWillUnmount() {
     if (this.resetMsMaxTouchPoints) {
-      Object.defineProperty(navigator, 'msMaxTouchPoints',
+      Object.defineProperty(
+        navigator, 'msMaxTouchPoints',
         {
           value: this.previousMsMaxTouchPoints,
           configurable: true,

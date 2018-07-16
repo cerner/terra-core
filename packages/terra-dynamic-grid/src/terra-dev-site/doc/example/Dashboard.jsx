@@ -54,7 +54,7 @@ const region3 = {
 
 
 const DashboardLayout = () => (
-  (<DynamicGrid defaultTemplate={template}>
+  <DynamicGrid defaultTemplate={template}>
     <DynamicGrid.Region defaultPosition={leftGutter}>
       <Card>left gutter</Card>
     </DynamicGrid.Region>
@@ -73,7 +73,7 @@ const DashboardLayout = () => (
     <DynamicGrid.Region defaultPosition={region3}>
       <Card>r3</Card>
     </DynamicGrid.Region>
-  </DynamicGrid>)
+  </DynamicGrid>
 );
 
 export default DashboardLayout;

@@ -2,7 +2,6 @@ import React from 'react';
 import SearchField from '../../../SearchField';
 
 class MinimumLengthSearchField extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -25,7 +24,6 @@ class MinimumLengthSearchField extends React.Component {
       </div>
     );
   }
-
 }
 
 export default MinimumLengthSearchField;

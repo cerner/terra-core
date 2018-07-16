@@ -5,6 +5,7 @@ exports[`Menu should render a Menu with an add option 1`] = `
   aria-activedescendant="terra-select-option-Tag"
   className="menu"
   role="listbox"
+  tabIndex="0"
 >
   <AddOption
     data-select-active={true}
@@ -26,6 +27,7 @@ exports[`Menu should render a Menu with no results 1`] = `
   aria-activedescendant="terra-select-option-null"
   className="menu"
   role="listbox"
+  tabIndex="0"
 >
   <NoResults
     key=".0"
@@ -38,6 +40,7 @@ exports[`Menu should render a default Menu 1`] = `
   aria-activedescendant="terra-select-option-null"
   className="menu"
   role="listbox"
+  tabIndex="0"
 >
   <NoResults
     key=".0"
