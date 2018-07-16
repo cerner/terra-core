@@ -51,8 +51,7 @@
     }
 
     .is-selected {
-      color: #000;
-      color: var(--terra-paginator-nav-link-selected-color, initial);
+      color: var(--terra-paginator-nav-link-selected-color, inherit);
       cursor: auto;
       pointer-events: none;
 
