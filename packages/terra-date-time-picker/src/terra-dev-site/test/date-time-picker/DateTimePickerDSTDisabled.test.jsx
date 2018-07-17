@@ -1,0 +1,33 @@
+import React from 'react';
+import Button from 'terra-button';
+import DateTimePickerExampleTemplate from '../../common/DateTimePickerExampleTemplate';
+
+export default class extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { active: false };
+    this.toggleDateTimePicker = this.toggleDateTimePicker.bind(this);
+  }
+
+  toggleDateTimePicker() {
+    this.setState({
+      active: !this.state.active
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <Button
+          text={this.state.active ? 'Disable' : 'Enable'}
+          onClick={this.toggleDateTimePicker}
+        />
+        <DateTimePickerExampleTemplate
+          value="2017-11-05T01:30:00"
+          disabled={!this.state.active}
+        />
+      </div>
+    )
+  }
+}
