@@ -177,7 +177,6 @@ describe('Filter View', () => {
   describe('No Results Initially', () => {
     before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-list/filter-view-list-no-results-initially'));
 
-    Terra.should.beAccessible();
     Terra.should.matchScreenshot('no results shown');
 
     it('should focus input to show results', () => {
@@ -188,6 +187,7 @@ describe('Filter View', () => {
       });
     });
 
+    Terra.should.beAccessible();
     Terra.should.matchScreenshot('results shown');
   });
 
@@ -210,5 +210,22 @@ describe('Filter View', () => {
     });
 
     Terra.should.matchScreenshot('updated twice');
+  });
+
+  describe('No Result Content', () => {
+    before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-list/filter-view-list-no-result-content'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot('initial');
+
+    it('should enter input to show no results', () => {
+      browser.setValue('input', 'Lorem');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
+    });
+
+    Terra.should.matchScreenshot('custom no results shown');
   });
 });

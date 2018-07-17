@@ -174,6 +174,7 @@ describe('Filter View', () => {
     Terra.should.matchScreenshot('with text');
     Terra.should.beAccessible();
   });
+
   describe('Auto Search Disabled', () => {
     before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-auto-search-disabled'));
 
@@ -226,5 +227,22 @@ describe('Filter View', () => {
     });
 
     Terra.should.matchScreenshot('updated twice');
+  });
+
+  describe('No Result Content', () => {
+    before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-no-result-content'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot('initial');
+
+    it('should enter a search term and show no result content', () => {
+      browser.setValue('input', 'Lorem');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
+    });
+
+    Terra.should.matchScreenshot('custom no result content');
   });
 });

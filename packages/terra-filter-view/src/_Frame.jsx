@@ -337,7 +337,7 @@ class Frame extends React.Component {
   delaySearch() {
     this.clearSearchTimeout();
 
-    const searchValue = { ...this.state };
+    const { searchValue } = { ...this.state };
 
     if (searchValue.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
       this.props.onSearch(searchValue);
