@@ -30,7 +30,7 @@ const propTypes = {
   /**
    * The attachment target.
    */
-  target: PropTypes.object.isRequired,
+  target: PropTypes.shape({}).isRequired,
 };
 
 const defaultProps = {
@@ -47,7 +47,9 @@ const BelowAttachment = {
   horizontal: 'start',
 };
 
-const Dropdown = ({ children, isAbove, isEnabled, onResize, target, refCallback, ...customProps }) => {
+const Dropdown = ({
+  children, isAbove, isEnabled, onResize, target, refCallback, ...customProps
+}) => {
   /**
    * Prevents default events from removing the focus from the target.
    * @param {event} event - The event invoking the callback.

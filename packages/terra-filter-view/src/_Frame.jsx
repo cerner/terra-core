@@ -34,7 +34,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the dropdown. ( Style, ClassNames, etc.. )
    */
-  dropdownAttrs: PropTypes.object,
+  dropdownAttrs: PropTypes.shape({}),
   /**
    * Whether the select is in an invalid state.
    */
@@ -79,13 +79,13 @@ const propTypes = {
    * Placeholder text.
    */
   placeholder: PropTypes.string,
- /**
+  /**
    * how long the component should wait (in milliseconds) after input before performing an automatic search.
    */
   searchDelay: PropTypes.number,
-    /**
-     * Controls whether or not all results are shown on initial load or after input focus.
-     */
+  /**
+   * Controls whether or not all results are shown on initial load or after input focus.
+   */
   showResultsInitially: PropTypes.bool,
   /**
    * The select value.
@@ -116,7 +116,7 @@ const defaultProps = {
 };
 
 const contextTypes = {
-    /* eslint-disable consistent-return */
+  /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
       return new Error('Please add locale prop to Base component to load translations');
@@ -337,7 +337,7 @@ class Frame extends React.Component {
   delaySearch() {
     this.clearSearchTimeout();
 
-    const searchValue = this.state.searchValue;
+    const searchValue = { ...this.state };
 
     if (searchValue.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
       this.props.onSearch(searchValue);
@@ -430,15 +430,23 @@ class Frame extends React.Component {
 
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
 
+    let ariaOwns;
+    if (this.state.isOpen && this.props.variant === Variants.DROPDOWN) {
+      ariaOwns = 'terra-select-dropdown';
+    } else if (this.props.variant === Variants.LIST) {
+      ariaOwns = 'terra-filter-box';
+    }
+
     return (
       <div className={cx('select-parent')}>
         <div
           {...customProps}
           role="combobox"
+          aria-controls={ariaOwns}
           aria-disabled={!!disabled}
           aria-expanded={!!this.state.isOpen}
-          aria-haspopup="true"
-          aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+          aria-haspopup={this.props.variant === Variants.DROPDOWN ? 'true' : undefined}
+          aria-owns={ariaOwns}
           className={selectClasses}
           onBlur={this.handleBlur}
           onFocus={this.handleFocus}
@@ -446,7 +454,7 @@ class Frame extends React.Component {
           onMouseDown={this.handleMouseDown}
           ref={(select) => { this.select = select; }}
         >
-          <div className={cx('display')} onMouseDown={this.openDropdown} role="textbox">
+          <div className={cx('display')} onMouseDown={this.openDropdown} >
             {this.getDisplay()}
           </div>
           {/* Render a clear search button when text is present in input */}
@@ -468,7 +476,7 @@ class Frame extends React.Component {
           {variant === Variants.DROPDOWN && this.state.isOpen &&
             <Dropdown
               {...dropdownAttrs}
-              id={'terra-select-dropdown'}
+              id="terra-select-dropdown"
               target={this.select}
               isAbove={this.state.isAbove}
               isEnabled={this.state.isPositioned}
@@ -491,7 +499,7 @@ class Frame extends React.Component {
         </div>
         {/* If variant is persistent, render the result box */}
         {variant === Variants.LIST &&
-          <div {...dropdownAttrs} className={cx('box')} id="box">
+          <div {...dropdownAttrs} className={cx('box')} id="terra-filter-box">
             {dropdown && this.state.showResults && dropdown({
               value,
               onDeselect,

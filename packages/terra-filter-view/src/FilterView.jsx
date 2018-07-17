@@ -27,7 +27,7 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the dropdown. ( style, classnames, etc.. )
    */
-  dropdownAttrs: PropTypes.object,
+  dropdownAttrs: PropTypes.shape({}),
   /**
    * The minimum number of characters to perform a search.
    */
@@ -119,7 +119,9 @@ function FilterView(props) {
     placeholder,
     variant,
     searchDelay,
-    ...otherProps } = props;
+    ...otherProps
+  } = props;
+
   return (
     <Select
       className={FilterViewClassNames}

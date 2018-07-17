@@ -129,15 +129,6 @@
     pointer-events: none;
   }
 
-  .toggle {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex-shrink: 0;
-    margin-left: auto;
-    padding: var(--terra-select-toggle-padding, 0 0.42857rem);
-  }
-
   // A reduced, non-zero, height and width allows the input to receive focus using tab.
   // Browsers disable focus on inputs with a 0 x 0 height and width.
   .search-input.is-hidden {
@@ -211,13 +202,6 @@
       padding-top: var(--terra-select-padding-top, 0);
     }
 
-    > .toggle {
-      border: var(--terra-select-toggle-border, 1px solid #dedfe0);
-      border-bottom-right-radius: var(--terra-select-border-radius, 3px);
-      border-left: 0;
-      border-top-right-radius: var(--terra-select-border-radius, 3px);
-    }
-
     &.is-focused {
       > .display {
         background-image: var(--terra-select-focus-background-image, none);
@@ -238,21 +222,12 @@
         border-bottom-left-radius: 0;
         box-shadow: none;
       }
-
-      > .toggle {
-        border-bottom-right-radius: 0;
-      }
     }
 
     &.is-above {
       > .display {
         border-bottom-left-radius: var(--terra-select-border-radius, 3px);
         border-top-left-radius: 0;
-      }
-
-      > .toggle {
-        border-bottom-right-radius: var(--terra-select-border-radius, 3px);
-        border-top-right-radius: 0;
       }
     }
 
