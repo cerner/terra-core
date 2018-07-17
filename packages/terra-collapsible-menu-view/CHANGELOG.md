@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added themeable variables
+
 ### Changed
 * Formatting changes per eslint v4 update
 * Required props no longer set a default prop

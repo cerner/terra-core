@@ -12,6 +12,13 @@ describe('Menu Item', () => {
 
     Terra.should.matchScreenshot();
     Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-menu-item-text-color': 'red',
+        '--terra-menu-item-text-font-size': '20px',
+      },
+    });
   });
 
   describe('Menu Item-Selectable', () => {
@@ -21,12 +28,14 @@ describe('Menu Item', () => {
       it('is selected', () => {
         browser.click('.TestSelectableItem');
       });
+
       Terra.should.matchScreenshot('selected');
       Terra.should.beAccessible({ rules: ignoredA11y });
 
       it('is deselected', () => {
         browser.click('.TestSelectableItem');
       });
+
       Terra.should.matchScreenshot('deselected');
       Terra.should.beAccessible({ rules: ignoredA11y });
     });
@@ -35,12 +44,21 @@ describe('Menu Item', () => {
       it('is selected', () => {
         browser.keys('Enter');
       });
+
       Terra.should.matchScreenshot('selected');
       Terra.should.beAccessible({ rules: ignoredA11y });
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-menu-item-checkmark-icon-color': 'green',
+          '--terra-menu-item-checkmark-icon-font-size': '18px',
+        },
+      });
 
       it('is deselected', () => {
         browser.keys('Enter');
       });
+
       Terra.should.matchScreenshot('deselected');
       Terra.should.beAccessible({ rules: ignoredA11y });
     });
@@ -57,6 +75,13 @@ describe('Menu Item-Disabled', () => {
     browser.click('.TestDisabledItem');
   });
   Terra.should.matchScreenshot('disabled item was not checked');
+  Terra.should.themeCombinationOfCustomProperties({
+    testName: 'themed',
+    properties: {
+      '--terra-menu-item-disabled-text-color': 'fuchsia',
+      '--terra-menu-item-disabled-chevron-icon-color': 'salmon',
+    },
+  });
 });
 
 describe('Menu Item-Submenu Indicator', () => {
@@ -64,6 +89,13 @@ describe('Menu Item-Submenu Indicator', () => {
 
   Terra.should.matchScreenshot();
   Terra.should.beAccessible({ rules: ignoredA11y });
+  Terra.should.themeCombinationOfCustomProperties({
+    testName: 'themed',
+    properties: {
+      '--terra-menu-item-chevron-icon-color': 'blue',
+      '--terra-menu-item-chevron-icon-font-size': '24px',
+    },
+  });
 });
 
 describe('Menu Item-Wrapped Text', () => {

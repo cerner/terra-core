@@ -26,6 +26,16 @@ class MenuItemDisabled extends React.Component {
             isSelectable
             isDisabled
           />
+          <Menu.Item
+            isDisabled
+            isSelectable
+            text="Nested Menu"
+            key="2"
+            className="TestNestedMenu"
+            subMenuItems={[
+              <Menu.Item text="Default 2.1" key="2.1" className="TestNestedMenuContent" />,
+            ]}
+          />
         </List>
       </div>
     );

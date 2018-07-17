@@ -1,7 +1,8 @@
 :local {
   .item {
     cursor: default;
-    padding: 0.286rem 0;
+    margin: var(--terra-menu-item-margin, 0);
+    padding: var(--terra-menu-item-padding, 0.286rem 0);
 
     &:not(.is-disabled) {
       cursor: pointer;
@@ -10,18 +11,32 @@
       &:focus {
         background-color: var(--terra-menu-item-hover-color, #ebf6fd);
       }
-    } 
+    }
+  }
+
+  .item:active:not(.is-disabled),
+  .active {
+    background-color: var(--terra-menu-item-active-background-color, #ebf6fd);
+
+    .text {
+      color: var(--terra-menu-item-active-text-color, #1c1f21);
+    }
   }
 
   .is-disabled {
     outline: 0;
     
-    .title {
+    .text {
+      color: var(--terra-menu-item-disabled-text-color, #1c1f21);
       opacity: 0.3;
+    }
+
+    .chevron {
+      color: var(--terra-menu-item-disabled-chevron-icon-color, #9b9fa1);
     }
   }
 
-  .title {
+  .text {
     color: var(--terra-menu-item-text-color, #1c1f21);
     font-size: var(--terra-menu-item-text-font-size, 13px);
     line-height: 1.2;
