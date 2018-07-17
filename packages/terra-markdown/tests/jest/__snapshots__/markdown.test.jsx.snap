@@ -16,7 +16,7 @@ exports[`should render correctly 1`] = `
     dir="ltr"
     style={
       Object {
-        "listStyle": "initial",
+        "listStyle": "disc outside none",
       }
     }
   />

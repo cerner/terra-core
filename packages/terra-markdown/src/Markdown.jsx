@@ -23,7 +23,7 @@ const Markdown = props => (
   <div
     dir="ltr"
     className="markdown-body"
-    style={{ listStyle: 'initial' }}
+    style={{ listStyle: 'disc outside none' }}
     dangerouslySetInnerHTML={{ __html: marked(props.src) }}
   />
 );
