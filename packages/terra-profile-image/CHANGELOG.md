@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Make placeholder image themeable
+
 ### Changed
 * Formatting changes per eslint v4 update
 
