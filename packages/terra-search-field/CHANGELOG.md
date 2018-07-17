@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added more themeable variables
+
 ### Changed
 * Formatting changes per eslint v4 update
 
