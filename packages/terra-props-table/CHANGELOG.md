@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Implicit inferring of an `enum`'s type based on its first child.
+
 ### Changed
 * Formatting changes per eslint v4 update
 
