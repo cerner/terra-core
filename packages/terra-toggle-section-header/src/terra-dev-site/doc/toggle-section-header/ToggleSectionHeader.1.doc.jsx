@@ -12,6 +12,8 @@ import DefaultToggleSectionHeader from '../example/DefaultToggleSectionHeader';
 import DefaultToggleSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggleSectionHeader';
 import AnimatedToggleSectionHeader from '../example/AnimatedToggleSectionHeader';
 import AnimatedToggleSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AnimatedToggleSectionHeader';
+import TransparentToggleSectionHeader from '../example/TransparentToggleSectionHeader';
+import TransparentToggleSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TransparentToggleSectionHeader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -29,6 +31,11 @@ const DocPage = () => (
         title: 'Two Column',
         example: <AnimatedToggleSectionHeader />,
         source: AnimatedToggleSectionHeaderSrc,
+      },
+      {
+        title: 'Transparent',
+        example: <TransparentToggleSectionHeader />,
+        source: TransparentToggleSectionHeaderSrc,
       },
     ]}
     propsTables={[

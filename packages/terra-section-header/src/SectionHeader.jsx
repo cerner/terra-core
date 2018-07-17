@@ -29,11 +29,16 @@ const propTypes = {
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=2`.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  /**
+   * Sets the background of the section header to transparent.
+   */
+  isTransparent: PropTypes.bool,
 };
 
 const defaultProps = {
   onClick: undefined,
   isOpen: false,
+  isTransparent: false,
   level: 2,
 };
 
@@ -82,6 +87,7 @@ class SectionHeader extends React.Component {
       title,
       onClick,
       isOpen,
+      isTransparent,
       level,
       ...customProps
     } = this.props;
@@ -115,6 +121,7 @@ class SectionHeader extends React.Component {
       'section-header',
       { 'is-interactable': onClick },
       { 'is-active': this.state.isActive },
+      { 'is-transparent': isTransparent },
       customProps.className,
     ]);
 
