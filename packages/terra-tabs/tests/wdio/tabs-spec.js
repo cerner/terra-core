@@ -185,4 +185,30 @@ describe('Tabs - Responsive', () => {
       });
     });
   });
+
+  // Test additional tabs
+  describe('Additional Tabs', () => {
+    before(() => {
+      browser.setViewportSize(Terra.viewports('small')[0]);
+      browser.url('/#/raw/tests/terra-tabs/tabs/tabs/additional-tabs');
+    });
+
+    it('should load initial tabs', () => {
+
+    });
+    Terra.should.matchScreenshot('Initial');
+    Terra.should.beAccessible();
+
+    it('should load additional tab', () => {
+      browser.click('#toggleButton');
+    });
+    Terra.should.matchScreenshot('Visible');
+    Terra.should.beAccessible();
+
+    it('should remove additional tab', () => {
+      browser.click('#toggleButton');
+    });
+    Terra.should.matchScreenshot('Hidden');
+    Terra.should.beAccessible();
+  });
 });
