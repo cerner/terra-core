@@ -10,8 +10,8 @@
   "scripts": {},
   "env": {
     "NODE_ENV": {
-      "description": "development environment",
-      "value": "development"
+      "description": "node environment",
+      "value": "production"
     },
     "HEROKU": {
       "description": "Heroku environment",
