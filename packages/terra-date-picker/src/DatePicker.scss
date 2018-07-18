@@ -11,13 +11,13 @@
       .input {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
-        margin-right: -0.071em;
         vertical-align: middle;
         width: 8em;
 
         &:focus {
           border-color: #26a2e5;
           outline: none;
+          z-index: 1;
         }
       }
 

@@ -9,7 +9,7 @@ exports[`should render a default date input 1`] = `
     type="hidden"
   />
   <input
-    class="input input"
+    class="form-input input"
     name="terra-date-undefined"
     type="text"
   />
@@ -55,7 +55,7 @@ exports[`should render a default date input with all props 1`] = `
     value="2017-01-01"
   />
   <input
-    class="input input"
+    class="form-input input"
     id="terra-date-input"
     name="terra-date-date-input"
     placeholder="MM/DD/YYYY"

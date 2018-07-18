@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Updated translations
+* Replaced the legacy form input with the new terra-form-input package
+* Fixed Focus Styles on the input element
 
 2.22.0 - (July 17, 2018)
 ------------------
