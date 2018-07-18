@@ -55,11 +55,9 @@ exports[`Frame should render a disabled list variant 1`] = `
   className="select-parent"
 >
   <div
-    aria-controls="terra-filter-box"
     aria-disabled={true}
-    aria-expanded={true}
-    aria-owns="terra-filter-box"
-    className="select list is-disabled is-open"
+    aria-expanded={false}
+    className="select list is-disabled"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -211,11 +209,9 @@ exports[`Frame should render a list variant 1`] = `
   className="select-parent"
 >
   <div
-    aria-controls="terra-filter-box"
     aria-disabled={false}
-    aria-expanded={true}
-    aria-owns="terra-filter-box"
-    className="select list is-open"
+    aria-expanded={false}
+    className="select list"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -266,11 +262,9 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
   className="select-parent"
 >
   <div
-    aria-controls="terra-filter-box"
     aria-disabled={false}
-    aria-expanded={true}
-    aria-owns="terra-filter-box"
-    className="select list is-open"
+    aria-expanded={false}
+    className="select list"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
