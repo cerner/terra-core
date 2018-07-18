@@ -24,7 +24,7 @@ it('should render a default date time picker', () => {
 });
 
 it('should render a disabled time clarification', () => {
-  const datePicker = shallow(
+  const datePicker = shallow((
     <IntlProvider locale={locale} messages={messages}>
       <TimeClarification
         isOpen
@@ -37,7 +37,6 @@ it('should render a disabled time clarification', () => {
         requestFocus={jest.fn()}
         disabled
       />
-    </IntlProvider>,
-  );
+    </IntlProvider>));
   expect(datePicker).toMatchSnapshot();
 });

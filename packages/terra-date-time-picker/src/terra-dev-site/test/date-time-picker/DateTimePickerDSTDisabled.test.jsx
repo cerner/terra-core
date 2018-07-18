@@ -12,14 +12,15 @@ export default class extends React.Component {
 
   toggleDateTimePicker() {
     this.setState({
-      active: !this.state.active
-    })
+      active: !this.state.active,
+    });
   }
 
   render() {
     return (
       <div>
         <Button
+          id="date-time-picker-toggler"
           text={this.state.active ? 'Disable' : 'Enable'}
           onClick={this.toggleDateTimePicker}
         />
@@ -28,6 +29,6 @@ export default class extends React.Component {
           disabled={!this.state.active}
         />
       </div>
-    )
+    );
   }
 }
