@@ -27,5 +27,5 @@ if (hasModifiedSrcFiles && !hasCHANGELOGChanges) {
 // Warn when there is a big PR
 const bigPRThreshold = 1000;
 if (danger.github.pr.additions + danger.github.pr.deletions > bigPRThreshold) {
-  warn(':exclamation: Big PR. Consider breaking this into smaller PRs if applicaple');
+  warn(':exclamation: Big PR. Consider breaking this into smaller PRs if applicable');
 }
