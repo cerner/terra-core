@@ -2,7 +2,6 @@
 
 exports[`Snapshots renders a default FilterView 1`] = `
 <Select
-  className="filter-view"
   disableAutoSearch={false}
   disabled={false}
   id="search"
@@ -16,7 +15,6 @@ exports[`Snapshots renders a default FilterView 1`] = `
 
 exports[`Snapshots renders a default FilterView with a default value 1`] = `
 <Select
-  className="filter-view"
   defaultValue="Test"
   disableAutoSearch={false}
   disabled={false}
@@ -31,7 +29,6 @@ exports[`Snapshots renders a default FilterView with a default value 1`] = `
 
 exports[`Snapshots renders a default FilterView with a placeholder 1`] = `
 <Select
-  className="filter-view"
   disableAutoSearch={false}
   disabled={false}
   id="search"
@@ -46,7 +43,6 @@ exports[`Snapshots renders a default FilterView with a placeholder 1`] = `
 
 exports[`Snapshots renders a disabled default FilterView 1`] = `
 <Select
-  className="filter-view"
   disableAutoSearch={false}
   disabled={true}
   id="search"
@@ -60,7 +56,6 @@ exports[`Snapshots renders a disabled default FilterView 1`] = `
 
 exports[`Snapshots renders a disabled default FilterView with a default value 1`] = `
 <Select
-  className="filter-view"
   defaultValue="default"
   disableAutoSearch={false}
   disabled={true}
@@ -75,7 +70,6 @@ exports[`Snapshots renders a disabled default FilterView with a default value 1`
 
 exports[`Snapshots renders a disabled list FilterView 1`] = `
 <Select
-  className="filter-view"
   disableAutoSearch={false}
   disabled={true}
   id="search"
@@ -89,7 +83,6 @@ exports[`Snapshots renders a disabled list FilterView 1`] = `
 
 exports[`Snapshots renders a disabled list FilterView with a default value 1`] = `
 <Select
-  className="filter-view"
   defaultValue="default"
   disableAutoSearch={false}
   disabled={true}
@@ -104,7 +97,6 @@ exports[`Snapshots renders a disabled list FilterView with a default value 1`] =
 
 exports[`Snapshots renders a list FilterView 1`] = `
 <Select
-  className="filter-view"
   disableAutoSearch={false}
   disabled={false}
   id="search"
@@ -118,7 +110,6 @@ exports[`Snapshots renders a list FilterView 1`] = `
 
 exports[`Snapshots renders a list FilterView with a default value 1`] = `
 <Select
-  className="filter-view"
   defaultValue="Test"
   disableAutoSearch={false}
   disabled={false}
@@ -133,7 +124,6 @@ exports[`Snapshots renders a list FilterView with a default value 1`] = `
 
 exports[`Snapshots renders a list FilterView with a placeholder 1`] = `
 <Select
-  className="filter-view"
   disableAutoSearch={false}
   disabled={false}
   id="search"
@@ -148,7 +138,6 @@ exports[`Snapshots renders a list FilterView with a placeholder 1`] = `
 
 exports[`Snapshots renders a list FilterView with dropdownAttrs spread 1`] = `
 <Select
-  className="filter-view"
   disableAutoSearch={false}
   disabled={false}
   dropdownAttrs={
@@ -167,7 +156,6 @@ exports[`Snapshots renders a list FilterView with dropdownAttrs spread 1`] = `
 
 exports[`Snapshots renders a list FilterView without results initially 1`] = `
 <Select
-  className="filter-view"
   disableAutoSearch={false}
   disabled={false}
   id="search"

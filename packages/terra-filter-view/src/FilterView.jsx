@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
-import classNames from 'classnames/bind';
 import { Variants } from './_constants';
 import Select from './Select';
-
-const cx = classNames;
 
 const propTypes = {
   /**
@@ -93,7 +90,7 @@ const defaultProps = {
   placeholder: undefined,
   searchDelay: 250,
   showResultsInitially: true,
-  variant: 'dropdown',
+  variant: Variants.DROPDOWN,
 };
 
 const contextTypes = {
@@ -105,12 +102,7 @@ const contextTypes = {
   },
 };
 
-
 function FilterView(props) {
-  const FilterViewClassNames = cx([
-    'filter-view',
-  ]);
-
   const {
     children,
     defaultValue,
@@ -124,7 +116,6 @@ function FilterView(props) {
 
   return (
     <Select
-      className={FilterViewClassNames}
       id="search"
       defaultValue={defaultValue}
       onChange={onChange}

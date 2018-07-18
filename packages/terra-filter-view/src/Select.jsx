@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Variants } from './_constants';
 import DropdownMenu from './_Menu';
 import Frame from './_Frame';
 import Option from './_Option';
@@ -64,13 +63,6 @@ const propTypes = {
    * The selected value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
-  /**
-   * The behavior of the Select. One of `dropdown` or `list`.
-   */
-  variant: PropTypes.oneOf([
-    Variants.DROPDOWN,
-    Variants.LIST,
-  ]),
 };
 
 const defaultProps = {
@@ -87,7 +79,6 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   value: undefined,
-  variant: Variants.LIST,
 };
 
 const contextTypes = {
@@ -114,7 +105,7 @@ class Select extends React.Component {
   }
 
   /**
-   * Returns the appropriate variant display
+   * Returns the appropriate display
    */
   display() {
     const selectValue = Util.value(this.props, this.state);
@@ -163,7 +154,7 @@ class Select extends React.Component {
   render() {
     const { intl } = this.context;
     const {
-      children, defaultValue, onChange, placeholder, value, variant, ...otherProps
+      children, defaultValue, onChange, placeholder, value, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.searchField.search' });
@@ -177,7 +168,6 @@ class Select extends React.Component {
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
-        variant={variant}
         dropdown={dropdownProps => (
           <DropdownMenu {...dropdownProps}>
             {children}

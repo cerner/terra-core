@@ -112,7 +112,6 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   value: undefined,
-  variant: Variants.DROPDOWN,
 };
 
 const contextTypes = {
@@ -431,9 +430,9 @@ class Frame extends React.Component {
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
 
     let ariaOwns;
-    if (this.state.isOpen && this.props.variant === Variants.DROPDOWN) {
+    if (this.state.isOpen && variant === Variants.DROPDOWN) {
       ariaOwns = 'terra-select-dropdown';
-    } else if (this.props.variant === Variants.LIST) {
+    } else if (variant === Variants.LIST) {
       ariaOwns = 'terra-filter-box';
     }
 
@@ -445,7 +444,7 @@ class Frame extends React.Component {
           aria-controls={this.state.isOpen ? ariaOwns : undefined}
           aria-disabled={!!disabled}
           aria-expanded={!!this.state.isOpen}
-          aria-haspopup={this.props.variant === Variants.DROPDOWN ? 'true' : undefined}
+          aria-haspopup={variant === Variants.DROPDOWN ? 'true' : undefined}
           aria-owns={this.state.isOpen ? ariaOwns : undefined}
           className={selectClasses}
           onBlur={this.handleBlur}
