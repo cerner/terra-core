@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.18.0 - (July 17, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 
 2.17.0 - (July 10, 2018)
