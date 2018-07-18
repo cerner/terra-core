@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import TerraImage from 'terra-image';
-import avatarImage from './avatar.svg';
+import styles from './ProfileImage.scss';
+
+const cx = classNames.bind(styles);
 
 /* eslint react/no-unused-prop-types: [0] */
 const propTypes = {
@@ -32,16 +35,21 @@ const propTypes = {
   onError: PropTypes.func,
 };
 
+const isOnlyNumbers = toTest => !(/\D/).test(toTest);
+
 const ProfileImage = (props) => {
+  // img tags assume a height attribute of only numbers is in px but CSS does not
+  const fixedHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
+  const fixedWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
+
   const placeholderImage = (
-    <img
-      src={avatarImage}
-      alt={props.alt}
-      height={props.height}
-      width={props.width}
+    <span
+      className={cx('placeholder-images')}
+      title={props.alt}
+      style={{ height: fixedHeight, width: fixedWidth }}
     />
   );
-  return <div><TerraImage placeholder={placeholderImage} {...props} /></div>;
+  return (<div><TerraImage placeholder={placeholderImage} {...props} /></div>);
 };
 
 ProfileImage.propTypes = propTypes;
