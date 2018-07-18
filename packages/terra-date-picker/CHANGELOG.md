@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Placeholder text is now localized
 
 2.22.0 - (July 17, 2018)
 ------------------

@@ -251,6 +251,7 @@ class DatePicker extends React.Component {
     const { intl } = this.context;
     const todayString = intl.formatMessage({ id: 'Terra.datePicker.today' });
     const dateFormat = DateUtil.getFormatByLocale(intl.locale);
+    const placeholderText = intl.formatMessage({ id: 'Terra.datePicker.dateFormat' });
     const exludeMomentDates = DateUtil.filterInvalidDates(excludeDates);
     const includeMomentDates = DateUtil.filterInvalidDates(includeDates);
     const maxMomentDate = DateUtil.createSafeDate(maxDate);
@@ -283,7 +284,7 @@ class DatePicker extends React.Component {
         dateFormat={dateFormat}
         fixedHeight
         locale={intl.locale}
-        placeholderText={dateFormat}
+        placeholderText={placeholderText}
         dropdownMode="select"
         showMonthDropdown
         showYearDropdown
@@ -316,7 +317,7 @@ class DatePicker extends React.Component {
         dateFormat={dateFormat}
         fixedHeight
         locale={intl.locale}
-        placeholderText={dateFormat}
+        placeholderText={placeholderText}
         popperContainer={PopperContainer}
         popperPlacement="bottom"
         popperModifiers={{
