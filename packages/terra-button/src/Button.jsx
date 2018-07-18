@@ -104,7 +104,7 @@ const defaultProps = {
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false, focused: false, mouseWasClicked: false };
+    this.state = { active: false, focused: false };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);

@@ -32,7 +32,6 @@ const propTypes = {
 const defaultProps = {
   heightSize: 'small',
   max: 100,
-  value: 0,
   hasGradient: false,
 };
 

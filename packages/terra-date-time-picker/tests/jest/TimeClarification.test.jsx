@@ -7,7 +7,7 @@ import messages from '../../translations/en-US.json';
 const locale = 'en-US';
 
 it('should render a default date time picker', () => {
-  const datePicker = shallow(
+  const datePicker = shallow((
     <IntlProvider locale={locale} messages={messages}>
       <TimeClarification
         isOpen
@@ -19,8 +19,7 @@ it('should render a default date time picker', () => {
         releaseFocus={jest.fn()}
         requestFocus={jest.fn()}
       />
-    </IntlProvider>,
-  );
+    </IntlProvider>));
   expect(datePicker).toMatchSnapshot();
 });
 

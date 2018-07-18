@@ -31,6 +31,7 @@ const positionShape = {
   /**
   * Additional CSS properties to apply to the region.
   */
+  // eslint-disable-next-line react/forbid-prop-types
   style: PropTypes.object,
 };
 

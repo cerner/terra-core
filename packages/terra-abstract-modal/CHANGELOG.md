@@ -4,6 +4,18 @@ Changelog
 Unreleased
 ----------
 
+1.12.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+* Formatting changes per eslint v4 update
+* Required props no longer set a default prop
+
+1.11.0 - (July 10, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.10.0 - (June 28, 2018)
 ------------------
 ### Changed

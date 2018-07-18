@@ -15,11 +15,8 @@
 | enzyme | ^3.3.0 | -- | JavaScript Testing utilities for React |
 | enzyme-adapter-react-16 | ^1.1.1 | ^16.0.0-0 | JavaScript Testing utilities for React |
 | enzyme-to-json | ^3.2.2 | -- | convert enzyme wrapper to a format compatible with Jest snapshot |
-| eslint | ^3.19.0 | -- | An AST-based pattern checker for JavaScript. |
-| eslint-config-airbnb | ^14.1.0 | -- | Airbnb's ESLint config, following our styleguide |
-| eslint-plugin-import | ^2.2.0 | -- | Import with sanity. |
-| eslint-plugin-jsx-a11y | ^4.0.0 | -- | Static AST checker for accessibility rules on JSX elements. |
-| eslint-plugin-react | ^6.9.0 | -- | React specific linting rules for ESLint |
+| eslint | ^4.19.1 | -- | An AST-based pattern checker for JavaScript. |
+| eslint-config-terra | ^1.0.0 | -- | Terra Eslint Config |
 | gh-pages | ^1.1.0 | -- | Publish to a gh-pages branch on GitHub (or any other branch on any other remote) |
 | glob | ^7.1.1 | -- | a little globber |
 | identity-obj-proxy | ^3.0.0 | -- | an identity object using ES6 proxies |
@@ -38,6 +35,6 @@
 | stylelint-order | ^0.8.1 | -- | A collection of order related linting rules for stylelint. |
 | stylelint-scss | ^3.0.0 | -- | A collection of SCSS specific rules for stylelint |
 | stylelint-suitcss | ^3.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
-| terra-dev-site | ^1.2.0 | ^16.2.0 | Dynamically builds a react-hash-routed site based on site configuration, navigation configuration and component configuration. |
-| terra-toolkit | ^3.3.1 | -- | Utilities to help when developing terra modules. |
+| terra-dev-site | ^2.0.0 | ^16.2.0 | Dynamically builds a react-hash-routed site based on site configuration, navigation configuration and component configuration. |
+| terra-toolkit | ^4.1.0 | -- | Utilities to help when developing terra modules. |
 | webpack-merge | ^4.1.2 | -- | Variant of merge that's useful for webpack configuration |

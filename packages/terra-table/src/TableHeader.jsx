@@ -12,7 +12,7 @@ const propTypes = {
 const TableHeader = ({
   children,
   ...customProps
-  }) => {
+}) => {
   let childrenArray = React.Children.toArray(children);
   if (childrenArray.length > 16) {
     // eslint-disable-next-line no-console

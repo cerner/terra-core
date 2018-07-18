@@ -3,6 +3,23 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Replace legacy Input with the new terra-form-input package
+* Give desktop time input the same styles as terra-form-input.
+
+2.18.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+* Formatting changes per eslint v4 update
+
+2.17.0 - (July 10, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Fixed
+* Prevent modification of passed in attribute props.
 
 2.16.0 - (June 28, 2018)
 ------------------

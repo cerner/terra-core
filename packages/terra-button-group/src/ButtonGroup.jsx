@@ -31,7 +31,6 @@ const defaultProps = {
 };
 
 class ButtonGroup extends React.Component {
-
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -44,7 +43,7 @@ class ButtonGroup extends React.Component {
   }
 
   wrapOnClick(item) {
-    const onClick = item.props.onClick;
+    const { onClick } = item.props;
     return (event) => {
       this.handleOnChange(event, item.key);
 

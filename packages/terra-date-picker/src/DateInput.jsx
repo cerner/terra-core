@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
-import Input from 'terra-form/lib/Input';
+import Input from 'terra-form-input';
 import DateUtil from './DateUtil';
 import styles from './DatePicker.scss';
 
@@ -13,6 +13,7 @@ const propTypes = {
   /**
    * Custom input attributes to apply to the date input.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   inputAttributes: PropTypes.object,
   /**
    * Name of the date input.
@@ -144,7 +145,7 @@ class DatePickerInput extends React.Component {
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.datePicker.openCalendar' });
 
     return (
-      (<div className={styles['custom-input']}>
+      <div className={styles['custom-input']}>
         <input
           // Create a hidden input for storing the name and value attributes to use when submitting the form.
           // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
@@ -173,7 +174,7 @@ class DatePickerInput extends React.Component {
           isCompact
           isDisabled={additionalInputProps.disabled}
         />
-      </div>)
+      </div>
     );
   }
 }

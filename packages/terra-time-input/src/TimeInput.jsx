@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import Input from 'terra-form/lib/Input';
+import Input from 'terra-form-input';
 import ButtonGroup from 'terra-button-group';
 
 import TimeUtil from './TimeUtil';
@@ -18,14 +18,17 @@ const propTypes = {
   /**
    * Custom input attributes that apply to both the hour and minute inputs.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   inputAttributes: PropTypes.object,
   /**
    * Custom input attributes to apply to the hour input
    */
+  // eslint-disable-next-line react/forbid-prop-types
   hourAttributes: PropTypes.object,
   /**
    * Custom input attributes to apply to the minutes input
    */
+  // eslint-disable-next-line react/forbid-prop-types
   minuteAttributes: PropTypes.object,
   /**
    * Name of the time input. The name should be unique.
@@ -55,7 +58,6 @@ const defaultProps = {
   inputAttributes: {},
   minuteAttributes: {},
   hourAttributes: {},
-  name: null,
   onBlur: null,
   onChange: null,
   value: undefined,
@@ -75,15 +77,14 @@ class TimeInput extends React.Component {
   constructor(props, context) {
     super(props);
 
-    let value = this.props.value;
+    let { value } = this.props;
 
     if (value && !TimeUtil.validateTime.test(value)) {
       if (process.env !== 'production') {
         // eslint-disable-next-line
         console.warn(
           `An invalid time value, ${value}, has been passed to the terra-time-picker.`
-          + 'This value has been ignored and will not be rendered. Time values must be in hh:mm format.',
-        );
+          + 'This value has been ignored and will not be rendered. Time values must be in hh:mm format.');
       }
 
       value = undefined;
@@ -124,6 +125,7 @@ class TimeInput extends React.Component {
       if (hour) {
         const parsedHour = TimeUtil.parseTwelveHourTime(hour, this.anteMeridiem, this.postMeridiem);
         hour = parsedHour.hourString;
+        // eslint-disable-next-line prefer-destructuring
         meridiem = parsedHour.meridiem;
       } else {
         meridiem = this.anteMeridiem;
@@ -150,7 +152,7 @@ class TimeInput extends React.Component {
     }
 
     let hour = TimeUtil.splitHour(nextProps.value);
-    let meridiem = this.state.meridiem;
+    let { meridiem } = this.state;
 
     if (nextProps.variant === TimeUtil.FORMAT_12_HOUR) {
       if (!this.context.intl.messages['Terra.timeInput.am'] || !this.context.intl.messages['Terra.timeInput.pm']) {
@@ -169,6 +171,7 @@ class TimeInput extends React.Component {
       if (hour) {
         const parsedHour = TimeUtil.parseTwelveHourTime(hour, this.anteMeridiem, this.postMeridiem);
         hour = parsedHour.hourString;
+        // eslint-disable-next-line prefer-destructuring
         meridiem = parsedHour.meridiem;
       }
     }
@@ -191,13 +194,13 @@ class TimeInput extends React.Component {
   handleMinuteFocus(event) {
     this.handleFocus(event);
     this.setState({ minuteInitialFocused: true });
-    this.minuteInput.textInput.setSelectionRange(0, this.minuteInput.textInput.value.length);
+    this.minuteInput.setSelectionRange(0, this.minuteInput.value.length);
   }
 
   handleHourFocus(event) {
     this.handleFocus(event);
     this.setState({ hourInitialFocused: true });
-    this.hourInput.textInput.setSelectionRange(0, this.hourInput.textInput.value.length);
+    this.hourInput.setSelectionRange(0, this.hourInput.value.length);
   }
 
   handleHourBlur(event) {
@@ -269,7 +272,7 @@ class TimeInput extends React.Component {
 
     // // Move focus to the minute input if the hour input has a valid and complete entry.
     if (inputValue.length === 2) {
-      this.minuteInput.textInput.focus();
+      this.minuteInput.focus();
     }
 
     this.handleValueChange(event, TimeUtil.inputType.HOUR, inputValue, this.state.meridiem);
@@ -340,7 +343,7 @@ class TimeInput extends React.Component {
    */
   handleHourInputKeyDown(event) {
     let stateValue = this.state.hour;
-    let meridiem = this.state.meridiem;
+    let { meridiem } = this.state;
     const previousStateValue = stateValue;
 
     if (event.keyCode === TimeUtil.keyCodes.ARROWUP) {
@@ -376,9 +379,9 @@ class TimeInput extends React.Component {
 
   focusMinute(event) {
     // If the hour is empty or the cursor is after the value, move focus to the minute input when the right arrow is pressed.
-    if (this.state.hour.length === 0 || this.state.hour.length === this.hourInput.textInput.selectionEnd) {
-      this.minuteInput.textInput.focus();
-      this.minuteInput.textInput.setSelectionRange(0, 0);
+    if (this.state.hour.length === 0 || this.state.hour.length === this.hourInput.selectionEnd) {
+      this.minuteInput.focus();
+      this.minuteInput.setSelectionRange(0, 0);
       event.preventDefault();
     }
   }
@@ -421,10 +424,10 @@ class TimeInput extends React.Component {
     // If the cursor is at the left most position in the minute input, is empty or the cursor is before the value,
     // move focus to the hour input
 
-    if (this.minuteInput.textInput.selectionEnd === 0) {
-      this.hourInput.textInput.focus();
+    if (this.minuteInput.selectionEnd === 0) {
+      this.hourInput.focus();
       if (this.state.hour) {
-        this.hourInput.textInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
+        this.hourInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
         event.preventDefault();
       }
     }
@@ -433,7 +436,7 @@ class TimeInput extends React.Component {
   focusMeridiem(event) {
     // If the minute is empty or the cursor is after the value, move focus to the meridiem.
     if ((this.state.minute.length === 0 ||
-        this.state.minute.length === this.minuteInput.textInput.selectionEnd) &&
+        this.state.minute.length === this.minuteInput.selectionEnd) &&
         this.meridiemInput
     ) {
       this.meridiemInput.focus();
@@ -497,7 +500,7 @@ class TimeInput extends React.Component {
     if (event.keyCode === TimeUtil.keyCodes.ARROWLEFT ||
         event.keyCode === TimeUtil.keyCodes.DELETE ||
         event.keyCode === TimeUtil.keyCodes.BACKSPACE) {
-      this.minuteInput.textInput.focus();
+      this.minuteInput.focus();
       event.preventDefault();
     }
   }
@@ -516,6 +519,9 @@ class TimeInput extends React.Component {
       ...customProps
     } = this.props;
 
+    const instanceHoursAttrs = Object.assign({}, hourAttributes);
+    const instanceMinuteAttrs = Object.assign({}, minuteAttributes);
+
     // Using the state of hour and minute create a time in UTC represented in ISO 8601 format.
     let timeValue = '';
 
@@ -529,12 +535,12 @@ class TimeInput extends React.Component {
       timeValue = 'T'.concat(hour, ':', this.state.minute);
     }
 
-    if (hourAttributes && !hourAttributes.id) {
-      hourAttributes.id = 'terra-time-hour-'.concat(name);
+    if (!instanceHoursAttrs.id) {
+      instanceHoursAttrs.id = 'terra-time-hour-'.concat(name);
     }
 
-    if (minuteAttributes && !minuteAttributes.id) {
-      minuteAttributes.id = 'terra-time-minute-'.concat(name);
+    if (!instanceMinuteAttrs.id) {
+      instanceMinuteAttrs.id = 'terra-time-minute-'.concat(name);
     }
 
     return (
@@ -549,8 +555,8 @@ class TimeInput extends React.Component {
         <div className={cx('time-input-group')}>
           <Input
             {...inputAttributes}
-            {...hourAttributes}
-            ref={(inputRef) => { this.hourInput = inputRef; }}
+            {...instanceHoursAttrs}
+            refCallback={(inputRef) => { this.hourInput = inputRef; }}
             className={cx('time-input-hour')}
             value={this.state.hour}
             name={'terra-time-hour-'.concat(name)}
@@ -564,7 +570,7 @@ class TimeInput extends React.Component {
             pattern="\d*"
             disabled={disabled}
           />
-          <label htmlFor={hourAttributes.id} className={cx('mobile-input-label')}>
+          <label htmlFor={instanceHoursAttrs.id} className={cx('mobile-input-label')}>
             {this.context.intl.formatMessage({ id: 'Terra.timeInput.hours' })}
           </label>
         </div>
@@ -572,8 +578,8 @@ class TimeInput extends React.Component {
         <div className={cx('time-input-group')}>
           <Input
             {...inputAttributes}
-            {...minuteAttributes}
-            ref={(inputRef) => { this.minuteInput = inputRef; }}
+            {...instanceMinuteAttrs}
+            refCallback={(inputRef) => { this.minuteInput = inputRef; }}
             className={cx('time-input-minute')}
             value={this.state.minute}
             name={'terra-time-minute-'.concat(name)}
@@ -587,7 +593,7 @@ class TimeInput extends React.Component {
             pattern="\d*"
             disabled={disabled}
           />
-          <label htmlFor={minuteAttributes.id} className={cx('mobile-input-label')}>
+          <label htmlFor={instanceMinuteAttrs.id} className={cx('mobile-input-label')}>
             {this.context.intl.formatMessage({ id: 'Terra.timeInput.minutes' })}
           </label>
         </div>
@@ -633,6 +639,7 @@ class TimeInput extends React.Component {
     delete customProps.onInputFocus;
 
     const timeInputClassNames = cx([
+      { disabled },
       'time-input',
       { 'is-focused': this.state.isFocused },
       customProps.className,
@@ -664,7 +671,8 @@ class TimeInput extends React.Component {
         <Input
           {...inputAttributes}
           {...minuteAttributes}
-          ref={(inputRef) => { this.hourInput = inputRef; }}
+          aria-label={this.context.intl.formatMessage({ id: 'Terra.timeInput.hours' })}
+          refCallback={(inputRef) => { this.hourInput = inputRef; }}
           className={cx('time-input-hour', 'desktop', { 'initial-focus': this.state.hourInitialFocused })}
           type="text"
           value={this.state.hour}
@@ -683,7 +691,8 @@ class TimeInput extends React.Component {
         <Input
           {...inputAttributes}
           {...minuteAttributes}
-          ref={(inputRef) => { this.minuteInput = inputRef; }}
+          refCallback={(inputRef) => { this.minuteInput = inputRef; }}
+          aria-label={this.context.intl.formatMessage({ id: 'Terra.timeInput.minutes' })}
           className={cx('time-input-minute', 'desktop', { 'initial-focus': this.state.minuteInitialFocused })}
           type="text"
           value={this.state.minute}

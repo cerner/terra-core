@@ -47,6 +47,7 @@ const propTypes = {
   /**
    * Additional key value identifiers of a person's demographic information
    */
+  // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
    * Full Name of the person

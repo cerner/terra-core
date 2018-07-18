@@ -1,4 +1,4 @@
-/* global browser, Terra */
+/* global before, browser, Terra */
 const {
   viewports,
   withActionsThemeables,
@@ -23,7 +23,7 @@ describe('CenteredActionFooter', () => {
   });
 
   describe('Single Action', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/single-action-centered-action-footer'));
+    before(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/single-action-centered-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

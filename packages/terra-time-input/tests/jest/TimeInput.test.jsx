@@ -28,7 +28,7 @@ it('should render a time input with custom attributes', () => {
 });
 
 it('should render a time input with a default time', () => {
-  const timeInput = <TimeInput name="time-input" value={'10:45'} />;
+  const timeInput = <TimeInput name="time-input" value="10:45" />;
   const wrapper = shallow(timeInput, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
@@ -92,6 +92,23 @@ it('should render a 12 hour timepicker meridiem with buttons when viewed on a mo
 
   const timeInput = <TimeInput name="time-input" variant="12-hour" />;
   const wrapper = render(timeInput, intlContexts.mountContext);
+  expect(wrapper).toMatchSnapshot();
+  delete window.ontouchstart;
+});
+
+it('should not have duplicate ids on the page when multiple date pickers are initialized', () => {
+  spyOn(window, 'matchMedia').and.returnValue({ matches: true });
+  window.ontouchstart = 'true';
+
+  const wrapper = render(
+    <div>
+      <TimeInput name="time-input" variant="12-hour" />
+      <TimeInput name="time-input-2" variant="12-hour" />
+      <TimeInput name="time-input-3" variant="12-hour" />
+    </div>,
+    intlContexts.mountContext,
+  );
+
   expect(wrapper).toMatchSnapshot();
   delete window.ontouchstart;
 });

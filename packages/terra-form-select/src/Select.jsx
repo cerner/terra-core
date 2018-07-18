@@ -24,11 +24,16 @@ const propTypes = {
   /**
    * Additional attributes to spread onto the dropdown. ( Style, ClassNames, etc.. )
    */
+  // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
+  /**
+   * The max height of the dropdown.
+   */
+  maxHeight: PropTypes.number,
   /**
    * Content to display when no results are found.
    */
@@ -179,7 +184,9 @@ class Select extends React.Component {
 
   render() {
     const { intl } = this.context;
-    const { children, defaultValue, onChange, placeholder, value, ...otherProps } = this.props;
+    const {
+      children, defaultValue, onChange, placeholder, value, ...otherProps
+    } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
     const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;

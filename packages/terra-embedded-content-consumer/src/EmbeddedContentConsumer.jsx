@@ -24,6 +24,7 @@ const propTypes = {
    * The component can be configured with consumer frame options.
    * See xfc consumer configuration for details: https://github.com/cerner/xfc
    */
+  // eslint-disable-next-line react/forbid-prop-types
   options: PropTypes.object,
   /**
   * A set of event handlers keyed by the event name.

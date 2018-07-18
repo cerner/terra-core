@@ -69,6 +69,7 @@ import IconPadlock from 'terra-icon/lib/icon/IconPadlock';
 import IconFeatured from 'terra-icon/lib/icon/IconFeatured';
 import IconFeaturedOff from 'terra-icon/lib/icon/IconFeaturedOff';
 import IconFeaturedOutline from 'terra-icon/lib/icon/IconFeaturedOutline';
+import IconHalfRating from 'terra-icon/lib/icon/IconHalfRating';
 import IconArchive from 'terra-icon/lib/icon/IconArchive';
 import IconFunnel from 'terra-icon/lib/icon/IconFunnel';
 import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
@@ -150,17 +151,37 @@ import IconPause from 'terra-icon/lib/icon/IconPause';
 import IconAudio from 'terra-icon/lib/icon/IconAudio';
 import IconExternalLink from 'terra-icon/lib/icon/IconExternalLink';
 import IconBedRequested from 'terra-icon/lib/icon/IconBedRequested';
-import IconFlipHorizontal from 'terra-icon/lib/icon/IconFlipHorizontal';
 import IconFlipVertical from 'terra-icon/lib/icon/IconFlipVertical';
+import IconFlipHorizontal from 'terra-icon/lib/icon/IconFlipHorizontal';
 import IconRotateLeft from 'terra-icon/lib/icon/IconRotateLeft';
 import IconRotateRight from 'terra-icon/lib/icon/IconRotateRight';
 import IconHold from 'terra-icon/lib/icon/IconHold';
+import IconFitWidth from 'terra-icon/lib/icon/IconFitWidth';
+import IconFitScale from 'terra-icon/lib/icon/IconFitScale';
+import IconSecondaryProvider from 'terra-icon/lib/icon/IconSecondaryProvider';
+import IconPartiallyMet from 'terra-icon/lib/icon/IconPartiallyMet';
+import IconSimulation from 'terra-icon/lib/icon/IconSimulation';
+import IconCollapseRow from 'terra-icon/lib/icon/IconCollapseRow';
+import IconExpandRow from 'terra-icon/lib/icon/IconExpandRow';
+import IconDoubleChevronLeft from 'terra-icon/lib/icon/IconDoubleChevronLeft';
+import IconDoubleChevronRight from 'terra-icon/lib/icon/IconDoubleChevronRight';
+import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
+import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
+import IconPlusSymbol from 'terra-icon/lib/icon/IconPlusSymbol';
+import IconRectangleSymbol from 'terra-icon/lib/icon/IconRectangleSymbol';
+import IconSquareSymbol from 'terra-icon/lib/icon/IconSquareSymbol';
+import IconTeardropSymbol from 'terra-icon/lib/icon/IconTeardropSymbol';
+import IconTeardropUpSymbol from 'terra-icon/lib/icon/IconTeardropUpSymbol';
+import IconThinDiamondSymbol from 'terra-icon/lib/icon/IconThinDiamondSymbol';
+import IconTriangleSymbol from 'terra-icon/lib/icon/IconTriangleSymbol';
+import IconTriangleDownSymbol from 'terra-icon/lib/icon/IconTriangleDownSymbol';
+import IconXSymbol from 'terra-icon/lib/icon/IconXSymbol';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
-      <Table.HeaderCell content={'SVG'} key={'svg'} />
-      <Table.HeaderCell content={'Concept'} key={'concept'} />
-      <Table.HeaderCell content={'Code'} key={'code'} />
+      <Table.HeaderCell content="SVG" key="svg" />
+      <Table.HeaderCell content="Concept" key="concept" />
+      <Table.HeaderCell content="Code" key="code" />
     </Table.Header>
     <Table.Rows>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
@@ -763,6 +784,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold' }}>
           <code>
             import IconFeaturedOutline from 'terra-icon/lib/icon/IconFeaturedOutline';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconHalfRating height='2em' width='2em' /></td>
+        <td>halfRating</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconHalfRating from 'terra-icon/lib/icon/IconHalfRating';
           </code>
         </td>
       </tr>
@@ -1496,20 +1526,20 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconFlipHorizontal height='2em' width='2em' /></td>
-        <td>flipHorizontal</td>
-        <td style={{ fontWeight: 'bold' }}>
-          <code>
-            import IconFlipHorizontal from 'terra-icon/lib/icon/IconFlipHorizontal';
-          </code>
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconFlipVertical height='2em' width='2em' /></td>
         <td>flipVertical</td>
         <td style={{ fontWeight: 'bold' }}>
           <code>
             import IconFlipVertical from 'terra-icon/lib/icon/IconFlipVertical';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconFlipHorizontal height='2em' width='2em' /></td>
+        <td>flipHorizontal</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconFlipHorizontal from 'terra-icon/lib/icon/IconFlipHorizontal';
           </code>
         </td>
       </tr>
@@ -1537,6 +1567,186 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold' }}>
           <code>
             import IconHold from 'terra-icon/lib/icon/IconHold';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconFitWidth height='2em' width='2em' /></td>
+        <td>fitWidth</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconFitWidth from 'terra-icon/lib/icon/IconFitWidth';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconFitScale height='2em' width='2em' /></td>
+        <td>fitScale</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconFitScale from 'terra-icon/lib/icon/IconFitScale';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconSecondaryProvider height='2em' width='2em' /></td>
+        <td>secondaryProvider</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconSecondaryProvider from 'terra-icon/lib/icon/IconSecondaryProvider';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconPartiallyMet height='2em' width='2em' /></td>
+        <td>partiallyMet</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconPartiallyMet from 'terra-icon/lib/icon/IconPartiallyMet';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconSimulation height='2em' width='2em' /></td>
+        <td>simulation</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconSimulation from 'terra-icon/lib/icon/IconSimulation';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconCollapseRow height='2em' width='2em' /></td>
+        <td>collapseRow</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconCollapseRow from 'terra-icon/lib/icon/IconCollapseRow';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconExpandRow height='2em' width='2em' /></td>
+        <td>expandRow</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconExpandRow from 'terra-icon/lib/icon/IconExpandRow';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconDoubleChevronLeft height='2em' width='2em' /></td>
+        <td>doubleChevronLeft</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDoubleChevronLeft from 'terra-icon/lib/icon/IconDoubleChevronLeft';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconDoubleChevronRight height='2em' width='2em' /></td>
+        <td>doubleChevronRight</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDoubleChevronRight from 'terra-icon/lib/icon/IconDoubleChevronRight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconCircleSymbol height='2em' width='2em' /></td>
+        <td>circle_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconDiamondSymbol height='2em' width='2em' /></td>
+        <td>diamond_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconPlusSymbol height='2em' width='2em' /></td>
+        <td>plus_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconPlusSymbol from 'terra-icon/lib/icon/IconPlusSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconRectangleSymbol height='2em' width='2em' /></td>
+        <td>rectangle_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconRectangleSymbol from 'terra-icon/lib/icon/IconRectangleSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconSquareSymbol height='2em' width='2em' /></td>
+        <td>square_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconSquareSymbol from 'terra-icon/lib/icon/IconSquareSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconTeardropSymbol height='2em' width='2em' /></td>
+        <td>teardrop_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconTeardropSymbol from 'terra-icon/lib/icon/IconTeardropSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconTeardropUpSymbol height='2em' width='2em' /></td>
+        <td>teardropUp_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconTeardropUpSymbol from 'terra-icon/lib/icon/IconTeardropUpSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconThinDiamondSymbol height='2em' width='2em' /></td>
+        <td>thinDiamond_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconThinDiamondSymbol from 'terra-icon/lib/icon/IconThinDiamondSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconTriangleSymbol height='2em' width='2em' /></td>
+        <td>triangle_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconTriangleSymbol from 'terra-icon/lib/icon/IconTriangleSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconTriangleDownSymbol height='2em' width='2em' /></td>
+        <td>triangleDown_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconTriangleDownSymbol from 'terra-icon/lib/icon/IconTriangleDownSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconXSymbol height='2em' width='2em' /></td>
+        <td>x_symbol</td>
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconXSymbol from 'terra-icon/lib/icon/IconXSymbol';
           </code>
         </td>
       </tr>

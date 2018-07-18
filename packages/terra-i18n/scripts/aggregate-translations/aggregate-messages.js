@@ -17,8 +17,7 @@ const aggregateTranslationMessages = (translationDirectories, locales) => {
         // eslint-disable-next-line no-console
         console.warn(`Translation file ${language}.json not found for ${dir}`);
       }
-    }),
-  );
+    }));
 
   return translations;
 };

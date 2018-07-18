@@ -6,9 +6,9 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | focus-trap-react | ^3.1.1 | 0.14.x \|\| ^15.0.0 \|\| ^16.0.0 | A React component that traps focus. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-button | ^2.15.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-doc-template | ^1.8.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-icon | ^2.15.0 | ^16.2.0 | terra-icon |
+| terra-button | ^2.17.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-doc-template | ^1.10.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-icon | ^2.17.0 | ^16.2.0 | terra-icon |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |

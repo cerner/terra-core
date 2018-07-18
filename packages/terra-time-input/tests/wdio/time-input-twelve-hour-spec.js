@@ -5,10 +5,9 @@ describe('Time Input Twelve Hour', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
   describe('Twelve Hour Default with no time provided', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default'));
+    before(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default'));
 
     Terra.should.matchScreenshot({ viewports });
-
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -49,19 +48,19 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Default with an evening time filled', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/filled-evening'));
+    before(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/filled-evening'));
 
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Twelve Hour Default with a morning time filled', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/filled-morning'));
+    before(() => browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/filled-morning'));
 
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Twelve Hour Meridiem - Up switches to a.m.', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[value="a.m."]');
@@ -72,7 +71,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Meridiem - Down switches to p.m.', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[value="a.m."]');
@@ -83,7 +82,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Meridiem - Auto focuses on meridiem when filling out whole time', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -94,7 +93,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Meridiem - Auto focuses on meridiem when filling out minute', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-minute-time-input"]');
@@ -105,7 +104,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Meridiem - Sets hour to 12 without meridiem change for hour input 00', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -116,7 +115,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Meridiem - Sets hour to 12 without meridiem change for hour input 00', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -127,7 +126,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Meridiem - Up Arrow on hour does not change meridiem', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -138,7 +137,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour - Changes time to 01 when up is pressed on hour of 12', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -151,7 +150,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour - Changes time to 12 when down is pressed on hour of 01', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -164,7 +163,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Meridiem - Switched when up is press on hour of 11', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -177,7 +176,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour Meridiem - Switched when down is press on hour of 12', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -190,7 +189,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour - Sets time to 12 when hour is 0 and onBlur is called', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -202,7 +201,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour - Sets time to 12 when hour is 0 and onBlur is called', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -214,7 +213,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour - Sets time to 12 when hour is 0 and onBlur is called', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[name="terra-time-hour-time-input"]');
@@ -226,7 +225,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour - Focuses to minute when left is pressed from meridiem', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[value="a.m."]');
@@ -237,7 +236,7 @@ describe('Time Input Twelve Hour', () => {
   });
 
   describe('Twelve Hour - Focuses to minute when delete is pressed from meridiem', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-time-input/time-input/twelve-hour/default');
 
       browser.click('#timeInput input[value="a.m."]');

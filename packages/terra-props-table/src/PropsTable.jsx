@@ -26,14 +26,8 @@ function formatShape(shape) {
 function determineType(type) {
   let typeName = type.name;
 
-  // Pull the first value off and use that as type.
-  // This assumes all enumerable values are the same type.
   if (typeName === 'enum') {
-    if (isNaN(type.value[0].value)) {
-      typeName = typeof type.value[0].value;
-    } else {
-      typeName = 'number';
-    }
+    typeName = 'enum';
   } else if (typeName === 'arrayOf') {
     if (type.value.name === 'shape') {
       typeName = <span> array of objects structured like: <pre className={cx('props-table-pre')}> {formatShape(type.value.value)} </pre></span>;
@@ -42,8 +36,11 @@ function determineType(type) {
     }
   } else if (typeName === 'union') {
     const options = type.value.map((option) => {
-      const name = option.name === 'shape' ? (<span key={option.value}> an object structured like:
-        <pre className={cx('props-table-pre')}> {formatShape(option.value)} </pre></span>) : (<span key={option.name}> {option.name}</span>);
+      const name = option.name === 'shape' ? ((
+        <span key={option.value}> an object structured like:
+          <pre className={cx('props-table-pre')}> {formatShape(option.value)} </pre>
+        </span>
+      )) : (<span key={option.name}> {option.name}</span>);
       return name;
     });
     typeName = options.reduce((curr, next) => [curr, <span key={`${curr.value}-${next.value}`}> or </span>, next]);

@@ -4,11 +4,28 @@ ChangeLog
 Unreleased
 ----------
 
+4.10.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+* Formatting changes per eslint v4 update
+* Added tabIndex="0" to role="listbox"
+* Reordered react methods to match preferred linter order
+
+4.9.0 - (July 10, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+### Added
+* A maxHeight prop for setting a custom max height of the dropdown
+
 4.8.0 - (July 3, 2018)
 ------------------
 ### Added
 * Added CSS style to display the select box-shadow over the toggle border
 * Added CSS custom property to enable theming of disabled state arrow icon
+
+### Fixed
 * Null check the active state before performing findByValue
 
 4.7.0 - (June 28, 2018)

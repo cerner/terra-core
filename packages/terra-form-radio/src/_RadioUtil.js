@@ -1,6 +1,6 @@
 // TODO: move this to utils package. Issue #1010.
 const isConsideredMobileDevice = () =>
-    window.matchMedia('(max-width: 1024px)').matches &&
+  window.matchMedia('(max-width: 1024px)').matches &&
     (
       'ontouchstart' in window ||
       // eslint-disable-next-line no-undef

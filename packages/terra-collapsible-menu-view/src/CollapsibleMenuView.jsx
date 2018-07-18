@@ -2,7 +2,6 @@ import React from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
 import 'terra-base/lib/baseStyles';
 import CollapsibleMenuViewItem from './CollapsibleMenuViewItem';
 import CollapsibleMenuViewItemGroup from './CollapsibleMenuViewItemGroup';
@@ -127,8 +126,10 @@ class CollapsibleMenuView extends React.Component {
   }
 
   render() {
-    const { children, boundingRef, menuWidth, ...customProps } = this.props;
-    const intl = this.context.intl;
+    const {
+      children, boundingRef, menuWidth, ...customProps
+    } = this.props;
+    const { intl } = this.context;
     const ellipsesText = intl.formatMessage({ id: 'Terra.collapsibleMenuView.more' });
     const visibleChildren = React.Children.toArray(children);
 
@@ -153,7 +154,7 @@ class CollapsibleMenuView extends React.Component {
         <div className={menuButtonClassName} ref={this.setMenuButton}>
           <CollapsibleMenuViewItem
             data-collapsible-menu-toggle
-            icon={<IconEllipses />}
+            icon={<span className={cx('menu-button-icon')} />}
             subMenuItems={hiddenChildren}
             boundingRef={boundingRef}
             menuWidth={menuWidth}

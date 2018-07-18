@@ -30,7 +30,6 @@ const defaultProps = {
 };
 
 class MultiSelectList extends React.Component {
-
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -51,7 +50,9 @@ class MultiSelectList extends React.Component {
   }
 
   render() {
-    const { children, isDivided, onChange, maxSelectionCount, ...customProps } = this.props;
+    const {
+      children, isDivided, onChange, maxSelectionCount, ...customProps
+    } = this.props;
     return (
       <SelectableList
         {...customProps}
