@@ -3,12 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.11.0 - (July 17, 2018)
+------------------
 ### Added
 * Added themeable variables
 
 ### Changed
 * Formatting changes per eslint v4 update
 * Required props no longer set a default prop
+* Minor dependency version bump
 
 3.10.0 - (July 10, 2018)
 ------------------

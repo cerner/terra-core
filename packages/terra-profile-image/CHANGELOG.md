@@ -3,10 +3,12 @@ Changelog
 
 Unreleased
 ----------
-### Added
-* Make placeholder image themeable
 
+2.16.0 - (July 17, 2018)
+------------------
 ### Changed
+* Make placeholder image themeable
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 
 2.15.0 - (July 10, 2018)

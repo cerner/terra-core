@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "2.16.0",
+  "version": "2.17.0",
   "description": "terra-icon",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.9.0"
+    "terra-doc-template": "^1.10.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
