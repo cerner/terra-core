@@ -132,7 +132,7 @@ class Frame extends React.Component {
     super(props);
 
     this.state = {
-      isOpen: props.variant === Variants.LIST,
+      isOpen: props.variant === Variants.LIST && props.showResultsInitially,
       isFocused: false,
       isPositioned: false,
       hasSearchChanged: false,
@@ -260,7 +260,7 @@ class Frame extends React.Component {
   handleFocus(event) {
     // Show results once input is focused
     if (!this.state.showResults) {
-      this.setState({ showResults: true });
+      this.setState({ showResults: true, isOpen: true });
     }
     if (this.props.disabled) {
       return;
@@ -442,11 +442,11 @@ class Frame extends React.Component {
         <div
           {...customProps}
           role="combobox"
-          aria-controls={ariaOwns}
+          aria-controls={this.state.isOpen ? ariaOwns : undefined}
           aria-disabled={!!disabled}
           aria-expanded={!!this.state.isOpen}
           aria-haspopup={this.props.variant === Variants.DROPDOWN ? 'true' : undefined}
-          aria-owns={ariaOwns}
+          aria-owns={this.state.isOpen ? ariaOwns : undefined}
           className={selectClasses}
           onBlur={this.handleBlur}
           onFocus={this.handleFocus}
