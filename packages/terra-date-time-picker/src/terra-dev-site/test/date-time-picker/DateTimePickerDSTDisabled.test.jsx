@@ -6,7 +6,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { active: false };
+    this.state = { active: true };
     this.toggleDateTimePicker = this.toggleDateTimePicker.bind(this);
   }
 

@@ -34,6 +34,10 @@ const propTypes = {
    */
   onRequestClose: PropTypes.func.isRequired,
   /**
+   * Whether the clarification is disabled.
+   */
+  disabled: PropTypes.bool,
+  /**
    * Callback function to let the containing component (e.g. modal) to regain focus.
    */
   releaseFocus: PropTypes.func,
@@ -50,6 +54,7 @@ const defaultProps = {
   onStandardTimeButtonClick: undefined,
   onOffsetButtonClick: undefined,
   onRequestClose: undefined,
+  disabled: false,
   releaseFocus: undefined,
   requestFocus: undefined,
 };
@@ -168,6 +173,7 @@ class TimeClarification extends React.Component {
           onClick={this.props.onOffsetButtonClick}
           text={this.state.offsetDisplay}
           isCompact
+          isDisabled={this.props.disabled}
         />
       </div>
     );

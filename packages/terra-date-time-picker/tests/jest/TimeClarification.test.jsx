@@ -23,3 +23,22 @@ it('should render a default date time picker', () => {
   );
   expect(datePicker).toMatchSnapshot();
 });
+
+it('should render a disabled time clarification', () => {
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <TimeClarification
+        isOpen
+        isOffsetButtonHidden
+        onDaylightSavingButtonClick={jest.fn()}
+        onStandardTimeButtonClick={jest.fn()}
+        onOffsetButtonClick={jest.fn()}
+        onRequestClose={jest.fn()}
+        releaseFocus={jest.fn()}
+        requestFocus={jest.fn()}
+        disabled
+      />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});
