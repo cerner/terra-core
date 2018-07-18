@@ -5,6 +5,11 @@ Unreleased
 ----------
 ### Changed
 * Use datepicker that consumes new form inputs.
+
+2.22.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 * Required props no longer set a default prop
 

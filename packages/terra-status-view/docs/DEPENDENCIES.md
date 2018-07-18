@@ -6,10 +6,10 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | lodash.uniqueid | ^4.0.1 | -- | The lodash method `_.uniqueId` exported as a module. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-button | ^2.16.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-divider | ^2.15.0 | ^16.2.0 | The divider component is used to visually separate content on a layout. |
-| terra-doc-template | ^1.9.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-icon | ^2.16.0 | ^16.2.0 | terra-icon |
+| terra-button | ^2.17.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-divider | ^2.16.0 | ^16.2.0 | The divider component is used to visually separate content on a layout. |
+| terra-doc-template | ^1.10.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-icon | ^2.17.0 | ^16.2.0 | terra-icon |
 | terra-mixins | ^1.16.0 | -- | terra-mixins |
 
 ## devDependencies
