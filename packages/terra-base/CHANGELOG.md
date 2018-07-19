@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added 'Segoe UI' to font stack just before Arial
 
 3.16.0 - (July 17, 2018)
 ------------------

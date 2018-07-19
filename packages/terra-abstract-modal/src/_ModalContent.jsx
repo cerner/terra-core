@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import 'terra-base/lib/baseStyles';
 import ModalOverlay from './_ModalOverlay';
-import styles from './AbstractModal.scss';
+import styles from './AbstractModal.module.scss';
 
 const cx = classNames.bind(styles);
 
