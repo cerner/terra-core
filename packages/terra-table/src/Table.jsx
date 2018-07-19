@@ -11,7 +11,7 @@ import SelectableTableRows from './SelectableTableRows';
 import TableSingleSelectableRows from './SingleSelectableRows';
 import TableMultiSelectableRows from './MultiSelectableRows';
 import TableSubheader from './TableSubheader';
-import styles from './Table.scss';
+import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);
 

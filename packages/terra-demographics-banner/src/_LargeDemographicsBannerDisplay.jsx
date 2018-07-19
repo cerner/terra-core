@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import classNames from 'classnames/bind';
 import React from 'react';
-import styles from './DemographicsBanner.scss';
+import styles from './DemographicsBanner.module.scss';
 
 import { personDetails, applicationIdentifiers } from './_sharedObjects';
 

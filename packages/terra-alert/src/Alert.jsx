@@ -9,7 +9,7 @@ import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Alert.scss';
+import styles from './Alert.module.scss';
 
 const cx = classNames.bind(styles);
 

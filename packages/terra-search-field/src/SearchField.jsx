@@ -5,7 +5,7 @@ import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form-input';
-import styles from './SearchField.scss';
+import styles from './SearchField.module.scss';
 
 const cx = classNames.bind(styles);
 

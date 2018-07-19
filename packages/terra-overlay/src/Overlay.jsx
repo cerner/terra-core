@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import 'terra-base/lib/baseStyles';
-import styles from './Overlay.scss';
+import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
 
 const cx = classNames.bind(styles);

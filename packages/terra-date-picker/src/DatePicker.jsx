@@ -6,7 +6,7 @@ import ResponsiveElement from 'terra-responsive-element';
 import PopperContainer from './_PopperContainer';
 import DateInput from './DateInput';
 import DateUtil from './DateUtil';
-import styles from './DatePicker.scss';
+import styles from './DatePicker.module.scss';
 
 const propTypes = {
   /**
