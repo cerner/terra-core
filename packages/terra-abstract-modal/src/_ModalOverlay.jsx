@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
-import styles from './ModalOverlay.scss';
+import styles from './ModalOverlay.module.scss';
 
 const cx = classNames.bind(styles);
 

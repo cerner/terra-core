@@ -5,7 +5,7 @@ import Button from 'terra-button';
 import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
 import Input from 'terra-form-input';
 import DateUtil from './DateUtil';
-import styles from './DatePicker.scss';
+import styles from './DatePicker.module.scss';
 
 const Icon = <IconCalendar />;
 

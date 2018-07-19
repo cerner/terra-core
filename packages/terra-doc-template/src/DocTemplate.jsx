@@ -4,7 +4,7 @@ import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
 import IndexExampleTemplate from './ExampleTemplate';
-import styles from './DocTemplate.scss';
+import styles from './DocTemplate.module.scss';
 
 const cx = classNames.bind(styles);
 

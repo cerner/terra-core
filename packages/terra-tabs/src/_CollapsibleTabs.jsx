@@ -5,7 +5,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import 'terra-base/lib/baseStyles';
 import TabUtils from './TabUtils';
 import Menu from './_TabMenu';
-import styles from './Tabs.scss';
+import styles from './Tabs.module.scss';
 
 const cx = classNames.bind(styles);
 

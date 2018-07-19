@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import Arrange from 'terra-arrange';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
-import styles from './List.scss';
+import styles from './List.module.scss';
 
 const cx = classNames.bind(styles);
 

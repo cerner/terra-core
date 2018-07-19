@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import AbstractModal from 'terra-abstract-modal';
 import Button from 'terra-button';
 import DateTimeUtils from './DateTimeUtils';
-import styles from './_TimeClarification.scss';
+import styles from './_TimeClarification.module.scss';
 
 const cx = classNames.bind(styles);
 
