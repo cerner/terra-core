@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ActionFooterContainer from './_ActionFooterContainer';
-import styles from './CenteredActionFooter.scss';
+import styles from './CenteredActionFooter.module.scss';
 
 const cx = classNames.bind(styles);
 

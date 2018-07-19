@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import 'terra-base/lib/baseStyles';
 
-import './DemographicsBanner.scss';
+import './DemographicsBanner.module.scss';
 import SmallDemographicsBannerDisplay from './_SmallDemographicsBannerDisplay';
 import LargeDemographicsBannerDisplay from './_LargeDemographicsBannerDisplay';
 

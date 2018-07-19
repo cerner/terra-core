@@ -1,5 +1,5 @@
-@import './ModularTabs';
-@import './StructuralTabs';
+@import './ModularTabs.module';
+@import './StructuralTabs.module';
 
 :local {
   .tabs-container {

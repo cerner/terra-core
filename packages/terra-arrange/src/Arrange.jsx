@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Arrange.scss';
+import styles from './Arrange.module.scss';
 
 const alignmentTypes = ['center', 'bottom', 'stretch'];
 const cx = classNames.bind(styles);
