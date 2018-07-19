@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
 import 'terra-base/lib/baseStyles';
-import breakpoints from './breakpoints.scss';
+import breakpoints from './breakpoints.module.scss';
 
 /* Disabled for the defaultElement which is used implicitly */
 /* eslint-disable react/no-unused-prop-types */

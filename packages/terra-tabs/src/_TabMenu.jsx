@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Menu from 'terra-menu';
 import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
-import styles from './Tabs.scss';
+import styles from './Tabs.module.scss';
 import TabUtils from './TabUtils';
 
 const cx = classNames.bind(styles);

@@ -6,7 +6,7 @@ import Input from 'terra-form-input';
 import ButtonGroup from 'terra-button-group';
 
 import TimeUtil from './TimeUtil';
-import styles from './TimeInput.scss';
+import styles from './TimeInput.module.scss';
 
 const cx = classNames.bind(styles);
 

@@ -5,8 +5,8 @@ import TransitionGroup from 'react-transition-group/TransitionGroup';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import 'terra-base/lib/baseStyles';
 import Slide from './Slide';
-import styles from './SlideGroup.scss';
-import transitions from './Slide.scss';
+import styles from './SlideGroup.module.scss';
+import transitions from './Slide.module.scss';
 
 const cx = classNames.bind(styles);
 

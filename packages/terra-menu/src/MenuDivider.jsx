@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Menu.scss';
+import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
 
