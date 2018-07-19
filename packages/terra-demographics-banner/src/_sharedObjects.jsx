@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import React from 'react';
-import styles from './DemographicsBanner.scss';
+import styles from './DemographicsBanner.module.scss';
 
 const cx = classNames.bind(styles);
 

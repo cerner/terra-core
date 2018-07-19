@@ -5,7 +5,7 @@ import 'terra-base/lib/baseStyles';
 import DatePicker from 'terra-date-picker';
 import TimeInput from 'terra-time-input';
 import DateUtil from 'terra-date-picker/lib/DateUtil';
-import styles from './DateTimePicker.scss';
+import styles from './DateTimePicker.module.scss';
 import DateTimeUtils from './DateTimeUtils';
 import TimeClarification from './_TimeClarification';
 

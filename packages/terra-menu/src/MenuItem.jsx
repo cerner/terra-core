@@ -6,7 +6,7 @@ import ChevronIcon from 'terra-icon/lib/icon/IconChevronRight';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import MenuUtils from './_MenuUtils';
-import styles from './MenuItem.scss';
+import styles from './MenuItem.module.scss';
 
 const cx = classNames.bind(styles);
 
