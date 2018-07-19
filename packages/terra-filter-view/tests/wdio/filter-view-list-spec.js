@@ -204,8 +204,6 @@ describe('Filter View', () => {
     Terra.should.matchScreenshot('updated once');
 
     it('should select another option', () => {
-      // Clears the input so that the second option is rendered
-      browser.click('svg[class*="clear-button"]');
       browser.click('#terra-select-option-goodbye');
     });
 

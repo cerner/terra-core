@@ -122,6 +122,7 @@ class Frame extends React.Component {
     super(props);
 
     this.state = {
+      excludeBlur: false,
       isOpen: props.variant === Variants.LIST && props.showResultsInitially,
       isFocused: false,
       isPositioned: false,
@@ -141,6 +142,8 @@ class Frame extends React.Component {
     this.positionDropdown = this.positionDropdown.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -183,9 +186,10 @@ class Frame extends React.Component {
   /**
    * Clears the search-bar content.
    */
-  clearSearch() {
+  clearSearch(event) {
+    event.preventDefault();
     if (this.state.searchValue !== '') {
-      this.setState({ searchValue: '', hasSearchChanged: true });
+      this.setState({ searchValue: '', hasSearchChanged: true, excludeBlur: false });
     }
   }
 
@@ -202,6 +206,8 @@ class Frame extends React.Component {
         isPositioned: false,
         hasSearchChanged: true,
       });
+    } else {
+      this.setState({ isFocused: document.activeElement === this.input || document.activeElement === this.select });
     }
   }
 
@@ -237,7 +243,9 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
-    this.closeDropdown();
+    if (!this.state.excludeBlur) {
+      this.closeDropdown();
+    }
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
@@ -296,6 +304,17 @@ class Frame extends React.Component {
     }
   }
 
+  handleMouseLeave() {
+    if (this.state.excludeBlur) {
+      this.setState({ excludeBlur: false });
+    }
+  }
+
+  handleMouseEnter() {
+    if (!this.state.excludeBlur) {
+      this.setState({ excludeBlur: true });
+    }
+  }
   /**
    * Handles the input mouse down events.
    * @param {event} event - The mouse down event.
@@ -440,11 +459,13 @@ class Frame extends React.Component {
             {this.getDisplay()}
           </div>
           {/* Render a clear search button when text is present in input */}
-          {this.state.searchValue &&
-          <IconIncomplete
-            className={cx('clear-button')}
-            onClick={this.clearSearch}
-          />
+          {this.state.searchValue && this.state.isFocused &&
+            <IconIncomplete
+              className={cx('clear-button')}
+              onClick={this.clearSearch}
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseLeave}
+            />
           }
           <Button
             className={cx(['button'])}
