@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Resolve issue where disabled component doesn't disable time clarification
+
 ### Changed
 * Use datepicker that consumes new form inputs.
 
