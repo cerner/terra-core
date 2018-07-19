@@ -52,15 +52,6 @@ const defaultProps = {
   value: undefined,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
-    }
-  },
-};
-
 class Menu extends React.Component {
   constructor(props) {
     super(props);
@@ -263,7 +254,6 @@ class Menu extends React.Component {
 
 Menu.propTypes = propTypes;
 Menu.defaultProps = defaultProps;
-Menu.contextTypes = contextTypes;
 
 /**
  * This polyfill enables backwards compatability of features added in React 16.3.0.

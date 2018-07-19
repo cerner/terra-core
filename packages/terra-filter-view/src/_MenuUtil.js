@@ -201,7 +201,7 @@ class MenuUtil {
     const { searchValue, value } = props;
     const options = MenuUtil.flatten(children, true);
 
-    if (options.length === 0) {
+    if (options.length === 0 || props.disabled) {
       return null;
     } else if (state.searchValue === undefined) {
       const selected = options.find(option => (

@@ -4,6 +4,16 @@
   .select-parent {
     display: flex;
     flex-direction: column;
+    // height: 100%;
+    
+    // > .is-disabled {
+    //   background-color: var(--terra-select-disabled-background-color, rgba(111, 116, 119, 0.2));
+    //   border-color: var(--terra-select-disabled-border-color, #85898b);
+    //   color: var(--terra-select-disabled-color, #1c1f21);
+    //   cursor: default;
+    //   // opacity: 0.25;
+    //   pointer-events: none;
+    // }
   }
 
   .select {
@@ -69,20 +79,6 @@
     &.is-focused:hover {
       border-color: var(--terra-select-focus-hover-border-color, #4cb2e9);
     }
-
-    &.is-invalid {
-      background-image: var(--terra-select-invalid-background-image, none);
-      border-color: var(--terra-select-invalid-border-color, #dedfe0);
-    }
-
-    &.is-invalid.is-focused {
-      background-size: var(--terra-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
-    }
-
-    &.is-invalid:hover {
-      border-color: var(--terra-select-invalid-hover-border-color, #dedfe0);
-    }
   }
 
   .display {
@@ -120,15 +116,6 @@
     top: 7px;
   }
 
-  .is-disabled {
-    background-color: var(--terra-select-disabled-background-color, rgba(111, 116, 119, 0.2));
-    border-color: var(--terra-select-disabled-border-color, #dedfe0);
-    color: var(--terra-select-disabled-color, #1c1f21);
-    cursor: default;
-    opacity: 0.4;
-    pointer-events: none;
-  }
-
   .search-input,
   .search-input:focus {
     background: transparent;
@@ -142,7 +129,8 @@
     min-width: 0; // IE 11
     opacity: 1;
     outline: none;
-    padding: 0;
+    // Add padding to avoid clear-search button
+    padding: 0 2rem 0 0;
     text-overflow: ellipsis;
     width: auto;
   }
@@ -166,10 +154,34 @@
   .box {
     border: 1px solid #dedfe0;
     height: 14.286rem; // 200px
-    margin-top: 1.428571rem;
+    // height: 100%;
+    margin-top: 0.5rem;
     overflow: auto;
+    
   }
 
+  .is-disabled {
+    cursor: default;
+    opacity: var(--themeable-variable-for-disabled, 0.25);   /*this is overall – the full component*/
+    pointer-events: none;
+
+    ::placeholder {
+      color: var(--themeable-variable-for-disabled, #868a8c);
+    }
+
+    .button {
+      background-color: var(--themeable-variable-for-disabled, #e2e3e4);
+      border: var(--themeable-variable-for-disabled, 1px solid #85898b);
+      opacity: var(--themeable-variable-for-disabled, 0.5);
+    }
+
+    .box {
+      background-color: var(--themeable-variable-for-disabled, rgba(111, 116, 119, 0.2));
+      border: var(--themable-variable-for-disabled, 1px solid #85898b);
+    }
+    
+  }
+  
   .dropdown,
   .list {
     > .display {
@@ -184,6 +196,12 @@
       padding-left: var(--terra-select-padding-left, 0.42857rem);
       padding-right: var(--terra-select-padding-right, 0);
       padding-top: var(--terra-select-padding-top, 0);
+    }
+
+    > .is-disabled {
+      background-color: var(--terra-select-disabled-background-color, rgba(111, 116, 119, 0.2));
+      border-color: var(--terra-select-disabled-border-color, #85898b);
+      color: var(--terra-select-disabled-color, #1c1f21);
     }
 
     &.is-focused {
@@ -222,28 +240,5 @@
     &.is-focused:hover > .display {
       border-color: var(--terra-select-focus-hover-border-color, #4cb2e9);
     }
-
-    &.is-invalid > .display {
-      background-image: var(--terra-select-invalid-background-image, none);
-      border-color: var(--terra-select-invalid-border-color, #dedfe0);
-    }
-
-    &.is-invalid.is-focused > .display {
-      background-size: var(--terra-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
-      box-shadow: var(--terra-select-invalid-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
-    }
-
-    &.is-invalid:hover > .display {
-      border-color: var(--terra-select-invalid-hover-border-color, #dedfe0);
-    }
-  }
-
-  .is-invalid {
-    background: var(--terra-select-invalid-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block; // IE 10
   }
 }

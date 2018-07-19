@@ -112,17 +112,8 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   value: undefined,
+  variant: Variants.DROPDOWN,
 };
-
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
-    }
-  },
-};
-
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -173,8 +164,8 @@ class Frame extends React.Component {
   }
 
   getDisplay() {
-    const { hasSearchChanged, searchValue } = this.state;
-    const { disabled, display, placeholder } = this.props;
+    const { searchValue } = this.state;
+    const { disabled, placeholder } = this.props;
 
     const inputAttrs = {
       disabled,
@@ -186,7 +177,7 @@ class Frame extends React.Component {
       className: cx('search-input'),
     };
 
-    return <input {...inputAttrs} value={hasSearchChanged ? searchValue : display} />;
+    return <input {...inputAttrs} value={searchValue} />;
   }
 
   /**
@@ -366,10 +357,6 @@ class Frame extends React.Component {
         hasSearchChanged: true,
         isOpen: false,
       });
-    } else {
-      this.setState({
-        searchValue: option.props.display,
-      });
     }
 
     if (this.props.onSelect) {
@@ -420,14 +407,10 @@ class Frame extends React.Component {
       'select',
       variant,
       { 'is-above': this.state.isAbove },
-      { 'is-disabled': disabled },
       { 'is-focused': this.state.isFocused },
-      { 'is-invalid': isInvalid },
       { 'is-open': this.state.isOpen },
       customProps.className,
     ]);
-
-    const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
 
     let ariaOwns;
     if (this.state.isOpen && variant === Variants.DROPDOWN) {
@@ -437,7 +420,7 @@ class Frame extends React.Component {
     }
 
     return (
-      <div className={cx('select-parent')}>
+      <div className={cx(['select-parent', { 'is-disabled': disabled }])}>
         <div
           {...customProps}
           role="combobox"
@@ -453,7 +436,7 @@ class Frame extends React.Component {
           onMouseDown={this.handleMouseDown}
           ref={(select) => { this.select = select; }}
         >
-          <div className={cx('display')} onMouseDown={this.openDropdown} >
+          <div className={cx(['display', { 'is-disabled': disabled }])} onMouseDown={this.openDropdown} >
             {this.getDisplay()}
           </div>
           {/* Render a clear search button when text is present in input */}
@@ -464,10 +447,10 @@ class Frame extends React.Component {
           />
           }
           <Button
-            className={cx('button')}
+            className={cx(['button'])}
             onMouseDown={this.toggleDropdown}
             icon={Icon}
-            text={buttonText}
+            text="Search"
             isIconOnly
             isCompact
           />
@@ -498,8 +481,9 @@ class Frame extends React.Component {
         </div>
         {/* If variant is persistent, render the result box */}
         {variant === Variants.LIST &&
-          <div {...dropdownAttrs} className={cx('box')} id="terra-filter-box">
+          <div {...dropdownAttrs} className={cx(['box'])} id="terra-filter-box">
             {dropdown && this.state.showResults && dropdown({
+              disabled,
               value,
               onDeselect,
               optionFilter,
@@ -517,6 +501,5 @@ class Frame extends React.Component {
 
 Frame.propTypes = propTypes;
 Frame.defaultProps = defaultProps;
-Frame.contextTypes = contextTypes;
 
 export default Frame;

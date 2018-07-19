@@ -38,11 +38,11 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Callback function triggered when an option is selected.
+   * Callback function triggered when an option is selected. function(value)
    */
   onSelect: PropTypes.func,
   /**
-   * A callback to indicate an invalid search.
+   * A callback to indicate an invalid search. function(value)
    */
   onInvalidSearch: PropTypes.func,
   /**
@@ -93,15 +93,6 @@ const defaultProps = {
   variant: Variants.DROPDOWN,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('please add locale prop to base component to load translations');
-    }
-  },
-};
-
 function FilterView(props) {
   const {
     children,
@@ -133,7 +124,6 @@ function FilterView(props) {
 
 FilterView.propTypes = propTypes;
 FilterView.defaultProps = defaultProps;
-FilterView.contextTypes = contextTypes;
 FilterView.Option = Select.Option;
 FilterView.OptGroup = Select.OptGroup;
 

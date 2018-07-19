@@ -1,65 +1,64 @@
 import React from 'react';
 import FilterView from '../../src/FilterView';
-import intlContexts from './intl-context-setup';
 
 describe('Snapshots', () => {
   it('renders a default FilterView', () => {
-    const wrapper = shallow(<FilterView />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a list FilterView', () => {
-    const wrapper = shallow(<FilterView variant="list" />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView variant="list" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a list FilterView with dropdownAttrs spread', () => {
-    const wrapper = shallow(<FilterView variant="list" dropdownAttrs={{ onClick: () => {} }} />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView variant="list" dropdownAttrs={{ onClick: () => {} }} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a list FilterView without results initially', () => {
-    const wrapper = shallow(<FilterView variant="list" showResultsInitially={false} />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView variant="list" showResultsInitially={false} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a default FilterView with a placeholder', () => {
-    const wrapper = shallow(<FilterView placeholder="Test" />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView placeholder="Test" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a list FilterView with a placeholder', () => {
-    const wrapper = shallow(<FilterView variant="list" placeholder="Test" />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView variant="list" placeholder="Test" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a default FilterView with a default value', () => {
-    const wrapper = shallow(<FilterView defaultValue="Test" />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView defaultValue="Test" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a list FilterView with a default value', () => {
-    const wrapper = shallow(<FilterView variant="list" defaultValue="Test" />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView variant="list" defaultValue="Test" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a disabled default FilterView', () => {
-    const wrapper = shallow(<FilterView disabled />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView disabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a disabled list FilterView', () => {
-    const wrapper = shallow(<FilterView variant="list" disabled />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView variant="list" disabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a disabled default FilterView with a default value', () => {
-    const wrapper = shallow(<FilterView disabled defaultValue="default" />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView disabled defaultValue="default" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders a disabled list FilterView with a default value', () => {
-    const wrapper = shallow(<FilterView variant="list" disabled defaultValue="default" />, intlContexts.shallowContext);
+    const wrapper = shallow(<FilterView variant="list" disabled defaultValue="default" />);
     expect(wrapper).toMatchSnapshot();
   });
 });

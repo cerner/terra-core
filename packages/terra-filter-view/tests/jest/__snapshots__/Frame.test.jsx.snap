@@ -2,13 +2,13 @@
 
 exports[`Frame should render a disabled dropdown variant 1`] = `
 <div
-  className="select-parent"
+  className="select-parent is-disabled"
 >
   <div
     aria-disabled={true}
     aria-expanded={false}
     aria-haspopup="true"
-    className="select dropdown is-disabled"
+    className="select dropdown"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -16,7 +16,7 @@ exports[`Frame should render a disabled dropdown variant 1`] = `
     role="combobox"
   >
     <div
-      className="display"
+      className="display is-disabled"
       onMouseDown={[Function]}
     >
       <input
@@ -25,6 +25,7 @@ exports[`Frame should render a disabled dropdown variant 1`] = `
         disabled={true}
         onChange={[Function]}
         onMouseDown={[Function]}
+        value=""
       />
     </div>
     <Button
@@ -52,12 +53,12 @@ exports[`Frame should render a disabled dropdown variant 1`] = `
 
 exports[`Frame should render a disabled list variant 1`] = `
 <div
-  className="select-parent"
+  className="select-parent is-disabled"
 >
   <div
     aria-disabled={true}
     aria-expanded={false}
-    className="select list is-disabled"
+    className="select list"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -65,7 +66,7 @@ exports[`Frame should render a disabled list variant 1`] = `
     role="combobox"
   >
     <div
-      className="display"
+      className="display is-disabled"
       onMouseDown={[Function]}
     >
       <input
@@ -74,6 +75,7 @@ exports[`Frame should render a disabled list variant 1`] = `
         disabled={true}
         onChange={[Function]}
         onMouseDown={[Function]}
+        value=""
       />
     </div>
     <Button
@@ -128,6 +130,7 @@ exports[`Frame should render a dropdown variant 1`] = `
         disabled={false}
         onChange={[Function]}
         onMouseDown={[Function]}
+        value=""
       />
     </div>
     <Button
@@ -179,6 +182,7 @@ exports[`Frame should render a dropdown variant with a placeholder 1`] = `
         onChange={[Function]}
         onMouseDown={[Function]}
         placeholder="Placeholder"
+        value=""
       />
     </div>
     <Button
@@ -228,6 +232,7 @@ exports[`Frame should render a list variant 1`] = `
         disabled={false}
         onChange={[Function]}
         onMouseDown={[Function]}
+        value=""
       />
     </div>
     <Button
@@ -282,6 +287,7 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
         onChange={[Function]}
         onMouseDown={[Function]}
         placeholder="Placeholder"
+        value=""
       />
     </div>
     <Button

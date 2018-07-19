@@ -25,9 +25,9 @@ const contextTypes = {
   },
 };
 
-const NoResults = ({ noResultContent, value }, context) => (
+const NoResults = ({ noResultContent, value }) => (
   <div className={cx('no-results')}>
-    {noResultContent || context.intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: value })}
+    {noResultContent || `No matching results for "${value}"` }
   </div>
 );
 

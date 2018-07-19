@@ -8,7 +8,6 @@ exports[`Select should render a disabled dropdown variant 1`] = `
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
-  placeholder="Search"
   value=""
   variant="dropdown"
 />
@@ -22,7 +21,6 @@ exports[`Select should render a disabled list variant 1`] = `
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
-  placeholder="Search"
   value=""
   variant="list"
 />
@@ -36,7 +34,6 @@ exports[`Select should render a dropdown variant 1`] = `
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
-  placeholder="Search"
   value=""
   variant="dropdown"
 />
@@ -64,7 +61,6 @@ exports[`Select should render a list variant 1`] = `
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
-  placeholder="Search"
   value=""
   variant="list"
 />

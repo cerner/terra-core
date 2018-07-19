@@ -24,10 +24,6 @@ const propTypes = {
    */
   dropdownAttrs: PropTypes.shape({}),
   /**
-   * Whether the select is in an invalid state.
-   */
-  isInvalid: PropTypes.bool,
-  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
@@ -70,7 +66,6 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
-  isInvalid: false,
   noResultContent: undefined,
   onChange: undefined,
   onDeselect: undefined,
@@ -79,15 +74,6 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   value: undefined,
-};
-
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
-    }
-  },
 };
 
 class Select extends React.Component {
@@ -152,13 +138,9 @@ class Select extends React.Component {
   }
 
   render() {
-    const { intl } = this.context;
     const {
-      children, defaultValue, onChange, placeholder, value, ...otherProps
+      children, defaultValue, onChange, value, ...otherProps
     } = this.props;
-
-    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.searchField.search' });
-    const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
 
     return (
       <Frame
@@ -167,7 +149,6 @@ class Select extends React.Component {
         display={this.display()}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
-        placeholder={selectPlaceholder}
         dropdown={dropdownProps => (
           <DropdownMenu {...dropdownProps}>
             {children}
@@ -182,6 +163,5 @@ Select.Option = Option;
 Select.OptGroup = OptGroup;
 Select.propTypes = propTypes;
 Select.defaultProps = defaultProps;
-Select.contextTypes = contextTypes;
 
 export default Select;
