@@ -3,10 +3,12 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Required alt prop now has a default prop of empty string
-* Add .module extension to SCSS file(s)
 
+2.17.0 - (July 19, 2018)
+------------------
+### Changed
+* Required alt prop now has a default prop equal to an empty string
+* Add .module extension to SCSS file(s)
 
 2.16.0 - (July 17, 2018)
 ------------------
