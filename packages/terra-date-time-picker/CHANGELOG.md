@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated translations
+* Add .module extension to SCSS file(s)
 * Use datepicker that consumes new form inputs.
 
 2.22.0 - (July 17, 2018)

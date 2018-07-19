@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import Menu from './_TabMenu';
-import styles from './Tabs.scss';
+import styles from './Tabs.module.scss';
 
 const cx = classNames.bind(styles);
 

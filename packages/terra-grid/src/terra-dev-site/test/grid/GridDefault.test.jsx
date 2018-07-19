@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '../../../../lib/Grid';
-import './GridExample.scss';
+import './GridExample.module.scss';
 
 const GridDefault = () => (
   <Grid id="grid">

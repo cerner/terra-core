@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated translations
+* Add .module extension to SCSS file(s)
 * Replaced the legacy form input with the new terra-form-input package
 * Fixed Focus Styles on the input element
 

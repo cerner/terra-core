@@ -9,7 +9,7 @@ import Arrange from 'terra-arrange';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import MenuUtils from './_MenuUtils';
-import styles from './Menu.scss';
+import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
 
