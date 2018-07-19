@@ -81,7 +81,6 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.0.0",
     "react-test-renderer": "^16.2.0",
-    "replace-in-file": "^3.4.0",
     "rimraf": "^2.6.1",
     "shelljs": "^0.8.2",
     "stylelint": "^9.0.0",
