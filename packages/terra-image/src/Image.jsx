@@ -45,10 +45,13 @@ const propTypes = {
   onError: PropTypes.func,
 };
 
+/* eslint-disable react/default-props-match-prop-types */
 const defaultProps = {
   variant: 'default',
   isFluid: false,
+  alt: ' ',
 };
+/* eslint-enable react/default-props-match-prop-types */
 
 class Image extends React.Component {
   constructor(props) {
