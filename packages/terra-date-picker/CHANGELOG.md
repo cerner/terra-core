@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Add .module extension to SCSS file(s)
+### Changed
 * Replaced the legacy form input with the new terra-form-input package
 * Fixed Focus Styles on the input element
 

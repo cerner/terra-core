@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { parse } from 'react-docgen';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
-import styles from './PropsTable.scss';
+import styles from './PropsTable.module.scss';
 
 const cx = classNames.bind(styles);
 

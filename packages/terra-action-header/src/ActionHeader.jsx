@@ -5,7 +5,7 @@ import Button from 'terra-button';
 import ButtonGroup from 'terra-button-group';
 import 'terra-base/lib/baseStyles';
 import ActionHeaderContainer from './_ActionHeaderContainer';
-import styles from './ActionHeader.scss';
+import styles from './ActionHeader.module.scss';
 
 const cx = classNames.bind(styles);
 
