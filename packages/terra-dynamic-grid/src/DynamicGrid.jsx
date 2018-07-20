@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
 import { grid } from './styles';
 import Region from './Region';
-import styles from './DynamicGrid.scss';
+import styles from './DynamicGrid.module.scss';
 
 const templateShape = {
   /**

@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import AbstractModal from 'terra-abstract-modal/lib/AbstractModal';
-import styles from './ExampleAbstractSize.scss';
+import styles from './ExampleAbstractSize.module.scss';
 
 class AbstractModalIsOpen extends React.Component {
   constructor() {

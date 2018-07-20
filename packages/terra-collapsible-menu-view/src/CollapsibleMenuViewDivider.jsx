@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Menu from 'terra-menu';
 import 'terra-base/lib/baseStyles';
-import styles from './CollapsibleMenuView.scss';
+import styles from './CollapsibleMenuView.module.scss';
 
 const cx = classNames.bind(styles);
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import IconError from 'terra-icon/lib/icon/IconError';
 import 'terra-base/lib/baseStyles';
-import styles from './Field.scss';
+import styles from './Field.module.scss';
 
 const cx = classNames.bind(styles);
 

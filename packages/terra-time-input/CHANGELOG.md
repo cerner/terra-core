@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.19.0 - (July 19, 2018)
+------------------
 ### Changed
+* Add .module extension to SCSS file(s)
 * Replace legacy Input with the new terra-form-input package
 * Give desktop time input the same styles as terra-form-input.
 

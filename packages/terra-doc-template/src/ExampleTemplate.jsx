@@ -4,7 +4,7 @@ import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/pr
 import { okaidia } from 'react-syntax-highlighter/styles/prism';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import classNames from 'classnames/bind';
-import styles from './ExampleTemplate.scss';
+import styles from './ExampleTemplate.module.scss';
 
 registerLanguage('jsx', jsx);
 

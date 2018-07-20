@@ -1,5 +1,5 @@
 import React from 'react';
-import './SpacerTest.scss';
+import './SpacerTest.module.scss';
 import Spacer from '../../../Spacer';
 
 export default () => (

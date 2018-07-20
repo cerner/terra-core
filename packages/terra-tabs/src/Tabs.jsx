@@ -8,7 +8,7 @@ import TabPane from './TabPane';
 import CollapsibleTabs from './_CollapsibleTabs';
 import CollapsedTabs from './_CollapsedTabs';
 import TabUtils from './TabUtils';
-import styles from './Tabs.scss';
+import styles from './Tabs.module.scss';
 
 const cx = classNames.bind(styles);
 
