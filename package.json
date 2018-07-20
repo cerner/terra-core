@@ -89,7 +89,7 @@
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
     "terra-dev-site": "^2.0.0",
-    "terra-toolkit": "git://github.com/cerner/terra-toolkit#fix_heroku", 
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit#fix_heroku",
     "webpack-merge": "^4.1.2"
   }
 }
