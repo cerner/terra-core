@@ -4,6 +4,13 @@ Changelog
 Unreleased
 ----------
 
+2.23.0 - (July 19, 2018)
+------------------
+### Changed
+* Add .module extension to SCSS file(s)
+* Replaced the legacy form input with the new terra-form-input package
+* Fixed Focus Styles on the input element
+
 2.22.0 - (July 17, 2018)
 ------------------
 ### Changed

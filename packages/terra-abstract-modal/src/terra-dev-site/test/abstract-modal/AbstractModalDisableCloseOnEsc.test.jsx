@@ -1,6 +1,6 @@
 import React from 'react';
 import AbstractModal from '../../../AbstractModal';
-import './AbstractModalTestStyles.scss';
+import './AbstractModalTestStyles.module.scss';
 
 class ModalDisableCloseOnEsc extends React.Component {
   constructor() {

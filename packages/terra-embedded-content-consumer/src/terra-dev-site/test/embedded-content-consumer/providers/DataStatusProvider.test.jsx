@@ -2,6 +2,7 @@
 import React from 'react';
 import { Provider } from 'xfc';
 import './Provider.scss';
+import './ProviderIframe.module.scss';
 
 class DataStatusProvider extends React.Component {
   constructor(props) {

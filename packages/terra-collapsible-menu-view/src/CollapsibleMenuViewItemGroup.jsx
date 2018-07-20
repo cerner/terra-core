@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import ButtonGroup from 'terra-button-group';
 import List from 'terra-list';
 import Menu from './_CollapsibleMenu';
-import styles from './CollapsibleMenuView.scss';
+import styles from './CollapsibleMenuView.module.scss';
 
 const cx = classNames.bind(styles);
 

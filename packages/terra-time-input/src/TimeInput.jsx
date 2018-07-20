@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import Input from 'terra-form/lib/Input';
+import Input from 'terra-form-input';
 import ButtonGroup from 'terra-button-group';
 
 import TimeUtil from './TimeUtil';
-import styles from './TimeInput.scss';
+import styles from './TimeInput.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -194,13 +194,13 @@ class TimeInput extends React.Component {
   handleMinuteFocus(event) {
     this.handleFocus(event);
     this.setState({ minuteInitialFocused: true });
-    this.minuteInput.textInput.setSelectionRange(0, this.minuteInput.textInput.value.length);
+    this.minuteInput.setSelectionRange(0, this.minuteInput.value.length);
   }
 
   handleHourFocus(event) {
     this.handleFocus(event);
     this.setState({ hourInitialFocused: true });
-    this.hourInput.textInput.setSelectionRange(0, this.hourInput.textInput.value.length);
+    this.hourInput.setSelectionRange(0, this.hourInput.value.length);
   }
 
   handleHourBlur(event) {
@@ -272,7 +272,7 @@ class TimeInput extends React.Component {
 
     // // Move focus to the minute input if the hour input has a valid and complete entry.
     if (inputValue.length === 2) {
-      this.minuteInput.textInput.focus();
+      this.minuteInput.focus();
     }
 
     this.handleValueChange(event, TimeUtil.inputType.HOUR, inputValue, this.state.meridiem);
@@ -379,9 +379,9 @@ class TimeInput extends React.Component {
 
   focusMinute(event) {
     // If the hour is empty or the cursor is after the value, move focus to the minute input when the right arrow is pressed.
-    if (this.state.hour.length === 0 || this.state.hour.length === this.hourInput.textInput.selectionEnd) {
-      this.minuteInput.textInput.focus();
-      this.minuteInput.textInput.setSelectionRange(0, 0);
+    if (this.state.hour.length === 0 || this.state.hour.length === this.hourInput.selectionEnd) {
+      this.minuteInput.focus();
+      this.minuteInput.setSelectionRange(0, 0);
       event.preventDefault();
     }
   }
@@ -424,10 +424,10 @@ class TimeInput extends React.Component {
     // If the cursor is at the left most position in the minute input, is empty or the cursor is before the value,
     // move focus to the hour input
 
-    if (this.minuteInput.textInput.selectionEnd === 0) {
-      this.hourInput.textInput.focus();
+    if (this.minuteInput.selectionEnd === 0) {
+      this.hourInput.focus();
       if (this.state.hour) {
-        this.hourInput.textInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
+        this.hourInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
         event.preventDefault();
       }
     }
@@ -436,7 +436,7 @@ class TimeInput extends React.Component {
   focusMeridiem(event) {
     // If the minute is empty or the cursor is after the value, move focus to the meridiem.
     if ((this.state.minute.length === 0 ||
-        this.state.minute.length === this.minuteInput.textInput.selectionEnd) &&
+        this.state.minute.length === this.minuteInput.selectionEnd) &&
         this.meridiemInput
     ) {
       this.meridiemInput.focus();
@@ -500,7 +500,7 @@ class TimeInput extends React.Component {
     if (event.keyCode === TimeUtil.keyCodes.ARROWLEFT ||
         event.keyCode === TimeUtil.keyCodes.DELETE ||
         event.keyCode === TimeUtil.keyCodes.BACKSPACE) {
-      this.minuteInput.textInput.focus();
+      this.minuteInput.focus();
       event.preventDefault();
     }
   }
@@ -556,7 +556,7 @@ class TimeInput extends React.Component {
           <Input
             {...inputAttributes}
             {...instanceHoursAttrs}
-            ref={(inputRef) => { this.hourInput = inputRef; }}
+            refCallback={(inputRef) => { this.hourInput = inputRef; }}
             className={cx('time-input-hour')}
             value={this.state.hour}
             name={'terra-time-hour-'.concat(name)}
@@ -579,7 +579,7 @@ class TimeInput extends React.Component {
           <Input
             {...inputAttributes}
             {...instanceMinuteAttrs}
-            ref={(inputRef) => { this.minuteInput = inputRef; }}
+            refCallback={(inputRef) => { this.minuteInput = inputRef; }}
             className={cx('time-input-minute')}
             value={this.state.minute}
             name={'terra-time-minute-'.concat(name)}
@@ -639,6 +639,7 @@ class TimeInput extends React.Component {
     delete customProps.onInputFocus;
 
     const timeInputClassNames = cx([
+      { disabled },
       'time-input',
       { 'is-focused': this.state.isFocused },
       customProps.className,
@@ -671,7 +672,7 @@ class TimeInput extends React.Component {
           {...inputAttributes}
           {...minuteAttributes}
           aria-label={this.context.intl.formatMessage({ id: 'Terra.timeInput.hours' })}
-          ref={(inputRef) => { this.hourInput = inputRef; }}
+          refCallback={(inputRef) => { this.hourInput = inputRef; }}
           className={cx('time-input-hour', 'desktop', { 'initial-focus': this.state.hourInitialFocused })}
           type="text"
           value={this.state.hour}
@@ -690,7 +691,7 @@ class TimeInput extends React.Component {
         <Input
           {...inputAttributes}
           {...minuteAttributes}
-          ref={(inputRef) => { this.minuteInput = inputRef; }}
+          refCallback={(inputRef) => { this.minuteInput = inputRef; }}
           aria-label={this.context.intl.formatMessage({ id: 'Terra.timeInput.minutes' })}
           className={cx('time-input-minute', 'desktop', { 'initial-focus': this.state.minuteInitialFocused })}
           type="text"

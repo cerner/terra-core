@@ -5,7 +5,7 @@ import IconSpinner from 'terra-icon/lib/icon/IconSpinner';
 import 'terra-base/lib/baseStyles';
 
 import Overlay from './Overlay';
-import styles from './Overlay.scss';
+import styles from './Overlay.module.scss';
 
 const cx = classNames.bind(styles);
 
