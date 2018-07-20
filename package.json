@@ -50,7 +50,7 @@
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
     "start": "tt-serve --config webpack.config",
-    "start-heroku": "tt-serve-static --site build",
+    "start-heroku": "tt-heroku-serve-static",
     "start-static": "tt-serve-static --config webpack.config",
     "test": "npm run jest && npm run wdio",
     "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
@@ -89,7 +89,7 @@
     "stylelint-scss": "^3.0.0",
     "stylelint-suitcss": "^3.0.0",
     "terra-dev-site": "^2.0.0",
-    "terra-toolkit": "^4.1.0",
+    "terra-toolkit": "^4.5.0",
     "webpack-merge": "^4.1.2"
   }
 }
