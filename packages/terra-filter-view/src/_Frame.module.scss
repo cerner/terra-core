@@ -103,7 +103,7 @@
     margin-left: 0.3571428571rem;
     margin-right: 0.3571428571rem;
     position: absolute;
-    right: 32px;
+    right: 30px;
     top: 7px;
   }
 
@@ -121,9 +121,13 @@
     opacity: 1;
     outline: none;
     // Add padding to avoid clear-search button
-    padding: 0 2rem 0 0;
     text-overflow: ellipsis;
     width: auto;
+
+  }
+
+  .right-padding {
+    padding: 0 2rem 0 0;
   }
 
   // Hides the clear buttons in IE.

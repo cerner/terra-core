@@ -177,7 +177,7 @@ class Frame extends React.Component {
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
       'aria-label': 'search',
-      className: cx('search-input'),
+      className: cx('search-input', { 'right-padding': this.state.isFocused && this.state.searchValue }),
     };
 
     return <input {...inputAttrs} value={searchValue} />;
@@ -426,7 +426,7 @@ class Frame extends React.Component {
       variant,
       { 'is-above': this.state.isAbove },
       { 'is-focused': this.state.isFocused },
-      { 'is-open': this.state.isOpen },
+      { 'is-open': this.state.isOpen && variant === Variants.DROPDOWN },
       customProps.className,
     ]);
 
@@ -456,7 +456,10 @@ class Frame extends React.Component {
           onKeyDown={this.handleKeyDown}
           ref={(select) => { this.select = select; }}
         >
-          <div className={cx(['display', { 'is-disabled': disabled }])} onMouseDown={this.openDropdown} >
+          <div
+            className={cx(['display', { 'is-disabled': disabled }])}
+            onMouseDown={this.openDropdown}
+          >
             {this.getDisplay()}
           </div>
           {/* Render a clear search button when text is present in input */}
