@@ -141,7 +141,7 @@ describe('DateTimePicker', () => {
 
     const ignoredDisabledAlly = Object.assign({ 'color-contrast': { enabled: false } }, ignoredA11y);
     Terra.should.beAccessible({ rules: ignoredDisabledAlly });
-    Terra.should.matchScreenshot('0');
+    Terra.should.matchScreenshot({ viewports });
   });
 
   describe('OnChange', () => {
