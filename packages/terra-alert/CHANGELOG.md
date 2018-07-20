@@ -7,6 +7,7 @@ Unreleased
 2.20.0 - (July 19, 2018)
 ------------------
 ### Changed
+* Updated translations
 * Add .module extension to SCSS file(s)
 
 2.19.0 - (July 17, 2018)
