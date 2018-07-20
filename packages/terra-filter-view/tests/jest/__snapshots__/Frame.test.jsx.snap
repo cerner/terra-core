@@ -3,16 +3,16 @@
 exports[`Frame should render a disabled dropdown variant 1`] = `
 <div
   className="select-parent is-disabled"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
 >
   <div
     aria-disabled={true}
     aria-expanded={false}
     aria-haspopup="true"
     className="select dropdown"
-    onBlur={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
-    onMouseDown={[Function]}
     role="combobox"
   >
     <div
@@ -54,15 +54,15 @@ exports[`Frame should render a disabled dropdown variant 1`] = `
 exports[`Frame should render a disabled list variant 1`] = `
 <div
   className="select-parent is-disabled"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
 >
   <div
     aria-disabled={true}
     aria-expanded={false}
     className="select list"
-    onBlur={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
-    onMouseDown={[Function]}
     role="combobox"
   >
     <div
@@ -108,16 +108,16 @@ exports[`Frame should render a disabled list variant 1`] = `
 exports[`Frame should render a dropdown variant 1`] = `
 <div
   className="select-parent"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
 >
   <div
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="true"
     className="select dropdown"
-    onBlur={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
-    onMouseDown={[Function]}
     role="combobox"
   >
     <div
@@ -159,16 +159,16 @@ exports[`Frame should render a dropdown variant 1`] = `
 exports[`Frame should render a dropdown variant with a placeholder 1`] = `
 <div
   className="select-parent"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
 >
   <div
     aria-disabled={false}
     aria-expanded={false}
     aria-haspopup="true"
     className="select dropdown"
-    onBlur={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
-    onMouseDown={[Function]}
     role="combobox"
   >
     <div
@@ -211,15 +211,15 @@ exports[`Frame should render a dropdown variant with a placeholder 1`] = `
 exports[`Frame should render a list variant 1`] = `
 <div
   className="select-parent"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
 >
   <div
     aria-disabled={false}
     aria-expanded={false}
     className="select list"
-    onBlur={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
-    onMouseDown={[Function]}
     role="combobox"
   >
     <div
@@ -265,15 +265,15 @@ exports[`Frame should render a list variant 1`] = `
 exports[`Frame should render a list variant with a placeholder 1`] = `
 <div
   className="select-parent"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
 >
   <div
     aria-disabled={false}
     aria-expanded={false}
     className="select list"
-    onBlur={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
-    onMouseDown={[Function]}
     role="combobox"
   >
     <div

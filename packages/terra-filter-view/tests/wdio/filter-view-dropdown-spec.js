@@ -11,7 +11,7 @@ describe('Filter View', () => {
       Terra.should.matchScreenshot();
 
       it('should open the dropdown by clicking the search button', () => {
-        browser.click('#search:last-child');
+        browser.click('button');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -23,10 +23,12 @@ describe('Filter View', () => {
 
       it('should select the first option', () => {
         browser.click('#terra-select-option-blue');
+        // Reopen dropdown to see selection
+        browser.click('button');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('selected-option');
+      Terra.should.matchScreenshot('selected-option', { selector: '#root' });
     });
 
     describe('default should select an option by pressing enter', () => {
@@ -36,7 +38,7 @@ describe('Filter View', () => {
       Terra.should.matchScreenshot();
 
       it('should open the dropdown by clicking the search button', () => {
-        browser.click('#search:last-child');
+        browser.click('button');
         browser.execute(() => {
           // Removes the blinking cursor to prevent screenshot mismatches.
           document.querySelector('input').style.caretColor = 'transparent';
@@ -48,10 +50,11 @@ describe('Filter View', () => {
 
       it('should select the first option by pressing enter', () => {
         browser.keys('Enter');
+        browser.click('button');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('selected-option');
+      Terra.should.matchScreenshot('selected-option', { selector: '#root' });
     });
 
     describe('default should overflow text', () => {
@@ -74,7 +77,10 @@ describe('Filter View', () => {
   describe('Default Value', () => {
     before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-default-value'));
 
-    Terra.should.matchScreenshot('default value');
+    it('should open the dropdown', () => {
+      browser.click('button');
+    });
+    Terra.should.matchScreenshot('default value', { selector: '#root' });
 
     it('should enter a new search term', () => {
       browser.click('input');
@@ -141,7 +147,7 @@ describe('Filter View', () => {
     before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-opt-group'));
 
     it('should open the dropdown by clicking the search button', () => {
-      browser.click('#search:last-child');
+      browser.click('button');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
         document.querySelector('input').style.caretColor = 'transparent';
@@ -152,10 +158,12 @@ describe('Filter View', () => {
 
     it('should select the first option', () => {
       browser.click('#terra-select-option-blue');
+      // Open up the dropdown to view selected option
+      browser.click('button');
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('selected-option');
+    Terra.should.matchScreenshot('selected-option', { selector: '#root' });
   });
 
   describe('Placeholder', () => {
@@ -222,7 +230,8 @@ describe('Filter View', () => {
     Terra.should.matchScreenshot('updated once');
 
     it('should select another option', () => {
-      browser.click('svg[class*="clear-button"]');
+      // Reopen the dropdown
+      browser.click('button');
       browser.click('#terra-select-option-goodbye');
     });
 
@@ -243,6 +252,6 @@ describe('Filter View', () => {
       });
     });
 
-    Terra.should.matchScreenshot('custom no result content');
+    Terra.should.matchScreenshot('custom no result content', { selector: '#root' });
   });
 });
