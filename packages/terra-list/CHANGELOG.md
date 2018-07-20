@@ -12,9 +12,17 @@ Unreleased
 * Added new Prop "hasSections" to MultiSelectList and SingleSelectList
 * Added new Utils to handle selection across Sections for MultiSelectList and SingleSelectList
 * Updated logic of helper functions to find selected indexes and initial indexes if list contains sections as children
-
-### Changed
 * Updated logic to render SelectableList differently if it has sections as children.
+
+2.19.0 - (July 19, 2018)
+------------------
+### Changed
+* Add .module extension to SCSS file(s)
+
+2.18.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 
 2.17.0 - (July 10, 2018)

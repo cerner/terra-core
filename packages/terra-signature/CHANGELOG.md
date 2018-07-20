@@ -3,7 +3,16 @@ Changelog
 
 Unreleased
 ----------
+
+1.20.0 - (July 19, 2018)
+------------------
 ### Changed
+* Add .module extension to SCSS file(s)
+
+1.19.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 * Required props no longer set a default prop
 * Removed unused state lineWidth key

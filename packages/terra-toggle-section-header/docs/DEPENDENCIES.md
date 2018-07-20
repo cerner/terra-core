@@ -5,10 +5,10 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-doc-template | ^1.9.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-doc-template | ^1.11.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 | terra-mixins | ^1.16.0 | -- | terra-mixins |
-| terra-section-header | ^1.14.0 | ^16.2.0 | Section Header component that contains text and can be optionally interacted with. |
-| terra-toggle | ^2.15.0 | ^16.2.0 | Toggle component that transitions content in and out. |
+| terra-section-header | ^1.16.0 | ^16.2.0 | Section Header component that contains text and can be optionally interacted with. |
+| terra-toggle | ^2.17.0 | ^16.2.0 | Toggle component that transitions content in and out. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

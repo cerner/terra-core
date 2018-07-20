@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { parse } from 'react-docgen';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
-import styles from './PropsTable.scss';
+import styles from './PropsTable.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -26,14 +26,8 @@ function formatShape(shape) {
 function determineType(type) {
   let typeName = type.name;
 
-  // Pull the first value off and use that as type.
-  // This assumes all enumerable values are the same type.
   if (typeName === 'enum') {
-    if (Number.isNaN(Number(type.value[0].value))) {
-      typeName = typeof type.value[0].value;
-    } else {
-      typeName = 'number';
-    }
+    typeName = 'enum';
   } else if (typeName === 'arrayOf') {
     if (type.value.name === 'shape') {
       typeName = <span> array of objects structured like: <pre className={cx('props-table-pre')}> {formatShape(type.value.value)} </pre></span>;

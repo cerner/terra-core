@@ -3,7 +3,20 @@ Changelog
 
 Unreleased
 ----------
+
+3.12.0 - (July 19, 2018)
+------------------
 ### Changed
+* Add .module extension to SCSS file(s)
+
+3.11.0 - (July 17, 2018)
+------------------
+### Added
+* Added more themeable variables to MenuItem
+* Added an active style to MenuItem
+
+### Changed
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 * Required props no longer set a default prop
 

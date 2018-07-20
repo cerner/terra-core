@@ -2,13 +2,12 @@ import React from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
 import 'terra-base/lib/baseStyles';
 import CollapsibleMenuViewItem from './CollapsibleMenuViewItem';
 import CollapsibleMenuViewItemGroup from './CollapsibleMenuViewItemGroup';
 import CollapsibleMenuViewToggle from './CollapsibleMenuViewToggle';
 import CollapsibleMenuViewDivider from './CollapsibleMenuViewDivider';
-import styles from './CollapsibleMenuView.scss';
+import styles from './CollapsibleMenuView.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -155,7 +154,7 @@ class CollapsibleMenuView extends React.Component {
         <div className={menuButtonClassName} ref={this.setMenuButton}>
           <CollapsibleMenuViewItem
             data-collapsible-menu-toggle
-            icon={<IconEllipses />}
+            icon={<span className={cx('menu-button-icon')} />}
             subMenuItems={hiddenChildren}
             boundingRef={boundingRef}
             menuWidth={menuWidth}

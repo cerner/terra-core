@@ -3,7 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.18.0 - (July 19, 2018)
+------------------
 ### Changed
+* Add .module extension to SCSS file(s)
+
+1.17.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 
 1.16.0 - (July 10, 2018)

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
-import styles from './Slide.scss';
+import styles from './Slide.module.scss';
 
 const propTypes = {
   /**

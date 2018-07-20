@@ -7,7 +7,7 @@ import MenuItem from './MenuItem';
 import MenuItemGroup from './MenuItemGroup';
 import MenuDivider from './MenuDivider';
 import MenuContent from './_MenuContent';
-import styles from './Menu.scss';
+import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
 

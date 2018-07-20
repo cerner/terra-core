@@ -11,7 +11,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  containerHeight: 'initial',
+  containerHeight: 'auto',
 };
 
 const TabsTemplate = props => (
