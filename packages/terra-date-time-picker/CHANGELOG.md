@@ -6,9 +6,11 @@ Unreleased
 ### Fixed
 * Resolve issue where disabled component doesn't disable time clarification
 
+
+2.23.0 - (July 19, 2018)
+------------------
 ### Changed
 * Add .module extension to SCSS file(s)
-### Changed
 * Use datepicker that consumes new form inputs.
 
 2.22.0 - (July 17, 2018)

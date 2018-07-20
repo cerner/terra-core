@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.17.0 - (July 19, 2018)
+------------------
 ### Changed
 * Add .module extension to SCSS file(s)
 
