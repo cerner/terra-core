@@ -14,6 +14,8 @@ import DefaultFilterView from '../example/DefaultFilterView';
 import DefaultFilterViewSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultFilterView.jsx';
 import ListFilterView from '../example/ListFilterView';
 import ListFilterViewSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListFilterView.jsx';
+import OptGroup from '../example/OptGroup';
+import ExampleOptGroupSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OptGroup.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -32,6 +34,12 @@ const DocPage = () => (
         description: 'A list variant provides a list view to display results.',
         example: <ListFilterView />,
         source: ListFilterViewSrc,
+      },
+      {
+        title: 'OptGroup',
+        description: 'OptGroups may be used to group options together.',
+        example: OptGroup,
+        source: ExampleOptGroupSrc,
       },
     ]}
     propsTables={[

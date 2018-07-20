@@ -186,11 +186,12 @@ class Frame extends React.Component {
   /**
    * Clears the search-bar content.
    */
-  clearSearch(event) {
-    event.preventDefault();
+  clearSearch() {
     if (this.state.searchValue !== '') {
       this.setState({ searchValue: '', hasSearchChanged: true, excludeBlur: false });
     }
+    // Refocus input after clearing
+    this.input.focus();
   }
 
   /**
@@ -297,9 +298,9 @@ class Frame extends React.Component {
    * @param {event} event - The mouse down event.
    */
   handleMouseDown(event) {
+    // Preventing default events stops the search input from losing focus.
+    event.preventDefault();
     if (this.props.variant !== Variants.LIST) {
-      // Preventing default events stops the search input from losing focus.
-      event.preventDefault();
       this.openDropdown();
     }
   }
@@ -372,8 +373,6 @@ class Frame extends React.Component {
     if (this.props.variant !== Variants.LIST) {
       // Set the search value to the option selected (so that input is clearable)
       this.setState({
-        searchValue: option.props.display,
-        hasSearchChanged: true,
         isOpen: false,
       });
     }
@@ -439,7 +438,12 @@ class Frame extends React.Component {
     }
 
     return (
-      <div className={cx(['select-parent', { 'is-disabled': disabled }])}>
+      <div
+        className={cx(['select-parent', { 'is-disabled': disabled }])}
+        onMouseDown={this.handleMouseDown}
+        onBlur={this.handleBlur}
+        onFocus={this.handleFocus}
+      >
         <div
           {...customProps}
           role="combobox"
@@ -449,10 +453,7 @@ class Frame extends React.Component {
           aria-haspopup={variant === Variants.DROPDOWN ? 'true' : undefined}
           aria-owns={this.state.isOpen ? ariaOwns : undefined}
           className={selectClasses}
-          onBlur={this.handleBlur}
-          onFocus={this.handleFocus}
           onKeyDown={this.handleKeyDown}
-          onMouseDown={this.handleMouseDown}
           ref={(select) => { this.select = select; }}
         >
           <div className={cx(['display', { 'is-disabled': disabled }])} onMouseDown={this.openDropdown} >
@@ -502,7 +503,11 @@ class Frame extends React.Component {
         </div>
         {/* If variant is persistent, render the result box */}
         {variant === Variants.LIST &&
-          <div {...dropdownAttrs} className={cx(['box'])} id="terra-filter-box">
+          <div
+            {...dropdownAttrs}
+            className={cx(['box'])}
+            id="terra-filter-box"
+          >
             {dropdown && this.state.showResults && dropdown({
               disabled,
               value,

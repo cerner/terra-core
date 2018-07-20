@@ -145,7 +145,6 @@
   .box {
     border: 1px solid #dedfe0;
     height: 14.286rem; // 200px
-    // height: 100%;
     margin-top: 0.5rem;
     overflow: auto;
     
@@ -179,6 +178,8 @@
       background-size: var(--terra-select-background-size, 0 0);
       border: var(--terra-select-border, 1px solid #dedfe0);
       border-bottom-left-radius: var(--terra-select-border-radius, 3px);
+      border-bottom-right-radius: 0;
+      border-right: 0;
       border-top-left-radius: var(--terra-select-border-radius, 3px);
       cursor: text;
       display: flex;

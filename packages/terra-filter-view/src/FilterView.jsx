@@ -22,7 +22,7 @@ const propTypes = {
    */
   disableAutoSearch: PropTypes.bool,
   /**
-   * Additional attributes to spread onto the dropdown. ( style, classnames, etc.. )
+   * Additional attributes to spread onto the dropdown/list. ( style, classnames, etc.. )
    */
   dropdownAttrs: PropTypes.shape({}),
   /**
@@ -38,7 +38,7 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Callback function triggered when an option is selected. function(value)
+   * Callback function triggered when an option is selected. function(value, option)
    */
   onSelect: PropTypes.func,
   /**
@@ -66,7 +66,7 @@ const propTypes = {
    */
   searchDelay: PropTypes.number,
   /**
-   * The search field variant. One of `dropdown` or `persistent`
+   * The search field variant. One of `dropdown` or `list`
    */
   variant: PropTypes.oneOf([
     Variants.DROPDOWN,
@@ -107,6 +107,7 @@ function FilterView(props) {
 
   return (
     <Select
+      {...otherProps}
       id="search"
       defaultValue={defaultValue}
       onChange={onChange}
@@ -114,7 +115,6 @@ function FilterView(props) {
       placeholder={placeholder}
       searchDelay={searchDelay}
       variant={variant}
-      {...otherProps}
     >
       {children}
     </Select>
