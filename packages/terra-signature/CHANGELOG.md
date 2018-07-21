@@ -7,7 +7,7 @@ Unreleased
 1.20.1 - (July 20, 2018)
 ------------------
 ### Changed
-Bumped terra-select dependency up to new patch version
+Bumped terra-form-select dependency up to new patch version
 
 1.20.0 - (July 19, 2018)
 ------------------
