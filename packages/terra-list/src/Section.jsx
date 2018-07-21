@@ -9,7 +9,7 @@ const propTypes = {
    */
   headerContent: PropTypes.string,
   /**
-   * The header content to be placed for display in a section.
+   * The current section number.
    */
   sectionIndex: PropTypes.number,
   /**
