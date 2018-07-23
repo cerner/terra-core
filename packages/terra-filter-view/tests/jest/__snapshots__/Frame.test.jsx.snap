@@ -4,7 +4,6 @@ exports[`Frame should render a disabled dropdown variant 1`] = `
 <div
   className="select-parent is-disabled"
   onBlur={[Function]}
-  onFocus={[Function]}
   onMouseDown={[Function]}
 >
   <div
@@ -17,6 +16,7 @@ exports[`Frame should render a disabled dropdown variant 1`] = `
   >
     <div
       className="display is-disabled"
+      onFocus={[Function]}
       onMouseDown={[Function]}
     >
       <input
@@ -55,7 +55,6 @@ exports[`Frame should render a disabled list variant 1`] = `
 <div
   className="select-parent is-disabled"
   onBlur={[Function]}
-  onFocus={[Function]}
   onMouseDown={[Function]}
 >
   <div
@@ -67,6 +66,7 @@ exports[`Frame should render a disabled list variant 1`] = `
   >
     <div
       className="display is-disabled"
+      onFocus={[Function]}
       onMouseDown={[Function]}
     >
       <input
@@ -109,7 +109,6 @@ exports[`Frame should render a dropdown variant 1`] = `
 <div
   className="select-parent"
   onBlur={[Function]}
-  onFocus={[Function]}
   onMouseDown={[Function]}
 >
   <div
@@ -122,6 +121,7 @@ exports[`Frame should render a dropdown variant 1`] = `
   >
     <div
       className="display"
+      onFocus={[Function]}
       onMouseDown={[Function]}
     >
       <input
@@ -160,7 +160,6 @@ exports[`Frame should render a dropdown variant with a placeholder 1`] = `
 <div
   className="select-parent"
   onBlur={[Function]}
-  onFocus={[Function]}
   onMouseDown={[Function]}
 >
   <div
@@ -173,6 +172,7 @@ exports[`Frame should render a dropdown variant with a placeholder 1`] = `
   >
     <div
       className="display"
+      onFocus={[Function]}
       onMouseDown={[Function]}
     >
       <input
@@ -212,7 +212,6 @@ exports[`Frame should render a list variant 1`] = `
 <div
   className="select-parent"
   onBlur={[Function]}
-  onFocus={[Function]}
   onMouseDown={[Function]}
 >
   <div
@@ -224,6 +223,7 @@ exports[`Frame should render a list variant 1`] = `
   >
     <div
       className="display"
+      onFocus={[Function]}
       onMouseDown={[Function]}
     >
       <input
@@ -266,7 +266,6 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
 <div
   className="select-parent"
   onBlur={[Function]}
-  onFocus={[Function]}
   onMouseDown={[Function]}
 >
   <div
@@ -278,6 +277,7 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
   >
     <div
       className="display"
+      onFocus={[Function]}
       onMouseDown={[Function]}
     >
       <input

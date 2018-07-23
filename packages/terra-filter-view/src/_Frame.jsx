@@ -126,7 +126,6 @@ class Frame extends React.Component {
       isOpen: props.variant === Variants.LIST && props.showResultsInitially,
       isFocused: false,
       isPositioned: false,
-      hasSearchChanged: false,
       searchValue: '',
       showResults: props.showResultsInitially,
     };
@@ -188,7 +187,7 @@ class Frame extends React.Component {
    */
   clearSearch() {
     if (this.state.searchValue !== '') {
-      this.setState({ searchValue: '', hasSearchChanged: true, excludeBlur: false });
+      this.setState({ searchValue: '', excludeBlur: false });
     }
     // Refocus input after clearing
     this.input.focus();
@@ -198,14 +197,12 @@ class Frame extends React.Component {
    * Closes the dropdown.
    */
   closeDropdown() {
-    // Don't clear the search value when closing the dropdown
     if (this.props.variant !== Variants.LIST) {
       this.setState({
         isAbove: false,
         isFocused: document.activeElement === this.input || document.activeElement === this.select,
         isOpen: false,
         isPositioned: false,
-        hasSearchChanged: true,
       });
     } else {
       this.setState({ isFocused: document.activeElement === this.input || document.activeElement === this.select });
@@ -252,7 +249,6 @@ class Frame extends React.Component {
       this.props.onBlur(event);
     }
   }
-
   /**
    * Handles the focus event.
    */
@@ -304,13 +300,17 @@ class Frame extends React.Component {
       this.openDropdown();
     }
   }
-
+  /**
+   * Removes exception made for clear-button when cursor leaves the clear-button.
+   */
   handleMouseLeave() {
     if (this.state.excludeBlur) {
       this.setState({ excludeBlur: false });
     }
   }
-
+  /**
+   * Allows the clear-button to be clicked by not losing focus of input.
+   */
   handleMouseEnter() {
     if (!this.state.excludeBlur) {
       this.setState({ excludeBlur: true });
@@ -335,7 +335,6 @@ class Frame extends React.Component {
 
     this.setState({
       isOpen: true,
-      hasSearchChanged: true,
       searchValue,
     });
 
@@ -344,6 +343,9 @@ class Frame extends React.Component {
     }
   }
 
+  /**
+   * Performs the search callbacks after the delay.
+   */
   delaySearch() {
     this.clearSearchTimeout();
 
@@ -351,12 +353,14 @@ class Frame extends React.Component {
 
     if (searchValue.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
       this.props.onSearch(searchValue);
-    } else if
-    (this.props.onInvalidSearch) {
+    } else if (this.props.onInvalidSearch) {
       this.props.onInvalidSearch(searchValue);
     }
   }
 
+  /**
+   * Clears the timeout instance for each delay
+   */
   clearSearchTimeout() {
     if (this.searchTimeout) {
       clearTimeout(this.searchTimeout);
@@ -371,7 +375,7 @@ class Frame extends React.Component {
    */
   handleSelect(value, option) {
     if (this.props.variant !== Variants.LIST) {
-      // Set the search value to the option selected (so that input is clearable)
+      // Close the dropdown
       this.setState({
         isOpen: false,
       });
@@ -426,7 +430,7 @@ class Frame extends React.Component {
       variant,
       { 'is-above': this.state.isAbove },
       { 'is-focused': this.state.isFocused },
-      { 'is-open': this.state.isOpen && variant === Variants.DROPDOWN },
+      { 'is-open': (this.state.isOpen && variant === Variants.DROPDOWN) || (variant === Variants.LIST && this.state.searchValue) },
       customProps.className,
     ]);
 
@@ -442,7 +446,6 @@ class Frame extends React.Component {
         className={cx(['select-parent', { 'is-disabled': disabled }])}
         onMouseDown={this.handleMouseDown}
         onBlur={this.handleBlur}
-        onFocus={this.handleFocus}
       >
         <div
           {...customProps}
@@ -459,6 +462,7 @@ class Frame extends React.Component {
           <div
             className={cx(['display', { 'is-disabled': disabled }])}
             onMouseDown={this.openDropdown}
+            onFocus={this.handleFocus}
           >
             {this.getDisplay()}
           </div>
