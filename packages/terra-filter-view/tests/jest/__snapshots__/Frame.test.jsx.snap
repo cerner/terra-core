@@ -100,7 +100,7 @@ exports[`Frame should render a disabled list variant 1`] = `
   </div>
   <div
     className="box"
-    id="terra-filter-box"
+    id="terra-filter-list"
   />
 </div>
 `;
@@ -257,7 +257,7 @@ exports[`Frame should render a list variant 1`] = `
   </div>
   <div
     className="box"
-    id="terra-filter-box"
+    id="terra-filter-list"
   />
 </div>
 `;
@@ -312,7 +312,7 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
   </div>
   <div
     className="box"
-    id="terra-filter-box"
+    id="terra-filter-list"
   />
 </div>
 `;

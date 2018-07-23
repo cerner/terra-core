@@ -436,9 +436,9 @@ class Frame extends React.Component {
 
     let ariaOwns;
     if (this.state.isOpen && variant === Variants.DROPDOWN) {
-      ariaOwns = 'terra-select-dropdown';
+      ariaOwns = 'terra-filter-dropdown';
     } else if (variant === Variants.LIST) {
-      ariaOwns = 'terra-filter-box';
+      ariaOwns = 'terra-filter-list';
     }
 
     return (
@@ -487,7 +487,7 @@ class Frame extends React.Component {
           {variant === Variants.DROPDOWN && this.state.isOpen &&
             <Dropdown
               {...dropdownAttrs}
-              id="terra-select-dropdown"
+              id="terra-filter-dropdown"
               target={this.select}
               isAbove={this.state.isAbove}
               isEnabled={this.state.isPositioned}
@@ -513,7 +513,7 @@ class Frame extends React.Component {
           <div
             {...dropdownAttrs}
             className={cx(['box'])}
-            id="terra-filter-box"
+            id="terra-filter-list"
           >
             {dropdown && this.state.showResults && dropdown({
               disabled,
