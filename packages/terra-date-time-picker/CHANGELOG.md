@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Resolve issue where disabled component doesn't disable time clarification
+
 
 2.23.0 - (July 19, 2018)
 ------------------
