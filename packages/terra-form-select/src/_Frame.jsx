@@ -5,7 +5,7 @@ import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
 import Dropdown from './_Dropdown';
 import Util from './_FrameUtil';
-import styles from './_Frame.module.module.scss';
+import styles from './_Frame.module.scss';
 
 const cx = classNames.bind(styles);
 

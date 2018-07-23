@@ -7,7 +7,7 @@ import { KeyCodes, Variants } from './_constants';
 import AddOption from './_AddOption';
 import NoResults from './_NoResults';
 import Util from './_MenuUtil';
-import styles from './_Menu.module.module.scss';
+import styles from './_Menu.module.scss';
 
 const cx = classNames.bind(styles);
 
