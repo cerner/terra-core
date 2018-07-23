@@ -256,4 +256,18 @@ describe('Search Field', () => {
 
     Terra.should.matchScreenshot('extended search');
   });
+
+  describe('Search Field in Focus', () => {
+    before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-focus'));
+
+    Terra.should.matchScreenshot('empty');
+
+    it('should click button to focus search field', () => {
+      browser.waitForVisible('#search-field-focus-button');
+      browser.click('#search-field-focus-button');
+    });
+
+    Terra.should.matchScreenshot('with focus');
+    Terra.should.beAccessible({ rules: ignoredA11y });
+  });
 });

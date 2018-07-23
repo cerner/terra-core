@@ -229,3 +229,42 @@ exports[`Snapshots renders a search field with a value 1`] = `
   />
 </div>
 `;
+
+exports[`Snapshots renders a search field with an Input that contains a non-null refCallback prop 1`] = `
+<div
+  className="searchfield"
+>
+  <Input
+    aria-disabled={false}
+    className="input"
+    disabled={false}
+    isInvalid={false}
+    name={null}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder=""
+    refCallback={[Function]}
+    required={false}
+    type="search"
+  />
+  <Button
+    className="button"
+    icon={
+      <IconSearch
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="Search"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;

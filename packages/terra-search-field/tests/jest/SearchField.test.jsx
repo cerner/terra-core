@@ -36,6 +36,12 @@ describe('Snapshots', () => {
 
     expect(searchField).toMatchSnapshot();
   });
+
+  it('renders a search field with an Input that contains a non-null refCallback prop', () => {
+    const searchField = shallow(<SearchField inputFieldRefCallback={(inputRef) => { inputRef.focus(); }} />, intlContexts.shallowContext);
+    expect(searchField.find('Input').props().refCallback).not.toBeFalsy();
+    expect(searchField).toMatchSnapshot();
+  });
 });
 
 describe('Manual Search', () => {

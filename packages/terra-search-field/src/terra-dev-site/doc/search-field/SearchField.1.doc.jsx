@@ -26,6 +26,8 @@ import SearchFieldDisableAutoSearch from '../example/SearchFieldDisableAutoSearc
 import SearchFieldDisableAutoSearchSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldDisableAutoSearch';
 import SearchFieldFilterNumeric from '../example/SearchFieldFilterNumeric';
 import SearchFieldFilterNumericSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFilterNumeric';
+import SearchFieldFocus from '../example/SearchFieldFocus';
+import SearchFieldFocusSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFocus';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -78,6 +80,11 @@ const DocPage = () => (
         title: 'Search Field with onChange Event Filtering Numbers',
         example: <SearchFieldFilterNumeric />,
         source: SearchFieldFilterNumericSrc,
+      },
+      {
+        title: 'Search Field with Focus',
+        example: <SearchFieldFocus />,
+        source: SearchFieldFocusSrc,
       },
     ]}
     propsTables={[
