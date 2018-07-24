@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.11.1 - (July 20, 2018)
+------------------
+### Changed
+* Clean up double .module extension on SCSS files
+
+4.11.0 - (July 19, 2018)
+------------------
 ### Changed
 * Add .module extension to SCSS file(s)
 

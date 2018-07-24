@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+1.20.1 - (July 20, 2018)
+------------------
+### Changed
+Bumped terra-form-select dependency up to new patch version
+
+1.20.0 - (July 19, 2018)
+------------------
 ### Changed
 * Add .module extension to SCSS file(s)
 

@@ -5,8 +5,8 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-doc-template | ^1.10.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-form-select | ^4.10.0 | ^16.2.0 | Provides a drop down of selectable options. |
+| terra-doc-template | ^1.11.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-form-select | ^4.11.1 | ^16.2.0 | Provides a drop down of selectable options. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

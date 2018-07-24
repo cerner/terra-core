@@ -5,11 +5,11 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-button | ^2.17.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-button-group | ^2.17.0 | ^16.2.0 | terra-button-group |
-| terra-collapsible-menu-view | ^3.11.0 | ^16.2.0 | The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu. |
-| terra-doc-template | ^1.10.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-icon | ^2.17.0 | ^16.2.0 | terra-icon |
+| terra-button | ^2.18.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-button-group | ^2.18.0 | ^16.2.0 | terra-button-group |
+| terra-collapsible-menu-view | ^3.12.0 | ^16.2.0 | The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu. |
+| terra-doc-template | ^1.11.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-icon | ^2.18.0 | ^16.2.0 | terra-icon |
 | terra-mixins | ^1.16.0 | -- | terra-mixins |
 
 ## peerDependencies
