@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Added
+* Add inputFieldRefCallback prop
+
 2.20.0 - (July 19, 2018)
 ------------------
 ### Changed
