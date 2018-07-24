@@ -118,6 +118,22 @@ const loadNlBETranslation = (callback, scope) => {
   }, 'nl-BE-translations');
 };
 
+const loadSvTranslation = (callback, scope) => {
+  require.ensure([], (require) => {
+    // eslint-disable-next-line
+    const i18n = require('sv.js');
+    callback.call(scope, i18n);
+  }, 'sv-translations');
+};
+
+const loadSvSETranslation = (callback, scope) => {
+  require.ensure([], (require) => {
+    // eslint-disable-next-line
+    const i18n = require('sv-SE.js');
+    callback.call(scope, i18n);
+  }, 'sv-SE-translations');
+};
+
 const translationLoaders = {
   ar: loadArTranslation,
   en: loadEnTranslation,
@@ -134,6 +150,8 @@ const translationLoaders = {
   'fi-FI': loadFiFITranslation,
   nl: loadNlTranslation,
   'nl-BE': loadNlBETranslation,
+  sv: loadSvTranslation,
+  'sv-SE': loadSvSETranslation,
 };
 
 module.exports = translationLoaders;
