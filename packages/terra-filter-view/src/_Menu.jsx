@@ -65,9 +65,6 @@ class Menu extends React.Component {
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.scrollIntoView = this.scrollIntoView.bind(this);
-    this.clearSearchTimeout = this.clearSearchTimeout.bind(this);
-
-    this.searchTimeout = null;
   }
 
   /**
@@ -112,13 +109,6 @@ class Menu extends React.Component {
     this.searchString = '';
     clearTimeout(this.searchTimeout);
     this.searchTimeout = null;
-  }
-
-  clearSearchTimeout() {
-    if (this.searchTimeout) {
-      clearTimeout(this.searchTimeout);
-      this.searchTimeout = null;
-    }
   }
 
   /**
@@ -240,14 +230,19 @@ class Menu extends React.Component {
 
   render() {
     return (
+      // This warns that aria-activedescendant should map to an id
+      // Our implementation maps it to a dynamic id but linter is unable to detect mapping and throws an error
+      /* eslint-disable jsx-a11y/aria-proptypes */
       <ul
         role="listbox"
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
         {...(this.state.active !== null) && { 'aria-activedescendant': `terra-select-option-${this.state.active}` }}
+        tabIndex="0"
       >
         {this.clone(this.state.children)}
       </ul>
+      /* eslint-enable jsx-a11y/aria-proptypes */
     );
   }
 }

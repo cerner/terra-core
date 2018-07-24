@@ -65,18 +65,6 @@ class FrameUtil {
     const { bottom } = dropdown.getBoundingClientRect();
     return previousState.isOpen === false || bottom > window.innerHeight;
   }
-
-  /**
-   * Determines the variant appropriate container tab index.
-   * @param {Object} props - The component props.
-   * @return {string} - A tab index.
-   */
-  static tabIndex(props) {
-    if (!props.disabled) {
-      return '0';
-    }
-    return '-1';
-  }
 }
 
 export default FrameUtil;

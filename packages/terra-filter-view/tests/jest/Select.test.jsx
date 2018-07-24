@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from '../../src/Select';
+import Select from '../../src/_Select';
 
 describe('Select', () => {
   it('should render a dropdown variant', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import { Variants } from './_constants';
-import Select from './Select';
+import Select from './_Select';
 
 const propTypes = {
   /**

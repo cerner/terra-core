@@ -395,7 +395,7 @@ class Frame extends React.Component {
     if (this.props.variant === Variants.LIST) {
       return;
     }
-    if (this.state.isOpen && this.props.variant) {
+    if (this.state.isOpen) {
       this.closeDropdown();
     } else {
       this.openDropdown();
