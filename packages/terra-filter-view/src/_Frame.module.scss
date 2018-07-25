@@ -43,7 +43,7 @@
   }
 
   .clear-button {
-    color: #b9bbbc;
+    color: var(terra-filter-clear-button-color, #b9bbbc);
     margin-left: 0.3571428571rem;
     margin-right: 0.3571428571rem;
     position: absolute;

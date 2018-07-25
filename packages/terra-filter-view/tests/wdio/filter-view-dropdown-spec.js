@@ -71,6 +71,39 @@ describe('Filter View', () => {
 
       Terra.should.matchScreenshot('scrolled text');
       Terra.should.beAccessible();
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-filter-background-color': '#85898b',
+          '--terra-filter-color': '#fff',
+          '--terra-filter-font-size': '2rem',
+          '--terra-filter-line-height': '2',
+          '--terra-filter-clear-button-color': '#85898b',
+          '--terra-filter-search-font-size': '2rem',
+          '--terra-filter-search-margin-top': '1rem',
+          '--terra-filter-border': '5px solid #dedfe0',
+          '--terra-filter-border-radius': '5px',
+          '--terra-filter-padding-bottom': '5px',
+          '--terra-filter-padding-left': '5px',
+          '--terra-filter-padding-right': '5px',
+          '--terra-filter-padding-top': '5px',
+        },
+      });
+    });
+    describe('focuses to test theme variables', () => {
+      before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-default-dropdown'));
+
+      it('tabs focus on input', () => {
+        browser.keys('Tab');
+      });
+
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-filter-focus-border-color': '#121def',
+          '--terra-filter-focus-box-shadow': '5px 10px',
+        },
+      });
     });
   });
 
@@ -119,6 +152,19 @@ describe('Filter View', () => {
 
     it('should not accept clicks', () => {
       expect(browser.click.bind(browser, '[class*="button"]')).to.throw(Error);
+    });
+
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-filter-disabled-opacity': '0.5',
+        '--terra-filter-disabled-button-background-color': '#fff',
+        '--terra-filter-disabled-border': '5px solid #85898b',
+        '--terra-filter-disabled-button-opacity': '0.75',
+        '--terra-filter-disabled-background-color': '#85898b',
+        '--terra-filter-disabled-color': '#dedfe1',
+        '--terra-filter-disabled-placeholder-color': '1d80f3',
+      },
     });
   });
 
@@ -170,6 +216,13 @@ describe('Filter View', () => {
     before(() => browser.url('/#/raw/tests/terra-filter-view/filter-view/filter-view-dropdown/filter-view-placeholder'));
 
     Terra.should.matchScreenshot('placeholder');
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-filter-search-placeholder-color': '#121def',
+        '--terra-filter-search-placeholder-font-size': '2rem',
+      },
+    });
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
