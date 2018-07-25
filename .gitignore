@@ -59,4 +59,5 @@ props-table
 **/__snapshots__/latest
 **/__snapshots__/diff
 errorScreenshots
+.vscode
 .DS_Store

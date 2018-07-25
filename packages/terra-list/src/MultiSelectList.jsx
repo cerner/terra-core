@@ -13,6 +13,10 @@ const propTypes = {
    */
   isDivided: PropTypes.bool,
   /**
+   * Whether or not the child items should be displayed in sections with header and list of elements.
+   */
+  hasSections: PropTypes.bool,
+  /**
    * A callback event that will be triggered when selection state changes.
    */
   onChange: PropTypes.func,
@@ -25,6 +29,7 @@ const propTypes = {
 const defaultProps = {
   children: [],
   isDivided: false,
+  hasSections: false,
   onChange: undefined,
   maxSelectionCount: undefined,
 };
@@ -33,16 +38,33 @@ class MultiSelectList extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.state = { selectedIndexes: SelectableList.Utils.initialMultiSelectedIndexes(props.children, props.maxSelectionCount) };
+    // state gets updated when getDerivedStateFromProps gets called right before each render.
+    this.state = {
+      selectedIndexes: props.hasSections ?
+        SelectableList.Utils.initialMultiSelectedIndexesWithSections(props.children, props.maxSelectionCount) :
+        SelectableList.Utils.initialMultiSelectedIndexes(props.children, props.maxSelectionCount),
+      hasSections: false,
+    };
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.hasSections !== state.hasSections) {
+      return {
+        hasSections: props.hasSections,
+      };
+    }
+    return null;
   }
 
   handleOnChange(event, index) {
     const { children, maxSelectionCount } = this.props;
-    if (SelectableList.Utils.shouldHandleMultiSelect(children, maxSelectionCount, this.state.selectedIndexes, index)) {
+    if (SelectableList.Utils.shouldHandleMultiSelect(children, maxSelectionCount, this.state.selectedIndexes, index, this.state.hasSections)) {
       event.preventDefault();
       const newIndexes = SelectableList.Utils.updatedMultiSelectedIndexes(this.state.selectedIndexes, index);
-
-      this.setState({ selectedIndexes: newIndexes });
+      this.setState(prevState => ({
+        ...prevState,
+        selectedIndexes: newIndexes,
+      }));
       if (this.props.onChange) {
         this.props.onChange(event, newIndexes);
       }
@@ -51,15 +73,29 @@ class MultiSelectList extends React.Component {
 
   render() {
     const {
-      children, isDivided, onChange, maxSelectionCount, ...customProps
+      children,
+      isDivided,
+      onChange,
+      maxSelectionCount,
+      hasSections,
+      ...customProps
     } = this.props;
+
+    let maxCount = 0;
+    if (!this.state.hasSections) {
+      maxCount = SelectableList.Utils.validatedMaxCount(children, maxSelectionCount);
+    } else {
+      maxCount = SelectableList.Utils.validatedMaxCountForSections(children, maxSelectionCount);
+    }
+
     return (
       <SelectableList
         {...customProps}
         isDivided={isDivided}
         onChange={this.handleOnChange}
         selectedIndexes={this.state.selectedIndexes}
-        disableUnselectedItems={this.state.selectedIndexes.length >= SelectableList.Utils.validatedMaxCount(children, maxSelectionCount)}
+        hasSections={this.state.hasSections}
+        disableUnselectedItems={this.state.selectedIndexes.length >= maxCount}
       >
         {children}
       </SelectableList>
@@ -70,5 +106,6 @@ class MultiSelectList extends React.Component {
 MultiSelectList.propTypes = propTypes;
 MultiSelectList.defaultProps = defaultProps;
 MultiSelectList.Item = SelectableList.Item;
+MultiSelectList.Section = SelectableList.Section;
 
 export default MultiSelectList;

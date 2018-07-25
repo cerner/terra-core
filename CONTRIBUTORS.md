@@ -65,6 +65,7 @@ Cerner Corporation
 - Tom Wu [@tomleewu]
 - Cory McDonald [@corymcdonald]
 - Anthony Ross [@AnthonyRoss]
+- Dinesh Singh [@DineshSingh9]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -132,3 +133,4 @@ Cerner Corporation
 [@tomleewu]: https:/github.com/tomleewu
 [@CoryMcDonald]: https://github.com/CoryMcDonald
 [@AnthonyRoss]: https://github.com/AnthonyRoss
+[@DineshSingh9]: https://github.com/DineshSingh9

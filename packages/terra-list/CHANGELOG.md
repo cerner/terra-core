@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added change log to the documentation on terra-dev-site
+* List takes Static List-Section API as children.
+
+### Changed
+* New Sections API which can be used as children for List.
+* Added new Prop "hasSections" to MultiSelectList and SingleSelectList
+* Added new Utils to handle selection across Sections for MultiSelectList and SingleSelectList
+* Updated logic of helper functions to find selected indexes and initial indexes if list contains sections as children
+* Updated logic to render SelectableList differently if it has sections as children.
 
 2.19.0 - (July 19, 2018)
 ------------------
@@ -24,9 +34,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-
-### Added
-* Added change log to the documentation on terra-dev-site
 
 2.15.0 - (June 22, 2018)
 ------------------
