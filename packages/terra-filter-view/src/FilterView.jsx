@@ -121,7 +121,6 @@ function FilterView(props) {
   );
 }
 
-
 FilterView.propTypes = propTypes;
 FilterView.defaultProps = defaultProps;
 FilterView.Option = Select.Option;
