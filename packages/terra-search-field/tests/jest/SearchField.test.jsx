@@ -37,9 +37,11 @@ describe('Snapshots', () => {
     expect(searchField).toMatchSnapshot();
   });
 
-  it('renders a search field with an Input that contains a non-null refCallback prop', () => {
-    const searchField = shallow(<SearchField inputFieldRefCallback={(inputRef) => { inputRef.focus(); }} />, intlContexts.shallowContext);
-    expect(searchField.find('Input').props().refCallback).not.toBeFalsy();
+  it('passes in inputFieldRefCallback as the refCallback prop of the Input component', () => {
+    const inputFieldRefCallback = jest.fn();
+    const searchField = mount(<SearchField inputFieldRefCallback={inputFieldRefCallback} />, intlContexts.mountContext);
+    expect(inputFieldRefCallback).toBeCalled();
+    expect(searchField.find('Input').props().refCallback).toBeCalled();
     expect(searchField).toMatchSnapshot();
   });
 });
