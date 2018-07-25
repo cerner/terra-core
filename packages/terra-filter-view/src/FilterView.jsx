@@ -108,7 +108,6 @@ function FilterView(props) {
   return (
     <Select
       {...otherProps}
-      id="search"
       defaultValue={defaultValue}
       onChange={onChange}
       onSelect={onSelect}

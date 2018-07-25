@@ -180,7 +180,7 @@ describe('Filter View', () => {
     Terra.should.matchScreenshot('no results shown');
 
     it('should focus input to show results', () => {
-      browser.click('#search');
+      browser.click('input');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
         document.querySelector('input').style.caretColor = 'transparent';
