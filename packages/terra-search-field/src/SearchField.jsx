@@ -70,6 +70,11 @@ const propTypes = {
    * The value of search field.  Use this to create a controlled search field.
    */
   value: PropTypes.string,
+
+  /**
+   * Callback ref to pass into the inner input component.
+   */
+  inputRefCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -171,6 +176,7 @@ class SearchField extends React.Component {
       onInvalidSearch,
       onSearch,
       value,
+      inputRefCallback,
       ...customProps
     } = this.props;
     const searchFieldClassNames = cx([
@@ -198,6 +204,7 @@ class SearchField extends React.Component {
           disabled={isDisabled}
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
+          refCallback={inputRefCallback}
           {...additionalInputAttributes}
         />
         <Button

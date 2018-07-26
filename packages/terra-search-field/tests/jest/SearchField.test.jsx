@@ -36,6 +36,14 @@ describe('Snapshots', () => {
 
     expect(searchField).toMatchSnapshot();
   });
+
+  it('passes in inputRefCallback as the refCallback prop of the Input component', () => {
+    const inputRefCallback = jest.fn();
+    const searchField = mount(<SearchField inputRefCallback={inputRefCallback} />, intlContexts.mountContext);
+    expect(inputRefCallback).toBeCalled();
+    expect(searchField.find('Input').props().refCallback).toBeCalled();
+    expect(searchField).toMatchSnapshot();
+  });
 });
 
 describe('Manual Search', () => {

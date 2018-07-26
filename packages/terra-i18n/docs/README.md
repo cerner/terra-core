@@ -34,6 +34,8 @@ The `I18nProvider` component configures the react-intl's `IntlProvider` and supp
 | nl-BE | Dutch (Belgium)|
 | pt | Portuguese |
 | pt-BR | Portuguese - Brazil|
+| sv | Swedish |
+| sv-SE | Swedish (Sweden) |
 
 #### Non-Supported Locales
 
@@ -48,7 +50,7 @@ The `i18nLoader` loads internationalized information from the translationLoader 
 3. Try the 'en' base locale
 4. Throw an error if 'en' is not provided
 
-**Note:** This fallback strategy is only applied when an aggregated translation file does not exist. For example if the 'es' locale is loaded and the translation for `Terra.button.close` is missing, `react-intl` will display the `Terra.button.close` message name, not the english translation, because locale data was only loaded for 'es'. The `terra-i18n` package does not support loading multiple locales at once. This ensures an application will never have a mix of 'es' and 'en' translations.  
+**Note:** This fallback strategy is only applied when an aggregated translation file does not exist. For example if the 'es' locale is loaded and the translation for `Terra.button.close` is missing, `react-intl` will display the `Terra.button.close` message name, not the english translation, because locale data was only loaded for 'es'. The `terra-i18n` package does not support loading multiple locales at once. This ensures an application will never have a mix of 'es' and 'en' translations.
 
 ### Aggregating Translations
 

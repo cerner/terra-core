@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+2.24.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+* Placeholder text is now localized
+
 2.23.0 - (July 19, 2018)
 ------------------
 ### Changed

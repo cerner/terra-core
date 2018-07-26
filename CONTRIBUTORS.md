@@ -65,6 +65,7 @@ Cerner Corporation
 - Tom Wu [@tomleewu]
 - Cory McDonald [@corymcdonald]
 - Anthony Ross [@AnthonyRoss]
+- Julia Calandro [@JuliaCalandro]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -132,3 +133,4 @@ Cerner Corporation
 [@tomleewu]: https:/github.com/tomleewu
 [@CoryMcDonald]: https://github.com/CoryMcDonald
 [@AnthonyRoss]: https://github.com/AnthonyRoss
+[@JuliaCalandro]: https://github.com/JuliaCalandro
