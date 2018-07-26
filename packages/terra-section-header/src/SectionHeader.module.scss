@@ -70,7 +70,7 @@
       }
 
       &:focus {
-        background: var(--terra-transparent-section-header-focus-background, rgba(89, 159, 253, 0.3));
+        background: var(--terra-transparent-section-header-focus-background, rgba(0, 0, 0, 0.07));
         border-bottom: var(--terra-transparent-section-header-focus-border-bottom, 0);
         border-left: var(--terra-transparent-section-header-focus-border-left, 0);
         border-right: var(--terra-transparent-section-header-focus-border-right, 0);
@@ -82,7 +82,7 @@
 
       &:active,
       &.is-active {
-        background: var(--terra-transparent-section-header-active-background, rgba(89, 159, 253, 0.3));
+        background: var(--terra-transparent-section-header-active-background, rgba(0, 0, 0, 0.07));
         border-bottom: var(--terra-transparent-section-header-active-border-bottom, 0);
         border-left: var(--terra-transparent-section-header-active-border-left, 0);
         border-right: var(--terra-transparent-section-header-active-border-right, 0);
