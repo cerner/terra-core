@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed input to have right border
 
 2.21.0 - (July 25, 2018)
 ------------------
