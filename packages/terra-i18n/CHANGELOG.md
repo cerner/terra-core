@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Updated translations
 
+2.16.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+
 2.15.0 - (July 17, 2018)
 ------------------
 ### Changed

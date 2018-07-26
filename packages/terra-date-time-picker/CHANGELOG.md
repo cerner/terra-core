@@ -3,9 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.24.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+
 ### Fixed
 * Resolve issue where disabled component doesn't disable time clarification
-
 
 2.23.0 - (July 19, 2018)
 ------------------
