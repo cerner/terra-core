@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshots passes in inputFieldRefCallback as the refCallback prop of the Input component 1`] = `
+exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
 <SearchField
   disableAutoSearch={false}
-  inputFieldRefCallback={
+  inputRefCallback={
     [MockFunction] {
       "calls": Array [
         Array [

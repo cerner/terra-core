@@ -74,7 +74,7 @@ const propTypes = {
   /**
    * Callback ref to pass into the inner input component.
    */
-  inputFieldRefCallback: PropTypes.func,
+  inputRefCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -176,7 +176,7 @@ class SearchField extends React.Component {
       onInvalidSearch,
       onSearch,
       value,
-      inputFieldRefCallback,
+      inputRefCallback,
       ...customProps
     } = this.props;
     const searchFieldClassNames = cx([
@@ -204,7 +204,7 @@ class SearchField extends React.Component {
           disabled={isDisabled}
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
-          refCallback={inputFieldRefCallback}
+          refCallback={inputRefCallback}
           {...additionalInputAttributes}
         />
         <Button

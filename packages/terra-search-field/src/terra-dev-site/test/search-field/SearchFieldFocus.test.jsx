@@ -32,7 +32,7 @@ class SearchFieldFocus extends React.Component {
         <SearchField
           onChange={this.onChange}
           value={this.state.searchText}
-          inputFieldRefCallback={(inputRef) => { this.searchInput = inputRef; }}
+          inputRefCallback={(inputRef) => { this.searchInput = inputRef; }}
         />
       </React.Fragment>
     );
