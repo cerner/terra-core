@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.24.1 - (July 26, 2018)
+------------------
 ### Fixed
 * Fixed trailing comma issue in sv and sv-SE translations
 

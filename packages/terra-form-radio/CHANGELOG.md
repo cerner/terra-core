@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.19.0 - (July 26, 2018)
+------------------
 ### Added
 * Added sv and sv-SE translations
 
