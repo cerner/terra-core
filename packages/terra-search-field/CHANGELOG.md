@@ -3,9 +3,13 @@ Changelog
 
 Unreleased
 ----------
-
 ### Added
 * Add inputRefCallback prop
+
+2.21.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
 
 2.20.0 - (July 19, 2018)
 ------------------

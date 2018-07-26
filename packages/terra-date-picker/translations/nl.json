@@ -1,4 +1,5 @@
 {
+  "Terra.datePicker.dateFormat": "DD/MM/JJJJ",
   "Terra.datePicker.openCalendar": "Agenda openen",
   "Terra.datePicker.today": "Vandaag"
 }
