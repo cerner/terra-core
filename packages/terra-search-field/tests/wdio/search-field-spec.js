@@ -28,6 +28,25 @@ describe('Search Field', () => {
 
     Terra.should.matchScreenshot('scrolled text');
     Terra.should.beAccessible({ rules: ignoredA11y });
+
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-search-field-input-border-bottom-left-radius': '1em',
+        '--terra-search-field-input-border-top-left-radius': '1em',
+        '--terra-search-field-button-border-bottom-right-radius': '1em',
+        '--terra-search-field-button-border-top-right-radius': '1em',
+        '--terra-search-field-button-border': '2px dotted red',
+        '--terra-search-field-button-margin-bottom': '10px',
+        '--terra-search-field-button-margin-left': '-10px',
+        '--terra-search-field-button-margin-right': '10px',
+        '--terra-search-field-button-margin-top': '10px',
+        '--terra-search-field-input-margin-bottom': '10px',
+        '--terra-search-field-input-margin-left': '10px',
+        '--terra-search-field-input-margin-right': '10px',
+        '--terra-search-field-input-margin-top': '10px',
+      },
+    });
   });
 
   describe('Block', () => {
@@ -236,5 +255,19 @@ describe('Search Field', () => {
     });
 
     Terra.should.matchScreenshot('extended search');
+  });
+
+  describe('Search Field in Focus', () => {
+    before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-focus'));
+
+    Terra.should.matchScreenshot('empty');
+
+    it('should click button to focus search field', () => {
+      browser.waitForVisible('#search-field-focus-button');
+      browser.click('#search-field-focus-button');
+    });
+
+    Terra.should.matchScreenshot('with focus');
+    Terra.should.beAccessible({ rules: ignoredA11y });
   });
 });

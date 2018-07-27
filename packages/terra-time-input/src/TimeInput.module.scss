@@ -46,6 +46,13 @@
         box-shadow: var(--terra-time-input-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
       }
     }
+
+    &.disabled {
+      background-color: var(--terra-form-input-disabled-background-color, rgba(111, 116, 119, 0.05));
+      border: var(--terra-form-input-disabled-border, 1px solid #dedfe0);
+      color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
+      opacity: var(--terra-form-input-disabled-opacity);
+    }
   }
 
   .time-input-group {
@@ -75,9 +82,7 @@
     box-sizing: border-box;
     color: var(--terra-time-input-color, #000);
     display: table;
-    font-size: var(--terra-time-input-font-size, 1em);
     height: var(--terra-time-input-mobile-height, 1.857rem);
-    line-height: var(--terra-time-input-line-height, 1.429);
     min-width: var(--terra-time-input-width-input, 3.57em);
     padding-bottom: var(--terra-time-input-input-padding-bottom, 0.357em);
     padding-left: var(--terra-time-input-input-padding-left, 0.357em);
@@ -103,6 +108,7 @@
     }
 
     &.desktop {
+      background-color: transparent;
       background-size: 0 0;
       border: 0;
       display: inline-block;
@@ -174,8 +180,17 @@
     text-align: center;
     width: auto;
 
+    &:hover {
+      border-color: transparent;
+    }
+
     &.focused {
       background-color: var(--terra-time-input-desktop-focused-input-background, rgba(139, 194, 249, 0.3));
+    }
+
+    &[disabled] {
+      background-color: transparent;
+      border-color: transparent;
     }
   }
 

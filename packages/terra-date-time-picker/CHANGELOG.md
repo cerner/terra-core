@@ -3,7 +3,30 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.24.1 - (July 26, 2018)
+------------------
 ### Changed
+* Patch dependency version bump
+
+2.24.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+
+### Fixed
+* Resolve issue where disabled component doesn't disable time clarification
+
+2.23.0 - (July 19, 2018)
+------------------
+### Changed
+* Add .module extension to SCSS file(s)
+* Use datepicker that consumes new form inputs.
+
+2.22.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 * Required props no longer set a default prop
 

@@ -5,7 +5,7 @@ import 'terra-base/lib/baseStyles';
 import DatePicker from 'terra-date-picker';
 import TimeInput from 'terra-time-input';
 import DateUtil from 'terra-date-picker/lib/DateUtil';
-import styles from './DateTimePicker.scss';
+import styles from './DateTimePicker.module.scss';
 import DateTimeUtils from './DateTimeUtils';
 import TimeClarification from './_TimeClarification';
 
@@ -361,6 +361,7 @@ class DateTimePicker extends React.Component {
   renderTimeClarification() {
     return (
       <TimeClarification
+        disabled={this.props.disabled}
         isOpen={this.state.isTimeClarificationOpen}
         isOffsetButtonHidden={!this.state.isAmbiguousTime}
         onDaylightSavingButtonClick={this.handleDaylightSavingButtonClick}

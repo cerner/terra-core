@@ -129,6 +129,21 @@ describe('DateTimePicker', () => {
     }
   });
 
+  describe('Time Clarification Dialog Disabled', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-dst-disabled');
+      browser.click('input[name="terra-time-hour-input"]');
+      browser.click('input[name="terra-time-minute-input"]');
+      browser.waitForVisible('[class*="time-clarification"]', 1000);
+      browser.click('[class*="button-daylight"]');
+      browser.click('#date-time-picker-toggler');
+    });
+
+    const ignoredDisabledAlly = Object.assign({ 'color-contrast': { enabled: false } }, ignoredA11y);
+    Terra.should.beAccessible({ rules: ignoredDisabledAlly });
+    Terra.should.matchScreenshot({ viewports });
+  });
+
   describe('OnChange', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-on-change');

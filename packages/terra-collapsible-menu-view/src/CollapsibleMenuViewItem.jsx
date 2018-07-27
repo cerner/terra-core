@@ -5,7 +5,7 @@ import Button from 'terra-button';
 import ButtonGroup from 'terra-button-group';
 import 'terra-base/lib/baseStyles';
 import Menu from './_CollapsibleMenu';
-import styles from './CollapsibleMenuView.scss';
+import styles from './CollapsibleMenuView.module.scss';
 
 const cx = classNames.bind(styles);
 

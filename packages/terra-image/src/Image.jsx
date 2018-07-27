@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Image.scss';
+import styles from './Image.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -45,10 +45,13 @@ const propTypes = {
   onError: PropTypes.func,
 };
 
+/* eslint-disable react/default-props-match-prop-types */
 const defaultProps = {
   variant: 'default',
   isFluid: false,
+  alt: ' ',
 };
+/* eslint-enable react/default-props-match-prop-types */
 
 class Image extends React.Component {
   constructor(props) {

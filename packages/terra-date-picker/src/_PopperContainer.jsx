@@ -2,7 +2,7 @@ import React from 'react';
 import { Portal } from 'react-portal';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './_PopperContainer.scss';
+import styles from './_PopperContainer.module.scss';
 
 const cx = classNames.bind(styles);
 

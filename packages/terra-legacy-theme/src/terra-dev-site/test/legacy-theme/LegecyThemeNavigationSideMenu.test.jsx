@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../scss/scoped-theme.scss';
-import './LegacyThemeNavigationSideMenu.scss';
+import './LegacyThemeNavigationSideMenu.module.scss';
 
 const NavigationSideMenuThemeExamples = () => (
   <div className="terra-legacy-theme legacy-theme-test">

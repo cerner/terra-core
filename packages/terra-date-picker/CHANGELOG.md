@@ -3,7 +3,29 @@ Changelog
 
 Unreleased
 ----------
+
+2.24.1 - (July 26, 2018)
+------------------
+### Fixed
+* Fixed trailing comma issue in sv and sv-SE translations
+
+2.24.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+* Placeholder text is now localized
+
+2.23.0 - (July 19, 2018)
+------------------
 ### Changed
+* Add .module extension to SCSS file(s)
+* Replaced the legacy form input with the new terra-form-input package
+* Fixed Focus Styles on the input element
+
+2.22.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 * Formatting changes per eslint v4 update
 * Removed unused state format key
 

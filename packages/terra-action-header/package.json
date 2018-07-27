@@ -1,7 +1,7 @@
 {
   "name": "terra-action-header",
   "main": "lib/ActionHeader.js",
-  "version": "1.12.0",
+  "version": "1.15.0",
   "description": "The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.",
   "repository": {
     "type": "git",
@@ -28,11 +28,11 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^2.16.0",
-    "terra-button-group": "^2.16.0",
-    "terra-collapsible-menu-view": "^3.10.0",
-    "terra-doc-template": "^1.9.0",
-    "terra-icon": "^2.16.0",
+    "terra-button": "^2.18.0",
+    "terra-button-group": "^2.18.0",
+    "terra-collapsible-menu-view": "^3.13.0",
+    "terra-doc-template": "^1.11.0",
+    "terra-icon": "^2.18.0",
     "terra-mixins": "^1.16.0"
   },
   "scripts": {

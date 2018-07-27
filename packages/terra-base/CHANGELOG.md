@@ -3,11 +3,25 @@ Changelog
 
 Unreleased
 ----------
+
+3.18.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE locale data
+
+3.17.0 - (July 19, 2018)
+------------------
+### Added
+* Added 'Segoe UI' to font stack just before Arial
+
+3.16.0 - (July 17, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+* Formatting changes per eslint v4 update
+
 ### Added
 * Added themeable variable for setting a background styles
-
-### Changed
-* Formatting changes per eslint v4 update
 
 3.15.0 - (July 10, 2018)
 ------------------

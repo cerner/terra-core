@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import Control from 'terra-form/lib/Control';
 import 'terra-base/lib/baseStyles';
 import Menu from './_CollapsibleMenu';
-import styles from './CollapsibleMenuView.scss';
+import styles from './CollapsibleMenuView.module.scss';
 
 const cx = classNames.bind(styles);
 

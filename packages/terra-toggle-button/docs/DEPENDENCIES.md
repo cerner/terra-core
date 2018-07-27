@@ -5,10 +5,10 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-button | ^2.16.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-doc-template | ^1.9.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-icon | ^2.16.0 | ^16.2.0 | terra-icon |
-| terra-toggle | ^2.15.0 | ^16.2.0 | Toggle component that transitions content in and out. |
+| terra-button | ^2.18.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-doc-template | ^1.11.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-icon | ^2.18.0 | ^16.2.0 | terra-icon |
+| terra-toggle | ^2.17.0 | ^16.2.0 | Toggle component that transitions content in and out. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

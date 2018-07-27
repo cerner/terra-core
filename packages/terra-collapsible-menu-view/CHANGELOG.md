@@ -3,12 +3,26 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.13.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+
+3.12.0 - (July 19, 2018)
+------------------
+### Changed
+* Add .module extension to SCSS file(s)
+
+3.11.0 - (July 17, 2018)
+------------------
 ### Added
 * Added themeable variables
 
 ### Changed
 * Formatting changes per eslint v4 update
 * Required props no longer set a default prop
+* Minor dependency version bump
 
 3.10.0 - (July 10, 2018)
 ------------------

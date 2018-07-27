@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'xfc';
 import './Provider.scss';
+import './ProviderIframe.module.scss';
 
 class OnReadyProvider extends React.Component {
   componentDidMount() {
