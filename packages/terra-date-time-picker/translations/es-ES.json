@@ -1,6 +1,6 @@
 {
-  "Terra.dateTimePicker.timeClarification.title": "Time Clarification",
-  "Terra.dateTimePicker.timeClarification.message": "The time selected occurs during the transition from Daylight Saving Time to Standard Time. Would you like to enter this before or after the time change from Daylight Saving to Standard time?",
-  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Before (Daylight Saving)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "After (Standard Time)"
+  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Antes (horario de ahorro de energía)",
+  "Terra.dateTimePicker.timeClarification.button.standardTime": "Después (hora estándar)",
+  "Terra.dateTimePicker.timeClarification.message": "La hora seleccionada coincide con la transición del horario de ahorro de energía al horario estándar. ¿Desea escribir esta información antes o después del cambio de horario de ahorro de energía a horario estándar?",
+  "Terra.dateTimePicker.timeClarification.title": "Aclaración horaria"
 }
