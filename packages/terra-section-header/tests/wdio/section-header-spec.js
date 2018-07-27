@@ -145,4 +145,81 @@ describe('SectionHeader', () => {
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
+
+  describe('Transparent Section Header', () => {
+    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/transparent-section-header'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
+
+    describe('Hovered - Interactable Transparent Section Header', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-section-header/section-header/transparent-on-click-section-header');
+        browser.moveToObject('[data-id="section-header"]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-transparent-section-header-hover-background': 'red',
+          '--terra-transparent-section-header-hover-border-bottom': '10px dashed red',
+          '--terra-transparent-section-header-hover-border-left': '10px dashed red',
+          '--terra-transparent-section-header-hover-border-right': '10px dashed red',
+          '--terra-transparent-section-header-hover-border-top': '10px dashed red',
+          '--terra-transparent-section-header-hover-box-shadow': 'inset 5px 5px 5px red',
+          '--terra-transparent-section-header-hover-color': 'red',
+        },
+      });
+    });
+
+    describe('Keyboard Focus - Interactable Transparent Section Header', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-section-header/section-header/transparent-on-click-section-header');
+        browser.keys('Tab');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-transparent-section-header-focus-background': 'green',
+          '--terra-transparent-section-header-focus-border-bottom': '10px dashed green',
+          '--terra-transparent-section-header-focus-border-left': '10px dashed green',
+          '--terra-transparent-section-header-focus-border-right': '10px dashed green',
+          '--terra-transparent-section-header-focus-border-top': '10px dashed green',
+          '--terra-transparent-section-header-focus-box-shadow': 'inset 5px 5px 5px green',
+          '--terra-transparent-section-header-focus-color': 'green',
+        },
+      });
+    });
+
+    describe('Active - Interactable Transparent Section Header', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-section-header/section-header/transparent-on-click-section-header');
+        browser.moveToObject('[data-id="section-header"]');
+        browser.buttonDown('[data-id="section-header"]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-transparent-section-header-active-background': 'purple',
+          '--terra-transparent-section-header-active-border-bottom': '10px dashed purple',
+          '--terra-transparent-section-header-active-border-left': '10px dashed purple',
+          '--terra-transparent-section-header-active-border-right': '10px dashed purple',
+          '--terra-transparent-section-header-active-border-top': '10px dashed purple',
+          '--terra-transparent-section-header-active-box-shadow': 'inset 5px 5px 5px purple',
+          '--terra-transparent-section-header-active-color': 'purple',
+        },
+      });
+    });
+  });
 });
