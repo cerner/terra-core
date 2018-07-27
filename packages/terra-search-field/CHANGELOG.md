@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.22.0 - (July 26, 2018)
+------------------
+### Added
+* Add inputRefCallback prop
+
 2.21.0 - (July 25, 2018)
 ------------------
 ### Added
