@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../../Button';
 import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
+import Button from '../../../Button';
 
 const spacingStyle = { padding: '20px' };
 

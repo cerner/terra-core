@@ -1,7 +1,7 @@
 import React from 'react';
+import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
 
 import Button from '../../../../Button';
-import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
 
 const UtilityButton = () => (
   <div id="utility" style={{ padding: '5px' }}>
