@@ -56,6 +56,20 @@ viewports.forEach((viewport) => {
       Terra.should.matchScreenshot();
     });
 
+    describe('Next Enabled Previous Disabled', () => {
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/next-disabled-previous-action-header'));
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+    });
+
+    describe('Previous Enabled Next Disabled', () => {
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/previous-disabled-next-action-header'));
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+    });
+
     describe('Wrapped Title', () => {
       before(() => browser.url('/#/raw/tests/terra-action-header/action-header/wrapped-title-action-header'));
 

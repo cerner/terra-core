@@ -71,6 +71,18 @@ describe('ActionHeader', () => {
     const wrapper = shallow(actionHeader, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render an action header with title and next button but without previous button', () => {
+    const actionHeader = <ActionHeader title="Action Header" onNext={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an action header with title and previous button but without next buttons', () => {
+    const actionHeader = <ActionHeader title="Action Header" onPrevious={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 
 it('throws error on missing locale prop in Base', () => {

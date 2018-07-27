@@ -293,3 +293,77 @@ exports[`ActionHeader should render an action header with title 1`] = `
   title="Action Header"
 />
 `;
+
+exports[`ActionHeader should render an action header with title and next button but without previous button 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={
+    <div
+      className="left-buttons"
+    >
+      <ButtonGroup
+        selectedKeys={Array []}
+      >
+        <ButtonGroupButton
+          icon={
+            <span
+              className="header-icon previous"
+            />
+          }
+          isDisabled={true}
+          text="Previous"
+        />
+        <ButtonGroupButton
+          icon={
+            <span
+              className="header-icon next"
+            />
+          }
+          isDisabled={false}
+          onClick={[Function]}
+          text="Next"
+        />
+      </ButtonGroup>
+    </div>
+  }
+  title="Action Header"
+/>
+`;
+
+exports[`ActionHeader should render an action header with title and previous button but without next buttons 1`] = `
+<ActionHeaderContainer
+  endContent={null}
+  level={1}
+  startContent={
+    <div
+      className="left-buttons"
+    >
+      <ButtonGroup
+        selectedKeys={Array []}
+      >
+        <ButtonGroupButton
+          icon={
+            <span
+              className="header-icon previous"
+            />
+          }
+          isDisabled={false}
+          onClick={[Function]}
+          text="Previous"
+        />
+        <ButtonGroupButton
+          icon={
+            <span
+              className="header-icon next"
+            />
+          }
+          isDisabled={true}
+          text="Next"
+        />
+      </ButtonGroup>
+    </div>
+  }
+  title="Action Header"
+/>
+`;
