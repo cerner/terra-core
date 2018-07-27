@@ -459,10 +459,12 @@ class Frame extends React.Component {
           onKeyDown={this.handleKeyDown}
           ref={(select) => { this.select = select; }}
         >
+          {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
           <div
             className={cx(['display', { 'is-disabled': disabled }])}
             onMouseDown={this.openDropdown}
             onFocus={this.handleFocus}
+            role="textbox"
           >
             {this.getDisplay()}
           </div>

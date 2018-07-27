@@ -18,6 +18,7 @@ exports[`Frame should render a disabled dropdown variant 1`] = `
       className="display is-disabled"
       onFocus={[Function]}
       onMouseDown={[Function]}
+      role="textbox"
     >
       <input
         aria-label="search"
@@ -68,6 +69,7 @@ exports[`Frame should render a disabled list variant 1`] = `
       className="display is-disabled"
       onFocus={[Function]}
       onMouseDown={[Function]}
+      role="textbox"
     >
       <input
         aria-label="search"
@@ -123,6 +125,7 @@ exports[`Frame should render a dropdown variant 1`] = `
       className="display"
       onFocus={[Function]}
       onMouseDown={[Function]}
+      role="textbox"
     >
       <input
         aria-label="search"
@@ -174,6 +177,7 @@ exports[`Frame should render a dropdown variant with a placeholder 1`] = `
       className="display"
       onFocus={[Function]}
       onMouseDown={[Function]}
+      role="textbox"
     >
       <input
         aria-label="search"
@@ -225,6 +229,7 @@ exports[`Frame should render a list variant 1`] = `
       className="display"
       onFocus={[Function]}
       onMouseDown={[Function]}
+      role="textbox"
     >
       <input
         aria-label="search"
@@ -279,6 +284,7 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
       className="display"
       onFocus={[Function]}
       onMouseDown={[Function]}
+      role="textbox"
     >
       <input
         aria-label="search"
