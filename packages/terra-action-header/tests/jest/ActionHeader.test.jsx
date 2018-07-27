@@ -72,13 +72,13 @@ describe('ActionHeader', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render an action header with title and next button but without previous button', () => {
+  it('should render an action header with title, enabled next button, and disabled previous button', () => {
     const actionHeader = <ActionHeader title="Action Header" onNext={() => {}} />;
     const wrapper = shallow(actionHeader, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render an action header with title and previous button but without next buttons', () => {
+  it('should render an action header with title, enabled previous button, and disabled next button', () => {
     const actionHeader = <ActionHeader title="Action Header" onPrevious={() => {}} />;
     const wrapper = shallow(actionHeader, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();

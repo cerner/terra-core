@@ -294,7 +294,7 @@ exports[`ActionHeader should render an action header with title 1`] = `
 />
 `;
 
-exports[`ActionHeader should render an action header with title and next button but without previous button 1`] = `
+exports[`ActionHeader should render an action header with title, enabled next button, and disabled previous button 1`] = `
 <ActionHeaderContainer
   endContent={null}
   level={1}
@@ -331,7 +331,7 @@ exports[`ActionHeader should render an action header with title and next button 
 />
 `;
 
-exports[`ActionHeader should render an action header with title and previous button but without next buttons 1`] = `
+exports[`ActionHeader should render an action header with title, enabled previous button, and disabled next button 1`] = `
 <ActionHeaderContainer
   endContent={null}
   level={1}

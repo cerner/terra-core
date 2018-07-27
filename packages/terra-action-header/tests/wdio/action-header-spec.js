@@ -57,14 +57,14 @@ viewports.forEach((viewport) => {
     });
 
     describe('Next Enabled Previous Disabled', () => {
-      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/next-disabled-previous-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/next-enabled-previous-disabled-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
 
     describe('Previous Enabled Next Disabled', () => {
-      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/previous-disabled-next-action-header'));
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/previous-enabled-next-disabled-action-header'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
