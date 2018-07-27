@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.24.1 - (July 26, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
 2.24.0 - (July 25, 2018)
 ------------------
 ### Added
