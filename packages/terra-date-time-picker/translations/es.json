@@ -1,6 +1,6 @@
 {
-  "Terra.dateTimePicker.timeClarification.title": "Aclaración respecto a la hora",
-  "Terra.dateTimePicker.timeClarification.message": "La hora seleccionada se produce durante el cambio del horario de ahorro de energía a la hora estándar. ¿Desea escribir esta entrada antes o después de dicho cambio?",
   "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Antes (horario de ahorro de energía)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "Después (hora estándar)"
+  "Terra.dateTimePicker.timeClarification.button.standardTime": "Después (hora estándar)",
+  "Terra.dateTimePicker.timeClarification.message": "La hora seleccionada coincide con la transición del horario de ahorro de energía al horario estándar. ¿Desea escribir esta información antes o después del cambio de horario de ahorro de energía a horario estándar?",
+  "Terra.dateTimePicker.timeClarification.title": "Aclaración horaria"
 }

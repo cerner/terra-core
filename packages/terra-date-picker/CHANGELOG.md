@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.24.1 - (July 26, 2018)
+------------------
+### Fixed
+* Fixed trailing comma issue in sv and sv-SE translations
+
 2.24.0 - (July 25, 2018)
 ------------------
 ### Added
@@ -13,6 +18,7 @@ Unreleased
 2.23.0 - (July 19, 2018)
 ------------------
 ### Changed
+* Updated translations
 * Add .module extension to SCSS file(s)
 * Replaced the legacy form input with the new terra-form-input package
 * Fixed Focus Styles on the input element

@@ -5,6 +5,7 @@ exports[`ToggleSectionHeader should call any custom onCLose that is provided by 
   <SectionHeader
     aria-expanded={false}
     isOpen={false}
+    isTransparent={false}
     level={2}
     onClick={[Function]}
     title="custom title"
@@ -23,6 +24,7 @@ exports[`ToggleSectionHeader should call any custom onOpen that is provided by t
   <SectionHeader
     aria-expanded={false}
     isOpen={false}
+    isTransparent={false}
     level={2}
     onClick={[Function]}
     title="custom title"
@@ -181,6 +183,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
 <ToggleSectionHeader
   isAnimated={false}
   isInitiallyOpen={false}
+  isTransparent={false}
   level={2}
   sectionHeaderAttrs={Object {}}
   title="opens on click title"
@@ -189,6 +192,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
     <SectionHeader
       aria-expanded={true}
       isOpen={true}
+      isTransparent={false}
       level={2}
       onClick={[Function]}
       title="opens on click title"
@@ -271,6 +275,7 @@ exports[`ToggleSectionHeader should set sectionHeaderAttrs prop correctly 1`] = 
     aria-expanded={false}
     backgroundColor="red"
     isOpen={false}
+    isTransparent={false}
     level={2}
     onClick={[Function]}
     title="sectionHeaderAttrs props test"
@@ -289,6 +294,7 @@ exports[`ToggleSectionHeader should set the children prop correctly 1`] = `
   <SectionHeader
     aria-expanded={false}
     isOpen={false}
+    isTransparent={false}
     level={2}
     onClick={[Function]}
     title="sectionHeaderAttrs props test"
@@ -307,6 +313,7 @@ exports[`ToggleSectionHeader should set the level prop correctly 1`] = `
   <SectionHeader
     aria-expanded={false}
     isOpen={false}
+    isTransparent={false}
     level={1}
     onClick={[Function]}
     title="sectionHeaderAttrs props test"

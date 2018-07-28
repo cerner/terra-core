@@ -22,6 +22,8 @@ import OnClickSectionHeader from '../example/OnClickSectionHeader';
 import OnClickSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OnClickSectionHeader';
 import AccordionSectionHeader from '../example/AccordionSectionHeader';
 import AccordionSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AccordionSectionHeader';
+import TransparentSectionHeader from '../example/TransparentSectionHeader';
+import TransparentSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TransparentSectionHeader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -57,6 +59,10 @@ const DocPage = () => (
       {
         example: <AccordionSectionHeader />,
         source: AccordionSectionHeaderSrc,
+      },
+      {
+        example: <TransparentSectionHeader />,
+        source: TransparentSectionHeaderSrc,
       },
     ]}
     propsTables={[
