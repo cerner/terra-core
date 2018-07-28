@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated test pages with icons to use a `terra-icon`
+
+### Fixed
+* Fixed the Compact Button test page to display a compact button
 
 2.18.0 - (July 19, 2018)
 ------------------
