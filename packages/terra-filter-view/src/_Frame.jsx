@@ -173,7 +173,7 @@ class Frame extends React.Component {
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
       'aria-label': 'search',
-      className: cx('search-input', { 'right-padding': this.state.isFocused && this.state.searchValue }),
+      className: cx('search-input'),
     };
 
     return <input {...inputAttrs} value={searchValue} />;
@@ -446,14 +446,14 @@ class Frame extends React.Component {
             role="textbox"
           >
             {this.getDisplay()}
+            {/* Render a clear search button when text is present in input */}
+            {this.state.searchValue && this.state.isFocused &&
+              <IconIncomplete
+                className={cx('clear-button')}
+                onClick={this.clearSearch}
+              />
+            }
           </div>
-          {/* Render a clear search button when text is present in input */}
-          {this.state.searchValue && this.state.isFocused &&
-            <IconIncomplete
-              className={cx('clear-button')}
-              onClick={this.clearSearch}
-            />
-          }
           <Button
             className={cx('button')}
             onMouseDown={this.toggleDropdown}

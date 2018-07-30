@@ -17,6 +17,7 @@
   }
 
   .display {
+    align-items: center;
     overflow: hidden; // IE 10
   }
 
@@ -44,11 +45,10 @@
 
   .clear-button {
     color: var(--terra-filter-clear-button-color, #b9bbbc);
+    cursor: default;
     margin-left: 0.3571428571rem;
     margin-right: 0.3571428571rem;
-    position: absolute;
-    right: 30px;
-    top: 7px;
+    margin-top: 0.21428571428571427rem;
   }
 
   .search-input,
@@ -67,11 +67,6 @@
     text-overflow: ellipsis;
     width: auto;
 
-  }
-
-  .right-padding {
-    // Add padding to avoid text from hiding under clear-search button
-    padding: 0 26px 0 0;
   }
 
   // Hides the clear buttons in IE.
