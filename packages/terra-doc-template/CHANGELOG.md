@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed styles not being applied to the Examples header
 
 1.11.0 - (July 19, 2018)
 ------------------
