@@ -4,7 +4,7 @@ import ActionHeader from '../../../ActionHeader';
 
 const ActionHeaderExample = () => (
   <ActionHeader
-    title="Next Enabled Prevous Disabled Action Header"
+    title="Next Enabled Previous Disabled Action Header"
     onNext={() => alert('You clicked next!')}
   />
 );
