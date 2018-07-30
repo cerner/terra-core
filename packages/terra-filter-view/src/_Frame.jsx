@@ -247,17 +247,23 @@ class Frame extends React.Component {
    * Handles the focus event.
    */
   handleFocus(event) {
-    // Show results once input is focused
+    const newState = {};
     if (!this.state.showResults) {
-      this.setState({ showResults: true, isOpen: true });
+      // Show results once input is focused
+      newState.showResults = true;
+      newState.isOpen = true;
+    }
+
+    if (!this.state.isFocused) {
+      newState.isFocused = true;
+    }
+
+    if (Object.keys(newState).length !== 0 && newState.constructor === Object) {
+      this.setState(newState);
     }
 
     if (this.props.disabled) {
       return;
-    }
-
-    if (!this.state.isFocused) {
-      this.setState({ isFocused: true });
     }
 
     if (this.props.onFocus) {
