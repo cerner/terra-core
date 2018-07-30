@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added isTransparent prop to set background to be transparent
 
 1.17.0 - (July 19, 2018)
 ------------------

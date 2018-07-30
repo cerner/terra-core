@@ -1,9 +1,8 @@
 import React from 'react';
+import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
 import Button from '../../../Button';
 
 const spacingStyle = { padding: '20px' };
-const iconStyle = { backgroundColor: 'black' };
-const icon = <svg width="1em" height="1em" style={iconStyle} className="test"><rect width="1em" height="1em" /></svg>;
 
 const NeutralButton = () => (
   <div id="neutral" style={spacingStyle}>
@@ -31,17 +30,17 @@ const DeemphasisButton = () => (
 
 const ActionButton = () => (
   <div id="action" style={spacingStyle}>
-    <Button id="actionActive" text="Action-Active" icon={icon} variant="action" className="is-active" />
+    <Button id="actionActive" text="Action-Active" icon={<IconSquare />} variant="action" className="is-active" />
     <span id="actionActiveFocusSpan" style={spacingStyle}>
-      <Button id="actionActiveFocus" text="Action-Active+Focus" icon={icon} variant="action" className={['is-active', 'is-focused']} />
+      <Button id="actionActiveFocus" text="Action-Active+Focus" icon={<IconSquare />} variant="action" className={['is-active', 'is-focused']} />
     </span>
   </div>);
 
 const UtilityButton = () => (
   <div id="utility" style={spacingStyle}>
-    <Button id="utilityActive" text="Utility-Active" icon={icon} variant="utility" className="is-active" />
+    <Button id="utilityActive" text="Utility-Active" icon={<IconSquare />} variant="utility" className="is-active" />
     <span id="utilityActiveFocusSpan" style={spacingStyle}>
-      <Button id="utilityButtonActiveFocus" text="Utility-Active+Focus" icon={icon} variant="utility" className={['is-active', 'is-focused']} />
+      <Button id="utilityButtonActiveFocus" text="Utility-Active+Focus" icon={<IconSquare />} variant="utility" className={['is-active', 'is-focused']} />
     </span>
   </div>);
 
