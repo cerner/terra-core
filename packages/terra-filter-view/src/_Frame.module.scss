@@ -8,11 +8,11 @@
   }
 
   .select {
-    background-color: var(--terra-filter-background-color, #fff);
-    color: var(--terra-filter-color, #1c1f21);
+    background-color: var(--terra-filter-select-background-color, #fff);
+    color: var(--terra-filter-select-color, #1c1f21);
     display: inline-flex;
-    font-size: var(--terra-filter-font-size, 1.143rem);
-    line-height: var(--terra-filter-line-height, 1.5);
+    font-size: var(--terra-filter-select-font-size, 1.143rem);
+    line-height: var(--terra-filter-select-line-height, 1.5);
     position: relative;
   }
 
@@ -21,7 +21,7 @@
   }
 
   .button {
-    border: 0.071em solid #dedfe0;
+    border: var(--terra-filter-search-button-border, 0.071em solid #dedfe0);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0.25em;
     border-top-left-radius: 0;
@@ -31,19 +31,19 @@
     margin: 0;
 
     &:hover {
-      background-color: #b9bbbc;
-      border-color: #c8cacb;
+      background-color: var(--terra-filter-search-button-hover-background-color, #b9bbbc);
+      border-color: var(--terrra-filter-search-button-hover-border-color, #c8cacb);
     }
 
     &:active {
-      background-color: #6f7477;
-      border-color: #52585b;
+      background-color: var(--terra-filter-search-button-active-background-color, #6f7477);
+      border-color: var(--terra-filter-search-button-active-border-color, #52585b);
       color: #fff;
     }
   }
 
   .clear-button {
-    color: var(terra-filter-clear-button-color, #b9bbbc);
+    color: var(--terra-filter-clear-button-color, #b9bbbc);
     margin-left: 0.3571428571rem;
     margin-right: 0.3571428571rem;
     position: absolute;
@@ -91,9 +91,9 @@
   }
 
   .box {
-    border: var(terra-filter-list-border, 1px solid #dedfe0);
+    border: var(--terra-filter-list-border, 1px solid #dedfe0);
     flex: 1;
-    margin-top: var(terra-filter-list-margin-top, 0.5rem);
+    margin-top: var(--terra-filter-list-margin-top, 0.5rem);
     overflow: auto;
   }
 
@@ -113,8 +113,8 @@
     }
 
     .box {
-      background-color: var(--terra-filter-disabled-background-color, rgba(111, 116, 119, 0.2));
-      border: var(--terra-filter-disabled-border, 1px solid #85898b);
+      background-color: var(--terra-filter-disabled-list-background-color, rgba(111, 116, 119, 0.2));
+      border: var(--terra-filter-disabled-list-border, 1px solid #85898b);
     }
     
   }

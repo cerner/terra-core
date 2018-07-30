@@ -16,6 +16,13 @@ describe('Filter View', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('selected-option');
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-filter-list-border': '5px dotted #85898b',
+          '--terra-filter-list-margin-top': '5rem',
+        },
+      });
     });
 
     describe('default should select an option by pressing enter', () => {
@@ -92,6 +99,14 @@ describe('Filter View', () => {
 
     it('should not accept clicks', () => {
       expect(browser.click.bind(browser, '[class*="button"]')).to.throw(Error);
+    });
+
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-filter-disabled-list-border': '5px dotted #85898b',
+        '--terra-filter-disabled-list-background-color': '#dedfe0',
+      },
     });
   });
 

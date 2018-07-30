@@ -74,10 +74,10 @@ describe('Filter View', () => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-filter-background-color': '#85898b',
-          '--terra-filter-color': '#fff',
-          '--terra-filter-font-size': '2rem',
-          '--terra-filter-line-height': '2',
+          '--terra-filter-select-background-color': '#85898b',
+          '--terra-filter-select-color': '#fff',
+          '--terra-filter-select-font-size': '2rem',
+          '--terra-filter-select-line-height': '2',
           '--terra-filter-clear-button-color': '#85898b',
           '--terra-filter-search-font-size': '2rem',
           '--terra-filter-search-margin-top': '1rem',
@@ -87,6 +87,7 @@ describe('Filter View', () => {
           '--terra-filter-padding-left': '5px',
           '--terra-filter-padding-right': '5px',
           '--terra-filter-padding-top': '5px',
+          '--terra-filter-search-button-border': '5px solid #dedfe0',
         },
       });
     });
