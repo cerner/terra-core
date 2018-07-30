@@ -4,9 +4,9 @@ exports[`Snapshots renders a default FilterView 1`] = `
 <Select
   disableAutoSearch={false}
   disabled={false}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -16,9 +16,9 @@ exports[`Snapshots renders a default FilterView with a default value 1`] = `
   defaultValue="Test"
   disableAutoSearch={false}
   disabled={false}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -27,10 +27,10 @@ exports[`Snapshots renders a default FilterView with a placeholder 1`] = `
 <Select
   disableAutoSearch={false}
   disabled={false}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   placeholder="Test"
   searchDelay={250}
-  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -39,9 +39,9 @@ exports[`Snapshots renders a disabled default FilterView 1`] = `
 <Select
   disableAutoSearch={false}
   disabled={true}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -51,9 +51,9 @@ exports[`Snapshots renders a disabled default FilterView with a default value 1`
   defaultValue="default"
   disableAutoSearch={false}
   disabled={true}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="dropdown"
 />
 `;
@@ -62,9 +62,9 @@ exports[`Snapshots renders a disabled list FilterView 1`] = `
 <Select
   disableAutoSearch={false}
   disabled={true}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -74,9 +74,9 @@ exports[`Snapshots renders a disabled list FilterView with a default value 1`] =
   defaultValue="default"
   disableAutoSearch={false}
   disabled={true}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -85,9 +85,9 @@ exports[`Snapshots renders a list FilterView 1`] = `
 <Select
   disableAutoSearch={false}
   disabled={false}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -97,9 +97,9 @@ exports[`Snapshots renders a list FilterView with a default value 1`] = `
   defaultValue="Test"
   disableAutoSearch={false}
   disabled={false}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -108,10 +108,10 @@ exports[`Snapshots renders a list FilterView with a placeholder 1`] = `
 <Select
   disableAutoSearch={false}
   disabled={false}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   placeholder="Test"
   searchDelay={250}
-  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -125,9 +125,9 @@ exports[`Snapshots renders a list FilterView with dropdownAttrs spread 1`] = `
       "onClick": [Function],
     }
   }
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
-  showResultsInitially={true}
   variant="list"
 />
 `;
@@ -136,6 +136,7 @@ exports[`Snapshots renders a list FilterView without results initially 1`] = `
 <Select
   disableAutoSearch={false}
   disabled={false}
+  hideResultsInitially={false}
   minimumSearchTextLength={2}
   searchDelay={250}
   showResultsInitially={false}

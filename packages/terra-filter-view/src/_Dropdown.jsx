@@ -30,7 +30,7 @@ const propTypes = {
   /**
    * The attachment target.
    */
-  target: PropTypes.shape({}).isRequired,
+  target: PropTypes.instanceOf(Element).isRequired,
 };
 
 const defaultProps = {

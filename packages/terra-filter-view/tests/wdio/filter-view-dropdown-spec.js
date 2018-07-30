@@ -22,7 +22,7 @@ describe('Filter View', () => {
       Terra.should.matchScreenshot('open-dropdown', { selector: '#root' });
 
       it('should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('#terra-select-option-red');
         // Reopen dropdown to see selection
         browser.click('button');
       });

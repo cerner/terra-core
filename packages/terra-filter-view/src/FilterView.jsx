@@ -14,11 +14,11 @@ const propTypes = {
    */
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
-   * Whether the select is disabled.
+   * Whether the filter is disabled.
    */
   disabled: PropTypes.bool,
   /**
-   * When true, will disable the auto-search.
+   * Callback function triggered when on an invalid search. function(value)
    */
   disableAutoSearch: PropTypes.bool,
   /**
@@ -60,7 +60,7 @@ const propTypes = {
   /**
    * Controls whether or not all results are shown on initial load or after input focus.
    */
-  showResultsInitially: PropTypes.bool,
+  hideResultsInitially: PropTypes.bool,
   /**
    * How long the component should wait (in milliseconds) after input before performing an automatic search.
    */
@@ -89,7 +89,7 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   searchDelay: 250,
-  showResultsInitially: true,
+  hideResultsInitially: false,
   variant: Variants.DROPDOWN,
 };
 

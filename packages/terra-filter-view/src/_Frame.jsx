@@ -16,15 +16,15 @@ const Icon = <IconSearch />;
 
 const propTypes = {
   /**
-   * Whether the select is disabled.
+   * Whether the filter is disabled.
    */
   disabled: PropTypes.bool,
   /**
-   * When true, will disable the auto-search.
+   * Whether the search callback is called automatically.
    */
   disableAutoSearch: PropTypes.bool,
   /**
-   * The select display.
+   * The filter input display.
    */
   display: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
@@ -36,7 +36,7 @@ const propTypes = {
    */
   dropdownAttrs: PropTypes.shape({}),
   /**
-   * Whether the select is in an invalid state.
+   * Whether the filter is in an invalid state.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -60,7 +60,7 @@ const propTypes = {
    */
   onFocus: PropTypes.func,
   /**
-   * A callback to indicate an invalid search.
+   * Callback function triggered when on an invalid search.
    */
   onInvalidSearch: PropTypes.func,
   /**
@@ -80,19 +80,19 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
-   * how long the component should wait (in milliseconds) after input before performing an automatic search.
+   * How long the component should wait (in milliseconds) after input before performing an automatic search.
    */
   searchDelay: PropTypes.number,
   /**
    * Controls whether or not all results are shown on initial load or after input focus.
    */
-  showResultsInitially: PropTypes.bool,
+  hideResultsInitially: PropTypes.bool,
   /**
-   * The select value.
+   * The selected value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
-   * The behavior of the select.
+   * The behavior of the filter.
    */
   variant: PropTypes.oneOf([
     Variants.DROPDOWN,
@@ -122,12 +122,11 @@ class Frame extends React.Component {
     super(props);
 
     this.state = {
-      excludeBlur: false,
-      isOpen: props.variant === Variants.LIST && props.showResultsInitially,
+      isOpen: props.variant === Variants.LIST && !props.hideResultsInitially,
       isFocused: false,
       isPositioned: false,
       searchValue: '',
-      showResults: props.showResultsInitially,
+      showResults: !props.hideResultsInitially,
     };
 
     this.setInput = this.setInput.bind(this);
@@ -141,8 +140,6 @@ class Frame extends React.Component {
     this.positionDropdown = this.positionDropdown.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -185,12 +182,11 @@ class Frame extends React.Component {
   /**
    * Clears the search-bar content.
    */
-  clearSearch() {
+  clearSearch(event) {
+    event.preventDefault();
     if (this.state.searchValue !== '') {
-      this.setState({ searchValue: '', excludeBlur: false });
+      this.setState({ searchValue: '' });
     }
-    // Refocus input after clearing
-    this.input.focus();
   }
 
   /**
@@ -241,9 +237,7 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
-    if (!this.state.excludeBlur) {
-      this.closeDropdown();
-    }
+    this.closeDropdown();
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
@@ -257,6 +251,7 @@ class Frame extends React.Component {
     if (!this.state.showResults) {
       this.setState({ showResults: true, isOpen: true });
     }
+
     if (this.props.disabled) {
       return;
     }
@@ -298,22 +293,6 @@ class Frame extends React.Component {
     event.preventDefault();
     if (this.props.variant !== Variants.LIST) {
       this.openDropdown();
-    }
-  }
-  /**
-   * Removes exception made for clear-button when cursor leaves the clear-button.
-   */
-  handleMouseLeave() {
-    if (this.state.excludeBlur) {
-      this.setState({ excludeBlur: false });
-    }
-  }
-  /**
-   * Allows the clear-button to be clicked by not losing focus of input.
-   */
-  handleMouseEnter() {
-    if (!this.state.excludeBlur) {
-      this.setState({ excludeBlur: true });
     }
   }
   /**
@@ -419,7 +398,7 @@ class Frame extends React.Component {
       optionFilter,
       placeholder,
       searchDelay,
-      showResultsInitially,
+      hideResultsInitially,
       variant,
       value,
       ...customProps
@@ -443,12 +422,12 @@ class Frame extends React.Component {
 
     return (
       <div
-        className={cx(['select-parent', { 'is-disabled': disabled }])}
+        {...customProps}
+        className={cx('select-parent', { 'is-disabled': disabled })}
         onMouseDown={this.handleMouseDown}
         onBlur={this.handleBlur}
       >
         <div
-          {...customProps}
           role="combobox"
           aria-controls={this.state.isOpen ? ariaOwns : undefined}
           aria-disabled={!!disabled}
@@ -461,7 +440,7 @@ class Frame extends React.Component {
         >
           {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
           <div
-            className={cx(['display', { 'is-disabled': disabled }])}
+            className={cx('display', { 'is-disabled': disabled })}
             onMouseDown={this.openDropdown}
             onFocus={this.handleFocus}
             role="textbox"
@@ -473,12 +452,10 @@ class Frame extends React.Component {
             <IconIncomplete
               className={cx('clear-button')}
               onClick={this.clearSearch}
-              onMouseEnter={this.handleMouseEnter}
-              onMouseLeave={this.handleMouseLeave}
             />
           }
           <Button
-            className={cx(['button'])}
+            className={cx('button')}
             onMouseDown={this.toggleDropdown}
             icon={Icon}
             text="Search"
@@ -514,7 +491,7 @@ class Frame extends React.Component {
         {variant === Variants.LIST &&
           <div
             {...dropdownAttrs}
-            className={cx(['box'])}
+            className={cx('box')}
             id="terra-filter-list"
           >
             {dropdown && this.state.showResults && dropdown({

@@ -59,8 +59,10 @@ exports[`Frame should render a disabled list variant 1`] = `
   onMouseDown={[Function]}
 >
   <div
+    aria-controls="terra-filter-list"
     aria-disabled={true}
-    aria-expanded={false}
+    aria-expanded={true}
+    aria-owns="terra-filter-list"
     className="select list"
     onKeyDown={[Function]}
     role="combobox"
@@ -219,8 +221,10 @@ exports[`Frame should render a list variant 1`] = `
   onMouseDown={[Function]}
 >
   <div
+    aria-controls="terra-filter-list"
     aria-disabled={false}
-    aria-expanded={false}
+    aria-expanded={true}
+    aria-owns="terra-filter-list"
     className="select list"
     onKeyDown={[Function]}
     role="combobox"
@@ -274,8 +278,10 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
   onMouseDown={[Function]}
 >
   <div
+    aria-controls="terra-filter-list"
     aria-disabled={false}
-    aria-expanded={false}
+    aria-expanded={true}
+    aria-owns="terra-filter-list"
     className="select list"
     onKeyDown={[Function]}
     role="combobox"

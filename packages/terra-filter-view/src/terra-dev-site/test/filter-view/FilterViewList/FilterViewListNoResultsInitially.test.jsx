@@ -3,7 +3,7 @@ import FilterView from '../../../../FilterView';
 
 function FilterViewListNoResultsInitially() {
   return (
-    <FilterView showResultsInitially={false} variant="list" >
+    <FilterView hideResultsInitially variant="list" >
       <FilterView.Option value="red" display="Red" key="red" />
       <FilterView.Option value="green" display="Green" key="green" />
       <FilterView.Option value="blue" display="Blue" key="blue" />
