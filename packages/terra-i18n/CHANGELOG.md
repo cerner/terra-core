@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated translations
 
 2.16.0 - (July 25, 2018)
 ------------------

@@ -1,7 +1,7 @@
 {
-  "Terra.demographicsBanner.dateOfBirth": "DOB",
-  "Terra.demographicsBanner.deceased": "Deceased",
-  "Terra.demographicsBanner.gestationalAge": "GA",
+  "Terra.demographicsBanner.dateOfBirth": "Fecha de nacimiento",
+  "Terra.demographicsBanner.deceased": "Fallecido/a",
+  "Terra.demographicsBanner.gestationalAge": "EG",
   "Terra.demographicsBanner.noDataProvided": "--",
-  "Terra.demographicsBanner.postMenstrualAge": "PMA"
+  "Terra.demographicsBanner.postMenstrualAge": "Edad postmenstrual"
 }
