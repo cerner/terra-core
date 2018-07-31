@@ -40,11 +40,11 @@ const propTypes = {
    */
   onMinimize: PropTypes.func,
   /**
-   * Callback function for when the next button is clicked. The previous-next button group will not display if neither this or onPrevious are set.
+   * Callback function for when the next button is clicked. The previous-next button group will display if either this or onPrevious is set but the button for the one not set will be disabled.
    */
   onNext: PropTypes.func,
   /**
-   * Callback function for when the previous button is clicked. The previous-next button group will not display if neither this or onNext are set.
+   * Callback function for when the previous button is clicked. The previous-next button group will display if either this or onNext is set but the button for the one not set will be disabled.
    */
   onPrevious: PropTypes.func,
   /**
@@ -110,8 +110,20 @@ const ActionHeader = ({
   const previousNextButtonGroup = (onPrevious || onNext) ?
     (
       <ButtonGroup>
-        <ButtonGroup.Button icon={<span className={cx(['header-icon', 'previous'])} />} text={previousText} onClick={onPrevious} key="ActionHeaderPrevious" />
-        <ButtonGroup.Button icon={<span className={cx(['header-icon', 'next'])} />} text={nextText} onClick={onNext} key="ActionHeaderNext" />
+        <ButtonGroup.Button
+          icon={<span className={cx(['header-icon', 'previous'])} />}
+          text={previousText}
+          onClick={onPrevious}
+          key="ActionHeaderPrevious"
+          isDisabled={onPrevious === undefined}
+        />
+        <ButtonGroup.Button
+          icon={<span className={cx(['header-icon', 'next'])} />}
+          text={nextText}
+          onClick={onNext}
+          key="ActionHeaderNext"
+          isDisabled={onNext === undefined}
+        />
       </ButtonGroup>
     ) :
     null;
