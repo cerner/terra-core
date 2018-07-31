@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
-import { KeyCodes } from './_constants';
-import NoResults from './_NoResults';
-import Util from './_MenuUtil';
-import styles from './_Menu.module.scss';
+import { KeyCodes } from './_FilterConstants';
+import NoResults from './_FilterNoResults';
+import Util from './_FilterMenuUtil';
+import styles from './_FilterMenu.module.scss';
 
 const cx = classNames.bind(styles);
 

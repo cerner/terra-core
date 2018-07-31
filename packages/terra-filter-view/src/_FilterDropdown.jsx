@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Hookshot from 'terra-hookshot';
 import classNames from 'classnames/bind';
-import styles from './_Dropdown.module.scss';
+import styles from './_FilterDropdown.module.scss';
 
 const cx = classNames.bind(styles);
 

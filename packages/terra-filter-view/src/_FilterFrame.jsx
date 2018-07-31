@@ -5,10 +5,10 @@ import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import IconIncomplete from 'terra-icon/lib/icon/IconIncomplete';
-import { KeyCodes, Variants } from './_constants';
-import Dropdown from './_Dropdown';
-import Util from './_FrameUtil';
-import styles from './_Frame.module.scss';
+import { KeyCodes, Variants } from './_FilterConstants';
+import Dropdown from './_FilterDropdown';
+import Util from './_FilterFrameUtil';
+import styles from './_FilterFrame.module.scss';
 
 const cx = classNames.bind(styles);
 

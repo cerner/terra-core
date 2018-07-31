@@ -1,4 +1,4 @@
-import FrameUtil from '../../src/_FrameUtil';
+import FrameUtil from '../../src/_FilterFrameUtil';
 
 describe('FrameUtil', () => {
   describe('dropdownStyle', () => {

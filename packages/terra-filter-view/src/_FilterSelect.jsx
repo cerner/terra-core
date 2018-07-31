@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DropdownMenu from './_Menu';
-import Frame from './_Frame';
-import Option from './_Option';
-import OptGroup from './_OptGroup';
-import Util from './_SelectUtil';
+import DropdownMenu from './_FilterMenu';
+import Frame from './_FilterFrame';
+import Option from './_FilterOption';
+import OptGroup from './_FilterOptGroup';
+import Util from './_FilterSelectUtil';
 
 const propTypes = {
   /**

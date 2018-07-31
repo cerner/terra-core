@@ -6,8 +6,8 @@ import { name } from '../../../../package.json';
 
 // Component Source
 import FilterViewSrc from '!raw-loader!../../../../src/FilterView';
-import OptGroupSrc from '!raw-loader!../../../../src/_OptGroup';
-import OptionSrc from '!raw-loader!../../../../src/_Option';
+import OptGroupSrc from '!raw-loader!../../../../src/_FilterOptGroup';
+import OptionSrc from '!raw-loader!../../../../src/_FilterOption';
 
 // Example Files
 import DefaultFilterView from '../example/DefaultFilterView';

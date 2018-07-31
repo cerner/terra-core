@@ -1,5 +1,5 @@
 import React from 'react';
-import NoResults from '../../src/_NoResults';
+import NoResults from '../../src/_FilterNoResults';
 import intlContexts from './intl-context-setup';
 
 describe('NoResults', () => {

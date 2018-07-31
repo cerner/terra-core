@@ -1,5 +1,5 @@
-import { Variants } from './_constants';
-import MenuUtil from './_MenuUtil';
+import { Variants } from './_FilterConstants';
+import MenuUtil from './_FilterMenuUtil';
 
 class SelectUtil {
   /**

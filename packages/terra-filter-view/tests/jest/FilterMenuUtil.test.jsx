@@ -1,8 +1,8 @@
 import React from 'react';
-import MenuUtil from '../../src/_MenuUtil';
-import { Variants } from '../../src/_constants';
-import OptGroup from '../../src/_OptGroup';
-import Option from '../../src/_Option';
+import MenuUtil from '../../src/_FilterMenuUtil';
+import { Variants } from '../../src/_FilterConstants';
+import OptGroup from '../../src/_FilterOptGroup';
+import Option from '../../src/_FilterOption';
 
 describe('MenuUtil', () => {
   describe('contains', () => {

@@ -29,7 +29,10 @@
     border-top-right-radius: 0.25em;
     display: inline-block;
     flex: 0 0 auto;
-    margin: 0;
+    margin-bottom: var(--terra-filter-search-button-margin-bottom, 0);
+    margin-left: var(--terra-filter-search-button-margin-left, -1px);
+    margin-right: var(--terra-filter-search-button-margin-right, 0);
+    margin-top: var(--terra-filter-search-button-margin-top, 0);
 
     &:hover {
       background-color: var(--terra-filter-search-button-hover-background-color, #b9bbbc);
@@ -66,7 +69,6 @@
     outline: none;
     text-overflow: ellipsis;
     width: auto;
-
   }
 
   // Hides the clear buttons in IE.
@@ -148,6 +150,7 @@
         transition-duration: var(--terra-filter-focus-transition-duration, 0s);
         transition-property: background-size;
         transition-timing-function: var(--terra-filter-focus-transition-timing-function, ease);
+        z-index: 1;
       }
     }
 

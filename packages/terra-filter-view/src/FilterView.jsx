@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
-import { Variants } from './_constants';
-import Select from './_Select';
+import { Variants } from './_FilterConstants';
+import Select from './_FilterSelect';
 
 const propTypes = {
   /**

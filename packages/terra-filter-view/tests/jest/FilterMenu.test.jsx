@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../../src/_Menu';
+import Menu from '../../src/_FilterMenu';
 
 describe('Menu', () => {
   it('should render a dropdown Menu', () => {

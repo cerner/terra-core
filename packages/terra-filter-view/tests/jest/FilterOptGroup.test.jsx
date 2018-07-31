@@ -1,5 +1,5 @@
 import React from 'react';
-import OptGroup from '../../src/_OptGroup';
+import OptGroup from '../../src/_FilterOptGroup';
 
 describe('OptGroup', () => {
   it('should render a default Option', () => {
