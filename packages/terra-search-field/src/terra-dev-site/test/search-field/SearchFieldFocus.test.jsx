@@ -1,8 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Button from 'terra-button/lib/Button';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Spacer from 'terra-spacer/lib/Spacer';
 import SearchField from '../../../SearchField';
 
 class SearchFieldFocus extends React.Component {
@@ -26,9 +24,7 @@ class SearchFieldFocus extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Spacer paddingBottom="medium">
-          <Button text="Focus Me" onClick={this.handleButtonClick} id="search-field-focus-button" />
-        </Spacer>
+        <Button text="Focus Me" onClick={this.handleButtonClick} id="search-field-focus-button" />
         <SearchField
           onChange={this.onChange}
           value={this.state.searchText}
