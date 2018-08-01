@@ -6,8 +6,8 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-animate-height | ^2.0.1 | >=15.6.2 | Lightweight React component for animating height using CSS transitions. |
-| terra-doc-template | ^1.11.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-icon | ^2.18.0 | ^16.2.0 | terra-icon |
+| terra-doc-template | ^1.12.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-icon | ^2.19.0 | ^16.2.0 | terra-icon |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
