@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added documentation pages for TableRows, SelectableTableRows, and SingleSelectableRows
+
+### Changed
+* Updated documentation
 
 2.18.0 - (July 19, 2018)
 ------------------
