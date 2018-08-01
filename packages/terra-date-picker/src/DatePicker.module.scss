@@ -1,4 +1,6 @@
-@import '~react-datepicker/src/stylesheets/datepicker';
+:global {
+  @import '~react-datepicker/src/stylesheets/datepicker';
+}
 
 /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
 :local {
