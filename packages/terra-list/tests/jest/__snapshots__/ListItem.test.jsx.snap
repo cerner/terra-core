@@ -6,7 +6,9 @@ exports[`should mount with isSelectable 1`] = `
   isSelected={false}
 >
   <li
+    aria-selected={false}
     className="list-item is-selectable"
+    role="option"
   />
 </ListItem>
 `;
