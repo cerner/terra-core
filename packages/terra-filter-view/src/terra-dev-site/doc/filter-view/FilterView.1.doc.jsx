@@ -38,7 +38,7 @@ const DocPage = () => (
       {
         title: 'OptGroup',
         description: 'OptGroups may be used to group options together.',
-        example: OptGroup,
+        example: <OptGroup />,
         source: ExampleOptGroupSrc,
       },
     ]}

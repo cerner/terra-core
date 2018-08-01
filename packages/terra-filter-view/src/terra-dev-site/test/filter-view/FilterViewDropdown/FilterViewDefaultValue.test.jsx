@@ -10,4 +10,4 @@ function FilterViewDefaultValue() {
     </FilterView>
   );
 }
-export default () => <FilterViewDefaultValue />;
+export default FilterViewDefaultValue;

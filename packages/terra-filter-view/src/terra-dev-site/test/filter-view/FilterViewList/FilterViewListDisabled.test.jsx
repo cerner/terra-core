@@ -12,4 +12,4 @@ function FilterViewListDisabled() {
     </FilterView>
   );
 }
-export default () => <FilterViewListDisabled />;
+export default FilterViewListDisabled;

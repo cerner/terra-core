@@ -11,4 +11,4 @@ const ListFilterView = () => (
   </FilterView>
 );
 
-export default () => ListFilterView();
+export default ListFilterView;

@@ -12,4 +12,4 @@ function FilterViewListOptGroup() {
     </FilterView>
   );
 }
-export default () => <FilterViewListOptGroup />;
+export default FilterViewListOptGroup;

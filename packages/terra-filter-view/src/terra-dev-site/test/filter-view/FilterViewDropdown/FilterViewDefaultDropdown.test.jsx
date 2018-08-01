@@ -10,4 +10,4 @@ function FilterViewDefaultDropdown() {
     </FilterView>
   );
 }
-export default () => <FilterViewDefaultDropdown />;
+export default FilterViewDefaultDropdown;

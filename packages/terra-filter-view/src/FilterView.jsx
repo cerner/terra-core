@@ -18,7 +18,7 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Callback function triggered when on an invalid search. function(value)
+   * Whether the search callback is called automatically.
    */
   disableAutoSearch: PropTypes.bool,
   /**
@@ -42,7 +42,7 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * A callback to indicate an invalid search. function(value)
+   * Callback function triggered when on an invalid search. function(value)
    */
   onInvalidSearch: PropTypes.func,
   /**

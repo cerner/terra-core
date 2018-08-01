@@ -10,4 +10,4 @@ function FilterViewListPlaceholder() {
     </FilterView>
   );
 }
-export default () => <FilterViewListPlaceholder />;
+export default FilterViewListPlaceholder;

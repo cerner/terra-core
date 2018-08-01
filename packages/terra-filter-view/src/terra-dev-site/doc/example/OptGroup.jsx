@@ -13,4 +13,4 @@ const OptGroup = () => (
   </FilterView>
 );
 
-export default <OptGroup />;
+export default OptGroup;

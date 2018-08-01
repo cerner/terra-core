@@ -57,7 +57,7 @@ class MenuUtil {
   /**
    * Flattens the available options. Ignores disabled options.
    * @param {ReactNode} object - The node being flattened.
-   * @param {boolean} - Whether disabled props should be filtered out.
+   * @param {boolean} ignoreDisabled - Whether disabled props should be filtered out.
    * @return {array} - An array of available options.
    */
   static flatten(object, ignoreDisabled) {

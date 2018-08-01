@@ -37,4 +37,4 @@ class FilterViewAutoSearchDisabled extends React.Component {
     );
   }
 }
-export default () => <FilterViewAutoSearchDisabled />;
+export default FilterViewAutoSearchDisabled;

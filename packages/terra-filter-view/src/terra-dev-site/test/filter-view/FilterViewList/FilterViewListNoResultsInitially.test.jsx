@@ -10,4 +10,4 @@ function FilterViewListNoResultsInitially() {
     </FilterView>
   );
 }
-export default () => <FilterViewListNoResultsInitially />;
+export default FilterViewListNoResultsInitially;

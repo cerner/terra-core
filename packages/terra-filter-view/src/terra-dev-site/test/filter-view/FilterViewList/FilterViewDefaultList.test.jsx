@@ -10,4 +10,4 @@ function FilterViewDefaultList() {
     </FilterView>
   );
 }
-export default () => <FilterViewDefaultList />;
+export default FilterViewDefaultList;
