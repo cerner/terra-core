@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.19.0 - (August 1, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Updated test pages with icons to use a `terra-icon`
 
 ### Fixed

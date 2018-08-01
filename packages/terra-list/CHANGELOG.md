@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.20.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Aria attributes are applied to ListItems based upon selectability rather than chevron status
 
