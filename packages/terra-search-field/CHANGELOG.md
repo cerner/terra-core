@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.23.0 - (August 1, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Changed input to have right border
 
 2.22.0 - (July 26, 2018)
