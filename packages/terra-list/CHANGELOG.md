@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Aria attributes are applied to ListItems based upon selectability rather than chevron status
 
 2.19.0 - (July 19, 2018)
 ------------------
