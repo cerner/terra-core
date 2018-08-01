@@ -116,7 +116,6 @@ const Spacer = ({
   };
 
   const SpacerClassNames = cx([
-    'spacer',
     `margin-top-${SpacerClassMappings[marginAttributes.marginTop]}`,
     `margin-bottom-${SpacerClassMappings[marginAttributes.marginBottom]}`,
     `margin-left-${SpacerClassMappings[marginAttributes.marginLeft]}`,

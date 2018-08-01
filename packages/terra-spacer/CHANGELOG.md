@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Removed
+* Remove 'spacer' CSS class
+
 2.17.0 - (July 19, 2018)
 ------------------
 ### Changed
