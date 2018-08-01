@@ -11,7 +11,7 @@ exports[`DocTemplate should show multiple examples 1`] = `
   className="doc-template"
 >
   <h1
-    className=".examples-header"
+    className="examples-header"
   >
     Examples
   </h1>
@@ -54,7 +54,7 @@ exports[`DocTemplate should show one example 1`] = `
   className="doc-template"
 >
   <h1
-    className=".examples-header"
+    className="examples-header"
   >
     Example
   </h1>
@@ -144,7 +144,7 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
     View component source code
   </a>
   <h1
-    className=".examples-header"
+    className="examples-header"
   >
     Examples
   </h1>
