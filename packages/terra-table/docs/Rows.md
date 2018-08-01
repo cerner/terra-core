@@ -1,6 +1,6 @@
 # TableRows
 
-Rows is the standard component used for managing Terra Table `Row`s. It offers no selection capabilities but will apply listeners to children rows for clicking and tabbing. 
+Rows is the standard component used for managing Terra Table `Row`s. It offers no selection capabilities but will apply listeners to children rows for clicking and button presses.
 
 Using Rows or an extension of Rows (Selctable Rows, Single Selectable Rows, or Multi Selectable Rows) to organize a table is required for proper appearance of the table.
 
