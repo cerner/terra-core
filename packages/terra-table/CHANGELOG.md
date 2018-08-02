@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed background color to transparent
 
 2.19.0 - (August 1, 2018)
 ------------------
