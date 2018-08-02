@@ -318,6 +318,7 @@ exports[`ActionHeader should render an action header with title 1`] = `
 exports[`ActionHeader should render an action header with title, enabled next button, and disabled previous button 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  isBorderless={false}
   level={1}
   startContent={
     <div
@@ -355,6 +356,7 @@ exports[`ActionHeader should render an action header with title, enabled next bu
 exports[`ActionHeader should render an action header with title, enabled previous button, and disabled next button 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  isBorderless={false}
   level={1}
   startContent={
     <div
