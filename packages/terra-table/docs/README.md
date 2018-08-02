@@ -11,6 +11,7 @@ The Terra Table is a structural component to arrange content within a table.
 ## Usage
 
 Terra-table provides several different components for building tables accessible through the Table component:
+
 - Header: Indicates a primary level of hierarchy.
 - SubHeader: Indicates a secondary level of hierarchy.
 - HeaderCell: Renders a table header cell.
@@ -21,9 +22,10 @@ Terra-table provides several different components for building tables accessible
 - Row: Renders a table row.
 - Cell: Renders a table cell.
 
-More information regarding managed selectable tables can be found [here](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs/ManagedSelectableTable.md).
+More information regarding managed selectable tables can be found [here](/#/components/terra-table/table/selectable-rows).
 
 ### Table
+
 ```jsx
 import React from 'react';
 import Table from 'terra-table';
@@ -53,7 +55,9 @@ import Table from 'terra-table';
   </Table.Rows>
 </Table>
 ```
+
 ### Single Selectable Table
+
 ```jsx
 import React from 'react';
 import Table from 'terra-table';
@@ -85,6 +89,7 @@ import Table from 'terra-table';
 ```
 
 ### Multiple Selectable Table
+
 ```jsx
 import React from 'react';
 import Table from 'terra-table';
@@ -116,4 +121,5 @@ import Table from 'terra-table';
 ```
 
 ## Component Features
-* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+
+- [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
