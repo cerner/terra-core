@@ -14,7 +14,7 @@ const propTypes = {
    */
   onClick: PropTypes.func,
   /**
-   * A callback function for onKeyDown action for tab key
+   * A callback function for onKeyDown action
    */
   onKeyDown: PropTypes.func,
 };
