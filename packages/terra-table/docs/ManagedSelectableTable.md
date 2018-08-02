@@ -1,7 +1,8 @@
-## Managed Tables
-In certain scenarios, consumers may wish to use a selectable table, but would like to implement their own selection state management. In these cases, the recommended pattern is to implement the SelectableTableRows subcomponent, which provides the basic framework needed to implement selectable table rows, and then utilize the SelectableTableRows.Utils to manage the state. The SelectableTableRows.Utils gives access to single-selection functions as well as table navigation KEYCODES. Use this component in place of the TableRows component.
+# Selectable (Managed) Tables
 
-### Managed Single Select Table Rows
+In certain scenarios, consumers may wish to use a selectable table, but would like to implement their own selection state management. In these cases, the recommended pattern is to implement the `SelectableTableRows` subcomponent, which provides the basic framework needed to implement selectable table rows, and then utilize the `SelectableTableRows.Utils` utility functions to manage the state. The `SelectableTableRows.Utils` property gives access to various selection management utility functions as well as table navigation KEYCODES. Use this component in place of the TableRows component.
+
+## Managed Single Select Table Rows
 
 ```jsx
 import Table from 'terra-table';

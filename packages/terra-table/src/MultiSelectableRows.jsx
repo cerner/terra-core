@@ -10,11 +10,10 @@ const propTypes = {
   children: PropTypes.node,
   /**
    * A callback function triggered when a row is selected or unselected. Passes the following parameters:
-   * <ul>
-   *   <li>the event triggering the onChange</li>
-   *   <li>the list of the indexes for the rows selected</li>
-   *   <li>the index of the last item selected</li>
-   * </ul>
+   *
+   * - the event triggering the onChange
+   * - the list of the indexes for the rows selected
+   * - the index of the last item selected
    */
   onChange: PropTypes.func,
   /**
