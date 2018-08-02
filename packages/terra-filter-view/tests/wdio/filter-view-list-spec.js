@@ -175,7 +175,7 @@ describe('Filter View', () => {
     Terra.should.matchScreenshot('text before search', { selector: '#root' });
 
     it('should search with the button', () => {
-      browser.click('button[aria-label="Search"]');
+      browser.click('div[class*="search-button"]');
       browser.waitForExist('#search-callback-text');
     });
 

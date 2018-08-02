@@ -29,25 +29,15 @@ exports[`Frame should render a disabled dropdown variant 1`] = `
         value=""
       />
     </div>
-    <Button
-      className="button"
-      icon={
-        <IconSearch
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={true}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
+    <div
+      className="search-button"
       onMouseDown={[Function]}
-      text="Search"
-      type="button"
-      variant="neutral"
-    />
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -82,25 +72,15 @@ exports[`Frame should render a disabled list variant 1`] = `
         value=""
       />
     </div>
-    <Button
-      className="button"
-      icon={
-        <IconSearch
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={true}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
+    <div
+      className="search-button"
       onMouseDown={[Function]}
-      text="Search"
-      type="button"
-      variant="neutral"
-    />
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
   </div>
   <div
     className="box"
@@ -138,25 +118,15 @@ exports[`Frame should render a dropdown variant 1`] = `
         value=""
       />
     </div>
-    <Button
-      className="button"
-      icon={
-        <IconSearch
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={true}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
+    <div
+      className="search-button"
       onMouseDown={[Function]}
-      text="Search"
-      type="button"
-      variant="neutral"
-    />
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -191,25 +161,15 @@ exports[`Frame should render a dropdown variant with a placeholder 1`] = `
         value=""
       />
     </div>
-    <Button
-      className="button"
-      icon={
-        <IconSearch
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={true}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
+    <div
+      className="search-button"
       onMouseDown={[Function]}
-      text="Search"
-      type="button"
-      variant="neutral"
-    />
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -244,25 +204,15 @@ exports[`Frame should render a list variant 1`] = `
         value=""
       />
     </div>
-    <Button
-      className="button"
-      icon={
-        <IconSearch
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={true}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
+    <div
+      className="search-button"
       onMouseDown={[Function]}
-      text="Search"
-      type="button"
-      variant="neutral"
-    />
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
   </div>
   <div
     className="box"
@@ -302,25 +252,15 @@ exports[`Frame should render a list variant with a placeholder 1`] = `
         value=""
       />
     </div>
-    <Button
-      className="button"
-      icon={
-        <IconSearch
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={true}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
+    <div
+      className="search-button"
       onMouseDown={[Function]}
-      text="Search"
-      type="button"
-      variant="neutral"
-    />
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
   </div>
   <div
     className="box"

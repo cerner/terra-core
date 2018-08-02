@@ -9,6 +9,7 @@ class FilterViewListOptionFilter extends React.Component {
   render() {
     return (
       <div>
+        <h3> Case-sensitive search with optionFilter prop </h3>
         <FilterView variant="list" optionFilter={this.constructor.customFilter} >
           <FilterView.Option value="hello" display="Hello" key="hello" />
           <FilterView.Option value="goodbye" display="Good Bye" key="goodbye" />

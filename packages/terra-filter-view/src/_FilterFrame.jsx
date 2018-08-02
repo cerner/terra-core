@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import Button from 'terra-button';
-import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import IconIncomplete from 'terra-icon/lib/icon/IconIncomplete';
 import { KeyCodes, Variants } from './_FilterConstants';
 import Dropdown from './_FilterDropdown';
@@ -11,8 +9,6 @@ import Util from './_FilterFrameUtil';
 import styles from './_FilterFrame.module.scss';
 
 const cx = classNames.bind(styles);
-
-const Icon = <IconSearch />;
 
 const propTypes = {
   /**
@@ -460,14 +456,10 @@ class Frame extends React.Component {
               />
             }
           </div>
-          <Button
-            className={cx('button')}
-            onMouseDown={this.toggleDropdown}
-            icon={Icon}
-            text="Search"
-            isIconOnly
-            isCompact
-          />
+          {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+          <div className={cx('search-button')} onMouseDown={this.toggleDropdown} tabIndex={0}>
+            <span className={cx('search')} />
+          </div>
           {/* If variant is dropdown, render the dropdown */}
           {variant === Variants.DROPDOWN && this.state.isOpen &&
             <Dropdown

@@ -35,6 +35,7 @@ const propTypes = {
 
 const defaultProps = {
   isAbove: false,
+  isEnabled: false,
 };
 
 const AboveAttachment = {

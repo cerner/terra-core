@@ -21,18 +21,34 @@
     overflow: hidden; // IE 10
   }
 
-  .button {
+  .search {
+    background: var(--terra-filter-search-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M47.4 43.2l-13-13A19.66 19.66 0 0 0 38 19a19 19 0 1 0-7.9 15.4l13 13a2.05 2.05 0 0 0 2.9 0l1.4-1.4a1.93 1.93 0 0 0 0-2.8zM3 19a16 16 0 1 1 16 16A16 16 0 0 1 3 19z"/></svg>'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: var(--terra-filter-search-height, 1rem);
+    margin-left: var(--terra-filter-search-margin-left, 0.5rem);
+    margin-right: var(--terra-filter-search-margin-right, 0.5rem);
+    width: var(--terra-filter-search-width, 1rem);
+  }
+
+  .search-button {
+    background-color: #dedfe0;
     border: var(--terra-filter-search-button-border, 0.071em solid #dedfe0);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0.25em;
     border-top-left-radius: 0;
     border-top-right-radius: 0.25em;
+    cursor: pointer;
     display: inline-block;
     flex: 0 0 auto;
     margin-bottom: var(--terra-filter-search-button-margin-bottom, 0);
     margin-left: var(--terra-filter-search-button-margin-left, -1px);
     margin-right: var(--terra-filter-search-button-margin-right, 0);
     margin-top: var(--terra-filter-search-button-margin-top, 0);
+    padding-top: var(--terra-filter-search-button-padding-top, 0.286rem);
+    text-align: center;
 
     &:hover {
       background-color: var(--terra-filter-search-button-hover-background-color, #b9bbbc);
@@ -43,6 +59,13 @@
       background-color: var(--terra-filter-search-button-active-background-color, #6f7477);
       border-color: var(--terra-filter-search-button-active-border-color, #52585b);
       color: #fff;
+    }
+
+    &:focus {
+      background-color: var(--terra-filter-search-button-focus-background-color, #dedfe0);
+      border-color: var(--terra-filter-search-button-focus-border-color, #c8cacb);
+      box-shadow: var(--terra-filter-search-button-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+      outline: none;
     }
   }
 
@@ -103,7 +126,7 @@
       color: var(--terra-filter-disabled-placeholder-color, #868a8c);
     }
 
-    .button {
+    .search-button {
       background-color: var(--terra-filter-disabled-button-background-color, #e2e3e4);
       border: var(--terra-filter-disabled-border, 1px solid #85898b);
       opacity: var(--terra-filter-disabled-button-opacity, 0.5);
