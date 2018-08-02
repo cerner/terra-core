@@ -27,7 +27,7 @@ const DocPage = () => (
         source: SingleRowSelectableTableSrc,
       },
       {
-        title: 'Single Selectable table with second row as non selectable',
+        title: 'Single Selectable Rows (Second row unselectable)',
         example: <TableWithNonSelectableRow />,
         source: TableWithNonSelectableRowSrc,
       },
