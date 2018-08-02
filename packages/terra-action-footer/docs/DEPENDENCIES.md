@@ -5,9 +5,9 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-button | ^2.18.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-doc-template | ^1.11.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-spacer | ^2.17.0 | ^16.2.0 | This component is used to provide margin and/or padding space between two components based on the given values. |
+| terra-button | ^2.19.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-doc-template | ^1.12.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-spacer | ^2.18.0 | ^16.2.0 | This component is used to provide margin and/or padding space between two components based on the given values. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
