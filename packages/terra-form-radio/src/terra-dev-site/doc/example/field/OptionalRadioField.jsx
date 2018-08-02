@@ -7,7 +7,7 @@ import RadioField from 'terra-form-radio/lib/RadioField';
 
 const OptionalRadioFieldExample = () => (
   <RadioField
-    legend="Which Type of Meal are you looking for?"
+    legend="Which Track are you looking for?"
     help="This cannot be changed when submitted"
     showOptional
   >
