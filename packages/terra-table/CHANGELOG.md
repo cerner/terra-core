@@ -9,6 +9,11 @@ Unreleased
 ### Changed
 * Updated documentation
 
+2.19.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.18.0 - (July 19, 2018)
 ------------------
 ### Changed

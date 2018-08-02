@@ -3,8 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+2.25.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
-Fix issue where tooling was parsing the .scss import inside of our .module.scss file as a CSS modules file
+* Fix issue where tooling was parsing the .scss import inside of our .module.scss file as a CSS modules file
 
 2.24.1 - (July 26, 2018)
 ------------------

@@ -3,7 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.16.0 - (August 1, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Disable the next-previous button group button if its associating prop is not set.
 
 1.15.0 - (July 25, 2018)

@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+2.18.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Removed
+* Remove 'spacer' CSS class
+
 2.17.0 - (July 19, 2018)
 ------------------
 ### Changed
