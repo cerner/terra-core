@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed unnecessary onChange handler call in Optional RadioField example
 
 2.20.0 - (August 1, 2018)
 ------------------

@@ -11,9 +11,9 @@ const OptionalRadioFieldExample = () => (
     help="This cannot be changed when submitted"
     showOptional
   >
-    <Radio id="frontend-track" name="track" labelText="Frontend Development" onChange={this.handleOnChange} value="backend" />
-    <Radio id="backend-track" name="track" labelText="Backend Development" onChange={this.handleOnChange} value="frontend" />
-    <Radio id="devops-track" name="track" labelText="DevOps" onChange={this.handleOnChange} value="devops" />
+    <Radio id="frontend-track" name="track" labelText="Frontend Development" value="backend" />
+    <Radio id="backend-track" name="track" labelText="Backend Development" value="frontend" />
+    <Radio id="devops-track" name="track" labelText="DevOps" value="devops" />
   </RadioField>
 );
 
