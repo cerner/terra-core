@@ -56,7 +56,8 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-dst');
       browser.click('input[name="terra-time-hour-input"]');
       browser.click('input[name="terra-time-minute-input"]');
-      browser.waitForVisible('[class*="time-clarification"]', 1000);
+      browser.waitForVisible('[class*="time-clarification"]');
+      browser.waitForVisible('[class*="time-clarification2"]');
     });
 
     Terra.should.beAccessible({ rules: ignoredA11y });
@@ -79,7 +80,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-dst');
       browser.click('input[name="terra-time-hour-input"]');
       browser.click('input[name="terra-time-minute-input"]');
-      browser.waitForVisible('[class*="time-clarification"]', 1000);
+      browser.waitForVisible('[class*="time-clarification"]');
     });
 
     Terra.should.matchScreenshot('0', { viewports, selector: '[class*="abstract-modal"]' });
@@ -97,7 +98,7 @@ describe('DateTimePicker', () => {
         browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-dst');
         browser.click('input[name="terra-time-hour-input"]');
         browser.click('input[name="terra-time-minute-input"]');
-        browser.waitForVisible('[class*="time-clarification"]', 1000);
+        browser.waitForVisible('[class*="time-clarification"]');
       });
 
       Terra.should.matchScreenshot('0', { viewports, selector: '[class*="abstract-modal"]' });
@@ -116,7 +117,7 @@ describe('DateTimePicker', () => {
         browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-dst');
         browser.click('input[name="terra-time-hour-input"]');
         browser.click('input[name="terra-time-minute-input"]');
-        browser.waitForVisible('[class*="time-clarification"]', 1000);
+        browser.waitForVisible('[class*="time-clarification"]');
       });
 
       Terra.should.matchScreenshot('0', { viewports, selector: '[class*="abstract-modal"]' });
@@ -134,7 +135,7 @@ describe('DateTimePicker', () => {
       browser.url('/#/raw/tests/terra-date-time-picker/date-time-picker/date-time-picker-dst-disabled');
       browser.click('input[name="terra-time-hour-input"]');
       browser.click('input[name="terra-time-minute-input"]');
-      browser.waitForVisible('[class*="time-clarification"]', 1000);
+      browser.waitForVisible('[class*="time-clarification"]');
       browser.click('[class*="button-daylight"]');
       browser.click('#date-time-picker-toggler');
     });
