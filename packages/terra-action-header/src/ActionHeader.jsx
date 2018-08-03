@@ -69,7 +69,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Component requires Localization, and must be wrapped in terra-base');
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
     }
   },
 };
