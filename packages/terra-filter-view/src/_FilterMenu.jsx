@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
-import { KeyCodes } from './_FilterConstants';
+import { Variants, KeyCodes } from './_FilterConstants';
 import NoResults from './_FilterNoResults';
 import Util from './_FilterMenuUtil';
 import styles from './_FilterMenu.module.scss';
@@ -17,6 +17,10 @@ const propTypes = {
    * The content of the menu.
    */
   children: PropTypes.node,
+  /*
+   * Whether the input is focused
+   */
+  isFocused: PropTypes.bool,
   /**
    * Content to display when no results are found.
    */
@@ -41,6 +45,13 @@ const propTypes = {
    * The value of the selected options.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   * The behavior of the filter.
+   */
+  variant: PropTypes.oneOf([
+    Variants.DROPDOWN,
+    Variants.LIST,
+  ]),
 };
 
 const defaultProps = {
@@ -148,6 +159,10 @@ class Menu extends React.Component {
    * @param {event} event - The key down event.
    */
   handleKeyDown(event) {
+    if (this.props.variant === Variants.LIST && !this.props.isFocused) {
+      return;
+    }
+
     const { keyCode } = event;
     const { active, children } = this.state;
     const { onSelect, value } = this.props;

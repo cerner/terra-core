@@ -32,6 +32,7 @@ describe('Filter View', () => {
       Terra.should.matchScreenshot('none selected');
 
       it('should select the first option by pressing enter', () => {
+        browser.click('input'); // Focus input before trying to select
         browser.keys('Enter');
       });
 

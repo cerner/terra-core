@@ -481,6 +481,8 @@ class Frame extends React.Component {
                    onSelect: this.handleSelect,
                    onRequestClose: this.closeDropdown,
                    searchValue: this.state.searchValue,
+                   variant,
+                   isFocused: this.state.isFocused,
                  })}
             </Dropdown>
           }
@@ -501,6 +503,8 @@ class Frame extends React.Component {
               onSelect: this.handleSelect,
               onRequestClose: this.closeDropdown,
               searchValue: this.state.searchValue,
+              variant,
+              isFocused: this.state.isFocused,
             })}
           </div>
         }
