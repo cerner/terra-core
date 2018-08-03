@@ -66,6 +66,7 @@ Cerner Corporation
 - Cory McDonald [@corymcdonald]
 - Anthony Ross [@AnthonyRoss]
 - Julia Calandro [@JuliaCalandro]
+- Adam Parker [@amichaelparker]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -134,3 +135,4 @@ Cerner Corporation
 [@CoryMcDonald]: https://github.com/CoryMcDonald
 [@AnthonyRoss]: https://github.com/AnthonyRoss
 [@JuliaCalandro]: https://github.com/JuliaCalandro
+[@amichaelparker]: https://github.com/amichaelparker
