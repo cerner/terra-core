@@ -116,7 +116,7 @@ it('throws error on missing locale prop in Base', () => {
   try {
     render(<DatePicker name="date-input" />);
   } catch (e) {
-    expect(e.message).toContain('add locale prop to Base component to load translations');
+    expect(e.message).toContain('Component is internationalized, and must be wrapped in terra-base');
   }
 });
 
