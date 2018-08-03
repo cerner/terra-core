@@ -6,12 +6,9 @@ import { name } from '../../../../package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import TableSrc from '!raw-loader!../../../../src/Table';
-import SingleSelectableRowsSrc from '!raw-loader!../../../../src/SingleSelectableRows';
 import TableHeaderSrc from '!raw-loader!../../../../src/TableHeader';
 import TableHeaderCellSrc from '!raw-loader!../../../../src/TableHeaderCell';
 import TableRowSrc from '!raw-loader!../../../../src/TableRow';
-import TableRowsSrc from '!raw-loader!../../../../src/TableRows';
-import SelectableTableRowsSrc from '!raw-loader!../../../../src/SelectableTableRows';
 import TableCellSrc from '!raw-loader!../../../../src/TableCell';
 import TableSubheaderSrc from '!raw-loader!../../../../src/TableSubheader';
 
@@ -25,10 +22,6 @@ import TableWithMultipleOnClicks from '../example/TableWithMultipleOnClicks';
 import TableWithMultipleOnClicksSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithMultipleOnClicks';
 import TableWithHighlightedRows from '../example/TableWithHighlightedRows';
 import TableWithHighlightedRowsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithHighlightedRows';
-import SingleRowSelectableTable from '../example/SingleRowSelectableTable';
-import SingleRowSelectableTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleRowSelectableTable';
-import TableWithNonSelectableRow from '../example/TableWithNonSelectableRow';
-import TableWithNonSelectableRowSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithNonSelectableRow';
 import TableWithSortingIndicator from '../example/TableWithSortingIndicator';
 import TableWithSortingIndicatorSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithSortingIndicator';
 import TableWithLongContent from '../example/TableWithLongContent';
@@ -61,7 +54,7 @@ const DocPage = () => (
         source: NoPaddingTableSrc,
       },
       {
-        title: 'Table with multiple header onClick handlers (Click &ldquo;Name&rdquo; header to preview)',
+        title: 'Table with multiple header onClick handlers (Click \u2018Name\u2019 header to preview)',
         example: <TableWithMultipleOnClicks />,
         source: TableWithMultipleOnClicksSrc,
       },
@@ -69,16 +62,6 @@ const DocPage = () => (
         title: 'Table with some rows selected. Table will not select or deselect any row',
         example: <TableWithHighlightedRows />,
         source: TableWithHighlightedRowsSrc,
-      },
-      {
-        title: 'Single Selectable table',
-        example: <SingleRowSelectableTable />,
-        source: SingleRowSelectableTableSrc,
-      },
-      {
-        title: 'Single Selectable table with second row as non selectable',
-        example: <TableWithNonSelectableRow />,
-        source: TableWithNonSelectableRowSrc,
       },
       {
         title: 'Table with sorting indicator',
@@ -117,18 +100,6 @@ const DocPage = () => (
       {
         componentName: 'Table Subheader',
         componentSrc: TableSubheaderSrc,
-      },
-      {
-        componentName: 'Table Rows',
-        componentSrc: TableRowsSrc,
-      },
-      {
-        componentName: 'Selectable Table Rows',
-        componentSrc: SelectableTableRowsSrc,
-      },
-      {
-        componentName: 'Single Selectable Rows',
-        componentSrc: SingleSelectableRowsSrc,
       },
       {
         componentName: 'Table Row',

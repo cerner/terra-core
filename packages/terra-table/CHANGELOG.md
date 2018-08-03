@@ -5,6 +5,11 @@ Unreleased
 ----------
 ### Changed
 * Changed background color to transparent
+### Added
+* Added documentation pages for TableRows, SelectableTableRows, and SingleSelectableRows
+
+### Changed
+* Updated documentation
 
 2.19.0 - (August 1, 2018)
 ------------------

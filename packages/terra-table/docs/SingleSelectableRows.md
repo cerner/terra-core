@@ -1,7 +1,6 @@
-# Multi Selectable Rows
+# Single Selectable Rows
 
-MultiSelectableRows is a component that allows the selection of multiple Terra Table `Row`s. It supports a configurable
-maximum number of selectable items and provides a listener for when the list of selected rows is changed.
+SingleSelectableRows is a component that allows the selection of one Terra Table `Row`. It provides a listener for when the selected row is changed.
 
 ## Usage
 
@@ -15,7 +14,7 @@ import Table from 'terra-table';
     <Table.HeaderCell content="Address" key="ADDRESS" minWidth="medium" />
     <Table.HeaderCell content="Phone Number" key="PHONE_NUMBER" minWidth="large" />
   </Table.Header>
-  <Table.MultiSelectableRows maxSelectionCount={2}>
+  <Table.SingleSelectableRows >
     <Table.Row key="PERSON_0" isSelected>
       <Table.Cell content="John Smith" key="NAME" />
       <Table.Cell content="123 Adams Drive" key="ADDRESS" />
@@ -31,6 +30,6 @@ import Table from 'terra-table';
       <Table.Cell content="213 Raymond Road" key="ADDRESS" />
       <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
     </Table.Row>
-  </Table.MultiSelectableRows>
+  </Table.SingleSelectableRows>
 </Table>
 ```
