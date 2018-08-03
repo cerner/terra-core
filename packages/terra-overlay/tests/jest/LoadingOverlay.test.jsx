@@ -44,7 +44,7 @@ describe('LoadingOverlay', () => {
     try {
       render(<LoadingOverlay />);
     } catch (e) {
-      expect(e.message).toContain('add locale prop to Base component');
+      expect(e.message).toContain('Component is internationalized, and must be wrapped in terra-base');
     }
   });
 });

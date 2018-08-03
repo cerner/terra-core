@@ -114,7 +114,7 @@ it('throws error on missing locale prop in Base', () => {
   try {
     render(<DateTimePicker name="date-time-input" />);
   } catch (e) {
-    expect(e.message).toContain('add locale prop to Base component');
+    expect(e.message).toContain('add locale prop to Base component to load translations');
   }
 });
 
