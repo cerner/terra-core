@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+* Updated component internationalization error message
+
 ### Removed
 * Removed unnecessary onChange handler call in Optional RadioField example
 

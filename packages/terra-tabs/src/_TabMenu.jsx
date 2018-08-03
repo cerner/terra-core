@@ -29,7 +29,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
+      return new Error('Component requires Localization, and must be wrapped in terra-base');
     }
   },
 };

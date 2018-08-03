@@ -3,6 +3,7 @@ ChangeLog
 
 Unreleased
 ----------
+* Updated component internationalization error message
 
 2.21.0 - (August 1, 2018)
 ------------------
