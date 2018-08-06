@@ -202,7 +202,7 @@ class SearchField extends React.Component {
     const additionalInputAttributes = Object.assign({}, inputAttributes, valueTemp);
 
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
-    // make inputAttributes in this to pass to Input component
+
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <Input
