@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed test restrictions on accessibility since that issue was fixed.
 * Updated component internationalization error message
 
 3.14.0 - (August 1, 2018)
