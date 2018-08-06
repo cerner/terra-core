@@ -1,7 +1,7 @@
-## MultiSelectableRows
+# Multi Selectable Rows
 
-MultiSelectableRows is a component that allows the selection of multiple Terra Table Rows. It supports a configurable
-maximum number of selectable items.
+MultiSelectableRows is a component that allows the selection of multiple Terra Table `Row`s. It supports a configurable
+maximum number of selectable items and provides a listener for when the list of selected rows is changed.
 
 ## Usage
 

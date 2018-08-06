@@ -14,6 +14,8 @@ import MultipleRowMaxSelectableExample from '../example/MultiSelectableRowsMaxSe
 import MultipleRowMaxSelectableExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsMaxSelectable';
 import MultipleSelectableRowsWithSubheader from '../example/MultiSelectableRowsWithSubheader';
 import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsWithSubheader';
+import MultiSelectableRowsOnChange from '../example/MultiSelectableRowsOnChange';
+import MultiSelectableRowsOnChangeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsOnChange';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -28,7 +30,7 @@ const DocPage = () => (
         source: MultipleRowSelectableTableExamplesSrc,
       },
       {
-        title: 'Multiple Selectable Rows (Max Selectable: 2)',
+        title: 'Multiple Selectable Rows (Max selectable: 2)',
         example: <MultipleRowMaxSelectableExample />,
         source: MultipleRowMaxSelectableExampleSrc,
       },
@@ -36,6 +38,11 @@ const DocPage = () => (
         title: 'Multiple Selectable Rows (Includes Subheaders)',
         example: <MultipleSelectableRowsWithSubheader />,
         source: MultipleSelectableRowsWithSubheaderSrc,
+      },
+      {
+        title: 'Multiple Selectable Rows (onChange callback)',
+        example: <MultiSelectableRowsOnChange />,
+        source: MultiSelectableRowsOnChangeSrc,
       },
     ]}
     propsTables={[

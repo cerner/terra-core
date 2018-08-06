@@ -5,10 +5,10 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-arrange | ^2.19.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
+| terra-arrange | ^2.20.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
 | terra-clinical-item-view | ^2.6.0 | ^16.2.0 | The Item View component allows displays to be organized into rows and column and themed, while providing means to add accessory elements and a comment. |
-| terra-doc-template | ^1.11.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-icon | ^2.18.0 | ^16.2.0 | terra-icon |
+| terra-doc-template | ^1.12.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-icon | ^2.19.0 | ^16.2.0 | terra-icon |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
