@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed background color to transparent
 
 ### Added
 * Added documentation pages for TableRows, SelectableTableRows, and SingleSelectableRows
