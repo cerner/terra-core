@@ -56,4 +56,11 @@ describe('ActionFooter', () => {
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
+
+  describe('Borderless', () => {
+    before(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/borderless-action-footer'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
 });

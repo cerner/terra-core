@@ -83,6 +83,13 @@ viewports.forEach((viewport) => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
+
+    describe('Borderless', () => {
+      before(() => browser.url('/#/raw/tests/terra-action-header/action-header/borderless-action-header'));
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+    });
   });
 });
 

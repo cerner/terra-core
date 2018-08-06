@@ -15,6 +15,10 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
+   * Determines whether or not a border is shown
+   */
+  isBorderless: PropTypes.bool,
+  /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=1`.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
@@ -55,6 +59,7 @@ const propTypes = {
 
 const defaultProps = {
   title: undefined,
+  isBorderless: false,
   level: 1,
   onClose: undefined,
   onBack: undefined,
@@ -76,6 +81,7 @@ const contextTypes = {
 
 const ActionHeader = ({
   title,
+  isBorderless,
   level,
   onClose,
   onBack,
@@ -143,6 +149,7 @@ const ActionHeader = ({
   return (
     <ActionHeaderContainer
       {...customProps}
+      isBorderless={isBorderless}
       startContent={leftButtons}
       title={title}
       endContent={rightButtons}

@@ -32,16 +32,22 @@ const propTypes = {
    * Sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+
+  /**
+   * Determines whether or not a border is shown
+   */
+  isBorderless: PropTypes.bool,
 };
 
 const defaultProps = {
   title: undefined,
   startContent: undefined,
   endContent: undefined,
+  isBorderless: false,
 };
 
 const ActionHeaderContainer = ({
-  children, title, startContent, endContent, level, ...customProps
+  children, title, startContent, endContent, level, isBorderless, ...customProps
 }) => {
   const HeaderElement = `h${level}`;
 
@@ -58,7 +64,7 @@ const ActionHeaderContainer = ({
   ) : undefined;
 
   return (
-    <header {...customProps} className={cx(['flex-header', customProps.className])}>
+    <header {...customProps} className={cx(['flex-header', { 'with-border': !isBorderless }, customProps.className])}>
       {startContent && <div className={cx('flex-end')}>{startContent}</div>}
       <div className={cx('flex-fill')}>
         {titleElement}

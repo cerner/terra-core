@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionFooterContainer Prop Tests with actions should display no actions 1`] = `
-<ActionFooterContainer>
+<ActionFooterContainer
+  isBorderless={false}
+>
   <div
-    className="action-footer-container with-actions"
+    className="action-footer-container with-actions with-border"
   >
     Some content
   </div>
@@ -11,16 +13,18 @@ exports[`ActionFooterContainer Prop Tests with actions should display no actions
 `;
 
 exports[`ActionFooterContainer Prop Tests without actions should display no actions 1`] = `
-<ActionFooterContainer>
+<ActionFooterContainer
+  isBorderless={false}
+>
   <div
-    className="action-footer-container"
+    className="action-footer-container with-border"
   />
 </ActionFooterContainer>
 `;
 
 exports[`ActionFooterContainer Snapshot Tests should render a footer with some actions 1`] = `
 <div
-  className="action-footer-container with-actions"
+  className="action-footer-container with-actions with-border"
 >
   Some actions
 </div>
@@ -28,6 +32,6 @@ exports[`ActionFooterContainer Snapshot Tests should render a footer with some a
 
 exports[`ActionFooterContainer Snapshot Tests should render an empty footer 1`] = `
 <div
-  className="action-footer-container"
+  className="action-footer-container with-border"
 />
 `;

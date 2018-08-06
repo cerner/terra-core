@@ -56,6 +56,11 @@ describe('ActionFooter', () => {
       );
       expect(shallow(component)).toMatchSnapshot();
     });
+
+    it('should render a borderless footer', () => {
+      const component = <ActionFooter isBorderless end={<button>End Socket</button>} />;
+      expect(shallow(component)).toMatchSnapshot();
+    });
   });
 
   // Prop Tests
@@ -90,6 +95,14 @@ describe('ActionFooter', () => {
       it('should display both start and end actions', () => (
         expect(actionFooter).toMatchSnapshot()
       ));
+    });
+
+    describe('with no border', () => {
+      const actionFooter = mount(<ActionFooter isBorderless />);
+
+      it('should not display a border', () => {
+        expect(actionFooter).toMatchSnapshot();
+      });
     });
   });
 

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Add isBorderless prop
 
 1.18.0 - (August 1, 2018)
 ------------------
