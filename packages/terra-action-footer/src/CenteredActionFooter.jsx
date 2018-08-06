@@ -35,8 +35,8 @@ const CenteredActionFooter = ({
 
   return (
     <ActionFooterContainer
-      isBorderless={isBorderless}
       {...customProps}
+      isBorderless={isBorderless}
       className={centeredActionFooterClassNames}
     >
       {center}

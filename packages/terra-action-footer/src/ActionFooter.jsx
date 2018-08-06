@@ -34,7 +34,7 @@ const ActionFooter = ({
   isBorderless,
   ...customProps
 }) => (
-  <ActionFooterContainer isBorderless={isBorderless} {...customProps} className={cx(customProps.className)}>
+  <ActionFooterContainer {...customProps} className={cx(customProps.className)} isBorderless={isBorderless}>
     {start && <div className={cx('socket')}>{start}</div>}
     {(start || end) && <div className={cx('empty-center')} />}
     {end && <div className={cx('socket')}>{end}</div>}
