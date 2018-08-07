@@ -118,22 +118,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | Safari & Mobile Safari      | Current |
 
 ## Internationalization (I18n)
-
-1. Please follow [Base Getting Started](https://github.com/cerner/terra-core/blob/master/packages/terra-base/README.md#getting-started) to install `Base`, and consume it with `locale` props.
-2. Please follow [terra-i18n Aggregate Translations Guide](https://github.com/cerner/terra-core/blob/master/packages/terra-i18n/docs/AggregateTranslations.md) to set up aggregated translations.
-3. Install and config `react-intl`
-    - Install it `npm install --save react-intl`.
-    - Add alias webpack config to avoid importing duplicate `react-intl`.
-        ```
-        resolve: {
-          extensions: ['.js', '.jsx'],
-          alias: {
-            'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
-          },
-        },
-        ```
-4. Provide values for `locale` and `customMessages` prop of `Base`.
-5. Follow [react-intl wiki](https://github.com/yahoo/react-intl/wiki/API) to use `injectIntl`([pass translations to props](https://github.com/cerner/terra-core/wiki/terra-i18n-Guide#pass-translated-message-as-props)) or `FormattedMessage`([render translations](https://github.com/cerner/terra-core/wiki/terra-i18n-Guide#display-transalated-message-without-default-message-fallback)) to consume translations.
+Please review [Terra's Internationalization documentation](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/internationalization) for more information. Included are directions on consumption and how internationalization is setup.
 
 ### Packages Requiring I18n
 
