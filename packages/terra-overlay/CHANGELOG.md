@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated backgroundStyle documentation
 
 2.22.0 - (August 8, 2018)
 ------------------
