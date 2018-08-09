@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots renders a default FilterView 1`] = `
+<Select
+  disableAutoSearch={false}
+  disabled={false}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`Snapshots renders a default FilterView with a default value 1`] = `
+<Select
+  defaultValue="Test"
+  disableAutoSearch={false}
+  disabled={false}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`Snapshots renders a default FilterView with a placeholder 1`] = `
+<Select
+  disableAutoSearch={false}
+  disabled={false}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  placeholder="Test"
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`Snapshots renders a disabled default FilterView 1`] = `
+<Select
+  disableAutoSearch={false}
+  disabled={true}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`Snapshots renders a disabled default FilterView with a default value 1`] = `
+<Select
+  defaultValue="default"
+  disableAutoSearch={false}
+  disabled={true}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="dropdown"
+/>
+`;
+
+exports[`Snapshots renders a disabled list FilterView 1`] = `
+<Select
+  disableAutoSearch={false}
+  disabled={true}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a disabled list FilterView with a default value 1`] = `
+<Select
+  defaultValue="default"
+  disableAutoSearch={false}
+  disabled={true}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView 1`] = `
+<Select
+  disableAutoSearch={false}
+  disabled={false}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView with a default value 1`] = `
+<Select
+  defaultValue="Test"
+  disableAutoSearch={false}
+  disabled={false}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView with a placeholder 1`] = `
+<Select
+  disableAutoSearch={false}
+  disabled={false}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  placeholder="Test"
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView with dropdownAttrs spread 1`] = `
+<Select
+  disableAutoSearch={false}
+  disabled={false}
+  dropdownAttrs={
+    Object {
+      "onClick": [Function],
+    }
+  }
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  variant="list"
+/>
+`;
+
+exports[`Snapshots renders a list FilterView without results initially 1`] = `
+<Select
+  disableAutoSearch={false}
+  disabled={false}
+  hideResultsInitially={false}
+  minimumSearchTextLength={2}
+  searchDelay={250}
+  showResultsInitially={false}
+  variant="list"
+/>
+`;

@@ -1,0 +1,23 @@
+:local {
+  .dropdown {
+    background-color: var(--terra-filter-dropdown-background-color, #fff);
+    border: var(--terra-filter-dropdown-border, 1px solid #dedfe0);
+    border-bottom-left-radius: var(--terra-filter-dropdown-border-radius, 3px);
+    border-bottom-right-radius: var(--terra-filter-dropdown-border-radius, 3px);
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: var(--terra-filter-dropdown-box-shadow, 0 3px 12px -5px rgba(0, 0, 0, 0.25));
+    overflow: auto;
+  }
+
+  .is-above {
+    border: var(--terra-filter-dropdown-border, 1px solid #dedfe0);
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: var(--terra-filter-dropdown-border-radius, 3px);
+    border-top-right-radius: var(--terra-filter-dropdown-border-radius, 3px);
+    box-shadow: var(--terra-filter-dropdown-above-box-shadow, 0 -3px 12px -5px rgba(0, 0, 0, 0.25));
+  }
+}

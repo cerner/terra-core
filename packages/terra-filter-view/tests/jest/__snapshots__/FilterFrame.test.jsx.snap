@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Frame should render a disabled dropdown variant 1`] = `
+<div
+  className="select-parent is-disabled"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+>
+  <div
+    aria-disabled={true}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select dropdown"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display is-disabled"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={true}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="search-button"
+      onMouseDown={[Function]}
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Frame should render a disabled list variant 1`] = `
+<div
+  className="select-parent is-disabled"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+>
+  <div
+    aria-controls="terra-filter-list"
+    aria-disabled={true}
+    aria-expanded={true}
+    aria-owns="terra-filter-list"
+    className="select list"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display is-disabled"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={true}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="search-button"
+      onMouseDown={[Function]}
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
+  </div>
+  <div
+    className="box"
+    id="terra-filter-list"
+  />
+</div>
+`;
+
+exports[`Frame should render a dropdown variant 1`] = `
+<div
+  className="select-parent"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+>
+  <div
+    aria-disabled={false}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select dropdown"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="search-button"
+      onMouseDown={[Function]}
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Frame should render a dropdown variant with a placeholder 1`] = `
+<div
+  className="select-parent"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+>
+  <div
+    aria-disabled={false}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select dropdown"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        placeholder="Placeholder"
+        value=""
+      />
+    </div>
+    <div
+      className="search-button"
+      onMouseDown={[Function]}
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Frame should render a list variant 1`] = `
+<div
+  className="select-parent"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+>
+  <div
+    aria-controls="terra-filter-list"
+    aria-disabled={false}
+    aria-expanded={true}
+    aria-owns="terra-filter-list"
+    className="select list"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="search-button"
+      onMouseDown={[Function]}
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
+  </div>
+  <div
+    className="box"
+    id="terra-filter-list"
+  />
+</div>
+`;
+
+exports[`Frame should render a list variant with a placeholder 1`] = `
+<div
+  className="select-parent"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+>
+  <div
+    aria-controls="terra-filter-list"
+    aria-disabled={false}
+    aria-expanded={true}
+    aria-owns="terra-filter-list"
+    className="select list"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <div
+      className="display"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <input
+        aria-label="search"
+        className="search-input"
+        disabled={false}
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        placeholder="Placeholder"
+        value=""
+      />
+    </div>
+    <div
+      className="search-button"
+      onMouseDown={[Function]}
+      tabIndex={0}
+    >
+      <span
+        className="search"
+      />
+    </div>
+  </div>
+  <div
+    className="box"
+    id="terra-filter-list"
+  />
+</div>
+`;

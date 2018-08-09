@@ -1,0 +1,10 @@
+:local {
+  .no-results {
+    font-size: 1.142rem;
+    line-height: 1.125;
+    overflow: hidden;
+    padding: var(--terra-filter-no-results-padding, 0.28571rem 0.714286rem);
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+}

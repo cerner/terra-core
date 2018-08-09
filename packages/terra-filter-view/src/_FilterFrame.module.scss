@@ -1,0 +1,202 @@
+@import '~terra-mixins';
+
+:local {
+  .select-parent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .select {
+    background-color: var(--terra-filter-select-background-color, #fff);
+    color: var(--terra-filter-select-color, #1c1f21);
+    display: inline-flex;
+    font-size: var(--terra-filter-select-font-size, 1.143rem);
+    line-height: var(--terra-filter-select-line-height, 1.5);
+    position: relative;
+  }
+
+  .display {
+    align-items: center;
+    overflow: hidden; // IE 10
+  }
+
+  .search {
+    background: var(--terra-filter-search-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M47.4 43.2l-13-13A19.66 19.66 0 0 0 38 19a19 19 0 1 0-7.9 15.4l13 13a2.05 2.05 0 0 0 2.9 0l1.4-1.4a1.93 1.93 0 0 0 0-2.8zM3 19a16 16 0 1 1 16 16A16 16 0 0 1 3 19z"/></svg>'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: var(--terra-filter-search-height, 1rem);
+    margin-left: var(--terra-filter-search-margin-left, 0.5rem);
+    margin-right: var(--terra-filter-search-margin-right, 0.5rem);
+    width: var(--terra-filter-search-width, 1rem);
+  }
+
+  .search-button {
+    background-color: #dedfe0;
+    border: var(--terra-filter-search-button-border, 0.071em solid #dedfe0);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0.25em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.25em;
+    cursor: pointer;
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-bottom: var(--terra-filter-search-button-margin-bottom, 0);
+    margin-left: var(--terra-filter-search-button-margin-left, -1px);
+    margin-right: var(--terra-filter-search-button-margin-right, 0);
+    margin-top: var(--terra-filter-search-button-margin-top, 0);
+    padding-top: var(--terra-filter-search-button-padding-top, 0.286rem);
+    text-align: center;
+
+    &:hover {
+      background-color: var(--terra-filter-search-button-hover-background-color, #b9bbbc);
+      border-color: var(--terrra-filter-search-button-hover-border-color, #c8cacb);
+    }
+
+    &:active {
+      background-color: var(--terra-filter-search-button-active-background-color, #6f7477);
+      border-color: var(--terra-filter-search-button-active-border-color, #52585b);
+      color: #fff;
+    }
+
+    &:focus {
+      background-color: var(--terra-filter-search-button-focus-background-color, #dedfe0);
+      border-color: var(--terra-filter-search-button-focus-border-color, #c8cacb);
+      box-shadow: var(--terra-filter-search-button-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+      outline: none;
+    }
+  }
+
+  .clear-button {
+    color: var(--terra-filter-clear-button-color, #b9bbbc);
+    cursor: default;
+    margin-left: 0.3571428571rem;
+    margin-right: 0.3571428571rem;
+    margin-top: 0.21428571428571427rem;
+  }
+
+  .search-input,
+  .search-input:focus {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    flex: 1 1 auto;
+    font-size: var(--terra-filter-search-font-size, 1.143rem);
+    height: 1.375em;
+    margin-top: var(--terra-filter-search-margin-top, 0.21428571428571427rem);
+    max-width: 100%; // IE 10
+    min-width: 0; // IE 11
+    opacity: 1;
+    outline: none;
+    text-overflow: ellipsis;
+    width: auto;
+  }
+
+  // Hides the clear buttons in IE.
+  .search-input::-ms-clear {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .search-input::placeholder,
+  .placeholder {
+    color: var(--terra-filter-search-placeholder-color, #85898b);
+    font-size: var(--terra-filter-search-placeholder-font-size, 1.143rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .box {
+    border: var(--terra-filter-list-border, 1px solid #dedfe0);
+    flex: 1;
+    margin-top: var(--terra-filter-list-margin-top, 0.5rem);
+    overflow: auto;
+  }
+
+  .is-disabled {
+    cursor: default;
+    opacity: var(--terra-filter-disabled-opacity, 0.25);   /*this is overall – the full component*/
+    pointer-events: none;
+
+    ::placeholder {
+      color: var(--terra-filter-disabled-placeholder-color, #868a8c);
+    }
+
+    .search-button {
+      background-color: var(--terra-filter-disabled-button-background-color, #e2e3e4);
+      border: var(--terra-filter-disabled-border, 1px solid #85898b);
+      opacity: var(--terra-filter-disabled-button-opacity, 0.5);
+    }
+
+    .box {
+      background-color: var(--terra-filter-disabled-list-background-color, rgba(111, 116, 119, 0.2));
+      border: var(--terra-filter-disabled-list-border, 1px solid #85898b);
+    }
+    
+  }
+  
+  .dropdown,
+  .list {
+    > .display {
+      background-size: var(--terra-filter-background-size, 0 0);
+      border: var(--terra-filter-border, 1px solid #dedfe0);
+      border-bottom-left-radius: var(--terra-filter-border-radius, 3px);
+      border-top-left-radius: var(--terra-filter-border-radius, 3px);
+      cursor: text;
+      display: flex;
+      flex: 1 1 auto; // IE 10
+      padding-bottom: var(--terra-filter-padding-bottom, 0.21428571428571427rem);
+      padding-left: var(--terra-filter-padding-left, 0.42857rem);
+      padding-right: var(--terra-filter-padding-right, 0);
+      padding-top: var(--terra-filter-padding-top, 0);
+    }
+
+    > .is-disabled {
+      background-color: var(--terra-filter-disabled-background-color, rgba(111, 116, 119, 0.2));
+      border-color: var(--terra-filter-disabled-border-color, #85898b);
+      color: var(--terra-filter-disabled-color, #1c1f21);
+    }
+
+    &.is-focused {
+      > .display {
+        background-image: var(--terra-filter-focus-background-image, none);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: var(--terra-filter-focus-background-size, 0 0);
+        border-color: var(--terra-filter-focus-border-color, #4cb2e9);
+        box-shadow: var(--terra-filter-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+        outline: none;
+        transition-duration: var(--terra-filter-focus-transition-duration, 0s);
+        transition-property: background-size;
+        transition-timing-function: var(--terra-filter-focus-transition-timing-function, ease);
+        z-index: 1;
+      }
+    }
+
+    &.is-open {
+      > .display {
+        border-bottom-left-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    &.is-above {
+      > .display {
+        border-bottom-left-radius: var(--terra-filter-border-radius, 3px);
+        border-top-left-radius: 0;
+      }
+    }
+
+    &:hover > .display {
+      border-color: var(--terra-filter-hover-border-color, #dedfe0);
+    }
+
+    &.is-focused:hover > .display {
+      border-color: var(--terra-filter-focus-hover-border-color, #4cb2e9);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+:local {
+  .opt-group {
+    list-style: none;
+    margin: var(--terra-filter-optgroup-margin, 0);
+    padding: var(--terra-filter-optgroup-padding, 0);
+    user-select: none;
+
+    &:not(:first-child) > .label {
+      border-top: var(--terra-filter-optgroup-label-border-top, 0.1428571429rem solid #dedfe0);
+    }
+  }
+
+  .label {
+    background-color: var(--terra-filter-optgroup-label-background-color, #f4f4f4);
+    color: var(--terra-filter-optgroup-label-color, #64696c);
+    font-size: var(--terra-filter-optgroup-label-font-size, 0.9286rem);
+    font-weight: var(--terra-filter-optgroup-label-font-weight, bold);
+    line-height: var(--terra-filter-optgroup-label-line-height, 1.23);
+    padding: var(--terra-filter-optgroup-label-padding, 0.38461538461538464rem);
+    word-break: break-all;
+  }
+
+  .options {
+    list-style: none;
+    margin: var(--terra-filter-optgroup-options-margin, 0);
+    padding: var(--terra-filter-optgroup-options-padding, 0);
+  }
+
+  .is-disabled {
+    pointer-events: none;
+  }
+}
