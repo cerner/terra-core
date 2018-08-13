@@ -3,9 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added new prop to pass down custom props to input
+
+2.24.0 - (August 8, 2018)
+------------------
 ### Changed
 * Updated component internationalization error message
-* Added new prop to pass down custom props to input
 
 2.23.0 - (August 1, 2018)
 ------------------

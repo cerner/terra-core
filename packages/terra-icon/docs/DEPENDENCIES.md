@@ -10,8 +10,8 @@
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| csvtojson | ^1.1.4 | | |
-| jsdom | ^9.11.0 | | |
+| csvtojson | ^1.1.4 | -- | A tool concentrating on converting csv data to JSON with customised parser supporting |
+| jsdom | ^9.11.0 | -- | A JavaScript implementation of the DOM and HTML standards |
 | one-cerner-style-icons | https://github.com/cerner/one-cerner-style-icons/archive/v1.19.1.tar.gz | -- | One Cerner Style Icon Repository |
 | svgo | ^0.7.2 | -- | Nodejs-based tool for optimizing SVG vector graphics files |
 

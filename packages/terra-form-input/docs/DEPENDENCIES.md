@@ -6,7 +6,7 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-doc-template | ^1.12.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-form-field | ^2.21.0 | ^16.2.0 | The Form Field component handles the layout of the label, help text and error text associated with a form element. |
+| terra-form-field | ^2.22.0 | ^16.2.0 | The Form Field component handles the layout of the label, help text and error text associated with a form element. |
 | terra-icon | ^2.19.0 | ^16.2.0 | terra-icon |
 
 ## peerDependencies

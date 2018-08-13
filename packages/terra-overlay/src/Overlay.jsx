@@ -24,9 +24,9 @@ const propTypes = {
   */
   isOpen: PropTypes.bool,
   /**
-  * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear' or BackgroundStyles.LIGHT, BackgroundStyles.DARK, and BackgroundStyles.CLEAR.
+  * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear'.
   */
-  backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear', BackgroundStyles]),
+  backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
   /**
   * Indicates if the overlay content is scrollable.
   */

@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Changed
 * Removed test restrictions on accessibility since that issue was fixed.
+
+3.15.0 - (August 8, 2018)
+------------------
+### Changed
 * Updated component internationalization error message
 
 3.14.0 - (August 1, 2018)
