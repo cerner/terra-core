@@ -192,7 +192,6 @@
       cursor: text;
       display: flex;
       flex: 1 1 auto; // IE 10
-      padding-bottom: var(--terra-select-padding-bottom, 0.21428571428571427rem);
       padding-left: var(--terra-select-padding-left, 0.42857rem);
       padding-right: var(--terra-select-padding-right, 0);
       padding-top: var(--terra-select-padding-top, 0);
@@ -264,6 +263,30 @@
 
     &.is-invalid:hover > .display {
       border-color: var(--terra-select-invalid-hover-border-color, #dedfe0);
+    }
+  }
+
+  .tag {
+    > .display {
+      padding-bottom: var(--terra-search-select-padding-bottom, 0.21428571428571427rem);
+    }
+  }
+
+  .search {
+    > .display {
+      padding-bottom: var(--terra-search-select-padding-bottom, 0.21428571428571427rem);
+    }
+  }
+
+  .combobox {
+    > .display {
+      padding-bottom: var(--terra-combobox-select-padding-bottom, 0.21428571428571427rem);
+    }
+  }
+  
+  .multiple {
+    > .display {
+      padding-bottom: var(--terra-multiple-select-padding-bottom, 0.21428571428571427rem);
     }
   }
 
