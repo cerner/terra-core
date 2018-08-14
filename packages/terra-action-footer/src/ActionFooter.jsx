@@ -27,13 +27,20 @@ const ActionFooter = ({
   start,
   end,
   ...customProps
-}) => (
-  <BlockActionFooter {...customProps} className={cx(customProps.className)}>
-    {start && <div className={cx('socket')}>{start}</div>}
-    {(start || end) && <div className={cx('empty-center')} />}
-    {end && <div className={cx('socket')}>{end}</div>}
-  </BlockActionFooter>
-);
+}) => {
+  const actionFooterClassnames = cx([
+    'action-footer',
+    customProps.className,
+  ]);
+
+  return (
+    <BlockActionFooter {...customProps} className={actionFooterClassnames}>
+      {start && <div className={cx('socket')}>{start}</div>}
+      {(start || end) && <div className={cx('empty-center')} />}
+      {end && <div className={cx('socket')}>{end}</div>}
+    </BlockActionFooter>
+  );
+};
 
 ActionFooter.propTypes = propTypes;
 ActionFooter.defaultProps = defaultProps;

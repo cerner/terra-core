@@ -28,10 +28,7 @@ const CenteredActionFooter = ({
   ]);
 
   return (
-    <BlockActionFooter
-      {...customProps}
-      className={centeredActionFooterClassNames}
-    >
+    <BlockActionFooter {...customProps} className={centeredActionFooterClassNames}>
       {center}
     </BlockActionFooter>
   );
