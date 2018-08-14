@@ -17,12 +17,12 @@ describe('ActionFooter', () => {
     it('should render a footer with only two start socket buttons', () => {
       const component = (
         <ActionFooter
-          start={
+          start={(
             <div>
               <button>Start Socket 1</button>
               <button>Start Socket 2</button>
             </div>
-          }
+)}
         />
       );
       expect(shallow(component)).toMatchSnapshot();
@@ -36,12 +36,12 @@ describe('ActionFooter', () => {
     it('should render a footer with only two end socket buttons', () => {
       const component = (
         <ActionFooter
-          end={
+          end={(
             <div>
               <button>End Socket 1</button>
               <button>End Socket 2</button>
             </div>
-          }
+)}
         />
       );
       expect(shallow(component)).toMatchSnapshot();

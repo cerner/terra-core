@@ -18,9 +18,13 @@ class AlertActionButton extends React.Component {
 
   render() {
     return (
-      <Alert id="actionAlert" type="warning" action={<Button text="Action" onClick={this.actionFunc} />} >
+      <Alert id="actionAlert" type="warning" action={<Button text="Action" onClick={this.actionFunc} />}>
         This is a warning. It is configured with a custom Action button. Action button has been
-        clicked <span id="actionButtonClickCount">{this.state.actionButtonClickCount}</span> times.
+        clicked
+        {' '}
+        <span id="actionButtonClickCount">{this.state.actionButtonClickCount}</span>
+        {' '}
+times.
       </Alert>
     );
   }

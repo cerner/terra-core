@@ -8,14 +8,14 @@ import ExampleTemplate from '../../common/ExampleTemplate';
 export default () => (
   <ExampleTemplate>
     <CenteredActionFooter
-      center={
+      center={(
         <div style={{ width: '100%' }}>
           <Spacer paddingBottom="medium">
             <Button isBlock text="First Action" />
           </Spacer>
           <Button isBlock text="Second Action" />
         </div>
-      }
+)}
     />
   </ExampleTemplate>
 );

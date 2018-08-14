@@ -19,7 +19,11 @@ const DocPage = () => (
     examples={[
       {
         title: 'I18nProvider Example',
-        description: (<p style={{ fontStyle: 'italic' }}><span style={{ fontWeight: 'bold' }}>Note:</span> This is an example of a nested I18nProvider. The site overall is an example of using an application-level I18nProvider implemented through the terra-base component.</p>),
+        description: (<p style={{ fontStyle: 'italic' }}>
+          <span style={{ fontWeight: 'bold' }}>Note:</span>
+          {' '}
+This is an example of a nested I18nProvider. The site overall is an example of using an application-level I18nProvider implemented through the terra-base component.
+        </p>),
         example: <I18nDemo />,
       },
     ]}

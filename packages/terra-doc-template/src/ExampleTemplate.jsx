@@ -65,21 +65,26 @@ class ExampleTemplate extends React.Component {
 
     return (
       <div {...customProps} className={cx('template', customProps.className)}>
-        {title &&
+        {title
+          && (
           <div className={cx('header')}>
             <h2 className={cx('title')}>
               {title}
             </h2>
-          </div>}
+          </div>
+          )}
         <div className={cx('content')}>
-          {description &&
+          {description
+            && (
             <div className={cx('description')}>
               {description}
-            </div>}
+            </div>
+            )}
           {example}
           {children}
         </div>
-        {exampleSrc &&
+        {exampleSrc
+          && (
           <div className={cx('footer')}>
             <button className={cx('toggle')} onClick={this.handleCodeToggle}>
               <span className={cx('chevron-left')} />
@@ -91,7 +96,8 @@ class ExampleTemplate extends React.Component {
                 {exampleSrc}
               </SyntaxHighlighter>
             </div>
-          </div>}
+          </div>
+          )}
       </div>
     );
   }

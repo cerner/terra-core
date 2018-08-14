@@ -86,7 +86,13 @@ class ProgressivePaginator extends React.Component {
     return (
       <div className={cx(['paginator', 'progressive'])} role="navigation" aria-label="pagination">
         <div>
-          Page {selectedPage} of {totalPages}
+          Page
+          {' '}
+          {selectedPage}
+          {' '}
+of
+          {' '}
+          {totalPages}
         </div>
         <div>
           <a
@@ -107,7 +113,8 @@ class ProgressivePaginator extends React.Component {
             onClick={this.handlePageChange(previousPageIndex)}
             onKeyDown={this.handleOnKeyDown(previousPageIndex)}
           >
-            <span className={cx('icon')} />Previous
+            <span className={cx('icon')} />
+Previous
           </a>
           <a
             aria-disabled={selectedPage === totalPages}
@@ -117,7 +124,8 @@ class ProgressivePaginator extends React.Component {
             onClick={this.handlePageChange(nextPageIndex)}
             onKeyDown={this.handleOnKeyDown(nextPageIndex)}
           >
-            Next<span className={cx('icon')} />
+            Next
+            <span className={cx('icon')} />
           </a>
           <a
             aria-disabled={selectedPage === totalPages}
@@ -165,7 +173,13 @@ class ProgressivePaginator extends React.Component {
           </a>
         </div>
         <div>
-          Page {selectedPage} of {totalPages}
+          Page
+          {' '}
+          {selectedPage}
+          {' '}
+of
+          {' '}
+          {totalPages}
         </div>
         <div>
           <a

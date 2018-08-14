@@ -16,7 +16,10 @@ class ButtonGroupMultiSelect extends React.Component {
   render() {
     return (
       <div>
-        <h3>Selected Button(s): <span id="selected-keys">{this.state.selectedKeys.join(', ')}</span></h3>
+        <h3>
+Selected Button(s):
+          <span id="selected-keys">{this.state.selectedKeys.join(', ')}</span>
+        </h3>
         <ButtonGroup
           id="button-group-multi-select"
           onChange={this.handleSelection}

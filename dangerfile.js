@@ -1,5 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies, no-unused-vars
-import { danger, warn, fail, message } from 'danger';
+import {
+  danger, warn, fail, message,
+} from 'danger';
 
 const newChangelog = danger.git.created_files.filter((filePath) => {
   const srcFilePattern = /^packages\/terra-(?!(site))([a-z-])*\/CHANGELOG.md/i;

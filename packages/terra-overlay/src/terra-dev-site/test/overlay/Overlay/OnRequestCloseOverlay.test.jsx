@@ -26,7 +26,7 @@ class OverlayExample extends React.Component {
 
   render() {
     return (
-      <OverlayContainer style={{ height: '100px', width: '100%' }} >
+      <OverlayContainer style={{ height: '100px', width: '100%' }}>
         <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} onRequestClose={this.handleOnRequestESC} id={this.state.id}>
           <h3>The onRequestClose prop gives the overlay close behaviors.</h3>
           <br />

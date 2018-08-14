@@ -29,10 +29,13 @@ class AutoSearchDisabledSearchField extends React.Component {
         <h3> Auto Searching is Disabled </h3>
         <SearchField id="searchfield" onSearch={this.handleSearch} onInvalidSearch={this.handleInvalidSearch} />
         <div id="search-callback-text">
-          {this.state.message}{this.state.searchText}
+          {this.state.message}
+          {this.state.searchText}
         </div>
         <div id="search-count">
-          Search Count: {this.state.searchCount}
+          Search Count:
+          {' '}
+          {this.state.searchCount}
         </div>
       </div>
     );

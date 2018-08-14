@@ -17,7 +17,10 @@ class listExample extends React.Component {
     return (
       <div>
         <div id="selected-index">
-          <h3>Max Selection of 2. Selected Item(s): {this.state.selectedIndexes.join(', ')}</h3>
+          <h3>
+Max Selection of 2. Selected Item(s):
+            {this.state.selectedIndexes.join(', ')}
+          </h3>
         </div>
         <MultiSelectList onChange={this.handleSelection} maxSelectionCount={2}>
           <MultiSelectList.Item content={<p>test 1</p>} key="123" />

@@ -32,8 +32,8 @@ class AbstractModalIsFullscreen extends React.Component {
           onRequestClose={this.handleCloseModal}
         >
           <div style={{
- height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'aquamarine',
-}}
+            height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'aquamarine',
+          }}
           >
             <h1>Fullscreen Modal</h1>
             <br />

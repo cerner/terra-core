@@ -49,4 +49,3 @@ class ModalIsFullscreen extends React.Component {
 
 
 export default ModalIsFullscreen;
-

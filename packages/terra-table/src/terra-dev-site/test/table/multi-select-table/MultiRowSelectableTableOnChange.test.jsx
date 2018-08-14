@@ -18,8 +18,14 @@ class MultiRowSelectableTable extends React.Component {
   render() {
     return (
       <div>
-        <h3 id="selected-indexes">Selected Items: {this.state.selectedIndexes}</h3>
-        <h3 id="last-selected-index">Last Selected Item: {this.state.lastSelectedIndex}</h3>
+        <h3 id="selected-indexes">
+Selected Items:
+          {this.state.selectedIndexes}
+        </h3>
+        <h3 id="last-selected-index">
+Last Selected Item:
+          {this.state.lastSelectedIndex}
+        </h3>
         <Table isStriped={false}>
           <Table.Header>
             <Table.HeaderCell content="Name" key="NAME" minWidth="small" />

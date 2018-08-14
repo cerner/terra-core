@@ -60,8 +60,8 @@ class SignatureExample extends React.Component {
     return (
       <div>
         <div style={{
- height: '100px', width: '100%', padding: '5px', border: '1px solid black',
-}}
+          height: '100px', width: '100%', padding: '5px', border: '1px solid black',
+        }}
         >
           <Signature id="foo" lineWidth={this.state.lineWidth} lineSegments={this.state.lineSegments} />
         </div>

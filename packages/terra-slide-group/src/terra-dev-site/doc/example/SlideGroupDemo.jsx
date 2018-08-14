@@ -49,7 +49,10 @@ class SlideGroupDemo extends React.Component {
           key={`Slide ${i}`}
           style={slideStyles}
         >
-          <h2>Slide {i}</h2>
+          <h2>
+Slide
+            {i}
+          </h2>
           <br />
           <button onClick={this.increment}>Increment</button>
           {i !== 0 ? <button onClick={this.decrement}>Decrement</button> : null}

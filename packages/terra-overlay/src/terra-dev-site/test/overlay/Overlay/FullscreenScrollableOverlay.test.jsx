@@ -2,7 +2,7 @@ import React from 'react';
 import Overlay from '../../../../Overlay';
 
 const OverlayExample = () => (
-  <Overlay isOpen isScrollable id="scrollable-overlay" >
+  <Overlay isOpen isScrollable id="scrollable-overlay">
     <p>I</p>
     <p>am</p>
     <p>some</p>

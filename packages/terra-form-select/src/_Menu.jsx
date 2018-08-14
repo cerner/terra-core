@@ -161,7 +161,7 @@ class Menu extends React.Component {
           onMouseEnter: event => this.handleMouseEnter(event, option),
           ...(option.props.value === this.state.active) && { 'data-select-active': true },
         });
-      } else if (option.type.isOptGroup) {
+      } if (option.type.isOptGroup) {
         return React.cloneElement(option, {}, this.clone(option.props.children));
       }
       return option;

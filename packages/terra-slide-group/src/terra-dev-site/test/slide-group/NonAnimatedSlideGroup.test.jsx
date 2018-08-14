@@ -30,7 +30,10 @@ class SlideGroupExample extends React.Component {
     for (let i = 1; i <= this.state.counter; i += 1) {
       slides.push((
         <div key={i}>
-          <h2>Slide {i}</h2>
+          <h2>
+Slide
+            {i}
+          </h2>
           <br />
           {i !== 4 ? <button id={`increment-${i}`} style={{ backgroundColor: 'lightgrey' }} onClick={this.increment}>Increment</button> : null}
           {i !== 1 ? <button id={`decrement-${i}`} style={{ backgroundColor: 'lightgrey' }} onClick={this.decrement}>Decrement</button> : null}

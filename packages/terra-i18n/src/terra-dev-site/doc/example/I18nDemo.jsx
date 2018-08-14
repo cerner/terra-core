@@ -33,7 +33,13 @@ class Demo extends React.Component {
         messages={this.state.messages}
       >
         <FormattedMessage id="Terra.ajax.error" />
-        <label htmlFor="locale"> Current locale: {this.state.locale} </label>
+        <label htmlFor="locale">
+          {' '}
+Current locale:
+          {this.state.locale}
+          {' '}
+
+        </label>
         <select value={this.state.locale} onChange={this.handleLocaleChange}>
           <option value="en">en</option>
           <option value="en-GB">en-GB</option>

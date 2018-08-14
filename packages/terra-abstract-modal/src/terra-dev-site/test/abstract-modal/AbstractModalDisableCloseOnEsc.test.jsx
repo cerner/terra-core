@@ -13,6 +13,7 @@ class ModalDisableCloseOnEsc extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
+
   handleOpenModal() {
     this.setState({ isOpen: true });
   }

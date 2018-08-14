@@ -54,7 +54,12 @@ const Dialog = ({
   const closeText = intl.formatMessage({ id: 'Terra.dialog.close' });
   const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button variant="utility" text={closeText} onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} /></div> : null;
 
-  const dialogHeader = <div className={cx('dialog-header')}><div className={cx('dialog-header-title')}>{header}</div>{closeButton}</div>;
+  const dialogHeader = (
+    <div className={cx('dialog-header')}>
+      <div className={cx('dialog-header-title')}>{header}</div>
+      {closeButton}
+    </div>
+  );
 
   return (
     <div {...customProps} className={dialogClassNames}>

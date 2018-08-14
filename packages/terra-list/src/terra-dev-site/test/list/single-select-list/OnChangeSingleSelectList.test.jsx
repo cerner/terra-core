@@ -17,7 +17,10 @@ class listExample extends React.Component {
     return (
       <div>
         <div id="selected-index">
-          <h3>Selected Item: {this.state.selectedIndex}</h3>
+          <h3>
+Selected Item:
+            {this.state.selectedIndex}
+          </h3>
         </div>
         <SingleSelectList onChange={this.handleSelection}>
           <SingleSelectList.Item content={<p>test 1</p>} key="123" />

@@ -34,8 +34,8 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
           classNameModal={styles['fixed-size']}
         >
           <div style={{
- height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'lightgreen',
-}}
+            height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'lightgreen',
+          }}
           >
             <h1>Modal disable close on outside click</h1>
             <br />

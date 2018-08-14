@@ -54,12 +54,13 @@ const applicationIdentifiers = (props) => {
   const { identifiers } = props;
 
   if (identifiers) {
-    return Object.keys(identifiers).map(key =>
-      (<DemographicsBannerValue
+    return Object.keys(identifiers).map(key => (
+      <DemographicsBannerValue
         key={`identifier-${key}`}
         label={key}
         value={identifiers[key]}
-      />));
+      />
+    ));
   }
 
   return null;

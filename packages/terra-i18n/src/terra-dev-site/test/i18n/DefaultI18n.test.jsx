@@ -42,7 +42,8 @@ class Base extends React.Component {
         <select id="change-locale" onChange={this.handleLocaleChange} value={this.state.selectedLocale}>
           {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
         </select>
-        <p><span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
+        <p>
+          <span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
           <FormattedMessage id="Terra.ajax.error" />
         </p>
         {(this.state.selectedLocale).includes('zu')

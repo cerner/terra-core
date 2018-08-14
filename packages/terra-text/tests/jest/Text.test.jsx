@@ -44,7 +44,11 @@ describe('Text', () => {
   });
 
   it('should support rendering an array of elements as a children', () => {
-    const text = shallow(<Text><span>Element 1</span><span>Element 2</span><span>Element 3</span></Text>);
+    const text = shallow(<Text>
+      <span>Element 1</span>
+      <span>Element 2</span>
+      <span>Element 3</span>
+                         </Text>);
     expect(text).toMatchSnapshot();
   });
 

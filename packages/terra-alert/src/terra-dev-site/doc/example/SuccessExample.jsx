@@ -12,11 +12,13 @@ const SuccessExample = () => (
       <h3>Basic Alert of type success with default title</h3>
       <br />
       <code>
-        {alertStartTagStr}{alertText}{alertEndTagStr}
+        {alertStartTagStr}
+        {alertText}
+        {alertEndTagStr}
       </code>
     </div>
     <br />
-    <Alert type="success" >{alertText}</Alert>
+    <Alert type="success">{alertText}</Alert>
   </div>
 );
 

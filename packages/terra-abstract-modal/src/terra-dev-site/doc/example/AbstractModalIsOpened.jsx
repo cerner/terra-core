@@ -33,8 +33,8 @@ class AbstractModalIsOpen extends React.Component {
           classNameModal={styles['fixed-size']}
         >
           <div style={{
- height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'antiquewhite',
-}}
+            height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'antiquewhite',
+          }}
           >
             <h1>Default Modal</h1>
             <br />

@@ -231,7 +231,7 @@ class StatusView extends React.Component {
           ref={(element) => { this.innerNode = element; }}
         >
           {glyphSection}
-          <div className={cx('message-content-group')} >
+          <div className={cx('message-content-group')}>
             {titleSection}
             {dividerSection}
             {messageSection}

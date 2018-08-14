@@ -24,7 +24,7 @@ const OverlayContainer = ({ children, ...customProps }) => {
   ]);
 
   return (
-    <div {...customProps} className={OverlayContainerClassNames} tabIndex="-1" >
+    <div {...customProps} className={OverlayContainerClassNames} tabIndex="-1">
       {children}
     </div>
   );

@@ -59,7 +59,10 @@ class FieldExamples extends React.Component {
           <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
         </Field>
         <hr />
-        <p>If a field is invalid, an error icon will be displayed. <button onClick={this.toggleIsInvalid}>Toggle Invalid State</button></p>
+        <p>
+If a field is invalid, an error icon will be displayed.
+          <button onClick={this.toggleIsInvalid}>Toggle Invalid State</button>
+        </p>
       </div>
     );
   }

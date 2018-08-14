@@ -8,6 +8,7 @@ class TimeUtil {
   static validNumericInput(value) {
     return value.length === 0 || /^\d+$/.test(value);
   }
+
   /**
    * Finds the equivalent twelve hour time and meridiem for a given hour, anteMeridiem, and postMeridiem
    * @param {String} hour Hour to parse.
@@ -60,7 +61,7 @@ class TimeUtil {
       if (numericMinute < maxValue) {
         numericMinute += 1;
         return numericMinute < 10 ? '0'.concat(numericMinute.toString()) : numericMinute.toString();
-      } else if (timeVariant === this.FORMAT_12_HOUR) {
+      } if (timeVariant === this.FORMAT_12_HOUR) {
         return '01';
       }
 
@@ -86,7 +87,7 @@ class TimeUtil {
       if (numericMinute > minValue) {
         numericMinute -= 1;
         return numericMinute < 10 ? '0'.concat(numericMinute.toString()) : numericMinute.toString();
-      } else if (timeVariant === this.FORMAT_12_HOUR) {
+      } if (timeVariant === this.FORMAT_12_HOUR) {
         return '12';
       }
 
@@ -195,14 +196,13 @@ TimeUtil.keyCodes = {
   DELETE: 46,
 };
 
-TimeUtil.isConsideredMobileDevice = () =>
-  window.matchMedia('(max-width: 1024px)').matches &&
-  (
-    'ontouchstart' in window ||
+TimeUtil.isConsideredMobileDevice = () => window.matchMedia('(max-width: 1024px)').matches
+  && (
+    'ontouchstart' in window
     // eslint-disable-next-line no-undef
-    (window.DocumentTouch && document instanceof DocumentTouch) ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
+    || (window.DocumentTouch && document instanceof DocumentTouch)
+    || navigator.maxTouchPoints > 0
+    || navigator.msMaxTouchPoints > 0
   );
 
 // These formats are designed to be the possible props for the
