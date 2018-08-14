@@ -44,12 +44,16 @@ describe('Heading', () => {
   });
 
   it('should support rendering an array of elements as a children', () => {
-    const heading = shallow(<Heading level={1}>
-      <span>Element 1</span>
-      <span>Element 2</span>
-      <span>Element 3</span>
-                            </Heading>);
+    /* eslint-disable comma-dangle */
+    const heading = shallow(
+      <Heading level={1}>
+        <span>Element 1</span>
+        <span>Element 2</span>
+        <span>Element 3</span>
+      </Heading>
+    );
     expect(heading).toMatchSnapshot();
+    /* eslint-enable comma-dangle */
   });
 
   // Prop Tests

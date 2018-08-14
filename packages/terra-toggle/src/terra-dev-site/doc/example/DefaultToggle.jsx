@@ -12,14 +12,15 @@ class ToggleDefault extends React.Component {
   }
 
   handleOnClick() {
-    this.setState({ isOpen: !this.state.isOpen });
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 
   render() {
+    const { isOpen } = this.state;
     return (
       <div>
         <IconInformation onClick={this.handleOnClick} />
-        <Toggle isOpen={this.state.isOpen}>
+        <Toggle isOpen={isOpen}>
           <p>
 Lorem ipsum dolor sit amet,
             <a href="#test">consectetur</a>

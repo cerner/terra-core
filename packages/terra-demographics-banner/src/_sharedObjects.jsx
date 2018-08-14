@@ -66,7 +66,9 @@ const applicationIdentifiers = (props) => {
   return null;
 };
 
-module.exports = {
+const DemographicsBannerUtils = {
   personDetails,
   applicationIdentifiers,
 };
+
+export default DemographicsBannerUtils;

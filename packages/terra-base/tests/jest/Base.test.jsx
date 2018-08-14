@@ -8,11 +8,15 @@ it('should support rendering a string without translation', () => {
 });
 
 it('should support rendering an array of children without translation', () => {
-  const base = shallow(<Base>
-    <div>1</div>
-    <div>2</div>
-  </Base>);
+  /* eslint-disable comma-dangle */
+  const base = shallow(
+    <Base>
+      <div>1</div>
+      <div>2</div>
+    </Base>
+  );
   expect(base).toMatchSnapshot();
+  /* eslint-enable comma-dangle */
 });
 
 it('throws error for missing required locale', () => {

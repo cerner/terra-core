@@ -1,6 +1,5 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import TextareaField from 'terra-form-textarea/lib/TextareaField';
 import ReadMe from '../../../../docs/TextareaField.md';
 import { name } from '../../../../package.json';
 
@@ -8,8 +7,8 @@ import { name } from '../../../../package.json';
 // Component Source
 import TextareaFieldSrc from '!raw-loader!../../../../src/TextareaField';
 
-// Example Source
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+// Example Files
+import TextareaField from '../../../TextareaField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (

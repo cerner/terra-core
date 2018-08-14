@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import { I18nProvider, i18nLoader } from '../../../I18n';
+import I18nProvider from '../../../I18nProvider';
+import i18nLoader from '../../../i18nLoader';
 import i18nSupportedLocales from '../../../i18nSupportedLocales';
 
 // Add Portuguese-Guinea-Bissau, Zulu & Zulu-South African locales as test locales (supported by intl)
