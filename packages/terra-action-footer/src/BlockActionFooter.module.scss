@@ -1,7 +1,7 @@
 $default-padding: 0.3571428571rem;
 
 :local {
-  .action-footer-container {
+  .block-action-footer {
     background-color: var(--terra-action-footer-background-color, transparent);
     border-top: var(--terra-action-footer-border-top, 0.0714285714rem solid #cfd0d1);
     display: flex;

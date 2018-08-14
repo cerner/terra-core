@@ -5,11 +5,11 @@ exports[`ActionFooter Prop Tests with both start and end actions should display 
   end="End Action"
   start="Start Action"
 >
-  <ActionFooterContainer
+  <BlockActionFooter
     className=""
   >
     <div
-      className="action-footer-container with-actions"
+      className="block-action-footer with-actions"
     >
       <div
         className="socket"
@@ -25,7 +25,7 @@ exports[`ActionFooter Prop Tests with both start and end actions should display 
         End Action
       </div>
     </div>
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </ActionFooter>
 `;
 
@@ -33,11 +33,11 @@ exports[`ActionFooter Prop Tests with only a start action should only display a 
 <ActionFooter
   start="Start Action"
 >
-  <ActionFooterContainer
+  <BlockActionFooter
     className=""
   >
     <div
-      className="action-footer-container with-actions"
+      className="block-action-footer with-actions"
     >
       <div
         className="socket"
@@ -48,7 +48,7 @@ exports[`ActionFooter Prop Tests with only a start action should only display a 
         className="empty-center"
       />
     </div>
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </ActionFooter>
 `;
 
@@ -56,11 +56,11 @@ exports[`ActionFooter Prop Tests with only an end action should only display an 
 <ActionFooter
   end="End Action"
 >
-  <ActionFooterContainer
+  <BlockActionFooter
     className=""
   >
     <div
-      className="action-footer-container with-actions"
+      className="block-action-footer with-actions"
     >
       <div
         className="empty-center"
@@ -71,24 +71,24 @@ exports[`ActionFooter Prop Tests with only an end action should only display an 
         End Action
       </div>
     </div>
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </ActionFooter>
 `;
 
 exports[`ActionFooter Prop Tests without start or end actions should display no actions 1`] = `
 <ActionFooter>
-  <ActionFooterContainer
+  <BlockActionFooter
     className=""
   >
     <div
-      className="action-footer-container"
+      className="block-action-footer"
     />
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </ActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with both start and end socket buttons 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className=""
 >
   <div
@@ -108,11 +108,11 @@ exports[`ActionFooter Snapshot Tests should render a footer with both start and 
       End Socket
     </button>
   </div>
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only an end socket button 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className=""
 >
   <div
@@ -125,11 +125,11 @@ exports[`ActionFooter Snapshot Tests should render a footer with only an end soc
       End Socket
     </button>
   </div>
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only one start socket button 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className=""
 >
   <div
@@ -142,11 +142,11 @@ exports[`ActionFooter Snapshot Tests should render a footer with only one start 
   <div
     className="empty-center"
   />
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only two end socket buttons 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className=""
 >
   <div
@@ -164,11 +164,11 @@ exports[`ActionFooter Snapshot Tests should render a footer with only two end so
       </button>
     </div>
   </div>
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only two start socket buttons 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className=""
 >
   <div
@@ -186,11 +186,11 @@ exports[`ActionFooter Snapshot Tests should render a footer with only two start 
   <div
     className="empty-center"
   />
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render an empty footer 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className=""
 />
 `;
