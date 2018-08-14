@@ -17,7 +17,7 @@ class AnimatedToggle extends React.Component {
     const { isOpen } = this.state;
     return (
       <div>
-        <button id="trigger-toggle" onClick={this.handleOnClick} type="button">Animated Toggle</button>
+        <button type="button" id="trigger-toggle" onClick={this.handleOnClick}>Animated Toggle</button>
         <Toggle id="toggle" isOpen={isOpen} isAnimated>
           <p>
 Lorem ipsum dolor sit amet,
@@ -44,7 +44,7 @@ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali
           </div>
           <br />
           <div>
-            <button id="button" type="button">button</button>
+            <button type="button" id="button">button</button>
           </div>
         </Toggle>
       </div>

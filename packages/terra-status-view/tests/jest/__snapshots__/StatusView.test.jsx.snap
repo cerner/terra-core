@@ -57,7 +57,7 @@ exports[`should render a single child element 1`] = `
           type="button"
           variant="neutral"
         >
-          <button
+          <button type="button"
             aria-disabled={false}
             aria-label={null}
             className="button neutral"
@@ -289,7 +289,7 @@ exports[`should render an image with a no-data status view with all message prop
           type="button"
           variant="neutral"
         >
-          <button
+          <button type="button"
             aria-disabled={false}
             aria-label={null}
             className="button neutral"
@@ -321,7 +321,7 @@ exports[`should render an image with a no-data status view with all message prop
           type="button"
           variant="neutral"
         >
-          <button
+          <button type="button"
             aria-disabled={false}
             aria-label={null}
             className="button neutral"

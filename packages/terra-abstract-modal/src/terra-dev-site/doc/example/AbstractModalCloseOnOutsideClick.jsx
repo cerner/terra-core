@@ -45,10 +45,10 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
               <li>- Clicking on the close button</li>
             </ul>
             <br />
-            <button onClick={this.handleCloseModal}>Close Modal</button>
+            <button type="button" onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </AbstractModal>
-        <button onClick={this.handleOpenModal}>Open Modal</button>
+        <button type="button" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }

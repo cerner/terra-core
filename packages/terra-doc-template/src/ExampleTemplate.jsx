@@ -86,7 +86,7 @@ class ExampleTemplate extends React.Component {
         {exampleSrc
           && (
           <div className={cx('footer')}>
-            <button className={cx('toggle')} onClick={this.handleCodeToggle}>
+            <button type="button" className={cx('toggle')} onClick={this.handleCodeToggle}>
               <span className={cx('chevron-left')} />
               <span>Code</span>
               <span className={cx('chevron-right')} />

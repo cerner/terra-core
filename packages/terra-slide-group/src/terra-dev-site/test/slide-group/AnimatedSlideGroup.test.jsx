@@ -35,8 +35,8 @@ Slide
             {i}
           </h2>
           <br />
-          {i !== 4 ? <button id={`increment-${i}`} style={{ backgroundColor: 'lightgrey' }} onClick={this.increment}>Increment</button> : null}
-          {i !== 1 ? <button id={`decrement-${i}`} style={{ backgroundColor: 'lightgrey' }} onClick={this.decrement}>Decrement</button> : null}
+          {i !== 4 ? <button type="button" id={`increment-${i}`} style={{ backgroundColor: 'lightgrey' }} onClick={this.increment}>Increment</button> : null}
+          {i !== 1 ? <button type="button" id={`decrement-${i}`} style={{ backgroundColor: 'lightgrey' }} onClick={this.decrement}>Decrement</button> : null}
         </div>
       ));
     }

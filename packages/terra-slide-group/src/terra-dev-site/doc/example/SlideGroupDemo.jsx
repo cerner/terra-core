@@ -54,8 +54,8 @@ Slide
             {i}
           </h2>
           <br />
-          <button onClick={this.increment}>Increment</button>
-          {i !== 0 ? <button onClick={this.decrement}>Decrement</button> : null}
+          <button type="button" onClick={this.increment}>Increment</button>
+          {i !== 0 ? <button type="button" onClick={this.decrement}>Decrement</button> : null}
         </div>
       ));
     }

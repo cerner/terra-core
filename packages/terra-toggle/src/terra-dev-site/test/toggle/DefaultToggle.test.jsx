@@ -16,7 +16,7 @@ class ToggleDefault extends React.Component {
   render() {
     return (
       <div>
-        <button id="trigger-toggle" onClick={this.handleOnClick}>Default Toggle</button>
+        <button type="button" id="trigger-toggle" onClick={this.handleOnClick}>Default Toggle</button>
         <Toggle id="toggle" isOpen={this.state.isOpen}>
           <p>
 Lorem ipsum dolor sit amet,
@@ -43,7 +43,7 @@ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali
           </div>
           <br />
           <div>
-            <button id="button">button</button>
+            <button type="button" id="button">button</button>
           </div>
         </Toggle>
       </div>

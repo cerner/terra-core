@@ -19,8 +19,8 @@ describe('CenteredActionFooter', () => {
         <CenteredActionFooter
           center={(
             <div>
-              <button>Button 1</button>
-              <button>Button 2</button>
+              <button type="button">Button 1</button>
+              <button type="button">Button 2</button>
             </div>
 )}
         />

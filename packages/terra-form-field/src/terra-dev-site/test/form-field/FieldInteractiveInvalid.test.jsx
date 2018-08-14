@@ -126,7 +126,7 @@ class FieldExamples extends React.Component {
 
     return (
       <div>
-        <button id="toggle-is-invalid" onClick={this.handleIsInvalidChange}>Toggle In Error </button>
+        <button type="button" id="toggle-is-invalid" onClick={this.handleIsInvalidChange}>Toggle In Error </button>
         <h3>Field</h3>
         {field}
         <h3>Field - Optional</h3>

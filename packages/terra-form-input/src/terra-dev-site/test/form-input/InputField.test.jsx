@@ -22,7 +22,7 @@ class InputFieldExample extends React.Component {
   render() {
     return (
       <div>
-        <button id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
+        <button type="button" id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <InputField
           inputId="test-input"
           defaultValue="Value"

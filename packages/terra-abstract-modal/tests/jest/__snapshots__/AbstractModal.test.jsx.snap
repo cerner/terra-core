@@ -59,7 +59,7 @@ exports[`should mount an open modal 1`] = `
                   <h1>
                     Terra Modal
                   </h1>
-                  <button
+                  <button type="button"
                     onClick={[Function]}
                   >
                     Close Modal
@@ -71,7 +71,7 @@ exports[`should mount an open modal 1`] = `
         </ModalContent>
       </Portal>
     </AbstractModal>
-    <button
+    <button type="button"
       onClick={[Function]}
     >
       Open Modal
@@ -141,7 +141,7 @@ exports[`should mount an open modal 7000 z-index 1`] = `
                   <h1>
                     Terra Modal
                   </h1>
-                  <button
+                  <button type="button"
                     onClick={[Function]}
                   >
                     Close Modal
@@ -153,7 +153,7 @@ exports[`should mount an open modal 7000 z-index 1`] = `
         </ModalContent>
       </Portal>
     </AbstractModal>
-    <button
+    <button type="button"
       onClick={[Function]}
     >
       Open Modal
@@ -223,7 +223,7 @@ exports[`should mount an open modal 8000 z-index 1`] = `
                   <h1>
                     Terra Modal
                   </h1>
-                  <button
+                  <button type="button"
                     onClick={[Function]}
                   >
                     Close Modal
@@ -235,7 +235,7 @@ exports[`should mount an open modal 8000 z-index 1`] = `
         </ModalContent>
       </Portal>
     </AbstractModal>
-    <button
+    <button type="button"
       onClick={[Function]}
     >
       Open Modal
@@ -305,7 +305,7 @@ exports[`should mount an open modal 9000 z-index 1`] = `
                   <h1>
                     Terra Modal
                   </h1>
-                  <button
+                  <button type="button"
                     onClick={[Function]}
                   >
                     Close Modal
@@ -317,7 +317,7 @@ exports[`should mount an open modal 9000 z-index 1`] = `
         </ModalContent>
       </Portal>
     </AbstractModal>
-    <button
+    <button type="button"
       onClick={[Function]}
     >
       Open Modal
@@ -387,7 +387,7 @@ exports[`should mount an open modal set to fullscreen 1`] = `
                   <h1>
                     Terra Modal
                   </h1>
-                  <button
+                  <button type="button"
                     onClick={[Function]}
                   >
                     Close Modal
@@ -399,7 +399,7 @@ exports[`should mount an open modal set to fullscreen 1`] = `
         </ModalContent>
       </Portal>
     </AbstractModal>
-    <button
+    <button type="button"
       onClick={[Function]}
     >
       Open Modal
@@ -427,14 +427,14 @@ exports[`should shallow an open modal 1`] = `
       <h1>
         Terra Modal
       </h1>
-      <button
+      <button type="button"
         onClick={[Function]}
       >
         Close Modal
       </button>
     </div>
   </AbstractModal>
-  <button
+  <button type="button"
     onClick={[Function]}
   >
     Open Modal
@@ -461,14 +461,14 @@ exports[`should shallow an open modal 6000 z-index 1`] = `
       <h1>
         Terra Modal
       </h1>
-      <button
+      <button type="button"
         onClick={[Function]}
       >
         Close Modal
       </button>
     </div>
   </AbstractModal>
-  <button
+  <button type="button"
     onClick={[Function]}
   >
     Open Modal
@@ -495,14 +495,14 @@ exports[`should shallow an open modal 7000 z-index 1`] = `
       <h1>
         Terra Modal
       </h1>
-      <button
+      <button type="button"
         onClick={[Function]}
       >
         Close Modal
       </button>
     </div>
   </AbstractModal>
-  <button
+  <button type="button"
     onClick={[Function]}
   >
     Open Modal
@@ -529,14 +529,14 @@ exports[`should shallow an open modal 8000 z-index 1`] = `
       <h1>
         Terra Modal
       </h1>
-      <button
+      <button type="button"
         onClick={[Function]}
       >
         Close Modal
       </button>
     </div>
   </AbstractModal>
-  <button
+  <button type="button"
     onClick={[Function]}
   >
     Open Modal
@@ -563,14 +563,14 @@ exports[`should shallow an open modal 9000 z-index 1`] = `
       <h1>
         Terra Modal
       </h1>
-      <button
+      <button type="button"
         onClick={[Function]}
       >
         Close Modal
       </button>
     </div>
   </AbstractModal>
-  <button
+  <button type="button"
     onClick={[Function]}
   >
     Open Modal

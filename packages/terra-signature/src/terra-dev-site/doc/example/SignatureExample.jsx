@@ -66,8 +66,8 @@ class SignatureExample extends React.Component {
           <Signature id="foo" lineWidth={this.state.lineWidth} lineSegments={this.state.lineSegments} />
         </div>
         <div>
-          <button onClick={this.handleClear}>Clear </button>
-          <button onClick={this.handleSingleLine}>Sign w/Line </button>
+          <button type="button" onClick={this.handleClear}>Clear </button>
+          <button type="button" onClick={this.handleSingleLine}>Sign w/Line </button>
           <Select placeholder="Select a line width" value={this.state.lineWidth} onChange={this.handleLineWidth}>
             <Select.Option value="1" display="EXTRAFINE" key="extrafine" />
             <Select.Option value="2" display="FINE" key="fine" />

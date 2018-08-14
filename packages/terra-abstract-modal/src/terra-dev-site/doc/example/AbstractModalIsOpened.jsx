@@ -48,10 +48,10 @@ class AbstractModalIsOpen extends React.Component {
             <p>On smaller screens, the modal will take up the full screen.</p>
             <p />
             <br />
-            <button onClick={this.handleCloseModal}>Close Modal</button>
+            <button type="button" onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </AbstractModal>
-        <button onClick={this.handleOpenModal}>Open Modal</button>
+        <button type="button" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }

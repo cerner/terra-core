@@ -56,7 +56,7 @@ class SubMenu extends React.Component {
           <Menu.Item text="Default 4" key="4" />
           <Menu.Item text="Default 5" key="5" />
         </Menu>
-        <button id="sub-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button type="button" id="sub-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>
