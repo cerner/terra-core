@@ -13,7 +13,7 @@ exports[`should render a default date input 1`] = `
     name="terra-date-undefined"
     type="text"
   />
-  <button type="button"
+  <button
     aria-disabled="false"
     aria-label="Open Calendar"
     class="button neutral compact button"
@@ -62,7 +62,7 @@ exports[`should render a default date input with all props 1`] = `
     type="text"
     value="01/01/2017"
   />
-  <button type="button"
+  <button
     aria-disabled="false"
     aria-label="Open Calendar"
     class="button neutral compact button"
