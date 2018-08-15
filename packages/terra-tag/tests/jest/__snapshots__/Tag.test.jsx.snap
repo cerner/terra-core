@@ -28,7 +28,7 @@ exports[`Tag should render an icon and text 1`] = `
 `;
 
 exports[`Tag should render an interactive tag 1`] = `
-<button type="button"
+<button
   className="tag is-interactive"
   onBlur={[Function]}
   onClick={[Function]}
@@ -50,7 +50,7 @@ exports[`Tag should render as an anchor when provided an href 1`] = `
 `;
 
 exports[`Tag should render as an button tag when href is not provided 1`] = `
-<button type="button"
+<button
   className="tag is-interactive"
   onBlur={[Function]}
   onClick={[Function]}

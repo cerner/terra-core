@@ -97,7 +97,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       type="button"
       variant="neutral"
     >
-      <button type="button"
+      <button
         aria-disabled={false}
         aria-label="Search"
         className="button neutral compact button"

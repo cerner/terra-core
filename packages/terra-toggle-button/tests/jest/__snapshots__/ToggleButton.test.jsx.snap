@@ -4,7 +4,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
 <div
   class="button"
 >
-  <button type="button"
+  <button
     aria-disabled="false"
     aria-expanded="false"
     class="button neutral"
@@ -53,7 +53,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
 <div
   class="button"
 >
-  <button type="button"
+  <button
     aria-disabled="false"
     aria-expanded="false"
     class="button neutral"
@@ -112,7 +112,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
 <div
   class="button"
 >
-  <button type="button"
+  <button
     aria-disabled="false"
     aria-expanded="false"
     aria-label="Show"
@@ -157,7 +157,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
 <div
   class="button is-open"
 >
-  <button type="button"
+  <button
     aria-disabled="false"
     aria-expanded="true"
     class="button neutral"
@@ -249,7 +249,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       type="button"
       variant="neutral"
     >
-      <button type="button"
+      <button
         aria-disabled={false}
         aria-expanded={true}
         aria-label={null}

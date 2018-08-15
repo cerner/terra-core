@@ -113,7 +113,7 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
     <div
       class="button-group"
     >
-      <button type="button"
+      <button
         aria-disabled="false"
         aria-pressed="true"
         class="button neutral button-group-button is-active meridiem-button"
@@ -129,7 +129,7 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
           </span>
         </span>
       </button>
-      <button type="button"
+      <button
         aria-disabled="false"
         aria-pressed="false"
         class="button neutral button-group-button meridiem-button"
@@ -203,7 +203,7 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
     <div
       class="button-group"
     >
-      <button type="button"
+      <button
         aria-disabled="false"
         aria-pressed="true"
         class="button neutral button-group-button is-active meridiem-button"
@@ -219,7 +219,7 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
           </span>
         </span>
       </button>
-      <button type="button"
+      <button
         aria-disabled="false"
         aria-pressed="false"
         class="button neutral button-group-button meridiem-button"
@@ -293,7 +293,7 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
     <div
       class="button-group"
     >
-      <button type="button"
+      <button
         aria-disabled="false"
         aria-pressed="true"
         class="button neutral button-group-button is-active meridiem-button"
@@ -309,7 +309,7 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
           </span>
         </span>
       </button>
-      <button type="button"
+      <button
         aria-disabled="false"
         aria-pressed="false"
         class="button neutral button-group-button meridiem-button"
@@ -387,7 +387,7 @@ exports[`should render a 12 hour timepicker meridiem with buttons when viewed on
   <div
     class="button-group"
   >
-    <button type="button"
+    <button
       aria-disabled="false"
       aria-pressed="true"
       class="button neutral button-group-button is-active meridiem-button"
@@ -403,7 +403,7 @@ exports[`should render a 12 hour timepicker meridiem with buttons when viewed on
         </span>
       </span>
     </button>
-    <button type="button"
+    <button
       aria-disabled="false"
       aria-pressed="false"
       class="button neutral button-group-button meridiem-button"
