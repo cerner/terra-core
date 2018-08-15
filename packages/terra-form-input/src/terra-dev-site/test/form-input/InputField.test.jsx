@@ -14,9 +14,9 @@ class InputFieldExample extends React.Component {
   }
 
   toggleInvalid() {
-    this.setState({
-      isInvalid: !this.state.isInvalid,
-    });
+    this.setState(prevState => ({
+      isInvalid: !prevState.isInvalid,
+    }));
   }
 
   render() {

@@ -199,7 +199,7 @@ class Menu extends React.Component {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(this.clearSearch, 500);
-      this.setState({ active: Util.findWithStartString(this.state.children, this.searchString) || active });
+      this.setState(prevState => ({ active: Util.findWithStartString(prevState.children, this.searchString) || active }));
     }
   }
 

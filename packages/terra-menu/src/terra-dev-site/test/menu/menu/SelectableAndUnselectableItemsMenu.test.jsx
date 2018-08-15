@@ -33,7 +33,7 @@ class SelectableMenu extends React.Component {
   }
 
   handleItemClick() {
-    this.setState({ isSelected: !this.state.isSelected });
+    this.setState(prevState => ({ isSelected: !prevState.isSelected }));
     this.handleRequestClose();
   }
 

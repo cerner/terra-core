@@ -22,10 +22,7 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "eslintConfig": {
-    "extends": "terra",
-    "rules": {
-      "react/no-access-state-in-setstate": "0"
-    }
+    "extends": "terra"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",

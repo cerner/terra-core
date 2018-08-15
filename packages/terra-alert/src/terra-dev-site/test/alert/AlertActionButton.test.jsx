@@ -12,8 +12,7 @@ class AlertActionButton extends React.Component {
   }
 
   actionFunc() {
-    const actionButtonClickCount = this.state.actionButtonClickCount + 1;
-    this.setState({ actionButtonClickCount });
+    this.setState(prevState => ({ actionButtonClickCount: prevState.actionButtonClickCount + 1 }));
   }
 
   render() {
