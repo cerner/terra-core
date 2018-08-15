@@ -6,7 +6,7 @@ import ExampleTemplate from '../../common/ExampleTemplate';
 export default () => (
   <ExampleTemplate>
     <BlockActionFooter>
-      <a href="/#/site/action-footer/centered">A link</a>
+      <a href="/#/site/action-footer/block">A link</a>
     </BlockActionFooter>
   </ExampleTemplate>
 );
