@@ -4,32 +4,32 @@ exports[`CenteredActionFooter Prop Tests with a center action should display a c
 <CenteredActionFooter
   center="Center Action"
 >
-  <ActionFooterContainer
+  <BlockActionFooter
     className="centered-action-footer"
   >
     <div
-      className="action-footer-container with-actions centered-action-footer"
+      className="block-action-footer with-actions centered-action-footer"
     >
       Center Action
     </div>
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </CenteredActionFooter>
 `;
 
 exports[`CenteredActionFooter Prop Tests without a center action should display no actions 1`] = `
 <CenteredActionFooter>
-  <ActionFooterContainer
+  <BlockActionFooter
     className="centered-action-footer"
   >
     <div
-      className="action-footer-container centered-action-footer"
+      className="block-action-footer centered-action-footer"
     />
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </CenteredActionFooter>
 `;
 
 exports[`CenteredActionFooter Snapshot Tests should render a footer with an anchor 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className="centered-action-footer"
 >
   <a
@@ -37,11 +37,11 @@ exports[`CenteredActionFooter Snapshot Tests should render a footer with an anch
   >
     Test
   </a>
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`CenteredActionFooter Snapshot Tests should render a footer with two buttons 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className="centered-action-footer"
 >
   <div>
@@ -52,11 +52,11 @@ exports[`CenteredActionFooter Snapshot Tests should render a footer with two but
       Button 2
     </button>
   </div>
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`CenteredActionFooter Snapshot Tests should render an empty footer 1`] = `
-<ActionFooterContainer
+<BlockActionFooter
   className="centered-action-footer"
 />
 `;
