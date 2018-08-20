@@ -16,10 +16,7 @@ class OnOpenToggleButton extends React.Component {
     return (
       <div>
         <div id="on-open-event">
-          <h3>
-Times Opened:
-            {this.state.timesOpened}
-          </h3>
+          <h3>{`Times Opened: ${this.state.timesOpened}`}</h3>
         </div>
         <ToggleButton id="onOpenToggleButton" closedButtonText="ToggleButton" onOpen={this.handleOnOpen}>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
