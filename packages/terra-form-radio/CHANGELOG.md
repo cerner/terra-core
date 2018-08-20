@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Added additional themeable variables and minor update to styles
+* Added additional theming variables, minor styles update, updated wdio tests
 
 2.18.0 - (July 19, 2018)
 ------------------

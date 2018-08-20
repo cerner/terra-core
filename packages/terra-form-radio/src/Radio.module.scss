@@ -15,6 +15,7 @@
       display: inline-block;
       font-size: var(--terra-form-radio-font-size, 1rem);
       line-height: var(--terra-form-radio-line-height, 1.33);
+      padding-bottom: var(--terra-form-radio-padding-bottom, 0.3571428rem);
       padding-left: var(--terra-form-radio-padding-left, 0);
       position: relative;
     }
@@ -39,7 +40,6 @@
 
     .label-text {
       display: block;
-      margin-bottom: var(--terra-form-radio-label-text-margin-bottom, 0.3571428rem);
       margin-left: var(--terra-form-radio-label-text-margin-left, 1.3571rem);
       max-width: 100%; //stops content overflow on IE 10/11
     }
