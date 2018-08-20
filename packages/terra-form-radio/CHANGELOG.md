@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added additional themeable variables and minor update to styles
 
 2.18.0 - (July 19, 2018)
 ------------------
