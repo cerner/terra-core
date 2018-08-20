@@ -71,12 +71,24 @@ describe('ActionHeader', () => {
     const wrapper = shallow(actionHeader, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render an action header with title, enabled next button, and disabled previous button', () => {
+    const actionHeader = <ActionHeader title="Action Header" onNext={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an action header with title, enabled previous button, and disabled next button', () => {
+    const actionHeader = <ActionHeader title="Action Header" onPrevious={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 
 it('throws error on missing locale prop in Base', () => {
   try {
     render(<ActionHeader />);
   } catch (e) {
-    expect(e.message).toContain('add locale prop to Base component');
+    expect(e.message).toContain('Component is internationalized, and must be wrapped in terra-base');
   }
 });

@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+3.19.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.18.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE locale data
+
 3.17.0 - (July 19, 2018)
 ------------------
 ### Added

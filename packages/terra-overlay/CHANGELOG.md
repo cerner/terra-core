@@ -4,6 +4,26 @@ Changelog
 Unreleased
 ----------
 
+2.22.1 - (August 14, 2018)
+------------------
+### Changed
+* Updated backgroundStyle documentation
+
+2.22.0 - (August 8, 2018)
+------------------
+### Changed
+* Updated component internationalization error message
+
+2.21.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.20.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+
 2.19.0 - (July 19, 2018)
 ------------------
 ### Changed

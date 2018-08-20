@@ -6,6 +6,21 @@ Unreleased
 ### Changed
 * Added additional theming variables, minor styles update
 
+2.20.0 - (August 8, 2018)
+------------------
+### Changed
+* Updated component internationalization error message
+
+2.19.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.18.0 - (July 26, 2018)
+------------------
+### Added
+* Added sv and sv-SE translations
+
 2.17.0 - (July 19, 2018)
 ------------------
 ### Changed

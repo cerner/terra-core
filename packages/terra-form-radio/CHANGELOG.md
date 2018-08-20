@@ -6,6 +6,25 @@ Unreleased
 ### Changed
 * Added additional theming variables, minor styles update, updated wdio tests
 
+2.21.0 - (August 8, 2018)
+------------------
+### Removed
+* Removed unnecessary onChange handler call in Optional RadioField example
+
+### Changed
+* Changed the questions to be accurate for the options in the RadioField examples
+* Updated component internationalization error message
+
+2.20.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.19.0 - (July 26, 2018)
+------------------
+### Added
+* Added sv and sv-SE translations
+
 2.18.0 - (July 19, 2018)
 ------------------
 ### Changed

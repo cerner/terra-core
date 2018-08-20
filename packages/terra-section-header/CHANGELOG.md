@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+1.17.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added isTransparent prop to set background to be transparent
+
 1.16.0 - (July 19, 2018)
 ------------------
 ### Changed

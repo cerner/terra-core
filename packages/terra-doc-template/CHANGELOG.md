@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+1.12.0 - (August 1, 2018)
+------------------
+### Fixed
+* Fixed styles not being applied to the Examples header
+
 1.11.0 - (July 19, 2018)
 ------------------
 ### Changed

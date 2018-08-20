@@ -3,12 +3,35 @@ Changelog
 
 Unreleased
 ----------
+
+2.26.0 - (August 8, 2018)
+------------------
+### Changed
+* Updated component internationalization error message
+
+2.25.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Fixed
+* Fix issue where tooling was parsing the .scss import inside of our .module.scss file as a CSS modules file
+
+2.24.1 - (July 26, 2018)
+------------------
+### Fixed
+* Fixed trailing comma issue in sv and sv-SE translations
+
+2.24.0 - (July 25, 2018)
+------------------
 ### Added
+* Add sv and sv-SE translations
 * Placeholder text is now localized
 
 2.23.0 - (July 19, 2018)
 ------------------
 ### Changed
+* Updated translations
 * Add .module extension to SCSS file(s)
 * Replaced the legacy form input with the new terra-form-input package
 * Fixed Focus Styles on the input element

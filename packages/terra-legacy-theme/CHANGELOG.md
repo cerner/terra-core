@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.19.0 - (August 8, 2018)
+------------------
+### Added
+* Added Legacy Styles for the Brand Footer component
+
 2.18.0 - (July 19, 2018)
 ------------------
 ### Changed

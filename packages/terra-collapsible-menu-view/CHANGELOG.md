@@ -4,6 +4,21 @@ ChangeLog
 Unreleased
 ----------
 
+3.15.0 - (August 8, 2018)
+------------------
+### Changed
+* Updated component internationalization error message
+
+3.14.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.13.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+
 3.12.0 - (July 19, 2018)
 ------------------
 ### Changed

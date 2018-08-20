@@ -3,13 +3,34 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.26.0 - (August 8, 2018)
+------------------
+### Changed
+* Updated component internationalization error message
+
+2.25.0 - (August 1, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.24.1 - (July 26, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
+2.24.0 - (July 25, 2018)
+------------------
+### Added
+* Add sv and sv-SE translations
+
 ### Fixed
 * Resolve issue where disabled component doesn't disable time clarification
-
 
 2.23.0 - (July 19, 2018)
 ------------------
 ### Changed
+* Updated translations
 * Add .module extension to SCSS file(s)
 * Use datepicker that consumes new form inputs.
 
