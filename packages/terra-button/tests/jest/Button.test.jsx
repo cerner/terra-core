@@ -111,6 +111,13 @@ it('should be disabled when set', () => {
   expect(button.prop('disabled')).toEqual(true);
 });
 
+it('should pass in refCallback as the ref prop of the input element', () => {
+  const refCallback = jest.fn();
+  const wrapper = mount(<Button text="text" refCallback={refCallback} />);
+  expect(refCallback).toBeCalled();
+  expect(wrapper).toMatchSnapshot();
+});
+
 // Structure
 it('should have the class text-only when only text is provided', () => {
   const button = shallow(<Button text="text" />);
