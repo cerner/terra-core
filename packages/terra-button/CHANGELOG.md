@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.20.0 - (August 21, 2018)
+------------------
 ### Added
 * Added refCallback prop to the Button component
 
