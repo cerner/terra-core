@@ -67,6 +67,7 @@ Cerner Corporation
 - Anthony Ross [@AnthonyRoss]
 - Julia Calandro [@JuliaCalandro]
 - Adam Parker [@amichaelparker]
+- Matthew Carr [@Matthematic]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -136,3 +137,4 @@ Cerner Corporation
 [@AnthonyRoss]: https://github.com/AnthonyRoss
 [@JuliaCalandro]: https://github.com/JuliaCalandro
 [@amichaelparker]: https://github.com/amichaelparker
+[@Matthematic]: https://github.com/Matthematic
