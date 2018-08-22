@@ -19,11 +19,13 @@ class MultiRowSelectableTable extends React.Component {
     return (
       <div>
         <h3 id="selected-indexes">
-Selected Items:
+          Selected Items:
+          {' '}
           {this.state.selectedIndexes}
         </h3>
         <h3 id="last-selected-index">
-Last Selected Item:
+          Last Selected Item:
+          {' '}
           {this.state.lastSelectedIndex}
         </h3>
         <Table isStriped={false}>
