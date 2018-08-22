@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added additional theming variables, minor styles update, updated wdio tests
 
 2.22.0 - (August 21, 2018)
 ------------------
