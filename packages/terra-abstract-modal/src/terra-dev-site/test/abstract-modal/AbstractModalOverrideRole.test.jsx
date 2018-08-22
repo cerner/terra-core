@@ -35,7 +35,8 @@ class ModalOverrideRole extends React.Component {
         >
           <div>
             <p>
-The role is overriden to
+              The role is overriden to
+              {' '}
               <b>{newRole}</b>
             </p>
             <button type="button" onClick={this.handleCloseModal}>Close Modal</button>
