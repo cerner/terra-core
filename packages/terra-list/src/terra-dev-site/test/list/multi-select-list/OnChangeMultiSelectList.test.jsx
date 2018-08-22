@@ -18,7 +18,8 @@ class listExample extends React.Component {
       <div>
         <div id="selected-index">
           <h3>
-Selected Item(s):
+            Selected Item(s):
+            {' '}
             {this.state.selectedIndexes.join(', ')}
           </h3>
         </div>

@@ -18,7 +18,8 @@ class listExample extends React.Component {
       <div>
         <div id="current-index">
           <h3>
-Triggered Item:
+            Triggered Item:
+            {' '}
             {this.state.selectedIndex}
           </h3>
         </div>
