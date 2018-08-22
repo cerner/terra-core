@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Added additional theming variables, minor styles update, updated wdio tests
 
+2.22.0 - (August 21, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.21.0 - (August 8, 2018)
 ------------------
 ### Removed

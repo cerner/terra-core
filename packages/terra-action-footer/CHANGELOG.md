@@ -4,6 +4,8 @@ ChangeLog
 Unreleased
 ----------
 
+1.19.0 - (August 21, 2018)
+------------------
 ### Changed
 * Rename `_ActionFooterContainer` ~> `BlockActionFooter`
 * Expose `BlockActionFooter` as a first class component
