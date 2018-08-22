@@ -31,6 +31,10 @@
       border-width: var(--terra-form-textarea-hover-border-width, 1px);
     }
 
+    &::placeholder {
+      color: var(--terra-form-textarea-placeholder-color, #70787c);
+    }
+
     &[required] {
       box-shadow: unset;
     }
@@ -44,6 +48,10 @@
       cursor: default;
       opacity: var(--terra-form-textarea-disabled-opacity, 1);
       resize: none;
+    }
+
+    &[disabled]::placeholder {
+      color: var(--terra-form-textarea-placeholder-disabled-color, #70787c);
     }
 
     &:focus {

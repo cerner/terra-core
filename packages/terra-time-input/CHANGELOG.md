@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Border radius to use px
 
 2.23.0 - (August 21, 2018)
 ------------------
