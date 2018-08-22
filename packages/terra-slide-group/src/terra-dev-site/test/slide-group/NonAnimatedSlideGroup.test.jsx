@@ -31,7 +31,8 @@ class SlideGroupExample extends React.Component {
       slides.push((
         <div key={i}>
           <h2>
-Slide
+            Slide
+            {' '}
             {i}
           </h2>
           <br />
