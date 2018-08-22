@@ -23,7 +23,7 @@ class AlertActionButton extends React.Component {
         {' '}
         <span id="actionButtonClickCount">{this.state.actionButtonClickCount}</span>
         {' '}
-times.
+        times.
       </Alert>
     );
   }
