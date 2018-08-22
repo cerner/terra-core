@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.21.0 - (August 22, 2018)
+------------------
 ### Changed
 * Added additional theming variables, minor styles update
 
