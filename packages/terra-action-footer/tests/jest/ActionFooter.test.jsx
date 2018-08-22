@@ -98,8 +98,8 @@ describe('ActionFooter', () => {
     describe('without start or end actions', () => {
       const actionFooter = shallow(<ActionFooter />);
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
       it('should contain no socket class', () => (
@@ -114,8 +114,8 @@ describe('ActionFooter', () => {
     describe('with only a start action', () => {
       const actionFooter = shallow(<ActionFooter start="Start Action" />);
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
       it('should contain one socket class', () => (
@@ -130,8 +130,8 @@ describe('ActionFooter', () => {
     describe('with only an end action', () => {
       const actionFooter = shallow(<ActionFooter end="End Action" />);
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
       it('should contain one socket class', () => (
@@ -146,8 +146,8 @@ describe('ActionFooter', () => {
     describe('with both start and end actions', () => {
       const actionFooter = shallow(<ActionFooter start="Start Action" end="End Action" />);
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
       it('should contain two socket classes', () => (

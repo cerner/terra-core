@@ -57,8 +57,8 @@ describe('CenteredActionFooter', () => {
         expect(centeredActionFooter.find('.centered-action-footer').length).toBe(1)
       ));
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(centeredActionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(centeredActionFooter.find('BlockActionFooter').length).toBe(1)
       ));
     });
 
@@ -69,8 +69,8 @@ describe('CenteredActionFooter', () => {
         expect(centeredActionFooter.find('.centered-action-footer').length).toBe(1)
       ));
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(centeredActionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(centeredActionFooter.find('BlockActionFooter').length).toBe(1)
       ));
     });
   });

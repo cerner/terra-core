@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from 'terra-button';
-import ActionFooterContainer from '../../../_ActionFooterContainer';
+import BlockActionFooter from '../../../BlockActionFooter';
 
 export default () => (
-  <ActionFooterContainer>
+  <BlockActionFooter>
     FakeLink Action
     <Button text="Button Action" />
-  </ActionFooterContainer>
+  </BlockActionFooter>
 );

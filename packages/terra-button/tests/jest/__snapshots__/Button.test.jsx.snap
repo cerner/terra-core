@@ -1,5 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should pass in refCallback as the ref prop of the input element 1`] = `
+<Button
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isIconOnly={false}
+  isReversed={false}
+  refCallback={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          <button
+            aria-disabled="false"
+            class="button neutral"
+            type="button"
+          >
+            <span
+              class="text-only"
+            >
+              <span
+                class=""
+              >
+                text
+              </span>
+            </span>
+          </button>,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  text="text"
+  type="button"
+  variant="neutral"
+>
+  <button
+    aria-disabled={false}
+    aria-label={null}
+    className="button neutral"
+    disabled={false}
+    onBlur={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="text-only"
+    >
+      <span
+        className=""
+      >
+        text
+      </span>
+    </span>
+  </button>
+</Button>
+`;
+
 exports[`should render a Button with merged attributes 1`] = `
 <button
   aria-disabled={false}

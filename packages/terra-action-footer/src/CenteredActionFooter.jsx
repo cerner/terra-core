@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import ActionFooterContainer from './_ActionFooterContainer';
+import BlockActionFooter from './BlockActionFooter';
 import styles from './CenteredActionFooter.module.scss';
 
 const cx = classNames.bind(styles);
@@ -28,12 +28,9 @@ const CenteredActionFooter = ({
   ]);
 
   return (
-    <ActionFooterContainer
-      {...customProps}
-      className={centeredActionFooterClassNames}
-    >
+    <BlockActionFooter {...customProps} className={centeredActionFooterClassNames}>
       {center}
-    </ActionFooterContainer>
+    </BlockActionFooter>
   );
 };
 

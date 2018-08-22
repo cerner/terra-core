@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './ActionFooterContainer.module.scss';
+import styles from './BlockActionFooter.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -14,26 +14,26 @@ const defaultProps = {
   children: undefined,
 };
 
-const ActionFooterContainer = ({
+const BlockActionFooter = ({
   children,
   ...customProps
 }) => {
   const isEmpty = !React.Children.toArray(children).length;
 
-  const actionFooterContainerClassNames = cx([
-    'action-footer-container',
+  const blockActionFooterClassNames = cx([
+    'block-action-footer',
     { 'with-actions': !isEmpty },
     customProps.className,
   ]);
 
   return (
-    <div {...customProps} className={actionFooterContainerClassNames}>
+    <div {...customProps} className={blockActionFooterClassNames}>
       {children}
     </div>
   );
 };
 
-ActionFooterContainer.propTypes = propTypes;
-ActionFooterContainer.defaultProps = defaultProps;
+BlockActionFooter.propTypes = propTypes;
+BlockActionFooter.defaultProps = defaultProps;
 
-export default ActionFooterContainer;
+export default BlockActionFooter;

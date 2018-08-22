@@ -9,13 +9,13 @@ export default () => (
   <ExampleTemplate>
     <CenteredActionFooter
       center={(
-        <div style={{ width: '100%' }}>
+        <div>
           <Spacer paddingBottom="medium">
             <Button isBlock text="First Action" />
           </Spacer>
           <Button isBlock text="Second Action" />
         </div>
-)}
+      )}
     />
   </ExampleTemplate>
 );
