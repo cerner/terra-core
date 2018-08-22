@@ -90,7 +90,7 @@ class ProgressivePaginator extends React.Component {
           {' '}
           {selectedPage}
           {' '}
-of
+          of
           {' '}
           {totalPages}
         </div>
@@ -177,7 +177,7 @@ Previous
           {' '}
           {selectedPage}
           {' '}
-of
+          of
           {' '}
           {totalPages}
         </div>
