@@ -16,7 +16,8 @@ class DatePickerOnChange extends React.Component {
     return (
       <div>
         <h3>
-Selected Date:
+          Selected Date:
+          {' '}
           <span id="selected-date">{this.state.date}</span>
         </h3>
         <DatePicker

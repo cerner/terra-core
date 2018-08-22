@@ -16,7 +16,8 @@ class DatePickerOnChange extends React.Component {
     return (
       <div>
         <h3>
-Message:
+          Message:
+          {' '}
           <span id="message">{this.state.message}</span>
         </h3>
         <DatePicker
