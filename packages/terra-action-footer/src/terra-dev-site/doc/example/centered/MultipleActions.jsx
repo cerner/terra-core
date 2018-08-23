@@ -9,7 +9,7 @@ export default () => (
   <ExampleTemplate>
     <CenteredActionFooter
       center={
-        <div style={{ width: '100%' }}>
+        <div>
           <Spacer paddingBottom="medium">
             <Button isBlock text="First Action" />
           </Spacer>
