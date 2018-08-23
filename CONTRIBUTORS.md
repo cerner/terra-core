@@ -18,7 +18,7 @@ Cerner Corporation
 - Dave Kasper [@dkasper-was-taken]
 - Nikhil Agrawal [@nagrawal3]
 - Emily Rohrbough [@emilyrohrbough]
-- Rory Hardy [@gneatgeek]
+- Rory Hardy [@roryhardy]
 - Jake LaCombe [@JakeLaCombe]
 - Neil Pfeiffer [@neilpfeiffer]
 - David Schoonover [@dkschoonover]
@@ -87,7 +87,7 @@ Cerner Corporation
 [@dkasper-was-taken]: https://github.com/dkasper-was-taken
 [@nagrawal3]: https://github.com/nagrawal3
 [@emilyrohrbough]: https://github.com/emilyrohrbough
-[@gneatgeek]: https://github.com/gneatgeek
+[@roryhardy]: https://github.com/roryhardy
 [@JakeLaCombe]: https://github.com/JakeLaCombe
 [@neilpfeiffer]: https://github.com/neilpfeiffer
 [@dkschoonover]: https://github.com/dkschoonover
