@@ -14,69 +14,63 @@ describe('generatePropType', () => {
   });
 
   it('should return "string" for enum', () => {
-    const enumProp =
-      {
-        name: 'enum',
-        value:
+    const enumProp = {
+      name: 'enum',
+      value:
         [{ value: '\'default\'' },
           { value: '\'link\'' },
           { value: '\'primary\'' },
           { value: '\'secondary\'' }],
-      };
+    };
     expect(generatePropType(enumProp)).toEqual('`string`');
   });
 
   it('should return "number" for enum', () => {
-    const enumProp =
-      {
-        name: 'enum',
-        value:
+    const enumProp = {
+      name: 'enum',
+      value:
         [{ value: '2' },
           { value: '4' },
           { value: '6' },
           { value: '3' }],
-      };
+    };
     expect(generatePropType(enumProp)).toEqual('`number`');
   });
 
   it('should return list of types for oneOfType', () => {
-    const propType =
-      {
-        name: 'union',
-        value:
+    const propType = {
+      name: 'union',
+      value:
         [{ name: 'string' }, { name: 'number' }],
-      };
+    };
     expect(generatePropType(propType)).toEqual('`string or number`');
   });
 
   it('should return type for arrayOf', () => {
-    const propType =
-      {
-        name: 'arrayOf',
-        value:
+    const propType = {
+      name: 'arrayOf',
+      value:
         { name: 'string' },
-      };
+    };
     expect(generatePropType(propType)).toEqual('`array of strings`');
   });
 
   it('should return object format for arrayOf shapes', () => {
-    const propType =
-      {
-        name: 'arrayOf',
-        value: {
-          name: 'shape',
-          value: { row: 'string', icon: 'element' },
-        },
-      };
+    const propType = {
+      name: 'arrayOf',
+      value: {
+        name: 'shape',
+        value: { row: 'string', icon: 'element' },
+      },
+    };
     expect(generatePropType(propType)).toEqual('`array of objects structured like: {"row":"string","icon":"element"}`');
   });
 
   it('should return object format for shape', () => {
-    const propType =
-      {
-        name: 'shape',
-        value: { row: 'string', icon: 'element' },
-      };
+    const propType = {
+      name: 'shape',
+      value: { row: 'string', icon: 'element' },
+    };
     expect(generatePropType(propType)).toEqual('`an object structured like: {"row":"string","icon":"element"}`');
   });
 });

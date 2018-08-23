@@ -10,7 +10,7 @@ class FieldExamples extends React.Component {
   }
 
   toggleIsInvalid() {
-    this.setState({ isInvalid: !this.state.isInvalid });
+    this.setState(prevState => ({ isInvalid: !prevState.isInvalid }));
   }
 
   render() {
@@ -59,7 +59,10 @@ class FieldExamples extends React.Component {
           <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
         </Field>
         <hr />
-        <p>If a field is invalid, an error icon will be displayed. <button onClick={this.toggleIsInvalid}>Toggle Invalid State</button></p>
+        <p>
+If a field is invalid, an error icon will be displayed.
+          <button type="button" onClick={this.toggleIsInvalid}>Toggle Invalid State</button>
+        </p>
       </div>
     );
   }

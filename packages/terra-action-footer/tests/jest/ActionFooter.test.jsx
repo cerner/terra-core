@@ -10,38 +10,38 @@ describe('ActionFooter', () => {
     });
 
     it('should render a footer with only one start socket button', () => {
-      const component = <ActionFooter start={<button>Start Socket</button>} />;
+      const component = <ActionFooter start={<button type="button">Start Socket</button>} />;
       expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only two start socket buttons', () => {
       const component = (
         <ActionFooter
-          start={
+          start={(
             <div>
-              <button>Start Socket 1</button>
-              <button>Start Socket 2</button>
+              <button type="button">Start Socket 1</button>
+              <button type="button">Start Socket 2</button>
             </div>
-          }
+)}
         />
       );
       expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only an end socket button', () => {
-      const component = <ActionFooter end={<button>End Socket</button>} />;
+      const component = <ActionFooter end={<button type="button">End Socket</button>} />;
       expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only two end socket buttons', () => {
       const component = (
         <ActionFooter
-          end={
+          end={(
             <div>
-              <button>End Socket 1</button>
-              <button>End Socket 2</button>
+              <button type="button">End Socket 1</button>
+              <button type="button">End Socket 2</button>
             </div>
-          }
+)}
         />
       );
       expect(shallow(component)).toMatchSnapshot();
@@ -50,8 +50,8 @@ describe('ActionFooter', () => {
     it('should render a footer with both start and end socket buttons', () => {
       const component = (
         <ActionFooter
-          start={<button>Start Socket</button>}
-          end={<button>End Socket</button>}
+          start={<button type="button">Start Socket</button>}
+          end={<button type="button">End Socket</button>}
         />
       );
       expect(shallow(component)).toMatchSnapshot();

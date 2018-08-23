@@ -41,7 +41,7 @@ class DefaultMenu extends React.Component {
         >
           <Menu.Item text="Default Menu" id="TestContent" />
         </Menu>
-        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button type="button" id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

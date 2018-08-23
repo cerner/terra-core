@@ -36,4 +36,3 @@ ModalContainer.propTypes = {
 };
 
 export default ModalContainer;
-

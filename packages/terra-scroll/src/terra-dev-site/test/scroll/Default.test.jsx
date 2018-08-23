@@ -21,7 +21,7 @@ class DefaultScroll extends React.Component {
   render() {
     return (
       <div>
-        <button id="scroll" onClick={this.toggleScroll}>Scroll</button>
+        <button type="button" id="scroll" onClick={this.toggleScroll}>Scroll</button>
         <div style={{ height: '300px', width: '400px', border: '1px dashed black' }}>
           <Scroll id="scroll-test" refCallback={this.setNode}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,

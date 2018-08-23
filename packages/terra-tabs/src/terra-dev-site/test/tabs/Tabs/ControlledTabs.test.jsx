@@ -37,7 +37,10 @@ class ControlledTabs extends React.Component {
     return (
       <div>
         <div id="current-selection">
-          <p>Last Triggered Tab: {this.state.activeKey}</p>
+          <p>
+Last Triggered Tab:
+            {this.state.activeKey}
+          </p>
         </div>
         <Tabs id="controlledTabs" onChange={this.handleSelection} activeKey={this.state.activeKey}>
           {tab1}

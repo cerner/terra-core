@@ -4,7 +4,7 @@ import { ArrangeWrapper, longWordText } from './common/examplesetup';
 
 const AlignedAllArrange = () => (
   <div>
-    <ArrangeWrapper >
+    <ArrangeWrapper>
       <Arrange
         id="default"
         fitStart={longWordText}
@@ -16,7 +16,7 @@ const AlignedAllArrange = () => (
       />
     </ArrangeWrapper>
 
-    <ArrangeWrapper >
+    <ArrangeWrapper>
       <Arrange
         id="center"
         align="center"
@@ -29,7 +29,7 @@ const AlignedAllArrange = () => (
       />
     </ArrangeWrapper>
 
-    <ArrangeWrapper >
+    <ArrangeWrapper>
       <Arrange
         id="bottom"
         align="bottom"
@@ -42,7 +42,7 @@ const AlignedAllArrange = () => (
       />
     </ArrangeWrapper>
 
-    <ArrangeWrapper >
+    <ArrangeWrapper>
       <Arrange
         id="stretch"
         align="stretch"

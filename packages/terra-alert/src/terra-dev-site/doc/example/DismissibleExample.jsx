@@ -23,7 +23,7 @@ class DismissibleExample extends React.Component {
     const alertText = 'This is a success alert. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.';
     let alertElem = '';
     if (!this.state.isDismissed) {
-      alertElem = <Alert type="success" onDismiss={this.handleDismiss} >{alertText}</Alert>;
+      alertElem = <Alert type="success" onDismiss={this.handleDismiss}>{alertText}</Alert>;
     }
     return (
       <div>
@@ -33,7 +33,8 @@ class DismissibleExample extends React.Component {
           <code>
             {alertStartTagStr}
             <br />
-            &nbsp;&nbsp;{alertText}
+            &nbsp;&nbsp;
+            {alertText}
             <br />
             {alertEndTagStr}
           </code>

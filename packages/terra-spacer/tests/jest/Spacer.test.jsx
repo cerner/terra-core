@@ -35,8 +35,7 @@ describe('Spacer', () => {
   });
 
   it('should render a spacer component with all margin props set to the given values', () => {
-    const wrapper =
-    render((
+    const wrapper = render((
       <Spacer marginTop="small" marginBottom="small-1" marginLeft="small-2" marginRight="medium">
         <p>Test</p>
       </Spacer>
@@ -45,8 +44,7 @@ describe('Spacer', () => {
   });
 
   it('should render a spacer component with all padding props set to the given values', () => {
-    const wrapper =
-    render((
+    const wrapper = render((
       <Spacer paddingTop="large+1" paddingBottom="large+2" paddingLeft="large+3" paddingRight="large+4">
         <p>Test</p>
       </Spacer>

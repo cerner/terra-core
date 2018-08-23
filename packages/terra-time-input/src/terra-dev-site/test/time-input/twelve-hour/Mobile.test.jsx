@@ -36,7 +36,10 @@ export default class TimeInputElement extends React.Component {
         />
         <h3>(this picker is changeable)</h3>
         <div id="time-input-value">
-          <h3>Time Input with value provided - Current Value: {this.state.input}</h3>
+          <h3>
+Time Input with value provided - Current Value:
+            {this.state.input}
+          </h3>
         </div>
         <TimeInput
           id="timeInputValueProvided"
