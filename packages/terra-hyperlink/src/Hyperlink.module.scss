@@ -34,7 +34,7 @@
 
     &.is-disabled {
       color: var(--terra-link-disabled-color, rgba(28, 31, 33, 0.2));
-      text-decoration: none;
+      text-decoration: var(--terra-link-disabled-text-decoration, none);
     }
   }
 
