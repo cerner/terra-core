@@ -24,6 +24,9 @@
   "eslintConfig": {
     "extends": "terra"
   },
+  "stylelint": {
+    "extends": "stylelint-config-terra"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=moment --nohoist=one-cerner-style-icons",
@@ -84,10 +87,7 @@
     "rimraf": "^2.6.1",
     "shelljs": "^0.8.2",
     "stylelint": "^9.0.0",
-    "stylelint-config-sass-guidelines": "^5.0.0",
-    "stylelint-order": "^0.8.1",
-    "stylelint-scss": "^3.0.0",
-    "stylelint-suitcss": "^3.0.0",
+    "stylelint-config-terra": "^1.0.0",
     "terra-dev-site": "^2.0.0",
     "terra-toolkit": "^4.5.0",
     "webpack-merge": "^4.1.2"
