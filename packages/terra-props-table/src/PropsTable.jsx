@@ -1,12 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { parse } from 'react-docgen';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
 import styles from './PropsTable.module.scss';
 
 const cx = classNames.bind(styles);
+const reactDocs = require('react-docgen');
 
 const propTypes = {
   /**
@@ -56,16 +56,17 @@ function determineType(type) {
  */
 const PropsTable = ({ componentName, src, ...customProps }) => {
   /**
-   * Runs component source code through react-docgen
+   * Runs component source code through react-docgen. Passing second argument to parse
+   * function to account for mutiple export.
    * @type {Object}
    */
-  const componentMetaData = parse(src);
+  const componentMetaData = reactDocs.parse(src, reactDocs.resolver.findAllComponentDefinitions);
 
   /**
    * Alias for props object from componentMetaData
    * @type {Object}
    */
-  const componentProps = componentMetaData.props;
+  const componentProps = componentMetaData[0].props;
 
   const tableRowClass = cx('prop-table-row');
   const tableClassNames = cx([
