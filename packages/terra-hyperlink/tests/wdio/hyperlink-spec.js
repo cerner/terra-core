@@ -20,8 +20,12 @@ describe('Hyperlink', () => {
 
     Terra.should.beAccessible({ rules });
     Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-link-disabled-color': 'red',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-link-disabled-color': 'red',
+        '--terra-link-disabled-text-decoration': 'underline',
+      },
     });
   });
 
