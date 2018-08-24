@@ -30,22 +30,53 @@ function determineType(type) {
     typeName = 'enum';
   } else if (typeName === 'arrayOf') {
     if (type.value.name === 'shape') {
-      typeName = <span> array of objects structured like: <pre className={cx('props-table-pre')}> {formatShape(type.value.value)} </pre></span>;
+      typeName = (
+        <span>
+          {' '}
+array of objects structured like:
+          <pre className={cx('props-table-pre')}>
+            {' '}
+            {formatShape(type.value.value)}
+            {' '}
+          </pre>
+        </span>
+      );
     } else {
       typeName = `array of ${type.value.name}s`;
     }
   } else if (typeName === 'union') {
     const options = type.value.map((option) => {
       const name = option.name === 'shape' ? ((
-        <span key={option.value}> an object structured like:
-          <pre className={cx('props-table-pre')}> {formatShape(option.value)} </pre>
+        <span key={option.value}>
+          {' '}
+an object structured like:
+          <pre className={cx('props-table-pre')}>
+            {' '}
+            {formatShape(option.value)}
+            {' '}
+          </pre>
         </span>
-      )) : (<span key={option.name}> {option.name}</span>);
+      )) : (
+        <span key={option.name}>
+          {' '}
+          {option.name}
+        </span>
+      );
       return name;
     });
     typeName = options.reduce((curr, next) => [curr, <span key={`${curr.value}-${next.value}`}> or </span>, next]);
   } else if (typeName === 'shape') {
-    typeName = <span> an object structured like: <pre className={cx('props-table-pre')}> {formatShape(type.value)} </pre></span>;
+    typeName = (
+      <span>
+        {' '}
+an object structured like:
+        <pre className={cx('props-table-pre')}>
+          {' '}
+          {formatShape(type.value)}
+          {' '}
+        </pre>
+      </span>
+    );
   }
 
   return typeName;
@@ -76,7 +107,11 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
 
   return (
     <div dir="ltr" className="markdown-body">
-      <h2>{componentName} Props</h2>
+      <h2>
+        {componentName}
+        {' '}
+Props
+      </h2>
       <table {...customProps} className={tableClassNames}>
         <thead>
           <tr>
@@ -96,12 +131,12 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
               <tr className={tableRowClass} key={key} style={{ fontSize: '90%' }}>
                 <td style={{ fontWeight: 'bold' }}>{key}</td>
                 <td>{(prop.type ? type : '')}</td>
-                {(prop.required ?
-                  <td style={{ color: '#d53700' }}>required</td>
-              : <td style={{ color: '#444' }}>optional</td>)}
-                {(prop.defaultValue ?
-                  <td style={{ fontWeight: 'bold' }}>{prop.defaultValue.value}</td>
-              : <td style={{ color: '#444' }}>none</td>)}
+                {(prop.required
+                  ? <td style={{ color: '#d53700' }}>required</td>
+                  : <td style={{ color: '#444' }}>optional</td>)}
+                {(prop.defaultValue
+                  ? <td style={{ fontWeight: 'bold' }}>{prop.defaultValue.value}</td>
+                  : <td style={{ color: '#444' }}>none</td>)}
                 <td><Markdown src={prop.description} /></td>
               </tr>
             );

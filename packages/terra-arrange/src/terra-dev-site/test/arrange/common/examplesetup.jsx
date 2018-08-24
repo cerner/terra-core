@@ -6,13 +6,24 @@ const image = <img style={{ display: 'block' }} height="75" width="75" src="http
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 const longWord = 'Thisisareallyreallylongwordthathasnospacesthatwillneedtobebrokeninordertohavethetextwrapandnotoverlowintothenextelement';
 const simpleText = <div>{ipsum}</div>;
-const longText = <div>{ipsum} {ipsum} {ipsum} {ipsum}</div>;
+const longText = (
+  <div>
+    {ipsum}
+    {' '}
+    {ipsum}
+    {' '}
+    {ipsum}
+    {' '}
+    {ipsum}
+  </div>
+);
 const longWordText = <div>{longWord}</div>;
 
 const ArrangeWrapper = props => (
   <div style={{
- width: '100%', border: '1px solid black', marginBottom: '10px', backgroundColor: '#dedede',
-}}>
+    width: '100%', border: '1px solid black', marginBottom: '10px', backgroundColor: '#dedede',
+  }}
+  >
     {props.children}
   </div>
 );

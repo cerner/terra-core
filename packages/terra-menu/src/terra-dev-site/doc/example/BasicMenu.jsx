@@ -142,7 +142,12 @@ class BasicMenu extends React.Component {
           <Button onClick={this.handleButtonClick} text="Click Me" />
         </div>
         <br />
-        <p>Action button has been clicked {this.state.actionClickCount} times.</p>
+        <p>
+Action button has been clicked
+          {this.state.actionClickCount}
+          {' '}
+times.
+        </p>
       </div>
     );
   }

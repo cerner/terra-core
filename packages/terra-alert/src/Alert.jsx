@@ -175,24 +175,24 @@ const Alert = ({
   return (
     <ResponsiveElement
       responsiveTo="parent"
-      defaultElement={
-        <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle} >
+      defaultElement={(
+        <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle}>
           <div className={bodyClassNameForNarrowParent}>
             <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
           {actionsSection}
         </div>
-      }
-      tiny={
-        <div {...attributes} className={wideAlertClassNames} style={outerDivStyle} >
+)}
+      tiny={(
+        <div {...attributes} className={wideAlertClassNames} style={outerDivStyle}>
           <div className={cx(['body', 'body-std'])}>
             <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
           {actionsSection}
         </div>
-      }
+)}
     />
 
   );

@@ -5,7 +5,7 @@ import ActionHeader from '../../../ActionHeader';
 
 const ActionHeaderExample = () => (
   <div>
-    <ActionHeader title="Minimize Custom Button Action Header" onMaximize={() => alert('You clicked maximize!')} >
+    <ActionHeader title="Minimize Custom Button Action Header" onMaximize={() => alert('You clicked maximize!')}>
       <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
     </ActionHeader>
   </div>

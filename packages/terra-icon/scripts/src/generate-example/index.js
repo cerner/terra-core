@@ -7,4 +7,3 @@ import generateStaticIcons from './generateStaticIcons';
 parseCsv()
   .then(generateStaticIcons)
   .then(generateThemeableIcons);
-

@@ -7,14 +7,14 @@ const CustomDisplayTabPane = () => (
     <TabPane
       label="Custom Display"
       id="customDisplay"
-      customDisplay={
+      customDisplay={(
         <div id="customDisplayContent">
           <span style={{ marginRight: '15px' }}>
             Custom Display
           </span>
           <IconSearch />
         </div>
-      }
+)}
     />
   </div>
 );

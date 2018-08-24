@@ -35,7 +35,7 @@ describe('Dismissible Alert that includes actions section', () => {
   const alertText = 'This is a test';
   const dismissibleRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert onDismiss={() => {}} >{alertText}</Alert>
+      <Alert onDismiss={() => {}}>{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -50,7 +50,7 @@ describe('Alert of type alert with text content', () => {
   const alertText = 'This is an alert.';
   const basicAlertRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.ALERT} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.ALERT}>{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -65,7 +65,7 @@ describe('Alert of type error with text content', () => {
   const alertText = 'This is an error.';
   const basicErrorRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.ERROR} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.ERROR}>{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -80,7 +80,7 @@ describe('Alert of type warning with text content', () => {
   const alertText = 'This is an warning.';
   const basicWarningRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.WARNING} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.WARNING}>{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -95,7 +95,7 @@ describe('Alert of type advisory with text content', () => {
   const alertText = 'This is an advisory alert.';
   const basicAdvisoryRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.ADVISORY} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.ADVISORY}>{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -110,7 +110,7 @@ describe('Alert of type info with text content', () => {
   const alertText = 'This is an information alert.';
   const basicInfoRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.INFO} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.INFO}>{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -125,7 +125,7 @@ describe('Alert of type success with text content', () => {
   const alertText = 'This is a success alert.';
   const basicSuccessRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.SUCCESS} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.SUCCESS}>{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -141,7 +141,7 @@ describe('Alert of type custom with custom title and text content', () => {
   const alertCustomTitle = 'Help!';
   const basicCustomRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp />} customStatusColor="orange" >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp />} customStatusColor="orange">{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -158,7 +158,7 @@ describe('Alert of type info with custom title and HTML content', () => {
   const alertCustomTitle = 'Gettysburg Address';
   const basicHTMLContentRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.INFO} title={alertCustomTitle} >{alertHTML}</Alert>
+      <Alert type={Alert.Opts.Types.INFO} title={alertCustomTitle}>{alertHTML}</Alert>
     </IntlProvider>
   );
 
@@ -173,7 +173,7 @@ describe('Alert of type success with an action button text content', () => {
   const alertText = 'This is a success alert.';
   const actionButtonRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => {}} />} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => {}} />}>{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -189,7 +189,7 @@ describe('Dismissable Alert of type custom with action button, custom title and 
   const alertCustomTitle = 'Help!';
   const customActionDismissRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp />} customStatusColor="orange" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => {}} />} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp />} customStatusColor="orange" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => {}} />}>{alertText}</Alert>
     </IntlProvider>
   );
 

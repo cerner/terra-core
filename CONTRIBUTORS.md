@@ -18,7 +18,7 @@ Cerner Corporation
 - Dave Kasper [@dkasper-was-taken]
 - Nikhil Agrawal [@nagrawal3]
 - Emily Rohrbough [@emilyrohrbough]
-- Rory Hardy [@gneatgeek]
+- Rory Hardy [@roryhardy]
 - Jake LaCombe [@JakeLaCombe]
 - Neil Pfeiffer [@neilpfeiffer]
 - David Schoonover [@dkschoonover]
@@ -67,6 +67,7 @@ Cerner Corporation
 - Anthony Ross [@AnthonyRoss]
 - Julia Calandro [@JuliaCalandro]
 - Adam Parker [@amichaelparker]
+- Matthew Carr [@Matthematic]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -86,7 +87,7 @@ Cerner Corporation
 [@dkasper-was-taken]: https://github.com/dkasper-was-taken
 [@nagrawal3]: https://github.com/nagrawal3
 [@emilyrohrbough]: https://github.com/emilyrohrbough
-[@gneatgeek]: https://github.com/gneatgeek
+[@roryhardy]: https://github.com/roryhardy
 [@JakeLaCombe]: https://github.com/JakeLaCombe
 [@neilpfeiffer]: https://github.com/neilpfeiffer
 [@dkschoonover]: https://github.com/dkschoonover
@@ -136,3 +137,4 @@ Cerner Corporation
 [@AnthonyRoss]: https://github.com/AnthonyRoss
 [@JuliaCalandro]: https://github.com/JuliaCalandro
 [@amichaelparker]: https://github.com/amichaelparker
+[@Matthematic]: https://github.com/Matthematic

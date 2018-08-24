@@ -61,6 +61,7 @@ exports[`should mount an open modal 1`] = `
                   </h1>
                   <button
                     onClick={[Function]}
+                    type="button"
                   >
                     Close Modal
                   </button>
@@ -73,6 +74,7 @@ exports[`should mount an open modal 1`] = `
     </AbstractModal>
     <button
       onClick={[Function]}
+      type="button"
     >
       Open Modal
     </button>
@@ -143,6 +145,7 @@ exports[`should mount an open modal 7000 z-index 1`] = `
                   </h1>
                   <button
                     onClick={[Function]}
+                    type="button"
                   >
                     Close Modal
                   </button>
@@ -155,6 +158,7 @@ exports[`should mount an open modal 7000 z-index 1`] = `
     </AbstractModal>
     <button
       onClick={[Function]}
+      type="button"
     >
       Open Modal
     </button>
@@ -225,6 +229,7 @@ exports[`should mount an open modal 8000 z-index 1`] = `
                   </h1>
                   <button
                     onClick={[Function]}
+                    type="button"
                   >
                     Close Modal
                   </button>
@@ -237,6 +242,7 @@ exports[`should mount an open modal 8000 z-index 1`] = `
     </AbstractModal>
     <button
       onClick={[Function]}
+      type="button"
     >
       Open Modal
     </button>
@@ -307,6 +313,7 @@ exports[`should mount an open modal 9000 z-index 1`] = `
                   </h1>
                   <button
                     onClick={[Function]}
+                    type="button"
                   >
                     Close Modal
                   </button>
@@ -319,6 +326,7 @@ exports[`should mount an open modal 9000 z-index 1`] = `
     </AbstractModal>
     <button
       onClick={[Function]}
+      type="button"
     >
       Open Modal
     </button>
@@ -389,6 +397,7 @@ exports[`should mount an open modal set to fullscreen 1`] = `
                   </h1>
                   <button
                     onClick={[Function]}
+                    type="button"
                   >
                     Close Modal
                   </button>
@@ -401,6 +410,7 @@ exports[`should mount an open modal set to fullscreen 1`] = `
     </AbstractModal>
     <button
       onClick={[Function]}
+      type="button"
     >
       Open Modal
     </button>
@@ -429,6 +439,7 @@ exports[`should shallow an open modal 1`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         Close Modal
       </button>
@@ -436,6 +447,7 @@ exports[`should shallow an open modal 1`] = `
   </AbstractModal>
   <button
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
@@ -463,6 +475,7 @@ exports[`should shallow an open modal 6000 z-index 1`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         Close Modal
       </button>
@@ -470,6 +483,7 @@ exports[`should shallow an open modal 6000 z-index 1`] = `
   </AbstractModal>
   <button
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
@@ -497,6 +511,7 @@ exports[`should shallow an open modal 7000 z-index 1`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         Close Modal
       </button>
@@ -504,6 +519,7 @@ exports[`should shallow an open modal 7000 z-index 1`] = `
   </AbstractModal>
   <button
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
@@ -531,6 +547,7 @@ exports[`should shallow an open modal 8000 z-index 1`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         Close Modal
       </button>
@@ -538,6 +555,7 @@ exports[`should shallow an open modal 8000 z-index 1`] = `
   </AbstractModal>
   <button
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
@@ -565,6 +583,7 @@ exports[`should shallow an open modal 9000 z-index 1`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         Close Modal
       </button>
@@ -572,6 +591,7 @@ exports[`should shallow an open modal 9000 z-index 1`] = `
   </AbstractModal>
   <button
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>

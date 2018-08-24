@@ -40,9 +40,11 @@ class MultiSelectList extends React.Component {
     const { children, maxSelectionCount } = this.props;
     if (SelectableList.Utils.shouldHandleMultiSelect(children, maxSelectionCount, this.state.selectedIndexes, index)) {
       event.preventDefault();
+      /* eslint-disable react/no-access-state-in-setstate */
       const newIndexes = SelectableList.Utils.updatedMultiSelectedIndexes(this.state.selectedIndexes, index);
 
       this.setState({ selectedIndexes: newIndexes });
+      /* eslint-enable react/no-access-state-in-setstate */
       if (this.props.onChange) {
         this.props.onChange(event, newIndexes);
       }

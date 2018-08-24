@@ -24,7 +24,7 @@ const AnimatedToggleButton = () => (
     </div>
     <br />
     <div>
-      <button id="button">button</button>
+      <button type="button" id="button">button</button>
     </div>
   </ToggleButton>
 );

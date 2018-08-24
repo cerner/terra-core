@@ -1,6 +1,8 @@
 import React from 'react';
 import Arrange from '../../../Arrange';
-import { ArrangeWrapper, IconWrapper, image, simpleText } from './common/examplesetup';
+import {
+  ArrangeWrapper, IconWrapper, image, simpleText,
+} from './common/examplesetup';
 
 const IndividuallyAlignedFitStart = () => (
   <div>

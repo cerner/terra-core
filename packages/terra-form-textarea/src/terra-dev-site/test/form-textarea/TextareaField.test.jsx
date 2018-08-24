@@ -14,15 +14,15 @@ class TextareaFieldExample extends React.Component {
   }
 
   toggleInvalid() {
-    this.setState({
-      isInvalid: !this.state.isInvalid,
-    });
+    this.setState(prevState => ({
+      isInvalid: !prevState.isInvalid,
+    }));
   }
 
   render() {
     return (
       <div>
-        <button id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
+        <button type="button" id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <TextareaField
           inputId="test-input"
           defaultValue="Value"

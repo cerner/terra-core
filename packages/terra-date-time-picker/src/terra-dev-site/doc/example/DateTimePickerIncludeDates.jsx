@@ -30,7 +30,10 @@ class DateTimePickerExample extends React.Component {
   render() {
     return (
       <div>
-        <p>Selected ISO Date Time: {this.state.dateTime}</p>
+        <p>
+Selected ISO Date Time:
+          {this.state.dateTime}
+        </p>
         <DateTimePicker
           name="date-time-picker-example"
           onChange={this.handleDateTimeChange}

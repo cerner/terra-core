@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import ActionFooterContainer from './_ActionFooterContainer';
+import BlockActionFooter from './BlockActionFooter';
 import styles from './ActionFooter.module.scss';
 
 const cx = classNames.bind(styles);
@@ -27,13 +27,20 @@ const ActionFooter = ({
   start,
   end,
   ...customProps
-}) => (
-  <ActionFooterContainer {...customProps} className={cx(customProps.className)}>
-    {start && <div className={cx('socket')}>{start}</div>}
-    {(start || end) && <div className={cx('empty-center')} />}
-    {end && <div className={cx('socket')}>{end}</div>}
-  </ActionFooterContainer>
-);
+}) => {
+  const actionFooterClassnames = cx([
+    'action-footer',
+    customProps.className,
+  ]);
+
+  return (
+    <BlockActionFooter {...customProps} className={actionFooterClassnames}>
+      {start && <div className={cx('socket')}>{start}</div>}
+      {(start || end) && <div className={cx('empty-center')} />}
+      {end && <div className={cx('socket')}>{end}</div>}
+    </BlockActionFooter>
+  );
+};
 
 ActionFooter.propTypes = propTypes;
 ActionFooter.defaultProps = defaultProps;
