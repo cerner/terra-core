@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import React from 'react';
 import styles from './DemographicsBanner.module.scss';
 
-import { personDetails, applicationIdentifiers } from './_sharedObjects';
+import DemographicsBannerUtils from './_sharedObjects';
 
 const cx = classNames.bind(styles);
 
@@ -53,10 +53,10 @@ export default (props) => {
         </div>
         <div className={cx('row')}>
           <div className={cx('person-details')}>
-            {personDetails(props)}
+            {DemographicsBannerUtils.personDetails(props)}
           </div>
           <div className={cx('identifiers')}>
-            {applicationIdentifiers(props)}
+            {DemographicsBannerUtils.applicationIdentifiers(props)}
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ const shouldHandleSelection = (currentSelectedKey, newSelectedKey) => newSelecte
 const initialSelectedTabKey = (tabs, activeKey) => {
   if (activeKey) {
     return activeKey;
-  } else if (tabs.length) {
+  } if (tabs.length) {
     return tabs[0].key;
   }
   return tabs.key;

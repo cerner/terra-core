@@ -62,8 +62,7 @@ class StatusViewTemplate extends React.Component {
       title,
       variant,
       ...customProps
-    }
-    = this.props;
+    } = this.props;
 
     const styleAttributes = Object.assign({}, customProps.style);
     styleAttributes.border = '1px solid black';

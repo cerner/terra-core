@@ -417,7 +417,8 @@ class Frame extends React.Component {
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
           <span className={cx('arrow-icon')} />
         </div>
-        {this.state.isOpen &&
+        {this.state.isOpen
+          && (
           <Dropdown
             {...dropdownAttrs}
             target={this.select}
@@ -427,8 +428,8 @@ class Frame extends React.Component {
             refCallback={(ref) => { this.dropdown = ref; }}
             style={Util.dropdownStyle(dropdownAttrs, this.state)}
           >
-            {dropdown &&
-               dropdown({
+            {dropdown
+               && dropdown({
                  value,
                  variant,
                  onDeselect,
@@ -440,6 +441,7 @@ class Frame extends React.Component {
                  searchValue: this.state.searchValue,
                })}
           </Dropdown>
+          )
         }
       </div>
     );

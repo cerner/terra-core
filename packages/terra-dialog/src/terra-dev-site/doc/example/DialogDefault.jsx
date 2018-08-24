@@ -16,7 +16,7 @@ const body = (
 
 const DialogDefault = () => (
   <div style={{ height: '200px', width: '350px', border: 'dashed' }}>
-    <Dialog header={header} footer={footer} onClose={() => alert('Close')} >
+    <Dialog header={header} footer={footer} onClose={() => alert('Close')}>
       {body}
     </Dialog>
   </div>

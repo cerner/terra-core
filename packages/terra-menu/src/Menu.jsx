@@ -91,16 +91,21 @@ class Menu extends React.Component {
 
   pop() {
     if (this.state.stack.length > 1) {
-      const newStack = this.state.stack.slice();
-      newStack.pop();
-      this.setState({ stack: newStack });
+      this.setState((prevState) => {
+        const newStack = prevState.stack.slice();
+        newStack.pop();
+        return { stack: newStack };
+      });
     }
   }
 
+
   push(item) {
-    const newStack = this.state.stack.slice();
-    newStack.push(item);
-    this.setState({ stack: newStack });
+    this.setState((prevState) => {
+      const newStack = prevState.stack.slice();
+      newStack.push(item);
+      return { stack: newStack };
+    });
   }
 
   render() {
@@ -124,6 +129,7 @@ class Menu extends React.Component {
     ]);
 
     const visiblePage = this.state.stack.length - 1;
+    console.log(this.state.stack);
     const slides = this.state.stack.map((item, index) => (
       <MenuContent
         // eslint-disable-next-line react/no-array-index-key

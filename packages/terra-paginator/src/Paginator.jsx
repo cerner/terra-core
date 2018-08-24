@@ -161,7 +161,8 @@ class Paginator extends React.Component {
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handleOnKeyDown(previousPageIndex)}
         >
-          <span className={cx('icon')} />Previous
+          <span className={cx('icon')} />
+Previous
         </a>
         {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
         <a
@@ -172,7 +173,8 @@ class Paginator extends React.Component {
           onClick={this.handlePageChange(nextPageIndex)}
           onKeyDown={this.handleOnKeyDown(nextPageIndex)}
         >
-          Next<span className={cx('icon')} />
+          Next
+          <span className={cx('icon')} />
         </a>
         {
           this.hasNavContext() && (

@@ -18,7 +18,11 @@ class ButtonGroupSingleSelect extends React.Component {
   render() {
     return (
       <div>
-        <h3>Selected Button: <span id="selected-key">{this.state.selectedKey}</span></h3>
+        <h3>
+          Selected Button:
+          {' '}
+          <span id="selected-key">{this.state.selectedKey}</span>
+        </h3>
         <ButtonGroup
           id="button-group-single-select"
           onChange={this.handleSelection}

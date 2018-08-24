@@ -30,7 +30,7 @@ it('should render MultiSelectableRows with one row', () => {
 });
 
 it('should render MultiSelectableRows one selectable row and one non-selectable row', () => {
-  const row3 = <Table.Row isSelectable={false} key="PERSON_1" >{rowData}</Table.Row>;
+  const row3 = <Table.Row isSelectable={false} key="PERSON_1">{rowData}</Table.Row>;
   const defaultTableRows = <Table.MultiSelectableRows>{[row1, row3]}</Table.MultiSelectableRows>;
   const tableRows = shallow(defaultTableRows);
   expect(tableRows).toMatchSnapshot();
@@ -58,4 +58,3 @@ it('selectedIndexes should only allow the first rows up to the max count to be s
   tableRows.find('.PERSON_3').simulate('click', { preventDefault() {} });
   expect(tableRows).toMatchSnapshot();
 });
-
