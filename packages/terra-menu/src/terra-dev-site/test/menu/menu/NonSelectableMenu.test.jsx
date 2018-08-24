@@ -45,7 +45,7 @@ class NonSelectableMenu extends React.Component {
           <Menu.Item text="Default 1" key="1" className="TestFirstItem" />
           <Menu.Item text="Default 2" key="2" className="TestSecondItem" />
         </Menu>
-        <button id="non-selectable-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button type="button" id="non-selectable-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

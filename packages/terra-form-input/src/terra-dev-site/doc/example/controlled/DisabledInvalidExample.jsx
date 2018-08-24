@@ -26,7 +26,10 @@ class DisabledInvalidExample extends React.Component {
           onChange={this.handleChange}
           isInvalid
         />
-        <p>Input Provided: {this.state.input}</p>
+        <p>
+Input Provided:
+          {this.state.input}
+        </p>
       </div>
     );
   }

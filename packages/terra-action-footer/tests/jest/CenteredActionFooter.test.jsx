@@ -17,12 +17,12 @@ describe('CenteredActionFooter', () => {
     it('should render a footer with two buttons', () => {
       const component = (
         <CenteredActionFooter
-          center={
+          center={(
             <div>
-              <button>Button 1</button>
-              <button>Button 2</button>
+              <button type="button">Button 1</button>
+              <button type="button">Button 2</button>
             </div>
-          }
+)}
         />
       );
       expect(shallow(component)).toMatchSnapshot();

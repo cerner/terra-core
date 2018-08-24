@@ -9,7 +9,7 @@ class FieldExamples extends React.Component {
   }
 
   handleIsInvalidChange() {
-    this.setState({ isInvalid: !this.state.isInvalid });
+    this.setState(prevState => ({ isInvalid: !prevState.isInvalid }));
   }
 
   render() {
@@ -126,7 +126,7 @@ class FieldExamples extends React.Component {
 
     return (
       <div>
-        <button id="toggle-is-invalid" onClick={this.handleIsInvalidChange}>Toggle In Error </button>
+        <button type="button" id="toggle-is-invalid" onClick={this.handleIsInvalidChange}>Toggle In Error </button>
         <h3>Field</h3>
         {field}
         <h3>Field - Optional</h3>

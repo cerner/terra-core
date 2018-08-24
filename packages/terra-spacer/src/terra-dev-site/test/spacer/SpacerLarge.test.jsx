@@ -19,13 +19,13 @@ export default () => (
     </div>
     <div>Margin and Padding with value large applied</div>
     <div className="spacing-demo spacer-demo-margin">
-      <Spacer id="spacerMarginPaddingLarge" className="spacer" marginTop="large" marginBottom="large" marginLeft="large" marginRight="large" paddingTop="large" paddingBottom="large" paddingLeft="large" paddingRight="large" >
+      <Spacer id="spacerMarginPaddingLarge" className="spacer" marginTop="large" marginBottom="large" marginLeft="large" marginRight="large" paddingTop="large" paddingBottom="large" paddingLeft="large" paddingRight="large">
         <div style={{ background: 'rgb(141, 182, 193)' }}>Test component</div>
       </Spacer>
     </div>
     <div>Margin Padding with value large and isInlineBlock prop applied</div>
     <div className="spacing-demo spacer-demo-margin">
-      <Spacer id="spacerMarginPaddingLargeInlineBlock" className="spacer" marginTop="large" marginBottom="large" marginLeft="large" marginRight="large" paddingTop="large" paddingBottom="large" paddingLeft="large" paddingRight="large" isInlineBlock >
+      <Spacer id="spacerMarginPaddingLargeInlineBlock" className="spacer" marginTop="large" marginBottom="large" marginLeft="large" marginRight="large" paddingTop="large" paddingBottom="large" paddingLeft="large" paddingRight="large" isInlineBlock>
         <div style={{ background: 'rgb(141, 182, 193)' }}>Test component</div>
       </Spacer>
     </div>

@@ -161,7 +161,7 @@ class Menu extends React.Component {
           onMouseEnter: event => this.handleMouseEnter(event, option),
           ...(option.props.value === this.state.active) && { 'data-select-active': true },
         });
-      } else if (option.type.isOptGroup) {
+      } if (option.type.isOptGroup) {
         return React.cloneElement(option, {}, this.clone(option.props.children));
       }
       return option;
@@ -199,7 +199,7 @@ class Menu extends React.Component {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(this.clearSearch, 500);
-      this.setState({ active: Util.findWithStartString(this.state.children, this.searchString) || active });
+      this.setState(prevState => ({ active: Util.findWithStartString(prevState.children, this.searchString) || active }));
     }
   }
 

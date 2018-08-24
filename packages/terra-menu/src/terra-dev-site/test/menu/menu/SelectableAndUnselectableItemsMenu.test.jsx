@@ -33,7 +33,7 @@ class SelectableMenu extends React.Component {
   }
 
   handleItemClick() {
-    this.setState({ isSelected: !this.state.isSelected });
+    this.setState(prevState => ({ isSelected: !prevState.isSelected }));
     this.handleRequestClose();
   }
 
@@ -62,7 +62,7 @@ class SelectableMenu extends React.Component {
             onClick={this.handleItemClick}
           />
         </Menu>
-        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button type="button" id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

@@ -25,7 +25,10 @@ class DisabledExample extends React.Component {
           name="disabled input"
           onChange={this.handleChange}
         />
-        <p>Input Provided: {this.state.input}</p>
+        <p>
+Input Provided:
+          {this.state.input}
+        </p>
       </div>
     );
   }

@@ -99,21 +99,23 @@ const DocTemplate = ({
       {srcPath && <a href={srcPath}>View component source code</a>}
 
       {exampleHeader}
-      {localExamples.map(example =>
-        (<IndexExampleTemplate
+      {localExamples.map(example => (
+        <IndexExampleTemplate
           title={example.title}
           example={example.example}
           exampleSrc={example.source}
           description={example.description}
           key={example.id}
-        />))}
+        />
+      ))}
 
-      {localPropsTables.map(propsTable =>
-        (<PropsTable
+      {localPropsTables.map(propsTable => (
+        <PropsTable
           src={propsTable.componentSrc}
           componentName={propsTable.componentName}
           key={propsTable.id}
-        />))}
+        />
+      ))}
     </div>
   );
 };

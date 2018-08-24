@@ -28,34 +28,46 @@ class SmallContainerExample extends React.Component {
     return (
       <div style={{ width: '500px', border: '1px solid black', padding: '5px' }}>
         <div dir="ltr">
-          <h3>Basic Alert of type warning with action button in a small container (500px wide) that will cause the action button section of the alert
+          <h3>
+Basic Alert of type warning with action button in a small container (500px wide) that will cause the action button section of the alert
               to render below the message instead of beside it.
           </h3>
           <br />
           <code>
             {alertStartTagStr}
             <br />
-            &nbsp;&nbsp;{alertText}.
+            &nbsp;&nbsp;
+            {alertText}
+.
             <br />
             {alertEndTagStr}
           </code>
         </div>
         <br />
-        <Alert type="warning" action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >
+        <Alert type="warning" action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />}>
           {alertText}
         </Alert>
         <br />
-        <p>Action button has been clicked {this.state.actionButtonClickCount} times.</p>
-        <br /><br /><br />
+        <p>
+Action button has been clicked
+          {this.state.actionButtonClickCount}
+          {' '}
+times.
+        </p>
+        <br />
+        <br />
+        <br />
         <div dir="ltr">
           <h3>Basic Alert of type info in a small container (500px wide) which should be rendered the same as in wide container</h3>
           <br />
           <code>
-            {alert2StartTagStr}{alert2Text}{alert2EndTagStr}
+            {alert2StartTagStr}
+            {alert2Text}
+            {alert2EndTagStr}
           </code>
         </div>
         <br />
-        <Alert type="info" >{alert2Text}</Alert>
+        <Alert type="info">{alert2Text}</Alert>
       </div>
     );
   }

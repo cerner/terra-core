@@ -34,11 +34,15 @@ class ModalOverrideRole extends React.Component {
           classNameModal="test-background-class"
         >
           <div>
-            <p>The role is overriden to <b>{newRole}</b></p>
-            <button onClick={this.handleCloseModal}>Close Modal</button>
+            <p>
+              The role is overriden to
+              {' '}
+              <b>{newRole}</b>
+            </p>
+            <button type="button" onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </AbstractModal>
-        <button className="button-open-modal" onClick={this.handleOpenModal}>Open isOpen modal</button>
+        <button type="button" className="button-open-modal" onClick={this.handleOpenModal}>Open isOpen modal</button>
       </div>
     );
   }
@@ -46,4 +50,3 @@ class ModalOverrideRole extends React.Component {
 
 
 export default ModalOverrideRole;
-

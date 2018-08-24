@@ -54,7 +54,16 @@ class FieldsetExamples extends React.Component {
           </Fieldset>
         </form>
         <hr />
-        <p>Full Name Provided: <span style={{ display: 'inline-block' }}>{this.state.first} {this.state.middle} {this.state.last}</span></p>
+        <p>
+Full Name Provided:
+          <span style={{ display: 'inline-block' }}>
+            {this.state.first}
+            {' '}
+            {this.state.middle}
+            {' '}
+            {this.state.last}
+          </span>
+        </p>
         <br />
       </div>
     );

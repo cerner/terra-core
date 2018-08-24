@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import { I18nProvider, i18nLoader } from '../../../I18n';
+import I18nProvider from '../../../I18nProvider';
+import i18nLoader from '../../../i18nLoader';
 import i18nSupportedLocales from '../../../i18nSupportedLocales';
 
 // Add Portuguese-Guinea-Bissau, Zulu & Zulu-South African locales as test locales (supported by intl)
@@ -42,7 +43,8 @@ class Base extends React.Component {
         <select id="change-locale" onChange={this.handleLocaleChange} value={this.state.selectedLocale}>
           {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
         </select>
-        <p><span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
+        <p>
+          <span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
           <FormattedMessage id="Terra.ajax.error" />
         </p>
         {(this.state.selectedLocale).includes('zu')
