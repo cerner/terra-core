@@ -14,11 +14,6 @@
 [![devDependencies status](https://badgen.net/david/dev/cerner/terra-core)](https://david-dm.org/cerner/terra-core?type=dev)
 [![lerna](https://badgen.net/badge/maintained%20with/lerna/cc00ff)](https://lernajs.io/)
 
-[![Dependency Status](https://img.shields.io/david/cerner/terra-framework.svg?path=packages/terra-hookshot)](https://david-dm.org/cerner/terra-framework?path=packages/terra-hookshot)
-
-
-[![Dependency Status](https://badgen.net/david/cerner/terra-framework?path=packages/terra-hookshot)](https://david-dm.org/cerner/terra-framework?path=packages/terra-hookshot)
-
 - [Supported Browsers](#supported-browsers)
 - [Packages](#packages)
 - [Internationalization](#internationalization-i18n)
