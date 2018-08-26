@@ -1,8 +1,8 @@
 # Terra Arrange
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-arrange.svg)](https://www.npmjs.org/package/terra-arrange)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-arrange)](https://www.npmjs.org/package/terra-arrange)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The arrange component allows an item that has an intrinsic width, such as an icon or an image, to be offset from a group of associated content. When the group of associated content wraps, it will stay aligned next to the offset content rather than wrap below it.
 

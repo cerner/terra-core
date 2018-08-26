@@ -1,8 +1,8 @@
 # Terra Search Field
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-search-field.svg)](https://www.npmjs.org/package/terra-search-field)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-search-field)](https://www.npmjs.org/package/terra-search-field)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 A search component with a field that automatically performs a search callback after user input.
 

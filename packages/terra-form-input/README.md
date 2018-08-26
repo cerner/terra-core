@@ -1,8 +1,8 @@
 # Terra Form Input
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-form-input.svg)](https://www.npmjs.org/package/terra-form-input)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-form-input)](https://www.npmjs.org/package/terra-form-input)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 Generic input which represents an HTML input element directly.
 

@@ -1,8 +1,8 @@
 # Terra Select
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-select.svg)](https://www.npmjs.org/package/terra-form-select)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-select)](https://www.npmjs.org/package/terra-form-select)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The select component is a form input with a drop down list of options that allows for single selection.
 

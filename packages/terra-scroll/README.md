@@ -1,7 +1,7 @@
 # Terra Scroll
 
-[![NPM version](http://img.shields.io/npm/v/terra-scroll.svg)](https://www.npmjs.org/package/terra-scroll)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-scroll)](https://www.npmjs.org/package/terra-scroll)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback.
 

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Switched badge services for npm version display
 
 1.12.0 - (August 1, 2018)
 ------------------
