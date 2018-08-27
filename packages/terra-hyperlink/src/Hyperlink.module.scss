@@ -77,6 +77,7 @@
       background-image: var(--terra-link-disabled-external-icon, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M39 25h6v23H0V3h23v6H6v33h33V25zm-21.4 9.6l24-24L48 17V0H31l6.4 6.4-24 24 4.2 4.2z"></path></svg>'));
     }
   }
+
   .external:hover,
   .external.is-hovered {
     &::after {
@@ -85,7 +86,7 @@
   }
 
   .external:visited,
-  .extenral.is-visited {
+  .external.is-visited {
     &::after {
       background-image: var(--terra-link-visited-external-icon, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M39 25h6v23H0V3h23v6H6v33h33V25zm-21.4 9.6l24-24L48 17V0H31l6.4 6.4-24 24 4.2 4.2z"></path></svg>'));
     }
