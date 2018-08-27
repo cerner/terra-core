@@ -46,10 +46,20 @@ class TextareaExamples extends React.Component {
           <Textarea name="details" size="full" value={this.state.area3} required onChange={this.handleArea3Change} />
         </form>
         <hr />
-        <ul>Input Provided:
-          <li style={{ margin: '10px' }}>Text Area 1 - {this.state.area1}</li>
-          <li style={{ margin: '10px' }}>Text Area 2 - {this.state.area2}</li>
-          <li style={{ margin: '10px' }}>Text Area 3 - {this.state.area3}</li>
+        <ul>
+Input Provided:
+          <li style={{ margin: '10px' }}>
+Text Area 1 -
+            {this.state.area1}
+          </li>
+          <li style={{ margin: '10px' }}>
+Text Area 2 -
+            {this.state.area2}
+          </li>
+          <li style={{ margin: '10px' }}>
+Text Area 3 -
+            {this.state.area3}
+          </li>
         </ul>
         <br />
       </div>

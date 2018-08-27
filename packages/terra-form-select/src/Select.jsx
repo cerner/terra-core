@@ -174,7 +174,7 @@ class Select extends React.Component {
 
     // Add new tags for uncontrolled components.
     if (this.props.value === undefined && !Util.findByValue(this.props, this.state, value)) {
-      this.setState({ tags: [...this.state.tags, <Option key={value} display={value} value={value} />] });
+      this.setState(prevState => ({ tags: [...prevState.tags, <Option key={value} display={value} value={value} />] }));
     }
 
     if (this.props.onSelect) {

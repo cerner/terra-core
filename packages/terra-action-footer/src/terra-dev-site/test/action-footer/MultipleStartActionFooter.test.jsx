@@ -4,11 +4,11 @@ import ActionFooter from '../../../ActionFooter';
 
 export default () => (
   <ActionFooter
-    start={
+    start={(
       <div>
         FakeLink Start Action 1
         <Button text="Start Action 2" />
       </div>
-    }
+)}
   />
 );

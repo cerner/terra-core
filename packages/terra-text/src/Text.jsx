@@ -57,7 +57,7 @@ const Text = ({
   };
 
   return (
-    <span {...attributes} style={{ ...textStyles, ...customProps.style }} className={TextClassNames} >
+    <span {...attributes} style={{ ...textStyles, ...customProps.style }} className={TextClassNames}>
       {children}
     </span>
   );

@@ -33,7 +33,7 @@ class ActionAndDismissibleExample extends React.Component {
     let alertElem = '';
     if (!this.state.isDismissed) {
       alertElem = (
-        <Alert type="custom" onDismiss={this.handleDismiss} customStatusColor="orange" action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >
+        <Alert type="custom" onDismiss={this.handleDismiss} customStatusColor="orange" action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />}>
           {alertText}
         </Alert>
       );
@@ -46,7 +46,8 @@ class ActionAndDismissibleExample extends React.Component {
           <code>
             {alertStartTagStr}
             <br />
-            &nbsp;&nbsp;{alertText}
+            &nbsp;&nbsp;
+            {alertText}
             <br />
             {alertEndTagStr}
           </code>
@@ -54,7 +55,12 @@ class ActionAndDismissibleExample extends React.Component {
         <br />
         {alertElem}
         <br />
-        <p>Action button has been clicked {this.state.actionButtonClickCount} times.</p>
+        <p>
+Action button has been clicked
+          {this.state.actionButtonClickCount}
+          {' '}
+times.
+        </p>
       </div>
     );
   }

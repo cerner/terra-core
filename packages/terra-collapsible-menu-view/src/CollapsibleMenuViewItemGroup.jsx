@@ -75,7 +75,7 @@ class CollapsibleMenuViewItemGroup extends React.Component {
           {children}
         </Menu.ItemGroup>
       );
-    } else if (isCollapsibleMenuItem) {
+    } if (isCollapsibleMenuItem) {
       return (
         <List {...customProps} onChange={this.handleOnChange}>
           {children}

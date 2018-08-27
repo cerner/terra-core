@@ -30,4 +30,3 @@ MobileCheckbox.propTypes = propTypes;
 MobileCheckbox.defaultProps = defaultProps;
 
 export default MobileCheckbox;
-

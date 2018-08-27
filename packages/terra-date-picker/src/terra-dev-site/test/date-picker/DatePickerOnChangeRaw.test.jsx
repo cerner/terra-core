@@ -15,7 +15,11 @@ class DatePickerOnChange extends React.Component {
   render() {
     return (
       <div>
-        <h3>Selected Date: <span id="selected-date">{this.state.date}</span></h3>
+        <h3>
+          Selected Date:
+          {' '}
+          <span id="selected-date">{this.state.date}</span>
+        </h3>
         <DatePicker
           name="date-input-onchangeraw"
           onChangeRaw={this.handleDateChangeRaw}
