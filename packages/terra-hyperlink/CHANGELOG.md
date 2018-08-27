@@ -3,8 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Convert disabled text-decoration into a theme variable
 
 1.7.0 - (August 21, 2018)
 ------------------
