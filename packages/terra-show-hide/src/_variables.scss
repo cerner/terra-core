@@ -1,0 +1,95 @@
+// Button variant's color schemes
+$terra-button-neutral-color-scheme: (
+  active-and-focus-background-color: var(--terra-button-active-and-focus-background-color-neutral, #6f7477),
+  active-and-focus-border-color: var(--terra-button-active-and-focus-border-color-neutral, #52585b),
+  active-and-focus-box-shadow: var(--terra-button-active-and-focus-box-shadow-neutral, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  active-background-color: var(--terra-button-active-background-color-neutral, #6f7477),
+  active-border-color: var(--terra-button-active-border-color-neutral, #52585b),
+  active-color: var(--terra-button-active-color-neutral, #fff),
+  background-color: var(--terra-button-background-color-neutral, #dedfe0),
+  border-color: var(--terra-button-border-color-neutral, #c8cacb),
+  box-shadow: var(--terra-button-box-shadow-neutral, none),
+  color: var(--terra-button-color-neutral, #1c1f21),
+  focus-background-color: var(--terra-button-focus-background-color-neutral, #dedfe0),
+  focus-border-color: var(--terra-button-focus-border-color-neutral, #c8cacb),
+  focus-box-shadow: var(--terra-button-focus-box-shadow-neutral, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  font-weight: var(--terra-button-font-weight-neutral, 400),
+  hover-background-color: var(--terra-button-hover-background-color-neutral, #b9bbbc),
+  hover-color: var(--terra-button-hover-color-neutral, #000)
+);
+
+$terra-button-emphasis-color-scheme: (
+  active-and-focus-background-color: var(--terra-button-active-and-focus-background-color-emphasis, #004c76),
+  active-and-focus-border-color: var(--terra-button-active-and-focus-border-color-emphasis, #0065a3),
+  active-and-focus-box-shadow: var(--terra-button-active-and-focus-box-shadow-emphasis, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  active-background-color: var(--terra-button-active-background-color-emphasis, #004c76),
+  active-border-color: var(--terra-button-active-border-color-emphasis, #0065a3),
+  active-color: var(--terra-button-active-color-emphasis, #fff),
+  background-color: var(--terra-button-background-color-emphasis, #0079be),
+  box-shadow: var(--terra-button-box-shadow-emphasis, none),
+  border-color: var(--terra-button-border-color-emphasis, #01639e),
+  color: var(--terra-button-color-emphasis, #fff),
+  focus-background-color: var(--terra-button-focus-background-color-emphasis, #0079be),
+  focus-border-color: var(--terra-button-focus-border-color-emphasis, #01639e),
+  focus-box-shadow: var(--terra-button-focus-box-shadow-emphasis, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  font-weight: var(--terra-button-font-weight-emphasis, 400),
+  hover-background-color: var(--terra-button-hover-background-color-emphasis, #0065a3),
+  hover-color: var(--terra-button-hover-color-emphasis, #fff)
+);
+
+$terra-button-de-emphasis-color-scheme: (
+  active-and-focus-background-color: var(--terra-button-active-and-focus-background-color-de-emphasis, rgba(0, 0, 0, 0.07)),
+  active-and-focus-border-color: var(--terra-button-active-and-focus-border-color-de-emphasis, transparent),
+  active-and-focus-box-shadow: var(--terra-button-active-and-focus-box-shadow-de-emphasis, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  active-background-color: var(--terra-button-active-background-color-de-emphasis, rgba(0, 0, 0, 0.07)),
+  active-border-color: var(--terra-button-active-border-color-de-emphasis, transparent),
+  active-color: var(--terra-button-active-color-de-emphasis, #0059a8),
+  background-color: var(--terra-button-background-color-de-emphasis, transparent),
+  border-color: var(--terra-button-border-color-de-emphasis, transparent),
+  box-shadow: var(--terra-button-box-shadow-de-emphasis, none),
+  color: var(--terra-button-color-de-emphasis, #0059a8),
+  focus-background-color: var(--terra-button-focus-background-color-de-emphasis, transparent),
+  focus-border-color: var(--terra-button-focus-border-color-de-emphasis, transparent),
+  focus-box-shadow: var(--terra-button-focus-box-shadow-de-emphasis, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  font-weight: var(--terra-button-font-weight-de-emphasis, 400),
+  hover-background-color: var(--terra-button-hover-background-color-de-emphasis, transparent),
+  hover-color: var(--terra-button-hover-color-de-emphasis, #001f67)
+);
+
+$terra-button-action-color-scheme: (
+  active-and-focus-background-color: var(--terra-button-active-and-focus-background-color-action, #004c76),
+  active-and-focus-border-color: var(--terra-button-active-and-focus-border-color-action, rgba(255, 255, 255, 0.7)),
+  active-and-focus-box-shadow: var(--terra-button-active-and-focus-box-shadow-action, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  active-background-color: var(--terra-button-active-background-color-action, #004c76),
+  active-border-color: var(--terra-button-active-border-color-action, transparent),
+  active-color: var(--terra-button-active-color-action, #fff),
+  background-color: var(--terra-button-background-color-action, #0079be),
+  border-color: var(--terra-button-border-color-action, transparent),
+  box-shadow: var(--terra-button-box-shadow-action, 0 2px 2px rgba(0, 0, 0, 0.2)),
+  color: var(--terra-button-color-action, #fff),
+  focus-background-color: var(--terra-button-focus-background-color-action, #0079be),
+  focus-border-color: var(--terra-button-focus-border-color-action, rgba(255, 255, 255, 0.7)),
+  focus-box-shadow: var(--terra-button-focus-box-shadow-action, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  font-weight: var(--terra-button-font-weight-action, 400),
+  hover-background-color: var(--terra-button-hover-background-color-action, #0065a3),
+  hover-color: var(--terra-button-hover-color-action, #fff)
+);
+
+$terra-button-utility-color-scheme: (
+  active-and-focus-background-color: var(--terra-button-active-and-focus-background-color-utility, rgba(0, 0, 0, 0.07)),
+  active-and-focus-border-color: var(--terra-button-active-and-focus-border-color-utility, transparent),
+  active-and-focus-box-shadow: var(--terra-button-active-and-focus-box-shadow-utility, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  active-background-color: var(--terra-button-active-background-color-utility, rgba(0, 0, 0, 0.07)),
+  active-border-color: var(--terra-button-active-border-color-utility, transparent),
+  active-color: var(--terra-button-active-color-utility, #1c1f21),
+  background-color: var(--terra-button-background-color-utility, transparent),
+  border-color: var(--terra-button-border-color-utility, transparent),
+  box-shadow: var(--terra-button-box-shadow-utility, none),
+  color: var(--terra-button-color-utility, #1c1f21),
+  focus-background-color: var(--terra-button-focus-background-color-utility, transparent),
+  focus-border-color: var(--terra-button-focus-border-color-utility, transparent),
+  focus-box-shadow: var(--terra-button-focus-box-shadow-utility, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  font-weight: var(--terra-button-font-weight-utility, 400),
+  hover-background-color: var(--terra-button-hover-background-color-utility),
+  hover-color: var(--terra-button-hover-color-utility, #1c1f21)
+);

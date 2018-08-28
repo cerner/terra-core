@@ -1,0 +1,19 @@
+:local {
+  .show-hide {
+    display: block;
+  }
+
+  .icon {
+    display: inline-block;
+    font-size: 0.8em;
+    transform: rotate(0deg);
+  }
+
+  .is-open .icon {
+    transform: rotate(180deg);
+  }
+
+  .button-text {
+    padding-left: 0.3rem;
+  }
+}

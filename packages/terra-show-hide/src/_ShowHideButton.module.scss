@@ -1,0 +1,135 @@
+@import './variables';
+@import './mixins';
+
+:local {
+  // html input[type='button'].terra-Button selector used to
+  // prevent a WebKit bug destroys native `audio` and `video` controls
+  // in Android 4. More info:
+  // https://github.com/necolas/normalize.css/issues/20
+  // https://code.google.com/p/android/issues/detail?id=34301
+  // appearance: button; set to correct the inability to style
+  // clickable types in iOS and Safari.
+  // Appearance needs to be applied only to button/input elements, as
+  // applying to anchor element will cause render issue.
+  // More info:
+  // https://github.com/necolas/normalize.css/issues/566
+  // https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
+  // stylelint-disable selector-no-qualifying-type
+  button.button,
+  html input[type='button'].button,
+  input[type='reset'].button,
+  input[type='submit'].button {
+    appearance: button;  // autoprefix fix into -webkit-appearance
+  }
+  // stylelint-enable selector-no-qualifying-type
+
+  .button {
+    border-radius: var(--terra-button-border-radius, 0.2142rem);
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: var(--terra-button-font-size, 1rem);
+    line-height: var(--terra-button-line-height, 1.429);
+    outline: none;
+    padding-bottom: var(--terra-button-vertical-padding, 0.286rem);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: var(--terra-button-vertical-padding, 0.286rem);
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+    user-select: none; // Prevent text selection on buttons on mobile devices
+    white-space: normal;
+
+    // Remove the inner border and padding in Firefox.
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    &:disabled,
+    &.is-disabled {
+      cursor: default;
+      opacity: var(--terra-button-disabled-opacity, 0.3);
+      pointer-events: none; // prevent pointer interaction for anchor elements
+    }
+  }
+
+  // Button variant modifiers
+  .neutral {
+    @include terra-button-variant-color($terra-button-neutral-color-scheme);
+  }
+
+  .emphasis {
+    @include terra-button-variant-color($terra-button-emphasis-color-scheme);
+  }
+
+  .de-emphasis {
+    @include terra-button-variant-color($terra-button-de-emphasis-color-scheme);
+  }
+
+  .action {
+    @include terra-button-variant-color($terra-button-action-color-scheme);
+    border-radius: var(--terra-button-action-border-radius, 5rem);
+  }
+
+  .utility {
+    @include terra-button-variant-color($terra-button-utility-color-scheme);
+    border-radius: var(--terra-button-utility-border-radius, 0.2142rem);
+  }
+
+  // Button style modifiers
+  .block {
+    display: block;
+    width: 100%;
+  }
+
+  .compact {
+    padding-bottom: var(--terra-button-compact-padding-bottom, 0);
+    padding-top: var(--terra-button-compact-padding-top, 0);
+  }
+
+  .text-only {
+    margin-left: var(--terra-button-text-only-horizontal-margin, 0.714rem);
+    margin-right: var(--terra-button-text-only-horizontal-margin, 0.714rem);
+  }
+
+  .icon-only {
+    margin-left: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
+    margin-right: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
+  }
+
+  .text-and-icon {
+    margin-left: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
+    margin-right: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
+  }
+
+  .text-first {
+    margin-right: var(--terra-button-text-and-icon-margin-between, 0.3571rem);
+  }
+
+  .icon-first {
+    margin-right: var(--terra-button-text-and-icon-margin-between, 0.3571rem);
+  }
+
+  .icon {
+    display: inline-block;
+  }
+
+  .icon-svg {
+    height: var(--terra-button-icon-height, 1rem);
+    width: var(--terra-button-icon-width, 1rem);
+  }
+}

@@ -1,0 +1,35 @@
+//  Map Button Variant's Color Schemes
+// ==========================
+
+@mixin terra-button-variant-color($color-map) {
+  background-color: map-get($color-map, background-color);
+  border-color: map-get($color-map, border-color);
+  box-shadow: map-get($color-map, box-shadow);
+  color: map-get($color-map, color);
+  font-weight: map-get($color-map, font-weight);
+
+  &.is-focused {
+    background-color: map-get($color-map, focus-background-color);
+    border-color: map-get($color-map, focus-border-color);
+    box-shadow: map-get($color-map, focus-box-shadow);
+  }
+
+  &:hover {
+    background-color: map-get($color-map, hover-background-color);
+    color: map-get($color-map, hover-color);
+  }
+
+  &.is-active,
+  &:active {
+    background-color: map-get($color-map, active-background-color);
+    border-color: map-get($color-map, active-border-color);
+    color: map-get($color-map, active-color);
+  }
+
+  &.is-active.is-focused,
+  &:active.is-focused {
+    background-color: map-get($color-map, active-and-focus-background-color);
+    border-color: map-get($color-map, active-and-focus-border-color);
+    box-shadow: map-get($color-map, active-and-focus-box-shadow);
+  }
+}
