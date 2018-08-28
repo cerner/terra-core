@@ -31,9 +31,10 @@ const Index = () => {
         readme={readme}
         srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
         propsTables={propsTables}
-        customPropsTable={<CustomPropsTable />}
         examples={examples}
-      />
+      >
+        <CustomPropsTable />
+      </DocTemplate>
     </div>
   );
 };

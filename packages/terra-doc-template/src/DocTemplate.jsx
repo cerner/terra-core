@@ -10,6 +10,10 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Enables the ability to add custom content to doc template. Children will be rendered after all other content.
+   */
+  children: PropTypes.node,
+  /**
    * The given component's npm package name.
    */
   packageName: PropTypes.string,
@@ -47,10 +51,6 @@ const propTypes = {
     componentSrc: PropTypes.string,
     componentName: PropTypes.string,
   })),
-  /**
-   * Optional custom props table.
-   */
-  customPropsTable: PropTypes.node,
 };
 
 const defaultProps = {
@@ -59,11 +59,10 @@ const defaultProps = {
   srcPath: '',
   examples: [],
   propsTables: [],
-  customPropsTable: undefined,
 };
 
 const DocTemplate = ({
-  packageName, readme, srcPath, examples, propsTables, customPropsTable, ...customProps
+  packageName, readme, srcPath, examples, propsTables, children, ...customProps
 }) => {
   let id = 0;
   const localExamples = examples;
@@ -121,7 +120,7 @@ const DocTemplate = ({
           key={propsTable.id}
         />
       ))}
-      {customPropsTable !== undefined && customPropsTable}
+      {children}
     </div>
   );
 };
