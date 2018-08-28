@@ -68,9 +68,7 @@ describe('DocTemplate', () => {
   });
 
   it('should show custom props tables', () => {
-    const wrapper = render(<DocTemplate
-      customPropsTable={<CustomPropsTable />}
-    />);
+    const wrapper = render(<DocTemplate><CustomPropsTable /></DocTemplate>);
     expect(wrapper).toMatchSnapshot();
   });
 
