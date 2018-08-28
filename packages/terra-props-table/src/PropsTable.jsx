@@ -1,12 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { parse, resolver } from 'react-docgen';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
 import styles from './PropsTable.module.scss';
 
 const cx = classNames.bind(styles);
-const reactDocs = require('react-docgen');
 
 const propTypes = {
   /**
@@ -91,7 +91,7 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
    * function to account for mutiple export.
    * @type {Object}
    */
-  const componentMetaData = reactDocs.parse(src, reactDocs.resolver.findAllComponentDefinitions);
+  const componentMetaData = parse(src, resolver.findAllComponentDefinitions);
 
   /**
    * Alias for props object from componentMetaData
