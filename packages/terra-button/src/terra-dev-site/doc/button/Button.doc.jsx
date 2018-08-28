@@ -65,7 +65,6 @@ const DocPage = () => (
         componentSrc: ButtonSrc,
       },
     ]}
-    customPropsTable={<div>Custom props table</div>}
   />
 );
 
