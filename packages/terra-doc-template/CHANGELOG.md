@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added support for new `customPropsTable` prop to display customized prop tables
+
 ### Changed
 * Switched badge services for npm version display
 

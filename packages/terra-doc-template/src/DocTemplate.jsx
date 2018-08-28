@@ -47,6 +47,10 @@ const propTypes = {
     componentSrc: PropTypes.string,
     componentName: PropTypes.string,
   })),
+  /**
+   * Optional custom props table.
+   */
+  customPropsTable: PropTypes.node,
 };
 
 const defaultProps = {
@@ -55,10 +59,11 @@ const defaultProps = {
   srcPath: '',
   examples: [],
   propsTables: [],
+  customPropsTable: undefined,
 };
 
 const DocTemplate = ({
-  packageName, readme, srcPath, examples, propsTables, ...customProps
+  packageName, readme, srcPath, examples, propsTables, customPropsTable, ...customProps
 }) => {
   let id = 0;
   const localExamples = examples;
@@ -116,6 +121,7 @@ const DocTemplate = ({
           key={propsTable.id}
         />
       ))}
+      {customPropsTable !== undefined && customPropsTable}
     </div>
   );
 };
