@@ -1,8 +1,8 @@
 # Terra Profile Image
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-profile-image.svg)](https://www.npmjs.org/package/terra-profile-image)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-profile-image)](https://www.npmjs.org/package/terra-profile-image)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image.
 
