@@ -43,9 +43,11 @@
 
   .avatar-text-large {
     font-size: var(--terra-avatar-font-size-large, 1.571rem);
+    font-weight: var(--terra-avatar-font-weight-large);
   }
 
   .avatar-text-small {
     font-size: var(--terra-avatar-font-size-small, 1.143rem);
+    font-weight: var(--terra-avatar-font-weight-small);
   }
 }

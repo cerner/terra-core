@@ -84,6 +84,7 @@ describe('Avatar', () => {
         '--terra-avatar-box-shadow': 'inset 0 0.07143rem 0.2143rem 5px rgba(255, 0, 0, 0.3)',
         '--terra-avatar-color': 'rgb(0, 0, 255)',
         '--terra-avatar-font-size-large': '2rem',
+        '--terra-avatar-font-weight-large': '500',
         '--terra-avatar-size': '5rem',
       },
     });
@@ -107,6 +108,7 @@ describe('Avatar', () => {
         '--terra-avatar-box-shadow': 'inset 0 0.07143rem 0.2143rem 5px rgba(255, 0, 0, 0.3)',
         '--terra-avatar-color': 'rgb(0, 0, 255)',
         '--terra-avatar-font-size-small': '0.8rem',
+        '--terra-avatar-font-weight-small': '400',
         '--terra-avatar-size': '5rem',
       },
     });
