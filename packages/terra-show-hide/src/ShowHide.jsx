@@ -13,13 +13,33 @@ const closedButtonText = 'Show More';
 
 const propTypes = {
   /**
+   * Content in the body of the ShowHide component that will be shown or hidden
+   */
+  children: PropTypes.node.isRequired,
+  /**
+   * Text that will be visible to the user while the ShowHide state isClosed
+   */
+  preview: PropTypes.string.isRequired,
+  /**
    * Icon displayed next to text content within the show-hide button
    */
   icon: PropTypes.element,
   /**
+   * Sets the ShowHide component to be animated when it is opened or closed
+   */
+  isAnimated: PropTypes.bool,
+  /**
    * Sets the show-hide initial state to open
    */
   isInitiallyOpen: PropTypes.bool,
+  /**
+   * Callback function triggered when ShowHide component is closed
+   */
+  onClose: PropTypes.func,
+  /**
+   * Callback function triggered when ShowHide component is opened
+   */
+  onOpen: PropTypes.func,
   /**
    * Sets the text size. One of mini, tiny, small, medium, large, huge.
    */
@@ -27,8 +47,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isInitiallyOpen: false,
   icon: <IconChevronDown />,
+  isAnimated: false,
+  isInitiallyOpen: false,
 };
 
 class ShowHide extends React.Component {
@@ -69,9 +90,11 @@ class ShowHide extends React.Component {
       buttonAttrs,
       children,
       icon,
+      isAnimated,
       isInitiallyOpen,
       onClose,
       onOpen,
+      preview,
       size,
       ...customProps
     } = this.props;
@@ -94,10 +117,11 @@ class ShowHide extends React.Component {
       />
     );
 
-    // TODO set text size. through class stying?
+    // TODO set text size. through class styling?
     return (
       <div {...customProps} className={showHideClassName}>
-        <Toggle isOpen={this.state.isOpen} >
+        {!this.state.isOpen && preview}
+        <Toggle isOpen={this.state.isOpen} isAnimated={this.props.isAnimated}>
           {this.props.children}
         </Toggle>
         {button}
