@@ -1,8 +1,8 @@
 # Terra Mixins
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-mixins.svg)](https://www.npmjs.org/package/terra-mixins)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-mixins)](https://www.npmjs.org/package/terra-mixins)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The terra-mixins component supplies global mixins for use throughout the Terra ecosystem.
 

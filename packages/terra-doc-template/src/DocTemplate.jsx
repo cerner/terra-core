@@ -88,7 +88,7 @@ const DocTemplate = ({
 
   const badge = (
     <a href={`https://www.npmjs.org/package/${packageName}`}>
-      <img src={`https://img.shields.io/npm/v/${packageName}.svg`} alt="NPM version" />
+      <img src={`https://badgen.net/npm/v/${packageName}`} alt="NPM version" />
     </a>
   );
 

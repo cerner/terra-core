@@ -1,8 +1,8 @@
 # Terra ToggleButton
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-toggle-button.svg)](https://www.npmjs.org/package/terra-toggle-button)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-toggle-button)](https://www.npmjs.org/package/terra-toggle-button)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 ToggleButton component that transitions content in and out with the click on a button.
 
