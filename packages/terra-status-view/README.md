@@ -1,7 +1,7 @@
 # Terra Status View
 
-[![NPM version](http://img.shields.io/npm/v/terra-status-view.svg)](https://www.npmjs.org/package/terra-status-view)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-status-view)](https://www.npmjs.org/package/terra-status-view)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The status view component provides a customizable icon, message, and buttons in a view.
 

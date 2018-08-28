@@ -1,8 +1,8 @@
 # Terra Spacer
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-spacer.svg)](https://www.npmjs.org/package/terra-spacer)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-spacer)](https://www.npmjs.org/package/terra-spacer)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 This component is used to provide margin and/or padding space between two components based on the given values.
 
