@@ -241,6 +241,53 @@ describe('Form-Textarea', () => {
     Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
+  describe('Enabled Placeholder', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/placeholder-textarea');
+    });
+
+    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeEachCustomProperty({
+      '--terra-form-textarea-placeholder-color': 'red',
+    });
+  });
+
+  describe('Enabled Placeholder Font Style', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/placeholder-textarea-font-styled');
+    });
+
+    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeEachCustomProperty({
+      '--terra-form-textarea-placeholder-font-style': 'normal',
+    });
+  });
+
+  describe('Disabled Placeholder', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-placeholder-textarea');
+    });
+
+    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeEachCustomProperty({
+      '--terra-form-textarea-placeholder-disabled-color': 'red',
+    });
+  });
+
+  describe('Disabled Placeholder Font Style', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-placeholder-textarea-font-styled');
+    });
+
+    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeEachCustomProperty({
+      '--terra-form-textarea-placeholder-disabled-font-style': 'normal',
+    });
+  });
 
   describe('AutoResizable Textarea', () => {
     describe('Resizes when given several rows of input', () => {

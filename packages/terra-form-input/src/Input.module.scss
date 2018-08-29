@@ -24,6 +24,7 @@
 
     &::placeholder {
       color: var(--terra-form-input-placeholder-color, #70787c);
+      font-style: var(--terra-form-input-placeholder-font-style);
     }
 
     &:hover {
@@ -45,6 +46,7 @@
 
     &[disabled]::placeholder {
       color: var(--terra-form-input-placeholder-disabled-color, #70787c);
+      font-style: var(--terra-form-input-placeholder-disabled-font-style);
     }
 
     &:focus {

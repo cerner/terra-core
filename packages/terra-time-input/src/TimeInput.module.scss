@@ -53,6 +53,10 @@
       color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
       opacity: var(--terra-form-input-disabled-opacity);
     }
+
+    &::placeholder {
+      font-style: var(--terra-time-input-placeholder-font-style);
+    }
   }
 
   .time-input-group {
