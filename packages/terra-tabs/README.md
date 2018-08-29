@@ -1,8 +1,8 @@
 # Terra Tabs
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-tabs.svg)](https://www.npmjs.org/package/terra-tabs)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-tabs)](https://www.npmjs.org/package/terra-tabs)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 Tabs are containers used to organize content. They allow for quick switching between groups of contextually related content. Content is divided into different containers and each container is viewable one at a time. The user can switch between containers by selecting the corresponding tab control.
 

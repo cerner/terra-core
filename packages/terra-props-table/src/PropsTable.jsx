@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { parse } from 'react-docgen';
+import { parse, resolver } from 'react-docgen';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
 import styles from './PropsTable.module.scss';
@@ -87,16 +87,17 @@ an object structured like:
  */
 const PropsTable = ({ componentName, src, ...customProps }) => {
   /**
-   * Runs component source code through react-docgen
+   * Runs component source code through react-docgen. Passing second argument to parse
+   * function to account for mutiple export.
    * @type {Object}
    */
-  const componentMetaData = parse(src);
+  const componentMetaData = parse(src, resolver.findAllComponentDefinitions);
 
   /**
    * Alias for props object from componentMetaData
    * @type {Object}
    */
-  const componentProps = componentMetaData.props;
+  const componentProps = componentMetaData[0].props;
 
   const tableRowClass = cx('prop-table-row');
   const tableClassNames = cx([

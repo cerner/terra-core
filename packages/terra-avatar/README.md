@@ -1,8 +1,8 @@
 # Terra Avatar
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-avatar.svg)](https://www.npmjs.org/package/terra-avatar)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-avatar)](https://www.npmjs.org/package/terra-avatar)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The terra-avatar component displays an avatar, which can be either an image or text, in a circular frame. If neither an image or text is provided, a variant-based fallback icon is used.
 

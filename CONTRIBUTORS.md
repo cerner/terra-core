@@ -68,6 +68,7 @@ Cerner Corporation
 - Julia Calandro [@JuliaCalandro]
 - Adam Parker [@amichaelparker]
 - Matthew Carr [@Matthematic]
+- Mahesh S [@m-samkc]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -138,3 +139,4 @@ Cerner Corporation
 [@JuliaCalandro]: https://github.com/JuliaCalandro
 [@amichaelparker]: https://github.com/amichaelparker
 [@Matthematic]: https://github.com/Matthematic
+[@m-samkc]: https://github.com/m-samkc 

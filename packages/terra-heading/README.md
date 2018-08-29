@@ -1,8 +1,8 @@
 # Terra Heading
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-heading.svg)](https://www.npmjs.org/package/terra-heading)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-heading)](https://www.npmjs.org/package/terra-heading)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading.
 
