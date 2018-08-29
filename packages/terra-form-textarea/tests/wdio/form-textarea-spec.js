@@ -248,20 +248,12 @@ describe('Form-Textarea', () => {
 
     Terra.should.beAccessible({ rules: ignoredA11y });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-form-textarea-placeholder-color': 'red',
-    });
-  });
-
-  describe('Enabled Placeholder Font Style', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/placeholder-textarea-font-styled');
-    });
-
-    Terra.should.beAccessible({ rules: ignoredA11y });
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-form-textarea-placeholder-font-style': 'normal',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-form-textarea-placeholder-color': 'red',
+        '--terra-form-textarea-placeholder-font-style': 'italic',
+      },
     });
   });
 
@@ -272,20 +264,12 @@ describe('Form-Textarea', () => {
 
     Terra.should.beAccessible({ rules: ignoredA11y });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-form-textarea-placeholder-disabled-color': 'red',
-    });
-  });
-
-  describe('Disabled Placeholder Font Style', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-placeholder-textarea-font-styled');
-    });
-
-    Terra.should.beAccessible({ rules: ignoredA11y });
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-form-textarea-placeholder-disabled-font-style': 'normal',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-form-textarea-placeholder-disabled-color': 'red',
+        '--terra-form-textarea-placeholder-disabled-font-style': 'italic',
+      },
     });
   });
 

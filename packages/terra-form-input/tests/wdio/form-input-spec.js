@@ -78,20 +78,12 @@ describe('Form-Input', () => {
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeEachCustomProperty({
-        '--terra-form-input-placeholder-color': 'red',
-      });
-    });
-
-    describe('Enabled Placeholder Font Style', () => {
-      beforeEach(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/placeholder-form-input-font-styled');
-      });
-
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeEachCustomProperty({
-        '--terra-form-input-placeholder-font-style': 'normal',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-form-input-placeholder-color': 'red',
+          '--terra-form-input-placeholder-font-style': 'italic',
+        },
       });
     });
 
@@ -157,20 +149,12 @@ describe('Form-Input', () => {
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeEachCustomProperty({
-        '--terra-form-input-placeholder-disabled-color': 'red',
-      });
-    });
-
-    describe('Disabled Placeholder Font Style', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-placeholder-input-font-styled');
-      });
-
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeEachCustomProperty({
-        '--terra-form-input-placeholder-disabled-font-style': 'normal',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-form-input-placeholder-disabled-color': 'red',
+          '--terra-form-input-placeholder-disabled-font-style': 'italic',
+        },
       });
     });
 
