@@ -1,8 +1,8 @@
 # Terra Toggle Section Header
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-toggle-section-header.svg)](https://www.npmjs.org/package/terra-toggle-section-header)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-toggle-section-header)](https://www.npmjs.org/package/terra-toggle-section-header)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 Toggle section header component that transitions content in and out with a click.
 

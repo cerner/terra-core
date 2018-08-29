@@ -1,8 +1,8 @@
 # Terra Form Field
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-form-field.svg)](https://www.npmjs.org/package/terra-form-field)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-form-field)](https://www.npmjs.org/package/terra-form-field)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The Form Field component handles the layout of the label, help text and error text associated with a form element. Additionally, it provides required, optional, and invalid indicators.
 
