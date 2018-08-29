@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added support for rendering custom content in doc template via children API
+
 ### Changed
 * Switched badge services for npm version display
 
