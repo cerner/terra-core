@@ -7,6 +7,11 @@ Unreleased
 * Placeholder styling
 * Webdriver and dev site tests for disabled, placeholder, and value styling
 
+2.22.0 - (August 29, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.21.0 - (August 8, 2018)
 ------------------
 ### Changed

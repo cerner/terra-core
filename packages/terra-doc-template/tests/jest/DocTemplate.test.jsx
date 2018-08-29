@@ -2,6 +2,7 @@ import React from 'react';
 
 import DocTemplate from '../../src/DocTemplate';
 import TestComponentExample from '../../src/terra-dev-site/test/doc-template/common/TestComponentExample';
+import CustomPropsTable from '../../src/terra-dev-site/test/doc-template/common/CustomPropsTable';
 
 // These cannot be properly imported with jest so substitute this value in instead
 const readme = 'test-file-stub';
@@ -63,6 +64,11 @@ describe('DocTemplate', () => {
       propsTables={[{ componentSrc: testComponentSrc, componentName: 'Test Component' },
         { componentSrc: testComponentSrc, componentName: 'Test Component (Again)' }]}
     />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should show custom props tables', () => {
+    const wrapper = render(<DocTemplate><CustomPropsTable /></DocTemplate>);
     expect(wrapper).toMatchSnapshot();
   });
 
