@@ -3,9 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated marked dependency to 0.5.0 (current stable release)
 
 2.12.0 - (July 19, 2018)
 ------------------
+### Changed
+* Minor dependency version bump
 
 2.11.0 - (July 17, 2018)
 ------------------
