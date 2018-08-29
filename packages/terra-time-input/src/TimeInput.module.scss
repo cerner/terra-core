@@ -53,10 +53,6 @@
       color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
       opacity: var(--terra-form-input-disabled-opacity);
     }
-
-    &::placeholder {
-      font-style: var(--terra-time-input-placeholder-font-style);
-    }
   }
 
   .time-input-group {
@@ -108,6 +104,10 @@
 
       [dir=rtl] & {
         box-shadow: var(--terra-time-input-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
+      }
+
+      &::placeholder {
+        font-style: var(--terra-form-input-placeholder-font-style, italic);
       }
     }
 
