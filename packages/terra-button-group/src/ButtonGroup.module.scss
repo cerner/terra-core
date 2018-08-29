@@ -53,6 +53,7 @@
     &:active {
       background-color: var(--terra-button-group-button-active-background-color, #52585b);
       border-color: var(--terra-button-group-button-active-border-color, #52585b);
+      box-shadow: var(--terra-button-group-button-active--box-shadow);
       color: var(--terra-button-group-button-active-color, #fff);
     }
   }
