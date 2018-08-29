@@ -3,11 +3,15 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.13.0 - (August 29, 2018)
+------------------
 ### Added
 * Added support for rendering custom content in doc template via children API
 
 ### Changed
 * Switched badge services for npm version display
+* Minor dependency version bump
 
 1.12.0 - (August 1, 2018)
 ------------------
