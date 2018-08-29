@@ -3,8 +3,13 @@ Changelog
 
 Unreleased
 ----------
+
+2.15.0 - (August 29, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Updated `react-docgen` parse function to handle multiple exports
+* Dropped dependency on lodash/uniq and replaced with vanilla JavaScript
 
 2.14.0 - (July 19, 2018)
 ------------------

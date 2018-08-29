@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const commander = require('commander');
 const glob = require('glob');
-const uniq = require('lodash/uniq');
 const { parse } = require('react-docgen');
 const generateMarkdown = require('./generateMarkdown/generateMarkdown');
 const pkg = require('../package.json');
@@ -27,7 +26,7 @@ let filenames = commander.args.reduce((globbed, input) => {
 }, []);
 
 // verify filenames are unique
-filenames = uniq(filenames);
+filenames = [...new Set(filenames)];
 
 // check if filenames exist
 filenames.forEach((filename) => {
