@@ -118,6 +118,7 @@ class Frame extends React.Component {
     this.closeDropdown = this.closeDropdown.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.positionDropdown = this.positionDropdown.bind(this);
+    this.handleActive = this.handleActive.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
@@ -154,7 +155,13 @@ class Frame extends React.Component {
       ref: this.setInput,
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
+      role: 'combobox',
+      'aria-haspopup': 'true',
+      'aria-expanded': this.state.isOpen,
       'aria-label': 'search',
+      'aria-controls': this.state.isOpen ? 'terra-select-menu' : undefined,
+      'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
+      'aria-activedescendant': this.state.isOpen ? this.state.activedescendant : undefined,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
 
@@ -222,6 +229,14 @@ class Frame extends React.Component {
     const { dropdownAttrs, maxHeight } = this.props;
     const { select, dropdown } = this;
     this.setState(Util.dropdownPosition(dropdownAttrs, select, dropdown, maxHeight));
+  }
+
+  /**
+   * Handles the changes to the active descendant.
+   * @param {string} id - The id of the active decendent.
+   */
+  handleActive(id) {
+    this.setState({ activedescendant: id });
   }
 
   /**
@@ -375,14 +390,18 @@ class Frame extends React.Component {
     ]);
 
     return (
+      // This warns that a combobox role requires a tab index.
+      // The linter is unable to detect the tab index returned from a function.
+      /* eslint-disable-next-line jsx-a11y/aria-activedescendant-has-tabindex */
       <div
         {...customProps}
         role="combobox"
-        aria-controls={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+        aria-controls={this.state.isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!this.state.isOpen}
         aria-haspopup="true"
-        aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+        aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-activedescendant={this.state.isOpen ? this.state.activedescendant : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -402,7 +421,6 @@ class Frame extends React.Component {
           && (
           <Dropdown
             {...dropdownAttrs}
-            id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
             isEnabled={this.state.isPositioned}
@@ -417,6 +435,7 @@ class Frame extends React.Component {
                  onDeselect,
                  optionFilter,
                  noResultContent,
+                 onActive: this.handleActive,
                  onSelect: this.handleSelect,
                  onRequestClose: this.closeDropdown,
                  searchValue: this.state.searchValue,

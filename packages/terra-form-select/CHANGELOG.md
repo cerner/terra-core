@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Enabled Select options to be visible to screen readers  
 
 4.15.0 - (August 29, 2018)
 ------------------

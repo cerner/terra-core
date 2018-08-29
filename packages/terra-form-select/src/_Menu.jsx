@@ -23,6 +23,10 @@ const propTypes = {
    */
   noResultContent: PropTypes.node,
   /**
+   * Callback function triggered when an option becomes active.
+   */
+  onActive: PropTypes.func.isRequired,
+  /**
    * Callback function triggered when an option is deselected.
    */
   onDeselect: PropTypes.func,
@@ -114,10 +118,18 @@ class Menu extends React.Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
+
+    if (this.state.active) {
+      this.props.onActive(`terra-select-option-${this.state.active}`);
+    }
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     this.scrollIntoView();
+
+    if (prevState.active !== this.state.active) {
+      this.props.onActive(`terra-select-option-${this.state.active}`);
+    }
   }
 
   componentWillUnmount() {
@@ -268,19 +280,16 @@ class Menu extends React.Component {
 
   render() {
     return (
-      // This warns that aria-activedescendant should map to an id
-      // Our implementation maps it to a dynamic id but linter is unable to detect mapping and throws an error
-      /* eslint-disable jsx-a11y/aria-proptypes */
       <ul
         role="listbox"
         className={cx('menu')}
+        id="terra-select-menu"
+        aria-expanded="true"
         ref={(menu) => { this.menu = menu; }}
-        aria-activedescendant={`terra-select-option-${this.state.active}`}
         tabIndex="0"
       >
         {this.clone(this.state.children)}
       </ul>
-      /* eslint-enable jsx-a11y/aria-proptypes */
     );
   }
 }

@@ -2,8 +2,9 @@
 
 exports[`Menu should render a Menu with an add option 1`] = `
 <ul
-  aria-activedescendant="terra-select-option-Tag"
+  aria-expanded="true"
   className="menu"
+  id="terra-select-menu"
   role="listbox"
   tabIndex="0"
 >
@@ -24,8 +25,9 @@ exports[`Menu should render a Menu with an add option 1`] = `
 
 exports[`Menu should render a Menu with no results 1`] = `
 <ul
-  aria-activedescendant="terra-select-option-null"
+  aria-expanded="true"
   className="menu"
+  id="terra-select-menu"
   role="listbox"
   tabIndex="0"
 >
@@ -37,8 +39,9 @@ exports[`Menu should render a Menu with no results 1`] = `
 
 exports[`Menu should render a default Menu 1`] = `
 <ul
-  aria-activedescendant="terra-select-option-null"
+  aria-expanded="true"
   className="menu"
+  id="terra-select-menu"
   role="listbox"
   tabIndex="0"
 >
