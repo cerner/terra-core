@@ -8,8 +8,6 @@ import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
 
 const cx = classNames.bind(styles);
-const openedButtonText = 'Hide';
-const closedButtonText = 'Show More';
 
 const propTypes = {
   /**
@@ -20,6 +18,14 @@ const propTypes = {
    * Text that will be visible to the user while the ShowHide state isClosed
    */
   preview: PropTypes.string.isRequired,
+  /**
+   * Link text that will be displayed when the content is hidden
+   */
+  collapsedText: PropTypes.string,
+  /**
+   * Link text that will be displayed when the content is shown
+   */
+  expandedText: PropTypes.string,
   /**
    * Icon displayed next to text content within the show-hide button
    */
@@ -40,13 +46,11 @@ const propTypes = {
    * Callback function triggered when ShowHide component is opened
    */
   onOpen: PropTypes.func,
-  /**
-   * Sets the text size. One of mini, tiny, small, medium, large, huge.
-   */
-  size: PropTypes.oneOf(['mini', 'tiny', 'small', 'medium', 'large', 'huge']),
 };
 
 const defaultProps = {
+  collapsedText: 'Show More',
+  expandedText: 'Hide',
   icon: <IconChevronDown />,
   isAnimated: false,
   isInitiallyOpen: false,
@@ -88,28 +92,29 @@ class ShowHide extends React.Component {
   render() {
     const {
       buttonAttrs,
+      collapsedText,
       children,
+      expandedText,
       icon,
       isAnimated,
       isInitiallyOpen,
       onClose,
       onOpen,
       preview,
-      size,
       ...customProps
     } = this.props;
 
-    const buttonText = !this.state.isOpen ? closedButtonText : openedButtonText;
+    const buttonText = !this.state.isOpen ? collapsedText : expandedText;
     const showHideClassName = cx([
       'button',
       { 'is-open': this.state.isOpen },
-      { [`size-${size}`]: size },
       customProps.className,
     ]);
 
     const button = (
       <Button
         {...buttonAttrs}
+        variant="de-emphasis"
         icon={<span className={cx('icon')}>{icon}</span>}
         aria-expanded={this.state.isOpen}
         text={buttonText}
@@ -117,7 +122,6 @@ class ShowHide extends React.Component {
       />
     );
 
-    // TODO set text size. through class styling?
     return (
       <div {...customProps} className={showHideClassName}>
         {!this.state.isOpen && preview}
