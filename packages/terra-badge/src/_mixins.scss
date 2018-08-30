@@ -1,4 +1,5 @@
 @mixin terra-badge-color($color-map) {
   background-color: map-get($color-map, background-color);
+  background-image: map-get($color-map, background-image);
   color: map-get($color-map, color);
 }
