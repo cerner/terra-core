@@ -50,6 +50,29 @@ describe('Badge', () => {
     });
   });
 
+  describe('Intent Background Image', () => {
+    before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-intent'));
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-badge-background-color-default': 'none',
+        '--terra-badge-background-image-default': 'linear-gradient(to bottom, #ff9b00, #ff7e00)',
+        '--terra-badge-background-color-primary': 'none',
+        '--terra-badge-background-image-primary': 'linear-gradient(to bottom, #ff9b00, #ff7e00)',
+        '--terra-badge-background-color-secondary': 'none',
+        '--terra-badge-background-image-secondary': 'linear-gradient(to bottom, #ff9b00, #ff7e00)',
+        '--terra-badge-background-color-positive': 'none',
+        '--terra-badge-background-image-positive': 'linear-gradient(to bottom, #ff9b00, #ff7e00)',
+        '--terra-badge-background-color-negative': 'none',
+        '--terra-badge-background-image-negative': 'linear-gradient(to bottom, #ff9b00, #ff7e00)',
+        '--terra-badge-background-color-warning': 'none',
+        '--terra-badge-background-image-warning': 'linear-gradient(to bottom, #ff9b00, #ff7e00)',
+        '--terra-badge-background-color-info': 'none',
+        '--terra-badge-background-image-info': 'linear-gradient(to bottom, #ff9b00, #ff7e00)',
+      },
+    });
+  });
+
   describe('Size', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-size'));
 
