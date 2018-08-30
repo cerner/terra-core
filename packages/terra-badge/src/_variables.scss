@@ -1,42 +1,35 @@
 // Color variants
 $terra-badge-default-color-scheme: (
   background-color: var(--terra-badge-background-color-default, #bcbfc0),
-  background-image: var(--terra-badge-background-image-default),
   color: var(--terra-badge-color-default, #383f42)
 );
 
 $terra-badge-primary-color-scheme: (
   background-color: var(--terra-badge-background-color-primary, #004c76),
-  background-image: var(--terra-badge-background-image-primary),
   color: var(--terra-badge-color-primary, #fff)
 );
 
 $terra-badge-secondary-color-scheme: (
   background-color: var(--terra-badge-background-color-secondary, #4e832b),
-  background-image: var(--terra-badge-background-image-secondary),
   color: var(--terra-badge-color-secondary, #fff)
 );
 
 $terra-badge-positive-color-scheme: (
   background-color: var(--terra-badge-background-color-positive, #4e832b),
-  background-image: var(--terra-badge-background-image-positive),
   color: var(--terra-badge-color-positive, #fff)
 );
 
 $terra-badge-negative-color-scheme: (
   background-color: var(--terra-badge-background-color-negative, #bc0203),
-  background-image: var(--terra-badge-background-image-negative),
   color: var(--terra-badge-color-negative, #fff)
 );
 
 $terra-badge-warning-color-scheme: (
   background-color: var(--terra-badge-background-color-warning, #da3b03),
-  background-image: var(--terra-badge-background-image-warning),
   color: var(--terra-badge-color-warning, #fff)
 );
 
 $terra-badge-info-color-scheme: (
   background-color: var(--terra-badge-background-color-info, #004c76),
-  background-image: var(--terra-badge-background-image-info),
   color: var(--terra-badge-color-info, #fff)
 );
