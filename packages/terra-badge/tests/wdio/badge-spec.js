@@ -11,6 +11,7 @@ describe('Badge', () => {
       testName: 'themed',
       selector: '#default-badge',
       properties: {
+        '--terra-badge-border': 'solid 1px rgba(89, 159, 253, 0.4)',
         '--terra-badge-border-radius': '20px',
         '--terra-badge-display': 'block',
         '--terra-badge-font-weight': 'normal',
