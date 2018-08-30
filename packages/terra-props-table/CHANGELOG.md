@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added a new prop, `propsResolution` to allow users to opt-in to react-docgen's findAllComponentDefinitions prop-type resolution.
 
 2.15.0 - (August 29, 2018)
 ------------------
