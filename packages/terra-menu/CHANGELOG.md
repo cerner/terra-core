@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.17.0 - (August 30, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.16.0 - (August 29, 2018)
 ------------------
 ### Changed
