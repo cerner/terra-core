@@ -129,7 +129,6 @@ class Menu extends React.Component {
     ]);
 
     const visiblePage = this.state.stack.length - 1;
-    console.log(this.state.stack);
     const slides = this.state.stack.map((item, index) => (
       <MenuContent
         // eslint-disable-next-line react/no-array-index-key
