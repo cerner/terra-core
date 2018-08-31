@@ -102,6 +102,8 @@ describe('ActionHeader - Themeable', () => {
         '--terra-action-header-border-left': '1px solid #00FF00',
         '--terra-action-header-border-right': '1px solid #00FF00',
         '--terra-action-header-border-top': '1px solid #00FF00',
+        '--terra-action-header-border-top-left-radius': '3px',
+        '--terra-action-header-border-top-right-radius': '3px',
         '--terra-action-header-box-shadow': '5px 5px 5px #551A8B',
         '--terra-action-header-color': '#FFC0CB',
         '--terra-action-header-font-size': '0.5rem',
