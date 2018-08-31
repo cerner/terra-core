@@ -30,17 +30,24 @@ class ActionExample extends React.Component {
           <code>
             {alertStartTagStr}
             <br />
-            &nbsp;&nbsp;{alertText}.
+            &nbsp;&nbsp;
+            {alertText}
+.
             <br />
             {alertEndTagStr}
           </code>
         </div>
         <br />
-        <Alert type="warning" action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >
+        <Alert type="warning" action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />}>
           {alertText}
         </Alert>
         <br />
-        <p>Action button has been clicked {this.state.actionButtonClickCount} times.</p>
+        <p>
+Action button has been clicked
+          {this.state.actionButtonClickCount}
+          {' '}
+times.
+        </p>
       </div>
     );
   }

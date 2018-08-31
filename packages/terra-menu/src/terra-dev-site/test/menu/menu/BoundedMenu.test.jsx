@@ -45,8 +45,8 @@ class BoundedMenu extends React.Component {
     return (
       <div
         style={{
- height: '200px', width: '200px', background: 'aliceblue', overflow: 'hidden',
-}}
+          height: '200px', width: '200px', background: 'aliceblue', overflow: 'hidden',
+        }}
         ref={this.setParentNode}
       >
         <Menu
@@ -78,7 +78,7 @@ class BoundedMenu extends React.Component {
           <Menu.Item text="Default 7" key="7" />
           <Menu.Item text="Default 8" key="8" />
         </Menu>
-        <button id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button type="button" id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

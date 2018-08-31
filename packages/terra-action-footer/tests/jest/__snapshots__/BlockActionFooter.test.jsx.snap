@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlockActionFooter Prop Tests with actions should display no actions 1`] = `
+<BlockActionFooter>
+  <div
+    className="block-action-footer with-actions"
+  >
+    Some content
+  </div>
+</BlockActionFooter>
+`;
+
+exports[`BlockActionFooter Prop Tests without actions should display no actions 1`] = `
+<BlockActionFooter>
+  <div
+    className="block-action-footer"
+  />
+</BlockActionFooter>
+`;
+
+exports[`BlockActionFooter Snapshot Tests should render a footer with some actions 1`] = `
+<div
+  className="block-action-footer with-actions"
+>
+  Some actions
+</div>
+`;
+
+exports[`BlockActionFooter Snapshot Tests should render an empty footer 1`] = `
+<div
+  className="block-action-footer"
+/>
+`;

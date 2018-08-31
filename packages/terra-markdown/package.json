@@ -1,7 +1,7 @@
 {
   "name": "terra-markdown",
   "main": "lib/Markdown.js",
-  "version": "2.12.0",
+  "version": "2.13.0",
   "description": "terra-markdown",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "github-markdown-css": "^2.4.1",
-    "marked": "^0.3.6",
+    "marked": "0.5.0",
     "prop-types": "^15.5.8"
   },
   "scripts": {

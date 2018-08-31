@@ -34,8 +34,8 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
           classNameModal={styles['fixed-size']}
         >
           <div style={{
- height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'lightgreen',
-}}
+            height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'lightgreen',
+          }}
           >
             <h1>Modal disable close on outside click</h1>
             <br />
@@ -45,10 +45,10 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
               <li>- Clicking on the close button</li>
             </ul>
             <br />
-            <button onClick={this.handleCloseModal}>Close Modal</button>
+            <button type="button" onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </AbstractModal>
-        <button onClick={this.handleOpenModal}>Open Modal</button>
+        <button type="button" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }

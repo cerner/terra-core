@@ -16,7 +16,10 @@ class timeInput extends React.Component {
   render() {
     return (
       <div>
-        <p>Time Provided: <span style={{ display: 'inline-block' }}>{this.state.time}</span></p>
+        <p>
+Time Provided:
+          <span style={{ display: 'inline-block' }}>{this.state.time}</span>
+        </p>
         <TimeInput
           name="time-input-value"
           value={this.state.time}

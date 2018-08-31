@@ -33,7 +33,8 @@ class AutoSearchDisabledSearchField extends React.Component {
           disableAutoSearch
         />
         <div id="search-callback-text">
-          {this.state.message}{this.state.searchText}
+          {this.state.message}
+          {this.state.searchText}
         </div>
       </div>
     );

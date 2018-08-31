@@ -64,10 +64,10 @@ export const shorthandValidator = (props = {}, propName = '') => {
     const propertyConflicts = dir => (props[`${propName}${dir}`] && (props[`${propName}${dir}`] !== SpacerSizes.NONE));
 
     const conflictProp = (
-      (propertyConflicts('Top') ? `${propName}Top` : undefined) ||
-      (propertyConflicts('Right') ? `${propName}Right` : undefined) ||
-      (propertyConflicts('Bottom') ? `${propName}Bottom` : undefined) ||
-      (propertyConflicts('Left') ? `${propName}Left` : undefined)
+      (propertyConflicts('Top') ? `${propName}Top` : undefined)
+      || (propertyConflicts('Right') ? `${propName}Right` : undefined)
+      || (propertyConflicts('Bottom') ? `${propName}Bottom` : undefined)
+      || (propertyConflicts('Left') ? `${propName}Left` : undefined)
     );
 
     return conflictProp;

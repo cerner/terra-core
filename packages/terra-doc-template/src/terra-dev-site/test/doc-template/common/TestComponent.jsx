@@ -18,7 +18,12 @@ const defaultProps = {
 };
 
 const TestComponent = props => (
-  <p>{props.text}, {props.otherText}</p>
+  <p>
+    {props.text}
+,
+    {' '}
+    {props.otherText}
+  </p>
 );
 
 TestComponent.propTypes = propTypes;

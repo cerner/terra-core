@@ -2,6 +2,11 @@ import React from 'react';
 
 import Checkbox from '../../../../Checkbox';
 
-const checkbox = () => (<Checkbox id="disabled" labelText="Disabled Checkbox" disabled />);
+const checkbox = () => (
+  <div>
+    <Checkbox id="disabled" labelText="Disabled Checkbox" disabled />
+    <Checkbox id="disabledchecked" labelText="Disabled and Checked Checkbox" defaultChecked disabled />
+  </div>
+);
 
 export default checkbox;

@@ -64,7 +64,7 @@ const LoadingOverlay = ({
   const loadingMessage = message !== undefined ? message : intl.formatMessage({ id: 'Terra.Overlay.loading' });
 
   return (
-    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)} >
+    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)}>
       <IconSpinner className={cx('icon')} isSpin={isAnimated} height="36" width="36" />
       <div className={cx('message')}>{loadingMessage}</div>
     </Overlay>

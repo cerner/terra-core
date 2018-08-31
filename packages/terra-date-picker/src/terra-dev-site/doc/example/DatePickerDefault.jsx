@@ -28,7 +28,10 @@ class DatePickerExample extends React.Component {
   render() {
     return (
       <div>
-        <p>Selected ISO Date: <span style={{ display: 'inline-block' }}>{this.state.date}</span></p>
+        <p>
+Selected ISO Date:
+          <span style={{ display: 'inline-block' }}>{this.state.date}</span>
+        </p>
         <DatePicker
           name="date-input"
           onChange={this.handleDateChange}

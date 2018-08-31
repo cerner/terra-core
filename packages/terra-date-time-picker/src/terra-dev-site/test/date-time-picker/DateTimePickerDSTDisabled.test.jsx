@@ -11,9 +11,9 @@ export default class extends React.Component {
   }
 
   toggleDateTimePicker() {
-    this.setState({
-      active: !this.state.active,
-    });
+    this.setState(prevState => ({
+      active: !prevState.active,
+    }));
   }
 
   render() {

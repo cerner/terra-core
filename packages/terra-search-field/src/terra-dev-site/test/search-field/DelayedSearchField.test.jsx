@@ -14,7 +14,9 @@ class DelayedSearchField extends React.Component {
     return (
       <div>
         <div id="search-callback-text">
-          Search Text: {this.state.searchText}
+          Search Text:
+          {' '}
+          {this.state.searchText}
         </div>
         <SearchField searchDelay={1000} onSearch={(searchText) => { this.setState({ searchText }); }} />
       </div>

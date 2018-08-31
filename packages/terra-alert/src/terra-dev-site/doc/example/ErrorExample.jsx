@@ -12,11 +12,13 @@ const ErrorExample = () => (
       <h3>Basic Alert of type error with default title</h3>
       <br />
       <code>
-        {alertStartTagStr}{alertText}{alertEndTagStr}
+        {alertStartTagStr}
+        {alertText}
+        {alertEndTagStr}
       </code>
     </div>
     <br />
-    <Alert type="error" >{alertText}</Alert>
+    <Alert type="error">{alertText}</Alert>
   </div>
 );
 

@@ -71,7 +71,7 @@ const Arrange = ({
   const fitEndProps = Object.assign({}, fitEndAttributes);
 
   return (
-    <div {...customProps} className={cx('arrange', customProps.className)} >
+    <div {...customProps} className={cx('arrange', customProps.className)}>
       <div {...fitStartProps} className={cx('fit', align || alignFitStart, fitStartProps.className)}>
         {fitStart}
       </div>

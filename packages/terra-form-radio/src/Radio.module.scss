@@ -5,8 +5,8 @@
     font-family: inherit;
     margin-bottom: var(--terra-form-radio-container-margin-bottom, 0);
     margin-left: var(--terra-form-radio-container-margin-left, 0);
-    margin-right: var(--terra-form-radio-container-margin-right, 2rem);
-    margin-top: var(--terra-form-radio-container-margin-top, 0);
+    margin-right: var(--terra-form-radio-container-margin-right, 0);
+    margin-top: var(--terra-form-radio-container-margin-top, 0.3571428rem);
     position: relative;
 
     /* stylelint-disable selector-max-compound-selectors */
@@ -14,7 +14,8 @@
       cursor: pointer;
       display: inline-block;
       font-size: var(--terra-form-radio-font-size, 1rem);
-      line-height: var(--terra-form-radio-line-height, 1.42);
+      line-height: var(--terra-form-radio-line-height, 1.33);
+      padding-bottom: var(--terra-form-radio-padding-bottom, 0.3571428rem);
       padding-left: var(--terra-form-radio-padding-left, 0);
       position: relative;
     }
@@ -39,13 +40,14 @@
 
     .label-text {
       display: block;
-      margin-left: var(--terra-form-radio-label-text-margin-left, 1.4em);
+      margin-left: var(--terra-form-radio-label-text-margin-left, 1.3571rem);
       max-width: 100%; //stops content overflow on IE 10/11
     }
 
     /* Custom radio shown when theme uses custom styling */
     .native-input + .outer-ring {
       background-color: var(--terra-form-radio-outer-ring-background-color, transparent);
+      background-image: var(--terra-form-radio-outer-ring-background-image, none);
       border: var(--terra-form-radio-outer-ring-border, 0);
       border-radius: var(--terra-form-radio-outer-ring-border-radius, 0);
       box-sizing: border-box;
@@ -62,7 +64,7 @@
         background-color: var(--terra-form-radio-inner-ring-background-color, transparent);
         border: var(--terra-form-radio-inner-ring-border, 0);
         border-radius: 50%;
-        box-shadow: 0 0 1px 1px #fff; //Safari: overrides span not honouring border-radius
+        box-shadow: var(--terra-form-radio-inner-ring-box-shadow, 0 0 1px 1px #fff); //Safari: overrides span not honouring border-radius
         height: var(--terra-form-radio-inner-ring-height, 0);
         left: 50%;
         max-width: 100%;
@@ -77,6 +79,7 @@
     /* Custom radio in checked state */
     .native-input:checked + .outer-ring {
       background-color: var(--terra-form-radio-outer-ring-checked-background-color, transparent);
+      background-image: var(--terra-form-radio-outer-ring-checked-background-image, none);
       border: var(--terra-form-radio-outer-ring-checked-border, 0);
       border-radius: var(--terra-form-radio-outer-ring-checked-border-radius, 0);
       box-sizing: border-box;
@@ -91,7 +94,7 @@
         background-color: var(--terra-form-radio-inner-ring-checked-background-color, transparent);
         border: var(--terra-form-radio-inner-ring-checked-border, 0);
         border-radius: 50%;
-        box-shadow: 0 0 1px 1px #fff; //Safari: overrides span not honouring border-radius
+        box-shadow: var(--terra-form-radio-inner-ring-checked-box-shadow, 0 0 1px 1px #fff); //Safari: overrides span not honouring border-radius
         height: var(--terra-form-radio-inner-ring-checked-height, 0);
         left: 50%;
         position: absolute;
@@ -133,10 +136,15 @@
       width: var(--terra-form-radio-label-is-hidden-width, 1rem);
     }
     /* stylelint-disable max-nesting-depth*/
-    .label:hover {
-      .outer-ring {
+    .label:not(.is-disabled):hover {
+      .native-input + .outer-ring {
         border-color: var(--terra-form-radio-hover-border-color, transparent);
         border-width: var(--terra-form-radio-hover-border-width, 0);
+      }
+
+      .native-input:checked + .outer-ring {
+        border-color: var(--terra-form-radio-outer-ring-checked-hover-border-color, transparent);
+        border-width: var(--terra-form-radio-outer-ring-checked-hover-border-width, 0);
       }
     }
 
@@ -154,7 +162,7 @@
         opacity: var(--terra-form-radio-disabled-font-opacity, 1);
       }
 
-      > .outer-ring {
+      > .native-input:disabled + .outer-ring {
         background-color: var(--terra-form-radio-outer-ring-disabled-background-color, transparent);
         background-image: var(--terra-form-radio-outer-ring-disabled-background-image, none);
         border-color: var(--terra-form-radio-outer-ring-disabled-border-color, transparent);
@@ -167,9 +175,17 @@
         }
       }
 
-      &:hover > .outer-ring {
-        border-color: var(--terra-form-radio-disabled-hover-border-color, transparent);
-        border-width: var(--terra-form-radio-disabled-border-width, 0);
+      > .native-input:checked:disabled + .outer-ring {
+        background-color: var(--terra-form-radio-outer-ring-checked-disabled-background-color, transparent);
+        background-image: var(--terra-form-radio-outer-ring-checked-disabled-background-image, none);
+        border-color: var(--terra-form-radio-outer-ring-checked-disabled-border-color, transparent);
+        cursor: default;
+
+        > .inner-ring {
+          background-color: var(--terra-form-radio-inner-ring-checked-disabled-background-color, transparent);
+          border-color: var(--terra-form-radio-inner-ring-checked-disabled-border-color, transparent);
+          box-shadow: none;
+        }
       }
     }
     /* stylelint-enable max-nesting-depth */
@@ -196,5 +212,6 @@
 
   .radio.is-inline {
     display: inline-block;
+    margin-right: var(--terra-form-radio-inline-container-margin-right, 1.42857rem);
   }
 }

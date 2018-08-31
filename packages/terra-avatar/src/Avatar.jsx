@@ -82,8 +82,8 @@ class Avatar extends React.Component {
 
   componentWillReceiveProps(newProps) {
     // If we have an image to display (they take precedence) and one of its attributes have changed
-    if (newProps.image && (newProps.image !== this.props.image ||
-      newProps.alt !== this.props.alt || newProps.variant !== this.props.variant)) {
+    if (newProps.image && (newProps.image !== this.props.image
+      || newProps.alt !== this.props.alt || newProps.variant !== this.props.variant)) {
       const { alt, image, variant } = newProps;
 
       const imageComponent = Avatar.generateImage(image, variant, alt);

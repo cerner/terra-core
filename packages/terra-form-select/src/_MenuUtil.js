@@ -213,14 +213,14 @@ class MenuUtil {
 
     if (options.length === 0) {
       return null;
-    } else if (state.searchValue === undefined) {
+    } if (state.searchValue === undefined) {
       const selected = options.find(option => (
         Array.isArray(value) ? MenuUtil.includes(value, option.props.value) : MenuUtil.isEqual(value, option.props.value)
       ));
       return selected === undefined ? options[0].props.value : selected.props.value;
-    } else if (searchValue !== state.searchValue) {
+    } if (searchValue !== state.searchValue) {
       return options[0].props.value;
-    } else if (active !== null && MenuUtil.findByValue(options, active)) {
+    } if (active !== null && MenuUtil.findByValue(options, active)) {
       return active;
     }
     return options[0].props.value;

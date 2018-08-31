@@ -3,7 +3,7 @@ import OverlayContainer from '../../../../OverlayContainer';
 import Overlay from '../../../../Overlay';
 
 const OverlayExample = () => (
-  <OverlayContainer style={{ height: '100px', width: '100%' }} id="overlay-container" >
+  <OverlayContainer style={{ height: '100px', width: '100%' }} id="overlay-container">
     <Overlay isOpen isRelativeToContainer isScrollable>
       <p>I</p>
       <p>am</p>

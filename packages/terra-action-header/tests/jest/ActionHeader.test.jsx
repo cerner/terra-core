@@ -49,7 +49,14 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with multiple custom buttons and title', () => {
-    const actionHeader = <ActionHeader title="Action Header"><span><Button text="Custom Button" onClick={() => alert('You clicked me!')} /><Button text="Custom Button" onClick={() => alert('You clicked me!')} /></span></ActionHeader>;
+    const actionHeader = (
+      <ActionHeader title="Action Header">
+        <span>
+          <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
+          <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
+        </span>
+      </ActionHeader>
+    );
     const wrapper = shallow(actionHeader, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });

@@ -98,15 +98,15 @@ class UpdateAvatar extends React.Component {
       <div>
         <Avatar id={id} image={image} alt={alt} variant={variant} ariaLabel={ariaLabel} initials={initials} />
         <br />
-        <button onClick={this.altButtonHandle} id="alt">Alt Text</button>
-        <button onClick={this.imageButtonHandle} id="image">Image</button>
-        <button onClick={this.variantButtonHandle} id="variant">Variant</button>
-        <button onClick={this.ariaLabelButtonHandle} id="aria-label">AriaLabel</button>
-        <button onClick={this.initialsButtonHandle} id="initials">Initials</button>
-        <button onClick={this.idButtonHandle} id="id">Custom Prop (id)</button>
+        <button type="button" onClick={this.altButtonHandle} id="alt">Alt Text</button>
+        <button type="button" onClick={this.imageButtonHandle} id="image">Image</button>
+        <button type="button" onClick={this.variantButtonHandle} id="variant">Variant</button>
+        <button type="button" onClick={this.ariaLabelButtonHandle} id="aria-label">AriaLabel</button>
+        <button type="button" onClick={this.initialsButtonHandle} id="initials">Initials</button>
+        <button type="button" onClick={this.idButtonHandle} id="id">Custom Prop (id)</button>
         <br />
         <p>The buttons update one of the Avatar&apos;s props then force it to reload</p>
-        <button onClick={this.imageToggleButtonHandle} id="image-toggle">Toggle Image</button>
+        <button type="button" onClick={this.imageToggleButtonHandle} id="image-toggle">Toggle Image</button>
       </div>);
   }
 }
