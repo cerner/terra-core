@@ -55,6 +55,12 @@
       opacity: var(--terra-time-input-disabled-opacity, 0.25);
       pointer-events: none;
     }
+
+    .time-input-hour[disabled],
+    .time-input-minute[disabled],
+    .meridiem-display[disabled] {
+      opacity: 1;
+    }
   }
 
   .time-input-group {
@@ -68,12 +74,6 @@
     &:last-of-type {
       margin-right: 0;
     }
-  }
-
-  .time-input-hour[disabled],
-  .time-input-minute[disabled],
-  .meridiem-display[disabled] {
-    opacity: 1;
   }
 
   .time-input-hour,
