@@ -21,7 +21,7 @@
     border-style: var(--terra-time-input-border-style, solid);
     border-width: var(--terra-time-input-border-width, 1px);
     box-sizing: content-box;
-    color: var(--terra-time-input-color, #000);
+    color: var(--terra-time-input-color, #1c1f21);
     direction: ltr;
     display: inline-block;
     font-size: var(--terra-time-input-font-size, 1em);
@@ -202,7 +202,7 @@
   .meridiem-button {
     background-color: var(--terra-time-input-meridiem-button-background-color, #d3d4d5);
     border-color: var(--terra-time-input-meridiem-button-border-color, #d1d1d1);
-    color: var(--terra-time-input-meridiem-button-color, #000);
+    color: var(--terra-time-input-meridiem-button-color, #1c1f21);
     font-size: var(--terra-time-input-font-size, 1em);
     height: var(--terra-time-input-mobile-height, 1.857rem);
     line-height: var(--terra-time-input-line-height, 1.429);
