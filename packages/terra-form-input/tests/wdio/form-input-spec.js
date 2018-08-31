@@ -72,7 +72,7 @@ describe('Form-Input', () => {
     });
 
     describe('Enabled Placeholder', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/placeholder-form-input');
       });
 
@@ -88,7 +88,7 @@ describe('Form-Input', () => {
     });
 
     describe('Enabled Value', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/value-form-input');
       });
 

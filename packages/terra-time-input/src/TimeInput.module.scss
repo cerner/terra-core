@@ -80,7 +80,7 @@
     border-style: var(--terra-time-input-border-style, solid);
     border-width: var(--terra-time-input-border-width, 1px);
     box-sizing: border-box;
-    color: var(--terra-time-input-color, #000);
+    color: var(--terra-time-input-color, #1c1f21);
     display: table;
     height: var(--terra-time-input-mobile-height, 1.857rem);
     min-width: var(--terra-time-input-width-input, 3.57em);
@@ -93,6 +93,11 @@
     transition-timing-function: var(--terra-time-input-transition-timing-function, ease);
     width: 100%;
 
+    &::placeholder {
+      color: var(--terra-time-input-placeholder-color, #70787c);
+      font-style: var(--terra-time-input-placeholder-font-style);
+    }
+
     &:focus {
       @include focus-styles;
 
@@ -104,10 +109,6 @@
 
       [dir=rtl] & {
         box-shadow: var(--terra-time-input-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
-      }
-
-      &::placeholder {
-        font-style: var(--terra-form-input-placeholder-font-style, italic);
       }
     }
 
