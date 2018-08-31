@@ -48,10 +48,12 @@
     }
 
     &.disabled {
-      background-color: var(--terra-form-input-disabled-background-color, rgba(111, 116, 119, 0.05));
-      border: var(--terra-form-input-disabled-border, 1px solid #dedfe0);
-      color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
-      opacity: var(--terra-form-input-disabled-opacity);
+      background-color: var(--terra-time-input-disabled-background-color, rgba(111, 116, 119, 0.2));
+      border: var(--terra-time-input-disabled-border, 1px solid #868a8c);
+      color: var(--terra-time-input-disabled-color, #1c1f21);
+      cursor: default;
+      opacity: var(--terra-time-input-disabled-opacity, 0.25);
+      pointer-events: none;
     }
   }
 
@@ -66,6 +68,12 @@
     &:last-of-type {
       margin-right: 0;
     }
+  }
+
+  .time-input-hour[disabled],
+  .time-input-minute[disabled],
+  .meridiem-display[disabled] {
+    opacity: 1;
   }
 
   .time-input-hour,
@@ -92,11 +100,6 @@
     transition-property: background-size;
     transition-timing-function: var(--terra-time-input-transition-timing-function, ease);
     width: 100%;
-
-    &::placeholder {
-      color: var(--terra-time-input-placeholder-color, #70787c);
-      font-style: var(--terra-time-input-placeholder-font-style);
-    }
 
     &:focus {
       @include focus-styles;
