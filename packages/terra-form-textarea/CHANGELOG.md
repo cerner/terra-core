@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Placeholder styling
+* Webdriver and dev site tests for disabled, placeholder, and value styling
 
 2.22.0 - (August 29, 2018)
 ------------------

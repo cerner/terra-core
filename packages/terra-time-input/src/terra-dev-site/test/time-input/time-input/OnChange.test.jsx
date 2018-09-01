@@ -21,7 +21,7 @@ Time Input:
             {this.state.input}
           </h3>
         </div>
-        <div style={{ 'caret-color': 'transparent' }}>
+        <div style={{ caretColor: 'transparent' }}>
           <TimeInput
             id="timeInput"
             name="time-input"
