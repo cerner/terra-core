@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Border radius updated to use px
+
+### Added
+* Placeholder text styling
+* Webdriver and dev site tests for disabled, placeholder, and value styling
 
 1.22.0 - (August 29, 2018)
 ------------------

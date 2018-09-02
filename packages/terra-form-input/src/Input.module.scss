@@ -6,21 +6,26 @@
     background-repeat: no-repeat;
     background-size: var(--terra-form-input-focus-background-start);
     border: var(--terra-form-input-border, 1px solid #dedfe0);
-    border-radius: var(--terra-form-input-border-radius, 0.2rem);
+    border-radius: var(--terra-form-input-border-radius, 3px);
     box-shadow: var(--terra-form-input-box-shadow);
-    color: var(--terra-form-input-color, #000);
+    color: var(--terra-form-input-color, #1c1f21);
     font-family: inherit;
-    font-size: var(--terra-form-input-font-size, 1.143rem);
-    height: var(--terra-form-input-height, 2.143rem);
+    font-size: var(--terra-form-input-font-size, 1.142857rem);
+    height: var(--terra-form-input-height, 2.142857rem);
     line-height: var(--terra-form-input-line-height, 1.25);
-    padding-bottom: var(--terra-form-input-padding-bottom, 0.286rem);
-    padding-left: var(--terra-form-input-padding-left, 0.286rem);
-    padding-right: var(--terra-form-input-padding-right, 0.286rem);
-    padding-top: var(--terra-form-input-padding-top, 0.286rem);
+    padding-bottom: var(--terra-form-input-padding-bottom, 0.28571rem);
+    padding-left: var(--terra-form-input-padding-left, 0.28571rem);
+    padding-right: var(--terra-form-input-padding-right, 0.28571rem);
+    padding-top: var(--terra-form-input-padding-top, 0.28571rem);
     transition-duration: var(--terra-form-input-transition-duration, 0s);
     transition-property: background-size;
     transition-timing-function: var(--terra-form-input-transition-timing-function, ease);
     width: 100%;
+
+    &::placeholder {
+      color: var(--terra-form-input-placeholder-color, #70787c);
+      font-style: var(--terra-form-input-placeholder-font-style);
+    }
 
     &:hover {
       border: var(--terra-form-input-hover-border, 1px solid #dedfe0);
@@ -31,11 +36,17 @@
     }
 
     &[disabled] {
-      background-color: var(--terra-form-input-disabled-background-color, rgba(111, 116, 119, 0.05));
-      border: var(--terra-form-input-disabled-border, 1px solid #dedfe0);
-      color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
+      background-color: var(--terra-form-input-disabled-background-color, rgba(111, 116, 119, 0.2));
+      border: var(--terra-form-input-disabled-border, 1px solid #868a8c);
+      color: var(--terra-form-input-disabled-color, #1c1f21);
       cursor: default;
-      opacity: var(--terra-form-input-disabled-opacity);
+      opacity: var(--terra-form-input-disabled-opacity, 0.25);
+      pointer-events: none;
+    }
+
+    &[disabled]::placeholder {
+      color: var(--terra-form-input-placeholder-disabled-color, #70787c);
+      font-style: var(--terra-form-input-placeholder-disabled-font-style);
     }
 
     &:focus {
