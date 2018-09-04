@@ -28,6 +28,7 @@
     }
 
     &:hover {
+      background-color: var(--terra-form-input-hover-background-color, #fff);
       border: var(--terra-form-input-hover-border, 1px solid #dedfe0);
     }
 
@@ -66,10 +67,12 @@
   }
 
   .form-error {
+    background-color: var(--terra-form-input-error-background-color, #fff);
     background-image: var(--terra-form-input-error-focus-animation-background);
     border: var(--terra-form-input-error-border, 1px solid #dedfe0);
 
     &:hover {
+      background-color: var(--terra-form-input-error-hover-background-color, #fff);
       border: var(--terra-form-input-error-hover-border, 1px solid #dedfe0);
     }
 
