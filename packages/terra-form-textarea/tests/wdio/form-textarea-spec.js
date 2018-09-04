@@ -241,6 +241,37 @@ describe('Form-Textarea', () => {
     Terra.should.beAccessible({ rules: ignoredA11y });
   });
 
+  describe('Enabled Placeholder', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/placeholder-textarea');
+    });
+
+    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-form-textarea-placeholder-color': 'red',
+        '--terra-form-textarea-placeholder-font-style': 'italic',
+      },
+    });
+  });
+
+  describe('Disabled Placeholder', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-placeholder-textarea');
+    });
+
+    Terra.should.beAccessible({ rules: ignoredA11y });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-form-textarea-placeholder-disabled-color': 'red',
+        '--terra-form-textarea-placeholder-disabled-font-style': 'italic',
+      },
+    });
+  });
 
   describe('AutoResizable Textarea', () => {
     describe('Resizes when given several rows of input', () => {
