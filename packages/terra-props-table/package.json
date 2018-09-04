@@ -2,7 +2,7 @@
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
   "version": "2.17.0",
-  "description": "terra-props-table",
+  "description": "React component to render a table view for the props metadata of another react component.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
