@@ -35,12 +35,6 @@
       color: var(--terra-button-group-button-hover-color, #000);
     }
 
-    &:hover.is-active {
-      background-color: var(--terra-button-group-button-active-and-hover-background-color, #40474a);
-      border-color: var(--terra-button-group-button-active-and-hover-border-color, #40474a);
-      color: var(--terra-button-group-button-active-and-hover-color, #fff);
-    }
-
     &:hover.is-selected {
       background-color: var(--terra-button-group-button-selected-and-hover-background-color, #40474a);
       border-color: var(--terra-button-group-button-selected-and-hover-border-color, #40474a);
@@ -59,6 +53,12 @@
       border-color: var(--terra-button-group-button-selected-border-color, #52585b);
       box-shadow: var(--terra-button-group-button-selected-box-shadow);
       color: var(--terra-button-group-button-selected-color, #fff);
+    }
+
+    &:hover.is-active {
+      background-color: var(--terra-button-group-button-active-and-hover-background-color, #40474a);
+      border-color: var(--terra-button-group-button-active-and-hover-border-color, #40474a);
+      color: var(--terra-button-group-button-active-and-hover-color, #fff);
     }
 
     &.is-active.is-focused,
