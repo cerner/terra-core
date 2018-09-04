@@ -37,7 +37,6 @@
     align-items: center;
     display: flex;
     flex: 0 0 auto;
-    height: 100%;
     position: relative;
   }
 
@@ -54,6 +53,8 @@
     height: 100%;
     hyphens: auto;
     margin-bottom: 0;
+    margin-left: var(--terra-action-header-title-margin-left);
+    margin-right: var(--terra-action-header-title-margin-right);
     margin-top: 0;
     padding-top: var(--terra-action-header-title-padding-top, 0.1428571429rem);
     width: 100%;
