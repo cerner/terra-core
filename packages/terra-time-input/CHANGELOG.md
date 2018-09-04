@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.25.0 - (September 4, 2018)
+------------------
 ### Changed
+* Minor dependency version bump
 * Border radius to use px
 
 2.24.0 - (August 29, 2018)
