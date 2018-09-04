@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Replaced images used in test files with base64 encoded images
 
 2.22.0 - (September 4, 2018)
 ------------------
