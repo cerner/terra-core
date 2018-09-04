@@ -1,127 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToggleButton should render a default toggle-button 1`] = `
+exports[`ShowHide should render a default show-hide component 1`] = `
 <div
   class="button"
 >
-  <button
-    aria-disabled="false"
-    aria-expanded="false"
-    class="button neutral"
-    type="button"
-  >
-    <span
-      class="text-and-icon"
-    >
-      <span
-        class="icon icon-first"
-      >
-        <span
-          class="icon icon-svg"
-        >
-          <svg
-            aria-hidden="true"
-            class="icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-            />
-          </svg>
-        </span>
-      </span>
-      <span
-        class=""
-      >
-        Show
-      </span>
-    </span>
-  </button>
+  Test...
   <div
     aria-hidden="true"
     class="toggle"
   />
-</div>
-`;
-
-exports[`ToggleButton should render an animated toggle-button 1`] = `
-<div
-  class="button"
->
   <button
     aria-disabled="false"
     aria-expanded="false"
-    class="button neutral"
+    class="button"
     type="button"
+    variant="de-emphasis"
   >
     <span
       class="text-and-icon"
     >
       <span
-        class="icon icon-first"
+        class="text-first"
       >
-        <span
-          class="icon icon-svg"
-        >
-          <svg
-            aria-hidden="true"
-            class="icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-            />
-          </svg>
-        </span>
+        Show More
       </span>
-      <span
-        class=""
-      >
-        Show
-      </span>
-    </span>
-  </button>
-  <div
-    aria-hidden="true"
-    class="toggle"
-  >
-    <div
-      aria-hidden="false"
-      class="rah-static"
-      style="height:0;overflow:hidden"
-    >
-      <div>
-        Test
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ToggleButton should render an icon only toggle-button 1`] = `
-<divz
-  class="button"
->
-  <button
-    aria-disabled="false"
-    aria-expanded="false"
-    aria-label="Show"
-    class="button neutral"
-    type="button"
-  >
-    <span
-      class="icon-only"
-    >
       <span
         class="icon"
       >
@@ -139,35 +41,53 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
             />
           </svg>
         </span>
       </span>
     </span>
   </button>
-  <div
-    aria-hidden="true"
-    class="toggle"
-  />
 </div>
 `;
 
-exports[`ToggleButton should render an initially open toggle-button 1`] = `
+exports[`ShowHide should render an animated show-hide component 1`] = `
 <div
-  class="button is-open"
+  class="button"
 >
+  Test...
+  <div
+    aria-hidden="true"
+    class="toggle"
+    style="transition-delay:0.3s"
+  >
+    <div
+      aria-hidden="false"
+      class="rah-static"
+      style="height:0;overflow:hidden"
+    >
+      <div>
+        Full Text
+      </div>
+    </div>
+  </div>
   <button
     aria-disabled="false"
-    aria-expanded="true"
-    class="button neutral"
+    aria-expanded="false"
+    class="button"
     type="button"
+    variant="de-emphasis"
   >
     <span
       class="text-and-icon"
     >
       <span
-        class="icon icon-first"
+        class="text-first"
+      >
+        Show More
+      </span>
+      <span
+        class="icon"
       >
         <span
           class="icon icon-svg"
@@ -183,32 +103,74 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
             />
           </svg>
         </span>
       </span>
-      <span
-        class=""
-      >
-        Show
-      </span>
     </span>
   </button>
+</div>
+`;
+
+exports[`ShowHide should render an initially open show-hide component 1`] = `
+<div
+  class="button is-open"
+>
   <div
     aria-hidden="false"
     class="toggle"
   >
-    Test
+    Full Text
   </div>
+  <button
+    aria-disabled="false"
+    aria-expanded="true"
+    class="button"
+    type="button"
+    variant="de-emphasis"
+  >
+    <span
+      class="text-and-icon"
+    >
+      <span
+        class="text-first"
+      >
+        Hide
+      </span>
+      <span
+        class="icon"
+      >
+        <span
+          class="icon icon-svg"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon is-bidi"
+            data-name="Layer 1"
+            focusable="false"
+            height="1em"
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
+            />
+          </svg>
+        </span>
+      </span>
+    </span>
+  </button>
 </div>
 `;
 
-exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
-<ToggleButton
-  closedButtonText="Show"
+exports[`ShowHide should render an open show-hide component when clicked 1`] = `
+<ShowHide
+  collapsedText="Show More"
+  expandedText="Hide"
   icon={
-    <IconChevronRight
+    <IconChevronDown
       className=""
       data-name="Layer 1"
       isBidi={true}
@@ -217,20 +179,32 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
     />
   }
   isAnimated={false}
-  isIconAnimated={false}
-  isIconOnly={false}
   isInitiallyOpen={false}
+  preview="Test"
 >
   <div
     className="button is-open"
   >
+    <Toggle
+      isAnimated={false}
+      isOpen={true}
+      style={Object {}}
+    >
+      <div
+        aria-hidden={false}
+        className="toggle"
+        style={Object {}}
+      >
+        Full Text
+      </div>
+    </Toggle>
     <Button
       aria-expanded={true}
       icon={
         <span
           className="icon"
         >
-          <IconChevronRight
+          <IconChevronDown
             className=""
             data-name="Layer 1"
             isBidi={true}
@@ -239,38 +213,39 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
           />
         </span>
       }
-      isBlock={false}
-      isCompact={false}
       isDisabled={false}
-      isIconOnly={false}
-      isReversed={false}
       onClick={[Function]}
-      text="Show"
+      text="Hide"
       type="button"
-      variant="neutral"
+      variant="de-emphasis"
     >
       <button
         aria-disabled={false}
         aria-expanded={true}
-        aria-label={null}
-        className="button neutral"
+        className="button"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         type="button"
+        variant="de-emphasis"
       >
         <span
           className="text-and-icon"
         >
           <span
-            className="icon icon-first"
+            className="text-first"
+          >
+            Hide
+          </span>
+          <span
+            className="icon"
           >
             <span
               className="icon icon-svg"
             >
-              <IconChevronRight
+              <IconChevronDown
                 className=""
                 data-name="Layer 1"
                 isBidi={true}
@@ -300,47 +275,39 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+                      d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
                     />
                   </svg>
                 </IconBase>
-              </IconChevronRight>
+              </IconChevronDown>
             </span>
-          </span>
-          <span
-            className=""
-          >
-            Show
           </span>
         </span>
       </button>
     </Button>
-    <Toggle
-      isAnimated={false}
-      isOpen={true}
-    >
-      <div
-        aria-hidden={false}
-        className="toggle"
-      >
-        Test
-      </div>
-    </Toggle>
   </div>
-</ToggleButton>
+</ShowHide>
 `;
 
-exports[`ToggleButton should set icon prop correctly 1`] = `
+exports[`ShowHide should set icon prop correctly 1`] = `
 <div
   className="button"
 >
+  Test...
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+    style={Object {}}
+  >
+    Full Text
+  </Toggle>
   <Button
     aria-expanded={false}
     icon={
       <span
         className="icon"
       >
-        <IconChevronRight
+        <IconChevronDown
           className=""
           data-name="Layer 1"
           isBidi={true}
@@ -349,29 +316,27 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
         />
       </span>
     }
-    isBlock={false}
-    isCompact={false}
     isDisabled={false}
-    isIconOnly={false}
-    isReversed={false}
     onClick={[Function]}
-    text="Show"
+    text="Show More"
     type="button"
-    variant="neutral"
+    variant="de-emphasis"
   />
-  <Toggle
-    isAnimated={false}
-    isOpen={false}
-  >
-    Test
-  </Toggle>
 </div>
 `;
 
-exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
+exports[`ShowHide should set icon prop correctly with custom icon 1`] = `
 <div
   className="button"
 >
+  Test...
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+    style={Object {}}
+  >
+    Full Text
+  </Toggle>
   <Button
     aria-expanded={false}
     icon={
@@ -386,97 +351,11 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
         />
       </span>
     }
-    isBlock={false}
-    isCompact={false}
     isDisabled={false}
-    isIconOnly={false}
-    isReversed={false}
     onClick={[Function]}
-    text="Show"
+    text="Show More"
     type="button"
-    variant="neutral"
+    variant="de-emphasis"
   />
-  <Toggle
-    isAnimated={false}
-    isOpen={false}
-  >
-    Test
-  </Toggle>
-</div>
-`;
-
-exports[`ToggleButton should set onClose prop correctly 1`] = `
-<div
-  className="button"
->
-  <Button
-    aria-expanded={false}
-    icon={
-      <span
-        className="icon"
-      >
-        <IconChevronRight
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </span>
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={false}
-    isReversed={false}
-    onClick={[Function]}
-    text="Show"
-    type="button"
-    variant="neutral"
-  />
-  <Toggle
-    isAnimated={false}
-    isOpen={false}
-  >
-    Test
-  </Toggle>
-</div>
-`;
-
-exports[`ToggleButton should set onOpen prop correctly 1`] = `
-<div
-  className="button"
->
-  <Button
-    aria-expanded={false}
-    icon={
-      <span
-        className="icon"
-      >
-        <IconChevronRight
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </span>
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={false}
-    isReversed={false}
-    onClick={[Function]}
-    text="Show"
-    type="button"
-    variant="neutral"
-  />
-  <Toggle
-    isAnimated={false}
-    isOpen={false}
-  >
-    Test
-  </Toggle>
 </div>
 `;

@@ -10,8 +10,10 @@ import ShowHideSrc from '!raw-loader!../../../../src/ShowHide';
 // Example Files
 import AnimatedShowHide from '../example/AnimatedShowHide';
 import AnimatedShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AnimatedShowHide.jsx';
-import CustomLinkTextShowHide from '../example/CustomLinkText';
-import CustomLinkTextShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CustomLinkText.jsx';
+import CustomIconShowHide from '../example/CustomIconShowHide';
+import CustomIconShowHideSrc from '!raw-loader!../example/CustomIconShowHide.jsx';
+import CustomLinkTextShowHide from '../example/CustomLinkTextShowHide';
+import CustomLinkTextShowHideSrc from '!raw-loader!../example/CustomLinkTextShowHide.jsx';
 import DefaultShowHide from '../example/DefaultShowHide';
 import DefaultShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultShowHide.jsx';
 import InitiallyOpenShowHide from '../example/InitiallyOpenShowHide';
@@ -29,6 +31,16 @@ const DocPage = () => (
         source: AnimatedShowHideSrc,
       },
       {
+        title: 'Custom Icon ShowHide',
+        example: <CustomIconShowHide />,
+        source: CustomIconShowHideSrc,
+      },
+      {
+        title: 'Custom Link Text ShowHide',
+        example: <CustomLinkTextShowHide />,
+        source: CustomLinkTextShowHideSrc,
+      },
+      {
         title: 'Default ShowHide',
         example: <DefaultShowHide />,
         source: DefaultShowHideSrc,
@@ -37,11 +49,6 @@ const DocPage = () => (
         title: 'Initially Open ShowHide',
         example: <InitiallyOpenShowHide />,
         source: InitiallyOpenShowHideSrc,
-      },
-      {
-        title: 'Custom Link Text ShowHide',
-        example: <CustomLinkTextShowHide />,
-        source: CustomLinkTextShowHideSrc,
       },
     ]}
     propsTables={[

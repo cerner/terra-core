@@ -19,7 +19,7 @@ const CustomLinkTextShowHide = () => (
     preview={`${sentences[0]} ${sentences[1]} ${sentences[2]}`}
     collapsedText={`Show ${sentences.length - 3} More Sentences`}
     expandedText={`Hide ${sentences.length - 3} Sentences`}
-  > debugger
+  >
     {sentences.join(' ')}
   </ShowHide>
 );

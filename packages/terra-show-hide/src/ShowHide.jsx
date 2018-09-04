@@ -111,6 +111,16 @@ class ShowHide extends React.Component {
       customProps.className,
     ]);
 
+    let previewText = '';
+
+    if (preview) {
+      if (preview.slice(-1) === '.') {
+        previewText = `${preview}..`;
+      } else {
+        previewText = `${preview}...`;
+      }
+    }
+
     const button = (
       <Button
         {...buttonAttrs}
@@ -122,10 +132,19 @@ class ShowHide extends React.Component {
       />
     );
 
+    let isAnimatedStyle = {};
+
+    if (this.props.isAnimated) {
+      isAnimatedStyle = {
+        // fix for the toggle oscillation when setting isAnimated to true
+        transitionDelay: '0.3s',
+      };
+    }
+
     return (
       <div {...customProps} className={showHideClassName}>
-        {!this.state.isOpen && preview}
-        <Toggle isOpen={this.state.isOpen} isAnimated={this.props.isAnimated}>
+        {!this.state.isOpen && previewText}
+        <Toggle isOpen={this.state.isOpen} isAnimated={this.props.isAnimated} style={isAnimatedStyle}>
           {this.props.children}
         </Toggle>
         {button}

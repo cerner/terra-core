@@ -1,6 +1,3 @@
-@import './variables';
-@import './mixins';
-
 :local {
   // html input[type='button'].terra-Button selector used to
   // prevent a WebKit bug destroys native `audio` and `video` controls
@@ -24,11 +21,11 @@
   // stylelint-enable selector-no-qualifying-type
 
   .button {
-    border-radius: var(--terra-button-border-radius, 0.2142rem);
-    border-style: solid;
-    border-width: 1px;
+    background-color: transparent; // Remove the gray background on active links in IE 10
+    border: 0;
+    color: var(--terra-link-color, #0059a8);
     cursor: pointer;
-    display: inline-block;
+    display: inline-block; // prevents variant icon from breaking onto its own line
     font-family: inherit;
     font-size: var(--terra-button-font-size, 1rem);
     line-height: var(--terra-button-line-height, 1.429);
@@ -38,12 +35,11 @@
     padding-right: 0;
     padding-top: var(--terra-button-vertical-padding, 0.286rem);
     text-align: center;
-    text-decoration: none;
+    text-decoration: var(--terra-link-underline, none);
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
     white-space: normal;
-
     // Remove the inner border and padding in Firefox.
     &::-moz-focus-inner {
       border: 0;
@@ -51,43 +47,22 @@
     }
 
     &:focus {
-      outline: none;
+      background-color: var(--terra-link-focus-background-color, transparent);
+      border-radius: var(--terra-link-focus-border-radius, 0.2142rem);
+      box-shadow: var(--terra-link-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
+      color: var(--terra-link-focus-color, #001f67);
+      text-decoration: var(--terra-link-focus-underline, underline);
     }
 
     &:active {
-      outline: none;
-      -webkit-tap-highlight-color: transparent;
+      color: var(--terra-link-active-color, #001f67);
     }
 
     &:disabled,
     &.is-disabled {
-      cursor: default;
-      opacity: var(--terra-button-disabled-opacity, 0.3);
-      pointer-events: none; // prevent pointer interaction for anchor elements
+      color: var(--terra-link-disabled-color, rgba(28, 31, 33, 0.2));
+      text-decoration: none;
     }
-  }
-
-  // Button variant modifiers
-  .neutral {
-    @include terra-button-variant-color($terra-button-neutral-color-scheme);
-  }
-
-  .emphasis {
-    @include terra-button-variant-color($terra-button-emphasis-color-scheme);
-  }
-
-  .de-emphasis {
-    @include terra-button-variant-color($terra-button-de-emphasis-color-scheme);
-  }
-
-  .action {
-    @include terra-button-variant-color($terra-button-action-color-scheme);
-    border-radius: var(--terra-button-action-border-radius, 5rem);
-  }
-
-  .utility {
-    @include terra-button-variant-color($terra-button-utility-color-scheme);
-    border-radius: var(--terra-button-utility-border-radius, 0.2142rem);
   }
 
   // Button style modifiers
@@ -99,16 +74,6 @@
   .compact {
     padding-bottom: var(--terra-button-compact-padding-bottom, 0);
     padding-top: var(--terra-button-compact-padding-top, 0);
-  }
-
-  .text-only {
-    margin-left: var(--terra-button-text-only-horizontal-margin, 0.714rem);
-    margin-right: var(--terra-button-text-only-horizontal-margin, 0.714rem);
-  }
-
-  .icon-only {
-    margin-left: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
-    margin-right: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
   }
 
   .text-and-icon {

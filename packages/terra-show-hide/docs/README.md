@@ -13,7 +13,9 @@ Pretty much the best Terra component ever created.
 import React from 'react';
 import ShowHide from 'terra-show-hide';
 
-<ShowHide {props...} />
+  <ShowHide preview="Lorem ipsum dolor sit amet">
+    {Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+  </ShowHide>
 ```
 
 ## Component Features
