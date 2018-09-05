@@ -89,7 +89,7 @@ class Base extends React.Component {
 
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
-      <I18nProvider {...customProps} locale={this.state.locale} dir={direction} messages={messages}>
+      <I18nProvider {...customProps} locale={this.state.locale} dir={direction} lang={this.state.locale} messages={messages}>
         {children}
       </I18nProvider>
     );
