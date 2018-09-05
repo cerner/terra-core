@@ -1,6 +1,6 @@
 # Terra Show Hide
 
-Pretty much the best Terra component ever created.
+Show Hide component that will show a preview of content or show the full content with the click of a button.
 
 ## Getting Started
 
