@@ -11,39 +11,39 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Content in the body of the ShowHide component that will be shown or hidden
+   * Content in the body of the component that will be shown or hidden
    */
   children: PropTypes.node.isRequired,
   /**
-   * Text that will be visible to the user while the ShowHide state isClosed
+   * Text that will be visible to the user while the component is collapsed
    */
   preview: PropTypes.string.isRequired,
   /**
-   * Link text that will be displayed when the content is hidden
+   * Button text that will be displayed when the component is collapsed
    */
   collapsedText: PropTypes.string,
   /**
-   * Link text that will be displayed when the content is shown
+   * Button text that will be displayed when the component is expanded
    */
   expandedText: PropTypes.string,
   /**
-   * Icon displayed next to text content within the show-hide button
+   * Icon displayed next to the button text
    */
   icon: PropTypes.element,
   /**
-   * Sets the ShowHide component to be animated when it is opened or closed
+   * Sets the animation for the component when it is expanded or collapsed
    */
   isAnimated: PropTypes.bool,
   /**
-   * Sets the show-hide initial state to open
+   * Sets the initial state of the component to open and expanded
    */
   isInitiallyOpen: PropTypes.bool,
   /**
-   * Callback function triggered when ShowHide component is closed
+   * Callback function triggered when the component is collapsed
    */
   onClose: PropTypes.func,
   /**
-   * Callback function triggered when ShowHide component is opened
+   * Callback function triggered when the component is expanded
    */
   onOpen: PropTypes.func,
 };
@@ -91,7 +91,6 @@ class ShowHide extends React.Component {
 
   render() {
     const {
-      buttonAttrs,
       collapsedText,
       children,
       expandedText,
@@ -123,8 +122,6 @@ class ShowHide extends React.Component {
 
     const button = (
       <Button
-        {...buttonAttrs}
-        variant="de-emphasis"
         icon={<span className={cx('icon')}>{icon}</span>}
         aria-expanded={this.state.isOpen}
         text={buttonText}

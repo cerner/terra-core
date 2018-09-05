@@ -4,7 +4,8 @@
 [![NPM version](http://img.shields.io/npm/v/terra-show-hide.svg)](https://www.npmjs.org/package/terra-show-hide)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-Pretty much the best terra component ever written
+Show Hide component that will show a preview of content or show the full content with the click of a button.
+
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-show-hide/docs)
