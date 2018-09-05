@@ -199,9 +199,10 @@ class SearchField extends React.Component {
     } else {
       valueTemp.defaultValue = defaultValue;
     }
-    const additionalInputAttributes = Object.assign({}, inputAttributes, valueTemp);
 
-    const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
+    const inputText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
+    const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
+    const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes, valueTemp);
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
