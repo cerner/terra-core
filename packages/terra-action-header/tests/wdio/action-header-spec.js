@@ -107,15 +107,15 @@ describe('ActionHeader - Themeable', () => {
         '--terra-action-header-box-shadow': '5px 5px 5px #551A8B',
         '--terra-action-header-color': '#FFC0CB',
         '--terra-action-header-font-size': '0.5rem',
-        '--terra-action-header-title-margin-left': '0.5rem',
-        '--terra-action-header-title-margin-right': '0.5rem',
+        '--terra-action-header-title-padding-left': '0.5rem',
+        '--terra-action-header-title-padding-right': '0.5rem',
         '--terra-action-header-title-padding-top': '.2rem',
         '--terra-action-header-padding': '1rem',
       },
     });
   });
 
-  describe('Back', () => {
+describe('Back', () => {
     before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-action-header'));
 
     Terra.should.themeCombinationOfCustomProperties({
