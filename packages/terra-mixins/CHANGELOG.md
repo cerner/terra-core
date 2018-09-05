@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.12.0 - (September 5, 2018)
+------------------
+### Changed
+* Updated package description
+
 1.11.0 - (August 29, 2018)
 ------------------
 ### Changed
