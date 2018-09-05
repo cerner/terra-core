@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { I18nProvider, i18nLoader, injectIntl, intlShape, FormattedMessage } from 'terra-i18n';
+import {
+  I18nProvider, i18nLoader, injectIntl, intlShape, FormattedMessage,
+} from 'terra-i18n';
 import './baseStyles';
 
 const propTypes = {

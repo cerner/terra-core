@@ -17,8 +17,15 @@ class listExample extends React.Component {
     return (
       <div>
         <div id="current-index">
-          <h3>Last Triggered Index: {this.state.selectedIndex}</h3>
-          <p><strong>Note:</strong> Marking an item as selected is an implementation detail of the consumer. This example shows a single-selectable list implementation.</p>
+          <h3>
+Last Triggered Index:
+            {this.state.selectedIndex}
+          </h3>
+          <p>
+            <strong>Note:</strong>
+            {' '}
+Marking an item as selected is an implementation detail of the consumer. This example shows a single-selectable list implementation.
+          </p>
         </div>
         <SelectableList onChange={this.handleSelection} selectedIndexes={[this.state.selectedIndex]}>
           <SelectableList.Item content={<p>Item 1</p>} key="123" />

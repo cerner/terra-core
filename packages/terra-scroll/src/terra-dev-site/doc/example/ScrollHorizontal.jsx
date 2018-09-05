@@ -8,8 +8,8 @@ export default () => (
     <div style={{ height: '200px', width: '400px', border: '1px dashed black' }}>
       <Scroll>
         <p style={{
- height: '160px', width: '1350px', paddingLeft: '10px', paddingRight: '10px',
-}}
+          height: '160px', width: '1350px', paddingLeft: '10px', paddingRight: '10px',
+        }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
           eget facilisis nunc ornare in. Vestibulum ut posuere neque. Maecenas nibh lacus, euismod sit amet magna sit amet,

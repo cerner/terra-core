@@ -51,12 +51,14 @@ class MultiSelectableRows extends React.Component {
     // Check if the selectedIndexes state should update before updating
     if (shouldHandleMultiSelectRowSelection(children, maxSelectionCount, this.state.selectedIndexes, index)) {
       event.preventDefault();
+      /* eslint-disable react/no-access-state-in-setstate */
       const newIndexes = updatedMultiSelectedIndexes(this.state.selectedIndexes, index);
 
       this.setState({ selectedIndexes: newIndexes });
       if (this.props.onChange) {
         this.props.onChange(event, newIndexes, index);
       }
+      /* eslint-enable react/no-access-state-in-setstate */
     }
   }
 

@@ -30,15 +30,15 @@ class SlideGroupDemo extends React.Component {
   }
 
   increment() {
-    this.setState({
-      counter: this.state.counter + 1,
-    });
+    this.setState(prevState => ({
+      counter: prevState.counter + 1,
+    }));
   }
 
   decrement() {
-    this.setState({
-      counter: this.state.counter - 1,
-    });
+    this.setState(prevState => ({
+      counter: prevState.counter - 1,
+    }));
   }
 
   render() {
@@ -49,10 +49,13 @@ class SlideGroupDemo extends React.Component {
           key={`Slide ${i}`}
           style={slideStyles}
         >
-          <h2>Slide {i}</h2>
+          <h2>
+Slide
+            {i}
+          </h2>
           <br />
-          <button onClick={this.increment}>Increment</button>
-          {i !== 0 ? <button onClick={this.decrement}>Decrement</button> : null}
+          <button type="button" onClick={this.increment}>Increment</button>
+          {i !== 0 ? <button type="button" onClick={this.decrement}>Decrement</button> : null}
         </div>
       ));
     }

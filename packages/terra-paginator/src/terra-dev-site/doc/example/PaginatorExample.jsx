@@ -15,11 +15,11 @@ const fillArray = (value, len) => {
 
 const buildPage = () => {
   let fullContent = [];
-  const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
-    'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. ' +
-    'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. ' +
-    'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. ' +
-    'Aliquam eget maximus dui, ut rhoncus augue.');
+  const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+    + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
+    + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
+    + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
+    + 'Aliquam eget maximus dui, ut rhoncus augue.');
 
   fullContent = fillArray(content, 10);
 
@@ -47,7 +47,15 @@ class PaginatorExample extends React.Component {
   render() {
     return (
       <div style={{ height: '500px' }}>
-        <Dialog header={<h1>Page {this.state.currentPage}</h1>} footer={<Paginator onPageChange={this.changePages} selectedPage={1} totalCount={totalCount} itemCountPerPage={10} />}>
+        <Dialog
+          header={(
+            <h1>
+Page
+              {this.state.currentPage}
+            </h1>
+)}
+          footer={<Paginator onPageChange={this.changePages} selectedPage={1} totalCount={totalCount} itemCountPerPage={10} />}
+        >
           {this.state.content}
         </Dialog>
       </div>

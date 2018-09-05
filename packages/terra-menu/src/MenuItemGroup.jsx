@@ -23,6 +23,7 @@ class MenuItemGroup extends React.Component {
   getChildContext() {
     return { isGroupItem: true };
   }
+
   render() {
     const { children, onChange, ...customProps } = this.props;
 

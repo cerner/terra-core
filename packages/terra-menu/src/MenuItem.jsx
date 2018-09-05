@@ -96,11 +96,10 @@ class MenuItem extends React.Component {
     event.preventDefault();
 
     if (this.props.isSelectable && !this.context.isGroupItem && !this.props.isDisabled) {
-      const newIsSelected = !this.state.isSelected;
-      this.setState({ isSelected: newIsSelected });
+      this.setState(prevState => ({ isSelected: !prevState.isSelected }));
 
       if (this.props.onChange) {
-        this.props.onChange(event, newIsSelected);
+        this.props.onChange(event, !this.state.isSelected);
       }
     }
   }

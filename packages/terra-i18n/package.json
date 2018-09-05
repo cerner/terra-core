@@ -1,7 +1,7 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "version": "2.18.0",
+  "version": "2.21.0",
   "description": "The terra-i18n package provides on-demand internationalization of React components.",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
     "aggregate-translations": "./bin/aggregate-translations.js"
   },
   "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -40,7 +40,7 @@
     "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
     "react-intl": "^2.4.0",
-    "terra-doc-template": "^1.12.0"
+    "terra-doc-template": "^1.15.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

@@ -1,11 +1,11 @@
 # Terra Signature
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-signature.svg)](https://www.npmjs.org/package/terra-signature)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-signature)](https://www.npmjs.org/package/terra-signature)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The terra-signature component provides users a way to define a signature with a series of line segments.
-The component can define line width, line color, and optionally display a signature if the line segments have 
+The component can define line width, line color, and optionally display a signature if the line segments have
 already been recorded. Exiting the canvas then re-entering continues the drawing, as long as the pointer does not exit the confines of the browser. For mouse usage, only left click drawing is enabled.
 
 - [Getting Started](#getting-started)

@@ -4,6 +4,27 @@ ChangeLog
 Unreleased
 ----------
 
+1.15.0 - (September 5, 2018)
+------------------
+### Changed
+* Bumped minimum react peerDependency version from ^16.2.0 to ^16.4.2
+* Bumped minimum react-dom peerDependency version from ^16.2.0 to ^16.4.2
+* Expose propsResolution prop in propTable via doc-template component
+
+1.14.0 - (September 4, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.13.0 - (August 29, 2018)
+------------------
+### Added
+* Added support for rendering custom content in doc template via children API
+
+### Changed
+* Switched badge services for npm version display
+* Minor dependency version bump
+
 1.12.0 - (August 1, 2018)
 ------------------
 ### Fixed

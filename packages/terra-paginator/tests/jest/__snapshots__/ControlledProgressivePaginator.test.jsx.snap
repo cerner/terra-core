@@ -38,9 +38,12 @@ exports[`Paginator should render a controlled progressive paginator 1`] = `
         </a>
       </div>
       <div>
-        Page 
+        Page
+         
         1
-         of 
+         
+        of
+         
         112
       </div>
       <div>
@@ -82,9 +85,12 @@ exports[`Paginator should render a controlled progressive paginator 1`] = `
       role="navigation"
     >
       <div>
-        Page 
+        Page
+         
         1
-         of 
+         
+        of
+         
         112
       </div>
       <div>

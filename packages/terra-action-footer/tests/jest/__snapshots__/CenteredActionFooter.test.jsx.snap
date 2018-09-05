@@ -45,10 +45,14 @@ exports[`CenteredActionFooter Snapshot Tests should render a footer with two but
   className="centered-action-footer"
 >
   <div>
-    <button>
+    <button
+      type="button"
+    >
       Button 1
     </button>
-    <button>
+    <button
+      type="button"
+    >
       Button 2
     </button>
   </div>

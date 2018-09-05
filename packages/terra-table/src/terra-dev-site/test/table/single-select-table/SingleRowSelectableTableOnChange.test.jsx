@@ -16,7 +16,11 @@ class SingleRowSelectableTable extends React.Component {
     return (
       <div>
         <div id="selected-index">
-          <h3>Selected Item: {this.state.selectedIndex}</h3>
+          <h3>
+            Selected Item:
+            {' '}
+            {this.state.selectedIndex}
+          </h3>
         </div>
         <Table isStriped={false}>
           <Table.Header>

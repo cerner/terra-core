@@ -18,7 +18,7 @@ const propTypes = {
 };
 
 const Status = ({ color, children, ...customProps }) => (
-  <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)} >
+  <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)}>
     {children}
   </div>
 );

@@ -1,8 +1,8 @@
 {
   "name": "terra-button-group",
   "main": "lib/ButtonGroup.js",
-  "version": "2.19.0",
-  "description": "terra-button-group",
+  "version": "2.23.0",
+  "description": "The Terra Button Group component groups buttons and can maintain a toggle selection state.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -21,16 +21,16 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "terra-base": "^3.12.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^2.19.0",
-    "terra-doc-template": "^1.12.0",
-    "terra-icon": "^2.19.0"
+    "terra-button": "^2.23.0",
+    "terra-doc-template": "^1.15.0",
+    "terra-icon": "^2.22.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

@@ -4,7 +4,7 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
-| terra-doc-template | ^1.12.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-doc-template | ^1.13.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
