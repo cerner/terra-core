@@ -34,7 +34,7 @@ class ModalNoFocusableContent extends React.Component {
         >
           <div>No focusable content inside the modal.</div>
         </AbstractModal>
-        <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
+        <button type="button" className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }

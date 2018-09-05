@@ -29,25 +29,31 @@ class AlertResponsiveToParent extends React.Component {
     const alertText = 'This is a success alert. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.';
     let alertElem = '';
     if (!this.state.isDismissed) {
-      alertElem = <Alert id="dismissibleAlert" type="success" onDismiss={this.handleDismiss} >{alertText}</Alert>;
+      alertElem = <Alert id="dismissibleAlert" type="success" onDismiss={this.handleDismiss}>{alertText}</Alert>;
     }
     return (
       <div style={{ width: '500px', border: '1px solid black', padding: '5px' }}>
-        <h3>Alerts with actions in a small container (500px wide) that will cause the action section of the alert
+        <h3>
+Alerts with actions in a small container (500px wide) that will cause the action section of the alert
             to render below the message instead of beside it.
         </h3>
         <br />
-        <Alert id="actionAlert" type="warning" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={this.actionFunc} />} >
+        <Alert id="actionAlert" type="warning" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={this.actionFunc} />}>
           This is a warning. It is configured with a custom Action button.
         </Alert>
         <br />
-        <p>Action button has been clicked {this.state.actionButtonClickCount} times.</p>
+        <p>
+Action button has been clicked
+          {this.state.actionButtonClickCount}
+          {' '}
+times.
+        </p>
         <br />
         <br />
         {alertElem}
         <br />
         <br />
-        <Alert id="noActionsAlert" type="info" >This is an info alert</Alert>
+        <Alert id="noActionsAlert" type="info">This is an info alert</Alert>
       </div>
     );
   }

@@ -16,7 +16,12 @@ class MenuItemOnClick extends React.Component {
     return (
       <div>
         <div id="clickNumber">
-          <h3>Item has been clicked {this.state.clickNumber} times</h3>
+          <h3>
+Item has been clicked
+            {this.state.clickNumber}
+            {' '}
+times
+          </h3>
         </div>
         <ul>
           <Menu.Item text="OnClick Menu Item" key="1" className="TestOnClickItem" onClick={this.handleSelection} />

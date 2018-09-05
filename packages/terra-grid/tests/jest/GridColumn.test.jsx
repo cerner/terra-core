@@ -15,7 +15,7 @@ it('should render column with all size breakpoints', () => {
 });
 
 it('should render specified width column', () => {
-  const wrapper = shallow(<Col col={3} >Test</Col>);
+  const wrapper = shallow(<Col col={3}>Test</Col>);
   expect(wrapper).toMatchSnapshot();
 });
 

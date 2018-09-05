@@ -1,8 +1,8 @@
 # Terra Dynamic Grid
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-dynamic-grid.svg)](https://www.npmjs.org/package/terra-dynamic-grid)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-dynamic-grid)](https://www.npmjs.org/package/terra-dynamic-grid)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids.
 

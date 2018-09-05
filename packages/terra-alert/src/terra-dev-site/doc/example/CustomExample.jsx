@@ -15,14 +15,20 @@ const CustomExample = () => (
       <code>
         {alertStartTagStr}
         <br />
-        &nbsp;&nbsp;{alertContentStr}
+        &nbsp;&nbsp;
+        {alertContentStr}
         <br />
         {alertEndTagStr}
       </code>
     </div>
     <br />
-    <Alert type="custom" title="Help!" customStatusColor="orange" customIcon={<IconHelp />} >
-      <span>This is a <i>custom</i> alert</span>
+    <Alert type="custom" title="Help!" customStatusColor="orange" customIcon={<IconHelp />}>
+      <span>
+This is a
+        <i>custom</i>
+        {' '}
+alert
+      </span>
     </Alert>
   </div>
 );

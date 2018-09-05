@@ -2,12 +2,11 @@
 /* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
-const pkg = require('../package.json');
 const commander = require('commander');
 const glob = require('glob');
-const uniq = require('lodash/uniq');
-const generateMarkdown = require('./generateMarkdown/generateMarkdown');
 const { parse } = require('react-docgen');
+const generateMarkdown = require('./generateMarkdown/generateMarkdown');
+const pkg = require('../package.json');
 
 commander
   .version(pkg.version)
@@ -27,7 +26,7 @@ let filenames = commander.args.reduce((globbed, input) => {
 }, []);
 
 // verify filenames are unique
-filenames = uniq(filenames);
+filenames = [...new Set(filenames)];
 
 // check if filenames exist
 filenames.forEach((filename) => {

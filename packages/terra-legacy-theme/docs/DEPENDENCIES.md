@@ -3,7 +3,7 @@
 ## dependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| terra-mixins | ^1.16.0 | -- | terra-mixins |
+| terra-mixins | ^1.17.0 | -- | terra-mixins |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

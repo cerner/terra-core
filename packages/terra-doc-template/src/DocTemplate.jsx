@@ -10,6 +10,10 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Enables the ability to add custom content to doc template. Children will be rendered after all other content.
+   */
+  children: PropTypes.node,
+  /**
    * The given component's npm package name.
    */
   packageName: PropTypes.string,
@@ -58,7 +62,7 @@ const defaultProps = {
 };
 
 const DocTemplate = ({
-  packageName, readme, srcPath, examples, propsTables, ...customProps
+  packageName, readme, srcPath, examples, propsTables, children, ...customProps
 }) => {
   let id = 0;
   const localExamples = examples;
@@ -88,7 +92,7 @@ const DocTemplate = ({
 
   const badge = (
     <a href={`https://www.npmjs.org/package/${packageName}`}>
-      <img src={`https://img.shields.io/npm/v/${packageName}.svg`} alt="NPM version" />
+      <img src={`https://badgen.net/npm/v/${packageName}`} alt="NPM version" />
     </a>
   );
 
@@ -99,21 +103,24 @@ const DocTemplate = ({
       {srcPath && <a href={srcPath}>View component source code</a>}
 
       {exampleHeader}
-      {localExamples.map(example =>
-        (<IndexExampleTemplate
+      {localExamples.map(example => (
+        <IndexExampleTemplate
           title={example.title}
           example={example.example}
           exampleSrc={example.source}
           description={example.description}
           key={example.id}
-        />))}
+        />
+      ))}
 
-      {localPropsTables.map(propsTable =>
-        (<PropsTable
+      {localPropsTables.map(propsTable => (
+        <PropsTable
           src={propsTable.componentSrc}
           componentName={propsTable.componentName}
           key={propsTable.id}
-        />))}
+        />
+      ))}
+      {children}
     </div>
   );
 };

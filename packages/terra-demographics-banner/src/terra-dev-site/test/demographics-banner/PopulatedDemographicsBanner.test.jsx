@@ -3,8 +3,8 @@ import Image from 'terra-image';
 import DemographicsBanner from '../../../DemographicsBanner';
 import demographicsCat from '../../doc/assets/demographicsCat.jpg';
 
-export default () =>
-  (<DemographicsBanner
+export default () => (
+  <DemographicsBanner
     id="populated-demographics"
     applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
     age="25 Years"
@@ -16,4 +16,5 @@ export default () =>
     personName="Johnathon Doe"
     photo={<Image alt="My Cat" src={demographicsCat} />}
     preferredFirstName="John"
-  />);
+  />
+);

@@ -5,7 +5,15 @@ import Dialog from 'terra-dialog/lib/Dialog';
 
 const header = 'Header Stuff';
 
-const footer = <div><span>Footer Stuff</span><span>Footer Stuff</span><span>Footer Stuff</span><span>Footer Stuff</span><span>Footer Stuff</span></div>;
+const footer = (
+  <div>
+    <span>Footer Stuff</span>
+    <span>Footer Stuff</span>
+    <span>Footer Stuff</span>
+    <span>Footer Stuff</span>
+    <span>Footer Stuff</span>
+  </div>
+);
 
 const body = (
   <div>

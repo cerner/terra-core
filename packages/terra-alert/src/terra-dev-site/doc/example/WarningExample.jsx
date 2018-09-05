@@ -12,11 +12,13 @@ const WarningExample = () => (
       <h3>Basic Alert of type warning with default title</h3>
       <br />
       <code>
-        {alertStartTagStr}{alertText}{alertEndTagStr}
+        {alertStartTagStr}
+        {alertText}
+        {alertEndTagStr}
       </code>
     </div>
     <br />
-    <Alert type="warning" >{alertText}</Alert>
+    <Alert type="warning">{alertText}</Alert>
   </div>
 );
 

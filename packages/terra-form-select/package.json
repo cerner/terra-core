@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "4.14.0",
+  "version": "4.16.0",
   "description": "Provides a drop down of selectable options.",
   "repository": {
     "type": "git",
@@ -25,18 +25,18 @@
     "react-intl": "^2.4.0"
   },
   "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "terra-base": "^3.12.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
-    "terra-doc-template": "^1.12.0",
-    "terra-form-field": "^2.22.0",
+    "terra-doc-template": "^1.14.0",
+    "terra-form-field": "^2.24.0",
     "terra-hookshot": "^4.0.0",
-    "terra-mixins": "^1.16.0"
+    "terra-mixins": "^1.17.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

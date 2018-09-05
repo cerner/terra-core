@@ -14,8 +14,7 @@ const defaultSearchPatterns = baseDirectory => ([
   path.resolve(baseDirectory, 'packages', 'terra-*', 'node_modules', 'terra-*', 'translations'), // package level dependency translations
 ]);
 
-const customDirectories = (baseDirectory, directories) =>
-  (directories.map(dir => path.resolve(baseDirectory, dir)));
+const customDirectories = (baseDirectory, directories) => (directories.map(dir => path.resolve(baseDirectory, dir)));
 
 const aggregatedTranslations = (options) => {
   // eslint-disable-next-line no-console

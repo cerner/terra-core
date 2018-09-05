@@ -31,9 +31,9 @@ class DateUtil {
 
   // Checks if a given date is out of the range between the start and end dates.
   static isDateOutOfRange(sourceDate, startDate, endDate) {
-    if (!sourceDate || !sourceDate.isValid() ||
-      !startDate || !startDate.isValid() ||
-      !endDate || !endDate.isValid()) {
+    if (!sourceDate || !sourceDate.isValid()
+      || !startDate || !startDate.isValid()
+      || !endDate || !endDate.isValid()) {
       return false;
     }
 

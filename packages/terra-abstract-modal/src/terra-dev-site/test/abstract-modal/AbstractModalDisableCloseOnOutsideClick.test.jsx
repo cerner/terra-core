@@ -13,6 +13,7 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
+
   handleOpenModal() {
     this.setState({ isOpen: true });
   }
@@ -37,10 +38,10 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
             <hr />
             <p>The Terra Modal is appended to the document body.</p>
             <p>{'Modal is assigned a role of \'document\' for accessibility.'}</p>
-            <button onClick={this.handleCloseModal}>Close Modal</button>
+            <button type="button" onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </AbstractModal>
-        <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
+        <button type="button" className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }

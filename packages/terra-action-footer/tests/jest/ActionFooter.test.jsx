@@ -10,38 +10,38 @@ describe('ActionFooter', () => {
     });
 
     it('should render a footer with only one start socket button', () => {
-      const component = <ActionFooter start={<button>Start Socket</button>} />;
+      const component = <ActionFooter start={<button type="button">Start Socket</button>} />;
       expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only two start socket buttons', () => {
       const component = (
         <ActionFooter
-          start={
+          start={(
             <div>
-              <button>Start Socket 1</button>
-              <button>Start Socket 2</button>
+              <button type="button">Start Socket 1</button>
+              <button type="button">Start Socket 2</button>
             </div>
-          }
+)}
         />
       );
       expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only an end socket button', () => {
-      const component = <ActionFooter end={<button>End Socket</button>} />;
+      const component = <ActionFooter end={<button type="button">End Socket</button>} />;
       expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only two end socket buttons', () => {
       const component = (
         <ActionFooter
-          end={
+          end={(
             <div>
-              <button>End Socket 1</button>
-              <button>End Socket 2</button>
+              <button type="button">End Socket 1</button>
+              <button type="button">End Socket 2</button>
             </div>
-          }
+)}
         />
       );
       expect(shallow(component)).toMatchSnapshot();
@@ -50,8 +50,8 @@ describe('ActionFooter', () => {
     it('should render a footer with both start and end socket buttons', () => {
       const component = (
         <ActionFooter
-          start={<button>Start Socket</button>}
-          end={<button>End Socket</button>}
+          start={<button type="button">Start Socket</button>}
+          end={<button type="button">End Socket</button>}
         />
       );
       expect(shallow(component)).toMatchSnapshot();
@@ -98,8 +98,8 @@ describe('ActionFooter', () => {
     describe('without start or end actions', () => {
       const actionFooter = shallow(<ActionFooter />);
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
       it('should contain no socket class', () => (
@@ -114,8 +114,8 @@ describe('ActionFooter', () => {
     describe('with only a start action', () => {
       const actionFooter = shallow(<ActionFooter start="Start Action" />);
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
       it('should contain one socket class', () => (
@@ -130,8 +130,8 @@ describe('ActionFooter', () => {
     describe('with only an end action', () => {
       const actionFooter = shallow(<ActionFooter end="End Action" />);
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
       it('should contain one socket class', () => (
@@ -146,8 +146,8 @@ describe('ActionFooter', () => {
     describe('with both start and end actions', () => {
       const actionFooter = shallow(<ActionFooter start="Start Action" end="End Action" />);
 
-      it("should render an 'ActionFooterContainer'", () => (
-        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      it("should render an 'BlockActionFooter'", () => (
+        expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
       it('should contain two socket classes', () => (

@@ -21,7 +21,8 @@ const BaseExample = () => (
     </dl>
     <ol>
       <li>Ordered list item</li>
-      <li>Ordered list item
+      <li>
+Ordered list item
         <ol>
           <li>Nested ordered list item</li>
         </ol>
@@ -30,7 +31,8 @@ const BaseExample = () => (
     </ol>
     <ul>
       <li>Unordered list item</li>
-      <li>Unordered list item
+      <li>
+Unordered list item
         <ol>
           <li>Nested unordered list item</li>
         </ol>

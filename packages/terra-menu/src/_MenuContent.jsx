@@ -212,7 +212,7 @@ class MenuContent extends React.Component {
     let closeButton = <div />;
     if (this.props.onRequestClose && isFullScreen) {
       closeButton = (
-        <button className={cx(['header-button'])} onClick={this.props.onRequestClose} aria-label={closeBtnText}>
+        <button type="button" className={cx(['header-button'])} onClick={this.props.onRequestClose} aria-label={closeBtnText}>
           {closeIcon}
         </button>
       );

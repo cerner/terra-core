@@ -1,8 +1,8 @@
 # Terra Table
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-table.svg)](https://www.npmjs.org/package/terra-table)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-table)](https://www.npmjs.org/package/terra-table)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The Terra Table is a structural component to arrange content within table.
 
