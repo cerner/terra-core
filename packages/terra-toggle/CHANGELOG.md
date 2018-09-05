@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Removed extra padding beneath toggle component.
+
 2.19.0 - (August 29, 2018)
 ------------------
 ### Changed
