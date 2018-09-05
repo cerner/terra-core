@@ -29,7 +29,6 @@ class SearchFieldFocus extends React.Component {
           onChange={this.onChange}
           value={this.state.searchText}
           inputRefCallback={(inputRef) => { this.searchInput = inputRef; }}
-          inputAttributes={{ 'aria-label': 'Search Field' }}
         />
       </React.Fragment>
     );
