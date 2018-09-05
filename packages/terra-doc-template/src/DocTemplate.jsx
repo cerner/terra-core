@@ -50,6 +50,7 @@ const propTypes = {
   propsTables: PropTypes.arrayOf(PropTypes.shape({
     componentSrc: PropTypes.string,
     componentName: PropTypes.string,
+    propsResolution: PropTypes.string,
   })),
 };
 
@@ -118,6 +119,7 @@ const DocTemplate = ({
           src={propsTable.componentSrc}
           componentName={propsTable.componentName}
           key={propsTable.id}
+          propsResolution={propsTable.propsResolution}
         />
       ))}
       {children}
