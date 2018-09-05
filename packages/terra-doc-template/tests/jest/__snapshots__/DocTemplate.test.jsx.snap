@@ -132,6 +132,19 @@ exports[`DocTemplate should show one props table 1`] = `
 </div>
 `;
 
+exports[`DocTemplate should show props table with findAllComponentDefinitions prop resolution 1`] = `
+<div
+  className="doc-template"
+>
+  <PropsTable
+    componentName="Test Component"
+    key="0"
+    propsResolution="findAllComponentDefinitions"
+    src="test-file-stub"
+  />
+</div>
+`;
+
 exports[`DocTemplate should show the readme 1`] = `
 <div
   className="doc-template"
