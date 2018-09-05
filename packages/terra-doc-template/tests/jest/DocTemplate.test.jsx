@@ -72,6 +72,11 @@ describe('DocTemplate', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should show props table with findAllComponentDefinitions prop resolution', () => {
+    const wrapper = shallow(<DocTemplate propsTables={[{ componentSrc: testComponentSrc, componentName: 'Test Component', propsResolution: 'findAllComponentDefinitions' }]} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should show the version, readme, source link, examples, and props tables', () => {
     const wrapper = shallow(<DocTemplate
       packageName="terra-doc-template"
