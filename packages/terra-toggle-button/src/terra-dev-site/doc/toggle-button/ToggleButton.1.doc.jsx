@@ -31,37 +31,37 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Default ShowHide',
+        title: 'Default ToggleButton',
         example: <DefaultToggleButton />,
         source: DefaultToggleButtonSrc,
       },
       {
-        title: 'isAnimated ShowHide',
+        title: 'isAnimated ToggleButton',
         example: <AnimatedToggleButton />,
         source: AnimatedToggleButtonSrc,
       },
       {
-        title: 'Open / Close Button Text ShowHide',
+        title: 'Open / Close Button Text ToggleButton',
         example: <OpenCloseTextToggleButton />,
         source: OpenCloseTextToggleButtonSrc,
       },
       {
-        title: 'isIconOnly ShowHide',
+        title: 'isIconOnly ToggleButton',
         example: <IsIconOnlyToggleButton />,
         source: IsIconOnlyToggleButtonSrc,
       },
       {
-        title: 'isInitiallyOpen ShowHide',
+        title: 'isInitiallyOpen ToggleButton',
         example: <IsInitiallyOpenToggleButton />,
         source: IsInitiallyOpenToggleButtonSrc,
       },
       {
-        title: 'Custom ShowHide Button',
+        title: 'Custom ToggleButton Button',
         example: <ButtonAttrsToggleButton />,
         source: ButtonAttrsToggleButtonSrc,
       },
       {
-        title: 'OnOpen / OnClose Callback ShowHide',
+        title: 'OnOpen / OnClose Callback ToggleButton',
         example: <OpenCloseEventToggleButton />,
         source: OpenCloseEventToggleButtonSrc,
       },

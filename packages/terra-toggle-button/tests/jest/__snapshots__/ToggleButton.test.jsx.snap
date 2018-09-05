@@ -109,7 +109,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
 `;
 
 exports[`ToggleButton should render an icon only toggle-button 1`] = `
-<divz
+<div
   class="button"
 >
   <button
@@ -378,7 +378,7 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
       <span
         className="icon"
       >
-        <IconCaretLeft
+        <IconCaretRight
           className=""
           isBidi={true}
           viewBox="0 0 48 48"
