@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Bumped minimum react peerDependency version from ^16.2.0 to ^16.4.2
+* Bumped minimum react-dom peerDependency version from ^16.2.0 to ^16.4.2
 * Replaced images used in test files with base64 encoded images
 
 2.22.0 - (September 4, 2018)
