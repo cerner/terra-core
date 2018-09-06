@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed bug where props-table eagerly parsed component source code
 
 2.17.0 - (September 5, 2018)
 ------------------
