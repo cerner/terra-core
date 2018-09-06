@@ -30,10 +30,7 @@
     font-size: var(--terra-button-font-size, 1rem);
     line-height: var(--terra-button-line-height, 1.429);
     outline: none;
-    padding-bottom: var(--terra-button-vertical-padding, 0.286rem);
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: var(--terra-button-vertical-padding, 0.286rem);
+    padding: 0;
     text-align: center;
     text-decoration: var(--terra-link-underline, none);
     text-transform: none;
@@ -46,12 +43,19 @@
       padding: 0;
     }
 
-    &:focus {
+    &.is-focused {
       background-color: var(--terra-link-focus-background-color, transparent);
       border-radius: var(--terra-link-focus-border-radius, 0.2142rem);
       box-shadow: var(--terra-link-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
       color: var(--terra-link-focus-color, #001f67);
       text-decoration: var(--terra-link-focus-underline, underline);
+    }
+
+    &:hover,
+    &.is-hovered {
+      background-color: var(--terra-link-hover-background-color);
+      color: var(--terra-link-hover-color, #001f67);
+      text-decoration: var(--terra-link-hover-underline, underline);
     }
 
     &:active {
@@ -77,8 +81,7 @@
   }
 
   .text-and-icon {
-    margin-left: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
-    margin-right: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
+    margin: 0;
   }
 
   .text-first {
