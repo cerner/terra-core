@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added new prop to pass down custom props to input
 
+2.28.1 - (September 6, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
 2.28.0 - (September 5, 2018)
 ------------------
 ### Changed
