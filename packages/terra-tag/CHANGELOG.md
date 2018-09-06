@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+1.23.1 - (September 6, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
 1.23.0 - (September 5, 2018)
 ------------------
 ### Changed
