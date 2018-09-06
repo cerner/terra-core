@@ -135,6 +135,7 @@ class ShowHide extends React.Component {
       isAnimatedStyle = {
         // fix for the toggle oscillation when setting isAnimated to true
         transitionDelay: '0.3s',
+        webkitTransitionDelay: '0.3s', /* Safari */
       };
     }
 
