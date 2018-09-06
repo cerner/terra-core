@@ -20,7 +20,7 @@
     padding-left: var(--terra-form-textarea-padding-left, 0.286rem);
     padding-right: var(--terra-form-textarea-padding-right, 0.286rem);
     padding-top: var(--terra-form-textarea-padding-top, 0.286rem);
-    transition-duration: var(--terra-form-textarea-focus-transition-duration, 0.2s);
+    transition-duration: var(--terra-form-textarea-focus-transition-duration, 0.5s);
     transition-property: background-size;
     transition-timing-function: var(--terra-form-textarea-focus-transition-timing-function, ease);
     width: 100%;
@@ -62,6 +62,7 @@
       border-color: var(--terra-form-textarea-focus-keyboard-border-color, #4cb2e9);
       border-style: var(--terra-form-textarea-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-focus-keyboard-border-width, 1px);
+      color: var(--terra-from-textarea-focus-color, #000);
       opacity: var(--terra-form-textarea-focus-keyboard-opacity, 1);
       outline: none;
 
@@ -113,6 +114,7 @@
       border-color: var(--terra-form-textarea-error-focus-keyboard-border-color, #4cb2e9);
       border-style: var(--terra-form-textarea-error-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-error-focus-keyboard-border-width, 1px);
+      color: var(--terra-from-textarea-error-focus-color, #000);
       opacity: var(--terra-form-textarea-error-focus-keyboard-opacity, 1);
 
       [dir=ltr] & {
