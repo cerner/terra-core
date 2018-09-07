@@ -60,6 +60,7 @@
     }
 
     &:focus {
+      background-color: var(--terra-form-textarea-focus-background-color);
       background-size: var(--terra-form-textarea-focus-keyboard-animation-size, 0 0);
       border-color: var(--terra-form-textarea-focus-keyboard-border-color, #4cb2e9);
       border-style: var(--terra-form-textarea-focus-keyboard-border-style, solid);
@@ -115,6 +116,7 @@
     }
 
     &:focus {
+      background-color: var(--terra-form-textarea-error-focus-background-color);
       background-size: var(--terra-form-textarea-error-focus-keyboard-animation-size, 0 0);
       border-color: var(--terra-form-textarea-error-focus-keyboard-border-color, #4cb2e9);
       border-style: var(--terra-form-textarea-error-focus-keyboard-border-style, solid);
