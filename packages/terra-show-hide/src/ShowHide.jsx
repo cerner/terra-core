@@ -21,11 +21,11 @@ const propTypes = {
   /**
    * Button text that will be displayed when the component is collapsed
    */
-  collapsedText: PropTypes.string,
+  collapsedButtonText: PropTypes.string,
   /**
    * Button text that will be displayed when the component is expanded
    */
-  expandedText: PropTypes.string,
+  expandedButtonText: PropTypes.string,
   /**
    * Icon displayed next to the button text
    */
@@ -49,8 +49,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  collapsedText: 'Show More',
-  expandedText: 'Hide',
+  collapsedButtonText: 'Show More',
+  expandedButtonText: 'Hide',
   icon: <IconChevronDown />,
   isAnimated: false,
   isInitiallyOpen: false,
@@ -91,9 +91,9 @@ class ShowHide extends React.Component {
 
   render() {
     const {
-      collapsedText,
+      collapsedButtonText,
       children,
-      expandedText,
+      expandedButtonText,
       icon,
       isAnimated,
       isInitiallyOpen,
@@ -103,7 +103,7 @@ class ShowHide extends React.Component {
       ...customProps
     } = this.props;
 
-    const buttonText = !this.state.isOpen ? collapsedText : expandedText;
+    const buttonText = !this.state.isOpen ? collapsedButtonText : expandedButtonText;
     const showHideClassName = cx([
       'button',
       { 'is-open': this.state.isOpen },
@@ -135,7 +135,7 @@ class ShowHide extends React.Component {
       isAnimatedStyle = {
         // fix for the toggle oscillation when setting isAnimated to true
         transitionDelay: '0.3s',
-        webkitTransitionDelay: '0.3s', /* Safari */
+        WebkitTransitionDelay: '0.3s', /* Safari */
       };
     }
 

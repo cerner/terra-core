@@ -32,9 +32,9 @@ describe('ShowHide', () => {
     expect(showHide.instance().props.children).toEqual('Full Text');
   });
 
-  it('should set collapsedText prop correctly', () => {
-    const showHide = shallow(<ShowHide preview="Test" collapsedText="Collapsed Text">Full Text</ShowHide>);
-    expect(showHide.instance().props.collapsedText).toEqual('Collapsed Text');
+  it('should set collapsedButtonText prop correctly', () => {
+    const showHide = shallow(<ShowHide preview="Test" collapsedButtonText="Collapsed Text">Full Text</ShowHide>);
+    expect(showHide.instance().props.collapsedButtonText).toEqual('Collapsed Text');
   });
 
   it('should set icon prop correctly', () => {
@@ -73,9 +73,9 @@ describe('ShowHide', () => {
     expect(window.alert).toHaveBeenCalledWith('Closed');
   });
 
-  it('should set expandedText prop correctly', () => {
-    const showHide = shallow(<ShowHide preview="Test" expandedText="Expanded Text">Full Text</ShowHide>);
-    expect(showHide.instance().props.expandedText).toEqual('Expanded Text');
+  it('should set expandedButtonText prop correctly', () => {
+    const showHide = shallow(<ShowHide preview="Test" expandedButtonText="Expanded Text">Full Text</ShowHide>);
+    expect(showHide.instance().props.expandedButtonText).toEqual('Expanded Text');
   });
 
   it('should set preview prop correctly', () => {

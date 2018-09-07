@@ -17,8 +17,8 @@ sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
 const CustomLinkTextShowHide = () => (
   <ShowHide
     preview={`${sentences[0]} ${sentences[1]} ${sentences[2]}`}
-    collapsedText={`Show ${sentences.length - 3} More Sentences`}
-    expandedText={`Hide ${sentences.length - 3} Sentences`}
+    collapsedButtonText={`Show ${sentences.length - 3} More Sentences`}
+    expandedButtonText={`Hide ${sentences.length - 3} Sentences`}
   >
     {sentences.join(' ')}
   </ShowHide>
