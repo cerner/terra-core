@@ -45,11 +45,13 @@ const propTypes = {
    * ```
    * componentSrc: The source code of the component
    * componentName: The name of the component
+   * propsResolution: Type of react-docgen resolver to use for prop-types resolution. Supported values are `default` or `findAllComponentDefinitions`. Will use `default` if left unspecified.
    * ```
    */
   propsTables: PropTypes.arrayOf(PropTypes.shape({
     componentSrc: PropTypes.string,
     componentName: PropTypes.string,
+    propsResolution: PropTypes.string,
   })),
 };
 
@@ -118,6 +120,7 @@ const DocTemplate = ({
           src={propsTable.componentSrc}
           componentName={propsTable.componentName}
           key={propsTable.id}
+          propsResolution={propsTable.propsResolution}
         />
       ))}
       {children}

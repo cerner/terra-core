@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+2.17.1 - (September 6, 2018)
+------------------
+### Fixed
+* Fixed bug where props-table eagerly parsed component source code
+
+2.17.0 - (September 5, 2018)
+------------------
 ### Changed
 * Bumped minimum react peerDependency version from ^16.2.0 to ^16.4.2
 * Bumped minimum react-dom peerDependency version from ^16.2.0 to ^16.4.2
@@ -11,7 +19,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-### Changed
 * Added a new prop, `propsResolution` to allow users to opt-in to react-docgen's findAllComponentDefinitions prop-type resolution.
 
 2.15.0 - (August 29, 2018)
