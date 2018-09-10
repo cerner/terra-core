@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fix
+* Remove post-install script which wrote default loaders
 
 2.20.1 - (September 6, 2018)
 ------------------

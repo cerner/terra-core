@@ -48,7 +48,6 @@
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "postinstall": "node scripts/post-install/write-default-loaders.js",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest --config ../../jestconfig.js",
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
