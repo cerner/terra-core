@@ -11,9 +11,25 @@
         background-color: var(--terra-menu-item-hover-color, #ebf6fd);
       }
 
+      &:hover .checkmark {
+        color: var(--terra-menu-item-checkmark-hover-icon-color);
+      }
+
+      &:hover .chevron {
+        color: var(--terra-menu-item-chevron-hover-icon-color);
+      }
+
       &:focus {
         background-color: var(--terra-menu-item-focus-color, #ebf6fd);
         outline: var(--terra-menu-item-focus-outline, -webkit-focus-ring-color auto 5px); //browser default fallback. if no fallback is provided, outline does not render.
+      }
+
+      &:focus .checkmark {
+        color: var(--terra-menu-item-checkmark-focus-icon-color);
+      }
+
+      &:focus .chevron {
+        color: var(--terra-menu-item-chevron-focus-icon-color);
       }
     }
   }
@@ -24,6 +40,14 @@
 
     .text {
       color: var(--terra-menu-item-active-text-color, #1c1f21);
+    }
+
+    .checkmark {
+      color: var(--terra-menu-item-checkmark-active-icon-color);
+    }
+
+    .chevron {
+      color: var(--terra-menu-item-chevron-active-icon-color);
     }
   }
 
@@ -65,5 +89,4 @@
     font-size: var(--terra-menu-item-chevron-icon-font-size, 10px);
     margin: 0 10px;
   }
-
 }
