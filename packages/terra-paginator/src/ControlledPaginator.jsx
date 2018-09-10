@@ -96,7 +96,7 @@ class Paginator extends React.Component {
       pageButtons.push((
         <a
           aria-label={`Page ${val}`}
-          aria-current={val === selectedPage && 'page'}
+          aria-current={val === selectedPage && 'true'}
           className={paginationLinkClassNames}
           tabIndex={val === selectedPage ? null : '0'}
           key={`pageButton_${val}`}
