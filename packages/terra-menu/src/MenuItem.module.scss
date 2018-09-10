@@ -25,7 +25,7 @@
 
   .is-disabled {
     outline: 0;
-    
+
     .text {
       color: var(--terra-menu-item-disabled-text-color, #1c1f21);
       opacity: 0.3;
@@ -46,7 +46,7 @@
   .checkmark {
     color: var(--terra-menu-item-checkmark-icon-color, #1c1f21);
     font-size: var(--terra-menu-item-checkmark-icon-font-size, 12px);
-    margin-left: 10px;
+    margin-left: var(--terra-menu-item-checkmark-icon-margin-left, 10px);
     visibility: hidden;
   }
 
