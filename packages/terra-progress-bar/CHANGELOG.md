@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Change aria-current value from page to true
+* Add valueText prop for attribute aria-valuetext
 
 2.22.1 - (September 6, 2018)
 ------------------
