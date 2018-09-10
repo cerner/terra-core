@@ -7,9 +7,13 @@
     &:not(.is-disabled) {
       cursor: pointer;
 
-      &:hover,
-      &:focus {
+      &:hover {
         background-color: var(--terra-menu-item-hover-color, #ebf6fd);
+      }
+
+      &:focus {
+        background-color: var(--terra-menu-item-focus-color, #ebf6fd);
+        outline: var(--terra-menu-item-focus-outline, -webkit-focus-ring-color auto 5px); //browser default fallback. if no fallback is provided, outline does not render.
       }
     }
   }
