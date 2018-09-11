@@ -29,6 +29,7 @@
   .header {
     background-color: var(--terra-menu-submenu-header-background-color, #fff);
     border-bottom: var(--terra-menu-submenu-header-border-bottom, 1px solid #dedfe0);
+    height: var(--terra-menu-submenu-header-height);
     width: 100%;
 
     .header-title {
