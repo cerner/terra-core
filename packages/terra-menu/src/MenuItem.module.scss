@@ -80,6 +80,7 @@
   .chevron {
     color: var(--terra-menu-item-chevron-icon-color, #9b9fa1);
     font-size: var(--terra-menu-item-chevron-icon-font-size, 10px);
-    margin: 0 10px;
+    margin-left: var(--terra-menu-item-chevron-icon-margin-left, 10px);
+    margin-right: var(--terra-menu-item-chevron-icon-margin-right, 10px);
   }
 }
