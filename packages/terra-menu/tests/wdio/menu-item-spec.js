@@ -50,7 +50,7 @@ describe('Menu Item', () => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-menu-item-checkmark-icon-color': 'green',
+          '--terra-menu-item-checkmark-focus-icon-color': 'green',
           '--terra-menu-item-checkmark-icon-font-size': '18px',
         },
       });
