@@ -28,7 +28,8 @@ const propTypes = {
    */
   hasGradient: PropTypes.bool,
   /**
-   * Value passed to aria-valuetext for accessibility
+   * Value passed to aria-valuetext for accessibility. You can view more about this attribute
+   * at https://www.w3.org/WAI/PF/aria/states_and_properties#aria-valuetext.
    */
   valueText: PropTypes.string,
 };
