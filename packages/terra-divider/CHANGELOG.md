@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Hide divider from Screen Readers
 
 2.21.1 - (September 6, 2018)
 ------------------
