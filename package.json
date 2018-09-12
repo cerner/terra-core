@@ -40,6 +40,7 @@
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
+    "prejest": "node packages/terra-i18n/tests/jest/generate-aggregated-translations-directory.js",
     "jest": "jest --config jestconfig.js",
     "jest:coverage": "jest --coverage --config jestconfig.js",
     "link-parent-bin": "link-parent-bin",
