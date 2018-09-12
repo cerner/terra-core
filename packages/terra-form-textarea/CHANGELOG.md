@@ -3,7 +3,7 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
+### Fixed
 * Set custom prop spreads first in textarea and Field tags
 
 2.24.1 - (September 6, 2018)
