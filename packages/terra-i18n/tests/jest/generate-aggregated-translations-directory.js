@@ -1,5 +1,6 @@
-const aggregateTranslations = require('../../scripts/aggregate-translations/aggregate-translations');
-const i18nSupportedLocales = require('../../src/i18nSupportedLocales');
+/* eslint-disable import/no-extraneous-dependencies */
+const aggregateTranslations = require('terra-toolkit/scripts/aggregate-translations/aggregate-translations');
+const i18nSupportedLocales = require('terra-toolkit/scripts/aggregate-translations/i18nSupportedLocales');
 
 const aggregateOptions = {
   baseDir: __dirname,
