@@ -79,13 +79,17 @@ class Base extends React.Component {
 
     const messages = Object.assign({}, this.state.messages, customMessages);
 
+    let direction = 'ltr';
+
     if (locale === undefined) {
       return (<div {...customProps}>{children}</div>);
     }
 
+    if (locale === 'ar') direction = 'rtl';
+
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
-      <I18nProvider {...customProps} locale={this.state.locale} messages={messages}>
+      <I18nProvider {...customProps} locale={this.state.locale} dir={direction} lang={this.state.locale} messages={messages}>
         {children}
       </I18nProvider>
     );
