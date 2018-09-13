@@ -30,6 +30,7 @@
     &:hover {
       background-color: var(--terra-form-input-hover-background-color, #fff);
       border: var(--terra-form-input-hover-border, 1px solid #dedfe0);
+      color: var(--terra-form-input-hover-color);
     }
 
     &[required] {
@@ -54,6 +55,7 @@
       background-color: var(--terra-form-input-focus-background-color, #fff);
       background-size: var(--terra-form-input-focus-keyboard-animation-size);
       border: var(--terra-form-input-focus-border, 1px solid #4cb2e9);
+      color: var(--terra-form-input-focus-color);
       outline: none;
 
       [dir=ltr] & {
