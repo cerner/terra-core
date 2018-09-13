@@ -57,7 +57,6 @@ describe('DateTimePicker', () => {
       browser.click('input[name="terra-time-hour-input"]');
       browser.click('input[name="terra-time-minute-input"]');
       browser.waitForVisible('[class*="time-clarification"]');
-      browser.waitForVisible('[class*="time-clarification2"]');
     });
 
     Terra.should.beAccessible({ rules: ignoredA11y });
