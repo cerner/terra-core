@@ -27,6 +27,6 @@ it('throws error on missing locale prop in Base', () => {
   try {
     render(<Dialog header="Header Content" footer="Footer Content" />);
   } catch (e) {
-    expect(e.message).toContain('add locale prop to Base component');
+    expect(e.message).toContain('Component is internationalized, and must be wrapped in terra-base');
   }
 });

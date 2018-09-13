@@ -5,6 +5,7 @@ The terra-centered-action-footer component is a footer bar that contains a singl
 ## Usage
 
 ### Centered Action Footer with a Single Action
+
 ```jsx
 import React from 'react';
 import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
@@ -14,7 +15,8 @@ import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
 />
 ```
 
-### Centered Action Footer with Mutliple Actions
+### Centered Action Footer with Multiple Actions
+
 ```jsx
 import React from 'react';
 import Button from 'terra-button';
@@ -31,6 +33,7 @@ import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
 ```
 
 ### Empty Centered Action Footer
+
 ```jsx
 import React from 'react';
 import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';

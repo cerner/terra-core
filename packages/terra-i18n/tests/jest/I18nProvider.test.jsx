@@ -18,7 +18,7 @@ describe('I18nProvider', () => {
   describe('for error handling tests', () => {
     it('throws error for missing required locale', () => {
       try {
-        shallow(<I18nProvider messages={messages} ><Children /></I18nProvider>);
+        shallow(<I18nProvider messages={messages}><Children /></I18nProvider>);
       } catch (e) {
         expect(e.message).toContain('The prop `locale` is marked as required');
       }
@@ -26,7 +26,7 @@ describe('I18nProvider', () => {
 
     it('throws error for missing required messages', () => {
       try {
-        shallow(<I18nProvider locale={locale} ><Children /></I18nProvider>);
+        shallow(<I18nProvider locale={locale}><Children /></I18nProvider>);
       } catch (e) {
         expect(e.message).toContain('The prop `messages` is marked as required');
       }

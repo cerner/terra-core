@@ -7,14 +7,13 @@ import styles from './Textarea.module.scss';
 
 const cx = classNames.bind(styles);
 
-const isMobileDevice = () =>
-  window.matchMedia('(max-width: 1024px)').matches &&
-  (
-    'ontouchstart' in window ||
+const isMobileDevice = () => window.matchMedia('(max-width: 1024px)').matches
+  && (
+    'ontouchstart' in window
     // eslint-disable-next-line no-undef
-    (window.DocumentTouch && document instanceof DocumentTouch) ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
+    || (window.DocumentTouch && document instanceof DocumentTouch)
+    || navigator.maxTouchPoints > 0
+    || navigator.msMaxTouchPoints > 0
   );
 
 const TEXTAREA_ROW_SIZES = {
@@ -195,6 +194,7 @@ class Textarea extends React.Component {
 
     return (
       <textarea
+        {...additionalTextareaProps}
         ref={(textarea) => {
           this.textarea = textarea;
           if (refCallback) refCallback(textarea);
@@ -204,7 +204,6 @@ class Textarea extends React.Component {
         onChange={this.onChange}
         required={required}
         rows={textareaRows}
-        {...additionalTextareaProps}
         className={textareaClasses}
       />
     );

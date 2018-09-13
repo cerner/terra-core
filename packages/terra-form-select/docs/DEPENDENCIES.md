@@ -6,10 +6,10 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-lifecycles-compat | ^3.0.2 | -- | Backwards compatibility polyfill for React class components |
-| terra-doc-template | ^1.12.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-form-field | ^2.21.0 | ^16.2.0 | The Form Field component handles the layout of the label, help text and error text associated with a form element. |
+| terra-doc-template | ^1.13.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-form-field | ^2.23.0 | ^16.2.0 | The Form Field component handles the layout of the label, help text and error text associated with a form element. |
 | terra-hookshot | ^4.0.0 | ^16.2.0 | The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected. |
-| terra-mixins | ^1.16.0 | -- | terra-mixins |
+| terra-mixins | ^1.17.0 | -- | terra-mixins |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |

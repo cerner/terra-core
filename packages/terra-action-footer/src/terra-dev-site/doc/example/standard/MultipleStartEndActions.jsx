@@ -9,14 +9,14 @@ export default () => (
   <ExampleTemplate>
     <ActionFooter
       start={<a href="/#/site/action-footer">Start Action</a>}
-      end={
+      end={(
         <div>
           <Spacer isInlineBlock paddingRight="medium">
             <Button text="Submit" variant={Button.Opts.Variants.EMPHASIS} />
           </Spacer>
           <Button text="Cancel" />
         </div>
-      }
+)}
     />
   </ExampleTemplate>
 );

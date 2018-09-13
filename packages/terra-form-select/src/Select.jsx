@@ -99,7 +99,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
     }
   },
 };
@@ -174,7 +174,7 @@ class Select extends React.Component {
 
     // Add new tags for uncontrolled components.
     if (this.props.value === undefined && !Util.findByValue(this.props, this.state, value)) {
-      this.setState({ tags: [...this.state.tags, <Option key={value} display={value} value={value} />] });
+      this.setState(prevState => ({ tags: [...prevState.tags, <Option key={value} display={value} value={value} />] }));
     }
 
     if (this.props.onSelect) {

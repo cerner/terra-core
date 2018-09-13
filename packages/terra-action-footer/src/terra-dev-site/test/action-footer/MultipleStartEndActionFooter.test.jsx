@@ -4,17 +4,17 @@ import ActionFooter from '../../../ActionFooter';
 
 export default () => (
   <ActionFooter
-    start={
+    start={(
       <div>
         Start Text
         <Button text="Start Action" />
       </div>
-    }
-    end={
+)}
+    end={(
       <div>
         End Text
         <Button text="End Action" />
       </div>
-    }
+)}
   />
 );

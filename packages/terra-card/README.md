@@ -1,8 +1,8 @@
 # Terra Card
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-card.svg)](https://www.npmjs.org/package/terra-card)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-card)](https://www.npmjs.org/package/terra-card)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 Card is a basic container with some base styling to help separate elements with different content
 

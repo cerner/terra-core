@@ -38,7 +38,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
     }
   },
 };
@@ -54,7 +54,12 @@ const Dialog = ({
   const closeText = intl.formatMessage({ id: 'Terra.dialog.close' });
   const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button variant="utility" text={closeText} onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} /></div> : null;
 
-  const dialogHeader = <div className={cx('dialog-header')}><div className={cx('dialog-header-title')}>{header}</div>{closeButton}</div>;
+  const dialogHeader = (
+    <div className={cx('dialog-header')}>
+      <div className={cx('dialog-header-title')}>{header}</div>
+      {closeButton}
+    </div>
+  );
 
   return (
     <div {...customProps} className={dialogClassNames}>

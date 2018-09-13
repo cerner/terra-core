@@ -98,7 +98,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
     }
   },
 };
@@ -175,24 +175,24 @@ const Alert = ({
   return (
     <ResponsiveElement
       responsiveTo="parent"
-      defaultElement={
-        <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle} >
+      defaultElement={(
+        <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle}>
           <div className={bodyClassNameForNarrowParent}>
             <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
           {actionsSection}
         </div>
-      }
-      tiny={
-        <div {...attributes} className={wideAlertClassNames} style={outerDivStyle} >
+)}
+      tiny={(
+        <div {...attributes} className={wideAlertClassNames} style={outerDivStyle}>
           <div className={cx(['body', 'body-std'])}>
             <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
           {actionsSection}
         </div>
-      }
+)}
     />
 
   );

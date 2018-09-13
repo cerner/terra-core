@@ -68,7 +68,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
     }
   },
 };
@@ -84,7 +84,8 @@ class TimeInput extends React.Component {
         // eslint-disable-next-line
         console.warn(
           `An invalid time value, ${value}, has been passed to the terra-time-picker.`
-          + 'This value has been ignored and will not be rendered. Time values must be in hh:mm format.');
+          + 'This value has been ignored and will not be rendered. Time values must be in hh:mm format.',
+        );
       }
 
       value = undefined;
@@ -145,8 +146,8 @@ class TimeInput extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (
-      nextProps.value === this.props.value &&
-      nextProps.variant === this.props.variant
+      nextProps.value === this.props.value
+      && nextProps.variant === this.props.variant
     ) {
       return;
     }
@@ -220,9 +221,9 @@ class TimeInput extends React.Component {
 
     // Prepend a 0 to the value when losing focus and the value is single digit.
     if (stateValue.length === 1) {
-      if (this.props.variant === TimeUtil.FORMAT_12_HOUR &&
-          type === TimeUtil.inputType.HOUR &&
-          stateValue === '0') {
+      if (this.props.variant === TimeUtil.FORMAT_12_HOUR
+          && type === TimeUtil.inputType.HOUR
+          && stateValue === '0') {
         stateValue = '12';
       } else {
         stateValue = '0'.concat(stateValue);
@@ -409,9 +410,9 @@ class TimeInput extends React.Component {
       this.handleValueChange(event, TimeUtil.inputType.MINUTE, stateValue, this.state.meridiem);
     }
 
-    if (event.keyCode === TimeUtil.keyCodes.ARROWLEFT ||
-        event.keyCode === TimeUtil.keyCodes.DELETE ||
-        event.keyCode === TimeUtil.keyCodes.BACKSPACE) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWLEFT
+        || event.keyCode === TimeUtil.keyCodes.DELETE
+        || event.keyCode === TimeUtil.keyCodes.BACKSPACE) {
       this.focusHour(event);
     }
 
@@ -435,9 +436,9 @@ class TimeInput extends React.Component {
 
   focusMeridiem(event) {
     // If the minute is empty or the cursor is after the value, move focus to the meridiem.
-    if ((this.state.minute.length === 0 ||
-        this.state.minute.length === this.minuteInput.selectionEnd) &&
-        this.meridiemInput
+    if ((this.state.minute.length === 0
+        || this.state.minute.length === this.minuteInput.selectionEnd)
+        && this.meridiemInput
     ) {
       this.meridiemInput.focus();
       event.preventDefault();
@@ -497,9 +498,9 @@ class TimeInput extends React.Component {
   }
 
   handleMeridiemInputKeyDown(event) {
-    if (event.keyCode === TimeUtil.keyCodes.ARROWLEFT ||
-        event.keyCode === TimeUtil.keyCodes.DELETE ||
-        event.keyCode === TimeUtil.keyCodes.BACKSPACE) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWLEFT
+        || event.keyCode === TimeUtil.keyCodes.DELETE
+        || event.keyCode === TimeUtil.keyCodes.BACKSPACE) {
       this.minuteInput.focus();
       event.preventDefault();
     }

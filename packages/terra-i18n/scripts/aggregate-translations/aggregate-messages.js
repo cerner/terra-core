@@ -7,17 +7,15 @@ const aggregateTranslationMessages = (translationDirectories, locales) => {
     translations[language] = {};
   });
 
-  translationDirectories.forEach(dir =>
-    // Check the directory for a translation file for each locale
-    locales.forEach((language) => {
-      const translationFile = path.resolve(dir, `${language}.json`);
-      try {
-        Object.assign(translations[language], JSON.parse(fs.readFileSync(translationFile, 'utf8')));
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.warn(`Translation file ${language}.json not found for ${dir}`);
-      }
-    }));
+  translationDirectories.forEach(dir => locales.forEach((language) => {
+    const translationFile = path.resolve(dir, `${language}.json`);
+    try {
+      Object.assign(translations[language], JSON.parse(fs.readFileSync(translationFile, 'utf8')));
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.warn(`Translation file ${language}.json not found for ${dir}`);
+    }
+  }));
 
   return translations;
 };

@@ -5,11 +5,11 @@ exports[`ActionFooter Prop Tests with both start and end actions should display 
   end="End Action"
   start="Start Action"
 >
-  <ActionFooterContainer
-    className=""
+  <BlockActionFooter
+    className="action-footer"
   >
     <div
-      className="action-footer-container with-actions"
+      className="block-action-footer with-actions action-footer"
     >
       <div
         className="socket"
@@ -25,7 +25,7 @@ exports[`ActionFooter Prop Tests with both start and end actions should display 
         End Action
       </div>
     </div>
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </ActionFooter>
 `;
 
@@ -33,11 +33,11 @@ exports[`ActionFooter Prop Tests with only a start action should only display a 
 <ActionFooter
   start="Start Action"
 >
-  <ActionFooterContainer
-    className=""
+  <BlockActionFooter
+    className="action-footer"
   >
     <div
-      className="action-footer-container with-actions"
+      className="block-action-footer with-actions action-footer"
     >
       <div
         className="socket"
@@ -48,7 +48,7 @@ exports[`ActionFooter Prop Tests with only a start action should only display a 
         className="empty-center"
       />
     </div>
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </ActionFooter>
 `;
 
@@ -56,11 +56,11 @@ exports[`ActionFooter Prop Tests with only an end action should only display an 
 <ActionFooter
   end="End Action"
 >
-  <ActionFooterContainer
-    className=""
+  <BlockActionFooter
+    className="action-footer"
   >
     <div
-      className="action-footer-container with-actions"
+      className="block-action-footer with-actions action-footer"
     >
       <div
         className="empty-center"
@@ -71,30 +71,32 @@ exports[`ActionFooter Prop Tests with only an end action should only display an 
         End Action
       </div>
     </div>
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </ActionFooter>
 `;
 
 exports[`ActionFooter Prop Tests without start or end actions should display no actions 1`] = `
 <ActionFooter>
-  <ActionFooterContainer
-    className=""
+  <BlockActionFooter
+    className="action-footer"
   >
     <div
-      className="action-footer-container"
+      className="block-action-footer action-footer"
     />
-  </ActionFooterContainer>
+  </BlockActionFooter>
 </ActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with both start and end socket buttons 1`] = `
-<ActionFooterContainer
-  className=""
+<BlockActionFooter
+  className="action-footer"
 >
   <div
     className="socket"
   >
-    <button>
+    <button
+      type="button"
+    >
       Start Socket
     </button>
   </div>
@@ -104,16 +106,18 @@ exports[`ActionFooter Snapshot Tests should render a footer with both start and 
   <div
     className="socket"
   >
-    <button>
+    <button
+      type="button"
+    >
       End Socket
     </button>
   </div>
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only an end socket button 1`] = `
-<ActionFooterContainer
-  className=""
+<BlockActionFooter
+  className="action-footer"
 >
   <div
     className="empty-center"
@@ -121,33 +125,37 @@ exports[`ActionFooter Snapshot Tests should render a footer with only an end soc
   <div
     className="socket"
   >
-    <button>
+    <button
+      type="button"
+    >
       End Socket
     </button>
   </div>
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only one start socket button 1`] = `
-<ActionFooterContainer
-  className=""
+<BlockActionFooter
+  className="action-footer"
 >
   <div
     className="socket"
   >
-    <button>
+    <button
+      type="button"
+    >
       Start Socket
     </button>
   </div>
   <div
     className="empty-center"
   />
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only two end socket buttons 1`] = `
-<ActionFooterContainer
-  className=""
+<BlockActionFooter
+  className="action-footer"
 >
   <div
     className="empty-center"
@@ -156,29 +164,37 @@ exports[`ActionFooter Snapshot Tests should render a footer with only two end so
     className="socket"
   >
     <div>
-      <button>
+      <button
+        type="button"
+      >
         End Socket 1
       </button>
-      <button>
+      <button
+        type="button"
+      >
         End Socket 2
       </button>
     </div>
   </div>
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only two start socket buttons 1`] = `
-<ActionFooterContainer
-  className=""
+<BlockActionFooter
+  className="action-footer"
 >
   <div
     className="socket"
   >
     <div>
-      <button>
+      <button
+        type="button"
+      >
         Start Socket 1
       </button>
-      <button>
+      <button
+        type="button"
+      >
         Start Socket 2
       </button>
     </div>
@@ -186,11 +202,11 @@ exports[`ActionFooter Snapshot Tests should render a footer with only two start 
   <div
     className="empty-center"
   />
-</ActionFooterContainer>
+</BlockActionFooter>
 `;
 
 exports[`ActionFooter Snapshot Tests should render an empty footer 1`] = `
-<ActionFooterContainer
-  className=""
+<BlockActionFooter
+  className="action-footer"
 />
 `;

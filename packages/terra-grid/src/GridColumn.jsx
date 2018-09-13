@@ -9,9 +9,9 @@ const cx = classNames.bind(styles);
 const columnRange = (props, propName) => {
   if (props[propName]) {
     const val = props[propName];
-    return (val >= 1 && val <= 12) ?
-      null :
-      new Error(`${propName} must be in range 1 to 12 inclusively`);
+    return (val >= 1 && val <= 12)
+      ? null
+      : new Error(`${propName} must be in range 1 to 12 inclusively`);
   }
   return null;
 };

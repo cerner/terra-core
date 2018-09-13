@@ -69,7 +69,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
     }
   },
 };
@@ -107,8 +107,8 @@ const ActionHeader = ({
     }
   }
 
-  const previousNextButtonGroup = (onPrevious || onNext) ?
-    (
+  const previousNextButtonGroup = (onPrevious || onNext)
+    ? (
       <ButtonGroup>
         <ButtonGroup.Button
           icon={<span className={cx(['header-icon', 'previous'])} />}
@@ -125,18 +125,18 @@ const ActionHeader = ({
           isDisabled={onNext === undefined}
         />
       </ButtonGroup>
-    ) :
-    null;
+    )
+    : null;
 
-  const leftButtons = (backButton || expandButton || previousNextButtonGroup) ?
-    (
+  const leftButtons = (backButton || expandButton || previousNextButtonGroup)
+    ? (
       <div className={cx('left-buttons')}>
         {backButton}
         {expandButton}
         {previousNextButtonGroup}
       </div>
-    ) :
-    null;
+    )
+    : null;
 
   const rightButtons = closeButton ? <div className={cx('right-buttons')}>{closeButton}</div> : null;
 

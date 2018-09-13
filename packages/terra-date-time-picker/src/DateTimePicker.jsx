@@ -98,7 +98,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
     }
   },
 };
@@ -251,8 +251,8 @@ class DateTimePicker extends React.Component {
     if (validDate && validTime) {
       const updatedDateTime = DateTimeUtils.updateTime(previousDateTime, time);
 
-      if (event.keyCode === keyCodes.ARROWDOWN &&
-        previousDateTime && updatedDateTime && previousDateTime.format() === updatedDateTime.format()) {
+      if (event.keyCode === keyCodes.ARROWDOWN
+        && previousDateTime && updatedDateTime && previousDateTime.format() === updatedDateTime.format()) {
         updatedDateTime.subtract(1, 'hours');
       }
 

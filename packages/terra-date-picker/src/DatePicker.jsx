@@ -98,7 +98,7 @@ const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
     if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
     }
   },
 };
@@ -257,22 +257,24 @@ class DatePicker extends React.Component {
     const maxMomentDate = DateUtil.createSafeDate(maxDate);
     const minMomentDate = DateUtil.createSafeDate(minDate);
 
-    const portalPicker =
-      (<ReactDatePicker
+    const portalPicker = (
+      <ReactDatePicker
         {...customProps}
         selected={this.state.selectedDate}
         onChange={this.handleChange}
         onChangeRaw={this.handleChangeRaw}
         onClickOutside={this.handleOnClickOutside}
         onSelect={this.handleOnSelect}
-        customInput={<DateInput
-          onInputFocus={this.handleOnInputFocus}
-          onCalendarButtonClick={this.handleOnCalendarButtonClick}
-          inputAttributes={inputAttributes}
-          releaseFocus={releaseFocus}
-          requestFocus={requestFocus}
-          shouldShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
-        />}
+        customInput={(
+          <DateInput
+            onInputFocus={this.handleOnInputFocus}
+            onCalendarButtonClick={this.handleOnCalendarButtonClick}
+            inputAttributes={inputAttributes}
+            releaseFocus={releaseFocus}
+            requestFocus={requestFocus}
+            shouldShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
+          />
+)}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
@@ -289,24 +291,27 @@ class DatePicker extends React.Component {
         showMonthDropdown
         showYearDropdown
         name={name}
-      />);
+      />
+    );
 
-    const popupPicker =
-      (<ReactDatePicker
+    const popupPicker = (
+      <ReactDatePicker
         {...customProps}
         selected={this.state.selectedDate}
         onChange={this.handleChange}
         onChangeRaw={this.handleChangeRaw}
         onClickOutside={this.handleOnClickOutside}
         onSelect={this.handleOnSelect}
-        customInput={<DateInput
-          onInputFocus={this.handleOnInputFocus}
-          onCalendarButtonClick={this.handleOnCalendarButtonClick}
-          inputAttributes={inputAttributes}
-          releaseFocus={releaseFocus}
-          requestFocus={requestFocus}
-          shouldShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
-        />}
+        customInput={(
+          <DateInput
+            onInputFocus={this.handleOnInputFocus}
+            onCalendarButtonClick={this.handleOnCalendarButtonClick}
+            inputAttributes={inputAttributes}
+            releaseFocus={releaseFocus}
+            requestFocus={requestFocus}
+            shouldShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
+          />
+)}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
@@ -331,7 +336,8 @@ class DatePicker extends React.Component {
         showMonthDropdown
         showYearDropdown
         name={name}
-      />);
+      />
+    );
 
     return (
       <div className={styles['date-picker']}>

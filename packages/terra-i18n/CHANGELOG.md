@@ -4,6 +4,37 @@ Changelog
 Unreleased
 ----------
 
+2.20.3 - (September 13, 2018)
+------------------
+### Fix
+* Add post-install script which writes default loaders
+
+2.20.2 - (September 12, 2018)
+------------------
+### Fix
+* Remove post-install script which wrote default loaders
+
+2.20.1 - (September 6, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
+2.20.0 - (September 5, 2018)
+------------------
+### Changed
+* Bumped minimum react peerDependency version from ^16.2.0 to ^16.4.2
+* Bumped minimum react-dom peerDependency version from ^16.2.0 to ^16.4.2
+
+2.19.0 - (September 4, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.18.0 - (August 29, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.17.0 - (August 1, 2018)
 ------------------
 ### Changed

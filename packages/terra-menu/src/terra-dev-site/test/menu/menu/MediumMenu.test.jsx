@@ -66,7 +66,7 @@ class MediumMenu extends React.Component {
             <Menu.Item text="Default 153" key="153" className="TestLastItem" />
           </Menu.ItemGroup>
         </Menu>
-        <button id="medium-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button type="button" id="medium-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

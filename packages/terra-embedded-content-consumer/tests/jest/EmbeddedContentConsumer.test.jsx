@@ -4,19 +4,23 @@ import EmbeddedContentConsumer from '../../lib/EmbeddedContentConsumer';
 
 // Snapshot Tests
 it('should render the embedded content consumer container', () => {
-  const embeddedContentConsumer = (<EmbeddedContentConsumer
-    src="https://www.google.com/"
-  />);
+  const embeddedContentConsumer = (
+    <EmbeddedContentConsumer
+      src="https://www.google.com/"
+    />
+  );
 
   const wrapper = render(embeddedContentConsumer);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render the embedded content consumer with custom class names', () => {
-  const embeddedContentConsumer = (<EmbeddedContentConsumer
-    src="https://www.google.com/"
-    className="container"
-  />);
+  const embeddedContentConsumer = (
+    <EmbeddedContentConsumer
+      src="https://www.google.com/"
+      className="container"
+    />
+  );
 
   const wrapper = render(embeddedContentConsumer);
   expect(wrapper).toMatchSnapshot();
@@ -32,14 +36,16 @@ it('should validate the inputs', () => {
   const options = { secret: 'SecretKey', resizeConfig };
   const customEvents = [{ key: 'eventKey', handler: () => {} }];
 
-  const embeddedContentConsumer = (<EmbeddedContentConsumer
-    src={src}
-    onMount={onMount}
-    onLaunch={onLaunch}
-    onAuthorize={onAuthorize}
-    options={options}
-    eventHandlers={customEvents}
-  />);
+  const embeddedContentConsumer = (
+    <EmbeddedContentConsumer
+      src={src}
+      onMount={onMount}
+      onLaunch={onLaunch}
+      onAuthorize={onAuthorize}
+      options={options}
+      eventHandlers={customEvents}
+    />
+  );
 
   Consumer.init();
   const wrapper = mount(embeddedContentConsumer);

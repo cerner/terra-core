@@ -10,12 +10,12 @@
 | react-datepicker | ^0.64.0 | | |
 | react-portal | ^4.1.2 | ^15.0.0-0 \|\| ^16.0.0-0 \|\| ^17.0.0-0 | To make your life with React Portals easier. |
 | terra-app-delegate | ^2.1.0 | ^16.2.0 | An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications |
-| terra-button | ^2.19.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
-| terra-doc-template | ^1.12.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-form-input | ^1.20.0 | ^16.2.0 | Element for building out inputs in a form. |
-| terra-icon | ^2.19.0 | ^16.2.0 | terra-icon |
+| terra-button | ^2.21.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
+| terra-doc-template | ^1.13.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
+| terra-form-input | ^1.22.0 | ^16.2.0 | Element for building out inputs in a form. |
+| terra-icon | ^2.20.0 | ^16.2.0 | terra-icon |
 | terra-modal-manager | ^3.0.0 | ^16.2.0 | The ModalManager is a DisclosureManager implementation that presents disclosed content using an AbstractModal. |
-| terra-responsive-element | ^3.6.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
+| terra-responsive-element | ^3.7.0 | ^16.2.0 | The terra-responsive-element conditionally renders components based on viewport size |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
