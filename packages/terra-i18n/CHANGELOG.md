@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.20.3 - (September 13, 2018)
+------------------
+### Fix
+* Add post-install script which writes default loaders
+
 2.20.2 - (September 12, 2018)
 ------------------
 ### Fix
