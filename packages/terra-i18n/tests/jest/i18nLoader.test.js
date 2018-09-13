@@ -1,4 +1,4 @@
-/* eslint-disable no-console, import/no-unresolved */
+/* eslint-disable no-console */
 import i18nLoader from '../../src/i18nLoader';
 
 global.console = { warn: jest.fn() };
