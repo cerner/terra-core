@@ -24,7 +24,7 @@ describe('Alert', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-alert-height': '5rem',
+        '--terra-alert-min-height': '5rem',
         '--terra-alert-alert-background-color': 'purple',
         '--terra-alert-error-background-color': 'purple',
         '--terra-alert-warning-background-color': 'purple',

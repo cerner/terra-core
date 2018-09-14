@@ -3,8 +3,8 @@
   .alert-base {
     align-items: stretch;
     display: flex;
-    height: var(--terra-alert-height);
     justify-content: space-between;
+    min-height: var(--terra-alert-min-height);
     overflow: hidden;
     width: 100%;
   }
@@ -20,7 +20,7 @@
   .icon {
     flex-shrink: 0;
     font-size: var(--terra-alert-icon-font-size, 1.286em);
-    margin-right: 0.5rem;
+    margin-right: var(--terra-alert-icon-margin-right, 0.5rem);
   }
 
   .body {
