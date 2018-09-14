@@ -60,7 +60,7 @@
   }
 
   .actions {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
@@ -82,37 +82,37 @@
 
   .alert {
     background-color: var(--terra-alert-alert-background-color, #fedcdc);
-    box-shadow: var(--terra-alert-alert-shadow, 2px 0 0 #c00 inset);
+    box-shadow: var(--terra-alert-alert-box-shadow, 2px 0 0 #c00 inset);
   }
 
   .error {
     background-color: var(--terra-alert-error-background-color, #fedcdc);
-    box-shadow: var(--terra-alert-error-shadow, 2px 0 0 #c00 inset);
+    box-shadow: var(--terra-alert-error-box-shadow, 2px 0 0 #c00 inset);
   }
 
   .warning {
     background-color: var(--terra-alert-warning-background-color, #fff3ce);
-    box-shadow: var(--terra-alert-warning-shadow, 2px 0 0 #ffc20a inset);
+    box-shadow: var(--terra-alert-warning-box-shadow, 2px 0 0 #ffc20a inset);
   }
 
   .advisory {
     background-color: var(--terra-alert-advisory-background-color, #f4f4f4);
-    box-shadow: var(--terra-alert-advisory-shadow, 2px 0 0 #9b9fa1 inset);
+    box-shadow: var(--terra-alert-advisory-box-shadow, 2px 0 0 #9b9fa1 inset);
   }
 
   .info {
     background-color: var(--terra-alert-info-background-color, #f4f4f4);
-    box-shadow: var(--terra-alert-info-shadow, 2px 0 0 #0092e0 inset);
+    box-shadow: var(--terra-alert-info-box-shadow, 2px 0 0 #0092e0 inset);
   }
 
   .success {
     background-color: var(--terra-alert-success-background-color, #f4f4f4);
-    box-shadow: var(--terra-alert-success-shadow, 2px 0 0 #78c346 inset);
+    box-shadow: var(--terra-alert-success-box-shadow, 2px 0 0 #78c346 inset);
   }
 
   .custom {
     background-color: var(--terra-alert-custom-background-color, #f4f4f4);
-    box-shadow: var(--terra-alert-custom-shadow, 2px 0 0 #9b9fa1 inset);
+    box-shadow: var(--terra-alert-custom-box-shadow, 2px 0 0 #9b9fa1 inset);
   }
 
   .alert .title {

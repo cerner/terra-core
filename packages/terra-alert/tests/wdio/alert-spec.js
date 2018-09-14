@@ -31,12 +31,12 @@ describe('Alert', () => {
         '--terra-alert-info-background-color': 'purple',
         '--terra-alert-success-background-color': 'purple',
 
-        '--terra-alert-alert-shadow': '2px 2px 2px purple',
-        '--terra-alert-error-shadow': '2px 2px 2px purple',
-        '--terra-alert-warning-shadow': '2px 2px 2px purple',
-        '--terra-alert-advisory-shadow': '2px 2px 2px purple',
-        '--terra-alert-info-shadow': '2px 2px 2px purple',
-        '--terra-alert-success-shadow': '2px 2px 2px purple',
+        '--terra-alert-alert-box-shadow': '2px 2px 2px purple',
+        '--terra-alert-error-box-shadow': '2px 2px 2px purple',
+        '--terra-alert-warning-box-shadow': '2px 2px 2px purple',
+        '--terra-alert-advisory-box-shadow': '2px 2px 2px purple',
+        '--terra-alert-info-box-shadow': '2px 2px 2px purple',
+        '--terra-alert-success-box-shadow': '2px 2px 2px purple',
 
         '--terra-alert-alert-title-color': 'purple',
         '--terra-alert-error-title-color': 'purple',
@@ -53,7 +53,7 @@ describe('Alert', () => {
       properties: {
         '--terra-alert-custom-text-color': 'blue',
         '--terra-alert-custom-background-color': 'purple',
-        '--terra-alert-custom-shadow': '2px 2px 2px purple',
+        '--terra-alert-custom-box-shadow': '2px 2px 2px purple',
       },
     });
   });
