@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const markdownMagic = require('markdown-magic');
+const markdownMagic = require('markdown-magic'); // eslint-disable-line import/no-extraneous-dependencies
 
 const defaults = {
   dir: './packages',
