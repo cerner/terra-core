@@ -3,6 +3,7 @@
   .alert-base {
     align-items: stretch;
     display: flex;
+    height: var(--terra-alert-height);
     justify-content: space-between;
     overflow: hidden;
     width: 100%;
