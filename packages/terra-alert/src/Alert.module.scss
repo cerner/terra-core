@@ -24,7 +24,7 @@
   }
 
   .body {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex: 1 1 auto;
     flex-direction: row;
@@ -56,8 +56,10 @@
   }
 
   .title {
-    float: left;
-    margin-right: 0.5833rem;
+    display: var(--terra-alert-title-display);
+    float: var(--terra-alert-title-left, left);
+    margin-bottom: var(--terra-alert-title-margin-bottom);
+    margin-right: var(--terra-alert-margin-right, 0.5833rem);
   }
 
   .actions {
