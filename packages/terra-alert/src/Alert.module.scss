@@ -23,7 +23,7 @@
   }
 
   .body {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex: 1 1 auto;
     flex-direction: row;
@@ -60,7 +60,7 @@
   }
 
   .actions {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
