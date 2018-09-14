@@ -29,19 +29,19 @@
     flex: 1 1 auto;
     flex-direction: row;
     line-height: 1.2;
-    margin-left: 0.6667rem;
-    margin-top: 0.7143rem;
+    margin-left: var(--terra-alert-margin-left, 0.6667rem);
+    margin-top: var(--terra-alert-margin-top, 0.7143rem);
     overflow: hidden;
     padding-top: 0;
   }
 
   .body-narrow {
     margin-bottom: 0;
-    margin-right: 0.6667rem;
+    margin-right: var(--terra-alert-narrow-margin-right, 0.6667rem);
   }
 
   .body-std {
-    margin-bottom: 0.7143rem;
+    margin-bottom: var(--terra-alert-std-margin-bottom, 0.7143rem);
     margin-right: 0;
   }
 
