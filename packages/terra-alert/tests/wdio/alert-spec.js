@@ -25,6 +25,7 @@ describe('Alert', () => {
       testName: 'themed',
       properties: {
         '--terra-alert-min-height': '5rem',
+
         '--terra-alert-title-display': 'block',
         '--terra-alert-title-left': 'none',
         '--terra-alert-title-margin-bottom': '10px',

@@ -47,8 +47,8 @@
 
   .section {
     flex: 1;
-    padding-bottom: 0.2143rem;
-    padding-top: 0.2143rem;
+    padding-bottom: var(--terra-alert-section-padding-bottom, 0.2143rem);
+    padding-top: var(--terra-alert-section-padding-top, 0.2143rem);
   }
 
   .section-custom {
