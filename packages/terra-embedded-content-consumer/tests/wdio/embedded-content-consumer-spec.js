@@ -53,7 +53,7 @@ describe('Embedded Content Consumer', () => {
     });
 
     it('has mounted, launched, and authorized elements', () => {
-      const timeout = browser.global.options.waitforTimeout + 2000;
+      const timeout = browser.options.waitforTimeout + 2000;
       browser.waitForExist('iframe[src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/data-status-provider"]', timeout);
 
       const myFrame = $('iframe[src="#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/providers/data-status-provider"]').value;
