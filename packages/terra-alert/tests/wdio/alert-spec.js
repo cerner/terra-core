@@ -12,6 +12,7 @@ describe('Alert', () => {
         '--terra-alert-icon-font-size': '50px',
         '--terra-alert-icon-margin-left': '10px',
         '--terra-alert-icon-margin-right': '10px',
+        '--terra-alert-icon-margin-top': '10px',
       },
     });
   });
