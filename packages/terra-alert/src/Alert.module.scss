@@ -70,7 +70,10 @@
     flex-direction: row;
     flex-shrink: 0;
     justify-content: flex-end;
-    margin: 0.4286rem 0.5833rem 0.4286rem 0.8333rem;
+    margin-bottom: var(--terra-alert-actions-margin-bottom, 0.4286rem);
+    margin-left: var(--terra-alert-actions-margin-left, 0.8333rem);
+    margin-right: var(--terra-alert-actions-margin-right, 0.5833rem);
+    margin-top: var(--terra-alert-actions-margin-top, 0.4286rem);
   }
 
   .actions-custom {
