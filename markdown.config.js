@@ -14,6 +14,7 @@ const header = `| Terra Package      | Version | Status | Dependencies |
 
 const config = {
   transforms: {
+    // see: https://github.com/camacho/markdown-magic-subpackage-list
     SUBPACKAGELIST(content, _options, configuration) {
       const options = Object.assign({}, defaults, _options);
 
