@@ -108,6 +108,15 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-toggle-section-header](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle-section-header) | [![NPM version](https://badgen.net/npm/v/terra-toggle-section-header)](https://www.npmjs.org/package/terra-toggle-section-header) | ![Stable](https://badgen.net/badge/status/Stable/green) | [![terra-toggle-section-header](https://badgen.net/david/dep/cerner/terra-core/packages/terra-toggle-section-header)](https://david-dm.org/cerner/terra-core?path=packages/terra-toggle-section-header) |
 <!-- AUTO-GENERATED-CONTENT:END *-->
 
+### Deprecated
+
+| Terra Package      | Version | Status | Dependencies |
+|--------------------|---------|--------|--------------|
+| terra-application | [![NPM version](https://badgen.net/npm/v/terra-application)](https://www.npmjs.org/package/terra-application) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-application](https://badgen.net/badge/dependencies/n%2Fa/grey) |
+| [terra-form](https://github.com/cerner/terra-core/tree/master/packages/terra-form) | [![NPM version](https://badgen.net/npm/v/terra-form)](https://www.npmjs.org/package/terra-form) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-form](https://badgen.net/badge/dependencies/n%2Fa/grey) |
+| terra-i18n-plugin | [![NPM version](https://badgen.net/npm/v/terra-i18n-plugin)](https://www.npmjs.org/package/terra-i18n-plugin) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-i18n-plugin](https://badgen.net/badge/dependencies/n%2Fa/grey) |
+| terra-modal | [![NPM version](https://badgen.net/npm/v/terra-modal)](https://www.npmjs.org/package/terra-modal) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-application](https://badgen.net/badge/dependencies/n%2Fa/grey) |
+
 ## Supported Browsers
 
 | Browser                     | Version |
