@@ -20,6 +20,7 @@
   .icon {
     flex-shrink: 0;
     font-size: var(--terra-alert-icon-font-size, 1.286em);
+    margin-left: var(--terra-alert-icon-margin-left);
     margin-right: var(--terra-alert-icon-margin-right, 0.5rem);
   }
 

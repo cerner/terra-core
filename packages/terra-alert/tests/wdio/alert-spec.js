@@ -6,8 +6,13 @@ describe('Alert', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/default-alert'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-alert-icon-font-size': '50px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-alert-icon-font-size': '50px',
+        '--terra-alert-icon-margin-left': '10px',
+        '--terra-alert-icon-margin-right': '10px',
+      },
     });
   });
 
