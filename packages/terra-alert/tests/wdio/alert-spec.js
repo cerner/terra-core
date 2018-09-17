@@ -79,6 +79,15 @@ describe('Alert', () => {
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-alert-actions-margin-bottom': '10px',
+          '--terra-alert-actions-margin-left': '10px',
+          '--terra-alert-actions-margin-right': '10px',
+          '--terra-alert-actions-margin-top': '10px',
+        },
+      });
 
       it('should be register actions', () => {
         expect(browser.getText('#actionButtonClickCount')).to.equal('0');
