@@ -18,10 +18,5 @@ module.exports = {
     '\\.(svg|jpg|png|md)$': '<rootDir>/__mocks__/fileMock.js',
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
-  moduleDirectories: [
-    'aggregated-translations',
-    './packages/terra-i18n/tests/jest/aggregated-translations',
-    'node_modules',
-  ],
   testURL: 'http://localhost',
 };
