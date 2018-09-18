@@ -53,8 +53,7 @@
     hyphens: auto;
     margin-bottom: 0;
     margin-top: 0;
-    padding-left: var(--terra-action-header-title-padding-left);
-    padding-right: var(--terra-action-header-title-padding-right);
+    padding: var(--terra-action-header-title-padding);
     padding-top: var(--terra-action-header-title-padding-top, 0.1428571429rem);
     width: 100%;
     word-break: break-all;
