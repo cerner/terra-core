@@ -23,6 +23,7 @@ const propTypes = {
       return new Error(`Missing locale prop for ${propName} in ${componentName} props`);
     }
   },
+  strictMode: PropTypes.bool,
   /**
    * The component(s) that will be wrapped by `<Base />` ONLY
    * in the event that translations have not been loaded yet.
@@ -34,6 +35,7 @@ const propTypes = {
 
 const defaultProps = {
   customMessages: {},
+  strictMode: false,
 };
 
 class Base extends React.Component {
@@ -73,20 +75,25 @@ class Base extends React.Component {
       children,
       locale,
       customMessages,
+      strictMode,
       translationsLoadingPlaceholder,
       ...customProps
     } = this.props;
 
     const messages = Object.assign({}, this.state.messages, customMessages);
+    const renderStrictMode = strictMode ? (<React.StrictMode>{children}</React.StrictMode>) : children;
 
     if (locale === undefined) {
-      return (<div {...customProps}>{children}</div>);
+      return (
+        <div {...customProps}>
+          {renderStrictMode}
+        </div>);
     }
 
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
       <I18nProvider {...customProps} locale={this.state.locale} messages={messages}>
-        {children}
+        {renderStrictMode}
       </I18nProvider>
     );
   }
