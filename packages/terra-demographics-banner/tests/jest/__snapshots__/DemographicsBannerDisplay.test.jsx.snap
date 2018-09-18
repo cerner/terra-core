@@ -7,16 +7,19 @@ exports[`renders a banner that has basic information 1`] = `
       age="24"
       applicationContent={null}
       dateOfBirth="March 30, 2017"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="F"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="Terra Demographics Banner"
       photo={null}
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -27,16 +30,19 @@ exports[`renders a banner that has basic information 1`] = `
       age="24"
       applicationContent={null}
       dateOfBirth="March 30, 2017"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="F"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="Terra Demographics Banner"
       photo={null}
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -51,16 +57,19 @@ exports[`renders a blank banner properly 1`] = `
       age="--"
       applicationContent={null}
       dateOfBirth="--"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="--"
       photo={null}
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -71,16 +80,19 @@ exports[`renders a blank banner properly 1`] = `
       age="--"
       applicationContent={null}
       dateOfBirth="--"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="--"
       photo={null}
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -95,16 +107,19 @@ exports[`renders gestational date with a default label when the label is not pro
       age="--"
       applicationContent={null}
       dateOfBirth="--"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
       gestationalAge="April 5, 2016"
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="--"
       photo={null}
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -115,16 +130,19 @@ exports[`renders gestational date with a default label when the label is not pro
       age="--"
       applicationContent={null}
       dateOfBirth="--"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
       gestationalAge="April 5, 2016"
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="--"
       photo={null}
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -139,16 +157,19 @@ exports[`renders post menstrural date with a default label when the label is not
       age="--"
       applicationContent={null}
       dateOfBirth="--"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="--"
       photo={null}
       postMenstrualAge="April 5, 2016"
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -159,16 +180,19 @@ exports[`renders post menstrural date with a default label when the label is not
       age="--"
       applicationContent={null}
       dateOfBirth="--"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="--"
       photo={null}
       postMenstrualAge="April 5, 2016"
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -183,16 +207,19 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       age="24"
       applicationContent={null}
       dateOfBirth="June 15, 2014"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate="March 30, 2017"
       deceasedDateLabel="Deceased"
       gender="F"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="Old Terra Demographics Banner"
       photo={null}
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -203,16 +230,19 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       age="24"
       applicationContent={null}
       dateOfBirth="June 15, 2014"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate="March 30, 2017"
       deceasedDateLabel="Deceased"
       gender="F"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
       personName="Old Terra Demographics Banner"
       photo={null}
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName={null}
     />
@@ -244,11 +274,13 @@ exports[`renders the banner appropriately for a person with gestational and post
         ]
       }
       dateOfBirth="May 9, 1993"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="Male"
       gestationalAge="April 5, 2016"
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
         Object {
@@ -266,6 +298,7 @@ exports[`renders the banner appropriately for a person with gestational and post
         />
       }
       postMenstrualAge="April 7, 2016"
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName="John"
     />
@@ -293,11 +326,13 @@ exports[`renders the banner appropriately for a person with gestational and post
         ]
       }
       dateOfBirth="May 9, 1993"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="Male"
       gestationalAge="April 5, 2016"
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
         Object {
@@ -315,6 +350,7 @@ exports[`renders the banner appropriately for a person with gestational and post
         />
       }
       postMenstrualAge="April 7, 2016"
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName="John"
     />
@@ -346,11 +382,13 @@ exports[`renders the banner properly for a deceased person with additional appli
         ]
       }
       dateOfBirth="May 9, 1993"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate="March 5, 2016"
       deceasedDateLabel="Deceased"
       gender="Male"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
         Object {
@@ -368,6 +406,7 @@ exports[`renders the banner properly for a deceased person with additional appli
         />
       }
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName="John"
     />
@@ -395,11 +434,13 @@ exports[`renders the banner properly for a deceased person with additional appli
         ]
       }
       dateOfBirth="May 9, 1993"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate="March 5, 2016"
       deceasedDateLabel="Deceased"
       gender="Male"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
         Object {
@@ -417,6 +458,7 @@ exports[`renders the banner properly for a deceased person with additional appli
         />
       }
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName="John"
     />
@@ -448,11 +490,13 @@ exports[`renders the banner that contains additional information 1`] = `
         ]
       }
       dateOfBirth="May 9, 1993"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="Male"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
         Object {
@@ -470,6 +514,7 @@ exports[`renders the banner that contains additional information 1`] = `
         />
       }
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName="John"
     />
@@ -497,11 +542,13 @@ exports[`renders the banner that contains additional information 1`] = `
         ]
       }
       dateOfBirth="May 9, 1993"
+      dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="Male"
       gestationalAge={null}
+      gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={
         Object {
@@ -519,6 +566,7 @@ exports[`renders the banner that contains additional information 1`] = `
         />
       }
       postMenstrualAge={null}
+      postMenstrualAgeFullText="Post Menstrual Age"
       postMenstrualAgeLabel="PMA"
       preferredFirstName="John"
     />

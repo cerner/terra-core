@@ -5,9 +5,22 @@ import styles from './DemographicsBanner.module.scss';
 const cx = classNames.bind(styles);
 
 // eslint-disable-next-line react/prop-types
-const DemographicsBannerValue = ({ label, value }) => (
+const DemographicsBannerValue = ({ label, value, abbrTitle }) => (
   <span className={cx('value')}>
-    { label && <span className={cx('value-label')}>{`${label}:`}</span> }
+    {label
+      && (
+        <span className={cx('value-label')}>
+          {abbrTitle
+            ? (
+              <abbr title={abbrTitle}>
+                {`${label}:`}
+              </abbr>
+            )
+            : `${label}:`
+          }
+        </span>
+      )
+     }
     <b>{value}</b>
   </span>
 );
@@ -18,6 +31,7 @@ const personDetails = (props) => {
     <DemographicsBannerValue key="gender" value={props.gender} />,
     <DemographicsBannerValue
       key="dob"
+      abbrTitle={props.dateOfBirthFullText}
       label={props.dateOfBirthLabel}
       value={props.dateOfBirth}
     />,
@@ -26,6 +40,7 @@ const personDetails = (props) => {
   if (props.gestationalAge) {
     elements.push(<DemographicsBannerValue
       key="ga"
+      abbrTitle={props.gestationalAgeFullText}
       label={props.gestationalAgeLabel}
       value={props.gestationalAge}
     />);
@@ -34,6 +49,7 @@ const personDetails = (props) => {
   if (props.postMenstrualAge) {
     elements.push(<DemographicsBannerValue
       key="pma"
+      abbrTitle={props.postMenstrualAgeFullText}
       label={props.postMenstrualAgeLabel}
       value={props.postMenstrualAge}
     />);
