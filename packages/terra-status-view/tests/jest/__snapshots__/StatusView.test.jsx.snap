@@ -38,6 +38,7 @@ exports[`should render a single child element 1`] = `
         >
           <Divider>
             <hr
+              aria-hidden="true"
               className="divider"
             />
           </Divider>
@@ -265,6 +266,7 @@ exports[`should render an image with a no-data status view with all message prop
         >
           <Divider>
             <hr
+              aria-hidden="true"
               className="divider"
             />
           </Divider>
