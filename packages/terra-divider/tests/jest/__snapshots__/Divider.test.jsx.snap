@@ -2,6 +2,7 @@
 
 exports[`Divider it should pass in a custom prop 1`] = `
 <hr
+  aria-hidden="true"
   className="divider"
   id="testDivider"
 />
@@ -9,6 +10,7 @@ exports[`Divider it should pass in a custom prop 1`] = `
 
 exports[`Divider should render a basic component 1`] = `
 <hr
+  aria-hidden="true"
   className="divider"
 />
 `;
