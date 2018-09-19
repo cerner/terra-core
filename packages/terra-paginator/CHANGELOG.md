@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Switch aria-current from page to true
 
 1.17.1 - (September 6, 2018)
 ------------------
