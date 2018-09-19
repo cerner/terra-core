@@ -15,7 +15,8 @@
 
   .value {
     display: inline-flex;
-    margin-right: 0.357em;
+    margin-right: var(--terra-demographics-banner-value-margin-right, 0.357em);
+    margin-top: var(--terra-demographics-banner-value-margin-top);
 
     &:last-child {
       margin-right: 0;
