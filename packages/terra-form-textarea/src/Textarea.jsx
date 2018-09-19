@@ -16,6 +16,8 @@ const isMobileDevice = () => window.matchMedia('(max-width: 1024px)').matches
     || navigator.msMaxTouchPoints > 0
   );
 
+const TextareaSize = ['small', 'medium', 'large', 'full'];
+
 const TEXTAREA_ROW_SIZES = {
   small: 2,
   medium: 5,
@@ -64,7 +66,7 @@ const propTypes = {
    * The size of the textarea. Sizes the textarea by setting the rows attribute to the number corresponding
    * to this value.
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
+  size: PropTypes.oneOf(TextareaSize),
   /**
    * The value of the textarea. Use this to create a controlled textarea.
    */
@@ -214,3 +216,4 @@ Textarea.propTypes = propTypes;
 Textarea.defaultProps = defaultProps;
 
 export default Textarea;
+export { TextareaSize };

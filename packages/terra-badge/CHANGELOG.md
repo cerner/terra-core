@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Exports for schemes and sizes added
 
 2.21.1 - (September 6, 2018)
 ------------------

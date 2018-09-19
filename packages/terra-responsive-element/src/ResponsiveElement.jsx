@@ -4,6 +4,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import 'terra-base/lib/baseStyles';
 import breakpoints from './breakpoints.module.scss';
 
+const ResponsiveElementResponsiveTo = ['window', 'parent'];
 /* Disabled for the defaultElement which is used implicitly */
 /* eslint-disable react/no-unused-prop-types */
 const propTypes = {
@@ -34,7 +35,7 @@ const propTypes = {
   /**
    * The viewport the element will be responsive to. One of `window` or `parent`.
    */
-  responsiveTo: PropTypes.oneOf(['window', 'parent']),
+  responsiveTo: PropTypes.oneOf(ResponsiveElementResponsiveTo),
 };
 
 const defaultProps = {
@@ -122,3 +123,4 @@ ResponsiveElement.propTypes = propTypes;
 ResponsiveElement.defaultProps = defaultProps;
 
 export default ResponsiveElement;
+export { ResponsiveElementResponsiveTo };

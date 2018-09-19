@@ -6,6 +6,12 @@ import styles from './Heading.module.scss';
 
 const cx = classNames.bind(styles);
 
+const HeadingLevel = [1, 2, 3, 4, 5, 6];
+
+const HeadingSize = ['mini', 'tiny', 'small', 'medium', 'large', 'huge'];
+
+const HeadingWeight = [200, 400, 700];
+
 const propTypes = {
   /**
    * Child nodes
@@ -14,7 +20,7 @@ const propTypes = {
   /**
    * Sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
    */
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  level: PropTypes.oneOf(HeadingLevel).isRequired,
   /**
    * The color of the text. Accepts any color value parseable by CSS.
    */
@@ -30,11 +36,11 @@ const propTypes = {
   /**
    * Sets the text size. One of `mini`, `tiny`, `small`, `medium`, `large`, `huge`.
    */
-  size: PropTypes.oneOf(['mini', 'tiny', 'small', 'medium', 'large', 'huge']),
+  size: PropTypes.oneOf(HeadingSize),
   /**
    * Sets the text size. One of `200`, `400`, `700`.
    */
-  weight: PropTypes.oneOf([200, 400, 700]),
+  weight: PropTypes.oneOf(HeadingWeight),
 };
 
 const defaultProps = {
@@ -75,3 +81,4 @@ Heading.propTypes = propTypes;
 Heading.defaultProps = defaultProps;
 
 export default Heading;
+export { HeadingLevel, HeadingSize, HeadingWeight };

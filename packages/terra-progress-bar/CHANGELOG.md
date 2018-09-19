@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Export for progress bar height size added.
 
 2.22.1 - (September 6, 2018)
 ------------------

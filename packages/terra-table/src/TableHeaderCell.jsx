@@ -8,6 +8,10 @@ import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);
 
+const TableHeaderCellMinWidth = ['tiny', 'small', 'medium', 'large', 'huge'];
+
+const TableHeaderCellSort = ['asc', 'desc'];
+
 const propTypes = {
   /**
    * Content to be displayed for the column header
@@ -16,11 +20,11 @@ const propTypes = {
   /**
    * The minimum width for the column
    */
-  minWidth: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  minWidth: PropTypes.oneOf(TableHeaderCellMinWidth),
   /**
    * Whether or not data in table is sorted (asc, desc)
    */
-  sort: PropTypes.oneOf(['asc', 'desc']),
+  sort: PropTypes.oneOf(TableHeaderCellSort),
 };
 
 const defaultProps = {
@@ -64,3 +68,4 @@ TableHeaderCell.propTypes = propTypes;
 TableHeaderCell.defaultProps = defaultProps;
 
 export default TableHeaderCell;
+export { TableHeaderCellMinWidth, TableHeaderCellSort };

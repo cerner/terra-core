@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Export for textarea size added
 
 2.25.0 - (September 13, 2018)
 ------------------

@@ -6,6 +6,8 @@ import styles from './Image.module.scss';
 
 const cx = classNames.bind(styles);
 
+const ImageVariant = ['default', 'rounded', 'circle', 'thumbnail'];
+
 const propTypes = {
   /**
    * The source string for the image which will be loaded and displayed.
@@ -14,7 +16,7 @@ const propTypes = {
   /**
    * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`.
    */
-  variant: PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
+  variant: PropTypes.oneOf(ImageVariant),
   /**
    * Sets the fluid behavior of the image, which is `nonfluid` by default.
    */
@@ -140,3 +142,4 @@ Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;
 
 export default Image;
+export { ImageVariant };

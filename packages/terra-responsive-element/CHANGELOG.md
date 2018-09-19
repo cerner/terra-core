@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Export for element responsiveTo added.
 
 3.9.1 - (September 6, 2018)
 ------------------

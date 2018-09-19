@@ -6,6 +6,8 @@ import styles from './ProgressBar.module.scss';
 
 const cx = classNames.bind(styles);
 
+const ProgressBarHeightSize = ['tiny', 'small', 'medium', 'large', 'huge'];
+
 const propTypes = {
   /**
    * The color of the progress bar. Accepts a CSS color value.
@@ -14,7 +16,7 @@ const propTypes = {
   /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
-  heightSize: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  heightSize: PropTypes.oneOf(ProgressBarHeightSize),
   /**
    * Sets the fill-value of the progress bar with respect to the `max` prop.
    */
@@ -70,3 +72,4 @@ ProgressBar.propTypes = propTypes;
 ProgressBar.defaultProps = defaultProps;
 
 export default ProgressBar;
+export { ProgressBarHeightSize };
