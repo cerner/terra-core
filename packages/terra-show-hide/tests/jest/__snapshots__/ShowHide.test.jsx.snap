@@ -2,36 +2,42 @@
 
 exports[`ShowHide should render a default show-hide component 1`] = `
 <div
-  class="button"
+  className="button"
 >
   Test...
   <div
-    aria-hidden="true"
-    class="toggle"
+    aria-hidden={true}
+    className="toggle"
+    style={Object {}}
   />
   <button
-    aria-disabled="false"
-    aria-expanded="false"
-    class="button"
+    aria-disabled={false}
+    aria-expanded={false}
+    className="button"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
-      class="text-and-icon"
+      className="text-and-icon"
     >
       <span
-        class="text-first"
+        className="text-first"
       >
         Show More
       </span>
       <span
-        class="icon"
+        className="icon"
       >
         <span
-          class="icon icon-svg"
+          className="icon icon-svg"
         >
           <svg
             aria-hidden="true"
-            class="icon is-bidi"
+            className="icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -52,47 +58,64 @@ exports[`ShowHide should render a default show-hide component 1`] = `
 
 exports[`ShowHide should render an animated show-hide component 1`] = `
 <div
-  class="button"
+  className="button"
 >
   Test...
   <div
-    aria-hidden="true"
-    class="toggle"
-    style="transition-delay:0.3s;-webkit-transition-delay:0.3s"
+    aria-hidden={true}
+    className="toggle"
+    style={
+      Object {
+        "WebkitTransitionDelay": "0.3s",
+        "transitionDelay": "0.3s",
+      }
+    }
   >
     <div
-      aria-hidden="false"
-      class="rah-static"
-      style="height:0;overflow:hidden"
+      aria-hidden={false}
+      className="rah-static"
+      style={
+        Object {
+          "height": "0",
+          "overflow": "hidden",
+        }
+      }
     >
-      <div>
+      <div
+        style={Object {}}
+      >
         Full Text
       </div>
     </div>
   </div>
   <button
-    aria-disabled="false"
-    aria-expanded="false"
-    class="button"
+    aria-disabled={false}
+    aria-expanded={false}
+    className="button"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
-      class="text-and-icon"
+      className="text-and-icon"
     >
       <span
-        class="text-first"
+        className="text-first"
       >
         Show More
       </span>
       <span
-        class="icon"
+        className="icon"
       >
         <span
-          class="icon icon-svg"
+          className="icon icon-svg"
         >
           <svg
             aria-hidden="true"
-            class="icon is-bidi"
+            className="icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -113,37 +136,43 @@ exports[`ShowHide should render an animated show-hide component 1`] = `
 
 exports[`ShowHide should render an initially open show-hide component 1`] = `
 <div
-  class="button is-open"
+  className="button is-open"
 >
   <div
-    aria-hidden="false"
-    class="toggle"
+    aria-hidden={false}
+    className="toggle"
+    style={Object {}}
   >
     Full Text
   </div>
   <button
-    aria-disabled="false"
-    aria-expanded="true"
-    class="button"
+    aria-disabled={false}
+    aria-expanded={true}
+    className="button"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
-      class="text-and-icon"
+      className="text-and-icon"
     >
       <span
-        class="text-first"
+        className="text-first"
       >
         Hide
       </span>
       <span
-        class="icon"
+        className="icon"
       >
         <span
-          class="icon icon-svg"
+          className="icon icon-svg"
         >
           <svg
             aria-hidden="true"
-            class="icon is-bidi"
+            className="icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -163,125 +192,60 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
 `;
 
 exports[`ShowHide should render an open show-hide component when clicked 1`] = `
-<ShowHide
-  collapsedButtonText="Show More"
-  expandedButtonText="Hide"
-  icon={
-    <IconChevronDown
-      className=""
-      data-name="Layer 1"
-      isBidi={true}
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  isAnimated={false}
-  isInitiallyOpen={false}
-  preview="Test"
+<div
+  className="button is-open"
 >
   <div
-    className="button is-open"
+    aria-hidden={false}
+    className="toggle"
+    style={Object {}}
   >
-    <Toggle
-      isAnimated={false}
-      isOpen={true}
-      style={Object {}}
-    >
-      <div
-        aria-hidden={false}
-        className="toggle"
-        style={Object {}}
-      >
-        Full Text
-      </div>
-    </Toggle>
-    <Button
-      aria-expanded={true}
-      icon={
-        <span
-          className="icon"
-        >
-          <IconChevronDown
-            className=""
-            data-name="Layer 1"
-            isBidi={true}
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </span>
-      }
-      isDisabled={false}
-      onClick={[Function]}
-      text="Hide"
-      type="button"
-    >
-      <button
-        aria-disabled={false}
-        aria-expanded={true}
-        className="button"
-        disabled={false}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        type="button"
-      >
-        <span
-          className="text-and-icon"
-        >
-          <span
-            className="text-first"
-          >
-            Hide
-          </span>
-          <span
-            className="icon"
-          >
-            <span
-              className="icon icon-svg"
-            >
-              <IconChevronDown
-                className=""
-                data-name="Layer 1"
-                isBidi={true}
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <IconBase
-                  ariaLabel={null}
-                  className=""
-                  data-name="Layer 1"
-                  focusable="false"
-                  height="1em"
-                  isBidi={true}
-                  isSpin={false}
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="icon is-bidi"
-                    data-name="Layer 1"
-                    focusable="false"
-                    height="1em"
-                    viewBox="0 0 48 48"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
-                    />
-                  </svg>
-                </IconBase>
-              </IconChevronDown>
-            </span>
-          </span>
-        </span>
-      </button>
-    </Button>
+    Full Text
   </div>
-</ShowHide>
+  <button
+    aria-disabled={false}
+    aria-expanded={true}
+    className="button"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="text-and-icon"
+    >
+      <span
+        className="text-first"
+      >
+        Hide
+      </span>
+      <span
+        className="icon"
+      >
+        <span
+          className="icon icon-svg"
+        >
+          <svg
+            aria-hidden="true"
+            className="icon is-bidi"
+            data-name="Layer 1"
+            focusable="false"
+            height="1em"
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
+            />
+          </svg>
+        </span>
+      </span>
+    </span>
+  </button>
+</div>
 `;
 
 exports[`ShowHide should set icon prop correctly 1`] = `
@@ -289,33 +253,54 @@ exports[`ShowHide should set icon prop correctly 1`] = `
   className="button"
 >
   Test...
-  <Toggle
-    isAnimated={false}
-    isOpen={false}
+  <div
+    aria-hidden={true}
+    className="toggle"
     style={Object {}}
-  >
-    Full Text
-  </Toggle>
-  <Button
+  />
+  <button
+    aria-disabled={false}
     aria-expanded={false}
-    icon={
+    className="button"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="text-and-icon"
+    >
+      <span
+        className="text-first"
+      >
+        Show More
+      </span>
       <span
         className="icon"
       >
-        <IconChevronDown
-          className=""
-          data-name="Layer 1"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
+        <span
+          className="icon icon-svg"
+        >
+          <svg
+            aria-hidden="true"
+            className="icon is-bidi"
+            data-name="Layer 1"
+            focusable="false"
+            height="1em"
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
+            />
+          </svg>
+        </span>
       </span>
-    }
-    isDisabled={false}
-    onClick={[Function]}
-    text="Show More"
-    type="button"
-  />
+    </span>
+  </button>
 </div>
 `;
 
@@ -324,31 +309,52 @@ exports[`ShowHide should set icon prop correctly with custom icon 1`] = `
   className="button"
 >
   Test...
-  <Toggle
-    isAnimated={false}
-    isOpen={false}
+  <div
+    aria-hidden={true}
+    className="toggle"
     style={Object {}}
-  >
-    Full Text
-  </Toggle>
-  <Button
+  />
+  <button
+    aria-disabled={false}
     aria-expanded={false}
-    icon={
+    className="button"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="text-and-icon"
+    >
+      <span
+        className="text-first"
+      >
+        Show More
+      </span>
       <span
         className="icon"
       >
-        <IconCaretLeft
-          className=""
-          isBidi={true}
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
+        <span
+          className="icon icon-svg"
+        >
+          <svg
+            aria-hidden="true"
+            className="icon is-bidi"
+            focusable="false"
+            height="1em"
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M36 48L12 24 36 0v48z"
+            />
+          </svg>
+        </span>
       </span>
-    }
-    isDisabled={false}
-    onClick={[Function]}
-    text="Show More"
-    type="button"
-  />
+    </span>
+  </button>
 </div>
 `;

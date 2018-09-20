@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
+import { injectIntl, intlShape } from 'terra-base';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
@@ -14,6 +15,10 @@ const propTypes = {
    * Content in the body of the component that will be shown or hidden
    */
   children: PropTypes.node.isRequired,
+  /**
+   * The intl object to be injected for translations. Provided by the injectIntl function.
+   */
+  intl: intlShape.isRequired,
   /**
    * Text that will be visible to the user while the component is collapsed
    */
@@ -49,8 +54,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  collapsedButtonText: 'Show More',
-  expandedButtonText: 'Hide',
   icon: <IconChevronDown />,
   isAnimated: false,
   isInitiallyOpen: false,
@@ -87,6 +90,7 @@ class ShowHide extends React.Component {
       children,
       expandedButtonText,
       icon,
+      intl,
       isAnimated,
       isInitiallyOpen,
       onClose,
@@ -95,7 +99,10 @@ class ShowHide extends React.Component {
       ...customProps
     } = this.props;
 
-    const buttonText = !this.state.isOpen ? collapsedButtonText : expandedButtonText;
+    const collapsedText = (collapsedButtonText === undefined || collapsedButtonText.trim.length === 0) ? intl.formatMessage({ id: 'Terra.showhide.showmore' }) : collapsedButtonText;
+    const expandedText = (expandedButtonText === undefined || expandedButtonText.trim.length === 0) ? intl.formatMessage({ id: 'Terra.showhide.hide' }) : expandedButtonText;
+    const buttonText = !this.state.isOpen ? collapsedText : expandedText;
+
     const showHideClassName = cx([
       'button',
       { 'is-open': this.state.isOpen },
@@ -146,4 +153,4 @@ class ShowHide extends React.Component {
 ShowHide.propTypes = propTypes;
 ShowHide.defaultProps = defaultProps;
 
-export default ShowHide;
+export default injectIntl(ShowHide);

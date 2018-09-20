@@ -30,6 +30,8 @@
     "prop-types": "^15.5.8",
     "terra-doc-template": "^1.2.0",
     "terra-icon": "^2.19.0",
+    "react-intl": "^2.4.0",
+    "react-test-renderer": "^16.5.2",
     "terra-toggle": "^2.18.0"
   },
   "scripts": {
