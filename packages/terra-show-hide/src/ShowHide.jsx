@@ -16,10 +16,6 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The intl object to be injected for translations. Provided by the injectIntl function.
-   */
-  intl: intlShape.isRequired,
-  /**
    * Text that will be visible to the user while the component is collapsed
    */
   preview: PropTypes.string.isRequired,
@@ -35,6 +31,10 @@ const propTypes = {
    * Icon displayed next to the button text
    */
   icon: PropTypes.element,
+  /**
+   * The intl object to be injected for translations. Provided by the injectIntl function.
+   */
+  intl: intlShape.isRequired,
   /**
    * Sets the animation for the component when it is expanded or collapsed
    */
@@ -99,8 +99,8 @@ class ShowHide extends React.Component {
       ...customProps
     } = this.props;
 
-    const collapsedText = (collapsedButtonText === undefined || collapsedButtonText.trim.length === 0) ? intl.formatMessage({ id: 'Terra.showhide.showmore' }) : collapsedButtonText;
-    const expandedText = (expandedButtonText === undefined || expandedButtonText.trim.length === 0) ? intl.formatMessage({ id: 'Terra.showhide.hide' }) : expandedButtonText;
+    const collapsedText = (collapsedButtonText === undefined) ? intl.formatMessage({ id: 'Terra.showhide.showmore' }) : collapsedButtonText;
+    const expandedText = (expandedButtonText === undefined) ? intl.formatMessage({ id: 'Terra.showhide.hide' }) : expandedButtonText;
     const buttonText = !this.state.isOpen ? collapsedText : expandedText;
 
     const showHideClassName = cx([
