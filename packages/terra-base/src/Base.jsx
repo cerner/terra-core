@@ -23,6 +23,9 @@ const propTypes = {
       return new Error(`Missing locale prop for ${propName} in ${componentName} props`);
     }
   },
+  /**
+   * Activates [React Strict Mode](https://reactjs.org/docs/strict-mode.html) for descendants
+   */
   strictMode: PropTypes.bool,
   /**
    * The component(s) that will be wrapped by `<Base />` ONLY
