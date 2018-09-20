@@ -101,19 +101,23 @@ const PropsTable = ({
    * function to account for mutiple export.
    * @type {Object}
    */
-  let componentMetaData = parse(src);
+  let componentMetaData;
 
   /**
    * Alias for props object from componentMetaData
    * @type {Object}
    */
-  let componentProps = componentMetaData.props;
+  let componentProps;
 
-  // If user wants to resolve all component definitions in file, use react-docgen's
-  // findAllComponentDefinitions resolver
+  // Resolve using react-docgen's default resolver
+  if (propsResolution === 'default') {
+    componentMetaData = parse(src);
+    componentProps = componentMetaData.props;
+  }
+
+  // Resolve using react-docgen's findAllComponentDefinitions resolver
   if (propsResolution === 'findAllComponentDefinitions') {
     componentMetaData = parse(src, resolver.findAllComponentDefinitions);
-
     componentProps = componentMetaData[0].props;
   }
 

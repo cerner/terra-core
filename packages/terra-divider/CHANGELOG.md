@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Hide divider from Screen Readers for accessibility
+
+2.21.1 - (September 6, 2018)
+------------------
+### Changed
+* Patch dependency version bump
 
 2.21.0 - (September 5, 2018)
 ------------------

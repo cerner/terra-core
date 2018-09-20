@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.21.1 - (September 6, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
 2.21.0 - (September 5, 2018)
 ------------------
 ### Changed
@@ -14,6 +19,9 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
+
+### Changed
+* Removed extra padding beneath toggle component.
 
 2.19.0 - (August 29, 2018)
 ------------------
