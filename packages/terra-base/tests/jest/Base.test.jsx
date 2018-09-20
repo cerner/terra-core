@@ -19,6 +19,12 @@ it('should support rendering an array of children without translation', () => {
   /* eslint-enable comma-dangle */
 });
 
+// Snapshot Tests
+it('should render with stict mode when strict mode enabled', () => {
+  const base = shallow(<Base strictMode>String</Base>);
+  expect(base).toMatchSnapshot();
+});
+
 it('throws error for missing required locale', () => {
   const messages = { Terra: 'Terra' };
 
