@@ -84,19 +84,19 @@ class Base extends React.Component {
     } = this.props;
 
     const messages = Object.assign({}, this.state.messages, customMessages);
-    const renderStrictMode = strictMode ? (<React.StrictMode>{children}</React.StrictMode>) : children;
+    const renderChildren = strictMode ? (<React.StrictMode>{children}</React.StrictMode>) : children;
 
     if (locale === undefined) {
       return (
         <div {...customProps}>
-          {renderStrictMode}
+          {renderChildren}
         </div>);
     }
 
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
       <I18nProvider {...customProps} locale={this.state.locale} messages={messages}>
-        {renderStrictMode}
+        {renderChildren}
       </I18nProvider>
     );
   }
