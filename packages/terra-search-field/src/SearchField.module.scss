@@ -51,6 +51,7 @@
         background-color: var(--terra-search-field-button-active-background-color, #6f7477);
         background-image: var(--terra-search-field-button-active-background-image);
         border-color: var(--terra-search-field-button-active-border-color, #52585b);
+        box-shadow: var(--terra-search-field-button-active-box-shadow);
       }
 
       &:disabled {
