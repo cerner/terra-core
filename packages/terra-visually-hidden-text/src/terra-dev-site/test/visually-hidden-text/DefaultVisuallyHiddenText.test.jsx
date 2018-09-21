@@ -4,7 +4,7 @@ import VisuallyHiddenText from '../../../VisuallyHiddenText';
 
 export default () => (
   <p>
-    Focus in this section to hear screen reader only text
-    <VisuallyHiddenText tabIndex="0" text="This is visually hidden" />
+    No Screen Reader text is added on this page, and should be blank other than this line.
+    <VisuallyHiddenText />
   </p>
 );

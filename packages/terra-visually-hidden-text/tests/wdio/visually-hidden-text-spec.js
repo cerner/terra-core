@@ -7,4 +7,10 @@ describe('VisuallyHiddenText', () => {
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
+
+  describe('NonNull', () => {
+    before(() => browser.url('/#/raw/tests/terra-visually-hidden-text/visually-hidden-text/non-null-visually-hidden-text'));
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
 });

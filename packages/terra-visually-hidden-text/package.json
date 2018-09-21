@@ -2,7 +2,7 @@
   "name": "terra-visually-hidden-text",
   "main": "lib/VisuallyHiddenText.js",
   "version": "0.0.0",
-  "description": "{insert description}",
+  "description": "Text that is designed to only be read by a screen reader.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"

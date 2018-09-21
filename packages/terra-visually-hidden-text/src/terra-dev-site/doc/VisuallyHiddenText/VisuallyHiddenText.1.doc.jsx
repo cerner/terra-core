@@ -10,8 +10,6 @@ import VisuallyHiddenTextSrc from '!raw-loader!../../../../src/VisuallyHiddenTex
 // Example Files
 import DefaultVisuallyHiddenText from '../example/DefaultVisuallyHiddenText';
 import DefaultVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultVisuallyHiddenText.jsx';
-import NonNullVisuallyHiddenText from '../example/NonNullVisuallyHiddenText';
-import NonNullVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NonNullVisuallyHiddenText.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -23,11 +21,6 @@ const DocPage = () => (
         title: 'VisuallyHiddenText with empty string',
         example: <DefaultVisuallyHiddenText />,
         source: DefaultVisuallyHiddenTextSrc,
-      },
-      {
-        title: 'VisuallyHiddenText with non null string',
-        example: <NonNullVisuallyHiddenText />,
-        source: NonNullVisuallyHiddenTextSrc,
       },
     ]}
     propsTables={[
