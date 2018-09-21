@@ -16,7 +16,10 @@ class OnCloseShowHide extends React.Component {
     return (
       <div>
         <div id="on-close-event">
-          <h3>Times Closed: {this.state.timesClosed}</h3>
+          <h3>
+            Times Closed:
+            {this.state.timesClosed}
+          </h3>
         </div>
         <ShowHide id="onCloseShowHide" preview="ShowHide" onClose={this.handleOnClose}>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

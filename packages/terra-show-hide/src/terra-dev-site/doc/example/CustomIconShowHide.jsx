@@ -7,7 +7,7 @@ const fullText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut en
 const previewText = fullText.substring(0, 280);
 
 const CustomIconShowHide = () => (
-  <ShowHide preview={previewText} icon={<IconTrophy />} >
+  <ShowHide preview={previewText} icon={<IconTrophy />}>
     {fullText}
   </ShowHide>
 );

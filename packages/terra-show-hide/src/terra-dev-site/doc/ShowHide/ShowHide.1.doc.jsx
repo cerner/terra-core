@@ -52,10 +52,10 @@ const DocPage = () => (
       },
     ]}
     propsTables={[
-        {
-          componentName: 'ShowHide',
-          componentSrc: ShowHideSrc,
-        },
+      {
+        componentName: 'ShowHide',
+        componentSrc: ShowHideSrc,
+      },
     ]}
   />
 );
