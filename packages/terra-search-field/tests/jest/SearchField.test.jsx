@@ -44,6 +44,11 @@ describe('Snapshots', () => {
     expect(searchField.find('Input').props().refCallback).toBeCalled();
     expect(searchField).toMatchSnapshot();
   });
+
+  it('renders a search field with an aria-label', () => {
+    const searchField = shallow(<SearchField inputAttributes={{ 'aria-label': 'Search Field' }} />, intlContexts.shallowContext);
+    expect(searchField).toMatchSnapshot();
+  });
 });
 
 describe('Manual Search', () => {
