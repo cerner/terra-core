@@ -1,5 +1,3 @@
-/* global browser, before, Terra */
-
 /* eslint-disable no-unused-expressions */
 const moment = require('moment-timezone');
 

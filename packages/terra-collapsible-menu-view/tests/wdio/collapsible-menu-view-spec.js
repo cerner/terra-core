@@ -1,5 +1,3 @@
-/* global browser, before, Terra */
-
 describe('Collapsible Menu View', () => {
   Terra.viewports().forEach((viewport) => {
     describe('Responsive', () => {

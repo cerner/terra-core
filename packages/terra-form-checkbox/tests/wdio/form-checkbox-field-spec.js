@@ -1,5 +1,3 @@
-/* global before, browser, Terra */
-
 const viewports = Terra.viewports('tiny', 'large');
 
 describe('CheckboxField', () => {

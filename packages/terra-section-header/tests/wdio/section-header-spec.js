@@ -1,5 +1,3 @@
-/* global before, browser, Terra */
-
 describe('SectionHeader', () => {
   describe('Default Section Header', () => {
     before(() => browser.url('/#/raw/tests/terra-section-header/section-header/default-section-header'));
