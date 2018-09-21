@@ -52,6 +52,11 @@
         background-image: var(--terra-search-field-button-active-background-image);
         border-color: var(--terra-search-field-button-active-border-color, #52585b);
       }
+
+      &:disabled {
+        background-color: var(--terra-search-field-button-disabled-background-color);
+        border-color: var(--terra-search-field-button-disabled-border-color, #dedfe0);
+      }
     }
   }
 
