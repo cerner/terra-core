@@ -1,8 +1,8 @@
 # Terra Show Hide
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-show-hide.svg)](https://www.npmjs.org/package/terra-show-hide)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-show-hide)](https://www.npmjs.org/package/terra-abstract-modal)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 Show Hide component that will show a preview of content or show the full content with the click of a button.
 
