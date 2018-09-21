@@ -59,6 +59,12 @@ const defaultProps = {
   isInitiallyOpen: false,
 };
 
+const animatedStyle = {
+  // fix for the toggle oscillation when setting isAnimated to true
+  transitionDelay: '0.3s',
+  WebkitTransitionDelay: '0.3s', /* Safari */
+};
+
 class ShowHide extends React.Component {
   constructor(props) {
     super(props);
@@ -131,11 +137,7 @@ class ShowHide extends React.Component {
     let isAnimatedStyle = {};
 
     if (this.props.isAnimated) {
-      isAnimatedStyle = {
-        // fix for the toggle oscillation when setting isAnimated to true
-        transitionDelay: '0.3s',
-        WebkitTransitionDelay: '0.3s', /* Safari */
-      };
+      isAnimatedStyle = animatedStyle;
     }
 
     return (
