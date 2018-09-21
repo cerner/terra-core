@@ -41,6 +41,7 @@
         border-color: var(--terra-search-field-button-focus-border-color, #c8cacb);
         box-shadow: var(--terra-search-field-button-focus-box-shadow);
         outline: none;
+        z-index: var(--terra-search-field-button-focus-z-index);
       }
 
       &:hover {
@@ -54,6 +55,7 @@
         background-image: var(--terra-search-field-button-active-background-image);
         border-color: var(--terra-search-field-button-active-border-color, #52585b);
         box-shadow: var(--terra-search-field-button-active-box-shadow);
+        z-index: var(--terra-search-field-button-active-z-index);
       }
 
       &:disabled {
