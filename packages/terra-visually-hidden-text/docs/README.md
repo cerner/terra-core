@@ -15,15 +15,6 @@ In these instances, it's recommended to use visually hidden text.
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-visually-hidden-text`
 
-## Usage
-
-```jsx
-import React from 'react';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
-
-<VisuallyHiddenText text="Press Escape to close this window" {props...} />
-```
-
 ## Component Features
 
  * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
