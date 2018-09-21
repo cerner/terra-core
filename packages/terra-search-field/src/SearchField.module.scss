@@ -45,6 +45,7 @@
       &:hover {
         background-color: var(--terra-search-field-button-hover-background-color, #b9bbbc);
         border-color: var(--terra-search-field-button-hover-border-color, #c8cacb);
+        box-shadow: var(--terra-search-field-button-hover-box-shadow);
       }
 
       &:active {
