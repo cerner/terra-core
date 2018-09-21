@@ -125,15 +125,6 @@ class ShowHide extends React.Component {
       }
     }
 
-    const button = (
-      <Button
-        icon={<span className={cx('icon')}>{icon}</span>}
-        aria-expanded={this.state.isOpen}
-        text={buttonText}
-        onClick={this.handleOnClick}
-      />
-    );
-
     let isAnimatedStyle = {};
 
     if (this.props.isAnimated) {
@@ -146,7 +137,12 @@ class ShowHide extends React.Component {
         <Toggle isOpen={this.state.isOpen} isAnimated={this.props.isAnimated} style={isAnimatedStyle}>
           {this.props.children}
         </Toggle>
-        {button}
+        <Button
+          icon={<span className={cx('icon')}>{icon}</span>}
+          aria-expanded={this.state.isOpen}
+          text={buttonText}
+          onClick={this.handleOnClick}
+        />
       </div>
     );
   }
