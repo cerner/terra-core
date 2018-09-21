@@ -33,6 +33,14 @@
         color: var(--terra-from-textarea-focus-color, #000);
         outline: none;
         z-index: 1;
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-search-field-focus-keyboard-box-shadow-ltr);
+        }
+
+        [dir=rtl] & {
+          box-shadow: var(--terra-search-field-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
+        }
       }
     }
 
@@ -49,22 +57,20 @@
       margin-right: var(--terra-search-field-button-margin-right, 0);
       margin-top: var(--terra-search-field-button-margin-top, 0);
 
-      &:focus {
-        background-color: var(--terra-search-field-button-focus-background-color, #dedfe0);
-        border-color: var(--terra-search-field-button-focus-border-color, #c8cacb);
-        // box-shadow: var(--terra-search-field-button-focus-box-shadow);
-        outline: none;
-      }
-
       &:hover {
         background-color: var(--terra-search-field-button-hover-background-color, #b9bbbc);
         border-color: var(--terrra-search-field-button-hover-border-color, #c8cacb);
       }
-
-      &:active {
+       &:active {
         background-color: var(--terra-search-field-button-active-background-color, #6f7477);
         border-color: var(--terra-search-field-button-active-border-color, #52585b);
-        color: var(--terra-search-field-button-active-color, #fff);
+        color: #fff;
+      }
+       &:focus {
+        background-color: var(--terra-search-field-button-focus-background-color, #dedfe0);
+        border-color: var(--terra-search-field-button-focus-border-color, #c8cacb);
+        box-shadow: var(--terra-search-field-button-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+        outline: none;
       }
     }
   }
