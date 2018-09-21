@@ -75,6 +75,12 @@ const propTypes = {
    * Callback ref to pass into the inner input component.
    */
   inputRefCallback: PropTypes.func,
+
+  /**
+   * Custom input attributes to apply to the input field such as aria-label.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  inputAttributes: PropTypes.object,
 };
 
 const defaultProps = {
@@ -86,6 +92,7 @@ const defaultProps = {
   placeholder: '',
   searchDelay: 250,
   value: undefined,
+  inputAttributes: undefined,
 };
 
 const contextTypes = {
@@ -177,6 +184,7 @@ class SearchField extends React.Component {
       onSearch,
       value,
       inputRefCallback,
+      inputAttributes,
       ...customProps
     } = this.props;
     const searchFieldClassNames = cx([
@@ -185,14 +193,16 @@ class SearchField extends React.Component {
       customProps.className,
     ]);
 
-    const additionalInputAttributes = {};
+    const valueTemp = {};
     if (value !== undefined) {
-      additionalInputAttributes.value = value;
+      valueTemp.value = value;
     } else {
-      additionalInputAttributes.defaultValue = defaultValue;
+      valueTemp.defaultValue = defaultValue;
     }
 
-    const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
+    const inputText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
+    const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
+    const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes, valueTemp);
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
