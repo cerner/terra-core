@@ -27,12 +27,31 @@
       border-bottom-right-radius: var(--terra-search-field-button-border-bottom-right-radius, 3px);
       border-top-left-radius: 0;
       border-top-right-radius: var(--terra-search-field-button-border-top-right-radius, 3px);
+      box-shadow: var(--terra-search-field-button-box-shadow);
       display: inline-block;
       flex: 0 0 auto;
       margin-bottom: var(--terra-search-field-button-margin-bottom, 0);
       margin-left: var(--terra-search-field-button-margin-left, -1px);
       margin-right: var(--terra-search-field-button-margin-right, 0);
       margin-top: var(--terra-search-field-button-margin-top, 0);
+
+      &:focus {
+        background-color: var(--terra-search-field-button-focus-background-color, #dedfe0);
+        border-color: var(--terra-search-field-button-focus-border-color, #c8cacb);
+        box-shadow: var(--terra-search-field-button-focus-box-shadow);
+        outline: none;
+      }
+
+      &:hover {
+        background-color: var(--terra-search-field-button-hover-background-color, #b9bbbc);
+        border-color: var(--terrra-search-field-button-hover-border-color, #c8cacb);
+      }
+
+      &:active {
+        background-color: var(--terra-search-field-button-active-background-color, #6f7477);
+        background-image: var(--terra-search-field-button-active-background-image);
+        border-color: var(--terra-search-field-button-active-border-color, #52585b);
+      }
     }
   }
 
