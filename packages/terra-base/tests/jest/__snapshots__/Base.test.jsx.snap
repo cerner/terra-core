@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render with stict mode when strict mode enabled 1`] = `
+<div>
+  <StrictMode>
+    String
+  </StrictMode>
+</div>
+`;
+
 exports[`should support rendering a string without translation 1`] = `
 <div>
   String
