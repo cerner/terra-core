@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 describe('DocTemplate', () => {
   before(() => browser.setViewportSize(Terra.viewports('huge')[0]));
 

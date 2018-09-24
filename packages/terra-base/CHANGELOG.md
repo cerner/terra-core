@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added `strictMode` prop
 
 3.22.3 - (September 13, 2018)
 ------------------

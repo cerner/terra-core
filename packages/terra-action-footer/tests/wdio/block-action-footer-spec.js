@@ -1,4 +1,3 @@
-/* global browser, Terra */
 const {
   viewports,
   withActionsThemeables,

@@ -1,5 +1,3 @@
-/* global browser, Terra, before */
-
 describe('Legacy Theme', () => {
   before(() => browser.setViewportSize(Terra.viewports('large')[0]));
 

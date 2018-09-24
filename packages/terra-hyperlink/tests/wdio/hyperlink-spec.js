@@ -1,5 +1,3 @@
-/* global browser, Terra, before */
-
 describe('Hyperlink', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 

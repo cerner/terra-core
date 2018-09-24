@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 describe('Icon', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
   describe('Default', () => {
