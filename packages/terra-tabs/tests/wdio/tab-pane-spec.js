@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 describe('TabPane', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 

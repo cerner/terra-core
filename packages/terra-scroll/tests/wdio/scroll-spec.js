@@ -1,5 +1,3 @@
-/* global browser, before, Terra */
-
 describe('Scroll', () => {
   before(() => {
     browser.url('/#/raw/tests/terra-scroll/scroll/default');

@@ -12,6 +12,7 @@ Unreleased
 3.20.0 - (September 5, 2018)
 ------------------
 ### Changed
+* Removed test restrictions on accessibility since that issue was fixed.
 * Bumped minimum react peerDependency version from ^16.2.0 to ^16.4.2
 * Bumped minimum react-dom peerDependency version from ^16.2.0 to ^16.4.2
 

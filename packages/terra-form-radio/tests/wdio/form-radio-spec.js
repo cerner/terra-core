@@ -1,5 +1,3 @@
-/* global before, browser, Terra */
-
 describe('Radio', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 

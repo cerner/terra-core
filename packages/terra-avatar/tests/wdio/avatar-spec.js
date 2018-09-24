@@ -1,5 +1,3 @@
-/* global before, browser, Terra */
-
 describe('Avatar', () => {
   describe('User', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/user-avatar'));

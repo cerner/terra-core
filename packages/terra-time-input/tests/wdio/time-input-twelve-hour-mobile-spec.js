@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 const viewports = Terra.viewports('medium');
 
 // Color contrast will be resolved in https://github.com/cerner/terra-core/issues/1670

@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 const viewports = Terra.viewports('tiny', 'large');
 
 const ignoredA11y = {
