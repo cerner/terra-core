@@ -146,6 +146,5 @@ describe('Show Hide', () => {
     it('should ', () => {
       browser.click('button');
     });
-
   });
 });

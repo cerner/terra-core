@@ -16,4 +16,9 @@
   .button-text {
     padding-left: 0.3rem;
   }
+
+  .animated[aria-hidden='false'] {
+    // fix for the toggle oscillation when setting isAnimated to true
+    transition-delay: 0.3s;
+  }
 }

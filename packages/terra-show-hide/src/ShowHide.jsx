@@ -59,12 +59,6 @@ const defaultProps = {
   isInitiallyOpen: false,
 };
 
-const animatedStyle = {
-  // fix for the toggle oscillation when setting isAnimated to true
-  transitionDelay: '0.3s',
-  WebkitTransitionDelay: '0.3s', /* Safari */
-};
-
 class ShowHide extends React.Component {
   constructor(props) {
     super(props);
@@ -125,16 +119,10 @@ class ShowHide extends React.Component {
       }
     }
 
-    let isAnimatedStyle = {};
-
-    if (this.props.isAnimated) {
-      isAnimatedStyle = animatedStyle;
-    }
-
     return (
       <div {...customProps} className={showHideClassName}>
         {!this.state.isOpen && previewText}
-        <Toggle isOpen={this.state.isOpen} isAnimated={this.props.isAnimated} style={isAnimatedStyle}>
+        <Toggle isOpen={this.state.isOpen} isAnimated={this.props.isAnimated} className={cx('animated', customProps.className)}>
           {this.props.children}
         </Toggle>
         <Button

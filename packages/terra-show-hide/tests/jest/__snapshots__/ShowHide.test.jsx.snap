@@ -7,8 +7,7 @@ exports[`ShowHide should render a default show-hide component 1`] = `
   Test...
   <div
     aria-hidden={true}
-    className="toggle"
-    style={Object {}}
+    className="toggle animated"
   />
   <button
     aria-disabled={false}
@@ -63,13 +62,7 @@ exports[`ShowHide should render an animated show-hide component 1`] = `
   Test...
   <div
     aria-hidden={true}
-    className="toggle"
-    style={
-      Object {
-        "WebkitTransitionDelay": "0.3s",
-        "transitionDelay": "0.3s",
-      }
-    }
+    className="toggle animated"
   >
     <div
       aria-hidden={false}
@@ -140,8 +133,7 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
 >
   <div
     aria-hidden={false}
-    className="toggle"
-    style={Object {}}
+    className="toggle animated"
   >
     Full Text
   </div>
@@ -197,8 +189,7 @@ exports[`ShowHide should render an open show-hide component when clicked 1`] = `
 >
   <div
     aria-hidden={false}
-    className="toggle"
-    style={Object {}}
+    className="toggle animated"
   >
     Full Text
   </div>
@@ -255,8 +246,7 @@ exports[`ShowHide should set icon prop correctly 1`] = `
   Test...
   <div
     aria-hidden={true}
-    className="toggle"
-    style={Object {}}
+    className="toggle animated"
   />
   <button
     aria-disabled={false}
@@ -311,8 +301,7 @@ exports[`ShowHide should set icon prop correctly with custom icon 1`] = `
   Test...
   <div
     aria-hidden={true}
-    className="toggle"
-    style={Object {}}
+    className="toggle animated"
   />
   <button
     aria-disabled={false}
