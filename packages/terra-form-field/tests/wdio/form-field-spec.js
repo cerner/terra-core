@@ -1,5 +1,3 @@
-/* global browser, Terra, before */
-
 describe('Form-field', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
