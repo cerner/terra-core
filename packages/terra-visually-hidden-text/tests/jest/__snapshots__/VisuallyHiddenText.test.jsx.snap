@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VisuallyHiddenText should render a default component 1`] = `
+<span
+  className="visually-hidden-text"
+>
+  This is screen reader only text
+</span>
+`;
