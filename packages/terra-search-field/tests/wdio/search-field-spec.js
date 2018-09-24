@@ -1,5 +1,3 @@
-/* global browser, Terra, before */
-
 describe('Search Field', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
