@@ -3,7 +3,7 @@ import React from 'react';
 import ProgressBar from 'terra-progress-bar/lib/ProgressBar';
 
 const ProgressBarDefault = () => (
-  <ProgressBar value={15} />
+  <ProgressBar valueText="15%" value={15} />
 );
 
 export default ProgressBarDefault;

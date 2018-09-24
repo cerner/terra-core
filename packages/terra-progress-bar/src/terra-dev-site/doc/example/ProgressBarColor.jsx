@@ -4,13 +4,13 @@ import ProgressBar from 'terra-progress-bar/lib/ProgressBar';
 
 const ProgressBarColor = () => (
   <div>
-    <ProgressBar value={5} max={10} color="Orange" />
+    <ProgressBar valueText="5%" value={5} max={10} color="Orange" />
     <br />
     <br />
-    <ProgressBar value={7.5} max={10} color="#8ccc62" />
+    <ProgressBar valueText="7.5%" value={7.5} max={10} color="#8ccc62" />
     <br />
     <br />
-    <ProgressBar value={10} max={10} color="rgb(255, 0, 0)" />
+    <ProgressBar valueText="10%" value={10} max={10} color="rgb(255, 0, 0)" />
   </div>
 );
 
