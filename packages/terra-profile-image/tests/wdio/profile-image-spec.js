@@ -1,5 +1,3 @@
-/* global browser, Terra, before */
-
 describe('Profile Image', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 

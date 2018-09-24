@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 const i18nSupportedLocales = require('../../src/i18nSupportedLocales');
 
 // Add Portuguese-Guinea-Bissau, Zulu & Zulu-South African locales as test locales (supported by intl)
