@@ -31,7 +31,8 @@
     flex: 1 1 auto;
     flex-direction: row;
     line-height: 1.2;
-    margin-left: var(--terra-alert-margin-left, 0.6667rem);
+    margin-left: var(--terra-alert-margin-left, 0.64285rem);
+    margin-right: var(--terra-alert-margin-right, 0.7143rem);
     margin-top: var(--terra-alert-margin-top, 0.7143rem);
     overflow: hidden;
     padding-top: 0;
@@ -39,18 +40,16 @@
 
   .body-narrow {
     margin-bottom: 0;
-    margin-right: var(--terra-alert-narrow-margin-right, 0.6667rem);
   }
 
   .body-std {
     margin-bottom: var(--terra-alert-std-margin-bottom, 0.7143rem);
-    margin-right: 0;
   }
 
   .section {
     flex: 1;
-    padding-bottom: var(--terra-alert-section-padding-bottom, 0.2143rem);
-    padding-top: var(--terra-alert-section-padding-top, 0.2143rem);
+    padding-bottom: var(--terra-alert-section-padding-bottom, 0.142857rem);
+    padding-top: var(--terra-alert-section-padding-top, 0.142857rem);
   }
 
   .section-custom {
@@ -59,9 +58,9 @@
 
   .title {
     display: var(--terra-alert-title-display);
-    float: var(--terra-alert-title-left, left);
+    float: var(--terra-alert-title-float, left);
     margin-bottom: var(--terra-alert-title-margin-bottom);
-    margin-right: var(--terra-alert-margin-right, 0.5833rem);
+    margin-right: var(--terra-alert-title-margin-right, 0.5833rem);
   }
 
   .actions {
@@ -71,8 +70,8 @@
     flex-shrink: 0;
     justify-content: flex-end;
     margin-bottom: var(--terra-alert-actions-margin-bottom, 0.4286rem);
-    margin-left: var(--terra-alert-actions-margin-left, 0.8333rem);
-    margin-right: var(--terra-alert-actions-margin-right, 0.5833rem);
+    margin-left: var(--terra-alert-actions-margin-left, 0.142857rem);
+    margin-right: var(--terra-alert-actions-margin-right, 0.5rem);
     margin-top: var(--terra-alert-actions-margin-top, 0.4286rem);
   }
 
