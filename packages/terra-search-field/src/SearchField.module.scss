@@ -35,6 +35,10 @@
       margin-left: var(--terra-search-field-button-margin-left, -1px);
       margin-right: var(--terra-search-field-button-margin-right, 0);
       margin-top: var(--terra-search-field-button-margin-top, 0);
+
+      &:focus {
+        box-shadow: var(--terra-search-field-button-focus-box-shadow);
+      }
     }
   }
 
