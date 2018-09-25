@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Exports for button types and variants added
 
+2.24.0 - (September 25, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.23.1 - (September 6, 2018)
 ------------------
 ### Changed

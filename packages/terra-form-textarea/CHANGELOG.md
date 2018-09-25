@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Export for textarea size added
 
+2.26.0 - (September 25, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.25.0 - (September 13, 2018)
 ------------------
 ### Fixed
