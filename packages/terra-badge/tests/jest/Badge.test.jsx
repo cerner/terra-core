@@ -38,6 +38,11 @@ it('should render a badge component in the order, text and icon with info intent
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a badge component with visually hidden text', () => {
+  const wrapper = shallow(<Badge text="3" visuallyHiddenText="Risk Score" />);
+  expect(wrapper).toMatchSnapshot();
+});
+
 // Prop Tests
 // With only text prop
 describe('Badge with only text', () => {

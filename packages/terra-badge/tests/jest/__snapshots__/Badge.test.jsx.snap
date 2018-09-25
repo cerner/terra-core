@@ -74,6 +74,22 @@ exports[`should render a badge component with text and secondary intent 1`] = `
 </span>
 `;
 
+exports[`should render a badge component with visually hidden text 1`] = `
+<span
+  className="badge small default"
+>
+  <VisuallyHiddenText
+    text="Risk Score"
+  />
+  <span
+    aria-label="Risk Score"
+    className="text"
+  >
+    3
+  </span>
+</span>
+`;
+
 exports[`should render a default component with nothing 1`] = `
 <span
   className="badge small default"

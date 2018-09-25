@@ -40,6 +40,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^1.15.1",
-    "terra-icon": "^2.22.1"
+    "terra-icon": "^2.22.1",
+    "terra-visually-hidden-text": "0.0.0"
   }
 }

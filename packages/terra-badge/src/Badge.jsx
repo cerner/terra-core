@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Badge.module.scss';
 
 const cx = classNames.bind(styles);
@@ -31,6 +32,11 @@ const propTypes = {
    * Sets the badge text.
    */
   text: PropTypes.string,
+  /**
+   * Text that describes the badge to a screen reader. Use this
+   * for creating an accessible badge.
+   */
+  visuallyHiddenText: PropTypes.string,
 };
 
 const defaultProps = {
@@ -40,6 +46,7 @@ const defaultProps = {
   isReversed: false,
   size: 'small',
   text: null,
+  visuallyHiddenText: undefined,
 };
 
 const Badge = ({
@@ -48,6 +55,7 @@ const Badge = ({
   isReversed,
   text,
   icon,
+  visuallyHiddenText,
   ...customProps
 }) => {
   const badgeClassNames = cx(
@@ -57,8 +65,9 @@ const Badge = ({
     customProps.className,
   );
 
-  const textContent = text ? <span className={styles.text}>{text}</span> : null;
-  const content = isReversed ? [textContent, icon, customProps.children] : [icon, textContent, customProps.children];
+  const textContent = text ? <span className={styles.text} aria-label={visuallyHiddenText}>{text}</span> : null;
+  const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
+  const content = isReversed ? [visuallyHiddenTextContent, textContent, icon, customProps.children] : [icon, visuallyHiddenTextContent, textContent, customProps.children];
   return React.createElement('span', { ...customProps, className: badgeClassNames }, ...content);
 };
 
