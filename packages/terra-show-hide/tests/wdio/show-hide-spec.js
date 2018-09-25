@@ -68,52 +68,6 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
-  describe('On Close Show Hide', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/on-close-show-hide'));
-
-    it('should not increment', () => {
-      browser.click('button');
-
-      // Ensures the on hover button styling is not displayed
-      browser.click('div*=Times');
-    });
-
-    Terra.should.matchScreenshot('expanded');
-
-    it('should increment', () => {
-      browser.click('button');
-
-      // Ensures the on hover button styling is not displayed
-      browser.click('div*=Times');
-    });
-
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
-  });
-
-  describe('On Open Show Hide', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/on-open-show-hide'));
-
-    it('should increment', () => {
-      browser.click('button');
-
-      // Ensures the on hover button styling is not displayed
-      browser.click('div*=Times');
-    });
-
-    Terra.should.matchScreenshot('expanded');
-
-    it('should not increment', () => {
-      browser.click('button');
-
-      // Ensures the on hover button styling is not displayed
-      browser.click('div*=Times');
-    });
-
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
-  });
-
   describe('Custom css properties', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/states-show-hide'));
 

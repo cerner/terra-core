@@ -16,6 +16,10 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
+   * Callback function triggered when the component is expanded or collapsed
+   */
+  onToggle: PropTypes.func.isRequired,
+  /**
    * Text that will be visible to the user while the component is collapsed
    */
   preview: PropTypes.string.isRequired,
@@ -40,48 +44,26 @@ const propTypes = {
    */
   isAnimated: PropTypes.bool,
   /**
-   * Sets the initial state of the component to open and expanded
+   * Allows parent to toggle the component. True for open and false for close.
    */
-  isInitiallyOpen: PropTypes.bool,
-  /**
-   * Callback function triggered when the component is collapsed
-   */
-  onClose: PropTypes.func,
-  /**
-   * Callback function triggered when the component is expanded
-   */
-  onOpen: PropTypes.func,
+  toggle: PropTypes.bool,
 };
 
 const defaultProps = {
   icon: <IconChevronDown />,
   isAnimated: false,
-  isInitiallyOpen: false,
+  toggle: false,
 };
 
 class ShowHide extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isOpen: props.isInitiallyOpen,
-    };
-
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   handleOnClick(e) {
     e.preventDefault();
-
-    // Fire event from toggle handlers
-    if (!this.state.isOpen && this.props.onOpen) {
-      this.props.onOpen();
-    } else if (this.state.isOpen && this.props.onClose) {
-      this.props.onClose();
-    }
-
-    this.setState(prevState => ({
-      isOpen: !prevState.isOpen,
-    }));
+    this.props.onToggle();
   }
 
   render() {
@@ -92,20 +74,19 @@ class ShowHide extends React.Component {
       icon,
       intl,
       isAnimated,
-      isInitiallyOpen,
-      onClose,
-      onOpen,
+      onToggle,
       preview,
+      toggle,
       ...customProps
     } = this.props;
 
     const collapsedText = (collapsedButtonText === undefined) ? intl.formatMessage({ id: 'Terra.showhide.showmore' }) : collapsedButtonText;
     const expandedText = (expandedButtonText === undefined) ? intl.formatMessage({ id: 'Terra.showhide.hide' }) : expandedButtonText;
-    const buttonText = !this.state.isOpen ? collapsedText : expandedText;
+    const buttonText = this.props.toggle ? expandedText : collapsedText;
 
     const showHideClassName = cx([
       'button',
-      { 'is-open': this.state.isOpen },
+      { 'is-open': this.props.toggle },
       customProps.className,
     ]);
 
@@ -121,13 +102,13 @@ class ShowHide extends React.Component {
 
     return (
       <div {...customProps} className={showHideClassName}>
-        {!this.state.isOpen && previewText}
-        <Toggle isOpen={this.state.isOpen} isAnimated={this.props.isAnimated} className={cx('animated', customProps.className)}>
+        {!this.props.toggle && previewText}
+        <Toggle isOpen={this.props.toggle} isAnimated={this.props.isAnimated} className={cx([{ animated: this.props.isAnimated }])}>
           {this.props.children}
         </Toggle>
         <Button
           icon={<span className={cx('icon')}>{icon}</span>}
-          aria-expanded={this.state.isOpen}
+          aria-expanded={this.props.toggle}
           text={buttonText}
           onClick={this.handleOnClick}
         />
