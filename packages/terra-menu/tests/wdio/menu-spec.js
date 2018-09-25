@@ -1,5 +1,3 @@
-/* global browser, describe, it, before, expect, Terra */
-
 const ignoredA11y = {
   // Issue logged here: https://github.com/cerner/terra-core/issues/1585
   'button-name': { enabled: false },

@@ -1,5 +1,3 @@
-/* global browser, Terra, before */
-
 describe('Progress Bar', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
