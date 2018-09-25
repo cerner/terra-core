@@ -61,6 +61,7 @@
     &.tab-fill .collapsible-tabs-container:not(.is-calculating) {
       .tab,
       .tab-menu {
+        border-radius: var(--terra-tabs-structural-extended-tabs-border-radius);
         flex: 1 1 auto;
       }
     }
