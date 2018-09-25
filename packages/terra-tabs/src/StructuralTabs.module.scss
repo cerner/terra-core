@@ -45,7 +45,7 @@
         // However in the scenario where you need to also set the background image as a gradient to give a transparent
         // affect and make it 100% height, but you then can't use it for the blue stripe.
         &::before {
-          background: var(--terra-tabs-structural-before-content-background, linear-gradient(to bottom, pink, purple));
+          background: var(--terra-tabs-structural-before-content-background, none);
           content: '';
           display: block;
           height: var(--terra-tabs-structural-before-content-height, 0);
@@ -140,7 +140,7 @@
     .collapsible-tabs-container:focus .is-active,
     .tab-menu:focus.is-active {
       background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
-      background-image: var(--terra-tabs-structural-active-focus-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+      background-image: var(--terra-tabs-structural-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
       color: var(--terra-tabs-structural-active-focus-color, inherit);
       position: relative;
       z-index: 1;
