@@ -91,7 +91,6 @@
         position: relative;
 
         &::before {
-          background-image: var(--terra-tabs-structural-active-background-image, linear-gradient(to bottom, #c8cacb, #c8cacb));
           transition-duration: var(--terra-tabs-structural-transition-duration, 0);
           transition-property: width;
           transition-timing-function: var(--terra-tabs-structural-transition-timing, ease);
