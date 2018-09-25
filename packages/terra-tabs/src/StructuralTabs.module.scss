@@ -156,6 +156,7 @@
 
     .tab-menu:focus {
       background-color: var(--terra-tabs-structural-focus-background-color, #fff);
+      background-image: var(--terra-tabs-structural-focus-background-image);
       color: var(--terra-tabs-structural-focus-color, inherit);
       outline: none;
 
