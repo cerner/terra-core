@@ -12,27 +12,27 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Content in the body of the component that will be shown or hidden
+   * Content in the body of the component that will be shown or hidden.
    */
   children: PropTypes.node.isRequired,
   /**
-   * Callback function triggered when the component is expanded or collapsed
+   * Callback function triggered when the component is expanded or collapsed.
    */
   onToggle: PropTypes.func.isRequired,
   /**
-   * Text that will be visible to the user while the component is collapsed
+   * Text that will be visible to the user while the component is collapsed.
    */
   preview: PropTypes.string.isRequired,
   /**
-   * Button text that will be displayed when the component is collapsed
+   * Button text that will be displayed when the component is collapsed.
    */
   collapsedButtonText: PropTypes.string,
   /**
-   * Button text that will be displayed when the component is expanded
+   * Button text that will be displayed when the component is expanded.
    */
   expandedButtonText: PropTypes.string,
   /**
-   * Icon displayed next to the button text
+   * Icon displayed next to the button text.
    */
   icon: PropTypes.element,
   /**
@@ -40,7 +40,7 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Sets the animation for the component when it is expanded or collapsed
+   * Sets the animation for the component when it is expanded or collapsed.
    */
   isAnimated: PropTypes.bool,
   /**
