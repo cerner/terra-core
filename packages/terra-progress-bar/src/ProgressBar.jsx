@@ -6,7 +6,13 @@ import styles from './ProgressBar.module.scss';
 
 const cx = classNames.bind(styles);
 
-const ProgressBarHeightSize = ['tiny', 'small', 'medium', 'large', 'huge'];
+const ProgressBarHeightSize = {
+  TINY: 'tiny',
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+  HUGE: 'huge',
+};
 
 const propTypes = {
   /**

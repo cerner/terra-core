@@ -6,9 +6,23 @@ import styles from './Badge.module.scss';
 
 const cx = classNames.bind(styles);
 
-const BadgeScheme = ['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative'];
+const BadgeIntent = {
+  DEFAULT: 'default',
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  INFO: 'info',
+  WARNING: 'warning',
+  POSITIVE: 'positive',
+  NEGATIVE: 'negative',
+};
 
-const BadgeSize = ['tiny', 'small', 'medium', 'large', 'huge'];
+const BadgeSize = {
+  TINY: 'tiny',
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+  HUGE: 'huge',
+};
 
 const propTypes = {
   /**
@@ -22,7 +36,7 @@ const propTypes = {
   /**
    * Sets the badge color scheme. One of `default`, `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
    */
-  intent: PropTypes.oneOf(BadgeScheme),
+  intent: PropTypes.oneOf(BadgeIntent),
   /**
    * Reverses the position of the icon and text.
    */
@@ -70,4 +84,4 @@ Badge.propTypes = propTypes;
 Badge.defaultProps = defaultProps;
 
 export default Badge;
-export { BadgeScheme, BadgeSize };
+export { BadgeIntent, BadgeSize };

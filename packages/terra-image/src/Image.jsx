@@ -6,7 +6,12 @@ import styles from './Image.module.scss';
 
 const cx = classNames.bind(styles);
 
-const ImageVariant = ['default', 'rounded', 'circle', 'thumbnail'];
+const ImageVariant = {
+  DEFAULT: 'default',
+  ROUNDED: 'rounded',
+  CIRCLE: 'circle',
+  THUMBNAIL: 'thumbnail',
+};
 
 const propTypes = {
   /**

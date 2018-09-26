@@ -6,9 +6,25 @@ import styles from './Text.module.scss';
 
 const cx = classNames.bind(styles);
 
-const TextFontSize = [10, 12, 14, 16, 18, 20, 24, 32, 100];
+/* eslint-disable quote-props */
+const TextFontSize = {
+  '10': 10,
+  '12': 12,
+  '14': 14,
+  '16': 16,
+  '18': 18,
+  '20': 20,
+  '24': 24,
+  '32': 32,
+  '100': 100,
+};
 
-const TextWeight = [200, 400, 700];
+const TextWeight = {
+  '200': 200,
+  '400': 400,
+  '700': 700,
+};
+/* eslint-enable quote-props */
 
 const propTypes = {
   /**

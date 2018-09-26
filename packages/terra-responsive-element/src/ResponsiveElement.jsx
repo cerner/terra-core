@@ -4,7 +4,11 @@ import ResizeObserver from 'resize-observer-polyfill';
 import 'terra-base/lib/baseStyles';
 import breakpoints from './breakpoints.module.scss';
 
-const ResponsiveElementResponsiveTo = ['window', 'parent'];
+const ResponsiveElementResponsiveTo = {
+  WINDOW: 'window',
+  PARENT: 'parent',
+};
+
 /* Disabled for the defaultElement which is used implicitly */
 /* eslint-disable react/no-unused-prop-types */
 const propTypes = {

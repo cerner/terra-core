@@ -8,9 +8,18 @@ import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);
 
-const TableHeaderCellMinWidth = ['tiny', 'small', 'medium', 'large', 'huge'];
+const TableHeaderCellMinWidth = {
+  TINY: 'tiny',
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+  HUGE: 'huge',
+};
 
-const TableHeaderCellSort = ['asc', 'desc'];
+const TableHeaderCellSort = {
+  ASC: 'asc',
+  DESC: 'desc',
+};
 
 const propTypes = {
   /**

@@ -4,7 +4,12 @@ import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Arrange.module.scss';
 
-const AlignmentTypes = ['center', 'bottom', 'stretch'];
+const AlignmentTypes = {
+  CENTER: 'center',
+  BOTTOM: 'bottom',
+  STRETCH: 'stretch',
+};
+
 const cx = classNames.bind(styles);
 
 const propTypes = {
