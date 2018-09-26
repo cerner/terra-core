@@ -4,7 +4,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import 'terra-base/lib/baseStyles';
 import breakpoints from './breakpoints.module.scss';
 
-const ResponsiveElementResponsiveTo = {
+const DependentViewport = {
   WINDOW: 'window',
   PARENT: 'parent',
 };
@@ -39,11 +39,11 @@ const propTypes = {
   /**
    * The viewport the element will be responsive to. One of `window` or `parent`.
    */
-  responsiveTo: PropTypes.oneOf([ResponsiveElementResponsiveTo.WINDOW, ResponsiveElementResponsiveTo.PARENT]),
+  responsiveTo: PropTypes.oneOf([DependentViewport.WINDOW, DependentViewport.PARENT]),
 };
 
 const defaultProps = {
-  responsiveTo: ResponsiveElementResponsiveTo.PARENT,
+  responsiveTo: DependentViewport.PARENT,
 };
 
 class ResponsiveElement extends React.Component {
@@ -127,4 +127,4 @@ ResponsiveElement.propTypes = propTypes;
 ResponsiveElement.defaultProps = defaultProps;
 
 export default ResponsiveElement;
-export { ResponsiveElementResponsiveTo };
+export { DependentViewport };
