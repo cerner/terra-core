@@ -25,7 +25,8 @@ const propTypes = {
   variant: PropTypes.oneOf([...Object.values(CardVariants)]),
   /**
    * Text that describes the badge to a screen reader. Use this
-   * for creating an accessible badge.
+   * if more information is needed to accurately describe
+   * this card to screen reader users.
    */
   visuallyHiddenText: PropTypes.string,
 };
