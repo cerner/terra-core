@@ -27,10 +27,6 @@
   // List Item Component
   // ========================================================
 
-  .arrange-content {
-    width: 100%; // Removing this will break things in IE See: https://github.com/cerner/terra-core/pull/1592
-  }
-
   .chevron {
     display: flex;
     padding-left: 10px;
@@ -76,6 +72,23 @@
     &.selected:focus {
       background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
+  }
+
+  .item-has-cheverom {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .item-fill {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .item-end {
+    flex: 0 0 auto;
   }
 }
 /* stylelint-enable */

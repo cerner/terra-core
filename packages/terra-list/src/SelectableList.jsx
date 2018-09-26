@@ -28,10 +28,9 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * An array of the currectly selected indexes.
+   * Array of keys associated to selected list items
    */
-  // eslint-disable-next-line react/forbid-prop-types
-  selectedIndexes: PropTypes.array,
+  selectedKeys: PropTypes.arrayOf(PropTypes.string),
 };
 
 const defaultProps = {
@@ -40,7 +39,7 @@ const defaultProps = {
   isDivided: false,
   hasChevrons: false,
   onChange: undefined,
-  selectedIndexes: [],
+  selectedIndexPaths: [],
 };
 
 const SelectableList = ({
@@ -49,13 +48,11 @@ const SelectableList = ({
   isDivided,
   onChange,
   hasChevrons,
-  selectedIndexes,
+  selectedIndexPaths,
   ...customProps
 }) => {
   const clonedChildren = React.Children.map(children, (child, index) => {
-    const wrappedOnClick = SelectableUtils.wrappedOnClickForItem(child, index, onChange);
-    const wrappedOnKeyDown = SelectableUtils.wrappedOnKeyDownForItem(child, index, onChange);
-    const newProps = SelectableUtils.newPropsForItem(child, index, wrappedOnClick, wrappedOnKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems);
+    const newProps = SelectableUtils.newPropsForItem(child, index, onChange, hasChevrons, selectedIndexPaths, disableUnselectedItems, true);
     return React.cloneElement(child, newProps);
   });
 

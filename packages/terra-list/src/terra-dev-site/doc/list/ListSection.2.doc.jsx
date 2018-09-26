@@ -1,15 +1,15 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/SingleSelect.md';
+import ReadMe from '../../../../docs/ListSection.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import SingleSelectSrc from '!raw-loader!terra-list/src/SingleSelectList';
+import ListSectionSrc from '!raw-loader!../../../../src/ListSection';
 
-// Example File
-import SingleSelectExamples from '../example/SingleSelect';
-import SingleSelectExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleSelect';
+// Example Files
+import ListSectionExample from '../example/ListSection';
+import ListSectionExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListSection';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -19,15 +19,14 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Single Selectable List',
-        example: <SingleSelectExamples />,
-        source: SingleSelectExamplesSrc,
+        example: <ListSectionExample />,
+        source: ListSectionExamplesSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'Single Selectable List',
-        componentSrc: SingleSelectSrc,
+        componentName: 'List-Section',
+        componentSrc: ListSectionSrc,
       },
     ]}
   />
