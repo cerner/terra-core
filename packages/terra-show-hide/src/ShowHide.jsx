@@ -90,19 +90,9 @@ class ShowHide extends React.Component {
       customProps.className,
     ]);
 
-    let previewText = '';
-
-    if (preview) {
-      if (preview.slice(-1) === '.') {
-        previewText = `${preview}..`;
-      } else {
-        previewText = `${preview}...`;
-      }
-    }
-
     return (
       <div {...customProps} className={showHideClassName}>
-        {!this.props.toggle && previewText}
+        {!this.props.toggle && preview}
         <Toggle isOpen={this.props.toggle} isAnimated={this.props.isAnimated} className={cx([{ animated: this.props.isAnimated }])}>
           {this.props.children}
         </Toggle>
