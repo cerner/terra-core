@@ -24,9 +24,8 @@ describe('Dialog', () => {
 });
 
 it('throws error on missing locale prop in Base', () => {
-  try {
-    render(<Dialog header="Header Content" footer="Footer Content" />);
-  } catch (e) {
-    expect(e.message).toContain('Component is internationalized, and must be wrapped in terra-base');
-  }
+  global.console = { error: jest.fn() };
+
+  expect(render(<Dialog header="Header Content" footer="Footer Content" />)).toThrowError();
+  expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
 });
