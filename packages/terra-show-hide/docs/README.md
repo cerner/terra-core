@@ -20,11 +20,10 @@ import ShowHide from 'terra-show-hide';
 
 ## Component Features
 
-<!-- Uncomment supported features.
- * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
- * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
- * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
- * [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
- * [Localization Support](https://github.com/cerner/terra-core/wiki/Component-Features#localization-support)
- * [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
- -->
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
+ * [Responsive Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
+ * [Mobile Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
+ * [Internationalization Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
+ * [Localization Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
+ * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
+
