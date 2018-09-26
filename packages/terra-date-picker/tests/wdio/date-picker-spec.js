@@ -1,5 +1,3 @@
-/* global browser, before, Terra */
-
 const ignoredA11y = {
   'color-contrast': { enabled: false },
   label: { enabled: false },

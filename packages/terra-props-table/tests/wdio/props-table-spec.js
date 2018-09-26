@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 const viewports = Terra.viewports('medium', 'large');
 
 describe('Props Table', () => {

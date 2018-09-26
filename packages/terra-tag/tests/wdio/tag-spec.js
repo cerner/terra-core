@@ -1,4 +1,3 @@
-/* global before, browser, Terra */
 const viewports = Terra.viewports('tiny', 'medium', 'large');
 
 describe('Tag', () => {
