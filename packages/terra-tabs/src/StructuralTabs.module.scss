@@ -19,6 +19,24 @@
       border-bottom-width: 1px;
       border-radius: var(--terra-tabs-structural-collapsed-menu-bar-border-radius, 0);
 
+      .tab,
+      .tab-menu {
+        position: var(--terra-tabs-structural-collapsed-position, static);
+        // Typically we use the background image to set a blue stripe and animate it...
+        // However in the scenario where you need to also set the background image as a gradient to give a transparent
+        // affect and make it 100% height, but you then can't use it for the blue stripe.
+        &::before {
+          background: var(--terra-tabs-structural-collapsed-before-content-background, none);
+          content: '';
+          display: block;
+          height: var(--terra-tabs-structural-collapsed-before-content-height, 0);
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 0%;
+        }
+      }
+
       .tab-menu:focus {
         outline: none;
       }
@@ -37,7 +55,6 @@
       border-bottom-style: solid;
       border-bottom-width: var(--terra-tabs-structural-tab-bar-border-width, 1px);
 
-      // Only target the tabs when in collapsible-tabs-container. When it is collapsed, the menu shouldn't have the stripe
       .tab,
       .tab-menu {
         position: var(--terra-tabs-structural-position, static);
