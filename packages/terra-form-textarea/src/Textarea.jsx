@@ -71,7 +71,7 @@ const propTypes = {
    * The size of the textarea. Sizes the textarea by setting the rows attribute to the number corresponding
    * to this value.
    */
-  size: PropTypes.oneOf(TextareaSize),
+  size: PropTypes.oneOf([TextareaSize.SMALL, TextareaSize.MEDIUM, TextareaSize.LARGE, TextareaSize.FULL]),
   /**
    * The value of the textarea. Use this to create a controlled textarea.
    */
@@ -92,7 +92,7 @@ const defaultProps = {
   onChange: undefined,
   required: false,
   rows: null,
-  size: 'small',
+  size: TextareaSize.SMALL,
   value: undefined,
   refCallback: undefined,
 };

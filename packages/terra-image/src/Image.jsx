@@ -21,7 +21,7 @@ const propTypes = {
   /**
    * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`.
    */
-  variant: PropTypes.oneOf(ImageVariant),
+  variant: PropTypes.oneOf([ImageVariant.DEFAULT, ImageVariant.ROUNDED, ImageVariant.CIRCLE, ImageVariant.THUMBNAIL]),
   /**
    * Sets the fluid behavior of the image, which is `nonfluid` by default.
    */
@@ -54,7 +54,7 @@ const propTypes = {
 
 /* eslint-disable react/default-props-match-prop-types */
 const defaultProps = {
-  variant: 'default',
+  variant: ImageVariant.DEFAULT,
   isFluid: false,
   alt: ' ',
 };

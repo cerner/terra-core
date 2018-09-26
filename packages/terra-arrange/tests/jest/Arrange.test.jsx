@@ -1,5 +1,5 @@
 import React from 'react';
-import Arrange from '../../src/Arrange';
+import Arrange, { AlignmentTypes } from '../../src/Arrange';
 
 describe('Arrange', () => {
   const fitStart = <img src="http:///uploads/2016/09/telegraph-1.jpg" alt="panda" />;
@@ -24,19 +24,19 @@ describe('Arrange', () => {
     });
 
     it('should render a arrange component with fit and fill aligned to center', () => {
-      const arrangeAlignAll = <Arrange fitEnd={fitEnd} fill={fill} align="center" />;
+      const arrangeAlignAll = <Arrange fitEnd={fitEnd} fill={fill} align={AlignmentTypes.CENTER} />;
       const wrapper = shallow(arrangeAlignAll);
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should render a arrange component with fit and fill aligned to bottom', () => {
-      const arrangeAlignAll = <Arrange fitStart={fitStart} fill={fill} align="bottom" />;
+      const arrangeAlignAll = <Arrange fitStart={fitStart} fill={fill} align={AlignmentTypes.BOTTOM} />;
       const wrapper = shallow(arrangeAlignAll);
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should render a arrange component with fit and fill aligned to stretch', () => {
-      const arrangeAlignAll = <Arrange fitStart={fitStart} fill={fill} align="stretch" />;
+      const arrangeAlignAll = <Arrange fitStart={fitStart} fill={fill} align={AlignmentTypes.STRETCH} />;
       const wrapper = shallow(arrangeAlignAll);
       expect(wrapper).toMatchSnapshot();
     });
@@ -44,7 +44,7 @@ describe('Arrange', () => {
 
   // Prop Tests
   it('should have all prop set correctly', () => {
-    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="center" fitStartAttributes={{ style: { maxWidth: '10px' } }} fillAttributes={{ style: { maxWidth: '20px' } }} fitEndAttributes={{ style: { maxWidth: '30px' } }} />;
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align={AlignmentTypes.CENTER} fitStartAttributes={{ style: { maxWidth: '10px' } }} fillAttributes={{ style: { maxWidth: '20px' } }} fitEndAttributes={{ style: { maxWidth: '30px' } }} />;
     const wrapper = shallow(arrange);
     expect(wrapper).toMatchSnapshot();
   });
@@ -84,7 +84,7 @@ describe('Arrange', () => {
   });
 
   it('should have child with the correct class when align is set to stretch', () => {
-    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="stretch" />;
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align={AlignmentTypes.STRETCH} />;
     const wrapper = shallow(arrange);
     expect(wrapper.type()).toEqual('div');
     expect(wrapper.childAt(0).hasClass('fit stretch')).toEqual(true);
@@ -93,7 +93,7 @@ describe('Arrange', () => {
   });
 
   it('should have child with the correct class when align is set and overwrites individual fit and fill ', () => {
-    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="stretch" alignFitStart="center" />;
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align={AlignmentTypes.STRETCH} alignFitStart="center" />;
     const wrapper = shallow(arrange);
     expect(wrapper.type()).toEqual('div');
     expect(wrapper.childAt(0).hasClass('fit stretch')).toEqual(true);

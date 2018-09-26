@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../src/Image';
+import Image, { ImageVariant } from '../../src/Image';
 
 const imagecontainerStyle1 = {
   backgroundColor: '#ffe4c4',
@@ -7,7 +7,7 @@ const imagecontainerStyle1 = {
   height: 200,
 };
 
-const image = <Image src="" alt="circle" variant="circle" isFluid />;
+const image = <Image src="" alt="circle" variant={ImageVariant.CIRCLE} isFluid />;
 
 /* Default component */
 it('should render a default component', () => {
@@ -25,31 +25,31 @@ it('should render a default image component with a specified height and width', 
 
 /* Image with a rounded variant */
 it('should render a rounded image component', () => {
-  const wrapper = shallow(<Image src="" variant="rounded" alt="rounded image" />);
+  const wrapper = shallow(<Image src="" variant={ImageVariant.ROUNDED} alt="rounded image" />);
   expect(wrapper.instance().props.alt).toEqual('rounded image');
 });
 
 /* Image with a circle variant */
 it('should render a circle image component', () => {
-  const wrapper = shallow(<Image src="" variant="circle" alt="circle image" />);
+  const wrapper = shallow(<Image src="" variant={ImageVariant.CIRCLE} alt="circle image" />);
   expect(wrapper.instance().props.alt).toEqual('circle image');
 });
 
 /* Image with a thumbnail variant */
 it('should render a thumbnail image component', () => {
-  const wrapper = shallow(<Image src="" variant="thumbnail" alt="thumbnail image" />);
+  const wrapper = shallow(<Image src="" variant={ImageVariant.THUMBNAIL} alt="thumbnail image" />);
   expect(wrapper.instance().props.alt).toEqual('thumbnail image');
 });
 
 /* Image with fluid behavior */
 it('should render a thumbail image component with fluid behavior', () => {
-  const wrapper = render(<Image src="" variant="thumbnail" alt="thumbnail image" isFluid />);
+  const wrapper = render(<Image src="" variant={ImageVariant.THUMBNAIL} alt="thumbnail image" isFluid />);
   expect(wrapper).toMatchSnapshot();
 });
 
 /* Image without fluid behavior */
 it('should render a thumbail image component with non-fluid behavior', () => {
-  const wrapper = render(<Image src="" variant="thumbnail" alt="thumbnail image" />);
+  const wrapper = render(<Image src="" variant={ImageVariant.THUMBNAIL} alt="thumbnail image" />);
   expect(wrapper).toMatchSnapshot();
 });
 

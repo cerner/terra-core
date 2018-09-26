@@ -1,52 +1,52 @@
 import React from 'react';
-import Heading from '../../src/Heading';
+import Heading, { HeadingLevel, HeadingSize, HeadingWeight } from '../../src/Heading';
 
 describe('Heading', () => {
   // Snapshot Tests
   it('should render a heading component', () => {
-    const heading = shallow(<Heading level={1}>Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']}>Test</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   it('should render a heading component with color prop set', () => {
-    const heading = shallow(<Heading level={1} color="#f00">Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} color="#f00">Test</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   it('should render a heading component with isItalic prop set', () => {
-    const heading = shallow(<Heading level={1} isItalic>Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} isItalic>Test</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   it('should render a heading component with isVisuallyHidden prop set', () => {
-    const heading = shallow(<Heading level={1} isVisuallyHidden>Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} isVisuallyHidden>Test</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   it('should render a heading component with size prop set', () => {
-    const heading = shallow(<Heading level={1} size="large">Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} size={HeadingSize.LARGE}>Test</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   it('should render a heading component with weight prop set', () => {
-    const heading = shallow(<Heading level={1} weight={200}>Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} weight={HeadingWeight['200']}>Test</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   it('should support rendering a string as children', () => {
-    const heading = shallow(<Heading level={1}>String</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']}>String</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   it('should support rendering an element as children', () => {
-    const heading = shallow(<Heading level={1}><span>Element</span></Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']}><span>Element</span></Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   it('should support rendering an array of elements as a children', () => {
     /* eslint-disable comma-dangle */
     const heading = shallow(
-      <Heading level={1}>
+      <Heading level={HeadingLevel['1']}>
         <span>Element 1</span>
         <span>Element 2</span>
         <span>Element 3</span>
@@ -58,40 +58,40 @@ describe('Heading', () => {
 
   // Prop Tests
   it('should have all props including customProps set correctly', () => {
-    const heading = shallow(<Heading level={1} id="id" size="small" color="#f00" weight={200} isItalic isVisuallyHidden>All props and custom attrs</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} id="id" size={HeadingSize.SMALL} color="#f00" weight={HeadingWeight['200']} isItalic isVisuallyHidden>All props and custom attrs</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
   // Attributes
   it('should merge classes passed in with attributes', () => {
-    const heading = shallow(<Heading level={1} className="TestClass">Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} className="TestClass">Test</Heading>);
     expect(heading.prop('className')).toContain('TestClass');
   });
 
   it('should merge ids passed in with attributes', () => {
-    const heading = shallow(<Heading level={1} id="TestId">Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} id="TestId">Test</Heading>);
     expect(heading.prop('id')).toContain('TestId');
   });
 
   it('should append data passed in with attributes', () => {
-    const heading = shallow(<Heading level={1} data-terra-text-mock="MockData">Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} data-terra-text-mock="MockData">Test</Heading>);
     expect(heading.prop('data-terra-text-mock')).toContain('MockData');
   });
 
   it('should append styles passed in with attributes', () => {
-    const heading = shallow(<Heading level={1} style={{ height: '100px' }}>Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} style={{ height: '100px' }}>Test</Heading>);
     expect(heading.prop('style')).toEqual({ color: 'inherit', height: '100px' });
   });
 
   it('should merge color value with styles passed in with attributes when both are set', () => {
-    const heading = shallow(<Heading level={1} color="#f00" style={{ height: '100px' }}>Test</Heading>);
+    const heading = shallow(<Heading level={HeadingLevel['1']} color="#f00" style={{ height: '100px' }}>Test</Heading>);
     expect(heading.prop('style')).toEqual({ color: '#f00', height: '100px' });
   });
 
   // Error Handling Test
   it('should throw error for required children', () => {
     try {
-      shallow(<Heading level={1} />);
+      shallow(<Heading level={HeadingLevel['1']} />);
     } catch (e) {
       expect(e.message).toContain('The prop `children` is marked as required');
     }

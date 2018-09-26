@@ -28,19 +28,19 @@ const propTypes = {
   /**
    * The vertical orientation of all three containers. It will override the aligment of alignFitStart, alignFill and alignFitEnd if given. One of: `center`, `bottom`, `stretch`.
    */
-  align: PropTypes.oneOf(AlignmentTypes),
+  align: PropTypes.oneOf([AlignmentTypes.CENTER, AlignmentTypes.BOTTOM, AlignmentTypes.STRETCH]),
   /**
    * The vertical orientation of fitStart. One of: `center`, `bottom`, `stretch`.
    */
-  alignFitStart: PropTypes.oneOf(AlignmentTypes),
+  alignFitStart: PropTypes.oneOf([AlignmentTypes.CENTER, AlignmentTypes.BOTTOM, AlignmentTypes.STRETCH]),
   /**
    * The vertical orientation of fill. One of: `center`, `bottom`, `stretch`.
    */
-  alignFitEnd: PropTypes.oneOf(AlignmentTypes),
+  alignFitEnd: PropTypes.oneOf([AlignmentTypes.CENTER, AlignmentTypes.BOTTOM, AlignmentTypes.STRETCH]),
   /**
    * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`.
    */
-  alignFill: PropTypes.oneOf(AlignmentTypes),
+  alignFill: PropTypes.oneOf([AlignmentTypes.CENTER, AlignmentTypes.BOTTOM, AlignmentTypes.STRETCH]),
   /**
    * The attributes to be set on the fitStart wrapper element
    */

@@ -39,11 +39,11 @@ const propTypes = {
   /**
    * The viewport the element will be responsive to. One of `window` or `parent`.
    */
-  responsiveTo: PropTypes.oneOf(ResponsiveElementResponsiveTo),
+  responsiveTo: PropTypes.oneOf([ResponsiveElementResponsiveTo.WINDOW, ResponsiveElementResponsiveTo.PARENT]),
 };
 
 const defaultProps = {
-  responsiveTo: 'parent',
+  responsiveTo: ResponsiveElementResponsiveTo.PARENT,
 };
 
 class ResponsiveElement extends React.Component {
