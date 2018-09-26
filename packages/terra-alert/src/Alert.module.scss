@@ -2,6 +2,7 @@
   /* stylelint-disable  property-no-unknown */
   .alert-base {
     align-items: stretch;
+    color: var(--terra-alert-color);
     display: flex;
     justify-content: space-between;
     min-height: var(--terra-alert-min-height);
