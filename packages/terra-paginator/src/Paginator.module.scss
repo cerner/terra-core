@@ -90,10 +90,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block; // IE 10
-    height: 1rem;
+    height: var(--terra-paginator-nav-link-icon-height, 1rem);
     position: relative;
     top: var(--terra-paginator-nav-link-icon-offset-top, 0.1785rem);
-    width: 1rem;
+    width: var(--terra-paginator-nav-link-icon-width, 1rem);
   }
 
   .previous > .icon {
