@@ -14,11 +14,15 @@
 [![devDependencies status](https://badgen.net/david/dev/cerner/terra-core)](https://david-dm.org/cerner/terra-core?type=dev)
 [![lerna](https://badgen.net/badge/maintained%20with/lerna/cc00ff)](https://lernajs.io/)
 
-- [Supported Browsers](#supported-browsers)
 - [Packages](#packages)
-- [Internationalization](#internationalization-i18n)
-  - [Packages Required I18n](#packages-requiring-i18n)
+  - [Versioning](#versioning)
+  - [Status](#status)
+  - [Deprecated](#deprecated)
+- [Supported Browsers](#supported-browsers)
+- [Internationalization (I18n)](#internationalization-i18n)
+  - [Packages Requiring I18n](#packages-requiring-i18n)
 - [Contributing](#contributing)
+- [Local Development](#local-development)
 - [LICENSE](#license)
 
 ## Packages
@@ -153,8 +157,9 @@ Please read through our [contributing guidelines](CONTRIBUTING.md). Included are
 
 ## Local Development
 
-1. Install docker https://www.docker.com/ to run browser tests.
-2. Install dependencies and run tests.
+1. Install [Node Version Manager (NVM) and Node](https://github.com/creationix/nvm#install-script). The root directory contains a [`.nvmrc`](https://github.com/cerner/terra-core/blob/master/.nvmrc) file that specifies terra-core's node version. Once NVM is installed and you are within the root directory, your version of node will change to this version.
+2. Install docker https://www.docker.com/ to run browser tests.
+3. Install dependencies and run tests.
 ```sh
 npm install
 npm run test
