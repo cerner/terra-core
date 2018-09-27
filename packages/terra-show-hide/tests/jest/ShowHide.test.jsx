@@ -26,7 +26,7 @@ describe('ShowHide', () => {
   });
 
   it('should render an initially open show-hide component', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} toggle>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} isOpen>Full Text</ShowHide>);
     expect(showHide).toMatchSnapshot();
   });
 
@@ -56,9 +56,9 @@ describe('ShowHide', () => {
     expect(showHide.toTree().rendered.props.isAnimated).toEqual(true);
   });
 
-  it('should set toggle prop correctly', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} toggle>Full Text</ShowHide>);
-    expect(showHide.toTree().rendered.props.toggle).toEqual(true);
+  it('should set isOpen prop correctly', () => {
+    const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} isOpen>Full Text</ShowHide>);
+    expect(showHide.toTree().rendered.props.isOpen).toEqual(true);
   });
 
   it('should set onToggle prop correctly', () => {

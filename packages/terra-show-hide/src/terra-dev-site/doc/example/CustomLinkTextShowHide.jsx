@@ -3,16 +3,16 @@ import React from 'react';
 import ShowHide from 'terra-show-hide/lib/ShowHide';
 
 const sentences = [];
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
-sentences.push('Lorem ipsum dolor sit amet consectetur adipiscing elit.');
+sentences.push(<p key="lorem1">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem2">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem3">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem4">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem5">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem6">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem7">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem8">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem9">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+sentences.push(<p key="lorem10">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
 
 class CustomLinkTextShowHide extends React.Component {
   constructor(props) {
@@ -29,15 +29,22 @@ class CustomLinkTextShowHide extends React.Component {
   }
 
   render() {
+    let customText = '';
+
+    if (this.state.isOpen) {
+      customText = `Hide ${sentences.length - 3} Sentences`;
+    } else {
+      customText = `Show ${sentences.length - 3} More Sentences`;
+    }
+
     return (
       <ShowHide
-        preview={`${sentences[0]} ${sentences[1]} ${sentences[2]}`}
+        preview={[sentences[0], sentences[1], sentences[2]]}
         onToggle={this.toggleShowHide}
-        toggle={this.state.isOpen}
-        collapsedButtonText={`Show ${sentences.length - 3} More Sentences`}
-        expandedButtonText={`Hide ${sentences.length - 3} Sentences`}
+        isOpen={this.state.isOpen}
+        buttonText={customText}
       >
-        {sentences.join(' ')}
+        {sentences}
       </ShowHide>
     );
   }

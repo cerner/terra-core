@@ -21,9 +21,11 @@ class DefaultShowHide extends React.Component {
 
   render() {
     return (
-      <ShowHide preview={previewText} toggle={this.state.isOpen} onToggle={this.toggleShowHide}>
-        {fullText}
-      </ShowHide>
+      <div>
+        <ShowHide preview={<p>{previewText}</p>} isOpen={this.state.isOpen} onToggle={this.toggleShowHide}>
+          <p>{fullText}</p>
+        </ShowHide>
+      </div>
     );
   }
 }

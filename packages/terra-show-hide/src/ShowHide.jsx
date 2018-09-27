@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
-import { injectIntl, intlShape } from 'terra-base';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
@@ -22,23 +21,15 @@ const propTypes = {
   /**
    * Text that will be visible to the user while the component is collapsed.
    */
-  preview: PropTypes.string.isRequired,
+  preview: PropTypes.node.isRequired,
   /**
-   * Button text that will be displayed when the component is collapsed.
+   * Button text that will be displayed.
    */
-  collapsedButtonText: PropTypes.string,
-  /**
-   * Button text that will be displayed when the component is expanded.
-   */
-  expandedButtonText: PropTypes.string,
+  buttonText: PropTypes.string,
   /**
    * Icon displayed next to the button text.
    */
   icon: PropTypes.element,
-  /**
-   * The intl object to be injected for translations. Provided by the injectIntl function.
-   */
-  intl: intlShape.isRequired,
   /**
    * Sets the animation for the component when it is expanded or collapsed.
    */
@@ -46,68 +37,70 @@ const propTypes = {
   /**
    * Allows parent to toggle the component. True for open and false for close.
    */
-  toggle: PropTypes.bool,
+  isOpen: PropTypes.bool,
 };
 
 const defaultProps = {
   icon: <IconChevronDown />,
   isAnimated: false,
-  toggle: false,
+  isOpen: false,
 };
 
-class ShowHide extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
+const ShowHide = (props, { intl }) => {
+  const {
+    buttonText,
+    children,
+    icon,
+    isAnimated,
+    onToggle,
+    preview,
+    isOpen,
+    ...customProps
+  } = props;
+
+  const showHideClassName = cx([
+    'button',
+    { 'is-open': isOpen },
+    customProps.className,
+  ]);
+
+  let intlButtonText = '';
+
+  if (!buttonText) {
+    if (isOpen) {
+      intlButtonText = intl.formatMessage({ id: 'Terra.showhide.hide' });
+    } else {
+      intlButtonText = intl.formatMessage({ id: 'Terra.showhide.showmore' });
+    }
   }
 
-  handleOnClick(e) {
-    e.preventDefault();
-    this.props.onToggle();
-  }
+  return (
+    <div {...customProps} className={showHideClassName}>
+      {!isOpen && preview}
+      <Toggle isOpen={isOpen} isAnimated={isAnimated} className={cx([{ animated: isAnimated }])}>
+        {children}
+      </Toggle>
+      <Button
+        icon={<span className={cx('icon')}>{icon}</span>}
+        aria-expanded={isOpen}
+        text={buttonText || intlButtonText}
+        onClick={onToggle}
+      />
+    </div>
+  );
+};
 
-  render() {
-    const {
-      collapsedButtonText,
-      children,
-      expandedButtonText,
-      icon,
-      intl,
-      isAnimated,
-      onToggle,
-      preview,
-      toggle,
-      ...customProps
-    } = this.props;
-
-    const collapsedText = (collapsedButtonText === undefined) ? intl.formatMessage({ id: 'Terra.showhide.showmore' }) : collapsedButtonText;
-    const expandedText = (expandedButtonText === undefined) ? intl.formatMessage({ id: 'Terra.showhide.hide' }) : expandedButtonText;
-    const buttonText = this.props.toggle ? expandedText : collapsedText;
-
-    const showHideClassName = cx([
-      'button',
-      { 'is-open': this.props.toggle },
-      customProps.className,
-    ]);
-
-    return (
-      <div {...customProps} className={showHideClassName}>
-        {!this.props.toggle && preview}
-        <Toggle isOpen={this.props.toggle} isAnimated={this.props.isAnimated} className={cx([{ animated: this.props.isAnimated }])}>
-          {this.props.children}
-        </Toggle>
-        <Button
-          icon={<span className={cx('icon')}>{icon}</span>}
-          aria-expanded={this.props.toggle}
-          text={buttonText}
-          onClick={this.handleOnClick}
-        />
-      </div>
-    );
-  }
-}
-
+ShowHide.contextTypes = contextTypes;
 ShowHide.propTypes = propTypes;
 ShowHide.defaultProps = defaultProps;
 
-export default injectIntl(ShowHide);
+export default ShowHide;

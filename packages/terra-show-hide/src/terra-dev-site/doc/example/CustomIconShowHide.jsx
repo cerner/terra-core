@@ -22,8 +22,8 @@ class CustomIconShowHide extends React.Component {
 
   render() {
     return (
-      <ShowHide preview={previewText} toggle={this.state.isOpen} onToggle={this.toggleShowHide} icon={<IconTrophy />}>
-        {fullText}
+      <ShowHide preview={<p>{previewText}</p>} isOpen={this.state.isOpen} onToggle={this.toggleShowHide} icon={<IconTrophy />}>
+        {<p>{fullText}</p>}
       </ShowHide>
     );
   }
