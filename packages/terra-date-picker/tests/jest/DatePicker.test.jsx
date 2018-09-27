@@ -115,7 +115,9 @@ it('should render a date picker with onSelect', () => {
 it('throws error on missing locale prop in Base', () => {
   global.console = { error: jest.fn() };
 
-  expect(render(<DatePicker name="date-input" />)).toThrowError();
+  expect(() => {
+    render(<DatePicker name="date-input" />);
+  }).toThrowError();
   expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
 });
 

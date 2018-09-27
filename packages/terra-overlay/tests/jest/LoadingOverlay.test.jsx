@@ -43,7 +43,9 @@ describe('LoadingOverlay', () => {
   it('throws error on missing locale prop in Base', () => {
     global.console = { error: jest.fn() };
 
-    expect(render(<LoadingOverlay />)).toThrowError();
+    expect(() => {
+      render(<LoadingOverlay />);
+    }).toThrowError();
     expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
   });
 });
