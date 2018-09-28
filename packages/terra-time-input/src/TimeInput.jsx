@@ -599,7 +599,7 @@ class TimeInput extends React.Component {
           </label>
         </div>
         {this.props.variant === TimeUtil.FORMAT_12_HOUR && (
-          <ButtonGroup selectedKeys={[this.state.meridiem]} onChange={this.handleMeridiemButtonChange}>
+          <ButtonGroup selectedKeys={[this.state.meridiem]} onChange={this.handleMeridiemButtonChange} className={cx('meridiem-button-group')}>
             <ButtonGroup.Button
               key={this.anteMeridiem}
               className={cx('meridiem-button')}

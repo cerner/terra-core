@@ -34,6 +34,12 @@
     transition-property: background-size;
     transition-timing-function: var(--terra-time-input-transition-timing-function, ease);
 
+    &:hover {
+      background-color: var(--terra-time-input-hover-background-color, #fff);
+      border: var(--terra-time-input-hover-border, 1px solid #dedfe0);
+      color: var(--terra-time-input-hover-color, #1c1f21);
+    }
+
     &.is-focused {
       @include focus-styles;
       background-size: var(--terra-time-input-focus-keyboard-animation-size, 0 0);
@@ -96,10 +102,17 @@
     padding-left: var(--terra-time-input-input-padding-left, 0.357em);
     padding-right: var(--terra-time-input-input-padding-right, 0.357em);
     padding-top: var(--terra-time-input-input-padding-top, 0.357em);
+    text-align: var(--terra-time-input-input-text-align, center);
     transition-duration: var(--terra-time-input-transition-duration, 0.2s);
     transition-property: background-size;
     transition-timing-function: var(--terra-time-input-transition-timing-function, ease);
     width: 100%;
+
+    &:hover {
+      background-color: var(--terra-time-input-hover-background-color, #fff);
+      border: var(--terra-time-input-hover-border, 1px solid #dedfe0);
+      color: var(--terra-time-input-hover-color, #1c1f21);
+    }
 
     &:focus {
       @include focus-styles;
@@ -124,6 +137,12 @@
       min-width: 1.9em;
       padding: 0;
       width: 1.7em;
+
+      &:hover {
+        background-color: var(--terra-time-input-hover-background-color, #fff);
+        border: var(--terra-time-input-hover-border, 1px solid #dedfe0);
+        color: var(--terra-time-input-hover-color, #1c1f21);
+      }
 
       &:focus {
         border-color: transparent;
@@ -167,12 +186,17 @@
     display: flex;
   }
 
+  .meridiem-button-group {
+    margin-left: var(--terra-time-input-meridiem-button-group-margin-left, 0);
+  }
+
   .mobile-input-label {
     color: var(--terra-time-input-mobile-label-color, rgba(0, 0, 0, 0.5));
     font-size: var(--terra-time-input-mobile-label-size, 0.857rem);
   }
 
   .meridiem-display {
+    background-color: var(--terra-time-input-desktop-background-color, transparent);
     border-color: transparent;
     border-radius: var(--terra-time-input-border-radius, 3px);
     border-style: var(--terra-time-input-keyboard-border-style, solid);
