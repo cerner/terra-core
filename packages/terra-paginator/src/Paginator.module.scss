@@ -12,6 +12,16 @@
 
     &.progressive {
       justify-content: space-between;
+
+      .nav-link.previous {
+        margin-left: var(--terra-paginator-progressive-nav-link-previous-margin-left, 0.14285rem);
+        margin-right: var(--terra-paginator-progressive-nav-link-previous-margin-right, 0.14285rem);
+      }
+
+      .nav-link.next {
+        margin-left: var(--terra-paginator-progressive-nav-link-next-margin-left, 0.14285rem);
+        margin-right: var(--terra-paginator-progressive-nav-link-next-margin-right, 0.14285rem);
+      }
     }
 
     .nav-link {
@@ -96,11 +106,6 @@
     width: var(--terra-paginator-nav-link-icon-width, 1rem);
   }
 
-  .previous {
-    margin-left: var(--terra-paginator-nav-link-previous-margin-left);
-    margin-right: var(--terra-paginator-nav-link-previous-margin-right);
-  }
-
   .previous > .icon {
     background: var(--terra-paginator-nav-link-icon-previous, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#0059a8" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>'));
     margin-right: var(--terra-paginator-nav-link-icon-previous-margin-right, 0.25rem);
@@ -108,11 +113,6 @@
 
   .previous.is-disabled > .icon {
     background: var(--terra-paginator-nav-link-icon-previous-disabled, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>'));
-  }
-
-  .next {
-    margin-left: var(--terra-paginator-nav-link-next-margin-left);
-    margin-right: var(--terra-paginator-nav-link-next-margin-right);
   }
 
   .next > .icon {
