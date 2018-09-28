@@ -29,9 +29,10 @@ it('should render a default date input with all props', () => {
 });
 
 it('throws error on missing locale prop in Base', () => {
-  try {
-    shallow(<DateInput name="date-input" />);
-  } catch (e) {
-    expect(e.message).toContain('Component is internationalized, and must be wrapped in terra-base');
-  }
+  global.console = { error: jest.fn() };
+
+  expect(() => {
+    render(<DateInput name="date-input" />);
+  }).toThrowError();
+  expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
 });

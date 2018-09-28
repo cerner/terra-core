@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.23.0 - (September 25, 2018)
+------------------
 ### Changed
 * Add valueText prop for attribute aria-valuetext
 
