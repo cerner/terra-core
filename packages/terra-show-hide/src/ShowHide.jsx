@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
-import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './ShowHide.module.scss';
@@ -27,22 +26,12 @@ const propTypes = {
    */
   buttonText: PropTypes.string,
   /**
-   * Icon displayed next to the button text.
-   */
-  icon: PropTypes.element,
-  /**
-   * Sets the animation for the component when it is expanded or collapsed.
-   */
-  isAnimated: PropTypes.bool,
-  /**
    * Allows parent to toggle the component. True for open and false for close.
    */
   isOpen: PropTypes.bool,
 };
 
 const defaultProps = {
-  icon: <IconChevronDown />,
-  isAnimated: false,
   isOpen: false,
 };
 
@@ -59,7 +48,6 @@ const ShowHide = (props, { intl }) => {
   const {
     buttonText,
     children,
-    icon,
     isAnimated,
     onToggle,
     preview,
@@ -86,11 +74,10 @@ const ShowHide = (props, { intl }) => {
   return (
     <div {...customProps} className={showHideClassName}>
       {!isOpen && preview}
-      <Toggle isOpen={isOpen} isAnimated={isAnimated} className={cx([{ animated: isAnimated }])}>
+      <Toggle isOpen={isOpen}>
         {children}
       </Toggle>
       <Button
-        icon={<span className={cx('icon')}>{icon}</span>}
         aria-expanded={isOpen}
         text={buttonText || intlButtonText}
         onClick={onToggle}

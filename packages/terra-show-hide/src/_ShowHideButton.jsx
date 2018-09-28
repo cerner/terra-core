@@ -21,10 +21,6 @@ const ButtonTypes = {
 
 const propTypes = {
   /**
-   * An optional icon. Nested inline with the text when provided.
-   */
-  icon: PropTypes.element,
-  /**
    * Whether or not the button should be disabled.
    */
   isDisabled: PropTypes.bool,
@@ -119,7 +115,6 @@ class Button extends React.Component {
 
   render() {
     const {
-      icon,
       isDisabled,
       text,
       type,
@@ -140,31 +135,6 @@ class Button extends React.Component {
       customProps.className,
     ]);
 
-    const buttonLabelClasses = cx([
-      { 'text-and-icon': icon },
-    ]);
-
-    const buttonTextClasses = cx([
-      { 'text-first': icon },
-    ]);
-
-    const iconClasses = cx([
-      'icon',
-    ]);
-
-    const buttonText = <span className={buttonTextClasses}>{text}</span>;
-
-    const iconSvgClasses = icon.props.className ? `${icon.props.className} ${cx('icon-svg')}` : cx('icon-svg');
-    const cloneIcon = React.cloneElement(icon, { className: iconSvgClasses });
-    const buttonIcon = <span className={iconClasses}>{cloneIcon}</span>;
-
-    const buttonLabel = (
-      <span className={buttonLabelClasses}>
-        { buttonText }
-        { buttonIcon }
-      </span>
-    );
-
     return (
       <button
         {...customProps}
@@ -180,7 +150,7 @@ class Button extends React.Component {
         onFocus={onFocus}
         ref={refCallback}
       >
-        {buttonLabel}
+        {text}
       </button>
     );
   }
