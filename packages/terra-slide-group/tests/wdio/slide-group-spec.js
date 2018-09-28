@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 describe('Slide Group', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 

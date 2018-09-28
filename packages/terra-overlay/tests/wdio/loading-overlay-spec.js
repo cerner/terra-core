@@ -1,5 +1,3 @@
-/* global before, browser, Terra */
-
 describe('Loading Overlay', () => {
   describe('Loading Overlay Default', () => {
     before(() => browser.url('/#/raw/tests/terra-overlay/overlay/loading-overlay/default-loading-overlay'));
