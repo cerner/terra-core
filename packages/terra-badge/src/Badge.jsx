@@ -65,7 +65,7 @@ const Badge = ({
     customProps.className,
   );
 
-  const textContent = text ? <span className={styles.text} aria-label={visuallyHiddenText}>{text}</span> : null;
+  const textContent = text ? <span className={styles.text}>{text}</span> : null;
   const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
   const content = isReversed ? [visuallyHiddenTextContent, textContent, icon, customProps.children] : [icon, visuallyHiddenTextContent, textContent, customProps.children];
   return React.createElement('span', { ...customProps, className: badgeClassNames }, ...content);

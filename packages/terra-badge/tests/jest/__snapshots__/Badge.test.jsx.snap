@@ -82,7 +82,6 @@ exports[`should render a badge component with visually hidden text 1`] = `
     text="Risk Score"
   />
   <span
-    aria-label="Risk Score"
     className="text"
   >
     3
