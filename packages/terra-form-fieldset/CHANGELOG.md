@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Changed
+* Removed unnecessary test file: DefaultFieldset.test.jsx
+
 1.23.0 - (September 25, 2018)
 ------------------
 ### Changed
