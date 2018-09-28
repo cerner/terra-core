@@ -23,11 +23,12 @@ describe('Alert with no props', () => {
   });
 
   it('throws error on missing locale prop in Base', () => {
-    try {
+    global.console = { error: jest.fn() };
+
+    expect(() => {
       render(<Alert />);
-    } catch (e) {
-      expect(e.message).toContain('Component is internationalized, and must be wrapped in terra-base');
-    }
+    }).toThrowError();
+    expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
   });
 });
 

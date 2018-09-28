@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Made main container an article to improve accessibility
+
+### Added
+* Added prop for VisuallyHiddenText
 
 2.22.0 - (September 25, 2018)
 ------------------
