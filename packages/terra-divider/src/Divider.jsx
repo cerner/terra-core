@@ -11,7 +11,7 @@ const Divider = ({ ...customProps }) => {
     customProps.className,
   ]);
 
-  return <hr {...customProps} className={dividerClassNames} />;
+  return <hr {...customProps} className={dividerClassNames} aria-hidden="true" />;
 };
 
 export default Divider;

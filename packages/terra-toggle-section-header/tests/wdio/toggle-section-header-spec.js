@@ -1,5 +1,3 @@
-/* global before, browser, Terra */
-
 describe('ToggleSectionHeader', () => {
   describe('Default', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/default-toggle-section-header'));

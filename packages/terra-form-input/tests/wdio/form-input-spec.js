@@ -1,4 +1,3 @@
-/* global before, browser, Terra */
 const viewports = Terra.viewports('tiny', 'large');
 
 describe('Form-Input', () => {
@@ -71,6 +70,34 @@ describe('Form-Input', () => {
       });
     });
 
+    describe('Enabled Placeholder', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/placeholder-form-input');
+      });
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-form-input-placeholder-color': 'red',
+          '--terra-form-input-placeholder-font-style': 'italic',
+        },
+      });
+    });
+
+    describe('Enabled Value', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/value-form-input');
+      });
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-input-color': 'red',
+      });
+    });
+
     describe('Enabled Keyboard-Focused', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
@@ -110,6 +137,37 @@ describe('Form-Input', () => {
           '--terra-form-input-disabled-border-width': '20rem dashed red',
           '--terra-form-input-disabled-color': 'red',
           '--terra-form-input-disabled-opacity': '0.5',
+        },
+      });
+    });
+
+    describe('Disabled Placeholder', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-placeholder-input');
+      });
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-form-input-placeholder-disabled-color': 'red',
+          '--terra-form-input-placeholder-disabled-font-style': 'italic',
+        },
+      });
+    });
+
+    describe('Disabled Value', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-value-input');
+      });
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-form-input-disabled-color': 'red',
         },
       });
     });

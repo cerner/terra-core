@@ -1,4 +1,3 @@
-/* global browser, Terra, before */
 const i18nSupportedLocales = require('../../src/i18nSupportedLocales');
 
 // Add Portuguese-Guinea-Bissau, Zulu & Zulu-South African locales as test locales (supported by intl)
@@ -9,7 +8,7 @@ describe('I18n', () => {
   describe('Initial Load', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-i-18-n/i-18-n/default-i-18-n');
-      browser.waitForVisible('select', 3000);
+      browser.waitForVisible('select');
     });
 
     Terra.should.matchScreenshot();
@@ -19,7 +18,7 @@ describe('I18n', () => {
     describe(`${locale} Locale`, () => {
       before(() => {
         browser.url('/#/raw/tests/terra-i-18-n/i-18-n/default-i-18-n');
-        browser.waitForVisible('select', 3000);
+        browser.waitForVisible('select');
         browser.element('select').selectByValue(locale);
       });
 

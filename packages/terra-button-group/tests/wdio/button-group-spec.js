@@ -1,5 +1,3 @@
-/* global before, browser, Terra */
-
 describe('Button Group', () => {
   describe('Text Button', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-text'));

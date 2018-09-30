@@ -1,4 +1,4 @@
-/* global Terra, $, before, browser */
+/* global $ */
 
 describe('Base', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));

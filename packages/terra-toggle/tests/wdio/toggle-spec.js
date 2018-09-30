@@ -1,5 +1,3 @@
-/* global browser, Terra, before */
-
 describe('Toggle', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
@@ -32,7 +30,7 @@ describe('Toggle', () => {
 
     it('enables focusable elements when opened', () => {
       browser.click('#trigger-toggle'); // Open toggle
-      browser.waitForVisible('#toggle', 1000);
+      browser.waitForVisible('#toggle');
       expect(browser.getCssProperty('#toggle', 'visibility').value).to.equal('visible');
     });
   });

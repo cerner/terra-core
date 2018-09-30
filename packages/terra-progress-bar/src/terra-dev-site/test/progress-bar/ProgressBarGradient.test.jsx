@@ -3,6 +3,6 @@ import ProgressBar from '../../../ProgressBar';
 
 export default () => (
   <div>
-    <ProgressBar value={8} max={10} color="blue" hasGradient />
+    <ProgressBar valueText="8%" value={8} max={10} color="blue" hasGradient />
   </div>
 );

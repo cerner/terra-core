@@ -194,6 +194,7 @@ class Textarea extends React.Component {
 
     return (
       <textarea
+        {...additionalTextareaProps}
         ref={(textarea) => {
           this.textarea = textarea;
           if (refCallback) refCallback(textarea);
@@ -203,7 +204,6 @@ class Textarea extends React.Component {
         onChange={this.onChange}
         required={required}
         rows={textareaRows}
-        {...additionalTextareaProps}
         className={textareaClasses}
       />
     );

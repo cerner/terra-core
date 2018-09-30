@@ -88,11 +88,13 @@ exports[`DocTemplate should show multiple props tables 1`] = `
   <PropsTable
     componentName="Test Component"
     key="0"
+    propsResolution="default"
     src="test-file-stub"
   />
   <PropsTable
     componentName="Test Component (Again)"
     key="1"
+    propsResolution="default"
     src="test-file-stub"
   />
 </div>
@@ -124,6 +126,20 @@ exports[`DocTemplate should show one props table 1`] = `
   <PropsTable
     componentName="Test Component"
     key="0"
+    propsResolution="default"
+    src="test-file-stub"
+  />
+</div>
+`;
+
+exports[`DocTemplate should show props table with findAllComponentDefinitions prop resolution 1`] = `
+<div
+  className="doc-template"
+>
+  <PropsTable
+    componentName="Test Component"
+    key="0"
+    propsResolution="findAllComponentDefinitions"
     src="test-file-stub"
   />
 </div>
@@ -214,11 +230,13 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
   <PropsTable
     componentName="Test Component"
     key="2"
+    propsResolution="default"
     src="test-file-stub"
   />
   <PropsTable
     componentName="Test Component (Again)"
     key="3"
+    propsResolution="default"
     src="test-file-stub"
   />
 </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Card.module.scss';
 import CardBody from './CardBody';
 
@@ -22,6 +23,12 @@ const propTypes = {
    * Sets the card variant to change the style for different use cases. One of `default`,  `raised`.
    */
   variant: PropTypes.oneOf([...Object.values(CardVariants)]),
+  /**
+   * Text that describes the badge to a screen reader. Use this
+   * if more information is needed to accurately describe
+   * this card to screen reader users.
+   */
+  visuallyHiddenText: PropTypes.string,
 };
 
 const defaultProps = {
@@ -31,6 +38,7 @@ const defaultProps = {
 const Card = ({
   children,
   variant,
+  visuallyHiddenText,
   ...customProps
 }) => {
   const cardClassNames = cx([
@@ -39,7 +47,14 @@ const Card = ({
     customProps.className,
   ]);
 
-  return <div {...customProps} className={cardClassNames}>{children}</div>;
+  const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
+
+  return (
+    <article {...customProps} className={cardClassNames}>
+      {visuallyHiddenTextContent}
+      {children}
+    </article>
+  );
 };
 
 Card.propTypes = propTypes;
