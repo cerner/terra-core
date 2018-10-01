@@ -36,7 +36,7 @@ const propTypes = {
   /**
    * Sets the badge color scheme. One of `default`, `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
    */
-  intent: PropTypes.oneOf([BadgeIntent.DEFAULT, BadgeIntent.PRIMARY, BadgeIntent.SECONDARY, BadgeIntent.INFO, BadgeIntent.WARNING, BadgeIntent.POSITIVE, BadgeIntent.NEGATIVE]),
+  intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
    * Reverses the position of the icon and text.
    */
@@ -44,7 +44,7 @@ const propTypes = {
   /**
    * Sets the badge size. One of `tiny`, `small`, `medium`, `large`, `huge`.
    */
-  size: PropTypes.oneOf([BadgeSize.TINY, BadgeSize.SMALL, BadgeSize.MEDIUM, BadgeSize.LARGE, BadgeSize.HUGE]),
+  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the badge text.
    */
@@ -54,9 +54,9 @@ const propTypes = {
 const defaultProps = {
   children: null,
   icon: null,
-  intent: BadgeIntent.DEFAULT,
+  intent: 'default',
   isReversed: false,
-  size: BadgeSize.SMALL,
+  size: 'small',
   text: null,
 };
 

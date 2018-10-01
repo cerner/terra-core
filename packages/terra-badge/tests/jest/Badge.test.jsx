@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge, { BadgeSize, BadgeIntent } from '../../src/Badge';
+import Badge from '../../src/Badge';
 
 const iconValue = <img alt="Test icon" />;
 // Snapshot Tests
@@ -9,32 +9,32 @@ it('should render a default component with nothing', () => {
 });
 
 it('should render a badge component with text and large size', () => {
-  const wrapper = shallow(<Badge size={BadgeSize.LARGE} text="Large" />);
+  const wrapper = shallow(<Badge size="large" text="Large" />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a badge component with text and secondary intent', () => {
-  const wrapper = shallow(<Badge text="Secondary" intent={BadgeIntent.SECONDARY} />);
+  const wrapper = shallow(<Badge text="Secondary" intent="secondary" />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a badge component with icon and medium size', () => {
-  const wrapper = shallow(<Badge size={BadgeSize.MEDIUM} icon={iconValue} />);
+  const wrapper = shallow(<Badge size="medium" icon={iconValue} />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a badge component with icon and warning intent', () => {
-  const wrapper = shallow(<Badge icon={iconValue} intent={BadgeIntent.WARNING} />);
+  const wrapper = shallow(<Badge icon={iconValue} intent="warning" />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a badge component in the order, icon and text with medium size', () => {
-  const wrapper = shallow(<Badge text="Test value" size={BadgeSize.MEDIUM} icon={iconValue} />);
+  const wrapper = shallow(<Badge text="Test value" size="medium" icon={iconValue} />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a badge component in the order, text and icon with info intent', () => {
-  const wrapper = shallow(<Badge text="Test value" icon={iconValue} intent={BadgeIntent.INFO} isReversed />);
+  const wrapper = shallow(<Badge text="Test value" icon={iconValue} intent="info" isReversed />);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -50,14 +50,14 @@ describe('Badge with only text', () => {
 
   // Only intent props
   it('and only intent props, should have the class terra-Badge--primary and terra-Badge--small', () => {
-    const wrapper = shallow(<Badge text="Test value" intent={BadgeIntent.PRIMARY} />);
+    const wrapper = shallow(<Badge text="Test value" intent="primary" />);
     expect(wrapper.prop('className')).toContain('badge small primary');
     expect(wrapper.find('.text').text()).toEqual('Test value');
   });
 
   // Only size props
   it('and only size props, should have the class terra-Badge--default and terra-Badge--huge', () => {
-    const wrapper = shallow(<Badge text="Test value" size={BadgeSize.HUGE} />);
+    const wrapper = shallow(<Badge text="Test value" size="huge" />);
     expect(wrapper.prop('className')).toContain('badge huge default');
     expect(wrapper.find('.text').text()).toEqual('Test value');
   });
@@ -73,14 +73,14 @@ describe('Badge with only icon', () => {
 
   // Only intent props
   it('and only intent props, should have the class terra-Badge--primary and terra-Badge--small', () => {
-    const wrapper = shallow(<Badge icon={iconValue} intent={BadgeIntent.PRIMARY} />);
+    const wrapper = shallow(<Badge icon={iconValue} intent="primary" />);
     expect(wrapper.prop('className')).toContain('badge small primary');
     expect(wrapper.childAt(0).is('img')).toEqual(true);
   });
 
   // Only size props
   it('and only size props, should have the class terra-Badge--default and terra-Badge--huge', () => {
-    const wrapper = shallow(<Badge icon={iconValue} size={BadgeSize.HUGE} />);
+    const wrapper = shallow(<Badge icon={iconValue} size="huge" />);
     expect(wrapper.prop('className')).toContain('badge huge default');
     expect(wrapper.childAt(0).is('img')).toEqual(true);
   });
@@ -104,7 +104,7 @@ describe('Badge with icon and text', () => {
 
   // With size prop
   it('should have the class terra-Badge--default and terra-Badge--tiny with icon followed by text', () => {
-    const wrapper = shallow(<Badge icon={iconValue} text="Test value" size={BadgeSize.TINY} />);
+    const wrapper = shallow(<Badge icon={iconValue} text="Test value" size="tiny" />);
     expect(wrapper.prop('className')).toContain('badge tiny default');
     expect(wrapper.childAt(0).is('img')).toEqual(true);
     expect(wrapper.find('.text').text()).toEqual('Test value');
@@ -112,7 +112,7 @@ describe('Badge with icon and text', () => {
 
   // With intent prop
   it('should have the class terra-Badge--primary and terra-Badge--small with icon followed by text', () => {
-    const wrapper = shallow(<Badge icon={iconValue} text="Test value" intent={BadgeIntent.PRIMARY} />);
+    const wrapper = shallow(<Badge icon={iconValue} text="Test value" intent="primary" />);
     expect(wrapper.prop('className')).toContain('badge small primary');
     expect(wrapper.childAt(0).is('img')).toEqual(true);
     expect(wrapper.find('.text').text()).toEqual('Test value');
@@ -123,7 +123,7 @@ describe('Badge with icon and text', () => {
 describe('Badge with additional props', () => {
   // With custom props
   it('should have the class terra-Badge--primary and terra-Badge--small with icon followed by text', () => {
-    const wrapper = shallow(<Badge icon={iconValue} text="Test value" intent={BadgeIntent.PRIMARY} lang="English" className="negative" />);
+    const wrapper = shallow(<Badge icon={iconValue} text="Test value" intent="primary" lang="English" className="negative" />);
     expect(wrapper.prop('className')).toContain('badge small primary negative');
     expect(wrapper.prop('lang')).toEqual('English');
     expect(wrapper.childAt(0).is('img')).toEqual(true);

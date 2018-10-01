@@ -40,7 +40,7 @@ const propTypes = {
   /**
    * Sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
    */
-  level: PropTypes.oneOf([HeadingLevel['1'], HeadingLevel['2'], HeadingLevel['3'], HeadingLevel['4'], HeadingLevel['5'], HeadingLevel['6']]).isRequired,
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   /**
    * The color of the text. Accepts any color value parseable by CSS.
    */
@@ -56,18 +56,18 @@ const propTypes = {
   /**
    * Sets the text size. One of `mini`, `tiny`, `small`, `medium`, `large`, `huge`.
    */
-  size: PropTypes.oneOf([HeadingSize.MINI, HeadingSize.TINY, HeadingSize.SMALL, HeadingSize.MEDIUM, HeadingSize.LARGE, HeadingSize.HUGE]),
+  size: PropTypes.oneOf(['mini', 'tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the text size. One of `200`, `400`, `700`.
    */
-  weight: PropTypes.oneOf([HeadingWeight['200'], HeadingWeight['400'], HeadingWeight['700']]),
+  weight: PropTypes.oneOf([200, 400, 700]),
 };
 
 const defaultProps = {
   color: 'inherit',
   isItalic: false,
   isVisuallyHidden: false,
-  weight: HeadingWeight['700'],
+  weight: 700,
 };
 
 const Heading = ({

@@ -46,11 +46,11 @@ const propTypes = {
   /**
    * Sets the text size. One of `10`, `12`, `14`, `16`, `18`, `20`, `24`, `32`, `100`.
    */
-  fontSize: PropTypes.oneOf([TextFontSize['10'], TextFontSize['12'], TextFontSize['14'], TextFontSize['16'], TextFontSize['18'], TextFontSize['20'], TextFontSize['24'], TextFontSize['32'], TextFontSize['100']]),
+  fontSize: PropTypes.oneOf([10, 12, 14, 16, 18, 20, 24, 32, 100]),
   /**
    * Sets the text size. One of `200`, `400`, `700`.
    */
-  weight: PropTypes.oneOf([TextWeight['200'], TextWeight['400'], TextWeight['700']]),
+  weight: PropTypes.oneOf([200, 400, 700]),
 };
 
 const defaultProps = {

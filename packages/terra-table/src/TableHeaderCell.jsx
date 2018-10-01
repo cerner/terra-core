@@ -29,15 +29,15 @@ const propTypes = {
   /**
    * The minimum width for the column
    */
-  minWidth: PropTypes.oneOf([TableHeaderCellMinWidth.TINY, TableHeaderCellMinWidth.SMALL, TableHeaderCellMinWidth.MEDIUM, TableHeaderCellMinWidth.LARGE, TableHeaderCellMinWidth.HUGE]),
+  minWidth: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Whether or not data in table is sorted (asc, desc)
    */
-  sort: PropTypes.oneOf([TableHeaderCellSort.ASC, TableHeaderCellSort.DESC]),
+  sort: PropTypes.oneOf(['asc', 'desc']),
 };
 
 const defaultProps = {
-  minWidth: TableHeaderCellMinWidth.SMALL,
+  minWidth: 'small',
 };
 
 const iconDown = <IconDown />;

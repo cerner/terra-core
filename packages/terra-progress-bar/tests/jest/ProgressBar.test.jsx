@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar, { ProgressBarHeightSize } from '../../src/ProgressBar';
+import ProgressBar from '../../src/ProgressBar';
 
 // Snapshot Tests
 it('should render a default component', () => {
@@ -8,12 +8,12 @@ it('should render a default component', () => {
 });
 
 it('should render a ProgressBar component with tiny heightSize and 15% fill', () => {
-  const wrapper = shallow(<ProgressBar heightSize={ProgressBarHeightSize.TINY} valueText="15%" value={15} />);
+  const wrapper = shallow(<ProgressBar heightSize="tiny" valueText="15%" value={15} />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a ProgressBar component with large heightSize and 60% fill', () => {
-  const wrapper = shallow(<ProgressBar heightSize={ProgressBarHeightSize.LARGE} valueText="15%" value={60} color="#8ccc62" />);
+  const wrapper = shallow(<ProgressBar heightSize="large" valueText="15%" value={60} color="#8ccc62" />);
   expect(wrapper).toMatchSnapshot();
 });
 

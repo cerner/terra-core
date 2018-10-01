@@ -1,5 +1,5 @@
 import React from 'react';
-import Text, { TextWeight, TextFontSize } from '../../src/Text';
+import Text from '../../src/Text';
 
 describe('Text', () => {
   // Snapshot Tests
@@ -29,7 +29,7 @@ describe('Text', () => {
   });
 
   it('should render a text component with weight prop set', () => {
-    const text = shallow(<Text weight={TextWeight['200']}>Test</Text>);
+    const text = shallow(<Text weight={200}>Test</Text>);
     expect(text).toMatchSnapshot();
   });
 
@@ -58,7 +58,7 @@ describe('Text', () => {
 
   // Prop Tests
   it('should have all props including customProps set correctly', () => {
-    const text = shallow(<Text id="id" fontSize={TextFontSize['20']} color="#f00" weight={TextWeight['200']} isItalic isVisuallyHidden>All props and custom attrs</Text>);
+    const text = shallow(<Text id="id" fontSize={20} color="#f00" weight={200} isItalic isVisuallyHidden>All props and custom attrs</Text>);
     expect(text).toMatchSnapshot();
     expect(text.find('.text').text()).toEqual('All props and custom attrs');
   });

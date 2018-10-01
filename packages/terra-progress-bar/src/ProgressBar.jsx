@@ -22,7 +22,7 @@ const propTypes = {
   /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
-  heightSize: PropTypes.oneOf([ProgressBarHeightSize.TINY, ProgressBarHeightSize.SMALL, ProgressBarHeightSize.MEDIUM, ProgressBarHeightSize.LARGE, ProgressBarHeightSize.HUGE]),
+  heightSize: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the fill-value of the progress bar with respect to the `max` prop.
    */
@@ -43,7 +43,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  heightSize: ProgressBarHeightSize.SMALL,
+  heightSize: 'small',
   max: 100,
   hasGradient: false,
   valueText: undefined,

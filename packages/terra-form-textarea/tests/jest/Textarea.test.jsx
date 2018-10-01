@@ -1,6 +1,6 @@
 /* globals spyOn */
 import React from 'react';
-import Textarea, { TextareaSize } from '../../src/Textarea';
+import Textarea from '../../src/Textarea';
 
 it('should render a default TextArea component', () => {
   const textarea = <Textarea />;
@@ -33,31 +33,31 @@ it('should render as controlled when just a default value is passed into the Tex
 });
 
 it('should render a small textbox appropriately', () => {
-  const textarea = <Textarea size={TextareaSize.SMALL} />;
+  const textarea = <Textarea size="small" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a medium textbox appropriately', () => {
-  const textarea = <Textarea size={TextareaSize.MEDIUM} />;
+  const textarea = <Textarea size="medium" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a large textbox appropriately', () => {
-  const textarea = <Textarea size={TextareaSize.LARGE} />;
+  const textarea = <Textarea size="large" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a full size textbox appropriately', () => {
-  const textarea = <Textarea size={TextareaSize.FULL} />;
+  const textarea = <Textarea size="full" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should set the rows attribute appropriate when it is passed into the textarea', () => {
-  const textarea = <Textarea size={TextareaSize.SMALL} rows={7} />;
+  const textarea = <Textarea size="small" rows={7} />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
