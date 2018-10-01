@@ -3,9 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-
-2.27.0 - (September 30, 2018)
-------------------
 ### Changed
 * Updated documentation examples
 
