@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Theme variable for input height
+
 ### Fixed
 * Normalized duplicate padding theme variable
 
