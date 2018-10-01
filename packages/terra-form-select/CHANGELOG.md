@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Normalized duplicate padding theme variable
 
 4.18.0 - (September 25, 2018)
 ------------------
