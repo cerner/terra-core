@@ -8,6 +8,7 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
+* Use absolute position for modal and modal overlay for iOS stability
 
 1.17.1 - (September 6, 2018)
 ------------------
