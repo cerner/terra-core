@@ -6,6 +6,26 @@ import styles from './Text.module.scss';
 
 const cx = classNames.bind(styles);
 
+/* eslint-disable quote-props */
+const TextFontSize = {
+  '10': 10,
+  '12': 12,
+  '14': 14,
+  '16': 16,
+  '18': 18,
+  '20': 20,
+  '24': 24,
+  '32': 32,
+  '100': 100,
+};
+
+const TextWeight = {
+  '200': 200,
+  '400': 400,
+  '700': 700,
+};
+/* eslint-enable quote-props */
+
 const propTypes = {
   /**
    * Child nodes
@@ -67,3 +87,4 @@ Text.propTypes = propTypes;
 Text.defaultProps = defaultProps;
 
 export default Text;
+export { TextFontSize, TextWeight };

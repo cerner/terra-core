@@ -1,4 +1,3 @@
-/* global before, browser, Terra */
 const viewports = Terra.viewports('tiny', 'small', 'medium', 'large', 'huge');
 
 describe('Responsive Element', () => {

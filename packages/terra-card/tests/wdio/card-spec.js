@@ -1,4 +1,3 @@
-/* global before, browser, Terra */
 const viewports = Terra.viewports('tiny');
 
 describe('Card', () => {
@@ -64,6 +63,13 @@ describe('Card', () => {
 
   describe('Card Body Centered', () => {
     before(() => browser.url('/#/raw/tests/terra-card/card/card-content-center'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
+
+  describe('Card Visually Hidden Text', () => {
+    before(() => browser.url('/#/raw/tests/terra-card/card/card-visually-hidden-text'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

@@ -23,6 +23,9 @@ import CardPaddingHR from '../example/CardPaddingHR';
 import CardPaddingHRSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardPaddingHR';
 import CardContentCentered from '../example/CardContentCentered';
 import CardContentCenteredSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardContentCentered';
+import CardVisuallyHiddenText from '../example/CardVisuallyHiddenText';
+import CardVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardVisuallyHiddenText';
+
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -65,6 +68,11 @@ const DocPage = () => (
         title: 'Centered content inside card',
         example: <CardContentCentered />,
         source: CardContentCenteredSrc,
+      },
+      {
+        title: 'Card with Visually Hidden Text',
+        example: <CardVisuallyHiddenText />,
+        source: CardVisuallyHiddenTextSrc,
       },
     ]}
     propsTables={[

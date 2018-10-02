@@ -258,3 +258,4 @@ Button.Opts.Types = ButtonTypes;
 Button.Opts.Variants = ButtonVariants;
 
 export default Button;
+export { ButtonTypes, ButtonVariants };

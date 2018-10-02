@@ -1,5 +1,3 @@
-/* global before, browser, Terra */
-
 describe('Single Select List', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 

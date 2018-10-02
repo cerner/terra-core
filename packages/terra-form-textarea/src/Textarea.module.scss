@@ -31,19 +31,30 @@
       border-width: var(--terra-form-textarea-hover-border-width, 1px);
     }
 
+    &::placeholder {
+      color: var(--terra-form-textarea-placeholder-color, #70787c);
+      font-style: var(--terra-form-textarea-placeholder-font-style);
+    }
+
     &[required] {
       box-shadow: unset;
     }
 
     &[disabled] {
-      background-color: var(--terra-form-textarea-disabled-background-color, rgba(111, 116, 119, 0.05));
-      border-color: var(--terra-form-textarea-disabled-border-color, #dedfe0);
+      background-color: var(--terra-form-textarea-disabled-background-color, rgba(111, 116, 119, 0.2));
+      border-color: var(--terra-form-textarea-disabled-border-color, #868a8c);
       border-style: var(--terra-form-textarea-disabled-border-style, solid);
       border-width: var(--terra-form-textarea-disabled-border-width, 1px);
-      color: var(--terra-form-textarea-disabled-color, rgba(0, 0, 0, 0.25));
+      color: var(--terra-form-textarea-disabled-color, #1c1f21);
       cursor: default;
-      opacity: var(--terra-form-textarea-disabled-opacity, 1);
+      opacity: var(--terra-form-textarea-disabled-opacity, 0.25);
+      pointer-events: none;
       resize: none;
+    }
+
+    &[disabled]::placeholder {
+      color: var(--terra-form-textarea-placeholder-disabled-color, #70787c);
+      font-style: var(--terra-form-textarea-placeholder-disabled-font-style);
     }
 
     &:focus {
@@ -61,7 +72,7 @@
       [dir=rtl] & {
         box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
       }
-    }    
+    }
   }
 
   .full-size {

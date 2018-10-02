@@ -69,6 +69,8 @@ Cerner Corporation
 - Adam Parker [@amichaelparker]
 - Matthew Carr [@Matthematic]
 - Mahesh S [@m-samkc]
+- Alexander Brisimitzakis [@AlexBrizi]
+- Kyle Roush [@kyleroush]
 - Sharynne Azhar [@sharynneazhar]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -141,4 +143,6 @@ Cerner Corporation
 [@amichaelparker]: https://github.com/amichaelparker
 [@Matthematic]: https://github.com/Matthematic
 [@m-samkc]: https://github.com/m-samkc
+[@AlexBrizi]: https://github.com/AlexBrizi
+[@kyleroush]: https://github.com/kyleroush
 [@sharynneazhar]: https://github.com/sharynneazhar

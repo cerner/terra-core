@@ -1,5 +1,3 @@
-/* global browser, Terra, before */
-
 describe('Image', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
@@ -31,8 +29,8 @@ describe('Image', () => {
   describe('Loading', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-image/image/image-loading');
-      browser.waitForExist('#loadedImage', 1000);
-      browser.waitForExist('#errorImage', 1000);
+      browser.waitForExist('#loadedImage');
+      browser.waitForExist('#errorImage');
     });
 
     Terra.should.beAccessible();

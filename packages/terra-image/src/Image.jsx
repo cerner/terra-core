@@ -6,6 +6,13 @@ import styles from './Image.module.scss';
 
 const cx = classNames.bind(styles);
 
+const ImageVariant = {
+  DEFAULT: 'default',
+  ROUNDED: 'rounded',
+  CIRCLE: 'circle',
+  THUMBNAIL: 'thumbnail',
+};
+
 const propTypes = {
   /**
    * The source string for the image which will be loaded and displayed.
@@ -140,3 +147,4 @@ Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;
 
 export default Image;
+export { ImageVariant };
