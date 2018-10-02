@@ -25,10 +25,10 @@ const people = [
 
 const onChange = (event, selectedIndex) => {
   // eslint-disable-next-line no-alert
-  alert(`Selected name: ${people[selectedIndex]}`);
+  alert(`Selected name: ${people[selectedIndex].name}`);
 };
 
-const SingleSelectableRowsDisableUnselectedRows = () => (
+const SingleSelectableRowsOnChangeAdditionalDetails = () => (
   <Table isStriped={false}>
     <Table.Header>
       <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
@@ -49,4 +49,4 @@ const SingleSelectableRowsDisableUnselectedRows = () => (
   </Table>
 );
 
-export default SingleSelectableRowsDisableUnselectedRows;
+export default SingleSelectableRowsOnChangeAdditionalDetails;
