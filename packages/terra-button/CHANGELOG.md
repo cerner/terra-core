@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed the Button component wrapping to center text
 
 2.21.0 - (August 29, 2018)
 ------------------
