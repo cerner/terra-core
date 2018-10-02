@@ -1,5 +1,5 @@
 import {
-  injectIntl, intlShape, FormattedMessage, intlProvider,
+  injectIntl, intlShape, FormattedMessage, IntlProvider,
 } from 'react-intl';
 import I18nProvider from './I18nProvider';
 import i18nLoader from './i18nLoader';
@@ -9,6 +9,6 @@ module.exports = {
   i18nLoader,
   injectIntl,
   intlShape,
-  intlProvider,
+  IntlProvider,
   FormattedMessage,
 };
