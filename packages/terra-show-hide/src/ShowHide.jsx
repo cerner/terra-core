@@ -18,9 +18,9 @@ const propTypes = {
    */
   onToggle: PropTypes.func.isRequired,
   /**
-   * Text that will be visible to the user while the component is collapsed.
+   * Elements(s) that will be visible to the user when component is collapsed
    */
-  preview: PropTypes.node.isRequired,
+  preview: PropTypes.node,
   /**
    * Button text that will be displayed.
    */
@@ -33,6 +33,7 @@ const propTypes = {
 
 const defaultProps = {
   isOpen: false,
+  preview: <div />,
 };
 
 const contextTypes = {

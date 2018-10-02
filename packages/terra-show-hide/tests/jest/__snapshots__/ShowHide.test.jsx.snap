@@ -20,67 +20,20 @@ exports[`ShowHide should render a default show-hide component 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    <span
-      className="text-and-icon"
-    >
-      <span
-        className="text-first"
-      >
-        Show More
-      </span>
-      <span
-        className="icon"
-      >
-        <span
-          className="icon icon-svg"
-        >
-          <svg
-            aria-hidden="true"
-            className="icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
-            />
-          </svg>
-        </span>
-      </span>
-    </span>
+    Show More
   </button>
 </div>
 `;
 
-exports[`ShowHide should render an animated show-hide component 1`] = `
+exports[`ShowHide should render a no preview show-hide component 1`] = `
 <div
   className="button"
 >
-  Test
+  <div />
   <div
     aria-hidden={true}
-    className="toggle animated"
-  >
-    <div
-      aria-hidden={false}
-      className="rah-static"
-      style={
-        Object {
-          "height": "0",
-          "overflow": "hidden",
-        }
-      }
-    >
-      <div
-        style={Object {}}
-      >
-        Full Text
-      </div>
-    </div>
-  </div>
+    className="toggle"
+  />
   <button
     aria-disabled={false}
     aria-expanded={false}
@@ -92,37 +45,7 @@ exports[`ShowHide should render an animated show-hide component 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    <span
-      className="text-and-icon"
-    >
-      <span
-        className="text-first"
-      >
-        Show More
-      </span>
-      <span
-        className="icon"
-      >
-        <span
-          className="icon icon-svg"
-        >
-          <svg
-            aria-hidden="true"
-            className="icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
-            />
-          </svg>
-        </span>
-      </span>
-    </span>
+    Show More
   </button>
 </div>
 `;
@@ -148,37 +71,7 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    <span
-      className="text-and-icon"
-    >
-      <span
-        className="text-first"
-      >
-        Hide
-      </span>
-      <span
-        className="icon"
-      >
-        <span
-          className="icon icon-svg"
-        >
-          <svg
-            aria-hidden="true"
-            className="icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
-            />
-          </svg>
-        </span>
-      </span>
-    </span>
+    Hide
   </button>
 </div>
 `;
@@ -203,37 +96,7 @@ exports[`ShowHide should set icon prop correctly 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    <span
-      className="text-and-icon"
-    >
-      <span
-        className="text-first"
-      >
-        Show More
-      </span>
-      <span
-        className="icon"
-      >
-        <span
-          className="icon icon-svg"
-        >
-          <svg
-            aria-hidden="true"
-            className="icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"
-            />
-          </svg>
-        </span>
-      </span>
-    </span>
+    Show More
   </button>
 </div>
 `;
@@ -241,6 +104,14 @@ exports[`ShowHide should set icon prop correctly 1`] = `
 exports[`ShowHide should set icon prop correctly with custom icon 1`] = `
 <div
   className="button"
+  icon={
+    <IconCaretLeft
+      className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
 >
   Test
   <div
@@ -258,36 +129,7 @@ exports[`ShowHide should set icon prop correctly with custom icon 1`] = `
     onKeyUp={[Function]}
     type="button"
   >
-    <span
-      className="text-and-icon"
-    >
-      <span
-        className="text-first"
-      >
-        Show More
-      </span>
-      <span
-        className="icon"
-      >
-        <span
-          className="icon icon-svg"
-        >
-          <svg
-            aria-hidden="true"
-            className="icon is-bidi"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M36 48L12 24 36 0v48z"
-            />
-          </svg>
-        </span>
-      </span>
-    </span>
+    Show More
   </button>
 </div>
 `;

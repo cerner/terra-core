@@ -8,8 +8,8 @@ import { name } from '../../../../package.json';
 import ShowHideSrc from '!raw-loader!../../../../src/ShowHide';
 
 // Example Files
-import AnimatedShowHide from '../example/AnimatedShowHide';
-import AnimatedShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AnimatedShowHide.jsx';
+import NoPreviewShowHide from '../example/NoPreviewShowHide';
+import NoPreviewShowHideSrc from '!raw-loader!../example/NoPreviewShowHide.jsx';
 import CustomIconShowHide from '../example/CustomIconShowHide';
 import CustomIconShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CustomIconShowHide.jsx';
 import CustomLinkTextShowHide from '../example/CustomLinkTextShowHide';
@@ -26,9 +26,9 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Animated ShowHide',
-        example: <AnimatedShowHide />,
-        source: AnimatedShowHideSrc,
+        title: 'No Preview ShowHide',
+        example: <NoPreviewShowHide />,
+        source: NoPreviewShowHideSrc,
       },
       {
         title: 'Custom Icon ShowHide',

@@ -20,8 +20,8 @@ describe('ShowHide', () => {
     expect(showHide).toMatchSnapshot();
   });
 
-  it('should render an animated show-hide component', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} isAnimated>Full Text</ShowHide>);
+  it('should render a no preview show-hide component', () => {
+    const showHide = createComponentWithIntl(<ShowHide onToggle={e => typeof e}>Full Text</ShowHide>);
     expect(showHide).toMatchSnapshot();
   });
 
@@ -107,23 +107,15 @@ describe('ShowHide', () => {
   // Error Handling Test
   it('should throw error for required children', () => {
     try {
-      createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} />);
+      createComponentWithIntl(<ShowHide onToggle={e => typeof e} />);
     } catch (e) {
       expect(e.message).toContain('The prop `children` is marked as required');
     }
   });
 
-  it('should throw error for required preview prop', () => {
-    try {
-      createComponentWithIntl(<ShowHide onToggle={e => typeof e}>Full Text</ShowHide>);
-    } catch (e) {
-      expect(e.message).toContain('The prop `preview` is marked as required');
-    }
-  });
-
   it('should throw error for required onToggle prop', () => {
     try {
-      createComponentWithIntl(<ShowHide preview="Test">Full Text</ShowHide>);
+      createComponentWithIntl(<ShowHide>Full Text</ShowHide>);
     } catch (e) {
       expect(e.message).toContain('The prop `onToggle` is marked as required');
     }
