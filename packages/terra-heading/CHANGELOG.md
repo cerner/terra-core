@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.23.0 - (October 2, 2018)
+------------------
 ### Added
 * Exports for level, size, and weight added.
 

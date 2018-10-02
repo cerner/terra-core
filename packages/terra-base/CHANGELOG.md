@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 
+3.24.0 - (October 2, 2018)
+------------------
 ### Added
 * Export IntlProvider from terra-i18n
 

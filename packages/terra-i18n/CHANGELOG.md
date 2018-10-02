@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.22.0 - (October 2, 2018)
+------------------
 ### Added
 * Export IntlProvider from react-intl
 
