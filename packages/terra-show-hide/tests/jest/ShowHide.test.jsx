@@ -1,7 +1,6 @@
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 import renderer from 'react-test-renderer';
-import IconCaretLeft from 'terra-icon/lib/icon/IconCaretLeft';
 import ShowHide from '../../src/ShowHide';
 
 // You can pass your messages to the IntlProvider. Optional: remove if unneeded.
@@ -39,16 +38,6 @@ describe('ShowHide', () => {
   it('should set collapsedButtonText prop correctly', () => {
     const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} collapsedButtonText="Collapsed Text">Full Text</ShowHide>);
     expect(showHide.toTree().rendered.props.collapsedButtonText).toEqual('Collapsed Text');
-  });
-
-  it('should set icon prop correctly', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e}>Full Text</ShowHide>);
-    expect(showHide).toMatchSnapshot();
-  });
-
-  it('should set icon prop correctly with custom icon', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} icon={<IconCaretLeft />}>Full Text</ShowHide>);
-    expect(showHide).toMatchSnapshot();
   });
 
   it('should set isAnimated prop correctly', () => {

@@ -18,17 +18,6 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
-  describe('Custom Icon', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/custom-icon-show-hide'));
-
-    it('should expand to full text', () => {
-      browser.click('button');
-    });
-
-    Terra.should.matchScreenshot('expanded');
-    Terra.should.beAccessible();
-  });
-
   describe('Collapsed Text', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/collapsed-text-show-hide'));
 
@@ -54,17 +43,10 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
-  describe('Animated', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/animated-show-hide'));
+  describe('No preview', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/no-preview-show-hide'));
 
-    it('should expand to full text', () => {
-      browser.click('button');
-
-      // Let the animation complete
-      browser.pause(100);
-    });
-
-    Terra.should.matchScreenshot('expanded');
+    Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
   });
 
@@ -95,10 +77,6 @@ describe('Show Hide', () => {
         '--terra-show-hide-icon-height': '1rem',
         '--terra-show-hide-icon-width': '1rem',
       },
-    });
-
-    it('should ', () => {
-      browser.click('button');
     });
   });
 });

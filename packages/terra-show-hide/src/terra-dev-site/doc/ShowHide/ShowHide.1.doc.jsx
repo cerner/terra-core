@@ -9,9 +9,7 @@ import ShowHideSrc from '!raw-loader!../../../../src/ShowHide';
 
 // Example Files
 import NoPreviewShowHide from '../example/NoPreviewShowHide';
-import NoPreviewShowHideSrc from '!raw-loader!../example/NoPreviewShowHide.jsx';
-import CustomIconShowHide from '../example/CustomIconShowHide';
-import CustomIconShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CustomIconShowHide.jsx';
+import NoPreviewShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoPreviewShowHide.jsx';
 import CustomLinkTextShowHide from '../example/CustomLinkTextShowHide';
 import CustomLinkTextShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CustomLinkTextShowHide.jsx';
 import DefaultShowHide from '../example/DefaultShowHide';
@@ -29,11 +27,6 @@ const DocPage = () => (
         title: 'No Preview ShowHide',
         example: <NoPreviewShowHide />,
         source: NoPreviewShowHideSrc,
-      },
-      {
-        title: 'Custom Icon ShowHide',
-        example: <CustomIconShowHide />,
-        source: CustomIconShowHideSrc,
       },
       {
         title: 'Custom Link Text ShowHide',
