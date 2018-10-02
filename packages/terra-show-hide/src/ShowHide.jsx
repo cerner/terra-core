@@ -49,7 +49,6 @@ const ShowHide = (props, { intl }) => {
   const {
     buttonText,
     children,
-    isAnimated,
     onToggle,
     preview,
     isOpen,

@@ -40,11 +40,6 @@ describe('ShowHide', () => {
     expect(showHide.toTree().rendered.props.collapsedButtonText).toEqual('Collapsed Text');
   });
 
-  it('should set isAnimated prop correctly', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} isAnimated>Full Text</ShowHide>);
-    expect(showHide.toTree().rendered.props.isAnimated).toEqual(true);
-  });
-
   it('should set isOpen prop correctly', () => {
     const showHide = createComponentWithIntl(<ShowHide preview="Test" onToggle={e => typeof e} isOpen>Full Text</ShowHide>);
     expect(showHide.toTree().rendered.props.isOpen).toEqual(true);
