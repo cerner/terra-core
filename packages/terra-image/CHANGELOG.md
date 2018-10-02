@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Export for image variant added.
 
 2.22.0 - (September 25, 2018)
 ------------------
