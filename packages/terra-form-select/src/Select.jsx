@@ -39,7 +39,7 @@ const propTypes = {
    */
   noResultContent: PropTypes.node,
   /**
-   * Callback function triggered when the select loses focus.
+   * Callback function triggered when the select loses focus. function(event)
    */
   onBlur: PropTypes.func,
   /**
@@ -47,7 +47,7 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Callback function triggered when the select is clicked.
+   * Callback function triggered when the select is clicked. function(event)
    */
   onClick: PropTypes.func,
   /**
@@ -55,7 +55,7 @@ const propTypes = {
    */
   onDeselect: PropTypes.func,
   /**
-   * Callback function triggered when the select receives focus.
+   * Callback function triggered when the select receives focus. function(event)
    */
   onFocus: PropTypes.func,
   /**
