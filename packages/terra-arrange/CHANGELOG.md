@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.25.0 - (October 2, 2018)
+------------------
 ### Added
 * Export for alignment types added
 

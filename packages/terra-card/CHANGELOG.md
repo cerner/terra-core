@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.23.0 - (October 2, 2018)
+------------------
 ### Changed
 * Made main container an article to improve accessibility
 

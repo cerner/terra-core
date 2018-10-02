@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Refactor markup and styles to be more accessible to screen readers
 
+2.29.0 - (October 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.28.0 - (September 25, 2018)
 ------------------
 ### Changed
