@@ -6,7 +6,7 @@
     max-width: calc(100% - 2 * var(--terra-abstract-modal-horizontal-inset, 10px));
     outline: none;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
 
