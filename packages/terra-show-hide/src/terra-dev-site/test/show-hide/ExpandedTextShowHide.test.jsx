@@ -40,7 +40,7 @@ class CustomLinkTextShowHide extends React.Component {
     return (
       <ShowHide
         preview={[sentences[0], sentences[1], sentences[2]]}
-        onToggle={this.toggleShowHide}
+        onChange={this.toggleShowHide}
         isOpen={this.state.isOpen}
         buttonText={customText}
       >

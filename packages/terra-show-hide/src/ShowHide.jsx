@@ -17,7 +17,7 @@ const propTypes = {
   /**
    * Callback function triggered when the component is expanded or collapsed.
    */
-  onToggle: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   /**
    * Elements(s) that will be visible to the user when component is collapsed
    */
@@ -48,7 +48,7 @@ const ShowHide = (props) => {
   const {
     buttonText,
     children,
-    onToggle,
+    onChange,
     preview,
     intl,
     isOpen,
@@ -80,7 +80,7 @@ const ShowHide = (props) => {
       <Button
         aria-expanded={isOpen}
         text={buttonText || intlButtonText}
-        onClick={onToggle}
+        onClick={onChange}
       />
     </div>
   );

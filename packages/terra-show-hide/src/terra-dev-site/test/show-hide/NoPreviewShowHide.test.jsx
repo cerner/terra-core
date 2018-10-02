@@ -20,7 +20,7 @@ class NoPreviewShowHide extends React.Component {
 
   render() {
     return (
-      <ShowHide isOpen={this.state.isOpen} onToggle={this.toggleShowHide}>
+      <ShowHide isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
         <p>{fullText}</p>
       </ShowHide>
     );

@@ -21,7 +21,7 @@ class InitiallyOpenShowHide extends React.Component {
 
   render() {
     return (
-      <ShowHide preview={previewText} isOpen={this.state.isOpen} onToggle={this.toggleShowHide}>
+      <ShowHide preview={previewText} isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
         {fullText}
       </ShowHide>
     );
