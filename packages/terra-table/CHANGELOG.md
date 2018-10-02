@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Exports for table header cell minimum width and sort added.
 
 2.24.0 - (September 25, 2018)
 ------------------

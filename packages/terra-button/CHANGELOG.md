@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Exports for button types and variants added
 
 2.24.0 - (September 25, 2018)
 ------------------
