@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
+import { injectIntl, intlShape } from 'terra-base';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './ShowHide.module.scss';
@@ -36,21 +37,20 @@ const defaultProps = {
   preview: <div />,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
+injectIntl(({ intl }) => {
+  if (intl === undefined) {
+    return new Error('Component is internationalized, and must be wrapped in terra-base');
+  }
+  return intl;
+});
 
-const ShowHide = (props, { intl }) => {
+const ShowHide = (props) => {
   const {
     buttonText,
     children,
     onToggle,
     preview,
+    intl,
     isOpen,
     ...customProps
   } = props;
@@ -86,8 +86,7 @@ const ShowHide = (props, { intl }) => {
   );
 };
 
-ShowHide.contextTypes = contextTypes;
 ShowHide.propTypes = propTypes;
 ShowHide.defaultProps = defaultProps;
 
-export default ShowHide;
+export default injectIntl(ShowHide);
