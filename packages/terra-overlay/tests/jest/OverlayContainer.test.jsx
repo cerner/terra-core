@@ -16,7 +16,7 @@ describe('OverlayContainer', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should have the class terra-OverlayContainer', () => {
+  it('should have the class overlay-container', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper.prop('className')).toContain('overlay-container');
   });

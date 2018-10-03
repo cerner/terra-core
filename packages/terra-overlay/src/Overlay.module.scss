@@ -11,7 +11,39 @@
     justify-content: center;
     outline: none;
     overflow: hidden;
-    z-index: 100;
+
+    .inner {
+      height: 200%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 200%;
+    }
+
+    &.layer-100 {
+      z-index: 100;
+    }
+
+    &.layer-6000 {
+      z-index: 6000;
+    }
+
+    &.layer-7000 {
+      z-index: 7000;
+    }
+
+    &.layer-8000 {
+      z-index: 8000;
+    }
+
+    &.layer-9000 {
+      z-index: 9000;
+    }
+
+    &.is-fullscreen {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .clear {

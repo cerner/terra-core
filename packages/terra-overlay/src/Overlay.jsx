@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
+import { Portal } from 'react-portal';
 import 'terra-base/lib/baseStyles';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
@@ -13,6 +14,8 @@ const BackgroundStyles = {
   DARK: 'dark',
   CLEAR: 'clear',
 };
+
+const zIndexes = ['100', '6000', '7000', '8000', '9000'];
 
 const propTypes = {
   /**
@@ -39,6 +42,10 @@ const propTypes = {
   * Indicates if the overlay is relative to the triggering container.
   */
   isRelativeToContainer: PropTypes.bool,
+  /**
+  * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are the standard modal layer: '6000', and the max layer: '8000'.
+  */
+  zIndex: PropTypes.oneOf(zIndexes),
 };
 
 const KEYCODES = {
@@ -52,6 +59,7 @@ const defaultProps = {
   isScrollable: false,
   isRelativeToContainer: false,
   onRequestClose: undefined,
+  zIndex: '100',
 };
 
 class Overlay extends React.Component {
@@ -71,6 +79,7 @@ class Overlay extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.shouldHandleESCKeydown);
+    this.resetBeforeOverlay();
   }
 
   setContainer(node) {
@@ -134,7 +143,7 @@ class Overlay extends React.Component {
 
   render() {
     const {
-      children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, ...customProps
+      children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, zIndex, ...customProps
     } = this.props;
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
@@ -143,12 +152,18 @@ class Overlay extends React.Component {
       return null;
     }
 
+    let zIndexLayer = '100';
+    if (zIndexes.indexOf(zIndex) >= 0) {
+      zIndexLayer = zIndex;
+    }
+
     const OverlayClassNames = cx([
       'overlay',
       type,
       backgroundStyle,
       { scrollable: isScrollable },
       customProps.className,
+      `layer-${zIndexLayer}`,
     ]);
 
     /*
@@ -158,6 +173,7 @@ class Overlay extends React.Component {
     /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-tabindex */
     const overlayComponent = (
       <div {...customProps} ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0">
+        <div className={cx('inner')} />
         <div className={cx('content')}>
           {children}
         </div>
@@ -170,14 +186,16 @@ class Overlay extends React.Component {
     }
 
     return (
-      <FocusTrap>
-        {overlayComponent}
-      </FocusTrap>
+      <Portal>
+        <FocusTrap>
+          {overlayComponent}
+        </FocusTrap>
+      </Portal>
     );
   }
 }
 
-const Opts = { BackgroundStyles };
+const Opts = { BackgroundStyles, zIndexes };
 
 Overlay.propTypes = propTypes;
 Overlay.defaultProps = defaultProps;

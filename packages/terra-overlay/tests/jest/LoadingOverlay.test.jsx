@@ -1,40 +1,37 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies */
-import { IntlProvider } from 'react-intl';
+import intlContexts from './intl-context-setup';
 import LoadingOverlay from '../../src/LoadingOverlay';
-import messages from '../../translations/en-US.json';
 
-const locale = 'en-US';
 
 describe('LoadingOverlay', () => {
-  it('should render a null component when isOpen is not provided', () => {
-    const wrapper = render(<IntlProvider locale={locale} messages={messages}><LoadingOverlay /></IntlProvider>);
+  it('should not render markup when isOpen is not provided', () => {
+    const wrapper = mount(<LoadingOverlay />, intlContexts.mountContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   describe('when isOpen is provided', () => {
     describe('the default LoadingOverlay', () => {
-      const defaultRender = (<IntlProvider locale={locale} messages={messages}><LoadingOverlay isOpen /></IntlProvider>);
+      const defaultRender = <LoadingOverlay isOpen />;
 
       it('should render a default component', () => {
-        const wrapper = render(defaultRender);
+        const wrapper = mount(defaultRender, intlContexts.mountContext);
         expect(wrapper).toMatchSnapshot();
       });
 
-      it('should have the class terra-LoadingOverlay', () => {
-        const wrapper = render(defaultRender);
+      it('should have the class loading-overlay', () => {
+        const wrapper = mount(defaultRender, intlContexts.mountContext);
         expect(wrapper.find('loading-overlay'));
       });
 
       it('should have the default message of Loading...', () => {
-        const wrapper = render(defaultRender);
+        const wrapper = mount(defaultRender, intlContexts.mountContext);
         expect(wrapper.find('.message').text()).toEqual('Loading...');
       });
     });
 
     it('should render with message prop', () => {
-      const overlayRender = (<IntlProvider locale={locale} messages={messages}><LoadingOverlay isOpen message="Loading!" /></IntlProvider>);
-      const wrapper = render(overlayRender);
+      const overlayRender = <LoadingOverlay isOpen message="Loading!" />;
+      const wrapper = mount(overlayRender, intlContexts.mountContext);
       expect(wrapper.find('.message').text()).toEqual('Loading!');
       expect(wrapper).toMatchSnapshot();
     });
