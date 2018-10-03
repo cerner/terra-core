@@ -16,6 +16,8 @@ import DefaultShowHide from '../example/DefaultShowHide';
 import DefaultShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultShowHide.jsx';
 import InitiallyOpenShowHide from '../example/InitiallyOpenShowHide';
 import InitiallyOpenShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/InitiallyOpenShowHide.jsx';
+import ButtonAlignCenterShowHide from '../example/ButtonAlignCenterShowHide';
+import ButtonAlignCenterShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonAlignCenterShowHideSrc.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -24,9 +26,9 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'No Preview ShowHide',
-        example: <NoPreviewShowHide />,
-        source: NoPreviewShowHideSrc,
+        title: 'Default ShowHide',
+        example: <DefaultShowHide />,
+        source: DefaultShowHideSrc,
       },
       {
         title: 'Custom Link Text ShowHide',
@@ -34,14 +36,19 @@ const DocPage = () => (
         source: CustomLinkTextShowHideSrc,
       },
       {
-        title: 'Default ShowHide',
-        example: <DefaultShowHide />,
-        source: DefaultShowHideSrc,
-      },
-      {
         title: 'Initially Open ShowHide',
         example: <InitiallyOpenShowHide />,
         source: InitiallyOpenShowHideSrc,
+      },
+      {
+        title: 'Button Align Center ShowHide',
+        example: <ButtonAlignCenterShowHide />,
+        source: ButtonAlignCenterShowHideSrc,
+      },
+      {
+        title: 'No Preview ShowHide',
+        example: <NoPreviewShowHide />,
+        source: NoPreviewShowHideSrc,
       },
     ]}
     propsTables={[

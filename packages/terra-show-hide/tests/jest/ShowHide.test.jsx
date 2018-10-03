@@ -57,6 +57,11 @@ describe('ShowHide', () => {
     expect(window.alert).toHaveBeenCalledWith('Toggled');
   });
 
+  it('should set the button to align left', () => {
+    const showHide = createComponentWithIntl(<ShowHide preview="Test" buttonAlign="start">Full Text</ShowHide>);
+    expect(showHide.toTree().rendered.props.buttonAlign).toEqual(true);
+  });
+
   it('should set expandedButtonText prop correctly', () => {
     const showHide = createComponentWithIntl(<ShowHide preview="Test" onChange={e => typeof e} expandedButtonText="Expanded Text">Full Text</ShowHide>);
     expect(showHide.toTree().rendered.props.expandedButtonText).toEqual('Expanded Text');

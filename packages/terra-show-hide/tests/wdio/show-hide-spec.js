@@ -50,6 +50,48 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
+  describe('Button align left', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-left-show-hide'));
+
+    Terra.should.matchScreenshot('collapsed');
+    Terra.should.beAccessible();
+
+    it('should expand to full text', () => {
+      browser.click('button');
+    });
+
+    Terra.should.matchScreenshot('expanded');
+    Terra.should.beAccessible();
+  });
+
+  describe('Button align center', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-left-show-center'));
+
+    Terra.should.matchScreenshot('collapsed');
+    Terra.should.beAccessible();
+
+    it('should expand to full text', () => {
+      browser.click('button');
+    });
+
+    Terra.should.matchScreenshot('expanded');
+    Terra.should.beAccessible();
+  });
+
+  describe('Button align right', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-left-show-right'));
+
+    Terra.should.matchScreenshot('collapsed');
+    Terra.should.beAccessible();
+
+    it('should expand to full text', () => {
+      browser.click('button');
+    });
+
+    Terra.should.matchScreenshot('expanded');
+    Terra.should.beAccessible();
+  });
+
   describe('Custom css properties', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/states-show-hide'));
 

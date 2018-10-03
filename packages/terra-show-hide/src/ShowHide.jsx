@@ -15,13 +15,17 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
+   * The intl object to be injected for translations. Provided by the injectIntl function.
+   */
+  intl: intlShape.isRequired,
+  /**
    * Callback function triggered when the component is expanded or collapsed.
    */
   onChange: PropTypes.func.isRequired,
   /**
-   * Elements(s) that will be visible to the user when component is collapsed
+   * Applies style for which side of the container the button aligns to. Available options are start, center and end
    */
-  preview: PropTypes.node,
+  buttonAlign: PropTypes.string,
   /**
    * Button text that will be displayed.
    */
@@ -30,9 +34,14 @@ const propTypes = {
    * Allows parent to toggle the component. True for open and false for close.
    */
   isOpen: PropTypes.bool,
+  /**
+   * Elements(s) that will be visible to the user when component is collapsed
+   */
+  preview: PropTypes.node,
 };
 
 const defaultProps = {
+  buttonAlign: 'end',
   isOpen: false,
   preview: <div />,
 };
@@ -46,6 +55,7 @@ injectIntl(({ intl }) => {
 
 const ShowHide = (props) => {
   const {
+    buttonAlign,
     buttonText,
     children,
     onChange,
@@ -55,11 +65,13 @@ const ShowHide = (props) => {
     ...customProps
   } = props;
 
-  const showHideClassName = cx([
+  const buttonClassName = cx([
+    'show-hide',
     'button',
-    { 'is-open': isOpen },
+    buttonAlign,
     customProps.className,
   ]);
+
 
   let intlButtonText = '';
 
@@ -72,16 +84,19 @@ const ShowHide = (props) => {
   }
 
   return (
-    <div {...customProps} className={showHideClassName}>
+    <div {...customProps}>
       {!isOpen && preview}
       <Toggle isOpen={isOpen}>
         {children}
       </Toggle>
-      <Button
-        aria-expanded={isOpen}
-        text={buttonText || intlButtonText}
-        onClick={onChange}
-      />
+      <div className={cx('show-hide')}>
+        <Button
+          aria-expanded={isOpen}
+          text={buttonText || intlButtonText}
+          onClick={onChange}
+          className={buttonClassName}
+        />
+      </div>
     </div>
   );
 };

@@ -1,9 +1,17 @@
 :local {
   .show-hide {
-    display: block;
+    display: flex;
   }
 
-  .button-text {
-    padding-left: 0.3rem;
+  .start {
+    margin-right: auto;
+  }
+
+  .center {
+    margin: auto;
+  }
+
+  .end {
+    margin-left: auto;
   }
 }
