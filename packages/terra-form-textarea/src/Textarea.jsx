@@ -16,6 +16,13 @@ const isMobileDevice = () => window.matchMedia('(max-width: 1024px)').matches
     || navigator.msMaxTouchPoints > 0
   );
 
+const TextareaSize = {
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+  FULL: 'full',
+};
+
 const TEXTAREA_ROW_SIZES = {
   small: 2,
   medium: 5,
@@ -214,3 +221,4 @@ Textarea.propTypes = propTypes;
 Textarea.defaultProps = defaultProps;
 
 export default Textarea;
+export { TextareaSize };

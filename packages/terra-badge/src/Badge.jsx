@@ -6,6 +6,24 @@ import styles from './Badge.module.scss';
 
 const cx = classNames.bind(styles);
 
+const BadgeIntent = {
+  DEFAULT: 'default',
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  INFO: 'info',
+  WARNING: 'warning',
+  POSITIVE: 'positive',
+  NEGATIVE: 'negative',
+};
+
+const BadgeSize = {
+  TINY: 'tiny',
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+  HUGE: 'huge',
+};
+
 const propTypes = {
   /**
    * Child Nodes.
@@ -66,3 +84,4 @@ Badge.propTypes = propTypes;
 Badge.defaultProps = defaultProps;
 
 export default Badge;
+export { BadgeIntent, BadgeSize };
