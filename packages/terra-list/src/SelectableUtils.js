@@ -23,7 +23,7 @@ const updatedMultiSelectedKeys = (currentKeys, newKey) => {
       newKeys = currentKeys.slice();
       newKeys.splice(newKeys.indexOf(newKey), 1);
     } else {
-      newKeys = currentKeys.concat([newIndex]);
+      newKeys = currentKeys.concat([newKey]);
     }
   } else {
     newKeys.push(newKey);
@@ -37,7 +37,7 @@ const updatedMultiSelectedKeys = (currentKeys, newKey) => {
  */
 const shouldHandleMultiSelect = (maxSelectionCount, currentKeys, newKey) => {
   const validMaxCount = validatedMaxCount(maxSelectionCount);
-  if (validMaxCount < 0 || currentIndexes.length < validMaxCount) {
+  if (validMaxCount < 0 || currentKeys.length < validMaxCount) {
     return true;
   }
   if (currentKeys.indexOf(newKey) >= 0) {
@@ -54,36 +54,36 @@ const shouldHandleSingleSelect = (currentKey, newKey) => newKey !== currentKey;
 /**
  * Returns a wrapped onClick callback function.
  */
-const wrappedOnClickForItem = (onClick, isSelectable, indexPath, onChange) => {
-  return (event) => {
+const wrappedOnClickForItem = (onClick, isSelectable, onChange, key, metaData) => (
+  (event) => {
     // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
     if (isSelectable !== false && onChange) {
-      onChange(event, indexPath);
+      onChange(event, { key, metaData });
     }
 
     if (onClick) {
       onClick(event);
     }
-  };
-};
+  }
+);
 
 /**
  * Returns a wrapped onKeyDown callback function with enter and space keys triggering onChange.
  */
-const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, indexPath, onChange) => {
-  return (event) => {
+const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, onChange, key, metaData) => (
+  (event) => {
     if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
       // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
       if (isSelectable !== false && onChange) {
-        onChange(event, indexPath);
+        onChange(event, { key, metaData });
       }
     }
 
     if (onKeyDown) {
       onKeyDown(event);
     }
-  };
-};
+  }
+);
 
 /**
  * Returns an object containing accessiblity and selectable properties.

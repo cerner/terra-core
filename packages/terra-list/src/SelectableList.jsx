@@ -39,7 +39,7 @@ const defaultProps = {
   isDivided: false,
   hasChevrons: false,
   onChange: undefined,
-  selectedIndexPaths: [],
+  selectedKeys: [],
 };
 
 const SelectableList = ({
@@ -48,11 +48,11 @@ const SelectableList = ({
   isDivided,
   onChange,
   hasChevrons,
-  selectedIndexPaths,
+  selectedKeys,
   ...customProps
 }) => {
-  const clonedChildren = React.Children.map(children, (child, index) => {
-    const newProps = SelectableUtils.newPropsForItem(child, index, onChange, hasChevrons, selectedIndexPaths, disableUnselectedItems, true);
+  const clonedChildren = React.Children.map(children, (child) => {
+    const newProps = SelectableUtils.newPropsForItem(child, onChange, hasChevrons, selectedKeys, disableUnselectedItems, true);
     return React.cloneElement(child, newProps);
   });
 

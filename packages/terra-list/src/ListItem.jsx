@@ -8,6 +8,8 @@ import styles from './List.module.scss';
 
 const cx = classNames.bind(styles);
 
+// Disable this lint rule to allow for the metaData prop
+/* eslint-disable react/forbid-prop-types */
 const propTypes = {
   /**
    * The content element to be placed inside the list item for display.
@@ -32,6 +34,10 @@ const propTypes = {
   /**
    * Function callback for the ref of the li.
    */
+  metaData: PropTypes.object,
+  /**
+   * Function callback for the ref of the li.
+   */
   onChange: PropTypes.func,
   /**
    * Function callback for the ref of the li.
@@ -46,6 +52,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
 };
+/* eslint-enable react/forbid-prop-types */
 
 const defaultProps = {
   children: [],
@@ -61,6 +68,7 @@ const ListItem = ({
   isSelected,
   isSelectable,
   listKey,
+  metaData,
   onChange,
   onClick,
   onKeyDown,
@@ -78,8 +86,8 @@ const ListItem = ({
 
   const ariaSpread = {};
   if (isSelectable) {
-    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, isSelectable, [index], onChange);
-    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, isSelectable, [index], onChange);
+    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, isSelectable, listKey, onChange, metaData);
+    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, isSelectable, listKey, onChange, metaData);
     ariaSpread.tabIndex = '0';
     ariaSpread.role = 'option';
     ariaSpread['aria-selected'] = isSelected;
@@ -89,13 +97,13 @@ const ListItem = ({
   if (hasChevron) {
     childContent = [
       <div className={cx('item-fill')} key="item-fill">{childContent}</div>,
-      <div className={cx('item-end')} key="item-end">{<span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>}</div>
+      <div className={cx('item-end')} key="item-end">{<span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>}</div>,
     ];
   }
 
   return (
     <li {...customProps} {...ariaSpread} className={listItemClassNames} ref={refCallback}>
-      {children}
+      {childContent}
     </li>
   );
 };
