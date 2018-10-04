@@ -20,10 +20,9 @@ import ShowHide from 'terra-show-hide';
 
 ## Component Features
 
- * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
- * [Responsive Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
- * [Mobile Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
- * [Internationalization Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
- * [Localization Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
- * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
-
+* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
+* [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
+* [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+* [Internationalization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
+* [Localization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
+* [LTR/RTL Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#ltr--rtl-support)
