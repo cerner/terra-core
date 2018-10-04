@@ -64,7 +64,7 @@
       text-decoration: var(--terra-show-hide-focus-underline, underline);
 
       &::after {
-        background-image: var(--terra-show-hide-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#001f67"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+        background-image: var(--terra-show-hide-focus-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#001f67"><path d="M48 12L24 36 0 12h48z"/></svg>'));
       }
     }
 
@@ -75,7 +75,7 @@
       text-decoration: var(--terra-show-hide-hover-underline, underline);
 
       &::after {
-        background-image: var(--terra-show-hide-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#001f67"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+        background-image: var(--terra-show-hide-hover-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#001f67"><path d="M48 12L24 36 0 12h48z"/></svg>'));
       }
     }
 
@@ -89,7 +89,7 @@
       text-decoration: none;
 
       &::after {
-        background-image: var(--terra-show-hide-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="rgba(28, 31, 33, 0.2)"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+        background-image: var(--terra-show-hide-disabled-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="rgba(28, 31, 33, 0.2)"><path d="M48 12L24 36 0 12h48z"/></svg>'));
       }
     }
   }
