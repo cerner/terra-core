@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added a prop for visually hidden text
 
+2.23.0 - (October 2, 2018)
+------------------
+### Added
+* Exports for schemes and sizes added
+
 2.22.0 - (September 25, 2018)
 ------------------
 ### Changed

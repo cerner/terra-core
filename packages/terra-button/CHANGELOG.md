@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated component feature links in README
+
+2.25.0 - (October 2, 2018)
+------------------
+### Added
+* Exports for button types and variants added
 
 2.24.0 - (September 25, 2018)
 ------------------
