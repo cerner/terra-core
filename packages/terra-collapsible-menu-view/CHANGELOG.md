@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+3.22.0 - (October 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.21.0 - (September 25, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.20.1 - (September 6, 2018)
 ------------------
 ### Changed
@@ -12,6 +22,7 @@ Unreleased
 3.20.0 - (September 5, 2018)
 ------------------
 ### Changed
+* Removed test restrictions on accessibility since that issue was fixed.
 * Bumped minimum react peerDependency version from ^16.2.0 to ^16.4.2
 * Bumped minimum react-dom peerDependency version from ^16.2.0 to ^16.4.2
 

@@ -1,4 +1,4 @@
-/* global browser, Terra, before, $ */
+/* global $ */
 const viewports = Terra.viewports('tiny', 'large');
 
 describe('Embedded Content Consumer', () => {

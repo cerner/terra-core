@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+2.24.0 - (October 2, 2018)
+------------------
+### Added
+* Export for progress bar height size added.
+
+2.23.0 - (September 25, 2018)
+------------------
+### Changed
+* Add valueText prop for attribute aria-valuetext
+
 2.22.1 - (September 6, 2018)
 ------------------
 ### Changed

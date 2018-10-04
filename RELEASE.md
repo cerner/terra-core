@@ -7,15 +7,14 @@ Below is a guide for releasing packages:
 - Run `npm run clean:install` to ensure you have npm packages updated for the master branch.
 - Run `lerna updated` to view all packages that have updates to be released.
 - Be sure to check the changelogs of all packages that have updates and ensure the changelogs are updated accordingly.
-- If a package has not been released before, remove the private attribute from the package.json. The private attribute has been set to true in order to prevent accidental publication.
 
 - Verify that the version number in the package.json is correct.
   - If the package is new, confirm that the version is `0.0.0`.
   - If the package has been published before, confirm that the version matches the latest released version. The publish script will update the version.
 
-- Login to npm. You must have the credentials to the `cerner-oss` account.
-  - `npm login` - Make sure to use the `cerner-oss` account.
-  - `npm whoami` - This should return `cerner-oss`.
+- Login to npm. Use your personal npm account.
+  - `npm login` - CLI command to log into npm.
+  - `npm whoami` - CLI command to confirm who you are logged in as.
 
 - Run the `npm run publish` script from the root directory.
 
@@ -36,5 +35,12 @@ More specifically, this command will:
 - Update all dependencies of the updated packages with the new versions, specified with a caret (^)
 - Create a new git commit and tag for the new version
 - Publish updated packages to npm
+
+If you are publishing a new package, e.g. a v1.0.0 release, the package will be listed with only you as the collaborator.
+You'll need to move the package into the terra-ui team under the Cerner org on npm.
+- Log into npm's website 
+- Navigate to the terra-ui package page: https://www.npmjs.com/settings/cerner/teams/team/terra-ui/access
+- At the top of this page, there should be an input labeled, "Package". Type in the full package name and press enter.
+- This will add the package to ther terra-ui team's packages under the Cerner org on npm and then all team members on the terra-ui team in npm will have access to publish in future releases.
 
 [project-url]: https://www.npmjs.com/org/cerner/team/terra-ui
