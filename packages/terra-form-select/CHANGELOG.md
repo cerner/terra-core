@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
+* First class prop support and documentation for onBlur, onFocus, and onClick 
 * Theme variable for input height
 
 ### Fixed

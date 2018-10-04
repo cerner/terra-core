@@ -4,10 +4,16 @@ Changelog
 Unreleased
 ----------
 
+1.19.0 - (October 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.18.0 - (September 25, 2018)
 ------------------
 ### Changed
 * Minor dependency version bump
+* Use absolute position for modal and modal overlay for iOS stability
 
 1.17.1 - (September 6, 2018)
 ------------------

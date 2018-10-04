@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {
-  I18nProvider, i18nLoader, injectIntl, intlShape, FormattedMessage,
+import PropTypes from 'prop-types'; import {
+  I18nProvider, i18nLoader, injectIntl, intlShape, FormattedMessage, IntlProvider,
 } from 'terra-i18n';
 import './baseStyles';
 
@@ -106,4 +105,6 @@ Base.propTypes = propTypes;
 Base.defaultProps = defaultProps;
 
 export default Base;
-export { injectIntl, intlShape, FormattedMessage };
+export {
+  injectIntl, intlShape, FormattedMessage, IntlProvider,
+};
