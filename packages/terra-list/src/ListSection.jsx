@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import SelectableUtils from './SelectableUtils';
-import SectionHeader from 'terra-section-header';
 import ListItem from './ListItem';
 
 const propTypes = {
@@ -65,18 +64,23 @@ class ListSection extends React.Component {
   constructor(props) {
     super(props);
     this.aggregateRef = this.aggregateRef.bind(this);
+    this.sendRefs = this.sendRefs.bind(this);
     this.aggregatedRefs = [];
   }
 
   componentDidMount() {
-    if (this.props.refCallback) {
-      this.props.refCallback(this.aggregatedRefs);
-    }
+    this.sendRefs();
   }
 
   componentDidUpdate() {
+    this.sendRefs();
+  }
+
+  sendRefs() {
     if (this.props.refCallback) {
-      this.props.refCallback(this.aggregatedRefs);
+      const tempRefs = this.aggregatedRefs;
+      this.aggregatedRefs = [];
+      this.props.refCallback(tempRefs);
     }
   }
 
@@ -104,7 +108,7 @@ class ListSection extends React.Component {
     if (!isCollapsed) {
       sectionItems = React.Children.map(children, (child, index) => {
         const newProps = SelectableUtils.newPropsForItem(child, index, onChange, hasChevron, selectedKeys, disableUnselectedItems, isSelectable);
-        newProps.refCallback=  node => this.aggregateRef(node, index);
+        newProps.refCallback = node => this.aggregateRef(node, index);
         return React.cloneElement(child, newProps);
       });
     } else if (this.aggregatedRefs.length > 1) {
@@ -117,7 +121,7 @@ class ListSection extends React.Component {
         {sectionItems}
       </React.Fragment>
     );
-  };
+  }
 }
 
 ListSection.propTypes = propTypes;
