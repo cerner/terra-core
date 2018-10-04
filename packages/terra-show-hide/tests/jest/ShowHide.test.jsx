@@ -15,7 +15,7 @@ const createComponentWithIntl = (children, props = { locale: 'en', messages }) =
 describe('ShowHide', () => {
   // Snapshot Tests
   it('should render a default show-hide component', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onChange={e => typeof e}>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>);
     expect(showHide).toMatchSnapshot();
   });
 
@@ -25,23 +25,33 @@ describe('ShowHide', () => {
   });
 
   it('should render an initially open show-hide component', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onChange={e => typeof e} isOpen>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e} isOpen>Full Text</ShowHide>);
+    expect(showHide).toMatchSnapshot();
+  });
+
+  it('should render a center-aligned button show-hide component', () => {
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e} buttonAlign="center">Full Text</ShowHide>);
     expect(showHide).toMatchSnapshot();
   });
 
   // Prop Tests
   it('should set children prop correctly', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onChange={e => typeof e}>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>);
     expect(showHide.toTree().rendered.props.children).toEqual('Full Text');
   });
 
-  it('should set collapsedButtonText prop correctly', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onChange={e => typeof e} collapsedButtonText="Collapsed Text">Full Text</ShowHide>);
-    expect(showHide.toTree().rendered.props.collapsedButtonText).toEqual('Collapsed Text');
+  it('should set buttonText prop correctly when it is collapsed', () => {
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e} buttonText="Collapsed Text" isOpen={false}>Full Text</ShowHide>);
+    expect(showHide.toTree().rendered.props.buttonText).toEqual('Collapsed Text');
+  });
+
+  it('should set buttonText prop correctly when it is expanded', () => {
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e} buttonText="Expanded Text" isOpen>Full Text</ShowHide>);
+    expect(showHide.toTree().rendered.props.buttonText).toEqual('Expanded Text');
   });
 
   it('should set isOpen prop correctly', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onChange={e => typeof e} isOpen>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e} isOpen>Full Text</ShowHide>);
     expect(showHide.toTree().rendered.props.isOpen).toEqual(true);
   });
 
@@ -51,45 +61,43 @@ describe('ShowHide', () => {
     event.preventDefault = jest.fn();
 
     // eslint-disable-next-line no-alert
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onChange={() => alert('Toggled')}>Full Text</ShowHide>);
-    const childButton = showHide.toJSON().children.find(object => object.type === 'button');
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={() => alert('Toggled')}>Full Text</ShowHide>);
+    console.log(showHide.toJSON().children[2].props.className);
+    const buttonContainer = showHide.toJSON().children.find(object => object.props.className === 'show-hide');
+    console.log(buttonContainer);
+    const childButton = buttonContainer.children.find(object => object.type === 'button');
     childButton.props.onClick(event);
     expect(window.alert).toHaveBeenCalledWith('Toggled');
   });
 
-  it('should set the button to align left', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" buttonAlign="start">Full Text</ShowHide>);
-    expect(showHide.toTree().rendered.props.buttonAlign).toEqual(true);
-  });
-
-  it('should set expandedButtonText prop correctly', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Test" onChange={e => typeof e} expandedButtonText="Expanded Text">Full Text</ShowHide>);
-    expect(showHide.toTree().rendered.props.expandedButtonText).toEqual('Expanded Text');
+  it('should set the button to align right', () => {
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e} buttonAlign="end">Full Text</ShowHide>);
+    expect(showHide.toTree().rendered.props.buttonAlign).toEqual('end');
   });
 
   it('should set preview prop correctly', () => {
-    const showHide = createComponentWithIntl(<ShowHide preview="Preview Text" onChange={e => typeof e}>Full Text</ShowHide>);
-    expect(showHide.toTree().rendered.props.preview).toEqual('Preview Text');
+    const showHide = createComponentWithIntl(<ShowHide preview={<p>Preview Text</p>} onChange={e => typeof e}>Full Text</ShowHide>);
+    expect(showHide.toTree().rendered.props.preview).toEqual(<p>Preview Text</p>);
   });
 
   // Attributes
   it('should merge classes passed in with attributes', () => {
-    const showHide = createComponentWithIntl(<ShowHide className="TestClass" preview="Test" onChange={e => typeof e}>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide className="TestClass" preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>);
     expect(showHide.toJSON().props.className).toContain('TestClass');
   });
 
   it('should merge ids passed in with attributes', () => {
-    const showHide = createComponentWithIntl(<ShowHide id="TestId" preview="Test" onChange={e => typeof e}>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide id="TestId" preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>);
     expect(showHide.toJSON().props.id).toContain('TestId');
   });
 
   it('should append data passed in with attributes', () => {
-    const showHide = createComponentWithIntl(<ShowHide data-terra-text-mock="MockData" preview="Test" onChange={e => typeof e}>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide data-terra-text-mock="MockData" preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>);
     expect(showHide.toJSON().props['data-terra-text-mock']).toEqual('MockData');
   });
 
   it('should append styles passed in with attributes', () => {
-    const showHide = createComponentWithIntl(<ShowHide style={{ height: '100px' }} preview="Test" onChange={e => typeof e}>Full Text</ShowHide>);
+    const showHide = createComponentWithIntl(<ShowHide style={{ height: '100px' }} preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>);
     expect(showHide.toJSON().props.style).toEqual({ height: '100px' });
   });
 
@@ -107,6 +115,14 @@ describe('ShowHide', () => {
       createComponentWithIntl(<ShowHide>Full Text</ShowHide>);
     } catch (e) {
       expect(e.message).toContain('The prop `onChange` is marked as required');
+    }
+  });
+
+  it('should throw error for required intl prop', () => {
+    try {
+      render(<ShowHide onChange={e => typeof e}>Full Text</ShowHide>);
+    } catch (e) {
+      expect(e.message).toContain('[React Intl] Could not find required `intl` object. <IntlProvider> needs to exist in the component ancestry.');
     }
   });
 });
