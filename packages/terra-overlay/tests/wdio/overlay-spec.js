@@ -188,8 +188,8 @@ describe('Overlay', () => {
     });
   });
 
-  describe('Overlay Removed from DOM', () => {
-    it('Background scrolling is restored after overlay is removed rom DOM', () => {
+  describe('Overlay unmounted', () => {
+    it('Background scrolling is restored after overlay is unmounted', () => {
       browser.url('/#/raw/tests/terra-overlay/overlay/overlay/removed-overlay');
       browser.click('#fullscreen_overlay');
       expect(browser.getAttribute('html', 'style')).to.not.include('overflow: hidden');

@@ -3,6 +3,15 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed issue where body scrolling is not restored on unmount.
+
+### Changed
+* Updated overlay to be portalled
+
+### Added
+* Added hidden div to catch scrolling behind Overlay
+* zIndex prop
 
 2.28.0 - (October 2, 2018)
 ------------------
