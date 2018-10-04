@@ -14,7 +14,7 @@ sentences.push(<p key="lorem8">Lorem ipsum dolor sit amet consectetur adipiscing
 sentences.push(<p key="lorem9">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
 sentences.push(<p key="lorem10">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
 
-class CustomLinkTextShowHide extends React.Component {
+class CustomButtonTextShowHide extends React.Component {
   constructor(props) {
     super(props);
 
@@ -29,7 +29,6 @@ class CustomLinkTextShowHide extends React.Component {
   }
 
   render() {
-
     let customText = '';
 
     if (this.state.isOpen) {
@@ -38,18 +37,17 @@ class CustomLinkTextShowHide extends React.Component {
       customText = `Show ${sentences.length - 3} More Sentences`;
     }
 
-
     return (
       <ShowHide
-        preview={`${sentences[0]} ${sentences[1]} ${sentences[2]}`}
+        preview={[sentences[0], sentences[1], sentences[2]]}
         onChange={this.toggleShowHide}
         isOpen={this.state.isOpen}
         buttonText={customText}
       >
-        {sentences.join(' ')}
+        {sentences}
       </ShowHide>
     );
   }
 }
 
-export default CustomLinkTextShowHide;
+export default CustomButtonTextShowHide;

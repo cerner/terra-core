@@ -18,15 +18,11 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
-  describe('Collapsed Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/collapsed-text-show-hide'));
+  describe('Custom button text', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/custom-button-text-show-hide'));
 
     Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
-  });
-
-  describe('Expanded Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/expanded-text-show-hide'));
 
     it('should expand to full text', () => {
       browser.click('button');
@@ -65,7 +61,7 @@ describe('Show Hide', () => {
   });
 
   describe('Button align center', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-left-show-center'));
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-center-show-hide'));
 
     Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
@@ -79,7 +75,7 @@ describe('Show Hide', () => {
   });
 
   describe('Button align right', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-left-show-right'));
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-right-show-hide'));
 
     Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();

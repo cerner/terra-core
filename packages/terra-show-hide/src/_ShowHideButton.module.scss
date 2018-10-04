@@ -94,7 +94,7 @@
     }
   }
 
-  .button[aria-expanded="true"] {
+  .button[aria-expanded='true'] {
     &::after {
       transform: rotate(180deg);
     }

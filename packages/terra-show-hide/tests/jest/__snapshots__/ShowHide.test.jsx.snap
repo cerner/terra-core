@@ -44,7 +44,7 @@ exports[`ShowHide should render a default show-hide component 1`] = `
     <button
       aria-disabled={false}
       aria-expanded={false}
-      className="button show-hide button end"
+      className="button show-hide button start"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -71,7 +71,7 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
     <button
       aria-disabled={false}
       aria-expanded={false}
-      className="button show-hide button end"
+      className="button show-hide button start"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -99,7 +99,7 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
     <button
       aria-disabled={false}
       aria-expanded={true}
-      className="button show-hide button end"
+      className="button show-hide button start"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}

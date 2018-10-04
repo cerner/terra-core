@@ -10,14 +10,16 @@ import ShowHideSrc from '!raw-loader!../../../../src/ShowHide';
 // Example Files
 import NoPreviewShowHide from '../example/NoPreviewShowHide';
 import NoPreviewShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoPreviewShowHide.jsx';
-import CustomLinkTextShowHide from '../example/CustomLinkTextShowHide';
-import CustomLinkTextShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CustomLinkTextShowHide.jsx';
+import CustomButtonTextShowHide from '../example/CustomButtonTextShowHide';
+import CustomLinkTextShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CustomButtonTextShowHide.jsx';
 import DefaultShowHide from '../example/DefaultShowHide';
 import DefaultShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultShowHide.jsx';
 import InitiallyOpenShowHide from '../example/InitiallyOpenShowHide';
 import InitiallyOpenShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/InitiallyOpenShowHide.jsx';
 import ButtonAlignCenterShowHide from '../example/ButtonAlignCenterShowHide';
-import ButtonAlignCenterShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonAlignCenterShowHideSrc.jsx';
+import ButtonAlignCenterShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonAlignCenterShowHide.jsx';
+import ButtonAlignRightShowHide from '../example/ButtonAlignRightShowHide';
+import ButtonAlignRightShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonAlignRightShowHide.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -31,8 +33,8 @@ const DocPage = () => (
         source: DefaultShowHideSrc,
       },
       {
-        title: 'Custom Link Text ShowHide',
-        example: <CustomLinkTextShowHide />,
+        title: 'Custom Button Text ShowHide',
+        example: <CustomButtonTextShowHide />,
         source: CustomLinkTextShowHideSrc,
       },
       {
@@ -44,6 +46,11 @@ const DocPage = () => (
         title: 'Button Align Center ShowHide',
         example: <ButtonAlignCenterShowHide />,
         source: ButtonAlignCenterShowHideSrc,
+      },
+      {
+        title: 'Button Align Right ShowHide',
+        example: <ButtonAlignRightShowHide />,
+        source: ButtonAlignRightShowHideSrc,
       },
       {
         title: 'No Preview ShowHide',

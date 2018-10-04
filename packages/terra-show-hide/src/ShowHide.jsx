@@ -41,7 +41,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  buttonAlign: 'end',
+  buttonAlign: 'start',
   isOpen: false,
   preview: <div />,
 };

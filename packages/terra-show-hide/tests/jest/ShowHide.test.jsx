@@ -62,9 +62,7 @@ describe('ShowHide', () => {
 
     // eslint-disable-next-line no-alert
     const showHide = createComponentWithIntl(<ShowHide preview={<p>Test</p>} onChange={() => alert('Toggled')}>Full Text</ShowHide>);
-    console.log(showHide.toJSON().children[2].props.className);
     const buttonContainer = showHide.toJSON().children.find(object => object.props.className === 'show-hide');
-    console.log(buttonContainer);
     const childButton = buttonContainer.children.find(object => object.type === 'button');
     childButton.props.onClick(event);
     expect(window.alert).toHaveBeenCalledWith('Toggled');

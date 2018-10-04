@@ -14,7 +14,7 @@ sentences.push(<p key="lorem8">Lorem ipsum dolor sit amet consectetur adipiscing
 sentences.push(<p key="lorem9">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
 sentences.push(<p key="lorem10">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
 
-class CustomLinkTextShowHide extends React.Component {
+class CustomButtonTextShowHideTest extends React.Component {
   constructor(props) {
     super(props);
 
@@ -50,4 +50,4 @@ class CustomLinkTextShowHide extends React.Component {
   }
 }
 
-export default CustomLinkTextShowHide;
+export default CustomButtonTextShowHideTest;
