@@ -46,13 +46,6 @@ const defaultProps = {
   preview: <div />,
 };
 
-injectIntl(({ intl }) => {
-  if (intl === undefined) {
-    return new Error('Component is internationalized, and must be wrapped in terra-base');
-  }
-  return intl;
-});
-
 const ShowHide = (props) => {
   const {
     buttonAlign,
