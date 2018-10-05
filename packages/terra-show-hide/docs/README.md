@@ -1,6 +1,6 @@
 # Terra Show Hide
 
-Show Hide component that will show a preview of content or show the full content with the click of a button.
+Show Hide Component that will show a preview of content and then expand it with a Show More button.
 
 ## Getting Started
 
