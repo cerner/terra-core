@@ -15,8 +15,6 @@ const KEYCODES = {
 
 const ButtonTypes = {
   BUTTON: 'button',
-  SUBMIT: 'submit',
-  RESET: 'reset',
 };
 
 const propTypes = {
@@ -82,13 +80,11 @@ class Button extends React.Component {
   }
 
   handleKeyDown(event) {
-    // Add active state to FF browsers
+    // Add active state to FF browser
     if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
       this.setState({ active: true });
-    }
-
-    // Add focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE || event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      this.setState({ focused: true });
+    } else if (event.nativeEvent.keyCode === KEYCODES.ENTER) { // Add focus styles for keyboard navigation
       this.setState({ focused: true });
     }
 
