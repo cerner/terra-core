@@ -2,17 +2,18 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import ShowHide from 'terra-show-hide/lib/ShowHide';
 
-const sentences = [];
-sentences.push(<p key="lorem1">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem2">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem3">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem4">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem5">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem6">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem7">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem8">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem9">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
-sentences.push(<p key="lorem10">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>);
+const sentences = [
+  <p key="lorem1">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem2">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem3">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem4">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem5">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem6">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem7">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem8">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem9">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <p key="lorem10">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+];
 
 class CustomButtonTextShowHideTest extends React.Component {
   constructor(props) {
