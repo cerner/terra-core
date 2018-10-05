@@ -51,9 +51,9 @@
       background-size: cover;
       content: '';
       display: inline-block;
-      height: 0.6em;
-      margin-left: 0.4em;
-      width: 0.6em;
+      height: var(--terra-show-hide-height, 0.6em);
+      margin-left: var(--terra-show-hide-margin-left, 0.4em);
+      width: var(--terra-show-hide-width, 0.6em);
     }
 
     &.is-focused {
