@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Refactor markup and styles to be more accessible to screen readers
 
 2.29.0 - (October 2, 2018)
 ------------------
