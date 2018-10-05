@@ -43,7 +43,7 @@ const propTypes = {
 const defaultProps = {
   buttonAlign: 'start',
   isOpen: false,
-  preview: <div />,
+  preview: undefined,
 };
 
 const ShowHide = (props) => {
