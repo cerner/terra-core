@@ -29,8 +29,8 @@
         border-bottom-right-radius: var(--terra-date-picker-button-border-bottom-right-radius, 0.25em);
         border-top-left-radius: 0;
         border-top-right-radius: var(--terra-date-picker-button-border-top-right-radius, 0.25em);
-        box-shadow: var(--terra-date-picker-button-box-shadow);
-        color: var(--terra-date-picker-button-color);
+        box-shadow: var(--terra-date-picker-button-box-shadow, none);
+        color: var(--terra-date-picker-button-color, #1c1f21);
         margin-bottom: 0;
         margin-left: -0.071em;
         margin-top: 0;

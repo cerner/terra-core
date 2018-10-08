@@ -10,19 +10,20 @@
   }
 
   .header {
-    background-color: #f4f4f4;
-    border-bottom-color: #dedfe0;
+    background-color: var(--terra-date-time-clarification-header-background-color, #f4f4f4);
+    border-bottom-color: var(--terra-date-time-clarification-header-border-bottom-color, #dedfe0);
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    height: 3.587rem;
-    padding: 0.714rem;
+    color: var(--terra-date-time-clarification-header-color, #1c1f21);
+    height: var(--terra-date-time-clarification-header-height, 3.587rem);
+    padding: var(--terra-date-time-clarification-header-padding, 0.714rem);
     width: 100%;
   }
 
   .title {
-    font-size: 1.285rem;
+    font-size: var(--terra-date-time-clarification-title-font-size, 1.285rem);
     font-weight: normal;
-    line-height: 1.75;
+    line-height: var(--terra-date-time-clarification-title-line-height, 1.75);
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -32,7 +33,6 @@
   }
 
   .body {
-    color: #64696c;
     padding: 0.25rem 0.714rem;
     
     p {
@@ -53,13 +53,11 @@
   }
 
   .button-offset {
-    background-color: #fff;
-    border: #dedfe0 solid 1px;
-    height: 1.857em;
+    background-color: var(--terra-date-time-clarification-button-offset-background-color, #fff);
+    height: var(--terra-date-time-clarification-button-offset-height, 2.142857rem);
     margin-left: 0.429em;
 
     &:focus {
-      border-color: #26a2e5;
       outline: none;
     }
   }
