@@ -11,7 +11,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
     type="button"
   >
     <span
-      class="text-and-icon"
+      class="button-label text-and-icon"
     >
       <span
         class="icon icon-first"
@@ -60,7 +60,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
     type="button"
   >
     <span
-      class="text-and-icon"
+      class="button-label text-and-icon"
     >
       <span
         class="icon icon-first"
@@ -120,7 +120,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
     type="button"
   >
     <span
-      class="icon-only"
+      class="button-label icon-only"
     >
       <span
         class="icon"
@@ -164,7 +164,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
     type="button"
   >
     <span
-      class="text-and-icon"
+      class="button-label text-and-icon"
     >
       <span
         class="icon icon-first"
@@ -262,7 +262,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
         type="button"
       >
         <span
-          className="text-and-icon"
+          className="button-label text-and-icon"
         >
           <span
             className="icon icon-first"

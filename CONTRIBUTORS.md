@@ -71,6 +71,7 @@ Cerner Corporation
 - Mahesh S [@m-samkc]
 - Alexander Brisimitzakis [@AlexBrizi]
 - Kyle Roush [@kyleroush]
+- Sharynne Azhar [@sharynneazhar]
 - Gabe Parra [@gabeparra01]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -145,4 +146,5 @@ Cerner Corporation
 [@m-samkc]: https://github.com/m-samkc
 [@AlexBrizi]: https://github.com/AlexBrizi
 [@kyleroush]: https://github.com/kyleroush
+[@sharynneazhar]: https://github.com/sharynneazhar
 [@gabeparra01]: https://github.com/gabeparra01
