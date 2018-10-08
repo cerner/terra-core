@@ -60,7 +60,6 @@ exports[`ShowHide should render a default show-hide component 1`] = `
 
 exports[`ShowHide should render a no preview show-hide component 1`] = `
 <div>
-  <div />
   <div
     aria-hidden={true}
     className="toggle"
