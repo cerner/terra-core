@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.25.0 - (October 8, 2018)
+------------------
 # Removed
 * Removed 'Segoe UI' from default font-stack which was never being rendered on Windows
 
