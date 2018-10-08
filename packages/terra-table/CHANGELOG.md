@@ -9,6 +9,9 @@ Unreleased
 ### Added
 * Exports for table header cell minimum width and sort added.
 
+### Changed
+* SingleSelectableRows documentation
+
 2.24.0 - (September 25, 2018)
 ------------------
 ### Changed
