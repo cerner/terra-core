@@ -7,7 +7,7 @@ const onChange = (event, selectedIndex) => {
   alert(`Selected indexes changed. Selected index: ${selectedIndex}`);
 };
 
-const SingleSelectableRowsDisableUnselectedRows = () => (
+const SingleSelectableRowsOnChange = () => (
   <Table isStriped={false}>
     <Table.Header>
       <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
@@ -34,4 +34,4 @@ const SingleSelectableRowsDisableUnselectedRows = () => (
   </Table>
 );
 
-export default SingleSelectableRowsDisableUnselectedRows;
+export default SingleSelectableRowsOnChange;
