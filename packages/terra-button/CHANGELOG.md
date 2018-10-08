@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed the Button component wrapping to center text
+
 ### Changed
 * Updated component feature links in README
 
