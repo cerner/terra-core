@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.24.0 - (October 8, 2018)
+------------------
 ### Changed
 * Updated to use one-cerner-style-icons 1.19.2
 

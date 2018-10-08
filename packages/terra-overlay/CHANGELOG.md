@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.29.0 - (October 8, 2018)
+------------------
 ### Changed
 * Upgrade focus-trap-react to ^4.0.1
 
