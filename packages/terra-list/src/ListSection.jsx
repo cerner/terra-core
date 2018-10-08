@@ -107,7 +107,7 @@ class ListSection extends React.Component {
     let sectionItems;
     if (!isCollapsed) {
       sectionItems = React.Children.map(children, (child, index) => {
-        const newProps = SelectableUtils.newPropsForItem(child, index, onChange, hasChevron, selectedKeys, disableUnselectedItems, isSelectable);
+        const newProps = SelectableUtils.newPropsForItem(child, onChange, hasChevron, selectedKeys, disableUnselectedItems, isSelectable);
         newProps.refCallback = node => this.aggregateRef(node, index);
         return React.cloneElement(child, newProps);
       });

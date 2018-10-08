@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SingleSelectList from 'terra-list/lib/SingleSelectList';
+import SelectableList from 'terra-list/lib/SelectableList';
 import 'terra-base/lib/baseStyles';
 
 const propTypes = {
@@ -20,17 +20,33 @@ const childContextTypes = {
 };
 
 class MenuItemGroup extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+    this.handleOnChange = this.handleOnChange.bind(this);
+    this.state = { selectedKey: null };
+  }
+
   getChildContext() {
     return { isGroupItem: true };
+  }
+
+  handleOnChange(event, response) {
+    if (SelectableList.Utils.shouldHandleSingleSelect(this.state.selectedKey, response.key)) {
+      event.preventDefault();
+      this.setState({ selectedKey: response.key });
+      if (this.props.onChange) {
+        this.props.onChange(event, response);
+      }
+    }
   }
 
   render() {
     const { children, onChange, ...customProps } = this.props;
 
     return (
-      <SingleSelectList {...customProps} onChange={onChange} role="group">
+      <SelectableList {...customProps} onChange={this.handleOnChange} role="group" selectedKeys={[this.state.selectedKey]}>
         {children}
-      </SingleSelectList>
+      </SelectableList>
     );
   }
 }
