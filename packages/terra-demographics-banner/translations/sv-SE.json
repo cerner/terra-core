@@ -1,7 +1,10 @@
 {
   "Terra.demographicsBanner.dateOfBirth": "Födelsedatum",
+  "Terra.demographicsBanner.dateOfBirthFullText": "Födelsedatum",
   "Terra.demographicsBanner.deceased": "Avliden",
   "Terra.demographicsBanner.gestationalAge": "GA",
+  "Terra.demographicsBanner.gestationalAgeFullText": "Graviditetstid",
   "Terra.demographicsBanner.noDataProvided": "--",
-  "Terra.demographicsBanner.postMenstrualAge": "PMA"
+  "Terra.demographicsBanner.postMenstrualAge": "PMA",
+  "Terra.demographicsBanner.postMenstrualAgeFullText": "Tid enligt senaste mens"
 }
