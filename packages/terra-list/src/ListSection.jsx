@@ -117,7 +117,9 @@ class ListSection extends React.Component {
 
     return (
       <React.Fragment>
-        <ListItem {...customProps} content={header} refCallback={node => this.aggregateRef(node, -1)} />
+        <ListItem {...customProps} refCallback={node => this.aggregateRef(node, -1)}>
+          {header}
+        </ListItem>
         {sectionItems}
       </React.Fragment>
     );
