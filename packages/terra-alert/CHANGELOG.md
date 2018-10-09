@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.30.0 - (October 8, 2018)
+------------------
 ### Changed
 * Refactor markup and styles to be more accessible to screen readers
 * Added padding to right of alert so text doesn't run flush to the edge
