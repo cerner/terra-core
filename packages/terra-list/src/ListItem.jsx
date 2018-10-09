@@ -34,10 +34,6 @@ const propTypes = {
   /**
    * Function callback for the ref of the li.
    */
-  listKey: PropTypes.string.isRequired,
-  /**
-   * Function callback for the ref of the li.
-   */
   metaData: PropTypes.object,
   /**
    * Function callback for the ref of the li.
@@ -69,11 +65,11 @@ const defaultProps = {
 /**
  * Returns a wrapped onClick callback function.
  */
-const wrappedOnClickForItem = (onClick, isSelectable, onChange, key, metaData) => (
+const wrappedOnClickForItem = (onClick, isSelectable, onChange, metaData) => (
   (event) => {
     // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
     if (isSelectable !== false && onChange) {
-      onChange(event, { key, metaData });
+      onChange(event, metaData);
     }
 
     if (onClick) {
@@ -85,12 +81,12 @@ const wrappedOnClickForItem = (onClick, isSelectable, onChange, key, metaData) =
 /**
  * Returns a wrapped onKeyDown callback function with enter and space keys triggering onChange.
  */
-const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, onChange, key, metaData) => (
+const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, onChange, metaData) => (
   (event) => {
     if (event.nativeEvent.keyCode === SelectableUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === SelectableUtils.KEYCODES.SPACE) {
       // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
       if (isSelectable !== false && onChange) {
-        onChange(event, { key, metaData });
+        onChange(event, metaData);
       }
     }
 
