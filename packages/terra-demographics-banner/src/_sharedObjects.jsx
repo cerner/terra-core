@@ -1,29 +1,40 @@
 import classNames from 'classnames/bind';
 import React from 'react';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './DemographicsBanner.module.scss';
 
 const cx = classNames.bind(styles);
 
 // eslint-disable-next-line react/prop-types
-const DemographicsBannerValue = ({ label, value, abbrTitle }) => (
-  <span className={cx('value')}>
-    {label
-      && (
-        <span className={cx('value-label')}>
-          {abbrTitle
-            ? (
-              <abbr title={abbrTitle}>
-                {`${label}:`}
-              </abbr>
-            )
-            : `${label}:`
-          }
-        </span>
-      )
-     }
-    <b>{value}</b>
-  </span>
-);
+const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
+  let valueLabelContent;
+
+  console.log(label);
+  console.log(abbrTitle);
+  if (abbrTitle) {
+    valueLabelContent = (
+      <span className={cx('value-label')}>
+        <abbr className={cx('abbreviation')} title={abbrTitle} aria-hidden="true">
+          {`${label}:`}
+        </abbr>
+      </span>
+    );
+  } else if (label) {
+    valueLabelContent = (
+      <span className={cx('value-label')}>
+        {`${label}:`}
+      </span>
+    );
+  }
+
+  return (
+    <span className={cx('value')}>
+      {abbrTitle && (<VisuallyHiddenText text={abbrTitle} />)}
+      {valueLabelContent}
+      <b>{value}</b>
+    </span>
+  );
+};
 
 const personDetails = (props) => {
   const elements = [
