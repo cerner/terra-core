@@ -9,7 +9,6 @@ describe('Show Hide', () => {
     Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
 
-
     it('should expand to full text', () => {
       browser.click('button');
     });
