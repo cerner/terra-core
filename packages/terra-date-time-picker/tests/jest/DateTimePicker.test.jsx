@@ -111,11 +111,12 @@ it('should render a date time picker with a default date and time', () => {
 });
 
 it('throws error on missing locale prop in Base', () => {
-  try {
+  global.console = { error: jest.fn() };
+
+  expect(() => {
     render(<DateTimePicker name="date-time-input" />);
-  } catch (e) {
-    expect(e.message).toContain('Component is internationalized, and must be wrapped in terra-base');
-  }
+  }).toThrowError();
+  expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
 });
 
 it('should render a disabled date time picker', () => {

@@ -13,7 +13,7 @@ describe('DocTemplate', () => {
   describe('Interactivity test', () => {
     before(() => browser.url('/#/raw/tests/terra-doc-template/doc-template/default-doc-template'));
 
-    it('Reveals the example\'s code', () => {
+    it('Reveals the examples code', () => {
       browser.click('button');
       // Reliably causes on hover styling of button to deactivate
       browser.click('h1=Examples');
@@ -25,7 +25,7 @@ describe('DocTemplate', () => {
       expect(screenshots).to.matchReference('withinTolerance');
     });
 
-    it('Hides the example\'s code again', () => {
+    it('Hides the examples code again', () => {
       browser.click('button');
       // Reliably causes on hover styling of button to deactivate
       browser.click('h1=Examples');

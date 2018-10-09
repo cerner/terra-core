@@ -4,6 +4,19 @@ ChangeLog
 Unreleased
 ----------
 
+2.24.0 - (October 8, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.23.0 - (October 2, 2018)
+------------------
+### Changed
+* Made main container an article to improve accessibility
+
+### Added
+* Added prop for VisuallyHiddenText
+
 2.22.0 - (September 25, 2018)
 ------------------
 ### Changed

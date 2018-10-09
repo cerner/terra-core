@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+4.19.0 - (October 8, 2018)
+------------------
+### Added
+* First class prop support and documentation for onBlur, onFocus, and onClick
+
 4.18.0 - (September 25, 2018)
 ------------------
 ### Changed
