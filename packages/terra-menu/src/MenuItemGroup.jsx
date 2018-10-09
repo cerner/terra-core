@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SelectableList from 'terra-list/lib/SelectableList';
+import List, { Utils } from 'terra-list';
 import 'terra-base/lib/baseStyles';
 
 const propTypes = {
@@ -31,7 +31,7 @@ class MenuItemGroup extends React.Component {
   }
 
   handleOnChange(event, response) {
-    if (SelectableList.Utils.shouldHandleSingleSelect(this.state.selectedKey, response.key)) {
+    if (Utils.shouldHandleSingleSelect(this.state.selectedKey, response.key)) {
       event.preventDefault();
       this.setState({ selectedKey: response.key });
       if (this.props.onChange) {
@@ -44,9 +44,9 @@ class MenuItemGroup extends React.Component {
     const { children, onChange, ...customProps } = this.props;
 
     return (
-      <SelectableList {...customProps} onChange={this.handleOnChange} role="group" selectedKeys={[this.state.selectedKey]}>
+      <List {...customProps} onChange={this.handleOnChange} role="group" selectedKeys={[this.state.selectedKey]}>
         {children}
-      </SelectableList>
+      </List>
     );
   }
 }

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './List.module.scss';
-import ListItem from './ListItem';
+import Item from './ListItem';
+import Section from './ListSection';
+import Utils from './ListUtils';
 
 const cx = classNames.bind(styles);
 
@@ -13,10 +15,6 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Whether or not the child list items should have a border color applied.
-   */
-  isDivided: PropTypes.bool,
-  /**
    * Function callback for the ref of the ul.
    */
   refCallback: PropTypes.func,
@@ -24,18 +22,15 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
-  isDivided: false,
 };
 
 const List = ({
   children,
-  isDivided,
   refCallback,
   ...customProps
 }) => {
   const listClassNames = cx([
     'list',
-    { divided: isDivided },
     customProps.className,
   ]);
 
@@ -48,6 +43,6 @@ const List = ({
 
 List.propTypes = propTypes;
 List.defaultProps = defaultProps;
-List.Item = ListItem;
 
 export default List;
+export { Item, Section, Utils };

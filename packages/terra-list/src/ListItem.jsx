@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
-import SelectableUtils from './SelectableUtils';
-import styles from './List.module.scss';
+import SelectableUtils from './ListUtils';
+import styles from './ListItem.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -19,6 +19,10 @@ const propTypes = {
    * Whether or not the list item has a disclosure indicator presented.
    */
   hasChevron: PropTypes.bool,
+  /**
+   * Whether or not the child list items should have a border color applied.
+   */
+  isDivided: PropTypes.bool,
   /**
    * Whether or not the list item should have selection styles applied.
    */
@@ -57,27 +61,61 @@ const propTypes = {
 const defaultProps = {
   children: [],
   hasChevron: undefined,
+  isDivided: false,
   isSelected: false,
   isSelectable: undefined,
 };
 
+/**
+ * Returns a wrapped onClick callback function.
+ */
+const wrappedOnClickForItem = (onClick, isSelectable, onChange, key, metaData) => (
+  (event) => {
+    // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
+    if (isSelectable !== false && onChange) {
+      onChange(event, { key, metaData });
+    }
+
+    if (onClick) {
+      onClick(event);
+    }
+  }
+);
+
+/**
+ * Returns a wrapped onKeyDown callback function with enter and space keys triggering onChange.
+ */
+const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, onChange, key, metaData) => (
+  (event) => {
+    if (event.nativeEvent.keyCode === SelectableUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === SelectableUtils.KEYCODES.SPACE) {
+      // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
+      if (isSelectable !== false && onChange) {
+        onChange(event, { key, metaData });
+      }
+    }
+
+    if (onKeyDown) {
+      onKeyDown(event);
+    }
+  }
+);
+
 const ListItem = ({
   children,
-  disableUnselectedItems,
   hasChevron,
+  isDivided,
   isSelected,
   isSelectable,
-  listKey,
   metaData,
   onChange,
   onClick,
   onKeyDown,
   refCallback,
-  selectedKeys,
   ...customProps
 }) => {
   const listItemClassNames = cx([
     'list-item',
+    { divided: isDivided },
     { selected: isSelected },
     { 'is-selectable': isSelectable },
     { 'item-has-chevron': hasChevron },
@@ -86,8 +124,8 @@ const ListItem = ({
 
   const ariaSpread = {};
   if (isSelectable) {
-    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, isSelectable, listKey, onChange, metaData);
-    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, isSelectable, listKey, onChange, metaData);
+    ariaSpread.onClick = wrappedOnClickForItem(onClick, isSelectable, onChange, metaData);
+    ariaSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, isSelectable, onChange, metaData);
     ariaSpread.tabIndex = '0';
     ariaSpread.role = 'option';
     ariaSpread['aria-selected'] = isSelected;

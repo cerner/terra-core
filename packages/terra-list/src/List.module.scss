@@ -1,6 +1,5 @@
 // List Component
 // ========================================================
-/* stylelint-disable selector-max-compound-selectors */
 :local {
   .list {
     display: flex;
@@ -9,86 +8,4 @@
     margin: 0;
     padding: 0;
   }
-
-  .list-item {
-    background-color: var(--terra-list-item-background-color);
-    margin: 0;
-    padding: 0;
-  }
-
-  .divided > .list-item {
-    border-top: var(--terra-list-divider-border, 1px solid #dedfe0);
-
-    &:last-of-type {
-      border-bottom: var(--terra-list-divider-border, 1px solid #dedfe0);
-    }
-  }
-
-  // List Item Component
-  // ========================================================
-
-  .chevron {
-    display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    > svg {
-      color: var(--terra-list-chevron-color, #bcbfc0);
-    }
-  }
-
-  .selected {
-    background-color: var(--terra-list-item-selected-background-color, darken(#ebf6fd, 2%));
-  }
-
-  .divided .selected {
-    &.list-item {
-      border-color: var(--terra-list-item-selected-divider-color, #0092e0) !important;
-    }
-
-    + .list-item {
-      border-top-color: var(--terra-list-item-selected-divider-color, #0092e0);
-    }
-  }
-
-
-  .is-selectable {
-    cursor: pointer;
-
-    &.list-item:hover {
-      background-color: var(--terra-list-item-hover-background-color, lighten(#ebf6fd, 2%)) !important;
-    }
-
-    &.list-item:focus {
-      background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
-      box-shadow: var(--terra-list-item-focus-box-shadow);
-      outline: var(--terra-list-item-focus-outline);
-    }
-
-    &.selected:hover {
-      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
-    }
-
-    &.selected:focus {
-      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
-    }
-  }
-
-  .item-has-cheverom {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .item-fill {
-    flex: 1 1 auto;
-    min-width: 0;
-    width: 100%;
-  }
-
-  .item-end {
-    flex: 0 0 auto;
-  }
 }
-/* stylelint-enable */

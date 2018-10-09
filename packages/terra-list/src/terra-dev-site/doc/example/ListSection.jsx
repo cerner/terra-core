@@ -5,7 +5,12 @@ import ListSection from 'terra-list/lib/ListSection';
 
 const ListSectionExample = () => (
   <List isDivided>
-    <ListSection header={<p>open title</p>} key="1" listKey="derp1" refCallback={node => console.log(node)}>
+    <ListSection
+      header={<p>open title</p>}
+      key="1"
+      listKey="derp1"
+      refCallback={node => console.log(node)}
+    >
       <List.Item key="123" listKey="123">
         <span>test</span>
       </List.Item>
@@ -16,7 +21,13 @@ const ListSectionExample = () => (
         <span>test</span>
       </List.Item>
     </ListSection>
-    <ListSection isCollapsed header={<p>collapsed title</p>} key="2" listKey="derp2" refCallback={node => console.log(node)}>
+    <ListSection
+      isCollapsed
+      header={<p>collapsed title</p>}
+      key="2"
+      listKey="derp2"
+      refCallback={node => console.log(node)}
+    >
       <List.Item key="126" listKey="126">
         <span>test</span>
       </List.Item>
