@@ -39,7 +39,7 @@ it('should render a badge component in the order, text and icon with info intent
 });
 
 it('should render a badge component with visually hidden text', () => {
-  const wrapper = shallow(<Badge text="3" visuallyHiddenText="Risk Score" />);
+  const wrapper = shallow(<Badge text="3" visuallyHiddenText="Risk Score 3" />);
   expect(wrapper).toMatchSnapshot();
 });
 
