@@ -111,12 +111,12 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
       </label>
     </div>
     <div
-      class="button-group"
+      class="button-group meridiem-button-group"
     >
       <button
         aria-disabled="false"
         aria-pressed="true"
-        class="button neutral button-group-button is-active meridiem-button"
+        class="button neutral button-group-button is-selected meridiem-button"
         type="button"
       >
         <span
@@ -201,12 +201,12 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
       </label>
     </div>
     <div
-      class="button-group"
+      class="button-group meridiem-button-group"
     >
       <button
         aria-disabled="false"
         aria-pressed="true"
-        class="button neutral button-group-button is-active meridiem-button"
+        class="button neutral button-group-button is-selected meridiem-button"
         type="button"
       >
         <span
@@ -291,12 +291,12 @@ exports[`should not have duplicate ids on the page when multiple date pickers ar
       </label>
     </div>
     <div
-      class="button-group"
+      class="button-group meridiem-button-group"
     >
       <button
         aria-disabled="false"
         aria-pressed="true"
-        class="button neutral button-group-button is-active meridiem-button"
+        class="button neutral button-group-button is-selected meridiem-button"
         type="button"
       >
         <span
@@ -385,12 +385,12 @@ exports[`should render a 12 hour timepicker meridiem with buttons when viewed on
     </label>
   </div>
   <div
-    class="button-group"
+    class="button-group meridiem-button-group"
   >
     <button
       aria-disabled="false"
       aria-pressed="true"
-      class="button neutral button-group-button is-active meridiem-button"
+      class="button neutral button-group-button is-selected meridiem-button"
       type="button"
     >
       <span
