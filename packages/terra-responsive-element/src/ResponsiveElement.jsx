@@ -116,7 +116,12 @@ class ResponsiveElement extends React.Component {
 
   render() {
     if (this.state.element) {
-      return this.props[this.state.element] || null;
+      const Tag = this.props[this.state.element] || null;
+      if (Tag) {
+        return <Tag {...this.props} />;
+      } else {
+        return null;
+      }
     }
 
     return <div ref={this.setContainer} />;
