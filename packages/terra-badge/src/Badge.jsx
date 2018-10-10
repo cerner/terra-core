@@ -78,6 +78,8 @@ const Badge = ({
 }) => {
   const badgeClassNames = cx(
     'badge',
+    { 'has-icon': icon },
+    { 'is-reversed': isReversed },
     size,
     intent,
     customProps.className,
