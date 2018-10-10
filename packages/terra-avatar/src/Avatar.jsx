@@ -45,13 +45,13 @@ const defaultProps = {
 };
 
 class Avatar extends React.Component {
-  static generateImagePlaceholder(variant) {
+  static generateImagePlaceholder(variant, alt) {
     const avatarIconClassNames = cx([
       'avatar-icon',
       variant,
     ]);
 
-    return <span className={avatarIconClassNames} />;
+    return <span className={avatarIconClassNames} role="img" alt={alt} />;
   }
 
   static generateImage(image, variant, alt) {
@@ -119,7 +119,7 @@ class Avatar extends React.Component {
 
       avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
     } else {
-      avatarContent = Avatar.generateImagePlaceholder(variant);
+      avatarContent = Avatar.generateImagePlaceholder(variant, alt);
     }
 
     return (
