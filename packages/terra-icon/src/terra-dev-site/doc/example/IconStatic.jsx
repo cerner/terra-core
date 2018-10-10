@@ -79,9 +79,9 @@ import IconDrugDrugLowLight from 'terra-icon/lib/icon/IconDrugDrugLowLight';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
-      <Table.HeaderCell content="SVG" key="svg" />
-      <Table.HeaderCell content="Concept" key="concept" />
-      <Table.HeaderCell content="Code" key="code" />
+      <Table.HeaderCell content={'SVG'} key={'svg'} />
+      <Table.HeaderCell content={'Concept'} key={'concept'} />
+      <Table.HeaderCell content={'Code'} key={'code'} />
     </Table.Header>
     <Table.Rows>
       <tr style={{ backgroundColor: '#EEEEEE' }}>

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.23.0 - (October 8, 2018)
+------------------
 ### Changed
 * Updated fs-extra dependency to latest stable release (^7.0.0)
 
