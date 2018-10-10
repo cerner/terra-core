@@ -29,6 +29,7 @@ exports[`Avatar should render fallback facility avatar when invalid image is pas
     </div>
     <div>
       <span
+        alt="placeholder"
         class="avatar-icon facility"
         role="img"
       />
@@ -78,6 +79,7 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
     </div>
     <div>
       <span
+        alt="placeholder"
         class="avatar-icon user"
         role="img"
       />
@@ -103,6 +105,7 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
     </div>
     <div>
       <span
+        alt="placeholder"
         class="avatar-icon user"
         role="img"
       />
