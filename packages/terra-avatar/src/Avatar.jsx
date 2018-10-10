@@ -55,7 +55,7 @@ class Avatar extends React.Component {
   }
 
   static generateImage(image, variant, alt) {
-    const icon = Avatar.generateImagePlaceholder(variant);
+    const icon = Avatar.generateImagePlaceholder(variant, alt);
 
     return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
   }
