@@ -113,7 +113,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         type="button"
       >
         <span
-          className="icon-only"
+          className="button-label icon-only"
         >
           <span
             className="icon"
