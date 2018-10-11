@@ -9,6 +9,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         Array [
           <input
             aria-disabled="false"
+            aria-label="Search"
             class="form-input input"
             placeholder=""
             type="search"
@@ -35,6 +36,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
   >
     <Input
       aria-disabled={false}
+      aria-label="Search"
       className="input"
       disabled={false}
       isInvalid={false}
@@ -48,6 +50,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
             Array [
               <input
                 aria-disabled="false"
+                aria-label="Search"
                 class="form-input input"
                 placeholder=""
                 type="search"
@@ -68,6 +71,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
     >
       <input
         aria-disabled={false}
+        aria-label="Search"
         className="form-input input"
         disabled={false}
         name={null}
@@ -93,13 +97,13 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       isIconOnly={true}
       isReversed={false}
       onClick={[Function]}
-      text="Search"
+      text="Submit Search"
       type="button"
       variant="neutral"
     >
       <button
         aria-disabled={false}
-        aria-label="Search"
+        aria-label="Submit Search"
         className="button neutral compact button"
         disabled={false}
         onBlur={[Function]}
@@ -109,7 +113,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         type="button"
       >
         <span
-          className="icon-only"
+          className="button-label icon-only"
         >
           <span
             className="icon"
@@ -162,6 +166,7 @@ exports[`Snapshots renders a basic search field 1`] = `
 >
   <Input
     aria-disabled={false}
+    aria-label="Search"
     className="input"
     disabled={false}
     isInvalid={false}
@@ -187,7 +192,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Search"
+    text="Submit Search"
     type="button"
     variant="neutral"
   />
@@ -200,6 +205,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
 >
   <Input
     aria-disabled={true}
+    aria-label="Search"
     className="input"
     disabled={true}
     isInvalid={false}
@@ -225,7 +231,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Search"
+    text="Submit Search"
     type="button"
     variant="neutral"
   />
@@ -238,6 +244,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
 >
   <Input
     aria-disabled={false}
+    aria-label="Search"
     className="input"
     disabled={false}
     isInvalid={false}
@@ -263,7 +270,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Search"
+    text="Submit Search"
     type="button"
     variant="neutral"
   />
@@ -276,6 +283,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
 >
   <Input
     aria-disabled={false}
+    aria-label="Search"
     className="input"
     defaultValue="Default"
     disabled={false}
@@ -302,7 +310,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Search"
+    text="Submit Search"
     type="button"
     variant="neutral"
   />
@@ -315,6 +323,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 >
   <Input
     aria-disabled={false}
+    aria-label="Search"
     className="input"
     disabled={false}
     isInvalid={false}
@@ -340,7 +349,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Search"
+    text="Submit Search"
     type="button"
     variant="neutral"
   />
@@ -353,6 +362,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
 >
   <Input
     aria-disabled={false}
+    aria-label="Search"
     className="input"
     disabled={false}
     isInvalid={false}
@@ -379,7 +389,46 @@ exports[`Snapshots renders a search field with a value 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Search"
+    text="Submit Search"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`Snapshots renders a search field with an aria-label 1`] = `
+<div
+  className="searchfield"
+>
+  <Input
+    aria-disabled={false}
+    aria-label="Search Field"
+    className="input"
+    disabled={false}
+    isInvalid={false}
+    name={null}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder=""
+    required={false}
+    type="search"
+  />
+  <Button
+    className="button"
+    icon={
+      <IconSearch
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="Submit Search"
     type="button"
     variant="neutral"
   />

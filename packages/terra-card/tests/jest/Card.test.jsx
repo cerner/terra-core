@@ -40,4 +40,10 @@ describe('Card', () => {
     const wrapper = shallow(<Card id="testCard" />);
     expect(wrapper.props().id).toEqual('testCard');
   });
+
+  // Visually hidden text
+  it('it should pass in visually hidden text', () => {
+    const wrapper = shallow(<Card visuallyHiddenText="This is screen reader only text" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

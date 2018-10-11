@@ -1,12 +1,3 @@
-/* global browser, before, Terra */
-
-const ignoredA11y = {
-  // https://github.com/cerner/terra-core/issues/1058
-  'button-name': { enabled: false },
-  // https://github.com/cerner/terra-core/issues/1061
-  'aria-allowed-attr': { enabled: false },
-};
-
 describe('Collapsible Menu View', () => {
   Terra.viewports().forEach((viewport) => {
     describe('Responsive', () => {
@@ -16,7 +7,7 @@ describe('Collapsible Menu View', () => {
       });
 
       Terra.should.matchScreenshot();
-      Terra.should.beAccessible({ rules: ignoredA11y });
+      Terra.should.beAccessible();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
@@ -45,7 +36,7 @@ describe('Collapsible Menu View', () => {
       });
 
       Terra.should.matchScreenshot({ selector: '#root' });
-      Terra.should.beAccessible({ rules: ignoredA11y });
+      Terra.should.beAccessible();
     });
   });
 
@@ -53,6 +44,6 @@ describe('Collapsible Menu View', () => {
     const viewports = Terra.viewports('medium');
     before(() => browser.url('/#/raw/tests/terra-collapsible-menu-view/collapsible-menu-view/first-hidden-item-is-icon'));
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoredA11y });
+    Terra.should.beAccessible({ viewports });
   });
 });

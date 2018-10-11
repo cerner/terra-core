@@ -16,6 +16,13 @@ const isMobileDevice = () => window.matchMedia('(max-width: 1024px)').matches
     || navigator.msMaxTouchPoints > 0
   );
 
+const TextareaSize = {
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+  FULL: 'full',
+};
+
 const TEXTAREA_ROW_SIZES = {
   small: 2,
   medium: 5,
@@ -194,6 +201,7 @@ class Textarea extends React.Component {
 
     return (
       <textarea
+        {...additionalTextareaProps}
         ref={(textarea) => {
           this.textarea = textarea;
           if (refCallback) refCallback(textarea);
@@ -203,7 +211,6 @@ class Textarea extends React.Component {
         onChange={this.onChange}
         required={required}
         rows={textareaRows}
-        {...additionalTextareaProps}
         className={textareaClasses}
       />
     );
@@ -214,3 +221,4 @@ Textarea.propTypes = propTypes;
 Textarea.defaultProps = defaultProps;
 
 export default Textarea;
+export { TextareaSize };

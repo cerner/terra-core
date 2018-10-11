@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {
-  I18nProvider, i18nLoader, injectIntl, intlShape, FormattedMessage,
+import PropTypes from 'prop-types'; import {
+  I18nProvider, i18nLoader, injectIntl, intlShape, FormattedMessage, IntlProvider,
 } from 'terra-i18n';
 import './baseStyles';
 
@@ -24,6 +23,10 @@ const propTypes = {
     }
   },
   /**
+   * Activates [React Strict Mode](https://reactjs.org/docs/strict-mode.html) for descendants
+   */
+  strictMode: PropTypes.bool,
+  /**
    * The component(s) that will be wrapped by `<Base />` ONLY
    * in the event that translations have not been loaded yet.
    * NOTE: Absolutely no locale-dependent logic should be
@@ -34,6 +37,7 @@ const propTypes = {
 
 const defaultProps = {
   customMessages: {},
+  strictMode: false,
 };
 
 class Base extends React.Component {
@@ -73,20 +77,25 @@ class Base extends React.Component {
       children,
       locale,
       customMessages,
+      strictMode,
       translationsLoadingPlaceholder,
       ...customProps
     } = this.props;
 
     const messages = Object.assign({}, this.state.messages, customMessages);
+    const renderChildren = strictMode ? (<React.StrictMode>{children}</React.StrictMode>) : children;
 
     if (locale === undefined) {
-      return (<div {...customProps}>{children}</div>);
+      return (
+        <div {...customProps}>
+          {renderChildren}
+        </div>);
     }
 
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
       <I18nProvider {...customProps} locale={this.state.locale} messages={messages}>
-        {children}
+        {renderChildren}
       </I18nProvider>
     );
   }
@@ -96,4 +105,6 @@ Base.propTypes = propTypes;
 Base.defaultProps = defaultProps;
 
 export default Base;
-export { injectIntl, intlShape, FormattedMessage };
+export {
+  injectIntl, intlShape, FormattedMessage, IntlProvider,
+};

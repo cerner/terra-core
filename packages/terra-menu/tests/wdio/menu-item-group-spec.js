@@ -1,5 +1,3 @@
-/* global browser, describe, it, before, expect, Terra */
-
 const ignoredA11y = {
   'aria-required-parent': { enabled: false },
 };
