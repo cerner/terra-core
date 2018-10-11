@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed text wrapping to break on whole word instead of part of the word.
 
 1.20.0 - (August 30, 2018)
 ------------------
