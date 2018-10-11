@@ -6,6 +6,32 @@ import styles from './Heading.module.scss';
 
 const cx = classNames.bind(styles);
 
+/* eslint-disable quote-props */
+const HeadingLevel = {
+  '1': 1,
+  '2': 2,
+  '3': 3,
+  '4': 4,
+  '5': 5,
+  '6': 6,
+};
+
+const HeadingSize = {
+  MINI: 'mini',
+  TINY: 'tiny',
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+  HUGE: 'huge',
+};
+
+const HeadingWeight = {
+  '200': 200,
+  '400': 400,
+  '700': 700,
+};
+/* eslint-enable quote-props */
+
 const propTypes = {
   /**
    * Child nodes
@@ -75,3 +101,4 @@ Heading.propTypes = propTypes;
 Heading.defaultProps = defaultProps;
 
 export default Heading;
+export { HeadingLevel, HeadingSize, HeadingWeight };

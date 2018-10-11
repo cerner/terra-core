@@ -67,4 +67,11 @@ describe('Card', () => {
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
+
+  describe('Card Visually Hidden Text', () => {
+    before(() => browser.url('/#/raw/tests/terra-card/card/card-visually-hidden-text'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
 });

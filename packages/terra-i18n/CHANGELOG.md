@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+2.23.0 - (October 8, 2018)
+------------------
+### Changed
+* Updated fs-extra dependency to latest stable release (^7.0.0)
+
+2.22.0 - (October 2, 2018)
+------------------
+### Added
+* Export IntlProvider from react-intl
+
 2.21.0 - (September 25, 2018)
 ------------------
 ### Changed
