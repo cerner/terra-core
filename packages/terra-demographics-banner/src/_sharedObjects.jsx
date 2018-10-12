@@ -9,8 +9,6 @@ const cx = classNames.bind(styles);
 const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
   let valueLabelContent;
 
-  console.log(label);
-  console.log(abbrTitle);
   if (abbrTitle) {
     valueLabelContent = (
       <span className={cx('value-label')}>
