@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Added VisuallyHiddenText prop to status component.
+
 2.26.0 - (October 8, 2018)
 ------------------
 ### Changed
