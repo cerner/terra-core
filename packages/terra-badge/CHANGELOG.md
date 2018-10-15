@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added a prop for visually hidden text
 
 2.24.0 - (October 8, 2018)
 ------------------
