@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Theme variable for input height
+
+### Fixed
+* Normalized duplicate padding theme variable
 
 4.19.0 - (October 8, 2018)
 ------------------
