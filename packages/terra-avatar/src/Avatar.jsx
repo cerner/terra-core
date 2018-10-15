@@ -51,7 +51,7 @@ class Avatar extends React.Component {
       variant,
     ]);
 
-    return <span className={avatarIconClassNames} role="img" alt={alt} />;
+    return <span className={avatarIconClassNames} role="img" aria-label={alt} />;
   }
 
   static generateImage(image, variant, alt) {
