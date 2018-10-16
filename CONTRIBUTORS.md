@@ -72,6 +72,8 @@ Cerner Corporation
 - Alexander Brisimitzakis [@AlexBrizi]
 - Kyle Roush [@kyleroush]
 - Sharynne Azhar [@sharynneazhar]
+- Eric Wilson [@eawww]
+- Matt Anderson [@mndrsn]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -146,3 +148,5 @@ Cerner Corporation
 [@AlexBrizi]: https://github.com/AlexBrizi
 [@kyleroush]: https://github.com/kyleroush
 [@sharynneazhar]: https://github.com/sharynneazhar
+[@eawww]: https://github.com/eawww
+[@mndrsn]: https://github.com/mndrsn
