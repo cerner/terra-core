@@ -1,7 +1,7 @@
 {
   "name": "terra-content-container",
   "main": "lib/ContentContainer.js",
-  "version": "2.25.0",
+  "version": "2.26.0",
   "description": "The Terra ContentContainer is a structural component for the purpose of arranging content with a header.",
   "repository": {
     "type": "git",
@@ -28,9 +28,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.17.0",
-    "terra-heading": "^2.24.0",
-    "terra-scroll": "^1.11.0"
+    "terra-doc-template": "^1.18.0",
+    "terra-heading": "^2.25.0",
+    "terra-scroll": "^1.12.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
