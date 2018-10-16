@@ -3,8 +3,9 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Correct example in docs/README.md
+### Fixed
+* Fix flickering on new props #1748
+* Corrected example in docs/README.md
 
 2.24.0 - (October 8, 2018)
 ------------------
