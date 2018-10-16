@@ -1,0 +1,29 @@
+:local {
+  .placeholder,
+  .inner {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .placeholder {
+    padding: 10px;
+  }
+
+  .inner {
+    align-items: center;
+    border: 3px dashed;
+    display: flex;
+    justify-content: center;
+  }
+
+  .is-light {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  .is-dark {
+    border-color: #d1d1d1;
+    color: #787575;
+  }
+}
