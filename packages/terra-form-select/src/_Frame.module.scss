@@ -7,6 +7,7 @@
     display: flex;
     font-size: var(--terra-select-font-size, 1.143rem);
     line-height: var(--terra-select-line-height, 1.75);
+    border-radius: var(--terra-select-border-radius, 3px);
   }
 
   .default {
@@ -99,7 +100,7 @@
     border-color: var(--terra-select-disabled-border-color, #dedfe0);
     color: var(--terra-select-disabled-color, #1c1f21);
     cursor: default;
-    opacity: 0.4;
+    opacity: var(--terra-select-disabled-opacity, 0.4);
     pointer-events: none;
 
     .arrow-icon {

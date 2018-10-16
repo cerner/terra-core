@@ -7,6 +7,7 @@
     display: flex;
     flex: 0 1 auto; // IE 10
     font-size: var(--terra-select-tag-font-size, 1rem);
+    height: var(--terra-select-tag-height, auto);
     line-height: var(--terra-select-tag-line-height, 1.143);
     margin-right: var(--terra-select-tag-margin-right, 0.42857rem);
     margin-top: var(--terra-select-tag-margin-top, 0.21428571428571427rem);
