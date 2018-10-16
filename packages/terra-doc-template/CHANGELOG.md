@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Created placeholder component for documentation.
 
 1.17.0 - (October 8, 2018)
 ------------------
