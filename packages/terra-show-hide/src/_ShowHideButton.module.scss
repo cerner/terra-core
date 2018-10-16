@@ -25,16 +25,16 @@
   .button {
     background-color: transparent; // Remove the gray background on active links in IE 10
     border: 0;
-    color: var(--terra-show-hide-color, #0059a8);
+    color: var(--terra-show-hide-button-color, #0059a8);
     cursor: pointer;
     display: inline-block; // prevents variant icon from breaking onto its own line
     font-family: inherit;
-    font-size: var(--terra-show-hide-font-size, 1rem);
-    line-height: var(--terra-show-hide-line-height, 1.85714);
+    font-size: var(--terra-show-hide-button-font-size, 1rem);
+    line-height: var(--terra-show-hide-button-line-height, 1.85714);
     outline: none;
     padding: 0;
     text-align: center;
-    text-decoration: var(--terra-show-hide-underline, none);
+    text-decoration: var(--terra-show-hide-button-underline, none);
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
@@ -46,51 +46,51 @@
     }
 
     &::after {
-      background-image: var(--terra-show-hide-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
+      background-image: var(--terra-show-hide-button-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
       background-repeat: no-repeat;
       background-size: cover;
       content: '';
       display: inline-block;
-      height: var(--terra-show-hide-icon-height, 0.7143em);
-      margin-left: var(--terra-show-hide-icon-margin-left, 0.28571em);
-      width: var(--terra-show-hide-icon-width, 0.7143em);
+      height: var(--terra-show-hide-button-icon-height, 0.7143em);
+      margin-left: var(--terra-show-hide-button-icon-margin-left, 0.28571em);
+      width: var(--terra-show-hide-button-icon-width, 0.7143em);
     }
 
     &.is-focused {
-      background-color: var(--terra-show-hide-focus-background-color, transparent);
-      border-radius: var(--terra-show-hide-focus-border-radius, 0.2142rem);
-      box-shadow: var(--terra-show-hide-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
-      color: var(--terra-show-hide-focus-color, #001f67);
-      text-decoration: var(--terra-show-hide-focus-underline, underline);
+      background-color: var(--terra-show-hide-button-focus-background-color, transparent);
+      border-radius: var(--terra-show-hide-button-focus-border-radius, 0.2142rem);
+      box-shadow: var(--terra-show-hide-button-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
+      color: var(--terra-show-hide-button-focus-color, #001f67);
+      text-decoration: var(--terra-show-hide-button-focus-underline, underline);
 
       &::after {
-        background-image: var(--terra-show-hide-focus-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
+        background-image: var(--terra-show-hide-button-focus-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
       }
     }
 
     &:hover,
     &.is-hovered {
-      background-color: var(--terra-show-hide-hover-background-color);
-      color: var(--terra-show-hide-hover-color, #001f67);
-      text-decoration: var(--terra-show-hide-hover-text-decoration, underline);
+      background-color: var(--terra-show-hide-button-hover-background-color);
+      color: var(--terra-show-hide-button-hover-color, #001f67);
+      text-decoration: var(--terra-show-hide-button-hover-text-decoration, underline);
 
       &::after {
-        background-image: var(--terra-show-hide-hover-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
+        background-image: var(--terra-show-hide-button-hover-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
       }
     }
 
     &:active {
-      color: var(--terra-show-hide-active-color, #001f67);
+      color: var(--terra-show-hide-button-active-color, #001f67);
     }
 
     &:disabled,
     &.is-disabled {
-      color: var(--terra-show-hide-disabled-color, rgba(28, 31, 33, 0.2));
+      color: var(--terra-show-hide-button-disabled-color, rgba(28, 31, 33, 0.2));
       pointer-events: none;
       text-decoration: none;
 
       &::after {
-        background-image: var(--terra-show-hide-disabled-icon, inline-svg('svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
+        background-image: var(--terra-show-hide-button-disabled-icon, inline-svg('svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
       }
     }
   }
