@@ -126,7 +126,7 @@ describe('Menu', () => {
     Terra.should.matchScreenshot('main menu remains open', { selector: '#root' });
 
     it('displays the submenu on right arrow', () => {
-      browser.keys(['Tab', 'Tab', 'ArrowRight']);
+      browser.keys(['Tab', 'ArrowDown', 'ArrowRight']);
     });
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 
@@ -143,7 +143,7 @@ describe('Menu', () => {
     });
 
     it('displays the submenu on enter', () => {
-      browser.keys(['Tab', 'Tab', 'Enter']);
+      browser.keys(['Tab', 'ArrowDown', 'Enter']);
     });
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 
