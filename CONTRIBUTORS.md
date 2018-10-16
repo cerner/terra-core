@@ -73,6 +73,7 @@ Cerner Corporation
 - Kyle Roush [@kyleroush]
 - Sharynne Azhar [@sharynneazhar]
 - Eric Wilson [@eawww]
+- Matt Anderson [@mndrsn]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
