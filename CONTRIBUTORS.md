@@ -72,6 +72,7 @@ Cerner Corporation
 - Alexander Brisimitzakis [@AlexBrizi]
 - Kyle Roush [@kyleroush]
 - Sharynne Azhar [@sharynneazhar]
+- Eric Wilson [@eawww]
 - Gabe Parra [@gabeparra01]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -147,4 +148,5 @@ Cerner Corporation
 [@AlexBrizi]: https://github.com/AlexBrizi
 [@kyleroush]: https://github.com/kyleroush
 [@sharynneazhar]: https://github.com/sharynneazhar
+[@eawww]: https://github.com/eawww
 [@gabeparra01]: https://github.com/gabeparra01

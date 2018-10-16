@@ -162,7 +162,7 @@ class Frame extends React.Component {
       case Variants.TAG:
       case Variants.MULTIPLE:
         return (
-          <ul className={cx('tags')}>
+          <ul className={cx('content')}>
             {display}
             <li className={cx('search-wrapper')}>
               <input {...inputAttrs} value={searchValue} />
@@ -171,7 +171,7 @@ class Frame extends React.Component {
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <input {...inputAttrs} value={hasSearchChanged ? searchValue : display} />;
+        return <div className={cx('content')}><input {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
       default:
         return display || <div className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
