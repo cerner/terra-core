@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fix flickering on new props #1748.
 
 2.24.0 - (October 8, 2018)
 ------------------
