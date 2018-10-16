@@ -72,7 +72,7 @@
     &.is-hovered {
       background-color: var(--terra-show-hide-hover-background-color);
       color: var(--terra-show-hide-hover-color, #001f67);
-      text-decoration: var(--terra-show-hide-hover-underline, underline);
+      text-decoration: var(--terra-show-hide-hover-text-decoration, underline);
 
       &::after {
         background-image: var(--terra-show-hide-hover-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#001f67"><path d="M48 12L24 36 0 12h48z"/></svg>'));
