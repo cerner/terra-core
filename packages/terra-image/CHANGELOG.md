@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.25.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Fix flickering on new props #1748
 * Corrected example in docs/README.md
