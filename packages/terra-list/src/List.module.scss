@@ -12,15 +12,16 @@
 
   .list-item {
     background-color: var(--terra-list-item-background-color);
-    margin: 0;
+    margin: var(--terra-list-item-margin, 0);
     padding: 0;
   }
 
   .divided > .list-item {
-    border-top: var(--terra-list-divider-border, 1px solid #dedfe0);
+    border-bottom: var(--terra-list-divider-border-bottom);
+    border-top: var(--terra-list-divider-border-top, 1px solid #dedfe0);
 
     &:last-of-type {
-      border-bottom: var(--terra-list-divider-border, 1px solid #dedfe0);
+      border-bottom: var(--terra-list-last-divider-border-bottom, 1px solid #dedfe0);
     }
   }
 

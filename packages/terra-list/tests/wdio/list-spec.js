@@ -23,7 +23,8 @@ describe('List', () => {
       testName: 'themed',
       properties: {
         '--terra-list-item-background-color': '#ffffff',
-        '--terra-list-divider-border': '1px dotted #dddddd',
+        '--terra-list-divider-border-top': '1px dotted #dddddd',
+        '--terra-list-last-divider-border-bottom': '1px dotted #dddddd',
       },
     });
   });
