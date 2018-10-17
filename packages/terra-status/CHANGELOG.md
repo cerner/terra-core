@@ -3,7 +3,6 @@ Changelog
 
 Unreleased
 ----------
-
 ### Changed
 * Added VisuallyHiddenText prop to status component.
 
