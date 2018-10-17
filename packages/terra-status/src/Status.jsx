@@ -16,6 +16,9 @@ const propTypes = {
    * The color of the status indicator. Accepts a CSS color value.
    */
   color: PropTypes.string,
+  /**
+   * The hidden text to be read by the screen reader.
+   */
   visuallyHiddenText: PropTypes.string,
 };
 
