@@ -12,8 +12,8 @@
 
   .list-item {
     background-color: var(--terra-list-item-background-color);
-    margin: var(--terra-list-item-margin, 0);
-    padding: 0;
+    margin: 0;
+    padding: var(--terra-list-item-margin, 0);
   }
 
   .divided > .list-item {
