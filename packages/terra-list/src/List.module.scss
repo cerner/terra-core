@@ -38,12 +38,16 @@
     padding-right: 10px;
 
     > svg {
-      color: var(--terra-list-chevron-color, #bcbfc0);
+      color: var(--terra-list-item-chevron-color, #bcbfc0);
     }
   }
 
   .selected {
     background-color: var(--terra-list-item-selected-background-color, darken(#ebf6fd, 2%));
+
+    .chevron > svg {
+      color: var(--terra-list-item-selected-chevron-color, #bcbfc0);
+    }
   }
 
   .divided .selected {

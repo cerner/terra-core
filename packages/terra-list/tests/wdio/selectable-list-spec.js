@@ -18,7 +18,7 @@ describe('Selectable List', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-list-chevron-color': '#000000',
+        '--terra-list-item-chevron-color': '#000000',
       },
     });
   });
