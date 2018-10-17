@@ -4,7 +4,7 @@ import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const placeholder = () => (
   <div style={{ height: '200px', width: '100%' }}>
-    <Placeholder title="Default Placeholder" />
+    <Placeholder title="Dark Placeholder" />
   </div>
 );
 

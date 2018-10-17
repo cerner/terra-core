@@ -12,7 +12,7 @@ The placeholder component should be used within documentation examples in place 
 
 ```jsx
 import React from 'react';
-import Image from 'terra-doc-template/lib/Placeholder';
+import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 <Placeholder variant="dark" />
 ```
