@@ -15,6 +15,10 @@
     }
   }
 
+  .value-text {
+    font-weight: var(--terra-demographics-banner-value-text-font-weight, bold);
+  }
+
   .value-label {
     margin-right: 0.357em;
   }

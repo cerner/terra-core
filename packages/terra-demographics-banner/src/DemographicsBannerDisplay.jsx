@@ -25,7 +25,7 @@ const propTypes = {
    */
   dateOfBirthLabel: PropTypes.string,
   /**
-   * Full text description for the date of birth
+   * Text Description of the date of birth label that is read by screen readers
    */
   dateOfBirthFullText: PropTypes.string,
   /**
@@ -49,7 +49,7 @@ const propTypes = {
    */
   gestationalAgeLabel: PropTypes.string,
   /**
-   * Full text description for the Gestational Age
+  * Text Description of the Gestational Age label that is read by screen readers
    */
   gestationalAgeFullText: PropTypes.string,
   /**
@@ -74,7 +74,7 @@ const propTypes = {
    */
   postMenstrualAgeLabel: PropTypes.string,
   /**
-   * Full text to display for the PostMenstrualAgeLabel
+  * Text Description of the Post Menstrural Age label that is read by screen readers
    */
   postMenstrualAgeFullText: PropTypes.string,
   /**

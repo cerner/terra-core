@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
   let valueLabelContent;
 
-  if (abbrTitle) {
+  if (label && abbrTitle) {
     valueLabelContent = (
       <span className={cx('value-label')}>
         <abbr className={cx('abbreviation')} title={abbrTitle} aria-hidden="true">
@@ -29,7 +29,7 @@ const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
     <span className={cx('value')}>
       {abbrTitle && (<VisuallyHiddenText text={abbrTitle} />)}
       {valueLabelContent}
-      <b>{value}</b>
+      <span className={cx('value-text')}>{value}</span>
     </span>
   );
 };
