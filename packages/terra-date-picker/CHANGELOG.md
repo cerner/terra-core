@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated react-datepicker version to ^1.6
 
 2.34.0 - (October 16, 2018)
 ------------------

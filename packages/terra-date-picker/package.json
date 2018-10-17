@@ -30,7 +30,7 @@
     "moment": "^2.21.0",
     "popper.js": "^1.14.3",
     "prop-types": "^15.5.8",
-    "react-datepicker": "^0.64.0",
+    "react-datepicker": "^1.6.0",
     "react-portal": "^4.1.2",
     "terra-app-delegate": "^2.1.0",
     "terra-button": "^2.27.0",
