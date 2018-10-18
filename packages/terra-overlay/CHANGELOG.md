@@ -13,6 +13,16 @@ Unreleased
 * Added hidden div to catch scrolling behind Overlay
 * zIndex prop
 
+2.30.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.29.0 - (October 8, 2018)
+------------------
+### Changed
+* Upgrade focus-trap-react to ^4.0.1
+
 2.28.0 - (October 2, 2018)
 ------------------
 ### Changed

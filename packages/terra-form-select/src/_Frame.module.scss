@@ -120,14 +120,17 @@
     padding: var(--terra-select-toggle-padding, 0 0.42857rem);
   }
 
-  .tags {
+  .content {
     display: flex;
     flex: 1 1 auto;
     flex-wrap: wrap; // IE 10
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    padding: 0;
+    padding-bottom: var(--terra-select-content-padding-bottom, 0.21428571428571427rem);
+    padding-left: var(--terra-select-content-padding-left, 0);
+    padding-right: var(--terra-select-content-padding-right, 0);
+    padding-top: var(--terra-select-content-padding-top, 0);
   }
 
   // A reduced, non-zero, height and width allows the input to receive focus using tab.
@@ -153,7 +156,7 @@
     color: inherit;
     flex: 1 1 auto;
     font-size: var(--terra-select-search-font-size, 1.143rem);
-    height: 1.375em;
+    height: var(--terra-select-search-height, 1.375em);
     margin-top: var(--terra-select-search-margin-top, 0.21428571428571427rem);
     max-width: 100%; // IE 10
     min-width: 0; // IE 11
@@ -192,7 +195,7 @@
       cursor: text;
       display: flex;
       flex: 1 1 auto; // IE 10
-      padding-bottom: var(--terra-select-padding-bottom, 0.21428571428571427rem);
+      padding-bottom: var(--terra-select-padding-bottom, 0);
       padding-left: var(--terra-select-padding-left, 0.42857rem);
       padding-right: var(--terra-select-padding-right, 0);
       padding-top: var(--terra-select-padding-top, 0);

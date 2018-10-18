@@ -17,7 +17,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
             type="button"
           >
             <span
-              class="text-only"
+              class="button-label text-only"
             >
               <span
                 class=""
@@ -51,7 +51,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
     type="button"
   >
     <span
-      className="text-only"
+      className="button-label text-only"
     >
       <span
         className=""
@@ -81,7 +81,7 @@ exports[`should render a Button with merged attributes 1`] = `
   type="button"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -104,7 +104,7 @@ exports[`should render a button with type equal to button 1`] = `
   type="button"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -127,7 +127,7 @@ exports[`should render a button with type equal to reset 1`] = `
   type="reset"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -150,7 +150,7 @@ exports[`should render a button with type equal to submit 1`] = `
   type="submit"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -173,7 +173,7 @@ exports[`should render a de-emphasis button 1`] = `
   type="button"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -196,7 +196,7 @@ exports[`should render a emphasis button 1`] = `
   type="button"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -219,7 +219,7 @@ exports[`should render a neutral button 1`] = `
   type="button"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -242,7 +242,7 @@ exports[`should render a utility button 1`] = `
   type="button"
 >
   <span
-    className="icon-only text-only"
+    className="button-label icon-only text-only"
   />
 </button>
 `;
@@ -259,7 +259,7 @@ exports[`should render an action button 1`] = `
   type="button"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -282,7 +282,7 @@ exports[`should render an icon 1`] = `
   type="button"
 >
   <span
-    className="icon-only"
+    className="button-label icon-only"
   >
     <span
       className="icon"
@@ -308,7 +308,7 @@ exports[`should render an icon and a text 1`] = `
   type="button"
 >
   <span
-    className="text-and-icon"
+    className="button-label text-and-icon"
   >
     <span
       className="icon icon-first"
@@ -340,7 +340,7 @@ exports[`should render as an anchor when provided an href 1`] = `
   type="button"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -364,7 +364,7 @@ exports[`should render as disabled when set 1`] = `
   type="button"
 >
   <span
-    className="text-only"
+    className="button-label text-only"
   >
     <span
       className=""
@@ -387,7 +387,7 @@ exports[`should render text then an icon when reversed 1`] = `
   type="button"
 >
   <span
-    className="text-and-icon"
+    className="button-label text-and-icon"
   >
     <span
       className="text-first"
