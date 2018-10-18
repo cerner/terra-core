@@ -12,14 +12,6 @@
     outline: none;
     overflow: hidden;
 
-    .inner {
-      height: 200%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 200%;
-    }
-
     &.layer-100 {
       z-index: 100;
     }
