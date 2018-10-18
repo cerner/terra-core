@@ -24,7 +24,10 @@
     font-size: var(--terra-show-hide-button-font-size, 1rem);
     line-height: var(--terra-show-hide-button-line-height, 1.429);
     outline: none;
-    padding: 0.21428rem 0;
+    padding-bottom: var(--terra-show-hide-button-padding-bottom, 0.21428rem);
+    padding-left: var(--terra-show-hide-button-padding-left, 0);
+    padding-right: var(--terra-show-hide-button-padding-right, 0);
+    padding-top: var(--terra-show-hide-button-padding-top, 0.21428rem);
     text-align: center;
     text-decoration: var(--terra-show-hide-button-text-decoration, none);
     text-transform: none;

@@ -73,8 +73,8 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
-  describe('Button align left', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-left-show-hide'));
+  describe('Button align start', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-start-show-hide'));
 
     Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
@@ -101,8 +101,8 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
-  describe('Button align right', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-right-show-hide'));
+  describe('Button align end', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-end-show-hide'));
 
     Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
