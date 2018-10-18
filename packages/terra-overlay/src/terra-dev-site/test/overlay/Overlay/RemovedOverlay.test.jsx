@@ -21,7 +21,7 @@ class OverlayExample extends React.Component {
   render() {
     if (this.state.show) {
       return (
-        <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} onRequestClose={this.handleOnRequestESC} id="fullscreen_overlay">
+        <Overlay isOpen onRequestClose={this.handleOnRequestESC} id="fullscreen_overlay">
           <h3>The onRequestClose prop gives the overlay close behaviors.</h3>
           <br />
           <p>Close by clicking inside the overlay or pressing the ESC key.</p>
