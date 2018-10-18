@@ -79,7 +79,7 @@
     }
 
     &.selected:focus {
-      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+      background-color: var(--terra-list-item-selected-focus-background-color, darken(#ebf6fd, 7%)) !important;
     }
   }
 }

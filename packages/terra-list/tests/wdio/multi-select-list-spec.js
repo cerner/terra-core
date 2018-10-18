@@ -125,7 +125,7 @@ describe('Multi Select List', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-list-item-selected-hover-background-color': '#fdebeb',
+        '--terra-list-item-selected-focus-background-color': '#fdebeb',
       },
     });
   });
