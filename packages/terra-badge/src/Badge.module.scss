@@ -20,11 +20,11 @@
     white-space: nowrap;
   }
 
-  .text:first-child:not(:last-child) {
+  .is-reversed.has-icon .text {
     margin-right: var(--terra-badge-child-margin, 0.357em);
   }
 
-  .text:nth-child(2) {
+  .has-icon:not(.is-reversed) .text {
     margin-left: var(--terra-badge-child-margin, 0.357em);
   }
 

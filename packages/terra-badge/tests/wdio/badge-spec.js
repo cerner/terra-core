@@ -74,4 +74,10 @@ describe('Badge', () => {
       '--terra-badge-child-margin': '50px',
     });
   });
+
+  describe('Visually Hidden Text', () => {
+    before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-visually-hidden-text'));
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
 });
