@@ -13,17 +13,30 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
     className="show-hide"
   >
     <button
-      aria-disabled={false}
       aria-expanded={false}
       className="button show-hide button center"
-      disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       type="button"
     >
-      Show More
+      <span
+        className="inner"
+      >
+        <span
+          className="text"
+        >
+          Show More
+        </span>
+        <span
+          className="icon-holder"
+        >
+          <span
+            className="icon"
+          />
+        </span>
+      </span>
     </button>
   </div>
 </div>
@@ -42,17 +55,30 @@ exports[`ShowHide should render a default show-hide component 1`] = `
     className="show-hide"
   >
     <button
-      aria-disabled={false}
       aria-expanded={false}
       className="button show-hide button start"
-      disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       type="button"
     >
-      Show More
+      <span
+        className="inner"
+      >
+        <span
+          className="text"
+        >
+          Show More
+        </span>
+        <span
+          className="icon-holder"
+        >
+          <span
+            className="icon"
+          />
+        </span>
+      </span>
     </button>
   </div>
 </div>
@@ -68,17 +94,30 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
     className="show-hide"
   >
     <button
-      aria-disabled={false}
       aria-expanded={false}
       className="button show-hide button start"
-      disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       type="button"
     >
-      Show More
+      <span
+        className="inner"
+      >
+        <span
+          className="text"
+        >
+          Show More
+        </span>
+        <span
+          className="icon-holder"
+        >
+          <span
+            className="icon"
+          />
+        </span>
+      </span>
     </button>
   </div>
 </div>
@@ -96,17 +135,30 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
     className="show-hide"
   >
     <button
-      aria-disabled={false}
       aria-expanded={true}
       className="button show-hide button start"
-      disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       type="button"
     >
-      Hide
+      <span
+        className="inner"
+      >
+        <span
+          className="text"
+        >
+          Hide
+        </span>
+        <span
+          className="icon-holder"
+        >
+          <span
+            className="icon"
+          />
+        </span>
+      </span>
     </button>
   </div>
 </div>
