@@ -11,8 +11,9 @@ describe('Table', () => {
       properties: {
         '--terra-table-background-color': '#dddddd',
         '--terra-table-border': '#000 dashed 2px',
-        '--terra-table-cell-border': '#0f0 solid 1px',
-        '--terra-table-row-border-vertical': '#dddddd solid 2px',
+        '--terra-table-cell-border-left': '#0f0 solid 1px',
+        '--terra-table-first-cell-border-left': '#dddddd solid 2px',
+        '--terra-table-last-cell-border-right': '#dddddd solid 2px',
         '--terra-table-thead-background-color': '#f2f2f2',
         '--terra-table-thead-tr-border-bottom': '#00ff00 solid 1px',
         '--terra-table-thead-tr-border-top': '3px solid #000000',
