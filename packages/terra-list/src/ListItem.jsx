@@ -20,7 +20,7 @@ const propTypes = {
    */
   hasChevron: PropTypes.bool,
   /**
-   * Whether or not the child list items should have a border color applied.
+   * Whether or not the list item should have a border color applied.
    */
   isDivided: PropTypes.bool,
   /**
@@ -38,15 +38,15 @@ const propTypes = {
   /**
    * Function callback for the ref of the li.
    */
-  onChange: PropTypes.func,
-  /**
-   * Function callback for the ref of the li.
-   */
   onClick: PropTypes.func,
   /**
    * Function callback for the ref of the li.
    */
   onKeyDown: PropTypes.func,
+  /**
+   * Function callback for the ref of the li.
+   */
+  onSelect: PropTypes.func,
   /**
    * Function callback for the ref of the li.
    */
@@ -62,40 +62,6 @@ const defaultProps = {
   isSelectable: undefined,
 };
 
-/**
- * Returns a wrapped onClick callback function.
- */
-const wrappedOnClickForItem = (onClick, isSelectable, onChange, metaData) => (
-  (event) => {
-    // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
-    if (isSelectable !== false && onChange) {
-      onChange(event, metaData);
-    }
-
-    if (onClick) {
-      onClick(event);
-    }
-  }
-);
-
-/**
- * Returns a wrapped onKeyDown callback function with enter and space keys triggering onChange.
- */
-const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, onChange, metaData) => (
-  (event) => {
-    if (event.nativeEvent.keyCode === SelectableUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === SelectableUtils.KEYCODES.SPACE) {
-      // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
-      if (isSelectable !== false && onChange) {
-        onChange(event, metaData);
-      }
-    }
-
-    if (onKeyDown) {
-      onKeyDown(event);
-    }
-  }
-);
-
 const ListItem = ({
   children,
   hasChevron,
@@ -103,9 +69,9 @@ const ListItem = ({
   isSelected,
   isSelectable,
   metaData,
-  onChange,
   onClick,
   onKeyDown,
+  onSelect,
   refCallback,
   ...customProps
 }) => {
@@ -120,8 +86,8 @@ const ListItem = ({
 
   const ariaSpread = {};
   if (isSelectable) {
-    ariaSpread.onClick = wrappedOnClickForItem(onClick, isSelectable, onChange, metaData);
-    ariaSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, isSelectable, onChange, metaData);
+    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, isSelectable, onSelect, metaData);
+    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, isSelectable, onSelect, metaData);
     ariaSpread.tabIndex = '0';
     ariaSpread.role = 'option';
     ariaSpread['aria-selected'] = isSelected;

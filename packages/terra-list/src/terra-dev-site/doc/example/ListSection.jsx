@@ -1,6 +1,11 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import List, { Item, Section, Utils } from 'terra-list/lib/List';
+import List, {
+  Item,
+  Section,
+  Subsection,
+  Utils,
+} from 'terra-list/lib/List';
 
 const mockData = [
   {
@@ -51,7 +56,7 @@ class ListSectionExample extends React.Component {
         isSelectable
         isSelected={this.state.selectedKeys.indexOf(itemData.key) >= 0}
         metaData={{ key: itemData.key }}
-        onChange={this.handleItemSelection}
+        onSelect={this.handleItemSelection}
       >
         <span>
           {itemData.title}
@@ -65,11 +70,23 @@ class ListSectionExample extends React.Component {
       <Section
         key={sectionData.key}
         isCollapsed={this.state.collapsedKeys.indexOf(sectionData.key) >= 0}
+        isCollapsible
         isDivided
         metaData={{ key: sectionData.key }}
-        header={<p onClick={event => this.handleSectionSelection(event, { key: sectionData.key})}>{sectionData.title}</p>}
+        title={sectionData.title}
+        onSelect={this.handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => this.createListItem(childItem))}
+        <Subsection
+          key="test-key"
+          isCollapsed={this.state.collapsedKeys.indexOf('test-subsection') >= 0}
+          isCollapsible
+          isDivided
+          metaData={{ key: 'test-subsection' }}
+          title="Subsection"
+          onSelect={this.handleSectionSelection}
+        >
+          {sectionData.childItems.map(childItem => this.createListItem(childItem))}
+        </Subsection>
       </Section>
     );
   }

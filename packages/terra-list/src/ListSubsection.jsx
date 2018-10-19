@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
-import SectionHeader from './SectionHeader';
+import SubsectionHeader from './SubsectionHeader';
 
 // Disable this lint rule to allow for the metaData prop
 /* eslint-disable react/forbid-prop-types */
@@ -62,7 +62,7 @@ const defaultProps = {
   title: '',
 };
 
-const ListSection = ({
+const ListSubsection = ({
   children,
   isCollapsed,
   isCollapsible,
@@ -75,13 +75,13 @@ const ListSection = ({
 
   return (
     <React.Fragment>
-      <SectionHeader isCollapsible={isCollapsible} isCollapsed={isCollapsed} {...customProps} />
+      <SubsectionHeader isCollapsible={isCollapsible} isCollapsed={isCollapsed} {...customProps} />
       {sectionItems}
     </React.Fragment>
   );
 };
 
-ListSection.propTypes = propTypes;
-ListSection.defaultProps = defaultProps;
+ListSubsection.propTypes = propTypes;
+ListSubsection.defaultProps = defaultProps;
 
-export default ListSection;
+export default ListSubsection;

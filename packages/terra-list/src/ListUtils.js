@@ -48,11 +48,47 @@ const shouldHandleMultiSelect = (maxSelectionCount, currentKeys, newKey) => {
  */
 const shouldHandleSingleSelect = (currentKey, newKey) => newKey !== currentKey;
 
+/**
+ * Returns a wrapped onClick callback function.
+ */
+const wrappedOnClickForItem = (onClick, isSelectable, onChange, metaData) => (
+  (event) => {
+    // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
+    if (isSelectable !== false && onChange) {
+      onChange(event, metaData);
+    }
+
+    if (onClick) {
+      onClick(event);
+    }
+  }
+);
+
+/**
+ * Returns a wrapped onKeyDown callback function with enter and space keys triggering onChange.
+ */
+const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, onChange, metaData) => (
+  (event) => {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
+      if (isSelectable !== false && onChange) {
+        onChange(event, metaData);
+      }
+    }
+
+    if (onKeyDown) {
+      onKeyDown(event);
+    }
+  }
+);
+
 const SelectableUtils = {
   updatedMultiSelectedKeys,
   validatedMaxCount,
   shouldHandleMultiSelect,
   shouldHandleSingleSelect,
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
   KEYCODES,
 };
 
