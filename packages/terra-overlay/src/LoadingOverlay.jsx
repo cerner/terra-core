@@ -33,7 +33,7 @@ const propTypes = {
   */
   isRelativeToContainer: PropTypes.bool,
   /**
-  * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are the standard modal layer: '6000', and the max layer: '8000'.
+  * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are '100', '6000', '7000', '8000', or '9000'.
   */
   zIndex: PropTypes.oneOf(zIndexes),
 };
