@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowHide should render a center-aligned button show-hide component 1`] = `
+<div>
+  <p>
+    Test
+  </p>
+  <div
+    aria-hidden={true}
+    className="toggle"
+  />
+  <div
+    className="show-hide"
+  >
+    <button
+      aria-expanded={false}
+      className="button show-hide button center"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="inner"
+      >
+        <span
+          className="text"
+        >
+          Show More
+        </span>
+        <span
+          className="icon-holder"
+        >
+          <span
+            className="icon"
+          />
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ShowHide should render a default show-hide component 1`] = `
+<div>
+  <p>
+    Test
+  </p>
+  <div
+    aria-hidden={true}
+    className="toggle"
+  />
+  <div
+    className="show-hide"
+  >
+    <button
+      aria-expanded={false}
+      className="button show-hide button start"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="inner"
+      >
+        <span
+          className="text"
+        >
+          Show More
+        </span>
+        <span
+          className="icon-holder"
+        >
+          <span
+            className="icon"
+          />
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ShowHide should render a no preview show-hide component 1`] = `
+<div>
+  <div
+    aria-hidden={true}
+    className="toggle"
+  />
+  <div
+    className="show-hide"
+  >
+    <button
+      aria-expanded={false}
+      className="button show-hide button start"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="inner"
+      >
+        <span
+          className="text"
+        >
+          Show More
+        </span>
+        <span
+          className="icon-holder"
+        >
+          <span
+            className="icon"
+          />
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ShowHide should render an initially open show-hide component 1`] = `
+<div>
+  <div
+    aria-hidden={false}
+    className="toggle"
+  >
+    Full Text
+  </div>
+  <div
+    className="show-hide"
+  >
+    <button
+      aria-expanded={true}
+      className="button show-hide button start"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="inner"
+      >
+        <span
+          className="text"
+        >
+          Hide
+        </span>
+        <span
+          className="icon-holder"
+        >
+          <span
+            className="icon"
+          />
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
+`;
