@@ -16,7 +16,7 @@
 
   .progress-bar {
     background: #d3d4d5;
-    border-radius: 0.5em;
+    border-radius: var(--terra-progress-bar-border-radius, 0.5em);
     display: block;
     height: var(--terra-progress-bar-height-small, 0.8rem);
     overflow: hidden;
