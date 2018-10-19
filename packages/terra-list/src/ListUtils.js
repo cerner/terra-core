@@ -3,6 +3,8 @@ const KEYCODES = {
   SPACE: 32,
 };
 
+const shouldBeMultiselectable = (maxSelectionCount, selectedKeys, key) => (maxSelectionCount < 0 || selectedKeys.indexOf(key) >= 0 || selectedKeys.length < maxSelectionCount);
+
 /**
  * The validates the max count prop, and if undefined returns a max of -1..
  */
@@ -85,6 +87,7 @@ const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, onChange, metaData) =>
 const SelectableUtils = {
   updatedMultiSelectedKeys,
   validatedMaxCount,
+  shouldBeMultiselectable,
   shouldHandleMultiSelect,
   shouldHandleSingleSelect,
   wrappedOnClickForItem,

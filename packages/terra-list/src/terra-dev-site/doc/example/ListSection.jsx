@@ -95,7 +95,7 @@ class ListSectionExample extends React.Component {
       <Item
         key={itemData.key}
         isDivided
-        isSelectable
+        isSelectable={Utils.shouldBeMultiselectable(3, this.state.selectedKeys, itemData.key)}
         isSelected={this.state.selectedKeys.indexOf(itemData.key) >= 0}
         metaData={{ key: itemData.key }}
         onSelect={this.handleItemSelection}
