@@ -17,9 +17,6 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
       tabIndex="0"
     >
       <div
-        className="inner"
-      />
-      <div
         className="content"
       />
     </div>
@@ -41,9 +38,6 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
       onClick={[Function]}
       tabIndex="0"
     >
-      <div
-        className="inner"
-      />
       <div
         className="content"
       />
@@ -67,9 +61,6 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
       tabIndex="0"
     >
       <div
-        className="inner"
-      />
-      <div
         className="content"
       />
     </div>
@@ -91,9 +82,6 @@ exports[`Overlay when isOpen is provided -default Overlay when isOpen- should re
       onClick={[Function]}
       tabIndex="0"
     >
-      <div
-        className="inner"
-      />
       <div
         className="content"
       />
@@ -117,9 +105,6 @@ exports[`Overlay when isOpen is provided should render with content 1`] = `
       tabIndex="0"
     >
       <div
-        className="inner"
-      />
-      <div
         className="content"
       >
         Overlay message
@@ -135,9 +120,6 @@ exports[`Overlay when isOpen is provided should render with isRelativeToContaine
   onClick={[Function]}
   tabIndex="0"
 >
-  <div
-    className="inner"
-  />
   <div
     className="content"
   />
@@ -158,9 +140,6 @@ exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
       onClick={[Function]}
       tabIndex="0"
     >
-      <div
-        className="inner"
-      />
       <div
         className="content"
       />
@@ -183,9 +162,6 @@ exports[`Overlay when isOpen is provided should render with onRequestClose 1`] =
       onClick={[Function]}
       tabIndex="0"
     >
-      <div
-        className="inner"
-      />
       <div
         className="content"
       />

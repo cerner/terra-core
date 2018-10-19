@@ -44,9 +44,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                 tabindex="0"
               >
                 <div
-                  class="inner"
-                />
-                <div
                   class="content"
                 >
                   <svg
@@ -87,9 +84,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
               onClick={[Function]}
               tabIndex="0"
             >
-              <div
-                className="inner"
-              />
               <div
                 className="content"
               >
@@ -170,9 +164,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                 tabindex="0"
               >
                 <div
-                  class="inner"
-                />
-                <div
                   class="content"
                 >
                   <svg
@@ -213,9 +204,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
               onClick={[Function]}
               tabIndex="0"
             >
-              <div
-                className="inner"
-              />
               <div
                 className="content"
               >
