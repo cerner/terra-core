@@ -3,4 +3,4 @@ ChangeLog
 
 Unreleased
 -----------------
-* Initial stable release
+* The initial stable release
