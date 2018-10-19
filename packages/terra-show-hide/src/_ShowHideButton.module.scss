@@ -1,11 +1,6 @@
 @import '~terra-mixins';
 
 :local {
-  // html input[type='button'].terra-Button selector used to
-  // prevent a WebKit bug destroys native `audio` and `video` controls
-  // in Android 4. More info:
-  // https://github.com/necolas/normalize.css/issues/20
-  // https://code.google.com/p/android/issues/detail?id=34301
   // appearance: button; set to correct the inability to style
   // clickable types in iOS and Safari.
   // Appearance needs to be applied only to button/input elements, as
@@ -14,10 +9,7 @@
   // https://github.com/necolas/normalize.css/issues/566
   // https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
   // stylelint-disable selector-no-qualifying-type
-  button.button,
-  html input[type='button'].button,
-  input[type='reset'].button,
-  input[type='submit'].button {
+  button.button, {
     appearance: button;  // autoprefix fix into -webkit-appearance
   }
   // stylelint-enable selector-no-qualifying-type
@@ -25,16 +17,19 @@
   .button {
     background-color: transparent; // Remove the gray background on active links in IE 10
     border: 0;
-    color: var(--terra-show-hide-button-color, #0059a8);
+    color: var(--terra-show-hide-v1-button-color, #0059a8);
     cursor: pointer;
     display: inline-block; // prevents variant icon from breaking onto its own line
     font-family: inherit;
-    font-size: var(--terra-show-hide-button-font-size, 1rem);
-    line-height: var(--terra-show-hide-button-line-height, 1.85714);
+    font-size: var(--terra-show-hide-v1-button-font-size, 1rem);
+    line-height: var(--terra-show-hide-v1-button-line-height, 1.429);
     outline: none;
-    padding: 0;
+    padding-bottom: var(--terra-show-hide-v1-button-padding-bottom, 0.21428rem);
+    padding-left: var(--terra-show-hide-v1-button-padding-left, 0);
+    padding-right: var(--terra-show-hide-v1-button-padding-right, 0);
+    padding-top: var(--terra-show-hide-v1-button-padding-top, 0.21428rem);
     text-align: center;
-    text-decoration: var(--terra-show-hide-button-underline, none);
+    text-decoration: var(--terra-show-hide-v1-button-text-decoration, none);
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
@@ -45,59 +40,61 @@
       padding: 0;
     }
 
-    &::after {
-      background-image: var(--terra-show-hide-button-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
+    .icon {
+      background-image: var(--terra-show-hide-v1-button-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
       background-repeat: no-repeat;
       background-size: cover;
-      content: '';
       display: inline-block;
-      height: var(--terra-show-hide-button-icon-height, 0.7143em);
-      margin-left: var(--terra-show-hide-button-icon-margin-left, 0.28571em);
-      width: var(--terra-show-hide-button-icon-width, 0.7143em);
+      height: var(--terra-show-hide-v1-button-icon-height, 0.7143em);
+      margin-left: var(--terra-show-hide-v1-button-icon-margin-left, 0.28571em);
+      width: var(--terra-show-hide-v1-button-icon-width, 0.7143em);
     }
 
     &.is-focused {
-      background-color: var(--terra-show-hide-button-focus-background-color, transparent);
-      border-radius: var(--terra-show-hide-button-focus-border-radius, 0.2142rem);
-      box-shadow: var(--terra-show-hide-button-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
-      color: var(--terra-show-hide-button-focus-color, #001f67);
-      text-decoration: var(--terra-show-hide-button-focus-underline, underline);
+      background-color: var(--terra-show-hide-v1-button-focus-background-color, transparent);
+      border-radius: var(--terra-show-hide-v1-button-focus-border-radius, 0.2142rem);
+      box-shadow: var(--terra-show-hide-v1-button-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
+      color: var(--terra-show-hide-v1-button-focus-color, #001f67);
+      text-decoration: var(--terra-show-hide-v1-button-focus-text-decoration, underline);
 
-      &::after {
-        background-image: var(--terra-show-hide-button-focus-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
+      .icon {
+        background-image: var(--terra-show-hide-v1-button-focus-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#001f67" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
       }
     }
 
     &:hover,
     &.is-hovered {
-      background-color: var(--terra-show-hide-button-hover-background-color);
-      color: var(--terra-show-hide-button-hover-color, #001f67);
-      text-decoration: var(--terra-show-hide-button-hover-text-decoration, underline);
+      background-color: var(--terra-show-hide-v1-button-hover-background-color);
+      color: var(--terra-show-hide-v1-button-hover-color, #001f67);
+      text-decoration: var(--terra-show-hide-v1-button-hover-text-decoration, underline);
 
-      &::after {
-        background-image: var(--terra-show-hide-button-hover-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
+      .icon {
+        background-image: var(--terra-show-hide-v1-button-hover-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#001f67" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
       }
     }
 
     &:active {
-      color: var(--terra-show-hide-button-active-color, #001f67);
-    }
-
-    &:disabled,
-    &.is-disabled {
-      color: var(--terra-show-hide-button-disabled-color, rgba(28, 31, 33, 0.2));
-      pointer-events: none;
-      text-decoration: none;
-
-      &::after {
-        background-image: var(--terra-show-hide-button-disabled-icon, inline-svg('svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#0059a8" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
-      }
+      color: var(--terra-show-hide-v1-button-active-color, #001f67);
     }
   }
 
   .button[aria-expanded='true'] {
-    &::after {
+    .icon {
       transform: rotate(180deg);
     }
+  }
+
+  .inner {
+    display: flex;
+  }
+
+  .text {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .icon-holder {
+    align-self: center;
+    flex: 0 0 auto;
   }
 }
