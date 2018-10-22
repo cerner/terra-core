@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Status.module.scss';
-import VisuallyHiddenText from '../../terra-visually-hidden-text';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 const cx = classNames.bind(styles);
 
@@ -17,7 +17,7 @@ const propTypes = {
    */
   color: PropTypes.string,
   /**
-   * The hidden text to be read by the screen reader.
+   * Visually hidden text used to convey the meaning of the status indicator to screen readers.
    */
   visuallyHiddenText: PropTypes.string,
 };
