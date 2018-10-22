@@ -45,13 +45,13 @@ const defaultProps = {
 };
 
 class Avatar extends React.Component {
-  static generateImagePlaceholder(variant, alt) {
+  static generateImagePlaceholder(variant, label, alt) {
     const avatarIconClassNames = cx([
       'avatar-icon',
       variant,
     ]);
 
-    return <span className={avatarIconClassNames} role="img" aria-label={alt} />;
+    return <span className={avatarIconClassNames} role="img" aria-label={label} alt={alt} />;
   }
 
   static generateImage(image, variant, alt) {
@@ -116,14 +116,24 @@ class Avatar extends React.Component {
         { 'avatar-text-small': initials && initials.length === 3 },
         { 'avatar-text-large': initials && initials.length === 2 },
       ]);
-
       avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
     } else {
-      avatarContent = Avatar.generateImagePlaceholder(variant, alt);
+      // set each prop to this respective provided props, or set both to whichever prop is provided
+      if (ariaLabel && !alt) {
+        this.ariaLabel = ariaLabel;
+        this.alt = ariaLabel;
+      } else if (alt && !ariaLabel) {
+        this.alt = alt;
+        this.ariaLabel = alt;
+      } else {
+        this.ariaLabel = ariaLabel;
+        this.alt = alt;
+      }
+      avatarContent = Avatar.generateImagePlaceholder(variant, this.ariaLabel, this.alt);
     }
 
     return (
-      <div {...attributes} aria-label={ariaLabel} className={avatarClassNames}>
+      <div {...attributes} alt={alt} className={avatarClassNames}>
         {avatarContent}
       </div>
     );

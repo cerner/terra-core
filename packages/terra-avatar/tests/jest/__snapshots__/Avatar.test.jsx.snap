@@ -2,10 +2,11 @@
 
 exports[`Avatar should render facility avatar when variant is facility 1`] = `
 <div
-  aria-label="facility"
   class="avatar"
 >
   <span
+    alt="facility"
+    aria-label="facility"
     class="avatar-icon facility"
     role="img"
   />
@@ -14,7 +15,7 @@ exports[`Avatar should render facility avatar when variant is facility 1`] = `
 
 exports[`Avatar should render fallback facility avatar when invalid image is passed in with facility variant 1`] = `
 <div
-  aria-label="facility"
+  alt="placeholder"
   class="avatar"
 >
   <div>
@@ -40,10 +41,11 @@ exports[`Avatar should render fallback facility avatar when invalid image is pas
 
 exports[`Avatar should render fallback facility avatar when more than three initials are passed in and variant is facility 1`] = `
 <div
-  aria-label="facility"
   class="avatar"
 >
   <span
+    alt="facility"
+    aria-label="facility"
     class="avatar-icon facility"
     role="img"
   />
@@ -52,10 +54,11 @@ exports[`Avatar should render fallback facility avatar when more than three init
 
 exports[`Avatar should render fallback user avatar when fewer than two initials are passed in and variant is user 1`] = `
 <div
-  aria-label="user"
   class="avatar"
 >
   <span
+    alt="user"
+    aria-label="user"
     class="avatar-icon user"
     role="img"
   />
@@ -64,7 +67,7 @@ exports[`Avatar should render fallback user avatar when fewer than two initials 
 
 exports[`Avatar should render fallback user avatar when invalid image is passed in with user variant 1`] = `
 <div
-  aria-label="user"
+  alt="placeholder"
   class="avatar"
 >
   <div>
@@ -90,7 +93,7 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
 
 exports[`Avatar should render image avatar when image is passed in 1`] = `
 <div
-  aria-label="user"
+  alt="placeholder"
   class="avatar"
 >
   <div>
@@ -116,7 +119,6 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
 
 exports[`Avatar should render three initials avatar when three initials are passed in 1`] = `
 <div
-  aria-label="user"
   class="avatar"
 >
   <span
@@ -129,7 +131,6 @@ exports[`Avatar should render three initials avatar when three initials are pass
 
 exports[`Avatar should render two initials avatar when two initials are passed in 1`] = `
 <div
-  aria-label="user"
   class="avatar"
 >
   <span
@@ -142,10 +143,11 @@ exports[`Avatar should render two initials avatar when two initials are passed i
 
 exports[`Avatar should render user avatar when variant is user 1`] = `
 <div
-  aria-label="user"
   class="avatar"
 >
   <span
+    alt="user"
+    aria-label="user"
     class="avatar-icon user"
     role="img"
   />
