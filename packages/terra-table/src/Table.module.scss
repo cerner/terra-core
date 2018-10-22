@@ -36,17 +36,17 @@
 
     th {
       border: 0;
-      border-left: var(--terra-table-header-border-left, 0);
+      border-left: var(--terra-table-header-cell-border-left, 0);
       display: table-cell;
       text-align: left;
       vertical-align: top;
 
       &:first-of-type {
-        border-left: var(--terra-table-first-header-border-left, 1px solid #c8cacb);
+        border-left: var(--terra-table-first-header-cell-border-left, 1px solid #c8cacb);
       }
 
       &:last-of-type {
-        border-right: var(--terra-table-last-header-border-right, 1px solid #c8cacb);
+        border-right: var(--terra-table-last-header-cell-border-right, 1px solid #c8cacb);
       }
     }
 
@@ -120,12 +120,18 @@
   }
 
   .padded {
-    th,
     td {
       padding-bottom: var(--terra-table-cell-padding-bottom, 0.5em);
       padding-left: var(--terra-table-cell-padding-left, 0.75em);
       padding-right: var(--terra-table-cell-padding-right, 0.75em);
       padding-top: var(--terra-table-cell-padding-top, 0.5em);
+    }
+
+    th {
+      padding-bottom: var(--terra-table-header-cell-padding-bottom, 0.5em);
+      padding-left: var(--terra-table-header-cell-padding-left, 0.75em);
+      padding-right: var(--terra-table-header-cell-padding-right, 0.75em);
+      padding-top: var(--terra-table-header-cell-padding-top, 0.5em);
     }
   }
 

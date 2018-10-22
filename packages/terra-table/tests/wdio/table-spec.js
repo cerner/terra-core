@@ -14,9 +14,9 @@ describe('Table', () => {
         '--terra-table-cell-border-left': '#0f0 solid 1px',
         '--terra-table-first-cell-border-left': '#dddddd solid 2px',
         '--terra-table-last-cell-border-right': '#dddddd solid 2px',
-        '--terra-table-header-border-left': '#0f0 solid 1px',
-        '--terra-table-first-header-border-left': '#dddddd solid 2px',
-        '--terra-table-last-header-border-right': '#dddddd solid 2px',
+        '--terra-table-header-cell-border-left': '#0f0 solid 1px',
+        '--terra-table-first-header-cell-border-left': '#dddddd solid 2px',
+        '--terra-table-last-header-cell-border-right': '#dddddd solid 2px',
         '--terra-table-thead-background-color': '#f2f2f2',
         '--terra-table-thead-tr-border-bottom': '#00ff00 solid 1px',
         '--terra-table-thead-tr-border-top': '3px solid #000000',
@@ -40,6 +40,10 @@ describe('Table', () => {
         '--terra-table-cell-padding-left': '2em',
         '--terra-table-cell-padding-right': '3em',
         '--terra-table-cell-padding-top': '1.5em',
+        '--terra-table-header-cell-padding-bottom': '1.5em',
+        '--terra-table-header-cell-padding-left': '2em',
+        '--terra-table-header-cell-padding-right': '3em',
+        '--terra-table-header-cell-padding-top': '1.5em',
       },
     });
   });
