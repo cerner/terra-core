@@ -15,6 +15,11 @@ const propTypes = {
   children: PropTypes.node,
 
   /**
+   * Allows user to set button group to fill container width.
+   */
+  isBlock: PropTypes.bool,
+
+  /**
    * Callback function when the state changes. Parameters are (event, key).
    */
   onChange: PropTypes.func,
@@ -27,6 +32,7 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
+  isBlock: false,
   selectedKeys: [],
 };
 
@@ -56,6 +62,7 @@ class ButtonGroup extends React.Component {
   render() {
     const {
       children,
+      isBlock,
       onChange,
       selectedKeys,
       ...customProps
@@ -64,6 +71,10 @@ class ButtonGroup extends React.Component {
     const buttonGroupClassNames = cx(['button-group',
       customProps.className,
     ]);
+
+    if (isBlock) {
+      this.block = { display: 'block', width: '100%' };
+    }
 
     const allButtons = children ? [] : undefined;
 
@@ -78,7 +89,7 @@ class ButtonGroup extends React.Component {
     });
 
     return (
-      <div {...customProps} className={buttonGroupClassNames}>
+      <div {...customProps} className={buttonGroupClassNames} style={this.block}>
         {allButtons}
       </div>
     );
