@@ -184,8 +184,15 @@ class Overlay extends React.Component {
       return overlayComponent;
     }
 
+    const backgroundScrollContent = (
+      <div className={cx('background-scroll-content')}>
+        <div className={cx('inner')} />
+      </div>
+    );
+
     return (
       <Portal>
+        {backgroundScrollContent}
         <FocusTrap>
           {overlayComponent}
         </FocusTrap>

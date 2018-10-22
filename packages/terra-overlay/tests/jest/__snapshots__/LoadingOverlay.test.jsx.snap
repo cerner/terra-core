@@ -38,6 +38,13 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
       <Portal
         containerInfo={
           <div>
+            <div
+              class="background-scroll-content"
+            >
+              <div
+                class="inner"
+              />
+            </div>
             <div>
               <div
                 class="overlay fullscreen light loading-overlay layer-100"
@@ -71,6 +78,13 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
           </div>
         }
       >
+        <div
+          className="background-scroll-content"
+        >
+          <div
+            className="inner"
+          />
+        </div>
         <FocusTrap
           _createFocusTrap={[Function]}
           active={true}
@@ -158,6 +172,13 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
       <Portal
         containerInfo={
           <div>
+            <div
+              class="background-scroll-content"
+            >
+              <div
+                class="inner"
+              />
+            </div>
             <div>
               <div
                 class="overlay fullscreen light loading-overlay layer-100"
@@ -191,6 +212,13 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
           </div>
         }
       >
+        <div
+          className="background-scroll-content"
+        >
+          <div
+            className="inner"
+          />
+        </div>
         <FocusTrap
           _createFocusTrap={[Function]}
           active={true}

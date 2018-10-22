@@ -96,4 +96,30 @@
   .message {
     padding: 5px;
   }
+
+  .background-scroll-content {
+    bottom: 0;
+    left: 0;
+    overflow: -moz-scrollbars-none;
+    // This is needed on iOS so that this content area will catch momentum scrolling
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    .inner {
+      height: 200%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 200%;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
 }
