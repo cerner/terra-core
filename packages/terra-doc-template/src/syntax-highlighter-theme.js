@@ -1,3 +1,5 @@
+// This file is based on https://github.com/reactjs/reactjs.org/blob/master/src/prism-styles.js
+
 const prismColors = {
   plainText: '#ffffff',
   char: '#D8DEE9',
