@@ -24,7 +24,7 @@
 
     .content {
       color: var(--terra-overlay-dark-content-color, #fff);
-      text-shadow: var (--terra-overlay-dark-content-text-shadow, none);
+      text-shadow: var(--terra-overlay-dark-content-text-shadow, none);
     }
   }
 
@@ -34,7 +34,7 @@
 
     .content {
       color: var(--terra-overlay-light-content-color, #1c1f21);
-      text-shadow: var (--terra-overlay-light-content-text-shadow, none);
+      text-shadow: var(--terra-overlay-light-content-text-shadow, none);
     }
   }
 
