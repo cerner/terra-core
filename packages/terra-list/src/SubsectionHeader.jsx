@@ -18,6 +18,10 @@ const propTypes = {
    */
   isCollapsible: PropTypes.bool,
   /**
+   * Whether or not the section header is divided.
+   */
+  isDivided: PropTypes.bool,
+  /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=2`.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
@@ -51,6 +55,7 @@ const propTypes = {
 const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
+  isDivided: false,
   level: 2,
   title: '',
 };
@@ -58,6 +63,7 @@ const defaultProps = {
 const SectionHeader = ({
   isCollapsed,
   isCollapsible,
+  isDivided,
   level,
   metaData,
   onClick,
@@ -70,6 +76,7 @@ const SectionHeader = ({
   const sectionHeaderClassNames = cx([
     'subsection-header',
     { 'is-collapsible': isCollapsible },
+    { 'is-divided': isDivided },
     customProps.className,
   ]);
 
@@ -92,8 +99,9 @@ const SectionHeader = ({
     ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, true, onSelect, metaData);
     ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, true, onSelect, metaData);
     ariaSpread.tabIndex = '0';
-    ariaSpread.role = 'option';
-    // ariaSpread['aria-selected'] = isSelected;
+    ariaSpread.role = 'heading';
+    ariaSpread['aria-expanded'] = !isCollapsed;
+    ariaSpread['aria-level'] = 2;
   }
 
   return (

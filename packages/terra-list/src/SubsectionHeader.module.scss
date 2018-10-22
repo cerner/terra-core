@@ -7,6 +7,17 @@
     background-color: rgb(235, 22, 57);
   }
 
+  .subsection-header:focus {
+    // background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
+    box-shadow: var(--terra-list-subsection-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+    outline: var(--terra-list-subsection-header-focus-outline);
+    z-index: 1;
+  }
+
+  .subsection-header:hover {
+    background-color: rgb(115, 22, 57);
+  }
+
   .title {
     color: #fff;
     font-size: 1rem;

@@ -8,6 +8,17 @@
     width: 100%;
   }
 
+  .section-header:focus {
+    // background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
+    box-shadow: var(--terra-list-section-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+    outline: var(--terra-list-section-header-focus-outline);
+    z-index: 1;
+  }
+
+  .section-header:hover {
+    background-color: rgb(79, 22, 115);
+  }
+
   .title {
     color: #fff;
     font-size: 1rem;
