@@ -13,15 +13,7 @@ const KEYCODES = {
   TAB: 9,
 };
 
-const ButtonTypes = {
-  BUTTON: 'button',
-};
-
 const propTypes = {
-  /**
-   * Whether or not the button should be disabled.
-   */
-  isDisabled: PropTypes.bool,
   /**
    * Callback function triggered when clicked.
    */
@@ -50,16 +42,10 @@ const propTypes = {
    * Sets the button text.
    */
   text: PropTypes.string.isRequired,
-  /**
-   * Sets the button type. One of `button`, `submit`, or `reset`.
-   */
-  type: PropTypes.oneOf([ButtonTypes.BUTTON, ButtonTypes.SUBMIT, ButtonTypes.RESET]),
 };
 
 const defaultProps = {
-  isDisabled: false,
   refCallback: undefined,
-  type: ButtonTypes.BUTTON,
 };
 
 class Button extends React.Component {
@@ -111,9 +97,7 @@ class Button extends React.Component {
 
   render() {
     const {
-      isDisabled,
       text,
-      type,
       onClick,
       onBlur,
       onFocus,
@@ -125,7 +109,6 @@ class Button extends React.Component {
 
     const buttonClasses = cx([
       'button',
-      { 'is-disabled': isDisabled },
       { 'is-active': this.state.active },
       { 'is-focused': this.state.focused },
       customProps.className,
@@ -135,10 +118,7 @@ class Button extends React.Component {
       <button
         {...customProps}
         className={buttonClasses}
-        type={type}
-        disabled={isDisabled}
-        tabIndex={isDisabled ? '-1' : undefined}
-        aria-disabled={isDisabled}
+        type="button"
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
@@ -146,7 +126,14 @@ class Button extends React.Component {
         onFocus={onFocus}
         ref={refCallback}
       >
-        {text}
+        <span className={cx('inner')}>
+          <span className={cx('text')}>
+            {text}
+          </span>
+          <span className={cx('icon-holder')}>
+            <span className={cx('icon')} />
+          </span>
+        </span>
       </button>
     );
   }

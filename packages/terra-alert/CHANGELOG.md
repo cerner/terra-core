@@ -13,6 +13,7 @@ Unreleased
 ------------------
 ### Changed
 * Refactor markup and styles to be more accessible to screen readers
+* Added padding to right of alert so text doesn't run flush to the edge
 
 2.29.0 - (October 2, 2018)
 ------------------

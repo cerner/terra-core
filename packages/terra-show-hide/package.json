@@ -1,7 +1,7 @@
 {
   "name": "terra-show-hide",
   "main": "lib/ShowHide.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Show/Hide component that previews a small section of content or shows the full content with the click of a button",
   "repository": {
     "type": "git",

@@ -17,6 +17,34 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
+  describe('Hover', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide');
+      browser.moveToObject('button');
+    });
+    Terra.should.matchScreenshot();
+    Terra.should.beAccessible();
+  });
+
+  describe('Focus', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide');
+      browser.keys(['Tab']);
+    });
+    Terra.should.matchScreenshot();
+    Terra.should.beAccessible();
+  });
+
+  describe('Active', () => {
+    beforeEach(() => {
+      browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide');
+      browser.moveToObject('button');
+      browser.buttonDown('button');
+    });
+    Terra.should.matchScreenshot();
+    Terra.should.beAccessible();
+  });
+
   describe('Custom button text', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/custom-button-text-show-hide'));
 
@@ -45,8 +73,8 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
-  describe('Button align left', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-left-show-hide'));
+  describe('Button align start', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-start-show-hide'));
 
     Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
@@ -73,8 +101,22 @@ describe('Show Hide', () => {
     Terra.should.beAccessible();
   });
 
-  describe('Button align right', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-right-show-hide'));
+  describe('Button align end', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-end-show-hide'));
+
+    Terra.should.matchScreenshot('collapsed');
+    Terra.should.beAccessible();
+
+    it('should expand to full text', () => {
+      browser.click('button');
+    });
+
+    Terra.should.matchScreenshot('expanded');
+    Terra.should.beAccessible();
+  });
+
+  describe('Long button text', () => {
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/long-button-text-show-hide'));
 
     Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
