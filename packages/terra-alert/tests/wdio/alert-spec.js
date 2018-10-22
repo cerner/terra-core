@@ -16,6 +16,11 @@ describe('Alert', () => {
     Terra.should.beAccessible({ viewports });
   });
 
+  describe('Padding', () => {
+    before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-padding'));
+    Terra.should.matchScreenshot({ viewports });
+  });
+
   describe('Titles', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-title'));
     Terra.should.matchScreenshot({ viewports });
