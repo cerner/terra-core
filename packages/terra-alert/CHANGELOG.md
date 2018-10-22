@@ -4,10 +4,16 @@ Changelog
 Unreleased
 ----------
 
+2.31.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.30.0 - (October 8, 2018)
 ------------------
 ### Changed
 * Refactor markup and styles to be more accessible to screen readers
+* Added padding to right of alert so text doesn't run flush to the edge
 
 2.29.0 - (October 2, 2018)
 ------------------
