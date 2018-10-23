@@ -52,9 +52,9 @@
     hyphens: auto;
     margin-bottom: 0;
     margin-top: 0;
+    overflow-wrap: break-word; /* Modern browsersrs */
     padding-top: var(--terra-action-header-title-padding-top, 0.1428571429rem);
     width: 100%;
-    word-break: break-all;
-    word-wrap: normal;
+    word-wrap: break-word; /* For IE 10 and IE 11 */
   }
 }
