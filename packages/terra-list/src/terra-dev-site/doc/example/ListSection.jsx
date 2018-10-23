@@ -113,7 +113,6 @@ class ListSectionExample extends React.Component {
         key={sectionData.key}
         isCollapsed={this.state.collapsedKeys.indexOf(sectionData.key) >= 0}
         isCollapsible
-        isDivided
         metaData={{ key: sectionData.key }}
         title={sectionData.title}
         onSelect={this.handleSectionSelection}
@@ -122,7 +121,6 @@ class ListSectionExample extends React.Component {
           key={`test-key-${index}`}
           isCollapsed={this.state.collapsedKeys.indexOf(`test-key-${index}`) >= 0}
           isCollapsible
-          isDivided
           metaData={{ key: `test-key-${index}` }}
           title={`Subsection ${index}`}
           onSelect={this.handleSectionSelection}
