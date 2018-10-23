@@ -148,12 +148,19 @@
         background-color: var(--terra-table-row-striped-selected-background-color, darken(#ebf6fd, 7%)) !important;
       }
 
-      &.is-selectable:hover,
-      &.is-selectable:focus {
+      &.is-selectable:hover {
         background-color: var(--terra-table-row-striped-hover-background-color, darken(#ebf6fd, 2%)) !important;
 
         &.is-selected {
           background-color: var(--terra-table-row-striped-selected-hover-background-color, darken(#ebf6fd, 12%)) !important;
+        }
+      }
+
+      &.is-selectable:focus {
+        background-color: var(--terra-table-row-striped-focus-background-color, darken(#ebf6fd, 2%)) !important;
+
+        &.is-selected {
+          background-color: var(--terra-table-row-striped-selected-focus-background-color, darken(#ebf6fd, 12%)) !important;
         }
       }
       /* stylelint-enable selector-no-qualifying-type */
@@ -175,12 +182,18 @@
   .is-selectable {
     cursor: pointer;
 
-    &.row:focus,
+    &.row:focus {
+      background-color: var(--terra-table-row-focus-background-color, lighten(#ebf6fd, 2%)) !important;
+    }
+
     &.row:hover {
       background-color: var(--terra-table-row-hover-background-color, lighten(#ebf6fd, 2%)) !important;
     }
 
-    &.is-selected:focus,
+    &.is-selected:focus {
+      background-color: var(--terra-table-row-selected-focus-background-color, darken(#ebf6fd, 7%)) !important;
+    }
+
     &.is-selected:hover {
       background-color: var(--terra-table-row-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }

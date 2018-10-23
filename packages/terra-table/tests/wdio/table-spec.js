@@ -60,9 +60,13 @@ describe('Table', () => {
         '--terra-table-row-striped-selected-background-color': '#7facbe',
         '--terra-table-row-striped-hover-background-color': '#2fcef2',
         '--terra-table-row-striped-selected-hover-background-color': '#df3b3d',
+        '--terra-table-row-striped-focus-background-color': '#2fcef2',
+        '--terra-table-row-striped-selected-focus-background-color': '#df3b3d',
         '--terra-table-row-selected-background-color': '#2fcef2',
         '--terra-table-row-selected-border-color': '#00cc99',
         '--terra-table-row-hover-background-color': '#555555',
+        '--terra-table-row-focus-background-color': '#555555',
+        '--terra-table-row-selected-focus-background-color': '#888888',
         '--terra-table-row-selected-hover-background-color': '#888888',
       },
     });
