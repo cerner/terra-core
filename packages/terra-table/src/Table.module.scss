@@ -99,6 +99,7 @@
   .sort-indicator {
     color: var(--terra-table-sort-indicator-color, #1c1f21);
     padding-left: 0.7142857143rem;
+    width: var(--terra-table-sort-indicator-width);
   }
 
   .min-width-tiny {
