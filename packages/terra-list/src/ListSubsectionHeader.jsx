@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import SelectableUtils from './ListUtils';
-import styles from './SectionHeader.module.scss';
+import styles from './ListSubsectionHeader.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -68,7 +68,7 @@ const SectionHeader = ({
   ...customProps
 }) => {
   const sectionHeaderClassNames = cx([
-    'section-header',
+    'subsection-header',
     { 'is-collapsible': isCollapsible },
     customProps.className,
   ]);
@@ -94,7 +94,7 @@ const SectionHeader = ({
     ariaSpread.tabIndex = '0';
     ariaSpread.role = 'heading';
     ariaSpread['aria-expanded'] = !isCollapsed;
-    ariaSpread['aria-level'] = 1;
+    ariaSpread['aria-level'] = 2;
   }
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
-import SectionHeader from './SectionHeader';
+import SectionHeader from './ListSectionHeader';
 
 // Disable this lint rule to allow for the metaData prop
 /* eslint-disable react/forbid-prop-types */

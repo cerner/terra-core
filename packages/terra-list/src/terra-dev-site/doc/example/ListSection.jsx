@@ -6,57 +6,58 @@ import List, {
   Subsection,
   Utils,
 } from 'terra-list/lib/List';
+import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const mockData = [
   {
     title: 'Section 0',
-    key: 'section-key-1',
+    key: 'section-key-0',
     childItems: [
       {
-        title: 'Item 1',
+        title: 'Item 0-0',
+        key: 'unique-0',
+      },
+      {
+        title: 'Item 0-1',
         key: 'unique-1',
       },
       {
-        title: 'Item 2',
+        title: 'Item 0-2',
         key: 'unique-2',
       },
       {
-        title: 'Item 3',
+        title: 'Item 0-3',
         key: 'unique-3',
       },
       {
-        title: 'Item 4',
+        title: 'Item 0-4',
         key: 'unique-4',
-      },
-      {
-        title: 'Item 5',
-        key: 'unique-5',
       },
     ],
   },
   {
     title: 'Section 1',
-    key: 'section-key-2',
+    key: 'section-key-1',
     childItems: [
       {
-        title: 'Item 21',
-        key: 'unique-21',
+        title: 'Item 1-0',
+        key: 'unique-10',
       },
       {
-        title: 'Item 22',
-        key: 'unique-22',
+        title: 'Item 1-1',
+        key: 'unique-11',
       },
       {
-        title: 'Item 23',
-        key: 'unique-23',
+        title: 'Item 1-2',
+        key: 'unique-12',
       },
       {
-        title: 'Item 24',
-        key: 'unique-24',
+        title: 'Item 1-3',
+        key: 'unique-13',
       },
       {
-        title: 'Item 25',
-        key: 'unique-25',
+        title: 'Item 1-4',
+        key: 'unique-14',
       },
     ],
   },
@@ -100,9 +101,7 @@ class ListSectionExample extends React.Component {
         metaData={{ key: itemData.key }}
         onSelect={this.handleItemSelection}
       >
-        <span>
-          {itemData.title}
-        </span>
+        <Placeholder title={itemData.title} style={{ height: '50px' }} />
       </Item>
     );
   }

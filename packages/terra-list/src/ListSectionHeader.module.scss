@@ -33,15 +33,16 @@
     padding-left: 0.5rem;
     width: 100%;
 
-    .section-header:focus {
+    &.section-header:focus {
       background-color: var(--terra-list-item-focus-background-color, #e8e9ea);
       box-shadow: var(--terra-list-section-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
       outline: var(--terra-list-section-header-focus-outline, none);
+      position: relative;
       z-index: 1;
     }
   
-    .section-header:hover,
-    .section-header:active {
+    &.section-header:hover,
+    &.section-header:active {
       background-color: #d7d8d9;
     }
   }
