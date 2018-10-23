@@ -8,7 +8,7 @@ import ExampleTemplate from '../../common/ExampleTemplate';
 export default () => (
   <ExampleTemplate>
     <ActionFooter
-      start={<a href="/#/site/action-footer">Start Action</a>}
+      start={<Hyperlink href="#">Start Action</Hyperlink>}
       end={(
         <div>
           <Spacer isInlineBlock paddingRight="medium">

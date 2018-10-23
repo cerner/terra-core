@@ -6,7 +6,7 @@ import ExampleTemplate from '../../common/ExampleTemplate';
 export default () => (
   <ExampleTemplate>
     <CenteredActionFooter
-      center={<a href="/#/site/action-footer/centered">A link</a>}
+      center={<Hyperlink href="#">A link</Hyperlink>}
     />
   </ExampleTemplate>
 );
