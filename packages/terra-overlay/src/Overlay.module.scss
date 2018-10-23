@@ -110,16 +110,16 @@
     right: 0;
     top: 0;
 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .inner {
       height: 200%;
       left: 0;
       position: absolute;
       top: 0;
       width: 200%;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
     }
   }
 }
