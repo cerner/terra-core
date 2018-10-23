@@ -1,7 +1,7 @@
 {
   "name": "terra-button",
   "main": "lib/Button.js",
-  "version": "2.26.0",
+  "version": "2.27.0",
   "description": "The terra-button component provides users a way to trigger actions in the UI.",
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.17.0",
-    "terra-icon": "^2.24.0"
+    "terra-doc-template": "^1.18.0",
+    "terra-icon": "^2.25.0"
   }
 }

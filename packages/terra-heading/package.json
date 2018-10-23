@@ -1,7 +1,7 @@
 {
   "name": "terra-heading",
   "main": "lib/Heading.js",
-  "version": "2.24.0",
+  "version": "2.25.0",
   "description": "Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading.",
   "repository": {
     "type": "git",
@@ -29,10 +29,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^2.26.0",
-    "terra-doc-template": "^1.17.0",
+    "terra-arrange": "^2.27.0",
+    "terra-doc-template": "^1.18.0",
     "terra-markdown": "^2.15.0",
-    "terra-text": "^2.24.0"
+    "terra-text": "^2.25.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

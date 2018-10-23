@@ -18,11 +18,13 @@ import placeholderSrc from './mock/valid/path/placeholder.png';
 import invalidImageSrc from './mock/invalid/path/image.png';
 import validImageSrc from './mock/valid/path/image.png';
 
-// Providing an invalid or unresolvable path with cause the placeholder image to be displayed.
-<Image src={invalidImageSrc} placeholder={placeholderSrc} alt="placeholder image" />
+const placeholderNode = (<img src={placeholderSrc} alt="placeholder image" />);
+
+// Providing an invalid or unresolvable path with cause the placeholder node to be displayed.
+<Image src={invalidImageSrc} placeholder={placeholderNode} alt="invalid image" />
 
 // Providing a valid path will cause the src image to be displayed.
-<Image src={validImageSrc} placeholder={placeholderSrc} alt="placeholder image" />
+<Image src={validImageSrc} placeholder={placeholderNode} alt="valid image" />
 ```
 
 ## Component Features
