@@ -68,6 +68,8 @@
     }
 
     tbody {
+      background-color: var(--terra-table-tbody-background-color);
+
       tr {
         border-top: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
 
