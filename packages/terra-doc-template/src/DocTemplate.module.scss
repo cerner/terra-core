@@ -1,7 +1,9 @@
 :local {
   .examples-header {
-    border-bottom: 1px solid #eaecef;
+    border-bottom: var(--terra-doc-template-v1-examples-header-border-bottom, 1px solid #eaecef);
+    color: var(--terra-doc-template-v1-examples-header-color);
     padding-bottom: 0.3em;
+    text-shadow: var(--terra-doc-template-v1-examples-header-text-shadow);
   }
 
   .doc-template {
@@ -9,5 +11,14 @@
     overflow: auto;
     padding: 15px;
     position: relative;
+  }
+
+  .doc-card:not(:empty) {
+    background-color: var(--terra-doc-template-v1-doc-card-background-color);
+    border-radius: var(--terra-doc-template-v1-doc-card-border-radius);
+    padding-bottom: var(--terra-doc-template-v1-doc-card-padding-bottom);
+    padding-left: var(--terra-doc-template-v1-doc-card-padding-left);
+    padding-right: var(--terra-doc-template-v1-doc-card-padding-right);
+    padding-top: var(--terra-doc-template-v1-doc-card-padding-top);
   }
 }
