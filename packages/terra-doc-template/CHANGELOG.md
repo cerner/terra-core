@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.19.0 - (October 24, 2018)
+------------------
 ### Changed
 * Set language on syntax highlight to JSX to improve highlighting
 * Improved syntax highlighter theme - based on ReactJS.org syntax highlighter theme
