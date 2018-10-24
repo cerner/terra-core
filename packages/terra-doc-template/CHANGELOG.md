@@ -9,6 +9,9 @@ Unreleased
 * Added aria-hidden to code examples to hide code from screen readers when closed
 * Improve doc example styling to be more usable in theme repos
 
+### Added
+* Created placeholder component for documentation.
+
 1.18.0 - (October 16, 2018)
 ------------------
 ### Changed
