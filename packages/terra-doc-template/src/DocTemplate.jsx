@@ -100,9 +100,11 @@ const DocTemplate = ({
 
   return (
     <div {...customProps} className={docTemplateClassNames}>
-      {packageName && badge}
-      {readme && <Markdown src={readme} />}
-      {srcPath && <a href={srcPath}>View component source code</a>}
+      <div className={cx('doc-card')}>
+        {packageName && badge}
+        {readme && <Markdown src={readme} />}
+        {srcPath && <a href={srcPath}>View component source code</a>}
+      </div>
 
       {exampleHeader}
       {localExamples.map(example => (
@@ -115,15 +117,17 @@ const DocTemplate = ({
         />
       ))}
 
-      {localPropsTables.map(propsTable => (
-        <PropsTable
-          src={propsTable.componentSrc}
-          componentName={propsTable.componentName}
-          key={propsTable.id}
-          propsResolution={propsTable.propsResolution}
-        />
-      ))}
-      {children}
+      <div className={cx('doc-card')}>
+        {localPropsTables.map(propsTable => (
+          <PropsTable
+            src={propsTable.componentSrc}
+            componentName={propsTable.componentName}
+            key={propsTable.id}
+            propsResolution={propsTable.propsResolution}
+          />
+        ))}
+      </div>
+      {children && <div className={cx('doc-card')}>{children}</div>}
     </div>
   );
 };

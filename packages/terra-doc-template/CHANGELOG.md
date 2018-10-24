@@ -3,10 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.19.0 - (October 24, 2018)
+------------------
 ### Changed
 * Set language on syntax highlight to JSX to improve highlighting
 * Improved syntax highlighter theme - based on ReactJS.org syntax highlighter theme
 * Added aria-hidden to code examples to hide code from screen readers when closed
+* Improve doc example styling to be more usable in theme repos
 
 ### Added
 * Created placeholder component for documentation.

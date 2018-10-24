@@ -6,6 +6,11 @@ Unreleased
 ### Fixed
 * Screen reader text added for facility and user avatar placeholders
 
+1.25.0 - (October 24, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.24.0 - (October 16, 2018)
 ------------------
 ### Changed
