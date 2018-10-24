@@ -17,6 +17,7 @@
   }
 
   .icon {
+    display: inline-block;
     flex-shrink: 0;
     font-size: var(--terra-alert-icon-font-size, 1.286em);
     margin-right: 0.5rem;
@@ -41,11 +42,13 @@
 
   .body-std {
     margin-bottom: 0.7143rem;
-    margin-right: 0;
+    margin-right: 0.6667rem;
   }
 
   .section {
     flex: 1;
+    margin-bottom: 0;
+    margin-top: 0;
     padding-bottom: 0.2143rem;
     padding-top: 0.2143rem;
   }
@@ -55,7 +58,6 @@
   }
 
   .title {
-    float: left;
     margin-right: 0.5833rem;
   }
 

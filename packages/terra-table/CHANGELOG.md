@@ -3,8 +3,24 @@ Changelog
 
 Unreleased
 ----------
+
+2.27.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.26.0 - (October 8, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.25.0 - (October 2, 2018)
+------------------
 ### Added
 * Exports for table header cell minimum width and sort added.
+
+### Changed
+* SingleSelectableRows documentation
 
 2.24.0 - (September 25, 2018)
 ------------------

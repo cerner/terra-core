@@ -76,19 +76,19 @@ const defaultProps = {
 const getAlertIcon = (type, customIcon) => {
   switch (type) {
     case AlertTypes.ALERT:
-      return (<IconAlert />);
+      return (<span className={cx('icon')}><IconAlert /></span>);
     case AlertTypes.ERROR:
-      return (<IconError />);
+      return (<span className={cx('icon')}><IconError /></span>);
     case AlertTypes.WARNING:
-      return (<IconWarning />);
+      return (<span className={cx('icon')}><IconWarning /></span>);
     case AlertTypes.ADVISORY:
       return null;
     case AlertTypes.INFO:
-      return (<IconInformation />);
+      return (<span className={cx('icon')}><IconInformation /></span>);
     case AlertTypes.SUCCESS:
-      return (<IconSuccess />);
+      return (<span className={cx('icon')}><IconSuccess /></span>);
     case AlertTypes.CUSTOM:
-      return customIcon;
+      return (<span className={cx('icon')}>{customIcon}</span>);
     default:
       return null;
   }
@@ -164,12 +164,10 @@ const Alert = ({
   }
 
   const alertMessageContent = (
-    <div className={alertSectionClassName}>
-      <strong className={cx('title')}>{title || defaultTitle}</strong>
-      <div>
-        {children}
-      </div>
-    </div>
+    <p className={alertSectionClassName}>
+      {(title || defaultTitle) && <strong className={cx('title')}>{title || defaultTitle}</strong>}
+      {children}
+    </p>
   );
 
   return (
@@ -178,7 +176,7 @@ const Alert = ({
       defaultElement={(
         <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle}>
           <div className={bodyClassNameForNarrowParent}>
-            <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
+            {getAlertIcon(type, customIcon)}
             {alertMessageContent}
           </div>
           {actionsSection}
@@ -187,7 +185,7 @@ const Alert = ({
       tiny={(
         <div {...attributes} className={wideAlertClassNames} style={outerDivStyle}>
           <div className={cx(['body', 'body-std'])}>
-            <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
+            {getAlertIcon(type, customIcon)}
             {alertMessageContent}
           </div>
           {actionsSection}

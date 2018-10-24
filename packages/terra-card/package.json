@@ -1,7 +1,7 @@
 {
   "name": "terra-card",
   "main": "lib/Card.js",
-  "version": "2.22.0",
+  "version": "2.25.0",
   "description": "Card is a basic container with some base styling to help seperate elements with different content",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.16.0",
-    "terra-visually-hidden-text": "^1.0.0"
+    "terra-doc-template": "^1.18.0",
+    "terra-visually-hidden-text": "^1.2.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

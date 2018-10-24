@@ -1,7 +1,7 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "version": "2.22.0",
+  "version": "2.25.0",
   "description": "The terra-i18n package provides on-demand internationalization of React components.",
   "repository": {
     "type": "git",
@@ -34,13 +34,13 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "commander": "^2.9.0",
-    "fs-extra": "^6.0.1",
+    "fs-extra": "^7.0.0",
     "glob": "^7.1.1",
     "intl": "^1.2.5",
     "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
     "react-intl": "^2.4.0",
-    "terra-doc-template": "^1.16.0"
+    "terra-doc-template": "^1.18.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

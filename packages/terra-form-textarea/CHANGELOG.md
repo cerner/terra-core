@@ -6,6 +6,18 @@ Unreleased
 ### Changed
 * Updated textarea documentation examples
 
+2.29.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.28.0 - (October 8, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.27.0 - (October 2, 2018)
+------------------
 ### Added
 * Export for textarea size added
 

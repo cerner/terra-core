@@ -4,6 +4,18 @@ ChangeLog
 Unreleased
 ----------
 
+1.26.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.25.0 - (October 8, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.24.0 - (October 2, 2018)
+------------------
 ### Changed
 * Removed unnecessary test file: DefaultFieldset.test.jsx
 

@@ -1,8 +1,16 @@
+const viewports = Terra.viewports('tiny', 'huge');
+
 describe('Button Group', () => {
   describe('Text Button', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-text'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-text' });
+  });
+
+  describe('Button Group Wrapping', () => {
+    before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-wrapping'));
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Long Text Button', () => {

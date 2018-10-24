@@ -3,6 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.25.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.24.0 - (October 8, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.23.0 - (October 2, 2018)
+------------------
 ### Changed
 * Made main container an article to improve accessibility
 

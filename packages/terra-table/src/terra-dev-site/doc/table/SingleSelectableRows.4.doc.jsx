@@ -12,6 +12,7 @@ import SingleRowSelectableTableSrc from '!raw-loader!../../../../src/terra-dev-s
 import TableWithNonSelectableRow from '../example/TableWithNonSelectableRow';
 import TableWithNonSelectableRowSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithNonSelectableRow';
 import SingleSelectableRowsOnChange from '../example/SingleSelectableRowsOnChange';
+import SingleSelectableRowsOnChangeAdditionalDetails from '../example/SingleSelectableRowsOnChangeAdditionalDetails';
 import SingleSelectableRowsOnChangeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleSelectableRowsOnChange';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
@@ -34,6 +35,11 @@ const DocPage = () => (
       {
         title: 'Single Selectable Rows (onChange callback)',
         example: <SingleSelectableRowsOnChange />,
+        source: SingleSelectableRowsOnChangeSrc,
+      },
+      {
+        title: 'Single Selectable Rows (additional details from onChange)',
+        example: <SingleSelectableRowsOnChangeAdditionalDetails />,
         source: SingleSelectableRowsOnChangeSrc,
       },
     ]}

@@ -1,7 +1,7 @@
 {
   "name": "terra-slide-group",
   "main": "lib/SlideGroup.js",
-  "version": "2.22.0",
+  "version": "2.24.0",
   "description": "A component that utilizes the `react-transition-group` library to present a stack of components in an animated fashion",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-transition-group": "^2.2.0",
-    "terra-doc-template": "^1.16.0"
+    "terra-doc-template": "^1.18.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

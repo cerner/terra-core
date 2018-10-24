@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
-import { okaidia } from 'react-syntax-highlighter/styles/prism';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import classNames from 'classnames/bind';
 import styles from './ExampleTemplate.module.scss';
+import theme from './syntax-highlighter-theme';
 
 registerLanguage('jsx', jsx);
 
@@ -91,8 +91,8 @@ class ExampleTemplate extends React.Component {
               <span>Code</span>
               <span className={cx('chevron-right')} />
             </button>
-            <div className={cx('code', { 'is-expanded': this.state.isExpanded })}>
-              <SyntaxHighlighter language="javascript" style={okaidia} customStyle={{ margin: '0', borderRadius: '0' }}>
+            <div className={cx('code', { 'is-expanded': this.state.isExpanded })} aria-hidden={!this.state.isExpanded}>
+              <SyntaxHighlighter language="jsx" style={theme} customStyle={{ margin: '0', borderRadius: '0' }}>
                 {exampleSrc}
               </SyntaxHighlighter>
             </div>

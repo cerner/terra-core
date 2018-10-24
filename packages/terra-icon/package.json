@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "2.23.0",
+  "version": "2.25.0",
   "description": "The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
-    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.19.1.tar.gz",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.19.2.tar.gz",
     "svgo": "^0.7.2"
   },
   "peerDependencies": {
@@ -33,7 +33,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.16.0"
+    "terra-doc-template": "^1.18.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",

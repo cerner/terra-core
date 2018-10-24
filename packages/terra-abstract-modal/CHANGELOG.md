@@ -4,10 +4,26 @@ Changelog
 Unreleased
 ----------
 
+1.21.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.20.0 - (October 8, 2018)
+------------------
+### Changed
+* Upgrade focus-trap-react to ^4.0.1
+
+1.19.0 - (October 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.18.0 - (September 25, 2018)
 ------------------
 ### Changed
 * Minor dependency version bump
+* Use absolute position for modal and modal overlay for iOS stability
 
 1.17.1 - (September 6, 2018)
 ------------------

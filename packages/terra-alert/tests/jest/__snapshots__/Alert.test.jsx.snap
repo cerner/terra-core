@@ -32,10 +32,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
           <div
             className="body body-std"
           >
-            <div
-              className="icon"
-            />
-            <div
+            <p
               className="section"
             >
               <strong
@@ -43,10 +40,8 @@ exports[`Alert of type advisory with text content should render an Alert compone
               >
                 Advisory.
               </strong>
-              <div>
-                This is an advisory alert.
-              </div>
-            </div>
+              This is an advisory alert.
+            </p>
           </div>
           
         </div>
@@ -60,10 +55,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
           <div
             className="body body-std"
           >
-            <div
-              className="icon"
-            />
-            <div
+            <p
               className="section"
             >
               <strong
@@ -71,10 +63,8 @@ exports[`Alert of type advisory with text content should render an Alert compone
               >
                 Advisory.
               </strong>
-              <div>
-                This is an advisory alert.
-              </div>
-            </div>
+              This is an advisory alert.
+            </p>
           </div>
           
         </div>
@@ -118,15 +108,15 @@ exports[`Alert of type alert with text content should render an Alert component 
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconAlert
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -134,10 +124,8 @@ exports[`Alert of type alert with text content should render an Alert component 
               >
                 Alert.
               </strong>
-              <div>
-                This is an alert.
-              </div>
-            </div>
+              This is an alert.
+            </p>
           </div>
           
         </div>
@@ -151,15 +139,15 @@ exports[`Alert of type alert with text content should render an Alert component 
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconAlert
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -167,10 +155,8 @@ exports[`Alert of type alert with text content should render an Alert component 
               >
                 Alert.
               </strong>
-              <div>
-                This is an alert.
-              </div>
-            </div>
+              This is an alert.
+            </p>
           </div>
           
         </div>
@@ -223,15 +209,15 @@ exports[`Alert of type custom with custom title and text content should render a
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconHelp
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section section-custom"
             >
               <strong
@@ -239,10 +225,8 @@ exports[`Alert of type custom with custom title and text content should render a
               >
                 Help!
               </strong>
-              <div>
-                This is a custom alert.
-              </div>
-            </div>
+              This is a custom alert.
+            </p>
           </div>
           
         </div>
@@ -260,15 +244,15 @@ exports[`Alert of type custom with custom title and text content should render a
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconHelp
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section section-custom"
             >
               <strong
@@ -276,10 +260,8 @@ exports[`Alert of type custom with custom title and text content should render a
               >
                 Help!
               </strong>
-              <div>
-                This is a custom alert.
-              </div>
-            </div>
+              This is a custom alert.
+            </p>
           </div>
           
         </div>
@@ -323,15 +305,15 @@ exports[`Alert of type error with text content should render an Alert component 
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconError
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -339,10 +321,8 @@ exports[`Alert of type error with text content should render an Alert component 
               >
                 Error.
               </strong>
-              <div>
-                This is an error.
-              </div>
-            </div>
+              This is an error.
+            </p>
           </div>
           
         </div>
@@ -356,15 +336,15 @@ exports[`Alert of type error with text content should render an Alert component 
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconError
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -372,10 +352,8 @@ exports[`Alert of type error with text content should render an Alert component 
               >
                 Error.
               </strong>
-              <div>
-                This is an error.
-              </div>
-            </div>
+              This is an error.
+            </p>
           </div>
           
         </div>
@@ -419,15 +397,15 @@ exports[`Alert of type info with custom title and HTML content should render an 
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconInformation
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -435,12 +413,10 @@ exports[`Alert of type info with custom title and HTML content should render an 
               >
                 Gettysburg Address
               </strong>
-              <div>
-                <span>
-                  Four score and seven years ago . . .
-                </span>
-              </div>
-            </div>
+              <span>
+                Four score and seven years ago . . .
+              </span>
+            </p>
           </div>
           
         </div>
@@ -454,15 +430,15 @@ exports[`Alert of type info with custom title and HTML content should render an 
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconInformation
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -470,12 +446,10 @@ exports[`Alert of type info with custom title and HTML content should render an 
               >
                 Gettysburg Address
               </strong>
-              <div>
-                <span>
-                  Four score and seven years ago . . .
-                </span>
-              </div>
-            </div>
+              <span>
+                Four score and seven years ago . . .
+              </span>
+            </p>
           </div>
           
         </div>
@@ -519,15 +493,15 @@ exports[`Alert of type info with text content should render an Alert component o
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconInformation
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -535,10 +509,8 @@ exports[`Alert of type info with text content should render an Alert component o
               >
                 Information.
               </strong>
-              <div>
-                This is an information alert.
-              </div>
-            </div>
+              This is an information alert.
+            </p>
           </div>
           
         </div>
@@ -552,15 +524,15 @@ exports[`Alert of type info with text content should render an Alert component o
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconInformation
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -568,10 +540,8 @@ exports[`Alert of type info with text content should render an Alert component o
               >
                 Information.
               </strong>
-              <div>
-                This is an information alert.
-              </div>
-            </div>
+              This is an information alert.
+            </p>
           </div>
           
         </div>
@@ -627,15 +597,15 @@ exports[`Alert of type success with an action button text content should render 
           <div
             className="body body-narrow"
           >
-            <div
+            <span
               className="icon"
             >
               <IconSuccess
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -643,10 +613,8 @@ exports[`Alert of type success with an action button text content should render 
               >
                 Success.
               </strong>
-              <div>
-                This is a success alert.
-              </div>
-            </div>
+              This is a success alert.
+            </p>
           </div>
           <div
             className="actions"
@@ -675,15 +643,15 @@ exports[`Alert of type success with an action button text content should render 
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconSuccess
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -691,10 +659,8 @@ exports[`Alert of type success with an action button text content should render 
               >
                 Success.
               </strong>
-              <div>
-                This is a success alert.
-              </div>
-            </div>
+              This is a success alert.
+            </p>
           </div>
           <div
             className="actions"
@@ -753,15 +719,15 @@ exports[`Alert of type success with text content should render an Alert componen
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconSuccess
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -769,10 +735,8 @@ exports[`Alert of type success with text content should render an Alert componen
               >
                 Success.
               </strong>
-              <div>
-                This is a success alert.
-              </div>
-            </div>
+              This is a success alert.
+            </p>
           </div>
           
         </div>
@@ -786,15 +750,15 @@ exports[`Alert of type success with text content should render an Alert componen
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconSuccess
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -802,10 +766,8 @@ exports[`Alert of type success with text content should render an Alert componen
               >
                 Success.
               </strong>
-              <div>
-                This is a success alert.
-              </div>
-            </div>
+              This is a success alert.
+            </p>
           </div>
           
         </div>
@@ -849,15 +811,15 @@ exports[`Alert of type warning with text content should render an Alert componen
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconWarning
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -865,10 +827,8 @@ exports[`Alert of type warning with text content should render an Alert componen
               >
                 Warning.
               </strong>
-              <div>
-                This is an warning.
-              </div>
-            </div>
+              This is an warning.
+            </p>
           </div>
           
         </div>
@@ -882,15 +842,15 @@ exports[`Alert of type warning with text content should render an Alert componen
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconWarning
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -898,10 +858,8 @@ exports[`Alert of type warning with text content should render an Alert componen
               >
                 Warning.
               </strong>
-              <div>
-                This is an warning.
-              </div>
-            </div>
+              This is an warning.
+            </p>
           </div>
           
         </div>
@@ -945,15 +903,15 @@ exports[`Alert with no props should render a default component 1`] = `
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconAlert
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -961,10 +919,8 @@ exports[`Alert with no props should render a default component 1`] = `
               >
                 Alert.
               </strong>
-              <div>
-                
-              </div>
-            </div>
+              
+            </p>
           </div>
           
         </div>
@@ -978,15 +934,15 @@ exports[`Alert with no props should render a default component 1`] = `
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconAlert
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -994,10 +950,8 @@ exports[`Alert with no props should render a default component 1`] = `
               >
                 Alert.
               </strong>
-              <div>
-                
-              </div>
-            </div>
+              
+            </p>
           </div>
           
         </div>
@@ -1062,15 +1016,15 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           <div
             className="body body-narrow"
           >
-            <div
+            <span
               className="icon"
             >
               <IconHelp
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section section-custom"
             >
               <strong
@@ -1078,10 +1032,8 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               >
                 Help!
               </strong>
-              <div>
-                This is a custom alert.
-              </div>
-            </div>
+              This is a custom alert.
+            </p>
           </div>
           <div
             className="actions actions-custom"
@@ -1124,15 +1076,15 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconHelp
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section section-custom"
             >
               <strong
@@ -1140,10 +1092,8 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               >
                 Help!
               </strong>
-              <div>
-                This is a custom alert.
-              </div>
-            </div>
+              This is a custom alert.
+            </p>
           </div>
           <div
             className="actions actions-custom"
@@ -1212,15 +1162,15 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           <div
             className="body body-narrow"
           >
-            <div
+            <span
               className="icon"
             >
               <IconAlert
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -1228,10 +1178,8 @@ exports[`Dismissible Alert that includes actions section should render an alert 
               >
                 Alert.
               </strong>
-              <div>
-                This is a test
-              </div>
-            </div>
+              This is a test
+            </p>
           </div>
           <div
             className="actions"
@@ -1259,15 +1207,15 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           <div
             className="body body-std"
           >
-            <div
+            <span
               className="icon"
             >
               <IconAlert
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
               />
-            </div>
-            <div
+            </span>
+            <p
               className="section"
             >
               <strong
@@ -1275,10 +1223,8 @@ exports[`Dismissible Alert that includes actions section should render an alert 
               >
                 Alert.
               </strong>
-              <div>
-                This is a test
-              </div>
-            </div>
+              This is a test
+            </p>
           </div>
           <div
             className="actions"

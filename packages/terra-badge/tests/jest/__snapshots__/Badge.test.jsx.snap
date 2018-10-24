@@ -2,12 +2,13 @@
 
 exports[`should render a badge component in the order, icon and text with medium size 1`] = `
 <span
-  className="badge medium default"
+  className="badge has-icon medium default"
 >
   <img
     alt="Test icon"
   />
   <span
+    aria-hidden="true"
     className="text"
   >
     Test value
@@ -17,9 +18,10 @@ exports[`should render a badge component in the order, icon and text with medium
 
 exports[`should render a badge component in the order, text and icon with info intent 1`] = `
 <span
-  className="badge small info"
+  className="badge has-icon is-reversed small info"
 >
   <span
+    aria-hidden="true"
     className="text"
   >
     Test value
@@ -32,7 +34,7 @@ exports[`should render a badge component in the order, text and icon with info i
 
 exports[`should render a badge component with icon and medium size 1`] = `
 <span
-  className="badge medium default"
+  className="badge has-icon medium default"
 >
   <img
     alt="Test icon"
@@ -42,7 +44,7 @@ exports[`should render a badge component with icon and medium size 1`] = `
 
 exports[`should render a badge component with icon and warning intent 1`] = `
 <span
-  className="badge small warning"
+  className="badge has-icon small warning"
 >
   <img
     alt="Test icon"
@@ -55,6 +57,7 @@ exports[`should render a badge component with text and large size 1`] = `
   className="badge large default"
 >
   <span
+    aria-hidden="true"
     className="text"
   >
     Large
@@ -67,9 +70,26 @@ exports[`should render a badge component with text and secondary intent 1`] = `
   className="badge small secondary"
 >
   <span
+    aria-hidden="true"
     className="text"
   >
     Secondary
+  </span>
+</span>
+`;
+
+exports[`should render a badge component with visually hidden text 1`] = `
+<span
+  className="badge small default"
+>
+  <VisuallyHiddenText
+    text="Risk Score 3"
+  />
+  <span
+    aria-hidden="true"
+    className="text"
+  >
+    3
   </span>
 </span>
 `;

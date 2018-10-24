@@ -67,6 +67,10 @@
     }
   }
 
+  .button-label {
+    display: inline-block;
+  }
+
   // Button variant modifiers
   .neutral {
     @include terra-button-variant-color($terra-button-neutral-color-scheme);

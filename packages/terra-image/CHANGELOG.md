@@ -3,8 +3,25 @@ Changelog
 
 Unreleased
 ----------
+
+2.25.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Fixed
+* Fix flickering on new props #1748
+* Corrected example in docs/README.md
+
+2.24.0 - (October 8, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.23.0 - (October 2, 2018)
+------------------
 ### Added
-* Export for image variant added.
+* Export for image variant added
 
 2.22.0 - (September 25, 2018)
 ------------------

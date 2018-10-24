@@ -3,6 +3,19 @@ Changelog
 
 Unreleased
 ----------
+
+2.26.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.25.0 - (October 8, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.24.0 - (October 2, 2018)
+------------------
 ### Added
 * Export for progress bar height size added.
 

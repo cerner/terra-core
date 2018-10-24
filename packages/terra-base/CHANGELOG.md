@@ -4,6 +4,21 @@ Changelog
 Unreleased
 ----------
 
+3.26.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.25.0 - (October 8, 2018)
+------------------
+# Removed
+* Removed 'Segoe UI' from default font-stack which was never being rendered on Windows
+
+3.24.0 - (October 2, 2018)
+------------------
+### Added
+* Export IntlProvider from terra-i18n
+
 3.23.0 - (September 25, 2018)
 ------------------
 ### Added

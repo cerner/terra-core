@@ -1,7 +1,7 @@
 {
   "name": "terra-text",
   "main": "lib/Text.js",
-  "version": "2.22.0",
+  "version": "2.25.0",
   "description": "Component for displaying customizable text in UI.",
   "repository": {
     "type": "git",
@@ -29,10 +29,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^2.24.0",
-    "terra-doc-template": "^1.16.0",
-    "terra-heading": "^2.22.0",
-    "terra-markdown": "^2.14.0"
+    "terra-arrange": "^2.27.0",
+    "terra-doc-template": "^1.18.0",
+    "terra-heading": "^2.25.0",
+    "terra-markdown": "^2.15.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

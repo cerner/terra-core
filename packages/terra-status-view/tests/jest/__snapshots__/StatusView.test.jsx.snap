@@ -69,7 +69,7 @@ exports[`should render a single child element 1`] = `
             type="button"
           >
             <span
-              className="text-only"
+              className="button-label text-only"
             >
               <span
                 className=""
@@ -302,7 +302,7 @@ exports[`should render an image with a no-data status view with all message prop
             type="button"
           >
             <span
-              className="text-only"
+              className="button-label text-only"
             >
               <span
                 className=""
@@ -334,7 +334,7 @@ exports[`should render an image with a no-data status view with all message prop
             type="button"
           >
             <span
-              className="text-only"
+              className="button-label text-only"
             >
               <span
                 className=""

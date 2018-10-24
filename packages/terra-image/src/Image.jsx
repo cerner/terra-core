@@ -72,7 +72,7 @@ class Image extends React.Component {
 
   componentWillReceiveProps(newProps) {
     // If a new image is being loaded, reset the state to loading
-    if (newProps.src !== this.props.src || newProps.placeholder !== this.props.placeholder) {
+    if (newProps.src !== this.props.src) {
       this.setState({ isLoading: true, isError: false });
     }
   }

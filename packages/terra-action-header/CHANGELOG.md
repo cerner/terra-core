@@ -3,6 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed text wrapping to break on whole word instead of part of the word.
+
+1.26.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.25.0 - (October 8, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.24.0 - (October 2, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 
 1.23.0 - (September 25, 2018)
 ------------------

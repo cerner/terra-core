@@ -14,6 +14,8 @@ import BadgeSize from '../example/BadgeSize';
 import BadgeSizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BadgeSize';
 import BadgeIcon from '../example/BadgeIcon';
 import BadgeIconSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BadgeIcon';
+import BadgeVisuallyHiddenText from '../example/BadgeVisuallyHiddenText';
+import BadgeVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BadgeVisuallyHiddenText';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -36,6 +38,11 @@ const DocPage = () => (
         title: 'Icon',
         example: <BadgeIcon />,
         source: BadgeIconSrc,
+      },
+      {
+        title: 'Visually Hidden Text',
+        example: <BadgeVisuallyHiddenText />,
+        source: BadgeVisuallyHiddenTextSrc,
       },
     ]}
     propsTables={[

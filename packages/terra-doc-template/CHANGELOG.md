@@ -3,6 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Set language on syntax highlight to JSX to improve highlighting
+* Improved syntax highlighter theme - based on ReactJS.org syntax highlighter theme
+* Added aria-hidden to code examples to hide code from screen readers when closed
+
+### Added
+* Created placeholder component for documentation.
+
+1.18.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.17.0 - (October 8, 2018)
+------------------
+### Changed
+* Updated react-syntax-highlighter version to ^8
 
 1.16.0 - (September 25, 2018)
 ------------------

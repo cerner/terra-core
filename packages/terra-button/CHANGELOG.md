@@ -3,6 +3,22 @@ Changelog
 
 Unreleased
 ----------
+
+2.27.0 - (October 16, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.26.0 - (October 8, 2018)
+------------------
+### Fixed
+* Fixed the Button component wrapping to center text
+
+### Changed
+* Updated component feature links in README
+
+2.25.0 - (October 2, 2018)
+------------------
 ### Added
 * Exports for button types and variants added
 

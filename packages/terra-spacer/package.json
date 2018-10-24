@@ -1,7 +1,7 @@
 {
   "name": "terra-spacer",
   "main": "lib/Spacer.js",
-  "version": "2.23.0",
+  "version": "2.26.0",
   "description": "This component is used to provide margin and/or padding space between two components based on the given values.",
   "repository": {
     "type": "git",
@@ -28,9 +28,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^2.24.0",
-    "terra-doc-template": "^1.16.0",
-    "terra-image": "^2.22.0"
+    "terra-button": "^2.27.0",
+    "terra-doc-template": "^1.18.0",
+    "terra-image": "^2.25.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

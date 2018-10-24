@@ -102,4 +102,32 @@ describe('Select', () => {
     const wrapper = shallow(<Select variant="tag" isInvalid />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should call onBlur', () => {
+    const mockBlur = jest.fn();
+    const wrapper = shallow(<Select onBlur={mockBlur} />, intlContexts.shallowContext);
+
+    wrapper.simulate('focus');
+    wrapper.simulate('blur');
+
+    expect(mockBlur).toBeCalled();
+  });
+
+  it('should call onFocus', () => {
+    const mockFocus = jest.fn();
+    const wrapper = shallow(<Select onFocus={mockFocus} />, intlContexts.shallowContext);
+
+    wrapper.simulate('focus');
+
+    expect(mockFocus).toBeCalled();
+  });
+
+  it('should call onClick', () => {
+    const mockClick = jest.fn();
+    const wrapper = shallow(<Select onClick={mockClick} />, intlContexts.shallowContext);
+
+    wrapper.simulate('click');
+
+    expect(mockClick).toBeCalled();
+  });
 });

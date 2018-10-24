@@ -42,6 +42,6 @@ The arrange component provides content containers with a fit (start and/or end r
 ```
 
 ## Component Features
-* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
-* [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
-* [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
+* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
+* [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
+* [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
