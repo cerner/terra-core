@@ -15,8 +15,6 @@ const KEYCODES = {
 const ButtonVariants = {
   NEUTRAL: 'neutral',
   EMPHASIS: 'emphasis',
-  // TODO: this should be removed on the next major version bump
-  'DE-EMPHSASIS': 'de-emphasis',
   'DE-EMPHASIS': 'de-emphasis',
   ACTION: 'action',
   UTILITY: 'utility',
