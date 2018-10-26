@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Updated textarea documentation examples
 
+2.30.0 - (October 24, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.29.0 - (October 16, 2018)
 ------------------
 ### Changed
