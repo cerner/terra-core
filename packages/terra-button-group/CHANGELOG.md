@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added isBlock prop to button group component
+* Added .block CSS class to component scss
+* Added dev site test page for button group block
+* Added jest and webdriver tests for button block group
 
 2.27.0 - (October 16, 2018)
 ------------------
