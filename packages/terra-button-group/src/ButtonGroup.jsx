@@ -69,12 +69,9 @@ class ButtonGroup extends React.Component {
     } = this.props;
 
     const buttonGroupClassNames = cx(['button-group',
+      { block: isBlock },
       customProps.className,
     ]);
-
-    if (isBlock) {
-      this.block = { display: 'block', width: '100%' };
-    }
 
     const allButtons = children ? [] : undefined;
 
@@ -89,7 +86,7 @@ class ButtonGroup extends React.Component {
     });
 
     return (
-      <div {...customProps} className={buttonGroupClassNames} style={this.block}>
+      <div {...customProps} className={buttonGroupClassNames}>
         {allButtons}
       </div>
     );
