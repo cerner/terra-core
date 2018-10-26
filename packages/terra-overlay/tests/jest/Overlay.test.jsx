@@ -16,14 +16,19 @@ describe('Overlay', () => {
         expect(wrapper).toMatchSnapshot();
       });
 
-      it('should have the class terra-Overlay', () => {
+      it('should have the class overlay', () => {
         const wrapper = shallow(defaultRender);
-        expect(wrapper.childAt(0).prop('className')).toContain('overlay');
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('overlay');
       });
 
       it('should default to a fullscreen overlay', () => {
         const wrapper = shallow(defaultRender);
-        expect(wrapper.childAt(0).prop('className')).toContain('fullscreen');
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('fullscreen');
+      });
+
+      it('should default to 100 zIndex layer', () => {
+        const wrapper = shallow(defaultRender);
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('layer-100');
       });
     });
 
@@ -40,7 +45,7 @@ describe('Overlay', () => {
     it('should render with isScrollable', () => {
       const overlayRender = <Overlay isOpen isScrollable />;
       const wrapper = shallow(overlayRender);
-      expect(wrapper.childAt(0).prop('className')).toContain('scrollable');
+      expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('scrollable');
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -61,28 +66,54 @@ describe('Overlay', () => {
       it('should use the default backgroundStyle when no value is given', () => {
         const overlayRender = <Overlay isOpen />;
         const wrapper = shallow(overlayRender);
-        expect(wrapper.childAt(0).prop('className')).toContain('light');
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('light');
       });
 
       it('should render with the light backgroundStyle', () => {
         const overlayRender = <Overlay isOpen backgroundStyle="light" />;
         const wrapper = shallow(overlayRender);
-        expect(wrapper.childAt(0).prop('className')).toContain('light');
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('light');
         expect(wrapper).toMatchSnapshot();
       });
 
       it('should render with the dark backgroundStyle', () => {
         const overlayRender = <Overlay isOpen backgroundStyle="dark" />;
         const wrapper = shallow(overlayRender);
-        expect(wrapper.childAt(0).prop('className')).toContain('dark');
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('dark');
         expect(wrapper).toMatchSnapshot();
       });
 
       it('should render with the clear backgroundStyle', () => {
         const overlayRender = <Overlay isOpen backgroundStyle="clear" />;
         const wrapper = shallow(overlayRender);
-        expect(wrapper.childAt(0).prop('className')).toContain('clear');
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('clear');
         expect(wrapper).toMatchSnapshot();
+      });
+    });
+
+    describe('-zIndex-', () => {
+      it('should render with zIndex 6000', () => {
+        const overlayRender = <Overlay isOpen zIndex="6000" />;
+        const wrapper = shallow(overlayRender);
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('layer-6000');
+      });
+
+      it('should render with zIndex 7000', () => {
+        const overlayRender = <Overlay isOpen zIndex="7000" />;
+        const wrapper = shallow(overlayRender);
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('layer-7000');
+      });
+
+      it('should render with zIndex 8000', () => {
+        const overlayRender = <Overlay isOpen zIndex="8000" />;
+        const wrapper = shallow(overlayRender);
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('layer-8000');
+      });
+
+      it('should render with zIndex 9000', () => {
+        const overlayRender = <Overlay isOpen zIndex="9000" />;
+        const wrapper = shallow(overlayRender);
+        expect(wrapper.childAt(1).childAt(0).prop('className')).toContain('layer-9000');
       });
     });
   });

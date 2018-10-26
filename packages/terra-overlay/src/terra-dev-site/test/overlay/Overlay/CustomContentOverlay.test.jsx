@@ -38,7 +38,7 @@ class OverlayExample extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="custom-content-example">
         <OverlayContainer style={{ height: '100px', width: '100%' }}>
           <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} id={this.state.id}>
             <h3>Overlay will timeout in 5 seconds.</h3>
