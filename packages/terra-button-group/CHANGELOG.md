@@ -9,6 +9,11 @@ Unreleased
 * Added dev site test page for button group block
 * Added jest and webdriver tests for button block group
 
+2.28.0 - (October 24, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.27.0 - (October 16, 2018)
 ------------------
 ### Changed

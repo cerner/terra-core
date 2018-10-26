@@ -5,13 +5,15 @@
     margin-bottom: 0.9375rem;
     overflow: hidden;
   }
-  
+
   .header {
+    background-color: var(--terra-doc-template-v1-header-background-color);
     border-bottom: 1px solid #e8e8e8;
     padding: 0.625rem;
   }
 
   .content {
+    background-color: var(--terra-doc-template-v1-content-background-color);
     padding: 0.625rem;
   }
 
@@ -20,9 +22,13 @@
   }
 
   .footer {
-    display: flex;
-    flex-direction: column;
+    background-color: var(--terra-doc-template-v1-footer-background-color);
     overflow: hidden;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .code {
@@ -33,12 +39,12 @@
     height: auto;
   }
 
-  .toggle {
+  .bg-toggle,
+  .code-toggle {
     align-items: center;
     border: 0;
     cursor: pointer;
     display: flex;
-    margin-left: auto;
     outline: none;
     padding: 0.625rem;
   }

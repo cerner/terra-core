@@ -3,55 +3,72 @@
 exports[`DocTemplate should render a default component with nothing 1`] = `
 <div
   className="doc-template"
-/>
+>
+  <div
+    className="doc-card"
+  />
+  <div
+    className="doc-card"
+  />
+</div>
 `;
 
 exports[`DocTemplate should show custom props tables 1`] = `
 <div
   class="doc-template"
 >
-  <table>
-    <thead>
-      <tr>
-        <th>
-          Prop Name
-        </th>
-        <th>
-          Type
-        </th>
-        <th>
-          Is Required
-        </th>
-        <th>
-          Default Value
-        </th>
-        <th>
-          Description
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          text
-        </td>
-        <td>
-          string
-        </td>
-        <td>
-          optional
-        </td>
-        <td>
-          null
-        </td>
-        <td>
-          <p>
-            A text string to be rendered in the component.
-          </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div
+    class="doc-card"
+  />
+  <div
+    class="doc-card"
+  />
+  <div
+    class="doc-card"
+  >
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Prop Name
+          </th>
+          <th>
+            Type
+          </th>
+          <th>
+            Is Required
+          </th>
+          <th>
+            Default Value
+          </th>
+          <th>
+            Description
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            text
+          </td>
+          <td>
+            string
+          </td>
+          <td>
+            optional
+          </td>
+          <td>
+            null
+          </td>
+          <td>
+            <p>
+              A text string to be rendered in the component.
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 
@@ -59,6 +76,9 @@ exports[`DocTemplate should show multiple examples 1`] = `
 <div
   className="doc-template"
 >
+  <div
+    className="doc-card"
+  />
   <h1
     className="examples-header"
   >
@@ -78,6 +98,9 @@ exports[`DocTemplate should show multiple examples 1`] = `
     key="1"
     title="Test Example 2"
   />
+  <div
+    className="doc-card"
+  />
 </div>
 `;
 
@@ -85,18 +108,25 @@ exports[`DocTemplate should show multiple props tables 1`] = `
 <div
   className="doc-template"
 >
-  <PropsTable
-    componentName="Test Component"
-    key="0"
-    propsResolution="default"
-    src="test-file-stub"
+  <div
+    className="doc-card"
   />
-  <PropsTable
-    componentName="Test Component (Again)"
-    key="1"
-    propsResolution="default"
-    src="test-file-stub"
-  />
+  <div
+    className="doc-card"
+  >
+    <PropsTable
+      componentName="Test Component"
+      key="0"
+      propsResolution="default"
+      src="test-file-stub"
+    />
+    <PropsTable
+      componentName="Test Component (Again)"
+      key="1"
+      propsResolution="default"
+      src="test-file-stub"
+    />
+  </div>
 </div>
 `;
 
@@ -104,6 +134,9 @@ exports[`DocTemplate should show one example 1`] = `
 <div
   className="doc-template"
 >
+  <div
+    className="doc-card"
+  />
   <h1
     className="examples-header"
   >
@@ -116,6 +149,9 @@ exports[`DocTemplate should show one example 1`] = `
     key="0"
     title="Test Example 1"
   />
+  <div
+    className="doc-card"
+  />
 </div>
 `;
 
@@ -123,12 +159,19 @@ exports[`DocTemplate should show one props table 1`] = `
 <div
   className="doc-template"
 >
-  <PropsTable
-    componentName="Test Component"
-    key="0"
-    propsResolution="default"
-    src="test-file-stub"
+  <div
+    className="doc-card"
   />
+  <div
+    className="doc-card"
+  >
+    <PropsTable
+      componentName="Test Component"
+      key="0"
+      propsResolution="default"
+      src="test-file-stub"
+    />
+  </div>
 </div>
 `;
 
@@ -136,12 +179,19 @@ exports[`DocTemplate should show props table with findAllComponentDefinitions pr
 <div
   className="doc-template"
 >
-  <PropsTable
-    componentName="Test Component"
-    key="0"
-    propsResolution="findAllComponentDefinitions"
-    src="test-file-stub"
+  <div
+    className="doc-card"
   />
+  <div
+    className="doc-card"
+  >
+    <PropsTable
+      componentName="Test Component"
+      key="0"
+      propsResolution="findAllComponentDefinitions"
+      src="test-file-stub"
+    />
+  </div>
 </div>
 `;
 
@@ -149,8 +199,15 @@ exports[`DocTemplate should show the readme 1`] = `
 <div
   className="doc-template"
 >
-  <Markdown
-    src="test-file-stub"
+  <div
+    className="doc-card"
+  >
+    <Markdown
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="doc-card"
   />
 </div>
 `;
@@ -159,14 +216,21 @@ exports[`DocTemplate should show the version 1`] = `
 <div
   className="doc-template"
 >
-  <a
-    href="https://www.npmjs.org/package/terra-doc-template"
+  <div
+    className="doc-card"
   >
-    <img
-      alt="NPM version"
-      src="https://badgen.net/npm/v/terra-doc-template"
-    />
-  </a>
+    <a
+      href="https://www.npmjs.org/package/terra-doc-template"
+    >
+      <img
+        alt="NPM version"
+        src="https://badgen.net/npm/v/terra-doc-template"
+      />
+    </a>
+  </div>
+  <div
+    className="doc-card"
+  />
 </div>
 `;
 
@@ -174,16 +238,23 @@ exports[`DocTemplate should show the version and readme 1`] = `
 <div
   className="doc-template"
 >
-  <a
-    href="https://www.npmjs.org/package/terra-doc-template"
+  <div
+    className="doc-card"
   >
-    <img
-      alt="NPM version"
-      src="https://badgen.net/npm/v/terra-doc-template"
+    <a
+      href="https://www.npmjs.org/package/terra-doc-template"
+    >
+      <img
+        alt="NPM version"
+        src="https://badgen.net/npm/v/terra-doc-template"
+      />
+    </a>
+    <Markdown
+      src="test-file-stub"
     />
-  </a>
-  <Markdown
-    src="test-file-stub"
+  </div>
+  <div
+    className="doc-card"
   />
 </div>
 `;
@@ -192,22 +263,26 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
 <div
   className="doc-template"
 >
-  <a
-    href="https://www.npmjs.org/package/terra-doc-template"
+  <div
+    className="doc-card"
   >
-    <img
-      alt="NPM version"
-      src="https://badgen.net/npm/v/terra-doc-template"
+    <a
+      href="https://www.npmjs.org/package/terra-doc-template"
+    >
+      <img
+        alt="NPM version"
+        src="https://badgen.net/npm/v/terra-doc-template"
+      />
+    </a>
+    <Markdown
+      src="test-file-stub"
     />
-  </a>
-  <Markdown
-    src="test-file-stub"
-  />
-  <a
-    href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
-  >
-    View component source code
-  </a>
+    <a
+      href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
+    >
+      View component source code
+    </a>
+  </div>
   <h1
     className="examples-header"
   >
@@ -227,17 +302,21 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
     key="1"
     title="Test Example 2"
   />
-  <PropsTable
-    componentName="Test Component"
-    key="2"
-    propsResolution="default"
-    src="test-file-stub"
-  />
-  <PropsTable
-    componentName="Test Component (Again)"
-    key="3"
-    propsResolution="default"
-    src="test-file-stub"
-  />
+  <div
+    className="doc-card"
+  >
+    <PropsTable
+      componentName="Test Component"
+      key="2"
+      propsResolution="default"
+      src="test-file-stub"
+    />
+    <PropsTable
+      componentName="Test Component (Again)"
+      key="3"
+      propsResolution="default"
+      src="test-file-stub"
+    />
+  </div>
 </div>
 `;
