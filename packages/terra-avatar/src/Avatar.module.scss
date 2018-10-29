@@ -3,18 +3,65 @@
 :local {
   .avatar {
     align-items: center;
-    background-color: var(--terra-avatar-background-color, rgb(222, 223, 224));
     border: var(--terra-avatar-border);
     border-radius: 50%;
     box-shadow: var(--terra-avatar-box-shadow);
     color: var(--terra-avatar-color, rgb(155, 159, 161));
     display: inline-flex;
-    height: var(--terra-avatar-size, 3.429rem);
+    height: var(--terra-avatar-size, 3.429em);
     justify-content: center;
     line-height: 0;
     overflow: hidden;
     vertical-align: middle; // Fixes gap below image variant
-    width: var(--terra-avatar-size, 3.429rem);
+    width: var(--terra-avatar-size, 3.429em);
+  }
+
+  .avatar.neutral {
+    background-color: var(--terra-avatar-neutral-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.one {
+    background-color: var(--terra-avatar-one-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.two {
+    background-color: var(--terra-avatar-two-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.three {
+    background-color: var(--terra-avatar-three-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.four {
+    background-color: var(--terra-avatar-four-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.five {
+    background-color: var(--terra-avatar-five-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.six {
+    background-color: var(--terra-avatar-six-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.seven {
+    background-color: var(--terra-avatar-seven-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.eight {
+    background-color: var(--terra-avatar-eight-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.nine {
+    background-color: var(--terra-avatar-nine-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.ten {
+    background-color: var(--terra-avatar-ten-background-color, rgb(222, 223, 224));
+  }
+
+  .avatar.is-deceased {
+    opacity: var(--terra-avatar-is-decased-opacity, rgb(222, 223, 224));
   }
 
   .avatar-icon {
@@ -44,8 +91,4 @@
   .avatar-text {
     font-size: var(--terra-avatar-font-size, 1.571rem);
   }
-
-  // .avatar-text-small {
-  //   font-size: var(--terra-avatar-font-size-small, 1.143rem);
-  // }
 }

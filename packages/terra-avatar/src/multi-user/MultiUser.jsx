@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import TerraImage from 'terra-image';
-import styles from './Avatar.module.scss';
+import styles from '../Avatar.module.scss';
 
 const cx = classNames.bind(styles);
 

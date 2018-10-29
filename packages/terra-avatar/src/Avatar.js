@@ -2,11 +2,11 @@ import Avatar from './avatar/Avatar';
 import Location from './location/Location';
 import MultiUser from './multi-user/MultiUser';
 
-const Avatar = {
+const ExportAvatar = {
   Avatar,
   Location,
   MultiUser,
-}
+};
 
-export default Avatar;
+export default ExportAvatar;
 export { Avatar, Location, MultiUser };
