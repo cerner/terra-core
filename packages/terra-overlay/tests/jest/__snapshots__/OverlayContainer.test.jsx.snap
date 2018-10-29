@@ -17,6 +17,7 @@ exports[`OverlayContainer should render when children are provided 1`] = `
     isOpen={false}
     isRelativeToContainer={false}
     isScrollable={false}
+    zIndex="100"
   />
   Some Text Content
 </div>
