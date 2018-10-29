@@ -4,7 +4,11 @@
 [![NPM version](https://badgen.net/npm/v/terra-text)](https://www.npmjs.org/package/terra-text)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
-Component for displaying customizable text in UI.
+The font size, font weight, font family, and font color in terra components are set to defaults in terra-base which is then inherited into all components. Components can override these base styles as needed in their specific component CSS. In some cases, you may need text that differs from the base font styles, though, the text doesn't belong to a specific component.
+
+In these cases, the text component may be helpful. Using terra-text, you can create text that differs from the base text styles by changing the font size, font weight, and color.
+
+However, there are some drawbacks to be aware of with this component. The styles set with this component are not themable and will be static. If this is a concern, we recommend building a custom component that handles your font styles that need to differ from the base font styles so you can control the themability of them.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-text/docs)
