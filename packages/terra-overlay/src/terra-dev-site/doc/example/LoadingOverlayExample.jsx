@@ -33,7 +33,7 @@ class OverlayExample extends React.Component {
   render() {
     return (
       <OverlayContainer style={{ height: '100px', width: '100%' }}>
-        <LoadingOverlay isOpen={this.state.show} isAnimated isRelativeToContainer={this.state.isRelativeToContainer} />
+        <LoadingOverlay isOpen={this.state.show} isAnimated isRelativeToContainer={this.state.isRelativeToContainer} zIndex="6000" />
         <Button text="Trigger Container Overlay" onClick={this.handleTriggerOverlay} />
         <Button text="Trigger FullScreen Overlay" onClick={this.handleTriggerFullScreenOverlay} />
       </OverlayContainer>

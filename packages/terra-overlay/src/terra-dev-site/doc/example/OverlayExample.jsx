@@ -30,7 +30,7 @@ class OverlayExample extends React.Component {
   render() {
     return (
       <OverlayContainer style={{ height: '100px', width: '100%' }}>
-        <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} onRequestClose={this.handleOnRequestESC}>
+        <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} onRequestClose={this.handleOnRequestESC} zIndex="6000">
           <p>Close by clicking the overlay or pressing the ESC key.</p>
         </Overlay>
         <Button text="Trigger Container Overlay" onClick={this.handleTriggerOverlay} />
