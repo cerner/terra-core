@@ -33,7 +33,8 @@
     "prop-types": "^15.5.8",
     "terra-doc-template": "^1.19.0",
     "terra-image": "^2.26.0",
-    "terra-responsive-element": "^3.14.0"
+    "terra-responsive-element": "^3.14.0",
+    "terra-visually-hidden-text": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
