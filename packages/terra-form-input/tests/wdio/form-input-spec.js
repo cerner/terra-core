@@ -174,7 +174,7 @@ describe('Form-Input', () => {
 
     describe('Disabled Hovered', () => {
       before(() => {
-        browser.url('/#raw/tests/terra-form-input/form-input/disabled-form-input');
+        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
         browser.moveToObject('input');
       });
 
@@ -204,6 +204,15 @@ describe('Form-Input', () => {
     });
 
     describe('InputField', () => {
+      describe('Resized InputField', () => {
+        before(() => {
+          browser.url('/#/raw/tests/terra-form-input/form-input/input-field-width');
+        });
+
+        Terra.should.beAccessible({ viewports });
+        Terra.should.matchScreenshot({ viewports });
+      });
+
       describe('Valid InputField', () => {
         before(() => {
           browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
