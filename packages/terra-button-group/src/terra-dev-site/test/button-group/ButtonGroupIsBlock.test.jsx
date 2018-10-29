@@ -16,7 +16,7 @@ class ButtonGroupIsBlock extends React.Component {
   render() {
     return (
       <ButtonGroup
-        id="controlled-button-group"
+        id="button-block-group"
         isBlock
         onChange={this.handleSelection}
         selectedKeys={this.state.selectedKey}
