@@ -1,12 +1,12 @@
 import Avatar from './avatar/Avatar';
-import Location from './location/Location';
+import Facility from './location/Location';
 import MultiUser from './multi-user/MultiUser';
 
 const ExportAvatar = {
   Avatar,
-  Location,
+  Facility,
   MultiUser,
 };
 
 export default ExportAvatar;
-export { Avatar, Location, MultiUser };
+export { Avatar, Facility, MultiUser };
