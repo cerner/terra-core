@@ -135,8 +135,8 @@ class MenuContent extends React.Component {
 
   validateFocus(node) {
     if (this.needsFocus && node) {
-      node.focus();
-      this.needsFocus = document.activeElement !== node;
+      node.querySelector('[tabIndex="0"]').focus();
+      this.needsFocus = document.activeElement !== node.querySelector('[tabIndex="0"]');
     }
   }
 
