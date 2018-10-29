@@ -4,15 +4,15 @@
 // ========================================================
 :local {
   .subsection-header {
-    background-color: rgb(235, 22, 57);
-    border-bottom: 1px solid #c8cacb;
+    background-color: #c8cacb;
+    border-bottom: 1px solid #b5b6b7;
     padding-bottom: 0.5rem;
     padding-left: 1.6571428571rem;
     padding-top: 0.5rem;
   }
 
   .title {
-    color: #fff;
+    color: #1c1f21;
     font-size: 1rem;
     font-size: var(--terra-section-header-font-size, 1rem);
     font-weight: var(--terra-section-header-font-weight, bold);
@@ -41,7 +41,11 @@
   
     &.subsection-header:hover,
     &.subsection-header:active {
-      background-color: rgb(115, 22, 57);
+      background-color: #b5b6b7;
+    }
+
+    &[data-focusable='false']:focus {
+      box-shadow: none !important;
     }
   }
 

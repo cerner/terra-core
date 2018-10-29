@@ -60,8 +60,10 @@ const SectionHeader = ({
   isCollapsible,
   level,
   metaData,
+  onBlur,
   onClick,
   onKeyDown,
+  onMouseDown,
   onSelect,
   refCallback,
   title,
@@ -89,12 +91,14 @@ const SectionHeader = ({
       </div>
     );
 
-    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, true, onSelect, metaData);
-    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, true, onSelect, metaData);
+    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     ariaSpread.tabIndex = '0';
     ariaSpread.role = 'heading';
     ariaSpread['aria-expanded'] = !isCollapsed;
     ariaSpread['aria-level'] = 1;
+    ariaSpread.onBlur = SelectableUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-focusable', 'true'));
+    ariaSpread.onMouseDown = SelectableUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-focusable', 'false'));
   }
 
   return (

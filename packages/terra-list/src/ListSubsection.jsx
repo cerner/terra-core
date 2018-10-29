@@ -19,10 +19,6 @@ const propTypes = {
    */
   isCollapsible: PropTypes.bool,
   /**
-   * Whether or not the header list item should have a border color applied.
-   */
-  isDivided: PropTypes.bool,
-  /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=2`.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
@@ -57,7 +53,6 @@ const defaultProps = {
   children: [],
   isCollapsed: false,
   isCollapsible: false,
-  isDivided: false,
   level: 2,
   title: '',
 };

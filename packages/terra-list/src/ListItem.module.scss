@@ -60,6 +60,10 @@
     &.selected:focus {
       background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
+
+    &[data-focusable='false']:focus {
+      box-shadow: none !important;
+    }
   }
 
   .item-has-chevron {

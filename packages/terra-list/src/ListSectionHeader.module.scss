@@ -45,6 +45,10 @@
     &.section-header:active {
       background-color: #d7d8d9;
     }
+
+    &[data-focusable='false']:focus {
+      box-shadow: none !important;
+    }
   }
 
   .item-fill {

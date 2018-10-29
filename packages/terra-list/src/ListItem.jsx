@@ -69,8 +69,10 @@ const ListItem = ({
   isSelected,
   isSelectable,
   metaData,
+  onBlur,
   onClick,
   onKeyDown,
+  onMouseDown,
   onSelect,
   refCallback,
   ...customProps
@@ -86,11 +88,13 @@ const ListItem = ({
 
   const ariaSpread = {};
   if (isSelectable) {
-    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, isSelectable, onSelect, metaData);
-    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, isSelectable, onSelect, metaData);
+    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     ariaSpread.tabIndex = '0';
     ariaSpread.role = 'option';
     ariaSpread['aria-selected'] = isSelected;
+    ariaSpread.onBlur = SelectableUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-focusable', 'true'));
+    ariaSpread.onMouseDown = SelectableUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-focusable', 'false'));
   }
 
   let childContent = children;

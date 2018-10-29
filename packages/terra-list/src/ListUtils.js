@@ -53,36 +53,68 @@ const shouldHandleSingleSelect = (currentKey, newKey) => newKey !== currentKey;
 /**
  * Returns a wrapped onClick callback function.
  */
-const wrappedOnClickForItem = (onClick, isSelectable, onChange, metaData) => (
-  (event) => {
-    // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
-    if (isSelectable !== false && onChange) {
-      onChange(event, metaData);
-    }
+const wrappedOnClickForItem = (onClick, onSelect, metaData) => {
+  if (!onSelect) {
+    return onClick;
+  }
+  return (event) => {
+    onSelect(event, metaData);
 
     if (onClick) {
       onClick(event);
     }
-  }
-);
+  };
+};
 
 /**
- * Returns a wrapped onKeyDown callback function with enter and space keys triggering onChange.
+ * Returns a wrapped onKeyDown callback function with enter and space keys triggering onSelect.
  */
-const wrappedOnKeyDownForItem = (onKeyDown, isSelectable, onChange, metaData) => (
-  (event) => {
+const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => {
+  if (!onSelect) {
+    return onKeyDown;
+  }
+  return (event) => {
     if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
-      // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
-      if (isSelectable !== false && onChange) {
-        onChange(event, metaData);
-      }
+      onSelect(event, metaData);
     }
 
     if (onKeyDown) {
       onKeyDown(event);
     }
+  };
+};
+
+/**
+ * Returns a wrapped onBlur callback function.
+ */
+const wrappedOnBlur = (onBlur, newOnBlur) => {
+  if (!onBlur) {
+    return newOnBlur;
   }
-);
+  return (event) => {
+    newOnBlur(event);
+
+    if (onBlur) {
+      onBlur(event);
+    }
+  };
+};
+
+/**
+ * Returns a wrapped onBlur callback function.
+ */
+const wrappedOnMouseDown = (onBlur, newOnBlur) => {
+  if (!onBlur) {
+    return newOnBlur;
+  }
+  return (event) => {
+    newOnBlur(event);
+
+    if (onBlur) {
+      onBlur(event);
+    }
+  };
+};
 
 const SelectableUtils = {
   updatedMultiSelectedKeys,
@@ -92,6 +124,8 @@ const SelectableUtils = {
   shouldHandleSingleSelect,
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
+  wrappedOnBlur,
+  wrappedOnMouseDown,
   KEYCODES,
 };
 
