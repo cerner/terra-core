@@ -1,69 +1,288 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadingOverlay should render a null component when isOpen is not provided 1`] = `null`;
+exports[`LoadingOverlay should not render markup when isOpen is not provided 1`] = `
+<LoadingOverlay
+  backgroundStyle="light"
+  isAnimated={false}
+  isOpen={false}
+  isRelativeToContainer={false}
+>
+  <Overlay
+    backgroundStyle="light"
+    className="loading-overlay"
+    isOpen={false}
+    isRelativeToContainer={false}
+    isScrollable={false}
+    zIndex="100"
+  />
+</LoadingOverlay>
+`;
 
 exports[`LoadingOverlay when isOpen is provided should render with message prop 1`] = `
-<div>
-  <div
-    class="overlay fullscreen light loading-overlay"
-    tabindex="0"
+<LoadingOverlay
+  backgroundStyle="light"
+  isAnimated={false}
+  isOpen={true}
+  isRelativeToContainer={false}
+  message="Loading!"
+>
+  <Overlay
+    backgroundStyle="light"
+    className="loading-overlay"
+    isOpen={true}
+    isRelativeToContainer={false}
+    isScrollable={false}
+    zIndex="100"
   >
-    <div
-      class="content"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon"
-        data-name="Layer 1"
-        focusable="false"
-        height="36"
-        viewBox="0 0 48 48"
-        width="36"
-        xmlns="http://www.w3.org/2000/svg"
+    <Portal>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="background-scroll-content"
+            >
+              <div
+                class="inner"
+              />
+            </div>
+            <div>
+              <div
+                class="overlay fullscreen light loading-overlay layer-100"
+                tabindex="0"
+              >
+                <div
+                  class="content"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="icon icon"
+                    data-name="Layer 1"
+                    focusable="false"
+                    height="36"
+                    viewBox="0 0 48 48"
+                    width="36"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24 0a3.8 3.8 0 1 1-3.8 3.8A3.8 3.8 0 0 1 24 0zm0 40.4a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm20.2-20.2a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm-40.4 0A3.8 3.8 0 1 1 0 24a3.8 3.8 0 0 1 3.8-3.8zM38.3 5.9a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zM9.7 34.5a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm0-28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm28.6 28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8z"
+                    />
+                  </svg>
+                  <div
+                    class="message"
+                  >
+                    Loading!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
       >
-        <path
-          d="M24 0a3.8 3.8 0 1 1-3.8 3.8A3.8 3.8 0 0 1 24 0zm0 40.4a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm20.2-20.2a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm-40.4 0A3.8 3.8 0 1 1 0 24a3.8 3.8 0 0 1 3.8-3.8zM38.3 5.9a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zM9.7 34.5a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm0-28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm28.6 28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8z"
-        />
-      </svg>
-      <div
-        class="message"
-      >
-        Loading!
-      </div>
-    </div>
-  </div>
-</div>
+        <div
+          className="background-scroll-content"
+        >
+          <div
+            className="inner"
+          />
+        </div>
+        <FocusTrap
+          _createFocusTrap={[Function]}
+          active={true}
+          focusTrapOptions={Object {}}
+          paused={false}
+          tag="div"
+        >
+          <div>
+            <div
+              className="overlay fullscreen light loading-overlay layer-100"
+              onClick={[Function]}
+              tabIndex="0"
+            >
+              <div
+                className="content"
+              >
+                <IconSpinner
+                  className="icon"
+                  data-name="Layer 1"
+                  height="36"
+                  isSpin={false}
+                  viewBox="0 0 48 48"
+                  width="36"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <IconBase
+                    ariaLabel={null}
+                    className="icon"
+                    data-name="Layer 1"
+                    focusable="false"
+                    height="36"
+                    isBidi={false}
+                    isSpin={false}
+                    viewBox="0 0 48 48"
+                    width="36"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="icon icon"
+                      data-name="Layer 1"
+                      focusable="false"
+                      height="36"
+                      viewBox="0 0 48 48"
+                      width="36"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24 0a3.8 3.8 0 1 1-3.8 3.8A3.8 3.8 0 0 1 24 0zm0 40.4a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm20.2-20.2a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm-40.4 0A3.8 3.8 0 1 1 0 24a3.8 3.8 0 0 1 3.8-3.8zM38.3 5.9a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zM9.7 34.5a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm0-28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm28.6 28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8z"
+                      />
+                    </svg>
+                  </IconBase>
+                </IconSpinner>
+                <div
+                  className="message"
+                >
+                  Loading!
+                </div>
+              </div>
+            </div>
+          </div>
+        </FocusTrap>
+      </Portal>
+    </Portal>
+  </Overlay>
+</LoadingOverlay>
 `;
 
 exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay should render a default component 1`] = `
-<div>
-  <div
-    class="overlay fullscreen light loading-overlay"
-    tabindex="0"
+<LoadingOverlay
+  backgroundStyle="light"
+  isAnimated={false}
+  isOpen={true}
+  isRelativeToContainer={false}
+>
+  <Overlay
+    backgroundStyle="light"
+    className="loading-overlay"
+    isOpen={true}
+    isRelativeToContainer={false}
+    isScrollable={false}
+    zIndex="100"
   >
-    <div
-      class="content"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon"
-        data-name="Layer 1"
-        focusable="false"
-        height="36"
-        viewBox="0 0 48 48"
-        width="36"
-        xmlns="http://www.w3.org/2000/svg"
+    <Portal>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="background-scroll-content"
+            >
+              <div
+                class="inner"
+              />
+            </div>
+            <div>
+              <div
+                class="overlay fullscreen light loading-overlay layer-100"
+                tabindex="0"
+              >
+                <div
+                  class="content"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="icon icon"
+                    data-name="Layer 1"
+                    focusable="false"
+                    height="36"
+                    viewBox="0 0 48 48"
+                    width="36"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24 0a3.8 3.8 0 1 1-3.8 3.8A3.8 3.8 0 0 1 24 0zm0 40.4a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm20.2-20.2a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm-40.4 0A3.8 3.8 0 1 1 0 24a3.8 3.8 0 0 1 3.8-3.8zM38.3 5.9a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zM9.7 34.5a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm0-28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm28.6 28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8z"
+                    />
+                  </svg>
+                  <div
+                    class="message"
+                  >
+                    Loading...
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
       >
-        <path
-          d="M24 0a3.8 3.8 0 1 1-3.8 3.8A3.8 3.8 0 0 1 24 0zm0 40.4a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm20.2-20.2a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm-40.4 0A3.8 3.8 0 1 1 0 24a3.8 3.8 0 0 1 3.8-3.8zM38.3 5.9a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zM9.7 34.5a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm0-28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm28.6 28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8z"
-        />
-      </svg>
-      <div
-        class="message"
-      >
-        Loading...
-      </div>
-    </div>
-  </div>
-</div>
+        <div
+          className="background-scroll-content"
+        >
+          <div
+            className="inner"
+          />
+        </div>
+        <FocusTrap
+          _createFocusTrap={[Function]}
+          active={true}
+          focusTrapOptions={Object {}}
+          paused={false}
+          tag="div"
+        >
+          <div>
+            <div
+              className="overlay fullscreen light loading-overlay layer-100"
+              onClick={[Function]}
+              tabIndex="0"
+            >
+              <div
+                className="content"
+              >
+                <IconSpinner
+                  className="icon"
+                  data-name="Layer 1"
+                  height="36"
+                  isSpin={false}
+                  viewBox="0 0 48 48"
+                  width="36"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <IconBase
+                    ariaLabel={null}
+                    className="icon"
+                    data-name="Layer 1"
+                    focusable="false"
+                    height="36"
+                    isBidi={false}
+                    isSpin={false}
+                    viewBox="0 0 48 48"
+                    width="36"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="icon icon"
+                      data-name="Layer 1"
+                      focusable="false"
+                      height="36"
+                      viewBox="0 0 48 48"
+                      width="36"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24 0a3.8 3.8 0 1 1-3.8 3.8A3.8 3.8 0 0 1 24 0zm0 40.4a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm20.2-20.2a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm-40.4 0A3.8 3.8 0 1 1 0 24a3.8 3.8 0 0 1 3.8-3.8zM38.3 5.9a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zM9.7 34.5a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm0-28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8zm28.6 28.6a3.8 3.8 0 1 1-3.8 3.8 3.8 3.8 0 0 1 3.8-3.8z"
+                      />
+                    </svg>
+                  </IconBase>
+                </IconSpinner>
+                <div
+                  className="message"
+                >
+                  Loading...
+                </div>
+              </div>
+            </div>
+          </div>
+        </FocusTrap>
+      </Portal>
+    </Portal>
+  </Overlay>
+</LoadingOverlay>
 `;
