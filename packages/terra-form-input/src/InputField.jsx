@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Field from 'terra-form-field';
-
 import Input from './Input';
 
 const propTypes = {
@@ -59,6 +58,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
+   * Set max width of input field.
+   */
+  maxWidth: PropTypes.string,
+  /**
    * Function to trigger when user changes the input value. Provide a function to create a controlled input.
    */
   onChange: PropTypes.func,
@@ -94,6 +97,7 @@ const defaultProps = {
   isInvalid: false,
   isLabelHidden: false,
   labelAttrs: {},
+  maxWidth: undefined,
   onChange: undefined,
   refCallback: undefined,
   required: false,
@@ -115,13 +119,16 @@ const InputField = (props) => {
     isLabelHidden,
     label,
     labelAttrs,
+    maxWidth,
+    onChange,
     refCallback,
     required,
     showOptional,
-    onChange,
     value,
     ...customProps
   } = props;
+
+  const styles = 'style' in props.inputAttrs ? props.inputAttrs.style : { maxWidth: props.maxWidth };
 
   return (
     <Field
@@ -141,6 +148,7 @@ const InputField = (props) => {
     >
       <Input
         {...inputAttrs}
+        style={styles}
         id={inputId}
         onChange={onChange}
         value={value}
