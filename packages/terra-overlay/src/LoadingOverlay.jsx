@@ -9,7 +9,7 @@ import styles from './Overlay.module.scss';
 
 const cx = classNames.bind(styles);
 
-const { BackgroundStyles } = Overlay.Opts;
+const { BackgroundStyles, zIndexes } = Overlay.Opts;
 
 const propTypes = {
   /**
@@ -32,6 +32,10 @@ const propTypes = {
   * Indicates if the overlay is relative to the triggering container.
   */
   isRelativeToContainer: PropTypes.bool,
+  /**
+  * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are '100', '6000', '7000', '8000', or '9000'.
+  */
+  zIndex: PropTypes.oneOf(zIndexes),
 };
 
 const defaultProps = {
