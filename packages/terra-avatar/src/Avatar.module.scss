@@ -41,11 +41,11 @@
     width: 100%;
   }
 
-  .avatar-text-large {
-    font-size: var(--terra-avatar-font-size-large, 1.571rem);
+  .avatar-text {
+    font-size: var(--terra-avatar-font-size, 1.571rem);
   }
 
-  .avatar-text-small {
-    font-size: var(--terra-avatar-font-size-small, 1.143rem);
-  }
+  // .avatar-text-small {
+  //   font-size: var(--terra-avatar-font-size-small, 1.143rem);
+  // }
 }
