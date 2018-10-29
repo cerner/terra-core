@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import TerraImage from 'terra-image';
+import { isArray } from 'util';
 import styles from '../Avatar.module.scss';
 
 const cx = classNames.bind(styles);
@@ -21,7 +22,7 @@ const propTypes = {
   /**
    * Value used for the hash function when color is set to `auto`. If not provided, hash function utilizes alt.
    */
-  hashvalue: PropTypes.string,
+  hashValue: PropTypes.string,
   /**
    * Overrides the default height.
    */
@@ -49,22 +50,28 @@ const propTypes = {
 };
 
 const defaultProps = {
+  color: 'auto',
+  hashValue: undefined,
+  height: undefined,
   image: undefined,
   initials: undefined,
+  isAriaHidden: false,
+  isDeceased: false,
+  width: undefined,
 };
 
 class Avatar extends React.Component {
-  static generateImagePlaceholder() {
+  static generateImagePlaceholder(alt, isAriaHidden) {
     const avatarIconClassNames = cx([
       'avatar-icon',
       'user',
     ]);
 
-    return <span className={avatarIconClassNames} />;
+    return <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} isAriaHidden={isAriaHidden} />;
   }
 
-  static generateImage(image, alt) {
-    const icon = Avatar.generateImagePlaceholder();
+  static generateImage(image, alt, isAriaHidden) {
+    const icon = Avatar.generateImagePlaceholder(alt, isAriaHidden);
 
     return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
   }
@@ -74,9 +81,9 @@ class Avatar extends React.Component {
 
     // If image has been provided we need to generate the image to display and store it in the state
     if (props.image) {
-      const { alt, image } = props;
+      const { alt, image, isAriaHidden } = props;
 
-      const imageComponent = Avatar.generateImage(image, alt);
+      const imageComponent = Avatar.generateImage(image, alt, isAriaHidden);
       this.state = { imageComponent };
     }
 
@@ -92,9 +99,9 @@ class Avatar extends React.Component {
   componentWillReceiveProps(newProps) {
     // If we have an image to display (they take precedence) and one of its attributes have changed
     if (newProps.image && (newProps.image !== this.props.image || newProps.alt !== this.props.alt)) {
-      const { alt, image } = newProps;
+      const { alt, image, isAriaHidden } = newProps;
 
-      const imageComponent = Avatar.generateImage(image, alt);
+      const imageComponent = Avatar.generateImage(image, alt, isAriaHidden);
       this.setState({ imageComponent });
     }
   }
@@ -128,7 +135,7 @@ class Avatar extends React.Component {
 
       avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
     } else {
-      avatarContent = Avatar.generateImagePlaceholder();
+      avatarContent = Avatar.generateImagePlaceholder(alt, isAriaHidden);
     }
 
     return (
