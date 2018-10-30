@@ -54,16 +54,7 @@ const MultiUser = ({
   width,
   ...customProps
 }) => {
-  let colorVariant = null;
-
-  if (hashValue) {
-    colorVariant = MultiUser.automateColor(hashValue);
-  } else if (color !== 'auto') {
-    colorVariant = color;
-  } else {
-    colorVariant = MultiUser.automateColor(alt);
-  }
-
+  const colorVariant = Utils.setColor(alt, color, hashValue);
   const attributes = Object.assign({}, customProps);
   const avatarClassNames = cx([
     'avatar',

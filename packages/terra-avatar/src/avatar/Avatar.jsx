@@ -83,7 +83,7 @@ class Avatar extends React.Component {
 
   componentWillReceiveProps(newProps) {
     // If we have an image to display (they take precedence) and one of its attributes have changed
-    if (newProps.image && (newProps.image !== this.props.image || newProps.alt !== this.props.alt)) {
+    if (newProps.image && (newProps.image !== this.props.image || newProps.alt !== this.props.alt || newProps.isAriaHidden !== this.props.isAriaHidden)) {
       const { alt, image, isAriaHidden } = newProps;
 
       const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AvatarVariants.USER);
@@ -105,15 +105,7 @@ class Avatar extends React.Component {
       ...customProps
     } = this.props;
 
-    let colorVariant = null;
-    if (hashValue) {
-      colorVariant = Utils.getColorVariant(hashValue);
-    } else if (color !== 'auto') {
-      colorVariant = color;
-    } else {
-      colorVariant = Utils.getColorVariant(alt);
-    }
-
+    const colorVariant = Utils.setColor(alt, color, hashValue);
     const attributes = Object.assign({}, customProps);
     const avatarClassNames = cx([
       'avatar',
@@ -126,7 +118,6 @@ class Avatar extends React.Component {
       avatarContent = this.state.imageComponent;
     } else if (initials && (initials.length === 1 || initials.length === 2)) {
       const avatarTextClassNames = cx('avatar-text');
-
       avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
     } else {
       avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.USER);

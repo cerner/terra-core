@@ -85,15 +85,7 @@ class Facility extends React.Component {
       ...customProps
     } = this.props;
 
-    let colorVariant = null;
-    if (hashValue) {
-      colorVariant = Utils.getColorVariant(hashValue);
-    } else if (color !== 'auto') {
-      colorVariant = color;
-    } else {
-      colorVariant = Utils.getColorVariant(alt);
-    }
-
+    const colorVariant = Utils.setColor(alt, color, hashValue);
     const attributes = Object.assign({}, customProps);
     const avatarClassNames = cx([
       'avatar',
