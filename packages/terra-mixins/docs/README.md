@@ -12,7 +12,7 @@ The terra-mixins component supplies global mixins for use throughout the Terra e
 
 SCSS
 ```scss
-@import '~terra-mixins';
+@import '~terra-mixins/lib/Mixins';
 ```
 
 JS (webpack)

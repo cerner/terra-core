@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update mixin import to be more explicit
 
 2.23.0 - (October 8, 2018)
 ------------------
