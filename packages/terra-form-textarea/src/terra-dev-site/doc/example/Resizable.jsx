@@ -7,7 +7,7 @@ const ResizableExample = () => (
   <Textarea
     isAutoResizable
     size="small"
-    value="I automatically resize as you type in more information (except in mobile)."
+    defaultValue="I automatically resize as you type in more information (except in mobile)."
   />
 );
 

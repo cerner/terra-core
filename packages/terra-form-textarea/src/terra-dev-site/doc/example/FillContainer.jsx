@@ -6,7 +6,7 @@ import Textarea from 'terra-form-textarea/lib/Textarea';
 const FillContainerExample = () => (
   <Textarea
     size="full"
-    value="I am full container width and height, making me non-resizable."
+    defaultValue="I am full container width and height, making me non-resizable."
   />
 );
 
