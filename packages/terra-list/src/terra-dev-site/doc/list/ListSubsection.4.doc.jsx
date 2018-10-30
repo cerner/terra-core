@@ -1,15 +1,15 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/README.md';
+import ReadMe from '../../../../docs/ListSubsection.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import ListSrc from '!raw-loader!../../../../src/List.jsx';
+import ListSubsectionSrc from '!raw-loader!../../../../src/ListSubsection';
 
-// Example File
-import ListExample from '../example/List';
-import ListExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/List';
+// Example Files
+import ListSubsectionExample from '../example/ListSubsection';
+import ListSubsectionExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListSubsection';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -19,15 +19,14 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Default List',
-        example: <ListExample />,
-        source: ListExampleSrc,
+        example: <ListSubsectionExample />,
+        source: ListSubsectionExamplesSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'List',
-        componentSrc: ListSrc,
+        componentName: 'List-Subsection',
+        componentSrc: ListSubsectionSrc,
       },
     ]}
   />

@@ -32,19 +32,12 @@ const propTypes = {
    */
   isSelectable: PropTypes.bool,
   /**
-   * Function callback for the ref of the li.
+   * The associated metaData to be provided in the onSelect callback.
    */
   metaData: PropTypes.object,
   /**
-   * Function callback for the ref of the li.
-   */
-  onClick: PropTypes.func,
-  /**
-   * Function callback for the ref of the li.
-   */
-  onKeyDown: PropTypes.func,
-  /**
-   * Function callback for the ref of the li.
+   * Function callback for when the appropriate click or key action is performed.
+   * Callback contains the javascript evnt and prop metadata, e.g. onSelect(event, metaData)
    */
   onSelect: PropTypes.func,
   /**

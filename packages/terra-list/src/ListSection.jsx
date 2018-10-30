@@ -23,19 +23,12 @@ const propTypes = {
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
-   * Function callback for the ref of the li.
+   * The associated metaData to be provided in the onSelect callback.
    */
   metaData: PropTypes.object,
   /**
-   * Function callback for the ref of the li.
-   */
-  onClick: PropTypes.func,
-  /**
-   * Function callback for the ref of the li.
-   */
-  onKeyDown: PropTypes.func,
-  /**
-   * Function callback for the ref of the li.
+   * Function callback for when the appropriate click or key action is performed.
+   * Callback contains the javascript evnt and prop metadata, e.g. onSelect(event, metaData)
    */
   onSelect: PropTypes.func,
   /**
@@ -43,7 +36,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Header to be placed within a section list item
+   * Title to be placed set on section header list item
    */
   title: PropTypes.string,
 };

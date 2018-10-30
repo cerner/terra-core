@@ -6,6 +6,8 @@ import styles from './List.module.scss';
 import Item from './ListItem';
 import Section from './ListSection';
 import Subsection from './ListSubsection';
+import SectionHeader from './ListSectionHeader';
+import SubsectionHeader from './ListSubsectionHeader';
 import Utils from './ListUtils';
 
 const cx = classNames.bind(styles);
@@ -50,5 +52,7 @@ export {
   Item,
   Section,
   Subsection,
+  SectionHeader,
+  SubsectionHeader,
   Utils,
 };

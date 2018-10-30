@@ -1,15 +1,15 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/README.md';
+import ReadMe from '../../../../docs/ListItem.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import ListSrc from '!raw-loader!../../../../src/List.jsx';
+import ListItemSrc from '!raw-loader!../../../../src/ListItem';
 
-// Example File
-import ListExample from '../example/List';
-import ListExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/List';
+// Example Files
+import ListItemExample from '../example/ListItem';
+import ListItemExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListItem';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -19,15 +19,14 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Default List',
-        example: <ListExample />,
-        source: ListExampleSrc,
+        example: <ListItemExample />,
+        source: ListItemExamplesSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'List',
-        componentSrc: ListSrc,
+        componentName: 'List-Item',
+        componentSrc: ListItemSrc,
       },
     ]}
   />
