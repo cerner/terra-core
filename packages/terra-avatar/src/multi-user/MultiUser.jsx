@@ -3,61 +3,67 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import TerraImage from 'terra-image';
+import Utils from '../AvatarUtils';
 import styles from '../Avatar.module.scss';
 
 const cx = classNames.bind(styles);
 
-// Changes the placeholder image for while the image prop, if provided, is loading
-const AvatarVariants = {
-  FACILITY: 'facility',
-  USER: 'user',
-};
-
 const propTypes = {
   /**
-   * The text content that specifies the alternative text for the image.
+   * Specifies the alternative text for the image.
    */
-  alt: PropTypes.string,
+  alt: PropTypes.string.isRequired,
   /**
-   * The text content of the aria-label for accessibility.
+   * Sets the background color. Defaults to `auto`.
+   * Accepted values: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
    */
-  ariaLabel: PropTypes.string,
+  color: PropTypes.oneOf(['auto', 'neutral', 'one', 'two', 'three', 'four',
+    'five', 'six', 'seven', 'eight', 'nine', 'ten']),
   /**
-   * The image to display.
+   * Value used for the hash function when color is set to `auto`. If not provided, hash function utilizes alt.
    */
-  image: PropTypes.string,
+  hashValue: PropTypes.string,
   /**
-   * Two or three letters to display.
+   * Overrides the default height.
    */
-  initials: PropTypes.string,
+  height: PropTypes.string,
   /**
-   * The avatar variant. One of `AvatarVariants.FACILITY`, `AvatarVariants.USER`.
+   * Whether to hide avatar from the accessiblity API.
    */
-  variant: PropTypes.oneOf([...Object.values(AvatarVariants)]),
+  isAriaHidden: PropTypes.bool,
+  /**
+   * Overrides the default width.
+   */
+  width: PropTypes.string,
 };
 
 const defaultProps = {
-  alt: undefined,
-  ariaLabel: undefined,
-  image: undefined,
-  initials: undefined,
-  variant: AvatarVariants.USER,
+  color: 'auto',
+  hashValue: undefined,
+  height: undefined,
+  isAriaHidden: false,
+  width: undefined,
 };
 
-class Avatar extends React.Component {
-  static generateImagePlaceholder(variant) {
-    const avatarIconClassNames = cx([
-      'avatar-icon',
-      variant,
-    ]);
+class MultiUser extends React.Component {
+  static generateImagePlaceholder(alt, isAriaHidden) {
+    const avatarIconClassNames = cx(['avatar-icon', 'facility']);
 
-    return <span className={avatarIconClassNames} />;
+    return <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
   }
 
-  static generateImage(image, variant, alt) {
-    const icon = Avatar.generateImagePlaceholder(variant);
+  static generateImage(alt, isAriaHidden) {
+    const icon = MultiUser.generateImagePlaceholder(alt, isAriaHidden);
 
-    return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
+    return <TerraImage className={cx('avatar-image')} placeholder={icon} alt={alt} />;
+  }
+
+  static automateColor(hashValue) {
+    const hash = Utils.calculateHash(hashValue);
+    // console.log(`hash: ${hash}`);
+    const color = Utils.getVariant(hash);
+    // console.log(`color: ${color}`);
+    return color;
   }
 
   constructor(props) {
@@ -65,28 +71,19 @@ class Avatar extends React.Component {
 
     // If image has been provided we need to generate the image to display and store it in the state
     if (props.image) {
-      const { alt, image, variant } = props;
+      const { alt, image, isAriaHidden } = props;
 
-      const imageComponent = Avatar.generateImage(image, variant, alt);
+      const imageComponent = MultiUser.generateImage(image, alt, isAriaHidden);
       this.state = { imageComponent };
-    }
-
-    // Checks to run when not in production
-    if (process.env.NODE_ENV !== 'production') {
-      if (props.image && props.initials) {
-        // eslint-disable-next-line
-        console.warn('Only one of the props: [image, initials] should be supplied.');
-      }
     }
   }
 
   componentWillReceiveProps(newProps) {
     // If we have an image to display (they take precedence) and one of its attributes have changed
-    if (newProps.image && (newProps.image !== this.props.image
-      || newProps.alt !== this.props.alt || newProps.variant !== this.props.variant)) {
-      const { alt, image, variant } = newProps;
+    if (newProps.alt !== this.props.alt) {
+      const { alt, isAriaHidden } = newProps;
 
-      const imageComponent = Avatar.generateImage(image, variant, alt);
+      const imageComponent = MultiUser.generateImage(alt, isAriaHidden);
       this.setState({ imageComponent });
     }
   }
@@ -94,44 +91,50 @@ class Avatar extends React.Component {
   render() {
     const {
       alt,
-      ariaLabel,
-      initials,
-      variant,
-      image,
+      color,
+      hashValue,
+      height,
+      isAriaHidden,
+      isDeceased,
+      width,
       ...customProps
     } = this.props;
 
     const attributes = Object.assign({}, customProps);
 
+    let colorVariant = null;
+
+    if (hashValue) {
+      colorVariant = MultiUser.automateColor(hashValue);
+    } else if (color !== 'auto') {
+      colorVariant = color;
+    } else {
+      colorVariant = MultiUser.automateColor(alt);
+    }
+    console.log(`color variant: ${colorVariant}`);
+
     const avatarClassNames = cx([
       'avatar',
+      `${colorVariant}`,
       attributes.className,
     ]);
 
     let avatarContent;
     if (image) {
       avatarContent = this.state.imageComponent;
-    } else if (initials && (initials.length === 2 || initials.length === 3)) {
-      const avatarTextClassNames = cx([
-        { 'avatar-text-small': initials && initials.length === 3 },
-        { 'avatar-text-large': initials && initials.length === 2 },
-      ]);
-
-      avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
     } else {
-      avatarContent = Avatar.generateImagePlaceholder(variant);
+      avatarContent = MultiUser.generateImagePlaceholder(alt, isAriaHidden);
     }
 
     return (
-      <div {...attributes} aria-label={ariaLabel} className={avatarClassNames}>
+      <div {...attributes} className={avatarClassNames} style={{ width, height }}>
         {avatarContent}
       </div>
     );
   }
 }
 
-Avatar.propTypes = propTypes;
-Avatar.defaultProps = defaultProps;
+MultiUser.propTypes = propTypes;
+MultiUser.defaultProps = defaultProps;
 
-export default Avatar;
-export { AvatarVariants };
+export default MultiUser;

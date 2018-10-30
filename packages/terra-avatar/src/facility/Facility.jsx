@@ -3,90 +3,78 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import TerraImage from 'terra-image';
+import Utils from '../AvatarUtils';
 import styles from '../Avatar.module.scss';
 
 const cx = classNames.bind(styles);
 
-// Changes the placeholder image for while the image prop, if provided, is loading
-const AvatarVariants = {
-  FACILITY: 'facility',
-  USER: 'user',
-};
-
 const propTypes = {
   /**
-   * The text content that specifies the alternative text for the image.
+   * Specifies the alternative text for the image.
    */
-  alt: PropTypes.string,
+  alt: PropTypes.string.isRequired,
   /**
-   * The text content of the aria-label for accessibility.
+   * Sets the background color. Defaults to `auto`.
+   * Accepted values: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
    */
-  ariaLabel: PropTypes.string,
+  color: PropTypes.oneOf(['auto', 'neutral', 'one', 'two', 'three', 'four',
+    'five', 'six', 'seven', 'eight', 'nine', 'ten']),
+  /**
+   * Value used for the hash function when color is set to `auto`. If not provided, hash function utilizes alt.
+   */
+  hashValue: PropTypes.string,
+  /**
+   * Overrides the default height.
+   */
+  height: PropTypes.string,
   /**
    * The image to display.
    */
   image: PropTypes.string,
   /**
-   * Two or three letters to display.
+   * Whether to hide avatar from the accessiblity API.
    */
-  initials: PropTypes.string,
+  isAriaHidden: PropTypes.bool,
   /**
-   * The avatar variant. One of `AvatarVariants.FACILITY`, `AvatarVariants.USER`.
+   * Overrides the default width.
    */
-  variant: PropTypes.oneOf([...Object.values(AvatarVariants)]),
+  width: PropTypes.string,
 };
 
 const defaultProps = {
-  alt: undefined,
-  ariaLabel: undefined,
+  color: 'auto',
+  hashValue: undefined,
+  height: undefined,
   image: undefined,
-  initials: undefined,
-  variant: AvatarVariants.USER,
+  isAriaHidden: false,
+  width: undefined,
 };
 
-class Avatar extends React.Component {
-  static generateImagePlaceholder(variant) {
-    const avatarIconClassNames = cx([
-      'avatar-icon',
-      variant,
-    ]);
-
-    return <span className={avatarIconClassNames} />;
-  }
-
-  static generateImage(image, variant, alt) {
-    const icon = Avatar.generateImagePlaceholder(variant);
-
-    return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
-  }
+class Facility extends React.Component {
+  // static automateColor(hashValue) {
+  //   const hash = Utils.calculateHash(hashValue);
+  //   const color = Utils.getColorVariant(hash);
+  //   return color;
+  // }
 
   constructor(props) {
     super(props);
 
     // If image has been provided we need to generate the image to display and store it in the state
     if (props.image) {
-      const { alt, image, variant } = props;
+      const { alt, image, isAriaHidden } = props;
 
-      const imageComponent = Avatar.generateImage(image, variant, alt);
+      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AvatarVariants.FACILITY);
       this.state = { imageComponent };
-    }
-
-    // Checks to run when not in production
-    if (process.env.NODE_ENV !== 'production') {
-      if (props.image && props.initials) {
-        // eslint-disable-next-line
-        console.warn('Only one of the props: [image, initials] should be supplied.');
-      }
     }
   }
 
   componentWillReceiveProps(newProps) {
     // If we have an image to display (they take precedence) and one of its attributes have changed
-    if (newProps.image && (newProps.image !== this.props.image
-      || newProps.alt !== this.props.alt || newProps.variant !== this.props.variant)) {
-      const { alt, image, variant } = newProps;
+    if (newProps.image && (newProps.image !== this.props.image || newProps.alt !== this.props.alt)) {
+      const { alt, image, isAriaHidden } = newProps;
 
-      const imageComponent = Avatar.generateImage(image, variant, alt);
+      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AvatarVariants.FACILITY);
       this.setState({ imageComponent });
     }
   }
@@ -94,44 +82,48 @@ class Avatar extends React.Component {
   render() {
     const {
       alt,
-      ariaLabel,
-      initials,
-      variant,
+      color,
+      hashValue,
+      height,
       image,
+      isAriaHidden,
+      isDeceased,
+      width,
       ...customProps
     } = this.props;
 
-    const attributes = Object.assign({}, customProps);
+    let colorVariant = null;
+    if (hashValue) {
+      colorVariant = Utils.automateColor(hashValue);
+    } else if (color !== 'auto') {
+      colorVariant = color;
+    } else {
+      colorVariant = Utils.automateColor(alt);
+    }
 
+    const attributes = Object.assign({}, customProps);
     const avatarClassNames = cx([
       'avatar',
+      `${colorVariant}`,
       attributes.className,
     ]);
 
     let avatarContent;
     if (image) {
       avatarContent = this.state.imageComponent;
-    } else if (initials && (initials.length === 2 || initials.length === 3)) {
-      const avatarTextClassNames = cx([
-        { 'avatar-text-small': initials && initials.length === 3 },
-        { 'avatar-text-large': initials && initials.length === 2 },
-      ]);
-
-      avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
     } else {
-      avatarContent = Avatar.generateImagePlaceholder(variant);
+      avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.FACILITY);
     }
 
     return (
-      <div {...attributes} aria-label={ariaLabel} className={avatarClassNames}>
+      <div {...attributes} className={avatarClassNames} style={{ width, height }}>
         {avatarContent}
       </div>
     );
   }
 }
 
-Avatar.propTypes = propTypes;
-Avatar.defaultProps = defaultProps;
+Facility.propTypes = propTypes;
+Facility.defaultProps = defaultProps;
 
-export default Avatar;
-export { AvatarVariants };
+export default Facility;

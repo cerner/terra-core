@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import TerraImage from 'terra-image';
+
 import Utils from '../AvatarUtils';
 import styles from '../Avatar.module.scss';
 
@@ -61,29 +61,6 @@ const defaultProps = {
 };
 
 class Avatar extends React.Component {
-  static generateImagePlaceholder(alt, isAriaHidden) {
-    const avatarIconClassNames = cx([
-      'avatar-icon',
-      'user',
-    ]);
-
-    return <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
-  }
-
-  static generateImage(image, alt, isAriaHidden) {
-    const icon = Avatar.generateImagePlaceholder(alt, isAriaHidden);
-
-    return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
-  }
-
-  static automateColor(hashValue) {
-    const hash = Utils.calculateHash(hashValue);
-    // console.log(`hash: ${hash}`);
-    const color = Utils.getVariant(hash);
-    // console.log(`color: ${color}`);
-    return color;
-  }
-
   constructor(props) {
     super(props);
 
@@ -91,7 +68,7 @@ class Avatar extends React.Component {
     if (props.image) {
       const { alt, image, isAriaHidden } = props;
 
-      const imageComponent = Avatar.generateImage(image, alt, isAriaHidden);
+      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AvatarVariants.USER);
       this.state = { imageComponent };
     }
 
@@ -109,7 +86,7 @@ class Avatar extends React.Component {
     if (newProps.image && (newProps.image !== this.props.image || newProps.alt !== this.props.alt)) {
       const { alt, image, isAriaHidden } = newProps;
 
-      const imageComponent = Avatar.generateImage(image, alt, isAriaHidden);
+      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AvatarVariants.USER);
       this.setState({ imageComponent });
     }
   }
@@ -128,19 +105,16 @@ class Avatar extends React.Component {
       ...customProps
     } = this.props;
 
-    const attributes = Object.assign({}, customProps);
-
     let colorVariant = null;
-
     if (hashValue) {
-      colorVariant = Avatar.automateColor(hashValue);
+      colorVariant = Utils.getColorVariant(hashValue);
     } else if (color !== 'auto') {
       colorVariant = color;
     } else {
-      colorVariant = Avatar.automateColor(alt);
+      colorVariant = Utils.getColorVariant(alt);
     }
-    console.log(`color variant: ${colorVariant}`);
 
+    const attributes = Object.assign({}, customProps);
     const avatarClassNames = cx([
       'avatar',
       `${colorVariant}`,
@@ -155,11 +129,11 @@ class Avatar extends React.Component {
 
       avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
     } else {
-      avatarContent = Avatar.generateImagePlaceholder(alt, isAriaHidden);
+      avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.USER);
     }
 
     return (
-      <div {...attributes} aria-label={alt} className={avatarClassNames} style={{ width, height }}>
+      <div {...attributes} className={avatarClassNames} style={{ width, height }}>
         {avatarContent}
       </div>
     );
