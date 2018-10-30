@@ -16,6 +16,8 @@ import AvatarTwoInitials from '../example/AvatarTwoInitials';
 import AvatarTwoInitialsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarTwoInitials';
 import AvatarImage from '../example/AvatarImage';
 import AvatarImageSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarImage';
+import AvatarSize from '../example/AvatarSize';
+import AvatarSizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarSize';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -43,6 +45,11 @@ const DocPage = () => (
         title: 'Image',
         example: <AvatarImage />,
         source: AvatarImageSrc,
+      },
+      {
+        title: 'Size',
+        example: <AvatarSize />,
+        source: AvatarSizeSrc,
       },
     ]}
     propsTables={[
