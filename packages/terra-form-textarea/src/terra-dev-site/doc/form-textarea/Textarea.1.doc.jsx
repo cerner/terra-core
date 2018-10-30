@@ -22,8 +22,6 @@ import InvalidExample from '../example/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Invalid';
 import DisabledExample from '../example/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Disabled';
-import DisabledWithErrorExample from '../example/DisabledWithError';
-import DisabledWithErrorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledWithError';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -72,11 +70,6 @@ const DocPage = () => (
         title: 'Disabled Textarea',
         example: <DisabledExample />,
         source: DisabledExampleSrc,
-      },
-      {
-        title: 'Disabled Textarea with Error',
-        example: <DisabledWithErrorExample />,
-        source: DisabledWithErrorExampleSrc,
       },
     ]}
   />
