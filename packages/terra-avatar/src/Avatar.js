@@ -1,5 +1,5 @@
 import Avatar from './avatar/Avatar';
-import Facility from './location/Location';
+import Facility from './facility/Facility';
 import MultiUser from './multi-user/MultiUser';
 
 const ExportAvatar = {

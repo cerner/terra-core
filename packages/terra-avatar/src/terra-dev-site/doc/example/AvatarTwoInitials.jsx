@@ -1,9 +1,9 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Avatar from 'terra-avatar/lib/Avatar';
+import { Avatar } from 'terra-avatar/lib/Avatar';
 
 const AvatarTwoInitials = () => (
-  <Avatar ariaLabel="John Doe" initials="JS" />
+  <Avatar alt="John Doe" initials="JD" />
 );
 
 export default AvatarTwoInitials;

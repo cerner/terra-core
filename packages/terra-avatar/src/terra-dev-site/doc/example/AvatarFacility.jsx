@@ -1,9 +1,9 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Avatar from 'terra-avatar/lib/Avatar';
+import { Facility } from 'terra-avatar/lib/Avatar';
 
 const AvatarFacility = () => (
-  <Avatar ariaLabel="South Surgical Center" variant="facility" />
+  <Facility alt="South Surgical Center" />
 );
 
 export default AvatarFacility;
