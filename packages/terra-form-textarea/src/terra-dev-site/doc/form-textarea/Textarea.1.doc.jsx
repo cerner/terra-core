@@ -63,6 +63,7 @@ const DocPage = () => (
       },
       {
         title: 'Invalid Textarea When Empty',
+        description: 'Leaving this as blank makes this input invalid.',
         example: <InvalidExample />,
         source: InvalidExampleSrc,
       },

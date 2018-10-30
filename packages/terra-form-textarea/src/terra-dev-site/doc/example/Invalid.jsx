@@ -7,7 +7,7 @@ class InvalidExample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      area: 'Leaving this as blank makes this input invalid.',
+      area: '',
     };
     this.handleAreaChange = this.handleAreaChange.bind(this);
   }
