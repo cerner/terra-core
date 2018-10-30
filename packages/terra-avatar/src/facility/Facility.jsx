@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import TerraImage from 'terra-image';
 import Utils from '../AvatarUtils';
 import styles from '../Avatar.module.scss';
 
@@ -51,12 +50,6 @@ const defaultProps = {
 };
 
 class Facility extends React.Component {
-  // static automateColor(hashValue) {
-  //   const hash = Utils.calculateHash(hashValue);
-  //   const color = Utils.getColorVariant(hash);
-  //   return color;
-  // }
-
   constructor(props) {
     super(props);
 
@@ -94,11 +87,11 @@ class Facility extends React.Component {
 
     let colorVariant = null;
     if (hashValue) {
-      colorVariant = Utils.automateColor(hashValue);
+      colorVariant = Utils.getColorVariant(hashValue);
     } else if (color !== 'auto') {
       colorVariant = color;
     } else {
-      colorVariant = Utils.automateColor(alt);
+      colorVariant = Utils.getColorVariant(alt);
     }
 
     const attributes = Object.assign({}, customProps);
