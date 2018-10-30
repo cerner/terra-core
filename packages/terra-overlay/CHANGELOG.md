@@ -4,6 +4,23 @@ Changelog
 Unreleased
 ----------
 
+2.32.0 - (October 30, 2018)
+------------------
+### Fixed
+* Fixed issue where body scrolling is not restored on unmount.
+
+### Changed
+* Updated overlay to be portalled
+
+### Added
+* Added hidden div to catch scrolling behind Overlay
+* zIndex prop
+
+2.31.0 - (October 24, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.30.0 - (October 16, 2018)
 ------------------
 ### Changed

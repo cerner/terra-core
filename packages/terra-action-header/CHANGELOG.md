@@ -3,6 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.28.0 - (October 30, 2018)
+------------------
+### Changed
+* Update mixin import to be more explicit
+
+1.27.0 - (October 24, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Fixed text wrapping to break on whole word instead of part of the word.
 
