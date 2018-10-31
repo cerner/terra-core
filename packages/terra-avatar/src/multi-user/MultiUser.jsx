@@ -50,7 +50,6 @@ const MultiUser = ({
   hashValue,
   height,
   isAriaHidden,
-  isDeceased,
   width,
   ...customProps
 }) => {
@@ -66,7 +65,7 @@ const MultiUser = ({
   const avatarContent = <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
   return (
-    <div {...attributes} className={avatarClassNames} style={{ width, height }}>
+    <div {...attributes} alt={alt} className={avatarClassNames} style={{ width, height }}>
       {avatarContent}
     </div>
   );

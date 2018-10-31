@@ -80,7 +80,6 @@ class Facility extends React.Component {
       height,
       image,
       isAriaHidden,
-      isDeceased,
       width,
       ...customProps
     } = this.props;
@@ -101,7 +100,7 @@ class Facility extends React.Component {
     }
 
     return (
-      <div {...attributes} className={avatarClassNames} style={{ width, height }}>
+      <div {...attributes} alt={alt} className={avatarClassNames} style={{ width, height }}>
         {avatarContent}
       </div>
     );

@@ -110,6 +110,7 @@ class Avatar extends React.Component {
     const avatarClassNames = cx([
       'avatar',
       `${colorVariant}`,
+      { 'is-deceased': isDeceased },
       attributes.className,
     ]);
 
@@ -124,7 +125,7 @@ class Avatar extends React.Component {
     }
 
     return (
-      <div {...attributes} className={avatarClassNames} style={{ width, height }}>
+      <div {...attributes} alt={alt} className={avatarClassNames} style={{ width, height }}>
         {avatarContent}
       </div>
     );

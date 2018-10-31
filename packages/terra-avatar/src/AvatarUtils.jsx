@@ -15,24 +15,8 @@ const ColorVariants = ['one', 'two', 'three', 'four', 'five', 'six',
   'seven', 'eight', 'nine', 'ten'];
 
 /**
- * Returns true if the given color exists within `ColorVariants`.
- * @param {*} color
- */
-const validateColor = (color) => {
-  if (!color) {
-    return false;
-  }
-
-  for (let i = 0; i < ColorVariants.length; i += i) {
-    if (color === ColorVariants[i]) {
-      return true;
-    }
-  }
-  return false;
-};
-
-/**
  * Generates a hash, based on a given string s.
+ * https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
  * @param {*} s
  */
 const calculateHash = (s) => {
@@ -67,28 +51,6 @@ const getColorVariant = (hashValue) => {
 };
 
 /**
- * Returns a color variant based on the following precedence:
- *   1. `color`
- *   2. Hash `hashValue` to generate color variant.
- *   3. Hash `alt`  to generate color variant.
- * @param {*} hashValue
- * @param {*} color
- * @param {*} alt
- */
-const setColor = (alt, color, hashValue) => {
-  let colorVariant = null;
-  if (color === 'neutral' || (color !== 'auto' && validateColor(color))) {
-    colorVariant = color;
-  } else if (hashValue) {
-    colorVariant = getColorVariant(hashValue);
-  } else {
-    colorVariant = getColorVariant(alt);
-  }
-
-  return colorVariant;
-};
-
-/**
  * Render placeholder.
  * @param {*} alt
  * @param {*} isAriaHidden
@@ -113,14 +75,55 @@ const generateImage = (image, alt, isAriaHidden, variant) => {
   return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
 };
 
+
+/**
+ * Returns true if the given color exists within `ColorVariants`.
+ * @param {*} color
+ */
+const validateColor = (color) => {
+  if (!color) {
+    return false;
+  }
+
+  for (let i = 0; i < ColorVariants.length; i += i) {
+    if (color === ColorVariants[i]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+/**
+ * Returns a color variant based on the following precedence:
+ *   1. `color`
+ *   2. Hash `hashValue` to generate color variant.
+ *   3. Hash `alt`  to generate color variant.
+ * @param {*} hashValue
+ * @param {*} color
+ * @param {*} alt
+ */
+const setColor = (alt, color, hashValue) => {
+  let colorVariant = null;
+  if (color === 'neutral' || (color !== 'auto' && validateColor(color))) {
+    colorVariant = color;
+  } else if (hashValue) {
+    colorVariant = getColorVariant(hashValue);
+  } else {
+    colorVariant = getColorVariant(alt);
+  }
+
+  return colorVariant;
+};
+
 const Utils = {
   AvatarVariants,
   ColorVariants,
   calculateHash,
   getColorVariant,
-  setColor,
   generateImagePlaceholder,
   generateImage,
+  validateColor,
+  setColor,
 };
 
 export default Utils;
