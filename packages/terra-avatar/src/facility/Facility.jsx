@@ -13,7 +13,7 @@ const propTypes = {
    */
   alt: PropTypes.string.isRequired,
   /**
-   * Sets the background color. Defaults to `auto`.
+   * Sets the background color. Defaults to `auto`. Color variants are theme specific.
    * Accepted values: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
    */
   color: PropTypes.oneOf(['auto', 'neutral', 'one', 'two', 'three', 'four',
