@@ -1,4 +1,4 @@
-// import React from 'react';
-// import Avatar from '../../../Avatar';
+import React from 'react';
+import { Facility } from '../../../Avatar';
 
-// // export default () => <Avatar id="facility-avatar" alt="facility" />;
+export default () => <Facility id="facility-avatar" alt="facility" />;

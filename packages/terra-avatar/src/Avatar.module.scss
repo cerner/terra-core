@@ -7,17 +7,25 @@
     border-radius: 50%;
     color: var(--terra-avatar-color, rgb(155, 159, 161));
     display: inline-flex;
-    height: var(--terra-avatar-size, 3.429em);
+    height: var(--terra-avatar-height, 3.429em);
     justify-content: center;
     line-height: 0;
+    min-height: var(--terra-avatar-min-height); //are min sizes needed?
+    min-width: var(--terra-avatar-min-width);
     overflow: hidden;
+    position: relative;
     vertical-align: middle; // Fixes gap below image variant
-    width: var(--terra-avatar-size, 3.429em);
+    width: var(--terra-avatar-width, 3.429em);
   }
 
   .avatar::after {
-    box-shadow: var(--terra-avatar-box-shadow);
+    border-radius: 50%;
+    box-shadow: var(--terra-avatar-image-after-box-shadow);
     content: '';
+    display: block;
+    height: var(--terra-avatar-after-height, 100%);
+    position: absolute;
+    width: var(--terra-avatar-after-width, 100%);
   }
 
   .avatar.neutral {
@@ -95,6 +103,7 @@
   }
 
   .avatar-image {
+    border-radius: 50%;
     height: 100%;
     width: 100%;
   }

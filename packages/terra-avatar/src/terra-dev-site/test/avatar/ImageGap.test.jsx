@@ -1,14 +1,14 @@
 import React from 'react';
-import { Avatar } from '../../../Avatar';
+import { Avatar, Facility } from '../../../Avatar';
 import exampleAvatarImage from '../../assets/150x150.jpg';
 
 export default () => (
   <div>
     <div style={{ border: '5px solid #f00' }}>
-      <Avatar id="image-avatar" image={exampleAvatarImage} alt="placeholder" variant="user" ariaLabel="user" />
+      <Avatar id="image-avatar" image={exampleAvatarImage} alt="placeholder" />
     </div>
     <div style={{ border: '5px solid #f00' }}>
-      <Avatar id="facility-avatar" variant="facility" ariaLabel="facility" />
+      <Facility id="facility-avatar" alt="facility" />
     </div>
   </div>
 );
