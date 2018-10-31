@@ -23,11 +23,6 @@ exports[`should render a InputField with props 1`] = `
   }
   required={false}
   showOptional={true}
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <Input
     defaultValue="Value"
@@ -63,11 +58,6 @@ exports[`should render a default InputField component 1`] = `
   labelAttrs={Object {}}
   required={false}
   showOptional={false}
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <Input
     disabled={false}
@@ -102,11 +92,6 @@ exports[`should render a valid InputField with props 1`] = `
   }
   required={false}
   showOptional={true}
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <Input
     defaultValue="Value"

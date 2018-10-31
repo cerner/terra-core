@@ -54,6 +54,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
+   * Set max width of input field. Passed in custom inline styles take precedence over this prop.
+   */
+  maxWidth: PropTypes.string,
+  /**
    * Whether or not the field is required.
    */
   required: PropTypes.bool,
@@ -61,6 +65,11 @@ const propTypes = {
    * Whether or not to append the 'optional' label to a non-required field label.
    */
   showOptional: PropTypes.bool,
+  /**
+   * Allows for custom inline styles in addition to (or separate from) the maxWidth style prop.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  style: PropTypes.object,
 };
 
 const defaultProps = {
@@ -74,8 +83,10 @@ const defaultProps = {
   isInline: false,
   isLabelHidden: false,
   labelAttrs: {},
+  maxWidth: undefined,
   required: false,
   showOptional: false,
+  style: undefined,
 };
 
 const contextTypes = {
@@ -100,10 +111,24 @@ const Field = (props, { intl }) => {
     isLabelHidden,
     label,
     labelAttrs,
+    maxWidth,
     required,
     showOptional,
+    style,
     ...customProps
   } = props;
+
+  let customStyles;
+
+  if (props.style) {
+    if (!props.style.maxWidth) {
+      customStyles = { ...props.style, maxWidth };
+    } else if (props.style.maxWidth) {
+      customStyles = { ...props.style };
+    }
+  } else {
+    customStyles = { maxWidth };
+  }
 
   const fieldClasses = cx([
     'field',
@@ -132,7 +157,7 @@ const Field = (props, { intl }) => {
   );
 
   return (
-    <div {...customProps} className={fieldClasses}>
+    <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
       {children}
       {isInvalid && error && <div className={cx('error-text')}>{error}</div>}

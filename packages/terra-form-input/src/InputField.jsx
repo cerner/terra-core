@@ -58,10 +58,6 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
-   * Set max width of input field. Passed in custom inline styles take precedence over this prop.
-   */
-  maxWidth: PropTypes.string,
-  /**
    * Function to trigger when user changes the input value. Provide a function to create a controlled input.
    */
   onChange: PropTypes.func,
@@ -77,11 +73,6 @@ const propTypes = {
    * Whether or not to append the 'optional' label to a non-required field label.
    */
   showOptional: PropTypes.bool,
-  /**
-   * Allows for custom inline styles in addition to (or separate from) the maxWidth style prop.
-   */
-  // eslint-disable-next-line react/forbid-prop-types
-  style: PropTypes.object,
   /**
    * The value of the input field. Use this to create a controlled input.
    */
@@ -102,12 +93,10 @@ const defaultProps = {
   isInvalid: false,
   isLabelHidden: false,
   labelAttrs: {},
-  maxWidth: undefined,
   onChange: undefined,
   refCallback: undefined,
   required: false,
   showOptional: false,
-  style: undefined,
   value: undefined,
 };
 
@@ -125,27 +114,13 @@ const InputField = (props) => {
     isLabelHidden,
     label,
     labelAttrs,
-    maxWidth,
     onChange,
     refCallback,
     required,
     showOptional,
-    style,
     value,
     ...customProps
   } = props;
-
-  let styles;
-
-  if (props.style) {
-    if (!props.style.maxWidth) {
-      styles = { ...props.style, maxWidth };
-    } else if (props.style.maxWidth) {
-      styles = { ...props.style };
-    }
-  } else {
-    styles = { maxWidth };
-  }
 
   return (
     <Field
@@ -161,7 +136,6 @@ const InputField = (props) => {
       isInline={isInline}
       isLabelHidden={isLabelHidden}
       htmlFor={inputId}
-      style={styles}
       {...customProps}
     >
       <Input
