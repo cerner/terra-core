@@ -25,6 +25,10 @@ const propTypes = {
    */
   dateOfBirthLabel: PropTypes.string,
   /**
+   * Text Description of the date of birth label that is read by screen readers
+   */
+  dateOfBirthFullText: PropTypes.string,
+  /**
    * The person's deceased date. Will display the banner as deceased if this value is provided
    */
   deceasedDate: PropTypes.string,
@@ -41,9 +45,13 @@ const propTypes = {
    */
   gestationalAge: PropTypes.string,
   /**
-   * Label to display for the GestationalAge
+   * Label to display for the Gestational Age
    */
   gestationalAgeLabel: PropTypes.string,
+  /**
+  * Text Description of the Gestational Age label that is read by screen readers
+   */
+  gestationalAgeFullText: PropTypes.string,
   /**
    * Additional key value identifiers of a person's demographic information
    */
@@ -66,6 +74,10 @@ const propTypes = {
    */
   postMenstrualAgeLabel: PropTypes.string,
   /**
+  * Text Description of the Post Menstrural Age label that is read by screen readers
+   */
+  postMenstrualAgeFullText: PropTypes.string,
+  /**
    * The persons preferred first name if they have one.
    */
   preferredFirstName: PropTypes.string,
@@ -76,16 +88,19 @@ const defaultProps = {
   age: '--',
   dateOfBirth: '--',
   dateOfBirthLabel: 'DOB',
+  dateOfBirthFullText: 'Date of Birth',
   deceasedDate: null,
   deceasedDateLabel: 'Deceased',
   gender: '--',
   gestationalAge: null,
   gestationalAgeLabel: 'GA',
+  gestationalAgeFullText: 'Gestational Age',
   identifiers: {},
   personName: '--',
   photo: null,
   postMenstrualAge: null,
   postMenstrualAgeLabel: 'PMA',
+  postMenstrualAgeFullText: 'Post Menstrual Age',
   preferredFirstName: null,
 };
 
