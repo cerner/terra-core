@@ -39,15 +39,12 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-<<<<<<< HEAD
     "terra-arrange": "^2.27.0",
     "terra-doc-template": "^1.18.0",
     "terra-icon": "^2.25.0",
-    "terra-visually-hidden-text": "^1.0.0"
-=======
+    "terra-visually-hidden-text": "^1.0.0",
     "terra-arrange": "^2.28.0",
     "terra-doc-template": "^1.19.0",
     "terra-icon": "^2.26.0"
->>>>>>> 368fbb27aa7c1e27669e83cd25faef4b17e037d2
   }
 }
