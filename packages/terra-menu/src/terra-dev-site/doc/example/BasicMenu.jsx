@@ -44,7 +44,7 @@ class BasicMenu extends React.Component {
   }
 
   handleRequestClose() {
-    debugger;
+    // debugger;
     this.setState({ open: false });
   }
 

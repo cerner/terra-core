@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Menu now shifts focus to first interactable item in menu when opened
 
 3.24.0 - (October 24, 2018)
 ------------------
