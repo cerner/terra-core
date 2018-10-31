@@ -1,6 +1,6 @@
 # Terra List
 
-The Terra List is a structural component to arrange content within list/listitems.
+The Terra List is a structural component to vertically arrange content within list/listitems.
 
 ## Getting Started
 
@@ -12,28 +12,17 @@ The Terra List is a structural component to arrange content within list/listitem
 
 ```jsx
 import React from 'react';
-import List from 'terra-list';
-
-<List.Item
-  content={<h1 blurb />}
-  isSelected={true}
-  isSelectable={true}
-  hasChevron={false}
-/>
+import List, { Item } from 'terra-list';
 
 <List isDivided={true}>
-  <List.Item content={<h1 blurb />} />
-  <List.Item content={<h1 blurb />} />
+  <Item key="section-1-item-1">
+    <p>blurb</p>
+  </Item>
+  <Item key="section-1-item-2">
+    <p>blurb</p>
+  </Item>
 </List>
 ```
-
-Terra also provides two variations for the list component.
-* [Selectable List](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/Selectable.md)
-
-* [Single Select List](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/SingleSelect.md)
-
-* [Multi Select List](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/MultiSelect.md)
-
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
