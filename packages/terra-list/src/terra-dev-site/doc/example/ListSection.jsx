@@ -30,7 +30,7 @@ class ListSectionExample extends React.Component {
           <Item key="123">
             <Placeholder title="Item 0" style={{ height: '50px' }} />
           </Item>
-          <Item key="124" >
+          <Item key="124">
             <Placeholder title="Item 1" style={{ height: '50px' }} />
           </Item>
           <Item key="125">
@@ -48,7 +48,7 @@ class ListSectionExample extends React.Component {
           <Item key="223">
             <Placeholder title="Item 0" style={{ height: '50px' }} />
           </Item>
-          <Item key="224" >
+          <Item key="224">
             <Placeholder title="Item 1" style={{ height: '50px' }} />
           </Item>
           <Item key="225">

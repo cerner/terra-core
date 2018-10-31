@@ -48,7 +48,7 @@ class ListSubsectionExample extends React.Component {
           <Item key="223">
             <Placeholder title="Item 0" style={{ height: '50px' }} />
           </Item>
-          <Item key="224" >
+          <Item key="224">
             <Placeholder title="Item 1" style={{ height: '50px' }} />
           </Item>
           <Item key="225">

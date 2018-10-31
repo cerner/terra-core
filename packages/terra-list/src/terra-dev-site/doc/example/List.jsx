@@ -8,7 +8,7 @@ const ListExample = () => (
     <Item key="123">
       <Placeholder title="Item 0" style={{ height: '50px' }} />
     </Item>
-    <Item key="124" >
+    <Item key="124">
       <Placeholder title="Item 1" style={{ height: '50px' }} />
     </Item>
     <Item key="125">
