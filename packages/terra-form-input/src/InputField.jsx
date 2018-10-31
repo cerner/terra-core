@@ -128,7 +128,7 @@ const InputField = (props) => {
     ...customProps
   } = props;
 
-  const styles = 'style' in props.inputAttrs ? props.inputAttrs.style : { maxWidth: props.maxWidth };
+  const styles = 'style' in props ? props.style : { maxWidth: props.maxWidth };
 
   return (
     <Field
@@ -144,11 +144,11 @@ const InputField = (props) => {
       isInline={isInline}
       isLabelHidden={isLabelHidden}
       htmlFor={inputId}
+      style={styles}
       {...customProps}
     >
       <Input
         {...inputAttrs}
-        style={styles}
         id={inputId}
         onChange={onChange}
         value={value}
