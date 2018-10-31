@@ -15,6 +15,23 @@ const ColorVariants = ['one', 'two', 'three', 'four', 'five', 'six',
   'seven', 'eight', 'nine', 'ten'];
 
 /**
+ * Returns true if the given color exists within `ColorVariants`.
+ * @param {*} color
+ */
+const validateColor = (color) => {
+  if (!color) {
+    return false;
+  }
+
+  for (let i = 0; i < ColorVariants.length; i += i) {
+    if (color === ColorVariants[i]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+/**
  * Generates a hash, based on a given string s.
  * @param {*} s
  */
@@ -60,7 +77,7 @@ const getColorVariant = (hashValue) => {
  */
 const setColor = (alt, color, hashValue) => {
   let colorVariant = null;
-  if (color !== 'auto') {
+  if (color === 'neutral' || (color !== 'auto' && validateColor(color))) {
     colorVariant = color;
   } else if (hashValue) {
     colorVariant = getColorVariant(hashValue);
