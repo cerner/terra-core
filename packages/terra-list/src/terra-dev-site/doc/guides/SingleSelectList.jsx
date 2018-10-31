@@ -7,11 +7,10 @@ import List, {
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-select';
 
-class MutliSelectListExample extends React.Component {
+class SingleSelectList extends React.Component {
   constructor(props) {
     super(props);
-    this.createSection = this.createSection.bind(this);
-    this.createSections = this.createSections.bind(this);
+    this.createListItem = this.createListItem.bind(this);
     this.handleItemSelection = this.handleItemSelection.bind(this);
     this.state = { selectedKey: null };
   }
@@ -54,4 +53,4 @@ class MutliSelectListExample extends React.Component {
   }
 }
 
-export default MutliSelectListExample;
+export default SingleSelectList;

@@ -24,7 +24,7 @@ const createSubsection = subsectionData => (
   </Subsection>
 );
 
-class ListSectionExample extends React.Component {
+class SectionWithSubsection1 extends React.Component {
   constructor(props) {
     super(props);
     this.createSection = this.createSection.bind(this);
@@ -69,4 +69,4 @@ class ListSectionExample extends React.Component {
   }
 }
 
-export default ListSectionExample;
+export default SectionWithSubsection1;

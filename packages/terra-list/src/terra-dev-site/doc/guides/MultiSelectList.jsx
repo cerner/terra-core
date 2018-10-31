@@ -9,11 +9,10 @@ import mockData from './mock-data/mock-select';
 
 const maxSectionCount = 3;
 
-class MutliSelectListExample extends React.Component {
+class MutliSelectList extends React.Component {
   constructor(props) {
     super(props);
-    this.createSection = this.createSection.bind(this);
-    this.createSections = this.createSections.bind(this);
+    this.createListItem = this.createListItem.bind(this);
     this.handleItemSelection = this.handleItemSelection.bind(this);
     this.state = { selectedKeys: [] };
   }
@@ -56,4 +55,4 @@ class MutliSelectListExample extends React.Component {
   }
 }
 
-export default MutliSelectListExample;
+export default MutliSelectList;
