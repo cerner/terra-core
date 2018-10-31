@@ -78,6 +78,11 @@ const propTypes = {
    */
   showOptional: PropTypes.bool,
   /**
+   * Allows inline styles to be applied to input field element.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  style: PropTypes.object,
+  /**
    * The value of the input field. Use this to create a controlled input.
    */
   value: PropTypes.oneOfType([
@@ -102,6 +107,7 @@ const defaultProps = {
   refCallback: undefined,
   required: false,
   showOptional: false,
+  style: undefined,
   value: undefined,
 };
 
@@ -124,11 +130,12 @@ const InputField = (props) => {
     refCallback,
     required,
     showOptional,
+    style,
     value,
     ...customProps
   } = props;
 
-  const styles = 'style' in props ? props.style : { maxWidth: props.maxWidth };
+  const styles = 'style' in props ? { ...props.style, maxWidth } : { maxWidth: props.maxWidth };
 
   return (
     <Field

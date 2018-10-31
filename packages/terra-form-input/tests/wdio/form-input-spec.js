@@ -202,33 +202,33 @@ describe('Form-Input', () => {
         },
       });
     });
+  });
 
-    describe('InputField', () => {
-      describe('Resized InputField', () => {
-        before(() => {
-          browser.url('/#/raw/tests/terra-form-input/form-input/input-field-width');
-        });
-
-        Terra.should.beAccessible({ viewports });
-        Terra.should.matchScreenshot({ viewports });
+  describe('InputField', () => {
+    describe('Resized InputField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/input-field-width');
       });
 
-      describe('Valid InputField', () => {
-        before(() => {
-          browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
-        });
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+    });
 
-        Terra.should.matchScreenshot({ viewports });
+    describe('Valid InputField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
       });
 
-      describe('Invalid InputField', () => {
-        before(() => {
-          browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
-          browser.click('#validity-toggle');
-        });
+      Terra.should.matchScreenshot({ viewports });
+    });
 
-        Terra.should.matchScreenshot({ viewports });
+    describe('Invalid InputField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
+        browser.click('#validity-toggle');
       });
+
+      Terra.should.matchScreenshot({ viewports });
     });
   });
 });
