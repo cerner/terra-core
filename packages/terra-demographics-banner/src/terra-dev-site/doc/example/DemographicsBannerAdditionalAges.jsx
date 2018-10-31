@@ -7,14 +7,14 @@ import demographicsImage from '../assets/demographicsCat.jpg';
 const DemographicsBannerAdditionalAges = () => (
   <DemographicsBanner
     applicationContent={<span className="risk-score">5%</span>}
-    age="25 Years"
-    dateOfBirth="May 9, 1993"
+    age="10 Weeks"
+    dateOfBirth="October 25, 2018"
     gender="Male"
-    gestationalAge="April 5, 2016"
+    gestationalAge="33 Weeks"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
     photo={<Image alt="My Cat" src={demographicsImage} />}
     personName="Johnathon Doe"
-    postMenstrualAge="April 7, 2016"
+    postMenstrualAge="43 Weeks"
     preferredFirstName="John"
   />
 );

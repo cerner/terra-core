@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Placeholder should render a default component 1`] = `
+<div
+  className="placeholder"
+>
+  <div
+    className="inner is-dark"
+  >
+    <h2 />
+  </div>
+</div>
+`;
+
+exports[`Placeholder should show the light version with a title 1`] = `
+<div
+  className="placeholder"
+>
+  <div
+    className="inner is-light"
+  >
+    <h2>
+      test light
+    </h2>
+  </div>
+</div>
+`;

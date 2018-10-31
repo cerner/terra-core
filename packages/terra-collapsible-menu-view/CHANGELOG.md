@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+3.26.0 - (October 30, 2018)
+------------------
+### Changed
+* Update mixin import to be more explicit
+
+3.25.0 - (October 24, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.24.0 - (October 16, 2018)
 ------------------
 ### Changed
