@@ -58,7 +58,7 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
-   * Set max width of input field.
+   * Set max width of input field. Passed in custom inline styles take precedence over this prop.
    */
   maxWidth: PropTypes.string,
   /**
@@ -78,7 +78,7 @@ const propTypes = {
    */
   showOptional: PropTypes.bool,
   /**
-   * Allows inline styles to be applied to input field element.
+   * Allows for custom inline styles in addition to (or separate from) the maxWidth style prop.
    */
   // eslint-disable-next-line react/forbid-prop-types
   style: PropTypes.object,
@@ -135,7 +135,17 @@ const InputField = (props) => {
     ...customProps
   } = props;
 
-  const styles = 'style' in props ? { ...props.style, maxWidth } : { maxWidth: props.maxWidth };
+  let styles;
+
+  if (props.style) {
+    if (!props.style.maxWidth) {
+      styles = { ...props.style, maxWidth };
+    } else if (props.style.maxWidth) {
+      styles = { ...props.style };
+    }
+  } else {
+    styles = { maxWidth };
+  }
 
   return (
     <Field
