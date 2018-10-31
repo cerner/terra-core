@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* data-terra-base attribute added to Base component
 
 3.27.0 - (October 24, 2018)
 ------------------
