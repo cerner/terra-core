@@ -39,8 +39,6 @@ class InputFieldExample extends React.Component {
             className: 'label',
           }}
           showOptional
-          style={{ color: 'red' }}
-          maxWidth="30%"
         />
       </div>
     );
