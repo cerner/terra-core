@@ -1,7 +1,10 @@
 {
-  "Terra.demographicsBanner.dateOfBirth": "DOB",
-  "Terra.demographicsBanner.deceased": "Deceased",
-  "Terra.demographicsBanner.gestationalAge": "GA",
+  "Terra.demographicsBanner.dateOfBirth": "تاريخ الولادة",
+  "Terra.demographicsBanner.dateOfBirthFullText": "تاريخ الولادة",
+  "Terra.demographicsBanner.deceased": "متوفى",
+  "Terra.demographicsBanner.gestationalAge": "عمر الحمل",
+  "Terra.demographicsBanner.gestationalAgeFullText": "عمر الحمل",
   "Terra.demographicsBanner.noDataProvided": "--",
-  "Terra.demographicsBanner.postMenstrualAge": "PMA"
+  "Terra.demographicsBanner.postMenstrualAge": "مرحلة ما بعد الحيض",
+  "Terra.demographicsBanner.postMenstrualAgeFullText": "مرحلة ما بعد الحيض"
 }
