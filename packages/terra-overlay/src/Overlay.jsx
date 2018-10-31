@@ -142,8 +142,11 @@ class Overlay extends React.Component {
     }
   }
 
-  resetBeforeOverlay() {
+  resetBeforeOverlay(selector) {
     document.documentElement.style.overflow = this.overflow;
+    if (document.querySelector(selector)) {
+      document.querySelector(selector).setAttribute('aria-hidden', 'false');
+    }
     if (this.props.isRelativeToContainer) {
       this.enableContainerChildrenFocus();
     }
@@ -156,7 +159,7 @@ class Overlay extends React.Component {
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
-      this.resetBeforeOverlay();
+      this.resetBeforeOverlay(rootSelector);
       return null;
     }
 
