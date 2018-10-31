@@ -100,7 +100,7 @@ class Overlay extends React.Component {
     } else {
       document.documentElement.style.overflow = 'hidden';
       this.container = null;
-      document.querySelector(selector).setAttribute('aria-hidden', 'true'); // prevent screen reader from moving to hidden content
+      if (document.querySelector(selector)) document.querySelector(selector).setAttribute('aria-hidden', 'true'); // prevent screen reader from moving to hidden content
     }
   }
 
@@ -156,7 +156,7 @@ class Overlay extends React.Component {
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
-      this.resetBeforeOverlay(rootSelector);
+      this.resetBeforeOverlay();
       return null;
     }
 

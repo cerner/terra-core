@@ -6,6 +6,7 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
   isAnimated={false}
   isOpen={false}
   isRelativeToContainer={false}
+  rootSelector="[data-terra-base]"
 >
   <Overlay
     backgroundStyle="light"
@@ -26,6 +27,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
   isOpen={true}
   isRelativeToContainer={false}
   message="Loading!"
+  rootSelector="[data-terra-base]"
 >
   <Overlay
     backgroundStyle="light"
@@ -33,6 +35,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
     isOpen={true}
     isRelativeToContainer={false}
     isScrollable={false}
+    rootSelector="[data-terra-base]"
     zIndex="100"
   >
     <Portal>
@@ -160,6 +163,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
   isAnimated={false}
   isOpen={true}
   isRelativeToContainer={false}
+  rootSelector="[data-terra-base]"
 >
   <Overlay
     backgroundStyle="light"
@@ -167,6 +171,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
     isOpen={true}
     isRelativeToContainer={false}
     isScrollable={false}
+    rootSelector="[data-terra-base]"
     zIndex="100"
   >
     <Portal>
