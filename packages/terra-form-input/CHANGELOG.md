@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* maxWidth prop added to input field component
 
 1.28.0 - (October 24, 2018)
 ------------------
