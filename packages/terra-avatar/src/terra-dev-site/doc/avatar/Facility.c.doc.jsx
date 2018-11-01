@@ -1,14 +1,14 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/multi-user/README.md';
+import ReadMe from '../../../../docs/facility.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import MultiUserSrc from '!raw-loader!../../../../src/multi-user/MultiUser.jsx';
+import FacilitySrc from '!raw-loader!../../../../src/facility/Facility.jsx';
 
-import AvatarMultiUser from '../example/AvatarMultiUser';
-import AvatarMultiUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarMultiUser';
+import AvatarFacility from '../example/AvatarFacility';
+import AvatarFacilitySrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarFacility';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -18,15 +18,15 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'MultiUser',
-        example: <AvatarMultiUser />,
-        source: AvatarMultiUserSrc,
+        title: 'Facility',
+        example: <AvatarFacility />,
+        source: AvatarFacilitySrc,
       },
     ]}
     propsTables={[
       {
         componentName: 'Avatar',
-        componentSrc: MultiUserSrc,
+        componentSrc: FacilitySrc,
       },
     ]}
   />
