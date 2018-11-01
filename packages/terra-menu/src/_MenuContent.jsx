@@ -135,8 +135,8 @@ class MenuContent extends React.Component {
 
   validateFocus(node) {
     if (this.needsFocus && node) {
-      node.querySelector('[tabIndex="0"]').focus();
-      this.needsFocus = document.activeElement !== node.querySelector('[tabIndex="0"]');
+      node.focus();
+      this.needsFocus = document.activeElement !== node;
     }
   }
 
@@ -323,6 +323,8 @@ class MenuContent extends React.Component {
         className={contentClass}
         style={{ height: contentHeight, width: contentWidth, position: contentPosition }}
         tabIndex="-1"
+        aria-modal="true"
+        role="dialog"
       >
         <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
           <List className={cx(['list'])} role="menu">
