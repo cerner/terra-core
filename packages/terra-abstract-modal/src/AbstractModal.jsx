@@ -64,7 +64,7 @@ const defaultProps = {
   closeOnOutsideClick: true,
   isFocused: true,
   isFullscreen: false,
-  role: 'document',
+  role: 'dialog',
   zIndex: '6000',
 };
 
@@ -138,6 +138,7 @@ class AbstractModal extends React.Component {
           isFullscreen={isFullscreen}
           onRequestClose={onRequestClose}
           zIndex={zIndex}
+          aria-modal="true"
         >
           {children}
         </ModalContent>
