@@ -168,7 +168,12 @@ class MenuContent extends React.Component {
       }
 
       if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
-        this.props.onRequestNext(item);
+        // Avoid keydown "click" event from enter / space key triggering stack increase here
+        // We handle increasing stack with keydown events in a separate handler below
+        // Fixes: https://github.com/cerner/terra-core/issues/2015
+        if (event.type !== 'keydown') {
+          this.props.onRequestNext(item);
+        }
       }
 
       if (onClick) {
@@ -227,6 +232,7 @@ class MenuContent extends React.Component {
         onKeyDown={this.onKeyDownBackButton}
         tabIndex="0"
         aria-label={backBtnText}
+        className={cx(['header-button-container'])}
       >
         <Arrange
           align="center"
