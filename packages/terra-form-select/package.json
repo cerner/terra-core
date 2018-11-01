@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "4.21.0",
+  "version": "4.22.0",
   "description": "Provides a drop down of selectable options.",
   "repository": {
     "type": "git",
@@ -36,7 +36,7 @@
     "terra-doc-template": "^1.19.0",
     "terra-form-field": "^2.29.0",
     "terra-hookshot": "^4.0.0",
-    "terra-mixins": "^1.19.0"
+    "terra-mixins": "^1.20.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
