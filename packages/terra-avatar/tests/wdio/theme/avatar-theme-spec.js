@@ -76,7 +76,6 @@ describe('Avatar', () => {
       expect(browser.getAttribute('#initial-initials-avatar', 'class')).contains('avatar');
     });
   });
-  });
 
   describe('Two Initials', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/two-initials-avatar'));
@@ -96,11 +95,6 @@ describe('Avatar', () => {
 
     it('Expect two initials avatar to have avatar class', () => {
       expect(browser.getAttribute('#two-initials-avatar', 'class')).contains('avatar');
-    });
-  });
-
-    it('Expect three initials avatar to have avatar class', () => {
-      expect(browser.getAttribute('#three-initials-avatar', 'class')).contains('avatar');
     });
   });
 });
