@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.30.0 - (October 30, 2018)
+------------------
+### Changed
+* Create abbr nodes for Date of Birth, PostMenstrual Age, and Gestational Age
+
 2.29.0 - (October 24, 2018)
 ------------------
 ### Changed
