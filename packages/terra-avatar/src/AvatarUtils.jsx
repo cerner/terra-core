@@ -97,7 +97,7 @@ const validateColor = (color) => {
  * Returns a color variant based on the following precedence:
  *   1. `color`
  *   2. Hash `hashValue` to generate color variant.
- *   3. Hash `alt`  to generate color variant.
+ *   3. Hash `alt`  to generate color variant. This is the fallback.
  * @param {*} hashValue
  * @param {*} color
  * @param {*} alt

@@ -1,4 +1,4 @@
 import React from 'react';
-import { MultiUser } from '../../../Avatar';
+import { Avatar } from '../../../Avatar';
 
-export default () => <MultiUser id="multi-avatar" alt="user" />;
+export default () => <Avatar id="avatar" alt="user" />;
