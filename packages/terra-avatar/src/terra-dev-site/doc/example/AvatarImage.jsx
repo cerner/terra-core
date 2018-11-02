@@ -4,7 +4,7 @@ import { Avatar } from 'terra-avatar/lib/AvatarVariants';
 import exampleAvatarImage from '../../assets/150x150.jpg';
 
 const AvatarImage = () => (
-  <Avatar image={exampleAvatarImage} alt="placeholder" />
+  <Avatar image={exampleAvatarImage} alt="Deep Space" />
 );
 
 export default AvatarImage;

@@ -56,6 +56,12 @@ describe('Avatar', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render an avatar with initials and aria hidden set to true', () => {
+    const avatar = <Avatar alt="multi-user" initials="JJ" isAriaHidden height="5em" width="5em" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render custom props', () => {
     const avatar = <Avatar alt="user" style={{ color: 'purple' }} />;
     const wrapper = render(avatar);

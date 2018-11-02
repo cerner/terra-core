@@ -105,7 +105,6 @@ class Avatar extends React.Component {
     } = this.props;
 
     const colorVariant = Utils.setColor(alt, color, hashValue);
-    console.log(`colorVariant: ${colorVariant}`);
     const attributes = Object.assign({}, customProps);
     const avatarClassNames = cx([
       'avatar',

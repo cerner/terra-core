@@ -4,7 +4,7 @@ import { Avatar } from 'terra-avatar/lib/AvatarVariants';
 import exampleAvatarImage from '../../assets/150x150.jpg';
 
 const AvatarSize = () => (
-  <Avatar alt="John Doe" image={exampleAvatarImage} height="5em" width="5em" />
+  <Avatar alt="Deep Space" image={exampleAvatarImage} height="5em" width="5em" />
 );
 
 export default AvatarSize;
