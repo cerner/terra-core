@@ -14,14 +14,18 @@ The terra-action-footer component is a footer bar that contains two sockets, sta
 import React from 'react';
 import ActionFooter from 'terra-action-footer';
 import Button from 'terra-button';
+import Hyperlink from 'terra-hyperlink';
+import Spacer from 'terra-spacer';
 
 <ActionFooter
-  start={<a href="/link/to/somewhere">A link</a>}
+  start={<Hyperlink href="/link/to/somewhere">A link</Hyperlink>}
   end={
-    <div>
-      <Button text="Submit"/>
-      <Button text="Cancel"/>
-    </div>
+    <React.Fragment>
+      <Spacer isInlineBlock marginRight="medium">
+        <Button text="Action" />
+      </Spacer>
+      <Button text="Cancel" />
+    </React.Fragment>
   }
 />
 ```
@@ -34,8 +38,10 @@ import ActionFooter from 'terra-action-footer';
 <ActionFooter />
 ```
 
-Terra also provides a Centered Action Footer variation.
+Terra provides a Standard, Centered, and Block-style variations for Action Footer:
+* [Standard Action Footer](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer/docs/README.md)
 * [Centered Action Footer](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer/docs/CenteredActionFooter.md)
+* [Block Action Footer](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer/docs/BlockActionFooter.md)
 
 ## Component Features
 

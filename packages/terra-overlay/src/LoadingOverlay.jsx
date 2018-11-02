@@ -81,11 +81,9 @@ const LoadingOverlay = ({
   );
 };
 
-const Opts = { BackgroundStyles };
-
 LoadingOverlay.propTypes = propTypes;
 LoadingOverlay.defaultProps = defaultProps;
 LoadingOverlay.contextTypes = contextTypes;
-LoadingOverlay.Opts = Opts;
+LoadingOverlay.Opts = Overlay.Opts;
 
 export default LoadingOverlay;

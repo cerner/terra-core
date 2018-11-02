@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * data-terra-base attribute added to Base component
 
+### Changed
+* Restructured theme tests into a separate file
+
 3.27.0 - (October 24, 2018)
 ------------------
 ### Changed

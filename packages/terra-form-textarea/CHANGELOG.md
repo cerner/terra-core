@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated textarea documentation examples
 
 2.30.0 - (October 24, 2018)
 ------------------

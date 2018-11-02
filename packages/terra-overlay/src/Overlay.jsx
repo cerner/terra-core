@@ -84,7 +84,7 @@ class Overlay extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.shouldHandleESCKeydown);
-    this.resetBeforeOverlay();
+    this.resetBeforeOverlay(this.props.rootSelector);
   }
 
   setContainer(node) {
