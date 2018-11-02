@@ -18,13 +18,16 @@
     width: var(--terra-avatar-width, 3.429em);
   }
 
+  // Addresses https://github.com/cerner/terra-core/issues/1845
   .avatar::after {
     border-radius: 50%;
-    box-shadow: var(--terra-avatar-image-after-box-shadow);
+    box-shadow: var(--terra-avatar-image-after-box-shadow, inset 0 0 2px 2px orange); //@TODO remove this when releasing
     content: '';
     display: block;
     height: var(--terra-avatar-after-height, 100%);
+    left: 0;
     position: absolute;
+    top: 0;
     width: var(--terra-avatar-after-width, 100%);
   }
 
