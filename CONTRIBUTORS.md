@@ -75,6 +75,7 @@ Cerner Corporation
 - Eric Wilson [@eawww]
 - Gabe Parra [@gabeparra01]
 - Matt Anderson [@mndrsn]
+- Jeremy Fuksa [@jeremyfuksa]
 - Dillon Lustick [@celvro]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -153,4 +154,5 @@ Cerner Corporation
 [@eawww]: https://github.com/eawww
 [@gabeparra01]: https://github.com/gabeparra01
 [@mndrsn]: https://github.com/mndrsn
+[@jeremyfuksa]: https://github.com/jeremyfuksa
 [@celvro]: https://github.com/celvro
