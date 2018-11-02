@@ -1,6 +1,6 @@
 # MultiUser
 
-The multi-user variant displays a multi-user icon within a circular frame.
+The multi-user variant represents multiple users - displays a multi-user icon in a circular frame.
 
 ## Getting Started
 
@@ -13,9 +13,8 @@ The multi-user variant displays a multi-user icon within a circular frame.
 import React from 'react';
 import { MultiUser } from 'terra-avatar';
 
-<Facility
-  image="https://path/to/image.jpg"
-  alt="placeholder"
+<MultiUser
+  alt="Group Chat"
 />
 ```
 

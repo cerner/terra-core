@@ -1,6 +1,6 @@
 # Facility
 
-The facility variant displays an image in a circular frame. If an image is not provided, a fallback facility icon is displayed.
+The facility variant represents a location - it displays an image in a circular frame. If an image is not provided, a fallback facility icon displays.
 
 ## Getting Started
 
@@ -14,8 +14,8 @@ import React from 'react';
 import { Facility } from 'terra-avatar';
 
 <Facility
-  image="https://path/to/image.jpg"
-  alt="placeholder"
+  alt="Lima"
+  image="/path/to/image.jpg"
 />
 ```
 

@@ -1,6 +1,6 @@
 # Avatar
 
-The avatar variant displays an image or text, in a circular frame. If neither an image or text is provided, fallback user icon is displayed.
+The avatar variant represents a person - it displays an image or initials in a circular frame. If neither are provided, a fallback user icon displays.
 
 ## Getting Started
 
@@ -14,8 +14,8 @@ import React from 'react';
 import { Avatar } from 'terra-avatar';
 
 <Avatar
-  image="https://path/to/image.jpg"
-  alt="placeholder"
+  alt="patient"
+  initials="DY"
 />
 ```
 

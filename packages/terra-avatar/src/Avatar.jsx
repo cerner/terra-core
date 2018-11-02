@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-
-import Utils from '../AvatarUtils';
-import styles from '../Avatar.module.scss';
+import Utils from './shared/AvatarUtils';
+import styles from './shared/Avatar.module.scss';
 
 const cx = classNames.bind(styles);
 
