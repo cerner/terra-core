@@ -238,7 +238,6 @@ class MenuContent extends React.Component {
         onKeyDown={this.onKeyDownBackButton}
         tabIndex="0"
         aria-label={backBtnText}
-        className={cx(['header-button-container'])}
       >
         <Arrange
           align="center"
