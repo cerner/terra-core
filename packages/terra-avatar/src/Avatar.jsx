@@ -105,6 +105,7 @@ class Avatar extends React.Component {
     } = this.props;
 
     const colorVariant = Utils.setColor(alt, color, hashValue);
+    console.log(`colorVariant: ${colorVariant}`);
     const attributes = Object.assign({}, customProps);
     const avatarClassNames = cx([
       'avatar',
@@ -124,7 +125,7 @@ class Avatar extends React.Component {
     }
 
     return (
-      <div {...attributes} alt={alt} className={avatarClassNames} style={{ width, height }}>
+      <div {...attributes} className={avatarClassNames} style={{ width, height }}>
         {avatarContent}
       </div>
     );

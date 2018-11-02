@@ -100,7 +100,7 @@ class Facility extends React.Component {
     }
 
     return (
-      <div {...attributes} alt={alt} className={facilityClassNames} style={{ width, height }}>
+      <div {...attributes} className={facilityClassNames} style={{ width, height }}>
         {facilityContent}
       </div>
     );

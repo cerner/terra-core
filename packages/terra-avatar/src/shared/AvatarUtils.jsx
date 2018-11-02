@@ -93,9 +93,11 @@ const validateColor = (color) => {
   if (!color) {
     return false;
   }
+  console.log(`Color: ${color}`);
 
   for (let i = 0; i < ColorVariants.length; i += i) {
     if (color === ColorVariants[i]) {
+      console.log('Return true');
       return true;
     }
   }
@@ -112,16 +114,15 @@ const validateColor = (color) => {
  * @param {*} alt
  */
 const setColor = (alt, color, hashValue) => {
-  let colorVariant = null;
   if (color === 'neutral' || (color !== 'auto' && validateColor(color))) {
-    colorVariant = color;
-  } else if (hashValue) {
-    colorVariant = getColorVariant(hashValue);
-  } else {
-    colorVariant = getColorVariant(alt);
+    return color;
   }
 
-  return colorVariant;
+  if (hashValue) {
+    return getColorVariant(hashValue);
+  }
+
+  return getColorVariant(alt);
 };
 
 const Utils = {

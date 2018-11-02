@@ -65,7 +65,7 @@ const MultiUser = ({
   const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
   return (
-    <div {...attributes} alt={alt} className={multiUserClassNames} style={{ width, height }}>
+    <div {...attributes} className={multiUserClassNames} style={{ width, height }}>
       {multiUserContent}
     </div>
   );

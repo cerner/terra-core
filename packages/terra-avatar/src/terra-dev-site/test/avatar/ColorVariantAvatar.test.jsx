@@ -1,4 +1,5 @@
 import React from 'react';
 import { Avatar } from '../../../AvatarVariants';
 
-export default () => <Avatar id="color-variant-avatar" alt="facility" color="three" />;
+export default () => <Avatar alt="facility" color="four" />;
+// export default () => <div />;
