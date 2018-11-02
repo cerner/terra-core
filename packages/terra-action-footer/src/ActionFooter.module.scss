@@ -1,14 +1,21 @@
 :local {
-  .action-footer {
+  .action-footer,
+  .action-footer-end {
     display: flex;
+    flex-flow: row wrap;
+    width: 100%;
   }
 
-  .empty-center {
-    flex: 1 1 auto;
+  .action-footer {
+    justify-content: space-between;
+
+    &-end {
+      justify-content: flex-end;
+    }
   }
 
-  .socket {
+  .start-actions,
+  .end-actions {
     align-self: center;
-    flex: 0 0 auto;
   }
 }

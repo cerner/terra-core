@@ -9,12 +9,12 @@ export default () => (
   <ExampleTemplate>
     <CenteredActionFooter
       center={(
-        <div>
-          <Spacer paddingBottom="medium">
-            <Button isBlock text="First Action" />
+        <React.Fragment>
+          <Spacer isInlineBlock marginRight="medium">
+            <Button text="Action One" />
           </Spacer>
-          <Button isBlock text="Second Action" />
-        </div>
+          <Button text="Action Two" />
+        </React.Fragment>
       )}
     />
   </ExampleTemplate>

@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Fixed
+* LoadingOverlay Opts includes zIndexes
+
+2.32.0 - (October 30, 2018)
+------------------
+### Fixed
 * Fixed issue where body scrolling is not restored on unmount.
 
 ### Changed
