@@ -3,7 +3,7 @@ import React from 'react';
 import { Avatar } from 'terra-avatar/lib/AvatarVariants';
 
 const AvatarUser = () => (
-  <Avatar alt="The Last Airbender" color="four" />
+  <Avatar alt="The Last Airbender" />
 );
 
 export default AvatarUser;

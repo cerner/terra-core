@@ -93,11 +93,9 @@ const validateColor = (color) => {
   if (!color) {
     return false;
   }
-  console.log(`Color: ${color}`);
 
-  for (let i = 0; i < ColorVariants.length; i += i) {
+  for (let i = 0; i < ColorVariants.length; i += 1) {
     if (color === ColorVariants[i]) {
-      console.log('Return true');
       return true;
     }
   }
