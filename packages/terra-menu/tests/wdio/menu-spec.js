@@ -131,7 +131,7 @@ describe('Menu', () => {
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 
     it('returns to the main menu on left arrow', () => {
-      browser.keys(['Tab', 'ArrowLeft']);
+      browser.keys(['ArrowLeft']);
     });
     Terra.should.matchScreenshot('returned to main menu', { selector: '#root' });
   });
