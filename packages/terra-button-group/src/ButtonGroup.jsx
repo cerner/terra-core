@@ -69,7 +69,7 @@ class ButtonGroup extends React.Component {
     } = this.props;
 
     const buttonGroupClassNames = cx(['button-group',
-      { block: isBlock },
+      { 'is-block': isBlock },
       customProps.className,
     ]);
 

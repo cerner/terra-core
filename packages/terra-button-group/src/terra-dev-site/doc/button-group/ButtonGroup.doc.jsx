@@ -48,7 +48,7 @@ const DocPage = () => (
         source: ButtonGroupDisabledButtonsSrc,
       },
       {
-        title: 'Button Block Layout',
+        title: 'ButtonGroup Is Block - width stretches to fill container',
         example: <ButtonGroupIsBlock />,
         source: ButtonGroupIsBlockSrc,
       },
