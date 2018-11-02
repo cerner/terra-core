@@ -11,8 +11,18 @@ const AvatarVariants = {
   MULTIUSER: 'multi-user',
 };
 
-const ColorVariants = ['one', 'two', 'three', 'four', 'five', 'six',
-  'seven', 'eight', 'nine', 'ten'];
+const ColorVariants = [
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine',
+  'ten',
+];
 
 /**
  * Generates a hash, based on a given string s.
@@ -31,12 +41,11 @@ const calculateHash = (s) => {
   for (let i = 0; i < s.length; i += 1) {
     char = s.charCodeAt(i);
     hash = (hash << 5) - hash + char;
-    // Convert to 32bit integer
-    hash &= hash;
+    hash &= hash; // Convert to 32bit integer
   }
+  /* eslint-enable no-bitwise */
 
-  // Always return positive hash
-  return Math.abs(hash);
+  return Math.abs(hash); // Always return positive hash
 };
 
 /**
@@ -57,7 +66,7 @@ const getColorVariant = (hashValue) => {
  * @param {*} variant
  */
 const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
-  const avatarIconClassNames = cx(['avatar-icon', variant]);
+  const avatarIconClassNames = cx(['icon', variant]);
 
   return <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 };
@@ -72,7 +81,7 @@ const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
 const generateImage = (image, alt, isAriaHidden, variant) => {
   const icon = generateImagePlaceholder(alt, isAriaHidden, variant);
 
-  return <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
+  return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} />;
 };
 
 

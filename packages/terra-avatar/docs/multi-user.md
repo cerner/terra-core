@@ -1,6 +1,6 @@
 # MultiUser
 
-The multi-user variant represents multiple users - displays a multi-user icon in a circular frame.
+The multi-user variant represents multiple users - it displays a multi-user icon in a circular frame.
 
 ## Getting Started
 

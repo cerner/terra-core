@@ -2,11 +2,11 @@ import Avatar from './Avatar';
 import Facility from './Facility';
 import MultiUser from './MultiUser';
 
-const ExportAvatar = {
+const AvatarVariants = {
   Avatar,
   Facility,
   MultiUser,
 };
 
-export default ExportAvatar;
+export default AvatarVariants;
 export { Avatar, Facility, MultiUser };

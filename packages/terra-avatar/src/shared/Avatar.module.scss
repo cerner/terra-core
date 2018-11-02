@@ -80,7 +80,7 @@
     opacity: var(--terra-avatar-is-deceased-opacity);
   }
 
-  .avatar-icon {
+  .avatar > .icon {
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
@@ -106,13 +106,13 @@
     /* stylelint-enable string-quotes */
   }
 
-  .avatar-image {
+  .avatar > .image {
     border-radius: 50%;
     height: 100%;
     width: 100%;
   }
 
-  .avatar-text {
+  .avatar > .initials {
     font-size: var(--terra-avatar-font-size, 1.571rem);
   }
 }

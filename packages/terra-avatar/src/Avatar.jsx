@@ -117,7 +117,7 @@ class Avatar extends React.Component {
     if (image) {
       avatarContent = this.state.imageComponent;
     } else if (initials && (initials.length === 1 || initials.length === 2)) {
-      const avatarTextClassNames = cx('avatar-text');
+      const avatarTextClassNames = cx('initials');
       avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
     } else {
       avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.USER);

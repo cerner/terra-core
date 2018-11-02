@@ -86,22 +86,22 @@ class Facility extends React.Component {
 
     const colorVariant = Utils.setColor(alt, color, hashValue);
     const attributes = Object.assign({}, customProps);
-    const avatarClassNames = cx([
+    const facilityClassNames = cx([
       'avatar',
       `${colorVariant}`,
       attributes.className,
     ]);
 
-    let avatarContent;
+    let facilityContent;
     if (image) {
-      avatarContent = this.state.imageComponent;
+      facilityContent = this.state.imageComponent;
     } else {
-      avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.FACILITY);
+      facilityContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.FACILITY);
     }
 
     return (
-      <div {...attributes} alt={alt} className={avatarClassNames} style={{ width, height }}>
-        {avatarContent}
+      <div {...attributes} alt={alt} className={facilityClassNames} style={{ width, height }}>
+        {facilityContent}
       </div>
     );
   }

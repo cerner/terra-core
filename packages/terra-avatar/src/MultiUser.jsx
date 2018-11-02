@@ -55,18 +55,18 @@ const MultiUser = ({
 }) => {
   const colorVariant = Utils.setColor(alt, color, hashValue);
   const attributes = Object.assign({}, customProps);
-  const avatarClassNames = cx([
+  const multiUserClassNames = cx([
     'avatar',
     `${colorVariant}`,
     attributes.className,
   ]);
 
-  const avatarIconClassNames = cx(['avatar-icon', Utils.AvatarVariants.MULTIUSER]);
-  const avatarContent = <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
+  const multiUserIconClassNames = cx(['icon', Utils.AvatarVariants.MULTIUSER]);
+  const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
   return (
-    <div {...attributes} alt={alt} className={avatarClassNames} style={{ width, height }}>
-      {avatarContent}
+    <div {...attributes} alt={alt} className={multiUserClassNames} style={{ width, height }}>
+      {multiUserContent}
     </div>
   );
 };
