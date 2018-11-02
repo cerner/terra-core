@@ -27,12 +27,19 @@ const Status = ({
   children,
   visuallyHiddenText,
   ...customProps
-}) => (
-  <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)}>
-    <VisuallyHiddenText text={visuallyHiddenText} />
-    {children}
-  </div>
-);
+ }) => {
+   if ((process.env.NODE_ENV !== 'production') && (!visuallyHiddenText)) {
+     // eslint-disable-next-line no-console
+     console.warn('\'visuallyHiddenText\' should be added to convey the meaning of the status indicator for screen readers accessibility. This prop will be required in the next major version bump of terra-status.');
+   }
+
+  return (
+    <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)}>
+      {visuallyHiddenText && <VisuallyHiddenText text={visuallyHiddenText} />}
+      {children}
+    </div>
+  );
+}
 
 Status.propTypes = propTypes;
 
