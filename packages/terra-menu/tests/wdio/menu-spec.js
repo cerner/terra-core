@@ -143,7 +143,7 @@ describe('Menu', () => {
     });
 
     it('displays the submenu on enter', () => {
-      browser.keys(['ArrowDown', 'Enter']);
+      browser.keys(['Tab', 'ArrowDown', 'Enter']);
     });
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 

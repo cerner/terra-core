@@ -127,7 +127,7 @@ class MenuContent extends React.Component {
   }
 
   onKeyDownBackButton(event) {
-    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE || event.nativeEvent.keyCode === MenuUtils.KEYCODES.LEFT_ARROW) {
       event.preventDefault();
       this.props.onRequestBack();
     }
@@ -137,6 +137,12 @@ class MenuContent extends React.Component {
     if (this.needsFocus && node) {
       node.focus();
       this.needsFocus = document.activeElement !== node;
+
+      // If nested menu is open
+      if (this.props.index > 0) {
+        // Shift focus to the back button
+        node.querySelector('[role="button"][tabIndex="0"]').focus();
+      }
     }
   }
 
