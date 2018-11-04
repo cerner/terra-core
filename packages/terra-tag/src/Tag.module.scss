@@ -4,28 +4,29 @@
     align-items: center;
     background-color: var(--terra-tag-background-color, rgba(28, 31, 33, 0.04));
     border-color: var(--terra-tag-border-color, rgba(28, 31, 33, 0.1));
-    border-radius: 0.2142rem;
+    border-radius: 3px;
     border-style: var(--terra-tag-border-style, solid);
-    border-width: 0.07142rem;
+    border-width: 1px;
     box-shadow: var(--terra-tag-box-shadow);
     color: var(--terra-tag-color, #434a4d);
     display: inline-flex;
     font-size: var(--terra-tag-font-size, 1rem);
-    font-weight: var(--terra-tag-font-weight, normal);
-    line-height: var(--terra-tag-line-height, 1.14285);
-    margin-bottom: var(--terra-tag-margin-bottom, 0.357rem);
+    font-weight: var(--terra-tag-font-weight, 400);
+    line-height: var(--terra-tag-line-height, 1.1428571429);
+    margin-bottom: var(--terra-tag-margin-bottom, 0.3571428571rem);
     margin-left: var(--terra-tag-margin-left);
-    margin-right: var(--terra-tag-margin-right, 0.714rem);
-    margin-top: var(--terra-tag-margin-top, 0.357rem);
-    padding-bottom: var(--terra-tag-padding-bottom, 0.1428rem);
+    margin-right: var(--terra-tag-margin-right, 0.7142857143rem);
+    margin-top: var(--terra-tag-margin-top, 0.3571428571rem);
+    padding-bottom: var(--terra-tag-padding-bottom, 0.1428571429rem);
     padding-left: var(--terra-tag-padding-left, 0.5rem);
     padding-right: var(--terra-tag-padding-right, 0.5rem);
-    padding-top: var(--terra-tag-padding-top, 0.1428rem);
+    padding-top: var(--terra-tag-padding-top, 0.1428571429rem);
     text-align: left;
     text-decoration: var(--terra-tag-text-decoration);
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on tags on mobile and desktop.
+    vertical-align: middle;
     white-space: normal;
 
     // Remove the inner border and padding in Firefox and IE.
@@ -63,12 +64,12 @@
   }
 
   .icon {
-    margin-right: var(--terra-tag-icon-margin-right, 0.357rem);
-    margin-top: var(--terra-tag-icon-margin-top, 0.0714rem);
+    line-height: 0;
+    margin-right: var(--terra-tag-icon-margin-right, 0.3571428571rem);
+    margin-top: var(--terra-tag-icon-margin-top, 0);
 
     > svg {
       height: var(--terra-tag-icon-height, 1rem);
-      vertical-align: middle;
       width: var(--terra-tag-icon-width, 1rem);
     }
   }
