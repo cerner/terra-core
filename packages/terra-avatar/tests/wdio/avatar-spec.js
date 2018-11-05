@@ -47,4 +47,10 @@ describe('Avatar', () => {
     //   expect(browser.getAttribute('#color-variant-avatar', 'class')).contains('three');
     // });
   });
+  describe('IsDeceased', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/is-deceased-avatar'));
+
+    Terra.should.beAccessible({ selector: '#is-deceased-avatar' });
+    Terra.should.matchScreenshot({ selector: '#is-deceased-avatar' });
+  });
 });
