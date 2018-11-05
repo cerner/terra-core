@@ -4,7 +4,7 @@ const {
   withoutActionsThemeables,
 } = require('../common');
 
-describe('CenteredActionFooter', () => {
+describe('Centered action footer theme', () => {
   describe('Empty', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/empty-centered-action-footer'));
 
