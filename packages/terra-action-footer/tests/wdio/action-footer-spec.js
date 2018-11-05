@@ -1,8 +1,4 @@
-const {
-  viewports,
-  withActionsThemeables,
-  withoutActionsThemeables,
-} = require('./common');
+const { viewports } = require('./common');
 
 describe('ActionFooter', () => {
   describe('Empty', () => {
@@ -10,7 +6,6 @@ describe('ActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(withoutActionsThemeables);
   });
 
   describe('Multiple End Actions', () => {
@@ -25,14 +20,6 @@ describe('ActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-  });
-
-  describe('Multiple Start and End Actions', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-start-end-action-footer'));
-
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(withActionsThemeables);
   });
 
   describe('Single End Action', () => {

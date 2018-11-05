@@ -1,5 +1,7 @@
 ChangeLog
 =========
+### Changed
+* Restructured theme tests into a separate file
 
 Unreleased
 ----------

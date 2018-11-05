@@ -1,8 +1,4 @@
-const {
-  viewports,
-  withActionsThemeables,
-  withoutActionsThemeables,
-} = require('./common');
+const { viewports } = require('./common');
 
 describe('CenteredActionFooter', () => {
   describe('Empty', () => {
@@ -10,7 +6,6 @@ describe('CenteredActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(withoutActionsThemeables);
   });
 
   describe('Multiple Actions', () => {
@@ -18,7 +13,6 @@ describe('CenteredActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(withActionsThemeables);
   });
 
   describe('Single Action', () => {
