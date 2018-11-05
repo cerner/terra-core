@@ -1,5 +1,4 @@
 const {
-  viewports,
   withActionsThemeables,
   withoutActionsThemeables,
 } = require('../common');
@@ -14,8 +13,6 @@ describe('Action footer theme', () => {
   describe('Multiple Start and End Actions', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-start-end-action-footer'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty(withActionsThemeables);
   });
 });
