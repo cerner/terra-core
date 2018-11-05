@@ -9,18 +9,18 @@ describe('ActionFooter', () => {
       expect(shallow(component)).toMatchSnapshot();
     });
 
-    it('should render a footer with only one start socket button', () => {
-      const component = <ActionFooter start={<button type="button">Start Socket</button>} />;
+    it('should render a footer with only one start-actions button', () => {
+      const component = <ActionFooter start={<button type="button">Start Button</button>} />;
       expect(shallow(component)).toMatchSnapshot();
     });
 
-    it('should render a footer with only two start socket buttons', () => {
+    it('should render a footer with only two start-actions buttons', () => {
       const component = (
         <ActionFooter
           start={(
             <div>
-              <button type="button">Start Socket 1</button>
-              <button type="button">Start Socket 2</button>
+              <button type="button">Start Button 1</button>
+              <button type="button">Start Button 2</button>
             </div>
 )}
         />
@@ -28,18 +28,18 @@ describe('ActionFooter', () => {
       expect(shallow(component)).toMatchSnapshot();
     });
 
-    it('should render a footer with only an end socket button', () => {
-      const component = <ActionFooter end={<button type="button">End Socket</button>} />;
+    it('should render a footer with only an end-actions button', () => {
+      const component = <ActionFooter end={<button type="button">End Button</button>} />;
       expect(shallow(component)).toMatchSnapshot();
     });
 
-    it('should render a footer with only two end socket buttons', () => {
+    it('should render a footer with only two end-actions buttons', () => {
       const component = (
         <ActionFooter
           end={(
             <div>
-              <button type="button">End Socket 1</button>
-              <button type="button">End Socket 2</button>
+              <button type="button">End Button 1</button>
+              <button type="button">End Button 2</button>
             </div>
 )}
         />
@@ -50,8 +50,8 @@ describe('ActionFooter', () => {
     it('should render a footer with both start and end socket buttons', () => {
       const component = (
         <ActionFooter
-          start={<button type="button">Start Socket</button>}
-          end={<button type="button">End Socket</button>}
+          start={<button type="button">Start Button</button>}
+          end={<button type="button">End Button</button>}
         />
       );
       expect(shallow(component)).toMatchSnapshot();
@@ -102,12 +102,12 @@ describe('ActionFooter', () => {
         expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
-      it('should contain no socket class', () => (
-        expect(actionFooter.find('.socket').length).toBe(0)
+      it('should contain no start-actions class', () => (
+        expect(actionFooter.find('.start-actions').length).toBe(0)
       ));
 
-      it('should contain no empty-center class', () => (
-        expect(actionFooter.find('.empty-center').length).toBe(0)
+      it('should contain no end-actions class', () => (
+        expect(actionFooter.find('.end-actions').length).toBe(0)
       ));
     });
 
@@ -118,12 +118,12 @@ describe('ActionFooter', () => {
         expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
-      it('should contain one socket class', () => (
-        expect(actionFooter.find('.socket').length).toBe(1)
+      it('should contain one start-actions class', () => (
+        expect(actionFooter.find('.start-actions').length).toBe(1)
       ));
 
-      it('should contain one empty-center class', () => (
-        expect(actionFooter.find('.empty-center').length).toBe(1)
+      it('should contain no end-actions class', () => (
+        expect(actionFooter.find('.end-actions').length).toBe(0)
       ));
     });
 
@@ -134,12 +134,12 @@ describe('ActionFooter', () => {
         expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
-      it('should contain one socket class', () => (
-        expect(actionFooter.find('.socket').length).toBe(1)
+      it('should contain no start-actions class', () => (
+        expect(actionFooter.find('.start-actions').length).toBe(0)
       ));
 
-      it('should contain one empty-center class', () => (
-        expect(actionFooter.find('.empty-center').length).toBe(1)
+      it('should contain one end-actions class', () => (
+        expect(actionFooter.find('.end-actions').length).toBe(1)
       ));
     });
 
@@ -150,12 +150,12 @@ describe('ActionFooter', () => {
         expect(actionFooter.find('BlockActionFooter').length).toBe(1)
       ));
 
-      it('should contain two socket classes', () => (
-        expect(actionFooter.find('.socket').length).toBe(2)
+      it('should contain one start-actions class', () => (
+        expect(actionFooter.find('.start-actions').length).toBe(1)
       ));
 
-      it('should contain one empty-center class', () => (
-        expect(actionFooter.find('.empty-center').length).toBe(1)
+      it('should contain one end-actions class', () => (
+        expect(actionFooter.find('.end-actions').length).toBe(1)
       ));
     });
   });
