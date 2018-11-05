@@ -9,9 +9,10 @@ The terra-centered-action-footer component is a footer bar that contains a singl
 ```jsx
 import React from 'react';
 import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
+import Hyperlink from 'terra-hyperlink';
 
 <CenteredActionFooter
-  center={<a href="/link/to/somewhere">A link</a>}
+  center={<Hyperlink href="/link/to/somewhere">A link</Hyperlink>}
 />
 ```
 
@@ -21,13 +22,17 @@ import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
 import React from 'react';
 import Button from 'terra-button';
 import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
+import Hyperlink from 'terra-hyperlink';
+import Spacer from 'terra-spacer';
 
 <CenteredActionFooter
   center={
-    <div>
-      <Button text="First Action"/>
-      <Button text="Second Action"/>
-    </div>
+    <React.Fragment>
+      <Spacer isInlineBlock marginRight="medium">
+        <Button text="Action One" />
+      </Spacer>
+      <Button text="Action Two" />
+    </React.Fragment>
   }
 />
 ```
