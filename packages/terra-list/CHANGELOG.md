@@ -4,19 +4,19 @@ Changelog
 Unreleased
 ----------
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/guides)
-* Removed Component `SingleSelectList` - .
-* Removed Component `MultiSelectList` - .
-* Removed Component `SelectableList` - .
-* Removed Util `validatedMaxCount` - .
-* Removed Util `initialSingleSelectedIndex` - .
-* Removed Util `initialMultiSelectedIndexes` - .
-* Removed Util `shouldHandleMultiSelect` - .
-* Removed Util `shouldHandleSingleSelect` - .
-* Removed Util `newPropsForItem` - .
-* Added Component `ListSection` = .
-* Added Component `ListSubsection` = .
-* Added Component `ListSectionHeader` = .
-* Added Component `ListSubsectionHeader` = .
+* Removed Component `SingleSelectList` - No longer support this uncontrolled varaint of list.
+* Removed Component `MultiSelectList` - No longer support this uncontrolled variant of list.
+* Removed Component `SelectableList` - Removed to avoid the need for cloning child props.
+* Removed Util `validatedMaxCount`.
+* Removed Util `initialSingleSelectedIndex`.
+* Removed Util `initialMultiSelectedIndexes`.
+* Removed Util `shouldHandleMultiSelect`.
+* Removed Util `shouldHandleSingleSelect`.
+* Removed Util `newPropsForItem`.
+* Added Component `ListSection` - Collapsible and Static functionality implementing the ListSectionHeader.
+* Added Component `ListSubsection` - Collapsible and Static functionality implementing the ListSubsectionHeader.
+* Added Component `ListSectionHeader` - Section styled header.
+* Added Component `ListSubsectionHeader` - Subsection styled header.
 * Change from dot notation for ListItem and Utils access to individual exports for Item, Utils, SectionHeader, SubsectionHeader, Section, and Subsection.
 * Moved accessibility logic into the ListItem.
 
