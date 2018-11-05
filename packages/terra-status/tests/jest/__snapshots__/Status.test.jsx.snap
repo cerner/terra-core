@@ -10,7 +10,6 @@ exports[`should render a arrange with status and customProps 1`] = `
     }
   }
 >
-  <VisuallyHiddenText />
   <Arrange
     fill={
       <div>
@@ -43,7 +42,6 @@ exports[`should render a icon with status 1`] = `
     }
   }
 >
-  <VisuallyHiddenText />
   <svg
     fill="#8bc34a"
     height="100"
@@ -72,7 +70,6 @@ exports[`should render a image with status 1`] = `
     }
   }
 >
-  <VisuallyHiddenText />
   <img
     alt="placeholder"
     height="150"
@@ -96,7 +93,6 @@ exports[`should render a simpleText with status 1`] = `
     }
   }
 >
-  <VisuallyHiddenText />
   <div>
     Lorem labore et dolore magna aliqua.
   </div>
@@ -107,9 +103,6 @@ exports[`should render status with no style 1`] = `
 <div
   class="status"
 >
-  <span
-    class="visually-hidden-text"
-  />
   <div>
     Lorem labore et dolore magna aliqua.
   </div>
