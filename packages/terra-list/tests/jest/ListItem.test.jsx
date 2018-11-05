@@ -3,27 +3,36 @@ import ListItem from '../../src/ListItem';
 
 // Snapshot Tests
 it('should render with className', () => {
-  const item = shallow(<ListItem className="textClass" />);
-  expect(item).toMatchSnapshot();
+  const shallowComponent = shallow(<ListItem className="textClass" />);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with content', () => {
-  const textContent = <p>text</p>;
-  const item = shallow(<ListItem content={textContent} />);
-  expect(item).toMatchSnapshot();
+  const shallowComponent = shallow(<ListItem><p>text</p></ListItem>);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with selected', () => {
-  const item = shallow(<ListItem isSelected />);
-  expect(item).toMatchSnapshot();
+  const shallowComponent = shallow(<ListItem isSelected />);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should mount with isSelectable', () => {
-  const item = mount(<ListItem isSelectable />);
-  expect(item).toMatchSnapshot();
+it('should render with isSelectable', () => {
+  const shallowComponent = shallow(<ListItem isSelectable />);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should mount with isSelectable and hasChevron', () => {
-  const item = shallow(<ListItem isSelectable hasChevron content={<p>test</p>} />);
-  expect(item).toMatchSnapshot();
+it('should render with hasChevron', () => {
+  const shallowComponent = shallow(<ListItem hasChevron />);
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render with isDivided', () => {
+  const shallowComponent = shallow(<ListItem isDivided />);
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render with callback functions', () => {
+  const shallowComponent = shallow(<ListItem refCallback={jest.fn()} onSelect={jest.fn()} />);
+  expect(shallowComponent).toMatchSnapshot();
 });
