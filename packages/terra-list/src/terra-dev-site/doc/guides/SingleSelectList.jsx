@@ -16,9 +16,8 @@ class SingleSelectList extends React.Component {
   }
 
   handleItemSelection(event, metaData) {
-    if (Utils.shouldHandleSingleSelect(this.state.selectedKey, metaData.key)) {
-      event.preventDefault();
-
+    event.preventDefault();
+    if (this.state.selectedKey !== metaData.key) {
       this.setState({ selectedKey: metaData.key });
     }
   }

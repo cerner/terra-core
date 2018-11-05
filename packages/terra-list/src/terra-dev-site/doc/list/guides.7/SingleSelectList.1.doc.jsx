@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../../docs/ListSection.md';
+import ReadMe from '../../../../../docs/guides/SingleSelectList.md';
 import { name } from '../../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Example Files
-import MultiSelectList from '../../guides/MultiSelectList';
-import MultiSelectListSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/MultiSelectList';
+import SingleSelectList from '../../guides/SingleSelectList';
+import SingleSelectListSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/SingleSelectList';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -16,8 +16,8 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        example: <MultiSelectList />,
-        source: MultiSelectListSrc,
+        example: <SingleSelectList />,
+        source: SingleSelectListSrc,
       },
     ]}
   />

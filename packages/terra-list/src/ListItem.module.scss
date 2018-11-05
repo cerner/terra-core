@@ -63,6 +63,10 @@
 
     &[data-focusable='false']:focus {
       box-shadow: none !important;
+
+      &.selected:focus {
+        background-color: var(--terra-list-item-selected-background-color, darken(#ebf6fd, 2%)) !important;
+      }
     }
   }
 

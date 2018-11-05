@@ -18,11 +18,8 @@ class MutliSelectList extends React.Component {
   }
 
   handleItemSelection(event, metaData) {
-    if (Utils.shouldHandleMultiSelect(maxSectionCount, this.state.selectedKeys, metaData.key)) {
-      event.preventDefault();
-
-      this.setState(state => ({ selectedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
-    }
+    event.preventDefault();
+    this.setState(state => ({ selectedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
   }
 
   createListItem(itemData) {
@@ -30,7 +27,7 @@ class MutliSelectList extends React.Component {
       <Item
         key={itemData.key}
         isDivided
-        isSelectable={Utils.shouldBeMultiselectable(maxSectionCount, this.state.selectedKeys, itemData.key)}
+        isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, this.state.selectedKeys, itemData.key)}
         isSelected={this.state.selectedKeys.indexOf(itemData.key) >= 0}
         metaData={{ key: itemData.key }}
         onSelect={this.handleItemSelection}
@@ -45,11 +42,9 @@ class MutliSelectList extends React.Component {
   }
 
   render() {
-    const sections = this.createListItems(mockData);
-
     return (
       <List>
-        {sections}
+        {this.createListItems(mockData)}
       </List>
     );
   }

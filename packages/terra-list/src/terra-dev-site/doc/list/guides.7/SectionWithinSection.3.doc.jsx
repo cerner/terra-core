@@ -1,6 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../../docs/ListSection.md';
+import ReadMe from '../../../../../docs/guides/SectionWithinSection.md';
 import { name } from '../../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */

@@ -43,10 +43,10 @@ class SectionWithSubsection1 extends React.Component {
     return (
       <Section
         key={sectionData.key}
+        title={sectionData.title}
         isCollapsed={this.state.collapsedKeys.indexOf(sectionData.key) >= 0}
         isCollapsible
         metaData={{ key: sectionData.key }}
-        title={sectionData.title}
         onSelect={this.handleSectionSelection}
       >
         {sectionData.childItems.map(childItem => createSubsection(childItem))}
@@ -59,11 +59,9 @@ class SectionWithSubsection1 extends React.Component {
   }
 
   render() {
-    const sections = this.createSections(mockData);
-
     return (
       <List>
-        {sections}
+        {this.createSections(mockData)}
       </List>
     );
   }
