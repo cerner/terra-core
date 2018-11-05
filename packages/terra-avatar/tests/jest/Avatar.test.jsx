@@ -56,14 +56,26 @@ describe('Avatar', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render an avatar with initials and aria hidden set to true', () => {
+  it('should render an avatar with initials and aria hidden', () => {
     const avatar = <Avatar alt="multi-user" initials="JJ" isAriaHidden height="5em" width="5em" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render custom props', () => {
-    const avatar = <Avatar alt="user" style={{ color: 'purple' }} />;
+  it('should render an avatar with color variant seven', () => {
+    const avatar = <Avatar alt="multi-user" color="seven" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an isDeceased avatar', () => {
+    const avatar = <Avatar alt="multi-user" isDeceased />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an avatar with custom props', () => {
+    const avatar = <Avatar alt="user" id="custom props avatar" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });

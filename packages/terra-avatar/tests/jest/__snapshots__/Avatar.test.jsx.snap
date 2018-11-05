@@ -2,22 +2,63 @@
 
 exports[`Avatar should render a default avatar 1`] = `
 <div
-  alt="user"
   class="avatar one"
 >
   <span
     alt="user"
     aria-hidden="false"
     aria-label="user"
-    class="avatar-icon user"
+    class="icon user"
     role="img"
   />
 </div>
 `;
 
+exports[`Avatar should render an avatar with color variant seven 1`] = `
+<div
+  class="avatar seven"
+>
+  <span
+    alt="multi-user"
+    aria-hidden="false"
+    aria-label="multi-user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Avatar should render an avatar with custom props 1`] = `
+<div
+  class="avatar one"
+  id="custom props avatar"
+>
+  <span
+    alt="user"
+    aria-hidden="false"
+    aria-label="user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
+<div
+  class="avatar five"
+  style="width:5em;height:5em"
+>
+  <span
+    aria-hidden="true"
+    class="initials"
+  >
+    JJ
+  </span>
+</div>
+`;
+
 exports[`Avatar should render an avatar with provided height and width 1`] = `
 <div
-  alt="multi-user"
   class="avatar five"
   style="width:5em;height:5em"
 >
@@ -25,22 +66,21 @@ exports[`Avatar should render an avatar with provided height and width 1`] = `
     alt="multi-user"
     aria-hidden="false"
     aria-label="multi-user"
-    class="avatar-icon user"
+    class="icon user"
     role="img"
   />
 </div>
 `;
 
-exports[`Avatar should render custom props 1`] = `
+exports[`Avatar should render an isDeceased avatar 1`] = `
 <div
-  alt="user"
-  class="avatar one"
+  class="avatar five is-deceased"
 >
   <span
-    alt="user"
+    alt="multi-user"
     aria-hidden="false"
-    aria-label="user"
-    class="avatar-icon user"
+    aria-label="multi-user"
+    class="icon user"
     role="img"
   />
 </div>
@@ -48,7 +88,6 @@ exports[`Avatar should render custom props 1`] = `
 
 exports[`Avatar should render fallback user avatar when invalid image is passed in 1`] = `
 <div
-  alt="placeholder"
   class="avatar five"
 >
   <div>
@@ -57,7 +96,7 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
     >
       <img
         alt="placeholder"
-        class="image default avatar-image"
+        class="image default image"
         src="https://path/to/invalid_image.jpg"
       />
     </div>
@@ -66,7 +105,7 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
         alt="placeholder"
         aria-hidden="false"
         aria-label="placeholder"
-        class="avatar-icon user"
+        class="icon user"
         role="img"
       />
     </div>
@@ -76,14 +115,13 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
 
 exports[`Avatar should render fallback user avatar when more than two initials are passed in 1`] = `
 <div
-  alt="user"
   class="avatar one"
 >
   <span
     alt="user"
     aria-hidden="false"
     aria-label="user"
-    class="avatar-icon user"
+    class="icon user"
     role="img"
   />
 </div>
@@ -91,7 +129,6 @@ exports[`Avatar should render fallback user avatar when more than two initials a
 
 exports[`Avatar should render image avatar when image is passed in 1`] = `
 <div
-  alt="placeholder"
   class="avatar five"
 >
   <div>
@@ -100,7 +137,7 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
     >
       <img
         alt="placeholder"
-        class="image default avatar-image"
+        class="image default image"
         src="test-file-stub"
       />
     </div>
@@ -109,7 +146,7 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
         alt="placeholder"
         aria-hidden="false"
         aria-label="placeholder"
-        class="avatar-icon user"
+        class="icon user"
         role="img"
       />
     </div>
@@ -119,12 +156,11 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
 
 exports[`Avatar should render one initial avatar when one initial is passed in 1`] = `
 <div
-  alt="user"
   class="avatar one"
 >
   <span
     aria-hidden="false"
-    class="avatar-text"
+    class="initials"
   >
     J
   </span>
@@ -133,150 +169,13 @@ exports[`Avatar should render one initial avatar when one initial is passed in 1
 
 exports[`Avatar should render two initials avatar when two initials are passed in 1`] = `
 <div
-  alt="user"
   class="avatar one"
 >
   <span
     aria-hidden="false"
-    class="avatar-text"
+    class="initials"
   >
     JS
   </span>
-</div>
-`;
-
-exports[`Facility should render a default facility avatar 1`] = `
-<div
-  alt="facility"
-  class="avatar nine"
->
-  <span
-    alt="facility"
-    aria-hidden="false"
-    aria-label="facility"
-    class="avatar-icon facility"
-    role="img"
-  />
-</div>
-`;
-
-exports[`Facility should render a facility avatar with custom props 1`] = `
-<div
-  alt="facility"
-  class="avatar nine"
->
-  <span
-    alt="facility"
-    aria-hidden="false"
-    aria-label="facility"
-    class="avatar-icon facility"
-    role="img"
-  />
-</div>
-`;
-
-exports[`Facility should render fallback facility avatar when invalid image is passed in 1`] = `
-<div
-  alt="placeholder"
-  class="avatar five"
->
-  <div>
-    <div
-      class="hidden"
-    >
-      <img
-        alt="placeholder"
-        class="image default avatar-image"
-        src="https://path/to/invalid_image.jpg"
-      />
-    </div>
-    <div>
-      <span
-        alt="placeholder"
-        aria-hidden="false"
-        aria-label="placeholder"
-        class="avatar-icon facility"
-        role="img"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Facility should render fallback facility avatar when more than two initials are passed in 1`] = `
-<div
-  alt="facility"
-  class="avatar nine"
-  initials="JSP"
->
-  <span
-    alt="facility"
-    aria-hidden="false"
-    aria-label="facility"
-    class="avatar-icon facility"
-    role="img"
-  />
-</div>
-`;
-
-exports[`Facility should render with a facility avatar with provided height and width 1`] = `
-<div
-  alt="multi-user"
-  class="avatar five"
-  style="width:5em;height:5em"
->
-  <span
-    alt="multi-user"
-    aria-hidden="false"
-    aria-label="multi-user"
-    class="avatar-icon facility"
-    role="img"
-  />
-</div>
-`;
-
-exports[`MultiUser should render a default multi-user avatar 1`] = `
-<div
-  alt="multi-user"
-  class="avatar five"
->
-  <span
-    alt="multi-user"
-    aria-hidden="false"
-    aria-label="multi-user"
-    class="avatar-icon multi-user"
-    role="img"
-  />
-</div>
-`;
-
-exports[`MultiUser should render a multi user avatar with custom props 1`] = `
-<div
-  alt="multi-user"
-  class="avatar five"
->
-  <span
-    alt="multi-user"
-    aria-hidden="false"
-    aria-label="multi-user"
-    class="avatar-icon multi-user"
-    role="img"
-  />
-</div>
-`;
-
-exports[`MultiUser should render with a multi user with provided height and width 1`] = `
-<div
-  alt="multi-user"
-  class="avatar five"
-  style="width:5em;height:5em"
->
-  <span
-    alt="multi-user"
-    aria-hidden="false"
-    aria-label="multi-user"
-    class="avatar-icon multi-user"
-    role="img"
-  />
 </div>
 `;
