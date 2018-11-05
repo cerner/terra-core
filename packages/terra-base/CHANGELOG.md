@@ -3,9 +3,12 @@ Changelog
 
 Unreleased
 ----------
+<<<<<<< HEAD
 ### Added
 * data-terra-base attribute added to Base component
 
+=======
+>>>>>>> 3f07d070203796d623d5594badd825797f624168
 ### Changed
 * Restructured theme tests into a separate file
 
