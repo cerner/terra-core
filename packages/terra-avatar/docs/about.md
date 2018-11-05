@@ -1,6 +1,6 @@
 # About terra-avatar
 
-The `terra-avatar` package contains three components: `Avatar`, `Facility`, and `SharedUser`. View their respective documentation tabs for in depth information on accepted props and examples.
+The `terra-avatar` package contains three components: `Avatar`, `Facility`, and `SharedUser`. View their respective documentation tabs for information on accepted props and examples.
 
 ## Getting Started
 
