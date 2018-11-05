@@ -1,13 +1,12 @@
 ChangeLog
 =========
-### Changed
-* Restructured theme tests into a separate file
 
 Unreleased
 ----------
 ### Changed
 * Styling improvements
 * Component markup refactoring
+* Restructured theme tests into a separate file
 
 1.27.0 - (October 24, 2018)
 ------------------
