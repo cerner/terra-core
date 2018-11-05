@@ -8,8 +8,6 @@ describe('Action footer theme', () => {
   describe('Empty', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/empty-action-footer'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty(withoutActionsThemeables);
   });
 
