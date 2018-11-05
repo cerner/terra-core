@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.4.0 - (October 30, 2018)
+------------------
 ### Changed
 * Prevented text from reading one word at a time on screen readers
 

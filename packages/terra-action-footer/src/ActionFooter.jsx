@@ -29,15 +29,15 @@ const ActionFooter = ({
   ...customProps
 }) => {
   const actionFooterClassnames = cx([
-    'action-footer',
+    { 'action-footer': start },
+    { 'action-footer-end': !start },
     customProps.className,
   ]);
 
   return (
     <BlockActionFooter {...customProps} className={actionFooterClassnames}>
-      {start && <div className={cx('socket')}>{start}</div>}
-      {(start || end) && <div className={cx('empty-center')} />}
-      {end && <div className={cx('socket')}>{end}</div>}
+      {start && <div className={cx('start-actions')}>{start}</div>}
+      {end && <div className={cx('end-actions')}>{end}</div>}
     </BlockActionFooter>
   );
 };
