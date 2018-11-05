@@ -3,6 +3,22 @@ Changelog
 
 Unreleased
 ----------
+### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/guides)
+* Removed Component `SingleSelectList` - .
+* Removed Component `MultiSelectList` - .
+* Removed Component `SelectableList` - .
+* Removed Util `validatedMaxCount` - .
+* Removed Util `initialSingleSelectedIndex` - .
+* Removed Util `initialMultiSelectedIndexes` - .
+* Removed Util `shouldHandleMultiSelect` - .
+* Removed Util `shouldHandleSingleSelect` - .
+* Removed Util `newPropsForItem` - .
+* Added Component `ListSection` = .
+* Added Component `ListSubsection` = .
+* Added Component `ListSectionHeader` = .
+* Added Component `ListSubsectionHeader` = .
+* Change from dot notation for ListItem and Utils access to individual exports for Item, Utils, SectionHeader, SubsectionHeader, Section, and Subsection.
+* Moved accessibility logic into the ListItem.
 
 2.28.0 - (October 24, 2018)
 ------------------

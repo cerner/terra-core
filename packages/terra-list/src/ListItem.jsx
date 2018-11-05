@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
-import SelectableUtils from './ListUtils';
+import ListUtils from './ListUtils';
 import styles from './ListItem.module.scss';
 
 const cx = classNames.bind(styles);
@@ -81,13 +81,13 @@ const ListItem = ({
 
   const ariaSpread = {};
   if (isSelectable) {
-    ariaSpread.onClick = SelectableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-    ariaSpread.onKeyDown = SelectableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    ariaSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+    ariaSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     ariaSpread.tabIndex = '0';
     ariaSpread.role = 'option';
     ariaSpread['aria-selected'] = isSelected;
-    ariaSpread.onBlur = SelectableUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-focusable', 'true'));
-    ariaSpread.onMouseDown = SelectableUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-focusable', 'false'));
+    ariaSpread.onBlur = ListUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-focusable', 'true'));
+    ariaSpread.onMouseDown = ListUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-focusable', 'false'));
   }
 
   let childContent = children;
