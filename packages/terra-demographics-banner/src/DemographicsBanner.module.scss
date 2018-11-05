@@ -13,13 +13,17 @@
   }
 
   .value {
-    display: inline-flex;
+    display: inline-block;
     margin-right: var(--terra-demographics-banner-value-margin-right, 0.357em);
     margin-top: var(--terra-demographics-banner-value-margin-top);
 
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .value-text {
+    font-weight: var(--terra-demographics-banner-value-text-font-weight, bold);
   }
 
   .value-label {
@@ -60,6 +64,10 @@
     .profile-photo {
       opacity: var(--terra-demographics-banner-deceased-profile-photo-opacity, 0.7);
     }
+  }
+
+  .abbreviation {
+    text-decoration: none;
   }
 
   .row {

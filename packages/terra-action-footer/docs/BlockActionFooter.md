@@ -9,8 +9,10 @@ The terra-block-action-footer component is a footer bar that contains a single s
 ```jsx
 import React from 'react';
 import BlockActionFooter from 'terra-action-footer/lib/BlockActionFooter';
+import Hyperlink from 'terra-hyperlink';
 
 <BlockActionFooter>
+  <Hyperlink href="/link/to/somewhere">A link</Hyperlink>
   <a href="/link/to/somewhere">A link</a>
 </BlockActionFooter>
 ```
@@ -19,12 +21,15 @@ import BlockActionFooter from 'terra-action-footer/lib/BlockActionFooter';
 
 ```jsx
 import React from 'react';
-import Button from 'terra-button';
 import BlockActionFooter from 'terra-action-footer/lib/BlockActionFooter';
+import Button from 'terra-button';
+import Spacer from 'terra-spacer';
 
 <BlockActionFooter>
-  <Button text="First Action"/>
-  <Button text="Second Action"/>
+  <Spacer marginBottom="medium">
+    <Button isBlock text="First Action" />
+  </Spacer>
+  <Button isBlock text="Second Action" />
 </BlockActionFooter>
 ```
 
