@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const AvatarVariants = {
   USER: 'user',
   FACILITY: 'facility',
-  MULTIUSER: 'multi-user',
+  SHAREDUSER: 'shared-user',
 };
 
 const ColorVariants = [
@@ -107,9 +107,9 @@ const validateColor = (color) => {
  *   1. `color`
  *   2. Hash `hashValue` to generate color variant.
  *   3. Hash `alt`  to generate color variant. This is the fallback.
- * @param {*} hashValue
- * @param {*} color
  * @param {*} alt
+ * @param {*} color
+ * @param {*} hashValue
  */
 const setColor = (alt, color, hashValue) => {
   if (color === 'neutral' || (color !== 'auto' && validateColor(color))) {

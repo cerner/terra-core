@@ -74,7 +74,7 @@ exports[`Avatar should render an avatar with custom props 1`] = `
 exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
 <div
   class="avatar one"
-  style="width:5em;height:5em"
+  style="height:5em;width:5em"
 >
   <span
     aria-hidden="true"
@@ -88,7 +88,7 @@ exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
 exports[`Avatar should render an avatar with provided height and width 1`] = `
 <div
   class="avatar one"
-  style="width:5em;height:5em"
+  style="height:5em;width:5em"
 >
   <span
     alt="user"

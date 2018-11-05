@@ -1,6 +1,6 @@
 # Terra Avatar
 
-The `terra-avatar` package contains three components: `avatar`, `facility`, and `multi-user`. View their respective documentation tabs for in depth information on accepted props and examples.
+The `terra-avatar` package contains three components: `Avatar`, `Facility`, and `SharedUser`. View their respective documentation tabs for in depth information on accepted props and examples.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ The `terra-avatar` package contains three components: `avatar`, `facility`, and 
 
 ```jsx
 import React from 'react';
-import { Avatar, Facility, MultiUser } from 'terra-avatar';
+import { Avatar, Facility, SharedUser } from 'terra-avatar';
 
 <Avatar
   alt="User"
@@ -23,8 +23,8 @@ import { Avatar, Facility, MultiUser } from 'terra-avatar';
   image="https://path/to/image.jpg"
 />
 
-<MultiUser
-  alt="Multi-User"
+<SharedUser
+  alt="Shared-User"
 />
 ```
 

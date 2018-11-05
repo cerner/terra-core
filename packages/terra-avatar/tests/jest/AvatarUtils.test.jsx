@@ -1,4 +1,4 @@
-import AvatarUtils from '../../src/shared/AvatarUtils';
+import AvatarUtils from '../../src/common/AvatarUtils';
 
 const alt = 'User';
 const hashValue = 'sample hashValue';

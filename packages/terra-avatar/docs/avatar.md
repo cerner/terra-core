@@ -1,6 +1,6 @@
 # Avatar
 
-The avatar variant represents a person - it displays an image or initials in a circular frame. If neither are provided, a fallback user icon displays.
+The `Avatar` variant represents a person - it displays an image or initials in a circular frame. If neither are provided, a fallback user icon displays. The size scales based on its consuming component's `font-size`. To override this, utilize the `height` and `width` props.
 
 ## Getting Started
 

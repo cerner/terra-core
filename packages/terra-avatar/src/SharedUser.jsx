@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import Utils from './shared/AvatarUtils';
-import styles from './shared/Avatar.module.scss';
+import Utils from './common/AvatarUtils';
+import styles from './common/Avatar.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -61,11 +61,11 @@ const MultiUser = ({
     attributes.className,
   ]);
 
-  const multiUserIconClassNames = cx(['icon', Utils.AvatarVariants.MULTIUSER]);
+  const multiUserIconClassNames = cx(['icon', Utils.AvatarVariants.SHAREDUSER]);
   const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
   return (
-    <div {...attributes} className={multiUserClassNames} style={{ width, height }}>
+    <div {...attributes} className={multiUserClassNames} style={{ height, width }}>
       {multiUserContent}
     </div>
   );

@@ -1,6 +1,6 @@
-# MultiUser
+# Shared User
 
-The multi-user variant represents multiple users - it displays a multi-user icon in a circular frame.
+The `Shared User` variant represents multiple users - it displays a shared user icon in a circular frame. The size scales based on its consuming component's `font-size`. To override this, utilize the `height` and `width` props.
 
 ## Getting Started
 
@@ -11,10 +11,10 @@ The multi-user variant represents multiple users - it displays a multi-user icon
 
 ```jsx
 import React from 'react';
-import { MultiUser } from 'terra-avatar';
+import { SharedUser } from 'terra-avatar';
 
-<MultiUser
-  alt="Group Chat"
+<SharedUser
+  alt="shared users"
 />
 ```
 

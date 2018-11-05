@@ -7,8 +7,12 @@ import { name } from '../../../../package.json';
 // Component Source
 import FacilitySrc from '!raw-loader!../../../../src/Facility.jsx';
 
-import AvatarFacility from '../example/AvatarFacility';
-import AvatarFacilitySrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarFacility';
+import Facility from '../example/facility/Facility';
+import FacilityExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/Facility';
+import FacilityImage from '../example/facility/FacilityImage';
+import FacilityImageSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/FacilityImage';
+import FacilitySize from '../example/facility/FacilitySize';
+import FacilitySizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/FacilitySize';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -18,14 +22,24 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Facility',
-        example: <AvatarFacility />,
-        source: AvatarFacilitySrc,
+        title: 'Default - Fallback Icon',
+        example: <Facility />,
+        source: FacilityExampleSrc,
+      },
+      {
+        title: 'Image',
+        example: <FacilityImage />,
+        source: FacilityImageSrc,
+      },
+      {
+        title: 'Override Size',
+        example: <FacilitySize />,
+        source: FacilitySizeSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'Avatar',
+        componentName: 'Facility',
         componentSrc: FacilitySrc,
       },
     ]}

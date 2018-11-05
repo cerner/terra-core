@@ -1,12 +1,12 @@
 import Avatar from './Avatar';
 import Facility from './Facility';
-import MultiUser from './MultiUser';
+import SharedUser from './SharedUser';
 
 const AvatarVariants = {
   Avatar,
   Facility,
-  MultiUser,
+  SharedUser,
 };
 
 export default AvatarVariants;
-export { Avatar, Facility, MultiUser };
+export { Avatar, Facility, SharedUser };

@@ -8,16 +8,16 @@ import { name } from '../../../../package.json';
 import AvatarSrc from '!raw-loader!../../../../src/Avatar.jsx';
 
 // Example Files
-import AvatarUser from '../example/AvatarUser';
-import AvatarUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarUser';
-import AvatarOneInitial from '../example/AvatarOneInitial';
-import AvatarOneInitialSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarOneInitial';
-import AvatarTwoInitials from '../example/AvatarTwoInitials';
-import AvatarTwoInitialsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarTwoInitials';
-import AvatarImage from '../example/AvatarImage';
-import AvatarImageSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarImage';
-import AvatarSize from '../example/AvatarSize';
-import AvatarSizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AvatarSize';
+import AvatarUser from '../example/avatar/AvatarUser';
+import AvatarUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarUser';
+import AvatarOneInitial from '../example/avatar/AvatarOneInitial';
+import AvatarOneInitialSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarOneInitial';
+import AvatarTwoInitials from '../example/avatar/AvatarTwoInitials';
+import AvatarTwoInitialsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarTwoInitials';
+import AvatarImage from '../example/avatar/AvatarImage';
+import AvatarImageSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarImage';
+import AvatarSize from '../example/avatar/AvatarSize';
+import AvatarSizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarSize';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -27,7 +27,7 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'User',
+        title: 'Default - Fallback Icon',
         example: <AvatarUser />,
         source: AvatarUserSrc,
       },
@@ -47,7 +47,7 @@ const DocPage = () => (
         source: AvatarImageSrc,
       },
       {
-        title: 'Size',
+        title: 'Override Size',
         example: <AvatarSize />,
         source: AvatarSizeSrc,
       },
