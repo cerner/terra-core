@@ -51,25 +51,37 @@ describe('Avatar', () => {
 
 
   it('should render an avatar with provided height and width', () => {
-    const avatar = <Avatar alt="multi-user" height="5em" width="5em" />;
+    const avatar = <Avatar alt="user" height="5em" width="5em" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an avatar with initials and aria hidden', () => {
-    const avatar = <Avatar alt="multi-user" initials="JJ" isAriaHidden height="5em" width="5em" />;
+    const avatar = <Avatar alt="user" initials="JJ" isAriaHidden height="5em" width="5em" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render an avatar with color variant seven', () => {
-    const avatar = <Avatar alt="multi-user" color="seven" />;
+  it('should render an avatar with color variant one', () => {
+    const avatar = <Avatar alt="user" color="one" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an avatar with color variant netural', () => {
+    const avatar = <Avatar alt="user" color="neutral" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an avatar with an automated color variant, based on a hashValue', () => {
+    const avatar = <Avatar alt="user" hashValue="alternative hash" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an isDeceased avatar', () => {
-    const avatar = <Avatar alt="multi-user" isDeceased />;
+    const avatar = <Avatar alt="user" isDeceased />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });

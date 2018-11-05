@@ -33,8 +33,20 @@ describe('Facility', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a facility avatar with color variant seven', () => {
-    const avatar = <Facility alt="London" color="seven" />;
+  it('should render a facility avatar with color variant one', () => {
+    const avatar = <Facility alt="London" color="one" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an avatar with color variant netural', () => {
+    const avatar = <Facility alt="London" color="neutral" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an avatar with an automated color variant, based on a hashValue', () => {
+    const avatar = <Facility alt="London" hashValue="alternative hash" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });

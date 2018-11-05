@@ -28,9 +28,9 @@ exports[`Facility should render a facility avatar with aria hidden 1`] = `
 </div>
 `;
 
-exports[`Facility should render a facility avatar with color variant seven 1`] = `
+exports[`Facility should render a facility avatar with color variant one 1`] = `
 <div
-  class="avatar seven"
+  class="avatar one"
 >
   <span
     alt="London"
@@ -46,6 +46,34 @@ exports[`Facility should render a facility avatar with custom props 1`] = `
 <div
   class="avatar five"
   id="custom props facility"
+>
+  <span
+    alt="London"
+    aria-hidden="false"
+    aria-label="London"
+    class="icon facility"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Facility should render an avatar with an automated color variant, based on a hashValue 1`] = `
+<div
+  class="avatar two"
+>
+  <span
+    alt="London"
+    aria-hidden="false"
+    aria-label="London"
+    class="icon facility"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Facility should render an avatar with color variant netural 1`] = `
+<div
+  class="avatar neutral"
 >
   <span
     alt="London"

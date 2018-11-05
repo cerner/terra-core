@@ -20,8 +20,20 @@ describe('MultiUser', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a facility avatar with color variant seven', () => {
-    const avatar = <MultiUser alt="multi-user" color="seven" />;
+  it('should render a facility avatar with color variant one', () => {
+    const avatar = <MultiUser alt="multi-user" color="one" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an avatar with color variant neutral', () => {
+    const avatar = <MultiUser alt="multi-user" color="neutral" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an avatar with an automated color variant, based on a hashValue', () => {
+    const avatar = <MultiUser alt="multi-user" hashValue="alternative hash" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });

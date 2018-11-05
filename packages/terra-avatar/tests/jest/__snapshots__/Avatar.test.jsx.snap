@@ -14,14 +14,42 @@ exports[`Avatar should render a default avatar 1`] = `
 </div>
 `;
 
-exports[`Avatar should render an avatar with color variant seven 1`] = `
+exports[`Avatar should render an avatar with an automated color variant, based on a hashValue 1`] = `
 <div
-  class="avatar seven"
+  class="avatar two"
 >
   <span
-    alt="multi-user"
+    alt="user"
     aria-hidden="false"
-    aria-label="multi-user"
+    aria-label="user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Avatar should render an avatar with color variant netural 1`] = `
+<div
+  class="avatar neutral"
+>
+  <span
+    alt="user"
+    aria-hidden="false"
+    aria-label="user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Avatar should render an avatar with color variant one 1`] = `
+<div
+  class="avatar one"
+>
+  <span
+    alt="user"
+    aria-hidden="false"
+    aria-label="user"
     class="icon user"
     role="img"
   />
@@ -45,7 +73,7 @@ exports[`Avatar should render an avatar with custom props 1`] = `
 
 exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
 <div
-  class="avatar five"
+  class="avatar one"
   style="width:5em;height:5em"
 >
   <span
@@ -59,13 +87,13 @@ exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
 
 exports[`Avatar should render an avatar with provided height and width 1`] = `
 <div
-  class="avatar five"
+  class="avatar one"
   style="width:5em;height:5em"
 >
   <span
-    alt="multi-user"
+    alt="user"
     aria-hidden="false"
-    aria-label="multi-user"
+    aria-label="user"
     class="icon user"
     role="img"
   />
@@ -74,12 +102,12 @@ exports[`Avatar should render an avatar with provided height and width 1`] = `
 
 exports[`Avatar should render an isDeceased avatar 1`] = `
 <div
-  class="avatar five is-deceased"
+  class="avatar one is-deceased"
 >
   <span
-    alt="multi-user"
+    alt="user"
     aria-hidden="false"
-    aria-label="multi-user"
+    aria-label="user"
     class="icon user"
     role="img"
   />

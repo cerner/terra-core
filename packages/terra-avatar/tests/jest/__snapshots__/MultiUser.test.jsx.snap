@@ -28,9 +28,9 @@ exports[`MultiUser should render a facility avatar with aria hidden 1`] = `
 </div>
 `;
 
-exports[`MultiUser should render a facility avatar with color variant seven 1`] = `
+exports[`MultiUser should render a facility avatar with color variant one 1`] = `
 <div
-  class="avatar seven"
+  class="avatar one"
 >
   <span
     alt="multi-user"
@@ -46,6 +46,34 @@ exports[`MultiUser should render a multi user avatar with custom props 1`] = `
 <div
   class="avatar five"
   id="custom props multi user"
+>
+  <span
+    alt="multi-user"
+    aria-hidden="false"
+    aria-label="multi-user"
+    class="icon multi-user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`MultiUser should render an avatar with an automated color variant, based on a hashValue 1`] = `
+<div
+  class="avatar two"
+>
+  <span
+    alt="multi-user"
+    aria-hidden="false"
+    aria-label="multi-user"
+    class="icon multi-user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`MultiUser should render an avatar with color variant neutral 1`] = `
+<div
+  class="avatar neutral"
 >
   <span
     alt="multi-user"
