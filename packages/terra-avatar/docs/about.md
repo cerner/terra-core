@@ -1,4 +1,4 @@
-# Terra Avatar
+# About terra-avatar
 
 The `terra-avatar` package contains three components: `Avatar`, `Facility`, and `SharedUser`. View their respective documentation tabs for in depth information on accepted props and examples.
 

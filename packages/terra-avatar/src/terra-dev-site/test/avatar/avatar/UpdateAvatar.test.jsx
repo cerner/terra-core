@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '../../../../AvatarVariants';
+import { Avatar } from '../../../../Avatar';
 import exampleAvatarImage from '../../../assets/150x150.jpg';
 import exampleAvatarImage2 from '../../../assets/163x40.png';
 
@@ -78,7 +78,6 @@ class UpdateAvatar extends React.Component {
         <br />
         <button type="button" onClick={this.altButtonHandle} id="alt">Alt Text</button>
         <button type="button" onClick={this.imageButtonHandle} id="image">Image</button>
-        <button type="button" onClick={this.variantButtonHandle} id="variant">Variant</button>
         <button type="button" onClick={this.initialsButtonHandle} id="initials">Initials</button>
         <button type="button" onClick={this.idButtonHandle} id="id">Custom Prop (id)</button>
         <br />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facility } from '../../src/AvatarVariants';
+import Facility from '../../src/variants/Facility';
 import exampleProfilePhoto from '../../src/terra-dev-site/assets/150x150.jpg';
 
 describe('Facility', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '../../src/AvatarVariants';
+import Avatar from '../../src/variants/Avatar';
 import exampleProfilePhoto from '../../src/terra-dev-site/assets/150x150.jpg';
 
 describe('Avatar', () => {

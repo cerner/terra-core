@@ -1,5 +1,5 @@
 import React from 'react';
-import { SharedUser } from '../../src/AvatarVariants';
+import SharedUser from '../../src/variants/SharedUser';
 
 describe('SharedUser', () => {
   it('should render a default shared-user avatar', () => {
