@@ -87,7 +87,7 @@ exports[`Facility should render an avatar with color variant netural 1`] = `
 
 exports[`Facility should render fallback facility avatar when invalid image is passed in 1`] = `
 <div
-  class="avatar five"
+  class="avatar"
 >
   <div>
     <div
@@ -114,7 +114,7 @@ exports[`Facility should render fallback facility avatar when invalid image is p
 
 exports[`Facility should render image facility avatar when image is passed in 1`] = `
 <div
-  class="avatar five"
+  class="avatar"
 >
   <div>
     <div
