@@ -13,8 +13,8 @@ const propTypes = {
    */
   alt: PropTypes.string.isRequired,
   /**
-   * Sets the background color. Defaults to `auto`. Color variants are theme specific.
-   * Accepted values: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
+   * Sets the background color. Defaults to `auto`. Accepted color variants are theme specific.
+   * One of: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
    */
   color: PropTypes.oneOf(['auto', 'neutral', 'one', 'two', 'three', 'four',
     'five', 'six', 'seven', 'eight', 'nine', 'ten']),
@@ -61,7 +61,7 @@ const MultiUser = ({
     attributes.className,
   ]);
 
-  const multiUserIconClassNames = cx(['icon', Utils.AvatarVariants.SHAREDUSER]);
+  const multiUserIconClassNames = cx(['icon', Utils.AVATAR_VARIANTS.SHARED_USER]);
   const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
   return (

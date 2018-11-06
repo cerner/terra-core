@@ -13,8 +13,8 @@ const propTypes = {
    */
   alt: PropTypes.string.isRequired,
   /**
-   * Sets the background color. Defaults to `auto`. Color variants are theme specific.
-   * Accepted values: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
+   * Sets the background color. Defaults to `auto`. Accepted color variants are theme specific.
+   * One of: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
    */
   color: PropTypes.oneOf(['auto', 'neutral', 'one', 'two', 'three', 'four',
     'five', 'six', 'seven', 'eight', 'nine', 'ten']),
@@ -39,7 +39,7 @@ const propTypes = {
    */
   isAriaHidden: PropTypes.bool,
   /**
-   * Whether the person is desceased.
+   * Whether the person is deceased. Overrides any color variant.
    */
   isDeceased: PropTypes.bool,
   /**
@@ -67,7 +67,7 @@ class Avatar extends React.Component {
     if (props.image) {
       const { alt, image, isAriaHidden } = props;
 
-      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AvatarVariants.USER);
+      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
       this.state = { imageComponent };
     }
 
@@ -85,7 +85,7 @@ class Avatar extends React.Component {
     if (newProps.image && (newProps.image !== this.props.image || newProps.alt !== this.props.alt || newProps.isAriaHidden !== this.props.isAriaHidden)) {
       const { alt, image, isAriaHidden } = newProps;
 
-      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AvatarVariants.USER);
+      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
       this.setState({ imageComponent });
     }
   }
@@ -115,7 +115,7 @@ class Avatar extends React.Component {
       avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
     } else {
       colorVariant = Utils.setColor(alt, color, hashValue);
-      avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.USER);
+      avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
     }
 
     const attributes = Object.assign({}, customProps);

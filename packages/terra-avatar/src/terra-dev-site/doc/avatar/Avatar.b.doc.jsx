@@ -16,6 +16,8 @@ import AvatarTwoInitials from '../example/avatar/AvatarTwoInitials';
 import AvatarTwoInitialsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarTwoInitials';
 import AvatarImage from '../example/avatar/AvatarImage';
 import AvatarImageSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarImage';
+import AvatarIsDeceased from '../example/avatar/AvatarIsDeceased';
+import AvatarIsDeceasedSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarIsDeceased';
 import AvatarSize from '../example/avatar/AvatarSize';
 import AvatarSizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarSize';
 import AvatarColorVariants from '../example/avatar/AvatarColorVariants';
@@ -42,6 +44,11 @@ const DocPage = () => (
         title: 'Initials (2)',
         example: <AvatarTwoInitials />,
         source: AvatarTwoInitialsSrc,
+      },
+      {
+        title: 'Is Deceased',
+        example: <AvatarIsDeceased />,
+        source: AvatarIsDeceasedSrc,
       },
       {
         title: 'Image',

@@ -11,17 +11,12 @@ describe('Avatar', () => {
 
     Terra.should.beAccessible({ selector: '#image-avatar' });
     Terra.should.matchScreenshot({ selector: '#image-avatar' });
-
-    // it('Expect image avatar to have image class', () => {
-    //   expect(browser.getAttribute('#image-avatar', 'class')).contains('avatar');
-    // });
   });
 
   describe('Image Spacing', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/image-gap'));
     Terra.should.matchScreenshot();
   });
-
 
   describe('One Initial', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/one-initial-avatar'));
@@ -37,20 +32,42 @@ describe('Avatar', () => {
     Terra.should.matchScreenshot({ selector: '#two-initials-avatar' });
   });
 
-  describe('Color Variant', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/color-variant-avatar'));
-
-    Terra.should.beAccessible({ selector: '#color-variant-avatar' });
-    Terra.should.matchScreenshot({ selector: '#color-variant-avatar' });
-
-    // it('Expect color variant avatar to have variant class', () => {
-    //   expect(browser.getAttribute('#color-variant-avatar', 'class')).contains('three');
-    // });
-  });
   describe('IsDeceased', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/is-deceased-avatar'));
 
     Terra.should.beAccessible({ selector: '#is-deceased-avatar' });
     Terra.should.matchScreenshot({ selector: '#is-deceased-avatar' });
+  });
+
+  describe('IsDeceased Image', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/is-deceased-image-avatar'));
+
+    Terra.should.beAccessible({ selector: '#is-deceased-image-avatar' });
+    Terra.should.matchScreenshot({ selector: '#is-deceased-image-avatar' });
+  });
+});
+
+describe('Facility', () => {
+  describe('Default', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/facility/default-facility'));
+
+    Terra.should.beAccessible({ selector: '#default-facility' });
+    Terra.should.matchScreenshot({ selector: '#default-facility' });
+  });
+
+  describe('Image', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/facility/image-facility'));
+
+    Terra.should.beAccessible({ selector: '#image-facility' });
+    Terra.should.matchScreenshot({ selector: '#image-facility' });
+  });
+});
+
+describe('Shared User', () => {
+  describe('Default', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/shared-user/shared-user'));
+
+    Terra.should.beAccessible({ selector: '#shared-user' });
+    Terra.should.matchScreenshot({ selector: '#shared-user' });
   });
 });

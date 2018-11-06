@@ -5,13 +5,13 @@ import styles from './Avatar.module.scss';
 
 const cx = classNames.bind(styles);
 
-const AvatarVariants = {
+const AVATAR_VARIANTS = {
   USER: 'user',
   FACILITY: 'facility',
-  SHAREDUSER: 'shared-user',
+  SHARED_USER: 'shared-user',
 };
 
-const ColorVariants = [
+const COLOR_VARIANTS = [
   'one',
   'two',
   'three',
@@ -54,9 +54,9 @@ const calculateHash = (s) => {
  */
 const getColorVariant = (hashValue) => {
   const hash = calculateHash(hashValue);
-  const size = ColorVariants.length - 1;
+  const size = COLOR_VARIANTS.length - 1;
   const index = hash % size;
-  return ColorVariants[index];
+  return COLOR_VARIANTS[index];
 };
 
 /**
@@ -86,7 +86,7 @@ const generateImage = (image, alt, isAriaHidden, variant) => {
 
 
 /**
- * Returns true if the given color exists within `ColorVariants`.
+ * Returns true if the given color exists within `COLOR_VARIANTS`.
  * @param {*} color
  */
 const validateColor = (color) => {
@@ -94,8 +94,8 @@ const validateColor = (color) => {
     return false;
   }
 
-  for (let i = 0; i < ColorVariants.length; i += 1) {
-    if (color === ColorVariants[i]) {
+  for (let i = 0; i < COLOR_VARIANTS.length; i += 1) {
+    if (color === COLOR_VARIANTS[i]) {
       return true;
     }
   }
@@ -124,8 +124,8 @@ const setColor = (alt, color, hashValue) => {
 };
 
 const Utils = {
-  AvatarVariants,
-  ColorVariants,
+  AVATAR_VARIANTS,
+  COLOR_VARIANTS,
   calculateHash,
   getColorVariant,
   generateImagePlaceholder,
