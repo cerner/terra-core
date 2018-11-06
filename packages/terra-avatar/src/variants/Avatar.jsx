@@ -104,7 +104,20 @@ class Avatar extends React.Component {
       ...customProps
     } = this.props;
 
-    const colorVariant = Utils.setColor(alt, color, hashValue);
+    let colorVariant;
+    let avatarContent;
+    if (image) {
+      colorVariant = '';
+      avatarContent = this.state.imageComponent;
+    } else if (initials && (initials.length === 1 || initials.length === 2)) {
+      colorVariant = Utils.setColor(alt, color, hashValue);
+      const avatarTextClassNames = cx('initials');
+      avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
+    } else {
+      colorVariant = Utils.setColor(alt, color, hashValue);
+      avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.USER);
+    }
+
     const attributes = Object.assign({}, customProps);
     const avatarClassNames = cx([
       'avatar',
@@ -112,16 +125,6 @@ class Avatar extends React.Component {
       { 'is-deceased': isDeceased },
       attributes.className,
     ]);
-
-    let avatarContent;
-    if (image) {
-      avatarContent = this.state.imageComponent;
-    } else if (initials && (initials.length === 1 || initials.length === 2)) {
-      const avatarTextClassNames = cx('initials');
-      avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
-    } else {
-      avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AvatarVariants.USER);
-    }
 
     return (
       <div {...attributes} className={avatarClassNames} style={{ height, width }}>

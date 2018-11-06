@@ -18,6 +18,8 @@ import AvatarImage from '../example/avatar/AvatarImage';
 import AvatarImageSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarImage';
 import AvatarSize from '../example/avatar/AvatarSize';
 import AvatarSizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarSize';
+import AvatarColorVariants from '../example/avatar/AvatarColorVariants';
+import AvatarColorVariantsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarColorVariants';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -50,6 +52,11 @@ const DocPage = () => (
         title: 'Override Size',
         example: <AvatarSize />,
         source: AvatarSizeSrc,
+      },
+      {
+        title: 'Toggle Color Variants',
+        example: <AvatarColorVariants />,
+        source: AvatarColorVariantsSrc,
       },
     ]}
     propsTables={[

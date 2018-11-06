@@ -19,68 +19,212 @@
   }
 
   // Addresses https://github.com/cerner/terra-core/issues/1845
-  .avatar::after {
-    border-radius: 50%;
-    box-shadow: var(--terra-avatar-image-after-box-shadow);
-    content: '';
-    display: block;
-    height: var(--terra-avatar-after-height, 100%);
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: var(--terra-avatar-after-width, 100%);
-  }
+  // .avatar::after {
+  //   border-radius: 50%;
+  //   box-shadow: var(--terra-avatar-after-box-shadow);
+  //   content: '';
+  //   display: block;
+  //   height: 100%;
+  //   left: 0;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100%;
+  // }
 
   .avatar.neutral {
-    background-color: var(--terra-avatar-neutral-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-neutral-background-color, #0092e0);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-netural-after-box-shadow, inset 0 0 0 2px #0092e0);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-neutral-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-netural-after-width, 100%);
+    }
   }
 
   .avatar.one {
-    background-color: var(--terra-avatar-one-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-one-background-color, #0092e0);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-one-after-box-shadow, inset 0 0 0 2px #0092e0);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-one-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-one-after-width, 100%);
+    }
   }
 
   .avatar.two {
-    background-color: var(--terra-avatar-two-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-two-background-color, #0065a3);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-two-after-box-shadow, inset 0 0 0 2px #0065a3);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-two-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-two-after-width, 100%);
+    }
   }
 
   .avatar.three {
-    background-color: var(--terra-avatar-three-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-three-background-color, #5c9a32);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-three-after-box-shadow, inset 0 0 0 2px #5c9a32);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-three-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-three-after-width, 100%);
+    }
   }
 
   .avatar.four {
-    background-color: var(--terra-avatar-four-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-four-background-color, #406c23);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-four-after-box-shadow, inset 0 0 0 2px #406c23);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-four-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-four-after-width, 100%);
+    }
   }
 
   .avatar.five {
-    background-color: var(--terra-avatar-five-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-five-background-color, #f76e00);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-five-after-box-shadow, inset 0 0 0 2px #f76e00);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-five-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-five-after-width, 100%);
+    }
   }
 
   .avatar.six {
-    background-color: var(--terra-avatar-six-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-six-background-color, #e34c02);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-six-after-box-shadow, inset 0 0 0 2px #e34c02);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-six-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-six-after-width, 100%);
+    }
   }
 
   .avatar.seven {
-    background-color: var(--terra-avatar-seven-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-seven-background-color, #b400dc);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-seven-after-box-shadow, inset 0 0 0 2px #b400dc);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-seven-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-seven-after-width, 100%);
+    }
   }
 
   .avatar.eight {
-    background-color: var(--terra-avatar-eight-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-eight-background-color, #7f00a2);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-eight-after-box-shadow, inset 0 0 0 2px #7f00a2);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-eight-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-eight-after-width, 100%);
+    }
   }
 
   .avatar.nine {
-    background-color: var(--terra-avatar-nine-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-nine-background-color, #0092e0);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-nine-after-box-shadow, inset 0 0 0 2px #0092e0);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-nine-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-nine-after-width, 100%);
+    }
   }
 
   .avatar.ten {
-    background-color: var(--terra-avatar-ten-background-color, rgb(222, 223, 224));
+    background-color: var(--terra-avatar-ten-background-color, #0065a3);
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-ten-after-box-shadow, inset 0 0 0 2px #0065a3);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-ten-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-ten-after-width, 100%);
+    }
   }
 
   .avatar.is-deceased {
-    background-color: var(--terra-avatar-is-deceased-background-color);
-  }
+    background-color: var(--terra-avatar-is-deceased-background-color, #64696c);
 
-  .avatar.is-deceased > .image {
-    opacity: var(--terra-avatar-image-is-deceased-opacity);
+    > .image {
+      opacity: var(--terra-avatar-image-is-deceased-opacity, 0.4);
+    }
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-is-deceased-after-box-shadow, inset 0 0 0 2px #64696c);
+      content: '';
+      display: block;
+      height: var(--terra-avatar-is-deceased-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-is-deceased-after-width, 100%);
+    }
   }
 
   .avatar > .icon {
@@ -115,6 +259,18 @@
     border-radius: 50%;
     height: 100%;
     width: 100%;
+
+    &::after{
+      border-radius: 50%;
+      box-shadow: var(--terra-avatar-image-after-box-shadow, inset 0 1px 3px 0 rgba(17, 22, 25, 0.3));
+      content: '';
+      display: block;
+      height: var(--terra-avatar-image-after-height, 100%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: var(--terra-avatar-image-after-width, 100%);
+    }
   }
 
   .avatar > .initials {

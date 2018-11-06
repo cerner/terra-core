@@ -13,6 +13,8 @@ import FacilityImage from '../example/facility/FacilityImage';
 import FacilityImageSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/FacilityImage';
 import FacilitySize from '../example/facility/FacilitySize';
 import FacilitySizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/FacilitySize';
+import FacilityColorVariants from '../example/facility/FacilityColorVariants';
+import FacilityColorVariantsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/FacilityColorVariants';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -35,6 +37,11 @@ const DocPage = () => (
         title: 'Override Size',
         example: <FacilitySize />,
         source: FacilitySizeSrc,
+      },
+      {
+        title: 'Toggle Color Variants',
+        example: <FacilityColorVariants />,
+        source: FacilityColorVariantsSrc,
       },
     ]}
     propsTables={[
