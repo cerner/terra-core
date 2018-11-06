@@ -7,7 +7,7 @@ import placeholderPic150x150 from 'terra-status/lib/terra-dev-site/doc/example/1
 const image = <img style={{ display: 'block' }} height="150" width="150" src={placeholderPic150x150} alt="placeholder" />;
 
 const StatusImage = () => (
-  <Status color="#ff0000">{image}</Status>
+  <Status color="#ff0000" visuallyHiddenText="Status High">{image}</Status>
 );
 
 export default StatusImage;
