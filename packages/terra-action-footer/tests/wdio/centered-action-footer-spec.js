@@ -1,13 +1,6 @@
 const { viewports } = require('./common');
 
 describe('CenteredActionFooter', () => {
-  describe('Empty', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/empty-centered-action-footer'));
-
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
-  });
-
   describe('Multiple Actions', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-action-centered-action-footer'));
 
