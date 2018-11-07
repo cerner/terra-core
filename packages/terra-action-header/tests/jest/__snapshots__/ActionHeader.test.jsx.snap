@@ -256,6 +256,7 @@ exports[`ActionHeader should render an action header with next and previous butt
       className="left-buttons"
     >
       <ButtonGroup
+        isBlock={false}
         selectedKeys={Array []}
       >
         <ButtonGroupButton
@@ -303,6 +304,7 @@ exports[`ActionHeader should render an action header with title, enabled next bu
       className="left-buttons"
     >
       <ButtonGroup
+        isBlock={false}
         selectedKeys={Array []}
       >
         <ButtonGroupButton
@@ -340,6 +342,7 @@ exports[`ActionHeader should render an action header with title, enabled previou
       className="left-buttons"
     >
       <ButtonGroup
+        isBlock={false}
         selectedKeys={Array []}
       >
         <ButtonGroupButton

@@ -43,6 +43,10 @@ const propTypes = {
   */
   isRelativeToContainer: PropTypes.bool,
   /**
+   * Allows assigning of root element custom data attribute for easy selecting.
+   */
+  rootSelector: PropTypes.string,
+  /**
   * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are '100', '6000', '7000', '8000', or '9000'.
   */
   zIndex: PropTypes.oneOf(zIndexes),
@@ -59,6 +63,7 @@ const defaultProps = {
   isScrollable: false,
   isRelativeToContainer: false,
   onRequestClose: undefined,
+  rootSelector: '[data-terra-base]',
   zIndex: '100',
 };
 
@@ -79,20 +84,23 @@ class Overlay extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.shouldHandleESCKeydown);
-    this.resetBeforeOverlay();
+    this.resetBeforeOverlay(this.props.rootSelector);
   }
 
   setContainer(node) {
     if (!node) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
     this.overflow = document.documentElement.style.overflow;
+    const selector = this.props.rootSelector;
 
     if (this.props.isRelativeToContainer) {
       this.container = node.parentNode;
       this.containerChildren = this.container.children;
       this.disableContainerChildrenFocus();
+      this.containerChildren[0].focus();
     } else {
       document.documentElement.style.overflow = 'hidden';
       this.container = null;
+      if (document.querySelector(selector)) document.querySelector(selector).setAttribute('aria-hidden', 'true'); // prevent screen reader from moving to hidden content
     }
   }
 
@@ -134,8 +142,11 @@ class Overlay extends React.Component {
     }
   }
 
-  resetBeforeOverlay() {
+  resetBeforeOverlay(selector) {
     document.documentElement.style.overflow = this.overflow;
+    if (document.querySelector(selector)) {
+      document.querySelector(selector).setAttribute('aria-hidden', 'false');
+    }
     if (this.props.isRelativeToContainer) {
       this.enableContainerChildrenFocus();
     }
@@ -143,12 +154,12 @@ class Overlay extends React.Component {
 
   render() {
     const {
-      children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, zIndex, ...customProps
+      children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, rootSelector, zIndex, ...customProps
     } = this.props;
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
-      this.resetBeforeOverlay();
+      this.resetBeforeOverlay(rootSelector);
       return null;
     }
 

@@ -87,14 +87,14 @@ class Base extends React.Component {
 
     if (locale === undefined) {
       return (
-        <div {...customProps}>
+        <div {...customProps} data-terra-base>
           {renderChildren}
         </div>);
     }
 
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
-      <I18nProvider {...customProps} locale={this.state.locale} messages={messages}>
+      <I18nProvider {...customProps} locale={this.state.locale} messages={messages} data-terra-base>
         {renderChildren}
       </I18nProvider>
     );
