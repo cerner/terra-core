@@ -4,24 +4,24 @@ import List, {
   SubsectionHeader,
 } from 'terra-list/lib/List';
 
-const ListSubsectionHeaderExample = () => (
+const ListSubsectionHeaderTest = () => (
   <List>
     <SubsectionHeader
-      key="static-subheader"
-      title="Static Subheader"
+      key="static-header"
+      title="Static Header"
     />
     <SubsectionHeader
-      key="collapsible-subheader-open"
+      key="collapsible-header-open"
       isCollapsible
-      title="Collapsible Subheader"
+      title="Collapsible Header"
     />
     <SubsectionHeader
-      key="collapsible-subheader-collapsed"
+      key="collapsible-header-collapsed"
       isCollapsed
       isCollapsible
-      title="Collapsible Subheader"
+      title="Collapsible Header"
     />
   </List>
 );
 
-export default ListSubsectionHeaderExample;
+export default ListSubsectionHeaderTest;

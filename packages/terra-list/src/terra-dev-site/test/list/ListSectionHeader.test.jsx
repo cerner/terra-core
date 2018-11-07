@@ -4,7 +4,7 @@ import List, {
   SectionHeader,
 } from 'terra-list/lib/List';
 
-const ListSectionHeaderExample = () => (
+const ListSectionHeaderTest = () => (
   <List>
     <SectionHeader
       key="static-header"
@@ -24,4 +24,4 @@ const ListSectionHeaderExample = () => (
   </List>
 );
 
-export default ListSectionHeaderExample;
+export default ListSectionHeaderTest;

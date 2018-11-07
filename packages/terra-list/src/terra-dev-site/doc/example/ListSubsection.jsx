@@ -3,61 +3,57 @@ import React from 'react';
 import List, {
   Item,
   Subsection,
-  Utils,
 } from 'terra-list/lib/List';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 
-class ListSubsectionExample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleSectionSelection = this.handleSectionSelection.bind(this);
-    this.state = { collapsedKeys: [] };
-  }
-
-  handleSectionSelection(event, metaData) {
-    event.preventDefault();
-
-    this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.collapsedKeys, metaData.key) }));
-  }
-
-  render() {
-    return (
-      <List>
-        <Subsection
-          key="static-section"
-          title="Static Section"
-        >
-          <Item key="123">
-            <Placeholder title="Item 0" style={{ height: '50px' }} />
-          </Item>
-          <Item key="124">
-            <Placeholder title="Item 1" style={{ height: '50px' }} />
-          </Item>
-          <Item key="125">
-            <Placeholder title="Item 2" style={{ height: '50px' }} />
-          </Item>
-        </Subsection>
-        <Subsection
-          key="collapsible-section"
-          isCollapsed={this.state.collapsedKeys.indexOf('collapse') >= 0}
-          isCollapsible
-          metaData={{ key: 'collapse' }}
-          title="Collapsible Section"
-          onSelect={this.handleSectionSelection}
-        >
-          <Item key="223">
-            <Placeholder title="Item 0" style={{ height: '50px' }} />
-          </Item>
-          <Item key="224">
-            <Placeholder title="Item 1" style={{ height: '50px' }} />
-          </Item>
-          <Item key="225">
-            <Placeholder title="Item 2" style={{ height: '50px' }} />
-          </Item>
-        </Subsection>
-      </List>
-    );
-  }
-}
+const ListSubsectionExample = () => (
+  <List>
+    <Subsection
+      key="static-subsection"
+      title="Static Subsection"
+    >
+      <Item key="123">
+        <Placeholder title="Item 0" style={{ height: '50px' }} />
+      </Item>
+      <Item key="124">
+        <Placeholder title="Item 1" style={{ height: '50px' }} />
+      </Item>
+      <Item key="125">
+        <Placeholder title="Item 2" style={{ height: '50px' }} />
+      </Item>
+    </Subsection>
+    <Subsection
+      key="collapsible-subsection"
+      isCollapsible
+      title="Collapsible Subsection"
+    >
+      <Item key="223">
+        <Placeholder title="Item 0" style={{ height: '50px' }} />
+      </Item>
+      <Item key="224">
+        <Placeholder title="Item 1" style={{ height: '50px' }} />
+      </Item>
+      <Item key="225">
+        <Placeholder title="Item 2" style={{ height: '50px' }} />
+      </Item>
+    </Subsection>
+    <Subsection
+      key="collapsible-subsection"
+      isCollapsed
+      isCollapsible
+      title="Collapsed Subsection"
+    >
+      <Item key="323">
+        <Placeholder title="Item 0" style={{ height: '50px' }} />
+      </Item>
+      <Item key="324">
+        <Placeholder title="Item 1" style={{ height: '50px' }} />
+      </Item>
+      <Item key="325">
+        <Placeholder title="Item 2" style={{ height: '50px' }} />
+      </Item>
+    </Subsection>
+  </List>
+);
 
 export default ListSubsectionExample;
