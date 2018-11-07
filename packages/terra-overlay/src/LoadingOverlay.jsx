@@ -33,6 +33,10 @@ const propTypes = {
   */
   isRelativeToContainer: PropTypes.bool,
   /**
+   * Allows assigning of root element custom data attribute for easy selecting of document base component.
+   */
+  rootSelector: PropTypes.string,
+  /**
   * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are '100', '6000', '7000', '8000', or '9000'.
   */
   zIndex: PropTypes.oneOf(zIndexes),
@@ -43,6 +47,7 @@ const defaultProps = {
   isOpen: false,
   backgroundStyle: BackgroundStyles.LIGHT,
   isRelativeToContainer: false,
+  rootSelector: '[data-terra-base]',
 };
 
 const contextTypes = {
@@ -58,6 +63,7 @@ const contextTypes = {
 const LoadingOverlay = ({
   message,
   isAnimated,
+  rootSelector,
   ...customProps
 }, {
   intl,
@@ -68,18 +74,16 @@ const LoadingOverlay = ({
   const loadingMessage = message !== undefined ? message : intl.formatMessage({ id: 'Terra.Overlay.loading' });
 
   return (
-    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)}>
+    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)} rootSelector={rootSelector}>
       <IconSpinner className={cx('icon')} isSpin={isAnimated} height="36" width="36" />
       <div className={cx('message')}>{loadingMessage}</div>
     </Overlay>
   );
 };
 
-const Opts = { BackgroundStyles };
-
 LoadingOverlay.propTypes = propTypes;
 LoadingOverlay.defaultProps = defaultProps;
 LoadingOverlay.contextTypes = contextTypes;
-LoadingOverlay.Opts = Opts;
+LoadingOverlay.Opts = Overlay.Opts;
 
 export default LoadingOverlay;

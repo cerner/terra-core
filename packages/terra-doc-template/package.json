@@ -29,7 +29,6 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-syntax-highlighter": "^8.0.1",
-    "terra-doc-template": "^1.19.0",
     "terra-markdown": "^2.15.0",
     "terra-props-table": "^2.21.0"
   },

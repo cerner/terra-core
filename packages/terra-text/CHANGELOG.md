@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added additional font sizes
+* Added `300` option for weight prop
 
 2.26.0 - (October 24, 2018)
 ------------------
