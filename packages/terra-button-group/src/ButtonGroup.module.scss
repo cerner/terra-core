@@ -78,4 +78,12 @@
     border-bottom-right-radius: var(--terra-button-group-button-border-bottom-right-radius, 0.2142rem);
     border-top-right-radius: var(--terra-button-group-button-border-top-right-radius, 0.2142rem);
   }
+
+  .is-block {
+    width: 100%;
+
+    .button-group-button {
+      flex: 1 1 auto;
+    }
+  }
 }

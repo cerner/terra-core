@@ -13,6 +13,12 @@ describe('Button Group', () => {
     Terra.should.matchScreenshot({ viewports });
   });
 
+  describe('Button Group Block', () => {
+    before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-is-block'));
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
+
   describe('Long Text Button', () => {
     before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-long-text'));
     Terra.should.beAccessible();

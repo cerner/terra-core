@@ -5,7 +5,7 @@ import Status from '../../../Status';
 const icon = <IconDue height="60" width="60" />;
 
 const StatusIcon = () => (
-  <Status id="statusIcon" color="#ff0000">{icon}</Status>
+  <Status id="statusIcon" color="#ff0000" visuallyHiddenText="Status High">{icon}</Status>
 );
 
 export default StatusIcon;
