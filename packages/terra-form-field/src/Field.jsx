@@ -65,11 +65,6 @@ const propTypes = {
    * Whether or not to append the 'optional' label to a non-required field label.
    */
   showOptional: PropTypes.bool,
-  /**
-   * Allows for custom inline styles in addition to (or separate from) the maxWidth style prop.
-   */
-  // eslint-disable-next-line react/forbid-prop-types
-  style: PropTypes.object,
 };
 
 const defaultProps = {
@@ -86,7 +81,6 @@ const defaultProps = {
   maxWidth: undefined,
   required: false,
   showOptional: false,
-  style: undefined,
 };
 
 const contextTypes = {
@@ -118,17 +112,7 @@ const Field = (props, { intl }) => {
     ...customProps
   } = props;
 
-  let customStyles;
-
-  if (props.style) {
-    if (!props.style.maxWidth) {
-      customStyles = { ...props.style, maxWidth };
-    } else if (props.style.maxWidth) {
-      customStyles = { ...props.style };
-    }
-  } else {
-    customStyles = { maxWidth };
-  }
+  const customStyles = Object.assign({ maxWidth }, style);
 
   const fieldClasses = cx([
     'field',
