@@ -8,6 +8,8 @@ const TextWeight = () => (
     <br />
     <Text id="textFontWeight400" weight={400}>400 Weight</Text>
     <br />
+    <Text id="textFontWeight300" weight={300}>300 Weight</Text>
+    <br />
     <Text id="textFontWeight200" weight={200}>200 Weight</Text>
   </div>
 );

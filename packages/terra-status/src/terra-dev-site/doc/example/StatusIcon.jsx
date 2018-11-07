@@ -6,7 +6,7 @@ import Status from 'terra-status/lib/Status';
 const icon = <IconDue height="60" width="60" />;
 
 const StatusIcon = () => (
-  <Status color="#ff0000">{icon}</Status>
+  <Status color="#ff0000" visuallyHiddenText="Status High">{icon}</Status>
 );
 
 export default StatusIcon;

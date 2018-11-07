@@ -6,6 +6,20 @@ const TextFontSizes = () => (
   <div>
     <Text fontSize={100}>100px (7.143rem)</Text>
     <br />
+    <Text fontSize={92}>92px (2.286rem)</Text>
+    <br />
+    <Text fontSize={72}>72px (2.286rem)</Text>
+    <br />
+    <Text fontSize={64}>64px (2.286rem)</Text>
+    <br />
+    <Text fontSize={56}>56px (2.286rem)</Text>
+    <br />
+    <Text fontSize={50}>50px (2.286rem)</Text>
+    <br />
+    <Text fontSize={46}>46px (2.286rem)</Text>
+    <br />
+    <Text fontSize={36}>36px (2.286rem)</Text>
+    <br />
     <Text fontSize={32}>32px (2.286rem)</Text>
     <br />
     <Text fontSize={24}>24px (1.714rem)</Text>
