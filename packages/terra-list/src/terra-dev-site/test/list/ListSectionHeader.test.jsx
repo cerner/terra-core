@@ -14,6 +14,7 @@ const ListSectionHeaderTest = () => (
       key="collapsible-header-open"
       isCollapsible
       title="Collapsible Header"
+      id="test-header"
     />
     <SectionHeader
       key="collapsible-header-collapsed"

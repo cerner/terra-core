@@ -14,9 +14,9 @@
   .title {
     color: #1c1f21;
     font-size: 1rem;
-    font-size: var(--terra-section-header-font-size, 1rem);
-    font-weight: var(--terra-section-header-font-weight, bold);
-    line-height: var(--terra-section-header-line-height, 1.142857143);
+    font-size: var(--terra-list-v3-subsection-header-title-font-size, 1rem);
+    font-weight: var(--terra-list-v3-subsection-header-title-font-weight, bold);
+    line-height: var(--terra-list-v3-subsection-header-title-line-height, 1.142857143);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -34,15 +34,15 @@
 
     &.subsection-header:focus {
       // background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
-      box-shadow: var(--terra-list-subsection-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-      outline: var(--terra-list-subsection-header-focus-outline, none);
+      box-shadow: var(--terra-list-v3-subsection-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+      outline: var(--terra-list-v3-subsection-header-focus-outline, none);
       position: relative;
       z-index: 1;
     }
   
     &.subsection-header:hover,
     &.subsection-header:active {
-      background-color: #b5b6b7;
+      background-color: #b5b6b7; // Needs proper color value.
     }
 
     &[data-focusable='false']:focus {
@@ -62,7 +62,7 @@
   }
 
   .accordion-icon {
-    background: var(--terra-section-header-accordion-icon, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
+    background: var(--terra-list-v3-section-header-accordion-icon-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
     background-repeat: no-repeat;
     background-size: contain;
     display: block;

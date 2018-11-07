@@ -2,16 +2,16 @@
 // ========================================================
 :local {
   .list-item {
-    background-color: var(--terra-list-item-background-color);
+    background-color: var(--terra-list-v3-item-background-color);
     margin: 0;
     padding: 0;
   }
 
-  .divided.list-item {
-    border-top: var(--terra-list-divider-border, 1px solid #dedfe0);
+  .divided {
+    border-top: var(--terra-list-v3-item-divider-border-top, 1px solid #dedfe0);
 
     &:last-of-type {
-      border-bottom: var(--terra-list-divider-border, 1px solid #dedfe0);
+      border-bottom: var(--terra-list-v3-item-divider-border-bottom, 1px solid #dedfe0);
     }
   }
 
@@ -21,51 +21,49 @@
     padding-right: 10px;
 
     > svg {
-      color: var(--terra-list-chevron-color, #bcbfc0);
+      color: var(--terra-list-v3-item-chevron-color, #bcbfc0);
     }
   }
 
   .selected {
-    background-color: var(--terra-list-item-selected-background-color, darken(#ebf6fd, 2%));
+    background-color: var(--terra-list-v3-item-selected-background-color, darken(#ebf6fd, 2%));
   }
 
   .divided.selected {
-    &.list-item {
-      border-color: var(--terra-list-item-selected-divider-color, #0092e0) !important;
-    }
+    border-color: var(--terra-list-v3-item-selected-divider-border-color, #0092e0);
 
     + .list-item {
-      border-top-color: var(--terra-list-item-selected-divider-color, #0092e0);
+      border-top-color: var(--terra-list-v3-item-selected-divider-border-top-color, #0092e0);
     }
   }
 
   .is-selectable {
     cursor: pointer;
 
-    &.list-item:hover {
-      background-color: var(--terra-list-item-hover-background-color, lighten(#ebf6fd, 2%)) !important;
+    &:hover {
+      background-color: var(--terra-list-v3-item-hover-background-color, lighten(#ebf6fd, 2%));
     }
 
-    &.list-item:focus {
-      background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
-      box-shadow: var(--terra-list-item-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-      outline: var(--terra-list-item-focus-outline);
+    &:focus {
+      background-color: var(--terra-list-v3-item-focus-background-color, lighten(#ebf6fd, 2%));
+      box-shadow: var(--terra-list-v3-item-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+      outline: var(--terra-list-v3-item-focus-outline);
       z-index: 1;
     }
 
     &.selected:hover {
-      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+      background-color: var(--terra-list-v3-item-selected-hover-background-color, darken(#ebf6fd, 7%));
     }
 
     &.selected:focus {
-      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+      background-color: var(--terra-list-v3-item-selected-focus-background-color, darken(#ebf6fd, 7%));
     }
 
     &[data-focusable='false']:focus {
-      box-shadow: none !important;
+      box-shadow: none;
 
-      &.selected:focus {
-        background-color: var(--terra-list-item-selected-background-color, darken(#ebf6fd, 2%)) !important;
+      &.selected {
+        background-color: var(--terra-list-v3-item-selected-focus-background-color, darken(#ebf6fd, 2%));
       }
     }
   }

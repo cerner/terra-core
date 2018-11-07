@@ -20,6 +20,7 @@ const ListItemTest = () => (
     <Item
       key="selectable"
       isSelectable
+      id="selectable-item"
     >
       <p>test selectable</p>
     </Item>
