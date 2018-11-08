@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with callback functions 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={2}
+    onSelect={[MockFunction]}
+    refCallback={[MockFunction]}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render with isCollapsed 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={true}
+    isCollapsible={false}
+    level={2}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render with isCollapsible 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={true}
+    level={2}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render with items 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={2}
+    title=""
+  />
+  <ListItem
+    isDivided={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    isDivided={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    isDivided={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    isDivided={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    isDivided={false}
+    isSelected={false}
+    key="127"
+  />
+</Fragment>
+`;
+
+exports[`should render with no items 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={2}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render with title 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={2}
+    title="Test Title"
+  />
+</Fragment>
+`;
+
+exports[`should render with title and level 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={3}
+    title="Test Title"
+  />
+</Fragment>
+`;

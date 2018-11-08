@@ -1,84 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should mount with no items 1`] = `
-<List
-  isDivided={false}
->
-  <ul
-    className="list"
-  />
-</List>
-`;
-
-exports[`should mount with one items 1`] = `
-<List
-  isDivided={false}
->
-  <ul
-    className="list"
-  >
-    <ListItem
-      isSelected={false}
-      key="123"
-    >
-      <li
-        className="list-item"
-      />
-    </ListItem>
-  </ul>
-</List>
-`;
-
-exports[`should render isDivided 1`] = `
-<ul
-  className="list divided"
->
-  <ListItem
-    isSelected={false}
-    key="123"
-  />
-  <ListItem
-    isSelected={false}
-    key="123"
-  />
-  <ListItem
-    isSelected={false}
-    key="123"
-  />
-  <ListItem
-    isSelected={false}
-    key="123"
-  />
-  <ListItem
-    isSelected={false}
-    key="123"
-  />
-</ul>
-`;
-
 exports[`should render with items 1`] = `
 <ul
   className="list"
+  role="listbox"
 >
   <ListItem
+    isDivided={false}
     isSelected={false}
     key="123"
   />
   <ListItem
+    isDivided={false}
     isSelected={false}
-    key="123"
+    key="124"
   />
   <ListItem
+    isDivided={false}
     isSelected={false}
-    key="123"
+    key="125"
   />
   <ListItem
+    isDivided={false}
     isSelected={false}
-    key="123"
+    key="126"
   />
   <ListItem
+    isDivided={false}
     isSelected={false}
-    key="123"
+    key="127"
   />
 </ul>
+`;
+
+exports[`should render with no items 1`] = `
+<ul
+  className="list"
+  role="listbox"
+/>
 `;

@@ -38,7 +38,7 @@ const List = ({
   ]);
 
   return (
-    <ul {...customProps} className={listClassNames} ref={refCallback}>
+    <ul {...customProps} role="listbox" className={listClassNames} ref={refCallback}>
       {children}
     </ul>
   );

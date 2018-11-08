@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render default 1`] = `
+<li
+  className="subsection-header"
+>
+  <h2
+    className="title"
+  />
+</li>
+`;
+
+exports[`should render with callback functions 1`] = `
+<li
+  className="subsection-header"
+>
+  <h2
+    className="title"
+  />
+</li>
+`;
+
+exports[`should render with isCollapsed 1`] = `
+<li
+  className="subsection-header"
+>
+  <h2
+    className="title"
+  />
+</li>
+`;
+
+exports[`should render with isCollapsible 1`] = `
+<li
+  aria-expanded={true}
+  aria-level={2}
+  className="subsection-header is-collapsible"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="heading"
+  tabIndex="0"
+>
+  <div
+    className="item-start"
+  >
+    <span
+      className="accordion-icon is-open"
+    />
+  </div>
+  <div
+    className="item-fill"
+  >
+    <h2
+      className="title"
+    />
+  </div>
+</li>
+`;
+
+exports[`should render with title 1`] = `
+<li
+  className="subsection-header"
+>
+  <h2
+    className="title"
+  >
+    Test Title
+  </h2>
+</li>
+`;
+
+exports[`should render with title and level 1`] = `
+<li
+  className="subsection-header"
+>
+  <h3
+    className="title"
+  >
+    Test Title
+  </h3>
+</li>
+`;

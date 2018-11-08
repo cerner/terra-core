@@ -20,7 +20,7 @@ describe('List', () => {
     Terra.should.matchScreenshot('ListItem');
     Terra.should.beAccessible();
 
-    it(() => browser.moveToObject('selectable-item'));
+    it('Hover', () => browser.moveToObject('#selectable-item'));
 
     Terra.should.matchScreenshot('ListItem-Hover');
   });
@@ -45,7 +45,7 @@ describe('List', () => {
     Terra.should.matchScreenshot('ListSectionHeader');
     Terra.should.beAccessible();
 
-    it(() => browser.moveToObject('test-header'));
+    it('Hover', () => browser.moveToObject('#test-header'));
 
     Terra.should.matchScreenshot('ListSubsection-Hover');
   });
@@ -56,7 +56,7 @@ describe('List', () => {
     Terra.should.matchScreenshot('ListSubsection');
     Terra.should.beAccessible();
 
-    it(() => browser.moveToObject('test-header'));
+    it('Hover', () => browser.moveToObject('#test-header'));
 
     Terra.should.matchScreenshot('ListSubsection-Hover');
   });

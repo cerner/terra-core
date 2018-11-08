@@ -1,53 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should mount with isSelectable 1`] = `
-<ListItem
-  isSelectable={true}
-  isSelected={false}
->
-  <li
-    aria-selected={false}
-    className="list-item is-selectable"
-    role="option"
-  />
-</ListItem>
-`;
-
-exports[`should mount with isSelectable and hasChevron 1`] = `
+exports[`should render with callback functions 1`] = `
 <li
-  aria-selected={false}
-  className="list-item is-selectable"
-  role="option"
->
-  <Arrange
-    align="center"
-    fill={
-      <p>
-        test
-      </p>
-    }
-    fillAttributes={
-      Object {
-        "className": "arrange-content",
-      }
-    }
-    fitEnd={
-      <span
-        className="chevron"
-      >
-        <IconChevronRight
-          className=""
-          data-name="Layer 1"
-          height="0.8em"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          width="0.8em"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </span>
-    }
-  />
-</li>
+  className="list-item"
+/>
 `;
 
 exports[`should render with className 1`] = `
@@ -64,6 +20,52 @@ exports[`should render with content 1`] = `
     text
   </p>
 </li>
+`;
+
+exports[`should render with hasChevron 1`] = `
+<li
+  className="list-item item-has-chevron"
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+  <div
+    className="item-end"
+    key="item-end"
+  >
+    <span
+      className="chevron"
+    >
+      <IconChevronRight
+        className=""
+        data-name="Layer 1"
+        height="0.8em"
+        isBidi={true}
+        viewBox="0 0 48 48"
+        width="0.8em"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </div>
+</li>
+`;
+
+exports[`should render with isDivided 1`] = `
+<li
+  className="list-item divided"
+/>
+`;
+
+exports[`should render with isSelectable 1`] = `
+<li
+  aria-selected={false}
+  className="list-item is-selectable"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="option"
+  tabIndex="0"
+/>
 `;
 
 exports[`should render with selected 1`] = `
