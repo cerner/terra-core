@@ -42,7 +42,7 @@
   
     &.section-header:hover,
     &.section-header:active {
-      background-color: var(--terra-list-v3-section-header-focus-box-shadow, #d7d8d9); // Need correct value.
+      background-color: var(--terra-list-v3-section-header-hover-background-color, #d7d8d9); // Need correct value.
     }
 
     &[data-focusable='false']:focus {
