@@ -27,7 +27,7 @@ export default class TimeInputElement extends React.Component {
 
   render() {
     return (
-      <div style={{ 'caret-color': 'transparent' }}>
+      <div style={{ caretColor: 'transparent' }}>
         <h3>Empty Time Input</h3>
         <TimeInput
           id="timeInput"

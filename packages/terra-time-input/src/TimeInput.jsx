@@ -712,6 +712,7 @@ class TimeInput extends React.Component {
           [
             <Input
               {...inputAttributes}
+              aria-label="Meridiem Display"
               className={cx(['meridiem-display', { focused: this.state.meridiemFocused }])}
               onFocus={this.meridiemFocus}
               key="meridiem_display"
@@ -726,6 +727,7 @@ class TimeInput extends React.Component {
               key="meridiem_select_box"
             >
               <select
+                aria-label="Meridiem Select"
                 ref={(input) => { this.meridiemInput = input; }}
                 onBlur={this.meridiemBlur}
                 onFocus={this.meridiemFocus}
