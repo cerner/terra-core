@@ -4,16 +4,16 @@
 // ========================================================
 :local {
   .subsection-header {
-    background-color: #c8cacb;
-    border-bottom: 1px solid #b5b6b7;
-    padding-bottom: 0.5rem;
-    padding-left: 1.6571428571rem;
-    padding-top: 0.5rem;
+    background-color: var(--terra-list-v3-subsection-header-background-color, #c8cacb);
+    border-bottom: var(--terra-list-v3-subsection-header-border-bottom, 1px solid #b5b6b7);
+    padding-bottom: var(--terra-list-v3-subsection-header-padding-bottom, 0.5rem);
+    padding-left: var(--terra-list-v3-subsection-header-padding-left, 1.6571428571rem);
+    padding-top: var(--terra-list-v3-subsection-header-padding-top, 0.5rem);
+    width: 100%;
   }
 
   .title {
-    color: #1c1f21;
-    font-size: 1rem;
+    color: var(--terra-list-v3-subsection-header-title-color, #1c1f21);
     font-size: var(--terra-list-v3-subsection-header-title-font-size, 1rem);
     font-weight: var(--terra-list-v3-subsection-header-title-font-weight, bold);
     line-height: var(--terra-list-v3-subsection-header-title-line-height, 1.142857143);
@@ -29,7 +29,7 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    padding-left: 1.4471428571rem;
+    padding-left: var(--terra-list-v3-subsection-header-collapsible-padding-left, 1.4471428571rem);
     width: 100%;
 
     &.subsection-header:focus {
@@ -42,7 +42,7 @@
   
     &.subsection-header:hover,
     &.subsection-header:active {
-      background-color: #b5b6b7; // Needs proper color value.
+      background-color: var(--terra-list-v3-subsection-header-hover-background-color, #b5b6b7); // Needs proper color value.
     }
 
     &[data-focusable='false']:focus {
@@ -50,19 +50,19 @@
     }
   }
 
-  .item-fill {
+  .fill {
     flex: 1 1 auto;
     min-width: 0;
     width: 100%;
   }
 
-  .item-start {
+  .start {
     flex: 0 0 auto;
-    padding-right: 0.3571228571rem;
+    padding-right: var(--terra-list-v3-subsection-header-start-padding-right, 0.3571228571rem);
   }
 
   .accordion-icon {
-    background: var(--terra-list-v3-section-header-accordion-icon-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
+    background: var(--terra-list-v3-subsection-header-accordion-icon-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
     background-repeat: no-repeat;
     background-size: contain;
     display: block;

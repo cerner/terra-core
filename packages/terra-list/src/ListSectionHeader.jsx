@@ -74,12 +74,12 @@ const SectionHeader = ({
   let accordionIcon;
   if (isCollapsible) {
     accordionIcon = (
-      <div className={cx('item-start')}>
+      <div className={cx('start')}>
         <span className={cx(['accordion-icon', { 'is-open': !isCollapsed }])} />
       </div>
     );
     titleElement = (
-      <div className={cx('item-fill')}>
+      <div className={cx('fill')}>
         {titleElement}
       </div>
     );

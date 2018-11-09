@@ -4,17 +4,16 @@
 // ========================================================
 :local {
   .section-header {
-    background-color: #e8e9ea;
-    border-bottom: 1px solid #c8cacb;
-    padding-bottom: 0.5rem;
-    padding-left: 0.7142857143rem;
-    padding-top: 0.5rem;
+    background-color: var(--terra-list-v3-section-header-background-color, #e8e9ea);
+    border-bottom: var(--terra-list-v3-section-header-border-bottom, 1px solid #c8cacb);
+    padding-bottom: var(--terra-list-v3-section-header-padding-bottom, 0.5rem);
+    padding-left: var(--terra-list-v3-section-header-padding-left, 0.7142857143rem);
+    padding-top: var(--terra-list-v3-section-header-padding-top, 0.5rem);
     width: 100%;
   }
 
   .title {
-    color: #1c1f21;
-    font-size: 1rem;
+    color: var(--terra-list-v3-section-header-title-color, #1c1f21);
     font-size: var(--terra-list-v3-section-header-title-font-size, 1rem);
     font-weight: var(--terra-list-v3-section-header-title-font-weight, bold);
     line-height: var(--terra-list-v3-section-header-title-line-height, 1.142857143);
@@ -30,7 +29,7 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    padding-left: 0.5rem;
+    padding-left: var(--terra-list-v3-section-header-collapsible-padding-left, 0.5rem);
     width: 100%;
 
     &.section-header:focus {
@@ -43,7 +42,7 @@
   
     &.section-header:hover,
     &.section-header:active {
-      background-color: #d7d8d9; // Need correct value.
+      background-color: var(--terra-list-v3-section-header-focus-box-shadow, #d7d8d9); // Need correct value.
     }
 
     &[data-focusable='false']:focus {
@@ -51,15 +50,15 @@
     }
   }
 
-  .item-fill {
+  .fill {
     flex: 1 1 auto;
     min-width: 0;
     width: 100%;
   }
 
-  .item-start {
+  .start {
     flex: 0 0 auto;
-    padding-right: 0.3571228571rem;
+    padding-right: var(--terra-list-v3-section-header-start-padding-right, 0.3571228571rem);
   }
 
   .accordion-icon {
