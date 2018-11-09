@@ -643,6 +643,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     value=""
   />
   <Input
+    aria-label="Meridiem Display"
     className="meridiem-display"
     disabled={false}
     isInvalid={false}
@@ -664,6 +665,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     }
   >
     <select
+      aria-label="Meridiem Select"
       className="time-input-meridiem"
       name="terra-time-meridiem-time-input"
       onBlur={[Function]}
