@@ -95,6 +95,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render men
 exports[`CollapsibleMenuViewItemGroup should merge custom props 1`] = `
 <ButtonGroup
   className="face-up-item Testing"
+  isBlock={false}
   selectedKeys={Array []}
 >
   <CollapsibleMenuViewItem
@@ -117,6 +118,7 @@ exports[`CollapsibleMenuViewItemGroup should merge custom props 1`] = `
 exports[`CollapsibleMenuViewItemGroup should render a default component 1`] = `
 <ButtonGroup
   className="face-up-item"
+  isBlock={false}
   selectedKeys={Array []}
 >
   <CollapsibleMenuViewItem
@@ -139,6 +141,7 @@ exports[`CollapsibleMenuViewItemGroup should render a default component 1`] = `
 exports[`CollapsibleMenuViewItemGroup should render a selectable button group 1`] = `
 <ButtonGroup
   className="face-up-item"
+  isBlock={false}
   selectedKeys={
     Array [
       "key1",

@@ -3,9 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.28.0 - (November 9, 2018)
+------------------
 ### Changed
 * Styling improvements
 * Component markup refactoring
+* Restructured theme tests into a separate file
 
 1.27.0 - (October 24, 2018)
 ------------------

@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.29.0 - (November 9, 2018)
+------------------
+### Added
+* Added isBlock prop to button group component
+
 2.28.0 - (October 24, 2018)
 ------------------
 ### Changed

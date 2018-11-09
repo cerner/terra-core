@@ -5,7 +5,7 @@ const base64ImgSrc = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAs4AAAFmCAMA
 const image = <img style={{ display: 'block' }} height="150" width="300" src={base64ImgSrc} alt="placeholder" />;
 
 const StatusImage = () => (
-  <Status id="statusImage" color="#ff0000">{image}</Status>
+  <Status id="statusImage" color="#ff0000" visuallyHiddenText="Status High">{image}</Status>
 );
 
 export default StatusImage;

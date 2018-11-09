@@ -1,8 +1,4 @@
-const {
-  viewports,
-  withActionsThemeables,
-  withoutActionsThemeables,
-} = require('./common');
+const { viewports } = require('./common');
 
 describe('BlockActionFooter', () => {
   describe('No Actions', () => {
@@ -10,7 +6,6 @@ describe('BlockActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(withoutActionsThemeables);
   });
 
   describe('With Actions', () => {
@@ -18,6 +13,5 @@ describe('BlockActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(withActionsThemeables);
   });
 });

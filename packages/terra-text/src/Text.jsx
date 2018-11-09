@@ -16,11 +16,19 @@ const TextFontSize = {
   '20': 20,
   '24': 24,
   '32': 32,
+  '36': 36,
+  '46': 46,
+  '50': 50,
+  '56': 56,
+  '64': 64,
+  '72': 72,
+  '92': 92,
   '100': 100,
 };
 
 const TextWeight = {
   '200': 200,
+  '300': 300,
   '400': 400,
   '700': 700,
 };
@@ -44,13 +52,13 @@ const propTypes = {
    */
   isVisuallyHidden: PropTypes.bool,
   /**
-   * Sets the text size. One of `10`, `12`, `14`, `16`, `18`, `20`, `24`, `32`, `100`.
+   * Sets the text size. One of `10`, `12`, `14`, `16`, `18`, `20`, `24`, `32`, `36`, `46`, `50`, `56`, `64`, `72`, `92`, `100`.
    */
-  fontSize: PropTypes.oneOf([10, 12, 14, 16, 18, 20, 24, 32, 100]),
+  fontSize: PropTypes.oneOf([10, 12, 14, 16, 18, 20, 24, 32, 36, 46, 50, 56, 64, 72, 92, 100]),
   /**
-   * Sets the text size. One of `200`, `400`, `700`.
+   * Sets the text size. One of `200`, `300`, `400`, `700`.
    */
-  weight: PropTypes.oneOf([200, 400, 700]),
+  weight: PropTypes.oneOf([200, 300, 400, 700]),
 };
 
 const defaultProps = {

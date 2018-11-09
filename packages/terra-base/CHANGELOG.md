@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+3.28.0 - (November 9, 2018)
+------------------
+### Added
+* data-terra-base attribute added to Base component
+
 ### Changed
 * Restructured theme tests into a separate file
 

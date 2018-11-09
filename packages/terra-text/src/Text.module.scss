@@ -10,6 +10,13 @@
 
   // Text Sizes
   .font-size-100 { font-size: 7.143rem; }
+  .font-size-92 { font-size: 6.571rem; }
+  .font-size-72 { font-size: 5.143rem; }
+  .font-size-64 { font-size: 4.571rem; }
+  .font-size-56 { font-size: 4rem; }
+  .font-size-50 { font-size: 3.571rem; }
+  .font-size-46 { font-size: 3.286rem; }
+  .font-size-36 { font-size: 2.571rem; }
   .font-size-32 { font-size: 2.286rem; }
   .font-size-24 { font-size: 1.714rem;}
   .font-size-20 { font-size: 1.429rem; }
@@ -21,6 +28,7 @@
 
   // Text Weights
   .font-weight-200 { font-weight: 200; }
+  .font-weight-300 { font-weight: 300; }
   .font-weight-400 { font-weight: 400; }
   .font-weight-700 { font-weight: 700; }
 
@@ -38,5 +46,12 @@
     padding: 0;
     position: absolute;
     width: 1px;
+  }
+
+  .font-stack {
+    &::after {
+      content: var(--terra-text-v2-font-stack-after-content, '\"Helvetica Neue\", Helvetica, Arial, sans-serif');
+      display: inline-block;
+    }
   }
 }
