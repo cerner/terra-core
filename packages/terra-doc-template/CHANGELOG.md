@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Fixed lint errors
 
 1.19.0 - (October 24, 2018)
 ------------------

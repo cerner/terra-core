@@ -7,6 +7,9 @@ Unreleased
 * Added additional font sizes
 * Added `300` option for weight prop
 
+### Changed
+* Fixed lint errors
+
 2.26.0 - (October 24, 2018)
 ------------------
 ### Changed
