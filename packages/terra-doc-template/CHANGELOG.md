@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.20.0 - (November 9, 2018)
+------------------
 ### Changed
 * Fixed lint errors
 

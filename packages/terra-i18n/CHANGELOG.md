@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.26.0 - (November 9, 2018)
+------------------
 ### Added
 * Add full list of locales to terra-i18n translation fixtures
 
