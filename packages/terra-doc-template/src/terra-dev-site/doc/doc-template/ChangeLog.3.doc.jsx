@@ -1,5 +1,5 @@
 import React from 'react';
-import DocTemplate from 'terra-doc-template';
+import DocTemplate from '../../../DocTemplate';
 import ChangeLog from '../../../../CHANGELOG.md';
 
 const DocPage = () => (
