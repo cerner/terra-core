@@ -21,15 +21,21 @@ const propTypes = {
    * Function callback for the ref of the ul.
    */
   refCallback: PropTypes.func,
+  /**
+   * Accessibility role of the list, defaults to 'listbox'.
+   */
+  role: PropTypes.string,
 };
 
 const defaultProps = {
   children: [],
+  role: 'listbox',
 };
 
 const List = ({
   children,
   refCallback,
+  role,
   ...customProps
 }) => {
   const listClassNames = cx([
@@ -38,7 +44,7 @@ const List = ({
   ]);
 
   return (
-    <ul {...customProps} role="listbox" className={listClassNames} ref={refCallback}>
+    <ul {...customProps} role={role} className={listClassNames} ref={refCallback}>
       {children}
     </ul>
   );

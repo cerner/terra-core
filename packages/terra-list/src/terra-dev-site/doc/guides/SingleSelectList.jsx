@@ -41,11 +41,9 @@ class SingleSelectList extends React.Component {
   }
 
   render() {
-    const sections = this.createListItems(mockData);
-
     return (
       <List>
-        {sections}
+        {this.createListItems(mockData)}
       </List>
     );
   }
