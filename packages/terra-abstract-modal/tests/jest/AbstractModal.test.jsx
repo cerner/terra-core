@@ -50,3 +50,27 @@ it('should mount an open modal set to fullscreen', () => {
   const modal = mount(<AbstractModalExample isFullscreen />);
   expect(modal).toMatchSnapshot();
 });
+
+it('should render the correct snapshot for iPhones', () => {
+  Object.assign(window.navigator, 'platform', 'iPhone');
+
+  const modal = mount(<AbstractModalExample />);
+  expect(modal).toMatchSnapshot();
+  Object.assign(window.navigator, 'platform', null);
+});
+
+it('should render the correct snapshot for iPads', () => {
+  Object.assign(window.navigator, 'platform', 'iPad');
+
+  const modal = mount(<AbstractModalExample />);
+  expect(modal).toMatchSnapshot();
+  Object.assign(window.navigator, 'platform', null);
+});
+
+it('should render the correct snapshot for iPods', () => {
+  Object.assign(window.navigator, 'platform', 'iPod');
+
+  const modal = mount(<AbstractModalExample />);
+  expect(modal).toMatchSnapshot();
+  Object.assign(window.navigator, 'platform', null);
+});

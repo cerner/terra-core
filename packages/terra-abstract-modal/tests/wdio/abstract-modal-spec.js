@@ -50,6 +50,7 @@ describe('Abstract Modal', () => {
 
     it('focuses on the first button', () => {
       browser.keys(['Tab']);
+      browser.hasFocus('#focus-button');
     });
 
     Terra.should.matchScreenshot({ selector: 'div[role="dialog"]' });
