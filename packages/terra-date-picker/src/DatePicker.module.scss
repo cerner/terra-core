@@ -37,6 +37,7 @@
 
         &:focus {
           border-color: var(--terra-date-picker-button-focus-border-color, #26a2e5);
+          box-shadow: var(--terra-date-picker-button-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
           outline: none;
         }
       }
