@@ -86,8 +86,9 @@ const ListItem = ({
     ariaSpread.tabIndex = '0';
     ariaSpread.role = 'option';
     ariaSpread['aria-selected'] = isSelected;
-    ariaSpread.onBlur = ListUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-focusable', 'true'));
-    ariaSpread.onMouseDown = ListUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-focusable', 'false'));
+    ariaSpread['data-item-show-focus'] = 'true';
+    ariaSpread.onBlur = ListUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
+    ariaSpread.onMouseDown = ListUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
 
   let childContent = children;

@@ -16,7 +16,7 @@
     color: var(--terra-list-v3-section-header-title-color, #1c1f21);
     font-size: var(--terra-list-v3-section-header-title-font-size, 1rem);
     font-weight: var(--terra-list-v3-section-header-title-font-weight, bold);
-    line-height: var(--terra-list-v3-section-header-title-line-height, 1.142857143);
+    line-height: var(--terra-list-v3-section-header-title-line-height, 1.1428571429);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -29,24 +29,20 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    padding-left: var(--terra-list-v3-section-header-collapsible-padding-left, 0.5rem);
+    outline: var(--terra-list-v3-section-header-focus-outline, none);
+    padding-left: var(--terra-list-v3-section-header-collapsible-padding-left, 1rem);
     width: 100%;
 
-    &.section-header:focus {
-      background-color: var(--terra-list-v3-section-header-focus-background-color, #e8e9ea);
-      box-shadow: var(--terra-list-v3-section-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-      outline: var(--terra-list-v3-section-header-focus-outline, none);
+    &[data-item-show-focus='true']:focus {
+      background-color: var(--terra-list-v3-section-header-focus-background-color, #dedfe0);
+      box-shadow: var(--terra-list-v3-section-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       position: relative;
       z-index: 1;
     }
   
     &.section-header:hover,
     &.section-header:active {
-      background-color: var(--terra-list-v3-section-header-hover-background-color, #d7d8d9); // Need correct value.
-    }
-
-    &[data-focusable='false']:focus {
-      box-shadow: none !important;
+      background-color: var(--terra-list-v3-section-header-hover-background-color, #d0d1d2);
     }
   }
 
@@ -58,7 +54,7 @@
 
   .start {
     flex: 0 0 auto;
-    padding-right: var(--terra-list-v3-section-header-start-padding-right, 0.3571228571rem);
+    padding-right: var(--terra-list-v3-section-header-start-padding-right, 0.7142857143rem);
   }
 
   .accordion-icon {

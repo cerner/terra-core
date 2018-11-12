@@ -4,19 +4,19 @@
 // ========================================================
 :local {
   .subsection-header {
-    background-color: var(--terra-list-v3-subsection-header-background-color, #c8cacb);
-    border-bottom: var(--terra-list-v3-subsection-header-border-bottom, 1px solid #b5b6b7);
-    padding-bottom: var(--terra-list-v3-subsection-header-padding-bottom, 0.5rem);
-    padding-left: var(--terra-list-v3-subsection-header-padding-left, 1.6571428571rem);
-    padding-top: var(--terra-list-v3-subsection-header-padding-top, 0.5rem);
+    background-color: var(--terra-list-v3-subsection-header-background-color, #dedfe0);
+    border-bottom: var(--terra-list-v3-subsection-header-border-bottom, 1px solid #c8cacb);
+    padding-bottom: var(--terra-list-v3-subsection-header-padding-bottom, 0.3571428571rem);
+    padding-left: var(--terra-list-v3-subsection-header-padding-left, 1.2142857143rem);
+    padding-top: var(--terra-list-v3-subsection-header-padding-top, 0.3571428571rem);
     width: 100%;
   }
 
   .title {
     color: var(--terra-list-v3-subsection-header-title-color, #1c1f21);
-    font-size: var(--terra-list-v3-subsection-header-title-font-size, 1rem);
+    font-size: var(--terra-list-v3-subsection-header-title-font-size, 0.8571428571rem);
     font-weight: var(--terra-list-v3-subsection-header-title-font-weight, bold);
-    line-height: var(--terra-list-v3-subsection-header-title-line-height, 1.142857143);
+    line-height: var(--terra-list-v3-subsection-header-title-line-height, 1.1666666667);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -29,24 +29,20 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    padding-left: var(--terra-list-v3-subsection-header-collapsible-padding-left, 1.4471428571rem);
+    outline: var(--terra-list-v3-subsection-header-focus-outline, none);
+    padding-left: var(--terra-list-v3-subsection-header-collapsible-padding-left, 1rem);
     width: 100%;
 
-    &.subsection-header:focus {
-      // background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
-      box-shadow: var(--terra-list-v3-subsection-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-      outline: var(--terra-list-v3-subsection-header-focus-outline, none);
+    &[data-item-show-focus='true']:focus {
+      background-color: var(--terra-list-item-focus-background-color, #dedfe0);
+      box-shadow: var(--terra-list-v3-subsection-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       position: relative;
       z-index: 1;
     }
   
     &.subsection-header:hover,
     &.subsection-header:active {
-      background-color: var(--terra-list-v3-subsection-header-hover-background-color, #b5b6b7); // Needs proper color value.
-    }
-
-    &[data-focusable='false']:focus {
-      box-shadow: none !important;
+      background-color: var(--terra-list-v3-subsection-header-hover-background-color, #d0d1d2);
     }
   }
 
@@ -58,7 +54,7 @@
 
   .start {
     flex: 0 0 auto;
-    padding-right: var(--terra-list-v3-subsection-header-start-padding-right, 0.3571228571rem);
+    padding-right: var(--terra-list-v3-subsection-header-start-padding-right, 0.7142857143rem);
   }
 
   .accordion-icon {

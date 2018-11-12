@@ -90,8 +90,9 @@ const SectionHeader = ({
     ariaSpread.role = 'heading';
     ariaSpread['aria-expanded'] = !isCollapsed;
     ariaSpread['aria-level'] = 1;
-    ariaSpread.onBlur = ListUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-focusable', 'true'));
-    ariaSpread.onMouseDown = ListUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-focusable', 'false'));
+    ariaSpread['data-focusable'] = 'true';
+    ariaSpread.onBlur = ListUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
+    ariaSpread.onMouseDown = ListUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
 
   return (
