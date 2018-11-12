@@ -10,11 +10,11 @@ const cx = classNames.bind(styles);
 /* eslint-disable react/forbid-prop-types */
 const propTypes = {
   /**
-   * Whether or not the section is collapsed.
+   * Whether or not the subsection is collapsed.
    */
   isCollapsed: PropTypes.bool,
   /**
-   * Whether or not the section can be collapsed.
+   * Whether or not the subsection can be collapsed.
    */
   isCollapsible: PropTypes.bool,
   /**
@@ -35,7 +35,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Header to be placed within a section list item
+   * Title text to be placed within the subsection header.
    */
   title: PropTypes.string,
 };

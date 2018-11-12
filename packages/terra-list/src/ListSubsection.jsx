@@ -11,11 +11,11 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Whether or not the section is collapsed.
+   * Whether or not the subsection is collapsed.
    */
   isCollapsed: PropTypes.bool,
   /**
-   * Whether or not the section can be collapsed.
+   * Whether or not the subsection can be collapsed.
    */
   isCollapsible: PropTypes.bool,
   /**
@@ -36,7 +36,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Title to be placed set on section header list item
+   * Title text to be placed within the subsection header.
    */
   title: PropTypes.string,
 };

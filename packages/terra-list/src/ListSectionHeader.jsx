@@ -35,7 +35,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Header to be placed within a section list item
+   * Title text to be placed within the section header.
    */
   title: PropTypes.string,
 };
