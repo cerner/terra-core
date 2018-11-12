@@ -61,7 +61,7 @@ const DocPage = () => (
         source: AvatarSizeSrc,
       },
       {
-        title: 'Toggle Color Variants',
+        title: 'Toggle Color Variants - Theme Specific',
         example: <AvatarColorVariants />,
         source: AvatarColorVariantsSrc,
       },

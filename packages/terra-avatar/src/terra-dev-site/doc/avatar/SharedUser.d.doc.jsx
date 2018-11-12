@@ -32,7 +32,7 @@ const DocPage = () => (
         source: SharedUserSizeSrc,
       },
       {
-        title: 'Toggle Color Variants',
+        title: 'Toggle Color Variants - Theme Specific',
         example: <SharedUserColorVariants />,
         source: SharedUserColorVariantsSrc,
       },

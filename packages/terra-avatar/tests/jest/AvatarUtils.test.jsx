@@ -12,7 +12,7 @@ describe('AvatarUtils', () => {
     expect(hash).toEqual(2108909069);
   });
 
-  it('should return color variant nine based on given hashValue', () => {
+  it('should return a color variant based on a given hashValue', () => {
     const variant = AvatarUtils.getColorVariant(hashValue);
     const variantTwo = AvatarUtils.getColorVariant(alt);
 
@@ -28,7 +28,7 @@ describe('AvatarUtils', () => {
     expect(validColor).toBeTruthy();
   });
 
-  it('should return a color variant, based on precedence', () => {
+  it('should return a color variant, based on precedence of color, hashvalue, and alt values', () => {
     const colorVariant = AvatarUtils.setColor(alt, nine, hashValue);
     const hashValueVariant = AvatarUtils.setColor(alt, null, hashValue);
     const altVariant = AvatarUtils.setColor(alt, null, null);

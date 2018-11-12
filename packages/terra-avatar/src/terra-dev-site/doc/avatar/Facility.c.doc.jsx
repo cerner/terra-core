@@ -39,7 +39,7 @@ const DocPage = () => (
         source: FacilitySizeSrc,
       },
       {
-        title: 'Toggle Color Variants',
+        title: 'Toggle Color Variants - Theme Specific',
         example: <FacilityColorVariants />,
         source: FacilityColorVariantsSrc,
       },
