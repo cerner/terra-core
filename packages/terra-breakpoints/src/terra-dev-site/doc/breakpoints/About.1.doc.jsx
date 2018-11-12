@@ -4,10 +4,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
-// // Component Source
-// import VisuallyHiddenTextSrc from '!raw-loader!../../../../src/VisuallyHiddenText';
-
-// // Example Files
+// Example Files
 import ActiveBreakpointProviderExample from '../example/ActiveBreakpointProviderExample';
 import ActiveBreakpointProviderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ActiveBreakpointProviderExample.jsx';
 
