@@ -18,12 +18,22 @@ const childContextTypes = {
   isGroupItem: PropTypes.bool,
 };
 
+const initialSingleSelectedIndex = (children) => {
+  const childArray = React.Children.toArray(children);
+  for (let i = 0; i < childArray.length; i += 1) {
+    if (childArray[i].props.isSelected) {
+      return i;
+    }
+  }
+  return -1;
+};
+
 class MenuItemGroup extends React.Component {
   constructor(props) {
     super(props);
     this.cloneChildren = this.cloneChildren.bind(this);
     this.handleItemSelection = this.handleItemSelection.bind(this);
-    this.state = { selectedIndex: null };
+    this.state = { selectedIndex: initialSingleSelectedIndex(props.children) };
   }
 
   getChildContext() {
@@ -34,7 +44,9 @@ class MenuItemGroup extends React.Component {
     if (this.state.selectedIndex !== metaData.index) {
       event.preventDefault();
       this.setState({ selectedIndex: metaData.index });
-      this.onChange(event, metaData.index);
+      if (this.props.onChange) {
+        this.props.onChange(event, metaData.index);
+      }
     }
   }
 
