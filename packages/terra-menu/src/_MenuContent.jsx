@@ -100,6 +100,7 @@ class MenuContent extends React.Component {
     this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
     this.buildHeader = this.buildHeader.bind(this);
     this.isSelectable = this.isSelectable.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
     this.onKeyDownBackButton = this.onKeyDownBackButton.bind(this);
     this.validateFocus = this.validateFocus.bind(this);
     this.needsFocus = props.isFocused;
@@ -124,6 +125,21 @@ class MenuContent extends React.Component {
 
   componentDidUpdate() {
     this.validateFocus(this.contentNode);
+  }
+
+  onKeyDown(event) {
+    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE || event.nativeEvent.keyCode === MenuUtils.KEYCODES.LEFT_ARROW) {
+      event.preventDefault();
+      this.props.onRequestBack();
+    }
+
+    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.UP_ARROW) {
+      console.log('up arrow');
+    }
+
+    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.DOWN_ARROW) {
+      console.log('down arrow');
+    }
   }
 
   onKeyDownBackButton(event) {
@@ -330,6 +346,7 @@ class MenuContent extends React.Component {
         tabIndex="-1"
         aria-modal="true"
         role="dialog"
+        onKeyDown={this.onKeyDown}
       >
         <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
           <List className={cx(['list'])} role="menu">
