@@ -14,7 +14,10 @@ const TextDisplays = () => (
     <Heading level={2}>
       Fonts
       <br />
-      <Text weight={400}>Font Stack: <span className={cx(['font-stack'])} /></Text>
+      <Text weight={400}>
+        Font Stack:
+        <span className={cx(['font-stack'])} />
+      </Text>
     </Heading>
     <br />
     <br />

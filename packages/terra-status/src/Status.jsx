@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import 'terra-base/lib/baseStyles';
 import styles from './Status.module.scss';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
+
 
 const cx = classNames.bind(styles);
 
@@ -27,11 +28,11 @@ const Status = ({
   children,
   visuallyHiddenText,
   ...customProps
- }) => {
-   if ((process.env.NODE_ENV !== 'production') && (!visuallyHiddenText)) {
-     // eslint-disable-next-line no-console
-     console.warn('\'visuallyHiddenText\' should be added to convey the meaning of the status indicator for screen readers accessibility. This prop will be required in the next major version bump of terra-status.');
-   }
+}) => {
+  if ((process.env.NODE_ENV !== 'production') && (!visuallyHiddenText)) {
+  // eslint-disable-next-line no-console
+    console.warn('\'visuallyHiddenText\' should be added to convey the meaning of the status indicator for screen readers accessibility. This prop will be required in the next major version bump of terra-status.');
+  }
 
   return (
     <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)}>
@@ -39,7 +40,7 @@ const Status = ({
       {children}
     </div>
   );
-}
+};
 
 Status.propTypes = propTypes;
 

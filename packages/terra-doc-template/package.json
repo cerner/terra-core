@@ -1,7 +1,7 @@
 {
   "name": "terra-doc-template",
   "main": "lib/DocTemplate.js",
-  "version": "1.19.0",
+  "version": "1.20.0",
   "description": "Provides an adjustable template for documentation pages.",
   "repository": {
     "type": "git",

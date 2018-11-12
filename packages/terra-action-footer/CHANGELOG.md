@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.28.0 - (November 9, 2018)
+------------------
 ### Changed
 * Styling improvements
 * Component markup refactoring
