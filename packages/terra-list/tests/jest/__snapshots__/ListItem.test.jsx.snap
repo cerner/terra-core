@@ -61,6 +61,7 @@ exports[`should render with isSelectable 1`] = `
 <li
   aria-selected={false}
   className="list-item is-selectable"
+  data-item-show-focus="true"
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="option"

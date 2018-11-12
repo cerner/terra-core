@@ -35,20 +35,21 @@ exports[`should render with isCollapsible 1`] = `
   aria-expanded={true}
   aria-level={2}
   className="subsection-header is-collapsible"
+  data-item-show-focus="true"
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="heading"
   tabIndex="0"
 >
   <div
-    className="item-start"
+    className="start"
   >
     <span
       className="accordion-icon is-open"
     />
   </div>
   <div
-    className="item-fill"
+    className="fill"
   >
     <h2
       className="title"
