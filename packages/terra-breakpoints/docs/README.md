@@ -43,7 +43,7 @@ console.log(activeBreakpointForSize(1500)); // 'enormous'
 
 `isBreakpointActiveForSize` will return a boolean value indicating whether or not the given breakpoint name is active for the width value.
 
-> Note that since the breakpoints are defined as minimum values, a breakpoint will be determined to be active if the width value is larger than defined minimum, even if the width value has entered a higher breakpoint range.
+> Note that since the breakpoints are defined as minimum values, a breakpoint will be determined to be active if the width value is larger than the defined minimum, even if the width value is included in a higher breakpoint's range.
 
 ```jsx
 import { isBreakpointActiveForSize } from 'terra-breakpoints';
@@ -118,7 +118,7 @@ const ActiveBreakpointProviderExample = () => (
 ```scss
 @import 'terra-breakpoints/media-queries';
 
-.my-class {
+.example {
   color: blue;
 
   @include terra-mq-small-up {

@@ -4,8 +4,8 @@ import ChangeLog from '../../../../CHANGELOG.md';
 
 const DocPage = () => (
   <DocTemplate
-    packageName="visually-hidden-text"
-    srcPath="https://github.com/cerner/terra-core/tree/master/packages/visually-hidden-text"
+    packageName="breakpoints"
+    srcPath="https://github.com/cerner/terra-core/tree/master/packages/breakpoints"
     readme={ChangeLog}
   />
 );

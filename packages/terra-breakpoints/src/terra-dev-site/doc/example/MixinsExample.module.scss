@@ -2,11 +2,7 @@
 
 :local {
   .content::after {
-    content: 'The active breakpoint is: default';
-
-    @include terra-mq-tiny-up {
-      content: 'The active breakpoint is: tiny';
-    }
+    content: 'The active breakpoint is: tiny';
   
     @include terra-mq-small-up {
       content: 'The active breakpoint is: small';
@@ -22,6 +18,10 @@
   
     @include terra-mq-huge-up {
       content: 'The active breakpoint is: huge';
+    }
+
+    @include terra-mq-enormous-up {
+      content: 'The active breakpoint is: enormous';
     }
   }
 }

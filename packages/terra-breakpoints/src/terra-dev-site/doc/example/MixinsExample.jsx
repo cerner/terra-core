@@ -8,33 +8,27 @@ import styles from './MixinsExample.module.scss';
   @import 'terra-breakpoints/mixins';
 
   :local {
-    @include terra-mq-tiny-up {
-      .content::after {
-        content: 'The active breakpoint is: tiny';
-      }
-    }
+    .content::after {
+      content: 'The active breakpoint is: tiny';
 
-    @include terra-mq-small-up {
-      .content::after {
+      @include terra-mq-small-up {
         content: 'The active breakpoint is: small';
       }
-    }
 
-    @include terra-mq-medium-up {
-      .content::after {
+      @include terra-mq-medium-up {
         content: 'The active breakpoint is: medium';
       }
-    }
 
-    @include terra-mq-large-up {
-      .content::after {
+      @include terra-mq-large-up {
         content: 'The active breakpoint is: large';
       }
-    }
 
-    @include terra-mq-huge-up {
-      .content::after {
+      @include terra-mq-huge-up {
         content: 'The active breakpoint is: huge';
+      }
+
+      @include terra-mq-enormous-up {
+        content: 'The active breakpoint is: enormous';
       }
     }
   }

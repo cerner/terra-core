@@ -1,6 +1,6 @@
 # Terra Breakpoints
 
-[![NPM version](https://badgen.net/npm/v/terra-visually-hidden-text)](https://www.npmjs.org/package/terra-visually-hidden-text)
+[![NPM version](https://badgen.net/npm/v/terra-breakpoints)](https://www.npmjs.org/package/terra-breakpoints)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 `terra-breakpoints` contains components and utilities related to Terra's supported responsive breakpoints.
