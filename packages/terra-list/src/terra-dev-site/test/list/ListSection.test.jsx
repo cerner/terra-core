@@ -6,7 +6,7 @@ import List, {
 } from 'terra-list/lib/List';
 
 const ListSectionTest = () => (
-  <List>
+  <List role="none">
     <Section
       key="static-section"
       title="Static Section"

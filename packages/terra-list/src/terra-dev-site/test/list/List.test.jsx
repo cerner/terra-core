@@ -3,7 +3,7 @@ import React from 'react';
 import List, { Item } from '../../../List';
 
 const ListTest = () => (
-  <List>
+  <List role="none">
     <Item key="0">
       <p>test 0</p>
     </Item>

@@ -63,7 +63,7 @@ class SectionWithSubsection2 extends React.Component {
 
   render() {
     return (
-      <List>
+      <List role="none">
         {this.createSections(mockData)}
       </List>
     );

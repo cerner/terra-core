@@ -22,7 +22,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Accessibility role of the list, defaults to 'listbox'.
+   * Accessibility role of the list, defaults to 'listbox'. If creating a read-only list, pass 'none', and no role will be added.
    */
   role: PropTypes.string,
 };
@@ -43,8 +43,13 @@ const List = ({
     customProps.className,
   ]);
 
+  let roleSpread;
+  if (role && role.length > 0 && role !== 'none') {
+    roleSpread = { role };
+  }
+
   return (
-    <ul {...customProps} role={role} className={listClassNames} ref={refCallback}>
+    <ul {...customProps} {...roleSpread} className={listClassNames} ref={refCallback}>
       {children}
     </ul>
   );

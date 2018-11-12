@@ -2,6 +2,8 @@
 
 The Terra List is a structural component to vertically arrange content within list/listitems.
 
+If a read-only list is desired, set the role prop for the list to 'none', as this will prevent accessibility concerns.
+
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
@@ -14,7 +16,7 @@ The Terra List is a structural component to vertically arrange content within li
 import React from 'react';
 import List, { Item } from 'terra-list';
 
-<List isDivided={true}>
+<List role="none">
   <Item key="section-1-item-1">
     <p>blurb</p>
   </Item>

@@ -7,7 +7,7 @@ import List, {
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const ListSubsectionExample = () => (
-  <List>
+  <List role="none">
     <Subsection
       key="static-subsection"
       title="Static Subsection"

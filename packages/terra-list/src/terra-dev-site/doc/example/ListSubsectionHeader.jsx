@@ -5,7 +5,7 @@ import List, {
 } from 'terra-list/lib/List';
 
 const ListSubsectionHeaderExample = () => (
-  <List>
+  <List role="none">
     <SubsectionHeader
       key="static-subheader"
       title="Static Subheader"

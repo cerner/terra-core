@@ -6,7 +6,7 @@ import List, {
 } from 'terra-list/lib/List';
 
 const ListSubsectionTest = () => (
-  <List>
+  <List role="none">
     <Subsection
       key="static-subsection"
       title="Static Subsection"

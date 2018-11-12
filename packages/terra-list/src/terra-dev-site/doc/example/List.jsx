@@ -4,7 +4,7 @@ import List, { Item } from 'terra-list/lib/List';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const ListExample = () => (
-  <List>
+  <List role="none">
     <Item key="123">
       <Placeholder title="Item 0" style={{ height: '50px' }} />
     </Item>
