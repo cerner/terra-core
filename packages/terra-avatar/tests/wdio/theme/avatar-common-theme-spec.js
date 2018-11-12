@@ -1,5 +1,5 @@
 describe('Avatar', () => {
-  describe('Default Avatar', () => {
+  describe('Icon Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/user-avatar'));
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -18,7 +18,7 @@ describe('Avatar', () => {
     });
   });
 
-  describe('Two Initials', () => {
+  describe('Two Initials Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/two-initials-avatar'));
 
     Terra.should.themeCombinationOfCustomProperties({
@@ -37,7 +37,7 @@ describe('Avatar', () => {
     });
   });
 
-  describe('Image', () => {
+  describe('Image Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-avatar'));
 
     Terra.should.themeCombinationOfCustomProperties({
@@ -54,7 +54,7 @@ describe('Avatar', () => {
     });
   });
 
-  describe('IsDeceased', () => {
+  describe('Deceased Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-avatar'));
 
     Terra.should.themeCombinationOfCustomProperties({
@@ -70,7 +70,7 @@ describe('Avatar', () => {
 });
 
 describe('Facility', () => {
-  describe('Default Facility', () => {
+  describe('Icon Facility', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility/default-facility'));
 
     Terra.should.themeCombinationOfCustomProperties({
@@ -109,7 +109,7 @@ describe('Facility', () => {
 });
 
 describe('Shared User', () => {
-  describe('Default Shared User', () => {
+  describe('Icon Shared User', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/shared-user/default-shared-user'));
 
     Terra.should.themeCombinationOfCustomProperties({

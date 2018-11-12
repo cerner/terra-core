@@ -1,5 +1,5 @@
 describe('Avatar', () => {
-  describe('Default Avatar', () => {
+  describe('Icon Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/user-avatar'));
 
     Terra.should.beAccessible({ selector: '#user-avatar' });
@@ -32,14 +32,14 @@ describe('Avatar', () => {
     Terra.should.matchScreenshot({ selector: '#two-initials-avatar' });
   });
 
-  describe('IsDeceased Avatar', () => {
+  describe('Deceased Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-avatar'));
 
     Terra.should.beAccessible({ selector: '#is-deceased-avatar' });
     Terra.should.matchScreenshot({ selector: '#is-deceased-avatar' });
   });
 
-  describe('IsDeceased Image Avatar', () => {
+  describe('Deceased Image Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-image-avatar'));
 
     Terra.should.beAccessible({ selector: '#is-deceased-image-avatar' });
@@ -48,7 +48,7 @@ describe('Avatar', () => {
 });
 
 describe('Facility', () => {
-  describe('Default Facility', () => {
+  describe('Icon Facility', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility/default-facility'));
 
     Terra.should.beAccessible({ selector: '#default-facility' });
@@ -64,7 +64,7 @@ describe('Facility', () => {
 });
 
 describe('Shared User', () => {
-  describe('Default Shared User', () => {
+  describe('Icon Shared User', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/shared-user/shared-user'));
 
     Terra.should.beAccessible({ selector: '#shared-user' });
