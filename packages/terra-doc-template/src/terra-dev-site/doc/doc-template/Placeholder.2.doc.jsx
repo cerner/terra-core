@@ -1,5 +1,5 @@
 import React from 'react';
-import DocTemplate from 'terra-doc-template';
+import DocTemplate from '../../../DocTemplate';
 import ReadMe from '../../../../docs/PLACEHOLDER.md';
 import { name } from '../../../../package.json';
 
