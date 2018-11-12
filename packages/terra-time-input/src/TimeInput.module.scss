@@ -97,7 +97,7 @@
     box-sizing: border-box;
     color: var(--terra-time-input-color, #1c1f21);
     display: table;
-    height: var(--terra-time-input-mobile-height, 1.857rem);
+    height: var(--terra-time-input-mobile-height, 2.28571428rem);
     min-width: var(--terra-time-input-width-input, 3.57em);
     padding-bottom: var(--terra-time-input-input-padding-bottom, 0.357em);
     padding-left: var(--terra-time-input-input-padding-left, 0.357em);
@@ -230,11 +230,11 @@
     border-color: var(--terra-time-input-meridiem-button-border-color, #d1d1d1);
     color: var(--terra-time-input-meridiem-button-color, #1c1f21);
     font-size: var(--terra-time-input-font-size, 1em);
-    height: var(--terra-time-input-mobile-height, 1.857rem);
+    height: var(--terra-time-input-mobile-height, 2.28571428rem);
     line-height: var(--terra-time-input-line-height, 1.429);
     outline: none;
     padding-bottom: var(--terra-time-input-meridiem-button-padding-bottom, 0.357em);
-    padding-top: var(--terra-time-input-meridiem-button-padding-top, 0.157em);
+    padding-top: var(--terra-time-input-meridiem-button-padding-top, 0.357em);
 
     &:hover {
       background-color: var(--terra-time-input-meridiem-button-hover-background-color, #bcbfc0);
