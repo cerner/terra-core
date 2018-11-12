@@ -128,17 +128,16 @@ class MenuContent extends React.Component {
   }
 
   onKeyDown(event) {
-    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE || event.nativeEvent.keyCode === MenuUtils.KEYCODES.LEFT_ARROW) {
-      event.preventDefault();
-      this.props.onRequestBack();
-    }
+    const focusableMenuItems = this.contentNode.querySelectorAll('li[tabindex="0"]');
 
     if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.UP_ARROW) {
-      console.log('up arrow');
+      // Shift focus to last focusable menu item
+      focusableMenuItems[focusableMenuItems.length - 1].focus();
     }
 
     if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.DOWN_ARROW) {
-      console.log('down arrow');
+      // Shift focus to first focusable menu item
+      focusableMenuItems[0].focus();
     }
   }
 
@@ -339,21 +338,24 @@ class MenuContent extends React.Component {
     const contentWidth = this.props.isWidthBounded ? undefined : this.props.fixedWidth;
 
     return (
-      <div
-        ref={this.handleContainerRef}
-        className={contentClass}
-        style={{ height: contentHeight, width: contentWidth, position: contentPosition }}
-        tabIndex="-1"
-        aria-modal="true"
-        role="dialog"
-        onKeyDown={this.onKeyDown}
-      >
-        <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
-          <List className={cx(['list'])} role="menu">
-            {items}
-          </List>
-        </ContentContainer>
-      </div>
+      <React.Fragment>
+        {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
+        <div
+          ref={this.handleContainerRef}
+          className={contentClass}
+          style={{ height: contentHeight, width: contentWidth, position: contentPosition }}
+          tabIndex="-1"
+          aria-modal="true"
+          role="dialog"
+          onKeyDown={this.onKeyDown}
+        >
+          <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
+            <List className={cx(['list'])} role="menu">
+              {items}
+            </List>
+          </ContentContainer>
+        </div>
+      </React.Fragment>
     );
   }
 }

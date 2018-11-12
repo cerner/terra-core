@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Prevent left and right arrow key events from shifting tab focus indication while inside of tab popup menu
 
 3.26.0 - (October 24, 2018)
 ------------------
