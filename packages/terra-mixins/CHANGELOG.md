@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.28.0 - (November 9, 2018)
+------------------
 ### Changed
 * Updated url-encode to include '{' and '}' to support the style tag in SVGs for IE
 

@@ -9,6 +9,11 @@ Unreleased
 ### Fixed
 * Dev site tests pages adjusted to uniformly use caretColor
 
+1.29.0 - (November 9, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.28.0 - (October 24, 2018)
 ------------------
 ### Changed
