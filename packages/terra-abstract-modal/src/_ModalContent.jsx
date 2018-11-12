@@ -70,12 +70,6 @@ const defaultProps = {
 
 /* eslint-disable react/prefer-stateless-function */
 class ModalContent extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.modalRef = React.createRef();
-  }
-
   render() {
     const {
       ariaLabel,
@@ -123,7 +117,6 @@ class ModalContent extends React.Component {
            */
           /* eslint-disable jsx-a11y/no-noninteractive-tabindex */}
         <div
-          ref={this.modalRef}
           tabIndex={platformIsiOS ? '-1' : '0'}
           aria-label={ariaLabel}
           className={modalClassName}
