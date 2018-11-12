@@ -615,7 +615,7 @@ exports[`should render the correct snapshot for iPads 1`] = `
                   aria-modal="true"
                   class="abstract-modal layer-6000"
                   role="dialog"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div>
                     <h1>
@@ -668,7 +668,7 @@ exports[`should render the correct snapshot for iPads 1`] = `
                   aria-modal="true"
                   className="abstract-modal layer-6000"
                   role="dialog"
-                  tabIndex="0"
+                  tabIndex="-1"
                 >
                   <div>
                     <h1>
@@ -730,7 +730,7 @@ exports[`should render the correct snapshot for iPhones 1`] = `
                   aria-modal="true"
                   class="abstract-modal layer-6000"
                   role="dialog"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div>
                     <h1>
@@ -783,7 +783,7 @@ exports[`should render the correct snapshot for iPhones 1`] = `
                   aria-modal="true"
                   className="abstract-modal layer-6000"
                   role="dialog"
-                  tabIndex="0"
+                  tabIndex="-1"
                 >
                   <div>
                     <h1>
@@ -845,7 +845,7 @@ exports[`should render the correct snapshot for iPods 1`] = `
                   aria-modal="true"
                   class="abstract-modal layer-6000"
                   role="dialog"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div>
                     <h1>
@@ -898,7 +898,7 @@ exports[`should render the correct snapshot for iPods 1`] = `
                   aria-modal="true"
                   className="abstract-modal layer-6000"
                   role="dialog"
-                  tabIndex="0"
+                  tabIndex="-1"
                 >
                   <div>
                     <h1>

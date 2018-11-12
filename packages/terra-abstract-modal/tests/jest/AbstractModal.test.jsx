@@ -52,25 +52,25 @@ it('should mount an open modal set to fullscreen', () => {
 });
 
 it('should render the correct snapshot for iPhones', () => {
-  Object.assign(window.navigator, 'platform', 'iPhone');
+  Object.defineProperty(global.navigator, 'platform', { value: 'iPhone', writable: 'true' });
 
   const modal = mount(<AbstractModalExample />);
   expect(modal).toMatchSnapshot();
-  Object.assign(window.navigator, 'platform', null);
+  global.navigator.platform = null;
 });
 
 it('should render the correct snapshot for iPads', () => {
-  Object.assign(window.navigator, 'platform', 'iPad');
+  Object.defineProperty(global.navigator, 'platform', { value: 'iPad', writable: 'true' });
 
   const modal = mount(<AbstractModalExample />);
   expect(modal).toMatchSnapshot();
-  Object.assign(window.navigator, 'platform', null);
+  global.navigator.platform = null;
 });
 
 it('should render the correct snapshot for iPods', () => {
-  Object.assign(window.navigator, 'platform', 'iPod');
+  Object.defineProperty(global.navigator, 'platform', { value: 'iPod', writable: 'true' });
 
   const modal = mount(<AbstractModalExample />);
   expect(modal).toMatchSnapshot();
-  Object.assign(window.navigator, 'platform', null);
+  global.navigator.platform = null;
 });
