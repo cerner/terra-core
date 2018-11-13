@@ -23,7 +23,7 @@ class ModalOverrideRole extends React.Component {
   }
 
   render() {
-    const newRole = 'button';
+    const newRole = 'alertdialog';
     return (
       <div>
         <AbstractModal
