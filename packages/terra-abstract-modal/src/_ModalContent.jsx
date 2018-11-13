@@ -100,6 +100,7 @@ class ModalContent extends React.Component {
 
     // Delete the closePortal prop that comes from react-portal.
     delete customProps.closePortal;
+    const platformIsiOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
     return (
       <FocusTrap
@@ -116,7 +117,7 @@ class ModalContent extends React.Component {
            */
           /* eslint-disable jsx-a11y/no-noninteractive-tabindex */}
         <div
-          tabIndex="0"
+          tabIndex={platformIsiOS ? '-1' : '0'}
           aria-label={ariaLabel}
           className={modalClassName}
           role={role}

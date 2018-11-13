@@ -1,7 +1,7 @@
 {
   "name": "terra-embedded-content-consumer",
   "main": "lib/EmbeddedContentConsumer.js",
-  "version": "2.27.0",
+  "version": "2.28.0",
   "description": "The Embedded Content Consumer is the application component which is embedding web content within it.",
   "repository": {
     "type": "git",
@@ -32,10 +32,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.20.0"
+    "terra-doc-template": "^1.21.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
+    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
