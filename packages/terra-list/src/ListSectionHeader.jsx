@@ -17,7 +17,7 @@ const propTypes = {
    */
   isCollapsible: PropTypes.bool,
   /**
-   * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=2`.
+   * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
@@ -43,7 +43,7 @@ const propTypes = {
 const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
-  level: 2,
+  level: 1,
   title: '',
 };
 

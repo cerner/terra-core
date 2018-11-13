@@ -44,22 +44,32 @@ exports[`should render with items 1`] = `
     title=""
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="123"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="124"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="125"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="126"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="127"
   />

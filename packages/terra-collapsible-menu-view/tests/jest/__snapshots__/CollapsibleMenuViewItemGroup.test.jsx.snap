@@ -3,6 +3,7 @@
 exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge custom props 1`] = `
 <List
   className="Testing"
+  isDivided={false}
   role="listbox"
 >
   <CollapsibleMenuViewItem
@@ -71,6 +72,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a m
 
 exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render menu items when selectedKeys is not set 1`] = `
 <List
+  isDivided={false}
   role="listbox"
 >
   <CollapsibleMenuViewItem

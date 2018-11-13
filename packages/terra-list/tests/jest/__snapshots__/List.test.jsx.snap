@@ -7,22 +7,32 @@ exports[`should render with divided items 1`] = `
   role="listbox"
 >
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="123"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="124"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="125"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="126"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="127"
   />
@@ -35,22 +45,32 @@ exports[`should render with items 1`] = `
   role="listbox"
 >
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="123"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="124"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="125"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="126"
   />
   <ListItem
+    hasChevron={false}
+    isSelectable={false}
     isSelected={false}
     key="127"
   />
