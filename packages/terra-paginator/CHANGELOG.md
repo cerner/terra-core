@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Unneeded terra-list dependency.
 
 1.24.0 - (November 9, 2018)
 ------------------
