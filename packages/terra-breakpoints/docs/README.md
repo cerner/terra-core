@@ -13,16 +13,16 @@
 
 An object containing the named breakpoint values is the default export of the `terra-breakpoints` package. These named breakpoints are defined as minimum values.
 
-|Breakpoint Name|Minimum Value|
-|---|---|
-|`tiny`|0px|
-|`small`|544px|
-|`medium`|768px|
-|`large`|992px|
-|`huge`|1216px|
-|`enormous`|1440px|
+|Breakpoint Name|Minimum Value|Media Query|Description|
+|---|---|---|---|
+|`tiny`|0px|`@media screen and (min-width: 0px)`| Active from viewport width 0px and up |
+|`small`|544px|`@media screen and (min-width: 544px)`|Active from viewport width 544px and up|
+|`medium`|768px|`@media screen and (min-width: 768px)`|Active from viewport width 768px and up|
+|`large`|992px|`@media screen and (min-width: 992px)`|Active from viewport width 992px and up|
+|`huge`|1216px|`@media screen and (min-width: 1216px)`|Active from viewport width 1216 and up|
+|`enormous`|1440px|`@media screen and (min-width: 1440px)`|Active from viewport width 1440px and up|
 
-Helper functions are also provided to to help determine what breakpoint is active for a given value.
+Utility functions are also provided to help determine what breakpoint is active for a given value.
 
 #### `activeBreakpointForSize(widthValue)`
 
@@ -66,7 +66,7 @@ console.log(isBreakpointActiveForSize('enormous', 1500)); // true
 
 ### ActiveBreakpointProvider
 
-`terra-breakpoints` also defines a component that provides the current active breakpoint to child components using a Context-based API. This can be used to minimize the number of required resize event listeners and ensure consistency across the component hierarchy.
+`terra-breakpoints` also provides `<ActiveBreakpointProvider>`. a component that provides the current active breakpoint to child components using a Context-based API. This can be used to minimize the number of required resize event listeners and ensure consistency across the component hierarchy.
 
 A component generator called `withActiveBreakpoint()` is included to provide simple interfacing with the ActiveBreakpointProvider. However, the ActiveBreakpointContext can also be imported and used directly, if needed.
 

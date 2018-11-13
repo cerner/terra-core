@@ -38,7 +38,7 @@ const cx = classNames.bind(styles);
 
 const MixinsExample = () => (
   <div>
-    <p>This example uses SASS mixins to determine the active breakpoint.</p>
+    <p>This example uses Sass mixins to determine the active breakpoint.</p>
     <p className={cx('content')} />
   </div>
 );
