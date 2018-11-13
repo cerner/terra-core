@@ -33,6 +33,7 @@ Terra list comes with additional helpers to manage state, in this case we want t
   }
 ```
 Settting state will trigger another render. So in the render method we need generate our sections with the updated isCollapsed and isCollapsible props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The list renders flat, so keys need to be unique even if items are placed within sections structurally.
+[React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
 ```jsx
   createSection(sectionData) {
     return (
