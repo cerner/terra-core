@@ -8,8 +8,6 @@ import styles from './ListItem.module.scss';
 
 const cx = classNames.bind(styles);
 
-// Disable this lint rule to allow for the metaData prop
-/* eslint-disable react/forbid-prop-types */
 const propTypes = {
   /**
    * The content element to be placed inside the list item for display.
@@ -30,6 +28,7 @@ const propTypes = {
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
   /**
    * Function callback for when the appropriate click or key action is performed.
@@ -41,7 +40,6 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
 };
-/* eslint-enable react/forbid-prop-types */
 
 const defaultProps = {
   children: [],

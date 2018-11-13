@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import SubsectionHeader from './ListSubsectionHeader';
 
-// Disable this lint rule to allow for the metaData prop
-/* eslint-disable react/forbid-prop-types */
 const propTypes = {
   /**
    * The children list items passed to the component.
@@ -25,6 +23,7 @@ const propTypes = {
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
   /**
    * Function callback for when the appropriate click or key action is performed.
@@ -40,7 +39,6 @@ const propTypes = {
    */
   title: PropTypes.string,
 };
-/* eslint-enable react/forbid-prop-types */
 
 const defaultProps = {
   children: [],

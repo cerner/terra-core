@@ -1,6 +1,6 @@
 # Terra List - Implementing a Single Select List
 
-In previous versions of the terra-list a single select style list could be created as either a controlled version of SelectableList or uncontrolled version of SingleSelectList.  These implementations suffered from inflexibility and performance concerns. Going foward terra-list is more granular, though this puts more reponsibility on the consumer to properly update their list items with the appropriate state. The following is a guide to addressing those concerns in your implementation.
+In previous versions of the terra-list a single select style list could be created as either a controlled version of SelectableList or uncontrolled version of SingleSelectList.  These implementations suffered from inflexibility and performance concerns. Going forward terra-list is more granular, though this puts more responsibility on the consumer to properly update their list items with the appropriate state. The following is a guide to addressing those concerns in your implementation.
 
 ## State Management
 The state of selection needs to be managed for the list in a HOC. In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
@@ -25,7 +25,7 @@ As a precaution we can prevent default on the event, in case the list is inside 
     event.preventDefault();
   }
 ```
-A single select list normally doens't allow deselection, so we'll be using it in our example, but if deselection is desired we could adjust this method. So we compare the key to the current one in state, and if they aren't the same we set this as our state.
+A single select list normally doesn't allow deselection, so we'll be using it in our example, but if deselection is desired we could adjust this method. So we compare the key to the current one in state, and if they aren't the same we set this as our state.
 ```jsx
   handleItemSelection(event, metaData) {
     event.preventDefault();

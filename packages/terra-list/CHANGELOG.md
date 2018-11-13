@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/guides)
-* Removed Component `SingleSelectList` - No longer support this uncontrolled varaint of list.
+* Removed Component `SingleSelectList` - No longer support this uncontrolled variant of list.
 * Removed Component `MultiSelectList` - No longer support this uncontrolled variant of list.
 * Removed Component `SelectableList` - Removed to avoid the need for cloning child props.
 * Removed Util `validatedMaxCount`.

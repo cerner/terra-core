@@ -2,7 +2,7 @@
 
 The Terra List is a structural component to vertically arrange content within list/listitems.
 
-If a read-only list is desired, set the role prop for the list to 'none', as this will prevent accessibility concerns.
+If a read-only list is desired, set the role prop for the list to null or 'none'. The default prop value for role is 'listbox', for read-only we want to disable this, so screen readers will not view it as containing actionable items.
 
 ## Getting Started
 

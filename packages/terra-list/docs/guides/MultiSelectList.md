@@ -32,7 +32,7 @@ Terra list comes with additional helpers to manage state, in this case we want t
     this.setState(state => ({ selectedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
   }
 ```
-Settting state will trigger another render. So in the render method we need generate our list items with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The list renders flat, so keys need to be unique even if they are placed within sections.
+Setting state will trigger another render. So in the render method we need generate our list items with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The list renders flat, so keys need to be unique even if they are placed within sections.
 ```jsx
   createListItem(itemData) {
     return (

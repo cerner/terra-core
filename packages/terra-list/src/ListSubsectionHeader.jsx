@@ -7,7 +7,6 @@ import styles from './ListSubsectionHeader.module.scss';
 
 const cx = classNames.bind(styles);
 
-/* eslint-disable react/forbid-prop-types */
 const propTypes = {
   /**
    * Whether or not the subsection is collapsed.
@@ -24,6 +23,7 @@ const propTypes = {
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
   /**
    * Function callback for when the appropriate click or key action is performed.
@@ -39,7 +39,6 @@ const propTypes = {
    */
   title: PropTypes.string,
 };
-/* eslint-enable react/forbid-prop-types */
 
 const defaultProps = {
   isCollapsed: false,
