@@ -26,27 +26,21 @@ const updatedMultiSelectedKeys = (currentKeys, newKey) => {
 /**
  * Returns a wrapped onClick callback function.
  */
-const wrappedOnClickForItem = (onClick, onSelect, metaData) => {
-  if (!onSelect) {
-    return onClick;
-  }
-  return (event) => {
+const wrappedOnClickForItem = (onClick, onSelect, metaData) => (
+  (event) => {
     onSelect(event, metaData);
 
     if (onClick) {
       onClick(event);
     }
-  };
-};
+  }
+);
 
 /**
  * Returns a wrapped onKeyDown callback function with enter and space keys triggering onSelect.
  */
-const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => {
-  if (!onSelect) {
-    return onKeyDown;
-  }
-  return (event) => {
+const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => (
+  (event) => {
     if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
       onSelect(event, metaData);
     }
@@ -54,8 +48,8 @@ const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => {
     if (onKeyDown) {
       onKeyDown(event);
     }
-  };
-};
+  }
+);
 
 /**
  * Returns a wrapped onBlur callback function.
