@@ -52,6 +52,10 @@ const propTypes = {
    */
   role: PropTypes.string,
   /**
+   * Allows assigning of root element custom data attribute for easy selecting of document base component.
+   */
+  rootSelector: PropTypes.string,
+  /**
    * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are the standard modal layer: '6000', and the max layer: '8000'.
    */
   zIndex: PropTypes.oneOf(zIndexes),
@@ -64,7 +68,8 @@ const defaultProps = {
   closeOnOutsideClick: true,
   isFocused: true,
   isFullscreen: false,
-  role: 'document',
+  role: 'dialog',
+  rootSelector: '[data-terra-base]',
   zIndex: '6000',
 };
 
@@ -94,11 +99,20 @@ class AbstractModal extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeydown);
+    this.toggleVisuallyHiddenMainDocument('false');
   }
 
   handleKeydown(e) {
     if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpen && this.props.closeOnEsc && this.props.isFocused) {
       this.props.onRequestClose();
+    }
+  }
+
+  toggleVisuallyHiddenMainDocument(hiddenValue) {
+    const mainDocumentElement = document.querySelector(this.props.rootSelector);
+
+    if (mainDocumentElement) {
+      mainDocumentElement.setAttribute('aria-hidden', hiddenValue);
     }
   }
 
@@ -114,14 +128,18 @@ class AbstractModal extends React.Component {
       isFullscreen,
       isOpen,
       role,
+      rootSelector,
       onRequestClose,
       zIndex,
       ...customProps
     } = this.props;
 
     if (!isOpen) {
+      this.toggleVisuallyHiddenMainDocument('false');
       return null;
     }
+    this.toggleVisuallyHiddenMainDocument('true');
+
 
     return (
       <Portal
@@ -138,6 +156,7 @@ class AbstractModal extends React.Component {
           isFullscreen={isFullscreen}
           onRequestClose={onRequestClose}
           zIndex={zIndex}
+          aria-modal="true"
         >
           {children}
         </ModalContent>
