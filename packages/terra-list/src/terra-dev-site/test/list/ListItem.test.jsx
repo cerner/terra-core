@@ -31,12 +31,6 @@ const ListItemTest = () => (
     >
       <p>test selected</p>
     </Item>
-    <Item
-      key="divided"
-      isDivided
-    >
-      <p>test divided</p>
-    </Item>
   </List>
 );
 

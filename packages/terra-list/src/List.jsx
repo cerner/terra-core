@@ -18,6 +18,10 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Whether or not the list's child items should have a border color applied.
+   */
+  isDivided: PropTypes.bool,
+  /**
    * Function callback for the ref of the ul.
    */
   refCallback: PropTypes.func,
@@ -29,11 +33,13 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
+  isDivided: false,
   role: 'listbox',
 };
 
 const List = ({
   children,
+  isDivided,
   refCallback,
   role,
   ...customProps
@@ -43,13 +49,16 @@ const List = ({
     customProps.className,
   ]);
 
-  let roleSpread;
+  const attrSpread = {};
   if (role && role.length > 0 && role !== 'none') {
-    roleSpread = { role };
+    attrSpread.role = role;
+  }
+  if (isDivided) {
+    attrSpread['data-list-items-divided'] = isDivided;
   }
 
   return (
-    <ul {...customProps} {...roleSpread} className={listClassNames} ref={refCallback}>
+    <ul {...customProps} {...attrSpread} className={listClassNames} ref={refCallback}>
       {children}
     </ul>
   );

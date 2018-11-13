@@ -26,7 +26,6 @@ class MutliSelectList extends React.Component {
     return (
       <Item
         key={itemData.key}
-        isDivided
         isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, this.state.selectedKeys, itemData.key)}
         isSelected={this.state.selectedKeys.indexOf(itemData.key) >= 0}
         metaData={{ key: itemData.key }}
@@ -43,7 +42,7 @@ class MutliSelectList extends React.Component {
 
   render() {
     return (
-      <List>
+      <List isDivided>
         {this.createListItems(mockData)}
       </List>
     );

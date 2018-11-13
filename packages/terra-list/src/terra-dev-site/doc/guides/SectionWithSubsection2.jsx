@@ -10,7 +10,7 @@ import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-section-sub';
 
 const createListItem = itemData => (
-  <Item key={itemData.key} isDivided>
+  <Item key={itemData.key}>
     <Placeholder title={itemData.title} style={{ height: '50px' }} />
   </Item>
 );
@@ -63,7 +63,7 @@ class SectionWithSubsection2 extends React.Component {
 
   render() {
     return (
-      <List role="none">
+      <List isDivided role="none">
         {this.createSections(mockData)}
       </List>
     );

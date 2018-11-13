@@ -44,27 +44,22 @@ exports[`should render with items 1`] = `
     title=""
   />
   <ListItem
-    isDivided={false}
     isSelected={false}
     key="123"
   />
   <ListItem
-    isDivided={false}
     isSelected={false}
     key="124"
   />
   <ListItem
-    isDivided={false}
     isSelected={false}
     key="125"
   />
   <ListItem
-    isDivided={false}
     isSelected={false}
     key="126"
   />
   <ListItem
-    isDivided={false}
     isSelected={false}
     key="127"
   />

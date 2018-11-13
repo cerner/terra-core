@@ -13,12 +13,6 @@ const ListSectionExample = () => (
       <Placeholder title="Default ListItem" style={{ height: '50px' }} />
     </Item>
     <Item
-      key="divided"
-      isDivided
-    >
-      <Placeholder title="Divided ListItem" style={{ height: '50px' }} />
-    </Item>
-    <Item
       key="chevron"
       hasChevron
     >

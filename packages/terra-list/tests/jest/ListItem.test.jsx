@@ -27,11 +27,6 @@ it('should render with hasChevron', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render with isDivided', () => {
-  const shallowComponent = shallow(<ListItem isDivided />);
-  expect(shallowComponent).toMatchSnapshot();
-});
-
 it('should render with callback functions', () => {
   const shallowComponent = shallow(<ListItem refCallback={jest.fn()} onSelect={jest.fn()} />);
   expect(shallowComponent).toMatchSnapshot();

@@ -51,12 +51,6 @@ exports[`should render with hasChevron 1`] = `
 </li>
 `;
 
-exports[`should render with isDivided 1`] = `
-<li
-  className="list-item divided"
-/>
-`;
-
 exports[`should render with isSelectable 1`] = `
 <li
   aria-selected={false}

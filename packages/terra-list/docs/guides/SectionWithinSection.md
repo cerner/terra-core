@@ -95,7 +95,7 @@ Finally we need to check if the section is collapsed. As we support IE10 & 11, w
 We can then stub out our static elements
 ```jsx
 const createListItem = itemData => (
-  <Item key={itemData.key} isDivided>
+  <Item key={itemData.key}>
     <Placeholder />
   </Item>
 );
@@ -117,7 +117,7 @@ Then we can implement a method to loop through our data and create the section w
 
   render() {
     return (
-      <List>
+      <List isDivided>
         {this.createSections(mockData)}
       </List>
     );

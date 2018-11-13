@@ -8,11 +8,22 @@
     width: 100%;
   }
 
-  .divided {
-    border-top: var(--terra-list-v3-item-divider-border-top, 1px solid #dedfe0);
+  [data-list-items-divided='true'] {
+    > .list-item {
+      border-top: var(--terra-list-v3-item-divider-border-top, 1px solid #dedfe0);
 
-    &:last-of-type {
-      border-bottom: var(--terra-list-v3-item-divider-border-bottom, 1px solid #dedfe0);
+      &:last-of-type {
+        border-bottom: var(--terra-list-v3-item-divider-border-bottom, 1px solid #dedfe0);
+      }
+    }
+
+    > .selected {
+      border-color: var(--terra-list-v3-item-selected-divider-border-color, #0092e0);
+  
+      // stylelint-disable-next-line selector-max-compound-selectors
+      + .list-item {
+        border-top-color: var(--terra-list-v3-item-selected-divider-border-top-color, #0092e0);
+      }
     }
   }
 
@@ -28,14 +39,6 @@
 
   .selected {
     background-color: var(--terra-list-v3-item-selected-background-color, darken(#ebf6fd, 2%));
-  }
-
-  .divided.selected {
-    border-color: var(--terra-list-v3-item-selected-divider-border-color, #0092e0);
-
-    + .list-item {
-      border-top-color: var(--terra-list-v3-item-selected-divider-border-top-color, #0092e0);
-    }
   }
 
   .is-selectable {

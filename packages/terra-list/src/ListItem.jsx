@@ -20,10 +20,6 @@ const propTypes = {
    */
   hasChevron: PropTypes.bool,
   /**
-   * Whether or not the list item should have a border color applied.
-   */
-  isDivided: PropTypes.bool,
-  /**
    * Whether or not the list item should have selection styles applied.
    */
   isSelected: PropTypes.bool,
@@ -50,7 +46,6 @@ const propTypes = {
 const defaultProps = {
   children: [],
   hasChevron: undefined,
-  isDivided: false,
   isSelected: false,
   isSelectable: undefined,
 };
@@ -58,7 +53,6 @@ const defaultProps = {
 const ListItem = ({
   children,
   hasChevron,
-  isDivided,
   isSelected,
   isSelectable,
   metaData,
@@ -72,7 +66,6 @@ const ListItem = ({
 }) => {
   const listItemClassNames = cx([
     'list-item',
-    { divided: isDivided },
     { selected: isSelected },
     { 'is-selectable': isSelectable },
     { 'item-has-chevron': hasChevron },

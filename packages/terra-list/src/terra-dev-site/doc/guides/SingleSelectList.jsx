@@ -25,7 +25,6 @@ class SingleSelectList extends React.Component {
     return (
       <Item
         key={itemData.key}
-        isDivided
         isSelectable
         isSelected={this.state.selectedKey === itemData.key}
         metaData={{ key: itemData.key }}
@@ -42,7 +41,7 @@ class SingleSelectList extends React.Component {
 
   render() {
     return (
-      <List>
+      <List isDivided>
         {this.createListItems(mockData)}
       </List>
     );
