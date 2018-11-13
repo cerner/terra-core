@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Dev site test for maxWidth prop
 
+1.29.0 - (November 9, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.28.0 - (October 24, 2018)
 ------------------
 ### Changed

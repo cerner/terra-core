@@ -1,7 +1,7 @@
 {
   "name": "terra-mixins",
   "main": "lib/Mixins.scss",
-  "version": "1.20.0",
+  "version": "1.21.0",
   "description": "The terra-mixins component supplies global mixins for use throughout the Terra ecosystem.",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
+    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:scss",

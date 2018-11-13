@@ -1,7 +1,7 @@
 {
   "name": "terra-doc-template",
   "main": "lib/DocTemplate.js",
-  "version": "1.19.0",
+  "version": "1.20.0",
   "description": "Provides an adjustable template for documentation pages.",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "terra-props-table": "^2.21.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
+    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

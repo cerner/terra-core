@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * maxWidth prop added to Field component
 
+2.29.0 - (November 9, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.28.0 - (October 24, 2018)
 ------------------
 ### Changed

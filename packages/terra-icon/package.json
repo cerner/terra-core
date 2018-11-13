@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "2.26.0",
+  "version": "2.27.0",
   "description": "The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.19.0"
+    "terra-doc-template": "^1.20.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
@@ -44,7 +44,7 @@
     "generate-icon": "node scripts/lib/generate-icon/index.js",
     "generate-example": "node scripts/lib/generate-example/index.js",
     "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-icon && npm run generate-example",
-    "compile": "npm run compile:clean && npm run compile:build && npm run compilescripts",
+    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
