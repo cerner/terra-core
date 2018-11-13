@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.24.0 - (November 13, 2018)
+------------------
 ### Changed
 * Defaulted role prop to dialog.
 * Added aria-modal to the modal.
