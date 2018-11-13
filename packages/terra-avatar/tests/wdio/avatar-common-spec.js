@@ -39,6 +39,13 @@ describe('Avatar', () => {
     Terra.should.matchScreenshot({ selector: '#is-deceased-avatar' });
   });
 
+  describe('Deceased Initials Avatar', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-initials-avatar'));
+
+    Terra.should.beAccessible({ selector: '#is-deceased-initials-avatar' });
+    Terra.should.matchScreenshot({ selector: '#is-deceased-initials-avatar' });
+  });
+
   describe('Deceased Image Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-image-avatar'));
 

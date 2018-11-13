@@ -67,6 +67,33 @@ describe('Avatar', () => {
       },
     });
   });
+
+  describe('Deceased Initials Avatar', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-initials-avatar'));
+
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      selector: '#is-deceased-initials-avatar',
+      properties: {
+        '--terra-avatar-is-deceased-background-color': 'black',
+        '--terra-avatar-image-is-deceased-opacity': '0.2',
+        '--terra-avatar-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
+      },
+    });
+  });
+
+  describe('Deceased Image Avatar', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-image-avatar'));
+
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      selector: '#is-deceased-image-avatar',
+      properties: {
+        '--terra-avatar-image-is-deceased-opacity': '0.2',
+        '--terra-avatar-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
+      },
+    });
+  });
 });
 
 describe('Facility', () => {
