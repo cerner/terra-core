@@ -54,7 +54,8 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
-   * Set max width of input field. Passed in custom inline styles take precedence over this prop.
+   * Set the max-width of a field using `length` or `%`.  Best practice recommendation to never exceed
+   * a rendered value of 1020px. _(Note: Providing custom inline styles will take precedence.)_
    */
   maxWidth: PropTypes.string,
   /**
