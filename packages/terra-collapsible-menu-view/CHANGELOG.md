@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update snapshots for list dependency.
 
 3.27.0 - (November 9, 2018)
 ------------------
