@@ -3,7 +3,7 @@ import React from 'react';
 import { SharedUser } from 'terra-avatar/lib/Avatar';
 
 const AvatarSize = () => (
-  <SharedUser alt="users" height="5em" width="5em" />
+  <SharedUser alt="Shared User" height="5em" width="5em" />
 );
 
 export default AvatarSize;
