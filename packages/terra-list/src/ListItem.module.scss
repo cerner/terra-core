@@ -15,13 +15,13 @@
       &:last-of-type {
         border-bottom: var(--terra-list-v3-item-divider-border-bottom, 1px solid #dedfe0);
       }
-    }
 
-    > .selected {
-      border-color: var(--terra-list-v3-item-selected-divider-border-color, #0092e0);
-  
+      &.selected {
+        border-color: var(--terra-list-v3-item-selected-divider-border-color, #0092e0);
+      }
+
       // stylelint-disable-next-line selector-max-compound-selectors
-      + .list-item {
+      &.selected + .list-item {
         border-top-color: var(--terra-list-v3-item-selected-divider-border-top-color, #0092e0);
       }
     }
