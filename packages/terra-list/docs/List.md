@@ -16,7 +16,7 @@ If a read-only list is desired, set the role prop for the list to 'none', as thi
 import React from 'react';
 import List, { Item } from 'terra-list';
 
-<List role="none">
+<List isDivided role="none">
   <Item key="section-1-item-1">
     <p>blurb</p>
   </Item>

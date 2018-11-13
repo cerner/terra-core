@@ -10,7 +10,6 @@ import List, { Item } from 'terra-list/lib/List';
 
 <Item
   key={itemData.key}
-  isDivided
   isSelectable
   isSelected={false}
   metaData={{ key: 'my-item-key' }}
