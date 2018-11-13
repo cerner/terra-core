@@ -90,8 +90,8 @@
     "shelljs": "^0.8.2",
     "stylelint": "^9.0.0",
     "stylelint-config-terra": "^1.0.0",
-    "terra-dev-site": "^2.0.0",
-    "terra-toolkit": "^4.5.0",
+    "terra-dev-site": "git://github.com/cerner/terra-dev-site.git#master",
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#master",
     "webpack-merge": "^4.1.2"
   }
 }
