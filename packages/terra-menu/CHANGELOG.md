@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Update to use new List API, create single select implementation within MenuItemGroup. 
 
+3.26.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.25.0 - (November 9, 2018)
 ------------------
 ### Changed
