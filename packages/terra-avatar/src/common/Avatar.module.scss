@@ -22,14 +22,14 @@
   // Applies to images. Will be overriden by color variants.
   .avatar::after {
     border-radius: 50%;
-    box-shadow: var(--terra-avatar-after-box-shadow);
+    box-shadow: var(--terra-avatar-after-box-shadow, inset 0 1px 3px 0 rgba(17, 22, 25, 0.3));
     content: '';
     display: block;
-    height: 0;
+    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 0;
+    width: 100%;
   }
 
   .avatar > .icon {
@@ -254,9 +254,10 @@
       opacity: var(--terra-avatar-image-is-deceased-opacity, 0.4);
     }
 
-    &::after{
+    // Do not override image box shadw.
+    :not(.image) &::after{
       border-radius: 50%;
-      box-shadow: var(--terra-avatar-is-deceased-after-box-shadow, none);
+      box-shadow: var(--terra-avatar-is-deceased-after-box-shadow, inset 0 0 0 2px #64696c);
       content: '';
       display: block;
       height: 100%;

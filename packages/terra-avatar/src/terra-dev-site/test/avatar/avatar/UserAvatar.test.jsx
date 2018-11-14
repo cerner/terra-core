@@ -1,4 +1,4 @@
 import React from 'react';
-import { Avatar } from '../../../../Avatar';
+import { Avatar } from '../../../../index';
 
 export default () => <Avatar id="user-avatar" alt="user" color="one" />;
