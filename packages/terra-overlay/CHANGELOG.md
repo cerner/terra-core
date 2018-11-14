@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed automatic focus shift to relative overlay when it is displayed
+
+2.34.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.33.0 - (November 9, 2018)
 ------------------
