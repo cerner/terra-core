@@ -1,6 +1,8 @@
 import React from 'react';
 
-import List, { Item } from '../../../List';
+import List, {
+  Item,
+} from 'terra-list/lib/index';
 
 const ListTest = () => (
   <React.Fragment>

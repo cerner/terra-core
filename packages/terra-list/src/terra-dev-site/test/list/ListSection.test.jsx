@@ -3,7 +3,7 @@ import React from 'react';
 import List, {
   Item,
   Section,
-} from 'terra-list/lib/List';
+} from 'terra-list/lib/index';
 
 const ListSectionTest = () => (
   <List role="none">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Item, Subsection } from '../../src/List';
+import { Item, Subsection } from '../../src/index';
 
 // Snapshot Tests
 it('should render with items', () => {

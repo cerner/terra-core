@@ -1,9 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import List, {
-  Item,
-  Subsection,
-} from 'terra-list/lib/List';
+import List, { Item, Subsection } from 'terra-list/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const ListSubsectionExample = () => (

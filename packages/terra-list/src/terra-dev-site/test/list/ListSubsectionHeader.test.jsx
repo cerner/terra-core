@@ -2,7 +2,7 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import List, {
   SubsectionHeader,
-} from 'terra-list/lib/List';
+} from 'terra-list/lib/index';
 
 const ListSubsectionHeaderTest = () => (
   <List role="none">
