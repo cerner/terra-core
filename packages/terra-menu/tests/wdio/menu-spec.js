@@ -126,12 +126,12 @@ describe('Menu', () => {
     Terra.should.matchScreenshot('main menu remains open', { selector: '#root' });
 
     it('displays the submenu on right arrow', () => {
-      browser.keys(['Tab', 'ArrowDown', 'ArrowRight']);
+      browser.keys(['ArrowDown', 'ArrowRight']);
     });
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 
     it('returns to the main menu on left arrow', () => {
-      browser.keys(['Tab', 'Tab', 'ArrowLeft']);
+      browser.keys(['ArrowLeft']);
     });
     Terra.should.matchScreenshot('returned to main menu', { selector: '#root' });
   });
@@ -148,7 +148,7 @@ describe('Menu', () => {
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 
     it('returns to the main menu on enter', () => {
-      browser.keys(['Tab', 'Enter']);
+      browser.keys(['Enter']);
     });
     Terra.should.matchScreenshot('returned to main menu', { selector: '#root' });
   });

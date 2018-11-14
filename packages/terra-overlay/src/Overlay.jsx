@@ -96,7 +96,6 @@ class Overlay extends React.Component {
       this.container = node.parentNode;
       this.containerChildren = this.container.children;
       this.disableContainerChildrenFocus();
-      this.containerChildren[0].focus();
     } else {
       document.documentElement.style.overflow = 'hidden';
       this.container = null;

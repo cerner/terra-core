@@ -100,6 +100,7 @@ class MenuContent extends React.Component {
     this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
     this.buildHeader = this.buildHeader.bind(this);
     this.isSelectable = this.isSelectable.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
     this.onKeyDownBackButton = this.onKeyDownBackButton.bind(this);
     this.validateFocus = this.validateFocus.bind(this);
     this.needsFocus = props.isFocused;
@@ -126,8 +127,22 @@ class MenuContent extends React.Component {
     this.validateFocus(this.contentNode);
   }
 
+  onKeyDown(event) {
+    const focusableMenuItems = this.contentNode.querySelectorAll('li[tabindex="0"]');
+
+    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.UP_ARROW) {
+      // Shift focus to last focusable menu item
+      focusableMenuItems[focusableMenuItems.length - 1].focus();
+    }
+
+    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.DOWN_ARROW) {
+      // Shift focus to first focusable menu item
+      focusableMenuItems[0].focus();
+    }
+  }
+
   onKeyDownBackButton(event) {
-    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE || event.nativeEvent.keyCode === MenuUtils.KEYCODES.LEFT_ARROW) {
       event.preventDefault();
       this.props.onRequestBack();
     }
@@ -137,6 +152,12 @@ class MenuContent extends React.Component {
     if (this.needsFocus && node) {
       node.focus();
       this.needsFocus = document.activeElement !== node;
+
+      // If nested menu is open
+      if (this.props.index > 0) {
+        // Shift focus to the back button
+        node.querySelector('[role="button"][tabIndex="0"]').focus();
+      }
     }
   }
 
@@ -168,7 +189,12 @@ class MenuContent extends React.Component {
       }
 
       if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
-        this.props.onRequestNext(item);
+        // Avoid keydown "click" event from enter / space key triggering stack increase here
+        // We handle increasing stack with keydown events in a separate handler below
+        // Fixes: https://github.com/cerner/terra-core/issues/2015
+        if (event.type !== 'keydown') {
+          this.props.onRequestNext(item);
+        }
       }
 
       if (onClick) {
@@ -312,18 +338,24 @@ class MenuContent extends React.Component {
     const contentWidth = this.props.isWidthBounded ? undefined : this.props.fixedWidth;
 
     return (
-      <div
-        ref={this.handleContainerRef}
-        className={contentClass}
-        style={{ height: contentHeight, width: contentWidth, position: contentPosition }}
-        tabIndex="-1"
-      >
-        <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
-          <List className={cx(['list'])} role="menu">
-            {items}
-          </List>
-        </ContentContainer>
-      </div>
+      <React.Fragment>
+        {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
+        <div
+          ref={this.handleContainerRef}
+          className={contentClass}
+          style={{ height: contentHeight, width: contentWidth, position: contentPosition }}
+          tabIndex="-1"
+          aria-modal="true"
+          role="dialog"
+          onKeyDown={this.onKeyDown}
+        >
+          <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
+            <List className={cx(['list'])} role="menu">
+              {items}
+            </List>
+          </ContentContainer>
+        </div>
+      </React.Fragment>
     );
   }
 }

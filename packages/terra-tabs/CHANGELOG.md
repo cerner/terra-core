@@ -4,6 +4,17 @@ ChangeLog
 Unreleased
 ----------
 
+3.29.0 - (November 13, 2018)
+------------------
+### Changed
+* Prevent left and right arrow key events from shifting tab focus indication while inside of tab popup menu
+* Minor dependency version bump
+
+3.28.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.27.0 - (November 9, 2018)
 ------------------
 ### Changed
