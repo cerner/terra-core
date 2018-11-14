@@ -3,8 +3,17 @@ Changelog
 
 Unreleased
 ----------
+
+2.30.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.29.0 - (November 9, 2018)
+------------------
 ### Changed
 * Added VisuallyHiddenText prop to all examples in terra-status component.
+* Fixed lint errors
 
 2.28.0 - (October 24, 2018)
 ------------------

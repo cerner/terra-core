@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+1.21.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+1.20.0 - (November 9, 2018)
+------------------
+### Changed
+* Fixed lint errors
+
 1.19.0 - (October 24, 2018)
 ------------------
 ### Changed

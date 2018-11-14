@@ -1,7 +1,7 @@
 {
   "name": "terra-avatar",
   "main": "lib/Avatar.js",
-  "version": "1.26.0",
+  "version": "1.28.0",
   "description": "The terra-avatar component displays an avatar, which can be either an image or text, in a circular frame. If neither an image or text is provided, a variant-based fallback icon is used.",
   "repository": {
     "type": "git",
@@ -28,12 +28,12 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.19.0",
-    "terra-image": "^2.26.0",
-    "terra-mixins": "^1.20.0"
+    "terra-doc-template": "^1.21.0",
+    "terra-image": "^2.28.0",
+    "terra-mixins": "^1.22.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
+    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

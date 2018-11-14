@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "4.22.0",
+  "version": "4.24.0",
   "description": "Provides a drop down of selectable options.",
   "repository": {
     "type": "git",
@@ -33,13 +33,13 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
-    "terra-doc-template": "^1.19.0",
-    "terra-form-field": "^2.29.0",
+    "terra-doc-template": "^1.21.0",
+    "terra-form-field": "^2.31.0",
     "terra-hookshot": "^4.0.0",
-    "terra-mixins": "^1.20.0"
+    "terra-mixins": "^1.22.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
+    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

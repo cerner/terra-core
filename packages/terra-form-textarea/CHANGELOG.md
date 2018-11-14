@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.32.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.31.0 - (November 9, 2018)
+------------------
 ### Changed
 * Updated textarea documentation examples
 

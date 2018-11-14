@@ -1,7 +1,7 @@
 {
   "name": "terra-divider",
   "main": "lib/Divider.js",
-  "version": "2.25.0",
+  "version": "2.27.0",
   "description": "The divider component is used to visually separate content on a layout.",
   "repository": {
     "type": "git",
@@ -27,10 +27,10 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-doc-template": "^1.19.0"
+    "terra-doc-template": "^1.21.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
+    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

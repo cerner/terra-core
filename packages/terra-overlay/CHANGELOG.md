@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+2.34.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.33.0 - (November 9, 2018)
+------------------
 ### Fixed
 * LoadingOverlay Opts includes zIndexes
 

@@ -1,7 +1,7 @@
 {
   "name": "terra-paginator",
   "main": "lib/Paginator.js",
-  "version": "1.23.0",
+  "version": "1.25.0",
   "description": "Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^2.21.0"
+    "terra-props-table": "^2.22.0"
   },
   "peerDependencies": {
     "react": "^16.4.2",
@@ -31,17 +31,17 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^2.28.0",
-    "terra-dialog": "^1.32.0",
-    "terra-doc-template": "^1.19.0",
-    "terra-form-input": "^1.28.0",
-    "terra-icon": "^2.26.0",
-    "terra-list": "^2.28.0",
-    "terra-mixins": "^1.20.0",
-    "terra-responsive-element": "^3.14.0"
+    "terra-button": "^2.30.0",
+    "terra-dialog": "^1.34.0",
+    "terra-doc-template": "^1.21.0",
+    "terra-form-input": "^1.30.0",
+    "terra-icon": "^2.28.0",
+    "terra-list": "^2.30.0",
+    "terra-mixins": "^1.22.0",
+    "terra-responsive-element": "^3.16.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
+    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
