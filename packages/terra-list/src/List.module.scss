@@ -13,11 +13,10 @@
   .list-item {
     background-color: var(--terra-list-item-background-color);
     margin: 0;
-    padding: var(--terra-list-item-padding, 0);
+    padding: 0;
   }
 
   .divided > .list-item {
-    border-bottom: var(--terra-list-divider-border-bottom);
     border-top: var(--terra-list-divider-border-top, 1px solid #dedfe0);
 
     &:last-of-type {
@@ -34,11 +33,15 @@
 
   .chevron {
     display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-bottom: var(--terra-list-item-chevron-margin-bottom);
+    margin-left: var(--terra-list-item-chevron-margin-left, 0.7143rem);
+    margin-right: var(--terra-list-item-chevron-margin-right, 0.7143rem);
+    margin-top: var(--terra-list-item-chevron-margin-top);
 
     > svg {
       color: var(--terra-list-item-chevron-color, #bcbfc0);
+      height: var(--terra-list-item-chevron-height, 0.8572rem);
+      width: var(--terra-list-item-chevron-width, 0.8572rem);
     }
   }
 
@@ -46,7 +49,7 @@
     background-color: var(--terra-list-item-selected-background-color, darken(#ebf6fd, 2%));
 
     .chevron > svg {
-      color: var(--terra-list-item-selected-chevron-color, #bcbfc0);
+      color: var(--terra-list-item-selected-chevron-color, #95adbc);
     }
   }
 
