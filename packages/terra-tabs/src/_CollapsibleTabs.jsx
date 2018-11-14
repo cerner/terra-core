@@ -52,6 +52,7 @@ class CollapsibleTabs extends React.Component {
     this.handleResize = this.handleResize.bind(this);
     this.handleSelectionAnimation = this.handleSelectionAnimation.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
+    this.handleMenuOnKeyDown = this.handleMenuOnKeyDown.bind(this);
     this.handleFocusLeft = this.handleFocusLeft.bind(this);
     this.handleFocusRight = this.handleFocusRight.bind(this);
     this.resetCache();
@@ -176,20 +177,27 @@ class CollapsibleTabs extends React.Component {
       return;
     }
 
-    const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
-    const visibleChildren = this.container.children;
+    // We don't want menu keydown events to propagate and conflict when the tabs keydown events
+    // Instead of stopping menu key event propagation, we whitelist event.targets so we do tab focus mgmt only on tab based event targets
+    const tabList = event.target.getAttribute('role') === 'tablist';
+    const tabMoreBtn = event.target.getAttribute('data-terra-tabs-menu') === 'true';
 
-    if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
-      if (isRTL) {
-        this.handleFocusRight(visibleChildren, event);
-      } else {
-        this.handleFocusLeft(visibleChildren, event);
-      }
-    } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
-      if (isRTL) {
-        this.handleFocusLeft(visibleChildren, event);
-      } else {
-        this.handleFocusRight(visibleChildren, event);
+    if (tabList || tabMoreBtn) {
+      const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
+      const visibleChildren = this.container.children;
+
+      if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
+        if (isRTL) {
+          this.handleFocusRight(visibleChildren, event);
+        } else {
+          this.handleFocusLeft(visibleChildren, event);
+        }
+      } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
+        if (isRTL) {
+          this.handleFocusLeft(visibleChildren, event);
+        } else {
+          this.handleFocusRight(visibleChildren, event);
+        }
       }
     }
   }
@@ -229,6 +237,13 @@ class CollapsibleTabs extends React.Component {
     }
   }
 
+  handleMenuOnKeyDown(event) {
+    console.log('stop propagation');
+    // Prevent menu key events from propagating up to CollabsibleTabs handleOnKeyDown listener
+    // This prevents left / right arrow key usage in menu from shifting to different tabs
+    event.stopPropagation();
+  }
+
   render() {
     const visibleChildren = [];
     const hiddenChildren = [];
@@ -242,7 +257,7 @@ class CollapsibleTabs extends React.Component {
     });
 
     const menu = this.menuHidden ? null : (
-      <Menu refCallback={this.setMenuRef} activeKey={this.props.activeKey}>
+      <Menu onKeyDown={this.handleMenuOnKeyDown} refCallback={this.setMenuRef} activeKey={this.props.activeKey}>
         {hiddenChildren}
       </Menu>
     );
