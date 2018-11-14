@@ -1,6 +1,6 @@
 # Terra List - Sections with Subsections
 
-With the inclusion of sections in the list, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to have both sections and subsections to be collapsible.
+With the inclusion of sections in the list, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to not have both sections and subsections to be collapsible, have one or the other be collapsible.
 
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapisble section in only one pattern.
