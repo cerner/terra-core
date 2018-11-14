@@ -1,7 +1,7 @@
 {
   "name": "terra-image",
   "main": "lib/Image.js",
-  "version": "2.27.0",
+  "version": "2.28.0",
   "description": "The terra-image component provides styling for visual imagery.",
   "repository": {
     "type": "git",
@@ -39,6 +39,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.20.0"
+    "terra-doc-template": "^1.21.0"
   }
 }
