@@ -3,11 +3,6 @@
 exports[`should render a field error message 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group label-group-hidden"
@@ -32,11 +27,6 @@ exports[`should render a field error message 1`] = `
 exports[`should render a field help message 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group label-group-hidden"
@@ -66,11 +56,6 @@ exports[`should render a field help message 1`] = `
 exports[`should render a field in error 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -105,11 +90,6 @@ exports[`should render a field in error 1`] = `
 exports[`should render a field label 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -134,11 +114,6 @@ exports[`should render a field label 1`] = `
 exports[`should render a field with a custom error icon 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -163,11 +138,6 @@ exports[`should render a field with a custom error icon 1`] = `
 exports[`should render a field with a hidden label 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group label-group-hidden"
@@ -192,11 +162,6 @@ exports[`should render a field with a hidden label 1`] = `
 exports[`should render a field with a hidden label in error 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -231,11 +196,6 @@ exports[`should render a field with a hidden label in error 1`] = `
 exports[`should render a required field in error 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -275,11 +235,6 @@ exports[`should render a required field in error 1`] = `
 exports[`should render a required field label 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -309,11 +264,6 @@ exports[`should render a required field label 1`] = `
 exports[`should render a required field label with required hidden 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -343,11 +293,6 @@ exports[`should render a required field label with required hidden 1`] = `
 exports[`should render a required field with a hidden label 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group label-group-hidden"
@@ -377,11 +322,6 @@ exports[`should render a required field with a hidden label 1`] = `
 exports[`should render a required field with a hidden label in error 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group label-group-hidden"
@@ -421,11 +361,6 @@ exports[`should render a required field with a hidden label in error 1`] = `
 exports[`should render an inline field with most of the possible props are passed into it 1`] = `
 <div
   className="field field-inline"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -460,11 +395,6 @@ exports[`should render an inline field with most of the possible props are passe
 exports[`should render an optional field in error 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"
@@ -504,11 +434,6 @@ exports[`should render an optional field in error 1`] = `
 exports[`should render an optional field label 1`] = `
 <div
   className="field"
-  style={
-    Object {
-      "maxWidth": undefined,
-    }
-  }
 >
   <div
     className="label-group"

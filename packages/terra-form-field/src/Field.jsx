@@ -113,7 +113,7 @@ const Field = (props, { intl }) => {
     ...customProps
   } = props;
 
-  const customStyles = Object.assign({ maxWidth }, style);
+  const customStyles = maxWidth ? Object.assign({ maxWidth }, style) : style;
 
   const fieldClasses = cx([
     'field',
