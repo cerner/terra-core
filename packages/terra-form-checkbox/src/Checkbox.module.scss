@@ -8,6 +8,7 @@
     margin-right: var(--terra-form-checkbox-container-margin-right, 0);
     margin-top: var(--terra-form-checkbox-container-margin-top, 0.3571428rem);
     position: relative;
+    transform: scale(1);
 
     /* stylelint-disable selector-max-compound-selectors */
     .label {
