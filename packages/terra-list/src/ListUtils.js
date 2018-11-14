@@ -52,33 +52,17 @@ const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => (
 );
 
 /**
- * Returns a wrapped onBlur callback function.
+ * Returns a function that wraps both the old and new callback.
  */
-const wrappedOnBlur = (onBlur, newOnBlur) => {
-  if (!onBlur) {
-    return newOnBlur;
+const wrappedEventCallback = (callback, newCallback) => {
+  if (!callback) {
+    return newCallback;
   }
   return (event) => {
-    newOnBlur(event);
+    newCallback(event);
 
-    if (onBlur) {
-      onBlur(event);
-    }
-  };
-};
-
-/**
- * Returns a wrapped onBlur callback function.
- */
-const wrappedOnMouseDown = (onBlur, newOnBlur) => {
-  if (!onBlur) {
-    return newOnBlur;
-  }
-  return (event) => {
-    newOnBlur(event);
-
-    if (onBlur) {
-      onBlur(event);
+    if (callback) {
+      callback(event);
     }
   };
 };
@@ -88,8 +72,7 @@ const SelectableUtils = {
   shouldBeMultiSelectable,
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
-  wrappedOnBlur,
-  wrappedOnMouseDown,
+  wrappedEventCallback,
   KEYCODES,
 };
 

@@ -70,16 +70,16 @@ const ListItem = ({
     customProps.className,
   ]);
 
-  const ariaSpread = {};
+  const attrSpread = {};
   if (isSelectable) {
-    ariaSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-    ariaSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-    ariaSpread.tabIndex = '0';
-    ariaSpread.role = 'option';
-    ariaSpread['aria-selected'] = isSelected;
-    ariaSpread['data-item-show-focus'] = 'true';
-    ariaSpread.onBlur = ListUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
-    ariaSpread.onMouseDown = ListUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
+    attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+    attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.tabIndex = '0';
+    attrSpread.role = 'option';
+    attrSpread['aria-selected'] = isSelected;
+    attrSpread['data-item-show-focus'] = 'true';
+    attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
+    attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
 
   let childContent = children;
@@ -91,7 +91,7 @@ const ListItem = ({
   }
 
   return (
-    <li {...customProps} {...ariaSpread} className={listItemClassNames} ref={refCallback}>
+    <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
       {childContent}
     </li>
   );

@@ -67,7 +67,7 @@ const SectionHeader = ({
     customProps.className,
   ]);
 
-  const ariaSpread = {};
+  const attrSpread = {};
   const Element = `h${level}`;
   let titleElement = <Element className={cx('title')}>{title}</Element>;
   let accordionIcon;
@@ -83,19 +83,19 @@ const SectionHeader = ({
       </div>
     );
 
-    ariaSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-    ariaSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-    ariaSpread.tabIndex = '0';
-    ariaSpread.role = 'heading';
-    ariaSpread['aria-expanded'] = !isCollapsed;
-    ariaSpread['aria-level'] = 2;
-    ariaSpread['data-item-show-focus'] = 'true';
-    ariaSpread.onBlur = ListUtils.wrappedOnBlur(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
-    ariaSpread.onMouseDown = ListUtils.wrappedOnMouseDown(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
+    attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+    attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.tabIndex = '0';
+    attrSpread.role = 'heading';
+    attrSpread['aria-expanded'] = !isCollapsed;
+    attrSpread['aria-level'] = 2;
+    attrSpread['data-item-show-focus'] = 'true';
+    attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
+    attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
 
   return (
-    <li {...customProps} {...ariaSpread} className={sectionHeaderClassNames} ref={refCallback}>
+    <li {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
       {accordionIcon}
       {titleElement}
     </li>

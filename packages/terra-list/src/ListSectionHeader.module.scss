@@ -18,10 +18,11 @@
     font-weight: var(--terra-list-v3-section-header-title-font-weight, bold);
     line-height: var(--terra-list-v3-section-header-title-line-height, 1.1428571429);
     margin: 0;
+    // stylelint-disable-next-line plugin/no-unsupported-browser-features
+    overflow-wrap: break-word; /* Modern browsers */
     padding: 0;
     width: 100%;
-    word-break: break-all;
-    word-wrap: normal;
+    word-wrap: break-word; /* For IE 10 and IE 11 */
   }
 
   .is-collapsible {

@@ -1,6 +1,6 @@
 # Terra List - Sections with Subsections
 
-With the inclusion of sections in the list, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. It is not advised to have both sections and subsections to be collapsible.
+With the inclusion of sections in the list, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to have both sections and subsections to be collapsible.
 
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapisble section in only one pattern.
@@ -25,7 +25,7 @@ As a precaution we can prevent default on the event, in case there is a listener
     event.preventDefault();
   }
 ```
-Terra list comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or open the section key in our state. So we use the utility method "updatedMulitSelectedKeys", which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
+Terra list comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method "updatedMulitSelectedKeys", which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
 ```jsx
   handleSectionSelection(event, metaData) {
     event.preventDefault();
