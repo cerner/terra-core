@@ -3,12 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './List.module.scss';
-import Item from './ListItem';
-import Section from './ListSection';
-import Subsection from './ListSubsection';
-import SectionHeader from './ListSectionHeader';
-import SubsectionHeader from './ListSubsectionHeader';
-import Utils from './ListUtils';
 
 const cx = classNames.bind(styles);
 
@@ -68,11 +62,3 @@ List.propTypes = propTypes;
 List.defaultProps = defaultProps;
 
 export default List;
-export {
-  Item,
-  Section,
-  Subsection,
-  SectionHeader,
-  SubsectionHeader,
-  Utils,
-};

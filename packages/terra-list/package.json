@@ -1,6 +1,6 @@
 {
   "name": "terra-list",
-  "main": "lib/List.js",
+  "main": "lib/index.js",
   "version": "2.30.0",
   "description": "The Terra List is a structural component to arrange content within list/listitems.",
   "repository": {
