@@ -49,7 +49,7 @@ describe('Embedded Content Consumer', () => {
 
   describe('data-status', () => {
     before(() => {
-      browser.url('#/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/data-status-consumer');
+      browser.url('#/raw/tests/terra-embedded-content-consumer/embedded-content-consumer/consumers/data-status-consumer');
     });
 
     it('has mounted, launched, and authorized elements', () => {
