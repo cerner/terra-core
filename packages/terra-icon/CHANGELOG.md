@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Fixed
+* Fixed keyframe animation name hashing in webpacker environments
+
 ### Changed
 * Added test page for Icon with aria-label component.
 
