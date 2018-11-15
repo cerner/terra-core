@@ -54,6 +54,11 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
+   * Set the max-width of a field using `length` or `%`.  Best practice recommendation to never exceed
+   * a rendered value of 1020px. _(Note: Providing custom inline styles will take precedence.)_
+   */
+  maxWidth: PropTypes.string,
+  /**
    * Whether or not the field is required.
    */
   required: PropTypes.bool,
@@ -74,6 +79,7 @@ const defaultProps = {
   isInline: false,
   isLabelHidden: false,
   labelAttrs: {},
+  maxWidth: undefined,
   required: false,
   showOptional: false,
 };
@@ -100,10 +106,14 @@ const Field = (props, { intl }) => {
     isLabelHidden,
     label,
     labelAttrs,
+    maxWidth,
     required,
     showOptional,
+    style,
     ...customProps
   } = props;
+
+  const customStyles = maxWidth ? Object.assign({ maxWidth }, style) : style;
 
   const fieldClasses = cx([
     'field',
@@ -132,7 +142,7 @@ const Field = (props, { intl }) => {
   );
 
   return (
-    <div {...customProps} className={fieldClasses}>
+    <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
       {children}
       {isInvalid && error && <div className={cx('error-text')}>{error}</div>}
