@@ -27,7 +27,7 @@ describe('List', () => {
         '--terra-list-v3-item-selected-background-color': 'blue',
         '--terra-list-v3-item-selected-divider-border-color': 'orange',
         '--terra-list-v3-item-selected-divider-border-top-color': 'purple',
-        '--terra-list-v3-item-hover-background-color': 'black',
+        '--terra-list-v3-item-hover-active-background-color': 'black',
         '--terra-list-v3-item-focus-background-color': 'cyan',
         '--terra-list-v3-item-focus-box-shadow': '0 0 3px #FF0000',
         '--terra-list-v3-item-focus-outline': '5px solid red',
@@ -76,7 +76,7 @@ describe('List', () => {
         '--terra-list-v3-section-header-focus-background-color': 'orange',
         '--terra-list-v3-section-header-focus-box-shadow': '0 0 3px #FF0000',
         '--terra-list-v3-section-header-focus-outline': '5px solid red',
-        '--terra-list-v3-section-header-hover-background-color': 'blue',
+        '--terra-list-v3-section-header-hover-active-background-color': 'blue',
         '--terra-list-v3-section-header-start-padding-right': '15px',
       },
     });
@@ -106,7 +106,7 @@ describe('List', () => {
         '--terra-list-v3-subsection-header-focus-background-color': 'orange',
         '--terra-list-v3-subsection-header-focus-box-shadow': '0 0 3px #FF0000',
         '--terra-list-v3-subsection-header-focus-outline': '5px solid red',
-        '--terra-list-v3-subsection-header-hover-background-color': 'blue',
+        '--terra-list-v3-subsection-header-hover-active-background-color': 'blue',
         '--terra-list-v3-subsection-header-start-padding-right': '15px',
       },
     });
