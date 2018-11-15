@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Added test page for Icon with aria-label component.
+
 2.28.0 - (November 13, 2018)
 ------------------
 ### Changed
