@@ -1,12 +1,9 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import List, {
-  Item,
-  Section,
-} from 'terra-list/lib/index';
+import List, { Item, Section } from 'terra-list/lib/index';
 
 const ListSectionTest = () => (
-  <List role="none">
+  <List>
     <Section
       key="static-section"
       title="Static Section"

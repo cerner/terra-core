@@ -3,7 +3,7 @@ import React from 'react';
 import List, { SectionHeader } from 'terra-list/lib/index';
 
 const ListSectionHeaderExample = () => (
-  <List role="none">
+  <List>
     <SectionHeader
       key="static-header"
       title="Static Header"

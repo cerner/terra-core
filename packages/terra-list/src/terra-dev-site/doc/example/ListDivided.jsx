@@ -4,7 +4,7 @@ import List, { Item } from 'terra-list/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const ListDividedExample = () => (
-  <List isDivided role="none">
+  <List isDivided>
     <Item key="123">
       <Placeholder title="Divided Item 0" style={{ height: '50px' }} />
     </Item>

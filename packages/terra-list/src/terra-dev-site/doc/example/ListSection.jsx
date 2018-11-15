@@ -4,7 +4,7 @@ import List, { Item, Section } from 'terra-list/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const ListSectionExample = () => (
-  <List role="none">
+  <List>
     <Section
       key="static-section"
       title="Static Section"

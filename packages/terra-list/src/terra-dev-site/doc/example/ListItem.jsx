@@ -4,7 +4,7 @@ import List, { Item } from 'terra-list/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const ListSectionExample = () => (
-  <List>
+  <List role="listbox">
     <Item
       key="default"
     >

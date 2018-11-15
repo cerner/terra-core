@@ -1,11 +1,9 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import List, {
-  Item,
-} from 'terra-list/lib/index';
+import List, { Item } from 'terra-list/lib/index';
 
 const ListItemTest = () => (
-  <List>
+  <List role="listbox">
     <Item
       key="default"
     >

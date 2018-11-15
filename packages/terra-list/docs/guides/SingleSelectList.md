@@ -92,7 +92,7 @@ Finally we need to check if the item matches the selectdKey in state.
     );
   }
 ```
-Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method.
+Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of "listbox" for the list, as it is required for accessibility with selectable list options.
 ```jsx
   createListItems(data) {
     return data.map(childItem => this.createListItem(childItem));
@@ -100,7 +100,7 @@ Then we can implement a method to loop through our data and create the list item
 
   render() {
     return (
-      <List>
+      <List role="listbox">
         {this.createListItems(mockData)}
       </List>
     );

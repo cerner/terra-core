@@ -47,7 +47,7 @@
 
     &:hover,
     &:active {
-      background-color: var(--terra-list-v3-item-hover-background-color, lighten(#ebf6fd, 2%));
+      background-color: var(--terra-list-v3-item-hover-active-background-color, lighten(#ebf6fd, 2%));
     }
 
     &[data-item-show-focus='true']:focus {

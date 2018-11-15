@@ -4,7 +4,6 @@ exports[`should render with divided items 1`] = `
 <ul
   className="list"
   data-list-items-divided={true}
-  role="listbox"
 >
   <ListItem
     hasChevron={false}
@@ -42,7 +41,6 @@ exports[`should render with divided items 1`] = `
 exports[`should render with items 1`] = `
 <ul
   className="list"
-  role="listbox"
 >
   <ListItem
     hasChevron={false}
@@ -80,6 +78,5 @@ exports[`should render with items 1`] = `
 exports[`should render with no items 1`] = `
 <ul
   className="list"
-  role="listbox"
 />
 `;

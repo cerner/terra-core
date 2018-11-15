@@ -1,6 +1,10 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import List, { Item, Section, Subsection, Utils } from 'terra-list/lib/index';
+import List, {
+  Item,
+  Section,
+  Subsection,
+  Utils,
+} from 'terra-list/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions\
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-section-sub';
 
@@ -58,7 +62,7 @@ class SectionWithSubsection2 extends React.Component {
 
   render() {
     return (
-      <List isDivided role="none">
+      <List isDivided>
         {this.createSections(mockData)}
       </List>
     );

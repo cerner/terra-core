@@ -20,7 +20,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Accessibility role of the list, defaults to 'listbox'. If creating a read-only list, pass 'none', and no role will be added.
+   * Accessibility role of the list, defaults to 'none'. If creating a list with selectable items, pass 'listbox'.
    */
   role: PropTypes.string,
 };
@@ -28,7 +28,7 @@ const propTypes = {
 const defaultProps = {
   children: [],
   isDivided: false,
-  role: 'listbox',
+  role: 'none',
 };
 
 const List = ({

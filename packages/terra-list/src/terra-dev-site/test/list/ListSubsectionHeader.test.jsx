@@ -1,11 +1,9 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import List, {
-  SubsectionHeader,
-} from 'terra-list/lib/index';
+import List, { SubsectionHeader } from 'terra-list/lib/index';
 
 const ListSubsectionHeaderTest = () => (
-  <List role="none">
+  <List>
     <SubsectionHeader
       key="static-header"
       title="Static Header"

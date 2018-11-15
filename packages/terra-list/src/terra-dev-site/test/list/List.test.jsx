@@ -1,12 +1,10 @@
 import React from 'react';
-
-import List, {
-  Item,
-} from 'terra-list/lib/index';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import List, { Item } from 'terra-list/lib/index';
 
 const ListTest = () => (
   <React.Fragment>
-    <List role="none">
+    <List>
       <Item key="0">
         <p>test 0</p>
       </Item>
@@ -17,7 +15,7 @@ const ListTest = () => (
         <p>test 2</p>
       </Item>
     </List>
-    <List isDivided role="none">
+    <List isDivided>
       <Item key="0">
         <p>divided test 0</p>
       </Item>
