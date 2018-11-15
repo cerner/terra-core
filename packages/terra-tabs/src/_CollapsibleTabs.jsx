@@ -46,8 +46,8 @@ const propTypes = {
 const handleMenuOnKeyDown = (event) => {
   // Prevent menu key events from propagating up to CollabsibleTabs handleOnKeyDown listener
   // This prevents left / right arrow key usage in menu from shifting to different tabs
-  event.stopPropagation();//
-}
+  event.stopPropagation();
+};
 
 class CollapsibleTabs extends React.Component {
   constructor(props) {
