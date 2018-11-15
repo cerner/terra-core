@@ -43,6 +43,12 @@ const propTypes = {
   onTruncationChange: PropTypes.func,
 };
 
+const handleMenuOnKeyDown = (event) => {
+  // Prevent menu key events from propagating up to CollabsibleTabs handleOnKeyDown listener
+  // This prevents left / right arrow key usage in menu from shifting to different tabs
+  event.stopPropagation();//
+}
+
 class CollapsibleTabs extends React.Component {
   constructor(props) {
     super(props);
@@ -52,7 +58,6 @@ class CollapsibleTabs extends React.Component {
     this.handleResize = this.handleResize.bind(this);
     this.handleSelectionAnimation = this.handleSelectionAnimation.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
-    this.handleMenuOnKeyDown = this.handleMenuOnKeyDown.bind(this);
     this.handleFocusLeft = this.handleFocusLeft.bind(this);
     this.handleFocusRight = this.handleFocusRight.bind(this);
     this.resetCache();
@@ -237,13 +242,6 @@ class CollapsibleTabs extends React.Component {
     }
   }
 
-  handleMenuOnKeyDown(event) {
-    console.log('stop propagation');
-    // Prevent menu key events from propagating up to CollabsibleTabs handleOnKeyDown listener
-    // This prevents left / right arrow key usage in menu from shifting to different tabs
-    event.stopPropagation();
-  }
-
   render() {
     const visibleChildren = [];
     const hiddenChildren = [];
@@ -257,7 +255,7 @@ class CollapsibleTabs extends React.Component {
     });
 
     const menu = this.menuHidden ? null : (
-      <Menu onKeyDown={this.handleMenuOnKeyDown} refCallback={this.setMenuRef} activeKey={this.props.activeKey}>
+      <Menu onKeyDown={handleMenuOnKeyDown} refCallback={this.setMenuRef} activeKey={this.props.activeKey}>
         {hiddenChildren}
       </Menu>
     );
