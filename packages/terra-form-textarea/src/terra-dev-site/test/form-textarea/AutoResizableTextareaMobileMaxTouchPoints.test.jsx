@@ -3,7 +3,7 @@ import React from 'react';
 import Textarea from '../../../Textarea';
 
 export default class textarea extends React.Component {
-  componentWillMount() {
+  componentDidMount() {
     if (!navigator.maxTouchPoints || navigator.maxTouchPoints === 0) {
       this.resetMaxTouchPoints = true;
       this.previousMaxTouchPoints = navigator.maxTouchPoints;

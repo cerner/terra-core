@@ -8,7 +8,7 @@ export default class TimeInputElement extends React.Component {
     this.handleOnChange = this.handleOnChange.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (!window.ontouchstart) {
       this.resetontouchstart = true;
       window.ontouchstart = 'true';
