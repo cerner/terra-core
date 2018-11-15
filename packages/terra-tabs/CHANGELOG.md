@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Fixed lint errors.
 
 3.29.0 - (November 13, 2018)
 ------------------

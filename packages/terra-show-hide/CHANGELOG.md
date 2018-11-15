@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Correct test routing.
 
 1.4.0 - (November 13, 2018)
 ------------------

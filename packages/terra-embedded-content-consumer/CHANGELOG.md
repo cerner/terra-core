@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Correctly use raw route.
 
 2.28.0 - (November 13, 2018)
 ------------------
