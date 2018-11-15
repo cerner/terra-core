@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+* Split avatar into three sub-components - avatar, facility, and shared user.
+* Add color variants.
+* Refactor box shadow to after element.
+* Replace `componentWillReceiveProps` with memoization.
+* Split theme tests into their own package.
 
 1.28.0 - (November 13, 2018)
 ------------------
