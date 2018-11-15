@@ -3,8 +3,9 @@
 :local {
   .avatar {
     align-items: center;
+    background-clip: padding-box; // Stops background color from bleeding through border on IE.
     border: var(--terra-avatar-border, solid 1px #fff);
-    border-radius: 50%;
+    border-radius: 100%;
     color: var(--terra-avatar-color, #fff);
     display: inline-flex;
     height: var(--terra-avatar-height, 3.286em);
@@ -21,7 +22,7 @@
   // Addresses https://github.com/cerner/terra-core/issues/1845
   // Applies to images. Will be overriden by color variants.
   .avatar::after {
-    border-radius: 50%;
+    border-radius: 100%;
     box-shadow: var(--terra-avatar-after-box-shadow, inset 0 1px 3px 0 rgba(17, 22, 25, 0.3));
     content: '';
     display: block;
@@ -33,6 +34,7 @@
   }
 
   .avatar > .icon {
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
@@ -41,18 +43,18 @@
     /* stylelint-disable string-quotes */
     &.facility {
       background-image: var(--terra-avatar-icon-facility-background-image, inline-svg("<svg data-name='Layer_1' xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 48 48'><path d='M33,20.2V12H15v8.2H9.8V48h12v-9h4.5v9h12V20.2H33z M17.2,42.8h-3V39h3V42.8z M17.2,33.8h-3V30h3V33.8z M25.5,33.8h-3V30h3 V33.8z M29.2,22.5h-3.8v3.8h-3v-3.8h-3.8v-3h3.8v-3.8h3v3.8h3.8V22.5z M33.8,42.8h-3V39h3V42.8z M33.8,33.8h-3V30h3V33.8z'/></svg>"));
-      height: var(--terra-avatar-icon-facility-height, 90%);
-      width: var(--terra-avatar-icon-facility-width, 90%);
+      height: var(--terra-avatar-icon-facility-height, 95%);
+      width: var(--terra-avatar-icon-facility-width, 95%);
     }
 
     &.shared-user {
-      background: var(--terra-avatar-icon-multi-user-background-image, inline-svg("<svg data-name='Layer_1' xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 48 48'><path d='M15 0a8.7 8.7 0 1 1-8.7 8.7A8.71 8.71 0 0 1 15 0zm18 11a8.7 8.7 0 1 1-8.7 8.7A8.71 8.71 0 0 1 33 11zm15 37v-4.4a12.93 12.93 0 0 0-12.9-12.9h-4.2A12.93 12.93 0 0 0 18 43.6V48zM25.5 28.7a11.32 11.32 0 0 1-4.1-8.3 14.21 14.21 0 0 0-4.2-.7H13A13 13 0 0 0 0 32.6V37h16.4a15.52 15.52 0 0 1 9.1-8.3z'/></svg>"));
+      background-image: var(--terra-avatar-icon-multi-user-background-image, inline-svg("<svg data-name='Layer_1' xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 48 48'><path d='M15 0a8.7 8.7 0 1 1-8.7 8.7A8.71 8.71 0 0 1 15 0zm18 11a8.7 8.7 0 1 1-8.7 8.7A8.71 8.71 0 0 1 33 11zm15 37v-4.4a12.93 12.93 0 0 0-12.9-12.9h-4.2A12.93 12.93 0 0 0 18 43.6V48zM25.5 28.7a11.32 11.32 0 0 1-4.1-8.3 14.21 14.21 0 0 0-4.2-.7H13A13 13 0 0 0 0 32.6V37h16.4a15.52 15.52 0 0 1 9.1-8.3z'/></svg>"));
       height: var(--terra-avatar-icon-multi-user-height, 70%);
       width: var(--terra-avatar-icon-multi-user-width, 70%);
     }
 
     &.user {
-      background: var(--terra-avatar-icon-user-background-image, inline-svg("<svg data-name='Layer_1' xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 48 48'><path d='M24 0a11.3 11.3 0 1 1-11.3 11.3A11.35 11.35 0 0 1 24 0zm19.5 48v-5.7a16.77 16.77 0 0 0-16.8-16.8h-5.5A16.75 16.75 0 0 0 4.5 42.3V48z'/></svg>"));
+      background-image: var(--terra-avatar-icon-user-background-image, inline-svg("<svg data-name='Layer_1' xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 48 48'><path d='M24 0a11.3 11.3 0 1 1-11.3 11.3A11.35 11.35 0 0 1 24 0zm19.5 48v-5.7a16.77 16.77 0 0 0-16.8-16.8h-5.5A16.75 16.75 0 0 0 4.5 42.3V48z'/></svg>"));
       height: var(--terra-avatar-icon-user-height, 80%);
       margin-top: var(--terra-avatar-icon-user-margin-top, 0.7143rem);
       width: var(--terra-avatar-icon-user-width, 80%);
@@ -89,6 +91,11 @@
 
   .avatar.one {
     background-color: var(--terra-avatar-one-background-color, #0092e0);
+    // &::before{
+    //   background-color: var(--terra-avatar-one-background-color, #0092e0);
+    //   left: -2px;
+    //   top: -2px;
+    // }
 
     &::after{
       border-radius: 50%;
