@@ -117,7 +117,7 @@ class DateTimePicker extends React.Component {
     // The dateValue and timeValue variables represent the actual value in the date input and time input respectively.
     // They are used to keep track of the currently entered value to determine whether or not the entry is valid.
     // Unlike dateValue and timeValue, this.state.dateTime is the internal moment object representing both the date and time as one entity
-    // It is used for date/time minuipulation and used to calculate the missing/ambiguous hour.
+    // It is used for date/time manipulation and used to calculate the missing/ambiguous hour.
     // The dateValue and timeValue are tracked outside of the react state to limit the number of renderings that occur.
     this.dateValue = DateTimeUtils.formatMomentDateTime(this.state.dateTime, this.state.dateFormat);
     this.timeValue = DateTimeUtils.hasTime(this.props.value) ? DateTimeUtils.formatISODateTime(this.props.value, 'HH:mm') : '';

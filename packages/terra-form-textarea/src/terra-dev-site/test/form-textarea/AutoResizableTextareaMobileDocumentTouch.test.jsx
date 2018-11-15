@@ -3,7 +3,16 @@ import React from 'react';
 import Textarea from '../../../Textarea';
 
 export default class textarea extends React.Component {
-  componentDidMount() {
+  constructor() {
+    super();
+    if (!window.DocumentTouch) {
+      this.resetDocumentTouch = true;
+      window.DocumentTouch = () => { };
+      window.DocumentTouch.prototype = Document.prototype;
+    }
+  }
+
+  componentDidUpdate() {
     if (!window.DocumentTouch) {
       this.resetDocumentTouch = true;
       window.DocumentTouch = () => {};

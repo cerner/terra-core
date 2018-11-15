@@ -6,6 +6,10 @@ export default class TimeInputElement extends React.Component {
     super(props);
     this.state = { input: '15:23' };
     this.handleOnChange = this.handleOnChange.bind(this);
+    if (!window.ontouchstart) {
+      this.resetontouchstart = true;
+      window.ontouchstart = 'true';
+    }
   }
 
   componentDidMount() {
@@ -27,7 +31,7 @@ export default class TimeInputElement extends React.Component {
 
   render() {
     return (
-      <div style={{ 'caret-color': 'transparent' }}>
+      <div style={{ caretColor: 'transparent' }}>
         <h3>Empty Time Input</h3>
         <TimeInput
           id="timeInput"
