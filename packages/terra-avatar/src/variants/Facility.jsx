@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import memoize from 'memoize-one';
 import 'terra-base/lib/baseStyles';
 import Utils from '../common/AvatarUtils';
 import styles from '../common/Avatar.module.scss';
@@ -53,22 +54,8 @@ class Facility extends React.Component {
   constructor(props) {
     super(props);
 
-    // If image has been provided we need to generate the image to display and store it in the state
     if (props.image) {
-      const { alt, image, isAriaHidden } = props;
-
-      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
-      this.state = { imageComponent };
-    }
-  }
-
-  componentWillReceiveProps(newProps) {
-    // If we have an image to display (they take precedence) and one of its attributes have changed
-    if (newProps.image && (newProps.image !== this.props.image || newProps.alt !== this.props.alt)) {
-      const { alt, image, isAriaHidden } = newProps;
-
-      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
-      this.setState({ imageComponent });
+      this.imageComponent = memoize(Utils.generateImage);
     }
   }
 
@@ -88,7 +75,7 @@ class Facility extends React.Component {
     let facilityContent;
     if (image) {
       colorVariant = '';
-      facilityContent = this.state.imageComponent;
+      facilityContent = this.imageComponent(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
     } else {
       colorVariant = Utils.setColor(alt, color, hashValue);
       facilityContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);

@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "memoize-one": "^4.0.3",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^1.21.0",
     "terra-form-select": "^4.22.0",

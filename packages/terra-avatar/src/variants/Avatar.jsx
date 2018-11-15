@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import memoize from 'memoize-one';
 import 'terra-base/lib/baseStyles';
 import Utils from '../common/AvatarUtils';
 import styles from '../common/Avatar.module.scss';
@@ -63,12 +64,8 @@ class Avatar extends React.Component {
   constructor(props) {
     super(props);
 
-    // If image has been provided we need to generate the image to display and store it in the state
     if (props.image) {
-      const { alt, image, isAriaHidden } = props;
-
-      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
-      this.state = { imageComponent };
+      this.imageComponent = memoize(Utils.generateImage);
     }
 
     // Checks to run when not in production
@@ -77,16 +74,6 @@ class Avatar extends React.Component {
         // eslint-disable-next-line
         console.warn('Only one of the props: [image, initials] should be supplied.');
       }
-    }
-  }
-
-  componentWillReceiveProps(newProps) {
-    // If we have an image to display (they take precedence) and one of its attributes have changed
-    if (newProps.image && (newProps.image !== this.props.image || newProps.alt !== this.props.alt || newProps.isAriaHidden !== this.props.isAriaHidden)) {
-      const { alt, image, isAriaHidden } = newProps;
-
-      const imageComponent = Utils.generateImage(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
-      this.setState({ imageComponent });
     }
   }
 
@@ -108,7 +95,7 @@ class Avatar extends React.Component {
     let avatarContent;
     if (image) {
       colorVariant = '';
-      avatarContent = this.state.imageComponent;
+      avatarContent = this.imageComponent(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
     } else if (initials && (initials.length === 1 || initials.length === 2)) {
       colorVariant = Utils.setColor(alt, color, hashValue);
       const avatarTextClassNames = cx('initials');
