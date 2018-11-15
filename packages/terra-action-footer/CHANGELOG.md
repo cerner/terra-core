@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Correct block footer theme test routes
 
 1.29.0 - (November 13, 2018)
 ------------------
