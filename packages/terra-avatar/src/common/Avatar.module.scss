@@ -91,11 +91,6 @@
 
   .avatar.one {
     background-color: var(--terra-avatar-one-background-color, #0092e0);
-    // &::before{
-    //   background-color: var(--terra-avatar-one-background-color, #0092e0);
-    //   left: -2px;
-    //   top: -2px;
-    // }
 
     &::after{
       border-radius: 50%;
@@ -261,7 +256,7 @@
       opacity: var(--terra-avatar-image-is-deceased-opacity, 0.4);
     }
 
-    // Do not override image box shadw.
+    // Do not override image box shadow.
     :not(.image) &::after{
       border-radius: 50%;
       box-shadow: var(--terra-avatar-is-deceased-after-box-shadow, inset 0 0 0 2px #64696c);
