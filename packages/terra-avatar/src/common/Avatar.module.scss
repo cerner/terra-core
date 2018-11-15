@@ -5,7 +5,7 @@
     align-items: center;
     background-clip: padding-box; // Stops background color from bleeding through border on IE.
     border: var(--terra-avatar-border, solid 1px #fff);
-    border-radius: 100%;
+    border-radius: 50%;
     color: var(--terra-avatar-color, #fff);
     display: inline-flex;
     height: var(--terra-avatar-height, 3.286em);
