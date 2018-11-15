@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Field from 'terra-form-field';
-
 import Input from './Input';
 
 const propTypes = {
@@ -115,10 +114,10 @@ const InputField = (props) => {
     isLabelHidden,
     label,
     labelAttrs,
+    onChange,
     refCallback,
     required,
     showOptional,
-    onChange,
     value,
     ...customProps
   } = props;
