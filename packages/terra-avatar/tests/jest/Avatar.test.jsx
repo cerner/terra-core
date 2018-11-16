@@ -40,16 +40,6 @@ describe('Avatar', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should display warning when both image and initials props are provided', () => {
-    const avatar = <Avatar image="https://path/to/invalid_image.jpg" alt="placeholder" initials="JS" />;
-    try {
-      render(avatar);
-    } catch (object) {
-      expect(object.message).toContain('Only one of the props: [image, initials] should be supplied.');
-    }
-  });
-
-
   it('should render an avatar with provided height and width', () => {
     const avatar = <Avatar alt="user" height="5em" width="5em" />;
     const wrapper = render(avatar);

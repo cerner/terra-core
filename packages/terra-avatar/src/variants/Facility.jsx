@@ -50,51 +50,41 @@ const defaultProps = {
   width: undefined,
 };
 
-class Facility extends React.Component {
-  constructor(props) {
-    super(props);
+const ImageComponent = memoize(Utils.generateImage);
 
-    if (props.image) {
-      this.imageComponent = memoize(Utils.generateImage);
-    }
+const Facility = ({
+  alt,
+  color,
+  hashValue,
+  height,
+  image,
+  isAriaHidden,
+  width,
+  ...customProps
+}) => {
+  let colorVariant;
+  let facilityContent;
+  if (image) {
+    colorVariant = '';
+    facilityContent = ImageComponent(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
+  } else {
+    colorVariant = Utils.setColor(alt, color, hashValue);
+    facilityContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
   }
 
-  render() {
-    const {
-      alt,
-      color,
-      hashValue,
-      height,
-      image,
-      isAriaHidden,
-      width,
-      ...customProps
-    } = this.props;
+  const attributes = Object.assign({}, customProps);
+  const facilityClassNames = cx([
+    'avatar',
+    `${colorVariant}`,
+    attributes.className,
+  ]);
 
-    let colorVariant;
-    let facilityContent;
-    if (image) {
-      colorVariant = '';
-      facilityContent = this.imageComponent(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
-    } else {
-      colorVariant = Utils.setColor(alt, color, hashValue);
-      facilityContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
-    }
-
-    const attributes = Object.assign({}, customProps);
-    const facilityClassNames = cx([
-      'avatar',
-      `${colorVariant}`,
-      attributes.className,
-    ]);
-
-    return (
-      <div {...attributes} className={facilityClassNames} style={{ height, width }}>
-        {facilityContent}
-      </div>
-    );
-  }
-}
+  return (
+    <div {...attributes} className={facilityClassNames} style={{ height, width }}>
+      {facilityContent}
+    </div>
+  );
+};
 
 Facility.propTypes = propTypes;
 Facility.defaultProps = defaultProps;

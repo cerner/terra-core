@@ -60,66 +60,48 @@ const defaultProps = {
   width: undefined,
 };
 
-class Avatar extends React.Component {
-  constructor(props) {
-    super(props);
+const ImageComponent = memoize(Utils.generateImage);
 
-    if (props.image) {
-      this.imageComponent = memoize(Utils.generateImage);
-    }
-
-    // Checks to run when not in production
-    if (process.env.NODE_ENV !== 'production') {
-      if (props.image && props.initials) {
-        // eslint-disable-next-line
-        console.warn('Only one of the props: [image, initials] should be supplied.');
-      }
-    }
+const Avatar = ({
+  alt,
+  color,
+  hashValue,
+  height,
+  image,
+  initials,
+  isAriaHidden,
+  isDeceased,
+  width,
+  ...customProps
+}) => {
+  let colorVariant;
+  let avatarContent;
+  if (image) {
+    colorVariant = '';
+    avatarContent = ImageComponent(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
+  } else if (initials && (initials.length === 1 || initials.length === 2)) {
+    colorVariant = Utils.setColor(alt, color, hashValue);
+    const avatarTextClassNames = cx('initials');
+    avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
+  } else {
+    colorVariant = Utils.setColor(alt, color, hashValue);
+    avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
   }
 
-  render() {
-    const {
-      alt,
-      color,
-      hashValue,
-      height,
-      image,
-      initials,
-      isAriaHidden,
-      isDeceased,
-      width,
-      ...customProps
-    } = this.props;
+  const attributes = Object.assign({}, customProps);
+  const avatarClassNames = cx([
+    'avatar',
+    `${colorVariant}`,
+    { 'is-deceased': isDeceased },
+    attributes.className,
+  ]);
 
-    let colorVariant;
-    let avatarContent;
-    if (image) {
-      colorVariant = '';
-      avatarContent = this.imageComponent(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
-    } else if (initials && (initials.length === 1 || initials.length === 2)) {
-      colorVariant = Utils.setColor(alt, color, hashValue);
-      const avatarTextClassNames = cx('initials');
-      avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
-    } else {
-      colorVariant = Utils.setColor(alt, color, hashValue);
-      avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
-    }
-
-    const attributes = Object.assign({}, customProps);
-    const avatarClassNames = cx([
-      'avatar',
-      `${colorVariant}`,
-      { 'is-deceased': isDeceased },
-      attributes.className,
-    ]);
-
-    return (
-      <div {...attributes} className={avatarClassNames} style={{ height, width }}>
-        {avatarContent}
-      </div>
-    );
-  }
-}
+  return (
+    <div {...attributes} className={avatarClassNames} style={{ height, width }}>
+      {avatarContent}
+    </div>
+  );
+};
 
 Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;

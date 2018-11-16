@@ -74,7 +74,7 @@ class UpdateAvatar extends React.Component {
   render() {
     return (
       <div>
-        <Avatar id={id} image={image} alt={alt} variant={variant} ariaLabel={ariaLabel} initials={initials} />
+        <Avatar id={id} image={image} alt={alt} variant={variant} aria-label={ariaLabel} initials={initials} />
         <br />
         <button type="button" onClick={this.altButtonHandle} id="alt">Alt Text</button>
         <button type="button" onClick={this.imageButtonHandle} id="image">Image</button>
