@@ -1,6 +1,6 @@
 # Terra List
 
-The Terra List is a structural component to vertically arrange content within list/listitems.
+The Terra List is a structural component to vertically arrange content within list/list items.
 
 If a list implementation contains selectable list options the role prop should be set to "listbox" for accesibility. 
 

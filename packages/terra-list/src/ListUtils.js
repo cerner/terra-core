@@ -24,23 +24,29 @@ const updatedMultiSelectedKeys = (currentKeys, newKey) => {
 };
 
 /**
- * Returns a wrapped onClick callback function.
+ * Returns a wrapped onClick callback function. If the onSelect method isn't passed, we return the initial onClick.
  */
-const wrappedOnClickForItem = (onClick, onSelect, metaData) => (
-  (event) => {
+const wrappedOnClickForItem = (onClick, onSelect, metaData) => {}
+  if (!onSelect) {
+    return onClick;
+  }
+  return (event) => {
     onSelect(event, metaData);
 
     if (onClick) {
       onClick(event);
     }
   }
-);
+};
 
 /**
- * Returns a wrapped onKeyDown callback function with enter and space keys triggering onSelect.
+ * Returns a wrapped onKeyDown callback function with enter and space keys triggering onSelect. If the onSelect method isn't passed, we return the initial onClick.
  */
-const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => (
-  (event) => {
+const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => {
+  if (!onSelect) {
+    return onKeyDown;
+  }
+  return (event) => {
     if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
       onSelect(event, metaData);
     }
@@ -49,7 +55,7 @@ const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => (
       onKeyDown(event);
     }
   }
-);
+};
 
 /**
  * Returns a function that wraps both the old and new callback.

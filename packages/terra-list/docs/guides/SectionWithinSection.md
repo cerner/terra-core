@@ -61,7 +61,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
     );
   }
 ```
-For we common collapsible sections we set "isCollapsible" for all sections.
+For the common collapsible sections we set "isCollapsible" for all sections.
 ```jsx
   createSection(sectionData) {
     return (

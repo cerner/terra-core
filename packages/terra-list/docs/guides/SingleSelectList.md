@@ -61,7 +61,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
     );
   }
 ```
-For we single select list we set "isSelectable" for all items.
+For the single select list we set "isSelectable" for all items.
 ```jsx
   createListItem(itemData) {
     return (
