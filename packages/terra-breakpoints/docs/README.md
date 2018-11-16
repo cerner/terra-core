@@ -113,7 +113,7 @@ const ActiveBreakpointProviderExample = () => (
 
 ### Media Queries
 
-`terra-breakpoints` includes `_media-queries.scss`, which contains a set of SASS mixins that define media queries for the supported breakpoints.
+`terra-breakpoints` includes `_media-queries.scss`, which contains a set of Sass mixins that define media queries for the supported breakpoints.
 
 ```scss
 @import 'terra-breakpoints/media-queries';
