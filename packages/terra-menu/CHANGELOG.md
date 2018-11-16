@@ -4,6 +4,17 @@ Changelog
 Unreleased
 ----------
 
+3.27.0 - (November 14, 2018)
+------------------
+### Changed
+* Menu now shifts focus to first interactable item in menu when opened
+* Menu now allows shifting focus to first or last menu item on arrow key down / arrow key up on initial focus.
+
+3.26.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.25.0 - (November 9, 2018)
 ------------------
 ### Changed

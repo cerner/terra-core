@@ -4,6 +4,17 @@ Changelog
 Unreleased
 ----------
 
+### Fixed
+* Fixed keyframe animation name hashing in webpacker environments
+
+### Changed
+* Added test page for Icon with aria-label component.
+
+2.28.0 - (November 13, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.27.0 - (November 9, 2018)
 ------------------
 ### Changed
