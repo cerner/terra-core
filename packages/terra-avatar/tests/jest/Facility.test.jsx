@@ -21,8 +21,8 @@ describe('Facility', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render with a facility avatar with provided height and width', () => {
-    const avatar = <Facility alt="London" height="5em" width="5em" />;
+  it('should render with a facility avatar with provided size', () => {
+    const avatar = <Facility alt="London" size="5em" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });

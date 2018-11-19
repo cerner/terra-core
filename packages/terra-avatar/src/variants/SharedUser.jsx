@@ -23,34 +23,28 @@ const propTypes = {
    */
   hashValue: PropTypes.string,
   /**
-   * Overrides the default height.
-   */
-  height: PropTypes.string,
-  /**
-   * Whether to hide avatar from the accessiblity API.
+   * Whether to hide avatar from the accessiblity tree.
    */
   isAriaHidden: PropTypes.bool,
   /**
    * Overrides the default width.
    */
-  width: PropTypes.string,
+  size: PropTypes.string,
 };
 
 const defaultProps = {
   color: 'auto',
   hashValue: undefined,
-  height: undefined,
   isAriaHidden: false,
-  width: undefined,
+  size: undefined,
 };
 
-const MultiUser = ({
+const SharedUser = ({
   alt,
   color,
   hashValue,
-  height,
   isAriaHidden,
-  width,
+  size,
   ...customProps
 }) => {
   const colorVariant = Utils.setColor(alt, color, hashValue);
@@ -65,13 +59,13 @@ const MultiUser = ({
   const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
   return (
-    <div {...attributes} className={multiUserClassNames} style={{ height, width }}>
+    <div {...attributes} className={multiUserClassNames} style={{ fontSize: size }}>
       {multiUserContent}
     </div>
   );
 };
 
-MultiUser.propTypes = propTypes;
-MultiUser.defaultProps = defaultProps;
+SharedUser.propTypes = propTypes;
+SharedUser.defaultProps = defaultProps;
 
-export default MultiUser;
+export default SharedUser;

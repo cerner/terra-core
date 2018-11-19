@@ -1,6 +1,6 @@
 # Facility
 
-The `Facility` variant represents a location - it displays an image in a circular frame. If an image is not provided, a fallback facility icon displays. The size scales based on its consuming component's `font-size`. To override this, utilize the `height` and `width` props.
+The `Facility` variant represents a location - it displays an image in a circular frame. If an image is not provided, a fallback facility icon displays.
 
 
 ## Getting Started

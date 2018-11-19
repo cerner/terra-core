@@ -24,10 +24,6 @@ const propTypes = {
    */
   hashValue: PropTypes.string,
   /**
-   * Overrides the default height.
-   */
-  height: PropTypes.string,
-  /**
    * The image to display.
    */
   image: PropTypes.string,
@@ -36,7 +32,7 @@ const propTypes = {
    */
   initials: PropTypes.string,
   /**
-   * Whether to hide avatar from the accessiblity API.
+   * Whether to hide avatar from the accessiblity tree.
    */
   isAriaHidden: PropTypes.bool,
   /**
@@ -44,20 +40,19 @@ const propTypes = {
    */
   isDeceased: PropTypes.bool,
   /**
-   * Overrides the default width.
+   * Overrides the default size.
    */
-  width: PropTypes.string,
+  size: PropTypes.string,
 };
 
 const defaultProps = {
   color: 'auto',
   hashValue: undefined,
-  height: undefined,
   image: undefined,
   initials: undefined,
   isAriaHidden: false,
   isDeceased: false,
-  width: undefined,
+  size: undefined,
 };
 
 const ImageComponent = memoize(Utils.generateImage);
@@ -66,12 +61,11 @@ const Avatar = ({
   alt,
   color,
   hashValue,
-  height,
   image,
   initials,
   isAriaHidden,
   isDeceased,
-  width,
+  size,
   ...customProps
 }) => {
   let colorVariant;
@@ -92,16 +86,19 @@ const Avatar = ({
   const avatarClassNames = cx([
     'avatar',
     `${colorVariant}`,
+    // { 'image': !!image },
+    { image: Boolean(image) },
     { 'is-deceased': isDeceased },
     attributes.className,
   ]);
 
   return (
-    <div {...attributes} className={avatarClassNames} style={{ height, width }}>
+    <div {...attributes} className={avatarClassNames} style={{ fontSize: size }}>
       {avatarContent}
     </div>
   );
 };
+// remove height and width prop. make font size themeable. remove width and height themeable props
 
 Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;

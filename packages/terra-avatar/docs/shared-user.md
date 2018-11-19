@@ -1,6 +1,6 @@
 # Shared User
 
-The `SharedUser` variant represents multiple users - it displays a shared user icon in a circular frame. The size scales based on its consuming component's `font-size`. To override this, utilize the `height` and `width` props.
+The `SharedUser` variant represents multiple users - it displays a shared user icon in a circular frame.
 
 ## Getting Started
 

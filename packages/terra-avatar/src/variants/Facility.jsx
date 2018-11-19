@@ -24,30 +24,25 @@ const propTypes = {
    */
   hashValue: PropTypes.string,
   /**
-   * Overrides the default height.
-   */
-  height: PropTypes.string,
-  /**
    * The image to display.
    */
   image: PropTypes.string,
   /**
-   * Whether to hide avatar from the accessiblity API.
+   * Whether to hide avatar from the accessiblity tree.
    */
   isAriaHidden: PropTypes.bool,
   /**
    * Overrides the default width.
    */
-  width: PropTypes.string,
+  size: PropTypes.string,
 };
 
 const defaultProps = {
   color: 'auto',
   hashValue: undefined,
-  height: undefined,
   image: undefined,
   isAriaHidden: false,
-  width: undefined,
+  size: undefined,
 };
 
 const ImageComponent = memoize(Utils.generateImage);
@@ -56,10 +51,9 @@ const Facility = ({
   alt,
   color,
   hashValue,
-  height,
   image,
   isAriaHidden,
-  width,
+  size,
   ...customProps
 }) => {
   let colorVariant;
@@ -80,7 +74,7 @@ const Facility = ({
   ]);
 
   return (
-    <div {...attributes} className={facilityClassNames} style={{ height, width }}>
+    <div {...attributes} className={facilityClassNames} style={{ fontSize: size }}>
       {facilityContent}
     </div>
   );

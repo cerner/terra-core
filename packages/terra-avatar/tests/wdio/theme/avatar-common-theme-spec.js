@@ -5,15 +5,15 @@ describe('Avatar', () => {
       testName: 'themed',
       selector: '#user-avatar',
       properties: {
-        '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
-        '--terra-avatar-height': '5rem',
-        '--terra-avatar-width': '5rem',
-        '--terra-avatar-icon-user-background-image': 'rgb(0, 100, 0)',
-        '--terra-avatar-icon-user-height': '90%',
-        '--terra-avatar-icon-user-margin-top': '0.3571rem',
-        '--terra-avatar-icon-user-width': '90%',
-        '--terra-avatar-one-background-color': 'purple',
-        '--terra-avatar-one-after-box-shadow': 'inset 0 0 0 2px purple',
+        '--terra-avatar-v1-border': '0.07143rem solid rgb(0, 0, 255)',
+        '--terra-avatar-v1-initial-height': '5rem',
+        '--terra-avatar-v1-initial-width': '5rem',
+        '--terra-avatar-v1-icon-user-background-image': 'rgb(0, 100, 0)',
+        '--terra-avatar-v1-icon-user-height': '90%',
+        '--terra-avatar-v1-icon-user-margin-top': '0.3571rem',
+        '--terra-avatar-v1-icon-user-width': '90%',
+        '--terra-avatar-v1-one-background-color': 'purple',
+        '--terra-avatar-v1-one-after-box-shadow': 'inset 0 0 0 2px purple',
       },
     });
   });
@@ -25,14 +25,14 @@ describe('Avatar', () => {
       testName: 'themed',
       selector: '#two-initials-avatar',
       properties: {
-        '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
-        '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
-        '--terra-avatar-color': 'rgb(0, 0, 255)',
-        '--terra-avatar-font-size': '2rem',
-        '--terra-avatar-height': '5rem',
-        '--terra-avatar-width': '5rem',
-        '--terra-avatar-two-background-color': 'blue',
-        '--terra-avatar-two-after-box-shadow': 'inset 0 0 0 2px purple',
+        '--terra-avatar-v1-background-color': 'rgba(0, 0, 255, 0.5)',
+        '--terra-avatar-v1-border': '0.07143rem solid rgb(0, 0, 255)',
+        '--terra-avatar-v1-color': 'rgb(0, 0, 255)',
+        '--terra-avatar-v1-font-size': '2rem',
+        '--terra-avatar-v1-initial-height': '5rem',
+        '--terra-avatar-v1-initial-width': '5rem',
+        '--terra-avatar-v1-two-background-color': 'blue',
+        '--terra-avatar-v1-two-after-box-shadow': 'inset 0 0 0 2px purple',
       },
     });
   });
@@ -44,12 +44,12 @@ describe('Avatar', () => {
       testName: 'themed',
       selector: '#image-avatar',
       properties: {
-        '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
-        '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
-        '--terra-avatar-font-size': '2rem',
-        '--terra-avatar-height': '5rem',
-        '--terra-avatar-width': '5rem',
-        '--terra-avatar-after-box-shadow': 'inset 0 0 0 2px blue',
+        '--terra-avatar-v1-background-color': 'rgba(0, 0, 255, 0.5)',
+        '--terra-avatar-v1-border': '0.07143rem solid rgb(0, 0, 255)',
+        '--terra-avatar-v1-font-size': '2rem',
+        '--terra-avatar-v1-initial-height': '5rem',
+        '--terra-avatar-v1-initial-width': '5rem',
+        '--terra-avatar-v1-after-box-shadow': 'inset 0 0 0 2px blue',
       },
     });
   });
@@ -61,9 +61,9 @@ describe('Avatar', () => {
       testName: 'themed',
       selector: '#is-deceased-avatar',
       properties: {
-        '--terra-avatar-is-deceased-background-color': 'black',
-        '--terra-avatar-image-is-deceased-opacity': '0.2',
-        '--terra-avatar-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
+        '--terra-avatar-v1-is-deceased-background-color': 'black',
+        '--terra-avatar-v1-image-is-deceased-opacity': '0.2',
+        '--terra-avatar-v1-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
       },
     });
   });
@@ -75,9 +75,9 @@ describe('Avatar', () => {
       testName: 'themed',
       selector: '#is-deceased-initials-avatar',
       properties: {
-        '--terra-avatar-is-deceased-background-color': 'black',
-        '--terra-avatar-image-is-deceased-opacity': '0.2',
-        '--terra-avatar-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
+        '--terra-avatar-v1-is-deceased-background-color': 'black',
+        '--terra-avatar-v1-image-is-deceased-opacity': '0.2',
+        '--terra-avatar-v1-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
       },
     });
   });
@@ -89,8 +89,8 @@ describe('Avatar', () => {
       testName: 'themed',
       selector: '#is-deceased-image-avatar',
       properties: {
-        '--terra-avatar-image-is-deceased-opacity': '0.2',
-        '--terra-avatar-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
+        '--terra-avatar-v1-image-is-deceased-opacity': '0.2',
+        '--terra-avatar-v1-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
       },
     });
   });
@@ -104,15 +104,15 @@ describe('Facility', () => {
       testName: 'themed',
       selector: '#default-facility',
       properties: {
-        '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
-        '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
-        '--terra-avatar-icon-facility-background-image': 'rgb(0, 100, 0)',
-        '--terra-avatar-icon-facility-height': '95%',
-        '--terra-avatar-icon-facility-width': '95%',
-        '--terra-avatar-height': '5rem',
-        '--terra-avatar-width': '5rem',
-        '--terra-avatar-three-background-color': 'orange',
-        '--terra-avatar-three-after-box-shadow': 'inset 0 0 0 2px orange',
+        '--terra-avatar-v1-background-color': 'rgba(0, 0, 255, 0.5)',
+        '--terra-avatar-v1-border': '0.07143rem solid rgb(0, 0, 255)',
+        '--terra-avatar-v1-icon-facility-background-image': 'rgb(0, 100, 0)',
+        '--terra-avatar-v1-icon-facility-height': '95%',
+        '--terra-avatar-v1-icon-facility-width': '95%',
+        '--terra-avatar-v1-initial-height': '5rem',
+        '--terra-avatar-v1-initial-width': '5rem',
+        '--terra-avatar-v1-three-background-color': 'orange',
+        '--terra-avatar-v1-three-after-box-shadow': 'inset 0 0 0 2px orange',
       },
     });
   });
@@ -124,12 +124,12 @@ describe('Facility', () => {
       testName: 'themed',
       selector: '#image-facility',
       properties: {
-        '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
-        '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
-        '--terra-avatar-after-box-shadow': 'inset 0 0 0 4px black',
-        '--terra-avatar-icon-facility-background-image': 'rgb(0, 100, 0)',
-        '--terra-avatar-height': '5rem',
-        '--terra-avatar-width': '5rem',
+        '--terra-avatar-v1-background-color': 'rgba(0, 0, 255, 0.5)',
+        '--terra-avatar-v1-border': '0.07143rem solid rgb(0, 0, 255)',
+        '--terra-avatar-v1-after-box-shadow': 'inset 0 0 0 4px black',
+        '--terra-avatar-v1-icon-facility-background-image': 'rgb(0, 100, 0)',
+        '--terra-avatar-v1-initial-height': '5rem',
+        '--terra-avatar-v1-initial-width': '5rem',
       },
     });
   });
@@ -143,15 +143,15 @@ describe('Shared User', () => {
       testName: 'themed',
       selector: '#shared-user',
       properties: {
-        '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
-        '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
-        '--terra-avatar-icon-shared-user-background-image': 'rgb(0, 100, 0)',
-        '--terra-avatar-icon-multi-user-height': '100%',
-        '--terra-avatar-icon-multi-user-width': '100%',
-        '--terra-avatar-height': '5rem',
-        '--terra-avatar-width': '5rem',
-        '--terra-avatar-four-background-color': 'orange',
-        '--terra-avatar-four-after-box-shadow': 'inset 0 0 0 2px orange',
+        '--terra-avatar-v1-background-color': 'rgba(0, 0, 255, 0.5)',
+        '--terra-avatar-v1-border': '0.07143rem solid rgb(0, 0, 255)',
+        '--terra-avatar-v1-icon-shared-user-background-image': 'rgb(0, 100, 0)',
+        '--terra-avatar-v1-icon-multi-user-height': '100%',
+        '--terra-avatar-v1-icon-multi-user-width': '100%',
+        '--terra-avatar-v1-initial-height': '5rem',
+        '--terra-avatar-v1-initial-width': '5rem',
+        '--terra-avatar-v1-four-background-color': 'orange',
+        '--terra-avatar-v1-four-after-box-shadow': 'inset 0 0 0 2px orange',
       },
     });
   });

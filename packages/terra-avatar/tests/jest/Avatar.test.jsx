@@ -40,14 +40,14 @@ describe('Avatar', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render an avatar with provided height and width', () => {
-    const avatar = <Avatar alt="user" height="5em" width="5em" />;
+  it('should render an avatar with provided size', () => {
+    const avatar = <Avatar alt="user" size="5em" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an avatar with initials and aria hidden', () => {
-    const avatar = <Avatar alt="user" initials="JJ" isAriaHidden height="5em" width="5em" />;
+    const avatar = <Avatar alt="user" initials="JJ" isAriaHidden />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });

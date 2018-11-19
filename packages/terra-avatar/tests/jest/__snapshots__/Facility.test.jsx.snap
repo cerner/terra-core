@@ -139,10 +139,10 @@ exports[`Facility should render image facility avatar when image is passed in 1`
 </div>
 `;
 
-exports[`Facility should render with a facility avatar with provided height and width 1`] = `
+exports[`Facility should render with a facility avatar with provided size 1`] = `
 <div
   class="avatar five"
-  style="height:5em;width:5em"
+  style="font-size:5em"
 >
   <span
     alt="London"

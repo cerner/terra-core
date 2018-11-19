@@ -57,10 +57,10 @@ exports[`SharedUser should render a shared-user avatar with custom props 1`] = `
 </div>
 `;
 
-exports[`SharedUser should render a shared-user avatar with provided height and width 1`] = `
+exports[`SharedUser should render a shared-user avatar with provided size 1`] = `
 <div
   class="avatar four"
-  style="height:5em;width:5em"
+  style="font-size:5em"
 >
   <span
     alt="shared-user"

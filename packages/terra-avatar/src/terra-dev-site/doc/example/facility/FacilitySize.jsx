@@ -4,7 +4,7 @@ import { Facility } from 'terra-avatar/lib/index';
 import image from '../../../assets/200x133.jpg';
 
 const AvatarSize = () => (
-  <Facility image={image} alt="Thailand" height="5em" width="5em" />
+  <Facility image={image} alt="Thailand" size="2em" />
 );
 
 export default AvatarSize;

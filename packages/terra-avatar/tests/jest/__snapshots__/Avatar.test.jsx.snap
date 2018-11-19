@@ -74,7 +74,6 @@ exports[`Avatar should render an avatar with custom props 1`] = `
 exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
 <div
   class="avatar one"
-  style="height:5em;width:5em"
 >
   <span
     aria-hidden="true"
@@ -85,10 +84,10 @@ exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
 </div>
 `;
 
-exports[`Avatar should render an avatar with provided height and width 1`] = `
+exports[`Avatar should render an avatar with provided size 1`] = `
 <div
   class="avatar one"
-  style="height:5em;width:5em"
+  style="font-size:5em"
 >
   <span
     alt="user"
@@ -116,7 +115,7 @@ exports[`Avatar should render an isDeceased avatar 1`] = `
 
 exports[`Avatar should render fallback user avatar when invalid image is passed in 1`] = `
 <div
-  class="avatar"
+  class="avatar image"
 >
   <div>
     <div
@@ -157,7 +156,7 @@ exports[`Avatar should render fallback user avatar when more than two initials a
 
 exports[`Avatar should render image avatar when image is passed in 1`] = `
 <div
-  class="avatar"
+  class="avatar image"
 >
   <div>
     <div

@@ -8,8 +8,8 @@ describe('SharedUser', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a shared-user avatar with provided height and width', () => {
-    const avatar = <SharedUser alt="shared-user" height="5em" width="5em" />;
+  it('should render a shared-user avatar with provided size', () => {
+    const avatar = <SharedUser alt="shared-user" size="5em" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });

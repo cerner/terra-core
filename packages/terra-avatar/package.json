@@ -2,7 +2,7 @@
   "name": "terra-avatar",
   "main": "lib/index.js",
   "version": "1.28.0",
-  "description": "Contains components that represent a person, location or entity. Variants include Avatar, Facility, and Multiuser.",
+  "description": "Contains components that represent a person, location or entity. Variants include Avatar, Facility, and SharedUser.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
