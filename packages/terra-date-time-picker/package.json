@@ -1,7 +1,7 @@
 {
   "name": "terra-date-time-picker",
   "main": "lib/DateTimePicker.js",
-  "version": "2.37.0",
+  "version": "2.38.0",
   "description": "The DateTimePicker component has a date picker for selecting date and a time input for entering time",
   "repository": {
     "type": "git",
@@ -30,16 +30,16 @@
     "moment": "^2.21.0",
     "moment-timezone": "^0.5.13",
     "prop-types": "^15.5.8",
-    "terra-abstract-modal": "^1.24.0",
+    "terra-abstract-modal": "^1.25.0",
     "terra-app-delegate": "^2.1.0",
-    "terra-button": "^2.30.0",
-    "terra-date-picker": "^2.37.0",
-    "terra-doc-template": "^1.21.0",
+    "terra-button": "^2.31.0",
+    "terra-date-picker": "^2.38.0",
+    "terra-doc-template": "^1.22.0",
     "terra-modal-manager": "^3.0.0",
-    "terra-time-input": "^2.33.0"
+    "terra-time-input": "^2.34.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
+    "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

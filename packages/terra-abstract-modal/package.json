@@ -1,7 +1,7 @@
 {
   "name": "terra-abstract-modal",
   "main": "lib/AbstractModal.js",
-  "version": "1.24.0",
+  "version": "1.25.0",
   "description": "The abstract modal is a structural component that provides the ability to display portal'd content in a layer above the app.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-icon": "^2.28.0"
+    "terra-icon": "^2.29.0"
   },
   "peerDependencies": {
     "react": "^16.4.2",
@@ -34,10 +34,10 @@
     "focus-trap-react": "^4.0.1",
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
-    "terra-doc-template": "^1.21.0"
+    "terra-doc-template": "^1.22.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
+    "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

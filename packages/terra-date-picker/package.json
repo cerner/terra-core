@@ -1,7 +1,7 @@
 {
   "name": "terra-date-picker",
   "main": "lib/DatePicker.js",
-  "version": "2.37.0",
+  "version": "2.38.0",
   "description": "The terra-date-picker component provides users a way to enter or select a date from the date picker.",
   "repository": {
     "type": "git",
@@ -33,15 +33,15 @@
     "react-datepicker": "^0.64.0",
     "react-portal": "^4.1.2",
     "terra-app-delegate": "^2.1.0",
-    "terra-button": "^2.30.0",
-    "terra-doc-template": "^1.21.0",
-    "terra-form-input": "^1.30.0",
-    "terra-icon": "^2.28.0",
+    "terra-button": "^2.31.0",
+    "terra-doc-template": "^1.22.0",
+    "terra-form-input": "^1.31.0",
+    "terra-icon": "^2.29.0",
     "terra-modal-manager": "^3.0.0",
-    "terra-responsive-element": "^3.16.0"
+    "terra-responsive-element": "^3.17.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
+    "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

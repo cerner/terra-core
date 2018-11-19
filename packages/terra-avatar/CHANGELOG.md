@@ -9,6 +9,11 @@ Unreleased
 * Replace `componentWillReceiveProps` with memoization.
 * Split theme tests into their own package.
 
+1.29.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.28.0 - (November 13, 2018)
 ------------------
 ### Changed

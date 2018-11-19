@@ -1,7 +1,7 @@
 {
   "name": "terra-demographics-banner",
   "main": "lib/DemographicsBanner.js",
-  "version": "2.32.0",
+  "version": "2.33.0",
   "description": "The demographics component is used to display demographic information about a person in a condensed, easy to read format.",
   "repository": {
     "type": "git",
@@ -31,13 +31,13 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.21.0",
-    "terra-image": "^2.28.0",
-    "terra-responsive-element": "^3.16.0",
-    "terra-visually-hidden-text": "^1.6.0"
+    "terra-doc-template": "^1.22.0",
+    "terra-image": "^2.29.0",
+    "terra-responsive-element": "^3.17.0",
+    "terra-visually-hidden-text": "^1.7.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
+    "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

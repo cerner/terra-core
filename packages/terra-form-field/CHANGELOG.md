@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.31.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * maxWidth prop added to Field component
 
