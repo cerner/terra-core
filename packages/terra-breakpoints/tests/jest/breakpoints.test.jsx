@@ -49,7 +49,7 @@ describe('breakpointIsActiveForSize', () => {
     expect(breakpointIsActiveForSize('tiny', -100)).toBe(false);
   });
 
-  it('should accurately determine default size matching', () => {
+  it('should accurately determine tiny size matching', () => {
     expect(breakpointIsActiveForSize('tiny', 0)).toBe(true);
     expect(breakpointIsActiveForSize('tiny', 544)).toBe(true);
     expect(breakpointIsActiveForSize('tiny', 768)).toBe(true);
@@ -59,8 +59,9 @@ describe('breakpointIsActiveForSize', () => {
     expect(breakpointIsActiveForSize('tiny', 9999)).toBe(true);
   });
 
-  it('should accurately determine tiny size matching', () => {
+  it('should accurately determine small size matching', () => {
     expect(breakpointIsActiveForSize('small', 0)).toBe(false);
+    expect(breakpointIsActiveForSize('small', 543)).toBe(false);
     expect(breakpointIsActiveForSize('small', 544)).toBe(true);
     expect(breakpointIsActiveForSize('small', 768)).toBe(true);
     expect(breakpointIsActiveForSize('small', 992)).toBe(true);
@@ -69,9 +70,10 @@ describe('breakpointIsActiveForSize', () => {
     expect(breakpointIsActiveForSize('small', 9999)).toBe(true);
   });
 
-  it('should accurately determine small size matching', () => {
+  it('should accurately determine medium size matching', () => {
     expect(breakpointIsActiveForSize('medium', 0)).toBe(false);
     expect(breakpointIsActiveForSize('medium', 544)).toBe(false);
+    expect(breakpointIsActiveForSize('medium', 767)).toBe(false);
     expect(breakpointIsActiveForSize('medium', 768)).toBe(true);
     expect(breakpointIsActiveForSize('medium', 992)).toBe(true);
     expect(breakpointIsActiveForSize('medium', 1216)).toBe(true);
@@ -79,33 +81,36 @@ describe('breakpointIsActiveForSize', () => {
     expect(breakpointIsActiveForSize('medium', 9999)).toBe(true);
   });
 
-  it('should accurately determine medium size matching', () => {
+  it('should accurately determine large size matching', () => {
     expect(breakpointIsActiveForSize('large', 0)).toBe(false);
     expect(breakpointIsActiveForSize('large', 544)).toBe(false);
     expect(breakpointIsActiveForSize('large', 768)).toBe(false);
+    expect(breakpointIsActiveForSize('large', 991)).toBe(false);
     expect(breakpointIsActiveForSize('large', 992)).toBe(true);
     expect(breakpointIsActiveForSize('large', 1216)).toBe(true);
     expect(breakpointIsActiveForSize('large', 1440)).toBe(true);
     expect(breakpointIsActiveForSize('large', 9999)).toBe(true);
   });
 
-  it('should accurately determine large size matching', () => {
+  it('should accurately determine huge size matching', () => {
     expect(breakpointIsActiveForSize('huge', 0)).toBe(false);
     expect(breakpointIsActiveForSize('huge', 544)).toBe(false);
     expect(breakpointIsActiveForSize('huge', 768)).toBe(false);
     expect(breakpointIsActiveForSize('huge', 992)).toBe(false);
+    expect(breakpointIsActiveForSize('huge', 1215)).toBe(false);
     expect(breakpointIsActiveForSize('huge', 1216)).toBe(true);
     expect(breakpointIsActiveForSize('huge', 1440)).toBe(true);
     expect(breakpointIsActiveForSize('huge', 9999)).toBe(true);
-  });  
+  });
 
-  it('should accurately determine huge size matching', () => {
+  it('should accurately determine enormous size matching', () => {
     expect(breakpointIsActiveForSize('enormous', 0)).toBe(false);
     expect(breakpointIsActiveForSize('enormous', 544)).toBe(false);
     expect(breakpointIsActiveForSize('enormous', 768)).toBe(false);
     expect(breakpointIsActiveForSize('enormous', 992)).toBe(false);
     expect(breakpointIsActiveForSize('enormous', 1216)).toBe(false);
+    expect(breakpointIsActiveForSize('enormous', 1439)).toBe(false);
     expect(breakpointIsActiveForSize('enormous', 1440)).toBe(true);
     expect(breakpointIsActiveForSize('enormous', 9999)).toBe(true);
-  });  
+  });
 });
