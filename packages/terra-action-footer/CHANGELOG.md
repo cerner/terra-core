@@ -4,6 +4,12 @@ ChangeLog
 Unreleased
 ----------
 
+1.30.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+* Correct block footer theme test routes
+
 1.29.0 - (November 13, 2018)
 ------------------
 ### Changed

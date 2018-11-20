@@ -20,4 +20,10 @@ describe('Icon', () => {
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
+
+  describe('AriaLabel', () => {
+    before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-aria-label'));
+
+    Terra.should.beAccessible();
+  });
 });
