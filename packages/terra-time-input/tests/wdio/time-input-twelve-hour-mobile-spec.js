@@ -12,7 +12,6 @@ describe('Time Input Twelve Hour Mobile', () => {
       if (!window.ontouchstart) {
         window.ontouchstart = 'true';
       }
-      console.log('what the FFFFF');
     });
   });
 
