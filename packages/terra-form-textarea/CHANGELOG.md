@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.33.1 - (November 20, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
 2.33.0 - (November 19, 2018)
 ------------------
 ### Changed

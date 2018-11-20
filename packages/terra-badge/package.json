@@ -1,7 +1,7 @@
 {
   "name": "terra-badge",
   "main": "lib/Badge.js",
-  "version": "2.30.0",
+  "version": "2.30.1",
   "description": "The terra-badge component displays content classification.",
   "repository": {
     "type": "git",
@@ -40,7 +40,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^1.22.0",
-    "terra-icon": "^2.29.0",
+    "terra-icon": "^2.29.1",
     "terra-visually-hidden-text": "^1.7.0"
   }
 }

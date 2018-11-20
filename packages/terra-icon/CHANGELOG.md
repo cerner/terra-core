@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.29.1 - (November 20, 2018)
+------------------
+### Fixed
+* Fixed broken keyframe animation
+
 2.29.0 - (November 19, 2018)
 ------------------
 ### Fixed
