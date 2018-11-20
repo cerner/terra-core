@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Removed use of componentWillMount from examples
 
+2.35.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.34.0 - (November 13, 2018)
 ------------------
 ### Changed

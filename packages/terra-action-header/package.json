@@ -1,7 +1,7 @@
 {
   "name": "terra-action-header",
   "main": "lib/ActionHeader.js",
-  "version": "1.31.0",
+  "version": "1.32.0",
   "description": "The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.",
   "repository": {
     "type": "git",
@@ -28,15 +28,15 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^2.30.0",
-    "terra-button-group": "^2.30.0",
-    "terra-collapsible-menu-view": "^3.29.0",
-    "terra-doc-template": "^1.21.0",
-    "terra-icon": "^2.28.0",
-    "terra-mixins": "^1.22.0"
+    "terra-button": "^2.31.0",
+    "terra-button-group": "^2.31.0",
+    "terra-collapsible-menu-view": "^3.30.0",
+    "terra-doc-template": "^1.22.0",
+    "terra-icon": "^2.29.0",
+    "terra-mixins": "^1.23.0"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
+    "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
