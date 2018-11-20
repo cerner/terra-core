@@ -19,11 +19,7 @@
     fill: currentColor; // Allows icon color to be inherited from text color
   }
 
-  @keyframes :global(spin) {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(359deg); }
-  }
-
+  /* rtl:ignore */
   .icon.is-spin {
     :global {
       animation: spin 2s infinite linear;
