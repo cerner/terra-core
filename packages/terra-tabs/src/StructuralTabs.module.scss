@@ -7,6 +7,7 @@
     // Content div of content container component
     > :nth-child(2) {
       background-color: var(--terra-tabs-structural-content-background-color, #fff);
+      background-image: var(--terra-tabs-structural-content-background-image);
       border-radius: var(--terra-tabs-structural-content-border-radius, 0);
       box-shadow: var(--terra-tabs-structural-content-box-shadow, 0);
       // Used to make the content sit above the tab to block the box shadow that can be applied
@@ -102,6 +103,7 @@
 
       &.is-active {
         background-color: var(--terra-tabs-structural-active-background-color, #fff);
+        background-image: var(--terra-tabs-structural-active-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
         background-size: var(--terra-tabs-structural-active-background-size, 100% 2px);
         box-shadow: var(--terra-tabs-structural-active-box-shadow, none);
         color: var(--terra-tabs-structural-active-color, #000);
