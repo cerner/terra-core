@@ -1,6 +1,6 @@
 # Avatar
 
-The `Avatar` variant represents a person - it displays an image or initials in a circular frame. If neither are provided, a fallback user icon displays.
+The `Avatar` variant represents a person - it displays an image or initials in a circular frame. If neither are provided, a fallback user icon displays. This is the default export of the `terra-avatar` package.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ The `Avatar` variant represents a person - it displays an image or initials in a
 
 ```jsx
 import React from 'react';
-import { Avatar } from 'terra-avatar';
+import Avatar from 'terra-avatar';
 
 <Avatar
   alt="patient"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '../../../../index';
+import Avatar from '../../../../index';
 import exampleAvatarImage from '../../../assets/150x150.jpg';
 import exampleAvatarImage2 from '../../../assets/163x40.png';
 

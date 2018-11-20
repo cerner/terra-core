@@ -11,7 +11,7 @@ The `terra-avatar` package contains three components: `Avatar`, `Facility`, and 
 
 ```jsx
 import React from 'react';
-import { Avatar, Facility, SharedUser } from 'terra-avatar';
+import Avatar, { Facility, SharedUser } from 'terra-avatar';
 
 <Avatar
   alt="User"

@@ -1,4 +1,4 @@
-# Terra Avatar - Upgrade Guide
+# terra-avatar Upgrade Guide
 ## V2 Major Updates
 ### Removed
 * `variant` prop. Avatar is now split into three sub components - Avatar, Facility, and SharedUser. Import them by using named imports.
