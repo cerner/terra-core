@@ -59,6 +59,7 @@
 
   .deceased {
     background: var(--terra-demographics-banner-background-deceased, #1c1f21);
+    background-clip: padding-box;
     background-image: var(--terra-demographics-banner-background-image-deceased);
     color: var(--terra-demographics-banner-foreground-deceased, #fff);
 
