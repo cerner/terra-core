@@ -1,7 +1,7 @@
 # terra-avatar Upgrade Guide
 ## V2 Major Updates
 ### Removed
-* `variant` prop. Avatar is now split into three sub components - Avatar, Facility, and SharedUser. Import them by using named imports.
+* `variant` prop. Avatar is now split into three sub components - `Avatar`, `Facility`, and `SharedUser`. `Avatar` is the default export, while `Facility` and `SharedUser` are named exports.
 
 ### Added
 * `alt` prop. Represents alternative text. This is required on all variants for accessibility.
@@ -15,7 +15,7 @@
 * `initials` prop now only accepts one or two letters.
 
 ## Steps to uplift to V2
-1. Use a named export to specify which variant to use.
+1. Use the default export for the `Avatar` variant. Use a named export for `Facility` and `SharedUser` variants.
 2. Specify alternative text, using the `alt` prop.
 3. Profit.
 
@@ -30,7 +30,7 @@ import Avatar from 'terra-avatar'
 
 ### V2 Code
 ```javascript
-import {Avatar, Facility} from 'terra-avatar'
+import Avatar, { Facility } from 'terra-avatar'
 
 <Avatar alt="Patient 1" initials="AA" />
 <Facility alt="Location 1" />
