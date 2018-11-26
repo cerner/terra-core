@@ -7,6 +7,11 @@ Unreleased
 * Removed use of componentWillMount from src code
 * Updated component to use injectIntl
 
+2.38.1 - (November 20, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
 2.38.0 - (November 19, 2018)
 ------------------
 ### Changed
