@@ -15,7 +15,7 @@ import List, { Item } from 'terra-list/lib/List';
   metaData={{ key: 'my-item-key' }}
   onSelect={this.handleItemSelection}
 >
-  <p>blurb</p>
+  <p>List item text</p>
 </Item>
 
 

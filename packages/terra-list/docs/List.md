@@ -18,10 +18,10 @@ import List, { Item } from 'terra-list';
 
 <List isDivided role="listbox">
   <Item isSelectable key="section-1-item-1">
-    <p>blurb</p>
+    <p>List item text</p>
   </Item>
   <Item isSelectable key="section-1-item-2">
-    <p>blurb</p>
+    <p>List item text</p>
   </Item>
 </List>
 ```

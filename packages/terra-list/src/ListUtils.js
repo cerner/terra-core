@@ -26,7 +26,7 @@ const updatedMultiSelectedKeys = (currentKeys, newKey) => {
 /**
  * Returns a wrapped onClick callback function. If the onSelect method isn't passed, we return the initial onClick.
  */
-const wrappedOnClickForItem = (onClick, onSelect, metaData) => {}
+const wrappedOnClickForItem = (onClick, onSelect, metaData) => {
   if (!onSelect) {
     return onClick;
   }
@@ -36,7 +36,7 @@ const wrappedOnClickForItem = (onClick, onSelect, metaData) => {}
     if (onClick) {
       onClick(event);
     }
-  }
+  };
 };
 
 /**
@@ -54,7 +54,7 @@ const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => {
     if (onKeyDown) {
       onKeyDown(event);
     }
-  }
+  };
 };
 
 /**

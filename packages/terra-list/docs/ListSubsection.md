@@ -2,8 +2,6 @@
 
 The list subsection component provides the ability to display subsection headers and collapse a subsection within a logical group. The list subsection will render as a flat list.
 
-The subsection should not be used within a virtualized component, such as the infinite list, as it will not work. If a subsection style of display is desired, simply consume the ListSubsectionHeader directly.
-
 ## Usage
 
 ```jsx
@@ -19,10 +17,10 @@ import List, { Item, Subsection } from 'terra-list/lib/List';
   key="section-1"
 >
   <Item key="section-1-item-1">
-    <p>blurb</p>
+    <p>List item text</p>
   </Item>
   <Item key="section-1-item-2">
-    <p>blurb</p>
+    <p>List item text</p>
   </Item>
 </Subsection>
 

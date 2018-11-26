@@ -47,7 +47,7 @@ const defaultProps = {
   title: '',
 };
 
-const SectionHeader = ({
+const ListSubsectionHeader = ({
   isCollapsed,
   isCollapsible,
   level,
@@ -102,7 +102,7 @@ const SectionHeader = ({
   );
 };
 
-SectionHeader.propTypes = propTypes;
-SectionHeader.defaultProps = defaultProps;
+ListSubsectionHeader.propTypes = propTypes;
+ListSubsectionHeader.defaultProps = defaultProps;
 
-export default SectionHeader;
+export default ListSubsectionHeader;
