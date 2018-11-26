@@ -2,7 +2,7 @@
 
 exports[`should render with callback functions 1`] = `
 <Fragment>
-  <SectionHeader
+  <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
     level={1}
@@ -15,7 +15,7 @@ exports[`should render with callback functions 1`] = `
 
 exports[`should render with isCollapsed 1`] = `
 <Fragment>
-  <SectionHeader
+  <ListSectionHeader
     isCollapsed={true}
     isCollapsible={false}
     level={1}
@@ -26,7 +26,7 @@ exports[`should render with isCollapsed 1`] = `
 
 exports[`should render with isCollapsible 1`] = `
 <Fragment>
-  <SectionHeader
+  <ListSectionHeader
     isCollapsed={false}
     isCollapsible={true}
     level={1}
@@ -37,7 +37,7 @@ exports[`should render with isCollapsible 1`] = `
 
 exports[`should render with items 1`] = `
 <Fragment>
-  <SectionHeader
+  <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
     level={1}
@@ -78,7 +78,7 @@ exports[`should render with items 1`] = `
 
 exports[`should render with no items 1`] = `
 <Fragment>
-  <SectionHeader
+  <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
     level={1}
@@ -89,7 +89,7 @@ exports[`should render with no items 1`] = `
 
 exports[`should render with title 1`] = `
 <Fragment>
-  <SectionHeader
+  <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
     level={1}
@@ -100,7 +100,7 @@ exports[`should render with title 1`] = `
 
 exports[`should render with title and level 1`] = `
 <Fragment>
-  <SectionHeader
+  <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
     level={3}
