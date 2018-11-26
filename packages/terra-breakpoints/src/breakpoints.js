@@ -17,7 +17,7 @@ const activeBreakpointForSize = (size) => {
       return breakpoint;
     }
   }
-  return -1;
+  return undefined;
 };
 
 const breakpointIsActiveForSize = (breakpoint, size) => {

@@ -1,5 +1,4 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies */
 import { IntlProvider } from 'react-intl';
 import DateTimePicker from '../../lib/DateTimePicker';
 import messages from '../../translations/en-US.json';
@@ -108,16 +107,6 @@ it('should render a date time picker with a default date and time', () => {
       <DateTimePicker name="date-time-input" value="2017-04-01T10:30" utcOffset={0} />
     </IntlProvider>));
   expect(datePicker).toMatchSnapshot();
-});
-
-it('throws error on missing locale prop in Base', () => {
-  global.console = { error: jest.fn() };
-
-  expect(() => {
-    render(<DateTimePicker name="date-time-input" />);
-  }).toThrowError();
-  // eslint-disable-next-line no-console
-  expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
 });
 
 it('should render a disabled date time picker', () => {
