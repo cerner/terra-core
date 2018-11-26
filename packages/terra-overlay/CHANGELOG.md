@@ -3,6 +3,22 @@ Changelog
 
 Unreleased
 ----------
+<<<<<<< HEAD
+=======
+
+2.36.1 - (November 20, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
+2.36.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.35.0 - (November 14, 2018)
+------------------
+>>>>>>> master
 ### Changed
 * Removed automatic focus shift to relative overlay when it is displayed
 

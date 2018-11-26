@@ -18,15 +18,11 @@ class StatusViewTemplate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: undefined,
+      id: uniqueid(),
       variant: 'no-data',
     };
 
     this.handleSelectChange = this.handleSelectChange.bind(this);
-  }
-
-  componentWillMount() {
-    this.state.id = uniqueid();
   }
 
   getId(name) {

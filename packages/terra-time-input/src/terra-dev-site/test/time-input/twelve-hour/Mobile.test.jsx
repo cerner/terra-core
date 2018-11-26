@@ -6,9 +6,13 @@ export default class TimeInputElement extends React.Component {
     super(props);
     this.state = { input: '15:23' };
     this.handleOnChange = this.handleOnChange.bind(this);
+    if (!window.ontouchstart) {
+      this.resetontouchstart = true;
+      window.ontouchstart = 'true';
+    }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (!window.ontouchstart) {
       this.resetontouchstart = true;
       window.ontouchstart = 'true';

@@ -4,6 +4,21 @@ Changelog
 Unreleased
 ----------
 
+2.29.1 - (November 20, 2018)
+------------------
+### Fixed
+* Fixed broken keyframe animation
+
+2.29.0 - (November 19, 2018)
+------------------
+### Fixed
+* Fixed keyframe animation name hashing in webpacker environments
+
+### Changed
+* Added test page for Icon with aria-label component
+* Minor dependency version bump
+
+
 2.28.0 - (November 13, 2018)
 ------------------
 ### Changed

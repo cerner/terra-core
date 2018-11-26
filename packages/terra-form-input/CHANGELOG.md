@@ -9,6 +9,19 @@ Unreleased
 ### Fixed
 * Dev site tests pages adjusted to uniformly use caretColor
 
+1.31.1 - (November 20, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
+1.31.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Dev site test for maxWidth prop
+
 1.30.0 - (November 13, 2018)
 ------------------
 ### Changed
