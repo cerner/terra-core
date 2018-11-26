@@ -6,11 +6,6 @@ const newChangelog = danger.git.created_files.filter((filePath) => {
   return srcFilePattern.test(filePath);
 });
 
-const newTarFiles = danger.git.created_files.filter((filePath) => {
-  const srcFilePattern = /^packages\/([a-z-])*\/.tgz/i;
-  return srcFilePattern.test(filePath);
-});
-
 const modifiedChangelog = danger.git.modified_files.filter((filePath) => {
   const srcFilePattern = /^packages\/terra-(?!(site))([a-z-])*\/CHANGELOG.md/i;
   return srcFilePattern.test(filePath);
@@ -21,23 +16,12 @@ const modifiedSrcFiles = danger.git.modified_files.filter((filePath) => {
   return srcFilePattern.test(filePath);
 });
 
-const modifiedTarFiles = danger.git.modified_files.filter((filePath) => {
-  const srcFilePattern = /^packages\/([a-z-])*\/.tgz/i;
-  return srcFilePattern.test(filePath);
-});
-
 const hasCHANGELOGChanges = modifiedChangelog.length > 0 || newChangelog.length > 0;
 const hasModifiedSrcFiles = modifiedSrcFiles.length > 0;
-const hasTarChanges = modifiedTarFiles.length > 0 || newTarFiles.length > 0;
 
 // Fail if there are src code changes without a CHANGELOG update
 if (hasModifiedSrcFiles && !hasCHANGELOGChanges) {
   fail('Please include a CHANGELOG entry with this PR.');
-}
-
-// Fail if there are src code changes without a tar update.
-if (hasModifiedSrcFiles && !hasTarChanges) {
-  fail('Please regenerate the tar file by compiling the package.');
 }
 
 // Warn when there is a big PR

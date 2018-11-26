@@ -1,7 +1,7 @@
 {
   "name": "terra-signature",
   "main": "lib/Signature.js",
-  "version": "1.33.0",
+  "version": "1.34.1",
   "description": "A signature defined by an array of line segments.",
   "repository": {
     "type": "git",
@@ -28,11 +28,11 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.21.0",
-    "terra-form-select": "^4.24.0"
+    "terra-doc-template": "^1.22.0",
+    "terra-form-select": "^4.25.1"
   },
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build && tt-pack",
+    "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",

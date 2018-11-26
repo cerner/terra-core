@@ -20,6 +20,16 @@ Unreleased
 * Change from dot notation for ListItem and Utils access to individual exports for Item, Utils, SectionHeader, SubsectionHeader, Section, and Subsection.
 * Moved accessibility logic into the ListItem.
 
+2.31.1 - (November 20, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
+2.31.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.30.0 - (November 13, 2018)
 ------------------
 ### Changed

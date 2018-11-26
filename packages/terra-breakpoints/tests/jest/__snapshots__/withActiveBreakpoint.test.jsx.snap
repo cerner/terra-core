@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withActiveBreakpoint should render using the provided render function 1`] = `
+<withActiveBreakpoint(Component)>
+  <Component>
+    <div>
+      I am a test component
+    </div>
+  </Component>
+</withActiveBreakpoint(Component)>
+`;

@@ -6,6 +6,16 @@ Unreleased
 ### Removed
 * Unneeded terra-list dependency.
 
+1.26.1 - (November 20, 2018)
+------------------
+### Changed
+* Patch dependency version bump
+
+1.26.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.25.0 - (November 13, 2018)
 ------------------
 ### Changed

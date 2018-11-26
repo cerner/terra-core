@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Correctly use raw route.
 
+2.29.0 - (November 19, 2018)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.28.0 - (November 13, 2018)
 ------------------
 ### Changed
