@@ -1,11 +1,7 @@
 {
   "name": "terra-overlay",
   "main": "lib/Overlay.js",
-<<<<<<< HEAD
-  "version": "2.34.0",
-=======
   "version": "2.36.1",
->>>>>>> master
   "description": "The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.",
   "repository": {
     "type": "git",

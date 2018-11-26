@@ -4,8 +4,6 @@ ChangeLog
 Unreleased
 ----------
 
-<<<<<<< HEAD
-=======
 3.30.1 - (November 20, 2018)
 ------------------
 ### Changed
@@ -21,7 +19,6 @@ Unreleased
 ### Changed
 * Minor dependency version bump
 
->>>>>>> master
 3.28.0 - (November 13, 2018)
 ------------------
 ### Changed

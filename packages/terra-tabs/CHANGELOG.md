@@ -3,8 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-<<<<<<< HEAD
-=======
 
 3.30.1 - (November 20, 2018)
 ------------------
@@ -18,7 +16,6 @@ Unreleased
 
 3.29.0 - (November 13, 2018)
 ------------------
->>>>>>> master
 ### Changed
 * Prevent left and right arrow key events from shifting tab focus indication while inside of tab popup menu
 
