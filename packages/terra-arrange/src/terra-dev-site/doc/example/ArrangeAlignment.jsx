@@ -34,14 +34,10 @@ class ArrangeAlignment extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: undefined,
+      id: uniqueid(),
     };
 
     this.handleSelectChange = this.handleSelectChange.bind(this);
-  }
-
-  componentWillMount() {
-    this.state.id = uniqueid();
   }
 
   getId(name) {

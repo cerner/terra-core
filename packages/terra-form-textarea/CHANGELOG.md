@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed use of componentWillMount from examples
 
 2.33.1 - (November 20, 2018)
 ------------------
