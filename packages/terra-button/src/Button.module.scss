@@ -33,10 +33,10 @@
     font-size: var(--terra-button-font-size, 1rem);
     line-height: var(--terra-button-line-height, 1.429);
     outline: none;
-    padding-bottom: var(--terra-button-vertical-padding, 0.286rem);
+    padding-bottom: var(--terra-button-vertical-padding, 0.5rem);
     padding-left: 0;
     padding-right: 0;
-    padding-top: var(--terra-button-vertical-padding, 0.286rem);
+    padding-top: var(--terra-button-vertical-padding, 0.5rem);
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -68,7 +68,8 @@
   }
 
   .button-label {
-    display: inline-block;
+    align-items: center;
+    display: flex;
   }
 
   // Button variant modifiers
@@ -106,16 +107,19 @@
   }
 
   .text-only {
+    line-height: 1; // Used to help with vertical centering
     margin-left: var(--terra-button-text-only-horizontal-margin, 0.714rem);
     margin-right: var(--terra-button-text-only-horizontal-margin, 0.714rem);
   }
 
   .icon-only {
+    line-height: 0; // Used to help with vertical centering
     margin-left: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
     margin-right: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
   }
 
   .text-and-icon {
+    line-height: 0; // Used to help with vertical centering
     margin-left: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
     margin-right: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
   }
@@ -135,5 +139,9 @@
   .icon-svg {
     height: var(--terra-button-icon-height, 1rem);
     width: var(--terra-button-icon-width, 1rem);
+
+    & > svg {
+      margin-top: 0.15em; // Helps with vertical centering as Icon vertical-align styles aren't applied properly in flexbox container
+    }
   }
 }

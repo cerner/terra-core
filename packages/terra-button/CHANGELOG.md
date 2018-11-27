@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Reworked vertically center in button component
 
 2.31.1 - (November 20, 2018)
 ------------------

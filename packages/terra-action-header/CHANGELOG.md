@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed position and top styles from icons in buttons, now they are vertically centered with flexbox via terra-button styles
 
 1.32.1 - (November 20, 2018)
 ------------------

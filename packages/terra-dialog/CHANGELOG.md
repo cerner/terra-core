@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed top margin from close-icon, now it is vertically centered with flexbox via terra-button styles
 
 1.35.1 - (November 20, 2018)
 ------------------
