@@ -1,5 +1,5 @@
+/* eslint-disable no-console */
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies */
 import { IntlProvider } from 'react-intl';
 
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
