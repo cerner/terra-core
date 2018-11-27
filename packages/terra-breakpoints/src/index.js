@@ -10,4 +10,4 @@ export {
   ActiveBreakpointContext,
   ActiveBreakpointProvider,
   withActiveBreakpoint,
-}
+};

@@ -1,5 +1,4 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies */
 import { IntlProvider } from 'react-intl';
 import DateTimePicker from '../../lib/DateTimePicker';
 import messages from '../../translations/en-US.json';
