@@ -66,7 +66,7 @@ const Facility = ({
     facilityContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
   }
 
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
   const facilityClassNames = cx([
     'avatar',
     `${colorVariant}`,

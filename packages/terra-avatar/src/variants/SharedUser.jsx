@@ -48,7 +48,7 @@ const SharedUser = ({
   ...customProps
 }) => {
   const colorVariant = Utils.setColor(alt, color, hashValue);
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
   const multiUserClassNames = cx([
     'avatar',
     `${colorVariant}`,

@@ -94,8 +94,7 @@ const validateColor = (color) => {
     return false;
   }
 
-  const result = COLOR_VARIANTS.includes(color); // will return true if color is an item in the COLOR_VARIANTS array.
-  return result;
+  return COLOR_VARIANTS.includes(color); // will return true if color is an item in the COLOR_VARIANTS array.
 };
 
 /**

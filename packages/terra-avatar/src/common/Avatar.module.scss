@@ -169,7 +169,7 @@
     }
   }
 
-  //Non image variants should use this box shadow. Image variant shoud use base box shadw.
+  // Non image variants should use this box shadow. Image variant shoud use base box shadw.
   .avatar.is-deceased:not(.image) {
     &::after {
       box-shadow: var(--terra-avatar-v2-is-deceased-after-box-shadow, inset 0 0 0 2px #64696c);

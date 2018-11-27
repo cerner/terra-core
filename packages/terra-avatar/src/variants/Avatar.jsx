@@ -82,11 +82,10 @@ const Avatar = ({
     avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
   }
 
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
   const avatarClassNames = cx([
     'avatar',
     `${colorVariant}`,
-    // { 'image': !!image },
     { image: Boolean(image) },
     { 'is-deceased': isDeceased },
     attributes.className,
@@ -98,7 +97,6 @@ const Avatar = ({
     </div>
   );
 };
-// remove height and width prop. make font size themeable. remove width and height themeable props
 
 Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;
