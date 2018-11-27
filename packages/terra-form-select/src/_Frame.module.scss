@@ -3,11 +3,11 @@
 :local {
   .select {
     background-color: var(--terra-select-background-color, #fff);
+    border-radius: var(--terra-select-border-radius, 3px);
     color: var(--terra-select-color, #1c1f21);
     display: flex;
     font-size: var(--terra-select-font-size, 1.143rem);
     line-height: var(--terra-select-line-height, 1.75);
-    border-radius: var(--terra-select-border-radius, 3px);
   }
 
   .default {
@@ -59,6 +59,7 @@
 
     &:hover {
       border-color: var(--terra-select-hover-border-color, #dedfe0);
+      color: var(--terra-select-hover-color, inherit);
     }
 
     &.is-focused:hover {
@@ -200,6 +201,11 @@
       padding-left: var(--terra-select-padding-left, 0.42857rem);
       padding-right: var(--terra-select-padding-right, 0);
       padding-top: var(--terra-select-padding-top, 0);
+
+      &:hover {
+        border-color: var(--terra-select-hover-border-color, #dedfe0);
+        color: var(--terra-select-hover-color, inherit);
+      }
     }
 
     > .toggle {
@@ -207,6 +213,10 @@
       border-bottom-right-radius: var(--terra-select-border-radius, 3px);
       border-left: 0;
       border-top-right-radius: var(--terra-select-border-radius, 3px);
+
+      &:hover {
+        background-color: var(--terra-select-toggle-hover-background-color, none);
+      }
     }
 
     &.is-focused {
@@ -245,10 +255,6 @@
         border-bottom-right-radius: var(--terra-select-border-radius, 3px);
         border-top-right-radius: 0;
       }
-    }
-
-    &:hover > .display {
-      border-color: var(--terra-select-hover-border-color, #dedfe0);
     }
 
     &.is-focused:hover > .display {
