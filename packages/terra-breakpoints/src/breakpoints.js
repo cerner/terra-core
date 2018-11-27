@@ -17,7 +17,8 @@ const activeBreakpointForSize = (size) => {
       return breakpoint;
     }
   }
-}
+  return undefined;
+};
 
 const breakpointIsActiveForSize = (breakpoint, size) => {
   const breakpointLocation = breakpointSequence.indexOf(breakpoint);
@@ -28,5 +29,5 @@ const breakpointIsActiveForSize = (breakpoint, size) => {
 
 export default breakpoints;
 export {
-  activeBreakpointForSize, breakpointIsActiveForSize
-}
+  activeBreakpointForSize, breakpointIsActiveForSize,
+};

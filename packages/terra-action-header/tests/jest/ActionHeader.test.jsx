@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies, no-alert */
+/* eslint-disable no-alert, no-console */
 import React from 'react';
 import Button from 'terra-button';
 import intlContexts from './intl-context-setup';

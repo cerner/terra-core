@@ -2,7 +2,6 @@ import React from 'react';
 import intlContexts from './intl-context-setup';
 import LoadingOverlay from '../../src/LoadingOverlay';
 
-
 describe('LoadingOverlay', () => {
   it('should not render markup when isOpen is not provided', () => {
     const wrapper = mount(<LoadingOverlay />, intlContexts.mountContext);
@@ -43,6 +42,7 @@ describe('LoadingOverlay', () => {
     expect(() => {
       render(<LoadingOverlay />);
     }).toThrowError();
+    // eslint-disable-next-line no-console
     expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
   });
 });

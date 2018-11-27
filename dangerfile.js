@@ -2,17 +2,17 @@
 import { danger, warn, fail, message } from 'danger';
 
 const newChangelog = danger.git.created_files.filter((filePath) => {
-  const srcFilePattern = /^packages\/terra-(?!(site))([a-z-])*\/CHANGELOG.md/i;
+  const srcFilePattern = /^packages\/terra-([a-z-])*\/CHANGELOG.md/i;
   return srcFilePattern.test(filePath);
 });
 
 const modifiedChangelog = danger.git.modified_files.filter((filePath) => {
-  const srcFilePattern = /^packages\/terra-(?!(site))([a-z-])*\/CHANGELOG.md/i;
+  const srcFilePattern = /^packages\/terra-([a-z-])*\/CHANGELOG.md/i;
   return srcFilePattern.test(filePath);
 });
 
 const modifiedSrcFiles = danger.git.modified_files.filter((filePath) => {
-  const srcFilePattern = /^packages\/terra-(?!(site))([a-z-])*\/src/i;
+  const srcFilePattern = /^packages\/terra-([a-z-])*\/src/i;
   return srcFilePattern.test(filePath);
 });
 
