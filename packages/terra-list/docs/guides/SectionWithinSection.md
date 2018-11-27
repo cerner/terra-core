@@ -19,7 +19,7 @@ Next creating an event handler callback method to pass to the section's "onSelec
 
   }
 ```
-As a precaution we can prevent default on the event, in case there is a listener above the list.
+As a precaution we can prevent default on the event, in case the list has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
 ```jsx
   handleSectionSelection(event, metaData) {
     event.preventDefault();

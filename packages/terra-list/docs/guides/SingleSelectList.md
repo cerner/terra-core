@@ -19,7 +19,7 @@ Next creating an event handler callback method to pass to the list item's "onSel
 
   }
 ```
-As a precaution we can prevent default on the event, in case the list is inside a dismissable element, list a popup or modal and event propagation is an issue.
+As a precaution we can prevent default on the event, in case the list has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
 ```jsx
   handleItemSelection(event, metaData) {
     event.preventDefault();
