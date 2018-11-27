@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Add overflow style hidden to prevent incorrect size calculation.
 
 1.22.0 - (November 19, 2018)
 ------------------
