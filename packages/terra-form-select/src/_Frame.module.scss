@@ -67,6 +67,7 @@
     }
 
     &.is-invalid {
+      background-color: var(--terra-select-invalid-background-color, none);
       background-image: var(--terra-select-invalid-background-image, none);
       border-color: var(--terra-select-invalid-border-color, #dedfe0);
     }
@@ -262,6 +263,7 @@
     }
 
     &.is-invalid > .display {
+      background-color: var(--terra-select-invalid-background-color, none);
       background-image: var(--terra-select-invalid-background-image, none);
       border-color: var(--terra-select-invalid-border-color, #dedfe0);
     }
