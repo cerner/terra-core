@@ -1,5 +1,4 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies */
 import { IntlProvider } from 'react-intl';
 import TimeClarification from '../../lib/_TimeClarification';
 import messages from '../../translations/en-US.json';

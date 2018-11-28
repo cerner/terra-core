@@ -40,5 +40,6 @@ it('throws error on missing locale prop in Base', () => {
   expect(() => {
     render(<DemographicsBanner />);
   }).toThrowError();
+  // eslint-disable-next-line no-console
   expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
 });

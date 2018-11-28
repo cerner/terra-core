@@ -1,6 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ActiveBreakpointContext from './ActiveBreakpointContext';
 import { activeBreakpointForSize } from './breakpoints';
+
+const propTypes = {
+  /**
+   * The component(s) that will be wrapped by `<ActiveBreakpointContext.Provider />`.
+   */
+  children: PropTypes.node,
+};
 
 class ActiveBreakpointProvider extends React.Component {
   constructor(props) {
@@ -24,11 +32,11 @@ class ActiveBreakpointProvider extends React.Component {
   setActiveBreakpoint() {
     const { activeBreakpoint } = this.state;
     const newBreakpoint = activeBreakpointForSize(window.innerWidth);
-    
+
     if (activeBreakpoint !== newBreakpoint) {
       this.setState({
         activeBreakpoint: newBreakpoint,
-      });  
+      });
     }
   }
 
@@ -43,5 +51,7 @@ class ActiveBreakpointProvider extends React.Component {
     );
   }
 }
+
+ActiveBreakpointProvider.propTypes = propTypes;
 
 export default ActiveBreakpointProvider;

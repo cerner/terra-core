@@ -3,7 +3,7 @@ import IconAlert from '../../../icon/IconAlert';
 
 const IconAriaLabel = () => (
   <div>
-    <IconAlert ariaLabel="Alert"/>
+    <IconAlert ariaLabel="Alert" />
   </div>
 );
 
