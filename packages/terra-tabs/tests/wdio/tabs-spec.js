@@ -150,6 +150,7 @@ describe('Tabs - Responsive', () => {
           properties: {
             '--terra-tabs-structural-active-focus-background-color': 'purple',
             '--terra-tabs-structural-active-focus-color': 'purple',
+            '--terra-tabs-keyboard-active-focus-ltr-box-shadow': 'none',
             '--terra-tabs-keyboard-focus-ltr-box-shadow': 'none',
             '--terra-tabs-structural-active-box-shadow': 'inset 5px 5px 5px red',
           },

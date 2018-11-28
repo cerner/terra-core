@@ -124,6 +124,10 @@
           background-size: var(--terra-tabs-structural-active-hover-background-size, 100% 2px);
           color: var(--terra-tabs-structural-active-hover-color, #000);
         }
+
+        &:focus {
+          box-shadow: var(--terra-tabs-structural-active-focus-box-shadow);
+        }
       }
 
       &.is-disabled,
@@ -147,6 +151,10 @@
         color: var(--terra-tabs-structural-hover-color, #000);
       }
 
+      &:focus {
+        box-shadow: var(--terra-tabs-structural-focus-box-shadow);
+      }
+
       &:first-child {
         margin-left: 0;
       }
@@ -165,11 +173,11 @@
       z-index: 1;
 
       [dir=rtl] & {
-        box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+        box-shadow: var(--terra-tabs-keyboard-active-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
       }
 
       [dir=ltr] & {
-        box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+        box-shadow: var(--terra-tabs-keyboard-active-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
       }
     }
 
