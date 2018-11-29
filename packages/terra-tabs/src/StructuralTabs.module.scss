@@ -6,6 +6,7 @@
 
     // Content div of content container component
     > :nth-child(2) {
+      background-clip: content-box;
       background-color: var(--terra-tabs-structural-content-background-color, #fff);
       background-image: var(--terra-tabs-structural-content-background-image);
       border-radius: var(--terra-tabs-structural-content-border-radius, 0);
@@ -124,10 +125,6 @@
           background-size: var(--terra-tabs-structural-active-hover-background-size, 100% 2px);
           color: var(--terra-tabs-structural-active-hover-color, #000);
         }
-
-        &:focus {
-          box-shadow: var(--terra-tabs-structural-active-focus-box-shadow);
-        }
       }
 
       &.is-disabled,
@@ -149,10 +146,6 @@
         background-image: var(--terra-tabs-structural-hover-background-image, linear-gradient(to bottom, #c8cacb, #c8cacb));
         background-size: var(--terra-tabs-structural-hover-background-size, 100% 2px);
         color: var(--terra-tabs-structural-hover-color, #000);
-      }
-
-      &:focus {
-        box-shadow: var(--terra-tabs-structural-focus-box-shadow);
       }
 
       &:first-child {
