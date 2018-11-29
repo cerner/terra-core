@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a date time picker with a default date and time 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   name="date-time-input"
   utcOffset={0}
   value="2017-04-01T10:30"
@@ -10,8 +9,7 @@ exports[`should render a date time picker with a default date and time 1`] = `
 `;
 
 exports[`should render a date time picker with disabled dates 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   excludeDates={
     Array [
       "2017-04-01",
@@ -23,8 +21,7 @@ exports[`should render a date time picker with disabled dates 1`] = `
 `;
 
 exports[`should render a date time picker with filtered dates 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   filterDate={[Function]}
   name="date-time-input"
   utcOffset={0}
@@ -32,8 +29,7 @@ exports[`should render a date time picker with filtered dates 1`] = `
 `;
 
 exports[`should render a date time picker with included dates 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   includeDates={
     Array [
       "2017-04-01",
@@ -45,8 +41,7 @@ exports[`should render a date time picker with included dates 1`] = `
 `;
 
 exports[`should render a date time picker with min and max dates 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   maxDateTime="2017-04-01"
   minDateTime="2017-04-10"
   name="date-time-input"
@@ -55,8 +50,7 @@ exports[`should render a date time picker with min and max dates 1`] = `
 `;
 
 exports[`should render a date time picker with onChange 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   name="date-time-input"
   onChange={[Function]}
   utcOffset={0}
@@ -64,8 +58,7 @@ exports[`should render a date time picker with onChange 1`] = `
 `;
 
 exports[`should render a date time picker with onChangeRaw 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   name="date-time-input"
   onChangeRaw={[Function]}
   utcOffset={0}
@@ -73,8 +66,7 @@ exports[`should render a date time picker with onChangeRaw 1`] = `
 `;
 
 exports[`should render a date time picker with releaseFocus 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   name="date-time-input"
   releaseFocus={[Function]}
   utcOffset={0}
@@ -82,8 +74,7 @@ exports[`should render a date time picker with releaseFocus 1`] = `
 `;
 
 exports[`should render a date time picker with requestFocus 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   name="date-time-input"
   requestFocus={[Function]}
   utcOffset={0}
@@ -91,29 +82,26 @@ exports[`should render a date time picker with requestFocus 1`] = `
 `;
 
 exports[`should render a default date time picker 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   name="date-time-input"
   utcOffset={0}
 />
 `;
 
 exports[`should render a default date time picker with custom date input attributes 1`] = `
-<DateTimePicker
+<InjectIntl(DateTimePicker)
   dateInputAttributes={
     Object {
       "id": "terra-date-input",
     }
   }
-  disabled={false}
   name="date-time-input"
   utcOffset={0}
 />
 `;
 
 exports[`should render a default date time picker with custom time input attributes 1`] = `
-<DateTimePicker
-  disabled={false}
+<InjectIntl(DateTimePicker)
   name="date-time-input"
   timeInputAttributes={
     Object {
@@ -125,7 +113,7 @@ exports[`should render a default date time picker with custom time input attribu
 `;
 
 exports[`should render a disabled date time picker 1`] = `
-<DateTimePicker
+<InjectIntl(DateTimePicker)
   disabled={true}
   name="date-time-input"
   utcOffset={0}

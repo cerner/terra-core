@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added missing ar translations
+
+### Changed
+* Removed use of componentWillMount from src code
+* Updated component to use injectIntl
 
 2.38.1 - (November 20, 2018)
 ------------------

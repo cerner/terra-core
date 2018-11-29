@@ -237,8 +237,8 @@ class CollapsibleTabs extends React.Component {
     }
   }
 
+  /* eslint class-methods-use-this: ["error", { "exceptMethods": ["handleMenuOnKeyDown"] }] */
   handleMenuOnKeyDown(event) {
-    console.log('stop propagation');
     // Prevent menu key events from propagating up to CollabsibleTabs handleOnKeyDown listener
     // This prevents left / right arrow key usage in menu from shifting to different tabs
     event.stopPropagation();

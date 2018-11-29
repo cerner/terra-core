@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Lint Errors
 
 2.29.1 - (November 20, 2018)
 ------------------
