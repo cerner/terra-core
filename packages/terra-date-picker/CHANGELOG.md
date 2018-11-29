@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added missing ar translations.
 
 2.38.1 - (November 20, 2018)
 ------------------
