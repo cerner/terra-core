@@ -3,22 +3,37 @@
 exports[`should render with callback functions 1`] = `
 <li
   className="list-item"
-/>
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+</li>
 `;
 
 exports[`should render with className 1`] = `
 <li
   className="list-item textClass"
-/>
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+</li>
 `;
 
 exports[`should render with content 1`] = `
 <li
   className="list-item"
 >
-  <p>
-    text
-  </p>
+  <div
+    className="item-fill"
+    key="item-fill"
+  >
+    <p>
+      text
+    </p>
+  </div>
 </li>
 `;
 
@@ -60,11 +75,21 @@ exports[`should render with isSelectable 1`] = `
   onMouseDown={[Function]}
   role="option"
   tabIndex="0"
-/>
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+</li>
 `;
 
 exports[`should render with selected 1`] = `
 <li
   className="list-item selected"
-/>
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+</li>
 `;
