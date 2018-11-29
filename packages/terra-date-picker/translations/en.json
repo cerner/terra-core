@@ -1,5 +1,5 @@
 {
-  "Terra.datePicker.dateFormat": "MM/DD/YYYY",
-  "Terra.datePicker.today": "Today",
-  "Terra.datePicker.openCalendar": "Open Calendar"
+  "Terra.datePicker.dateFormat": "DD.MM.YYYY",
+  "Terra.datePicker.today": "Tänään",
+  "Terra.datePicker.openCalendar": "Avaa Kalenteri"
 }
