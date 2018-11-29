@@ -1,6 +1,6 @@
 {
-  "Terra.dateTimePicker.timeClarification.title": "Time Clarification",
-  "Terra.dateTimePicker.timeClarification.message": "The time selected occurs during the transition from Daylight Saving Time to Standard Time. Would you like to enter this before or after the time change from Daylight Saving to Standard time?",
-  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Before (Daylight Saving)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "After (Standard Time)"
+  "Terra.dateTimePicker.timeClarification.title": "توضيح التوقيت",
+  "Terra.dateTimePicker.timeClarification.message": "يحين الوقت الذي تم تحديده خلال التحول من التوقيت الصيفي إلى التوقيت القياسي. هل تريد إدخال ذلك قبل أو بعد تغيير الوقت من التوقيت الصيفي إلى التوقيت القياسي؟",
+  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "قبل (التوقيت الصيفي)",
+  "Terra.dateTimePicker.timeClarification.button.standardTime": "بعد (التوقيت القياسي)"
 }
