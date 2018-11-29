@@ -23,7 +23,6 @@
 
       .tab,
       .tab-menu {
-        box-shadow: var(--terra-tabs-structural-collapsed-box-shadow);
         position: var(--terra-tabs-structural-collapsed-position, static);
         // Typically we use the background image to set a blue stripe and animate it...
         // However in the scenario where you need to also set the background image as a gradient to give a transparent
@@ -187,6 +186,19 @@
 
       [dir=ltr] & {
         box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+      }
+    }
+
+    // For uses cases when the box shadow on the collapsed tab should be overriden.
+    .collapsed-tabs-container .tab-menu {
+      box-shadow: var(--terra-tabs-structural-collapsed-box-shadow);
+
+      &:focus.is-active {
+        box-shadow: var(--terra-tabs-structural-collapsed-active-focus-box-shadow, 0 0 1px 2px #4a90e2);
+      }
+
+      &:focus {
+        box-shadow: var(--terra-tabs-structural-collapsed-focus-box-shadow, 0 0 1px 2px #4a90e2);
       }
     }
   }
