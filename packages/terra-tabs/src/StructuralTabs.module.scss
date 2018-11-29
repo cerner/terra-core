@@ -23,6 +23,7 @@
 
       .tab,
       .tab-menu {
+        box-shadow: var(--terra-tabs-structural-collapsed-box-shadow);
         position: var(--terra-tabs-structural-collapsed-position, static);
         // Typically we use the background image to set a blue stripe and animate it...
         // However in the scenario where you need to also set the background image as a gradient to give a transparent
