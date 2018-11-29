@@ -82,17 +82,10 @@ const ListItem = ({
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
 
-  let childContent = children;
-  if (hasChevron) {
-    childContent = [
-      <div className={cx('item-fill')} key="item-fill">{childContent}</div>,
-      <div className={cx('item-end')} key="item-end">{<span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>}</div>,
-    ];
-  }
-
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
-      {childContent}
+      <div className={cx('item-fill')} key="item-fill">{children}</div>
+      {hasChevron && <div className={cx('item-end')} key="item-end">{<span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>}</div>}
     </li>
   );
 };

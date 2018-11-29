@@ -2,7 +2,7 @@
 // ========================================================
 :local {
   .list-item {
-    background-color: var(--terra-list-v3-item-background-color);
+    background-color: var(--terra-list-item-background-color);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -10,19 +10,19 @@
 
   [data-list-items-divided='true'] {
     > .list-item {
-      border-top: var(--terra-list-v3-item-divider-border-top, 1px solid #dedfe0);
+      border-top: var(--terra-list-item-divider-border-top, 1px solid #dedfe0);
 
       &:last-of-type {
-        border-bottom: var(--terra-list-v3-item-divider-border-bottom, 1px solid #dedfe0);
+        border-bottom: var(--terra-list-item-divider-border-bottom, 1px solid #dedfe0);
       }
 
       &.selected {
-        border-color: var(--terra-list-v3-item-selected-divider-border-color, #0092e0);
+        border-color: var(--terra-list-item-selected-divider-border-color, #0092e0);
       }
 
       // stylelint-disable-next-line selector-max-compound-selectors
       &.selected + .list-item {
-        border-top-color: var(--terra-list-v3-item-selected-divider-border-top-color, #0092e0);
+        border-top-color: var(--terra-list-item-selected-divider-border-top-color, #0092e0);
       }
     }
   }
@@ -33,35 +33,35 @@
     padding-right: 10px;
 
     > svg {
-      color: var(--terra-list-v3-item-chevron-color, #bcbfc0);
+      color: var(--terra-list-item-chevron-color, #bcbfc0);
     }
   }
 
   .selected {
-    background-color: var(--terra-list-v3-item-selected-background-color, darken(#ebf6fd, 2%));
+    background-color: var(--terra-list-item-selected-background-color, darken(#ebf6fd, 2%));
   }
 
   .is-selectable {
     cursor: pointer;
-    outline: var(--terra-list-v3-item-focus-outline, none);
+    outline: var(--terra-list-item-focus-outline, none);
 
     &:hover,
     &:active {
-      background-color: var(--terra-list-v3-item-hover-active-background-color, lighten(#ebf6fd, 2%));
+      background-color: var(--terra-list-item-hover-active-background-color, lighten(#ebf6fd, 2%));
     }
 
     &[data-item-show-focus='true']:focus {
-      background-color: var(--terra-list-v3-item-focus-background-color, lighten(#ebf6fd, 2%));
-      box-shadow: var(--terra-list-v3-item-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
+      background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%));
+      box-shadow: var(--terra-list-item-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       z-index: 1;
 
       &.selected {
-        background-color: var(--terra-list-v3-item-selected-focus-background-color, darken(#ebf6fd, 7%));
+        background-color: var(--terra-list-item-selected-focus-background-color, darken(#ebf6fd, 7%));
       }
     }
 
     &.selected:hover {
-      background-color: var(--terra-list-v3-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
   }
 
@@ -75,6 +75,7 @@
   .item-fill {
     flex: 1 1 auto;
     min-width: 0;
+    overflow: hidden;
     width: 100%;
   }
 
