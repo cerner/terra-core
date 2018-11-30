@@ -115,14 +115,6 @@ class MenuContent extends React.Component {
     return { isSelectableMenu: this.isSelectable() };
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.isFocused) {
-      this.needsFocus = this.needsFocus || this.props.isFocused !== newProps.isFocused;
-    } else {
-      this.needsFocus = false;
-    }
-  }
-
   componentDidUpdate() {
     this.validateFocus(this.contentNode);
   }
