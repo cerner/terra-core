@@ -1,0 +1,27 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+:local {
+  .tiny {
+    min-width: var(--terra-table-header-cell-tiny-min-width, 3rem);
+  }
+
+  .small {
+    min-width: var(--terra-table-header-cell-small-min-width, 4.25rem);
+  }
+
+  .medium {
+    min-width: var(--terra-table-header-cell-medium-min-width, 5.75rem);
+  }
+
+  .large {
+    min-width: var(--terra-table-header-cell-large-min-width, 8.5rem);
+  }
+
+  .huge {
+    min-width: var(--terra-table-header-cell-huge-min-width, 10.5rem);
+  }
+
+  .sort-indicator {
+    color: var(--terra-table-sort-indicator-color, #1c1f21);
+    padding-left: 0.7142857143rem;
+  }
+}

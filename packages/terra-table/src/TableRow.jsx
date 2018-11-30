@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Table.module.scss';
+import TableUtils from './TableUtils';
 
 const cx = classNames.bind(styles);
 
@@ -19,17 +20,38 @@ const propTypes = {
    * Whether or not row is selectable
    */
   isSelectable: PropTypes.bool,
+  /**
+   * The associated metaData to be provided in the onSelect callback.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  metaData: PropTypes.object,
+  /**
+   * Function callback for when the appropriate click or key action is performed.
+   * Callback contains the javascript evnt and prop metadata, e.g. onSelect(event, metaData)
+   */
+  onSelect: PropTypes.func,
+  /**
+   * Function callback for the ref of the tr.
+   */
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
   isSelected: false,
-  isSelectable: undefined,
+  isSelectable: false,
 };
 
 const TableRow = ({
   children,
   isSelected,
   isSelectable,
+  metaData,
+  onBlur,
+  onClick,
+  onKeyDown,
+  onMouseDown,
+  onSelect,
+  refCallback,
   ...customProps
 }) => {
   const rowClassNames = cx([
@@ -39,14 +61,19 @@ const TableRow = ({
     customProps.className,
   ]);
 
-  const childrenArray = React.Children.toArray(children);
-  if (childrenArray.length > 16) {
-    // eslint-disable-next-line no-console
-    console.log(`Number of Columns are ${React.Children.count(children)}. This is more than columns limit`);
+  const attrSpread = {};
+  if (isSelectable) {
+    attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+    attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.tabIndex = '0';
+    attrSpread['aria-selected'] = isSelected;
+    attrSpread['data-item-show-focus'] = 'true';
+    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
+    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
 
   return (
-    <tr {...customProps} aria-selected={isSelected} className={rowClassNames}>
+    <tr {...customProps} {...attrSpread} className={rowClassNames} ref={refCallback}>
       {children}
     </tr>
   );

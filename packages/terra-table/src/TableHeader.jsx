@@ -12,22 +12,13 @@ const propTypes = {
 const TableHeader = ({
   children,
   ...customProps
-}) => {
-  let childrenArray = React.Children.toArray(children);
-  if (childrenArray.length > 16) {
-    // eslint-disable-next-line no-console
-    console.log(`Number of Columns are ${childrenArray.length}. This is more than columns limit`);
-    childrenArray = childrenArray.slice(0, 16);
-  }
-
-  return (
-    <thead {...customProps}>
-      <tr>
-        {childrenArray}
-      </tr>
-    </thead>
-  );
-};
+}) => (
+  <thead {...customProps}>
+    <tr>
+      {children}
+    </tr>
+  </thead>
+);
 
 TableHeader.propTypes = propTypes;
 

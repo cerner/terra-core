@@ -2,15 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import TableHeader from './TableHeader';
-import TableHeaderCell from './TableHeaderCell';
-import TableRows from './TableRows';
-import TableRow from './TableRow';
-import TableCell from './TableCell';
-import SelectableTableRows from './SelectableTableRows';
-import TableSingleSelectableRows from './SingleSelectableRows';
-import TableMultiSelectableRows from './MultiSelectableRows';
-import TableSubheader from './TableSubheader';
 import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);
@@ -20,6 +11,10 @@ const propTypes = {
    * The children passed to the component
    */
   children: PropTypes.node.isRequired,
+  /**
+   * The header passed to the table
+   */
+  header: PropTypes.element,
   /**
    * Whether or not the rows should be zebra striped
    */
@@ -37,6 +32,7 @@ const defaultProps = {
 
 const Table = ({
   children,
+  header,
   isStriped,
   isPadded,
   ...customProps
@@ -49,21 +45,15 @@ const Table = ({
   ]);
   return (
     <table {...customProps} className={tableClassNames}>
-      {children}
+      {header}
+      <tbody>
+        {children}
+      </tbody>
     </table>
   );
 };
 
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
-Table.Rows = TableRows;
-Table.Header = TableHeader;
-Table.HeaderCell = TableHeaderCell;
-Table.Row = TableRow;
-Table.Cell = TableCell;
-Table.SelectableTableRows = SelectableTableRows;
-Table.SingleSelectableRows = TableSingleSelectableRows;
-Table.MultiSelectableRows = TableMultiSelectableRows;
-Table.Subheader = TableSubheader;
 
 export default Table;

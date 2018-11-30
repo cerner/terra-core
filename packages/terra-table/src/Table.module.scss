@@ -78,31 +78,6 @@
     text-align: left;
   }
 
-  .sort-indicator {
-    color: var(--terra-table-sort-indicator-color, #1c1f21);
-    padding-left: 0.7142857143rem;
-  }
-
-  .min-width-tiny {
-    min-width: var(--terra-table-cell-min-width-tiny, 3rem);
-  }
-
-  .min-width-small {
-    min-width: var(--terra-table-cell-min-width-small, 4.25rem);
-  }
-
-  .min-width-medium {
-    min-width: var(--terra-table-cell-min-width-medium, 5.75rem);
-  }
-
-  .min-width-large {
-    min-width: var(--terra-table-cell-min-width-large, 8.5rem);
-  }
-
-  .min-width-huge {
-    min-width: var(--terra-table-cell-min-width-huge, 10.5rem);
-  }
-
   .padded {
     th,
     td {

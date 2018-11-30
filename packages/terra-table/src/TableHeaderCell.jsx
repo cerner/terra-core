@@ -25,7 +25,7 @@ const propTypes = {
   /**
    * Content to be displayed for the column header
    */
-  content: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   /**
    * The minimum width for the column
    */
@@ -40,17 +40,14 @@ const defaultProps = {
   minWidth: 'small',
 };
 
-const iconDown = <IconDown />;
-const iconUp = <IconUp />;
-
 const TableHeaderCell = ({
-  content,
+  children,
   minWidth,
   sort,
   ...customProps
 }) => {
   const contentClassName = cx([
-    { [`min-width-${minWidth}`]: minWidth },
+    minWidth,
     customProps.className,
   ]);
 
@@ -60,14 +57,14 @@ const TableHeaderCell = ({
 
   let sortIndicator = null;
   if (sort === 'asc') {
-    sortIndicator = <span className={cx('sort-indicator')}>{iconUp}</span>;
+    sortIndicator = <span className={cx('sort-indicator')}><IconUp /></span>;
   } else if (sort === 'desc') {
-    sortIndicator = <span className={cx('sort-indicator')}>{iconDown}</span>;
+    sortIndicator = <span className={cx('sort-indicator')}><IconDown /></span>;
   }
 
   return (
     <th {...customProps} data-terra-table-header-cell className={contentClassName} {...dataSort}>
-      {content}
+      {children}
       {sortIndicator}
     </th>
   );

@@ -10,8 +10,7 @@ const propTypes = {
   /**
    * Content to be displayed in the subheader row
    */
-  content: PropTypes.node.isRequired,
-
+  children: PropTypes.node.isRequired,
   /**
    * Number of columns the subheader must span
    */
@@ -19,14 +18,13 @@ const propTypes = {
 };
 
 const TableSubheader = ({
-  content,
+  children,
   colSpan,
   ...customProps
 }) => (
-  // count is based on the number of columns and assigned in the table component which contains this subheader
   <tr data-terra-table-subheader-row>
     <td {...customProps} className={cx('subheader', customProps.className)} colSpan={colSpan}>
-      {content}
+      {children}
     </td>
   </tr>
 );
