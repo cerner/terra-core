@@ -68,9 +68,7 @@ class Menu extends React.Component {
     this.setPageDimensions = this.setPageDimensions.bind(this);
     this.push = this.push.bind(this);
     this.pop = this.pop.bind(this);
-    this.state = {
-      stack: [this],
-    };
+    this.state = { stack: [this] };
   }
 
   componentDidUpdate(prevProps) {
