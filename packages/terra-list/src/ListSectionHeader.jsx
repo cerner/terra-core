@@ -89,7 +89,7 @@ const ListSectionHeader = ({
     attrSpread.role = 'heading';
     attrSpread['aria-expanded'] = !isCollapsed;
     attrSpread['aria-level'] = 1;
-    attrSpread['data-focusable'] = 'true';
+    attrSpread['data-item-show-focus'] = 'true';
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
