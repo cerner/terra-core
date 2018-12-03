@@ -135,6 +135,7 @@ const SelectField = ({
   ...customProps
 }) => (
   <Field
+    {...customProps}
     label={label}
     labelAttrs={labelAttrs}
     error={error}
@@ -147,7 +148,6 @@ const SelectField = ({
     isLabelHidden={isLabelHidden}
     htmlFor={selectId}
     maxWidth={maxWidth}
-    {...customProps}
   >
     <Select
       {...selectAttrs}

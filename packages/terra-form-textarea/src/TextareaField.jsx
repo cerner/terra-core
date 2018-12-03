@@ -126,6 +126,7 @@ const TextareaField = (props) => {
 
   return (
     <Field
+      {...customProps}
       label={label}
       labelAttrs={labelAttrs}
       error={error}
@@ -139,7 +140,6 @@ const TextareaField = (props) => {
       isLabelHidden={isLabelHidden}
       htmlFor={inputId}
       maxWidth={maxWidth}
-      {...customProps}
     >
       <Textarea
         {...inputAttrs}
