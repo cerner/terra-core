@@ -78,7 +78,7 @@ const Avatar = ({
   } else if (initials && (initials.length === 1 || initials.length === 2)) {
     colorVariant = setColor(alt, color, hashValue);
     const avatarTextClassNames = cx('initials');
-    avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
+    avatarContent = <span className={avatarTextClassNames} alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
   } else {
     colorVariant = setColor(alt, color, hashValue);
     avatarContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.USER);

@@ -76,7 +76,9 @@ exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
   class="avatar one"
 >
   <span
+    alt="user"
     aria-hidden="true"
+    aria-label="user"
     class="initials"
   >
     JJ
@@ -186,7 +188,9 @@ exports[`Avatar should render one initial avatar when one initial is passed in 1
   class="avatar one"
 >
   <span
+    alt="user"
     aria-hidden="false"
+    aria-label="user"
     class="initials"
   >
     J
@@ -199,7 +203,9 @@ exports[`Avatar should render two initials avatar when two initials are passed i
   class="avatar one"
 >
   <span
+    alt="user"
     aria-hidden="false"
+    aria-label="user"
     class="initials"
   >
     JS
