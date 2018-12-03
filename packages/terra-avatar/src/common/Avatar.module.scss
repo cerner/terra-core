@@ -8,7 +8,7 @@
     border-radius: 50%;
     color: var(--terra-avatar-color, #fff);
     display: inline-flex;
-    height: var(--terra-avatar-initial-height, 3.286em);
+    height: var(--terra-avatar-height, 3.286em);
     justify-content: center;
     line-height: 0;
     min-height: 1.143em;
@@ -16,7 +16,7 @@
     overflow: hidden;
     position: relative;
     vertical-align: middle; // Fixes gap below image variant
-    width: var(--terra-avatar-initial-width, 3.286em);
+    width: var(--terra-avatar-width, 3.286em);
   }
 
   // Addresses https://github.com/cerner/terra-core/issues/1845
@@ -48,9 +48,9 @@
     }
 
     &.shared-user {
-      background-image: var(--terra-avatar-icon-multi-user-background-image, inline-svg("<svg data-name='Layer_1' xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 48 48'><path d='M15 0a8.7 8.7 0 1 1-8.7 8.7A8.71 8.71 0 0 1 15 0zm18 11a8.7 8.7 0 1 1-8.7 8.7A8.71 8.71 0 0 1 33 11zm15 37v-4.4a12.93 12.93 0 0 0-12.9-12.9h-4.2A12.93 12.93 0 0 0 18 43.6V48zM25.5 28.7a11.32 11.32 0 0 1-4.1-8.3 14.21 14.21 0 0 0-4.2-.7H13A13 13 0 0 0 0 32.6V37h16.4a15.52 15.52 0 0 1 9.1-8.3z'/></svg>"));
-      height: var(--terra-avatar-icon-multi-user-height, 70%);
-      width: var(--terra-avatar-icon-multi-user-width, 70%);
+      background-image: var(--terra-avatar-icon-shared-user-background-image, inline-svg("<svg data-name='Layer_1' xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 48 48'><path d='M15 0a8.7 8.7 0 1 1-8.7 8.7A8.71 8.71 0 0 1 15 0zm18 11a8.7 8.7 0 1 1-8.7 8.7A8.71 8.71 0 0 1 33 11zm15 37v-4.4a12.93 12.93 0 0 0-12.9-12.9h-4.2A12.93 12.93 0 0 0 18 43.6V48zM25.5 28.7a11.32 11.32 0 0 1-4.1-8.3 14.21 14.21 0 0 0-4.2-.7H13A13 13 0 0 0 0 32.6V37h16.4a15.52 15.52 0 0 1 9.1-8.3z'/></svg>"));
+      height: var(--terra-avatar-icon-shared-user-height, 70%);
+      width: var(--terra-avatar-icon-shared-user-width, 70%);
     }
 
     &.user {
@@ -70,7 +70,7 @@
   }
 
   .avatar > .initials {
-    font-size: var(--terra-avatar-font-size, 1.429em);
+    font-size: var(--terra-avatar-initials-font-size, 1.429em);
   }
 
   .avatar.neutral {
