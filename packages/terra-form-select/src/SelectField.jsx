@@ -47,6 +47,11 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
+   * Set the max-width of a field using `length` or `%`.  Best practice recommendation to never exceed
+   * a rendered value of 1020px. _(Note: Providing custom inline styles will take precedence.)_
+   */
+  maxWidth: PropTypes.string,
+  /**
    * Callback function triggered when the select value changes. function(value)
    */
   onChange: PropTypes.func,
@@ -97,6 +102,7 @@ const defaultProps = {
   isInvalid: false,
   isLabelHidden: false,
   labelAttrs: {},
+  maxWidth: undefined,
   onChange: undefined,
   placeholder: undefined,
   required: false,
@@ -117,6 +123,7 @@ const SelectField = ({
   isLabelHidden,
   label,
   labelAttrs,
+  maxWidth,
   onChange,
   placeholder,
   required,
@@ -128,7 +135,6 @@ const SelectField = ({
   ...customProps
 }) => (
   <Field
-    {...customProps}
     label={label}
     labelAttrs={labelAttrs}
     error={error}
@@ -140,6 +146,8 @@ const SelectField = ({
     isInline={isInline}
     isLabelHidden={isLabelHidden}
     htmlFor={selectId}
+    maxWidth={maxWidth}
+    {...customProps}
   >
     <Select
       {...selectAttrs}
