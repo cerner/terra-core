@@ -51,6 +51,7 @@ const SharedUser = ({
 }) => {
   const colorVariant = setColor(alt, color, hashValue);
   const attributes = { ...customProps };
+  const customStyles = size ? Object.assign({ fontSize: size }, attributes.style) : attributes.style;
   const multiUserClassNames = cx([
     'avatar',
     `${colorVariant}`,
@@ -61,7 +62,7 @@ const SharedUser = ({
   const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
   return (
-    <div {...attributes} className={multiUserClassNames} style={{ fontSize: size }}>
+    <div {...attributes} className={multiUserClassNames} style={customStyles}>
       {multiUserContent}
     </div>
   );

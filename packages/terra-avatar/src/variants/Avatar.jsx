@@ -85,6 +85,7 @@ const Avatar = ({
   }
 
   const attributes = { ...customProps };
+  const customStyles = size ? Object.assign({ fontSize: size }, attributes.style) : attributes.style;
   const avatarClassNames = cx([
     'avatar',
     `${colorVariant}`,
@@ -94,7 +95,7 @@ const Avatar = ({
   ]);
 
   return (
-    <div {...attributes} className={avatarClassNames} style={{ fontSize: size }}>
+    <div {...attributes} className={avatarClassNames} style={customStyles}>
       {avatarContent}
     </div>
   );

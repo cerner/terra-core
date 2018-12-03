@@ -69,6 +69,7 @@ const Facility = ({
   }
 
   const attributes = { ...customProps };
+  const customStyles = size ? Object.assign({ fontSize: size }, attributes.style) : attributes.style;
   const facilityClassNames = cx([
     'avatar',
     `${colorVariant}`,
@@ -76,7 +77,7 @@ const Facility = ({
   ]);
 
   return (
-    <div {...attributes} className={facilityClassNames} style={{ fontSize: size }}>
+    <div {...attributes} className={facilityClassNames} style={customStyles}>
       {facilityContent}
     </div>
   );
