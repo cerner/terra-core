@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added isWordWrapped prop
 
 2.29.1 - (November 20, 2018)
 ------------------
