@@ -3,8 +3,6 @@ Changelog
 
 Unreleased
 ----------
-### Removed
-* Removed dependency on terra-text
 
 2.29.1 - (November 20, 2018)
 ------------------
