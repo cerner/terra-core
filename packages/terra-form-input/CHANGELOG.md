@@ -3,9 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-### Added
-* Aria labels added to meridiem display and select box
-
 ### Fixed
 * Dev site tests pages adjusted to uniformly use caretColor
 
