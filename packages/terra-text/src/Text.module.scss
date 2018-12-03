@@ -9,7 +9,10 @@
   .italic { font-style: italic; }
 
   // Word wrap
-  .word-wrap { word-wrap: break-word; }
+  .word-wrap {
+    word-break: break-word;
+    word-wrap: break-word;
+  }
 
   // Text Sizes
   .font-size-100 { font-size: 7.143rem; }
