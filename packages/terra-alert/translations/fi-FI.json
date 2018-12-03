@@ -1,9 +1,9 @@
 {
-  "Terra.alert.dismiss": "Verwerfen~n9KZ Pi",
-  "Terra.alert.info": "Informações~n9KZ Pi.",
-  "Terra.alert.error": "Erreur~n9KZ Pi.",
-  "Terra.alert.warning": "Avertissement~n9KZ Pi.",
-  "Terra.alert.alert": "Benachrichtigung~n9KZ Pi.",
-  "Terra.alert.advisory": "Recommandation~n9KZ Pi.",
-  "Terra.alert.success": "Erfolgreich~n9KZ Pi."
+  "Terra.alert.dismiss": "Hylkää",
+  "Terra.alert.info": "Tiedot.",
+  "Terra.alert.error": "Virhe.",
+  "Terra.alert.warning": "Varoitus.",
+  "Terra.alert.alert": "Hälytys.",
+  "Terra.alert.advisory": "Neuvoa-antava.",
+  "Terra.alert.success": "Menestys."
 }
