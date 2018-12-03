@@ -1,9 +1,9 @@
 {
   "Terra.alert.dismiss": "تجاهل",
-  "Terra.alert.info": "معلومات.",
-  "Terra.alert.error": "خطأ.",
-  "Terra.alert.warning": "تحذير.",
-  "Terra.alert.alert": "تنبيه.",
-  "Terra.alert.advisory": "استشاري.",
-  "Terra.alert.success": "نجاح."
+  "Terra.alert.info": ".معلومات",
+  "Terra.alert.error": ".خطأ",
+  "Terra.alert.warning": ".تحذير",
+  "Terra.alert.alert": ".تنبيه",
+  "Terra.alert.advisory": ".استشاري",
+  "Terra.alert.success": ".نجاح"
 }
