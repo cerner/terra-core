@@ -118,7 +118,7 @@ const setColor = (alt, color, hashValue) => {
   return getColorVariant(alt);
 };
 
-const Utils = {
+export {
   AVATAR_VARIANTS,
   COLOR_VARIANTS,
   calculateHash,
@@ -128,5 +128,3 @@ const Utils = {
   validateColor,
   setColor,
 };
-
-export default Utils;

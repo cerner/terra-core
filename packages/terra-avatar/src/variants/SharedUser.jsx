@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import Utils from '../common/AvatarUtils';
 import styles from '../common/Avatar.module.scss';
+import {
+  AVATAR_VARIANTS, setColor,
+} from '../common/AvatarUtils';
 
 const cx = classNames.bind(styles);
 
@@ -47,7 +49,7 @@ const SharedUser = ({
   size,
   ...customProps
 }) => {
-  const colorVariant = Utils.setColor(alt, color, hashValue);
+  const colorVariant = setColor(alt, color, hashValue);
   const attributes = { ...customProps };
   const multiUserClassNames = cx([
     'avatar',
@@ -55,7 +57,7 @@ const SharedUser = ({
     attributes.className,
   ]);
 
-  const multiUserIconClassNames = cx(['icon', Utils.AVATAR_VARIANTS.SHARED_USER]);
+  const multiUserIconClassNames = cx(['icon', AVATAR_VARIANTS.SHARED_USER]);
   const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
   return (

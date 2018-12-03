@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import memoize from 'memoize-one';
 import 'terra-base/lib/baseStyles';
-import Utils from '../common/AvatarUtils';
 import styles from '../common/Avatar.module.scss';
+import {
+  AVATAR_VARIANTS, generateImagePlaceholder, generateImage, setColor,
+} from '../common/AvatarUtils';
 
 const cx = classNames.bind(styles);
 
@@ -55,7 +57,7 @@ const defaultProps = {
   size: undefined,
 };
 
-const ImageComponent = memoize(Utils.generateImage);
+const ImageComponent = memoize(generateImage);
 
 const Avatar = ({
   alt,
@@ -72,14 +74,14 @@ const Avatar = ({
   let avatarContent;
   if (image) {
     colorVariant = '';
-    avatarContent = ImageComponent(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
+    avatarContent = ImageComponent(image, alt, isAriaHidden, AVATAR_VARIANTS.USER);
   } else if (initials && (initials.length === 1 || initials.length === 2)) {
-    colorVariant = Utils.setColor(alt, color, hashValue);
+    colorVariant = setColor(alt, color, hashValue);
     const avatarTextClassNames = cx('initials');
     avatarContent = <span className={avatarTextClassNames} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
   } else {
-    colorVariant = Utils.setColor(alt, color, hashValue);
-    avatarContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.USER);
+    colorVariant = setColor(alt, color, hashValue);
+    avatarContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.USER);
   }
 
   const attributes = { ...customProps };

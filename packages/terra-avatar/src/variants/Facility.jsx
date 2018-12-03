@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import memoize from 'memoize-one';
 import 'terra-base/lib/baseStyles';
-import Utils from '../common/AvatarUtils';
 import styles from '../common/Avatar.module.scss';
+import {
+  AVATAR_VARIANTS, generateImagePlaceholder, generateImage, setColor,
+} from '../common/AvatarUtils';
 
 const cx = classNames.bind(styles);
 
@@ -45,7 +47,7 @@ const defaultProps = {
   size: undefined,
 };
 
-const ImageComponent = memoize(Utils.generateImage);
+const ImageComponent = memoize(generateImage);
 
 const Facility = ({
   alt,
@@ -60,10 +62,10 @@ const Facility = ({
   let facilityContent;
   if (image) {
     colorVariant = '';
-    facilityContent = ImageComponent(image, alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
+    facilityContent = ImageComponent(image, alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
   } else {
-    colorVariant = Utils.setColor(alt, color, hashValue);
-    facilityContent = Utils.generateImagePlaceholder(alt, isAriaHidden, Utils.AVATAR_VARIANTS.FACILITY);
+    colorVariant = setColor(alt, color, hashValue);
+    facilityContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
   }
 
   const attributes = { ...customProps };
