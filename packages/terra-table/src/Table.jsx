@@ -39,14 +39,13 @@ const Table = ({
 }) => {
   const tableClassNames = cx([
     'table',
-    { striped: isStriped },
-    { padded: isPadded },
     customProps.className,
   ]);
+
   return (
-    <table {...customProps} className={tableClassNames}>
+    <table {...customProps} data-table-padded={isPadded} className={tableClassNames}>
       {header}
-      <tbody>
+      <tbody data-table-striped={isStriped}>
         {children}
       </tbody>
     </table>

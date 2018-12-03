@@ -47,6 +47,7 @@ const TableHeaderCell = ({
   ...customProps
 }) => {
   const contentClassName = cx([
+    'header-cell',
     minWidth,
     customProps.className,
   ]);

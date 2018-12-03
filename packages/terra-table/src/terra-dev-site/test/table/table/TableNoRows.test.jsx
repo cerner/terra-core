@@ -1,15 +1,19 @@
 import React from 'react';
-import Table from '../../../../Table';
+import Table, {
+  Header, HeaderCell,
+} from '../../../../index';
 
-const SingleRowTable = () => (
-  <Table isStriped={false}>
-    <Table.Header>
-      <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
-      <Table.HeaderCell content="Address" key="ADDRESS" minWidth="medium" />
-      <Table.HeaderCell content="Phone Number" key="PHONE_NUMBER" minWidth="large" />
-    </Table.Header>
-    <Table.Rows className="TableRows" />
-  </Table>
+const TableNoRows = () => (
+  <Table
+    id="Table"
+    header={(
+      <Header>
+        <HeaderCell key="NAME" minWidth="small">Name</HeaderCell>
+        <HeaderCell key="ADDRESS" minWidth="medium">Address</HeaderCell>
+        <HeaderCell key="PHONE_NUMBER" minWidth="large">Phone Number</HeaderCell>
+      </Header>
+    )}
+  />
 );
 
-export default SingleRowTable;
+export default TableNoRows;

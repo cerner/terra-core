@@ -3,9 +3,8 @@ import Table, {
   Header, HeaderCell, Row, Cell,
 } from '../../../../index';
 
-const NoStripedTable = () => (
+const DefaultTable = () => (
   <Table
-    isStriped={false}
     id="Table"
     header={(
       <Header>
@@ -33,4 +32,4 @@ const NoStripedTable = () => (
   </Table>
 );
 
-export default NoStripedTable;
+export default DefaultTable;

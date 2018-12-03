@@ -100,10 +100,12 @@ const TableSubsectionHeader = ({
   }
 
   return (
-    <li {...customProps} {...attrSpread} className={sectionHeaderClassNames} colSpan={colSpan} ref={refCallback}>
-      {accordionIcon}
-      {titleElement}
-    </li>
+    <tr {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
+      <td colSpan={colSpan}>
+        {accordionIcon}
+        {titleElement}
+      </td>
+    </tr>
   );
 };
 

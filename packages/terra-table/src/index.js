@@ -1,8 +1,8 @@
 import Table from './Table';
-import TableRow from './TableRow';
-import TableCell from './TableCell';
-import TableHeader from './TableHeader';
-import TableHeaderCell from './TableHeaderCell';
+import Row from './TableRow';
+import Cell from './TableCell';
+import Header from './TableHeader';
+import HeaderCell from './TableHeaderCell';
 import Section from './TableSection';
 import Subsection from './TableSubsection';
 import SectionHeader from './TableSectionHeader';
@@ -11,10 +11,10 @@ import Utils from './TableUtils';
 
 export default Table;
 export {
-  TableRow,
-  TableCell,
-  TableHeader,
-  TableHeaderCell,
+  Row,
+  Cell,
+  Header,
+  HeaderCell,
   Section,
   Subsection,
   SectionHeader,

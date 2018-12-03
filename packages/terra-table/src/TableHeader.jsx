@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
+import classNames from 'classnames/bind';
+import styles from './TableHeader.module.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -12,13 +16,20 @@ const propTypes = {
 const TableHeader = ({
   children,
   ...customProps
-}) => (
-  <thead {...customProps}>
-    <tr>
-      {children}
-    </tr>
-  </thead>
-);
+}) => {
+  const contentClassName = cx([
+    'header',
+    customProps.className,
+  ]);
+
+  return (
+    <thead {...customProps} className={contentClassName}>
+      <tr>
+        {children}
+      </tr>
+    </thead>
+  );
+};
 
 TableHeader.propTypes = propTypes;
 

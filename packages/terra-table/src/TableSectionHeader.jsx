@@ -94,16 +94,18 @@ const TableSectionHeader = ({
     attrSpread.role = 'heading';
     attrSpread['aria-expanded'] = !isCollapsed;
     attrSpread['aria-level'] = 1;
-    attrSpread['data-focusable'] = 'true';
-    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
-    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
+    attrSpread['data-row-show-focus'] = 'true';
+    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
+    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
   }
 
   return (
-    <li {...customProps} {...attrSpread} className={sectionHeaderClassNames} colSpan={colSpan} ref={refCallback}>
-      {accordionIcon}
-      {titleElement}
-    </li>
+    <tr {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
+      <td colSpan={colSpan}>
+        {accordionIcon}
+        {titleElement}
+      </td>
+    </tr>
   );
 };
 
