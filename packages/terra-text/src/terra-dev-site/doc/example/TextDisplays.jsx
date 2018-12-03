@@ -1,5 +1,4 @@
 import React from 'react';
-import Heading from 'terra-heading';
 import Arrange from 'terra-arrange';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Text from 'terra-text/lib/Text';
@@ -11,17 +10,17 @@ const cx = classNames.bind(styles);
 
 const TextDisplays = () => (
   <div>
-    <Heading level={2}>
+    <h2>
       Fonts
       <br />
       <Text weight={400}>
         Font Stack:
         <span className={cx(['font-stack'])} />
       </Text>
-    </Heading>
+    </h2>
     <br />
     <br />
-    <Heading level={3} weight={400}>Font Weight: 300</Heading>
+    <h3>Font Weight: 300</h3>
     <Arrange
       fitStart={<Text weight={300} color="#333" fontSize={100}>Aa</Text>}
       fill={(
@@ -36,7 +35,7 @@ const TextDisplays = () => (
     />
     <br />
     <br />
-    <Heading level={3} weight={400}>Font Style: Italic Font Weight: 300</Heading>
+    <h3>Font Style: Italic Font Weight: 300</h3>
     <Arrange
       fitStart={<Text isItalic weight={300} color="#333" fontSize={100}>Aa</Text>}
       fill={(
@@ -51,7 +50,7 @@ const TextDisplays = () => (
     />
     <br />
     <br />
-    <Heading level={3} weight={400}>Font Weight: 400</Heading>
+    <h3>Font Weight: 400</h3>
     <Arrange
       fitStart={<Text color="#333" fontSize={100}>Aa</Text>}
       fill={(
@@ -66,7 +65,7 @@ const TextDisplays = () => (
     />
     <br />
     <br />
-    <Heading level={3} weight={400}>Font Style: Italic</Heading>
+    <h3>Font Style: Italic</h3>
     <Arrange
       fitStart={<Text isItalic color="#333" fontSize={100}>Aa</Text>}
       fill={(
@@ -81,7 +80,7 @@ const TextDisplays = () => (
     />
     <br />
     <br />
-    <Heading level={3} weight={400}>Font Weight: 700</Heading>
+    <h3>Font Weight: 700</h3>
     <Arrange
       fitStart={<Text weight={700} color="#333" fontSize={100}>Aa</Text>}
       fill={(
@@ -96,7 +95,7 @@ const TextDisplays = () => (
     />
     <br />
     <br />
-    <Heading level={3} weight={400}>Font Style: Italic Font Weight: 700</Heading>
+    <h3>Font Style: Italic Font Weight: 700</h3>
     <Arrange
       fitStart={<Text isItalic weight={700} color="#333" fontSize={100}>Aa</Text>}
       fill={(
