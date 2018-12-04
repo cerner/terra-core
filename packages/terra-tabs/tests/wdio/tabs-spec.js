@@ -180,7 +180,7 @@ describe('Tabs - Responsive', () => {
         properties: {
           '--terra-tabs-menu-arrow-left-margin': '50px',
           '--terra-tabs-menu-collapsed-justify-content': 'center',
-          '--terra-tabs-structural-collapsed-menu-bar-border-bottom-color': 'purple',
+          '--terra-tabs-structural-collapsed-border-bottom-color': 'purple',
         },
       });
     });
