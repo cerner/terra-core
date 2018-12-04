@@ -16,9 +16,9 @@
     }
 
     .collapsed-tabs-container {
-      border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-border-color, #dddedf);
+      border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-border-bottom-color, #dddedf);
       border-bottom-style: solid;
-      border-bottom-width: 1px;
+      border-bottom-width: var(--terra-tabs-structural-collapsed-menu-bar-border-bottom-width, 1px);
       border-radius: var(--terra-tabs-structural-collapsed-menu-bar-border-radius, 0);
 
       .tab,
@@ -189,17 +189,19 @@
       }
     }
 
-    // For uses cases when the box shadow on the collapsed tab should be overriden.
+    /*
+    For instances when
+    1. tab is a collapsed tab (becomes tab-menu).
+    2. tab-menu contains box shadow that renders  on left+right sides.
+    3. tab-menu contains bottom border.
+    These variables must be used to set the bottom border.
+    Otherwise, the outer .collapsed-tabs-container's border-bottom will overlap with the tab-menu's box shadow
+    */
     .collapsed-tabs-container .tab-menu {
-      box-shadow: var(--terra-tabs-structural-collapsed-box-shadow);
-
-      &:focus.is-active {
-        box-shadow: var(--terra-tabs-structural-collapsed-active-focus-box-shadow, 0 0 1px 2px #4a90e2);
-      }
-
-      &:focus {
-        box-shadow: var(--terra-tabs-structural-collapsed-focus-box-shadow, 0 0 1px 2px #4a90e2);
-      }
+      border-bottom-color: var(--terra-tabs-structural-collapsed-border-bottom-color);
+      border-bottom-style: solid;
+      border-bottom-width: var(--terra-tabs-structural-collapsed-border-bottom-width, 0);
+      overflow: hidden; //forces :before background-image to honor border-radius clipping.
     }
   }
 }
