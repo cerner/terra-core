@@ -197,7 +197,8 @@
     These variables must be used to set the bottom border.
     Otherwise, the outer .collapsed-tabs-container's border-bottom will overlap with the tab-menu's box shadow
     */
-    .collapsed-tabs-container .tab-menu {
+    .collapsed-tabs-container .tab-menu,
+    .collapsed-tabs-container .tab-menu:focus.is-active {
       border-bottom-color: var(--terra-tabs-structural-collapsed-border-bottom-color);
       border-bottom-style: solid;
       border-bottom-width: var(--terra-tabs-structural-collapsed-border-bottom-width, 0);
