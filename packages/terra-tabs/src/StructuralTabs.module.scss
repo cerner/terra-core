@@ -108,6 +108,7 @@
         background-size: var(--terra-tabs-structural-active-background-size, 100% 2px);
         box-shadow: var(--terra-tabs-structural-active-box-shadow, none);
         color: var(--terra-tabs-structural-active-color, #000);
+        overflow: hidden; //forces :before background-image to honor border-radius clipping.
         position: relative;
 
         &::before {
@@ -197,12 +198,10 @@
     These variables must be used to set the bottom border.
     Otherwise, the outer .collapsed-tabs-container's border-bottom will overlap with the tab-menu's box shadow
     */
-    .collapsed-tabs-container .tab-menu,
     .collapsed-tabs-container .tab-menu:focus.is-active {
       border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-border-bottom-color);
       border-bottom-style: solid;
       border-bottom-width: var(--terra-tabs-structural-collapsed-menu-bar-border-bottom-width, 0);
-      overflow: hidden; //forces :before background-image to honor border-radius clipping.
     }
   }
 }
