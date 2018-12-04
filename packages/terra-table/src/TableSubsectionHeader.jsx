@@ -94,16 +94,18 @@ const TableSubsectionHeader = ({
     attrSpread.role = 'heading';
     attrSpread['aria-expanded'] = !isCollapsed;
     attrSpread['aria-level'] = 2;
-    attrSpread['data-item-show-focus'] = 'true';
-    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
-    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
+    attrSpread['data-row-show-focus'] = 'true';
+    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
+    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
   }
 
   return (
     <tr {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
       <td colSpan={colSpan}>
-        {accordionIcon}
-        {titleElement}
+        <div className={cx('subsection-content')}>
+          {accordionIcon}
+          {titleElement}
+        </div>
       </td>
     </tr>
   );

@@ -5,7 +5,13 @@
 :local {
   .section-header {
     background-color: var(--terra-table-section-header-background-color, #e8e9ea);
-    border-bottom: var(--terra-table-section-header-border-bottom, 1px solid #c8cacb);
+    border-left: var(--terra-table-section-header-border-left, 1px solid #c8cacb);
+    border-right: var(--terra-table-section-header-border-right, 1px solid #c8cacb);
+    border-top: var(--terra-table-section-header-border-top, 1px solid #c8cacb);
+    width: 100%;
+  }
+
+  .section-content {
     padding-bottom: var(--terra-table-section-header-padding-bottom, 0.5rem);
     padding-left: var(--terra-table-section-header-padding-left, 0.7142857143rem);
     padding-top: var(--terra-table-section-header-padding-top, 0.5rem);
@@ -26,16 +32,20 @@
   }
 
   .is-collapsible {
-    align-items: center;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
     outline: var(--terra-table-section-header-focus-outline, none);
     padding-left: var(--terra-table-section-header-collapsible-padding-left, 1rem);
-    width: 100%;
+
+    .section-content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
 
     &[data-row-show-focus='true']:focus {
       background-color: var(--terra-table-section-header-focus-background-color, #dedfe0);
+      border-bottom: var(--terra-table-section-header-border-horizontal, 1px solid);
+      border-color: var(--terra-table-section-header-selected-border-color, #0092e0);
       box-shadow: var(--terra-table-section-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       position: relative;
       z-index: 1;

@@ -27,7 +27,7 @@ const TableCell = ({
       {children}
     </td>
   );
-}
+};
 
 TableCell.propTypes = propTypes;
 

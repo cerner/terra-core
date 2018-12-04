@@ -35,7 +35,7 @@
 
   .header-cell {
     border: 0;
-    border-left: var(--terra-table-cell-border, 0);
+    // border-left: var(--terra-table-cell-border, 0);
     color: var(--terra-table-thead-th-color, #1c1f21);
     display: table-cell;
     font-size: var(--terra-table-thead-th-font-size, 1rem);

@@ -102,8 +102,10 @@ const TableSectionHeader = ({
   return (
     <tr {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
       <td colSpan={colSpan}>
-        {accordionIcon}
-        {titleElement}
+        <div className={cx('section-content')}>
+          {accordionIcon}
+          {titleElement}
+        </div>
       </td>
     </tr>
   );

@@ -5,7 +5,13 @@
 :local {
   .subsection-header {
     background-color: var(--terra-table-subsection-header-background-color, #dedfe0);
-    border-bottom: var(--terra-table-subsection-header-border-bottom, 1px solid #c8cacb);
+    border-left: var(--terra-table-subsection-header-border-left, 1px solid #c8cacb);
+    border-right: var(--terra-table-subsection-header-border-right, 1px solid #c8cacb);
+    border-top: var(--terra-table-subsection-header-border-top, 1px solid #c8cacb);
+    width: 100%;
+  }
+
+  .subsection-content {
     padding-bottom: var(--terra-table-subsection-header-padding-bottom, 0.3571428571rem);
     padding-left: var(--terra-table-subsection-header-padding-left, 1.2142857143rem);
     padding-top: var(--terra-table-subsection-header-padding-top, 0.3571428571rem);
@@ -26,16 +32,20 @@
   }
 
   .is-collapsible {
-    align-items: center;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
     outline: var(--terra-table-subsection-header-focus-outline, none);
     padding-left: var(--terra-table-subsection-header-collapsible-padding-left, 1rem);
-    width: 100%;
+
+    .subsection-content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
 
     &[data-row-show-focus='true']:focus {
-      background-color: var(--terra-table-item-focus-background-color, #dedfe0);
+      background-color: var(--terra-table-subsection-header-focus-background-color, #dedfe0);
+      border-bottom: var(--terra-table-subsection-header-border-horizontal, 1px solid);
+      border-color: var(--terra-table-subsection-header-selected-border-color, #0092e0);
       box-shadow: var(--terra-table-subsection-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       position: relative;
       z-index: 1;
