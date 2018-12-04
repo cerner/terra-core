@@ -4,7 +4,7 @@ import IconDown from 'terra-icon/lib/icon/IconCaretDown';
 import IconUp from 'terra-icon/lib/icon/IconCaretUp';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Table.module.scss';
+import styles from './TableHeaderCell.module.scss';
 
 const cx = classNames.bind(styles);
 

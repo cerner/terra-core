@@ -1,8 +1,13 @@
 /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
 :local {
   .row {
+    border-top: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
     display: table-row;
     margin-bottom: 0;
+
+    &:last-of-type {
+      border-bottom: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
+    }
   }
 
   [data-table-striped='true'] > .row {

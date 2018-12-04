@@ -10,7 +10,7 @@ const propTypes = {
   /**
    * The children passed to the component
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * The header passed to the table
    */
