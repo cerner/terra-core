@@ -1,10 +1,10 @@
 {
-  "Terra.demographicsBanner.dateOfBirth": "DOB",
-  "Terra.demographicsBanner.dateOfBirthFullText": "Syntymäaika",
-  "Terra.demographicsBanner.deceased": "Kuolleen",
-  "Terra.demographicsBanner.gestationalAge": "GA",
-  "Terra.demographicsBanner.gestationalAgeFullText": "Sikiöikä",
+  "Terra.demographicsBanner.dateOfBirth": "DOB ~",
+  "Terra.demographicsBanner.dateOfBirthFullText": "Date of Birth ~",
+  "Terra.demographicsBanner.deceased": "Deceased ~",
+  "Terra.demographicsBanner.gestationalAge": "GA ~",
+  "Terra.demographicsBanner.gestationalAgeFullText": "Gestational Age ~",
   "Terra.demographicsBanner.noDataProvided": "--",
-  "Terra.demographicsBanner.postMenstrualAge": "PMA",
-  "Terra.demographicsBanner.postMenstrualAgeFullText": "Post Kuukautiskierron Ikä"
+  "Terra.demographicsBanner.postMenstrualAge": "PMA ~",
+  "Terra.demographicsBanner.postMenstrualAgeFullText": "Post Menstrual Age ~"
 }
