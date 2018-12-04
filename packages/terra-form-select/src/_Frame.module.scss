@@ -181,6 +181,7 @@
   .placeholder {
     color: var(--terra-select-search-placeholder-color, #bcbfc0);
     font-size: var(--terra-select-search-placeholder-font-size, 1.143rem);
+    font-style: var(--terra-select-search-placeholder-font-style);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
