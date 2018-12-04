@@ -36,7 +36,7 @@ describe('Text', () => {
   it('should render a text component with isWordWrapped prop set', () => {
     const text = shallow(<Text isWordWrapped>Test</Text>);
     expect(text).toMatchSnapshot();
-  })
+  });
 
   it('should support rendering a string as children', () => {
     const text = shallow(<Text>String</Text>);

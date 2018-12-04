@@ -10,8 +10,8 @@
 
   // Word wrap
   .word-wrap {
-    word-break: break-word;
-    word-wrap: break-word;
+    overflow-wrap: break-word; /* Modern browsers */
+    word-wrap: break-word; /* For IE 10 and IE 11 */
   }
 
   // Text Sizes
