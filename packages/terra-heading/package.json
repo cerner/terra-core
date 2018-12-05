@@ -31,8 +31,7 @@
     "prop-types": "^15.5.8",
     "terra-arrange": "^2.31.1",
     "terra-doc-template": "^1.22.0",
-    "terra-markdown": "^2.17.0",
-    "terra-text": "^2.29.1"
+    "terra-markdown": "^2.17.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
