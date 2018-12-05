@@ -58,6 +58,11 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
+   * Set the max-width of a field using `length` or `%`.  Best practice recommendation to never exceed
+   * a rendered value of 1020px. _(Note: Providing custom inline styles will take precedence.)_
+   */
+  maxWidth: PropTypes.string,
+  /**
    * Function to trigger when user changes the input value. Provide a function to create a controlled input.
    */
   onChange: PropTypes.func,
@@ -94,6 +99,7 @@ const defaultProps = {
   isLabelHidden: false,
   labelAttrs: {},
   onChange: undefined,
+  maxWidth: undefined,
   refCallback: undefined,
   required: false,
   showOptional: false,
@@ -114,6 +120,7 @@ const InputField = (props) => {
     isLabelHidden,
     label,
     labelAttrs,
+    maxWidth,
     onChange,
     refCallback,
     required,
@@ -136,6 +143,7 @@ const InputField = (props) => {
       isInline={isInline}
       isLabelHidden={isLabelHidden}
       htmlFor={inputId}
+      maxWidth={maxWidth}
       {...customProps}
     >
       <Input
