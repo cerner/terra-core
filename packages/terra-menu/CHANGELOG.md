@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed usage of componentWillReceiveProps
 * Update to use new List API, create single select implementation within MenuItemGroup. 
 
 3.28.1 - (November 20, 2018)
