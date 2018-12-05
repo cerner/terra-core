@@ -1,7 +1,8 @@
 /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
 :local {
   .header {
-    background-color: var(--terra-table-thead-background-color, #dedfe0);
+    background-color: var(--terra-table-header-background-color, #dedfe0);
+    border-top: var(--terra-table-header-border-horizontal, 1px solid #c8cacb);
     display: table-header-group;
   }
 }
