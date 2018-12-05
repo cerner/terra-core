@@ -16,6 +16,12 @@ describe('Input', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with a type of password and pattern prop value', () => {
+    const input = <Input type="password" pattern=".{6,}" />;
+    const wrapper = render(input);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render w/ placeholder text when just a placeholder prop is passed into the Input', () => {
     const input = <Input placeholder="foo" />;
     const wrapper = render(input);

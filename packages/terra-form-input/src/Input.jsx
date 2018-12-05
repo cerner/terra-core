@@ -41,7 +41,7 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * Pattern to match when input type is used.
+   * Pattern for the input value.
    */
   pattern: PropTypes.string,
   /**

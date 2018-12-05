@@ -5,6 +5,7 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
   disabled={false}
   isInvalid={false}
   name={null}
+  pattern={null}
   refCallback={
     [MockFunction] {
       "calls": Array [
@@ -29,6 +30,7 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
     className="form-input"
     disabled={false}
     name={null}
+    pattern={null}
     required={false}
   />
 </Input>
@@ -39,6 +41,7 @@ exports[`Input should render a default component 1`] = `
   className="form-input"
   disabled={false}
   name={null}
+  pattern={null}
   required={false}
 />
 `;
@@ -61,6 +64,14 @@ exports[`Input should render w/ placeholder text when just a placeholder prop is
 <input
   class="form-input"
   placeholder="foo"
+/>
+`;
+
+exports[`Input should render with a type of password and pattern prop value 1`] = `
+<input
+  class="form-input"
+  pattern=".{6,}"
+  type="password"
 />
 `;
 
