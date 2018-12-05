@@ -41,6 +41,10 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
+   * Pattern to match when input type is used.
+   */
+  pattern: PropTypes.string,
+  /**
    * Callback ref to pass into the input dom element.
    */
   refCallback: PropTypes.func,
@@ -65,6 +69,7 @@ const defaultProps = {
   onChange: undefined,
   onFocus: undefined,
   name: null,
+  pattern: null,
   required: false,
   refCallback: undefined,
   value: undefined,
@@ -80,6 +85,7 @@ class Input extends React.Component {
       onChange,
       onFocus,
       name,
+      pattern,
       refCallback,
       required,
       value,
@@ -110,6 +116,7 @@ class Input extends React.Component {
           if (refCallback) refCallback(inputRef);
         }}
         name={name}
+        pattern={pattern}
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
