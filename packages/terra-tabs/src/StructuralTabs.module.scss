@@ -29,7 +29,6 @@
         // affect and make it 100% height, but you then can't use it for the blue stripe.
         &::before {
           background: var(--terra-tabs-structural-collapsed-before-content-background, none);
-          background-clip: content-box; // Make sure background fully extends
           content: '';
           display: block;
           height: var(--terra-tabs-structural-collapsed-before-content-height, 0);
@@ -66,7 +65,6 @@
         // affect and make it 100% height, but you then can't use it for the blue stripe.
         &::before {
           background: var(--terra-tabs-structural-before-content-background, none);
-          background-clip: content-box; // Make sure background fully extends
           content: '';
           display: block;
           height: var(--terra-tabs-structural-before-content-height, 0);
@@ -114,6 +112,7 @@
         position: relative;
 
         &::before {
+          background-clip: content-box; // Make sure background fully extends
           transition-duration: var(--terra-tabs-structural-active-transition-duration, 0);
           transition-property: width;
           transition-timing-function: var(--terra-tabs-structural-active-transition-timing, ease);
