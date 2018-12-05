@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Pattern prop added to Input component
+* Pattern prop added to Input component 
 
 1.31.1 - (November 20, 2018)
 ------------------
