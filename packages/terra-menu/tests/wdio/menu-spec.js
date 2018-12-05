@@ -10,6 +10,7 @@ describe('Menu', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-menu/menu/menu/default-menu');
       browser.click('#default-button');
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
     });
 
     Terra.should.matchScreenshot({ selector: '#root' });
@@ -20,6 +21,7 @@ describe('Menu', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-menu/menu/menu/bounded-menu');
       browser.click('#bounded-button');
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
     });
 
     Terra.should.matchScreenshot();
@@ -27,6 +29,7 @@ describe('Menu', () => {
 
     it('opens submenu', () => {
       browser.click('.TestNestedMenu');
+      browser.hasFocus('[role="button"][aria-label="Back"]');
     });
     Terra.should.matchScreenshot('submenu', { selector: '#root' });
     Terra.should.beAccessible({ rules: ignoredA11y });
@@ -76,7 +79,9 @@ describe('Menu', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-menu/menu/menu/selectable-menu');
       browser.click('#selectable-menu-button');
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
       browser.click('.TestGroupItem3');
+      browser.hasFocus('li:last-child[aria-selected="true"][role="menuitemradio"]');
     });
 
     Terra.should.matchScreenshot({ selector: '#root' });
@@ -94,7 +99,9 @@ describe('Menu', () => {
 
     it('selects an item and maintains selection after menu has been reopened', () => {
       browser.click('.TestSelectableItem');
+      browser.hasFocus('#default-button');
       browser.click('#default-button');
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
     });
     Terra.should.matchScreenshot('maintained selection after reopen', { selector: '#root' });
   });
@@ -103,6 +110,7 @@ describe('Menu', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-menu/menu/menu/sub-menu');
       browser.click('#sub-menu-button');
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
     });
 
     Terra.should.matchScreenshot('main menu', { selector: '#root' });
@@ -110,6 +118,7 @@ describe('Menu', () => {
 
     it('displays the submenu', () => {
       browser.click('.TestNestedMenu');
+      browser.hasFocus('[role="button"][aria-label="Back"]');
     });
     Terra.should.matchScreenshot('submenu', { selector: '#root' });
   });
@@ -118,20 +127,24 @@ describe('Menu', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-menu/menu/menu/sub-menu');
       browser.click('#sub-menu-button');
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
     });
 
     it('does not do anything when left arrow is pressed on the first layer', () => {
       browser.keys(['Tab', 'ArrowLeft']);
+      browser.hasFocus('li:first-child[class*="item"][role="menuitem"]');
     });
     Terra.should.matchScreenshot('main menu remains open', { selector: '#root' });
 
     it('displays the submenu on right arrow', () => {
       browser.keys(['ArrowDown', 'ArrowRight']);
+      browser.hasFocus('[role="button"][aria-label="Back"]');
     });
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 
     it('returns to the main menu on left arrow', () => {
       browser.keys(['ArrowLeft']);
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
     });
     Terra.should.matchScreenshot('returned to main menu', { selector: '#root' });
   });
@@ -140,15 +153,18 @@ describe('Menu', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-menu/menu/menu/sub-menu');
       browser.click('#sub-menu-button');
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
     });
 
     it('displays the submenu on enter', () => {
       browser.keys(['Tab', 'ArrowDown', 'Enter']);
+      browser.hasFocus('[role="button"][aria-label="Back"]');
     });
     Terra.should.matchScreenshot('navigated to submenu', { selector: '#root' });
 
     it('returns to the main menu on enter', () => {
       browser.keys(['Enter']);
+      browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
     });
     Terra.should.matchScreenshot('returned to main menu', { selector: '#root' });
   });
