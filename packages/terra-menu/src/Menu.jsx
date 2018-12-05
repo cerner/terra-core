@@ -71,8 +71,9 @@ class Menu extends React.Component {
     this.state = { stack: [this] };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if ((this.props.isOpen && !nextProps.isOpen) || this.props.children.length !== nextProps.children.length) {
+  componentDidUpdate(prevProps) {
+    if ((!this.props.isOpen && prevProps.isOpen) || this.props.children.length !== prevProps.children.length) {
+      /* eslint-disable react/no-did-update-set-state */
       this.setState({ stack: [this] });
     }
   }
