@@ -33,6 +33,11 @@ describe('Text', () => {
     expect(text).toMatchSnapshot();
   });
 
+  it('should render a text component with isWordWrapped prop set', () => {
+    const text = shallow(<Text isWordWrapped>Test</Text>);
+    expect(text).toMatchSnapshot();
+  });
+
   it('should support rendering a string as children', () => {
     const text = shallow(<Text>String</Text>);
     expect(text).toMatchSnapshot();
@@ -58,7 +63,7 @@ describe('Text', () => {
 
   // Prop Tests
   it('should have all props including customProps set correctly', () => {
-    const text = shallow(<Text id="id" fontSize={20} color="#f00" weight={200} isItalic isVisuallyHidden>All props and custom attrs</Text>);
+    const text = shallow(<Text id="id" fontSize={20} color="#f00" weight={200} isItalic isVisuallyHidden isWordWrapped>All props and custom attrs</Text>);
     expect(text).toMatchSnapshot();
     expect(text.find('.text').text()).toEqual('All props and custom attrs');
   });

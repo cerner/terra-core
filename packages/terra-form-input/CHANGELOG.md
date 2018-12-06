@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Dev site tests pages adjusted to uniformly use caretColor
 ### Added
 * maxWidth prop added to pass through to terra-form-field
 

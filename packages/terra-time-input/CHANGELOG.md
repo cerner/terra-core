@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Removed use of componentWillMount from examples
 
+### Added
+* Aria labels for meridiem display and select
+
 2.34.1 - (November 20, 2018)
 ------------------
 ### Changed

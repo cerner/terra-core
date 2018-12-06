@@ -712,6 +712,8 @@ class TimeInput extends React.Component {
           [
             <Input
               {...inputAttributes}
+              aria-label={this.context.intl.formatMessage({ id: 'Terra.timeInput.display.meridiem' })} // value in translations set to 'Display Meridiem'
+              aria-readonly
               className={cx(['meridiem-display', { focused: this.state.meridiemFocused }])}
               onFocus={this.meridiemFocus}
               key="meridiem_display"
@@ -726,6 +728,7 @@ class TimeInput extends React.Component {
               key="meridiem_select_box"
             >
               <select
+                aria-label={this.context.intl.formatMessage({ id: 'Terra.timeInput.select.meridiem' })} // value in translations set to 'Select Meridiem'
                 ref={(input) => { this.meridiemInput = input; }}
                 onBlur={this.meridiemBlur}
                 onFocus={this.meridiemFocus}
