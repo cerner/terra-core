@@ -7,6 +7,7 @@
 
     &:not(:first-child) > .label {
       border-top: var(--terra-select-optgroup-label-border-top, 0.1428571429rem solid #dedfe0);
+      margin: var(--terra-select-optgroup-label-margin, 0);
     }
   }
 
