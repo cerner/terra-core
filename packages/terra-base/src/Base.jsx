@@ -73,6 +73,17 @@ class Base extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.locale !== undefined && this.props.locale !== prevProps.locale) {
+      try {
+        i18nLoader(this.props.locale, this.setState, this);
+      } catch (e) {
+        // eslint-disable-next-line no-console
+        console.error(e);
+      }
+    }
+  }
+
   render() {
     const {
       children,
