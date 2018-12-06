@@ -109,6 +109,7 @@ class DatePicker extends React.Component {
 
     this.state = {
       selectedDate: DateUtil.createSafeDate(props.selectedDate),
+      prevPropsSelectedDate: props.selectedDate,
     };
 
     this.isDefaultDateAcceptable = false;
@@ -120,18 +121,19 @@ class DatePicker extends React.Component {
     this.handleOnCalendarButtonClick = this.handleOnCalendarButtonClick.bind(this);
   }
 
-  componentDidMount() {
-    this.isDefaultDateAcceptable = this.validateDefaultDate();
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.selectedDate === this.props.selectedDate) {
-      return;
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.selectedDate !== prevState.prevPropsSelectedDate) {
+      return {
+        selectedDate: DateUtil.createSafeDate(nextProps.selectedDate),
+        prevPropsSelectedDate: nextProps.selectedDate,
+      };
     }
 
-    this.setState({
-      selectedDate: DateUtil.createSafeDate(nextProps.selectedDate),
-    });
+    return null;
+  }
+
+  componentDidMount() {
+    this.isDefaultDateAcceptable = this.validateDefaultDate();
   }
 
   handleOnSelect(selectedDate, event) {
