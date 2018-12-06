@@ -27,7 +27,6 @@ const COLOR_VARIANTS = [
 /**
  * Generates a hash, based on a given string s.
  * https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
- * @param {*} s
  */
 const calculateHash = (s) => {
   let hash = 0;
@@ -50,7 +49,6 @@ const calculateHash = (s) => {
 
 /**
  *  Returns a color variant based on a given hashValue.
- * @param {*} hashValue
  */
 const getColorVariant = (hashValue) => {
   const hash = calculateHash(hashValue);
@@ -61,9 +59,6 @@ const getColorVariant = (hashValue) => {
 
 /**
  * Render placeholder.
- * @param {*} alt
- * @param {*} isAriaHidden
- * @param {*} variant
  */
 const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
   const avatarIconClassNames = cx(['icon', variant]);
@@ -73,10 +68,6 @@ const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
 
 /**
  * Render image with placeholder.
- * @param {*} image
- * @param {*} alt
- * @param {*} isAriaHidden
- * @param {*} variant
  */
 const generateImage = (image, alt, isAriaHidden, variant) => {
   const icon = generateImagePlaceholder(alt, isAriaHidden, variant);
@@ -87,7 +78,6 @@ const generateImage = (image, alt, isAriaHidden, variant) => {
 
 /**
  * Returns true if the given color exists within `COLOR_VARIANTS`.
- * @param {*} color
  */
 const validateColor = (color) => {
   if (!color) {
@@ -102,9 +92,6 @@ const validateColor = (color) => {
  *   1. `color`
  *   2. Hash `hashValue` to generate color variant.
  *   3. Hash `alt`  to generate color variant. This is the fallback.
- * @param {*} alt
- * @param {*} color
- * @param {*} hashValue
  */
 const setColor = (alt, color, hashValue) => {
   if (color === 'neutral' || (color !== 'auto' && validateColor(color))) {
