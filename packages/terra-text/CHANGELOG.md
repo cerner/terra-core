@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added isWordWrapped prop
+
+### Removed
+* Removed dependency on terra-heading
 
 2.29.1 - (November 20, 2018)
 ------------------

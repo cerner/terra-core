@@ -66,4 +66,10 @@ describe('Text', () => {
     before(() => browser.url('/#/raw/tests/terra-text/text/text-line-height'));
     Terra.should.matchScreenshot();
   });
+
+  describe('Word Wrapped', () => {
+    before(() => browser.url('/#/raw/tests/terra-text/text/text-word-wrapped'));
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
+  });
 });
