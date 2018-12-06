@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added missing ar translations
+* maxWidth prop added to pass through to terra-form-field
 
 4.25.1 - (November 20, 2018)
 ------------------
