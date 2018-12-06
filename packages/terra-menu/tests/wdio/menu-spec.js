@@ -81,7 +81,7 @@ describe('Menu', () => {
       browser.click('#selectable-menu-button');
       browser.hasFocus('[class*="content"][aria-modal="true"][role="dialog"]');
       browser.click('.TestGroupItem3');
-      browser.hasFocus('li:last-child[aria-selected="true"][role="menuitemradio"]');
+      browser.hasFocus('li:last-child[aria-checked="true"][role="menuitemradio"]');
     });
 
     Terra.should.matchScreenshot({ selector: '#root' });
