@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added missing ar translations.
 
+### Changed
+* Removed usage of componentWillReceiveProps
+
 2.38.1 - (November 20, 2018)
 ------------------
 ### Changed
