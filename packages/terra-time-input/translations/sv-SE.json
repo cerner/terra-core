@@ -4,5 +4,7 @@
   "Terra.timeInput.hours": "Timmar",
   "Terra.timeInput.minutes": "Minuter",
   "Terra.timeInput.mm": "mm",
-  "Terra.timeInput.pm": "em"
+  "Terra.timeInput.pm": "em",
+  "Terra.timeInput.display.meridiem": "",
+  "Terra.timeInput.select.meridiem": ""
 }
