@@ -9,7 +9,7 @@ If a list implementation contains selectable list options the role prop should b
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-list`
   - `yarn add terra-list`
-s
+
 ## Usage
 
 ```jsx
