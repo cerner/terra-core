@@ -7,6 +7,7 @@ import TextColorDocs from '../../../../docs/text-colors.md';
 import TextWeightDocs from '../../../../docs/text-weights.md';
 import TextVariationsDocs from '../../../../docs/text-variations.md';
 import TextVisuallyHiddenDocs from '../../../../docs/text-visually-hidden.md';
+import TextWordWrappedDocs from '../../../../docs/text-word-wrapped.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
@@ -26,6 +27,8 @@ import TextVisuallyHidden from '../example/TextVisuallyHidden';
 import TextVisuallyHiddenSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextVisuallyHidden';
 import TextWeights from '../example/TextWeights';
 import TextWeightsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextWeights';
+import TextWordWrapped from '../example/TextWordWrapped';
+import TextWordWrappedSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextWordWrapped';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -68,6 +71,12 @@ const DocPage = () => (
         description: <Markdown id="text-variations-docs" src={TextVariationsDocs} />,
         example: <TextVariations />,
         source: TextVariationsSrc,
+      },
+      {
+        title: 'Word Wrapped',
+        description: <Markdown id="text-word-wrapped-docs" src={TextWordWrappedDocs} />,
+        example: <TextWordWrapped />,
+        source: TextWordWrappedSrc,
       },
     ]}
     propsTables={[
