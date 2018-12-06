@@ -52,6 +52,10 @@ const propTypes = {
    */
   isVisuallyHidden: PropTypes.bool,
   /**
+   * Indicates if word wrapping styles should be applied.
+   */
+  isWordWrapped: PropTypes.bool,
+  /**
    * Sets the text size. One of `10`, `12`, `14`, `16`, `18`, `20`, `24`, `32`, `36`, `46`, `50`, `56`, `64`, `72`, `92`, `100`.
    */
   fontSize: PropTypes.oneOf([10, 12, 14, 16, 18, 20, 24, 32, 36, 46, 50, 56, 64, 72, 92, 100]),
@@ -65,15 +69,17 @@ const defaultProps = {
   color: 'inherit',
   isItalic: false,
   isVisuallyHidden: false,
+  isWordWrapped: false,
 };
 
 const Text = ({
-  color, children, isVisuallyHidden, isItalic, fontSize, weight, ...customProps
+  color, children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
     'text',
     { italic: isItalic },
+    { 'word-wrap': isWordWrapped },
     { 'visually-hidden': isVisuallyHidden },
     { [`font-size-${fontSize}`]: fontSize },
     { [`font-weight-${weight}`]: weight },
