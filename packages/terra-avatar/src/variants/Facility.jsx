@@ -47,7 +47,7 @@ const defaultProps = {
   size: undefined,
 };
 
-const ImageComponent = memoize(generateImage);
+const imageComponent = memoize(generateImage);
 
 const Facility = ({
   alt,
@@ -62,7 +62,7 @@ const Facility = ({
   let facilityContent;
   if (image) {
     colorVariant = '';
-    facilityContent = ImageComponent(image, alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
+    facilityContent = imageComponent(image, alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
   } else {
     colorVariant = setColor(alt, color, hashValue);
     facilityContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);

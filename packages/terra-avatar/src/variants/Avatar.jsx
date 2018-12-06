@@ -57,7 +57,7 @@ const defaultProps = {
   size: undefined,
 };
 
-const ImageComponent = memoize(generateImage);
+const imageComponent = memoize(generateImage);
 
 const Avatar = ({
   alt,
@@ -74,7 +74,7 @@ const Avatar = ({
   let avatarContent;
   if (image) {
     colorVariant = '';
-    avatarContent = ImageComponent(image, alt, isAriaHidden, AVATAR_VARIANTS.USER);
+    avatarContent = imageComponent(image, alt, isAriaHidden, AVATAR_VARIANTS.USER);
   } else if (initials && (initials.length === 1 || initials.length === 2)) {
     colorVariant = setColor(alt, color, hashValue);
     const avatarTextClassNames = cx('initials');
