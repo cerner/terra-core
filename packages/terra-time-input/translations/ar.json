@@ -4,5 +4,7 @@
   "Terra.timeInput.hours": "ساعات",
   "Terra.timeInput.minutes": "دقائق",
   "Terra.timeInput.hh": "س س",
-  "Terra.timeInput.mm": "د د"
+  "Terra.timeInput.mm": "د د",
+  "Terra.timeInput.display.meridiem": "عرض ميريدي",
+  "Terra.timeInput.select.meridiem": "اختر ميريدم"
 }
