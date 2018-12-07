@@ -112,6 +112,7 @@ class DateTimePicker extends React.Component {
       isAmbiguousTime: false,
       isTimeClarificationOpen: false,
       dateFormat: DateUtil.getFormatByLocale(props.intl.locale),
+      prevPropsValue: props.value,
     };
 
     // The dateValue and timeValue variables represent the actual value in the date input and time input respectively.
@@ -138,18 +139,19 @@ class DateTimePicker extends React.Component {
     this.handleOnRequestClose = this.handleOnRequestClose.bind(this);
   }
 
-  componentDidMount() {
-    this.isDefaultDateAcceptable = this.validateDefaultDate();
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.value === this.props.value) {
-      return;
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.value !== prevState.prevPropsValue) {
+      return {
+        dateTime: DateTimeUtils.createSafeDate(nextProps.value),
+        prevPropsValue: nextProps.value,
+      };
     }
 
-    this.setState({
-      dateTime: DateTimeUtils.createSafeDate(nextProps.value),
-    });
+    return null;
+  }
+
+  componentDidMount() {
+    this.isDefaultDateAcceptable = this.validateDefaultDate();
   }
 
   handleOnSelect(event, selectedDate) {
