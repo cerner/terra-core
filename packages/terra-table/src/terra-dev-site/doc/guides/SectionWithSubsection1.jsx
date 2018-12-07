@@ -10,13 +10,13 @@ import Table, {
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-section-sub';
 
-const createCell = (cell) => {
-  return <Cell key={cell.key}><Placeholder title={cell.title} style={{ height: '50px' }} /></Cell>;
-};
+const createCell = cell => (
+  <Cell key={cell.key}>
+    <Placeholder title={cell.title} style={{ height: '50px' }} />
+  </Cell>
+);
 
-const createCellsForRow = (cells) => {
-  return cells.map(cell => createCell(cell));
-};
+const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const createRow = itemData => (
   <Row key={itemData.key}>

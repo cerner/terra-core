@@ -4,13 +4,13 @@ import Table, { Row, Cell } from 'terra-table/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-select';
 
-const createCell = (cell) => {
-  return <Cell key={cell.key}><Placeholder title={cell.title} style={{ height: '50px' }} /></Cell>;
-};
+const createCell = cell => (
+  <Cell key={cell.key}>
+    <Placeholder title={cell.title} style={{ height: '50px' }} />
+  </Cell>
+);
 
-const createCellsForRow = (cells) => {
-  return cells.map(cell => createCell(cell));
-};
+const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 class SingleSelectTable extends React.Component {
   constructor(props) {
