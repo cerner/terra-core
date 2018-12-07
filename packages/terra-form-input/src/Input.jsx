@@ -53,6 +53,10 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
+   * Specifies the type of input element to display.
+   */
+  type: PropTypes.string,
+  /**
    * The value of the input field. Use this to create a controlled input.
    */
   value: PropTypes.oneOfType([
@@ -69,9 +73,10 @@ const defaultProps = {
   onChange: undefined,
   onFocus: undefined,
   name: null,
-  pattern: null,
+  pattern: undefined,
   required: false,
   refCallback: undefined,
+  type: undefined,
   value: undefined,
 };
 
@@ -88,6 +93,7 @@ class Input extends React.Component {
       pattern,
       refCallback,
       required,
+      type,
       value,
       ...customProps
     } = this.props;
@@ -116,6 +122,7 @@ class Input extends React.Component {
           if (refCallback) refCallback(inputRef);
         }}
         name={name}
+        type={type}
         pattern={pattern}
         onBlur={onBlur}
         onChange={onChange}
