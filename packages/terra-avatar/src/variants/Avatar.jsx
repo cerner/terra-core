@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import memoize from 'memoize-one';
 import 'terra-base/lib/baseStyles';
 import styles from '../common/Avatar.module.scss';
 import {
@@ -57,8 +56,6 @@ const defaultProps = {
   size: undefined,
 };
 
-const imageComponent = memoize(generateImage);
-
 const Avatar = ({
   alt,
   color,
@@ -74,7 +71,7 @@ const Avatar = ({
   let avatarContent;
   if (image) {
     colorVariant = '';
-    avatarContent = imageComponent(image, alt, isAriaHidden, AVATAR_VARIANTS.USER);
+    avatarContent = generateImage(image, alt, isAriaHidden, AVATAR_VARIANTS.USER);
   } else if (initials && (initials.length === 1 || initials.length === 2)) {
     colorVariant = setColor(alt, color, hashValue);
     const avatarTextClassNames = cx('initials');
