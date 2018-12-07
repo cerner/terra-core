@@ -8,6 +8,12 @@
   // Text Italics
   .italic { font-style: italic; }
 
+  // Word wrap
+  .word-wrap {
+    overflow-wrap: break-word; /* Modern browsers */
+    word-wrap: break-word; /* For IE 10 and IE 11 */
+  }
+
   // Text Sizes
   .font-size-100 { font-size: 7.143rem; }
   .font-size-92 { font-size: 6.571rem; }
