@@ -41,6 +41,10 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
+   * The regular expression that the input's value is checked against.
+   */
+  pattern: PropTypes.string,
+  /**
    * Callback ref to pass into the input dom element.
    */
   refCallback: PropTypes.func,
@@ -48,6 +52,10 @@ const propTypes = {
    * Whether the input is required.
    */
   required: PropTypes.bool,
+  /**
+   * Specifies the type of input element to display.
+   */
+  type: PropTypes.string,
   /**
    * The value of the input field. Use this to create a controlled input.
    */
@@ -65,8 +73,10 @@ const defaultProps = {
   onChange: undefined,
   onFocus: undefined,
   name: null,
+  pattern: undefined,
   required: false,
   refCallback: undefined,
+  type: undefined,
   value: undefined,
 };
 
@@ -80,8 +90,10 @@ class Input extends React.Component {
       onChange,
       onFocus,
       name,
+      pattern,
       refCallback,
       required,
+      type,
       value,
       ...customProps
     } = this.props;
@@ -110,6 +122,8 @@ class Input extends React.Component {
           if (refCallback) refCallback(inputRef);
         }}
         name={name}
+        type={type}
+        pattern={pattern}
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
