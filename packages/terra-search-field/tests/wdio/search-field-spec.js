@@ -258,6 +258,10 @@ describe('Search Field', () => {
 
     it('should click button to focus search field', () => {
       browser.waitForVisible('#search-field-focus-button');
+      browser.execute(() => {
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        document.querySelector('input').style.caretColor = 'transparent';
+      });
       browser.click('#search-field-focus-button');
     });
 
