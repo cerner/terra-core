@@ -4,6 +4,8 @@ import Table, {
   Cell,
   Section,
   Subsection,
+  Header,
+  HeaderCell,
   Utils,
 } from 'terra-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions\
 import Placeholder from 'terra-doc-template/lib/Placeholder';
@@ -72,7 +74,15 @@ class SectionWithSubsection2 extends React.Component {
 
   render() {
     return (
-      <Table>
+      <Table
+        header={
+          <Header>
+            <HeaderCell>Column 0</HeaderCell>
+            <HeaderCell>Column 1</HeaderCell>
+            <HeaderCell>Column 2</HeaderCell>
+          </Header> 
+        }
+      >
         {this.createSections(mockData)}
       </Table>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Table, { Row, Cell, Utils } from 'terra-table/lib/index';
+import Table, { Row, Cell, Header, HeaderCell, Utils } from 'terra-table/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-select';
 
@@ -48,7 +48,15 @@ class MutliSelectTable extends React.Component {
 
   render() {
     return (
-      <Table>
+      <Table
+        header={
+          <Header>
+            <HeaderCell>Column 0</HeaderCell>
+            <HeaderCell>Column 1</HeaderCell>
+            <HeaderCell>Column 2</HeaderCell>
+          </Header> 
+        }
+      >
         {this.createTableRows(mockData)}
       </Table>
     );
