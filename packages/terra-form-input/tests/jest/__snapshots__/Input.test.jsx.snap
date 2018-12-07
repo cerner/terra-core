@@ -5,7 +5,6 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
   disabled={false}
   isInvalid={false}
   name={null}
-  pattern={null}
   refCallback={
     [MockFunction] {
       "calls": Array [
@@ -30,7 +29,6 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
     className="form-input"
     disabled={false}
     name={null}
-    pattern={null}
     required={false}
   />
 </Input>
@@ -41,7 +39,6 @@ exports[`Input should render a default component 1`] = `
   className="form-input"
   disabled={false}
   name={null}
-  pattern={null}
   required={false}
 />
 `;
@@ -52,7 +49,6 @@ exports[`Input should render as controlled when just a default value and \`onCha
   disabled={false}
   name={null}
   onChange={[Function]}
-  pattern={null}
   required={false}
   value="foo"
 />
@@ -64,7 +60,6 @@ exports[`Input should render as uncontrolled when just a default value is passed
   defaultValue="foo"
   disabled={false}
   name={null}
-  pattern={null}
   required={false}
 />
 `;
@@ -74,7 +69,6 @@ exports[`Input should render w/ placeholder text when just a placeholder prop is
   className="form-input"
   disabled={false}
   name={null}
-  pattern={null}
   placeholder="foo"
   required={false}
 />
@@ -96,7 +90,6 @@ exports[`Input should set the forminput to disabled when passed into the compone
   className="form-input"
   disabled={true}
   name={null}
-  pattern={null}
   required={false}
 />
 `;
@@ -106,7 +99,6 @@ exports[`Input should set the forminput to invalid when isInvalid is passed into
   className="form-input form-error"
   disabled={false}
   name={null}
-  pattern={null}
   required={false}
 />
 `;
@@ -117,7 +109,6 @@ exports[`Input should set the forminput to required when required is passed into
   className="form-input"
   disabled={false}
   name={null}
-  pattern={null}
   required={true}
 />
 `;

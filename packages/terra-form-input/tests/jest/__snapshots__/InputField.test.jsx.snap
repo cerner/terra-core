@@ -31,7 +31,6 @@ exports[`should render a InputField with props 1`] = `
     isInvalid={false}
     name="test"
     onChange={[Function]}
-    pattern={null}
     refCallback={[Function]}
     required={false}
     type="number"
@@ -65,7 +64,6 @@ exports[`should render a default InputField component 1`] = `
     id="test-input"
     isInvalid={false}
     name={null}
-    pattern={null}
     required={false}
   />
 </Field>
@@ -102,7 +100,6 @@ exports[`should render a valid InputField with props 1`] = `
     isInvalid={false}
     name="test"
     onChange={[Function]}
-    pattern={null}
     refCallback={[Function]}
     required={false}
     type="number"
