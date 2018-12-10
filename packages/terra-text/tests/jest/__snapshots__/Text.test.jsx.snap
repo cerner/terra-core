@@ -2,7 +2,7 @@
 
 exports[`Text should have all props including customProps set correctly 1`] = `
 <span
-  className="text italic visually-hidden font-size-20 font-weight-200"
+  className="text italic word-wrap visually-hidden font-size-20 font-weight-200"
   id="id"
   style={
     Object {
@@ -69,6 +69,19 @@ exports[`Text should render a text component with isItalic prop set 1`] = `
 exports[`Text should render a text component with isVisuallyHidden prop set 1`] = `
 <span
   className="text visually-hidden"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }
+>
+  Test
+</span>
+`;
+
+exports[`Text should render a text component with isWordWrapped prop set 1`] = `
+<span
+  className="text word-wrap"
   style={
     Object {
       "color": "inherit",
