@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
@@ -50,15 +51,19 @@ const defaultProps = {
   focusable: 'false',
 };
 
-class IconBase extends React.Component {
-  constructor(props) {
-    super(props);
-    this.addAnimationStyles();
-  }
+const IconBase = ({
+  isBidi,
+  isSpin,
+  children,
+  height,
+  width,
+  ariaLabel,
+  focusable,
+  ...customProps
+}) => {
+  const attributes = Object.assign({}, customProps);
 
-  addAnimationStyles() {
-    const { isSpin } = this.props;
-
+  const addAnimationStyles = () => {
     if (isSpin) {
       const css = '@-webkit-keyframes tui-spin-ltr{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes tui-spin-ltr{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@-webkit-keyframes tui-spin-rtl{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(-359deg);transform:rotate(-359deg)}}@keyframes tui-spin-rtl{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(-359deg);transform:rotate(-359deg)}}[dir=ltr] .tui-Icon.is-spin {-webkit-animation: tui-spin-ltr 2s infinite linear;animation: tui-spin-ltr 2s infinite linear;}[dir=rtl] .tui-Icon.is-spin {-webkit-animation: tui-spin-rtl 2s infinite linear;animation: tui-spin-rtl 2s infinite linear;}';
       const head = document.head || document.getElementsByTagName('head')[0];
@@ -71,47 +76,33 @@ class IconBase extends React.Component {
         head.appendChild(style);
       }
     }
+  };
+  addAnimationStyles();
+
+  // append to existing classNames
+  const classes = cx(
+    'tui-Icon',
+    'icon',
+    { 'is-bidi': isBidi },
+    { 'is-spin': isSpin },
+    attributes.className,
+  );
+
+  // aria-label is present, remove aria-hidden, set role to img
+  if (ariaLabel) {
+    attributes['aria-label'] = ariaLabel;
+    attributes.role = 'img';
+    attributes['aria-hidden'] = null;
+  } else {
+    attributes['aria-hidden'] = 'true';
   }
 
-  render() {
-    const {
-      isBidi,
-      isSpin,
-      children,
-      height,
-      width,
-      ariaLabel,
-      focusable,
-      ...customProps
-    } = this.props;
+  attributes.height = height;
+  attributes.width = width;
+  attributes.focusable = focusable;
 
-    const attributes = Object.assign({}, customProps);
-
-    // append to existing classNames
-    const classes = cx(
-      'tui-Icon', // Namespaced class since it will be global, needed for global spin animation
-      'icon',
-      { 'is-bidi': isBidi },
-      { 'is-spin': isSpin },
-      attributes.className,
-    );
-
-    // aria-label is present, remove aria-hidden, set role to img
-    if (ariaLabel) {
-      attributes['aria-label'] = ariaLabel;
-      attributes.role = 'img';
-      attributes['aria-hidden'] = null;
-    } else {
-      attributes['aria-hidden'] = 'true';
-    }
-
-    attributes.height = height;
-    attributes.width = width;
-    attributes.focusable = focusable;
-
-    return <svg {...attributes} className={classes}>{children}</svg>;
-  }
-}
+  return <svg {...attributes} className={classes}>{children}</svg>;
+};
 
 IconBase.propTypes = propTypes;
 IconBase.defaultProps = defaultProps;
