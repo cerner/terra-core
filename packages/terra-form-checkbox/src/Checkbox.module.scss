@@ -49,57 +49,57 @@
 
     /* Custom checkbox shown when theme uses custom styling */
     .native-input + .label-text::before {
-      background-color: var(--terra-form-checkbox-background-color, transparent);
-      background-image: var(--terra-form-checkbox-background-image, none);
+      background-color: var(--terra-form-checkbox-before-background-color, transparent);
+      background-image: var(--terra-form-checkbox-before-background-image, none);
       background-position: center center;
       background-repeat: no-repeat;
-      border: var(--terra-form-checkbox-border, 0);
-      border-radius: var(--terra-form-checkbox-border-radius, 0);
+      border: var(--terra-form-checkbox-before-border, 0);
+      border-radius: var(--terra-form-checkbox-before-border-radius, 0);
       content: '';
       cursor: pointer;
       display: inline-block;
-      height: var(--terra-form-checkbox-height, 0);
+      height: var(--terra-form-checkbox-before-height, 0);
       left: 0;
-      margin-top: var(--terra-form-checkbox-margin-top, 0);
+      margin-top: var(--terra-form-checkbox-before-margin-top, 0);
       position: absolute;
       top: 0;
-      transition: var(--terra-form-checkbox-transition, none);
-      width: var(--terra-form-checkbox-width, 0);
+      transition: var(--terra-form-checkbox-before-transition, none);
+      width: var(--terra-form-checkbox-before-width, 0);
     }
 
     /* Custom checkbox in checked state */
     .native-input:checked + .label-text::before {
-      background-color: var(--terra-form-checkbox-checked-background-color, transparent);
-      background-image: var(--terra-form-checkbox-checked-background-image, none);
-      border: var(--terra-form-checkbox-checked-border, 0);
-      border-radius: var(--terra-form-checkbox-checked-border-radius, 0);
-      content: var(--terra-form-checkbox-symbol, none);
-      height: var(--terra-form-checkbox-checked-height, 0);
+      background-color: var(--terra-form-checkbox-checked-before-background-color, transparent);
+      background-image: var(--terra-form-checkbox-checked-before-background-image, none);
+      border: var(--terra-form-checkbox-checked-before-border, 0);
+      border-radius: var(--terra-form-checkbox-checked-before-border-radius, 0);
+      content: var(--terra-form-checkbox-checked-before-content, none);
+      height: var(--terra-form-checkbox-checked-before-height, 0);
       left: 0;
-      line-height: var(--terra-form-checkbox-checked-line-height, normal);
-      margin-top: var(--terra-form-checkbox-margin-top, 0);
+      line-height: var(--terra-form-checkbox-checked-before-line-height, normal);
+      margin-top: var(--terra-form-checkbox-checked-before-margin-top, 0);
       opacity: 1;
-      padding-left: var(--terra-form-checkbox-checked-symbol-padding-left, 0);
-      padding-right: var(--terra-form-checkbox-checked-symbol-padding-right, 0);
-      padding-top: var(--terra-form-checkbox-checked-symbol-padding-top, 0);
+      padding-left: var(--terra-form-checkbox-checked-before-padding-left, 0);
+      padding-right: var(--terra-form-checkbox-checked-before-padding-right, 0);
+      padding-top: var(--terra-form-checkbox-checked-before-padding-top, 0);
       position: absolute;
       top: 0;
-      transform: var(--terra-form-checkbox-checked-transform, none);
-      transition: var(--terra-form-checkbox-checked-transition, none);
-      width: var(--terra-form-checkbox-checked-width, 0);
+      transform: var(--terra-form-checkbox-checked-before-transform, none);
+      transition: var(--terra-form-checkbox-checked-before-transition, none);
+      width: var(--terra-form-checkbox-checked-before-width, 0);
     }
 
     .native-input + .label-text.is-mobile::before {
-      height: var(--terra-form-checkbox-is-mobile-height, 0);
-      margin-top: var(--terra-form-checkbox-is-mobile-margin-top, 0);
-      width: var(--terra-form-checkbox-is-mobile-width, 0);
+      height: var(--terra-form-checkbox-is-mobile-before-height, 0);
+      margin-top: var(--terra-form-checkbox-is-mobile-before-margin-top, 0);
+      width: var(--terra-form-checkbox-is-mobile-before-width, 0);
     }
 
     .native-input:checked + .label-text.is-mobile::before {
-      height: var(--terra-form-checkbox-is-mobile-checked-height, 0);
-      line-height: var(--terra-form-checkbox-is-mobile-checked-line-height, normal);
-      margin-top: var(--terra-form-checkbox-is-mobile-margin-top, 0);
-      width: var(--terra-form-checkbox-is-mobile-checked-width, 0);
+      height: var(--terra-form-checkbox-is-mobile-checked-before-height, 0);
+      line-height: var(--terra-form-checkbox-is-mobile-checked-before-line-height, normal);
+      margin-top: var(--terra-form-checkbox-is-mobile-checked-before-margin-top, 0);
+      width: var(--terra-form-checkbox-is-mobile-checked-before-width, 0);
     }
 
     /* Hide label if isLabelHidden true */
@@ -113,13 +113,13 @@
     /* stylelint-disable max-nesting-depth */
     .label:not(.is-disabled):hover {
       .native-input + .label-text::before {
-        border-color: var(--terra-form-checkbox-hover-border-color, transparent);
-        border-width: var(--terra-form-checkbox-hover-border-width, 0);
+        border-color: var(--terra-form-checkbox-hover-before-border-color, transparent);
+        border-width: var(--terra-form-checkbox-hover-before-border-width, 0);
       }
 
       .native-input:checked + .label-text::before {
-        border-color: var(--terra-form-checkbox-checked-hover-border-color, transparent);
-        border-width: var(--terra-form-checkbox-checked-hover-border-width, 0);
+        border-color: var(--terra-form-checkbox-hover-checked-before-border-color, transparent);
+        border-width: var(--terra-form-checkbox-hover-checked-before-border-width, 0);
       }
     }
 
@@ -138,36 +138,36 @@
       }
 
       > .native-input:disabled + .label-text::before {
-        background-color: var(--terra-form-checkbox-disabled-background-color, transparent);
-        background-image: var(--terra-form-checkbox-disabled-background-image, none);
-        border-color: var(--terra-form-checkbox-disabled-border-color, transparent);
-        border-width: var(--terra-form-checkbox-disabled-border-width, 0);
+        background-color: var(--terra-form-checkbox-disabled-before-background-color, transparent);
+        background-image: var(--terra-form-checkbox-disabled-before-background-image, none);
+        border-color: var(--terra-form-checkbox-disabled-before-border-color, transparent);
+        border-width: var(--terra-form-checkbox-disabled-before-border-width, 0);
         cursor: default;
       }
 
       > .native-input:checked:disabled + .label-text::before {
-        border-width: var(--terra-form-checkbox-checked-disabled-border-width, 0);
-        content: var(--terra-form-checkbox-disabled-symbol, none);
+        border-width: var(--terra-form-checkbox-checked-disabled-before-border-width, 0);
+        content: var(--terra-form-checkbox-checked-disabled-before-content, none);
       }
     }
     /* stylelint-enable max-nesting-depth */
 
     /* Focus custom checkbox styling */
     .native-input:focus + .label-text::before {
-      border-color: var(--terra-form-checkbox-focus-border-color, transparent);
-      border-width: var(--terra-form-checkbox-focus-border-width, 0);
+      border-color: var(--terra-form-checkbox-focus-before-border-color, transparent);
+      border-width: var(--terra-form-checkbox-focus-before-border-width, 0);
     }
 
     /* Large focus ring */
     .native-input:focus + .label-text::after {
-      background-color: var(--terra-form-checkbox-focus-ring-background-color, transparent);
-      border-radius: var(--terra-form-checkbox-focus-ring-border-radius, 0);
+      background-color: var(--terra-form-checkbox-focus-after-ring-background-color, transparent);
+      border-radius: var(--terra-form-checkbox-focus-after-ring-border-radius, 0);
       content: '';
-      height: var(--terra-form-checkbox-focus-ring-height);
-      left: var(--terra-form-checkbox-focus-ring-left);
+      height: var(--terra-form-checkbox-focus-after-ring-height);
+      left: var(--terra-form-checkbox-focus-after-ring-left);
       position: absolute;
-      top: var(--terra-form-checkbox-focus-ring-top);
-      width: var(--terra-form-checkbox-focus-ring-width);
+      top: var(--terra-form-checkbox-focus-after-ring-top);
+      width: var(--terra-form-checkbox-focus-after-ring-width);
       z-index: -1;
     }
   }
