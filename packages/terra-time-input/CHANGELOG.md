@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Removed use of componentWillMount from examples
+* Removed use of componentWillReceiveProps
 
 ### Added
 * Aria labels for meridiem display and select
