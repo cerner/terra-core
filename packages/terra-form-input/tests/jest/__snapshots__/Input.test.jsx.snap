@@ -45,42 +45,70 @@ exports[`Input should render a default component 1`] = `
 
 exports[`Input should render as controlled when just a default value and \`onChange()\` is passed into the Input 1`] = `
 <input
-  class="form-input"
+  className="form-input"
+  disabled={false}
+  name={null}
+  onChange={[Function]}
+  required={false}
   value="foo"
 />
 `;
 
 exports[`Input should render as uncontrolled when just a default value is passed into the Input 1`] = `
 <input
-  class="form-input"
-  value="foo"
+  className="form-input"
+  defaultValue="foo"
+  disabled={false}
+  name={null}
+  required={false}
 />
 `;
 
 exports[`Input should render w/ placeholder text when just a placeholder prop is passed into the Input 1`] = `
 <input
-  class="form-input"
+  className="form-input"
+  disabled={false}
+  name={null}
   placeholder="foo"
+  required={false}
+/>
+`;
+
+exports[`Input should render with a type of password and pattern prop value 1`] = `
+<input
+  className="form-input"
+  disabled={false}
+  name={null}
+  pattern=".{6,}"
+  required={false}
+  type="password"
 />
 `;
 
 exports[`Input should set the forminput to disabled when passed into the component 1`] = `
 <input
-  class="form-input"
-  disabled=""
+  className="form-input"
+  disabled={true}
+  name={null}
+  required={false}
 />
 `;
 
 exports[`Input should set the forminput to invalid when isInvalid is passed into the component 1`] = `
 <input
-  class="form-input form-error"
+  className="form-input form-error"
+  disabled={false}
+  name={null}
+  required={false}
 />
 `;
 
 exports[`Input should set the forminput to required when required is passed into the component 1`] = `
 <input
   aria-required="true"
-  class="form-input"
-  required=""
+  className="form-input"
+  disabled={false}
+  name={null}
+  required={true}
 />
 `;
