@@ -118,7 +118,7 @@ describe('ActionHeader - Themeable', () => {
       properties: {
         '--terra-action-header-margin-right': '2rem',
         '--terra-action-header-icon-top': '0.2rem',
-        '--terra-action-header-back-icon': '#551A8B',
+        '--terra-action-header-back-background': '#551A8B',
       },
     });
   });
@@ -131,7 +131,7 @@ describe('ActionHeader - Themeable', () => {
       properties: {
         '--terra-action-header-margin-left': '2rem',
         '--terra-action-header-margin-right': '2rem',
-        '--terra-action-header-close-icon': '#551A8B',
+        '--terra-action-header-close-background': '#551A8B',
       },
     });
   });
