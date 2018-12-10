@@ -9,7 +9,7 @@
   .dialog-header {
     align-items: center;
     background-color: var(--terra-dialog-header-background-color, #f9f9f9);
-    border-bottom: var(--terra-dialog-header-bottom-border, 1px solid #dedfe0);
+    border-bottom: var(--terra-dialog-header-border-bottom, 1px solid #dedfe0);
     color: var(--terra-dialog-header-foreground-color, #1c1f21);
     display: flex;
     font-size: var(--terra-dialog-header-font-size);
@@ -29,7 +29,7 @@
   }
 
   .close-icon {
-    background: var(--terra-dialog-header-close-icon, inline-svg("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='rgba(17, 17, 17, 1)' d='M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z'/></svg>"));
+    background: var(--terra-dialog-header-close-background, inline-svg("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='rgba(17, 17, 17, 1)' d='M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z'/></svg>"));
     display: inline-block;
     height: var(--terra-dialog-header-close-icon-height, 1.14286rem);
     margin-top: var(--terra-dialog-header-close-icon-margin-top, -0.214285rem);
@@ -47,7 +47,7 @@
 
   .dialog-footer {
     background-color: var(--terra-dialog-footer-background-color, #f9f9f9);
-    border-top: var(--terra-dialog-footer-top-border, 1px solid #dedfe0);
+    border-top: var(--terra-dialog-footer-border-top, 1px solid #dedfe0);
     color: var(--terra-dialog-footer-foreground-color, #1c1f21);
     padding: var(--terra-dialog-footer-padding, 0.7143rem);
   }

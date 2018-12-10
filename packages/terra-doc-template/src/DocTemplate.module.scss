@@ -1,9 +1,9 @@
 :local {
   .examples-header {
-    border-bottom: var(--terra-doc-template-v1-examples-header-border-bottom, 1px solid #eaecef);
-    color: var(--terra-doc-template-v1-examples-header-color);
+    border-bottom: var(--terra-doc-template-examples-header-border-bottom, 1px solid #eaecef);
+    color: var(--terra-doc-template-examples-header-color);
     padding-bottom: 0.3em;
-    text-shadow: var(--terra-doc-template-v1-examples-header-text-shadow);
+    text-shadow: var(--terra-doc-template-examples-header-text-shadow);
   }
 
   .doc-template {
@@ -14,11 +14,11 @@
   }
 
   .doc-card:not(:empty) {
-    background-color: var(--terra-doc-template-v1-doc-card-background-color);
-    border-radius: var(--terra-doc-template-v1-doc-card-border-radius);
-    padding-bottom: var(--terra-doc-template-v1-doc-card-padding-bottom);
-    padding-left: var(--terra-doc-template-v1-doc-card-padding-left);
-    padding-right: var(--terra-doc-template-v1-doc-card-padding-right);
-    padding-top: var(--terra-doc-template-v1-doc-card-padding-top);
+    background-color: var(--terra-doc-template-doc-card-not-empty-background-color);
+    border-radius: var(--terra-doc-template-doc-card-not-empty-border-radius);
+    padding-bottom: var(--terra-doc-template-doc-card-not-empty-padding-bottom);
+    padding-left: var(--terra-doc-template-doc-card-not-empty-padding-left);
+    padding-right: var(--terra-doc-template-doc-card-not-empty-padding-right);
+    padding-top: var(--terra-doc-template-doc-card-not-empty-padding-top);
   }
 }
