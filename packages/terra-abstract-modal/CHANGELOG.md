@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added support for the fallbackFocus option of FocusTrap
 
 1.25.1 - (November 20, 2018)
 ------------------
