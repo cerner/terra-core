@@ -32,6 +32,15 @@ const propTypes = {
    */
   closeOnOutsideClick: PropTypes.bool,
   /**
+   * Element to fallback focus on if the FocusTrap can not find any focusable elements. Valid values are a valid
+   * dom selector string, a dom element, or a function that returns a dom element.
+   */
+  fallbackFocus: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.instanceOf(Element),
+  ]),
+  /**
    * If set to true, the modal will trap the focus and prevents any popup within the modal from gaining focus.
    */
   isFocused: PropTypes.bool,
@@ -124,6 +133,7 @@ class AbstractModal extends React.Component {
       classNameOverlay,
       closeOnEsc,
       closeOnOutsideClick,
+      fallbackFocus,
       isFocused,
       isFullscreen,
       isOpen,
@@ -152,6 +162,7 @@ class AbstractModal extends React.Component {
           classNameModal={classNameModal}
           classNameOverlay={classNameOverlay}
           role={role}
+          fallbackFocus={fallbackFocus}
           isFocused={isFocused}
           isFullscreen={isFullscreen}
           onRequestClose={onRequestClose}

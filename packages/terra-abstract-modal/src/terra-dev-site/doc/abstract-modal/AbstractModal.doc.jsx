@@ -14,6 +14,9 @@ import AbstractModalCloseOnOutsideClick from '../example/AbstractModalCloseOnOut
 import AbstractModalCloseOnOutsideClickSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AbstractModalCloseOnOutsideClick';
 import AbstractModalIsFullscreen from '../example/AbstractModalIsFullscreen';
 import AbstractModalIsFullscreenSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AbstractModalIsFullscreen';
+import FallbackFocusModal from '../example/AbstractModalFallbackFocus';
+import FallbackFocusModalSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AbstractModalFallbackFocus';
+
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -36,6 +39,11 @@ const DocPage = () => (
         title: 'Fullscreen Modal',
         example: <AbstractModalIsFullscreen />,
         source: AbstractModalIsFullscreenSrc,
+      },
+      {
+        title: 'Fallback Focus Modal',
+        example: <FallbackFocusModal />,
+        source: FallbackFocusModalSrc,
       },
     ]}
     propsTables={[

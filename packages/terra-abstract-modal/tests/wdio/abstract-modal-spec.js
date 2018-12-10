@@ -115,6 +115,16 @@ describe('Abstract Modal', () => {
     Terra.should.beAccessible();
   });
 
+  describe('Custom Focusable Fallback', () => {
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-fallback-focus'));
+
+    it('clicks to open modal', () => {
+      browser.click('button');
+    });
+
+    Terra.should.matchScreenshot({ selector: 'div[role="dialog"]' });
+  });
+
   describe('Override Role', () => {
     before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-override-role'));
 
