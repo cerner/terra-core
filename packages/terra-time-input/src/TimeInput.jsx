@@ -144,18 +144,18 @@ class TimeInput extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps) {
     if (
-      nextProps.value === this.props.value
-      && nextProps.variant === this.props.variant
+      this.props.value === prevProps.value
+      && this.props.variant === prevProps.variant
     ) {
       return;
     }
 
-    let hour = TimeUtil.splitHour(nextProps.value);
+    let hour = TimeUtil.splitHour(this.props.value);
     let { meridiem } = this.state;
 
-    if (nextProps.variant === TimeUtil.FORMAT_12_HOUR) {
+    if (this.props.variant === TimeUtil.FORMAT_12_HOUR) {
       if (!this.context.intl.messages['Terra.timeInput.am'] || !this.context.intl.messages['Terra.timeInput.pm']) {
         if (process.env !== 'production') {
           // eslint-disable-next-line no-console
@@ -177,9 +177,10 @@ class TimeInput extends React.Component {
       }
     }
 
+    // eslint-disable-next-line react/no-did-update-set-state
     this.setState({
       hour,
-      minute: TimeUtil.splitMinute(nextProps.value),
+      minute: TimeUtil.splitMinute(this.props.value),
       meridiem,
     });
   }
