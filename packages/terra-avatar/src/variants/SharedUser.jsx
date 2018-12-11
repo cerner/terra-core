@@ -29,7 +29,7 @@ const propTypes = {
    */
   isAriaHidden: PropTypes.bool,
   /**
-   * Overrides the default width.
+   * Overrides the default size.
    */
   size: PropTypes.string,
 };
