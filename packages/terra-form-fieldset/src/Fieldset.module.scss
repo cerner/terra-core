@@ -7,7 +7,7 @@
 
   .fieldset-required > .legend:first-child {
     &::before {
-      color: var(--terra-form-fieldset-required-color, #e50000);
+      color: var(--terra-form-fieldset-required-before-color, #e50000);
       content: '*';
       display: inline-block;
       padding-right: 0.357em;

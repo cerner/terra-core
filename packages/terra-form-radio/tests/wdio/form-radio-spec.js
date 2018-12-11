@@ -38,8 +38,8 @@ describe('Radio', () => {
   const hoverThemingProperties = {
     '--terra-form-radio-hover-border-color': '#800080',
     '--terra-form-radio-hover-border-width': '2px',
-    '--terra-form-radio-outer-ring-checked-hover-border-color': '#800080',
-    '--terra-form-radio-outer-ring-checked-hover-border-width': '2px',
+    '--terra-form-radio-outer-ring-hover-checked-border-color': '#800080',
+    '--terra-form-radio-outer-ring-hover-checked-border-width': '2px',
   };
 
   const focusThemingProperties = {
@@ -48,11 +48,11 @@ describe('Radio', () => {
   };
 
   const focusRingThemingProperties = {
-    '--terra-form-radio-focus-ring-background-color': 'rgba(128, 0, 128, 0.25)',
-    '--terra-form-radio-focus-ring-height': '32px',
-    '--terra-form-radio-focus-ring-left': '-3px',
-    '--terra-form-radio-focus-ring-top': '-3px',
-    '--terra-form-radio-focus-ring-width': '32px',
+    '--terra-form-radio-focus-before-ring-background-color': 'rgba(128, 0, 128, 0.25)',
+    '--terra-form-radio-focus-before-ring-height': '32px',
+    '--terra-form-radio-focus-before-ring-left': '-3px',
+    '--terra-form-radio-focus-before-ring-top': '-3px',
+    '--terra-form-radio-focus-before-ring-width': '32px',
   };
 
   const checkedThemingProperties = {
