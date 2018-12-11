@@ -1,10 +1,10 @@
 :local {
   .textarea {
     background-color: var(--terra-form-textarea-background-color, #fff);
-    background-image: var(--terra-form-textarea-focus-animation-background, none);
+    background-image: var(--terra-form-textarea-focus-animation-background-image, none);
     background-position: 0 100%;
     background-repeat: no-repeat;
-    background-size: var(--terra-form-textarea-focus-background-start, 0 0);
+    background-size: var(--terra-form-textarea-focus-start-background-size, 0 0);
     border-color: var(--terra-form-textarea-border-color, #dedfe0);
     border-radius: var(--terra-form-textarea-border-radius, 3px);
     border-style: var(--terra-form-textarea-border-style, solid);
@@ -61,20 +61,20 @@
 
     &:focus {
       background-color: var(--terra-form-textarea-focus-background-color);
-      background-size: var(--terra-form-textarea-focus-keyboard-animation-size, 0 0);
+      background-size: var(--terra-form-textarea-focus-keyboard-animation-background-size, 0 0);
       border-color: var(--terra-form-textarea-focus-keyboard-border-color, #4cb2e9);
       border-style: var(--terra-form-textarea-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-focus-keyboard-border-width, 1px);
-      color: var(--terra-from-textarea-focus-color, #000);
+      color: var(--terra-form-textarea-focus-color, #000);
       opacity: var(--terra-form-textarea-focus-keyboard-opacity, 1);
       outline: none;
 
       [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
+        box-shadow: var(--terra-form-textarea-focus-keyboard-ltr-box-shadow, 0 0 8px #a6d9f4);
       }
 
       [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
+        box-shadow: var(--terra-form-textarea-focus-keyboard-rtl-box-shadow, 0 0 8px #a6d9f4);
       }
     }
   }
@@ -92,7 +92,7 @@
 
   .form-error {
     background-color: var(--terra-form-textarea-error-background-color);
-    background-image: var(--terra-form-textarea-error-focus-animation-background, none);
+    background-image: var(--terra-form-textarea-error-focus-animation-background-image, none);
     border-color: var(--terra-form-textarea-error-border-color, #dedfe0);
     border-style: var(--terra-form-textarea-error-border-style, solid);
     border-width: var(--terra-form-textarea-error-border-width, 1px);
@@ -117,19 +117,19 @@
 
     &:focus {
       background-color: var(--terra-form-textarea-error-focus-background-color);
-      background-size: var(--terra-form-textarea-error-focus-keyboard-animation-size, 0 0);
+      background-size: var(--terra-form-textarea-error-focus-keyboard-animation-background-size, 0 0);
       border-color: var(--terra-form-textarea-error-focus-keyboard-border-color, #4cb2e9);
       border-style: var(--terra-form-textarea-error-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-error-focus-keyboard-border-width, 1px);
-      color: var(--terra-from-textarea-error-focus-color, #000);
+      color: var(--terra-form-textarea-error-focus-color, #000);
       opacity: var(--terra-form-textarea-error-focus-keyboard-opacity, 1);
 
       [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
+        box-shadow: var(--terra-form-textarea-error-focus-keyboard-ltr-box-shadow, 0 0 8px #a6d9f4);
       }
 
       [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
+        box-shadow: var(--terra-form-textarea-error-focus-keyboard-rtl-box-shadow, 0 0 8px #a6d9f4);
       }
     }
   }
