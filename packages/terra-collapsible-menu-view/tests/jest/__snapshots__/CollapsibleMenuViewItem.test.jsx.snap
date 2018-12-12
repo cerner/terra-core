@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon on menu item when isIconOnly is set, but should set the text 1`] = `
+<MenuItem
+  isActive={false}
+  isDisabled={false}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon prop menu item, but should render text 1`] = `
+<MenuItem
+  isActive={false}
+  isDisabled={false}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set isReversed prop on menu item 1`] = `
+<MenuItem
+  isActive={false}
+  isDisabled={false}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set selected prop on menu item outside of item group 1`] = `
+<MenuItem
+  isActive={false}
+  isDisabled={false}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a disabled menu item when isDisabled is set 1`] = `
+<MenuItem
+  isActive={false}
+  isDisabled={true}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu item 1`] = `
+<MenuItem
+  isActive={false}
+  isDisabled={false}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu item when subMenuItems are given 1`] = `
+<MenuItem
+  isActive={false}
+  isDisabled={false}
+  isSelected={false}
+  subMenuItems={
+    Array [
+      <CollapsibleMenuViewItem
+        isIconOnly={false}
+        isReversed={false}
+        isSelected={false}
+        shouldCloseOnClick={true}
+        text="Menu Item"
+      />,
+    ]
+  }
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should set selected prop on menu item when inside item group 1`] = `
+<MenuItem
+  isActive={false}
+  isDisabled={false}
+  isSelected={true}
+  subMenuItems={Array []}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem should merge custom props 1`] = `
+<div
+  className="face-up-item"
+>
+  <Button
+    className="Testing"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    text="Testing"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`CollapsibleMenuViewItem should not set isSelected on button outside of an item group 1`] = `
+<div
+  className="face-up-item"
+>
+  <Button
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    text="Testing"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`CollapsibleMenuViewItem should render a button group button when in an item group 1`] = `
+<ButtonGroupButton
+  isDisabled={false}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem should render a button with icon and text when isIconOnly and text is set 1`] = `
+<div
+  className="face-up-item"
+>
+  <Button
+    icon={
+      <IconTrash
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    text="Testing"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`CollapsibleMenuViewItem should render a default component 1`] = `
+<div
+  className="face-up-item"
+>
+  <Button
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    text="Testing"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`CollapsibleMenuViewItem should render a disabled button group button that is inside a button group when isDisabled is set 1`] = `
+<ButtonGroupButton
+  isDisabled={true}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewItem should render a disabled button when isDisabled is set 1`] = `
+<div
+  className="face-up-item"
+>
+  <Button
+    isBlock={false}
+    isCompact={false}
+    isDisabled={true}
+    isIconOnly={false}
+    isReversed={false}
+    text="Testing"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`CollapsibleMenuViewItem should render a menu when subMenuItems are given 1`] = `
+<CollapsibleMenu
+  button={
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      text="Testing"
+      type="button"
+      variant="neutral"
+    />
+  }
+>
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    key="1"
+    shouldCloseOnClick={true}
+    text="Menu Item"
+  />
+</CollapsibleMenu>
+`;
+
+exports[`CollapsibleMenuViewItem should set icon prop on button 1`] = `
+<div
+  className="face-up-item"
+>
+  <Button
+    icon={
+      <IconTrash
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    text="Testing"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`CollapsibleMenuViewItem should set isReversed prop on button 1`] = `
+<div
+  className="face-up-item"
+>
+  <Button
+    icon={
+      <IconTrash
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={true}
+    text="Testing"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`CollapsibleMenuViewItem should set isSelected on button that is inside item group 1`] = `
+<ButtonGroupButton
+  isDisabled={false}
+  text="Testing"
+/>
+`;
