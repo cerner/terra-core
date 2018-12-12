@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Moved keyframe animation styles out of CSS Modules parsing and into global styles written to the DOM with JS
+
 ### Fixed
 * Lint Errors
 
