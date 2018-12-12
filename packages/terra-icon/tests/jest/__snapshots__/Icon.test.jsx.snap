@@ -21,7 +21,7 @@ exports[`Icon IconAdd should shallow IconBase 1`] = `
 exports[`Icon IconComment should render IconBase with custom-class 1`] = `
 <svg
   aria-hidden="true"
-  class="icon is-bidi custom-class"
+  class="tui-Icon icon is-bidi custom-class"
   data-name="Layer 1"
   focusable="false"
   height="1em"
