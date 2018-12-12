@@ -8,6 +8,7 @@ Unreleased
 
 ### Changed
 * Removed usage of componentWillReceiveProps
+* Updated examples to use ModalManager v4
 
 2.38.1 - (November 20, 2018)
 ------------------
