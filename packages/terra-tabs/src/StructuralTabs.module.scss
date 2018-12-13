@@ -53,9 +53,9 @@
     }
 
     .collapsible-tabs-container {
-      border-bottom-color: var(--terra-tabs-structural-tab-bar-border-color, #dddedf);
+      border-bottom-color: var(--terra-tabs-structural-tab-bar-border-bottom-color, #dddedf);
       border-bottom-style: solid;
-      border-bottom-width: var(--terra-tabs-structural-tab-bar-border-width, 1px);
+      border-bottom-width: var(--terra-tabs-structural-tab-bar-border-bottom-width, 1px);
 
       .tab,
       .tab-menu {
@@ -97,10 +97,10 @@
       border-style: solid;
       border-width: var(--terra-tabs-structural-border-width, 0 1px 0 0);
       color: var(--terra-tabs-structural-color, #007ee0);
-      margin-left: var(--terra-tabs-structural-margin-between-tabs, 0);
+      margin-left: var(--terra-tabs-structural-between-tabs-margin-left, 0);
       transition-duration: var(--terra-tabs-structural-transition-duration, 0);
       transition-property: background-size;
-      transition-timing-function: var(--terra-tabs-structural-transition-timing, ease);
+      transition-timing-function: var(--terra-tabs-structural-transition-timing-function, ease);
 
       &.is-active {
         background-color: var(--terra-tabs-structural-active-background-color, #fff);
@@ -113,9 +113,9 @@
 
         &::before {
           background-clip: content-box; // Make sure background fully extends
-          transition-duration: var(--terra-tabs-structural-active-transition-duration, 0);
+          transition-duration: var(--terra-tabs-structural-active-before-transition-duration, 0);
           transition-property: width;
-          transition-timing-function: var(--terra-tabs-structural-active-transition-timing, ease);
+          transition-timing-function: var(--terra-tabs-structural-active-before-transition-timing-function, ease);
           width: 100%;
         }
 
@@ -131,11 +131,11 @@
 
       &.is-disabled,
       &.is-disabled:hover {
-        background-color: var(--terra-tabs-structural-disabled-background-color, #fff);
+        background-color: var(--terra-tabs-structural-disabled-hover-background-color, #fff);
         background-size: 0 0;
-        color: var(--terra-tabs-structural-disabled-color, rgba(0, 0, 0, 0.25));
+        color: var(--terra-tabs-structural-disabled-hover-color, rgba(0, 0, 0, 0.25));
         cursor: default;
-        opacity: var(--terra-tabs-structural-disabled-opacity, 1);
+        opacity: var(--terra-tabs-structural-disabled-hover-opacity, 1);
       }
 
       &.is-disabled .label,
@@ -159,7 +159,22 @@
       }
     }
 
-    .collapsible-tabs-container:focus .is-active,
+    .collapsible-tabs-container:focus .is-active {
+      background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
+      background-image: var(--terra-tabs-structural-active-focus-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+      color: var(--terra-tabs-structural-active-focus-color, inherit);
+      position: relative;
+      z-index: 1;
+
+      [dir=rtl] & {
+        box-shadow: var(--terra-tabs-keyboard-active-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+      }
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-tabs-keyboard-active-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+      }
+    }
+
     .tab-menu:focus.is-active {
       background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
       background-image: var(--terra-tabs-structural-active-focus-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
@@ -202,9 +217,9 @@
     .collapsed-tabs-container .tab-menu,
     .collapsed-tabs-container .tab-menu.is-active,
     .collapsed-tabs-container .tab-menu:focus {
-      border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-border-bottom-color);
+      border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-focus-border-bottom-color);
       border-bottom-style: solid;
-      border-bottom-width: var(--terra-tabs-structural-collapsed-menu-bar-border-bottom-width, 0);
+      border-bottom-width: var(--terra-tabs-structural-collapsed-menu-bar-focus-border-bottom-width, 0);
     }
   }
 }
