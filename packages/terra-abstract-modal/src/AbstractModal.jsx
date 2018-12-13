@@ -33,14 +33,13 @@ const propTypes = {
   closeOnOutsideClick: PropTypes.bool,
   /**
    * Element to fallback focus on if the FocusTrap can not find any focusable elements. Valid values are a valid
-   * dom selector string that is passed into document.querySelector, a dom element, or a function
+   * dom selector string that is passed into document.querySelector or a function
    * that returns a dom element. If using a dom selector, ensure that the query works for all browsers with
    * the document.querySelector method.
    */
   fallbackFocus: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
-    PropTypes.instanceOf(Element),
   ]),
   /**
    * If set to true, the modal will trap the focus and prevents any popup within the modal from gaining focus.

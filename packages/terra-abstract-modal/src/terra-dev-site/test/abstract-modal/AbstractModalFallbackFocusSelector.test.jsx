@@ -11,7 +11,6 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
       isOpen: false,
     };
 
-    this.focusTrapRef = React.createRef();
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
@@ -32,10 +31,10 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
           isOpen={this.state.isOpen}
           closeOnOutsideClick
           onRequestClose={this.handleCloseModal}
-          fallbackFocus={() => (this.focusTrapRef.current)}
+          fallbackFocus="#focus-element"
         >
-          Focusing
-          <p ref={this.focusTrapRef} tabIndex="-1">Focus Trap!</p>
+          Fallback Focus Modal
+          <p id="focus-element" tabIndex="-1">Fallback Element</p>
         </AbstractModal>
         <button type="button" onClick={this.handleOpenModal}>Open Modal</button>
       </div>

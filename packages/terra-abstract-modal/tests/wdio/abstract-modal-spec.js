@@ -115,14 +115,32 @@ describe('Abstract Modal', () => {
     Terra.should.beAccessible();
   });
 
-  describe('Custom Focusable Fallback', () => {
-    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-fallback-focus'));
+  describe('Custom Focusable Fallback Function', () => {
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-fallback-focus-function'));
 
     it('clicks to open modal', () => {
       browser.click('button');
     });
 
     Terra.should.matchScreenshot({ selector: 'div[role="dialog"]' });
+
+    it('has the appropriate focus', () => {
+      browser.hasFocus('#focus-element');
+    });
+  });
+
+  describe('Custom Focusable Fallback Selector', () => {
+    before(() => browser.url('/#/raw/tests/terra-abstract-modal/abstract-modal/abstract-modal-fallback-focus-selector'));
+
+    it('clicks to open modal', () => {
+      browser.click('button');
+    });
+
+    Terra.should.matchScreenshot({ selector: 'div[role="dialog"]' });
+
+    it('has the appropriate focus', () => {
+      browser.hasFocus('#focus-element');
+    });
   });
 
   describe('Override Role', () => {

@@ -73,12 +73,6 @@ it('should allow us to pass in a dom selector as a fallbackFocus', () => {
   global.navigator.platform = null;
 });
 
-it('should allow us to pass in a dom element as fallbackFocus', () => {
-  const modal = mount(<AbstractModalExample fallbackFocus={document.createElement('p')} />);
-  expect(modal).toMatchSnapshot();
-  global.navigator.platform = null;
-});
-
 it('should allow us to pass in a function as fallbackFocus', () => {
   const modal = mount(<AbstractModalExample fallbackFocus={() => {}} />);
   expect(modal).toMatchSnapshot();
