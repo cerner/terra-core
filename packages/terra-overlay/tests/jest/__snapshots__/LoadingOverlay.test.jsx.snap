@@ -59,7 +59,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                 >
                   <svg
                     aria-hidden="true"
-                    class="icon icon"
+                    class="tui-Icon icon icon"
                     data-name="Layer 1"
                     focusable="false"
                     height="36"
@@ -128,7 +128,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                   >
                     <svg
                       aria-hidden="true"
-                      className="icon icon"
+                      className="tui-Icon icon icon"
                       data-name="Layer 1"
                       focusable="false"
                       height="36"
@@ -195,7 +195,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                 >
                   <svg
                     aria-hidden="true"
-                    class="icon icon"
+                    class="tui-Icon icon icon"
                     data-name="Layer 1"
                     focusable="false"
                     height="36"
@@ -264,7 +264,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                   >
                     <svg
                       aria-hidden="true"
-                      className="icon icon"
+                      className="tui-Icon icon icon"
                       data-name="Layer 1"
                       focusable="false"
                       height="36"
