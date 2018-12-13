@@ -178,7 +178,7 @@ describe('Tabs - Responsive', () => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-tabs-menu-arrow-left-margin': '50px',
+          '--terra-tabs-menu-arrow-margin-left': '50px',
           '--terra-tabs-menu-collapsed-justify-content': 'center',
           '--terra-tabs-structural-collapsed-border-bottom-color': 'purple',
         },
