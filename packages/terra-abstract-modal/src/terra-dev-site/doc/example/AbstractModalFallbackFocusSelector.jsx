@@ -1,9 +1,9 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import AbstractModal from '../../../AbstractModal';
-import './AbstractModalTestStyles.module.scss';
+import AbstractModal from 'terra-abstract-modal/lib/AbstractModal';
+import styles from './ExampleAbstractSize.module.scss';
 
-class AbstractModalCloseFallbackFocusFunction extends React.Component {
+class AbstractModalCloseFallbackFocusSelector extends React.Component {
   constructor() {
     super();
 
@@ -32,10 +32,16 @@ class AbstractModalCloseFallbackFocusFunction extends React.Component {
           isOpen={this.state.isOpen}
           closeOnOutsideClick
           onRequestClose={this.handleCloseModal}
+          classNameModal={styles['fixed-size']}
           fallbackFocus={() => (this.focusTrapRef.current)}
         >
-          Fallback Focus Modal
-          <p id="focus-element" ref={this.focusTrapRef} tabIndex="-1">Fallback Element</p>
+          <div style={{
+            height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'lightgreen',
+          }}
+          >
+            Focusing
+            <p ref={this.focusTrapRef} tabIndex="-1">Focus Trap!</p>
+          </div>
         </AbstractModal>
         <button type="button" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
@@ -43,4 +49,4 @@ class AbstractModalCloseFallbackFocusFunction extends React.Component {
   }
 }
 
-export default AbstractModalCloseFallbackFocusFunction;
+export default AbstractModalCloseFallbackFocusSelector;

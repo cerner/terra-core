@@ -3,7 +3,7 @@ import React from 'react';
 import AbstractModal from 'terra-abstract-modal/lib/AbstractModal';
 import styles from './ExampleAbstractSize.module.scss';
 
-class AbstractModalCloseOnOutsideClick extends React.Component {
+class AbstractModalCloseFallbackFocusFunction extends React.Component {
   constructor() {
     super();
 
@@ -35,8 +35,13 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
           classNameModal={styles['fixed-size']}
           fallbackFocus={() => (this.focusTrapRef.current)}
         >
-          Focusing
-          <p ref={this.focusTrapRef} tabIndex="-1">Focus Trap!</p>
+          <div style={{
+            height: '100%', width: '100%', overflow: 'hidden', backgroundColor: 'lightgreen',
+          }}
+          >
+            Fallback Focus Modal
+            <p id="focus-element" ref={this.focusTrapRef} tabIndex="-1">Fallback Element</p>
+          </div>
         </AbstractModal>
         <button type="button" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
@@ -44,4 +49,4 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
   }
 }
 
-export default AbstractModalCloseOnOutsideClick;
+export default AbstractModalCloseFallbackFocusFunction;

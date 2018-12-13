@@ -3,7 +3,7 @@ import React from 'react';
 import AbstractModal from '../../../AbstractModal';
 import './AbstractModalTestStyles.module.scss';
 
-class AbstractModalCloseOnOutsideClick extends React.Component {
+class AbstractModalCloseFallbackFocusSelector extends React.Component {
   constructor() {
     super();
 
@@ -42,4 +42,4 @@ class AbstractModalCloseOnOutsideClick extends React.Component {
   }
 }
 
-export default AbstractModalCloseOnOutsideClick;
+export default AbstractModalCloseFallbackFocusSelector;
