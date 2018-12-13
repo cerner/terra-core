@@ -75,14 +75,6 @@ class ToggleButton extends React.Component {
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.isInitiallyOpen === this.props.isInitiallyOpen) {
-      return;
-    }
-
-    this.setState({ isOpen: nextProps.isInitiallyOpen });
-  }
-
   handleOnClick(e) {
     e.preventDefault();
 

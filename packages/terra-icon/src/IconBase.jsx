@@ -62,8 +62,25 @@ const IconBase = ({
 }) => {
   const attributes = Object.assign({}, customProps);
 
+  const addAnimationStyles = () => {
+    if (isSpin) {
+      const css = '@-webkit-keyframes tui-spin-ltr{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes tui-spin-ltr{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@-webkit-keyframes tui-spin-rtl{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(-359deg);transform:rotate(-359deg)}}@keyframes tui-spin-rtl{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(-359deg);transform:rotate(-359deg)}}[dir=ltr] .tui-Icon.is-spin {-webkit-animation: tui-spin-ltr 2s infinite linear;animation: tui-spin-ltr 2s infinite linear;}[dir=rtl] .tui-Icon.is-spin {-webkit-animation: tui-spin-rtl 2s infinite linear;animation: tui-spin-rtl 2s infinite linear;}';
+      const head = document.head || document.getElementsByTagName('head')[0];
+      const style = document.createElement('style');
+      style.type = 'text/css';
+      style.id = 'terra-icon-animation';
+      // If we haven't written the styles to the DOM yet, add them, otherwise don't do this for subsequent spinner icons.
+      if (!document.getElementById(style.id)) {
+        style.appendChild(document.createTextNode(css));
+        head.appendChild(style);
+      }
+    }
+  };
+  addAnimationStyles();
+
   // append to existing classNames
   const classes = cx(
+    'tui-Icon',
     'icon',
     { 'is-bidi': isBidi },
     { 'is-spin': isSpin },
