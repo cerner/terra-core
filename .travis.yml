@@ -5,6 +5,7 @@ services:
 branches:
   only:
     - master
+    - ocs-theme-variables
 cache:
   directories:
     - $HOME/docker
