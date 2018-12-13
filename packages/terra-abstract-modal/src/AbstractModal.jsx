@@ -33,7 +33,9 @@ const propTypes = {
   closeOnOutsideClick: PropTypes.bool,
   /**
    * Element to fallback focus on if the FocusTrap can not find any focusable elements. Valid values are a valid
-   * dom selector string, a dom element, or a function that returns a dom element.
+   * dom selector string that is passed into document.querySelector, a dom element, or a function
+   * that returns a dom element. If using a dom selector, ensure that the query works for all browsers with
+   * the document.querySelector method.
    */
   fallbackFocus: PropTypes.oneOfType([
     PropTypes.string,
