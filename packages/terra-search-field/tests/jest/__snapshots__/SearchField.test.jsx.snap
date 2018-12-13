@@ -138,7 +138,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
               >
                 <svg
                   aria-hidden="true"
-                  className="icon icon-svg"
+                  className="tui-Icon icon icon-svg"
                   data-name="Layer 1"
                   focusable="false"
                   height="1em"
