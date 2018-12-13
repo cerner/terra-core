@@ -67,12 +67,6 @@ it('should render the correct snapshot for iPads', () => {
   global.navigator.platform = null;
 });
 
-it('should allow us to pass in a fallbackFocus element', () => {
-  const modal = mount(<AbstractModalExample fallbackFocus="#focusable-element" />);
-  expect(modal).toMatchSnapshot();
-  global.navigator.platform = null;
-});
-
 it('should allow us to pass in a dom selector as a fallbackFocus', () => {
   const modal = mount(<AbstractModalExample fallbackFocus="#focusable-element" />);
   expect(modal).toMatchSnapshot();
