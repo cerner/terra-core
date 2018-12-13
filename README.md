@@ -134,7 +134,6 @@ Please review [Terra's Internationalization documentation](https://engineering.c
 
 - [terra-action-header](https://github.com/cerner/terra-core/tree/master/packages/terra-action-header)
 - [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert)
-- [terra-psible-menu-view](https://github.com/cerner/terra-core/tree/master/packages/terra-collapsible-menu-view)
 - [terra-date-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker)
 - [terra-date-time-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-time-picker)
 - [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner)
