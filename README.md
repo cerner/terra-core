@@ -146,7 +146,6 @@ Please review [Terra's Internationalization documentation](https://engineering.c
 - [terra-search-field](https://github.com/cerner/terra-core/tree/master/packages/terra-search-field)
 - [terra-status-view](https://github.com/cerner/terra-core/tree/master/packages/terra-status-view)
 - [terra-tabs](https://github.com/cerner/terra-core/tree/master/packages/terra-tabs)
-- [terra-time-input](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input)
 
 ## Contributing
 
