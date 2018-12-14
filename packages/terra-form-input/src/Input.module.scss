@@ -59,11 +59,11 @@
       outline: none;
 
       [dir=ltr] & {
-        box-shadow: var(--terra-form-input-focus-keyboard-box-shadow-ltr);
+        box-shadow: var(--terra-form-input-focus-keyboard-ltr-box-shadow);
       }
 
       [dir=rtl] & {
-        box-shadow: var(--terra-form-input-focus-keyboard-box-shadow-rtl);
+        box-shadow: var(--terra-form-input-focus-keyboard-rtl-box-shadow);
       }
     }
   }

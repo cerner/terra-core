@@ -1,7 +1,7 @@
 :local {
   .no-results {
     overflow: hidden;
-    padding: var(--terra-select-no-results-padding, 0.28571rem 0.714286rem);
+    padding: var(--terra-form-select-no-results-padding, 0.28571rem 0.714286rem);
     word-break: break-word;
     word-wrap: break-word;
   }
