@@ -43,7 +43,7 @@
   }
 
   .dark {
-    background: var(--terra-overlay-dark-background-color, rgba(28, 31, 33, 0.8));
+    background: var(--terra-overlay-dark-background, rgba(28, 31, 33, 0.8));
     background-image: var(--terra-overlay-dark-background-image, none);
 
     .content {
@@ -53,7 +53,7 @@
   }
 
   .light {
-    background: var(--terra-overlay-light-background-color, rgba(245, 245, 245, 0.7));
+    background: var(--terra-overlay-light-background, rgba(245, 245, 245, 0.7));
     background-image: var(--terra-overlay-light-background-image, none);
 
     .content {
