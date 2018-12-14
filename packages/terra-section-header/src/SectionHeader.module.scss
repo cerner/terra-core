@@ -60,35 +60,35 @@
 
     &.is-interactable.is-transparent {
       &:hover {
-        background: var(--terra-section-header-transparent-hover-background, rgba(0, 0, 0, 0));
-        border-bottom: var(--terra-section-header-transparent-hover-border-bottom, 0);
-        border-left: var(--terra-section-header-transparent-hover-border-left, 0);
-        border-right: var(--terra-section-header-transparent-hover-border-right, 0);
-        border-top: var(--terra-section-header-transparent-hover-border-top, 0);
-        box-shadow: var(--terra-section-header-transparent-hover-box-shadow);
-        color: var(--terra-section-header-transparent-hover-color, #1c1f21);
+        background: var(--terra-transparent-section-header-hover-background, rgba(0, 0, 0, 0));
+        border-bottom: var(--terra-transparent-section-header-hover-border-bottom, 0);
+        border-left: var(--terra-transparent-section-header-hover-border-left, 0);
+        border-right: var(--terra-transparent-section-header-hover-border-right, 0);
+        border-top: var(--terra-transparent-section-header-hover-border-top, 0);
+        box-shadow: var(--terra-transparent-section-header-hover-box-shadow);
+        color: var(--terra-transparent-section-header-hover-color, #1c1f21);
       }
 
       &:focus {
-        background: var(--terra-section-header-transparent-focus-background, rgba(0, 0, 0, 0.07));
-        border-bottom: var(--terra-section-header-transparent-focus-border-bottom, 0);
-        border-left: var(--terra-section-header-transparent-focus-border-left, 0);
-        border-right: var(--terra-section-header-transparent-focus-border-right, 0);
-        border-top: var(--terra-section-header-transparent-focus-border-top, 0);
-        box-shadow: var(--terra-section-header-transparent-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-        color: var(--terra-section-header-transparent-focus-color, #1c1f21);
+        background: var(--terra-transparent-section-header-focus-background, rgba(0, 0, 0, 0.07));
+        border-bottom: var(--terra-transparent-section-header-focus-border-bottom, 0);
+        border-left: var(--terra-transparent-section-header-focus-border-left, 0);
+        border-right: var(--terra-transparent-section-header-focus-border-right, 0);
+        border-top: var(--terra-transparent-section-header-focus-border-top, 0);
+        box-shadow: var(--terra-transparent-section-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+        color: var(--terra-transparent-section-header-focus-color, #1c1f21);
         outline: none;
       }
 
       &:active,
       &.is-active {
-        background: var(--terra-section-header-transparent-active-background, rgba(0, 0, 0, 0.07));
-        border-bottom: var(--terra-section-header-transparent-active-border-bottom, 0);
-        border-left: var(--terra-section-header-transparent-active-border-left, 0);
-        border-right: var(--terra-section-header-transparent-active-border-right, 0);
-        border-top: var(--terra-section-header-transparent-active-border-top, 0);
-        box-shadow: var(--terra-section-header-transparent-active-box-shadow);
-        color: var(--terra-section-header-transparent-active-color, #1c1f21);
+        background: var(--terra-transparent-section-header-active-background, rgba(0, 0, 0, 0.07));
+        border-bottom: var(--terra-transparent-section-header-active-border-bottom, 0);
+        border-left: var(--terra-transparent-section-header-active-border-left, 0);
+        border-right: var(--terra-transparent-section-header-active-border-right, 0);
+        border-top: var(--terra-transparent-section-header-active-border-top, 0);
+        box-shadow: var(--terra-transparent-section-header-active-box-shadow);
+        color: var(--terra-transparent-section-header-active-color, #1c1f21);
       }
     }
   }
