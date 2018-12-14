@@ -45,14 +45,14 @@
     &.is-open {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      border-top-left-radius: var(--terra-form-select-border-radius, 3px);
-      border-top-right-radius: var(--terra-form-select-border-radius, 3px);
+      border-top-left-radius: var(--terra-form-select-border-top-left-radius, 3px);
+      border-top-right-radius: var(--terra-form-select-border-top-right-radius, 3px);
       box-shadow: none;
     }
 
     &.is-above {
-      border-bottom-left-radius: var(--terra-form-select-border-radius, 3px);
-      border-bottom-right-radius: var(--terra-form-select-border-radius, 3px);
+      border-bottom-left-radius: var(--terra-form-select-border-bottom-left-radius, 3px);
+      border-bottom-right-radius: var(--terra-form-select-border-bottom-right-radius, 3px);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
@@ -194,8 +194,8 @@
     > .display {
       background-size: var(--terra-form-select-background-size, 0 0);
       border: var(--terra-form-select-border, 1px solid #dedfe0);
-      border-bottom-left-radius: var(--terra-form-select-border-radius, 3px);
-      border-top-left-radius: var(--terra-form-select-border-radius, 3px);
+      border-bottom-left-radius: var(--terra-form-select-border-bottom-left-radius, 3px);
+      border-top-left-radius: var(--terra-form-select-border-top-left-radius, 3px);
       cursor: text;
       display: flex;
       flex: 1 1 auto; // IE 10
@@ -212,9 +212,9 @@
 
     > .toggle {
       border: var(--terra-form-select-toggle-border, 1px solid #dedfe0);
-      border-bottom-right-radius: var(--terra-form-select-border-radius, 3px);
+      border-bottom-right-radius: var(--terra-form-select-border-bottom-right-radius, 3px);
       border-left: 0;
-      border-top-right-radius: var(--terra-form-select-border-radius, 3px);
+      border-top-right-radius: var(--terra-form-select-border-top-right-radius, 3px);
 
       &:hover {
         background-color: var(--terra-form-select-toggle-hover-background-color, none);
@@ -249,12 +249,12 @@
 
     &.is-above {
       > .display {
-        border-bottom-left-radius: var(--terra-form-select-border-radius, 3px);
+        border-bottom-left-radius: var(--terra-form-select-border-bottom-left-radius, 3px);
         border-top-left-radius: 0;
       }
 
       > .toggle {
-        border-bottom-right-radius: var(--terra-form-select-border-radius, 3px);
+        border-bottom-right-radius: var(--terra-form-select-border-bottom-right-radius, 3px);
         border-top-right-radius: 0;
       }
     }

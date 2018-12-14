@@ -6,7 +6,7 @@
     user-select: none;
 
     &:first-child > .label {
-      padding: var(--terra-select-first-optgroup-label-padding, 0.38461538461538464rem);
+      padding: var(--terra-form-select-first-optgroup-label-padding, 0.38461538461538464rem);
     }
 
     &:not(:first-child) > .label {
