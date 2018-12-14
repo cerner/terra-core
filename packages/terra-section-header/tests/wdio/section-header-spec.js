@@ -48,7 +48,7 @@ describe('SectionHeader', () => {
         '--terra-section-header-accordion-icon-padding-end': '100px',
         '--terra-section-header-accordion-icon-padding-bottom': '100px',
         '--terra-section-header-accordion-icon-padding-top': '100px',
-        '--terra-section-header-accordion-icon': 'rgb(0, 0, 100)',
+        '--terra-section-header-accordion-icon-background': 'rgb(0, 0, 100)',
       },
     });
 
