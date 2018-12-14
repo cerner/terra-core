@@ -71,10 +71,10 @@
       background-color: var(--terra-table-tbody-background-color);
 
       tr {
-        border-top: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
+        border-top: var(--terra-table-row-border-top, 1px solid #c8cacb);
 
         &:last-of-type {
-          border-bottom: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
+          border-bottom: var(--terra-table-last-row-border-bottom, 1px solid #c8cacb);
         }
       }
     }
@@ -106,23 +106,23 @@
   }
 
   .min-width-tiny {
-    min-width: var(--terra-table-cell-min-width-tiny, 3rem);
+    min-width: var(--terra-table-cell-tiny-min-width, 3rem);
   }
 
   .min-width-small {
-    min-width: var(--terra-table-cell-min-width-small, 4.25rem);
+    min-width: var(--terra-table-cell-small-min-width, 4.25rem);
   }
 
   .min-width-medium {
-    min-width: var(--terra-table-cell-min-width-medium, 5.75rem);
+    min-width: var(--terra-table-cell-medium-min-width, 5.75rem);
   }
 
   .min-width-large {
-    min-width: var(--terra-table-cell-min-width-large, 8.5rem);
+    min-width: var(--terra-table-cell-large-min-width, 8.5rem);
   }
 
   .min-width-huge {
-    min-width: var(--terra-table-cell-min-width-huge, 10.5rem);
+    min-width: var(--terra-table-cell-huge-min-width, 10.5rem);
   }
 
   .padded {
@@ -181,7 +181,7 @@
     }
 
     + .row {
-      border-top-color: var(--terra-table-row-selected-border-color, #0092e0);
+      border-top-color: var(--terra-table-row-selected-border-top-color, #0092e0);
     }
   }
 
