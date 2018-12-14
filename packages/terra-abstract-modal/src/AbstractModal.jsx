@@ -32,6 +32,16 @@ const propTypes = {
    */
   closeOnOutsideClick: PropTypes.bool,
   /**
+   * Element to fallback focus on if the FocusTrap can not find any focusable elements. Valid values are a valid
+   * dom selector string that is passed into document.querySelector or a function
+   * that returns a dom element. If using a dom selector, ensure that the query works for all browsers with
+   * the document.querySelector method.
+   */
+  fallbackFocus: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+  ]),
+  /**
    * If set to true, the modal will trap the focus and prevents any popup within the modal from gaining focus.
    */
   isFocused: PropTypes.bool,
@@ -87,12 +97,12 @@ class AbstractModal extends React.Component {
     document.addEventListener('keydown', this.handleKeydown);
   }
 
-  componentWillReceiveProps(nextProps) {
-    // When the Modal no longer in focus, it should no longer listen to the keydown event to handle the Escape key.
+  componentDidUpdate(prevProps) {
+    // When the Modal is no longer in focus, it should no longer listen to the keydown event to handle the Escape key.
     // Otherwise, the Modal would also get closed when the intention for pressing the Escape key is to close a popup inside the modal.
-    if (!nextProps.isFocused && this.props.isFocused) {
+    if (!this.props.isFocused && prevProps.isFocused) {
       document.removeEventListener('keydown', this.handleKeydown);
-    } else if (nextProps.isFocused && !this.props.isFocused) {
+    } else if (this.props.isFocused && !prevProps.isFocused) {
       document.addEventListener('keydown', this.handleKeydown);
     }
   }
@@ -124,6 +134,7 @@ class AbstractModal extends React.Component {
       classNameOverlay,
       closeOnEsc,
       closeOnOutsideClick,
+      fallbackFocus,
       isFocused,
       isFullscreen,
       isOpen,
@@ -152,6 +163,7 @@ class AbstractModal extends React.Component {
           classNameModal={classNameModal}
           classNameOverlay={classNameOverlay}
           role={role}
+          fallbackFocus={fallbackFocus}
           isFocused={isFocused}
           isFullscreen={isFullscreen}
           onRequestClose={onRequestClose}

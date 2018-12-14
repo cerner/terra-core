@@ -79,10 +79,11 @@ class Signature extends React.Component {
     this.canvas.addEventListener('resize', this.updateDimensions);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if ((this.props.lineSegments !== nextProps.lineSegments) || (this.props.lineWidth !== nextProps.lineWidth)) {
-      this.setState({ lineSegments: nextProps.lineSegments });
-      this.drawSignature(nextProps.lineSegments, nextProps.lineWidth);
+  componentDidUpdate(prevProps) {
+    if ((this.props.lineSegments !== prevProps.lineSegments) || (this.props.lineWidth !== prevProps.lineWidth)) {
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ lineSegments: this.props.lineSegments });
+      this.drawSignature(this.props.lineSegments, this.props.lineWidth);
     }
   }
 

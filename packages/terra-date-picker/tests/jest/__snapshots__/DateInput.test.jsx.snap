@@ -27,7 +27,7 @@ exports[`should render a default date input 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon-svg"
+          class="tui-Icon icon icon-svg"
           focusable="false"
           height="1em"
           viewBox="0 0 48 48"
@@ -76,7 +76,7 @@ exports[`should render a default date input with all props 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon-svg"
+          class="tui-Icon icon icon-svg"
           focusable="false"
           height="1em"
           viewBox="0 0 48 48"
