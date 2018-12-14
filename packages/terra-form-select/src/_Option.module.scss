@@ -3,30 +3,30 @@
 :local {
   .option {
     align-items: center;
-    color: var(--terra-select-option-color, #1c1f21);
+    color: var(--terra-form-select-option-color, #1c1f21);
     cursor: pointer;
     display: flex;
-    font-size: var(--terra-select-option-font-size, 1.143rem);
-    line-height: var(--terra-select-option-line-height, 1.125);
-    padding: var(--terra-select-option-padding, 0.286rem 0.714rem);
+    font-size: var(--terra-form-select-option-font-size, 1.143rem);
+    line-height: var(--terra-form-select-option-line-height, 1.125);
+    padding: var(--terra-form-select-option-padding, 0.286rem 0.714rem);
     user-select: none;
   }
 
   .is-default {
     &:active:not(.is-disabled) {
-      background-color: var(--terra-select-option-pressed-background-color, #0079be);
-      color: var(--terra-select-option-pressed-color, #fff);
-      font-weight: var(--terra-select-option-pressed-font-weight, normal);
+      background-color: var(--terra-form-select-option-pressed-active-background-color, #0079be);
+      color: var(--terra-form-select-option-pressed-active-color, #fff);
+      font-weight: var(--terra-form-select-option-pressed-active-font-weight, normal);
     }
 
     &.is-selected {
-      background-color: var(--terra-select-option-selected-background-color, #0079be);
-      color: var(--terra-select-option-selected-color, #fff);
-      font-weight: var(--terra-select-option-selected-font-weight, normal);
+      background-color: var(--terra-form-select-option-selected-background-color, #0079be);
+      color: var(--terra-form-select-option-selected-color, #fff);
+      font-weight: var(--terra-form-select-option-selected-font-weight, normal);
     }
 
     &.is-selected.is-active {
-      background-color: var(--terra-select-option-selected-active-background-color, #0065a3);
+      background-color: var(--terra-form-select-option-selected-active-background-color, #0065a3);
     }
   }
 
@@ -44,27 +44,27 @@
     background-size: contain;
     display: inline-block; // IE 10
     flex-shrink: 0;
-    height: var(--terra-select-option-icon-height, 1.143rem);
-    margin-right: var(--terra-select-option-icon-margin-right, 0.714rem);
+    height: var(--terra-form-select-option-icon-height, 1.143rem);
+    margin-right: var(--terra-form-select-option-icon-margin-right, 0.714rem);
     visibility: hidden;
-    width: var(--terra-select-option-icon-width, 1.143rem);
+    width: var(--terra-form-select-option-icon-width, 1.143rem);
   }
 
   .is-checkable > .icon {
-    background: var(--terra-select-option-icon-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#1c1f21" opacity="0.12"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0087d1"/></svg>'));
+    background: var(--terra-form-select-option-icon-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#1c1f21" opacity="0.12"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0087d1"/></svg>'));
   }
 
   .is-selected.is-active > .icon {
-    background: var(--terra-select-option-icon-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.5"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
+    background: var(--terra-form-select-option-icon-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.5"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
   }
 
   .is-checkable:active > .icon {
-    background: var(--terra-select-option-icon-pressed-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.8"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
+    background: var(--terra-form-select-option-icon-pressed-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.8"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
     visibility: visible;
   }
 
   .is-add-option > .icon {
-    background: var(--terra-select-option-icon-add-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#0079be" d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"/></svg>'));
+    background: var(--terra-form-select-option-icon-add-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#0079be" d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"/></svg>'));
     visibility: visible;
   }
 
@@ -73,11 +73,11 @@
   }
 
   .is-active {
-    background-color: var(--terra-select-option-active-background-color, #ebf6fd);
+    background-color: var(--terra-form-select-option-active-background-color, #ebf6fd);
   }
 
   .is-disabled {
-    color: var(--terra-select-option-disabled-color, rgba(28, 31, 33, 0.25));
+    color: var(--terra-form-select-option-disabled-color, rgba(28, 31, 33, 0.25));
     cursor: not-allowed;
     pointer-events: none;
   }
