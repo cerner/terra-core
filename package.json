@@ -89,7 +89,7 @@
     "rimraf": "^2.6.1",
     "shelljs": "^0.8.2",
     "stylelint": "^9.0.0",
-    "stylelint-config-terra": "^1.0.0",
+    "stylelint-config-terra": "git+https://github.com/cerner/stylelint-config-terra.git#Errors",
     "terra-dev-site": "^2.0.0",
     "terra-toolkit": "^4.5.0",
     "webpack-merge": "^4.1.2"
