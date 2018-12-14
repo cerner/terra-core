@@ -67,6 +67,18 @@ it('should render the correct snapshot for iPads', () => {
   global.navigator.platform = null;
 });
 
+it('should allow us to pass in a dom selector as a fallbackFocus', () => {
+  const modal = mount(<AbstractModalExample fallbackFocus="#focusable-element" />);
+  expect(modal).toMatchSnapshot();
+  global.navigator.platform = null;
+});
+
+it('should allow us to pass in a function as fallbackFocus', () => {
+  const modal = mount(<AbstractModalExample fallbackFocus={() => {}} />);
+  expect(modal).toMatchSnapshot();
+  global.navigator.platform = null;
+});
+
 it('should render the correct snapshot for iPods', () => {
   Object.defineProperty(global.navigator, 'platform', { value: 'iPod', writable: 'true' });
 
