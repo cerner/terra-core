@@ -8,7 +8,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: var(--terra-menu-item-hover-color, #ebf6fd);
+        background-color: var(--terra-menu-item-hover-background-color, #ebf6fd);
       }
 
       &:hover .checkmark {
@@ -20,7 +20,7 @@
       }
 
       &:focus {
-        background-color: var(--terra-menu-item-focus-color, #ebf6fd);
+        background-color: var(--terra-menu-item-focus-background-color, #ebf6fd);
         outline: var(--terra-menu-item-focus-outline, -webkit-focus-ring-color auto 5px); //browser default fallback. if no fallback is provided, outline does not render.
       }
 
