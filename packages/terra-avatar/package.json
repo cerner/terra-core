@@ -1,8 +1,8 @@
 {
   "name": "terra-avatar",
-  "main": "lib/Avatar.js",
+  "main": "lib/index.js",
   "version": "1.29.0",
-  "description": "The terra-avatar component displays an avatar, which can be either an image or text, in a circular frame. If neither an image or text is provided, a variant-based fallback icon is used.",
+  "description": "Contains components that represent a person, location or entity. Variants include Avatar, Facility, and SharedUser.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -29,6 +29,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^1.22.0",
+    "terra-form-select": "^4.22.0",
     "terra-image": "^2.29.0",
     "terra-mixins": "^1.23.0"
   },

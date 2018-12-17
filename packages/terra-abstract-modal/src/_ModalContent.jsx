@@ -36,6 +36,16 @@ const propTypes = {
    */
   onRequestClose: PropTypes.func.isRequired,
   /**
+   * Element to fallback focus on if the FocusTrap can not find any focusable elements. Valid values are a valid
+   * dom selector string that is passed into document.querySelector or a function
+   * that returns a dom element. If using a dom selector, ensure that the query works for all browsers with
+   * the document.querySelector method.
+   */
+  fallbackFocus: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+  ]),
+  /**
    * If set to true, the modal will trap the focus and prevents any popup within the modal from gaining focus.
    */
   isFocused: PropTypes.bool,
@@ -61,6 +71,7 @@ const defaultProps = {
   classNameModal: null,
   classNameOverlay: null,
   closeOnOutsideClick: true,
+  fallbackFocus: undefined,
   isFocused: true,
   isFullscreen: false,
   isScrollable: false,
@@ -78,6 +89,7 @@ class ModalContent extends React.Component {
       classNameOverlay,
       closeOnOutsideClick,
       onRequestClose,
+      fallbackFocus,
       role,
       isFocused,
       isFullscreen,
@@ -102,9 +114,20 @@ class ModalContent extends React.Component {
     delete customProps.closePortal;
     const platformIsiOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
+    this.modalContentRef = React.createRef();
+
+    if (fallbackFocus) {
+      this.fallbackFocus = fallbackFocus;
+    } else {
+      this.fallbackFocus = () => (this.modalContentRef.current);
+    }
+
     return (
       <FocusTrap
         paused={!isFocused}
+        focusTrapOptions={{
+          fallbackFocus: this.fallbackFocus,
+        }}
       >
         <ModalOverlay
           onClick={closeOnOutsideClick ? onRequestClose : null}
@@ -121,6 +144,7 @@ class ModalContent extends React.Component {
           aria-label={ariaLabel}
           className={modalClassName}
           role={role}
+          ref={this.modalContentRef}
           {...customProps}
         >
           {children}
