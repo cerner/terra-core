@@ -64,17 +64,26 @@ class Image extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { isLoading: true, isError: false };
+    this.state = {
+      isLoading: true,
+      isError: false,
+      prevPropsSrc: props.src,
+    };
 
     this.handleOnLoad = this.handleOnLoad.bind(this);
     this.handleOnError = this.handleOnError.bind(this);
   }
 
-  componentWillReceiveProps(newProps) {
-    // If a new image is being loaded, reset the state to loading
-    if (newProps.src !== this.props.src) {
-      this.setState({ isLoading: true, isError: false });
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.src !== prevState.prevPropsSrc) {
+      return {
+        isLoading: true,
+        isError: false,
+        prevPropsSrc: nextProps.src,
+      };
     }
+
+    return null;
   }
 
   handleOnLoad() {

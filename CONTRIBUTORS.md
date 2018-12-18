@@ -40,7 +40,7 @@ Cerner Corporation
 - Derek Yu [@yuderekyu]
 - Hardik Jain [@hardikjain29]
 - Dustin Singleton [@singleton06]
-- Dylan Klohr [@dylan-sftwr]
+- Dylan Klohr [@dklohr]
 - Daniel Vu [@dv297]
 - Victor Nava [@vikonava]
 - Chase Sinclair [@ChaseSinclair]
@@ -119,7 +119,7 @@ Cerner Corporation
 [@yuderekyu]: https://github.com/yuderekyu
 [@hardikjain29]: https://github.com/hardikjain29
 [@singleton06]: https://github.com/Singleton06
-[@dylan-sftwr]: https://github.com/dylan-sftwr
+[@dklohr]: https://github.com/dklohr
 [@dv297]: https://github.com/dv297
 [@vikonava]: https://github.com/vikonava
 [@ChaseSinclair]: https://github.com/ChaseSinclair

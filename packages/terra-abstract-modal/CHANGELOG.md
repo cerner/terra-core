@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added support for the fallbackFocus option of FocusTrap
+
+### Changed
+* Removed use of componentWillReceiveProps
 
 1.25.1 - (November 20, 2018)
 ------------------
