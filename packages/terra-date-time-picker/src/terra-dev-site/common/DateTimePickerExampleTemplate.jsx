@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Field from 'terra-form-field';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import DateTimePicker from 'terra-date-time-picker/lib/DateTimePicker';
 
@@ -33,11 +34,14 @@ class DatePickerExample extends React.Component {
 Selected ISO Date Time:
           {this.state.dateTime}
         </p>
-        <DateTimePicker
-          name="date-time-picker-example"
-          onChange={this.handleDateTimeChange}
-          {...this.props}
-        />
+        <Field label="Enter Date/Time" htmlFor="default">
+          <DateTimePicker
+            name="date-time-picker-example"
+            id="default"
+            onChange={this.handleDateTimeChange}
+            {...this.props}
+          />
+        </Field>
       </div>
     );
   }

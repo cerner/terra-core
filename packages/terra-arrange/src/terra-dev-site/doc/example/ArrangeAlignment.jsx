@@ -50,7 +50,7 @@ class ArrangeAlignment extends React.Component {
 
   renderAllAlignmentForm() {
     return (
-      <form>
+      <div>
         <label htmlFor={this.getId('align')}>{alignLabels.overall}</label>
         <select id={this.getId('align')} name="align" value={this.state.align} onChange={this.handleSelectChange}>
           <option value="">default</option>
@@ -58,13 +58,13 @@ class ArrangeAlignment extends React.Component {
           <option value={alignOptions.bottom}>{alignOptions.bottom}</option>
           <option value={alignOptions.stretch}>{alignOptions.stretch}</option>
         </select>
-      </form>
+      </div>
     );
   }
 
   renderIndividualAlignmentForm() {
     return (
-      <form>
+      <div>
         <label htmlFor={this.getId('alignFitStart')}>{alignLabels.alignFitStart}</label>
         <select id={this.getId('alignFitStart')} name="alignFitStart" value={this.state.alignFitStart} onChange={this.handleSelectChange}>
           <option value="">default</option>
@@ -90,7 +90,7 @@ class ArrangeAlignment extends React.Component {
           <option value={alignOptions.bottom}>{alignOptions.bottom}</option>
           <option value={alignOptions.stretch}>{alignOptions.stretch}</option>
         </select>
-      </form>
+      </div>
     );
   }
 

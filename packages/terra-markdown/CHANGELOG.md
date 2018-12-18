@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated site examples to be more accessible.
 
 2.17.0 - (November 19, 2018)
 ------------------

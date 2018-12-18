@@ -6,8 +6,10 @@ Unreleased
 ### Fixed
 * Dev site tests pages adjusted to uniformly use caretColor
 ### Added
-* Pattern prop added to Input component 
+* Pattern prop added to Input component
 * maxWidth prop added to pass through to terra-form-field
+### Changed
+* Updated site examples to be more accessible.
 
 1.31.1 - (November 20, 2018)
 ------------------

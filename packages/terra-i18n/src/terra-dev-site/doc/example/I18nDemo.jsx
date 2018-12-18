@@ -40,7 +40,7 @@ Current locale:
           {' '}
 
         </label>
-        <select value={this.state.locale} onChange={this.handleLocaleChange}>
+        <select id="locale" value={this.state.locale} onChange={this.handleLocaleChange}>
           <option value="en">en</option>
           <option value="en-GB">en-GB</option>
           <option value="en-US">en-US</option>
