@@ -45,14 +45,14 @@
     &.is-open {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      border-top-left-radius: var(--terra-form-select-border-top-left-radius, 3px);
-      border-top-right-radius: var(--terra-form-select-border-top-right-radius, 3px);
+      border-top-left-radius: var(--terra-form-select-open-border-top-left-radius, 3px);
+      border-top-right-radius: var(--terra-form-select-open-border-top-right-radius, 3px);
       box-shadow: none;
     }
 
     &.is-above {
-      border-bottom-left-radius: var(--terra-form-select-border-bottom-left-radius, 3px);
-      border-bottom-right-radius: var(--terra-form-select-border-bottom-right-radius, 3px);
+      border-bottom-left-radius: var(--terra-form-select-above-border-bottom-left-radius, 3px);
+      border-bottom-right-radius: var(--terra-form-select-above-border-bottom-right-radius, 3px);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
@@ -249,12 +249,12 @@
 
     &.is-above {
       > .display {
-        border-bottom-left-radius: var(--terra-form-select-border-bottom-left-radius, 3px);
+        border-bottom-left-radius: var(--terra-form-select-above-border-bottom-left-radius, 3px);
         border-top-left-radius: 0;
       }
 
       > .toggle {
-        border-bottom-right-radius: var(--terra-form-select-border-bottom-right-radius, 3px);
+        border-bottom-right-radius: var(--terra-form-select-above-border-bottom-right-radius, 3px);
         border-top-right-radius: 0;
       }
     }

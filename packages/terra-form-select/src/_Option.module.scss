@@ -14,9 +14,9 @@
 
   .is-default {
     &:active:not(.is-disabled) {
-      background-color: var(--terra-form-select-option-pressed-active-background-color, #0079be);
-      color: var(--terra-form-select-option-pressed-active-color, #fff);
-      font-weight: var(--terra-form-select-option-pressed-active-font-weight, normal);
+      background-color: var(--terra-form-select-option-active-background-color, #0079be);
+      color: var(--terra-form-select-option-active-color, #fff);
+      font-weight: var(--terra-form-select-option-active-font-weight, normal);
     }
 
     &.is-selected {
@@ -59,7 +59,7 @@
   }
 
   .is-checkable:active > .icon {
-    background: var(--terra-form-select-option-icon-pressed-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.8"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
+    background: var(--terra-form-select-option-checkable-icon-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.8"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>'));
     visibility: visible;
   }
 
