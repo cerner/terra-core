@@ -26,7 +26,7 @@ describe('DateTimePicker', () => {
         '--terra-date-time-picker-clarification-modal-border': '#f2a1c0 dashed 2px',
         '--terra-date-time-picker-clarification-modal-border-radius': '1.5rem',
         '--terra-date-time-picker-clarification-modal-box-shadow': '0 3px 7px rgba(50, 50, 50, 0.4)',
-        '--terra-date-time-picker-clarification-modal-foreground-color': '#ef12bc',
+        '--terra-date-time-picker-clarification-modal-color': '#ef12bc',
       },
     });
   });
@@ -67,7 +67,7 @@ describe('DateTimePicker', () => {
         '--terra-date-time-picker-clarification-modal-border': '#f2a1c0 dashed 2px',
         '--terra-date-time-picker-clarification-modal-border-radius': '1.5rem',
         '--terra-date-time-picker-clarification-modal-box-shadow': '0 3px 7px rgba(50, 50, 50, 0.4)',
-        '--terra-date-time-picker-clarification-modal-foreground-color': '#ef12bc',
+        '--terra-date-time-picker-clarification-modal-color': '#ef12bc',
       },
     });
   });
