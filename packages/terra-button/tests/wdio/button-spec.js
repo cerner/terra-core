@@ -245,8 +245,8 @@ describe('Button', () => {
         testName: 'themed',
         selector: '#buttonWithTypeButton',
         properties: {
-          '--terra-button-text-only-horizontal-margin-left': '20px',
-          '--terra-button-text-only-horizontal-margin-right': '20px',
+          '--terra-button-text-only-margin-left': '20px',
+          '--terra-button-text-only-margin-right': '20px',
         },
       });
     });
@@ -264,9 +264,10 @@ describe('Button', () => {
         testName: 'themed',
         selector: '#iconNeutralButton',
         properties: {
-          '--terra-button-text-and-icon-horizontal-margin-left': '20px',
+          '--terra-button-text-and-icon-margin-left': '20px',
           '--terra-button-text-and-icon-horizontal-margin-right': '20px',
-          '--terra-button-text-and-icon-margin-right': '20px',
+          '--terra-button-text-first-margin-right': '20px',
+          '--terra-button-icon-first-margin-right': '20px',
         },
       });
     });
@@ -284,8 +285,8 @@ describe('Button', () => {
         testName: 'themed',
         selector: '#iconOnlyButton',
         properties: {
-          '--terra-button-icon-only-horizontal-margin-left': '20px',
-          '--terra-button-icon-only-horizontal-margin-right': '20px',
+          '--terra-button-icon-only-margin-left': '20px',
+          '--terra-button-icon-only-margin-right': '20px',
           '--terra-button-icon-height': '10px',
           '--terra-button-icon-width': '10px',
         },
