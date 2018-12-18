@@ -4,7 +4,13 @@ The `terra-base` component will handle locale changes, manage the locale loading
 
 **Note: This component must be imported before the other terra components in your app.** This is to help ensure that these styles are defined at the beginning of the [extracted stylesheet](https://github.com/webpack-contrib/extract-text-webpack-plugin) and are inherited by the other terra components. Additionally, when used to internationalize an application, it will wrap the application’s root component such that the entire application is within the same configured i18n context.
 
-## Getting Started
+- [Getting Started](#getting-started)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs)
+- [LICENSE](#license)
+
+<h2 id="getting-started">
+  Getting Started
+</h2>
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-base`
 
