@@ -87,7 +87,7 @@
 
     &:focus {
       background-color: var(--terra-form-input-error-focus-background-color, #fff);
-      background-size: var(--terra-form-input-error-focus-keyboard-animation-background-size);
+      background-size: var(--terra-form-input-error-focus-background-size);
       border: var(--terra-form-input-error-focus-border, 1px solid #4cb2e9);
 
       [dir=ltr] & {

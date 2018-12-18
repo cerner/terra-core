@@ -265,7 +265,7 @@ describe('Button', () => {
         selector: '#iconNeutralButton',
         properties: {
           '--terra-button-text-and-icon-margin-left': '20px',
-          '--terra-button-text-and-icon-horizontal-margin-right': '20px',
+          '--terra-button-text-and-icon-margin-right': '20px',
           '--terra-button-text-first-margin-right': '20px',
           '--terra-button-icon-first-margin-right': '20px',
         },

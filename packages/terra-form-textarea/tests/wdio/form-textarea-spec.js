@@ -127,7 +127,6 @@ describe('Form-Textarea', () => {
         '--terra-form-textarea-focus-border-width': '2px',
         '--terra-form-textarea-focus-box-ltr-shadow': 'none',
         '--terra-form-textarea-focus-box-rtl-shadow': 'none',
-        '--terra-form-textarea-focus-opacity': '1',
         '--terra-form-textarea-hover-border-color': '#337b33',
         '--terra-form-textarea-hover-border-style': 'solid',
         '--terra-form-textarea-hover-border-width': '2px',
