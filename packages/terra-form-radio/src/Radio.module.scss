@@ -144,8 +144,8 @@
       }
 
       .native-input:checked + .outer-ring {
-        border-color: var(--terra-form-radio-outer-ring-hover-checked-border-color, transparent);
-        border-width: var(--terra-form-radio-outer-ring-hover-checked-border-width, 0);
+        border-color: var(--terra-form-radio-hover-checked-outer-ring-border-color, transparent);
+        border-width: var(--terra-form-radio-hover-checked-outer-ring-border-width, 0);
       }
     }
 

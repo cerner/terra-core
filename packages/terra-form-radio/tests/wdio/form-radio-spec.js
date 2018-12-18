@@ -38,8 +38,8 @@ describe('Radio', () => {
   const hoverThemingProperties = {
     '--terra-form-radio-hover-border-color': '#800080',
     '--terra-form-radio-hover-border-width': '2px',
-    '--terra-form-radio-outer-ring-hover-checked-border-color': '#800080',
-    '--terra-form-radio-outer-ring-hover-checked-border-width': '2px',
+    '--terra-form-radio-hover-checked-outer-ring-border-color': '#800080',
+    '--terra-form-radio-hover-checked-outer-outer-ring-border-width': '2px',
   };
 
   const focusThemingProperties = {
