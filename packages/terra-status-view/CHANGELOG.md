@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Removed use of componentWillMount from examples
+* Added code sample display to the doc site examples
 
 2.35.1 - (November 20, 2018)
 ------------------

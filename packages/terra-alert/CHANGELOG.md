@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added missing ar translations.
+* Added code sample display to the doc site examples
 
 2.35.1 - (November 20, 2018)
 ------------------
