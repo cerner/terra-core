@@ -14,8 +14,8 @@ describe('Button', () => {
         // Button Vars that apply to all buttons
         '--terra-button-border-radius': '50px',
         '--terra-button-line-height': '20px',
-        '--terra-button-vertical-padding-bottom': '20px',
-        '--terra-button-vertical-padding-top': '20px',
+        '--terra-button-padding-bottom': '20px',
+        '--terra-button-padding-top': '20px',
         '--terra-button-top': '20px',
         '--terra-button-disabled-opacity': '.7',
         '--terra-button-font-size': '50px',
