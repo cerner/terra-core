@@ -159,22 +159,7 @@
       }
     }
 
-    .collapsible-tabs-container:focus .is-active {
-      background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
-      background-image: var(--terra-tabs-structural-active-focus-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
-      color: var(--terra-tabs-structural-active-focus-color, inherit);
-      position: relative;
-      z-index: 1;
-
-      [dir=rtl] & {
-        box-shadow: var(--terra-tabs-keyboard-active-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
-      }
-
-      [dir=ltr] & {
-        box-shadow: var(--terra-tabs-keyboard-active-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
-      }
-    }
-
+    .collapsible-tabs-container:focus .is-active,
     .tab-menu:focus.is-active {
       background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
       background-image: var(--terra-tabs-structural-active-focus-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
