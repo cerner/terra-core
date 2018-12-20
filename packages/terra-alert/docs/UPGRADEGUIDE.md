@@ -6,17 +6,6 @@
 
 CSS Custom Properties have been updated to follow naming conventions. A CSS property should define the component, state, and property it controls.
 
-#### Renamed
-
-| Previous | Updated |
-|-|-|
-| --terra-action-header-back-icon | --terra-action-header-back-background |
-| --terra-action-header-close-icon | --terra-action-header-close-background |
-| --terra-action-header-maximize-icon | --terra-action-header-maximize-background |
-| --terra-action-header-minimize-icon | --terra-action-header-minimize-background |
-| --terra-action-header-previous-icon | --terra-action-header-previous-background |
-| --terra-action-header-next-icon | --terra-action-header-next-background |
-
 #### Removed
 * --terra-alert-alert-shadow-color
 * --terra-alert-error-shadow-color
