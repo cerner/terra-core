@@ -1,10 +1,10 @@
 :local {
   .form-input {
     background-color: var(--terra-form-input-background-color, #fff);
-    background-image: var(--terra-form-input-focus-animation-background);
+    background-image: var(--terra-form-input-background-image);
     background-position: 0 100%;
     background-repeat: no-repeat;
-    background-size: var(--terra-form-input-focus-background-start);
+    background-size: var(--terra-form-input-background-size);
     border: var(--terra-form-input-border, 1px solid #dedfe0);
     border-radius: var(--terra-form-input-border-radius, 3px);
     box-shadow: var(--terra-form-input-box-shadow);
@@ -53,24 +53,24 @@
 
     &:focus {
       background-color: var(--terra-form-input-focus-background-color, #fff);
-      background-size: var(--terra-form-input-focus-keyboard-animation-size);
+      background-size: var(--terra-form-input-focus-background-size);
       border: var(--terra-form-input-focus-border, 1px solid #4cb2e9);
       color: var(--terra-form-input-focus-color);
       outline: none;
 
       [dir=ltr] & {
-        box-shadow: var(--terra-form-input-focus-keyboard-box-shadow-ltr);
+        box-shadow: var(--terra-form-input-focus-ltr-box-shadow);
       }
 
       [dir=rtl] & {
-        box-shadow: var(--terra-form-input-focus-keyboard-box-shadow-rtl);
+        box-shadow: var(--terra-form-input-focus-rtl-box-shadow);
       }
     }
   }
 
   .form-error {
     background-color: var(--terra-form-input-error-background-color, #fff);
-    background-image: var(--terra-form-input-error-focus-animation-background);
+    background-image: var(--terra-form-input-error-background-image);
     border: var(--terra-form-input-error-border, 1px solid #dedfe0);
 
     &:hover {
@@ -87,15 +87,15 @@
 
     &:focus {
       background-color: var(--terra-form-input-error-focus-background-color, #fff);
-      background-size: var(--terra-form-input-error-focus-keyboard-animation-size);
+      background-size: var(--terra-form-input-error-focus-background-size);
       border: var(--terra-form-input-error-focus-border, 1px solid #4cb2e9);
 
       [dir=ltr] & {
-        box-shadow: var(--terra-form-input-error-focus-keyboard-box-shadow-ltr);
+        box-shadow: var(--terra-form-input-error-focus-ltr-box-shadow);
       }
 
       [dir=rtl] & {
-        box-shadow: var(--terra-form-input-error-focus-keyboard-box-shadow-rtl);
+        box-shadow: var(--terra-form-input-error-focus-rtl-box-shadow);
       }
     }
   }

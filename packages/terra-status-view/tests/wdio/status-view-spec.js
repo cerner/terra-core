@@ -77,7 +77,7 @@ describe('StatusView', () => {
         '--terra-status-view-message-padding-top': '10px',
         '--terra-status-view-message-text-align': 'left',
         '--terra-status-view-divider-padding-top': '10px',
-        '--terra-status-view-actions-flex-direction-small-width': 'column',
+        '--terra-status-view-actions-small-width-flex-direction': 'column',
         '--terra-status-view-actions-padding-top': '10px',
         '--terra-status-view-actions-button-flex': 'auto',
         '--terra-status-view-actions-button-margin-left': '5px',

@@ -2,52 +2,52 @@
 
 :local {
   .tag {
-    background: var(--terra-select-tag-background, #f2f2f2);
-    border-radius: var(--terra-select-tag-border-radius, 3px);
+    background: var(--terra-form-select-tag-background, #f2f2f2);
+    border-radius: var(--terra-form-select-tag-border-radius, 3px);
     display: flex;
     flex: 0 1 auto; // IE 10
-    font-size: var(--terra-select-tag-font-size, 1rem);
-    height: var(--terra-select-tag-height, auto);
-    line-height: var(--terra-select-tag-line-height, 1.143);
-    margin-right: var(--terra-select-tag-margin-right, 0.42857rem);
-    margin-top: var(--terra-select-tag-margin-top, 0.21428571428571427rem);
+    font-size: var(--terra-form-select-tag-font-size, 1rem);
+    height: var(--terra-form-select-tag-height, auto);
+    line-height: var(--terra-form-select-tag-line-height, 1.143);
+    margin-right: var(--terra-form-select-tag-margin-right, 0.42857rem);
+    margin-top: var(--terra-form-select-tag-margin-top, 0.21428571428571427rem);
     overflow: hidden;
     user-select: none;
   }
 
   .display {
-    border-bottom: var(--terra-select-tag-display-border-bottom, 0.14286rem solid #dedfe0);
-    color: var(--terra-select-tag-display-color, #1c1f21);
+    border-bottom: var(--terra-form-select-tag-display-border-bottom, 0.14286rem solid #dedfe0);
+    color: var(--terra-form-select-tag-display-color, #1c1f21);
     display: inline-block;  // IE 10
     flex: 1 1 auto; // IE 10
     overflow: hidden;
-    padding: var(--terra-select-tag-display-padding, 0.14285714285714285rem 0.571429rem);
+    padding: var(--terra-form-select-tag-display-padding, 0.14285714285714285rem 0.571429rem);
     word-break: break-word;
     word-wrap: break-word;
   }
 
   .deselect {
     align-items: center;
-    background: var(--terra-select-tag-deselect-background, #e0e0e0);
-    border-bottom: var(--terra-select-tag-deselect-border-bottom, 0.14286rem solid #aeaeaf);
+    background: var(--terra-form-select-tag-deselect-background, #e0e0e0);
+    border-bottom: var(--terra-form-select-tag-deselect-border-bottom, 0.14286rem solid #aeaeaf);
     cursor: pointer;
     display: flex;
     flex-shrink: 0; // IE 10
-    font-size: var(--terra-select-tag-deselect-font-size, 1rem);
-    padding: var(--terra-select-tag-deselect-padding, 0.2142857rem 0.5rem);
+    font-size: var(--terra-form-select-tag-deselect-font-size, 1rem);
+    padding: var(--terra-form-select-tag-deselect-padding, 0.2142857rem 0.5rem);
 
     &:hover {
-      background: var(--terra-select-tag-deselect-hover-background, #b9bbbc);
-      border-bottom: var(--terra-select-tag-deselect-hover-border-bottom-hover, 0.14286rem solid #8f8f90);
+      background: var(--terra-form-select-tag-deselect-hover-background, #b9bbbc);
+      border-bottom: var(--terra-form-select-tag-deselect-hover-border-bottom, 0.14286rem solid #8f8f90);
     }
   }
 
   .icon {
-    background: var(--terra-select-tag-icon-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"/></svg>'));
+    background: var(--terra-form-select-tag-icon-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"/></svg>'));
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block; // IE 10
-    height: var(--terra-select-tag-icon-height, 0.7142857142857143rem);
-    width: var(--terra-select-tag-icon-width, 0.7142857142857143rem);
+    height: var(--terra-form-select-tag-icon-height, 0.7142857142857143rem);
+    width: var(--terra-form-select-tag-icon-width, 0.7142857142857143rem);
   }
 }

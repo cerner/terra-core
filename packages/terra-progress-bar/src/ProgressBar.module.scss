@@ -18,7 +18,7 @@
     background: #d3d4d5;
     border-radius: var(--terra-progress-bar-border-radius, 0.5em);
     display: block;
-    height: var(--terra-progress-bar-height-small, 0.8rem);
+    height: var(--terra-progress-bar-default-height, 0.8rem);
     overflow: hidden;
     width: 100%;
 
@@ -105,22 +105,22 @@
 
   //Height specific styles
   .tiny {
-    height: var(--terra-progress-bar-height-tiny, 0.5rem);
+    height: var(--terra-progress-bar-tiny-height, 0.5rem);
   }
 
   .small {
-    height: var(--terra-progress-bar-height-small, 0.8rem);
+    height: var(--terra-progress-bar-small-height, 0.8rem);
   }
 
   .medium {
-    height: var(--terra-progress-bar-height-medium, 1rem);
+    height: var(--terra-progress-bar-medium-height, 1rem);
   }
 
   .large {
-    height: var(--terra-progress-bar-height-large, 1.4rem);
+    height: var(--terra-progress-bar-large-height, 1.4rem);
   }
 
   .huge {
-    height: var(--terra-progress-bar-height-huge, 1.7rem);
+    height: var(--terra-progress-bar-huge-height, 1.7rem);
   }
 }

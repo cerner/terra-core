@@ -4,7 +4,7 @@
     background-clip: padding-box;
     background-image: var(--terra-demographics-banner-background-image);
     box-shadow: var(--terra-demographics-banner-box-shadow);
-    color: var(--terra-demographics-banner-foreground, #fff);
+    color: var(--terra-demographics-banner-color, #fff);
     line-height: 1;
     padding: var(--terra-demographics-banner-padding, 0.714em);
   }
@@ -58,10 +58,10 @@
   }
 
   .deceased {
-    background: var(--terra-demographics-banner-background-deceased, #1c1f21);
+    background: var(--terra-demographics-banner-deceased-background, #1c1f21);
     background-clip: padding-box;
-    background-image: var(--terra-demographics-banner-background-image-deceased);
-    color: var(--terra-demographics-banner-foreground-deceased, #fff);
+    background-image: var(--terra-demographics-banner-deceased-background-image);
+    color: var(--terra-demographics-banner-deceased-color, #fff);
 
     .profile-photo {
       opacity: var(--terra-demographics-banner-deceased-profile-photo-opacity, 0.7);

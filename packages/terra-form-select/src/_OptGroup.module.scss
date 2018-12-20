@@ -1,35 +1,35 @@
 :local {
   .opt-group {
     list-style: none;
-    margin: var(--terra-select-optgroup-margin, 0);
-    padding: var(--terra-select-optgroup-padding, 0);
+    margin: var(--terra-form-select-optgroup-margin, 0);
+    padding: var(--terra-form-select-optgroup-padding, 0);
     user-select: none;
 
     &:first-child > .label {
-      padding: var(--terra-select-first-optgroup-label-padding, 0.38461538461538464rem);
+      padding: var(--terra-form-select-first-optgroup-label-padding, 0.38461538461538464rem);
     }
 
     &:not(:first-child) > .label {
-      border-top: var(--terra-select-optgroup-label-border-top, 0.1428571429rem solid #dedfe0);
-      margin: var(--terra-select-optgroup-label-margin, 0);
+      border-top: var(--terra-form-select-optgroup-label-border-top, 0.1428571429rem solid #dedfe0);
+      margin: var(--terra-form-select-optgroup-label-margin, 0);
     }
   }
 
   .label {
-    background-color: var(--terra-select-optgroup-label-background-color, #f4f4f4);
-    color: var(--terra-select-optgroup-label-color, #64696c);
-    font-size: var(--terra-select-optgroup-font-size, 0.9286rem);
-    font-weight: var(--terra-select-optgroup-label-font-weight, bold);
-    font-style: var(--terra-select-optgroup-label-font-style, normal);
-    line-height: var(--terra-select-optgroup-label-line-height, 1.23);
-    padding: var(--terra-select-optgroup-label-padding, 0.38461538461538464rem);
+    background-color: var(--terra-form-select-optgroup-label-background-color, #f4f4f4);
+    color: var(--terra-form-select-optgroup-label-color, #64696c);
+    font-size: var(--terra-form-select-optgroup-label-font-size, 0.9286rem);
+    font-style: var(--terra-form-select-optgroup-label-font-style, normal);
+    font-weight: var(--terra-form-select-optgroup-label-font-weight, bold);
+    line-height: var(--terra-form-select-optgroup-label-line-height, 1.23);
+    padding: var(--terra-form-select-optgroup-label-padding, 0.38461538461538464rem);
     word-break: break-all;
   }
 
   .options {
     list-style: none;
-    margin: var(--terra-select-optgroup-options-margin, 0);
-    padding: var(--terra-select-optgroup-options-padding, 0);
+    margin: var(--terra-form-select-optgroup-options-margin, 0);
+    padding: var(--terra-form-select-optgroup-options-padding, 0);
   }
 
   .is-disabled {

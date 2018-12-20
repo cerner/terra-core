@@ -6,7 +6,7 @@
     border: var(--terra-badge-border);
     border-radius: var(--terra-badge-border-radius, 0.25em);
     display: var(--terra-badge-display, inline-block);
-    font-size: var(--terra-badge-font-size-small, 0.8rem);
+    font-size: var(--terra-badge-default-font-size, 0.8rem);
     font-weight: var(--terra-badge-font-weight, 700);
     line-height: var(--terra-badge-line-height, 1);
     min-width: var(--terra-badge-min-width, 1.65em);
@@ -22,31 +22,31 @@
   }
 
   .is-reversed.has-icon .text {
-    margin-right: var(--terra-badge-child-margin, 0.357em);
+    margin-right: var(--terra-badge-child-margin-right, 0.357em);
   }
 
   .has-icon:not(.is-reversed) .text {
-    margin-left: var(--terra-badge-child-margin, 0.357em);
+    margin-left: var(--terra-badge-child-margin-left, 0.357em);
   }
 
   .tiny {
-    font-size: var(--terra-badge-font-size-tiny, 0.5rem);
+    font-size: var(--terra-badge-tiny-font-size, 0.5rem);
   }
 
   .small {
-    font-size: var(--terra-badge-font-size-small, 0.8rem);
+    font-size: var(--terra-badge-small-font-size, 0.8rem);
   }
 
   .medium {
-    font-size: var(--terra-badge-font-size-medium, 1rem);
+    font-size: var(--terra-badge-medium-font-size, 1rem);
   }
 
   .large {
-    font-size: var(--terra-badge-font-size-large, 1.4rem);
+    font-size: var(--terra-badge-large-font-size, 1.4rem);
   }
 
   .huge {
-    font-size: var(--terra-badge-font-size-huge, 1.7rem);
+    font-size: var(--terra-badge-huge-font-size, 1.7rem);
   }
 
   .default {

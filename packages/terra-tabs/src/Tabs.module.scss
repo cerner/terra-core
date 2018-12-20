@@ -66,7 +66,7 @@
     }
 
     .label:nth-child(2) {
-      margin-left: var(--terra-tabs-label-margin-next-to-icon, 0.357rem);
+      margin-left: var(--terra-tabs-label-next-to-icon-margin-left, 0.357rem);
     }
   }
 
@@ -85,7 +85,7 @@
     svg {
       flex: 0 0 auto;
       font-size: 0.571rem;
-      margin-left: var(--terra-tabs-menu-arrow-left-margin, 0.5rem);
+      margin-left: var(--terra-tabs-menu-arrow-margin-left, 0.5rem);
     }
   }
 
