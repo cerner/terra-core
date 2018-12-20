@@ -5,7 +5,6 @@ services:
 branches:
   only:
     - master
-    - refactor-core-theme-variables
 cache:
   directories:
     - $HOME/docker
