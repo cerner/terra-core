@@ -10,13 +10,18 @@ CSS Custom Properties have been updated to follow naming conventions. A CSS prop
 
 | Previous | Updated |
 |-|-|
-| --terra-action-header-back-icon | --terra-action-header-back-background |
-| --terra-action-header-close-icon | --terra-action-header-close-background |
-| --terra-action-header-maximize-icon | --terra-action-header-maximize-background |
-| --terra-action-header-minimize-icon | --terra-action-header-minimize-background |
-| --terra-action-header-previous-icon | --terra-action-header-previous-background |
-| --terra-action-header-next-icon | --terra-action-header-next-background |
+| --terra-badge-font-size-tiny | --terra-badge-tiny-font-size |
+| --terra-badge-font-size-small | --terra-badge-small-font-size |
+| --terra-badge-font-size-medium | --terra-badge-medium-font-size |
+| --terra-badge-font-size-large | --terra-badge-large-font-size |
+| --terra-badge-font-size-huge | --terra-badge-huge-font-size |
+
+#### Removed
+* --terra-badge-child-margin
 
 #### Added
-* --terra-action-header-color
+* --terra-badge-border
 * --terra-action-header-title-padding
+* --terra-badge-default-font-size
+* --terra-badge-child-margin-right
+* --terra-badge-child-margin-left
