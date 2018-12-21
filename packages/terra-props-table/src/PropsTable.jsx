@@ -147,6 +147,10 @@ Props
         <tbody>
           {Object.keys(componentProps).map((key) => {
             const prop = componentProps[key];
+            if (prop.description && prop.description.match(/\[Private\]/)) {
+              return null;
+            }
+
             const type = determineType(prop.type);
 
             return (
