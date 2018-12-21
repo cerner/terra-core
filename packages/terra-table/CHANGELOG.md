@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Changed
 * Updated theme variables
+* Split focus and hover styles to separate blocks
+
+### Added
+* Table header (th) styles
 
 2.31.1 - (November 20, 2018)
 ------------------

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* Refactor default style values
 
 1.31.1 - (November 20, 2018)
 ------------------

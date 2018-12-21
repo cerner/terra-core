@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated theme variables
+* Add previous and next margins for progressive paginator
 
 1.26.1 - (November 20, 2018)
 ------------------

@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Disable stylelint rules
 
 2.27.0 - (November 19, 2018)
 ------------------

@@ -1,5 +1,5 @@
 # terra-avatar Upgrade Guide
-## Changes from 1.0 to 2.0
+## Changes from version 1 to version 2
 
 ### Props
 #### Removed

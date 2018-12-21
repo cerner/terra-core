@@ -7,14 +7,17 @@
 #### Renamed
 | Previous | New |
 |-|-|
-| --terra-list-divider-border | --terra-list-divider-border-top |
-| --terra-list-divider-border | --terra-list-last-divider-border-bottom |
 | --terra-list-chevron-color | --terra-list-item-chevron-color |
 | --terra-list-item-selected-divider-color | --terra-list-item-selected-divider-border-color |
 | --terra-list-item-selected-divider-color | --terra-list-item-selected-divider-border-top-color |
 | --terra-list-item-selected-hover-background-color | --terra-list-item-selected-focus-background-color |
 
+#### Removed
+* --terra-list-divider-border
+
 #### Added
+* --terra-list-divider-border-top
+* --terra-list-last-divider-border-bottom
 * --terra-list-item-chevron-margin-bottom
 * --terra-list-item-chevron-margin-left
 * --terra-list-item-chevron-margin-right

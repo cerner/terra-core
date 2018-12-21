@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Updated theme variables
 
+### Added
+* Bottom border styles collapsed tab edge case
+
 ### Fixed
 * Lint Errors
 

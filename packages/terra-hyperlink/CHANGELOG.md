@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated theme variables
+* Refactor icons to consistently use background-image instead of background
 
 1.18.0 - (November 19, 2018)
 ------------------

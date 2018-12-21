@@ -5,7 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Updated theme variables
-
+* radio-field: render error icon down one level of markup
+*
 2.35.1 - (November 20, 2018)
 ------------------
 ### Changed

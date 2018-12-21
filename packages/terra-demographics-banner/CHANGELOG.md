@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated theme variables
+* Add conditional render for profile photo
 
 2.33.0 - (November 19, 2018)
 ------------------

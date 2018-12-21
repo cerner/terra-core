@@ -9,6 +9,7 @@ const LazyResult = require('postcss/lib/lazy-result');
 const importLazy = require('import-lazy')(require);
 
 /**
+ * @author StephenEsser
  * The Upgrade Generator will compare a branch against master and diff all changes to
  * custom properties between the two branches.
  *

@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated theme variables
+* Update chevron size to 1em
 
 2.31.1 - (November 20, 2018)
 ------------------

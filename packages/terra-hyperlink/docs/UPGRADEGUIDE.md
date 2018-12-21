@@ -21,25 +21,17 @@
 | --terra-link-active-color | --terra-hyperlink-active-color |
 | --terra-link-disabled-color | --terra-hyperlink-disabled-color |
 | --terra-link-external-icon | --terra-hyperlink-external-after-background-image |
-| --terra-link-external-icon | --terra-hyperlink-external-disabled-after-background-image |
+| --terra-link-image-icon | --terra-hyperlink-image-after-background-image |
+| --terra-link-video-icon | --terra-hyperlink-video-after-background-image |
+| --terra-link-audio-icon | --terra-hyperlink-audio-after-background-image |
+| --terra-link-document-icon | --terra-hyperlink-document-after-background-image |
+
 
 #### Added
 * --terra-hyperlink-disabled-text-decoration
-* --terra-hyperlink-image-after-background-image
+* --terra-hyperlink-external-disabled-after-background-image
 * --terra-hyperlink-image-disabled-after-background-image
-* --terra-hyperlink-video-after-background-image
 * --terra-hyperlink-video-disabled-after-background-image
-* --terra-hyperlink-audio-after-background-image
 * --terra-hyperlink-audio-disabled-after-background-image
-* --terra-hyperlink-document-after-background-image
 * --terra-hyperlink-document-disabled-after-background-image
 
-#### Removed
-* --terra-link-image-icon
-* --terra-link-image-icon
-* --terra-link-video-icon
-* --terra-link-video-icon
-* --terra-link-audio-icon
-* --terra-link-audio-icon
-* --terra-link-document-icon
-* --terra-link-document-icon
