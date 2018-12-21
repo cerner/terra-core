@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* Refactor isActive css class to isSelected
 
 2.31.1 - (November 20, 2018)
 ------------------

@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Updated theme variables
+
+### Changed
 * Removed use of componentWillMount from examples
 
 2.35.1 - (November 20, 2018)

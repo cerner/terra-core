@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+
 ### Fixed
 * Lint Errors
 

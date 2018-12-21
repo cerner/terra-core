@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
 
 2.30.0 - (November 19, 2018)
 ------------------

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+
 ### Added
 * Added missing ar translations.
 

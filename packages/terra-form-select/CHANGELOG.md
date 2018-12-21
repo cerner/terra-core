@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+
 ### Added
 * Added missing ar translations
 * maxWidth prop added to pass through to terra-form-field

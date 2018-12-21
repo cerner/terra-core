@@ -1,10 +1,8 @@
 # Terra Date Picker Upgrade Guide
 
-## Changes from 2.0 to 3.0
+## Changes from version 2 to version 3
 
 ### Changes to CSS Custom Properties
-
-CSS Custom Properties have been updated to follow naming conventions. A CSS property should define the component, state, and property it controls.
 
 #### Added
 * --terra-date-picker-input-focus-border-color

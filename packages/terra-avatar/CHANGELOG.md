@@ -10,6 +10,7 @@ Unreleased
 * Add color variants
 * Refactor box shadow to after element.
 * Split theme tests into their own package.
+* Update theme variables
 
 ### Removed
 * variant prop

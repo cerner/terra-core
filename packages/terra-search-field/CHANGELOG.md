@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Updated theme variables
+
+### Changed
 * Set the input cursor to be transparent for wdio tests
 
 2.36.1 - (November 20, 2018)
