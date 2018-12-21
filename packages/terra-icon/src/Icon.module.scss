@@ -1,18 +1,5 @@
 // Icon Component
 // ====================================================
-/* rtl:begin:ignore */
-:global {
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(359deg); }
-  }
-}
-/* rtl:end:ignore */
-
-/**
- * IE/Edge need both width and height defined to properly size SVG icons
- */
-
 :local {
   .icon {
     display: inline-block;
@@ -25,13 +12,6 @@
    */
   .icon *:not([fill]) {
     fill: currentColor; // Allows icon color to be inherited from text color
-  }
-
-  /* rtl:ignore */
-  .icon.is-spin {
-    :global {
-      animation: spin 2s infinite linear;
-    }
   }
 
   // We need dir='rtl'
