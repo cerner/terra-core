@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Remove use of componentWillReceiveProps
+* Migrate theme test inside 'theme' directory
 
 1.30.1 - (November 20, 2018)
 ------------------

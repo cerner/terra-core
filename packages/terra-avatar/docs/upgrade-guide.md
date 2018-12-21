@@ -16,8 +16,7 @@
 #### Updated
 * `initials` prop now only accepts one or two letters.
 
-### CSS Custom Properties
-CSS Custom Properties have been updated to follow naming conventions and new API. A CSS property should define the component, state, and property it controls.
+### Changes to CSS Custom Properties
 
 #### Renamed
 

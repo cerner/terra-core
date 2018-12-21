@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Remove use of componentWillReceiveProps
+* Regenerate screenshots caused by section-header theme var changes
 
 1.30.1 - (November 20, 2018)
 ------------------

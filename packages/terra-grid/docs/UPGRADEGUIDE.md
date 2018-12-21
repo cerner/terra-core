@@ -4,7 +4,9 @@
 
 ### Changes to CSS Custom Properties
 
-#### Renamed
-| Previous | New |
-|-|-|
-| --terra-grid-gutter-width | --terra-grid-gutter-padding-left |
+#### Removed
+* --terra-grid-gutter-width
+
+#### Added
+* --terra-grid-gutter-margin-left
+* --terra-grid-gutter-padding-left
