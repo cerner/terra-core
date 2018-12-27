@@ -10,6 +10,7 @@ Unreleased
 * Removed use of componentWillReceiveProps
 * Removed use of componentWillMount
 * Updated component to use injectIntl
+* Updated examples to use ModalManager v4
 
 2.38.1 - (November 20, 2018)
 ------------------

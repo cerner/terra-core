@@ -34,7 +34,7 @@
     "terra-abstract-modal": "^1.25.1",
     "terra-button": "^2.31.1",
     "terra-date-picker": "^2.38.1",
-    "terra-disclosure-manager": "^3.0.0",
+    "terra-disclosure-manager": "^3.1.0",
     "terra-doc-template": "^1.22.0",
     "terra-modal-manager": "^4.0.0",
     "terra-time-input": "^2.34.1"
