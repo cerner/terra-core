@@ -3,7 +3,7 @@ describe('Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/user-avatar'));
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#user-avatar',
+      selector: '[id=user-avatar]',
       properties: {
         '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
         '--terra-avatar-height': '5em',
@@ -20,7 +20,7 @@ describe('Avatar', () => {
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#two-initials-avatar',
+      selector: '[id=two-initials-avatar]',
       properties: {
         '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
         '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
@@ -40,7 +40,7 @@ describe('Avatar', () => {
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#image-avatar',
+      selector: '[id=image-avatar]',
       properties: {
         '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
         '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
@@ -56,7 +56,7 @@ describe('Avatar', () => {
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#is-deceased-avatar',
+      selector: '[id=is-deceased-avatar]',
       properties: {
         '--terra-avatar-is-deceased-background-color': 'black',
         '--terra-avatar-image-is-deceased-opacity': '0.2',
@@ -70,7 +70,7 @@ describe('Avatar', () => {
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#is-deceased-initials-avatar',
+      selector: '[id=is-deceased-initials-avatar]',
       properties: {
         '--terra-avatar-is-deceased-background-color': 'black',
         '--terra-avatar-is-deceased-after-box-shadow': 'inset 0 0 0 5px black',
@@ -83,7 +83,7 @@ describe('Avatar', () => {
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#is-deceased-image-avatar',
+      selector: '[id=is-deceased-image-avatar]',
       properties: {
         '--terra-avatar-is-deceased-background-color': 'black',
         '--terra-avatar-image-is-deceased-opacity': '0.2',
@@ -98,7 +98,7 @@ describe('Facility', () => {
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#default-facility',
+      selector: '[id=default-facility]',
       properties: {
         '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
         '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
@@ -116,7 +116,7 @@ describe('Facility', () => {
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#image-facility',
+      selector: '[id=image-facility]',
       properties: {
         '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
         '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',
@@ -135,7 +135,7 @@ describe('Shared User', () => {
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#shared-user',
+      selector: '[id=shared-user]',
       properties: {
         '--terra-avatar-background-color': 'rgba(0, 0, 255, 0.5)',
         '--terra-avatar-border': '0.07143rem solid rgb(0, 0, 255)',

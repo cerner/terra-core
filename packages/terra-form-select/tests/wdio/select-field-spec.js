@@ -8,14 +8,14 @@ describe('Select Field', () => {
     Terra.should.matchScreenshot({ viewports });
 
     it('should open the dropdown by clicking the toggle', () => {
-      browser.click('#select-field:last-child');
+      browser.click('[id=select-field]:last-child');
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+    Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
     it('should select the first option', () => {
-      browser.click('#terra-select-option-xSmall');
+      browser.click('[id=terra-select-option-xSmall]');
     });
 
     Terra.should.beAccessible();
@@ -29,11 +29,11 @@ describe('Select Field', () => {
     Terra.should.matchScreenshot({ viewports });
 
     it('should open the dropdown by clicking the toggle', () => {
-      browser.click('#select-field:last-child');
+      browser.click('[id=select-field]:last-child');
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+    Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
     it('should select the first option by pressing enter', () => {
       browser.keys('ArrowUp');

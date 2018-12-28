@@ -6,12 +6,12 @@ describe('Base', () => {
   describe('Switching Locales', () => {
     before(() => browser.url('/#/raw/tests/terra-base/base/switch-locale-base'));
     it('Displays a default en locale message', () => {
-      expect(browser.getText('#message')).to.equal('en');
+      expect(browser.getText('[id=message]')).to.equal('en');
     });
 
     it('Displays a customized en-US locale message', () => {
-      browser.click('#switch');
-      expect(browser.getText('#message')).to.equal('en-US');
+      browser.click('[id=switch]');
+      expect(browser.getText('[id=message]')).to.equal('en-US');
     });
   });
 

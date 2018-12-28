@@ -9,14 +9,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('default should open the dropdown by clicking the toggle', () => {
-        browser.click('#default:last-child');
+        browser.click('[id=default]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('default should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -30,11 +30,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('default should open the dropdown by clicking the toggle', () => {
-        browser.click('#default:last-child');
+        browser.click('[id=default]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('default should select the first option by pressing enter', () => {
         browser.keys('Enter');
@@ -51,14 +51,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('default controlled should open the dropdown by clicking the toggle', () => {
-        browser.click('#default:last-child');
+        browser.click('[id=default]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('default controlled should select the first option', () => {
-        browser.click('#terra-select-option-green');
+        browser.click('[id=terra-select-option-green]');
       });
 
       Terra.should.beAccessible();
@@ -72,11 +72,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('default should open the dropdown by clicking the toggle', () => {
-        browser.click('#default:last-child');
+        browser.click('[id=default]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
     });
 
     describe('should render an empty placeholder', () => {
@@ -92,11 +92,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('default should open the dropdown by clicking the toggle', () => {
-        browser.click('#maxHeight:last-child');
+        browser.click('[id=maxHeight]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown-max-height', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown-max-height', { viewports, selector: '[id=root]' });
     });
   });
 
@@ -114,14 +114,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('combobox should open the dropdown by clicking the toggle', () => {
-        browser.click('#combobox:last-child');
+        browser.click('[id=combobox]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('combobox should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -141,11 +141,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('combobox should open the dropdown by clicking the toggle', () => {
-        browser.click('#combobox:last-child');
+        browser.click('[id=combobox]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('combobox should select the first option by pressing enter', () => {
         browser.keys('Enter');
@@ -168,14 +168,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('combobox controlled should open the dropdown by clicking the toggle', () => {
-        browser.click('#combobox:last-child');
+        browser.click('[id=combobox]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('combobox controlled should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -195,11 +195,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('combobox should open the dropdown by clicking the toggle', () => {
-        browser.click('#combobox:last-child');
+        browser.click('[id=combobox]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('combobox should enter a free text entry', () => {
         browser.keys(['T', 'a', 'g']);
@@ -228,14 +228,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('multiple should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[id=multiple]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('multiple should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -255,11 +255,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('multiple should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[id=multiple]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('multiple should select the first option by pressing enter', () => {
         browser.keys('Enter');
@@ -282,14 +282,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('multiple controlled should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[id=multiple]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('multiple controlled should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -311,14 +311,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('search should open the dropdown by clicking the toggle', () => {
-        browser.click('#search:last-child');
+        browser.click('[id=search]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('search should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -338,11 +338,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('search should open the dropdown by clicking the toggle', () => {
-        browser.click('#search:last-child');
+        browser.click('[id=search]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('search should select the first option by pressing enter', () => {
         browser.keys('Enter');
@@ -365,14 +365,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('search constrolled should open the dropdown by clicking the toggle', () => {
-        browser.click('#search:last-child');
+        browser.click('[id=search]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('search constrolled should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -394,14 +394,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[id=tag]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('tag should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -421,11 +421,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[id=tag]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('tag should select the first option by pressing enter', () => {
         browser.keys('Enter');
@@ -448,14 +448,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('tag controlled should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[id=tag]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('tag controlled should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();
@@ -475,11 +475,11 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[id=tag]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('tag should enter a free text entry', () => {
         browser.keys(['T', 'a', 'g']);
@@ -502,14 +502,14 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
 
       it('should open the dropdown by clicking the toggle', () => {
-        browser.click('#opt-group:last-child');
+        browser.click('[id=opt-group]:last-child');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '[id=root]' });
 
       it('should select the first option', () => {
-        browser.click('#terra-select-option-blue');
+        browser.click('[id=terra-select-option-blue]');
       });
 
       Terra.should.beAccessible();

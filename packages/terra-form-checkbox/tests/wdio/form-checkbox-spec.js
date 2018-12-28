@@ -88,8 +88,8 @@ describe('Checkbox', () => {
 
     describe('Hover', () => {
       beforeEach(() => {
-        browser.waitForVisible('#default');
-        browser.moveToObject('#default');
+        browser.waitForVisible('[id=default]');
+        browser.moveToObject('[id=default]');
       });
 
       Terra.should.matchScreenshot();
@@ -102,9 +102,9 @@ describe('Checkbox', () => {
 
     describe('Checked', () => {
       beforeEach(() => {
-        browser.waitForVisible('#default');
+        browser.waitForVisible('[id=default]');
         browser.click('[for="default"]');
-        browser.click('#site');
+        browser.click('[id=site]');
       });
 
       Terra.should.matchScreenshot();
@@ -117,7 +117,7 @@ describe('Checkbox', () => {
 
     describe('Focus', () => {
       beforeEach(() => {
-        browser.waitForVisible('#default');
+        browser.waitForVisible('[id=default]');
         browser.keys('Tab');
       });
 
@@ -152,8 +152,8 @@ describe('Checkbox', () => {
 
     describe('Disabled Hover', () => {
       beforeEach(() => {
-        browser.waitForVisible('#disabled');
-        browser.moveToObject('#disabled');
+        browser.waitForVisible('[id=disabled]');
+        browser.moveToObject('[id=disabled]');
       });
 
       Terra.should.beAccessible();

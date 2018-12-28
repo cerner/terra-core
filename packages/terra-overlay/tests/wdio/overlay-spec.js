@@ -2,29 +2,29 @@ describe('Overlay', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/default-overlay'));
 
-    Terra.should.beAccessible({ selector: '#default-overlay' });
-    Terra.should.matchScreenshot({ selector: '#default-overlay' });
+    Terra.should.beAccessible({ selector: '[id=default-overlay]' });
+    Terra.should.matchScreenshot({ selector: '[id=default-overlay]' });
   });
 
   describe('Overlay container', () => {
     before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/container-overlay'));
 
-    Terra.should.beAccessible({ selector: '#overlay-container' });
-    Terra.should.matchScreenshot({ selector: '#overlay-container' });
+    Terra.should.beAccessible({ selector: '[id=overlay-container]' });
+    Terra.should.matchScreenshot({ selector: '[id=overlay-container]' });
   });
 
   describe('Scrollable Full Screen Overlay', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/fullscreen-scrollable-overlay'));
 
-    Terra.should.beAccessible({ selector: '#scrollable-overlay' });
-    Terra.should.matchScreenshot({ selector: '#scrollable-overlay' });
+    Terra.should.beAccessible({ selector: '[id=scrollable-overlay]' });
+    Terra.should.matchScreenshot({ selector: '[id=scrollable-overlay]' });
   });
 
   describe('Scrollable relative container overlay', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/container-scrollable-overlay'));
 
-    Terra.should.beAccessible({ selector: '#overlay-container' });
-    Terra.should.matchScreenshot({ selector: '#overlay-container' });
+    Terra.should.beAccessible({ selector: '[id=overlay-container]' });
+    Terra.should.matchScreenshot({ selector: '[id=overlay-container]' });
   });
 
   describe('Overlay on Request-Close', () => {
@@ -37,27 +37,27 @@ describe('Overlay', () => {
       Terra.should.matchScreenshot('Before');
 
       it('Clicks on the Full screen overlay button', () => {
-        browser.click('#trigger_fullscreen');
+        browser.click('[id=trigger_fullscreen]');
       });
 
-      Terra.should.beAccessible({ selector: '#terra-Overlay--fullscreen' });
-      Terra.should.matchScreenshot('After', { selector: '#terra-Overlay--fullscreen' });
+      Terra.should.beAccessible({ selector: '[id=terra-Overlay--fullscreen]' });
+      Terra.should.matchScreenshot('After', { selector: '[id=terra-Overlay--fullscreen]' });
     });
 
     it('Background does not scroll when a fullscreen Overlay is open', () => {
       browser.url('/#/raw/tests/terra-overlay/overlay/overlay/on-request-close-overlay');
-      browser.click('#trigger_fullscreen');
+      browser.click('[id=trigger_fullscreen]');
       expect(browser.getAttribute('html', 'style')).contains('overflow: hidden');
     });
 
     describe('Full Screen Overlay- Triggers an onRequestClose on escape keydown', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-overlay/overlay/overlay/on-request-close-overlay');
-        browser.click('#trigger_fullscreen');
+        browser.click('[id=trigger_fullscreen]');
       });
 
-      Terra.should.beAccessible({ selector: '#terra-Overlay--fullscreen' });
-      Terra.should.matchScreenshot('Before', { selector: '#terra-Overlay--fullscreen' });
+      Terra.should.beAccessible({ selector: '[id=terra-Overlay--fullscreen]' });
+      Terra.should.matchScreenshot('Before', { selector: '[id=terra-Overlay--fullscreen]' });
 
       it('Escape key press', () => {
         browser.keys('Escape');
@@ -70,14 +70,14 @@ describe('Overlay', () => {
     describe('Full Screen Overlay- Triggers an onRequestClose on click inside of the Overlay', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-overlay/overlay/overlay/on-request-close-overlay');
-        browser.click('#trigger_fullscreen');
+        browser.click('[id=trigger_fullscreen]');
       });
 
-      Terra.should.beAccessible({ selector: '#terra-Overlay--fullscreen' });
-      Terra.should.matchScreenshot('Before', { selector: '#terra-Overlay--fullscreen' });
+      Terra.should.beAccessible({ selector: '[id=terra-Overlay--fullscreen]' });
+      Terra.should.matchScreenshot('Before', { selector: '[id=terra-Overlay--fullscreen]' });
 
       it('Click inside of the overlay', () => {
-        browser.click('#terra-Overlay--fullscreen');
+        browser.click('[id=terra-Overlay--fullscreen]');
       });
 
       Terra.should.beAccessible();
@@ -93,27 +93,27 @@ describe('Overlay', () => {
       Terra.should.matchScreenshot('Before');
 
       it('Clicks on Container Overlay', () => {
-        browser.click('#trigger_container');
+        browser.click('[id=trigger_container]');
       });
 
-      Terra.should.beAccessible({ selector: '#terra-Overlay--container' });
-      Terra.should.matchScreenshot('After', { selector: '#terra-Overlay--container' });
+      Terra.should.beAccessible({ selector: '[id=terra-Overlay--container]' });
+      Terra.should.matchScreenshot('After', { selector: '[id=terra-Overlay--container]' });
     });
 
     it('Container Overlay- Background can scroll when Overlay relative to contianer is open', () => {
       browser.url('/#/raw/tests/terra-overlay/overlay/overlay/on-request-close-overlay');
-      browser.click('#trigger_container');
+      browser.click('[id=trigger_container]');
       expect(browser.getAttribute('html', 'style')).contains('');
     });
 
     describe('Container Overlay- Triggers an onRequestClose on escape keydown', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-overlay/overlay/overlay/on-request-close-overlay');
-        browser.click('#trigger_container');
+        browser.click('[id=trigger_container]');
       });
 
-      Terra.should.beAccessible({ selector: '#terra-Overlay--container' });
-      Terra.should.matchScreenshot('Before', { selector: '#terra-Overlay--container' });
+      Terra.should.beAccessible({ selector: '[id=terra-Overlay--container]' });
+      Terra.should.matchScreenshot('Before', { selector: '[id=terra-Overlay--container]' });
 
       it('Escape key press', () => {
         browser.keys('Escape');
@@ -126,14 +126,14 @@ describe('Overlay', () => {
     describe('Container Overlay-Triggers an onRequestClose on click inside of the Overlay', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-overlay/overlay/overlay/on-request-close-overlay');
-        browser.click('#trigger_container');
+        browser.click('[id=trigger_container]');
       });
 
-      Terra.should.beAccessible({ selector: '#terra-Overlay--container' });
-      Terra.should.matchScreenshot('Before', { selector: '#terra-Overlay--container' });
+      Terra.should.beAccessible({ selector: '[id=terra-Overlay--container]' });
+      Terra.should.matchScreenshot('Before', { selector: '[id=terra-Overlay--container]' });
 
       it('Clicks on the inside of Overlay', () => {
-        browser.click('#terra-Overlay--container');
+        browser.click('[id=terra-Overlay--container]');
       });
 
       Terra.should.beAccessible();
@@ -144,7 +144,7 @@ describe('Overlay', () => {
   describe('Custom Content', () => {
     const random = function random() {
       try {
-        browser.click('#random_button');
+        browser.click('[id=random_button]');
       } catch (error) {
         if (error.message.contains('is not clickable')) {
           throw error;
@@ -155,43 +155,43 @@ describe('Overlay', () => {
     describe('Full Screen Custom Content', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-overlay/overlay/overlay/custom-content-overlay');
-        browser.click('#trigger_fullscreen');
+        browser.click('[id=trigger_fullscreen]');
       });
-      Terra.should.beAccessible({ selector: '#terra-Overlay--fullscreen' });
-      Terra.should.matchScreenshot({ selector: '#terra-Overlay--fullscreen' });
+      Terra.should.beAccessible({ selector: '[id=terra-Overlay--fullscreen]' });
+      Terra.should.matchScreenshot({ selector: '[id=terra-Overlay--fullscreen]' });
     });
 
     it('Custom Content under overlay is not clickable when Overlay is open', () => {
       browser.url('/#/raw/tests/terra-overlay/overlay/overlay/custom-content-overlay');
-      browser.click('#trigger_fullscreen');
+      browser.click('[id=trigger_fullscreen]');
       expect(random).to.throw();
     });
 
     describe('Container Custom Content', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-overlay/overlay/overlay/custom-content-overlay');
-        browser.click('#trigger_container');
+        browser.click('[id=trigger_container]');
       });
-      Terra.should.beAccessible({ selector: '#custom-content-example' });
-      Terra.should.matchScreenshot({ selector: '#custom-content-example' });
+      Terra.should.beAccessible({ selector: '[id=custom-content-example]' });
+      Terra.should.matchScreenshot({ selector: '[id=custom-content-example]' });
     });
 
     describe('Custom Content under overlay container is clickable when overlaycontainer is open', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-overlay/overlay/overlay/custom-content-overlay');
-        browser.click('#trigger_container');
-        browser.click('#random_button');
+        browser.click('[id=trigger_container]');
+        browser.click('[id=random_button]');
       });
 
-      Terra.should.beAccessible({ selector: '#custom-content-example' });
-      Terra.should.matchScreenshot({ selector: '#custom-content-example' });
+      Terra.should.beAccessible({ selector: '[id=custom-content-example]' });
+      Terra.should.matchScreenshot({ selector: '[id=custom-content-example]' });
     });
   });
 
   describe('Overlay unmounted', () => {
     it('Background scrolling is restored after overlay is unmounted', () => {
       browser.url('/#/raw/tests/terra-overlay/overlay/overlay/removed-overlay');
-      browser.click('#fullscreen_overlay');
+      browser.click('[id=fullscreen_overlay]');
       expect(browser.getAttribute('html', 'style')).to.not.include('overflow: hidden');
     });
   });
@@ -200,10 +200,10 @@ describe('Overlay', () => {
     before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/light-overlay'));
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#light-overlay' });
+    Terra.should.matchScreenshot({ selector: '[id=light-overlay]' });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#light-overlay',
+      selector: '[id=light-overlay]',
       properties: {
         '--terra-overlay-light-background-color': 'green',
         '--terra-overlay-light-background-image': 'linear-gradient(red, green)',
@@ -216,10 +216,10 @@ describe('Overlay', () => {
     before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/dark-overlay'));
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#dark-overlay' });
+    Terra.should.matchScreenshot({ selector: '[id=dark-overlay]' });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#dark-overlay',
+      selector: '[id=dark-overlay]',
       properties: {
         '--terra-overlay-dark-background-color': 'blue',
         '--terra-overlay-dark-background-image': 'linear-gradient(blue, green)',
@@ -232,10 +232,10 @@ describe('Overlay', () => {
     before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay/clear-overlay'));
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#clear-overlay' });
+    Terra.should.matchScreenshot({ selector: '[id=clear-overlay]' });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#clear-overlay',
+      selector: '[id=clear-overlay]',
       properties: {
         '--terra-overlay-content-color': 'red',
         '--terra-overlay-content-padding-bottom': '500px',

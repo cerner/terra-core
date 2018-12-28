@@ -41,7 +41,7 @@ describe('TabPane', () => {
 
   describe('Long text', () => {
     before(() => browser.url('/#/raw/tests/terra-tabs/tabs/tab-pane/long-text-tab-pane'));
-    Terra.should.matchScreenshot({ selector: '#longText' });
+    Terra.should.matchScreenshot({ selector: '[id=longText]' });
     Terra.should.beAccessible();
   });
 });

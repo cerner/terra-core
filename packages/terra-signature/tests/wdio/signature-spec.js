@@ -11,11 +11,11 @@ describe('Signature', () => {
   describe('Drawing Lines', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
-      browser.waitForVisible('#drawline');
+      browser.waitForVisible('[id=drawline]');
 
-      browser.moveToObject('#drawline', 0, 0);
+      browser.moveToObject('[id=drawline]', 0, 0);
       browser.buttonDown(0);
-      browser.moveToObject('#drawline', 90, 90);
+      browser.moveToObject('[id=drawline]', 90, 90);
       browser.buttonUp(0);
     });
 
@@ -26,13 +26,13 @@ describe('Signature', () => {
   describe('Themed Drawing Lines', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
-      browser.waitForVisible('#drawline');
+      browser.waitForVisible('[id=drawline]');
       // Theme variables need to be set before drawing on canvas for theme test
       browser.execute('document.documentElement.style.setProperty("--terra-signature-background-color", "#a7dc9e")');
       browser.execute('document.documentElement.style.setProperty("--terra-signature-line-color", "#8b0a0a")');
-      browser.moveToObject('#drawline', 0, 0);
+      browser.moveToObject('[id=drawline]', 0, 0);
       browser.buttonDown(0);
-      browser.moveToObject('#drawline', 90, 90);
+      browser.moveToObject('[id=drawline]', 90, 90);
       browser.buttonUp(0);
     });
 
@@ -42,11 +42,11 @@ describe('Signature', () => {
   describe('Right Click does not draw lines', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
-      browser.waitForVisible('#drawline');
+      browser.waitForVisible('[id=drawline]');
 
-      browser.moveToObject('#drawline', 0, 0);
+      browser.moveToObject('[id=drawline]', 0, 0);
       browser.buttonDown(2);
-      browser.moveToObject('#drawline', 90, 90);
+      browser.moveToObject('[id=drawline]', 90, 90);
       browser.buttonUp(2);
     });
 
@@ -57,11 +57,11 @@ describe('Signature', () => {
   describe('Middle Click does not draw lines', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-signature/signature/signature-default');
-      browser.waitForVisible('#drawline');
+      browser.waitForVisible('[id=drawline]');
 
-      browser.moveToObject('#drawline', 0, 0);
+      browser.moveToObject('[id=drawline]', 0, 0);
       browser.buttonDown(1);
-      browser.moveToObject('#drawline', 90, 90);
+      browser.moveToObject('[id=drawline]', 90, 90);
       browser.buttonUp(1);
     });
 

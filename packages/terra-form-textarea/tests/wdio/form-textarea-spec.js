@@ -394,7 +394,7 @@ describe('Form-Textarea', () => {
     describe('Invalid TextareaField', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
-        browser.click('#validity-toggle');
+        browser.click('[id=validity-toggle]');
       });
 
       Terra.should.matchScreenshot({ viewports });

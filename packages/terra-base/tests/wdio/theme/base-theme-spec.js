@@ -5,7 +5,7 @@ describe('Base theme', () => {
     before(() => browser.url('/#/raw/tests/terra-base/base/default-base'));
 
     Terra.should.themeEachCustomProperty(
-      '#root',
+      '[id=root]',
       {
         '--terra-base-background-color': 'red',
       },
@@ -24,13 +24,13 @@ describe('Base theme', () => {
         '--terra-base-background-position': 'top 70px left 45px',
         '--terra-base-background-attachment': 'fixed',
       },
-      selector: '#root',
+      selector: '[id=root]',
     });
 
     it('should scroll to the bottom', () => {
-      browser.moveToObject('#bottom');
+      browser.moveToObject('[id=bottom]');
     });
 
-    Terra.should.matchScreenshot('scrolled down', { selector: '#bottom-section' });
+    Terra.should.matchScreenshot('scrolled down', { selector: '[id=bottom-section]' });
   });
 });

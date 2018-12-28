@@ -102,8 +102,8 @@ describe('Radio', () => {
 
     describe('Hover', () => {
       beforeEach(() => {
-        browser.waitForVisible('#default');
-        browser.moveToObject('#default');
+        browser.waitForVisible('[id=default]');
+        browser.moveToObject('[id=default]');
       });
 
       Terra.should.matchScreenshot();
@@ -116,9 +116,9 @@ describe('Radio', () => {
 
     describe('Checked', () => {
       beforeEach(() => {
-        browser.waitForVisible('#default');
+        browser.waitForVisible('[id=default]');
         browser.click('[for="default"]');
-        browser.click('#site');
+        browser.click('[id=site]');
       });
 
       Terra.should.matchScreenshot();
@@ -131,7 +131,7 @@ describe('Radio', () => {
 
     describe('Focus', () => {
       beforeEach(() => {
-        browser.waitForVisible('#default');
+        browser.waitForVisible('[id=default]');
         browser.keys('Tab');
       });
 

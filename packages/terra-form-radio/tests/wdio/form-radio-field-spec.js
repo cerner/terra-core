@@ -39,7 +39,7 @@ describe('RadioField', () => {
   describe('RadioField Interactions - Valid State', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
-      browser.waitForVisible('#testing-radio-field');
+      browser.waitForVisible('[id=testing-radio-field]');
       browser.click('[for="website-dept"]');
       browser.click('[for="ux-dept"]');
       browser.click('[for="website-dept"]');
@@ -52,7 +52,7 @@ describe('RadioField', () => {
   describe('RadioField Interactions - Valid State with hideRequired', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
-      browser.waitForVisible('#testing-radio-field');
+      browser.waitForVisible('[id=testing-radio-field]');
       browser.click('[for="website-dept"]');
       browser.click('[for="ux-dept"]');
     });
@@ -63,7 +63,7 @@ describe('RadioField', () => {
   describe('RadioField Interactions - Invalid State with hideRequired', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
-      browser.waitForVisible('#testing-radio-field');
+      browser.waitForVisible('[id=testing-radio-field]');
       browser.click('[for="website-dept"]');
       browser.click('[for="ux-dept"]');
       browser.click('[for="website-dept"]');

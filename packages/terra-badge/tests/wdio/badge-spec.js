@@ -5,10 +5,10 @@ describe('Badge', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-default'));
 
     Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports, selector: '#default-badge' });
+    Terra.should.matchScreenshot({ viewports, selector: '[id=default-badge]' });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
-      selector: '#default-badge',
+      selector: '[id=default-badge]',
       properties: {
         '--terra-badge-border-radius': '20px',
         '--terra-badge-display': 'block',

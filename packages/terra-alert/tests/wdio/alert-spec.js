@@ -73,9 +73,9 @@ describe('Alert', () => {
       Terra.should.beAccessible();
 
       it('should be register actions', () => {
-        expect(browser.getText('#actionButtonClickCount')).to.equal('0');
-        browser.click('#actionAlert button');
-        expect(browser.getText('#actionButtonClickCount')).to.equal('1');
+        expect(browser.getText('[id=actionButtonClickCount]')).to.equal('0');
+        browser.click('[id=actionAlert] button');
+        expect(browser.getText('[id=actionButtonClickCount]')).to.equal('1');
       });
     });
 
@@ -90,8 +90,8 @@ describe('Alert', () => {
       Terra.should.beAccessible();
 
       it('should dismiss', () => {
-        browser.click('#dismissibleAlert button');
-        expect(browser.getText('#dismissed')).to.equal('Alert was dismissed');
+        browser.click('[id=dismissibleAlert] button');
+        expect(browser.getText('[id=dismissed]')).to.equal('Alert was dismissed');
       });
     });
   });

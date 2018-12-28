@@ -46,11 +46,11 @@ describe('Tabs - Responsive', () => {
         browser.click('[data-terra-tabs-menu]');
       });
 
-      Terra.should.matchScreenshot('0', { selector: '#root' });
+      Terra.should.matchScreenshot('0', { selector: '[id=root]' });
       Terra.should.beAccessible({ rules: ignoredA11y });
 
       it('should close menu when tab is selected', () => {
-        browser.click('#tab12');
+        browser.click('[id=tab12]');
       });
 
       Terra.should.beAccessible({ rules: ignoredA11y });
@@ -118,8 +118,8 @@ describe('Tabs - Responsive', () => {
 
       describe('Collapsible hover', () => {
         beforeEach(() => {
-          browser.waitForVisible('#tab2');
-          browser.moveToObject('#tab2');
+          browser.waitForVisible('[id=tab2]');
+          browser.moveToObject('[id=tab2]');
         });
 
         Terra.should.matchScreenshot();
@@ -138,8 +138,8 @@ describe('Tabs - Responsive', () => {
 
       describe('Collapsible active focus', () => {
         beforeEach(() => {
-          browser.waitForVisible('#tab2');
-          browser.click('#tab2');
+          browser.waitForVisible('[id=tab2]');
+          browser.click('[id=tab2]');
         });
 
         Terra.should.matchScreenshot();

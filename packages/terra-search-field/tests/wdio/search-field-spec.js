@@ -153,7 +153,7 @@ describe('Search Field', () => {
     it('should not search with the button', () => {
       browser.click('button');
       // Ensure button on hover styling is disabled
-      browser.click('#search-callback-text');
+      browser.click('[id=search-callback-text]');
     });
 
     Terra.should.matchScreenshot('with too short text after button press');
@@ -257,12 +257,12 @@ describe('Search Field', () => {
     Terra.should.matchScreenshot('empty');
 
     it('should click button to focus search field', () => {
-      browser.waitForVisible('#search-field-focus-button');
+      browser.waitForVisible('[id=search-field-focus-button]');
       browser.execute(() => {
         // Removes the blinking cursor to prevent screenshot mismatches.
         document.querySelector('input').style.caretColor = 'transparent';
       });
-      browser.click('#search-field-focus-button');
+      browser.click('[id=search-field-focus-button]');
     });
 
     Terra.should.matchScreenshot('with focus');

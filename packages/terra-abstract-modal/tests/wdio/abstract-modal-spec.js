@@ -50,7 +50,7 @@ describe('Abstract Modal', () => {
 
     it('focuses on the first button', () => {
       browser.keys(['Tab']);
-      browser.hasFocus('#focus-button');
+      browser.hasFocus('[id=focus-button]');
     });
 
     Terra.should.matchScreenshot({ selector: 'div[role="dialog"]' });
@@ -125,7 +125,7 @@ describe('Abstract Modal', () => {
     Terra.should.matchScreenshot({ selector: 'div[role="dialog"]' });
 
     it('has the appropriate focus', () => {
-      browser.hasFocus('#focus-element');
+      browser.hasFocus('[id=focus-element]');
     });
   });
 
@@ -139,7 +139,7 @@ describe('Abstract Modal', () => {
     Terra.should.matchScreenshot({ selector: 'div[role="dialog"]' });
 
     it('has the appropriate focus', () => {
-      browser.hasFocus('#focus-element');
+      browser.hasFocus('[id=focus-element]');
     });
   });
 

@@ -64,7 +64,7 @@ describe('Paginator', () => {
     Terra.should.matchScreenshot('0');
 
     it('should toggle page change when the props are updated', () => {
-      browser.click('#button-9');
+      browser.click('[id=button-9]');
     });
 
     Terra.should.matchScreenshot('1');
@@ -88,7 +88,7 @@ describe('Paginator', () => {
     Terra.should.matchScreenshot('0');
 
     it('should toggle page change when the props are updated', () => {
-      browser.click('#button-9');
+      browser.click('[id=button-9]');
     });
 
     Terra.should.matchScreenshot('1');

@@ -35,7 +35,7 @@ describe('Collapsible Menu View', () => {
         browser.click('[data-collapsible-menu-toggle]');
       });
 
-      Terra.should.matchScreenshot({ selector: '#root' });
+      Terra.should.matchScreenshot({ selector: '[id=root]' });
       Terra.should.beAccessible();
     });
   });

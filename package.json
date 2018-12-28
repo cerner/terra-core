@@ -73,7 +73,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.2.2",
     "eslint": "^5.0.0",
-    "eslint-config-terra": "^2.0.0",
+    "eslint-config-terra": "git://github.com/cerner/eslint-config-terra.git#add-terra-eslint-pluign",
     "gh-pages": "^1.1.0",
     "glob": "^7.1.1",
     "identity-obj-proxy": "^3.0.0",
@@ -93,5 +93,8 @@
     "terra-dev-site": "^2.0.0",
     "terra-toolkit": "^4.5.0",
     "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "eslint-plugin-react": "^7.11.0"
   }
 }

@@ -134,7 +134,7 @@ describe('DateTimePicker', () => {
       browser.click('input[name="terra-time-minute-input"]');
       browser.waitForVisible('[class*="time-clarification"]');
       browser.click('[class*="button-daylight"]');
-      browser.click('#date-time-picker-toggler');
+      browser.click('[id=date-time-picker-toggler]');
     });
 
     const ignoredDisabledAlly = Object.assign({ 'color-contrast': { enabled: false } }, ignoredA11y);

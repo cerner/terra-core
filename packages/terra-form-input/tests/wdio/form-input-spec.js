@@ -225,7 +225,7 @@ describe('Form-Input', () => {
     describe('Invalid InputField', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
-        browser.click('#validity-toggle');
+        browser.click('[id=validity-toggle]');
       });
 
       Terra.should.matchScreenshot({ viewports });

@@ -8,7 +8,7 @@ describe('Toggle', () => {
     Terra.should.matchScreenshot('closed');
 
     it('expands', () => {
-      browser.click('#trigger-toggle'); // Open toggle
+      browser.click('[id=trigger-toggle]'); // Open toggle
     });
 
     Terra.should.matchScreenshot('opened');
@@ -25,13 +25,13 @@ describe('Toggle', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle/toggle/animated-toggle'));
 
     it('disables focusable elements when closed', () => {
-      expect(browser.getCssProperty('#toggle', 'visibility').value).to.equal('hidden');
+      expect(browser.getCssProperty('[id=toggle]', 'visibility').value).to.equal('hidden');
     });
 
     it('enables focusable elements when opened', () => {
-      browser.click('#trigger-toggle'); // Open toggle
-      browser.waitForVisible('#toggle');
-      expect(browser.getCssProperty('#toggle', 'visibility').value).to.equal('visible');
+      browser.click('[id=trigger-toggle]'); // Open toggle
+      browser.waitForVisible('[id=toggle]');
+      expect(browser.getCssProperty('[id=toggle]', 'visibility').value).to.equal('visible');
     });
   });
 });

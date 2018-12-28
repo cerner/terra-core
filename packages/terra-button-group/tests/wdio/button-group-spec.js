@@ -4,7 +4,7 @@ describe('Button Group', () => {
   describe('Text Button', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-text'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#button-group-text' });
+    Terra.should.matchScreenshot({ selector: '[id=button-group-text]' });
   });
 
   describe('Button Group Wrapping', () => {
@@ -22,25 +22,25 @@ describe('Button Group', () => {
   describe('Long Text Button', () => {
     before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-long-text'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#button-group-text' });
+    Terra.should.matchScreenshot({ selector: '[id=button-group-text]' });
   });
 
   describe('Icon Button', () => {
     before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-icon'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#button-group-icon' });
+    Terra.should.matchScreenshot({ selector: '[id=button-group-icon]' });
   });
 
   describe('Not Selectable', () => {
     before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-not-selectable'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#button-group-not-selectable' });
+    Terra.should.matchScreenshot({ selector: '[id=button-group-not-selectable]' });
   });
 
   describe('Disabled Buttons', () => {
     before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-disabled-buttons'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#button-group-not-selectable' });
+    Terra.should.matchScreenshot({ selector: '[id=button-group-not-selectable]' });
   });
 
   describe('Single-Select', () => {
@@ -48,7 +48,7 @@ describe('Button Group', () => {
     it('should select the first button', () => {
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-key')).to.equal('1');
+      expect(browser.getText('[id=selected-key]')).to.equal('1');
     });
 
     Terra.should.beAccessible();
@@ -57,7 +57,7 @@ describe('Button Group', () => {
     it('should select the second button', () => {
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-key')).to.equal('2');
+      expect(browser.getText('[id=selected-key]')).to.equal('2');
     });
 
     Terra.should.beAccessible();
@@ -67,7 +67,7 @@ describe('Button Group', () => {
       browser.keys('Tab');
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-key')).to.equal('4');
+      expect(browser.getText('[id=selected-key]')).to.equal('4');
     });
 
     Terra.should.beAccessible();
@@ -79,7 +79,7 @@ describe('Button Group', () => {
     it('should select the first button', () => {
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-keys')).to.equal('1');
+      expect(browser.getText('[id=selected-keys]')).to.equal('1');
     });
 
     Terra.should.beAccessible();
@@ -87,7 +87,7 @@ describe('Button Group', () => {
 
     it('should unselect the first button', () => {
       browser.keys('Space');
-      expect(browser.getText('#selected-keys')).to.equal('');
+      expect(browser.getText('[id=selected-keys]')).to.equal('');
     });
 
     Terra.should.beAccessible();
@@ -96,7 +96,7 @@ describe('Button Group', () => {
     it('should select the second button', () => {
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-keys')).to.equal('2');
+      expect(browser.getText('[id=selected-keys]')).to.equal('2');
     });
 
     Terra.should.beAccessible();
@@ -105,7 +105,7 @@ describe('Button Group', () => {
     it('should select the third button', () => {
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-keys')).to.equal('2, 3');
+      expect(browser.getText('[id=selected-keys]')).to.equal('2, 3');
     });
 
     Terra.should.beAccessible();
@@ -113,7 +113,7 @@ describe('Button Group', () => {
 
     it('should unselect the third button', () => {
       browser.keys('Space');
-      expect(browser.getText('#selected-keys')).to.equal('2');
+      expect(browser.getText('[id=selected-keys]')).to.equal('2');
     });
 
     Terra.should.beAccessible();

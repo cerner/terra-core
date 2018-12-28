@@ -5,6 +5,6 @@ describe('Overlay Container Default', () => {
   Terra.should.matchScreenshot();
 
   it('Check for tabindex value', () => {
-    expect(browser.getAttribute('#terra-OverlayContainer', 'tabIndex')).to.equal('-1');
+    expect(browser.getAttribute('[id=terra-OverlayContainer]', 'tabIndex')).to.equal('-1');
   });
 });

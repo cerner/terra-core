@@ -19,6 +19,6 @@ describe('Responsive Element', () => {
     before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/all-breakpoints-small-parent'));
 
     Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports, selector: '#root' });
+    Terra.should.matchScreenshot({ viewports, selector: '[id=root]' });
   });
 });

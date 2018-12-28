@@ -107,21 +107,21 @@ describe('Menu Item-Triggers onClick Function', () => {
   before(() => browser.url('/#/raw/tests/terra-menu/menu/menu-item/menu-item-on-click'));
 
   it('starts with click number of 0', () => {
-    expect(browser.getText('#clickNumber')).to.contain('0');
+    expect(browser.getText('[id=clickNumber]')).to.contain('0');
   });
 
   it('increments on Click', () => {
     browser.click('.TestOnClickItem');
-    expect(browser.getText('#clickNumber')).to.contain('1');
+    expect(browser.getText('[id=clickNumber]')).to.contain('1');
   });
 
   it('increments on Enter', () => {
     browser.keys('Enter');
-    expect(browser.getText('#clickNumber')).to.contain('2');
+    expect(browser.getText('[id=clickNumber]')).to.contain('2');
   });
 
   it('increments on Space', () => {
     browser.keys('Space');
-    expect(browser.getText('#clickNumber')).to.contain('3');
+    expect(browser.getText('[id=clickNumber]')).to.contain('3');
   });
 });
