@@ -95,6 +95,6 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "eslint-plugin-react": "^7.11.0"
+    "eslint-plugin-react": "7.11.0"
   }
 }
