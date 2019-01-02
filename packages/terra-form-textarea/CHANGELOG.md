@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Removed use of componentWillMount from examples
+* Updated site examples to be more accessible.
 
 ### Added
 * maxWidth prop added to pass through to terra-form-field

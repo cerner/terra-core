@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Field from 'terra-form-field';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Input from 'terra-form-input';
 
@@ -18,13 +18,15 @@ class DisabledExample extends React.Component {
   render() {
     return (
       <div>
-        <h4>Disabled</h4>
-        <Input
-          disabled
-          value={this.state.input}
-          name="disabled input"
-          onChange={this.handleChange}
-        />
+        <Field label="Disabled" htmlFor="controlled-disabled">
+          <Input
+            disabled
+            value={this.state.input}
+            name="disabled input"
+            id="controlled-disabled"
+            onChange={this.handleChange}
+          />
+        </Field>
         <p>
 Input Provided:
           {this.state.input}
