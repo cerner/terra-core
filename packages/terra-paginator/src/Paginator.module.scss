@@ -80,7 +80,7 @@
       pointer-events: none;
 
       &:focus {
-        box-shadow: var(--terra-paginator-nav-link-disabled-focused-box-shadow, none);
+        box-shadow: var(--terra-paginator-nav-link-disabled-focus-box-shadow, none);
         outline: none;
       }
     }
