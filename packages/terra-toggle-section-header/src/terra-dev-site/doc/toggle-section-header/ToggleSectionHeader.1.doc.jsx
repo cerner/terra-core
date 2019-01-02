@@ -28,7 +28,7 @@ const DocPage = () => (
         source: DefaultToggleSectionHeaderSrc,
       },
       {
-        title: 'Two Column',
+        title: 'Animated',
         example: <AnimatedToggleSectionHeader />,
         source: AnimatedToggleSectionHeaderSrc,
       },

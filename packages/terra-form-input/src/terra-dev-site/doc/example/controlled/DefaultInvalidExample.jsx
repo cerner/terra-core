@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Field from 'terra-form-field';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Input from 'terra-form-input';
 
@@ -18,13 +18,15 @@ class DefaultInvalidExample extends React.Component {
   render() {
     return (
       <div>
-        <h4>Default</h4>
-        <Input
-          name="default error input"
-          value={this.state.input}
-          onChange={this.handleChange}
-          isInvalid
-        />
+        <Field label="Default" htmlFor="default-controlled-invalid">
+          <Input
+            name="default error input"
+            id="default-controlled-invalid"
+            value={this.state.input}
+            onChange={this.handleChange}
+            isInvalid
+          />
+        </Field>
         <p>
 Input Provided:
           {this.state.input}
