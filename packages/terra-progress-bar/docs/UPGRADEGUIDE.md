@@ -7,7 +7,6 @@
 #### Renamed
 | Previous | New |
 |-|-|
-| --terra-progress-bar-height-small | --terra-progress-bar-default-height |
 | --terra-progress-bar-height-tiny | --terra-progress-bar-tiny-height |
 | --terra-progress-bar-height-small | --terra-progress-bar-small-height |
 | --terra-progress-bar-height-medium | --terra-progress-bar-medium-height |
@@ -15,4 +14,5 @@
 | --terra-progress-bar-height-huge | --terra-progress-bar-huge-height |
 
 #### Added
+* --terra-progress-bar-default-height
 * --terra-progress-bar-border-radius
