@@ -1,11 +1,12 @@
 import React from 'react';
-
+import Field from 'terra-form-field';
 import Input from '../../../Input';
 
 const BlankExample = () => (
   <div>
-    <h4>Blank</h4>
-    <Input name="default blank input" />
+    <Field label="Blank" htmlFor="blank">
+      <Input name="default blank input" id="blank" />
+    </Field>
   </div>
 );
 

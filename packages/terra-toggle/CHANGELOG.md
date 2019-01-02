@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed link in readme.
 
 2.28.1 - (November 20, 2018)
 ------------------

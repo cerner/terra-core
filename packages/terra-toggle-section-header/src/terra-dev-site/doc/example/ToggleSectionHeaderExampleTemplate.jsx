@@ -5,10 +5,6 @@ import ToggleSectionHeader from 'terra-toggle-section-header/lib/ToggleSectionHe
 
 const propTypes = {
   /**
-   * Title of the example
-   */
-  exampleTitle: PropTypes.string.isRequired,
-  /**
    * Props to be spread onto TerraSectionHeader
    */
   // eslint-disable-next-line react/forbid-prop-types
@@ -19,9 +15,8 @@ const propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const ToggleSectionHeaderExampleTemplate = ({ exampleTitle, exampleProps, children }) => (
+const ToggleSectionHeaderExampleTemplate = ({ exampleProps, children }) => (
   <div>
-    <h4>{exampleTitle}</h4>
     <ToggleSectionHeader {...exampleProps}>
       {children}
     </ToggleSectionHeader>

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated site examples to be more accessible.
+
 ### Added
 * Added missing ar translations.
 * Added code sample display to the doc site examples
