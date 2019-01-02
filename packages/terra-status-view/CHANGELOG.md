@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.36.0 - (January 2, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
 * Removed use of componentWillMount from examples
 * Updated site examples to be more accessible.
 
