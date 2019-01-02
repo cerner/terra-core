@@ -1,11 +1,12 @@
 import React from 'react';
-
+import Field from 'terra-form-field';
 import Input from '../../../Input';
 
 const PlaceholderExample = () => (
   <div>
-    <h4>Placeholder Text</h4>
-    <Input name="default placeholder input" placeholder="Placeholder Text" />
+    <Field label="Placeholder Text" htmlFor="placeholder">
+      <Input name="default placeholder input" placeholder="Placeholder Text" id="placeholder" />
+    </Field>
   </div>
 );
 

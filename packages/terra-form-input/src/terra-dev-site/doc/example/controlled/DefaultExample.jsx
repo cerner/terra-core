@@ -1,4 +1,5 @@
 import React from 'react';
+import Field from 'terra-form-field';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Input from 'terra-form-input';
@@ -18,12 +19,14 @@ class DefaultExample extends React.Component {
   render() {
     return (
       <div>
-        <h4>Default</h4>
-        <Input
-          name="default input"
-          value={this.state.input}
-          onChange={this.handleChange}
-        />
+        <Field label="Default" htmlFor="default-controlled">
+          <Input
+            name="default input"
+            id="default-controlled"
+            value={this.state.input}
+            onChange={this.handleChange}
+          />
+        </Field>
         <p>
 Input Provided:
           {this.state.input}
