@@ -9,6 +9,11 @@ Unreleased
 ### Added
 * Bottom border styles collapsed tab edge case
 
+3.31.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Lint Errors
 

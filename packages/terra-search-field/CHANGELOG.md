@@ -6,7 +6,11 @@ Unreleased
 ### Changed
 * Updated theme variables
 
+2.37.0 - (January 2, 2019)
+------------------
 ### Changed
+=======
+* Minor dependency version bump
 * Set the input cursor to be transparent for wdio tests
 
 2.36.1 - (November 20, 2018)

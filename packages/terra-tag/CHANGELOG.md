@@ -7,6 +7,11 @@ Unreleased
 * Updated theme variables
 * Refactor default style values
 
+1.32.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.31.1 - (November 20, 2018)
 ------------------
 ### Changed

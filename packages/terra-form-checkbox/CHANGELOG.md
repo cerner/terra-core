@@ -7,6 +7,11 @@ Unreleased
 * Updated theme variables
 * checkbox-field: render error icon down one level of markup
 
+2.33.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.32.0 - (November 19, 2018)
 ------------------
 ### Changed

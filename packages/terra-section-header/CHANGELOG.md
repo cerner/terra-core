@@ -5,6 +5,11 @@ Unreleased
 ----------
 ### Changed
 * Updated theme variables
+
+1.30.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 * Updated site examples to be more accessible.
 
 1.29.1 - (November 20, 2018)

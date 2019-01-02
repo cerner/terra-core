@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Updated theme variables
 
+4.26.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added missing ar translations
 * maxWidth prop added to pass through to terra-form-field
