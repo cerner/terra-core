@@ -35,7 +35,7 @@ class StatusViewTemplate extends React.Component {
 
   renderVariantForm() {
     return (
-      <form>
+      <div>
         <label htmlFor={this.getId('variant')}>Variant: </label>
         <select id={this.getId('variant')} name="variant" value={this.state.variant} onChange={this.handleSelectChange}>
           <option value="no-data"> no-data </option>
@@ -44,7 +44,7 @@ class StatusViewTemplate extends React.Component {
           <option value="error"> error </option>
           <option value="custom"> custom </option>
         </select>
-      </form>
+      </div>
     );
   }
 

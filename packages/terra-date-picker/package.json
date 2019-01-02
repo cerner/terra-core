@@ -35,6 +35,7 @@
     "terra-app-delegate": "^2.1.0",
     "terra-button": "^2.31.1",
     "terra-doc-template": "^1.22.0",
+    "terra-form-field": "^2.32.1",
     "terra-form-input": "^1.31.1",
     "terra-icon": "^2.29.1",
     "terra-modal-manager": "^3.0.0",

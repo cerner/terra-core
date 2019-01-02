@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated code blocks to have sufficient color contrast
+* Updated markdown headers to not have generated ids, preventing duplicated ids in change logs
 
 2.17.0 - (November 19, 2018)
 ------------------
