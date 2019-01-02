@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.30.0 - (January 2, 2019)
+------------------
 ### Changed
 * Moved keyframe animation styles out of CSS Modules parsing and into global styles written to the DOM with JS
 
