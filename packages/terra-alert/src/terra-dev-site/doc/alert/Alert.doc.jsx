@@ -26,14 +26,10 @@ import LongTextExample from '../example/LongTextExample';
 import LongTextExampleSrc from '!raw-loader!../example/LongTextExample';
 import ActionExample from '../example/ActionExample';
 import ActionExampleSrc from '!raw-loader!../example/ActionExample';
-import SmallContainerExample from '../example/SmallContainerExample';
-import SmallContainerExampleSrc from '!raw-loader!../example/SmallContainerExample';
 import DismissibleExample from '../example/DismissibleExample';
 import DismissibleExampleSrc from '!raw-loader!../example/DismissibleExample';
 import ActionAndDismissibleExample from '../example/ActionAndDismissibleExample';
 import ActionAndDismissibleExampleSrc from '!raw-loader!../example/ActionAndDismissibleExample';
-import BuildYourOwnAlertExample from '../example/BuildYourOwnAlertExample';
-import BuildYourOwnAlertExampleSrc from '!raw-loader!../example/BuildYourOwnAlertExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -88,11 +84,6 @@ const DocPage = () => (
         source: ActionExampleSrc,
       },
       {
-        title: 'Alert in Small Container',
-        example: <SmallContainerExample />,
-        source: SmallContainerExampleSrc,
-      },
-      {
         title: 'Dismissible Alert',
         example: <DismissibleExample />,
         source: DismissibleExampleSrc,
@@ -101,11 +92,6 @@ const DocPage = () => (
         title: 'Dismissible Alert with Actions',
         example: <ActionAndDismissibleExample />,
         source: ActionAndDismissibleExampleSrc,
-      },
-      {
-        title: 'Build ',
-        example: <BuildYourOwnAlertExample />,
-        source: BuildYourOwnAlertExampleSrc,
       },
     ]}
     propsTables={[

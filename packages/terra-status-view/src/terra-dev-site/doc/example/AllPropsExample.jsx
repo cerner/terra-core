@@ -1,10 +1,11 @@
 import React from 'react';
 import Button from 'terra-button';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
-import StatusViewTemplate from '../example/StatusViewTemplate';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import StatusView from 'terra-status-view/lib/StatusView';
 
 const AllPropsExample = (
-  <StatusViewTemplate
+  <StatusView
     style={{ width: '500px' }}
     variant="no-data"
     title="500"
@@ -13,7 +14,7 @@ const AllPropsExample = (
   >
     <Button text="OK" key="1" size="medium" />
     <Button text="Cancel" key="2" size="medium" />
-  </StatusViewTemplate>
+  </StatusView>
 );
 
 export default AllPropsExample;

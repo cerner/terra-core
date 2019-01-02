@@ -1,7 +1,5 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import Button from 'terra-button';
-import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
@@ -10,8 +8,6 @@ import { name } from '../../../../package.json';
 import StatusViewSrc from '!raw-loader!../../../../src/StatusView';
 
 // Example Files
-import StatusViewTemplate from '../example/StatusViewTemplate';
-
 import NoPropsExample from '../example/NoPropsExample';
 import NoPropsExampleSrc from '!raw-loader!../example/NoPropsExample';
 import AllPropsExample from '../example/AllPropsExample';

@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from 'terra-button';
-import StatusViewTemplate from '../example/StatusViewTemplate';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import StatusView from 'terra-status-view/lib/StatusView';
 
 const NoPropsExample = (
-  <StatusViewTemplate style={{ width: '500px' }} />
+  <StatusView style={{ width: '500px' }} />
 );
 
 export default NoPropsExample;
