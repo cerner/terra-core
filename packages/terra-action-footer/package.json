@@ -1,7 +1,7 @@
 {
   "name": "terra-action-footer",
   "main": "lib/ActionFooter.js",
-  "version": "1.28.1",
+  "version": "1.29.0",
   "description": "The terra-action-footer component is a footer bar that contains sockets for placing actionable items such as buttons and hyperlinks. The default variation contains a start and end socket, while the centered variation has only a center socket. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.",
   "repository": {
     "type": "git",
@@ -28,10 +28,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^2.31.1",
-    "terra-doc-template": "^1.22.0",
-    "terra-hyperlink": "^1.18.0",
-    "terra-spacer": "^2.30.1"
+    "terra-button": "^2.32.0",
+    "terra-doc-template": "^1.23.0",
+    "terra-hyperlink": "^1.19.0",
+    "terra-spacer": "^2.31.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
