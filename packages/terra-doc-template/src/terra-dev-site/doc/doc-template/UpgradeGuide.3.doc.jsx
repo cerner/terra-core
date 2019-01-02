@@ -1,6 +1,6 @@
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions */
 import React from 'react';
-import DocTemplate from 'terra-doc-template';
+import DocTemplate from '../../../DocTemplate';
 import UpgradeGuide from '../../../../docs/UPGRADEGUIDE.md';
 
 const DocPage = () => (

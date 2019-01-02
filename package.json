@@ -25,7 +25,14 @@
     "extends": "terra"
   },
   "stylelint": {
-    "extends": "stylelint-config-terra"
+    "extends": "stylelint-config-terra",
+    "rules": {
+      "terra/custom-property-name": true,
+      "terra/custom-property-no-duplicate-declaration": true,
+      "terra/custom-property-pattern": true,
+      "terra/custom-property-pseudo-selectors": true,
+      "terra/custom-property-namespace": true
+    }
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -90,7 +97,7 @@
     "rimraf": "^2.6.1",
     "shelljs": "^0.8.2",
     "stylelint": "^9.0.0",
-    "stylelint-config-terra": "git+https://github.com/cerner/stylelint-config-terra.git#Errors",
+    "stylelint-config-terra": "^1.0.0",
     "terra-dev-site": "^2.0.0",
     "terra-toolkit": "^4.5.0",
     "webpack-merge": "^4.1.2"
