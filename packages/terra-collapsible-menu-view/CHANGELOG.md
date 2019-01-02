@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Update snapshots for list dependency.
 
+3.31.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.30.1 - (November 20, 2018)
 ------------------
 ### Changed

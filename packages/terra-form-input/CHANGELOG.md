@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.32.0 - (January 2, 2019)
+------------------
 ### Fixed
 * Dev site tests pages adjusted to uniformly use caretColor
 
@@ -11,6 +14,7 @@ Unreleased
 * maxWidth prop added to pass through to terra-form-field
 
 ### Changed
+* Minor dependency version bump
 * Updated site examples to be more accessible.
 * Note added regarding input types to pattern prop
 

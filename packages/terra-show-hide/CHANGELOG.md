@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Correct test routing.
 
+1.6.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.5.1 - (November 20, 2018)
 ------------------
 ### Changed

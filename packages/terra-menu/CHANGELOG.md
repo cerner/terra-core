@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+3.29.0 - (January 2, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
 * Removed usage of componentWillReceiveProps
 * Updated site examples to be more accessible.
 * Update to use new List API, create single select implementation within MenuItemGroup. 

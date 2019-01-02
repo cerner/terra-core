@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "2.29.1",
+  "version": "2.30.0",
   "description": "The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.22.0",
+    "terra-doc-template": "^1.23.0"
     "terra-table": "^2.31.1"
   },
   "scripts": {
