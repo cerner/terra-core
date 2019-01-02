@@ -2,7 +2,7 @@
 
 The terra-i18n package provides internationalization for React components by loading translations and locale data on demand and providing the translated messages to the component. It does this by utilizing the [`react-intl`](https://github.com/yahoo/react-intl) dependency to provide the formatted translation messages to the supplied React children. To enable this behavior, terra-i18n provides the `i18nLoader` and `I18nProvider` components.
 
-### i18nLoader
+## i18nLoader
 
 The `i18nLoader` component guarantees that the intl polyfill, locale data and translation messages are loaded before the translation-needing component is rendered. This loader should be utilized only once within an application, because all internationalization information is loaded into memory to remove the need to dynamically load locale data on the server.
 
@@ -11,11 +11,11 @@ Note: the `i18nLoader` state object for the callback must contain the following 
 - `locale` - string
 - `messages` - key-value pairs such that the key is the message name and the value is the translation message
 
-### I18nProvider
+## I18nProvider
 
 The `I18nProvider` component configures the react-intl's `IntlProvider` and supplies it with the translation-needing components such that the i18n context is accessible. Usually, one `I18nProvider` will wrap an application's root component such that the entire application is within the same configured i18n context, however it is possible to render nested `I18nProvider` components to provide different, or modified i18n context.
 
-### Supported Locales
+## Supported Locales
 
 | Locale ID | Locale |
 |-|-|
@@ -37,7 +37,7 @@ The `I18nProvider` component configures the react-intl's `IntlProvider` and supp
 | sv | Swedish |
 | sv-SE | Swedish (Sweden) |
 
-#### Non-Supported Locales
+### Non-Supported Locales
 
 It is possible to add and load non-supported locales with `terra-i18n`, however one must ensure the locales are supported by `react-intl`, otherwise no locale-data will exist and loading the intl data will result in an error. Once confirmed that the locale is supported by `react-intl`, one is responsible for including the appropriate translations messages for each terra component used in your application, otherwise the translations will fail and `react-intl` will display the message name as the fallback.
 

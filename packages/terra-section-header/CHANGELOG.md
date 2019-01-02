@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated site examples to be more accessible.
 
 1.29.1 - (November 20, 2018)
 ------------------
