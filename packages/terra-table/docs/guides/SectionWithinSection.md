@@ -1,11 +1,11 @@
-# Terra List - Sections with Subsections
+# Terra Table - Sections with Subsections
 
-With the inclusion of sections in the list, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to not have both sections and subsections to be collapsible, have one or the other be collapsible.
+With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to not have both sections and subsections to be collapsible, have one or the other be collapsible.
 
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapisble section in only one pattern.
 
- First defaulting our state to an empty array in the constructor. 
+First defaulting our state to an empty array in the constructor. 
 ```jsx
   constructor(props) {
     super(props);
@@ -19,20 +19,20 @@ Next creating an event handler callback method to pass to the section's "onSelec
 
   }
 ```
-As a precaution we can prevent default on the event, in case the list has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
+As a precaution we can prevent default on the event, in case the table has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
 ```jsx
   handleSectionSelection(event, metaData) {
     event.preventDefault();
   }
 ```
-Terra list comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method "updatedMulitSelectedKeys", which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
+Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method "updatedMulitSelectedKeys", which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
 ```jsx
   handleSectionSelection(event, metaData) {
     event.preventDefault();
     this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
   }
 ```
-Settting state will trigger another render. So in the render method we need generate our sections with the updated isCollapsed and isCollapsible props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The list renders flat, so keys need to be unique even if items are placed within sections structurally.
+Settting state will trigger another render. So in the render method we need generate our sections with the updated isCollapsed and isCollapsible props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The tab le renders flat, so keys need to be unique even if items are placed within sections structurally.
 [React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
 ```jsx
   createSection(sectionData) {
@@ -95,20 +95,29 @@ Finally we need to check if the section is collapsed. As we support IE10 & 11, w
 ```
 We can then stub out our static elements
 ```jsx
-const createListItem = itemData => (
-  <Item key={itemData.key}>
-    <Placeholder />
-  </Item>
-);
+  const createCell = cell => (
+    <Cell key={cell.key}>
+      <Placeholder title={cell.title} style={{ height: '50px' }} />
+    </Cell>
+  );
 
-const createSubsection = subsectionData => (
-  <Subsection
-    key={subsectionData.key}
-    title={subsectionData.title}
-  >
-    {subsectionData.childItems.map(childItem => createListItem(childItem))}
-  </Subsection>
-);
+  const createCellsForRow = cells => cells.map(cell => createCell(cell));
+
+  const createRow = itemData => (
+    <Row key={itemData.key}>
+      {createCellsForRow(itemData.cells)}
+    </Row>
+  );
+
+  const createSubsection = subsectionData => (
+    <Subsection
+      key={subsectionData.key}
+      title={subsectionData.title}
+      colSpan={3}
+    >
+      {subsectionData.childItems.map(childItem => createRow(childItem))}
+    </Subsection>
+  );
 ```
 Then we can implement a method to loop through our data and create the section with our methods and call it from our render method.
 ```jsx
@@ -118,10 +127,18 @@ Then we can implement a method to loop through our data and create the section w
 
   render() {
     return (
-      <List isDivided>
+      <Table
+        header={
+          <Header>
+            <HeaderCell>Column 0</HeaderCell>
+            <HeaderCell>Column 1</HeaderCell>
+            <HeaderCell>Column 2</HeaderCell>
+          </Header> 
+        }
+      >
         {this.createSections(mockData)}
-      </List>
+      </Table>
     );
   }
-  ```
-  Using these steps we get the following example.
+```
+Using these steps we get the following example.
