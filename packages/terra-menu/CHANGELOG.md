@@ -7,6 +7,7 @@ Unreleased
 * Removed usage of componentWillReceiveProps
 * Updated theme variables
 * Make menu item outline on focus themeable and provide browser default fallback.
+* Updated site examples to be more accessible.
 
 3.28.1 - (November 20, 2018)
 ------------------

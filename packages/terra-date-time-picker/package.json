@@ -36,6 +36,7 @@
     "terra-button": "^2.31.1",
     "terra-date-picker": "^2.38.1",
     "terra-doc-template": "^1.22.0",
+    "terra-form-field": "^2.32.1",
     "terra-modal-manager": "^3.0.0",
     "terra-time-input": "^2.34.1"
   },

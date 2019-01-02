@@ -8,6 +8,7 @@ Unreleased
 
 ### Changed
 * Removed use of componentWillMount from examples
+* Updated site examples to be more accessible.
 
 2.35.1 - (November 20, 2018)
 ------------------

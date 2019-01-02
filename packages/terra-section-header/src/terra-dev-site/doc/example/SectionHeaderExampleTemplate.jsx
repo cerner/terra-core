@@ -17,7 +17,7 @@ const propTypes = {
 
 const SectionHeaderExampleTemplate = ({ title, exampleProps }) => (
   <div>
-    <h4>{title}</h4>
+    <h2>{title}</h2>
     <SectionHeader {...exampleProps} />
   </div>
 );

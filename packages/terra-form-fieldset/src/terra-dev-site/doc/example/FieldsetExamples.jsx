@@ -32,27 +32,25 @@ class FieldsetExamples extends React.Component {
   render() {
     return (
       <div>
-        <form>
-          <Fieldset
-            type="checkbox"
-            legend="Give your full name here"
-            name="children_present"
-            value="children_present"
-            error="All fields must be filled out"
-            help="Families are eligible for family package plans"
-            required
-          >
-            <Field label="First" isInline required htmlFor="test">
-              <Input id="test" type="text" name="first" defaultValue="" onChange={this.handleFirstChange} />
-            </Field>
-            <Field label="Middle" isInline required>
-              <Input type="text" name="middle" defaultValue="" onChange={this.handleMiddleChange} />
-            </Field>
-            <Field label="Last" isInline required>
-              <Input type="text" name="last" defaultValue="" onChange={this.handleLastChange} />
-            </Field>
-          </Fieldset>
-        </form>
+        <Fieldset
+          type="checkbox"
+          legend="Give your full name here"
+          name="children_present"
+          value="children_present"
+          error="All fields must be filled out"
+          help="Families are eligible for family package plans"
+          required
+        >
+          <Field label="First" isInline required htmlFor="first">
+            <Input id="first" type="text" name="first" defaultValue="" onChange={this.handleFirstChange} />
+          </Field>
+          <Field label="Middle" isInline required htmlFor="middle">
+            <Input id="middle" type="text" name="middle" defaultValue="" onChange={this.handleMiddleChange} />
+          </Field>
+          <Field label="Last" isInline required htmlFor="last">
+            <Input id="last" type="text" name="last" defaultValue="" onChange={this.handleLastChange} />
+          </Field>
+        </Fieldset>
         <hr />
         <p>
 Full Name Provided:

@@ -7,6 +7,10 @@ import 'github-markdown-css/github-markdown.css';
 /* eslint-enable import/extensions */
 import './Markdown.scss';
 
+marked.setOptions({
+  headerIds: false,
+});
+
 const propTypes = {
   /**
    * Markdown content to parse
@@ -17,6 +21,7 @@ const propTypes = {
 const defaultProps = {
   src: '',
 };
+
 
 /* eslint react/no-danger:0 */
 const Markdown = props => (

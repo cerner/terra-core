@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated theme variables
+* Updated site examples to be more accessible.
 
 ### Added
 * Added missing ar translations.
