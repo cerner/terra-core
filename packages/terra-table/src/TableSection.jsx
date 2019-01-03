@@ -11,7 +11,7 @@ const propTypes = {
   /**
    * Number of columns the section header must span
    */
-  colSpan: PropTypes.number,
+  colSpan: PropTypes.number.isRequired,
   /**
    * Whether or not the section is collapsed.
    */
