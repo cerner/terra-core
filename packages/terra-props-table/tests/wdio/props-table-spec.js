@@ -39,6 +39,15 @@ describe('Props Table', () => {
     Terra.should.beAccessible({ viewports });
   });
 
+  describe('Private Props', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-props-table/props-table-test/mock-private-props-table');
+      browser.setViewportSize(Terra.viewports('medium')[0]);
+    });
+
+    Terra.should.matchScreenshot('should not render private prop information', { selector: '#PrivatePropsTable' });
+  });
+
   describe('With Title', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-props-table/props-table-test/mock-props-table-with-title');
