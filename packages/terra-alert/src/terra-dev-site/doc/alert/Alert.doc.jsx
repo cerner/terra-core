@@ -9,27 +9,27 @@ import AlertSrc from '!raw-loader!../../../../src/Alert';
 
 // Example Files
 import AlertExample from '../example/AlertExample';
-import AlertExampleSrc from '!raw-loader!../example/AlertExample';
+import AlertExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AlertExample';
 import ErrorExample from '../example/ErrorExample';
-import ErrorExampleSrc from '!raw-loader!../example/ErrorExample';
+import ErrorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ErrorExample';
 import WarningExample from '../example/WarningExample';
-import WarningExampleSrc from '!raw-loader!../example/WarningExample';
+import WarningExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/WarningExample';
 import AdvisoryExample from '../example/AdvisoryExample';
-import AdvisoryExampleSrc from '!raw-loader!../example/AdvisoryExample';
+import AdvisoryExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AdvisoryExample';
 import InfoExample from '../example/InfoExample';
-import InfoExampleSrc from '!raw-loader!../example/InfoExample';
+import InfoExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/InfoExample';
 import SuccessExample from '../example/SuccessExample';
-import SuccessExampleSrc from '!raw-loader!../example/SuccessExample';
+import SuccessExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SuccessExample';
 import CustomExample from '../example/CustomExample';
-import CustomExampleSrc from '!raw-loader!../example/CustomExample';
+import CustomExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CustomExample';
 import LongTextExample from '../example/LongTextExample';
-import LongTextExampleSrc from '!raw-loader!../example/LongTextExample';
+import LongTextExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/LongTextExample';
 import ActionExample from '../example/ActionExample';
-import ActionExampleSrc from '!raw-loader!../example/ActionExample';
+import ActionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ActionExample';
 import DismissibleExample from '../example/DismissibleExample';
-import DismissibleExampleSrc from '!raw-loader!../example/DismissibleExample';
+import DismissibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DismissibleExample';
 import ActionAndDismissibleExample from '../example/ActionAndDismissibleExample';
-import ActionAndDismissibleExampleSrc from '!raw-loader!../example/ActionAndDismissibleExample';
+import ActionAndDismissibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ActionAndDismissibleExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (

@@ -9,19 +9,19 @@ import StatusViewSrc from '!raw-loader!../../../../src/StatusView';
 
 // Example Files
 import NoPropsExample from '../example/NoPropsExample';
-import NoPropsExampleSrc from '!raw-loader!../example/NoPropsExample';
+import NoPropsExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoPropsExample';
 import AllPropsExample from '../example/AllPropsExample';
-import AllPropsExampleSrc from '!raw-loader!../example/AllPropsExample';
+import AllPropsExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AllPropsExample';
 import TextWrappingExample from '../example/TextWrappingExample';
-import TextWrappingExampleSrc from '!raw-loader!../example/TextWrappingExample';
+import TextWrappingExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextWrappingExample';
 import GlyphHiddenExample from '../example/GlyphHiddenExample';
-import GlyphHiddenExampleSrc from '!raw-loader!../example/GlyphHiddenExample';
+import GlyphHiddenExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GlyphHiddenExample';
 import LargeContainerExample from '../example/LargeContainerExample';
-import LargeContainerExampleSrc from '!raw-loader!../example/LargeContainerExample';
+import LargeContainerExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/LargeContainerExample';
 import AlignTopExample from '../example/AlignTopExample';
-import AlignTopExampleSrc from '!raw-loader!../example/AlignTopExample';
+import AlignTopExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AlignTopExample';
 import GlyphNotFitExample from '../example/GlyphNotFitExample';
-import GlyphNotFitExampleSrc from '!raw-loader!../example/GlyphNotFitExample';
+import GlyphNotFitExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GlyphNotFitExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (

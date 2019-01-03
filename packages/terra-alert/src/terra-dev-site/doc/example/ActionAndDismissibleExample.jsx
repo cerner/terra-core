@@ -42,6 +42,7 @@ class ActionAndDismissibleExample extends React.Component {
         <br />
         <p>
           Action button has been clicked
+          {' '}
           {this.state.actionButtonClickCount}
           {' '}
           times.
