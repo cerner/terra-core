@@ -8,10 +8,10 @@
 | Previous | New |
 |-|-|
 | --terra-demographics-banner-foreground | --terra-demographics-banner-color |
-| --terra-demographics-banner-background-deceased | --terra-demographics-banner-deceased-background |
 | --terra-demographics-banner-foreground-deceased | --terra-demographics-banner-deceased-color |
 
 #### Added
+* --terra-demographics-banner-background-color
 * --terra-demographics-banner-background-image
 * --terra-demographics-banner-box-shadow
 * --terra-demographics-banner-padding
@@ -19,6 +19,7 @@
 * --terra-demographics-banner-value-margin-right
 * --terra-demographics-banner-value-margin-top
 * --terra-demographics-banner-person-details-margin-top
+* --terra-demographics-banner-deceased-background-color
 * --terra-demographics-banner-deceased-background-image
 * --terra-demographics-banner-deceased-profile-photo-opacity
 * --terra-demographics-banner-content-margin
@@ -26,3 +27,7 @@
 * --terra-demographics-banner-large-box-shadow
 * --terra-demographics-banner-large-padding
 * --terra-demographics-banner-large-person-name-font-size
+
+#### Removed
+* * --terra-demographics-banner-background
+* --terra-demographics-banner-background-deceased

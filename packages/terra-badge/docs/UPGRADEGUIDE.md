@@ -16,5 +16,5 @@
 | --terra-badge-font-size-huge | --terra-badge-huge-font-size |
 
 #### Added
-* --terra-badge-default-font-size
+* --terra-badge-font-size
 * --terra-badge-border

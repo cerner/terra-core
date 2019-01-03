@@ -19,9 +19,9 @@
 * --terra-alert-icon-margin-left
 * --terra-alert-icon-margin-right
 * --terra-alert-icon-margin-top
-* --terra-alert-margin-left
-* --terra-alert-margin-right
-* --terra-alert-margin-top
+* --terra-alert-body-margin-left
+* --terra-alert-body-margin-right
+* --terra-alert-body-margin-top
 * --terra-alert-std-margin-bottom
 * --terra-alert-std-margin-right
 * --terra-alert-section-padding-bottom

@@ -33,9 +33,9 @@
     flex: 1 1 auto;
     flex-direction: row;
     line-height: 1.2;
-    margin-left: var(--terra-alert-margin-left, 0.64285rem);
-    margin-right: var(--terra-alert-margin-right, 0.7143rem);
-    margin-top: var(--terra-alert-margin-top, 0.7143rem);
+    margin-left: var(--terra-alert-body-margin-left, 0.64285rem);
+    margin-right: var(--terra-alert-body-margin-right, 0.7143rem);
+    margin-top: var(--terra-alert-body-margin-top, 0.7143rem);
     overflow: hidden;
     padding-top: 0;
   }

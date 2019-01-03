@@ -1,6 +1,6 @@
 :local {
   .demographics-banner {
-    background: var(--terra-demographics-banner-background, #004c76);
+    background-color: var(--terra-demographics-banner-background-color, #004c76);
     background-clip: padding-box;
     background-image: var(--terra-demographics-banner-background-image);
     box-shadow: var(--terra-demographics-banner-box-shadow);
@@ -58,7 +58,7 @@
   }
 
   .deceased {
-    background: var(--terra-demographics-banner-deceased-background, #1c1f21);
+    background-color: var(--terra-demographics-banner-deceased-background-color, #1c1f21);
     background-clip: padding-box;
     background-image: var(--terra-demographics-banner-deceased-background-image);
     color: var(--terra-demographics-banner-deceased-color, #fff);
