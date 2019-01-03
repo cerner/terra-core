@@ -9,9 +9,14 @@ const propTypes = {
    */
   string: PropTypes.string.isRequired,
   /**
-   * [Private] A private prop that should not show up in the rendered markup.
+   * @private
+   * A private prop that should not show up in the rendered markup.
    */
   privateProp: PropTypes.string,
+  /**
+   * @private Testing inline private declaration
+   */
+  anotherPrivateProp: PropTypes.string,
 };
 /* eslint-enable react/no-unused-prop-types */
 
