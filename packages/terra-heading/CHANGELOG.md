@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.30.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Removed
 * Removed dependency on terra-text
 
