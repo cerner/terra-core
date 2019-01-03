@@ -78,6 +78,7 @@ Cerner Corporation
 - Jeremy Fuksa [@jeremyfuksa]
 - Dillon Lustick [@celvro]
 - Ryan Rickard [@RLRickard]
+- Akarsh Shetty [@ShettyAkarsh]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -158,3 +159,4 @@ Cerner Corporation
 [@jeremyfuksa]: https://github.com/jeremyfuksa
 [@celvro]: https://github.com/celvro
 [@RLRickard]: https://github.com/RLRickard
+[@ShettyAkarsh] https://github.com/ShettyAkarsh

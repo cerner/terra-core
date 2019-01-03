@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Fixed
+* Repititive Resizing when scrollbars appear between two breakpoints
+
 3.18.0 - (January 2, 2019)
 ------------------
 ### Changed
