@@ -9,18 +9,27 @@ import AlertSrc from '!raw-loader!../../../../src/Alert';
 
 // Example Files
 import AlertExample from '../example/AlertExample';
+import AlertExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AlertExample';
 import ErrorExample from '../example/ErrorExample';
+import ErrorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ErrorExample';
 import WarningExample from '../example/WarningExample';
+import WarningExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/WarningExample';
 import AdvisoryExample from '../example/AdvisoryExample';
+import AdvisoryExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AdvisoryExample';
 import InfoExample from '../example/InfoExample';
+import InfoExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/InfoExample';
 import SuccessExample from '../example/SuccessExample';
+import SuccessExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SuccessExample';
 import CustomExample from '../example/CustomExample';
+import CustomExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CustomExample';
 import LongTextExample from '../example/LongTextExample';
+import LongTextExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/LongTextExample';
 import ActionExample from '../example/ActionExample';
-import SmallContainerExample from '../example/SmallContainerExample';
+import ActionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ActionExample';
 import DismissibleExample from '../example/DismissibleExample';
+import DismissibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DismissibleExample';
 import ActionAndDismissibleExample from '../example/ActionAndDismissibleExample';
-import BuildYourOwnAlertExample from '../example/BuildYourOwnAlertExample';
+import ActionAndDismissibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ActionAndDismissibleExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -32,54 +41,57 @@ const DocPage = () => (
       {
         title: 'Default Alert',
         example: <AlertExample />,
+        source: AlertExampleSrc,
       },
       {
         title: 'Error Alert',
         example: <ErrorExample />,
+        source: ErrorExampleSrc,
       },
       {
         title: 'Warning Alert',
         example: <WarningExample />,
+        source: WarningExampleSrc,
       },
       {
         title: 'Advisory Alert',
         example: <AdvisoryExample />,
+        source: AdvisoryExampleSrc,
       },
       {
         title: 'Information Alert',
         example: <InfoExample />,
+        source: InfoExampleSrc,
       },
       {
         title: 'Success Alert',
         example: <SuccessExample />,
+        source: SuccessExampleSrc,
       },
       {
         title: 'Custom Alert',
         example: <CustomExample />,
+        source: CustomExampleSrc,
       },
       {
         title: 'Long Text Alert',
         example: <LongTextExample />,
+        source: LongTextExampleSrc,
       },
       {
         title: 'Alert with Action',
         example: <ActionExample />,
-      },
-      {
-        title: 'Alert in Small Container',
-        example: <SmallContainerExample />,
+        source: ActionExampleSrc,
       },
       {
         title: 'Dismissible Alert',
         example: <DismissibleExample />,
+        source: DismissibleExampleSrc,
       },
       {
         title: 'Dismissible Alert with Actions',
         example: <ActionAndDismissibleExample />,
-      },
-      {
-        title: 'Build ',
-        example: <BuildYourOwnAlertExample />,
+        source: ActionAndDismissibleExampleSrc,
       },
     ]}
     propsTables={[
