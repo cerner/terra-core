@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.37.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added missing ar translations.
 

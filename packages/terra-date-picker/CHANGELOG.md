@@ -3,11 +3,15 @@ Changelog
 
 Unreleased
 ----------
+
+2.39.0 - (January 2, 2019)
+------------------
 ### Added
 * Added missing ar translations.
 
 ### Changed
 * Removed usage of componentWillReceiveProps
+* Updated site examples to be more accessible.
 
 2.38.1 - (November 20, 2018)
 ------------------
