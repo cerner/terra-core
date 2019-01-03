@@ -14,5 +14,5 @@
 | --terra-progress-bar-height-huge | --terra-progress-bar-huge-height |
 
 #### Added
-* --terra-progress-bar-default-height
+* --terra-progress-bar-height
 * --terra-progress-bar-border-radius
