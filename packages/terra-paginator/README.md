@@ -16,7 +16,7 @@ Paginator to be used for data sets of known and unknown size. Provides first, la
 
 ## LICENSE
 
-Copyright 2018 Cerner Innovation, Inc.
+Copyright 2018 - 2019 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
