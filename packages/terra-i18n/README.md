@@ -4,7 +4,7 @@
 [![NPM version](https://badgen.net/npm/v/terra-i18n)](https://www.npmjs.org/package/terra-i18n)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
-The terra-i18n package provides on-demand internationalization of React components. Additionally, it provides an `aggregate-translations` pre-build tool to aggregate translations and build dynamic intlLoader and translationLoader modules.
+The terra-i18n package provides on-demand internationalization of React components.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
@@ -12,7 +12,7 @@ The terra-i18n package provides on-demand internationalization of React componen
 
 ## Getting Started
 
-It is recommended to use the `terra-base` component implementation; `terra-base` will handle locale changes, manage the locale loading state and receive customized translation messages from an application and pass them into the `I18nProvider`. See [`terra-base documentation`](https://github.com/cerner/terra-core/tree/master/packages/terra-base) to get started.
+This component is not intended for direct usage by developers. It is recommended to use the `terra-base` component instead which acts as an abstraction around terra-i18n and react-intl's Intl Provider component. See [`terra-base documentation`](https://github.com/cerner/terra-core/tree/master/packages/terra-base) to get started.
 
 However, terra-i18n can be installed with [npmjs](https://www.npmjs.com):
   - `npm install terra-i18n`
