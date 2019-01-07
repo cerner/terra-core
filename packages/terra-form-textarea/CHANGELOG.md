@@ -9,6 +9,7 @@ Unreleased
 ### Changed
 * Minor dependency version bump
 * Removed use of componentWillMount from examples
+* Updated theme variables
 * Updated site examples to be more accessible.
 
 ### Added
