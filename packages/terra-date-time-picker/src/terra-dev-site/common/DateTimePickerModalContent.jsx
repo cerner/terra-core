@@ -18,8 +18,8 @@ const ModalContent = (props) => {
           value="06-26-2017"
           name="date-time-picker-in-modal"
           dateInputAttributes={{ id: 'modal-picker' }}
-          releaseFocus={app.releaseFocus}
-          requestFocus={app.requestFocus}
+          releaseFocus={disclosureManager.releaseFocus}
+          requestFocus={disclosureManager.requestFocus}
         />
       </Field>
       <br />

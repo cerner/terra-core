@@ -14,7 +14,7 @@ const ModalContent = (props) => {
       {disclosureManager && disclosureManager.releaseFocus ? <h4>Modal focus is released!</h4> : null }
       {disclosureManager && disclosureManager.requestFocus ? <h4>Modal focus is trapped!</h4> : null }
       <Field label="Enter Date" htmlFor="date-picker-in-modal">
-        <DatePicker name="date-picker-in-modal" id="date-picker-in-modal" releaseFocus={app.releaseFocus} requestFocus={app.requestFocus} />
+        <DatePicker name="date-picker-in-modal" id="date-picker-in-modal" releaseFocus={disclosureManager.releaseFocus} requestFocus={disclosureManager.requestFocus} />
       </Field>
       <br />
       <br />
