@@ -42,6 +42,7 @@ const propTypes = {
   name: PropTypes.string,
   /**
    * The regular expression that the input's value is checked against.
+   * NOTE: The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.
    */
   pattern: PropTypes.string,
   /**

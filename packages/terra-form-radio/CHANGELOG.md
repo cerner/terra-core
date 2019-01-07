@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* radio-field: render error icon down one level of markup
+
+2.36.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.35.1 - (November 20, 2018)
 ------------------

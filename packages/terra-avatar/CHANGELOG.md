@@ -3,6 +3,24 @@ ChangeLog
 
 Unreleased
 ----------
+* Added theme variable change to upgrade guide
+
+2.0.0 - (January 2, 2019)
+------------------
+
+### Breaking Changes
+* Removed variant prop
+* Initials prop now only accepts one or two letters
+
+### Changed
+* Split avatar into three functional sub-components - avatar, facility, and shared user.
+* Split theme tests into their own package
+* Refactor box shadow to after element
+
+### Added
+* Added color variants
+* Added alt, color, hashValue, isDeceased, isAriaHidden, and size props
+
 
 1.29.0 - (November 19, 2018)
 ------------------

@@ -1,0 +1,86 @@
+:local {
+  .item {
+    cursor: default;
+    margin: var(--terra-menu-item-margin, 0);
+    padding: var(--terra-menu-item-padding, 0.286rem 0);
+
+    &:not(.is-disabled) {
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--terra-menu-item-hover-background-color, #ebf6fd);
+      }
+
+      &:hover .checkmark {
+        color: var(--terra-menu-item-checkmark-hover-icon-color);
+      }
+
+      &:hover .chevron {
+        color: var(--terra-menu-item-chevron-hover-icon-color);
+      }
+
+      &:focus {
+        background-color: var(--terra-menu-item-focus-background-color, #ebf6fd);
+        outline: var(--terra-menu-item-focus-outline, -webkit-focus-ring-color auto 5px); //browser default fallback. if no fallback is provided, outline does not render.
+      }
+
+      &:focus .checkmark {
+        color: var(--terra-menu-item-checkmark-focus-icon-color);
+      }
+
+      &:focus .chevron {
+        color: var(--terra-menu-item-chevron-focus-icon-color);
+      }
+    }
+  }
+
+  .item:active:not(.is-disabled),
+  .active {
+    background-color: var(--terra-menu-item-active-background-color, #ebf6fd);
+
+    .text {
+      color: var(--terra-menu-item-active-text-color, #1c1f21);
+    }
+  }
+
+  .is-disabled {
+    outline: 0;
+
+    .text {
+      color: var(--terra-menu-item-disabled-text-color, #1c1f21);
+      opacity: 0.3;
+    }
+
+    .chevron {
+      color: var(--terra-menu-item-disabled-chevron-icon-color, #9b9fa1);
+    }
+  }
+
+  .text {
+    color: var(--terra-menu-item-text-color, #1c1f21);
+    font-size: var(--terra-menu-item-text-font-size, 13px);
+    line-height: 1.2;
+    margin-left: var(--terra-menu-item-text-margin-left, 10px);
+  }
+
+  .checkmark {
+    color: var(--terra-menu-item-checkmark-icon-color, #1c1f21);
+    font-size: var(--terra-menu-item-checkmark-icon-font-size, 12px);
+    margin-left: var(--terra-menu-item-checkmark-icon-margin-left, 10px);
+    margin-right: var(--terra-menu-item-checkmark-icon-margin-right);
+    visibility: hidden;
+  }
+
+  .selected {
+    .checkmark {
+      visibility: visible;
+    }
+  }
+
+  .chevron {
+    color: var(--terra-menu-item-chevron-icon-color, #9b9fa1);
+    font-size: var(--terra-menu-item-chevron-icon-font-size, 10px);
+    margin-left: var(--terra-menu-item-chevron-icon-margin-left, 10px);
+    margin-right: var(--terra-menu-item-chevron-icon-margin-right, 10px);
+  }
+}
