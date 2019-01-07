@@ -32,7 +32,9 @@
     font-family: inherit;
     font-size: var(--terra-button-font-size, 1rem);
     line-height: var(--terra-button-line-height, 1.429);
+    max-width: 100%; /* Need to help with overflow-wrap */
     outline: none;
+    overflow-wrap: break-word; /* Modern browsers */
     padding-bottom: var(--terra-button-vertical-padding, 0.286rem);
     padding-left: 0;
     padding-right: 0;
@@ -43,6 +45,7 @@
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
     white-space: normal;
+    word-wrap: break-word; /* For IE 10 and IE 11 */
 
     // Remove the inner border and padding in Firefox.
     &::-moz-focus-inner {
@@ -106,8 +109,9 @@
   }
 
   .text-only {
-    margin-left: var(--terra-button-text-only-horizontal-margin, 0.714rem);
-    margin-right: var(--terra-button-text-only-horizontal-margin, 0.714rem);
+    max-width: 100%; /* Need to help with overflow-wrap */
+    padding-left: var(--terra-button-text-only-horizontal-padding, 0.714rem);
+    padding-right: var(--terra-button-text-only-horizontal-padding, 0.714rem);
   }
 
   .icon-only {
@@ -116,8 +120,9 @@
   }
 
   .text-and-icon {
-    margin-left: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
-    margin-right: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
+    max-width: 100%; /* Need to help with overflow-wrap */
+    padding-left: var(--terra-button-text-and-icon-horizontal-padding, 0.714rem);
+    padding-right: var(--terra-button-text-and-icon-horizontal-padding, 0.714rem);
   }
 
   .text-first {
