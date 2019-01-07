@@ -1,22 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render table header tag 1`] = `
-<thead>
+exports[`should render a default table header 1`] = `
+<thead
+  className="header"
+>
+  <tr />
+</thead>
+`;
+
+exports[`should render table header with a header cell 1`] = `
+<thead
+  className="header"
+>
   <tr>
     <TableHeaderCell
-      content="Name"
-      key=".$NAME"
-      minWidth="small"
-      onClick={[Function]}
-    />
-    <TableHeaderCell
-      content="Address"
-      key=".$ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key=".$PHONE_NUMBER"
       minWidth="small"
     />
   </tr>

@@ -10,7 +10,11 @@ const propTypes = {
   /**
    * The children passed to the component
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+};
+
+const defaultProps = {
+  children: [],
 };
 
 const TableHeader = ({
@@ -32,5 +36,6 @@ const TableHeader = ({
 };
 
 TableHeader.propTypes = propTypes;
+TableHeader.defaultProps = defaultProps;
 
 export default TableHeader;

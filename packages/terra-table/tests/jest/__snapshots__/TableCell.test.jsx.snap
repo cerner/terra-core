@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default table cell 1`] = `
+<td
+  className="cell"
+/>
+`;
+
+exports[`should render a table cell with content 1`] = `
+<td
+  className="cell"
+>
+  Content
+</td>
+`;

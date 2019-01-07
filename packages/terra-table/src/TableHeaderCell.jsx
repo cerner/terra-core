@@ -25,7 +25,7 @@ const propTypes = {
   /**
    * Content to be displayed for the column header
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * The minimum width for the column
    */
@@ -37,6 +37,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  children: [],
   minWidth: 'small',
 };
 

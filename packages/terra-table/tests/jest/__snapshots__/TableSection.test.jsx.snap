@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default table section 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render a table section with a row 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    title=""
+  />
+  <TableRow
+    isSelectable={false}
+    isSelected={false}
+  />
+</Fragment>
+`;
+
+exports[`should render a table section with isCollapsible 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={false}
+    isCollapsible={true}
+    level={1}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render a table section with isCollpased 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={true}
+    isCollapsible={false}
+    level={1}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render a table section with level 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={false}
+    isCollapsible={false}
+    level={2}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render a table section with metaData 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    metaData={Object {}}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render a table section with onSelect 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    onSelect={[MockFunction]}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render a table section with refCallback 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    onSelect={[MockFunction]}
+    title=""
+  />
+</Fragment>
+`;
+
+exports[`should render a table section with title 1`] = `
+<Fragment>
+  <TableSectionHeader
+    colSpan={1}
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    title="test"
+  />
+</Fragment>
+`;

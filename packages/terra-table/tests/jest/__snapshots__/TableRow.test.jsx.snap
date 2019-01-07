@@ -2,60 +2,31 @@
 
 exports[`should render a default table row 1`] = `
 <tr
-  aria-selected={false}
   className="row"
->
-  <TableCell
-    content="John Smith"
-    key="NAME"
-  />
-  <TableCell
-    content="123 Adams Drive"
-    key="ADDRESS"
-  />
-  <TableCell
-    content="111-222-3333"
-    key="PHONE_NUMBER"
-  />
-</tr>
+/>
 `;
 
 exports[`should render a selectable table row 1`] = `
 <tr
   aria-selected={false}
   className="is-selectable row"
->
-  <TableCell
-    content="John Smith"
-    key="NAME"
-  />
-  <TableCell
-    content="123 Adams Drive"
-    key="ADDRESS"
-  />
-  <TableCell
-    content="111-222-3333"
-    key="PHONE_NUMBER"
-  />
-</tr>
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  tabIndex="0"
+/>
 `;
 
 exports[`should render a selected table row 1`] = `
 <tr
-  aria-selected={true}
   className="is-selected row"
+/>
+`;
+
+exports[`should render a table row with a cell 1`] = `
+<tr
+  className="row"
 >
-  <TableCell
-    content="John Smith"
-    key="NAME"
-  />
-  <TableCell
-    content="123 Adams Drive"
-    key="ADDRESS"
-  />
-  <TableCell
-    content="111-222-3333"
-    key="PHONE_NUMBER"
-  />
+  <TableCell />
 </tr>
 `;

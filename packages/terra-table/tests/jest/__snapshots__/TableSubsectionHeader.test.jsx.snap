@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default table section header 1`] = `
+<tr
+  className="subsection-header"
+>
+  <td
+    colSpan={1}
+  >
+    <div
+      className="subsection-content"
+    >
+      <h2
+        className="title"
+      />
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should render a table section header with isCollapsible 1`] = `
+<tr
+  aria-expanded={true}
+  aria-level={2}
+  className="subsection-header is-collapsible"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="heading"
+  tabIndex="0"
+>
+  <td
+    colSpan={1}
+  >
+    <div
+      className="subsection-content"
+    >
+      <div
+        className="start"
+      >
+        <span
+          className="accordion-icon is-open"
+        />
+      </div>
+      <div
+        className="fill"
+      >
+        <h2
+          className="title"
+        />
+      </div>
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should render a table section header with isCollpased 1`] = `
+<tr
+  className="subsection-header"
+>
+  <td
+    colSpan={1}
+  >
+    <div
+      className="subsection-content"
+    >
+      <h2
+        className="title"
+      />
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should render a table section header with level 1`] = `
+<tr
+  className="subsection-header"
+>
+  <td
+    colSpan={1}
+  >
+    <div
+      className="subsection-content"
+    >
+      <h2
+        className="title"
+      />
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should render a table section header with metaData 1`] = `
+<tr
+  className="subsection-header"
+>
+  <td
+    colSpan={1}
+  >
+    <div
+      className="subsection-content"
+    >
+      <h2
+        className="title"
+      />
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should render a table section header with onSelect 1`] = `
+<tr
+  className="subsection-header"
+>
+  <td
+    colSpan={1}
+  >
+    <div
+      className="subsection-content"
+    >
+      <h2
+        className="title"
+      />
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should render a table section header with refCallback 1`] = `
+<tr
+  className="subsection-header"
+>
+  <td
+    colSpan={1}
+  >
+    <div
+      className="subsection-content"
+    >
+      <h2
+        className="title"
+      />
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should render a table section header with title 1`] = `
+<tr
+  className="subsection-header"
+>
+  <td
+    colSpan={1}
+  >
+    <div
+      className="subsection-content"
+    >
+      <h2
+        className="title"
+      >
+        test
+      </h2>
+    </div>
+  </td>
+</tr>
+`;

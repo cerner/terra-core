@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a table header with content 1`] = `
+<th
+  className="header-cell small"
+  data-terra-table-header-cell={true}
+>
+  Content
+</th>
+`;
+
+exports[`should render default table header cell 1`] = `
+<th
+  className="header-cell small"
+  data-terra-table-header-cell={true}
+/>
+`;
+
+exports[`should render table header cell descending sort indicator 1`] = `
+<th
+  className="header-cell small"
+  data-sort="desc"
+  data-terra-table-header-cell={true}
+>
+  <span
+    className="sort-indicator"
+  >
+    <IconCaretDown
+      className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </span>
+</th>
+`;
+
+exports[`should render table header cell with ascending sort indicator 1`] = `
+<th
+  className="header-cell small"
+  data-sort="asc"
+  data-terra-table-header-cell={true}
+>
+  <span
+    className="sort-indicator"
+  >
+    <IconCaretUp
+      className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </span>
+</th>
+`;
+
+exports[`should render table header cell with minWideth 1`] = `
+<th
+  className="header-cell tiny"
+  data-terra-table-header-cell={true}
+/>
+`;

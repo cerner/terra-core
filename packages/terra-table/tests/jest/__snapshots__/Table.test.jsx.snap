@@ -2,180 +2,33 @@
 
 exports[`should render a default table 1`] = `
 <table
-  className="table striped padded"
+  className="table"
+  data-table-padded={true}
 >
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
-      isSelected={false}
-      key="PERSON_0"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-    <TableRow
-      isSelected={false}
-      key="PERSON_1"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-  </TableRows>
+  <tbody
+    data-table-striped={true}
+  />
 </table>
 `;
 
 exports[`should render a table without padding 1`] = `
 <table
-  className="table striped"
+  className="table"
+  data-table-padded={false}
 >
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
-      isSelected={false}
-      key="PERSON_0"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-    <TableRow
-      isSelected={false}
-      key="PERSON_1"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-  </TableRows>
+  <tbody
+    data-table-striped={true}
+  />
 </table>
 `;
 
 exports[`should render a table without zebra stripes 1`] = `
 <table
-  className="table padded"
+  className="table"
+  data-table-padded={true}
 >
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
-      isSelected={false}
-      key="PERSON_0"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-    <TableRow
-      isSelected={false}
-      key="PERSON_1"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-  </TableRows>
+  <tbody
+    data-table-striped={false}
+  />
 </table>
 `;
