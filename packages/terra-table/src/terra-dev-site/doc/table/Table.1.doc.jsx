@@ -13,8 +13,6 @@ import NoStripedTable from '../example/NoStripedTable';
 import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoStripedTable';
 import NoPaddingTable from '../example/NoPaddingTable';
 import NoPaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoPaddingTable';
-import TableNoRows from '../example/TableNoRows';
-import TableNoRowsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableNoRows';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -37,11 +35,6 @@ const DocPage = () => (
         title: 'Table without zebra stripes',
         example: <NoStripedTable />,
         source: NoStripedTableSrc,
-      },
-      {
-        title: 'Table with no rows',
-        example: <TableNoRows />,
-        source: TableNoRowsSrc,
       },
     ]}
     propsTables={[

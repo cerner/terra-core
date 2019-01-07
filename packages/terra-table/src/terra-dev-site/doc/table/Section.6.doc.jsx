@@ -7,8 +7,8 @@ import { name } from '../../../../package.json';
 // Component Source
 import TableSectionSrc from '!raw-loader!../../../../src/TableSection';
 
-// import DefaultTable from '../example/DefaultTable';
-// import DefaultTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultTable';
+import SectionExample from '../example/TableSection';
+import SectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableSection';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -17,11 +17,10 @@ const DocPage = () => (
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
-      // {
-      //   title: 'Default Table',
-      //   example: <DefaultTable />,
-      //   source: DefaultTableSrc,
-      // },
+      {
+        example: <SectionExample />,
+        source: SectionExampleSrc,
+      },
     ]}
     propsTables={[
       {

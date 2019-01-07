@@ -7,8 +7,8 @@ import { name } from '../../../../package.json';
 // Component Source
 import TableSubsectionHeaderSrc from '!raw-loader!../../../../src/TableSubsectionHeader';
 
-// import DefaultTable from '../example/DefaultTable';
-// import DefaultTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultTable';
+import SubsectionHeaderExample from '../example/TableSubsectionHeader';
+import SubsectionHeaderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableSubsectionHeader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -17,11 +17,10 @@ const DocPage = () => (
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
-      // {
-      //   title: 'Default Table',
-      //   example: <DefaultTable />,
-      //   source: DefaultTableSrc,
-      // },
+      {
+        example: <SubsectionHeaderExample />,
+        source: SubsectionHeaderExampleSrc,
+      },
     ]}
     propsTables={[
       {

@@ -7,8 +7,8 @@ import { name } from '../../../../package.json';
 // Component Source
 import TableHeaderCellSrc from '!raw-loader!../../../../src/TableHeaderCell';
 
-// import DefaultTable from '../example/DefaultTable';
-// import DefaultTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultTable';
+import HeaderCellExample from '../example/TableHeaderCell';
+import HeaderCellExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableHeaderCell';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -17,11 +17,10 @@ const DocPage = () => (
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
-      // {
-      //   title: 'Default Table',
-      //   example: <DefaultTable />,
-      //   source: DefaultTableSrc,
-      // },
+      {
+        example: <HeaderCellExample />,
+        source: HeaderCellExampleSrc,
+      },
     ]}
     propsTables={[
       {
