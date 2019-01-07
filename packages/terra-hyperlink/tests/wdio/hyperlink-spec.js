@@ -18,8 +18,12 @@ describe('Hyperlink', () => {
 
     Terra.should.beAccessible({ rules });
     Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-link-disabled-color': 'red',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-hyperlink-disabled-color': 'red',
+        '--terra-hyperlink-disabled-text-decoration': 'underline',
+      },
     });
   });
 
@@ -29,7 +33,7 @@ describe('Hyperlink', () => {
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
     Terra.should.themeEachCustomProperty({
-      '--terra-link-audio-icon': 'linear-gradient(red, orange)',
+      '--terra-hyperlink-audio-after-background-image': 'linear-gradient(red, orange)',
     });
   });
 
@@ -39,7 +43,7 @@ describe('Hyperlink', () => {
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
     Terra.should.themeEachCustomProperty({
-      '--terra-link-document-icon': 'linear-gradient(red, orange)',
+      '--terra-hyperlink-document-after-background-image': 'linear-gradient(red, orange)',
     });
   });
 
@@ -49,7 +53,7 @@ describe('Hyperlink', () => {
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
     Terra.should.themeEachCustomProperty({
-      '--terra-link-external-icon': 'linear-gradient(red, orange)',
+      '--terra-hyperlink-external-after-background-image': 'linear-gradient(red, orange)',
     });
   });
 
@@ -59,7 +63,7 @@ describe('Hyperlink', () => {
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
     Terra.should.themeEachCustomProperty({
-      '--terra-link-image-icon': 'linear-gradient(red, orange)',
+      '--terra-hyperlink-image-after-background-image': 'linear-gradient(red, orange)',
     });
   });
 
@@ -69,7 +73,7 @@ describe('Hyperlink', () => {
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
     Terra.should.themeEachCustomProperty({
-      '--terra-link-video-icon': 'linear-gradient(red, orange)',
+      '--terra-hyperlink-video-after-background-image': 'linear-gradient(red, orange)',
     });
   });
 
@@ -95,18 +99,18 @@ describe('Hyperlink', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-link-color': 'red',
-        '--terra-link-underline': 'underline',
-        '--terra-link-visted-color': 'orange',
-        '--terra-link-hover-color': 'yellow',
-        '--terra-link-hover-underline': 'dotted',
-        '--terra-link-focus-background-color': 'green',
-        '--terra-link-focus-border-radius': '0',
-        '--terra-link-focus-box-shadow': '0 0 0 1px red, 0 0 0 3px green',
-        '--terra-link-focus-color': 'purple',
-        '--terra-link-focus-underline': 'overline',
-        '--terra-link-active-color': 'pink',
-        '--terra-link-disabled-color': 'blue',
+        '--terra-hyperlink-color': 'red',
+        '--terra-hyperlink-text-decoration': 'underline',
+        '--terra-hyperlink-visited-color': 'orange',
+        '--terra-hyperlink-hover-color': 'yellow',
+        '--terra-hyperlink-hover-text-decoration': 'dotted',
+        '--terra-hyperlink-focus-background-color': 'green',
+        '--terra-hyperlink-focus-border-radius': '0',
+        '--terra-hyperlink-focus-box-shadow': '0 0 0 1px red, 0 0 0 3px green',
+        '--terra-hyperlink-focus-color': 'purple',
+        '--terra-hyperlink-focus-text-decoration': 'overline',
+        '--terra-hyperlink-active-color': 'pink',
+        '--terra-hyperlink-disabled-color': 'blue',
       },
     });
   });

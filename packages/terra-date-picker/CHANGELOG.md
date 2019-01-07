@@ -3,12 +3,18 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated examples to use ModalManager v4
+
+
+2.39.0 - (January 2, 2019)
+------------------
 ### Added
 * Added missing ar translations.
 
 ### Changed
 * Removed usage of componentWillReceiveProps
-* Updated examples to use ModalManager v4
+* Updated theme variables
 
 2.38.1 - (November 20, 2018)
 ------------------

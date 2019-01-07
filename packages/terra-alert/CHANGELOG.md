@@ -3,8 +3,16 @@ Changelog
 
 Unreleased
 ----------
+
+2.36.0 - (January 2, 2019)
+------------------
+### Changed
+* Updated theme variables
+* Updated site examples to be more accessible.
+
 ### Added
 * Added missing ar translations.
+* Added code sample display to the doc site examples
 
 2.35.1 - (November 20, 2018)
 ------------------

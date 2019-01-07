@@ -3,6 +3,15 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* Refactor isActive css class to isSelected
+* Add isSelected (pressed) styles
+
+2.32.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.31.1 - (November 20, 2018)
 ------------------
