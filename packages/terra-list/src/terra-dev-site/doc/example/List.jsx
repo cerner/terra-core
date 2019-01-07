@@ -9,6 +9,7 @@ const ListExample = () => (
       <List.Item content={<span>test</span>} key="124" />
       <List.Item content={<span>test</span>} key="125" />
     </List>
-  </div>);
+  </div>
+);
 
 export default ListExample;
