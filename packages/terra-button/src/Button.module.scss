@@ -35,10 +35,10 @@
     max-width: 100%; /* Need to help with overflow-wrap */
     outline: none;
     overflow-wrap: break-word; /* Modern browsers */
-    padding-bottom: var(--terra-button-vertical-padding, 0.286rem);
+    padding-bottom: var(--terra-button-padding-bottom, 0.286rem);
     padding-left: 0;
     padding-right: 0;
-    padding-top: var(--terra-button-vertical-padding, 0.286rem);
+    padding-top: var(--terra-button-padding-top, 0.286rem);
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -110,27 +110,27 @@
 
   .text-only {
     max-width: 100%; /* Need to help with overflow-wrap */
-    padding-left: var(--terra-button-text-only-horizontal-padding, 0.714rem);
-    padding-right: var(--terra-button-text-only-horizontal-padding, 0.714rem);
+    padding-left: var(--terra-button-text-only-padding-left, 0.714rem);
+    padding-right: var(--terra-button-text-only-padding-right, 0.714rem);
   }
 
   .icon-only {
-    margin-left: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
-    margin-right: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
+    margin-left: var(--terra-button-icon-only-margin-left, 0.5rem);
+    margin-right: var(--terra-button-icon-only-margin-right, 0.5rem);
   }
 
   .text-and-icon {
     max-width: 100%; /* Need to help with overflow-wrap */
-    padding-left: var(--terra-button-text-and-icon-horizontal-padding, 0.714rem);
-    padding-right: var(--terra-button-text-and-icon-horizontal-padding, 0.714rem);
+    padding-left: var(--terra-button-text-and-icon-padding-left, 0.714rem);
+    padding-right: var(--terra-button-text-and-icon-padding-right, 0.714rem);
   }
 
   .text-first {
-    margin-right: var(--terra-button-text-and-icon-margin-between, 0.3571rem);
+    margin-right: var(--terra-button-text-first-margin-right, 0.3571rem);
   }
 
   .icon-first {
-    margin-right: var(--terra-button-text-and-icon-margin-between, 0.3571rem);
+    margin-right: var(--terra-button-icon-first-margin-right, 0.3571rem);
   }
 
   .icon {

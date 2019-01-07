@@ -11,6 +11,7 @@ Unreleased
 
 ### Changed
 * Removed usage of componentWillReceiveProps
+* Updated theme variables
 * Updated site examples to be more accessible.
 
 2.38.1 - (November 20, 2018)

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* Add conditional render for profile photo
 
 2.34.0 - (January 2, 2019)
 ------------------

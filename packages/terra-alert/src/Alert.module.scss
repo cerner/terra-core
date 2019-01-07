@@ -2,8 +2,10 @@
   /* stylelint-disable  property-no-unknown */
   .alert-base {
     align-items: stretch;
+    color: var(--terra-alert-color);
     display: flex;
     justify-content: space-between;
+    min-height: var(--terra-alert-min-height);
     overflow: hidden;
     width: 100%;
   }
@@ -20,7 +22,9 @@
     display: inline-block;
     flex-shrink: 0;
     font-size: var(--terra-alert-icon-font-size, 1.286em);
-    margin-right: 0.5rem;
+    margin-left: var(--terra-alert-icon-margin-left);
+    margin-right: var(--terra-alert-icon-margin-right, 0.5rem);
+    margin-top: var(--terra-alert-icon-margin-top);
   }
 
   .body {
@@ -29,28 +33,28 @@
     flex: 1 1 auto;
     flex-direction: row;
     line-height: 1.2;
-    margin-left: 0.6667rem;
-    margin-top: 0.7143rem;
+    margin-left: var(--terra-alert-body-margin-left, 0.64285rem);
+    margin-right: var(--terra-alert-body-margin-right, 0.7143rem);
+    margin-top: var(--terra-alert-body-margin-top, 0.7143rem);
     overflow: hidden;
     padding-top: 0;
   }
 
   .body-narrow {
     margin-bottom: 0;
-    margin-right: 0.6667rem;
   }
 
   .body-std {
-    margin-bottom: 0.7143rem;
-    margin-right: 0.6667rem;
+    margin-bottom: var(--terra-alert-std-margin-bottom, 0.7143rem);
+    margin-right: var(--terra-alert-std-margin-right, 0.6667rem);
   }
 
   .section {
     flex: 1;
     margin-bottom: 0;
     margin-top: 0;
-    padding-bottom: 0.2143rem;
-    padding-top: 0.2143rem;
+    padding-bottom: var(--terra-alert-section-padding-bottom, 0.142857rem);
+    padding-top: var(--terra-alert-section-padding-top, 0.142857rem);
   }
 
   .section-custom {
@@ -58,7 +62,10 @@
   }
 
   .title {
-    margin-right: 0.5833rem;
+    display: var(--terra-alert-title-display);
+    float: var(--terra-alert-title-float, left);
+    margin-bottom: var(--terra-alert-title-margin-bottom);
+    margin-right: var(--terra-alert-title-margin-right, 0.5833rem);
   }
 
   .actions {
@@ -67,7 +74,10 @@
     flex-direction: row;
     flex-shrink: 0;
     justify-content: flex-end;
-    margin: 0.4286rem 0.5833rem 0.4286rem 0.8333rem;
+    margin-bottom: var(--terra-alert-actions-margin-bottom, 0.4286rem);
+    margin-left: var(--terra-alert-actions-margin-left, 0.142857rem);
+    margin-right: var(--terra-alert-actions-margin-right, 0.5rem);
+    margin-top: var(--terra-alert-actions-margin-top, 0.4286rem);
   }
 
   .actions-custom {
@@ -84,38 +94,37 @@
 
   .alert {
     background-color: var(--terra-alert-alert-background-color, #fedcdc);
-    box-shadow: 2px 0 0 var(--terra-alert-alert-shadow-color, #c00) inset;
+    box-shadow: var(--terra-alert-alert-box-shadow, 2px 0 0 #c00 inset);
   }
 
   .error {
     background-color: var(--terra-alert-error-background-color, #fedcdc);
-    box-shadow: 2px 0 0 var(--terra-alert-error-shadow-color, #c00) inset;
+    box-shadow: var(--terra-alert-error-box-shadow, 2px 0 0 #c00 inset);
   }
 
   .warning {
     background-color: var(--terra-alert-warning-background-color, #fff3ce);
-    box-shadow: 2px 0 0 var(--terra-alert-warning-shadow-color, #ffc20a) inset;
+    box-shadow: var(--terra-alert-warning-box-shadow, 2px 0 0 #ffc20a inset);
   }
 
   .advisory {
     background-color: var(--terra-alert-advisory-background-color, #f4f4f4);
-    box-shadow: 2px 0 0 var(--terra-alert-advisory-shadow-color, #9b9fa1) inset;
+    box-shadow: var(--terra-alert-advisory-box-shadow, 2px 0 0 #9b9fa1 inset);
   }
 
   .info {
     background-color: var(--terra-alert-info-background-color, #f4f4f4);
-    box-shadow: 2px 0 0 var(--terra-alert-info-shadow-color, #0092e0) inset;
+    box-shadow: var(--terra-alert-info-box-shadow, 2px 0 0 #0092e0 inset);
   }
 
   .success {
     background-color: var(--terra-alert-success-background-color, #f4f4f4);
-    box-shadow: 2px 0 0 var(--terra-alert-success-shadow-color, #78c346) inset;
+    box-shadow: var(--terra-alert-success-box-shadow, 2px 0 0 #78c346 inset);
   }
 
   .custom {
     background-color: var(--terra-alert-custom-background-color, #f4f4f4);
-    box-shadow: 2px 0 0 inset;
-    color: var(--terra-alert-custom-shadow-color, #9b9fa1);
+    box-shadow: var(--terra-alert-custom-box-shadow, 2px 0 0 #9b9fa1 inset);
   }
 
   .alert .title {

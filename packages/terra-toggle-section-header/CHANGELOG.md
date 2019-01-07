@@ -9,6 +9,7 @@ Unreleased
 ### Changed
 * Minor dependency version bump
 * Remove use of componentWillReceiveProps
+* Regenerate screenshots caused by section-header theme var changes
 * Updated site examples to be more accessible.
 
 1.30.1 - (November 20, 2018)
