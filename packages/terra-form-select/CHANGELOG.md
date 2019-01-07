@@ -6,7 +6,6 @@ Unreleased
 ### Fixed
 * Fixed Dropdown closing issue on Hold and Scroll in IE
 
-------------------
 4.26.0 - (January 2, 2019)
 ------------------
 ### Changed
