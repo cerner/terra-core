@@ -17,7 +17,7 @@ describe('RadioField', () => {
         '--terra-form-radio-field-label-margin-bottom': '0.714em',
         '--terra-form-radio-field-label-color': 'rgba(64, 64, 64, 1)',
         '--terra-form-radio-field-label-font-weight': '900',
-        '--terra-form-radio-field-error-icon': '#e41296',
+        '--terra-form-radio-field-error-background': '#e41296',
         '--terra-form-radio-field-label-error-icon-display': 'inline-block',
         '--terra-form-radio-field-label-error-icon-padding-right': '2em',
         '--terra-form-radio-field-label-required-color': '#00ff00',

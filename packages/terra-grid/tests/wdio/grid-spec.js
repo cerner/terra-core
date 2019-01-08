@@ -6,8 +6,12 @@ describe('Grid', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-grid-gutter-width': '35px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-grid-gutter-margin-left': '35px',
+        '--terra-grid-gutter-padding-left': '35px',
+      },
     });
   });
 

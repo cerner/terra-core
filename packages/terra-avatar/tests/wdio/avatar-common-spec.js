@@ -72,7 +72,7 @@ describe('Facility', () => {
 
 describe('Shared User', () => {
   describe('Icon Shared User', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/shared-user/shared-user'));
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/shared-user/default-shared-user'));
 
     Terra.should.beAccessible({ selector: '#shared-user' });
     Terra.should.matchScreenshot({ selector: '#shared-user' });

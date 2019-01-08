@@ -3,6 +3,7 @@ ChangeLog
 
 Unreleased
 ----------
+* Added theme variable change to upgrade guide
 
 2.0.0 - (January 2, 2019)
 ------------------

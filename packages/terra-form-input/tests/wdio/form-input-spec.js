@@ -12,7 +12,7 @@ describe('Form-Input', () => {
       testName: 'themed',
       properties: {
         '--terra-form-input-background-color': 'red',
-        '--terra-form-input-focus-animation-background': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
+        '--terra-form-input-background-image': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
         '--terra-form-input-border-radius': '0.3rem',
         '--terra-form-input-border': '2px dashed #4a4a41',
         '--terra-form-input-box-shadow': 'inset 5em 1em gold',
@@ -25,7 +25,7 @@ describe('Form-Input', () => {
         '--terra-form-input-padding-top': '1.571rem',
         '--terra-form-input-transition-duration': '2s',
         '--terra-form-input-transition-timing-function': 'ease-out',
-        '--terra-form-input-focus-background-start': '20px 20px',
+        '--terra-form-input-background-size': '20px 20px',
         '--terra-form-input-height': '40px',
       },
     });
@@ -41,7 +41,7 @@ describe('Form-Input', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-form-input-error-focus-animation-background': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
+        '--terra-form-input-error-background-image': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
         '--terra-form-input-error-border': '20rem dashed blue',
       },
     });
@@ -116,7 +116,7 @@ describe('Form-Input', () => {
         properties: {
           '--terra-form-input-focus-background-color': 'red',
           '--terra-form-input-focus-border': '20rem dashed red',
-          '--terra-form-input-focus-keyboard-animation-size': '20px 20px',
+          '--terra-form-input-focus-background-size': '20px 20px',
         },
       });
     });
@@ -198,7 +198,7 @@ describe('Form-Input', () => {
         properties: {
           '--terra-form-input-focus-background-color': 'red',
           '--terra-form-input-focus-border': '20rem dashed red',
-          '--terra-form-input-error-focus-keyboard-animation-size': '20px 20px',
+          '--terra-form-input-error-focus-background-size': '20px 20px',
         },
       });
     });

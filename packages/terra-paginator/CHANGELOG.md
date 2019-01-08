@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* Add previous and next margins for progressive paginator
 
 1.27.0 - (January 2, 2019)
 ------------------

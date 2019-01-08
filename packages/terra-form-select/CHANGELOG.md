@@ -5,6 +5,9 @@ Unreleased
 ----------
 ### Fixed
 * Fixed Dropdown closing issue on Hold and Scroll in IE
+=======
+### Changed
+* Updated theme variables
 
 4.26.0 - (January 2, 2019)
 ------------------
