@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated examples to use ModalManager v4
+
 
 2.39.0 - (January 2, 2019)
 ------------------
