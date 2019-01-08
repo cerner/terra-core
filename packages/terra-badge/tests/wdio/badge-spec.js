@@ -10,6 +10,7 @@ describe('Badge', () => {
       testName: 'themed',
       selector: '#default-badge',
       properties: {
+        '--terra-badge-border': 'solid 1px rgba(89, 159, 253, 0.4)',
         '--terra-badge-border-radius': '20px',
         '--terra-badge-display': 'block',
         '--terra-badge-font-weight': 'normal',
@@ -57,11 +58,11 @@ describe('Badge', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-badge-font-size-tiny': '50px',
-        '--terra-badge-font-size-small': '50px',
-        '--terra-badge-font-size-medium': '50px',
-        '--terra-badge-font-size-large': '50px',
-        '--terra-badge-font-size-huge': '50px',
+        '--terra-badge-tiny-font-size': '50px',
+        '--terra-badge-small-font-size': '50px',
+        '--terra-badge-medium-font-size': '50px',
+        '--terra-badge-large-font-size': '50px',
+        '--terra-badge-huge-font-size': '50px',
       },
     });
   });
@@ -71,7 +72,7 @@ describe('Badge', () => {
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty({
-      '--terra-badge-child-margin': '50px',
+      '--terra-badge-child-margin-right': '50px',
     });
   });
 

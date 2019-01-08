@@ -85,7 +85,7 @@ const ListItem = ({
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
       <div className={cx('item-fill')} key="item-fill">{children}</div>
-      {hasChevron && <div className={cx('item-end')} key="item-end">{<span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>}</div>}
+      {hasChevron && <div className={cx('item-end')} key="item-end">{<span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span>}</div>}
     </li>
   );
 };

@@ -13,7 +13,7 @@
       border-top: var(--terra-list-item-divider-border-top, 1px solid #dedfe0);
 
       &:last-of-type {
-        border-bottom: var(--terra-list-item-divider-border-bottom, 1px solid #dedfe0);
+        border-bottom: var(--terra-list-item-last-divider-border-bottom, 1px solid #dedfe0);
       }
 
       &.selected {
@@ -29,11 +29,15 @@
 
   .chevron {
     display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-bottom: var(--terra-list-item-chevron-padding-bottom);
+    padding-left: var(--terra-list-item-chevron-padding-left, 0.7143rem);
+    padding-right: var(--terra-list-item-chevron-padding-right, 0.7143rem);
+    padding-top: var(--terra-list-item-chevron-padding-top);
 
     > svg {
       color: var(--terra-list-item-chevron-color, #bcbfc0);
+      height: var(--terra-list-item-chevron-height, 0.8572rem);
+      width: var(--terra-list-item-chevron-width, 0.8572rem);
     }
   }
 

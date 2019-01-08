@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* Add previous and next margins for progressive paginator
+
 ### Removed
 * Unneeded terra-list dependency.
 

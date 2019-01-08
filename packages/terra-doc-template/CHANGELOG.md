@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
+* Updated theme variables
 * Add overflow style hidden to prevent incorrect size calculation.
 
 1.23.0 - (January 2, 2019)

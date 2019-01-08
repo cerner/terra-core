@@ -17,7 +17,7 @@ describe('CheckboxField', () => {
         '--terra-form-checkbox-field-label-margin-bottom': '0.714em',
         '--terra-form-checkbox-field-label-color': 'rgba(64, 64, 64, 1)',
         '--terra-form-checkbox-field-label-font-weight': '900',
-        '--terra-form-checkbox-field-error-icon': '#e41296',
+        '--terra-form-checkbox-field-error-background': '#e41296',
         '--terra-form-checkbox-field-label-error-icon-display': 'inline-block',
         '--terra-form-checkbox-field-label-error-icon-padding-right': '2em',
         '--terra-form-checkbox-field-label-required-color': '#00ff00',

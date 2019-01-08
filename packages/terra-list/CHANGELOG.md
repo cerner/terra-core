@@ -3,9 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* Update chevron size to 1em
+
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/guides)
-* Removed Component `SingleSelectList` - No longer support this uncontrolled variant of list.
-* Removed Component `MultiSelectList` - No longer support this uncontrolled variant of list.
+* Removed Component `SingleSelectList` - No longer supported this uncontrolled variant of list.
+* Removed Component `MultiSelectList` - No longer supported this uncontrolled variant of list.
 * Removed Component `SelectableList` - Removed to avoid the need for cloning child props.
 * Removed Util `validatedMaxCount`.
 * Removed Util `initialSingleSelectedIndex`.
