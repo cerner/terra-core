@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.33.0 - (January 8, 2019)
+------------------
 ### Changed
 * Disable stylelint rules
 
