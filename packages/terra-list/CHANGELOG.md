@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated theme variables
+* Update chevron size to 1em
 
 2.32.0 - (January 2, 2019)
 ------------------

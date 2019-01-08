@@ -1,23 +1,23 @@
 :local {
   .dropdown {
-    background-color: var(--terra-select-dropdown-background-color, #fff);
-    border: var(--terra-select-dropdown-border, 1px solid #dedfe0);
-    border-bottom-left-radius: var(--terra-select-dropdown-border-radius, 3px);
-    border-bottom-right-radius: var(--terra-select-dropdown-border-radius, 3px);
+    background-color: var(--terra-form-select-dropdown-background-color, #fff);
+    border: var(--terra-form-select-dropdown-border, 1px solid #dedfe0);
+    border-bottom-left-radius: var(--terra-form-select-dropdown-border-bottom-left-radius, 3px);
+    border-bottom-right-radius: var(--terra-form-select-dropdown-border-bottom-right-radius, 3px);
     border-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    box-shadow: var(--terra-select-dropdown-box-shadow, 0 3px 12px -5px rgba(0, 0, 0, 0.25));
+    box-shadow: var(--terra-form-select-dropdown-box-shadow, 0 3px 12px -5px rgba(0, 0, 0, 0.25));
     overflow: auto;
   }
 
   .is-above {
-    border: var(--terra-select-dropdown-border, 1px solid #dedfe0);
+    border: var(--terra-form-select-dropdown-border, 1px solid #dedfe0);
     border-bottom: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-top-left-radius: var(--terra-select-dropdown-border-radius, 3px);
-    border-top-right-radius: var(--terra-select-dropdown-border-radius, 3px);
-    box-shadow: var(--terra-select-dropdown-above-box-shadow, 0 -3px 12px -5px rgba(0, 0, 0, 0.25));
+    border-top-left-radius: var(--terra-form-select-dropdown-border-top-left-radius, 3px);
+    border-top-right-radius: var(--terra-form-select-dropdown-border-top-right-radius, 3px);
+    box-shadow: var(--terra-form-select-dropdown-above-box-shadow, 0 -3px 12px -5px rgba(0, 0, 0, 0.25));
   }
 }

@@ -45,7 +45,7 @@ const Table = ({
   return (
     <table {...customProps} data-table-padded={isPadded} className={tableClassNames}>
       {header}
-      <tbody data-table-striped={isStriped}>
+      <tbody data-table-striped={isStriped} className={cx(['body'])}>
         {children}
       </tbody>
     </table>

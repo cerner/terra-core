@@ -35,7 +35,6 @@
 
   .header-cell {
     border: 0;
-    // border-left: var(--terra-table-cell-border, 0);
     color: var(--terra-table-thead-th-color, #1c1f21);
     display: table-cell;
     font-size: var(--terra-table-thead-th-font-size, 1rem);
@@ -44,11 +43,11 @@
     vertical-align: bottom;
 
     &:first-of-type {
-      border-left: var(--terra-table-row-border-vertical, 1px solid #c8cacb);
+      border-left: var(--terra-table-header-cell-border-left, 1px solid #c8cacb);
     }
 
     &:last-of-type {
-      border-right: var(--terra-table-row-border-vertical, 1px solid #c8cacb);
+      border-right: var(--terra-table-header-cell-border-right, 1px solid #c8cacb);
     }
   }
 }

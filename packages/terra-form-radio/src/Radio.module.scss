@@ -8,6 +8,7 @@
     margin-right: var(--terra-form-radio-container-margin-right, 0);
     margin-top: var(--terra-form-radio-container-margin-top, 0.3571428rem);
     position: relative;
+    transform: scale(1);
 
     /* stylelint-disable selector-max-compound-selectors */
     .label {
@@ -143,8 +144,8 @@
       }
 
       .native-input:checked + .outer-ring {
-        border-color: var(--terra-form-radio-outer-ring-checked-hover-border-color, transparent);
-        border-width: var(--terra-form-radio-outer-ring-checked-hover-border-width, 0);
+        border-color: var(--terra-form-radio-hover-checked-outer-ring-border-color, transparent);
+        border-width: var(--terra-form-radio-hover-checked-outer-ring-border-width, 0);
       }
     }
 
@@ -199,14 +200,14 @@
 
   /* Large focus ring */
   .native-input:focus ~ .label-text::before {
-    background-color: var(--terra-form-radio-focus-ring-background-color, transparent);
+    background-color: var(--terra-form-radio-focus-before-ring-background-color, transparent);
     border-radius: 50%;
     content: '';
-    height: var(--terra-form-radio-focus-ring-height, 0);
-    left: var(--terra-form-radio-focus-ring-left, auto);
+    height: var(--terra-form-radio-focus-before-ring-height, 0);
+    left: var(--terra-form-radio-focus-before-ring-left, auto);
     position: absolute;
-    top: var(--terra-form-radio-focus-ring-top, auto);
-    width: var(--terra-form-radio-focus-ring-width, 0);
+    top: var(--terra-form-radio-focus-before-ring-top, auto);
+    width: var(--terra-form-radio-focus-before-ring-width, 0);
     z-index: -1;
   }
 

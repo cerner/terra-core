@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Applied styles to wrap long words in buttons
+* Updated theme variables
 
 2.32.0 - (January 2, 2019)
 ------------------
