@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
-import AppDelegate from 'terra-app-delegate';
+import { withDisclosureManager, disclosureManagerShape } from 'terra-disclosure-manager';
 import DatePickerModalContent from './DatePickerModalContent';
 
 class ModalContainer extends React.Component {
@@ -14,7 +14,7 @@ class ModalContainer extends React.Component {
     return () => {
       const identifier = Date.now();
 
-      this.props.app.disclose({
+      this.props.disclosureManager.disclose({
         preferredType: 'modal',
         content: {
           key: `DatePickerModalContent-${identifier}`,
@@ -32,7 +32,7 @@ class ModalContainer extends React.Component {
 }
 
 ModalContainer.propTypes = {
-  app: AppDelegate.propType,
+  disclosureManager: disclosureManagerShape,
 };
 
-export default ModalContainer;
+export default withDisclosureManager(ModalContainer);
