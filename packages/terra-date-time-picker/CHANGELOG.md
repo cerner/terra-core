@@ -4,10 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
-2.40.0 - (January 8, 2019)
+3.0.0 - (January 8, 2019)
 ------------------
 ### Changed
 * Updated examples to use ModalManager v4
+* Updated theme variables
 
 2.39.0 - (January 2, 2019)
 ------------------
@@ -18,7 +19,6 @@ Unreleased
 * Removed use of componentWillReceiveProps
 * Removed use of componentWillMount
 * Updated component to use injectIntl
-* Updated theme variables
 * Updated site examples to be more accessible.
 
 2.38.1 - (November 20, 2018)
