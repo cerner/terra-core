@@ -16,11 +16,11 @@ describe('Progress Bar', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-progress-bar-height-tiny': '25px',
-        '--terra-progress-bar-height-small': '20px',
-        '--terra-progress-bar-height-medium': '17px',
-        '--terra-progress-bar-height-large': '14px',
-        '--terra-progress-bar-height-huge': '10px',
+        '--terra-progress-bar-tiny-height': '25px',
+        '--terra-progress-bar-small-height': '20px',
+        '--terra-progress-bar-medium-height': '17px',
+        '--terra-progress-bar-large-height': '14px',
+        '--terra-progress-bar-huge-height': '10px',
       },
     });
   });

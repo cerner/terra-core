@@ -52,7 +52,7 @@ exports[`should render a button group with children selected 1`] = `
 >
   <ButtonGroupButton
     aria-pressed={true}
-    className="is-active"
+    className="is-selected"
     isDisabled={false}
     key="1"
     onClick={[Function]}

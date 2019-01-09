@@ -38,7 +38,8 @@ it('should render content', () => {
   const container = (
     <ContentContainer>
       <p>test content</p>
-    </ContentContainer>);
+    </ContentContainer>
+  );
   const wrapper = shallow(container);
   expect(wrapper).toMatchSnapshot();
 });

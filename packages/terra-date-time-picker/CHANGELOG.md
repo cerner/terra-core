@@ -4,6 +4,12 @@ ChangeLog
 Unreleased
 ----------
 
+3.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated examples to use ModalManager v4
+* Updated theme variables
+
 2.39.0 - (January 2, 2019)
 ------------------
 ### Added
