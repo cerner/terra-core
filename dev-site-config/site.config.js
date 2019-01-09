@@ -15,7 +15,7 @@ const siteConfig = {
       'Legacy Theme': 'terra-legacy-theme',
     },
   },
-  
+
   filterSideMenu: true,
 };
 
