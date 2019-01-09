@@ -146,7 +146,8 @@ class CollapsibleMenuViewItem extends React.Component {
               isDisabled={isDisabled}
               onClick={this.handleButtonClick}
               isIconOnly={isIconOnly}
-            />)}
+            />
+)}
         >
           {subMenuItems}
         </Menu>
