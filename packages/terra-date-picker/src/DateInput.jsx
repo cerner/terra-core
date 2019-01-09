@@ -44,6 +44,10 @@ const propTypes = {
    */
   requestFocus: PropTypes.func,
   /**
+   * @private Internal prop for showing date picker.
+   */
+  shouldShowPicker: PropTypes.bool,
+  /**
    * The selected or entered date value to display in the date input.
    */
   value: PropTypes.string,
