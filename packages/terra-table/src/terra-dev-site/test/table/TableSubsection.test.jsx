@@ -1,7 +1,5 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, { Row, Cell, Subsection } from 'terra-table/lib/index';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
+import Table, { Row, Cell, Subsection } from '../../../index';
 
 const TableSubsectionTest = () => (
   <Table>

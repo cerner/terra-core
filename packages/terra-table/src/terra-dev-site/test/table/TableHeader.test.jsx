@@ -1,7 +1,7 @@
 import React from 'react';
 import Table, {
   Header, HeaderCell,
-} from '../../../../index';
+} from '../../../index';
 
 const TableHeaderTest = () => (
   <Table

@@ -71,7 +71,7 @@ viewports.forEach((viewport) => {
     });
 
     describe('Non Striped Table', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/table/no-striped-table'));
+      before(() => browser.url('/#/raw/tests/terra-table/table/no-striped-table'));
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
@@ -87,7 +87,7 @@ viewports.forEach((viewport) => {
     });
 
     describe('No Padding Table', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/table/no-padding-table'));
+      before(() => browser.url('/#/raw/tests/terra-table/table/no-padding-table'));
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();

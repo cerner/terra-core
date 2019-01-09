@@ -1,10 +1,11 @@
 import React from 'react';
 import Table, {
   Row, Cell,
-} from '../../../../index';
+} from '../../../index';
 
-const DefaultTableTest = () => (
+const NoStripedTableTest = () => (
   <Table
+    isStriped={false}
     id="Table"
   >
     <Row key="ROW-0">
@@ -19,4 +20,4 @@ const DefaultTableTest = () => (
   </Table>
 );
 
-export default DefaultTableTest;
+export default NoStripedTableTest;

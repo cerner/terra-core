@@ -1,7 +1,7 @@
 import React from 'react';
 import Table, {
   Row, Cell,
-} from '../../../../index';
+} from '../../../index';
 
 const NoPaddingTableTest = () => (
   <Table
