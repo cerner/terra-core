@@ -97,7 +97,8 @@ class DateRange extends React.Component {
           name={endName}
           onChange={this.handleChangeEnd}
         />
-      </div>);
+      </div>
+    );
   }
 }
 

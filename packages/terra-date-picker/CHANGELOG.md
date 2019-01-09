@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Added 'showShouldPicker' to prop-types validation
 
 2.40.0 - (January 8, 2019)
 ------------------
