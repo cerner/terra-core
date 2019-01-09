@@ -1,117 +1,165 @@
 const viewports = Terra.viewports('medium');
 
-describe('Table', () => {
-  describe('Non Striped Table', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/no-striped-table'));
-
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-table-background-color': '#dddddd',
-        '--terra-table-border': '#000 dashed 2px',
-        '--terra-table-cell-border-left': '#0f0 solid 1px',
-        '--terra-table-first-cell-border-left': '#dddddd solid 2px',
-        '--terra-table-last-cell-border-right': '#dddddd solid 2px',
-        '--terra-table-header-cell-border-left': '#0f0 solid 1px',
-        '--terra-table-first-header-cell-border-left': '#dddddd solid 2px',
-        '--terra-table-last-header-cell-border-right': '#dddddd solid 2px',
-        '--terra-table-thead-background-color': '#f2f2f2',
-        '--terra-table-thead-tr-border-bottom': '#00ff00 solid 1px',
-        '--terra-table-thead-tr-border-top': '3px solid #000000',
-        '--terra-table-thead-th-color': '#0000ff',
-        '--terra-table-thead-th-font-size': '2rem',
-        '--terra-table-thead-th-font-weight': 'normal',
-        '--terra-table-row-border-top': '#00ff00 solid 1px',
-        '--terra-table-last-row-border-bottom': '#00ff00 solid 1px',
-        '--terra-table-tfoot-tr-border-bottom': '#00f0f0 solid 1px',
-        '--terra-table-tfoot-tr-border-top': '#00f0f0 solid 1px',
-        '--terra-table-subheader-background-color': '#abc123',
-        '--terra-table-subheader-color': '#dfeac2',
-        '--terra-table-subheader-font-size': '0.5rem',
-        '--terra-table-subheader-font-weight': '200',
-        '--terra-table-sort-indicator-color': '#111111',
-        '--terra-table-cell-tiny-min-width': '1rem',
-        '--terra-table-cell-small-min-width': '5.25rem',
-        '--terra-table-cell-medium-min-width': '2.75rem',
-        '--terra-table-cell-large-min-width': '1.5rem',
-        '--terra-table-cell-huge-min-width': '7.5rem',
-        '--terra-table-cell-padding-bottom': '1.5em',
-        '--terra-table-cell-padding-left': '2em',
-        '--terra-table-cell-padding-right': '3em',
-        '--terra-table-cell-padding-top': '1.5em',
-        '--terra-table-header-cell-padding-bottom': '1.5em',
-        '--terra-table-header-cell-padding-left': '2em',
-        '--terra-table-header-cell-padding-right': '3em',
-        '--terra-table-header-cell-padding-top': '1.5em',
-      },
+viewports.forEach((viewport) => {
+  describe('Table', () => {
+    before(() => {
+      browser.setViewportSize(viewport);
     });
-  });
 
-  describe('Striped', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/striped-table'));
+    describe('Table Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/default-table'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-table-row-striped-background-color': '#4f4f4f',
-        '--terra-table-row-striped-selected-background-color': '#7facbe',
-        '--terra-table-row-striped-hover-background-color': '#2fcef2',
-        '--terra-table-row-striped-selected-hover-background-color': '#df3b3d',
-        '--terra-table-row-striped-focus-background-color': '#2fcef2',
-        '--terra-table-row-striped-selected-focus-background-color': '#df3b3d',
-        '--terra-table-row-selected-background-color': '#2fcef2',
-        '--terra-table-row-selected-border-color': '#00cc99',
-        '--terra-table-row-hover-background-color': '#555555',
-        '--terra-table-row-focus-background-color': '#555555',
-        '--terra-table-row-selected-focus-background-color': '#888888',
-        '--terra-table-row-selected-hover-background-color': '#888888',
-      },
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
     });
-  });
 
-  describe('Non Padded Table', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/no-padding-table'));
+    describe('TableSection Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table-section'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
-  });
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+    });
 
-  describe('Sort Indicator', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-sort-indicator'));
+    describe('TableSubsection Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table-subsection'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
-  });
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+    });
 
-  describe('Highlighted Rows', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-highlighted-rows'));
+    describe('TableHeader Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table-header'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
-  });
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-table-row-background-color': 'pink',
+          '--terra-table-row-divider-border-top': '3px dashed green',
+        },
+      });
+    });
 
-  describe('Subheaders', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-subheaders'));
+    describe('TableRow Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table-row'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
-  });
+      Terra.should.matchScreenshot('TableRow');
+      Terra.should.beAccessible();
 
-  describe('Single Row', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/single-row-table'));
+      it('Hover', () => browser.moveToObject('#selectable-row'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
-  });
+      Terra.should.matchScreenshot('TableRow-Hover');
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-table-row-background-color': 'pink',
+          '--terra-table-row-divider-border-top': '3px dashed green',
+          '--terra-table-row-divider-border-bottom': '2px dotted yellow',
+          '--terra-table-row-selected-background-color': 'blue',
+          '--terra-table-row-selected-divider-border-color': 'orange',
+          '--terra-table-row-selected-divider-border-top-color': 'purple',
+          '--terra-table-row-hover-active-background-color': 'black',
+          '--terra-table-row-focus-background-color': 'cyan',
+          '--terra-table-row-focus-box-shadow': '0 0 3px #FF0000',
+          '--terra-table-row-focus-outline': '5px solid red',
+          '--terra-table-row-selected-hover-background-color': 'beige',
+          '--terra-table-row-selected-focus-background-color': 'darkgrey',
+          '--terra-table-row-selected-focus-false-background-color': 'navy',
+        },
+      });
+    });
 
-  describe('No Rows', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-no-rows'));
+    describe('Non Striped Table', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table/no-striped-table'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-table-background-color': '#dddddd',
+          '--terra-table-border': '#000 dashed 2px',
+          '--terra-table-cell-border-left': '#0f0 solid 1px',
+          '--terra-table-first-cell-border-left': '#dddddd solid 2px',
+        },
+      });
+    });
+
+    describe('No Padding Table', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table/no-padding-table'));
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-table-background-color': '#dddddd',
+          '--terra-table-border': '#000 dashed 2px',
+          '--terra-table-cell-border-left': '#0f0 solid 1px',
+          '--terra-table-first-cell-border-left': '#dddddd solid 2px',
+        },
+      });
+    });
+
+    describe('TableSectionHeader Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table-section-header'));
+
+      Terra.should.matchScreenshot('TableSectionHeader');
+      Terra.should.beAccessible();
+
+      it('Hover', () => browser.moveToObject('#test-header'));
+
+      Terra.should.matchScreenshot('TableSubsection-Hover');
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-table-section-header-background-color': '#pink',
+          '--terra-table-section-header-border-bottom': '2px dashed green',
+          '--terra-table-section-header-padding-bottom': '20px',
+          '--terra-table-section-header-padding-left': '30px',
+          '--terra-table-section-header-padding-top': '10px',
+          '--terra-table-section-header-title-color': 'yellow',
+          '--terra-table-section-header-title-font-size': '20px',
+          '--terra-table-section-header-title-line-height': '20px',
+          '--terra-table-section-header-collapsible-padding-left': '5px',
+          '--terra-table-section-header-focus-background-color': 'orange',
+          '--terra-table-section-header-focus-box-shadow': '0 0 3px #FF0000',
+          '--terra-table-section-header-focus-outline': '5px solid red',
+          '--terra-table-section-header-hover-active-background-color': 'blue',
+          '--terra-table-section-header-start-padding-right': '15px',
+        },
+      });
+    });
+
+    describe('TableSubsectionHeader Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table-subsection-header'));
+
+      Terra.should.matchScreenshot('TableSubsection');
+      Terra.should.beAccessible();
+
+      it('Hover', () => browser.moveToObject('#test-header'));
+
+      Terra.should.matchScreenshot('TableSubsection-Hover');
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-table-subsection-header-background-color': 'pink',
+          '--terra-table-subsection-header-border-bottom': '2px dashed green',
+          '--terra-table-subsection-header-padding-bottom': '20px',
+          '--terra-table-subsection-header-padding-left': '30px',
+          '--terra-table-subsection-header-padding-top': '10px',
+          '--terra-table-subsection-header-title-color': 'yellow',
+          '--terra-table-subsection-header-title-font-size': '20px',
+          '--terra-table-subsection-header-title-line-height': '20px',
+          '--terra-table-subsection-header-collapsible-padding-left': '5px',
+          '--terra-table-subsection-header-focus-background-color': 'orange',
+          '--terra-table-subsection-header-focus-box-shadow': '0 0 3px #FF0000',
+          '--terra-table-subsection-header-focus-outline': '5px solid red',
+          '--terra-table-subsection-header-hover-active-background-color': 'blue',
+          '--terra-table-subsection-header-start-padding-right': '15px',
+        },
+      });
+    });
   });
 });

@@ -65,7 +65,7 @@ const TableSection = ({
 
   return (
     <React.Fragment>
-      <SectionHeader isCollapsible={isCollapsible} isCollapsed={isCollapsed} {...customProps} />
+      <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {sectionItems}
     </React.Fragment>
   );
