@@ -12,14 +12,14 @@ const TableSectionTest = () => (
         </Cell>
       </Row>
     </Section>
-    <Section title="Collapsible Section" key="collapsible-section" id="test-header">
+    <Section isCollapsible title="Collapsible Section" key="collapsible-section" id="test-header">
       <Row>
         <Cell>
           Cell Content
         </Cell>
       </Row>
     </Section>
-    <Section title="Collapsed Section" key="collapsed-section">
+    <Section isCollapsed isCollapsible title="Collapsed Section" key="collapsed-section">
       <Row>
         <Cell>
           Cell Content
