@@ -4,12 +4,16 @@ Changelog
 Unreleased
 ----------
 
+4.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated theme variables
+
 3.29.0 - (January 2, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 * Removed usage of componentWillReceiveProps
-* Updated theme variables
 * Make menu item outline on focus themeable and provide browser default fallback.
 * Updated site examples to be more accessible.
 * Update to use new List API, create single select implementation within MenuItemGroup. 

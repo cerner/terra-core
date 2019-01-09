@@ -3,10 +3,6 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Updated theme variables
-* Update chevron size to 1em
-
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/guides)
 * Removed Component `SingleSelectList` - No longer supported this uncontrolled variant of list.
 * Removed Component `MultiSelectList` - No longer supported this uncontrolled variant of list.
@@ -23,6 +19,12 @@ Unreleased
 * Added Component `ListSubsectionHeader` - Subsection styled header.
 * Change from dot notation for ListItem and Utils access to individual exports for Item, Utils, SectionHeader, SubsectionHeader, Section, and Subsection.
 * Moved accessibility logic into the ListItem.
+
+3.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated theme variables
+* Update chevron size to 1em
 
 2.32.0 - (January 2, 2019)
 ------------------

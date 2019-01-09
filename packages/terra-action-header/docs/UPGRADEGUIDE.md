@@ -1,6 +1,6 @@
 # Terra Action Header Upgrade Guide
 
-## Changes from 2.0 to 3.0
+## Changes from 1.0 to 2.0
 
 ### Changes to CSS Custom Properties
 
