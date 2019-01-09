@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Added 'style' to prop-types validation
 
 2.33.0 - (January 8, 2019)
 ------------------

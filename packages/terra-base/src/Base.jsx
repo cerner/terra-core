@@ -90,7 +90,8 @@ class Base extends React.Component {
       return (
         <div {...customProps} data-terra-base>
           {renderChildren}
-        </div>);
+        </div>
+      );
     }
 
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
