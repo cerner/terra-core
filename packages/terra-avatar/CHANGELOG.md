@@ -3,11 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.1.0 - (January 8, 2019)
+------------------
+### Changed
 * Added theme variable change to upgrade guide
 
 2.0.0 - (January 2, 2019)
 ------------------
-
 ### Breaking Changes
 * Removed variant prop
 * Initials prop now only accepts one or two letters
