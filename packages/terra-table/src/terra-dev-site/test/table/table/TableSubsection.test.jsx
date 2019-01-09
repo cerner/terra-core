@@ -5,21 +5,21 @@ import Table, { Row, Cell, Subsection } from 'terra-table/lib/index';
 
 const TableSubsectionTest = () => (
   <Table>
-    <Subsection title="Default Subsection" key="default-subsection">
+    <Subsection colSpan={1} title="Default Subsection" key="default-subsection">
       <Row>
         <Cell>
           Cell Content
         </Cell>
       </Row>
     </Subsection>
-    <Subsection isCollapsible title="Collapsible Subsection" key="collapsible-subsection" id="test-header">
+    <Subsection colSpan={1} isCollapsible title="Collapsible Subsection" key="collapsible-subsection" id="test-header">
       <Row>
         <Cell>
           Cell Content
         </Cell>
       </Row>
     </Subsection>
-    <Subsection isCollapsed isCollapsible title="Collapsed Subsection" key="collapsed-subsection">
+    <Subsection colSpan={1} isCollapsed isCollapsible title="Collapsed Subsection" key="collapsed-subsection">
       <Row>
         <Cell>
           Cell Content
