@@ -102,15 +102,15 @@ viewports.forEach((viewport) => {
       });
     });
 
-    describe('TableSectionHeader Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/table-section-header'));
+    describe('TableSection Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table-section'));
 
-      Terra.should.matchScreenshot('TableSectionHeader');
+      Terra.should.matchScreenshot('TableSection');
       Terra.should.beAccessible();
 
       it('Hover', () => browser.moveToObject('#test-header'));
 
-      Terra.should.matchScreenshot('TableSubsection-Hover');
+      Terra.should.matchScreenshot('TableSection-Hover');
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
@@ -132,8 +132,8 @@ viewports.forEach((viewport) => {
       });
     });
 
-    describe('TableSubsectionHeader Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/table-subsection-header'));
+    describe('TableSubsection Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/table-subsection'));
 
       Terra.should.matchScreenshot('TableSubsection');
       Terra.should.beAccessible();
