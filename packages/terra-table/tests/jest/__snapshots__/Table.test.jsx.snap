@@ -6,6 +6,7 @@ exports[`should render a default table 1`] = `
   data-table-padded={true}
 >
   <tbody
+    className="body"
     data-table-striped={true}
   />
 </table>
@@ -17,6 +18,7 @@ exports[`should render a table without padding 1`] = `
   data-table-padded={false}
 >
   <tbody
+    className="body"
     data-table-striped={true}
   />
 </table>
@@ -28,6 +30,7 @@ exports[`should render a table without zebra stripes 1`] = `
   data-table-padded={true}
 >
   <tbody
+    className="body"
     data-table-striped={false}
   />
 </table>
