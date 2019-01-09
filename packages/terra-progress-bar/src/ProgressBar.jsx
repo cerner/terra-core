@@ -78,7 +78,8 @@ const ProgressBar = ({
       aria-valuenow={normalizedValue}
       aria-valuetext={valueText}
       tabIndex="-1"
-    />);
+    />
+  );
 };
 
 ProgressBar.propTypes = propTypes;
