@@ -11,17 +11,25 @@ viewports.forEach((viewport) => {
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-table-background-color': 'red',
+          '--terra-table-border': '2px solid green',
+          '--terra-table-body-background-color': 'yellow',
+        },
+      });
     });
 
-    describe('TableSection Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/table-section'));
+    describe('Non Striped Table', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/no-striped-table'));
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
     });
 
-    describe('TableSubsection Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/table-subsection'));
+    describe('No Padding Table', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/no-padding-table'));
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
@@ -35,8 +43,24 @@ viewports.forEach((viewport) => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-table-row-background-color': 'pink',
-          '--terra-table-row-divider-border-top': '3px dashed green',
+          '--terra-table-header-background-color': 'pink',
+          '--terra-table-header-border-top': '5px dashed green',
+          '--terra-table-header-cell-tiny-min-width': '0.5rem',
+          '--terra-table-header-cell-small-min-width': '1.25rem',
+          '--terra-table-header-cell-medium-min-width': '1.75rem',
+          '--terra-table-header-cell-large-min-width': '2.5rem',
+          '--terra-table-header-cell-huge-min-width': '3.0rem',
+          '--terra-table-sort-indicator-color': 'yellow',
+          '--terra-table-sort-indicator-width': '1rem',
+          '--terra-table-header-cell-padding-bottom': '1.5em',
+          '--terra-table-header-cell-padding-left': '0.5em',
+          '--terra-table-header-cell-padding-right': '0.5em',
+          '--terra-table-header-cell-padding-top': '0.75em',
+          '--terra-table-header-cell-color': 'orange',
+          '--terra-table-header-cell-font-size': '0.5rem',
+          '--terra-table-header-cell-font-weight': 'normal',
+          '--terra-table-first-header-cell-border-left': '3px dashed blue',
+          '--terra-table-last-header-cell-border-right': '4px dashed blue',
         },
       });
     });
@@ -53,51 +77,29 @@ viewports.forEach((viewport) => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-table-row-background-color': 'pink',
-          '--terra-table-row-divider-border-top': '3px dashed green',
-          '--terra-table-row-divider-border-bottom': '2px dotted yellow',
-          '--terra-table-row-selected-background-color': 'blue',
-          '--terra-table-row-selected-divider-border-color': 'orange',
-          '--terra-table-row-selected-divider-border-top-color': 'purple',
-          '--terra-table-row-hover-active-background-color': 'black',
-          '--terra-table-row-focus-background-color': 'cyan',
-          '--terra-table-row-focus-box-shadow': '0 0 3px #FF0000',
-          '--terra-table-row-focus-outline': '5px solid red',
-          '--terra-table-row-selected-hover-background-color': 'beige',
-          '--terra-table-row-selected-focus-background-color': 'darkgrey',
-          '--terra-table-row-selected-focus-false-background-color': 'navy',
-        },
-      });
-    });
-
-    describe('Non Striped Table', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/no-striped-table'));
-
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-table-background-color': '#dddddd',
-          '--terra-table-border': '#000 dashed 2px',
-          '--terra-table-cell-border-left': '#0f0 solid 1px',
-          '--terra-table-first-cell-border-left': '#dddddd solid 2px',
-        },
-      });
-    });
-
-    describe('No Padding Table', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/no-padding-table'));
-
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-table-background-color': '#dddddd',
-          '--terra-table-border': '#000 dashed 2px',
-          '--terra-table-cell-border-left': '#0f0 solid 1px',
-          '--terra-table-first-cell-border-left': '#dddddd solid 2px',
+          '--terra-table-row-border-top': '3px solid orange',
+          '--terra-table-row-border-bottom': '3px solid green',
+          '--terra-table-row-striped-background-color': 'pink',
+          '--terra-table-row-striped-selected-background-color': 'blue',
+          '--terra-table-row-striped-hover-focus-background-color': 'yellow',
+          '--terra-table-row-striped-selected-hover-focus-background-color': 'red',
+          '--terra-table-row-selected-background-color': 'crimson',
+          '--terra-table-row-selected-border-color': 'aliceblue',
+          '--terra-table-row-selected-border-top-color': 'cornsilk',
+          '--terra-table-row-focus-outline': 'thick ridge pink',
+          '--terra-table-row-hover-focus-background-color': 'coral',
+          '--terra-table-row-focus-background-color': 'coral',
+          '--terra-table-row-focus-border-bottom': '1px solid brown',
+          '--terra-table-row-focus-border-color': 'burlywood',
+          '--terra-table-row-focus-box-shadow': 'inset 2 0 0 1px blue, inset 2 0 0 3px green',
+          '--terra-table-row-selected-focus-background-color': 'cyan',
+          '--terra-table-row-selected-hover-focus-background-color': 'beige',
+          '--terra-table-cell-padding-bottom': '0.25rem',
+          '--terra-table-cell-padding-left': '0.5rem',
+          '--terra-table-cell-padding-right': '0.5rem',
+          '--terra-table-cell-padding-top': '0.25rem',
+          '--terra-table-first-cell-border-left': '5px dashed aqua',
+          '--terra-table-last-cell-border-right': '5px dashed aqua',
         },
       });
     });
