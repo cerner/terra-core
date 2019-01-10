@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Webdriver theme test updated to use base64 image string
 
 3.32.0 - (January 8, 2019)
 ------------------
