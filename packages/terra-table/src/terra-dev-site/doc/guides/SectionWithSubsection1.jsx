@@ -73,13 +73,13 @@ class SectionWithSubsection1 extends React.Component {
   render() {
     return (
       <Table
-        header={
+        header={(
           <Header>
             <HeaderCell>Column 0</HeaderCell>
             <HeaderCell>Column 1</HeaderCell>
             <HeaderCell>Column 2</HeaderCell>
-          </Header> 
-        }
+          </Header>
+        )}
       >
         {this.createSections(mockData)}
       </Table>

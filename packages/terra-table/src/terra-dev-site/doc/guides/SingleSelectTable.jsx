@@ -1,6 +1,7 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Table, { Row, Cell, Header, HeaderCell } from 'terra-table/lib/index';
+import Table, {
+  Row, Cell, Header, HeaderCell,
+} from 'terra-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-select';
 
@@ -49,13 +50,13 @@ class SingleSelectTable extends React.Component {
   render() {
     return (
       <Table
-        header={
+        header={(
           <Header>
             <HeaderCell>Column 0</HeaderCell>
             <HeaderCell>Column 1</HeaderCell>
             <HeaderCell>Column 2</HeaderCell>
-          </Header> 
-        }
+          </Header>
+        )}
       >
         {this.createTableRows(mockData)}
       </Table>
