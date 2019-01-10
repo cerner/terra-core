@@ -2,3 +2,7 @@
 node_modules
 target
 reports
+aggregated-translations
+dev-site-config
+screenshots
+errorScreenshots
