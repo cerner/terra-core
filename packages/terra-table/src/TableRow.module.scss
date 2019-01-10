@@ -6,7 +6,7 @@
     margin-bottom: 0;
 
     &:last-of-type {
-      border-bottom: var(--terra-table-row-border-bottom, 1px solid #c8cacb);
+      border-bottom: var(--terra-table-last-row-border-bottom, 1px solid #c8cacb);
     }
   }
 

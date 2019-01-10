@@ -44,6 +44,7 @@ viewports.forEach((viewport) => {
         testName: 'themed',
         properties: {
           '--terra-table-header-background-color': 'pink',
+          '--terra-table-header-border-bottom': '5px dashed green',
           '--terra-table-header-border-top': '5px dashed green',
           '--terra-table-header-cell-tiny-min-width': '0.5rem',
           '--terra-table-header-cell-small-min-width': '1.25rem',
@@ -78,7 +79,7 @@ viewports.forEach((viewport) => {
         testName: 'themed',
         properties: {
           '--terra-table-row-border-top': '3px solid orange',
-          '--terra-table-row-border-bottom': '3px solid green',
+          '--terra-table-last-row-border-bottom': '3px solid green',
           '--terra-table-row-striped-background-color': 'pink',
           '--terra-table-row-striped-selected-background-color': 'blue',
           '--terra-table-row-striped-hover-focus-background-color': 'yellow',

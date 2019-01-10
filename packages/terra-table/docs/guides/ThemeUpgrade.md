@@ -43,9 +43,55 @@
 | Previous | New |
 |-|-|
 | --terra-table-cell-border | --terra-table-cell-border-left |
+| --terra-table-thead-background-color | --terra-table-header-background-color |
+| --terra-table-thead-tr-border-top | --terra-table-header-border-top |
+| --terra-table-cell-tiny-min-width | --terra-table-header-cell-tiny-min-width |
+| --terra-table-cell-small-min-width | --terra-table-header-cell-small-min-width |
+| --terra-table-cell-medium-min-width | --terra-table-header-cell-medium-min-width |
+| --terra-table-cell-large-min-width | --terra-table-header-cell-large-min-width |
+| --terra-table-cell-huge-min-width | --terra-table-header-cell-huge-min-width |
+| --terra-table-thead-th-color | --terra-table-header-cell-color |
+| --terra-table-thead-th-font-size | --terra-table-header-cell-font-size |
+| --terra-table-thead-th-font-weight | --terra-table-header-cell-font-weight |
+| --terra-table-row-striped-focus-background-color | --terra-table-row-striped-hover-focus-background-color |
+| --terra-table-row-striped-selected-focus-background-color | --terra-table-row-striped-selected-hover-focus-background-color |
+| --terra-table-row-hover-background-color | --terra-table-row-hover-focus-background-color |
+| --terra-table-row-selected-hover-background-color | --terra-table-row-selected-hover-focus-background-color |
 
 #### Added
-<!-- * --terra-table-header-cell-border-left -->
+* --terra-table-row-focus-outline
+* --terra-table-row-focus-border-bottom
+* --terra-table-row-focus-border-color
+* --terra-table-row-focus-box-shadow
+* --terra-table-section-header-background-color
+* --terra-table-section-header-border-bottom
+* --terra-table-section-header-padding-bottom
+* --terra-table-section-header-padding-left
+* --terra-table-section-header-padding-top
+* --terra-table-section-header-title-color
+* --terra-table-section-header-title-font-size
+* --terra-table-section-header-title-line-height
+* --terra-table-section-header-collapsible-padding-left
+* --terra-table-section-header-focus-background-color
+* --terra-table-section-header-focus-box-shadow
+* --terra-table-section-header-focus-outline
+* --terra-table-section-header-hover-active-background-color
+* --terra-table-section-header-start-padding-right
+* --terra-table-subsection-header-background-color
+* --terra-table-subsection-header-border-bottom
+* --terra-table-subsection-header-padding-bottom
+* --terra-table-subsection-header-padding-left
+* --terra-table-subsection-header-padding-top
+* --terra-table-subsection-header-title-color
+* --terra-table-subsection-header-padding-top
+* --terra-table-subsection-header-title-font-size
+* --terra-table-subsection-header-title-line-height
+* --terra-table-subsection-header-collapsible-padding-left
+* --terra-table-subsection-header-focus-background-color
+* --terra-table-subsection-header-focus-box-shadow
+* --terra-table-subsection-header-focus-outline
+* --terra-table-subsection-header-hover-active-background-color
+* --terra-table-subsection-header-start-padding-right
 
 #### Removed
 * --terra-table-tfoot-tr-border-bottom
