@@ -5,7 +5,7 @@ Unreleased
 ----------
 ### Fixed
 * Fixed Dropdown closing issue on Hold and Scroll in IE
-=======
+
 ### Changed
 * Updated theme variables
 
