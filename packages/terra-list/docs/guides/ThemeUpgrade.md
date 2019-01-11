@@ -1,4 +1,4 @@
-# Terra List Theme Updrade Guide
+# Terra List Theme Upgrade Guide
 
 ## Changes from version 2 to version 3
 
