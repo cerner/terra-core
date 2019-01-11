@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import { KeyCodes, Variants } from './_constants';
 import Dropdown from './_Dropdown';
 import Util from './_FrameUtil';
+import MenuUtil from './_MenuUtil';
 import styles from './_Frame.module.scss';
 
 const cx = classNames.bind(styles);
@@ -64,6 +66,10 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
+   * Options to display inside the select box
+   */
+  options: PropTypes.node,
+  /**
    * Placeholder text.
    */
   placeholder: PropTypes.string,
@@ -96,6 +102,15 @@ const defaultProps = {
   placeholder: undefined,
   value: undefined,
   variant: Variants.DEFAULT,
+};
+
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
 };
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
@@ -357,6 +372,7 @@ class Frame extends React.Component {
       onSearch,
       onSelect,
       optionFilter,
+      options,
       placeholder,
       variant,
       value,
@@ -373,6 +389,15 @@ class Frame extends React.Component {
       { 'is-open': this.state.isOpen },
       customProps.className,
     ]);
+
+    const { searchValue } = this.state;
+
+    let ariaLiveText = '';
+    const children = MenuUtil.filter(options, searchValue, optionFilter);
+
+    if (searchValue && MenuUtil.shouldShowNoResults({ variant }, children)) {
+      ariaLiveText = this.context.intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+    }
 
     return (
       <div
@@ -398,6 +423,7 @@ class Frame extends React.Component {
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
           <span className={cx('arrow-icon')} />
         </div>
+        <VisuallyHiddenText aria-live="polite" aria-relevant="all" aria-atomic="true" text={ariaLiveText} />
         {this.state.isOpen
           && (
           <Dropdown
@@ -431,5 +457,6 @@ class Frame extends React.Component {
 
 Frame.propTypes = propTypes;
 Frame.defaultProps = defaultProps;
+Frame.contextTypes = contextTypes;
 
 export default Frame;
