@@ -47,6 +47,9 @@
 * --terra-list-item-chevron-padding-left
 * --terra-list-item-chevron-padding-right
 * --terra-list-item-chevron-padding-top
+* --terra-list-item-focus-outline
+* --terra-list-item-focus-border-color
+* --terra-list-item-focus-box-shadow
 * --terra-list-section-header-background-color
 * --terra-list-section-header-border-bottom
 * --terra-list-section-header-padding-bottom
