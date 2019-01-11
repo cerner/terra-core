@@ -3,6 +3,21 @@ Changelog
 
 Unreleased
 ----------
+### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs/guides)
+* Removed Component `SingleSelectableRows` - No longer supported this uncontrolled variant of table.
+* Removed Component `MultiSelectableRows` - No longer supported this uncontrolled variant of table.
+* Removed Component `SelectableRows` - Removed to avoid the need for cloning child props.
+* Removed Util `validatedMaxCount`.
+* Removed Util `initialSingleSelectedIndex`.
+* Removed Util `initialMultiSelectedIndexes`.
+* Removed Util `shouldHandleMultiSelect`.
+* Removed Util `shouldHandleSingleSelect`.
+* Added Component `TableSection` - Collapsible and Static functionality implementing the TableSectionHeader.
+* Added Component `TableSubsection` - Collapsible and Static functionality implementing the TableSubsectionHeader.
+* Added Component `TableSectionHeader` - Section styled header.
+* Added Component `TableSubsectionHeader` - Subsection styled header.
+* Change from dot notation for Header, HeaderCell, Cell, Row and Utils access to individual exports for Row, HeaderCell, Cell, Header, Utils, SectionHeader, SubsectionHeader, Section, and Subsection.
+* Moved accessibility logic into the TableRow.
 
 3.0.0 - (January 8, 2019)
 ------------------
