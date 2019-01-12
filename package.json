@@ -35,6 +35,7 @@
     }
   },
   "scripts": {
+    "a11y": "node scripts/a11y/index.js",
     "bootstrap": "lerna bootstrap",
     "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=moment --nohoist=one-cerner-style-icons",
     "clean:all": "lerna clean --yes && node scripts/clean-modules/index.js",
@@ -67,6 +68,7 @@
     "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
+    "axe-puppeteer": "^0.1.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-jest": "^23.0.1",
@@ -89,6 +91,7 @@
     "lerna": "^2.1.2",
     "link-parent-bin": "^0.2.0",
     "markdown-magic": "^0.1.25",
+    "puppeteer": "^1.11.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.0.0",
