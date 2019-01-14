@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+4.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated theme variables
+
+### Added
+* Bottom border styles collapsed tab edge case
+
 3.31.0 - (January 2, 2019)
 ------------------
 ### Changed

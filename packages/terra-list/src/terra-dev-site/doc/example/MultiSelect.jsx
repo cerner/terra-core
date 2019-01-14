@@ -17,6 +17,7 @@ const list = () => (
       <MultiSelectList.Item content={<span>test</span>} key="124" />
       <MultiSelectList.Item content={<span>test</span>} key="125" />
     </MultiSelectList>
-  </div>);
+  </div>
+);
 
 export default list;

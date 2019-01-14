@@ -17,20 +17,35 @@
       margin-bottom: 0;
     }
 
-    th,
     td {
       border: 0;
-      border-left: var(--terra-table-cell-border, 0);
+      border-left: var(--terra-table-cell-border-left, 0);
       display: table-cell;
       text-align: left;
       vertical-align: top;
 
       &:first-of-type {
-        border-left: var(--terra-table-row-border-vertical, 1px solid #c8cacb);
+        border-left: var(--terra-table-first-cell-border-left, 1px solid #c8cacb);
       }
 
       &:last-of-type {
-        border-right: var(--terra-table-row-border-vertical, 1px solid #c8cacb);
+        border-right: var(--terra-table-last-cell-border-right, 1px solid #c8cacb);
+      }
+    }
+
+    th {
+      border: 0;
+      border-left: var(--terra-table-header-cell-border-left, 0);
+      display: table-cell;
+      text-align: left;
+      vertical-align: top;
+
+      &:first-of-type {
+        border-left: var(--terra-table-first-header-cell-border-left, 1px solid #c8cacb);
+      }
+
+      &:last-of-type {
+        border-right: var(--terra-table-last-header-cell-border-right, 1px solid #c8cacb);
       }
     }
 
@@ -52,11 +67,13 @@
     }
 
     tbody {
+      background-color: var(--terra-table-tbody-background-color);
+
       tr {
-        border-top: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
+        border-top: var(--terra-table-row-border-top, 1px solid #c8cacb);
 
         &:last-of-type {
-          border-bottom: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
+          border-bottom: var(--terra-table-last-row-border-bottom, 1px solid #c8cacb);
         }
       }
     }
@@ -81,35 +98,46 @@
   .sort-indicator {
     color: var(--terra-table-sort-indicator-color, #1c1f21);
     padding-left: 0.7142857143rem;
+
+    > svg {
+      width: var(--terra-table-sort-indicator-width);
+    }
   }
 
   .min-width-tiny {
-    min-width: var(--terra-table-cell-min-width-tiny, 3rem);
+    min-width: var(--terra-table-cell-tiny-min-width, 3rem);
   }
 
   .min-width-small {
-    min-width: var(--terra-table-cell-min-width-small, 4.25rem);
+    min-width: var(--terra-table-cell-small-min-width, 4.25rem);
   }
 
   .min-width-medium {
-    min-width: var(--terra-table-cell-min-width-medium, 5.75rem);
+    min-width: var(--terra-table-cell-medium-min-width, 5.75rem);
   }
 
   .min-width-large {
-    min-width: var(--terra-table-cell-min-width-large, 8.5rem);
+    min-width: var(--terra-table-cell-large-min-width, 8.5rem);
   }
 
   .min-width-huge {
-    min-width: var(--terra-table-cell-min-width-huge, 10.5rem);
+    min-width: var(--terra-table-cell-huge-min-width, 10.5rem);
   }
 
   .padded {
-    th,
     td {
       padding-bottom: var(--terra-table-cell-padding-bottom, 0.5em);
       padding-left: var(--terra-table-cell-padding-left, 0.75em);
       padding-right: var(--terra-table-cell-padding-right, 0.75em);
       padding-top: var(--terra-table-cell-padding-top, 0.5em);
+    }
+
+    th {
+      height: var(--terra-table-header-cell-height);
+      padding-bottom: var(--terra-table-header-cell-padding-bottom, 0.5em);
+      padding-left: var(--terra-table-header-cell-padding-left, 0.75em);
+      padding-right: var(--terra-table-header-cell-padding-right, 0.75em);
+      padding-top: var(--terra-table-header-cell-padding-top, 0.5em);
     }
   }
 
@@ -125,12 +153,19 @@
         background-color: var(--terra-table-row-striped-selected-background-color, darken(#ebf6fd, 7%)) !important;
       }
 
-      &.is-selectable:hover,
-      &.is-selectable:focus {
+      &.is-selectable:hover {
         background-color: var(--terra-table-row-striped-hover-background-color, darken(#ebf6fd, 2%)) !important;
 
         &.is-selected {
           background-color: var(--terra-table-row-striped-selected-hover-background-color, darken(#ebf6fd, 12%)) !important;
+        }
+      }
+
+      &.is-selectable:focus {
+        background-color: var(--terra-table-row-striped-focus-background-color, darken(#ebf6fd, 2%)) !important;
+
+        &.is-selected {
+          background-color: var(--terra-table-row-striped-selected-focus-background-color, darken(#ebf6fd, 12%)) !important;
         }
       }
       /* stylelint-enable selector-no-qualifying-type */
@@ -145,19 +180,25 @@
     }
 
     + .row {
-      border-top-color: var(--terra-table-row-selected-border-color, #0092e0);
+      border-top-color: var(--terra-table-row-selected-border-top-color, #0092e0);
     }
   }
 
   .is-selectable {
     cursor: pointer;
 
-    &.row:focus,
+    &.row:focus {
+      background-color: var(--terra-table-row-focus-background-color, lighten(#ebf6fd, 2%)) !important;
+    }
+
     &.row:hover {
       background-color: var(--terra-table-row-hover-background-color, lighten(#ebf6fd, 2%)) !important;
     }
 
-    &.is-selected:focus,
+    &.is-selected:focus {
+      background-color: var(--terra-table-row-selected-focus-background-color, darken(#ebf6fd, 7%)) !important;
+    }
+
     &.is-selected:hover {
       background-color: var(--terra-table-row-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
