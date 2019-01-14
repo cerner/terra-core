@@ -129,7 +129,6 @@ class Select extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleDeselect = this.handleDeselect.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
-    this.dropdownRef = React.createRef();
   }
 
   /**
@@ -212,9 +211,8 @@ class Select extends React.Component {
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
-        options={children}
         dropdown={dropdownProps => (
-          <DropdownMenu ref={this.dropdownRef} intl={intl} {...dropdownProps}>
+          <DropdownMenu intl={intl} {...dropdownProps}>
             {this.state.tags}
             {children}
           </DropdownMenu>

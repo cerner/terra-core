@@ -64,10 +64,6 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Options to display inside the select box
-   */
-  options: PropTypes.node,
-  /**
    * Placeholder text.
    */
   placeholder: PropTypes.string,
@@ -100,15 +96,6 @@ const defaultProps = {
   placeholder: undefined,
   value: undefined,
   variant: Variants.DEFAULT,
-};
-
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
 };
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
@@ -371,7 +358,6 @@ class Frame extends React.Component {
       onSearch,
       onSelect,
       optionFilter,
-      options,
       placeholder,
       variant,
       value,
@@ -448,6 +434,5 @@ class Frame extends React.Component {
 
 Frame.propTypes = propTypes;
 Frame.defaultProps = defaultProps;
-Frame.contextTypes = contextTypes;
 
 export default Frame;

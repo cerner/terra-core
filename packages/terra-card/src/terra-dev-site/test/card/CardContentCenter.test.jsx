@@ -8,4 +8,5 @@ export default () => (
     <CardBody isContentCentered>
       Centered content
     </CardBody>
-  </Card>);
+  </Card>
+);

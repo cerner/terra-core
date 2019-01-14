@@ -40,7 +40,8 @@ it('should render a ChoiceField with a checkbox', () => {
       value="children_present"
       inputAttrs={{ className: 'healtheintent-application' }}
       isInline={false}
-    />);
+    />
+  );
 
   const wrapper = shallow(choiceField);
   expect(wrapper).toMatchSnapshot();

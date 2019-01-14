@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.0.0 - (January 8, 2019)
+------------------
 ### Changed
 * Updated theme variables
 * Refactor icons to consistently use background-image instead of background

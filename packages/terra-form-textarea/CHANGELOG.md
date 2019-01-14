@@ -4,12 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+3.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated theme variables
+
 2.34.0 - (January 2, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 * Removed use of componentWillMount from examples
-* Updated theme variables
 * Updated site examples to be more accessible.
 
 ### Added
