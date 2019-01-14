@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+5.0.0 - (January 8, 2019)
+------------------
 ### Changed
 * Updated theme variables
 
