@@ -214,7 +214,7 @@ class Select extends React.Component {
         placeholder={selectPlaceholder}
         options={children}
         dropdown={dropdownProps => (
-          <DropdownMenu ref={this.dropdownRef} {...dropdownProps}>
+          <DropdownMenu ref={this.dropdownRef} intl={intl} {...dropdownProps}>
             {this.state.tags}
             {children}
           </DropdownMenu>

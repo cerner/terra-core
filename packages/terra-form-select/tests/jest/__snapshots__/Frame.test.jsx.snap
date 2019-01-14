@@ -43,11 +43,11 @@ exports[`Frame should render a combobox variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -96,11 +96,11 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -148,11 +148,11 @@ exports[`Frame should render a custom dropdown 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -189,11 +189,11 @@ exports[`Frame should render a default variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -230,11 +230,11 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -282,11 +282,11 @@ exports[`Frame should render a disabled combobox variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -323,11 +323,11 @@ exports[`Frame should render a disabled default variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -375,11 +375,11 @@ exports[`Frame should render a disabled multiple variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -422,11 +422,11 @@ exports[`Frame should render a disabled search variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -474,11 +474,11 @@ exports[`Frame should render a disabled tag variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -526,11 +526,11 @@ exports[`Frame should render a multiple variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -579,11 +579,11 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -626,11 +626,11 @@ exports[`Frame should render a search variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -674,11 +674,11 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -726,11 +726,11 @@ exports[`Frame should render a tag variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -779,11 +779,11 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -831,11 +831,11 @@ exports[`Frame should render an invalid combobox variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -872,11 +872,11 @@ exports[`Frame should render an invalid default variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -924,11 +924,11 @@ exports[`Frame should render an invalid multiple variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -971,11 +971,11 @@ exports[`Frame should render an invalid search variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -1023,11 +1023,11 @@ exports[`Frame should render an invalid tag variant 1`] = `
       className="arrow-icon"
     />
   </div>
-  <VisuallyHiddenText
+  <span
     aria-atomic="true"
     aria-live="polite"
     aria-relevant="all"
-    text=""
+    className="visually-hidden-component"
   />
 </div>
 `;
@@ -1081,21 +1081,12 @@ exports[`Frame should update the aria-live text when the search has no results 1
         className="arrow-icon"
       />
     </div>
-    <VisuallyHiddenText
+    <span
       aria-atomic="true"
       aria-live="polite"
       aria-relevant="all"
-      text="No matching results for \\"qwqerewqrwqer\\""
-    >
-      <span
-        aria-atomic="true"
-        aria-live="polite"
-        aria-relevant="all"
-        className="visually-hidden-text"
-      >
-        No matching results for "qwqerewqrwqer"
-      </span>
-    </VisuallyHiddenText>
+      className="visually-hidden-component"
+    />
   </div>
 </Frame>
 `;

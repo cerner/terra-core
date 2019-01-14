@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
@@ -19,9 +21,17 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Translation object to use for interpreting strings
+   */
+  intl: PropTypes.object,
+  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
+  /**
+   * String to send to screen readers to read out no results found.
+   */
+  noResultScreenReaderText: PropTypes.string,
   /**
    * Callback function triggered when an option is deselected.
    */
@@ -52,6 +62,10 @@ const propTypes = {
     Variants.SEARCH,
     Variants.TAG,
   ]).isRequired,
+  /**
+   * Visually hidden component designed to feed screen reader text to read.
+   */
+  visuallyHiddenComponent: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
 const defaultProps = {
@@ -94,7 +108,9 @@ class Menu extends React.Component {
    * @return {Object} - The new state object.
    */
   static getDerivedStateFromProps(props, state) {
-    const { searchValue, noResultContent } = props;
+    const {
+      searchValue, intl, noResultContent, visuallyHiddenComponent,
+    } = props;
     const children = Util.filter(props.children, props.searchValue, props.optionFilter);
 
     if (Util.shouldAllowFreeText(props, children)) {
@@ -103,6 +119,9 @@ class Menu extends React.Component {
 
     if (Util.shouldShowNoResults(props, children)) {
       children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
+      visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+    } else {
+      visuallyHiddenComponent.current.innerText = '';
     }
 
     return {

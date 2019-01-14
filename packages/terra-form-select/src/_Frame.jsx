@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import { KeyCodes, Variants } from './_constants';
 import Dropdown from './_Dropdown';
 import Util from './_FrameUtil';
-import MenuUtil from './_MenuUtil';
 import styles from './_Frame.module.scss';
 
 const cx = classNames.bind(styles);
@@ -140,6 +138,7 @@ class Frame extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
+    this.visuallyHiddenComponent = React.createRef();
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -390,15 +389,6 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
-    const { searchValue } = this.state;
-
-    let ariaLiveText = '';
-    const children = MenuUtil.filter(options, searchValue, optionFilter);
-
-    if (searchValue && MenuUtil.shouldShowNoResults({ variant }, children)) {
-      ariaLiveText = this.context.intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
-    }
-
     return (
       <div
         {...customProps}
@@ -423,7 +413,7 @@ class Frame extends React.Component {
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
           <span className={cx('arrow-icon')} />
         </div>
-        <VisuallyHiddenText aria-live="polite" aria-relevant="all" aria-atomic="true" text={ariaLiveText} />
+        <span className={cx('visually-hidden-component')} ref={this.visuallyHiddenComponent} aria-live="polite" aria-relevant="all" aria-atomic="true" />
         {this.state.isOpen
           && (
           <Dropdown
@@ -443,6 +433,7 @@ class Frame extends React.Component {
                  onDeselect,
                  optionFilter,
                  noResultContent,
+                 visuallyHiddenComponent: this.visuallyHiddenComponent,
                  onSelect: this.handleSelect,
                  onRequestClose: this.closeDropdown,
                  searchValue: this.state.searchValue,
