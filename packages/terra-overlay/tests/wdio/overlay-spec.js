@@ -205,7 +205,7 @@ describe('Overlay', () => {
       testName: 'themed',
       selector: '#light-overlay',
       properties: {
-        '--terra-overlay-light-background-color': 'green',
+        '--terra-overlay-light-background': 'green',
         '--terra-overlay-light-background-image': 'linear-gradient(red, green)',
         '--terra-overlay-light-content-color': 'blue',
       },
@@ -221,7 +221,7 @@ describe('Overlay', () => {
       testName: 'themed',
       selector: '#dark-overlay',
       properties: {
-        '--terra-overlay-dark-background-color': 'blue',
+        '--terra-overlay-dark-background': 'blue',
         '--terra-overlay-dark-background-image': 'linear-gradient(blue, green)',
         '--terra-overlay-dark-content-color': 'red',
       },

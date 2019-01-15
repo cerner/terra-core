@@ -25,7 +25,14 @@
     "extends": "terra"
   },
   "stylelint": {
-    "extends": "stylelint-config-terra"
+    "extends": "stylelint-config-terra",
+    "rules": {
+      "terra/custom-property-name": true,
+      "terra/custom-property-no-duplicate-declaration": true,
+      "terra/custom-property-pattern": true,
+      "terra/custom-property-pseudo-selectors": true,
+      "terra/custom-property-namespace": true
+    }
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -57,7 +64,7 @@
     "start-heroku": "tt-heroku-serve-static",
     "start-static": "tt-serve-static --config webpack.config",
     "test": "npm run jest && npm run wdio",
-    "wdio": "wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -68,6 +75,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "check-installed-dependencies": "^1.0.0",
+    "cross-env": "^5.2.0",
     "danger": "^3.7.14",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -80,7 +88,6 @@
     "jest": "^23.1.0",
     "lerna": "^2.1.2",
     "link-parent-bin": "^0.2.0",
-    "load-json-file": "^5.0.0",
     "markdown-magic": "^0.1.25",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

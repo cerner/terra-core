@@ -1,32 +1,35 @@
 :local {
   .submenu.arrow[data-align-arrow='bottom']::after {
-    border-top-color: var(--terra-menu-submenu-background-color, #f9f9f9);
+    border-top-color: var(--terra-menu-submenu-arrow-after-border-top-color, #f9f9f9);
   }
 
   .divider {
-    border-color: var(--terra-menu-divider-color, #dedfe0);
+    border-color: var(--terra-menu-divider-border-color, #dedfe0);
     border-style: solid;
     border-width: 1px 0 0;
-    margin-top: 2px;
+    margin-top: var(--terra-menu-divider-margin-top, 2px);
     width: 100%;
 
     &::after {
-      border-color: var(--terra-menu-divider-shadow-color, #f9f9f9);
+      border-color: var(--terra-menu-divider-after-border-color, #f9f9f9);
       border-style: solid;
-      border-width: 3px 0 0;
+      border-width: var(--terra-menu-divider-after-border-width, 3px 0 0);
       content: '';
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: var(--terra-menu-divider-after-margin-bottom, 4px);
     }
   }
 
   .submenu .divider::after {
-    border-color: var(--terra-menu-submenu-divider-shadow-color, #fff);
+    border-color: var(--terra-menu-submenu-divider-after-border-color, #fff);
+    border-width: var(--terra-menu-submenu-divider-after-border-width);
+    margin-bottom: var(--terra-menu-submenu-divider-after-margin-bottom);
   }
 
   .header {
     background-color: var(--terra-menu-submenu-header-background-color, #fff);
     border-bottom: var(--terra-menu-submenu-header-border-bottom, 1px solid #dedfe0);
+    height: var(--terra-menu-submenu-header-height);
     width: 100%;
 
     .header-title {
@@ -84,16 +87,18 @@
   }
 
   .list {
-    padding: 6px 0;
+    padding: var(--terra-menu-list-padding, 6px 0);
   }
 
   .content {
     background-color: var(--terra-menu-background-color, #fff);
+    background-image: var(--terra-menu-background-image);
     color: var(--terra-menu-foreground-color, #1c1f21);
   }
 
   .content.submenu {
     background-color: var(--terra-menu-submenu-background-color, #f9f9f9);
+    background-image: var(--terra-menu-submenu-background-image);
     color: var(--terra-menu-submenu-foreground-color, #1c1f21);
   }
 

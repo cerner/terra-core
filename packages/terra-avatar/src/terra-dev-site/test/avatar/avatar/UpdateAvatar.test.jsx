@@ -83,7 +83,8 @@ class UpdateAvatar extends React.Component {
         <br />
         <p>The buttons update one of the Avatar&apos;s props then force it to reload</p>
         <button type="button" onClick={this.imageToggleButtonHandle} id="image-toggle">Toggle Image</button>
-      </div>);
+      </div>
+    );
   }
 }
 

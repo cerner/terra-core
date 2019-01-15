@@ -66,6 +66,11 @@ const propTypes = {
    * Whether or not to append the 'optional' label to a non-required field label.
    */
   showOptional: PropTypes.bool,
+  /**
+   *  Provides first class prop for custom inline styles
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  style: PropTypes.object,
 };
 
 const defaultProps = {

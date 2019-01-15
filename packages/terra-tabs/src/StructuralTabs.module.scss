@@ -6,7 +6,9 @@
 
     // Content div of content container component
     > :nth-child(2) {
+      background-clip: content-box;
       background-color: var(--terra-tabs-structural-content-background-color, #fff);
+      background-image: var(--terra-tabs-structural-content-background-image);
       border-radius: var(--terra-tabs-structural-content-border-radius, 0);
       box-shadow: var(--terra-tabs-structural-content-box-shadow, 0);
       // Used to make the content sit above the tab to block the box shadow that can be applied
@@ -14,10 +16,28 @@
     }
 
     .collapsed-tabs-container {
-      border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-border-color, #dddedf);
+      border-bottom-color: var(--terra-tabs-structural-collapsed-border-bottom-color, #dddedf);
       border-bottom-style: solid;
-      border-bottom-width: 1px;
-      border-radius: var(--terra-tabs-structural-collapsed-menu-bar-border-radius, 0);
+      border-bottom-width: var(--terra-tabs-structural-collapsed-border-bottom-width, 1px);
+      border-radius: var(--terra-tabs-structural-collapsed-border-radius, 0);
+
+      .tab,
+      .tab-menu {
+        position: var(--terra-tabs-structural-collapsed-position, static);
+        // Typically we use the background image to set a blue stripe and animate it...
+        // However in the scenario where you need to also set the background image as a gradient to give a transparent
+        // affect and make it 100% height, but you then can't use it for the blue stripe.
+        &::before {
+          background: var(--terra-tabs-structural-collapsed-before-content-background, none);
+          content: '';
+          display: block;
+          height: var(--terra-tabs-structural-collapsed-before-content-height, 0);
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 0%;
+        }
+      }
 
       .tab-menu:focus {
         outline: none;
@@ -33,11 +53,10 @@
     }
 
     .collapsible-tabs-container {
-      border-bottom-color: var(--terra-tabs-structural-tab-bar-border-color, #dddedf);
+      border-bottom-color: var(--terra-tabs-structural-tab-bar-border-bottom-color, #dddedf);
       border-bottom-style: solid;
-      border-bottom-width: var(--terra-tabs-structural-tab-bar-border-width, 1px);
+      border-bottom-width: var(--terra-tabs-structural-tab-bar-border-bottom-width, 1px);
 
-      // Only target the tabs when in collapsible-tabs-container. When it is collapsed, the menu shouldn't have the stripe
       .tab,
       .tab-menu {
         position: var(--terra-tabs-structural-position, static);
@@ -61,6 +80,7 @@
     &.tab-fill .collapsible-tabs-container:not(.is-calculating) {
       .tab,
       .tab-menu {
+        border-radius: var(--terra-tabs-structural-extended-tabs-border-radius);
         flex: 1 1 auto;
       }
     }
@@ -77,22 +97,25 @@
       border-style: solid;
       border-width: var(--terra-tabs-structural-border-width, 0 1px 0 0);
       color: var(--terra-tabs-structural-color, #007ee0);
-      margin-left: var(--terra-tabs-structural-margin-between-tabs, 0);
+      margin-left: var(--terra-tabs-structural-between-tabs-margin-left, 0);
       transition-duration: var(--terra-tabs-structural-transition-duration, 0);
       transition-property: background-size;
-      transition-timing-function: var(--terra-tabs-structural-transition-timing, ease);
+      transition-timing-function: var(--terra-tabs-structural-transition-timing-function, ease);
 
       &.is-active {
         background-color: var(--terra-tabs-structural-active-background-color, #fff);
+        background-image: var(--terra-tabs-structural-active-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
         background-size: var(--terra-tabs-structural-active-background-size, 100% 2px);
         box-shadow: var(--terra-tabs-structural-active-box-shadow, none);
         color: var(--terra-tabs-structural-active-color, #000);
+        overflow: hidden; //forces :before background-image to honor border-radius clipping.
         position: relative;
 
         &::before {
-          transition-duration: var(--terra-tabs-structural-transition-duration, 0);
+          background-clip: content-box; // Make sure background fully extends
+          transition-duration: var(--terra-tabs-structural-active-before-transition-duration, 0);
           transition-property: width;
-          transition-timing-function: var(--terra-tabs-structural-transition-timing, ease);
+          transition-timing-function: var(--terra-tabs-structural-active-before-transition-timing-function, ease);
           width: 100%;
         }
 
@@ -108,11 +131,11 @@
 
       &.is-disabled,
       &.is-disabled:hover {
-        background-color: var(--terra-tabs-structural-disabled-background-color, #fff);
+        background-color: var(--terra-tabs-structural-disabled-hover-background-color, #fff);
         background-size: 0 0;
-        color: var(--terra-tabs-structural-disabled-color, rgba(0, 0, 0, 0.25));
+        color: var(--terra-tabs-structural-disabled-hover-color, rgba(0, 0, 0, 0.25));
         cursor: default;
-        opacity: var(--terra-tabs-structural-disabled-opacity, 1);
+        opacity: var(--terra-tabs-structural-disabled-hover-opacity, 1);
       }
 
       &.is-disabled .label,
@@ -139,22 +162,23 @@
     .collapsible-tabs-container:focus .is-active,
     .tab-menu:focus.is-active {
       background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
-      background-image: var(--terra-tabs-structural-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+      background-image: var(--terra-tabs-structural-active-focus-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
       color: var(--terra-tabs-structural-active-focus-color, inherit);
       position: relative;
       z-index: 1;
 
       [dir=rtl] & {
-        box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+        box-shadow: var(--terra-tabs-keyboard-active-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
       }
 
       [dir=ltr] & {
-        box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+        box-shadow: var(--terra-tabs-keyboard-active-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
       }
     }
 
     .tab-menu:focus {
       background-color: var(--terra-tabs-structural-focus-background-color, #fff);
+      background-image: var(--terra-tabs-structural-focus-background-image);
       color: var(--terra-tabs-structural-focus-color, inherit);
       outline: none;
 
@@ -165,6 +189,22 @@
       [dir=ltr] & {
         box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
       }
+    }
+
+    /*
+    For instances when all three cases are need:
+    1. tab is a collapsed tab (becomes tab-menu).
+    2. tab-menu contains box shadow that renders on left+right sides.
+    3. tab-menu contains bottom border.
+    These variables must be used to set the bottom border.
+    Otherwise, the outer .collapsed-tabs-container's border-bottom will overlap with the tab-menu's box shadow
+    */
+    .collapsed-tabs-container .tab-menu,
+    .collapsed-tabs-container .tab-menu.is-active,
+    .collapsed-tabs-container .tab-menu:focus {
+      border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-focus-border-bottom-color);
+      border-bottom-style: solid;
+      border-bottom-width: var(--terra-tabs-structural-collapsed-menu-bar-focus-border-bottom-width, 0);
     }
   }
 }

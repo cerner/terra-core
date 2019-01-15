@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.24.0 - (January 8, 2019)
+------------------
 ### Added
 * Added support for private props suppression in PropsTable output.
 
