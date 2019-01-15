@@ -1,6 +1,5 @@
 # Terra I18n
 
-
 [![NPM version](https://badgen.net/npm/v/terra-i18n)](https://www.npmjs.org/package/terra-i18n)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
@@ -17,7 +16,6 @@ This component is not intended for direct usage by developers. It is recommended
 However, terra-i18n can be installed with [npmjs](https://www.npmjs.com):
   - `npm install terra-i18n`
   - `yarn add terra-i18n`
-
 
 ## Documentation
 
