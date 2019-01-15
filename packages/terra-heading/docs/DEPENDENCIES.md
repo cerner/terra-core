@@ -5,14 +5,13 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-arrange | ^2.21.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
-| terra-doc-template | ^1.13.0 | ^16.2.0 | Provides an adjustable template for documentation pages. |
-| terra-markdown | ^2.13.0 | ^16.2.0 | terra-markdown |
-| terra-text | ^2.19.0 | ^16.2.0 | Component for displaying customizable text in UI. |
+| terra-arrange | ^2.33.0 | ^16.4.2 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
+| terra-doc-template | ^2.0.0 | ^16.4.2 | Provides an adjustable template for documentation pages. |
+| terra-markdown | ^2.19.0 | ^16.4.2 | React component to display the content of markdown files. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
-| terra-base | ^3.12.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| react | ^16.4.2 | -- | React is a JavaScript library for building user interfaces. |
+| react-dom | ^16.4.2 | ^16.0.0 | React package for working with the DOM. |
+| terra-base | ^3.12.0 | ^16.4.2 | The base component sets minimal global styles for an application. |

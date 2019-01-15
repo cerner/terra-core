@@ -14,7 +14,8 @@ it('should render a TextArea when all the possible props are passed into it', ()
       name="description"
       rows={5}
       required
-    />);
+    />
+  );
 
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
