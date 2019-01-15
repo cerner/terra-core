@@ -1,5 +1,3 @@
 # use terra-node as base image
-FROM cerner/terra-node
-
-# run the server
-CMD ["npm", "run", "start"]
+# FROM cerner/terra-node
+FROM mjhenkes/terra-base:1
