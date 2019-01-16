@@ -10,7 +10,7 @@ exports[`should render a default table section header 1`] = `
     <div
       className="subsection-content"
     >
-      <h2
+      <h3
         className="title"
       />
     </div>
@@ -45,7 +45,7 @@ exports[`should render a table section header with isCollapsible 1`] = `
       <div
         className="fill"
       >
-        <h2
+        <h3
           className="title"
         />
       </div>
@@ -64,7 +64,7 @@ exports[`should render a table section header with isCollpased 1`] = `
     <div
       className="subsection-content"
     >
-      <h2
+      <h3
         className="title"
       />
     </div>
@@ -82,7 +82,7 @@ exports[`should render a table section header with level 1`] = `
     <div
       className="subsection-content"
     >
-      <h2
+      <h4
         className="title"
       />
     </div>
@@ -100,7 +100,7 @@ exports[`should render a table section header with metaData 1`] = `
     <div
       className="subsection-content"
     >
-      <h2
+      <h3
         className="title"
       />
     </div>
@@ -118,7 +118,7 @@ exports[`should render a table section header with onSelect 1`] = `
     <div
       className="subsection-content"
     >
-      <h2
+      <h3
         className="title"
       />
     </div>
@@ -136,7 +136,7 @@ exports[`should render a table section header with refCallback 1`] = `
     <div
       className="subsection-content"
     >
-      <h2
+      <h3
         className="title"
       />
     </div>
@@ -154,11 +154,11 @@ exports[`should render a table section header with title 1`] = `
     <div
       className="subsection-content"
     >
-      <h2
+      <h3
         className="title"
       >
         test
-      </h2>
+      </h3>
     </div>
   </td>
 </tr>

@@ -6,7 +6,7 @@ exports[`should render a default table section 1`] = `
     colSpan={1}
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
+    level={3}
     title=""
   />
 </Fragment>
@@ -18,7 +18,7 @@ exports[`should render a table section with a row 1`] = `
     colSpan={1}
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
+    level={3}
     title=""
   />
   <TableRow
@@ -34,7 +34,7 @@ exports[`should render a table section with isCollapsible 1`] = `
     colSpan={1}
     isCollapsed={false}
     isCollapsible={true}
-    level={2}
+    level={3}
     title=""
   />
 </Fragment>
@@ -46,7 +46,7 @@ exports[`should render a table section with isCollpased 1`] = `
     colSpan={1}
     isCollapsed={true}
     isCollapsible={false}
-    level={2}
+    level={3}
     title=""
   />
 </Fragment>
@@ -58,7 +58,7 @@ exports[`should render a table section with level 1`] = `
     colSpan={1}
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
+    level={4}
     title=""
   />
 </Fragment>
@@ -70,7 +70,7 @@ exports[`should render a table section with metaData 1`] = `
     colSpan={1}
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
+    level={3}
     metaData={Object {}}
     title=""
   />
@@ -83,7 +83,7 @@ exports[`should render a table section with onSelect 1`] = `
     colSpan={1}
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
+    level={3}
     onSelect={[MockFunction]}
     title=""
   />
@@ -96,7 +96,7 @@ exports[`should render a table section with refCallback 1`] = `
     colSpan={1}
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
+    level={3}
     onSelect={[MockFunction]}
     title=""
   />
@@ -109,7 +109,7 @@ exports[`should render a table section with title 1`] = `
     colSpan={1}
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
+    level={3}
     title="test"
   />
 </Fragment>

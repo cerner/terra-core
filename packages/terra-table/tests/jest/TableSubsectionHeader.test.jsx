@@ -26,7 +26,7 @@ it('should render a table section header with isCollapsible', () => {
 
 it('should render a table section header with level', () => {
   const section = shallow(
-    <TableSubsectionHeader colSpan={1} level={2} />,
+    <TableSubsectionHeader colSpan={1} level={4} />,
   );
   expect(section).toMatchSnapshot();
 });

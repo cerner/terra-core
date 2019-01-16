@@ -21,9 +21,9 @@ const propTypes = {
    */
   isCollapsible: PropTypes.bool,
   /**
-   * Optionally sets the heading level. One of `2`, `3`, `4`, `5`, `6`.
+   * Optionally sets the heading level. One of 3`, `4`, `5`, `6`.
    */
-  level: PropTypes.oneOf([2, 3, 4, 5, 6]),
+  level: PropTypes.oneOf([3, 4, 5, 6]),
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
@@ -47,7 +47,7 @@ const propTypes = {
 const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
-  level: 2,
+  level: 3,
   title: '',
 };
 

@@ -13,7 +13,7 @@ const TableRowTest = () => (
     <Row isSelectable key="selectable-row" id="selectable-row">
       <Cell>Selectable Row</Cell>
     </Row>
-    <Row isSelected key="selected-row">
+    <Row isSelectable isSelected key="selected-row">
       <Cell>Selected Row</Cell>
     </Row>
   </Table>
