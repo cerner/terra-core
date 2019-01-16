@@ -29,10 +29,6 @@ const propTypes = {
    */
   noResultContent: PropTypes.node,
   /**
-   * String to send to screen readers to read out no results found.
-   */
-  noResultScreenReaderText: PropTypes.string,
-  /**
    * Callback function triggered when an option is deselected.
    */
   onDeselect: PropTypes.func,
