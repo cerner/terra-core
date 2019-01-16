@@ -55,7 +55,7 @@ const TableRow = ({
   ...customProps
 }) => {
   const rowClassNames = cx([
-    { 'is-selected': isSelected },
+    { 'is-selected': isSelected && isSelectable },
     { 'is-selectable': isSelectable },
     'row',
     customProps.className,

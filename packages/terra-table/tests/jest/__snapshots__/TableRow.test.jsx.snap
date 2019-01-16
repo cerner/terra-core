@@ -19,7 +19,12 @@ exports[`should render a selectable table row 1`] = `
 
 exports[`should render a selected table row 1`] = `
 <tr
-  className="is-selected row"
+  aria-selected={true}
+  className="is-selected is-selectable row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  tabIndex="0"
 />
 `;
 

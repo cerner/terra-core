@@ -19,6 +19,6 @@ it('should render a selectable table row', () => {
 });
 
 it('should render a selected table row', () => {
-  const tableRow = shallow(<TableRow isSelected />);
+  const tableRow = shallow(<TableRow isSelectable isSelected />);
   expect(tableRow).toMatchSnapshot();
 });
