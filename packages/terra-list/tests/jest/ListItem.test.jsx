@@ -13,7 +13,7 @@ it('should render with content', () => {
 });
 
 it('should render with selected', () => {
-  const shallowComponent = shallow(<ListItem isSelected />);
+  const shallowComponent = shallow(<ListItem isSelectable isSelected />);
   expect(shallowComponent).toMatchSnapshot();
 });
 

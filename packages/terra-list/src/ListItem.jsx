@@ -64,7 +64,7 @@ const ListItem = ({
 }) => {
   const listItemClassNames = cx([
     'list-item',
-    { selected: isSelected },
+    { selected: isSelected && isSelectable },
     { 'is-selectable': isSelectable },
     { 'item-has-chevron': hasChevron },
     customProps.className,
