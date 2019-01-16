@@ -21,10 +21,6 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Translation object to use for interpreting strings
-   */
-  intl: PropTypes.object,
-  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
@@ -157,9 +153,12 @@ class Menu extends React.Component {
 
       const {
         visuallyHiddenComponent,
-        intl,
         searchValue,
       } = this.props;
+
+      const {
+        intl,
+      } = this.context;
 
       if (hasNoResults && searchValue) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
