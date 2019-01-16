@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed Focus Issue of Menu Item on Press of Tab and Shift Tab.
 
 4.0.0 - (January 8, 2019)
 ------------------
