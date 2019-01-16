@@ -1,8 +1,7 @@
-/* global spyOn */
+/* global jest */
 
 import React from 'react';
 import Frame from '../../src/_Frame';
-import MenuUtil from '../../src/_MenuUtil';
 import intlContexts from './intl-context-setup';
 
 describe('Frame', () => {
@@ -124,8 +123,9 @@ describe('Frame', () => {
   it('should update the aria-live text when the search has no results', () => {
     const wrapper = mount(<Frame variant="tag" dropdown={() => <div>Custom</div>} />, intlContexts.shallowContext);
 
-    spyOn(MenuUtil, 'shouldShowNoResults').and.returnValue(true);
     wrapper.setState({ searchValue: 'qwqerewqrwqer' });
+    jest.useFakeTimers();
+    jest.runOnlyPendingTimers();
 
     expect(wrapper).toMatchSnapshot();
   });

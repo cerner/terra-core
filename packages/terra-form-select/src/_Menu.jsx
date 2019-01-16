@@ -109,9 +109,11 @@ class Menu extends React.Component {
    */
   static getDerivedStateFromProps(props, state) {
     const {
-      searchValue, intl, noResultContent, visuallyHiddenComponent,
+      searchValue, noResultContent,
     } = props;
     const children = Util.filter(props.children, props.searchValue, props.optionFilter);
+
+    let hasNoResults = false;
 
     if (Util.shouldAllowFreeText(props, children)) {
       children.push(<AddOption value={searchValue} />);
@@ -119,14 +121,15 @@ class Menu extends React.Component {
 
     if (Util.shouldShowNoResults(props, children)) {
       children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
-      visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+      hasNoResults = true;
     } else {
-      visuallyHiddenComponent.current.innerText = '';
+      hasNoResults = false;
     }
 
     return {
       children,
       searchValue,
+      hasNoResults,
       active: Util.getActiveOptionFromProps(props, children, state),
     };
   }
@@ -136,6 +139,7 @@ class Menu extends React.Component {
   }
 
   componentDidUpdate() {
+    this.updateLiveRegion();
     this.scrollIntoView();
   }
 
@@ -143,6 +147,30 @@ class Menu extends React.Component {
     this.clearSearch();
     this.clearScrollTimeout();
     document.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  updateLiveRegion() {
+    if (this.liveRegionTimeOut) {
+      clearTimeout(this.liveRegionTimeOut);
+    }
+
+    this.liveRegionTimeOut = setTimeout(() => {
+      const {
+        hasNoResults,
+      } = this.state;
+
+      const {
+        visuallyHiddenComponent,
+        intl,
+        searchValue,
+      } = this.props;
+
+      if (hasNoResults && searchValue) {
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+      } else {
+        visuallyHiddenComponent.current.innerText = '';
+      }
+    }, 500);
   }
 
   /**

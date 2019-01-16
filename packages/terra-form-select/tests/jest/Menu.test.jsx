@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from '../../src/_Menu';
+import Option from '../../src/_Option';
 import intlContexts from './intl-context-setup';
 
 describe('Menu', () => {
@@ -16,8 +17,19 @@ describe('Menu', () => {
     const liveRegion = { current: document.createElement('div') };
     const mockIntl = { formatMessage: id => (`No Results for ${id}`) };
 
-    const menu = <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} variant="tag" value="value" searchValue="Tag" />;
+    jest.useFakeTimers();
+
+    const menu = (
+      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} variant="tag" value="value" searchValue="value">
+        <Option value="value" display="display" />
+      </Menu>
+    );
+
     const wrapper = shallow(menu, intlContexts.shallowContext);
+    wrapper.setState({ searchValue: 'value' });
+
+    jest.runOnlyPendingTimers();
+
     expect(wrapper).toMatchSnapshot();
     expect(liveRegion.current.innerText).toEqual('');
   });
@@ -26,8 +38,19 @@ describe('Menu', () => {
     const liveRegion = { current: document.createElement('div') };
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
 
-    const menu = <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} variant="default" value="value" />;
+    jest.useFakeTimers();
+
+    const menu = (
+      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} variant="default" value="value" searchValue="asdfasdf">
+        <Option value="value" display="display" />
+      </Menu>
+    );
+
     const wrapper = shallow(menu, intlContexts.shallowContext);
+    wrapper.setState({ searchValue: 'asdf' });
+
+    jest.advanceTimersByTime(500);
+
     expect(wrapper).toMatchSnapshot();
     expect(liveRegion.current.innerText).toEqual('No Results for Terra.form.select.noResults');
   });
