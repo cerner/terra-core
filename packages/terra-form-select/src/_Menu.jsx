@@ -63,7 +63,7 @@ const propTypes = {
     Variants.TAG,
   ]).isRequired,
   /**
-   * Visually hidden component designed to feed screen reader text to read.
+   * @private Visually hidden component designed to feed screen reader text to read.
    */
   visuallyHiddenComponent: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
