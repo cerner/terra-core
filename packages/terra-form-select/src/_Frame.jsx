@@ -329,6 +329,12 @@ class Frame extends React.Component {
     });
 
     if (this.props.onSelect) {
+      if (!Util.allowsMultipleSelections(this.props)) {
+        this.setState({
+          isAbove: false,
+        });
+      }
+
       this.props.onSelect(value, option);
     }
   }
