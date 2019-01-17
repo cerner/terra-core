@@ -42,6 +42,8 @@
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
     "compile:prod": "webpack --config webpack.config.js -p",
+    "custom-properties-generate-json": "tt-custom-properties-generate-json",
+    "custom-properties-spell-check": "tt-custom-properties-spell-check",
     "danger": "danger ci",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
@@ -98,7 +100,7 @@
     "stylelint": "^9.0.0",
     "stylelint-config-terra": "^1.0.0",
     "terra-dev-site": "^2.0.0",
-    "terra-toolkit": "^4.5.0",
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#custom-property-scripts",
     "webpack-merge": "^4.1.2"
   }
 }
