@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  dev:
+  dev: &dev
     image: "terra-core:dev"
     build:
       context: ./
@@ -9,8 +9,13 @@ services:
         - npm_install=false
     ports:
       - 8080:8080
+    environment:
+      - CI=true
+    depends_on:
+      - standalone-chrome
     volumes:
       - .:/opt/module
+
   standalone-chrome:
     image: 'selenium/standalone-chrome:3.11.0-californium'
     ports:
@@ -23,13 +28,7 @@ services:
       TZ: 'America/Chicago'
       SCREEN_WIDTH: 1070
       SCREEN_HEIGHT: 1020
-  test:
-    build: .
-    image: "terra-core:${BRANCH:-latest}"
-    command: "sh /opt/entrypoint/test.sh"
-    depends_on:
-      - standalone-chrome
-    environment:
-      - CI=true
-    volumes:
-      - .:/opt/module
+
+  term:
+    <<: *dev
+    command: "/bin/zsh"
