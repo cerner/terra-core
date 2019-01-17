@@ -39,7 +39,7 @@
 * --terra-avatar-initials-font-size
 * --terra-avatar-initials-font-weight
 * --terra-avatar-neutral-background-color
-* --terra-avatar-netural-after-box-shadow
+* --terra-avatar-neutral-after-box-shadow
 * --terra-avatar-one-background-color
 * --terra-avatar-one-after-box-shadow
 * --terra-avatar-two-background-color
