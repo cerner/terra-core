@@ -60,7 +60,7 @@
     "postinstall": "node scripts/post-install/index.js",
     "postinstall:package": "npm run compile && npm run bootstrap",
     "postinstall:project": "link-parent-bin && npm run compile && npm run bootstrap:hoist",
-    "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
+    "publish": "npm whoami && check-installed-dependencies && npm run custom-properties-spell-check && npm run compile && npm test && lerna publish",
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
     "start": "tt-serve --config webpack.config",
     "start-heroku": "tt-heroku-serve-static",
