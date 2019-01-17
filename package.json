@@ -42,6 +42,7 @@
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
+    "compiledRouteConfig": "babel dev-site-config/build/routeConfig.js --out-file dev-site-config/build/compiledRouteConfig.js",
     "compile:prod": "webpack --config webpack.config.js -p",
     "danger": "danger ci",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
@@ -68,6 +69,7 @@
     "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
+    "@babel/register": "^7.0.0",
     "axe-puppeteer": "^0.1.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
@@ -103,5 +105,8 @@
     "terra-dev-site": "^2.0.0",
     "terra-toolkit": "^4.5.0",
     "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "file-system": "^2.2.2"
   }
 }
