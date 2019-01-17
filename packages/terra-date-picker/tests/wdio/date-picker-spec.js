@@ -129,8 +129,7 @@ describe('Date Picker', () => {
     Terra.should.beAccessible({ rules: ignoredA11y });
 
     it('should not accept keyboard input', () => {
-      expect(browser.setValue.bind(browser, 'input[name="terra-date-date-input"]', '06/01/2017'))
-        .to.throw('Element must be user-editable in order to clear it.');
+      expect(browser.setValue.bind(browser, 'input[name="terra-date-date-input"]', '06/01/2017')).to.throw(Error);
     });
 
     it('should not open the date picker', () => {
