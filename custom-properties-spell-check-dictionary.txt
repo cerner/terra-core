@@ -1,9 +1,11 @@
 checkable
 checkmark
 color
+de
 dropdown
 fieldset
 fullscreen
+html
 ltr
 nav
 optgroup
