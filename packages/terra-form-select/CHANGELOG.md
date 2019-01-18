@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Fixed
 * Fixed Dropdown closing issue on Hold and Scroll in IE
+* Updated Frame to remove isAbove styling when selecting item in single select list
 
 5.0.0 - (January 8, 2019)
 ------------------
