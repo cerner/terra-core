@@ -230,7 +230,7 @@ class DateTimePicker extends React.Component {
 
   handleTimeChange(event, time) {
     this.timeValue = time;
-    const validDate = DateTimeUtils.isValidDate(this.dateValue, this.state.dateFormat);
+    const validDate = DateTimeUtils.isValidDate(this.dateValue, this.state.dateFormat) && this.isDateTimeWithinRange(this.convertDateTimeStringToMomentObject(this.dateValue, this.timeValue));
     const validTime = DateTimeUtils.isValidTime(this.timeValue);
     const previousDateTime = this.state.dateTime ? this.state.dateTime.clone() : null;
 
@@ -305,13 +305,17 @@ class DateTimePicker extends React.Component {
   }
 
   validateDefaultDate() {
+    return this.isDateTimeWithinRange(this.state.dateTime);
+  }
+
+  isDateTimeWithinRange(newDateTime) {
     let isAcceptable = true;
 
-    if (DateUtil.isDateOutOfRange(this.state.dateTime, DateUtil.createSafeDate(this.props.minDateTime), DateUtil.createSafeDate(this.props.maxDateTime))) {
+    if (DateUtil.isDateOutOfRange(newDateTime, DateUtil.createSafeDate(this.props.minDateTime), DateUtil.createSafeDate(this.props.maxDateTime))) {
       isAcceptable = false;
     }
 
-    if (DateUtil.isDateExcluded(this.state.dateTime, this.props.excludeDates)) {
+    if (DateUtil.isDateExcluded(newDateTime, this.props.excludeDates)) {
       isAcceptable = false;
     }
 
@@ -344,6 +348,10 @@ class DateTimePicker extends React.Component {
 
   handleOnRequestClose() {
     this.setState({ isTimeClarificationOpen: false });
+  }
+
+  convertDateTimeStringToMomentObject(date, time) {
+    return DateTimeUtils.updateTime(DateUtil.createSafeDate(DateUtil.convertToISO8601(date, this.state.dateFormat)), time);
   }
 
   renderTimeClarification() {
