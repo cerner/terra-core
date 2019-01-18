@@ -2,6 +2,7 @@ import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
+import CustomProperties from '../../../../theme-properties.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
@@ -65,6 +66,7 @@ const DocPage = () => (
         componentSrc: ButtonSrc,
       },
     ]}
+    themeVariables={CustomProperties}
   />
 );
 

@@ -53,6 +53,11 @@ const propTypes = {
     componentName: PropTypes.string,
     propsResolution: PropTypes.string,
   })),
+  /**
+   * Theme Variables
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  themeVariables: PropTypes.object,
 };
 
 const defaultProps = {
@@ -64,7 +69,7 @@ const defaultProps = {
 };
 
 const DocTemplate = ({
-  packageName, readme, srcPath, examples, propsTables, children, ...customProps
+  packageName, readme, srcPath, examples, propsTables, themeVariables, children, ...customProps
 }) => {
   let id = 0;
   const localExamples = examples;
@@ -127,6 +132,31 @@ const DocTemplate = ({
           />
         ))}
       </div>
+
+      {themeVariables && (
+        <div className={cx('doc-card')}>
+          <div className="markdown-body">
+            <h2>Theme Variables (CSS Custom Properties)</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Property Name</th>
+                  <th>Property Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.keys(themeVariables).map(key => (
+                  <tr>
+                    <td>{key}</td>
+                    <td>{themeVariables[key]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       {children && <div className={cx('doc-card')}>{children}</div>}
     </div>
   );
