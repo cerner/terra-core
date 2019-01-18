@@ -1,5 +1,4 @@
 :local {
-  /* stylelint-disable selector-class-pattern  */
   .vertical-padding {
     padding-bottom: var(--terra-card-padding-bottom, 10px);
     padding-top: var(--terra-card-padding-top, 10px);
@@ -13,5 +12,4 @@
   .center-content {
     text-align: center;
   }
-  /* stylelint-enable */
 }

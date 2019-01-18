@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added stylelint-enable to Checkbox.module.scss
 
 3.4.0 - (February 12, 2019)
 ------------------
