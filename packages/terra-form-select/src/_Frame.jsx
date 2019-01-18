@@ -322,10 +322,14 @@ class Frame extends React.Component {
    * @param {ReactNode} option - The option that was selected.
    */
   handleSelect(value, option) {
+    const { isAbove } = this.state;
+    const isOpen = Util.allowsMultipleSelections(this.props);
+
     this.setState({
       searchValue: '',
       hasSearchChanged: false,
-      isOpen: Util.allowsMultipleSelections(this.props),
+      isOpen,
+      isAbove: isOpen ? isAbove : false,
     });
 
     if (this.props.onSelect) {
