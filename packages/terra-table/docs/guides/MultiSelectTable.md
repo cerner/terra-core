@@ -91,6 +91,7 @@ Finally we need to check if the row is selected. As we support IE10 & 11, we can
   }
 ```
 Then we can implement a method to loop through our data and create the table row with our methods and call it from our render method.
+Ensuring that we add the appropriate aria label for multiple selections.
 ```jsx
   createTableRows(data) {
     return data.map(childItem => this.createTableRow(childItem));
@@ -99,6 +100,7 @@ Then we can implement a method to loop through our data and create the table row
   render() {
     return (
       <Table
+        aria-multiselectable="true"
         header={
           <Header>
             <HeaderCell>Column 0</HeaderCell>

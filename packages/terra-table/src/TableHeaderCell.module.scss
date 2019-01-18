@@ -53,4 +53,13 @@
       border-right: var(--terra-table-last-header-cell-border-right, 1px solid #c8cacb);
     }
   }
+
+  .is-selectable {
+    cursor: pointer;
+    outline: var(--terra-table-header-cell-focus-outline, none);
+
+    &:hover {
+      background-color: var(--terra-table-header-cell-hover-background-color, darken(#dedfe0, 5%));
+    }
+  }
 }
