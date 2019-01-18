@@ -90,7 +90,7 @@ Finally we need to check if the item is selected. As we support IE10 & 11, we ca
     );
   }
 ```
-Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of "listbox" for the list, as it is required for accessibility with selectable list options.
+Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of "listbox" for the list, as it is required for accessibility with selectable list options. Ensuring that we add the appropriate aria label for multiple selections.
 ```jsx
   createListItems(data) {
     return data.map(childItem => this.createListItem(childItem));
@@ -98,7 +98,7 @@ Then we can implement a method to loop through our data and create the list item
 
   render() {
     return (
-      <List role="listbox">
+      <List role="listbox" aria-multiselectable="true">
         {this.createListItems(mockData)}
       </List>
     );
