@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Updated Frame to remove isAbove styling when selecting item in single select list
 
 5.0.0 - (January 8, 2019)
 ------------------
