@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Add scripts to collect CSS custom properties as JSON
 
 3.0.0 - (January 8, 2019)
 ------------------

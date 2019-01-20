@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Add `themeVariables` prop which will render a JSON list of CSS custom properties in the doc template
 
 2.0.0 - (January 8, 2019)
 ------------------
