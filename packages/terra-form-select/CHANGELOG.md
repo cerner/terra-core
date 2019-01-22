@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Create dropdown that announces no search results to screen reader
 
 5.1.0 - (January 22, 2019)
 ------------------
@@ -16,9 +18,6 @@ Unreleased
 ------------------
 ### Changed
 * Updated theme variables
-
-### Added
-* Create dropdown that announces no search results to screen reader
 
 4.26.0 - (January 2, 2019)
 ------------------
