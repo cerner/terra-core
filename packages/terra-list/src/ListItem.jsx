@@ -56,7 +56,7 @@ const ListItem = ({
   const ariaSpread = isSelectable ? { role: 'option', 'aria-selected': isSelected } : {};
 
   if (hasChevron) {
-    const chevron = <span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>;
+    const chevron = <span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span>;
 
     return (
       <li {...customProps} {...ariaSpread} className={listItemClassNames} ref={refCallback}>

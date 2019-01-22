@@ -11,6 +11,7 @@ const container = () => (
     <ContentContainer id="content-container" header={header} footer={footer}>
       {content}
     </ContentContainer>
-  </div>);
+  </div>
+);
 
 export default container;

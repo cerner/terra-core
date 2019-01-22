@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+1.28.0 - (January 22, 2019)
+------------------
+### Changed
+* Updated dependencies to fix major version bump issues
+
+1.27.0 - (January 8, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.26.0 - (January 2, 2019)
 ------------------
 ### Added

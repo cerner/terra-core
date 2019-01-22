@@ -59,7 +59,7 @@ jobs:
         # Load cached docker images
         - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
         - 'wget -q -O docker-compose.yml https://raw.github.com/cerner/terra-toolkit/master/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/app/build -e TRAVIS=$TRAVIS -e CI=$CI -e TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' -e TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' test-chrome npm run compile:prod"
+        - "travis_wait docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/opt/module/build -e TRAVIS=$TRAVIS -e CI=$CI -e TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' -e TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' test-chrome npm run compile:prod"
       deploy:
         provider: pages
         skip_cleanup: true

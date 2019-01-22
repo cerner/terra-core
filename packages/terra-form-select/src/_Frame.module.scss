@@ -2,22 +2,23 @@
 
 :local {
   .select {
-    background-color: var(--terra-select-background-color, #fff);
-    color: var(--terra-select-color, #1c1f21);
+    background-color: var(--terra-form-select-background-color, #fff);
+    border-radius: var(--terra-form-select-border-radius, 3px);
+    color: var(--terra-form-select-color, #1c1f21);
     display: flex;
-    font-size: var(--terra-select-font-size, 1.143rem);
-    line-height: var(--terra-select-line-height, 1.75);
+    font-size: var(--terra-form-select-font-size, 1.143rem);
+    line-height: var(--terra-form-select-line-height, 1.75);
   }
 
   .default {
-    background-size: var(--terra-select-background-size, 0 0);
-    border: var(--terra-select-border, 1px solid #dedfe0);
-    border-radius: var(--terra-select-border-radius, 3px);
+    background-size: var(--terra-form-select-background-size, 0 0);
+    border: var(--terra-form-select-border, 1px solid #dedfe0);
+    border-radius: var(--terra-form-select-border-radius, 3px);
     cursor: pointer;
-    padding-bottom: var(--terra-select-padding-bottom, 0);
-    padding-left: var(--terra-select-padding-left, 0.42857rem);
-    padding-right: var(--terra-select-padding-right, 0);
-    padding-top: var(--terra-select-padding-top, 0);
+    padding-bottom: var(--terra-form-select-padding-bottom, 0);
+    padding-left: var(--terra-form-select-padding-left, 0.42857rem);
+    padding-right: var(--terra-form-select-padding-right, 0);
+    padding-top: var(--terra-form-select-padding-top, 0);
 
     > .display {
       display: inline-block;
@@ -29,53 +30,55 @@
     }
 
     &.is-focused {
-      background-image: var(--terra-select-focus-background-image, none);
+      background-image: var(--terra-form-select-focus-background-image, none);
       background-position: 0 100%;
       background-repeat: no-repeat;
-      background-size: var(--terra-select-focus-background-size, 0 0);
-      border-color: var(--terra-select-focus-border-color, #4cb2e9);
-      box-shadow: var(--terra-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+      background-size: var(--terra-form-select-focus-background-size, 0 0);
+      border-color: var(--terra-form-select-focus-border-color, #4cb2e9);
+      box-shadow: var(--terra-form-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
       outline: none;
-      transition-duration: var(--terra-select-focus-transition-duration, 0s);
+      transition-duration: var(--terra-form-select-focus-transition-duration, 0s);
       transition-property: background-size;
-      transition-timing-function: var(--terra-select-focus-transition-timing-function, ease);
+      transition-timing-function: var(--terra-form-select-focus-transition-timing-function, ease);
     }
 
     &.is-open {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      border-top-left-radius: var(--terra-select-border-radius, 3px);
-      border-top-right-radius: var(--terra-select-border-radius, 3px);
+      border-top-left-radius: var(--terra-form-select-open-border-top-left-radius, 3px);
+      border-top-right-radius: var(--terra-form-select-open-border-top-right-radius, 3px);
       box-shadow: none;
     }
 
     &.is-above {
-      border-bottom-left-radius: var(--terra-select-border-radius, 3px);
-      border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+      border-bottom-left-radius: var(--terra-form-select-above-border-bottom-left-radius, 3px);
+      border-bottom-right-radius: var(--terra-form-select-above-border-bottom-right-radius, 3px);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
 
     &:hover {
-      border-color: var(--terra-select-hover-border-color, #dedfe0);
+      border-color: var(--terra-form-select-hover-border-color, #dedfe0);
+      color: var(--terra-form-select-hover-color, inherit);
     }
 
     &.is-focused:hover {
-      border-color: var(--terra-select-focus-hover-border-color, #4cb2e9);
+      border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
     &.is-invalid {
-      background-image: var(--terra-select-invalid-background-image, none);
-      border-color: var(--terra-select-invalid-border-color, #dedfe0);
+      background-color: var(--terra-form-select-invalid-background-color, none);
+      background-image: var(--terra-form-select-invalid-background-image, none);
+      border-color: var(--terra-form-select-invalid-border-color, #dedfe0);
     }
 
     &.is-invalid.is-focused {
-      background-size: var(--terra-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
+      background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
+      border-color: var(--terra-form-select-invalid-focus-border-color, #4cb2e9);
     }
 
     &.is-invalid:hover {
-      border-color: var(--terra-select-invalid-hover-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-hover-border-color, #dedfe0);
     }
   }
 
@@ -85,25 +88,25 @@
   }
 
   .arrow-icon {
-    background: var(--terra-select-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background: var(--terra-form-select-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block; // IE 10
-    height: var(--terra-select-arrow-height, 0.715rem);
-    width: var(--terra-select-arrow-width, 1rem);
+    height: var(--terra-form-select-arrow-height, 0.715rem);
+    width: var(--terra-form-select-arrow-width, 1rem);
   }
 
   .is-disabled {
-    background-color: var(--terra-select-disabled-background-color, rgba(111, 116, 119, 0.2));
-    border-color: var(--terra-select-disabled-border-color, #dedfe0);
-    color: var(--terra-select-disabled-color, #1c1f21);
+    background-color: var(--terra-form-select-disabled-background-color, rgba(111, 116, 119, 0.2));
+    border-color: var(--terra-form-select-disabled-border-color, #dedfe0);
+    color: var(--terra-form-select-disabled-color, #1c1f21);
     cursor: default;
-    opacity: 0.4;
+    opacity: var(--terra-form-select-disabled-opacity, 0.4);
     pointer-events: none;
 
     .arrow-icon {
-      background: var(--terra-select-disabled-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+      background: var(--terra-form-select-disabled-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -117,7 +120,7 @@
     display: flex;
     flex-shrink: 0;
     margin-left: auto;
-    padding: var(--terra-select-toggle-padding, 0 0.42857rem);
+    padding: var(--terra-form-select-toggle-padding, 0 0.42857rem);
   }
 
   .content {
@@ -127,10 +130,10 @@
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    padding-bottom: var(--terra-select-content-padding-bottom, 0.21428571428571427rem);
-    padding-left: var(--terra-select-content-padding-left, 0);
-    padding-right: var(--terra-select-content-padding-right, 0);
-    padding-top: var(--terra-select-content-padding-top, 0);
+    padding-bottom: var(--terra-form-select-content-padding-bottom, 0.21428571428571427rem);
+    padding-left: var(--terra-form-select-content-padding-left, 0);
+    padding-right: var(--terra-form-select-content-padding-right, 0);
+    padding-top: var(--terra-form-select-content-padding-top, 0);
   }
 
   // A reduced, non-zero, height and width allows the input to receive focus using tab.
@@ -155,9 +158,9 @@
     border: 0;
     color: inherit;
     flex: 1 1 auto;
-    font-size: var(--terra-select-search-font-size, 1.143rem);
-    height: var(--terra-select-search-height, 1.375em);
-    margin-top: var(--terra-select-search-margin-top, 0.21428571428571427rem);
+    font-size: var(--terra-form-select-search-focus-font-size, 1.143rem);
+    height: var(--terra-form-select-search-focus-height, 1.375em);
+    margin-top: var(--terra-form-select-search-focus-margin-top, 0.21428571428571427rem);
     max-width: 100%; // IE 10
     min-width: 0; // IE 11
     opacity: 1;
@@ -176,8 +179,9 @@
 
   .search-input::placeholder,
   .placeholder {
-    color: var(--terra-select-search-placeholder-color, #70787c);
-    font-size: var(--terra-select-search-placeholder-font-size, 1.143rem);
+    color: var(--terra-form-select-search-placeholder-color, #70787c);
+    font-size: var(--terra-form-select-search-placeholder-font-size, 1.143rem);
+    font-style: var(--terra-form-select-search-placeholder-font-style);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -188,38 +192,47 @@
   .combobox,
   .multiple {
     > .display {
-      background-size: var(--terra-select-background-size, 0 0);
-      border: var(--terra-select-border, 1px solid #dedfe0);
-      border-bottom-left-radius: var(--terra-select-border-radius, 3px);
-      border-top-left-radius: var(--terra-select-border-radius, 3px);
+      background-size: var(--terra-form-select-background-size, 0 0);
+      border: var(--terra-form-select-border, 1px solid #dedfe0);
+      border-bottom-left-radius: var(--terra-form-select-border-bottom-left-radius, 3px);
+      border-top-left-radius: var(--terra-form-select-border-top-left-radius, 3px);
       cursor: text;
       display: flex;
       flex: 1 1 auto; // IE 10
-      padding-bottom: var(--terra-select-padding-bottom, 0);
-      padding-left: var(--terra-select-padding-left, 0.42857rem);
-      padding-right: var(--terra-select-padding-right, 0);
-      padding-top: var(--terra-select-padding-top, 0);
+      padding-bottom: var(--terra-form-select-padding-bottom, 0);
+      padding-left: var(--terra-form-select-padding-left, 0.42857rem);
+      padding-right: var(--terra-form-select-padding-right, 0);
+      padding-top: var(--terra-form-select-padding-top, 0);
+
+      &:hover {
+        border-color: var(--terra-form-select-hover-border-color, #dedfe0);
+        color: var(--terra-form-select-hover-color, inherit);
+      }
     }
 
     > .toggle {
-      border: var(--terra-select-toggle-border, 1px solid #dedfe0);
-      border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+      border: var(--terra-form-select-toggle-border, 1px solid #dedfe0);
+      border-bottom-right-radius: var(--terra-form-select-border-bottom-right-radius, 3px);
       border-left: 0;
-      border-top-right-radius: var(--terra-select-border-radius, 3px);
+      border-top-right-radius: var(--terra-form-select-border-top-right-radius, 3px);
+
+      &:hover {
+        background-color: var(--terra-form-select-toggle-hover-background-color, none);
+      }
     }
 
     &.is-focused {
       > .display {
-        background-image: var(--terra-select-focus-background-image, none);
+        background-image: var(--terra-form-select-focus-background-image, none);
         background-position: 0 100%;
         background-repeat: no-repeat;
-        background-size: var(--terra-select-focus-background-size, 0 0);
-        border-color: var(--terra-select-focus-border-color, #4cb2e9);
-        box-shadow: var(--terra-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+        background-size: var(--terra-form-select-focus-background-size, 0 0);
+        border-color: var(--terra-form-select-focus-border-color, #4cb2e9);
+        box-shadow: var(--terra-form-select-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
         outline: none;
-        transition-duration: var(--terra-select-focus-transition-duration, 0s);
+        transition-duration: var(--terra-form-select-focus-transition-duration, 0s);
         transition-property: background-size;
-        transition-timing-function: var(--terra-select-focus-transition-timing-function, ease);
+        transition-timing-function: var(--terra-form-select-focus-transition-timing-function, ease);
       }
     }
 
@@ -236,42 +249,39 @@
 
     &.is-above {
       > .display {
-        border-bottom-left-radius: var(--terra-select-border-radius, 3px);
+        border-bottom-left-radius: var(--terra-form-select-above-border-bottom-left-radius, 3px);
         border-top-left-radius: 0;
       }
 
       > .toggle {
-        border-bottom-right-radius: var(--terra-select-border-radius, 3px);
+        border-bottom-right-radius: var(--terra-form-select-above-border-bottom-right-radius, 3px);
         border-top-right-radius: 0;
       }
     }
 
-    &:hover > .display {
-      border-color: var(--terra-select-hover-border-color, #dedfe0);
-    }
-
     &.is-focused:hover > .display {
-      border-color: var(--terra-select-focus-hover-border-color, #4cb2e9);
+      border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
     &.is-invalid > .display {
-      background-image: var(--terra-select-invalid-background-image, none);
-      border-color: var(--terra-select-invalid-border-color, #dedfe0);
+      background-color: var(--terra-form-select-invalid-background-color, none);
+      background-image: var(--terra-form-select-invalid-background-image, none);
+      border-color: var(--terra-form-select-invalid-border-color, #dedfe0);
     }
 
     &.is-invalid.is-focused > .display {
-      background-size: var(--terra-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
-      box-shadow: var(--terra-select-invalid-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+      background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
+      border-color: var(--terra-form-select-invalid-focus-border-color, #4cb2e9);
+      box-shadow: var(--terra-form-select-invalid-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
     }
 
     &.is-invalid:hover > .display {
-      border-color: var(--terra-select-invalid-hover-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-hover-border-color, #dedfe0);
     }
   }
 
   .is-invalid .arrow-icon {
-    background: var(--terra-select-invalid-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background: var(--terra-form-select-invalid-arrow-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

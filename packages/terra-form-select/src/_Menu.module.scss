@@ -1,8 +1,8 @@
 :local {
   .menu {
     list-style: none;
-    margin: var(--terra-select-menu-margin, 0);
+    margin: var(--terra-form-select-menu-margin, 0);
     overflow: hidden;
-    padding: var(--terra-select-menu-padding, 0 0 0.142857rem);
+    padding: var(--terra-form-select-menu-padding, 0 0 0.142857rem);
   }
 }

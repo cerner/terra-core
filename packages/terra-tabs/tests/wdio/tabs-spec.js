@@ -106,8 +106,8 @@ describe('Tabs - Responsive', () => {
           '--terra-tabs-structural-disabled-label-opacity': '0',
           '--terra-tabs-structural-border-color': 'purple',
           '--terra-tabs-structural-last-tab-border-width': '1px',
-          '--terra-tabs-structural-tab-bar-border-color': 'purple',
-          '--terra-tabs-structural-tab-bar-border-width': '10px',
+          '--terra-tabs-structural-tab-bar-border-bottom-color': 'purple',
+          '--terra-tabs-structural-tab-bar-border-bottom-width': '10px',
           '--terra-tabs-structural-content-box-shadow': 'inset 5px 5px 5px red',
           '--terra-tabs-structural-content-z-index': '100',
           '--terra-tabs-structural-position': 'absolute',
@@ -150,6 +150,7 @@ describe('Tabs - Responsive', () => {
           properties: {
             '--terra-tabs-structural-active-focus-background-color': 'purple',
             '--terra-tabs-structural-active-focus-color': 'purple',
+            '--terra-tabs-keyboard-active-focus-ltr-box-shadow': 'none',
             '--terra-tabs-keyboard-focus-ltr-box-shadow': 'none',
             '--terra-tabs-structural-active-box-shadow': 'inset 5px 5px 5px red',
           },
@@ -177,9 +178,9 @@ describe('Tabs - Responsive', () => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-tabs-menu-arrow-left-margin': '50px',
+          '--terra-tabs-menu-arrow-margin-left': '50px',
           '--terra-tabs-menu-collapsed-justify-content': 'center',
-          '--terra-tabs-structural-collapsed-menu-bar-border-color': 'purple',
+          '--terra-tabs-structural-collapsed-border-bottom-color': 'purple',
         },
       });
     });
