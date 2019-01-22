@@ -98,7 +98,11 @@ Then we can implement a method to loop through our data and create the list item
 
   render() {
     return (
-      <List role="listbox" aria-multiselectable="true">
+      <List
+        isDivided
+        role="listbox"
+        aria-multiselectable
+      >
         {this.createListItems(mockData)}
       </List>
     );

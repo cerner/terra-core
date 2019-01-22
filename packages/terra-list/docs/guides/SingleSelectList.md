@@ -76,7 +76,7 @@ For the single select list we set "isSelectable" for all items.
     );
   }
 ```
-Finally we need to check if the item matches the selectdKey in state.
+Finally we need to check if the item matches the selectedKey in state.
 ```jsx
   createListItem(itemData) {
     return (

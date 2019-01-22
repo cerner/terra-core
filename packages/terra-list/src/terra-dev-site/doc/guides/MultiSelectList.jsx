@@ -39,7 +39,11 @@ class MutliSelectList extends React.Component {
 
   render() {
     return (
-      <List isDivided role="listbox" aria-multiselectable="true">
+      <List
+        isDivided
+        role="listbox"
+        aria-multiselectable
+      >
         {this.createListItems(mockData)}
       </List>
     );
