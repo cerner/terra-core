@@ -1,7 +1,7 @@
 {
   "name": "terra-show-hide",
   "main": "lib/ShowHide.js",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Show/Hide component that previews a small section of content or shows the full content with the click of a button",
   "repository": {
     "type": "git",
@@ -32,8 +32,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.0.0",
-    "terra-toggle": "^2.30.0"
+    "terra-doc-template": "^1.23.0",
+    "terra-toggle": "^2.31.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

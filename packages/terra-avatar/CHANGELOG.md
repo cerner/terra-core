@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.2.0 - (January 22, 2019)
+------------------
+### Fixed
+* Refactor 'netraul' theme var to 'neutral'
+
 2.1.0 - (January 8, 2019)
 ------------------
 ### Changed
