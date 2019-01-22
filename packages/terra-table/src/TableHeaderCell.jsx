@@ -37,7 +37,7 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
   /**
-   * The minimum width for the column
+   * The minimum width for the column. One of `tiny`, `small`, `medium`, `large`, `huge`.
    */
   minWidth: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**

@@ -90,6 +90,16 @@ Finally we need to check if the row is selected. As we support IE10 & 11, we can
     );
   }
 ```
+We can then stub out our static elements
+```jsx
+  const createCell = cell => (
+    <Cell key={cell.key}>
+      <Placeholder title={cell.title} style={{ height: '50px' }} />
+    </Cell>
+  );
+
+  const createCellsForRow = cells => cells.map(cell => createCell(cell));
+```
 Then we can implement a method to loop through our data and create the table row with our methods and call it from our render method.
 Ensuring that we add the appropriate aria label for multiple selections.
 ```jsx

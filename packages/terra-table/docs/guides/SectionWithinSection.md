@@ -3,7 +3,7 @@
 With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to not have both sections and subsections to be collapsible, have one or the other be collapsible.
 
 ## State Management
-As section and subsection have the same API, we'll be walking through the expectation of a collapisble section in only one pattern.
+As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.
 
 First defaulting our state to an empty array in the constructor. 
 ```jsx
@@ -32,7 +32,7 @@ Terra Table comes with additional helpers to manage state, in this case we want 
     this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
   }
 ```
-Settting state will trigger another render. So in the render method we need generate our sections with the updated isCollapsed and isCollapsible props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The tab le renders flat, so keys need to be unique even if items are placed within sections structurally.
+Settting state will trigger another render. So in the render method we need to generate our sections with the updated isCollapsed and isCollapsible props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if items are placed within sections structurally.
 [React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
 ```jsx
   createSection(sectionData) {
@@ -68,7 +68,7 @@ For the common collapsible sections we set "isCollapsible" for all sections.
       <Section
         key={sectionData.key}
         title={sectionData.title}
-        isCollapsed={this.state.collapsedKeys.indexOf(sectionData.key) >= 0}
+        isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
       >

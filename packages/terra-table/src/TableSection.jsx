@@ -21,7 +21,7 @@ const propTypes = {
    */
   isCollapsible: PropTypes.bool,
   /**
-   * Optionally sets the heading level. One of 2`, `3`, `4`, `5`, `6`.
+   * Optionally sets the heading level. One of `2`, `3`, `4`, `5`, `6`.
    */
   level: PropTypes.oneOf([2, 3, 4, 5, 6]),
   /**
