@@ -3,8 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.1.0 - (January 22, 2019)
+------------------
 ### Fixed
 * Updated Frame to remove isAbove styling when selecting item in single select list
+
+### Changed
+* Updated Option prop documentation
 
 5.0.0 - (January 8, 2019)
 ------------------
