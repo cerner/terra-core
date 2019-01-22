@@ -10,6 +10,9 @@ Unreleased
 * Updated examples to use ModalManager v4
 * Updated theme variables
 
+### Fixed
+* Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
+
 2.39.0 - (January 2, 2019)
 ------------------
 ### Added

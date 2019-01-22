@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
 
 3.0.0 - (January 8, 2019)
 ------------------

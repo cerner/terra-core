@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Fixed
 * Added 'showShouldPicker' to prop-types validation
+* Changed expected selenium driver error to be non-Chrome specific for IE and FF driver compatibility
 
 2.40.0 - (January 8, 2019)
 ------------------

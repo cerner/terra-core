@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Fixed
 * Updated Frame to remove isAbove styling when selecting item in single select list
+* Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
 
 5.0.0 - (January 8, 2019)
 ------------------

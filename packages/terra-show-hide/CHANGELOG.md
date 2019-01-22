@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Correct browser.buttonDown() usage
 
 1.7.0 - (January 8, 2019)
 ------------------

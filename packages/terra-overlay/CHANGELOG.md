@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Changed expected selenium driver error to be non-Chrome specific for IE and FF driver compatibility
 
 3.0.0 - (January 8, 2019)
 ------------------
