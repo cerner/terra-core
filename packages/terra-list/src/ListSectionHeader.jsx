@@ -37,14 +37,13 @@ const propTypes = {
   /**
    * Title text to be placed within the section header.
    */
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
   level: 1,
-  title: '',
 };
 
 const ListSectionHeader = ({

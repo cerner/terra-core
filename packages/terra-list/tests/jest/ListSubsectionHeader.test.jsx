@@ -3,31 +3,26 @@ import ListSubsectionHeader from '../../src/ListSubsectionHeader';
 
 // Snapshot Tests
 it('should render default', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader />);
+  const shallowComponent = shallow(<ListSubsectionHeader title="test" />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render with title', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader title="Test Title" />);
-  expect(shallowComponent).toMatchSnapshot();
-});
-
-it('should render with title and level', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader title="Test Title" level={3} />);
+it('should render with level', () => {
+  const shallowComponent = shallow(<ListSubsectionHeader title="test" level={3} />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsed', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader isCollapsed />);
+  const shallowComponent = shallow(<ListSubsectionHeader title="test" isCollapsed />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsible', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader isCollapsible />);
+  const shallowComponent = shallow(<ListSubsectionHeader title="test" isCollapsible />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with callback functions', () => {
-  const shallowComponent = shallow(<ListSubsectionHeader refCallback={jest.fn()} onSelect={jest.fn()} />);
+  const shallowComponent = shallow(<ListSubsectionHeader title="test" refCallback={jest.fn()} onSelect={jest.fn()} />);
   expect(shallowComponent).toMatchSnapshot();
 });

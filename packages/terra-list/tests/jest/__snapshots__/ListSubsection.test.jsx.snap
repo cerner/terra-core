@@ -8,7 +8,7 @@ exports[`should render with callback functions 1`] = `
     level={2}
     onSelect={[MockFunction]}
     refCallback={[MockFunction]}
-    title=""
+    title="test"
   />
 </Fragment>
 `;
@@ -19,7 +19,7 @@ exports[`should render with isCollapsed 1`] = `
     isCollapsed={true}
     isCollapsible={false}
     level={2}
-    title=""
+    title="test"
   />
 </Fragment>
 `;
@@ -30,7 +30,7 @@ exports[`should render with isCollapsible 1`] = `
     isCollapsed={false}
     isCollapsible={true}
     level={2}
-    title=""
+    title="test"
   />
 </Fragment>
 `;
@@ -41,7 +41,7 @@ exports[`should render with items 1`] = `
     isCollapsed={false}
     isCollapsible={false}
     level={2}
-    title=""
+    title="test"
   />
   <ListItem
     hasChevron={false}
@@ -76,35 +76,24 @@ exports[`should render with items 1`] = `
 </Fragment>
 `;
 
+exports[`should render with level 1`] = `
+<Fragment>
+  <ListSubsectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={3}
+    title="test"
+  />
+</Fragment>
+`;
+
 exports[`should render with no items 1`] = `
 <Fragment>
   <ListSubsectionHeader
     isCollapsed={false}
     isCollapsible={false}
     level={2}
-    title=""
-  />
-</Fragment>
-`;
-
-exports[`should render with title 1`] = `
-<Fragment>
-  <ListSubsectionHeader
-    isCollapsed={false}
-    isCollapsible={false}
-    level={2}
-    title="Test Title"
-  />
-</Fragment>
-`;
-
-exports[`should render with title and level 1`] = `
-<Fragment>
-  <ListSubsectionHeader
-    isCollapsed={false}
-    isCollapsible={false}
-    level={3}
-    title="Test Title"
+    title="test"
   />
 </Fragment>
 `;

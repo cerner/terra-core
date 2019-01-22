@@ -6,7 +6,9 @@ exports[`should render default 1`] = `
 >
   <h2
     className="title"
-  />
+  >
+    test
+  </h2>
 </li>
 `;
 
@@ -16,7 +18,9 @@ exports[`should render with callback functions 1`] = `
 >
   <h2
     className="title"
-  />
+  >
+    test
+  </h2>
 </li>
 `;
 
@@ -26,7 +30,9 @@ exports[`should render with isCollapsed 1`] = `
 >
   <h2
     className="title"
-  />
+  >
+    test
+  </h2>
 </li>
 `;
 
@@ -53,31 +59,21 @@ exports[`should render with isCollapsible 1`] = `
   >
     <h2
       className="title"
-    />
+    >
+      test
+    </h2>
   </div>
 </li>
 `;
 
-exports[`should render with title 1`] = `
-<li
-  className="subsection-header"
->
-  <h2
-    className="title"
-  >
-    Test Title
-  </h2>
-</li>
-`;
-
-exports[`should render with title and level 1`] = `
+exports[`should render with level 1`] = `
 <li
   className="subsection-header"
 >
   <h3
     className="title"
   >
-    Test Title
+    test
   </h3>
 </li>
 `;
