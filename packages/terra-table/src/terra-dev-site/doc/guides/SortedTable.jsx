@@ -69,10 +69,10 @@ class SortedTable extends React.Component {
     }
     return (
       <HeaderCell
+        key={key}
         metaData={{ key }}
         onSelect={this.handleSortClick}
         sort={sort}
-        key={key}
         isSelectable
       >
         {title}

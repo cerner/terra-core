@@ -56,7 +56,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
         metaData={{ key: itemData.key }}
         onSelect={this.handleRowSelection}
       >
-        <Placeholder />
+        {createCellsForRow(rowData.cells)}
       </Row>
     );
   }
@@ -71,12 +71,12 @@ For the single select table we set "isSelectable" for all items.
         metaData={{ key: itemData.key }}
         onSelect={this.handleRowSelection}
       >
-        <Placeholder />
+        {createCellsForRow(rowData.cells)}
       </Row>
     );
   }
 ```
-Finally we need to check if the item matches the selectdKey in state.
+Finally we need to check if the item matches the selectedKey in state.
 ```jsx
   createTableRow(rowData) {
     return (
@@ -87,7 +87,7 @@ Finally we need to check if the item matches the selectdKey in state.
         metaData={{ key: itemData.key }}
         onSelect={this.handleRowSelection}
       >
-        <Placeholder />
+        {createCellsForRow(rowData.cells)}
       </Row>
     );
   }
@@ -112,6 +112,7 @@ Then we can implement a method to loop through our data and create the table row
         {this.createTableRows(mockData)}
       </Table>
     );
+  }
 }
   ```
-  Using these steps we get the following example.
+  Using these steps we get the following example:

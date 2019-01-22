@@ -50,7 +50,7 @@ class MutliSelectTable extends React.Component {
   render() {
     return (
       <Table
-        aria-multiselectable="true"
+        aria-multiselectable
         header={(
           <Header>
             <HeaderCell>Column 0</HeaderCell>

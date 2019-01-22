@@ -100,7 +100,7 @@ Ensuring that we add the appropriate aria label for multiple selections.
   render() {
     return (
       <Table
-        aria-multiselectable="true"
+        aria-multiselectable
         header={
           <Header>
             <HeaderCell>Column 0</HeaderCell>
@@ -114,4 +114,4 @@ Ensuring that we add the appropriate aria label for multiple selections.
     );
   }
   ```
-  Using these steps we get the following example.
+  Using these steps we get the following example:

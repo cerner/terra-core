@@ -141,4 +141,4 @@ Then we can implement a method to loop through our data and create the section w
     );
   }
 ```
-Using these steps we get the following example.
+Using these steps we get the following example:
