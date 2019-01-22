@@ -1,7 +1,7 @@
 {
   "name": "terra-divider",
   "main": "lib/Divider.js",
-  "version": "2.30.0",
+  "version": "2.31.0",
   "description": "The divider component is used to visually separate content on a layout.",
   "repository": {
     "type": "git",

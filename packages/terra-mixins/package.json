@@ -1,7 +1,7 @@
 {
   "name": "terra-mixins",
   "main": "lib/Mixins.scss",
-  "version": "1.25.0",
+  "version": "1.26.0",
   "description": "The terra-mixins component supplies global mixins for use throughout the Terra ecosystem.",
   "repository": {
     "type": "git",
