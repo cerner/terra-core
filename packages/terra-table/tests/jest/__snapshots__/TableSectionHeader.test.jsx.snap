@@ -12,7 +12,9 @@ exports[`should render a default table section header 1`] = `
     >
       <h2
         className="title"
-      />
+      >
+        test
+      </h2>
     </div>
   </td>
 </tr>
@@ -47,7 +49,9 @@ exports[`should render a table section header with isCollapsible 1`] = `
       >
         <h2
           className="title"
-        />
+        >
+          test
+        </h2>
       </div>
     </div>
   </td>
@@ -66,7 +70,9 @@ exports[`should render a table section header with isCollpased 1`] = `
     >
       <h2
         className="title"
-      />
+      >
+        test
+      </h2>
     </div>
   </td>
 </tr>
@@ -84,7 +90,9 @@ exports[`should render a table section header with level 1`] = `
     >
       <h3
         className="title"
-      />
+      >
+        test
+      </h3>
     </div>
   </td>
 </tr>
@@ -102,7 +110,9 @@ exports[`should render a table section header with metaData 1`] = `
     >
       <h2
         className="title"
-      />
+      >
+        test
+      </h2>
     </div>
   </td>
 </tr>
@@ -120,31 +130,15 @@ exports[`should render a table section header with onSelect 1`] = `
     >
       <h2
         className="title"
-      />
+      >
+        test
+      </h2>
     </div>
   </td>
 </tr>
 `;
 
 exports[`should render a table section header with refCallback 1`] = `
-<tr
-  className="section-header"
->
-  <td
-    colSpan={1}
-  >
-    <div
-      className="section-content"
-    >
-      <h2
-        className="title"
-      />
-    </div>
-  </td>
-</tr>
-`;
-
-exports[`should render a table section header with title 1`] = `
 <tr
   className="section-header"
 >

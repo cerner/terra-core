@@ -41,7 +41,7 @@ const propTypes = {
   /**
    * Title text to be placed within the subsection header.
    */
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -49,7 +49,6 @@ const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
   level: 3,
-  title: '',
 };
 
 const TableSubsection = ({
