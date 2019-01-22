@@ -40,7 +40,7 @@
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.0.0",
+    "terra-doc-template": "^1.23.0",
     "terra-icon": "^2.31.0"
   },
   "devDependencies": {

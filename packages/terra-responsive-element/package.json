@@ -28,7 +28,7 @@
   "dependencies": {
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-doc-template": "^2.0.0"
+    "terra-doc-template": "^1.23.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

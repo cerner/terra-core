@@ -32,7 +32,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.0.0",
+    "terra-doc-template": "^1.23.0",
     "terra-toggle": "^2.30.0"
   },
   "scripts": {

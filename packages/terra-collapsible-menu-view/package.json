@@ -29,13 +29,13 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-button": "^3.0.0",
-    "terra-button-group": "^3.0.0",
-    "terra-doc-template": "^2.0.0",
+    "terra-button": "^2.32.0",
+    "terra-button-group": "^2.32.0",
+    "terra-doc-template": "^1.23.0",
     "terra-form": "^2.10.0",
     "terra-icon": "^2.31.0",
-    "terra-list": "^3.0.0",
-    "terra-menu": "^4.0.0",
+    "terra-list": "^2.32.0",
+    "terra-menu": "^3.29.0",
     "terra-mixins": "^1.25.0"
   },
   "scripts": {

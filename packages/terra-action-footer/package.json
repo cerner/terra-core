@@ -28,9 +28,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.0.0",
-    "terra-doc-template": "^2.0.0",
-    "terra-hyperlink": "^2.0.0",
+    "terra-button": "^2.32.0",
+    "terra-doc-template": "^1.23.0",
+    "terra-hyperlink": "^1.19.0",
     "terra-spacer": "^2.32.0"
   },
   "scripts": {
