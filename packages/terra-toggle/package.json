@@ -29,7 +29,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-animate-height": "^2.0.1",
-    "terra-doc-template": "^1.23.0",
+    "terra-doc-template": "^2.1.0",
     "terra-icon": "^2.32.0"
   },
   "scripts": {

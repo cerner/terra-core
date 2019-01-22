@@ -30,7 +30,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-arrange": "^2.34.0",
-    "terra-doc-template": "^1.23.0",
+    "terra-doc-template": "^2.1.0",
     "terra-markdown": "^2.20.0"
   },
   "scripts": {

@@ -34,7 +34,7 @@
     "focus-trap-react": "^4.0.1",
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
-    "terra-doc-template": "^1.23.0"
+    "terra-doc-template": "^2.1.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
