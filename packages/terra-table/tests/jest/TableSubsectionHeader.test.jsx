@@ -9,7 +9,6 @@ it('should render a default table section header', () => {
   expect(section).toMatchSnapshot();
 });
 
-
 it('should render a table section header with isCollpased', () => {
   const section = shallow(
     <TableSubsectionHeader colSpan={1} title="test" isCollapsed />,
