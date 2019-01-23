@@ -196,7 +196,7 @@ class Button extends React.Component {
 
     const buttonLabelClasses = cx([
       'button-label',
-      { 'text-and-icon': icon && !isIconOnly },
+      { 'text-and-icon': icon && !isIconOnly && variant !== 'utility' },
       { 'icon-only': isIconOnly || variant === 'utility' },
       { 'text-only': !icon },
     ]);

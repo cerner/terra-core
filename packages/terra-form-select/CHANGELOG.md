@@ -4,16 +4,6 @@ ChangeLog
 Unreleased
 ----------
 
-5.3.0 - (January 23, 2019)
-------------------
-### Fixed
-* Increased terra-form-select default text color contrast for accessibility
-
-5.2.0 - (January 22, 2019)
-------------------
-### Changed
-* Minor dependency version bump
-
 5.1.0 - (January 22, 2019)
 ------------------
 ### Fixed

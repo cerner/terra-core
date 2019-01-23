@@ -12,13 +12,23 @@
 
     &.progressive {
       justify-content: space-between;
+
+      .nav-link.previous {
+        margin-left: var(--terra-paginator-progressive-nav-link-previous-margin-left, 0.14285rem);
+        margin-right: var(--terra-paginator-progressive-nav-link-previous-margin-right, 0.14285rem);
+      }
+
+      .nav-link.next {
+        margin-left: var(--terra-paginator-progressive-nav-link-next-margin-left, 0.14285rem);
+        margin-right: var(--terra-paginator-progressive-nav-link-next-margin-right, 0.14285rem);
+      }
     }
 
     .nav-link {
       background: var(--terra-paginator-nav-link-background);
       border: var(--terra-paginator-nav-link-border);
       border-radius: var(--terra-paginator-nav-link-border-radius, 3px);
-      color: var(--terra-paginator-nav-link-foreground-color, #0059a8);
+      color: var(--terra-paginator-nav-link-color, #0059a8);
       cursor: pointer;
       display: inline-block;
       line-height: var(--terra-paginator-nav-link-line-height, 1.43);
@@ -30,23 +40,23 @@
       user-select: none; // Keeps user from highlighting the paging link text.
 
       &:hover {
-        background: var(--terra-paginator-nav-link-background-hover);
-        color: var(--terra-paginator-nav-link-foreground-color-hover, #001f67);
-        text-decoration: var(--terra-paginator-nav-link-text-decoration-hover, underline);
+        background: var(--terra-paginator-nav-link-hover-background);
+        color: var(--terra-paginator-nav-link-hover-color, #001f67);
+        text-decoration: var(--terra-paginator-nav-link-hover-text-decoration, underline);
       }
 
       &:focus {
-        background: var(--terra-paginator-nav-link-background-focus);
-        border: var(--terra-paginator-nav-link-border-focus);
-        box-shadow: var(--terra-paginator-nav-link-box-shadow-focus, 0 0 0 2px rgba(76, 178, 233, 0.25), inset 0 0 0 1px #4cb2e9);
-        color: var(--terra-paginator-nav-link-foreground-color-focus);
+        background: var(--terra-paginator-nav-link-focus-background);
+        border: var(--terra-paginator-nav-link-focus-border);
+        box-shadow: var(--terra-paginator-nav-link-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25), inset 0 0 0 1px #4cb2e9);
+        color: var(--terra-paginator-nav-link-focus-color);
         outline: none;
       }
 
       &:active {
-        background: var(--terra-paginator-nav-link-background-active, rgba(0, 0, 0, 0.07));
-        color: var(--terra-paginator-nav-link-foreground-color-active, #001f67);
-        text-decoration: var(--terra-paginator-nav-link-text-decoration-active, underline);
+        background: var(--terra-paginator-nav-link-active-background, rgba(0, 0, 0, 0.07));
+        color: var(--terra-paginator-nav-link-active-color, #001f67);
+        text-decoration: var(--terra-paginator-nav-link-active-text-decoration, underline);
       }
     }
 
@@ -65,12 +75,12 @@
     }
 
     .is-disabled {
-      color: var(--terra-paginator-nav-link-foreground-color-disabled, rgba(28, 31, 33, 0.2));
+      color: var(--terra-paginator-nav-link-disabled-color, rgba(28, 31, 33, 0.2));
       cursor: default;
       pointer-events: none;
 
       &:focus {
-        box-shadow: var(--terra-paginator-nav-link-disabled-box-shadow-focus, none);
+        box-shadow: var(--terra-paginator-nav-link-disabled-focus-box-shadow, none);
         outline: none;
       }
     }
@@ -90,28 +100,28 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block; // IE 10
-    height: 1rem;
+    height: var(--terra-paginator-nav-link-icon-height, 1rem);
     position: relative;
     top: var(--terra-paginator-nav-link-icon-offset-top, 0.1785rem);
-    width: 1rem;
+    width: var(--terra-paginator-nav-link-icon-width, 1rem);
   }
 
   .previous > .icon {
-    background: var(--terra-paginator-nav-link-icon-previous, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#0059a8" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>'));
-    margin-right: 0.25rem;
+    background: var(--terra-paginator-nav-link-icon-previous-background, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#0059a8" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>'));
+    margin-right: var(--terra-paginator-nav-link-icon-previous-margin-right, 0.25rem);
   }
 
   .previous.is-disabled > .icon {
-    background: var(--terra-paginator-nav-link-icon-previous-disabled, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>'));
+    background: var(--terra-paginator-nav-link-icon-previous-disabled-background, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>'));
   }
 
   .next > .icon {
-    background: var(--terra-paginator-nav-link-icon-next, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#0059a8" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>'));
-    margin-left: 0.25rem;
+    background: var(--terra-paginator-nav-link-icon-next-background, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#0059a8" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>'));
+    margin-left: var(--terra-paginator-nav-link-icon-next-margin-left, 0.25rem);
   }
 
   .next.is-disabled > .icon {
-    background: var(--terra-paginator-nav-link-icon-next-disabled, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>'));
+    background: var(--terra-paginator-nav-link-icon-next-disabled-background, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(28, 31, 33, 0.2)" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>'));
   }
 
   .previous.icon-only,

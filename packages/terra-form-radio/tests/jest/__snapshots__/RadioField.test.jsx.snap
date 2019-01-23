@@ -36,10 +36,10 @@ exports[`should hide the legend when requested 1`] = `
       className="legend"
     >
       Hidden Legend legend
+      <span
+        className="error-icon-hidden"
+      />
     </div>
-    <span
-      className="error-icon-hidden"
-    />
   </legend>
 </fieldset>
 `;
@@ -60,10 +60,10 @@ exports[`should hide the required indicator when requested 1`] = `
       >
         *
       </span>
+      <span
+        className="error-icon-hidden"
+      />
     </div>
-    <span
-      className="error-icon-hidden"
-    />
   </legend>
 </fieldset>
 `;
@@ -79,10 +79,10 @@ exports[`should render a default radio field 1`] = `
       className="legend"
     >
       Default RadioField
+      <span
+        className="error-icon-hidden"
+      />
     </div>
-    <span
-      className="error-icon-hidden"
-    />
   </legend>
 </fieldset>
 `;
@@ -98,10 +98,10 @@ exports[`should render a help message 1`] = `
       className="legend"
     >
       Help RadioField
+      <span
+        className="error-icon-hidden"
+      />
     </div>
-    <span
-      className="error-icon-hidden"
-    />
   </legend>
   <div
     className="help-text"
@@ -151,10 +151,10 @@ exports[`should render an optional part on the label 1`] = `
       >
         (optional)
       </span>
+      <span
+        className="error-icon-hidden"
+      />
     </div>
-    <span
-      className="error-icon-hidden"
-    />
   </legend>
 </fieldset>
 `;
@@ -175,10 +175,10 @@ exports[`should render required radio field 1`] = `
         *
       </span>
       Required RadioField
+      <span
+        className="error-icon-hidden"
+      />
     </div>
-    <span
-      className="error-icon-hidden"
-    />
   </legend>
 </fieldset>
 `;
@@ -195,10 +195,10 @@ exports[`should render the legend with custom attributes properly 1`] = `
       className="legend"
     >
       Custom Legend RadioField
+      <span
+        className="error-icon-hidden"
+      />
     </div>
-    <span
-      className="error-icon-hidden"
-    />
   </legend>
 </fieldset>
 `;

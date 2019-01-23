@@ -138,7 +138,8 @@ Previous
             Last
           </a>
         </div>
-      </div>);
+      </div>
+    );
   }
 
   reducedProgressivePaginator() {
@@ -204,7 +205,8 @@ Previous
             Last
           </a>
         </div>
-      </div>);
+      </div>
+    );
   }
   /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
 

@@ -4,11 +4,17 @@ Changelog
 Unreleased
 ----------
 
+1.32.0 - (January 8, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.31.0 - (January 2, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 * Remove use of componentWillReceiveProps
+* Migrate theme test inside 'theme' directory
 
 1.30.1 - (November 20, 2018)
 ------------------

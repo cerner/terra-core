@@ -1,7 +1,7 @@
 {
   "name": "terra-form-textarea",
   "main": "lib/Textarea.js",
-  "version": "2.34.0",
+  "version": "3.1.0",
   "description": "Element for building out textareas in a form.",
   "repository": {
     "type": "git",
@@ -28,10 +28,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.23.0",
-    "terra-form-field": "^2.33.0",
-    "terra-icon": "^2.30.0",
-    "terra-markdown": "^2.18.0"
+    "terra-doc-template": "^2.1.0",
+    "terra-form-field": "^2.35.0",
+    "terra-icon": "^2.32.0",
+    "terra-markdown": "^2.20.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+2.41.0 - (January 22, 2019)
+------------------
+### Fixed
+* Added 'showShouldPicker' to prop-types validation
+
+2.40.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated examples to use ModalManager v4
+
 2.39.0 - (January 2, 2019)
 ------------------
 ### Added
@@ -11,6 +21,7 @@ Unreleased
 
 ### Changed
 * Removed usage of componentWillReceiveProps
+* Updated theme variables
 * Updated site examples to be more accessible.
 
 2.38.1 - (November 20, 2018)

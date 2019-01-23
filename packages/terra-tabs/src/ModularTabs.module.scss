@@ -18,9 +18,9 @@
     background-color: var(--terra-tabs-modular-background-color, #fff);
 
     .collapsed-tabs-container {
-      border-bottom-color: var(--terra-tabs-collapsed-modular-tab-bar-border-color, #dddedf);
+      border-bottom-color: var(--terra-tabs-collapsed-modular-tab-bar-border-bottom-color, #dddedf);
       border-bottom-style: solid;
-      border-bottom-width: var(--terra-tabs-collapsed-modular-tab-bar-border-width, 1px);
+      border-bottom-width: var(--terra-tabs-collapsed-modular-tab-bar-border-bottom-width, 1px);
 
       .tab-menu:focus {
         outline: none;
@@ -28,20 +28,20 @@
 
       .tab-menu.is-active {
         background-size: 0 0;
-        color: var(--terra-tabs-modular-color, #000);
+        color: var(--terra-tabs-modular-active-color, #000);
         font-weight: normal;
       }
 
       .tab-menu:hover {
         background-size: 0 0;
-        color: var(--terra-tabs-modular-color, #000);
+        color: var(--terra-tabs-modular-hover-color, #000);
       }
     }
 
     .collapsible-tabs-container {
-      border-bottom-color: var(--terra-tabs-modular-tab-bar-border-color, #dddedf);
+      border-bottom-color: var(--terra-tabs-modular-tab-bar-border-bottom-color, #dddedf);
       border-bottom-style: solid;
-      border-bottom-width: var(--terra-tabs-modular-tab-bar-border-width, 1px);
+      border-bottom-width: var(--terra-tabs-modular-tab-bar-border-bottom-width, 1px);
       padding: var(--terra-tabs-modular-tab-bar-padding, 0);
     }
 
@@ -77,7 +77,7 @@
       &.is-disabled,
       &.is-disabled:hover {
         background-size: 0 0;
-        color: var(--terra-tabs-modular-disabled-color, #c8cacb);
+        color: var(--terra-tabs-modular-disabled-hover-color, #c8cacb);
       }
     }
 
@@ -98,22 +98,22 @@
     .collapsible-tabs-container:focus .is-active,
     .tab-menu:focus.is-active {
       background-color: var(--terra-tabs-modular-active-focus-background-color, #fff);
-      background-image: var(--terra-tabs-modular-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
-      border-radius: var(--terra-tabs-modular-focus-border-radius, 0);
+      background-image: var(--terra-tabs-modular-active-focus-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+      border-radius: var(--terra-tabs-modular-active-focus-border-radius, 0);
       position: relative;
       z-index: 1;
 
       [dir=rtl] & {
-        box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+        box-shadow: var(--terra-tabs-active-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
       }
 
       [dir=ltr] & {
-        box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+        box-shadow: var(--terra-tabs-active-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
       }
     }
 
     .selection-bar {
-      background-color: var(--terra-tabs-modular-selection-bar-color, #fff);
+      background-color: var(--terra-tabs-modular-selection-bar-background-color, #fff);
       display: block;
       height: var(--terra-tabs-modular-selection-bar-height, 0);
       position: relative;

@@ -133,7 +133,8 @@ class Paginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(1)}
           >
             First
-          </a>)
+          </a>
+          )
         }
         <a
           aria-disabled={selectedPage === 1}
@@ -169,7 +170,8 @@ Previous
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
-          </a>)
+          </a>
+          )
         }
       </div>
     );
@@ -196,7 +198,8 @@ Previous
             onKeyDown={this.handleOnKeyDown(1)}
           >
             First
-          </a>)
+          </a>
+          )
         }
         <a
           aria-disabled={selectedPage === 1}
@@ -232,7 +235,8 @@ Previous
             onKeyDown={this.handleOnKeyDown(totalPages)}
           >
             Last
-          </a>)
+          </a>
+          )
         }
       </div>
     );

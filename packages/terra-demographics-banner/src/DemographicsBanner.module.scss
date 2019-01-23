@@ -1,14 +1,22 @@
 :local {
   .demographics-banner {
-    background: var(--terra-demographics-banner-background, #004c76);
-    color: var(--terra-demographics-banner-foreground, #fff);
+    background-clip: padding-box;
+    background-color: var(--terra-demographics-banner-background-color, #004c76);
+    background-image: var(--terra-demographics-banner-background-image);
+    box-shadow: var(--terra-demographics-banner-box-shadow);
+    color: var(--terra-demographics-banner-color, #fff);
     line-height: 1;
-    padding: 0.714em;
+    padding: var(--terra-demographics-banner-padding, 0.714em);
+  }
+
+  .profile-photo {
+    margin: var(--terra-demographics-banner-profile-photo-margin);
   }
 
   .value {
     display: inline-block;
-    margin-right: 0.357em;
+    margin-right: var(--terra-demographics-banner-value-margin-right, 0.357em);
+    margin-top: var(--terra-demographics-banner-value-margin-top);
 
     &:last-child {
       margin-right: 0;
@@ -37,6 +45,7 @@
 
   .person-details {
     flex: 1;
+    margin-top: var(--terra-demographics-banner-person-details-margin-top);
   }
 
   .preferred-first-name {
@@ -49,11 +58,13 @@
   }
 
   .deceased {
-    background: var(--terra-demographics-banner-background-deceased, #1c1f21);
-    color: var(--terra-demographics-banner-foreground-deceased, #fff);
+    background-clip: padding-box;
+    background-color: var(--terra-demographics-banner-deceased-background-color, #1c1f21);
+    background-image: var(--terra-demographics-banner-deceased-background-image);
+    color: var(--terra-demographics-banner-deceased-color, #fff);
 
     .profile-photo {
-      opacity: 0.7;
+      opacity: var(--terra-demographics-banner-deceased-profile-photo-opacity, 0.7);
     }
   }
 
@@ -67,24 +78,28 @@
 
   .content {
     flex-grow: 1;
-    margin: auto 0.714em;
+    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
   }
 
   .application-content {
     flex: 1;
     margin-right: auto;
+    margin-top: var(--terra-demographics-banner-application-content-margin-top);
   }
 
   .large-demographics-banner {
+    box-shadow: var(--terra-demographics-banner-large-box-shadow);
     display: flex;
     flex-direction: row;
+    padding: var(--terra-demographics-banner-large-padding, 0.714em);
 
     .application-content {
+      margin-top: 0;
       text-align: right;
     }
 
     .person-name {
-      font-size: 1.286rem;
+      font-size: var(--terra-demographics-banner-large-person-name-font-size, 1.286rem);
     }
 
     .identifiers {
