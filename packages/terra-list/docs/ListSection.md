@@ -1,6 +1,6 @@
 # List Section
 
-The list section component provides the ability to display section headers and collapse a section within a logical group. The list section will render as a flat list.
+The list section component creates a section header and layouts it out with the passed child list items. The section provides the ability to display and collapse a section within a logical group. The list section will render as a flat list.
 
 ## Usage
 

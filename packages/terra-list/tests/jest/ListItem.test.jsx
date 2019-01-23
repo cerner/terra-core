@@ -28,6 +28,14 @@ it('should render with hasChevron', () => {
 });
 
 it('should render with callback functions', () => {
-  const shallowComponent = shallow(<ListItem refCallback={jest.fn()} onSelect={jest.fn()} />);
+  const mockCallBack = jest.fn();
+
+  const shallowComponent = shallow(
+    <ListItem title="test" isSelectable onSelect={mockCallBack} refCallback={jest.fn()} />,
+  );
   expect(shallowComponent).toMatchSnapshot();
+  shallowComponent.find('li').simulate('click');
+  shallowComponent.find('li').simulate('keydown', { nativeEvent: { keyCode: 13 } });
+  shallowComponent.find('li').simulate('keydown', { nativeEvent: { keyCode: 32 } });
+  expect(mockCallBack.mock.calls.length).toEqual(3);
 });

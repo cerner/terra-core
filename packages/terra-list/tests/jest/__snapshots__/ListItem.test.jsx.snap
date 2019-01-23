@@ -2,7 +2,16 @@
 
 exports[`should render with callback functions 1`] = `
 <li
-  className="list-item"
+  aria-selected={false}
+  className="list-item is-selectable"
+  data-item-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="option"
+  tabIndex="0"
+  title="test"
 >
   <div
     className="item-fill"

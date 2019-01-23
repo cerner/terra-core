@@ -14,13 +14,33 @@ exports[`should render default 1`] = `
 
 exports[`should render with callback functions 1`] = `
 <li
-  className="subsection-header"
+  aria-expanded={true}
+  aria-level={2}
+  className="subsection-header is-collapsible"
+  data-item-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="heading"
+  tabIndex="0"
 >
-  <h2
-    className="title"
+  <div
+    className="start"
   >
-    test
-  </h2>
+    <span
+      className="accordion-icon is-open"
+    />
+  </div>
+  <div
+    className="fill"
+  >
+    <h2
+      className="title"
+    >
+      test
+    </h2>
+  </div>
 </li>
 `;
 

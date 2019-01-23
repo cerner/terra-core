@@ -1,6 +1,6 @@
 # List Subsection
 
-The list subsection component provides the ability to display subsection headers and collapse a subsection within a logical group. The list subsection will render as a flat list.
+The list subsection component creates a subsection header and layouts it out with the passed child list items. The subsection provides the ability to display and collapse a subsection within a logical group. The list subsection will render as a flat list.
 
 ## Usage
 
