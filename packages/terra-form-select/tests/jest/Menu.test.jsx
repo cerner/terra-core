@@ -4,7 +4,7 @@ import Option from '../../src/_Option';
 import intlContexts from './intl-context-setup';
 
 describe('Menu', () => {
-  xit('should render a default Menu', () => {
+  it('should render a default Menu', () => {
     const liveRegion = { current: document.createElement('div') };
 
     const menu = <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} variant="default" value="value" />;
@@ -12,7 +12,7 @@ describe('Menu', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  xit('should render a Menu with an add option and set the screen reader region to blank', () => {
+  it('should render a Menu with an add option and set the screen reader region to blank', () => {
     const liveRegion = { current: document.createElement('div') };
 
     jest.useFakeTimers();
