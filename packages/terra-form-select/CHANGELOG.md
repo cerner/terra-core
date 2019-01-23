@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Create dropdown that announces no search results to screen reader
 
+5.2.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.1.0 - (January 22, 2019)
 ------------------
 ### Fixed

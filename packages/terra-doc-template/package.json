@@ -1,7 +1,7 @@
 {
   "name": "terra-doc-template",
   "main": "lib/DocTemplate.js",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Provides an adjustable template for documentation pages.",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-base": "^3.12.0"
+    "terra-base": "^4.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
