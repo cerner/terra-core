@@ -22,3 +22,23 @@ it('should render a selected table row', () => {
   const tableRow = shallow(<TableRow isSelectable isSelected />);
   expect(tableRow).toMatchSnapshot();
 });
+
+it('should render a table row with onSelect', () => {
+  const mockCallBack = jest.fn();
+
+  const section = shallow(
+    <TableRow isSelectable onSelect={mockCallBack} />,
+  );
+  expect(section).toMatchSnapshot();
+  section.find('tr').simulate('click');
+  section.find('tr').simulate('keydown', { nativeEvent: { keyCode: 13 } });
+  section.find('tr').simulate('keydown', { nativeEvent: { keyCode: 32 } });
+  expect(mockCallBack.mock.calls.length).toEqual(3);
+});
+
+it('should render a table row with refCallback', () => {
+  const section = shallow(
+    <TableRow refCallback={jest.fn()} />,
+  );
+  expect(section).toMatchSnapshot();
+});

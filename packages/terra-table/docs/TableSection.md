@@ -1,6 +1,6 @@
 # Terra Table Section
 
-The Terra Table Section is a sub component that groups child rows beneath a section header. The section header has the ability to toggle the display of its child rows. Each section handle its collapsible and collapsed state.
+The Terra Table Section is a sub component that creates a section header based on the given props and groups the child rows beneath it. The section header has the ability to toggle the display of its child rows given the isCollapsible and isCollapsed props. For a section to be collapsed both isCollapsible and isCollapsed. Each section handles its collapsible and collapsed state.
 
 ## Getting Started
 

@@ -38,15 +38,21 @@ it('should render a table section header with metaData', () => {
 });
 
 it('should render a table section header with onSelect', () => {
+  const mockCallBack = jest.fn();
+
   const section = shallow(
-    <TableSectionHeader colSpan={1} title="test" onSelect={jest.fn()} />,
+    <TableSectionHeader colSpan={1} title="test" isCollapsible onSelect={mockCallBack} />,
   );
   expect(section).toMatchSnapshot();
+  section.find('tr').simulate('click');
+  section.find('tr').simulate('keydown', { nativeEvent: { keyCode: 13 } });
+  section.find('tr').simulate('keydown', { nativeEvent: { keyCode: 32 } });
+  expect(mockCallBack.mock.calls.length).toEqual(3);
 });
 
 it('should render a table section header with refCallback', () => {
   const section = shallow(
-    <TableSectionHeader colSpan={1} title="test" onSelect={jest.fn()} />,
+    <TableSectionHeader colSpan={1} title="test" refCallback={jest.fn()} />,
   );
   expect(section).toMatchSnapshot();
 });

@@ -120,7 +120,16 @@ exports[`should render a table section header with metaData 1`] = `
 
 exports[`should render a table section header with onSelect 1`] = `
 <tr
-  className="section-header"
+  aria-expanded={true}
+  aria-level={1}
+  className="section-header is-collapsible"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="heading"
+  tabIndex="0"
 >
   <td
     colSpan={1}
@@ -128,11 +137,22 @@ exports[`should render a table section header with onSelect 1`] = `
     <div
       className="section-content"
     >
-      <h2
-        className="title"
+      <div
+        className="start"
       >
-        test
-      </h2>
+        <span
+          className="accordion-icon is-open"
+        />
+      </div>
+      <div
+        className="fill"
+      >
+        <h2
+          className="title"
+        >
+          test
+        </h2>
+      </div>
     </div>
   </td>
 </tr>

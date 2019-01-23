@@ -5,9 +5,9 @@ import Table, { SectionHeader } from 'terra-table/lib/index';
 
 const TableRowExample = () => (
   <Table>
-    <SectionHeader title="Default SectionHeader" key="default" />
-    <SectionHeader title="Collapsed SectionHeader" isCollapsed isCollapsible key="collapsed" />
-    <SectionHeader title="Collapsible SectionHeader" isCollapsible key="collapsable" />
+    <SectionHeader colSpan={1} title="Default SectionHeader" key="default" />
+    <SectionHeader colSpan={1} title="Collapsed SectionHeader" isCollapsed isCollapsible key="collapsed" />
+    <SectionHeader colSpan={1} title="Collapsible SectionHeader" isCollapsible key="collapsable" />
   </Table>
 );
 

@@ -35,3 +35,22 @@ exports[`should render a table row with a cell 1`] = `
   <TableCell />
 </tr>
 `;
+
+exports[`should render a table row with onSelect 1`] = `
+<tr
+  aria-selected={false}
+  className="is-selectable row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  tabIndex="0"
+/>
+`;
+
+exports[`should render a table row with refCallback 1`] = `
+<tr
+  className="row"
+/>
+`;

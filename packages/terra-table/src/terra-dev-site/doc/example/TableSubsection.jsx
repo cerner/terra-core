@@ -6,7 +6,7 @@ import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const TableRowExample = () => (
   <Table>
-    <Subsection title="Subsection Title">
+    <Subsection colSpan={1} title="Subsection Title">
       <Row>
         <Cell>
           <Placeholder style={{ height: '50px' }} />
