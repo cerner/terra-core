@@ -4,7 +4,7 @@ import Table, { Row, Cell, Subsection } from 'terra-table/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const TableRowExample = () => (
+const TableSubsectionExample = () => (
   <Table>
     <Subsection colSpan={1} title="Subsection Title">
       <Row>
@@ -16,4 +16,4 @@ const TableRowExample = () => (
   </Table>
 );
 
-export default TableRowExample;
+export default TableSubsectionExample;

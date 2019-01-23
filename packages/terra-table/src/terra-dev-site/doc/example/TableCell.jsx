@@ -4,7 +4,7 @@ import Table, { Row, Cell } from 'terra-table/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const DefaultTableCell = () => (
+const TableCellExample = () => (
   <Table>
     <Row>
       <Cell>
@@ -14,4 +14,4 @@ const DefaultTableCell = () => (
   </Table>
 );
 
-export default DefaultTableCell;
+export default TableCellExample;

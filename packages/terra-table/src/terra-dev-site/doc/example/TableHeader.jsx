@@ -3,7 +3,7 @@ import React from 'react';
 import Table, { Header, HeaderCell } from 'terra-table/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const TableRowExample = () => (
+const TableHeaderExample = () => (
   <Table header={(
     <Header>
       <HeaderCell style={{ height: '50px' }} />
@@ -12,4 +12,4 @@ const TableRowExample = () => (
   />
 );
 
-export default TableRowExample;
+export default TableHeaderExample;

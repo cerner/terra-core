@@ -3,7 +3,7 @@ import React from 'react';
 import Table, { SectionHeader } from 'terra-table/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const TableRowExample = () => (
+const TableSectionHeaderExample = () => (
   <Table>
     <SectionHeader colSpan={1} title="Default SectionHeader" key="default" />
     <SectionHeader colSpan={1} title="Collapsed SectionHeader" isCollapsed isCollapsible key="collapsed" />
@@ -11,4 +11,4 @@ const TableRowExample = () => (
   </Table>
 );
 
-export default TableRowExample;
+export default TableSectionHeaderExample;

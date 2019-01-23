@@ -4,7 +4,7 @@ import Table, { Header, HeaderCell } from 'terra-table/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const TableRowExample = () => (
+const TableHeaderCellExample = () => (
   <Table header={(
     <Header>
       <HeaderCell>
@@ -15,4 +15,4 @@ const TableRowExample = () => (
   />
 );
 
-export default TableRowExample;
+export default TableHeaderCellExample;
