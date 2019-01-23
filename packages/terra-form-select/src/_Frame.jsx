@@ -110,6 +110,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
+      activedescendant: undefined,
     };
 
     this.setInput = this.setInput.bind(this);
@@ -143,9 +144,16 @@ class Frame extends React.Component {
   }
 
   getDisplay() {
-    const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, variant,
+      hasSearchChanged,
+      searchValue,
+    } = this.state;
+
+    const {
+      disabled,
+      display,
+      placeholder,
+      variant,
     } = this.props;
 
     const inputAttrs = {
@@ -154,6 +162,7 @@ class Frame extends React.Component {
       ref: this.setInput,
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
+      type: 'text',
       'aria-label': 'search',
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
@@ -396,7 +405,7 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
-        <div role="textbox" className={cx('display')} onMouseDown={this.openDropdown}>
+        <div className={cx('display')} role="textbox" onMouseDown={this.openDropdown}>
           {this.getDisplay()}
         </div>
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
@@ -424,6 +433,7 @@ class Frame extends React.Component {
                  onSelect: this.handleSelect,
                  onRequestClose: this.closeDropdown,
                  searchValue: this.state.searchValue,
+                 searchInput: this.input,
                })}
           </Dropdown>
           )

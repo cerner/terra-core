@@ -52,6 +52,10 @@ const propTypes = {
     Variants.SEARCH,
     Variants.TAG,
   ]).isRequired,
+  /**
+   * @private Input that was used to query the dropdown
+   */
+  searchInput: PropTypes.instanceOf(Element),
 };
 
 const defaultProps = {
@@ -61,6 +65,7 @@ const defaultProps = {
   optionFilter: undefined,
   searchValue: undefined,
   value: undefined,
+  searchInput: undefined,
 };
 
 const contextTypes = {
@@ -116,14 +121,22 @@ class Menu extends React.Component {
     document.addEventListener('keydown', this.handleKeyDown);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     this.scrollIntoView();
+
+    if (prevState.active !== this.state.active && this.props.searchInput) {
+      this.props.searchInput.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+    }
   }
 
   componentWillUnmount() {
     this.clearSearch();
     this.clearScrollTimeout();
     document.removeEventListener('keydown', this.handleKeyDown);
+
+    if (this.props.searchInput) {
+      this.props.searchInput.removeAttribute('aria-activedescendant');
+    }
   }
 
   /**
@@ -175,7 +188,9 @@ class Menu extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
     const { active, children } = this.state;
-    const { onSelect, value, variant } = this.props;
+    const {
+      onSelect, onDeselect, value, variant,
+    } = this.props;
 
     if (keyCode === KeyCodes.UP_ARROW) {
       this.clearScrollTimeout();
@@ -189,6 +204,10 @@ class Menu extends React.Component {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
+    } else if (keyCode === KeyCodes.ENTER && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
+      event.preventDefault();
+      const option = Util.findByValue(children, active);
+      onDeselect(option.props.value, option);
     } else if (keyCode === KeyCodes.HOME) {
       event.preventDefault();
       this.setState({ active: Util.findFirst(children) });

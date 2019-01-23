@@ -68,17 +68,23 @@ const Option = ({
   ]);
 
   return (
+    // Voiceover is having issues in a multiselect dropdown where once it reads the first
+    // select option that has aria-selected, then it is unable to read any other Options
+    // in the dropdown. It will just repeat the last selected element for any new menu
+    // items selected
+    /* eslint-disable jsx-a11y/role-has-required-aria-props */
     <li
       {...customProps}
       role="option"
       disabled={disabled}
       className={optionClassNames}
-      aria-selected={isSelected}
+      aria-checked={isSelected}
       aria-disabled={disabled}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
       <span className={cx('display')}>{display}</span>
     </li>
+    /* eslint-enable jsx-a11y/role-has-required-aria-props */
   );
 };
 
