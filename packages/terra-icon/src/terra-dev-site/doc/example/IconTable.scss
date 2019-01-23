@@ -1,0 +1,33 @@
+.icon-table {
+  background-color: #eee;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: 1px solid #c8cacb;
+  max-width: 100%;
+  width: 100%;
+
+  caption {
+    padding-bottom: 0.5em;
+  }
+  
+  thead tr {
+    background-color: #dedfe0;
+    padding: 7px 10px;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 7px 10px;
+  }
+
+  tr {
+    border-bottom: 1px solid #c8cacb;
+    border-left: 1px solid #c8cacb;
+    border-right: 1px solid #c8cacb;
+  }
+
+  code {
+    font-weight: bold;
+  }
+}
