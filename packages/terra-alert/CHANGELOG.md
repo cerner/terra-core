@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Fixed
-* Fixed console error
+* Fixed console error by changing children wrapper to be div instead of p tag given children accepts type node
 * Fixed broken "More Information" link 
 
 3.2.0 - (January 22, 2019)
