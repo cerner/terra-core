@@ -1,6 +1,6 @@
 # Terra Table SectionHeader
 
-The Terra Section Header is built upon a table row and can be placed similarly within a table, provided the number of columns are provided to the SectionHeader.
+The Terra Section Header is built upon a table row and can be placed similarly within a table, provided the number of columns are provided to the SectionHeader. The section header should only be consumed directly when the header is static, as the actual row collapse is handled by the section.
 
 ## Getting Started
 

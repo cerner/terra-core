@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Removed
-* Dependecy on terra-table
+* Dependency on terra-table
 
 3.0.0 - (January 22, 2019)
 ------------------

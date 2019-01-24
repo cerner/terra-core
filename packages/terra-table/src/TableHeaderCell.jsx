@@ -28,7 +28,7 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Whether or not row is selectable
+   * Whether or not header cell should appear as a selectable element..
    */
   isSelectable: PropTypes.bool,
   /**

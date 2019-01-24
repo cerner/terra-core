@@ -1,6 +1,6 @@
 # Terra Table Cell
 
-The Terra Table Cell is a sub component that when used in conjuction with a table row can horizontally align child content.
+The Terra Table Cell is a sub component to be used inside a table row.
 
 ## Getting Started
 

@@ -34,7 +34,7 @@ A single select table normally doesn't allow deselection, so we'll be using it i
     }
   }
 ```
-Settting state will trigger another render. So in the render method we need generate our table rows with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
+Setting state will trigger another render. So in the render method we need generate our table rows with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
 [React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
 ```jsx
   createTableRow(rowData) {

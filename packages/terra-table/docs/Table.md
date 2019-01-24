@@ -1,6 +1,6 @@
 # Terra Table
 
-The Terra Table is a structural component to arrange content within a table.
+The Terra Table is a structural component used to create standard html tables.
 
 ## Getting Started
 

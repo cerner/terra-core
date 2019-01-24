@@ -1,6 +1,6 @@
 # Terra Table Subsection Header
 
-The Terra Subsection Header is built upon a table row and can be placed similarly within a table, provided the number of columns are provided to the SubsectionHeader.
+The Terra Subsection Header is built upon a table row and can be placed similarly within a table, provided the number of columns are provided to the SubsectionHeader. The subsection header should only be consumed directly when the header is static, as the actual row collapse is handled by the subsection.
 
 ## Getting Started
 
