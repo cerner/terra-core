@@ -3,7 +3,7 @@
 In previous versions of the terra-table a single select style table could be created as either a controlled version of SelectableTableRows or uncontrolled version of SingleSelectableRows.  These implementations suffered from inflexibility and performance concerns. Going forward terra-table is more granular, though this puts more responsibility on the consumer to properly update their table rows with the appropriate state. The following is a guide to addressing those concerns in your implementation.
 
 ## State Management
-The state of selection needs to be managed for the table in a HOC. In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
+The state of selection needs to be managed for the table in a High Order Component (HOC). In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
 
  First defaulting our state to a null value in the constructor. 
 ```jsx
