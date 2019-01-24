@@ -3,9 +3,9 @@
 In previous versions of the terra-list a multi select style list could be created as either a controlled version of SelectableList or uncontrolled version of MultiSelectList.  These implementations suffered from inflexibility and performance concerns. Going foward terra-list is more granular, though this puts more reponsibility on the consumer to properly update their list items with the appropriate state. The following is a guide to addressing those concerns in your implementation.
 
 ## State Management
-The state of selection needs to be managed for the list in a HOC. In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
+The state of selection needs to be managed for the list in a High Order Component (HOC). In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
 
- First defaulting our state to an empty array in the constructor. 
+First defaulting our state to an empty array in the constructor. 
 ```jsx
   constructor(props) {
     super(props);

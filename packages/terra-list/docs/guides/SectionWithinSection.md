@@ -5,7 +5,7 @@ With the inclusion of sections in the list, there are two recommended patterns f
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.
 
- First defaulting our state to an empty array in the constructor. 
+First defaulting our state to an empty array in the constructor. 
 ```jsx
   constructor(props) {
     super(props);
