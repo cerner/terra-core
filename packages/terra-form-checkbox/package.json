@@ -1,7 +1,7 @@
 {
   "name": "terra-form-checkbox",
   "main": "lib/Checkbox.js",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "description": "The Terra Form Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.",
   "repository": {
     "type": "git",
@@ -23,13 +23,13 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-base": "^3.12.0"
+    "terra-base": "^4.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.0.0",
-    "terra-mixins": "^1.25.0"
+    "terra-doc-template": "^2.2.0",
+    "terra-mixins": "^1.26.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

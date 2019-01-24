@@ -1,7 +1,7 @@
 {
   "name": "terra-text",
   "main": "lib/Text.js",
-  "version": "2.31.0",
+  "version": "3.0.0",
   "description": "The font size, font weight, font family, and font color in terra components are set to defaults in terra-base which is then inherited into all components. Components can override these base styles as needed in their specific component CSS. In some cases, you may need text that differs from the base font styles, though, the text doesn't belong to a specific component. In these cases, the text component may be helpful. Using terra-text, you can create text that differs from the base text styles by changing the font size, font weight, and color. However, there are some drawbacks to be aware of with this component. The styles set with this component are not themable and will be static. If this is a concern, we recommend building a custom component that handles your font styles that need to differ from the base font styles so you can control the themability of them.",
   "repository": {
     "type": "git",
@@ -24,14 +24,14 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-base": "^3.12.0"
+    "terra-base": "^4.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^2.33.0",
-    "terra-doc-template": "^2.0.0",
-    "terra-markdown": "^2.19.0"
+    "terra-arrange": "^3.0.0",
+    "terra-doc-template": "^2.2.0",
+    "terra-markdown": "^2.20.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
