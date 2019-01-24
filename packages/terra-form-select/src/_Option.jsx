@@ -6,12 +6,6 @@ import styles from './_Option.module.scss';
 
 const cx = classNames.bind(styles);
 
-/* Disabling validation for controlled props. These props will always be overwritten. */
-/* eslint react/prop-types: [2, { ignore: [isActive, isSelected, isCheckable, isAddOption] }] */
-/* isActive {boolean} - True if the component is active. */
-/* isAddOption {boolean} - True if the option is a new custom text entry. */
-/* isCheckable {boolean} - True if the component is checkable. */
-/* isSelected {boolean} - True if the component is selected. */
 const propTypes = {
   /**
    * Whether the option is disabled.
@@ -22,7 +16,27 @@ const propTypes = {
    */
   display: PropTypes.string,
   /**
-   * The value of the option.
+   * @private
+   * Whether the option is active.
+   */
+  isActive: PropTypes.bool,
+  /**
+   * @private
+   * Whether the option is a custom text entry.
+   */
+  isAddOption: PropTypes.bool,
+  /**
+   * @private
+   * Whether the option is checkable.
+   */
+  isCheckable: PropTypes.bool,
+  /**
+   * @private
+   * Whether the option is selected.
+   */
+  isSelected: PropTypes.bool,
+  /**
+   * The value of the option. The value must be unique.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };

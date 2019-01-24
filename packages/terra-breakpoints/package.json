@@ -1,7 +1,7 @@
 {
   "name": "terra-breakpoints",
   "main": "lib/index.js",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Contains components and utilities related to Terra's supported responsive breakpoints",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.0.0"
+    "terra-doc-template": "^2.2.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

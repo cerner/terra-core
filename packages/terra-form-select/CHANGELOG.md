@@ -3,8 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+
 ### Fixed
+* Increased terra-form-select default text color contrast for accessibility
+
+5.2.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.1.0 - (January 22, 2019)
+------------------
+### Fixed
+* Fixed Dropdown closing issue on Hold and Scroll in IE
 * Updated Frame to remove isAbove styling when selecting item in single select list
+
+### Changed
+* Updated Option prop documentation
 
 5.0.0 - (January 8, 2019)
 ------------------

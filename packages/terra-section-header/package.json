@@ -1,7 +1,7 @@
 {
   "name": "terra-section-header",
   "main": "lib/SectionHeader.js",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "description": "Section Header component that contains text and can be optionally interacted with.",
   "repository": {
     "type": "git",
@@ -23,16 +23,16 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-base": "^3.12.0"
+    "terra-base": "^4.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-arrange": "^2.33.0",
-    "terra-doc-template": "^2.0.0",
-    "terra-mixins": "^1.25.0"
+    "terra-arrange": "^3.0.0",
+    "terra-doc-template": "^2.2.0",
+    "terra-mixins": "^1.26.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
