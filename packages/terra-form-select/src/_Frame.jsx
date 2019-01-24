@@ -208,7 +208,7 @@ class Frame extends React.Component {
       this.input.focus();
     }
 
-    this.setState({ isOpen: true, isFocused: true, isPositioned: false });
+    this.setState({ isOpen: true, isPositioned: false });
   }
 
   /**
@@ -228,6 +228,11 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
+    // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
+    if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
+      return;
+    }
+
     this.closeDropdown();
 
     if (this.props.onBlur) {
@@ -243,12 +248,12 @@ class Frame extends React.Component {
       return;
     }
 
-    if (!this.state.isFocused) {
-      this.setState({ isFocused: true });
+    if (this.props.onFocus && !this.state.isFocused) {
+      this.props.onFocus(event);
     }
 
-    if (this.props.onFocus) {
-      this.props.onFocus(event);
+    if (!this.state.isFocused) {
+      this.setState({ isFocused: true });
     }
   }
 
