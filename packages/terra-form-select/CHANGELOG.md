@@ -3,9 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* New CSS custom property: `--terra-form-select-disabled-placeholder-color`
+* New CSS custom property: `--terra-form-select-disabled-placeholder-font-style`
 
 ### Fixed
 * Increased terra-form-select default text color contrast for accessibility
+* Fixed issue preventing the input from inheriting the base font family
 
 5.2.0 - (January 22, 2019)
 ------------------
