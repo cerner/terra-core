@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed issue preventing single item views from collapsing
+
 ### Changed
 * Update snapshots for list dependency.
 
