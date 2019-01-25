@@ -35,7 +35,7 @@
     "react-lifecycles-compat": "^3.0.2",
     "terra-doc-template": "^2.2.0",
     "terra-form-field": "^3.0.0",
-    "terra-hookshot": "^4.0.0",
+    "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.26.0"
   },
   "scripts": {
