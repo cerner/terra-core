@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed issue preventing single item views from collapsing
 
 4.0.0 - (January 22, 2019)
 ------------------
