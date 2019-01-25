@@ -1,7 +1,7 @@
 {
   "name": "terra-profile-image",
   "main": "lib/ProfileImage.js",
-  "version": "2.32.0",
+  "version": "3.0.0",
   "description": "The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image.",
   "repository": {
     "type": "git",
@@ -34,13 +34,13 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-base": "^3.12.0"
+    "terra-base": "^4.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.0.0",
-    "terra-image": "^2.31.0",
-    "terra-mixins": "^1.25.0"
+    "terra-doc-template": "^2.2.0",
+    "terra-image": "^3.0.0",
+    "terra-mixins": "^1.26.0"
   }
 }

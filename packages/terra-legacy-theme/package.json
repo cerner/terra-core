@@ -1,7 +1,7 @@
 {
   "name": "terra-legacy-theme",
   "main": "lib/index.js",
-  "version": "2.19.0",
+  "version": "2.20.0",
   "description": "terra-legacy-theme",
   "repository": {
     "type": "git",
@@ -35,6 +35,6 @@
     "react-dom": "^16.4.2"
   },
   "dependencies": {
-    "terra-mixins": "^1.25.0"
+    "terra-mixins": "^1.26.0"
   }
 }

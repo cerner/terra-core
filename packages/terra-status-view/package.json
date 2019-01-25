@@ -1,7 +1,7 @@
 {
   "name": "terra-status-view",
   "main": "lib/StatusView.js",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "description": "The status view component provides an icon, title, message, and buttons inside a view.",
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-base": "^3.12.0"
+    "terra-base": "^4.0.0"
   },
   "devDependencies": {
     "react-intl": "^2.3.0"
@@ -43,10 +43,10 @@
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.0.0",
-    "terra-divider": "^2.30.0",
-    "terra-doc-template": "^2.0.0",
-    "terra-icon": "^2.31.0",
-    "terra-mixins": "^1.25.0"
+    "terra-button": "^3.2.0",
+    "terra-divider": "^3.0.0",
+    "terra-doc-template": "^2.2.0",
+    "terra-icon": "^3.0.0",
+    "terra-mixins": "^1.26.0"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "terra-tabs",
   "main": "lib/Tabs.js",
-  "version": "4.0.0",
+  "version": "4.2.0",
   "description": "Tabs are containers used to organize content. They allow for quick switching between groups of contextually related content. Content is divided into different containers and each container is viewable one at a time. The user can switch between containers by selecting the corresponding tab control. Tabs are meant for organizing content that doesn’t need to be compared or accessed simultaneously or if the user needs quick access through a group of contextually related content. Tabs are not intended for navigation.",
   "repository": {
     "type": "git",
@@ -26,17 +26,17 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-base": "^3.12.0"
+    "terra-base": "^4.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-content-container": "^2.32.0",
-    "terra-doc-template": "^2.0.0",
-    "terra-icon": "^2.31.0",
-    "terra-menu": "^4.0.0",
-    "terra-responsive-element": "^3.19.0"
+    "terra-content-container": "^3.0.0",
+    "terra-doc-template": "^2.2.0",
+    "terra-icon": "^3.0.0",
+    "terra-menu": "^4.2.0",
+    "terra-responsive-element": "^4.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

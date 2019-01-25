@@ -1,7 +1,7 @@
 {
   "name": "terra-dialog",
   "main": "lib/Dialog.js",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "description": "Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user.",
   "repository": {
     "type": "git",
@@ -23,16 +23,16 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "terra-base": "^3.12.0"
+    "terra-base": "^4.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.0.0",
-    "terra-content-container": "^2.32.0",
-    "terra-doc-template": "^2.0.0",
-    "terra-icon": "^2.31.0",
-    "terra-mixins": "^1.25.0"
+    "terra-button": "^3.2.0",
+    "terra-content-container": "^3.0.0",
+    "terra-doc-template": "^2.2.0",
+    "terra-icon": "^3.0.0",
+    "terra-mixins": "^1.26.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
