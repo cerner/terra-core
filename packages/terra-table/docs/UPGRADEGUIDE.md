@@ -17,7 +17,6 @@
 | --terra-table-cell-min-width-medium | --terra-table-cell-medium-min-width |
 | --terra-table-cell-min-width-large | --terra-table-cell-large-min-width |
 | --terra-table-cell-min-width-huge | --terra-table-cell-huge-min-width |
-| --terra-table-row-selected-border-color | --terra-table-row-selected-border-top-color |
 
 #### Added
 * --terra-table-header-cell-border-left
@@ -30,6 +29,7 @@
 * --terra-table-header-cell-padding-left
 * --terra-table-header-cell-padding-right
 * --terra-table-header-cell-padding-top
+* --terra-table-row-selected-border-top-color
 * --terra-table-row-striped-focus-background-color
 * --terra-table-row-striped-selected-focus-background-color
 * --terra-table-row-focus-background-color

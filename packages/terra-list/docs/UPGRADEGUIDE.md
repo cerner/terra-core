@@ -10,7 +10,6 @@
 | --terra-list-chevron-color | --terra-list-item-chevron-color |
 | --terra-list-item-selected-divider-color | --terra-list-item-selected-divider-border-color |
 | --terra-list-item-selected-divider-color | --terra-list-item-selected-divider-border-top-color |
-| --terra-list-item-selected-hover-background-color | --terra-list-item-selected-focus-background-color |
 
 #### Removed
 * --terra-list-divider-border
@@ -25,3 +24,4 @@
 * --terra-list-item-chevron-height
 * --terra-list-item-chevron-width
 * --terra-list-item-selected-chevron-color
+* --terra-list-item-selected-focus-background-color

@@ -1,4 +1,3 @@
-# Terra Menu Upgrade Guide
 
 ## Changes from version 3 to version 4
 
@@ -7,7 +6,6 @@
 #### Renamed
 | Previous | New |
 |-|-|
-| --terra-menu-submenu-background-color | --terra-menu-submenu-arrow-after-border-top-color |
 | --terra-menu-divider-color | --terra-menu-divider-border-color |
 | --terra-menu-divider-shadow-color | --terra-menu-divider-after-border-color |
 | --terra-menu-submenu-divider-shadow-color | --terra-menu-submenu-divider-after-border-color |
@@ -16,6 +14,7 @@
 * --terra-menu-divider-margin-top
 * --terra-menu-divider-after-border-width
 * --terra-menu-divider-after-margin-bottom
+* --terra-menu-submenu-background-color
 * --terra-menu-submenu-divider-after-border-width
 * --terra-menu-submenu-divider-after-margin-bottom
 * --terra-menu-submenu-header-height
