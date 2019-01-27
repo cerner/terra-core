@@ -12,3 +12,10 @@ it('should render table header with a header cell', () => {
   const tableHeader = shallow(<TableHeader><TableHeaderCell /></TableHeader>);
   expect(tableHeader).toMatchSnapshot();
 });
+
+it('should render a table header with refCallback', () => {
+  const tableHeader = shallow(
+    <TableHeader refCallback={jest.fn()} />,
+  );
+  expect(tableHeader).toMatchSnapshot();
+});

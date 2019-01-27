@@ -56,7 +56,7 @@ it('should render a table section with onSelect', () => {
 
 it('should render a table section with refCallback', () => {
   const section = shallow(
-    <TableSection colSpan={1} title="test" onSelect={jest.fn()} />,
+    <TableSection colSpan={1} title="test" refCallback={jest.fn()} />,
   );
   expect(section).toMatchSnapshot();
 });

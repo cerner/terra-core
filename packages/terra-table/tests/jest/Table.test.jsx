@@ -22,3 +22,10 @@ it('should render a table without padding', () => {
   );
   expect(table).toMatchSnapshot();
 });
+
+it('should render a table with refCallback', () => {
+  const table = shallow(
+    <Table refCallback={jest.fn()} />,
+  );
+  expect(table).toMatchSnapshot();
+});

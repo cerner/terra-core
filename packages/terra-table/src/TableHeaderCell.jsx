@@ -46,6 +46,10 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
+   * Function callback passthrough for the ref of the th.
+   */
+  refCallback: PropTypes.func,
+  /**
    * Whether or not data in table is sorted (asc, desc)
    */
   sort: PropTypes.oneOf(['asc', 'desc']),
@@ -65,6 +69,7 @@ const TableHeaderCell = ({
   onClick,
   onKeyDown,
   onSelect,
+  refCallback,
   sort,
   ...customProps
 }) => {
@@ -90,7 +95,7 @@ const TableHeaderCell = ({
   }
 
   return (
-    <th {...customProps} {...attrSpread} data-terra-table-header-cell className={contentClassName}>
+    <th {...customProps} {...attrSpread} data-terra-table-header-cell className={contentClassName} ref={refCallback}>
       {children}
       {sortIndicator}
     </th>

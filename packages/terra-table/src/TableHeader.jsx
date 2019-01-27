@@ -11,6 +11,10 @@ const propTypes = {
    * The children passed to the component
    */
   children: PropTypes.node,
+  /**
+   * Function callback passthrough for the ref of the thead.
+   */
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -19,6 +23,7 @@ const defaultProps = {
 
 const TableHeader = ({
   children,
+  refCallback,
   ...customProps
 }) => {
   const contentClassName = cx([
@@ -27,7 +32,7 @@ const TableHeader = ({
   ]);
 
   return (
-    <thead {...customProps} className={contentClassName}>
+    <thead {...customProps} className={contentClassName} ref={refCallback}>
       <tr>
         {children}
       </tr>

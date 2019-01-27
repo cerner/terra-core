@@ -8,6 +8,14 @@ exports[`should render a default table header 1`] = `
 </thead>
 `;
 
+exports[`should render a table header with refCallback 1`] = `
+<thead
+  className="header"
+>
+  <tr />
+</thead>
+`;
+
 exports[`should render table header with a header cell 1`] = `
 <thead
   className="header"

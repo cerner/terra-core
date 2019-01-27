@@ -11,10 +11,15 @@ const propTypes = {
    * Content to be displayed for the row cell
    */
   children: PropTypes.node,
+  /**
+   * Function callback passthrough for the ref of the td.
+   */
+  refCallback: PropTypes.func,
 };
 
 const TableCell = ({
   children,
+  refCallback,
   ...customProps
 }) => {
   const cellClassNames = cx([
@@ -23,7 +28,7 @@ const TableCell = ({
   ]);
 
   return (
-    <td {...customProps} className={cellClassNames}>
+    <td {...customProps} className={cellClassNames} ref={refCallback}>
       {children}
     </td>
   );

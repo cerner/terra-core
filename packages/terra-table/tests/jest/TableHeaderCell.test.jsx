@@ -26,3 +26,10 @@ it('should render table header cell with minWideth', () => {
   const tableHeaderCell = shallow(<TableHeaderCell minWidth="tiny" />);
   expect(tableHeaderCell).toMatchSnapshot();
 });
+
+it('should render a table header cell with refCallback', () => {
+  const tableHeaderCell = shallow(
+    <TableHeaderCell refCallback={jest.fn()} />,
+  );
+  expect(tableHeaderCell).toMatchSnapshot();
+});

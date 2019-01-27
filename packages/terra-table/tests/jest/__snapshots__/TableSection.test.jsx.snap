@@ -97,7 +97,7 @@ exports[`should render a table section with refCallback 1`] = `
     isCollapsed={false}
     isCollapsible={false}
     level={2}
-    onSelect={[MockFunction]}
+    refCallback={[MockFunction]}
     title="test"
   />
 </Fragment>

@@ -1,5 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render a table header cell with refCallback 1`] = `
+<th
+  className="header-cell small"
+  data-terra-table-header-cell={true}
+/>
+`;
+
 exports[`should render a table header with content 1`] = `
 <th
   className="header-cell small"
