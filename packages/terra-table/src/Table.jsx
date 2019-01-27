@@ -24,7 +24,7 @@ const propTypes = {
    */
   isPadded: PropTypes.bool,
   /**
-   * Function callback passthrough for the ref of the table.
+   * Function callback for the ref of the table.
    */
   refCallback: PropTypes.func,
 };

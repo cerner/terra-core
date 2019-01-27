@@ -46,7 +46,7 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * Function callback passthrough for the ref of the th.
+   * Function callback for the ref of the th.
    */
   refCallback: PropTypes.func,
   /**

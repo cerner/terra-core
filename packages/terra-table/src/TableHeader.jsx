@@ -12,7 +12,7 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Function callback passthrough for the ref of the thead.
+   * Function callback for the ref of the thead.
    */
   refCallback: PropTypes.func,
 };
