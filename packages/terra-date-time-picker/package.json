@@ -34,11 +34,11 @@
     "terra-abstract-modal": "^2.0.0",
     "terra-button": "^3.2.0",
     "terra-date-picker": "^3.2.0",
-    "terra-disclosure-manager": "^3.1.0",
+    "terra-disclosure-manager": "^4.0.0",
     "terra-doc-template": "^2.2.0",
     "terra-form-field": "^3.0.0",
-    "terra-modal-manager": "^4.0.0",
-    "terra-time-input": "^2.34.1"
+    "terra-modal-manager": "^5.0.0",
+    "terra-time-input": "^3.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
