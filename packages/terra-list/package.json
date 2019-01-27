@@ -1,7 +1,7 @@
 {
   "name": "terra-list",
   "main": "lib/List.js",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "The Terra List is a structural component to arrange content within list/listitems.",
   "repository": {
     "type": "git",
