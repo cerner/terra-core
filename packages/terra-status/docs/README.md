@@ -14,9 +14,23 @@ The status component provides a customizable color indictor to signify a specifi
 import React from 'react';
 import Status from 'terra-status';
 
-<Status color="red"><div>Hello</div></Status>
-<Status color="#00ff00"><div>Hello</div></Status>
-<Status color="rgb(0,0,255)"><div>Hello</div></Status>
+<Status className="high-status"><div>Hello</div></Status>
+<Status className="good-status"><div>Hello</div></Status>
+<Status className="blue-status"><div>Hello</div></Status>
+```
+
+```css
+.high-status {
+  border-color: red;
+}
+
+.good-status {
+  border-color: #00ff00;
+}
+
+.blue-status {
+  border-color: rgb(0,0,255);
+}
 ```
 
 ## Component Features

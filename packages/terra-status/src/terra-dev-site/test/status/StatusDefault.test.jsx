@@ -1,11 +1,12 @@
 import React from 'react';
 import Status from '../../../Status';
+import '../../doc/example/colors.css';
 
 const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
 
 const StatusDefault = () => (
   <div>
-    <Status id="status" color="#ff0000" visuallyHiddenText="Status High">{simpleText}</Status>
+    <Status id="status" className="high-status" visuallyHiddenText="Status High">{simpleText}</Status>
   </div>
 );
 

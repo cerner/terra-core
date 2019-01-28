@@ -1,10 +1,11 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Text from 'terra-text/lib/Text';
+import './colors.css';
 
 const TextVariations = () => (
   <div>
-    <Text fontSize={18} color="#304FFE" isItalic>
+    <Text fontSize={18} className="blue" isItalic>
 Text with color set to
       <code>rgb(46,125,50)</code>
       {' '}

@@ -42,10 +42,6 @@ const propTypes = {
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   /**
-   * The color of the text. Accepts any color value parseable by CSS.
-   */
-  color: PropTypes.string,
-  /**
    * Sets the text to display in italics.
    */
   isItalic: PropTypes.bool,
@@ -64,14 +60,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: 'inherit',
   isItalic: false,
   isVisuallyHidden: false,
   weight: 700,
 };
 
 const Heading = ({
-  level, color, children, isVisuallyHidden, isItalic, size, weight, ...customProps
+  level, children, isVisuallyHidden, isItalic, size, weight, ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
@@ -84,14 +79,10 @@ const Heading = ({
     attributes.className,
   ]);
 
-  const headingStyles = {
-    color,
-  };
-
   const Element = `h${level}`;
 
   return (
-    <Element {...attributes} style={{ ...headingStyles, ...customProps.style }} className={TextClassNames}>
+    <Element {...attributes} style={{ ...customProps.style }} className={TextClassNames}>
       {children}
     </Element>
   );

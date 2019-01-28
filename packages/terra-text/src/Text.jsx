@@ -40,10 +40,6 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The color of the text. Accepts any color value parseable by CSS.
-   */
-  color: PropTypes.string,
-  /**
    * Sets the text to display in italics.
    */
   isItalic: PropTypes.bool,
@@ -66,14 +62,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: 'inherit',
   isItalic: false,
   isVisuallyHidden: false,
   isWordWrapped: false,
 };
 
 const Text = ({
-  color, children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, ...customProps
+  children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
@@ -86,12 +81,8 @@ const Text = ({
     attributes.className,
   ]);
 
-  const textStyles = {
-    color,
-  };
-
   return (
-    <span {...attributes} style={{ ...textStyles, ...customProps.style }} className={TextClassNames}>
+    <span {...attributes} style={{ ...customProps.style }} className={TextClassNames}>
       {children}
     </span>
   );

@@ -1,0 +1,20 @@
+/* stylelint-disable color-named */
+.orange-bar {
+  color: orange;
+}
+
+.green-bar {
+  color: #8ccc62;
+}
+
+.red-bar {
+  color: rgb(255, 0, 0);
+}
+
+.blue-bar {
+  color: blue;
+}
+
+.yellow-bar {
+  color: yellow;
+}

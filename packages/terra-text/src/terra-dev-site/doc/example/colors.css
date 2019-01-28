@@ -1,0 +1,16 @@
+/* stylelint-disable color-named */
+.crimson {
+  color: Crimson;
+}
+
+.green {
+  color: rgb(46, 125, 50);
+}
+
+.blue {
+  color: #304ffe;
+}
+
+.black {
+  color: #333;
+}

@@ -14,17 +14,12 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The color of the status indicator. Accepts a CSS color value.
-   */
-  color: PropTypes.string,
-  /**
    * Visually hidden text used to convey the meaning of the status indicator to screen readers.
    */
   visuallyHiddenText: PropTypes.string,
 };
 
 const Status = ({
-  color,
   children,
   visuallyHiddenText,
   ...customProps
@@ -35,7 +30,7 @@ const Status = ({
   }
 
   return (
-    <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)}>
+    <div {...customProps} className={cx('status', customProps.className)}>
       {visuallyHiddenText && <VisuallyHiddenText text={visuallyHiddenText} />}
       {children}
     </div>

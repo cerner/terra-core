@@ -15,30 +15,46 @@ Note: The progress bar displays fill with respect to percentage (value between 0
 ```jsx
 import React from 'react';
 import ProgressBar from 'terra-progress-bar';
+import './colors.css';
 
 <ProgressBar
   heightSize="tiny"
   value={3}
   max={10}
-  color="#8ccc62"
+  className="green-bar"
 />
 
 <ProgressBar
   heightSize="tiny"
   value={40}
-  color="Orange"
+  className="orange-bar"
 />
 
 <ProgressBar
   value={60}
-  color="#8ccc62"
+  className="green-bar"
 />
 
 <ProgressBar
   value={10}
   max={10}
-  color="rgb(255, 0, 0)"
+  className="red-bar"
 />
+```
+
+```css
+// colors.css
+.orange-bar {
+  color: orange;
+}
+
+.green-bar {
+  color: #8ccc62;
+}
+
+.red-bar {
+  color: rgb(255, 0, 0);
+}
 ```
 
 ## Component Features

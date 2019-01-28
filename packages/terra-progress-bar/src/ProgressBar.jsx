@@ -16,10 +16,6 @@ const ProgressBarHeightSize = {
 
 const propTypes = {
   /**
-   * The color of the progress bar. Accepts a CSS color value.
-   */
-  color: PropTypes.string,
-  /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
   heightSize: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
@@ -69,7 +65,6 @@ const ProgressBar = ({
   return (
     <progress
       {...customProps}
-      style={{ color: customProps.color }}
       className={classes}
       max={100}
       value={normalizedValue}
