@@ -14,7 +14,7 @@
 * --terra-menu-divider-margin-top
 * --terra-menu-divider-after-border-width
 * --terra-menu-divider-after-margin-bottom
-* --terra-menu-submenu-background-color
+* --terra-menu-submenu-arrow-after-border-top-color
 * --terra-menu-submenu-divider-after-border-width
 * --terra-menu-submenu-divider-after-margin-bottom
 * --terra-menu-submenu-header-height
