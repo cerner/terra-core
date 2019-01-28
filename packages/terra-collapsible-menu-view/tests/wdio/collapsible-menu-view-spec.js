@@ -46,4 +46,16 @@ describe('Collapsible Menu View', () => {
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
+
+  Terra.viewports('tiny', 'large').forEach((viewport) => {
+    describe('Responsive Single Item', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-collapsible-menu-view/collapsible-menu-view/collapsible-menu-view-single-item');
+        browser.setViewportSize(viewport);
+      });
+
+      Terra.should.matchScreenshot({ selector: '#root' });
+      Terra.should.beAccessible();
+    });
+  });
 });

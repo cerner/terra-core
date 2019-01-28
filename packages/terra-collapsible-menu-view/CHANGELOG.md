@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+4.2.0 - (January 27, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.1.0 - (January 26, 2019)
+------------------
+### Fixed
+* Fixed issue preventing single item views from collapsing
+
 4.0.0 - (January 22, 2019)
 ------------------
 ### Changed
