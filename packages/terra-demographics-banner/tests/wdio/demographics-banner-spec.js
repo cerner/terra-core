@@ -28,8 +28,8 @@ describe('Demographics Banner', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-demographics-banner-background-deceased': '#3C1362',
-        '--terra-demographics-banner-foreground-deceased': '#f1f227',
+        '--terra-demographics-banner-deceased-background-color': '#3C1362',
+        '--terra-demographics-banner-deceased-color': '#f1f227',
       },
     });
   });
@@ -61,8 +61,8 @@ describe('Demographics Banner', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-demographics-banner-background': '#f12772',
-        '--terra-demographics-banner-foreground': '#004c76',
+        '--terra-demographics-banner-background-color': '#f12772',
+        '--terra-demographics-banner-color': '#004c76',
       },
     });
   });

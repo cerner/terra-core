@@ -4,6 +4,32 @@ ChangeLog
 Unreleased
 ----------
 
+3.3.0 - (January 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.2.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.1.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated theme variables
+* radio-field: render error icon down one level of markup
+
+2.36.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.35.1 - (November 20, 2018)
 ------------------
 ### Changed

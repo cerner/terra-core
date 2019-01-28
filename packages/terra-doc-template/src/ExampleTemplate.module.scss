@@ -7,13 +7,13 @@
   }
 
   .header {
-    background-color: var(--terra-doc-template-v1-header-background-color);
+    background-color: var(--terra-doc-template-header-background-color);
     border-bottom: 1px solid #e8e8e8;
     padding: 0.625rem;
   }
 
   .content {
-    background-color: var(--terra-doc-template-v1-content-background-color);
+    background-color: var(--terra-doc-template-content-background-color);
     padding: 0.625rem;
   }
 
@@ -22,7 +22,7 @@
   }
 
   .footer {
-    background-color: var(--terra-doc-template-v1-footer-background-color);
+    background-color: var(--terra-doc-template-footer-background-color);
     overflow: hidden;
   }
 

@@ -43,20 +43,22 @@
   }
 
   .dark {
-    background: var(--terra-overlay-dark-background-color, rgba(28, 31, 33, 0.8));
+    background: var(--terra-overlay-dark-background, rgba(28, 31, 33, 0.8));
     background-image: var(--terra-overlay-dark-background-image, none);
 
     .content {
       color: var(--terra-overlay-dark-content-color, #fff);
+      text-shadow: var(--terra-overlay-dark-content-text-shadow, none);
     }
   }
 
   .light {
-    background: var(--terra-overlay-light-background-color, rgba(245, 245, 245, 0.7));
+    background: var(--terra-overlay-light-background, rgba(245, 245, 245, 0.7));
     background-image: var(--terra-overlay-light-background-image, none);
 
     .content {
       color: var(--terra-overlay-light-content-color, #1c1f21);
+      text-shadow: var(--terra-overlay-light-content-text-shadow, none);
     }
   }
 

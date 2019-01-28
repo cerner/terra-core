@@ -6,7 +6,7 @@ import Table from 'terra-table/lib/Table';
 const CustomCell = props => (
   <div>
     <h3>{props.text}</h3>
-    {props.subtext ? <h4 style={{ color: 'grey' }}>{props.subtext}</h4> : null}
+    {props.subtext ? <h4 style={{ color: '#656565' }}>{props.subtext}</h4> : null}
   </div>
 );
 

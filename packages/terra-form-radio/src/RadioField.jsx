@@ -112,9 +112,9 @@ const RadioField = (props, { intl }) => {
           {legend}
           {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
           {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
+          {!isInvalid && <span className={cx('error-icon-hidden')} />}
         </div>
       }
-      {!isInvalid && <span className={cx('error-icon-hidden')} />}
     </legend>
   );
 

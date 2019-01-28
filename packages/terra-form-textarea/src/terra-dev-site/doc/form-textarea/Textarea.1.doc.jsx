@@ -37,38 +37,31 @@ const DocPage = () => (
     ]}
     examples={[
       {
-        title: 'Resizable Textarea',
         example: <ResizableExample />,
         source: ResizableExampleSrc,
       },
       {
-        title: 'Fixed Textarea - Small Size',
         example: <FixedSmallSizeExample />,
         source: FixedSmallSizeExampleSrc,
       },
       {
-        title: 'Fixed Textarea - Medium Size',
         example: <FixedMediumSizeExample />,
         source: FixedMediumSizeExampleSrc,
       },
       {
-        title: 'Fixed Textarea - Large Size',
         example: <FixedLargeSizeExample />,
         source: FixedLargeSizeExampleSrc,
       },
       {
-        title: 'Fill Container',
         example: <FillContainerExample />,
         source: FillContainerExampleSrc,
       },
       {
-        title: 'Invalid Textarea When Empty',
         description: 'Leaving this as blank makes this input invalid.',
         example: <InvalidExample />,
         source: InvalidExampleSrc,
       },
       {
-        title: 'Disabled Textarea',
         example: <DisabledExample />,
         source: DisabledExampleSrc,
       },

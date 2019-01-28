@@ -1,10 +1,10 @@
 <!-- Logo -->
-<p align="center">
-  <img height="128" width="128" src="https://github.com/cerner/terra-core/raw/master/terra.png">
+<p style="text-align:center">
+  <img alt="Terra Logo" height="128" width="128" src="https://github.com/cerner/terra-core/raw/master/terra.png">
 </p>
 
 <!-- Name -->
-<h1 align="center">
+<h1 style="text-align:center">
   Terra Core
 </h1>
 
@@ -25,9 +25,13 @@
 - [Local Development](#local-development)
 - [LICENSE](#license)
 
-## Packages
+<h2 id="packages">
+  Packages
+</h2>
 
-### Versioning
+<h3 id="versioning">
+  Versioning
+</h3>
 
 When a component reaches v1.0.0., it is considered to be stable and will follow [SemVer](http://semver.org/) for versioning.
 1. MAJOR versions represent breaking changes
@@ -41,7 +45,10 @@ We view the React.js props API of our components as our main public API. We use 
 Prior to components reaching v1.0.0, a component is considered to be in a beta stage.
 Components in beta stage may include breaking changes, new features, and bug fixes all within v0.x.x releases.
 
-### Status
+<h3 id="status">
+  Status
+</h3>
+
 ![Stable](https://badgen.net/badge/status/Stable/green)
 ![Beta](https://badgen.net/badge/status/Beta/orange)
 ![Deprecated](https://badgen.net/badge/status/Deprecated/grey)
@@ -108,7 +115,9 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-toggle-section-header](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle-section-header) | [![NPM version](https://badgen.net/npm/v/terra-toggle-section-header)](https://www.npmjs.org/package/terra-toggle-section-header) | ![Stable](https://badgen.net/badge/status/Stable/green) | [![terra-toggle-section-header](https://badgen.net/david/dep/cerner/terra-core/packages/terra-toggle-section-header)](https://david-dm.org/cerner/terra-core?path=packages/terra-toggle-section-header) |
 <!-- AUTO-GENERATED-CONTENT:END *-->
 
-### Deprecated
+<h3 id="deprecated">
+  Deprecated
+</h3>
 
 | Terra Package      | Version | Status | Dependencies |
 |--------------------|---------|--------|--------------|
@@ -117,7 +126,9 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | terra-i18n-plugin | [![NPM version](https://badgen.net/npm/v/terra-i18n-plugin)](https://www.npmjs.org/package/terra-i18n-plugin) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-i18n-plugin](https://badgen.net/badge/dependencies/n%2Fa/grey) |
 | terra-modal | [![NPM version](https://badgen.net/npm/v/terra-modal)](https://www.npmjs.org/package/terra-modal) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-application](https://badgen.net/badge/dependencies/n%2Fa/grey) |
 
-## Supported Browsers
+<h2 id="supported-browsers">
+  Supported Browsers
+</h2>
 
 | Browser                     | Version |
 |-----------------------------|---------|
@@ -127,10 +138,14 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | Internet Explorer           | 10 & 11 |
 | Safari & Mobile Safari      | Current |
 
-## Internationalization (I18n)
+<h2 id="internationalization-i18n">
+  Internationalization (I18n)
+</h2>
 Please review [Terra's Internationalization documentation](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/internationalization) for more information. Included are directions on consumption and how internationalization is setup.
 
-### Packages Requiring I18n
+<h3 id="packages-requiring-i18n">
+  Packages Requiring I18n
+</h3>
 
 - [terra-action-header](https://github.com/cerner/terra-core/tree/master/packages/terra-action-header)
 - [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert)
@@ -145,11 +160,15 @@ Please review [Terra's Internationalization documentation](https://engineering.c
 - [terra-status-view](https://github.com/cerner/terra-core/tree/master/packages/terra-status-view)
 - [terra-tabs](https://github.com/cerner/terra-core/tree/master/packages/terra-tabs)
 
-## Contributing
+<h2 id="contributing">
+  Contributing
+</h2>
 
 Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
-## Local Development
+<h2 id="local-development">
+  Local Development
+</h2>
 
 1. Install [Node Version Manager (NVM) and Node](https://github.com/creationix/nvm#install-script). The root directory contains a [`.nvmrc`](https://github.com/cerner/terra-core/blob/master/.nvmrc) file that specifies terra-core's node version. Once NVM is installed and you are within the root directory, your version of node will change to this version.
 2. Install docker https://www.docker.com/ to run browser tests.
@@ -159,7 +178,9 @@ npm install
 npm run test
 ```
 
-## LICENSE
+<h2 id="license">
+  LICENSE
+</h2>
 
 Copyright 2017 - 2018 Cerner Innovation, Inc.
 

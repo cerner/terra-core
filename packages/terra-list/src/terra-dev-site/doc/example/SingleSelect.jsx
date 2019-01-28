@@ -10,6 +10,7 @@ const SingleSelectExamples = () => (
       <SingleSelectList.Item content={<span>test</span>} key="124" />
       <SingleSelectList.Item content={<span>test</span>} key="125" />
     </SingleSelectList>
-  </div>);
+  </div>
+);
 
 export default SingleSelectExamples;
