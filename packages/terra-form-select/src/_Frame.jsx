@@ -156,6 +156,7 @@ class Frame extends React.Component {
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
       'aria-label': 'search',
+      'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
 
@@ -209,7 +210,7 @@ class Frame extends React.Component {
       this.input.focus();
     }
 
-    this.setState({ isOpen: true, isFocused: true, isPositioned: false });
+    this.setState({ isOpen: true, isPositioned: false });
   }
 
   /**
@@ -229,6 +230,11 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
+    // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
+    if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
+      return;
+    }
+
     this.closeDropdown();
 
     if (this.props.onBlur) {
@@ -244,12 +250,12 @@ class Frame extends React.Component {
       return;
     }
 
-    if (!this.state.isFocused) {
-      this.setState({ isFocused: true });
+    if (this.props.onFocus && !this.state.isFocused) {
+      this.props.onFocus(event);
     }
 
-    if (this.props.onFocus) {
-      this.props.onFocus(event);
+    if (!this.state.isFocused) {
+      this.setState({ isFocused: true });
     }
   }
 
@@ -382,11 +388,11 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role="combobox"
-        aria-controls={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+        role={!disabled ? 'combobox' : undefined}
+        aria-controls={!disabled && this.state.isOpen ? 'terra-select-dropdown' : undefined}
         aria-disabled={!!disabled}
-        aria-expanded={!!this.state.isOpen}
-        aria-haspopup="true"
+        aria-expanded={!!disabled && !!this.state.isOpen}
+        aria-haspopup={!disabled ? 'true' : undefined}
         aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
@@ -397,7 +403,7 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
-        <div role="textbox" className={cx('display')} onMouseDown={this.openDropdown}>
+        <div role="textbox" aria-disabled={!!disabled} className={cx('display')} onMouseDown={this.openDropdown}>
           {this.getDisplay()}
         </div>
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>

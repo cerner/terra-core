@@ -6,6 +6,19 @@ Unreleased
 ### Added
 * Create dropdown that announces no search results to screen reader
 
+### Changed
+* Made it easier for screen readers to read disabled state to users
+
+5.4.0 - (January 28, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.3.0 - (January 26, 2019)
+------------------
+### Fixed
+* Increased terra-form-select default text color contrast for accessibility
+
 5.2.0 - (January 22, 2019)
 ------------------
 ### Changed
@@ -14,6 +27,7 @@ Unreleased
 5.1.0 - (January 22, 2019)
 ------------------
 ### Fixed
+* Fixed Dropdown closing issue on Hold and Scroll in IE
 * Updated Frame to remove isAbove styling when selecting item in single select list
 
 ### Changed
