@@ -155,6 +155,7 @@ class Frame extends React.Component {
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
       'aria-label': 'search',
+      'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
 
@@ -386,11 +387,11 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
-        role="combobox"
-        aria-controls={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+        role={!disabled ? 'combobox' : undefined}
+        aria-controls={!disabled && this.state.isOpen ? 'terra-select-dropdown' : undefined}
         aria-disabled={!!disabled}
-        aria-expanded={!!this.state.isOpen}
-        aria-haspopup="true"
+        aria-expanded={!!disabled && !!this.state.isOpen}
+        aria-haspopup={!disabled ? 'true' : undefined}
         aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
@@ -401,7 +402,7 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
-        <div role="textbox" className={cx('display')} onMouseDown={this.openDropdown}>
+        <div role="textbox" aria-disabled={!!disabled} className={cx('display')} onMouseDown={this.openDropdown}>
           {this.getDisplay()}
         </div>
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Made it easier for screen readers to read disabled state to users
 
 5.4.0 - (January 28, 2019)
 ------------------
