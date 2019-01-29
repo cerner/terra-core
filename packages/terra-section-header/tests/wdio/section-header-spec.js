@@ -48,7 +48,7 @@ describe('SectionHeader', () => {
         '--terra-section-header-accordion-icon-padding-end': '100px',
         '--terra-section-header-accordion-icon-padding-bottom': '100px',
         '--terra-section-header-accordion-icon-padding-top': '100px',
-        '--terra-section-header-accordion-icon': 'rgb(0, 0, 100)',
+        '--terra-section-header-accordion-icon-background': 'rgb(0, 0, 100)',
       },
     });
 
@@ -162,13 +162,13 @@ describe('SectionHeader', () => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-transparent-section-header-hover-background': 'red',
-          '--terra-transparent-section-header-hover-border-bottom': '10px dashed red',
-          '--terra-transparent-section-header-hover-border-left': '10px dashed red',
-          '--terra-transparent-section-header-hover-border-right': '10px dashed red',
-          '--terra-transparent-section-header-hover-border-top': '10px dashed red',
-          '--terra-transparent-section-header-hover-box-shadow': 'inset 5px 5px 5px red',
-          '--terra-transparent-section-header-hover-color': 'red',
+          '--terra-section-header-transparent-hover-background': 'red',
+          '--terra-section-header-transparent-hover-border-bottom': '10px dashed red',
+          '--terra-section-header-transparent-hover-border-left': '10px dashed red',
+          '--terra-section-header-transparent-hover-border-right': '10px dashed red',
+          '--terra-section-header-transparent-hover-border-top': '10px dashed red',
+          '--terra-section-header-transparent-hover-box-shadow': 'inset 5px 5px 5px red',
+          '--terra-section-header-transparent-hover-color': 'red',
         },
       });
     });
@@ -185,13 +185,13 @@ describe('SectionHeader', () => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-transparent-section-header-focus-background': 'green',
-          '--terra-transparent-section-header-focus-border-bottom': '10px dashed green',
-          '--terra-transparent-section-header-focus-border-left': '10px dashed green',
-          '--terra-transparent-section-header-focus-border-right': '10px dashed green',
-          '--terra-transparent-section-header-focus-border-top': '10px dashed green',
-          '--terra-transparent-section-header-focus-box-shadow': 'inset 5px 5px 5px green',
-          '--terra-transparent-section-header-focus-color': 'green',
+          '--terra-section-header-transparent-focus-background': 'green',
+          '--terra-section-header-transparent-focus-border-bottom': '10px dashed green',
+          '--terra-section-header-transparent-focus-border-left': '10px dashed green',
+          '--terra-section-header-transparent-focus-border-right': '10px dashed green',
+          '--terra-section-header-transparent-focus-border-top': '10px dashed green',
+          '--terra-section-header-transparent-focus-box-shadow': 'inset 5px 5px 5px green',
+          '--terra-section-header-transparent-focus-color': 'green',
         },
       });
     });
@@ -209,13 +209,13 @@ describe('SectionHeader', () => {
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
-          '--terra-transparent-section-header-active-background': 'purple',
-          '--terra-transparent-section-header-active-border-bottom': '10px dashed purple',
-          '--terra-transparent-section-header-active-border-left': '10px dashed purple',
-          '--terra-transparent-section-header-active-border-right': '10px dashed purple',
-          '--terra-transparent-section-header-active-border-top': '10px dashed purple',
-          '--terra-transparent-section-header-active-box-shadow': 'inset 5px 5px 5px purple',
-          '--terra-transparent-section-header-active-color': 'purple',
+          '--terra-section-header-transparent-active-background': 'purple',
+          '--terra-section-header-transparent-active-border-bottom': '10px dashed purple',
+          '--terra-section-header-transparent-active-border-left': '10px dashed purple',
+          '--terra-section-header-transparent-active-border-right': '10px dashed purple',
+          '--terra-section-header-transparent-active-border-top': '10px dashed purple',
+          '--terra-section-header-transparent-active-box-shadow': 'inset 5px 5px 5px purple',
+          '--terra-section-header-transparent-active-color': 'purple',
         },
       });
     });

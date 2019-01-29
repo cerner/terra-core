@@ -1,0 +1,68 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+:local {
+  .time-clarification {
+    background-color: var(--terra-date-time-picker-clarification-modal-background-color, #fff);
+    border: var(--terra-date-time-picker-clarification-modal-border);
+    border-radius: var(--terra-date-time-picker-clarification-modal-border-radius, 5px);
+    box-shadow: var(--terra-date-time-picker-clarification-modal-box-shadow, 0 3px 7px rgba(0, 0, 0, 0.3));
+    color: var(--terra-date-time-picker-clarification-modal-color);
+    width: 640px;
+  }
+
+  .header {
+    background-color: var(--terra-date-time-picker-clarification-header-background-color, #f4f4f4);
+    border-bottom-color: var(--terra-date-time-picker-clarification-header-border-bottom-color, #dedfe0);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: var(--terra-date-time-picker-clarification-header-color, #1c1f21);
+    height: var(--terra-date-time-picker-clarification-header-height, 3.587rem);
+    padding: var(--terra-date-time-picker-clarification-header-padding, 0.714rem);
+    width: 100%;
+  }
+
+  .title {
+    font-size: var(--terra-date-time-picker-clarification-title-font-size, 1.285rem);
+    font-weight: normal;
+    line-height: var(--terra-date-time-picker-clarification-title-line-height, 1.75);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal;
+  }
+
+  .body {
+    padding: 0.25rem 0.714rem;
+
+    p {
+      margin-top: 0.714rem;
+    }
+  }
+
+  .buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0.714rem 0;
+
+    .button-daylight,
+    .button-standard {
+      margin: 0.25rem;
+    }
+  }
+
+  .button-offset {
+    background-color: var(--terra-date-time-picker-clarification-button-offset-background-color, #fff);
+    height: var(--terra-date-time-picker-clarification-button-offset-height, 2.142857rem);
+    margin-left: 0.429em;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .button-offset-hidden {
+    display: none;
+  }
+}

@@ -3,8 +3,39 @@ Changelog
 
 Unreleased
 ----------
+
+4.4.0 - (January 27, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
+
+4.3.0 - (January 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.2.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.1.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated theme variables
+
+3.29.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 * Removed usage of componentWillReceiveProps
+* Make menu item outline on focus themeable and provide browser default fallback.
+* Updated site examples to be more accessible.
 
 3.28.1 - (November 20, 2018)
 ------------------

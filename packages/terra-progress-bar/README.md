@@ -17,7 +17,7 @@ Note: The progress bar displays fill with respect to percentage (value between 0
 
 ## LICENSE
 
-Copyright 2017 Cerner Innovation, Inc.
+Copyright 2017 - 2019 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

@@ -15,22 +15,20 @@ class MenuWidths extends React.Component {
   render() {
     return (
       <div>
-        <form>
-          <label htmlFor="menuWidth">Select menu width </label>
-          <select id="menuWidth" name="menuWidth" value={this.state.menuWidth} onChange={this.handleSelectChange}>
-            <option value={undefined}>Default</option>
-            <option key="160" value="160">160</option>
-            <option key="240" value="240">240</option>
-            <option key="320" value="320">320</option>
-            <option key="640" value="640">640</option>
-            <option key="960" value="960">960</option>
-            <option key="1280" value="1280">1280</option>
-            <option key="1760" value="1760">1760</option>
-            <option key="auto" value="auto">Auto</option>
-          </select>
-          <br />
-          <br />
-        </form>
+        <label htmlFor="menuWidth">Select menu width </label>
+        <select id="menuWidth" name="menuWidth" value={this.state.menuWidth} onChange={this.handleSelectChange}>
+          <option value={undefined}>Default</option>
+          <option key="160" value="160">160</option>
+          <option key="240" value="240">240</option>
+          <option key="320" value="320">320</option>
+          <option key="640" value="640">640</option>
+          <option key="960" value="960">960</option>
+          <option key="1280" value="1280">1280</option>
+          <option key="1760" value="1760">1760</option>
+          <option key="auto" value="auto">Auto</option>
+        </select>
+        <br />
+        <br />
 
         <BasicMenu contentWidth={this.state.menuWidth} />
       </div>
