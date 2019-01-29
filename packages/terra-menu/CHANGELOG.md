@@ -6,6 +6,9 @@ Unreleased
 ### Updated
 * Theme variable upgrade guide
 
+### Fixed
+* Fixed Focus Issue of Menu Item on Press of Tab and Shift Tab.
+
 4.4.0 - (January 27, 2019)
 ------------------
 ### Changed
