@@ -3,6 +3,24 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.5.0 - (January 28, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.4.0 - (January 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.3.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.2.0 - (January 22, 2019)
+------------------
 ### Fixed
 * Refactor 'netraul' theme var to 'neutral'
 

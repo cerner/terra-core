@@ -3,6 +3,22 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.1.0 - (January 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.0.0 - (January 22, 2019)
+------------------
+### Changed
+* Updated theme variables
+
+2.34.0 - (January 22, 2019)
+------------------
+### Changed
+* Updated dependencies to fix major version bump issues
+
 ### Fixed
 * Added 'style' to prop-types validation
 
