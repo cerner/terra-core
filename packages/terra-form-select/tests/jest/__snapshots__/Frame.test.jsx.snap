@@ -1080,6 +1080,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
     tabIndex="-1"
   >
     <div
+      aria-disabled={false}
       className="display"
       onMouseDown={[Function]}
       role="textbox"
@@ -1091,6 +1092,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
           className="search-wrapper"
         >
           <input
+            aria-disabled={false}
             aria-label="search"
             className="search-input"
             disabled={false}
