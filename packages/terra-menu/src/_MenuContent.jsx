@@ -204,7 +204,12 @@ class MenuContent extends React.Component {
   wrapOnKeyDown(item, index) {
     const { onKeyDown } = item.props;
     return ((event) => {
-      event.preventDefault();
+      const shiftTabClicked = (event.shiftKey && event.nativeEvent.keyCode === MenuUtils.KEYCODES.TAB);
+      const tabClicked = (event.nativeEvent.keyCode === MenuUtils.KEYCODES.TAB);
+      if (!(shiftTabClicked || tabClicked)) {
+        event.preventDefault();
+      }
+
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
         if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
           this.props.onRequestNext(item);
