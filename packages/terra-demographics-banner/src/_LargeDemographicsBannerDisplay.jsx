@@ -41,9 +41,11 @@ export default (props) => {
 
   return (
     <section className={mainClasses} {...customProps}>
-      <div className={cx('profile-photo')}>
-        {props.photo}
-      </div>
+      {props.photo && (
+        <div className={cx('profile-photo')}>
+          {props.photo}
+        </div>
+      )}
       <div className={cx('content')}>
         <div className={cx('row')}>
           <h1 className={cx('person-name')}>

@@ -10,6 +10,7 @@ const container = () => (
     <ContentContainer id="content-container" header={header} fill>
       {content}
     </ContentContainer>
-  </div>);
+  </div>
+);
 
 export default container;

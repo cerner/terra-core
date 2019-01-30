@@ -4,6 +4,36 @@ Changelog
 Unreleased
 ----------
 
+3.3.0 - (January 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.2.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.1.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated theme variables
+
+2.32.0 - (January 2, 2019)
+------------------
+### Changed
+* Split focus and hover styles to separate blocks
+
+### Added
+* Table header (th) styles
+* Minor dependency version bump
+* Updated site examples to be more accessible.
+
 2.31.1 - (November 20, 2018)
 ------------------
 ### Changed

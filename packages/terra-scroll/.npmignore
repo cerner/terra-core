@@ -3,3 +3,7 @@ node_modules
 target
 reports
 tests/**/__snapshots__/
+aggregated-translations
+dev-site-config
+screenshots
+errorScreenshots

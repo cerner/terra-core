@@ -7,7 +7,7 @@ describe('Frame', () => {
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty({
-      '--terra-select-disabled-arrow-background': 'rgb(0, 0, 255)',
+      '--terra-form-select-disabled-arrow-background': 'rgb(0, 0, 255)',
     });
   });
 });

@@ -14,7 +14,9 @@ describe('Button', () => {
         // Button Vars that apply to all buttons
         '--terra-button-border-radius': '50px',
         '--terra-button-line-height': '20px',
-        '--terra-button-vertical-padding': '20px',
+        '--terra-button-padding-bottom': '20px',
+        '--terra-button-padding-top': '20px',
+        '--terra-button-top': '20px',
         '--terra-button-disabled-opacity': '.7',
         '--terra-button-font-size': '50px',
 
@@ -239,8 +241,13 @@ describe('Button', () => {
     describe('Type button', () => {
       Terra.should.matchScreenshot({ selector: '#buttonWithTypeButton' });
 
-      Terra.should.themeEachCustomProperty('#buttonWithTypeButton', {
-        '--terra-button-text-only-horizontal-margin': '20px',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        selector: '#buttonWithTypeButton',
+        properties: {
+          '--terra-button-text-only-margin-left': '20px',
+          '--terra-button-text-only-margin-right': '20px',
+        },
       });
     });
   });
@@ -257,8 +264,10 @@ describe('Button', () => {
         testName: 'themed',
         selector: '#iconNeutralButton',
         properties: {
-          '--terra-button-text-and-icon-horizontal-margin': '20px',
-          '--terra-button-text-and-icon-margin-between': '20px',
+          '--terra-button-text-and-icon-margin-left': '20px',
+          '--terra-button-text-and-icon-margin-right': '20px',
+          '--terra-button-text-first-margin-right': '20px',
+          '--terra-button-icon-first-margin-right': '20px',
         },
       });
     });
@@ -276,7 +285,8 @@ describe('Button', () => {
         testName: 'themed',
         selector: '#iconOnlyButton',
         properties: {
-          '--terra-button-icon-only-horizontal-margin': '20px',
+          '--terra-button-icon-only-margin-left': '20px',
+          '--terra-button-icon-only-margin-right': '20px',
           '--terra-button-icon-height': '10px',
           '--terra-button-icon-width': '10px',
         },

@@ -1,7 +1,7 @@
 # Terra Select
 
 
-[![NPM version](https://badgen.net/npm/v/terra-select)](https://www.npmjs.org/package/terra-form-select)
+[![NPM version](https://badgen.net/npm/v/terra-form-select)](https://www.npmjs.org/package/terra-form-select)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 
 The select component is a form input with a drop down list of options that allows for single selection.
@@ -16,7 +16,7 @@ The select component is a form input with a drop down list of options that allow
 
 ## LICENSE
 
-Copyright 2017 Cerner Innovation, Inc.
+Copyright 2017 - 2019 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

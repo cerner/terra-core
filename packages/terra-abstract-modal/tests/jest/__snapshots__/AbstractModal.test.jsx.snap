@@ -1,5 +1,247 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should allow us to pass in a dom selector as a fallbackFocus 1`] = `
+<ModalExample
+  fallbackFocus="#focusable-element"
+>
+  <div>
+    <AbstractModal
+      ariaLabel="Terra Modal"
+      classNameModal={null}
+      classNameOverlay={null}
+      closeOnEsc={true}
+      closeOnOutsideClick={true}
+      isFocused={true}
+      isFullscreen={false}
+      isOpen={true}
+      onRequestClose={[Function]}
+      role="dialog"
+      rootSelector="[data-terra-base]"
+      zIndex="6000"
+    >
+      <Portal
+        isOpened={true}
+      >
+        <Portal
+          containerInfo={
+            <div>
+              <div>
+                <div
+                  class="overlay layer-6000"
+                />
+                <div
+                  aria-label="Terra Modal"
+                  aria-modal="true"
+                  class="abstract-modal layer-6000"
+                  role="dialog"
+                  tabindex="0"
+                >
+                  <div>
+                    <h1>
+                      Terra Modal
+                    </h1>
+                    <button
+                      type="button"
+                    >
+                      Close Modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        >
+          <ModalContent
+            aria-modal="true"
+            ariaLabel="Terra Modal"
+            classNameModal={null}
+            classNameOverlay={null}
+            closeOnOutsideClick={true}
+            isFocused={true}
+            isFullscreen={false}
+            isScrollable={false}
+            onRequestClose={[Function]}
+            role="dialog"
+            zIndex="6000"
+          >
+            <FocusTrap
+              _createFocusTrap={[Function]}
+              active={true}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
+              paused={false}
+              tag="div"
+            >
+              <div>
+                <ModalOverlay
+                  className={null}
+                  onClick={[Function]}
+                  zIndex="6000"
+                >
+                  <div
+                    className="overlay layer-6000"
+                    onClick={[Function]}
+                  />
+                </ModalOverlay>
+                <div
+                  aria-label="Terra Modal"
+                  aria-modal="true"
+                  className="abstract-modal layer-6000"
+                  role="dialog"
+                  tabIndex="0"
+                >
+                  <div>
+                    <h1>
+                      Terra Modal
+                    </h1>
+                    <button
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Close Modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </FocusTrap>
+          </ModalContent>
+        </Portal>
+      </Portal>
+    </AbstractModal>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Open Modal
+    </button>
+  </div>
+</ModalExample>
+`;
+
+exports[`should allow us to pass in a function as fallbackFocus 1`] = `
+<ModalExample
+  fallbackFocus={[Function]}
+>
+  <div>
+    <AbstractModal
+      ariaLabel="Terra Modal"
+      classNameModal={null}
+      classNameOverlay={null}
+      closeOnEsc={true}
+      closeOnOutsideClick={true}
+      isFocused={true}
+      isFullscreen={false}
+      isOpen={true}
+      onRequestClose={[Function]}
+      role="dialog"
+      rootSelector="[data-terra-base]"
+      zIndex="6000"
+    >
+      <Portal
+        isOpened={true}
+      >
+        <Portal
+          containerInfo={
+            <div>
+              <div>
+                <div
+                  class="overlay layer-6000"
+                />
+                <div
+                  aria-label="Terra Modal"
+                  aria-modal="true"
+                  class="abstract-modal layer-6000"
+                  role="dialog"
+                  tabindex="0"
+                >
+                  <div>
+                    <h1>
+                      Terra Modal
+                    </h1>
+                    <button
+                      type="button"
+                    >
+                      Close Modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        >
+          <ModalContent
+            aria-modal="true"
+            ariaLabel="Terra Modal"
+            classNameModal={null}
+            classNameOverlay={null}
+            closeOnOutsideClick={true}
+            isFocused={true}
+            isFullscreen={false}
+            isScrollable={false}
+            onRequestClose={[Function]}
+            role="dialog"
+            zIndex="6000"
+          >
+            <FocusTrap
+              _createFocusTrap={[Function]}
+              active={true}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
+              paused={false}
+              tag="div"
+            >
+              <div>
+                <ModalOverlay
+                  className={null}
+                  onClick={[Function]}
+                  zIndex="6000"
+                >
+                  <div
+                    className="overlay layer-6000"
+                    onClick={[Function]}
+                  />
+                </ModalOverlay>
+                <div
+                  aria-label="Terra Modal"
+                  aria-modal="true"
+                  className="abstract-modal layer-6000"
+                  role="dialog"
+                  tabIndex="0"
+                >
+                  <div>
+                    <h1>
+                      Terra Modal
+                    </h1>
+                    <button
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Close Modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </FocusTrap>
+          </ModalContent>
+        </Portal>
+      </Portal>
+    </AbstractModal>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Open Modal
+    </button>
+  </div>
+</ModalExample>
+`;
+
 exports[`should mount an open modal 1`] = `
 <ModalExample>
   <div>
@@ -65,7 +307,11 @@ exports[`should mount an open modal 1`] = `
             <FocusTrap
               _createFocusTrap={[Function]}
               active={true}
-              focusTrapOptions={Object {}}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
               paused={false}
               tag="div"
             >
@@ -182,7 +428,11 @@ exports[`should mount an open modal 7000 z-index 1`] = `
             <FocusTrap
               _createFocusTrap={[Function]}
               active={true}
-              focusTrapOptions={Object {}}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
               paused={false}
               tag="div"
             >
@@ -299,7 +549,11 @@ exports[`should mount an open modal 8000 z-index 1`] = `
             <FocusTrap
               _createFocusTrap={[Function]}
               active={true}
-              focusTrapOptions={Object {}}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
               paused={false}
               tag="div"
             >
@@ -416,7 +670,11 @@ exports[`should mount an open modal 9000 z-index 1`] = `
             <FocusTrap
               _createFocusTrap={[Function]}
               active={true}
-              focusTrapOptions={Object {}}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
               paused={false}
               tag="div"
             >
@@ -533,7 +791,11 @@ exports[`should mount an open modal set to fullscreen 1`] = `
             <FocusTrap
               _createFocusTrap={[Function]}
               active={true}
-              focusTrapOptions={Object {}}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
               paused={false}
               tag="div"
             >
@@ -648,7 +910,11 @@ exports[`should render the correct snapshot for iPads 1`] = `
             <FocusTrap
               _createFocusTrap={[Function]}
               active={true}
-              focusTrapOptions={Object {}}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
               paused={false}
               tag="div"
             >
@@ -763,7 +1029,11 @@ exports[`should render the correct snapshot for iPhones 1`] = `
             <FocusTrap
               _createFocusTrap={[Function]}
               active={true}
-              focusTrapOptions={Object {}}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
               paused={false}
               tag="div"
             >
@@ -878,7 +1148,11 @@ exports[`should render the correct snapshot for iPods 1`] = `
             <FocusTrap
               _createFocusTrap={[Function]}
               active={true}
-              focusTrapOptions={Object {}}
+              focusTrapOptions={
+                Object {
+                  "fallbackFocus": [Function],
+                }
+              }
               paused={false}
               tag="div"
             >

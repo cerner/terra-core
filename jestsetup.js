@@ -8,6 +8,7 @@ Enzyme.configure({ adapter: new Adapter() });
 global.shallow = shallow;
 global.render = render;
 global.mount = mount;
+global.document = document;
 
 // TODO: Test running jest with this removed and see if tests still work
 // More info: https://github.com/cerner/terra-react-svg-loader/pull/1#discussion_r100876464

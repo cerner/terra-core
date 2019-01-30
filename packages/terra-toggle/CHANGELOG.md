@@ -4,6 +4,32 @@ Changelog
 Unreleased
 ----------
 
+3.1.0 - (January 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.0.0 - (January 22, 2019)
+------------------
+### Changed
+* Updated theme variables
+
+2.31.0 - (January 22, 2019)
+------------------
+### Changed
+* Updated dependencies to fix major version bump issues
+
+2.30.0 - (January 8, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.29.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Fixed link in readme.
+
 2.28.1 - (November 20, 2018)
 ------------------
 ### Changed
