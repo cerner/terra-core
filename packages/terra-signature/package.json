@@ -1,7 +1,7 @@
 {
   "name": "terra-signature",
   "main": "lib/Signature.js",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "description": "A signature defined by an array of line segments.",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.2.0",
-    "terra-form-select": "^5.2.0"
+    "terra-form-select": "^5.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
