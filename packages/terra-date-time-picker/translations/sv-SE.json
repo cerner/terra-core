@@ -1,6 +1,0 @@
-{
-  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Före (som sommartid)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "Efter (som vintertid)",
-  "Terra.dateTimePicker.timeClarification.message": "Tiden som valts inträffar vid övergång från sommartid till vintertid. Vill du att tiden ska anges som sommartid eller vintertid?",
-  "Terra.dateTimePicker.timeClarification.title": "Tidsförklaring"
-}

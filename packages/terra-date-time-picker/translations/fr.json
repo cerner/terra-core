@@ -1,6 +1,0 @@
-{
-  "Terra.dateTimePicker.timeClarification.title": "Clarification de l'heure",
-  "Terra.dateTimePicker.timeClarification.message": "L'heure sélectionnée se situe lors du passage de l'heure d'été à l'heure d'hiver. Voulez-vous documenter cette valeur avant ou après le passage de l'heure d'été à l'heure d'hiver ?",
-  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Avant (Heure d'été)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "Après (Heure d'hiver)"
-}
