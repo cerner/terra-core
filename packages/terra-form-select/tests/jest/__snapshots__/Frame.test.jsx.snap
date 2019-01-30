@@ -45,6 +45,12 @@ exports[`Frame should render a combobox variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -94,6 +100,12 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -142,6 +154,12 @@ exports[`Frame should render a custom dropdown 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -178,6 +196,12 @@ exports[`Frame should render a default variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -214,6 +238,12 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -260,6 +290,12 @@ exports[`Frame should render a disabled combobox variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -294,6 +330,12 @@ exports[`Frame should render a disabled default variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -340,6 +382,12 @@ exports[`Frame should render a disabled multiple variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -381,6 +429,12 @@ exports[`Frame should render a disabled search variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -427,6 +481,12 @@ exports[`Frame should render a disabled tag variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -475,6 +535,12 @@ exports[`Frame should render a multiple variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -524,6 +590,12 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -567,6 +639,12 @@ exports[`Frame should render a search variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -611,6 +689,12 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -659,6 +743,12 @@ exports[`Frame should render a tag variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -708,6 +798,12 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -756,6 +852,12 @@ exports[`Frame should render an invalid combobox variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -792,6 +894,12 @@ exports[`Frame should render an invalid default variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -840,6 +948,12 @@ exports[`Frame should render an invalid multiple variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -883,6 +997,12 @@ exports[`Frame should render an invalid search variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
 `;
 
@@ -931,5 +1051,72 @@ exports[`Frame should render an invalid tag variant 1`] = `
       className="arrow-icon"
     />
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
 </div>
+`;
+
+exports[`Frame should update the aria-live text when the search has no results 1`] = `
+<Frame
+  disabled={false}
+  dropdown={[Function]}
+  isInvalid={false}
+  variant="tag"
+>
+  <div
+    aria-disabled={false}
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="select tag"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="combobox"
+    tabIndex="-1"
+  >
+    <div
+      aria-disabled={false}
+      className="display"
+      onMouseDown={[Function]}
+      role="textbox"
+    >
+      <ul
+        className="content"
+      >
+        <li
+          className="search-wrapper"
+        >
+          <input
+            aria-disabled={false}
+            aria-label="search"
+            className="search-input"
+            disabled={false}
+            onChange={[Function]}
+            onMouseDown={[Function]}
+            value="qwqerewqrwqer"
+          />
+        </li>
+      </ul>
+    </div>
+    <div
+      className="toggle"
+      onMouseDown={[Function]}
+    >
+      <span
+        className="arrow-icon"
+      />
+    </div>
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      aria-relevant="additions text"
+      className="visually-hidden-component"
+    />
+  </div>
+</Frame>
 `;
