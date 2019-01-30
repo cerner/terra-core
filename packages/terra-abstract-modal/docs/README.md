@@ -63,7 +63,7 @@ export default MyApp;
 ```
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker/docs
 [2]: https://github.com/cerner/terra-framework/tree/master/packages/terra-popup/docs
-[3]: https://github.com/cerner/terra-core/tree/master/packages/terra-menu/docs
+[3]: https://github.com/cerner/terra-framework/tree/master/packages/terra-menu/docs
 [4]: https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/docs
 [5]: https://github.com/cerner/terra-framework/tree/master/packages/terra-modal-manager/docs
 
