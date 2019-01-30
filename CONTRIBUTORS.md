@@ -80,6 +80,7 @@ Cerner Corporation
 - Ryan Rickard [@RLRickard]
 - Supreeth MR [@supreethmr]
 - Chandrakanth Dudela [@ChanduDudela]
+- Shetty Akarsh [@ShettyAkarsh]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -162,3 +163,4 @@ Cerner Corporation
 [@RLRickard]: https://github.com/RLRickard
 [@supreethmr]: https://github.com/supreethmr
 [@ChanduDudela]: https://github.com/ChanduDudela
+[@ShettyAkarsh]: https://github.com/ShettyAkarsh
