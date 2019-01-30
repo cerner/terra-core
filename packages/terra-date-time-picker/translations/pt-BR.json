@@ -1,6 +1,0 @@
-{
-  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Antes (horário de verão)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "Depois (horário padrão)",
-  "Terra.dateTimePicker.timeClarification.message": "O horário selecionado ocorre durante a transição do horário de verão para horário padrão. Deseja salvar antes ou depois da transição do horário de verão para horário padrão?",
-  "Terra.dateTimePicker.timeClarification.title": "Normalização do horário"
-}

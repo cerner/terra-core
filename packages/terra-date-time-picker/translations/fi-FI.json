@@ -1,6 +1,0 @@
-{
-  "Terra.dateTimePicker.timeClarification.title": "Aika Selvennys",
-  "Terra.dateTimePicker.timeClarification.message": "Valittu aika tapahtuu siirryttäessä kesäaikaa Standardin Aikaa. Haluaisitko tulla tämän ennen tai jälkeen kun muutos kesäaikaa Standardin aikaa?",
-  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Ennen (Kesäaika)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "Jälkeen (Normaaliaika)"
-}
