@@ -8,11 +8,6 @@ describe('Heading', () => {
     expect(heading).toMatchSnapshot();
   });
 
-  it('should render a heading component with color prop set', () => {
-    const heading = shallow(<Heading level={1} color="#f00">Test</Heading>);
-    expect(heading).toMatchSnapshot();
-  });
-
   it('should render a heading component with isItalic prop set', () => {
     const heading = shallow(<Heading level={1} isItalic>Test</Heading>);
     expect(heading).toMatchSnapshot();
@@ -58,7 +53,7 @@ describe('Heading', () => {
 
   // Prop Tests
   it('should have all props including customProps set correctly', () => {
-    const heading = shallow(<Heading level={1} id="id" size="small" color="#f00" weight={200} isItalic isVisuallyHidden>All props and custom attrs</Heading>);
+    const heading = shallow(<Heading level={1} id="id" size="small" weight={200} isItalic isVisuallyHidden>All props and custom attrs</Heading>);
     expect(heading).toMatchSnapshot();
   });
 
@@ -80,12 +75,7 @@ describe('Heading', () => {
 
   it('should append styles passed in with attributes', () => {
     const heading = shallow(<Heading level={1} style={{ height: '100px' }}>Test</Heading>);
-    expect(heading.prop('style')).toEqual({ color: 'inherit', height: '100px' });
-  });
-
-  it('should merge color value with styles passed in with attributes when both are set', () => {
-    const heading = shallow(<Heading level={1} color="#f00" style={{ height: '100px' }}>Test</Heading>);
-    expect(heading.prop('style')).toEqual({ color: '#f00', height: '100px' });
+    expect(heading.prop('style')).toEqual({ height: '100px' });
   });
 
   // Error Handling Test

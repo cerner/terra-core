@@ -32,7 +32,7 @@ import './colors.css';
 
 <ProgressBar
   value={60}
-  className="green-bar"
+  className="green-bar white-to-color-gradient"
 />
 
 <ProgressBar
@@ -54,6 +54,20 @@ import './colors.css';
 
 .red-bar {
   color: rgb(255, 0, 0);
+}
+
+.blue-bar {
+  color: blue;
+}
+
+.white-to-color-gradient {
+  &::-webkit-progress-value {
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
+  }
+
+  &::-ms-fill {
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
+  }
 }
 ```
 

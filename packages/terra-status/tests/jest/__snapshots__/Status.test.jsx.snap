@@ -4,11 +4,6 @@ exports[`should render a arrange with status and customProps 1`] = `
 <div
   className="status"
   id="id"
-  style={
-    Object {
-      "borderColor": "green",
-    }
-  }
 >
   <Arrange
     fill={
@@ -36,11 +31,6 @@ exports[`should render a arrange with status and customProps 1`] = `
 exports[`should render a icon with status 1`] = `
 <div
   className="status"
-  style={
-    Object {
-      "borderColor": "grey",
-    }
-  }
 >
   <svg
     fill="#8bc34a"
@@ -64,11 +54,6 @@ exports[`should render a icon with status 1`] = `
 exports[`should render a image with status 1`] = `
 <div
   className="status"
-  style={
-    Object {
-      "borderColor": "red",
-    }
-  }
 >
   <img
     alt="placeholder"
@@ -87,11 +72,6 @@ exports[`should render a image with status 1`] = `
 exports[`should render a simpleText with status 1`] = `
 <div
   className="status"
-  style={
-    Object {
-      "borderColor": "blue",
-    }
-  }
 >
   <div>
     Lorem labore et dolore magna aliqua.

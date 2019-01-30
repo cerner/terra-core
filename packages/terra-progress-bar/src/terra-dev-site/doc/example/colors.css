@@ -18,3 +18,23 @@
 .yellow-bar {
   color: yellow;
 }
+
+.white-to-color-gradient {
+  &::-webkit-progress-value {
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
+  }
+
+  &::-ms-fill {
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
+  }
+}
+
+.red-to-color-gradient {
+  &::-webkit-progress-value {
+    background: linear-gradient(to left, transparent, red);
+  }
+
+  &::-ms-fill {
+    background: linear-gradient(to left, transparent, red);
+  }
+}

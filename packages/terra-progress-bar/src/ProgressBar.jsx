@@ -28,10 +28,6 @@ const propTypes = {
    */
   max: PropTypes.number,
   /**
-   * Boolean check for gradient.
-   */
-  hasGradient: PropTypes.bool,
-  /**
    * Value passed to aria-valuetext for accessibility. You can view more about this attribute
    * at https://www.w3.org/WAI/PF/aria/states_and_properties#aria-valuetext.
    */
@@ -41,7 +37,6 @@ const propTypes = {
 const defaultProps = {
   heightSize: 'small',
   max: 100,
-  hasGradient: false,
   valueText: undefined,
 };
 
@@ -49,12 +44,10 @@ const ProgressBar = ({
   heightSize,
   value,
   max,
-  hasGradient,
   valueText,
   ...customProps
 }) => {
   const classes = cx([
-    { 'progress-bar-gradient': hasGradient },
     'progress-bar',
     heightSize,
     customProps.className,
