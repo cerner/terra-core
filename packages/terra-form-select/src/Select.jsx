@@ -212,7 +212,7 @@ class Select extends React.Component {
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
         dropdown={dropdownProps => (
-          <DropdownMenu {...dropdownProps}>
+          <DropdownMenu intl={intl} {...dropdownProps}>
             {this.state.tags}
             {children}
           </DropdownMenu>

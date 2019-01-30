@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`CollapsibleMenuViewDivider should render a default component 1`] = `
-<div
-  className="divider face-up-item"
-/>
-`;
-
-exports[`CollapsibleMenuViewDivider should render a menu divider in the context of the collapsible menu 1`] = `<MenuDivider />`;
