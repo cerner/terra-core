@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Announce current selection to the screen reader
+* Create dropdown that announces no search results to screen reader
+
+### Changed
+* Made it easier for screen readers to read disabled state to users
 
 5.4.0 - (January 28, 2019)
 ------------------

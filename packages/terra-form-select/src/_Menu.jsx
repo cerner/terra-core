@@ -56,6 +56,10 @@ const propTypes = {
    * @private Input that was used to query the dropdown
    */
   searchInput: PropTypes.instanceOf(Element),
+  /**
+   * @private Visually hidden component designed to feed screen reader text to read.
+   */
+  visuallyHiddenComponent: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
 const defaultProps = {
@@ -63,9 +67,10 @@ const defaultProps = {
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
+  searchInput: undefined,
   searchValue: undefined,
   value: undefined,
-  searchInput: undefined,
+  visuallyHiddenComponent: undefined,
 };
 
 const contextTypes = {
@@ -99,8 +104,12 @@ class Menu extends React.Component {
    * @return {Object} - The new state object.
    */
   static getDerivedStateFromProps(props, state) {
-    const { searchValue, noResultContent } = props;
+    const {
+      searchValue, noResultContent,
+    } = props;
     const children = Util.filter(props.children, props.searchValue, props.optionFilter);
+
+    let hasNoResults = false;
 
     if (Util.shouldAllowFreeText(props, children)) {
       children.push(<AddOption value={searchValue} />);
@@ -108,11 +117,15 @@ class Menu extends React.Component {
 
     if (Util.shouldShowNoResults(props, children)) {
       children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
+      hasNoResults = true;
+    } else {
+      hasNoResults = false;
     }
 
     return {
       children,
       searchValue,
+      hasNoResults,
       active: Util.getActiveOptionFromProps(props, children, state),
     };
   }
@@ -122,6 +135,7 @@ class Menu extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    this.updateLiveRegion();
     this.scrollIntoView();
 
     if (prevState.active !== this.state.active && this.props.searchInput) {
@@ -137,6 +151,33 @@ class Menu extends React.Component {
     if (this.props.searchInput) {
       this.props.searchInput.removeAttribute('aria-activedescendant');
     }
+  }
+
+  updateLiveRegion() {
+    if (this.liveRegionTimeOut) {
+      clearTimeout(this.liveRegionTimeOut);
+    }
+
+    this.liveRegionTimeOut = setTimeout(() => {
+      const {
+        hasNoResults,
+      } = this.state;
+
+      const {
+        visuallyHiddenComponent,
+        searchValue,
+      } = this.props;
+
+      const {
+        intl,
+      } = this.context;
+
+      if (hasNoResults && searchValue) {
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+      } else {
+        visuallyHiddenComponent.current.innerText = '';
+      }
+    }, 500);
   }
 
   /**

@@ -1,6 +1,0 @@
-{
-  "Terra.dateTimePicker.timeClarification.title": "Klärung der Zeit",
-  "Terra.dateTimePicker.timeClarification.message": "Die ausgewählte Zeit liegt während der Umstellung von Sommer- auf Standardzeit. Möchten Sie für die Zeit vor oder nach der Zeitumstellung dokumentieren?",
-  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "Vor (Sommerzeit)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "Nach (Standardzeit)"
-}

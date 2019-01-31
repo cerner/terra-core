@@ -32,7 +32,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
           <div
             className="body body-std"
           >
-            <p
+            <div
               className="section"
             >
               <strong
@@ -41,7 +41,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
                 Advisory.
               </strong>
               This is an advisory alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -55,7 +55,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
           <div
             className="body body-std"
           >
-            <p
+            <div
               className="section"
             >
               <strong
@@ -64,7 +64,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
                 Advisory.
               </strong>
               This is an advisory alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -116,7 +116,7 @@ exports[`Alert of type alert with text content should render an Alert component 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -125,7 +125,7 @@ exports[`Alert of type alert with text content should render an Alert component 
                 Alert.
               </strong>
               This is an alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -147,7 +147,7 @@ exports[`Alert of type alert with text content should render an Alert component 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -156,7 +156,7 @@ exports[`Alert of type alert with text content should render an Alert component 
                 Alert.
               </strong>
               This is an alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -217,7 +217,7 @@ exports[`Alert of type custom with custom title and text content should render a
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section section-custom"
             >
               <strong
@@ -226,7 +226,7 @@ exports[`Alert of type custom with custom title and text content should render a
                 Help!
               </strong>
               This is a custom alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -252,7 +252,7 @@ exports[`Alert of type custom with custom title and text content should render a
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section section-custom"
             >
               <strong
@@ -261,7 +261,7 @@ exports[`Alert of type custom with custom title and text content should render a
                 Help!
               </strong>
               This is a custom alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -313,7 +313,7 @@ exports[`Alert of type error with text content should render an Alert component 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -322,7 +322,7 @@ exports[`Alert of type error with text content should render an Alert component 
                 Error.
               </strong>
               This is an error.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -344,7 +344,7 @@ exports[`Alert of type error with text content should render an Alert component 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -353,7 +353,7 @@ exports[`Alert of type error with text content should render an Alert component 
                 Error.
               </strong>
               This is an error.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -405,7 +405,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -416,7 +416,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
               <span>
                 Four score and seven years ago . . .
               </span>
-            </p>
+            </div>
           </div>
           
         </div>
@@ -438,7 +438,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -449,7 +449,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
               <span>
                 Four score and seven years ago . . .
               </span>
-            </p>
+            </div>
           </div>
           
         </div>
@@ -501,7 +501,7 @@ exports[`Alert of type info with text content should render an Alert component o
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -510,7 +510,7 @@ exports[`Alert of type info with text content should render an Alert component o
                 Information.
               </strong>
               This is an information alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -532,7 +532,7 @@ exports[`Alert of type info with text content should render an Alert component o
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -541,7 +541,7 @@ exports[`Alert of type info with text content should render an Alert component o
                 Information.
               </strong>
               This is an information alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -605,7 +605,7 @@ exports[`Alert of type success with an action button text content should render 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -614,7 +614,7 @@ exports[`Alert of type success with an action button text content should render 
                 Success.
               </strong>
               This is a success alert.
-            </p>
+            </div>
           </div>
           <div
             className="actions"
@@ -651,7 +651,7 @@ exports[`Alert of type success with an action button text content should render 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -660,7 +660,7 @@ exports[`Alert of type success with an action button text content should render 
                 Success.
               </strong>
               This is a success alert.
-            </p>
+            </div>
           </div>
           <div
             className="actions"
@@ -727,7 +727,7 @@ exports[`Alert of type success with text content should render an Alert componen
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -736,7 +736,7 @@ exports[`Alert of type success with text content should render an Alert componen
                 Success.
               </strong>
               This is a success alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -758,7 +758,7 @@ exports[`Alert of type success with text content should render an Alert componen
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -767,7 +767,7 @@ exports[`Alert of type success with text content should render an Alert componen
                 Success.
               </strong>
               This is a success alert.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -819,7 +819,7 @@ exports[`Alert of type warning with text content should render an Alert componen
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -828,7 +828,7 @@ exports[`Alert of type warning with text content should render an Alert componen
                 Warning.
               </strong>
               This is an warning.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -850,7 +850,7 @@ exports[`Alert of type warning with text content should render an Alert componen
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -859,7 +859,7 @@ exports[`Alert of type warning with text content should render an Alert componen
                 Warning.
               </strong>
               This is an warning.
-            </p>
+            </div>
           </div>
           
         </div>
@@ -911,7 +911,7 @@ exports[`Alert with no props should render a default component 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -920,7 +920,7 @@ exports[`Alert with no props should render a default component 1`] = `
                 Alert.
               </strong>
               
-            </p>
+            </div>
           </div>
           
         </div>
@@ -942,7 +942,7 @@ exports[`Alert with no props should render a default component 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -951,7 +951,7 @@ exports[`Alert with no props should render a default component 1`] = `
                 Alert.
               </strong>
               
-            </p>
+            </div>
           </div>
           
         </div>
@@ -1024,7 +1024,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section section-custom"
             >
               <strong
@@ -1033,7 +1033,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
                 Help!
               </strong>
               This is a custom alert.
-            </p>
+            </div>
           </div>
           <div
             className="actions actions-custom"
@@ -1084,7 +1084,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section section-custom"
             >
               <strong
@@ -1093,7 +1093,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
                 Help!
               </strong>
               This is a custom alert.
-            </p>
+            </div>
           </div>
           <div
             className="actions actions-custom"
@@ -1170,7 +1170,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -1179,7 +1179,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                 Alert.
               </strong>
               This is a test
-            </p>
+            </div>
           </div>
           <div
             className="actions"
@@ -1215,7 +1215,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                 xmlns="http://www.w3.org/2000/svg"
               />
             </span>
-            <p
+            <div
               className="section"
             >
               <strong
@@ -1224,7 +1224,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                 Alert.
               </strong>
               This is a test
-            </p>
+            </div>
           </div>
           <div
             className="actions"
