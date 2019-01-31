@@ -29,8 +29,6 @@
 | react-dom | ^16.4.2 | ^16.0.0 | React package for working with the DOM. |
 | react-router-dom | ^4.0.0 | >=15 | DOM bindings for React Router |
 | react-test-renderer | ^16.4.2 | ^16.0.0 | React package for snapshot testing. |
-| rimraf | ^2.6.1 | -- | A deep deletion module for node (like `rm -rf`) |
-| shelljs | ^0.8.2 | -- | Portable Unix shell commands for Node.js |
 | stylelint | ^9.0.0 | -- | A mighty, modern CSS linter. |
 | stylelint-config-terra | ^1.0.0 | -- | Terra Stylelint Shared Config |
 | terra-dev-site | ^2.0.0 | ^16.4.2 | Dynamically builds a react-hash-routed site based on site configuration, navigation configuration and component configuration. |
