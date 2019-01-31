@@ -44,7 +44,7 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rimraf lib",
+    "compile:clean": "rm -rf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",

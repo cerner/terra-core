@@ -125,6 +125,7 @@ class Frame extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
+    this.visuallyHiddenComponent = React.createRef();
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -408,6 +409,7 @@ class Frame extends React.Component {
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
           <span className={cx('arrow-icon')} />
         </div>
+        <span className={cx('visually-hidden-component')} ref={this.visuallyHiddenComponent} aria-live="polite" aria-relevant="additions text" aria-atomic="true" />
         {this.state.isOpen
           && (
           <Dropdown
@@ -427,6 +429,7 @@ class Frame extends React.Component {
                  onDeselect,
                  optionFilter,
                  noResultContent,
+                 visuallyHiddenComponent: this.visuallyHiddenComponent,
                  onSelect: this.handleSelect,
                  onRequestClose: this.closeDropdown,
                  searchValue: this.state.searchValue,

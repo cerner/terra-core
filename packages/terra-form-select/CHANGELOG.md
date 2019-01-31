@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Create dropdown that announces no search results to screen reader
+
 ### Changed
 * Made it easier for screen readers to read disabled state to users
 
