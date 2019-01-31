@@ -4,6 +4,27 @@ Changelog
 Unreleased
 ----------
 
+3.2.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.1.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.0.0 - (January 8, 2019)
+------------------
+### Changed
+* Updated theme variables
+* Add conditional render for profile photo
+
+2.34.0 - (January 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.33.0 - (November 19, 2018)
 ------------------
 ### Changed

@@ -1,9 +1,9 @@
+/* stylelint-disable */
 .legacy-theme-test > * {
   align-items: center;
   display: flex;
 }
 
-// stylelint-disable-next-line selector-max-compound-selectors
 .legacy-theme-test > * > div:first-child {
   flex-basis: 75px;
   height: 29px;
