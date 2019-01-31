@@ -35,7 +35,7 @@
     }
   },
   "scripts": {
-    "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=moment --nohoist=one-cerner-style-icons",
+    "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
     "clean:all": "lerna clean --yes && rm -rf node_modules",
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
