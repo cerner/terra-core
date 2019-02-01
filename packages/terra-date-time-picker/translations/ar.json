@@ -1,6 +1,0 @@
-{
-  "Terra.dateTimePicker.timeClarification.title": "توضيح التوقيت",
-  "Terra.dateTimePicker.timeClarification.message": "يحين الوقت الذي تم تحديده خلال التحول من التوقيت الصيفي إلى التوقيت القياسي. هل تريد إدخال ذلك قبل أو بعد تغيير الوقت من التوقيت الصيفي إلى التوقيت القياسي؟",
-  "Terra.dateTimePicker.timeClarification.button.daylightSaving": "قبل (التوقيت الصيفي)",
-  "Terra.dateTimePicker.timeClarification.button.standardTime": "بعد (التوقيت القياسي)"
-}
