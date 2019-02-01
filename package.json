@@ -25,17 +25,10 @@
     "extends": "terra"
   },
   "stylelint": {
-    "extends": "stylelint-config-terra",
-    "rules": {
-      "terra/custom-property-name": true,
-      "terra/custom-property-no-duplicate-declaration": true,
-      "terra/custom-property-pattern": true,
-      "terra/custom-property-pseudo-selectors": true,
-      "terra/custom-property-namespace": true
-    }
+    "extends": "stylelint-config-terra"
   },
   "scripts": {
-    "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=moment --nohoist=one-cerner-style-icons",
+    "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
     "clean:all": "lerna clean --yes && rm -rf node_modules",
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
@@ -91,7 +84,7 @@
     "react-router-dom": "^4.0.0",
     "react-test-renderer": "^16.4.2",
     "stylelint": "^9.0.0",
-    "stylelint-config-terra": "^1.0.0",
+    "stylelint-config-terra": "^2.0.0",
     "terra-dev-site": "^3.0.0",
     "terra-toolkit": "^4.16.1",
     "webpack-merge": "^4.1.2"
