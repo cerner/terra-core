@@ -118,7 +118,7 @@ Then we can implement a method to loop through our data and create the section w
 
   render() {
     return (
-      <List isDivided>
+      <List dividerStyle="standard">
         {this.createSections(mockData)}
       </List>
     );

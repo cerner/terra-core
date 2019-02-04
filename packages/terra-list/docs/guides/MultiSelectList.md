@@ -99,7 +99,7 @@ Then we can implement a method to loop through our data and create the list item
   render() {
     return (
       <List
-        isDivided
+        dividerStyle="standard"
         role="listbox"
         aria-multiselectable
       >

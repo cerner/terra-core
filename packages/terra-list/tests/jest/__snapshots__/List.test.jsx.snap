@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render with divided items 1`] = `
+exports[`should render with bottom only divided items 1`] = `
 <ul
-  className="list"
-  data-list-items-divided={true}
+  className="list divider-bottom-only"
 >
   <ListItem
     hasChevron={false}
@@ -79,4 +78,115 @@ exports[`should render with no items 1`] = `
 <ul
   className="list"
 />
+`;
+
+exports[`should render with standard divided items 1`] = `
+<ul
+  className="list divider-standard"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</ul>
+`;
+
+exports[`should render with standard padded items 1`] = `
+<ul
+  className="list padding-standard"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</ul>
+`;
+
+exports[`should render with thin padded items 1`] = `
+<ul
+  className="list padding-thin"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</ul>
 `;

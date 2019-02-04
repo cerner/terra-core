@@ -39,7 +39,7 @@ class SingleSelectList extends React.Component {
 
   render() {
     return (
-      <List isDivided role="listbox">
+      <List dividerStyle="standard" role="listbox">
         {this.createListItems(mockData)}
       </List>
     );

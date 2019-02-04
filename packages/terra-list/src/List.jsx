@@ -14,7 +14,11 @@ const propTypes = {
   /**
    * Whether or not the list's child items should have a border color applied.
    */
-  isDivided: PropTypes.bool,
+  dividerStyle: PropTypes.oneOf(['none', 'standard', 'bottom-only']),
+  /**
+   * The padding styling to apply to the child list item content.
+   */
+  paddingStyle: PropTypes.oneOf(['none', 'standard', 'thin']),
   /**
    * Function callback for the ref of the ul.
    */
@@ -27,28 +31,31 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
-  isDivided: false,
+  dividerStyle: 'none',
+  paddingStyle: 'none',
   role: 'none',
 };
 
 const List = ({
   children,
-  isDivided,
+  dividerStyle,
+  paddingStyle,
   refCallback,
   role,
   ...customProps
 }) => {
   const listClassNames = cx([
     'list',
+    { 'padding-standard': paddingStyle === 'standard' },
+    { 'padding-thin': paddingStyle === 'thin' },
+    { 'divider-standard': dividerStyle === 'standard' },
+    { 'divider-bottom-only': dividerStyle === 'bottom-only' },
     customProps.className,
   ]);
 
   const attrSpread = {};
   if (role && role.length > 0 && role !== 'none') {
     attrSpread.role = role;
-  }
-  if (isDivided) {
-    attrSpread['data-list-items-divided'] = isDivided;
   }
 
   return (

@@ -62,7 +62,7 @@ class SectionWithSubsection2 extends React.Component {
 
   render() {
     return (
-      <List isDivided>
+      <List dividerStyle="standard">
         {this.createSections(mockData)}
       </List>
     );

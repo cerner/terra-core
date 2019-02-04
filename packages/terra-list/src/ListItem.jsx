@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import ListUtils from './ListUtils';
-import styles from './ListItem.module.scss';
+import styles from './List.module.scss';
 
 const cx = classNames.bind(styles);
 

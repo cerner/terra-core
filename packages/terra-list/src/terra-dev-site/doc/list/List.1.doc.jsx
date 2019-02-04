@@ -12,6 +12,8 @@ import ListExample from '../example/List';
 import ListExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/List';
 import ListDividedExample from '../example/ListDivided';
 import ListDividedExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListDivided';
+import ListPaddedExample from '../example/ListPadded';
+import ListPaddedExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListPadded';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -29,6 +31,11 @@ const DocPage = () => (
         title: 'Divided List',
         example: <ListDividedExample />,
         source: ListDividedExampleSrc,
+      },
+      {
+        title: 'Padded List',
+        example: <ListPaddedExample />,
+        source: ListPaddedExampleSrc,
       },
     ]}
     propsTables={[

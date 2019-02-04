@@ -16,7 +16,7 @@ If a list implementation contains selectable list options the role prop should b
 import React from 'react';
 import List, { Item } from 'terra-list';
 
-<List isDivided role="listbox">
+<List dividerStyle="standard" role="listbox">
   <Item isSelectable key="section-1-item-1">
     <p>List item text</p>
   </Item>

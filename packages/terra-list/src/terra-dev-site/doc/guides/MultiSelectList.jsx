@@ -40,7 +40,7 @@ class MutliSelectList extends React.Component {
   render() {
     return (
       <List
-        isDivided
+        dividerStyle="standard"
         role="listbox"
         aria-multiselectable
       >

@@ -6,6 +6,19 @@ describe('List', () => {
 
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-list-standard-item-fill-padding-bottom': '2rem',
+        '--terra-list-standard-item-fill-padding-left': '2rem',
+        '--terra-list-standard-item-fill-padding-right': '2rem',
+        '--terra-list-standard-item-fill-padding-top': '2rem',
+        '--terra-list-thin-item-fill-padding-bottom': '1rem',
+        '--terra-list-thin-item-fill-padding-left': '2rem',
+        '--terra-list-thin-item-fill-padding-right': '2rem',
+        '--terra-list-thin-item-fill-padding-top': '1rem',
+      },
+    });
   });
 
   describe('ListItem Test', () => {
