@@ -7,7 +7,7 @@ The viewport can be set to the immediate parent or window.
 
 It is not necessary to set each breakpoint. If a breakpoint is not set the component will look at each successive smaller breakpoint until one is found.
 
-The ResponsiveElement observes the available width. Meaning padding, borders, and margins set on the parent are not included in the calculation. Modifying box-sizing will impact how these properties are used in an elements width calculation. For more details see: https://css-tricks.com/almanac/properties/b/box-sizing/
+The ResponsiveElement observes the total width. Meaning padding, borders except the margins set on the parent are included in the calculation. Modifying box-sizing will impact how these properties are used in an elements width calculation. For more details see: https://css-tricks.com/almanac/properties/b/box-sizing/
 
 ## Getting Started
 
