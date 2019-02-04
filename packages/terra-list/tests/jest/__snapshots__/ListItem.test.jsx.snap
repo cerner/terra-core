@@ -38,10 +38,10 @@ exports[`should mount with isSelectable and hasChevron 1`] = `
         <IconChevronRight
           className=""
           data-name="Layer 1"
-          height="0.8em"
+          height="1em"
           isBidi={true}
           viewBox="0 0 48 48"
-          width="0.8em"
+          width="1em"
           xmlns="http://www.w3.org/2000/svg"
         />
       </span>

@@ -1,9 +1,11 @@
 # terra-avatar Upgrade Guide
-## V2 Major Updates
-### Removed
+## Changes from version 1 to version 2
+
+### Props
+#### Removed
 * `variant` prop. Avatar is now split into three sub components - `Avatar`, `Facility`, and `SharedUser`. `Avatar` is the default export, while `Facility` and `SharedUser` are named exports.
 
-### Added
+#### Added
 * `alt` prop. Represents alternative text. This is required on all variants for accessibility.
 * `color` prop. This controls theme specific colors. By default, it is set to `auto`. `auto` hashes the `alt` prop to generate a color. See prop tables for accepted values.
 * `hashValue` prop. This value will be used in place of `alt` to generate a color. Use this if `alt` should not be used to generate a color.
@@ -11,16 +13,63 @@
 * `isAriaHidden` prop. This controls whether to hide the component from accessibility. Use this when avatar is purely decorative in nature.
 * `size` prop.
 
-### Updated
+#### Updated
 * `initials` prop now only accepts one or two letters.
 
-## Steps to uplift to V2
+### Changes to CSS Custom Properties
+
+#### Renamed
+
+| Previous | Updated |
+|-|-|
+| --terra-avatar-icon-facility | --terra-avatar-icon-facility-background-image |
+| --terra-avatar-icon-user | --terra-avatar-icon-user-background-image |
+
+#### Removed
+* --terra-avatar-background-color
+* --terra-avatar-box-shadow
+* --terra-avatar-size
+* --terra-avatar-font-size-large
+* --terra-avatar-font-size-small
+
+#### Added
+* --terra-avatar-height
+* --terra-avatar-width
+* --terra-avatar-icon-shared-user-background-image
+* --terra-avatar-initials-font-size
+* --terra-avatar-initials-font-weight
+* --terra-avatar-neutral-background-color
+* --terra-avatar-neutral-after-box-shadow
+* --terra-avatar-one-background-color
+* --terra-avatar-one-after-box-shadow
+* --terra-avatar-two-background-color
+* --terra-avatar-two-after-box-shadow
+* --terra-avatar-three-background-color
+* --terra-avatar-three-after-box-shadow
+* --terra-avatar-four-background-color
+* --terra-avatar-four-after-box-shadow
+* --terra-avatar-five-background-color
+* --terra-avatar-five-after-box-shadow
+* --terra-avatar-six-background-color
+* --terra-avatar-six-after-box-shadow
+* --terra-avatar-seven-background-color
+* --terra-avatar-seven-after-box-shadow
+* --terra-avatar-eight-background-color
+* --terra-avatar-eight-after-box-shadow
+* --terra-avatar-nine-background-color
+* --terra-avatar-nine-after-box-shadow
+* --terra-avatar-ten-background-color
+* --terra-avatar-ten-after-box-shadow
+* --terra-avatar-is-deceased-background-color
+* --terra-avatar-image-is-deceased-opacity
+* --terra-avatar-is-deceased-after-box-shadow
+
+### Steps to uplift to V2
 1. Use the default export for the `Avatar` variant. Use a named export for `Facility` and `SharedUser` variants.
 2. Specify alternative text, using the `alt` prop.
 3. Profit.
 
-## Uplift Code Examples
-### V1 Code
+#### V1 Code
 ```javascript
 import Avatar from 'terra-avatar'
 
@@ -28,7 +77,7 @@ import Avatar from 'terra-avatar'
 <Avatar variant="facility" />
 ```
 
-### V2 Code
+#### V2 Code
 ```javascript
 import Avatar, { Facility } from 'terra-avatar'
 

@@ -8,10 +8,10 @@
 | glob | ^7.1.2 | -- | a little globber |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-docgen | ^2.15.0 | -- | A CLI and toolkit to extract information from React components for documentation generation. |
-| terra-markdown | ^2.13.0 | ^16.2.0 | terra-markdown |
+| terra-markdown | ^2.19.0 | ^16.4.2 | React component to display the content of markdown files. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
+| react | ^16.4.2 | -- | React is a JavaScript library for building user interfaces. |
+| react-dom | ^16.4.2 | ^16.0.0 | React package for working with the DOM. |

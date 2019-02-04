@@ -164,10 +164,10 @@ const Alert = ({
   }
 
   const alertMessageContent = (
-    <p className={alertSectionClassName}>
+    <div className={alertSectionClassName}>
       {(title || defaultTitle) && <strong className={cx('title')}>{title || defaultTitle}</strong>}
       {children}
-    </p>
+    </div>
   );
 
   return (

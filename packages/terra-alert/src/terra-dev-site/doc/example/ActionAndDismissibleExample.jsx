@@ -27,8 +27,6 @@ class ActionAndDismissibleExample extends React.Component {
   }
 
   render() {
-    const alertStartTagStr = '<Alert type="custom" onDismiss={this.handleDismiss} customStatusColor="orange" action={<Button text="Action" variant="primary" onClick={this.actionFunc} />} >';
-    const alertEndTagStr = '</Alert>';
     const alertText = 'This is a a custom alert with no icon or title. It is configured to be dismissible and with a custom action button. Click on the Dismiss button to dismiss the alert.';
     let alertElem = '';
     if (!this.state.isDismissed) {
@@ -40,26 +38,14 @@ class ActionAndDismissibleExample extends React.Component {
     }
     return (
       <div>
-        <div dir="ltr">
-          <h3>Alert of type custom with no icon or title that is dismissible and has an action button</h3>
-          <br />
-          <code>
-            {alertStartTagStr}
-            <br />
-            &nbsp;&nbsp;
-            {alertText}
-            <br />
-            {alertEndTagStr}
-          </code>
-        </div>
-        <br />
         {alertElem}
         <br />
         <p>
-Action button has been clicked
+          Action button has been clicked
+          {' '}
           {this.state.actionButtonClickCount}
           {' '}
-times.
+          times.
         </p>
       </div>
     );
