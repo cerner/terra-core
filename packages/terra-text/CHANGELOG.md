@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed color prop
 
 3.1.0 - (January 26, 2019)
 ------------------

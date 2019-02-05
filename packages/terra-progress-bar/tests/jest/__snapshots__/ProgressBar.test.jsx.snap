@@ -6,8 +6,21 @@ exports[`should render a ProgressBar component with default heightSize 50% fill 
   aria-valuemin={0}
   aria-valuenow={50}
   aria-valuetext="6%"
-  className="progress-bar small"
+  className="progress-bar small default-color"
   dir="rtl"
+  max={100}
+  tabIndex="-1"
+  value={50}
+/>
+`;
+
+exports[`should render a ProgressBar component with default heightSize and 50% fill and colorClass prop 1`] = `
+<progress
+  aria-valuemax={100}
+  aria-valuemin={0}
+  aria-valuenow={50}
+  aria-valuetext="60%"
+  className="progress-bar small yellow-bar"
   max={100}
   tabIndex="-1"
   value={50}
@@ -20,7 +33,7 @@ exports[`should render a ProgressBar component with large heightSize and 60% fil
   aria-valuemin={0}
   aria-valuenow={60}
   aria-valuetext="15%"
-  className="progress-bar large"
+  className="progress-bar large default-color"
   max={100}
   tabIndex="-1"
   value={60}
@@ -33,7 +46,7 @@ exports[`should render a ProgressBar component with tiny heightSize and 15% fill
   aria-valuemin={0}
   aria-valuenow={15}
   aria-valuetext="15%"
-  className="progress-bar tiny"
+  className="progress-bar tiny default-color"
   max={100}
   tabIndex="-1"
   value={15}
@@ -45,7 +58,7 @@ exports[`should render a default component 1`] = `
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={15}
-  className="progress-bar small"
+  className="progress-bar small default-color"
   max={100}
   tabIndex="-1"
   value={15}

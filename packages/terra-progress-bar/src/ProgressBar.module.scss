@@ -1,6 +1,5 @@
 :local {
   .progress-bar {
-    background: #d3d4d5;
     border-radius: var(--terra-progress-bar-border-radius, 0.5em);
     display: block;
     height: var(--terra-progress-bar-height, 0.8rem);
@@ -17,20 +16,12 @@
 
       // To fix background color to the proper shade of Grey in Safari
       &::-webkit-progress-bar {
-        background: #d3d4d5;
         border-radius: 0;
       }
 
       &::-webkit-progress-value {
-        background-color: currentColor;
         border-bottom-left-radius: 0;
-        border-right: 1px solid #fff;
         border-top-left-radius: 0;
-      }
-
-      &::-ms-fill {
-        background-color: currentColor;
-        border-right: 1px solid #fff;
       }
     }
 
@@ -38,13 +29,26 @@
     &[value='0'] {
       &::-webkit-progress-value {
         border-bottom-right-radius: 0;
-        border-right: 0 solid #fff;
         border-top-right-radius: 0;
       }
+    }
+  }
 
-      &::-ms-fill {
-        border-right: 0 solid #fff;
-      }
+  .default-color {
+    background-color: var(--terra-progress-bar-background-color, #d3d4d5);
+    color: var(--terra-progress-bar-progress-background-color, #0092e0);
+
+    // To fix background color to the proper shade of Grey in Safari
+    &::-webkit-progress-bar {
+      background-color: var(--terra-progress-bar-background-color, #d3d4d5);
+    }
+
+    &::-webkit-progress-value {
+      background-color: var(--terra-progress-bar-progress-background-color, #0092e0);
+    }
+
+    &::-ms-fill {
+      background-color: var(--terra-progress-bar-progress-background-color, #0092e0);
     }
   }
 

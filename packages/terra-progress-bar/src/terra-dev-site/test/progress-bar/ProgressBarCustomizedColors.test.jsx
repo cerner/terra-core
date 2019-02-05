@@ -4,6 +4,6 @@ import '../../doc/example/colors.css';
 
 export default () => (
   <div>
-    <ProgressBar valueText="8%" value={8} max={10} className="blue-bar white-to-color-gradient" />
+    <ProgressBar valueText="8%" value={8} max={10} colorClass="green-to-red-bar-blue-to-yellow-background-green-border" />
   </div>
 );

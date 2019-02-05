@@ -32,12 +32,17 @@ const propTypes = {
    * at https://www.w3.org/WAI/PF/aria/states_and_properties#aria-valuetext.
    */
   valueText: PropTypes.string,
+  /**
+   * Sets an author defined class, to control the colors of the progress bar
+   */
+  colorClass: PropTypes.string,
 };
 
 const defaultProps = {
   heightSize: 'small',
   max: 100,
   valueText: undefined,
+  colorClass: 'default-color',
 };
 
 const ProgressBar = ({
@@ -45,11 +50,13 @@ const ProgressBar = ({
   value,
   max,
   valueText,
+  colorClass,
   ...customProps
 }) => {
   const classes = cx([
     'progress-bar',
     heightSize,
+    colorClass,
     customProps.className,
   ]);
 

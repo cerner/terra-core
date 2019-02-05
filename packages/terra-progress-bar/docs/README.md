@@ -21,54 +21,24 @@ import './colors.css';
   heightSize="tiny"
   value={3}
   max={10}
-  className="green-bar"
+  colorClass="green-bar"
 />
 
 <ProgressBar
   heightSize="tiny"
   value={40}
-  className="orange-bar"
+  colorClass="orange-bar"
 />
 
 <ProgressBar
   value={60}
-  className="green-bar white-to-color-gradient"
 />
 
 <ProgressBar
   value={10}
   max={10}
-  className="red-bar"
+  colorClass="red-bar"
 />
-```
-
-```css
-// colors.css
-.orange-bar {
-  color: orange;
-}
-
-.green-bar {
-  color: #8ccc62;
-}
-
-.red-bar {
-  color: rgb(255, 0, 0);
-}
-
-.blue-bar {
-  color: blue;
-}
-
-.white-to-color-gradient {
-  &::-webkit-progress-value {
-    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
-  }
-
-  &::-ms-fill {
-    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
-  }
-}
 ```
 
 ## Component Features
