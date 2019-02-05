@@ -86,7 +86,7 @@
     "stylelint": "^9.0.0",
     "stylelint-config-terra": "^2.0.0",
     "terra-dev-site": "^3.0.0",
-    "terra-toolkit": "^4.5.0",
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit#update-duplicate-dependency",
     "webpack-merge": "^4.1.2"
   }
 }
