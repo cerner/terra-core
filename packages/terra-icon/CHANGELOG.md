@@ -6,6 +6,11 @@ Unreleased
 ### Removed
 * Dependency on terra-table
 
+3.2.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.1.0 - (January 26, 2019)
 ------------------
 ### Changed
