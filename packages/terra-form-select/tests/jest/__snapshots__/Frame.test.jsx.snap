@@ -4,7 +4,7 @@ exports[`Frame should render a combobox variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -59,7 +59,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -115,7 +115,7 @@ exports[`Frame should render a custom dropdown 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -170,7 +170,7 @@ exports[`Frame should render a default variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select default"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -212,7 +212,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select default"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -501,7 +501,7 @@ exports[`Frame should render a multiple variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select multiple"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -556,7 +556,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select multiple"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -612,7 +612,7 @@ exports[`Frame should render a search variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select search"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -662,7 +662,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select search"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -713,7 +713,7 @@ exports[`Frame should render a tag variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -768,7 +768,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -824,7 +824,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -879,7 +879,7 @@ exports[`Frame should render an invalid default variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select default is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -921,7 +921,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select multiple is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -976,7 +976,7 @@ exports[`Frame should render an invalid search variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select search is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -1026,7 +1026,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -1087,7 +1087,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
   <div
     aria-disabled={false}
     aria-expanded={false}
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     className="select tag"
     onBlur={[Function]}
     onFocus={[Function]}

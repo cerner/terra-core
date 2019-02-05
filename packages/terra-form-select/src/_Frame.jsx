@@ -164,6 +164,7 @@ class Frame extends React.Component {
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
       type: 'text',
+      'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
       'aria-label': 'search',
       'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
@@ -394,15 +395,21 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
+    let role;
+
+    if (!disabled) {
+      role = 'combobox';
+    }
+
     return (
       <div
         {...customProps}
-        role={!disabled ? 'combobox' : undefined}
-        aria-controls={!disabled && this.state.isOpen ? 'terra-select-dropdown' : undefined}
+        role={role}
+        aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
-        aria-haspopup={!disabled ? 'true' : undefined}
-        aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+        aria-haspopup={!disabled ? 'listbox' : undefined}
+        aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -438,11 +445,11 @@ class Frame extends React.Component {
                  onDeselect,
                  optionFilter,
                  noResultContent,
+                 menuTriggerElement: variant === Variants.DEFAULT ? this.select : this.input,
                  visuallyHiddenComponent: this.visuallyHiddenComponent,
                  onSelect: this.handleSelect,
                  onRequestClose: this.closeDropdown,
                  searchValue: this.state.searchValue,
-                 searchInput: this.input,
                })}
           </Dropdown>
           )

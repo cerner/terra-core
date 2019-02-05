@@ -53,9 +53,9 @@ const propTypes = {
     Variants.TAG,
   ]).isRequired,
   /**
-   * @private Input that was used to query the dropdown
+   * @private Element that is used to trigger the dropdown, such as an input or button.
    */
-  searchInput: PropTypes.instanceOf(Element),
+  menuTriggerElement: PropTypes.instanceOf(Element),
   /**
    * @private Visually hidden component designed to feed screen reader text to read.
    */
@@ -64,10 +64,10 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  menuTriggerElement: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
-  searchInput: undefined,
   searchValue: undefined,
   value: undefined,
   visuallyHiddenComponent: undefined,
@@ -138,8 +138,12 @@ class Menu extends React.Component {
     this.updateLiveRegion();
     this.scrollIntoView();
 
-    if (prevState.active !== this.state.active && this.props.searchInput) {
-      this.props.searchInput.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+    if (prevState.active !== this.state.active) {
+      this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+
+      if (this.props.menuTriggerElement) {
+        this.props.menuTriggerElement.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+      }
     }
   }
 
@@ -148,8 +152,8 @@ class Menu extends React.Component {
     this.clearScrollTimeout();
     document.removeEventListener('keydown', this.handleKeyDown);
 
-    if (this.props.searchInput) {
-      this.props.searchInput.removeAttribute('aria-activedescendant');
+    if (this.props.menuTriggerElement) {
+      this.props.menuTriggerElement.removeAttribute('aria-activedescendant');
     }
   }
 
@@ -335,8 +339,8 @@ class Menu extends React.Component {
         role="listbox"
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
-        aria-activedescendant={`terra-select-option-${this.state.active}`}
-        tabIndex="0"
+        id="terra-select-menu"
+        tabIndex="-1"
       >
         {this.clone(this.state.children)}
       </ul>

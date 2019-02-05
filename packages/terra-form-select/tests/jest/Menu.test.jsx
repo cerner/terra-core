@@ -62,7 +62,7 @@ describe('Menu', () => {
     input.setAttribute('type', 'text');
 
     const menu = (
-      <Menu onSelect={() => {}} searchInput={input} variant="default" searchValue="display">
+      <Menu onSelect={() => {}} menuTriggerElement={input} variant="default" searchValue="display">
         <Option value="value" display="display" />
         <Option value="value_two" display="display" />
       </Menu>
