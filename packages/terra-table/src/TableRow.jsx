@@ -21,6 +21,10 @@ const propTypes = {
    */
   isSelectable: PropTypes.bool,
   /**
+   * Whether or not row should display as a striped row.
+   */
+  isStriped: PropTypes.bool,
+  /**
    * The associated metaData to be provided in the onSelect callback.
    */
   // eslint-disable-next-line react/forbid-prop-types
@@ -45,6 +49,7 @@ const TableRow = ({
   children,
   isSelected,
   isSelectable,
+  isStriped,
   metaData,
   onBlur,
   onClick,
@@ -57,6 +62,7 @@ const TableRow = ({
   const rowClassNames = cx([
     { 'is-selected': isSelected && isSelectable },
     { 'is-selectable': isSelectable },
+    { 'is-striped': isStriped },
     'row',
     customProps.className,
   ]);

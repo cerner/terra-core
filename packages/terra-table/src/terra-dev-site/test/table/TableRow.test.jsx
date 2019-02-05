@@ -10,11 +10,17 @@ const TableRowTest = () => (
     <Row key="default-row">
       <Cell>Default Row</Cell>
     </Row>
-    <Row isSelectable key="selectable-row" id="selectable-row">
+    <Row key="striped-row" isStriped>
+      <Cell>Striped Row</Cell>
+    </Row>
+    <Row key="selectable-row" isSelectable id="selectable-row">
       <Cell>Selectable Row</Cell>
     </Row>
-    <Row isSelectable isSelected key="selected-row">
+    <Row key="selected-row" isSelectable isSelected>
       <Cell>Selected Row</Cell>
+    </Row>
+    <Row key="striped-selected-row" isSelectable isSelected isStriped>
+      <Cell>Striped Selected Row</Cell>
     </Row>
   </Table>
 );

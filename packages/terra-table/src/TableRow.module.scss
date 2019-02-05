@@ -9,10 +9,8 @@
     }
   }
 
-  [data-table-striped='true'] > .row {
-    &:nth-of-type(even) {
-      background-color: var(--terra-table-row-striped-background-color, #f4f4f4);
-    }
+  .is-striped {
+    background-color: var(--terra-table-row-striped-background-color, #f4f4f4);
 
     &.is-selected {
       background-color: var(--terra-table-row-striped-selected-background-color, darken(#ebf6fd, 7%));

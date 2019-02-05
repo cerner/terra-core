@@ -7,7 +7,6 @@ exports[`should render a default table 1`] = `
 >
   <tbody
     className="body"
-    data-table-striped={true}
   />
 </table>
 `;
@@ -19,7 +18,6 @@ exports[`should render a table with refCallback 1`] = `
 >
   <tbody
     className="body"
-    data-table-striped={true}
   />
 </table>
 `;
@@ -31,19 +29,6 @@ exports[`should render a table without padding 1`] = `
 >
   <tbody
     className="body"
-    data-table-striped={true}
-  />
-</table>
-`;
-
-exports[`should render a table without zebra stripes 1`] = `
-<table
-  className="table"
-  data-table-padded={true}
->
-  <tbody
-    className="body"
-    data-table-striped={false}
   />
 </table>
 `;

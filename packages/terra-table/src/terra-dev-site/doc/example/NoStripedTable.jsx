@@ -7,7 +7,6 @@ import Table, {
 
 const NoStripedTable = () => (
   <Table
-    isStriped={false}
     id="Table"
     header={(
       <Header>

@@ -23,6 +23,11 @@ it('should render a selected table row', () => {
   expect(tableRow).toMatchSnapshot();
 });
 
+it('should render a striped table row', () => {
+  const tableRow = shallow(<TableRow isStriped />);
+  expect(tableRow).toMatchSnapshot();
+});
+
 it('should render a table row with onSelect', () => {
   const mockCallBack = jest.fn();
 

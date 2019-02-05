@@ -16,10 +16,6 @@ const propTypes = {
    */
   header: PropTypes.element,
   /**
-   * Whether or not the rows should be zebra striped
-   */
-  isStriped: PropTypes.bool,
-  /**
    * Whether or not the table cells should be padded
    */
   isPadded: PropTypes.bool,
@@ -30,14 +26,12 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isStriped: true,
   isPadded: true,
 };
 
 const Table = ({
   children,
   header,
-  isStriped,
   isPadded,
   refCallback,
   ...customProps
@@ -50,7 +44,7 @@ const Table = ({
   return (
     <table {...customProps} data-table-padded={isPadded} className={tableClassNames} ref={refCallback}>
       {header}
-      <tbody data-table-striped={isStriped} className={cx(['body'])}>
+      <tbody className={cx(['body'])}>
         {children}
       </tbody>
     </table>

@@ -28,6 +28,12 @@ exports[`should render a selected table row 1`] = `
 />
 `;
 
+exports[`should render a striped table row 1`] = `
+<tr
+  className="is-striped row"
+/>
+`;
+
 exports[`should render a table row with a cell 1`] = `
 <tr
   className="row"

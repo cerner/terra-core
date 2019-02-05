@@ -3,15 +3,14 @@ import Table, {
   Row, Cell,
 } from '../../../index';
 
-const NoStripedTableTest = () => (
+const StripedTableTest = () => (
   <Table
-    isStriped={false}
     id="Table"
   >
     <Row key="ROW-0">
       <Cell>Cell Content</Cell>
     </Row>
-    <Row key="ROW-1">
+    <Row key="ROW-1" isStriped>
       <Cell>Cell Content</Cell>
     </Row>
     <Row key="ROW-2">
@@ -20,4 +19,4 @@ const NoStripedTableTest = () => (
   </Table>
 );
 
-export default NoStripedTableTest;
+export default StripedTableTest;

@@ -9,13 +9,6 @@ it('should render a default table', () => {
   expect(table).toMatchSnapshot();
 });
 
-it('should render a table without zebra stripes', () => {
-  const table = shallow(
-    <Table isStriped={false} />,
-  );
-  expect(table).toMatchSnapshot();
-});
-
 it('should render a table without padding', () => {
   const table = shallow(
     <Table isPadded={false} />,
