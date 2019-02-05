@@ -58,6 +58,6 @@ it('should render with thin padded items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallow(<List paddingStyle="thin">{items}</List>);
+  const shallowComponent = shallow(<List paddingStyle="compact">{items}</List>);
   expect(shallowComponent).toMatchSnapshot();
 });

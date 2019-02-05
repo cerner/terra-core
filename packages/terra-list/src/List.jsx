@@ -18,7 +18,7 @@ const propTypes = {
   /**
    * The padding styling to apply to the child list item content.
    */
-  paddingStyle: PropTypes.oneOf(['none', 'standard', 'thin']),
+  paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
   /**
    * Function callback for the ref of the ul.
    */
@@ -47,7 +47,7 @@ const List = ({
   const listClassNames = cx([
     'list',
     { 'padding-standard': paddingStyle === 'standard' },
-    { 'padding-thin': paddingStyle === 'thin' },
+    { 'padding-compact': paddingStyle === 'compact' },
     { 'divider-standard': dividerStyle === 'standard' },
     { 'divider-bottom-only': dividerStyle === 'bottom-only' },
     customProps.className,

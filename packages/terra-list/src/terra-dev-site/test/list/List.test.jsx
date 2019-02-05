@@ -26,7 +26,7 @@ const ListTest = () => (
         <p>divided test 2</p>
       </Item>
     </List>
-    <List paddingStyle="thin" dividerStyle="bottom-only">
+    <List paddingStyle="compact" dividerStyle="bottom-only">
       <Item key="0">
         <p>divided test 0</p>
       </Item>

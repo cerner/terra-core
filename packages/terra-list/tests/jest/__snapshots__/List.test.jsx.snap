@@ -156,7 +156,7 @@ exports[`should render with standard padded items 1`] = `
 
 exports[`should render with thin padded items 1`] = `
 <ul
-  className="list padding-thin"
+  className="list padding-compact"
 >
   <ListItem
     hasChevron={false}

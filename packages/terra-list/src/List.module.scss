@@ -47,21 +47,21 @@
   .padding-standard {
     > .list-item {
       > .item-fill {
-        padding-bottom: var(--terra-list-standard-item-fill-padding-bottom, 10px);
-        padding-left: var(--terra-list-standard-item-fill-padding-left, 10px);
-        padding-right: var(--terra-list-standard-item-fill-padding-right, 10px);
-        padding-top: var(--terra-list-standard-item-fill-padding-top, 10px);
+        padding-bottom: var(--terra-list-standard-item-fill-padding-bottom, 0.7143rem);
+        padding-left: var(--terra-list-standard-item-fill-padding-left, 0.7143rem);
+        padding-right: var(--terra-list-standard-item-fill-padding-right, 0.7143rem);
+        padding-top: var(--terra-list-standard-item-fill-padding-top, 0.7143rem);
       }
     }
   }
 
-  .padding-thin {
+  .padding-compact {
     > .list-item {
       > .item-fill {
-        padding-bottom: var(--terra-list-thin-item-fill-padding-bottom, 5px);
-        padding-left: var(--terra-list-thin-item-fill-padding-left, 10px);
-        padding-right: var(--terra-list-thin-item-fill-padding-right, 10px);
-        padding-top: var(--terra-list-thin-item-fill-padding-top, 5px);
+        padding-bottom: var(--terra-list-thin-item-fill-padding-bottom, 0.357rem);
+        padding-left: var(--terra-list-thin-item-fill-padding-left, 0.7143rem);
+        padding-right: var(--terra-list-thin-item-fill-padding-right, 0.7143rem);
+        padding-top: var(--terra-list-thin-item-fill-padding-top, 0.357rem);
       }
     }
   }

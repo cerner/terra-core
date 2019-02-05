@@ -17,7 +17,7 @@ const ListPaddedExample = () => (
       </Item>
     </List>
     <br />
-    <List paddingStyle="thin">
+    <List paddingStyle="compact">
       <Item key="123">
         <Placeholder title="Thin Padding Item 0" style={{ height: '50px' }} />
       </Item>
