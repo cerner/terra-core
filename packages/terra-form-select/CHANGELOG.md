@@ -3,11 +3,15 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.5.0 - (February 5, 2019)
+------------------
 ### Added
-* Create dropdown that announces no search results to screen reader
+* Dropdown that announces no search results to screen reader
 
 ### Changed
 * Made it easier for screen readers to read disabled state to users
+* Minor dependency version bump
 
 5.4.0 - (January 28, 2019)
 ------------------

@@ -1,7 +1,7 @@
 {
   "name": "terra-toggle",
   "main": "lib/Toggle.js",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Toggle component that transitions content in and out.",
   "repository": {
     "type": "git",
@@ -29,12 +29,12 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-animate-height": "^2.0.1",
-    "terra-doc-template": "^2.2.0",
-    "terra-icon": "^3.1.0"
+    "terra-doc-template": "^2.3.0",
+    "terra-icon": "^3.2.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rimraf lib",
+    "compile:clean": "rm -rf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",

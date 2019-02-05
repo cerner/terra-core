@@ -1,7 +1,7 @@
 {
   "name": "terra-status",
   "main": "lib/Status.js",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "The status component provides a customizable color indictor to signify a specific condition.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rimraf lib",
+    "compile:clean": "rm -rf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
@@ -39,9 +39,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^3.1.0",
-    "terra-doc-template": "^2.2.0",
-    "terra-icon": "^3.1.0",
-    "terra-visually-hidden-text": "^2.0.0"
+    "terra-arrange": "^3.2.0",
+    "terra-doc-template": "^2.3.0",
+    "terra-icon": "^3.2.0",
+    "terra-visually-hidden-text": "^2.1.0"
   }
 }

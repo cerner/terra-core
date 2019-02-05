@@ -4,6 +4,15 @@ Changelog
 Unreleased
 ----------
 
+3.4.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Fixed
+* Fixed console error by changing children wrapper to be div instead of p tag given children accepts type node
+* Fixed broken "More Information" link
+
 3.3.0 - (January 26, 2019)
 ------------------
 ### Changed
