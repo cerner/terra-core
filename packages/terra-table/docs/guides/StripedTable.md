@@ -1,6 +1,6 @@
 # Terra Table - Implementing a Striped Table
 
-In previous versions of the terra-table the striped style was derived using a nth-of-type selector, however this stripping pattern does not work using section and subsections, as they are sibling elements of the same type. So in this implementation the responsibility of striping is moved to the TableRow itself. The following guide shows how to cleanly implement a striped table.
+In previous versions of the terra-table the striped style was derived using a nth-of-type selector, however this striping pattern does not work using section and subsections, as they are sibling elements of the same type. So in this implementation the responsibility of striping is moved to the TableRow itself. The following guide shows how to cleanly implement a striped table.
 
 ## Standard Striped Function
 When striping the table rows the functionality is the same if you are yielding a flat list of items and a section's items.  When mapping your data to table rows capture the index of each row and pass it to your createTableRow method.

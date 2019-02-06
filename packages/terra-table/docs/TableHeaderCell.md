@@ -1,6 +1,6 @@
 # Terra Table Header Cell
 
-The Terra Table Header Cell is a sub component of the table header. The header cell's width can grow based row cell widths, but is ultimately reponsible the column maximum width when styling is applied.
+The Terra Table Header Cell is a sub component of the table header. The header cell dictates the minimum width of the column, but it can also dictate the maximum width of the column if a fixed or max-width value is set it. This results in the minimum width of the content also being the maximum width of the column.
 
 ## Getting Started
 
