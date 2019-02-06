@@ -24,6 +24,7 @@ exports[`should render table header with a header cell 1`] = `
     <TableHeaderCell
       isSelectable={false}
       minWidth="small"
+      sort="none"
     />
   </tr>
 </thead>

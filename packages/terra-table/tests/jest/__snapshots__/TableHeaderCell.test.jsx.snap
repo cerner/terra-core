@@ -2,15 +2,19 @@
 
 exports[`should render a table header cell with refCallback 1`] = `
 <th
+  aria-sort="none"
   className="header-cell small"
   data-terra-table-header-cell={true}
+  role="columnheader"
 />
 `;
 
 exports[`should render a table header with content 1`] = `
 <th
+  aria-sort="none"
   className="header-cell small"
   data-terra-table-header-cell={true}
+  role="columnheader"
 >
   Content
 </th>
@@ -18,16 +22,19 @@ exports[`should render a table header with content 1`] = `
 
 exports[`should render default table header cell 1`] = `
 <th
+  aria-sort="none"
   className="header-cell small"
   data-terra-table-header-cell={true}
+  role="columnheader"
 />
 `;
 
 exports[`should render table header cell descending sort indicator 1`] = `
 <th
+  aria-sort="descending"
   className="header-cell small"
-  data-sort="desc"
   data-terra-table-header-cell={true}
+  role="columnheader"
 >
   <span
     className="sort-indicator"
@@ -44,9 +51,10 @@ exports[`should render table header cell descending sort indicator 1`] = `
 
 exports[`should render table header cell with ascending sort indicator 1`] = `
 <th
+  aria-sort="ascending"
   className="header-cell small"
-  data-sort="asc"
   data-terra-table-header-cell={true}
+  role="columnheader"
 >
   <span
     className="sort-indicator"
@@ -63,7 +71,9 @@ exports[`should render table header cell with ascending sort indicator 1`] = `
 
 exports[`should render table header cell with minWideth 1`] = `
 <th
+  aria-sort="none"
   className="header-cell tiny"
   data-terra-table-header-cell={true}
+  role="columnheader"
 />
 `;

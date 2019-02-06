@@ -42,7 +42,7 @@ const Table = ({
   ]);
 
   return (
-    <table {...customProps} data-table-padded={isPadded} className={tableClassNames} ref={refCallback}>
+    <table {...customProps} data-table-padded={isPadded} className={tableClassNames} ref={refCallback} role="grid">
       {header}
       <tbody className={cx(['body'])}>
         {children}

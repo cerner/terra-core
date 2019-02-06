@@ -79,7 +79,7 @@ const TableRow = ({
   }
 
   return (
-    <tr {...customProps} {...attrSpread} className={rowClassNames} ref={refCallback}>
+    <tr {...customProps} {...attrSpread} className={rowClassNames} ref={refCallback} role="row">
       {children}
     </tr>
   );

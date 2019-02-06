@@ -3,12 +3,14 @@
 exports[`should render a default table cell 1`] = `
 <td
   className="cell"
+  role="gridcell"
 />
 `;
 
 exports[`should render a table cell with content 1`] = `
 <td
   className="cell"
+  role="gridcell"
 >
   Content
 </td>
@@ -17,5 +19,6 @@ exports[`should render a table cell with content 1`] = `
 exports[`should render a table cell with refCallback 1`] = `
 <td
   className="cell"
+  role="gridcell"
 />
 `;

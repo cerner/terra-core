@@ -9,17 +9,10 @@ import TableUtils from './TableUtils';
 
 const cx = classNames.bind(styles);
 
-const TableHeaderCellMinWidth = {
-  TINY: 'tiny',
-  SMALL: 'small',
-  MEDIUM: 'medium',
-  LARGE: 'large',
-  HUGE: 'huge',
-};
-
-const TableHeaderCellSort = {
-  ASC: 'asc',
-  DESC: 'desc',
+const ariaSortMap = {
+  asc: 'ascending',
+  desc: 'descending',
+  none: 'none',
 };
 
 const propTypes = {
@@ -50,15 +43,16 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Whether or not data in table is sorted (asc, desc)
+   * Whether or not data in table is sorted (none, asc, desc)
    */
-  sort: PropTypes.oneOf(['asc', 'desc']),
+  sort: PropTypes.oneOf(['none', 'asc', 'desc']),
 };
 
 const defaultProps = {
   children: [],
   isSelectable: false,
   minWidth: 'small',
+  sort: 'none',
 };
 
 const TableHeaderCell = ({
@@ -87,7 +81,7 @@ const TableHeaderCell = ({
     sortIndicator = <span className={cx('sort-indicator')}><IconDown /></span>;
   }
 
-  const attrSpread = { 'data-sort': sort };
+  const attrSpread = { 'aria-sort': ariaSortMap[sort] };
   if (isSelectable) {
     attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
@@ -95,7 +89,7 @@ const TableHeaderCell = ({
   }
 
   return (
-    <th {...customProps} {...attrSpread} data-terra-table-header-cell className={contentClassName} ref={refCallback}>
+    <th {...customProps} {...attrSpread} data-terra-table-header-cell className={contentClassName} ref={refCallback} role="columnheader">
       {children}
       {sortIndicator}
     </th>
@@ -106,4 +100,3 @@ TableHeaderCell.propTypes = propTypes;
 TableHeaderCell.defaultProps = defaultProps;
 
 export default TableHeaderCell;
-export { TableHeaderCellMinWidth, TableHeaderCellSort };

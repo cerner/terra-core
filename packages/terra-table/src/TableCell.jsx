@@ -28,7 +28,7 @@ const TableCell = ({
   ]);
 
   return (
-    <td {...customProps} className={cellClassNames} ref={refCallback}>
+    <td {...customProps} className={cellClassNames} ref={refCallback} role="gridcell">
       {children}
     </td>
   );

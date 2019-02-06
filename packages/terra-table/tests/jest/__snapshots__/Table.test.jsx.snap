@@ -4,6 +4,7 @@ exports[`should render a default table 1`] = `
 <table
   className="table"
   data-table-padded={true}
+  role="grid"
 >
   <tbody
     className="body"
@@ -15,6 +16,7 @@ exports[`should render a table with refCallback 1`] = `
 <table
   className="table"
   data-table-padded={true}
+  role="grid"
 >
   <tbody
     className="body"
@@ -26,6 +28,7 @@ exports[`should render a table without padding 1`] = `
 <table
   className="table"
   data-table-padded={false}
+  role="grid"
 >
   <tbody
     className="body"
