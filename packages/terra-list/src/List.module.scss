@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-compound-selectors */
+
 :local {
   // List Component
   // ========================================================
@@ -33,7 +35,6 @@
         border-color: var(--terra-list-item-selected-divider-border-color, #0092e0);
       }
 
-      // stylelint-disable-next-line selector-max-compound-selectors
       &.selected + .list-item {
         border-top-color: var(--terra-list-item-selected-divider-border-top-color, #0092e0);
       }
