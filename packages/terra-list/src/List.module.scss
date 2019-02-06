@@ -10,8 +10,12 @@
   // List Item Component
   // ========================================================
   .list-item {
+    align-items: center;
     background-color: var(--terra-list-item-background-color);
+    display: flex;
+    justify-content: space-between;
     margin: 0;
+    min-height: var(--terra-list-item-min-height);
     padding: 0;
     width: 100%;
   }
@@ -58,20 +62,17 @@
   .padding-compact {
     > .list-item {
       > .item-fill {
-        padding-bottom: var(--terra-list-thin-item-fill-padding-bottom, 0.357rem);
+        padding-bottom: var(--terra-list-thin-item-fill-padding-bottom, 0.35715rem);
         padding-left: var(--terra-list-thin-item-fill-padding-left, 0.7143rem);
         padding-right: var(--terra-list-thin-item-fill-padding-right, 0.7143rem);
-        padding-top: var(--terra-list-thin-item-fill-padding-top, 0.357rem);
+        padding-top: var(--terra-list-thin-item-fill-padding-top, 0.35715rem);
       }
     }
   }
 
   .chevron {
     display: flex;
-    padding-bottom: var(--terra-list-item-chevron-padding-bottom);
-    padding-left: var(--terra-list-item-chevron-padding-left, 0.7143rem);
     padding-right: var(--terra-list-item-chevron-padding-right, 0.7143rem);
-    padding-top: var(--terra-list-item-chevron-padding-top);
 
     > svg {
       color: var(--terra-list-item-chevron-color, #bcbfc0);
@@ -106,13 +107,6 @@
     &.selected:hover {
       background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
-  }
-
-  .item-has-chevron {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
   }
 
   .item-fill {

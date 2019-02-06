@@ -13,10 +13,12 @@ const propTypes = {
   children: PropTypes.node,
   /**
    * Whether or not the list's child items should have a border color applied.
+   * One of `'none'`, `'standard'`, `'bottom-only'`.
    */
   dividerStyle: PropTypes.oneOf(['none', 'standard', 'bottom-only']),
   /**
    * The padding styling to apply to the child list item content.
+   * One of `'none'`, `'standard'`, `'compact'`.
    */
   paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
   /**

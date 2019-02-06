@@ -43,10 +43,8 @@
 * --terra-list-item-chevron-margin-top
 
 #### Added
-* --terra-list-item-chevron-padding-bottom
-* --terra-list-item-chevron-padding-left
+* --terra-list-item-min-height
 * --terra-list-item-chevron-padding-right
-* --terra-list-item-chevron-padding-top
 * --terra-list-item-focus-outline
 * --terra-list-item-focus-border-color
 * --terra-list-item-focus-box-shadow

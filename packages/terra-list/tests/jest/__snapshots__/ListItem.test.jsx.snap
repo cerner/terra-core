@@ -48,7 +48,7 @@ exports[`should render with content 1`] = `
 
 exports[`should render with hasChevron 1`] = `
 <li
-  className="list-item item-has-chevron"
+  className="list-item"
 >
   <div
     className="item-fill"

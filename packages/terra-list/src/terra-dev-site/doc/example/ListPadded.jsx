@@ -19,13 +19,13 @@ const ListPaddedExample = () => (
     <br />
     <List paddingStyle="compact">
       <Item key="123">
-        <Placeholder title="Thin Padding Item 0" style={{ height: '50px' }} />
+        <Placeholder title="Compact Padding Item 0" style={{ height: '50px' }} />
       </Item>
       <Item key="124">
-        <Placeholder title="Thin Padding Item 1" style={{ height: '50px' }} />
+        <Placeholder title="Compact Padding Item 1" style={{ height: '50px' }} />
       </Item>
       <Item key="125">
-        <Placeholder title="Thin Padding Item 2" style={{ height: '50px' }} />
+        <Placeholder title="Compact Padding Item 2" style={{ height: '50px' }} />
       </Item>
     </List>
   </React.Fragment>

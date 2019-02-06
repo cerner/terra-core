@@ -66,7 +66,6 @@ const ListItem = ({
     'list-item',
     { selected: isSelected && isSelectable },
     { 'is-selectable': isSelectable },
-    { 'item-has-chevron': hasChevron },
     customProps.className,
   ]);
 
