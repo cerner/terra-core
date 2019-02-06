@@ -114,7 +114,7 @@ const IconStatic = () => (
           </code>
         </td>
       </tr>
-      <tr >
+      <tr>
         <td><IconSuccessInverseLowLight height='2em' width='2em' /></td>
         <td>success_inverse_low_light</td>
         <td>
@@ -231,7 +231,7 @@ const IconStatic = () => (
           </code>
         </td>
       </tr>
-      <tr >
+      <tr>
         <td><IconModerate height='2em' width='2em' /></td>
         <td>moderate</td>
         <td>
@@ -754,6 +754,7 @@ const IconStatic = () => (
         </td>
       </tr>
     </tbody>
-  </table>);
+  </table>
+);
 
 export default IconStatic;

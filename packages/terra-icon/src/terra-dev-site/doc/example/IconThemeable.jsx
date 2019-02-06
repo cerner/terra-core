@@ -1754,6 +1754,7 @@ const IconThemeable = () => (
         </td>
       </tr>
     </tbody>
-  </table>);
+  </table>
+);
 
 export default IconThemeable;
