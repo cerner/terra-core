@@ -39,6 +39,22 @@ const propTypes = {
    * Function callback for the ref of the li.
    */
   refCallback: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onBlur: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onClick: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onKeyDown: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onMouseDown: PropTypes.func,
 };
 
 const defaultProps = {
