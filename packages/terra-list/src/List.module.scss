@@ -52,6 +52,7 @@
   .padding-standard {
     > .list-item {
       > .item-fill {
+        line-height: var(--terra-list-standard-item-fill-line-height, 1.42857);
         padding-bottom: var(--terra-list-standard-item-fill-padding-bottom, 0.7143rem);
         padding-left: var(--terra-list-standard-item-fill-padding-left, 0.7143rem);
         padding-right: var(--terra-list-standard-item-fill-padding-right, 0.7143rem);
@@ -63,10 +64,11 @@
   .padding-compact {
     > .list-item {
       > .item-fill {
-        padding-bottom: var(--terra-list-thin-item-fill-padding-bottom, 0.35715rem);
-        padding-left: var(--terra-list-thin-item-fill-padding-left, 0.7143rem);
-        padding-right: var(--terra-list-thin-item-fill-padding-right, 0.7143rem);
-        padding-top: var(--terra-list-thin-item-fill-padding-top, 0.35715rem);
+        line-height: var(--terra-list-compact-item-fill-line-height, 1.21428);
+        padding-bottom: var(--terra-list-compact-item-fill-padding-bottom, 0.35715rem);
+        padding-left: var(--terra-list-compact-item-fill-padding-left, 0.7143rem);
+        padding-right: var(--terra-list-compact-item-fill-padding-right, 0.7143rem);
+        padding-top: var(--terra-list-compact-item-fill-padding-top, 0.35715rem);
       }
     }
   }

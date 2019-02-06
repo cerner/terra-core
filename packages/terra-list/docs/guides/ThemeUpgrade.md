@@ -77,3 +77,13 @@
 * --terra-list-subsection-header-focus-outline
 * --terra-list-subsection-header-hover-active-background-color
 * --terra-list-subsection-header-start-padding-right
+* --terra-list-standard-item-fill-line-height
+* --terra-list-standard-item-fill-padding-bottom
+* --terra-list-standard-item-fill-padding-left
+* --terra-list-standard-item-fill-padding-right
+* --terra-list-standard-item-fill-padding-top
+* --terra-list-compact-item-fill-line-height
+* --terra-list-compact-item-fill-padding-bottom
+* --terra-list-compact-item-fill-padding-left
+* --terra-list-compact-item-fill-padding-right
+* --terra-list-compact-item-fill-padding-top
