@@ -1,6 +1,6 @@
 # Terra Table - Sections with Subsections
 
-With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to not have both sections and subsections to be collapsible, have one or the other be collapsible.
+With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to not have both collapsible sections and collapsible subsections in a table.
 
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.
@@ -13,7 +13,7 @@ First defaulting our state to an empty array in the constructor.
     this.state = { collapsedKeys: [] };
   }
 ```
-Next creating an event handler callback method to pass to the section's "onSelect" prop. The "onSelect" will return the metaData prop passed it each section.
+Next creating an event handler callback method to pass to the section's "onSelect" prop. The "onSelect" callback will return the metaData prop passed to each section.
 ```jsx
   handleSectionSelection(event, metaData) {
 
