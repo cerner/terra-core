@@ -42,6 +42,22 @@ const propTypes = {
    * Title text to be placed within the subsection header.
    */
   title: PropTypes.string.isRequired,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onBlur: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onClick: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onKeyDown: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onMouseDown: PropTypes.func,
 };
 
 const defaultProps = {

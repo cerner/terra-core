@@ -46,6 +46,14 @@ const propTypes = {
    * Whether or not data in table is sorted (none, asc, desc)
    */
   sort: PropTypes.oneOf(['none', 'asc', 'desc']),
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onClick: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onKeyDown: PropTypes.func,
 };
 
 const defaultProps = {
