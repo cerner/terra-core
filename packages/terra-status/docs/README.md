@@ -21,15 +21,15 @@ import Status from 'terra-status';
 
 ```css
 .high-status {
-  border-color: red;
+  border-left-color: red;
 }
 
 .good-status {
-  border-color: #00ff00;
+  border-left-color: #00ff00;
 }
 
 .blue-status {
-  border-color: rgb(0,0,255);
+  border-left-color: rgb(0,0,255);
 }
 ```
 

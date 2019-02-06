@@ -82,7 +82,7 @@ const Heading = ({
   const Element = `h${level}`;
 
   return (
-    <Element {...attributes} style={{ ...customProps.style }} className={TextClassNames}>
+    <Element {...attributes} className={TextClassNames}>
       {children}
     </Element>
   );

@@ -1,16 +1,22 @@
-/* stylelint-disable color-named */
+:root {
+  --terra-heading-red-color: rgb(220, 20, 60);
+  --terra-heading-green-color: rgb(46, 125, 50);
+  --terra-heading-blue-color: #304ffe;
+  --terra-heading-black-color: #333;
+}
+
 .crimson {
-  color: Crimson;
+  color: var(--terra-heading-red-color);
 }
 
 .green {
-  color: rgb(46, 125, 50);
+  color: var(--terra-heading-green-color);
 }
 
 .blue {
-  color: #304ffe;
+  color: var(--terra-heading-blue-color);
 }
 
 .black {
-  color: #333;
+  color: var(--terra-heading-black-color);
 }

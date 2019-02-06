@@ -4,7 +4,6 @@ exports[`Text should have all props including customProps set correctly 1`] = `
 <span
   className="text italic word-wrap visually-hidden font-size-20 font-weight-200"
   id="id"
-  style={Object {}}
 >
   All props and custom attrs
 </span>
@@ -13,7 +12,6 @@ exports[`Text should have all props including customProps set correctly 1`] = `
 exports[`Text should render a text component 1`] = `
 <span
   className="text"
-  style={Object {}}
 >
   Test
 </span>
@@ -22,7 +20,6 @@ exports[`Text should render a text component 1`] = `
 exports[`Text should render a text component with fontSize prop set 1`] = `
 <span
   className="text font-size-24"
-  style={Object {}}
 >
   Test
 </span>
@@ -31,7 +28,6 @@ exports[`Text should render a text component with fontSize prop set 1`] = `
 exports[`Text should render a text component with isItalic prop set 1`] = `
 <span
   className="text italic"
-  style={Object {}}
 >
   Test
 </span>
@@ -40,7 +36,6 @@ exports[`Text should render a text component with isItalic prop set 1`] = `
 exports[`Text should render a text component with isVisuallyHidden prop set 1`] = `
 <span
   className="text visually-hidden"
-  style={Object {}}
 >
   Test
 </span>
@@ -49,7 +44,6 @@ exports[`Text should render a text component with isVisuallyHidden prop set 1`] 
 exports[`Text should render a text component with isWordWrapped prop set 1`] = `
 <span
   className="text word-wrap"
-  style={Object {}}
 >
   Test
 </span>
@@ -58,7 +52,6 @@ exports[`Text should render a text component with isWordWrapped prop set 1`] = `
 exports[`Text should render a text component with weight prop set 1`] = `
 <span
   className="text font-weight-200"
-  style={Object {}}
 >
   Test
 </span>
@@ -67,7 +60,6 @@ exports[`Text should render a text component with weight prop set 1`] = `
 exports[`Text should support rendering a string as children 1`] = `
 <span
   className="text"
-  style={Object {}}
 >
   String
 </span>
@@ -76,7 +68,6 @@ exports[`Text should support rendering a string as children 1`] = `
 exports[`Text should support rendering an array of elements as a children 1`] = `
 <span
   className="text"
-  style={Object {}}
 >
   <span>
     Element 1
@@ -93,7 +84,6 @@ exports[`Text should support rendering an array of elements as a children 1`] = 
 exports[`Text should support rendering an element as children 1`] = `
 <span
   className="text"
-  style={Object {}}
 >
   <span>
     Element
