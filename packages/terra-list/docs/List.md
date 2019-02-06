@@ -4,6 +4,8 @@ The Terra List is a structural component to vertically arrange content within li
 
 If a list implementation contains selectable list options the role prop should be set to "listbox" for accesibility. 
 
+Two padding variants are provide for list item content, standard and compact. If different padding is desired use the defaulted style of 'none' and set the padding on the list item's child content with your own css values, preferrably themeable variables.
+
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
@@ -16,7 +18,11 @@ If a list implementation contains selectable list options the role prop should b
 import React from 'react';
 import List, { Item } from 'terra-list';
 
-<List dividerStyle="standard" role="listbox">
+<List
+  dividerStyle="standard"
+  paddingStyle="standard"
+  role="listbox"
+>
   <Item isSelectable key="section-1-item-1">
     <p>List item text</p>
   </Item>
