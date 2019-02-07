@@ -15,7 +15,6 @@ Note: The progress bar displays fill with respect to percentage (value between 0
 ```jsx
 import React from 'react';
 import ProgressBar from 'terra-progress-bar';
-import './colors.css';
 
 <ProgressBar
   heightSize="tiny"
