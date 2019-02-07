@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Display block to svg
 
 3.3.0 - (January 26, 2019)
 ------------------
