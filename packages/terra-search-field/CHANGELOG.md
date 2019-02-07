@@ -6,6 +6,26 @@ Unreleased
 ### Fixed
 * Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
 
+3.4.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.3.0 - (January 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.2.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.1.0 - (January 22, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.0.0 - (January 8, 2019)
 ------------------
 ### Changed
@@ -14,7 +34,6 @@ Unreleased
 2.37.0 - (January 2, 2019)
 ------------------
 ### Changed
-=======
 * Minor dependency version bump
 * Set the input cursor to be transparent for wdio tests
 

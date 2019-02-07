@@ -3,7 +3,21 @@ Changelog
 
 Unreleased
 ----------
+
+4.1.0 - (February 5, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
+
+4.0.0 - (January 22, 2019)
+------------------
+### Changed
+* Updated theme variables
+
+3.33.0 - (January 22, 2019)
+------------------
+### Changed
+* Updated dependencies to fix major version bump issues
 * Webdriver theme test updated to use base64 image string
 
 3.32.0 - (January 8, 2019)

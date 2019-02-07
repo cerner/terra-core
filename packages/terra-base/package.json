@@ -1,7 +1,7 @@
 {
   "name": "terra-base",
   "main": "lib/Base.js",
-  "version": "3.32.0",
+  "version": "4.1.0",
   "description": "The base component sets minimal global styles for an application.",
   "repository": {
     "type": "git",
@@ -27,12 +27,12 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.0.0",
-    "terra-i18n": "^2.31.0"
+    "terra-doc-template": "^2.3.0",
+    "terra-i18n": "^3.1.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rimraf lib",
+    "compile:clean": "rm -rf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
