@@ -74,5 +74,8 @@
   .cell-content {
     display: flex;
     align-items: center;
+    hyphens: auto;
+    overflow-wrap: break-word; /* Modern browsers */
+    word-wrap: break-word; 
   }
 }
