@@ -2,19 +2,19 @@
 
 exports[`Menu should render a Menu with an add option and set the screen reader region to blank 1`] = `
 <ul
-  aria-activedescendant="terra-select-option-null"
   className="menu"
+  id="terra-select-menu"
   role="listbox"
-  tabIndex="0"
+  tabIndex="-1"
 />
 `;
 
 exports[`Menu should render a Menu with no results and update the live region appropriately 1`] = `
 <ul
-  aria-activedescendant="terra-select-option-null"
   className="menu"
+  id="terra-select-menu"
   role="listbox"
-  tabIndex="0"
+  tabIndex="-1"
 >
   <NoResults
     key=".0"
@@ -25,10 +25,10 @@ exports[`Menu should render a Menu with no results and update the live region ap
 
 exports[`Menu should render a default Menu 1`] = `
 <ul
-  aria-activedescendant="terra-select-option-null"
   className="menu"
+  id="terra-select-menu"
   role="listbox"
-  tabIndex="0"
+  tabIndex="-1"
 >
   <NoResults
     key=".0"

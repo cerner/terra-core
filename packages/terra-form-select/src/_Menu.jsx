@@ -53,6 +53,10 @@ const propTypes = {
     Variants.TAG,
   ]).isRequired,
   /**
+   * @private Element that is used to trigger the dropdown, such as an input or button.
+   */
+  focusRegion: PropTypes.instanceOf(Element),
+  /**
    * @private Visually hidden component designed to feed screen reader text to read.
    */
   visuallyHiddenComponent: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
@@ -60,11 +64,13 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  focusRegion: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
   searchValue: undefined,
   value: undefined,
+  visuallyHiddenComponent: undefined,
 };
 
 const contextTypes = {
@@ -129,7 +135,7 @@ class Menu extends React.Component {
   }
 
   componentDidUpdate() {
-    this.updateLiveRegion();
+    this.updateNoResultsScreenReader();
     this.scrollIntoView();
   }
 
@@ -137,9 +143,21 @@ class Menu extends React.Component {
     this.clearSearch();
     this.clearScrollTimeout();
     document.removeEventListener('keydown', this.handleKeyDown);
+
+    if (this.props.focusRegion) {
+      this.props.focusRegion.removeAttribute('aria-activedescendant');
+    }
   }
 
-  updateLiveRegion() {
+  isActiveSelected() {
+    if (Array.isArray(this.props.value)) {
+      return this.props.value.includes(this.state.active);
+    }
+
+    return this.state.active === this.props.value;
+  }
+
+  updateNoResultsScreenReader() {
     if (this.liveRegionTimeOut) {
       clearTimeout(this.liveRegionTimeOut);
     }
@@ -164,6 +182,27 @@ class Menu extends React.Component {
         visuallyHiddenComponent.current.innerText = '';
       }
     }, 500);
+  }
+
+  updateCurrentActiveScreenReader() {
+    this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+
+    if (this.props.focusRegion) {
+      this.props.focusRegion.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+    }
+
+    if (this.props.visuallyHiddenComponent) {
+      const element = Util.findByValue(this.props.children, this.state.active);
+
+      if (element) {
+        if (this.isActiveSelected()) {
+          const { intl } = this.context;
+          this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selected' }, { text: element.props.display });
+        } else {
+          this.props.visuallyHiddenComponent.current.innerText = element.props.display;
+        }
+      }
+    }
   }
 
   /**
@@ -215,20 +254,28 @@ class Menu extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
     const { active, children } = this.state;
-    const { onSelect, value, variant } = this.props;
+    const {
+      onSelect, onDeselect, value, variant,
+    } = this.props;
 
     if (keyCode === KeyCodes.UP_ARROW) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findPrevious(children, active) });
+      this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCodes.DOWN_ARROW) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findNext(children, active) });
+      this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCodes.ENTER && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
+    } else if (keyCode === KeyCodes.ENTER && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
+      event.preventDefault();
+      const option = Util.findByValue(children, active);
+      onDeselect(option.props.value, option);
     } else if (keyCode === KeyCodes.HOME) {
       event.preventDefault();
       this.setState({ active: Util.findFirst(children) });
@@ -315,8 +362,8 @@ class Menu extends React.Component {
         role="listbox"
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
-        aria-activedescendant={`terra-select-option-${this.state.active}`}
-        tabIndex="0"
+        id="terra-select-menu"
+        tabIndex="-1"
       >
         {this.clone(this.state.children)}
       </ul>

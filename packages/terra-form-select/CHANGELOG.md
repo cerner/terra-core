@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Announce current selection to the screen reader
 
 5.5.0 - (February 5, 2019)
 ------------------

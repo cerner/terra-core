@@ -4,7 +4,7 @@ exports[`Frame should render a combobox variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -32,6 +32,7 @@ exports[`Frame should render a combobox variant 1`] = `
           disabled={false}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -47,7 +48,7 @@ exports[`Frame should render a combobox variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -58,7 +59,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -87,6 +88,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
           onChange={[Function]}
           onMouseDown={[Function]}
           placeholder="Placeholder"
+          type="text"
           value=""
         />
       </li>
@@ -102,7 +104,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -113,7 +115,7 @@ exports[`Frame should render a custom dropdown 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -141,6 +143,7 @@ exports[`Frame should render a custom dropdown 1`] = `
           disabled={false}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -156,7 +159,7 @@ exports[`Frame should render a custom dropdown 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -167,7 +170,7 @@ exports[`Frame should render a default variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select default"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -198,7 +201,7 @@ exports[`Frame should render a default variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -209,7 +212,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select default"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -240,7 +243,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -277,6 +280,7 @@ exports[`Frame should render a disabled combobox variant 1`] = `
           disabled={true}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -292,7 +296,7 @@ exports[`Frame should render a disabled combobox variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -332,7 +336,7 @@ exports[`Frame should render a disabled default variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -369,6 +373,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
           disabled={true}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -384,7 +389,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -418,6 +423,7 @@ exports[`Frame should render a disabled search variant 1`] = `
         disabled={true}
         onChange={[Function]}
         onMouseDown={[Function]}
+        type="text"
       />
     </div>
   </div>
@@ -431,7 +437,7 @@ exports[`Frame should render a disabled search variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -468,6 +474,7 @@ exports[`Frame should render a disabled tag variant 1`] = `
           disabled={true}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -483,7 +490,7 @@ exports[`Frame should render a disabled tag variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -494,7 +501,7 @@ exports[`Frame should render a multiple variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select multiple"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -522,6 +529,7 @@ exports[`Frame should render a multiple variant 1`] = `
           disabled={false}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -537,7 +545,7 @@ exports[`Frame should render a multiple variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -548,7 +556,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select multiple"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -577,6 +585,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
           onChange={[Function]}
           onMouseDown={[Function]}
           placeholder="Placeholder"
+          type="text"
           value=""
         />
       </li>
@@ -592,7 +601,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -603,7 +612,7 @@ exports[`Frame should render a search variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select search"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -628,6 +637,7 @@ exports[`Frame should render a search variant 1`] = `
         disabled={false}
         onChange={[Function]}
         onMouseDown={[Function]}
+        type="text"
       />
     </div>
   </div>
@@ -641,7 +651,7 @@ exports[`Frame should render a search variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -652,7 +662,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select search"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -678,6 +688,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
         onChange={[Function]}
         onMouseDown={[Function]}
         placeholder="Placeholder"
+        type="text"
       />
     </div>
   </div>
@@ -691,7 +702,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -702,7 +713,7 @@ exports[`Frame should render a tag variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -730,6 +741,7 @@ exports[`Frame should render a tag variant 1`] = `
           disabled={false}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -745,7 +757,7 @@ exports[`Frame should render a tag variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -756,7 +768,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -785,6 +797,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
           onChange={[Function]}
           onMouseDown={[Function]}
           placeholder="Placeholder"
+          type="text"
           value=""
         />
       </li>
@@ -800,7 +813,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -811,7 +824,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -839,6 +852,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
           disabled={false}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -854,7 +868,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -865,7 +879,7 @@ exports[`Frame should render an invalid default variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select default is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -896,7 +910,7 @@ exports[`Frame should render an invalid default variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -907,7 +921,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select multiple is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -935,6 +949,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
           disabled={false}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -950,7 +965,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -961,7 +976,7 @@ exports[`Frame should render an invalid search variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select search is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -986,6 +1001,7 @@ exports[`Frame should render an invalid search variant 1`] = `
         disabled={false}
         onChange={[Function]}
         onMouseDown={[Function]}
+        type="text"
       />
     </div>
   </div>
@@ -999,7 +1015,7 @@ exports[`Frame should render an invalid search variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -1010,7 +1026,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  aria-haspopup="true"
+  aria-haspopup="listbox"
   className="select tag is-invalid"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -1038,6 +1054,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
           disabled={false}
           onChange={[Function]}
           onMouseDown={[Function]}
+          type="text"
           value=""
         />
       </li>
@@ -1053,7 +1070,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
   </div>
   <span
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
   />
@@ -1070,7 +1087,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
   <div
     aria-disabled={false}
     aria-expanded={false}
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     className="select tag"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -1098,6 +1115,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
             disabled={false}
             onChange={[Function]}
             onMouseDown={[Function]}
+            type="text"
             value="qwqerewqrwqer"
           />
         </li>
@@ -1113,7 +1131,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
     </div>
     <span
       aria-atomic="true"
-      aria-live="polite"
+      aria-live="assertive"
       aria-relevant="additions text"
       className="visually-hidden-component"
     />
