@@ -8,7 +8,13 @@ const TableHeaderCellExample = () => (
   <Table header={(
     <Header>
       <HeaderCell>
-        <Placeholder title="Cell Content" style={{ height: '50px' }} />
+        <Placeholder title="Basic Content" style={{ height: '50px', width: '200px' }} />
+      </HeaderCell>
+      <HeaderCell isSelectable sort="asc">
+        <Placeholder title="Asc Content" style={{ height: '50px', width: '200px' }} />
+      </HeaderCell>
+      <HeaderCell isSelectable sort="desc">
+        <Placeholder title="Desc Content" style={{ height: '50px', width: '200px' }} />
       </HeaderCell>
     </Header>
   )}

@@ -49,11 +49,19 @@ const propTypes = {
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
+  onBlur: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
   onClick: PropTypes.func,
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onKeyDown: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onMouseDown: PropTypes.func,
 };
 
 const defaultProps = {
@@ -68,8 +76,10 @@ const TableHeaderCell = ({
   isSelectable,
   metaData,
   minWidth,
+  onBlur,
   onClick,
   onKeyDown,
+  onMouseDown,
   onSelect,
   refCallback,
   sort,
@@ -94,12 +104,17 @@ const TableHeaderCell = ({
     attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '0';
+    attrSpread['data-header-show-focus'] = 'true';
+    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
+    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
   }
 
   return (
     <th {...customProps} {...attrSpread} data-terra-table-header-cell className={contentClassName} ref={refCallback} role="columnheader">
-      {children}
-      {sortIndicator}
+      <div className={cx('cell-content')}>
+        {children}
+        {sortIndicator}
+      </div>
     </th>
   );
 };

@@ -6,7 +6,11 @@ exports[`should render a table header cell with refCallback 1`] = `
   className="header-cell small"
   data-terra-table-header-cell={true}
   role="columnheader"
-/>
+>
+  <div
+    className="cell-content"
+  />
+</th>
 `;
 
 exports[`should render a table header with content 1`] = `
@@ -16,7 +20,11 @@ exports[`should render a table header with content 1`] = `
   data-terra-table-header-cell={true}
   role="columnheader"
 >
-  Content
+  <div
+    className="cell-content"
+  >
+    Content
+  </div>
 </th>
 `;
 
@@ -26,7 +34,11 @@ exports[`should render default table header cell 1`] = `
   className="header-cell small"
   data-terra-table-header-cell={true}
   role="columnheader"
-/>
+>
+  <div
+    className="cell-content"
+  />
+</th>
 `;
 
 exports[`should render table header cell descending sort indicator 1`] = `
@@ -36,16 +48,20 @@ exports[`should render table header cell descending sort indicator 1`] = `
   data-terra-table-header-cell={true}
   role="columnheader"
 >
-  <span
-    className="sort-indicator"
+  <div
+    className="cell-content"
   >
-    <IconCaretDown
-      className=""
-      isBidi={true}
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  </span>
+    <span
+      className="sort-indicator"
+    >
+      <IconCaretDown
+        className=""
+        isBidi={true}
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </div>
 </th>
 `;
 
@@ -56,16 +72,20 @@ exports[`should render table header cell with ascending sort indicator 1`] = `
   data-terra-table-header-cell={true}
   role="columnheader"
 >
-  <span
-    className="sort-indicator"
+  <div
+    className="cell-content"
   >
-    <IconCaretUp
-      className=""
-      isBidi={true}
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  </span>
+    <span
+      className="sort-indicator"
+    >
+      <IconCaretUp
+        className=""
+        isBidi={true}
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </div>
 </th>
 `;
 
@@ -75,5 +95,9 @@ exports[`should render table header cell with minWideth 1`] = `
   className="header-cell tiny"
   data-terra-table-header-cell={true}
   role="columnheader"
-/>
+>
+  <div
+    className="cell-content"
+  />
+</th>
 `;

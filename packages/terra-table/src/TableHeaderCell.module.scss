@@ -61,5 +61,18 @@
     &:hover {
       background-color: var(--terra-table-header-cell-hover-background-color, darken(#dedfe0, 5%));
     }
+
+    &[data-header-show-focus='true']:focus {
+      background-color: var(--terra-table-header-cell-focus-background-color, lighten(#dedfe0, 2%));
+      // border-bottom: var(--terra-table-header-cell-focus-border-bottom, 1px solid);
+      border-color: var(--terra-table-header-cell-focus-border-color, #0092e0);
+      box-shadow: var(--terra-table-header-cell-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
+      z-index: 1;
+    }
+  }
+
+  .cell-content {
+    display: flex;
+    align-items: center;
   }
 }
