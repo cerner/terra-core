@@ -4,15 +4,20 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Create dropdown that announces no search results to screen reader
 * New CSS custom property: `--terra-form-select-disabled-placeholder-color`
 * New CSS custom property: `--terra-form-select-disabled-placeholder-font-style`
 
-### Changed
-* Made it easier for screen readers to read disabled state to users
-
 ### Fixed
 * Fixed issue preventing the input from inheriting the base font family
+
+5.5.0 - (February 5, 2019)
+------------------
+### Added
+* Dropdown that announces no search results to screen reader
+
+### Changed
+* Made it easier for screen readers to read disabled state to users
+* Minor dependency version bump
 
 5.4.0 - (January 28, 2019)
 ------------------
