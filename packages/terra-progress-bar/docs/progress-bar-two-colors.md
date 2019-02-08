@@ -15,6 +15,10 @@ By defining more CSS, authors can control more of the `<ProgressBar />` componen
     background-color: #8ccc62;
   }
 
+  &::-moz-progress-bar {
+    background-color: #8ccc62;
+  }
+
   &::-ms-fill {
     background-color: #8ccc62;
   }
@@ -32,25 +36,33 @@ By defining more CSS, authors can control more of the `<ProgressBar />` componen
     background-color: rgb(255, 0, 0);
   }
 
+  &::-moz-progress-bar {
+    background-color: rgb(255, 0, 0);
+  }
+
   &::-ms-fill {
     background-color: rgb(255, 0, 0);
   }
 }
 
 .orange-bar-dark-blue-background {
-  background-color: darkblue;
-  color: orange;
+  background-color: rgb(0, 0, 139);
+  color: rgb(255, 165, 0);
 
   &::-webkit-progress-bar {
-    background-color: darkblue;
+    background-color: rgb(0, 0, 139);
   }
 
   &::-webkit-progress-value {
-    background-color: orange;
+    background-color: rgb(255, 165, 0);
+  }
+
+  &::-moz-progress-bar {
+    background-color: rgb(255, 165, 0);
   }
 
   &::-ms-fill {
-    background-color: orange;
+    background-color: rgb(255, 165, 0);
   }
 }
 ```

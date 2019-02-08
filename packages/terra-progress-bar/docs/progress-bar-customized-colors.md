@@ -18,6 +18,11 @@ By defining more CSS, authors can control more of the `<ProgressBar />` componen
       border-right: 1px solid #fff;
     }
 
+    &::-moz-progress-bar {
+      background-color: #8ccc62;
+      border-right: 1px solid #fff;
+    }
+
     &::-ms-fill {
       background-color: #8ccc62;
       border-right: 1px solid #fff;
@@ -32,6 +37,10 @@ By defining more CSS, authors can control more of the `<ProgressBar />` componen
       border-right: 0 solid #fff;
     }
 
+    &::-moz-progress-bar {
+      border-right: 0 solid #fff;
+    }
+
     &::-ms-fill {
       border-right: 0 solid #fff;
     }
@@ -39,41 +48,51 @@ By defining more CSS, authors can control more of the `<ProgressBar />` componen
 
 }
 
-.pink-to-red-bar-blue-to-yellow-background-green-border {
-  background: linear-gradient(to left, yellow, blue);
-  background-color: blue;
-  border-right: 3px solid lime;
+.green-to-red-bar-blue-to-yellow-background-green-border {
+  background: linear-gradient(to left, rgb(255, 255, 0), rgb(0, 0, 255));
+  background-color: rgb(0, 0, 255);
+  border-right: 3px solid rgb(0, 255, 0);
   color: rgb(255, 0, 0);
 
   &[value] {
     &::-webkit-progress-bar {
-      background: linear-gradient(to left, yellow, blue);
-      background-color: blue;
+      background: linear-gradient(to left, rgb(255, 255, 0), rgb(0, 0, 255));
+      background-color: rgb(0, 0, 255);
     }
 
     &::-webkit-progress-value {
-      background: linear-gradient(to left, rgb(255, 0, 0), pink);
+      background: linear-gradient(to left, rgb(255, 0, 0), rgb(0, 128, 0));
       background-color: rgb(255, 0, 0);
-      border-right: 3px solid lime;
+      border-right: 3px solid rgb(0, 255, 0);
+    }
+
+    &::-moz-progress-bar {
+      background: linear-gradient(to left, rgb(255, 0, 0), rgb(0, 128, 0));
+      background-color: rgb(255, 0, 0);
+      border-right: 3px solid rgb(0, 255, 0);
     }
 
     &::-ms-fill {
-      background: linear-gradient(to left, rgb(255, 0, 0), pink);
+      background: linear-gradient(to left, rgb(255, 0, 0), rgb(0, 128, 0));
       background-color: rgb(255, 0, 0);
-      border-right: 3px solid lime;
+      border-right: 3px solid rgb(0, 255, 0);
     }
   }
 
   &[value='100'],
   &[value='0'] {
-    border-right: 0 solid lime;
+    border-right: 0 solid rgb(0, 255, 0);
 
     &::-webkit-progress-value {
-      border-right: 0 solid lime;
+      border-right: 0 solid rgb(0, 255, 0);
+    }
+
+    &::-moz-progress-bar {
+      border-right: 0 solid rgb(0, 255, 0);
     }
 
     &::-ms-fill {
-      border-right: 0 solid lime;
+      border-right: 0 solid rgb(0, 255, 0);
     }
   }
 }

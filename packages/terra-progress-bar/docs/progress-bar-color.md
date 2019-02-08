@@ -4,14 +4,18 @@ By passing in a colorClass, authors can manually set the bar color of any `<Prog
 
 ```css
 .orange-bar {
-  color: orange;
+  color: rgb(255, 165, 0);
 
   &::-webkit-progress-value {
-    background-color: orange;
+    background-color: rgb(255, 165, 0);
+  }
+
+  &::-moz-progress-bar {
+    background-color: rgb(255, 165, 0);
   }
 
   &::-ms-fill {
-    background-color: orange;
+    background-color: rgb(255, 165, 0);
   }
 }
 
@@ -19,6 +23,10 @@ By passing in a colorClass, authors can manually set the bar color of any `<Prog
   color: #8ccc62;
 
   &::-webkit-progress-value {
+    background-color: #8ccc62;
+  }
+
+  &::-moz-progress-bar {
     background-color: #8ccc62;
   }
 
@@ -31,6 +39,10 @@ By passing in a colorClass, authors can manually set the bar color of any `<Prog
   color: rgb(255, 0, 0);
 
   &::-webkit-progress-value {
+    background-color: rgb(255, 0, 0);
+  }
+
+  &::-moz-progress-bar {
     background-color: rgb(255, 0, 0);
   }
 

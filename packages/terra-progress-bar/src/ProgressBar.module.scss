@@ -47,6 +47,10 @@
       background-color: var(--terra-progress-bar-progress-background-color, #0092e0);
     }
 
+    &::-moz-progress-bar {
+      background-color: var(--terra-progress-bar-progress-background-color, #0092e0);
+    }
+
     &::-ms-fill {
       background-color: var(--terra-progress-bar-progress-background-color, #0092e0);
     }
@@ -62,25 +66,14 @@
         outline: none;
       }
 
-      &[value] {
-        background-color: #d3d4d5;
-      }
-
       &[value]::-moz-progress-bar {
-        background-color: currentColor;
         border-bottom-left-radius: 0;
-        border-right: 1px solid #fff;
         border-top-left-radius: 0;
-      }
-
-      &[value='100'] {
-        border-right: 0 solid #fff;
       }
 
       &[value='0']::-moz-progress-bar,
       &[value='100']::-moz-progress-bar {
         border-bottom-right-radius: 0;
-        border-right: 0 solid #fff;
         border-top-right-radius: 0;
       }
     }
