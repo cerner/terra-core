@@ -424,7 +424,7 @@ class Frame extends React.Component {
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
           <span className={cx('arrow-icon')} />
         </div>
-        <span className={cx('visually-hidden-component')} ref={this.visuallyHiddenComponent} aria-live="assertive" aria-relevant="additions text" aria-atomic="true" />
+        <span className={cx('visually-hidden-component')} ref={this.visuallyHiddenComponent} aria-live="assertive" aria-relevant="additions text" aria-atomic="true" role="alert" />
         {this.state.isOpen
           && (
           <Dropdown
