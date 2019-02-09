@@ -11,6 +11,11 @@ const TableRowExample = () => (
         <Placeholder title="Default" style={{ height: '50px' }} />
       </Cell>
     </Row>
+    <Row key="striped_row" isStriped>
+      <Cell>
+        <Placeholder title="Striped" style={{ height: '50px' }} />
+      </Cell>
+    </Row>
     <Row isSelectable key="selectable_row">
       <Cell>
         <Placeholder title="Selectable" style={{ height: '50px' }} />
