@@ -14,10 +14,17 @@
     }
   }
 
-  [data-table-padded='true'] .cell {
-    padding-bottom: var(--terra-table-cell-padding-bottom, 0.5em);
-    padding-left: var(--terra-table-cell-padding-left, 0.75em);
-    padding-right: var(--terra-table-cell-padding-right, 0.75em);
-    padding-top: var(--terra-table-cell-padding-top, 0.5em);
+  [data-table-padding='standard'] .cell {
+    padding-bottom: var(--terra-table-cell-standard-padding-bottom, 0.5em);
+    padding-left: var(--terra-table-cell-standard-padding-left, 0.75em);
+    padding-right: var(--terra-table-cell-standard-padding-right, 0.75em);
+    padding-top: var(--terra-table-cell-standard-padding-top, 0.5em);
+  }
+
+  [data-table-padding='compact'] .cell {
+    padding-bottom: var(--terra-table-cell-compact-padding-bottom, 0.25em);
+    padding-left: var(--terra-table-cell-compact-padding-left, 0.75em);
+    padding-right: var(--terra-table-cell-compact-padding-right, 0.75em);
+    padding-top: var(--terra-table-cell-compact-padding-top, 0.25em);
   }
 }

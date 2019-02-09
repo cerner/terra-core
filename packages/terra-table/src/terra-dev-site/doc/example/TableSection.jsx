@@ -9,7 +9,7 @@ const TableSectionExample = () => (
     <Section title="Section Title" colSpan={1}>
       <Row>
         <Cell>
-          <Placeholder style={{ height: '50px' }} />
+          <Placeholder title="Section Row" style={{ height: '50px' }} />
         </Cell>
       </Row>
     </Section>

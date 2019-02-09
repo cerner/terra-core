@@ -7,7 +7,7 @@ import mockData from './mock-data/mock-section';
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px' }} />
+    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
   </Cell>
 );
 
@@ -37,6 +37,7 @@ const createSections = data => data.map(childItem => createSection(childItem));
 
 const StripedTableSection = () => (
   <Table
+    paddingStyle="standard"
     header={(
       <Header>
         <HeaderCell>Column 0</HeaderCell>

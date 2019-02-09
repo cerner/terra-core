@@ -1,20 +1,30 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, { Header, HeaderCell } from 'terra-table/lib/index';
-import Placeholder from 'terra-doc-template/lib/Placeholder';
+import IconSearch from 'terra-icon/lib/icon/IconSearch';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableHeaderCellExample = () => (
   <Table header={(
     <Header>
-      <HeaderCell>
-        <Placeholder title="Basic Content" style={{ height: '50px', width: '200px' }} />
+      <HeaderCell
+        icon={<IconSearch />}
+      >
+        I Like Punch
       </HeaderCell>
-      <HeaderCell isSelectable sort="asc">
-        <Placeholder title="Asc Content" style={{ height: '50px', width: '200px' }} />
+      <HeaderCell
+        icon={<IconSearch />}
+        isSelectable
+        sort="asc"
+      >
+        Turbo Monkey Waffles Use Diaper Assocaiton Taco Cheese Ingredient
       </HeaderCell>
-      <HeaderCell isSelectable sort="desc">
-        <Placeholder title="Desc Content" style={{ height: '50px', width: '200px' }} />
+      <HeaderCell
+        icon={<IconSearch />}
+        isSelectable
+        sort="desc"
+      >
+        Lobster
       </HeaderCell>
     </Header>
   )}

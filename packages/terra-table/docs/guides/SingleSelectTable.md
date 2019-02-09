@@ -76,7 +76,7 @@ For the single select table we set "isSelectable" for all items.
     );
   }
 ```
-Finally we need to check if the item matches the selectedKey in state.
+Next we need to check if the item matches the selectedKey in state.
 ```jsx
   createTableRow(rowData) {
     return (
@@ -92,7 +92,17 @@ Finally we need to check if the item matches the selectedKey in state.
     );
   }
 ```
-Then we can implement a method to loop through our data and create the table row with our methods and call it from our render method. 
+We can then stub out our static elements
+```jsx
+  const createCell = cell => (
+    <Cell key={cell.key}>
+      <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+    </Cell>
+  );
+
+  const createCellsForRow = cells => cells.map(cell => createCell(cell));
+```
+Finally we can implement a method to loop through our data and create the table row with our methods and call it from our render method. 
 ```jsx
   createTableRows(data) {
     return data.map(childItem => this.createTableRow(childItem));

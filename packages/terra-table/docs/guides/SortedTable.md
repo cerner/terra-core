@@ -128,7 +128,7 @@ const columns = ['column-0', 'column-1', 'column-2'];
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px' }} />
+    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
   </Cell>
 );
 

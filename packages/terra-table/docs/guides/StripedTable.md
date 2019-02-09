@@ -22,7 +22,7 @@ We can then implement our additional static methods to populate the cell data.
 ```jsx
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px' }} />
+    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
   </Cell>
 );
 

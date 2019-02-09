@@ -9,7 +9,7 @@ const TableSubsectionExample = () => (
     <Subsection colSpan={1} title="Subsection Title">
       <Row>
         <Cell>
-          <Placeholder style={{ height: '50px' }} />
+          <Placeholder title="Subsection Row" style={{ height: '50px' }} />
         </Cell>
       </Row>
     </Subsection>

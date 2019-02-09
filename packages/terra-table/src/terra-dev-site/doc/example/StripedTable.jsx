@@ -5,9 +5,8 @@ import Table, {
 } from 'terra-table/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const NoPaddingTable = () => (
+const NoStripedTable = () => (
   <Table
-    isPadded={false}
     id="Table"
     header={(
       <Header>
@@ -22,7 +21,7 @@ const NoPaddingTable = () => (
       <Cell key="ADDRESS">123 Adams Drive</Cell>
       <Cell key="PHONE_NUMBER">111-222-3333</Cell>
     </Row>
-    <Row key="PERSON_1">
+    <Row key="PERSON_1" isStriped>
       <Cell key="NAME">Jane Smith</Cell>
       <Cell key="ADDRESS">321 Drive Street</Cell>
       <Cell key="PHONE_NUMBER">111-222-3333</Cell>
@@ -35,4 +34,4 @@ const NoPaddingTable = () => (
   </Table>
 );
 
-export default NoPaddingTable;
+export default NoStripedTable;

@@ -8,7 +8,7 @@ const TableCellExample = () => (
   <Table>
     <Row>
       <Cell>
-        <Placeholder title="Cell Content" style={{ height: '50px' }} />
+        <Placeholder title="Cell Content" style={{ height: '50px', padding: '0' }} />
       </Cell>
     </Row>
   </Table>

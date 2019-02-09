@@ -21,18 +21,32 @@ viewports.forEach((viewport) => {
       });
     });
 
-    describe('Non Striped Table', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/no-striped-table'));
+    describe('Padded Table', () => {
+      before(() => browser.url('/#/raw/tests/terra-table/table/padding-table'));
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
-    });
-
-    describe('No Padding Table', () => {
-      before(() => browser.url('/#/raw/tests/terra-table/table/no-padding-table'));
-
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-table-cell-standard-padding-bottom': '1rem',
+          '--terra-table-cell-standard-padding-left': '1rem',
+          '--terra-table-cell-standard-padding-right': '1rem',
+          '--terra-table-cell-standard-padding-top': '1rem',
+          '--terra-table-cell-compact-padding-bottom': '1rem',
+          '--terra-table-cell-compact-padding-left': '1rem',
+          '--terra-table-cell-compact-padding-right': '1rem',
+          '--terra-table-cell-compact-padding-top': '1rem',
+          '--terra-table-header-cell-standard-padding-bottom': '1rem',
+          '--terra-table-header-cell-standard-padding-left': '1rem',
+          '--terra-table-header-cell-standard-padding-right': '1rem',
+          '--terra-table-header-cell-standard-padding-top': '1rem',
+          '--terra-table-header-cell-compact-padding-bottom': '1rem',
+          '--terra-table-header-cell-compact-padding-left': '1rem',
+          '--terra-table-header-cell-compact-padding-right': '1rem',
+          '--terra-table-header-cell-compact-padding-top': '1rem',
+        },
+      });
     });
 
     describe('TableHeader Test', () => {
@@ -53,10 +67,6 @@ viewports.forEach((viewport) => {
           '--terra-table-header-cell-huge-min-width': '3.0rem',
           '--terra-table-sort-indicator-color': 'yellow',
           '--terra-table-sort-indicator-width': '1rem',
-          '--terra-table-header-cell-padding-bottom': '1.5em',
-          '--terra-table-header-cell-padding-left': '0.5em',
-          '--terra-table-header-cell-padding-right': '0.5em',
-          '--terra-table-header-cell-padding-top': '0.75em',
           '--terra-table-header-cell-color': 'orange',
           '--terra-table-header-cell-font-size': '0.5rem',
           '--terra-table-header-cell-font-weight': 'normal',
@@ -95,10 +105,6 @@ viewports.forEach((viewport) => {
           '--terra-table-row-focus-box-shadow': 'inset 2 0 0 1px blue, inset 2 0 0 3px green',
           '--terra-table-row-selected-focus-background-color': 'cyan',
           '--terra-table-row-selected-hover-focus-background-color': 'beige',
-          '--terra-table-cell-padding-bottom': '0.25rem',
-          '--terra-table-cell-padding-left': '0.5rem',
-          '--terra-table-cell-padding-right': '0.5rem',
-          '--terra-table-cell-padding-top': '0.25rem',
           '--terra-table-first-cell-border-left': '5px dashed aqua',
           '--terra-table-last-cell-border-right': '5px dashed aqua',
         },

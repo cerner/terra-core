@@ -11,7 +11,7 @@ it('should render a default table', () => {
 
 it('should render a table without padding', () => {
   const table = shallow(
-    <Table isPadded={false} />,
+    <Table paddingStyle="none" />,
   );
   expect(table).toMatchSnapshot();
 });

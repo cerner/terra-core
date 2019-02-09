@@ -9,10 +9,10 @@ import TableSrc from '!raw-loader!../../../../src/Table';
 
 import DefaultTable from '../example/DefaultTable';
 import DefaultTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultTable';
-import NoStripedTable from '../example/NoStripedTable';
-import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoStripedTable';
-import NoPaddingTable from '../example/NoPaddingTable';
-import NoPaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoPaddingTable';
+import StripedTable from '../example/StripedTable';
+import StripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StripedTable';
+import PaddingTable from '../example/PaddingTable';
+import PaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/PaddingTable';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -27,14 +27,19 @@ const DocPage = () => (
         source: DefaultTableSrc,
       },
       {
-        title: 'Table without padding',
-        example: <NoPaddingTable />,
-        source: NoPaddingTableSrc,
+        title: 'Table with standard padding',
+        example: <PaddingTable paddingStyle="standard" />,
+        source: PaddingTableSrc,
       },
       {
-        title: 'Table without zebra stripes',
-        example: <NoStripedTable />,
-        source: NoStripedTableSrc,
+        title: 'Table with compact padding',
+        example: <PaddingTable paddingStyle="compact" />,
+        source: PaddingTableSrc,
+      },
+      {
+        title: 'Table zebra stripes',
+        example: <StripedTable />,
+        source: StripedTableSrc,
       },
     ]}
     propsTables={[

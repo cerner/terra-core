@@ -97,7 +97,7 @@ We can then stub out our static elements
 ```jsx
   const createCell = cell => (
     <Cell key={cell.key}>
-      <Placeholder title={cell.title} style={{ height: '50px' }} />
+      <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
     </Cell>
   );
 

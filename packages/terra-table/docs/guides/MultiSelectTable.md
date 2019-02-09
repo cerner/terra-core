@@ -74,7 +74,7 @@ For multi-select tables we need to set selectability based upon whether or not w
     );
   }
 ```
-Finally we need to check if the row is selected. As we support IE10 & 11, we cannot use "contains", so we use "indexOf" to determine if the key is present in our state array.
+Next we need to check if the row is selected. As we support IE10 & 11, we cannot use "contains", so we use "indexOf" to determine if the key is present in our state array.
 ```jsx
   createTableRow(rowData) {
     return (
@@ -94,13 +94,13 @@ We can then stub out our static elements
 ```jsx
   const createCell = cell => (
     <Cell key={cell.key}>
-      <Placeholder title={cell.title} style={{ height: '50px' }} />
+      <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
     </Cell>
   );
 
   const createCellsForRow = cells => cells.map(cell => createCell(cell));
 ```
-Then we can implement a method to loop through our data and create the table row with our methods and call it from our render method.
+Finally we can implement a method to loop through our data and create the table row with our methods and call it from our render method.
 Ensuring that we add the appropriate aria label for multiple selections.
 ```jsx
   createTableRows(data) {

@@ -1,12 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, {
   Header, HeaderCell, Row, Cell,
 } from 'terra-table/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const NoStripedTable = () => (
+const propTypes = {
+  paddingStyle: PropTypes.string,
+};
+
+const NoPaddingTable = ({
+  paddingStyle,
+}) => (
   <Table
+    paddingStyle={paddingStyle}
     id="Table"
     header={(
       <Header>
@@ -34,4 +42,6 @@ const NoStripedTable = () => (
   </Table>
 );
 
-export default NoStripedTable;
+NoPaddingTable.propTypes = propTypes;
+
+export default NoPaddingTable;

@@ -44,48 +44,46 @@ exports[`should render default table header cell 1`] = `
 exports[`should render table header cell descending sort indicator 1`] = `
 <th
   aria-sort="descending"
-  className="header-cell small"
+  className="header-cell is-sortable small"
   data-terra-table-header-cell={true}
   role="columnheader"
 >
+  <span
+    className="sort-indicator"
+  >
+    <IconCaretDown
+      className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </span>
   <div
     className="cell-content"
-  >
-    <span
-      className="sort-indicator"
-    >
-      <IconCaretDown
-        className=""
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </span>
-  </div>
+  />
 </th>
 `;
 
 exports[`should render table header cell with ascending sort indicator 1`] = `
 <th
   aria-sort="ascending"
-  className="header-cell small"
+  className="header-cell is-sortable small"
   data-terra-table-header-cell={true}
   role="columnheader"
 >
+  <span
+    className="sort-indicator"
+  >
+    <IconCaretUp
+      className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </span>
   <div
     className="cell-content"
-  >
-    <span
-      className="sort-indicator"
-    >
-      <IconCaretUp
-        className=""
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </span>
-  </div>
+  />
 </th>
 `;
 

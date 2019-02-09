@@ -9,7 +9,7 @@ const maxSectionCount = 3;
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px' }} />
+    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
   </Cell>
 );
 
@@ -51,6 +51,7 @@ class MutliSelectTable extends React.Component {
     return (
       <Table
         aria-multiselectable
+        paddingStyle="standard"
         header={(
           <Header>
             <HeaderCell>Column 0</HeaderCell>

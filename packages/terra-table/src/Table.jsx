@@ -16,9 +16,10 @@ const propTypes = {
    */
   header: PropTypes.element,
   /**
-   * Whether or not the table cells should be padded
+   * The padding styling to apply to the child list item content.
+   * One of `'none'`, `'standard'`, `'compact'`.
    */
-  isPadded: PropTypes.bool,
+  paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
   /**
    * Function callback for the ref of the table.
    */
@@ -26,13 +27,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isPadded: true,
+  paddingStyle: 'none',
 };
 
 const Table = ({
   children,
   header,
-  isPadded,
+  paddingStyle,
   refCallback,
   ...customProps
 }) => {
@@ -41,8 +42,13 @@ const Table = ({
     customProps.className,
   ]);
 
+  const attrSpread = {};
+  if (paddingStyle !== 'none') {
+    attrSpread['data-table-padding'] = paddingStyle;
+  }
+
   return (
-    <table {...customProps} data-table-padded={isPadded} className={tableClassNames} ref={refCallback} role="grid">
+    <table {...customProps} {...attrSpread} className={tableClassNames} ref={refCallback} role="grid">
       {header}
       <tbody className={cx(['body'])}>
         {children}

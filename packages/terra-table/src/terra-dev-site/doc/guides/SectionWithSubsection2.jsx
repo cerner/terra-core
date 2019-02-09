@@ -13,7 +13,7 @@ import mockData from './mock-data/mock-section-sub';
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px' }} />
+    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
   </Cell>
 );
 
@@ -75,6 +75,7 @@ class SectionWithSubsection2 extends React.Component {
   render() {
     return (
       <Table
+        paddingStyle="standard"
         header={(
           <Header>
             <HeaderCell>Column 0</HeaderCell>

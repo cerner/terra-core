@@ -7,7 +7,7 @@ import mockData from './mock-data/mock-select';
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px' }} />
+    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
   </Cell>
 );
 
@@ -50,6 +50,7 @@ class SingleSelectTable extends React.Component {
   render() {
     return (
       <Table
+        paddingStyle="standard"
         header={(
           <Header>
             <HeaderCell>Column 0</HeaderCell>

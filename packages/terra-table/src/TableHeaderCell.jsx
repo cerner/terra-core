@@ -17,9 +17,13 @@ const ariaSortMap = {
 
 const propTypes = {
   /**
-   * Content to be displayed for the column header
+   * Content to be displayed for the column header.
    */
   children: PropTypes.node,
+  /**
+   * Content to be displayed for the column header
+   */
+  icon: PropTypes.element,
   /**
    * Whether or not header cell should appear as a selectable element..
    */
@@ -73,6 +77,7 @@ const defaultProps = {
 
 const TableHeaderCell = ({
   children,
+  icon,
   isSelectable,
   metaData,
   minWidth,
@@ -88,15 +93,21 @@ const TableHeaderCell = ({
   const contentClassName = cx([
     'header-cell',
     { 'is-selectable': isSelectable },
+    { 'is-sortable': sort === 'asc' || sort === 'desc' },
     minWidth,
     customProps.className,
   ]);
 
-  let sortIndicator = null;
+  let sortIndicator;
   if (sort === 'asc') {
     sortIndicator = <span className={cx('sort-indicator')}><IconUp /></span>;
   } else if (sort === 'desc') {
     sortIndicator = <span className={cx('sort-indicator')}><IconDown /></span>;
+  }
+
+  let headerIcon;
+  if (icon) {
+    headerIcon = <span className={cx('cell-icon')}>{icon}</span>;
   }
 
   const attrSpread = { 'aria-sort': ariaSortMap[sort] };
@@ -111,9 +122,10 @@ const TableHeaderCell = ({
 
   return (
     <th {...customProps} {...attrSpread} data-terra-table-header-cell className={contentClassName} ref={refCallback} role="columnheader">
+      {sortIndicator}
       <div className={cx('cell-content')}>
+        {headerIcon}
         {children}
-        {sortIndicator}
       </div>
     </th>
   );
