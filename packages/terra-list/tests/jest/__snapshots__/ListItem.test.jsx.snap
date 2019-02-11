@@ -1,51 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should mount with isSelectable 1`] = `
-<ListItem
-  isSelectable={true}
-  isSelected={false}
->
-  <li
-    aria-selected={false}
-    className="list-item is-selectable"
-    role="option"
-  />
-</ListItem>
-`;
-
-exports[`should mount with isSelectable and hasChevron 1`] = `
+exports[`should render with callback functions 1`] = `
 <li
   aria-selected={false}
   className="list-item is-selectable"
+  data-item-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
   role="option"
+  tabIndex="0"
+  title="test"
 >
-  <Arrange
-    align="center"
-    fill={
-      <p>
-        test
-      </p>
-    }
-    fillAttributes={
-      Object {
-        "className": "arrange-content",
-      }
-    }
-    fitEnd={
-      <span
-        className="chevron"
-      >
-        <IconChevronRight
-          className=""
-          data-name="Layer 1"
-          height="1em"
-          isBidi={true}
-          viewBox="0 0 48 48"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </span>
-    }
+  <div
+    className="item-fill"
+    key="item-fill"
   />
 </li>
 `;
@@ -53,21 +23,88 @@ exports[`should mount with isSelectable and hasChevron 1`] = `
 exports[`should render with className 1`] = `
 <li
   className="list-item textClass"
-/>
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+</li>
 `;
 
 exports[`should render with content 1`] = `
 <li
   className="list-item"
 >
-  <p>
-    text
-  </p>
+  <div
+    className="item-fill"
+    key="item-fill"
+  >
+    <p>
+      text
+    </p>
+  </div>
+</li>
+`;
+
+exports[`should render with hasChevron 1`] = `
+<li
+  className="list-item"
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+  <div
+    className="item-end"
+    key="item-end"
+  >
+    <span
+      className="chevron"
+    >
+      <IconChevronRight
+        className=""
+        data-name="Layer 1"
+        height="1em"
+        isBidi={true}
+        viewBox="0 0 48 48"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </div>
+</li>
+`;
+
+exports[`should render with isSelectable 1`] = `
+<li
+  aria-selected={false}
+  className="list-item is-selectable"
+  data-item-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="option"
+  tabIndex="0"
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
 </li>
 `;
 
 exports[`should render with selected 1`] = `
 <li
-  className="list-item selected"
-/>
+  aria-selected={true}
+  className="list-item selected is-selectable"
+  data-item-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="option"
+  tabIndex="0"
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+</li>
 `;

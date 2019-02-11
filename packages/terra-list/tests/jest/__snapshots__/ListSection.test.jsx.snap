@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with callback functions 1`] = `
+<Fragment>
+  <ListSectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    onSelect={[MockFunction]}
+    refCallback={[MockFunction]}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render with isCollapsed 1`] = `
+<Fragment>
+  <ListSectionHeader
+    isCollapsed={true}
+    isCollapsible={false}
+    level={1}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render with isCollapsible 1`] = `
+<Fragment>
+  <ListSectionHeader
+    isCollapsed={false}
+    isCollapsible={true}
+    level={1}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render with items 1`] = `
+<Fragment>
+  <ListSectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    title="test"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</Fragment>
+`;
+
+exports[`should render with level 1`] = `
+<Fragment>
+  <ListSectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={3}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render with no items 1`] = `
+<Fragment>
+  <ListSectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={1}
+    title="test"
+  />
+</Fragment>
+`;
