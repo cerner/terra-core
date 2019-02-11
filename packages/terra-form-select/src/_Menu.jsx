@@ -5,6 +5,7 @@ import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
 import AddOption from './_AddOption';
+import ClearOption from './_ClearOption';
 import NoResults from './_NoResults';
 import Util from './_MenuUtil';
 import styles from './_Menu.module.scss';
@@ -18,6 +19,10 @@ const propTypes = {
    * The content of the menu.
    */
   children: PropTypes.node,
+  /**
+   * Text for the clear option.
+   */
+  clearOptionDisplay: PropTypes.string,
   /**
    * Content to display when no results are found.
    */
@@ -60,6 +65,7 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  clearOptionDisplay: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
@@ -99,21 +105,25 @@ class Menu extends React.Component {
    */
   static getDerivedStateFromProps(props, state) {
     const {
-      searchValue, noResultContent,
+      searchValue, noResultContent, clearOptionDisplay,
     } = props;
     const children = Util.filter(props.children, props.searchValue, props.optionFilter);
 
     let hasNoResults = false;
+    let hasAddOption = false;
 
     if (Util.shouldAllowFreeText(props, children)) {
       children.push(<AddOption value={searchValue} />);
+      hasAddOption = true;
     }
 
     if (Util.shouldShowNoResults(props, children)) {
       children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
       hasNoResults = true;
-    } else {
-      hasNoResults = false;
+    }
+
+    if (Util.shouldShowClearOption(props, hasAddOption, hasNoResults)) {
+      children.unshift(<ClearOption display={clearOptionDisplay} value={""} />);
     }
 
     return {

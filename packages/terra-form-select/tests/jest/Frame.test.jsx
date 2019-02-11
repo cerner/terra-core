@@ -129,4 +129,9 @@ describe('Frame', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a clear option', () => {
+    const wrapper = shallow(<Frame clearOptionDisplay={"-Select-"} />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

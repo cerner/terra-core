@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Added
+* Introduce an option to allow clearing the selected item
+
 5.5.0 - (February 5, 2019)
 ------------------
 ### Added

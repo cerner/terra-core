@@ -6,6 +6,11 @@ import { Variants } from './_constants';
 
 const propTypes = {
   /**
+   * Whether a clear option is available to clear the selection.
+   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
+   */
+  allowClear: PropTypes.bool,
+  /**
    * The select options.
    */
   children: PropTypes.node,
@@ -93,6 +98,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   error: undefined,
@@ -113,6 +119,7 @@ const defaultProps = {
 };
 
 const SelectField = ({
+  allowClear,
   children,
   defaultValue,
   error,
@@ -151,6 +158,7 @@ const SelectField = ({
   >
     <Select
       {...selectAttrs}
+      allowClear={allowClear}
       id={selectId}
       isInvalid={isInvalid}
       defaultValue={defaultValue}
