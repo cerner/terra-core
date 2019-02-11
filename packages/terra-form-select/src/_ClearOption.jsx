@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Option from './_Option';
 import classNames from 'classnames/bind';
+import Option from './_Option';
 import styles from './_ClearOption.module.scss';
 
 const cx = classNames.bind(styles);
@@ -17,10 +17,10 @@ const propTypes = {
   value: PropTypes.string,
 };
 
-const ClearOption = ({ display, value, ...customProps }, context) => (
+const ClearOption = ({ display, value, ...customProps }) => (
   <Option
     {...customProps}
-    className={cx(['clear-option', customProps.className,])}
+    className={cx(['clear-option', customProps.className])}
     display={display}
     value={value}
   />

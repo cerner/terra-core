@@ -131,7 +131,7 @@ describe('Frame', () => {
   });
 
   it('should render a clear option', () => {
-    const wrapper = shallow(<Frame clearOptionDisplay={"-Select-"} />, intlContexts.shallowContext);
+    const wrapper = shallow(<Frame clearOptionDisplay="-Select-" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 });

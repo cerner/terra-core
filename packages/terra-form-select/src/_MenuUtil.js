@@ -269,9 +269,9 @@ class MenuUtil {
   static shouldShowClearOption(props, hasAddOption, hasNoResults) {
     const { clearOptionDisplay, searchValue, variant } = props;
 
-    if (variant !== Variants.TAG && variant !== Variants.MULTIPLE && 
-      clearOptionDisplay && !hasNoResults && !hasAddOption && 
-      (searchValue == undefined || searchValue.length == 0)) {
+    if (variant !== Variants.TAG && variant !== Variants.MULTIPLE
+      && clearOptionDisplay && !hasNoResults && !hasAddOption
+      && (searchValue === undefined || searchValue.length === 0)) {
       return true;
     }
 

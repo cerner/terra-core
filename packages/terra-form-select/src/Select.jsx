@@ -208,6 +208,15 @@ class Select extends React.Component {
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
     const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
+    let clearOptionDisplay;
+
+    if (allowClear) {
+      if (selectPlaceholder.length === 0) {
+        clearOptionDisplay = defaultPlaceholder;
+      } else {
+        clearOptionDisplay = selectPlaceholder;
+      }
+    }
 
     return (
       <Frame
@@ -217,7 +226,7 @@ class Select extends React.Component {
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
-        clearOptionDisplay= {allowClear ? selectPlaceholder.length > 0 ? selectPlaceholder : defaultPlaceholder : undefined}
+        clearOptionDisplay={clearOptionDisplay}
         dropdown={dropdownProps => (
           <DropdownMenu intl={intl} {...dropdownProps}>
             {this.state.tags}
