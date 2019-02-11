@@ -46,39 +46,57 @@ const defaultProps = {
   size: undefined,
 };
 
-const Facility = ({
-  alt,
-  color,
-  hashValue,
-  image,
-  isAriaHidden,
-  size,
-  ...customProps
-}) => {
-  let colorVariant;
-  let facilityContent;
-  if (image) {
-    colorVariant = '';
-    facilityContent = generateImage(image, alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
-  } else {
-    colorVariant = setColor(alt, color, hashValue);
-    facilityContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
+class Facility extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      fallback: false,
+    };
+
+    this.handleFallBack = this.handleFallback.bind(this);
   }
 
-  const attributes = { ...customProps };
-  const customStyles = size ? Object.assign({ fontSize: size }, attributes.style) : attributes.style;
-  const facilityClassNames = cx([
-    'avatar',
-    `${colorVariant}`,
-    attributes.className,
-  ]);
+  handleFallback() {
+    this.setState({ fallback: true });
+  }
 
-  return (
-    <div {...attributes} className={facilityClassNames} style={customStyles}>
-      {facilityContent}
-    </div>
-  );
-};
+  render() {
+    const {
+      alt,
+      color,
+      hashValue,
+      image,
+      isAriaHidden,
+      size,
+      ...customProps
+    } = this.props;
+
+    let facilityContent;
+
+    if (image) {
+      facilityContent = generateImage(image, alt, isAriaHidden, AVATAR_VARIANTS.FACILITY, this.handleFallback);
+    } else {
+      facilityContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
+    }
+
+    const attributes = { ...customProps };
+    const customStyles = size ? Object.assign({ fontSize: size }, attributes.style) : attributes.style;
+    const facilityClassNames = cx([
+      'avatar',
+      setColor(alt, color, hashValue),
+      { 'fallback-icon': this.state.fallback },
+      { image: Boolean(image) },
+      attributes.className,
+    ]);
+
+    return (
+      <div {...attributes} className={facilityClassNames} style={customStyles}>
+        {facilityContent}
+      </div>
+    );
+  }
+}
 
 Facility.propTypes = propTypes;
 Facility.defaultProps = defaultProps;
