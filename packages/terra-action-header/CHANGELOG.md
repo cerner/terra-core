@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Remove the collapsible menu view from the example
 
 2.5.0 - (February 5, 2019)
 ------------------
