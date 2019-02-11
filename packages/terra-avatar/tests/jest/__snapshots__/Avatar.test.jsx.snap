@@ -117,7 +117,7 @@ exports[`Avatar should render an isDeceased avatar 1`] = `
 
 exports[`Avatar should render fallback user avatar when invalid image is passed in 1`] = `
 <div
-  class="avatar image"
+  class="avatar five image"
 >
   <div>
     <div
@@ -158,7 +158,7 @@ exports[`Avatar should render fallback user avatar when more than two initials a
 
 exports[`Avatar should render image avatar when image is passed in 1`] = `
 <div
-  class="avatar image"
+  class="avatar five image"
 >
   <div>
     <div

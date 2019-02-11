@@ -76,7 +76,7 @@ describe('Facility', () => {
     Terra.should.matchScreenshot({ selector: '#image-facility' });
   });
 
-  describe('Invalid Image Avatar', () => {
+  describe('Invalid Image Facility', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility/invalid-image-facility'));
 
     Terra.should.beAccessible({ selector: '#invalid-image-facility' });

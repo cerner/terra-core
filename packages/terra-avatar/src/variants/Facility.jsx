@@ -54,7 +54,7 @@ class Facility extends React.Component {
       fallback: false,
     };
 
-    this.handleFallBack = this.handleFallback.bind(this);
+    this.handleFallback = this.handleFallback.bind(this);
   }
 
   handleFallback() {
@@ -79,7 +79,6 @@ class Facility extends React.Component {
     } else {
       facilityContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
     }
-
     const attributes = { ...customProps };
     const customStyles = size ? Object.assign({ fontSize: size }, attributes.style) : attributes.style;
     const facilityClassNames = cx([
