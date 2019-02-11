@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Correct test routing.
 
 2.2.0 - (February 5, 2019)
 ------------------

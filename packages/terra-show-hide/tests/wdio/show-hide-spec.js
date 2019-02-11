@@ -130,9 +130,8 @@ describe('Show Hide', () => {
   });
 
   describe('Custom css properties', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/states-show-hide'));
+    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide'));//
 
-    Terra.should.matchScreenshot('collapsed');
     Terra.should.beAccessible();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
