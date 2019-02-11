@@ -26,10 +26,6 @@
 * --terra-table-tbody-background-color
 * --terra-table-sort-indicator-width
 * --terra-table-header-cell-height
-* --terra-table-header-cell-padding-bottom
-* --terra-table-header-cell-padding-left
-* --terra-table-header-cell-padding-right
-* --terra-table-header-cell-padding-top
 * --terra-table-row-striped-focus-background-color
 * --terra-table-row-striped-selected-focus-background-color
 * --terra-table-row-focus-background-color
@@ -92,6 +88,25 @@
 * --terra-table-subsection-header-focus-outline
 * --terra-table-subsection-header-hover-active-background-color
 * --terra-table-subsection-header-start-padding-right
+* --terra-table-cell-standard-padding-bottom
+* --terra-table-cell-standard-padding-left
+* --terra-table-cell-standard-padding-right
+* --terra-table-cell-standard-padding-top
+* --terra-table-cell-compact-padding-bottom
+* --terra-table-cell-compact-padding-left
+* --terra-table-cell-compact-padding-right
+* --terra-table-cell-compact-padding-top
+* --terra-table-header-cell-focus-background-color
+* --terra-table-header-cell-focus-border-color
+* --terra-table-header-cell-focus-box-shadow
+* --terra-table-header-cell-standard-padding-bottom
+* --terra-table-header-cell-standard-padding-left
+* --terra-table-header-cell-standard-padding-right
+* --terra-table-header-cell-standard-padding-top
+* --terra-table-header-cell-compact-padding-bottom
+* --terra-table-header-cell-compact-padding-left
+* --terra-table-header-cell-compact-padding-right
+* --terra-table-header-cell-compact-padding-top
 
 #### Removed
 * --terra-table-tfoot-tr-border-bottom
@@ -100,3 +115,10 @@
 * --terra-table-subheader-color
 * --terra-table-subheader-font-size
 * --terra-table-subheader-font-weight
+* --terra-table-cell-padding-bottom
+* --terra-table-cell-padding-left
+* --terra-table-cell-padding-right
+* --terra-table-header-cell-padding-bottom
+* --terra-table-header-cell-padding-left
+* --terra-table-header-cell-padding-right
+* --terra-table-header-cell-padding-top
