@@ -6,6 +6,11 @@ Unreleased
 
 ### Fixed
 * Status View glyph does not always displays when it should
+=======
+3.4.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.3.0 - (January 26, 2019)
 ------------------
