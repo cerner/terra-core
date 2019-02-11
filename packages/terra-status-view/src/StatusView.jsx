@@ -101,47 +101,43 @@ class StatusView extends React.Component {
     let paddingTop = 0;
     let paddingBottom = 0;
     let showGlyph = false;
-    let componentsHeight = 0;
     let newViewHeight = 0;
     let contentHeight = 0;
+    let titleNodeHeight = 0;
+    let actionNodeHeight = 0;
+    let messageNodeHeight = 0;
+    let dividerNodeHeight = 0;
+    let contentWithGlyphHeight = 0;
 
     const viewHeight = this.innerNode.getBoundingClientRect().height;
     newViewHeight = viewHeight;
 
     // get the content heights of the nodes that are to be shown if have content and cannot be hidden
-    componentsHeight = this.titleNode.getBoundingClientRect().height;
-    if (this.actionsNode) {
-      componentsHeight += this.actionsNode.getBoundingClientRect().height;
-    }
-    if (this.messageNode) {
-      componentsHeight += this.messageNode.getBoundingClientRect().height;
-    }
-    if (this.dividerNode) {
-      componentsHeight += this.dividerNode.getBoundingClientRect().height;
+    titleNodeHeight = this.titleNode.getBoundingClientRect().height;
+    actionNodeHeight = this.actionsNode ? this.actionsNode.getBoundingClientRect().height : 0;
+    messageNodeHeight = this.messageNode ? this.messageNode.getBoundingClientRect().height : 0;
+    dividerNodeHeight = this.dividerNodeHeight ? this.dividerNode.getBoundingClientRect().height : 0;
+    contentHeight = (titleNodeHeight + actionNodeHeight + messageNodeHeight + dividerNodeHeight);
+
+    contentWithGlyphHeight = contentHeight + (this.glyphNode ? this.glyphNode.getBoundingClientRect().height : 0);
+    // if inner view node height is lesser than the components along with glyph inside the inner view.
+    // and the height difference is very less (i.e 0.0001) then add that comparision value to the
+    // the inner view height.
+    if (contentWithGlyphHeight - viewHeight <= 0.0001) {
+      newViewHeight += 0.0001;
     }
 
-    contentHeight = componentsHeight;
-    if (this.glyphNode) {
-      contentHeight += this.glyphNode.getBoundingClientRect().height;
-      // if inner view node height is lesser than the components along with glyph inside the inner view.
-      // and the height difference is very less (i.e 0.0001) then add that comparision value to the
-      // the inner view height.
-      if (contentHeight - viewHeight <= 0.0001) {
-        newViewHeight += 0.0001;
-      }
-    }
-
-    if (this.glyphNode && newViewHeight >= contentHeight && this.innerNode.offsetWidth >= this.glyphNode.offsetWidth) {
+    if (this.glyphNode && newViewHeight >= contentWithGlyphHeight && this.innerNode.offsetWidth >= this.glyphNode.offsetWidth) {
       // if glyph exists and can fit inside the container's height and width, distribute remaining padding to center
       showGlyph = true;
       if (!this.props.isAlignedTop) {
-        const remainingHeight = (viewHeight > contentHeight) ? (viewHeight - contentHeight) : 0;
+        const remainingHeight = (viewHeight > contentWithGlyphHeight) ? (viewHeight - contentWithGlyphHeight) : 0;
         paddingTop = remainingHeight * 0.4;
         paddingBottom = remainingHeight * 0.6;
       }
     } else if (!this.props.isAlignedTop) {
       // glyph does not exist or does not fit, distribute remaining padding if any to center
-      const remainingHeight = viewHeight - componentsHeight;
+      const remainingHeight = viewHeight - contentHeight;
       if (remainingHeight > 0) {
         paddingTop = remainingHeight * 0.4;
         paddingBottom = remainingHeight * 0.6;
