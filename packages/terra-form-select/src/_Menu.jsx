@@ -176,7 +176,7 @@ class Menu extends React.Component {
         intl,
       } = this.context;
 
-      if (hasNoResults && searchValue) {
+      if (hasNoResults) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
       } else {
         visuallyHiddenComponent.current.innerText = '';

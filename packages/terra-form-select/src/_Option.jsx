@@ -74,6 +74,7 @@ const Option = ({
       disabled={disabled}
       className={optionClassNames}
       aria-selected={isSelected}
+      aria-checked={isSelected}
       aria-disabled={disabled}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
