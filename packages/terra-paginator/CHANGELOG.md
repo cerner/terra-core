@@ -35,6 +35,9 @@ Unreleased
 * Updated theme variables
 * Add previous and next margins for progressive paginator
 
+### Removed
+* Unneeded terra-list dependency.
+
 1.27.0 - (January 2, 2019)
 ------------------
 ### Changed
