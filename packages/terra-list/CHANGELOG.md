@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+4.0.0 - (February 12, 2019)
+------------------
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/guides)
 * Removed Component `SingleSelectList` - No longer supported this uncontrolled variant of list.
 * Removed Component `MultiSelectList` - No longer supported this uncontrolled variant of list.
