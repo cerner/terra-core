@@ -7,6 +7,11 @@ Unreleased
 ### Added
 * Introduce an option to allow clearing the selected item
 
+5.6.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.5.0 - (February 5, 2019)
 ------------------
 ### Added
