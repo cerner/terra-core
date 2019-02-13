@@ -103,20 +103,16 @@ class StatusView extends React.Component {
     let showGlyph = false;
     let newViewHeight = 0;
     let contentHeight = 0;
-    let titleNodeHeight = 0;
-    let actionNodeHeight = 0;
-    let messageNodeHeight = 0;
-    let dividerNodeHeight = 0;
     let contentWithGlyphHeight = 0;
 
     const viewHeight = this.innerNode.getBoundingClientRect().height;
     newViewHeight = viewHeight;
 
     // get the content heights of the nodes that are to be shown if have content and cannot be hidden
-    titleNodeHeight = this.titleNode.getBoundingClientRect().height;
-    actionNodeHeight = this.actionsNode ? this.actionsNode.getBoundingClientRect().height : 0;
-    messageNodeHeight = this.messageNode ? this.messageNode.getBoundingClientRect().height : 0;
-    dividerNodeHeight = this.dividerNodeHeight ? this.dividerNode.getBoundingClientRect().height : 0;
+    const titleNodeHeight = this.titleNode.getBoundingClientRect().height;
+    const actionNodeHeight = this.actionsNode ? this.actionsNode.getBoundingClientRect().height : 0;
+    const messageNodeHeight = this.messageNode ? this.messageNode.getBoundingClientRect().height : 0;
+    const dividerNodeHeight = this.dividerNode ? this.dividerNode.getBoundingClientRect().height : 0;
     contentHeight = (titleNodeHeight + actionNodeHeight + messageNodeHeight + dividerNodeHeight);
 
     contentWithGlyphHeight = contentHeight + (this.glyphNode ? this.glyphNode.getBoundingClientRect().height : 0);
