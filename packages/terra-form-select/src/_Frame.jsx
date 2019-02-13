@@ -394,16 +394,10 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
-    let role;
-
-    if (!disabled) {
-      role = 'combobox';
-    }
-
     return (
       <div
         {...customProps}
-        role={role}
+        role={!disabled ? 'combobox' : undefined}
         aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
