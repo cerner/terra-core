@@ -96,6 +96,7 @@
 * --terra-table-cell-compact-padding-left
 * --terra-table-cell-compact-padding-right
 * --terra-table-cell-compact-padding-top
+* --terra-table-header-cell-selectable-outline
 * --terra-table-header-cell-focus-background-color
 * --terra-table-header-cell-focus-border-color
 * --terra-table-header-cell-focus-box-shadow
@@ -107,6 +108,7 @@
 * --terra-table-header-cell-compact-padding-left
 * --terra-table-header-cell-compact-padding-right
 * --terra-table-header-cell-compact-padding-top
+* --terra-table-header-cell-icon-padding-right
 
 #### Removed
 * --terra-table-tfoot-tr-border-bottom

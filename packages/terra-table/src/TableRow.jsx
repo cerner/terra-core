@@ -57,8 +57,10 @@ const propTypes = {
 };
 
 const defaultProps = {
+  children: [],
   isSelected: false,
   isSelectable: false,
+  isStriped: false,
 };
 
 const TableRow = ({

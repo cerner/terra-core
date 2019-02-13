@@ -3,7 +3,7 @@
 In previous versions of the terra-table a multi select style table could be created as either a controlled version of SelectableTableRows or uncontrolled version of MultiSelectableRows.  These implementations suffered from inflexibility and performance concerns. Going foward terra-table is more granular, though this puts more reponsibility on the consumer to properly update their table rows with the appropriate state. The following is a guide to addressing those concerns in your implementation.
 
 ## State Management
-The state of selection needs to be managed for the table in a High Order Component (HOC). In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
+The state of selection needs to be managed for the table in a High Order Component (HOC). In this example we are going to be using a unique key to manage the selection state, but the type of state used is open to the implementor of the HOC.
 
  First defaulting our state to an empty array in the constructor. 
 ```jsx
@@ -90,7 +90,7 @@ Next we need to check if the row is selected. As we support IE10 & 11, we cannot
     );
   }
 ```
-We can then stub out our static elements
+We can then implement a standard cell content for our static elements
 ```jsx
   const createCell = cell => (
     <Cell key={cell.key}>

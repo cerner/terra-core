@@ -1,6 +1,6 @@
 # Terra Table - Sections with Subsections
 
-With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to not have both collapsible sections and collapsible subsections in a table.
+With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to only use collapsible sections or collapsible subsections in a table, but not both.
 
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.
@@ -61,7 +61,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
     );
   }
 ```
-For the common collapsible sections we set "isCollapsible" for all sections.
+For rendering the collapsible section we set "isCollapsible" for all sections.
 ```jsx
   createSection(sectionData) {
     return (

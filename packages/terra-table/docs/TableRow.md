@@ -1,12 +1,6 @@
 # Terra Table Row
 
-The Terra Table Row is a sub component that groups child cells. Each row handles it's own selection state through props. The onSelect function that can be passed to the table row will return the metaData associated to the row. The metaData allows for greater control of state with the ability to associate any indicator or function with the row.
-
-## Getting Started
-
-- Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-table`
-  - `yarn add terra-table`
+The Terra Table Row is a sub component that groups table cells passed through children. Each row handles it's own selection state through props. The onSelect function that can be passed to the table row will return the metaData associated to the row. The metaData allows for greater control of state with the ability to associate any indicator or function with the row.
 
 ## Usage
 

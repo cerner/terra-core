@@ -53,13 +53,10 @@
     }
   }
 
-  .is-sortable {
-    padding-top: var(--terra-table-sort-padding-top, 14px);
-  }
-
   .is-selectable {
     cursor: pointer;
-    outline: var(--terra-table-header-cell-focus-outline, none);
+    outline: var(--terra-table-header-cell-selectable-outline, none);
+    padding-top: var(--terra-table-header-cell-selectable-padding-top, 14px);
 
     &:hover {
       background-color: var(--terra-table-header-cell-hover-background-color, darken(#dedfe0, 5%));
@@ -96,6 +93,6 @@
   }
 
   .cell-icon {
-    padding-right: 5px;
+    padding-right: var(--terra-table-header-cell-icon-padding-right, 5px);
   }
 }

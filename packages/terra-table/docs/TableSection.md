@@ -1,12 +1,6 @@
 # Terra Table Section
 
-The Terra Table Section is a sub component that creates a section header based on the given props and groups the child rows beneath it. The section header has the ability to toggle the display of its child rows given the isCollapsible and isCollapsed props. For a section to be collapsed both isCollapsible and isCollapsed. Each section handles its collapsible and collapsed state.
-
-## Getting Started
-
-- Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-table`
-  - `yarn add terra-table`
+The Terra Table Section is a sub component that creates a section header based on the given props and groups the child rows beneath it. The section has the ability to toggle the display of its child rows given the isCollapsible and isCollapsed props. For a section to be collapsed both isCollapsible and isCollapsed must be true. Each section handles its collapsible and collapsed state.
 
 ## Usage
 

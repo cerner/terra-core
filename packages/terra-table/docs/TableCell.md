@@ -2,12 +2,6 @@
 
 The Terra Table Cell is a sub component to be used inside a table row.
 
-## Getting Started
-
-- Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-table`
-  - `yarn add terra-table`
-
 ## Usage
 
 ```jsx

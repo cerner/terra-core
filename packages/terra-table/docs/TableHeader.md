@@ -1,12 +1,6 @@
 # Terra Table Header
 
-The Terra Table Header is a sub component passed to the table as a prop, rather than children. The header provides the layout for header cells.
-
-## Getting Started
-
-- Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-table`
-  - `yarn add terra-table`
+The Terra Table Header is a sub component passed to the table through Table's `header` prop, rather than children. The header provides the layout for header cells.
 
 ## Usage
 

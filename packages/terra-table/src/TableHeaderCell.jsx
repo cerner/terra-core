@@ -21,11 +21,11 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Content to be displayed for the column header
+   * Start aligned icon of the header cell.
    */
   icon: PropTypes.element,
   /**
-   * Whether or not header cell should appear as a selectable element..
+   * Whether or not header cell should appear as a selectable element.
    */
   isSelectable: PropTypes.bool,
   /**

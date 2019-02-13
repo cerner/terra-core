@@ -1,12 +1,6 @@
 # Terra Table Subsection Header
 
-The Terra Subsection Header is built upon a table row and can be placed similarly within a table, provided the number of columns are provided to the SubsectionHeader. The subsection header should only be consumed directly when the header is static, as the actual row collapse is handled by the subsection.
-
-## Getting Started
-
-- Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-table`
-  - `yarn add terra-table`
+The Terra Subsection Header is built upon a table row and can be placed similarly within a table, provided the number of columns are provided to the SubsectionHeader. The subsection header should only be placed within the table via children when the header is static, as the actual row collapse is handled by the section.
 
 ## Usage
 
