@@ -1,7 +1,7 @@
 {
   "name": "terra-scroll",
   "main": "lib/Scroll.js",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback.",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.3.0"
+    "terra-doc-template": "^2.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
