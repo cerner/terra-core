@@ -7,6 +7,11 @@ Unreleased
 * Added new colorClass prop and examples of how to use it.
 * Removed color and hasGradient props
 
+3.4.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.3.0 - (February 5, 2019)
 ------------------
 ### Changed
