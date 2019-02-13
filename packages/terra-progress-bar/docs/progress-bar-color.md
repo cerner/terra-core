@@ -1,5 +1,3 @@
-## Progress Bar Colors
-
 By passing in a colorClass, authors can manually set the bar color of any `<ProgressBar />` component.
 
 ```css

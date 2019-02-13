@@ -1,5 +1,3 @@
-## Progress Bar Foreground and Background Colors
-
 By defining more CSS, authors can control more of the `<ProgressBar />` component through the colorClass prop.
 
 ```css
