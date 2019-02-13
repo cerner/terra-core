@@ -72,6 +72,7 @@ viewports.forEach((viewport) => {
           '--terra-table-header-cell-font-weight': 'normal',
           '--terra-table-first-header-cell-border-left': '3px dashed blue',
           '--terra-table-last-header-cell-border-right': '4px dashed blue',
+          '--terra-table-header-cell-selectable-padding-top': '28px',
         },
       });
     });

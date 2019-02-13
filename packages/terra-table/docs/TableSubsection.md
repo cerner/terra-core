@@ -10,6 +10,7 @@ import { Row, Subsection } from 'terra-table';
 
   <Subsection
     key="unique-react-key"
+    title="Subsection Title"
     isCollapsible
     isCollapsed
     metaData={{ myInfo: 'my-data' }}

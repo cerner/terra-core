@@ -13,11 +13,11 @@ const propTypes = {
    */
   colSpan: PropTypes.number.isRequired,
   /**
-   * Whether or not the subsection is collapsed.
+   * @private Whether or not the subsection is collapsed.
    */
   isCollapsed: PropTypes.bool,
   /**
-   * Whether or not the subsection can be collapsed.
+   * @private Whether or not the subsection can be collapsed.
    */
   isCollapsible: PropTypes.bool,
   /**
@@ -25,12 +25,12 @@ const propTypes = {
    */
   level: PropTypes.oneOf([3, 4, 5, 6]),
   /**
-   * The associated metaData to be provided in the onSelect callback.
+   * @private The associated metaData to be provided in the onSelect callback.
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
   /**
-   * Function callback for when the appropriate click or key action is performed.
+   * @private Function callback for when the appropriate click or key action is performed.
    * Callback contains the javascript evnt and prop metadata, e.g. onSelect(event, metaData)
    */
   onSelect: PropTypes.func,

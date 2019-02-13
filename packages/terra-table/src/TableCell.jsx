@@ -17,6 +17,10 @@ const propTypes = {
   refCallback: PropTypes.func,
 };
 
+const defaultProps = {
+  children: [],
+};
+
 const TableCell = ({
   children,
   refCallback,
@@ -35,5 +39,6 @@ const TableCell = ({
 };
 
 TableCell.propTypes = propTypes;
+TableCell.defaultProps = defaultProps;
 
 export default TableCell;

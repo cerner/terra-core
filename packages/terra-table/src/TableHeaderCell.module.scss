@@ -53,10 +53,14 @@
     }
   }
 
+  .is-sortable,
+  .is-selectable {
+    padding-top: var(--terra-table-header-selected-padding-top, 14px);
+  }
+
   .is-selectable {
     cursor: pointer;
-    outline: var(--terra-table-header-cell-selectable-outline, none);
-    padding-top: var(--terra-table-header-cell-selectable-padding-top, 14px);
+    outline: var(--terra-table-header-cell-focus-outline, none);
 
     &:hover {
       background-color: var(--terra-table-header-cell-hover-background-color, darken(#dedfe0, 5%));

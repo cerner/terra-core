@@ -24,6 +24,7 @@ exports[`should render a table section with a row 1`] = `
   <TableRow
     isSelectable={false}
     isSelected={false}
+    isStriped={false}
   />
 </Fragment>
 `;

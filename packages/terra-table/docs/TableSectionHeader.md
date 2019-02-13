@@ -10,10 +10,7 @@ import { SectionHeader } from 'terra-table';
 
 <SectionHeader
   key="unique-react-key"
-  isCollapsible
-  isCollapsed
-  metaData={{ myInfo: 'my-data' }}
-  onSelect={this.handleSelection}
+  title="Section Title"
   colSpan={3}
 />
 ```

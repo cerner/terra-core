@@ -18,7 +18,6 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        description: 'Sorting logic is handled by the consumer by implementing the onSelect and metaData props.',
         example: <HeaderCellExample />,
         source: HeaderCellExampleSrc,
       },

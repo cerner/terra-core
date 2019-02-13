@@ -6,7 +6,21 @@ import Placeholder from 'terra-doc-template/lib/Placeholder';
 
 const TableSectionExample = () => (
   <Table>
-    <Section title="Section Title" colSpan={1}>
+    <Section title="Default Section" colSpan={1}>
+      <Row>
+        <Cell>
+          <Placeholder title="Section Row" style={{ height: '50px' }} />
+        </Cell>
+      </Row>
+    </Section>
+    <Section isCollapsible title="Collapsible Section" colSpan={1}>
+      <Row>
+        <Cell>
+          <Placeholder title="Section Row" style={{ height: '50px' }} />
+        </Cell>
+      </Row>
+    </Section>
+    <Section isCollapsible isCollapsed title="Collapsed Section" colSpan={1}>
       <Row>
         <Cell>
           <Placeholder title="Section Row" style={{ height: '50px' }} />

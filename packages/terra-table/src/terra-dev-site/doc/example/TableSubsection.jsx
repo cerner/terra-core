@@ -13,6 +13,20 @@ const TableSubsectionExample = () => (
         </Cell>
       </Row>
     </Subsection>
+    <Subsection isCollapsible title="Collapsible Subsection" colSpan={1}>
+      <Row>
+        <Cell>
+          <Placeholder title="Subsection Row" style={{ height: '50px' }} />
+        </Cell>
+      </Row>
+    </Subsection>
+    <Subsection isCollapsible isCollapsed title="Collapsed Subsection" colSpan={1}>
+      <Row>
+        <Cell>
+          <Placeholder title="Subsection Row" style={{ height: '50px' }} />
+        </Cell>
+      </Row>
+    </Subsection>
   </Table>
 );
 

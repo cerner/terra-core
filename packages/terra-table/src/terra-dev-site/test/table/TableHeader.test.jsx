@@ -9,8 +9,8 @@ const TableHeaderTest = () => (
     header={(
       <Header>
         <HeaderCell key="cell-0">Default Cell</HeaderCell>
-        <HeaderCell key="cell-1" sort="asc">ASC Cell</HeaderCell>
-        <HeaderCell key="cell-2" sort="desc">DESC Cell</HeaderCell>
+        <HeaderCell key="cell-1" isSelectable sort="asc">ASC Cell</HeaderCell>
+        <HeaderCell key="cell-2" isSelectable sort="desc">DESC Cell</HeaderCell>
         <HeaderCell key="cell-3" minWidth="tiny">Tiny Cell</HeaderCell>
         <HeaderCell key="cell-4" minWidth="small">Small Cell</HeaderCell>
         <HeaderCell key="cell-5" minWidth="medium">Medium Cell</HeaderCell>
