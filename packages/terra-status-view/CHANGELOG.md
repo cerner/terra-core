@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Update Thin Constraint test screenshot to be limited to the test size 75px to remove wdio screen resizing. Screen resizing to 75px is not possible with firefox driver.
 
+3.5.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.4.0 - (February 5, 2019)
 ------------------
 ### Changed
