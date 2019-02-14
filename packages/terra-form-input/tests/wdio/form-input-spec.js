@@ -102,11 +102,8 @@ describe('Form-Input', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
         browser.keys('Tab');
-        // remove the blinking cursor for the screenshots
-        browser.execute(() => {
-          const inputElement = document.getElementById('form-input-default');
-          inputElement.style.caretColor = 'transparent';
-        });
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.getElementById("form-input-default").style.caretColor = "transparent";');
       });
 
       Terra.should.beAccessible({ viewports });
