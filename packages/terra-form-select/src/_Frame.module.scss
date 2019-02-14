@@ -48,6 +48,10 @@
       border-top-left-radius: var(--terra-form-select-open-border-top-left-radius, 3px);
       border-top-right-radius: var(--terra-form-select-open-border-top-right-radius, 3px);
       box-shadow: none;
+
+      > .toggle {
+        padding: 0;
+      }
     }
 
     &.is-above {
@@ -121,6 +125,22 @@
     flex-shrink: 0;
     margin-left: auto;
     padding: var(--terra-form-select-toggle-padding, 0 0.42857rem);
+  }
+
+  .toggle-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    height: 100%;
+    line-height: 0;
+    margin: 0;
+    // outline: 0;
+    padding: var(--terra-form-select-toggle-padding, 0 0.42857rem);
+
+    // Remove the inner border and padding in Firefox.
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
   }
 
   .content {
@@ -244,6 +264,7 @@
 
       > .toggle {
         border-bottom-right-radius: 0;
+        padding: 0;
       }
     }
 
