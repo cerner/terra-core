@@ -40,6 +40,7 @@ Unreleased
 ### Fixed
 * Fixed Dropdown closing issue on Hold and Scroll in IE
 * Updated Frame to remove isAbove styling when selecting item in single select list
+* Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
 
 ### Changed
 * Updated Option prop documentation

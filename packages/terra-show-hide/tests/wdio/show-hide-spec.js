@@ -39,7 +39,7 @@ describe('Show Hide', () => {
     beforeEach(() => {
       browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide');
       browser.moveToObject('button');
-      browser.buttonDown('button');
+      browser.buttonDown();
     });
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
