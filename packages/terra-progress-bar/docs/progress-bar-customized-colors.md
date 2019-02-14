@@ -1,7 +1,7 @@
 By defining more CSS, authors can control more of the `<ProgressBar />` component through the colorClass prop.
 
 ```css
-.green-bar-grey-background-white-border {
+.customized-color-bar-example-1 {
   background-color: #d3d4d5;
   border-right: 1px solid #fff;
   color: #8ccc62;
@@ -46,7 +46,7 @@ By defining more CSS, authors can control more of the `<ProgressBar />` componen
 
 }
 
-.green-to-red-bar-blue-to-yellow-background-green-border {
+.customized-color-bar-example-2 {
   background: linear-gradient(to left, rgb(255, 255, 0), rgb(0, 0, 255));
   background-color: rgb(0, 0, 255);
   border-right: 3px solid rgb(0, 255, 0);

@@ -5,13 +5,13 @@ import './colors.css';
 
 const ProgressBarGradient = () => (
   <div>
-    <ProgressBar valueText="5%" value={5} max={10} colorClass="green-bar-light-grey-background" />
+    <ProgressBar valueText="5%" value={5} max={10} colorClass="two-colors-bar-example-1" />
     <br />
     <br />
-    <ProgressBar valueText="3%" value={3} max={10} colorClass="red-bar-black-background" />
+    <ProgressBar valueText="3%" value={3} max={10} colorClass="two-colors-bar-example-2" />
     <br />
     <br />
-    <ProgressBar valueText="8%" value={8} max={10} colorClass="orange-bar-dark-blue-background" />
+    <ProgressBar valueText="8%" value={8} max={10} colorClass="two-colors-bar-example-3" />
   </div>
 );
 

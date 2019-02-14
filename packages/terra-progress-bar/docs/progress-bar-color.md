@@ -1,7 +1,7 @@
 By passing in a colorClass, authors can manually set the bar color of any `<ProgressBar />` component.
 
 ```css
-.orange-bar {
+.color-bar-example-1 {
   color: rgb(255, 165, 0);
 
   &::-webkit-progress-value {
@@ -17,7 +17,7 @@ By passing in a colorClass, authors can manually set the bar color of any `<Prog
   }
 }
 
-.green-bar {
+.color-bar-example-2 {
   color: #8ccc62;
 
   &::-webkit-progress-value {
@@ -33,7 +33,7 @@ By passing in a colorClass, authors can manually set the bar color of any `<Prog
   }
 }
 
-.red-bar {
+.color-bar-example-3 {
   color: rgb(255, 0, 0);
 
   &::-webkit-progress-value {
