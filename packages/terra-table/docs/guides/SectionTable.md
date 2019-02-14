@@ -25,7 +25,7 @@ As a precaution we can prevent default on the event, in case the table has an an
     event.preventDefault();
   }
 ```
-Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `updatedMulitSelectedKeys`, which returns an array of the keys following the addition or removal of the key passed. We then set this as our state.
+Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `updatedMulitSelectedKeys`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state.
 ```jsx
   handleSectionSelection(event, metaData) {
     event.preventDefault();
