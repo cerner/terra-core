@@ -4,20 +4,25 @@ By passing in a className, authors can manually set the text color of any `<Head
 
 ```css
 :root {
-  --terra-heading-red-color: rgb(220, 20, 60);
-  --terra-heading-green-color: rgb(46, 125, 50);
-  --terra-heading-blue-color: #304ffe;
+  --terra-heading-attention-color: rgb(220, 20, 60);
+  --terra-heading-neutral-color: rgb(46, 125, 50);
+  --terra-heading-info-color: #304ffe;
+  --terra-heading-default-color: #333;
 }
 
-.crimson {
-  color: var(--terra-heading-red-color);
+.default {
+  color: var(--terra-heading-default-color, #333);
 }
 
-.green {
-  color: var(--terra-heading-green-color);
+.attention {
+  color: var(--terra-heading-attention-color, rgb(220, 20, 60));
 }
 
-.blue {
-  color: var(--terra-heading-blue-color);
+.neutral {
+  color: var(--terra-heading-neutral-color, rgb(46, 125, 50));
+}
+
+.info {
+  color: var(--terra-heading-info-color, #304ffe);
 }
 ```

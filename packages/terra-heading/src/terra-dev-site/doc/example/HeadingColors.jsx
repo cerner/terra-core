@@ -5,9 +5,9 @@ import './colors.css';
 
 const HeadingColors = () => (
   <div>
-    <Heading level={3} className="crimson">Font Color: Crimson</Heading>
-    <Heading level={3} className="green">Font Color: rgb(46,125,50)</Heading>
-    <Heading level={3} className="blue">Font Color: #304FFE</Heading>
+    <Heading level={3} className="attention">Font Color: Crimson</Heading>
+    <Heading level={3} className="neutral">Font Color: rgb(46,125,50)</Heading>
+    <Heading level={3} className="info">Font Color: #304FFE</Heading>
   </div>
 );
 

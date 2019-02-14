@@ -5,7 +5,7 @@ import '../../doc/example/colors.css';
 
 const TextColor = () => (
   <div>
-    <Text id="textColor" className="blue">Color</Text>
+    <Text id="textColor" className="info">Color</Text>
   </div>
 );
 

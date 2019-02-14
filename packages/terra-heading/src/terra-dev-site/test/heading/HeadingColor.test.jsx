@@ -5,7 +5,7 @@ import '../../doc/example/colors.css';
 
 const HeadingColor = () => (
   <div>
-    <Heading id="heading-color" level={1} className="blue">Color</Heading>
+    <Heading id="heading-color" level={1} className="info">Color</Heading>
   </div>
 );
 

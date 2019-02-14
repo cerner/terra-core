@@ -5,7 +5,7 @@ import './colors.css';
 
 const TextVariations = () => (
   <div>
-    <Text fontSize={18} className="blue" isItalic>
+    <Text fontSize={18} className="neutral" isItalic>
 Text with color set to
       <code>rgb(46,125,50)</code>
       {' '}

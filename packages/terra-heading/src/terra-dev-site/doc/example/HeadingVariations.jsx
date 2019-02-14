@@ -5,7 +5,7 @@ import './colors.css';
 
 const HeadingVariations = () => (
   <div>
-    <Heading level={3} className="blue" isItalic>
+    <Heading level={3} className="neutral" isItalic>
 H3 heading with color set to
       <code>rgb(46,125,50)</code>
       {' '}

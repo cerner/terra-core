@@ -23,7 +23,7 @@ const TextDisplays = () => (
     <br />
     <h3>Font Weight: 300</h3>
     <Arrange
-      fitStart={<Text weight={300} className="black" fontSize={100}>Aa</Text>}
+      fitStart={<Text weight={300} className="default" fontSize={100}>Aa</Text>}
       fill={(
         <div style={{ marginLeft: '10px', marginRight: '10px' }}>
           <Text weight={300} fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
@@ -38,7 +38,7 @@ const TextDisplays = () => (
     <br />
     <h3>Font Style: Italic Font Weight: 300</h3>
     <Arrange
-      fitStart={<Text isItalic weight={300} className="black" fontSize={100}>Aa</Text>}
+      fitStart={<Text isItalic weight={300} className="default" fontSize={100}>Aa</Text>}
       fill={(
         <div style={{ marginLeft: '10px', marginRight: '10px' }}>
           <Text isItalic weight={300} fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
@@ -53,7 +53,7 @@ const TextDisplays = () => (
     <br />
     <h3>Font Weight: 400</h3>
     <Arrange
-      fitStart={<Text className="black" fontSize={100}>Aa</Text>}
+      fitStart={<Text className="default" fontSize={100}>Aa</Text>}
       fill={(
         <div style={{ marginLeft: '10px', marginRight: '10px' }}>
           <Text fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
@@ -68,7 +68,7 @@ const TextDisplays = () => (
     <br />
     <h3>Font Style: Italic</h3>
     <Arrange
-      fitStart={<Text isItalic className="black" fontSize={100}>Aa</Text>}
+      fitStart={<Text isItalic className="default" fontSize={100}>Aa</Text>}
       fill={(
         <div style={{ marginLeft: '10px', marginRight: '10px' }}>
           <Text isItalic fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
@@ -83,7 +83,7 @@ const TextDisplays = () => (
     <br />
     <h3>Font Weight: 700</h3>
     <Arrange
-      fitStart={<Text weight={700} className="black" fontSize={100}>Aa</Text>}
+      fitStart={<Text weight={700} className="default" fontSize={100}>Aa</Text>}
       fill={(
         <div style={{ marginLeft: '10px', marginRight: '10px' }}>
           <Text weight={700} fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
@@ -98,7 +98,7 @@ const TextDisplays = () => (
     <br />
     <h3>Font Style: Italic Font Weight: 700</h3>
     <Arrange
-      fitStart={<Text isItalic weight={700} className="black" fontSize={100}>Aa</Text>}
+      fitStart={<Text isItalic weight={700} className="default" fontSize={100}>Aa</Text>}
       fill={(
         <div style={{ marginLeft: '10px', marginRight: '10px' }}>
           <Text isItalic weight={700} fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>

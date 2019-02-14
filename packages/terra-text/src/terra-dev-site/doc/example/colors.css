@@ -1,22 +1,22 @@
 :root {
-  --terra-text-red-color: rgb(220, 20, 60);
-  --terra-text-green-color: rgb(46, 125, 50);
-  --terra-text-blue-color: #304ffe;
-  --terra-text-black-color: #333;
+  --terra-text-attention-color: rgb(220, 20, 60);
+  --terra-text-neutral-color: rgb(46, 125, 50);
+  --terra-text-info-color: #304ffe;
+  --terra-text-default-color: #333;
 }
 
-.crimson {
-  color: var(--terra-text-red-color);
+.default {
+  color: var(--terra-text-default-color, #333);
 }
 
-.green {
-  color: var(--terra-text-green-color);
+.attention {
+  color: var(--terra-text-attention-color, rgb(220, 20, 60));
 }
 
-.blue {
-  color: var(--terra-text-blue-color);
+.neutral {
+  color: var(--terra-text-neutral-color, rgb(46, 125, 50));
 }
 
-.black {
-  color: var(--terra-text-black-color);
+.info {
+  color: var(--terra-text-info-color, #304ffe);
 }
