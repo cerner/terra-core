@@ -13,7 +13,7 @@ The state of the sort column needs to be managed for the table in a HOC. In this
     this.state = { sortColumn: null };
   }
 ```
-Next creating an event handler callback method to pass to the table row's "onSelect" prop. The "onSelect" will return the metaData prop passed it each header cell.
+Next creating an event handler callback method to pass to the table row's `onSelect` prop. The `onSelect` will return the metaData prop passed it each header cell.
 ```jsx
   handleSortClick(event, metaData) {
 
@@ -53,7 +53,7 @@ Settting state will trigger another render. So in the render method we need gene
     );
   }
 ```
-Next we need to set up our metaData object with our key value, and attach the "onSelect" to our handler.
+Next we need to set up our metaData object with our key value, and attach the `onSelect` to our handler.
 ```jsx
   createHeaderCell(key, title) {
     return (
@@ -67,7 +67,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
     );
   }
 ```
-For the ability to toggle sorting we set "isSelectable" for all header cells.
+For the ability to toggle sorting we set `isSelectable` for all header cells.
 ```jsx
   createHeaderCell(key, title) {
     return (

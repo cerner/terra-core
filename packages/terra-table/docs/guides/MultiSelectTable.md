@@ -1,6 +1,6 @@
 # Terra Table - Implementing a Multi Select Table
 
-In previous versions of the terra-table a multi select style table could be created as either a controlled version of SelectableTableRows or uncontrolled version of MultiSelectableRows.  These implementations suffered from inflexibility and performance concerns. Going foward terra-table is more granular, though this puts more reponsibility on the consumer to properly update their table rows with the appropriate state. The following is a guide to addressing those concerns in your implementation.
+The terra-table implementation requires controlled state if selections are required. As a result selections are applied at child row generation from HOC state. The following guide show you how to implement that state within a multiple row selection variant of table, as well as implement the additional narrowing requirements of a max selection for rows.
 
 ## State Management
 The state of selection needs to be managed for the table in a High Order Component (HOC). In this example we are going to be using a unique key to manage the selection state, but the type of state used is open to the implementor of the HOC.
@@ -13,7 +13,7 @@ The state of selection needs to be managed for the table in a High Order Compone
     this.state = { selectedKeys: [] };
   }
 ```
-Next creating an event handler callback method to pass to the table row's "onSelect" prop. The "onSelect" will return the metaData prop passed it each table row.
+Next creating an event handler callback method to pass to the table row's `onSelect` prop. The `onSelect` will return the metaData prop passed it each table row.
 ```jsx
   handleRowSelection(event, metaData) {
 
@@ -25,14 +25,14 @@ As a precaution we can prevent default on the event, in case the table has an an
     event.preventDefault();
   }
 ```
-Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has selected or unselected the table row key in our state. So we use the utility method "updatedMulitSelectedKeys", which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
+Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has selected or unselected the table row key in our state. So we use the utility method `updatedMulitSelectedKeys`, which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
 ```jsx
   handleItemSelection(event, metaData) {
     event.preventDefault();
     this.setState(state => ({ selectedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
   }
 ```
-Setting state will trigger another render. So in the render method we need generate our table rows with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
+Setting state will trigger another render. So in the render method we need generate our table rows with the updated isSelected and `isSelectable` props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
 [React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
 ```jsx
   createTableRow(rowData) {
@@ -59,7 +59,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
     );
   }
 ```
-For multi-select tables we need to set selectability based upon whether or not we have reached our max selection count.  Terra Table provides a helper for this, namely "shouldBeMultiSelectable", by providing our count, the currently selected key, and the key of the associated item.
+For multi-select tables we need to set selectability based upon whether or not we have reached our max selection count.  Terra Table provides a helper for this, namely `shouldBeMultiSelectable`, by providing our count, the currently selected key, and the key of the associated item.
 ```jsx
   createTableRow(rowData) {
     return (
@@ -74,7 +74,7 @@ For multi-select tables we need to set selectability based upon whether or not w
     );
   }
 ```
-Next we need to check if the row is selected. As we support IE10 & 11, we cannot use "contains", so we use "indexOf" to determine if the key is present in our state array.
+Next we need to check if the row is selected. As we support IE10 & 11, we cannot use `contains`, so we use `indexOf` to determine if the key is present in our state array.
 ```jsx
   createTableRow(rowData) {
     return (
@@ -90,7 +90,7 @@ Next we need to check if the row is selected. As we support IE10 & 11, we cannot
     );
   }
 ```
-We can then implement a standard cell content for our static elements
+We can then implement the unpack of our data into our row cells.
 ```jsx
   const createCell = cell => (
     <Cell key={cell.key}>

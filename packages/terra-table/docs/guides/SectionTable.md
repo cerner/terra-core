@@ -1,6 +1,6 @@
-# Terra Table - Sections with Subsections
+# Terra Table - Sections
 
-With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to only use collapsible sections or collapsible subsections in a table, but not both.
+Table sections are available in both static and collapsible varieties. A table section that is collapsed will be remove its children rows from the DOM. This improves performance and accessiblilty, but may remove potentional state assocaited to a mounted row. If your table row content has additional state, it needs to be stored externally and reapplied when thawed for the next render that shows its section open. Since this render occurs at the same time that a collapsible section state changes, for additional optimization, collapsed sections do not necessarily need to be provided with child rows.
 
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.
@@ -13,7 +13,7 @@ First defaulting our state to an empty array in the constructor.
     this.state = { collapsedKeys: [] };
   }
 ```
-Next creating an event handler callback method to pass to the section's "onSelect" prop. The "onSelect" callback will return the metaData prop passed to each section.
+Next creating an event handler callback method to pass to the section's `onSelect` prop. The `onSelect` callback will return the metaData prop passed to each section.
 ```jsx
   handleSectionSelection(event, metaData) {
 
@@ -25,7 +25,7 @@ As a precaution we can prevent default on the event, in case the table has an an
     event.preventDefault();
   }
 ```
-Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method "updatedMulitSelectedKeys", which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
+Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `updatedMulitSelectedKeys`, which returns an array of the keys following the addition or removal of the key passed. We then set this as our state.
 ```jsx
   handleSectionSelection(event, metaData) {
     event.preventDefault();
@@ -61,7 +61,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
     );
   }
 ```
-For rendering the collapsible section we set "isCollapsible" for all sections.
+For rendering the collapsible section we set `isCollapsible` for all sections.
 ```jsx
   createSection(sectionData) {
     return (
@@ -77,19 +77,20 @@ For rendering the collapsible section we set "isCollapsible" for all sections.
     );
   }
 ```
-Finally we need to check if the section is collapsed. As we support IE10 & 11, we cannot use "contains", so we use "indexOf" to determine if the key is present in our state array.
+Finally we need to check if the section is collapsed. As we support IE10 & 11, we cannot use `contains`, so we use `indexOf` to determine if the key is present in our state array. Here we can also avoid rendering collapsed child rows and subsections by avoiding the subsequent function calls. Short circuiting the render is not required, as the section can correctly managed the display of the child content, but this will avoid additional javascript cycles looping through and creating child objects. The performance impact of generating child rows is minimal, but with large tables it can add up.
 ```jsx
   createSection(sectionData) {
+    const isCollapsed = this.state.collapsedKeys.indexOf(sectionData.key) >= 0;
     return (
       <Section
         key={sectionData.key}
         title={sectionData.title}
-        isCollapsed={this.state.collapsedKeys.indexOf(sectionData.key) >= 0}
+        isCollapsed={isCollapsed}
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {!isCollapsed && sectionData.childItems.map(childItem => createRow(childItem))}
       </Section>
     );
 ```
@@ -107,16 +108,6 @@ We can then implement the unpack of our data into our row cells.
     <Row key={itemData.key}>
       {createCellsForRow(itemData.cells)}
     </Row>
-  );
-
-  const createSubsection = subsectionData => (
-    <Subsection
-      key={subsectionData.key}
-      title={subsectionData.title}
-      colSpan={3}
-    >
-      {subsectionData.childItems.map(childItem => createRow(childItem))}
-    </Subsection>
   );
 ```
 Then we can implement a method to loop through our data and create the section with our methods and call it from our render method.

@@ -1,6 +1,6 @@
 # Terra Table - Implementing a Single Select Table
 
-In previous versions of the terra-table a single select style table could be created as either a controlled version of SelectableTableRows or uncontrolled version of SingleSelectableRows.  These implementations suffered from inflexibility and performance concerns. Going forward terra-table is more granular, though this puts more responsibility on the consumer to properly update their table rows with the appropriate state. The following is a guide to addressing those concerns in your implementation.
+The terra-table implementation requires controlled state if selections are required. As a result selections are applied at child row generation from HOC state. The following guide show you how to implement that state within a single row selection vairant of table.
 
 ## State Management
 The state of selection needs to be managed for the table in a High Order Component (HOC). In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
@@ -92,7 +92,7 @@ Next we need to check if the item matches the selectedKey in state.
     );
   }
 ```
-We can then stub out our static elements
+We can then implement the unpack of our data into our row cells.
 ```jsx
   const createCell = cell => (
     <Cell key={cell.key}>

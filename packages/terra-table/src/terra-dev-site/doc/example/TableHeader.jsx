@@ -6,7 +6,7 @@ import Table, { Header, HeaderCell } from 'terra-table/lib/index';
 const TableHeaderExample = () => (
   <Table header={(
     <Header>
-      <HeaderCell style={{ height: '50px' }} />
+      <HeaderCell>Header</HeaderCell>
     </Header>
   )}
   />
