@@ -1,10 +1,15 @@
 /**
- * Tabbing to the button and pressing enter seems to close the dropdown
- * Tabbing to the toggle button and pressing spacebar does not close the button
- *
- * Decide if toggle should always be a button. How to handle click event vs current mouseDown event on toggle
+ * TODO
+ * Decide if toggle should always be a button.
+ * How to handle click event vs current mouseDown event on toggle
  *
  * Look into focus state getting out of sync when tabbing and opening dropdown on select textbox
+ *
+ * Cross-browser test event.relatedTarget
+ *
+ * Input element in getDisplay function causes VO on iOS to shift focus back from dropdown to input
+ *
+ * Write wdio tests to ensure focus is placed correctly with these additions
  */
 
 import React from 'react';
@@ -258,19 +263,20 @@ class Frame extends React.Component {
 
     // test this cross-browser, may need to compare against activeElement in setTimeout if this doesn't work across browsers
     if (document.querySelector(this.selectListBox) === event.relatedTarget) {
+      console.log('focus shifted to select role=listbox');
       return;
     }
 
     // Use timeout to delay examination of activeElement until after blur/focus
     // events have been processed.
     // setTimeout(() => {
-    // console.log(`setTimeout Console Log ${document.activeElement}`);
+    //   console.log(`setTimeout Console Log ${document.activeElement}`);
 
-    // If focus is shifted to dropdown, don't close dropdown
-    // if (document.querySelector(this.selectListBox) === document.activeElement) {
-    //   console.log('select dropdown focused now');
-    //   return;
-    // }
+    //   // If focus is shifted to dropdown, don't close dropdown
+    //   if (document.querySelector(this.selectListBox) === document.activeElement) {
+    //     console.log('select dropdown focused now');
+    //     return;
+    //   }
 
     this.closeDropdown();
 
@@ -350,20 +356,24 @@ class Frame extends React.Component {
    * Handles click event on toggle button
    */
   handleButtonClick(event) {
+    console.log('handle Button click');
     if (document.querySelector(this.selectListBox)) {
       document.querySelector(this.selectListBox).focus();
     }
 
-    event.stopPropagation();
-    this.closeDropdown();
+    // event.stopPropagation();
+    // this.closeDropdown();
   }
 
   /**
    * Handles keyDown event on toggle button
    */
   handleButtonKeydown(event) {
+    // Prevent event from bubbling up to other component keydown event handlers
+    event.nativeEvent.stopImmediatePropagation();
+    // Prevent event from bubbling up to Frame handleKeyDown event handler
     event.stopPropagation();
-    console.log('btn keydown')
+    console.log('handle Button keydown');
   }
 
   /**
@@ -489,7 +499,6 @@ class Frame extends React.Component {
           : (
             <div
               className={cx('toggle')}
-              onMouseDown={this.toggleDropdown}
             >
               <span className={cx('arrow-icon')} />
             </div>
