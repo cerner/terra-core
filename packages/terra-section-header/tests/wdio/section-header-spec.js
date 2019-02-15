@@ -102,7 +102,7 @@ describe('SectionHeader', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
         browser.moveToObject('.accordionContent');
-        browser.buttonDown('.accordionContent');
+        browser.buttonDown();
       });
 
       Terra.should.beAccessible();
@@ -200,7 +200,7 @@ describe('SectionHeader', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-section-header/section-header/transparent-on-click-section-header');
         browser.moveToObject('[data-id="section-header"]');
-        browser.buttonDown('[data-id="section-header"]');
+        browser.buttonDown();
       });
 
       Terra.should.beAccessible();
