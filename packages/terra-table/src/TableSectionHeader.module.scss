@@ -5,10 +5,12 @@
 :local {
   .section-header {
     background-color: var(--terra-table-section-header-background-color, #e8e9ea);
-    border-left: var(--terra-table-section-header-border-left, 1px solid #c8cacb);
-    border-right: var(--terra-table-section-header-border-right, 1px solid #c8cacb);
-    border-top: var(--terra-table-section-header-border-top, 1px solid #c8cacb);
+    border-top: var(--terra-table-section-header-border-top, 1px solid #dedfe0);
     width: 100%;
+
+    & > td {
+      padding: 0;
+    }
   }
 
   .section-content {

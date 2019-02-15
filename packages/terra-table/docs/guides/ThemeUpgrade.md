@@ -7,7 +7,6 @@
 #### Renamed
 | Previous | New |
 |-|-|
-| --terra-table-cell-border | --terra-table-cell-border-left |
 | --terra-table-thead-background-color | --terra-table-header-background-color |
 | --terra-table-thead-tr-border-top | --terra-table-header-border-top |
 | --terra-table-cell-tiny-min-width | --terra-table-header-cell-tiny-min-width |
@@ -78,6 +77,10 @@
 * --terra-table-header-cell-compact-padding-right
 * --terra-table-header-cell-compact-padding-top
 * --terra-table-header-cell-icon-padding-right
+* --terra-table-header-cell-line-height
+* --terra-table-sort-indicator-top
+* --terra-table-cell-border-right
+* --terra-table-header-cell-border-right
 
 #### Removed
 * --terra-table-tfoot-tr-border-bottom
@@ -93,6 +96,10 @@
 * --terra-table-header-cell-padding-left
 * --terra-table-header-cell-padding-right
 * --terra-table-header-cell-padding-top
+* --terra-table-first-cell-border-left
+* --terra-table-last-cell-border-right
+* --terra-table-first-header-cell-border-left
+* --terra-table-last-header-cell-border-right
 
 ## Changes from version 2 to version 3
 

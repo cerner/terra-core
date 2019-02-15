@@ -1,16 +1,13 @@
 :local {
   .cell {
     border: 0;
+    border-right: var(--terra-table-cell-border-right, 0);
     display: table-cell;
     text-align: left;
     vertical-align: top;
-
-    &:first-of-type {
-      border-left: var(--terra-table-first-cell-border-left, 1px solid #c8cacb);
-    }
-
+  
     &:last-of-type {
-      border-right: var(--terra-table-last-cell-border-right, 1px solid #c8cacb);
+      border-right: 0;
     }
   }
 
