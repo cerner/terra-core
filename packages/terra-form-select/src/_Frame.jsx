@@ -1,14 +1,16 @@
 /**
+ * There seems to be a bug related to VoiceOver on iOS where it is shifting focus unexpectedly
+ * This code shifts focus to the listbox when the toggle button is clicked and VO will honor that for 1 second
+ * and then shift focus back to the input element.
+ *
  * TODO
+ *
+ * Tested removing event listeners to open dropdown from container and only have them on the toggle button
+ *
  * Decide if toggle should always be a button.
  * How to handle click event vs current mouseDown event on toggle
- *
  * Look into focus state getting out of sync when tabbing and opening dropdown on select textbox
- *
  * Cross-browser test event.relatedTarget
- *
- * Input element in getDisplay function causes VO on iOS to shift focus back from dropdown to input
- *
  * Write wdio tests to ensure focus is placed correctly with these additions
  */
 
@@ -141,6 +143,7 @@ class Frame extends React.Component {
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleButtonKeydown = this.handleButtonKeydown.bind(this);
+    this.handleDropdownKeyDown = this.handleDropdownKeyDown.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectListBox = '#terra-select-dropdown [role="listbox"]';
   }
@@ -171,6 +174,8 @@ class Frame extends React.Component {
       placeholder,
       ref: this.setInput,
       onChange: this.handleSearch,
+      // Removing this fixes issue where VO on iOS shifts focus to input after shifting focus to dropdown
+      // from clicking on the toggle button. This doesn't appear to be needed in the testing I've done so far
       onMouseDown: this.handleInputMouseDown,
       'aria-label': 'search',
       'aria-disabled': disabled,
@@ -190,6 +195,10 @@ class Frame extends React.Component {
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
+        // if (this.state.isDropdownFocused) {
+        //   return <div className={cx('content')}><div>{hasSearchChanged ? searchValue : display}</div></div>;
+        // }
+
         return <div className={cx('content')}><input {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
       default:
         return display || <div className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
@@ -203,6 +212,7 @@ class Frame extends React.Component {
     this.setState({
       isAbove: false,
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
+      isDropdownFocused: false,
       isOpen: false,
       isPositioned: false,
       hasSearchChanged: false,
@@ -222,6 +232,9 @@ class Frame extends React.Component {
     if (this.state.isOpen || this.props.disabled) {
       return;
     }
+
+    // console.log('getting ready shift focus to input')
+    // console.log(document.activeElement);
 
     if (this.input) {
       this.input.focus();
@@ -331,7 +344,7 @@ class Frame extends React.Component {
 
   /**
    * Handles the mouse down events.
-   * @param {event} event - The mouse down event.
+   * @param {event} event - The mouse down event. !!!
    */
   handleMouseDown(event) {
     console.log('handleMouseDown');
@@ -348,6 +361,7 @@ class Frame extends React.Component {
    * @param {event} event - The mouse down event.
    */
   handleInputMouseDown(event) {
+    console.log('handleInputMouseDown');
     event.stopPropagation();
     this.openDropdown();
   }
@@ -356,13 +370,24 @@ class Frame extends React.Component {
    * Handles click event on toggle button
    */
   handleButtonClick(event) {
+    // Prevent event from bubbling up to other component keydown event handlers
+    event.nativeEvent.stopImmediatePropagation();
+    // Prevent event from bubbling up to Frame handleKeyDown event handler
+    event.stopPropagation();
     console.log('handle Button click');
     if (document.querySelector(this.selectListBox)) {
-      document.querySelector(this.selectListBox).focus();
-    }
+      // document.querySelector(this.selectListBox).focus();
+      setTimeout(() => {
+        document.querySelector(this.selectListBox).focus();
+      }, 1000);
 
-    // event.stopPropagation();
-    // this.closeDropdown();
+      this.setState({ isDropdownFocused: true });
+
+      // prevent screen reader from moving to hidden content
+      // if (document.querySelector('[data-terra-base]')) {
+      //   document.querySelector('[data-terra-base]').setAttribute('aria-hidden', 'true');
+      // }
+    }
   }
 
   /**
@@ -374,6 +399,10 @@ class Frame extends React.Component {
     // Prevent event from bubbling up to Frame handleKeyDown event handler
     event.stopPropagation();
     console.log('handle Button keydown');
+  }
+
+  handleDropdownKeyDown(event) {
+    console.log('dropdown keydown');
   }
 
   /**
@@ -440,6 +469,7 @@ class Frame extends React.Component {
       onSelect,
       optionFilter,
       placeholder,
+      rootSelector,
       variant,
       value,
       ...customProps

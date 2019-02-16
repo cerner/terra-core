@@ -75,6 +75,10 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
+   * Allows assigning of root element custom data attribute for easy selecting.
+   */
+  rootSelector: PropTypes.string,
+  /**
    * The selected value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -103,6 +107,7 @@ const defaultProps = {
   onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
+  rootSelector: '[data-terra-base]',
   value: undefined,
   variant: 'default',
 };
@@ -197,7 +202,7 @@ class Select extends React.Component {
   render() {
     const { intl } = this.context;
     const {
-      children, defaultValue, onChange, placeholder, value, ...otherProps
+      children, defaultValue, onChange, placeholder, rootSelector, value, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
@@ -211,6 +216,7 @@ class Select extends React.Component {
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
+        rootSelector={rootSelector}
         dropdown={dropdownProps => (
           <DropdownMenu intl={intl} {...dropdownProps}>
             {this.state.tags}
