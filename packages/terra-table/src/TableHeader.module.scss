@@ -1,7 +1,7 @@
 :local {
   .header {
     background-color: var(--terra-table-header-background-color, #f4f4f4);
-    border-bottom: var(--terra-table-header-border-top, 2px solid #a7aaab);
+    border-bottom: var(--terra-table-header-border-bottom, 2px solid #a7aaab);
     display: table-header-group;
   }
 }

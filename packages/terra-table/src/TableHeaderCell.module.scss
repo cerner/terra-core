@@ -21,17 +21,17 @@
 
   .sort-indicator {
     color: var(--terra-table-sort-indicator-color, #1c1f21);
+    height: var(--terra-table-sort-indicator-height, 0.6429rem);
     left: 50%;
     margin-left: calc(var(--terra-table-sort-indicator-width, 0.6429rem) / -2);
     padding: 0;
     position: absolute;
     top: var(--terra-table-sort-indicator-top, 0.1429rem);
-    height: var(--terra-table-sort-indicator-height, 0.6429rem);
     width: var(--terra-table-sort-indicator-width, 0.6429rem);
 
     > svg {
-      left: 0;
       height: 100%;
+      left: 0;
       position: absolute;
       top: 0;
       width: 100%;
@@ -100,6 +100,7 @@
     padding-top: var(--terra-table-header-cell-compact-padding-top, 0.35715em);
   }
 
+  /* stylelint-disable selector-max-compound-selectors */
   [data-table-padding='standard'] {
     .is-sortable,
     .is-selectable {
@@ -108,6 +109,7 @@
       }
     }
   }
+  /* stylelint-enable selector-max-compound-selectors */
 
   .cell-icon {
     padding-right: var(--terra-table-header-cell-icon-padding-right, 5px);
