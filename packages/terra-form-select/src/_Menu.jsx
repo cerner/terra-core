@@ -261,6 +261,20 @@ class Menu extends React.Component {
       onDeselect(option.props.value, option);
     } else {
       onSelect(option.props.value, option);
+
+      // // prevent screen reader from moving to hidden content
+      // if (document.querySelector('[data-terra-base]')) {
+      //   document.querySelector('[data-terra-base]').setAttribute('aria-hidden', 'false');
+      // }
+
+      // Shift focus back select
+      if (variant === Variants.DEFAULT) {
+        document.querySelector('[data-terra-form-select-is-focused]').focus();
+      } else {
+        // Shift focus back select input
+        document.querySelector('[data-terra-form-select-is-focused] input').focus();
+      }
+
     }
   }
 

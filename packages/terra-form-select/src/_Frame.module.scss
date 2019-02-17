@@ -48,10 +48,6 @@
       border-top-left-radius: var(--terra-form-select-open-border-top-left-radius, 3px);
       border-top-right-radius: var(--terra-form-select-open-border-top-right-radius, 3px);
       box-shadow: none;
-
-      > .toggle {
-        padding: 0;
-      }
     }
 
     &.is-above {
@@ -235,6 +231,7 @@
       border-bottom-right-radius: var(--terra-form-select-border-bottom-right-radius, 3px);
       border-left: 0;
       border-top-right-radius: var(--terra-form-select-border-top-right-radius, 3px);
+      padding: 0;
 
       &:hover {
         background-color: var(--terra-form-select-toggle-hover-background-color, none);
