@@ -262,11 +262,6 @@ class Menu extends React.Component {
     } else {
       onSelect(option.props.value, option);
 
-      // // prevent screen reader from moving to hidden content
-      // if (document.querySelector('[data-terra-base]')) {
-      //   document.querySelector('[data-terra-base]').setAttribute('aria-hidden', 'false');
-      // }
-
       // Shift focus back select
       if (variant === Variants.DEFAULT) {
         document.querySelector('[data-terra-form-select-is-focused]').focus();
@@ -274,7 +269,6 @@ class Menu extends React.Component {
         // Shift focus back select input
         document.querySelector('[data-terra-form-select-is-focused] input').focus();
       }
-
     }
   }
 

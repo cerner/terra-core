@@ -1,14 +1,10 @@
 /**
- * There seems to be a bug related to VoiceOver on iOS where it is shifting focus unexpectedly
- * This code shifts focus to the listbox when the toggle button is clicked and VO will honor that for 1 second
- * and then shift focus back to the input element.
- *
- * Working theory is that VoiceOver captures the element that triggered the onScreen keyboard and
- * when the onScreen keyboard is closed, VoiceOver will move focus back to the element that triggered the onScreen keyboard
- * irregardless of if we have shifted focus elsewhere why the onScreen keyboard is open
+ * When opening the onscreen keyboard on iOS when focusing on an input, VoiceOver will shift
+ * focus back to the input when the keyboard is closed. This means we can't shift focus to the dropdown,
+ * while the onscreen keyboard is open.
  *
  * Some ideas to work around this:
- * Don't do any focus shifting when the keyboard is open
+ * Create a button users can click on to toggle focus to dropdown, avoiding the onscreen keyboard being open
  * Get rid of  blur trap in current code, fire on blur when focus is shifted to toggle button, this will close the dropdown
  * Make the toggle button only toggle the dropdown open/close and shift focus to dropdown when open
  * Will need to work through how that works with keyboard interaction, might look into on focus of the toggle button, open the dropdown
@@ -18,8 +14,6 @@
  *
  * Figure out issue where shifting focus back to input when selecting option with VO shifts focus
  * back to wrong input
- * DONE - Decide if toggle should always be a button.
- * DONE - How to handle click event vs current mouseDown event on toggle
  * Look into focus state getting out of sync when tabbing and opening dropdown on select textbox
  * Cross-browser test event.relatedTarget
  * Write wdio tests to ensure focus is placed correctly with these additions
