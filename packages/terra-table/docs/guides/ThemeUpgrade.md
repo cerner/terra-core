@@ -81,6 +81,8 @@
 * --terra-table-sort-indicator-top
 * --terra-table-cell-border-right
 * --terra-table-header-cell-border-right
+* --terra-table-section-header-first-border-top-color
+* --terra-table-subsection-header-first-border-top-color
 
 #### Removed
 * --terra-table-tfoot-tr-border-bottom

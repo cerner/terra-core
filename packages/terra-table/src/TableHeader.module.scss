@@ -1,7 +1,14 @@
 :local {
   .header {
     background-color: var(--terra-table-header-background-color, #f4f4f4);
-    border-bottom: var(--terra-table-header-border-bottom, 2px solid #a7aaab);
+    border-bottom: var(--terra-table-header-border-bottom, 1px solid #868a8c);
+    box-shadow: var(--terra-table-header-box-shadow, 0 4px 4px -4px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff);
     display: table-header-group;
+    z-index: 1;
+
+    // stylelint-disable-next-line selector-max-compound-selectors
+    +:first-of-type > *:first-child {
+      border-top: 0;
+    }
   }
 }

@@ -11,6 +11,10 @@
     > td {
       padding: 0;
     }
+
+    + tr {
+      border-top-color: var(--terra-table-subsection-header-next-border-top-color, #b2b5b6);
+    }
   }
 
   .subsection-content {
