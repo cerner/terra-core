@@ -40,7 +40,7 @@ describe('Menu', () => {
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
 
     const menu = (
-      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} variant="default" value="value" searchValue="asdfasdf">
+      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} variant="default" value="value" searchValue="asdf">
         <Option value="value" display="display" />
       </Menu>
     );
@@ -49,7 +49,7 @@ describe('Menu', () => {
 
     jest.useFakeTimers();
 
-    wrapper.setProps({ searchValue: 'asdf' });
+    wrapper.setState({ hasNoResults: true });
 
     jest.advanceTimersByTime(500);
 
