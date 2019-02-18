@@ -5,8 +5,6 @@
  * Figure out issue where shifting focus back to input when selecting option with VO shifts focus
  * back to wrong input
  *
- * Look into focus state getting out of sync when tabbing and opening dropdown on select textbox
- *
  * Write wdio tests to ensure focus is placed correctly with these additions
  */
 
@@ -433,16 +431,15 @@ class Frame extends React.Component {
 
     if (variant !== Variants.DEFAULT && this.state.isInputFocused) {
       return (
-        <div>no button 1</div>
-        // <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
-        //   <span className={cx('arrow-icon')} />
-        // </div>
+        <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
+          <span className={cx('arrow-icon')} />
+        </div>
       );
     }
 
     if (variant !== Variants.DEFAULT && this.state.isFocused !== true) {
       return (
-        <div className={cx('toggle')}>
+        <div className={cx(['toggle', 'toggle-narrow'])}>
           <button
             type="button"
             className={cx('toggle-btn')}
@@ -458,10 +455,9 @@ class Frame extends React.Component {
     }
 
     return (
-      <div>no button 2</div>
-      // <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
-      //   <span className={cx('arrow-icon')} />
-      // </div>
+      <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
+        <span className={cx('arrow-icon')} />
+      </div>
     );
   }
 
