@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added a11y clarity to not-selectable button group
 
 3.5.0 - (February 12, 2019)
 ------------------
