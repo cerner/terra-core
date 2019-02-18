@@ -3,8 +3,6 @@
  *
  * Wire up default variant to shift focus to dropdown
  *
- * Review button stop propagation and see if still needed for click and keydown
- *
  * Write wdio tests to ensure focus is placed correctly with these additions
  */
 
@@ -140,7 +138,6 @@ class Frame extends React.Component {
     this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleInputBlur = this.handleInputBlur.bind(this);
     this.handleButtonClick = this.handleButtonClick.bind(this);
-    this.handleButtonKeydown = this.handleButtonKeydown.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectListBox = '#terra-select-dropdown [role="listbox"]';
   }
@@ -341,37 +338,17 @@ class Frame extends React.Component {
   /**
    * Handles click event on toggle button
    */
-  handleButtonClick(event) {
-    // If default variant, don't do custom event handling here, will use default event handling
+  handleButtonClick() {
+    // If default variant, don't do custom event handling, use default event handling
     if (this.props.variant === Variants.DEFAULT) {
       return;
     }
-    // Test and see if event bubbling stoppage is needed here
-    // Prevent event from bubbling up to other component keydown event handlers
-    event.nativeEvent.stopImmediatePropagation();
-    // Prevent event from bubbling up to Frame handleKeyDown event handler
-    event.stopPropagation();
 
     this.openDropdown();
 
     if (document.querySelector(this.selectListBox)) {
       document.querySelector(this.selectListBox).focus();
     }
-  }
-
-  /**
-   * Handles keyDown event on toggle button
-   */
-  handleButtonKeydown(event) {
-    // If default variant, don't do custom event handling here, will use default event handling
-    if (this.props.variant === Variants.DEFAULT) {
-      return;
-    }
-    // Prevent event from bubbling up to other component keydown event handlers
-    event.nativeEvent.stopImmediatePropagation();
-    // Prevent event from bubbling up to Frame handleKeyDown event handler
-    event.stopPropagation();
-    this.openDropdown(event);
   }
 
   /**
@@ -442,7 +419,6 @@ class Frame extends React.Component {
             type="button"
             className={cx('toggle-btn')}
             onClick={this.handleButtonClick}
-            onKeyDown={this.handleButtonKeydown}
             aria-label="Click to navigate to options"
             data-terra-form-select-toggle-button
           >
