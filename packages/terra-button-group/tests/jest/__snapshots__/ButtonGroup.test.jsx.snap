@@ -5,7 +5,7 @@ exports[`should render a block button group with children 1`] = `
   className="button-group is-block"
 >
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="1"
@@ -13,7 +13,7 @@ exports[`should render a block button group with children 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="2"
@@ -21,7 +21,7 @@ exports[`should render a block button group with children 1`] = `
     text="Button 2"
   />
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="3"
@@ -36,7 +36,7 @@ exports[`should render a button group with children 1`] = `
   className="button-group"
 >
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="1"
@@ -59,7 +59,7 @@ exports[`should render a button group with children selected 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="2"
@@ -80,7 +80,7 @@ exports[`should select a button 1`] = `
   className="button-group"
 >
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="1"
@@ -88,7 +88,7 @@ exports[`should select a button 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="2"
@@ -103,7 +103,7 @@ exports[`should select a button 2`] = `
   className="button-group"
 >
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="1"
@@ -111,7 +111,7 @@ exports[`should select a button 2`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-pressed={false}
+    aria-pressed={null}
     className=""
     isDisabled={false}
     key="2"
