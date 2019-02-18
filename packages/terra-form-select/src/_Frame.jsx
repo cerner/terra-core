@@ -132,6 +132,7 @@ class Frame extends React.Component {
     this.state = {
       isOpen: false,
       isFocused: false,
+      isInputFocused: false,
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
@@ -151,6 +152,8 @@ class Frame extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
+    this.handleInputFocus = this.handleInputFocus.bind(this);
+    this.handleInputBlur = this.handleInputBlur.bind(this);
     this.handleButtonFocus = this.handleButtonFocus.bind(this);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleButtonKeydown = this.handleButtonKeydown.bind(this);
@@ -196,13 +199,13 @@ class Frame extends React.Component {
           <ul className={cx('content')}>
             {display}
             <li className={cx('search-wrapper')}>
-              <input {...inputAttrs} value={searchValue} />
+              <input onFocus={this.handleInputFocus} onBlur={this.handleInputBlur} {...inputAttrs} value={searchValue} />
             </li>
           </ul>
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <div className={cx('content')}><input {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
+        return <div className={cx('content')}><input onFocus={this.handleInputFocus} onBlur={this.handleInputBlur} {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
       default:
         return display || <div className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
@@ -375,6 +378,15 @@ class Frame extends React.Component {
     this.openDropdown(event);
   }
 
+  handleInputFocus() {
+    this.setState({ isInputFocused: true });
+  }
+
+  handleInputBlur() {
+    // alert('input is blurred');
+    this.setState({ isInputFocused: false });
+  }
+
   /**
    * Handles click event on toggle button
    */
@@ -482,6 +494,15 @@ class Frame extends React.Component {
   renderToggleButton() {
     const { variant } = this.props;
 
+    if (variant !== Variants.DEFAULT && this.state.isInputFocused) {
+      return (
+        <div>no button 1</div>
+        // <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
+        //   <span className={cx('arrow-icon')} />
+        // </div>
+      );
+    }
+
     if (variant !== Variants.DEFAULT && this.state.isFocused !== true) {
       return (
         <div className={cx('toggle')}>
@@ -500,18 +521,11 @@ class Frame extends React.Component {
       );
     }
 
-    if (variant !== Variants.DEFAULT && this.state.isFocused) {
-      return (
-        <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
-          <span className={cx('arrow-icon')} />
-        </div>
-      );
-    }
-
     return (
-      <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
-        <span className={cx('arrow-icon')} />
-      </div>
+      <div>no button 2</div>
+      // <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
+      //   <span className={cx('arrow-icon')} />
+      // </div>
     );
   }
 
