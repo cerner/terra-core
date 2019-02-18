@@ -1,15 +1,9 @@
 /**
  * TODO
  *
- * Figure out issue where shifting focus back to input when selecting option with VO shifts focus
- * back to wrong input
- *
- * Steps to reproduce issue
- * Click on search variant and select a color
- * Then click on combobox variant and select a color
- * Bug: Focus is shifted to search variant input instead of combobox input
- *
  * Wire up default variant to shift focus to dropdown
+ *
+ * Review button stop propagation and see if still needed for click and keydown
  *
  * Write wdio tests to ensure focus is placed correctly with these additions
  */
@@ -229,12 +223,10 @@ class Frame extends React.Component {
     }
 
     // Avoid focusing the input if the toggle button is used to open the dropdown
-    // This is to avoid issue with VoiceOver on iOS and focus shifting with onScreen keyboard
+    // This is to avoid an issue with VoiceOver on iOS with shifting focus while the onScreen keyboard is open
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
-      console.log(event.target);
-      console.log('input should not be focused');
       this.setState({ isOpen: true, isPositioned: false });
       return;
     }
@@ -507,7 +499,6 @@ class Frame extends React.Component {
         onMouseDown={this.handleMouseDown}
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
-        data-terra-form-select-is-focused={this.state.isFocused}
       >
         {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
 
@@ -551,6 +542,8 @@ class Frame extends React.Component {
                 onSelect: this.handleSelect,
                 onRequestClose: this.closeDropdown,
                 searchValue: this.state.searchValue,
+                input: this.input,
+                select: this.select,
               })}
           </Dropdown>
           )

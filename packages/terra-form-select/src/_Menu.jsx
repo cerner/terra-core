@@ -19,6 +19,10 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Input element ref used in select component.
+   */
+  input: PropTypes.instanceOf(Element),
+  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
@@ -38,6 +42,10 @@ const propTypes = {
    * The search value to filter the available options.
    */
   searchValue: PropTypes.string,
+  /**
+   * Select frame wrapper element ref.
+   */
+  select: PropTypes.instanceOf(Element),
   /**
    * The value of the selected options.
    */
@@ -60,10 +68,12 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  input: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
   searchValue: undefined,
+  select: undefined,
   value: undefined,
 };
 
@@ -254,7 +264,7 @@ class Menu extends React.Component {
     }
 
     const {
-      onDeselect, onSelect, value, variant,
+      input, onDeselect, onSelect, value, variant, select,
     } = this.props;
 
     if (Util.allowsMultipleSelections(variant) && Util.includes(value, option.props.value)) {
@@ -264,10 +274,10 @@ class Menu extends React.Component {
 
       // Shift focus back select
       if (variant === Variants.DEFAULT) {
-        document.querySelector('[data-terra-form-select-is-focused]').focus();
+        select.focus();
       } else {
         // Shift focus back select input
-        document.querySelector('[data-terra-form-select-is-focused] input').focus();
+        input.focus();
       }
     }
   }
