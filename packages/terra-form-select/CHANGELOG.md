@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added en-AU translations
 
 5.6.0 - (February 12, 2019)
 ------------------
