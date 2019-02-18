@@ -14,6 +14,10 @@
  *
  * Figure out issue where shifting focus back to input when selecting option with VO shifts focus
  * back to wrong input
+ * issue that results in select becoming unusable
+ * * With VO on, click on toggle button, select and option. VO shifts focus back to input.
+ * * Swipe right and click on toggle button.
+ * * Dropdown doesn't open and also disappears resulting in unusable state
  * Look into focus state getting out of sync when tabbing and opening dropdown on select textbox
  * Cross-browser test event.relatedTarget
  * Write wdio tests to ensure focus is placed correctly with these additions
@@ -566,7 +570,7 @@ class Frame extends React.Component {
           aria-expanded={!!disabled && !!this.state.isOpen}
           aria-haspopup={!disabled ? 'true' : undefined}
           aria-label="Search label"
-          aria-describedBy="#screen-reader-text"
+          aria-describedBy="screen-reader-text"
           className={cx('display')}
           onMouseDown={this.openDropdown}
           data-terra-form-select-frame-display
