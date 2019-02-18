@@ -1,3 +1,5 @@
+@import '~terra-mixins';
+
 :local {
   .tiny {
     min-width: var(--terra-table-header-cell-tiny-min-width, 3rem);
@@ -19,7 +21,8 @@
     min-width: var(--terra-table-header-cell-huge-min-width, 10.5rem);
   }
 
-  .sort-indicator {
+  .sort-indicator-asc,
+  .sort-indicator-desc {
     color: var(--terra-table-sort-indicator-color, #1c1f21);
     height: var(--terra-table-sort-indicator-height, 0.6429rem);
     left: 50%;
@@ -28,14 +31,14 @@
     position: absolute;
     top: var(--terra-table-sort-indicator-top, 0.1429rem);
     width: var(--terra-table-sort-indicator-width, 0.6429rem);
+  }
 
-    > svg {
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
+  .sort-indicator-asc {
+    background: var(--terra-table-subsection-header-accordion-icon-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+  }
+
+  .sort-indicator-desc {
+    background: var(--terra-table-subsection-header-accordion-icon-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M0 36l24-24 24 24H0z"/></svg>'));
   }
 
   .header-cell {
@@ -112,6 +115,6 @@
   /* stylelint-enable selector-max-compound-selectors */
 
   .cell-icon {
-    padding-right: var(--terra-table-header-cell-icon-padding-right, 5px);
+    padding-right: var(--terra-table-header-cell-icon-padding-right, 0.35715em);
   }
 }

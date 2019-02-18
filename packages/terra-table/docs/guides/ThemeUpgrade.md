@@ -31,6 +31,7 @@
 * --terra-table-section-header-border-bottom
 * --terra-table-section-header-padding-bottom
 * --terra-table-section-header-padding-left
+* --terra-table-section-header-padding-right
 * --terra-table-section-header-padding-top
 * --terra-table-section-header-title-color
 * --terra-table-section-header-title-font-size
@@ -45,6 +46,7 @@
 * --terra-table-subsection-header-border-bottom
 * --terra-table-subsection-header-padding-bottom
 * --terra-table-subsection-header-padding-left
+* --terra-table-subsection-header-padding-right
 * --terra-table-subsection-header-padding-top
 * --terra-table-subsection-header-title-color
 * --terra-table-subsection-header-padding-top
@@ -83,6 +85,9 @@
 * --terra-table-header-cell-border-right
 * --terra-table-section-header-first-border-top-color
 * --terra-table-subsection-header-first-border-top-color
+* --terra-table-subsection-header-accordion-icon-asc-background
+* --terra-table-subsection-header-accordion-icon-desc-background
+* --terra-table-header-box-shadow
 
 #### Removed
 * --terra-table-tfoot-tr-border-bottom

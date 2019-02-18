@@ -7,7 +7,7 @@
     z-index: 1;
 
     // stylelint-disable-next-line selector-max-compound-selectors
-    +:first-of-type > *:first-child {
+    + tbody > tr:first-child {
       border-top: 0;
     }
   }

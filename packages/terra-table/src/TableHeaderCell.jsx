@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconDown from 'terra-icon/lib/icon/IconCaretDown';
-import IconUp from 'terra-icon/lib/icon/IconCaretUp';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './TableHeaderCell.module.scss';
@@ -99,10 +97,8 @@ const TableHeaderCell = ({
   ]);
 
   let sortIndicator;
-  if (sort === 'asc') {
-    sortIndicator = <span className={cx('sort-indicator')}><IconUp /></span>;
-  } else if (sort === 'desc') {
-    sortIndicator = <span className={cx('sort-indicator')}><IconDown /></span>;
+  if (sort !== 'none') {
+    sortIndicator = <span className={cx(`sort-indicator-${sort}`)} />;
   }
 
   let headerIcon;

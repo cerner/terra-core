@@ -1,28 +1,25 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, { Header, HeaderCell } from 'terra-table/lib/index';
-import IconSearch from 'terra-icon/lib/icon/IconSearch';
-import IconPill from 'terra-icon/lib/icon/IconPill';
-import IconLightbulb from 'terra-icon/lib/icon/IconLightbulb';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableHeaderCellExample = () => (
   <Table header={(
     <Header>
       <HeaderCell
-        icon={<IconSearch />}
+        icon={<div style={{ border: '1px dotted black', height: '1em', width: '1em' }} />}
       >
         Lorem ipsum dolor
       </HeaderCell>
       <HeaderCell
-        icon={<IconPill />}
+        icon={<div style={{ border: '1px dotted black', height: '1em', width: '1em' }} />}
         isSelectable
         sort="asc"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </HeaderCell>
       <HeaderCell
-        icon={<IconLightbulb />}
+        icon={<div style={{ border: '1px dotted black', height: '1em', width: '1em' }} />}
         isSelectable
         sort="desc"
       >
