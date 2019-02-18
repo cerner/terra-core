@@ -1,25 +1,12 @@
 /**
- * When opening the onscreen keyboard on iOS when focusing on an input, VoiceOver will shift
- * focus back to the input when the keyboard is closed. This means we can't shift focus to the dropdown,
- * while the onscreen keyboard is open.
- *
- * Some ideas to work around this:
- * Create a button users can click on to toggle focus to dropdown, avoiding the onscreen keyboard being open
- * Get rid of  blur trap in current code, fire on blur when focus is shifted to toggle button, this will close the dropdown
- * Make the toggle button only toggle the dropdown open/close and shift focus to dropdown when open
- * Will need to work through how that works with keyboard interaction, might look into on focus of the toggle button, open the dropdown
- * to avoid dropdown from flickering when shifting focus from input to toggle button
  *
  * TODO
  *
  * Figure out issue where shifting focus back to input when selecting option with VO shifts focus
  * back to wrong input
- * issue that results in select becoming unusable
- * * With VO on, click on toggle button, select and option. VO shifts focus back to input.
- * * Swipe right and click on toggle button.
- * * Dropdown doesn't open and also disappears resulting in unusable state
+ *
  * Look into focus state getting out of sync when tabbing and opening dropdown on select textbox
- * Cross-browser test event.relatedTarget
+ *
  * Write wdio tests to ensure focus is placed correctly with these additions
  */
 
@@ -154,7 +141,6 @@ class Frame extends React.Component {
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
     this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleInputBlur = this.handleInputBlur.bind(this);
-    this.handleButtonFocus = this.handleButtonFocus.bind(this);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleButtonKeydown = this.handleButtonKeydown.bind(this);
     this.visuallyHiddenComponent = React.createRef();
@@ -252,6 +238,7 @@ class Frame extends React.Component {
     if (this.input) {
       this.input.focus();
     }
+
     this.setState({ isOpen: true, isPositioned: false });
   }
 
@@ -272,43 +259,16 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
-    // console.log('handle blur fired');
-
-    // console.log(event.relatedTarget);
-
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
       return;
     }
-
-    // test this cross-browser, may need to compare against activeElement in setTimeout if this doesn't work across browsers
-    if (document.querySelector('[data-terra-form-select-toggle-button="true"]') === event.relatedTarget) {
-      return;
-    }
-
-    // test this cross-browser, may need to compare against activeElement in setTimeout if this doesn't work across browsers
-    // if (document.querySelector(this.selectListBox) === event.relatedTarget) {
-    //   console.log('focus shifted to select role=listbox');
-    //   return;
-    // }
-
-    // Use timeout to delay examination of activeElement until after blur/focus
-    // events have been processed.
-    // setTimeout(() => {
-    //   console.log(`setTimeout Console Log ${document.activeElement}`);
-
-    //   // If focus is shifted to dropdown, don't close dropdown
-    //   if (document.querySelector(this.selectListBox) === document.activeElement) {
-    //     console.log('select dropdown focused now');
-    //     return;
-    //   }
 
     this.closeDropdown();
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
-    // }, 1);
   }
 
   /**
@@ -333,8 +293,6 @@ class Frame extends React.Component {
    * @param {event} event - The onKeyDown event.
    */
   handleKeyDown(event) {
-    // console.log('handleKeyDown');
-
     const { value } = this.props;
     const { keyCode, target } = event;
     const {
@@ -359,7 +317,6 @@ class Frame extends React.Component {
    * @param {event} event - The mouse down event.
    */
   handleMouseDown(event) {
-    // console.log('handleMouseDown');
     if (this.props.variant !== Variants.DEFAULT) {
       // Preventing default events stops the search input from losing focus.
       // The default variant has no search input therefore the mouse down gives the component focus.
@@ -373,7 +330,6 @@ class Frame extends React.Component {
    * @param {event} event - The mouse down event.
    */
   handleInputMouseDown(event) {
-    //console.log('handleInputMouseDown');
     event.stopPropagation();
     this.openDropdown(event);
   }
@@ -383,15 +339,7 @@ class Frame extends React.Component {
   }
 
   handleInputBlur() {
-    // alert('input is blurred');
     this.setState({ isInputFocused: false });
-  }
-
-  /**
-   * Handles click event on toggle button
-   */
-  handleButtonFocus(event) {
-    // this.openDropdown(event);
   }
 
   /**
@@ -402,26 +350,16 @@ class Frame extends React.Component {
     if (this.props.variant === Variants.DEFAULT) {
       return;
     }
+    // Test and see if event bubbling stoppage is needed here
     // Prevent event from bubbling up to other component keydown event handlers
     event.nativeEvent.stopImmediatePropagation();
     // Prevent event from bubbling up to Frame handleKeyDown event handler
     event.stopPropagation();
 
     this.openDropdown();
-    // console.log('handle Button click');
+
     if (document.querySelector(this.selectListBox)) {
       document.querySelector(this.selectListBox).focus();
-      // setTimeout(() => {
-      //   document.querySelector(this.selectListBox).focus();
-      // }, 1000);
-
-
-      // Can result in focus trap staying active longer than anticipated and DOM becoming fully hidden
-      // after done using dropdown
-      // prevent screen reader from moving to hidden content
-      // if (document.querySelector('[data-terra-base]')) {
-      //   document.querySelector('[data-terra-base]').setAttribute('aria-hidden', 'true');
-      // }
     }
   }
 
@@ -438,7 +376,6 @@ class Frame extends React.Component {
     // Prevent event from bubbling up to Frame handleKeyDown event handler
     event.stopPropagation();
     this.openDropdown(event);
-    // console.log('handle Button keydown');
   }
 
   /**
@@ -510,7 +447,6 @@ class Frame extends React.Component {
             type="button"
             className={cx('toggle-btn')}
             onClick={this.handleButtonClick}
-            onFocus={this.handleButtonFocus}
             onKeyDown={this.handleButtonKeydown}
             aria-label="Click to navigate to options"
             data-terra-form-select-toggle-button
@@ -543,7 +479,6 @@ class Frame extends React.Component {
       onSelect,
       optionFilter,
       placeholder,
-      rootSelector,
       variant,
       value,
       ...customProps
@@ -570,7 +505,6 @@ class Frame extends React.Component {
         onMouseDown={this.handleMouseDown}
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
-        aria-label="test 123"
         data-terra-form-select
         data-terra-form-select-is-focused={this.state.isFocused}
       >
@@ -584,7 +518,7 @@ class Frame extends React.Component {
           aria-expanded={!!disabled && !!this.state.isOpen}
           aria-haspopup={!disabled ? 'true' : undefined}
           aria-label="Search label"
-          aria-describedBy="screen-reader-text"
+          aria-describedby="screen-reader-text"
           className={cx('display')}
           onMouseDown={this.openDropdown}
           data-terra-form-select-frame-display
