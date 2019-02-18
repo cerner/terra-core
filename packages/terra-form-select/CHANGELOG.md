@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed a Select Menu jest test that was broken with the release of enzyme-3.9.0
 
 ### Added
 * Introduce an option to allow clearing the currently selected item
