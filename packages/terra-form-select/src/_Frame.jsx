@@ -1,9 +1,15 @@
 /**
- *
  * TODO
  *
  * Figure out issue where shifting focus back to input when selecting option with VO shifts focus
  * back to wrong input
+ *
+ * Steps to reproduce issue
+ * Click on search variant and select a color
+ * Then click on combobox variant and select a color
+ * Bug: Focus is shifted to search variant input instead of combobox input
+ *
+ * Wire up default variant to shift focus to dropdown
  *
  * Write wdio tests to ensure focus is placed correctly with these additions
  */
@@ -501,7 +507,6 @@ class Frame extends React.Component {
         onMouseDown={this.handleMouseDown}
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
-        data-terra-form-select
         data-terra-form-select-is-focused={this.state.isFocused}
       >
         {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
@@ -517,7 +522,6 @@ class Frame extends React.Component {
           aria-describedby="screen-reader-text"
           className={cx('display')}
           onMouseDown={this.openDropdown}
-          data-terra-form-select-frame-display
         >
           <span id="screen-reader-text" className={cx('visually-hidden-component')}>Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options</span>
           {this.getDisplay()}
