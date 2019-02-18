@@ -9,6 +9,8 @@ import OptGroupSrc from '!raw-loader!../../../../src/_OptGroup';
 import SelectSrc from '!raw-loader!../../../../src/Select';
 
 // Example Files
+import AllowClearExample from '../example/AllowClear';
+import AllowClearExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AllowClear';
 import ControlledExample from '../example/Controlled';
 import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Controlled';
 import ComboboxExample from '../example/Combobox';
@@ -95,6 +97,11 @@ const Index = () => (
       description: 'An example of implementing a controlled Select.',
       example: <ControlledExample />,
       source: ControlledExampleSrc,
+    }, {
+      title: 'Clear',
+      description: 'An example with an option to clear the selected item.',
+      example: <AllowClearExample />,
+      source: AllowClearExampleSrc,
     }]}
   />
 );

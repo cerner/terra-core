@@ -11,6 +11,10 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Text for the clear option.
+   */
+  clearOptionDisplay: PropTypes.string,
+  /**
    * Whether the select is disabled.
    */
   disabled: PropTypes.bool,
@@ -84,6 +88,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  clearOptionDisplay: undefined,
   disabled: false,
   dropdown: undefined,
   dropdownAttrs: undefined,
@@ -357,6 +362,7 @@ class Frame extends React.Component {
 
   render() {
     const {
+      clearOptionDisplay,
       disabled,
       display,
       dropdown,
@@ -433,6 +439,7 @@ class Frame extends React.Component {
                  onSelect: this.handleSelect,
                  onRequestClose: this.closeDropdown,
                  searchValue: this.state.searchValue,
+                 clearOptionDisplay,
                })}
           </Dropdown>
           )

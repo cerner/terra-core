@@ -21,6 +21,7 @@ exports[`should render a default SelectField component 1`] = `
   showOptional={false}
 >
   <Select
+    allowClear={false}
     defaultValue="blue"
     disabled={false}
     id="select-id"
@@ -77,6 +78,7 @@ exports[`should render a default SelectField component with attributes spread on
   showOptional={false}
 >
   <Select
+    allowClear={false}
     defaultValue="blue"
     disabled={false}
     id="select-id"
