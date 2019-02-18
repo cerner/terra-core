@@ -272,11 +272,9 @@ class Menu extends React.Component {
     } else {
       onSelect(option.props.value, option);
 
-      // Shift focus back select
       if (variant === Variants.DEFAULT) {
         select.focus();
       } else {
-        // Shift focus back select input
         input.focus();
       }
     }

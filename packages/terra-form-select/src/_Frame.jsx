@@ -3,6 +3,13 @@
  *
  * Wire up default variant to shift focus to dropdown
  *
+ * Cross-Browser test
+ *
+ * Get translations for following strings
+ * * 'Search'
+ * * 'Click to navigate to options'
+ * * 'Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options'
+ *
  * Write wdio tests to ensure focus is placed correctly with these additions
  */
 
@@ -485,12 +492,14 @@ class Frame extends React.Component {
           aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
           aria-expanded={!!disabled && !!this.state.isOpen}
           aria-haspopup={!disabled ? 'true' : undefined}
-          aria-label="Search label"
+          aria-label="Search"
           aria-describedby="screen-reader-text"
           className={cx('display')}
           onMouseDown={this.openDropdown}
         >
-          <span id="screen-reader-text" className={cx('visually-hidden-component')}>Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options</span>
+          <span id="screen-reader-text" className={cx('visually-hidden-component')}>
+            Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options
+          </span>
           {this.getDisplay()}
         </div>
         {this.renderToggleButton()}
