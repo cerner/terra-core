@@ -1,9 +1,9 @@
 /**
  * TODO
  *
- * Wire up default variant to shift focus to dropdown
- *
  * Cross-Browser test
+ *
+ * Fix a11y errors reported by aXe
  *
  * Get translations for following strings
  * * 'Search'
@@ -144,7 +144,6 @@ class Frame extends React.Component {
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
     this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleInputBlur = this.handleInputBlur.bind(this);
-    this.handleButtonClick = this.handleButtonClick.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectListBox = '#terra-select-dropdown [role="listbox"]';
   }
@@ -232,11 +231,25 @@ class Frame extends React.Component {
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
+
+      // Allows time for state update to render select listbox DOM
+      setTimeout(() => {
+        if (document.querySelector(this.selectListBox)) {
+          document.querySelector(this.selectListBox).focus();
+        }
+      }, 10);
       return;
     }
 
     if (this.input) {
       this.input.focus();
+    } else {
+      // Allows time for state update to render select listbox DOM
+      setTimeout(() => {
+        if (document.querySelector(this.selectListBox)) {
+          document.querySelector(this.selectListBox).focus();
+        }
+      }, 10);
     }
 
     this.setState({ isOpen: true, isPositioned: false });
@@ -264,6 +277,13 @@ class Frame extends React.Component {
       return;
     }
 
+    // test this cross-browser, may need to compare against activeElement in setTimeout if this doesn't work across browsers
+    if (document.querySelector(this.selectListBox) === event.relatedTarget) {
+      return;
+    }
+
+    this.setState({ isFocused: false });
+
     this.closeDropdown();
 
     if (this.props.onBlur) {
@@ -283,9 +303,7 @@ class Frame extends React.Component {
       this.props.onFocus(event);
     }
 
-    if (!this.state.isFocused) {
-      this.setState({ isFocused: true });
-    }
+    this.setState({ isFocused: true });
   }
 
   /**
@@ -301,10 +319,10 @@ class Frame extends React.Component {
 
     if (keyCode === SPACE && target !== this.input) {
       event.preventDefault();
-      this.openDropdown();
+      this.openDropdown(event);
     } else if (keyCode === UP_ARROW || keyCode === DOWN_ARROW) {
       event.preventDefault();
-      this.openDropdown();
+      this.openDropdown(event);
     } else if (keyCode === BACKSPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0) {
       this.props.onDeselect(value[value.length - 1]);
     } else if (keyCode === KeyCodes.ESCAPE) {
@@ -340,22 +358,6 @@ class Frame extends React.Component {
 
   handleInputBlur() {
     this.setState({ isInputFocused: false });
-  }
-
-  /**
-   * Handles click event on toggle button
-   */
-  handleButtonClick() {
-    // If default variant, don't do custom event handling, use default event handling
-    if (this.props.variant === Variants.DEFAULT) {
-      return;
-    }
-
-    this.openDropdown();
-
-    if (document.querySelector(this.selectListBox)) {
-      document.querySelector(this.selectListBox).focus();
-    }
   }
 
   /**
@@ -400,11 +402,11 @@ class Frame extends React.Component {
   /**
    * Toggles the dropdown open or closed.
    */
-  toggleDropdown() {
+  toggleDropdown(event) {
     if (this.state.isOpen) {
       this.closeDropdown();
     } else {
-      this.openDropdown();
+      this.openDropdown(event);
     }
   }
 
@@ -413,7 +415,7 @@ class Frame extends React.Component {
 
     if (variant !== Variants.DEFAULT && this.state.isInputFocused) {
       return (
-        <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
+        <div className={cx('toggle')}>
           <span className={cx('arrow-icon')} />
         </div>
       );
@@ -425,7 +427,6 @@ class Frame extends React.Component {
           <button
             type="button"
             className={cx('toggle-btn')}
-            onClick={this.handleButtonClick}
             aria-label="Click to navigate to options"
             data-terra-form-select-toggle-button
           >
@@ -436,7 +437,7 @@ class Frame extends React.Component {
     }
 
     return (
-      <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
+      <div className={cx('toggle')}>
         <span className={cx('arrow-icon')} />
       </div>
     );
@@ -484,7 +485,6 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
-
         <div
           role={!disabled ? 'combobox' : undefined}
           aria-controls={!disabled && this.state.isOpen ? 'terra-select-dropdown' : undefined}
@@ -495,7 +495,6 @@ class Frame extends React.Component {
           aria-label="Search"
           aria-describedby="screen-reader-text"
           className={cx('display')}
-          onMouseDown={this.openDropdown}
         >
           <span id="screen-reader-text" className={cx('visually-hidden-component')}>
             Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options

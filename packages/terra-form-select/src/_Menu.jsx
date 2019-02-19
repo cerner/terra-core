@@ -225,7 +225,13 @@ class Menu extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
     const { active, children } = this.state;
-    const { onSelect, value, variant } = this.props;
+    const {
+      input,
+      onSelect,
+      select,
+      value,
+      variant,
+    } = this.props;
 
     if (keyCode === KeyCodes.UP_ARROW) {
       this.clearScrollTimeout();
@@ -239,6 +245,11 @@ class Menu extends React.Component {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
+      if (variant === Variants.DEFAULT) {
+        select.focus();
+      } else {
+        input.focus();
+      }
     } else if (keyCode === KeyCodes.HOME) {
       event.preventDefault();
       this.setState({ active: Util.findFirst(children) });
@@ -271,7 +282,6 @@ class Menu extends React.Component {
       onDeselect(option.props.value, option);
     } else {
       onSelect(option.props.value, option);
-
       if (variant === Variants.DEFAULT) {
         select.focus();
       } else {
@@ -283,7 +293,7 @@ class Menu extends React.Component {
   /**
    * Sets the hovered option as the active value.
    * @param {event} event - The mouse enter event.
-   * @param {ReactNode} option - The option that recieved the mouse enter event.
+   * @param {ReactNode} option - The option that received the mouse enter event.
    */
   handleMouseEnter(event, option) {
     // Prevents setting the active option on mouse enter if the keyboard scrolled the view.
