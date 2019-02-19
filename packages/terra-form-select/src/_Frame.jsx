@@ -1,13 +1,21 @@
 /**
  * TODO
  *
+ * Issue with VO on iOS not rendering toggle button after making a selection and closing the onscreen keyboard
+ * * Issue reproducible without VO turned on when on iOS
+ *
+ *
  * Cross-Browser test
  *
  * IE 10 and IE 11
  * * adds dotted focus outline around dropdown when clicking toggle button in not default variant
- * * Default variant dropdown doesn't open on click (flickers for a second)
  * * Clicking on option and then clicking off of select does not set select back to initial no focus state for search and combobox variants
  *   * works with multi-select and tag variants
+ *
+ * iOS Safari
+ * * Clicking on option and then clicking off of select does not set select back to initial no focus state for search and combobox variants
+ *   * works with multi-select and tag variants
+ * * VO no longers works with variants other than default
  *
  * Edge
  * * Adds dotted border around dropdown when focused
@@ -19,7 +27,6 @@
  * Firefox
  * * Seems to work fine
  *
- * Fix a11y errors reported by aXe
  *
  * Get translations for following strings
  * * 'Search'
@@ -295,7 +302,15 @@ class Frame extends React.Component {
       return;
     }
 
-    // test this cross-browser, may need to compare against activeElement in setTimeout if this doesn't work across browsers
+    // For IE 10 / 11
+    if (event.relatedTarget === null) {
+      // IE 11 sets document.activeElement to the next focused element before the blur event is called
+      if (document.querySelector(this.selectListBox) === document.activeElement) {
+        return;
+      }
+    }
+
+    // Modern browsers support event.relatedTarget
     if (document.querySelector(this.selectListBox) === event.relatedTarget) {
       return;
     }
