@@ -20,7 +20,8 @@
     padding-right: var(--terra-form-select-padding-right, 0);
     padding-top: var(--terra-form-select-padding-top, 0);
 
-    > .display {
+    .display {
+      border: 0;
       display: inline-block;
       flex: 1 1 auto; // IE 10
       overflow: hidden;
@@ -80,6 +81,11 @@
     &.is-invalid:hover {
       border-color: var(--terra-form-select-invalid-hover-border-color, #dedfe0);
     }
+  }
+
+  .combobox-control {
+    display: flex;
+    flex: 1 1 auto; // IE 10
   }
 
   .display {
@@ -211,7 +217,7 @@
   .search,
   .combobox,
   .multiple {
-    > .display {
+    .display {
       background-size: var(--terra-form-select-background-size, 0 0);
       border: var(--terra-form-select-border, 1px solid #dedfe0);
       border-bottom-left-radius: var(--terra-form-select-border-bottom-left-radius, 3px);
@@ -242,7 +248,7 @@
     }
 
     &.is-focused {
-      > .display {
+      .display {
         background-image: var(--terra-form-select-focus-background-image, none);
         background-position: 0 100%;
         background-repeat: no-repeat;
@@ -257,7 +263,7 @@
     }
 
     &.is-open {
-      > .display {
+      .display {
         border-bottom-left-radius: 0;
         box-shadow: none;
       }
@@ -268,7 +274,7 @@
     }
 
     &.is-above {
-      > .display {
+      .display {
         border-bottom-left-radius: var(--terra-form-select-above-border-bottom-left-radius, 3px);
         border-top-left-radius: 0;
       }
@@ -279,23 +285,23 @@
       }
     }
 
-    &.is-focused:hover > .display {
+    &.is-focused:hover .display {
       border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
-    &.is-invalid > .display {
+    &.is-invalid .display {
       background-color: var(--terra-form-select-invalid-background-color, none);
       background-image: var(--terra-form-select-invalid-background-image, none);
       border-color: var(--terra-form-select-invalid-border-color, #dedfe0);
     }
 
-    &.is-invalid.is-focused > .display {
+    &.is-invalid.is-focused .display {
       background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
       border-color: var(--terra-form-select-invalid-focus-border-color, #4cb2e9);
       box-shadow: var(--terra-form-select-invalid-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
     }
 
-    &.is-invalid:hover > .display {
+    &.is-invalid:hover .display {
       border-color: var(--terra-form-select-invalid-hover-border-color, #dedfe0);
     }
   }

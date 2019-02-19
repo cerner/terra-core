@@ -3,6 +3,22 @@
  *
  * Cross-Browser test
  *
+ * IE 10 and IE 11
+ * * adds dotted focus outline around dropdown when clicking toggle button in not default variant
+ * * Default variant dropdown doesn't open on click (flickers for a second)
+ * * Clicking on option and then clicking off of select does not set select back to initial no focus state for search and combobox variants
+ *   * works with multi-select and tag variants
+ *
+ * Edge
+ * * Adds dotted border around dropdown when focused
+ * * Doesn't appear to have same issues as IE 10/11
+ *
+ * Safari
+ * * Seems to work fine
+ *
+ * Firefox
+ * * Seems to work fine
+ *
  * Fix a11y errors reported by aXe
  *
  * Get translations for following strings
@@ -16,6 +32,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import uniqueid from 'lodash.uniqueid';
 import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
 import Dropdown from './_Dropdown';
@@ -175,6 +192,7 @@ class Frame extends React.Component {
       ref: this.setInput,
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
+      'aria-label': 'search',
       'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
@@ -473,6 +491,8 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
+    const ariaDescribedById = `terra-select-screen-reader-description-${uniqueid()}`;
+
     return (
       <div
         {...customProps}
@@ -484,22 +504,23 @@ class Frame extends React.Component {
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
-        {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
         <div
+          className={cx('combobox-control')}
           role={!disabled ? 'combobox' : undefined}
           aria-controls={!disabled && this.state.isOpen ? 'terra-select-dropdown' : undefined}
           aria-disabled={!!disabled}
-          aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
           aria-expanded={!!disabled && !!this.state.isOpen}
           aria-haspopup={!disabled ? 'true' : undefined}
+          aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
           aria-label="Search"
-          aria-describedby="screen-reader-text"
-          className={cx('display')}
+          aria-describedby={ariaDescribedById}
         >
-          <span id="screen-reader-text" className={cx('visually-hidden-component')}>
-            Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options
-          </span>
-          {this.getDisplay()}
+          <div role="textbox" aria-disabled={!!disabled} className={cx('display')}>
+            <span id={ariaDescribedById} className={cx('visually-hidden-component')}>
+              Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options
+            </span>
+            {this.getDisplay()}
+          </div>
         </div>
         {this.renderToggleButton()}
         <span className={cx('visually-hidden-component')} ref={this.visuallyHiddenComponent} aria-live="polite" aria-relevant="additions text" aria-atomic="true" />
