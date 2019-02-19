@@ -81,6 +81,9 @@ Cerner Corporation
 - Supreeth MR [@supreethmr]
 - Chandrakanth Dudela [@ChanduDudela]
 - Lauren Stephenson [@CompSciLauren]
+- Shetty Akarsh [@ShettyAkarsh]
+
+
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -164,3 +167,4 @@ Cerner Corporation
 [@supreethmr]: https://github.com/supreethmr
 [@ChanduDudela]: https://github.com/ChanduDudela
 [@CompSciLauren]: https://github.com/CompSciLauren
+[@ShettyAkarsh]: https://github.com/ShettyAkarsh
