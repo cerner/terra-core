@@ -1,0 +1,8 @@
+:local {
+  .max-selection {
+    overflow: hidden;
+    padding: var(--terra-form-select-max-selection-padding, 0.28571rem 0.714286rem);
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+}
