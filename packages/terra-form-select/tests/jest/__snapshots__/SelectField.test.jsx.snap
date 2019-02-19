@@ -25,6 +25,7 @@ exports[`should render a default SelectField component 1`] = `
     disabled={false}
     id="select-id"
     isInvalid={false}
+    onChange={[Function]}
     variant="default"
   >
     <Option
@@ -81,8 +82,68 @@ exports[`should render a default SelectField component with attributes spread on
     disabled={false}
     id="select-id"
     isInvalid={false}
+    onChange={[Function]}
     onClick={[Function]}
     variant="default"
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </Select>
+</Field>
+`;
+
+exports[`should render a multiple SelectField component that limits the selection count 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help="Help Text"
+  hideRequired={false}
+  htmlFor="select-id"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Select
+    defaultValue="blue"
+    disabled={false}
+    id="select-id"
+    isInvalid={false}
+    maxSelectionCount={2}
+    onChange={[Function]}
+    onClick={[Function]}
+    variant="multiple"
   >
     <Option
       disabled={false}

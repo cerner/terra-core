@@ -118,7 +118,7 @@ class Menu extends React.Component {
 
     if (Util.shouldAllowFreeText(props, children)) {
       if (maxSelectionCountReached) {
-        children.push(<MaxSelection noResultContent={noResultContent} value={maxSelectionCount} />);
+        children = [(<MaxSelection noResultContent={noResultContent} value={maxSelectionCount} />)];
         hasMaxSelection = true;
       } else {
         children.push(<AddOption value={searchValue} />);
@@ -127,7 +127,7 @@ class Menu extends React.Component {
 
     if (Util.shouldShowNoResults(props, children)) {
       if (maxSelectionCountReached) {
-        children.push(<MaxSelection noResultContent={noResultContent} value={maxSelectionCount} />);
+        children = [(<MaxSelection noResultContent={noResultContent} value={maxSelectionCount} />)];
         hasMaxSelection = true;
       } else {
         children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);

@@ -143,7 +143,13 @@ class SelectField extends React.Component {
       let helpWithMaxSelectionCount = this.context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
 
       if (this.props.help) {
-        helpWithMaxSelectionCount = <span>{helpWithMaxSelectionCount} {this.props.help}</span> 
+        helpWithMaxSelectionCount = (
+          <span>
+            { helpWithMaxSelectionCount }
+            { ' ' }
+            { this.props.help }
+          </span>
+        );
       }
 
       this.setState({ help: helpWithMaxSelectionCount });
@@ -181,12 +187,6 @@ class SelectField extends React.Component {
       ...customProps
     } = this.props;
 
-
-    let enforcedMaxSelectionCount = maxSelectionCount;
-    if (maxSelectionCount !== undefined && maxSelectionCount < 2 ) {
-      enforcedMaxSelectionCount = undefined;
-    }
-
     return (
       <Field
         {...customProps}
@@ -208,7 +208,7 @@ class SelectField extends React.Component {
           id={selectId}
           isInvalid={isInvalid}
           defaultValue={defaultValue}
-          maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2  ? undefined : maxSelectionCount}
+          maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
           onChange={this.handleChange}
           placeholder={placeholder}
           value={value}

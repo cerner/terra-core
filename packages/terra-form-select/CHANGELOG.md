@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added option to limit the maximum number os selection count for multi-select variants.
+
 ### Fixed
 * Fixed a Select Menu jest test that was broken with the release of enzyme-3.9.0
 
