@@ -1,0 +1,24 @@
+:root {
+  --terra-text-attention-color: rgb(220, 20, 60);
+  --terra-text-neutral-color: rgb(46, 125, 50);
+  --terra-text-info-color: #304ffe;
+  --terra-text-default-color: #333;
+}
+
+:local {
+  .default {
+    color: var(--terra-text-default-color, #333);
+  }
+
+  .attention {
+    color: var(--terra-text-attention-color, rgb(220, 20, 60));
+  }
+
+  .neutral {
+    color: var(--terra-text-neutral-color, rgb(46, 125, 50));
+  }
+
+  .info {
+    color: var(--terra-text-info-color, #304ffe);
+  }
+}

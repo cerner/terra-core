@@ -1,11 +1,14 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Heading from 'terra-heading/lib/Heading';
-import './colors.css';
+import classNames from 'classnames/bind';
+import styles from './colors.module.scss';
+
+const cx = classNames.bind(styles);
 
 const HeadingVariations = () => (
   <div>
-    <Heading level={3} className="neutral" isItalic>
+    <Heading level={3} className={cx(['neutral'])} isItalic>
 H3 heading with color set to
       <code>rgb(46,125,50)</code>
       {' '}
