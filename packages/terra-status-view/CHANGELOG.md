@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Update Thin Constraint test screenshot to be limited to the test size 75px to remove wdio screen resizing. Screen resizing to 75px is not possible with firefox driver.
 
+### Fixed
+* Status View glyph does not always displays when it should
+=======
 3.5.0 - (February 12, 2019)
 ------------------
 ### Changed
