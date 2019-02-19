@@ -4,25 +4,25 @@ By passing in a className, authors can manually set the text color of any `<Text
 
 ```css
 :root {
-  --terra-text-attention-color: rgb(220, 20, 60);
-  --terra-text-neutral-color: rgb(46, 125, 50);
-  --terra-text-info-color: #304ffe;
-  --terra-text-default-color: #333;
+  --my-app-text-attention-color: rgb(220, 20, 60);
+  --my-app-text-neutral-color: rgb(46, 125, 50);
+  --my-app-text-info-color: #304ffe;
+  --my-app-text-default-color: #333;
 }
 
 .default {
-  color: var(--terra-text-default-color, #333);
+  color: var(--my-app-text-default-color, #333);
 }
 
 .attention {
-  color: var(--terra-text-attention-color, rgb(220, 20, 60));
+  color: var(--my-app-text-attention-color, rgb(220, 20, 60));
 }
 
 .neutral {
-  color: var(--terra-text-neutral-color, rgb(46, 125, 50));
+  color: var(--my-app-text-neutral-color, rgb(46, 125, 50));
 }
 
 .info {
-  color: var(--terra-text-info-color, #304ffe);
+  color: var(--my-app-text-info-color, #304ffe);
 }
 ```
