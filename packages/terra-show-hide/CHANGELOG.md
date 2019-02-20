@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added en-AU translations
+
 ### Fixed
 * Correct browser.buttonDown() usage
 
