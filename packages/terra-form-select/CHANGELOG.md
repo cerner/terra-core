@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added en-AU translations
+
+### Fixed
+* Fixed a Select Menu jest test that was broken with the release of enzyme-3.9.0
+
 
 5.6.0 - (February 12, 2019)
 ------------------
