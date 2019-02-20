@@ -2,7 +2,7 @@
 
 exports[`MaxSelection should render a default MaxSelection 1`] = `
 <div
-  className="no-results"
+  className="max-selection"
 >
   Maximum number of 3 items reached
 </div>

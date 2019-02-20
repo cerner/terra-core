@@ -22,7 +22,7 @@ const contextTypes = {
 };
 
 const MaxSelection = ({ value }, context) => (
-  <div className={cx('no-results')}>
+  <div className={cx('max-selection')}>
     { context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionOption' }, { text: value })}
   </div>
 );
