@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added stylelint-enable to Table.module.scss
 
 3.5.0 - (February 12, 2019)
 ------------------
