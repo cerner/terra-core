@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added en-AU translations
+
+2.6.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Remove the collapsible menu view from the example
 
 2.5.0 - (February 5, 2019)
 ------------------

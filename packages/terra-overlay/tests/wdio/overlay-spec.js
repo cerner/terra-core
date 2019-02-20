@@ -142,16 +142,6 @@ describe('Overlay', () => {
   });
 
   describe('Custom Content', () => {
-    const random = function random() {
-      try {
-        browser.click('#random_button');
-      } catch (error) {
-        if (error.message.contains('is not clickable')) {
-          throw error;
-        }
-      }
-    };
-
     describe('Full Screen Custom Content', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-overlay/overlay/overlay/custom-content-overlay');
@@ -164,7 +154,7 @@ describe('Overlay', () => {
     it('Custom Content under overlay is not clickable when Overlay is open', () => {
       browser.url('/#/raw/tests/terra-overlay/overlay/overlay/custom-content-overlay');
       browser.click('#trigger_fullscreen');
-      expect(random).to.throw();
+      expect(browser.click.bind(browser, '#random_button')).to.throw(Error);
     });
 
     describe('Container Custom Content', () => {

@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added en-AU translations
+
+### Fixed
+* Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
+
+3.5.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.4.0 - (February 5, 2019)
 ------------------

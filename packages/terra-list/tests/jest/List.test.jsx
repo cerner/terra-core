@@ -1,36 +1,63 @@
 import React from 'react';
-import List from '../../src/List';
+import List, { Item } from '../../src/index';
 
 // Snapshot Tests
 it('should render with items', () => {
-  const item1 = <List.Item key="123" />;
-  const item2 = <List.Item key="123" />;
-  const item3 = <List.Item key="123" />;
-  const item4 = <List.Item key="123" />;
-  const item5 = <List.Item key="123" />;
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const singleSelect = shallow(<List>{items}</List>);
-  expect(singleSelect).toMatchSnapshot();
+  const shallowComponent = shallow(<List>{items}</List>);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render isDivided', () => {
-  const item1 = <List.Item key="123" />;
-  const item2 = <List.Item key="123" />;
-  const item3 = <List.Item key="123" />;
-  const item4 = <List.Item key="123" />;
-  const item5 = <List.Item key="123" />;
+it('should render with no items', () => {
+  const shallowComponent = shallow(<List />);
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render with standard divided items', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const singleSelect = shallow(<List isDivided>{items}</List>);
-  expect(singleSelect).toMatchSnapshot();
+  const shallowComponent = shallow(<List dividerStyle="standard">{items}</List>);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should mount with no items', () => {
-  const singleSelect = mount(<List />);
-  expect(singleSelect).toMatchSnapshot();
+it('should render with bottom only divided items', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
+  const items = [item1, item2, item3, item4, item5];
+  const shallowComponent = shallow(<List dividerStyle="bottom-only">{items}</List>);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should mount with one items', () => {
-  const item1 = <List.Item key="123" />;
-  const singleSelect = mount(<List>{item1}</List>);
-  expect(singleSelect).toMatchSnapshot();
+it('should render with standard padded items', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
+  const items = [item1, item2, item3, item4, item5];
+  const shallowComponent = shallow(<List paddingStyle="standard">{items}</List>);
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render with thin padded items', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
+  const items = [item1, item2, item3, item4, item5];
+  const shallowComponent = shallow(<List paddingStyle="compact">{items}</List>);
+  expect(shallowComponent).toMatchSnapshot();
 });
