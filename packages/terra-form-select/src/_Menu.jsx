@@ -109,32 +109,27 @@ class Menu extends React.Component {
       maxSelectionCount, searchValue, noResultContent,
     } = props;
 
-    let children = Util.filter(props.children, props.searchValue, props.optionFilter);
-    const maxSelectionCountReached = Util.isMaxSelectionReached(props);
+    let children;
     let hasNoResults = false;
     let hasMaxSelection = false;
 
-    children = Util.updateSelectionState(children, props);
+    if (searchValue && searchValue.length > 0 && Util.isMaxSelectionReached(props)) {
+      children = [(<MaxSelection value={maxSelectionCount} />)];
+      hasMaxSelection = true;
+    } else {
+      children = Util.filter(props.children, props.searchValue, props.optionFilter);
+      children = Util.updateSelectionState(children, props);
 
-    if (Util.shouldAllowFreeText(props, children)) {
-      if (maxSelectionCountReached) {
-        children = [(<MaxSelection noResultContent={noResultContent} value={maxSelectionCount} />)];
-        hasMaxSelection = true;
-      } else {
+      if (Util.shouldAllowFreeText(props, children)) {
         children.push(<AddOption value={searchValue} />);
       }
-    }
 
-    if (Util.shouldShowNoResults(props, children)) {
-      if (maxSelectionCountReached) {
-        children = [(<MaxSelection noResultContent={noResultContent} value={maxSelectionCount} />)];
-        hasMaxSelection = true;
-      } else {
+      if (Util.shouldShowNoResults(props, children)) {
         children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
         hasNoResults = true;
+      } else {
+        hasNoResults = false;
       }
-    } else {
-      hasNoResults = false;
     }
 
     return {

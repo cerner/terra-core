@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaxSelection should render a default MaxSelection 1`] = `
+<div
+  className="no-results"
+>
+  Maximum number of 3 items reached
+</div>
+`;

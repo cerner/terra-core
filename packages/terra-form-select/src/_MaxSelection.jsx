@@ -7,10 +7,6 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Content to display when max selection is reached.
-   */
-  maxSelectionContent: PropTypes.node,
-  /**
    * The filter value.
    */
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -25,9 +21,9 @@ const contextTypes = {
   },
 };
 
-const MaxSelection = ({ maxSelectionContent, value }, context) => (
+const MaxSelection = ({ value }, context) => (
   <div className={cx('no-results')}>
-    {maxSelectionContent || context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionOption' }, { text: value })}
+    { context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionOption' }, { text: value })}
   </div>
 );
 
