@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed stylelint overrides in CardBody.module.scss
 
 3.2.0 - (February 12, 2019)
 ------------------
