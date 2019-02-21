@@ -19,6 +19,9 @@ Unreleased
 ### Changed
 * Minor dependency version bump
 
+### Changed
+* Removed stylelint overrides in Overlay.module.scss
+
 3.3.0 - (January 26, 2019)
 ------------------
 ### Changed
