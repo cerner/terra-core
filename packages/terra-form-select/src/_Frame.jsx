@@ -1,7 +1,9 @@
 /**
  * TODO
  *
- * Cross-Browser test
+ * DONE - Cross-Browser test
+ * Tested in Chrome, FF, Edge, Safari, IE 10, IE 11, Safari iOS
+ * No issues detected
  *
  * Get translations for following strings
  * * 'Search'
@@ -511,7 +513,7 @@ class Frame extends React.Component {
         >
           <div role="textbox" aria-disabled={!!disabled} className={cx('display')}>
             <span id={ariaDescribedById} className={cx('visually-hidden-component')}>
-              Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options
+              Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options.
             </span>
             {this.getDisplay()}
           </div>
