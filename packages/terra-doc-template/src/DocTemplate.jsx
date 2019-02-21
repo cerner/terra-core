@@ -102,8 +102,8 @@ const DocTemplate = ({
     <div {...customProps} className={docTemplateClassNames}>
       <div className={cx('doc-card')}>
         {packageName && badge}
-        {packageName && srcPath && <a href={srcPath}><img src={`https://badgen.net/badge//source/?icon=github`} alt="src code"/></a>}
         {readme && <Markdown src={readme} />}
+        {srcPath && <a href={srcPath}>View component source code</a>}
       </div>
 
       {exampleHeader}
