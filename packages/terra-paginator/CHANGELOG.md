@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.6.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.5.0 - (February 5, 2019)
 ------------------
 ### Changed
@@ -34,6 +39,9 @@ Unreleased
 ### Changed
 * Updated theme variables
 * Add previous and next margins for progressive paginator
+
+### Removed
+* Unneeded terra-list dependency.
 
 1.27.0 - (January 2, 2019)
 ------------------

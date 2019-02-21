@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added stylelint-enable to LegacyThemeNavigationSideMenu.module.scss
 
 2.35.0 - (February 5, 2019)
 ------------------

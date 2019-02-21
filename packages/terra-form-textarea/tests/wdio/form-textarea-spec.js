@@ -270,10 +270,8 @@ describe('Form-Textarea', () => {
     describe('Resizes when given several rows of input', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea');
-        browser.execute(() => {
-          // Removes the blinking cursor to prevent screenshot mismatches.
-          document.querySelector('textarea').style.caretColor = 'transparent';
-        });
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.should.matchScreenshot('0', { viewports });
@@ -288,10 +286,8 @@ describe('Form-Textarea', () => {
     describe('Does not resize textareas that are non-resizable', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
-        browser.execute(() => {
-          // Removes the blinking cursor to prevent screenshot mismatches.
-          document.querySelector('textarea').style.caretColor = 'transparent';
-        });
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.should.matchScreenshot('0', { viewports });
@@ -306,10 +302,8 @@ describe('Form-Textarea', () => {
     describe('Blocks autoresizing for when ontouch exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-on-touch-start');
-        browser.execute(() => {
-          // Removes the blinking cursor to prevent screenshot mismatches.
-          document.querySelector('textarea').style.caretColor = 'transparent';
-        });
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.should.matchScreenshot('0', { viewports });
@@ -324,10 +318,8 @@ describe('Form-Textarea', () => {
     describe('Blocks autoresizing for when DocumentTouch exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-document-touch');
-        browser.execute(() => {
-          // Removes the blinking cursor to prevent screenshot mismatches.
-          document.querySelector('textarea').style.caretColor = 'transparent';
-        });
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.should.matchScreenshot('0', { viewports });
@@ -342,10 +334,8 @@ describe('Form-Textarea', () => {
     describe('Blocks autoresizing for when maxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-max-touch-points');
-        browser.execute(() => {
-          // Removes the blinking cursor to prevent screenshot mismatches.
-          document.querySelector('textarea').style.caretColor = 'transparent';
-        });
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.should.matchScreenshot('0', { viewports });
@@ -360,10 +350,8 @@ describe('Form-Textarea', () => {
     describe('Blocks autoresizing for when msMaxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-ms-max-touch-points');
-        browser.execute(() => {
-          // Removes the blinking cursor to prevent screenshot mismatches.
-          document.querySelector('textarea').style.caretColor = 'transparent';
-        });
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.should.matchScreenshot('0', { viewports });

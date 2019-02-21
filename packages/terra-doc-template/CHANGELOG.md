@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.4.0 - (February 12, 2019)
+------------------
+### Changed
+* Add overflow style hidden to prevent incorrect size calculation.
+
 2.3.0 - (February 5, 2019)
 ------------------
 ### Changed
