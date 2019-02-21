@@ -1,32 +1,7 @@
 /**
  * TODO
  *
- * Issue with VO on iOS not rendering toggle button after making a selection and closing the onscreen keyboard
- * * Issue reproducible without VO turned on when on iOS
- *
- *
  * Cross-Browser test
- *
- * IE 10 and IE 11
- * * adds dotted focus outline around dropdown when clicking toggle button in not default variant
- * * Clicking on option and then clicking off of select does not set select back to initial no focus state for search and combobox variants
- *   * works with multi-select and tag variants
- *
- * iOS Safari
- * * Clicking on option and then clicking off of select does not set select back to initial no focus state for search and combobox variants
- *   * works with multi-select and tag variants
- * * VO no longers works with variants other than default
- *
- * Edge
- * * Adds dotted border around dropdown when focused
- * * Doesn't appear to have same issues as IE 10/11
- *
- * Safari
- * * Seems to work fine
- *
- * Firefox
- * * Seems to work fine
- *
  *
  * Get translations for following strings
  * * 'Search'
@@ -302,18 +277,21 @@ class Frame extends React.Component {
       return;
     }
 
-    // For IE 10 / 11
-    if (event.relatedTarget === null) {
-      // IE 11 sets document.activeElement to the next focused element before the blur event is called
-      if (document.querySelector(this.selectListBox) === document.activeElement) {
+    // Prevent closing of the dropdown in the default variant
+    // as we shift focus to dropdown when opened which triggers blur handler
+    if (this.props.variant === Variants.DEFAULT) {
+      // event.relatedTarget returns null in IE 10 / IE 11
+      if (event.relatedTarget == null) {
+        // IE 11 sets document.activeElement to the next focused element before the blur event is called
+        if (document.querySelector(this.selectListBox) === document.activeElement) {
+          return;
+        }
+      // Modern browsers support event.relatedTarget
+      } else if (document.querySelector(this.selectListBox) === event.relatedTarget) {
         return;
       }
     }
 
-    // Modern browsers support event.relatedTarget
-    if (document.querySelector(this.selectListBox) === event.relatedTarget) {
-      return;
-    }
 
     this.setState({ isFocused: false });
 
@@ -516,7 +494,6 @@ class Frame extends React.Component {
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}
-        tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
         <div
@@ -529,6 +506,8 @@ class Frame extends React.Component {
           aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
           aria-label="Search"
           aria-describedby={ariaDescribedById}
+          tabIndex={Util.tabIndex(this.props)}
+          ref={(combobox) => { this.combobox = combobox; }}
         >
           <div role="textbox" aria-disabled={!!disabled} className={cx('display')}>
             <span id={ariaDescribedById} className={cx('visually-hidden-component')}>
@@ -563,7 +542,7 @@ class Frame extends React.Component {
                 onRequestClose: this.closeDropdown,
                 searchValue: this.state.searchValue,
                 input: this.input,
-                select: this.select,
+                combobox: this.combobox,
               })}
           </Dropdown>
           )

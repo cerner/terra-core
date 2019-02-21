@@ -19,6 +19,10 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Combobox element ref.
+   */
+  combobox: PropTypes.instanceOf(Element),
+  /**
    * Input element ref used in select component.
    */
   input: PropTypes.instanceOf(Element),
@@ -42,10 +46,6 @@ const propTypes = {
    * The search value to filter the available options.
    */
   searchValue: PropTypes.string,
-  /**
-   * Select frame wrapper element ref.
-   */
-  select: PropTypes.instanceOf(Element),
   /**
    * The value of the selected options.
    */
@@ -228,7 +228,7 @@ class Menu extends React.Component {
     const {
       input,
       onSelect,
-      select,
+      combobox,
       value,
       variant,
     } = this.props;
@@ -246,7 +246,7 @@ class Menu extends React.Component {
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
       if (variant === Variants.DEFAULT) {
-        select.focus();
+        combobox.focus();
       } else {
         input.focus();
       }
@@ -275,7 +275,7 @@ class Menu extends React.Component {
     }
 
     const {
-      input, onDeselect, onSelect, value, variant, select,
+      combobox, input, onDeselect, onSelect, value, variant,
     } = this.props;
 
     if (Util.allowsMultipleSelections(variant) && Util.includes(value, option.props.value)) {
@@ -283,7 +283,7 @@ class Menu extends React.Component {
     } else {
       onSelect(option.props.value, option);
       if (variant === Variants.DEFAULT) {
-        select.focus();
+        combobox.focus();
       } else {
         input.focus();
       }
