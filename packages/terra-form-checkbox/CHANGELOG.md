@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
+* Added stylelint-enable to Checkbox.module.scss
 * Added en-AU translations
 
 3.4.0 - (February 12, 2019)
