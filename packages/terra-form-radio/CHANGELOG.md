@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
+* Added stylelint-enable at end of Radio.module.scss
 * Added en-AU translations
 
 3.5.0 - (February 12, 2019)
