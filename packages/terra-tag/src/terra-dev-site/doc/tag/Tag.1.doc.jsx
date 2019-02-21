@@ -33,7 +33,8 @@ const DocPage = () => (
         source: TagHrefSrc,
       },
       {
-        title: 'Tag Fallbacks',
+        title: 'Tag with no onClick or href',
+        description: 'These styles are provided for when this compoment is missing recomended elements for best practice use.',
         example: <TagFallbacks />,
         source: TagFallbacksSrc,
       },
