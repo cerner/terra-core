@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed stylelint-disable in Signature.module.scss
 
 2.4.0 - (February 12, 2019)
 ------------------
