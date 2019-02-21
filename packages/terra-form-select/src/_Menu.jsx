@@ -73,7 +73,7 @@ const defaultProps = {
   onDeselect: undefined,
   optionFilter: undefined,
   searchValue: undefined,
-  select: undefined,
+  combobox: undefined,
   value: undefined,
 };
 
