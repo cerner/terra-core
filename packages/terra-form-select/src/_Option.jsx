@@ -39,6 +39,11 @@ const propTypes = {
    * The value of the option. The value must be unique.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  /**
+   * @private
+   * Variant of select component
+   */
+  variant: PropTypes.string,
 };
 
 const defaultProps = {
@@ -50,6 +55,7 @@ const Option = ({
   disabled,
   display,
   value,
+  variant,
   isActive,
   isSelected,
   isCheckable,
@@ -67,18 +73,22 @@ const Option = ({
     customProps.className,
   ]);
 
+  const role = (variant === 'tag' || variant === 'multiple') ? 'checkbox' : 'radio';
+
   return (
-    <li
+    <span
+      role={role}
       {...customProps}
-      role="option"
       disabled={disabled}
       className={optionClassNames}
-      aria-selected={isSelected}
+      aria-checked={isSelected}
       aria-disabled={disabled}
+      tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
+      data-terra-select-option
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
       <span className={cx('display')}>{display}</span>
-    </li>
+    </span>
   );
 };
 

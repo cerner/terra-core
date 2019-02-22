@@ -5,6 +5,14 @@
  * Tested in Chrome, FF, Edge, Safari, IE 10, IE 11, Safari iOS
  * No issues detected
  *
+ * Add VoiceOver desktop support
+ * Code seems to work
+ * When dropdown is open, it would be nice to focus to item that is selected
+ * Add logic to switch between radio and checkbox
+ * Look into radiogroup role, see if there is a checkboxgroup role too
+ *
+ * Add JAWS support
+ *
  * Get translations for following strings
  * * 'Search'
  * * 'Click to navigate to options'
@@ -146,7 +154,7 @@ class Frame extends React.Component {
     this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleInputBlur = this.handleInputBlur.bind(this);
     this.visuallyHiddenComponent = React.createRef();
-    this.selectListBox = '#terra-select-dropdown [role="listbox"]';
+    this.selectListBox = '#terra-select-menu [data-terra-select-option]:first-child';
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -176,6 +184,8 @@ class Frame extends React.Component {
       ref: this.setInput,
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
+      type: 'text',
+      'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
       'aria-label': 'search',
       'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
@@ -501,25 +511,32 @@ class Frame extends React.Component {
         <div
           className={cx('combobox-control')}
           role={!disabled ? 'combobox' : undefined}
-          aria-controls={!disabled && this.state.isOpen ? 'terra-select-dropdown' : undefined}
+          aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
           aria-disabled={!!disabled}
           aria-expanded={!!disabled && !!this.state.isOpen}
           aria-haspopup={!disabled ? 'true' : undefined}
-          aria-owns={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+          aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
           aria-label="Search"
           aria-describedby={ariaDescribedById}
           tabIndex={Util.tabIndex(this.props)}
           ref={(combobox) => { this.combobox = combobox; }}
         >
           <div role="textbox" aria-disabled={!!disabled} className={cx('display')}>
-            <span id={ariaDescribedById} className={cx('visually-hidden-component')}>
+            {/* Hidden attribute used to resolve VoiceOver on desktop from overly reading aria-describedby content */}
+            <span id={ariaDescribedById} hidden className={cx('visually-hidden-component')}>
               Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options.
             </span>
             {this.getDisplay()}
           </div>
         </div>
         {this.renderToggleButton()}
-        <span className={cx('visually-hidden-component')} ref={this.visuallyHiddenComponent} aria-live="polite" aria-relevant="additions text" aria-atomic="true" />
+        <span
+          className={cx('visually-hidden-component')}
+          ref={this.visuallyHiddenComponent}
+          aria-live="assertive"
+          aria-relevant="additions text"
+          aria-atomic="true"
+        />
         {this.state.isOpen
           && (
           <Dropdown
@@ -545,6 +562,7 @@ class Frame extends React.Component {
                 searchValue: this.state.searchValue,
                 input: this.input,
                 combobox: this.combobox,
+                focusRegion: variant === Variants.DEFAULT ? this.select : this.input,
               })}
           </Dropdown>
           )

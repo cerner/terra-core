@@ -23,6 +23,10 @@ const propTypes = {
    */
   combobox: PropTypes.instanceOf(Element),
   /**
+   * @private Element that is used to trigger the dropdown, such as an input or button.
+   */
+  focusRegion: PropTypes.instanceOf(Element),
+  /**
    * Input element ref used in select component.
    */
   input: PropTypes.instanceOf(Element),
@@ -68,12 +72,14 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  focusRegion: undefined,
   input: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
   searchValue: undefined,
   combobox: undefined,
+  visuallyHiddenComponent: undefined,
   value: undefined,
 };
 
@@ -139,7 +145,7 @@ class Menu extends React.Component {
   }
 
   componentDidUpdate() {
-    this.updateLiveRegion();
+    this.updateNoResultsScreenReader();
     this.scrollIntoView();
   }
 
@@ -147,9 +153,21 @@ class Menu extends React.Component {
     this.clearSearch();
     this.clearScrollTimeout();
     document.removeEventListener('keydown', this.handleKeyDown);
+
+    if (this.props.focusRegion) {
+      this.props.focusRegion.removeAttribute('aria-activedescendant');
+    }
   }
 
-  updateLiveRegion() {
+  isActiveSelected() {
+    if (Array.isArray(this.props.value)) {
+      return this.props.value.includes(this.state.active);
+    }
+
+    return this.state.active === this.props.value;
+  }
+
+  updateNoResultsScreenReader() {
     if (this.liveRegionTimeOut) {
       clearTimeout(this.liveRegionTimeOut);
     }
@@ -168,12 +186,33 @@ class Menu extends React.Component {
         intl,
       } = this.context;
 
-      if (hasNoResults && searchValue) {
+      if (hasNoResults) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
       } else {
         visuallyHiddenComponent.current.innerText = '';
       }
     }, 500);
+  }
+
+  updateCurrentActiveScreenReader() {
+    this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+
+    if (this.props.focusRegion) {
+      this.props.focusRegion.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+    }
+
+    if (this.props.visuallyHiddenComponent) {
+      const element = Util.findByValue(this.props.children, this.state.active);
+
+      if (element) {
+        if (this.isActiveSelected()) {
+          const { intl } = this.context;
+          this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selected' }, { text: element.props.display });
+        } else {
+          this.props.visuallyHiddenComponent.current.innerText = element.props.display;
+        }
+      }
+    }
   }
 
   /**
@@ -206,6 +245,7 @@ class Menu extends React.Component {
           isActive: option.props.value === this.state.active,
           isCheckable: Util.allowsMultipleSelections(this.props.variant),
           isSelected: Util.isSelected(this.props.value, option.props.value),
+          variant: this.props.variant,
           onMouseDown: () => { this.downOption = option; },
           onMouseUp: event => this.handleOptionClick(event, option),
           onMouseEnter: event => this.handleMouseEnter(event, option),
@@ -228,6 +268,7 @@ class Menu extends React.Component {
     const {
       input,
       onSelect,
+      onDeselect,
       combobox,
       value,
       variant,
@@ -237,10 +278,12 @@ class Menu extends React.Component {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findPrevious(children, active) });
+      this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCodes.DOWN_ARROW) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findNext(children, active) });
+      this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCodes.ENTER && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
@@ -250,6 +293,10 @@ class Menu extends React.Component {
       } else {
         input.focus();
       }
+    } else if (keyCode === KeyCodes.ENTER && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
+      event.preventDefault();
+      const option = Util.findByValue(children, active);
+      onDeselect(option.props.value, option);
     } else if (keyCode === KeyCodes.HOME) {
       event.preventDefault();
       this.setState({ active: Util.findFirst(children) });
@@ -336,17 +383,23 @@ class Menu extends React.Component {
     return (
       // This warns that aria-activedescendant should map to an id
       // Our implementation maps it to a dynamic id but linter is unable to detect mapping and throws an error
-      /* eslint-disable jsx-a11y/aria-proptypes */
-      <ul
-        role="listbox"
+      /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+
+
+      // Removing role="listbox" seems to break focus shifting on iOS.
+      // Need to test with compiling code with new selector for focusing and see if that is the issue
+      // VO needs "interactive" element to shift focus to, can work around this by removing role="listbox"
+      // and shifting focus to first list item and setting role="checkbox" or role="raido"
+      <div
+        id="terra-select-menu"
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
         aria-activedescendant={`terra-select-option-${this.state.active}`}
         tabIndex="0"
       >
         {this.clone(this.state.children)}
-      </ul>
-      /* eslint-enable jsx-a11y/aria-proptypes */
+      </div>
+      /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
     );
   }
 }
