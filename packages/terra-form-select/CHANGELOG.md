@@ -7,6 +7,7 @@ Unreleased
 * Fixed a Select Menu jest test that was broken with the release of enzyme-3.9.0
 
 ### Added
+* Added en-AU translations
 * Introduce an option to allow clearing the currently selected item
 
 5.6.0 - (February 12, 2019)
