@@ -1,5 +1,6 @@
 {
   "Terra.form.select.add": "Adicionar \"{text}\"",
   "Terra.form.select.defaultDisplay": "- Selecione -",
-  "Terra.form.select.noResults": "Não há resultados para \"{text}\""
+  "Terra.form.select.noResults": "Não há resultados para \"{text}\"",
+  "Terra.form.select.selected": "{text} como opção"
 }
