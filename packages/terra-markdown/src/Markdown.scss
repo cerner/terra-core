@@ -1,13 +1,11 @@
-:local {
-  .markdown-body {
-    margin-bottom: 1.25rem;
+.markdown-body {
+  margin-bottom: 1.25rem;
 
-    code {
-      background-color: #ebebef;
-    }
+  code {
+    background-color: #ebebef;
   }
+}
 
-  .markdown-body blockquote {
-    color: var(--terra-markdown-blockquote-color, #24292e);
-  }
-};
+.markdown-body blockquote {
+  color: var(--terra-markdown-blockquote-color, #24292e);
+}
