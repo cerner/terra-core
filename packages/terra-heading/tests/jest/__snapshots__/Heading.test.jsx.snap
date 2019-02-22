@@ -2,7 +2,7 @@
 
 exports[`Heading should have all props including customProps set correctly 1`] = `
 <h1
-  className="heading italic visually-hidden level-1 size-small weight-200"
+  className="heading italic visually-hidden level-1 size-small weight-200 TestClass"
   id="id"
 >
   All props and custom attrs

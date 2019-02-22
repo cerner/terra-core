@@ -59,6 +59,10 @@ const propTypes = {
    * Sets the text size. One of `200`, `300`, `400`, `700`.
    */
   weight: PropTypes.oneOf([200, 300, 400, 700]),
+  /**
+   * Sets an author defined class, to control the colors of the text
+   */
+  colorClass: PropTypes.string,
 };
 
 const defaultProps = {
@@ -68,7 +72,7 @@ const defaultProps = {
 };
 
 const Text = ({
-  children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, ...customProps
+  children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, colorClass, ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
@@ -78,6 +82,7 @@ const Text = ({
     { 'visually-hidden': isVisuallyHidden },
     { [`font-size-${fontSize}`]: fontSize },
     { [`font-weight-${weight}`]: weight },
+    colorClass,
     attributes.className,
   ]);
 

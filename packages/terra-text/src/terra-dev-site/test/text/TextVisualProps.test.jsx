@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const TextVisualProps = () => (
   <div>
-    <Text id="textVisualProps" fontSize={24} className={cx(['info'])} isItalic weight={200}>All Visual Props Set</Text>
+    <Text id="textVisualProps" fontSize={24} colorClass={cx(['info'])} isItalic weight={200}>All Visual Props Set</Text>
   </div>
 );
 

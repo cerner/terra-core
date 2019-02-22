@@ -8,9 +8,9 @@ const cx = classNames.bind(styles);
 
 const TextVariations = () => (
   <div>
-    <Text fontSize={18} className={cx(['neutral'])} isItalic>
+    <Text fontSize={18} colorClass={cx(['success'])} isItalic>
 Text with color set to
-      <code>rgb(46,125,50)</code>
+      <code>{'\'success\' class'}</code>
       {' '}
 and
       <code>isItalic</code>

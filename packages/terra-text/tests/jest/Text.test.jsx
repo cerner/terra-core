@@ -28,6 +28,11 @@ describe('Text', () => {
     expect(text).toMatchSnapshot();
   });
 
+  it('should render a text component with colorClass prop set', () => {
+    const text = shallow(<Text colorClass="testClass">Test</Text>);
+    expect(text).toMatchSnapshot();
+  });
+
   it('should render a text component with isWordWrapped prop set', () => {
     const text = shallow(<Text isWordWrapped>Test</Text>);
     expect(text).toMatchSnapshot();

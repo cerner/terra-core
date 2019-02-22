@@ -8,9 +8,9 @@ const cx = classNames.bind(styles);
 
 const HeadingColors = () => (
   <div>
-    <Heading level={3} className={cx(['attention'])}>Font Color: Crimson</Heading>
-    <Heading level={3} className={cx(['neutral'])}>Font Color: rgb(46,125,50)</Heading>
-    <Heading level={3} className={cx(['info'])}>Font Color: #304FFE</Heading>
+    <Heading level={3} colorClass={cx(['attention'])}>{'Font Color: \'attention\' class'}</Heading>
+    <Heading level={3} colorClass={cx(['success'])}>{'Font Color: \'success\' class'}</Heading>
+    <Heading level={3} colorClass={cx(['info'])}>{'Font Color: \'info\' class'}</Heading>
   </div>
 );
 

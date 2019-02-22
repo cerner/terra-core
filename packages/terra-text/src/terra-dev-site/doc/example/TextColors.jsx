@@ -8,11 +8,11 @@ const cx = classNames.bind(styles);
 
 const TextColors = () => (
   <div>
-    <Text fontSize={18} className={cx(['attention'])}>Font Color: Crimson</Text>
+    <Text fontSize={18} colorClass={cx(['attention'])}>{'Font Color: \'attention\' class'}</Text>
     <br />
-    <Text fontSize={18} className={cx(['neutral'])}>Font Color: rgb(46,125,50)</Text>
+    <Text fontSize={18} colorClass={cx(['success'])}>{'Font Color: \'success\' class'}</Text>
     <br />
-    <Text fontSize={18} className={cx(['info'])}>Font Color: #304FFE</Text>
+    <Text fontSize={18} colorClass={cx(['info'])}>{'Font Color: \'info\' class'}</Text>
   </div>
 );
 

@@ -57,6 +57,10 @@ const propTypes = {
    * Sets the text size. One of `200`, `400`, `700`.
    */
   weight: PropTypes.oneOf([200, 400, 700]),
+  /**
+   * Sets an author defined class, to control the colors of the heading
+   */
+  colorClass: PropTypes.string,
 };
 
 const defaultProps = {
@@ -66,7 +70,7 @@ const defaultProps = {
 };
 
 const Heading = ({
-  level, children, isVisuallyHidden, isItalic, size, weight, ...customProps
+  level, children, isVisuallyHidden, isItalic, size, weight, colorClass, ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
@@ -76,6 +80,7 @@ const Heading = ({
     { [`level-${level}`]: level },
     { [`size-${size}`]: size },
     { [`weight-${weight}`]: weight },
+    colorClass,
     attributes.className,
   ]);
 

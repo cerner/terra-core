@@ -28,6 +28,13 @@ it('should render a simpleText with status', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a simpleText with correct class', () => {
+  const simpleTextWithStatus = <Status colorClass="testClass">{simpleText}</Status>;
+  const wrapper = shallow(simpleTextWithStatus);
+  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.getElement(0).props.className).toContain('testClass');
+});
+
 it('should render a arrange with status and customProps', () => {
   const arrangeWithStatus = <Status id="id">{arrange}</Status>;
   const wrapper = shallow(arrangeWithStatus);

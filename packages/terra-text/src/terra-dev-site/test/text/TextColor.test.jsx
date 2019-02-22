@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const TextColor = () => (
   <div>
-    <Text id="textColor" className={cx(['info'])}>Color</Text>
+    <Text id="textColor" colorClass={cx(['info'])}>Color</Text>
   </div>
 );
 

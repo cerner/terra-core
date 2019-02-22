@@ -69,6 +69,16 @@ exports[`should render a image with status 1`] = `
 </div>
 `;
 
+exports[`should render a simpleText with correct class 1`] = `
+<div
+  className="status testClass"
+>
+  <div>
+    Lorem labore et dolore magna aliqua.
+  </div>
+</div>
+`;
+
 exports[`should render a simpleText with status 1`] = `
 <div
   className="status"

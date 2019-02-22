@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const HeadingColor = () => (
   <div>
-    <Heading id="heading-color" level={1} className={cx(['info'])}>Color</Heading>
+    <Heading id="heading-color" level={1} colorClass={cx(['info'])}>Color</Heading>
   </div>
 );
 

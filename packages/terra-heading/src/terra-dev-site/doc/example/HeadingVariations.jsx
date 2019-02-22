@@ -8,9 +8,9 @@ const cx = classNames.bind(styles);
 
 const HeadingVariations = () => (
   <div>
-    <Heading level={3} className={cx(['neutral'])} isItalic>
+    <Heading level={3} colorClass={cx(['success'])} isItalic>
 H3 heading with color set to
-      <code>rgb(46,125,50)</code>
+      <code>{'\'success\' class'}</code>
       {' '}
 and
       <code>isItalic</code>

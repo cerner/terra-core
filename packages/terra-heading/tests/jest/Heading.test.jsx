@@ -53,7 +53,7 @@ describe('Heading', () => {
 
   // Prop Tests
   it('should have all props including customProps set correctly', () => {
-    const heading = shallow(<Heading level={1} id="id" size="small" weight={200} isItalic isVisuallyHidden>All props and custom attrs</Heading>);
+    const heading = shallow(<Heading level={1} id="id" size="small" weight={200} colorClass="TestClass" isItalic isVisuallyHidden>All props and custom attrs</Heading>);
     expect(heading).toMatchSnapshot();
   });
 

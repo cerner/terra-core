@@ -17,6 +17,14 @@ exports[`Text should render a text component 1`] = `
 </span>
 `;
 
+exports[`Text should render a text component with colorClass prop set 1`] = `
+<span
+  className="text testClass"
+>
+  Test
+</span>
+`;
+
 exports[`Text should render a text component with fontSize prop set 1`] = `
 <span
   className="text font-size-24"

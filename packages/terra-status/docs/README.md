@@ -20,16 +20,22 @@ import Status from 'terra-status';
 ```
 
 ```css
-.high-status {
-  border-left-color: red;
+:root {
+  --my-app-status-attention-color: red;
+  --my-app-status-success-color: #00ff00;
+  --my-app-status-info-color: rgb(0,0,255);
 }
 
-.good-status {
-  border-left-color: #00ff00;
+.attention {
+  border-left-color: var(--my-app-status-attention-color, red);
 }
 
-.blue-status {
-  border-left-color: rgb(0,0,255);
+.success {
+  border-left-color: var(--my-app-status-success-color, #00ff00);
+}
+
+.info {
+  border-left-color: var(--my-app-status-info-color, rgb(0,0,255));
 }
 ```
 

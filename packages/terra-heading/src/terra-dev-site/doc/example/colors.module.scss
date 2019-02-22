@@ -1,6 +1,6 @@
 :root {
   --terra-heading-attention-color: rgb(220, 20, 60);
-  --terra-heading-neutral-color: rgb(46, 125, 50);
+  --terra-heading-success-color: rgb(46, 125, 50);
   --terra-heading-info-color: #304ffe;
   --terra-heading-default-color: #333;
 }
@@ -14,8 +14,8 @@
     color: var(--terra-heading-attention-color, rgb(220, 20, 60));
   }
 
-  .neutral {
-    color: var(--terra-heading-neutral-color, rgb(46, 125, 50));
+  .success {
+    color: var(--terra-heading-success-color, rgb(46, 125, 50));
   }
 
   .info {
