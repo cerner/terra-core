@@ -4,6 +4,6 @@ exports[`MaxSelection should render a default MaxSelection 1`] = `
 <div
   className="max-selection"
 >
-  Maximum number of 3 items reached
+  Maximum number of 3 items selected
 </div>
 `;
