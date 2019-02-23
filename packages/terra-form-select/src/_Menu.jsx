@@ -390,15 +390,17 @@ class Menu extends React.Component {
       // Need to test with compiling code with new selector for focusing and see if that is the issue
       // VO needs "interactive" element to shift focus to, can work around this by removing role="listbox"
       // and shifting focus to first list item and setting role="checkbox" or role="raido"
-      <div
+      <ul
         id="terra-select-menu"
+        role="listbox"
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
         aria-activedescendant={`terra-select-option-${this.state.active}`}
         tabIndex="0"
+        style={{ outline: 'none' }}
       >
         {this.clone(this.state.children)}
-      </div>
+      </ul>
       /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
     );
   }

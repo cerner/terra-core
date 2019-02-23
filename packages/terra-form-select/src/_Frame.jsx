@@ -154,7 +154,7 @@ class Frame extends React.Component {
     this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleInputBlur = this.handleInputBlur.bind(this);
     this.visuallyHiddenComponent = React.createRef();
-    this.selectListBox = '#terra-select-menu [data-terra-select-option]:first-child';
+    this.selectListBox = '#terra-select-menu'; // selecting the first radio option causes JAWS to bug out
   }
 
   componentDidUpdate(previousProps, previousState) {

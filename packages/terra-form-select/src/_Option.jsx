@@ -76,7 +76,7 @@ const Option = ({
   const role = (variant === 'tag' || variant === 'multiple') ? 'checkbox' : 'radio';
 
   return (
-    <span
+    <li
       role={role}
       {...customProps}
       disabled={disabled}
@@ -88,7 +88,7 @@ const Option = ({
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
       <span className={cx('display')}>{display}</span>
-    </span>
+    </li>
   );
 };
 
