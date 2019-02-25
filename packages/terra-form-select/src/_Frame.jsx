@@ -524,7 +524,7 @@ class Frame extends React.Component {
           <div role="textbox" aria-disabled={!!disabled} className={cx('display')}>
             {/* Hidden attribute used to resolve VoiceOver on desktop from overly reading aria-describedby content */}
             <span id={ariaDescribedById} hidden className={cx('visually-hidden-component')}>
-              Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options.
+              {'ontouchstart' in window ? 'Swipe right to navigate options.' : 'Use up and down arrow keys to navigate through options.'}
             </span>
             {this.getDisplay()}
           </div>
