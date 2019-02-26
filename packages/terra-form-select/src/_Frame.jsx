@@ -5,18 +5,13 @@
  * Tested in Chrome, FF, Edge, Safari, IE 10, IE 11, Safari iOS
  * No issues detected
  *
- * Add VoiceOver desktop support
- * Code seems to work
- * When dropdown is open, it would be nice to focus to item that is selected
- * Add logic to switch between radio and checkbox
- * Look into radiogroup role, see if there is a checkboxgroup role too
- *
- * Add JAWS support
+ * Check IE 11 dropdown positioning, looks offset
  *
  * Get translations for following strings
  * * 'Search'
  * * 'Click to navigate to options'
- * * 'Use up and down arrow keys to navigate through options. On a mobile device, swipe right to navigate options'
+ * * 'Swipe right to navigate options.'
+ * * 'Use up and down arrow keys to navigate through options.'
  *
  * Write wdio tests to ensure focus is placed correctly with these additions
  */
@@ -140,6 +135,7 @@ class Frame extends React.Component {
     this.setInput = this.setInput.bind(this);
     this.getDisplay = this.getDisplay.bind(this);
     this.renderToggleButton = this.renderToggleButton.bind(this);
+    this.renderDescriptionText = this.renderDescriptionText.bind(this);
     this.openDropdown = this.openDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
@@ -172,7 +168,7 @@ class Frame extends React.Component {
     this.input = input;
   }
 
-  getDisplay() {
+  getDisplay(ariaDescribedById) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
       disabled, display, placeholder, variant,
@@ -187,6 +183,7 @@ class Frame extends React.Component {
       type: 'text',
       'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
       'aria-label': 'search',
+      'aria-describedby': ariaDescribedById,
       'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
@@ -433,6 +430,16 @@ class Frame extends React.Component {
     }
   }
 
+  renderDescriptionText() {
+    const { variant } = this.props;
+
+    if ('ontouchstart' in window) {
+      return variant !== Variants.DEFAULT ? 'Swipe right to navigate options.' : null;
+    }
+
+    return 'Use up and down arrow keys to navigate through options.';
+  }
+
   renderToggleButton() {
     const { variant } = this.props;
 
@@ -516,17 +523,15 @@ class Frame extends React.Component {
           aria-expanded={!!disabled && !!this.state.isOpen}
           aria-haspopup={!disabled ? 'true' : undefined}
           aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
-          aria-label="Search"
-          aria-describedby={ariaDescribedById}
           tabIndex={Util.tabIndex(this.props)}
           ref={(combobox) => { this.combobox = combobox; }}
         >
-          <div role="textbox" aria-disabled={!!disabled} className={cx('display')}>
+          <div role="textbox" aria-label="Search" aria-disabled={!!disabled} className={cx('display')} aria-describedby={ariaDescribedById}>
             {/* Hidden attribute used to resolve VoiceOver on desktop from overly reading aria-describedby content */}
             <span id={ariaDescribedById} hidden className={cx('visually-hidden-component')}>
-              {'ontouchstart' in window ? 'Swipe right to navigate options.' : 'Use up and down arrow keys to navigate through options.'}
+              {this.renderDescriptionText()}
             </span>
-            {this.getDisplay()}
+            {this.getDisplay(ariaDescribedById)}
           </div>
         </div>
         {this.renderToggleButton()}
