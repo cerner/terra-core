@@ -19,9 +19,9 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Combobox element ref.
+   * Select element ref.
    */
-  combobox: PropTypes.instanceOf(Element),
+  select: PropTypes.instanceOf(Element),
   /**
    * @private Element that is used to trigger the dropdown, such as an input or button.
    */
@@ -78,7 +78,7 @@ const defaultProps = {
   onDeselect: undefined,
   optionFilter: undefined,
   searchValue: undefined,
-  combobox: undefined,
+  select: undefined,
   visuallyHiddenComponent: undefined,
   value: undefined,
 };
@@ -274,7 +274,7 @@ class Menu extends React.Component {
       input,
       onSelect,
       onDeselect,
-      combobox,
+      select,
       value,
       variant,
     } = this.props;
@@ -294,7 +294,7 @@ class Menu extends React.Component {
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
       if (variant === Variants.DEFAULT) {
-        combobox.focus();
+        select.focus();
       } else {
         input.focus();
       }
@@ -327,7 +327,7 @@ class Menu extends React.Component {
     }
 
     const {
-      combobox, input, onDeselect, onSelect, value, variant,
+      select, input, onDeselect, onSelect, value, variant,
     } = this.props;
 
     if (Util.allowsMultipleSelections(variant) && Util.includes(value, option.props.value)) {
@@ -335,7 +335,7 @@ class Menu extends React.Component {
     } else {
       onSelect(option.props.value, option);
       if (variant === Variants.DEFAULT) {
-        combobox.focus();
+        select.focus();
       } else {
         input.focus();
       }

@@ -510,31 +510,26 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
+        role={!disabled ? 'application' : undefined}
+        aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-disabled={!!disabled}
+        aria-expanded={!!disabled && !!this.state.isOpen}
+        aria-haspopup={!disabled ? 'true' : undefined}
+        aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}
+        tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
-        <div
-          className={cx('combobox-control')}
-          role={!disabled ? 'application' : undefined}
-          aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
-          aria-disabled={!!disabled}
-          aria-expanded={!!disabled && !!this.state.isOpen}
-          aria-haspopup={!disabled ? 'true' : undefined}
-          aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
-          tabIndex={Util.tabIndex(this.props)}
-          ref={(combobox) => { this.combobox = combobox; }}
-        >
-          <div role="textbox" aria-label="Search" aria-disabled={!!disabled} className={cx('display')} aria-describedby={ariaDescribedById}>
-            {/* Hidden attribute used to resolve VoiceOver on desktop from overly reading aria-describedby content */}
-            <span id={ariaDescribedById} hidden className={cx('visually-hidden-component')}>
-              {this.renderDescriptionText()}
-            </span>
-            {this.getDisplay(ariaDescribedById)}
-          </div>
+        <div role="textbox" aria-label="Search" aria-disabled={!!disabled} className={cx('display')} aria-describedby={ariaDescribedById}>
+          {/* Hidden attribute used to resolve VoiceOver on desktop from overly reading aria-describedby content */}
+          <span id={ariaDescribedById} hidden className={cx('visually-hidden-component')}>
+            {this.renderDescriptionText()}
+          </span>
+          {this.getDisplay(ariaDescribedById)}
         </div>
         {this.renderToggleButton()}
         <span
@@ -568,7 +563,7 @@ class Frame extends React.Component {
                 onRequestClose: this.closeDropdown,
                 searchValue: this.state.searchValue,
                 input: this.input,
-                combobox: this.combobox,
+                select: this.select,
                 focusRegion: variant === Variants.DEFAULT ? this.select : this.input,
               })}
           </Dropdown>
