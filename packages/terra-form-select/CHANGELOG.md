@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.7.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * New CSS custom property: `--terra-form-select-disabled-placeholder-color`
 * New CSS custom property: `--terra-form-select-disabled-placeholder-font-style`

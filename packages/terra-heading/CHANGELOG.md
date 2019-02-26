@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+4.0.0 - (February 26, 2019)
+------------------
 ### Breaking Changes
 * Removed color prop
 
