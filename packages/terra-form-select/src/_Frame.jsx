@@ -524,20 +524,30 @@ class Frame extends React.Component {
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
-        <div role="textbox" aria-label="Search" aria-disabled={!!disabled} className={cx('display')} aria-describedby={ariaDescribedById}>
+        <div
+          aria-describedby={ariaDescribedById}
+          aria-disabled={!!disabled}
+          aria-label="Search"
+          className={cx('display')}
+          role="textbox"
+        >
           {/* Hidden attribute used to resolve VoiceOver on desktop from overly reading aria-describedby content */}
-          <span id={ariaDescribedById} hidden className={cx('visually-hidden-component')}>
+          <span
+            className={cx('visually-hidden-component')}
+            id={ariaDescribedById}
+            hidden
+          >
             {this.renderDescriptionText()}
           </span>
           {this.getDisplay(ariaDescribedById)}
         </div>
         {this.renderToggleButton()}
         <span
-          className={cx('visually-hidden-component')}
-          ref={this.visuallyHiddenComponent}
+          aria-atomic="true"
           aria-live="assertive"
           aria-relevant="additions text"
-          aria-atomic="true"
+          className={cx('visually-hidden-component')}
+          ref={this.visuallyHiddenComponent}
         />
         {this.state.isOpen
           && (
