@@ -142,6 +142,11 @@ class Menu extends React.Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
+    // VoiceOver on iOS doesn't need aria-live update when opening dropdown menu,
+    // will result in double reading of first option so we opt-out of running the
+    // aria-live update on mount here if browser supports touch events
+    if ('ontouchstart' in window) return;
+    this.updateCurrentActiveScreenReader();
   }
 
   componentDidUpdate() {
@@ -381,15 +386,7 @@ class Menu extends React.Component {
 
   render() {
     return (
-      // This warns that aria-activedescendant should map to an id
-      // Our implementation maps it to a dynamic id but linter is unable to detect mapping and throws an error
-      /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-
-
       // Removing role="listbox" seems to break focus shifting on iOS.
-      // Need to test with compiling code with new selector for focusing and see if that is the issue
-      // VO needs "interactive" element to shift focus to, can work around this by removing role="listbox"
-      // and shifting focus to first list item and setting role="checkbox" or role="raido"
       <ul
         id="terra-select-menu"
         role="listbox"
@@ -401,7 +398,6 @@ class Menu extends React.Component {
       >
         {this.clone(this.state.children)}
       </ul>
-      /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
     );
   }
 }

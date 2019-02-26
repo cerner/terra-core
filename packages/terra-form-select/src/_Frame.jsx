@@ -510,7 +510,7 @@ class Frame extends React.Component {
       >
         <div
           className={cx('combobox-control')}
-          role={!disabled ? 'combobox' : undefined}
+          role={!disabled ? 'application' : undefined}
           aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
           aria-disabled={!!disabled}
           aria-expanded={!!disabled && !!this.state.isOpen}
