@@ -5,7 +5,9 @@
  * Tested in Chrome, FF, Edge, Safari, IE 10, IE 11, Safari iOS
  * No issues detected
  *
- * Check IE 11 dropdown positioning, looks offset
+ * DONE - Check IE 11 dropdown positioning, looks offset.
+ * This seems to appear in my VM but not on native Windows box
+ * It is also offset on terra-ui.com site in VM.
  *
  * Get translations for following strings
  * * 'Search'
