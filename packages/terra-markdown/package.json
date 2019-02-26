@@ -25,6 +25,7 @@
     "react-dom": "^16.4.2"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "github-markdown-css": "^2.4.1",
     "marked": "0.5.0",
     "prop-types": "^15.5.8"
@@ -36,7 +37,8 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "test": "npm run test:jest",
-    "test:jest": "jest --config ../../jestconfig.js"
+    "test": "npm run test:jest && npm run test:wdio",
+    "test:jest": "jest --config ../../jestconfig.js",
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   }
 }
