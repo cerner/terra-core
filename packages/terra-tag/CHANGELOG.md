@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed terra-alert depenency used in documentation example
 
 2.5.0 - (February 12, 2019)
 ------------------

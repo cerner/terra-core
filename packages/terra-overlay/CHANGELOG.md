@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added en-AU translations
+
 ### Fixed
 * Changed expected selenium driver error to be non-Chrome specific for IE and FF driver compatibility
 
@@ -15,6 +18,9 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
+
+### Changed
+* Removed stylelint overrides in Overlay.module.scss
 
 3.3.0 - (January 26, 2019)
 ------------------

@@ -5,3 +5,7 @@
     background-color: #ebebef;
   }
 }
+
+.markdown-body blockquote {
+  color: var(--terra-markdown-blockquote-color, #24292e);
+}
