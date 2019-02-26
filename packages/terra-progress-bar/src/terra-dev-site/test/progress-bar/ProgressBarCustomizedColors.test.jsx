@@ -1,16 +1,12 @@
 import React from 'react';
-
 import classNames from 'classnames/bind';
+import ProgressBar from '../../../ProgressBar';
 import styles from '../../doc/example/colors.module.scss';
-
-import Heading from '../../../Heading';
 
 const cx = classNames.bind(styles);
 
-const HeadingColor = () => (
+export default () => (
   <div>
-    <Heading id="heading-color" level={1} colorClass={cx(['info'])}>Color</Heading>
+    <ProgressBar valueText="8%" value={8} max={10} colorClass={cx(['customized-color-bar-example-2'])} />
   </div>
 );
-
-export default HeadingColor;
