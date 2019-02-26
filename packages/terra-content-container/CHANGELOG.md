@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed dependency on terra-heading used in examples
 
 3.2.0 - (February 12, 2019)
 ------------------
