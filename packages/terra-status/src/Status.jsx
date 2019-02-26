@@ -19,7 +19,7 @@ const propTypes = {
   visuallyHiddenText: PropTypes.string,
   /**
    * Sets an author defined class, to control the colors of the status indicator.
-   * 
+   *
    * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/blue?icon=github)
    * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
    */
