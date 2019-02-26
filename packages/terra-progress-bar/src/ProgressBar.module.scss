@@ -1,21 +1,5 @@
 :local {
-
-  @mixin terra-gradient($from-color, $to-color) {
-    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
-  }
-
-  .progress-bar-gradient {
-    &::-webkit-progress-value {
-      @include terra-gradient(currentColor, currentColor);
-    }
-
-    &::-ms-fill {
-      @include terra-gradient(currentColor, currentColor);
-    }
-  }
-
   .progress-bar {
-    background: #d3d4d5;
     border-radius: var(--terra-progress-bar-border-radius, 0.5em);
     display: block;
     height: var(--terra-progress-bar-height, 0.8rem);
@@ -32,20 +16,12 @@
 
       // To fix background color to the proper shade of Grey in Safari
       &::-webkit-progress-bar {
-        background: #d3d4d5;
         border-radius: 0;
       }
 
       &::-webkit-progress-value {
-        background-color: currentColor;
         border-bottom-left-radius: 0;
-        border-right: 1px solid #fff;
         border-top-left-radius: 0;
-      }
-
-      &::-ms-fill {
-        background-color: currentColor;
-        border-right: 1px solid #fff;
       }
     }
 
@@ -53,24 +29,35 @@
     &[value='0'] {
       &::-webkit-progress-value {
         border-bottom-right-radius: 0;
-        border-right: 0 solid #fff;
         border-top-right-radius: 0;
       }
+    }
+  }
 
-      &::-ms-fill {
-        border-right: 0 solid #fff;
-      }
+  .default-color {
+    background-color: var(--terra-progress-bar-background-color, #d3d4d5);
+    color: var(--terra-progress-bar-progress-background-color, #0092e0);
+
+    // To fix background color to the proper shade of Grey in Safari
+    &::-webkit-progress-bar {
+      background-color: var(--terra-progress-bar-background-color, #d3d4d5);
+    }
+
+    &::-webkit-progress-value {
+      background-color: var(--terra-progress-bar-progress-background-color, #0092e0);
+    }
+
+    &::-moz-progress-bar {
+      background-color: var(--terra-progress-bar-progress-background-color, #0092e0);
+    }
+
+    &::-ms-fill {
+      background-color: var(--terra-progress-bar-progress-background-color, #0092e0);
     }
   }
 
   // Firefox styles must be entirely separate as it doesn't work well with WebKit styles
   @-moz-document url-prefix('') {
-    .progress-bar-gradient {
-      &::-moz-progress-bar {
-        @include terra-gradient(currentColor, currentColor);
-      }
-    }
-
     .progress-bar {
       border-radius: 0.5em;
       overflow: hidden;
@@ -79,25 +66,14 @@
         outline: none;
       }
 
-      &[value] {
-        background-color: #d3d4d5;
-      }
-
       &[value]::-moz-progress-bar {
-        background-color: currentColor;
         border-bottom-left-radius: 0;
-        border-right: 1px solid #fff;
         border-top-left-radius: 0;
-      }
-
-      &[value='100'] {
-        border-right: 0 solid #fff;
       }
 
       &[value='0']::-moz-progress-bar,
       &[value='100']::-moz-progress-bar {
         border-bottom-right-radius: 0;
-        border-right: 0 solid #fff;
         border-top-right-radius: 0;
       }
     }
