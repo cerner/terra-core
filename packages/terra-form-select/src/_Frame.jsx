@@ -1,16 +1,10 @@
 /**
  * TODO
  *
- * DONE - Cross-Browser test
- * Tested in Chrome, FF, Edge, Safari, IE 10, IE 11, Safari iOS
- * No issues detected
- *
- * Get button working to close dropdown when clicked while open
  * Update Jest test
  * Write wdio tests to ensure focus is placed correctly with these additions
  *
  * Get translations for following strings
- * * 'Search'
  * * 'Click to navigate to options'
  * * 'Swipe right to navigate options.'
  * * 'Use up and down arrow keys to navigate through options.'
@@ -160,6 +154,8 @@ class Frame extends React.Component {
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
     this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleInputBlur = this.handleInputBlur.bind(this);
+    this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
+    this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectListBox = '#terra-select-menu'; // selecting the first radio option causes JAWS to bug out
   }
@@ -395,6 +391,25 @@ class Frame extends React.Component {
   }
 
   /**
+   * Handles the toggle mouse down events.
+   */
+  handleToggleMouseDown() {
+    if (this.state.isOpen) {
+      this.closeDropdown();
+    }
+  }
+
+  /**
+   * Handles the toggle button mouse down events.
+   */
+  handleToggleButtonMouseDown() {
+    if (this.state.isOpen) {
+      this.closeDropdown();
+      this.input.focus();
+    }
+  }
+
+  /**
    * Handles changes to the search value.
    * @param {event} event - The input change event.
    */
@@ -457,15 +472,15 @@ class Frame extends React.Component {
   renderToggleButton() {
     const { variant } = this.props;
 
-    if (variant !== Variants.DEFAULT && this.state.isInputFocused) {
-      return (
-        <div className={cx('toggle')}>
-          <span className={cx('arrow-icon')} />
-        </div>
-      );
-    }
+    if (variant !== Variants.DEFAULT) {
+      if (this.state.isInputFocused) {
+        return (
+          <div className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
+            <span className={cx('arrow-icon')} />
+          </div>
+        );
+      }
 
-    if (variant !== Variants.DEFAULT && this.state.isFocused !== true) {
       return (
         <div className={cx(['toggle', 'toggle-narrow'])}>
           <button
@@ -473,6 +488,7 @@ class Frame extends React.Component {
             className={cx('toggle-btn')}
             aria-label="Click to navigate to options"
             data-terra-form-select-toggle-button
+            onMouseDown={this.handleToggleButtonMouseDown}
           >
             <span className={cx('arrow-icon')} data-terra-form-select-toggle-button-icon />
           </button>
