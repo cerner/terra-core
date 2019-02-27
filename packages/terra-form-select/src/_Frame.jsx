@@ -5,10 +5,6 @@
  * Tested in Chrome, FF, Edge, Safari, IE 10, IE 11, Safari iOS
  * No issues detected
  *
- * DONE - Check IE 11 dropdown positioning, looks offset.
- * This seems to appear in my VM but not on native Windows box
- * It is also offset on terra-ui.com site in VM.
- *
  * Get translations for following strings
  * * 'Search'
  * * 'Click to navigate to options'
@@ -184,7 +180,7 @@ class Frame extends React.Component {
       onMouseDown: this.handleInputMouseDown,
       type: 'text',
       'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
-      'aria-label': 'search',
+      'aria-label': 'Search',
       'aria-describedby': ariaDescribedById,
       'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
@@ -433,13 +429,13 @@ class Frame extends React.Component {
   }
 
   renderDescriptionText() {
-    const { variant } = this.props;
+    const { variant, placeholder } = this.props;
 
     if ('ontouchstart' in window) {
-      return variant !== Variants.DEFAULT ? 'Swipe right to navigate options.' : null;
+      return variant === Variants.DEFAULT ? null : 'Swipe right to navigate options.';
     }
 
-    return 'Use up and down arrow keys to navigate through options.';
+    return variant === Variants.DEFAULT ? `${placeholder}. Use up and down arrow keys to navigate through options.` : 'Use up and down arrow keys to navigate through options.';
   }
 
   renderToggleButton() {
@@ -515,6 +511,8 @@ class Frame extends React.Component {
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
+        aria-label={variant === Variants.DEFAULT ? 'Search' : null} // Enables JAWS and VoiceOver on desktop the ability to read the select label
+        aria-describedby={ariaDescribedById} // Enables JAWS and VoiceOver on desktop the ability to read the select description text
         aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
@@ -525,13 +523,12 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         <div
-          aria-describedby={ariaDescribedById}
+          aria-label={variant === Variants.DEFAULT ? 'Search' : null} // Enables VoiceOver on iOS the ability to read label
+          role={variant === Variants.DEFAULT ? 'textbox' : null} // Enables VoiceOver on iOS the ability to read label and placeholder text correctly
           aria-disabled={!!disabled}
-          aria-label="Search"
           className={cx('display')}
-          role="textbox"
         >
-          {/* Hidden attribute used to resolve VoiceOver on desktop from overly reading aria-describedby content */}
+          {/* Hidden attribute used to prevent VoiceOver on desktop from overly reading aria-describedby content */}
           <span
             className={cx('visually-hidden-component')}
             id={ariaDescribedById}

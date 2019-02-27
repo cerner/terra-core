@@ -160,7 +160,7 @@ class Menu extends React.Component {
     document.removeEventListener('keydown', this.handleKeyDown);
 
     if (this.props.focusRegion) {
-      this.props.focusRegion.removeAttribute('aria-activedescendant');
+      this.props.focusRegion.removeAttribute('data-activedescendant');
     }
   }
 
@@ -200,10 +200,10 @@ class Menu extends React.Component {
   }
 
   updateCurrentActiveScreenReader() {
-    this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+    this.menu.setAttribute('data-activedescendant', `terra-select-option-${this.state.active}`);
 
     if (this.props.focusRegion) {
-      this.props.focusRegion.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+      this.props.focusRegion.setAttribute('data-activedescendant', `terra-select-option-${this.state.active}`);
     }
 
     if (this.props.visuallyHiddenComponent) {
@@ -386,13 +386,15 @@ class Menu extends React.Component {
 
   render() {
     return (
-      // Removing role="listbox" seems to break focus shifting on iOS.
+      // Role listbox and aria-activedescendant needed for VoiceOver on iOS to properly shift virtual indicator to this
+      // DOM element when dropdown is rendered
       <ul
         id="terra-select-menu"
         role="listbox"
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
-        aria-activedescendant={`terra-select-option-${this.state.active}`}
+        {...('ontouchstart' in window ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
+        data-activedescendant={`terra-select-option-${this.state.active}`}
         tabIndex="0"
         style={{ outline: 'none' }}
       >

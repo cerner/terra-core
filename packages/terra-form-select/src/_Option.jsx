@@ -73,11 +73,13 @@ const Option = ({
     customProps.className,
   ]);
 
-  let role = 'option'; // For JAWs
+  let role = 'option'; // Used for JAWs and VoiceOver on iOS
 
-  // VoiceOver in Safari has issues with role="option" with the combination of the aria-live section
+  // VoiceOver in Safari on desktop has issues with role="option" with the combination of the aria-live section
   // we have and will stutter when reading options. Switching to role="radio" and role="checkbox" mitigates this behavior
-  if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
+  if (navigator.userAgent.indexOf('Safari') !== -1
+   && navigator.userAgent.indexOf('Chrome') === -1
+   && !('ontouchstart' in window)) {
     role = 'radio';
 
     if (variant === 'tag' || variant === 'multiple') {
@@ -91,6 +93,7 @@ const Option = ({
       {...customProps}
       disabled={disabled}
       className={optionClassNames}
+      aria-selected={isSelected} // Allows VoiceOver on iOS to announce selected state
       aria-checked={isSelected}
       aria-disabled={disabled}
       tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
