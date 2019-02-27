@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
+import { injectIntl, intlShape } from 'react-intl';
 import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
 import AddOption from './_AddOption';
@@ -26,6 +27,11 @@ const propTypes = {
    * @private Element that is used to trigger the dropdown, such as an input or button.
    */
   focusRegion: PropTypes.instanceOf(Element),
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: intlShape.isRequired,
   /**
    * Input element ref used in select component.
    */
@@ -414,4 +420,4 @@ Menu.contextTypes = contextTypes;
  */
 polyfill(Menu);
 
-export default Menu;
+export default injectIntl(Menu);

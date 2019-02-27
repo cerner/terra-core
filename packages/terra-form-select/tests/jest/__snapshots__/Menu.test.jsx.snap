@@ -1,37 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Menu should render a Menu with an add option and set the screen reader region to blank 1`] = `
-<ul
-  aria-activedescendant="terra-select-option-null"
-  className="menu"
-  role="listbox"
-  tabIndex="0"
-/>
+<Menu
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onSelect={[Function]}
+  searchValue="value"
+  value="value"
+  variant="tag"
+  visuallyHiddenComponent={
+    Object {
+      "current": <div />,
+    }
+  }
+>
+  <Option
+    disabled={false}
+    display="display"
+    value="value"
+  />
+</Menu>
 `;
 
 exports[`Menu should render a Menu with no results and update the live region appropriately 1`] = `
-<ul
-  aria-activedescendant="terra-select-option-null"
-  className="menu"
-  role="listbox"
-  tabIndex="0"
+<Menu
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onSelect={[Function]}
+  searchValue="asdf"
+  value="value"
+  variant="default"
+  visuallyHiddenComponent={
+    Object {
+      "current": <div />,
+    }
+  }
 >
-  <NoResults
-    key=".0"
-    value="asdf"
+  <Option
+    disabled={false}
+    display="display"
+    value="value"
   />
-</ul>
+</Menu>
 `;
 
 exports[`Menu should render a default Menu 1`] = `
-<ul
-  aria-activedescendant="terra-select-option-null"
-  className="menu"
-  role="listbox"
-  tabIndex="0"
->
-  <NoResults
-    key=".0"
-  />
-</ul>
+<Menu
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onSelect={[Function]}
+  value="value"
+  variant="default"
+  visuallyHiddenComponent={
+    Object {
+      "current": <div />,
+    }
+  }
+/>
 `;

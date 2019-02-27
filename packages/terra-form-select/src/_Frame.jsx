@@ -14,7 +14,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import { intlShape } from 'react-intl';
+import { injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
@@ -48,7 +48,7 @@ const propTypes = {
   dropdownAttrs: PropTypes.object,
   /**
    * @private
-   * The intl object to be injected for translations. Provided by select component.
+   * The intl object to be injected for translations.
    */
   intl: intlShape.isRequired,
   /**
@@ -620,4 +620,4 @@ class Frame extends React.Component {
 Frame.propTypes = propTypes;
 Frame.defaultProps = defaultProps;
 
-export default Frame;
+export default injectIntl(Frame);

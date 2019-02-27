@@ -206,14 +206,14 @@ class Select extends React.Component {
     return (
       <Frame
         {...otherProps}
-        intl={intl}
+        data-terra-select
         value={Util.value(this.props, this.state)}
         display={this.display()}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
         dropdown={dropdownProps => (
-          <DropdownMenu intl={intl} {...dropdownProps}>
+          <DropdownMenu {...dropdownProps}>
             {this.state.tags}
             {children}
           </DropdownMenu>

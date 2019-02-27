@@ -1,1122 +1,988 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Frame should render a combobox variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="tag"
+/>
 `;
 
 exports[`Frame should render a combobox variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          placeholder="Placeholder"
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="tag"
+/>
 `;
 
 exports[`Frame should render a custom dropdown 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a default variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select default"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="0"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-       
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a default variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select default"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="0"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-      Placeholder
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled combobox variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select tag is-disabled"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={true}
-          aria-label="search"
-          className="search-input"
-          disabled={true}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled default variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select default is-disabled"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-       
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled multiple variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select multiple is-disabled"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={true}
-          aria-label="search"
-          className="search-input"
-          disabled={true}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled search variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select search is-disabled"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="content"
-    >
-      <input
-        aria-disabled={true}
-        aria-label="search"
-        className="search-input"
-        disabled={true}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-      />
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled tag variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select tag is-disabled"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={true}
-          aria-label="search"
-          className="search-input"
-          disabled={true}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a multiple variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select multiple"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a multiple variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select multiple"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          placeholder="Placeholder"
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a search variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select search"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="content"
-    >
-      <input
-        aria-disabled={false}
-        aria-label="search"
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-      />
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a search variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select search"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="content"
-    >
-      <input
-        aria-disabled={false}
-        aria-label="search"
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        placeholder="Placeholder"
-      />
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a tag variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a tag variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          placeholder="Placeholder"
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid combobox variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag is-invalid"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid default variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select default is-invalid"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="0"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-       
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid multiple variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select multiple is-invalid"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid search variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select search is-invalid"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="content"
-    >
-      <input
-        aria-disabled={false}
-        aria-label="search"
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-      />
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid tag variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag is-invalid"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should update the aria-live text when the search has no results 1`] = `
 <Frame
   disabled={false}
   dropdown={[Function]}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   isInvalid={false}
   variant="tag"
+/>
+`;
+
+exports[`Frame should render a default variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="default"
+/>
+`;
+
+exports[`Frame should render a default variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="default"
+/>
+`;
+
+exports[`Frame should render a disabled combobox variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render a disabled default variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="default"
+/>
+`;
+
+exports[`Frame should render a disabled multiple variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="multiple"
+/>
+`;
+
+exports[`Frame should render a disabled search variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="search"
+/>
+`;
+
+exports[`Frame should render a disabled tag variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render a multiple variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="multiple"
+/>
+`;
+
+exports[`Frame should render a multiple variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="multiple"
+/>
+`;
+
+exports[`Frame should render a search variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="search"
+/>
+`;
+
+exports[`Frame should render a search variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="search"
+/>
+`;
+
+exports[`Frame should render a tag variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render a tag variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render an invalid combobox variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render an invalid default variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="default"
+/>
+`;
+
+exports[`Frame should render an invalid multiple variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="multiple"
+/>
+`;
+
+exports[`Frame should render an invalid search variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="search"
+/>
+`;
+
+exports[`Frame should render an invalid tag variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should update the aria-live text when the search has no results 1`] = `
+<InjectIntl(Frame)
+  dropdown={[Function]}
+  variant="tag"
 >
-  <div
-    aria-disabled={false}
-    aria-expanded={false}
-    aria-haspopup="true"
-    className="select tag"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
-    role="combobox"
-    tabIndex="-1"
+  <Frame
+    disabled={false}
+    dropdown={[Function]}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en-US",
+        "messages": Object {
+          "Terra.form.select.add": "Add \\"{text}\\"",
+          "Terra.form.select.ariaLabel": "Search",
+          "Terra.form.select.defaultDisplay": "- Select -",
+          "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+          "Terra.form.select.selected": "{text} Selected",
+        },
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isInvalid={false}
+    variant="tag"
   >
     <div
+      aria-describedby="terra-select-screen-reader-description-2"
       aria-disabled={false}
-      className="display"
+      aria-expanded={false}
+      aria-haspopup="true"
+      aria-label={null}
+      className="select tag"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
       onMouseDown={[Function]}
-      role="textbox"
+      role="application"
+      tabIndex="-1"
     >
-      <ul
-        className="content"
+      <div
+        aria-disabled={false}
+        aria-label={null}
+        className="display"
+        role={null}
       >
-        <li
-          className="search-wrapper"
+        <span
+          className="visually-hidden-component"
+          hidden={true}
+          id="terra-select-screen-reader-description-2"
         >
-          <input
-            aria-disabled={false}
-            aria-label="search"
-            className="search-input"
-            disabled={false}
-            onChange={[Function]}
-            onMouseDown={[Function]}
-            value="qwqerewqrwqer"
+          Use up and down arrow keys to navigate through options.
+        </span>
+        <ul
+          className="content"
+        >
+          <li
+            className="search-wrapper"
+          >
+            <input
+              aria-describedby="terra-select-screen-reader-description-2"
+              aria-disabled={false}
+              aria-label="Search"
+              className="search-input"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              type="text"
+              value=""
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        className="toggle toggle-narrow"
+      >
+        <button
+          aria-label="Click to navigate to options"
+          className="toggle-btn"
+          data-terra-form-select-toggle-button={true}
+          onMouseDown={[Function]}
+          type="button"
+        >
+          <span
+            className="arrow-icon"
+            data-terra-form-select-toggle-button-icon={true}
           />
-        </li>
-      </ul>
-    </div>
-    <div
-      className="toggle"
-      onMouseDown={[Function]}
-    >
+        </button>
+      </div>
       <span
-        className="arrow-icon"
+        aria-atomic="true"
+        aria-live="assertive"
+        aria-relevant="additions text"
+        className="visually-hidden-component"
       />
     </div>
-    <span
-      aria-atomic="true"
-      aria-live="polite"
-      aria-relevant="additions text"
-      className="visually-hidden-component"
-    />
-  </div>
-</Frame>
+  </Frame>
+</InjectIntl(Frame)>
 `;
