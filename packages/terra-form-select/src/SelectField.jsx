@@ -151,6 +151,7 @@ const SelectField = ({
   >
     <Select
       {...selectAttrs}
+      ariaLabel={label}
       id={selectId}
       isInvalid={isInvalid}
       defaultValue={defaultValue}

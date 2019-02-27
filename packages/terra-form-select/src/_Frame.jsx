@@ -20,6 +20,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import { intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
@@ -30,6 +31,10 @@ import styles from './_Frame.module.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Used to define a string that labels the select component to screen readers.
+   */
+  ariaLabel: PropTypes.string,
   /**
    * Whether the select is disabled.
    */
@@ -47,6 +52,11 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
+  /**
+   * @private
+   * The intl object to be injected for translations. Provided by select component.
+   */
+  intl: intlShape.isRequired,
   /**
    * Whether the select is in an invalid state.
    */
@@ -172,8 +182,11 @@ class Frame extends React.Component {
   getDisplay(ariaDescribedById) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, variant,
+      ariaLabel, disabled, display, intl, placeholder, variant,
     } = this.props;
+
+    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
+    const selectAriaLabel = ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
 
     const inputAttrs = {
       disabled,
@@ -183,7 +196,7 @@ class Frame extends React.Component {
       onMouseDown: this.handleInputMouseDown,
       type: 'text',
       'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
-      'aria-label': 'Search',
+      'aria-label': selectAriaLabel,
       'aria-describedby': ariaDescribedById,
       'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
@@ -476,10 +489,12 @@ class Frame extends React.Component {
 
   render() {
     const {
+      ariaLabel,
       disabled,
       display,
       dropdown,
       dropdownAttrs,
+      intl,
       isInvalid,
       maxHeight,
       noResultContent,
@@ -504,6 +519,8 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
+    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
+    const selectAriaLabel = ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
     const ariaDescribedById = `terra-select-screen-reader-description-${uniqueid()}`;
 
     return (
@@ -514,7 +531,7 @@ class Frame extends React.Component {
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
-        aria-label={variant === Variants.DEFAULT ? 'Search' : null} // Enables JAWS and VoiceOver on desktop the ability to read the select label
+        aria-label={variant === Variants.DEFAULT ? selectAriaLabel : null} // Enables JAWS and VoiceOver on desktop the ability to read the select label
         aria-describedby={ariaDescribedById} // Enables JAWS and VoiceOver on desktop the ability to read the select description text
         aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
@@ -526,7 +543,7 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         <div
-          aria-label={variant === Variants.DEFAULT ? 'Search' : null} // Enables VoiceOver on iOS the ability to read label
+          aria-label={variant === Variants.DEFAULT ? selectAriaLabel : null} // Enables VoiceOver on iOS the ability to read label
           role={variant === Variants.DEFAULT ? 'textbox' : null} // Enables VoiceOver on iOS the ability to read label and placeholder text correctly
           aria-disabled={!!disabled}
           className={cx('display')}

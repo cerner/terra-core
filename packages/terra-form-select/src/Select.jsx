@@ -206,6 +206,7 @@ class Select extends React.Component {
     return (
       <Frame
         {...otherProps}
+        intl={intl}
         value={Util.value(this.props, this.state)}
         display={this.display()}
         onDeselect={this.handleDeselect}

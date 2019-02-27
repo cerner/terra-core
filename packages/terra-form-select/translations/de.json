@@ -1,5 +1,6 @@
 {
   "Terra.form.select.add": "\"{text}\" hinzufügen",
+  "Terra.form.select.ariaLabel": "Suchen",
   "Terra.form.select.defaultDisplay": "- Wählen -",
   "Terra.form.select.noResults": "Keine Entsprechungen für \"{text}\" gefunden.",
   "Terra.form.select.selected": "Ausgewählt: {text}"
