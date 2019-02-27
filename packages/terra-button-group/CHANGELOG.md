@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Added a11y clarity to not-selectable button group
+* Replaced local keyCode values with keycode-js npm package 
 
 3.5.0 - (February 12, 2019)
 ------------------

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+
 ### Removed
 * Removed terra-alert depenency used in documentation example
 

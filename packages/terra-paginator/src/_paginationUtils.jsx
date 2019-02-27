@@ -1,3 +1,5 @@
+import KeyCode from 'keycode-js';
+
 const calculatePages = (totalCount, itemCountPerPage) => Math.ceil(totalCount / itemCountPerPage);
 
 const pageSet = (index, totalPages) => {
@@ -35,9 +37,4 @@ const pageSet = (index, totalPages) => {
   return sequence.sort((a, b) => a - b);
 };
 
-const KEYCODES = {
-  ENTER: 13,
-  SPACE: 32,
-};
-
-export { calculatePages, pageSet, KEYCODES };
+export { calculatePages, pageSet, KeyCode };

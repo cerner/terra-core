@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import KeyCode from 'keycode-js';
 import 'terra-base/lib/baseStyles';
 import Arrange from 'terra-arrange';
 import styles from './SectionHeader.module.scss';
 
 const cx = classNames.bind(styles);
-
-const KEYCODES = {
-  ENTER: 13,
-  SPACE: 32,
-};
 
 const propTypes = {
   /**
@@ -42,7 +38,7 @@ const defaultProps = {
   level: 2,
 };
 
-const isRecognizedKeyPress = event => ((event.nativeEvent.keyCode === KEYCODES.ENTER) || (event.nativeEvent.keyCode === KEYCODES.SPACE));
+const isRecognizedKeyPress = event => ((event.nativeEvent.keyCode === KeyCode.KEY_ENTER) || (event.nativeEvent.keyCode === KeyCode.KEY_SPACE));
 
 class SectionHeader extends React.Component {
   constructor(props) {

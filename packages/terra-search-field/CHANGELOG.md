@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+
 ### Added
 * Added en-AU translations
 

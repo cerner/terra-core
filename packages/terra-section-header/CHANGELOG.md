@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+
 ### Fixed
 * Correct browser.buttonDown() usage
 

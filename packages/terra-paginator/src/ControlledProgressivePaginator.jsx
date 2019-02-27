@@ -6,7 +6,7 @@ import ResponsiveElement from 'terra-responsive-element';
 import 'terra-base/lib/baseStyles';
 import styles from './Paginator.module.scss';
 
-import { calculatePages, KEYCODES } from './_paginationUtils';
+import { calculatePages, KeyCode } from './_paginationUtils';
 
 const cx = classNames.bind(styles);
 
@@ -49,7 +49,7 @@ class ProgressivePaginator extends React.Component {
 
   handleOnKeyDown(index) {
     return (event) => {
-      if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      if (event.nativeEvent.keyCode === KeyCode.KEY_ENTER || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         event.preventDefault();
 
         if (Number.isNaN(Number(index))) {

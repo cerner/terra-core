@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
     "terra-button": "^3.5.0",
     "terra-dialog": "^2.5.0",

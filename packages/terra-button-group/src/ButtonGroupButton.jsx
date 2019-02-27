@@ -2,16 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
+import KeyCode from 'keycode-js';
 import 'terra-base/lib/baseStyles';
 import styles from './ButtonGroup.module.scss';
 
 const cx = classNames.bind(styles);
-
-const KEYCODES = {
-  ENTER: 13,
-  SPACE: 32,
-  TAB: 9,
-};
 
 const propTypes = {
   /**
@@ -72,7 +67,7 @@ class ButtonGroupButton extends React.Component {
   handleKeyDown(event) {
     // Add focus styles for keyboard navigation.
     // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE || event.nativeEvent.keyCode === KEYCODES.ENTER) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_ENTER) {
       this.setState({ focused: true });
     }
 
@@ -84,7 +79,7 @@ class ButtonGroupButton extends React.Component {
   handleKeyUp(event) {
     // Apply focus styles for keyboard navigation.
     // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
-    if (event.nativeEvent.keyCode === KEYCODES.TAB) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
       this.setState({ focused: true });
     }
 

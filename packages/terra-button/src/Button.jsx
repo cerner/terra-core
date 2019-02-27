@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import KeyCode from 'keycode-js';
 import 'terra-base/lib/baseStyles';
 import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
-
-const KEYCODES = {
-  ENTER: 13,
-  SPACE: 32,
-  TAB: 9,
-};
 
 const ButtonVariants = {
   NEUTRAL: 'neutral',
@@ -125,7 +120,7 @@ class Button extends React.Component {
 
   handleKeyDown(event) {
     // Add active state to FF browsers
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ active: true });
 
       // Follow href on space keydown when rendered as an anchor tag
@@ -137,7 +132,7 @@ class Button extends React.Component {
     }
 
     // Add focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE || event.nativeEvent.keyCode === KEYCODES.ENTER) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_ENTER) {
       this.setState({ focused: true });
     }
 
@@ -148,12 +143,12 @@ class Button extends React.Component {
 
   handleKeyUp(event) {
     // Remove active state from FF broswers
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ active: false });
     }
 
     // Apply focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KEYCODES.TAB) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
       this.setState({ focused: true });
     }
 

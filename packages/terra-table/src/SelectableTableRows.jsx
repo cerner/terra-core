@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import KeyCode from 'keycode-js';
 import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
 import TableRow from './TableRow';
@@ -64,7 +65,7 @@ class SelectableTableRows extends React.Component {
     const initialOnKeyDown = row.props.onKeyDown;
 
     return (event) => {
-      if (event.nativeEvent.keyCode === SelectableUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === SelectableUtils.KEYCODES.SPACE) {
+      if (event.nativeEvent.keyCode === KeyCode.KEY_ENTER || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         // The default isSelectable attribute is either undefined or true, unless the consumer specifies the row's isSelectable attribute as false.
         if (row.props.isSelectable !== false) {
           this.handleOnChange(event, index);
