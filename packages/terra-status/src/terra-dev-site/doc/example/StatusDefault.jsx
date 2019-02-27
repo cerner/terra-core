@@ -1,12 +1,16 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Status from 'terra-status/lib/Status';
+import classNames from 'classnames/bind';
+import styles from './colors.module.scss';
+
+const cx = classNames.bind(styles);
 
 const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
 
 const StatusDefault = () => (
   <div>
-    <Status color="#ff0000" visuallyHiddenText="Status High">{simpleText}</Status>
+    <Status colorClass={cx(['success'])} visuallyHiddenText="Status Success">{simpleText}</Status>
   </div>
 );
 

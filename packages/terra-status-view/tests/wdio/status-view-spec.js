@@ -179,10 +179,11 @@ describe('StatusView', () => {
   });
 
   describe('Displays an error status view that is too thin for a glyph', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-thin-constraint'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-status-view/status-view/status-view-thin-constraint');
+    });
 
-    // Screenshot is too tall for standard viewports
-    Terra.should.matchScreenshot({ viewports: [{ width: 75, height: 700 }] });
-    Terra.should.beAccessible({ viewports: [{ width: 75, height: 700 }] });
+    Terra.should.matchScreenshot();
+    Terra.should.beAccessible();
   });
 });
