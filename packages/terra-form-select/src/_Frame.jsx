@@ -5,13 +5,16 @@
  * Tested in Chrome, FF, Edge, Safari, IE 10, IE 11, Safari iOS
  * No issues detected
  *
+ * Get button working to close dropdown when clicked while open
+ * Update Jest test
+ * Write wdio tests to ensure focus is placed correctly with these additions
+ *
  * Get translations for following strings
  * * 'Search'
  * * 'Click to navigate to options'
  * * 'Swipe right to navigate options.'
  * * 'Use up and down arrow keys to navigate through options.'
  *
- * Write wdio tests to ensure focus is placed correctly with these additions
  */
 
 import React from 'react';
