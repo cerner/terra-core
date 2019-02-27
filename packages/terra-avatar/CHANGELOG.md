@@ -9,6 +9,11 @@ Unreleased
 ### Added
 * CSS classes to handle fallback and deceased edge cases.
 
+2.8.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.7.0 - (February 12, 2019)
 ------------------
 ### Changed

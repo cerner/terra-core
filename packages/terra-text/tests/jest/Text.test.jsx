@@ -8,11 +8,6 @@ describe('Text', () => {
     expect(text).toMatchSnapshot();
   });
 
-  it('should render a text component with color prop set', () => {
-    const text = shallow(<Text color="#f00">Test</Text>);
-    expect(text).toMatchSnapshot();
-  });
-
   it('should render a text component with isItalic prop set', () => {
     const text = shallow(<Text isItalic>Test</Text>);
     expect(text).toMatchSnapshot();
@@ -30,6 +25,11 @@ describe('Text', () => {
 
   it('should render a text component with weight prop set', () => {
     const text = shallow(<Text weight={200}>Test</Text>);
+    expect(text).toMatchSnapshot();
+  });
+
+  it('should render a text component with colorClass prop set', () => {
+    const text = shallow(<Text colorClass="testClass">Test</Text>);
     expect(text).toMatchSnapshot();
   });
 
@@ -63,7 +63,7 @@ describe('Text', () => {
 
   // Prop Tests
   it('should have all props including customProps set correctly', () => {
-    const text = shallow(<Text id="id" fontSize={20} color="#f00" weight={200} isItalic isVisuallyHidden isWordWrapped>All props and custom attrs</Text>);
+    const text = shallow(<Text id="id" fontSize={20} weight={200} isItalic isVisuallyHidden isWordWrapped>All props and custom attrs</Text>);
     expect(text).toMatchSnapshot();
     expect(text.find('.text').text()).toEqual('All props and custom attrs');
   });
@@ -86,12 +86,7 @@ describe('Text', () => {
 
   it('should append styles passed in with attributes', () => {
     const text = shallow(<Text style={{ height: '100px' }}>Test</Text>);
-    expect(text.prop('style')).toEqual({ color: 'inherit', height: '100px' });
-  });
-
-  it('should merge color value with styles passed in with attributes when both are set', () => {
-    const text = shallow(<Text color="#f00" style={{ height: '100px' }}>Test</Text>);
-    expect(text.prop('style')).toEqual({ color: '#f00', height: '100px' });
+    expect(text.prop('style')).toEqual({ height: '100px' });
   });
 
   // Error Handling Test
