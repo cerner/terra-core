@@ -40,10 +40,6 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The color of the text. Accepts any color value parseable by CSS.
-   */
-  color: PropTypes.string,
-  /**
    * Sets the text to display in italics.
    */
   isItalic: PropTypes.bool,
@@ -63,17 +59,23 @@ const propTypes = {
    * Sets the text size. One of `200`, `300`, `400`, `700`.
    */
   weight: PropTypes.oneOf([200, 300, 400, 700]),
+  /**
+   * Sets an author defined class, to control the colors of the text.
+   *
+   * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/blue?icon=github)
+   * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
+   */
+  colorClass: PropTypes.string,
 };
 
 const defaultProps = {
-  color: 'inherit',
   isItalic: false,
   isVisuallyHidden: false,
   isWordWrapped: false,
 };
 
 const Text = ({
-  color, children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, ...customProps
+  children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, colorClass, ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
@@ -83,15 +85,12 @@ const Text = ({
     { 'visually-hidden': isVisuallyHidden },
     { [`font-size-${fontSize}`]: fontSize },
     { [`font-weight-${weight}`]: weight },
+    colorClass,
     attributes.className,
   ]);
 
-  const textStyles = {
-    color,
-  };
-
   return (
-    <span {...attributes} style={{ ...textStyles, ...customProps.style }} className={TextClassNames}>
+    <span {...attributes} className={TextClassNames}>
       {children}
     </span>
   );

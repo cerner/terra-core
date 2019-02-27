@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.5.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added stylelint-enable to Checkbox.module.scss
 * Added en-AU translations

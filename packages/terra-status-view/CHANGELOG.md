@@ -3,16 +3,21 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Update SVG style to `display: block` to fix SVG size and stop text from shifting downards.
+
+3.6.0 - (February 26, 2019)
+------------------
 ### Added
 * Added en-AU translations
 
 ### Changed
+* Minor dependency version bump
 * Update Thin Constraint test screenshot to be limited to the test size 75px to remove wdio screen resizing. Screen resizing to 75px is not possible with firefox driver.
 
 ### Fixed
 * Status View glyph does not always displays when it should
-* Update SVG style to `display: block` to fix SVG size and stop text from shifting downards.
-=======
+
 3.5.0 - (February 12, 2019)
 ------------------
 ### Changed

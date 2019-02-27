@@ -16,10 +16,6 @@ const ProgressBarHeightSize = {
 
 const propTypes = {
   /**
-   * The color of the progress bar. Accepts a CSS color value.
-   */
-  color: PropTypes.string,
-  /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
   heightSize: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
@@ -32,35 +28,38 @@ const propTypes = {
    */
   max: PropTypes.number,
   /**
-   * Boolean check for gradient.
-   */
-  hasGradient: PropTypes.bool,
-  /**
    * Value passed to aria-valuetext for accessibility. You can view more about this attribute
    * at https://www.w3.org/WAI/PF/aria/states_and_properties#aria-valuetext.
    */
   valueText: PropTypes.string,
+  /**
+   * Sets an author defined class, to control the colors of the progress bar.
+   *
+   * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/blue?icon=github)
+   * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
+   */
+  colorClass: PropTypes.string,
 };
 
 const defaultProps = {
   heightSize: 'small',
   max: 100,
-  hasGradient: false,
   valueText: undefined,
+  colorClass: 'default-color',
 };
 
 const ProgressBar = ({
   heightSize,
   value,
   max,
-  hasGradient,
   valueText,
+  colorClass,
   ...customProps
 }) => {
   const classes = cx([
-    { 'progress-bar-gradient': hasGradient },
     'progress-bar',
     heightSize,
+    colorClass,
     customProps.className,
   ]);
 
@@ -69,7 +68,6 @@ const ProgressBar = ({
   return (
     <progress
       {...customProps}
-      style={{ color: customProps.color }}
       className={classes}
       max={100}
       value={normalizedValue}
