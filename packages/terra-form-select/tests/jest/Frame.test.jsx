@@ -6,107 +6,107 @@ import intlContexts from './intl-context-setup';
 
 describe('Frame', () => {
   it('should render a default variant', () => {
-    const wrapper = shallow(<Frame />, intlContexts.shallowContext);
+    const wrapper = render(<Frame />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a combobox variant', () => {
-    const wrapper = shallow(<Frame variant="tag" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a multiple variant', () => {
-    const wrapper = shallow(<Frame variant="multiple" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="multiple" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a search variant', () => {
-    const wrapper = shallow(<Frame variant="search" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="search" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a tag variant', () => {
-    const wrapper = shallow(<Frame variant="tag" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a default variant with a placeholder', () => {
-    const wrapper = shallow(<Frame placeholder="Placeholder" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame placeholder="Placeholder" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a combobox variant with a placeholder', () => {
-    const wrapper = shallow(<Frame variant="tag" placeholder="Placeholder" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" placeholder="Placeholder" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a multiple variant with a placeholder', () => {
-    const wrapper = shallow(<Frame variant="multiple" placeholder="Placeholder" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="multiple" placeholder="Placeholder" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a search variant with a placeholder', () => {
-    const wrapper = shallow(<Frame variant="search" placeholder="Placeholder" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="search" placeholder="Placeholder" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a tag variant with a placeholder', () => {
-    const wrapper = shallow(<Frame variant="tag" placeholder="Placeholder" />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" placeholder="Placeholder" />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled default variant', () => {
-    const wrapper = shallow(<Frame disabled />, intlContexts.shallowContext);
+    const wrapper = render(<Frame disabled />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled combobox variant', () => {
-    const wrapper = shallow(<Frame variant="tag" disabled />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" disabled />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled multiple variant', () => {
-    const wrapper = shallow(<Frame variant="multiple" disabled />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="multiple" disabled />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled search variant', () => {
-    const wrapper = shallow(<Frame variant="search" disabled />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="search" disabled />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled tag variant', () => {
-    const wrapper = shallow(<Frame variant="tag" disabled />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" disabled />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid default variant', () => {
-    const wrapper = shallow(<Frame isInvalid />, intlContexts.shallowContext);
+    const wrapper = render(<Frame isInvalid />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid combobox variant', () => {
-    const wrapper = shallow(<Frame variant="tag" isInvalid />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" isInvalid />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid multiple variant', () => {
-    const wrapper = shallow(<Frame variant="multiple" isInvalid />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="multiple" isInvalid />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid search variant', () => {
-    const wrapper = shallow(<Frame variant="search" isInvalid />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="search" isInvalid />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid tag variant', () => {
-    const wrapper = shallow(<Frame variant="tag" isInvalid />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" isInvalid />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a custom dropdown', () => {
-    const wrapper = shallow(<Frame variant="tag" dropdown={() => <div>Custom</div>} />, intlContexts.shallowContext);
+    const wrapper = render(<Frame variant="tag" dropdown={() => <div>Custom</div>} />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 

@@ -1,870 +1,1219 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Frame should render a combobox variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-2"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select tag"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-2"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-2"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a combobox variant with a placeholder 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  placeholder="Placeholder"
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-7"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select tag"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-7"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-7"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          placeholder="Placeholder"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a custom dropdown 1`] = `
-<Frame
-  disabled={false}
-  dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-21"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select tag"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-21"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-21"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a default variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="default"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-1"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-label="Search"
+  class="select default"
+  role="application"
+  tabindex="0"
+>
+  <div
+    aria-disabled="false"
+    aria-label="Search"
+    class="display"
+    role="textbox"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-1"
+    >
+      undefined. Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="placeholder"
+    >
+       
+    </div>
+  </div>
+  <div
+    class="toggle"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a default variant with a placeholder 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  placeholder="Placeholder"
-  variant="default"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-6"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-label="Search"
+  class="select default"
+  role="application"
+  tabindex="0"
+>
+  <div
+    aria-disabled="false"
+    aria-label="Search"
+    class="display"
+    role="textbox"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-6"
+    >
+      Placeholder. Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="placeholder"
+    >
+      Placeholder
+    </div>
+  </div>
+  <div
+    class="toggle"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a disabled combobox variant 1`] = `
-<Frame
-  disabled={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-12"
+  aria-disabled="true"
+  aria-expanded="false"
+  class="select tag is-disabled"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="true"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-12"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-12"
+          aria-disabled="true"
+          aria-label="Search"
+          class="search-input"
+          disabled=""
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a disabled default variant 1`] = `
-<Frame
-  disabled={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="default"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-11"
+  aria-disabled="true"
+  aria-expanded="false"
+  aria-label="Search"
+  class="select default is-disabled"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="true"
+    aria-label="Search"
+    class="display"
+    role="textbox"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-11"
+    >
+      undefined. Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="placeholder"
+    >
+       
+    </div>
+  </div>
+  <div
+    class="toggle"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a disabled multiple variant 1`] = `
-<Frame
-  disabled={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="multiple"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-13"
+  aria-disabled="true"
+  aria-expanded="false"
+  class="select multiple is-disabled"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="true"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-13"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-13"
+          aria-disabled="true"
+          aria-label="Search"
+          class="search-input"
+          disabled=""
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a disabled search variant 1`] = `
-<Frame
-  disabled={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="search"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-14"
+  aria-disabled="true"
+  aria-expanded="false"
+  class="select search is-disabled"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="true"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-14"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="content"
+    >
+      <input
+        aria-describedby="terra-select-screen-reader-description-14"
+        aria-disabled="true"
+        aria-label="Search"
+        class="search-input"
+        disabled=""
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a disabled tag variant 1`] = `
-<Frame
-  disabled={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-15"
+  aria-disabled="true"
+  aria-expanded="false"
+  class="select tag is-disabled"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="true"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-15"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-15"
+          aria-disabled="true"
+          aria-label="Search"
+          class="search-input"
+          disabled=""
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a multiple variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="multiple"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-3"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select multiple"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-3"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-3"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a multiple variant with a placeholder 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  placeholder="Placeholder"
-  variant="multiple"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-8"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select multiple"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-8"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-8"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          placeholder="Placeholder"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a search variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="search"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-4"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select search"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-4"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="content"
+    >
+      <input
+        aria-describedby="terra-select-screen-reader-description-4"
+        aria-disabled="false"
+        aria-label="Search"
+        class="search-input"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a search variant with a placeholder 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  placeholder="Placeholder"
-  variant="search"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-9"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select search"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-9"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="content"
+    >
+      <input
+        aria-describedby="terra-select-screen-reader-description-9"
+        aria-disabled="false"
+        aria-label="Search"
+        class="search-input"
+        placeholder="Placeholder"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a tag variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-5"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select tag"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-5"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-5"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render a tag variant with a placeholder 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={false}
-  placeholder="Placeholder"
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-10"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select tag"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-10"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-10"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          placeholder="Placeholder"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render an invalid combobox variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={true}
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-17"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select tag is-invalid"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-17"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-17"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render an invalid default variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={true}
-  variant="default"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-16"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-label="Search"
+  class="select default is-invalid"
+  role="application"
+  tabindex="0"
+>
+  <div
+    aria-disabled="false"
+    aria-label="Search"
+    class="display"
+    role="textbox"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-16"
+    >
+      undefined. Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="placeholder"
+    >
+       
+    </div>
+  </div>
+  <div
+    class="toggle"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render an invalid multiple variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={true}
-  variant="multiple"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-18"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select multiple is-invalid"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-18"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-18"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render an invalid search variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={true}
-  variant="search"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-19"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select search is-invalid"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-19"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="content"
+    >
+      <input
+        aria-describedby="terra-select-screen-reader-description-19"
+        aria-disabled="false"
+        aria-label="Search"
+        class="search-input"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should render an invalid tag variant 1`] = `
-<Frame
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
-      },
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInvalid={true}
-  variant="tag"
-/>
+<div
+  aria-describedby="terra-select-screen-reader-description-20"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select tag is-invalid"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    aria-disabled="false"
+    class="display"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-20"
+    >
+      Use up and down arrow keys to navigate through options.
+    </span>
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-description-20"
+          aria-disabled="false"
+          aria-label="Search"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle toggle-narrow"
+  >
+    <button
+      aria-label="Click to navigate to options"
+      class="toggle-btn"
+      data-terra-form-select-toggle-button="true"
+      type="button"
+    >
+      <span
+        class="arrow-icon"
+        data-terra-form-select-toggle-button-icon="true"
+      />
+    </button>
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Frame should update the aria-live text when the search has no results 1`] = `
@@ -912,7 +1261,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
     variant="tag"
   >
     <div
-      aria-describedby="terra-select-screen-reader-description-2"
+      aria-describedby="terra-select-screen-reader-description-23"
       aria-disabled={false}
       aria-expanded={false}
       aria-haspopup="true"
@@ -934,7 +1283,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
         <span
           className="visually-hidden-component"
           hidden={true}
-          id="terra-select-screen-reader-description-2"
+          id="terra-select-screen-reader-description-23"
         >
           Use up and down arrow keys to navigate through options.
         </span>
@@ -945,7 +1294,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
             className="search-wrapper"
           >
             <input
-              aria-describedby="terra-select-screen-reader-description-2"
+              aria-describedby="terra-select-screen-reader-description-23"
               aria-disabled={false}
               aria-label="Search"
               className="search-input"
