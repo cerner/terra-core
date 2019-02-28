@@ -104,6 +104,10 @@ describe('Select', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('default should close when clicking off of the select after being opened by toggle icon', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
       it('default should open the dropdown by clicking the select toggle icon', () => {
         browser.click('[data-terra-form-select-toggle]');
@@ -170,8 +174,6 @@ describe('Select', () => {
       Terra.should.matchScreenshot('selected-option', { viewports });
     });
 
-    /* -------------- */
-
     describe('default controlled should select an option by click', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
 
@@ -196,11 +198,8 @@ describe('Select', () => {
     describe('default should truncate and wrap long text', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default-long-text'));
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-
       it('default should open the dropdown by clicking the toggle', () => {
-        browser.click('#default:last-child');
+        browser.click('#default');
       });
 
       Terra.should.beAccessible();
@@ -210,6 +209,7 @@ describe('Select', () => {
     describe('should render an empty placeholder', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/empty-placeholder'));
 
+      Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
     });
 
