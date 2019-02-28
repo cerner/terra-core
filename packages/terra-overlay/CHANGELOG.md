@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added overlay prop to OverlayContainer to separate overlay from container-content
+* Added condition in overlay setNode method to prevent screen reader from reading container-content
+
 
 3.6.0 - (February 26, 2019)
 ------------------

@@ -7,7 +7,26 @@ exports[`OverlayContainer should render a default component 1`] = `
 />
 `;
 
-exports[`OverlayContainer should render when children are provided 1`] = `
+exports[`OverlayContainer should render when overlay and children are provided 1`] = `
+<div
+  className="overlay-container"
+  tabIndex="-1"
+>
+  <Overlay
+    backgroundStyle="light"
+    isOpen={false}
+    isRelativeToContainer={false}
+    isScrollable={false}
+    rootSelector="[data-terra-base]"
+    zIndex="100"
+  />
+  <div>
+    Some Text Content
+  </div>
+</div>
+`;
+
+exports[`OverlayContainer should render when overlay is provided 1`] = `
 <div
   className="overlay-container user-defined-class"
   tabIndex="-1"

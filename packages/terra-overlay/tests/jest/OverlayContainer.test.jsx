@@ -21,8 +21,21 @@ describe('OverlayContainer', () => {
     expect(wrapper.prop('className')).toContain('overlay-container');
   });
 
-  it('should render when children are provided', () => {
+  it('should render when overlay is provided', () => {
     const wrapper = shallow(standardRender);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render when overlay and children are provided', () => {
+    const overlayContainer = (
+      <OverlayContainer>
+        <Overlay />
+        <div>
+         Some Text Content
+        </div>
+      </OverlayContainer>
+    );
+    const wrapper = shallow(overlayContainer);
     expect(wrapper).toMatchSnapshot();
   });
 

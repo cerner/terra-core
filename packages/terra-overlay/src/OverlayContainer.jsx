@@ -7,17 +7,22 @@ import styles from './Overlay.module.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-/**
- * The overlay and the elements the overlay should hide when overlay isRelativeToContainer and isOpen.
- */
+  /**
+  * The Overlay and the content to be displayed within the overlay.
+  */
+  overlay: PropTypes.node,
+  /**
+  * The elements the overlay should hide when overlay isRelativeToContainer and isOpen.
+  */
   children: PropTypes.node,
 };
 
 const defaultProps = {
+  overlay: null,
   children: null,
 };
 
-const OverlayContainer = ({ children, ...customProps }) => {
+const OverlayContainer = ({ overlay, children, ...customProps }) => {
   const OverlayContainerClassNames = cx([
     'overlay-container',
     customProps.className,
@@ -25,6 +30,7 @@ const OverlayContainer = ({ children, ...customProps }) => {
 
   return (
     <div {...customProps} className={OverlayContainerClassNames} tabIndex="-1">
+      {overlay}
       {children}
     </div>
   );
