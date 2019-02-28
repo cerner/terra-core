@@ -498,7 +498,7 @@ class Frame extends React.Component {
        */
       if (this.state.isInputFocused) {
         return (
-          <div className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
+          <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
             <span className={cx('arrow-icon')} />
           </div>
         );
@@ -520,7 +520,7 @@ class Frame extends React.Component {
     }
 
     return (
-      <div className={cx('toggle')}>
+      <div data-terra-form-select-toggle className={cx('toggle')}>
         <span className={cx('arrow-icon')} />
       </div>
     );
