@@ -16,7 +16,7 @@ class SelectUtil {
       // Flatten allows converting a string default into an array.
       return defaultValue ? [defaultValue].flatten() : [];
     }
-    return props.defaultValue || '';
+    return (prop.defaultValue !== undefined && props.defaultValue !== null) ? prop.defaultValue : '' ;
   }
 
   /**
