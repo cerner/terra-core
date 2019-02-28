@@ -136,6 +136,7 @@ class Frame extends React.Component {
       searchValue: '',
     };
 
+    this.ariaLabel = this.ariaLabel.bind(this);
     this.setInput = this.setInput.bind(this);
     this.getDisplay = this.getDisplay.bind(this);
     this.renderToggleButton = this.renderToggleButton.bind(this);
@@ -156,7 +157,7 @@ class Frame extends React.Component {
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.visuallyHiddenComponent = React.createRef();
-    this.selectListBox = '#terra-select-menu'; // selecting the first radio option causes JAWS to bug out
+    this.selectMenu = '#terra-select-menu';
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -174,26 +175,33 @@ class Frame extends React.Component {
     this.input = input;
   }
 
+  // eslint-disable-next-line react/sort-comp
+  ariaLabel() {
+    const { ariaLabel, intl } = this.props;
+
+    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
+    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
+  }
+
   getDisplay(ariaDescribedById) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      ariaLabel, disabled, display, intl, placeholder, variant,
+      disabled, display, placeholder, variant,
     } = this.props;
-
-    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
-    const selectAriaLabel = ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
 
     const inputAttrs = {
       disabled,
       placeholder,
       ref: this.setInput,
       onChange: this.handleSearch,
+      onFocus: this.handleInputFocus,
+      onBlur: this.handleInputBlur,
       onMouseDown: this.handleInputMouseDown,
-      type: 'text',
-      'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
-      'aria-label': selectAriaLabel,
+      'aria-label': this.ariaLabel(),
       'aria-describedby': ariaDescribedById,
       'aria-disabled': disabled,
+      'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
+      type: 'text',
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
 
@@ -204,13 +212,13 @@ class Frame extends React.Component {
           <ul className={cx('content')}>
             {display}
             <li className={cx('search-wrapper')}>
-              <input onFocus={this.handleInputFocus} onBlur={this.handleInputBlur} {...inputAttrs} value={searchValue} />
+              <input {...inputAttrs} value={searchValue} />
             </li>
           </ul>
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <div className={cx('content')}><input onFocus={this.handleInputFocus} onBlur={this.handleInputBlur} {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
+        return <div className={cx('content')}><input {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
       default:
         return display || <div className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
@@ -243,17 +251,21 @@ class Frame extends React.Component {
       return;
     }
 
-    // Avoid focusing the input if the toggle button is used to open the dropdown
-    // This is to avoid an issue with VoiceOver on iOS with shifting focus while the onScreen keyboard is open
+    /**
+     * Avoids focusing the input if the toggle button is used to open the select menu.
+     * This is to avoid an issue with VoiceOver on iOS where shifting to toggle button while the
+     * input is focused / onScreen keyboard is open unexpected focus shift when the onScreen
+     * keyboard is closed
+     */
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
 
-      // Allows time for state update to render select listbox DOM
+      // Allows time for state update to render select menu DOM before shifting focus to it
       setTimeout(() => {
-        if (document.querySelector(this.selectListBox)) {
-          document.querySelector(this.selectListBox).focus();
+        if (document.querySelector(this.selectMenu)) {
+          document.querySelector(this.selectMenu).focus();
         }
       }, 10);
       return;
@@ -262,10 +274,10 @@ class Frame extends React.Component {
     if (this.input) {
       this.input.focus();
     } else {
-      // Allows time for state update to render select listbox DOM
+      // Allows time for state update to render select menu DOM before shifting focus to it
       setTimeout(() => {
-        if (document.querySelector(this.selectListBox)) {
-          document.querySelector(this.selectListBox).focus();
+        if (document.querySelector(this.selectMenu)) {
+          document.querySelector(this.selectMenu).focus();
         }
       }, 10);
     }
@@ -295,17 +307,20 @@ class Frame extends React.Component {
       return;
     }
 
-    // Prevent closing of the dropdown in the default variant
-    // as we shift focus to dropdown when opened which triggers blur handler
+    /**
+     * When the select blur event is triggered with the default variant, this code checks if the focus
+     * is shifted to the select menu and if so, suppresses the rest of the blur handler to prevent
+     * the select menu from being closed.
+     */
     if (this.props.variant === Variants.DEFAULT) {
       // event.relatedTarget returns null in IE 10 / IE 11
       if (event.relatedTarget == null) {
         // IE 11 sets document.activeElement to the next focused element before the blur event is called
-        if (document.querySelector(this.selectListBox) === document.activeElement) {
+        if (document.querySelector(this.selectMenu) === document.activeElement) {
           return;
         }
       // Modern browsers support event.relatedTarget
-      } else if (document.querySelector(this.selectListBox) === event.relatedTarget) {
+      } else if (document.querySelector(this.selectMenu) === event.relatedTarget) {
         return;
       }
     }
@@ -381,10 +396,16 @@ class Frame extends React.Component {
     this.openDropdown(event);
   }
 
+  /**
+   * Handles the input focus event.
+   */
   handleInputFocus() {
     this.setState({ isInputFocused: true });
   }
 
+  /**
+   * Handles the input blur event.
+   */
   handleInputBlur() {
     this.setState({ isInputFocused: false });
   }
@@ -404,7 +425,9 @@ class Frame extends React.Component {
   handleToggleButtonMouseDown() {
     if (this.state.isOpen) {
       this.closeDropdown();
-      this.input.focus();
+      if (this.input) {
+        this.input.focus();
+      }
     }
   }
 
@@ -461,10 +484,15 @@ class Frame extends React.Component {
   renderDescriptionText() {
     const { variant, placeholder } = this.props;
 
+    // Instructions for touch devices, not needed with default variant.
     if ('ontouchstart' in window) {
       return variant === Variants.DEFAULT ? null : 'Swipe right to navigate options.';
     }
 
+    /**
+     * Instructions for non-touch devices, with the default variant, we inject the placeholder in
+     * the description. This allows JAWS to read the placeholder with the default variant.
+     */
     return variant === Variants.DEFAULT ? `${placeholder}. Use up and down arrow keys to navigate through options.` : 'Use up and down arrow keys to navigate through options.';
   }
 
@@ -472,6 +500,14 @@ class Frame extends React.Component {
     const { variant } = this.props;
 
     if (variant !== Variants.DEFAULT) {
+      /**
+       * When the input within the select is focused, we don't want to render the toggle button that
+       * shifts focus to the select menu as it causes issues when using VoiceOver on iOS.
+       * Always rendering the toggle button allows the users to shift the virtual indicator to the
+       * toggle button and tap on it which shifts focus to the select menu. When this happens on iOS,
+       * the onScreen keyboard will close and shift focus back to the input which prevents users
+       * from ever navigating through the select options.
+       */
       if (this.state.isInputFocused) {
         return (
           <div className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
@@ -504,12 +540,10 @@ class Frame extends React.Component {
 
   render() {
     const {
-      ariaLabel,
       disabled,
       display,
       dropdown,
       dropdownAttrs,
-      intl,
       isInvalid,
       maxHeight,
       noResultContent,
@@ -523,6 +557,8 @@ class Frame extends React.Component {
       ...customProps
     } = this.props;
 
+    console.log(this.ariaLabel());
+
     const selectClasses = cx([
       'select',
       variant,
@@ -534,19 +570,19 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
-    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
-    const selectAriaLabel = ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
+    // Don't spread ariaLabel prop, we handle it below
+    delete customProps.ariaLabel;
     const ariaDescribedById = `terra-select-screen-reader-description-${uniqueid()}`;
 
     return (
       <div
         {...customProps}
-        role={!disabled ? 'application' : undefined}
+        role={!disabled ? 'application' : undefined} // role="application" needed to allow JAWS to pick up and use our key event listeners
         aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
-        aria-label={variant === Variants.DEFAULT ? selectAriaLabel : null} // Enables JAWS and VoiceOver on desktop the ability to read the select label
+        aria-label={variant === Variants.DEFAULT ? this.ariaLabel() : null} // Enables JAWS and VoiceOver on desktop the ability to read the select label
         aria-describedby={ariaDescribedById} // Enables JAWS and VoiceOver on desktop the ability to read the select description text
         aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
@@ -558,7 +594,7 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         <div
-          aria-label={variant === Variants.DEFAULT ? selectAriaLabel : null} // Enables VoiceOver on iOS the ability to read label
+          aria-label={variant === Variants.DEFAULT ? this.ariaLabel() : null} // Enables VoiceOver on iOS the ability to read label
           role={variant === Variants.DEFAULT ? 'textbox' : null} // Enables VoiceOver on iOS the ability to read label and placeholder text correctly
           aria-disabled={!!disabled}
           className={cx('display')}
