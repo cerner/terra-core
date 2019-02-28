@@ -24,7 +24,8 @@ const propTypes = {
    */
   select: PropTypes.instanceOf(Element),
   /**
-   * @private Element that is used to trigger the dropdown, such as an input or button.
+   * @private
+   * Element that is used to trigger the dropdown, such as an input or button.
    */
   focusRegion: PropTypes.instanceOf(Element),
   /**
@@ -148,9 +149,13 @@ class Menu extends React.Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
-    // VoiceOver on iOS doesn't need aria-live update when opening dropdown menu,
-    // will result in double reading of first option so we opt-out of running the
-    // aria-live update on mount here if browser supports touch events
+    /**
+     * Without this detection for ontouchstart and the early return, VoiceOver on iOS will read the
+     * first option twice when the menu is opened. First due to aria-live update in componentDidMount
+     * and another time because we shift focus to the dropdown and VoiceOver on iOS will read the
+     * first interactable element in the dropdown. To mitigate this, the following conditional
+     * check opts-out of the aria-live update if browser supports ontouchstart which iOS supports.
+     */
     if ('ontouchstart' in window) return;
     this.updateCurrentActiveScreenReader();
   }
@@ -392,8 +397,10 @@ class Menu extends React.Component {
 
   render() {
     return (
-      // Role listbox and aria-activedescendant needed for VoiceOver on iOS to properly shift virtual indicator to this
-      // DOM element when dropdown is rendered
+      /**
+       * Note: role="listbox" and aria-activedescendant needed for VoiceOver on iOS to properly
+       * shift the virtual indicator to this DOM element when dropdown is rendered.
+       */
       <ul
         id="terra-select-menu"
         role="listbox"
@@ -415,7 +422,7 @@ Menu.defaultProps = defaultProps;
 Menu.contextTypes = contextTypes;
 
 /**
- * This polyfill enables backwards compatability of features added in React 16.3.0.
+ * This polyfill enables backwards compatibility of features added in React 16.3.0.
  * More information is available at: https://github.com/reactjs/react-lifecycles-compat
  */
 polyfill(Menu);

@@ -1,7 +1,6 @@
 /**
  * TODO
  *
- * Update Jest test
  * Write wdio tests to ensure focus is placed correctly with these additions
  *
  * Get translations for following strings
