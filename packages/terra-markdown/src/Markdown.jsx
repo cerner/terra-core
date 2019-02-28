@@ -22,7 +22,6 @@ const defaultProps = {
   src: '',
 };
 
-
 /* eslint react/no-danger:0 */
 const Markdown = props => (
   <div
