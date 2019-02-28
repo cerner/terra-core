@@ -7,6 +7,7 @@ exports[`Frame should render a combobox variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -69,6 +70,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -132,6 +134,7 @@ exports[`Frame should render a custom dropdown 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -195,6 +198,7 @@ exports[`Frame should render a default variant 1`] = `
   aria-haspopup="true"
   aria-label="Search"
   class="select default"
+  intl="[object Object]"
   role="application"
   tabindex="0"
 >
@@ -241,6 +245,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
   aria-haspopup="true"
   aria-label="Search"
   class="select default"
+  intl="[object Object]"
   role="application"
   tabindex="0"
 >
@@ -285,6 +290,7 @@ exports[`Frame should render a disabled combobox variant 1`] = `
   aria-disabled="true"
   aria-expanded="false"
   class="select tag is-disabled"
+  intl="[object Object]"
   tabindex="-1"
 >
   <div
@@ -347,6 +353,7 @@ exports[`Frame should render a disabled default variant 1`] = `
   aria-expanded="false"
   aria-label="Search"
   class="select default is-disabled"
+  intl="[object Object]"
   tabindex="-1"
 >
   <div
@@ -390,6 +397,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
   aria-disabled="true"
   aria-expanded="false"
   class="select multiple is-disabled"
+  intl="[object Object]"
   tabindex="-1"
 >
   <div
@@ -451,6 +459,7 @@ exports[`Frame should render a disabled search variant 1`] = `
   aria-disabled="true"
   aria-expanded="false"
   class="select search is-disabled"
+  intl="[object Object]"
   tabindex="-1"
 >
   <div
@@ -507,6 +516,7 @@ exports[`Frame should render a disabled tag variant 1`] = `
   aria-disabled="true"
   aria-expanded="false"
   class="select tag is-disabled"
+  intl="[object Object]"
   tabindex="-1"
 >
   <div
@@ -569,6 +579,7 @@ exports[`Frame should render a multiple variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -631,6 +642,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -694,6 +706,7 @@ exports[`Frame should render a search variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select search"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -751,6 +764,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select search"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -809,6 +823,7 @@ exports[`Frame should render a tag variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -871,6 +886,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -934,6 +950,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag is-invalid"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -997,6 +1014,7 @@ exports[`Frame should render an invalid default variant 1`] = `
   aria-haspopup="true"
   aria-label="Search"
   class="select default is-invalid"
+  intl="[object Object]"
   role="application"
   tabindex="0"
 >
@@ -1042,6 +1060,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple is-invalid"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -1104,6 +1123,7 @@ exports[`Frame should render an invalid search variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select search is-invalid"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -1161,6 +1181,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag is-invalid"
+  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
@@ -1267,6 +1288,39 @@ exports[`Frame should update the aria-live text when the search has no results 1
       aria-haspopup="true"
       aria-label={null}
       className="select tag"
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en-US",
+          "messages": Object {
+            "Terra.form.select.add": "Add \\"{text}\\"",
+            "Terra.form.select.ariaLabel": "Search",
+            "Terra.form.select.defaultDisplay": "- Select -",
+            "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+            "Terra.form.select.selected": "{text} Selected",
+          },
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
       onBlur={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}

@@ -1,15 +1,3 @@
-/**
- * TODO
- *
- * Write wdio tests to ensure focus is placed correctly with these additions
- *
- * Get translations for following strings
- * * 'Click to navigate to options'
- * * 'Swipe right to navigate options.'
- * * 'Use up and down arrow keys to navigate through options.'
- *
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
