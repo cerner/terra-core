@@ -557,8 +557,6 @@ class Frame extends React.Component {
       ...customProps
     } = this.props;
 
-    console.log(this.ariaLabel());
-
     const selectClasses = cx([
       'select',
       variant,
