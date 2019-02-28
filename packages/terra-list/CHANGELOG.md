@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Replaced local keyCode values with keycode-js npm package 
 
+4.1.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.0.0 - (February 12, 2019)
 ------------------
 ### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/guides)

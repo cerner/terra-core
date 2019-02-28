@@ -2,13 +2,8 @@
 
 exports[`Heading should have all props including customProps set correctly 1`] = `
 <h1
-  className="heading italic visually-hidden level-1 size-small weight-200"
+  className="heading italic visually-hidden level-1 size-small weight-200 TestClass"
   id="id"
-  style={
-    Object {
-      "color": "#f00",
-    }
-  }
 >
   All props and custom attrs
 </h1>
@@ -17,24 +12,6 @@ exports[`Heading should have all props including customProps set correctly 1`] =
 exports[`Heading should render a heading component 1`] = `
 <h1
   className="heading level-1 weight-700"
-  style={
-    Object {
-      "color": "inherit",
-    }
-  }
->
-  Test
-</h1>
-`;
-
-exports[`Heading should render a heading component with color prop set 1`] = `
-<h1
-  className="heading level-1 weight-700"
-  style={
-    Object {
-      "color": "#f00",
-    }
-  }
 >
   Test
 </h1>
@@ -43,11 +20,6 @@ exports[`Heading should render a heading component with color prop set 1`] = `
 exports[`Heading should render a heading component with isItalic prop set 1`] = `
 <h1
   className="heading italic level-1 weight-700"
-  style={
-    Object {
-      "color": "inherit",
-    }
-  }
 >
   Test
 </h1>
@@ -56,11 +28,6 @@ exports[`Heading should render a heading component with isItalic prop set 1`] = 
 exports[`Heading should render a heading component with isVisuallyHidden prop set 1`] = `
 <h1
   className="heading visually-hidden level-1 weight-700"
-  style={
-    Object {
-      "color": "inherit",
-    }
-  }
 >
   Test
 </h1>
@@ -69,11 +36,6 @@ exports[`Heading should render a heading component with isVisuallyHidden prop se
 exports[`Heading should render a heading component with size prop set 1`] = `
 <h1
   className="heading level-1 size-large weight-700"
-  style={
-    Object {
-      "color": "inherit",
-    }
-  }
 >
   Test
 </h1>
@@ -82,11 +44,6 @@ exports[`Heading should render a heading component with size prop set 1`] = `
 exports[`Heading should render a heading component with weight prop set 1`] = `
 <h1
   className="heading level-1 weight-200"
-  style={
-    Object {
-      "color": "inherit",
-    }
-  }
 >
   Test
 </h1>
@@ -95,11 +52,6 @@ exports[`Heading should render a heading component with weight prop set 1`] = `
 exports[`Heading should support rendering a string as children 1`] = `
 <h1
   className="heading level-1 weight-700"
-  style={
-    Object {
-      "color": "inherit",
-    }
-  }
 >
   String
 </h1>
@@ -108,11 +60,6 @@ exports[`Heading should support rendering a string as children 1`] = `
 exports[`Heading should support rendering an array of elements as a children 1`] = `
 <h1
   className="heading level-1 weight-700"
-  style={
-    Object {
-      "color": "inherit",
-    }
-  }
 >
   <span>
     Element 1
@@ -129,11 +76,6 @@ exports[`Heading should support rendering an array of elements as a children 1`]
 exports[`Heading should support rendering an element as children 1`] = `
 <h1
   className="heading level-1 weight-700"
-  style={
-    Object {
-      "color": "inherit",
-    }
-  }
 >
   <span>
     Element

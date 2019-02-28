@@ -4,8 +4,14 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Added a11y clarity to not-selectable button group
 * Replaced local keyCode values with keycode-js npm package 
+
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Added a11y clarity to not-selectable button group
+* Minor dependency version bump
+* Improved screen reader clarity on non-selectable button group buttons
 
 3.5.0 - (February 12, 2019)
 ------------------

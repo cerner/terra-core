@@ -4,14 +4,21 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Replaced local keyCode values with keycode-js npm package 
+* Replaced local keyCode values with keycode-js npm package
+
+5.7.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 ### Added
-* Added en-AU translations
+* New CSS custom property: `--terra-form-select-disabled-placeholder-color`
+* New CSS custom property: `--terra-form-select-disabled-placeholder-font-style`
 
 ### Fixed
+* Added en-AU translations
+* Fixed issue preventing the input from inheriting the base font family
 * Fixed a Select Menu jest test that was broken with the release of enzyme-3.9.0
-
 
 5.6.0 - (February 12, 2019)
 ------------------

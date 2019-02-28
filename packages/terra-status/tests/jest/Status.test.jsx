@@ -11,34 +11,40 @@ const arrange = <Arrange fitStart={image} fill={simpleText} />;
 
 // Snapshot Tests
 it('should render a image with status', () => {
-  const imageWithStatus = <Status color="red">{image}</Status>;
+  const imageWithStatus = <Status>{image}</Status>;
   const wrapper = shallow(imageWithStatus);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a icon with status', () => {
-  const iconWithStatus = <Status color="grey">{icon}</Status>;
+  const iconWithStatus = <Status>{icon}</Status>;
   const wrapper = shallow(iconWithStatus);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a simpleText with status', () => {
-  const simpleTextWithStatus = <Status color="blue">{simpleText}</Status>;
+  const simpleTextWithStatus = <Status>{simpleText}</Status>;
   const wrapper = shallow(simpleTextWithStatus);
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a simpleText with correct class', () => {
+  const simpleTextWithStatus = <Status colorClass="testClass">{simpleText}</Status>;
+  const wrapper = shallow(simpleTextWithStatus);
+  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.getElement(0).props.className).toContain('testClass');
+});
+
 it('should render a arrange with status and customProps', () => {
-  const arrangeWithStatus = <Status color="green" id="id">{arrange}</Status>;
+  const arrangeWithStatus = <Status id="id">{arrange}</Status>;
   const wrapper = shallow(arrangeWithStatus);
   expect(wrapper).toMatchSnapshot();
 });
 
 // Structure test
 it('should have indicator section of component with correct class, style and type', () => {
-  const arrangeWithStatus = <Status color="green" className="testClass">{arrange}</Status>;
+  const arrangeWithStatus = <Status className="testClass">{arrange}</Status>;
   const wrapper = shallow(arrangeWithStatus);
-  expect(wrapper.getElement(0).props.style.borderColor).toEqual('green');
   expect(wrapper.getElement(0).props.className).toContain('status');
   expect(wrapper.getElement(0).props.className).toContain('testClass');
 });

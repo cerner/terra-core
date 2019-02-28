@@ -1,12 +1,16 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Text from 'terra-text/lib/Text';
+import classNames from 'classnames/bind';
+import styles from './colors.module.scss';
+
+const cx = classNames.bind(styles);
 
 const TextVariations = () => (
   <div>
-    <Text fontSize={18} color="#304FFE" isItalic>
+    <Text fontSize={18} colorClass={cx(['success'])} isItalic>
 Text with color set to
-      <code>rgb(46,125,50)</code>
+      <code>{'\'success\' class'}</code>
       {' '}
 and
       <code>isItalic</code>
