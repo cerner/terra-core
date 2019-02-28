@@ -7,7 +7,7 @@ describe('Menu', () => {
     const liveRegion = { current: document.createElement('div') };
 
     const menu = <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} variant="default" value="value" />;
-    const wrapper = shallow(menu, intlContexts.shallowContext);
+    const wrapper = render(menu, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
 });
