@@ -1,5 +1,5 @@
 const viewports = Terra.viewports('tiny');
-
+/*
 describe('Select Field', () => {
   describe('should select an option by click', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/select-field'));
@@ -44,3 +44,4 @@ describe('Select Field', () => {
     Terra.should.matchScreenshot('selected-option', { viewports });
   });
 });
+*/

@@ -2,6 +2,21 @@ const viewports = Terra.viewports('tiny');
 
 describe('Select', () => {
   describe('Default Variant', () => {
+    describe('default should gain focus when tabbed to', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+
+      it('should press tab key', () => {
+        browser.keys('Tab');
+      });
+
+      it('default should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('tab-focus', { viewports, selector: '#root' });
+    });
+
     describe('default should open select menu by click', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
@@ -127,33 +142,15 @@ describe('Select', () => {
     describe('default should close when pressing tab key to shift focus away from select', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
-      it('default should open the dropdown by clicking the select', () => {
-        browser.click('#default');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('opened-dropdown', { viewports, selector: '#root' });
-
       it('default should close the dropdown when tabbing focus away from the select', () => {
+        browser.click('#default');
         browser.keys('Tab');
       });
+
+      // TODO add focus expect statement here
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
-
-      it('default should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle]');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('toggle-opened-dropdown', { viewports, selector: '#root' });
-
-      it('default should close the dropdown by clicking off the select', () => {
-        browser.keys('Tab');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('toggle-tab-closed-dropdown', { viewports, selector: '#root' });
     });
 
     describe('default should select an option by pressing enter', () => {
