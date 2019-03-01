@@ -4,6 +4,14 @@ Changelog
 Unreleased
 ----------
 
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added stylelint-enable to Table.module.scss
+
 3.5.0 - (February 12, 2019)
 ------------------
 ### Changed

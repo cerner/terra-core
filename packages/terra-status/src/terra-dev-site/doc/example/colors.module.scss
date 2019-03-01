@@ -1,0 +1,19 @@
+:root {
+  --terra-status-attention-border-left-color: #f00;
+  --terra-status-success-border-left-color: #0f0;
+  --terra-status-info-border-left-color: rgb(0, 0, 255);
+}
+
+:local {
+  .attention {
+    border-left-color: var(--terra-status-attention-border-left-color, #f00);
+  }
+
+  .success {
+    border-left-color: var(--terra-status-success-border-left-color, #0f0);
+  }
+
+  .info {
+    border-left-color: var(--terra-status-info-border-left-color, rgb(0, 0, 255));
+  }
+}

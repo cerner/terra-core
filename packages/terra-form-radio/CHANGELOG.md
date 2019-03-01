@@ -4,6 +4,15 @@ ChangeLog
 Unreleased
 ----------
 
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added stylelint-enable at end of Radio.module.scss
+* Added en-AU translations
+
 3.5.0 - (February 12, 2019)
 ------------------
 ### Changed

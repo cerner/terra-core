@@ -202,6 +202,11 @@ class Menu extends React.Component {
         intl,
       } = this.context;
 
+      // Race condition can occur between calling timeout and unmounting this component.
+      if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
+        return;
+      }
+
       if (hasNoResults) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
       } else {

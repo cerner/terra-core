@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Improved screen reader clarity on non-selectable button group buttons
+
 3.5.0 - (February 12, 2019)
 ------------------
 ### Changed

@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+2.5.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Removed stylelint-disable in Signature.module.scss
+
 2.4.0 - (February 12, 2019)
 ------------------
 ### Changed

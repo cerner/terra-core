@@ -7,6 +7,7 @@ exports[`Frame should render a combobox variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -70,6 +71,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -134,6 +136,7 @@ exports[`Frame should render a custom dropdown 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -198,6 +201,7 @@ exports[`Frame should render a default variant 1`] = `
   aria-haspopup="true"
   aria-label="Search"
   class="select default"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="0"
@@ -223,6 +227,7 @@ exports[`Frame should render a default variant 1`] = `
   </div>
   <div
     class="toggle"
+    data-terra-form-select-toggle="true"
   >
     <span
       class="arrow-icon"
@@ -245,6 +250,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
   aria-haspopup="true"
   aria-label="Search"
   class="select default"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="0"
@@ -270,6 +276,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
   </div>
   <div
     class="toggle"
+    data-terra-form-select-toggle="true"
   >
     <span
       class="arrow-icon"
@@ -290,6 +297,7 @@ exports[`Frame should render a disabled combobox variant 1`] = `
   aria-disabled="true"
   aria-expanded="false"
   class="select tag is-disabled"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   tabindex="-1"
 >
@@ -353,6 +361,7 @@ exports[`Frame should render a disabled default variant 1`] = `
   aria-expanded="false"
   aria-label="Search"
   class="select default is-disabled"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   tabindex="-1"
 >
@@ -377,6 +386,7 @@ exports[`Frame should render a disabled default variant 1`] = `
   </div>
   <div
     class="toggle"
+    data-terra-form-select-toggle="true"
   >
     <span
       class="arrow-icon"
@@ -397,6 +407,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
   aria-disabled="true"
   aria-expanded="false"
   class="select multiple is-disabled"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   tabindex="-1"
 >
@@ -459,6 +470,7 @@ exports[`Frame should render a disabled search variant 1`] = `
   aria-disabled="true"
   aria-expanded="false"
   class="select search is-disabled"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   tabindex="-1"
 >
@@ -516,6 +528,7 @@ exports[`Frame should render a disabled tag variant 1`] = `
   aria-disabled="true"
   aria-expanded="false"
   class="select tag is-disabled"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   tabindex="-1"
 >
@@ -579,6 +592,7 @@ exports[`Frame should render a multiple variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -642,6 +656,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -706,6 +721,7 @@ exports[`Frame should render a search variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select search"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -764,6 +780,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select search"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -823,6 +840,7 @@ exports[`Frame should render a tag variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -886,6 +904,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -950,6 +969,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag is-invalid"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -1014,6 +1034,7 @@ exports[`Frame should render an invalid default variant 1`] = `
   aria-haspopup="true"
   aria-label="Search"
   class="select default is-invalid"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="0"
@@ -1039,6 +1060,7 @@ exports[`Frame should render an invalid default variant 1`] = `
   </div>
   <div
     class="toggle"
+    data-terra-form-select-toggle="true"
   >
     <span
       class="arrow-icon"
@@ -1060,6 +1082,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple is-invalid"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -1123,6 +1146,7 @@ exports[`Frame should render an invalid search variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select search is-invalid"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -1181,6 +1205,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag is-invalid"
+  data-terra-select-combobox="true"
   intl="[object Object]"
   role="application"
   tabindex="-1"
@@ -1288,6 +1313,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
       aria-haspopup="true"
       aria-label={null}
       className="select tag"
+      data-terra-select-combobox={true}
       intl={
         Object {
           "defaultFormats": Object {},
