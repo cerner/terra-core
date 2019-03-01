@@ -563,6 +563,7 @@ class Frame extends React.Component {
     return (
       <div
         {...customProps}
+        aria-roledescription={variant === Variants.DEFAULT ? 'listbox' : undefined}
         role={!disabled ? 'application' : undefined} // role="application" needed to allow JAWS to pick up and use our key event listeners
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}

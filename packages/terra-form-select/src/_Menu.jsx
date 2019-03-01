@@ -170,8 +170,8 @@ class Menu extends React.Component {
     this.clearScrollTimeout();
     document.removeEventListener('keydown', this.handleKeyDown);
 
-    if (this.props.focusRegion) {
-      this.props.focusRegion.removeAttribute('data-activedescendant');
+    if (this.props.focusRegion === this.props.select) {
+      this.props.focusRegion.removeAttribute('aria-activedescendant');
     }
   }
 
@@ -216,10 +216,10 @@ class Menu extends React.Component {
   }
 
   updateCurrentActiveScreenReader() {
-    this.menu.setAttribute('data-activedescendant', `terra-select-option-${this.state.active}`);
+    this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
 
-    if (this.props.focusRegion) {
-      this.props.focusRegion.setAttribute('data-activedescendant', `terra-select-option-${this.state.active}`);
+    if (this.props.focusRegion === this.props.select) {
+      this.props.focusRegion.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
     }
 
     if (this.props.visuallyHiddenComponent) {
@@ -404,17 +404,18 @@ class Menu extends React.Component {
     return (
       /**
        * Note: role="listbox" and aria-activedescendant needed for VoiceOver on iOS to properly
-       * shift the virtual indicator to this DOM element when dropdown is rendered.
+       * shift the virtual indicator to this DOM element when dropdown is rendered. If you modify these
+       * attributes, you'll need to manually verify that the virtual indicator on iOS is still shifted
+       * to the dropdown / the selected item in the dropdown if an item is selected when the dropdown
+       * is opened.
        */
       <ul
         id="terra-select-menu"
         role="listbox"
         className={cx('menu')}
         ref={(menu) => { this.menu = menu; }}
-        {...('ontouchstart' in window ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
-        data-activedescendant={`terra-select-option-${this.state.active}`}
+        {...(this.state.active !== null ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
         tabIndex="0"
-        style={{ outline: 'none' }}
       >
         {this.clone(this.state.children)}
       </ul>
