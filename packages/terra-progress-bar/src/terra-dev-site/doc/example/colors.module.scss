@@ -1,0 +1,145 @@
+:root {
+  --terra-progress-bar-example-1-background-color: rgb(255, 165, 0);
+  --terra-progress-bar-example-2-background-color: #8ccc62;
+  --terra-progress-bar-example-3-background-color: rgb(255, 0, 0);
+  --terra-progress-bar-2-colors-example-1-bar-background-color: #e8e8e8;
+  --terra-progress-bar-2-colors-example-1-value-background-color: #8ccc62;
+  --terra-progress-bar-2-colors-example-2-bar-background-color: rgb(0, 0, 0);
+  --terra-progress-bar-2-colors-example-2-value-background-color: rgb(255, 0, 0);
+  --terra-progress-bar-2-colors-example-3-bar-background-color: rgb(0, 0, 139);
+  --terra-progress-bar-2-colors-example-3-value-background-color: rgb(255, 165, 0);
+  --terra-progress-bar-customized-example-1-bar-background-color: #d3d4d5;
+  --terra-progress-bar-customized-example-1-value-background-color: #8ccc62;
+  --terra-progress-bar-customized-example-1-border-right: 1px solid #fff;
+  --terra-progress-bar-customized-example-1-empty-border-right: 0 solid #fff;
+  --terra-progress-bar-customized-example-2-backup-bar-background-color: rgb(0, 0, 255);
+  --terra-progress-bar-customized-example-2-backup-value-background-color: rgb(255, 0, 0);
+  --terra-progress-bar-customized-example-2-bar-background: linear-gradient(to left, rgb(255, 255, 0), rgb(0, 0, 255));
+  --terra-progress-bar-customized-example-2-value-background: linear-gradient(to left, rgb(255, 0, 0), rgb(0, 128, 0));
+  --terra-progress-bar-customized-example-2-border-right: 3px solid rgb(0, 255, 0);
+  --terra-progress-bar-customized-example-2-empty-border-right: 0 solid rgb(0, 255, 0);
+}
+
+:local {
+  .color-bar-example-1 {
+    color: var(--terra-progress-bar-example-1-background-color, rgb(255, 165, 0));
+    &::-webkit-progress-value { background-color: var(--terra-progress-bar-example-1-background-color, rgb(255, 165, 0)); }
+    &::-moz-progress-bar { background-color: var(--terra-progress-bar-example-1-background-color, rgb(255, 165, 0)); }
+    &::-ms-fill { background-color: var(--terra-progress-bar-example-1-background-color, rgb(255, 165, 0)); }
+  }
+
+  .color-bar-example-2 {
+    color: var(--terra-progress-bar-example-2-background-color, #8ccc62);
+    &::-webkit-progress-value { background-color: var(--terra-progress-bar-example-2-background-color, #8ccc62); }
+    &::-moz-progress-bar { background-color: var(--terra-progress-bar-example-2-background-color, #8ccc62); }
+    &::-ms-fill { background-color: var(--terra-progress-bar-example-2-background-color, #8ccc62); }
+  }
+
+  .color-bar-example-3 {
+    color: var(--terra-progress-bar-example-3-background-color, rgb(255, 0, 0));
+    &::-webkit-progress-value { background-color: var(--terra-progress-bar-example-3-background-color, rgb(255, 0, 0)); }
+    &::-moz-progress-bar { background-color: var(--terra-progress-bar-example-3-background-color, rgb(255, 0, 0)); }
+    &::-ms-fill { background-color: var(--terra-progress-bar-example-3-background-color, rgb(255, 0, 0)); }
+  }
+
+  .two-colors-bar-2-colors-example-1 {
+    background-color: var(--terra-progress-bar-2-colors-example-1-bar-background-color, #e8e8e8);
+    color: var(--terra-progress-bar-2-colors-example-1-value-background-color, #8ccc62);
+    &::-webkit-progress-bar { background-color: var(--terra-progress-bar-2-colors-example-1-bar-background-color, #e8e8e8); }
+    &::-webkit-progress-value { background-color: var(--terra-progress-bar-2-colors-example-1-value-background-color, #8ccc62); }
+    &::-moz-progress-bar { background-color: var(--terra-progress-bar-2-colors-example-1-value-background-color, #8ccc62); }
+    &::-ms-fill { background-color: var(--terra-progress-bar-2-colors-example-1-value-background-color, #8ccc62); }
+  }
+
+  .two-colors-bar-2-colors-example-2 {
+    background-color: var(--terra-progress-bar-2-colors-example-2-bar-background-color, rgb(0, 0, 0));
+    color: var(--terra-progress-bar-2-colors-example-2-value-background-color, rgb(255, 0, 0));
+    &::-webkit-progress-bar { background-color: var(--terra-progress-bar-2-colors-example-2-bar-background-color, rgb(0, 0, 0)); }
+    &::-webkit-progress-value { background-color: var(--terra-progress-bar-2-colors-example-2-value-background-color, rgb(255, 0, 0)); }
+    &::-moz-progress-bar { background-color: var(--terra-progress-bar-2-colors-example-2-value-background-color, rgb(255, 0, 0)); }
+    &::-ms-fill { background-color: var(--terra-progress-bar-2-colors-example-2-value-background-color, rgb(255, 0, 0)); }
+  }
+
+  .two-colors-bar-2-colors-example-3 {
+    background-color: var(--terra-progress-bar-2-colors-example-3-bar-background-color, rgb(0, 0, 139));
+    color: var(--terra-progress-bar-2-colors-example-3-value-background-color, rgb(255, 165, 0));
+    &::-webkit-progress-bar { background-color: var(--terra-progress-bar-2-colors-example-3-bar-background-color, rgb(0, 0, 139)); }
+    &::-webkit-progress-value { background-color: var(--terra-progress-bar-2-colors-example-3-value-background-color, rgb(255, 165, 0)); }
+    &::-moz-progress-bar { background-color: var(--terra-progress-bar-2-colors-example-3-value-background-color, rgb(255, 165, 0)); }
+    &::-ms-fill { background-color: var(--terra-progress-bar-2-colors-example-3-value-background-color, rgb(255, 165, 0)); }
+  }
+
+  .customized-color-bar-example-1 {
+    background-color: var(--terra-progress-bar-customized-example-1-bar-background-color, #d3d4d5);
+    border-right: var(--terra-progress-bar-customized-example-1-border-right, 1px solid #fff);
+    color: var(--terra-progress-bar-customized-example-1-value-background-color, #8ccc62);
+
+    &[value] {
+      &::-webkit-progress-bar { background-color: var(--terra-progress-bar-customized-example-1-bar-background-color, #d3d4d5); }
+
+      &::-webkit-progress-value {
+        background-color: var(--terra-progress-bar-customized-example-1-value-background-color, #8ccc62);
+        border-right: var(--terra-progress-bar-customized-example-1-border-right, 1px solid #fff);
+      }
+
+      &::-moz-progress-bar {
+        background-color: var(--terra-progress-bar-customized-example-1-value-background-color, #8ccc62);
+        border-right: var(--terra-progress-bar-customized-example-1-border-right, 1px solid #fff);
+      }
+
+      &::-ms-fill {
+        background-color: var(--terra-progress-bar-customized-example-1-value-background-color, #8ccc62);
+        border-right: var(--terra-progress-bar-customized-example-1-border-right, 1px solid #fff);
+      }
+    }
+
+    &[value='100'],
+    &[value='0'] {
+      border-right: var(--terra-progress-bar-customized-example-1-empty-border-right, 0 solid #fff);
+      &::-webkit-progress-value { border-right: var(--terra-progress-bar-customized-example-1-empty-border-right, 0 solid #fff); }
+      &::-moz-progress-bar { border-right: var(--terra-progress-bar-customized-example-1-empty-border-right, 0 solid #fff); }
+      &::-ms-fill { border-right: var(--terra-progress-bar-customized-example-1-empty-border-right, 0 solid #fff); }
+    }
+
+  }
+
+  .customized-color-bar-example-2 {
+    background: var(--terra-progress-bar-customized-example-2-bar-background, linear-gradient(to left, rgb(255, 255, 0), rgb(0, 0, 255)));
+    background-color: var(--terra-progress-bar-customized-example-2-backup-bar-background-color, rgb(0, 0, 255));
+    border-right: var(--terra-progress-bar-customized-example-2-border-right, 3px solid rgb(0, 255, 0));
+    color: var(--terra-progress-bar-customized-example-2-backup-value-background-color, rgb(255, 0, 0));
+
+    &[value] {
+      &::-webkit-progress-bar {
+        background: var(--terra-progress-bar-customized-example-2-bar-background, linear-gradient(to left, rgb(255, 255, 0), rgb(0, 0, 255)));
+        background-color: var(--terra-progress-bar-customized-example-2-backup-bar-background-color, rgb(0, 0, 255));
+      }
+
+      &::-webkit-progress-value {
+        background: var(--terra-progress-bar-customized-example-2-value-background, linear-gradient(to left, rgb(255, 0, 0), rgb(0, 128, 0)));
+        background-color: var(--terra-progress-bar-customized-example-2-backup-value-background-color, rgb(255, 0, 0));
+        border-right: var(--terra-progress-bar-customized-example-2-border-right, 3px solid rgb(0, 255, 0));
+      }
+
+      &::-moz-progress-bar {
+        background: var(--terra-progress-bar-customized-example-2-value-background, linear-gradient(to left, rgb(255, 0, 0), rgb(0, 128, 0)));
+        background-color: var(--terra-progress-bar-customized-example-2-backup-value-background-color, rgb(255, 0, 0));
+        border-right: var(--terra-progress-bar-customized-example-2-border-right, 3px solid rgb(0, 255, 0));
+      }
+
+      &::-ms-fill {
+        background: var(--terra-progress-bar-customized-example-2-value-background, linear-gradient(to left, rgb(255, 0, 0), rgb(0, 128, 0)));
+        background-color: var(--terra-progress-bar-customized-example-2-backup-value-background-color, rgb(255, 0, 0));
+        border-right: var(--terra-progress-bar-customized-example-2-border-right, 3px solid rgb(0, 255, 0));
+      }
+    }
+
+    &[value='100'],
+    &[value='0'] {
+      border-right: var(--terra-progress-bar-customized-example-2-empty-border-right, 0 solid rgb(0, 255, 0));
+      &::-webkit-progress-value { border-right: var(--terra-progress-bar-customized-example-2-empty-border-right, 0 solid rgb(0, 255, 0)); }
+      &::-moz-progress-bar { border-right: var(--terra-progress-bar-customized-example-2-empty-border-right, 0 solid rgb(0, 255, 0)); }
+      &::-ms-fill { border-right: var(--terra-progress-bar-customized-example-2-empty-border-right, 0 solid rgb(0, 255, 0)); }
+    }
+  }
+}

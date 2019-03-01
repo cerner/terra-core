@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.3.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 ### Changed
 * Removed stylelint overrides in CardBody.module.scss
 
