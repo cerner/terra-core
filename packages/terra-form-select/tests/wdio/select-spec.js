@@ -460,7 +460,6 @@ describe('Select', () => {
       Terra.should.matchScreenshot('tab-focus', { viewports, selector: '#root' });
     });
 
-
     describe('combobox should open dropdown by spacebar key press', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-combobox');
@@ -485,8 +484,6 @@ describe('Select', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
     });
-
-
 
     describe('combobox should open dropdown by down arrow key press', () => {
       before(() => {
@@ -652,7 +649,6 @@ describe('Select', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('select-closed', { viewports, selector: '#root' });
     });
-
 
     describe('combobox should open and close the dropdown by clicking on toggle icon', () => {
       before(() => {
