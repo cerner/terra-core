@@ -2,10 +2,17 @@ const viewports = Terra.viewports('tiny');
 
 describe('Select', () => {
   describe('Default Variant', () => {
+    describe('default uncontrolled should be closed initially', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+    });
+
     describe('default should gain focus when tabbed to', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
-      it('should press tab key', () => {
+      it('should tab focus to the select', () => {
         browser.keys('Tab');
       });
 
@@ -17,90 +24,76 @@ describe('Select', () => {
       Terra.should.matchScreenshot('tab-focus', { viewports, selector: '#root' });
     });
 
-    describe('default should open select menu by click', () => {
+    describe('default should open dropdown by click', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
 
       it('default should open the dropdown by clicking the select', () => {
         browser.click('#default');
+      });
+
+      it('dropdown menu should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
       });
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
     });
 
-    describe('default should select an option by click', () => {
+    describe('default should open dropdown by spacebar key press', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
-      it('default should select the first option', () => {
-        browser.click('#default');
-        browser.click('#terra-select-option-blue');
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('default should open the dropdown by spacebar key press', () => {
+        browser.keys('Space');
+      });
+
+      it('dropdown menu should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('selected-option', { viewports });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
     });
 
-    describe('default should open and close the select menu by clicking on toggle icon', () => {
+    describe('default should open dropdown by down arrow key press', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
-      it('default should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle]');
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('default should open the dropdown by arrow down key press', () => {
+        browser.keys('ArrowDown');
+      });
+
+      it('dropdown menu should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('toggle-icon-opened-dropdown', { viewports, selector: '#root' });
-
-      it('default should close the dropdown by clicking the select toggle icon again', () => {
-        browser.click('[data-terra-form-select-toggle]');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('toggle-icon-closed-dropdown', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
     });
 
-    describe('default should close when clicking on toggle icon when select is open', () => {
+    describe('default should not open dropdown by enter key press', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
-      it('default should open on click', () => {
-        browser.click('#default');
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
       });
 
-      it('default should close on toggle icon click', () => {
-        browser.click('[data-terra-form-select-toggle]');
+      it('default should not open the dropdown by enter key press', () => {
+        browser.keys('Enter');
+      });
+
+      it('default select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('select-closed', { viewports, selector: '#root' });
-    });
-
-    describe('default should close when clicking on select after it is opened', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
-      it('default should open on click', () => {
-        browser.click('#default');
-      });
-
-      it('default should close on subsequent click', () => {
-        browser.click('#default');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('closed', { viewports, selector: '#root' });
-    });
-
-    describe('default should select an option by click after clicking on toggle icon', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
-      it('default should select the first option', () => {
-        browser.click('[data-terra-form-select-toggle]');
-        browser.click('#terra-select-option-blue');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('toggle-icon-selected-option', { viewports, selector: '#root' });
+      Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
     });
 
     describe('default should close when clicking off of the select', () => {
@@ -115,6 +108,10 @@ describe('Select', () => {
 
       it('default should close the dropdown by clicking off the select', () => {
         browser.click('#root');
+      });
+
+      it('select should not be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.false;
       });
 
       Terra.should.beAccessible();
@@ -135,6 +132,10 @@ describe('Select', () => {
         browser.click('#root');
       });
 
+      it('select should not be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.false;
+      });
+
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('toggle-closed-dropdown', { viewports, selector: '#root' });
     });
@@ -147,10 +148,152 @@ describe('Select', () => {
         browser.keys('Tab');
       });
 
-      // TODO add focus expect statement here
+      it('default should not be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.false;
+      });
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('default should close when clicking on toggle icon when select is open', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+
+      it('default should open on click', () => {
+        browser.click('#default');
+      });
+
+      it('dropdown should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      });
+
+      it('default should close on toggle icon click', () => {
+        browser.click('[data-terra-form-select-toggle]');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('select-closed', { viewports, selector: '#root' });
+    });
+
+    describe('default should open and close the dropdown by clicking on the select', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+
+      it('default should open on click', () => {
+        browser.click('#default');
+      });
+
+      it('dropdown should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      });
+
+      Terra.should.matchScreenshot('opened', { viewports, selector: '#root' });
+
+      it('default should close on subsequent click', () => {
+        browser.click('#default');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('closed', { viewports, selector: '#root' });
+    });
+
+    describe('default should open and close the dropdown by clicking on toggle icon', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+
+      it('default should open the dropdown by clicking the select toggle icon', () => {
+        browser.click('[data-terra-form-select-toggle]');
+      });
+
+      it('dropdown should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-icon-opened-dropdown', { viewports, selector: '#root' });
+
+      it('default should close the dropdown by clicking the select toggle icon again', () => {
+        browser.click('[data-terra-form-select-toggle]');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-icon-closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('default should select an option by click', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+
+      it('default should select the first option', () => {
+        browser.click('#default');
+        browser.click('#terra-select-option-blue');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('default should select an option by keyboard interaction', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
+
+      it('default should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('Space');
+        browser.keys('Enter');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('default should select an option by click after clicking on toggle icon', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+
+      it('default should select the first option', () => {
+        browser.click('[data-terra-form-select-toggle]');
+        browser.click('#terra-select-option-blue');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-icon-selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('default should select an option by alternative keyboard interaction', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
+
+      it('default should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('ArrowDown');
+        browser.keys('Enter');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
     });
 
     describe('default should select an option by pressing enter', () => {
@@ -167,18 +310,51 @@ describe('Select', () => {
         browser.keys('Enter');
       });
 
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot('selected-option', { viewports });
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('default should select second option by keyboard interaction', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
+
+      it('default should navigate to second option', () => {
+        browser.keys('Tab');
+        browser.keys('ArrowDown');
+        browser.keys('ArrowDown');
+      });
+
+      it('dropdown menu should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('second-option-highlighted', { viewports, selector: '#root' });
+
+      it('default should select the second option', () => {
+        browser.keys('Enter');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
     });
 
     describe('default controlled should select an option by click', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-
       it('default controlled should open the dropdown by clicking the toggle icon', () => {
         browser.click('[data-terra-form-select-toggle]');
+      });
+
+      it('dropdown should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
       });
 
       Terra.should.beAccessible();
@@ -186,6 +362,10 @@ describe('Select', () => {
 
       it('default controlled should select the first option', () => {
         browser.click('#terra-select-option-green');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('#default')).should.be.true;
       });
 
       Terra.should.beAccessible();
