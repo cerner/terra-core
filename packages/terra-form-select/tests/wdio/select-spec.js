@@ -21,6 +21,7 @@ const viewports = Terra.viewports('tiny');
  */
 
 describe('Select', () => {
+/*
   describe('Default Variant', () => {
     describe('default uncontrolled should be closed initially', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
@@ -885,8 +886,339 @@ describe('Select', () => {
     });
   });
 
-/*
   describe('Multiple Variant', () => {
+    describe('multiple should be closed initially', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+    });
+
+    describe('multiple should gain focus when tabbed to', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('tab-focus', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should open dropdown by spacebar key press', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('multiple should open the dropdown by spacebar key press', () => {
+        browser.keys('Space');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should open dropdown by down arrow key press', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('multiple should open the dropdown by arrow down key press', () => {
+        browser.keys('ArrowDown');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should not open dropdown by enter key press', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('multiple should not open the dropdown by enter key press', () => {
+        browser.keys('Enter');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should close when clicking off of the select', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('multiple should open the dropdown by clicking the select', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('opened-dropdown', { viewports, selector: '#root' });
+
+      it('multiple should close the dropdown by clicking off the select', () => {
+        browser.click('#root');
+      });
+
+      it('multiple should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
+      });
+
+      it('multiple input should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should close when clicking off of the select after being opened by toggle icon', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('multiple should open the dropdown by clicking the select toggle icon', () => {
+        browser.click('[data-terra-form-select-toggle-button]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-opened-dropdown', { viewports, selector: '#root' });
+
+      it('multiple should close the dropdown by clicking off the select', () => {
+        browser.click('#root');
+      });
+
+      it('multiple should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
+      });
+
+      it('multiple input should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should close when pressing tab key to shift focus away from select', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('multiple should close the dropdown when tabbing focus away from the select', () => {
+        browser.click('[data-terra-select]');
+        browser.keys('Tab');
+      });
+
+      it('multiple should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
+      });
+
+      it('multiple input should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should close when clicking on toggle icon when select is open', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('multiple should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      it('multiple should close on toggle icon click', () => {
+        browser.click('[data-terra-form-select-toggle]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('select-closed', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should open and close the dropdown by clicking on toggle icon', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('multiple should open the dropdown by clicking the select toggle icon', () => {
+        browser.click('[data-terra-form-select-toggle-button]');
+      });
+
+      it('dropdown should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-icon-opened-dropdown', { viewports, selector: '#root' });
+
+      it('multiple should close the dropdown by clicking the select toggle icon again', () => {
+        browser.click('[data-terra-form-select-toggle-button]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-icon-closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should select an option by keyboard interaction', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('multiple should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('Space');
+        browser.keys('Enter');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should select an option by alternative keyboard interaction', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('multiple should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('ArrowDown');
+        browser.keys('Enter');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('multiple should select second option by keyboard interaction', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('multiple should navigate to second option', () => {
+        browser.keys('Tab');
+        browser.keys('ArrowDown');
+        browser.keys('ArrowDown');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('second-option-highlighted', { viewports, selector: '#root' });
+
+      it('multiple should select the second option', () => {
+        browser.keys('Enter');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
     describe('multiple should select an option by click', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
@@ -962,8 +1294,363 @@ describe('Select', () => {
       Terra.should.matchScreenshot('selected-option', { viewports });
     });
   });
+*/
 
   describe('Search Variant', () => {
+    describe('search should be closed initially', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+    });
+
+    describe('search should gain focus when tabbed to', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('tab-focus', { viewports, selector: '#root' });
+    });
+
+    describe('search should open dropdown by spacebar key press', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('search should open the dropdown by spacebar key press', () => {
+        browser.keys('Space');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('search should open dropdown by down arrow key press', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('search should open the dropdown by arrow down key press', () => {
+        browser.keys('ArrowDown');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('search should not open dropdown by enter key press', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('search should not open the dropdown by enter key press', () => {
+        browser.keys('Enter');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('search should close when clicking off of the select', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should open the dropdown by clicking the select', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('opened-dropdown', { viewports, selector: '#root' });
+
+      it('search should close the dropdown by clicking off the select', () => {
+        browser.click('#root');
+      });
+
+      it('search should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
+      });
+
+      it('search input should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('search should close when clicking off of the select after being opened by toggle icon', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should open the dropdown by clicking the select toggle icon', () => {
+        browser.click('[data-terra-form-select-toggle-button]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-opened-dropdown', { viewports, selector: '#root' });
+
+      it('search should close the dropdown by clicking off the select', () => {
+        browser.click('#root');
+      });
+
+      it('search should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
+      });
+
+      it('search input should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('search should close when pressing tab key to shift focus away from select', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should close the dropdown when tabbing focus away from the select', () => {
+        browser.click('[data-terra-select]');
+        browser.keys('Tab');
+      });
+
+      it('search should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
+      });
+
+      it('search input should not be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('search should close when clicking on toggle icon when select is open', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
+      });
+
+      it('search should close on toggle icon click', () => {
+        browser.click('[data-terra-form-select-toggle]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('select-closed', { viewports, selector: '#root' });
+    });
+
+    describe('search should open and close the dropdown by clicking on toggle icon', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should open the dropdown by clicking the select toggle icon', () => {
+        browser.click('[data-terra-form-select-toggle-button]');
+      });
+
+      it('dropdown should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-icon-opened-dropdown', { viewports, selector: '#root' });
+
+      it('search should close the dropdown by clicking the select toggle icon again', () => {
+        browser.click('[data-terra-form-select-toggle-button]');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-icon-closed-dropdown', { viewports, selector: '#root' });
+    });
+
+    describe('search should select an option by keyboard interaction', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('Space');
+        browser.keys('Enter');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('search should select an option by click after clicking on toggle icon', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should select the first option', () => {
+        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('#terra-select-option-blue');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('toggle-icon-selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('search should select an option by alternative keyboard interaction', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('ArrowDown');
+        browser.keys('Enter');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
+    describe('search should select second option by keyboard interaction', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      it('search should navigate to second option', () => {
+        browser.keys('Tab');
+        browser.keys('ArrowDown');
+        browser.keys('ArrowDown');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('second-option-highlighted', { viewports, selector: '#root' });
+
+      it('search should select the second option', () => {
+        browser.keys('Enter');
+      });
+
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports, selector: '#root' });
+    });
+
     describe('search should select an option by click', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
@@ -1067,6 +1754,7 @@ describe('Select', () => {
     });
   });
 
+  /*
   describe('Tag Variant', () => {
     describe('tag should select an option by click', () => {
       before(() => {
