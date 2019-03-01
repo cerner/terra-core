@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added option to limit the maximum number os selection count for multi-select variants.
 
+### Fixed
+* Race condition where timeout would update after the component is not mounted
 
 5.7.0 - (February 26, 2019)
 ------------------
