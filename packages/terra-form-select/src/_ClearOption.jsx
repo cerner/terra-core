@@ -23,6 +23,7 @@ const ClearOption = ({ display, value, ...customProps }) => (
     className={cx(['clear-option', customProps.className])}
     display={display}
     value={value}
+    isSelected={false}
   />
 );
 

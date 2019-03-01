@@ -95,7 +95,7 @@ describe('Menu', () => {
     jest.advanceTimersByTime(500);
     expect(true).toEqual(true);
   });
-  
+
   it('should render a Menu with the clear option', () => {
     const liveRegion = { current: document.createElement('div') };
 
