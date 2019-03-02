@@ -3,10 +3,8 @@
 exports[`Menu should render a default Menu 1`] = `
 <ul
   class="menu"
-  data-activedescendant="terra-select-option-null"
   id="terra-select-menu"
   role="listbox"
-  style="outline:none"
   tabindex="0"
 >
   <div
