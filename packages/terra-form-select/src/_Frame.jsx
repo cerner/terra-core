@@ -487,40 +487,60 @@ class Frame extends React.Component {
   renderToggleButton() {
     const { variant } = this.props;
 
-    if (variant !== Variants.DEFAULT) {
-      /**
-       * When the input within the select is focused, we don't want to render the toggle button that
-       * shifts focus to the select menu as it causes issues when using VoiceOver on iOS.
-       * Always rendering the toggle button allows the users to shift the virtual indicator to the
-       * toggle button and tap on it which shifts focus to the select menu. When this happens on iOS,
-       * the onScreen keyboard will close and shift focus back to the input which prevents users
-       * from ever navigating through the select options.
-       */
-      if (this.state.isInputFocused) {
+    /**
+     * Devices that support ontouchstart trigger an onScreen keyboard when inputs are focused and
+     * need customized rendering to avoid issues when used with a screen reader.
+     */
+    if ('ontouchstart' in window) {
+      if (variant !== Variants.DEFAULT) {
+        /**
+         * When the input within the select is focused, we don't want to render the toggle button that
+         * shifts focus to the select menu as it causes issues when using VoiceOver on iOS.
+         * Always rendering the toggle button allows the users to shift the virtual indicator to the
+         * toggle button and tap on it which shifts focus to the select menu dropdown. When this
+         * happens on iOS, the onScreen keyboard will close and shift focus back to the input which
+         * prevents users from ever navigating through the select options.
+         */
+        if (this.state.isInputFocused) {
+          return (
+            <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
+              <span className={cx('arrow-icon')} />
+            </div>
+          );
+        }
+
+        /**
+         * Toggle button enables shifting focus to dropdown. This allows iOS users that are using
+         * VoiceOver the ability to navigate to the select options.
+         */
         return (
-          <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
-            <span className={cx('arrow-icon')} />
+          <div className={cx(['toggle', 'toggle-narrow'])}>
+            <button
+              type="button"
+              className={cx('toggle-btn')}
+              aria-label="Tap to navigate to options"
+              data-terra-form-select-toggle-button
+              onMouseDown={this.handleToggleButtonMouseDown}
+            >
+              <span className={cx('arrow-icon')} data-terra-form-select-toggle-button-icon />
+            </button>
           </div>
         );
       }
 
+      /**
+       * If the variant is default, we don't need to set up any event handlers on the toggle
+       * The event handlers on data-terra-select-combobox will handle tap/click events on this element
+       */
       return (
-        <div className={cx(['toggle', 'toggle-narrow'])}>
-          <button
-            type="button"
-            className={cx('toggle-btn')}
-            aria-label="Click to navigate to options"
-            data-terra-form-select-toggle-button
-            onMouseDown={this.handleToggleButtonMouseDown}
-          >
-            <span className={cx('arrow-icon')} data-terra-form-select-toggle-button-icon />
-          </button>
+        <div data-terra-form-select-toggle className={cx('toggle')}>
+          <span className={cx('arrow-icon')} />
         </div>
       );
     }
 
     return (
-      <div data-terra-form-select-toggle className={cx('toggle')}>
+      <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.toggleDropdown}>
         <span className={cx('arrow-icon')} />
       </div>
     );

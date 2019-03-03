@@ -557,7 +557,7 @@ describe('Select', () => {
       });
 
       it('combobox should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
       Terra.should.beAccessible();
@@ -640,18 +640,18 @@ describe('Select', () => {
       });
 
       it('combobox should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
-      it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      it('combobox input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('toggle-icon-opened-dropdown', { viewports, selector: '#root' });
 
       it('combobox should close the dropdown by clicking the select toggle icon again', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
       Terra.should.beAccessible();
@@ -691,7 +691,7 @@ describe('Select', () => {
       });
 
       it('combobox should select the first option', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
         browser.click('#terra-select-option-blue');
       });
 
@@ -1017,7 +1017,7 @@ describe('Select', () => {
       });
 
       it('multiple should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
       Terra.should.beAccessible();
@@ -1100,18 +1100,18 @@ describe('Select', () => {
       });
 
       it('multiple should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
-      it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('toggle-icon-opened-dropdown', { viewports, selector: '#root' });
 
       it('multiple should close the dropdown by clicking the select toggle icon again', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
       Terra.should.beAccessible();
@@ -1426,7 +1426,7 @@ describe('Select', () => {
       });
 
       it('search should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
       Terra.should.beAccessible();
@@ -1509,18 +1509,18 @@ describe('Select', () => {
       });
 
       it('search should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
-      it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      it('search input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('toggle-icon-opened-dropdown', { viewports, selector: '#root' });
 
       it('search should close the dropdown by clicking the select toggle icon again', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
       Terra.should.beAccessible();
@@ -1560,7 +1560,7 @@ describe('Select', () => {
       });
 
       it('search should select the first option', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
         browser.click('#terra-select-option-blue');
       });
 
@@ -1935,18 +1935,18 @@ describe('Select', () => {
       });
 
       it('tag should open the dropdown by clicking the select toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
-      it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      it('tag input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('toggle-icon-opened-dropdown', { viewports, selector: '#root' });
 
       it('tag should close the dropdown by clicking the select toggle icon again', () => {
-        browser.click('[data-terra-form-select-toggle-button]');
+        browser.click('[data-terra-form-select-toggle]');
       });
 
       Terra.should.beAccessible();
