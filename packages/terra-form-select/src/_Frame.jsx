@@ -629,7 +629,6 @@ class Frame extends React.Component {
                 searchValue: this.state.searchValue,
                 input: this.input,
                 select: this.select,
-                focusRegion: variant === Variants.DEFAULT ? this.select : this.input,
               })}
           </Dropdown>
           )

@@ -25,11 +25,6 @@ const propTypes = {
   select: PropTypes.instanceOf(Element),
   /**
    * @private
-   * Element that is used to trigger the dropdown, such as an input or button.
-   */
-  focusRegion: PropTypes.instanceOf(Element),
-  /**
-   * @private
    * The intl object to be injected for translations.
    */
   intl: intlShape.isRequired,
@@ -79,7 +74,6 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
-  focusRegion: undefined,
   input: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
@@ -169,10 +163,6 @@ class Menu extends React.Component {
     this.clearSearch();
     this.clearScrollTimeout();
     document.removeEventListener('keydown', this.handleKeyDown);
-
-    if (this.props.focusRegion === this.props.select) {
-      this.props.focusRegion.removeAttribute('aria-activedescendant');
-    }
   }
 
   isActiveSelected() {
@@ -217,10 +207,6 @@ class Menu extends React.Component {
 
   updateCurrentActiveScreenReader() {
     this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
-
-    if (this.props.focusRegion === this.props.select) {
-      this.props.focusRegion.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
-    }
 
     if (this.props.visuallyHiddenComponent) {
       const element = Util.findByValue(this.props.children, this.state.active);
