@@ -7,10 +7,7 @@ Unreleased
 2.22.0 - (February 26, 2019)
 ------------------
 ### Changed
-* Added a11y clarity to not-selectable button group
 * Minor dependency version bump
-
-### Changed
 * Add styles to increase text contrast for block quotes
 
 2.21.0 - (February 5, 2019)

@@ -6,7 +6,8 @@ import ResponsiveElement from 'terra-responsive-element';
 import 'terra-base/lib/baseStyles';
 import styles from './Paginator.module.scss';
 
-import { calculatePages, pageSet, KeyCode } from './_paginationUtils';
+import KeyCode from 'keycode-js';
+import { calculatePages, pageSet } from './_paginationUtils';
 
 const cx = classNames.bind(styles);
 
