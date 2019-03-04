@@ -41,19 +41,12 @@ exports[`Frame should render a combobox variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -106,19 +99,12 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -170,19 +156,12 @@ exports[`Frame should render a custom dropdown 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -331,19 +310,12 @@ exports[`Frame should render a disabled combobox variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -441,19 +413,12 @@ exports[`Frame should render a disabled multiple variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -499,19 +464,12 @@ exports[`Frame should render a disabled search variant 1`] = `
     </div>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -562,19 +520,12 @@ exports[`Frame should render a disabled tag variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -626,19 +577,12 @@ exports[`Frame should render a multiple variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -691,19 +635,12 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -750,19 +687,12 @@ exports[`Frame should render a search variant 1`] = `
     </div>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -810,19 +740,12 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
     </div>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -874,19 +797,12 @@ exports[`Frame should render a tag variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -939,19 +855,12 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -1003,19 +912,12 @@ exports[`Frame should render an invalid combobox variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -1116,19 +1018,12 @@ exports[`Frame should render an invalid multiple variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -1175,19 +1070,12 @@ exports[`Frame should render an invalid search variant 1`] = `
     </div>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -1239,19 +1127,12 @@ exports[`Frame should render an invalid tag variant 1`] = `
     </ul>
   </div>
   <div
-    class="toggle toggle-narrow"
+    class="toggle"
+    data-terra-form-select-toggle="true"
   >
-    <button
-      aria-label="Click to navigate to options"
-      class="toggle-btn"
-      data-terra-form-select-toggle-button="true"
-      type="button"
-    >
-      <span
-        class="arrow-icon"
-        data-terra-form-select-toggle-button-icon="true"
-      />
-    </button>
+    <span
+      class="arrow-icon"
+    />
   </div>
   <span
     aria-atomic="true"
@@ -1390,20 +1271,13 @@ exports[`Frame should update the aria-live text when the search has no results 1
         </ul>
       </div>
       <div
-        className="toggle toggle-narrow"
+        className="toggle"
+        data-terra-form-select-toggle={true}
+        onMouseDown={[Function]}
       >
-        <button
-          aria-label="Click to navigate to options"
-          className="toggle-btn"
-          data-terra-form-select-toggle-button={true}
-          onMouseDown={[Function]}
-          type="button"
-        >
-          <span
-            className="arrow-icon"
-            data-terra-form-select-toggle-button-icon={true}
-          />
-        </button>
+        <span
+          className="arrow-icon"
+        />
       </div>
       <span
         aria-atomic="true"
