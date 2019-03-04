@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Race condition where timeout would update after the component is not mounted
 
 5.7.0 - (February 26, 2019)
 ------------------
