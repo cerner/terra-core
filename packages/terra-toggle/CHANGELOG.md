@@ -3,7 +3,10 @@ Changelog
 
 Unreleased
 ----------
-### Changed
+
+3.4.1 - (March 5, 2019)
+------------------
+### Fixed
 * Fixed link to toggle-button
 
 3.4.0 - (February 26, 2019)

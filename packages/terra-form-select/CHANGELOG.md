@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.8.0 - (March 5th, 2019)
+------------------
 ### Fixed
 * Race condition where timeout would update after the component is not mounted
 * Improved experience using the select component with JAWS, VoiceOver, and VoiceOver on iOS

@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.4.1 - (March 5, 2019)
+------------------
+### Changed
+* Patch dependency version bump
+
 2.4.0 - (February 26, 2019)
 ------------------
 ### Changed
