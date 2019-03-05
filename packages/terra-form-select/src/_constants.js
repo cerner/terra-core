@@ -1,5 +1,3 @@
-import KeyCode from 'keycode-js';
-
 const Variants = {
   COMBOBOX: 'combobox',
   DEFAULT: 'default',
@@ -8,4 +6,4 @@ const Variants = {
   SEARCH: 'search',
 };
 
-export { KeyCode, Variants };
+export default Variants;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Variants } from './_constants';
+import Variants from './_constants';
 import DropdownMenu from './_Menu';
 import Frame from './_Frame';
 import Option from './_Option';
