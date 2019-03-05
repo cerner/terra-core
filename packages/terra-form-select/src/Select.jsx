@@ -212,6 +212,7 @@ class Select extends React.Component {
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
+        totalOptions={Util.getTotalNumberOfOptions(children)}
         dropdown={dropdownProps => (
           <DropdownMenu {...dropdownProps}>
             {this.state.tags}

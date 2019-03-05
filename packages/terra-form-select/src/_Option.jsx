@@ -111,5 +111,6 @@ const Option = ({
 Option.propTypes = propTypes;
 Option.defaultProps = defaultProps;
 Option.isOption = true;
+Option.displayName = 'Option';
 
 export default Option;

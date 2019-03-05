@@ -10,6 +10,7 @@ exports[`Select should render a combobox variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
@@ -25,6 +26,7 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
@@ -40,6 +42,7 @@ exports[`Select should render a default variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value=""
   variant="default"
 />
@@ -55,6 +58,7 @@ exports[`Select should render a default variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value=""
   variant="default"
 />
@@ -70,6 +74,7 @@ exports[`Select should render a disabled combobox variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
@@ -85,6 +90,7 @@ exports[`Select should render a disabled default variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value=""
   variant="default"
 />
@@ -100,6 +106,7 @@ exports[`Select should render a disabled multiple variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="multiple"
 />
@@ -115,6 +122,7 @@ exports[`Select should render a disabled search variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value=""
   variant="search"
 />
@@ -130,6 +138,7 @@ exports[`Select should render a disabled tag variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
@@ -145,6 +154,7 @@ exports[`Select should render a multiple variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="multiple"
 />
@@ -160,6 +170,7 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value={Array []}
   variant="multiple"
 />
@@ -175,6 +186,7 @@ exports[`Select should render a search variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value=""
   variant="search"
 />
@@ -190,9 +202,210 @@ exports[`Select should render a search variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value=""
   variant="search"
 />
+`;
+
+exports[`Select should render a select with an optgroup and an option 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-3"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-label="Search"
+  class="select default"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  intl="[object Object]"
+  role="application"
+  tabindex="0"
+>
+  <div
+    aria-disabled="false"
+    aria-label="Search"
+    class="display"
+    role="textbox"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-3"
+    >
+      - Select -. List of 1 options. Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="placeholder"
+    >
+      - Select -
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Select should render a select with an optgroup and multiple options 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-4"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-label="Search"
+  class="select default"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  intl="[object Object]"
+  role="application"
+  tabindex="0"
+>
+  <div
+    aria-disabled="false"
+    aria-label="Search"
+    class="display"
+    role="textbox"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-4"
+    >
+      - Select -. List of 2 options. Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="placeholder"
+    >
+      - Select -
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Select should render a select with an option 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-1"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-label="Search"
+  class="select default"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  intl="[object Object]"
+  role="application"
+  tabindex="0"
+>
+  <div
+    aria-disabled="false"
+    aria-label="Search"
+    class="display"
+    role="textbox"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-1"
+    >
+      - Select -. List of 1 options. Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="placeholder"
+    >
+      - Select -
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Select should render a select with multiple options 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-2"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-label="Search"
+  class="select default"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  intl="[object Object]"
+  role="application"
+  tabindex="0"
+>
+  <div
+    aria-disabled="false"
+    aria-label="Search"
+    class="display"
+    role="textbox"
+  >
+    <span
+      class="visually-hidden-component"
+      hidden=""
+      id="terra-select-screen-reader-description-2"
+    >
+      - Select -. List of 2 options. Use up and down arrow keys to navigate through options.
+    </span>
+    <div
+      class="placeholder"
+    >
+      - Select -
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
 `;
 
 exports[`Select should render a tag variant 1`] = `
@@ -205,6 +418,7 @@ exports[`Select should render a tag variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
@@ -220,6 +434,7 @@ exports[`Select should render a tag variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
@@ -235,6 +450,7 @@ exports[`Select should render an invalid combobox variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
@@ -250,6 +466,7 @@ exports[`Select should render an invalid default variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value=""
   variant="default"
 />
@@ -265,6 +482,7 @@ exports[`Select should render an invalid multiple variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="multiple"
 />
@@ -280,6 +498,7 @@ exports[`Select should render an invalid search variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value=""
   variant="search"
 />
@@ -295,6 +514,7 @@ exports[`Select should render an invalid tag variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />

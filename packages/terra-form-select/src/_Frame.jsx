@@ -79,6 +79,10 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
+   * Total number of options.
+   */
+  totalOptions: PropTypes.number,
+  /**
    * The select value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -105,6 +109,7 @@ const defaultProps = {
   onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
+  totalOptions: undefined,
   value: undefined,
   variant: Variants.DEFAULT,
 };
@@ -470,7 +475,7 @@ class Frame extends React.Component {
   }
 
   renderDescriptionText() {
-    const { variant, placeholder } = this.props;
+    const { variant, placeholder, totalOptions } = this.props;
 
     // Instructions for touch devices, not needed with default variant.
     if ('ontouchstart' in window) {
@@ -481,7 +486,7 @@ class Frame extends React.Component {
      * Instructions for non-touch devices, with the default variant, we inject the placeholder in
      * the description. This allows JAWS to read the placeholder with the default variant.
      */
-    return variant === Variants.DEFAULT ? `${placeholder}. Use up and down arrow keys to navigate through options.` : 'Use up and down arrow keys to navigate through options.';
+    return variant === Variants.DEFAULT ? `${placeholder}. List of ${totalOptions} options. Use up and down arrow keys to navigate through options.` : `List of ${totalOptions} options. Use up and down arrow keys to navigate through options.`;
   }
 
   renderToggleButton() {
@@ -560,6 +565,7 @@ class Frame extends React.Component {
       onSelect,
       optionFilter,
       placeholder,
+      totalOptions,
       variant,
       value,
       ...customProps

@@ -21,7 +21,7 @@ exports[`Frame should render a combobox variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-2"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -78,7 +78,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-7"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -136,7 +136,7 @@ exports[`Frame should render a custom dropdown 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-21"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -196,7 +196,7 @@ exports[`Frame should render a default variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-1"
     >
-      undefined. Use up and down arrow keys to navigate through options.
+      undefined. List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <div
       class="placeholder"
@@ -245,7 +245,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-6"
     >
-      Placeholder. Use up and down arrow keys to navigate through options.
+      Placeholder. List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <div
       class="placeholder"
@@ -289,7 +289,7 @@ exports[`Frame should render a disabled combobox variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-12"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -348,7 +348,7 @@ exports[`Frame should render a disabled default variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-11"
     >
-      undefined. Use up and down arrow keys to navigate through options.
+      undefined. List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <div
       class="placeholder"
@@ -392,7 +392,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-13"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -448,7 +448,7 @@ exports[`Frame should render a disabled search variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-14"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <div
       class="content"
@@ -499,7 +499,7 @@ exports[`Frame should render a disabled tag variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-15"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -557,7 +557,7 @@ exports[`Frame should render a multiple variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-3"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -614,7 +614,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-8"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -672,7 +672,7 @@ exports[`Frame should render a search variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-4"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <div
       class="content"
@@ -724,7 +724,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-9"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <div
       class="content"
@@ -777,7 +777,7 @@ exports[`Frame should render a tag variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-5"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -834,7 +834,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-10"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -892,7 +892,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-17"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -952,7 +952,7 @@ exports[`Frame should render an invalid default variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-16"
     >
-      undefined. Use up and down arrow keys to navigate through options.
+      undefined. List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <div
       class="placeholder"
@@ -998,7 +998,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-18"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -1055,7 +1055,7 @@ exports[`Frame should render an invalid search variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-19"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <div
       class="content"
@@ -1107,7 +1107,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
       hidden=""
       id="terra-select-screen-reader-description-20"
     >
-      Use up and down arrow keys to navigate through options.
+      List of undefined options. Use up and down arrow keys to navigate through options.
     </span>
     <ul
       class="content"
@@ -1246,7 +1246,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
           hidden={true}
           id="terra-select-screen-reader-description-23"
         >
-          Use up and down arrow keys to navigate through options.
+          List of undefined options. Use up and down arrow keys to navigate through options.
         </span>
         <ul
           className="content"

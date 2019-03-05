@@ -1,5 +1,7 @@
 import React from 'react';
 import Select from '../../src/Select';
+import Option from '../../src/_Option';
+import OptGroup from '../../src/_OptGroup';
 import intlContexts from './intl-context-setup';
 
 describe('Select', () => {
@@ -102,6 +104,50 @@ describe('Select', () => {
     const wrapper = shallow(<Select variant="tag" isInvalid />, intlContexts.shallowContext);
     expect(wrapper).toMatchSnapshot();
   });
+
+
+  it('should render a select with an option', () => {
+    const wrapper = render(
+      <Select>
+        <Option value="value" display="display" />
+      </Select>,
+      intlContexts.shallowContext,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a select with multiple options', () => {
+    const wrapper = render(
+      <Select>
+        <Option value="value-1" display="display-1" />
+        <Option value="value-2" display="display-2" />
+      </Select>,
+      intlContexts.shallowContext,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a select with an optgroup and an option', () => {
+    const wrapper = render(
+      <Select>
+        <Option value="value" display="display" />
+      </Select>,
+      intlContexts.shallowContext,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a select with an optgroup and multiple options', () => {
+    const wrapper = render(
+      <Select>
+        <Option value="value-1" display="display-1" />
+        <Option value="value-2" display="display-2" />
+      </Select>,
+      intlContexts.shallowContext,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
 
   it('should call onBlur', () => {
     const mockBlur = jest.fn();

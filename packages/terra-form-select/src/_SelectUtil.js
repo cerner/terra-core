@@ -1,3 +1,4 @@
+import React from 'react';
 import { Variants } from './_constants';
 import MenuUtil from './_MenuUtil';
 
@@ -83,6 +84,32 @@ class SelectUtil {
   static valueDisplay(props, value) {
     const option = MenuUtil.findByValue(props.children, value);
     return option ? option.props.display : value;
+  }
+
+  /**
+   * Parses options in Select and return total number of options
+   * @param {React Children} children
+   * @return {number} - Number of total Options
+   */
+  static getTotalNumberOfOptions(children) {
+    let totalNumberOfOptions = 0;
+
+    React.Children.forEach(children, (child) => {
+      if (child.type.displayName === 'Option') {
+        totalNumberOfOptions += 1;
+      }
+
+      // If child is an OptGroup, loop through it and total up number of Options it contains
+      if (child.type.displayName === 'OptGroup') {
+        React.Children.forEach(child.props.children, (grandChild) => {
+          if (grandChild.type.displayName === 'Option') {
+            totalNumberOfOptions += 1;
+          }
+        });
+      }
+    });
+
+    return totalNumberOfOptions;
   }
 }
 
