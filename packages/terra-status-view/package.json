@@ -1,7 +1,7 @@
 {
   "name": "terra-status-view",
   "main": "lib/StatusView.js",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "description": "The status view component provides an icon, title, message, and buttons inside a view.",
   "repository": {
     "type": "git",
