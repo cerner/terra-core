@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Checked for undefined and null for defaultValue
 
 5.5.0 - (February 5, 2019)
 ------------------
