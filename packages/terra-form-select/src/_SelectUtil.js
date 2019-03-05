@@ -17,7 +17,6 @@ class SelectUtil {
       return defaultValue ? [defaultValue].flatten() : [];
     }
      return (props.defaultValue !== undefined && props.defaultValue !== null) ? props.defaultValue : '' ;
-    // return props.defaultValue || '';
   }
 
   /**
