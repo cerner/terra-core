@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added option to limit the maximum number os selection count for multi-select variants.
+* Added option to limit the maximum number of selection count for multi-select variants.
 
 5.8.0 - (March 5th, 2019)
 ------------------
