@@ -130,7 +130,9 @@ describe('Select', () => {
   it('should render a select with an optgroup and an option', () => {
     const wrapper = render(
       <Select>
-        <Option value="value" display="display" />
+        <OptGroup label="OptGroup label">
+          <Option value="value" display="display" />
+        </OptGroup>
       </Select>,
       intlContexts.shallowContext,
     );
@@ -140,8 +142,10 @@ describe('Select', () => {
   it('should render a select with an optgroup and multiple options', () => {
     const wrapper = render(
       <Select>
-        <Option value="value-1" display="display-1" />
-        <Option value="value-2" display="display-2" />
+        <OptGroup label="OptGroup label">
+          <Option value="value-1" display="display-1" />
+          <Option value="value-2" display="display-2" />
+        </OptGroup>
       </Select>,
       intlContexts.shallowContext,
     );
