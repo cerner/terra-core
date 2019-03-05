@@ -29,8 +29,8 @@ const DocPage = () => (
       example: <SelectFieldExample />,
       source: SelectFieldExampleSrc,
     }, {
-      title: 'Maximum Selection',
-      description: 'A multiple variant that allows up to 3 selections',
+      title: 'Maximum Selection (applies to only \'multiple\' and \'tag\')',
+      description: 'A multiple selection variant that allows up to a set number of selections. (Not applicable to  \'default\', \'combobox\', and \'search\' variants)',
       example: <MaxSelectionExample />,
       source: MaxSelectionExampleSrc,
     }]}

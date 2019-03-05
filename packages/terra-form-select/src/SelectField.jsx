@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Field from 'terra-form-field';
 import Select from './Select';
 import { Variants } from './_constants';
-import MenuUtil from './_MenuUtil';
 
 const propTypes = {
   /**
@@ -128,98 +127,77 @@ const contextTypes = {
   },
 };
 
-class SelectField extends React.Component {
-  constructor() {
-    super();
 
-    this.state = { help: undefined };
-    this.handleChange = this.handleChange.bind(this);
+const SelectField = ({
+  children,
+  defaultValue,
+  error,
+  help,
+  hideRequired,
+  isInline,
+  isInvalid,
+  isLabelHidden,
+  label,
+  labelAttrs,
+  maxSelectionCount,
+  maxWidth,
+  onChange,
+  placeholder,
+  required,
+  selectAttrs,
+  selectId,
+  showOptional,
+  value,
+  variant,
+  ...customProps
+}, context) => {
+  let helpText = help;
+  if (maxSelectionCount !== undefined) {
+    const limitSelectionText = context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
+
+    if (help) {
+      helpText = (
+        <span>
+          { limitSelectionText }
+          { ' ' }
+          { help }
+        </span>
+      );
+    }
   }
 
-  handleChange(value) {
-    const { maxSelectionCount, variant } = this.props;
-
-    if (maxSelectionCount !== undefined && MenuUtil.allowsMultipleSelections(variant) && Array.isArray(value) && value.length >= maxSelectionCount) {
-      let helpWithMaxSelectionCount = this.context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
-
-      if (this.props.help) {
-        helpWithMaxSelectionCount = (
-          <span>
-            { helpWithMaxSelectionCount }
-            { ' ' }
-            { this.props.help }
-          </span>
-        );
-      }
-
-      this.setState({ help: helpWithMaxSelectionCount });
-    } else {
-      this.setState({ help: this.props.help });
-    }
-
-    if (this.props.onChange) {
-      this.props.onChange(value);
-    }
-  }
-
-  render() {
-    const {
-      children,
-      defaultValue,
-      error,
-      help,
-      hideRequired,
-      isInline,
-      isInvalid,
-      isLabelHidden,
-      label,
-      labelAttrs,
-      maxSelectionCount,
-      maxWidth,
-      onChange,
-      placeholder,
-      required,
-      selectAttrs,
-      selectId,
-      showOptional,
-      value,
-      variant,
-      ...customProps
-    } = this.props;
-
-    return (
-      <Field
-        {...customProps}
-        label={label}
-        labelAttrs={labelAttrs}
-        error={error}
-        help={this.state.help ? this.state.help : help}
-        hideRequired={hideRequired}
-        required={required}
-        showOptional={showOptional}
+  return (
+    <Field
+      {...customProps}
+      label={label}
+      labelAttrs={labelAttrs}
+      error={error}
+      help={helpText}
+      hideRequired={hideRequired}
+      required={required}
+      showOptional={showOptional}
+      isInvalid={isInvalid}
+      isInline={isInline}
+      isLabelHidden={isLabelHidden}
+      htmlFor={selectId}
+      maxWidth={maxWidth}
+    >
+      <Select
+        {...selectAttrs}
+        id={selectId}
         isInvalid={isInvalid}
-        isInline={isInline}
-        isLabelHidden={isLabelHidden}
-        htmlFor={selectId}
-        maxWidth={maxWidth}
+        defaultValue={defaultValue}
+        maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
+        onChange={onChange}
+        placeholder={placeholder}
+        value={value}
+        variant={variant}
       >
-        <Select
-          {...selectAttrs}
-          id={selectId}
-          isInvalid={isInvalid}
-          defaultValue={defaultValue}
-          maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
-          onChange={this.handleChange}
-          placeholder={placeholder}
-          value={value}
-          variant={variant}
-        >
-          {children}
-        </Select>
-      </Field>
-    );
-  }
-}
+        {children}
+      </Select>
+    </Field>
+  );
+};
 
 SelectField.propTypes = propTypes;
 SelectField.defaultProps = defaultProps;
