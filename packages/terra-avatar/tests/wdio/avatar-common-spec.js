@@ -13,6 +13,13 @@ describe('Avatar', () => {
     Terra.should.matchScreenshot({ selector: '#image-avatar' });
   });
 
+  describe('Invalid Image Avatar', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/invalid-image-avatar'));
+
+    Terra.should.beAccessible({ selector: '#invalid-image-avatar' });
+    Terra.should.matchScreenshot({ selector: '#invalid-image-avatar' });
+  });
+
   describe('Image Avatar Spacing', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-gap'));
     Terra.should.matchScreenshot();
@@ -67,6 +74,13 @@ describe('Facility', () => {
 
     Terra.should.beAccessible({ selector: '#image-facility' });
     Terra.should.matchScreenshot({ selector: '#image-facility' });
+  });
+
+  describe('Invalid Image Facility', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility/invalid-image-facility'));
+
+    Terra.should.beAccessible({ selector: '#invalid-image-facility' });
+    Terra.should.matchScreenshot({ selector: '#invalid-image-facility' });
   });
 });
 
