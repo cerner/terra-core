@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.7.0 - (March 5, 2019)
+------------------
 ### Fixed
 * Update SVG style to `display: block` to fix SVG size and stop text from shifting downards.
 
