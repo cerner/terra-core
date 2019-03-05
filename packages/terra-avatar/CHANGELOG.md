@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.9.0 - (March 5, 2019)
+------------------
 ### Fixed
 * Fallback icon on invalid image now renders correctly.
 

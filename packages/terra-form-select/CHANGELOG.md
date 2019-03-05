@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.8.0 - (March 5th, 2019)
+------------------
 ### Fixed
 * Race condition where timeout would update after the component is not mounted
 * 'Unable to get property 'getInstance' of undefined or null reference' error in IE
