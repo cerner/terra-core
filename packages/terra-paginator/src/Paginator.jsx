@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import ResponsiveElement from 'terra-responsive-element';
-
 import 'terra-base/lib/baseStyles';
-import styles from './Paginator.module.scss';
-
 import KeyCode from 'keycode-js';
+import styles from './Paginator.module.scss';
 import { calculatePages, pageSet } from './_paginationUtils';
 
 const cx = classNames.bind(styles);
