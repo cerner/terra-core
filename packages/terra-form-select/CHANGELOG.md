@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Fixed
 * Race condition where timeout would update after the component is not mounted
+* 'Unable to get property 'getInstance' of undefined or null reference' error in IE
 
 ### Added
 * Introduce an option to allow clearing the currently selected item
