@@ -143,7 +143,7 @@ class SearchField extends React.Component {
   }
 
   handleKeyDown(event) {
-    if (event.nativeEvent.keyCode === KeyCode.KEY_ENTER) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
       this.handleSearch();
     }
   }

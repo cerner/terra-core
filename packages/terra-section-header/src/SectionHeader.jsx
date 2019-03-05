@@ -38,7 +38,7 @@ const defaultProps = {
   level: 2,
 };
 
-const isRecognizedKeyPress = event => ((event.nativeEvent.keyCode === KeyCode.KEY_ENTER) || (event.nativeEvent.keyCode === KeyCode.KEY_SPACE));
+const isRecognizedKeyPress = event => ((event.nativeEvent.keyCode === KeyCode.KEY_RETURN) || (event.nativeEvent.keyCode === KeyCode.KEY_SPACE));
 
 class SectionHeader extends React.Component {
   constructor(props) {

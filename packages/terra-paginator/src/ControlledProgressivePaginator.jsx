@@ -49,7 +49,7 @@ class ProgressivePaginator extends React.Component {
 
   handleOnKeyDown(index) {
     return (event) => {
-      if (event.nativeEvent.keyCode === KeyCode.KEY_ENTER || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
+      if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         event.preventDefault();
 
         if (Number.isNaN(Number(index))) {

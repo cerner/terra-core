@@ -66,7 +66,7 @@ class Button extends React.Component {
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ active: true });
       this.setState({ focused: true });
-    } else if (event.nativeEvent.keyCode === KeyCode.KEY_ENTER) { // Add focus styles for keyboard navigation
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) { // Add focus styles for keyboard navigation
       this.setState({ focused: true });
     }
 
