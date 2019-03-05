@@ -10,7 +10,7 @@ import Util from './_SelectUtil';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
+   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
    * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
    */
   allowClear: PropTypes.bool,
