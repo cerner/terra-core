@@ -8,6 +8,7 @@ Unreleased
 
 ### Fixed
 * Race condition where timeout would update after the component is not mounted
+* 'Unable to get property 'getInstance' of undefined or null reference' error in IE
 
 5.7.0 - (February 26, 2019)
 ------------------
