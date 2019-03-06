@@ -5,15 +5,13 @@ Unreleased
 ----------
 ### Added
 * Added option to limit the maximum number of selection count for multi-select variants.
+* Introduce an option to allow clearing the currently selected item
 
 5.8.0 - (March 5th, 2019)
 ------------------
 ### Fixed
 * Race condition where timeout would update after the component is not mounted
 * 'Unable to get property 'getInstance' of undefined or null reference' error in IE
-
-### Added
-* Introduce an option to allow clearing the currently selected item
 
 5.7.0 - (February 26, 2019)
 ------------------
