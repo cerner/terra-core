@@ -4,6 +4,17 @@ Changelog
 Unreleased
 ----------
 
+3.5.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Added en-AU translations
+
+3.4.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.3.0 - (February 5, 2019)
 ------------------
 ### Changed

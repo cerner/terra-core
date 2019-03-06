@@ -130,4 +130,9 @@ describe('Select', () => {
 
     expect(mockClick).toBeCalled();
   });
+
+  it('should render a clear option', () => {
+    const wrapper = shallow(<Select allowClear />, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

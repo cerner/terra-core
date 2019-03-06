@@ -3,7 +3,27 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.5.0 - (March 5, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
+
+2.4.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added en-AU translations
+
+### Fixed
+* Correct browser.buttonDown() usage
+
+2.3.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 * Correct test routing.
 
 2.2.0 - (February 5, 2019)

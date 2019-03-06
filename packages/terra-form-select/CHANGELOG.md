@@ -5,6 +5,34 @@ Unreleased
 ----------
 ### Fixed
 * Checked for undefined and null for defaultValue
+### Added
+* Added option to limit the maximum number of selection count for multi-select variants.
+* Introduce an option to allow clearing the currently selected item
+
+5.8.0 - (March 5th, 2019)
+------------------
+### Fixed
+* Race condition where timeout would update after the component is not mounted
+* 'Unable to get property 'getInstance' of undefined or null reference' error in IE
+
+5.7.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* New CSS custom property: `--terra-form-select-disabled-placeholder-color`
+* New CSS custom property: `--terra-form-select-disabled-placeholder-font-style`
+
+### Fixed
+* Added en-AU translations
+* Fixed issue preventing the input from inheriting the base font family
+* Fixed a Select Menu jest test that was broken with the release of enzyme-3.9.0
+
+5.6.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 5.5.0 - (February 5, 2019)
 ------------------
@@ -35,6 +63,7 @@ Unreleased
 ### Fixed
 * Fixed Dropdown closing issue on Hold and Scroll in IE
 * Updated Frame to remove isAbove styling when selecting item in single select list
+* Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
 
 ### Changed
 * Updated Option prop documentation

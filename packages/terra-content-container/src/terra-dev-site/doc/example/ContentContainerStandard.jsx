@@ -1,5 +1,4 @@
 import React from 'react';
-import Heading from 'terra-heading';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import ContentContainer from 'terra-content-container/lib/ContentContainer';
 
@@ -28,8 +27,8 @@ pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
   </p>
 );
 
-const contentheader = <Heading level={3}>Display Header</Heading>;
-const contentfooter = <Heading level={3}>Display Footer</Heading>;
+const contentheader = <h3>Display Header</h3>;
+const contentfooter = <h3>Display Footer</h3>;
 
 const container = () => (
   <div style={{ border: '1px solid' }}>

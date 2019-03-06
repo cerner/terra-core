@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+2.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.5.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.4.0 - (February 5, 2019)
 ------------------
 ### Changed
@@ -28,6 +38,9 @@ Unreleased
 ------------------
 ### Changed
 * Updated theme variables
+
+### Fixed
+* Changed browser.execute function in wdio spec to be a string for IE and FF driver compatibility
 
 1.32.0 - (January 2, 2019)
 ------------------

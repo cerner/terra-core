@@ -8,10 +8,8 @@ describe('Search Field', () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lore');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('with text');
@@ -50,10 +48,8 @@ describe('Search Field', () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('with text');
@@ -67,8 +63,7 @@ describe('Search Field', () => {
     Terra.should.beAccessible();
 
     it('should not accept keyboard input', () => {
-      expect(browser.setValue.bind(browser, 'input', 'Lorem')).to
-        .throw('Element is not currently interactable and may not be manipulated');
+      expect(browser.setValue.bind(browser, 'input', 'Lorem')).to.throw(Error);
     });
 
     it('should not accept clicks', () => {
@@ -84,10 +79,8 @@ describe('Search Field', () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('with text');
@@ -106,10 +99,8 @@ describe('Search Field', () => {
       }
 
       browser.addValue('input', 'Lorem');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('with overwritten text');
@@ -128,10 +119,8 @@ describe('Search Field', () => {
       }
 
       browser.addValue('input', 'Lorem');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('unchanged text');
@@ -142,10 +131,8 @@ describe('Search Field', () => {
 
     it('should enter a short search term', () => {
       browser.setValue('input', 'Lore');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('with too short text');
@@ -172,10 +159,8 @@ describe('Search Field', () => {
 
     it('should enter a short search term', () => {
       browser.setValue('input', 'Lo');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('with too short text');
@@ -192,10 +177,8 @@ describe('Search Field', () => {
 
     it('should enter a letter', () => {
       browser.setValue('input', 'L');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('updated once');
@@ -213,10 +196,8 @@ describe('Search Field', () => {
     it('should search with enter', () => {
       browser.click('input');
       browser.keys('Enter');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot();
@@ -227,10 +208,8 @@ describe('Search Field', () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lore');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('text before search');
@@ -258,10 +237,8 @@ describe('Search Field', () => {
 
     it('should click button to focus search field', () => {
       browser.waitForVisible('#search-field-focus-button');
-      browser.execute(() => {
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        document.querySelector('input').style.caretColor = 'transparent';
-      });
+      // Removes the blinking cursor to prevent screenshot mismatches.
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       browser.click('#search-field-focus-button');
     });
 

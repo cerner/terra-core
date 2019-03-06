@@ -4,6 +4,24 @@ ChangeLog
 Unreleased
 ----------
 
+2.9.0 - (March 5, 2019)
+------------------
+### Fixed
+* Fallback icon on invalid image now renders correctly.
+
+### Added
+* CSS classes to handle fallback and deceased edge cases.
+
+2.8.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.7.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.6.0 - (February 5, 2019)
 ------------------
 ### Changed

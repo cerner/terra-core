@@ -4,6 +4,19 @@ ChangeLog
 Unreleased
 ----------
 
+2.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Removed
+* Removed terra-alert depenency used in documentation example
+
+2.5.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.4.0 - (February 5, 2019)
 ------------------
 ### Changed
