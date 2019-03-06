@@ -10,6 +10,11 @@ import Util from './_SelectUtil';
 
 const propTypes = {
   /**
+   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
+   */
+  allowClear: PropTypes.bool,
+  /**
    * The dropdown menu options.
    */
   children: PropTypes.node,
@@ -96,6 +101,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
@@ -203,11 +209,20 @@ class Select extends React.Component {
   render() {
     const { intl } = this.context;
     const {
-      children, defaultValue, onChange, placeholder, value, ...otherProps
+      allowClear, children, defaultValue, onChange, placeholder, value, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
     const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
+    let clearOptionDisplay;
+
+    if (allowClear) {
+      if (selectPlaceholder.length === 0) {
+        clearOptionDisplay = defaultPlaceholder;
+      } else {
+        clearOptionDisplay = selectPlaceholder;
+      }
+    }
 
     return (
       <Frame
@@ -217,6 +232,7 @@ class Select extends React.Component {
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
+        clearOptionDisplay={clearOptionDisplay}
         dropdown={dropdownProps => (
           <DropdownMenu intl={intl} {...dropdownProps}>
             {this.state.tags}

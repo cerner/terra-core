@@ -84,6 +84,7 @@ class MenuUtil {
   /**
    * Filters the object content by the search criteria.
    * @param {ReactNode} object - The node being filtered.
+   * @param {string} searchValue - The value being searched for.
    * @param {function|undefined} optionFilter - An optional custom filter.
    * @return {array} - An array of filtered content.
    */
@@ -247,7 +248,7 @@ class MenuUtil {
    * Determines if the menu should show the no results content.
    * @param {Object} props - The menu props.
    * @param {array} children - The menu children.
-   * @return {boolean} - True if the no results content should show..
+   * @return {boolean} - True if the no results content should show.
    */
   static shouldShowNoResults(props, children) {
     const { variant } = props;
@@ -292,6 +293,25 @@ class MenuUtil {
       }
       return child;
     });
+  }
+
+  /**
+   * Determines if the menu should show an option to clear the selected result.
+   * @param {Object} props - The menu props.
+   * @param {boolean} hasAddOption - Indicates if the Add Option is shown in the menu.
+   * @param {boolean} hasNoResults - Indicates if the No Results content is shown in the menu.
+   * @return {boolean} - True if the clear option should show.
+   */
+  static shouldShowClearOption(props, hasAddOption, hasNoResults) {
+    const { clearOptionDisplay, searchValue, variant } = props;
+
+    if (variant !== Variants.TAG && variant !== Variants.MULTIPLE
+      && clearOptionDisplay && !hasNoResults && !hasAddOption
+      && (searchValue === undefined || searchValue.length === 0)) {
+      return true;
+    }
+
+    return false;
   }
 }
 

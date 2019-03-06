@@ -6,6 +6,11 @@ import { Variants } from './_constants';
 
 const propTypes = {
   /**
+   * Whether a clear option is available to clear the selection.
+   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
+   */
+  allowClear: PropTypes.bool,
+  /**
    * The select options.
    */
   children: PropTypes.node,
@@ -98,6 +103,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   error: undefined,
@@ -129,6 +135,7 @@ const contextTypes = {
 
 
 const SelectField = ({
+  allowClear,
   children,
   defaultValue,
   error,
@@ -152,7 +159,7 @@ const SelectField = ({
   ...customProps
 }, context) => {
   let helpText = help;
-  if (maxSelectionCount !== undefined) {
+  if (maxSelectionCount !== undefined && maxSelectionCount >= 2) {
     const limitSelectionText = context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
 
     if (help) {
@@ -163,6 +170,8 @@ const SelectField = ({
           { help }
         </span>
       );
+    } else {
+      helpText = limitSelectionText;
     }
   }
 
@@ -184,6 +193,7 @@ const SelectField = ({
     >
       <Select
         {...selectAttrs}
+        allowClear={allowClear}
         id={selectId}
         isInvalid={isInvalid}
         defaultValue={defaultValue}

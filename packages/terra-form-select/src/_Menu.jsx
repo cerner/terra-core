@@ -5,6 +5,7 @@ import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
 import { KeyCodes, Variants } from './_constants';
 import AddOption from './_AddOption';
+import ClearOption from './_ClearOption';
 import MaxSelection from './_MaxSelection';
 import NoResults from './_NoResults';
 import Util from './_MenuUtil';
@@ -19,6 +20,10 @@ const propTypes = {
    * The content of the menu.
    */
   children: PropTypes.node,
+  /**
+   * Text for the clear option.
+   */
+  clearOptionDisplay: PropTypes.string,
   /**
    * The maximum number of options that can be selected. A value less than 2 will be ignored.
    * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
@@ -66,6 +71,7 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  clearOptionDisplay: undefined,
   maxSelectionCount: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
@@ -106,12 +112,13 @@ class Menu extends React.Component {
    */
   static getDerivedStateFromProps(props, state) {
     const {
-      maxSelectionCount, searchValue, noResultContent,
+      clearOptionDisplay, maxSelectionCount, searchValue, noResultContent,
     } = props;
 
     let children;
     let hasNoResults = false;
     let hasMaxSelection = false;
+    let hasAddOption = false;
 
     if (searchValue && searchValue.length > 0 && Util.isMaxSelectionReached(props)) {
       children = [(<MaxSelection value={maxSelectionCount} />)];
@@ -122,13 +129,16 @@ class Menu extends React.Component {
 
       if (Util.shouldAllowFreeText(props, children)) {
         children.push(<AddOption value={searchValue} />);
+        hasAddOption = true;
       }
 
       if (Util.shouldShowNoResults(props, children)) {
         children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
         hasNoResults = true;
-      } else {
-        hasNoResults = false;
+      }
+
+      if (Util.shouldShowClearOption(props, hasAddOption, hasNoResults)) {
+        children.unshift(<ClearOption display={clearOptionDisplay} value="" />);
       }
     }
 

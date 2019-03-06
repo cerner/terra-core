@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClearOption should render a default ClearOption 1`] = `
+<Option
+  className="clear-option"
+  disabled={false}
+  display="Clear"
+  isSelected={false}
+  value=""
+/>
+`;
