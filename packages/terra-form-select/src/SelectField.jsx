@@ -159,7 +159,7 @@ const SelectField = ({
   ...customProps
 }, context) => {
   let helpText = help;
-  if (maxSelectionCount !== undefined) {
+  if (maxSelectionCount !== undefined && maxSelectionCount >= 2) {
     const limitSelectionText = context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
 
     if (help) {
@@ -170,6 +170,8 @@ const SelectField = ({
           { help }
         </span>
       );
+    } else {
+      helpText = limitSelectionText;
     }
   }
 
