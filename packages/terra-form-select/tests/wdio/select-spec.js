@@ -98,8 +98,14 @@ describe('Select', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('open-dropdown-max-height', { viewports, selector: '#root' });
     });
-  });
 
+    describe('Default Renders an Option With a Value of Zero', () => {
+      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-value-zero'));
+
+      Terra.should.matchScreenshot({ viewports });
+    });
+  });
+  
   describe('Combobox Variant', () => {
     describe('combobox should select an option by click', () => {
       before(() => {
