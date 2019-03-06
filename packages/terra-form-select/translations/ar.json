@@ -2,5 +2,7 @@
   "Terra.form.select.add": "أضف \"{text}\".",
   "Terra.form.select.ariaLabel": "بحث",
   "Terra.form.select.defaultDisplay": "– حدد –",
-  "Terra.form.select.noResults": "لا توجد نتائج مطابقة لـ \"{text}\"."
+  "Terra.form.select.noResults": "لا توجد نتائج مطابقة لـ \"{text}\".",
+  "Terra.form.select.maxSelectionHelp": "حدد {text} عناصر.",
+  "Terra.form.select.maxSelectionOption": "الحد الأقصى لعدد عناصر {text} المحددة"
 }

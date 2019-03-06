@@ -2,6 +2,8 @@
   "Terra.form.select.add": "\"{text}\" toevoegen",
   "Terra.form.select.ariaLabel": "Zoeken",
   "Terra.form.select.defaultDisplay": "- Selecteren -",
+  "Terra.form.select.maxSelectionHelp": "Limiet: {text} items.",
+  "Terra.form.select.maxSelectionOption": "Maximumaantal van {text} items geselecteerd",
   "Terra.form.select.noResults": "Geen resultaten gevonden voor \"{text}\"",
   "Terra.form.select.selected": "{text} geselecteerd"
 }

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added option to limit the maximum number of selection count for multi-select variants.
+* Introduce an option to allow clearing the currently selected item
 
 5.8.0 - (March 5th, 2019)
 ------------------

@@ -1,7 +1,9 @@
 {
   "Terra.form.select.add": "\"{text}\" hinzufügen",
   "Terra.form.select.ariaLabel": "Suchen",
-  "Terra.form.select.defaultDisplay": "- Wählen -",
-  "Terra.form.select.noResults": "Keine Entsprechungen für \"{text}\" gefunden.",
+  "Terra.form.select.defaultDisplay": "- Auswählen -",
+  "Terra.form.select.maxSelectionHelp": "{text} Elemente begrenzen.",
+  "Terra.form.select.maxSelectionOption": "Maximale Anzahl an ausgewählten {text} Elementen",
+  "Terra.form.select.noResults": "Keine Übereinstimmungen für \"{text}\"",
   "Terra.form.select.selected": "Ausgewählt: {text}"
 }

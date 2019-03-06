@@ -9,6 +9,8 @@ import { name } from '../../../../package.json';
 import SelectFieldSrc from '!raw-loader!../../../../src/SelectField';
 
 // Example Files
+import MaxSelectionExample from '../example/MaxSelection';
+import MaxSelectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MaxSelection';
 import SelectFieldExample from '../example/SelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SelectField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
@@ -26,6 +28,11 @@ const DocPage = () => (
       title: 'Select Field Example',
       example: <SelectFieldExample />,
       source: SelectFieldExampleSrc,
+    }, {
+      title: 'Maximum Selection (applies to only \'multiple\' and \'tag\')',
+      description: 'A multiple selection variant that allows up to a set number of selections. (Not applicable to  \'default\', \'combobox\', and \'search\' variants)',
+      example: <MaxSelectionExample />,
+      source: MaxSelectionExampleSrc,
     }]}
   />
 );

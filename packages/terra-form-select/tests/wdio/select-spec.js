@@ -1817,6 +1817,45 @@ describe('Select', () => {
       Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
     });
 
+    describe('combobox should deselect the selected item when clicking on the clear option.', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-select/form-select/allow-clear');
+        browser.execute(() => {
+          // Removes the blinking cursor to prevent screenshot mismatches.
+          document.querySelector('input').style.caretColor = 'transparent';
+        });
+      });
+
+      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports });
+
+      it('combobox should open the dropdown by clicking the toggle', () => {
+        browser.click('#allowclear:last-child');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('open-dropdown', { viewports, selector: '#root' });
+
+      it('combobox should select the first option', () => {
+        browser.click('#terra-select-option-blue');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-option', { viewports });
+
+      it('combobox should open the dropdown by clicking the toggle again', () => {
+        browser.click('#allowclear:last-child');
+      });
+
+      it('combobox should select the clear option', () => {
+        browser.click('#terra-select-option-');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('selected-clear-option', { viewports });
+    });
+  });
+
     describe('tag should not open dropdown by enter key press', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');

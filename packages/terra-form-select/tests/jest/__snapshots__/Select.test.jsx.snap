@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Select should render a clear option 1`] = `
+<Frame
+  clearOptionDisplay="- Select -"
+  disabled={false}
+  display=""
+  dropdown={[Function]}
+  isInvalid={false}
+  onDeselect={[Function]}
+  onSelect={[Function]}
+  placeholder="- Select -"
+  value=""
+  variant="default"
+/>
+`;
+
 exports[`Select should render a combobox variant 1`] = `
 <InjectIntl(Frame)
   data-terra-select={true}

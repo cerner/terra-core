@@ -1,5 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Frame should render a clear option 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  aria-haspopup="true"
+  className="select default"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="combobox"
+  tabIndex="0"
+>
+  <div
+    aria-disabled={false}
+    className="display"
+    onMouseDown={[Function]}
+    role="textbox"
+  >
+    <div
+      className="placeholder"
+    >
+       
+    </div>
+  </div>
+  <div
+    className="toggle"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
+</div>
+`;
+
 exports[`Frame should render a combobox variant 1`] = `
 <div
   aria-describedby="terra-select-screen-reader-description-2"

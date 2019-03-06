@@ -17,6 +17,10 @@ const propTypes = {
    */
   ariaLabel: PropTypes.string,
   /**
+   * Text for the clear option.
+   */
+  clearOptionDisplay: PropTypes.string,
+  /**
    * Whether the select is disabled.
    */
   disabled: PropTypes.bool,
@@ -46,6 +50,11 @@ const propTypes = {
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
+  /**
+   * The maximum number of options that can be selected. A value less than 2 will be ignored.
+   * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
+   */
+  maxSelectionCount: PropTypes.number,
   /**
    * Content to display when no search results are found.
    */
@@ -99,10 +108,12 @@ const propTypes = {
 };
 
 const defaultProps = {
+  clearOptionDisplay: undefined,
   disabled: false,
   dropdown: undefined,
   dropdownAttrs: undefined,
   isInvalid: false,
+  maxSelectionCount: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   onSearch: undefined,
@@ -553,12 +564,14 @@ class Frame extends React.Component {
 
   render() {
     const {
+      clearOptionDisplay,
       disabled,
       display,
       dropdown,
       dropdownAttrs,
       isInvalid,
       maxHeight,
+      maxSelectionCount,
       noResultContent,
       onDeselect,
       onSearch,
@@ -643,19 +656,21 @@ class Frame extends React.Component {
             style={Util.dropdownStyle(dropdownAttrs, this.state)}
           >
             {dropdown
-              && dropdown({
-                value,
-                variant,
-                onDeselect,
-                optionFilter,
-                noResultContent,
-                visuallyHiddenComponent: this.visuallyHiddenComponent,
-                onSelect: this.handleSelect,
-                onRequestClose: this.closeDropdown,
-                searchValue: this.state.searchValue,
-                input: this.input,
-                select: this.select,
-              })}
+               && dropdown({
+                 value,
+                 variant,
+                 onDeselect,
+                 optionFilter,
+                 noResultContent,
+                 visuallyHiddenComponent: this.visuallyHiddenComponent,
+                 onSelect: this.handleSelect,
+                 onRequestClose: this.closeDropdown,
+                 searchValue: this.state.searchValue,
+                 input: this.input,
+                 select: this.select,
+                 maxSelectionCount,
+                 clearOptionDisplay,
+               })}
           </Dropdown>
           )
         }

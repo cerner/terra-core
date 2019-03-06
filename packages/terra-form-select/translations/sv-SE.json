@@ -2,6 +2,8 @@
   "Terra.form.select.add": "Lägg till \"{text}\"",
   "Terra.form.select.ariaLabel": "Sök",
   "Terra.form.select.defaultDisplay": "- Välj -",
-  "Terra.form.select.noResults": "Inga matchande resultat hittades för \"{text}\"",
+  "Terra.form.select.maxSelectionHelp": "Begränsa {text} antal poster.",
+  "Terra.form.select.maxSelectionOption": "Max antal poster {text} är valda",
+  "Terra.form.select.noResults": "Inga matchande resultat för \"{text}\"",
   "Terra.form.select.selected": "{text} har valts"
 }
