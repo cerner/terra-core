@@ -99,7 +99,7 @@ describe('Select', () => {
       Terra.should.matchScreenshot('open-dropdown-max-height', { viewports, selector: '#root' });
     });
 
-    describe('Default Renders an Option With a Value of Zero', () => {
+    describe('default renders an option with a value of zero', () => {
       before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-value-zero'));
 
       Terra.should.matchScreenshot({ viewports });
