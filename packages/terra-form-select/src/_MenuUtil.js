@@ -257,6 +257,42 @@ class MenuUtil {
     }
     return false;
   }
+
+  /**
+   * Determines if the number of selected items has reached the maximum.
+   * @param {Object} props - The menu props.
+   * @return {boolean} - True if the maximum selection count has reached.
+   */
+  static isMaxSelectionReached(props) {
+    const { maxSelectionCount, value, variant } = props;
+
+    if (maxSelectionCount !== undefined && MenuUtil.allowsMultipleSelections(variant) && Array.isArray(value) && value.length >= maxSelectionCount) {
+      return true;
+    }
+
+    return false;
+  }
+
+  /**
+   * Updates the selection state of the all the options in the menu.
+   * @param {ReactNode} object - The node being updated.
+   * @param {Object} props - The menu props.
+   * @return {array} - A cloned copy of the object with the selection state updated.
+   */
+  static updateSelectionState(object, props) {
+    const maxSelectionCountReached = MenuUtil.isMaxSelectionReached(props);
+
+    return React.Children.map(object, (child) => {
+      if (child.type.isOption) {
+        return React.cloneElement(child, {
+          disabled: child.props.disabled || (maxSelectionCountReached && !MenuUtil.isSelected(props.value, child.props.value)),
+        });
+      } if (child.type.isOptGroup) {
+        return React.cloneElement(child, {}, MenuUtil.updateSelectionState(child.props.children, props));
+      }
+      return child;
+    });
+  }
 }
 
 export default MenuUtil;

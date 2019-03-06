@@ -35,6 +35,11 @@ const propTypes = {
    */
   maxHeight: PropTypes.number,
   /**
+   * @private The maximum number of options that can be selected. A value less than 2 will be ignored.
+   * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
+   */
+  maxSelectionCount: PropTypes.number,
+  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
@@ -96,6 +101,7 @@ const defaultProps = {
   disabled: false,
   dropdownAttrs: undefined,
   isInvalid: false,
+  maxSelectionCount: undefined,
   noResultContent: undefined,
   onChange: undefined,
   onDeselect: undefined,

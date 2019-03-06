@@ -47,6 +47,11 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
+   * The maximum number of options that can be selected. A value less than 2 will be ignored.
+   * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
+   */
+  maxSelectionCount: PropTypes.number,
+  /**
    * Set the max-width of a field using `length` or `%`.  Best practice recommendation to never exceed
    * a rendered value of 1020px. _(Note: Providing custom inline styles will take precedence.)_
    */
@@ -102,6 +107,7 @@ const defaultProps = {
   isInvalid: false,
   isLabelHidden: false,
   labelAttrs: {},
+  maxSelectionCount: undefined,
   maxWidth: undefined,
   onChange: undefined,
   placeholder: undefined,
@@ -111,6 +117,16 @@ const defaultProps = {
   value: undefined,
   variant: 'default',
 };
+
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
 
 const SelectField = ({
   children,
@@ -123,6 +139,7 @@ const SelectField = ({
   isLabelHidden,
   label,
   labelAttrs,
+  maxSelectionCount,
   maxWidth,
   onChange,
   placeholder,
@@ -133,39 +150,58 @@ const SelectField = ({
   value,
   variant,
   ...customProps
-}) => (
-  <Field
-    {...customProps}
-    label={label}
-    labelAttrs={labelAttrs}
-    error={error}
-    help={help}
-    hideRequired={hideRequired}
-    required={required}
-    showOptional={showOptional}
-    isInvalid={isInvalid}
-    isInline={isInline}
-    isLabelHidden={isLabelHidden}
-    htmlFor={selectId}
-    maxWidth={maxWidth}
-  >
-    <Select
-      {...selectAttrs}
-      id={selectId}
+}, context) => {
+  let helpText = help;
+  if (maxSelectionCount !== undefined) {
+    const limitSelectionText = context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
+
+    if (help) {
+      helpText = (
+        <span>
+          { limitSelectionText }
+          { ' ' }
+          { help }
+        </span>
+      );
+    }
+  }
+
+  return (
+    <Field
+      {...customProps}
+      label={label}
+      labelAttrs={labelAttrs}
+      error={error}
+      help={helpText}
+      hideRequired={hideRequired}
+      required={required}
+      showOptional={showOptional}
       isInvalid={isInvalid}
-      defaultValue={defaultValue}
-      onChange={onChange}
-      placeholder={placeholder}
-      value={value}
-      variant={variant}
+      isInline={isInline}
+      isLabelHidden={isLabelHidden}
+      htmlFor={selectId}
+      maxWidth={maxWidth}
     >
-      {children}
-    </Select>
-  </Field>
-);
+      <Select
+        {...selectAttrs}
+        id={selectId}
+        isInvalid={isInvalid}
+        defaultValue={defaultValue}
+        maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
+        onChange={onChange}
+        placeholder={placeholder}
+        value={value}
+        variant={variant}
+      >
+        {children}
+      </Select>
+    </Field>
+  );
+};
 
 SelectField.propTypes = propTypes;
 SelectField.defaultProps = defaultProps;
+SelectField.contextTypes = contextTypes;
 
 SelectField.Option = Select.Option;
 SelectField.OptGroup = Select.OptGroup;
