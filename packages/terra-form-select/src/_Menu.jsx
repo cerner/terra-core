@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
-import { KeyCodes, Variants } from './_constants';
+import KeyCode from 'keycode-js';
+import Variants from './_constants';
 import AddOption from './_AddOption';
 import ClearOption from './_ClearOption';
 import MaxSelection from './_MaxSelection';
@@ -252,22 +253,22 @@ class Menu extends React.Component {
     const { active, children } = this.state;
     const { onSelect, value, variant } = this.props;
 
-    if (keyCode === KeyCodes.UP_ARROW) {
+    if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findPrevious(children, active) });
-    } else if (keyCode === KeyCodes.DOWN_ARROW) {
+    } else if (keyCode === KeyCode.KEY_DOWN) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findNext(children, active) });
-    } else if (keyCode === KeyCodes.ENTER && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
+    } else if (keyCode === KeyCode.KEY_RETURN && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
-    } else if (keyCode === KeyCodes.HOME) {
+    } else if (keyCode === KeyCode.KEY_HOME) {
       event.preventDefault();
       this.setState({ active: Util.findFirst(children) });
-    } else if (keyCode === KeyCodes.END) {
+    } else if (keyCode === KeyCode.KEY_END) {
       event.preventDefault();
       this.setState({ active: Util.findLast(children) });
     } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {
