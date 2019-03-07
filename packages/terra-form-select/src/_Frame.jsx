@@ -481,7 +481,7 @@ class Frame extends React.Component {
 
   /**
    * Determines compatible aria-label string based on if one is provided via props
-   * Falls back to the string 'Search' in no label is provided
+   * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
     const { ariaLabel, intl } = this.props;
@@ -665,7 +665,7 @@ class Frame extends React.Component {
         ref={(select) => { this.select = select; }}
       >
         <div className={cx('visually-hidden-component')} hidden>
-          {/* Hidden attribute used to prevent VoiceOver on desktop from this content twice */}
+          {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={ariaDescribedById}>{this.renderDescriptionText()}</span>
         </div>
