@@ -141,6 +141,7 @@ class Frame extends React.Component {
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
+    this.ariaLabelledByIds = this.ariaLabelledByIds.bind(this);
     this.setInput = this.setInput.bind(this);
     this.getDisplay = this.getDisplay.bind(this);
     this.renderToggleButton = this.renderToggleButton.bind(this);
@@ -160,6 +161,7 @@ class Frame extends React.Component {
     this.handleInputBlur = this.handleInputBlur.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
+    this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
   }
@@ -179,15 +181,7 @@ class Frame extends React.Component {
     this.input = input;
   }
 
-  // eslint-disable-next-line react/sort-comp
-  ariaLabel() {
-    const { ariaLabel, intl } = this.props;
-
-    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
-    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
-  }
-
-  getDisplay(ariaDescribedById) {
+  getDisplay(displayId, placeholderId, ariaDescribedById) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
       disabled, display, placeholder, variant,
@@ -202,7 +196,7 @@ class Frame extends React.Component {
       onBlur: this.handleInputBlur,
       onMouseDown: this.handleInputMouseDown,
       'aria-label': this.ariaLabel(),
-      'aria-describedby': ariaDescribedById,
+      'aria-describedby': (variant === Variants.TAG || variant === Variants.MULTIPLE) ? `${displayId} ${ariaDescribedById}` : ariaDescribedById,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
       type: 'text',
@@ -214,7 +208,7 @@ class Frame extends React.Component {
       case Variants.MULTIPLE:
         return (
           <ul className={cx('content')}>
-            {display}
+            <div id={displayId}>{display}</div>
             <li className={cx('search-wrapper')}>
               <input {...inputAttrs} value={searchValue} />
             </li>
@@ -224,7 +218,7 @@ class Frame extends React.Component {
       case Variants.COMBOBOX:
         return <div className={cx('content')}><input {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
       default:
-        return display || <div className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
+        return display ? <span id={displayId}>{display}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
   }
 
@@ -485,19 +479,65 @@ class Frame extends React.Component {
     }
   }
 
+  /**
+   * Determines compatible aria-label string based on if one is provided via props
+   * Falls back to the string 'Search' in no label is provided
+   */
+  ariaLabel() {
+    const { ariaLabel, intl } = this.props;
+
+    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
+    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
+  }
+
+  /**
+   * Determines compatible aria-labelledby IDs based on active variant
+   * Used with default, multiple, and tag variants to provide information about the label, displayed
+   * value and or the placeholder value.
+   */
+  ariaLabelledByIds(labelId, displayId, placeholderId) {
+    const { variant } = this.props;
+
+    let ariaLabelledBy = null;
+
+    // Safari is able to read the display/placeholder text, other browsers need help to provide that info to
+    // the accessibility tree used by screen readers
+    if (variant === Variants.DEFAULT) {
+      if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
+        ariaLabelledBy = `${labelId}`;
+      } else {
+        ariaLabelledBy = `${labelId} ${displayId} ${placeholderId}`;
+      }
+    }
+
+    return ariaLabelledBy;
+  }
+
+  /**
+   * Determines compatible role attribute to apply to select based on active variant and disabled prop
+   */
+  role() {
+    const { variant, disabled } = this.props;
+    // role="application" needed to allow JAWS to work correctly with the select and use our key event listeners
+    let role = 'application';
+    if (disabled) { role = undefined; }
+    if (variant === Variants.DEFAULT) { role = 'combobox'; }
+    return role;
+  }
+
+  /**
+   * Renders descriptive text related to the select component to be available for screen readers
+   */
   renderDescriptionText() {
-    const { variant, placeholder, totalOptions } = this.props;
+    const { variant, totalOptions } = this.props;
 
     // Instructions for touch devices, not needed with default variant.
     if ('ontouchstart' in window) {
-      return variant === Variants.DEFAULT ? null : 'Swipe right to navigate options.';
+      return variant === Variants.DEFAULT ? null : `List of ${totalOptions} options. Swipe right to navigate options.`;
     }
 
-    /**
-     * Instructions for non-touch devices, with the default variant, we inject the placeholder in
-     * the description. This allows JAWS to read the placeholder with the default variant.
-     */
-    return variant === Variants.DEFAULT ? `${placeholder}. List of ${totalOptions} options. Use up and down arrow keys to navigate through options.` : `List of ${totalOptions} options. Use up and down arrow keys to navigate through options.`;
+    // Instructions for non-touch devices
+    return `List of ${totalOptions} options. Use up and down arrow keys to navigate through options.`;
   }
 
   renderToggleButton() {
@@ -595,21 +635,26 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
-    // Don't spread ariaLabel prop, we handle it below
+    // Don't spread ariaLabel or intl as attributes on the DOM
     delete customProps.ariaLabel;
+    delete customProps.intl;
+
+    const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
+    const displayId = `terra-select-screen-reader-display-${uniqueid()}`;
+    const placeholderId = `terra-select-screen-reader-placeholder-${uniqueid()}`;
     const ariaDescribedById = `terra-select-screen-reader-description-${uniqueid()}`;
 
     return (
       <div
         {...customProps}
-        role={!disabled ? 'application' : undefined} // role="application" needed to allow JAWS to pick up and use our key event listeners
+        role={this.role()}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
-        aria-label={variant === Variants.DEFAULT ? this.ariaLabel() : null} // Enables JAWS and VoiceOver on desktop the ability to read the select label
-        aria-describedby={ariaDescribedById} // Enables JAWS and VoiceOver on desktop the ability to read the select description text
+        aria-labelledby={this.ariaLabelledByIds(labelId, displayId, placeholderId)}
+        aria-describedby={ariaDescribedById}
         aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
@@ -619,21 +664,13 @@ class Frame extends React.Component {
         tabIndex={Util.tabIndex(this.props)}
         ref={(select) => { this.select = select; }}
       >
-        <div
-          aria-label={variant === Variants.DEFAULT ? this.ariaLabel() : null} // Enables VoiceOver on iOS the ability to read label
-          role={variant === Variants.DEFAULT ? 'textbox' : null} // Enables VoiceOver on iOS the ability to read label and placeholder text correctly
-          aria-disabled={!!disabled}
-          className={cx('display')}
-        >
-          {/* Hidden attribute used to prevent VoiceOver on desktop from overly reading aria-describedby content */}
-          <span
-            className={cx('visually-hidden-component')}
-            id={ariaDescribedById}
-            hidden
-          >
-            {this.renderDescriptionText()}
-          </span>
-          {this.getDisplay(ariaDescribedById)}
+        <div className={cx('visually-hidden-component')} hidden>
+          {/* Hidden attribute used to prevent VoiceOver on desktop from this content twice */}
+          <span id={labelId}>{this.ariaLabel()}</span>
+          <span id={ariaDescribedById}>{this.renderDescriptionText()}</span>
+        </div>
+        <div className={cx('display')}>
+          {this.getDisplay(displayId, placeholderId, ariaDescribedById)}
         </div>
         {this.renderToggleButton()}
         <span
