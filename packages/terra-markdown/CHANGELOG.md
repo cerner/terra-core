@@ -8,8 +8,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-
-### Changed
 * Add styles to increase text contrast for block quotes
 
 2.21.0 - (February 5, 2019)

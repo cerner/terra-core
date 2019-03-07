@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Replaced local keyCode values with keycode-js npm package
 
 5.9.0 - (March 6th, 2019)
 ------------------

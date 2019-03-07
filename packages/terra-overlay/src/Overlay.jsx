@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
+import KeyCode from 'keycode-js';
 import 'terra-base/lib/baseStyles';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
@@ -50,10 +51,6 @@ const propTypes = {
   * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are '100', '6000', '7000', '8000', or '9000'.
   */
   zIndex: PropTypes.oneOf(zIndexes),
-};
-
-const KEYCODES = {
-  ESCAPE: 27,
 };
 
 const defaultProps = {
@@ -123,7 +120,7 @@ class Overlay extends React.Component {
   }
 
   shouldHandleESCKeydown(event) {
-    if (this.props.isOpen && event.keyCode === KEYCODES.ESCAPE) {
+    if (this.props.isOpen && event.keyCode === KeyCode.KEY_ESCAPE) {
       this.handleCloseEvent(event);
       event.preventDefault();
     }
