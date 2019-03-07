@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Replaced local keyCode values with keycode-js npm package 
+* Update documentation to better cover sections and headers
 
 4.1.0 - (February 26, 2019)
 ------------------

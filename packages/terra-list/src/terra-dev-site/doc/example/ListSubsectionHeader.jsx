@@ -4,21 +4,7 @@ import List, { SubsectionHeader } from 'terra-list/lib/index';
 
 const ListSubsectionHeaderExample = () => (
   <List>
-    <SubsectionHeader
-      key="static-subheader"
-      title="Static Subheader"
-    />
-    <SubsectionHeader
-      key="collapsible-subheader-open"
-      isCollapsible
-      title="Collapsible Subheader"
-    />
-    <SubsectionHeader
-      key="collapsible-subheader-collapsed"
-      isCollapsed
-      isCollapsible
-      title="Collapsible Subheader"
-    />
+    <SubsectionHeader title="Default SubsectionHeader" key="default" />
   </List>
 );
 

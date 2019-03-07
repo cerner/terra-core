@@ -1,6 +1,6 @@
 # Terra List - Implementing a Single Select List
 
-In previous versions of the terra-list a single select style list could be created as either a controlled version of SelectableList or uncontrolled version of SingleSelectList.  These implementations suffered from inflexibility and performance concerns. Going forward terra-list is more granular, though this puts more responsibility on the consumer to properly update their list items with the appropriate state. The following is a guide to addressing those concerns in your implementation.
+The terra-list implementation requires controlled state if selections are required. As a result selections are applied at child item generation from HOC state. The following guide show you how to implement that state within a single row selection variant of list.
 
 ## State Management
 The state of selection needs to be managed for the list in a HOC. In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
@@ -13,13 +13,13 @@ The state of selection needs to be managed for the list in a HOC. In this exampl
     this.state = { selectedKey: null };
   }
 ```
-Next creating an event handler callback method to pass to the list item's "onSelect" prop. The "onSelect" will return the metaData prop passed it each listItem.
+Next creating an event handler callback method to pass to the list item's `onSelect` prop. The `onSelect` will return the metaData prop passed it each listItem.
 ```jsx
   handleItemSelection(event, metaData) {
 
   }
 ```
-As a precaution we can prevent default on the event, in case the list has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
+As a precaution we can `preventDefault` on the event, in case the list has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
 ```jsx
   handleItemSelection(event, metaData) {
     event.preventDefault();
@@ -34,7 +34,7 @@ A single select list normally doesn't allow deselection, so we'll be using it in
     }
   }
 ```
-Setting state will trigger another render. So in the render method we need generate our list items with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The list renders flat, so keys need to be unique even if they are placed within sections.
+Setting state will trigger another render. So in the render method we need generate our list items with the updated `isSelected` and `isSelectable` props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The list renders flat, so keys need to be unique even if they are placed within sections.
 [React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
 ```jsx
   createListItem(itemData) {
@@ -47,7 +47,7 @@ Setting state will trigger another render. So in the render method we need gener
     );
   }
 ```
-Next we need to set up our metaData object with our key value, and attach the "onSelect" to our handler.
+Next we need to set up our `metaData` object with our key value, and attach the `onSelect` to our handler.
 ```jsx
   createListItem(itemData) {
     return (
@@ -61,7 +61,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
     );
   }
 ```
-For the single select list we set "isSelectable" for all items.
+For the single select list we set `isSelectable` for all items.
 ```jsx
   createListItem(itemData) {
     return (
@@ -76,7 +76,7 @@ For the single select list we set "isSelectable" for all items.
     );
   }
 ```
-Finally we need to check if the item matches the selectedKey in state.
+Finally we need to check if the item matches the selectedKey in state to set `isSelected`.
 ```jsx
   createListItem(itemData) {
     return (
@@ -92,7 +92,7 @@ Finally we need to check if the item matches the selectedKey in state.
     );
   }
 ```
-Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of "listbox" for the list, as it is required for accessibility with selectable list options.
+Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` for the list, as it is required for accessibility with selectable list options.
 ```jsx
   createListItems(data) {
     return data.map(childItem => this.createListItem(childItem));

@@ -10,13 +10,13 @@ const ListSubsectionExample = () => (
       title="Static Subsection"
     >
       <Item key="123">
-        <Placeholder title="Item 0" style={{ height: '50px' }} />
+        <Placeholder title="Item 0-0" style={{ height: '50px' }} />
       </Item>
       <Item key="124">
-        <Placeholder title="Item 1" style={{ height: '50px' }} />
+        <Placeholder title="Item 0-1" style={{ height: '50px' }} />
       </Item>
       <Item key="125">
-        <Placeholder title="Item 2" style={{ height: '50px' }} />
+        <Placeholder title="Item 0-2" style={{ height: '50px' }} />
       </Item>
     </Subsection>
     <Subsection
@@ -25,13 +25,13 @@ const ListSubsectionExample = () => (
       title="Collapsible Subsection"
     >
       <Item key="223">
-        <Placeholder title="Item 0" style={{ height: '50px' }} />
+        <Placeholder title="Item 1-0" style={{ height: '50px' }} />
       </Item>
       <Item key="224">
-        <Placeholder title="Item 1" style={{ height: '50px' }} />
+        <Placeholder title="Item 1-1" style={{ height: '50px' }} />
       </Item>
       <Item key="225">
-        <Placeholder title="Item 2" style={{ height: '50px' }} />
+        <Placeholder title="Item 1-2" style={{ height: '50px' }} />
       </Item>
     </Subsection>
     <Subsection
@@ -41,13 +41,13 @@ const ListSubsectionExample = () => (
       title="Collapsed Subsection"
     >
       <Item key="323">
-        <Placeholder title="Item 0" style={{ height: '50px' }} />
+        <Placeholder title="Item 2-0" style={{ height: '50px' }} />
       </Item>
       <Item key="324">
-        <Placeholder title="Item 1" style={{ height: '50px' }} />
+        <Placeholder title="Item 2-1" style={{ height: '50px' }} />
       </Item>
       <Item key="325">
-        <Placeholder title="Item 2" style={{ height: '50px' }} />
+        <Placeholder title="Item 2-2" style={{ height: '50px' }} />
       </Item>
     </Subsection>
   </List>

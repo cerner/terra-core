@@ -2,12 +2,11 @@ import React from 'react';
 import List, {
   Item,
   Section,
-  Subsection,
   Utils,
 } from 'terra-list/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 
 import Placeholder from 'terra-doc-template/lib/Placeholder';
-import mockData from './mock-data/mock-section-sub';
+import mockData from './mock-data/mock-section';
 
 const createListItem = itemData => (
   <Item key={itemData.key}>
@@ -15,16 +14,7 @@ const createListItem = itemData => (
   </Item>
 );
 
-const createSubsection = subsectionData => (
-  <Subsection
-    key={subsectionData.key}
-    title={subsectionData.title}
-  >
-    {subsectionData.childItems.map(childItem => createListItem(childItem))}
-  </Subsection>
-);
-
-class SectionWithSubsection1 extends React.Component {
+class SectionList extends React.Component {
   constructor(props) {
     super(props);
     this.createSection = this.createSection.bind(this);
@@ -35,22 +25,20 @@ class SectionWithSubsection1 extends React.Component {
 
   handleSectionSelection(event, metaData) {
     event.preventDefault();
-
     this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.collapsedKeys, metaData.key) }));
   }
 
   createSection(sectionData) {
-    const isCollapsed = this.state.collapsedKeys.indexOf(sectionData.key) >= 0;
     return (
       <Section
         key={sectionData.key}
         title={sectionData.title}
-        isCollapsed={isCollapsed}
+        isCollapsed={this.state.collapsedKeys.indexOf(sectionData.key) >= 0}
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
       >
-        {!isCollapsed && sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {sectionData.childItems.map(childItem => createListItem(childItem))}
       </Section>
     );
   }
@@ -61,11 +49,11 @@ class SectionWithSubsection1 extends React.Component {
 
   render() {
     return (
-      <List dividerStyle="standard">
+      <List role="listbox">
         {this.createSections(mockData)}
       </List>
     );
   }
 }
 
-export default SectionWithSubsection1;
+export default SectionList;
