@@ -531,13 +531,22 @@ class Frame extends React.Component {
   renderDescriptionText() {
     const { variant, totalOptions } = this.props;
 
-    // Instructions for touch devices, not needed with default variant.
+    const listOfOptionsTxt = `List of ${totalOptions} options.`;
+
     if ('ontouchstart' in window) {
-      return variant === Variants.DEFAULT ? null : `List of ${totalOptions} options. Swipe right to navigate options.`;
+      return variant === Variants.DEFAULT ? null : `${listOfOptionsTxt} . Swipe right to navigate options.`;
     }
 
-    // Instructions for non-touch devices
-    return `List of ${totalOptions} options. Use up and down arrow keys to navigate through options.`;
+    switch (variant) {
+      case Variants.TAG:
+      case Variants.MULTIPLE:
+        return `${listOfOptionsTxt} Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.`;
+      case Variants.SEARCH:
+      case Variants.COMBOBOX:
+        return `${listOfOptionsTxt} Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.`;
+      default:
+        return `${listOfOptionsTxt} Use up and down arrow keys to navigate through options. Press enter to select an option.`;
+    }
   }
 
   renderToggleButton() {
