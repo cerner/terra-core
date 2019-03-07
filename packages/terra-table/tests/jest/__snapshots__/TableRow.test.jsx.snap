@@ -2,8 +2,10 @@
 
 exports[`should render a default table row 1`] = `
 <tr
+  aria-live="polite"
   aria-selected={false}
   className="row"
+  role="row"
 >
   <TableCell
     content="John Smith"
@@ -22,8 +24,10 @@ exports[`should render a default table row 1`] = `
 
 exports[`should render a selectable table row 1`] = `
 <tr
+  aria-live="polite"
   aria-selected={false}
   className="is-selectable row"
+  role="row"
 >
   <TableCell
     content="John Smith"
@@ -42,8 +46,10 @@ exports[`should render a selectable table row 1`] = `
 
 exports[`should render a selected table row 1`] = `
 <tr
+  aria-live="polite"
   aria-selected={true}
   className="is-selected row"
+  role="row"
 >
   <TableCell
     content="John Smith"

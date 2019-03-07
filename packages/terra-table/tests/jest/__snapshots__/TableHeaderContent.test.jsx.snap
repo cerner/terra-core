@@ -4,6 +4,7 @@ exports[`should render default table header content tag 1`] = `
 <th
   className="min-width-small"
   data-terra-table-header-cell={true}
+  role="columnheader"
 >
   Column Heading
 </th>
@@ -14,6 +15,7 @@ exports[`should render table header content tag with ascending sort indicator 1`
   className="min-width-small"
   data-sort="asc"
   data-terra-table-header-cell={true}
+  role="columnheader"
 >
   Column Heading
   <span
@@ -34,6 +36,7 @@ exports[`should render table header content tag with descending sort indicator 1
   className="min-width-small"
   data-sort="desc"
   data-terra-table-header-cell={true}
+  role="columnheader"
 >
   Column Heading
   <span

@@ -46,7 +46,7 @@ const TableRow = ({
   }
 
   return (
-    <tr {...customProps} aria-selected={isSelected} className={rowClassNames}>
+    <tr {...customProps} role="row" aria-selected={isSelected} className={rowClassNames} aria-live="polite">
       {children}
     </tr>
   );

@@ -22,7 +22,7 @@ const TableHeader = ({
 
   return (
     <thead {...customProps}>
-      <tr>
+      <tr role="rowheader">
         {childrenArray}
       </tr>
     </thead>

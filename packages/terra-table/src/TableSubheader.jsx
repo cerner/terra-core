@@ -24,7 +24,7 @@ const TableSubheader = ({
   ...customProps
 }) => (
   // count is based on the number of columns and assigned in the table component which contains this subheader
-  <tr data-terra-table-subheader-row>
+  <tr role="rowheader" data-terra-table-subheader-row>
     <td {...customProps} className={cx('subheader', customProps.className)} colSpan={colSpan}>
       {content}
     </td>

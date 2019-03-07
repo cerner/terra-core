@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added ARIA Roles for table row and table headers
+* Added onFocus and OnBlur functions in selectablerows to add ARIA Labels for rows to improve accessibillity
+* Added ComponentDidMount to add ARIA labels for pre-selected rows
+
+------------------
 ### Changed
 * Replaced local keyCode values with keycode-js npm package
 

@@ -3,6 +3,7 @@
 exports[`should render table subheader row 1`] = `
 <tr
   data-terra-table-subheader-row={true}
+  role="rowheader"
 >
   <td
     className="subheader"
