@@ -1,6 +1,6 @@
 # Terra List - Implementing a Multi Select List
 
-The terra-list implementation requires controlled state if selections are required. As a result selections are applied at child items generation from HOC state. The following guide show you how to implement that state within a multiple items selection variant of list, as well as implement the additional narrowing requirements of a max selection for items.
+The terra-list implementation requires controlled state if selections are required. As a result, selections are applied when child items are generated from HOC state. The following guide will show you how to implement that state within a multiple items selection variant of list, as well as implement the additional narrowing requirements of a max selection for items.
 
 ## State Management
 The state of selection needs to be managed for the list in a High Order Component (HOC). In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
@@ -25,7 +25,7 @@ As a precaution we can prevent default on the event, in case the list has an anc
     event.preventDefault();
   }
 ```
-Terra list comes with additional helpers to manage state, in this case we want to determine if the selection has selected or unselected the list item key in our state. So we use the utility method `updatedMulitSelectedKeys`, which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
+Terra list comes with additional helpers to manage state. In this case, we want to determine if the selection has selected or unselected the list item key in our state. So we use the utility method `updatedMulitSelectedKeys`, which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
 ```jsx
   handleItemSelection(event, metaData) {
     event.preventDefault();
@@ -90,7 +90,7 @@ Finally we need to check if the item is selected. As we support IE10 & 11, we ca
     );
   }
 ```
-Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` for the list, as it is required for accessibility with selectable list options. Ensuring that we add the appropriate aria label for multiple selections, `aria-multiselectable`.
+Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` for the list, as it is required for accessibility with selectable list options. In addition, we need to assign the aria role for multiple selections, `aria-multiselectable`.
 ```jsx
   createListItems(data) {
     return data.map(childItem => this.createListItem(childItem));
