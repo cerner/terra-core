@@ -8,11 +8,12 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-  * The Overlay and the content to be displayed within the overlay.
+  * The overlay and the content to be displayed within the overlay.
   */
   overlay: PropTypes.node,
   /**
-  * The elements the overlay should hide when overlay isRelativeToContainer and isOpen.
+  * The elements that overlay should hide when overlay isOpen.
+  * elements which are not included in overlay will be wrapped within childern for better use of accessibility.
   */
   children: PropTypes.node,
 };

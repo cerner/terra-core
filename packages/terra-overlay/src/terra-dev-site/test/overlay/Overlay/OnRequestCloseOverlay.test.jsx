@@ -32,8 +32,10 @@ class OverlayExample extends React.Component {
           <br />
           <p>Close by clicking inside the overlay or pressing the ESC key.</p>
         </Overlay>
-        <button type="button" id="trigger_container" onClick={this.handleTriggerOverlay}>Trigger Container Overlay</button>
-        <button type="button" id="trigger_fullscreen" onClick={this.handleTriggerFullScreenOverlay}>Trigger Fullscreen Overlay</button>
+        <div>
+          <button type="button" id="trigger_container" onClick={this.handleTriggerOverlay}>Trigger Container Overlay</button>
+          <button type="button" id="trigger_fullscreen" onClick={this.handleTriggerFullScreenOverlay}>Trigger Fullscreen Overlay</button>
+        </div>
       </OverlayContainer>
     );
   }

@@ -43,8 +43,10 @@ class OverlayExample extends React.Component {
           <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} id={this.state.id}>
             <h3>Overlay will timeout in 5 seconds.</h3>
           </Overlay>
-          <button type="button" id="trigger_fullscreen" onClick={this.handleTriggerFullScreenOverlay}>Trigger Fullscreen Overlay</button>
-          <button type="button" id="trigger_container" onClick={this.handleTriggerOverlay}>Trigger Container Overlay</button>
+          <div>
+            <button type="button" id="trigger_fullscreen" onClick={this.handleTriggerFullScreenOverlay}>Trigger Fullscreen Overlay</button>
+            <button type="button" id="trigger_container" onClick={this.handleTriggerOverlay}>Trigger Container Overlay</button>
+          </div>
         </OverlayContainer>
         <br />
         <p> Outside of overlay container to prove functionality. Click the random button below after clicking the Trigger Container Overlay button to confirm an Overlay relative to container does not block outside interactions. </p>
