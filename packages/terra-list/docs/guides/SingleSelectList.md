@@ -1,6 +1,6 @@
 # Terra List - Implementing a Single Select List
 
-The terra-list implementation requires controlled state if selections are required. As a result selections are applied at child item generation from HOC state. The following guide show you how to implement that state within a single row selection variant of list.
+The terra-list implementation requires controlled state if selections are required. As a result, selections are applied at child item generation from HOC state. The following guide will show you how to implement that state within a single row selection variant of list.
 
 ## State Management
 The state of selection needs to be managed for the list in a HOC. In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
