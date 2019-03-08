@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import KeyCode from 'keycode-js';
 import 'terra-base/lib/baseStyles';
 import styles from './Hyperlink.module.scss';
 
 const cx = classNames.bind(styles);
-
-const KEYCODES = {
-  ENTER: 13,
-  TAB: 9,
-};
 
 const variants = {
   DEFAULT: 'default',
@@ -87,7 +83,7 @@ class Hyperlink extends React.Component {
 
   handleKeyDown(event) {
     // Add focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ focused: true });
     }
 
@@ -98,7 +94,7 @@ class Hyperlink extends React.Component {
 
   handleKeyUp(event) {
     // Apply focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KEYCODES.TAB) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
       this.setState({ focused: true });
     }
 

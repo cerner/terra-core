@@ -85,14 +85,6 @@ const shouldHandleMultiSelectRowSelection = (children, maxSelectionCount, curren
   return currentIndexes.indexOf(newIndex) >= 0;
 };
 
-/**
- * The KEYCODES supported by seletectable table components.
- */
-const KEYCODES = {
-  ENTER: 13,
-  SPACE: 32,
-};
-
 const SelectableUtils = {
   validatedMaxCountSelection,
   initialSingleSelectRowIndex,
@@ -100,7 +92,6 @@ const SelectableUtils = {
   updatedMultiSelectedIndexes,
   shouldHandleSingleSelectRowSelection,
   shouldHandleMultiSelectRowSelection,
-  KEYCODES,
 };
 
 export default SelectableUtils;

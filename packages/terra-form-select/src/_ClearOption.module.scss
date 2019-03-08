@@ -1,0 +1,7 @@
+:local {
+  .clear-option {
+    color: var(--terra-form-select-clear-option-color, rgba(28, 31, 33, 0.62));
+    font-style: var(--terra-form-select-clear-option-font-style);
+    margin: var(--terra-form-select-clear-option-margin, 0 0 0.17857rem 0);
+  }
+}
