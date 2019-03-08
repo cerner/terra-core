@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated status view variants object, added proptype check
 
 3.7.0 - (March 5, 2019)
 ------------------
