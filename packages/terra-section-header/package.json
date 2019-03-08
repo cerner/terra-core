@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

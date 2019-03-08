@@ -4,7 +4,8 @@ import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import 'terra-base/lib/baseStyles';
-import { KeyCodes, Variants } from './_constants';
+import KeyCode from 'keycode-js';
+import Variants from './_constants';
 import Dropdown from './_Dropdown';
 import Util from './_FrameUtil';
 import styles from './_Frame.module.scss';
@@ -355,19 +356,16 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { value } = this.props;
     const { keyCode, target } = event;
-    const {
-      BACKSPACE, SPACE, UP_ARROW, DOWN_ARROW,
-    } = KeyCodes;
 
-    if (keyCode === SPACE && target !== this.input) {
+    if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
       this.openDropdown(event);
-    } else if (keyCode === UP_ARROW || keyCode === DOWN_ARROW) {
+    } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown(event);
-    } else if (keyCode === BACKSPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0) {
+    } else if (keyCode === KeyCode.KEY_BACK_SPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0) {
       this.props.onDeselect(value[value.length - 1]);
-    } else if (keyCode === KeyCodes.ESCAPE) {
+    } else if (keyCode === KeyCode.KEY_ESCAPE) {
       this.closeDropdown();
     }
   }
