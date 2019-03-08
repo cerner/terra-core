@@ -1854,7 +1854,6 @@ describe('Select', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('selected-clear-option', { viewports });
     });
-  });
 
     describe('tag should not open dropdown by enter key press', () => {
       before(() => {

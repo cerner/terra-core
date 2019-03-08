@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select should render a clear option 1`] = `
-<Frame
+<InjectIntl(Frame)
   clearOptionDisplay="- Select -"
+  data-terra-select={true}
   disabled={false}
   display=""
   dropdown={[Function]}
@@ -10,6 +11,7 @@ exports[`Select should render a clear option 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="- Select -"
+  totalOptions={0}
   value=""
   variant="default"
 />
@@ -225,33 +227,38 @@ exports[`Select should render a search variant with a placeholder 1`] = `
 
 exports[`Select should render a select with an optgroup and an option 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-3"
+  aria-describedby="terra-select-screen-reader-description-12"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Search"
+  aria-labelledby="terra-select-screen-reader-label-9 terra-select-screen-reader-display-10 terra-select-screen-reader-placeholder-11"
   class="select default"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  intl="[object Object]"
-  role="application"
+  role="combobox"
   tabindex="0"
 >
   <div
-    aria-disabled="false"
-    aria-label="Search"
-    class="display"
-    role="textbox"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-3"
+      id="terra-select-screen-reader-label-9"
     >
-      - Select -. List of 1 options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-12"
+    >
+      List of 1 options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="placeholder"
+      id="terra-select-screen-reader-placeholder-11"
     >
       - Select -
     </div>
@@ -275,33 +282,38 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
 
 exports[`Select should render a select with an optgroup and multiple options 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-4"
+  aria-describedby="terra-select-screen-reader-description-16"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Search"
+  aria-labelledby="terra-select-screen-reader-label-13 terra-select-screen-reader-display-14 terra-select-screen-reader-placeholder-15"
   class="select default"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  intl="[object Object]"
-  role="application"
+  role="combobox"
   tabindex="0"
 >
   <div
-    aria-disabled="false"
-    aria-label="Search"
-    class="display"
-    role="textbox"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-4"
+      id="terra-select-screen-reader-label-13"
     >
-      - Select -. List of 2 options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-16"
+    >
+      List of 2 options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="placeholder"
+      id="terra-select-screen-reader-placeholder-15"
     >
       - Select -
     </div>
@@ -325,33 +337,38 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
 
 exports[`Select should render a select with an option 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-1"
+  aria-describedby="terra-select-screen-reader-description-4"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Search"
+  aria-labelledby="terra-select-screen-reader-label-1 terra-select-screen-reader-display-2 terra-select-screen-reader-placeholder-3"
   class="select default"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  intl="[object Object]"
-  role="application"
+  role="combobox"
   tabindex="0"
 >
   <div
-    aria-disabled="false"
-    aria-label="Search"
-    class="display"
-    role="textbox"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-1"
+      id="terra-select-screen-reader-label-1"
     >
-      - Select -. List of 1 options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-4"
+    >
+      List of 1 options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="placeholder"
+      id="terra-select-screen-reader-placeholder-3"
     >
       - Select -
     </div>
@@ -375,33 +392,38 @@ exports[`Select should render a select with an option 1`] = `
 
 exports[`Select should render a select with multiple options 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-2"
+  aria-describedby="terra-select-screen-reader-description-8"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Search"
+  aria-labelledby="terra-select-screen-reader-label-5 terra-select-screen-reader-display-6 terra-select-screen-reader-placeholder-7"
   class="select default"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  intl="[object Object]"
-  role="application"
+  role="combobox"
   tabindex="0"
 >
   <div
-    aria-disabled="false"
-    aria-label="Search"
-    class="display"
-    role="textbox"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-2"
+      id="terra-select-screen-reader-label-5"
     >
-      - Select -. List of 2 options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-8"
+    >
+      List of 2 options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="placeholder"
+      id="terra-select-screen-reader-placeholder-7"
     >
       - Select -
     </div>

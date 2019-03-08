@@ -21,8 +21,8 @@ exports[`should render a default SelectField component 1`] = `
   showOptional={false}
 >
   <Select
-    ariaLabel="Label"
     allowClear={false}
+    ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
     id="select-id"
@@ -79,8 +79,8 @@ exports[`should render a default SelectField component with attributes spread on
   showOptional={false}
 >
   <Select
-    ariaLabel="Label"
     allowClear={false}
+    ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
     id="select-id"
@@ -145,6 +145,7 @@ exports[`should render a multiple SelectField component that limits the selectio
 >
   <Select
     allowClear={false}
+    ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
     id="select-id"

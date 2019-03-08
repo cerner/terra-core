@@ -1,78 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Frame should render a clear option 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select default"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="0"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-       
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
+<Frame
+  clearOptionDisplay="-Select-"
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.maxSelectionHelp": "Limit {text} items.",
+        "Terra.form.select.maxSelectionOption": "Maximum number of {text} items selected",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="default"
+/>
 `;
 
 exports[`Frame should render a combobox variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-2"
+  aria-describedby="terra-select-screen-reader-description-8"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-2"
+      id="terra-select-screen-reader-label-5"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-8"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-6"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-2"
+          aria-describedby="terra-select-screen-reader-display-6 terra-select-screen-reader-description-8"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -101,35 +112,44 @@ exports[`Frame should render a combobox variant 1`] = `
 
 exports[`Frame should render a combobox variant with a placeholder 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-7"
+  aria-describedby="terra-select-screen-reader-description-28"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-7"
+      id="terra-select-screen-reader-label-25"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-28"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-26"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-7"
+          aria-describedby="terra-select-screen-reader-display-26 terra-select-screen-reader-description-28"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -159,35 +179,44 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
 
 exports[`Frame should render a custom dropdown 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-21"
+  aria-describedby="terra-select-screen-reader-description-84"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-21"
+      id="terra-select-screen-reader-label-81"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-84"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-82"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-21"
+          aria-describedby="terra-select-screen-reader-display-82 terra-select-screen-reader-description-84"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -216,32 +245,37 @@ exports[`Frame should render a custom dropdown 1`] = `
 
 exports[`Frame should render a default variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-1"
+  aria-describedby="terra-select-screen-reader-description-4"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Search"
+  aria-labelledby="terra-select-screen-reader-label-1 terra-select-screen-reader-display-2 terra-select-screen-reader-placeholder-3"
   class="select default"
   data-terra-select-combobox="true"
-  intl="[object Object]"
-  role="application"
+  role="combobox"
   tabindex="0"
 >
   <div
-    aria-disabled="false"
-    aria-label="Search"
-    class="display"
-    role="textbox"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-1"
+      id="terra-select-screen-reader-label-1"
     >
-      undefined. List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-4"
+    >
+      List of undefined options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="placeholder"
+      id="terra-select-screen-reader-placeholder-3"
     >
        
     </div>
@@ -265,32 +299,37 @@ exports[`Frame should render a default variant 1`] = `
 
 exports[`Frame should render a default variant with a placeholder 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-6"
+  aria-describedby="terra-select-screen-reader-description-24"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Search"
+  aria-labelledby="terra-select-screen-reader-label-21 terra-select-screen-reader-display-22 terra-select-screen-reader-placeholder-23"
   class="select default"
   data-terra-select-combobox="true"
-  intl="[object Object]"
-  role="application"
+  role="combobox"
   tabindex="0"
 >
   <div
-    aria-disabled="false"
-    aria-label="Search"
-    class="display"
-    role="textbox"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-6"
+      id="terra-select-screen-reader-label-21"
     >
-      Placeholder. List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-24"
+    >
+      List of undefined options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="placeholder"
+      id="terra-select-screen-reader-placeholder-23"
     >
       Placeholder
     </div>
@@ -314,33 +353,42 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
 
 exports[`Frame should render a disabled combobox variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-12"
+  aria-describedby="terra-select-screen-reader-description-48"
   aria-disabled="true"
   aria-expanded="false"
   class="select tag is-disabled"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   tabindex="-1"
 >
   <div
-    aria-disabled="true"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-12"
+      id="terra-select-screen-reader-label-45"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-48"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-46"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-12"
+          aria-describedby="terra-select-screen-reader-display-46 terra-select-screen-reader-description-48"
           aria-disabled="true"
           aria-label="Search"
           class="search-input"
@@ -370,30 +418,36 @@ exports[`Frame should render a disabled combobox variant 1`] = `
 
 exports[`Frame should render a disabled default variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-11"
+  aria-describedby="terra-select-screen-reader-description-44"
   aria-disabled="true"
   aria-expanded="false"
-  aria-label="Search"
+  aria-labelledby="terra-select-screen-reader-label-41 terra-select-screen-reader-display-42 terra-select-screen-reader-placeholder-43"
   class="select default is-disabled"
   data-terra-select-combobox="true"
-  intl="[object Object]"
+  role="combobox"
   tabindex="-1"
 >
   <div
-    aria-disabled="true"
-    aria-label="Search"
-    class="display"
-    role="textbox"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-11"
+      id="terra-select-screen-reader-label-41"
     >
-      undefined. List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-44"
+    >
+      List of undefined options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="placeholder"
+      id="terra-select-screen-reader-placeholder-43"
     >
        
     </div>
@@ -417,33 +471,42 @@ exports[`Frame should render a disabled default variant 1`] = `
 
 exports[`Frame should render a disabled multiple variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-13"
+  aria-describedby="terra-select-screen-reader-description-52"
   aria-disabled="true"
   aria-expanded="false"
   class="select multiple is-disabled"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   tabindex="-1"
 >
   <div
-    aria-disabled="true"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-13"
+      id="terra-select-screen-reader-label-49"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-52"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-50"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-13"
+          aria-describedby="terra-select-screen-reader-display-50 terra-select-screen-reader-description-52"
           aria-disabled="true"
           aria-label="Search"
           class="search-input"
@@ -473,30 +536,36 @@ exports[`Frame should render a disabled multiple variant 1`] = `
 
 exports[`Frame should render a disabled search variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-14"
+  aria-describedby="terra-select-screen-reader-description-56"
   aria-disabled="true"
   aria-expanded="false"
   class="select search is-disabled"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   tabindex="-1"
 >
   <div
-    aria-disabled="true"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-14"
+      id="terra-select-screen-reader-label-53"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-56"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="content"
     >
       <input
-        aria-describedby="terra-select-screen-reader-description-14"
+        aria-describedby="terra-select-screen-reader-description-56"
         aria-disabled="true"
         aria-label="Search"
         class="search-input"
@@ -524,33 +593,42 @@ exports[`Frame should render a disabled search variant 1`] = `
 
 exports[`Frame should render a disabled tag variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-15"
+  aria-describedby="terra-select-screen-reader-description-60"
   aria-disabled="true"
   aria-expanded="false"
   class="select tag is-disabled"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   tabindex="-1"
 >
   <div
-    aria-disabled="true"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-15"
+      id="terra-select-screen-reader-label-57"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-60"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-58"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-15"
+          aria-describedby="terra-select-screen-reader-display-58 terra-select-screen-reader-description-60"
           aria-disabled="true"
           aria-label="Search"
           class="search-input"
@@ -580,35 +658,44 @@ exports[`Frame should render a disabled tag variant 1`] = `
 
 exports[`Frame should render a multiple variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-3"
+  aria-describedby="terra-select-screen-reader-description-12"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-3"
+      id="terra-select-screen-reader-label-9"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-12"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-10"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-3"
+          aria-describedby="terra-select-screen-reader-display-10 terra-select-screen-reader-description-12"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -637,35 +724,44 @@ exports[`Frame should render a multiple variant 1`] = `
 
 exports[`Frame should render a multiple variant with a placeholder 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-8"
+  aria-describedby="terra-select-screen-reader-description-32"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-8"
+      id="terra-select-screen-reader-label-29"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-32"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-30"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-8"
+          aria-describedby="terra-select-screen-reader-display-30 terra-select-screen-reader-description-32"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -695,32 +791,38 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
 
 exports[`Frame should render a search variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-4"
+  aria-describedby="terra-select-screen-reader-description-16"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select search"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-4"
+      id="terra-select-screen-reader-label-13"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-16"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="content"
     >
       <input
-        aria-describedby="terra-select-screen-reader-description-4"
+        aria-describedby="terra-select-screen-reader-description-16"
         aria-disabled="false"
         aria-label="Search"
         class="search-input"
@@ -747,32 +849,38 @@ exports[`Frame should render a search variant 1`] = `
 
 exports[`Frame should render a search variant with a placeholder 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-9"
+  aria-describedby="terra-select-screen-reader-description-36"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select search"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-9"
+      id="terra-select-screen-reader-label-33"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-36"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="content"
     >
       <input
-        aria-describedby="terra-select-screen-reader-description-9"
+        aria-describedby="terra-select-screen-reader-description-36"
         aria-disabled="false"
         aria-label="Search"
         class="search-input"
@@ -800,35 +908,44 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
 
 exports[`Frame should render a tag variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-5"
+  aria-describedby="terra-select-screen-reader-description-20"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-5"
+      id="terra-select-screen-reader-label-17"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-20"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-18"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-5"
+          aria-describedby="terra-select-screen-reader-display-18 terra-select-screen-reader-description-20"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -857,35 +974,44 @@ exports[`Frame should render a tag variant 1`] = `
 
 exports[`Frame should render a tag variant with a placeholder 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-10"
+  aria-describedby="terra-select-screen-reader-description-40"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-10"
+      id="terra-select-screen-reader-label-37"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-40"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-38"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-10"
+          aria-describedby="terra-select-screen-reader-display-38 terra-select-screen-reader-description-40"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -915,35 +1041,44 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
 
 exports[`Frame should render an invalid combobox variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-17"
+  aria-describedby="terra-select-screen-reader-description-68"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag is-invalid"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-17"
+      id="terra-select-screen-reader-label-65"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-68"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-66"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-17"
+          aria-describedby="terra-select-screen-reader-display-66 terra-select-screen-reader-description-68"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -972,32 +1107,37 @@ exports[`Frame should render an invalid combobox variant 1`] = `
 
 exports[`Frame should render an invalid default variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-16"
+  aria-describedby="terra-select-screen-reader-description-64"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Search"
+  aria-labelledby="terra-select-screen-reader-label-61 terra-select-screen-reader-display-62 terra-select-screen-reader-placeholder-63"
   class="select default is-invalid"
   data-terra-select-combobox="true"
-  intl="[object Object]"
-  role="application"
+  role="combobox"
   tabindex="0"
 >
   <div
-    aria-disabled="false"
-    aria-label="Search"
-    class="display"
-    role="textbox"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-16"
+      id="terra-select-screen-reader-label-61"
     >
-      undefined. List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-64"
+    >
+      List of undefined options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="placeholder"
+      id="terra-select-screen-reader-placeholder-63"
     >
        
     </div>
@@ -1021,35 +1161,44 @@ exports[`Frame should render an invalid default variant 1`] = `
 
 exports[`Frame should render an invalid multiple variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-18"
+  aria-describedby="terra-select-screen-reader-description-72"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select multiple is-invalid"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-18"
+      id="terra-select-screen-reader-label-69"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-72"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-70"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-18"
+          aria-describedby="terra-select-screen-reader-display-70 terra-select-screen-reader-description-72"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -1078,32 +1227,38 @@ exports[`Frame should render an invalid multiple variant 1`] = `
 
 exports[`Frame should render an invalid search variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-19"
+  aria-describedby="terra-select-screen-reader-description-76"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select search is-invalid"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-19"
+      id="terra-select-screen-reader-label-73"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-76"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <div
       class="content"
     >
       <input
-        aria-describedby="terra-select-screen-reader-description-19"
+        aria-describedby="terra-select-screen-reader-description-76"
         aria-disabled="false"
         aria-label="Search"
         class="search-input"
@@ -1130,35 +1285,44 @@ exports[`Frame should render an invalid search variant 1`] = `
 
 exports[`Frame should render an invalid tag variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-20"
+  aria-describedby="terra-select-screen-reader-description-80"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
   class="select tag is-invalid"
   data-terra-select-combobox="true"
-  intl="[object Object]"
   role="application"
   tabindex="-1"
 >
   <div
-    aria-disabled="false"
-    class="display"
+    class="visually-hidden-component"
+    hidden=""
   >
     <span
-      class="visually-hidden-component"
-      hidden=""
-      id="terra-select-screen-reader-description-20"
+      id="terra-select-screen-reader-label-77"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options.
+      Search
     </span>
+    <span
+      id="terra-select-screen-reader-description-80"
+    >
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+    </span>
+  </div>
+  <div
+    class="display"
+  >
     <ul
       class="content"
     >
+      <div
+        id="terra-select-screen-reader-display-78"
+      />
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-description-20"
+          aria-describedby="terra-select-screen-reader-display-78 terra-select-screen-reader-description-80"
           aria-disabled="false"
           aria-label="Search"
           class="search-input"
@@ -1217,6 +1381,8 @@ exports[`Frame should update the aria-live text when the search has no results 1
           "Terra.form.select.add": "Add \\"{text}\\"",
           "Terra.form.select.ariaLabel": "Search",
           "Terra.form.select.defaultDisplay": "- Select -",
+          "Terra.form.select.maxSelectionHelp": "Limit {text} items.",
+          "Terra.form.select.maxSelectionOption": "Maximum number of {text} items selected",
           "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
           "Terra.form.select.selected": "{text} Selected",
         },
@@ -1230,46 +1396,13 @@ exports[`Frame should update the aria-live text when the search has no results 1
     variant="tag"
   >
     <div
-      aria-describedby="terra-select-screen-reader-description-23"
+      aria-describedby="terra-select-screen-reader-description-92"
       aria-disabled={false}
       aria-expanded={false}
       aria-haspopup="true"
-      aria-label={null}
+      aria-labelledby={null}
       className="select tag"
       data-terra-select-combobox={true}
-      intl={
-        Object {
-          "defaultFormats": Object {},
-          "defaultLocale": "en",
-          "formatDate": [Function],
-          "formatHTMLMessage": [Function],
-          "formatMessage": [Function],
-          "formatNumber": [Function],
-          "formatPlural": [Function],
-          "formatRelative": [Function],
-          "formatTime": [Function],
-          "formats": Object {},
-          "formatters": Object {
-            "getDateTimeFormat": [Function],
-            "getMessageFormat": [Function],
-            "getNumberFormat": [Function],
-            "getPluralFormat": [Function],
-            "getRelativeFormat": [Function],
-          },
-          "locale": "en-US",
-          "messages": Object {
-            "Terra.form.select.add": "Add \\"{text}\\"",
-            "Terra.form.select.ariaLabel": "Search",
-            "Terra.form.select.defaultDisplay": "- Select -",
-            "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-            "Terra.form.select.selected": "{text} Selected",
-          },
-          "now": [Function],
-          "onError": [Function],
-          "textComponent": "span",
-          "timeZone": null,
-        }
-      }
       onBlur={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1278,26 +1411,34 @@ exports[`Frame should update the aria-live text when the search has no results 1
       tabIndex="-1"
     >
       <div
-        aria-disabled={false}
-        aria-label={null}
-        className="display"
-        role={null}
+        className="visually-hidden-component"
+        hidden={true}
       >
         <span
-          className="visually-hidden-component"
-          hidden={true}
-          id="terra-select-screen-reader-description-23"
+          id="terra-select-screen-reader-label-89"
         >
-          List of undefined options. Use up and down arrow keys to navigate through options.
+          Search
         </span>
+        <span
+          id="terra-select-screen-reader-description-92"
+        >
+          List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+        </span>
+      </div>
+      <div
+        className="display"
+      >
         <ul
           className="content"
         >
+          <div
+            id="terra-select-screen-reader-display-90"
+          />
           <li
             className="search-wrapper"
           >
             <input
-              aria-describedby="terra-select-screen-reader-description-23"
+              aria-describedby="terra-select-screen-reader-display-90 terra-select-screen-reader-description-92"
               aria-disabled={false}
               aria-label="Search"
               className="search-input"

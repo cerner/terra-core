@@ -1,62 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Menu should render a Menu with an add option and set the screen reader region to blank 1`] = `
-<ul
-  aria-activedescendant="terra-select-option-null"
-  className="menu"
-  role="listbox"
-  tabIndex="0"
-/>
-`;
-
-exports[`Menu should render a Menu with no results and update the live region appropriately 1`] = `
-<ul
-  aria-activedescendant="terra-select-option-null"
-  className="menu"
-  role="listbox"
-  tabIndex="0"
->
-  <NoResults
-    key=".0"
-    value="asdf"
-  />
-</ul>
-`;
-
 exports[`Menu should render a Menu with the clear option 1`] = `
-<ul
-  aria-activedescendant="terra-select-option-"
-  className="menu"
-  role="listbox"
-  tabIndex="0"
+<Menu
+  clearOptionDisplay="-Select-"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "Terra.form.select.add": "Add \\"{text}\\"",
+        "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.maxSelectionHelp": "Limit {text} items.",
+        "Terra.form.select.maxSelectionOption": "Maximum number of {text} items selected",
+        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
+        "Terra.form.select.selected": "{text} Selected",
+      },
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onSelect={[Function]}
+  searchValue=""
+  variant="combobox"
+  visuallyHiddenComponent={
+    Object {
+      "current": <div />,
+    }
+  }
 >
-  <ClearOption
-    data-select-active={true}
-    display="-Select-"
-    id="terra-select-option-"
-    isActive={true}
-    isCheckable={false}
-    isSelected={false}
-    key=".0"
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseUp={[Function]}
-    value=""
-  />
   <Option
     disabled={false}
     display="display"
-    id="terra-select-option-value"
-    isActive={false}
-    isCheckable={false}
-    isSelected={false}
-    key=".$.$.0"
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseUp={[Function]}
     value="value"
   />
-</ul>
+</Menu>
 `;
 
 exports[`Menu should render a default Menu 1`] = `
