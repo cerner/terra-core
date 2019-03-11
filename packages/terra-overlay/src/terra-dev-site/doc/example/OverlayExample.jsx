@@ -27,16 +27,19 @@ class OverlayExample extends React.Component {
     this.setState({ show: false });
   }
 
+  addOverlay() {
+    return (
+      <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} onRequestClose={this.handleOnRequestESC} zIndex="6000">
+        <p>Close by clicking the overlay or pressing the ESC key.</p>
+      </Overlay>
+    );
+  }
+
   render() {
     return (
-      <OverlayContainer style={{ height: '100px', width: '100%' }}>
-        <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} onRequestClose={this.handleOnRequestESC} zIndex="6000">
-          <p>Close by clicking the overlay or pressing the ESC key.</p>
-        </Overlay>
-        <div>
-          <Button text="Trigger Container Overlay" onClick={this.handleTriggerOverlay} />
-          <Button text="Trigger FullScreen Overlay" onClick={this.handleTriggerFullScreenOverlay} />
-        </div>
+      <OverlayContainer style={{ height: '100px', width: '100%' }} overlay={this.addOverlay()}>
+        <Button text="Trigger Container Overlay" onClick={this.handleTriggerOverlay} />
+        <Button text="Trigger FullScreen Overlay" onClick={this.handleTriggerFullScreenOverlay} />
       </OverlayContainer>
     );
   }

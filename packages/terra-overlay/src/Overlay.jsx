@@ -53,12 +53,8 @@ const propTypes = {
   zIndex: PropTypes.oneOf(zIndexes),
 };
 
-const KEYCODES = {
-  ESCAPE: 27,
-};
-
 let overlayClassName = '';
-        
+
 const defaultProps = {
   children: null,
   isOpen: false,
