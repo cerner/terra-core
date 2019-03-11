@@ -32,7 +32,9 @@ const OverlayContainer = ({ overlay, children, ...customProps }) => {
   return (
     <div {...customProps} className={OverlayContainerClassNames} tabIndex="-1">
       {overlay}
-      {children}
+      <div className={cx('container-content')}>
+        {children}
+      </div>
     </div>
   );
 };

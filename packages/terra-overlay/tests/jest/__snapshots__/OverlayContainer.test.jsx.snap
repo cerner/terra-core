@@ -4,7 +4,11 @@ exports[`OverlayContainer should render a default component 1`] = `
 <div
   className="overlay-container"
   tabIndex="-1"
-/>
+>
+  <div
+    className="container-content"
+  />
+</div>
 `;
 
 exports[`OverlayContainer should render when overlay and children are provided 1`] = `
@@ -20,8 +24,12 @@ exports[`OverlayContainer should render when overlay and children are provided 1
     rootSelector="[data-terra-base]"
     zIndex="100"
   />
-  <div>
-    Some Text Content
+  <div
+    className="container-content"
+  >
+    <div>
+      Some Text Content
+    </div>
   </div>
 </div>
 `;
@@ -39,6 +47,10 @@ exports[`OverlayContainer should render when overlay is provided 1`] = `
     rootSelector="[data-terra-base]"
     zIndex="100"
   />
-  Some Text Content
+  <div
+    className="container-content"
+  >
+    Some Text Content
+  </div>
 </div>
 `;
