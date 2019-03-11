@@ -8,6 +8,7 @@ import KeyCode from 'keycode-js';
 import Variants from './_constants';
 import Dropdown from './_Dropdown';
 import Util from './_FrameUtil';
+import SharedUtil from './_SharedUtil';
 import styles from './_Frame.module.scss';
 
 const cx = classNames.bind(styles);
@@ -209,7 +210,16 @@ class Frame extends React.Component {
       case Variants.MULTIPLE:
         return (
           <ul className={cx('content')}>
-            <div id={displayId}>{display}</div>
+            {display.length > 0
+              ? (
+                <li>
+                  <ul id={displayId} className={cx('display-content')}>
+                    {display}
+                    <li className={cx('visually-hidden-component')}>Selected.</li>
+                  </ul>
+                </li>
+              ) : null
+            }
             <li className={cx('search-wrapper')}>
               <input {...inputAttrs} value={searchValue} />
             </li>
@@ -482,9 +492,16 @@ class Frame extends React.Component {
    * Falls back to the string 'Search' if no label is provided
    */
   ariaLabel() {
-    const { ariaLabel, intl } = this.props;
+    const { ariaLabel, disabled, intl } = this.props;
 
     const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
+
+    // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
+    // VO associates with disabled form controls.
+    if ('ontouchstart' in window && disabled) {
+      return ariaLabel === undefined ? `${defaultAriaLabel} Dimmed` : `${ariaLabel} Dimmed`;
+    }
+
     return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
   }
 
@@ -501,9 +518,10 @@ class Frame extends React.Component {
     // Safari is able to read the display/placeholder text, other browsers need help to provide that info to
     // the accessibility tree used by screen readers
     if (variant === Variants.DEFAULT) {
-      if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
+      if (SharedUtil.isSafari()) {
         ariaLabelledBy = `${labelId}`;
       } else {
+        // alert('not safari');
         ariaLabelledBy = `${labelId} ${displayId} ${placeholderId}`;
       }
     }
@@ -532,13 +550,21 @@ class Frame extends React.Component {
     const listOfOptionsTxt = `List of ${totalOptions} options.`;
 
     if ('ontouchstart' in window) {
-      return variant === Variants.DEFAULT ? null : `${listOfOptionsTxt} . Swipe right to navigate options.`;
+      if (variant === Variants.DEFAULT) {
+        return `${listOfOptionsTxt}`;
+      }
+
+      if (this.state.isInputFocused) {
+        return `${listOfOptionsTxt}`;
+      }
+
+      return `${listOfOptionsTxt} . Swipe right to navigate to options.`;
     }
 
     switch (variant) {
       case Variants.TAG:
       case Variants.MULTIPLE:
-        return `${listOfOptionsTxt} Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.`;
+        return `${listOfOptionsTxt} Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.`;
       case Variants.SEARCH:
       case Variants.COMBOBOX:
         return `${listOfOptionsTxt} Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.`;

@@ -150,9 +150,6 @@
   }
 
   .content {
-    display: flex;
-    flex: 1 1 auto;
-    flex-wrap: wrap; // IE 10
     list-style-type: none;
     margin: 0;
     overflow: hidden;
@@ -160,6 +157,16 @@
     padding-left: var(--terra-form-select-content-padding-left, 0);
     padding-right: var(--terra-form-select-content-padding-right, 0);
     padding-top: var(--terra-form-select-content-padding-top, 0);
+  }
+
+  .display-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap; // IE 10
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
   }
 
   // A reduced, non-zero, height and width allows the input to receive focus using tab.
@@ -198,7 +205,7 @@
   }
 
   // Hides the clear buttons in IE.
-  .search::-ms-clear {
+  .select ::-ms-clear {
     display: none;
     height: 0;
     width: 0;

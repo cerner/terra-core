@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
 
 const cx = classNames.bind(styles);
@@ -80,9 +81,7 @@ const Option = ({
    * aria-live section we have and will stutter when reading options.
    * Switching to role="radio" and role="checkbox" mitigates this behavior.
    */
-  if (navigator.userAgent.indexOf('Safari') !== -1
-   && navigator.userAgent.indexOf('Chrome') === -1
-   && !('ontouchstart' in window)) {
+  if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
     role = 'radio';
 
     if (variant === 'tag' || variant === 'multiple') {

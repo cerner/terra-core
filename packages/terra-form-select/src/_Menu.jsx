@@ -11,6 +11,7 @@ import ClearOption from './_ClearOption';
 import MaxSelection from './_MaxSelection';
 import NoResults from './_NoResults';
 import Util from './_MenuUtil';
+import SharedUtil from './_SharedUtil';
 import styles from './_Menu.module.scss';
 
 const cx = classNames.bind(styles);
@@ -175,10 +176,13 @@ class Menu extends React.Component {
      * Without this detection for ontouchstart and the early return, VoiceOver on iOS will read the
      * first option twice when the menu is opened. First due to aria-live update in componentDidMount
      * and another time because we shift focus to the dropdown and VoiceOver on iOS will read the
-     * first interactable element in the dropdown. To mitigate this, the following conditional
+     * first option in the dropdown. To mitigate this, the following conditional
      * check opts-out of the aria-live update if browser supports ontouchstart which iOS supports.
      */
     if ('ontouchstart' in window) return;
+    // if (this.props.clearOptionDisplay) {
+    //   this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
+    // }
     this.updateCurrentActiveScreenReader();
   }
 
@@ -190,6 +194,26 @@ class Menu extends React.Component {
   componentWillUnmount() {
     this.clearSearch();
     this.clearScrollTimeout();
+    if (this.state.closedViaKeyEvent) {
+      if (this.props.variant === Variants.DEFAULT) {
+        this.props.select.focus();
+        if (SharedUtil.isSafari()) {
+          /**
+           * Shifting focus back to the select specifically
+           * when VoiceOver is on will sometimes trigger VO to shift focus
+           * randomly to the root of document or the skip to main link
+           * instead of the select and then break VoiceOver usage when navigating the
+           * select options on subsequent opening of select
+           * Refocusing on select seems to seems to mitigate this VO bug.
+           */
+          setTimeout(() => {
+            this.props.select.focus();
+          }, 300);
+        }
+      } else {
+        this.props.input.focus();
+      }
+    }
     document.removeEventListener('keydown', this.handleKeyDown);
   }
 
@@ -233,17 +257,31 @@ class Menu extends React.Component {
       } else {
         visuallyHiddenComponent.current.innerText = '';
       }
-    }, 500);
+    }, 1000);
   }
 
   updateCurrentActiveScreenReader() {
-    this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+    if (this.menu !== null) {
+      this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+    }
 
+    // Detects if option is clear option and provides accessible text
+    if (this.props.clearOptionDisplay) {
+      const active = this.menu.querySelector('[data-select-active]');
+      if (active.hasAttribute('data-terra-select-clear-option')) {
+        this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
+      }
+    }
+
+    // Announces options to screen readers as user navigates through them via keyboard
     if (this.props.visuallyHiddenComponent) {
       const element = Util.findByValue(this.props.children, this.state.active);
-
       if (element) {
-        if (this.isActiveSelected()) {
+        if (element.props.display === '' && element.props.value === '') {
+          // Used for case where users selects clear option and opens
+          // dropdown again and navigates to clear option
+          this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
+        } else if (this.isActiveSelected()) {
           const { intl } = this.context;
           this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selected' }, { text: element.props.display });
         } else {
@@ -304,10 +342,8 @@ class Menu extends React.Component {
     const { keyCode } = event;
     const { active, children } = this.state;
     const {
-      input,
       onSelect,
       onDeselect,
-      select,
       value,
       variant,
     } = this.props;
@@ -324,16 +360,53 @@ class Menu extends React.Component {
       this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCode.KEY_RETURN && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
+      this.setState({ closedViaKeyEvent: true });
       const option = Util.findByValue(children, active);
-      onSelect(option.props.value, option);
-      if (variant === Variants.DEFAULT) {
-        select.focus();
-      } else {
-        input.focus();
+      // Handles communicating the case where a clear option is selected to screen readers
+      if (this.props.clearOptionDisplay) {
+        const activeOption = this.menu.querySelector('[data-select-active]');
+        if (activeOption.hasAttribute('data-terra-select-clear-option')) {
+          this.props.visuallyHiddenComponent.current.innerText = 'Select value cleared';
+        }
       }
+      // Handles communicating the case where a regular option is selected to screen readers.
+      /*
+        Detecting if browser is not Safari before updating aria-live as there is some odd behaivor
+        with VoiceOver on desktop, that causes the selected option to be read twice when this is
+        is added to aria-live container.
+        When we shift focus back to select, VoiceOver automatically reads the display text.
+        Using aria-hidden on the display does not prevent VO from reading the display text and so it
+        results in reading the display text followed by reading the aria-live message which is
+        the display text + 'selected'
+        */
+      if (SharedUtil.isSafari()) {
+        if (variant === Variants.MULTIPLE || variant === Variants.TAG) {
+          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} Selected.`;
+        }
+      } else {
+        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} Selected.`;
+      }
+      onSelect(option.props.value, option);
     } else if (keyCode === KeyCode.KEY_RETURN && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
+      // Handles communicating the case where a regular option is Unselected to screen readers.
+      /*
+        Detecting if browser is not Safari before updating aria-live as there is some odd behaivor
+        with VoiceOver on desktop, that causes the selected option to be read twice when this is
+        is added to aria-live container.
+        When we shift focus back to select, VoiceOver automatically reads the display text.
+        Using aria-hidden on the display does not prevent VO from reading the display text and so it
+        results in reading the display text followed by reading the aria-live message which is
+        the display text + 'Unselected'
+        */
+      if (SharedUtil.isSafari()) {
+        if (variant === Variants.MULTIPLE || variant === Variants.TAG) {
+          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} Unselected.`;
+        }
+      } else {
+        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} Unselected.`;
+      }
       onDeselect(option.props.value, option);
     } else if (keyCode === KeyCode.KEY_HOME) {
       event.preventDefault();
