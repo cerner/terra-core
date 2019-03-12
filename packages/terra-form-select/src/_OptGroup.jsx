@@ -41,6 +41,5 @@ const OptGroup = ({ children, disabled, label }) => (
 OptGroup.propTypes = propTypes;
 OptGroup.defaultProps = defaultProps;
 OptGroup.isOptGroup = true;
-OptGroup.displayName = 'OptGroup';
 
 export default OptGroup;

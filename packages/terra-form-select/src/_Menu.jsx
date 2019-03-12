@@ -180,9 +180,6 @@ class Menu extends React.Component {
      * check opts-out of the aria-live update if browser supports ontouchstart which iOS supports.
      */
     if ('ontouchstart' in window) return;
-    // if (this.props.clearOptionDisplay) {
-    //   this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
-    // }
     this.updateCurrentActiveScreenReader();
   }
 

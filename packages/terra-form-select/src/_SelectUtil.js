@@ -95,14 +95,13 @@ class SelectUtil {
     let totalNumberOfOptions = 0;
 
     React.Children.forEach(children, (child) => {
-      if (child.type.displayName === 'Option') {
+      if (child.type.isOption) {
         totalNumberOfOptions += 1;
       }
 
-      // If child is an OptGroup, loop through it and total up number of Options it contains
-      if (child.type.displayName === 'OptGroup') {
+      if (child.type.isOptGroup) {
         React.Children.forEach(child.props.children, (grandChild) => {
-          if (grandChild.type.displayName === 'Option') {
+          if (grandChild.type.isOption) {
             totalNumberOfOptions += 1;
           }
         });

@@ -558,7 +558,7 @@ class Frame extends React.Component {
         return `${listOfOptionsTxt}`;
       }
 
-      return `${listOfOptionsTxt} . Swipe right to navigate to options.`;
+      return `${listOfOptionsTxt} Swipe right to navigate to options.`;
     }
 
     switch (variant) {
