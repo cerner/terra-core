@@ -90,7 +90,6 @@ class Overlay extends React.Component {
     if (!node) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
     this.overflow = document.documentElement.style.overflow;
     const selector = this.props.rootSelector;
-
     if (this.props.isRelativeToContainer) {
       this.container = node.parentNode;
       this.containerChildren = this.container.children;
@@ -108,7 +107,8 @@ class Overlay extends React.Component {
       for (let i = 0; i < this.containerChildren.length; i += 1) {
         prevTabIndex.push(this.containerChildren[i].tabIndex);
         this.containerChildren[i].tabIndex = -1;
-        if (this.containerChildren[i].className !== overlayClassName) { // childern[0] will be the overlay and it's content which should not be disabled for screen readers.
+        // childern with calss name Overlay is the overlay component and it's content which should not be disabled for screen readers.
+        if (this.containerChildren[i].className !== overlayClassName) {
           this.containerChildren[i].setAttribute('aria-hidden', 'true'); // prevent screen reader from moving to content behind the overlay
         }
       }
