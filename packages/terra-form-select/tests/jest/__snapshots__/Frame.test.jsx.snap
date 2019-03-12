@@ -67,7 +67,7 @@ exports[`Frame should render a combobox variant 1`] = `
     <span
       id="terra-select-screen-reader-description-8"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -76,9 +76,6 @@ exports[`Frame should render a combobox variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-6"
-      />
       <li
         class="search-wrapper"
       >
@@ -133,7 +130,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
     <span
       id="terra-select-screen-reader-description-28"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -142,9 +139,6 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-26"
-      />
       <li
         class="search-wrapper"
       >
@@ -200,7 +194,7 @@ exports[`Frame should render a custom dropdown 1`] = `
     <span
       id="terra-select-screen-reader-description-84"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -209,9 +203,6 @@ exports[`Frame should render a custom dropdown 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-82"
-      />
       <li
         class="search-wrapper"
       >
@@ -372,7 +363,7 @@ exports[`Frame should render a disabled combobox variant 1`] = `
     <span
       id="terra-select-screen-reader-description-48"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -381,9 +372,6 @@ exports[`Frame should render a disabled combobox variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-46"
-      />
       <li
         class="search-wrapper"
       >
@@ -490,7 +478,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
     <span
       id="terra-select-screen-reader-description-52"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -499,9 +487,6 @@ exports[`Frame should render a disabled multiple variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-50"
-      />
       <li
         class="search-wrapper"
       >
@@ -612,7 +597,7 @@ exports[`Frame should render a disabled tag variant 1`] = `
     <span
       id="terra-select-screen-reader-description-60"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -621,9 +606,6 @@ exports[`Frame should render a disabled tag variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-58"
-      />
       <li
         class="search-wrapper"
       >
@@ -679,7 +661,7 @@ exports[`Frame should render a multiple variant 1`] = `
     <span
       id="terra-select-screen-reader-description-12"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -688,9 +670,6 @@ exports[`Frame should render a multiple variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-10"
-      />
       <li
         class="search-wrapper"
       >
@@ -745,7 +724,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
     <span
       id="terra-select-screen-reader-description-32"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -754,9 +733,6 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-30"
-      />
       <li
         class="search-wrapper"
       >
@@ -929,7 +905,7 @@ exports[`Frame should render a tag variant 1`] = `
     <span
       id="terra-select-screen-reader-description-20"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -938,9 +914,6 @@ exports[`Frame should render a tag variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-18"
-      />
       <li
         class="search-wrapper"
       >
@@ -995,7 +968,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
     <span
       id="terra-select-screen-reader-description-40"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -1004,9 +977,6 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-38"
-      />
       <li
         class="search-wrapper"
       >
@@ -1062,7 +1032,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
     <span
       id="terra-select-screen-reader-description-68"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -1071,9 +1041,6 @@ exports[`Frame should render an invalid combobox variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-66"
-      />
       <li
         class="search-wrapper"
       >
@@ -1182,7 +1149,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
     <span
       id="terra-select-screen-reader-description-72"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -1191,9 +1158,6 @@ exports[`Frame should render an invalid multiple variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-70"
-      />
       <li
         class="search-wrapper"
       >
@@ -1306,7 +1270,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
     <span
       id="terra-select-screen-reader-description-80"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -1315,9 +1279,6 @@ exports[`Frame should render an invalid tag variant 1`] = `
     <ul
       class="content"
     >
-      <div
-        id="terra-select-screen-reader-display-78"
-      />
       <li
         class="search-wrapper"
       >
@@ -1422,7 +1383,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
         <span
           id="terra-select-screen-reader-description-92"
         >
-          List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or de-select an option.
+          List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
         </span>
       </div>
       <div
@@ -1431,9 +1392,6 @@ exports[`Frame should update the aria-live text when the search has no results 1
         <ul
           className="content"
         >
-          <div
-            id="terra-select-screen-reader-display-90"
-          />
           <li
             className="search-wrapper"
           >

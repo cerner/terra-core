@@ -210,7 +210,7 @@ class Frame extends React.Component {
       case Variants.MULTIPLE:
         return (
           <ul className={cx('content')}>
-            {display.length > 0
+            {display && display.length > 0
               ? (
                 <li>
                   <ul id={displayId} className={cx('display-content')}>
