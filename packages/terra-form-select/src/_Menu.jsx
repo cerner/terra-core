@@ -261,20 +261,33 @@ class Menu extends React.Component {
   }
 
   updateCurrentActiveScreenReader() {
+    const { intl } = this.context;
+    const { variant, clearOptionDisplay, visuallyHiddenComponent } = this.props;
+
     if (this.menu !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
     }
 
-    // Detects if option is clear option and provides accessible text
-    if (this.props.clearOptionDisplay) {
-      const active = this.menu.querySelector('[data-select-active]');
-      if (active.hasAttribute('data-terra-select-clear-option')) {
-        this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
-      }
-    }
-
     // Announces options to screen readers as user navigates through them via keyboard
-    if (this.props.visuallyHiddenComponent) {
+    if (visuallyHiddenComponent) {
+      // Detects if option is clear option and provides accessible text
+      if (clearOptionDisplay) {
+        const active = this.menu.querySelector('[data-select-active]');
+        if (active.hasAttribute('data-terra-select-clear-option')) {
+          this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
+        }
+      }
+
+      // Detects if option is an "Add option" and provides accessible text
+      if (variant === Variants.COMBOBOX || variant === Variants.TAG) {
+        const active = this.menu.querySelector('[data-select-active]');
+
+        if (active.hasAttribute('data-terra-select-add-option')) {
+          const display = active.querySelector("[class*='display']").innerText;
+          this.props.visuallyHiddenComponent.current.innerText = display;
+        }
+      }
+
       const element = Util.findByValue(this.props.children, this.state.active);
       if (element) {
         if (element.props.display === '' && element.props.value === '') {
@@ -282,7 +295,6 @@ class Menu extends React.Component {
           // dropdown again and navigates to clear option
           this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
         } else if (this.isActiveSelected()) {
-          const { intl } = this.context;
           this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selected' }, { text: element.props.display });
         } else {
           this.props.visuallyHiddenComponent.current.innerText = element.props.display;
