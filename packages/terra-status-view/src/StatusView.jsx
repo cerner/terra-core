@@ -53,7 +53,7 @@ const propTypes = {
    * `no-matching-results`, `not-authorized`,
    * `error`, or `custom`.
    */
-  variant: PropTypes.oneOf(['no-data', 'no-matching-results', 'not-authorized', 'error', 'custom']),
+  variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
 };
 
 const defaultProps = {
