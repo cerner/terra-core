@@ -263,6 +263,7 @@ exports[`Frame should render a default variant 1`] = `
   </div>
   <div
     class="display"
+    role="textbox"
   >
     <div
       class="placeholder"
@@ -317,6 +318,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
   </div>
   <div
     class="display"
+    role="textbox"
   >
     <div
       class="placeholder"
@@ -432,6 +434,7 @@ exports[`Frame should render a disabled default variant 1`] = `
   </div>
   <div
     class="display"
+    role="textbox"
   >
     <div
       class="placeholder"
@@ -1101,6 +1104,7 @@ exports[`Frame should render an invalid default variant 1`] = `
   </div>
   <div
     class="display"
+    role="textbox"
   >
     <div
       class="placeholder"
@@ -1388,6 +1392,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
       </div>
       <div
         className="display"
+        role={null}
       >
         <ul
           className="content"

@@ -255,6 +255,7 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
   </div>
   <div
     class="display"
+    role="textbox"
   >
     <div
       class="placeholder"
@@ -310,6 +311,7 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
   </div>
   <div
     class="display"
+    role="textbox"
   >
     <div
       class="placeholder"
@@ -365,6 +367,7 @@ exports[`Select should render a select with an option 1`] = `
   </div>
   <div
     class="display"
+    role="textbox"
   >
     <div
       class="placeholder"
@@ -420,6 +423,7 @@ exports[`Select should render a select with multiple options 1`] = `
   </div>
   <div
     class="display"
+    role="textbox"
   >
     <div
       class="placeholder"
