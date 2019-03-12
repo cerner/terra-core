@@ -234,13 +234,10 @@ class Menu extends React.Component {
       } = this.state;
 
       const {
+        intl,
         visuallyHiddenComponent,
         searchValue,
       } = this.props;
-
-      const {
-        intl,
-      } = this.context;
 
       // Race condition can occur between calling timeout and unmounting this component.
       if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
@@ -258,8 +255,9 @@ class Menu extends React.Component {
   }
 
   updateCurrentActiveScreenReader() {
-    const { intl } = this.context;
-    const { variant, clearOptionDisplay, visuallyHiddenComponent } = this.props;
+    const { intl, variant, clearOptionDisplay, visuallyHiddenComponent } = this.props;
+
+    const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
 
     if (this.menu !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
@@ -271,7 +269,7 @@ class Menu extends React.Component {
       if (clearOptionDisplay) {
         const active = this.menu.querySelector('[data-select-active]');
         if (active.hasAttribute('data-terra-select-clear-option')) {
-          this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
+          this.props.visuallyHiddenComponent.current.innerText = clearSelectTxt;
         }
       }
 
@@ -290,9 +288,9 @@ class Menu extends React.Component {
         if (element.props.display === '' && element.props.value === '') {
           // Used for case where users selects clear option and opens
           // dropdown again and navigates to clear option
-          this.props.visuallyHiddenComponent.current.innerText = 'Clear select';
+          this.props.visuallyHiddenComponent.current.innerText = clearSelectTxt;
         } else if (this.isActiveSelected()) {
-          this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selected' }, { text: element.props.display });
+          this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: element.props.display });
         } else {
           this.props.visuallyHiddenComponent.current.innerText = element.props.display;
         }
@@ -351,11 +349,15 @@ class Menu extends React.Component {
     const { keyCode } = event;
     const { active, children } = this.state;
     const {
+      intl,
       onSelect,
       onDeselect,
       value,
       variant,
     } = this.props;
+
+    const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
+    const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
 
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
@@ -375,7 +377,7 @@ class Menu extends React.Component {
       if (this.props.clearOptionDisplay) {
         const activeOption = this.menu.querySelector('[data-select-active]');
         if (activeOption.hasAttribute('data-terra-select-clear-option')) {
-          this.props.visuallyHiddenComponent.current.innerText = 'Select value cleared';
+          this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectCleared' });
         }
       }
       // Handles communicating the case where a regular option is selected to screen readers.
@@ -390,10 +392,10 @@ class Menu extends React.Component {
         */
       if (SharedUtil.isSafari()) {
         if (variant === Variants.MULTIPLE || variant === Variants.TAG) {
-          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} Selected.`;
+          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
         }
       } else {
-        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} Selected.`;
+        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
       }
       onSelect(option.props.value, option);
     } else if (keyCode === KeyCode.KEY_RETURN && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
@@ -411,10 +413,10 @@ class Menu extends React.Component {
         */
       if (SharedUtil.isSafari()) {
         if (variant === Variants.MULTIPLE || variant === Variants.TAG) {
-          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} Unselected.`;
+          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${unselectedTxt}`;
         }
       } else {
-        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} Unselected.`;
+        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${unselectedTxt}`;
       }
       onDeselect(option.props.value, option);
     } else if (keyCode === KeyCode.KEY_HOME) {

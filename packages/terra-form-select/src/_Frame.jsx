@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import { injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import 'terra-base/lib/baseStyles';
 import KeyCode from 'keycode-js';
@@ -215,7 +215,9 @@ class Frame extends React.Component {
                 <li>
                   <ul id={displayId} className={cx('display-content')}>
                     {display}
-                    <li className={cx('visually-hidden-component')}>Selected.</li>
+                    <li className={cx('visually-hidden-component')}>
+                      <FormattedMessage id="Terra.form.select.selected" />
+                    </li>
                   </ul>
                 </li>
               ) : null
@@ -495,11 +497,12 @@ class Frame extends React.Component {
     const { ariaLabel, disabled, intl } = this.props;
 
     const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
+    const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return ariaLabel === undefined ? `${defaultAriaLabel} Dimmed` : `${ariaLabel} Dimmed`;
+      return ariaLabel === undefined ? `${defaultAriaLabel} ${dimmed}` : `${ariaLabel} ${dimmed}`;
     }
 
     return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
@@ -545,9 +548,13 @@ class Frame extends React.Component {
    * Renders descriptive text related to the select component to be available for screen readers
    */
   renderDescriptionText() {
-    const { variant, totalOptions } = this.props;
+    const { intl, variant, totalOptions } = this.props;
 
-    const listOfOptionsTxt = `List of ${totalOptions} options.`;
+    const listOfOptionsTxt = intl.formatMessage({ id: 'Terra.form.select.listOfTotalOptions' }, { total: totalOptions });
+    const defaultUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.defaultUsageGuidance' });
+    const mobileUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.mobileUsageGuidance' });
+    const multiSelectUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.multiSelectUsageGuidance' });
+    const searchUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.searchUsageGuidance' });
 
     if ('ontouchstart' in window) {
       if (variant === Variants.DEFAULT) {
@@ -558,23 +565,25 @@ class Frame extends React.Component {
         return `${listOfOptionsTxt}`;
       }
 
-      return `${listOfOptionsTxt} Swipe right to navigate to options.`;
+      return `${listOfOptionsTxt} ${mobileUsageGuidanceTxt}`;
     }
 
     switch (variant) {
       case Variants.TAG:
       case Variants.MULTIPLE:
-        return `${listOfOptionsTxt} Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.`;
+        return `${listOfOptionsTxt} ${multiSelectUsageGuidanceTxt}`;
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return `${listOfOptionsTxt} Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.`;
+        return `${listOfOptionsTxt} ${searchUsageGuidanceTxt}`;
       default:
-        return `${listOfOptionsTxt} Use up and down arrow keys to navigate through options. Press enter to select an option.`;
+        return `${listOfOptionsTxt} ${defaultUsageGuidanceTxt}`;
     }
   }
 
   renderToggleButton() {
-    const { variant } = this.props;
+    const { intl, variant } = this.props;
+
+    const mobileButtonUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.mobileButtonUsageGuidance' });
 
     /**
      * Devices that support ontouchstart trigger an onScreen keyboard when inputs are focused and
@@ -607,7 +616,7 @@ class Frame extends React.Component {
             <button
               type="button"
               className={cx('toggle-btn')}
-              aria-label="Tap to navigate to options"
+              aria-label={mobileButtonUsageGuidanceTxt}
               data-terra-form-select-toggle-button
               onMouseDown={this.handleToggleButtonMouseDown}
             >
