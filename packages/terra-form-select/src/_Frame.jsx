@@ -702,7 +702,7 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={ariaDescribedById}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')}>
+        <div className={cx('display')} role={variant === Variants.DEFAULT ? 'textbox' : null}>
           {this.getDisplay(displayId, placeholderId, ariaDescribedById)}
         </div>
         {this.renderToggleButton()}

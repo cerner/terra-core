@@ -1675,10 +1675,6 @@ describe('Select', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot('no-matching-results', { viewports, selector: '#root' });
-
-      it('should set the screen reader aria live region to blank', () => {
-        expect(browser.getText('[data-terra-select-combobox] [aria-live]')).to.equal('No matching results for "asdf"');
-      });
     });
 
     describe('search should select an option by pressing enter', () => {
