@@ -1,4 +1,4 @@
-import { Variants } from './_constants';
+import Variants from './_constants';
 import MenuUtil from './_MenuUtil';
 
 class SelectUtil {

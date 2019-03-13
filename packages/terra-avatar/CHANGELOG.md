@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.10.0 - (March 6, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.9.0 - (March 5, 2019)
 ------------------
 ### Fixed

@@ -5,6 +5,12 @@ Unreleased
 ----------
 ### Fixed
 * Checked for undefined and null for defaultValue
+
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+
+5.9.0 - (March 6th, 2019)
+------------------
 ### Added
 * Added option to limit the maximum number of selection count for multi-select variants.
 * Introduce an option to allow clearing the currently selected item
