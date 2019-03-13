@@ -27,11 +27,23 @@ exports[`Frame should render a clear option 1`] = `
       "messages": Object {
         "Terra.form.select.add": "Add \\"{text}\\"",
         "Terra.form.select.ariaLabel": "Search",
+        "Terra.form.select.clearSelect": "Clear select",
         "Terra.form.select.defaultDisplay": "- Select -",
+        "Terra.form.select.defaultUsageGuidance": "Use up and down arrow keys to navigate through options. Press enter to select an option.",
+        "Terra.form.select.dimmed": "Dimmed.",
+        "Terra.form.select.disabled": "Disabled.",
+        "Terra.form.select.listOfTotalOptions": "List of {total} options.",
         "Terra.form.select.maxSelectionHelp": "Limit {text} items.",
         "Terra.form.select.maxSelectionOption": "Maximum number of {text} items selected",
+        "Terra.form.select.mobileButtonUsageGuidance": "Tap to navigate to options.",
+        "Terra.form.select.mobileUsageGuidance": "Swipe right to navigate to options.",
+        "Terra.form.select.multiSelectUsageGuidance": "Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.",
         "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.selected": "{text} Selected",
+        "Terra.form.select.searchUsageGuidance": "Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.",
+        "Terra.form.select.selectCleared": "Select value cleared",
+        "Terra.form.select.selected": "Selected.",
+        "Terra.form.select.selectedText": "{text} Selected.",
+        "Terra.form.select.unselected": "Unselected.",
       },
       "now": [Function],
       "onError": [Function],
@@ -67,7 +79,7 @@ exports[`Frame should render a combobox variant 1`] = `
     <span
       id="terra-select-screen-reader-description-8"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -130,7 +142,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
     <span
       id="terra-select-screen-reader-description-28"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -194,7 +206,7 @@ exports[`Frame should render a custom dropdown 1`] = `
     <span
       id="terra-select-screen-reader-description-84"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -258,7 +270,7 @@ exports[`Frame should render a default variant 1`] = `
     <span
       id="terra-select-screen-reader-description-4"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+      List of  options. Use up and down arrow keys to navigate through options. Press enter to select an option.
     </span>
   </div>
   <div
@@ -313,7 +325,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
     <span
       id="terra-select-screen-reader-description-24"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+      List of  options. Use up and down arrow keys to navigate through options. Press enter to select an option.
     </span>
   </div>
   <div
@@ -365,7 +377,7 @@ exports[`Frame should render a disabled combobox variant 1`] = `
     <span
       id="terra-select-screen-reader-description-48"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -429,7 +441,7 @@ exports[`Frame should render a disabled default variant 1`] = `
     <span
       id="terra-select-screen-reader-description-44"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+      List of  options. Use up and down arrow keys to navigate through options. Press enter to select an option.
     </span>
   </div>
   <div
@@ -481,7 +493,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
     <span
       id="terra-select-screen-reader-description-52"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -543,7 +555,7 @@ exports[`Frame should render a disabled search variant 1`] = `
     <span
       id="terra-select-screen-reader-description-56"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
     </span>
   </div>
   <div
@@ -600,7 +612,7 @@ exports[`Frame should render a disabled tag variant 1`] = `
     <span
       id="terra-select-screen-reader-description-60"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -664,7 +676,7 @@ exports[`Frame should render a multiple variant 1`] = `
     <span
       id="terra-select-screen-reader-description-12"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -727,7 +739,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
     <span
       id="terra-select-screen-reader-description-32"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -791,7 +803,7 @@ exports[`Frame should render a search variant 1`] = `
     <span
       id="terra-select-screen-reader-description-16"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
     </span>
   </div>
   <div
@@ -849,7 +861,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
     <span
       id="terra-select-screen-reader-description-36"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
     </span>
   </div>
   <div
@@ -908,7 +920,7 @@ exports[`Frame should render a tag variant 1`] = `
     <span
       id="terra-select-screen-reader-description-20"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -971,7 +983,7 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
     <span
       id="terra-select-screen-reader-description-40"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -1035,7 +1047,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
     <span
       id="terra-select-screen-reader-description-68"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -1099,7 +1111,7 @@ exports[`Frame should render an invalid default variant 1`] = `
     <span
       id="terra-select-screen-reader-description-64"
     >
-      List of undefined options. Use up and down arrow keys to navigate through options. Press enter to select an option.
+      List of  options. Use up and down arrow keys to navigate through options. Press enter to select an option.
     </span>
   </div>
   <div
@@ -1153,7 +1165,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
     <span
       id="terra-select-screen-reader-description-72"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -1216,7 +1228,7 @@ exports[`Frame should render an invalid search variant 1`] = `
     <span
       id="terra-select-screen-reader-description-76"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.
     </span>
   </div>
   <div
@@ -1274,7 +1286,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
     <span
       id="terra-select-screen-reader-description-80"
     >
-      List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+      List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
     </span>
   </div>
   <div
@@ -1345,11 +1357,23 @@ exports[`Frame should update the aria-live text when the search has no results 1
         "messages": Object {
           "Terra.form.select.add": "Add \\"{text}\\"",
           "Terra.form.select.ariaLabel": "Search",
+          "Terra.form.select.clearSelect": "Clear select",
           "Terra.form.select.defaultDisplay": "- Select -",
+          "Terra.form.select.defaultUsageGuidance": "Use up and down arrow keys to navigate through options. Press enter to select an option.",
+          "Terra.form.select.dimmed": "Dimmed.",
+          "Terra.form.select.disabled": "Disabled.",
+          "Terra.form.select.listOfTotalOptions": "List of {total} options.",
           "Terra.form.select.maxSelectionHelp": "Limit {text} items.",
           "Terra.form.select.maxSelectionOption": "Maximum number of {text} items selected",
+          "Terra.form.select.mobileButtonUsageGuidance": "Tap to navigate to options.",
+          "Terra.form.select.mobileUsageGuidance": "Swipe right to navigate to options.",
+          "Terra.form.select.multiSelectUsageGuidance": "Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.",
           "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-          "Terra.form.select.selected": "{text} Selected",
+          "Terra.form.select.searchUsageGuidance": "Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.",
+          "Terra.form.select.selectCleared": "Select value cleared",
+          "Terra.form.select.selected": "Selected.",
+          "Terra.form.select.selectedText": "{text} Selected.",
+          "Terra.form.select.unselected": "Unselected.",
         },
         "now": [Function],
         "onError": [Function],
@@ -1387,7 +1411,7 @@ exports[`Frame should update the aria-live text when the search has no results 1
         <span
           id="terra-select-screen-reader-description-92"
         >
-          List of undefined options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
+          List of  options. Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.
         </span>
       </div>
       <div

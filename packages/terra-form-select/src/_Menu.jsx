@@ -255,7 +255,12 @@ class Menu extends React.Component {
   }
 
   updateCurrentActiveScreenReader() {
-    const { intl, variant, clearOptionDisplay, visuallyHiddenComponent } = this.props;
+    const {
+      intl,
+      variant,
+      clearOptionDisplay,
+      visuallyHiddenComponent,
+    } = this.props;
 
     const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
 
