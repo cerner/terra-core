@@ -105,7 +105,7 @@ describe('Select', () => {
       Terra.should.matchScreenshot({ viewports });
     });
   });
-  
+
   describe('Combobox Variant', () => {
     describe('combobox should select an option by click', () => {
       before(() => {
