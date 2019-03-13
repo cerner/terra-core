@@ -36,13 +36,18 @@ class OverlayExample extends React.Component {
     }
   }
 
+  addOverlay() {
+    return (
+      <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} id={this.state.id}>
+        <h3>Overlay will timeout in 5 seconds.</h3>
+      </Overlay>
+    );
+  }
+
   render() {
     return (
       <div id="custom-content-example">
-        <OverlayContainer style={{ height: '100px', width: '100%' }}>
-          <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} id={this.state.id}>
-            <h3>Overlay will timeout in 5 seconds.</h3>
-          </Overlay>
+        <OverlayContainer style={{ height: '100px', width: '100%' }} overlay={this.addOverlay()}>
           <button type="button" id="trigger_fullscreen" onClick={this.handleTriggerFullScreenOverlay}>Trigger Fullscreen Overlay</button>
           <button type="button" id="trigger_container" onClick={this.handleTriggerOverlay}>Trigger Container Overlay</button>
         </OverlayContainer>
