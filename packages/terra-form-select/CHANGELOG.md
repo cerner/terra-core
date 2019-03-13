@@ -6,6 +6,9 @@ Unreleased
 ### Fixed
 * Checked for undefined and null for defaultValue
 
+### Added
+* Added new translation strings
+
 ### Changed
 * Replaced local keyCode values with keycode-js npm package
 
