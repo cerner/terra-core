@@ -26,8 +26,8 @@ class InputFieldExample extends React.Component {
         <InputField
           inputId="test-input"
           defaultValue="Value"
-          error="Text"
-          help="Help"
+          error="Error message."
+          help="Help message."
           hideRequired
           inputAttrs={{
             name: 'test',

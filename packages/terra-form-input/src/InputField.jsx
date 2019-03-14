@@ -129,6 +129,20 @@ const InputField = (props) => {
     ...customProps
   } = props;
 
+  let ariaDescriptionIds;
+
+  if (help && error && isInvalid) {
+    ariaDescriptionIds = `${inputId}-help ${inputId}-error`;
+  } else {
+    if (help) {
+      ariaDescriptionIds = `${inputId}-help`;
+    }
+
+    if (error && isInvalid) {
+      ariaDescriptionIds = `${inputId}-error`;
+    }
+  }
+
   return (
     <Field
       label={label}
@@ -153,6 +167,7 @@ const InputField = (props) => {
         value={value}
         defaultValue={defaultValue}
         refCallback={refCallback}
+        aria-describedby={ariaDescriptionIds}
       />
     </Field>
   );

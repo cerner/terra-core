@@ -175,6 +175,20 @@ const SelectField = ({
     }
   }
 
+  let ariaDescriptionIds;
+
+  if (help && error && isInvalid) {
+    ariaDescriptionIds = `${selectId}-help ${selectId}-error`;
+  } else {
+    if (help) {
+      ariaDescriptionIds = `${selectId}-help`;
+    }
+
+    if (error && isInvalid) {
+      ariaDescriptionIds = `${selectId}-error`;
+    }
+  }
+
   return (
     <Field
       {...customProps}
@@ -194,6 +208,7 @@ const SelectField = ({
       <Select
         {...selectAttrs}
         allowClear={allowClear}
+        aria-describedby={ariaDescriptionIds}
         id={selectId}
         isInvalid={isInvalid}
         defaultValue={defaultValue}

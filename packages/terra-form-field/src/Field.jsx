@@ -98,6 +98,8 @@ const contextTypes = {
   },
 };
 
+const hasWhiteSpace = s => /\s/g.test(s);
+
 const Field = (props, { intl }) => {
   const {
     children,
@@ -131,6 +133,48 @@ const Field = (props, { intl }) => {
     labelAttrs.className,
   ]);
 
+  // Checks to run when not in production
+  if (process.env.NODE_ENV !== 'production') {
+    if (!htmlFor) {
+      // eslint-disable-next-line
+      console.warn('This prop will be required in the next major version bump of terra-form-field. It is needed for creating an accessible mapping from the form field to its related error and help text.');
+    }
+
+    if (htmlFor && hasWhiteSpace(htmlFor)) {
+      // eslint-disable-next-line
+      console.warn('The htmlFor prop should be a string without white spaces as it will be used as an HTML attribute value. Use - or _ in place of white space characters.');
+    }
+  }
+
+  let helpTextId;
+  let errorTextId;
+
+  if (htmlFor) {
+    /**
+     * IE + JAWS has trouble reading aria-describedby content with our form components.
+     * In that browser, we don't want an ID for the aria-describedby content so we have a
+     * Microsoft specific feature detect to flex on if the ID is undefined or valid.
+     */
+    helpTextId = !window.navigator.msPointerEnabled ? `${htmlFor}-help` : undefined;
+    errorTextId = !window.navigator.msPointerEnabled ? `${htmlFor}-help` : undefined;
+  }
+
+
+  /**
+   * IE + JAWS has trouble reading aria-describedby content with our form components.
+   * Using feature detect for Microsoft browsers and injecting the help and error messages
+   * into the label as visually hidden text so JAWS can announce them correctly in IE.
+   */
+  const IEDescriptionText = (
+    window.navigator.msPointerEnabled
+      ? (
+        <div className={cx('visually-hidden-text')}>
+          {isInvalid && error ? error : null}
+          {help}
+        </div>
+      ) : null
+  );
+
   const labelGroup = (
     <div className={cx(['label-group', { 'label-group-hidden': isLabelHidden }])}>
       {isInvalid && <div className={cx('error-icon')}>{errorIcon}</div>}
@@ -140,6 +184,7 @@ const Field = (props, { intl }) => {
           {label}
           {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
           {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
+          {IEDescriptionText}
         </label>
       }
       {!isInvalid && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
@@ -150,8 +195,8 @@ const Field = (props, { intl }) => {
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
       {children}
-      {isInvalid && error && <div className={cx('error-text')}>{error}</div>}
-      {help && <div className={cx('help-text')}>{help}</div>}
+      {isInvalid && error && <div id={errorTextId} className={cx('error-text')}>{error}</div>}
+      {help && <div id={helpTextId} className={cx('help-text')}>{help}</div>}
     </div>
   );
 };

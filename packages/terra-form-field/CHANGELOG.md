@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Breaking Change
+* htmlFor prop is now a required prop. This prop allows us to uniquely map
 
 3.4.0 - (February 26, 2019)
 ------------------
