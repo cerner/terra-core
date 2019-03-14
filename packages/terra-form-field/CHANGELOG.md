@@ -3,8 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
-### Breaking Change
-* htmlFor prop is now a required prop. This prop allows us to uniquely map
+### Added
+* Added logic to allow accessible mapping of error and help text messages when htmlFor prop is provided
 
 3.4.0 - (February 26, 2019)
 ------------------

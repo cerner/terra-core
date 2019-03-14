@@ -8,6 +8,7 @@ Unreleased
 
 ### Added
 * Added new translation strings
+* Added logic to enable accessible mapping of InputField and it's related error and help text messages
 
 ### Changed
 * Replaced local keyCode values with keycode-js npm package

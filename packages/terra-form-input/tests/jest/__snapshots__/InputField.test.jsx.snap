@@ -25,6 +25,7 @@ exports[`should render a InputField with props 1`] = `
   showOptional={true}
 >
   <Input
+    aria-describedby="test-input-help test-input-error"
     defaultValue="Value"
     disabled={false}
     id="test-input"
@@ -94,6 +95,7 @@ exports[`should render a valid InputField with props 1`] = `
   showOptional={true}
 >
   <Input
+    aria-describedby="test-input-help"
     defaultValue="Value"
     disabled={false}
     id="test-input"

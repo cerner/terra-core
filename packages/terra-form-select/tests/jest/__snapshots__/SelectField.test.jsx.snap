@@ -143,6 +143,7 @@ exports[`should render a multiple SelectField component that limits the selectio
 >
   <Select
     allowClear={false}
+    aria-describedby="select-id-help"
     defaultValue="blue"
     disabled={false}
     id="select-id"

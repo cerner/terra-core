@@ -25,6 +25,7 @@ exports[`should render a TextareaField with props 1`] = `
   showOptional={true}
 >
   <Textarea
+    aria-describedby="test-input-help test-input-error"
     defaultValue="Value"
     disabled={false}
     id="test-input"
@@ -98,6 +99,7 @@ exports[`should render a valid TextareaField with props 1`] = `
   showOptional={true}
 >
   <Textarea
+    aria-describedby="test-input-help"
     defaultValue="Value"
     disabled={false}
     id="test-input"
