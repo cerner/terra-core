@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Checked for undefined and null for defaultValue
+
 ### Added
 * Added new translation strings
 
