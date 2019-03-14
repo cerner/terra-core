@@ -160,7 +160,22 @@
     }
   }
 
+  // Stops color variant background-color from bleeding through image, when image does not fallback to icon. Overrides color variant box-shadow.
+  .avatar.image:not(.fallback-icon) {
+    background-color: transparent;
+
+    &::after {
+      box-shadow: var(--terra-avatar-after-box-shadow, inset 0 1px 3px 0 rgba(17, 22, 25, 0.3));
+    }
+  }
+
+
   .avatar.is-deceased {
+    background-color: var(--terra-avatar-is-deceased-background-color, #64696c);
+  }
+
+  // Stops a non fallback image from always being transparent.
+  .avatar.is-deceased.image {
     background-color: var(--terra-avatar-is-deceased-background-color, #64696c);
 
     > .image {

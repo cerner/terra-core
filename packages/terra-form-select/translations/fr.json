@@ -1,5 +1,7 @@
 {
   "Terra.form.select.add": "Ajouter \"{text}\"",
   "Terra.form.select.defaultDisplay": "Sélectionner",
-  "Terra.form.select.noResults": "Aucun résultat correspondant pour \"{text}\""
+  "Terra.form.select.noResults": "Aucun résultat correspondant pour \"{text}\"",
+  "Terra.form.select.maxSelectionHelp": "Limite de {text} éléments",
+  "Terra.form.select.maxSelectionOption": "{text} éléments maximum sélectionnés"
 }

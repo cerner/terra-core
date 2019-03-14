@@ -95,4 +95,24 @@ describe('Menu', () => {
     jest.advanceTimersByTime(500);
     expect(true).toEqual(true);
   });
+
+  it('should render a Menu with the clear option', () => {
+    const liveRegion = { current: document.createElement('div') };
+
+    jest.useFakeTimers();
+
+    const menu = (
+      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} variant="combobox" clearOptionDisplay="-Select-" searchValue="">
+        <Option value="value" display="display" />
+      </Menu>
+    );
+
+    jest.useFakeTimers();
+
+    const wrapper = shallow(menu, intlContexts.shallowContext);
+
+    jest.runOnlyPendingTimers();
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });

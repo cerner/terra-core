@@ -1,5 +1,5 @@
 import FrameUtil from '../../src/_FrameUtil';
-import { Variants } from '../../src/_constants';
+import Variants from '../../src/_constants';
 
 describe('FrameUtil', () => {
   describe('dropdownStyle', () => {

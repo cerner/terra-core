@@ -2,9 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Field from 'terra-form-field';
 import Select from './Select';
-import { Variants } from './_constants';
+import Variants from './_constants';
 
 const propTypes = {
+  /**
+   * Whether a clear option is available to clear the selection.
+   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
+   */
+  allowClear: PropTypes.bool,
   /**
    * The select options.
    */
@@ -46,6 +51,11 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
+  /**
+   * The maximum number of options that can be selected. A value less than 2 will be ignored.
+   * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
+   */
+  maxSelectionCount: PropTypes.number,
   /**
    * Set the max-width of a field using `length` or `%`.  Best practice recommendation to never exceed
    * a rendered value of 1020px. _(Note: Providing custom inline styles will take precedence.)_
@@ -93,6 +103,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   error: undefined,
@@ -102,6 +113,7 @@ const defaultProps = {
   isInvalid: false,
   isLabelHidden: false,
   labelAttrs: {},
+  maxSelectionCount: undefined,
   maxWidth: undefined,
   onChange: undefined,
   placeholder: undefined,
@@ -112,7 +124,18 @@ const defaultProps = {
   variant: 'default',
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
+
 const SelectField = ({
+  allowClear,
   children,
   defaultValue,
   error,
@@ -123,6 +146,7 @@ const SelectField = ({
   isLabelHidden,
   label,
   labelAttrs,
+  maxSelectionCount,
   maxWidth,
   onChange,
   placeholder,
@@ -133,39 +157,61 @@ const SelectField = ({
   value,
   variant,
   ...customProps
-}) => (
-  <Field
-    {...customProps}
-    label={label}
-    labelAttrs={labelAttrs}
-    error={error}
-    help={help}
-    hideRequired={hideRequired}
-    required={required}
-    showOptional={showOptional}
-    isInvalid={isInvalid}
-    isInline={isInline}
-    isLabelHidden={isLabelHidden}
-    htmlFor={selectId}
-    maxWidth={maxWidth}
-  >
-    <Select
-      {...selectAttrs}
-      id={selectId}
+}, context) => {
+  let helpText = help;
+  if (maxSelectionCount !== undefined && maxSelectionCount >= 2) {
+    const limitSelectionText = context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
+
+    if (help) {
+      helpText = (
+        <span>
+          { limitSelectionText }
+          { ' ' }
+          { help }
+        </span>
+      );
+    } else {
+      helpText = limitSelectionText;
+    }
+  }
+
+  return (
+    <Field
+      {...customProps}
+      label={label}
+      labelAttrs={labelAttrs}
+      error={error}
+      help={helpText}
+      hideRequired={hideRequired}
+      required={required}
+      showOptional={showOptional}
       isInvalid={isInvalid}
-      defaultValue={defaultValue}
-      onChange={onChange}
-      placeholder={placeholder}
-      value={value}
-      variant={variant}
+      isInline={isInline}
+      isLabelHidden={isLabelHidden}
+      htmlFor={selectId}
+      maxWidth={maxWidth}
     >
-      {children}
-    </Select>
-  </Field>
-);
+      <Select
+        {...selectAttrs}
+        allowClear={allowClear}
+        id={selectId}
+        isInvalid={isInvalid}
+        defaultValue={defaultValue}
+        maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
+        onChange={onChange}
+        placeholder={placeholder}
+        value={value}
+        variant={variant}
+      >
+        {children}
+      </Select>
+    </Field>
+  );
+};
 
 SelectField.propTypes = propTypes;
 SelectField.defaultProps = defaultProps;
+SelectField.contextTypes = contextTypes;
 
 SelectField.Option = Select.Option;
 SelectField.OptGroup = Select.OptGroup;

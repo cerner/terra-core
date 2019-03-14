@@ -1,5 +1,7 @@
 {
   "Terra.form.select.add": "\"{text}\" hinzufügen",
   "Terra.form.select.defaultDisplay": "- Auswählen -",
-  "Terra.form.select.noResults": "Keine Übereinstimmungen für \"{text}\""
+  "Terra.form.select.noResults": "Keine Übereinstimmungen für \"{text}\"",
+  "Terra.form.select.maxSelectionHelp": "{text} Elemente begrenzen.",
+  "Terra.form.select.maxSelectionOption": "Maximale Anzahl an ausgewählten {text} Elementen"
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Variants } from './_constants';
+import Variants from './_constants';
 import DropdownMenu from './_Menu';
 import Frame from './_Frame';
 import Option from './_Option';
@@ -9,6 +9,11 @@ import Tag from './_Tag';
 import Util from './_SelectUtil';
 
 const propTypes = {
+  /**
+   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
+   */
+  allowClear: PropTypes.bool,
   /**
    * The dropdown menu options.
    */
@@ -34,6 +39,11 @@ const propTypes = {
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
+  /**
+   * @private The maximum number of options that can be selected. A value less than 2 will be ignored.
+   * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
+   */
+  maxSelectionCount: PropTypes.number,
   /**
    * Content to display when no results are found.
    */
@@ -91,11 +101,13 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
   isInvalid: false,
+  maxSelectionCount: undefined,
   noResultContent: undefined,
   onChange: undefined,
   onDeselect: undefined,
@@ -197,11 +209,20 @@ class Select extends React.Component {
   render() {
     const { intl } = this.context;
     const {
-      children, defaultValue, onChange, placeholder, value, ...otherProps
+      allowClear, children, defaultValue, onChange, placeholder, value, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
     const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
+    let clearOptionDisplay;
+
+    if (allowClear) {
+      if (selectPlaceholder.length === 0) {
+        clearOptionDisplay = defaultPlaceholder;
+      } else {
+        clearOptionDisplay = selectPlaceholder;
+      }
+    }
 
     return (
       <Frame
@@ -211,6 +232,7 @@ class Select extends React.Component {
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
+        clearOptionDisplay={clearOptionDisplay}
         dropdown={dropdownProps => (
           <DropdownMenu intl={intl} {...dropdownProps}>
             {this.state.tags}
