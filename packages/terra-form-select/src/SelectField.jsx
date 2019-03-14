@@ -178,7 +178,7 @@ const SelectField = ({
   let ariaDescriptionIds;
 
   if (help && error && isInvalid) {
-    ariaDescriptionIds = `${selectId}-help ${selectId}-error`;
+    ariaDescriptionIds = `${selectId}-error ${selectId}-help`;
   } else {
     if (help) {
       ariaDescriptionIds = `${selectId}-help`;

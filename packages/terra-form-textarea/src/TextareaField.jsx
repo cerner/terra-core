@@ -127,7 +127,7 @@ const TextareaField = (props) => {
   let ariaDescriptionIds;
 
   if (help && error && isInvalid) {
-    ariaDescriptionIds = `${inputId}-help ${inputId}-error`;
+    ariaDescriptionIds = `${inputId}-error ${inputId}-help`;
   } else {
     if (help) {
       ariaDescriptionIds = `${inputId}-help`;

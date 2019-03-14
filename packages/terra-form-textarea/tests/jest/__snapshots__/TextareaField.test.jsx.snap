@@ -25,7 +25,7 @@ exports[`should render a TextareaField with props 1`] = `
   showOptional={true}
 >
   <Textarea
-    aria-describedby="test-input-help test-input-error"
+    aria-describedby="test-input-error test-input-help"
     defaultValue="Value"
     disabled={false}
     id="test-input"

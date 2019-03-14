@@ -156,7 +156,7 @@ const Field = (props, { intl }) => {
      * Microsoft specific feature detect to flex on if the ID is undefined or valid.
      */
     helpTextId = !window.navigator.msPointerEnabled ? `${htmlFor}-help` : undefined;
-    errorTextId = !window.navigator.msPointerEnabled ? `${htmlFor}-help` : undefined;
+    errorTextId = !window.navigator.msPointerEnabled ? `${htmlFor}-error` : undefined;
   }
 
 
