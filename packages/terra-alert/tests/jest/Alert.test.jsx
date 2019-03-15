@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl } from 'terra-enzyme-intl';
 
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
@@ -107,9 +108,7 @@ describe('Alert of type success with an action button text content', () => {
 describe('Dismissable Alert of type custom with action button, custom title and text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type custom with an action button', () => {
-    const wrapper = mountWithIntl(
-      <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customStatusColor="orange" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>
-    );
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customStatusColor="orange" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>);
     expect(wrapper).toMatchSnapshot();
   });
 });

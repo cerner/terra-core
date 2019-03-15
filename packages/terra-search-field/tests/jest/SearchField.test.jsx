@@ -1,4 +1,5 @@
 import React from 'react';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import SearchField from '../../src/SearchField';
 

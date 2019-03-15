@@ -1,6 +1,7 @@
 /* eslint-disable no-alert, no-console */
 import React from 'react';
 import Button from 'terra-button';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
 import ActionHeader from '../../src/ActionHeader';
 

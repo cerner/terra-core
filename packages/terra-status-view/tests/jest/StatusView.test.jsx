@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl } from 'terra-enzyme-intl';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import StatusView from '../../src/StatusView';

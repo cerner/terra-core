@@ -1,4 +1,5 @@
 import React from 'react';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
 import Select from '../../src/Select';
 

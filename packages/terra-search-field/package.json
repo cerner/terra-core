@@ -35,8 +35,7 @@
     "terra-button": "^3.6.0",
     "terra-doc-template": "^2.5.0",
     "terra-form-input": "^2.6.0",
-    "terra-icon": "^3.4.0",
-    "terra-enzyme-intl": "git://github.com/cerner/terra-enzyme-intl#add-enzyme-intl-helpers"
+    "terra-icon": "^3.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
