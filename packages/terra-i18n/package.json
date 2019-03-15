@@ -40,7 +40,8 @@
     "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
     "react-intl": "^2.4.0",
-    "terra-doc-template": "^2.5.0"
+    "terra-doc-template": "^2.5.0",
+    "terra-enzyme-intl": "git://github.com/cerner/terra-enzyme-intl#add-enzyme-intl-helpers"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

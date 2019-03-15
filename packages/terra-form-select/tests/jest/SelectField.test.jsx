@@ -1,6 +1,7 @@
 import React from 'react';
+import { shallowWithIntl } from 'terra-enzyme-intl';
 import SelectField from '../../src/SelectField';
-import intlContexts from './intl-context-setup';
+
 
 it('should render a default SelectField component', () => {
   const select = (
@@ -13,7 +14,7 @@ it('should render a default SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallow(select, intlContexts.shallowContext)).toMatchSnapshot();
+  expect(shallowWithIntl(select)).toMatchSnapshot();
 });
 
 it('should render a default SelectField component with attributes spread onto the select', () => {
@@ -27,7 +28,7 @@ it('should render a default SelectField component with attributes spread onto th
     </SelectField>
   );
 
-  expect(shallow(select, intlContexts.shallowContext)).toMatchSnapshot();
+  expect(shallowWithIntl(select)).toMatchSnapshot();
 });
 
 it('should render a multiple SelectField component that limits the selection count', () => {
@@ -41,5 +42,5 @@ it('should render a multiple SelectField component that limits the selection cou
     </SelectField>
   );
 
-  expect(shallow(select, intlContexts.shallowContext)).toMatchSnapshot();
+  expect(shallowWithIntl(select)).toMatchSnapshot();
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import intlContexts from './intl-context-setup';
+import { shallowWithIntl } from 'terra-enzyme-intl';
 import Dialog from '../../src/Dialog';
 
 describe('Dialog', () => {
@@ -7,18 +7,18 @@ describe('Dialog', () => {
 
   // Snapshot Test
   it('should render a default component', () => {
-    const wrapper = shallow(defaultRender, intlContexts.shallowContext);
+    const wrapper = shallowWithIntl(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Structure Tests
   it('should have the class dialog', () => {
-    const wrapper = shallow(defaultRender, intlContexts.shallowContext);
+    const wrapper = shallowWithIntl(defaultRender);
     expect(wrapper.prop('className')).toContain('dialog');
   });
 
   it('should render a Dialog with merged attributes', () => {
-    const wrapper = shallow(<Dialog header="Header Content" footer="Footer Content" className="TestClass">some body content</Dialog>, intlContexts.shallowContext);
+    const wrapper = shallowWithIntl(<Dialog header="Header Content" footer="Footer Content" className="TestClass">some body content</Dialog>);
     expect(wrapper).toMatchSnapshot();
   });
 });

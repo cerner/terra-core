@@ -1,10 +1,10 @@
 import React from 'react';
+import { shallowWithIntl } from 'terra-enzyme-intl';
 import AddOption from '../../src/_AddOption';
-import intlContexts from './intl-context-setup';
 
 describe('AddOption', () => {
   it('should render a default AddOption', () => {
-    const wrapper = shallow(<AddOption value="value" />, intlContexts.shallowContext);
+    const wrapper = shallowWithIntl(<AddOption value="value" />);
     expect(wrapper).toMatchSnapshot();
   });
 });

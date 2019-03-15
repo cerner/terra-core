@@ -34,7 +34,8 @@
     "terra-doc-template": "^2.5.0",
     "terra-image": "^3.3.0",
     "terra-responsive-element": "^4.3.0",
-    "terra-visually-hidden-text": "^2.3.0"
+    "terra-visually-hidden-text": "^2.3.0",
+    "terra-enzyme-intl": "git://github.com/cerner/terra-enzyme-intl#add-enzyme-intl-helpers"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

@@ -47,6 +47,7 @@
     "terra-divider": "^3.3.0",
     "terra-doc-template": "^2.5.0",
     "terra-icon": "^3.4.0",
-    "terra-mixins": "^1.28.0"
+    "terra-mixins": "^1.28.0",
+    "terra-enzyme-intl": "git://github.com/cerner/terra-enzyme-intl#add-enzyme-intl-helpers"
   }
 }
