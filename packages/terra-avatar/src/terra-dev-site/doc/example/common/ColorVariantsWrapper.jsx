@@ -1,5 +1,4 @@
 import React from 'react';
-import Select from 'terra-form-select';
 
 function ColorVariantsWrapper(WrappedComponent) {
   return class ColorVariant extends React.Component {
@@ -9,28 +8,29 @@ function ColorVariantsWrapper(WrappedComponent) {
       this.state = { colorVariant: 'auto' };
     }
 
-    handleOnSelect(value) {
-      this.setState({ colorVariant: value });
+    handleOnSelect(event) {
+      this.setState({ [event.target.name]: event.target.value });
     }
 
     render() {
       return (
         <div>
           <WrappedComponent color={this.state.colorVariant} {...this.props} />
-          <Select placeholder="Select a color variant" onSelect={this.handleOnSelect} defaultValue="auto" style={{ maxWidth: '300px', marginTop: '10px' }}>
-            <Select.Option value="auto" display="Auto" />
-            <Select.Option value="neutral" display="Neutral" />
-            <Select.Option value="one" display="One" />
-            <Select.Option value="two" display="Two" />
-            <Select.Option value="three" display="Three" />
-            <Select.Option value="four" display="Four" />
-            <Select.Option value="five" display="Five" />
-            <Select.Option value="six" display="Six" />
-            <Select.Option value="seven" display="Seven" />
-            <Select.Option value="eight" display="Eight" />
-            <Select.Option value="nine" display="Nine" />
-            <Select.Option value="ten" display="Ten" />
-          </Select>
+          <p><label htmlFor="colorVariant">Select a color variant:</label></p>
+          <select id="colorVariant" name="colorVariant" value={this.state.colorVariant} onChange={this.handleOnSelect}>
+            <option value="auto">Auto</option>
+            <option value="neutral">Neutral</option>
+            <option value="one">One</option>
+            <option value="two">Two</option>
+            <option value="three">Three</option>
+            <option value="four">Four</option>
+            <option value="five">Five</option>
+            <option value="six">Six</option>
+            <option value="seven">Seven</option>
+            <option value="eight">Eight</option>
+            <option value="nine">Nine</option>
+            <option value="ten">Ten</option>
+          </select>
         </div>
       );
     }
