@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Breaking Changes
+* Removed post-install script which wrote default loaders
+* Removed aggregate-translations pre-build tool
+* Removed `src/defaultIntlLoaders.js`
+* Removed `src/defaultTranslationsLoaders.js`
+* Removed `require.ensure` syntax for loading Intl polyfill
 
 3.3.0 - (February 26, 2019)
 ------------------
