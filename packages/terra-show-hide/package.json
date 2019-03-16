@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "react-intl": "^2.4.0",
     "react-test-renderer": "^16.5.2"
   },
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-intl": "^2.4.0",
     "terra-base": "^4.0.0"
   },
   "dependencies": {

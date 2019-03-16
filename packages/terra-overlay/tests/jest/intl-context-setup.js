@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-boolean-value, import/no-extraneous-dependencies */
-import { IntlProvider, intlShape } from 'terra-base';
+import { IntlProvider, intlShape } from 'react-intl';
 import messages from '../../translations/en-US.json';
 
 const locale = 'en-US';

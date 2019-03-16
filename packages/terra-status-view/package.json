@@ -34,10 +34,8 @@
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-intl": "^2.4.0",
     "terra-base": "^4.0.0"
-  },
-  "devDependencies": {
-    "react-intl": "^2.3.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
