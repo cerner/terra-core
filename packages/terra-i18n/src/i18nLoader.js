@@ -1,7 +1,7 @@
 /* eslint-disable */
+import Intl from './intl';
 import loadIntl from './intlLoaders';
 import loadTranslations from './translationsLoaders';
-
 import supportedLocales from './i18nSupportedLocales';
 
 const hasIntl = typeof (Intl) !== 'undefined';
@@ -18,11 +18,8 @@ const permitParams = (locale, callback) => {
 module.exports = (locale, callback, scope) => {
   permitParams(locale, callback);
   if (!hasIntl) {
-    require.ensure([], (require) => {
-      require('intl');
       loadIntl(locale);
       loadTranslations(locale, callback, scope);
-    }, 'intl-polyfill');
   } else {
     loadTranslations(locale, callback, scope);
   }
