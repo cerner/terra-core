@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Fixed
 * Checked for undefined and null for defaultValue
+* Fixed passed in onClick event not firing depending on click position on terra-form-select
 
 ### Added
 * Added new translation strings
