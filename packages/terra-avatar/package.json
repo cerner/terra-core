@@ -29,7 +29,6 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.5.0",
-    "terra-form-select": "^5.9.0",
     "terra-image": "^3.3.0",
     "terra-mixins": "^1.28.0"
   },
