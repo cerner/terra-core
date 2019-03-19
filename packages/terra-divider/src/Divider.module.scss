@@ -9,4 +9,36 @@
     height: 0;
     margin: 0;
   }
+
+  .divider-text {
+    border: 0;
+    height: 1.5em;
+    line-height: 1em;
+    outline: 0;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      background-color: #dedfe0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }
+
+    &::after {
+      background-color: #fff;
+      color: var(--terra-divider-after-text-color, #000);
+      content: attr(content);
+      display: inline-block;
+      line-height: 1.5em;
+      margin-bottom: var(--terra-divider-after-text-margin-bottom);
+      margin-top: var(--terra-divider-after-text-margin-top);
+      padding-left: var(--terra-divider-after-text-padding-left, 0.5em);
+      padding-right: var(--terra-divider-after-text-padding-right, 0.5em);
+      position: relative;
+    }
+  }
 }
