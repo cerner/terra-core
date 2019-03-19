@@ -21,16 +21,16 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "terra-base": "^4.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "terra-arrange": "^3.4.0",
     "terra-doc-template": "^2.5.0",
     "terra-mixins": "^1.28.0"
