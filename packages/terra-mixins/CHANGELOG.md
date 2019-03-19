@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Breaking Changes
+* Remove old theme based mixins
 
 3.6.0 - (February 26, 2019)
 ------------------
