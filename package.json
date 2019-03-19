@@ -87,7 +87,7 @@
     "stylelint-config-terra": "^2.0.0",
     "terra-dev-site": "^3.0.0",
     "terra-toolkit": "^4.16.1",
-    "terra-enzyme-intl": "git://github.com/cerner/terra-enzyme-intl#add-enzyme-intl-helpers",
+    "terra-enzyme-intl": "^2.0.0",
     "webpack-merge": "^4.1.2"
   }
 }
