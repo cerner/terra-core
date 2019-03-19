@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import KeyCode from 'keycode-js';
+import IconClose from 'terra-icon/lib/icon/IconClose';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form-input';
 import styles from './SearchField.module.scss';
@@ -11,6 +12,7 @@ import styles from './SearchField.module.scss';
 const cx = classNames.bind(styles);
 
 const Icon = <IconSearch />;
+const Cancel = <IconClose />;
 
 const propTypes = {
   /**
@@ -81,7 +83,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  defaultValue: undefined,
+  defaultValue: '',
   disableAutoSearch: false,
   isBlock: false,
   isDisabled: false,
@@ -105,6 +107,7 @@ class SearchField extends React.Component {
   constructor(props) {
     super(props);
 
+    this.handleCancel = this.handleCancel.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -121,6 +124,10 @@ class SearchField extends React.Component {
 
   componentWillUnmount() {
     this.clearSearchTimeout();
+  }
+
+  handleCancel() {
+    this.setState({ searchText: '' });
   }
 
   handleTextChange(event) {
@@ -184,26 +191,21 @@ class SearchField extends React.Component {
       inputAttributes,
       ...customProps
     } = this.props;
+
     const searchFieldClassNames = cx([
       'searchfield',
       { block: isBlock },
       customProps.className,
     ]);
 
-    const valueTemp = {};
-    if (value !== undefined) {
-      valueTemp.value = value;
-    } else {
-      valueTemp.defaultValue = defaultValue;
-    }
-
     const inputText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
-    const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes, valueTemp);
+    const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <Input
+          defaultValue={defaultValue}
           className={cx('input')}
           type="search"
           placeholder={placeholder}
@@ -212,8 +214,21 @@ class SearchField extends React.Component {
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
           refCallback={inputRefCallback}
+          value={this.state.searchText}
           {...additionalInputAttributes}
         />
+        { this.state.searchText
+          ? (
+            <Button
+              className={cx('cancel')}
+              onClick={this.handleCancel}
+              text="cancel"
+              icon={Cancel}
+              isIconOnly
+            />
+          )
+          : undefined
+        }
         <Button
           className={cx('button')}
           text={buttonText}
