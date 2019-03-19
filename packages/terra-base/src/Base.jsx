@@ -84,14 +84,6 @@ class Base extends React.Component {
     const messages = Object.assign({}, this.state.messages, customMessages);
     const renderChildren = strictMode ? (<React.StrictMode>{children}</React.StrictMode>) : children;
 
-    if (locale === undefined) {
-      return (
-        <div {...customProps} data-terra-base>
-          {renderChildren}
-        </div>
-      );
-    }
-
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
       <I18nProvider {...customProps} locale={this.state.locale} messages={messages} data-terra-base>
