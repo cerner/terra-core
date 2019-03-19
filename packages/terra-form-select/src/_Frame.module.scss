@@ -156,6 +156,7 @@
     flex: 1 1 auto; // IE 10
     max-width: 100%; // IE 10
     min-width: 0; // IE 11
+    pointer-events: none; // This fixes an issue with onClick events not being properly activated. This bug is not present in IE 10
   }
 
   .search-input,
