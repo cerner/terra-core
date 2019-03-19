@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Updated status view variants object, added proptype check
 
+### Fixed
+* Remove --terra-status-view-message-text-align theme variable to fix alignment within Edge browser.
+
 3.7.0 - (March 5, 2019)
 ------------------
 ### Fixed

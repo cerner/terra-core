@@ -5,9 +5,10 @@ Unreleased
 ----------
 ### Fixed
 * Checked for undefined and null for defaultValue
+* Fixed passed in onClick event not firing depending on click position on terra-form-select
 
 ### Added
-* Added new translation strings
+* Added new EN translation strings
 
 ### Changed
 * Replaced local keyCode values with keycode-js npm package
