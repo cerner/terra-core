@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update Jest tests to use terra-enzyme-intl
 
 3.5.0 - (February 26, 2019)
 ------------------
