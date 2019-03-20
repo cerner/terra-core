@@ -8,6 +8,8 @@ Unreleased
 * Fixed passed in onClick event not firing depending on click position on terra-form-select
 
 ### Added
+* Added new translation strings
+* Added logic to enable accessible mapping of InputField and it's related error and help text messages
 * Added new EN translation strings
 
 ### Changed
