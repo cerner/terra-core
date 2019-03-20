@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed terra-form-select dependency
 
 2.10.0 - (March 6, 2019)
 ------------------

@@ -1,5 +1,4 @@
 import React from 'react';
-import Select from 'terra-form-select';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Signature from 'terra-signature/lib/Signature';
 
@@ -51,9 +50,8 @@ class SignatureExample extends React.Component {
     this.setState(newState);
   }
 
-  handleLineWidth(value) {
-    const newState = Object.assign({}, this.state, { lineSegments: [], lineWidth: parseInt(value, 10) });
-    this.setState(newState);
+  handleLineWidth(event) {
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   render() {
@@ -68,12 +66,15 @@ class SignatureExample extends React.Component {
         <div>
           <button type="button" onClick={this.handleClear}>Clear </button>
           <button type="button" onClick={this.handleSingleLine}>Sign w/Line </button>
-          <Select placeholder="Select a line width" value={this.state.lineWidth} onChange={this.handleLineWidth}>
-            <Select.Option value="1" display="EXTRAFINE" key="extrafine" />
-            <Select.Option value="2" display="FINE" key="fine" />
-            <Select.Option value="4" display="MEDIUM" key="medium" />
-            <Select.Option value="6" display="HEAVY" key="heavy" />
-          </Select>
+          <div>
+            <p><label htmlFor="lineWidth">Select a line width:</label></p>
+            <select id="lineWidth" name="lineWidth" value={this.state.lineWidth} onChange={this.handleLineWidth}>
+              <option value="1">EXTRAFINE</option>
+              <option value="2">FINE</option>
+              <option value="4">MEDIUM</option>
+              <option value="6">HEAVY</option>
+            </select>
+          </div>
         </div>
       </div>
     );
