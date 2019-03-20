@@ -1,4 +1,4 @@
 import IntlPolyfill from 'intl';
 
-const exportedIntl = typeof (Intl) === 'undefined' ? IntlPolyfill : global.Intl;
+const exportedIntl = typeof (Intl) === 'undefined' ? IntlPolyfill : window.Intl;
 export default exportedIntl;
