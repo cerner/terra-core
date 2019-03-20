@@ -99,6 +99,9 @@ const contextTypes = {
 };
 
 const hasWhiteSpace = s => /\s/g.test(s);
+// Detect IE 10 or IE 11
+// TODO - Delete detection logic when we drop support for IE
+const isIE = () => (window.navigator.userAgent.indexOf('Trident/6.0') > -1 || window.navigator.userAgent.indexOf('Trident/7.0') > -1);
 
 const Field = (props, { intl }) => {
   const {
@@ -157,10 +160,9 @@ const Field = (props, { intl }) => {
      * In that browser, we don't want an ID for the aria-describedby content so we have a
      * Microsoft specific feature detect to flex on if the ID is undefined or valid.
      */
-    helpTextId = !window.navigator.msPointerEnabled ? `${htmlFor}-help` : undefined;
-    errorTextId = !window.navigator.msPointerEnabled ? `${htmlFor}-error` : undefined;
+    helpTextId = !isIE() ? `${htmlFor}-help` : undefined;
+    errorTextId = !isIE() ? `${htmlFor}-error` : undefined;
   }
-
 
   /**
    * IE + JAWS has trouble reading aria-describedby content with our form components.
@@ -168,7 +170,7 @@ const Field = (props, { intl }) => {
    * into the label as visually hidden text so JAWS can announce them correctly in IE.
    */
   const IEDescriptionText = (
-    window.navigator.msPointerEnabled
+    isIE()
       ? (
         <div className={cx('visually-hidden-text')}>
           {isInvalid && error ? error : null}
