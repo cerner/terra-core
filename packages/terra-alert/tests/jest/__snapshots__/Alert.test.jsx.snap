@@ -1,1251 +1,2043 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title=""
+  type="advisory"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="advisory"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base advisory narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.advisory
+            </strong>
+            This is an advisory alert.
+          </div>
+        </div>
+        
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base advisory wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.advisory
+            </strong>
+            This is an advisory alert.
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base advisory narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Advisory.
-              </strong>
-              This is an advisory alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base advisory wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Advisory.
-              </strong>
-              This is an advisory alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title=""
+  type="alert"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="alert"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base alert narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.alert
+            </strong>
+            This is a test
+          </div>
+        </div>
+        
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base alert wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.alert
+            </strong>
+            This is a test
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base alert narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Alert.
-              </strong>
-              This is an alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base alert wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Alert.
-              </strong>
-              This is an alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={
+    <IconHelp
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  customStatusColor="orange"
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title="Help!"
+  type="custom"
 >
-  <Alert
-    action={null}
-    customIcon={
-      <IconHelp
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base custom narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={
+          Object {
+            "color": "orange",
+          }
+        }
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconHelp
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section section-custom"
+          >
+            <strong
+              className="title"
+            >
+              Help!
+            </strong>
+            This is a custom alert.
+          </div>
+        </div>
+        
+      </div>
     }
-    customStatusColor="orange"
-    onDismiss={null}
-    title="Help!"
-    type="custom"
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base custom wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={
+          Object {
+            "color": "orange",
+          }
+        }
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconHelp
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section section-custom"
+          >
+            <strong
+              className="title"
+            >
+              Help!
+            </strong>
+            This is a custom alert.
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base custom narrow"
-          style={
-            Object {
-              "color": "orange",
-            }
-          }
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconHelp
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section section-custom"
-            >
-              <strong
-                className="title"
-              >
-                Help!
-              </strong>
-              This is a custom alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base custom wide"
-          style={
-            Object {
-              "color": "orange",
-            }
-          }
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconHelp
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section section-custom"
-            >
-              <strong
-                className="title"
-              >
-                Help!
-              </strong>
-              This is a custom alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title=""
+  type="error"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="error"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base error narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconError
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.error
+            </strong>
+            This is an error.
+          </div>
+        </div>
+        
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base error wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconError
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.error
+            </strong>
+            This is an error.
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base error narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconError
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Error.
-              </strong>
-              This is an error.
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base error wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconError
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Error.
-              </strong>
-              This is an error.
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title="Gettysburg Address"
+  type="info"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title="Gettysburg Address"
-    type="info"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base info narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconInformation
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Gettysburg Address
+            </strong>
+            <span>
+              Four score and seven years ago . . .
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base info wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconInformation
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Gettysburg Address
+            </strong>
+            <span>
+              Four score and seven years ago . . .
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base info narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconInformation
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Gettysburg Address
-              </strong>
-              <span>
-                Four score and seven years ago . . .
-              </span>
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base info wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconInformation
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Gettysburg Address
-              </strong>
-              <span>
-                Four score and seven years ago . . .
-              </span>
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert of type info with text content should render an Alert component of type info 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title=""
+  type="info"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="info"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base info narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconInformation
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.info
+            </strong>
+            This is an information alert.
+          </div>
+        </div>
+        
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base info wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconInformation
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.info
+            </strong>
+            This is an information alert.
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base info narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconInformation
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Information.
-              </strong>
-              This is an information alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base info wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconInformation
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Information.
-              </strong>
-              This is an information alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert of type success with an action button text content should render an Alert component of type success with an action button 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onClick={[Function]}
+      text="Action"
+      type="button"
+      variant="emphasis"
+    />
+  }
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title=""
+  type="success"
 >
-  <Alert
-    action={
-      <Button
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
-        onClick={[Function]}
-        text="Action"
-        type="button"
-        variant="emphasis"
-      />
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base success narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-narrow"
+        >
+          <span
+            className="icon"
+          >
+            <IconSuccess
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.success
+            </strong>
+            This is a success alert.
+          </div>
+        </div>
+        <div
+          className="actions"
+        >
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[Function]}
+            text="Action"
+            type="button"
+            variant="emphasis"
+          />
+          
+        </div>
+      </div>
     }
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="success"
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base success wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconSuccess
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.success
+            </strong>
+            This is a success alert.
+          </div>
+        </div>
+        <div
+          className="actions"
+        >
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[Function]}
+            text="Action"
+            type="button"
+            variant="emphasis"
+          />
+          
+        </div>
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base success narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-narrow"
-          >
-            <span
-              className="icon"
-            >
-              <IconSuccess
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Success.
-              </strong>
-              This is a success alert.
-            </div>
-          </div>
-          <div
-            className="actions"
-          >
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isIconOnly={false}
-              isReversed={false}
-              onClick={[Function]}
-              text="Action"
-              type="button"
-              variant="emphasis"
-            />
-            
-          </div>
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base success wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconSuccess
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Success.
-              </strong>
-              This is a success alert.
-            </div>
-          </div>
-          <div
-            className="actions"
-          >
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isIconOnly={false}
-              isReversed={false}
-              onClick={[Function]}
-              text="Action"
-              type="button"
-              variant="emphasis"
-            />
-            
-          </div>
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert of type success with text content should render an Alert component of type success 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title=""
+  type="success"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="success"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base success narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconSuccess
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.success
+            </strong>
+            This is a success alert.
+          </div>
+        </div>
+        
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base success wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconSuccess
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.success
+            </strong>
+            This is a success alert.
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base success narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconSuccess
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Success.
-              </strong>
-              This is a success alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base success wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconSuccess
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Success.
-              </strong>
-              This is a success alert.
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title=""
+  type="warning"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="warning"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base warning narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconWarning
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.warning
+            </strong>
+            This is an warning.
+          </div>
+        </div>
+        
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base warning wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconWarning
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.warning
+            </strong>
+            This is an warning.
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base warning narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconWarning
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Warning.
-              </strong>
-              This is an warning.
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base warning wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconWarning
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Warning.
-              </strong>
-              This is an warning.
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Alert with no props should render a default component 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={null}
+  title=""
+  type="alert"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="alert"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base alert narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.alert
+            </strong>
+            
+          </div>
+        </div>
+        
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base alert wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.alert
+            </strong>
+            
+          </div>
+        </div>
+        
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base alert narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Alert.
-              </strong>
-              
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base alert wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Alert.
-              </strong>
-              
-            </div>
-          </div>
-          
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onClick={[Function]}
+      text="Action"
+      type="button"
+      variant="emphasis"
+    />
+  }
+  customIcon={
+    <IconHelp
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  customStatusColor="orange"
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={[Function]}
+  title="Help!"
+  type="custom"
 >
-  <Alert
-    action={
-      <Button
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
-        onClick={[Function]}
-        text="Action"
-        type="button"
-        variant="emphasis"
-      />
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base custom narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={
+          Object {
+            "color": "orange",
+          }
+        }
+      >
+        <div
+          className="body body-narrow"
+        >
+          <span
+            className="icon"
+          >
+            <IconHelp
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section section-custom"
+          >
+            <strong
+              className="title"
+            >
+              Help!
+            </strong>
+            This is a custom alert.
+          </div>
+        </div>
+        <div
+          className="actions actions-custom"
+        >
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[Function]}
+            text="Action"
+            type="button"
+            variant="emphasis"
+          />
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[Function]}
+            text="Terra.alert.dismiss"
+            type="button"
+            variant="neutral"
+          />
+        </div>
+      </div>
     }
-    customIcon={
-      <IconHelp
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base custom wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={
+          Object {
+            "color": "orange",
+          }
+        }
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconHelp
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section section-custom"
+          >
+            <strong
+              className="title"
+            >
+              Help!
+            </strong>
+            This is a custom alert.
+          </div>
+        </div>
+        <div
+          className="actions actions-custom"
+        >
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[Function]}
+            text="Action"
+            type="button"
+            variant="emphasis"
+          />
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[Function]}
+            text="Terra.alert.dismiss"
+            type="button"
+            variant="neutral"
+          />
+        </div>
+      </div>
     }
-    customStatusColor="orange"
-    onDismiss={[Function]}
-    title="Help!"
-    type="custom"
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base custom narrow"
-          style={
-            Object {
-              "color": "orange",
-            }
-          }
-        >
-          <div
-            className="body body-narrow"
-          >
-            <span
-              className="icon"
-            >
-              <IconHelp
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section section-custom"
-            >
-              <strong
-                className="title"
-              >
-                Help!
-              </strong>
-              This is a custom alert.
-            </div>
-          </div>
-          <div
-            className="actions actions-custom"
-          >
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isIconOnly={false}
-              isReversed={false}
-              onClick={[Function]}
-              text="Action"
-              type="button"
-              variant="emphasis"
-            />
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isIconOnly={false}
-              isReversed={false}
-              onClick={[Function]}
-              text="Dismiss"
-              type="button"
-              variant="neutral"
-            />
-          </div>
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base custom wide"
-          style={
-            Object {
-              "color": "orange",
-            }
-          }
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconHelp
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section section-custom"
-            >
-              <strong
-                className="title"
-              >
-                Help!
-              </strong>
-              This is a custom alert.
-            </div>
-          </div>
-          <div
-            className="actions actions-custom"
-          >
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isIconOnly={false}
-              isReversed={false}
-              onClick={[Function]}
-              text="Action"
-              type="button"
-              variant="emphasis"
-            />
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isIconOnly={false}
-              isReversed={false}
-              onClick={[Function]}
-              text="Dismiss"
-              type="button"
-              variant="neutral"
-            />
-          </div>
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
 
 exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
+<Alert
+  action={null}
+  customIcon={null}
+  customStatusColor=""
+  intl={
     Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  onDismiss={[Function]}
+  title=""
+  type="alert"
 >
-  <Alert
-    action={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={[Function]}
-    title=""
-    type="alert"
+  <ResponsiveElement
+    defaultElement={
+      <div
+        className="alert-base alert narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-narrow"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.alert
+            </strong>
+            This is a test
+          </div>
+        </div>
+        <div
+          className="actions"
+        >
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[Function]}
+            text="Terra.alert.dismiss"
+            type="button"
+            variant="neutral"
+          />
+        </div>
+      </div>
+    }
+    responsiveTo="parent"
+    tiny={
+      <div
+        className="alert-base alert wide"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
+        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.alert
+            </strong>
+            This is a test
+          </div>
+        </div>
+        <div
+          className="actions"
+        >
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[Function]}
+            text="Terra.alert.dismiss"
+            type="button"
+            variant="neutral"
+          />
+        </div>
+      </div>
+    }
   >
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert-base alert narrow"
-          style={Object {}}
-        >
-          <div
-            className="body body-narrow"
-          >
-            <span
-              className="icon"
-            >
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Alert.
-              </strong>
-              This is a test
-            </div>
-          </div>
-          <div
-            className="actions"
-          >
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isIconOnly={false}
-              isReversed={false}
-              onClick={[Function]}
-              text="Dismiss"
-              type="button"
-              variant="neutral"
-            />
-          </div>
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert-base alert wide"
-          style={Object {}}
-        >
-          <div
-            className="body body-std"
-          >
-            <span
-              className="icon"
-            >
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-            <div
-              className="section"
-            >
-              <strong
-                className="title"
-              >
-                Alert.
-              </strong>
-              This is a test
-            </div>
-          </div>
-          <div
-            className="actions"
-          >
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isIconOnly={false}
-              isReversed={false}
-              onClick={[Function]}
-              text="Dismiss"
-              type="button"
-              variant="neutral"
-            />
-          </div>
-        </div>
-      }
-    >
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
+    <div />
+  </ResponsiveElement>
+</Alert>
 `;
