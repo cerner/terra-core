@@ -28,8 +28,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.5.0",
-    "terra-form-select": "^5.9.0"
+    "terra-doc-template": "^2.5.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
