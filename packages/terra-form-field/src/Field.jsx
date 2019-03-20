@@ -134,6 +134,8 @@ const Field = (props, { intl }) => {
   ]);
 
   // Checks to run when not in production
+  // TODO - Remove this once we make this a required prop.
+  // More info: https://github.com/cerner/terra-core/issues/2290
   if (process.env.NODE_ENV !== 'production') {
     if (!htmlFor) {
       // eslint-disable-next-line
