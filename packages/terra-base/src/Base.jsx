@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { I18nProvider, i18nLoader } from 'terra-i18n';
+import ThemeProvider from 'terra-theme-provider';
 import './baseStyles';
 
 const propTypes = {
@@ -8,6 +9,14 @@ const propTypes = {
    * The component(s) that will be wrapped by `<Base />`.
    */
   children: PropTypes.node.isRequired,
+  /**
+   * The fill prop sets a `height: 100%` style on the base component and it's theme provider
+   */
+  fill: PropTypes.bool,
+  /**
+   * The root fill prop sets a `height: 100%` style on the `#root` selector. This selector is commonly used for mounting a react app into the DOM.
+   */
+  rootFill: PropTypes.bool,
   /**
    * The locale name.
    */
@@ -26,6 +35,15 @@ const propTypes = {
    */
   strictMode: PropTypes.bool,
   /**
+   *  Provides first class prop for custom inline styles
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  style: PropTypes.object,
+  /**
+   * Name of class for specified theme. e.g cerner-clinical-theme. This class name is applied to the HTML element.
+   */
+  themeName: PropTypes.string,
+  /**
    * The component(s) that will be wrapped by `<Base />` ONLY
    * in the event that translations have not been loaded yet.
    * NOTE: Absolutely no locale-dependent logic should be
@@ -37,6 +55,8 @@ const propTypes = {
 const defaultProps = {
   customMessages: {},
   strictMode: false,
+  fill: true,
+  rootFill: true,
 };
 
 class Base extends React.Component {
@@ -50,7 +70,9 @@ class Base extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.locale !== undefined) {
+    const { locale, rootFill } = this.props;
+
+    if (locale !== undefined) {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
@@ -58,10 +80,17 @@ class Base extends React.Component {
         console.error(e);
       }
     }
+
+    if (rootFill) {
+      const root = document.getElementById('root');
+      root.style.height = '100%';
+    }
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.locale !== undefined && this.props.locale !== prevProps.locale) {
+    const { locale } = this.props;
+
+    if (locale !== undefined && locale !== prevProps.locale) {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
@@ -74,9 +103,12 @@ class Base extends React.Component {
   render() {
     const {
       children,
+      fill,
+      rootFill,
       locale,
       customMessages,
       strictMode,
+      style,
       translationsLoadingPlaceholder,
       ...customProps
     } = this.props;
@@ -84,10 +116,22 @@ class Base extends React.Component {
     const messages = Object.assign({}, this.state.messages, customMessages);
     const renderChildren = strictMode ? (<React.StrictMode>{children}</React.StrictMode>) : children;
 
+    const fillStyles = fill ? { height: '100%' } : {};
+    const customStyles = fill ? Object.assign(fillStyles, style) : style;
+
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
-      <I18nProvider {...customProps} locale={this.state.locale} messages={messages} data-terra-base>
-        {renderChildren}
+      <I18nProvider
+        style={customStyles}
+        {...customProps}
+        locale={this.state.locale}
+        messages={messages}
+        data-terra-base
+      >
+        {/* TO DO - Add docs on theme provider usages in terra-base */}
+        <ThemeProvider style={fillStyles} themeName={this.props.themeName} isGlobalTheme>
+          {renderChildren}
+        </ThemeProvider>
       </I18nProvider>
     );
   }
