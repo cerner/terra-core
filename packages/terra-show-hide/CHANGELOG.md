@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Replaced local keyCode values with keycode-js npm package
+* Update Jest tests to use terra-enzyme-intl
 
 2.5.0 - (March 5, 2019)
 ------------------
