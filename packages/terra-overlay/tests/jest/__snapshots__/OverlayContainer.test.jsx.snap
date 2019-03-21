@@ -21,7 +21,7 @@ exports[`OverlayContainer should render when overlay and children are provided 1
     isOpen={false}
     isRelativeToContainer={false}
     isScrollable={false}
-    rootSelector="[data-terra-base]"
+    rootSelector="#root"
     zIndex="100"
   />
   <div
@@ -44,7 +44,7 @@ exports[`OverlayContainer should render when overlay is provided 1`] = `
     isOpen={false}
     isRelativeToContainer={false}
     isScrollable={false}
-    rootSelector="[data-terra-base]"
+    rootSelector="#root"
     zIndex="100"
   />
   <div
