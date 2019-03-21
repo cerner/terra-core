@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.7.0 - (March 21, 2019)
+------------------
 ### Added
 * Added logic to enable accessible mapping of InputField and it's related error and help text messages
 

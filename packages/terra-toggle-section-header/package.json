@@ -1,7 +1,7 @@
 {
   "name": "terra-toggle-section-header",
   "main": "lib/ToggleSectionHeader.js",
-  "version": "2.4.1",
+  "version": "2.5.0",
   "description": "Toggle section header component that transitions content in and out with a click on the header.",
   "repository": {
     "type": "git",
@@ -27,10 +27,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.5.0",
+    "terra-doc-template": "^2.6.0",
     "terra-mixins": "^1.28.0",
-    "terra-section-header": "^2.6.0",
-    "terra-toggle": "^3.4.1"
+    "terra-section-header": "^2.7.0",
+    "terra-toggle": "^3.5.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
