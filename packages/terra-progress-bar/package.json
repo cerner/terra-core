@@ -34,7 +34,6 @@
   "peerDependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "terra-base": "^4.0.0",
     "terra-markdown": "^2.20.0"
   },
   "dependencies": {
