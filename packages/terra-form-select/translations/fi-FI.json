@@ -1,5 +1,7 @@
 {
   "Terra.form.select.add": "Lisätä \"{text}\"",
   "Terra.form.select.defaultDisplay": "- Valitat -",
-  "Terra.form.select.noResults": "Ei ole vastaavia tuloksia \"{text}\""
+  "Terra.form.select.noResults": "Ei ole vastaavia tuloksia \"{text}\"",
+  "Terra.form.select.maxSelectionHelp": "Rajoita {text} kohdetta.",
+  "Terra.form.select.maxSelectionOption": "Valittujen {text} kohtien enimmäismäärä"
 }

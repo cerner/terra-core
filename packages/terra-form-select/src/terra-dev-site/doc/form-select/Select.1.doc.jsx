@@ -9,6 +9,8 @@ import OptGroupSrc from '!raw-loader!../../../../src/_OptGroup';
 import SelectSrc from '!raw-loader!../../../../src/Select';
 
 // Example Files
+import AllowClearExample from '../example/AllowClear';
+import AllowClearExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AllowClear';
 import ControlledExample from '../example/Controlled';
 import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Controlled';
 import ComboboxExample from '../example/Combobox';
@@ -72,26 +74,31 @@ const Index = () => (
       example: <TagExample />,
       source: TagExampleSrc,
     }, {
-      title: 'Disabled',
+      title: 'Disabled (applies to all)',
       example: <DisabledExample />,
       source: DisabledExampleSrc,
     }, {
-      title: 'Invalid',
+      title: 'Invalid (applies to all)',
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',
       example: <InvalidExample />,
       source: InvalidExampleSrc,
     }, {
-      title: 'OptGroup',
+      title: 'Ability to add Option Groups (applies to all)',
       description: 'An OptGroup provides a way to group options together within the listbox. Can be applied to all select variants (default, search, combobox, multiple, tag).',
       example: <OptGroupExample />,
       source: OptGroupExampleSrc,
     }, {
-      title: 'Custom Max Height',
+      title: 'Ability to set a Maximum Height (applies to all)',
       description: 'An example of implementing a custom max height of the dropdown.',
       example: <MaxHeightExample />,
       source: MaxHeightExampleSrc,
     }, {
-      title: 'Controlled',
+      title: 'Ability to Clear Selection (applies to only \'default\', \'combobox\', and \'search\')',
+      description: 'An example with an option to clear the selected item. (Not applicable to \'multiple\' or \'tag\' variants)',
+      example: <AllowClearExample />,
+      source: AllowClearExampleSrc,
+    }, {
+      title: 'Create a Controlled Select (applies to all)',
       description: 'An example of implementing a controlled Select.',
       example: <ControlledExample />,
       source: ControlledExampleSrc,

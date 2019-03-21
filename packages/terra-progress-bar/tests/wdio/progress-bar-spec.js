@@ -32,8 +32,8 @@ describe('Progress Bar', () => {
     Terra.should.matchScreenshot();
   });
 
-  describe('Gradient', () => {
-    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-gradient'));
+  describe('Customized', () => {
+    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-customized-colors'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();

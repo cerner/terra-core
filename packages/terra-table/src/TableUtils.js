@@ -1,7 +1,4 @@
-const KEYCODES = {
-  ENTER: 13,
-  SPACE: 32,
-};
+import KeyCode from 'keycode-js';
 
 const shouldBeMultiSelectable = (maxSelectionCount, selectedKeys, key) => (maxSelectionCount < 0 || selectedKeys.indexOf(key) >= 0 || selectedKeys.length < maxSelectionCount);
 
@@ -47,7 +44,7 @@ const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => {
     return onKeyDown;
   }
   return (event) => {
-    if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
       onSelect(event, metaData);
     }
 
@@ -79,7 +76,6 @@ const TableUtils = {
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
-  KEYCODES,
 };
 
 export default TableUtils;

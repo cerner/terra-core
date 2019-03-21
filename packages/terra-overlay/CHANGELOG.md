@@ -4,6 +4,19 @@ Changelog
 Unreleased
 ----------
 ### Added
+* Added overlay prop to OverlayContainer to separate overlay from container-content
+* Added condition in overlay setNode method to prevent screen reader from reading container-content
+
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+* Update Jest tests to use terra-enzyme-intl
+
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
 * Added en-AU translations
 
 ### Fixed
@@ -18,6 +31,9 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
+
+### Changed
+* Removed stylelint overrides in Overlay.module.scss
 
 3.3.0 - (January 26, 2019)
 ------------------

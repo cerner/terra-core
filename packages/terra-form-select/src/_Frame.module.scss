@@ -112,6 +112,12 @@
       background-size: contain;
       display: inline-block; // IE 10
     }
+
+    .search-input::placeholder,
+    .placeholder {
+      color: var(--terra-form-select-disabled-placeholder-color, #70787c);
+      font-style: var(--terra-form-select-disabled-placeholder-font-style);
+    }
   }
 
   .toggle {
@@ -150,6 +156,7 @@
     flex: 1 1 auto; // IE 10
     max-width: 100%; // IE 10
     min-width: 0; // IE 11
+    pointer-events: none; // This fixes an issue with onClick events not being properly activated. This bug is not present in IE 10
   }
 
   .search-input,
@@ -158,6 +165,7 @@
     border: 0;
     color: inherit;
     flex: 1 1 auto;
+    font-family: inherit;
     font-size: var(--terra-form-select-search-focus-font-size, 1.143rem);
     height: var(--terra-form-select-search-focus-height, 1.375em);
     margin-top: var(--terra-form-select-search-focus-margin-top, 0.21428571428571427rem);

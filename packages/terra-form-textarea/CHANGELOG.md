@@ -3,6 +3,15 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added logic to enable accessible mapping of TextareaField and it's related error and help text messages
+
+
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
 

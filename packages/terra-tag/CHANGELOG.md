@@ -3,6 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+
+2.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Removed
+* Removed terra-alert depenency used in documentation example
 
 2.5.0 - (February 12, 2019)
 ------------------

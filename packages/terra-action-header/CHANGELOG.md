@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update Jest tests to use terra-enzyme-intl
+
+2.7.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added en-AU translations
 

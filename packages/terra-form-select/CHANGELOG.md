@@ -3,12 +3,44 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Checked for undefined and null for defaultValue
+* Fixed passed in onClick event not firing depending on click position on terra-form-select
+
 ### Added
-* Added en-AU translations
+* Added new translation strings
+* Added logic to enable accessible mapping of InputField and it's related error and help text messages
+* Added new EN translation strings
+
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+* Update Jest tests to use terra-enzyme-intl
+
+5.9.0 - (March 6th, 2019)
+------------------
+### Added
+* Added option to limit the maximum number of selection count for multi-select variants.
+* Introduce an option to allow clearing the currently selected item
+
+5.8.0 - (March 5th, 2019)
+------------------
+### Fixed
+* Race condition where timeout would update after the component is not mounted
+* 'Unable to get property 'getInstance' of undefined or null reference' error in IE
+
+5.7.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* New CSS custom property: `--terra-form-select-disabled-placeholder-color`
+* New CSS custom property: `--terra-form-select-disabled-placeholder-font-style`
 
 ### Fixed
+* Added en-AU translations
+* Fixed issue preventing the input from inheriting the base font family
 * Fixed a Select Menu jest test that was broken with the release of enzyme-3.9.0
-
 
 5.6.0 - (February 12, 2019)
 ------------------

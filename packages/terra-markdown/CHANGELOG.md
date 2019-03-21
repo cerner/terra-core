@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+2.22.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Add styles to increase text contrast for block quotes
+
 2.21.0 - (February 5, 2019)
 ------------------
 ### Changed

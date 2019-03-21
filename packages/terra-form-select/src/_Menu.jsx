@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import 'terra-base/lib/baseStyles';
-import { KeyCodes, Variants } from './_constants';
+import KeyCode from 'keycode-js';
+import Variants from './_constants';
 import AddOption from './_AddOption';
+import ClearOption from './_ClearOption';
+import MaxSelection from './_MaxSelection';
 import NoResults from './_NoResults';
 import Util from './_MenuUtil';
 import styles from './_Menu.module.scss';
@@ -18,6 +21,15 @@ const propTypes = {
    * The content of the menu.
    */
   children: PropTypes.node,
+  /**
+   * Text for the clear option.
+   */
+  clearOptionDisplay: PropTypes.string,
+  /**
+   * The maximum number of options that can be selected. A value less than 2 will be ignored.
+   * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
+   */
+  maxSelectionCount: PropTypes.number,
   /**
    * Content to display when no results are found.
    */
@@ -60,6 +72,8 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  clearOptionDisplay: undefined,
+  maxSelectionCount: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
@@ -99,26 +113,40 @@ class Menu extends React.Component {
    */
   static getDerivedStateFromProps(props, state) {
     const {
-      searchValue, noResultContent,
+      clearOptionDisplay, maxSelectionCount, searchValue, noResultContent,
     } = props;
-    const children = Util.filter(props.children, props.searchValue, props.optionFilter);
 
+    let children;
     let hasNoResults = false;
+    let hasMaxSelection = false;
+    let hasAddOption = false;
 
-    if (Util.shouldAllowFreeText(props, children)) {
-      children.push(<AddOption value={searchValue} />);
-    }
-
-    if (Util.shouldShowNoResults(props, children)) {
-      children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
-      hasNoResults = true;
+    if (searchValue && searchValue.length > 0 && Util.isMaxSelectionReached(props)) {
+      children = [(<MaxSelection value={maxSelectionCount} />)];
+      hasMaxSelection = true;
     } else {
-      hasNoResults = false;
+      children = Util.filter(props.children, props.searchValue, props.optionFilter);
+      children = Util.updateSelectionState(children, props);
+
+      if (Util.shouldAllowFreeText(props, children)) {
+        children.push(<AddOption value={searchValue} />);
+        hasAddOption = true;
+      }
+
+      if (Util.shouldShowNoResults(props, children)) {
+        children.push(<NoResults noResultContent={noResultContent} value={searchValue} />);
+        hasNoResults = true;
+      }
+
+      if (Util.shouldShowClearOption(props, hasAddOption, hasNoResults)) {
+        children.unshift(<ClearOption display={clearOptionDisplay} value="" />);
+      }
     }
 
     return {
       children,
       searchValue,
+      hasMaxSelection,
       hasNoResults,
       active: Util.getActiveOptionFromProps(props, children, state),
     };
@@ -146,6 +174,7 @@ class Menu extends React.Component {
 
     this.liveRegionTimeOut = setTimeout(() => {
       const {
+        hasMaxSelection,
         hasNoResults,
       } = this.state;
 
@@ -158,8 +187,15 @@ class Menu extends React.Component {
         intl,
       } = this.context;
 
+      // Race condition can occur between calling timeout and unmounting this component.
+      if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
+        return;
+      }
+
       if (hasNoResults && searchValue) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+      } else if (hasMaxSelection) {
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.maxSelectionOption' }, { text: this.props.maxSelectionCount });
       } else {
         visuallyHiddenComponent.current.innerText = '';
       }
@@ -217,22 +253,22 @@ class Menu extends React.Component {
     const { active, children } = this.state;
     const { onSelect, value, variant } = this.props;
 
-    if (keyCode === KeyCodes.UP_ARROW) {
+    if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findPrevious(children, active) });
-    } else if (keyCode === KeyCodes.DOWN_ARROW) {
+    } else if (keyCode === KeyCode.KEY_DOWN) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: Util.findNext(children, active) });
-    } else if (keyCode === KeyCodes.ENTER && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
+    } else if (keyCode === KeyCode.KEY_RETURN && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       onSelect(option.props.value, option);
-    } else if (keyCode === KeyCodes.HOME) {
+    } else if (keyCode === KeyCode.KEY_HOME) {
       event.preventDefault();
       this.setState({ active: Util.findFirst(children) });
-    } else if (keyCode === KeyCodes.END) {
+    } else if (keyCode === KeyCode.KEY_END) {
       event.preventDefault();
       this.setState({ active: Util.findLast(children) });
     } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {

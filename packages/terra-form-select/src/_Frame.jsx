@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import { KeyCodes, Variants } from './_constants';
+import KeyCode from 'keycode-js';
+import Variants from './_constants';
 import Dropdown from './_Dropdown';
 import Util from './_FrameUtil';
 import styles from './_Frame.module.scss';
@@ -10,6 +11,10 @@ import styles from './_Frame.module.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Text for the clear option.
+   */
+  clearOptionDisplay: PropTypes.string,
   /**
    * Whether the select is disabled.
    */
@@ -35,6 +40,11 @@ const propTypes = {
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
+  /**
+   * The maximum number of options that can be selected. A value less than 2 will be ignored.
+   * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
+   */
+  maxSelectionCount: PropTypes.number,
   /**
    * Content to display when no search results are found.
    */
@@ -84,10 +94,12 @@ const propTypes = {
 };
 
 const defaultProps = {
+  clearOptionDisplay: undefined,
   disabled: false,
   dropdown: undefined,
   dropdownAttrs: undefined,
   isInvalid: false,
+  maxSelectionCount: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   onSearch: undefined,
@@ -143,7 +155,7 @@ class Frame extends React.Component {
     this.input = input;
   }
 
-  getDisplay() {
+  getDisplay(describedbyIds) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
       disabled, display, placeholder, variant,
@@ -155,6 +167,7 @@ class Frame extends React.Component {
       ref: this.setInput,
       onChange: this.handleSearch,
       onMouseDown: this.handleInputMouseDown,
+      'aria-describedby': variant !== Variants.DEFAULT ? describedbyIds : undefined,
       'aria-label': 'search',
       'aria-disabled': disabled,
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
@@ -266,19 +279,16 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { value } = this.props;
     const { keyCode, target } = event;
-    const {
-      BACKSPACE, SPACE, UP_ARROW, DOWN_ARROW,
-    } = KeyCodes;
 
-    if (keyCode === SPACE && target !== this.input) {
+    if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
       this.openDropdown();
-    } else if (keyCode === UP_ARROW || keyCode === DOWN_ARROW) {
+    } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown();
-    } else if (keyCode === BACKSPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0) {
+    } else if (keyCode === KeyCode.KEY_BACK_SPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0) {
       this.props.onDeselect(value[value.length - 1]);
-    } else if (keyCode === KeyCodes.ESCAPE) {
+    } else if (keyCode === KeyCode.KEY_ESCAPE) {
       this.closeDropdown();
     }
   }
@@ -357,12 +367,14 @@ class Frame extends React.Component {
 
   render() {
     const {
+      clearOptionDisplay,
       disabled,
       display,
       dropdown,
       dropdownAttrs,
       isInvalid,
       maxHeight,
+      maxSelectionCount,
       noResultContent,
       onDeselect,
       onSearch,
@@ -385,10 +397,13 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
+    const ariaDescribedbyIds = customProps['aria-describedby'];
+
     return (
       <div
         {...customProps}
         role={!disabled ? 'combobox' : undefined}
+        aria-describedby={variant === Variants.DEFAULT ? ariaDescribedbyIds : undefined}
         aria-controls={!disabled && this.state.isOpen ? 'terra-select-dropdown' : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
@@ -404,7 +419,7 @@ class Frame extends React.Component {
       >
         {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus */}
         <div role="textbox" aria-disabled={!!disabled} className={cx('display')} onMouseDown={this.openDropdown}>
-          {this.getDisplay()}
+          {this.getDisplay(ariaDescribedbyIds)}
         </div>
         <div className={cx('toggle')} onMouseDown={this.toggleDropdown}>
           <span className={cx('arrow-icon')} />
@@ -433,6 +448,8 @@ class Frame extends React.Component {
                  onSelect: this.handleSelect,
                  onRequestClose: this.closeDropdown,
                  searchValue: this.state.searchValue,
+                 maxSelectionCount,
+                 clearOptionDisplay,
                })}
           </Dropdown>
           )

@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-boolean-value, import/no-extraneous-dependencies */
 import React from 'react';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
-import intlContexts from './intl-context-setup';
+import { shallowWithIntl } from 'terra-enzyme-intl';
+
 import Field from '../../src/Field';
 
 it('should render a field label', () => {
@@ -10,7 +11,7 @@ it('should render a field label', () => {
       label="Field Label"
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -21,7 +22,7 @@ it('should render an optional field label', () => {
       showOptional
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -32,7 +33,7 @@ it('should render a required field label', () => {
       required
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -44,7 +45,7 @@ it('should render a required field label with required hidden', () => {
       hideRequired
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -55,7 +56,7 @@ it('should render a field with a hidden label', () => {
       isLabelHidden
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -67,7 +68,7 @@ it('should render a required field with a hidden label', () => {
       required
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -79,7 +80,7 @@ it('should render a field error message', () => {
       error="Error Text"
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -91,7 +92,7 @@ it('should render a field help message', () => {
       help="Help Text"
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -109,7 +110,7 @@ it('should render an inline field with most of the possible props are passed int
     </Field>
   );
 
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -122,7 +123,7 @@ it('should render a field in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -136,7 +137,7 @@ it('should render an optional field in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -150,7 +151,7 @@ it('should render a required field in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -163,7 +164,7 @@ it('should render a field with a hidden label in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -178,7 +179,7 @@ it('should render a required field with a hidden label in error', () => {
       isInvalid
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -189,6 +190,6 @@ it('should render a field with a custom error icon', () => {
       errorIcon={<IconHelp />}
     />
   );
-  const wrapper = shallow(field, intlContexts.shallowContext);
+  const wrapper = shallowWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });

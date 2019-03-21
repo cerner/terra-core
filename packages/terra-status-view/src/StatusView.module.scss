@@ -23,6 +23,7 @@
     > svg {
       background-repeat: no-repeat;
       background-size: contain;
+      display: block;
       height: 100px;
       width: 100px;
     }
@@ -68,7 +69,7 @@
     flex-wrap: wrap;
     font-size: var(--terra-status-view-message-font-size, 1rem);
     padding-top: var(--terra-status-view-message-padding-top, 0.714rem);
-    text-align: var(--terra-status-view-message-text-align, center);
+    text-align: center;
     width: 100%;
   }
 

@@ -19,6 +19,17 @@ Unreleased
 * Change from dot notation for Header, HeaderCell, Cell, Row and Utils access to individual exports for Row, HeaderCell, Cell, Header, Utils, SectionHeader, SubsectionHeader, Section, and Subsection.
 * Moved accessibility logic into the TableRow.
 
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added stylelint-enable to Table.module.scss
+
 3.5.0 - (February 12, 2019)
 ------------------
 ### Changed

@@ -3,8 +3,19 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed generated table styling
+
+### Changed
+* Changed doc templates to render with HTML table instead of terra-table component
+
 ### Removed
-* Dependency on terra-table
+* Removed terra-table dependency
+
+3.4.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.3.0 - (February 12, 2019)
 ------------------

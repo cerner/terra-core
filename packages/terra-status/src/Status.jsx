@@ -14,19 +14,22 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The color of the status indicator. Accepts a CSS color value.
-   */
-  color: PropTypes.string,
-  /**
    * Visually hidden text used to convey the meaning of the status indicator to screen readers.
    */
   visuallyHiddenText: PropTypes.string,
+  /**
+   * Sets an author defined class, to control the colors of the status indicator.
+   *
+   * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/blue?icon=github)
+   * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
+   */
+  colorClass: PropTypes.string,
 };
 
 const Status = ({
-  color,
   children,
   visuallyHiddenText,
+  colorClass,
   ...customProps
 }) => {
   if ((process.env.NODE_ENV !== 'production') && (!visuallyHiddenText)) {
@@ -35,7 +38,7 @@ const Status = ({
   }
 
   return (
-    <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)}>
+    <div {...customProps} className={cx('status', colorClass, customProps.className)}>
       {visuallyHiddenText && <VisuallyHiddenText text={visuallyHiddenText} />}
       {children}
     </div>

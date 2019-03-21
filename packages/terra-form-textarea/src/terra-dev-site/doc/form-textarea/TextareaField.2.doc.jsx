@@ -8,33 +8,24 @@ import { name } from '../../../../package.json';
 import TextareaFieldSrc from '!raw-loader!../../../../src/TextareaField';
 
 // Example Files
-import TextareaField from '../../../TextareaField';
+import TextareaFieldExample from '../example/TextareaField';
+import TextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextareaField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 const DocPage = () => (
   <DocTemplate
     packageName={name}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    examples={[
-      {
-        example: (
-          <TextareaField
-            inputId="Profile Description"
-            label="Profile Description"
-            help="Every Profile Needs a Description"
-            inputAttrs={{
-              name: 'description',
-              placeholder: 'Enter a profile Description',
-            }}
-          />
-        ),
-      },
-    ]}
     propsTables={[
       {
-        componentName: 'Textarea Field',
+        componentName: 'TextareaField',
         componentSrc: TextareaFieldSrc,
+      },
+    ]}
+    examples={[
+      {
+        example: <TextareaFieldExample />,
+        source: TextareaFieldExampleSrc,
       },
     ]}
   />
