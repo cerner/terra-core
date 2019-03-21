@@ -104,43 +104,40 @@ const RadioField = (props, { intl }) => {
     legendAttrs.className,
   ]);
 
-  const ariaDescribedById = `terra-radio-field-description-${uniqueid()}`;
+  const legendAriaDescriptionId = `terra-radio-field-description-${uniqueid()}`;
+  const helpAriaDescriptionId = help ? `terra-radio-field-description-help-${uniqueid()}` : '';
+  const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
+  const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
 
   const legendGroup = (
-    <legend id={ariaDescribedById} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
-      {
-        <React.Fragment>
-          <div {...legendAttrs} className={legendClassNames}>
-            {isInvalid && <span className={cx('error-icon')} />}
-            {required && (isInvalid || !hideRequired) && <span className={cx('required')}>*</span>}
-            {legend}
-            {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
-            {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
-            {!isInvalid && <span className={cx('error-icon-hidden')} />}
-          </div>
-          <div className={cx('visually-hidden')}>
-            {isInvalid && error && <span>{error}</span>}
-            {help && <span>{help}</span>}
-          </div>
-        </React.Fragment>
-      }
+    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+      <div {...legendAttrs} className={legendClassNames}>
+        {isInvalid && <span className={cx('error-icon')} />}
+        {required && (isInvalid || !hideRequired) && <span className={cx('required')}>*</span>}
+        {legend}
+        {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
+        {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
+        {!isInvalid && <span className={cx('error-icon-hidden')} />}
+      </div>
     </legend>
   );
 
   const content = React.Children.map(children, (child) => {
     if (child.type.isRadio) {
       return React.cloneElement(child, {
-        inputAttrs: { 'aria-describedby': ariaDescribedById },
+        inputAttrs: { 'aria-describedby': ariaDescriptionIds },
       });
     }
+
+    return child;
   });
 
   return (
     <fieldset {...customProps} className={radioFieldClasses}>
       {legendGroup}
       {content}
-      {isInvalid && error && <div className={cx('error-text')}>{error}</div>}
-      {help && <div className={cx('help-text')}>{help}</div>}
+      {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}
+      {help && <div id={helpAriaDescriptionId} className={cx('help-text')}>{help}</div>}
     </fieldset>
   );
 };

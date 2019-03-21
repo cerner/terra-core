@@ -164,5 +164,6 @@ const Checkbox = ({
 
 Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;
+Checkbox.isCheckbox = true;
 
 export default Checkbox;
