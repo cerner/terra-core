@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.7.0 - (March 21, 2019)
+------------------
 ### Changed
 * Replaced local keyCode values with keycode-js npm package
 * Update Jest tests to use terra-enzyme-intl

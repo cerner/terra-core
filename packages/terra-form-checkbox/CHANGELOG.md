@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added aria-describedby to better announce legend, help text, and error text in the Radio Field component
 
+
+3.6.0 - (March 21, 2019)
+------------------
 ### Changed
 * Update Jest tests to use terra-enzyme-intl
 
