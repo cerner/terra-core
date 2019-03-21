@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added aria-describedby to better announce legend, help text, and error text in the Radio Field component
+
 ### Changed
 * Update Jest tests to use terra-enzyme-intl
 
