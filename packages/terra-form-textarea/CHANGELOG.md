@@ -3,9 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.7.0 - (March 21, 2019)
+------------------
 ### Added
 * Added logic to enable accessible mapping of TextareaField and it's related error and help text messages
-
 
 3.6.0 - (February 26, 2019)
 ------------------
