@@ -94,7 +94,6 @@ class Base extends React.Component {
         {...customProps}
         locale={this.state.locale}
         messages={messages}
-        data-terra-base
       >
         {renderChildren}
       </I18nProvider>
