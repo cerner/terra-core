@@ -174,5 +174,6 @@ const Radio = ({
 
 Radio.propTypes = propTypes;
 Radio.defaultProps = defaultProps;
+Radio.isRadio = true;
 
 export default Radio;

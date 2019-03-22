@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added aria-describedby to better announce legend, help text, and error text in the Radio Field component
+
 ### Removed
 * Removed peer dependency on terra-base
 * Removed baseStyles import from terra-base
