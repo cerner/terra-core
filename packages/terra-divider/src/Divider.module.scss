@@ -22,7 +22,7 @@
       color: var(--terra-divider-after-text-color, #000);
       content: attr(content);
       display: inline-block;
-      line-height: var(--terra-divider-after-line-height, 1.5em);
+      line-height: 1.5em;
       margin-bottom: var(--terra-divider-after-text-margin-bottom);
       margin-top: var(--terra-divider-after-text-margin-top);
       padding-left: var(--terra-divider-after-text-padding-left, 0.5em);
