@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'terra-base/lib/baseStyles';
 import TableRow from './TableRow';
 import TableSubheader from './TableSubheader';
 
