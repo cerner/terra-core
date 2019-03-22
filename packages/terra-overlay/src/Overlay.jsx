@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
 import KeyCode from 'keycode-js';
-import 'terra-base/lib/baseStyles';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
 

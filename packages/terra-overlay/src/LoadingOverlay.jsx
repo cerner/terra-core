@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import IconSpinner from 'terra-icon/lib/icon/IconSpinner';
-import 'terra-base/lib/baseStyles';
 
 import Overlay from './Overlay';
 import styles from './Overlay.module.scss';

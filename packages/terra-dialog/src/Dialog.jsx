@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import ContentContainer from 'terra-content-container';
 import styles from './Dialog.module.scss';
