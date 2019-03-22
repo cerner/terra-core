@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Import `injectIntl` and `intlShape` from react-intl instead of terra-base
+
 ### Removed
 * Removed peer dependency on terra-base
 * Removed baseStyles import from terra-base
