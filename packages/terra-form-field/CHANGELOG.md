@@ -3,12 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.5.0 - (March 21, 2019)
+------------------
 ### Added
 * Added logic to allow accessible mapping of error and help text messages when htmlFor prop is provided
 
 ### Changed
 * Update Jest tests to use terra-enzyme-intl
-
 
 3.4.0 - (February 26, 2019)
 ------------------

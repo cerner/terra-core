@@ -10,6 +10,11 @@ Unreleased
 * Removed `src/defaultTranslationsLoaders.js`
 * Removed `require.ensure` syntax for loading Intl polyfill
 
+3.4.0 - (March 21, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.3.0 - (February 26, 2019)
 ------------------
 ### Changed
