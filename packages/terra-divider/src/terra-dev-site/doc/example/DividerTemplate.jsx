@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable react/prop-types */
-class DividerTemplate extends Component {
+class DividerTemplate extends React.Component {
   render() {
     return (
       <div>
