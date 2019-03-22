@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import KeyCode from 'keycode-js';
-import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';

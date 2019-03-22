@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
-import 'terra-base/lib/baseStyles';
 import KeyCode from 'keycode-js';
 import Variants from './_constants';
 import AddOption from './_AddOption';
