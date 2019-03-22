@@ -3,8 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Breaking Changes
+* Removed StatusView.Opts export
+
+### Added
+* Added additional variants export
+
+3.7.0 - (March 21, 2019)
+------------------
 ### Changed
-* Updated status view variants object, added proptype check
+* Update Jest tests to use terra-enzyme-intl
 
 ### Fixed
 * Remove --terra-status-view-message-text-align theme variable to fix alignment within Edge browser.

@@ -9,7 +9,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         Array [
           <input
             aria-disabled="false"
-            aria-label="Search"
+            aria-label="Terra.searchField.search"
             class="form-input input"
             placeholder=""
             type="search"
@@ -25,6 +25,33 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       ],
     }
   }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   isBlock={false}
   isDisabled={false}
   minimumSearchTextLength={2}
@@ -33,10 +60,37 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
 >
   <div
     className="searchfield"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
   >
     <Input
       aria-disabled={false}
-      aria-label="Search"
+      aria-label="Terra.searchField.search"
       className="input"
       disabled={false}
       isInvalid={false}
@@ -50,7 +104,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
             Array [
               <input
                 aria-disabled="false"
-                aria-label="Search"
+                aria-label="Terra.searchField.search"
                 class="form-input input"
                 placeholder=""
                 type="search"
@@ -71,7 +125,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
     >
       <input
         aria-disabled={false}
-        aria-label="Search"
+        aria-label="Terra.searchField.search"
         className="form-input input"
         disabled={false}
         name={null}
@@ -97,13 +151,13 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       isIconOnly={true}
       isReversed={false}
       onClick={[Function]}
-      text="Submit Search"
+      text="Terra.searchField.submit-search"
       type="button"
       variant="neutral"
     >
       <button
         aria-disabled={false}
-        aria-label="Submit Search"
+        aria-label="Terra.searchField.submit-search"
         className="button neutral compact button"
         disabled={false}
         onBlur={[Function]}
@@ -163,10 +217,37 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
 exports[`Snapshots renders a basic search field 1`] = `
 <div
   className="searchfield"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <Input
     aria-disabled={false}
-    aria-label="Search"
+    aria-label="Terra.searchField.search"
     className="input"
     disabled={false}
     isInvalid={false}
@@ -192,7 +273,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Submit Search"
+    text="Terra.searchField.submit-search"
     type="button"
     variant="neutral"
   />
@@ -202,10 +283,37 @@ exports[`Snapshots renders a basic search field 1`] = `
 exports[`Snapshots renders a disabled search field with a value 1`] = `
 <div
   className="searchfield"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <Input
     aria-disabled={true}
-    aria-label="Search"
+    aria-label="Terra.searchField.search"
     className="input"
     disabled={true}
     isInvalid={false}
@@ -231,7 +339,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Submit Search"
+    text="Terra.searchField.submit-search"
     type="button"
     variant="neutral"
   />
@@ -241,10 +349,37 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
 exports[`Snapshots renders a search field that displays as a block to fill its container 1`] = `
 <div
   className="searchfield block"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <Input
     aria-disabled={false}
-    aria-label="Search"
+    aria-label="Terra.searchField.search"
     className="input"
     disabled={false}
     isInvalid={false}
@@ -270,7 +405,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Submit Search"
+    text="Terra.searchField.submit-search"
     type="button"
     variant="neutral"
   />
@@ -280,10 +415,37 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
 exports[`Snapshots renders a search field with a defaulted value 1`] = `
 <div
   className="searchfield"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <Input
     aria-disabled={false}
-    aria-label="Search"
+    aria-label="Terra.searchField.search"
     className="input"
     defaultValue="Default"
     disabled={false}
@@ -310,7 +472,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Submit Search"
+    text="Terra.searchField.submit-search"
     type="button"
     variant="neutral"
   />
@@ -320,10 +482,37 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
   className="searchfield"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <Input
     aria-disabled={false}
-    aria-label="Search"
+    aria-label="Terra.searchField.search"
     className="input"
     disabled={false}
     isInvalid={false}
@@ -349,7 +538,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Submit Search"
+    text="Terra.searchField.submit-search"
     type="button"
     variant="neutral"
   />
@@ -359,10 +548,37 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
   className="searchfield"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <Input
     aria-disabled={false}
-    aria-label="Search"
+    aria-label="Terra.searchField.search"
     className="input"
     disabled={false}
     isInvalid={false}
@@ -389,7 +605,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Submit Search"
+    text="Terra.searchField.submit-search"
     type="button"
     variant="neutral"
   />
@@ -399,6 +615,33 @@ exports[`Snapshots renders a search field with a value 1`] = `
 exports[`Snapshots renders a search field with an aria-label 1`] = `
 <div
   className="searchfield"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <Input
     aria-disabled={false}
@@ -428,7 +671,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     isIconOnly={true}
     isReversed={false}
     onClick={[Function]}
-    text="Submit Search"
+    text="Terra.searchField.submit-search"
     type="button"
     variant="neutral"
   />

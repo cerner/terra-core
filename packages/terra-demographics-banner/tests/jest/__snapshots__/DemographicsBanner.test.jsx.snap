@@ -1,19 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a blank banner wrapper 1`] = `
-<DemographicsBanner
+<DemographicsBannerDisplay
+  age="Terra.demographicsBanner.noDataProvided"
   applicationContent={null}
+  dateOfBirth="Terra.demographicsBanner.noDataProvided"
+  dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
+  dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
   deceasedDate={null}
+  deceasedDateLabel="Terra.demographicsBanner.deceased"
+  gender="Terra.demographicsBanner.noDataProvided"
   gestationalAge={null}
+  gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
+  gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={Object {}}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  personName="Terra.demographicsBanner.noDataProvided"
   photo={null}
   postMenstrualAge={null}
+  postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
+  postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
   preferredFirstName={null}
 />
 `;
 
 exports[`renders the banner wrapper with all props 1`] = `
-<DemographicsBanner
+<DemographicsBannerDisplay
   age="25 Years"
   applicationContent={
     <span
@@ -34,13 +72,45 @@ exports[`renders the banner wrapper with all props 1`] = `
     ]
   }
   dateOfBirth="May 9, 1993"
+  dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
+  dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
   deceasedDate={null}
+  deceasedDateLabel="Terra.demographicsBanner.deceased"
   gender="Male"
   gestationalAge="April 5, 2016"
+  gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
+  gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={
     Object {
       "MRN": 12343,
       "REA": "3JSDA",
+    }
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
   personName="Johnathon Doe"
@@ -53,6 +123,8 @@ exports[`renders the banner wrapper with all props 1`] = `
     />
   }
   postMenstrualAge="April 7, 2016"
+  postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
+  postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
   preferredFirstName="John"
 />
 `;
