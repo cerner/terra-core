@@ -9,7 +9,6 @@ Unreleased
 ### Added
 * Prop added to Divider to allow adding text inside divider
 * CSS variables added for theming text and divider
-* Trigger a deployment!
 
 3.4.0 - (March 21, 2019)
 ------------------
