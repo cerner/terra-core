@@ -7,19 +7,6 @@ A convenience wrapper assembling a [terra-form-select](https://github.com/cerner
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-form-select`
 
-## Usage
-
-```jsx
-import React from 'react';
-import SelectField from 'terra-form-select/lib/SelectField';
-
-<SelectField defaultValue="red" selectId="select-id" label="Select a color">
-  <SelectField.Option value="red" display="Red" key="red" />
-  <SelectField.Option value="blue" display="Blue" key="blue" />
-  <SelectField.Option value="green" display="Green" key="green" />
-</SelectField>
-```
-
 ## Component Features
 
  * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
