@@ -3,8 +3,15 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/no-unresolved */
+// Component source
+import DividerSrc from '!raw-loader!../../../Divider';
+
 // Example Files
-import Divider from '../example/DividerExample';
+import DividerExample from '../example/DividerExample';
+import DividerExampleTemplate from '!raw-loader!../example/DividerExample';
+import DividerCustomExample from '../example/DividerCustomExample';
+import DividerCustomExampleTemplate from '!raw-loader!../example/DividerCustomExample';
 
 const DocPage = () => (
   <DocTemplate
@@ -13,24 +20,20 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Dialog - Default',
-        example: (
-          <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industrys standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged.
-            </p>
-            <Divider />
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industrys standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged.
-            </p>
-          </div>
-        ),
+        title: 'Divider - Default',
+        example: <DividerExample />,
+        source: DividerExampleTemplate,
+      },
+      {
+        title: 'Divider - Custom',
+        example: <DividerCustomExample />,
+        source: DividerCustomExampleTemplate,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Divider',
+        componentSrc: DividerSrc,
       },
     ]}
   />

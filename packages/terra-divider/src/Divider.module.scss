@@ -1,16 +1,5 @@
 :local {
   .divider {
-    border-bottom-width: 0;
-    border-color: var(--terra-divider-border-color, #dedfe0);
-    border-left-width: 0;
-    border-right-width: 0;
-    border-style: solid;
-    border-top-width: var(--terra-divider-border-top-width, 1px);
-    height: 0;
-    margin: 0;
-  }
-
-  .divider-text {
     border: 0;
     height: 1.5em;
     line-height: 1em;
@@ -19,7 +8,7 @@
     text-align: center;
 
     &::before {
-      background-color: #dedfe0;
+      background-color: var(--terra-divider-before-background-color, #dedfe0);
       content: '';
       height: 1px;
       left: 0;
@@ -33,7 +22,7 @@
       color: var(--terra-divider-after-text-color, #000);
       content: attr(content);
       display: inline-block;
-      line-height: 1.5em;
+      line-height: var(--terra-divider-after-line-height, 1.5em);
       margin-bottom: var(--terra-divider-after-text-margin-bottom);
       margin-top: var(--terra-divider-after-text-margin-top);
       padding-left: var(--terra-divider-after-text-padding-left, 0.5em);

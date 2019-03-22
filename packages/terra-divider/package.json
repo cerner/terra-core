@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "prop-types": "^15.7.2",
     "terra-doc-template": "^2.6.0"
   },
   "scripts": {

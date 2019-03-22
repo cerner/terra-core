@@ -5,21 +5,23 @@ import 'terra-base/lib/baseStyles';
 import styles from './Divider.module.scss';
 
 const propTypes = {
+  /**
+  * String to be displayed in-line with divider.
+  */
   text: PropTypes.string,
 };
 
 const cx = classNames.bind(styles);
 
-const Divider = ({ ...customProps }) => {
-  const { text } = customProps;
+const Divider = (props) => {
+  const { text, ...customProps } = props;
 
   const dividerClassNames = cx([
     'divider',
-    'divider-text',
     customProps.className,
   ]);
 
-  return <div {...customProps} className={dividerClassNames} aria-hidden="true" content="Hello There" />;
+  return <div {...customProps} className={dividerClassNames} aria-hidden="true" content={text} />;
 };
 
 Divider.propTypes = propTypes;
