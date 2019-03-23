@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Breaking Changes
+* Locale prop is now required
+* Removed `injectIntl`, `intlShape`, `FormattedMessage`, `IntlProvider` exports from react-intl
+* Removed div that wrapped children passed into the base component. The base component now uses a `<React.Fragment>` wrapper around children
 
 4.4.0 - (March 21, 2019)
 ------------------

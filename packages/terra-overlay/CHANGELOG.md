@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed default rootProp value to `#root`
+
 ### Removed
 * Removed peer dependency on terra-base
 * Removed baseStyles import from terra-base
