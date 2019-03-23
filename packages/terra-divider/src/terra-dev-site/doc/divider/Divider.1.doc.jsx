@@ -9,9 +9,9 @@ import DividerSrc from '!raw-loader!../../../Divider';
 
 // Example Files
 import DividerExample from '../example/DividerExample';
-import DividerExampleTemplate from '!raw-loader!../example/DividerExample';
+import DividerExampleSrc from '!raw-loader!../example/DividerExample';
 import DividerCustomExample from '../example/DividerCustomExample';
-import DividerCustomExampleTemplate from '!raw-loader!../example/DividerCustomExample';
+import DividerCustomExampleSrc from '!raw-loader!../example/DividerCustomExample';
 
 const DocPage = () => (
   <DocTemplate
@@ -22,12 +22,12 @@ const DocPage = () => (
       {
         title: 'Divider - Default',
         example: <DividerExample />,
-        source: DividerExampleTemplate,
+        source: DividerExampleSrc,
       },
       {
         title: 'Divider - Custom',
         example: <DividerCustomExample />,
-        source: DividerCustomExampleTemplate,
+        source: DividerCustomExampleSrc,
       },
     ]}
     propsTables={[
