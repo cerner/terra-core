@@ -27,8 +27,8 @@
     "svgo": "^0.7.2"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",

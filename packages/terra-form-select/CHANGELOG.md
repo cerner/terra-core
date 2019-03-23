@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
 
 5.10.0 - (March 21, 2019)
 ------------------
