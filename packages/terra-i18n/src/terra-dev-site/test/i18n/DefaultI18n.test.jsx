@@ -36,23 +36,25 @@ class Base extends React.Component {
       return <div />;
     }
     return (
-      <I18nProvider
-        locale={this.state.locale}
-        messages={this.state.messages}
-      >
-        <label htmlFor="change-locale"> Current locale: </label>
-        <select id="change-locale" onChange={this.handleLocaleChange} value={this.state.selectedLocale}>
-          {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
-        </select>
-        <p id="translated-message">
-          <span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
-          <FormattedMessage id="Terra.ajax.error" />
-        </p>
-        {(this.state.selectedLocale).includes('zu')
-          && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the en locale as fallback.</p>}
-        {this.state.selectedLocale === 'pt-GW'
-          && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the pt locale as fallback.</p>}
-      </I18nProvider>
+      <div>
+        <I18nProvider
+          locale={this.state.locale}
+          messages={this.state.messages}
+        >
+          <label htmlFor="change-locale"> Current locale: </label>
+          <select id="change-locale" onChange={this.handleLocaleChange} value={this.state.selectedLocale}>
+            {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
+          </select>
+          <p id="translated-message">
+            <span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
+            <FormattedMessage id="Terra.ajax.error" />
+          </p>
+          {(this.state.selectedLocale).includes('zu')
+            && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the en locale as fallback.</p>}
+          {this.state.selectedLocale === 'pt-GW'
+            && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the pt locale as fallback.</p>}
+        </I18nProvider>
+      </div>
     );
   }
 }
