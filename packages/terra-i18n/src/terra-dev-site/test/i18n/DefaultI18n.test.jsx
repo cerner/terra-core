@@ -45,7 +45,7 @@ class Base extends React.Component {
           {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
         </select>
         <p id="translated-message">
-          <span> Loaded locale message: </span>
+          <span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
           <FormattedMessage id="Terra.ajax.error" />
         </p>
         {(this.state.selectedLocale).includes('zu')
