@@ -6,7 +6,7 @@ import styles from './Divider.module.scss';
 
 const propTypes = {
   /**
-  * String to be displayed in-line with divider.
+  * String to be displayed in-line with the divider.
   */
   text: PropTypes.string,
 };
