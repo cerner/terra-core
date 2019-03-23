@@ -9,9 +9,9 @@ import DividerSrc from '!raw-loader!../../../Divider';
 
 // Example Files
 import DividerExample from '../example/DividerExample';
-import DividerExampleSrc from '!raw-loader!../example/DividerExample';
+import DividerExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DividerExample';
 import DividerCustomExample from '../example/DividerCustomExample';
-import DividerCustomExampleSrc from '!raw-loader!../example/DividerCustomExample';
+import DividerCustomExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DividerCustomExample';
 
 const DocPage = () => (
   <DocTemplate
