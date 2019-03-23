@@ -8,7 +8,7 @@ it('throws error for missing required locale', () => {
   try {
     shallow(<Base customMessages={messages}>String</Base>);
   } catch (e) {
-    expect(e.message).toContain('Missing locale prop');
+    expect(e.message).toContain('The prop `locale` is marked as required in `Base`');
   }
 });
 

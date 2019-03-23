@@ -11,7 +11,7 @@ const propTypes = {
   /**
    * The locale name.
    */
-  locale: PropTypes.string,
+  locale: PropTypes.string.isRequired,
   /**
    * Customized translations provided by consuming application only for current locale.
    */
