@@ -29,10 +29,6 @@
     "classnames": "^2.2.5",
     "intl": "^1.2.5",
     "prop-types": "^15.5.8",
-<<<<<<< HEAD
-=======
-    "react-intl": "^2.8.0",
->>>>>>> master
     "terra-doc-template": "^2.6.0"
   },
   "scripts": {
