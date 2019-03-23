@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
-import 'terra-base/lib/baseStyles';
 import styles from './Status.module.scss';
 
 

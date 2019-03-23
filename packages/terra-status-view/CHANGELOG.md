@@ -9,6 +9,10 @@ Unreleased
 ### Added
 * Added additional variants export
 
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
 3.7.0 - (March 21, 2019)
 ------------------
 ### Changed

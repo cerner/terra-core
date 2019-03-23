@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import TerraImage from 'terra-image';
 import styles from './ProfileImage.module.scss';
 

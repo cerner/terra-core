@@ -22,8 +22,7 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "peerDependencies": {
     "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react-dom": "^16.4.2"
   },
   "dependencies": {
     "classnames": "^2.2.5",

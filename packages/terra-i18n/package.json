@@ -39,7 +39,7 @@
     "intl": "^1.2.5",
     "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
-    "react-intl": "^2.4.0",
+    "react-intl": "^2.8.0",
     "terra-doc-template": "^2.6.0"
   },
   "scripts": {
