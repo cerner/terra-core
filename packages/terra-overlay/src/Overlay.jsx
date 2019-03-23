@@ -61,7 +61,7 @@ const defaultProps = {
   isScrollable: false,
   isRelativeToContainer: false,
   onRequestClose: undefined,
-  rootSelector: '#root',
+  rootSelector: '[data-terra-base]',
   zIndex: '100',
 };
 

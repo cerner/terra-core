@@ -46,7 +46,7 @@ const defaultProps = {
   isOpen: false,
   backgroundStyle: BackgroundStyles.LIGHT,
   isRelativeToContainer: false,
-  rootSelector: '#root',
+  rootSelector: '[data-terra-base]',
 };
 
 const contextTypes = {
