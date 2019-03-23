@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
 
 2.36.0 - (February 26, 2019)
 ------------------

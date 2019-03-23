@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
 ### Added
 * Added aria-describedby to better announce legend, help text, and error text in the Radio Field component
 
