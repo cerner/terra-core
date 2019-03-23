@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render with stict mode when strict mode enabled 1`] = `<div />`;
+exports[`should render with strict mode when strict mode enabled 1`] = `<div />`;
 
-exports[`should support rendering a string without translation 1`] = `<div />`;
+exports[`should support rendering a string 1`] = `<div />`;
 
-exports[`should support rendering an array of children without translation 1`] = `<div />`;
+exports[`should support rendering an array of children 1`] = `<div />`;
