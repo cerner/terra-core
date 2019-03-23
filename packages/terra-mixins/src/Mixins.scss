@@ -2,6 +2,50 @@
 
 // Mixins
 // ====================================================
+/* stylelint-disable scss/at-mixin-pattern  */
+
+$default-theme: false !default;
+$bundled-themes: false !default;
+
+@mixin cerner-mock-theme {
+  @if index($bundled-themes, 'mock') {
+    @if $default-theme == 'mock' {
+      :global {
+        :root {
+          @content;
+        }
+      }
+    } @else {
+      :global {
+        .cerner-mock-theme {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin cerner-consumer-theme {
+  @if index($bundled-themes, 'consumer') {
+    @if $default-theme == 'consumer' {
+      :global {
+        :root {
+          @content;
+        }
+      }
+    } @else {
+      :global {
+        .cerner-consumer-theme {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+/* stylelint-enable scss/at-mixin-pattern  */
+
+
 // Clearfix mixin
 // Used to self clear floated child elements
 // More info: h5bp.com/q
