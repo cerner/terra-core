@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added Prismjs highlighting for code blocks
 
 2.23.0 - (March 21, 2019)
 ------------------
