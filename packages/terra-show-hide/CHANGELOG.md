@@ -5,7 +5,6 @@ Unreleased
 ----------
 ### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
-### Changed
 * Import `injectIntl` and `intlShape` from react-intl instead of terra-base
 
 ### Removed
