@@ -1,9 +1,9 @@
 import React from 'react';
 import Markdown from '../../../../lib/Markdown';
-import markdown from './Markdown.md';
+import markdown from './html.md';
 
-const MarkdownTest = () => (
+const HtmlTest = () => (
   <Markdown src={markdown} />
 );
 
-export default MarkdownTest;
+export default HtmlTest;
