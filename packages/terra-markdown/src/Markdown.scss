@@ -52,6 +52,7 @@
   }
 
   .token.tag,
+  .token.tag .token.class-name,
   .token.constant,
   .token.symbol {
     color: #218336;
