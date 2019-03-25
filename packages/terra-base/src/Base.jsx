@@ -50,9 +50,7 @@ class Base extends React.Component {
   }
 
   componentDidMount() {
-    const { locale } = this.props;
-
-    if (locale !== undefined) {
+    if (this.props.locale !== undefined) {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
@@ -63,9 +61,7 @@ class Base extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { locale } = this.props;
-
-    if (locale !== undefined && locale !== prevProps.locale) {
+    if (this.props.locale !== undefined && this.props.locale !== prevProps.locale) {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
