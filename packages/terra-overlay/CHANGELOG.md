@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Changed default rootProp value to `#root`
+* Update react/react-dom peer-dependency to latest stable minor release
 
 ### Removed
 * Removed peer dependency on terra-base
