@@ -1,15 +1,13 @@
-/* stylelint-disable selector-no-qualifying-type */
 
-:local(.terra-markdown) {
-  code[class*='language-'],
-  pre[class*='language-'] {
-    background: none;
+
+:local(.markdown) {
+  list-style: disc outside none;
+
+  .codeblock {
     color: var(--terra-markdown-blockquote-color, #24292e);
     font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
     font-size: 1em;
-    // hyphens: none;
     line-height: 1.5;
-    // tab-size: 4;
     text-align: left;
     text-shadow: 0 1px #fff;
     white-space: pre;
@@ -18,38 +16,10 @@
     word-wrap: normal;
   }
 
-  pre[class*='language-']::selection,
-  pre[class*='language-'] ::selection,
-  code[class*='language-']::selection,
-  code[class*='language-'] ::selection {
+  .codeblock::selection,
+  .codeblock ::selection {
     background: #b3d4fc;
     text-shadow: none;
-  }
-
-  @media print {
-    code[class*='language-'],
-    pre[class*='language-'] {
-      text-shadow: none;
-    }
-  }
-
-  /* Code blocks */
-  pre[class*='language-'] {
-    margin: 0.5em 0;
-    overflow: auto;
-    padding: 1em;
-  }
-
-  :not(pre) > code[class*='language-'],
-  pre[class*='language-'] {
-    background: #f5f2f0;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*='language-'] {
-    border-radius: 0.3em;
-    padding: 0.1em;
-    white-space: normal;
   }
 
   .token.comment,

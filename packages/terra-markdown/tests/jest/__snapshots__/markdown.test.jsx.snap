@@ -6,7 +6,7 @@ exports[`should render correctly 1`] = `
   src="test-file-stub"
 >
   <div
-    className="terra-markdown markdown-body"
+    className="markdown markdown-body"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<p>test-file-stub</p>
@@ -14,11 +14,6 @@ exports[`should render correctly 1`] = `
       }
     }
     dir="ltr"
-    style={
-      Object {
-        "listStyle": "disc outside none",
-      }
-    }
   />
 </Markdown>
 `;

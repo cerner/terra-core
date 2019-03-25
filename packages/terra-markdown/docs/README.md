@@ -18,7 +18,36 @@ import ReadMe from '{component}/docs/README.md';
 <Markdown id="readme" src={ReadMe} />
 ```
 
-## Examples
+## Code formatting
+Terra markdown uses prismjs to support code block highlighting.
+### Default languages
+By default terra-markdown supports:
+* markup
+* xml
+* html
+* mathml
+* svg
+* css
+* clike
+* javascript
+* js
+* diff
+* jsx
+* scss
+
+### Additional languages
+To add additional languages for code format blocks, simply inlcude the prismjs componet.
+
+If using terra-dev-site add an additional side effect import.
+```javascript
+const siteConfig = {
+  sideEffectImports: [
+      '../node_modules/prismjs/components/prism-bash',
+    ],
+}
+```
+
+## Code Formatblock Examples
 
 ### jsx
 ```jsx

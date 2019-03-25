@@ -14,20 +14,8 @@ import styles from './Markdown.scss';
 
 const cx = classNames.bind(styles);
 
-const supportedLanguages = [
-  'clike',
-  'css',
-  'diff',
-  'html',
-  'javascript',
-  'js',
-  'jsx',
-  'markup',
-  'mathml',
-  'scss',
-  'svg',
-  'xml',
-];
+// Create a list of loaded languages, remove functions that aren't actaully languages.
+const supportedLanguages = Object.keys(Prism.languages).filter(lang => !['extend', 'insertBefore', 'DFS'].includes(lang));
 
 const highlight = (code, lang) => {
   let language = lang;
@@ -41,6 +29,7 @@ const highlight = (code, lang) => {
 marked.setOptions({
   headerIds: false,
   highlight,
+  langPrefix: 'codeblock language-',
 });
 
 const propTypes = {
@@ -58,8 +47,7 @@ const defaultProps = {
 const Markdown = props => (
   <div
     dir="ltr"
-    className={`${cx(['terra-markdown'])} markdown-body`}
-    style={{ listStyle: 'disc outside none' }}
+    className={`${cx(['markdown'])} markdown-body`}
     dangerouslySetInnerHTML={{ __html: marked(props.src) }}
   />
 );

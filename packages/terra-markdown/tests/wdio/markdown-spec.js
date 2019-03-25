@@ -3,16 +3,15 @@ describe('Markdown', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.validateElement({ selector: '#root' });
   });
 
   describe('Block Quote', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.validateElement({ selector: '#root' });
     Terra.should.themeCombinationOfCustomProperties({
+      selector: '#root',
       testName: 'themed',
       properties: {
         '--terra-markdown-blockquote-color': 'red',
