@@ -53,7 +53,6 @@ describe('Markdown', () => {
 
     Terra.should.validateElement();
     Terra.should.themeCombinationOfCustomProperties({
-      selector: '#root',
       testName: 'themed',
       properties: {
         '--terra-markdown-blockquote-color': 'red',
