@@ -1,10 +1,13 @@
-
-
 :local(.markdown) {
   list-style: disc outside none;
+  margin-bottom: 1.25rem;
+
+  blockquote {
+    color: var(--terra-markdown-blockquote-color, #24292e);
+  }
 
   .codeblock {
-    color: var(--terra-markdown-blockquote-color, #24292e);
+    color: #24292e;
     font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
     font-size: 1em;
     line-height: 1.5;
@@ -45,7 +48,7 @@
   .token.variable,
   .token.script ,
   .token.tag .token.punctuation {
-    color: var(--terra-markdown-blockquote-color, #24292e);
+    color: #24292e;
   }
 
   .token.tag,

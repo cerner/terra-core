@@ -8,6 +8,9 @@ React component to display the content of markdown files.
   - `npm install terra-markdown`
   - `yarn add terra-markdown`
 
+## Test
+> This is a quote.
+
 ## Usage
 
 ```jsx

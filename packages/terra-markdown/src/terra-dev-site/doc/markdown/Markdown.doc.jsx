@@ -1,5 +1,6 @@
 import React from 'react';
-import Markdown from '../../../../lib/Markdown';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Markdown from 'terra-markdown/lib/Markdown';
 import ReadMe from '../../../../docs/README.md';
 
 // We're not using the doc template here to avoid circular dependencies.
