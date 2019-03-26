@@ -13,6 +13,8 @@ Unreleased
 * Removed div that wrapped children passed into the I18nProvider component. The I18nProvider component now uses a `<React.Fragment>` wrapper around children
 * Removed run time check for supported locales. This is provide at build time with terra-toolkits aggregate-translations script
 
+3.5.0 - (March 26, 2019)
+------------------
 ### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
 
