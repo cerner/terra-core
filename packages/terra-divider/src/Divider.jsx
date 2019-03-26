@@ -16,12 +16,15 @@ const cx = classNames.bind(styles);
 const Divider = (props) => {
   const { text, ...customProps } = props;
 
+  const dividerWithText = text ? 'divider-text' : undefined;
+  console.log(text);
   const dividerClassNames = cx([
     'divider',
+    dividerWithText,
     customProps.className,
   ]);
 
-  return <div {...customProps} className={dividerClassNames} aria-hidden="true" content={text} />;
+  return <div {...customProps} className={dividerClassNames} aria-hidden="true" data-content={text} />;
 };
 
 Divider.propTypes = propTypes;

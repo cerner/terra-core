@@ -11,8 +11,8 @@ exports[`Divider it should pass in a custom prop 1`] = `
 exports[`Divider it should pass in a string of text 1`] = `
 <div
   aria-hidden="true"
-  className="divider"
-  content="Divider Test String"
+  className="divider divider-text"
+  data-content="Divider Test String"
   id="testDivider"
 />
 `;

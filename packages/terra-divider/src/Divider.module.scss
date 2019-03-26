@@ -1,7 +1,7 @@
 :local {
   .divider {
     border: 0;
-    height: 1.5em;
+    height: 1px;
     line-height: 1em;
     outline: 0;
     position: relative;
@@ -16,11 +16,15 @@
       top: 50%;
       width: 100%;
     }
+  }
+
+  .divider-text {
+    height: 1.5em;
 
     &::after {
       background-color: #fff;
       color: var(--terra-divider-after-text-color, #000);
-      content: attr(content);
+      content: attr(data-content);
       display: inline-block;
       line-height: 1.5em;
       margin-bottom: var(--terra-divider-after-text-margin-bottom);
