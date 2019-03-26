@@ -9,6 +9,9 @@ Unreleased
 ### Added
 * Added additional variants export
 
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
 ### Removed
 * Removed peer dependency on terra-base
 * Removed baseStyles import from terra-base
@@ -19,7 +22,7 @@ Unreleased
 * Update Jest tests to use terra-enzyme-intl
 
 ### Fixed
-* Remove --terra-status-view-message-text-align theme variable to fix alignment within Edge browser.
+* Remove --ters-view-message-text-align theme variable to fix alignment within Edge browser.
 
 3.7.0 - (March 5, 2019)
 ------------------

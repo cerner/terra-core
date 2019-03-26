@@ -1,17 +1,57 @@
 describe('Markdown', () => {
-  before(() => browser.setViewportSize(Terra.viewports('large')[0]));
+  before(() => browser.setViewportSize({ width: 1000, height: 2000, name: 'large' }));
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.validateElement();
+  });
+
+  describe('css', () => {
+    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/css'));
+
+    Terra.should.validateElement();
+  });
+
+  describe('diff', () => {
+    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/diff'));
+
+    Terra.should.validateElement();
+  });
+
+  describe('html', () => {
+    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/html'));
+
+    Terra.should.validateElement();
+  });
+
+  describe('javascript', () => {
+    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/javascript'));
+
+    Terra.should.validateElement();
+  });
+
+  describe('jsx', () => {
+    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/jsx'));
+
+    Terra.should.validateElement();
+  });
+
+  describe('noformat', () => {
+    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/noformat'));
+
+    Terra.should.validateElement();
+  });
+
+  describe('scss', () => {
+    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/scss'));
+
+    Terra.should.validateElement();
   });
 
   describe('Block Quote', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.validateElement();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {

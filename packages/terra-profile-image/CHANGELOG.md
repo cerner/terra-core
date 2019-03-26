@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+* Added alt text to doc example images
+
 ### Removed
 * Removed peer dependency on terra-base
 * Removed baseStyles import from terra-base
