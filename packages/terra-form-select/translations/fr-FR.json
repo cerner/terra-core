@@ -5,5 +5,17 @@
   "Terra.form.select.maxSelectionHelp": "Limite de {text} éléments",
   "Terra.form.select.maxSelectionOption": "{text} éléments maximum sélectionnés",
   "Terra.form.select.noResults": "Aucun résultat correspondant pour \"{text}\"",
-  "Terra.form.select.selected": "{text} sélectionné"
+  "Terra.form.select.selectedText": "{text} sélectionné.",
+  "Terra.form.select.selected": "Sélectionné.",
+  "Terra.form.select.unselected": "Désélectionné.",
+  "Terra.form.select.disabled": "Désactivé.",
+  "Terra.form.select.dimmed": "Grisé.",
+  "Terra.form.select.listOfTotalOptions": "Liste de {total} options.",
+  "Terra.form.select.defaultUsageGuidance": "Utilisez les touches fléchées haut et bas pour parcourir les options. Appuyez sur Entrée pour sélectionner une option.",
+  "Terra.form.select.mobileUsageGuidance": "Balayez vers la droite pour naviguer vers les options.",
+  "Terra.form.select.mobileButtonUsageGuidance": "Appuyez pour naviguer vers les options.",
+  "Terra.form.select.multiSelectUsageGuidance": "Saisissez du texte ou utilisez les touches fléchées haut et bas pour parcourir les options. Appuyez sur Entrée pour sélectionner ou désélectionner une option.",
+  "Terra.form.select.searchUsageGuidance": "Saisissez du texte ou utilisez les touches fléchées haut et bas pour parcourir les options. Appuyez sur Entrée pour sélectionner une option.",
+  "Terra.form.select.clearSelect": "Effacer la sélection",
+  "Terra.form.select.selectCleared": "Valeur sélectionnée effacée."
 }

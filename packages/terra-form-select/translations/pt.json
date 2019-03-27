@@ -5,5 +5,17 @@
   "Terra.form.select.maxSelectionHelp": "Limite de itens de {text}.",
   "Terra.form.select.maxSelectionOption": "Número máximo de itens de {text} selecionado",
   "Terra.form.select.noResults": "Não há resultados para \"{text}\"",
-  "Terra.form.select.selected": "{text} como opção"
+  "Terra.form.select.selectedText": "{text} selecionado.",
+  "Terra.form.select.selected": "Selecionado.",
+  "Terra.form.select.unselected": "Não selecionado.",
+  "Terra.form.select.disabled": "Desativado.",
+  "Terra.form.select.dimmed": "Esmaecido.",
+  "Terra.form.select.listOfTotalOptions": "Lista de {total} opções.",
+  "Terra.form.select.defaultUsageGuidance": "Use as teclas de seta para cima e para baixo para navegar pelas opções. Pressione Enter para selecionar uma opção.",
+  "Terra.form.select.mobileUsageGuidance": "Deslize para a direita para acessar as opções.",
+  "Terra.form.select.mobileButtonUsageGuidance": "Toque a tela para navegar para as opções.",
+  "Terra.form.select.multiSelectUsageGuidance": "Insira o texto ou use as teclas de seta para cima e para baixo para navegar pelas opções. Pressione Enter para selecionar ou cancelar a seleção de uma opção.",
+  "Terra.form.select.searchUsageGuidance": "Insira o texto ou use as teclas de seta para cima e para baixo para navegar pelas opções. Pressione Enter para selecionar uma opção.",
+  "Terra.form.select.clearSelect": "Limpar seleção",
+  "Terra.form.select.selectCleared": "Selecionar valor limpo"
 }

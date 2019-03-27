@@ -5,5 +5,17 @@
   "Terra.form.select.maxSelectionHelp": "{text} Elemente begrenzen.",
   "Terra.form.select.maxSelectionOption": "Maximale Anzahl an ausgewählten {text} Elementen",
   "Terra.form.select.noResults": "Keine Übereinstimmungen für \"{text}\"",
-  "Terra.form.select.selected": "Ausgewählt: {text}"
+  "Terra.form.select.selectedText": "Ausgewählt: {text}",
+  "Terra.form.select.selected": "Ausgewählt",
+  "Terra.form.select.unselected": "Nicht ausgewählt",
+  "Terra.form.select.disabled": "Deaktiviert",
+  "Terra.form.select.dimmed": "Gedimmt",
+  "Terra.form.select.listOfTotalOptions": "Liste von {total} Optionen",
+  "Terra.form.select.defaultUsageGuidance": "Verwenden Sie die Pfeiltasten, um durch die Optionen zu navigieren. Drücken Sie die Eingabetaste, um eine Option auszuwählen.",
+  "Terra.form.select.mobileUsageGuidance": "Nach rechts wischen, um zu Optionen zu navigieren",
+  "Terra.form.select.mobileButtonUsageGuidance": "Klicken, um zu Optionen zu navigieren",
+  "Terra.form.select.multiSelectUsageGuidance": "Geben Sie Text ein oder verwenden Sie die Pfeiltasten, um durch die Optionen zu navigieren. Drücken Sie die Eingabetaste, um eine Option auszuwählen oder die Auswahl aufzuheben.",
+  "Terra.form.select.searchUsageGuidance": "Geben Sie Text ein oder verwenden Sie die Pfeiltasten, um durch die Optionen zu navigieren. Drücken Sie die Eingabetaste, um eine Option auszuwählen.",
+  "Terra.form.select.clearSelect": "Ausgewählte entfernen",
+  "Terra.form.select.selectCleared": "Ausgewählter Wert wurde entfernt"
 }
