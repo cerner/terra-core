@@ -26,7 +26,7 @@ const ImageDefault = () => (
     {/* eslint-disable-next-line react/jsx-no-duplicate-props */}
     <Image src="/mock/failure/route" alt="invalid src attribute image" placeholder={<Image src={placeholderPic1000x200} />} alt="placeholder image" />
     <h3>Valid src prop (src will show)</h3>
-    <Image src={placeholderPic150x150} placeholder={<Image src={placeholderPic1000x200} alt="src image"/>} />
+    <Image src={placeholderPic150x150} placeholder={<Image src={placeholderPic1000x200} alt="src image" />} />
   </div>
 );
 
