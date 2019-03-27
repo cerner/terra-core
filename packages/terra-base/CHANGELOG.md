@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+5.0.0 - (March 27, 2019)
+------------------
 ### Breaking Changes
 * Locale prop is now required
 * This package no longer provides the `injectIntl`, `intlShape`, `FormattedMessage`, `IntlProvider` exports from react-intl
