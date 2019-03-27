@@ -1,4 +1,5 @@
-const i18nSupportedLocales = require('../../src/i18nSupportedLocales');
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+const i18nSupportedLocales = require('terra-toolkit/scripts/aggregate-translations/i18nSupportedLocales');
 
 // Add Portuguese-Guinea-Bissau, Zulu & Zulu-South African locales as test locales (supported by intl)
 const testLocales = i18nSupportedLocales.concat(['pt-GW', 'zu', 'zu-ZA']);

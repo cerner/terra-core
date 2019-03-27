@@ -1,5 +1,5 @@
 /* globals spyOn */
-/* eslint-disable import/no-extraneous-dependencies, no-console */
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, no-console */
 import translationsLoaders from 'translationsLoaders';
 import loadTranslations from '../../src/translationsLoaders';
 

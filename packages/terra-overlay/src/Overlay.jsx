@@ -43,7 +43,7 @@ const propTypes = {
   */
   isRelativeToContainer: PropTypes.bool,
   /**
-   * Allows assigning of root element custom data attribute for easy selecting.
+   * Used to select the root mount DOM node. This is used to help prevent focus from shifting outside of the overlay when it is opened in a portal.
    */
   rootSelector: PropTypes.string,
   /**
@@ -61,7 +61,7 @@ const defaultProps = {
   isScrollable: false,
   isRelativeToContainer: false,
   onRequestClose: undefined,
-  rootSelector: '[data-terra-base]',
+  rootSelector: '#root',
   zIndex: '100',
 };
 
