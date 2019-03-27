@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
-import 'terra-base/lib/baseStyles';
 import KeyCode from 'keycode-js';
 import Variants from './_constants';
 import Dropdown from './_Dropdown';

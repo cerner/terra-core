@@ -3,8 +3,30 @@ Changelog
 
 Unreleased
 ----------
+
+3.8.1 - (March 27, 2019)
+------------------
+### Changed
+* Changed default rootProp value to `#root`
+
+3.8.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+3.7.0 - (March 21, 2019)
+------------------
+### Added
+* Added overlay prop to OverlayContainer to separate overlay from container-content
+* Added condition in overlay setNode method to prevent screen reader from reading container-content
+
 ### Changed
 * Replaced local keyCode values with keycode-js npm package
+* Update Jest tests to use terra-enzyme-intl
 
 3.6.0 - (February 26, 2019)
 ------------------

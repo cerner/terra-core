@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* eslint-disable no-console, import/no-unresolved */
 import i18nLoader from '../../src/i18nLoader';
 
 global.console = { warn: jest.fn() };
@@ -9,12 +9,6 @@ describe('i18nLoader', () => {
   });
 
   describe('permitParams', () => {
-    it('logs a warning message when locale is not supported', () => {
-      expect(() => i18nLoader('cy', jest.fn())).toThrowError();
-
-      expect(console.warn).toBeCalledWith(expect.stringContaining('cy is not a supported locale, supported locales include:'));
-    });
-
     it('throws error when callback is not function', () => {
       const invalidCallback = () => i18nLoader('en');
 

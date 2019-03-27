@@ -24,23 +24,20 @@ class TextareaFieldExample extends React.Component {
       <div>
         <button type="button" id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <TextareaField
-          inputId="test-input"
           defaultValue="Value"
-          error="Text"
-          help="Help"
+          inputId="test-input"
+          error="Error message."
+          help="Help message."
           hideRequired
           inputAttrs={{
             name: 'test',
-            type: 'number',
           }}
           isInvalid={this.state.isInvalid}
           label="Label Text"
           labelAttrs={{
             className: 'label',
           }}
-          onChange={() => {}}
           showOptional
-          value="Value"
         />
       </div>
     );

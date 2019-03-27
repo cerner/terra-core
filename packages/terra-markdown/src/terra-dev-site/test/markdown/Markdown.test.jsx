@@ -1,11 +1,9 @@
 import React from 'react';
 import Markdown from '../../../../lib/Markdown';
-
-const markdownSrc = `### Test
-> This is a quote.`;
+import markdown from './Markdown.md';
 
 const MarkdownTest = () => (
-  <Markdown src={markdownSrc} />
+  <Markdown src={markdown} />
 );
 
 export default MarkdownTest;

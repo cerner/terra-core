@@ -1,5 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Menu should render a Menu with no results and update the live region appropriately 1`] = `
+<Menu
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onSelect={[Function]}
+  searchValue="asdf"
+  value="value"
+  variant="default"
+  visuallyHiddenComponent={
+    Object {
+      "current": <div />,
+    }
+  }
+>
+  <Option
+    disabled={false}
+    display="display"
+    value="value"
+  />
+</Menu>
+`;
+
 exports[`Menu should render a Menu with the clear option 1`] = `
 <Menu
   clearOptionDisplay="-Select-"
@@ -22,28 +69,8 @@ exports[`Menu should render a Menu with the clear option 1`] = `
         "getPluralFormat": [Function],
         "getRelativeFormat": [Function],
       },
-      "locale": "en-US",
-      "messages": Object {
-        "Terra.form.select.add": "Add \\"{text}\\"",
-        "Terra.form.select.ariaLabel": "Search",
-        "Terra.form.select.clearSelect": "Clear select",
-        "Terra.form.select.defaultDisplay": "- Select -",
-        "Terra.form.select.defaultUsageGuidance": "Use up and down arrow keys to navigate through options. Press enter to select an option.",
-        "Terra.form.select.dimmed": "Dimmed.",
-        "Terra.form.select.disabled": "Disabled.",
-        "Terra.form.select.listOfTotalOptions": "List of {total} options.",
-        "Terra.form.select.maxSelectionHelp": "Limit {text} items.",
-        "Terra.form.select.maxSelectionOption": "Maximum number of {text} items selected",
-        "Terra.form.select.mobileButtonUsageGuidance": "Tap to navigate to options.",
-        "Terra.form.select.mobileUsageGuidance": "Swipe right to navigate to options.",
-        "Terra.form.select.multiSelectUsageGuidance": "Enter text or use up and down arrow keys to navigate through options. Press enter to select or unselect an option.",
-        "Terra.form.select.noResults": "No matching results for \\"{text}\\"",
-        "Terra.form.select.searchUsageGuidance": "Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.",
-        "Terra.form.select.selectCleared": "Select value cleared",
-        "Terra.form.select.selected": "Selected.",
-        "Terra.form.select.selectedText": "{text} Selected.",
-        "Terra.form.select.unselected": "Unselected.",
-      },
+      "locale": "en",
+      "messages": null,
       "now": [Function],
       "onError": [Function],
       "textComponent": "span",
@@ -68,16 +95,41 @@ exports[`Menu should render a Menu with the clear option 1`] = `
 `;
 
 exports[`Menu should render a default Menu 1`] = `
-<ul
-  class="menu"
-  id="terra-select-menu"
-  role="listbox"
-  tabindex="0"
->
-  <div
-    class="no-results"
-  >
-    No matching results for ""
-  </div>
-</ul>
+<Menu
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onSelect={[Function]}
+  value="value"
+  variant="default"
+  visuallyHiddenComponent={
+    Object {
+      "current": <div />,
+    }
+  }
+/>
 `;

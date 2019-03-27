@@ -3,8 +3,30 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.11.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+5.10.0 - (March 21, 2019)
+------------------
+### Fixed
+* Checked for undefined and null for defaultValue
+* Fixed passed in onClick event not firing depending on click position on terra-form-select
+
+### Added
+* Added new translation strings
+* Added logic to enable accessible mapping of InputField and it's related error and help text messages
+* Added new EN translation strings
+
 ### Changed
 * Replaced local keyCode values with keycode-js npm package
+* Update Jest tests to use terra-enzyme-intl
 
 5.9.0 - (March 6th, 2019)
 ------------------

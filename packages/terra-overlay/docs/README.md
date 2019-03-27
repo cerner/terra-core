@@ -1,7 +1,7 @@
 # Terra Overlay
 The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.
 
-When creating as an overlay relative to its container, place the overlay component and the element(s) which should be blocked within the Overlay Container wrapper subcomponent.
+When creating as an overlay relative to its container, place the overlay component within the overlay wrapper and the element(s) which should be hidden by overlay within the content(children) wrapper of Overlay Container subcomponent.
 
 A Loading Overlay is a specialized Overlay subcomponent that displays an overlay with a spinner icon and loading message.
 
@@ -35,12 +35,17 @@ class OverlayExample extends React.Component {
     this.setState({ show: false });
   }
 
+  addOverlay() {
+    return (
+      <Overlay isOpen={this.state.show} isRelativeToContainer onRequestClose={this.handleOnRequestESC}>
+        <p>Close by clicking the overlay or pressing the ESC key.</p>
+      </Overlay>
+    );
+  }
+
   render() {
     return (
-      <OverlayContainer style={{ height: '100px', width: '100%' }} >
-        <Overlay isOpen={this.state.show} isRelativeToContainer onRequestClose={this.handleOnRequestESC}>
-          <p>Close by clicking the overlay or pressing the ESC key.</p>
-        </Overlay>
+      <OverlayContainer style={{ height: '100px', width: '100%' }} overlay={this.addOverlay()}>'
         <Button onClick={this.handleTriggerOverlay} text="Trigger Overlay" />
       </OverlayContainer>
     );
@@ -55,6 +60,7 @@ export default OverlayExample;
 import React from 'react';
 import Button from 'terra-button';
 import LoadingOverlay from 'terra-overlay/lib/LoadingOverlay';
+import OverlayContainer from 'terra-overlay/lib/OverlayContainer';
 
 class LoadingOverlayExample extends React.Component {
   constructor() {
@@ -70,13 +76,16 @@ class LoadingOverlayExample extends React.Component {
       this.setState({ show: false });
     }, 5000);
   }
+ 
+  addLoadingOverlay() {
+    <LoadingOverlay isOpen={this.state.show} isAnimated />
+  }
 
   render() {
     return (
-      <div>
-        <LoadingOverlay isOpen={this.state.show} isAnimated />
+      <OverlayContainer overlay={this.addLoadingOverlay()}>
         <Button onClick={this.handleTriggerOverlay} text="Trigger Loading Overlay" />
-      </div>
+      </OverlayContainer>
     );
   }
 }

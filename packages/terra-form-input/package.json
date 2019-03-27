@@ -1,7 +1,7 @@
 {
   "name": "terra-form-input",
   "main": "lib/Input.js",
-  "version": "2.6.0",
+  "version": "2.8.0",
   "description": "Element for building out inputs in a form.",
   "repository": {
     "type": "git",
@@ -21,16 +21,15 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.5.0",
-    "terra-form-field": "^3.4.0",
-    "terra-icon": "^3.4.0"
+    "terra-doc-template": "^2.7.0",
+    "terra-form-field": "^3.6.0",
+    "terra-icon": "^3.6.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

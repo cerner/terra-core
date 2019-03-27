@@ -3,7 +3,7 @@ import React from 'react';
 import SelectField from 'terra-form-select/lib/SelectField';
 
 const MaxSelectionExample = () => (
-  <SelectField help="Shades of blue and green." label="Colors" maxSelectionCount={3} placeholder="Select a size" selectId="select-field" variant="multiple" style={{ maxWidth: '300px' }}>
+  <SelectField help="Shades of blue and green." label="Colors" maxSelectionCount={3} placeholder="Select a size" selectId="max-selection-field" variant="multiple" style={{ maxWidth: '300px' }}>
     <SelectField.OptGroup label="Shades of Blue">
       <SelectField.Option value="blue" display="Blue" />
       <SelectField.Option value="cyan" display="Cyan" />

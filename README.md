@@ -149,12 +149,15 @@ Please review [Terra's Internationalization documentation](https://engineering.c
 - [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert)
 - [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner)
 - [terra-dialog](https://github.com/cerner/terra-core/tree/master/packages/terra-dialog)
+- [terra-form-checkbox](https://github.com/cerner/terra-core/tree/master/packages/terra-form-checkbox)
 - [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field)
+- [terra-form-radio](https://github.com/cerner/terra-core/tree/master/packages/terra-form-radio)
 - [terra-form-select](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
+- [terra-i18n](https://github.com/cerner/terra-core/tree/master/packages/terra-form-i18n)
 - [terra-overlay](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay)
 - [terra-search-field](https://github.com/cerner/terra-core/tree/master/packages/terra-search-field)
+- [terra-show-hide](https://github.com/cerner/terra-core/tree/master/packages/terra-show-hide)
 - [terra-status-view](https://github.com/cerner/terra-core/tree/master/packages/terra-status-view)
-- [terra-tabs](https://github.com/cerner/terra-core/tree/master/packages/terra-tabs)
 
 <h2 id="contributing">
   Contributing

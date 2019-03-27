@@ -4,6 +4,20 @@ Changelog
 Unreleased
 ----------
 
+2.9.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+2.8.0 - (March 21, 2019)
+------------------
+### Changed
+* Removed terra-form-select dependency
+
 2.7.0 - (March 6, 2019)
 ------------------
 ### Changed

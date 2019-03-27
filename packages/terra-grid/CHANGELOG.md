@@ -4,6 +4,20 @@ Changelog
 Unreleased
 ----------
 
+5.7.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+5.6.0 - (March 21, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.5.0 - (February 26, 2019)
 ------------------
 ### Changed

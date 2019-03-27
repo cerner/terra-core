@@ -1,7 +1,7 @@
 {
   "name": "terra-grid",
   "main": "lib/Grid.js",
-  "version": "5.5.0",
+  "version": "5.7.0",
   "description": "The grid component provides a flexbox based grid system.",
   "repository": {
     "type": "git",
@@ -32,13 +32,12 @@
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.5.0"
+    "terra-doc-template": "^2.7.0"
   }
 }
