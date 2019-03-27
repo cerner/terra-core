@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import BlockActionFooter from './BlockActionFooter';
 import styles from './ActionFooter.module.scss';
 

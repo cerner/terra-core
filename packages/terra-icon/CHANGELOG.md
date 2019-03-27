@@ -4,6 +4,23 @@ Changelog
 Unreleased
 ----------
 
+3.6.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+3.5.0 - (March 21, 2019)
+------------------
+### Changed
+* Changed doc templates to render with HTML table instead of terra-table component
+
+### Removed
+* Removed terra-table dependency
+
 3.4.0 - (February 26, 2019)
 ------------------
 ### Changed

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import ListUtils from './ListUtils';
 import styles from './ListSubsectionHeader.module.scss';
 

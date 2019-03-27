@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
-import { injectIntl, intlShape } from 'terra-base';
+import { injectIntl, intlShape } from 'react-intl';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
 

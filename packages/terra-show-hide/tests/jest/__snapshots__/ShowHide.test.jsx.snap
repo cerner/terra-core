@@ -1,165 +1,1815 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ShowHide should render a center-aligned button show-hide component 1`] = `
-<div>
-  <p>
-    Test
-  </p>
-  <div
-    aria-hidden={true}
-    className="toggle"
-  />
-  <div
-    className="show-hide"
+exports[`ShowHide should append data passed in with attributes 1`] = `
+<InjectIntl(ShowHide)
+  data-terra-text-mock="MockData"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    data-terra-text-mock="MockData"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
   >
-    <button
-      aria-expanded={false}
-      className="button show-hide button center"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      type="button"
+    <div
+      data-terra-text-mock="MockData"
     >
-      <span
-        className="inner"
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
       >
-        <span
-          className="text"
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
         >
-          Show More
-        </span>
-        <span
-          className="icon-holder"
+          <button
+            aria-expanded={false}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should append styles passed in with attributes 1`] = `
+<InjectIntl(ShowHide)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+  style={
+    Object {
+      "height": "100px",
+    }
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+    style={
+      Object {
+        "height": "100px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": "100px",
+        }
+      }
+    >
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
+      >
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
         >
-          <span
-            className="icon"
-          />
-        </span>
-      </span>
-    </button>
-  </div>
-</div>
+          <button
+            aria-expanded={false}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should merge classes passed in with attributes 1`] = `
+<InjectIntl(ShowHide)
+  className="TestClass"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    className="TestClass"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <div
+      className="TestClass"
+    >
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
+      >
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start TestClass"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
+        >
+          <button
+            aria-expanded={false}
+            className="button show-hide button start TestClass"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should merge ids passed in with attributes 1`] = `
+<InjectIntl(ShowHide)
+  id="TestId"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    id="TestId"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <div
+      id="TestId"
+    >
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
+      >
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
+        >
+          <button
+            aria-expanded={false}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should render a center-aligned button show-hide component 1`] = `
+<InjectIntl(ShowHide)
+  buttonAlign="center"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="center"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <div>
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
+      >
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button center"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
+        >
+          <button
+            aria-expanded={false}
+            className="button show-hide button center"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
 `;
 
 exports[`ShowHide should render a default show-hide component 1`] = `
-<div>
-  <p>
-    Test
-  </p>
-  <div
-    aria-hidden={true}
-    className="toggle"
-  />
-  <div
-    className="show-hide"
+<InjectIntl(ShowHide)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
   >
-    <button
-      aria-expanded={false}
-      className="button show-hide button start"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      type="button"
-    >
-      <span
-        className="inner"
+    <div>
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
       >
-        <span
-          className="text"
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
         >
-          Show More
-        </span>
-        <span
-          className="icon-holder"
-        >
-          <span
-            className="icon"
-          />
-        </span>
-      </span>
-    </button>
-  </div>
-</div>
+          <button
+            aria-expanded={false}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
 `;
 
 exports[`ShowHide should render a no preview show-hide component 1`] = `
-<div>
-  <div
-    aria-hidden={true}
-    className="toggle"
-  />
-  <div
-    className="show-hide"
+<InjectIntl(ShowHide)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+>
+  <ShowHide
+    buttonAlign="start"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
   >
-    <button
-      aria-expanded={false}
-      className="button show-hide button start"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      type="button"
-    >
-      <span
-        className="inner"
+    <div>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
       >
-        <span
-          className="text"
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
         >
-          Show More
-        </span>
-        <span
-          className="icon-holder"
-        >
-          <span
-            className="icon"
-          />
-        </span>
-      </span>
-    </button>
-  </div>
-</div>
+          <button
+            aria-expanded={false}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
 `;
 
 exports[`ShowHide should render an initially open show-hide component 1`] = `
-<div>
-  <div
-    aria-hidden={false}
-    className="toggle"
+<InjectIntl(ShowHide)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isOpen={true}
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={true}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
   >
-    Full Text
-  </div>
-  <div
-    className="show-hide"
-  >
-    <button
-      aria-expanded={true}
-      className="button show-hide button start"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      type="button"
-    >
-      <span
-        className="inner"
+    <div>
+      <Toggle
+        isAnimated={false}
+        isOpen={true}
       >
-        <span
-          className="text"
+        <div
+          aria-hidden={false}
+          className="toggle"
         >
-          Hide
-        </span>
-        <span
-          className="icon-holder"
+          Full Text
+        </div>
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={true}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.hide"
         >
-          <span
-            className="icon"
-          />
-        </span>
-      </span>
-    </button>
-  </div>
-</div>
+          <button
+            aria-expanded={true}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.hide
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] = `
+<InjectIntl(ShowHide)
+  buttonText="Collapsed Text"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isOpen={false}
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    buttonText="Collapsed Text"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <div>
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
+      >
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Collapsed Text"
+        >
+          <button
+            aria-expanded={false}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Collapsed Text
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] = `
+<InjectIntl(ShowHide)
+  buttonText="Expanded Text"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isOpen={true}
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    buttonText="Expanded Text"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={true}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <div>
+      <Toggle
+        isAnimated={false}
+        isOpen={true}
+      >
+        <div
+          aria-hidden={false}
+          className="toggle"
+        >
+          Full Text
+        </div>
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={true}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Expanded Text"
+        >
+          <button
+            aria-expanded={true}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Expanded Text
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should set children prop correctly 1`] = `
+<InjectIntl(ShowHide)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <div>
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
+      >
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
+        >
+          <button
+            aria-expanded={false}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should set isOpen prop correctly 1`] = `
+<InjectIntl(ShowHide)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isOpen={true}
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={true}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <div>
+      <Toggle
+        isAnimated={false}
+        isOpen={true}
+      >
+        <div
+          aria-hidden={false}
+          className="toggle"
+        >
+          Full Text
+        </div>
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={true}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.hide"
+        >
+          <button
+            aria-expanded={true}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.hide
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should set preview prop correctly 1`] = `
+<InjectIntl(ShowHide)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Preview Text
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="start"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Preview Text
+      </p>
+    }
+  >
+    <div>
+      <p>
+        Preview Text
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
+      >
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button start"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
+        >
+          <button
+            aria-expanded={false}
+            className="button show-hide button start"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
+`;
+
+exports[`ShowHide should set the button to align right 1`] = `
+<InjectIntl(ShowHide)
+  buttonAlign="end"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[Function]}
+  preview={
+    <p>
+      Test
+    </p>
+  }
+>
+  <ShowHide
+    buttonAlign="end"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isOpen={false}
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <div>
+      <p>
+        Test
+      </p>
+      <Toggle
+        isAnimated={false}
+        isOpen={false}
+      >
+        <div
+          aria-hidden={true}
+          className="toggle"
+        />
+      </Toggle>
+      <div
+        className="show-hide"
+      >
+        <Button
+          aria-expanded={false}
+          className="show-hide button end"
+          onClick={[Function]}
+          text="Terra.showhide.showmore"
+        >
+          <button
+            aria-expanded={false}
+            className="button show-hide button end"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="inner"
+            >
+              <span
+                className="text"
+              >
+                Terra.showhide.showmore
+              </span>
+              <span
+                className="icon-holder"
+              >
+                <span
+                  className="icon"
+                />
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </ShowHide>
+</InjectIntl(ShowHide)>
 `;
