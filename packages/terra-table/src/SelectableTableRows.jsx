@@ -39,8 +39,6 @@ const defaultProps = {
   selectedIndexes: [],
 };
 
-const rowsSelector = 'row-group';
-
 class SelectableTableRows extends React.Component {
   constructor(props) {
     super(props);
@@ -48,21 +46,6 @@ class SelectableTableRows extends React.Component {
     this.handleOnBlur = this.handleOnBlur.bind(this);
   }
 
-
-  componentDidMount() {
-    // Adds ARIA-Label for Pre-selected rows
-    const rowGroup = document.querySelector(`#${rowsSelector}`);
-    for (let rowIndex = 0; rowIndex < rowGroup.children.length; rowIndex += 1) {
-      const preselectedRow = rowGroup.children[rowIndex];
-      let ariaLabel = 'pre-selected row';
-      if ((preselectedRow.hasAttribute('aria-selected')) && (preselectedRow.getAttributeNode('aria-selected').value === 'true')) {
-        for (let columnIndex = 0; columnIndex < preselectedRow.children.length; columnIndex += 1) {
-          ariaLabel += ` ${preselectedRow.children[columnIndex].innerText}`;
-        }
-        rowGroup.children[rowIndex].setAttribute('aria-label', ariaLabel);
-      }
-    }
-  }
 
   handleOnChange(event, index) {
     if (this.props.onChange) {
@@ -90,11 +73,11 @@ class SelectableTableRows extends React.Component {
         this.handleOnBlur(event, index);
       }
 
-      const rowGroup = document.querySelector(`#${rowsSelector}`);
-      const previousRow = rowGroup.children[index];
-      if (previousRow.getAttributeNode('aria-selected').value === 'false') {
-        if (previousRow.hasAttribute('aria-label')) {
-          previousRow.removeAttribute('aria-label');
+      const rowGroup = document.querySelector('[data-terra-row-group]');
+      const selectedRow = rowGroup.children[index];
+      if (!selectedRow.getAttribute('aria-selected')) {
+        if (selectedRow.hasAttribute('aria-label')) {
+          selectedRow.removeAttribute('aria-label');
         }
       }
 
@@ -173,6 +156,15 @@ class SelectableTableRows extends React.Component {
         const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
         const wrappedOnBlur = this.wrappedOnBlur(row, index);
         const newProps = this.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown, wrappedOnBlur);
+        if (newProps.isSelected) {
+          let ariaLabel = 'pre-selected row';
+          const cells = row.props.children;
+          for (let columnIndex = 0; columnIndex < cells.length; columnIndex += 1) {
+            ariaLabel += ` ${cells[columnIndex].props.content}`;
+          }
+          return React.cloneElement(row, { ...newProps, 'aria-label': `${ariaLabel}` });
+        }
+
         return React.cloneElement(row, newProps);
       }
       return row;
@@ -186,7 +178,7 @@ class SelectableTableRows extends React.Component {
     const clonedChildItems = this.clonedChildItems(children);
 
     return (
-      <TableRows id={rowsSelector} {...customProps}>
+      <TableRows data-terra-row-group {...customProps}>
         {clonedChildItems}
       </TableRows>
     );
