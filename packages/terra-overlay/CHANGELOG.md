@@ -7,6 +7,7 @@ Unreleased
 3.8.0 - (March 26, 2019)
 ------------------
 ### Changed
+* Changed default rootProp value to `#root`
 * Update react/react-dom peer-dependency to latest stable minor release
 
 ### Removed

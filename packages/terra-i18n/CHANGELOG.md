@@ -3,6 +3,15 @@ Changelog
 
 Unreleased
 ----------
+### Breaking Changes
+* Removed post-install script which wrote default loaders
+* Removed aggregate-translations pre-build tool
+* Removed `src/defaultIntlLoaders.js`
+* Removed `src/defaultTranslationsLoaders.js`
+* Removed `require.ensure` syntax for loading Intl polyfill
+* Removed `injectIntl`, `intlShape`, `FormattedMessage`, `IntlProvider` exports from react-intl
+* Removed div that wrapped children passed into the I18nProvider component. The I18nProvider component now uses a `<React.Fragment>` wrapper around children
+* Removed run time check for supported locales. This is provide at build time with terra-toolkits aggregate-translations script
 
 3.5.0 - (March 26, 2019)
 ------------------
