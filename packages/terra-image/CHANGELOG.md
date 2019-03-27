@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed alt text in invalid src prop example
 
 3.5.0 - (March 26, 2019)
 ------------------
