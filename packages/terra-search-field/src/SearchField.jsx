@@ -13,6 +13,7 @@ const cx = classNames.bind(styles);
 
 const Icon = <IconSearch />;
 const Cancel = <IconClose />;
+let currentlyFocusedInput;
 
 const propTypes = {
   /**
@@ -128,9 +129,14 @@ class SearchField extends React.Component {
 
   handleCancel() {
     this.setState({ searchText: '' });
+    currentlyFocusedInput.focus();
   }
 
   handleTextChange(event) {
+    if (currentlyFocusedInput !== event.currentTarget) {
+      currentlyFocusedInput = event.currentTarget;
+    }
+
     const textValue = event.target.value;
     this.updateSearchText(textValue);
 
@@ -152,6 +158,9 @@ class SearchField extends React.Component {
   handleKeyDown(event) {
     if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
       this.handleSearch();
+    }
+    if (event.nativeEvent.keyCode === KeyCode.KEY_ESCAPE) {
+      this.handleCancel();
     }
   }
 
@@ -192,6 +201,12 @@ class SearchField extends React.Component {
       ...customProps
     } = this.props;
 
+    const cancelButtonVisible = this.state.searchText ? 'input-cancel' : undefined;
+    const inputClassNames = cx([
+      'input',
+      cancelButtonVisible,
+    ]);
+
     const searchFieldClassNames = cx([
       'searchfield',
       { block: isBlock },
@@ -206,7 +221,7 @@ class SearchField extends React.Component {
       <div {...customProps} className={searchFieldClassNames}>
         <Input
           defaultValue={defaultValue}
-          className={cx('input')}
+          className={inputClassNames}
           type="search"
           placeholder={placeholder}
           onChange={this.handleTextChange}
