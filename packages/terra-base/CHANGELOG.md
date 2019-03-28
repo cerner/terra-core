@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed placehold.it image src that was used in docs/tests
 
 5.0.0 - (March 27, 2019)
 ------------------
