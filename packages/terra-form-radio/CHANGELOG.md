@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Adding a null check to the child components to avoid a crash
+* Adding a validation of falsey values to the child components to avoid a crash
 
 3.8.0 - (March 26, 2019)
 ------------------
