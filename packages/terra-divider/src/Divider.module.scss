@@ -25,8 +25,14 @@
   }
 
   .divider-text {
-    box-sizing: content-box;
+    color: var(--terra-divider-text-color, #4e5558);
     flex-grow: 0;
+    font-size: var(--terra-divider-text-font-size, 0.9285714286rem);
+    font-style: var(--terra-divider-text-font-style, normal);
+    font-weight: var(--terra-divider-text-font-weight, bold);
+    line-height: var(--terra-divider-text-line-height, 1.231);
+    padding-left: var(--terra-divider-text-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-divider-text-padding-right, 0.7142857143rem);
     text-align: center;
   }
 }
