@@ -9,6 +9,7 @@ it('should render a field label', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
     />
   );
   const wrapper = shallowWithIntl(field);
@@ -19,6 +20,7 @@ it('should render an optional field label', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       showOptional
     />
   );
@@ -30,6 +32,7 @@ it('should render a required field label', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       required
     />
   );
@@ -41,6 +44,7 @@ it('should render a required field label with required hidden', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       required
       hideRequired
     />
@@ -53,6 +57,7 @@ it('should render a field with a hidden label', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       isLabelHidden
     />
   );
@@ -64,6 +69,7 @@ it('should render a required field with a hidden label', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       isLabelHidden
       required
     />
@@ -76,6 +82,7 @@ it('should render a field error message', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       isLabelHidden
       error="Error Text"
     />
@@ -88,6 +95,7 @@ it('should render a field help message', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       isLabelHidden
       help="Help Text"
     />
@@ -103,6 +111,7 @@ it('should render an inline field with most of the possible props are passed int
       help="This is a test input"
       htmlFor="test"
       label="Text"
+      htmlFor="test"
       labelAttrs={{ className: 'healtheintent-legend' }}
       isInline
     >
@@ -118,6 +127,7 @@ it('should render a field in error', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       error="Error Text"
       help="Help Text"
       isInvalid
@@ -131,6 +141,7 @@ it('should render an optional field in error', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       error="Error Text"
       help="Help Text"
       showOptional
@@ -145,6 +156,7 @@ it('should render a required field in error', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       error="Error Text"
       help="Help Text"
       required
@@ -159,6 +171,7 @@ it('should render a field with a hidden label in error', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       error="Error Text"
       help="Help Text"
       isInvalid
@@ -172,6 +185,7 @@ it('should render a required field with a hidden label in error', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       error="Error Text"
       help="Help Text"
       isLabelHidden
@@ -187,6 +201,7 @@ it('should render a field with a custom error icon', () => {
   const field = (
     <Field
       label="Field Label"
+      htmlFor="test"
       errorIcon={<IconHelp />}
     />
   );
