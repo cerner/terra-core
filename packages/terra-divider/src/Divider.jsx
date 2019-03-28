@@ -24,9 +24,7 @@ const Divider = (props) => {
     ? <hr {...customProps} className={dividerClassNames} aria-hidden="true" />
     : (
       <div className={cx(['divider-container'])}>
-        <span className={cx(['divider-line'])} />
         <span className={cx(['divider-text'])}>{text}</span>
-        <span className={cx(['divider-line'])} />
       </div>
     );
 

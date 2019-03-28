@@ -16,12 +16,14 @@
     align-items: center;
     display: flex;
     min-width: 0;
-  }
 
-  .divider-line {
-    @include terra-divider;
-    flex-basis: 3em;
-    flex-grow: 1;
+    &::before,
+    &::after {
+      @include terra-divider;
+      content: '';
+      flex-basis: 3em;
+      flex-grow: 1;
+    }
   }
 
   .divider-text {
