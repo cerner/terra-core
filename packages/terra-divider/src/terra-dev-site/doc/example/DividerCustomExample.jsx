@@ -3,7 +3,7 @@ import React from 'react';
 import Divider from 'terra-divider/lib/Divider';
 import DividerExampleTemplate from './DividerExampleTemplate';
 
-const content = 'Custom Divider Text';
+const content = 'Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text';
 
 const DividerCustomExample = () => (
   <DividerExampleTemplate>

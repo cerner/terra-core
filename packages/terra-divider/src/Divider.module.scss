@@ -1,37 +1,32 @@
 :local {
-  .divider {
-    border: 0;
-    height: 1px;
-    line-height: 1em;
-    outline: 0;
-    position: relative;
-    text-align: center;
+  @mixin terra-divider {
+    border-bottom-width: 0;
+    border-color: var(--terra-divider-border-color, #dedfe0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-style: solid;
+    border-top-width: var(--terra-divider-border-top-width, 1px);
+  }
 
-    &::before {
-      background-color: var(--terra-divider-before-background-color, #dedfe0);
-      content: '';
-      height: 1px;
-      left: 0;
-      position: absolute;
-      top: 50%;
-      width: 100%;
-    }
+  .divider {
+    @include terra-divider;
+  }
+
+  .divider-container {
+    align-items: center;
+    display: flex;
+    min-width: 0;
+  }
+
+  .divider-line {
+    @include terra-divider;
+    flex-basis: 3em;
+    flex-grow: 1;
   }
 
   .divider-text {
-    height: 1.5em;
-
-    &::after {
-      background-color: #fff;
-      color: var(--terra-divider-after-text-color, #000);
-      content: attr(data-content);
-      display: inline-block;
-      line-height: 1.5em;
-      margin-bottom: var(--terra-divider-after-text-margin-bottom);
-      margin-top: var(--terra-divider-after-text-margin-top);
-      padding-left: var(--terra-divider-after-text-padding-left, 0.5em);
-      padding-right: var(--terra-divider-after-text-padding-right, 0.5em);
-      position: relative;
-    }
+    box-sizing: content-box;
+    flex-grow: 0;
+    text-align: center;
   }
 }
