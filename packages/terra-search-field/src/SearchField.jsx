@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import KeyCode from 'keycode-js';
 import IconClose from 'terra-icon/lib/icon/IconClose';

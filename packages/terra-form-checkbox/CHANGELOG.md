@@ -4,6 +4,18 @@ ChangeLog
 Unreleased
 ----------
 
+3.7.0 - (March 26, 2019)
+------------------
+### Added
+* Added aria-describedby to better announce legend, help text, and error text in the Radio Field component
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
 3.6.0 - (March 21, 2019)
 ------------------
 ### Changed

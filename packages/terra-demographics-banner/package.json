@@ -1,7 +1,7 @@
 {
   "name": "terra-demographics-banner",
   "main": "lib/DemographicsBanner.js",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "description": "The demographics component is used to display demographic information about a person in a condensed, easy to read format.",
   "repository": {
     "type": "git",
@@ -20,21 +20,18 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "devDependencies": {
-    "react-intl": "^2.4.0"
-  },
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-intl": "^2.8.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.6.0",
-    "terra-image": "^3.4.0",
-    "terra-responsive-element": "^4.4.0",
-    "terra-visually-hidden-text": "^2.4.0"
+    "terra-doc-template": "^2.7.0",
+    "terra-image": "^3.5.0",
+    "terra-responsive-element": "^4.5.0",
+    "terra-visually-hidden-text": "^2.5.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

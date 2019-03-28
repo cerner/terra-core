@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import Toggle from 'terra-toggle';
-import 'terra-base/lib/baseStyles';
 import styles from './ToggleButton.module.scss';
 
 const cx = classNames.bind(styles);

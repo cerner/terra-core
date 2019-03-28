@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';

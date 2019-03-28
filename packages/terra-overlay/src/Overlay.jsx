@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
 import KeyCode from 'keycode-js';
-import 'terra-base/lib/baseStyles';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
 
@@ -44,7 +43,7 @@ const propTypes = {
   */
   isRelativeToContainer: PropTypes.bool,
   /**
-   * Allows assigning of root element custom data attribute for easy selecting.
+   * Used to select the root mount DOM node. This is used to help prevent focus from shifting outside of the overlay when it is opened in a portal.
    */
   rootSelector: PropTypes.string,
   /**
@@ -62,7 +61,7 @@ const defaultProps = {
   isScrollable: false,
   isRelativeToContainer: false,
   onRequestClose: undefined,
-  rootSelector: '[data-terra-base]',
+  rootSelector: '#root',
   zIndex: '100',
 };
 
