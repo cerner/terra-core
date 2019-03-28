@@ -21,7 +21,7 @@
     &::after {
       @include terra-divider;
       content: '';
-      flex-basis: 3em;
+      flex-basis: 4em;
       flex-grow: 1;
     }
   }

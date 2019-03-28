@@ -2,12 +2,14 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Divider from 'terra-divider/lib/Divider';
 import DividerExampleTemplate from './DividerExampleTemplate';
+import Moment from '../../../../../../node_modules/moment/moment';
 
-const content = 'Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text Custom Divider Text';
+const m = Moment.utc();
+const currentDate = m.format('LL');
 
 const DividerCustomExample = () => (
   <DividerExampleTemplate>
-    <Divider text={content} />
+    <Divider text={currentDate} />
   </DividerExampleTemplate>
 );
 
