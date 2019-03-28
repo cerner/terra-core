@@ -9,9 +9,9 @@ it('should render a default radio field', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a default radio field without crashing if it has a null child', () => {
-  const nullChild = undefined;
-  const radioField = (<RadioField legend="Default RadioField">{ nullChild }</RadioField>);
+it('should render a default radio field without crashing if it has an undefined child', () => {
+  const undefinedChild = undefined;
+  const radioField = (<RadioField legend="Default RadioField">{ undefinedChild }</RadioField>);
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
