@@ -1,7 +1,7 @@
 {
   "name": "terra-form-fieldset",
   "main": "lib/Fieldset.js",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.",
   "repository": {
     "type": "git",
@@ -20,20 +20,17 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "devDependencies": {
-    "react-intl": "^2.4.0"
-  },
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-intl": "^2.8.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.6.0",
-    "terra-form-field": "^3.5.0",
-    "terra-form-input": "^2.7.0"
+    "terra-doc-template": "^2.7.0",
+    "terra-form-field": "^3.6.0",
+    "terra-form-input": "^2.8.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

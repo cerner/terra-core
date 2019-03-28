@@ -7,10 +7,10 @@ import exampleProfileImage from 'terra-profile-image/lib/terra-dev-site/doc/exam
 const ProfileImageDefault = () => (
   <div>
     <h2>Successful Profile Image</h2>
-    <ProfileImage src={exampleProfileImage} width="75" height="75" />
+    <ProfileImage alt="profile image" src={exampleProfileImage} width="75" height="75" />
     <br />
     <h2>Failed Profile Image</h2>
-    <ProfileImage src="invalid.jpg" width="75" height="75" />
+    <ProfileImage alt="profile image" src="invalid.jpg" width="75" height="75" />
   </div>
 );
 

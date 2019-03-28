@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
-import 'terra-base/lib/baseStyles';
 import styles from './Divider.module.scss';
 
 const propTypes = {

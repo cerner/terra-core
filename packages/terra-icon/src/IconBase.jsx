@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 
 // eslint-disable-next-line import/no-unresolved, import/no-webpack-loader-syntax
 import styles from './Icon.module.scss';
