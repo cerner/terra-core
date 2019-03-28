@@ -182,7 +182,7 @@ class Frame extends React.Component {
     this.input = input;
   }
 
-  getDisplay(displayId, placeholderId, ariaDescribedById) {
+  getDisplay(displayId, placeholderId, ariaDescribedBy) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
       disabled, display, placeholder, variant,
@@ -197,7 +197,7 @@ class Frame extends React.Component {
       onBlur: this.handleInputBlur,
       onMouseDown: this.handleInputMouseDown,
       'aria-label': this.ariaLabel(),
-      'aria-describedby': (variant === Variants.TAG || variant === Variants.MULTIPLE) ? `${displayId} ${ariaDescribedById}` : ariaDescribedById,
+      'aria-describedby': (variant === Variants.TAG || variant === Variants.MULTIPLE) ? `${displayId} ${ariaDescribedBy}` : ariaDescribedBy,
       'aria-disabled': disabled,
       'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
       type: 'text',
@@ -523,7 +523,6 @@ class Frame extends React.Component {
       if (SharedUtil.isSafari()) {
         ariaLabelledBy = `${labelId}`;
       } else {
-        // alert('not safari');
         ariaLabelledBy = `${labelId} ${displayId} ${placeholderId}`;
       }
     }
@@ -683,7 +682,10 @@ class Frame extends React.Component {
     const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
     const displayId = `terra-select-screen-reader-display-${uniqueid()}`;
     const placeholderId = `terra-select-screen-reader-placeholder-${uniqueid()}`;
-    const ariaDescribedById = `terra-select-screen-reader-description-${uniqueid()}`;
+    const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
+    const customAriaDescribedbyIds = customProps['aria-describedby'];
+    const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
+
 
     return (
       <div
@@ -695,7 +697,7 @@ class Frame extends React.Component {
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-labelledby={this.ariaLabelledByIds(labelId, displayId, placeholderId)}
-        aria-describedby={ariaDescribedById}
+        aria-describedby={ariaDescribedBy}
         aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
@@ -708,10 +710,10 @@ class Frame extends React.Component {
         <div className={cx('visually-hidden-component')} hidden>
           {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
           <span id={labelId}>{this.ariaLabel()}</span>
-          <span id={ariaDescribedById}>{this.renderDescriptionText()}</span>
+          <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')} role={variant === Variants.DEFAULT ? 'textbox' : null}>
-          {this.getDisplay(displayId, placeholderId, ariaDescribedById)}
+          {this.getDisplay(displayId, placeholderId, ariaDescribedBy)}
         </div>
         {this.renderToggleButton()}
         <span
