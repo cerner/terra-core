@@ -7,13 +7,13 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes}>
-      <path d="M0 35h48v6H0v-6zm0-8h33v-6H0v6zm0-14h20V7H0v6z" ></path>
+      <path d="M22 35h4v4h-4v-4zm0-18h4v15h-4V17zm2-7.805l18.807 32.616H5.193L24 9.195m0-6.006L0 44.811h48L24 3.189z" ></path>
     </IconBase>
   );
 };
 
-SvgIcon.displayName = "IconSortAscending";
-SvgIcon.defaultProps = {"className":"","viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg","isBidi":true};
+SvgIcon.displayName = "IconCaution";
+SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
 /* eslint-enable */

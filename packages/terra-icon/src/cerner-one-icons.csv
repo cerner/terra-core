@@ -21,6 +21,7 @@ folder,src/icons/0011_folder_a.svg,themeable ,bi-directional
 attachment,src/icons/0012_paperClip_a.svg,themeable ,bi-directional
 send,src/icons/0013_sendRight_a.svg,themeable ,bi-directional
 pill,src/icons/0014_pill_a.svg,themeable ,bi-directional
+redo,src/icons/0015_circleArrowRight_a.svg,themeable ,
 visualization,src/icons/0016_angledArrow_a.svg,themeable ,bi-directional
 lightbulb,src/icons/0017_lightbulb_a.svg,themeable ,
 forward,src/icons/0018_curvedArrowRight_a.svg,themeable ,bi-directional
@@ -46,8 +47,8 @@ chevronDown,src/icons/0026_chevronDown_a.svg,themeable ,bi-directional
 expandMore,src/icons/0026_chevronDown_a.svg,themeable ,bi-directional
 clock,src/icons/0027_clock_a.svg,themeable ,
 away,src/icons/0027_clock_i_heavyCircle.svg,themeable ,
-sortAscending,src/icons/0028_arrowDownFourLinesUp_a.svg,themeable ,bi-directional
-sortDescending,src/icons/0029_arrowDownFourLinesDown_a.svg,themeable ,bi-directional
+sortAscending,src/icons/0028_threeLinesAscending_a.svg,themeable ,bi-directional
+sortDescending,src/icons/0029_threeLinesDescending_a.svg,themeable ,bi-directional
 treemap,src/icons/0030_varyingSquares.svg,themeable ,bi-directional
 glasses,src/icons/0031_glasses_a.svg,themeable ,
 image,src/icons/0032_image_a.svg,themeable ,bi-directional
@@ -192,7 +193,7 @@ protocol,src/icons/0149_linesThreeSquares_a.svg,themeable ,
 videoCamera,src/icons/0150_videoCamera_a.svg,themeable ,bi-directional
 videoCameraDisabled,src/icons/0150_videoCamera_i_slash.svg,themeable ,bi-directional
 noSignal,src/icons/0151_wifiCircleLine_i.svg,themeable ,bi-directional
-reload,src/icons/0152_circleArrow_a.svg,themeable ,
+undo,src/icons/0152_circleArrow_a.svg,themeable ,
 recurringEvent,src/icons/0153_calendarCircleArrow_a.svg,themeable ,
 separate,src/icons/0154_lineTwoArrows_a.svg,themeable ,bi-directional
 merge,src/icons/0155_connectedLinesArrow_a.svg,themeable ,bi-directional
@@ -246,3 +247,9 @@ thinDiamond_symbol,src/icons/S_0008_thinDiamond.svg,themeable ,
 triangle_symbol,src/icons/S_0009_triangle.svg,themeable ,
 triangleDown_symbol,src/icons/S_0010_triangleDown.svg,themeable ,
 x_symbol,src/icons/S_0011_x.svg,themeable ,
+circleLines_symbol,src/icons/S_0012_circleLines.svg,themeable ,
+catalogueNumber,src/icons/R_catalogueNumber.svg,themeable ,
+caution,src/icons/R_caution.svg,themeable ,
+consultInstructionsForUse,src/icons/R_consultInstructionsForUse.svg,themeable ,
+dateOfManufacture,src/icons/R_dateOfManufacture.svg,themeable ,
+manufacturer,src/icons/R_manufacturer.svg,themeable ,

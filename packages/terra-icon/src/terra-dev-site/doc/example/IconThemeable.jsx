@@ -16,6 +16,7 @@ import IconFolder from 'terra-icon/lib/icon/IconFolder';
 import IconAttachment from 'terra-icon/lib/icon/IconAttachment';
 import IconSend from 'terra-icon/lib/icon/IconSend';
 import IconPill from 'terra-icon/lib/icon/IconPill';
+import IconRedo from 'terra-icon/lib/icon/IconRedo';
 import IconVisualization from 'terra-icon/lib/icon/IconVisualization';
 import IconLightbulb from 'terra-icon/lib/icon/IconLightbulb';
 import IconForward from 'terra-icon/lib/icon/IconForward';
@@ -132,7 +133,7 @@ import IconProtocol from 'terra-icon/lib/icon/IconProtocol';
 import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
 import IconVideoCameraDisabled from 'terra-icon/lib/icon/IconVideoCameraDisabled';
 import IconNoSignal from 'terra-icon/lib/icon/IconNoSignal';
-import IconReload from 'terra-icon/lib/icon/IconReload';
+import IconUndo from 'terra-icon/lib/icon/IconUndo';
 import IconRecurringEvent from 'terra-icon/lib/icon/IconRecurringEvent';
 import IconSeparate from 'terra-icon/lib/icon/IconSeparate';
 import IconMerge from 'terra-icon/lib/icon/IconMerge';
@@ -175,6 +176,12 @@ import IconThinDiamondSymbol from 'terra-icon/lib/icon/IconThinDiamondSymbol';
 import IconTriangleSymbol from 'terra-icon/lib/icon/IconTriangleSymbol';
 import IconTriangleDownSymbol from 'terra-icon/lib/icon/IconTriangleDownSymbol';
 import IconXSymbol from 'terra-icon/lib/icon/IconXSymbol';
+import IconCircleLinesSymbol from 'terra-icon/lib/icon/IconCircleLinesSymbol';
+import IconCatalogueNumber from 'terra-icon/lib/icon/IconCatalogueNumber';
+import IconCaution from 'terra-icon/lib/icon/IconCaution';
+import IconConsultInstructionsForUse from 'terra-icon/lib/icon/IconConsultInstructionsForUse';
+import IconDateOfManufacture from 'terra-icon/lib/icon/IconDateOfManufacture';
+import IconManufacturer from 'terra-icon/lib/icon/IconManufacturer';
 const cellStyle = { padding: '0.5rem' };
 const IconAll = () => (
   <div>  <table>
@@ -318,6 +325,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconPill from 'terra-icon/lib/icon/IconPill';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconRedo height='2em' width='2em' /></td>
+        <td style={cellStyle}>redo</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconRedo from 'terra-icon/lib/icon/IconRedo';
           </code>
         </td>
       </tr>
@@ -1366,11 +1382,11 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconReload height='2em' width='2em' /></td>
-        <td style={cellStyle}>reload</td>
+        <td style={cellStyle}><IconUndo height='2em' width='2em' /></td>
+        <td style={cellStyle}>undo</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
-            import IconReload from 'terra-icon/lib/icon/IconReload';
+            import IconUndo from 'terra-icon/lib/icon/IconUndo';
           </code>
         </td>
       </tr>
@@ -1749,6 +1765,60 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconXSymbol from 'terra-icon/lib/icon/IconXSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconCircleLinesSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}>circleLines_symbol</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconCircleLinesSymbol from 'terra-icon/lib/icon/IconCircleLinesSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconCatalogueNumber height='2em' width='2em' /></td>
+        <td style={cellStyle}>catalogueNumber</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconCatalogueNumber from 'terra-icon/lib/icon/IconCatalogueNumber';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconCaution height='2em' width='2em' /></td>
+        <td style={cellStyle}>caution</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconCaution from 'terra-icon/lib/icon/IconCaution';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconConsultInstructionsForUse height='2em' width='2em' /></td>
+        <td style={cellStyle}>consultInstructionsForUse</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconConsultInstructionsForUse from 'terra-icon/lib/icon/IconConsultInstructionsForUse';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconDateOfManufacture height='2em' width='2em' /></td>
+        <td style={cellStyle}>dateOfManufacture</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconDateOfManufacture from 'terra-icon/lib/icon/IconDateOfManufacture';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconManufacturer height='2em' width='2em' /></td>
+        <td style={cellStyle}>manufacturer</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconManufacturer from 'terra-icon/lib/icon/IconManufacturer';
           </code>
         </td>
       </tr>

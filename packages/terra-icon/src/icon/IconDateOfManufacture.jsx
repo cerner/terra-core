@@ -7,12 +7,12 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes}>
-      <path d="M48 18V3.4l-5.4 5.4C38.2 3.4 31.5 0 24 0 10.7 0 0 10.7 0 24s10.7 24 24 24c6.9 0 13.1-2.9 17.5-7.6L38 36.9c-3.5 3.8-8.4 6.1-14 6.1-10.5 0-19-8.5-19-19S13.5 5 24 5c6.1 0 11.5 2.9 15 7.4L33.4 18H48z" ></path>
+      <path d="M34 0v26l-5.773-8-5.613 7.778L17 18l-5.613 7.778L5.773 18 0 26v22h48V0H34zm11 45H3V26.969l2.773-3.843 3.181 4.407 2.433 3.371 2.433-3.371L17 23.126l3.181 4.407 2.433 3.371 2.433-3.371 3.181-4.407 3.341 4.629L33.909 31H37V3h8v42z" ></path>
     </IconBase>
   );
 };
 
-SvgIcon.displayName = "IconReload";
+SvgIcon.displayName = "IconDateOfManufacture";
 SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
