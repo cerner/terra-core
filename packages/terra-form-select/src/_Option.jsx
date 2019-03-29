@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
 
 const cx = classNames.bind(styles);
@@ -38,6 +39,11 @@ const propTypes = {
    * The value of the option. The value must be unique.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  /**
+   * @private
+   * Variant of select component
+   */
+  variant: PropTypes.string,
 };
 
 const defaultProps = {
@@ -49,6 +55,7 @@ const Option = ({
   disabled,
   display,
   value,
+  variant,
   isActive,
   isSelected,
   isCheckable,
@@ -66,14 +73,32 @@ const Option = ({
     customProps.className,
   ]);
 
+  let role = 'option'; // Used for JAWs and VoiceOver on iOS
+
+  /**
+   * VoiceOver in Safari on desktop has issues with role="option" with the combination of the
+   * aria-live section we have and will stutter when reading options.
+   * Switching to role="radio" and role="checkbox" mitigates this behavior.
+   */
+  if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
+    role = 'radio';
+
+    if (variant === 'tag' || variant === 'multiple') {
+      role = 'checkbox';
+    }
+  }
+
   return (
     <li
+      role={role}
       {...customProps}
-      role="option"
       disabled={disabled}
       className={optionClassNames}
-      aria-selected={isSelected}
+      aria-selected={isSelected} // Needed to allow VoiceOver on iOS to announce selected state
+      aria-checked={isSelected} // Needed to allow JAWS to announce "selected" state
       aria-disabled={disabled}
+      tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
+      data-terra-select-option
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
       <span className={cx('display')}>{display}</span>

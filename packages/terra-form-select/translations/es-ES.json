@@ -1,7 +1,21 @@
 {
   "Terra.form.select.add": "Agregar \"{text}\"",
+  "Terra.form.select.ariaLabel": "Buscar",
   "Terra.form.select.defaultDisplay": "- Predeterminado -",
-  "Terra.form.select.noResults": "No se encontró ningún resultado que coincida para \"{text}\"",
   "Terra.form.select.maxSelectionHelp": "Límite de {text} elementos.",
-  "Terra.form.select.maxSelectionOption": "Número máximo de {text} elementos seleccionados"
+  "Terra.form.select.maxSelectionOption": "Número máximo de {text} elementos seleccionados",
+  "Terra.form.select.noResults": "No se encontró ningún resultado que coincida para \"{text}\"",
+  "Terra.form.select.selectedText": "Se seleccionó {text}.",
+  "Terra.form.select.selected": "Seleccionado.",
+  "Terra.form.select.unselected": "No seleccionado.",
+  "Terra.form.select.disabled": "Deshabilitado.",
+  "Terra.form.select.dimmed": "Atenuado.",
+  "Terra.form.select.listOfTotalOptions": "Lista de {total} opciones.",
+  "Terra.form.select.defaultUsageGuidance": "Use las flechas arriba y abajo para desplazarse por las opciones. Presione entrar para seleccionar una opción.",
+  "Terra.form.select.mobileUsageGuidance": "Deslice a la derecha para acceder a las opciones.",
+  "Terra.form.select.mobileButtonUsageGuidance": "Pulse para acceder a las opciones.",
+  "Terra.form.select.multiSelectUsageGuidance": "Escriba texto o use las flechas arriba y abajo para desplazarse por las opciones. Presione entrar para seleccionar o deseleccionar una opción.",
+  "Terra.form.select.searchUsageGuidance": "Escriba texto o use las flechas arriba y abajo para desplazarse por las opciones. Presione entrar para seleccionar una opción.",
+  "Terra.form.select.clearSelect": "Borrar selección",
+  "Terra.form.select.selectCleared": "Se borró el valor seleccionado"
 }

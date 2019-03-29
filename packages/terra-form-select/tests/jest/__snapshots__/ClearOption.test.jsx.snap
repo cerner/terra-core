@@ -3,6 +3,7 @@
 exports[`ClearOption should render a default ClearOption 1`] = `
 <Option
   className="clear-option"
+  data-terra-select-clear-option={true}
   disabled={false}
   display="Clear"
   intl={

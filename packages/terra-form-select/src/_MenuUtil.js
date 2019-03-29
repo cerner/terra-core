@@ -22,7 +22,7 @@ class MenuUtil {
    * @return {boolean} - True if the values are equal.
    */
   static isEqual(a, b) {
-    if (a === undefined || b === undefined) {
+    if (a === undefined || a === null || b === undefined || b === null) {
       return false;
     }
     return a.toString().toLowerCase() === b.toString().toLowerCase();
