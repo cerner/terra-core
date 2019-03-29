@@ -54,7 +54,6 @@ class SelectableTableRows extends React.Component {
     this.handleOnBlur = this.handleOnBlur.bind(this);
   }
 
-
   handleOnChange(event, index) {
     if (this.props.onChange) {
       this.props.onChange(event, index);
@@ -170,7 +169,8 @@ class SelectableTableRows extends React.Component {
         if (newProps.isSelected) {
           let ariaLabel = this.context.intl.formatMessage({ id: 'Terra.table.selectabletablerows.selectedRow' }); // 'Row Selected';
           const cells = row.props.children;
-          for (let columnIndex = 0; columnIndex < cells.length; columnIndex += 1) {
+          const cellCount = cells.length;
+          for (let columnIndex = 0; columnIndex < cellCount; columnIndex += 1) {
             ariaLabel += ` ${cells[columnIndex].props.content}`;
           }
           return React.cloneElement(row, { ...newProps, 'aria-label': `${ariaLabel}` });

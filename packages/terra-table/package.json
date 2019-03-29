@@ -25,7 +25,7 @@
   },
   "peerDependencies": {
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
     "react-intl": "^2.4.0",
     "terra-base": "^4.0.0"
   },
