@@ -12,7 +12,6 @@ const cx = classNames.bind(styles);
 
 const Icon = <IconSearch />;
 const Cancel = <IconClose />;
-let currentlyFocusedInput;
 
 const propTypes = {
   /**
@@ -113,6 +112,7 @@ class SearchField extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.updateSearchText = this.updateSearchText.bind(this);
 
+    this.currentlyFocusedInput = null; // Tracks current input to retain input focus after clearing
     this.searchTimeout = null;
     this.state = { searchText: this.props.defaultValue };
   }
@@ -128,12 +128,15 @@ class SearchField extends React.Component {
 
   handleCancel() {
     this.setState({ searchText: '' });
-    currentlyFocusedInput.focus();
+
+    if (this.currentlyFocusedInput) {
+      this.currentlyFocusedInput.focus();
+    }
   }
 
   handleTextChange(event) {
-    if (currentlyFocusedInput !== event.currentTarget) {
-      currentlyFocusedInput = event.currentTarget;
+    if (this.currentlyFocusedInput !== event.currentTarget) {
+      this.currentlyFocusedInput = event.currentTarget;
     }
 
     const textValue = event.target.value;

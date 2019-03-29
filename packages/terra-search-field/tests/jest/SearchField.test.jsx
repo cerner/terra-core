@@ -59,8 +59,17 @@ describe('Manual Search', () => {
     searchField.setState({ searchText: 'Te' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.childAt(2).simulate('click');
     expect(onSearch).toBeCalledWith('Te');
+  });
+
+  it('triggers search field clear on button click', () => {
+    const searchField = shallowWithIntl(<SearchField />);
+    searchField.setState({ searchText: 'Te' });
+
+    expect(searchField.state('searchText')).toBe('Te');
+    searchField.childAt(1).simulate('click');
+    expect(searchField.state('searchText')).toBe('');
   });
 
   it('does not trigger search if default minimum search text has not been met', () => {
@@ -79,7 +88,7 @@ describe('Manual Search', () => {
     searchField.setState({ searchText: 'Sear' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.childAt(2).simulate('click');
     expect(onSearch).not.toBeCalled();
   });
 
@@ -87,7 +96,7 @@ describe('Manual Search', () => {
     const searchField = shallowWithIntl(<SearchField minimumSearchTextLength={5} />);
     searchField.setState({ searchText: 'Searc' });
 
-    searchField.childAt(1).simulate('click'); // Verifies we do not attempt to call an undefined function.
+    searchField.childAt(2).simulate('click'); // Verifies we do not attempt to call an undefined function.
   });
 });
 
@@ -119,7 +128,7 @@ describe('Auto Search', () => {
 
     expect(onSearch).not.toBeCalled();
 
-    searchField.childAt(1).simulate('click');
+    searchField.childAt(2).simulate('click');
     expect(onSearch).toBeCalledWith('Te');
 
     jest.runAllTimers();

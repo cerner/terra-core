@@ -2,6 +2,7 @@
 
 exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
 <SearchField
+  defaultValue=""
   disableAutoSearch={false}
   inputRefCallback={
     [MockFunction] {
@@ -92,6 +93,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       aria-disabled={false}
       aria-label="Terra.searchField.search"
       className="input"
+      defaultValue=""
       disabled={false}
       isInvalid={false}
       name={null}
@@ -122,6 +124,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       }
       required={false}
       type="search"
+      value=""
     >
       <input
         aria-disabled={false}
@@ -134,6 +137,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         placeholder=""
         required={false}
         type="search"
+        value=""
       />
     </Input>
     <Button
@@ -249,6 +253,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     aria-disabled={false}
     aria-label="Terra.searchField.search"
     className="input"
+    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -257,6 +262,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     placeholder=""
     required={false}
     type="search"
+    value=""
   />
   <Button
     className="button"
@@ -314,7 +320,8 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
   <Input
     aria-disabled={true}
     aria-label="Terra.searchField.search"
-    className="input"
+    className="input input-cancel"
+    defaultValue=""
     disabled={true}
     isInvalid={false}
     name={null}
@@ -323,6 +330,26 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     placeholder=""
     required={false}
     type="search"
+    value="Test"
+  />
+  <Button
+    className="cancel"
+    icon={
+      <IconClose
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="cancel"
+    type="button"
+    variant="neutral"
   />
   <Button
     className="button"
@@ -380,7 +407,8 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
   <Input
     aria-disabled={false}
     aria-label="Terra.searchField.search"
-    className="input"
+    className="input input-cancel"
+    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -389,6 +417,26 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     placeholder=""
     required={false}
     type="search"
+    value="Test"
+  />
+  <Button
+    className="cancel"
+    icon={
+      <IconClose
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="cancel"
+    type="button"
+    variant="neutral"
   />
   <Button
     className="button"
@@ -446,7 +494,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
   <Input
     aria-disabled={false}
     aria-label="Terra.searchField.search"
-    className="input"
+    className="input input-cancel"
     defaultValue="Default"
     disabled={false}
     isInvalid={false}
@@ -456,6 +504,26 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     placeholder=""
     required={false}
     type="search"
+    value="Default"
+  />
+  <Button
+    className="cancel"
+    icon={
+      <IconClose
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="cancel"
+    type="button"
+    variant="neutral"
   />
   <Button
     className="button"
@@ -514,6 +582,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     aria-disabled={false}
     aria-label="Terra.searchField.search"
     className="input"
+    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -522,6 +591,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     placeholder="Test"
     required={false}
     type="search"
+    value=""
   />
   <Button
     className="button"
@@ -580,6 +650,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     aria-disabled={false}
     aria-label="Terra.searchField.search"
     className="input"
+    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -588,7 +659,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     placeholder=""
     required={false}
     type="search"
-    value="Test"
+    value=""
   />
   <Button
     className="button"
@@ -647,6 +718,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     aria-disabled={false}
     aria-label="Search Field"
     className="input"
+    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -655,6 +727,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     placeholder=""
     required={false}
     type="search"
+    value=""
   />
   <Button
     className="button"
