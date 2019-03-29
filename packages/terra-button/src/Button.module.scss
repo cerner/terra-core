@@ -32,6 +32,7 @@
     font-family: inherit;
     font-size: var(--terra-button-font-size, 1rem);
     line-height: var(--terra-button-line-height, 1.429);
+    margin: 0; /* Reset the margin in Safari. */
     max-width: 100%; /* Need to help with overflow-wrap */
     outline: none;
     overflow-wrap: break-word; /* Modern browsers */

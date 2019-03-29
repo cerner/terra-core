@@ -8,6 +8,7 @@ Unreleased
 ------------------
 ### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
+* Reset default margin in Safari. [#471](https://github.com/cerner/terra-clinical/issues/471)
 
 ### Removed
 * Removed peer dependency on terra-base
