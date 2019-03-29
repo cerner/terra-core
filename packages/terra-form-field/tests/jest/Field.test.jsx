@@ -111,7 +111,6 @@ it('should render an inline field with most of the possible props are passed int
       help="This is a test input"
       htmlFor="test"
       label="Text"
-      htmlFor="test"
       labelAttrs={{ className: 'healtheintent-legend' }}
       isInline
     >
