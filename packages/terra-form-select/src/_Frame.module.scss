@@ -21,6 +21,7 @@
     padding-top: var(--terra-form-select-padding-top, 0);
 
     > .display {
+      border: 0;
       display: inline-block;
       flex: 1 1 auto; // IE 10
       overflow: hidden;
@@ -129,10 +130,26 @@
     padding: var(--terra-form-select-toggle-padding, 0 0.42857rem);
   }
 
+  .toggle-narrow {
+    padding: 0;
+  }
+
+  .toggle-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    height: 100%;
+    line-height: 0;
+    margin: 0;
+    padding: var(--terra-form-select-toggle-padding, 0 0.42857rem);
+
+    // Remove the inner border and padding in Firefox.
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+  }
+
   .content {
-    display: flex;
-    flex: 1 1 auto;
-    flex-wrap: wrap; // IE 10
     list-style-type: none;
     margin: 0;
     overflow: hidden;
@@ -140,6 +157,16 @@
     padding-left: var(--terra-form-select-content-padding-left, 0);
     padding-right: var(--terra-form-select-content-padding-right, 0);
     padding-top: var(--terra-form-select-content-padding-top, 0);
+  }
+
+  .display-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap; // IE 10
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
   }
 
   // A reduced, non-zero, height and width allows the input to receive focus using tab.
@@ -179,7 +206,7 @@
   }
 
   // Hides the clear buttons in IE.
-  .search::-ms-clear {
+  .select ::-ms-clear {
     display: none;
     height: 0;
     width: 0;

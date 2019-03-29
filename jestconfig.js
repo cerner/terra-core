@@ -3,6 +3,7 @@ module.exports = {
     'packages/**/src/*.js',
     'packages/**/src/*.jsx',
   ],
+  globalSetup: './jestglobalsetup.js',
   setupFiles: [
     'raf/polyfill',
     './jestsetup.js',
@@ -18,5 +19,9 @@ module.exports = {
     '\\.(svg|jpg|png|md)$': '<rootDir>/__mocks__/fileMock.js',
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
+  moduleDirectories: [
+    'aggregated-translations',
+    'node_modules',
+  ],
   testURL: 'http://localhost',
 };

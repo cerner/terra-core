@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.24.0 - (March 26, 2019)
+------------------
 ### Changed
 * Added Prismjs highlighting for code blocks
 * Update react/react-dom peer-dependency to latest stable minor release

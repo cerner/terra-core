@@ -1,7 +1,7 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "version": "3.4.0",
+  "version": "4.0.0",
   "description": "The terra-i18n package provides on-demand internationalization of React components.",
   "repository": {
     "type": "git",
@@ -20,27 +20,16 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "devDependencies": {
-    "babel-jest": "^19.0.0",
-    "memory-fs": "^0.4.1"
-  },
-  "bin": {
-    "aggregate-translations": "./bin/aggregate-translations.js"
-  },
   "peerDependencies": {
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
+    "react-intl": "^2.8.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "commander": "^2.9.0",
-    "fs-extra": "^7.0.0",
-    "glob": "^7.1.1",
     "intl": "^1.2.5",
-    "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
-    "react-intl": "^2.8.0",
-    "terra-doc-template": "^2.6.0"
+    "terra-doc-template": "^2.7.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -48,7 +37,6 @@
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "postinstall": "node scripts/post-install/write-default-loaders.js",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest --config ../../jestconfig.js",
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"

@@ -9,6 +9,8 @@ Unreleased
 ### Added
 * Added additional variants export
 
+3.8.0 - (March 26, 2019)
+------------------
 ### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
 

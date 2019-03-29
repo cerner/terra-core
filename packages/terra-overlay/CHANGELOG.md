@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+3.8.1 - (March 27, 2019)
+------------------
+### Changed
+* Changed default rootProp value to `#root`
+
+3.8.0 - (March 26, 2019)
+------------------
 ### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
 

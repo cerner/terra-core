@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.7.0 - (March 26, 2019)
+------------------
 ### Added
 * Added aria-describedby to better announce legend, help text, and error text in the Radio Field component
 

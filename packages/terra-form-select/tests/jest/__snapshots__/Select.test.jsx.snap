@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select should render a clear option 1`] = `
-<Frame
+<InjectIntl(Frame)
   clearOptionDisplay="Terra.form.select.defaultDisplay"
+  data-terra-select={true}
   disabled={false}
   display=""
   dropdown={[Function]}
@@ -37,13 +38,15 @@ exports[`Select should render a clear option 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value=""
   variant="default"
 />
 `;
 
 exports[`Select should render a combobox variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -78,13 +81,15 @@ exports[`Select should render a combobox variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
 `;
 
 exports[`Select should render a combobox variant with a placeholder 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -119,13 +124,15 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
 `;
 
 exports[`Select should render a default variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display=""
   dropdown={[Function]}
@@ -160,13 +167,15 @@ exports[`Select should render a default variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value=""
   variant="default"
 />
 `;
 
 exports[`Select should render a default variant with a placeholder 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display=""
   dropdown={[Function]}
@@ -201,13 +210,15 @@ exports[`Select should render a default variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value=""
   variant="default"
 />
 `;
 
 exports[`Select should render a disabled combobox variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={true}
   display={Array []}
   dropdown={[Function]}
@@ -242,13 +253,15 @@ exports[`Select should render a disabled combobox variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
 `;
 
 exports[`Select should render a disabled default variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={true}
   display=""
   dropdown={[Function]}
@@ -283,13 +296,15 @@ exports[`Select should render a disabled default variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value=""
   variant="default"
 />
 `;
 
 exports[`Select should render a disabled multiple variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={true}
   display={Array []}
   dropdown={[Function]}
@@ -324,13 +339,15 @@ exports[`Select should render a disabled multiple variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="multiple"
 />
 `;
 
 exports[`Select should render a disabled search variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={true}
   display=""
   dropdown={[Function]}
@@ -365,13 +382,15 @@ exports[`Select should render a disabled search variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value=""
   variant="search"
 />
 `;
 
 exports[`Select should render a disabled tag variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={true}
   display={Array []}
   dropdown={[Function]}
@@ -406,13 +425,15 @@ exports[`Select should render a disabled tag variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
 `;
 
 exports[`Select should render a multiple variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -447,13 +468,15 @@ exports[`Select should render a multiple variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="multiple"
 />
 `;
 
 exports[`Select should render a multiple variant with a placeholder 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -488,13 +511,15 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value={Array []}
   variant="multiple"
 />
 `;
 
 exports[`Select should render a search variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display=""
   dropdown={[Function]}
@@ -529,13 +554,15 @@ exports[`Select should render a search variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value=""
   variant="search"
 />
 `;
 
 exports[`Select should render a search variant with a placeholder 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display=""
   dropdown={[Function]}
@@ -570,13 +597,239 @@ exports[`Select should render a search variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value=""
   variant="search"
 />
 `;
 
+exports[`Select should render a select with an optgroup and an option 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-12"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-labelledby="terra-select-screen-reader-label-9 terra-select-screen-reader-display-10 terra-select-screen-reader-placeholder-11"
+  class="select default"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  role="combobox"
+  tabindex="0"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-9"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-12"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
+    </span>
+  </div>
+  <div
+    class="display"
+    role="textbox"
+  >
+    <div
+      class="placeholder"
+      id="terra-select-screen-reader-placeholder-11"
+    >
+      Terra.form.select.defaultDisplay
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Select should render a select with an optgroup and multiple options 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-16"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-labelledby="terra-select-screen-reader-label-13 terra-select-screen-reader-display-14 terra-select-screen-reader-placeholder-15"
+  class="select default"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  role="combobox"
+  tabindex="0"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-13"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-16"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
+    </span>
+  </div>
+  <div
+    class="display"
+    role="textbox"
+  >
+    <div
+      class="placeholder"
+      id="terra-select-screen-reader-placeholder-15"
+    >
+      Terra.form.select.defaultDisplay
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Select should render a select with an option 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-4"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-labelledby="terra-select-screen-reader-label-1 terra-select-screen-reader-display-2 terra-select-screen-reader-placeholder-3"
+  class="select default"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  role="combobox"
+  tabindex="0"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-1"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-4"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
+    </span>
+  </div>
+  <div
+    class="display"
+    role="textbox"
+  >
+    <div
+      class="placeholder"
+      id="terra-select-screen-reader-placeholder-3"
+    >
+      Terra.form.select.defaultDisplay
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Select should render a select with multiple options 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-8"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-labelledby="terra-select-screen-reader-label-5 terra-select-screen-reader-display-6 terra-select-screen-reader-placeholder-7"
+  class="select default"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  role="combobox"
+  tabindex="0"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-5"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-8"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
+    </span>
+  </div>
+  <div
+    class="display"
+    role="textbox"
+  >
+    <div
+      class="placeholder"
+      id="terra-select-screen-reader-placeholder-7"
+    >
+      Terra.form.select.defaultDisplay
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
 exports[`Select should render a tag variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -611,13 +864,15 @@ exports[`Select should render a tag variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
 `;
 
 exports[`Select should render a tag variant with a placeholder 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -652,13 +907,15 @@ exports[`Select should render a tag variant with a placeholder 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Placeholder"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
 `;
 
 exports[`Select should render an invalid combobox variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -693,13 +950,15 @@ exports[`Select should render an invalid combobox variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />
 `;
 
 exports[`Select should render an invalid default variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display=""
   dropdown={[Function]}
@@ -734,13 +993,15 @@ exports[`Select should render an invalid default variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value=""
   variant="default"
 />
 `;
 
 exports[`Select should render an invalid multiple variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -775,13 +1036,15 @@ exports[`Select should render an invalid multiple variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="multiple"
 />
 `;
 
 exports[`Select should render an invalid search variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display=""
   dropdown={[Function]}
@@ -816,13 +1079,15 @@ exports[`Select should render an invalid search variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value=""
   variant="search"
 />
 `;
 
 exports[`Select should render an invalid tag variant 1`] = `
-<Frame
+<InjectIntl(Frame)
+  data-terra-select={true}
   disabled={false}
   display={Array []}
   dropdown={[Function]}
@@ -857,6 +1122,7 @@ exports[`Select should render an invalid tag variant 1`] = `
   onDeselect={[Function]}
   onSelect={[Function]}
   placeholder="Terra.form.select.defaultDisplay"
+  totalOptions={0}
   value={Array []}
   variant="tag"
 />

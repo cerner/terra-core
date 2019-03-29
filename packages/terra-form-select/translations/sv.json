@@ -1,7 +1,21 @@
 {
   "Terra.form.select.add": "Lägg till \"{text}\"",
+  "Terra.form.select.ariaLabel": "Sök",
   "Terra.form.select.defaultDisplay": "- Välj -",
-  "Terra.form.select.noResults": "Inga matchande resultat för \"{text}\"",
   "Terra.form.select.maxSelectionHelp": "Begränsa {text} antal poster.",
-  "Terra.form.select.maxSelectionOption": "Max antal poster {text} är valda"
+  "Terra.form.select.maxSelectionOption": "Max antal poster {text} är valda",
+  "Terra.form.select.noResults": "Inga matchande resultat för \"{text}\"",
+  "Terra.form.select.selectedText": "{text} vald.",
+  "Terra.form.select.selected": "Vald.",
+  "Terra.form.select.unselected": "Omarkerad.",
+  "Terra.form.select.disabled": "Inaktiverad.",
+  "Terra.form.select.dimmed": "Inaktiverad.",
+  "Terra.form.select.listOfTotalOptions": "Lista med {total} alternativ.",
+  "Terra.form.select.defaultUsageGuidance": "Använd upp- och nedpilarna för att navigera mellan alternativen. Tryck på Enter för att väklja ett alternativ.",
+  "Terra.form.select.mobileUsageGuidance": "Bläddra åt höger för att navigera till alternativen.",
+  "Terra.form.select.mobileButtonUsageGuidance": "Tryck för att navigera till alternativen.",
+  "Terra.form.select.multiSelectUsageGuidance": "Ange text eller använd upp- och nedpilarna för att navigera genom alternativen. Tryck på Enter för att markera eller avmarkera ett alternativ.",
+  "Terra.form.select.searchUsageGuidance": "Ange text eller använd upp- och nedpilarna för att navigera genom alternativen. Tryck på Enter för att välja ett alternativ.",
+  "Terra.form.select.clearSelect": "Ta bort markering",
+  "Terra.form.select.selectCleared": "Välj omarkerat värde"
 }

@@ -19,13 +19,11 @@ const propTypes = {
   messages: PropTypes.object.isRequired,
 };
 
-const I18nProvider = ({
-  children, locale, messages, ...customProps
-}) => (
+const I18nProvider = ({ children, locale, messages }) => (
   <IntlProvider locale={locale} key={locale} messages={messages}>
-    <div {...customProps}>
+    <React.Fragment>
       {children}
-    </div>
+    </React.Fragment>
   </IntlProvider>
 );
 

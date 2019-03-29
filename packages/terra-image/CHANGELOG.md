@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Fixed alt text in invalid src prop example
+
+3.5.0 - (March 26, 2019)
+------------------
+### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
 * Added alt text to doc example images
 
