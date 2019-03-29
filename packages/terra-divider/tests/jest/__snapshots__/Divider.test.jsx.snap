@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Divider it should pass in a custom prop 1`] = `
-<div
+<hr
   aria-hidden="true"
   className="divider"
   id="testDivider"
@@ -10,15 +10,18 @@ exports[`Divider it should pass in a custom prop 1`] = `
 
 exports[`Divider it should pass in a string of text 1`] = `
 <div
-  aria-hidden="true"
-  className="divider divider-text"
-  data-content="Divider Test String"
-  id="testDivider"
-/>
+  className="divider-container"
+>
+  <span
+    className="divider-text"
+  >
+    Divider Test String
+  </span>
+</div>
 `;
 
 exports[`Divider should render a basic component 1`] = `
-<div
+<hr
   aria-hidden="true"
   className="divider"
 />

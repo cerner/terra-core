@@ -10,13 +10,13 @@ describe('Divider', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-divider-before-background-color': '#ff0000',
+        '--terra-divider-border-color': '#ff0000',
       },
     });
   });
 
   describe('Custom Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-divider/divider/custom-divider'));
+    before(() => browser.url('/#/raw/tests/terra-divider/divider/divider-with-text'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -24,12 +24,15 @@ describe('Divider', () => {
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
-        '--terra-divider-before-background-color': '#0079BE',
-        '--terra-divider-after-text-color': '#ff0000',
-        '--terra-divider-after-text-margin-bottom': '0.5rem',
-        '--terra-divider-after-text-margin-top': '0.5rem',
-        '--terra-divider-after-text-padding-left': '1.0rem',
-        '--terra-divider-after-text-padding-right': '1.0rem',
+        '--terra-divider-border-color': '#0079BE',
+        '--terra-divider-border-top-width': '3px',
+        '--terra-divider-text-color': '#007901',
+        '--terra-divider-text-font-size': '1rem',
+        '--terra-divider-text-font-style': 'italic',
+        '--terra-divider-text-font-weight': 'normal',
+        '--terra-divider-text-line-height': '1.5',
+        '--terra-divider-text-padding-left': '1rem',
+        '--terra-divider-text-padding-right': '1rem',
       },
     });
   });
