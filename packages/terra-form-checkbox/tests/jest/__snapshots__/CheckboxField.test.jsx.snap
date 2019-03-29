@@ -3,9 +3,37 @@
 exports[`should display the required icon for fields with hideRequired, but have a state of invalid 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group"
+    id="terra-checkbox-field-description-9"
   >
     <div
       className="legend"
@@ -27,9 +55,37 @@ exports[`should display the required icon for fields with hideRequired, but have
 exports[`should hide the legend when requested 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group legend-group-hidden"
+    id="terra-checkbox-field-description-11"
   >
     <div
       class="application-legend"
@@ -47,9 +103,37 @@ exports[`should hide the legend when requested 1`] = `
 exports[`should hide the required indicator when requested 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group"
+    id="terra-checkbox-field-description-8"
   >
     <div
       className="legend"
@@ -71,9 +155,37 @@ exports[`should hide the required indicator when requested 1`] = `
 exports[`should render a default checkbox field 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group"
+    id="terra-checkbox-field-description-1"
   >
     <div
       className="legend"
@@ -90,9 +202,37 @@ exports[`should render a default checkbox field 1`] = `
 exports[`should render a help message 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group"
+    id="terra-checkbox-field-description-4"
   >
     <div
       className="legend"
@@ -105,6 +245,7 @@ exports[`should render a help message 1`] = `
   </legend>
   <div
     className="help-text"
+    id="terra-checkbox-field-description-help-5"
   >
     This will help up determine how many chairs to request
   </div>
@@ -114,9 +255,37 @@ exports[`should render a help message 1`] = `
 exports[`should render an invalid checkbox field 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group"
+    id="terra-checkbox-field-description-2"
   >
     <div
       className="legend"
@@ -129,6 +298,7 @@ exports[`should render an invalid checkbox field 1`] = `
   </legend>
   <div
     className="error-text"
+    id="terra-checkbox-field-description-error-3"
   >
     Test Error
   </div>
@@ -138,9 +308,37 @@ exports[`should render an invalid checkbox field 1`] = `
 exports[`should render an optional part on the label 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group"
+    id="terra-checkbox-field-description-6"
   >
     <div
       className="legend"
@@ -149,7 +347,7 @@ exports[`should render an optional part on the label 1`] = `
       <span
         className="optional"
       >
-        (optional)
+        Terra.form.field.optional
       </span>
       <span
         className="error-icon-hidden"
@@ -162,9 +360,37 @@ exports[`should render an optional part on the label 1`] = `
 exports[`should render required checkbox field 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group"
+    id="terra-checkbox-field-description-7"
   >
     <div
       className="legend"
@@ -186,9 +412,37 @@ exports[`should render required checkbox field 1`] = `
 exports[`should render the legend with custom attributes properly 1`] = `
 <fieldset
   className="checkbox-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
 >
   <legend
     className="legend-group"
+    id="terra-checkbox-field-description-10"
   >
     <div
       class="application-legend"

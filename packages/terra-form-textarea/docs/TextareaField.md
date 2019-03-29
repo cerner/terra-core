@@ -8,22 +8,6 @@
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-form-textarea`
 
-## Usage
-
-```jsx
-import React from 'react';
-import TextareaField from 'terra-form-textarea/lib/TextareaField';
-
-<TextareaField
-  inputId="textarea-id"
-  name="description"
-  value="I'm a software engineer working at Cerner"
-  required
-  label="Enter a Description"
-  isInline
-/>
-```
-
 ## Component Features
 
  * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)

@@ -5,37 +5,27 @@ import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import FormInputFieldSrc from '!raw-loader!../../../../src/InputField';
+import InputFieldSrc from '!raw-loader!../../../../src/InputField';
 
 // Example Files
-import InputField from '../../../InputField';
+import InputFieldExample from '../example/InputField';
+import InputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/InputField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 const DocPage = () => (
   <DocTemplate
     packageName={name}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    examples={[
-      {
-        example: (
-          <InputField
-            inputId="Profile Name"
-            label="Profile Name"
-            help="Note: This can not be changed in the future"
-            inputAttrs={{
-              placeholder: 'Profile Name',
-              name: 'profile',
-              type: 'text',
-            }}
-          />
-        ),
-      },
-    ]}
     propsTables={[
       {
-        componentName: 'Form Input Field',
-        componentSrc: FormInputFieldSrc,
+        componentName: 'InputField',
+        componentSrc: InputFieldSrc,
+      },
+    ]}
+    examples={[
+      {
+        example: <InputFieldExample />,
+        source: InputFieldExampleSrc,
       },
     ]}
   />

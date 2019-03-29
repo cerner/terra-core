@@ -1,7 +1,7 @@
 {
   "name": "terra-table",
   "main": "lib/Table.js",
-  "version": "3.6.0",
+  "version": "3.8.0",
   "description": "The terra-table component provides user a way to render data in a tabular format",
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
     "react-intl": "^2.3.0"
   },
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
     "react-intl": "^2.4.0",
     "terra-base": "^4.0.0"
   },
@@ -33,8 +33,8 @@
     "classnames": "^2.2.5",
     "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.5.0",
-    "terra-icon": "^3.4.0"
+    "terra-doc-template": "^2.7.0",
+    "terra-icon": "^3.6.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

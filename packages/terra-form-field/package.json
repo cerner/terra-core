@@ -1,7 +1,7 @@
 {
   "name": "terra-form-field",
   "main": "lib/Field.js",
-  "version": "3.4.0",
+  "version": "3.6.0",
   "description": "The Form Field component handles the layout of the label, help text and error text associated with a form element.",
   "repository": {
     "type": "git",
@@ -20,19 +20,16 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "devDependencies": {
-    "react-intl": "^2.4.0"
-  },
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-intl": "^2.8.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.5.0",
-    "terra-icon": "^3.4.0"
+    "terra-doc-template": "^2.7.0",
+    "terra-icon": "^3.6.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
