@@ -1,13 +1,15 @@
 :local {
   .searchfield {
     display: inline-flex;
+    width: 15.31em;
 
     .cancel {
       background: transparent;
       border-style: none;
       display: inline-block;
+      flex: 0 0 auto;
       margin-left: -2em;
-      z-index: 2;
+      z-index: 1;
     }
 
     .input {
@@ -29,6 +31,10 @@
       }
     }
 
+    .input-cancel {
+      padding-right: 1.5em;
+    }
+
     .button {
       border: var(--terra-search-field-button-border, 1px solid #dedfe0);
       border-bottom-left-radius: 0;
@@ -43,6 +49,7 @@
       margin-left: var(--terra-search-field-button-margin-left, -1px);
       margin-right: var(--terra-search-field-button-margin-right, 0);
       margin-top: var(--terra-search-field-button-margin-top, 0);
+      z-index: 1;
 
       &:focus {
         box-shadow: var(--terra-search-field-button-focus-box-shadow);
@@ -52,6 +59,7 @@
 
   .block {
     display: flex;
+    width: 100%;
   }
 
   .input::-webkit-search-cancel-button {
