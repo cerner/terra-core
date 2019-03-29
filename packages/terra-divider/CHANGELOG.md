@@ -3,12 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Divider migrated from horizontal rule to div
-
 ### Added
-* Prop added to Divider to allow adding text inside divider
+* Separate div, props, and styling to allow inserting text into divider
 * CSS variables added for theming text and divider
+* Tests added for text divider
 
 3.5.0 - (March 26, 2019)
 ------------------
