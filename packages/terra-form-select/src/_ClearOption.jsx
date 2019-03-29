@@ -24,6 +24,7 @@ const ClearOption = ({ display, value, ...customProps }) => (
     display={display}
     value={value}
     isSelected={false}
+    data-terra-select-clear-option
   />
 );
 
