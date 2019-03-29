@@ -186,8 +186,8 @@ const Field = (props, { intl }) => {
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
       {children}
-      {isInvalid && error && <div tabIndex="-1" id={`${htmlFor}-error`} className={cx('error-text')}>{error}</div>}
-      {help && <div tabIndex="-1" id={`${htmlFor}-help`} className={cx('help-text')}>{help}</div>}
+      {isInvalid && error && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
+      {help && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
     </div>
   );
 };
