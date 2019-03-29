@@ -39,6 +39,15 @@ const defaultProps = {
   selectedIndexes: [],
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
 class SelectableTableRows extends React.Component {
   constructor(props) {
     super(props);
@@ -52,16 +61,28 @@ class SelectableTableRows extends React.Component {
       this.props.onChange(event, index);
     }
 
-    if (!document.activeElement.hasAttribute('aria-label')) {
+    const selectedRow = event.currentTarget;
+    if (!selectedRow.hasAttribute('aria-label')) {
       // Aria-Label is being populated with the cell contents for screen reader to read it as whole instead of cell value.
-      const ariaLabel = 'row selected';
-      document.activeElement.setAttribute('aria-label', ariaLabel);
+      let ariaLabel = this.context.intl.formatMessage({ id: 'Terra.table.selectabletablerows.selectedRow' });
+      const cellCount = selectedRow.children.length;
+      for (let columnIndex = 0; columnIndex < cellCount; columnIndex += 1) {
+        ariaLabel += ` ${selectedRow.children[columnIndex].innerText}`;
+      }
+      event.currentTarget.setAttribute('aria-label', ariaLabel);
     }
   }
 
   handleOnBlur(event, index) {
     if (this.props.onBlur) {
       this.props.onBlur(event, index);
+    }
+
+    const selectedRow = event.currentTarget;
+    if (selectedRow.getAttributeNode('aria-selected').value === 'false') {
+      if (selectedRow.hasAttribute('aria-label')) {
+        selectedRow.removeAttribute('aria-label');
+      }
     }
   }
 
@@ -71,14 +92,6 @@ class SelectableTableRows extends React.Component {
     return (event) => {
       if (row.props.isSelectable !== false) {
         this.handleOnBlur(event, index);
-      }
-
-      const rowGroup = document.querySelector('[data-terra-row-group]');
-      const selectedRow = rowGroup.children[index];
-      if (!selectedRow.getAttribute('aria-selected')) {
-        if (selectedRow.hasAttribute('aria-label')) {
-          selectedRow.removeAttribute('aria-label');
-        }
       }
 
       if (initialOnBlur) {
@@ -121,9 +134,8 @@ class SelectableTableRows extends React.Component {
   newPropsForRow(row, index, onClick, onKeyDown, onBlur) {
     const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
     const newProps = { };
-
     // Set the isSelected attribute to false for all the rows except the rows whose index is set to state selectedIndex.
-    if (isSelected !== row.props.isSelected) {
+    if ((isSelected) || (row.props.isSelected)) {
       newProps.isSelected = isSelected;
     }
 
@@ -157,7 +169,7 @@ class SelectableTableRows extends React.Component {
         const wrappedOnBlur = this.wrappedOnBlur(row, index);
         const newProps = this.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown, wrappedOnBlur);
         if (newProps.isSelected) {
-          let ariaLabel = 'pre-selected row';
+          let ariaLabel = this.context.intl.formatMessage({ id: 'Terra.table.selectabletablerows.selectedRow' }); // 'Row Selected';
           const cells = row.props.children;
           for (let columnIndex = 0; columnIndex < cells.length; columnIndex += 1) {
             ariaLabel += ` ${cells[columnIndex].props.content}`;
@@ -176,9 +188,8 @@ class SelectableTableRows extends React.Component {
       children, disableUnselectedRows, onChange, onBlur, selectedIndexes, ...customProps
     } = this.props;
     const clonedChildItems = this.clonedChildItems(children);
-
     return (
-      <TableRows data-terra-row-group {...customProps}>
+      <TableRows {...customProps}>
         {clonedChildItems}
       </TableRows>
     );
@@ -189,5 +200,6 @@ SelectableTableRows.propTypes = propTypes;
 SelectableTableRows.defaultProps = defaultProps;
 SelectableTableRows.Row = TableRow;
 SelectableTableRows.Utils = SelectableUtils;
+SelectableTableRows.contextTypes = contextTypes;
 
 export default SelectableTableRows;

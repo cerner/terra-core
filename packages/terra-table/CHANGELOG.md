@@ -5,8 +5,8 @@ Unreleased
 ----------
 ### Added
 * Added ARIA Roles for table row and table headers
-* Added onFocus and OnBlur functions in selectablerows to add ARIA Labels for rows to improve accessibillity
-* Added ComponentDidMount to add ARIA labels for pre-selected rows
+* Added ARIA label for pre-selected and selected rows
+* Added Translations for selectableTableRows
 
 ------------------
 ### Changed
