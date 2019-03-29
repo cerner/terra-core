@@ -23,6 +23,10 @@ const propTypes = {
    */
   defaultValue: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string]),
   /**
+   * Whether the input is disabled.
+   */
+  disabled: PropTypes.bool,
+  /**
    * Error message displayed when the select is invalid.
    */
   error: PropTypes.node,
@@ -106,6 +110,7 @@ const defaultProps = {
   allowClear: false,
   children: undefined,
   defaultValue: undefined,
+  disabled: null,
   error: undefined,
   help: undefined,
   hideRequired: false,
@@ -138,6 +143,7 @@ const SelectField = ({
   allowClear,
   children,
   defaultValue,
+  disabled,
   error,
   help,
   hideRequired,
@@ -189,6 +195,12 @@ const SelectField = ({
     }
   }
 
+  let isDisabled;
+
+  if (selectAttrs.disabled) {
+    isDisabled = true;
+  }
+
   return (
     <Field
       {...customProps}
@@ -209,6 +221,7 @@ const SelectField = ({
         {...selectAttrs}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
+        disabled={isDisabled || disabled}
         id={selectId}
         isInvalid={isInvalid}
         defaultValue={defaultValue}

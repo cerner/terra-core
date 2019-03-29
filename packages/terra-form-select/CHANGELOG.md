@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added a dual means of disabling field component
 
 5.11.0 - (March 26, 2019)
 ------------------

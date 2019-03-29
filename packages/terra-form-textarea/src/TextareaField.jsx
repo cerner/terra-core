@@ -21,6 +21,10 @@ const propTypes = {
     PropTypes.number,
   ]),
   /**
+   * Whether the input is disabled.
+   */
+  disabled: PropTypes.bool,
+  /**
    * Error message for when the input is invalid.
    */
   error: PropTypes.node,
@@ -86,6 +90,7 @@ const propTypes = {
 
 const defaultProps = {
   defaultValue: undefined,
+  disabled: null,
   error: null,
   errorIcon: Field.defaultProps.errorIcon,
   help: null,
@@ -105,6 +110,7 @@ const defaultProps = {
 const TextareaField = (props) => {
   const {
     defaultValue,
+    disabled,
     error,
     errorIcon,
     help,
@@ -138,6 +144,12 @@ const TextareaField = (props) => {
     }
   }
 
+  let isDisabled;
+
+  if (inputAttrs.disabled) {
+    isDisabled = true;
+  }
+
   return (
     <Field
       {...customProps}
@@ -157,6 +169,7 @@ const TextareaField = (props) => {
     >
       <Textarea
         {...inputAttrs}
+        disabled={isDisabled || disabled}
         id={inputId}
         onChange={onChange}
         value={value}
