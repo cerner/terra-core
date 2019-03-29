@@ -33,7 +33,7 @@ exports[`should display the required icon for fields with hideRequired, but have
 >
   <legend
     className="legend-group"
-    id="terra-radio-field-description-11"
+    id="terra-radio-field-description-10"
   >
     <div
       className="legend"
@@ -85,7 +85,7 @@ exports[`should hide the legend when requested 1`] = `
 >
   <legend
     className="legend-group legend-group-hidden"
-    id="terra-radio-field-description-12"
+    id="terra-radio-field-description-11"
   >
     <div
       class="application-legend"
@@ -133,7 +133,7 @@ exports[`should hide the required indicator when requested 1`] = `
 >
   <legend
     className="legend-group"
-    id="terra-radio-field-description-9"
+    id="terra-radio-field-description-8"
   >
     <div
       className="legend"
@@ -199,7 +199,7 @@ exports[`should render a default radio field 1`] = `
 </fieldset>
 `;
 
-exports[`should render a default radio field without crashing if it has an undefined child 1`] = `
+exports[`should render a default radio field if it has an invalid child 1`] = `
 <fieldset
   className="radio-field"
   intl={
@@ -232,7 +232,59 @@ exports[`should render a default radio field without crashing if it has an undef
 >
   <legend
     className="legend-group"
-    id="terra-radio-field-description-2"
+    id="terra-radio-field-description-13"
+  >
+    <div
+      className="legend"
+    >
+      Default RadioField
+      <span
+        className="error-icon-hidden"
+      />
+    </div>
+  </legend>
+  <Text
+    key=".0"
+  >
+    Test
+  </Text>
+</fieldset>
+`;
+
+exports[`should render a default radio field if it has an undefined child 1`] = `
+<fieldset
+  className="radio-field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <legend
+    className="legend-group"
+    id="terra-radio-field-description-12"
   >
     <div
       className="legend"
@@ -279,7 +331,7 @@ exports[`should render a help message 1`] = `
 >
   <legend
     className="legend-group"
-    id="terra-radio-field-description-5"
+    id="terra-radio-field-description-4"
   >
     <div
       className="legend"
@@ -292,7 +344,7 @@ exports[`should render a help message 1`] = `
   </legend>
   <div
     className="help-text"
-    id="terra-radio-field-description-help-6"
+    id="terra-radio-field-description-help-5"
   >
     This will help up determine how many chairs to request
   </div>
@@ -332,7 +384,7 @@ exports[`should render an invalid radio field 1`] = `
 >
   <legend
     className="legend-group"
-    id="terra-radio-field-description-3"
+    id="terra-radio-field-description-2"
   >
     <div
       className="legend"
@@ -345,7 +397,7 @@ exports[`should render an invalid radio field 1`] = `
   </legend>
   <div
     className="error-text"
-    id="terra-radio-field-description-error-4"
+    id="terra-radio-field-description-error-3"
   >
     Test Error
   </div>
@@ -385,7 +437,7 @@ exports[`should render an optional part on the label 1`] = `
 >
   <legend
     className="legend-group"
-    id="terra-radio-field-description-7"
+    id="terra-radio-field-description-6"
   >
     <div
       className="legend"
@@ -437,7 +489,7 @@ exports[`should render required radio field 1`] = `
 >
   <legend
     className="legend-group"
-    id="terra-radio-field-description-8"
+    id="terra-radio-field-description-7"
   >
     <div
       className="legend"
@@ -489,7 +541,7 @@ exports[`should render the legend with custom attributes properly 1`] = `
 >
   <legend
     className="legend-group"
-    id="terra-radio-field-description-10"
+    id="terra-radio-field-description-9"
   >
     <div
       class="application-legend"
