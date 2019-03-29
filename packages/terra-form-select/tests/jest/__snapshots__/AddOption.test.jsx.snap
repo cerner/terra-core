@@ -2,6 +2,7 @@
 
 exports[`AddOption should render a default AddOption 1`] = `
 <Option
+  data-terra-select-add-option={true}
   disabled={false}
   display="Terra.form.select.add"
   intl={

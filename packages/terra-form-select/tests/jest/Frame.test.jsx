@@ -121,16 +121,6 @@ describe('Frame', () => {
     expect(mockBlur).toBeCalled();
   });
 
-  it('should update the aria-live text when the search has no results', () => {
-    const wrapper = mount(<Frame variant="tag" dropdown={() => <div>Custom</div>} />);
-
-    wrapper.setState({ searchValue: 'qwqerewqrwqer' });
-    jest.useFakeTimers();
-    jest.runOnlyPendingTimers();
-
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should render a clear option', () => {
     const wrapper = shallowWithIntl(<Frame clearOptionDisplay="-Select-" />);
     expect(wrapper).toMatchSnapshot();

@@ -150,18 +150,6 @@ const Field = (props, { intl }) => {
     }
   }
 
-  let helpTextId;
-  let errorTextId;
-
-  if (htmlFor) {
-    /**
-     * IE + JAWS has trouble reading aria-describedby content with our form components.
-     * In that browser, we don't want an ID for the aria-describedby content so we have a
-     * Microsoft specific feature detect to flex on if the ID is undefined or valid.
-     */
-    helpTextId = !isIE() ? `${htmlFor}-help` : undefined;
-    errorTextId = !isIE() ? `${htmlFor}-error` : undefined;
-  }
 
   /**
    * IE + JAWS has trouble reading aria-describedby content with our form components.
@@ -198,8 +186,8 @@ const Field = (props, { intl }) => {
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
       {children}
-      {isInvalid && error && <div id={errorTextId} className={cx('error-text')}>{error}</div>}
-      {help && <div id={helpTextId} className={cx('help-text')}>{help}</div>}
+      {isInvalid && error && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
+      {help && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
     </div>
   );
 };
