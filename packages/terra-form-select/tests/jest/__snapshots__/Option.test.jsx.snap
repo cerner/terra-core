@@ -4,8 +4,10 @@ exports[`Option should render a default Option 1`] = `
 <li
   aria-disabled={false}
   className="option is-default"
+  data-terra-select-option={true}
   disabled={false}
   role="option"
+  tabIndex="0"
 >
   <span
     className="display"
@@ -19,8 +21,10 @@ exports[`Option should render a disabled Option 1`] = `
 <li
   aria-disabled={true}
   className="option is-default is-disabled"
+  data-terra-select-option={true}
   disabled={true}
   role="option"
+  tabIndex="0"
 >
   <span
     className="display"

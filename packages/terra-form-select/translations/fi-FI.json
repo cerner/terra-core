@@ -1,7 +1,21 @@
 {
   "Terra.form.select.add": "Lisätä \"{text}\"",
+  "Terra.form.select.ariaLabel": "Haku",
   "Terra.form.select.defaultDisplay": "- Valitat -",
-  "Terra.form.select.noResults": "Ei ole vastaavia tuloksia \"{text}\"",
   "Terra.form.select.maxSelectionHelp": "Rajoita {text} kohdetta.",
-  "Terra.form.select.maxSelectionOption": "Valittujen {text} kohtien enimmäismäärä"
+  "Terra.form.select.maxSelectionOption": "Valittujen {text} kohtien enimmäismäärä",
+  "Terra.form.select.noResults": "Ei ole vastaavia tuloksia \"{text}\"",
+  "Terra.form.select.selectedText": "{text} Valittu.",
+  "Terra.form.select.selected": "Valittu.",
+  "Terra.form.select.unselected": "Valitsematon.",
+  "Terra.form.select.disabled": "Liikuntarajoitteinen.",
+  "Terra.form.select.dimmed": "Himmeänä.",
+  "Terra.form.select.listOfTotalOptions": "Luettelo {total} vaihtoehdoista.",
+  "Terra.form.select.defaultUsageGuidance": "Käytä nuolinäppäimiä navigoidaksesi vaihtoehtoja. Valitse vaihtoehto painamalla Enter.",
+  "Terra.form.select.mobileUsageGuidance": "Pyyhkäise oikealle navigoidaksesi asetuksiin.",
+  "Terra.form.select.mobileButtonUsageGuidance": "Napauta navigoidaksesi asetuksiin.",
+  "Terra.form.select.multiSelectUsageGuidance": "Syötä tekstiä tai käytä ylä- ja alanuolinäppäimiä selaamalla vaihtoehtoja. Valitse tai poista valinta painamalla enter-näppäintä.",
+  "Terra.form.select.searchUsageGuidance": "Syötä tekstiä tai käytä ylä- ja alanuolinäppäimiä selaamalla vaihtoehtoja. Valitse vaihtoehto painamalla Enter.",
+  "Terra.form.select.clearSelect": "Tyhjennä valinta",
+  "Terra.form.select.selectCleared": "Valitse poistettu arvo"
 }

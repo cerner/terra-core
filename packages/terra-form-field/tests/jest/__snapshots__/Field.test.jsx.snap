@@ -36,6 +36,7 @@ exports[`should render a field error message 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
     </label>
@@ -87,6 +88,7 @@ exports[`should render a field help message 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
     </label>
@@ -101,6 +103,8 @@ exports[`should render a field help message 1`] = `
   </div>
   <div
     className="help-text"
+    id="test-help"
+    tabIndex="-1"
   >
     Help Text
   </div>
@@ -151,17 +155,22 @@ exports[`should render a field in error 1`] = `
     </div>
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
     </label>
   </div>
   <div
     className="error-text"
+    id="test-error"
+    tabIndex="-1"
   >
     Error Text
   </div>
   <div
     className="help-text"
+    id="test-help"
+    tabIndex="-1"
   >
     Help Text
   </div>
@@ -204,6 +213,7 @@ exports[`should render a field label 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
     </label>
@@ -255,6 +265,7 @@ exports[`should render a field with a custom error icon 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
     </label>
@@ -306,6 +317,7 @@ exports[`should render a field with a hidden label 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
     </label>
@@ -365,17 +377,22 @@ exports[`should render a field with a hidden label in error 1`] = `
     </div>
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
     </label>
   </div>
   <div
     className="error-text"
+    id="test-error"
+    tabIndex="-1"
   >
     Error Text
   </div>
   <div
     className="help-text"
+    id="test-help"
+    tabIndex="-1"
   >
     Help Text
   </div>
@@ -426,6 +443,7 @@ exports[`should render a required field in error 1`] = `
     </div>
     <label
       className="label"
+      htmlFor="test"
     >
       <div
         className="required"
@@ -437,11 +455,15 @@ exports[`should render a required field in error 1`] = `
   </div>
   <div
     className="error-text"
+    id="test-error"
+    tabIndex="-1"
   >
     Error Text
   </div>
   <div
     className="help-text"
+    id="test-help"
+    tabIndex="-1"
   >
     Help Text
   </div>
@@ -484,6 +506,7 @@ exports[`should render a required field label 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       <div
         className="required"
@@ -540,6 +563,7 @@ exports[`should render a required field label with required hidden 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
       <div
@@ -596,6 +620,7 @@ exports[`should render a required field with a hidden label 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       <div
         className="required"
@@ -660,6 +685,7 @@ exports[`should render a required field with a hidden label in error 1`] = `
     </div>
     <label
       className="label"
+      htmlFor="test"
     >
       <div
         className="required"
@@ -671,11 +697,15 @@ exports[`should render a required field with a hidden label in error 1`] = `
   </div>
   <div
     className="error-text"
+    id="test-error"
+    tabIndex="-1"
   >
     Error Text
   </div>
   <div
     className="help-text"
+    id="test-help"
+    tabIndex="-1"
   >
     Help Text
   </div>
@@ -738,6 +768,7 @@ exports[`should render an inline field with most of the possible props are passe
   <div
     className="help-text"
     id="test-help"
+    tabIndex="-1"
   >
     This is a test input
   </div>
@@ -788,6 +819,7 @@ exports[`should render an optional field in error 1`] = `
     </div>
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
       <div
@@ -799,11 +831,15 @@ exports[`should render an optional field in error 1`] = `
   </div>
   <div
     className="error-text"
+    id="test-error"
+    tabIndex="-1"
   >
     Error Text
   </div>
   <div
     className="help-text"
+    id="test-help"
+    tabIndex="-1"
   >
     Help Text
   </div>
@@ -846,6 +882,7 @@ exports[`should render an optional field label 1`] = `
   >
     <label
       className="label"
+      htmlFor="test"
     >
       Field Label
       <div
