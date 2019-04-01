@@ -13,29 +13,6 @@ describe('Menu', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a Menu with an add option and set the screen reader region to blank', () => {
-    const liveRegion = { current: document.createElement('div') };
-
-    jest.useFakeTimers();
-
-    const menu = (
-      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} variant="tag" value="value" searchValue="value">
-        <Option value="value" display="display" />
-      </Menu>
-    );
-
-    jest.useFakeTimers();
-
-    const wrapper = shallowWithIntl(menu);
-
-    wrapper.setState({ searchValue: 'value' });
-
-    jest.runOnlyPendingTimers();
-
-    expect(wrapper).toMatchSnapshot();
-    expect(liveRegion.current.innerText).toEqual('');
-  });
-
   it('should render a Menu with no results and update the live region appropriately', () => {
     const liveRegion = { current: document.createElement('div') };
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
