@@ -1,7 +1,7 @@
 :local {
   .searchfield {
     display: inline-flex;
-    width: 15.31em;
+    width: var(--terra-search-field-width, 15.31em);
 
     .cancel {
       background: transparent;
@@ -63,6 +63,7 @@
   }
 
   .input::-webkit-search-cancel-button {
+    // Remove webkit search clear functionality
     display: none;
   }
 
