@@ -107,7 +107,7 @@ class SearchField extends React.Component {
     super(props);
 
     this.handleCancel = this.handleCancel.bind(this);
-    this.handleOnClick = this.handleOnClick.bind(this);
+    this.handleOnFocus = this.handleOnFocus.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -145,14 +145,14 @@ class SearchField extends React.Component {
     }
   }
 
-  handleOnClick(event) {
+  handleOnFocus(event) {
     if (this.state.previouslyFocusedInput !== event.currentTarget) {
       this.setState({ previouslyFocusedInput: event.currentTarget });
     }
   }
 
   handleTextChange(event) {
-    this.handleOnClick(event);
+    this.handleOnFocus(event);
 
     const textValue = event.target.value;
     this.updateSearchText(textValue);
@@ -236,37 +236,20 @@ class SearchField extends React.Component {
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
-        { defaultValue
-          ? (
-            <Input
-              defaultValue={defaultValue}
-              className={inputClassNames}
-              type="search"
-              placeholder={placeholder}
-              onChange={this.handleTextChange}
-              onClick={this.handleOnClick}
-              disabled={isDisabled}
-              aria-disabled={isDisabled}
-              onKeyDown={this.handleKeyDown}
-              refCallback={inputRefCallback}
-              {...additionalInputAttributes}
-            />
-          )
-          : (
-            <Input
-              className={inputClassNames}
-              type="search"
-              placeholder={placeholder}
-              onChange={this.handleTextChange}
-              disabled={isDisabled}
-              aria-disabled={isDisabled}
-              onKeyDown={this.handleKeyDown}
-              refCallback={inputRefCallback}
-              value={this.state.searchText}
-              {...additionalInputAttributes}
-            />
-          )
-        }
+        <Input
+          defaultValue={defaultValue}
+          className={inputClassNames}
+          type="search"
+          placeholder={placeholder}
+          onChange={this.handleTextChange}
+          onFocus={this.handleOnFocus}
+          disabled={isDisabled}
+          aria-disabled={isDisabled}
+          onKeyDown={this.handleKeyDown}
+          refCallback={inputRefCallback}
+          value={defaultValue ? undefined : this.state.searchText}
+          {...additionalInputAttributes}
+        />
         { this.state.previouslyFocusedInput && this.state.searchText
           ? (
             <Button
