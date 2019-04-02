@@ -164,7 +164,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        title="Terra.searchField.submit-search"
         type="button"
       >
         <span
