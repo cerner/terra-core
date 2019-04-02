@@ -130,11 +130,12 @@ class SearchField extends React.Component {
     if (this.props.onChange) {
       this.props.onChange(event, '');
     }
-    this.setState({ searchText: '' });
 
     if (this.props.onInvalidSearch) {
       this.props.onInvalidSearch('');
     }
+
+    this.setState({ searchText: '' });
 
     if (this.currentlyFocusedInput) {
       this.currentlyFocusedInput.focus();
@@ -210,14 +211,16 @@ class SearchField extends React.Component {
       ...customProps
     } = this.props;
 
-    const cancelButtonVisible = this.state.searchText ? 'input-cancel' : undefined;
+    const cancelButtonVisible = !defaultValue && this.state.searchText ? 'input-cancel' : undefined;
     const inputClassNames = cx([
       'input',
       cancelButtonVisible,
     ]);
 
+    const webkitCancel = defaultValue ? 'webkit-cancel-on' : 'webkit-cancel-off';
     const searchFieldClassNames = cx([
       'searchfield',
+      webkitCancel,
       { block: isBlock },
       customProps.className,
     ]);
@@ -225,13 +228,6 @@ class SearchField extends React.Component {
     const inputText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
-
-    let isControlledInput;
-    if (defaultValue && this.state.searchText === defaultValue) {
-      isControlledInput = undefined;
-    } else {
-      isControlledInput = this.state.searchText;
-    }
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
@@ -245,10 +241,10 @@ class SearchField extends React.Component {
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
           refCallback={inputRefCallback}
-          value={isControlledInput}
+          value={defaultValue ? undefined : this.state.searchText}
           {...additionalInputAttributes}
         />
-        { this.state.searchText
+        { !defaultValue && this.state.searchText
           ? (
             <Button
               className={cx('cancel')}
