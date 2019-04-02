@@ -120,6 +120,7 @@ exports[`should render a single child element 1`] = `
             onBlur={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
+            title={null}
             type="button"
           >
             <span
@@ -569,6 +570,7 @@ exports[`should render an image with a no-data status view with all message prop
             onBlur={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
+            title={null}
             type="button"
           >
             <span
@@ -601,6 +603,7 @@ exports[`should render an image with a no-data status view with all message prop
             onBlur={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
+            title={null}
             type="button"
           >
             <span
