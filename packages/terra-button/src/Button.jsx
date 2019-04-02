@@ -76,9 +76,15 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Sets the button text. If the button `isIconOnly` or of variant `utility`, this text is set as the aria-label for accessibility.
+   * Sets the button text.
+   * If the button is `isIconOnly` or variant `utility` this text is set as the aria-label and title for accessibility.
    */
   text: PropTypes.string.isRequired,
+  /**
+   * Additional information to display as a native tooltip on hover.
+   * Buttons declared as `isIconOnly` or `utility` will fallback to using `text` if not provided.
+   */
+  title: PropTypes.string,
   /**
    * Sets the button type. One of `button`, `submit`, or `reset`.
    */
@@ -174,6 +180,7 @@ class Button extends React.Component {
       onKeyDown,
       onKeyUp,
       refCallback,
+      title,
       ...customProps
     } = this.props;
 
@@ -213,12 +220,18 @@ class Button extends React.Component {
       buttonIcon = <span className={iconClasses}>{cloneIcon}</span>;
     }
 
+    let buttonTitle = title;
+    if (isIconOnly || variant === 'utility') {
+      buttonTitle = title || text;
+    }
+
     const buttonLabel = (
       <span className={buttonLabelClasses}>
         {isReversed ? buttonText : buttonIcon }
         {isReversed ? buttonIcon : buttonText }
       </span>
     );
+
     const ComponentType = href ? 'a' : 'button';
 
     return (
@@ -233,6 +246,7 @@ class Button extends React.Component {
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
+        title={buttonTitle}
         onClick={onClick}
         onFocus={onFocus}
         href={href}
