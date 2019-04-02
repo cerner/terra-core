@@ -127,10 +127,12 @@ class SearchField extends React.Component {
   }
 
   handleCancel(event) {
+    // Clear uncontrolled input field
     if (this.props.defaultValue && this.state.previouslyFocusedInput) {
       this.state.previouslyFocusedInput.value = '';
     }
 
+    // Pass along changes to consuming components using associated props
     if (this.props.onChange) {
       this.props.onChange(event, '');
     }
@@ -140,6 +142,7 @@ class SearchField extends React.Component {
     }
     this.setState({ searchText: '' });
 
+    // Set focus back on previous focus after clicking / pressing clear
     if (this.state.previouslyFocusedInput) {
       this.state.previouslyFocusedInput.focus();
     }
