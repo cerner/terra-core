@@ -7,7 +7,6 @@ import IconClose from 'terra-icon/lib/icon/IconClose';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form-input';
 import styles from './SearchField.module.scss';
-import { css } from 'aphrodite';
 
 const cx = classNames.bind(styles);
 
@@ -120,17 +119,23 @@ class SearchField extends React.Component {
 
   componentDidUpdate() {
     // if consumer updates the value prop with onChange, need to update state to match
-    if (this.state.searchText) {
-      this.updateSearchText(this.props.value);
-    }
+    this.updateSearchText(this.props.value);
   }
 
   componentWillUnmount() {
     this.clearSearchTimeout();
   }
 
-  handleCancel() {
-    this.setState({ searchText: '' });
+  handleCancel(event) {
+    if (this.props.onChange) {
+      this.props.onChange(event, '');
+    } else {
+      this.setState({ searchText: '' });
+    }
+
+    if (this.props.onInvalidSearch) {
+      this.props.onInvalidSearch('');
+    }
 
     if (this.currentlyFocusedInput) {
       this.currentlyFocusedInput.focus();
@@ -234,7 +239,7 @@ class SearchField extends React.Component {
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
           refCallback={inputRefCallback}
-          value={this.state.searchText}
+          value={value || this.state.searchText}
           {...additionalInputAttributes}
         />
         { this.state.searchText
