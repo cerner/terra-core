@@ -107,14 +107,14 @@ class SearchField extends React.Component {
     super(props);
 
     this.handleCancel = this.handleCancel.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.updateSearchText = this.updateSearchText.bind(this);
 
-    this.currentlyFocusedInput = null; // Tracks current input to retain input focus after clearing
     this.searchTimeout = null;
-    this.state = { searchText: this.props.defaultValue };
+    this.state = { previouslyFocusedInput: null, searchText: this.props.defaultValue };
   }
 
   componentDidUpdate() {
@@ -127,6 +127,10 @@ class SearchField extends React.Component {
   }
 
   handleCancel(event) {
+    if (this.props.defaultValue && this.state.previouslyFocusedInput) {
+      this.state.previouslyFocusedInput.value = '';
+    }
+
     if (this.props.onChange) {
       this.props.onChange(event, '');
     }
@@ -134,18 +138,21 @@ class SearchField extends React.Component {
     if (this.props.onInvalidSearch) {
       this.props.onInvalidSearch('');
     }
-
     this.setState({ searchText: '' });
 
-    if (this.currentlyFocusedInput) {
-      this.currentlyFocusedInput.focus();
+    if (this.state.previouslyFocusedInput) {
+      this.state.previouslyFocusedInput.focus();
+    }
+  }
+
+  handleOnClick(event) {
+    if (this.state.previouslyFocusedInput !== event.currentTarget) {
+      this.setState({ previouslyFocusedInput: event.currentTarget });
     }
   }
 
   handleTextChange(event) {
-    if (this.currentlyFocusedInput !== event.currentTarget) {
-      this.currentlyFocusedInput = event.currentTarget;
-    }
+    this.handleOnClick(event);
 
     const textValue = event.target.value;
     this.updateSearchText(textValue);
@@ -217,10 +224,8 @@ class SearchField extends React.Component {
       cancelButtonVisible,
     ]);
 
-    const webkitCancel = defaultValue ? 'webkit-cancel-on' : 'webkit-cancel-off';
     const searchFieldClassNames = cx([
       'searchfield',
-      webkitCancel,
       { block: isBlock },
       customProps.className,
     ]);
@@ -231,20 +236,38 @@ class SearchField extends React.Component {
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
-        <Input
-          defaultValue={defaultValue}
-          className={inputClassNames}
-          type="search"
-          placeholder={placeholder}
-          onChange={this.handleTextChange}
-          disabled={isDisabled}
-          aria-disabled={isDisabled}
-          onKeyDown={this.handleKeyDown}
-          refCallback={inputRefCallback}
-          value={defaultValue ? undefined : this.state.searchText}
-          {...additionalInputAttributes}
-        />
-        { !defaultValue && this.state.searchText
+        { defaultValue
+          ? (
+            <Input
+              defaultValue={defaultValue}
+              className={inputClassNames}
+              type="search"
+              placeholder={placeholder}
+              onChange={this.handleTextChange}
+              onClick={this.handleOnClick}
+              disabled={isDisabled}
+              aria-disabled={isDisabled}
+              onKeyDown={this.handleKeyDown}
+              refCallback={inputRefCallback}
+              {...additionalInputAttributes}
+            />
+          )
+          : (
+            <Input
+              className={inputClassNames}
+              type="search"
+              placeholder={placeholder}
+              onChange={this.handleTextChange}
+              disabled={isDisabled}
+              aria-disabled={isDisabled}
+              onKeyDown={this.handleKeyDown}
+              refCallback={inputRefCallback}
+              value={this.state.searchText}
+              {...additionalInputAttributes}
+            />
+          )
+        }
+        { this.state.previouslyFocusedInput && this.state.searchText
           ? (
             <Button
               className={cx('cancel')}

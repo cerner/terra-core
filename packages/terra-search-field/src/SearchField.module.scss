@@ -62,16 +62,8 @@
     width: 100%;
   }
 
-  .webkit-cancel-off {
-    .input::-webkit-search-cancel-button {
-      display: none;
-    }
-  }
-
-  .webkit-cancel-on {
-    .input::-webkit-search-cancel-button {
-      appearance: searchfield-cancel-button;
-    }
+  .input::-webkit-search-cancel-button {
+    display: none;
   }
 
   .input::-webkit-search-decoration {
