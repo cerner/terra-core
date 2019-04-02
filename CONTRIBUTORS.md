@@ -84,8 +84,7 @@ Cerner Corporation
 - Shetty Akarsh [@ShettyAkarsh]
 - Caleb Meyer [@calebmeyer]
 - Andrew Givens [@agivens96]
-- Anjali Roy [@anjaliroy19]
-- Naveen Kumar Ramamurthy [@nramamurth]
+- Anjali Roy [@anjaliroy19] 
 
 
 
@@ -175,4 +174,3 @@ Cerner Corporation
 [@calebmeyer]: https://github.com/calebmeyer
 [@agivens96]: https://github.com/agivens96
 [@anjaliroy19]: https://github.com/anjaliroy19
-[@nramamurth]: https://github.com/nramamurth

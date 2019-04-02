@@ -3,10 +3,6 @@ Changelog
 
 Unreleased
 ----------
-
-### Added
-* Added `title` attribute to the icon-only button to show browser-native tooltip.
-
 ### Fixed
 * Reset default margin in Safari.
 
