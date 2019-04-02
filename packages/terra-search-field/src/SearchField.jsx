@@ -129,9 +129,8 @@ class SearchField extends React.Component {
   handleCancel(event) {
     if (this.props.onChange) {
       this.props.onChange(event, '');
-    } else {
-      this.setState({ searchText: '' });
     }
+    this.setState({ searchText: '' });
 
     if (this.props.onInvalidSearch) {
       this.props.onInvalidSearch('');
@@ -227,6 +226,13 @@ class SearchField extends React.Component {
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
 
+    let isControlledInput;
+    if (defaultValue && this.state.searchText === defaultValue) {
+      isControlledInput = undefined;
+    } else {
+      isControlledInput = this.state.searchText;
+    }
+
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <Input
@@ -239,7 +245,7 @@ class SearchField extends React.Component {
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
           refCallback={inputRefCallback}
-          value={value || this.state.searchText}
+          value={isControlledInput}
           {...additionalInputAttributes}
         />
         { this.state.searchText
