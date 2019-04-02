@@ -77,6 +77,7 @@ const propTypes = {
   refCallback: PropTypes.func,
   /**
    * Sets the button text. If the button `isIconOnly` or of variant `utility`, this text is set as the aria-label for accessibility.
+   * It is also used to reveal the label to the user via the browser-native tooltip upon hovering over a `isIconOnly` button.
    */
   text: PropTypes.string.isRequired,
   /**
@@ -233,6 +234,7 @@ class Button extends React.Component {
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
+        title={isIconOnly ? text : null}
         onClick={onClick}
         onFocus={onFocus}
         href={href}

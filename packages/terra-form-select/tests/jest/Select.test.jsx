@@ -1,7 +1,9 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, renderWithIntl } from 'terra-enzyme-intl';
 import Select from '../../src/Select';
+import Option from '../../src/_Option';
+import OptGroup from '../../src/_OptGroup';
 
 describe('Select', () => {
   it('should render a default variant', () => {
@@ -103,6 +105,50 @@ describe('Select', () => {
     const wrapper = shallowWithIntl(<Select variant="tag" isInvalid />);
     expect(wrapper).toMatchSnapshot();
   });
+
+
+  it('should render a select with an option', () => {
+    const wrapper = renderWithIntl(
+      <Select>
+        <Option value="value" display="display" />
+      </Select>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a select with multiple options', () => {
+    const wrapper = renderWithIntl(
+      <Select>
+        <Option value="value-1" display="display-1" />
+        <Option value="value-2" display="display-2" />
+      </Select>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a select with an optgroup and an option', () => {
+    const wrapper = renderWithIntl(
+      <Select>
+        <OptGroup label="OptGroup label">
+          <Option value="value" display="display" />
+        </OptGroup>
+      </Select>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a select with an optgroup and multiple options', () => {
+    const wrapper = renderWithIntl(
+      <Select>
+        <OptGroup label="OptGroup label">
+          <Option value="value-1" display="display-1" />
+          <Option value="value-2" display="display-2" />
+        </OptGroup>
+      </Select>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
 
   it('should call onBlur', () => {
     const mockBlur = jest.fn();
