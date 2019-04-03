@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Added
+* Added the native `title` attribute as a prop
+
 ### Fixed
 * Reset default margin in Safari.
 
