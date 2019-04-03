@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.9.0 - (April 2, 2019)
+------------------
+### Fixed
+* Reset default margin in Safari.
+
 3.8.0 - (March 26, 2019)
 ------------------
 ### Changed

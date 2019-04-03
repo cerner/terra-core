@@ -1,7 +1,7 @@
 {
   "name": "terra-overlay",
   "main": "lib/Overlay.js",
-  "version": "3.8.1",
+  "version": "3.9.0",
   "description": "The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
-    "terra-button": "^3.8.0",
+    "terra-button": "^3.9.0",
     "terra-doc-template": "^2.7.0",
     "terra-icon": "^3.6.0"
   },
