@@ -1,10 +1,12 @@
 import IntlPolyfill from 'intl';
 
-let exportedIntl;
+let intl;
 try {
-  exportedIntl = typeof (Intl) === 'undefined' ? IntlPolyfill : window.Intl;
-} catch {
-  exportedIntl = IntlPolyfill
+  intl = typeof (Intl) === 'undefined' ? IntlPolyfill : window.Intl;
+} catch (error) {
+  intl = IntlPolyfill;
 }
+
+const exportedIntl = intl;
 
 export default exportedIntl;
