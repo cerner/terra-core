@@ -48,7 +48,6 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
     onBlur={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    title={null}
     type="button"
   >
     <span
@@ -79,7 +78,6 @@ exports[`should render a Button with merged attributes 1`] = `
       "height": "100px",
     }
   }
-  title={null}
   type="button"
 >
   <span
@@ -103,7 +101,6 @@ exports[`should render a button with type equal to button 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span
@@ -127,7 +124,6 @@ exports[`should render a button with type equal to reset 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="reset"
 >
   <span
@@ -151,7 +147,6 @@ exports[`should render a button with type equal to submit 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="submit"
 >
   <span
@@ -175,7 +170,6 @@ exports[`should render a de-emphasis button 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span
@@ -199,7 +193,6 @@ exports[`should render a emphasis button 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span
@@ -223,7 +216,6 @@ exports[`should render a neutral button 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span
@@ -247,7 +239,6 @@ exports[`should render a utility button 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span
@@ -265,7 +256,6 @@ exports[`should render an action button 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span
@@ -289,7 +279,6 @@ exports[`should render an icon 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title="isIconOnly"
   type="button"
 >
   <span
@@ -316,7 +305,6 @@ exports[`should render an icon and a text 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span
@@ -349,7 +337,6 @@ exports[`should render as an anchor when provided an href 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span
@@ -374,7 +361,6 @@ exports[`should render as disabled when set 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   tabIndex="-1"
-  title={null}
   type="button"
 >
   <span
@@ -398,7 +384,6 @@ exports[`should render text then an icon when reversed 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  title={null}
   type="button"
 >
   <span

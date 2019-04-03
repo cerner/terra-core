@@ -117,7 +117,6 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
     aria-expanded="false"
     aria-label="Show"
     class="button neutral"
-    title="Show"
     type="button"
   >
     <span
@@ -260,7 +259,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        title={null}
         type="button"
       >
         <span

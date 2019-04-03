@@ -4,9 +4,8 @@ Changelog
 Unreleased
 ----------
 
-### Added
-* Added `title` attribute to the icon-only button to show browser-native tooltip.
-
+3.9.0 - (April 2, 2019)
+------------------
 ### Fixed
 * Reset default margin in Safari.
 
