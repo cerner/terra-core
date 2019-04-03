@@ -4,7 +4,12 @@ import loadTranslations from './translationsLoaders';
 
 import supportedLocales from './i18nSupportedLocales';
 
-const hasIntl = typeof (Intl) !== 'undefined';
+let hasIntl;
+try {
+  hasIntl = typeof (Intl) !== 'undefined';
+} catch (error) {
+  hasIntl = false;
+}
 
 const permitParams = (locale, callback) => {
   if (process.env.NODE_ENV !== 'production' && supportedLocales.indexOf(locale) < 0) {
