@@ -9,6 +9,13 @@ it('should render a default checkbox field', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a default checkbox field even if it has an undefined child', () => {
+  const undefinedChild = undefined;
+  const checkBox = (<CheckboxField legend="Default CheckboxField">{ undefinedChild }</CheckboxField>);
+  const wrapper = shallowWithIntl(checkBox);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render an invalid checkbox field', () => {
   const checkBox = (<CheckboxField legend="Invalid CheckboxField" isInvalid error="Test Error" />);
   const wrapper = shallowWithIntl(checkBox);
