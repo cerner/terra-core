@@ -102,6 +102,7 @@ const defaultProps = {
   isIconOnly: false,
   isReversed: false,
   refCallback: undefined,
+  title: undefined,
   type: ButtonTypes.BUTTON,
   variant: ButtonVariants.NEUTRAL,
 };
