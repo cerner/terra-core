@@ -1,6 +1,6 @@
-# Terra List - Sections with Subsections
+# Terra List - Sections
 
-With the inclusion of sections in the list, there are two recommended patterns for creating nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to only use collapsible sections or collapsible subsections in a list, but not both.
+List sections are available in both static and collapsible varieties. A list section that is collapsed will remove its children items from the DOM. This improves performance and accessiblilty, but may remove potentional state associated to a mounted list item. If your list item content has additional state, it needs to be stored externally and reapplied when thawed for the next render that shows its section open. Since this render occurs at the same time that a collapsible section state changes, for additional optimization, collapsed sections do not necessarily need to be provided with child items.
 
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.
@@ -13,7 +13,7 @@ First defaulting our state to an empty array in the constructor.
     this.state = { collapsedKeys: [] };
   }
 ```
-Next creating an event handler callback method to pass to the section's `onSelect` prop. The `onSelect` will return the metaData prop passed it each section.
+Next creating an event handler callback method to pass to the section's `onSelect` prop. The `onSelect` callback will return the metaData prop passed to each section.
 ```jsx
   handleSectionSelection(event, metaData) {
 
@@ -25,7 +25,7 @@ As a precaution we can prevent default on the event, in case the list has an anc
     event.preventDefault();
   }
 ```
-Terra list comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `updatedMulitSelectedKeys`, which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
+Terra List comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `updatedMulitSelectedKeys`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state.
 ```jsx
   handleSectionSelection(event, metaData) {
     event.preventDefault();
@@ -61,7 +61,7 @@ Next we need to set up our `metaData` object with our key value, and attach the 
     );
   }
 ```
-For the common collapsible sections we set `isCollapsible` for all sections.
+For rendering the collapsible section we set `isCollapsible` for all sections.
 ```jsx
   createSection(sectionData) {
     return (
@@ -90,26 +90,17 @@ Finally we need to check if the section is collapsed. As we support IE10 & 11, w
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
       >
-        {!isCollapsed && sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {!isCollapsed && sectionData.childItems.map(childItem => createListItem(childItem))}
       </Section>
     );
 ```
 We can then implement the unpack of our data into our list items.
 ```jsx
-const createListItem = itemData => (
-  <Item key={itemData.key}>
-    <Placeholder />
-  </Item>
-);
-
-const createSubsection = subsectionData => (
-  <Subsection
-    key={subsectionData.key}
-    title={subsectionData.title}
-  >
-    {subsectionData.childItems.map(childItem => createListItem(childItem))}
-  </Subsection>
-);
+  const createListItem = itemData => (
+    <Item key={itemData.key}>
+      <Placeholder />
+    </Item>
+  );
 ```
 Then we can implement a method to loop through our data and create the section with our methods and call it from our render method.
 ```jsx
@@ -124,5 +115,5 @@ Then we can implement a method to loop through our data and create the section w
       </List>
     );
   }
-  ```
-  Using these steps we get the following example.
+```
+Using these steps we get the following example:

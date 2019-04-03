@@ -31,16 +31,17 @@ class SectionWithSubsection2 extends React.Component {
   }
 
   createSubsection(subsectionData) {
+    const isCollapsed = this.state.collapsedKeys.indexOf(subsectionData.key) >= 0;
     return (
       <Subsection
         key={subsectionData.key}
         title={subsectionData.title}
-        isCollapsed={this.state.collapsedKeys.indexOf(subsectionData.key) >= 0}
+        isCollapsed={isCollapsed}
         isCollapsible
         metaData={{ key: subsectionData.key }}
         onSelect={this.handleSectionSelection}
       >
-        {subsectionData.childItems.map(childItem => createListItem(childItem))}
+        {!isCollapsed && subsectionData.childItems.map(childItem => createListItem(childItem))}
       </Subsection>
     );
   }
