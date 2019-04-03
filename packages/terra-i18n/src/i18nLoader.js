@@ -6,7 +6,7 @@ import supportedLocales from './i18nSupportedLocales';
 
 let hasIntl;
 try {
-  hasIntl = typeof (Intl) !== 'undefined';
+  hasIntl = typeof (Intl) !== 'undefined' && Intl.DateTimeFormat !== 'undefined';
 } catch (error) {
   hasIntl = false;
 }
