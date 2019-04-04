@@ -11,7 +11,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
           <input
             aria-disabled="false"
             aria-label="Terra.searchField.search"
-            class="form-input input"
+            class="form-input input input-clear"
             placeholder=""
             type="search"
             value=""
@@ -92,12 +92,13 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
     <Input
       aria-disabled={false}
       aria-label="Terra.searchField.search"
-      className="input"
+      className="input input-clear"
       defaultValue=""
       disabled={false}
       isInvalid={false}
       name={null}
       onChange={[Function]}
+      onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder=""
       refCallback={
@@ -107,7 +108,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
               <input
                 aria-disabled="false"
                 aria-label="Terra.searchField.search"
-                class="form-input input"
+                class="form-input input input-clear"
                 placeholder=""
                 type="search"
                 value=""
@@ -129,10 +130,11 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       <input
         aria-disabled={false}
         aria-label="Terra.searchField.search"
-        className="form-input input"
+        className="form-input input input-clear"
         disabled={false}
         name={null}
         onChange={[Function]}
+        onFocus={[Function]}
         onKeyDown={[Function]}
         placeholder=""
         required={false}
@@ -252,12 +254,13 @@ exports[`Snapshots renders a basic search field 1`] = `
   <Input
     aria-disabled={false}
     aria-label="Terra.searchField.search"
-    className="input"
+    className="input input-clear"
     defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
     required={false}
@@ -320,36 +323,18 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
   <Input
     aria-disabled={true}
     aria-label="Terra.searchField.search"
-    className="input input-cancel"
+    className="input"
     defaultValue=""
     disabled={true}
     isInvalid={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
     required={false}
     type="search"
     value="Test"
-  />
-  <Button
-    className="cancel"
-    icon={
-      <IconClose
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    text="cancel"
-    type="button"
-    variant="neutral"
   />
   <Button
     className="button"
@@ -407,36 +392,18 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
   <Input
     aria-disabled={false}
     aria-label="Terra.searchField.search"
-    className="input input-cancel"
+    className="input"
     defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
     required={false}
     type="search"
     value="Test"
-  />
-  <Button
-    className="cancel"
-    icon={
-      <IconClose
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    text="cancel"
-    type="button"
-    variant="neutral"
   />
   <Button
     className="button"
@@ -494,36 +461,17 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
   <Input
     aria-disabled={false}
     aria-label="Terra.searchField.search"
-    className="input input-cancel"
+    className="input"
     defaultValue="Default"
     disabled={false}
     isInvalid={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
     required={false}
     type="search"
-    value="Default"
-  />
-  <Button
-    className="cancel"
-    icon={
-      <IconClose
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    text="cancel"
-    type="button"
-    variant="neutral"
   />
   <Button
     className="button"
@@ -581,12 +529,13 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
   <Input
     aria-disabled={false}
     aria-label="Terra.searchField.search"
-    className="input"
+    className="input input-clear"
     defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder="Test"
     required={false}
@@ -649,12 +598,13 @@ exports[`Snapshots renders a search field with a value 1`] = `
   <Input
     aria-disabled={false}
     aria-label="Terra.searchField.search"
-    className="input"
+    className="input input-clear"
     defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
     required={false}
@@ -717,12 +667,13 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
   <Input
     aria-disabled={false}
     aria-label="Search Field"
-    className="input"
+    className="input input-clear"
     defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
     required={false}

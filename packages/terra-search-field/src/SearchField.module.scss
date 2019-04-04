@@ -1,14 +1,22 @@
 :local {
   .searchfield {
-    display: inline-flex;
+    display: flex;
     width: var(--terra-search-field-width, 15.31em);
 
-    .cancel {
+    .clear {
       background: transparent;
-      border-style: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: #dedfe0;
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
       display: inline-block;
       flex: 0 0 auto;
-      margin-left: -2em;
+      margin-bottom: var(--terra-search-field-cancel-margin-bottom, 0);
+      margin-left: var(--terra-search-field-cancel-margin-left, -5px);
+      margin-right: var(--terra-search-field-cancel-margin-right, 0);
+      margin-top: var(--terra-search-field-cancel-margin-top, 0);
       z-index: 1;
     }
 
@@ -16,6 +24,7 @@
       appearance: none;
       border-bottom-left-radius: var(--terra-search-field-input-border-bottom-left-radius, 3px);
       border-bottom-right-radius: 0;
+      border-right: 0;
       border-top-left-radius: var(--terra-search-field-input-border-top-left-radius, 3px);
       border-top-right-radius: 0;
       flex: 1 1 auto;
@@ -26,13 +35,19 @@
       min-width: 0;
       outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
 
-      &:focus {
-        z-index: 1;
+      &:focus + .clear {
+        border: 1px solid #4cb2e9;
+        border-bottom-left-radius: 0;
+        border-left: 0;
+        border-top-left-radius: 0;
+        z-index: 2;
       }
     }
 
-    .input-cancel {
-      padding-right: 1.5em;
+    .input-clear {
+      &:focus {
+        border: 1px solid #4cb2e9;
+      }
     }
 
     .button {
@@ -46,7 +61,7 @@
       display: inline-block;
       flex: 0 0 auto;
       margin-bottom: var(--terra-search-field-button-margin-bottom, 0);
-      margin-left: var(--terra-search-field-button-margin-left, -1px);
+      margin-left: var(--terra-search-field-button-margin-left, 0);
       margin-right: var(--terra-search-field-button-margin-right, 0);
       margin-top: var(--terra-search-field-button-margin-top, 0);
       z-index: 1;
@@ -58,7 +73,6 @@
   }
 
   .block {
-    display: flex;
     width: 100%;
   }
 

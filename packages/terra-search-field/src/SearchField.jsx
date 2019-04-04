@@ -107,14 +107,15 @@ class SearchField extends React.Component {
     super(props);
 
     this.handleCancel = this.handleCancel.bind(this);
-    this.handleOnFocus = this.handleOnFocus.bind(this);
+    this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.updateSearchText = this.updateSearchText.bind(this);
+    this.previouslyFocusedInput = undefined;
 
     this.searchTimeout = null;
-    this.state = { previouslyFocusedInput: null, searchText: this.props.defaultValue };
+    this.state = { searchText: this.props.defaultValue };
   }
 
   componentDidUpdate() {
@@ -126,10 +127,14 @@ class SearchField extends React.Component {
     this.clearSearchTimeout();
   }
 
+  focus() {
+    this.currentInput.current.focus();
+  }
+
   handleCancel(event) {
     // Clear uncontrolled input field
-    if (this.props.defaultValue && this.state.previouslyFocusedInput) {
-      this.state.previouslyFocusedInput.value = '';
+    if (this.props.defaultValue && this.previouslyFocusedInput) {
+      this.previouslyFocusedInput.value = '';
     }
 
     // Pass along changes to consuming components using associated props
@@ -143,19 +148,19 @@ class SearchField extends React.Component {
     this.setState({ searchText: '' });
 
     // Set focus back on previous focus after clicking / pressing clear
-    if (this.state.previouslyFocusedInput) {
-      this.state.previouslyFocusedInput.focus();
+    if (this.previouslyFocusedInput) {
+      this.previouslyFocusedInput.focus();
     }
   }
 
-  handleOnFocus(event) {
-    if (this.state.previouslyFocusedInput !== event.currentTarget) {
-      this.setState({ previouslyFocusedInput: event.currentTarget });
+  handleInputFocus(event) {
+    if (this.previouslyFocusedInput !== event.currentTarget) {
+      this.previouslyFocusedInput = event.currentTarget;
     }
   }
 
   handleTextChange(event) {
-    this.handleOnFocus(event);
+    this.handleInputFocus(event);
 
     const textValue = event.target.value;
     this.updateSearchText(textValue);
@@ -221,7 +226,12 @@ class SearchField extends React.Component {
       ...customProps
     } = this.props;
 
-    const cancelButtonVisible = !defaultValue && this.state.searchText ? 'input-cancel' : undefined;
+    const cancelButtonVisible = !defaultValue && !this.state.searchText ? 'input-clear' : undefined;
+
+    const cancelButtonClassNames = cx([
+      'clear',
+    ]);
+
     const inputClassNames = cx([
       'input',
       cancelButtonVisible,
@@ -245,7 +255,7 @@ class SearchField extends React.Component {
           type="search"
           placeholder={placeholder}
           onChange={this.handleTextChange}
-          onFocus={this.handleOnFocus}
+          onFocus={this.handleInputFocus}
           disabled={isDisabled}
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
@@ -253,10 +263,10 @@ class SearchField extends React.Component {
           value={defaultValue ? undefined : this.state.searchText}
           {...additionalInputAttributes}
         />
-        { this.state.previouslyFocusedInput && this.state.searchText
+        { this.previouslyFocusedInput && this.state.searchText
           ? (
             <Button
-              className={cx('cancel')}
+              className={cancelButtonClassNames}
               onClick={this.handleCancel}
               text="cancel"
               icon={Cancel}
