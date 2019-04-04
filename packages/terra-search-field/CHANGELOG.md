@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Cancel button added to search field for cross-browser compatibility
+* Wdio tests updated to include cancel button functionality
 
 3.8.0 - (March 26, 2019)
 ------------------
