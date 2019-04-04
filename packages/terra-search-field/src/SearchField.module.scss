@@ -1,7 +1,7 @@
 :local {
   .searchfield {
     display: flex;
-    width: var(--terra-search-field-width, 15.31em);
+    max-width: var(--terra-search-field-max-width, 15.31em);
 
     .clear {
       background: transparent;
