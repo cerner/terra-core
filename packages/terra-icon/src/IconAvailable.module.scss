@@ -1,0 +1,11 @@
+:local {
+  .IconAvailable {
+    path:first-child {
+      fill: var(--terra-, #78c346);
+    }
+
+    path:last-child {
+      fill: var(--terra-, #fff);
+    }
+  }
+}
