@@ -150,6 +150,9 @@
   }
 
   .content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap; // IE 10
     list-style-type: none;
     margin: 0;
     overflow: hidden;
@@ -157,6 +160,11 @@
     padding-left: var(--terra-form-select-content-padding-left, 0);
     padding-right: var(--terra-form-select-content-padding-right, 0);
     padding-top: var(--terra-form-select-content-padding-top, 0);
+  }
+
+  .content > li:first-child {
+    display: flex;
+    flex: 0 1 auto;
   }
 
   .display-content {
