@@ -3,7 +3,7 @@ import React from 'react';
 import Divider from 'terra-divider/lib/Divider';
 import DividerExampleTemplate from './DividerExampleTemplate';
 
-const currentDate = "November 12, 1955";
+const currentDate = 'November 12, 1955';
 
 const DividerCustomExample = () => (
   <DividerExampleTemplate>

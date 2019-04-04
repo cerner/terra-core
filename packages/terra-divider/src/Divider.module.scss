@@ -33,6 +33,7 @@
     font-style: var(--terra-divider-text-font-style, normal);
     font-weight: var(--terra-divider-text-font-weight, bold);
     line-height: var(--terra-divider-text-line-height, 1.231);
+    max-width: var(--terra-divider-text-max-width, 80em);
     padding-left: var(--terra-divider-text-padding-left, 0.7142857143rem);
     padding-right: var(--terra-divider-text-padding-right, 0.7142857143rem);
     text-align: center;
