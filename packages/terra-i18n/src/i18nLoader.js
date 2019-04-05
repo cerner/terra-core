@@ -3,7 +3,12 @@ import Intl from './intl';
 import loadIntl from './intlLoaders';
 import loadTranslations from './translationsLoaders';
 
-const hasIntl = typeof (Intl) !== 'undefined';
+let hasIntl;
+try {
+  hasIntl = typeof (Intl) !== 'undefined' && Intl.DateTimeFormat !== 'undefined';
+} catch (error) {
+  hasIntl = false;
+}
 
 const permitParams = (callback) => {
   if (typeof (callback) !== 'function') {
@@ -14,8 +19,8 @@ const permitParams = (callback) => {
 module.exports = (locale, callback, scope) => {
   permitParams(callback);
   if (!hasIntl) {
-      loadIntl(locale);
-      loadTranslations(locale, callback, scope);
+    loadIntl(locale);
+    loadTranslations(locale, callback, scope);
   } else {
     loadTranslations(locale, callback, scope);
   }

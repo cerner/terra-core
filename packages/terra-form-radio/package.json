@@ -1,7 +1,7 @@
 {
   "name": "terra-form-radio",
   "main": "lib/Radio.js",
-  "version": "3.8.0",
+  "version": "3.9.0",
   "description": "The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Use the `name` attribute to group radio buttons together. Tabbing switches focus between radio button groups; arrow keys switch between radio buttons of the same group. The checked state can be activated with a space.",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.8.0",
+    "terra-button": "^3.9.0",
     "terra-doc-template": "^2.7.0",
     "terra-mixins": "^1.29.0"
   },
