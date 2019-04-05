@@ -106,7 +106,7 @@ class SearchField extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleCancel = this.handleCancel.bind(this);
+    this.handleClear = this.handleClear.bind(this);
     this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
@@ -131,7 +131,7 @@ class SearchField extends React.Component {
     this.currentInput.current.focus();
   }
 
-  handleCancel(event) {
+  handleClear(event) {
     // Clear uncontrolled input field
     if (this.props.defaultValue && this.previouslyFocusedInput) {
       this.previouslyFocusedInput.value = '';
@@ -185,7 +185,7 @@ class SearchField extends React.Component {
       this.handleSearch();
     }
     if (event.nativeEvent.keyCode === KeyCode.KEY_ESCAPE) {
-      this.handleCancel();
+      this.handleClear();
     }
   }
 
@@ -267,10 +267,11 @@ class SearchField extends React.Component {
           ? (
             <Button
               className={cancelButtonClassNames}
-              onClick={this.handleCancel}
+              onClick={this.handleClear}
               text="cancel"
               icon={Cancel}
               isIconOnly
+              aria-label="cancel"
             />
           )
           : undefined

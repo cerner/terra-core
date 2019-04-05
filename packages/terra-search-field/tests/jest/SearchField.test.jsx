@@ -51,14 +51,12 @@ describe('Snapshots', () => {
     expect(searchField).toMatchSnapshot();
   });
 
-  it('clears form on button click', () => {
-    const searchField = mountWithIntl(<SearchField defaultValue="amp" />);
+  it('clears form with clear method', () => {
+    const searchField = shallowWithIntl(<SearchField />);
     searchField.setState({ searchText: 'amp' });
-    expect(searchField.find('[label="cancel"').value).toBe('amp');
 
     expect(searchField.state('searchText')).toBe('amp');
-    searchField.childAt(0).childAt(1).childAt(0).simulate('click');
-    console.log(searchField.childAt(0).childAt(1).childAt(0));
+    searchField.instance().handleClear();
     expect(searchField.state('searchText')).toBe('');
   });
 });
