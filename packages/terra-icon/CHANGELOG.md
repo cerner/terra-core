@@ -3,7 +3,22 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* IconCatalogueNumber
+* IconCaution
+* IconCircleLinesSymbol
+* IconConsultInstructionsForUse
+* IconDateOfManufacture
+* IconManufacturer
+* IconRedo
+* IconUndo
+
 ### Changed
+* Updated to one-cerner-style-icons v1.21.1
+* Replaced 'Reload' icon with 'Undo` icon.
+* `Reload` icon is now deprecated and will be removed in a future major version bump release.
+* Updated SVG for IconSortAscending
+* Updated SVG for IconSortDescending
 * Added a new template to generate static color react icons
 * Added CSS custom property based fill styles to static color icons
 

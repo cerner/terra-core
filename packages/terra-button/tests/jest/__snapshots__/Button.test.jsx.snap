@@ -92,6 +92,30 @@ exports[`should render a Button with merged attributes 1`] = `
 </button>
 `;
 
+exports[`should render a button with a title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label={null}
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Custom Title"
+  type="button"
+>
+  <span
+    className="button-label text-only"
+  >
+    <span
+      className=""
+    >
+      Button
+    </span>
+  </span>
+</button>
+`;
+
 exports[`should render a button with type equal to button 1`] = `
 <button
   aria-disabled={false}
@@ -239,6 +263,43 @@ exports[`should render a utility button 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  title="utility"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render a utility button with a custom title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button utility"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Custom Title"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render a utility button with text as a fallback title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button utility"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Icon Only"
   type="button"
 >
   <span
@@ -279,6 +340,7 @@ exports[`should render an icon 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  title="isIconOnly"
   type="button"
 >
   <span
@@ -324,6 +386,42 @@ exports[`should render an icon and a text 1`] = `
       text
     </span>
   </span>
+</button>
+`;
+
+exports[`should render an icon only button with a custom title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Custom Title"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render an icon only button with text as a fallback title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Icon Only"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
 </button>
 `;
 
