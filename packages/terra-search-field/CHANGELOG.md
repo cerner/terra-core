@@ -4,8 +4,9 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Cancel button added to search field for cross-browser compatibility
-* Wdio tests updated to include cancel button functionality
+* Clear button added to search field for cross-browser compatibility
+* Wdio tests updated to include clear button functionality
+* Jest test added to verify clearing functionality
 
 3.9.0 - (April 2, 2019)
 ------------------
