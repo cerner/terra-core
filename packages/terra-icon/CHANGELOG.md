@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added a new template to generate static color react icons
+* Added CSS custom property based fill styles to static color icons
 
 3.6.0 - (March 26, 2019)
 ------------------
