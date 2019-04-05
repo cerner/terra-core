@@ -38,7 +38,6 @@ describe('Search Field', () => {
         '--terra-search-field-clear-margin-top': '10px',
         '--terra-search-field-input-margin-bottom': '10px',
         '--terra-search-field-input-margin-left': '10px',
-        '--terra-search-field-input-margin-right': '10px',
         '--terra-search-field-input-margin-top': '10px',
       },
     });
