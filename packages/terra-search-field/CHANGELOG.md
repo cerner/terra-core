@@ -7,6 +7,11 @@ Unreleased
 * Cancel button added to search field for cross-browser compatibility
 * Wdio tests updated to include cancel button functionality
 
+3.9.0 - (April 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.8.0 - (March 26, 2019)
 ------------------
 ### Changed
