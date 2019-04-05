@@ -134,6 +134,7 @@ import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
 import IconVideoCameraDisabled from 'terra-icon/lib/icon/IconVideoCameraDisabled';
 import IconNoSignal from 'terra-icon/lib/icon/IconNoSignal';
 import IconUndo from 'terra-icon/lib/icon/IconUndo';
+import IconReload from 'terra-icon/lib/icon/IconReload';
 import IconRecurringEvent from 'terra-icon/lib/icon/IconRecurringEvent';
 import IconSeparate from 'terra-icon/lib/icon/IconSeparate';
 import IconMerge from 'terra-icon/lib/icon/IconMerge';
@@ -1387,6 +1388,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconUndo from 'terra-icon/lib/icon/IconUndo';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconReload height='2em' width='2em' /></td>
+        <td style={cellStyle}>reload</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconReload from 'terra-icon/lib/icon/IconReload';
           </code>
         </td>
       </tr>
