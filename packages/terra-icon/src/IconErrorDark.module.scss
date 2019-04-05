@@ -1,0 +1,13 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconErrorDark {
+    path:first-child {
+      fill: var(--terra-icon-error-dark-path-1-fill, currentColor);
+    }
+
+    path:last-child {
+      fill: var(--terra-icon-error-dark-path-2-fill, #fff);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

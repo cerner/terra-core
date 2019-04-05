@@ -1,7 +1,9 @@
+/* stylelint-disable selector-class-pattern */
 :local {
   .IconSuccessInverse {
     path:first-child {
-      fill: var(--terra-, #fff);
+      fill: var(--terra-icon-success-inverse-path-1-fill, #fff);
     }
   }
 }
+/* stylelint-enable selector-class-pattern */

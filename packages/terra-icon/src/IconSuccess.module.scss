@@ -2,11 +2,11 @@
 :local {
   .IconSuccess {
     path:first-child {
-      fill: var(--terra-, #78c346);
+      fill: var(--terra-icon-success-path-1-fill, #78c346);
     }
 
     path:last-child {
-      fill: var(--terra-, #fff);
+      fill: var(--terra-icon-success-path-2-fill, #fff);
     }
   }
 }

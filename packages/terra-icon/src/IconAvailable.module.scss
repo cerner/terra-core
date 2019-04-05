@@ -1,11 +1,13 @@
+/* stylelint-disable selector-class-pattern */
 :local {
   .IconAvailable {
     path:first-child {
-      fill: var(--terra-, #78c346);
+      fill: var(--terra-icon-available-path-1-fill, #78c346);
     }
 
     path:last-child {
-      fill: var(--terra-, #fff);
+      fill: var(--terra-icon-available-path-2-fill, #fff);
     }
   }
 }
+/* stylelint-enable selector-class-pattern */

@@ -7,7 +7,7 @@ import iconData from '../../../src/icon-data.json';
 /* eslint-enable import/no-extraneous-dependencies */
 
 const staticIconTemplatePath = path.join(__dirname, './staticIcontemplate.txt');
-const themeIconTemplatePath = path.join(__dirname, './themeIcontemplate.txt');
+const themeIconTemplatePath = path.join(__dirname, './template.txt');
 
 // Generate list of static color icon names
 const staticIcons = iconData

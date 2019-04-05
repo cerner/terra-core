@@ -1,0 +1,13 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconDoNotDisturb {
+    path:first-child {
+      fill: var(--terra-icon-do-not-disturb-path-1-fill, #e50000);
+    }
+
+    path:last-child {
+      fill: var(--terra-icon-do-not-disturb-path-2-fill, #fff);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */
