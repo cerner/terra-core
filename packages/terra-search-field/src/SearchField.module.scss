@@ -48,6 +48,11 @@
       }
     }
 
+    .input::-ms-clear,
+    .input::-ms-reveal {
+      display: none;
+    }
+
     // Focus style when clear button is not present
     .input-clear {
       &:focus {
