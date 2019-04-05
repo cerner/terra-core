@@ -11,7 +11,7 @@ import styles from './SearchField.module.scss';
 const cx = classNames.bind(styles);
 
 const Icon = <IconSearch />;
-const Cancel = <IconClose />;
+const Clear = <IconClose />;
 
 const propTypes = {
   /**
@@ -269,7 +269,7 @@ class SearchField extends React.Component {
               className={cancelButtonClassNames}
               onClick={this.handleClear}
               text="cancel"
-              icon={Cancel}
+              icon={Clear}
               isIconOnly
               aria-label="cancel"
             />
