@@ -110,7 +110,7 @@ const defaultProps = {
   allowClear: false,
   children: undefined,
   defaultValue: undefined,
-  disabled: null,
+  disabled: false,
   error: undefined,
   help: undefined,
   hideRequired: false,
@@ -195,12 +195,6 @@ const SelectField = ({
     }
   }
 
-  let isDisabled;
-
-  if (selectAttrs.disabled) {
-    isDisabled = true;
-  }
-
   return (
     <Field
       {...customProps}
@@ -221,7 +215,7 @@ const SelectField = ({
         {...selectAttrs}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
-        disabled={isDisabled || disabled}
+        disabled={selectAttrs.disabled || disabled}
         id={selectId}
         isInvalid={isInvalid}
         defaultValue={defaultValue}

@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Added a dual means of disabling field component
+* Added 'disabled' prop to InputField component
 
 3.8.0 - (March 26, 2019)
 ------------------

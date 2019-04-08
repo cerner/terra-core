@@ -93,7 +93,7 @@ const propTypes = {
 
 const defaultProps = {
   defaultValue: undefined,
-  disabled: null,
+  disabled: false,
   error: null,
   errorIcon: Field.defaultProps.errorIcon,
   help: null,
@@ -149,12 +149,6 @@ const InputField = (props) => {
     }
   }
 
-  let isDisabled;
-
-  if (inputAttrs.disabled) {
-    isDisabled = true;
-  }
-
   return (
     <Field
       label={label}
@@ -174,7 +168,7 @@ const InputField = (props) => {
     >
       <Input
         {...inputAttrs}
-        disabled={isDisabled || disabled}
+        disabled={inputAttrs.disabled || disabled}
         id={inputId}
         onChange={onChange}
         value={value}
@@ -185,7 +179,6 @@ const InputField = (props) => {
     </Field>
   );
 };
-
 
 InputField.propTypes = propTypes;
 InputField.defaultProps = defaultProps;

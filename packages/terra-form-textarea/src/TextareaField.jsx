@@ -90,7 +90,7 @@ const propTypes = {
 
 const defaultProps = {
   defaultValue: undefined,
-  disabled: null,
+  disabled: false,
   error: null,
   errorIcon: Field.defaultProps.errorIcon,
   help: null,
@@ -144,12 +144,6 @@ const TextareaField = (props) => {
     }
   }
 
-  let isDisabled;
-
-  if (inputAttrs.disabled) {
-    isDisabled = true;
-  }
-
   return (
     <Field
       {...customProps}
@@ -169,7 +163,7 @@ const TextareaField = (props) => {
     >
       <Textarea
         {...inputAttrs}
-        disabled={isDisabled || disabled}
+        disabled={inputAttrs.disabled || disabled}
         id={inputId}
         onChange={onChange}
         value={value}
