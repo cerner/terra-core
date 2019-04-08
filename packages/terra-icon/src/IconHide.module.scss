@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconHide {
+    path {
+      fill: var(--terra-icon-hide-path-1-fill, currentColor);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

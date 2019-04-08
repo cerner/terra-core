@@ -1,12 +1,20 @@
 /* eslint-disable */
 import React from 'react';
+import classNames from 'classnames/bind';
 import IconBase from '../IconBase';
+import styles from '../IconHighPriority.module.scss';
+
+const cx = classNames.bind(styles);
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
+  const iconClassNames = cx([
+    'IconHighPriority',
+    customProps.className,
+  ]);
 
   return (
-    <IconBase {...attributes}>
+    <IconBase className={iconClassNames} {...attributes}>
       <path d="M0 40h8v8H0v-8zM0 0h8v32H0V0z" ></path>
     </IconBase>
   );

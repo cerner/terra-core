@@ -1,0 +1,17 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconBedAssigned {
+    circle:first-child {
+      fill: var(--terra-icon-bed-assigned-circle-1-fill, #78c346);
+    }
+
+    path {
+      fill: var(--terra-icon-bed-assigned-path-1-fill, #fff);
+    }
+
+    path:last-child {
+      fill: var(--terra-icon-bed-assigned-path-2-fill, currentColor);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */
