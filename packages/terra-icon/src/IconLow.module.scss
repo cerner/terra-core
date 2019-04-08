@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconLow {
+    path:first-child {
+      fill: var(--terra-icon-low-path-1-fill, #0053e6);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

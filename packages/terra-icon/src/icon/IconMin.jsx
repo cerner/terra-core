@@ -1,12 +1,20 @@
 /* eslint-disable */
 import React from 'react';
+import classNames from 'classnames/bind';
 import IconBase from '../IconBase';
+import styles from '../IconMin.module.scss';
+
+const cx = classNames.bind(styles);
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
+  const iconClassNames = cx([
+    'IconMin',
+    customProps.className,
+  ]);
 
   return (
-    <IconBase {...attributes}>
+    <IconBase className={iconClassNames} {...attributes}>
       <path d="M27 32V0h-6v32H8.5L24 48l15.5-16z" ></path>
     </IconBase>
   );
