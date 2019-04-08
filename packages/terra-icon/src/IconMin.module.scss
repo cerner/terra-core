@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconMin {
+    path {
+      fill: var(--terra-icon-min-path-1-fill, currentColor);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

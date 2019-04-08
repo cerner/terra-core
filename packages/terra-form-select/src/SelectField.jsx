@@ -213,6 +213,7 @@ const SelectField = ({
     >
       <Select
         {...selectAttrs}
+        ariaLabel={label}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}

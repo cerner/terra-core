@@ -6,6 +6,16 @@ Unreleased
 ### Changed
 * Added 'disabled' prop to InputField component
 
+### Fixed
+* Issue with input element wrapping to new line too soon in multiple and tag variants
+* Unintended height increase
+* Null checks added to private Menu to prevent errors from empty queries
+
+5.12.0 - (April 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.11.0 - (March 26, 2019)
 ------------------
 ### Changed
@@ -40,6 +50,7 @@ Unreleased
 ------------------
 ### Fixed
 * Race condition where timeout would update after the component is not mounted
+* Improved experience using the select component with JAWS, VoiceOver, and VoiceOver on iOS
 * 'Unable to get property 'getInstance' of undefined or null reference' error in IE
 
 5.7.0 - (February 26, 2019)

@@ -161,3 +161,28 @@ it('should append styles passed in with attributes', () => {
   const button = shallow(<Button style={{ height: '100px' }} text="text" />);
   expect(button.prop('style')).toEqual({ height: '100px' });
 });
+
+it('should render an icon only button with text as a fallback title', () => {
+  const button = shallow(<Button isIconOnly text="Icon Only" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render an icon only button with a custom title', () => {
+  const button = shallow(<Button isIconOnly text="Icon Only" title="Custom Title" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button with text as a fallback title', () => {
+  const button = shallow(<Button variant="utility" text="Icon Only" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button with a custom title', () => {
+  const button = shallow(<Button variant="utility" text="Icon Only" title="Custom Title" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a button with a title', () => {
+  const button = shallow(<Button text="Button" title="Custom Title" />);
+  expect(button).toMatchSnapshot();
+});

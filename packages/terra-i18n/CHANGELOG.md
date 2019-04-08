@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Update the intl polyfill to be more robust for IE10
 
 4.0.0 - (March 27, 2019)
 ------------------

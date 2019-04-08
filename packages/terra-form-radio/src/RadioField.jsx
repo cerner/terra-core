@@ -123,7 +123,7 @@ const RadioField = (props, { intl }) => {
   );
 
   const content = React.Children.map(children, (child) => {
-    if (child.type.isRadio) {
+    if (child && child.type.isRadio) {
       return React.cloneElement(child, {
         inputAttrs: { 'aria-describedby': ariaDescriptionIds },
       });

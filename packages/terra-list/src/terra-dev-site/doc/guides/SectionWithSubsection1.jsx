@@ -40,16 +40,17 @@ class SectionWithSubsection1 extends React.Component {
   }
 
   createSection(sectionData) {
+    const isCollapsed = this.state.collapsedKeys.indexOf(sectionData.key) >= 0;
     return (
       <Section
         key={sectionData.key}
         title={sectionData.title}
-        isCollapsed={this.state.collapsedKeys.indexOf(sectionData.key) >= 0}
+        isCollapsed={isCollapsed}
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {!isCollapsed && sectionData.childItems.map(childItem => createSubsection(childItem))}
       </Section>
     );
   }

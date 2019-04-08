@@ -1,11 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Frame should render a clear option 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select default"
+<Frame
+  clearOptionDisplay="-Select-"
+  disabled={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -33,48 +31,14 @@ exports[`Frame should render a clear option 1`] = `
       "timeZone": null,
     }
   }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="0"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-       
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
+  isInvalid={false}
+  variant="default"
+/>
 `;
 
 exports[`Frame should render a combobox variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
+<Frame
+  disabled={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -102,60 +66,14 @@ exports[`Frame should render a combobox variant 1`] = `
       "timeZone": null,
     }
   }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
+  isInvalid={false}
+  variant="tag"
+/>
 `;
 
 exports[`Frame should render a combobox variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
+<Frame
+  disabled={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -183,1576 +101,678 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          placeholder="Placeholder"
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="tag"
+/>
 `;
 
 exports[`Frame should render a custom dropdown 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a default variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select default"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="0"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-       
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a default variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select default"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="0"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-      Placeholder
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled combobox variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select tag is-disabled"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={true}
-          aria-label="search"
-          className="search-input"
-          disabled={true}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled default variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select default is-disabled"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-       
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled multiple variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select multiple is-disabled"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={true}
-          aria-label="search"
-          className="search-input"
-          disabled={true}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled search variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select search is-disabled"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="content"
-    >
-      <input
-        aria-disabled={true}
-        aria-label="search"
-        className="search-input"
-        disabled={true}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-      />
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a disabled tag variant 1`] = `
-<div
-  aria-disabled={true}
-  aria-expanded={false}
-  className="select tag is-disabled"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  tabIndex="-1"
->
-  <div
-    aria-disabled={true}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={true}
-          aria-label="search"
-          className="search-input"
-          disabled={true}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a multiple variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select multiple"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a multiple variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select multiple"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          placeholder="Placeholder"
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a search variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select search"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="content"
-    >
-      <input
-        aria-disabled={false}
-        aria-label="search"
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-      />
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a search variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select search"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="content"
-    >
-      <input
-        aria-disabled={false}
-        aria-label="search"
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-        placeholder="Placeholder"
-      />
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a tag variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render a tag variant with a placeholder 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          placeholder="Placeholder"
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid combobox variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag is-invalid"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid default variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select default is-invalid"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="0"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="placeholder"
-    >
-       
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid multiple variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select multiple is-invalid"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid search variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select search is-invalid"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <div
-      className="content"
-    >
-      <input
-        aria-disabled={false}
-        aria-label="search"
-        className="search-input"
-        disabled={false}
-        onChange={[Function]}
-        onMouseDown={[Function]}
-      />
-    </div>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should render an invalid tag variant 1`] = `
-<div
-  aria-disabled={false}
-  aria-expanded={false}
-  aria-haspopup="true"
-  className="select tag is-invalid"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onMouseDown={[Function]}
-  role="combobox"
-  tabIndex="-1"
->
-  <div
-    aria-disabled={false}
-    className="display"
-    onMouseDown={[Function]}
-    role="textbox"
-  >
-    <ul
-      className="content"
-    >
-      <li
-        className="search-wrapper"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="search"
-          className="search-input"
-          disabled={false}
-          onChange={[Function]}
-          onMouseDown={[Function]}
-          value=""
-        />
-      </li>
-    </ul>
-  </div>
-  <div
-    className="toggle"
-    onMouseDown={[Function]}
-  >
-    <span
-      className="arrow-icon"
-    />
-  </div>
-  <span
-    aria-atomic="true"
-    aria-live="polite"
-    aria-relevant="additions text"
-    className="visually-hidden-component"
-  />
-</div>
-`;
-
-exports[`Frame should update the aria-live text when the search has no results 1`] = `
 <Frame
   disabled={false}
   dropdown={[Function]}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   isInvalid={false}
   variant="tag"
->
-  <div
-    aria-disabled={false}
-    aria-expanded={false}
-    aria-haspopup="true"
-    className="select tag"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
-    role="combobox"
-    tabIndex="-1"
-  >
-    <div
-      aria-disabled={false}
-      className="display"
-      onMouseDown={[Function]}
-      role="textbox"
-    >
-      <ul
-        className="content"
-      >
-        <li
-          className="search-wrapper"
-        >
-          <input
-            aria-disabled={false}
-            aria-label="search"
-            className="search-input"
-            disabled={false}
-            onChange={[Function]}
-            onMouseDown={[Function]}
-            value="qwqerewqrwqer"
-          />
-        </li>
-      </ul>
-    </div>
-    <div
-      className="toggle"
-      onMouseDown={[Function]}
-    >
-      <span
-        className="arrow-icon"
-      />
-    </div>
-    <span
-      aria-atomic="true"
-      aria-live="polite"
-      aria-relevant="additions text"
-      className="visually-hidden-component"
-    />
-  </div>
-</Frame>
+/>
+`;
+
+exports[`Frame should render a default variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="default"
+/>
+`;
+
+exports[`Frame should render a default variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="default"
+/>
+`;
+
+exports[`Frame should render a disabled combobox variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render a disabled default variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="default"
+/>
+`;
+
+exports[`Frame should render a disabled multiple variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="multiple"
+/>
+`;
+
+exports[`Frame should render a disabled search variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="search"
+/>
+`;
+
+exports[`Frame should render a disabled tag variant 1`] = `
+<Frame
+  disabled={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render a multiple variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="multiple"
+/>
+`;
+
+exports[`Frame should render a multiple variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="multiple"
+/>
+`;
+
+exports[`Frame should render a search variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="search"
+/>
+`;
+
+exports[`Frame should render a search variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="search"
+/>
+`;
+
+exports[`Frame should render a tag variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render a tag variant with a placeholder 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={false}
+  placeholder="Placeholder"
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render an invalid combobox variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="tag"
+/>
+`;
+
+exports[`Frame should render an invalid default variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="default"
+/>
+`;
+
+exports[`Frame should render an invalid multiple variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="multiple"
+/>
+`;
+
+exports[`Frame should render an invalid search variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="search"
+/>
+`;
+
+exports[`Frame should render an invalid tag variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInvalid={true}
+  variant="tag"
+/>
 `;

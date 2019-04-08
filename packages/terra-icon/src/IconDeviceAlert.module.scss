@@ -1,0 +1,17 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconDeviceAlert {
+    path:nth-of-type(1) {
+      fill: var(--terra-icon-device-alert-path-1-fill, currentColor);
+    }
+
+    path:nth-of-type(2) {
+      fill: var(--terra-icon-device-alert-path-2-fill, #e50000);
+    }
+
+    path:nth-of-type(3) {
+      fill: var(--terra-icon-device-alert-path-3-fill, #fff);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

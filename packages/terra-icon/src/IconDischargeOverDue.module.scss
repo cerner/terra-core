@@ -1,0 +1,17 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconDischargeOverDue {
+    path:nth-of-type(1) {
+      fill: var(--terra-icon-discharge-over-due-path-1-fill, #e50000);
+    }
+
+    path:nth-of-type(2) {
+      fill: var(--terra-icon-discharge-over-due-path-2-fill, #fff);
+    }
+
+    path:nth-of-type(3) {
+      fill: var(--terra-icon-discharge-over-due-path-3-fill, currentColor);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

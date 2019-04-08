@@ -2,6 +2,7 @@
   .menu {
     list-style: none;
     margin: var(--terra-form-select-menu-margin, 0);
+    outline: none;
     overflow: hidden;
     padding: var(--terra-form-select-menu-padding, 0 0 0.142857rem);
   }
