@@ -117,6 +117,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
     aria-expanded="false"
     aria-label="Show"
     class="button neutral"
+    title="Show"
     type="button"
   >
     <span

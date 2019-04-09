@@ -6,7 +6,7 @@ const outputfile = fs.createWriteStream('../../packages/terra-icon/src/terra-dev
 const generateIconAll = iconObjs => new Promise((resolve) => {
 
   const themeableIcons = iconObjs.filter(function(iconObj){
-    if (iconObj.themeable) {
+    if (iconObj.themeable && !iconObj.deprecated) {
       return iconObj;
     }
   });

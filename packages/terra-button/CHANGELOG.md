@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Added
+* Added the native `title` attribute as a prop
+
 3.9.0 - (April 2, 2019)
 ------------------
 ### Fixed

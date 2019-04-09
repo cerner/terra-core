@@ -1,0 +1,21 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconDueSoon {
+    path:nth-of-type(1) {
+      fill: var(--terra-icon-due-soon-path-1-fill, currentColor);
+    }
+
+    path:nth-of-type(2) {
+      fill: var(--terra-icon-due-soon-path-2-fill, #ffc20a);
+    }
+
+    path:nth-of-type(3) {
+      fill: var(--terra-icon-due-soon-path-3-fill, #1c1f21);
+    }
+
+    path:nth-of-type(4) {
+      fill: var(--terra-icon-due-soon-path-4-fill, #1c1f21);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

@@ -272,7 +272,7 @@ class Menu extends React.Component {
       // Detects if option is clear option and provides accessible text
       if (clearOptionDisplay) {
         const active = this.menu.querySelector('[data-select-active]');
-        if (active.hasAttribute('data-terra-select-clear-option')) {
+        if (active && active.hasAttribute('data-terra-select-clear-option')) {
           this.props.visuallyHiddenComponent.current.innerText = clearSelectTxt;
         }
       }
@@ -281,7 +281,7 @@ class Menu extends React.Component {
       if (variant === Variants.COMBOBOX || variant === Variants.TAG) {
         const active = this.menu.querySelector('[data-select-active]');
 
-        if (active.hasAttribute('data-terra-select-add-option')) {
+        if (active && active.hasAttribute('data-terra-select-add-option')) {
           const display = active.querySelector("[class*='display']").innerText;
           this.props.visuallyHiddenComponent.current.innerText = display;
         }
@@ -380,7 +380,7 @@ class Menu extends React.Component {
       // Handles communicating the case where a clear option is selected to screen readers
       if (this.props.clearOptionDisplay) {
         const activeOption = this.menu.querySelector('[data-select-active]');
-        if (activeOption.hasAttribute('data-terra-select-clear-option')) {
+        if (activeOption && activeOption.hasAttribute('data-terra-select-clear-option')) {
           this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectCleared' });
         }
       }
@@ -498,9 +498,9 @@ class Menu extends React.Component {
     const dropdownRect = this.menu.parentNode.getBoundingClientRect();
     const optionRect = activeOption.getBoundingClientRect();
 
-    if (optionRect.top < dropdownRect.top) {
+    if (activeOption && optionRect.top < dropdownRect.top) {
       activeOption.scrollIntoView();
-    } else if (optionRect.bottom > dropdownRect.bottom) {
+    } else if (activeOption && optionRect.bottom > dropdownRect.bottom) {
       activeOption.scrollIntoView(false);
     }
   }

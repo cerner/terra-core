@@ -22,7 +22,7 @@
   "devDependencies": {
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
-    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.19.2.tar.gz",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/1.21.1.tar.gz",
     "shelljs": "^0.8.2",
     "svgo": "^0.7.2"
   },
@@ -41,9 +41,10 @@
     "compilescripts:build": "babel scripts/src --out-dir scripts/lib --copy-files",
     "migrate-csv": "node scripts/lib/migrate-csv/index.js",
     "migrate-svg": "node scripts/lib/migrate-svg/index.js",
+    "generate-json": "node scripts/lib/generate-json/index.js",
     "generate-icon": "node scripts/lib/generate-icon/index.js",
     "generate-example": "node scripts/lib/generate-example/index.js",
-    "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-icon && npm run generate-example",
+    "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-json && npm run generate-icon && npm run generate-example",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
