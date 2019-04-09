@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+4.4.0 - (April 9, 2019)
+------------------
 ### Changed
 * Update documentation to better cover sections and headers
 
