@@ -68,7 +68,7 @@ describe('Manual Search', () => {
     searchField.setState({ searchText: 'Te' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.childAt(2).simulate('click');
     expect(onSearch).toBeCalledWith('Te');
   });
 
@@ -128,7 +128,7 @@ describe('Auto Search', () => {
 
     expect(onSearch).not.toBeCalled();
 
-    searchField.childAt(1).simulate('click');
+    searchField.childAt(2).simulate('click');
     expect(onSearch).toBeCalledWith('Te');
 
     jest.runAllTimers();

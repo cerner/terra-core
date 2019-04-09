@@ -1,3 +1,5 @@
+@import '~terra-mixins/lib/Mixins';
+
 :local {
   .searchfield {
     display: inline-flex;
@@ -18,6 +20,10 @@
       margin-right: var(--terra-search-field-clear-margin-right, 0);
       margin-top: var(--terra-search-field-clear-margin-top, 0);
       z-index: 1;
+
+      &:active {
+        background-color: rgba(0,0,0,0);
+      }
     }
 
     .clear-icon {
@@ -43,7 +49,7 @@
       margin-right: var(--terra-search-field-input-margin-right, 0);
       margin-top: var(--terra-search-field-input-margin-top, 0);
       min-width: 0;
-      //outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
+      outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
 
       /* stylelint-disable selector-max-compound-selectors */
       // Match focus style and make clear button appear seamless

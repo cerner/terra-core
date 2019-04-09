@@ -105,15 +105,14 @@ class SearchField extends React.Component {
     super(props);
 
     this.handleClear = this.handleClear.bind(this);
-    this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.setInputRef = this.setInputRef.bind(this);
     this.updateSearchText = this.updateSearchText.bind(this);
-    this.previouslyFocusedInput = undefined;
 
     this.searchTimeout = null;
-    this.state = { searchText: this.props.defaultValue };
+    this.state = { searchText: this.props.defaultValue || this.props.value };
   }
 
   componentDidUpdate() {
@@ -125,16 +124,7 @@ class SearchField extends React.Component {
     this.clearSearchTimeout();
   }
 
-  focus() {
-    this.currentInput.current.focus();
-  }
-
   handleClear(event) {
-    // Clear uncontrolled input field
-    if (this.props.defaultValue && this.previouslyFocusedInput) {
-      this.previouslyFocusedInput.value = '';
-    }
-
     // Pass along changes to consuming components using associated props
     if (this.props.onChange) {
       this.props.onChange(event, '');
@@ -145,21 +135,14 @@ class SearchField extends React.Component {
     }
     this.setState({ searchText: '' });
 
-    // Set focus back on previous focus after clicking / pressing clear
-    if (this.previouslyFocusedInput) {
-      this.previouslyFocusedInput.focus();
-    }
-  }
-
-  handleInputFocus(event) {
-    if (this.previouslyFocusedInput !== event.currentTarget) {
-      this.previouslyFocusedInput = event.currentTarget;
+    // Clear uncontrolled input field
+    if (this.inputRef) {
+      this.inputRef.value = '';
+      this.inputRef.focus();
     }
   }
 
   handleTextChange(event) {
-    this.handleInputFocus(event);
-
     const textValue = event.target.value;
     this.updateSearchText(textValue);
 
@@ -206,6 +189,13 @@ class SearchField extends React.Component {
     }
   }
 
+  setInputRef(node) {
+    this.inputRef = node;
+    if (this.props.inputRefCallback) {
+        this.props.inputRefCallback(node);
+    }
+  }
+
   render() {
     const {
       defaultValue,
@@ -224,7 +214,7 @@ class SearchField extends React.Component {
       ...customProps
     } = this.props;
 
-    const clearButtonVisible = !defaultValue && !this.state.searchText ? 'input-clear' : undefined;
+    const clearButtonVisible = !this.state.searchText ? 'input-clear' : undefined;
 
     const clearButtonClassNames = cx([
       'clear',
@@ -245,21 +235,30 @@ class SearchField extends React.Component {
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = this.context.intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
-    const clearIcon = <div><span className={cx('clear-icon')} /></div>;
+    const clearIcon = <span className={cx('clear-icon')} />;
 
-    let valueData;
-    if (defaultValue) {
-      valueData = undefined;
-    } else if (value) {
-      valueData = value;
+    if (value !== undefined) {
+      additionalInputAttributes.value = value;
     } else {
-      valueData = this.state.searchText;
+      additionalInputAttributes.defaultValue = defaultValue;
     }
+
+    const clearButton = this.state.searchText
+      ? (
+        <Button
+          className={clearButtonClassNames}
+          onClick={this.handleClear}
+          text={clearText}
+          variant="utility"
+          icon={clearIcon}
+          isIconOnly
+        />
+      )
+      : undefined;
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <Input
-          defaultValue={defaultValue}
           className={inputClassNames}
           type="search"
           placeholder={placeholder}
@@ -268,23 +267,10 @@ class SearchField extends React.Component {
           disabled={isDisabled}
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
-          refCallback={inputRefCallback}
-          value={valueData}
+          refCallback={inputRefCallback || this.setInputRef}
           {...additionalInputAttributes}
         />
-        { this.previouslyFocusedInput && this.state.searchText
-          ? (
-            <Button
-              className={clearButtonClassNames}
-              onClick={this.handleClear}
-              text={clearText}
-              variant="utility"
-              icon={clearIcon}
-              isIconOnly
-            />
-          )
-          : undefined
-        }
+        {clearButton}
         <Button
           className={cx('button')}
           text={buttonText}

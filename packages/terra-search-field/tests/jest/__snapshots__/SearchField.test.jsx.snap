@@ -96,7 +96,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       isInvalid={false}
       name={null}
       onChange={[Function]}
-      onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder=""
       refCallback={
@@ -131,7 +130,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         disabled={false}
         name={null}
         onChange={[Function]}
-        onFocus={[Function]}
         onKeyDown={[Function]}
         placeholder=""
         required={false}
@@ -166,6 +164,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
+        title="Terra.searchField.submit-search"
         type="button"
       >
         <span
@@ -255,9 +254,9 @@ exports[`Snapshots renders a basic search field 1`] = `
     isInvalid={false}
     name={null}
     onChange={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
+    refCallback={[Function]}
     required={false}
     type="search"
   />
@@ -322,12 +321,28 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     isInvalid={false}
     name={null}
     onChange={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
+    refCallback={[Function]}
     required={false}
     type="search"
-    value="Test"
+  />
+  <Button
+    className="clear"
+    icon={
+      <span
+        className="clear-icon"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="Terra.searchField.clear"
+    type="button"
+    variant="utility"
   />
   <Button
     className="button"
@@ -390,12 +405,28 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     isInvalid={false}
     name={null}
     onChange={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
+    refCallback={[Function]}
     required={false}
     type="search"
-    value="Test"
+  />
+  <Button
+    className="clear"
+    icon={
+      <span
+        className="clear-icon"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="Terra.searchField.clear"
+    type="button"
+    variant="utility"
   />
   <Button
     className="button"
@@ -459,11 +490,28 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     isInvalid={false}
     name={null}
     onChange={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
+    refCallback={[Function]}
     required={false}
     type="search"
+  />
+  <Button
+    className="clear"
+    icon={
+      <span
+        className="clear-icon"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="Terra.searchField.clear"
+    type="button"
+    variant="utility"
   />
   <Button
     className="button"
@@ -526,9 +574,9 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     isInvalid={false}
     name={null}
     onChange={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder="Test"
+    refCallback={[Function]}
     required={false}
     type="search"
   />
@@ -593,11 +641,12 @@ exports[`Snapshots renders a search field with a value 1`] = `
     isInvalid={false}
     name={null}
     onChange={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
+    refCallback={[Function]}
     required={false}
     type="search"
+    value="Test"
   />
   <Button
     className="button"
@@ -660,9 +709,9 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     isInvalid={false}
     name={null}
     onChange={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder=""
+    refCallback={[Function]}
     required={false}
     type="search"
   />
