@@ -20,6 +20,7 @@ Unreleased
 ------------------
 ### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
+* Improved experience using the select component with JAWS, VoiceOver, and VoiceOver on iOS
 
 ### Removed
 * Removed peer dependency on terra-base
@@ -50,7 +51,6 @@ Unreleased
 ------------------
 ### Fixed
 * Race condition where timeout would update after the component is not mounted
-* Improved experience using the select component with JAWS, VoiceOver, and VoiceOver on iOS
 * 'Unable to get property 'getInstance' of undefined or null reference' error in IE
 
 5.7.0 - (February 26, 2019)
