@@ -11,6 +11,7 @@ describe('Divider', () => {
       testName: 'themed',
       properties: {
         '--terra-divider-border-color': '#ff0000',
+        '--terra-divider-border-top-width': '10px',
       },
     });
   });
