@@ -1,5 +1,9 @@
 /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
 :local {
+  .row-selected-help-text {
+    display: none;
+  }
+
   .table {
     background-color: var(--terra-table-background-color, rgba(255, 255, 255, 0));
     border: var(--terra-table-border, 0);

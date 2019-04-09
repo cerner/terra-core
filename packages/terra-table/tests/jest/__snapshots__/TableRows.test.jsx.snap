@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render TableRows tag 1`] = `
-<tbody>
+<tbody
+  rol="rowgroup"
+>
   <TableRow
     isSelected={false}
     key=".$PERSON_0"
@@ -40,7 +42,9 @@ exports[`should render TableRows tag 1`] = `
 `;
 
 exports[`should render TableRows with multiple rows 1`] = `
-<tbody>
+<tbody
+  rol="rowgroup"
+>
   <TableRow
     isSelected={false}
     key=".$PERSON_0"
@@ -78,10 +82,16 @@ exports[`should render TableRows with multiple rows 1`] = `
 </tbody>
 `;
 
-exports[`should render TableRows with no rows 1`] = `<tbody />`;
+exports[`should render TableRows with no rows 1`] = `
+<tbody
+  rol="rowgroup"
+/>
+`;
 
 exports[`should render TableRows with one row 1`] = `
-<tbody>
+<tbody
+  rol="rowgroup"
+>
   <TableRow
     isSelected={false}
     key=".$PERSON_0"

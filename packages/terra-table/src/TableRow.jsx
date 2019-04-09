@@ -18,17 +18,57 @@ const propTypes = {
    * Whether or not row is selectable
    */
   isSelectable: PropTypes.bool,
+  /**
+   * @private
+   * Function to trigger when the onClick has been called on a row. This passes the onclick
+   * function as an onclick trigger to the row's child columns.
+   */
+  onClick: PropTypes.func,
+  /**
+   * @private
+   * Function to trigger when the onKeyDown has been called on a row. This passes the onclick
+   * function as an onclick trigger to the row's child columns.
+   */
+  onKeyDown: PropTypes.func,
+  /**
+   * @private
+   * Id of the helper text identifying a row is selectable. Populates the aria-describedby attribute
+   * of the child cells in this row.
+   */
+  selectRowHelpTextId: PropTypes.string,
 };
 
 const defaultProps = {
   isSelected: false,
   isSelectable: undefined,
+  onClick: undefined,
+  onKeyDown: undefined,
+  selectRowHelpTextId: undefined,
 };
+
+function cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId) {
+  return React.Children.map(children, (child) => {
+    const newProps = {};
+
+    if (onClick) {
+      newProps.onClick = onClick;
+    }
+    if (onKeyDown) {
+      newProps.onKeyDown = onKeyDown;
+    }
+
+    newProps.selectRowHelpTextId = selectRowHelpTextId;
+    return React.cloneElement(child, newProps);
+  });
+}
 
 const TableRow = ({
   children,
   isSelected,
   isSelectable,
+  onClick,
+  onKeyDown,
+  selectRowHelpTextId,
   ...customProps
 }) => {
   const rowClassNames = cx([
@@ -45,8 +85,8 @@ const TableRow = ({
   }
 
   return (
-    <tr {...customProps} aria-selected={isSelected} className={rowClassNames}>
-      {children}
+    <tr {...customProps} onKeyDown={onKeyDown} aria-describedby={selectRowHelpTextId} aria-selected={isSelected} className={rowClassNames} role="row">
+      {cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId)}
     </tr>
   );
 };

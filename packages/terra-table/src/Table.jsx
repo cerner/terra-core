@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import uniqueid from 'lodash.uniqueid';
 import TableHeader from './TableHeader';
 import TableHeaderCell from './TableHeaderCell';
 import TableRows from './TableRows';
@@ -34,11 +35,34 @@ const defaultProps = {
   isPadded: true,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
+function cloneChildItems(children, selectRowHelpTextId) {
+  return React.Children.map(children, (child) => {
+    if (child.type === TableRows) {
+      const newProps = {};
+      newProps.selectRowHelpTextId = selectRowHelpTextId;
+      return React.cloneElement(child, newProps);
+    }
+
+    return child;
+  });
+}
+
 const Table = ({
   children,
   isStriped,
   isPadded,
   ...customProps
+}, {
+  intl,
 }) => {
   const tableClassNames = cx([
     'table',
@@ -46,15 +70,22 @@ const Table = ({
     { padded: isPadded },
     customProps.className,
   ]);
+
+  const selectRowHelpTextId = `terra-table-help-${uniqueid()}`;
+
   return (
-    <table {...customProps} className={tableClassNames}>
-      {children}
-    </table>
+    <React.Fragment>
+      <p aria-hidden className={cx('row-selected-help-text')} id={selectRowHelpTextId}>{intl.formatMessage({ id: 'Terra.table.selectRow' })}</p>
+      <table {...customProps} className={tableClassNames}>
+        {cloneChildItems(children, selectRowHelpTextId)}
+      </table>
+    </React.Fragment>
   );
 };
 
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
+Table.contextTypes = contextTypes;
 Table.Rows = TableRows;
 Table.Header = TableHeader;
 Table.HeaderCell = TableHeaderCell;
