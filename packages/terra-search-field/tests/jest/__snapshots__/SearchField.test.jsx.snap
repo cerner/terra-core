@@ -2,7 +2,6 @@
 
 exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
 <SearchField
-  defaultValue=""
   disableAutoSearch={false}
   inputRefCallback={
     [MockFunction] {
@@ -93,7 +92,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       aria-disabled={false}
       aria-label="Terra.searchField.search"
       className="input input-clear"
-      defaultValue=""
       disabled={false}
       isInvalid={false}
       name={null}
@@ -125,7 +123,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       }
       required={false}
       type="search"
-      value=""
     >
       <input
         aria-disabled={false}
@@ -139,7 +136,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         placeholder=""
         required={false}
         type="search"
-        value=""
       />
     </Input>
     <Button
@@ -170,7 +166,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        title="Terra.searchField.submit-search"
         type="button"
       >
         <span
@@ -256,7 +251,6 @@ exports[`Snapshots renders a basic search field 1`] = `
     aria-disabled={false}
     aria-label="Terra.searchField.search"
     className="input input-clear"
-    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -266,7 +260,6 @@ exports[`Snapshots renders a basic search field 1`] = `
     placeholder=""
     required={false}
     type="search"
-    value=""
   />
   <Button
     className="button"
@@ -325,7 +318,6 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     aria-disabled={true}
     aria-label="Terra.searchField.search"
     className="input"
-    defaultValue=""
     disabled={true}
     isInvalid={false}
     name={null}
@@ -394,7 +386,6 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     aria-disabled={false}
     aria-label="Terra.searchField.search"
     className="input"
-    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -531,7 +522,6 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     aria-disabled={false}
     aria-label="Terra.searchField.search"
     className="input input-clear"
-    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -541,7 +531,6 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     placeholder="Test"
     required={false}
     type="search"
-    value=""
   />
   <Button
     className="button"
@@ -600,7 +589,6 @@ exports[`Snapshots renders a search field with a value 1`] = `
     aria-disabled={false}
     aria-label="Terra.searchField.search"
     className="input input-clear"
-    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -610,7 +598,6 @@ exports[`Snapshots renders a search field with a value 1`] = `
     placeholder=""
     required={false}
     type="search"
-    value=""
   />
   <Button
     className="button"
@@ -669,7 +656,6 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     aria-disabled={false}
     aria-label="Search Field"
     className="input input-clear"
-    defaultValue=""
     disabled={false}
     isInvalid={false}
     name={null}
@@ -679,7 +665,6 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     placeholder=""
     required={false}
     type="search"
-    value=""
   />
   <Button
     className="button"

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import KeyCode from 'keycode-js';
-import IconClose from 'terra-icon/lib/icon/IconClose';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form-input';
 import styles from './SearchField.module.scss';
@@ -11,7 +10,6 @@ import styles from './SearchField.module.scss';
 const cx = classNames.bind(styles);
 
 const Icon = <IconSearch />;
-const Clear = <IconClose />;
 
 const propTypes = {
   /**
@@ -82,7 +80,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  defaultValue: '',
+  defaultValue: undefined,
   disableAutoSearch: false,
   isBlock: false,
   isDisabled: false,
@@ -226,15 +224,15 @@ class SearchField extends React.Component {
       ...customProps
     } = this.props;
 
-    const cancelButtonVisible = !defaultValue && !this.state.searchText ? 'input-clear' : undefined;
+    const clearButtonVisible = !defaultValue && !this.state.searchText ? 'input-clear' : undefined;
 
-    const cancelButtonClassNames = cx([
+    const clearButtonClassNames = cx([
       'clear',
     ]);
 
     const inputClassNames = cx([
       'input',
-      cancelButtonVisible,
+      clearButtonVisible,
     ]);
 
     const searchFieldClassNames = cx([
@@ -245,6 +243,7 @@ class SearchField extends React.Component {
 
     const inputText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
+    const clearText = this.context.intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
 
     return (
@@ -260,18 +259,17 @@ class SearchField extends React.Component {
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
           refCallback={inputRefCallback}
-          value={defaultValue ? undefined : this.state.searchText}
+          value={defaultValue ? value : this.state.searchText}
           {...additionalInputAttributes}
         />
         { this.previouslyFocusedInput && this.state.searchText
           ? (
             <Button
-              className={cancelButtonClassNames}
+              className={clearButtonClassNames}
               onClick={this.handleClear}
-              text="cancel"
-              icon={Clear}
+              text={clearText}
+              icon={<span className={cx('clear-icon')} />}
               isIconOnly
-              aria-label="cancel"
             />
           )
           : undefined
