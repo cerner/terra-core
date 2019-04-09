@@ -1,12 +1,20 @@
 /* eslint-disable */
 import React from 'react';
+import classNames from 'classnames/bind';
 import IconBase from '../IconBase';
+import styles from '../IconMax.module.scss';
+
+const cx = classNames.bind(styles);
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
+  const iconClassNames = cx([
+    'IconMax',
+    customProps.className,
+  ]);
 
   return (
-    <IconBase {...attributes}>
+    <IconBase className={iconClassNames} {...attributes}>
       <path d="M39.5 16L24 0 8.5 16H21v32h6V16z" ></path>
     </IconBase>
   );
