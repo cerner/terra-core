@@ -5,7 +5,7 @@ import styles from './Divider.module.scss';
 
 const propTypes = {
   /**
-  * String to be displayed in-line with the divider.
+  * String to be displayed inline with the divider.
   */
   text: PropTypes.string,
 };
@@ -20,16 +20,13 @@ const Divider = (props) => {
     customProps.className,
   ]);
 
-  const dividerType = !text
-    ? <hr {...customProps} className={dividerClassNames} aria-hidden="true" />
-    : (
-      <div className={cx(['divider-container'])}>
-        <span className={cx(['divider-text'])}>{text}</span>
-      </div>
-    );
-
+  if (!text) {
+    return <hr {...customProps} className={dividerClassNames} aria-hidden="true" />;
+  }
   return (
-    dividerType
+    <div className={cx(['divider-container'])}>
+      <span className={cx(['divider-text'])}>{text}</span>
+    </div>
   );
 };
 
