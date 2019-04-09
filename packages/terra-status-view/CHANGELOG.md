@@ -9,6 +9,11 @@ Unreleased
 ### Added
 * Added additional variants export
 
+3.10.0 - (April 9, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.9.0 - (April 2, 2019)
 ------------------
 ### Changed
