@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added max-width: 100% style when isWordWrapped prop is set to enable prop word wrapping in IE
 
 4.3.0 - (April 9, 2019)
 ------------------
