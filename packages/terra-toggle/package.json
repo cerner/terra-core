@@ -1,7 +1,7 @@
 {
   "name": "terra-toggle",
   "main": "lib/Toggle.js",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "description": "Toggle component that transitions content in and out.",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "prop-types": "^15.5.8",
     "react-animate-height": "^2.0.1",
     "terra-doc-template": "^2.7.0",
-    "terra-icon": "^3.6.0"
+    "terra-icon": "^3.7.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
