@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.13.0 - (April 9, 2019)
+------------------
 ### Fixed
 * Issue with input element wrapping to new line too soon in multiple and tag variants
 * Unintended height increase

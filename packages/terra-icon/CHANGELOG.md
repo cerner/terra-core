@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.7.0 - (April 9, 2019)
+------------------
 ### Added
 * IconCatalogueNumber
 * IconCaution

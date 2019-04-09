@@ -10,6 +10,7 @@
 
   // Word wrap
   .word-wrap {
+    max-width: 100%; /* Allows text to wrap in IE */
     overflow-wrap: break-word; /* Modern browsers */
     word-wrap: break-word; /* For IE 10 and IE 11 */
   }
