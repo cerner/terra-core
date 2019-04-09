@@ -246,6 +246,15 @@ class SearchField extends React.Component {
     const clearText = this.context.intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
 
+    let valueData;
+    if (defaultValue) {
+      valueData = undefined;
+    } else if (value) {
+      valueData = value;
+    } else {
+      valueData = this.state.searchText;
+    }
+
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <Input
@@ -259,7 +268,7 @@ class SearchField extends React.Component {
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
           refCallback={inputRefCallback}
-          value={defaultValue ? value : this.state.searchText}
+          value={valueData}
           {...additionalInputAttributes}
         />
         { this.previouslyFocusedInput && this.state.searchText
