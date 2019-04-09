@@ -124,6 +124,13 @@ class SearchField extends React.Component {
     this.clearSearchTimeout();
   }
 
+  setInputRef(node) {
+    this.inputRef = node;
+    if (this.props.inputRefCallback) {
+      this.props.inputRefCallback(node);
+    }
+  }
+
   handleClear(event) {
     // Pass along changes to consuming components using associated props
     if (this.props.onChange) {
@@ -186,13 +193,6 @@ class SearchField extends React.Component {
     if (this.searchTimeout) {
       clearTimeout(this.searchTimeout);
       this.searchTimeout = null;
-    }
-  }
-
-  setInputRef(node) {
-    this.inputRef = node;
-    if (this.props.inputRefCallback) {
-        this.props.inputRefCallback(node);
     }
   }
 
