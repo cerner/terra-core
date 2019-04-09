@@ -245,6 +245,7 @@ class SearchField extends React.Component {
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = this.context.intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
+    const clearIcon = <div><span className={cx('clear-icon')} /></div>;
 
     let valueData;
     if (defaultValue) {
@@ -277,7 +278,8 @@ class SearchField extends React.Component {
               className={clearButtonClassNames}
               onClick={this.handleClear}
               text={clearText}
-              icon={<span className={cx('clear-icon')} />}
+              variant="utility"
+              icon={clearIcon}
               isIconOnly
             />
           )
