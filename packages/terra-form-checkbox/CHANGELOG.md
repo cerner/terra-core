@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.8.0 - (April 9, 2019)
+------------------
+### Changed
+* Adding a validation of falsey values to the child components to avoid a crash
+
 3.7.0 - (March 26, 2019)
 ------------------
 ### Added
