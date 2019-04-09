@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconDiamond {
+    path {
+      fill: var(--terra-icon-diamon-path-1-fill, #78288c);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

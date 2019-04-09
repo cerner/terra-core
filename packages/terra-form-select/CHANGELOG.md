@@ -6,6 +6,7 @@ Unreleased
 ### Fixed
 * Issue with input element wrapping to new line too soon in multiple and tag variants
 * Unintended height increase
+* Null checks added to private Menu to prevent errors from empty queries
 
 5.12.0 - (April 2, 2019)
 ------------------

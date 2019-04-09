@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconHigh {
+    path {
+      fill: var(--terra-icon-high-path-1-fill, #ff6100);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

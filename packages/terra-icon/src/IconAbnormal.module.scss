@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconAbnormal {
+    path {
+      fill: var(--terra-icon-abnormal-path-1-fill, #654a08);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

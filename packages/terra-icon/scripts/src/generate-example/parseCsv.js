@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { TerraIcon } from '../config';
 /* eslint-enable import/no-extraneous-dependencies */
 
-const csvHeaders = ['name', 'filepath', 'themeable', 'bidi'];
+const csvHeaders = ['name', 'filepath', 'themeable', 'bidi', 'deprecated'];
 
 const parseCsv = () => new Promise((resolve, reject) => {
   // Parse the csv file to json
@@ -15,6 +15,7 @@ const parseCsv = () => new Promise((resolve, reject) => {
       jsonObj.componentName = `Icon${_.upperFirst(_.camelCase(jsonObj.name))}`;
       jsonObj.filepath = `${TerraIcon.iconDir}${jsonObj.componentName}.jsx`;
       jsonObj.themeable = !!jsonObj.themeable;
+      jsonObj.deprecated = !!jsonObj.deprecated;
       jsonObj.bidi = (jsonObj.bidi === 'bi-directional');
       jsonObj.spinner = (jsonObj.name === 'IconSpinner');
       jsonObj.syntaxComponent = `<${jsonObj.componentName} height='2em' width='2em' />`;
