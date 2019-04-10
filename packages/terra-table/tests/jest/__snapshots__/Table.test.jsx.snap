@@ -2,13 +2,6 @@
 
 exports[`should render a default table 1`] = `
 <Fragment>
-  <p
-    aria-hidden={true}
-    className="row-selected-help-text"
-    id="terra-table-help-1"
-  >
-    Terra.table.selectRow
-  </p>
   <table
     className="table striped padded"
     intl={
@@ -97,18 +90,18 @@ exports[`should render a default table 1`] = `
       </TableRow>
     </TableRows>
   </table>
+  <p
+    aria-hidden={true}
+    className="row-selected-help-text"
+    id="terra-table-help-1"
+  >
+    This row is Selected
+  </p>
 </Fragment>
 `;
 
 exports[`should render a table without padding 1`] = `
 <Fragment>
-  <p
-    aria-hidden={true}
-    className="row-selected-help-text"
-    id="terra-table-help-3"
-  >
-    Terra.table.selectRow
-  </p>
   <table
     className="table striped"
     intl={
@@ -197,18 +190,18 @@ exports[`should render a table without padding 1`] = `
       </TableRow>
     </TableRows>
   </table>
+  <p
+    aria-hidden={true}
+    className="row-selected-help-text"
+    id="terra-table-help-3"
+  >
+    This row is Selected
+  </p>
 </Fragment>
 `;
 
 exports[`should render a table without zebra stripes 1`] = `
 <Fragment>
-  <p
-    aria-hidden={true}
-    className="row-selected-help-text"
-    id="terra-table-help-2"
-  >
-    Terra.table.selectRow
-  </p>
   <table
     className="table padded"
     intl={
@@ -297,5 +290,12 @@ exports[`should render a table without zebra stripes 1`] = `
       </TableRow>
     </TableRows>
   </table>
+  <p
+    aria-hidden={true}
+    className="row-selected-help-text"
+    id="terra-table-help-2"
+  >
+    This row is Selected
+  </p>
 </Fragment>
 `;
