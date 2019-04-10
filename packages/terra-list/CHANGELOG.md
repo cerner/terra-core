@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+### Added
+* Added an interaction media query to apply `hover` styles over a list-item only on non-touch devices.
+
+4.4.0 - (April 9, 2019)
+------------------
 ### Changed
 * Update documentation to better cover sections and headers
 
