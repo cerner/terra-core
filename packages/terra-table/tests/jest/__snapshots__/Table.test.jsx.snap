@@ -95,7 +95,7 @@ exports[`should render a default table 1`] = `
     className="row-selected-help-text"
     id="terra-table-help-1"
   >
-    This row is Selected
+    Terra.table.selectRow
   </p>
 </Fragment>
 `;
@@ -195,7 +195,7 @@ exports[`should render a table without padding 1`] = `
     className="row-selected-help-text"
     id="terra-table-help-3"
   >
-    This row is Selected
+    Terra.table.selectRow
   </p>
 </Fragment>
 `;
@@ -295,7 +295,7 @@ exports[`should render a table without zebra stripes 1`] = `
     className="row-selected-help-text"
     id="terra-table-help-2"
   >
-    This row is Selected
+    Terra.table.selectRow
   </p>
 </Fragment>
 `;

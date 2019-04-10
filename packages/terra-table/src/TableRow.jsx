@@ -46,7 +46,7 @@ const defaultProps = {
   selectRowHelpTextId: undefined,
 };
 
-function cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId) {
+function cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId, isSelectable) {
   return React.Children.map(children, (child) => {
     const newProps = {};
 
@@ -56,6 +56,8 @@ function cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId) {
     if (onKeyDown) {
       newProps.onKeyDown = onKeyDown;
     }
+
+    newProps.isSelectable = isSelectable;
 
     newProps.selectRowHelpTextId = selectRowHelpTextId;
     return React.cloneElement(child, newProps);
@@ -86,7 +88,7 @@ const TableRow = ({
 
   return (
     <tr {...customProps} onKeyDown={onKeyDown} aria-describedby={selectRowHelpTextId} aria-selected={isSelected} className={rowClassNames} role="row">
-      {cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId)}
+      {cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId, isSelectable)}
     </tr>
   );
 };
