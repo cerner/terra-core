@@ -636,7 +636,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
   <Input
     aria-disabled={false}
     aria-label="Terra.searchField.search"
-    className="input input-clear"
+    className="input"
     disabled={false}
     isInvalid={false}
     name={null}
@@ -647,6 +647,23 @@ exports[`Snapshots renders a search field with a value 1`] = `
     required={false}
     type="search"
     value="Test"
+  />
+  <Button
+    className="clear"
+    icon={
+      <span
+        className="clear-icon"
+      />
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="Terra.searchField.clear"
+    type="button"
+    variant="utility"
   />
   <Button
     className="button"
