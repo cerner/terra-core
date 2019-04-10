@@ -63,7 +63,7 @@
       display: none;
     }
 
-    // Focus style when clear button is not present
+    // Focus style when clear button is present
     .input-clear {
       &:focus {
         border: var(--terra-search-field-input-clear-focus-border, 1px solid #4cb2e9);

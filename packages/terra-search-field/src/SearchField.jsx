@@ -216,10 +216,6 @@ class SearchField extends React.Component {
 
     const clearButtonVisible = !this.state.searchText ? 'input-clear' : undefined;
 
-    const clearButtonClassNames = cx([
-      'clear',
-    ]);
-
     const inputClassNames = cx([
       'input',
       clearButtonVisible,
@@ -246,7 +242,7 @@ class SearchField extends React.Component {
     const clearButton = this.state.searchText
       ? (
         <Button
-          className={clearButtonClassNames}
+          className={cx('clear')}
           onClick={this.handleClear}
           text={clearText}
           variant="utility"
@@ -263,7 +259,6 @@ class SearchField extends React.Component {
           type="search"
           placeholder={placeholder}
           onChange={this.handleTextChange}
-          onFocus={this.handleInputFocus}
           disabled={isDisabled}
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
