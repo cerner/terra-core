@@ -46,13 +46,17 @@ const contextTypes = {
 
 function cloneChildItems(children, selectRowHelpTextId) {
   return React.Children.map(children, (child) => {
-    if (child.type === TableRows) {
-      const newProps = {};
-      newProps.selectRowHelpTextId = selectRowHelpTextId;
-      return React.cloneElement(child, newProps);
+    switch (child.type) {
+      case SelectableTableRows:
+      case TableSingleSelectableRows:
+      case TableMultiSelectableRows: {
+        const newProps = {};
+        newProps.selectRowHelpTextId = selectRowHelpTextId;
+        return React.cloneElement(child, newProps);
+      }
+      default:
+        return child;
     }
-
-    return child;
   });
 }
 

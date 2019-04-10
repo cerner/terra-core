@@ -60,7 +60,6 @@ exports[`should render a default table 1`] = `
     </TableHeader>
     <TableRows
       key=".1"
-      selectRowHelpTextId="terra-table-help-1"
     >
       <TableRow
         isSelected={false}
@@ -161,7 +160,6 @@ exports[`should render a table without padding 1`] = `
     </TableHeader>
     <TableRows
       key=".1"
-      selectRowHelpTextId="terra-table-help-3"
     >
       <TableRow
         isSelected={false}
@@ -262,7 +260,6 @@ exports[`should render a table without zebra stripes 1`] = `
     </TableHeader>
     <TableRows
       key=".1"
-      selectRowHelpTextId="terra-table-help-2"
     >
       <TableRow
         isSelected={false}
