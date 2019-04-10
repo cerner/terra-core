@@ -26,7 +26,7 @@ const propTypes = {
   onClick: PropTypes.func,
   /**
    * @private
-   * Function to trigger when the onKeyDown has been called on a row. This passes the onclick
+   * Function to trigger when the onKeyDown has been called on a row. This passes the onKeyDown
    * function as an onclick trigger to the row's child columns.
    */
   onKeyDown: PropTypes.func,
