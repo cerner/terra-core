@@ -226,6 +226,7 @@ exports[`should render an image with a custom status-view 1`] = `
         >
           <IconBase
             ariaLabel={null}
+            className="IconDiamond"
             focusable="false"
             height="1em"
             isBidi={false}
@@ -236,7 +237,7 @@ exports[`should render an image with a custom status-view 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="tui-Icon icon"
+              className="tui-Icon icon IconDiamond"
               focusable="false"
               height="1em"
               viewBox="0 0 48 48"

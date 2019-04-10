@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconIncompleteInverse {
+    path:first-child {
+      fill: var(--terra-icon-incomplete-inverse-path-1-fill, #fff);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

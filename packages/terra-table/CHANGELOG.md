@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Improved Accessibility but adding role of grid and attaching row listeners to columns 
 
+3.9.0 - (April 9, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.8.0 - (March 26, 2019)
 ------------------
 ### Changed
