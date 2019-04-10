@@ -92,7 +92,13 @@
     cursor: pointer;
     outline: var(--terra-list-item-focus-outline, none);
 
-    &:hover,
+    // Allow hover over a list-item _only_ when the primary input is a fine pointer device such as a mouse or stylus.
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: var(--terra-list-item-hover-active-background-color, lighten(#ebf6fd, 2%));
+      }
+    }
+
     &:active {
       background-color: var(--terra-list-item-hover-active-background-color, lighten(#ebf6fd, 2%));
     }
@@ -107,8 +113,11 @@
       }
     }
 
-    &.selected:hover {
-      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+    // Allow hover over a selected list-item _only_ when the primary input is a fine pointer device such as a mouse or stylus.
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &.selected:hover {
+        background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+      }
     }
   }
 
