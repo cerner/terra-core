@@ -1,15 +1,26 @@
 ##### Table of Contents
 [Headers](#headers)
+
 [Emphasis](#emphasis)
+
 [Lists](#lists)
+
 [Links](#links)
+
 [Images](#images)
+
 [Code and Syntax Highlighting](#code)
+
 [Tables](#tables)
+
 [Blockquotes](#blockquotes)
+
 [Inline HTML](#html)
+
 [Horizontal Rule](#hr)
+
 [Line Breaks](#lines)
+
 [YouTube Videos](#videos)
 
 <a name="headers"/>
