@@ -78,7 +78,7 @@ const TableRows = ({
   const numberOfCols = getNumberOfColumns(children);
   const cloneChildren = cloneChildItems(children, onClick, onKeyDown, numberOfCols, selectRowHelpTextId);
   return (
-    <tbody {...customProps} rol="rowgroup">
+    <tbody {...customProps}>
       {cloneChildren}
     </tbody>
   );

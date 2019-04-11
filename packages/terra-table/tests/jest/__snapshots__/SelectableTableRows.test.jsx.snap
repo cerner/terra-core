@@ -89,7 +89,6 @@ exports[`should update the liveregion on a selected row when one is provided 1`]
       >
         <tbody
           id="selectable-rows"
-          rol="rowgroup"
         >
           <TableRow
             className="PERSON_0"
@@ -360,7 +359,6 @@ exports[`should update the liveregion on a selected row when one is provided 2`]
       >
         <tbody
           id="selectable-rows"
-          rol="rowgroup"
         >
           <TableRow
             className="PERSON_0"

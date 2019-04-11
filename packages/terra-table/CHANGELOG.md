@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Updated to allow Voice Over to read selectable table rows.
+* Updated to allow VoiceOver to read selectable table rows.
 * Updated to allow row selection with Voice Over + space.
 
 3.9.0 - (April 9, 2019)
