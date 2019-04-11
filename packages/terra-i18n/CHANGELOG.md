@@ -4,10 +4,15 @@ Changelog
 Unreleased
 ----------
 
+2.31.2 - (April 11, 2019)
+------------------
+### Fixed
+Run compile
+
 2.31.1 - (April 11, 2019)
 ------------------
 ### Fixed
-Guard against a bad Intl object.
+Guard against a bad Intl object
 
 2.31.0 - (January 22, 2019)
 ------------------
