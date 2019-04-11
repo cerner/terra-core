@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Added prop for baseIUrl.
+* Added prop for hasHeadingAnchors.
+* Removed dependency on github-markdown-css.
 * Added regression test for a greater set of markdown.
 * Provide no highligting for unsupported languages instead of the clike highlighting.
 
