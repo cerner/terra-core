@@ -239,7 +239,7 @@ noformat
 | Prop Name | Type | Is Required | Default Value | Description |
 | ------------- |-------------| -----| -----| -----|
 | src | string | optional | '' | Markdown content to parse. |
-| baseUrl | string | optional | undefined | A prefix url for any relative link. |
+| baseUrl | string | optional | undefined | A prefix url for any relative link. e.g. '/prefix/'|
 | hasHeadingAnchors | bool | optional | undefined | Adds anchor links to heading elements. Anchor elements will not work with the hash router on an SPA. The anchors use negative margins to position to the left of heading. You must have more that 24px of space around this component. |
 
 ## Component Features
