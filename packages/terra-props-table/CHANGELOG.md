@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Props with custom prop types (like intlShape) now show as required if marked as such
 
 2.28.0 - (March 26, 2019)
 ------------------
