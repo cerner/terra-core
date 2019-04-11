@@ -32,6 +32,7 @@ class SingleSelectableRows extends React.Component {
     if (SelectableTableRows.Utils.shouldHandleSingleSelectRowSelection(this.state.selectedIndex, index)) {
       event.preventDefault();
       this.setState({ selectedIndex: index });
+
       if (this.props.onChange) {
         this.props.onChange(event, index);
       }
@@ -40,7 +41,6 @@ class SingleSelectableRows extends React.Component {
 
   render() {
     const { children, onChange, ...customProps } = this.props;
-
     return (
       <SelectableTableRows
         {...customProps}

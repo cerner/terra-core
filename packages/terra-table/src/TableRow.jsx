@@ -87,7 +87,7 @@ const TableRow = ({
   }
 
   return (
-    <tr {...customProps} onKeyDown={onKeyDown} aria-describedby={selectRowHelpTextId} aria-selected={isSelected} className={rowClassNames} role="row">
+    <tr {...customProps} onKeyDown={onKeyDown} aria-describedby={isSelectable ? selectRowHelpTextId : undefined} aria-selected={isSelected} className={rowClassNames} role="row">
       {cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId, isSelectable)}
     </tr>
   );

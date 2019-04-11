@@ -91,6 +91,12 @@ exports[`should render a default table 1`] = `
     </TableRows>
   </table>
   <p
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
+  <p
     aria-hidden={true}
     className="row-selected-help-text"
     id="terra-table-help-1"
@@ -191,6 +197,12 @@ exports[`should render a table without padding 1`] = `
     </TableRows>
   </table>
   <p
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
+  <p
     aria-hidden={true}
     className="row-selected-help-text"
     id="terra-table-help-3"
@@ -290,6 +302,12 @@ exports[`should render a table without zebra stripes 1`] = `
       </TableRow>
     </TableRows>
   </table>
+  <p
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
   <p
     aria-hidden={true}
     className="row-selected-help-text"

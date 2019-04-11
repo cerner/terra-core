@@ -44,7 +44,7 @@ const contextTypes = {
   },
 };
 
-function cloneChildItems(children, selectRowHelpTextId) {
+function cloneChildItems(children, selectRowHelpTextId, liveRegion) {
   return React.Children.map(children, (child) => {
     switch (child.type) {
       case SelectableTableRows:
@@ -52,6 +52,7 @@ function cloneChildItems(children, selectRowHelpTextId) {
       case TableMultiSelectableRows: {
         const newProps = {};
         newProps.selectRowHelpTextId = selectRowHelpTextId;
+        newProps.liveRegion = liveRegion;
         return React.cloneElement(child, newProps);
       }
       default:
@@ -75,13 +76,15 @@ const Table = ({
     customProps.className,
   ]);
 
+  const liveRegion = React.createRef();
   const selectRowHelpTextId = `terra-table-help-${uniqueid()}`;
 
   return (
     <React.Fragment>
       <table {...customProps} className={tableClassNames}>
-        {cloneChildItems(children, selectRowHelpTextId)}
+        {cloneChildItems(children, selectRowHelpTextId, liveRegion)}
       </table>
+      <p aria-atomic="true" className={cx('visually-hidden-component')} aria-live="assertive" aria-relevant="additions text" ref={liveRegion} />
       <p aria-hidden className={cx('row-selected-help-text')} id={selectRowHelpTextId}>{intl.formatMessage({ id: 'Terra.table.selectRow' })}</p>
     </React.Fragment>
   );

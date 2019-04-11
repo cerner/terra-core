@@ -12,18 +12,22 @@ exports[`should render SingleSelectableRows one selectable row and one non-selec
 >
   <TableRow
     className="PERSON_0"
+    isSelectable={true}
     isSelected={false}
     key="PERSON_0"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />
@@ -34,14 +38,17 @@ exports[`should render SingleSelectableRows one selectable row and one non-selec
     key="PERSON_1"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />
@@ -55,42 +62,50 @@ exports[`should render SingleSelectableRows tag 1`] = `
   onChange={[Function]}
   selectedIndexes={
     Array [
-      -1,
+      1,
     ]
   }
 >
   <TableRow
     className="PERSON_0"
+    isSelectable={true}
     isSelected={false}
     key="PERSON_0"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
-    isSelected={false}
+    isSelectable={true}
+    isSelected={true}
     key="PERSON_1"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />
@@ -122,18 +137,22 @@ exports[`should render SingleSelectableRows with one row 1`] = `
 >
   <TableRow
     className="PERSON_0"
+    isSelectable={true}
     isSelected={false}
     key="PERSON_0"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />
@@ -147,42 +166,50 @@ exports[`should select an row 1`] = `
   onChange={[Function]}
   selectedIndexes={
     Array [
-      -1,
+      1,
     ]
   }
 >
   <TableRow
     className="PERSON_0"
+    isSelectable={true}
     isSelected={false}
     key="PERSON_0"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
-    isSelected={false}
+    isSelectable={true}
+    isSelected={true}
     key="PERSON_1"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />
@@ -196,42 +223,50 @@ exports[`should select an row 2`] = `
   onChange={[Function]}
   selectedIndexes={
     Array [
-      -1,
+      1,
     ]
   }
 >
   <TableRow
     className="PERSON_0"
+    isSelectable={true}
     isSelected={false}
     key="PERSON_0"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
-    isSelected={false}
+    isSelectable={true}
+    isSelected={true}
     key="PERSON_1"
   >
     <TableCell
+      className="NAME"
       content="John Smith"
       key="NAME"
     />
     <TableCell
+      className="ADDRESS"
       content="123 Adams Drive"
       key="ADDRESS"
     />
     <TableCell
+      className="PHONE_NUMBER"
       content="111-222-3333"
       key="PHONE_NUMBER"
     />

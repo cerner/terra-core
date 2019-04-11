@@ -25,12 +25,25 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   selectedIndexes: PropTypes.array,
+  liveRegion: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
 };
 
 const defaultProps = {
   disableUnselectedRows: false,
   onChange: undefined,
   selectedIndexes: [],
+};
+
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
 };
 
 class SelectableTableRows extends React.Component {
@@ -49,9 +62,24 @@ class SelectableTableRows extends React.Component {
     const initialOnClick = row.props.onClick;
 
     return (event) => {
-      // The default isSelectable attribute is either undefined or true, unless the consumer specifies the row's isSelectable attribute as false.
       if (row.props.isSelectable !== false) {
         this.handleOnChange(event, index);
+
+        const { liveRegion } = this.props;
+        const { intl } = this.context;
+        const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
+
+        // The isSelected value here actually refers to the previous state of the row since
+        // isSelected is not actually geting updated inside this listener
+        if (liveRegion.current) {
+          liveRegion.current.innerText = '';
+
+          if (!isSelected) {
+            liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowSelected' });
+          } else {
+            liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowUnselected' });
+          }
+        }
       }
 
       if (initialOnClick) {
@@ -62,12 +90,26 @@ class SelectableTableRows extends React.Component {
 
   wrappedOnKeyDownForRow(row, index) {
     const initialOnKeyDown = row.props.onKeyDown;
-
     return (event) => {
       if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         // The default isSelectable attribute is either undefined or true, unless the consumer specifies the row's isSelectable attribute as false.
         if (row.props.isSelectable !== false) {
           this.handleOnChange(event, index);
+
+          const { liveRegion } = this.props;
+          const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
+
+          if (liveRegion.current) {
+            this.props.liveRegion.current.innerText = '';
+
+            // The isSelected value here actually refers to the previous state of the row since
+            // isSelected is not actually geting updated inside this listener
+            if (!isSelected) {
+              this.props.liveRegion.current.innerText = 'Row Selected';
+            } else {
+              this.props.liveRegion.current.innerText = 'Row Unselected';
+            }
+          }
         }
       }
 
@@ -80,7 +122,6 @@ class SelectableTableRows extends React.Component {
   newPropsForRow(row, index, onClick, onKeyDown) {
     const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
     const newProps = { };
-
     // Set the isSelected attribute to false for all the rows except the rows whose index is set to state selectedIndex.
     if (isSelected !== row.props.isSelected) {
       newProps.isSelected = isSelected;
@@ -121,10 +162,9 @@ class SelectableTableRows extends React.Component {
 
   render() {
     const {
-      children, disableUnselectedRows, onChange, selectedIndexes, ...customProps
+      children, disableUnselectedRows, onChange, selectedIndexes, liveRegion, ...customProps
     } = this.props;
     const clonedChildItems = this.clonedChildItems(children);
-
     return (
       <TableRows {...customProps}>
         {clonedChildItems}
@@ -135,6 +175,7 @@ class SelectableTableRows extends React.Component {
 
 SelectableTableRows.propTypes = propTypes;
 SelectableTableRows.defaultProps = defaultProps;
+SelectableTableRows.contextTypes = contextTypes;
 SelectableTableRows.Row = TableRow;
 SelectableTableRows.Utils = SelectableUtils;
 
