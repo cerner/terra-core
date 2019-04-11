@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Optional `text` property to display within the center of the divider
+* Themeable SCSS variables for the text and divider
 
 3.5.0 - (March 26, 2019)
 ------------------

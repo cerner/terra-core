@@ -1,9 +1,9 @@
 describe('Markdown', () => {
-  before(() => browser.setViewportSize({ width: 1000, height: 2000, name: 'large' }));
+  before(() => browser.setViewportSize({ width: 1000, height: 10000, name: 'large' }));
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
 
-    Terra.should.validateElement();
+    Terra.should.validateElement({ selector: '#root' });
   });
 
   describe('css', () => {
@@ -49,7 +49,7 @@ describe('Markdown', () => {
   });
 
   describe('Block Quote', () => {
-    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
+    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/blockquote'));
 
     Terra.should.validateElement();
     Terra.should.themeCombinationOfCustomProperties({

@@ -3,10 +3,12 @@ import React from 'react';
 import Divider from 'terra-divider/lib/Divider';
 import DividerExampleTemplate from './DividerExampleTemplate';
 
-const DividerExample = () => (
+const currentDate = 'November 12, 1955';
+
+const DividerCustomExample = () => (
   <DividerExampleTemplate>
-    <Divider />
+    <Divider text={currentDate} />
   </DividerExampleTemplate>
 );
 
-export default DividerExample;
+export default DividerCustomExample;

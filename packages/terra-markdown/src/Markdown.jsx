@@ -18,12 +18,11 @@ const cx = classNames.bind(styles);
 const supportedLanguages = Object.keys(Prism.languages).filter(lang => !['extend', 'insertBefore', 'DFS'].includes(lang));
 
 const highlight = (code, lang) => {
-  let language = lang;
-  if (!supportedLanguages.includes(language)) {
-    language = 'clike';
+  if (supportedLanguages.includes(lang)) {
+    return Prism.highlight(code, Prism.languages[lang], lang);
   }
 
-  return Prism.highlight(code, Prism.languages[language], language);
+  return null;
 };
 
 marked.setOptions({
