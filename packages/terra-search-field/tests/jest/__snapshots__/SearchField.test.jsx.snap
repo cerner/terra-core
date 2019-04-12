@@ -98,28 +98,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       onChange={[Function]}
       onKeyDown={[Function]}
       placeholder=""
-      refCallback={
-        [MockFunction] {
-          "calls": Array [
-            Array [
-              <input
-                aria-disabled="false"
-                aria-label="Terra.searchField.search"
-                class="form-input input input-clear"
-                placeholder=""
-                type="search"
-                value=""
-              />,
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        }
-      }
+      refCallback={[Function]}
       required={false}
       type="search"
     >

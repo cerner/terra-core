@@ -42,7 +42,6 @@ describe('Snapshots', () => {
     const inputRefCallback = jest.fn();
     const searchField = mountWithIntl(<SearchField inputRefCallback={inputRefCallback} />);
     expect(inputRefCallback).toBeCalled();
-    expect(searchField.find('Input').props().refCallback).toBeCalled();
     expect(searchField).toMatchSnapshot();
   });
 

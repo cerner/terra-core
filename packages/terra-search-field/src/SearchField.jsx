@@ -142,7 +142,7 @@ class SearchField extends React.Component {
     }
     this.setState({ searchText: '' });
 
-    // Clear uncontrolled input field
+    // Clear input field
     if (this.inputRef) {
       this.inputRef.value = '';
       this.inputRef.focus();
@@ -262,7 +262,7 @@ class SearchField extends React.Component {
           disabled={isDisabled}
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
-          refCallback={inputRefCallback || this.setInputRef}
+          refCallback={this.setInputRef}
           {...additionalInputAttributes}
         />
         {clearButton}
