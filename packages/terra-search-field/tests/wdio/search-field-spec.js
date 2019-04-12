@@ -140,7 +140,7 @@ describe('Search Field', () => {
     Terra.should.matchScreenshot('with too short text');
 
     it('should not search with the button', () => {
-      browser.click('button');
+      browser.keys('Enter');
       // Ensure button on hover styling is disabled
       browser.click('#search-callback-text');
     });
