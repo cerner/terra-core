@@ -149,6 +149,7 @@ const InputField = (props) => {
     }
   }
 
+  const inputType = (type) || inputAttrs.type;
   return (
     <Field
       label={label}
@@ -169,7 +170,7 @@ const InputField = (props) => {
       <Input
         {...inputAttrs}
         id={inputId}
-        type={type}
+        type={inputType}
         onChange={onChange}
         value={value}
         defaultValue={defaultValue}

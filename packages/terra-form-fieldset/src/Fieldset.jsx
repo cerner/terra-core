@@ -30,7 +30,7 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * Whether or not the legend is visible. Use this props to hide a legend while still creating it on the DOM for accessibility.
+   * Whether or not the legend is visible. Use this prop to hide a legend while still creating it on the DOM for accessibility.
    */
   isLegendHidden: PropTypes.bool,
 };

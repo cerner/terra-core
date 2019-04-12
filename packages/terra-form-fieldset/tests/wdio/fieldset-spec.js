@@ -21,7 +21,6 @@ describe('Fieldset', () => {
   describe('Fieldset Populated with Hidden Legend', () => {
     before(() => browser.url('/#/raw/tests/terra-form-fieldset/form-fieldset/fieldset-with-hidden-legend'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.should.validateElement();
   });
 });

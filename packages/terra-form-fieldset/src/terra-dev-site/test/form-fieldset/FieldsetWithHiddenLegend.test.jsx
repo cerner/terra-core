@@ -5,11 +5,7 @@ import Fieldset from '../../../Fieldset';
 
 const fieldsetwithhiddenlegend = () => (
   <Fieldset
-    type="checkbox"
     legend="Give your full name here"
-    name="children_present"
-    value="children_present"
-    error="All fields must be filled out"
     help="Families are eligible for family package plans"
     required
     isLegendHidden
