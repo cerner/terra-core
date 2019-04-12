@@ -25,6 +25,10 @@
     width: auto;
   }
 
+  .legend-hidden {
+    display: none;
+  }
+
   .help-text {
     color: var(--terra-form-fieldset-help-text-color, rgba(0, 0, 0, 0.8));
     display: block;

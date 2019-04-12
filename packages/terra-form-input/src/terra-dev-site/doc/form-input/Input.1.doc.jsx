@@ -12,6 +12,8 @@ import BlankExample from '../common/BlankExample';
 import BlankExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/common/BlankExample';
 import PlaceholderExample from '../common/PlaceholderExample';
 import PlaceholderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/common/PlaceholderExample';
+import NumberInputExample from '../common/NumberInputExample';
+import NumberInputExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/common/NumberInputExample';
 import ControlledDefaultExample from '../example/controlled/DefaultExample';
 import ControlledDefaultExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/controlled/DefaultExample';
 import ControlledDisabledExample from '../example/controlled/DisabledExample';
@@ -45,6 +47,11 @@ const DocPage = () => (
         title: 'Placeholder Input',
         example: <PlaceholderExample />,
         source: PlaceholderExampleSrc,
+      },
+      {
+        title: 'Numeric Input',
+        example: <NumberInputExample />,
+        source: NumberInputExampleSrc,
       },
       {
         title: 'Controlled Example - Valid',

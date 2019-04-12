@@ -29,15 +29,20 @@ const propTypes = {
    * Determines whether the fieldset is required.
    */
   required: PropTypes.bool,
+  /**
+   * Whether or not the legend is visible. Use this props to hide a legend while still creating it on the DOM for accessibility.
+   */
+  isLegendHidden: PropTypes.bool,
 };
 
 const defaultProps = {
   legendAttrs: {},
   required: false,
+  isLegendHidden: false,
 };
 
 const Fieldset = ({
-  children, help, legend, legendAttrs, required, ...customProps
+  children, help, legend, legendAttrs, isLegendHidden, required, ...customProps
 }) => {
   const fieldsetClasses = cx([
     'fieldset',
@@ -52,7 +57,7 @@ const Fieldset = ({
 
   return (
     <fieldset {...customProps} className={fieldsetClasses}>
-      {legend && <legend {...legendAttrs} className={legendClasses}>{legend}</legend>}
+      {legend && <legend {...legendAttrs} className={cx([legendClasses, { 'legend-hidden': isLegendHidden }])}>{legend}</legend>}
       {help && <small className={cx('help-text')} tabIndex="-1">{help}</small>}
       <div className={cx('fieldset-children')}>
         {children}

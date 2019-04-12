@@ -20,8 +20,8 @@ it('should render a InputField with props', () => {
       hideRequired
       inputAttrs={{
         name: 'test',
-        type: 'number',
       }}
+      type="number"
       isInline
       isInvalid
       isLabelHidden
@@ -51,8 +51,8 @@ it('should render a valid InputField with props', () => {
       hideRequired
       inputAttrs={{
         name: 'test',
-        type: 'number',
       }}
+      type="number"
       isInline
       isLabelHidden
       label="Label Test"
