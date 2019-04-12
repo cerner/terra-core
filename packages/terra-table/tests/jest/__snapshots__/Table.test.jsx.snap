@@ -91,7 +91,7 @@ exports[`should render a default table 1`] = `
     </TableRows>
   </table>
   <p
-    aria-atomic="true"
+    aria-atomic="false"
     aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
@@ -197,7 +197,7 @@ exports[`should render a table without padding 1`] = `
     </TableRows>
   </table>
   <p
-    aria-atomic="true"
+    aria-atomic="false"
     aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
@@ -303,7 +303,7 @@ exports[`should render a table without zebra stripes 1`] = `
     </TableRows>
   </table>
   <p
-    aria-atomic="true"
+    aria-atomic="false"
     aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"

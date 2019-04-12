@@ -29,12 +29,14 @@ const propTypes = {
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   ]),
+  screenReaderUpdateOnSelected: PropTypes.func,
 };
 
 const defaultProps = {
   disableUnselectedRows: false,
   onChange: undefined,
   selectedIndexes: [],
+  screenReaderUpdateOnSelected: undefined,
 };
 
 const contextTypes = {
@@ -67,17 +69,28 @@ class SelectableTableRows extends React.Component {
 
         const { liveRegion } = this.props;
         const { intl } = this.context;
-        const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
 
-        // The isSelected value here actually refers to the previous state of the row since
-        // isSelected is not actually geting updated inside this listener
-        if (liveRegion.current) {
-          liveRegion.current.innerText = '';
+        if (this.props.screenReaderUpdateOnSelected) {
+          this.props.screenReaderUpdateOnSelected(liveRegion, intl);
+        } else {
+          const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
 
-          if (!isSelected) {
-            liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowSelected' });
-          } else {
-            liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowUnselected' });
+          // The isSelected value here actually refers to the previous state of the row since
+          // isSelected is not actually geting updated inside this listener
+          if (liveRegion.current) {
+            liveRegion.current.innerText = '';
+
+            // The isSelected value here actually refers to the previous state of the row since
+            // isSelected is not actually geting updated inside this listener
+            if (!isSelected) {
+              setTimeout(() => {
+                this.props.liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowSelected' });
+              }, 250);
+            } else {
+              setTimeout(() => {
+                this.props.liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowUnselected' });
+              }, 250);
+            }
           }
         }
       }
@@ -97,17 +110,29 @@ class SelectableTableRows extends React.Component {
           this.handleOnChange(event, index);
 
           const { liveRegion } = this.props;
-          const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
+          const { intl } = this.context;
 
-          if (liveRegion.current) {
-            this.props.liveRegion.current.innerText = '';
+          if (this.props.screenReaderUpdateOnSelected) {
+            this.props.screenReaderUpdateOnSelected(liveRegion, intl);
+          } else {
+            const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
 
             // The isSelected value here actually refers to the previous state of the row since
             // isSelected is not actually geting updated inside this listener
-            if (!isSelected) {
-              this.props.liveRegion.current.innerText = 'Row Selected';
-            } else {
-              this.props.liveRegion.current.innerText = 'Row Unselected';
+            if (liveRegion.current) {
+              liveRegion.current.innerText = '';
+
+              // The isSelected value here actually refers to the previous state of the row since
+              // isSelected is not actually geting updated inside this listener
+              if (!isSelected) {
+                setTimeout(() => {
+                  this.props.liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowSelected' });
+                }, 250);
+              } else {
+                setTimeout(() => {
+                  this.props.liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowUnselected' });
+                }, 250);
+              }
             }
           }
         }
@@ -162,7 +187,13 @@ class SelectableTableRows extends React.Component {
 
   render() {
     const {
-      children, disableUnselectedRows, onChange, selectedIndexes, liveRegion, ...customProps
+      children,
+      disableUnselectedRows,
+      onChange,
+      selectedIndexes,
+      liveRegion,
+      screenReaderUpdateOnSelected,
+      ...customProps
     } = this.props;
     const clonedChildItems = this.clonedChildItems(children);
     return (

@@ -84,7 +84,7 @@ const Table = ({
       <table {...customProps} className={tableClassNames}>
         {cloneChildItems(children, selectRowHelpTextId, liveRegion)}
       </table>
-      <p aria-atomic="true" className={cx('visually-hidden-component')} aria-live="assertive" aria-relevant="additions text" ref={liveRegion} />
+      <p aria-atomic="false" className={cx('visually-hidden-component')} aria-live="assertive" aria-relevant="additions text" ref={liveRegion} />
       <p aria-hidden className={cx('row-selected-help-text')} id={selectRowHelpTextId}>{intl.formatMessage({ id: 'Terra.table.selectRow' })}</p>
     </React.Fragment>
   );

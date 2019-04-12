@@ -4,6 +4,7 @@ exports[`should render SingleSelectableRows one selectable row and one non-selec
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
+  screenReaderUpdateOnSelected={[Function]}
   selectedIndexes={
     Array [
       -1,
@@ -60,6 +61,7 @@ exports[`should render SingleSelectableRows tag 1`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
+  screenReaderUpdateOnSelected={[Function]}
   selectedIndexes={
     Array [
       1,
@@ -117,6 +119,7 @@ exports[`should render SingleSelectableRows with no rows 1`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
+  screenReaderUpdateOnSelected={[Function]}
   selectedIndexes={
     Array [
       null,
@@ -129,6 +132,7 @@ exports[`should render SingleSelectableRows with one row 1`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
+  screenReaderUpdateOnSelected={[Function]}
   selectedIndexes={
     Array [
       -1,
@@ -164,6 +168,7 @@ exports[`should select an row 1`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
+  screenReaderUpdateOnSelected={[Function]}
   selectedIndexes={
     Array [
       1,
@@ -221,6 +226,7 @@ exports[`should select an row 2`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
+  screenReaderUpdateOnSelected={[Function]}
   selectedIndexes={
     Array [
       1,

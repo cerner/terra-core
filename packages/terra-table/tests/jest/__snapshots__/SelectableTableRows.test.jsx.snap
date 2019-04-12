@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should update the liveregion on a selected row when one is provided 1`] = `
+exports[`should update the liveregion on a selected row when one is provided and no screen reader update function is 1`] = `
 <Table
   intl={
     Object {
@@ -69,7 +69,7 @@ exports[`should update the liveregion on a selected row when one is provided 1`]
       liveRegion={
         Object {
           "current": <p
-            aria-atomic="true"
+            aria-atomic="false"
             aria-live="assertive"
             aria-relevant="additions text"
             class="visually-hidden-component"
@@ -255,7 +255,7 @@ exports[`should update the liveregion on a selected row when one is provided 1`]
     </SelectableTableRows>
   </table>
   <p
-    aria-atomic="true"
+    aria-atomic="false"
     aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
@@ -270,7 +270,7 @@ exports[`should update the liveregion on a selected row when one is provided 1`]
 </Table>
 `;
 
-exports[`should update the liveregion on a selected row when one is provided 2`] = `
+exports[`should update the liveregion on a selected row when one is provided and no screen reader update function is 2`] = `
 <Table
   intl={
     Object {
@@ -339,7 +339,7 @@ exports[`should update the liveregion on a selected row when one is provided 2`]
       liveRegion={
         Object {
           "current": <p
-            aria-atomic="true"
+            aria-atomic="false"
             aria-live="assertive"
             aria-relevant="additions text"
             class="visually-hidden-component"
@@ -525,7 +525,7 @@ exports[`should update the liveregion on a selected row when one is provided 2`]
     </SelectableTableRows>
   </table>
   <p
-    aria-atomic="true"
+    aria-atomic="false"
     aria-live="assertive"
     aria-relevant="additions text"
     className="visually-hidden-component"
