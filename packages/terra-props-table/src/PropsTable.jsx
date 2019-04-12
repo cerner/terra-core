@@ -128,7 +128,7 @@ const PropsTable = ({
   ]);
 
   return (
-    <div dir="ltr" className="markdown-body">
+    <div dir="ltr" className={cx('props-table-markdown')}>
       <h2>
         {componentName}
         {' '}
