@@ -149,7 +149,7 @@ const InputField = (props) => {
     }
   }
 
-  const inputType = (type) || inputAttrs.type;
+  const inputType = type || inputAttrs.type;
   return (
     <Field
       label={label}

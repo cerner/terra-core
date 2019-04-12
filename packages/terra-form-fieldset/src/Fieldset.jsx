@@ -57,7 +57,7 @@ const Fieldset = ({
 
   return (
     <fieldset {...customProps} className={fieldsetClasses}>
-      {legend && <legend {...legendAttrs} className={cx([legendClasses, { 'legend-hidden': isLegendHidden }])}>{legend}</legend>}
+      {legend && <legend {...legendAttrs} className={cx([legendClasses, { 'legend-visually-hidden': isLegendHidden }])}>{legend}</legend>}
       {help && <small className={cx('help-text')} tabIndex="-1">{help}</small>}
       <div className={cx('fieldset-children')}>
         {children}

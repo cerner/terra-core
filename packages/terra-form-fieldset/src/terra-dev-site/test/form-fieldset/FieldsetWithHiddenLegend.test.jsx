@@ -5,7 +5,7 @@ import Fieldset from '../../../Fieldset';
 
 const fieldsetwithhiddenlegend = () => (
   <Fieldset
-    legend="Give your full name here"
+    legend="I am the Hidden Legend"
     help="Families are eligible for family package plans"
     required
     isLegendHidden
