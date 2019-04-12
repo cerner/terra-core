@@ -76,16 +76,18 @@ exports[`should update the liveregion on a selected row when one is provided and
           />,
         }
       }
-      selectRowHelpTextId="terra-table-help-1"
+      selectableRowHelpTextId="terra-table-row-selectable-1"
       selectedIndexes={
         Array [
           0,
         ]
       }
+      selectedRowHelpTextId="terra-table-row-selected-2"
     >
       <TableRows
         id="selectable-rows"
-        selectRowHelpTextId="terra-table-help-1"
+        selectableRowHelpTextId="terra-table-row-selectable-1"
+        selectedRowHelpTextId="terra-table-row-selected-2"
       >
         <tbody
           id="selectable-rows"
@@ -97,11 +99,12 @@ exports[`should update the liveregion on a selected row when one is provided and
             key=".$.$PERSON_0"
             onClick={[Function]}
             onKeyDown={[Function]}
-            selectRowHelpTextId="terra-table-help-1"
+            selectableRowHelpTextId="terra-table-row-selectable-1"
+            selectedRowHelpTextId="terra-table-row-selected-2"
             tabIndex="0"
           >
             <tr
-              aria-describedby="terra-table-help-1"
+              aria-describedby="terra-table-row-selectable-1terra-table-row-selected-2"
               aria-selected={true}
               className="is-selected is-selectable row PERSON_0"
               onKeyDown={[Function]}
@@ -112,13 +115,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="NAME"
                 content="John Smith"
                 isSelectable={true}
+                isSelected={true}
                 key=".$NAME"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1terra-table-row-selected-2"
                   className="NAME"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -132,13 +137,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="ADDRESS"
                 content="123 Adams Drive"
                 isSelectable={true}
+                isSelected={true}
                 key=".$ADDRESS"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1terra-table-row-selected-2"
                   className="ADDRESS"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -152,13 +159,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="PHONE_NUMBER"
                 content="111-222-3333"
                 isSelectable={true}
+                isSelected={true}
                 key=".$PHONE_NUMBER"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1terra-table-row-selected-2"
                   className="PHONE_NUMBER"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -177,11 +186,12 @@ exports[`should update the liveregion on a selected row when one is provided and
             key=".$.$PERSON_1"
             onClick={[Function]}
             onKeyDown={[Function]}
-            selectRowHelpTextId="terra-table-help-1"
+            selectableRowHelpTextId="terra-table-row-selectable-1"
+            selectedRowHelpTextId="terra-table-row-selected-2"
             tabIndex="0"
           >
             <tr
-              aria-describedby="terra-table-help-1"
+              aria-describedby="terra-table-row-selectable-1"
               aria-selected={false}
               className="is-selectable row PERSON_1"
               onKeyDown={[Function]}
@@ -192,13 +202,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="NAME"
                 content="John Smith"
                 isSelectable={true}
+                isSelected={false}
                 key=".$NAME"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1"
                   className="NAME"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -212,13 +224,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="ADDRESS"
                 content="123 Adams Drive"
                 isSelectable={true}
+                isSelected={false}
                 key=".$ADDRESS"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1"
                   className="ADDRESS"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -232,13 +246,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="PHONE_NUMBER"
                 content="111-222-3333"
                 isSelectable={true}
+                isSelected={false}
                 key=".$PHONE_NUMBER"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1"
                   className="PHONE_NUMBER"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -262,10 +278,17 @@ exports[`should update the liveregion on a selected row when one is provided and
   />
   <p
     aria-hidden={true}
-    className="row-selected-help-text"
-    id="terra-table-help-1"
+    className="row-select-help-text"
+    id="terra-table-row-selectable-1"
   >
-    Terra.table.selectRow
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-2"
+  >
+    Terra.table.selectedRow
   </p>
 </Table>
 `;
@@ -346,16 +369,18 @@ exports[`should update the liveregion on a selected row when one is provided and
           />,
         }
       }
-      selectRowHelpTextId="terra-table-help-1"
+      selectableRowHelpTextId="terra-table-row-selectable-1"
       selectedIndexes={
         Array [
           0,
         ]
       }
+      selectedRowHelpTextId="terra-table-row-selected-2"
     >
       <TableRows
         id="selectable-rows"
-        selectRowHelpTextId="terra-table-help-1"
+        selectableRowHelpTextId="terra-table-row-selectable-1"
+        selectedRowHelpTextId="terra-table-row-selected-2"
       >
         <tbody
           id="selectable-rows"
@@ -367,11 +392,12 @@ exports[`should update the liveregion on a selected row when one is provided and
             key=".$.$PERSON_0"
             onClick={[Function]}
             onKeyDown={[Function]}
-            selectRowHelpTextId="terra-table-help-1"
+            selectableRowHelpTextId="terra-table-row-selectable-1"
+            selectedRowHelpTextId="terra-table-row-selected-2"
             tabIndex="0"
           >
             <tr
-              aria-describedby="terra-table-help-1"
+              aria-describedby="terra-table-row-selectable-1terra-table-row-selected-2"
               aria-selected={true}
               className="is-selected is-selectable row PERSON_0"
               onKeyDown={[Function]}
@@ -382,13 +408,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="NAME"
                 content="John Smith"
                 isSelectable={true}
+                isSelected={true}
                 key=".$NAME"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1terra-table-row-selected-2"
                   className="NAME"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -402,13 +430,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="ADDRESS"
                 content="123 Adams Drive"
                 isSelectable={true}
+                isSelected={true}
                 key=".$ADDRESS"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1terra-table-row-selected-2"
                   className="ADDRESS"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -422,13 +452,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="PHONE_NUMBER"
                 content="111-222-3333"
                 isSelectable={true}
+                isSelected={true}
                 key=".$PHONE_NUMBER"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1terra-table-row-selected-2"
                   className="PHONE_NUMBER"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -447,11 +479,12 @@ exports[`should update the liveregion on a selected row when one is provided and
             key=".$.$PERSON_1"
             onClick={[Function]}
             onKeyDown={[Function]}
-            selectRowHelpTextId="terra-table-help-1"
+            selectableRowHelpTextId="terra-table-row-selectable-1"
+            selectedRowHelpTextId="terra-table-row-selected-2"
             tabIndex="0"
           >
             <tr
-              aria-describedby="terra-table-help-1"
+              aria-describedby="terra-table-row-selectable-1"
               aria-selected={false}
               className="is-selectable row PERSON_1"
               onKeyDown={[Function]}
@@ -462,13 +495,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="NAME"
                 content="John Smith"
                 isSelectable={true}
+                isSelected={false}
                 key=".$NAME"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1"
                   className="NAME"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -482,13 +517,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="ADDRESS"
                 content="123 Adams Drive"
                 isSelectable={true}
+                isSelected={false}
                 key=".$ADDRESS"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1"
                   className="ADDRESS"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -502,13 +539,15 @@ exports[`should update the liveregion on a selected row when one is provided and
                 className="PHONE_NUMBER"
                 content="111-222-3333"
                 isSelectable={true}
+                isSelected={false}
                 key=".$PHONE_NUMBER"
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                selectRowHelpTextId="terra-table-help-1"
+                selectableRowHelpTextId="terra-table-row-selectable-1"
+                selectedRowHelpTextId="terra-table-row-selected-2"
               >
                 <td
-                  aria-describedby="terra-table-help-1"
+                  aria-describedby="terra-table-row-selectable-1"
                   className="PHONE_NUMBER"
                   data-terra-table-cell={true}
                   onClick={[Function]}
@@ -532,10 +571,17 @@ exports[`should update the liveregion on a selected row when one is provided and
   />
   <p
     aria-hidden={true}
-    className="row-selected-help-text"
-    id="terra-table-help-1"
+    className="row-select-help-text"
+    id="terra-table-row-selectable-1"
   >
-    Terra.table.selectRow
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-2"
+  >
+    Terra.table.selectedRow
   </p>
 </Table>
 `;

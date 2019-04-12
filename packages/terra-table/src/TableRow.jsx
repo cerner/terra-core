@@ -33,9 +33,15 @@ const propTypes = {
   /**
    * @private
    * Id of the helper text identifying a row is selectable. Populates the aria-describedby attribute
-   * of the child cells in this row.
+   * of the row.
    */
-  selectRowHelpTextId: PropTypes.string,
+  selectableRowHelpTextId: PropTypes.string,
+  /**
+   * @private
+   * Id of the helper text identifying a row is selected. Populates the aria-describedby attribute
+   * of the row.
+   */
+  selectedRowHelpTextId: PropTypes.string,
 };
 
 const defaultProps = {
@@ -43,10 +49,10 @@ const defaultProps = {
   isSelectable: undefined,
   onClick: undefined,
   onKeyDown: undefined,
-  selectRowHelpTextId: undefined,
+  selectedRowHelpTextId: undefined,
 };
 
-function cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId, isSelectable) {
+function cloneChildItems(children, onClick, onKeyDown, selectableRowHelpTextId, selectedRowHelpTextId, isSelectable, isSelected) {
   return React.Children.map(children, (child) => {
     const newProps = {};
 
@@ -58,8 +64,10 @@ function cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId, isSe
     }
 
     newProps.isSelectable = isSelectable;
+    newProps.isSelected = isSelected;
+    newProps.selectableRowHelpTextId = selectableRowHelpTextId;
+    newProps.selectedRowHelpTextId = selectedRowHelpTextId;
 
-    newProps.selectRowHelpTextId = selectRowHelpTextId;
     return React.cloneElement(child, newProps);
   });
 }
@@ -70,7 +78,8 @@ const TableRow = ({
   isSelectable,
   onClick,
   onKeyDown,
-  selectRowHelpTextId,
+  selectableRowHelpTextId,
+  selectedRowHelpTextId,
   ...customProps
 }) => {
   const rowClassNames = cx([
@@ -86,9 +95,21 @@ const TableRow = ({
     console.log(`Number of Columns are ${React.Children.count(children)}. This is more than columns limit`);
   }
 
+  const ariaDescribedByAttributes = [];
+
+  if (isSelectable && selectableRowHelpTextId) {
+    ariaDescribedByAttributes.push(selectableRowHelpTextId);
+  }
+
+  if (isSelected && selectedRowHelpTextId) {
+    ariaDescribedByAttributes.push(selectedRowHelpTextId);
+  }
+
+  const ariaDescribedBy = ariaDescribedByAttributes.length > 0 ? ariaDescribedByAttributes.join('') : undefined;
+
   return (
-    <tr {...customProps} onKeyDown={onKeyDown} aria-describedby={isSelectable ? selectRowHelpTextId : undefined} aria-selected={isSelected} className={rowClassNames} role="row">
-      {cloneChildItems(children, onClick, onKeyDown, selectRowHelpTextId, isSelectable)}
+    <tr {...customProps} onKeyDown={onKeyDown} aria-describedby={ariaDescribedBy} aria-selected={isSelected} className={rowClassNames} role="row">
+      {cloneChildItems(children, onClick, onKeyDown, selectableRowHelpTextId, selectedRowHelpTextId, isSelectable, isSelected)}
     </tr>
   );
 };

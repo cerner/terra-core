@@ -98,10 +98,17 @@ exports[`should render a default table 1`] = `
   />
   <p
     aria-hidden={true}
-    className="row-selected-help-text"
-    id="terra-table-help-1"
+    className="row-select-help-text"
+    id="terra-table-row-selectable-1"
   >
-    Terra.table.selectRow
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-2"
+  >
+    Terra.table.selectedRow
   </p>
 </Fragment>
 `;
@@ -204,10 +211,17 @@ exports[`should render a table without padding 1`] = `
   />
   <p
     aria-hidden={true}
-    className="row-selected-help-text"
-    id="terra-table-help-3"
+    className="row-select-help-text"
+    id="terra-table-row-selectable-5"
   >
-    Terra.table.selectRow
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-6"
+  >
+    Terra.table.selectedRow
   </p>
 </Fragment>
 `;
@@ -310,10 +324,17 @@ exports[`should render a table without zebra stripes 1`] = `
   />
   <p
     aria-hidden={true}
-    className="row-selected-help-text"
-    id="terra-table-help-2"
+    className="row-select-help-text"
+    id="terra-table-row-selectable-3"
   >
-    Terra.table.selectRow
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-4"
+  >
+    Terra.table.selectedRow
   </p>
 </Fragment>
 `;

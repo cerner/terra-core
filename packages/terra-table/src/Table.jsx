@@ -44,14 +44,15 @@ const contextTypes = {
   },
 };
 
-function cloneChildItems(children, selectRowHelpTextId, liveRegion) {
+function cloneChildItems(children, selectableRowHelpTextId, selectedRowHelpTextId, liveRegion) {
   return React.Children.map(children, (child) => {
     switch (child.type) {
       case SelectableTableRows:
       case TableSingleSelectableRows:
       case TableMultiSelectableRows: {
         const newProps = {};
-        newProps.selectRowHelpTextId = selectRowHelpTextId;
+        newProps.selectableRowHelpTextId = selectableRowHelpTextId;
+        newProps.selectedRowHelpTextId = selectedRowHelpTextId;
         newProps.liveRegion = liveRegion;
         return React.cloneElement(child, newProps);
       }
@@ -77,15 +78,17 @@ const Table = ({
   ]);
 
   const liveRegion = React.createRef();
-  const selectRowHelpTextId = `terra-table-help-${uniqueid()}`;
+  const selectableRowHelpTextId = `terra-table-row-selectable-${uniqueid()}`;
+  const selectedRowHelpTextId = `terra-table-row-selected-${uniqueid()}`;
 
   return (
     <React.Fragment>
       <table {...customProps} className={tableClassNames}>
-        {cloneChildItems(children, selectRowHelpTextId, liveRegion)}
+        {cloneChildItems(children, selectableRowHelpTextId, selectedRowHelpTextId, liveRegion)}
       </table>
       <p aria-atomic="false" className={cx('visually-hidden-component')} aria-live="assertive" aria-relevant="additions text" ref={liveRegion} />
-      <p aria-hidden className={cx('row-selected-help-text')} id={selectRowHelpTextId}>{intl.formatMessage({ id: 'Terra.table.selectRow' })}</p>
+      <p aria-hidden className={cx('row-select-help-text')} id={selectableRowHelpTextId}>{intl.formatMessage({ id: 'Terra.table.selectableRow' })}</p>
+      <p aria-hidden className={cx('row-select-help-text')} id={selectedRowHelpTextId}>{intl.formatMessage({ id: 'Terra.table.selectedRow' })}</p>
     </React.Fragment>
   );
 };

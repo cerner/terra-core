@@ -19,18 +19,25 @@ const propTypes = {
   /**
    * @private
    * Id of the helper text identifying a row is selectable. Populates the aria-describedby attribute
-   * of the child cells in this row.
+   * of a child row.
    */
-  selectRowHelpTextId: PropTypes.string,
+  selectableRowHelpTextId: PropTypes.string,
+  /**
+   * @private
+   * Id of the helper text identifying a row is selected. Populates the aria-describedby attribute
+   * of a child row.
+   */
+  selectedRowHelpTextId: PropTypes.string,
 };
 
 const defaultProps = {
   onClick: undefined,
   onKeyDown: undefined,
-  selectRowHelpTextId: undefined,
+  selectableRowHelpTextId: undefined,
+  selectedRowHelpTextId: undefined,
 };
 
-function cloneChildItems(children, onClick, onKeyDown, numberOfCols, selectRowHelpTextId) {
+function cloneChildItems(children, onClick, onKeyDown, numberOfCols, selectableRowHelpTextId, selectedRowHelpTextId) {
   return React.Children.map(children, (child) => {
     const newProps = {};
     if (onClick) {
@@ -40,8 +47,12 @@ function cloneChildItems(children, onClick, onKeyDown, numberOfCols, selectRowHe
       newProps.onKeyDown = onKeyDown;
     }
 
-    if (selectRowHelpTextId) {
-      newProps.selectRowHelpTextId = selectRowHelpTextId;
+    if (selectableRowHelpTextId) {
+      newProps.selectableRowHelpTextId = selectableRowHelpTextId;
+    }
+
+    if (selectedRowHelpTextId) {
+      newProps.selectedRowHelpTextId = selectedRowHelpTextId;
     }
 
     if (child.type === TableRow) {
@@ -72,11 +83,12 @@ const TableRows = ({
   children,
   onClick,
   onKeyDown,
-  selectRowHelpTextId,
+  selectableRowHelpTextId,
+  selectedRowHelpTextId,
   ...customProps
 }) => {
   const numberOfCols = getNumberOfColumns(children);
-  const cloneChildren = cloneChildItems(children, onClick, onKeyDown, numberOfCols, selectRowHelpTextId);
+  const cloneChildren = cloneChildItems(children, onClick, onKeyDown, numberOfCols, selectableRowHelpTextId, selectedRowHelpTextId);
   return (
     <tbody {...customProps}>
       {cloneChildren}

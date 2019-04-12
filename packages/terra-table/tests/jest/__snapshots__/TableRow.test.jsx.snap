@@ -8,14 +8,17 @@ exports[`should render a default table row 1`] = `
 >
   <TableCell
     content="John Smith"
+    isSelected={false}
     key=".$NAME"
   />
   <TableCell
     content="123 Adams Drive"
+    isSelected={false}
     key=".$ADDRESS"
   />
   <TableCell
     content="111-222-3333"
+    isSelected={false}
     key=".$PHONE_NUMBER"
   />
 </tr>
@@ -30,16 +33,19 @@ exports[`should render a selectable table row 1`] = `
   <TableCell
     content="John Smith"
     isSelectable={true}
+    isSelected={false}
     key=".$NAME"
   />
   <TableCell
     content="123 Adams Drive"
     isSelectable={true}
+    isSelected={false}
     key=".$ADDRESS"
   />
   <TableCell
     content="111-222-3333"
     isSelectable={true}
+    isSelected={false}
     key=".$PHONE_NUMBER"
   />
 </tr>
@@ -53,14 +59,17 @@ exports[`should render a selected table row 1`] = `
 >
   <TableCell
     content="John Smith"
+    isSelected={true}
     key=".$NAME"
   />
   <TableCell
     content="123 Adams Drive"
+    isSelected={true}
     key=".$ADDRESS"
   />
   <TableCell
     content="111-222-3333"
+    isSelected={true}
     key=".$PHONE_NUMBER"
   />
 </tr>
