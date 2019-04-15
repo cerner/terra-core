@@ -6,7 +6,7 @@ The terra-list implementation requires controlled state if selections are requir
 The state of selection needs to be managed for the list in a HOC. In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
 
  First defaulting our state to a null value in the constructor. 
-```jsx
+```diff
 class MyList extends React.Component {
   constructor(props) {
     super(props);
@@ -78,8 +78,8 @@ Next we need to set up our `metaData` object with our key value, and attach the 
     return (
       <Item
         key={itemData.key}
- +      metaData={{ key: itemData.key }}
- +      onSelect={this.handleItemSelection}
++       metaData={{ key: itemData.key }}
++       onSelect={this.handleItemSelection}
       >
         <Placeholder />
       </Item>
