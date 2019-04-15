@@ -53,11 +53,12 @@ const Fieldset = ({
   const legendClasses = cx([
     'legend',
     legendAttrs.className,
+    { 'legend-visually-hidden': isLegendHidden },
   ]);
 
   return (
     <fieldset {...customProps} className={fieldsetClasses}>
-      {legend && <legend {...legendAttrs} className={cx([legendClasses, { 'legend-visually-hidden': isLegendHidden }])}>{legend}</legend>}
+      {legend && <legend {...legendAttrs} className={legendClasses}>{legend}</legend>}
       {help && <small className={cx('help-text')} tabIndex="-1">{help}</small>}
       <div className={cx('fieldset-children')}>
         {children}
