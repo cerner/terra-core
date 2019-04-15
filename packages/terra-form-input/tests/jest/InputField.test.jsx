@@ -69,3 +69,67 @@ it('should render a valid InputField with props', () => {
   const wrapper = shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
+
+it('should render a InputField with type specified through InpuAttributes', () => {
+  const textarea = (
+    <InputField
+      inputId="test-input"
+      defaultValue="Value"
+      error="Text"
+      errorIcon={<IconHelp />}
+      help="Help"
+      hideRequired
+      inputAttrs={{
+        name: 'test',
+        type: 'number',
+      }}
+      isInline
+      isInvalid
+      isLabelHidden
+      label="Label Test"
+      labelAttrs={{
+        className: 'label',
+      }}
+      onChange={() => {}}
+      refCallback={() => {}}
+      showOptional
+      value="Value"
+    />
+  );
+
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a InputField with type specified by type attribute when both type attribute and InpuAttributes are given', () => {
+  const type = 'Text';
+  const textarea = (
+    <InputField
+      inputId="test-input"
+      defaultValue="Value"
+      error="Text"
+      errorIcon={<IconHelp />}
+      help="Help"
+      hideRequired
+      inputAttrs={{
+        name: 'test',
+        type: 'number',
+      }}
+      type={type}
+      isInline
+      isInvalid
+      isLabelHidden
+      label="Label Test"
+      labelAttrs={{
+        className: 'label',
+      }}
+      onChange={() => {}}
+      refCallback={() => {}}
+      showOptional
+      value="Value"
+    />
+  );
+
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
