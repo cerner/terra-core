@@ -7,7 +7,7 @@
   }
 
   /**
-   * The following selectors match all SVG elements, (path, cirlec, line, rect, etc), within inline SVG
+   * The following selectors match all SVG elements, (path, circle, line, rect, etc), within inline SVG
    * which do not have a predefined fill color.
    */
   .icon *:not([fill]) {

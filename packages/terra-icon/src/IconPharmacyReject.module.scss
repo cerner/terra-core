@@ -1,0 +1,13 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconPharmacyReject {
+    path:nth-of-type(1) {
+      fill: var(--terra-icon-pharmacy-reject-path-1-fill, #e50000);
+    }
+
+    path:nth-of-type(2) {
+      fill: var(--terra-icon-pharmacy-reject-path-2-fill, currentColor);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

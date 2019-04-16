@@ -6,10 +6,10 @@ const DefaultInputField = () => (
     inputId="profile-name"
     label="Profile Name"
     help="Note: This can not be changed in the future"
+    type="text"
     inputAttrs={{
       placeholder: 'Profile Name',
       name: 'profile',
-      type: 'text',
     }}
   />
 );

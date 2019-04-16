@@ -1,0 +1,13 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconHelp {
+    path:first-child {
+      fill: var(--terra-icon-help-path-1-fill, #007cc3);
+    }
+
+    path:last-child {
+      fill: var(--terra-icon-help-path-2-fill, #fff);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */

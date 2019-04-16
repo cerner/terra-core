@@ -15,4 +15,10 @@ describe('Divider', () => {
     const wrapper = shallow(<Divider id="testDivider" />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  // Inline Custom Text Test
+  it('it should pass in a string of text', () => {
+    const wrapper = shallow(<Divider id="testDivider" text="Divider Test String" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
