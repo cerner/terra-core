@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added isLegendHidden prop to Form-Fieldset
 
 2.11.0 - (April 9, 2019)
 ------------------

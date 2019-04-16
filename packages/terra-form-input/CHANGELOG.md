@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added type as first class prop to Form-Input-Field
+* Added example of Number Input on for Form-Input
 
 2.10.0 - (April 9, 2019)
 ------------------
