@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* github-markdown-css dependency
+
 ### Fixed
 * Props with custom prop types (like intlShape) now show as required if marked as such
 

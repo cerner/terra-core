@@ -54,7 +54,7 @@ describe('Props Table', () => {
       browser.setViewportSize(Terra.viewports('medium')[0]);
     });
 
-    Terra.should.matchScreenshot('should display the title', { selector: '[class*="markdown-body"] > h2' });
+    Terra.should.matchScreenshot('should display the title', { selector: '[class*="props-table-markdown"] > h2' });
 
     Terra.should.beAccessible({ viewports });
   });

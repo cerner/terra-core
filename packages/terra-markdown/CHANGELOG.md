@@ -3,8 +3,15 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* baseUrl prop
+* hasHeadingAnchors prop
+* regression test for a greater set of markdown
+
+### Removed
+* github-markdown-css dependency
+
 ### Changed
-* Added regression test for a greater set of markdown.
 * Provide no highligting for unsupported languages instead of the clike highlighting.
 
 2.24.0 - (March 26, 2019)
