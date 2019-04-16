@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+2.29.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Removed
 * github-markdown-css dependency
 

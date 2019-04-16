@@ -3,7 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.9.0 - (April 16, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
 * Updated missing htmlFor prop warning text to clarify what prop is causing the warning
 
 3.8.0 - (April 9, 2019)
