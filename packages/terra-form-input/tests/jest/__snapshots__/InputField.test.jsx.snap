@@ -40,7 +40,7 @@ exports[`should render a InputField with props 1`] = `
 </Field>
 `;
 
-exports[`should render a InputField with type specified by type attribute when both type attribute and InpuAttributes are given 1`] = `
+exports[`should render a InputField with type specified by type attribute when both type attribute and InputAttributes are given 1`] = `
 <Field
   error="Text"
   errorIcon={
@@ -80,7 +80,7 @@ exports[`should render a InputField with type specified by type attribute when b
 </Field>
 `;
 
-exports[`should render a InputField with type specified through InpuAttributes 1`] = `
+exports[`should render a InputField with type specified through InputAttributes 1`] = `
 <Field
   error="Text"
   errorIcon={
