@@ -10,7 +10,7 @@ Unreleased
 4.4.0 - (April 9, 2019)
 ------------------
 ### Changed
-* Update documentation to better cover sections and headers
+* Update documentation to better cover sections and headers and for guides to be more interactive
 
 4.3.0 - (March 26, 2019)
 ------------------
