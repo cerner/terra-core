@@ -218,8 +218,6 @@ describe('Search Field', () => {
 
     it('should search with the button', () => {
       browser.keys('Enter');
-      // Ensure button on hover styling is disabled
-      browser.click('h3');
     });
 
     Terra.should.matchScreenshot('searched text');
