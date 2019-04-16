@@ -70,7 +70,7 @@ it('should render a valid InputField with props', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a InputField with type specified through InpuAttributes', () => {
+it('should render a InputField with type specified through InputAttributes', () => {
   const textarea = (
     <InputField
       inputId="test-input"
@@ -101,7 +101,7 @@ it('should render a InputField with type specified through InpuAttributes', () =
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a InputField with type specified by type attribute when both type attribute and InpuAttributes are given', () => {
+it('should render a InputField with type specified by type attribute when both type attribute and InputAttributes are given', () => {
   const type = 'Text';
   const textarea = (
     <InputField
