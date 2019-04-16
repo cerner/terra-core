@@ -14,9 +14,9 @@ class MyList extends React.Component {
 +    this.state = { selectedKey: null };
   }
   
-    render() {
+  render() {
     return (
-     );
+    );
   }
 }
 ```
@@ -31,8 +31,8 @@ class MyList extends React.Component {
   }
   
 + handleItemSelection(event, metaData) {
-
-  }
++
++ }
   ...
 ```
 As a precaution we can `preventDefault` on the event, in case the list has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
@@ -120,7 +120,7 @@ Finally we need to check if the item matches the selectedKey in state to set `is
 Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` for the list, as it is required for accessibility with selectable list options.
 ```diff
   render() {
-+    return (
+    return (
 +      <List role="listbox">
 +        {data.map(childItem => this.createListItem(mockData))}
 +      </List>
