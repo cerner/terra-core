@@ -16,7 +16,7 @@ class MyList extends React.Component {
   
   render() {
     return (
-     );
+    );
   }
 }
 ```
