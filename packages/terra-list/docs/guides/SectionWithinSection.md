@@ -44,7 +44,7 @@ Terra list comes with additional helpers to manage state, in this case we want t
 ```diff
   handleSectionSelection(event, metaData) {
     event.preventDefault();
-+    this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
++   this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
   }
 ```
 Settting state will trigger another render. So in the render method we need to generate our sections with the updated `isCollapsed` and `isCollapsible` props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The list renders flat, so keys need to be unique even if items are placed within sections structurally.
@@ -162,7 +162,7 @@ class MyList extends React.Component {
 +   this.createSections = this.createSections.bind(this)
   }
   ...
-+  createSections(data) {
++ createSections(data) {
 +   return data.map(section => this.createSection(section));
 + }
 
