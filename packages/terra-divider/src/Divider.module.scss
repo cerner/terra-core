@@ -10,6 +10,7 @@
 
   .divider {
     @include terra-divider;
+    margin: 0; // remove browser default margin
   }
 
   .divider-container {
