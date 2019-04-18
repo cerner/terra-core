@@ -3,11 +3,11 @@ Changelog
 
 Unreleased
 ----------
-### Breaking Changes
-* Removed StatusView.Opts export
+### Deprecated
+* StatusView.Opts object and export
 
 ### Added
-* Added additional variants export
+* Added named StatusViewVariants export
 
 3.11.0 - (April 16, 2019)
 ------------------
