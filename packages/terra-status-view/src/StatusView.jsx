@@ -249,6 +249,8 @@ class StatusView extends React.Component {
   }
 }
 
+StatusView.Opts = {};
+StatusView.Opts.variants = StatusViewVariants;
 StatusView.propTypes = propTypes;
 StatusView.contextTypes = contextTypes;
 StatusView.defaultProps = defaultProps;
