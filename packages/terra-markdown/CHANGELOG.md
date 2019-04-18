@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.25.0 - (April 16, 2019)
+------------------
 ### Added
 * baseUrl prop
 * hasHeadingAnchors prop
@@ -12,7 +15,7 @@ Unreleased
 * github-markdown-css dependency
 
 ### Changed
-* Provide no highligting for unsupported languages instead of the clike highlighting.
+* Provide no highlighting for unsupported languages instead of the clike highlighting.
 
 2.24.0 - (March 26, 2019)
 ------------------

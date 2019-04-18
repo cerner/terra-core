@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+4.5.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added an interaction media query to apply `hover` styles over a list-item only on non-touch devices.
 

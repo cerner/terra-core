@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Clear button added to search field for cross-browser compatibility
 
+3.11.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.10.0 - (April 9, 2019)
 ------------------
 ### Changed
