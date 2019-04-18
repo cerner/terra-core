@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.13.0 - (April 18, 2019)
+------------------
 ### Deprecated
 * StatusView.Opts object and export
 

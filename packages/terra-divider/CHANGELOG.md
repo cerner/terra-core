@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.7.0 - (April 18, 2019)
+------------------
 ### Changed
 * Reset margin to `0` on hr element in the divider component
 
