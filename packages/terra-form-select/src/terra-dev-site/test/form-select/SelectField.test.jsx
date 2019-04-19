@@ -1,61 +1,14 @@
 import React from 'react';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
-import SelectField from '../../src/SelectField';
+import SelectField from '../../../SelectField';
 
+const SelectFieldExample = () => (
+  <SelectField label="T-shirt size" placeholder="Select a size" selectId="select-field" defaultValue="small">
+    <SelectField.Option value="xSmall" display="Extra Small" />
+    <SelectField.Option value="small" display="Small" />
+    <SelectField.Option value="medium" display="Medium" />
+    <SelectField.Option value="large" display="Large" />
+    <SelectField.Option value="xLarge" display="Extra Large" />
+  </SelectField>
+);
 
-it('should render a default SelectField component', () => {
-  const select = (
-    <SelectField label="Label" defaultValue="blue" selectId="select-id">
-      <SelectField.Option value="blue" display="Blue" />
-      <SelectField.Option value="green" display="Green" />
-      <SelectField.Option value="purple" display="Purple" />
-      <SelectField.Option value="red" display="Red" />
-      <SelectField.Option value="violet" display="Violet" />
-    </SelectField>
-  );
-
-  expect(shallowWithIntl(select)).toMatchSnapshot();
-});
-
-it('should render a disabled SelectField component', () => {
-  const select = (
-    <SelectField label="Label" defaultValue="blue" selectId="select-id">
-      <SelectField.Option value="blue" display="Blue" />
-      <SelectField.Option value="green" display="Green" />
-      <SelectField.Option value="purple" display="Purple" />
-      <SelectField.Option value="red" display="Red" />
-      <SelectField.Option value="violet" display="Violet" />
-    </SelectField>
-  );
-
-  expect(shallowWithIntl(select)).toMatchSnapshot();
-});
-
-it('should render a default SelectField component with attributes spread onto the select', () => {
-  const select = (
-    <SelectField label="Label" defaultValue="blue" selectId="select-id" selectAttrs={{ onClick: () => {} }}>
-      <SelectField.Option value="blue" display="Blue" />
-      <SelectField.Option value="green" display="Green" />
-      <SelectField.Option value="purple" display="Purple" />
-      <SelectField.Option value="red" display="Red" />
-      <SelectField.Option value="violet" display="Violet" />
-    </SelectField>
-  );
-
-  expect(shallowWithIntl(select)).toMatchSnapshot();
-});
-
-it('should render a multiple SelectField component that limits the selection count', () => {
-  const select = (
-    <SelectField help="Help Text" label="Label" maxSelectionCount={2} variant="multiple" defaultValue="blue" selectId="select-id" selectAttrs={{ onClick: () => {} }}>
-      <SelectField.Option value="blue" display="Blue" />
-      <SelectField.Option value="green" display="Green" />
-      <SelectField.Option value="purple" display="Purple" />
-      <SelectField.Option value="red" display="Red" />
-      <SelectField.Option value="violet" display="Violet" />
-    </SelectField>
-  );
-
-  expect(shallowWithIntl(select)).toMatchSnapshot();
-});
+export default SelectFieldExample;
