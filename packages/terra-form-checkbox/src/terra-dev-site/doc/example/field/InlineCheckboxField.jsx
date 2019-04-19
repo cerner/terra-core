@@ -42,6 +42,7 @@ export default class extends React.Component {
     return (
       <div>
         <button style={{ marginBottom: '5px' }} type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Inline</button>
+        <hr />
         <div>
           <CheckboxField
             isInline={this.state.toggleInline}
