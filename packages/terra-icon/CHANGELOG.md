@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Doc site test page for all icons
 
 3.8.0 - (April 16, 2019)
 ------------------
