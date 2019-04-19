@@ -233,6 +233,11 @@ class Button extends React.Component {
       </span>
     );
 
+    let ariaLabel = customProps['aria-label'];
+    if (isIconOnly || variant === 'utility') {
+      ariaLabel = ariaLabel || text;
+    }
+
     const ComponentType = href ? 'a' : 'button';
 
     return (
@@ -243,7 +248,7 @@ class Button extends React.Component {
         disabled={isDisabled}
         tabIndex={isDisabled ? '-1' : undefined}
         aria-disabled={isDisabled}
-        aria-label={isIconOnly || variant === 'utility' ? text : null}
+        aria-label={ariaLabel}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
