@@ -1,12 +1,42 @@
 :local {
-  .divider {
+  @mixin terra-divider {
     border-bottom-width: 0;
     border-color: var(--terra-divider-border-color, #dedfe0);
     border-left-width: 0;
     border-right-width: 0;
     border-style: solid;
     border-top-width: var(--terra-divider-border-top-width, 1px);
-    height: 0;
-    margin: 0;
+  }
+
+  .divider {
+    @include terra-divider;
+    margin: 0; // remove browser default margin
+  }
+
+  .divider-container {
+    align-items: center;
+    display: flex;
+    min-width: 0;
+
+    &::before,
+    &::after {
+      @include terra-divider;
+      content: '';
+      flex-basis: 4em;
+      flex-grow: 1;
+    }
+  }
+
+  .divider-text {
+    color: var(--terra-divider-text-color, #4e5558);
+    flex-grow: 0;
+    font-size: var(--terra-divider-text-font-size, 0.9285714286rem);
+    font-style: var(--terra-divider-text-font-style, normal);
+    font-weight: var(--terra-divider-text-font-weight, bold);
+    line-height: var(--terra-divider-text-line-height, 1.231);
+    max-width: var(--terra-divider-text-max-width, 80em);
+    padding-left: var(--terra-divider-text-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-divider-text-padding-right, 0.7142857143rem);
+    text-align: center;
   }
 }

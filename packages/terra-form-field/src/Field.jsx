@@ -141,7 +141,7 @@ const Field = (props, { intl }) => {
   if (process.env.NODE_ENV !== 'production') {
     if (!htmlFor) {
       // eslint-disable-next-line
-      console.warn('This prop will be required in the next major version bump of terra-form-field. It is needed for creating an accessible mapping from the form field to its related error and help text.');
+      console.warn('The htmlFor prop will be required in the next major version bump of terra-form-field. It is needed for creating an accessible mapping from the form field to its related error and help text.');
     }
 
     if (htmlFor && hasWhiteSpace(htmlFor)) {

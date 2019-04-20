@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+2.12.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added isLegendHidden prop to Form-Fieldset
+
 2.11.0 - (April 9, 2019)
 ------------------
 ### Changed

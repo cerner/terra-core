@@ -6,7 +6,7 @@ import styles from './StatusView.module.scss';
 
 const cx = classNames.bind(styles);
 
-const variants = {
+const StatusViewVariants = {
   NODATA: 'no-data',
   NOMATCHINGRESULTS: 'no-matching-results',
   NOTAUTHORIZED: 'not-authorized',
@@ -52,7 +52,7 @@ const propTypes = {
    * `no-matching-results`, `not-authorized`,
    * `error`, or `custom`.
    */
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
 };
 
 const defaultProps = {
@@ -62,7 +62,7 @@ const defaultProps = {
   isGlyphHidden: false,
   message: undefined,
   title: undefined,
-  variant: variants.ERROR,
+  variant: StatusViewVariants.ERROR,
 };
 
 const contextTypes = {
@@ -116,7 +116,7 @@ class StatusView extends React.Component {
 
     contentWithGlyphHeight = contentHeight + (this.glyphNode ? this.glyphNode.getBoundingClientRect().height : 0);
     // if inner view node height is lesser than the components along with glyph inside the inner view.
-    // and the height difference is very less (i.e 0.0001) then add that comparision value to the
+    // and the height difference is very less (i.e 0.0001) then add that comparison value to the
     // the inner view height.
     if (contentWithGlyphHeight - viewHeight <= 0.0001) {
       newViewHeight += 0.0001;
@@ -163,7 +163,7 @@ class StatusView extends React.Component {
 
     let glyphSection;
     if (!isGlyphHidden && this.state.showGlyph) {
-      if (variant === variants.CUSTOM) {
+      if (variant === StatusViewVariants.CUSTOM) {
         glyphSection = (
           <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
             {customGlyph}
@@ -198,7 +198,7 @@ class StatusView extends React.Component {
 
     let defaultTitle = title;
     if (!defaultTitle) {
-      defaultTitle = (variant === StatusView.Opts.variants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
+      defaultTitle = (variant === StatusViewVariants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
     }
 
     let dividerSection;
@@ -249,9 +249,10 @@ class StatusView extends React.Component {
   }
 }
 
+StatusView.Opts = {};
+StatusView.Opts.variants = StatusViewVariants;
 StatusView.propTypes = propTypes;
 StatusView.contextTypes = contextTypes;
 StatusView.defaultProps = defaultProps;
-StatusView.Opts = {};
-StatusView.Opts.variants = variants;
 export default StatusView;
+export { StatusViewVariants };

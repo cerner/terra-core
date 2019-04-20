@@ -4,6 +4,20 @@ ChangeLog
 Unreleased
 ----------
 
+3.7.0 - (April 18, 2019)
+------------------
+### Changed
+* Reset margin to `0` on hr element in the divider component
+
+3.6.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Optional `text` property to display within the center of the divider
+* Themeable SCSS variables for the text and divider
+
 3.5.0 - (March 26, 2019)
 ------------------
 ### Changed
