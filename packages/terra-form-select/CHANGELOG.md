@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Added 'disabled' prop to InputField component
+* Added 'disabled' prop to FormSelectField component
 
 5.13.0 - (April 9, 2019)
 ------------------
