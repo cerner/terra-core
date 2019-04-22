@@ -26,8 +26,8 @@ it('should render a InputField with props', () => {
       hideRequired
       inputAttrs={{
         name: 'test',
-        type: 'number',
       }}
+      type="number"
       isInline
       isInvalid
       isLabelHidden
@@ -57,9 +57,73 @@ it('should render a valid InputField with props', () => {
       hideRequired
       inputAttrs={{
         name: 'test',
+      }}
+      type="number"
+      isInline
+      isLabelHidden
+      label="Label Test"
+      labelAttrs={{
+        className: 'label',
+      }}
+      onChange={() => {}}
+      refCallback={() => {}}
+      showOptional
+      value="Value"
+    />
+  );
+
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a InputField with type specified through InputAttributes', () => {
+  const textarea = (
+    <InputField
+      inputId="test-input"
+      defaultValue="Value"
+      error="Text"
+      errorIcon={<IconHelp />}
+      help="Help"
+      hideRequired
+      inputAttrs={{
+        name: 'test',
         type: 'number',
       }}
       isInline
+      isInvalid
+      isLabelHidden
+      label="Label Test"
+      labelAttrs={{
+        className: 'label',
+      }}
+      onChange={() => {}}
+      refCallback={() => {}}
+      showOptional
+      value="Value"
+    />
+  );
+
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a InputField with type specified by type attribute when both type attribute and InputAttributes are given', () => {
+  const type = 'Text';
+  const textarea = (
+    <InputField
+      inputId="test-input"
+      defaultValue="Value"
+      error="Text"
+      errorIcon={<IconHelp />}
+      help="Help"
+      hideRequired
+      inputAttrs={{
+        name: 'test',
+        type: 'number',
+      }}
+      type={type}
+      isInline
+      isInvalid
       isLabelHidden
       label="Label Test"
       labelAttrs={{

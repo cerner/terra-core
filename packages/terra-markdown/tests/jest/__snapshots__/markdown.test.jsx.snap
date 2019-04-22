@@ -1,12 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should apply a base url 1`] = `
+<Markdown
+  baseUrl="/derp/"
+  src="![alt text](favicon.ico \\"relative\\")"
+>
+  <div
+    className="markdown"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p><img src=\\"/derp/favicon.ico\\" alt=\\"alt text\\" title=\\"relative\\"></p>
+",
+      }
+    }
+    dir="ltr"
+  />
+</Markdown>
+`;
+
+exports[`should apply anchor tags to headings 1`] = `
+<Markdown
+  hasHeadingAnchors={true}
+  src="# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6"
+>
+  <div
+    className="markdown"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<h1><a name=\\"h1\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#h1\\"><svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi octicon octicon-link\\"><path d=\\"M10.5 26.3a16 16 0 0 1 .9-5.3L8 17.6a6.73 6.73 0 0 1-2-4.8A6.41 6.41 0 0 1 8 8a6.76 6.76 0 0 1 9.6 0l9 9a6.88 6.88 0 0 1 0 9.6 6.27 6.27 0 0 1-3.4 1.8 2.65 2.65 0 0 0 .5.6l4.1 4.1a11.36 11.36 0 0 0 3.1-2.3 12.8 12.8 0 0 0 0-18.1l-9-9a12.63 12.63 0 0 0-9-3.7 12.63 12.63 0 0 0-9 3.7A12.1 12.1 0 0 0 0 12.8a12.63 12.63 0 0 0 3.7 9l7 7a21.05 21.05 0 0 1-.2-2.5zm27-4.6a16 16 0 0 1-.9 5.3l3.4 3.4a6.79 6.79 0 1 1-9.6 9.6l-9-9a6.88 6.88 0 0 1 0-9.6 6.27 6.27 0 0 1 3.4-1.8 2.65 2.65 0 0 0-.5-.6l-4-4a11.36 11.36 0 0 0-3.1 2.3 12.8 12.8 0 0 0 0 18.1l9 9a12.73 12.73 0 0 0 18-18l-7-7a8 8 0 0 1 .3 2.3z\\"/></svg></a>H1</h1><h2><a name=\\"h2\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#h2\\"><svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi octicon octicon-link\\"><path d=\\"M10.5 26.3a16 16 0 0 1 .9-5.3L8 17.6a6.73 6.73 0 0 1-2-4.8A6.41 6.41 0 0 1 8 8a6.76 6.76 0 0 1 9.6 0l9 9a6.88 6.88 0 0 1 0 9.6 6.27 6.27 0 0 1-3.4 1.8 2.65 2.65 0 0 0 .5.6l4.1 4.1a11.36 11.36 0 0 0 3.1-2.3 12.8 12.8 0 0 0 0-18.1l-9-9a12.63 12.63 0 0 0-9-3.7 12.63 12.63 0 0 0-9 3.7A12.1 12.1 0 0 0 0 12.8a12.63 12.63 0 0 0 3.7 9l7 7a21.05 21.05 0 0 1-.2-2.5zm27-4.6a16 16 0 0 1-.9 5.3l3.4 3.4a6.79 6.79 0 1 1-9.6 9.6l-9-9a6.88 6.88 0 0 1 0-9.6 6.27 6.27 0 0 1 3.4-1.8 2.65 2.65 0 0 0-.5-.6l-4-4a11.36 11.36 0 0 0-3.1 2.3 12.8 12.8 0 0 0 0 18.1l9 9a12.73 12.73 0 0 0 18-18l-7-7a8 8 0 0 1 .3 2.3z\\"/></svg></a>H2</h2><h3><a name=\\"h3\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#h3\\"><svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi octicon octicon-link\\"><path d=\\"M10.5 26.3a16 16 0 0 1 .9-5.3L8 17.6a6.73 6.73 0 0 1-2-4.8A6.41 6.41 0 0 1 8 8a6.76 6.76 0 0 1 9.6 0l9 9a6.88 6.88 0 0 1 0 9.6 6.27 6.27 0 0 1-3.4 1.8 2.65 2.65 0 0 0 .5.6l4.1 4.1a11.36 11.36 0 0 0 3.1-2.3 12.8 12.8 0 0 0 0-18.1l-9-9a12.63 12.63 0 0 0-9-3.7 12.63 12.63 0 0 0-9 3.7A12.1 12.1 0 0 0 0 12.8a12.63 12.63 0 0 0 3.7 9l7 7a21.05 21.05 0 0 1-.2-2.5zm27-4.6a16 16 0 0 1-.9 5.3l3.4 3.4a6.79 6.79 0 1 1-9.6 9.6l-9-9a6.88 6.88 0 0 1 0-9.6 6.27 6.27 0 0 1 3.4-1.8 2.65 2.65 0 0 0-.5-.6l-4-4a11.36 11.36 0 0 0-3.1 2.3 12.8 12.8 0 0 0 0 18.1l9 9a12.73 12.73 0 0 0 18-18l-7-7a8 8 0 0 1 .3 2.3z\\"/></svg></a>H3</h3><h4><a name=\\"h4\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#h4\\"><svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi octicon octicon-link\\"><path d=\\"M10.5 26.3a16 16 0 0 1 .9-5.3L8 17.6a6.73 6.73 0 0 1-2-4.8A6.41 6.41 0 0 1 8 8a6.76 6.76 0 0 1 9.6 0l9 9a6.88 6.88 0 0 1 0 9.6 6.27 6.27 0 0 1-3.4 1.8 2.65 2.65 0 0 0 .5.6l4.1 4.1a11.36 11.36 0 0 0 3.1-2.3 12.8 12.8 0 0 0 0-18.1l-9-9a12.63 12.63 0 0 0-9-3.7 12.63 12.63 0 0 0-9 3.7A12.1 12.1 0 0 0 0 12.8a12.63 12.63 0 0 0 3.7 9l7 7a21.05 21.05 0 0 1-.2-2.5zm27-4.6a16 16 0 0 1-.9 5.3l3.4 3.4a6.79 6.79 0 1 1-9.6 9.6l-9-9a6.88 6.88 0 0 1 0-9.6 6.27 6.27 0 0 1 3.4-1.8 2.65 2.65 0 0 0-.5-.6l-4-4a11.36 11.36 0 0 0-3.1 2.3 12.8 12.8 0 0 0 0 18.1l9 9a12.73 12.73 0 0 0 18-18l-7-7a8 8 0 0 1 .3 2.3z\\"/></svg></a>H4</h4><h5><a name=\\"h5\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#h5\\"><svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi octicon octicon-link\\"><path d=\\"M10.5 26.3a16 16 0 0 1 .9-5.3L8 17.6a6.73 6.73 0 0 1-2-4.8A6.41 6.41 0 0 1 8 8a6.76 6.76 0 0 1 9.6 0l9 9a6.88 6.88 0 0 1 0 9.6 6.27 6.27 0 0 1-3.4 1.8 2.65 2.65 0 0 0 .5.6l4.1 4.1a11.36 11.36 0 0 0 3.1-2.3 12.8 12.8 0 0 0 0-18.1l-9-9a12.63 12.63 0 0 0-9-3.7 12.63 12.63 0 0 0-9 3.7A12.1 12.1 0 0 0 0 12.8a12.63 12.63 0 0 0 3.7 9l7 7a21.05 21.05 0 0 1-.2-2.5zm27-4.6a16 16 0 0 1-.9 5.3l3.4 3.4a6.79 6.79 0 1 1-9.6 9.6l-9-9a6.88 6.88 0 0 1 0-9.6 6.27 6.27 0 0 1 3.4-1.8 2.65 2.65 0 0 0-.5-.6l-4-4a11.36 11.36 0 0 0-3.1 2.3 12.8 12.8 0 0 0 0 18.1l9 9a12.73 12.73 0 0 0 18-18l-7-7a8 8 0 0 1 .3 2.3z\\"/></svg></a>H5</h5><h6><a name=\\"h6\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#h6\\"><svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi octicon octicon-link\\"><path d=\\"M10.5 26.3a16 16 0 0 1 .9-5.3L8 17.6a6.73 6.73 0 0 1-2-4.8A6.41 6.41 0 0 1 8 8a6.76 6.76 0 0 1 9.6 0l9 9a6.88 6.88 0 0 1 0 9.6 6.27 6.27 0 0 1-3.4 1.8 2.65 2.65 0 0 0 .5.6l4.1 4.1a11.36 11.36 0 0 0 3.1-2.3 12.8 12.8 0 0 0 0-18.1l-9-9a12.63 12.63 0 0 0-9-3.7 12.63 12.63 0 0 0-9 3.7A12.1 12.1 0 0 0 0 12.8a12.63 12.63 0 0 0 3.7 9l7 7a21.05 21.05 0 0 1-.2-2.5zm27-4.6a16 16 0 0 1-.9 5.3l3.4 3.4a6.79 6.79 0 1 1-9.6 9.6l-9-9a6.88 6.88 0 0 1 0-9.6 6.27 6.27 0 0 1 3.4-1.8 2.65 2.65 0 0 0-.5-.6l-4-4a11.36 11.36 0 0 0-3.1 2.3 12.8 12.8 0 0 0 0 18.1l9 9a12.73 12.73 0 0 0 18-18l-7-7a8 8 0 0 1 .3 2.3z\\"/></svg></a>H6</h6>",
+      }
+    }
+    dir="ltr"
+  />
+</Markdown>
+`;
+
+exports[`should not apply a base url 1`] = `
+<Markdown
+  src="![alt text](favicon.ico \\"relative\\")"
+>
+  <div
+    className="markdown"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p><img src=\\"favicon.ico\\" alt=\\"alt text\\" title=\\"relative\\"></p>
+",
+      }
+    }
+    dir="ltr"
+  />
+</Markdown>
+`;
+
+exports[`should not apply anchor tags to headings 1`] = `
+<Markdown
+  src="# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6"
+>
+  <div
+    className="markdown"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+",
+      }
+    }
+    dir="ltr"
+  />
+</Markdown>
+`;
+
 exports[`should render correctly 1`] = `
 <Markdown
-  id="Markdown"
   src="test-file-stub"
 >
   <div
-    className="markdown markdown-body"
+    className="markdown"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<p>test-file-stub</p>

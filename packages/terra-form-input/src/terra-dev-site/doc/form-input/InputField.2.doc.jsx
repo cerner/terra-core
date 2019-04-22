@@ -10,6 +10,8 @@ import InputFieldSrc from '!raw-loader!../../../../src/InputField';
 // Example Files
 import InputFieldExample from '../example/InputField';
 import InputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/InputField';
+import NumberInputFieldExample from '../example/NumberInputField';
+import NumberInputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NumberInputField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 const DocPage = () => (
   <DocTemplate
@@ -26,6 +28,10 @@ const DocPage = () => (
       {
         example: <InputFieldExample />,
         source: InputFieldExampleSrc,
+      },
+      {
+        example: <NumberInputFieldExample />,
+        source: NumberInputFieldExampleSrc,
       },
     ]}
   />
