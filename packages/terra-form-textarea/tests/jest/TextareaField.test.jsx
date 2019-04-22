@@ -9,6 +9,12 @@ it('should render a default TextareaField component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a disabled TextareaField component', () => {
+  const textarea = <TextareaField disabled inputId="test-input" label="Label" />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render a TextareaField with props', () => {
   const textarea = (
     <TextareaField

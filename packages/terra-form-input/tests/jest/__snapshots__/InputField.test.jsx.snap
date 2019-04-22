@@ -70,6 +70,36 @@ exports[`should render a default InputField component 1`] = `
 </Field>
 `;
 
+exports[`should render a disabled InputField component 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Input
+    disabled={true}
+    id="test-input"
+    isInvalid={false}
+    name={null}
+    required={false}
+  />
+</Field>
+`;
+
 exports[`should render a valid InputField with props 1`] = `
 <Field
   error="Text"
