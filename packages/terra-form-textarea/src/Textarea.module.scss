@@ -38,6 +38,15 @@
       font-style: var(--terra-form-textarea-placeholder-font-style);
     }
 
+    /* TODO: Remove vendor prefix once we update to autoprefixer v9 */
+    /* stylelint-disable declaration-colon-space-after */
+    /* stylelint-disable selector-no-vendor-prefix */
+    &:-ms-input-placeholder {
+      color: var(--terra-form-textarea-placeholder-color, #70787c);
+      font-style: var(--terra-form-textarea-placeholder-font-style);
+    }
+    /* End of vendor prefix */
+
     &[required] {
       box-shadow: unset;
     }

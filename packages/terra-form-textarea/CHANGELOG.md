@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed Placeholder color for IE by adding vendor specific style rule
 
 3.11.0 - (April 16, 2019)
 ------------------
