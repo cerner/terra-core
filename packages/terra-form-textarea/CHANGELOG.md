@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Added 'disabled' prop to InputField component
+* Added 'disabled' prop to TextAreaField component
 
 3.10.0 - (April 9, 2019)
 ------------------
