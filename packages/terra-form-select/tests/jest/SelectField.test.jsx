@@ -6,7 +6,7 @@ import SelectField from '../../src/SelectField';
 
 it('should render a default SelectField component', () => {
   const select = (
-    <SelectField label="Label" defaultValue="blue" selectId="select-id" disabled>
+    <SelectField label="Label" defaultValue="blue" selectId="select-id">
       <SelectField.Option value="blue" display="Blue" />
       <SelectField.Option value="green" display="Green" />
       <SelectField.Option value="purple" display="Purple" />
@@ -20,7 +20,7 @@ it('should render a default SelectField component', () => {
 
 it('should render a disabled SelectField component', () => {
   const select = (
-    <SelectField label="Label" defaultValue="blue" selectId="select-id">
+    <SelectField disabled label="Label" defaultValue="blue" selectId="select-id">
       <SelectField.Option value="blue" display="Blue" />
       <SelectField.Option value="green" display="Green" />
       <SelectField.Option value="purple" display="Purple" />
