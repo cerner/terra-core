@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 
 const icon = <IconAlert width="40px" height="40px" />;
 // Block style is required since images are inline by default. This could be resolved by someones normalize.css
 const image = <img style={{ display: 'block' }} height="40px" width="40px" src="https://github.com/cerner/terra-core/raw/master/terra.png" alt="a happy panda" />;
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-const simpleText = <div>{ipsum}</div>;
-const textWithPadding = <div style={{ paddingLeft: '10px', paddingRight: '10px', border: '1px solid red' }}>{ipsum}</div>;
+const textWithBorder = <div style={{ border: '1px solid #000' }}>{ipsum}</div>;
+const textWithBlueBorder = <div style={{ border: '1px solid #0079BE' }}>{ipsum}</div>;
 
 const alignExampleDiv = (
   <div
@@ -21,36 +20,36 @@ const alignExampleDiv = (
   />
 );
 
-const IconWrapper = props => (
-  <div style={{ backgroundColor: '#ff5722', height: '100%' }}>
-    {props.children}
-  </div>
+const alignStartExampleDiv = (
+  <div
+    style={{
+      backgroundColor: '#0079BE',
+      display: 'block',
+      height: '20px',
+      margin: '1px',
+      width: '40px',
+    }}
+  />
 );
 
-IconWrapper.propTypes = {
-  children: PropTypes.element,
-};
-
-const alignLabels = {
-  overall: 'Overall Alignment: ',
-  alignFitStart: 'Fit Start Alignment: ',
-  alignFitEnd: 'Fit End Alignment: ',
-  alignFill: 'Fill Alignment: ',
-};
-
-const alignOptions = [
-  'center',
-  'bottom',
-  'stretch',
-];
+const alignEndExampleDiv = (
+  <div
+    style={{
+      backgroundColor: '#0079BE',
+      display: 'block',
+      height: '20px',
+      margin: '1px',
+      width: '40px',
+    }}
+  />
+);
 
 export {
+  alignEndExampleDiv,
   alignExampleDiv,
+  alignStartExampleDiv,
   icon,
   image,
-  simpleText,
-  textWithPadding,
-  IconWrapper,
-  alignLabels,
-  alignOptions,
+  textWithBlueBorder,
+  textWithBorder,
 };

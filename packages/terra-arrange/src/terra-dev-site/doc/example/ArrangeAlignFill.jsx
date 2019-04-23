@@ -2,42 +2,42 @@ import React from 'react';
 import classNames from 'classnames/bind';
 /* eslint-disable import/no-extraneous-dependencies */
 import Arrange from 'terra-arrange/lib/Arrange';
-import { alignStartExampleDiv, alignEndExampleDiv, textWithBlueBorder } from '../common/examplesetup';
+import { alignExampleDiv, textWithBlueBorder } from '../common/examplesetup';
 import styles from './ArrangeExamples.module.scss';
 
 const cx = classNames.bind(styles);
 
-const ArrangeAlignAllContainers = () => (
+const ArrangeAlignFill = () => (
   <div>
-    <h4>Align - Stretch</h4>
+    <h4>Align Fill - Stretch</h4>
     <Arrange
-      align="stretch"
+      alignFill="stretch"
       className={cx('arrange')}
-      fitStart={alignStartExampleDiv}
+      fitStart={alignExampleDiv}
       fill={textWithBlueBorder}
-      fitEnd={alignEndExampleDiv}
+      fitEnd={alignExampleDiv}
     />
     <br />
     <hr />
-    <h4>Align - Center</h4>
+    <h4>Align Fill - Center</h4>
     <Arrange
-      align="center"
+      alignFill="center"
       className={cx('arrange')}
-      fitStart={alignStartExampleDiv}
+      fitStart={alignExampleDiv}
       fill={textWithBlueBorder}
-      fitEnd={alignEndExampleDiv}
+      fitEnd={alignExampleDiv}
     />
     <br />
     <hr />
-    <h4>Align - Bottom</h4>
+    <h4>Align Fill - Bottom</h4>
     <Arrange
-      align="bottom"
+      alignFill="bottom"
       className={cx('arrange')}
-      fitStart={alignStartExampleDiv}
+      fitStart={alignExampleDiv}
       fill={textWithBlueBorder}
-      fitEnd={alignEndExampleDiv}
+      fitEnd={alignExampleDiv}
     />
   </div>
 );
 
-export default ArrangeAlignAllContainers;
+export default ArrangeAlignFill;
