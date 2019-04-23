@@ -110,6 +110,7 @@ class ArrangeAlignment extends React.Component {
             {...(this.state.alignFitStart && { alignFitStart: this.state.alignFitStart })}
             {...(this.state.alignFill && { alignFill: this.state.alignFill })}
             {...(this.state.alignFitEnd && { alignFitEnd: this.state.alignFitEnd })}
+            style={{ height: '100%' }}
           />
         </ArrangeWrapper>
         <br />

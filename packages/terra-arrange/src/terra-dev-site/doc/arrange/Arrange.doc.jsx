@@ -10,7 +10,7 @@ import Arrange from '../../../Arrange';
 import ArrangeSrc from '!raw-loader!../../../../src/Arrange';
 
 // Example Files
-import { icon, image, simpleText } from '../common/examplesetup';
+import { alignExampleDiv, icon, image, simpleText } from '../common/examplesetup';
 import ArrangeAlignment from '../example/ArrangeAlignment';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
@@ -24,9 +24,7 @@ const DocPage = () => (
         title: 'Align All Containers',
         example: (
           <div>
-            <ArrangeAlignment alignment="all" fitStart={image} fill={simpleText} />
-            <ArrangeAlignment alignment="all" fill={simpleText} fitEnd={icon} />
-            <ArrangeAlignment alignment="all" fitStart={image} fill={simpleText} fitEnd={icon} />
+            <ArrangeAlignment alignment="all" fitStart={alignExampleDiv} fill={simpleText} fitEnd={alignExampleDiv} />
           </div>
         ),
       },
@@ -34,9 +32,7 @@ const DocPage = () => (
         title: 'Align Individual Containers',
         example: (
           <div>
-            <ArrangeAlignment alignment="individual" fitStart={image} fill={simpleText} />
-            <ArrangeAlignment alignment="individual" fill={simpleText} fitEnd={icon} />
-            <ArrangeAlignment alignment="individual" fitStart={image} fill={simpleText} fitEnd={icon} />
+            <ArrangeAlignment alignment="individual" fitStart={alignExampleDiv} fill={simpleText} fitEnd={alignExampleDiv} />
           </div>
         ),
       },
