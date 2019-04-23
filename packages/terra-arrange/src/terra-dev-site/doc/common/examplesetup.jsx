@@ -1,8 +1,8 @@
 import React from 'react';
 
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-const textWithBorder = <div style={{ border: '1px solid #000' }}>{ipsum}</div>;
-const textWithBlueBorder = <div style={{ border: '1px solid #0079BE' }}>{ipsum}</div>;
+const simpleText = <div>{ipsum}</div>;
+const textWithBlueBorder = <div style={{ border: '2px solid #0079BE' }}>{ipsum}</div>;
 
 const alignExampleDiv = (
   <div
@@ -44,6 +44,6 @@ export {
   alignEndExampleDiv,
   alignExampleDiv,
   alignStartExampleDiv,
+  simpleText,
   textWithBlueBorder,
-  textWithBorder,
 };
