@@ -16,19 +16,7 @@ const alignExampleDiv = (
   />
 );
 
-const alignStartExampleDiv = (
-  <div
-    style={{
-      backgroundColor: '#0079BE',
-      display: 'block',
-      height: '20px',
-      margin: '1px',
-      width: '40px',
-    }}
-  />
-);
-
-const alignEndExampleDiv = (
+const alignExampleDivBlue = (
   <div
     style={{
       backgroundColor: '#0079BE',
@@ -41,9 +29,8 @@ const alignEndExampleDiv = (
 );
 
 export {
-  alignEndExampleDiv,
   alignExampleDiv,
-  alignStartExampleDiv,
+  alignExampleDivBlue,
   simpleText,
   textWithBlueBorder,
 };

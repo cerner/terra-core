@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 /* eslint-disable import/no-extraneous-dependencies */
 import Arrange from 'terra-arrange/lib/Arrange';
-import { alignEndExampleDiv, alignExampleDiv, simpleText } from '../common/examplesetup';
+import { alignExampleDivBlue, alignExampleDiv, simpleText } from '../common/examplesetup';
 import styles from './ArrangeExamples.module.scss';
 
 const cx = classNames.bind(styles);
@@ -15,7 +15,7 @@ const ArrangeAlignFitStart = () => (
       className={cx('arrange')}
       fitStart={alignExampleDiv}
       fill={simpleText}
-      fitEnd={alignEndExampleDiv}
+      fitEnd={alignExampleDivBlue}
     />
     <br />
     <hr />
@@ -25,7 +25,7 @@ const ArrangeAlignFitStart = () => (
       className={cx('arrange')}
       fitStart={alignExampleDiv}
       fill={simpleText}
-      fitEnd={alignEndExampleDiv}
+      fitEnd={alignExampleDivBlue}
     />
     <br />
     <hr />
@@ -35,7 +35,7 @@ const ArrangeAlignFitStart = () => (
       className={cx('arrange')}
       fitStart={alignExampleDiv}
       fill={simpleText}
-      fitEnd={alignEndExampleDiv}
+      fitEnd={alignExampleDivBlue}
     />
   </div>
 );
