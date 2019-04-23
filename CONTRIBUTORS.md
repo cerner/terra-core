@@ -90,6 +90,7 @@ Community
 - Nathan Faltermeier [@Blackop778]
 - Cory McDonald [@corymcdonald]
 - Noah Benham [@noahbenham]
+- Payal Sawant [@PayalSawant]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -179,3 +180,4 @@ Community
 [@anjaliroy19]: https://github.com/anjaliroy19
 [@yfaney]: http://github.com/yfaney
 [@nramamurth]: https://github.com/nramamurth
+[@PayalSawant]: https://github.com/PayalSawant
