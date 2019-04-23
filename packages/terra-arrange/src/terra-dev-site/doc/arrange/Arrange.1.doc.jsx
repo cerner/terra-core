@@ -3,9 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates, object-curly-newline */
-import Arrange from '../../../Arrange';
-
+/* eslint-disable import/no-webpack-loader-syntax, import/no-unresolved */
 // Component Source
 import ArrangeSrc from '!raw-loader!../../../../src/Arrange';
 
@@ -18,7 +16,7 @@ import ArrangeAlignFitEnd from '../example/ArrangeAlignFitEnd';
 import ArrangeAlignFitEndSrc from '!raw-loader!../example/ArrangeAlignFitEnd';
 import ArrangeAlignFitStart from '../example/ArrangeAlignFitStart';
 import ArrangeAlignFitStartSrc from '!raw-loader!../example/ArrangeAlignFitStart';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/no-unresolved */
 
 const DocPage = () => (
   <DocTemplate
