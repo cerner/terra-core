@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed
-* Fixed Placeholder color for IE by adding vendor specific style rule
+* Faded the placeholder text on IE11 by adding vendor specific style rule.
 
 5.14.0 - (April 16, 2019)
 ------------------
