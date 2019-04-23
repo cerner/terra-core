@@ -26,6 +26,9 @@
       "value": "false"
     }
   },
+  "engines": {
+    "node": "8.x"
+  },
   "formation": {
     "web": {
       "quantity": 1,
