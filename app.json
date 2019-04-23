@@ -36,6 +36,4 @@
     }
   },
   "stack": "heroku-16",
-  "addons": [],
-  "buildpacks": []
 }
