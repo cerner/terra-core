@@ -9,9 +9,9 @@ const cx = classNames.bind(styles);
 
 const ArrangeAlignFitStart = () => (
   <div>
-    <h4>Align FitStart - Stretch</h4>
+    <h4>Align FitStart - Default</h4>
     <Arrange
-      alignFitStart="stretch"
+      alignFitStart="default"
       className={cx('arrange')}
       fitStart={alignExampleDivBlue}
       fill={simpleText}
