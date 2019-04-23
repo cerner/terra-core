@@ -1,5 +1,5 @@
 describe('Icon', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
+  before(() => browser.setViewportSize(Terra.viewports('large')[0]));
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-default'));
 
@@ -25,5 +25,10 @@ describe('Icon', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-aria-label'));
 
     Terra.should.beAccessible();
+  });
+  describe('AllIcons', () => {
+    before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-all'));
+
+    Terra.should.validateElement();
   });
 });
