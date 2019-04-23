@@ -5,14 +5,23 @@ import uniqueid from 'lodash.uniqueid';
 import Arrange from 'terra-arrange/lib/Arrange';
 import { ArrangeWrapper, alignLabels, alignOptions } from '../common/examplesetup';
 
-const alignmentTypes = ['all', 'individual'];
-
 const propTypes = {
   /**
-   * Alignment behavior.
-   * This is used to determine which form to load to change alignment in the examples
+   * This is used to align across all elements in the container.
    */
-  alignment: PropTypes.oneOf(alignmentTypes).isRequired,
+  align: PropTypes.oneOf(alignOptions),
+  /**
+   * This determines the alignment of the center element.
+   */
+  alignFill: PropTypes.oneOf(alignOptions),
+  /**
+   * This determines the alignment of the starting element.
+   */
+  alignFitStart: PropTypes.oneOf(alignOptions),
+  /**
+   * This determines the alignment of the ending element.
+   */
+  alignFitEnd: PropTypes.oneOf(alignOptions),
   /**
    * The content to display in the body of the fitStart
    * This is passed on to the arrange component
@@ -48,56 +57,8 @@ class ArrangeAlignment extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  renderAllAlignmentForm() {
-    return (
-      <div>
-        <label htmlFor={this.getId('align')}>{alignLabels.overall}</label>
-        <select id={this.getId('align')} name="align" value={this.state.align} onChange={this.handleSelectChange}>
-          <option value="">default</option>
-          <option value={alignOptions.center}>{alignOptions.center}</option>
-          <option value={alignOptions.bottom}>{alignOptions.bottom}</option>
-          <option value={alignOptions.stretch}>{alignOptions.stretch}</option>
-        </select>
-      </div>
-    );
-  }
-
-  renderIndividualAlignmentForm() {
-    return (
-      <div>
-        <label htmlFor={this.getId('alignFitStart')}>{alignLabels.alignFitStart}</label>
-        <select id={this.getId('alignFitStart')} name="alignFitStart" value={this.state.alignFitStart} onChange={this.handleSelectChange}>
-          <option value="">default</option>
-          <option value={alignOptions.center}>{alignOptions.center}</option>
-          <option value={alignOptions.bottom}>{alignOptions.bottom}</option>
-          <option value={alignOptions.stretch}>{alignOptions.stretch}</option>
-        </select>
-        <br />
-        <br />
-        <label htmlFor={this.getId('alignFill')}>{alignLabels.alignFill}</label>
-        <select id={this.getId('alignFill')} name="alignFill" value={this.state.alignFill} onChange={this.handleSelectChange}>
-          <option value="">Default</option>
-          <option value={alignOptions.center}>{alignOptions.center}</option>
-          <option value={alignOptions.bottom}>{alignOptions.bottom}</option>
-          <option value={alignOptions.stretch}>{alignOptions.stretch}</option>
-        </select>
-        <br />
-        <br />
-        <label htmlFor={this.getId('alignFitEnd')}>{alignLabels.alignFitEnd}</label>
-        <select id={this.getId('alignFitEnd')} name="alignFitEnd" value={this.state.alignFitEnd} onChange={this.handleSelectChange}>
-          <option value="">Default</option>
-          <option value={alignOptions.center}>{alignOptions.center}</option>
-          <option value={alignOptions.bottom}>{alignOptions.bottom}</option>
-          <option value={alignOptions.stretch}>{alignOptions.stretch}</option>
-        </select>
-      </div>
-    );
-  }
 
   render() {
-    const allAlignmentForm = this.renderAllAlignmentForm();
-    const individualAlignmentForm = this.renderIndividualAlignmentForm();
-
 
     return (
       <div>
@@ -106,16 +67,13 @@ class ArrangeAlignment extends React.Component {
             fitStart={this.props.fitStart}
             fill={this.props.fill}
             fitEnd={this.props.fitEnd}
-            {...(this.state.align && { align: this.state.align })}
-            {...(this.state.alignFitStart && { alignFitStart: this.state.alignFitStart })}
-            {...(this.state.alignFill && { alignFill: this.state.alignFill })}
-            {...(this.state.alignFitEnd && { alignFitEnd: this.state.alignFitEnd })}
+            align={this.props.align}
+            alignFitStart={this.props.alignFitStart}
+            alignFitEnd={this.props.alignFitEnd}
+            alignFill={this.props.alignFill}
             style={{ height: '100%' }}
           />
         </ArrangeWrapper>
-        <br />
-        {this.props.alignment === 'individual' && individualAlignmentForm}
-        {this.props.alignment === 'all' && allAlignmentForm}
       </div>
     );
   }

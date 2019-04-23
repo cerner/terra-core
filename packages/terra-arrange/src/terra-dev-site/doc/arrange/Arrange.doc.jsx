@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates, object-curly-newline */
 import Arrange from '../../../Arrange';
 
 // Component Source
@@ -12,6 +12,8 @@ import ArrangeSrc from '!raw-loader!../../../../src/Arrange';
 // Example Files
 import { alignExampleDiv, icon, image, simpleText } from '../common/examplesetup';
 import ArrangeAlignment from '../example/ArrangeAlignment';
+import ArrangeAlignAllContainers from '../example/ArrangeAlignAllContainers';
+import ArrangeAlignAllContainersSrc from '!raw-loader!../example/ArrangeAlignAllContainers';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -22,11 +24,8 @@ const DocPage = () => (
     examples={[
       {
         title: 'Align All Containers',
-        example: (
-          <div>
-            <ArrangeAlignment alignment="all" fitStart={alignExampleDiv} fill={simpleText} fitEnd={alignExampleDiv} />
-          </div>
-        ),
+        example: <ArrangeAlignAllContainers />,
+        source: ArrangeAlignAllContainersSrc,
       },
       {
         title: 'Align Individual Containers',

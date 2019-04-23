@@ -48,11 +48,11 @@ const alignLabels = {
   alignFill: 'Fill Alignment: ',
 };
 
-const alignOptions = {
-  center: 'center',
-  bottom: 'bottom',
-  stretch: 'stretch',
-};
+const alignOptions = [
+  'center',
+  'bottom',
+  'stretch',
+];
 
 export {
   alignExampleDiv,
