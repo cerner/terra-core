@@ -4,10 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Removed redundant arrange examples
-
-### Fixed
-* Arrange examples now properly adjust based on alignment selection
+* Restructured arrange examples to better demonstrate alignment functionality
 
 3.8.0 - (April 16, 2019)
 ------------------
