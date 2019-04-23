@@ -10,8 +10,7 @@ import Arrange from '../../../Arrange';
 import ArrangeSrc from '!raw-loader!../../../../src/Arrange';
 
 // Example Files
-import { alignExampleDiv, icon, image, simpleText } from '../common/examplesetup';
-import ArrangeAlignment from '../example/ArrangeAlignment';
+import { icon, image, simpleText } from '../common/examplesetup';
 import ArrangeAlignAllContainers from '../example/ArrangeAlignAllContainers';
 import ArrangeAlignAllContainersSrc from '!raw-loader!../example/ArrangeAlignAllContainers';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
@@ -31,7 +30,7 @@ const DocPage = () => (
         title: 'Align Individual Containers',
         example: (
           <div>
-            <ArrangeAlignment alignment="individual" fitStart={alignExampleDiv} fill={simpleText} fitEnd={alignExampleDiv} />
+            <h4>Hello! There is nothing here yet, but make yourself at home.</h4>
           </div>
         ),
       },

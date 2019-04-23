@@ -21,16 +21,6 @@ const alignExampleDiv = (
   />
 );
 
-const ArrangeWrapper = props => (
-  <div style={{ width: '500px', height: '50px', border: '1px solid black' }}>
-    {props.children}
-  </div>
-);
-
-ArrangeWrapper.propTypes = {
-  children: PropTypes.element,
-};
-
 const IconWrapper = props => (
   <div style={{ backgroundColor: '#ff5722', height: '100%' }}>
     {props.children}
@@ -60,7 +50,6 @@ export {
   image,
   simpleText,
   textWithPadding,
-  ArrangeWrapper,
   IconWrapper,
   alignLabels,
   alignOptions,
