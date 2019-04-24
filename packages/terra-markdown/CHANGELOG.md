@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update markdown text color to inherit parent color
 
 2.25.0 - (April 16, 2019)
 ------------------
