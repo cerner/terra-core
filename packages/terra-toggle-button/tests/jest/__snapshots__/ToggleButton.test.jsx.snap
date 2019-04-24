@@ -253,7 +253,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       <button
         aria-disabled={false}
         aria-expanded={true}
-        aria-label={null}
         className="button neutral"
         disabled={false}
         onBlur={[Function]}
