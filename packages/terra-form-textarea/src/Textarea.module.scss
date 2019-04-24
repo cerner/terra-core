@@ -39,11 +39,13 @@
     }
 
     /* TODO: Remove vendor prefix once we update to autoprefixer v9 */
+    /* Issue logged for updating Autoprefixer in Toolkit : https://github.com/cerner/terra-toolkit/issues/161 */
     /* stylelint-disable selector-no-vendor-prefix */
     &:-ms-input-placeholder {
       color: var(--terra-form-textarea-placeholder-color, #70787c);
       font-style: var(--terra-form-textarea-placeholder-font-style);
     }
+    /* stylelint-enable selector-no-vendor-prefix */
     /* End of vendor prefix */
 
     &[required] {
