@@ -105,7 +105,7 @@ const TableRow = ({
     ariaDescribedByAttributes.push(selectedRowHelpTextId);
   }
 
-  const ariaDescribedBy = ariaDescribedByAttributes.length > 0 ? ariaDescribedByAttributes.join('') : undefined;
+  const ariaDescribedBy = ariaDescribedByAttributes.length > 0 ? ariaDescribedByAttributes.join(' ') : undefined;
 
   return (
     <tr {...customProps} onKeyDown={onKeyDown} aria-describedby={ariaDescribedBy} aria-selected={isSelected} className={rowClassNames} role="row">

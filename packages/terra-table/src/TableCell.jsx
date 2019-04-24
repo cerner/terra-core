@@ -56,7 +56,7 @@ const TableCell = ({
     ariaDescribedByAttributes.push(selectedRowHelpTextId);
   }
 
-  const ariaDescribedBy = ariaDescribedByAttributes.length > 0 ? ariaDescribedByAttributes.join('') : undefined;
+  const ariaDescribedBy = ariaDescribedByAttributes.length > 0 ? ariaDescribedByAttributes.join(' ') : undefined;
 
   return (
     <td role="gridcell" {...customProps} aria-describedby={ariaDescribedBy} data-terra-table-cell>
