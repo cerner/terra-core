@@ -3,7 +3,6 @@ import InputField from '../../../InputField';
 
 const DisabledInputFieldExample = () => {
   return (
-    <div>
       <InputField
         disabled
         inputId="test-input"
@@ -22,7 +21,6 @@ const DisabledInputFieldExample = () => {
         showOptional
         maxWidth="40%"
       />
-    </div>
   );
 };
 
