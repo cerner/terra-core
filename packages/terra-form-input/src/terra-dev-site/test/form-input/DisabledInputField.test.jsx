@@ -1,7 +1,6 @@
 import React from 'react';
 import InputField from '../../../InputField';
 
-/* eslint-disable arrow-body-style */
 const DisabledInputFieldExample = () => {
   return (
     <div>
