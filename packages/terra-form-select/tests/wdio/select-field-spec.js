@@ -27,8 +27,8 @@ describe('Select Field', () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/disabled-select-field');
     });
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
   });
 
   describe('should select an option by pressing enter', () => {
