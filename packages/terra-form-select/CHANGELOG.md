@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Added 'disabled' prop to FormSelectField component
 
+### Fixed
+* Add vendor style rule for IE11 to fade placeholder text.
+
 5.14.0 - (April 16, 2019)
 ------------------
 ### Changed
