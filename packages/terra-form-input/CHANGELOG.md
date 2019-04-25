@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Added 'disabled' prop to InputField component
 
+### Fixed
+* Add vendor style rule for IE11 to fade placeholder text.
+
 2.11.0 - (April 16, 2019)
 ------------------
 ### Changed

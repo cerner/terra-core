@@ -114,7 +114,6 @@ exports[`should render a single child element 1`] = `
         >
           <button
             aria-disabled={false}
-            aria-label={null}
             className="button neutral"
             disabled={false}
             onBlur={[Function]}
@@ -564,7 +563,6 @@ exports[`should render an image with a no-data status view with all message prop
         >
           <button
             aria-disabled={false}
-            aria-label={null}
             className="button neutral"
             disabled={false}
             onBlur={[Function]}
@@ -596,7 +594,6 @@ exports[`should render an image with a no-data status view with all message prop
         >
           <button
             aria-disabled={false}
-            aria-label={null}
             className="button neutral"
             disabled={false}
             onBlur={[Function]}
