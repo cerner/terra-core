@@ -4,9 +4,6 @@ ChangeLog
 Unreleased
 ----------
 
-### Changed
-* Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
-
 2.9.0 - (April 16, 2019)
 ------------------
 ### Changed

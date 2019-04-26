@@ -3,10 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-
-### Changed
-* Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
-
 ### Fixed
 * Add vendor style rule for IE11 to fade placeholder text.
 

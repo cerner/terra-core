@@ -153,12 +153,8 @@ describe('Button', () => {
     Terra.should.beAccessible({ context: '#action' });
     Terra.should.matchScreenshot({ selector: '#action' });
 
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-button-action-border-radius': '26px',
-      },
-      selector: '#action',
+    Terra.should.themeEachCustomProperty('#action', {
+      '--terra-button-action-border-radius': '26px',
     });
 
     describe('Action-Hovered', () => {
@@ -202,12 +198,8 @@ describe('Button', () => {
       Terra.should.beAccessible({ context: '#utility' });
       Terra.should.matchScreenshot({ selector: '#utility' });
 
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-button-utility-border-radius': '50%',
-        },
-        selector: '#utility',
+      Terra.should.themeEachCustomProperty('#utility', {
+        '--terra-button-utility-border-radius': '50%',
       });
     });
 

@@ -4,9 +4,6 @@ Changelog
 Unreleased
 ----------
 
-### Changed
-* Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
-
 ## Fixed
 * Use the custom `aria-label` if explicitly provided, otherwise use `text` as its fallback value for Utility button and icon-only buttons.
 

@@ -65,11 +65,8 @@ describe('Form-Input', () => {
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-hover-border': '20rem dashed blue',
-        },
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-input-hover-border': '20rem dashed blue',
       });
     });
 
@@ -96,11 +93,8 @@ describe('Form-Input', () => {
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-color': 'red',
-        },
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-input-color': 'red',
       });
     });
 
@@ -183,11 +177,8 @@ describe('Form-Input', () => {
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-hover-border': '20rem dashed red',
-        },
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-input-hover-border': '20rem dashed red',
       });
     });
 

@@ -4,13 +4,12 @@ describe('Base theme', () => {
   describe('Background color', () => {
     before(() => browser.url('/#/raw/tests/terra-base/base/default-base'));
 
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
+    Terra.should.themeEachCustomProperty(
+      '#root',
+      {
         '--terra-base-background-color': 'red',
       },
-      selector: '#root',
-    });
+    );
   });
 
   describe('Background image', () => {
