@@ -86,7 +86,7 @@
     "react-router-dom": "^4.0.0",
     "react-test-renderer": "^16.5.2",
     "stylelint": "^9.0.0",
-    "stylelint-config-terra": "^2.0.0",
+    "stylelint-config-terra": "git+https://github.com/cerner/stylelint-config-terra.git#added-ignores",
     "terra-dev-site": "^4.0.0",
     "terra-enzyme-intl": "^3.0.0",
     "terra-toolkit": "^4.16.1",
