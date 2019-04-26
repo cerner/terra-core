@@ -53,8 +53,8 @@
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run docs && npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
     "start": "tt-serve --config webpack.config",
-    "start-heroku": "tt-heroku-serve-static",
-    "start-static": "tt-serve-static --config webpack.config",
+    "start-heroku": "npm run compile:prod && tt-serve-static --port $PORT --site './build' ",
+    "start-static": "npm run compile:prod && tt-serve-static --site ./build",
     "test": "npm run jest && npm run wdio",
     "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
@@ -89,7 +89,8 @@
     "stylelint-config-terra": "^2.0.0",
     "terra-dev-site": "^4.0.0",
     "terra-enzyme-intl": "^3.0.0",
-    "terra-toolkit": "^4.16.1",
-    "webpack-merge": "^4.1.2"
+    "terra-toolkit": "git+https://github.com/cerner/terra-toolkit.git#serve-updates",
+    "webpack-merge": "^4.1.2",
+    "webpack-dev-server": "^3.1.11"
   }
 }
