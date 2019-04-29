@@ -6,6 +6,9 @@ Unreleased
 
 ### Changed
 * Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
+=======
+### Changed
+* Added 'disabled' prop to InputField component
 
 ### Fixed
 * Add vendor style rule for IE11 to fade placeholder text.
