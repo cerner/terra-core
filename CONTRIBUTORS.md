@@ -77,6 +77,7 @@ Cerner Corporation
 - Anjali Roy [@anjaliroy19]
 - Younghwan Jang [@yfaney]
 - Naveen Kumar Ramamurthy [@nramamurth]
+- Pranav Agarwal [@pranav300]
 
 Community
 
@@ -181,3 +182,4 @@ Community
 [@yfaney]: http://github.com/yfaney
 [@nramamurth]: https://github.com/nramamurth
 [@PayalSawant]: https://github.com/PayalSawant
+[@pranav300]: https://github.com/pranav300
