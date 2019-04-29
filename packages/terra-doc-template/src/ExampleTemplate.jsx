@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import jsx from 'react-syntax-highlighter/dist/esm//languages/prism/jsx';
+import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/dist/prism-light';
+import jsx from 'react-syntax-highlighter/dist/languages/prism/jsx';
 import classNames from 'classnames/bind';
 import styles from './ExampleTemplate.module.scss';
 import theme from './syntax-highlighter-theme';
 
-SyntaxHighlighter.registerLanguage('jsx', jsx);
+registerLanguage('jsx', jsx);
 
 const cx = classNames.bind(styles);
 
