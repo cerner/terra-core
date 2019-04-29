@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated version of react-syntax-highlighter
 
 2.8.0 - (April 16, 2019)
 ------------------
