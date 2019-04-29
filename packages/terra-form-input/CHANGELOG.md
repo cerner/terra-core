@@ -6,7 +6,7 @@ Unreleased
 
 ### Changed
 * Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
-=======
+
 ### Changed
 * Added 'disabled' prop to InputField component
 
