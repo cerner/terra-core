@@ -13,7 +13,7 @@ const row2 = <Table.Row key="PERSON_1" className="PERSON_1" isSelected isSelecta
 const rows = [row1, row2];
 
 it('should update the liveregion on a selected row when one is provided and no screen reader update function is', () => {
-  const defaultTableRows = mountWithIntl(<Table><Table.SelectableTableRows selectedIndexes={[0]} id="selectable-rows">{rows}</Table.SelectableTableRows></Table>);
+  const defaultTableRows = mountWithIntl(<Table><Table.MultiSelectableRows selectedIndexes={[0]} id="selectable-rows">{rows}</Table.MultiSelectableRows></Table>);
 
   jest.useFakeTimers();
 
