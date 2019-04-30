@@ -1,54 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import IconAlert from 'terra-icon/lib/icon/IconAlert';
 
-const icon = <IconAlert width="4em" height="4em" />;
-// Block style is required since images are inline by default. This could be resolved by someones normalize.css
-const image = <img style={{ display: 'block' }} height="75" width="75" src="https://github.com/cerner/terra-core/raw/master/terra.png" alt="a happy panda" />;
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 const simpleText = <div>{ipsum}</div>;
-const textWithPadding = <div style={{ paddingLeft: '10px', paddingRight: '10px', border: '1px solid red' }}>{ipsum}</div>;
+const textWithBlueBorder = <div style={{ border: '2px solid #0079BE' }}>{ipsum}</div>;
 
-const ArrangeWrapper = props => (
-  <div style={{ width: '500px', border: '1px solid black' }}>
-    {props.children}
-  </div>
+const alignExampleDiv = (
+  <div
+    style={{
+      backgroundColor: '#000',
+      display: 'block',
+      height: '20px',
+      width: '40px',
+    }}
+  />
 );
 
-ArrangeWrapper.propTypes = {
-  children: PropTypes.element,
-};
-
-const IconWrapper = props => (
-  <div style={{ backgroundColor: '#ff5722', height: '100%' }}>
-    {props.children}
-  </div>
+const alignExampleDivBlue = (
+  <div
+    style={{
+      backgroundColor: '#0079BE',
+      display: 'block',
+      height: '20px',
+      width: '40px',
+    }}
+  />
 );
-
-IconWrapper.propTypes = {
-  children: PropTypes.element,
-};
-
-const alignLabels = {
-  overall: 'Overall Alignment: ',
-  alignFitStart: 'Fit Start Alignment: ',
-  alignFitEnd: 'Fit End Alignment: ',
-  alignFill: 'Fill Alignment: ',
-};
-
-const alignOptions = {
-  center: 'center',
-  bottom: 'bottom',
-  stretch: 'stretch',
-};
 
 export {
-  icon,
-  image,
+  alignExampleDiv,
+  alignExampleDivBlue,
   simpleText,
-  textWithPadding,
-  ArrangeWrapper,
-  IconWrapper,
-  alignLabels,
-  alignOptions,
+  textWithBlueBorder,
 };
