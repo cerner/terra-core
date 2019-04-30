@@ -42,4 +42,10 @@ describe('Arrange', () => {
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
   });
+
+  describe('Align stretch with 20% max-widths on containers using attribute props', () => {
+    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/aligned-stretch-max-width'));
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.beAccessible({ viewports });
+  });
 });
