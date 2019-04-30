@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Doc site example that can be toggled to demonstrate isInline prop
 
 3.9.0 - (April 16, 2019)
 ------------------
