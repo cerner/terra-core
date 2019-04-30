@@ -4,7 +4,13 @@ Changelog
 Unreleased
 ----------
 ### Breaking Changes
-* Removed variables file, breakpoints now imported from terra-breakpoints
+* Removed variables.scss file, breakpoints now imported from terra-breakpoints
+* Changed col (removed) breakpoint to tiny
+* Changed tiny breakpoint to small
+* Changed small breakpoint to medium
+* Changed medium breakpoint to large
+* Changed large breakpoint to huge
+* Changed huge breakpoint to enormous (new)
 
 5.8.0 - (April 16, 2019)
 ------------------
