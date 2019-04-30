@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Doc site examples that can be toggled to demonstrate isInline and isInvalid props
 
 3.11.0 - (April 16, 2019)
 ------------------

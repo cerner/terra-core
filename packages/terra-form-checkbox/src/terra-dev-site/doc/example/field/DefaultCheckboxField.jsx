@@ -5,14 +5,42 @@ import Checkbox from 'terra-form-checkbox/lib/Checkbox';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import CheckboxField from 'terra-form-checkbox/lib/CheckboxField';
 
-const disabledCheckbox = () => (
-  <CheckboxField
-    legend="Do you have experience with any of the following?"
-  >
-    <Checkbox id="experience-indesign" name="experience[]" labelText="InDesign" />
-    <Checkbox id="experience-photoshop" name="experience[]" labelText="Photoshop" />
-    <Checkbox id="experience-illustrator" name="experience[]" labelText="Illustrator" />
-  </CheckboxField>
-);
+class DefaultCheckboxField extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default disabledCheckbox;
+    this.state = {
+      isInvalid: false,
+    };
+
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick() {
+    this.setState(prevState => ({ isInvalid: !prevState.isInvalid }));
+  }
+
+  render() {
+    const errorMessage = 'All options are now invalid';
+
+    return (
+      <div>
+        <div>
+          <CheckboxField
+            error={errorMessage}
+            isInvalid={this.state.isInvalid}
+            legend="Do you have experience with any of the following?"
+          >
+            <Checkbox id="experience-indesign" name="experience[]" labelText="InDesign" />
+            <Checkbox id="experience-photoshop" name="experience[]" labelText="Photoshop" />
+            <Checkbox id="experience-illustrator" name="experience[]" labelText="Illustrator" />
+          </CheckboxField>
+        </div>
+        <hr />
+        <button type="button" aria-label="Toggle Invalid Status" onClick={this.handleOnClick}>Toggle Invalid Status</button>
+      </div>
+    );
+  }
+}
+
+export default DefaultCheckboxField;
