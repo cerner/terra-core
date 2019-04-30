@@ -208,7 +208,9 @@ class Overlay extends React.Component {
       <Portal>
         {backgroundScrollContent}
         <FocusTrap>
-          {overlayComponent}
+          <div>
+            {overlayComponent}
+          </div>
         </FocusTrap>
       </Portal>
     );
