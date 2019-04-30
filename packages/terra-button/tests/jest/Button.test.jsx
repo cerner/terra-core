@@ -186,3 +186,28 @@ it('should render a button with a title', () => {
   const button = shallow(<Button text="Button" title="Custom Title" />);
   expect(button).toMatchSnapshot();
 });
+
+it('should render an icon only button with text as a fallback accessible label', () => {
+  const button = shallow(<Button isIconOnly text="Icon Only" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render an icon only button with a custom accessible label', () => {
+  const button = shallow(<Button isIconOnly text="Icon Only" aria-label="Custom Accessible Label" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button with text as a fallback accessible label', () => {
+  const button = shallow(<Button variant="utility" text="Icon Only" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button with a custom accessible label', () => {
+  const button = shallow(<Button variant="utility" text="Icon Only" aria-label="Custom Accessible Label" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a button with accessible label', () => {
+  const button = shallow(<Button text="Button" aria-label="Custom Accessible Label" />);
+  expect(button).toMatchSnapshot();
+});

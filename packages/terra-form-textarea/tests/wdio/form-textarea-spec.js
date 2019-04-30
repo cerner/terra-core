@@ -381,5 +381,13 @@ describe('Form-Textarea', () => {
 
       Terra.should.matchScreenshot({ viewports });
     });
+
+    describe('Disabled TextareaField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-textarea-field');
+      });
+
+      Terra.should.matchScreenshot({ viewports });
+    });
   });
 });

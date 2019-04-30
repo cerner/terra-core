@@ -20,6 +20,10 @@ const propTypes = {
     PropTypes.number,
   ]),
   /**
+   * Whether the input is disabled.
+   */
+  disabled: PropTypes.bool,
+  /**
    * Error message for when the input is invalid.
    */
   error: PropTypes.node,
@@ -93,6 +97,7 @@ const propTypes = {
 
 const defaultProps = {
   defaultValue: undefined,
+  disabled: false,
   error: null,
   errorIcon: Field.defaultProps.errorIcon,
   help: null,
@@ -114,6 +119,7 @@ const defaultProps = {
 const InputField = (props) => {
   const {
     defaultValue,
+    disabled,
     error,
     errorIcon,
     help,
@@ -169,6 +175,7 @@ const InputField = (props) => {
     >
       <Input
         {...inputAttrs}
+        disabled={inputAttrs.disabled || disabled}
         id={inputId}
         type={inputType}
         onChange={onChange}

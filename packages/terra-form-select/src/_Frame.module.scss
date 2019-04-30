@@ -230,6 +230,22 @@
     white-space: nowrap;
   }
 
+  /* TODO: Remove vendor prefix once we update to autoprefixer v9 */
+  /* Issue loggedd for updating Autoprefixer in Toolkit : https://github.com/cerner/terra-toolkit/issues/161 */
+  /* stylelint-disable selector-no-vendor-prefix */
+  .search-input,
+  .placeholder,
+  :-ms-input-placeholder {
+    color: var(--terra-form-select-search-placeholder-color, #70787c);
+    font-size: var(--terra-form-select-search-placeholder-font-size, 1.143rem);
+    font-style: var(--terra-form-select-search-placeholder-font-style);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* stylelint-enable selector-no-vendor-prefix */
+  /* End of vendor prefix */
+
   .tag,
   .search,
   .combobox,
