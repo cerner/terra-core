@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added variables file for breakpoints to be imported into other packages
 
 2.6.0 - (April 16, 2019)
 ------------------
