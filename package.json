@@ -89,7 +89,7 @@
     "stylelint-config-terra": "^2.0.0",
     "terra-dev-site": "^4.0.0",
     "terra-enzyme-intl": "^3.0.0",
-    "terra-toolkit": "cerner/terra-toolkit.git#5f6e1976ff0a315cca7c8df591e57314ef5da2ee",
+    "terra-toolkit": "git+https://github.com/cerner/terra-toolkit.git#serve-updates",
     "webpack-merge": "^4.1.2",
     "webpack-dev-server": "^3.1.11"
   }
