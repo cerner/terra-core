@@ -2,7 +2,9 @@ Changelog
 =========
 
 Unreleased
-----------
+----------------
+### Added
+* Added Upgrade Guide to doc site
 
 4.2.0 - (April 16, 2019)
 ------------------

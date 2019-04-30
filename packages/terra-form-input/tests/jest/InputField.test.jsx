@@ -9,6 +9,18 @@ it('should render a default InputField component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a disabled InputField component', () => {
+  const textarea = <InputField disabled inputId="test-input" label="Label" />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a disabled InputField component via inputAttrs', () => {
+  const textarea = <InputField inputId="test-input" inputAttrs={{ disabled: true }} label="Label" />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render a InputField with props', () => {
   const textarea = (
     <InputField
