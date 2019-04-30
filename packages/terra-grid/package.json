@@ -38,6 +38,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
+    "terra-breakpoints": "^2.6.0",
     "terra-doc-template": "^2.8.0"
   }
 }

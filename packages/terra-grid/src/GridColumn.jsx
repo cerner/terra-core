@@ -27,9 +27,13 @@ const propTypes = {
   /**
    * The number of columns across all breakpoints. From 1-12(inclusively).
    */
-  col: columnRange,
+  tiny: columnRange,
   /**
-   * The number of columns starts from huge breakpoint. From 1-12(inclusively).
+   * The number of columns starts from enormous breakpoint. From 1-12(inclusively).
+   */
+  enormous: columnRange,
+  /**
+   * The number of columns starts from huge breakpoint. From 1-12 (inclusively).
    */
   huge: columnRange,
   /**
@@ -44,31 +48,27 @@ const propTypes = {
    * The number of columns starts from small breakpoint. From 1-12 (inclusively).
    */
   small: columnRange,
-  /**
-   * The number of columns starts from tiny breakpoint. From 1-12 (inclusively).
-   */
-  tiny: columnRange,
 };
 
 const GridColumn = ({
   className,
   children,
-  col,
   tiny,
   small,
   medium,
   large,
   huge,
+  enormous,
   ...customProps
 }) => {
   const colClassNames = cx([
     'column', {
-      [`column-${col}`]: col,
       [`column-tiny-${tiny}`]: tiny,
       [`column-small-${small}`]: small,
       [`column-medium-${medium}`]: medium,
       [`column-large-${large}`]: large,
       [`column-huge-${huge}`]: huge,
+      [`column-enormous-${enormous}`]: enormous,
     },
     className,
   ]);
