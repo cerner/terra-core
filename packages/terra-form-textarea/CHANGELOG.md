@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added 'disabled' prop to TextAreaField component
+
 ### Fixed
 * Add vendor style rule for IE11 to fade placeholder text.
 

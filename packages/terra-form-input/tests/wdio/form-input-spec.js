@@ -227,5 +227,13 @@ describe('Form-Input', () => {
 
       Terra.should.matchScreenshot({ viewports });
     });
+
+    describe('Disabled InputField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-input-field');
+      });
+
+      Terra.should.matchScreenshot({ viewports });
+    });
   });
 });
