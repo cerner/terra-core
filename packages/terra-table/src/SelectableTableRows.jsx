@@ -70,42 +70,46 @@ class SelectableTableRows extends React.Component {
     }
   }
 
+  updateLiveRegion(index) {
+    const {
+      liveRegion,
+      screenReaderUpdateOnSelected,
+      selectedIndexes,
+    } = this.props;
+
+    const { intl } = this.context;
+
+    if (screenReaderUpdateOnSelected) {
+      screenReaderUpdateOnSelected(liveRegion, intl);
+    } else {
+      const isSelected = (selectedIndexes.indexOf(index) >= 0) && (this.props.onChange !== undefined);
+
+      if (liveRegion.current) {
+        liveRegion.current.innerText = '';
+
+        // The isSelected value here actually refers to the previous state of the row since
+        // isSelected is not actually geting updated inside this listener
+        if (!isSelected) {
+          setTimeout(() => {
+            liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowSelected' });
+          }, 250);
+        } else {
+          setTimeout(() => {
+            liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowUnselected' });
+          }, 250);
+        }
+      }
+    }
+  }
+
   wrappedOnClickForRow(row, index) {
     const initialOnClick = row.props.onClick;
 
     return (event) => {
+      // The default isSelectable attribute is either undefined or true, unless the consumer specifies the row's isSelectable attribute as false.
       if (row.props.isSelectable !== false) {
         this.handleOnChange(event, index);
-
-        const {
-          liveRegion,
-          screenReaderUpdateOnSelected,
-          selectedIndexes,
-        } = this.props;
-
-        const { intl } = this.context;
-
-        if (screenReaderUpdateOnSelected) {
-          screenReaderUpdateOnSelected(liveRegion, intl);
-        } else {
-          const isSelected = selectedIndexes.indexOf(index) >= 0;
-
-          if (liveRegion.current) {
-            liveRegion.current.innerText = '';
-
-            // The isSelected value here actually refers to the previous state of the row since
-            // isSelected is not actually geting updated inside this listener
-            if (!isSelected) {
-              setTimeout(() => {
-                liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowSelected' });
-              }, 250);
-            } else {
-              setTimeout(() => {
-                liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowUnselected' });
-              }, 250);
-            }
-          }
-        }
+        this.updateLiveRegion(index);
       }
 
       if (initialOnClick) {
@@ -116,41 +120,13 @@ class SelectableTableRows extends React.Component {
 
   wrappedOnKeyDownForRow(row, index) {
     const initialOnKeyDown = row.props.onKeyDown;
+
     return (event) => {
       if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         // The default isSelectable attribute is either undefined or true, unless the consumer specifies the row's isSelectable attribute as false.
         if (row.props.isSelectable !== false) {
           this.handleOnChange(event, index);
-
-          const {
-            liveRegion,
-            screenReaderUpdateOnSelected,
-            selectedIndexes,
-          } = this.props;
-
-          const { intl } = this.context;
-
-          if (screenReaderUpdateOnSelected) {
-            screenReaderUpdateOnSelected(liveRegion, intl);
-          } else {
-            const isSelected = selectedIndexes.indexOf(index) >= 0;
-
-            if (liveRegion.current) {
-              liveRegion.current.innerText = '';
-
-              // The isSelected value here actually refers to the previous state of the row since
-              // isSelected is not actually geting updated inside this listener
-              if (!isSelected) {
-                setTimeout(() => {
-                  liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowSelected' });
-                }, 250);
-              } else {
-                setTimeout(() => {
-                  liveRegion.current.innerText = intl.formatMessage({ id: 'Terra.table.rowUnselected' });
-                }, 250);
-              }
-            }
-          }
+          this.updateLiveRegion(index);
         }
       }
 
@@ -164,7 +140,7 @@ class SelectableTableRows extends React.Component {
     const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
     const newProps = { };
     // Set the isSelected attribute to false for all the rows except the rows whose index is set to state selectedIndex.
-    if (isSelected !== row.props.isSelected) {
+    if (isSelected || row.props.isSelected) {
       newProps.isSelected = isSelected;
     }
 
@@ -195,7 +171,8 @@ class SelectableTableRows extends React.Component {
         const wrappedOnClick = this.wrappedOnClickForRow(row, index);
         const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
         const newProps = this.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
-        return React.cloneElement(row, newProps);
+        const rowy = React.cloneElement(row, newProps);
+        return rowy;
       }
       return row;
     });
