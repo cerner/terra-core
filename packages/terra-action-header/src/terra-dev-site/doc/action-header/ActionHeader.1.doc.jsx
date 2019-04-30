@@ -22,6 +22,8 @@ import MinimizeCustomButtonActionHeader from '../example/MinimizeCustomButtonAct
 import MinimizeCustomButtonActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MinimizeCustomButtonActionHeader';
 import BackPreviousNextCloseActionHeader from '../example/BackPreviousNextCloseActionHeader';
 import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BackPreviousNextCloseActionHeader';
+import LongWrappingTextHeader from '../example/LongWrappingTextHeader';
+import LongWrappingTextHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/LongWrappingTextHeader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -57,6 +59,10 @@ const DocPage = () => (
       {
         example: <MinimizeCustomButtonActionHeader />,
         source: MinimizeCustomButtonActionHeaderSrc,
+      },
+      {
+        example: <LongWrappingTextHeader />,
+        source: LongWrappingTextHeaderSrc,
       },
     ]}
     propsTables={[
