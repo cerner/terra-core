@@ -3,7 +3,7 @@ Changelog
 
 Unreleased
 ----------
-### Changed
+### Breaking Changes
 * Removed variables file, breakpoints now imported from terra-breakpoints
 
 5.8.0 - (April 16, 2019)
