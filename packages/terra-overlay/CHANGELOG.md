@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Upgrade focus-trap-react to version ^6.0.1
+* Added wrapping div to account for breaking change in focus-trap-react
 
 3.11.0 - (April 16, 2019)
 ------------------
