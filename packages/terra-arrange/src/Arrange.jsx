@@ -25,21 +25,21 @@ const propTypes = {
    */
   fitEnd: PropTypes.element,
   /**
-   * The vertical orientation of all three containers. It will override the aligment of alignFitStart, alignFill and alignFitEnd if given. One of: `center`, `bottom`, `stretch`, `default`.
+   * The vertical orientation of all three containers. It will override the alignment of alignFitStart, alignFill and alignFitEnd if given. One of: `center`, `bottom`, `stretch`.
    */
-  align: PropTypes.oneOf(['center', 'bottom', 'stretch', 'default']),
+  align: PropTypes.oneOf(['center', 'bottom', 'stretch']),
   /**
-   * The vertical orientation of fitStart. One of: `center`, `bottom`, `stretch`, `default`.
+   * The vertical orientation of fitStart. One of: `center`, `bottom`, `stretch`.
    */
-  alignFitStart: PropTypes.oneOf(['center', 'bottom', 'stretch', 'default']),
+  alignFitStart: PropTypes.oneOf(['center', 'bottom', 'stretch']),
   /**
-   * The vertical orientation of fill. One of: `center`, `bottom`, `stretch`, `default`.
+   * The vertical orientation of fill. One of: `center`, `bottom`, `stretch`.
    */
-  alignFitEnd: PropTypes.oneOf(['center', 'bottom', 'stretch', 'default']),
+  alignFitEnd: PropTypes.oneOf(['center', 'bottom', 'stretch']),
   /**
-   * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`, `default`.
+   * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`.
    */
-  alignFill: PropTypes.oneOf(['center', 'bottom', 'stretch', 'default']),
+  alignFill: PropTypes.oneOf(['center', 'bottom', 'stretch']),
   /**
    * The attributes to be set on the fitStart wrapper element
    */

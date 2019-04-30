@@ -9,9 +9,8 @@ const cx = classNames.bind(styles);
 
 const ArrangeAlignFill = () => (
   <div>
-    <h4>Align Fill - Default</h4>
+    <h3>Align Fill - Default</h3>
     <Arrange
-      alignFill="default"
       className={cx('arrange')}
       fitStart={alignExampleDiv}
       fill={textWithBlueBorder}
@@ -19,7 +18,7 @@ const ArrangeAlignFill = () => (
     />
     <br />
     <hr />
-    <h4>Align Fill - Center</h4>
+    <h3>Align Fill - Center</h3>
     <Arrange
       alignFill="center"
       className={cx('arrange')}
@@ -29,7 +28,7 @@ const ArrangeAlignFill = () => (
     />
     <br />
     <hr />
-    <h4>Align Fill - Bottom</h4>
+    <h3>Align Fill - Bottom</h3>
     <Arrange
       alignFill="bottom"
       className={cx('arrange')}

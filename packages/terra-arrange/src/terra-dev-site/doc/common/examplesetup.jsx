@@ -10,7 +10,6 @@ const alignExampleDiv = (
       backgroundColor: '#000',
       display: 'block',
       height: '20px',
-      margin: '1px',
       width: '40px',
     }}
   />
@@ -22,7 +21,6 @@ const alignExampleDivBlue = (
       backgroundColor: '#0079BE',
       display: 'block',
       height: '20px',
-      margin: '1px',
       width: '40px',
     }}
   />
