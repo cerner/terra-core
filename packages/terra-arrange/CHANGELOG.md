@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Restructured arrange examples to better demonstrate alignment functionality
 
 3.8.0 - (April 16, 2019)
 ------------------
