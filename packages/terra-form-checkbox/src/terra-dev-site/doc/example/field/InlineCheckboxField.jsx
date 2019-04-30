@@ -10,6 +10,7 @@ export default class extends React.Component {
     super(props);
 
     this.state = {
+      isInvalid: false,
       selectedAnswers: [],
       toggleInline: false,
     };
@@ -30,20 +31,31 @@ export default class extends React.Component {
     this.setState({ selectedAnswers });
   }
 
-  handleOnClick() {
-    this.setState(prevState => ({
-      toggleInline: !prevState.toggleInline,
-    }));
+  handleOnClick(e) {
+    if (e.currentTarget.id === 'inline') {
+      this.setState(prevState => ({
+        toggleInline: !prevState.toggleInline,
+      }));
+    } else {
+      this.setState(prevState => ({
+        isInvalid: !prevState.isInvalid,
+      }));
+    }
   }
 
   render() {
+    const errorMessage = 'All options are now invalid';
+
     return (
       <div>
-        <button style={{ marginBottom: '5px' }} type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Inline</button>
+        <button style={{ marginBottom: '5px' }} id="inline" type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Inline</button>
+        <button style={{ marginBottom: '5px' }} id="invalid" type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Invalid Status</button>
         <hr />
         <div>
           <CheckboxField
+            error={errorMessage}
             isInline={this.state.toggleInline}
+            isInvalid={this.state.isInvalid}
             legend="Do you have experience with any of the following?"
           >
             <Checkbox id="inline-experience-indesign" name="experience[]" labelText="InDesign" />
@@ -51,7 +63,9 @@ export default class extends React.Component {
             <Checkbox id="inline-experience-illustrator" name="experience[]" labelText="Illustrator" />
           </CheckboxField>
           <CheckboxField
+            error={errorMessage}
             isInline={this.state.toggleInline}
+            isInvalid={this.state.isInvalid}
             legend="Do you also have experience with any of the cutting edge technologies?"
           >
             <Checkbox id="experience-ie9" name="experience[]" labelText="IE9" />

@@ -10,6 +10,7 @@ export default class extends React.Component {
     super(props);
 
     this.state = {
+      isInvalid: false,
       selectedAnswer: undefined,
       toggleInline: false,
     };
@@ -22,17 +23,25 @@ export default class extends React.Component {
     this.setState({ selectedAnswer: e.currentTarget.value });
   }
 
-  handleOnClick() {
-    this.setState(prevState => ({
-      toggleInline: !prevState.toggleInline,
-    }));
+  handleOnClick(e) {
+    if (e.currentTarget.id === 'inline') {
+      this.setState(prevState => ({
+        toggleInline: !prevState.toggleInline,
+      }));
+    } else {
+      this.setState(prevState => ({
+        isInvalid: !prevState.isInvalid,
+      }));
+    }
   }
 
   render() {
     let errorMessage = 'An answer must be chosen';
     let isInvalid;
 
-    if (this.state.selectedAnswer === 'mcdonalds') {
+    if (this.state.isInvalid) {
+      errorMessage = 'All options are now invalid';
+    } else if (this.state.selectedAnswer === 'mcdonalds') {
       errorMessage = 'Invalid option selected.';
       isInvalid = true;
     } else if (this.state.selectedAnswer === undefined) {
@@ -41,14 +50,15 @@ export default class extends React.Component {
 
     return (
       <div>
-        <button style={{ marginBottom: '5px' }} type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Inline</button>
+        <button style={{ marginBottom: '5px' }} id="inline" type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Inline</button>
+        <button style={{ marginBottom: '5px' }} id="invalid" type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Invalid Status</button>
         <hr />
         <div>
           <RadioField
             legend="Which Type of Meal are you looking for?"
             help="This cannot be changed when submitted"
             isInline={this.state.toggleInline}
-            isInvalid={isInvalid}
+            isInvalid={this.state.isInvalid || isInvalid}
             error={errorMessage}
             required
           >
@@ -57,9 +67,11 @@ export default class extends React.Component {
             <Radio id="inline-mcdonalds-meal" name="meal" labelText="McDonalds (Not a valid choice)" onChange={this.handleOnChange} value="mcdonalds" />
           </RadioField>
           <RadioField
+            error={errorMessage}
             legend="Which Type of Sides do you want?"
             help="This cannot be changed when submitted"
             isInline={this.state.toggleInline}
+            isInvalid={this.state.isInvalid}
             required
           >
             <Radio id="fries" name="side" labelText="Fries" value="fries" />
