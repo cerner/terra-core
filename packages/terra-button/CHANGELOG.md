@@ -3,11 +3,15 @@ Changelog
 
 Unreleased
 ----------
+
+3.12.0 - (May 1, 2019)
+------------------
 ### Added
 * Added new `ghost` variant
-* Added `compact` variant docsite examples 
+* Added `compact` variant docsite examples
 
 ### Changed
+* Minor dependency version bump
 * Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
 
 ## Fixed

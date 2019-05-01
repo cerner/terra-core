@@ -4,10 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.12.0 - (May 1, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
 * Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
-
-### Changed
 * Added 'disabled' prop to InputField component
 
 ### Fixed
