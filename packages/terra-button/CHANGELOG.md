@@ -7,7 +7,10 @@ Unreleased
 * Added new `ghost` variant
 * Added `compact` variant docsite examples 
 
-### Fixed
+### Changed
+* Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
+
+## Fixed
 * Use the custom `aria-label` if explicitly provided, otherwise use `text` as its fallback value for Utility button and icon-only buttons.
 
 3.11.0 - (April 16, 2019)
