@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added new `ghost` variant
+* Added `compact` variant docsite examples 
 
 ### Changed
 * Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty

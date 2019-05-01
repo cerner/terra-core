@@ -246,6 +246,28 @@ exports[`should render a emphasis button 1`] = `
 </button>
 `;
 
+exports[`should render a ghost button 1`] = `
+<button
+  aria-disabled={false}
+  className="button ghost"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  type="button"
+>
+  <span
+    className="button-label text-only"
+  >
+    <span
+      className=""
+    >
+      ghost
+    </span>
+  </span>
+</button>
+`;
+
 exports[`should render a neutral button 1`] = `
 <button
   aria-disabled={false}

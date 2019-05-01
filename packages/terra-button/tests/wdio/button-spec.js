@@ -119,6 +119,37 @@ describe('Button', () => {
     });
   });
 
+  describe('Ghost', () => {
+    before(() => browser.url('/#/raw/tests/terra-button/button/variants/ghost-button'));
+
+    Terra.should.beAccessible({ context: '#ghost' });
+    Terra.should.matchScreenshot({ selector: '#ghost' });
+
+    describe('Ghost-Hovered', () => {
+      before(() => browser.moveToObject('#ghostButton'));
+
+      Terra.should.beAccessible({ context: '#ghost' });
+      Terra.should.matchScreenshot({ selector: '#ghost' });
+    });
+
+    describe('Ghost-Keyboard Focus', () => {
+      before(() => browser.keys('Tab'));
+
+      Terra.should.beAccessible({ context: '#ghost' });
+      Terra.should.matchScreenshot({ selector: '#ghost' });
+    });
+
+    describe('Ghost-Active', () => {
+      before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
+
+      Terra.should.beAccessible({ context: '#ghostActive' });
+      Terra.should.matchScreenshot('active', { selector: '#ghostActive' });
+
+      Terra.should.beAccessible({ context: '#ghostActiveFocus' });
+      Terra.should.matchScreenshot('active and focused', { selector: '#ghostActiveFocusSpan' });
+    });
+  });
+
   describe('De-emphasis', () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/deemphasis-button'));
 

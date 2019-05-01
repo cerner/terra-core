@@ -12,6 +12,11 @@ it('should render a emphasis button', () => {
   expect(button).toMatchSnapshot();
 });
 
+it('should render a ghost button', () => {
+  const button = shallow(<Button text="ghost" variant="ghost" />);
+  expect(button).toMatchSnapshot();
+});
+
 it('should render a de-emphasis button', () => {
   const button = shallow(<Button text="de-emphasis" variant="de-emphasis" />);
   expect(button).toMatchSnapshot();
@@ -84,6 +89,11 @@ it('should have the class neutral', () => {
 it('should have the class emphasis when variant is set to emphasis', () => {
   const button = shallow(<Button variant="emphasis" text="text" />);
   expect(button.prop('className')).toContain('emphasis');
+});
+
+it('should have the class ghost when variant is set to ghost', () => {
+  const button = shallow(<Button variant="ghost" text="text" />);
+  expect(button.prop('className')).toContain('ghost');
 });
 
 it('should have the class de-emphasis when an de-emphasis variant', () => {
