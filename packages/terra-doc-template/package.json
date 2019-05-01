@@ -27,7 +27,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "react-syntax-highlighter": "^8.0.1",
+    "react-syntax-highlighter": "^10.0.0",
     "terra-markdown": "^2.25.0",
     "terra-props-table": "^2.31.0"
   },

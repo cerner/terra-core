@@ -10,10 +10,12 @@ export default class extends React.Component {
     super(props);
 
     this.state = {
+      isInvalid: false,
       selectedAnswers: [],
     };
 
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   handleOnChange(e) {
@@ -28,20 +30,32 @@ export default class extends React.Component {
     this.setState({ selectedAnswers });
   }
 
+  handleOnClick() {
+    this.setState(prevState => ({ isInvalid: !prevState.isInvalid }));
+  }
+
   render() {
+    const errorMessage = 'All options are now invalid';
+
     return (
-      <CheckboxField
-        legend="What departments are you looking to work for?"
-        help="These are the core areas we need for graphic designers"
-        isInvalid={this.state.selectedAnswers.length <= 0}
-        error="You must be willing to work in one of these departments"
-        required
-      >
-        <Checkbox id="ux-dept" name="dept[]" labelText="UX/Interaction Design" onChange={this.handleOnChange} value="ux" />
-        <Checkbox id="magazine-dept" name="dept[]" labelText="Magazine Advertisements" onChange={this.handleOnChange} value="magazine" />
-        <Checkbox id="website-dept" name="dept[]" labelText="Website Advertisements" onChange={this.handleOnChange} value="website" />
-        <Checkbox id="events-dept" name="dept[]" labelText="Event Promotions" onChange={this.handleOnChange} value="events" />
-      </CheckboxField>
+      <div>
+        <div>
+          <CheckboxField
+            legend="What departments are you looking to work for?"
+            help="These are the core areas we need for graphic designers"
+            isInvalid={this.state.isInvalid || this.state.selectedAnswers.length <= 0}
+            error={this.state.isInvalid ? errorMessage : 'You must be willing to work in one of these departments'}
+            required
+          >
+            <Checkbox id="ux-dept" name="dept[]" labelText="UX/Interaction Design" onChange={this.handleOnChange} value="ux" />
+            <Checkbox id="magazine-dept" name="dept[]" labelText="Magazine Advertisements" onChange={this.handleOnChange} value="magazine" />
+            <Checkbox id="website-dept" name="dept[]" labelText="Website Advertisements" onChange={this.handleOnChange} value="website" />
+            <Checkbox id="events-dept" name="dept[]" labelText="Event Promotions" onChange={this.handleOnChange} value="events" />
+          </CheckboxField>
+        </div>
+        <hr />
+        <button type="button" aria-label="Toggle Invalid Status" onClick={this.handleOnClick}>Toggle Invalid Status</button>
+      </div>
     );
   }
 }

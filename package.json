@@ -74,7 +74,7 @@
     "enzyme-to-json": "^3.2.2",
     "eslint": "^5.0.0",
     "eslint-config-terra": "^2.0.0",
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^2.0.1",
     "glob": "^7.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.1.0",

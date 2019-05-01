@@ -12,6 +12,8 @@ import DefaultRadioField from '../example/field/DefaultRadioField';
 import DefaultRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/DefaultRadioField';
 import ControlledRadioField from '../example/field/ControlledRadioField';
 import ControlledRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/ControlledRadioField';
+import InlineRadioField from '../example/field/InlineRadioField';
+import InlineRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/InlineRadioField';
 import OptionalRadioField from '../example/field/OptionalRadioField';
 import OptionalRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/OptionalRadioField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
@@ -36,6 +38,11 @@ const RadioFieldExamples = () => (
         title: 'Controlled RadioField Example',
         example: <ControlledRadioField />,
         source: ControlledRadioFieldSrc,
+      },
+      {
+        title: 'Inline RadioField Example',
+        example: <InlineRadioField />,
+        source: InlineRadioFieldSrc,
       },
     ]}
     propsTables={[
