@@ -10,10 +10,12 @@ export default class extends React.Component {
     super(props);
 
     this.state = {
+      isInvalid: false,
       selectedAnswers: [],
     };
 
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   handleOnChange(e) {
@@ -28,17 +30,31 @@ export default class extends React.Component {
     this.setState({ selectedAnswers });
   }
 
+  handleOnClick() {
+    this.setState(prevState => ({ isInvalid: !prevState.isInvalid }));
+  }
+
   render() {
+    const errorMessage = 'All options are now invalid';
+
     return (
-      <CheckboxField
-        legend="Do you wish to use any of our services for new hires?"
-        help="These are not required, but make it easier to transition to our city"
-        showOptional
-      >
-        <Checkbox id="roommate-service" name="service[]" labelText="Roommate Search" onChange={this.handleOnChange} value="roommate" />
-        <Checkbox id="location-service" name="service[]" labelText="Relocation Assistance" onChange={this.handleOnChange} value="relocation" />
-        <Checkbox id="city-tour-service" name="service[]" labelText="City Tours" onChange={this.handleOnChange} value="city_tours" />
-      </CheckboxField>
+      <div>
+        <div>
+          <CheckboxField
+            error={errorMessage}
+            isInvalid={this.state.isInvalid}
+            legend="Do you wish to use any of our services for new hires?"
+            help="These are not required, but make it easier to transition to our city"
+            showOptional
+          >
+            <Checkbox id="roommate-service" name="service[]" labelText="Roommate Search" onChange={this.handleOnChange} value="roommate" />
+            <Checkbox id="location-service" name="service[]" labelText="Relocation Assistance" onChange={this.handleOnChange} value="relocation" />
+            <Checkbox id="city-tour-service" name="service[]" labelText="City Tours" onChange={this.handleOnChange} value="city_tours" />
+          </CheckboxField>
+        </div>
+        <hr />
+        <button type="button" aria-label="Toggle Invalid Status" onClick={this.handleOnClick}>Toggle Invalid Status</button>
+      </div>
     );
   }
 }

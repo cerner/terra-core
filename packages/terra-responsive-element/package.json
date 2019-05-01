@@ -1,7 +1,7 @@
 {
   "name": "terra-responsive-element",
   "main": "lib/ResponsiveElement.js",
-  "version": "4.6.0",
+  "version": "4.7.0",
   "description": "The terra-responsive-element conditionally renders components based on viewport size",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "dependencies": {
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-doc-template": "^2.8.0"
+    "terra-doc-template": "^2.9.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

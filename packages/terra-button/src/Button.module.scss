@@ -84,6 +84,10 @@
     @include terra-button-variant-color($terra-button-emphasis-color-scheme);
   }
 
+  .ghost {
+    @include terra-button-variant-color($terra-button-ghost-color-scheme);
+  }
+
   .de-emphasis {
     @include terra-button-variant-color($terra-button-de-emphasis-color-scheme);
   }

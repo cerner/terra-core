@@ -7,6 +7,11 @@ Unreleased
 * Updated to allow VoiceOver to read selectable table rows.
 * Updated to allow row selection with Voice Over + space.
 
+3.11.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.10.0 - (April 16, 2019)
 ------------------
 ### Changed

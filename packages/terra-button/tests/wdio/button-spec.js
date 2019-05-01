@@ -119,6 +119,37 @@ describe('Button', () => {
     });
   });
 
+  describe('Ghost', () => {
+    before(() => browser.url('/#/raw/tests/terra-button/button/variants/ghost-button'));
+
+    Terra.should.beAccessible({ context: '#ghost' });
+    Terra.should.matchScreenshot({ selector: '#ghost' });
+
+    describe('Ghost-Hovered', () => {
+      before(() => browser.moveToObject('#ghostButton'));
+
+      Terra.should.beAccessible({ context: '#ghost' });
+      Terra.should.matchScreenshot({ selector: '#ghost' });
+    });
+
+    describe('Ghost-Keyboard Focus', () => {
+      before(() => browser.keys('Tab'));
+
+      Terra.should.beAccessible({ context: '#ghost' });
+      Terra.should.matchScreenshot({ selector: '#ghost' });
+    });
+
+    describe('Ghost-Active', () => {
+      before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
+
+      Terra.should.beAccessible({ context: '#ghostActive' });
+      Terra.should.matchScreenshot('active', { selector: '#ghostActive' });
+
+      Terra.should.beAccessible({ context: '#ghostActiveFocus' });
+      Terra.should.matchScreenshot('active and focused', { selector: '#ghostActiveFocusSpan' });
+    });
+  });
+
   describe('De-emphasis', () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/deemphasis-button'));
 
@@ -153,8 +184,12 @@ describe('Button', () => {
     Terra.should.beAccessible({ context: '#action' });
     Terra.should.matchScreenshot({ selector: '#action' });
 
-    Terra.should.themeEachCustomProperty('#action', {
-      '--terra-button-action-border-radius': '26px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-button-action-border-radius': '26px',
+      },
+      selector: '#action',
     });
 
     describe('Action-Hovered', () => {
@@ -198,8 +233,12 @@ describe('Button', () => {
       Terra.should.beAccessible({ context: '#utility' });
       Terra.should.matchScreenshot({ selector: '#utility' });
 
-      Terra.should.themeEachCustomProperty('#utility', {
-        '--terra-button-utility-border-radius': '50%',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-button-utility-border-radius': '50%',
+        },
+        selector: '#utility',
       });
     });
 

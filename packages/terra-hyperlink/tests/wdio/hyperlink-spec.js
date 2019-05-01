@@ -32,8 +32,11 @@ describe('Hyperlink', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-hyperlink-audio-after-background-image': 'linear-gradient(red, orange)',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-hyperlink-audio-after-background-image': 'linear-gradient(red, orange)',
+      },
     });
   });
 
@@ -42,8 +45,11 @@ describe('Hyperlink', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-hyperlink-document-after-background-image': 'linear-gradient(red, orange)',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-hyperlink-document-after-background-image': 'linear-gradient(red, orange)',
+      },
     });
   });
 
@@ -52,8 +58,11 @@ describe('Hyperlink', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-hyperlink-external-after-background-image': 'linear-gradient(red, orange)',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-hyperlink-external-after-background-image': 'linear-gradient(red, orange)',
+      },
     });
   });
 
@@ -62,8 +71,11 @@ describe('Hyperlink', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-hyperlink-image-after-background-image': 'linear-gradient(red, orange)',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-hyperlink-image-after-background-image': 'linear-gradient(red, orange)',
+      },
     });
   });
 
@@ -72,8 +84,11 @@ describe('Hyperlink', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-hyperlink-video-after-background-image': 'linear-gradient(red, orange)',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-hyperlink-video-after-background-image': 'linear-gradient(red, orange)',
+      },
     });
   });
 
