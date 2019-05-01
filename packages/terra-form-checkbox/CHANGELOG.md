@@ -3,8 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.10.0 - (May 1, 2019)
+------------------
 ### Added
 * Doc site example that can be toggled to demonstrate isInline prop
+
+### Changed
+* Minor dependency version bump
 
 3.9.0 - (April 16, 2019)
 ------------------

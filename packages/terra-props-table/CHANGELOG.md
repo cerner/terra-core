@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+2.30.0 - (May 1, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
 * Update markdown text color to inherit parent color
 * Update markdown code elements to use hard-code text color to go with hard-coded background-color
 

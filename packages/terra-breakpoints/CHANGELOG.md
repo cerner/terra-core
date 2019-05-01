@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Added variables file for breakpoints to be imported into other packages
 
+2.7.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.6.0 - (April 16, 2019)
 ------------------
 ### Changed
