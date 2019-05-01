@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Removed 100% heights from container of action header
 
 2.12.0 - (April 16, 2019)
 ------------------
