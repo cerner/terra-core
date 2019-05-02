@@ -87,12 +87,9 @@
     "react-test-renderer": "^16.5.2",
     "stylelint": "^9.0.0",
     "stylelint-config-terra": "^2.0.0",
-    "terra-dev-site": "^4.0.0",
+    "terra-dev-site": "git://github.com/cerner/terra-dev-site.git#toolkit-as-peer-dep",
     "terra-enzyme-intl": "^3.0.0",
-    "terra-toolkit": "^4.16.1",
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#toolkit-v5-fix-viewport",
     "webpack-merge": "^4.1.2"
-  },
-  "dependencies": {
-    "replace-in-file": "^4.0.0"
   }
 }
