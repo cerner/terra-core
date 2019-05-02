@@ -9,6 +9,7 @@ const cx = classNames.bind(styles);
 const ButtonVariants = {
   NEUTRAL: 'neutral',
   EMPHASIS: 'emphasis',
+  GHOST: 'ghost',
   // TODO: this should be removed on the next major version bump
   'DE-EMPHSASIS': 'de-emphasis',
   'DE-EMPHASIS': 'de-emphasis',
@@ -90,9 +91,9 @@ const propTypes = {
    */
   type: PropTypes.oneOf([ButtonTypes.BUTTON, ButtonTypes.SUBMIT, ButtonTypes.RESET]),
   /**
-   * Sets the button variant. One of `neutral`,  `emphasis`, `de-emphasis`, `action` or `utility`.
+   * Sets the button variant. One of `neutral`,  `emphasis`, `ghost`, `de-emphasis`, `action` or `utility`.
    */
-  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
+  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants.GHOST, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
 };
 
 const defaultProps = {

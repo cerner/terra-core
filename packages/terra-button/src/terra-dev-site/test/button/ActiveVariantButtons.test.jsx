@@ -22,6 +22,15 @@ const EmphasisButton = () => (
   </div>
 );
 
+const GhostButton = () => (
+  <div id="ghost" style={spacingStyle}>
+    <Button id="ghostActive" text="Ghost-Active" variant="ghost" className="is-active" />
+    <span id="ghostActiveFocusSpan" style={spacingStyle}>
+      <Button id="ghostActiveFocus" text="Ghost-Active+Focus" variant="ghost" className={['is-active', 'is-focused']} />
+    </span>
+  </div>
+);
+
 const DeemphasisButton = () => (
   <div id="deempshasis" style={spacingStyle}>
     <Button id="de-emphasisActive" text="De-emphasis-Active" variant="de-emphasis" className="is-active" />
@@ -53,6 +62,7 @@ const activeButtons = () => (
   <div>
     <NeutralButton />
     <EmphasisButton />
+    <GhostButton />
     <DeemphasisButton />
     <ActionButton />
     <UtilityButton />

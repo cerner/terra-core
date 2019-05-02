@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+3.12.0 - (May 1, 2019)
+------------------
+### Added
+* Added new `ghost` variant
+* Added `compact` variant docsite examples
+
+### Changed
+* Minor dependency version bump
+* Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
+
 ## Fixed
 * Use the custom `aria-label` if explicitly provided, otherwise use `text` as its fallback value for Utility button and icon-only buttons.
 

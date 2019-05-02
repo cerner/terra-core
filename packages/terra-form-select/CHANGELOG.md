@@ -3,7 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.15.0 - (May 1, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
 * Added 'disabled' prop to FormSelectField component
 
 ### Fixed

@@ -2,7 +2,13 @@ Changelog
 =========
 
 Unreleased
-----------------
+----------
+
+4.3.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added Upgrade Guide to doc site
 
