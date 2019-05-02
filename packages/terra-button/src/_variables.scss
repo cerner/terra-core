@@ -37,6 +37,25 @@ $terra-button-emphasis-color-scheme: (
   hover-color: var(--terra-button-hover-color-emphasis, #fff)
 );
 
+$terra-button-ghost-color-scheme: (
+  active-and-focus-background-color: var(--terra-button-active-and-focus-background-color-ghost, rgba(0, 0, 0, 0.09)),
+  active-and-focus-border-color: var(--terra-button-active-and-focus-border-color-ghost, #4a4a4a),
+  active-and-focus-box-shadow: var(--terra-button-active-and-focus-box-shadow-ghost, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  active-background-color: var(--terra-button-active-background-color-ghost, rgba(0, 0, 0, 0.09)),
+  active-border-color: var(--terra-button-active-border-color-ghost, #4a4a4a),
+  active-color: var(--terra-button-active-color-ghost, #000),
+  background-color: var(--terra-button-background-color-ghost, transparent),
+  border-color: var(--terra-button-border-color-ghost, rgba(28, 31, 33, 0.25)),
+  box-shadow: var(--terra-button-box-shadow-ghost, none),
+  color: var(--terra-button-color-ghost, #1c1f21),
+  focus-background-color: var(--terra-button-focus-background-color-ghost, transparent),
+  focus-border-color: var(--terra-button-focus-border-color-ghost, rgba(28, 31, 33, 0.25)),
+  focus-box-shadow: var(--terra-button-focus-box-shadow-ghost, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  font-weight: var(--terra-button-font-weight-ghost, 400),
+  hover-background-color: var(--terra-button-hover-background-color-ghost, rgba(0, 0, 0, 0.05)),
+  hover-color: var(--terra-button-hover-color-ghost, #000)
+);
+
 $terra-button-de-emphasis-color-scheme: (
   active-and-focus-background-color: var(--terra-button-active-and-focus-background-color-de-emphasis, rgba(0, 0, 0, 0.07)),
   active-and-focus-border-color: var(--terra-button-active-and-focus-border-color-de-emphasis, transparent),

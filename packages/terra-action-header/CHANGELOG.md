@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+2.13.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Fixed
+* Removed 100% heights from container of action header
+
 2.12.0 - (April 16, 2019)
 ------------------
 ### Changed

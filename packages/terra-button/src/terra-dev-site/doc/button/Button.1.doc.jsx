@@ -12,6 +12,8 @@ import ButtonBlock from '../example/ButtonBlock';
 import ButtonBlockSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonBlock';
 import ButtonAnchor from '../example/ButtonAnchor';
 import ButtonAnchorSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonAnchor';
+import ButtonCompact from '../example/ButtonCompact';
+import ButtonCompactSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonCompact';
 import ButtonDisabled from '../example/ButtonDisabled';
 import ButtonDisabledSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonDisabled';
 import ButtonOnClick from '../example/ButtonOnClick';
@@ -37,6 +39,11 @@ const DocPage = () => (
         title: 'Block',
         example: <ButtonBlock />,
         source: ButtonBlockSrc,
+      },
+      {
+        title: 'Compact',
+        example: <ButtonCompact />,
+        source: ButtonCompactSrc,
       },
       {
         title: 'Anchor',
