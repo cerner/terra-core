@@ -13,12 +13,12 @@
 * 'enormous' breakpoint (originally 'huge')
 
 #### Changed
-* col -> tiny (0px)
-* tiny -> small (544px)
-* small -> medium (768px)
-* medium -> large (992px)
-* large -> huge (1216px)
-* huge -> enormous (1440px)
+* Renamed `col` prop to `tiny`
+* Renamed `tiny` prop to `small`
+* Renamed `small` prop to `medium`
+* Renamed `medium` prop to `large`
+* Renamed `large` prop to `huge`
+* Renamed `huge` prop to `enormous`
 
 ## Changes from version 4 to version 5
 
