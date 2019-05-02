@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Adjusted Button CSS to better line up icons with text
 
 3.12.0 - (May 1, 2019)
 ------------------

@@ -24,13 +24,15 @@
   // stylelint-enable selector-no-qualifying-type
 
   .button {
+    align-items: center;
     border-radius: var(--terra-button-border-radius, 0.2142rem);
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;
     font-family: inherit;
     font-size: var(--terra-button-font-size, 1rem);
+    justify-content: center;
     line-height: var(--terra-button-line-height, 1.429);
     margin: 0; /* Reset margin for Safari. Safari defaults to 2px. */
     max-width: 100%; /* Need to help with overflow-wrap */
@@ -104,7 +106,7 @@
 
   // Button style modifiers
   .block {
-    display: block;
+    display: flex;
     width: 100%;
   }
 
@@ -140,10 +142,16 @@
 
   .icon {
     display: inline-block;
+    line-height: 0;
   }
 
   .icon-svg {
     height: var(--terra-button-icon-height, 1rem);
     width: var(--terra-button-icon-width, 1rem);
+
+    svg {
+      margin-top: 0.15em; // Helps with vertical centering as Icon vertical-align styles aren't applied properly in flexbox container
+    }
   }
+
 }
