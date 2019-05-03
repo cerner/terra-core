@@ -6,6 +6,7 @@ Unreleased
 ### Changed
 * Updated to allow VoiceOver to read selectable table rows.
 * Updated to allow row selection with Voice Over + space.
+* Exclude subheader from zebra row styles.
 
 3.11.0 - (May 1, 2019)
 ------------------

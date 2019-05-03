@@ -146,7 +146,7 @@
   }
 
   .striped {
-    tbody tr {
+    tbody tr:not([data-terra-table-subheader-row]) {
       &:nth-of-type(even) {
         background-color: var(--terra-table-row-striped-background-color, #f4f4f4);
       }
