@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Hookshot from 'terra-hookshot';
 import classNames from 'classnames/bind';
 import styles from './_Dropdown.module.scss';
+import SharedUtil from './_SharedUtil';
 
 const cx = classNames.bind(styles);
 
@@ -65,26 +66,42 @@ const Dropdown = ({
     customProps.className,
   ]);
 
-  return (
-    <Hookshot
-      isOpen
-      isEnabled={isEnabled}
-      targetRef={() => target}
-      attachmentBehavior="none"
-      contentAttachment={isAbove ? AboveAttachment : BelowAttachment}
-      targetAttachment={isAbove ? BelowAttachment : AboveAttachment}
-    >
-      <Hookshot.Content
-        {...customProps}
-        disableOnClickOutside
-        className={dropdownClasses}
-        onResize={onResize}
-        onMouseDown={preventDefault}
-        refCallback={refCallback}
-      >
+  /**
+   * Visually hidden dropdown allows for more intuitive dropdown navigation when using gestures to navigate
+   * the dropdown options while using VoiceOver on iOS.
+   */
+  let visuallyHiddenDropdown;
+  if (SharedUtil.isSafari() && ('ontouchstart' in window)) {
+    visuallyHiddenDropdown = (
+      <div className={styles['visually-hidden-dropdown']}>
         {children}
-      </Hookshot.Content>
-    </Hookshot>
+      </div>
+    );
+  }
+
+  return (
+    <React.Fragment>
+      {visuallyHiddenDropdown}
+      <Hookshot
+        isOpen
+        isEnabled={isEnabled}
+        targetRef={() => target}
+        attachmentBehavior="none"
+        contentAttachment={isAbove ? AboveAttachment : BelowAttachment}
+        targetAttachment={isAbove ? BelowAttachment : AboveAttachment}
+      >
+        <Hookshot.Content
+          {...customProps}
+          disableOnClickOutside
+          className={dropdownClasses}
+          onResize={onResize}
+          onMouseDown={preventDefault}
+          refCallback={refCallback}
+        >
+          {children}
+        </Hookshot.Content>
+      </Hookshot>
+    </React.Fragment>
   );
 };
 

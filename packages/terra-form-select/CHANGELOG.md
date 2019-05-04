@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added visually hidden dropdown to help make gesture navigation while using VoiceOver on iOS more intuitive when using select variants that allow text entry
 
 5.15.0 - (May 1, 2019)
 ------------------
