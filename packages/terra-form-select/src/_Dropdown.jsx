@@ -79,6 +79,18 @@ const Dropdown = ({
     );
   }
 
+  /**
+   * Visual dropdown rendered in portal to avoid overflow clipping issues with overflow:hidden ancestor styles
+   */
+  let visualDropdown = (<div>{children}</div>);
+  if (SharedUtil.isSafari() && ('ontouchstart' in window)) {
+    visualDropdown = (
+      <div aria-hidden="true">
+        {children}
+      </div>
+    );
+  }
+
   return (
     <React.Fragment>
       {visuallyHiddenDropdown}
@@ -98,9 +110,7 @@ const Dropdown = ({
           onMouseDown={preventDefault}
           refCallback={refCallback}
         >
-          <div aria-hidden="true">
-            {children}
-          </div>
+          {visualDropdown}
         </Hookshot.Content>
       </Hookshot>
     </React.Fragment>
