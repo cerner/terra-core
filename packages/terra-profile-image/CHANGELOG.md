@@ -4,6 +4,10 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Changed Src to be an optional prop.
+* When Src is not provided it loads failed image.
+
 3.8.0 - (May 1, 2019)
 ------------------
 ### Changed
