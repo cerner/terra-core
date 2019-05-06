@@ -25,7 +25,7 @@ exports[`should render a Terra image with a placeholder prop 1`] = `
 </div>
 `;
 
-exports[`should render a avatar image without Source prop 1`] = `
+exports[`should render an avatar image without Source prop 1`] = `
 <span
   className="placeholder-images"
   style={
