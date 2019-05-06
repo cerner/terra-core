@@ -98,7 +98,9 @@ const Dropdown = ({
           onMouseDown={preventDefault}
           refCallback={refCallback}
         >
-          {children}
+          <div aria-hidden="true">
+            {children}
+          </div>
         </Hookshot.Content>
       </Hookshot>
     </React.Fragment>
