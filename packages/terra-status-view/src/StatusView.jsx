@@ -26,6 +26,11 @@ const propTypes = {
   customGlyph: PropTypes.node,
 
   /**
+   * The intl object to be injected for translations. Provided by the injectIntl function.
+   */
+  intl: intlShape.isRequired,
+
+  /**
    *  Determines if the content should be aligned vertically at the top of the container rather than in the middle.
    */
   isAlignedTop: PropTypes.bool,
@@ -65,188 +70,95 @@ const defaultProps = {
   variant: StatusViewVariants.ERROR,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
-class StatusView extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      showGlyph: true,
-      paddingBottom: 0,
-      paddingTop: 0,
-    };
-    this.showAndCenterItems = this.showAndCenterItems.bind(this);
-  }
-
-  componentDidMount() {
-    // call after all items have rendered in the view to calculate which items
-    // can be shown and center the items inside the view appropriately
-    this.showAndCenterItems();
-  }
-
-  /**
-   * Will calculate which items inside the status view can appear based on fixed
-   * height of its container and will update the inner padding to center the items
-   * with 40% of the remaining space at the top with 60% on the bottom.
-   */
-  showAndCenterItems() {
-    let paddingTop = 0;
-    let paddingBottom = 0;
-    let showGlyph = false;
-    let newViewHeight = 0;
-    let contentHeight = 0;
-    let contentWithGlyphHeight = 0;
-
-    const viewHeight = this.innerNode.getBoundingClientRect().height;
-    newViewHeight = viewHeight;
-
-    // get the content heights of the nodes that are to be shown if have content and cannot be hidden
-    const titleNodeHeight = this.titleNode.getBoundingClientRect().height;
-    const actionNodeHeight = this.actionsNode ? this.actionsNode.getBoundingClientRect().height : 0;
-    const messageNodeHeight = this.messageNode ? this.messageNode.getBoundingClientRect().height : 0;
-    const dividerNodeHeight = this.dividerNode ? this.dividerNode.getBoundingClientRect().height : 0;
-    contentHeight = (titleNodeHeight + actionNodeHeight + messageNodeHeight + dividerNodeHeight);
-
-    contentWithGlyphHeight = contentHeight + (this.glyphNode ? this.glyphNode.getBoundingClientRect().height : 0);
-    // if inner view node height is lesser than the components along with glyph inside the inner view.
-    // and the height difference is very less (i.e 0.0001) then add that comparison value to the
-    // the inner view height.
-    if (contentWithGlyphHeight - viewHeight <= 0.0001) {
-      newViewHeight += 0.0001;
-    }
-
-    if (this.glyphNode && newViewHeight >= contentWithGlyphHeight && this.innerNode.offsetWidth >= this.glyphNode.offsetWidth) {
-      // if glyph exists and can fit inside the container's height and width, distribute remaining padding to center
-      showGlyph = true;
-      if (!this.props.isAlignedTop) {
-        const remainingHeight = (viewHeight > contentWithGlyphHeight) ? (viewHeight - contentWithGlyphHeight) : 0;
-        paddingTop = remainingHeight * 0.4;
-        paddingBottom = remainingHeight * 0.6;
-      }
-    } else if (!this.props.isAlignedTop) {
-      // glyph does not exist or does not fit, distribute remaining padding if any to center
-      const remainingHeight = viewHeight - contentHeight;
-      if (remainingHeight > 0) {
-        paddingTop = remainingHeight * 0.4;
-        paddingBottom = remainingHeight * 0.6;
-      }
-    }
-
-    // set which components can fit into the view
-    this.setState({
-      showGlyph,
-      paddingTop,
-      paddingBottom,
-    });
-  }
-
-  render() {
-    const {
-      children,
-      customGlyph,
-      isAlignedTop,
-      isGlyphHidden,
-      message,
-      title,
-      variant,
-      ...customProps
-    } = this.props;
-
-    const { intl } = this.context;
-
-    let glyphSection;
-    if (!isGlyphHidden && this.state.showGlyph) {
-      if (variant === StatusViewVariants.CUSTOM) {
-        glyphSection = (
-          <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
-            {customGlyph}
-          </div>
-        );
-      } else {
-        glyphSection = (
-          <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
-            <svg className={cx(variant)} />
-          </div>
-        );
-      }
-    }
-
-    let messageSection;
-    if (message) {
-      messageSection = (
-        <div className={cx('message')} ref={(element) => { this.messageNode = element; }}>
-          {message}
+const StatusView = ({
+  children,
+  customGlyph,
+  intl,
+  isAlignedTop,
+  isGlyphHidden,
+  message,
+  title,
+  variant,
+  ...customProps
+}) => {
+  let glyphSection;
+  if (!isGlyphHidden) {
+    if (variant === StatusViewVariants.CUSTOM) {
+      glyphSection = (
+        <div className={cx('glyph')} >
+          {customGlyph}
+        </div>
+      );
+    } else {
+      glyphSection = (
+        <div className={cx('glyph')} >
+          <svg className={cx(variant)} />
         </div>
       );
     }
+  }
 
-    let actionSection;
-    if (React.Children.count(children) > 0) {
-      actionSection = (
-        <div className={cx('actions')} ref={(element) => { this.actionsNode = element; }}>
-          {children}
-        </div>
-      );
-    }
-
-    let defaultTitle = title;
-    if (!defaultTitle) {
-      defaultTitle = (variant === StatusViewVariants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
-    }
-
-    let dividerSection;
-    if (messageSection || actionSection) {
-      dividerSection = (
-        <div className={cx('divider')} ref={(element) => { this.dividerNode = element; }}>
-          <Divider />
-        </div>
-      );
-    }
-
-    const titleSection = (
-      <div className={cx('title')} ref={(element) => { this.titleNode = element; }}>
-        {defaultTitle}
+  let messageSection;
+  if (message) {
+    messageSection = (
+      <div className={cx('message')} >
+        {message}
       </div>
     );
+  }
 
-    const statusViewClassNames = cx([
-      'outer-view',
-      customProps.className,
-    ]);
+  let actionSection;
+  if (React.Children.count(children) > 0) {
+    actionSection = (
+      <div className={cx('actions')} >
+        {children}
+      </div>
+    );
+  }
 
-    const statusViewInnerStyles = {
-      paddingTop: `${this.state.paddingTop}px`,
-      paddingBottom: `${this.state.paddingBottom}px`,
-    };
+  let defaultTitle = title;
+  if (!defaultTitle) {
+    defaultTitle = (variant === StatusViewVariants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
+  }
 
-    return (
+  let dividerSection;
+  if (messageSection || actionSection) {
+    dividerSection = (
+      <div className={cx('divider')} >
+        <Divider />
+      </div>
+    );
+  }
+
+  const titleSection = (
+    <div className={cx('title')} >
+      {defaultTitle}
+    </div>
+  );
+
+  const statusViewClassNames = cx([
+    'outer-view',
+    customProps.className,
+  ]);
+
+  return (
+    <div
+      {...customProps}
+      className={statusViewClassNames}
+    >
       <div
-        {...customProps}
-        className={statusViewClassNames}
+        className={cx('inner-view')}
       >
-        <div
-          className={cx('inner-view')}
-          style={{ ...statusViewInnerStyles }}
-          ref={(element) => { this.innerNode = element; }}
-        >
-          {glyphSection}
-          <div className={cx('message-content-group')}>
-            {titleSection}
-            {dividerSection}
-            {messageSection}
-          </div>
-          {actionSection}
+        {glyphSection}
+        <div className={cx('message-content-group')}>
+          {titleSection}
+          {dividerSection}
+          {messageSection}
         </div>
+        {actionSection}
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 StatusView.Opts = {};
