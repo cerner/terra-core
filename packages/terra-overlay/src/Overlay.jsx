@@ -208,6 +208,7 @@ class Overlay extends React.Component {
       <Portal>
         {backgroundScrollContent}
         <FocusTrap>
+          {/* div addresses child focus change introduced in focus-trap-react v5.0.0 */}
           <div>
             {overlayComponent}
           </div>
