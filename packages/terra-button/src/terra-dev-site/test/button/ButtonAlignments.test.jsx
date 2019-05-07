@@ -15,53 +15,53 @@ import Tag from '../../../../../terra-tag/src/Tag';
 import ToggleButton from '../../../../../terra-toggle-button/src/ToggleButton';
 import ToggleSectionHeader from '../../../../../terra-toggle-section-header';
 
-const spacingStyle = { padding: '10px' };
 const buttonStyle = { margin: '5px' };
 const cellStyle = { padding: '0.5rem' };
-const constraintStyle = { width: '20%' };
 
 export default () => (
-  <div style={{ paddingLeft: '1em' }}>
-    <Button icon={<IconEdit />} text="icon" style={buttonStyle} />
-    <div style={spacingStyle} />
-    <ActionHeader
-      title="tester"
-      onClose={() => alert('You clicked close!')}
-      onBack={() => alert('You clicked back!')}
-      style={constraintStyle}
-    />
-    <div style={spacingStyle} />
-    <ButtonGroup>
-      <ButtonGroup.Button text="Up" icon={<IconCaretUp />} key="upIcon" />
-      <ButtonGroup.Button text="Down" icon={<IconCaretDown />} key="downIcon" />
-    </ButtonGroup>
-    <div style={spacingStyle} />
-    <Dialog
-      header="le header"
-      onClose={() => alert('Close')}
-      style={constraintStyle}
-    />
-    <div style={spacingStyle} />
-    <tbody>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSuccess height="2em" width="2em" /></td>
-      </tr>
-    </tbody>
-    <div style={spacingStyle} />
-    <SearchField />
-    <div style={spacingStyle} />
-    <SectionHeader
-      title="Closed"
-      onClick={() => {}}
-      style={constraintStyle}
-    />
-    <div style={spacingStyle} />
-    <ShowHide style={{ width: '20%', backgroundColor: '#eee' }} />
-    <div style={spacingStyle} />
-    <Tag icon={<IconTag />} text="Icon &amp; Text Tag" />
-    <div style={spacingStyle} />
-    <ToggleButton closedButtonText="ToggleButton" />
-    <div style={spacingStyle} />
-    <ToggleSectionHeader style={constraintStyle} />
+  <div style={{ paddingLeft: '1em', width: '100%' }}>
+    <div style={{ float: 'left', width: '20%' }}>
+      <h4>Button:</h4>
+      <Button icon={<IconEdit />} text="icon" style={buttonStyle} />
+      <h4>Action Header:</h4>
+      <ActionHeader
+        title="tester"
+        onClose={() => alert('You clicked close!')}
+        onBack={() => alert('You clicked back!')}
+      />
+      <h4>Button Group:</h4>
+      <ButtonGroup>
+        <ButtonGroup.Button text="Up" icon={<IconCaretUp />} key="upIcon" />
+        <ButtonGroup.Button text="Down" icon={<IconCaretDown />} key="downIcon" />
+      </ButtonGroup>
+      <h4>Dialog:</h4>
+      <Dialog
+        header="le header"
+        onClose={() => alert('Close')}
+      />
+      <h4>Icon:</h4>
+      <tbody>
+        <tr style={{ backgroundColor: '#EEEEEE' }}>
+          <td style={cellStyle}><IconSuccess height="2em" width="2em" /></td>
+        </tr>
+      </tbody>
+    </div>
+    <div style={{ float: 'left', paddingLeft: '1em', width: '20%' }}>
+      <h4>Search Field:</h4>
+      <SearchField />
+      <h4>Section Header:</h4>
+      <SectionHeader
+        title="Closed"
+        onClick={() => {}}
+      />
+      <h4>Show Hide:</h4>
+      <ShowHide style={{ backgroundColor: '#eee' }} />
+      <h4>Tag:</h4>
+      <Tag icon={<IconTag />} text="Icon &amp; Text Tag" />
+      <h4>Toggle Button:</h4>
+      <ToggleButton closedButtonText="ToggleButton" />
+      <h4>Toggle Section Header:</h4>
+      <ToggleSectionHeader />
+    </div>
   </div>
 );
