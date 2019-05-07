@@ -1,11 +1,4 @@
-const breakpoints = {
-  tiny: 0,
-  small: 544,
-  medium: 768,
-  large: 992,
-  huge: 1216,
-  enormous: 1440,
-};
+import breakpoints from './_breakpoints.scss';
 
 const breakpointSequence = ['tiny', 'small', 'medium', 'large', 'huge', 'enormous'];
 

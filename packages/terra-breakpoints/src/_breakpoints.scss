@@ -1,0 +1,7 @@
+@import './variables';
+
+:export {
+  @each $property, $value in $terra-breakpoints {
+    #{$property}: $value;
+  }
+}
