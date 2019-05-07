@@ -2,7 +2,7 @@ describe('Grid', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-tiny'));
+    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-default'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
