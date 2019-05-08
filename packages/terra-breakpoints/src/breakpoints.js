@@ -6,6 +6,7 @@ const breakpoints = {
   huge: 1216,
   enormous: 1440,
 };
+
 const breakpointSequence = ['tiny', 'small', 'medium', 'large', 'huge', 'enormous'];
 
 const activeBreakpointForSize = (size) => {
