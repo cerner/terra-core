@@ -1,29 +1,31 @@
+@import './variables';
+
 @mixin terra-mq-small-up {
-  @media screen and (min-width: 544px) {
+  @media screen and (min-width: #{map-get($terra-breakpoints, small)}px) {
     @content;
   }
 }
 
 @mixin terra-mq-medium-up {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: #{map-get($terra-breakpoints, medium)}px) {
     @content;
   }
 }
 
 @mixin terra-mq-large-up {
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: #{map-get($terra-breakpoints, large)}px) {
     @content;
   }
 }
 
 @mixin terra-mq-huge-up {
-  @media screen and (min-width: 1216px) {
+  @media screen and (min-width: #{map-get($terra-breakpoints, huge)}px) {
     @content;
   }
 }
 
 @mixin terra-mq-enormous-up {
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: #{map-get($terra-breakpoints, enormous)}px) {
     @content;
   }
 }

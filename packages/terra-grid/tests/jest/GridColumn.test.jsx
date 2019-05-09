@@ -9,13 +9,13 @@ it('should render a default Column', () => {
 });
 
 it('should render column with all size breakpoints', () => {
-  const col = <Col tiny={12} small={3} medium={2} large={1} huge={2}>Test</Col>;
+  const col = <Col tiny={12} small={3} medium={2} large={1} huge={2} enormous={2}>Test</Col>;
   const wrapper = shallow(col);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render specified width column', () => {
-  const wrapper = shallow(<Col col={3}>Test</Col>);
+  const wrapper = shallow(<Col tiny={3}>Test</Col>);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -28,7 +28,7 @@ it('should have customized class name', () => {
 // Error Handling Test
 it('should throw error for range', () => {
   try {
-    shallow(<Col className="test" col={13}>Test</Col>);
+    shallow(<Col className="test" tiny={13}>Test</Col>);
   } catch (e) {
     expect(e.message).toContain('must be in range 1 to 12 inclusively');
   }

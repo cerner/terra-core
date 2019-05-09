@@ -6,10 +6,10 @@ import './GridExample.module.scss';
 const GridDefault = () => (
   <Grid>
     <Grid.Row>
-      <Grid.Column col={6}>
+      <Grid.Column tiny={6}>
         <div className="terra-grid-example">First Column content</div>
       </Grid.Column>
-      <Grid.Column col={6}>
+      <Grid.Column tiny={6}>
         <div className="terra-grid-example">Second Column content</div>
       </Grid.Column>
     </Grid.Row>

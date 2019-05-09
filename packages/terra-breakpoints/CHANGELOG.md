@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added variables file for breakpoints to be imported into other packages
 
 2.7.0 - (May 1, 2019)
 ------------------
