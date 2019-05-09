@@ -1,4 +1,4 @@
-@import './variables';
+@import '~terra-breakpoints/lib/variables';
 @import './mixins';
 
 // Grid Component
@@ -32,8 +32,8 @@
   }
 
   // Create responsive styles
-  @each $size-name, $size-width in $terra-grid-breakpoints {
-    @media screen and (min-width: $size-width) {
+  @each $size-name, $size-width in $terra-breakpoints {
+    @media screen and (min-width: #{$size-width}px) {
       // Responsive column classes
       /* stylelint-disable max-nesting-depth */
       @for $i from 1 through 12 {
