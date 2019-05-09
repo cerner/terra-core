@@ -3,6 +3,7 @@ describe('Search Field', () => {
 
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/default-search-field'));
+    browser.execute('document.querySelector("input").style.caretColor = "transparent";');
 
     Terra.should.matchScreenshot('empty');
 
