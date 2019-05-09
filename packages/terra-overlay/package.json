@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "focus-trap-react": "^4.0.1",
+    "focus-trap-react": "^6.0.0",
     "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
