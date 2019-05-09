@@ -16,6 +16,7 @@ describe('Search Field', () => {
 
     it('should scroll text that is too long', () => {
       browser.addValue('input', ' is a correctly spelled word');
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.should.matchScreenshot('scrolled text');
