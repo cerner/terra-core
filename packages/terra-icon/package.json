@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "3.1.0",
+  "version": "3.9.0",
   "description": "The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.",
   "repository": {
     "type": "git",
@@ -22,19 +22,18 @@
   "devDependencies": {
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
-    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.19.2.tar.gz",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/1.21.1.tar.gz",
     "shelljs": "^0.8.2",
     "svgo": "^0.7.2"
   },
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.2.0"
+    "terra-doc-template": "^2.9.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
@@ -42,9 +41,10 @@
     "compilescripts:build": "babel scripts/src --out-dir scripts/lib --copy-files",
     "migrate-csv": "node scripts/lib/migrate-csv/index.js",
     "migrate-svg": "node scripts/lib/migrate-svg/index.js",
+    "generate-json": "node scripts/lib/generate-json/index.js",
     "generate-icon": "node scripts/lib/generate-icon/index.js",
     "generate-example": "node scripts/lib/generate-example/index.js",
-    "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-icon && npm run generate-example",
+    "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-json && npm run generate-icon && npm run generate-example",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
     "compile:build": "babel src --out-dir lib --copy-files",

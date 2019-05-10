@@ -12,6 +12,11 @@ it('should render a emphasis button', () => {
   expect(button).toMatchSnapshot();
 });
 
+it('should render a ghost button', () => {
+  const button = shallow(<Button text="ghost" variant="ghost" />);
+  expect(button).toMatchSnapshot();
+});
+
 it('should render a de-emphasis button', () => {
   const button = shallow(<Button text="de-emphasis" variant="de-emphasis" />);
   expect(button).toMatchSnapshot();
@@ -84,6 +89,11 @@ it('should have the class neutral', () => {
 it('should have the class emphasis when variant is set to emphasis', () => {
   const button = shallow(<Button variant="emphasis" text="text" />);
   expect(button.prop('className')).toContain('emphasis');
+});
+
+it('should have the class ghost when variant is set to ghost', () => {
+  const button = shallow(<Button variant="ghost" text="text" />);
+  expect(button.prop('className')).toContain('ghost');
 });
 
 it('should have the class de-emphasis when an de-emphasis variant', () => {
@@ -160,4 +170,54 @@ it('should append data passed in with attributes', () => {
 it('should append styles passed in with attributes', () => {
   const button = shallow(<Button style={{ height: '100px' }} text="text" />);
   expect(button.prop('style')).toEqual({ height: '100px' });
+});
+
+it('should render an icon only button with text as a fallback title', () => {
+  const button = shallow(<Button isIconOnly text="Icon Only" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render an icon only button with a custom title', () => {
+  const button = shallow(<Button isIconOnly text="Icon Only" title="Custom Title" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button with text as a fallback title', () => {
+  const button = shallow(<Button variant="utility" text="Icon Only" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button with a custom title', () => {
+  const button = shallow(<Button variant="utility" text="Icon Only" title="Custom Title" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a button with a title', () => {
+  const button = shallow(<Button text="Button" title="Custom Title" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render an icon only button with text as a fallback accessible label', () => {
+  const button = shallow(<Button isIconOnly text="Icon Only" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render an icon only button with a custom accessible label', () => {
+  const button = shallow(<Button isIconOnly text="Icon Only" aria-label="Custom Accessible Label" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button with text as a fallback accessible label', () => {
+  const button = shallow(<Button variant="utility" text="Icon Only" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button with a custom accessible label', () => {
+  const button = shallow(<Button variant="utility" text="Icon Only" aria-label="Custom Accessible Label" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a button with accessible label', () => {
+  const button = shallow(<Button text="Button" aria-label="Custom Accessible Label" />);
+  expect(button).toMatchSnapshot();
 });

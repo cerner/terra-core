@@ -4,6 +4,47 @@ Changelog
 Unreleased
 ----------
 
+2.26.0 - (May 1, 2019)
+------------------
+### Changed
+* Update markdown text color to inherit parent color
+* Update markdown code elements to use hard-code text color to go with hard-coded background-color
+
+2.25.0 - (April 16, 2019)
+------------------
+### Added
+* baseUrl prop
+* hasHeadingAnchors prop
+* regression test for a greater set of markdown
+
+### Removed
+* github-markdown-css dependency
+
+### Changed
+* Provide no highlighting for unsupported languages instead of the clike highlighting.
+
+2.24.0 - (March 26, 2019)
+------------------
+### Changed
+* Added Prismjs highlighting for code blocks
+* Update react/react-dom peer-dependency to latest stable minor release
+
+2.23.0 - (March 21, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.22.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Add styles to increase text contrast for block quotes
+
+2.21.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.20.0 - (January 22, 2019)
 ------------------
 ### Changed

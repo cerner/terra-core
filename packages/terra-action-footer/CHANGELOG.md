@@ -4,6 +4,56 @@ ChangeLog
 Unreleased
 ----------
 
+2.10.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
+
+2.9.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.8.0 - (April 9, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.7.0 - (April 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.6.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+2.5.0 - (March 21, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.4.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.3.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.2.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.1.0 - (January 26, 2019)
 ------------------
 ### Changed

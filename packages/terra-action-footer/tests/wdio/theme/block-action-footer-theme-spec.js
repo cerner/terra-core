@@ -7,12 +7,18 @@ describe('Block action footer theme', () => {
   describe('No Actions', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/without-actions-block-action-footer'));
 
-    Terra.should.themeEachCustomProperty(withoutActionsThemeables);
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: withoutActionsThemeables,
+    });
   });
 
   describe('With Actions', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/with-actions-block-action-footer'));
 
-    Terra.should.themeEachCustomProperty(withActionsThemeables);
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: withActionsThemeables,
+    });
   });
 });

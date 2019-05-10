@@ -1,7 +1,7 @@
 {
   "name": "terra-form-textarea",
   "main": "lib/Textarea.js",
-  "version": "3.3.0",
+  "version": "3.12.0",
   "description": "Element for building out textareas in a form.",
   "repository": {
     "type": "git",
@@ -21,17 +21,16 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.2.0",
-    "terra-form-field": "^3.1.0",
-    "terra-icon": "^3.1.0",
-    "terra-markdown": "^2.20.0"
+    "terra-doc-template": "^2.9.0",
+    "terra-form-field": "^3.10.0",
+    "terra-icon": "^3.9.0",
+    "terra-markdown": "^2.26.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

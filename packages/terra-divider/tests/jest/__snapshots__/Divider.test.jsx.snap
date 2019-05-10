@@ -8,6 +8,18 @@ exports[`Divider it should pass in a custom prop 1`] = `
 />
 `;
 
+exports[`Divider it should pass in a string of text 1`] = `
+<div
+  className="divider-container"
+>
+  <span
+    className="divider-text"
+  >
+    Divider Test String
+  </span>
+</div>
+`;
+
 exports[`Divider should render a basic component 1`] = `
 <hr
   aria-hidden="true"

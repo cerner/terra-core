@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
-import 'terra-base/lib/baseStyles';
+import KeyCode from 'keycode-js';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
 
@@ -43,7 +43,7 @@ const propTypes = {
   */
   isRelativeToContainer: PropTypes.bool,
   /**
-   * Allows assigning of root element custom data attribute for easy selecting.
+   * Used to select the root mount DOM node. This is used to help prevent focus from shifting outside of the overlay when it is opened in a portal.
    */
   rootSelector: PropTypes.string,
   /**
@@ -52,9 +52,7 @@ const propTypes = {
   zIndex: PropTypes.oneOf(zIndexes),
 };
 
-const KEYCODES = {
-  ESCAPE: 27,
-};
+let overlayClassName = '';
 
 const defaultProps = {
   children: null,
@@ -63,7 +61,7 @@ const defaultProps = {
   isScrollable: false,
   isRelativeToContainer: false,
   onRequestClose: undefined,
-  rootSelector: '[data-terra-base]',
+  rootSelector: '#root',
   zIndex: '100',
 };
 
@@ -91,7 +89,6 @@ class Overlay extends React.Component {
     if (!node) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
     this.overflow = document.documentElement.style.overflow;
     const selector = this.props.rootSelector;
-
     if (this.props.isRelativeToContainer) {
       this.container = node.parentNode;
       this.containerChildren = this.container.children;
@@ -109,6 +106,10 @@ class Overlay extends React.Component {
       for (let i = 0; i < this.containerChildren.length; i += 1) {
         prevTabIndex.push(this.containerChildren[i].tabIndex);
         this.containerChildren[i].tabIndex = -1;
+        // childern with class name Overlay is the overlay component and it's content which should not be disabled for screen readers.
+        if (this.containerChildren[i].className !== overlayClassName) {
+          this.containerChildren[i].setAttribute('aria-hidden', 'true'); // prevent screen reader from moving to content behind the overlay
+        }
       }
       this.containerChildrenPrevTabIndex = prevTabIndex;
     }
@@ -118,12 +119,15 @@ class Overlay extends React.Component {
     if (this.containerChildren) {
       for (let i = 0; i < this.containerChildren.length; i += 1) {
         this.containerChildren[i].tabIndex = this.containerChildrenPrevTabIndex[i];
+        if (this.containerChildren[i].className !== overlayClassName) {
+          this.containerChildren[i].setAttribute('aria-hidden', 'false'); // Enables content on close of overlay
+        }
       }
     }
   }
 
   shouldHandleESCKeydown(event) {
-    if (this.props.isOpen && event.keyCode === KEYCODES.ESCAPE) {
+    if (this.props.isOpen && event.keyCode === KeyCode.KEY_ESCAPE) {
       this.handleCloseEvent(event);
       event.preventDefault();
     }
@@ -175,7 +179,7 @@ class Overlay extends React.Component {
       customProps.className,
       `layer-${zIndexLayer}`,
     ]);
-
+    overlayClassName = OverlayClassNames;
     /*
       tabIndex set to 0 allows screen readers like VoiceOver to read overlay content when its displayed.
       Key events are added on mount.
@@ -204,7 +208,10 @@ class Overlay extends React.Component {
       <Portal>
         {backgroundScrollContent}
         <FocusTrap>
-          {overlayComponent}
+          {/* div addresses child focus change introduced in focus-trap-react v5.0.0 */}
+          <div>
+            {overlayComponent}
+          </div>
         </FocusTrap>
       </Portal>
     );

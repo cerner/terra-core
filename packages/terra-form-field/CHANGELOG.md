@@ -4,6 +4,62 @@ ChangeLog
 Unreleased
 ----------
 
+3.10.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.9.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Updated missing htmlFor prop warning text to clarify what prop is causing the warning
+
+3.8.0 - (April 9, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.7.0 - (April 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.6.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+3.5.0 - (March 21, 2019)
+------------------
+### Added
+* Added logic to allow accessible mapping of error and help text messages when htmlFor prop is provided
+
+### Changed
+* Update Jest tests to use terra-enzyme-intl
+
+3.4.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added en-AU translations
+
+3.3.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.2.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.1.0 - (January 26, 2019)
 ------------------
 ### Changed

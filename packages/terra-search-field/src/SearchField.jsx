@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
+import KeyCode from 'keycode-js';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form-input';
 import styles from './SearchField.module.scss';
@@ -10,10 +10,6 @@ import styles from './SearchField.module.scss';
 const cx = classNames.bind(styles);
 
 const Icon = <IconSearch />;
-
-const KEYCODES = {
-  ENTER: 13,
-};
 
 const propTypes = {
   /**
@@ -146,7 +142,7 @@ class SearchField extends React.Component {
   }
 
   handleKeyDown(event) {
-    if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
       this.handleSearch();
     }
   }

@@ -32,7 +32,6 @@ describe('StatusView', () => {
         '--terra-status-view-message-color': 'purple',
         '--terra-status-view-message-font-size': '24px',
         '--terra-status-view-message-padding-top': '10px',
-        '--terra-status-view-message-text-align': 'left',
         '--terra-status-view-divider-padding-top': '10px',
         '--terra-status-view-actions-flex-direction-small-width': 'column',
         '--terra-status-view-actions-padding-top': '10px',
@@ -75,7 +74,6 @@ describe('StatusView', () => {
         '--terra-status-view-message-color': 'purple',
         '--terra-status-view-message-font-size': '24px',
         '--terra-status-view-message-padding-top': '10px',
-        '--terra-status-view-message-text-align': 'left',
         '--terra-status-view-divider-padding-top': '10px',
         '--terra-status-view-actions-small-width-flex-direction': 'column',
         '--terra-status-view-actions-padding-top': '10px',
@@ -166,7 +164,6 @@ describe('StatusView', () => {
         '--terra-status-view-message-color': 'purple',
         '--terra-status-view-message-font-size': '20px',
         '--terra-status-view-message-padding-top': '10px',
-        '--terra-status-view-message-text-align': 'left',
         '--terra-status-view-divider-padding-top': '10px',
         '--terra-status-view-actions-flex-direction-small-width': 'column',
         '--terra-status-view-actions-padding-top': '10px',
@@ -179,10 +176,11 @@ describe('StatusView', () => {
   });
 
   describe('Displays an error status view that is too thin for a glyph', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-thin-constraint'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-status-view/status-view/status-view-thin-constraint');
+    });
 
-    // Screenshot is too tall for standard viewports
-    Terra.should.matchScreenshot({ viewports: [{ width: 75, height: 700 }] });
-    Terra.should.beAccessible({ viewports: [{ width: 75, height: 700 }] });
+    Terra.should.matchScreenshot();
+    Terra.should.beAccessible();
   });
 });

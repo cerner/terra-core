@@ -65,8 +65,11 @@ describe('Form-Input', () => {
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeEachCustomProperty({
-        '--terra-form-input-hover-border': '20rem dashed blue',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-form-input-hover-border': '20rem dashed blue',
+        },
       });
     });
 
@@ -93,8 +96,11 @@ describe('Form-Input', () => {
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeEachCustomProperty({
-        '--terra-form-input-color': 'red',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-form-input-color': 'red',
+        },
       });
     });
 
@@ -102,11 +108,8 @@ describe('Form-Input', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
         browser.keys('Tab');
-        // remove the blinking cursor for the screenshots
-        browser.execute(() => {
-          const inputElement = document.getElementById('form-input-default');
-          inputElement.style.caretColor = 'transparent';
-        });
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.getElementById("form-input-default").style.caretColor = "transparent";');
       });
 
       Terra.should.beAccessible({ viewports });
@@ -180,8 +183,11 @@ describe('Form-Input', () => {
 
       Terra.should.beAccessible({ viewports });
       Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeEachCustomProperty({
-        '--terra-form-input-hover-border': '20rem dashed red',
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: {
+          '--terra-form-input-hover-border': '20rem dashed red',
+        },
       });
     });
 
@@ -226,6 +232,14 @@ describe('Form-Input', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
         browser.click('#validity-toggle');
+      });
+
+      Terra.should.matchScreenshot({ viewports });
+    });
+
+    describe('Disabled InputField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-input-field');
       });
 
       Terra.should.matchScreenshot({ viewports });

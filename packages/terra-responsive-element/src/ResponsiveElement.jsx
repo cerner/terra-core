@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
-import 'terra-base/lib/baseStyles';
 import breakpoints from './breakpoints.module.scss';
 
 const DependentViewport = {

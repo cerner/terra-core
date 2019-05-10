@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import ButtonGroupButton from './ButtonGroupButton';
 import ButtonGroupUtils from './ButtonGroupUtils';
 import styles from './ButtonGroup.module.scss';
@@ -80,7 +79,7 @@ class ButtonGroup extends React.Component {
       const cloneChild = React.cloneElement(child, {
         onClick: this.wrapOnClick(child),
         className: cx([{ 'is-selected': isSelected }, child.props.className]),
-        'aria-pressed': isSelected,
+        'aria-pressed': isSelected || null,
       });
       allButtons.push(cloneChild);
     });

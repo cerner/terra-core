@@ -71,8 +71,11 @@ describe('Badge', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-icon'));
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-badge-child-margin-right': '50px',
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: {
+        '--terra-badge-child-margin-right': '50px',
+      },
     });
   });
 

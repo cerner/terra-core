@@ -4,6 +4,39 @@ Changelog
 Unreleased
 ----------
 
+2.30.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Update markdown text color to inherit parent color
+* Update markdown code elements to use hard-code text color to go with hard-coded background-color
+
+2.29.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Removed
+* github-markdown-css dependency
+
+### Fixed
+* Props with custom prop types (like intlShape) now show as required if marked as such
+
+2.28.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+2.27.0 - (March 21, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.26.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.25.0 - (January 22, 2019)
 ------------------
 ### Changed

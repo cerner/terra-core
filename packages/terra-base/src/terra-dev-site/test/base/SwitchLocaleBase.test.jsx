@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'terra-i18n';
+import { FormattedMessage } from 'react-intl';
 import Base from '../../../Base';
 
 const customMessages = {

@@ -4,6 +4,67 @@ Changelog
 Unreleased
 ----------
 
+4.6.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.5.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added an interaction media query to apply `hover` styles over a list-item only on non-touch devices.
+
+4.4.0 - (April 9, 2019)
+------------------
+### Changed
+* Update documentation to better cover sections and headers and for guides to be more interactive
+
+4.3.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+4.2.0 - (March 21, 2019)
+------------------
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+
+4.1.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.0.0 - (February 12, 2019)
+------------------
+### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/guides)
+* Removed Component `SingleSelectList` - No longer supported this uncontrolled variant of list.
+* Removed Component `MultiSelectList` - No longer supported this uncontrolled variant of list.
+* Removed Component `SelectableList` - Removed to avoid the need for cloning child props.
+* Removed Util `validatedMaxCount`.
+* Removed Util `initialSingleSelectedIndex`.
+* Removed Util `initialMultiSelectedIndexes`.
+* Removed Util `shouldHandleMultiSelect`.
+* Removed Util `shouldHandleSingleSelect`.
+* Removed Util `newPropsForItem`.
+* Added Component `ListSection` - Collapsible and Static functionality implementing the ListSectionHeader.
+* Added Component `ListSubsection` - Collapsible and Static functionality implementing the ListSubsectionHeader.
+* Added Component `ListSectionHeader` - Section styled header.
+* Added Component `ListSubsectionHeader` - Subsection styled header.
+* Change from dot notation for ListItem and Utils access to individual exports for Item, Utils, SectionHeader, SubsectionHeader, Section, and Subsection.
+* Moved accessibility logic into the ListItem.
+
+3.5.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.4.0 - (January 27, 2019)
 ------------------
 ### Changed

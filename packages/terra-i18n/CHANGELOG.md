@@ -4,6 +4,64 @@ Changelog
 Unreleased
 ----------
 
+4.3.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added Upgrade Guide to doc site
+
+4.2.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.1.0 - (April 9, 2019)
+------------------
+### Fixed
+* Update the intl polyfill to be more robust for IE10
+
+4.0.0 - (March 27, 2019)
+------------------
+### Breaking Changes
+* Removed post-install script which wrote default intl and translation loaders
+* Removed aggregate-translations pre-build tool/script
+* Removed `src/defaultIntlLoaders.js`
+* Removed `src/defaultTranslationsLoaders.js`
+* Removed `require.ensure` syntax for loading Intl polyfill
+* This package no longer provides the `injectIntl`, `intlShape`, `FormattedMessage`, `IntlProvider` exports from react-intl
+* Removed div that wrapped children passed into the I18nProvider component. The I18nProvider component now uses a `<React.Fragment>` wrapper around children
+* Removed run time check for supported locales. This is provided at build time with terra-toolkit's aggregate-translations script
+
+3.5.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+3.4.0 - (March 21, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.3.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added en-AU translations
+
+3.2.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.1.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.0.0 - (January 22, 2019)
 ------------------
 ### Changed

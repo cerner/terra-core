@@ -1,6 +1,6 @@
 # Terra Toggle
 
-Toggle component that transitions content in and out. For toggle button functionality, see [terra-toggle-button](/#/components/terra-toggle-button/toggle-button/toggle-button).
+Toggle component that transitions content in and out. For toggle button functionality, see [terra-toggle-button](https://engineering.cerner.com/terra-ui/#/components/terra-toggle-button/toggle-button/toggle-button).
 
 ## Getting Started
 

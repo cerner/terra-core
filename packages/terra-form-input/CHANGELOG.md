@@ -4,6 +4,64 @@ ChangeLog
 Unreleased
 ----------
 
+2.12.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
+* Added 'disabled' prop to InputField component
+
+### Fixed
+* Add vendor style rule for IE11 to fade placeholder text.
+
+2.11.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added type as first class prop to Form-Input-Field
+* Added example of Number Input on for Form-Input
+
+2.10.0 - (April 9, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.9.0 - (April 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.8.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+2.7.0 - (March 21, 2019)
+------------------
+### Added
+* Added logic to enable accessible mapping of InputField and it's related error and help text messages
+
+2.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.5.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.4.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.3.0 - (January 26, 2019)
 ------------------
 ### Changed
@@ -23,6 +81,9 @@ Unreleased
 ------------------
 ### Changed
 * Updated theme variables
+
+### Fixed
+* Changed browser.execute function in wdio spec to be a string for IE and FF driver compatibility
 
 1.32.0 - (January 2, 2019)
 ------------------

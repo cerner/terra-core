@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import Divider from 'terra-divider';
 import styles from './StatusView.module.scss';
 
 const cx = classNames.bind(styles);
 
-const variants = {
+const StatusViewVariants = {
   NODATA: 'no-data',
   NOMATCHINGRESULTS: 'no-matching-results',
   NOTAUTHORIZED: 'not-authorized',
@@ -53,7 +52,7 @@ const propTypes = {
    * `no-matching-results`, `not-authorized`,
    * `error`, or `custom`.
    */
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
 };
 
 const defaultProps = {
@@ -63,7 +62,7 @@ const defaultProps = {
   isGlyphHidden: false,
   message: undefined,
   title: undefined,
-  variant: variants.ERROR,
+  variant: StatusViewVariants.ERROR,
 };
 
 const contextTypes = {
@@ -98,35 +97,42 @@ class StatusView extends React.Component {
    * with 40% of the remaining space at the top with 60% on the bottom.
    */
   showAndCenterItems() {
-    const viewHeight = this.innerNode.offsetHeight;
-
     let paddingTop = 0;
     let paddingBottom = 0;
     let showGlyph = false;
+    let newViewHeight = 0;
+    let contentHeight = 0;
+    let contentWithGlyphHeight = 0;
+
+    const viewHeight = this.innerNode.getBoundingClientRect().height;
+    newViewHeight = viewHeight;
 
     // get the content heights of the nodes that are to be shown if have content and cannot be hidden
-    let componentsHeight = this.titleNode.offsetHeight;
-    if (this.actionsNode) {
-      componentsHeight += this.actionsNode.offsetHeight;
-    }
-    if (this.messageNode) {
-      componentsHeight += this.messageNode.offsetHeight;
-    }
-    if (this.dividerNode) {
-      componentsHeight += this.dividerNode.offsetHeight;
+    const titleNodeHeight = this.titleNode.getBoundingClientRect().height;
+    const actionNodeHeight = this.actionsNode ? this.actionsNode.getBoundingClientRect().height : 0;
+    const messageNodeHeight = this.messageNode ? this.messageNode.getBoundingClientRect().height : 0;
+    const dividerNodeHeight = this.dividerNode ? this.dividerNode.getBoundingClientRect().height : 0;
+    contentHeight = (titleNodeHeight + actionNodeHeight + messageNodeHeight + dividerNodeHeight);
+
+    contentWithGlyphHeight = contentHeight + (this.glyphNode ? this.glyphNode.getBoundingClientRect().height : 0);
+    // if inner view node height is lesser than the components along with glyph inside the inner view.
+    // and the height difference is very less (i.e 0.0001) then add that comparison value to the
+    // the inner view height.
+    if (contentWithGlyphHeight - viewHeight <= 0.0001) {
+      newViewHeight += 0.0001;
     }
 
-    if (this.glyphNode && viewHeight >= componentsHeight + this.glyphNode.offsetHeight && this.innerNode.offsetWidth >= this.glyphNode.offsetWidth) {
+    if (this.glyphNode && newViewHeight >= contentWithGlyphHeight && this.innerNode.offsetWidth >= this.glyphNode.offsetWidth) {
       // if glyph exists and can fit inside the container's height and width, distribute remaining padding to center
       showGlyph = true;
       if (!this.props.isAlignedTop) {
-        const remainingHeight = viewHeight - (componentsHeight + this.glyphNode.offsetHeight);
+        const remainingHeight = (viewHeight > contentWithGlyphHeight) ? (viewHeight - contentWithGlyphHeight) : 0;
         paddingTop = remainingHeight * 0.4;
         paddingBottom = remainingHeight * 0.6;
       }
     } else if (!this.props.isAlignedTop) {
       // glyph does not exist or does not fit, distribute remaining padding if any to center
-      const remainingHeight = viewHeight - componentsHeight;
+      const remainingHeight = viewHeight - contentHeight;
       if (remainingHeight > 0) {
         paddingTop = remainingHeight * 0.4;
         paddingBottom = remainingHeight * 0.6;
@@ -157,7 +163,7 @@ class StatusView extends React.Component {
 
     let glyphSection;
     if (!isGlyphHidden && this.state.showGlyph) {
-      if (variant === variants.CUSTOM) {
+      if (variant === StatusViewVariants.CUSTOM) {
         glyphSection = (
           <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
             {customGlyph}
@@ -192,7 +198,7 @@ class StatusView extends React.Component {
 
     let defaultTitle = title;
     if (!defaultTitle) {
-      defaultTitle = (variant === StatusView.Opts.variants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
+      defaultTitle = (variant === StatusViewVariants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
     }
 
     let dividerSection;
@@ -243,9 +249,10 @@ class StatusView extends React.Component {
   }
 }
 
+StatusView.Opts = {};
+StatusView.Opts.variants = StatusViewVariants;
 StatusView.propTypes = propTypes;
 StatusView.contextTypes = contextTypes;
 StatusView.defaultProps = defaultProps;
-StatusView.Opts = {};
-StatusView.Opts.variants = variants;
 export default StatusView;
+export { StatusViewVariants };

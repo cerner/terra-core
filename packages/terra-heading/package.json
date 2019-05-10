@@ -1,7 +1,7 @@
 {
   "name": "terra-heading",
   "main": "lib/Heading.js",
-  "version": "3.1.0",
+  "version": "4.5.0",
   "description": "Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading.",
   "repository": {
     "type": "git",
@@ -22,16 +22,15 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^3.1.0",
-    "terra-doc-template": "^2.2.0",
-    "terra-markdown": "^2.20.0"
+    "terra-arrange": "^3.9.0",
+    "terra-doc-template": "^2.9.0",
+    "terra-markdown": "^2.26.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

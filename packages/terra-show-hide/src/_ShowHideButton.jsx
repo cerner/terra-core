@@ -2,16 +2,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
+import KeyCode from 'keycode-js';
 import styles from './_ShowHideButton.module.scss';
 
-const cx = classNames.bind(styles);
 
-const KEYCODES = {
-  ENTER: 13,
-  SPACE: 32,
-  TAB: 9,
-};
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -67,10 +62,10 @@ class Button extends React.Component {
 
   handleKeyDown(event) {
     // Add active state to FF browser
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ active: true });
       this.setState({ focused: true });
-    } else if (event.nativeEvent.keyCode === KEYCODES.ENTER) { // Add focus styles for keyboard navigation
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) { // Add focus styles for keyboard navigation
       this.setState({ focused: true });
     }
 
@@ -81,12 +76,12 @@ class Button extends React.Component {
 
   handleKeyUp(event) {
     // Remove active state from FF broswers
-    if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ active: false });
     }
 
     // Apply focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KEYCODES.TAB) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
       this.setState({ focused: true });
     }
 

@@ -25,6 +25,87 @@ exports[`should render a InputField with props 1`] = `
   showOptional={true}
 >
   <Input
+    aria-describedby="test-input-error test-input-help"
+    defaultValue="Value"
+    disabled={false}
+    id="test-input"
+    isInvalid={false}
+    name="test"
+    onChange={[Function]}
+    refCallback={[Function]}
+    required={false}
+    type="number"
+    value="Value"
+  />
+</Field>
+`;
+
+exports[`should render a InputField with type specified by type attribute when both type attribute and InputAttributes are given 1`] = `
+<Field
+  error="Text"
+  errorIcon={
+    <IconHelp
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help="Help"
+  hideRequired={true}
+  htmlFor="test-input"
+  isInline={true}
+  isInvalid={true}
+  isLabelHidden={true}
+  label="Label Test"
+  labelAttrs={
+    Object {
+      "className": "label",
+    }
+  }
+  required={false}
+  showOptional={true}
+>
+  <Input
+    aria-describedby="test-input-error test-input-help"
+    defaultValue="Value"
+    disabled={false}
+    id="test-input"
+    isInvalid={false}
+    name="test"
+    onChange={[Function]}
+    refCallback={[Function]}
+    required={false}
+    type="Text"
+    value="Value"
+  />
+</Field>
+`;
+
+exports[`should render a InputField with type specified through InputAttributes 1`] = `
+<Field
+  error="Text"
+  errorIcon={
+    <IconHelp
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help="Help"
+  hideRequired={true}
+  htmlFor="test-input"
+  isInline={true}
+  isInvalid={true}
+  isLabelHidden={true}
+  label="Label Test"
+  labelAttrs={
+    Object {
+      "className": "label",
+    }
+  }
+  required={false}
+  showOptional={true}
+>
+  <Input
+    aria-describedby="test-input-error test-input-help"
     defaultValue="Value"
     disabled={false}
     id="test-input"
@@ -69,6 +150,66 @@ exports[`should render a default InputField component 1`] = `
 </Field>
 `;
 
+exports[`should render a disabled InputField component 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Input
+    disabled={true}
+    id="test-input"
+    isInvalid={false}
+    name={null}
+    required={false}
+  />
+</Field>
+`;
+
+exports[`should render a disabled InputField component via inputAttrs 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Input
+    disabled={true}
+    id="test-input"
+    isInvalid={false}
+    name={null}
+    required={false}
+  />
+</Field>
+`;
+
 exports[`should render a valid InputField with props 1`] = `
 <Field
   error="Text"
@@ -94,6 +235,7 @@ exports[`should render a valid InputField with props 1`] = `
   showOptional={true}
 >
   <Input
+    aria-describedby="test-input-help"
     defaultValue="Value"
     disabled={false}
     id="test-input"

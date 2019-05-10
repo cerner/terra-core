@@ -9,10 +9,10 @@
 </h1>
 
 [![Cerner OSS](https://badgen.net/badge/Cerner/OSS/blue)](http://engineering.cerner.com/2014/01/cerner-and-open-source/)
-[![License](https://badgen.net/github/license/cerner/terra-core)](https://github.com/cerner/terra-core/blob/master/LICENSE)
+[![License](https://badgen.net/badge/license/Apache-2.0/blue)](https://github.com/cerner/terra-core/blob/master/LICENSE)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
 [![devDependencies status](https://badgen.net/david/dev/cerner/terra-core)](https://david-dm.org/cerner/terra-core?type=dev)
-[![lerna](https://badgen.net/badge/maintained%20with/lerna/cc00ff)](https://lernajs.io/)
+[![lerna](https://badgen.net/badge/maintained%20with/lerna/cc00ff)](https://lerna.js.org/)
 
 - [Packages](#packages)
   - [Versioning](#versioning)
@@ -56,7 +56,6 @@ Components in beta stage may include breaking changes, new features, and bug fix
 <!-- AUTO-GENERATED-CONTENT:START (SUBPACKAGELIST) -->
 | Terra Package      | Version | Status | Dependencies |
 |--------------------|---------|--------|--------------|
-| [terra-abstract-modal](https://github.com/cerner/terra-core/tree/master/packages/terra-abstract-modal) | [![NPM version](https://badgen.net/npm/v/terra-abstract-modal)](https://www.npmjs.org/package/terra-abstract-modal) | ![Stable](https://badgen.net/badge/status/Stable/green) | [![terra-abstract-modal](https://badgen.net/david/dep/cerner/terra-core/packages/terra-abstract-modal)](https://david-dm.org/cerner/terra-core?path=packages/terra-abstract-modal) |
 | [terra-action-footer](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer) | [![NPM version](https://badgen.net/npm/v/terra-action-footer)](https://www.npmjs.org/package/terra-action-footer) | ![Stable](https://badgen.net/badge/status/Stable/green) | [![terra-action-footer](https://badgen.net/david/dep/cerner/terra-core/packages/terra-action-footer)](https://david-dm.org/cerner/terra-core?path=packages/terra-action-footer) |
 | [terra-action-header](https://github.com/cerner/terra-core/tree/master/packages/terra-action-header) | [![NPM version](https://badgen.net/npm/v/terra-action-header)](https://www.npmjs.org/package/terra-action-header) | ![Stable](https://badgen.net/badge/status/Stable/green) | [![terra-action-header](https://badgen.net/david/dep/cerner/terra-core/packages/terra-action-header)](https://david-dm.org/cerner/terra-core?path=packages/terra-action-header) |
 | [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert) | [![NPM version](https://badgen.net/npm/v/terra-alert)](https://www.npmjs.org/package/terra-alert) | ![Stable](https://badgen.net/badge/status/Stable/green) | [![terra-alert](https://badgen.net/david/dep/cerner/terra-core/packages/terra-alert)](https://david-dm.org/cerner/terra-core?path=packages/terra-alert) |
@@ -150,12 +149,15 @@ Please review [Terra's Internationalization documentation](https://engineering.c
 - [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert)
 - [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner)
 - [terra-dialog](https://github.com/cerner/terra-core/tree/master/packages/terra-dialog)
+- [terra-form-checkbox](https://github.com/cerner/terra-core/tree/master/packages/terra-form-checkbox)
 - [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field)
+- [terra-form-radio](https://github.com/cerner/terra-core/tree/master/packages/terra-form-radio)
 - [terra-form-select](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
+- [terra-i18n](https://github.com/cerner/terra-core/tree/master/packages/terra-form-i18n)
 - [terra-overlay](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay)
 - [terra-search-field](https://github.com/cerner/terra-core/tree/master/packages/terra-search-field)
+- [terra-show-hide](https://github.com/cerner/terra-core/tree/master/packages/terra-show-hide)
 - [terra-status-view](https://github.com/cerner/terra-core/tree/master/packages/terra-status-view)
-- [terra-tabs](https://github.com/cerner/terra-core/tree/master/packages/terra-tabs)
 
 <h2 id="contributing">
   Contributing

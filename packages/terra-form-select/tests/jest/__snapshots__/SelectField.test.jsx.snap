@@ -12,6 +12,33 @@ exports[`should render a default SelectField component 1`] = `
   help={null}
   hideRequired={false}
   htmlFor="select-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -21,6 +48,8 @@ exports[`should render a default SelectField component 1`] = `
   showOptional={false}
 >
   <Select
+    allowClear={false}
+    ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
     id="select-id"
@@ -68,6 +97,33 @@ exports[`should render a default SelectField component with attributes spread on
   help={null}
   hideRequired={false}
   htmlFor="select-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -77,12 +133,278 @@ exports[`should render a default SelectField component with attributes spread on
   showOptional={false}
 >
   <Select
+    allowClear={false}
+    ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
     id="select-id"
     isInvalid={false}
     onClick={[Function]}
     variant="default"
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </Select>
+</Field>
+`;
+
+exports[`should render a disabled SelectField component 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="select-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Select
+    allowClear={false}
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={true}
+    id="select-id"
+    isInvalid={false}
+    variant="default"
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </Select>
+</Field>
+`;
+
+exports[`should render a disabled SelectField component via selectAttrs 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="select-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Select
+    allowClear={false}
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={true}
+    id="select-id"
+    isInvalid={false}
+    variant="default"
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </Select>
+</Field>
+`;
+
+exports[`should render a multiple SelectField component that limits the selection count 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={
+    <span>
+      Terra.form.select.maxSelectionHelp
+       
+      Help Text
+    </span>
+  }
+  hideRequired={false}
+  htmlFor="select-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Select
+    allowClear={false}
+    aria-describedby="select-id-help"
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={false}
+    id="select-id"
+    isInvalid={false}
+    maxSelectionCount={2}
+    onClick={[Function]}
+    variant="multiple"
   >
     <Option
       disabled={false}

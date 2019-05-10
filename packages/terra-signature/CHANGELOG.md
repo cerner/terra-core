@@ -4,6 +4,56 @@ Changelog
 Unreleased
 ----------
 
+2.11.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.10.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.9.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+2.8.0 - (March 21, 2019)
+------------------
+### Changed
+* Removed terra-form-select dependency
+
+2.7.0 - (March 6, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.6.0 - (March 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.5.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Removed stylelint-disable in Signature.module.scss
+
+2.4.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.3.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.2.0 - (January 28, 2019)
 ------------------
 ### Changed

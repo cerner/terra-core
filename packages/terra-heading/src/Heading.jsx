@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import styles from './Heading.module.scss';
 
 const cx = classNames.bind(styles);
@@ -42,10 +41,6 @@ const propTypes = {
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   /**
-   * The color of the text. Accepts any color value parseable by CSS.
-   */
-  color: PropTypes.string,
-  /**
    * Sets the text to display in italics.
    */
   isItalic: PropTypes.bool,
@@ -61,17 +56,23 @@ const propTypes = {
    * Sets the text size. One of `200`, `400`, `700`.
    */
   weight: PropTypes.oneOf([200, 400, 700]),
+  /**
+   * Sets an author defined class, to control the colors of the heading.
+   *
+   * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/blue?icon=github)
+   * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
+   */
+  colorClass: PropTypes.string,
 };
 
 const defaultProps = {
-  color: 'inherit',
   isItalic: false,
   isVisuallyHidden: false,
   weight: 700,
 };
 
 const Heading = ({
-  level, color, children, isVisuallyHidden, isItalic, size, weight, ...customProps
+  level, children, isVisuallyHidden, isItalic, size, weight, colorClass, ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
   const TextClassNames = cx([
@@ -81,17 +82,14 @@ const Heading = ({
     { [`level-${level}`]: level },
     { [`size-${size}`]: size },
     { [`weight-${weight}`]: weight },
+    colorClass,
     attributes.className,
   ]);
-
-  const headingStyles = {
-    color,
-  };
 
   const Element = `h${level}`;
 
   return (
-    <Element {...attributes} style={{ ...headingStyles, ...customProps.style }} className={TextClassNames}>
+    <Element {...attributes} className={TextClassNames}>
       {children}
     </Element>
   );

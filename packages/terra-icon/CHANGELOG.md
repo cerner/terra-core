@@ -4,6 +4,72 @@ Changelog
 Unreleased
 ----------
 
+3.9.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Doc site test page for all icons
+
+3.8.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.7.0 - (April 9, 2019)
+------------------
+### Added
+* IconCatalogueNumber
+* IconCaution
+* IconCircleLinesSymbol
+* IconConsultInstructionsForUse
+* IconDateOfManufacture
+* IconManufacturer
+* IconRedo
+* IconUndo
+
+### Changed
+* Updated to one-cerner-style-icons v1.21.1
+* Replaced 'Reload' icon with 'Undo` icon.
+* `Reload` icon is now deprecated and will be removed in a future major version bump release.
+* Updated SVG for IconSortAscending
+* Updated SVG for IconSortDescending
+* Added a new template to generate static color react icons
+* Added CSS custom property based fill styles to static color icons
+
+3.6.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+3.5.0 - (March 21, 2019)
+------------------
+### Changed
+* Changed doc templates to render with HTML table instead of terra-table component
+
+### Removed
+* Removed terra-table dependency
+
+3.4.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.3.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.2.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.1.0 - (January 26, 2019)
 ------------------
 ### Changed

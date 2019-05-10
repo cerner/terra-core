@@ -1,14 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
+import KeyCode from 'keycode-js';
 import styles from './Tag.module.scss';
 
 const cx = classNames.bind(styles);
-
-const KEYCODES = {
-  TAB: 9,
-};
 
 const propTypes = {
   /**
@@ -59,7 +55,7 @@ class Tag extends React.Component {
 
   handleKeyUp(event) {
     // Apply focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KEYCODES.TAB) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
       this.setState({ focused: true });
     }
 

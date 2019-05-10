@@ -4,6 +4,63 @@ Changelog
 Unreleased
 ----------
 
+3.12.0 - (May 1, 2019)
+------------------
+### Added
+* Added new `ghost` variant
+* Added `compact` variant docsite examples
+
+### Changed
+* Minor dependency version bump
+* Updated WDIO tests to use themeCombinationOfCustomProperties instead of themeEachCustomProperty
+
+## Fixed
+* Use the custom `aria-label` if explicitly provided, otherwise use `text` as its fallback value for Utility button and icon-only buttons.
+
+3.11.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.10.0 - (April 9, 2019)
+------------------
+### Added
+* Added the native `title` attribute as a prop
+
+3.9.0 - (April 2, 2019)
+------------------
+### Fixed
+* Reset default margin in Safari.
+
+3.8.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+3.7.0 - (March 21, 2019)
+------------------
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.5.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.4.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.3.0 - (January 26, 2019)
 ------------------
 ### Changed

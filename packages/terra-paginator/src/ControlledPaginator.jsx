@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import ResponsiveElement from 'terra-responsive-element';
-
-import 'terra-base/lib/baseStyles';
+import KeyCode from 'keycode-js';
 import styles from './Paginator.module.scss';
-
-import { calculatePages, pageSet, KEYCODES } from './_paginationUtils';
+import { calculatePages, pageSet } from './_paginationUtils';
 
 const cx = classNames.bind(styles);
 
@@ -61,7 +59,7 @@ class Paginator extends React.Component {
 
   handleOnKeyDown(index) {
     return (event) => {
-      if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         event.preventDefault();
 
         if (Number.isNaN(Number(index))) {

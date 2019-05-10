@@ -20,6 +20,8 @@ import SearchFieldDefaultValue from '../example/SearchFieldDefaultValue';
 import SearchFieldDefaultValueSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldDefaultValue';
 import SearchFieldDisabled from '../example/SearchFieldDisabled';
 import SearchFieldDisabledSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldDisabled';
+import SearchFieldDisabledAutoFormatting from '../example/SearchFieldDisableAutoFormatAttrs';
+import SearchFieldDisabledAutoFormattingSrc from '../example/SearchFieldDisableAutoFormatAttrs';
 import SearchFieldBlock from '../example/SearchFieldBlock';
 import SearchFieldBlockSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldBlock';
 import SearchFieldDisableAutoSearch from '../example/SearchFieldDisableAutoSearch';
@@ -65,6 +67,11 @@ const DocPage = () => (
         title: 'Search Field that is Disabled',
         example: <SearchFieldDisabled />,
         source: SearchFieldDisabledSrc,
+      },
+      {
+        title: 'Search Field that has Autocomplete, Autocorrect, Autocapitalize, and Spellcheck disabled',
+        example: <SearchFieldDisabledAutoFormatting />,
+        source: SearchFieldDisabledAutoFormattingSrc,
       },
       {
         title: 'Search Field that Displays as Block Style to Fill Container',

@@ -4,6 +4,56 @@ Changelog
 Unreleased
 ----------
 
+6.0.0 - (May 9, 2019)
+------------------
+### Breaking Changes
+* Removed variables.scss file, SCSS media query breakpoints now imported from terra-breakpoints
+* Changed `col` (removed) prop to `tiny`
+* Changed `tiny` prop to `small`
+* Changed `small` prop to `medium`
+* Changed `medium` prop to `large`
+* Changed `large` prop to `huge`
+* Changed `huge` prop to `enormous` (new)
+
+5.9.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.8.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.7.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+5.6.0 - (March 21, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.5.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.4.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.3.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.2.0 - (January 22, 2019)
 ------------------
 ### Changed

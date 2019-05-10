@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import IconAlert from 'terra-icon/lib/icon/IconAlert';
 
+const icon = <IconAlert width="4em" height="4em" />;
 // Block style is required since images are inline by default. This could be resolved by someones normalize.css
 const image = <img style={{ display: 'block' }} height="75" width="75" src="https://github.com/cerner/terra-core/raw/master/terra.png" alt="a happy panda" />;
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
@@ -41,6 +43,7 @@ const IconWrapper = () => (
 );
 
 export {
+  icon,
   image,
   simpleText,
   longText,

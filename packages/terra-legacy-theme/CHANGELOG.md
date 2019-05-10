@@ -4,6 +4,24 @@ Changelog
 Unreleased
 ----------
 
+2.37.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+2.36.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added stylelint-enable to LegacyThemeNavigationSideMenu.module.scss
+
+2.35.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.34.0 - (January 22, 2019)
 ------------------
 ### Changed

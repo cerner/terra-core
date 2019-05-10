@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import styles from './Checkbox.module.scss';
 import CheckboxUtil from './CheckboxUtil';
 
@@ -164,5 +163,6 @@ const Checkbox = ({
 
 Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;
+Checkbox.isCheckbox = true;
 
 export default Checkbox;

@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
-import 'terra-base/lib/baseStyles';
 import styles from './Fieldset.module.scss';
 
 const cx = classNames.bind(styles);
@@ -30,15 +29,20 @@ const propTypes = {
    * Determines whether the fieldset is required.
    */
   required: PropTypes.bool,
+  /**
+   * Whether or not the legend is visible. Use this prop to hide a legend while still creating it on the DOM for accessibility.
+   */
+  isLegendHidden: PropTypes.bool,
 };
 
 const defaultProps = {
   legendAttrs: {},
   required: false,
+  isLegendHidden: false,
 };
 
 const Fieldset = ({
-  children, help, legend, legendAttrs, required, ...customProps
+  children, help, legend, legendAttrs, isLegendHidden, required, ...customProps
 }) => {
   const fieldsetClasses = cx([
     'fieldset',
@@ -49,6 +53,7 @@ const Fieldset = ({
   const legendClasses = cx([
     'legend',
     legendAttrs.className,
+    { 'legend-visually-hidden': isLegendHidden },
   ]);
 
   return (

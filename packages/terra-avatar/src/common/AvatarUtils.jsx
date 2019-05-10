@@ -69,10 +69,9 @@ const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
 /**
  * Render image with placeholder.
  */
-const generateImage = (image, alt, isAriaHidden, variant) => {
+const generateImage = (image, alt, isAriaHidden, variant, handleFallback) => {
   const icon = generateImagePlaceholder(alt, isAriaHidden, variant);
-
-  return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} />;
+  return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} />;
 };
 
 

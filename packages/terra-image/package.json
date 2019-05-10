@@ -1,7 +1,7 @@
 {
   "name": "terra-image",
   "main": "lib/Image.js",
-  "version": "3.0.0",
+  "version": "3.8.0",
   "description": "The terra-image component provides styling for visual imagery.",
   "repository": {
     "type": "git",
@@ -32,13 +32,12 @@
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
   "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "terra-base": "^4.0.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.2.0"
+    "terra-doc-template": "^2.9.0"
   }
 }

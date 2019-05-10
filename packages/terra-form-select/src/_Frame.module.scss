@@ -21,6 +21,7 @@
     padding-top: var(--terra-form-select-padding-top, 0);
 
     > .display {
+      border: 0;
       display: inline-block;
       flex: 1 1 auto; // IE 10
       overflow: hidden;
@@ -112,6 +113,12 @@
       background-size: contain;
       display: inline-block; // IE 10
     }
+
+    .search-input::placeholder,
+    .placeholder {
+      color: var(--terra-form-select-disabled-placeholder-color, #70787c);
+      font-style: var(--terra-form-select-disabled-placeholder-font-style);
+    }
   }
 
   .toggle {
@@ -121,6 +128,25 @@
     flex-shrink: 0;
     margin-left: auto;
     padding: var(--terra-form-select-toggle-padding, 0 0.42857rem);
+  }
+
+  .toggle-narrow {
+    padding: 0;
+  }
+
+  .toggle-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    height: 100%;
+    line-height: 0;
+    margin: 0;
+    padding: var(--terra-form-select-toggle-padding, 0 0.42857rem);
+
+    // Remove the inner border and padding in Firefox.
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
   }
 
   .content {
@@ -134,6 +160,21 @@
     padding-left: var(--terra-form-select-content-padding-left, 0);
     padding-right: var(--terra-form-select-content-padding-right, 0);
     padding-top: var(--terra-form-select-content-padding-top, 0);
+  }
+
+  .content > li:first-child {
+    display: flex;
+    flex: 0 1 auto;
+  }
+
+  .display-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap; // IE 10
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
   }
 
   // A reduced, non-zero, height and width allows the input to receive focus using tab.
@@ -150,6 +191,7 @@
     flex: 1 1 auto; // IE 10
     max-width: 100%; // IE 10
     min-width: 0; // IE 11
+    pointer-events: none; // This fixes an issue with onClick events not being properly activated. This bug is not present in IE 10
   }
 
   .search-input,
@@ -158,6 +200,7 @@
     border: 0;
     color: inherit;
     flex: 1 1 auto;
+    font-family: inherit;
     font-size: var(--terra-form-select-search-focus-font-size, 1.143rem);
     height: var(--terra-form-select-search-focus-height, 1.375em);
     margin-top: var(--terra-form-select-search-focus-margin-top, 0.21428571428571427rem);
@@ -171,7 +214,7 @@
   }
 
   // Hides the clear buttons in IE.
-  .search::-ms-clear {
+  .select ::-ms-clear {
     display: none;
     height: 0;
     width: 0;
@@ -186,6 +229,22 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  /* TODO: Remove vendor prefix once we update to autoprefixer v9 */
+  /* Issue loggedd for updating Autoprefixer in Toolkit : https://github.com/cerner/terra-toolkit/issues/161 */
+  /* stylelint-disable selector-no-vendor-prefix */
+  .search-input,
+  .placeholder,
+  :-ms-input-placeholder {
+    color: var(--terra-form-select-search-placeholder-color, #70787c);
+    font-size: var(--terra-form-select-search-placeholder-font-size, 1.143rem);
+    font-style: var(--terra-form-select-search-placeholder-font-style);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* stylelint-enable selector-no-vendor-prefix */
+  /* End of vendor prefix */
 
   .tag,
   .search,

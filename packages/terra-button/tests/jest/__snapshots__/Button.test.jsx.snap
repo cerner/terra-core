@@ -42,7 +42,6 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 >
   <button
     aria-disabled={false}
-    aria-label={null}
     className="button neutral"
     disabled={false}
     onBlur={[Function]}
@@ -66,7 +65,6 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 exports[`should render a Button with merged attributes 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button neutral TestClass"
   data-mock="data"
   disabled={false}
@@ -92,10 +90,55 @@ exports[`should render a Button with merged attributes 1`] = `
 </button>
 `;
 
+exports[`should render a button with a title 1`] = `
+<button
+  aria-disabled={false}
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Custom Title"
+  type="button"
+>
+  <span
+    className="button-label text-only"
+  >
+    <span
+      className=""
+    >
+      Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a button with accessible label 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Custom Accessible Label"
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  type="button"
+>
+  <span
+    className="button-label text-only"
+  >
+    <span
+      className=""
+    >
+      Button
+    </span>
+  </span>
+</button>
+`;
+
 exports[`should render a button with type equal to button 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -118,7 +161,6 @@ exports[`should render a button with type equal to button 1`] = `
 exports[`should render a button with type equal to reset 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -141,7 +183,6 @@ exports[`should render a button with type equal to reset 1`] = `
 exports[`should render a button with type equal to submit 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -164,7 +205,6 @@ exports[`should render a button with type equal to submit 1`] = `
 exports[`should render a de-emphasis button 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button de-emphasis"
   disabled={false}
   onBlur={[Function]}
@@ -187,7 +227,6 @@ exports[`should render a de-emphasis button 1`] = `
 exports[`should render a emphasis button 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button emphasis"
   disabled={false}
   onBlur={[Function]}
@@ -207,10 +246,31 @@ exports[`should render a emphasis button 1`] = `
 </button>
 `;
 
+exports[`should render a ghost button 1`] = `
+<button
+  aria-disabled={false}
+  className="button ghost"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  type="button"
+>
+  <span
+    className="button-label text-only"
+  >
+    <span
+      className=""
+    >
+      ghost
+    </span>
+  </span>
+</button>
+`;
+
 exports[`should render a neutral button 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -239,6 +299,79 @@ exports[`should render a utility button 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  title="utility"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render a utility button with a custom accessible label 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Custom Accessible Label"
+  className="button utility"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Icon Only"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render a utility button with a custom title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button utility"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Custom Title"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render a utility button with text as a fallback accessible label 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button utility"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Icon Only"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render a utility button with text as a fallback title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button utility"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Icon Only"
   type="button"
 >
   <span
@@ -250,7 +383,6 @@ exports[`should render a utility button 1`] = `
 exports[`should render an action button 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button action"
   disabled={false}
   onBlur={[Function]}
@@ -279,6 +411,7 @@ exports[`should render an icon 1`] = `
   onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  title="isIconOnly"
   type="button"
 >
   <span
@@ -299,7 +432,6 @@ exports[`should render an icon 1`] = `
 exports[`should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -327,10 +459,81 @@ exports[`should render an icon and a text 1`] = `
 </button>
 `;
 
+exports[`should render an icon only button with a custom accessible label 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Custom Accessible Label"
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Icon Only"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render an icon only button with a custom title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Custom Title"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render an icon only button with text as a fallback accessible label 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Icon Only"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render an icon only button with text as a fallback title 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="Icon Only"
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  title="Icon Only"
+  type="button"
+>
+  <span
+    className="button-label icon-only text-only"
+  />
+</button>
+`;
+
 exports[`should render as an anchor when provided an href 1`] = `
 <a
   aria-disabled={false}
-  aria-label={null}
   className="button neutral"
   disabled={false}
   href="MockHref"
@@ -354,7 +557,6 @@ exports[`should render as an anchor when provided an href 1`] = `
 exports[`should render as disabled when set 1`] = `
 <button
   aria-disabled={true}
-  aria-label={null}
   className="button neutral is-disabled"
   disabled={true}
   onBlur={[Function]}
@@ -378,7 +580,6 @@ exports[`should render as disabled when set 1`] = `
 exports[`should render text then an icon when reversed 1`] = `
 <button
   aria-disabled={false}
-  aria-label={null}
   className="button neutral"
   disabled={false}
   onBlur={[Function]}

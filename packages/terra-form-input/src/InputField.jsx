@@ -20,6 +20,10 @@ const propTypes = {
     PropTypes.number,
   ]),
   /**
+   * Whether the input is disabled.
+   */
+  disabled: PropTypes.bool,
+  /**
    * Error message for when the input is invalid.
    */
   error: PropTypes.node,
@@ -79,6 +83,10 @@ const propTypes = {
    */
   showOptional: PropTypes.bool,
   /**
+   * Specifies the type of input element to display.
+   */
+  type: PropTypes.string,
+  /**
    * The value of the input field. Use this to create a controlled input.
    */
   value: PropTypes.oneOfType([
@@ -89,6 +97,7 @@ const propTypes = {
 
 const defaultProps = {
   defaultValue: undefined,
+  disabled: false,
   error: null,
   errorIcon: Field.defaultProps.errorIcon,
   help: null,
@@ -103,12 +112,14 @@ const defaultProps = {
   refCallback: undefined,
   required: false,
   showOptional: false,
+  type: undefined,
   value: undefined,
 };
 
 const InputField = (props) => {
   const {
     defaultValue,
+    disabled,
     error,
     errorIcon,
     help,
@@ -125,10 +136,26 @@ const InputField = (props) => {
     refCallback,
     required,
     showOptional,
+    type,
     value,
     ...customProps
   } = props;
 
+  let ariaDescriptionIds;
+
+  if (help && error && isInvalid) {
+    ariaDescriptionIds = `${inputId}-error ${inputId}-help`;
+  } else {
+    if (help) {
+      ariaDescriptionIds = `${inputId}-help`;
+    }
+
+    if (error && isInvalid) {
+      ariaDescriptionIds = `${inputId}-error`;
+    }
+  }
+
+  const inputType = type || inputAttrs.type;
   return (
     <Field
       label={label}
@@ -148,11 +175,14 @@ const InputField = (props) => {
     >
       <Input
         {...inputAttrs}
+        disabled={inputAttrs.disabled || disabled}
         id={inputId}
+        type={inputType}
         onChange={onChange}
         value={value}
         defaultValue={defaultValue}
         refCallback={refCallback}
+        aria-describedby={ariaDescriptionIds}
       />
     </Field>
   );

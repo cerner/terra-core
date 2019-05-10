@@ -3,8 +3,18 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+// Component Source
+import DividerSrc from '!raw-loader!../../../../src/Divider';
+
 // Example Files
-import Divider from '../example/DividerExample';
+import DividerExample from '../example/DividerExample';
+import DividerExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DividerExample';
+import DividerWithText from '../example/DividerWithText';
+import DividerWithTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DividerWithText';
+import DividerWithWrappingText from '../example/DividerWithWrappingText';
+import DividerWithWrappingTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DividerWithWrappingText';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate
@@ -13,24 +23,25 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Dialog - Default',
-        example: (
-          <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industrys standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged.
-            </p>
-            <Divider />
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industrys standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged.
-            </p>
-          </div>
-        ),
+        title: 'Default',
+        example: <DividerExample />,
+        source: DividerExampleSrc,
+      },
+      {
+        title: 'Custom Text',
+        example: <DividerWithText />,
+        source: DividerWithTextSrc,
+      },
+      {
+        title: 'Custom Text',
+        example: <DividerWithWrappingText />,
+        source: DividerWithWrappingTextSrc,
+      },
+    ]}
+    propsTables={[
+      {
+        componentName: 'Divider',
+        componentSrc: DividerSrc,
       },
     ]}
   />

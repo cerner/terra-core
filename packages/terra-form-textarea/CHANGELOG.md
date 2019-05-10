@@ -4,6 +4,62 @@ ChangeLog
 Unreleased
 ----------
 
+3.12.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Added 'disabled' prop to TextAreaField component
+
+### Fixed
+* Add vendor style rule for IE11 to fade placeholder text.
+
+3.11.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.10.0 - (April 9, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.9.0 - (April 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.8.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+3.7.0 - (March 21, 2019)
+------------------
+### Added
+* Added logic to enable accessible mapping of TextareaField and it's related error and help text messages
+
+3.6.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Fixed
+* Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
+
+3.5.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.4.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.3.0 - (January 26, 2019)
 ------------------
 ### Changed

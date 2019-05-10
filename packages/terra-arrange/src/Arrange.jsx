@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
 import styles from './Arrange.module.scss';
 
 const AlignmentTypes = {
@@ -26,7 +25,7 @@ const propTypes = {
    */
   fitEnd: PropTypes.element,
   /**
-   * The vertical orientation of all three containers. It will override the aligment of alignFitStart, alignFill and alignFitEnd if given. One of: `center`, `bottom`, `stretch`.
+   * The vertical orientation of all three containers. It will override the alignment of alignFitStart, alignFill and alignFitEnd if given. One of: `center`, `bottom`, `stretch`.
    */
   align: PropTypes.oneOf(['center', 'bottom', 'stretch']),
   /**

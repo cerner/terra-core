@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import 'terra-base/lib/baseStyles';
+import uniqueid from 'lodash.uniqueid';
+
 import styles from './CheckboxField.module.scss';
 
 const cx = classNames.bind(styles);
@@ -103,27 +104,40 @@ const CheckboxField = (props, { intl }) => {
     legendAttrs.className,
   ]);
 
+  const legendAriaDescriptionId = `terra-checkbox-field-description-${uniqueid()}`;
+  const helpAriaDescriptionId = help ? `terra-checkbox-field-description-help-${uniqueid()}` : '';
+  const errorAriaDescriptionId = error ? `terra-checkbox-field-description-error-${uniqueid()}` : '';
+  const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
+
   const legendGroup = (
-    <legend className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
-      {
-        <div {...legendAttrs} className={legendClassNames}>
-          {isInvalid && <span className={cx('error-icon')} />}
-          {required && (isInvalid || !hideRequired) && <span className={cx('required')}>*</span>}
-          {legend}
-          {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
-          {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
-          {!isInvalid && <span className={cx('error-icon-hidden')} />}
-        </div>
-      }
+    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+      <div {...legendAttrs} className={legendClassNames}>
+        {isInvalid && <span className={cx('error-icon')} />}
+        {required && (isInvalid || !hideRequired) && <span className={cx('required')}>*</span>}
+        {legend}
+        {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
+        {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
+        {!isInvalid && <span className={cx('error-icon-hidden')} />}
+      </div>
     </legend>
   );
+
+  const content = React.Children.map(children, (child) => {
+    if (child && child.type.isCheckbox) {
+      return React.cloneElement(child, {
+        inputAttrs: { 'aria-describedby': ariaDescriptionIds },
+      });
+    }
+
+    return child;
+  });
 
   return (
     <fieldset {...customProps} className={checkboxFieldClasses}>
       {legendGroup}
-      {children}
-      {isInvalid && error && <div className={cx('error-text')}>{error}</div>}
-      {help && <div className={cx('help-text')}>{help}</div>}
+      {content}
+      {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}
+      {help && <div id={helpAriaDescriptionId} className={cx('help-text')}>{help}</div>}
     </fieldset>
   );
 };

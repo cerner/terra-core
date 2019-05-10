@@ -7,12 +7,18 @@ describe('Action footer theme', () => {
   describe('Empty', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/empty-action-footer'));
 
-    Terra.should.themeEachCustomProperty(withoutActionsThemeables);
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: withoutActionsThemeables,
+    });
   });
 
   describe('Multiple Start and End Actions', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-start-end-action-footer'));
 
-    Terra.should.themeEachCustomProperty(withActionsThemeables);
+    Terra.should.themeCombinationOfCustomProperties({
+      testName: 'themed',
+      properties: withActionsThemeables,
+    });
   });
 });

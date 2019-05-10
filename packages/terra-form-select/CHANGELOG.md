@@ -3,11 +3,97 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.15.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Added 'disabled' prop to FormSelectField component
+
+### Fixed
+* Add vendor style rule for IE11 to fade placeholder text.
+
+5.14.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.13.0 - (April 9, 2019)
+------------------
+### Fixed
+* Issue with input element wrapping to new line too soon in multiple and tag variants
+* Unintended height increase
+* Null checks added to private Menu to prevent errors from empty queries
+
+5.12.0 - (April 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.11.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+* Improved experience using the select component with JAWS, VoiceOver, and VoiceOver on iOS
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+5.10.0 - (March 21, 2019)
+------------------
+### Fixed
+* Checked for undefined and null for defaultValue
+* Fixed passed in onClick event not firing depending on click position on terra-form-select
+
 ### Added
-* Create dropdown that announces no search results to screen reader
+* Added new translation strings
+* Added logic to enable accessible mapping of InputField and it's related error and help text messages
+* Added new EN translation strings
+
+### Changed
+* Replaced local keyCode values with keycode-js npm package
+* Update Jest tests to use terra-enzyme-intl
+
+5.9.0 - (March 6th, 2019)
+------------------
+### Added
+* Added option to limit the maximum number of selection count for multi-select variants.
+* Introduce an option to allow clearing the currently selected item
+
+5.8.0 - (March 5th, 2019)
+------------------
+### Fixed
+* Race condition where timeout would update after the component is not mounted
+* 'Unable to get property 'getInstance' of undefined or null reference' error in IE
+
+5.7.0 - (February 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* New CSS custom property: `--terra-form-select-disabled-placeholder-color`
+* New CSS custom property: `--terra-form-select-disabled-placeholder-font-style`
+
+### Fixed
+* Added en-AU translations
+* Fixed issue preventing the input from inheriting the base font family
+* Fixed a Select Menu jest test that was broken with the release of enzyme-3.9.0
+
+5.6.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.5.0 - (February 5, 2019)
+------------------
+### Added
+* Dropdown that announces no search results to screen reader
 
 ### Changed
 * Made it easier for screen readers to read disabled state to users
+* Minor dependency version bump
 
 5.4.0 - (January 28, 2019)
 ------------------
@@ -29,6 +115,7 @@ Unreleased
 ### Fixed
 * Fixed Dropdown closing issue on Hold and Scroll in IE
 * Updated Frame to remove isAbove styling when selecting item in single select list
+* Changed browser.execute functions in wdio spec to be strings for IE and FF driver compatibility
 
 ### Changed
 * Updated Option prop documentation

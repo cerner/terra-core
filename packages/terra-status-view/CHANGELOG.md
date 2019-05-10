@@ -4,6 +4,78 @@ Changelog
 Unreleased
 ----------
 
+3.14.0 - (May 1, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.13.0 - (April 18, 2019)
+------------------
+### Deprecated
+* StatusView.Opts object and export
+
+### Added
+* Added named StatusViewVariants export
+
+3.11.0 - (April 16, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.10.0 - (April 9, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.9.0 - (April 2, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.8.0 - (March 26, 2019)
+------------------
+### Changed
+* Update react/react-dom peer-dependency to latest stable minor release
+
+### Removed
+* Removed peer dependency on terra-base
+* Removed baseStyles import from terra-base
+
+3.7.0 - (March 21, 2019)
+------------------
+### Changed
+* Update Jest tests to use terra-enzyme-intl
+
+### Fixed
+* Remove --terra-view-message-text-align theme variable to fix alignment within Edge browser.
+
+3.7.0 - (March 5, 2019)
+------------------
+### Fixed
+* Update SVG style to `display: block` to fix SVG size and stop text from shifting downards.
+
+3.6.0 - (February 26, 2019)
+------------------
+### Added
+* Added en-AU translations
+
+### Changed
+* Minor dependency version bump
+* Update Thin Constraint test screenshot to be limited to the test size 75px to remove wdio screen resizing. Screen resizing to 75px is not possible with firefox driver.
+
+### Fixed
+* Status View glyph does not always displays when it should
+
+3.5.0 - (February 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.4.0 - (February 5, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.3.0 - (January 26, 2019)
 ------------------
 ### Changed

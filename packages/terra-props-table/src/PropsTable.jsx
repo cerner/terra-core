@@ -98,7 +98,7 @@ const PropsTable = ({
 }) => {
   /**
    * Runs component source code through react-docgen. Passing second argument to parse
-   * function to account for mutiple export.
+   * function to account for multiple export.
    * @type {Object}
    */
   let componentMetaData;
@@ -128,7 +128,7 @@ const PropsTable = ({
   ]);
 
   return (
-    <div dir="ltr" className="markdown-body">
+    <div dir="ltr" className={cx('props-table-markdown')}>
       <h2>
         {componentName}
         {' '}
@@ -153,11 +153,17 @@ Props
 
             const type = determineType(prop.type);
 
+            /**
+             * Check if the react-docgen parser returned a custom proptype.
+             * If so, parse the raw value to see if the custom proptype has been marked as required.
+            */
+            const customRequired = (prop.type.name === 'custom' && prop.type.raw.includes('isRequired'));
+
             return (
               <tr className={tableRowClass} key={key} style={{ fontSize: '90%' }}>
                 <td style={{ fontWeight: 'bold' }}>{key}</td>
                 <td>{(prop.type ? type : '')}</td>
-                {(prop.required
+                {(customRequired || prop.required
                   ? <td style={{ color: '#d53700' }}>required</td>
                   : <td style={{ color: '#444' }}>optional</td>)}
                 {(prop.defaultValue
