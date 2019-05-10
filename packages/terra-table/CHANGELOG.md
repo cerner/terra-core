@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.12.0 - (May 9, 2019)
+------------------
 ### Changed
 * Exclude subheader from zebra row styles.
 

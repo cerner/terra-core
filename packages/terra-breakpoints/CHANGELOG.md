@@ -3,8 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.8.0 - (May 9, 2019)
+------------------
 ### Changed
-* Added variables file for breakpoints to be imported into other packages
+* Added SCSS media query breakpoint file
 
 2.7.0 - (May 1, 2019)
 ------------------
