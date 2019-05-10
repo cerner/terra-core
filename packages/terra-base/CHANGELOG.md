@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Removed
-* Removed custom props spead on I18nProvider. The I18nProvider does not accept custom props.
+* Removed custom props spread on I18nProvider. The I18nProvider does not accept custom props.
 
 5.4.0 - (May 1, 2019)
 ------------------
