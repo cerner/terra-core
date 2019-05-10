@@ -78,7 +78,6 @@ class Base extends React.Component {
       customMessages,
       strictMode,
       translationsLoadingPlaceholder,
-      ...customProps
     } = this.props;
 
     const messages = Object.assign({}, this.state.messages, customMessages);
@@ -86,7 +85,7 @@ class Base extends React.Component {
 
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
-      <I18nProvider {...customProps} locale={this.state.locale} messages={messages}>
+      <I18nProvider locale={this.state.locale} messages={messages}>
         {renderChildren}
       </I18nProvider>
     );
