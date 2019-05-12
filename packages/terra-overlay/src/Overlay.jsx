@@ -4,8 +4,18 @@ import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
 import KeyCode from 'keycode-js';
+import 'mutationobserver-shim';
+import './_matches-polyfill';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
+
+// Importing WICG Inert polyfill causes Jest to crash
+// Issue logged to Jest repo: https://github.com/facebook/jest/issues/8373
+// This logic avoids importing the polyfill when running Jest tests
+if (process.env.NODE_ENV !== 'test') {
+  // eslint-disable-next-line global-require
+  require('wicg-inert');
+}
 
 const cx = classNames.bind(styles);
 
@@ -52,8 +62,6 @@ const propTypes = {
   zIndex: PropTypes.oneOf(zIndexes),
 };
 
-let overlayClassName = '';
-
 const defaultProps = {
   children: null,
   isOpen: false,
@@ -88,41 +96,31 @@ class Overlay extends React.Component {
   setContainer(node) {
     if (!node) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
     this.overflow = document.documentElement.style.overflow;
-    const selector = this.props.rootSelector;
     if (this.props.isRelativeToContainer) {
       this.container = node.parentNode;
-      this.containerChildren = this.container.children;
-      this.disableContainerChildrenFocus();
     } else {
-      document.documentElement.style.overflow = 'hidden';
       this.container = null;
-      if (document.querySelector(selector)) document.querySelector(selector).setAttribute('aria-hidden', 'true'); // prevent screen reader from moving to hidden content
     }
+    this.disableContainerChildrenFocus();
   }
 
   disableContainerChildrenFocus() {
-    if (this.containerChildren) {
-      const prevTabIndex = [];
-      for (let i = 0; i < this.containerChildren.length; i += 1) {
-        prevTabIndex.push(this.containerChildren[i].tabIndex);
-        this.containerChildren[i].tabIndex = -1;
-        // childern with class name Overlay is the overlay component and it's content which should not be disabled for screen readers.
-        if (this.containerChildren[i].className !== overlayClassName) {
-          this.containerChildren[i].setAttribute('aria-hidden', 'true'); // prevent screen reader from moving to content behind the overlay
-        }
-      }
-      this.containerChildrenPrevTabIndex = prevTabIndex;
+    if (this.props.isRelativeToContainer) {
+      if (this.container) this.container.querySelector('[data-terra-overlay-container-content]').setAttribute('inert', '');
+    } else {
+      const selector = this.props.rootSelector;
+      if (document.querySelector(selector)) document.querySelector(selector).setAttribute('inert', '');
+      document.documentElement.style.overflow = 'hidden';
     }
   }
 
   enableContainerChildrenFocus() {
-    if (this.containerChildren) {
-      for (let i = 0; i < this.containerChildren.length; i += 1) {
-        this.containerChildren[i].tabIndex = this.containerChildrenPrevTabIndex[i];
-        if (this.containerChildren[i].className !== overlayClassName) {
-          this.containerChildren[i].setAttribute('aria-hidden', 'false'); // Enables content on close of overlay
-        }
-      }
+    if (this.props.isRelativeToContainer) {
+      if (this.container) this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
+    } else {
+      const selector = this.props.rootSelector;
+      if (document.querySelector(selector)) document.querySelector(selector).removeAttribute('inert');
+      document.documentElement.style.overflow = this.overflow;
     }
   }
 
@@ -145,14 +143,8 @@ class Overlay extends React.Component {
     }
   }
 
-  resetBeforeOverlay(selector) {
-    document.documentElement.style.overflow = this.overflow;
-    if (document.querySelector(selector)) {
-      document.querySelector(selector).setAttribute('aria-hidden', 'false');
-    }
-    if (this.props.isRelativeToContainer) {
-      this.enableContainerChildrenFocus();
-    }
+  resetBeforeOverlay() {
+    this.enableContainerChildrenFocus();
   }
 
   render() {
@@ -162,7 +154,7 @@ class Overlay extends React.Component {
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
-      this.resetBeforeOverlay(rootSelector);
+      this.resetBeforeOverlay();
       return null;
     }
 
@@ -179,7 +171,7 @@ class Overlay extends React.Component {
       customProps.className,
       `layer-${zIndexLayer}`,
     ]);
-    overlayClassName = OverlayClassNames;
+
     /*
       tabIndex set to 0 allows screen readers like VoiceOver to read overlay content when its displayed.
       Key events are added on mount.
