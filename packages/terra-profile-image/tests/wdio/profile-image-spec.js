@@ -25,4 +25,10 @@ describe('Profile Image', () => {
       },
     });
   });
+
+  describe('Source Not Provided', () => {
+    before(() => browser.url('/#/raw/tests/terra-profile-image/profile-image/profile-image-source-not-provided'));
+
+    Terra.should.validateElement();
+  });
 });
