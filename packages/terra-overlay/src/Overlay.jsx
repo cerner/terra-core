@@ -106,7 +106,9 @@ class Overlay extends React.Component {
 
   disableContainerChildrenFocus() {
     if (this.props.isRelativeToContainer) {
-      if (this.container) this.container.querySelector('[data-terra-overlay-container-content]').setAttribute('inert', '');
+      if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
+        this.container.querySelector('[data-terra-overlay-container-content]').setAttribute('inert', '');
+      }
     } else {
       const selector = this.props.rootSelector;
       if (document.querySelector(selector)) document.querySelector(selector).setAttribute('inert', '');
@@ -116,7 +118,9 @@ class Overlay extends React.Component {
 
   enableContainerChildrenFocus() {
     if (this.props.isRelativeToContainer) {
-      if (this.container) this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
+      if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
+        this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
+      }
     } else {
       const selector = this.props.rootSelector;
       if (document.querySelector(selector)) document.querySelector(selector).removeAttribute('inert');
