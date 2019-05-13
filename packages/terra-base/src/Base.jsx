@@ -74,10 +74,8 @@ class Base extends React.Component {
   render() {
     const {
       children,
-      locale,
       customMessages,
       strictMode,
-      translationsLoadingPlaceholder,
     } = this.props;
 
     const messages = Object.assign({}, this.state.messages, customMessages);
