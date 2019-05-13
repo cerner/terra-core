@@ -11,7 +11,7 @@ const propTypes = {
   /**
    * The source for the image which will be displayed.
    */
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   /**
    * The text content that specifies an alternative text for an image.
    */
@@ -48,7 +48,11 @@ const ProfileImage = (props) => {
       style={{ height: fixedHeight, width: fixedWidth }}
     />
   );
-  return (<div><TerraImage placeholder={placeholderImage} {...props} /></div>);
+
+  if (props.src) {
+    return (<div><TerraImage placeholder={placeholderImage} {...props} /></div>);
+  }
+  return placeholderImage;
 };
 
 ProfileImage.propTypes = propTypes;
