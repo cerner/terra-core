@@ -203,7 +203,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
           active={true}
           focusTrapOptions={Object {}}
           paused={false}
-          tag="div"
         >
           <div>
             <div
@@ -421,7 +420,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
           active={true}
           focusTrapOptions={Object {}}
           paused={false}
-          tag="div"
         >
           <div>
             <div

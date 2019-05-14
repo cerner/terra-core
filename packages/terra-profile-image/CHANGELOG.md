@@ -4,6 +4,10 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Changed `src` to be an optional prop.
+* When `src` is not provided it loads avatar image.
+
 3.8.0 - (May 1, 2019)
 ------------------
 ### Changed
