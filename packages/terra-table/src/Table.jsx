@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import uniqueid from 'lodash.uniqueid';
 import TableHeader from './TableHeader';
 import TableHeaderCell from './TableHeaderCell';
 import TableRows from './TableRows';
@@ -34,11 +35,40 @@ const defaultProps = {
   isPadded: true,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
+function cloneChildItems(children, selectableRowHelpTextId, selectedRowHelpTextId, liveRegion) {
+  return React.Children.map(children, (child) => {
+    switch (child.type) {
+      case SelectableTableRows:
+      case TableSingleSelectableRows:
+      case TableMultiSelectableRows: {
+        const newProps = {};
+        newProps.selectableRowHelpTextId = selectableRowHelpTextId;
+        newProps.selectedRowHelpTextId = selectedRowHelpTextId;
+        newProps.liveRegion = liveRegion;
+        return React.cloneElement(child, newProps);
+      }
+      default:
+        return child;
+    }
+  });
+}
+
 const Table = ({
   children,
   isStriped,
   isPadded,
   ...customProps
+}, {
+  intl,
 }) => {
   const tableClassNames = cx([
     'table',
@@ -46,15 +76,26 @@ const Table = ({
     { padded: isPadded },
     customProps.className,
   ]);
+
+  const liveRegion = React.createRef();
+  const selectableRowHelpTextId = `terra-table-row-selectable-${uniqueid()}`;
+  const selectedRowHelpTextId = `terra-table-row-selected-${uniqueid()}`;
+
   return (
-    <table {...customProps} className={tableClassNames}>
-      {children}
-    </table>
+    <React.Fragment>
+      <table {...customProps} className={tableClassNames}>
+        {cloneChildItems(children, selectableRowHelpTextId, selectedRowHelpTextId, liveRegion)}
+      </table>
+      <p aria-atomic="false" className={cx('visually-hidden-component')} aria-live="assertive" aria-relevant="additions text" ref={liveRegion} />
+      <p aria-hidden className={cx('row-select-help-text')} id={selectableRowHelpTextId}>{intl.formatMessage({ id: 'Terra.table.selectableRow' })}</p>
+      <p aria-hidden className={cx('row-select-help-text')} id={selectedRowHelpTextId}>{intl.formatMessage({ id: 'Terra.table.selectedRow' })}</p>
+    </React.Fragment>
   );
 };
 
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
+Table.contextTypes = contextTypes;
 Table.Rows = TableRows;
 Table.Header = TableHeader;
 Table.HeaderCell = TableHeaderCell;

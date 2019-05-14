@@ -4,18 +4,22 @@ exports[`should render a default table row 1`] = `
 <tr
   aria-selected={false}
   className="row"
+  role="row"
 >
   <TableCell
     content="John Smith"
-    key="NAME"
+    isSelected={false}
+    key=".$NAME"
   />
   <TableCell
     content="123 Adams Drive"
-    key="ADDRESS"
+    isSelected={false}
+    key=".$ADDRESS"
   />
   <TableCell
     content="111-222-3333"
-    key="PHONE_NUMBER"
+    isSelected={false}
+    key=".$PHONE_NUMBER"
   />
 </tr>
 `;
@@ -24,18 +28,25 @@ exports[`should render a selectable table row 1`] = `
 <tr
   aria-selected={false}
   className="is-selectable row"
+  role="row"
 >
   <TableCell
     content="John Smith"
-    key="NAME"
+    isSelectable={true}
+    isSelected={false}
+    key=".$NAME"
   />
   <TableCell
     content="123 Adams Drive"
-    key="ADDRESS"
+    isSelectable={true}
+    isSelected={false}
+    key=".$ADDRESS"
   />
   <TableCell
     content="111-222-3333"
-    key="PHONE_NUMBER"
+    isSelectable={true}
+    isSelected={false}
+    key=".$PHONE_NUMBER"
   />
 </tr>
 `;
@@ -44,18 +55,22 @@ exports[`should render a selected table row 1`] = `
 <tr
   aria-selected={true}
   className="is-selected row"
+  role="row"
 >
   <TableCell
     content="John Smith"
-    key="NAME"
+    isSelected={true}
+    key=".$NAME"
   />
   <TableCell
     content="123 Adams Drive"
-    key="ADDRESS"
+    isSelected={true}
+    key=".$ADDRESS"
   />
   <TableCell
     content="111-222-3333"
-    key="PHONE_NUMBER"
+    isSelected={true}
+    key=".$PHONE_NUMBER"
   />
 </tr>
 `;
