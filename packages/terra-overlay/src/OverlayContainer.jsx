@@ -12,7 +12,7 @@ const propTypes = {
   overlay: PropTypes.node,
   /**
   * The elements that overlay should hide when overlay isOpen.
-  * elements which are not included in overlay will be wrapped within childern for better use of accessibility.
+  * elements which are not included in overlay will be wrapped within children for better use of accessibility.
   */
   children: PropTypes.node,
 };
@@ -29,9 +29,9 @@ const OverlayContainer = ({ overlay, children, ...customProps }) => {
   ]);
 
   return (
-    <div {...customProps} className={OverlayContainerClassNames} tabIndex="-1">
+    <div {...customProps} className={OverlayContainerClassNames}>
       {overlay}
-      <div className={cx('container-content')}>
+      <div data-terra-overlay-container-content className={cx('container-content')}>
         {children}
       </div>
     </div>

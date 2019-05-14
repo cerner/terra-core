@@ -33,7 +33,9 @@
     "react-portal": "^4.1.2",
     "terra-button": "^3.12.0",
     "terra-doc-template": "^2.9.0",
-    "terra-icon": "^3.9.0"
+    "terra-icon": "^3.9.0",
+    "wicg-inert": "^2.1.0",
+    "mutationobserver-shim": "0.3.3"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
