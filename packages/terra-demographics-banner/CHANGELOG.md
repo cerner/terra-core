@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.11.0 - (May 9, 2019)
+------------------
 ### Changed
 * Update background-clip to border-box
 

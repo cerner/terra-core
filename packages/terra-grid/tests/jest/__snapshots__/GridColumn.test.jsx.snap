@@ -10,7 +10,7 @@ exports[`should render a default Column 1`] = `
 
 exports[`should render column with all size breakpoints 1`] = `
 <div
-  className="column column-tiny-12 column-small-3 column-medium-2 column-large-1 column-huge-2"
+  className="column column-tiny-12 column-small-3 column-medium-2 column-large-1 column-huge-2 column-enormous-2"
 >
   Test
 </div>
@@ -18,7 +18,7 @@ exports[`should render column with all size breakpoints 1`] = `
 
 exports[`should render specified width column 1`] = `
 <div
-  className="column column-3"
+  className="column column-tiny-3"
 >
   Test
 </div>

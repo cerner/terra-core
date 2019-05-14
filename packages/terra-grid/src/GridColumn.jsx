@@ -25,50 +25,50 @@ const propTypes = {
    */
   className: PropTypes.string,
   /**
-   * The number of columns across all breakpoints. From 1-12(inclusively).
+   * Defines the number of columns this container will span in the 12 column grid. It is applied at the `tiny` breakpoint and wider screens.
    */
-  col: columnRange,
+  tiny: columnRange,
   /**
-   * The number of columns starts from huge breakpoint. From 1-12(inclusively).
+   * Defines the number of columns this container will span in the 12 column grid. It is applied at the `enormous` breakpoint and wider screens.
+   */
+  enormous: columnRange,
+  /**
+   * Defines the number of columns this container will span in the 12 column grid. It is applied at the `huge` breakpoint and wider screens.
    */
   huge: columnRange,
   /**
-   * The number of columns starts from large breakpoint. From 1-12 (inclusively).
+   * Defines the number of columns this container will span in the 12 column grid. It is applied at the `large` breakpoint and wider screens.
    */
   large: columnRange,
   /**
-   * The number of columns starts from medium breakpoint. From 1-12 (inclusively).
+   * Defines the number of columns this container will span in the 12 column grid. It is applied at the `medium` breakpoint and wider screens.
    */
   medium: columnRange,
   /**
-   * The number of columns starts from small breakpoint. From 1-12 (inclusively).
+   * Defines the number of columns this container will span in the 12 column grid. It is applied at the `small` breakpoint and wider screens.
    */
   small: columnRange,
-  /**
-   * The number of columns starts from tiny breakpoint. From 1-12 (inclusively).
-   */
-  tiny: columnRange,
 };
 
 const GridColumn = ({
   className,
   children,
-  col,
   tiny,
   small,
   medium,
   large,
   huge,
+  enormous,
   ...customProps
 }) => {
   const colClassNames = cx([
     'column', {
-      [`column-${col}`]: col,
       [`column-tiny-${tiny}`]: tiny,
       [`column-small-${small}`]: small,
       [`column-medium-${medium}`]: medium,
       [`column-large-${large}`]: large,
       [`column-huge-${huge}`]: huge,
+      [`column-enormous-${enormous}`]: enormous,
     },
     className,
   ]);

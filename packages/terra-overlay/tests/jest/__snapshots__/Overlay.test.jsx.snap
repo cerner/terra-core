@@ -16,16 +16,17 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
     active={true}
     focusTrapOptions={Object {}}
     paused={false}
-    tag="div"
   >
-    <div
-      className="overlay fullscreen clear layer-100"
-      onClick={[Function]}
-      tabIndex="0"
-    >
+    <div>
       <div
-        className="content"
-      />
+        className="overlay fullscreen clear layer-100"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <div
+          className="content"
+        />
+      </div>
     </div>
   </FocusTrap>
 </Portal>
@@ -45,16 +46,17 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
     active={true}
     focusTrapOptions={Object {}}
     paused={false}
-    tag="div"
   >
-    <div
-      className="overlay fullscreen dark layer-100"
-      onClick={[Function]}
-      tabIndex="0"
-    >
+    <div>
       <div
-        className="content"
-      />
+        className="overlay fullscreen dark layer-100"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <div
+          className="content"
+        />
+      </div>
     </div>
   </FocusTrap>
 </Portal>
@@ -74,16 +76,17 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
     active={true}
     focusTrapOptions={Object {}}
     paused={false}
-    tag="div"
   >
-    <div
-      className="overlay fullscreen light layer-100"
-      onClick={[Function]}
-      tabIndex="0"
-    >
+    <div>
       <div
-        className="content"
-      />
+        className="overlay fullscreen light layer-100"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <div
+          className="content"
+        />
+      </div>
     </div>
   </FocusTrap>
 </Portal>
@@ -103,16 +106,17 @@ exports[`Overlay when isOpen is provided -default Overlay when isOpen- should re
     active={true}
     focusTrapOptions={Object {}}
     paused={false}
-    tag="div"
   >
-    <div
-      className="overlay fullscreen light layer-100"
-      onClick={[Function]}
-      tabIndex="0"
-    >
+    <div>
       <div
-        className="content"
-      />
+        className="overlay fullscreen light layer-100"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <div
+          className="content"
+        />
+      </div>
     </div>
   </FocusTrap>
 </Portal>
@@ -132,17 +136,18 @@ exports[`Overlay when isOpen is provided should render with content 1`] = `
     active={true}
     focusTrapOptions={Object {}}
     paused={false}
-    tag="div"
   >
-    <div
-      className="overlay fullscreen light layer-100"
-      onClick={[Function]}
-      tabIndex="0"
-    >
+    <div>
       <div
-        className="content"
+        className="overlay fullscreen light layer-100"
+        onClick={[Function]}
+        tabIndex="0"
       >
-        Overlay message
+        <div
+          className="content"
+        >
+          Overlay message
+        </div>
       </div>
     </div>
   </FocusTrap>
@@ -175,16 +180,17 @@ exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
     active={true}
     focusTrapOptions={Object {}}
     paused={false}
-    tag="div"
   >
-    <div
-      className="overlay fullscreen light scrollable layer-100"
-      onClick={[Function]}
-      tabIndex="0"
-    >
+    <div>
       <div
-        className="content"
-      />
+        className="overlay fullscreen light scrollable layer-100"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <div
+          className="content"
+        />
+      </div>
     </div>
   </FocusTrap>
 </Portal>
@@ -204,16 +210,17 @@ exports[`Overlay when isOpen is provided should render with onRequestClose 1`] =
     active={true}
     focusTrapOptions={Object {}}
     paused={false}
-    tag="div"
   >
-    <div
-      className="overlay fullscreen light layer-100"
-      onClick={[Function]}
-      tabIndex="0"
-    >
+    <div>
       <div
-        className="content"
-      />
+        className="overlay fullscreen light layer-100"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <div
+          className="content"
+        />
+      </div>
     </div>
   </FocusTrap>
 </Portal>
