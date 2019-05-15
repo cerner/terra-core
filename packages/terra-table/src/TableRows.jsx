@@ -16,14 +16,28 @@ const propTypes = {
    * A callback function for onKeyDown action
    */
   onKeyDown: PropTypes.func,
+  /**
+   * @private
+   * Id of the helper text identifying a row is selectable. Populates the aria-describedby attribute
+   * of a child row.
+   */
+  selectableRowHelpTextId: PropTypes.string,
+  /**
+   * @private
+   * Id of the helper text identifying a row is selected. Populates the aria-describedby attribute
+   * of a child row.
+   */
+  selectedRowHelpTextId: PropTypes.string,
 };
 
 const defaultProps = {
   onClick: undefined,
   onKeyDown: undefined,
+  selectableRowHelpTextId: undefined,
+  selectedRowHelpTextId: undefined,
 };
 
-function cloneChildItems(children, onClick, onKeyDown, numberOfCols) {
+function cloneChildItems(children, onClick, onKeyDown, numberOfCols, selectableRowHelpTextId, selectedRowHelpTextId) {
   return React.Children.map(children, (child) => {
     const newProps = {};
     if (onClick) {
@@ -32,6 +46,15 @@ function cloneChildItems(children, onClick, onKeyDown, numberOfCols) {
     if (onKeyDown) {
       newProps.onKeyDown = onKeyDown;
     }
+
+    if (selectableRowHelpTextId) {
+      newProps.selectableRowHelpTextId = selectableRowHelpTextId;
+    }
+
+    if (selectedRowHelpTextId) {
+      newProps.selectedRowHelpTextId = selectedRowHelpTextId;
+    }
+
     if (child.type === TableRow) {
       return React.cloneElement(child, newProps);
     }
@@ -60,10 +83,12 @@ const TableRows = ({
   children,
   onClick,
   onKeyDown,
+  selectableRowHelpTextId,
+  selectedRowHelpTextId,
   ...customProps
 }) => {
   const numberOfCols = getNumberOfColumns(children);
-  const cloneChildren = cloneChildItems(children, onClick, onKeyDown, numberOfCols);
+  const cloneChildren = cloneChildItems(children, onClick, onKeyDown, numberOfCols, selectableRowHelpTextId, selectedRowHelpTextId);
   return (
     <tbody {...customProps}>
       {cloneChildren}

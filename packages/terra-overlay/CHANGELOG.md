@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.14.0 - (May 14, 2019)
+------------------
+### Changed
+* Updated overlay to use WICG inert polyfill to handle focus management when overlay is open
+
 3.13.0 - (May 9, 2019)
 ------------------
 ### Changed
