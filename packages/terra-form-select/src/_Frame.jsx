@@ -139,6 +139,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
+      activeValue: '',
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -162,9 +163,11 @@ class Frame extends React.Component {
     this.handleInputBlur = this.handleInputBlur.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
+    this.handleActiveChange = this.handleActiveChange.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
+    this.shouldSearch = true;
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -183,7 +186,7 @@ class Frame extends React.Component {
   }
 
   getDisplay(displayId, placeholderId, ariaDescribedBy) {
-    const { hasSearchChanged, searchValue } = this.state;
+    const { hasSearchChanged, searchValue, activeValue } = this.state;
     const {
       disabled, display, placeholder, variant,
     } = this.props;
@@ -222,15 +225,15 @@ class Frame extends React.Component {
               ) : null
             }
             <li className={cx('search-wrapper')}>
-              <input {...inputAttrs} value={searchValue} />
+              <input {...inputAttrs} value={this.shouldSearch? searchValue: activeValue} />
             </li>
           </ul>
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <div className={cx('content')}><input {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
+        return <div className={cx('content')}><input {...inputAttrs} value={this.shouldSearch? hasSearchChanged ? searchValue : display : activeValue} /></div>;
       default:
-        return display ? <span id={displayId}>{display}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
+        return activeValue || display ? <span id={displayId}>{activeValue || display}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
   }
 
@@ -238,6 +241,13 @@ class Frame extends React.Component {
    * Closes the dropdown.
    */
   closeDropdown() {
+
+    let activeValue = '';
+
+    if (this.props.variant === Variants.SEARCH) {
+      activeValue = this.props.display;
+    }
+
     this.setState({
       isAbove: false,
       isFocused: document.activeElement === this.input || document.activeElement === this.select,
@@ -245,6 +255,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
+      activeValue,
     });
 
     // Tags and Comboboxes will select the current search value when the component loses focus.
@@ -444,12 +455,15 @@ class Frame extends React.Component {
    */
   handleSearch(event) {
     const searchValue = event.target.value;
+    this.shouldSearch = true;
 
     this.setState({
       isOpen: true,
       hasSearchChanged: true,
       searchValue,
     });
+
+    debugger;
 
     if (this.props.onSearch) {
       this.props.onSearch(searchValue);
@@ -465,6 +479,8 @@ class Frame extends React.Component {
     const { isAbove } = this.state;
     const isOpen = Util.allowsMultipleSelections(this.props);
 
+    this.shouldSearch = true;
+
     this.setState({
       searchValue: '',
       hasSearchChanged: false,
@@ -475,6 +491,18 @@ class Frame extends React.Component {
     if (this.props.onSelect) {
       this.props.onSelect(value, option);
     }
+  }
+
+  /**
+   * Handles the request to when the active option changes.
+   * @param {ReactNode} option - The option that becomes active.
+   */
+  handleActiveChange(option) {
+    this.shouldSearch = false;
+
+    this.setState({
+      activeValue: option.props.display,
+    });
   }
 
   /**
@@ -686,7 +714,6 @@ class Frame extends React.Component {
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
 
-
     return (
       <div
         {...customProps}
@@ -750,6 +777,7 @@ class Frame extends React.Component {
                  select: this.select,
                  maxSelectionCount,
                  clearOptionDisplay,
+                 onActiveChange: this.handleActiveChange,
                })}
           </Dropdown>
           )

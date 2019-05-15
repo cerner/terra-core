@@ -45,6 +45,10 @@ const propTypes = {
    */
   maxSelectionCount: PropTypes.number,
   /**
+   * @private Callback function triggered when an option becomes active.
+   */
+  onActiveChange: PropTypes.func,
+  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
@@ -89,6 +93,7 @@ const defaultProps = {
   input: undefined,
   clearOptionDisplay: undefined,
   maxSelectionCount: undefined,
+  onActiveChange: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
@@ -366,14 +371,24 @@ class Menu extends React.Component {
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: Util.findPrevious(children, active) });
+      let activeValue = Util.findPrevious(children, active);
+      this.setState({ active: activeValue });
       this.updateCurrentActiveScreenReader();
+
+      if (this.props.onActiveChange && activeValue) {
+        this.props.onActiveChange(Util.findByValue(children, activeValue));
+      }
     } else if (keyCode === KeyCode.KEY_DOWN) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: Util.findNext(children, active) });
+      let activeValue = Util.findNext(children, active);
+      this.setState({ active: activeValue });
       this.updateCurrentActiveScreenReader();
-    } else if (keyCode === KeyCode.KEY_RETURN && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
+
+      if (this.props.onActiveChange && activeValue) {
+        this.props.onActiveChange(Util.findByValue(children, activeValue));
+      }
+    } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB)  && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
       this.setState({ closedViaKeyEvent: true });
       const option = Util.findByValue(children, active);
@@ -402,7 +417,7 @@ class Menu extends React.Component {
         this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
       }
       onSelect(option.props.value, option);
-    } else if (keyCode === KeyCode.KEY_RETURN && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
+    } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB) && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       // Handles communicating the case where a regular option is Unselected to screen readers.
@@ -429,11 +444,21 @@ class Menu extends React.Component {
     } else if (keyCode === KeyCode.KEY_END) {
       event.preventDefault();
       this.setState({ active: Util.findLast(children) });
-    } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {
+    } else if (/*variant === Variants.DEFAULT && */keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(this.clearSearch, 500);
       this.setState(prevState => ({ active: Util.findWithStartString(prevState.children, this.searchString) || active }));
+
+      console.log('********active ', active);
+      console.log('********this.state.active ', this.state.active);
+
+      if (variant === Variants.DEFAULT) {
+        let activeValue= Util.findWithStartString(children, this.searchString) || active;
+        if (this.props.onActiveChange && activeValue) {
+          this.props.onActiveChange(Util.findByValue(children, activeValue));
+        }
+      }
     }
   }
 
