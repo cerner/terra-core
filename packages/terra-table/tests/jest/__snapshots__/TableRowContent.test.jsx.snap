@@ -3,6 +3,7 @@
 exports[`should render a default table row content 1`] = `
 <td
   data-terra-table-cell={true}
+  role="cell"
 >
   Table Data
 </td>

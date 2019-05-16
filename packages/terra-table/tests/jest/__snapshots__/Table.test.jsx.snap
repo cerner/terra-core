@@ -1,181 +1,340 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a default table 1`] = `
-<table
-  className="table striped padded"
->
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
-      isSelected={false}
-      key="PERSON_0"
+<Fragment>
+  <table
+    className="table striped padded"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <TableHeader
+      key=".0"
     >
-      <TableCell
-        content="John Smith"
+      <TableHeaderCell
+        content="Name"
         key="NAME"
+        minWidth="small"
       />
-      <TableCell
-        content="123 Adams Drive"
+      <TableHeaderCell
+        content="Address"
         key="ADDRESS"
+        minWidth="small"
       />
-      <TableCell
-        content="111-222-3333"
+      <TableHeaderCell
+        content="Phone Number"
         key="PHONE_NUMBER"
+        minWidth="small"
       />
-    </TableRow>
-    <TableRow
-      isSelected={false}
-      key="PERSON_1"
+    </TableHeader>
+    <TableRows
+      key=".1"
     >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-  </TableRows>
-</table>
+      <TableRow
+        isSelected={false}
+        key="PERSON_0"
+      >
+        <TableCell
+          content="John Smith"
+          key="NAME"
+        />
+        <TableCell
+          content="123 Adams Drive"
+          key="ADDRESS"
+        />
+        <TableCell
+          content="111-222-3333"
+          key="PHONE_NUMBER"
+        />
+      </TableRow>
+      <TableRow
+        isSelected={false}
+        key="PERSON_1"
+      >
+        <TableCell
+          content="John Smith"
+          key="NAME"
+        />
+        <TableCell
+          content="123 Adams Drive"
+          key="ADDRESS"
+        />
+        <TableCell
+          content="111-222-3333"
+          key="PHONE_NUMBER"
+        />
+      </TableRow>
+    </TableRows>
+  </table>
+  <p
+    aria-atomic="false"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selectable-1"
+  >
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-2"
+  >
+    Terra.table.selectedRow
+  </p>
+</Fragment>
 `;
 
 exports[`should render a table without padding 1`] = `
-<table
-  className="table striped"
->
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
-      isSelected={false}
-      key="PERSON_0"
+<Fragment>
+  <table
+    className="table striped"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <TableHeader
+      key=".0"
     >
-      <TableCell
-        content="John Smith"
+      <TableHeaderCell
+        content="Name"
         key="NAME"
+        minWidth="small"
       />
-      <TableCell
-        content="123 Adams Drive"
+      <TableHeaderCell
+        content="Address"
         key="ADDRESS"
+        minWidth="small"
       />
-      <TableCell
-        content="111-222-3333"
+      <TableHeaderCell
+        content="Phone Number"
         key="PHONE_NUMBER"
+        minWidth="small"
       />
-    </TableRow>
-    <TableRow
-      isSelected={false}
-      key="PERSON_1"
+    </TableHeader>
+    <TableRows
+      key=".1"
     >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-  </TableRows>
-</table>
+      <TableRow
+        isSelected={false}
+        key="PERSON_0"
+      >
+        <TableCell
+          content="John Smith"
+          key="NAME"
+        />
+        <TableCell
+          content="123 Adams Drive"
+          key="ADDRESS"
+        />
+        <TableCell
+          content="111-222-3333"
+          key="PHONE_NUMBER"
+        />
+      </TableRow>
+      <TableRow
+        isSelected={false}
+        key="PERSON_1"
+      >
+        <TableCell
+          content="John Smith"
+          key="NAME"
+        />
+        <TableCell
+          content="123 Adams Drive"
+          key="ADDRESS"
+        />
+        <TableCell
+          content="111-222-3333"
+          key="PHONE_NUMBER"
+        />
+      </TableRow>
+    </TableRows>
+  </table>
+  <p
+    aria-atomic="false"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selectable-5"
+  >
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-6"
+  >
+    Terra.table.selectedRow
+  </p>
+</Fragment>
 `;
 
 exports[`should render a table without zebra stripes 1`] = `
-<table
-  className="table padded"
->
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
-      isSelected={false}
-      key="PERSON_0"
+<Fragment>
+  <table
+    className="table padded"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <TableHeader
+      key=".0"
     >
-      <TableCell
-        content="John Smith"
+      <TableHeaderCell
+        content="Name"
         key="NAME"
+        minWidth="small"
       />
-      <TableCell
-        content="123 Adams Drive"
+      <TableHeaderCell
+        content="Address"
         key="ADDRESS"
+        minWidth="small"
       />
-      <TableCell
-        content="111-222-3333"
+      <TableHeaderCell
+        content="Phone Number"
         key="PHONE_NUMBER"
+        minWidth="small"
       />
-    </TableRow>
-    <TableRow
-      isSelected={false}
-      key="PERSON_1"
+    </TableHeader>
+    <TableRows
+      key=".1"
     >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-  </TableRows>
-</table>
+      <TableRow
+        isSelected={false}
+        key="PERSON_0"
+      >
+        <TableCell
+          content="John Smith"
+          key="NAME"
+        />
+        <TableCell
+          content="123 Adams Drive"
+          key="ADDRESS"
+        />
+        <TableCell
+          content="111-222-3333"
+          key="PHONE_NUMBER"
+        />
+      </TableRow>
+      <TableRow
+        isSelected={false}
+        key="PERSON_1"
+      >
+        <TableCell
+          content="John Smith"
+          key="NAME"
+        />
+        <TableCell
+          content="123 Adams Drive"
+          key="ADDRESS"
+        />
+        <TableCell
+          content="111-222-3333"
+          key="PHONE_NUMBER"
+        />
+      </TableRow>
+    </TableRows>
+  </table>
+  <p
+    aria-atomic="false"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selectable-3"
+  >
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-4"
+  >
+    Terra.table.selectedRow
+  </p>
+</Fragment>
 `;

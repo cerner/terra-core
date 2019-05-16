@@ -1,0 +1,6 @@
+{
+  "Terra.table.selectableRow": "Cette ligne peut être sélectionnée.",
+  "Terra.table.selectedRow": "Cette ligne est sélectionnée.",
+  "Terra.table.rowSelected": "Ligne sélectionnée",
+  "Terra.table.rowUnselected": "Ligne non sélectionnée"
+}
