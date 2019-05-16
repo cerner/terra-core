@@ -3,11 +3,12 @@ import TextareaField from '../../../TextareaField';
 
 const DefaultTextAreaField = () => (
   <TextareaField
-    inputId="textarea"
-    label="Textarea"
+    inputId="requiredTextarea"
+    label="Required Textarea"
     help="Note: This is help text"
+    required
     inputAttrs={{
-      name: 'textarea',
+      name: 'requiredTextarea',
       placeholder: 'Textarea placeholder',
     }}
   />

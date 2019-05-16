@@ -89,6 +89,10 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
+   * Whether the field is required.
+   */
+  required: PropTypes.bool,
+  /**
    * Total number of options.
    */
   totalOptions: PropTypes.number,
@@ -121,6 +125,7 @@ const defaultProps = {
   onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
+  required: false,
   totalOptions: undefined,
   value: undefined,
   variant: Variants.DEFAULT,
@@ -185,7 +190,7 @@ class Frame extends React.Component {
   getDisplay(displayId, placeholderId, ariaDescribedBy) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, variant,
+      disabled, display, placeholder, required, variant,
     } = this.props;
 
     const inputAttrs = {
@@ -196,6 +201,8 @@ class Frame extends React.Component {
       onFocus: this.handleInputFocus,
       onBlur: this.handleInputBlur,
       onMouseDown: this.handleInputMouseDown,
+      required,
+      'aria-required': required,
       'aria-label': this.ariaLabel(),
       'aria-describedby': (variant === Variants.TAG || variant === Variants.MULTIPLE) ? `${displayId} ${ariaDescribedBy}` : ariaDescribedBy,
       'aria-disabled': disabled,
@@ -658,6 +665,7 @@ class Frame extends React.Component {
       onSelect,
       optionFilter,
       placeholder,
+      required,
       totalOptions,
       variant,
       value,
@@ -691,6 +699,7 @@ class Frame extends React.Component {
       <div
         {...customProps}
         role={this.role()}
+        aria-required={variant === Variants.DEFAULT ? required : null}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}

@@ -763,6 +763,7 @@ exports[`should render an inline field with most of the possible props are passe
   </div>
   <input
     id="test"
+    key=".0"
     type="text"
   />
   <div

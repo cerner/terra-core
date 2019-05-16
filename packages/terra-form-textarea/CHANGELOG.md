@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added `isTextarea` type on Textarea component to help with component identity
 
 3.12.0 - (May 1, 2019)
 ------------------

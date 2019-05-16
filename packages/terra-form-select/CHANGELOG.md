@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added `required` prop
+* Added `isSelect` type on Select component to help with component identity
 
 5.15.0 - (May 1, 2019)
 ------------------

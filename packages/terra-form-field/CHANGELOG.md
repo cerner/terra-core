@@ -7,6 +7,12 @@ Unreleased
 3.10.0 - (May 1, 2019)
 ------------------
 ### Changed
+* Added functionality to pass required prop on form-field down to terra-form-input, terra-form-select, or terra-form-textarea when rendered as children in terra-form-field.
+
+
+3.10.0 - (May 1, 2019)
+------------------
+### Changed
 * Minor dependency version bump
 
 3.9.0 - (April 16, 2019)
