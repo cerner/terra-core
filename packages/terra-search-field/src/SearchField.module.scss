@@ -24,6 +24,11 @@
       &:active {
         background-color: rgba(0, 0, 0, 0);
       }
+
+      &:focus {
+        border: var(--terra-search-field-clear-focus-border, 1px solid #4cb2e9);
+        box-shadow: none;
+      }
     }
 
     .clear-icon {
@@ -33,7 +38,6 @@
       margin-top: var(--terra-search-field-clear-icon-margin-top, -0.214285rem);
       vertical-align: middle;
       width: var(--terra-search-field-clear-icon-width, 1.14286rem);
-      z-index: 1;
     }
 
     .input {
@@ -84,10 +88,10 @@
       margin-left: var(--terra-search-field-button-margin-left, 0);
       margin-right: var(--terra-search-field-button-margin-right, 0);
       margin-top: var(--terra-search-field-button-margin-top, 0);
-      z-index: 1;
 
       &:focus {
-        box-shadow: var(--terra-search-field-button-focus-box-shadow);
+        //box-shadow: var(--terra-search-field-button-focus-box-shadow);
+        border: var(--terra-search-field-input-clear-focus-border, 1px solid #4cb2e9);
       }
     }
   }
