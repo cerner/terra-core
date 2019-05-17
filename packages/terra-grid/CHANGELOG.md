@@ -4,6 +4,17 @@ Changelog
 Unreleased
 ----------
 
+6.0.0 - (May 9, 2019)
+------------------
+### Breaking Changes
+* Removed variables.scss file, SCSS media query breakpoints now imported from terra-breakpoints
+* Changed `col` (removed) prop to `tiny`
+* Changed `tiny` prop to `small`
+* Changed `small` prop to `medium`
+* Changed `medium` prop to `large`
+* Changed `large` prop to `huge`
+* Changed `huge` prop to `enormous` (new)
+
 5.9.0 - (May 1, 2019)
 ------------------
 ### Changed

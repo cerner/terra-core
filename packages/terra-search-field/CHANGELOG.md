@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.13.0 - (May 14, 2019)
+------------------
+### Changed
+* Added a doc site example with AutoFormat attributes disabled
+
 3.12.0 - (May 1, 2019)
 ------------------
 ### Changed

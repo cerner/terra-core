@@ -85,11 +85,11 @@
     "react-dom": "^16.8.5",
     "react-router-dom": "^4.0.0",
     "react-test-renderer": "^16.5.2",
-    "stylelint": "^9.0.0",
-    "stylelint-config-terra": "^2.0.0",
-    "terra-dev-site": "git://github.com/cerner/terra-dev-site.git#toolkit-as-peer-dep",
+    "stylelint": "^10.0.1",
+    "stylelint-config-terra": "^3.0.0",
+    "terra-dev-site": "git://github.com/cerner/terra-dev-site.git#v5",
     "terra-enzyme-intl": "^3.0.0",
-    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#toolkit-v5-fix-viewport",
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#master",
     "webpack-merge": "^4.1.2"
   }
 }
