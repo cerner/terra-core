@@ -1,3 +1,0 @@
-filename: CHANGELOG.md
-include:
-  - /^packages\/(.*?)\/src\//
