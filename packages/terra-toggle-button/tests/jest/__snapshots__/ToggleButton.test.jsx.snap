@@ -96,8 +96,8 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
     class="toggle"
   >
     <div
-      aria-hidden="false"
-      class="rah-static"
+      aria-hidden="true"
+      class="rah-static rah-static--height-zero"
       style="height:0;overflow:hidden"
     >
       <div>
