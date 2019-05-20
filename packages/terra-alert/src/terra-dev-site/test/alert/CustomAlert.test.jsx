@@ -1,6 +1,11 @@
 import React from 'react';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import Alert from '../../../Alert';
+import styles from '../../doc/example/colors.module.scss';
+import classNames from 'classnames/bind';
+
+const cx=classNames.bind(styles);
+
 
 export default () => (
   <div>
@@ -10,7 +15,7 @@ export default () => (
     <br />
     <Alert id="custom3" type={Alert.Opts.Types.CUSTOM} customIcon={<IconHelp />}>Custom Alert with icon but no title or custom color</Alert>
     <br />
-    <Alert id="custom4" type={Alert.Opts.Types.CUSTOM} customStatusColor="orange">Custom Alert with custom color but no title or icon</Alert>
+    <Alert id="custom4" type={Alert.Opts.Types.CUSTOM} customColorClass={cx(["orange"])}>Custom Alert with custom color but no title or icon</Alert>
     <br />
     <Alert id="custom5" type={Alert.Opts.Types.CUSTOM} title="Custom_Alert:" customStatusColor="orange">Custom Alert with custom color and title but no icon</Alert>
     <br />

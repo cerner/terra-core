@@ -124,7 +124,7 @@
 
   .custom {
     background-color: var(--terra-alert-custom-background-color, #f4f4f4);
-    box-shadow: var(--terra-alert-custom-box-shadow, 2px 0 0 #9b9fa1 inset);
+    box-shadow: var(--terra-alert-custom-box-shadow, 2px 0 0 inset);
   }
 
   .alert .title {

@@ -4,7 +4,7 @@ import Toggle from 'terra-toggle';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Alert from 'terra-alert/lib/Alert';
 
-const buttonStyle = { textDecoration: 'underline', color: '#1c11f21' };
+const buttonStyle = { textDecoration: 'underline', color: '#1c11f2' };
 
 class LongTextExample extends React.Component {
   constructor(props) {
