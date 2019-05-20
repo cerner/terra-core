@@ -3,7 +3,7 @@ import InputField from '../../../InputField';
 
 const RequiredInputField = () => (
   <InputField
-    inputId="profile-name"
+    inputId="requiredField"
     label="Required Input Field"
     help="Note: This is help text"
     type="text"

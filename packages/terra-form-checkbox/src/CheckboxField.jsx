@@ -113,7 +113,12 @@ const CheckboxField = (props, { intl }) => {
     <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
       <div {...legendAttrs} className={legendClassNames}>
         {isInvalid && <span className={cx('error-icon')} />}
-        {required && (isInvalid || !hideRequired) && <span className={cx('required')}>*</span>}
+        {required && (isInvalid || !hideRequired) && (
+          <React.Fragment>
+            <div aria-hidden="true" className={cx('required')}>*</div>
+            <span className={cx('visually-hidden-text')}>Required </span>
+          </React.Fragment>
+        )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
         {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
