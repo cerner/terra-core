@@ -1,0 +1,3 @@
+filename: CHANGELOG.md
+include:
+  - /^src\//

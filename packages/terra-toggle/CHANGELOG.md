@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 
+* react-animate-height released a new version that broke our jest tests. Fixing Jest tests.
+
 3.9.0 - (May 1, 2019)
 ------------------
 ### Changed
