@@ -16,6 +16,12 @@ For more details, see [More Information][2].
 ```jsx
 import React from 'react';
 import Alert from 'terra-alert';
+import classNames from 'classnames/bind';
+// eslint-disable-next-line import/no-extraneous-dependencies, import no-unresolved, import/extensions
+import Alert from 'terra-alert/lib/Alert';
+import styles from '../../doc/example/colors.module.scss';
+
+const cx = classNames.bind(styles);
 
 <Alert type="alert" >
   This is an alert with the default title.
@@ -34,7 +40,7 @@ import Alert from 'terra-alert';
 
 <Alert type="custom"
        title="Help!"
-       customStatusColor="orange"
+       customColorClass={cx(['terra-alert-custom-orange-color'])}
        customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} >
   <span>This is a <u>custom</u> alert with a custom title and icon and the content is HTML instead of text.</span>
 </Alert>

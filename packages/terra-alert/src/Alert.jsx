@@ -38,7 +38,7 @@ const propTypes = {
   /**
    * The status bar color to be used for an alert of type custom.
    */
-  customStatusColor: PropTypes.string,
+  customColorClass: PropTypes.string,
   /**
    * Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.
    */
@@ -66,7 +66,7 @@ const defaultProps = {
   action: null,
   children: '',
   customIcon: null,
-  customStatusColor: '',
+  customColorClass: '',
   onDismiss: null,
   title: '',
   type: AlertTypes.ALERT,
@@ -107,7 +107,7 @@ const Alert = ({
   children,
   title,
   customIcon,
-  customStatusColor,
+  customColorClass,
   onDismiss,
   action,
   ...customProps
@@ -116,13 +116,13 @@ const Alert = ({
 }) => {
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const attributes = Object.assign({}, customProps);
-  const narrowAlertClassNames = cx([
+  let narrowAlertClassNames = cx([
     'alert-base',
     type,
     'narrow',
     attributes.className,
   ]);
-  const wideAlertClassNames = cx([
+  let wideAlertClassNames = cx([
     'alert-base',
     type,
     'wide',
@@ -131,20 +131,25 @@ const Alert = ({
 
   let actionsSection = '';
   let dismissButton = '';
-  const outerDivStyle = {};
   let alertSectionClassName = cx('section');
   let actionsClassName = cx('actions');
   let bodyClassNameForNarrowParent = cx(['body', 'body-std']);
 
   if (type === AlertTypes.CUSTOM) {
-    // For custom alert, there is no color assigned to the box-shadow style since it is to be specified
-    // in the customStatusColor prop.  The box-shadow style is defined in CSS in order to get the
-    // bidirectionality via the mixin.  As per the W3C spec if the box-shadow does not have the color
-    // defined, it will use the prevailing color style, so setting that here. But then we need to set
-    // the color style for the alert content so that it doesn't pick up the custom status color. We
-    // will allow the icon to pick up the color style so that Terra icons will match the color of the
-    // status bar.
-    outerDivStyle.color = customStatusColor;
+    wideAlertClassNames = cx([
+      'alert-base',
+      type,
+      'wide',
+      attributes.className,
+      customColorClass,
+    ]);
+    narrowAlertClassNames = cx([
+      'alert-base',
+      type,
+      'narrow',
+      attributes.className,
+      customColorClass,
+    ]);
     alertSectionClassName = cx(['section', 'section-custom']);
     actionsClassName = cx(['actions', 'actions-custom']);
   }
@@ -173,23 +178,23 @@ const Alert = ({
     <ResponsiveElement
       responsiveTo="parent"
       defaultElement={(
-        <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle}>
+        <div {...attributes} className={narrowAlertClassNames}>
           <div className={bodyClassNameForNarrowParent}>
             {getAlertIcon(type, customIcon)}
             {alertMessageContent}
           </div>
           {actionsSection}
         </div>
-)}
+      )}
       tiny={(
-        <div {...attributes} className={wideAlertClassNames} style={outerDivStyle}>
+        <div {...attributes} className={wideAlertClassNames}>
           <div className={cx(['body', 'body-std'])}>
             {getAlertIcon(type, customIcon)}
             {alertMessageContent}
           </div>
           {actionsSection}
         </div>
-)}
+      )}
     />
 
   );
