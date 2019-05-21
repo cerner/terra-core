@@ -21,6 +21,9 @@
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
+  "browserslist": [
+    "extends browserslist-config-terra"
+  ],
   "eslintConfig": {
     "extends": "terra"
   },
@@ -57,7 +60,7 @@
     "start-heroku": " npm run compile:prod && tt-serve-static --port $PORT --site './build' ",
     "start-static": "tt-serve-static --site ./build",
     "test": "npm run jest && npm run wdio",
-    "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio wdio.config.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -67,6 +70,7 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.8.0",
+    "browserslist-config-terra": "^1.0.0",
     "check-installed-dependencies": "^1.0.0",
     "cross-env": "^5.2.0",
     "danger": "^3.7.14",
