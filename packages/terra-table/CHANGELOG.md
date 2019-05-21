@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added missing en-US and en-AU table translations
 
 3.12.0 - (May 9, 2019)
 ------------------
