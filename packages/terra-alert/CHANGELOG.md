@@ -5,7 +5,7 @@ Unreleased
 ----------
 
 ### Added
-* `customColorClass` prop 
+* Added `customColorClass` prop 
 
 ### Breaking Changes
 * Removed `customStatusColor` prop
