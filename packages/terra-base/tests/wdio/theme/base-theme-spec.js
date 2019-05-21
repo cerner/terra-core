@@ -27,11 +27,5 @@ describe('Base theme', () => {
       },
       selector: '#root',
     });
-
-    it('should scroll to the bottom', () => {
-      browser.moveToObject('#bottom');
-    });
-
-    Terra.should.matchScreenshot('scrolled down', { selector: '#bottom-section' });
   });
 });
