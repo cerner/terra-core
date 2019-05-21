@@ -50,9 +50,6 @@ describe('CheckboxField', () => {
   describe('CheckboxField Interactions - Invalid State', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/controlled-checkbox-field');
-      browser.waitForVisible('#testing-checkbox-field');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
       browser.click('[for="website-dept"]');
       browser.click('[for="ux-dept"]');
     });
@@ -75,8 +72,6 @@ describe('CheckboxField', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/hide-required-invalid-checkbox-field');
       browser.waitForVisible('#testing-checkbox-field');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
       browser.click('[for="website-dept"]');
       browser.click('[for="ux-dept"]');
     });

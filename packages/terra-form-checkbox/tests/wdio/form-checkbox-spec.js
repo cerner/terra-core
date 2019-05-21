@@ -78,7 +78,7 @@ describe('Checkbox', () => {
   };
 
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/default-checkbox'));
+    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/default-checkbox'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -88,8 +88,7 @@ describe('Checkbox', () => {
     });
 
     describe('Hover', () => {
-      beforeEach(() => {
-        browser.waitForVisible('#default');
+      before(() => {
         browser.moveToObject('#default');
       });
 
@@ -99,26 +98,14 @@ describe('Checkbox', () => {
         testName: 'themed',
         properties: { ...themingProperties, ...hoverThemingProperties },
       });
-    });
 
-    describe('Checked', () => {
-      beforeEach(() => {
-        browser.waitForVisible('#default');
-        browser.click('[for="default"]');
-        browser.click('#site');
-      });
-
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: { ...themingProperties, ...checkedThemingProperties },
+      after(() => {
+        browser.moveToObject('#root', 0, 0);
       });
     });
 
     describe('Focus', () => {
-      beforeEach(() => {
-        browser.waitForVisible('#default');
+      before(() => {
         browser.keys('Tab');
       });
 
@@ -137,6 +124,21 @@ describe('Checkbox', () => {
           ...focusThemingProperties,
           ...focusRingThemingProperties,
         },
+      });
+    });
+
+    describe('Checked', () => {
+      before(() => {
+        browser.waitForVisible('#default');
+        browser.click('[for="default"]');
+        browser.click('#site');
+      });
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+      Terra.should.themeCombinationOfCustomProperties({
+        testName: 'themed',
+        properties: { ...themingProperties, ...checkedThemingProperties },
       });
     });
   });
