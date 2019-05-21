@@ -75,10 +75,11 @@ describe('Alert', () => {
   });
 
   viewports.forEach((viewport) => {
+    before(() => browser.setViewportSize(viewport));
+
     describe('Action Button', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-alert/alert/alert-action-button');
-        browser.setViewportSize(viewport);
       });
 
       Terra.should.matchScreenshot();
@@ -98,13 +99,13 @@ describe('Alert', () => {
         browser.click('#actionAlert button');
         expect(browser.getText('#actionButtonClickCount')).to.equal('1');
       });
-    });
 
+      after(() => browser.moveToObject('#root', 0, 900));
+    });
 
     describe('Dismissible', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-alert/alert/alert-dismissible');
-        browser.setViewportSize(viewport);
       });
 
       Terra.should.matchScreenshot();
@@ -114,6 +115,8 @@ describe('Alert', () => {
         browser.click('#dismissibleAlert button');
         expect(browser.getText('#dismissed')).to.equal('Alert was dismissed');
       });
+
+      after(() => browser.moveToObject('#root', 0, 900));
     });
   });
 });
