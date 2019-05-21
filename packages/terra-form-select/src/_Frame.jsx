@@ -379,6 +379,8 @@ class Frame extends React.Component {
     const { value } = this.props;
     const { keyCode, target } = event;
 
+    debugger;
+
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
       this.openDropdown(event);
@@ -488,7 +490,7 @@ class Frame extends React.Component {
       isAbove: isOpen ? isAbove : false,
     });
 
-    if (this.props.onSelect) {
+    if (this.props.onSelect && option) {
       this.props.onSelect(value, option);
     }
   }

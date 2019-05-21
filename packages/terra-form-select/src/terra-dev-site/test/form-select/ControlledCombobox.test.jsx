@@ -28,7 +28,7 @@ class ControlledCombobox extends React.Component {
           onChange={this.handleChange}
           placeholder="Select a color"
           value={this.state.value}
-          variant="search"
+          variant="combobox"
         >
           <Select.Option value="blue-value" display="Blue" />
           <Select.Option value="green-value" display="Green" />

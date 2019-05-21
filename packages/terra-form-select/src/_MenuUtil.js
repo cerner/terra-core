@@ -212,37 +212,48 @@ class MenuUtil {
     const { searchValue, value } = props;
     const options = MenuUtil.flatten(children, true);
 
-    console.log('******props', props);
-    console.log('******state', state);
+    console.log('******active', active);
+    console.log('******value', value);
+    console.log('******searchValue', searchValue);
+    console.log('******state.searchValue', state.searchValue);
+    // console.log('******value', value);
+    // console.log('==============================================================');
+
 
     if (options.length === 0) {
       console.log('******111111');
       return null;
     }
 
-    if (value.length === 0 && !active) {
+    if (searchValue.length === 0 && value.length === 0 && !active) {
       console.log('******222222');
       return null;
     }
-    
+
     if (state.searchValue === undefined) {
       const selected = options.find(option => (
         Array.isArray(value) ? MenuUtil.includes(value, option.props.value) : MenuUtil.isEqual(value, option.props.value)
       ));
-      console.log('******333333');
+      console.log('******333333: ');
       return selected === undefined ? options[0].props.value : selected.props.value;
     }
-    
+
     if (searchValue !== state.searchValue) {
-      console.log('******444444');
-      return options[0].props.value;
+      console.log('******444444: ', options[0].props.value);
+
+      // if (searchValue.length > 0) {
+        return options[0].props.value;
+      // }
+
+      // return value;
     }
-    
+
     if (active !== null && MenuUtil.findByValue(options, active)) {
-      console.log('******5555555');
+      console.log('******5555555: ', active);
       return active;
     }
-    console.log('******6666666');
+
+    console.log('******6666666: ', options[0].props.value);
     return options[0].props.value;
   }
 
