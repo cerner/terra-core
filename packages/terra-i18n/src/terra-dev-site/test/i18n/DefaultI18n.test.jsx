@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import i18nSupportedLocales from 'terra-toolkit/scripts/aggregate-translations/i18nSupportedLocales';
 
 import I18nProvider from '../../../I18nProvider';
 import i18nLoader from '../../../i18nLoader';
 
 // Add Portuguese-Guinea-Bissau, Zulu & Zulu-South African locales as test locales (supported by intl)
-const testLocales = i18nSupportedLocales.concat(['pt-GW', 'zu', 'zu-ZA']);
+const testLocales = ['en', 'en-GB', 'pt', 'pt-GW', 'zu', 'zu-ZA'];
 
 class Base extends React.Component {
   constructor(props) {
