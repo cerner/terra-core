@@ -1,7 +1,7 @@
 const viewports = Terra.viewports('tiny', 'medium', 'large');
 
 viewports.forEach((viewport) => {
-  describe('ActionHeader', () => {
+  describe(`ActionHeader - ${viewport.name}`, () => {
     before(() => {
       browser.setViewportSize(viewport);
     });
