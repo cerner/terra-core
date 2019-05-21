@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+### Added
+* `customColorClass` prop 
+
+### Breaking Changes
+* Removed `customStatusColor` prop
+
 3.14.0 - (May 1, 2019)
 ------------------
 ### Changed

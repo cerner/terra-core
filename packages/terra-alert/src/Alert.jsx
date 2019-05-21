@@ -136,13 +136,6 @@ const Alert = ({
   let bodyClassNameForNarrowParent = cx(['body', 'body-std']);
 
   if (type === AlertTypes.CUSTOM) {
-    // For custom alert, there is no color assigned to the box-shadow style since it is to be specified
-    // in the customStatusColor prop.  The box-shadow style is defined in CSS in order to get the
-    // bidirectionality via the mixin.  As per the W3C spec if the box-shadow does not have the color
-    // defined, it will use the prevailing color style, so setting that here. But then we need to set
-    // the color style for the alert content so that it doesn't pick up the custom status color. We
-    // will allow the icon to pick up the color style so that Terra icons will match the color of the
-    // status bar.
     wideAlertClassNames = cx([
       'alert-base',
       type,
@@ -185,7 +178,7 @@ const Alert = ({
     <ResponsiveElement
       responsiveTo="parent"
       defaultElement={(
-        <div {...attributes} className={narrowAlertClassNames} >
+        <div {...attributes} className={narrowAlertClassNames}>
           <div className={bodyClassNameForNarrowParent}>
             {getAlertIcon(type, customIcon)}
             {alertMessageContent}
@@ -194,7 +187,7 @@ const Alert = ({
         </div>
       )}
       tiny={(
-        <div {...attributes} className={wideAlertClassNames} >
+        <div {...attributes} className={wideAlertClassNames}>
           <div className={cx(['body', 'body-std'])}>
             {getAlertIcon(type, customIcon)}
             {alertMessageContent}

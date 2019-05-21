@@ -5,9 +5,9 @@ import { mountWithIntl } from 'terra-enzyme-intl';
 
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import Button from 'terra-button';
+import classNames from 'classnames/bind';
 import Alert from '../../src/Alert';
 import styles from '../../src/terra-dev-site/doc/example/colors.module.scss';
-import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
@@ -87,7 +87,7 @@ describe('Alert of type success with text content', () => {
 describe('Alert of type custom with custom title and text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type custom', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass={cx(["terra-alert-custom-orange-color"])}>This is a custom alert.</Alert>);
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass={cx(['terra-alert-custom-orange-color'])}>This is a custom alert.</Alert>);
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -111,7 +111,7 @@ describe('Alert of type success with an action button text content', () => {
 describe('Dismissable Alert of type custom with action button, custom title and text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type custom with an action button', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customColorClass={cx(["terra-alert-custom-orange-color"])} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>);
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customColorClass={cx(['terra-alert-custom-orange-color'])} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>);
     expect(wrapper).toMatchSnapshot();
   });
 });

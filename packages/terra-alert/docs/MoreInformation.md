@@ -20,7 +20,7 @@ This image shows the layout of the elements of the Alert component.
 |action |element  |optional  |null  |An action element to be added to the action section of the alert.|
 |children  |node or string  |optional  |''  |Child Nodes providing the message content for the alert. Can contain text and HTML.|
 |customIcon  |element  |optional  |null  |The icon to be used for an alert of type custom. This will not be used for any other alert types.|
-|customStatusColor |string  |optional  |''  |The status bar color to be used for an alert of type custom.|
+|customColorClass |string  |optional  |''  |The status bar color to be used for an alert of type custom.|
 |onDismiss |function  |optional  |null  |Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.|
 |title |string  |optional  |''  |The title for the alert which will be bolded.|
 |type  |string  |optional  |'alert' |The type of alert to be rendered. One of Alert.Opts.Types.ALERT, Alert.Opts.Types.ERROR, Alert.Opts.Types.WARNING, Alert.Opts.Types.ADVISORY, Alert.Opts.Types.INFO, Alert.Opts.Types.SUCCESS, Alert.Opts.Types.CUSTOM. Use the Alert.Opts.Types attribute of the Alert component for access to these type strings.|
@@ -80,7 +80,7 @@ Alert of type 'custom' with custom title, status color, and icon, and includes H
 ```jsx
 <Alert type={Alert.Opts.Types.CUSTOM} 
        title="Help!" 
-       customStatusColor="orange" 
+       customColorClass={cx(['terra-alert-custom-orange-color'])} 
        customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} >
   <span>This is a <u>custom</u> alert</span>
 </Alert>
@@ -132,7 +132,7 @@ Alert of type 'custom' with no icon or title that is dismissible and has an acti
 ```jsx
 <Alert type={Alert.Opts.Types.CUSTOM} 
        onDismiss={this.handleDismiss} 
-       customStatusColor="orange" 
+       customColorClass={cx(['terra-alert-custom-orange-color'])} 
        action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
   This is a custom alert with no icon or title. It is configured to be dismissible 
   and with a custom action button. Click on the Dismiss button to dismiss the alert.
