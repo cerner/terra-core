@@ -66,6 +66,7 @@ const defaultProps = {
   action: null,
   children: '',
   customIcon: null,
+  customColorClass: '',
   onDismiss: null,
   title: '',
   type: AlertTypes.ALERT,
@@ -115,19 +116,17 @@ const Alert = ({
 }) => {
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const attributes = Object.assign({}, customProps);
-  const narrowAlertClassNames = cx([
+  let narrowAlertClassNames = cx([
     'alert-base',
     type,
     'narrow',
     attributes.className,
-    customColorClass,
   ]);
-  const wideAlertClassNames = cx([
+  let wideAlertClassNames = cx([
     'alert-base',
     type,
     'wide',
     attributes.className,
-    customColorClass,
   ]);
 
   let actionsSection = '';
@@ -144,6 +143,20 @@ const Alert = ({
     // the color style for the alert content so that it doesn't pick up the custom status color. We
     // will allow the icon to pick up the color style so that Terra icons will match the color of the
     // status bar.
+    wideAlertClassNames = cx([
+      'alert-base',
+      type,
+      'wide',
+      attributes.className,
+      customColorClass,
+    ]);
+    narrowAlertClassNames = cx([
+      'alert-base',
+      type,
+      'narrow',
+      attributes.className,
+      customColorClass,
+    ]);
     alertSectionClassName = cx(['section', 'section-custom']);
     actionsClassName = cx(['actions', 'actions-custom']);
   }

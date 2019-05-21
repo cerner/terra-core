@@ -8,7 +8,7 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 const CustomExample = () => (
-  <Alert type="custom" title="Help!" customColorClass={cx(["terra-alert-custom-red-color"])} customIcon={<IconHelp />}>
+  <Alert type="custom" title="Help!" customColorClass={cx(["terra-alert-custom-blue-color"])} customIcon={<IconHelp />}>
     <span>
       This is a
       <b>custom</b>
