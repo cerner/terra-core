@@ -1,7 +1,7 @@
 {
   "name": "terra-toggle",
   "main": "lib/Toggle.js",
-  "version": "3.9.0",
+  "version": "3.10.0",
   "description": "Toggle component that transitions content in and out.",
   "repository": {
     "type": "git",
