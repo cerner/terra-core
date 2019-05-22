@@ -232,7 +232,7 @@ class SearchField extends React.Component {
       additionalInputAttributes.defaultValue = defaultValue;
     }
 
-    const clearButton = this.state.searchText
+    const clearButton = this.state.searchText && !isDisabled
       ? (
         <Button
           className={cx('clear')}
