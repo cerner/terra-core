@@ -2,31 +2,46 @@ const viewports = Terra.viewports('tiny', 'huge');
 
 describe('Button Group', () => {
   describe('Text Button', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-text'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-text');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-text' });
   });
 
   describe('Button Group Wrapping', () => {
-    before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-wrapping'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-wrapping');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Button Group Block', () => {
-    before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-is-block'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-is-block');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Long Text Button', () => {
-    before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-long-text'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-long-text');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-text' });
   });
 
   describe('Icon Button', () => {
-    before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-icon'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-icon');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-icon' });
   });
