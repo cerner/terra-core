@@ -29,7 +29,7 @@ const defaultProps = {
 const Toggle = ({
   isAnimated, isOpen, children, ...customProps
 }) => {
-  const height = isOpen ? 'auto' : '0';
+  const height = isOpen ? 'auto' : 0;
   let body;
 
   if (isAnimated) {
