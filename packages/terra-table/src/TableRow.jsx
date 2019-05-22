@@ -18,68 +18,17 @@ const propTypes = {
    * Whether or not row is selectable
    */
   isSelectable: PropTypes.bool,
-  /**
-   * @private
-   * Function to trigger when the onClick has been called on a row. This passes the onclick
-   * function as an onclick trigger to the row's child columns.
-   */
-  onClick: PropTypes.func,
-  /**
-   * @private
-   * Function to trigger when the onKeyDown has been called on a row. This passes the onKeyDown
-   * function as an onclick trigger to the row's child columns.
-   */
-  onKeyDown: PropTypes.func,
-  /**
-   * @private
-   * Id of the helper text identifying a row is selectable. Populates the aria-describedby attribute
-   * of the row.
-   */
-  selectableRowHelpTextId: PropTypes.string,
-  /**
-   * @private
-   * Id of the helper text identifying a row is selected. Populates the aria-describedby attribute
-   * of the row.
-   */
-  selectedRowHelpTextId: PropTypes.string,
 };
 
 const defaultProps = {
   isSelected: false,
   isSelectable: undefined,
-  onClick: undefined,
-  onKeyDown: undefined,
-  selectedRowHelpTextId: undefined,
 };
-
-function cloneChildItems(children, onClick, onKeyDown, selectableRowHelpTextId, selectedRowHelpTextId, isSelectable, isSelected) {
-  return React.Children.map(children, (child) => {
-    const newProps = {};
-
-    if (onClick) {
-      newProps.onClick = onClick;
-    }
-    if (onKeyDown) {
-      newProps.onKeyDown = onKeyDown;
-    }
-
-    newProps.isSelectable = isSelectable;
-    newProps.isSelected = isSelected;
-    newProps.selectableRowHelpTextId = selectableRowHelpTextId;
-    newProps.selectedRowHelpTextId = selectedRowHelpTextId;
-
-    return React.cloneElement(child, newProps);
-  });
-}
 
 const TableRow = ({
   children,
   isSelected,
   isSelectable,
-  onClick,
-  onKeyDown,
-  selectableRowHelpTextId,
-  selectedRowHelpTextId,
   ...customProps
 }) => {
   const rowClassNames = cx([
@@ -95,21 +44,9 @@ const TableRow = ({
     console.log(`Number of Columns are ${React.Children.count(children)}. This is more than columns limit`);
   }
 
-  const ariaDescribedByAttributes = [];
-
-  if (isSelectable && selectableRowHelpTextId) {
-    ariaDescribedByAttributes.push(selectableRowHelpTextId);
-  }
-
-  if (isSelected && selectedRowHelpTextId) {
-    ariaDescribedByAttributes.push(selectedRowHelpTextId);
-  }
-
-  const ariaDescribedBy = ariaDescribedByAttributes.length > 0 ? ariaDescribedByAttributes.join(' ') : undefined;
-
   return (
-    <tr {...customProps} onKeyDown={onKeyDown} aria-describedby={ariaDescribedBy} aria-selected={isSelected} className={rowClassNames} role="row">
-      {cloneChildItems(children, onClick, onKeyDown, selectableRowHelpTextId, selectedRowHelpTextId, isSelectable, isSelected)}
+    <tr {...customProps} aria-selected={isSelected} className={rowClassNames}>
+      {children}
     </tr>
   );
 };

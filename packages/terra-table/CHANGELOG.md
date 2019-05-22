@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Revert update to allow VoiceOver to read selectable table rows.
+* Revert update to allow row selection with Voice Over + space.
 
 3.13.0 - (May 21, 2019)
 ------------------

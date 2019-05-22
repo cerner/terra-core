@@ -20,15 +20,6 @@ const defaultProps = {
   onChange: undefined,
 };
 
-const screenReaderUpdateOnSelected = (liveRegion, intl) => {
-  const liveElement = liveRegion.current;
-  liveElement.innerText = '';
-
-  setTimeout(() => {
-    liveElement.innerText = intl.formatMessage({ id: 'Terra.table.rowSelected' });
-  }, 250);
-};
-
 class SingleSelectableRows extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +32,6 @@ class SingleSelectableRows extends React.Component {
     if (SelectableTableRows.Utils.shouldHandleSingleSelectRowSelection(this.state.selectedIndex, index)) {
       event.preventDefault();
       this.setState({ selectedIndex: index });
-
       if (this.props.onChange) {
         this.props.onChange(event, index);
       }
@@ -50,12 +40,12 @@ class SingleSelectableRows extends React.Component {
 
   render() {
     const { children, onChange, ...customProps } = this.props;
+
     return (
       <SelectableTableRows
         {...customProps}
         onChange={this.handleOnChange}
         selectedIndexes={[this.state.selectedIndex]}
-        screenReaderUpdateOnSelected={screenReaderUpdateOnSelected}
       >
         {children}
       </SelectableTableRows>
