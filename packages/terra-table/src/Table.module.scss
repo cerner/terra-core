@@ -1,9 +1,5 @@
 /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
 :local {
-  .row-select-help-text {
-    display: none;
-  }
-
   .table {
     background-color: var(--terra-table-background-color, rgba(255, 255, 255, 0));
     border: var(--terra-table-border, 0);
@@ -206,18 +202,6 @@
     &.is-selected:hover {
       background-color: var(--terra-table-row-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
-  }
-
-  .visually-hidden-component {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap; /* Ensures words  are not read one at a time on screen readers*/
-    width: 1px;
   }
 
   // Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
