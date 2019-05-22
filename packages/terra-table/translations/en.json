@@ -1,0 +1,6 @@
+{
+  "Terra.table.selectableRow": "This row is selectable",
+  "Terra.table.selectedRow": "This row is selected",
+  "Terra.table.rowSelected": "Row Selected",
+  "Terra.table.rowUnselected": "Row Unselected"
+}

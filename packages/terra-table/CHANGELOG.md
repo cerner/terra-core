@@ -4,9 +4,16 @@ Changelog
 Unreleased
 ----------
 
+3.13.0 - (May 21, 2019)
+------------------
+### Added
+* Added missing en-US and en-AU table translations
+
 3.12.0 - (May 9, 2019)
 ------------------
 ### Changed
+* Updated to allow VoiceOver to read selectable table rows.
+* Updated to allow row selection with Voice Over + space.
 * Exclude subheader from zebra row styles.
 
 3.11.0 - (May 1, 2019)

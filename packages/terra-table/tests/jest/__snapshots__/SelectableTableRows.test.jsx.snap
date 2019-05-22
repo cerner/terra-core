@@ -1,0 +1,631 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should update the liveregion on a selected row when one is provided and no screen reader update function is 1`] = `
+<Table
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isPadded={true}
+  isStriped={true}
+>
+  <table
+    className="table striped padded"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <MultiSelectableRows
+      id="selectable-rows"
+      key=".0"
+      liveRegion={
+        Object {
+          "current": <p
+            aria-atomic="false"
+            aria-live="assertive"
+            aria-relevant="additions text"
+            class="visually-hidden-component"
+          />,
+        }
+      }
+      selectableRowHelpTextId="terra-table-row-selectable-1"
+      selectedIndexes={
+        Array [
+          0,
+        ]
+      }
+      selectedRowHelpTextId="terra-table-row-selected-2"
+    >
+      <SelectableTableRows
+        disableUnselectedRows={false}
+        id="selectable-rows"
+        liveRegion={
+          Object {
+            "current": <p
+              aria-atomic="false"
+              aria-live="assertive"
+              aria-relevant="additions text"
+              class="visually-hidden-component"
+            />,
+          }
+        }
+        onChange={[Function]}
+        selectableRowHelpTextId="terra-table-row-selectable-1"
+        selectedIndexes={
+          Array [
+            1,
+          ]
+        }
+        selectedRowHelpTextId="terra-table-row-selected-2"
+      >
+        <TableRows
+          id="selectable-rows"
+          selectableRowHelpTextId="terra-table-row-selectable-1"
+          selectedRowHelpTextId="terra-table-row-selected-2"
+        >
+          <tbody
+            id="selectable-rows"
+          >
+            <TableRow
+              className="PERSON_0"
+              isSelectable={true}
+              isSelected={false}
+              key=".$.$PERSON_0"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              selectableRowHelpTextId="terra-table-row-selectable-1"
+              selectedRowHelpTextId="terra-table-row-selected-2"
+              tabIndex="0"
+            >
+              <tr
+                aria-describedby="terra-table-row-selectable-1"
+                aria-selected={false}
+                className="is-selectable row PERSON_0"
+                onKeyDown={[Function]}
+                role="row"
+                tabIndex="0"
+              >
+                <TableCell
+                  className="NAME"
+                  content="John Smith"
+                  isSelectable={true}
+                  isSelected={false}
+                  key=".$NAME"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1"
+                    className="NAME"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    John Smith
+                  </td>
+                </TableCell>
+                <TableCell
+                  className="ADDRESS"
+                  content="123 Adams Drive"
+                  isSelectable={true}
+                  isSelected={false}
+                  key=".$ADDRESS"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1"
+                    className="ADDRESS"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    123 Adams Drive
+                  </td>
+                </TableCell>
+                <TableCell
+                  className="PHONE_NUMBER"
+                  content="111-222-3333"
+                  isSelectable={true}
+                  isSelected={false}
+                  key=".$PHONE_NUMBER"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1"
+                    className="PHONE_NUMBER"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    111-222-3333
+                  </td>
+                </TableCell>
+              </tr>
+            </TableRow>
+            <TableRow
+              className="PERSON_1"
+              isSelectable={true}
+              isSelected={true}
+              key=".$.$PERSON_1"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              selectableRowHelpTextId="terra-table-row-selectable-1"
+              selectedRowHelpTextId="terra-table-row-selected-2"
+              tabIndex="0"
+            >
+              <tr
+                aria-describedby="terra-table-row-selectable-1 terra-table-row-selected-2"
+                aria-selected={true}
+                className="is-selected is-selectable row PERSON_1"
+                onKeyDown={[Function]}
+                role="row"
+                tabIndex="0"
+              >
+                <TableCell
+                  className="NAME"
+                  content="John Smith"
+                  isSelectable={true}
+                  isSelected={true}
+                  key=".$NAME"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1 terra-table-row-selected-2"
+                    className="NAME"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    John Smith
+                  </td>
+                </TableCell>
+                <TableCell
+                  className="ADDRESS"
+                  content="123 Adams Drive"
+                  isSelectable={true}
+                  isSelected={true}
+                  key=".$ADDRESS"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1 terra-table-row-selected-2"
+                    className="ADDRESS"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    123 Adams Drive
+                  </td>
+                </TableCell>
+                <TableCell
+                  className="PHONE_NUMBER"
+                  content="111-222-3333"
+                  isSelectable={true}
+                  isSelected={true}
+                  key=".$PHONE_NUMBER"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1 terra-table-row-selected-2"
+                    className="PHONE_NUMBER"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    111-222-3333
+                  </td>
+                </TableCell>
+              </tr>
+            </TableRow>
+          </tbody>
+        </TableRows>
+      </SelectableTableRows>
+    </MultiSelectableRows>
+  </table>
+  <p
+    aria-atomic="false"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selectable-1"
+  >
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-2"
+  >
+    Terra.table.selectedRow
+  </p>
+</Table>
+`;
+
+exports[`should update the liveregion on a selected row when one is provided and no screen reader update function is 2`] = `
+<Table
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isPadded={true}
+  isStriped={true}
+>
+  <table
+    className="table striped padded"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <MultiSelectableRows
+      id="selectable-rows"
+      key=".0"
+      liveRegion={
+        Object {
+          "current": <p
+            aria-atomic="false"
+            aria-live="assertive"
+            aria-relevant="additions text"
+            class="visually-hidden-component"
+          />,
+        }
+      }
+      selectableRowHelpTextId="terra-table-row-selectable-1"
+      selectedIndexes={
+        Array [
+          0,
+        ]
+      }
+      selectedRowHelpTextId="terra-table-row-selected-2"
+    >
+      <SelectableTableRows
+        disableUnselectedRows={false}
+        id="selectable-rows"
+        liveRegion={
+          Object {
+            "current": <p
+              aria-atomic="false"
+              aria-live="assertive"
+              aria-relevant="additions text"
+              class="visually-hidden-component"
+            />,
+          }
+        }
+        onChange={[Function]}
+        selectableRowHelpTextId="terra-table-row-selectable-1"
+        selectedIndexes={
+          Array [
+            1,
+          ]
+        }
+        selectedRowHelpTextId="terra-table-row-selected-2"
+      >
+        <TableRows
+          id="selectable-rows"
+          selectableRowHelpTextId="terra-table-row-selectable-1"
+          selectedRowHelpTextId="terra-table-row-selected-2"
+        >
+          <tbody
+            id="selectable-rows"
+          >
+            <TableRow
+              className="PERSON_0"
+              isSelectable={true}
+              isSelected={false}
+              key=".$.$PERSON_0"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              selectableRowHelpTextId="terra-table-row-selectable-1"
+              selectedRowHelpTextId="terra-table-row-selected-2"
+              tabIndex="0"
+            >
+              <tr
+                aria-describedby="terra-table-row-selectable-1"
+                aria-selected={false}
+                className="is-selectable row PERSON_0"
+                onKeyDown={[Function]}
+                role="row"
+                tabIndex="0"
+              >
+                <TableCell
+                  className="NAME"
+                  content="John Smith"
+                  isSelectable={true}
+                  isSelected={false}
+                  key=".$NAME"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1"
+                    className="NAME"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    John Smith
+                  </td>
+                </TableCell>
+                <TableCell
+                  className="ADDRESS"
+                  content="123 Adams Drive"
+                  isSelectable={true}
+                  isSelected={false}
+                  key=".$ADDRESS"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1"
+                    className="ADDRESS"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    123 Adams Drive
+                  </td>
+                </TableCell>
+                <TableCell
+                  className="PHONE_NUMBER"
+                  content="111-222-3333"
+                  isSelectable={true}
+                  isSelected={false}
+                  key=".$PHONE_NUMBER"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1"
+                    className="PHONE_NUMBER"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    111-222-3333
+                  </td>
+                </TableCell>
+              </tr>
+            </TableRow>
+            <TableRow
+              className="PERSON_1"
+              isSelectable={true}
+              isSelected={true}
+              key=".$.$PERSON_1"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              selectableRowHelpTextId="terra-table-row-selectable-1"
+              selectedRowHelpTextId="terra-table-row-selected-2"
+              tabIndex="0"
+            >
+              <tr
+                aria-describedby="terra-table-row-selectable-1 terra-table-row-selected-2"
+                aria-selected={true}
+                className="is-selected is-selectable row PERSON_1"
+                onKeyDown={[Function]}
+                role="row"
+                tabIndex="0"
+              >
+                <TableCell
+                  className="NAME"
+                  content="John Smith"
+                  isSelectable={true}
+                  isSelected={true}
+                  key=".$NAME"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1 terra-table-row-selected-2"
+                    className="NAME"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    John Smith
+                  </td>
+                </TableCell>
+                <TableCell
+                  className="ADDRESS"
+                  content="123 Adams Drive"
+                  isSelectable={true}
+                  isSelected={true}
+                  key=".$ADDRESS"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1 terra-table-row-selected-2"
+                    className="ADDRESS"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    123 Adams Drive
+                  </td>
+                </TableCell>
+                <TableCell
+                  className="PHONE_NUMBER"
+                  content="111-222-3333"
+                  isSelectable={true}
+                  isSelected={true}
+                  key=".$PHONE_NUMBER"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  selectableRowHelpTextId="terra-table-row-selectable-1"
+                  selectedRowHelpTextId="terra-table-row-selected-2"
+                >
+                  <td
+                    aria-describedby="terra-table-row-selectable-1 terra-table-row-selected-2"
+                    className="PHONE_NUMBER"
+                    data-terra-table-cell={true}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="cell"
+                  >
+                    111-222-3333
+                  </td>
+                </TableCell>
+              </tr>
+            </TableRow>
+          </tbody>
+        </TableRows>
+      </SelectableTableRows>
+    </MultiSelectableRows>
+  </table>
+  <p
+    aria-atomic="false"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    className="visually-hidden-component"
+  />
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selectable-1"
+  >
+    Terra.table.selectableRow
+  </p>
+  <p
+    aria-hidden={true}
+    className="row-select-help-text"
+    id="terra-table-row-selected-2"
+  >
+    Terra.table.selectedRow
+  </p>
+</Table>
+`;

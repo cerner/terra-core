@@ -1,4 +1,7 @@
 import React from 'react';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { shallowWithIntl } from 'terra-enzyme-intl';
+
 import Table from '../../src/Table';
 
 // Constants
@@ -22,7 +25,7 @@ it('should render a default table', () => {
       <Table.Rows>{rows}</Table.Rows>
     </Table>
   );
-  const table = shallow(defaultTable);
+  const table = shallowWithIntl(defaultTable);
   expect(table).toMatchSnapshot();
 });
 
@@ -33,7 +36,7 @@ it('should render a table without zebra stripes', () => {
       <Table.Rows>{rows}</Table.Rows>
     </Table>
   );
-  const table = shallow(defaultTable);
+  const table = shallowWithIntl(defaultTable);
   expect(table).toMatchSnapshot();
 });
 
@@ -44,6 +47,6 @@ it('should render a table without padding', () => {
       <Table.Rows>{rows}</Table.Rows>
     </Table>
   );
-  const table = shallow(defaultTable);
+  const table = shallowWithIntl(defaultTable);
   expect(table).toMatchSnapshot();
 });
