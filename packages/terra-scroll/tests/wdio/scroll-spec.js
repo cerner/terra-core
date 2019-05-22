@@ -3,7 +3,7 @@ describe('Scroll', () => {
     browser.url('/#/raw/tests/terra-scroll/scroll/default');
   });
 
-  Terra.should.beAccessible({ context: '#scroll-test' });
+  Terra.should.beAccessible();
   Terra.should.matchScreenshot('before-click', { selector: '#scroll-test' });
 
   it('scroll the view', () => {
