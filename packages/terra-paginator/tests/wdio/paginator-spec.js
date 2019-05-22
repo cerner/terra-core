@@ -63,7 +63,10 @@ describe('Paginator', () => {
   });
 
   describe('Controlled Paginator', () => {
-    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/controlled-paginator'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/controlled-paginator');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
 
     Terra.should.matchScreenshot('0');
 
