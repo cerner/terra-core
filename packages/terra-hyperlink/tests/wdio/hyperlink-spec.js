@@ -1,8 +1,13 @@
 describe('Hyperlink', () => {
-  before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
+  before(() => {
+    browser.setViewportSize(Terra.viewports('tiny')[0]);
+  });
 
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/default-hyperlink'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-hyperlink/hyperlink/default-hyperlink');
+      browser.moveToObject('#root', 0, 900); // move mouse to prevent hover styles    
+    });
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
