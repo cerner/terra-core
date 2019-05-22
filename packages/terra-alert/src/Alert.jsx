@@ -116,17 +116,19 @@ const Alert = ({
 }) => {
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const attributes = Object.assign({}, customProps);
-  let narrowAlertClassNames = cx([
+  const narrowAlertClassNames = cx([
     'alert-base',
     type,
     'narrow',
     attributes.className,
+    { [`${customColorClass}`]: type === AlertTypes.CUSTOM },
   ]);
-  let wideAlertClassNames = cx([
+  const wideAlertClassNames = cx([
     'alert-base',
     type,
     'wide',
     attributes.className,
+    { [`${customColorClass}`]: type === AlertTypes.CUSTOM },
   ]);
 
   let actionsSection = '';
@@ -136,20 +138,6 @@ const Alert = ({
   let bodyClassNameForNarrowParent = cx(['body', 'body-std']);
 
   if (type === AlertTypes.CUSTOM) {
-    wideAlertClassNames = cx([
-      'alert-base',
-      type,
-      'wide',
-      attributes.className,
-      customColorClass,
-    ]);
-    narrowAlertClassNames = cx([
-      'alert-base',
-      type,
-      'narrow',
-      attributes.className,
-      customColorClass,
-    ]);
     alertSectionClassName = cx(['section', 'section-custom']);
     actionsClassName = cx(['actions', 'actions-custom']);
   }
