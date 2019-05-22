@@ -24,12 +24,21 @@ describe('Multi-Select Table', () => {
     });
 
     Terra.should.matchScreenshot('third-row', { viewports });
+
+    after(() => {
+      // deselect rows
+      browser.click('[class*="row"]:nth-child(1)');
+      browser.click('[class*="row"]:nth-child(2)');
+      browser.click('[class*="row"]:nth-child(3)');
+    });
   });
 
   describe('Multi-Select Table - Keyboard ENTER key', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-table/table/multi-select-table/multi-row-selectable-table');
       browser.waitForVisible('table');
+      // reset focusable point for keyboard navigation
+      browser.click('[data-terra-table-header-cell]:nth-child(1)');
     });
 
     it('selects the first row', () => {
@@ -49,12 +58,21 @@ describe('Multi-Select Table', () => {
     });
 
     Terra.should.matchScreenshot('third-row', { viewports });
+
+    after(() => {
+      // deselect rows
+      browser.click('[class*="row"]:nth-child(1)');
+      browser.click('[class*="row"]:nth-child(2)');
+      browser.click('[class*="row"]:nth-child(3)');
+    });
   });
 
   describe('Multi-Select Table - Keyboard SPACE key', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-table/table/multi-select-table/multi-row-selectable-table');
       browser.waitForVisible('table');
+      // reset focusable point for keyboard navigation
+      browser.click('[data-terra-table-header-cell]:nth-child(1)');
     });
 
     it('selects the first row', () => {
@@ -74,6 +92,13 @@ describe('Multi-Select Table', () => {
     });
 
     Terra.should.matchScreenshot('third-row', { viewports });
+
+    after(() => {
+      // deselect rows
+      browser.click('[class*="row"]:nth-child(1)');
+      browser.click('[class*="row"]:nth-child(2)');
+      browser.click('[class*="row"]:nth-child(3)');
+    });
   });
 
   describe('Multi-Select Table - onChange operations', () => {
@@ -131,7 +156,7 @@ describe('Multi-Select Table', () => {
 
     Terra.should.matchScreenshot('first-row', { viewports });
 
-    it('attempts to select the second row', () => {
+    it('selects the second row', () => {
       browser.click('[class*="row"]:nth-child(2)');
     });
 
@@ -142,12 +167,20 @@ describe('Multi-Select Table', () => {
     });
 
     Terra.should.matchScreenshot('third-row', { viewports });
+
+    after(() => {
+      // deselect the rows
+      browser.click('[class*="row"]:nth-child(1)');
+      browser.click('[class*="row"]:nth-child(2)');
+    });
   });
 
   describe('Multi-Select Table - Max Selection (keypress ENTER)', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-table/table/multi-select-table/multi-row-selectable-table-max-count');
       browser.waitForVisible('table');
+      // reset focusable point for keyboard navigation
+      browser.click('[data-terra-table-header-cell]:nth-child(1)');
     });
 
     it('selects the first row', () => {
@@ -156,7 +189,7 @@ describe('Multi-Select Table', () => {
 
     Terra.should.matchScreenshot('first-row', { viewports });
 
-    it('attempts to select the second row', () => {
+    it('selects the second row', () => {
       browser.keys(['Tab', 'Enter']);
     });
 
@@ -167,12 +200,20 @@ describe('Multi-Select Table', () => {
     });
 
     Terra.should.matchScreenshot('third-row', { viewports });
+
+    after(() => {
+      // deselect the rows
+      browser.click('[class*="row"]:nth-child(1)');
+      browser.click('[class*="row"]:nth-child(2)');
+    });
   });
 
   describe('Multi-Select Table - Max Selection (keypress SPACE)', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-table/table/multi-select-table/multi-row-selectable-table-max-count');
       browser.waitForVisible('table');
+      // reset focusable point for keyboard navigation
+      browser.click('[data-terra-table-header-cell]:nth-child(1)');
     });
 
     it('selects the first row', () => {
@@ -181,7 +222,7 @@ describe('Multi-Select Table', () => {
 
     Terra.should.matchScreenshot('first-row', { viewports });
 
-    it('attempts to select the second row', () => {
+    it('selects the second row', () => {
       browser.keys(['Tab', 'Space']);
     });
 
@@ -192,6 +233,12 @@ describe('Multi-Select Table', () => {
     });
 
     Terra.should.matchScreenshot('third-row', { viewports });
+
+    after(() => {
+      // deselect the rows
+      browser.click('[class*="row"]:nth-child(1)');
+      browser.click('[class*="row"]:nth-child(2)');
+    });
   });
 
   describe('Multi-Select Table - Initial Max Selection (onClick)', () => {
@@ -208,7 +255,9 @@ describe('Multi-Select Table', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-table/table/multi-select-table/multi-row-selectable-table-max-count-initially-met');
       browser.waitForVisible('table');
-      browser.keys(['Tab', 'Tab', 'Tab', 'Enter']);
+      // reset focusable point for keyboard navigation
+      browser.click('[data-terra-table-header-cell]:nth-child(1)');
+      browser.click('[class*="row"]:nth-child(3)');
     });
 
     Terra.should.matchScreenshot({ viewports });
@@ -228,6 +277,8 @@ describe('Multi-Select Table', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-table/table/multi-select-table/multi-row-selectable-table-max-count-initially-exceeded');
       browser.waitForVisible('table');
+      // reset focusable point for keyboard navigation
+      browser.click('[data-terra-table-header-cell]:nth-child(1)');
       browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Enter']);
     });
 

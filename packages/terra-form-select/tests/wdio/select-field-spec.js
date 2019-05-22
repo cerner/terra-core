@@ -112,6 +112,8 @@ describe('Select Field', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot('max-selection-count-text', { viewports });
+
+    after(() => browser.refresh());
   });
 
   describe('should show the max selection option on search', () => {

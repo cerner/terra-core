@@ -1,79 +1,74 @@
 const viewports = Terra.viewports('medium');
 
 describe('Single-Select Table', () => {
-  describe('Single-Select Table - Click Operations', () => {
+  describe('Single-Select Table - Interactions', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-table/table/single-select-table/selectable-table');
       browser.waitForVisible('table');
     });
 
-    it('selects the second row', () => {
-      browser.click('[class*="row"]:nth-child(1)');
+    // reset focusable point for keyboard navigation
+    beforeEach(() => browser.click('[data-terra-table-header-cell]:nth-child(1)'));
+
+    describe('Single-Select Table - Click Operations', () => {
+      it('selects the second row', () => {
+        browser.click('[class*="row"]:nth-child(1)');
+      });
+
+      Terra.should.matchScreenshot('first-row', { viewports });
+
+      it('selects the second row', () => {
+        browser.click('[class*="row"]:nth-child(2)');
+      });
+
+      Terra.should.matchScreenshot('second-row', { viewports });
+
+      it('selects the third row', () => {
+        browser.click('[class*="row"]:nth-child(3)');
+      });
+
+      Terra.should.matchScreenshot('third-row', { viewports });
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    describe('Single-Select Table - Keyboard ENTER key', () => {
+      it('selects the first row', () => {
+        browser.keys(['Tab', 'Enter']);
+      });
 
-    it('selects the second row', () => {
-      browser.click('[class*="row"]:nth-child(2)');
+      Terra.should.matchScreenshot('first-row', { viewports });
+
+      it('selects the second row', () => {
+        browser.keys(['Tab', 'Enter']);
+      });
+
+      Terra.should.matchScreenshot('second-row', { viewports });
+
+      it('selects the third row', () => {
+        browser.keys(['Tab', 'Enter']);
+      });
+
+      Terra.should.matchScreenshot('third-row', { viewports });
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    describe('Single-Select Table - Keyboard SPACE key', () => {
+      it('selects the first row', () => {
+        browser.keys(['Tab', 'Space']);
+      });
 
-    it('selects the third row', () => {
-      browser.click('[class*="row"]:nth-child(3)');
+      Terra.should.matchScreenshot('first-row', { viewports });
+
+      it('selects the second row', () => {
+        browser.keys(['Tab', 'Space']);
+      });
+
+      Terra.should.matchScreenshot('second-row', { viewports });
+
+      it('selects the third row', () => {
+        browser.keys(['Tab', 'Space']);
+      });
+
+      Terra.should.matchScreenshot('third-row', { viewports });
     });
-
-    Terra.should.matchScreenshot('third-row', { viewports });
-  });
-
-  describe('Single-Select Table - Keyboard ENTER key', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-table/table/single-select-table/selectable-table');
-      browser.waitForVisible('table');
-    });
-
-    it('selects the first row', () => {
-      browser.keys(['Tab', 'Enter']);
-    });
-
-    Terra.should.matchScreenshot('first-row', { viewports });
-
-    it('selects the second row', () => {
-      browser.keys(['Tab', 'Enter']);
-    });
-
-    Terra.should.matchScreenshot('second-row', { viewports });
-
-    it('selects the third row', () => {
-      browser.keys(['Tab', 'Enter']);
-    });
-
-    Terra.should.matchScreenshot('third-row', { viewports });
-  });
-
-  describe('Single-Select Table - Keyboard SPACE key', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-table/table/single-select-table/selectable-table');
-      browser.waitForVisible('table');
-    });
-
-    it('selects the first row', () => {
-      browser.keys(['Tab', 'Space']);
-    });
-
-    Terra.should.matchScreenshot('first-row', { viewports });
-
-    it('selects the second row', () => {
-      browser.keys(['Tab', 'Space']);
-    });
-
-    Terra.should.matchScreenshot('second-row', { viewports });
-
-    it('selects the third row', () => {
-      browser.keys(['Tab', 'Space']);
-    });
-
-    Terra.should.matchScreenshot('third-row', { viewports });
   });
 
   describe('Single-Select Table - onChange operations', () => {
