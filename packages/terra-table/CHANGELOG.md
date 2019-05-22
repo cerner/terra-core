@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Revert update to allow VoiceOver to read selectable table rows.
+* Revert update to allow row selection with Voice Over + space.
 
 3.13.0 - (May 21, 2019)
 ------------------
@@ -12,6 +15,8 @@ Unreleased
 3.12.0 - (May 9, 2019)
 ------------------
 ### Changed
+* Updated to allow VoiceOver to read selectable table rows.
+* Updated to allow row selection with Voice Over + space.
 * Exclude subheader from zebra row styles.
 
 3.11.0 - (May 1, 2019)
