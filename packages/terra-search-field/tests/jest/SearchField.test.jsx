@@ -112,8 +112,7 @@ describe('Auto Search', () => {
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />);
 
-    searchField.childAt(0).childAt(0).simulate('change', { target: { value: 'Te' } });
-    //searchField.childAt(0).simulate('change', { target: { value: 'Te' } });
+    searchField.find('.input').simulate('change', { target: { value: 'Te' } });
 
     expect(onSearch).not.toBeCalled();
     jest.runAllTimers();
@@ -124,7 +123,7 @@ describe('Auto Search', () => {
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />);
 
-    searchField.childAt(0).childAt(0).simulate('change', { target: { value: 'Te' } });
+    searchField.find('.input').simulate('change', { target: { value: 'Te' } });
 
     expect(onSearch).not.toBeCalled();
 
@@ -140,7 +139,7 @@ describe('Auto Search', () => {
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField onSearch={onSearch} minimumSearchTextLength={5} />);
 
-    searchField.childAt(0).childAt(0).simulate('change', { target: { value: 'Sear' } });
+    searchField.find('.input').simulate('change', { target: { value: 'Sear' } });
 
     expect(onSearch).not.toBeCalled();
     jest.runAllTimers();
@@ -153,7 +152,7 @@ describe('Auto Search', () => {
     const onInvalidSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField onSearch={onSearch} onInvalidSearch={onInvalidSearch} minimumSearchTextLength={5} />);
 
-    searchField.childAt(0).childAt(0).simulate('change', { target: { value: 'Sear' } });
+    searchField.find('.input').simulate('change', { target: { value: 'Sear' } });
 
     jest.runAllTimers();
     expect(onSearch).not.toBeCalled();
@@ -163,7 +162,7 @@ describe('Auto Search', () => {
   it('uses standard timeout for search delay when not provided', () => {
     const searchField = shallowWithIntl(<SearchField />);
 
-    searchField.childAt(0).childAt(0).simulate('change', { target: {} });
+    searchField.find('.input').simulate('change', { target: {} });
     expect(setTimeout).toBeCalledWith(expect.anything(), 250);
   });
 
@@ -187,10 +186,10 @@ describe('Auto Search', () => {
     const onChange = jest.fn();
     const searchField = shallowWithIntl(<SearchField onChange={onChange} />);
 
-    searchField.childAt(0).childAt(0).simulate('change', { target: {} });
+    searchField.find('.input').simulate('change', { target: {} });
     expect(onChange).toBeCalled();
 
-    searchField.childAt(0).childAt(0).simulate('change', { target: {} });
+    searchField.find('.input').simulate('change', { target: {} });
     expect(onChange).toBeCalled();
   });
 });
