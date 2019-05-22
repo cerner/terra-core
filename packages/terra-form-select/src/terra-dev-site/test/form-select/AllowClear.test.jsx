@@ -15,20 +15,26 @@ class AllowClear extends React.Component {
 
   render() {
     return (
-      <Select
-        allowClear
-        id="allowclear"
-        onChange={this.handleChange}
-        placeholder="Select a color"
-        value={this.state.value}
-        variant="combobox"
-      >
-        <Select.Option value="blue" display="Blue" />
-        <Select.Option value="green" display="Green" />
-        <Select.Option value="purple" display="Purple" />
-        <Select.Option value="red" display="Red" />
-        <Select.Option value="violet" display="Violet" />
-      </Select>
+      <div>
+        <h3>
+          Selected Option:
+          <span id="selected-option">{this.state.value}</span>
+        </h3>
+        <Select
+          allowClear
+          id="allowclear"
+          onChange={this.handleChange}
+          placeholder="Select a color"
+          value={this.state.value}
+          variant="combobox"
+        >
+          <Select.Option value="blue" display="Blue" />
+          <Select.Option value="green" display="Green" />
+          <Select.Option value="purple" display="Purple" />
+          <Select.Option value="red" display="Red" />
+          <Select.Option value="violet" display="Violet" />
+        </Select>
+      </div>
     );
   }
 }

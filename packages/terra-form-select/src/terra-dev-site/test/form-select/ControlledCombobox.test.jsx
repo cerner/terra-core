@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from '../../../Select';
-// `default`,  
+// `default`,
 // `search`, `multiple`,
 // `combobox`, `tag`
 

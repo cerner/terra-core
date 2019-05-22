@@ -138,10 +138,6 @@ class Menu extends React.Component {
       clearOptionDisplay, maxSelectionCount, searchValue, noResultContent,
     } = props;
 
-    console.log('******getDerivedStateFromProps: ', state.active);
-
-    debugger;
-
     let children;
     let hasNoResults = false;
     let hasMaxSelection = false;
@@ -369,15 +365,13 @@ class Menu extends React.Component {
       variant,
     } = this.props;
 
-    debugger;
-
     const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
     const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
 
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      let activeValue = Util.findPrevious(children, active);
+      const activeValue = Util.findPrevious(children, active);
       this.setState({ active: activeValue });
       this.updateCurrentActiveScreenReader();
 
@@ -387,7 +381,7 @@ class Menu extends React.Component {
     } else if (keyCode === KeyCode.KEY_DOWN) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      let activeValue = Util.findNext(children, active);
+      const activeValue = Util.findNext(children, active);
       this.setState({ active: activeValue });
       this.updateCurrentActiveScreenReader();
 
@@ -425,8 +419,8 @@ class Menu extends React.Component {
         }
       }
 
-      const optionValue = option ? option.props.value : ''
-        
+      const optionValue = option ? option.props.value : '';
+
       onSelect(optionValue, option || null);
     } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB) && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
       event.preventDefault();
@@ -455,14 +449,14 @@ class Menu extends React.Component {
     } else if (keyCode === KeyCode.KEY_END) {
       event.preventDefault();
       this.setState({ active: Util.findLast(children) });
-    } else if (/*variant === Variants.DEFAULT && */keyCode >= 48 && keyCode <= 90) {
+    } else if (/* variant === Variants.DEFAULT && */keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(this.clearSearch, 500);
       this.setState(prevState => ({ active: Util.findWithStartString(prevState.children, this.searchString) || active }));
 
       if (variant === Variants.DEFAULT) {
-        let activeValue= Util.findWithStartString(children, this.searchString) || active;
+        const activeValue = Util.findWithStartString(children, this.searchString) || active;
         if (this.props.onActiveChange && activeValue) {
           this.props.onActiveChange(Util.findByValue(children, activeValue));
         }

@@ -191,6 +191,8 @@ class Frame extends React.Component {
       disabled, display, placeholder, variant,
     } = this.props;
 
+    const searchDisplayValue = hasSearchChanged ? searchValue : display;
+
     const inputAttrs = {
       disabled,
       placeholder,
@@ -225,13 +227,13 @@ class Frame extends React.Component {
               ) : null
             }
             <li className={cx('search-wrapper')}>
-              <input {...inputAttrs} value={this.shouldSearch? searchValue: activeValue} />
+              <input {...inputAttrs} value={this.shouldSearch ? searchValue : activeValue} />
             </li>
           </ul>
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <div className={cx('content')}><input {...inputAttrs} value={this.shouldSearch? hasSearchChanged ? searchValue : display : activeValue} /></div>;
+        return <div className={cx('content')}><input {...inputAttrs} value={this.shouldSearch ? searchDisplayValue : activeValue} /></div>;
       default:
         return activeValue || display ? <span id={displayId}>{activeValue || display}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
@@ -241,7 +243,6 @@ class Frame extends React.Component {
    * Closes the dropdown.
    */
   closeDropdown() {
-
     let activeValue = '';
 
     if (this.props.variant === Variants.SEARCH) {
@@ -379,8 +380,6 @@ class Frame extends React.Component {
     const { value } = this.props;
     const { keyCode, target } = event;
 
-    debugger;
-
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
       this.openDropdown(event);
@@ -464,8 +463,6 @@ class Frame extends React.Component {
       hasSearchChanged: true,
       searchValue,
     });
-
-    debugger;
 
     if (this.props.onSearch) {
       this.props.onSearch(searchValue);
