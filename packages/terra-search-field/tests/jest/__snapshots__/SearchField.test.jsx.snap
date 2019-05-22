@@ -10,7 +10,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
           <input
             aria-disabled="false"
             aria-label="Terra.searchField.search"
-            class="form-input input input-clear"
+            class="form-input input"
             placeholder=""
             type="search"
             value=""
@@ -59,7 +59,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
   searchDelay={250}
 >
   <div
-    className="searchfield"
+    className="search-field"
     intl={
       Object {
         "defaultFormats": Object {},
@@ -88,33 +88,37 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       }
     }
   >
-    <Input
-      aria-disabled={false}
-      aria-label="Terra.searchField.search"
-      className="input input-clear"
-      disabled={false}
-      isInvalid={false}
-      name={null}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      refCallback={[Function]}
-      required={false}
-      type="search"
+    <div
+      className="input-group"
     >
-      <input
+      <Input
         aria-disabled={false}
         aria-label="Terra.searchField.search"
-        className="form-input input input-clear"
+        className="input"
         disabled={false}
+        isInvalid={false}
         name={null}
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder=""
+        refCallback={[Function]}
         required={false}
         type="search"
-      />
-    </Input>
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          className="form-input input"
+          disabled={false}
+          name={null}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          required={false}
+          type="search"
+        />
+      </Input>
+    </div>
     <Button
       className="button"
       icon={
@@ -196,7 +200,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
 
 exports[`Snapshots renders a basic search field 1`] = `
 <div
-  className="searchfield"
+  className="search-field"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -225,20 +229,24 @@ exports[`Snapshots renders a basic search field 1`] = `
     }
   }
 >
-  <Input
-    aria-disabled={false}
-    aria-label="Terra.searchField.search"
-    className="input input-clear"
-    disabled={false}
-    isInvalid={false}
-    name={null}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder=""
-    refCallback={[Function]}
-    required={false}
-    type="search"
-  />
+  <div
+    className="input-group"
+  >
+    <Input
+      aria-disabled={false}
+      aria-label="Terra.searchField.search"
+      className="input"
+      disabled={false}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      refCallback={[Function]}
+      required={false}
+      type="search"
+    />
+  </div>
   <Button
     className="button"
     icon={
@@ -263,7 +271,7 @@ exports[`Snapshots renders a basic search field 1`] = `
 
 exports[`Snapshots renders a disabled search field with a value 1`] = `
 <div
-  className="searchfield"
+  className="search-field"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -292,37 +300,41 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     }
   }
 >
-  <Input
-    aria-disabled={true}
-    aria-label="Terra.searchField.search"
-    className="input"
-    disabled={true}
-    isInvalid={false}
-    name={null}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder=""
-    refCallback={[Function]}
-    required={false}
-    type="search"
-  />
-  <Button
-    className="clear"
-    icon={
-      <span
-        className="clear-icon"
-      />
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    text="Terra.searchField.clear"
-    type="button"
-    variant="utility"
-  />
+  <div
+    className="input-group"
+  >
+    <Input
+      aria-disabled={true}
+      aria-label="Terra.searchField.search"
+      className="input"
+      disabled={true}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      refCallback={[Function]}
+      required={false}
+      type="search"
+    />
+    <Button
+      className="clear"
+      icon={
+        <span
+          className="clear-icon"
+        />
+      }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onClick={[Function]}
+      text="Terra.searchField.clear"
+      type="button"
+      variant="utility"
+    />
+  </div>
   <Button
     className="button"
     icon={
@@ -347,7 +359,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
 
 exports[`Snapshots renders a search field that displays as a block to fill its container 1`] = `
 <div
-  className="searchfield block"
+  className="search-field block"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -376,37 +388,41 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     }
   }
 >
-  <Input
-    aria-disabled={false}
-    aria-label="Terra.searchField.search"
-    className="input"
-    disabled={false}
-    isInvalid={false}
-    name={null}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder=""
-    refCallback={[Function]}
-    required={false}
-    type="search"
-  />
-  <Button
-    className="clear"
-    icon={
-      <span
-        className="clear-icon"
-      />
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    text="Terra.searchField.clear"
-    type="button"
-    variant="utility"
-  />
+  <div
+    className="input-group"
+  >
+    <Input
+      aria-disabled={false}
+      aria-label="Terra.searchField.search"
+      className="input"
+      disabled={false}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      refCallback={[Function]}
+      required={false}
+      type="search"
+    />
+    <Button
+      className="clear"
+      icon={
+        <span
+          className="clear-icon"
+        />
+      }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onClick={[Function]}
+      text="Terra.searchField.clear"
+      type="button"
+      variant="utility"
+    />
+  </div>
   <Button
     className="button"
     icon={
@@ -431,7 +447,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
 
 exports[`Snapshots renders a search field with a defaulted value 1`] = `
 <div
-  className="searchfield"
+  className="search-field"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -460,38 +476,42 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     }
   }
 >
-  <Input
-    aria-disabled={false}
-    aria-label="Terra.searchField.search"
-    className="input"
-    defaultValue="Default"
-    disabled={false}
-    isInvalid={false}
-    name={null}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder=""
-    refCallback={[Function]}
-    required={false}
-    type="search"
-  />
-  <Button
-    className="clear"
-    icon={
-      <span
-        className="clear-icon"
-      />
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    text="Terra.searchField.clear"
-    type="button"
-    variant="utility"
-  />
+  <div
+    className="input-group"
+  >
+    <Input
+      aria-disabled={false}
+      aria-label="Terra.searchField.search"
+      className="input"
+      defaultValue="Default"
+      disabled={false}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      refCallback={[Function]}
+      required={false}
+      type="search"
+    />
+    <Button
+      className="clear"
+      icon={
+        <span
+          className="clear-icon"
+        />
+      }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onClick={[Function]}
+      text="Terra.searchField.clear"
+      type="button"
+      variant="utility"
+    />
+  </div>
   <Button
     className="button"
     icon={
@@ -516,7 +536,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
 
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
-  className="searchfield"
+  className="search-field"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -545,20 +565,24 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     }
   }
 >
-  <Input
-    aria-disabled={false}
-    aria-label="Terra.searchField.search"
-    className="input input-clear"
-    disabled={false}
-    isInvalid={false}
-    name={null}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder="Test"
-    refCallback={[Function]}
-    required={false}
-    type="search"
-  />
+  <div
+    className="input-group"
+  >
+    <Input
+      aria-disabled={false}
+      aria-label="Terra.searchField.search"
+      className="input"
+      disabled={false}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Test"
+      refCallback={[Function]}
+      required={false}
+      type="search"
+    />
+  </div>
   <Button
     className="button"
     icon={
@@ -583,7 +607,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
-  className="searchfield"
+  className="search-field"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -612,38 +636,42 @@ exports[`Snapshots renders a search field with a value 1`] = `
     }
   }
 >
-  <Input
-    aria-disabled={false}
-    aria-label="Terra.searchField.search"
-    className="input"
-    disabled={false}
-    isInvalid={false}
-    name={null}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder=""
-    refCallback={[Function]}
-    required={false}
-    type="search"
-    value="Test"
-  />
-  <Button
-    className="clear"
-    icon={
-      <span
-        className="clear-icon"
-      />
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    text="Terra.searchField.clear"
-    type="button"
-    variant="utility"
-  />
+  <div
+    className="input-group"
+  >
+    <Input
+      aria-disabled={false}
+      aria-label="Terra.searchField.search"
+      className="input"
+      disabled={false}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      refCallback={[Function]}
+      required={false}
+      type="search"
+      value="Test"
+    />
+    <Button
+      className="clear"
+      icon={
+        <span
+          className="clear-icon"
+        />
+      }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={true}
+      isReversed={false}
+      onClick={[Function]}
+      text="Terra.searchField.clear"
+      type="button"
+      variant="utility"
+    />
+  </div>
   <Button
     className="button"
     icon={
@@ -668,7 +696,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
 
 exports[`Snapshots renders a search field with an aria-label 1`] = `
 <div
-  className="searchfield"
+  className="search-field"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -697,20 +725,24 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     }
   }
 >
-  <Input
-    aria-disabled={false}
-    aria-label="Search Field"
-    className="input input-clear"
-    disabled={false}
-    isInvalid={false}
-    name={null}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder=""
-    refCallback={[Function]}
-    required={false}
-    type="search"
-  />
+  <div
+    className="input-group"
+  >
+    <Input
+      aria-disabled={false}
+      aria-label="Search Field"
+      className="input"
+      disabled={false}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      refCallback={[Function]}
+      required={false}
+      type="search"
+    />
+  </div>
   <Button
     className="button"
     icon={

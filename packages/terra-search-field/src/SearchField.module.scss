@@ -1,73 +1,70 @@
 @import '~terra-mixins/lib/Mixins';
 
 :local {
-  .searchfield {
-    display: inline-flex;
+  .search-field {
+    display: flex;
     min-width: 0;
-    width: var(--terra-search-field-max-width, 15.31em);
+    width: var(--terra-search-field-max-width, 16.5rem);
 
-    .clear {
-      border: var(--terra-search-field-clear-border, 1px solid #dedfe0);
-      border-bottom-left-radius: var(--terra-search-field-clear-border-bottom-left-radius, 0);
-      border-bottom-right-radius: var(--terra-search-field-clear-border-bottom-right-radius, 0);
-      border-left: var(--terra-search-field-clear-border-left, 0);
-      border-top-left-radius: var(--terra-search-field-clear-border-top-left-radius, 0);
-      border-top-right-radius: var(--terra-search-field-clear-border-top-right-radius, 0);
-      display: inline-block;
-      flex: 0 0 auto;
-      margin-bottom: var(--terra-search-field-clear-margin-bottom, 0);
-      margin-left: var(--terra-search-field-clear-margin-left, -5px);
-      margin-right: var(--terra-search-field-clear-margin-right, 0);
-      margin-top: var(--terra-search-field-clear-margin-top, 0);
-      z-index: 1;
-
-      &:active {
-        background-color: rgba(0, 0, 0, 0);
-      }
-    }
-
-    .clear-icon {
-      background: var(--terra-search-field-clear-icon-background, inline-svg("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='rgba(17, 17, 17, 1)' d='M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z'/></svg>"));
-      display: inline-block;
-      height: var(--terra-search-field-clear-icon-height, 1.14286rem);
-      margin-top: var(--terra-search-field-clear-icon-margin-top, -0.214285rem);
-      vertical-align: middle;
-      width: var(--terra-search-field-clear-icon-width, 1.14286rem);
-      z-index: 1;
+    .input-group {
+      display: inline-flex;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+      position: relative;
     }
 
     .input {
       appearance: none;
       border-bottom-left-radius: var(--terra-search-field-input-border-bottom-left-radius, 3px);
-      border-bottom-right-radius: var(--terra-search-field-input-border-bottom-right-radius, 0);
-      border-right: var(--terra-search-field-input-border-right, 0);
+      border-bottom-right-radius: 0;
       border-top-left-radius: var(--terra-search-field-input-border-top-left-radius, 3px);
-      border-top-right-radius: var(--terra-search-field-input-border-top-right-radius, 0);
+      border-top-right-radius: 0;
       flex: 1 1 auto;
       margin-bottom: var(--terra-search-field-input-margin-bottom, 0);
       margin-left: var(--terra-search-field-input-margin-left, 0);
       margin-right: var(--terra-search-field-input-margin-right, 0);
       margin-top: var(--terra-search-field-input-margin-top, 0);
       min-width: 0;
-      outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
-
-      /* stylelint-disable selector-max-compound-selectors */
-      // Match focus style and make clear button appear seamless
-      &:focus + .clear {
-        border-color: var(--terra-search-field-input-focus-clear-border-color, #4cb2e9);
-      }
+      outline-offset: -0.143em;  // Adjust the outline offset for search input in Safari.
+      padding-right: var(--terra-search-field-input-padding-right, 2.28571rem); // Match the padding to width of the clear button
     }
 
     .input::-ms-clear,
     .input::-ms-reveal {
       display: none;
     }
+  
+    .input::-webkit-search-cancel-button {
+      // Remove webkit search clear functionality
+      display: none;
+    }
+  
+    .input::-webkit-search-decoration {
+      // Get rid of extra left-padding getting added in Safari for search fields
+      appearance: none;
+    }
 
-    // Focus style when clear button is present
-    .input-clear {
-      &:focus {
-        border: var(--terra-search-field-input-clear-focus-border, 1px solid #4cb2e9);
-      }
+    .clear {
+      border-radius: var(--terra-search-field-clear-border-radius, 100px);
+      display: block;
+      flex: 0 0 auto;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+    .clear-icon {
+      background-color: var(--terra-search-field-clear-icon-background-color, #909496);
+      background-image: var(--terra-search-field-clear-icon-background-image, inline-svg("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='#ffffff' d='M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z'/></svg>"));
+      border: var(--terra-search-field-clear-icon-border, 2px solid #909496);
+      border-radius: var(--terra-search-field-clear-icon-border-radius, 100px);
+      display: inline-block;
+      height: var(--terra-search-field-clear-icon-height, 1.14286rem);
+      margin-top: var(--terra-search-field-clear-icon-margin-top, -0.214285rem);
+      vertical-align: middle;
+      width: var(--terra-search-field-clear-icon-width, 1.14286rem);
     }
 
     .button {
@@ -81,28 +78,21 @@
       display: inline-block;
       flex: 0 0 auto;
       margin-bottom: var(--terra-search-field-button-margin-bottom, 0);
-      margin-left: var(--terra-search-field-button-margin-left, 0);
+      margin-left: var(--terra-search-field-button-margin-left, -1px);
       margin-right: var(--terra-search-field-button-margin-right, 0);
       margin-top: var(--terra-search-field-button-margin-top, 0);
-      z-index: 1;
 
       &:focus {
-        box-shadow: var(--terra-search-field-button-focus-box-shadow);
+        border-color: var(--terra-search-field-button-focus-border-color, #26a2e5);
+        box-shadow: var(--terra-search-field-button-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+        outline: none;
+        z-index: 1;
       }
     }
-  }
 
-  .block {
-    width: 100%;
-  }
+    &.block {
+      width: 100%;
+    }
 
-  .input::-webkit-search-cancel-button {
-    // Remove webkit search clear functionality
-    display: none;
-  }
-
-  .input::-webkit-search-decoration {
-    // Get rid of extra left-padding getting added in Safari for search fields
-    appearance: none;
   }
 }

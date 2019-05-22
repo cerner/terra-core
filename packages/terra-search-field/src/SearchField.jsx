@@ -214,15 +214,8 @@ class SearchField extends React.Component {
       ...customProps
     } = this.props;
 
-    const clearButtonVisible = !this.state.searchText ? 'input-clear' : undefined;
-
-    const inputClassNames = cx([
-      'input',
-      clearButtonVisible,
-    ]);
-
     const searchFieldClassNames = cx([
-      'searchfield',
+      'search-field',
       { block: isBlock },
       customProps.className,
     ]);
@@ -254,18 +247,20 @@ class SearchField extends React.Component {
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
-        <Input
-          className={inputClassNames}
-          type="search"
-          placeholder={placeholder}
-          onChange={this.handleTextChange}
-          disabled={isDisabled}
-          aria-disabled={isDisabled}
-          onKeyDown={this.handleKeyDown}
-          refCallback={this.setInputRef}
-          {...additionalInputAttributes}
-        />
-        {clearButton}
+        <div className={cx('input-group')}>
+          <Input
+            className={cx('input')}
+            type="search"
+            placeholder={placeholder}
+            onChange={this.handleTextChange}
+            disabled={isDisabled}
+            aria-disabled={isDisabled}
+            onKeyDown={this.handleKeyDown}
+            refCallback={this.setInputRef}
+            {...additionalInputAttributes}
+          />
+          {clearButton}
+        </div>
         <Button
           className={cx('button')}
           text={buttonText}
