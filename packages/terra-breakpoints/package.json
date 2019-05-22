@@ -1,7 +1,7 @@
 {
   "name": "terra-breakpoints",
   "main": "lib/index.js",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "description": "Contains components and utilities related to Terra's supported responsive breakpoints",
   "repository": {
     "type": "git",
