@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.14.0 - (May 22, 2019)
+------------------
+### Changed
+* Now renders `<ActionHeader />` as a div instead of a header element to avoid duplicate banner landmarks in the DOM
+
 2.13.0 - (May 1, 2019)
 ------------------
 ### Changed
