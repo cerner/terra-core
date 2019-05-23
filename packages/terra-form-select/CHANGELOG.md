@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Auto select active option.
 
 5.15.0 - (May 1, 2019)
 ------------------
