@@ -1399,7 +1399,7 @@ describe('Select', () => {
       });
     });
 
-    describe('search should select second option by keyboard interaction', () => {      
+    describe('search should select second option by keyboard interaction', () => {
       it('search should navigate to second option', () => {
         browser.keys('Tab');
         browser.keys('ArrowDown');
@@ -1735,7 +1735,7 @@ describe('Select', () => {
       after(() => {
         browser.keys(['Backspace']); // remove selected option
         browser.click('#root');
-       
+
         // talk with Brett. Seems like a bug. even with escape
         browser.click('#root');
       });

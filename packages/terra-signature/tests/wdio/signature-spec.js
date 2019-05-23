@@ -1,6 +1,6 @@
 describe('Signature', () => {
   before(() => {
-    browser.url('/#/raw/tests/terra-signature/signature/signature-default')
+    browser.url('/#/raw/tests/terra-signature/signature/signature-default');
     browser.setViewportSize(Terra.viewports('medium')[0]);
   });
 
