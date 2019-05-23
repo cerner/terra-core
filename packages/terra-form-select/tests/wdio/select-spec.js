@@ -369,6 +369,7 @@ describe('Select', () => {
 
       it('default controlled should open the dropdown by clicking the toggle icon', () => {
         browser.click('[data-terra-form-select-toggle]');
+        browser.moveToObject('#terra-select-option-green'); // add to ensure consistent hover styles
       });
 
       it('dropdown should be focused', async () => {

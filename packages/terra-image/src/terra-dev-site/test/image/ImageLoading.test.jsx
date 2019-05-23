@@ -17,7 +17,7 @@ class ImageLoading extends React.Component {
         <div>
           <Image
             id={this.state.loadedImageId}
-            alt=" "
+            alt="loading image"
             src={placeholder150x150}
             onLoad={() => { this.setState({ loadedImageId: 'loadedImage' }); }}
             onError={() => { this.setState({ errorImageId: 'errorImage' }); }}
