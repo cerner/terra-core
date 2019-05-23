@@ -222,7 +222,7 @@ class MenuUtil {
       return null;
     }
 
-    if (searchValue.length === 0 && value.length === 0 && !active) {
+    if (searchValue.length === 0 && value.length === 0 && !active && active !== '') {
       // console.log('******2 searchValue.length === 0');
       return null;
     }

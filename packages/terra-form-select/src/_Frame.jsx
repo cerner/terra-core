@@ -235,7 +235,7 @@ class Frame extends React.Component {
       case Variants.COMBOBOX:
         return <div className={cx('content')}><input {...inputAttrs} value={this.shouldSearch ? searchDisplayValue : activeValue} /></div>;
       default:
-        return activeValue || display ? <span id={displayId}>{activeValue || display}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
+        return activeValue ? <span id={displayId}>{activeValue}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
   }
 
@@ -500,7 +500,7 @@ class Frame extends React.Component {
     this.shouldSearch = false;
 
     this.setState({
-      activeValue: option.props.display,
+      activeValue: option.type.isClearOption ? '' : option.props.display,
     });
   }
 

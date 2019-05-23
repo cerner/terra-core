@@ -375,7 +375,7 @@ class Menu extends React.Component {
       this.setState({ active: activeValue });
       this.updateCurrentActiveScreenReader();
 
-      if (this.props.onActiveChange && activeValue) {
+      if (this.props.onActiveChange && (activeValue || activeValue === '')) {
         this.props.onActiveChange(Util.findByValue(children, activeValue));
       }
     } else if (keyCode === KeyCode.KEY_DOWN) {
@@ -385,7 +385,7 @@ class Menu extends React.Component {
       this.setState({ active: activeValue });
       this.updateCurrentActiveScreenReader();
 
-      if (this.props.onActiveChange && activeValue) {
+      if (this.props.onActiveChange && (activeValue || activeValue === '')) {
         this.props.onActiveChange(Util.findByValue(children, activeValue));
       }
     } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB) && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
@@ -457,7 +457,7 @@ class Menu extends React.Component {
 
       if (variant === Variants.DEFAULT) {
         const activeValue = Util.findWithStartString(children, this.searchString) || active;
-        if (this.props.onActiveChange && activeValue) {
+        if (this.props.onActiveChange && (activeValue || activeValue === '')) {
           this.props.onActiveChange(Util.findByValue(children, activeValue));
         }
       }
