@@ -40,7 +40,6 @@
     "compile:clean": "rm -rf packages/**/lib",
     "compile:prod": "webpack --config webpack.config.js -p",
     "danger": "danger ci",
-    "danger-l": "danger local",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
     "docs": "node markdown.config.js",
