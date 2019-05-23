@@ -1,7 +1,7 @@
 {
   "name": "terra-base",
   "main": "lib/Base.js",
-  "version": "5.5.0",
+  "version": "5.6.0",
   "description": "The base component sets minimal global styles for an application.",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.9.0",
-    "terra-i18n": "^4.3.0"
+    "terra-i18n": "^4.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
