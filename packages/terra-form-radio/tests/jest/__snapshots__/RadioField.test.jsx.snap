@@ -52,7 +52,8 @@ exports[`should display the required icon for fields with hideRequired, but have
       <span
         className="visually-hidden-text"
       >
-        Required 
+        Terra.form.field.required
+         
       </span>
       Hidden Required CheckboxField
     </div>
@@ -475,7 +476,8 @@ exports[`should render required radio field 1`] = `
       <span
         className="visually-hidden-text"
       >
-        Required 
+        Terra.form.field.required
+         
       </span>
       Required RadioField
       <span
