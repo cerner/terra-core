@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-signature)](https://www.npmjs.org/package/terra-signature)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The terra-signature component provides users a way to define a signature with a series of line segments.
 The component can define line width, line color, and optionally display a signature if the line segments have

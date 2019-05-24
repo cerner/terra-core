@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-section-header)](https://www.npmjs.org/package/terra-section-header)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 Section Header presentational component that provides an onClick callback.
 

@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-text)](https://www.npmjs.org/package/terra-text)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The font size, font weight, font family, and font color in terra components are set to defaults in terra-base which is then inherited into all components. Components can override these base styles as needed in their specific component CSS. In some cases, you may need text that differs from the base font styles for text that doesn't go with a specific terra component.
 
