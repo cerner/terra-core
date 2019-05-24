@@ -3,11 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Clear button added to search field for cross-browser compatibility
 
 3.13.0 - (May 14, 2019)
 ------------------
 ### Changed
-* Clear button added to search field for cross-browser compatibility
 * Added a doc site example with AutoFormat attributes disabled
 
 3.12.0 - (May 1, 2019)
