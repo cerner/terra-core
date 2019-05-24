@@ -6,7 +6,7 @@ describe('Hyperlink', () => {
   describe('Default', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-hyperlink/hyperlink/default-hyperlink');
-      browser.moveToObject('#root', 0, 900); // move mouse to prevent hover styles   
+      browser.moveToObject('#root', 0, 900); // move mouse to prevent hover styles
     });
 
     Terra.should.beAccessible();
