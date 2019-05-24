@@ -1,7 +1,7 @@
 # Terra Visually Hidden Text
 
 [![NPM version](https://badgen.net/npm/v/terra-visually-hidden-text)](https://www.npmjs.org/package/terra-visually-hidden-text)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 Text that is designed to only be read by a screen reader.
 

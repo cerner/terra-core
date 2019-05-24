@@ -1,7 +1,7 @@
 # Terra Form Textarea
 
 [![NPM version](https://badgen.net/npm/v/terra-form-textarea)](https://www.npmjs.org/package/terra-form-textarea)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 Element for building out textareas in a form.
 

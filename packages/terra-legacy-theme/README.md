@@ -1,7 +1,7 @@
 # Terra Legacy Theme
 
 [![NPM version](https://badgen.net/npm/v/terra-legacy-theme)](https://www.npmjs.org/package/terra-legacy-theme)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 
 - [Getting Started](#getting-started)

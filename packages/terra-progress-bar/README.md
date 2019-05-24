@@ -1,7 +1,7 @@
 # Terra Progress Bar
 
 [![NPM version](https://badgen.net/npm/v/terra-progress-bar)](https://www.npmjs.org/package/terra-progress-bar)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The progress bar component provides users a way to display the progress of process or activity in a graphical manner. It can be modified in height and fill color. Its styling is set such that, the `ProgressBar` element will occupy full width of its parent element and will flex based on the width of the parent container.
 
