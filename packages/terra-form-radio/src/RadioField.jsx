@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
+import VisualyHiddenText from 'terra-visually-hidden-text';
 
 import styles from './RadioField.module.scss';
 
@@ -116,10 +117,7 @@ const RadioField = (props, { intl }) => {
         {required && (isInvalid || !hideRequired) && (
           <React.Fragment>
             <div aria-hidden="true" className={cx('required')}>*</div>
-            <span className={cx('visually-hidden-text')}>
-              {intl.formatMessage({ id: 'Terra.form.field.required' })}
-              {' '}
-            </span>
+            <VisualyHiddenText text="{intl.formatMessage({ id: 'Terra.form.field.required' })} " />
           </React.Fragment>
         )}
         {legend}

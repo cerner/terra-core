@@ -29,7 +29,8 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.9.0",
-    "terra-mixins": "^1.29.0"
+    "terra-mixins": "^1.29.0",
+    "terra-visually-hidden-text": "^2.7.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
