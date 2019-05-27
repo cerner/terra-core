@@ -36,7 +36,10 @@ const propTypes = {
    */
   customIcon: PropTypes.element,
   /**
-   * The status bar color to be used for an alert of type custom.
+   * Sets an author-defined class, to control the status bar color to be used for an alert of type custom.
+   *
+   * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/blue?icon=github)
+   * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
    */
   customColorClass: PropTypes.string,
   /**
