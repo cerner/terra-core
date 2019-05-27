@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-action-footer)](https://www.npmjs.org/package/terra-action-footer)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The terra-action-footer component is a footer bar that contains sockets for placing actionable items such as buttons and hyperlinks. The default variation contains a start and end socket, while the centered variation has only a center socket. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.
 

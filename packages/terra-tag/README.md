@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-tag)](https://www.npmjs.org/package/terra-tag)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The tag component is used for tagging and provides users a way to trigger actions in the UI. Each tag should have text.
 It can optionally display an icon along with the text.
