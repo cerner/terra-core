@@ -13,16 +13,6 @@ describe('Progress Bar', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-progress-bar-tiny-height': '25px',
-        '--terra-progress-bar-small-height': '20px',
-        '--terra-progress-bar-medium-height': '17px',
-        '--terra-progress-bar-large-height': '14px',
-        '--terra-progress-bar-huge-height': '10px',
-      },
-    });
   });
 
   describe('Color', () => {

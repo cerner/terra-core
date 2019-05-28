@@ -9,28 +9,6 @@ describe('Tag', () => {
 
       Terra.it.isAccessible();
       Terra.it.matchesScreenshot();
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-tag-font-size': '25px',
-          '--terra-tag-color': 'red',
-          '--terra-tag-font-weight': '700',
-          '--terra-tag-padding-top': '1px',
-          '--terra-tag-padding-bottom': '1px',
-          '--terra-tag-padding-left': '1px',
-          '--terra-tag-padding-right': '1px',
-          '--terra-tag-border-style': 'dashed',
-          '--terra-tag-line-height': '20px',
-          '--terra-tag-margin-top': '1px',
-          '--terra-tag-margin-bottom': '1px',
-          '--terra-tag-margin-left': '1px',
-          '--terra-tag-margin-right': '1px',
-          '--terra-tag-text-decoration': 'underline',
-          '--terra-tag-background-color': 'green',
-          '--terra-tag-border-color': 'yellow',
-          '--terra-tag-box-shadow': '0 0 10px 10px blue',
-        },
-      });
     });
   });
 
@@ -50,15 +28,6 @@ describe('Tag', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-tag-icon-height': '5px',
-        '--terra-tag-icon-width': '5px',
-        '--terra-tag-icon-margin-right': '1px',
-        '--terra-tag-icon-margin-top': '1px',
-      },
-    });
   });
 
   describe('Icon and Text Long Tag', () => {
@@ -79,14 +48,6 @@ describe('Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/on-click-tag'));
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-tag-interactive-color': 'purple',
-        '--terra-tag-interactive-text-decoration': 'underline',
-        '--terra-tag-interactive-background-color': 'yellow',
-      },
-    });
 
     describe('OnClick Tag - Keyboard focus', () => {
       before(() => {
@@ -96,15 +57,6 @@ describe('Tag', () => {
 
       Terra.it.isAccessible();
       Terra.it.matchesScreenshot();
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-tag-focus-background-color': 'purple',
-          '--terra-tag-focus-box-shadow': '4px 4px 4px 4px green',
-          '--terra-tag-focus-border-color': 'yellow',
-          '--terra-tag-focus-text-decoration': 'overline',
-        },
-      });
     });
 
     describe('OnClick Tag - Hover', () => {
@@ -115,15 +67,6 @@ describe('Tag', () => {
 
       Terra.it.isAccessible();
       Terra.it.matchesScreenshot();
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-tag-hover-background-color': 'purple',
-          '--terra-tag-hover-box-shadow': '4px 4px 4px 4px green',
-          '--terra-tag-hover-text-decoration': 'overline',
-          '--terra-tag-hover-color': 'yellow',
-        },
-      });
     });
   });
 });

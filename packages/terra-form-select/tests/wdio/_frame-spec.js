@@ -6,14 +6,5 @@ describe('Frame', () => {
 
     Terra.it.isAccessible({ viewports });
     Terra.it.matchesScreenshot({ viewports });
-
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-form-select-disabled-arrow-background': 'rgb(0, 0, 255)',
-        '--terra-form-select-disabled-placeholder-color': 'red',
-        '--terra-form-select-disabled-placeholder-font-style': 'italic',
-      },
-    });
   });
 });

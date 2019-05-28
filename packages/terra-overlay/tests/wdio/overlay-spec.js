@@ -160,15 +160,6 @@ describe('Overlay', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot({ selector: '#light-overlay' });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      selector: '#light-overlay',
-      properties: {
-        '--terra-overlay-light-background': 'green',
-        '--terra-overlay-light-background-image': 'linear-gradient(red, green)',
-        '--terra-overlay-light-content-color': 'blue',
-      },
-    });
   });
 
   describe('Dark Themed', () => {
@@ -176,15 +167,6 @@ describe('Overlay', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot({ selector: '#dark-overlay' });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      selector: '#dark-overlay',
-      properties: {
-        '--terra-overlay-dark-background': 'blue',
-        '--terra-overlay-dark-background-image': 'linear-gradient(blue, green)',
-        '--terra-overlay-dark-content-color': 'red',
-      },
-    });
   });
 
   describe('Clear Themed', () => {
@@ -192,16 +174,5 @@ describe('Overlay', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot({ selector: '#clear-overlay' });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      selector: '#clear-overlay',
-      properties: {
-        '--terra-overlay-content-color': 'red',
-        '--terra-overlay-content-padding-bottom': '500px',
-        '--terra-overlay-content-padding-left': '500px',
-        '--terra-overlay-content-padding-right': '500px',
-        '--terra-overlay-content-padding-top': '500px',
-      },
-    });
   });
 });

@@ -4,13 +4,6 @@ describe('Grid', () => {
 
     Terra.it.isAccessible(Terra.viewports('medium')[0]);
     Terra.it.matchesScreenshot(Terra.viewports('medium')[0]);
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-grid-gutter-margin-left': '35px',
-        '--terra-grid-gutter-padding-left': '35px',
-      },
-    });
   });
 
   describe('Responsive', () => {

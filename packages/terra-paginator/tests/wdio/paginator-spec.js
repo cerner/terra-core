@@ -6,18 +6,6 @@ describe('Paginator', () => {
 
     Terra.it.isAccessible({ viewports });
     Terra.it.matchesScreenshot({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-paginator-nav-link-color': 'red',
-        '--terra-paginator-nav-link-hover-color': '#001F67',
-        '--terra-paginator-nav-link-disabled-color': 'purple',
-        '--terra-paginator-nav-link-margin-left': '0.5px',
-        '--terra-paginator-nav-link-margin-right': '0.5px',
-        '--terra-paginator-nav-link-min-width': '2rem',
-        '--terra-paginator-nav-link-padding': '2px',
-      },
-    });
   });
 
   describe('PaginatorNoPages', () => {
@@ -25,18 +13,6 @@ describe('Paginator', () => {
 
     Terra.it.isAccessible({ viewports });
     Terra.it.matchesScreenshot({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-paginator-nav-link-color': 'red',
-        '--terra-paginator-nav-link-hover-color': '#001F67',
-        '--terra-paginator-nav-link-disabled-color': 'purple',
-        '--terra-paginator-nav-link-margin-left': '0.5px',
-        '--terra-paginator-nav-link-margin-right': '0.5px',
-        '--terra-paginator-nav-link-min-width': '2rem',
-        '--terra-paginator-nav-link-padding': '2px',
-      },
-    });
   });
 
   describe('ProgressivePaginator', () => {
@@ -44,22 +20,6 @@ describe('Paginator', () => {
 
     Terra.it.isAccessible({ viewports });
     Terra.it.matchesScreenshot({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-paginator-nav-link-color': 'red',
-        '--terra-paginator-nav-link-hover-color': '#001F67',
-        '--terra-paginator-nav-link-disabled-color': 'purple',
-        '--terra-paginator-nav-link-margin-left': '0.5px',
-        '--terra-paginator-nav-link-margin-right': '0.5px',
-        '--terra-paginator-progressive-nav-link-previous-margin-left': '0.5px',
-        '--terra-paginator-progressive-nav-link-previous-margin-right': '0.5px',
-        '--terra-paginator-progressive-nav-link-next-margin-left': '0.5px',
-        '--terra-paginator-progressive-nav-link-next-margin-right': '0.5px',
-        '--terra-paginator-nav-link-min-width': '2rem',
-        '--terra-paginator-nav-link-padding': '2px',
-      },
-    });
   });
 
   describe('Controlled Paginator', () => {

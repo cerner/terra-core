@@ -20,25 +20,6 @@ describe('Search Field', () => {
 
     Terra.it.matchesScreenshot('scrolled text');
     Terra.it.isAccessible();
-
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-search-field-input-border-bottom-left-radius': '1em',
-        '--terra-search-field-input-border-top-left-radius': '1em',
-        '--terra-search-field-button-border-bottom-right-radius': '1em',
-        '--terra-search-field-button-border-top-right-radius': '1em',
-        '--terra-search-field-button-border': '2px dotted red',
-        '--terra-search-field-button-margin-bottom': '10px',
-        '--terra-search-field-button-margin-left': '-10px',
-        '--terra-search-field-button-margin-right': '10px',
-        '--terra-search-field-button-margin-top': '10px',
-        '--terra-search-field-input-margin-bottom': '10px',
-        '--terra-search-field-input-margin-left': '10px',
-        '--terra-search-field-input-margin-right': '10px',
-        '--terra-search-field-input-margin-top': '10px',
-      },
-    });
   });
 
   describe('Block', () => {

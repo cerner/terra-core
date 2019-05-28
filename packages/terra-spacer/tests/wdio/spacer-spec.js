@@ -13,12 +13,6 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-small-minus-2': '39px',
-      },
-    });
   });
 
   describe('Spacer with size small-1', () => {
@@ -26,12 +20,6 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-small-minus-1': '36px',
-      },
-    });
   });
 
   describe('Spacer with size small', () => {
@@ -39,12 +27,6 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-small': '33px',
-      },
-    });
   });
 
   describe('Spacer with size medium', () => {
@@ -52,12 +34,6 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-medium': '30px',
-      },
-    });
   });
 
   describe('Spacer with size large', () => {
@@ -65,12 +41,6 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-large': '26px',
-      },
-    });
   });
 
   describe('Spacer with size large+1', () => {
@@ -78,12 +48,6 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-large-plus-1': '23px',
-      },
-    });
   });
 
   describe('Spacer with size large+2', () => {
@@ -91,12 +55,6 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-large-plus-2': '20px',
-      },
-    });
   });
 
   describe('Spacer with size large+3', () => {
@@ -104,12 +62,6 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-large-plus-3': '13px',
-      },
-    });
   });
 
   describe('Spacer with size large+4', () => {
@@ -117,11 +69,5 @@ describe('Spacer', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-spacer-large-plus-4': '10px',
-      },
-    });
   });
 });

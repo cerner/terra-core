@@ -23,13 +23,6 @@ describe('Hyperlink', () => {
 
     Terra.it.isAccessible({ rules });
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-hyperlink-disabled-color': 'red',
-        '--terra-hyperlink-disabled-text-decoration': 'underline',
-      },
-    });
   });
 
   describe('Audio', () => {
@@ -37,12 +30,6 @@ describe('Hyperlink', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-hyperlink-audio-after-background-image': 'linear-gradient(red, orange)',
-      },
-    });
   });
 
   describe('Document', () => {
@@ -50,12 +37,6 @@ describe('Hyperlink', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-hyperlink-document-after-background-image': 'linear-gradient(red, orange)',
-      },
-    });
   });
 
   describe('External', () => {
@@ -63,12 +44,6 @@ describe('Hyperlink', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-hyperlink-external-after-background-image': 'linear-gradient(red, orange)',
-      },
-    });
   });
 
   describe('Image', () => {
@@ -76,12 +51,6 @@ describe('Hyperlink', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-hyperlink-image-after-background-image': 'linear-gradient(red, orange)',
-      },
-    });
   });
 
   describe('Video', () => {
@@ -89,12 +58,6 @@ describe('Hyperlink', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-hyperlink-video-after-background-image': 'linear-gradient(red, orange)',
-      },
-    });
   });
 
   describe('Icon Non Wrapping', () => {
@@ -116,23 +79,6 @@ describe('Hyperlink', () => {
 
     Terra.it.isAccessible();
     Terra.it.matchesScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-hyperlink-color': 'red',
-        '--terra-hyperlink-text-decoration': 'underline',
-        '--terra-hyperlink-visited-color': 'orange',
-        '--terra-hyperlink-hover-color': 'yellow',
-        '--terra-hyperlink-hover-text-decoration': 'dotted',
-        '--terra-hyperlink-focus-background-color': 'green',
-        '--terra-hyperlink-focus-border-radius': '0',
-        '--terra-hyperlink-focus-box-shadow': '0 0 0 1px red, 0 0 0 3px green',
-        '--terra-hyperlink-focus-color': 'purple',
-        '--terra-hyperlink-focus-text-decoration': 'overline',
-        '--terra-hyperlink-active-color': 'pink',
-        '--terra-hyperlink-disabled-color': 'blue',
-      },
-    });
   });
 
   describe('Underline Hidden', () => {

@@ -6,15 +6,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
-      },
-    });
   });
 
   describe('Displays an error status view with all props given', () => {
@@ -22,25 +13,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
-        '--terra-status-view-message-color': 'purple',
-        '--terra-status-view-message-font-size': '24px',
-        '--terra-status-view-message-padding-top': '10px',
-        '--terra-status-view-divider-padding-top': '10px',
-        '--terra-status-view-actions-flex-direction-small-width': 'column',
-        '--terra-status-view-actions-padding-top': '10px',
-        '--terra-status-view-actions-button-flex': 'auto',
-        '--terra-status-view-actions-button-margin-left': '5px',
-        '--terra-status-view-actions-button-margin-right': '5px',
-        '--terra-status-view-actions-button-margin-top': '10px',
-      },
-    });
   });
 
   describe('Displays an error status view with the glyph being hidden', () => {
@@ -48,15 +20,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
-      },
-    });
   });
 
   describe('Displays an error status view with the glyph being hidden with too small of a height', () => {
@@ -64,25 +27,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
-        '--terra-status-view-message-color': 'purple',
-        '--terra-status-view-message-font-size': '24px',
-        '--terra-status-view-message-padding-top': '10px',
-        '--terra-status-view-divider-padding-top': '10px',
-        '--terra-status-view-actions-small-width-flex-direction': 'column',
-        '--terra-status-view-actions-padding-top': '10px',
-        '--terra-status-view-actions-button-flex': 'auto',
-        '--terra-status-view-actions-button-margin-left': '5px',
-        '--terra-status-view-actions-button-margin-right': '5px',
-        '--terra-status-view-actions-button-margin-top': '10px',
-      },
-    });
   });
 
   describe('Displays a no-data status view with the content centered in its container', () => {
@@ -90,15 +34,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
-      },
-    });
   });
 
   describe('Displays a no-matching-results status view with the content aligned at the top in its container', () => {
@@ -106,15 +41,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
-      },
-    });
   });
 
   describe('Displays a not-authorized status view', () => {
@@ -122,15 +48,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
-      },
-    });
   });
 
   describe('Displays a custom status view', () => {
@@ -138,15 +55,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '36px',
-      },
-    });
   });
 
   describe('Displays an error status view that displays wrapping text', () => {
@@ -154,25 +62,6 @@ describe('StatusView', () => {
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-status-view-padding-bottom': '10px',
-        '--terra-status-view-padding-top': '10px',
-        '--terra-status-view-title-color': 'purple',
-        '--terra-status-view-title-font-size': '30px',
-        '--terra-status-view-message-color': 'purple',
-        '--terra-status-view-message-font-size': '20px',
-        '--terra-status-view-message-padding-top': '10px',
-        '--terra-status-view-divider-padding-top': '10px',
-        '--terra-status-view-actions-flex-direction-small-width': 'column',
-        '--terra-status-view-actions-padding-top': '10px',
-        '--terra-status-view-actions-button-flex': 'auto',
-        '--terra-status-view-actions-button-margin-left': '5px',
-        '--terra-status-view-actions-button-margin-right': '5px',
-        '--terra-status-view-actions-button-margin-top': '10px',
-      },
-    });
   });
 
   describe('Displays an error status view that is too thin for a glyph', () => {

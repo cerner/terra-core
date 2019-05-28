@@ -22,18 +22,6 @@ describe('Demographics Banner', () => {
     Terra.it.matchesScreenshot({ viewports });
   });
 
-  describe('Deceased - Themed', () => {
-    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/deceased-demographics-banner-no-label'));
-
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-demographics-banner-deceased-background-color': '#3C1362',
-        '--terra-demographics-banner-deceased-color': '#f1f227',
-      },
-    });
-  });
-
   describe('Gestational Age - No Label', () => {
     before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/gestational-age-demographics-banner-no-label'));
 
@@ -53,17 +41,5 @@ describe('Demographics Banner', () => {
 
     Terra.it.isAccessible({ viewports });
     Terra.it.matchesScreenshot({ viewports });
-  });
-
-  describe('Themed', () => {
-    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/populated-demographics-banner'));
-
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-demographics-banner-background-color': '#f12772',
-        '--terra-demographics-banner-color': '#004c76',
-      },
-    });
   });
 });

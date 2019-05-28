@@ -6,16 +6,6 @@ describe('Card', () => {
 
     Terra.it.isAccessible({ viewports });
     Terra.it.matchesScreenshot({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-card-background-color': 'yellow',
-        '--terra-card-border': '10px dashed purple',
-        '--terra-card-border-radius': '50px',
-        '--terra-card-box-shadow': 'inset 0 0 50px purple',
-        '--terra-card-color': 'purple',
-      },
-    });
   });
 
   describe('Raised', () => {
@@ -23,12 +13,6 @@ describe('Card', () => {
 
     Terra.it.isAccessible({ viewports });
     Terra.it.matchesScreenshot({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-card-raised-box-shadow': 'inset 0 50px 0 red',
-      },
-    });
   });
 
   describe('Card Body Padding Horizontal', () => {
@@ -50,15 +34,6 @@ describe('Card', () => {
 
     Terra.it.isAccessible({ viewports });
     Terra.it.matchesScreenshot({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-card-padding-bottom': '50px',
-        '--terra-card-padding-top': '50px',
-        '--terra-card-padding-left': '50px',
-        '--terra-card-padding-right': '50px',
-      },
-    });
   });
 
   describe('Card Body Centered', () => {

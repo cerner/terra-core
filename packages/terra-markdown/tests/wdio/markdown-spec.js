@@ -52,11 +52,5 @@ describe('Markdown', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/blockquote'));
 
     Terra.should.validateElement();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-markdown-blockquote-color': 'red',
-      },
-    });
   });
 });
