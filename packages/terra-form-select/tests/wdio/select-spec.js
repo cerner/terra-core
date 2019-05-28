@@ -1,17 +1,53 @@
 describe('Select', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
-  describe('Default Variant', () => {
-    describe('default uncontrolled should be closed initially', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+  describe('should render an empty placeholder', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/empty-placeholder'));
 
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
+  });
+
+  describe('should open the dropdown and honor the set max height', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/max-height'));
+
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
+
+    it('default should open the dropdown by clicking the toggle', () => {
+      browser.click('#maxHeight:last-child');
+    });
+
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot('open-dropdown-max-height', { selector: '#root' });
+  });
+
+  describe('default renders an option with a value of zero', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-value-zero'));
+
+    Terra.it.matchesScreenshot();
+  });
+
+  describe('default should truncate and wrap long text', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default-long-text'));
+
+    it('default should open the dropdown by clicking the toggle', () => {
+      browser.click('[data-terra-select]');
+    });
+
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot('open-dropdown', { selector: '#root' });
+  });
+
+  describe('Default Variant - uncontrolled', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+
+    describe('default uncontrolled should be closed initially', () => {
       Terra.it.isAccessible();
       Terra.it.matchesScreenshot();
     });
 
     describe('default should gain focus when tabbed to', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('should tab focus to the select', () => {
         browser.keys('Tab');
       });
@@ -25,8 +61,6 @@ describe('Select', () => {
     });
 
     describe('default should open dropdown by click', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should open the dropdown by clicking the select', () => {
         browser.click('[data-terra-select]');
       });
@@ -42,8 +76,6 @@ describe('Select', () => {
     });
 
     describe('default should open dropdown by spacebar key press', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('should tab focus to the select', () => {
         browser.keys('Tab');
       });
@@ -63,8 +95,6 @@ describe('Select', () => {
     });
 
     describe('default should open dropdown by down arrow key press', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('should tab focus to the select', () => {
         browser.keys('Tab');
       });
@@ -84,8 +114,6 @@ describe('Select', () => {
     });
 
     describe('default should not open dropdown by enter key press', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('should tab focus to the select', () => {
         browser.keys('Tab');
       });
@@ -103,8 +131,6 @@ describe('Select', () => {
     });
 
     describe('default should close when clicking off of the select', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should open the dropdown by clicking the select', () => {
         browser.click('[data-terra-select]');
         browser.moveToObject('#terra-select-option-green'); // add to ensure consistent hover styles
@@ -126,8 +152,6 @@ describe('Select', () => {
     });
 
     describe('default should close when clicking off of the select after being opened by toggle icon', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should open the dropdown by clicking the select toggle icon', () => {
         browser.click('[data-terra-form-select-toggle]');
         browser.moveToObject('#terra-select-option-green'); // add to ensure consistent hover styles
@@ -149,8 +173,6 @@ describe('Select', () => {
     });
 
     describe('default should close when pressing tab key to shift focus away from select', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should close the dropdown when tabbing focus away from the select', () => {
         browser.click('[data-terra-select]');
         browser.keys('Tab');
@@ -165,8 +187,6 @@ describe('Select', () => {
     });
 
     describe('default should close when clicking on toggle icon when select is open', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should open on click', () => {
         browser.click('[data-terra-select]');
       });
@@ -188,8 +208,6 @@ describe('Select', () => {
     });
 
     describe('default should open and close the dropdown by clicking on the select', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should open on click', () => {
         browser.click('[data-terra-select]');
         browser.moveToObject('#terra-select-option-green'); // add to ensure consistent hover styles
@@ -214,8 +232,6 @@ describe('Select', () => {
     });
 
     describe('default should open and close the dropdown by clicking on toggle icon', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should open the dropdown by clicking the select toggle icon', () => {
         browser.click('[data-terra-form-select-toggle]');
         browser.moveToObject('#terra-select-option-green'); // add to ensure consistent hover styles
@@ -241,8 +257,6 @@ describe('Select', () => {
     });
 
     describe('default should select an option by click', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should select the first option', () => {
         browser.click('[data-terra-select]');
         browser.click('#terra-select-option-blue');
@@ -258,28 +272,7 @@ describe('Select', () => {
       after(() => browser.click('#root'));
     });
 
-    describe('default should select an option by keyboard interaction', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
-
-      it('default should select the first option', () => {
-        browser.keys('Tab');
-        browser.keys('Space');
-        browser.keys('Enter');
-      });
-
-      it('select should be focused', async () => {
-        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
-      });
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot('selected-option', { selector: '#root' });
-
-      after(() => browser.click('#root'));
-    });
-
     describe('default should select an option by click after clicking on toggle icon', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should select the first option', () => {
         browser.click('[data-terra-form-select-toggle]');
         browser.click('#terra-select-option-blue');
@@ -295,28 +288,7 @@ describe('Select', () => {
       after(() => browser.click('#root'));
     });
 
-    describe('default should select an option by alternative keyboard interaction', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
-
-      it('default should select the first option', () => {
-        browser.keys('Tab');
-        browser.keys('ArrowDown');
-        browser.keys('Enter');
-      });
-
-      it('select should be focused', async () => {
-        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
-      });
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot('selected-option', { selector: '#root' });
-
-      after(() => browser.click('#root'));
-    });
-
     describe('default should select an option by pressing enter', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
-
       it('default should open the dropdown by clicking the toggle', () => {
         browser.click('[data-terra-select]');
       });
@@ -335,10 +307,73 @@ describe('Select', () => {
       Terra.it.isAccessible();
       Terra.it.matchesScreenshot('selected-option', { selector: '#root' });
     });
+  });
+
+  describe('Default Variant - controlled', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
+
+    describe('default should select an option by keyboard interaction', () => {
+      it('default should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('Space');
+        browser.keys('Enter');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
+      });
+
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot('selected-option', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
+
+    describe('default should select an option by alternative keyboard interaction', () => {
+      it('default should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('ArrowDown');
+        browser.keys('Enter');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
+      });
+
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot('selected-option', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
+
+    describe('default controlled should select an option by click', () => {
+      it('default controlled should open the dropdown by clicking the toggle icon', () => {
+        browser.click('[data-terra-form-select-toggle]');
+        browser.moveToObject('#terra-select-option-blue'); // add to ensure consistent hover styles
+      });
+
+      it('dropdown should be focused', async () => {
+        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+      });
+
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot('open-dropdown', { selector: '#root' });
+
+      it('default controlled should select the first option', () => {
+        browser.click('#terra-select-option-blue');
+      });
+
+      it('select should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
+      });
+
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot('selected-option');
+
+      after(() => browser.click('#root'));
+    });
 
     describe('default should select second option by keyboard interaction', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
-
       it('default should navigate to second option', () => {
         browser.keys('Tab');
         browser.keys('ArrowDown');
@@ -362,71 +397,6 @@ describe('Select', () => {
 
       Terra.it.isAccessible();
       Terra.it.matchesScreenshot('selected-option', { selector: '#root' });
-    });
-
-    describe('default controlled should select an option by click', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
-
-      it('default controlled should open the dropdown by clicking the toggle icon', () => {
-        browser.click('[data-terra-form-select-toggle]');
-        browser.moveToObject('#terra-select-option-green'); // add to ensure consistent hover styles
-      });
-
-      it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
-      });
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot('open-dropdown', { selector: '#root' });
-
-      it('default controlled should select the first option', () => {
-        browser.click('#terra-select-option-green');
-      });
-
-      it('select should be focused', async () => {
-        (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
-      });
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot('selected-option');
-    });
-
-    describe('default should truncate and wrap long text', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default-long-text'));
-
-      it('default should open the dropdown by clicking the toggle', () => {
-        browser.click('[data-terra-select]');
-      });
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot('open-dropdown', { selector: '#root' });
-    });
-
-    describe('should render an empty placeholder', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/empty-placeholder'));
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot();
-    });
-
-    describe('should open the dropdown and honor the set max height', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/max-height'));
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot();
-
-      it('default should open the dropdown by clicking the toggle', () => {
-        browser.click('#maxHeight:last-child');
-      });
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot('open-dropdown-max-height', { selector: '#root' });
-    });
-
-    describe('default renders an option with a value of zero', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-value-zero'));
-
-      Terra.it.matchesScreenshot();
     });
   });
 
@@ -1511,14 +1481,15 @@ describe('Select', () => {
       Terra.it.isAccessible();
       Terra.it.matchesScreenshot();
 
-      it('search constrolled should open the dropdown by clicking the toggle', () => {
+      it('search controlled should open the dropdown by clicking the toggle', () => {
         browser.click('#search:last-child');
+        browser.moveToObject('#terra-select-option-blue');
       });
 
       Terra.it.isAccessible();
       Terra.it.matchesScreenshot('open-dropdown', { selector: '#root' });
 
-      it('search constrolled should select the first option', () => {
+      it('search controlled should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 

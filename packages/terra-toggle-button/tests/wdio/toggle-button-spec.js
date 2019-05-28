@@ -96,7 +96,7 @@ describe('Toggle Button', () => {
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
-      browser.click('p*=Lorem');
+      browser.moveToObject('#root');
 
       // Let the animation complete
       browser.pause(100);
