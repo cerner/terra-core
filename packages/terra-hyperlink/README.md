@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-hyperlink)](https://www.npmjs.org/package/terra-hyperlink)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The terra hyperlink component allows linking to other web pages, files, locations within the same page, email addresses, or any other URL.
 
