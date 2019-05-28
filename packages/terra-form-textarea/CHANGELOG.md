@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Reordered examples on documentation site
+* Clarified functionality of `isAutoResizable` and `size` props for TextArea
 
 3.12.0 - (May 1, 2019)
 ------------------
