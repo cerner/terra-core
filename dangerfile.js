@@ -1,24 +1,31 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { danger, warn, fail } from 'danger';
 
-const determinePackages = (changedList, path) => {
-  const path1 = path.split('packages/')[1];
-  const packageName = path1.split('/')[0];
-  return changedList.includes(packageName) ? changedList : changedList.concat([packageName]);
-};
+const BIG_PR_THRESHOLD = 1000;
+const CHANGELOG_PATTERN = /^packages\/terra-([a-z-])*\/CHANGELOG\.md/i;
+const PACKAGE_SOURCE_PATTERN = /^packages\/terra-([a-z-])*\/src/i;
 
 const changedFiles = danger.git.created_files.concat(danger.git.modified_files);
-const changelogPattern = /^packages\/terra-([a-z-])*\/CHANGELOG.md/i;
-const packageSourcePattern = /^packages\/terra-([a-z-])*\/src/i;
 
-const changedChangelogs = changedFiles.filter(filePath => changelogPattern.test(filePath))
-  .reduce(determinePackages, []);
+const changedChangelogs = new Set();
+const changedSourceFiles = new Set();
 
-const changedSourceFiles = changedFiles.filter(
-  filePath => packageSourcePattern.test(filePath) && !changelogPattern.test(filePath),
-).reduce(determinePackages, []);
+changedFiles.forEach((file) => {
+  // file isn't in a package so it has no changelog, skip further processing
+  if (!file.includes('packages')) {
+    return;
+  }
 
-const missingChangelogs = changedSourceFiles.filter(packageName => !changedChangelogs.includes(packageName));
+  const packageName = file.split('packages/')[1].split('/')[0];
+
+  if (CHANGELOG_PATTERN.test(file)) {
+    changedChangelogs.add(packageName);
+  } else if (PACKAGE_SOURCE_PATTERN.test(file)) {
+    changedSourceFiles.add(packageName);
+  }
+});
+
+const missingChangelogs = [...changedSourceFiles].filter(packageName => !changedChangelogs.has(packageName));
 
 // Fail if there are package changes without a CHANGELOG update
 if (missingChangelogs.length > 0) {
@@ -26,7 +33,6 @@ if (missingChangelogs.length > 0) {
 }
 
 // Warn when there is a big PR
-const bigPRThreshold = 1000;
-if (danger.github.pr.additions + danger.github.pr.deletions > bigPRThreshold) {
+if (danger.github.pr.additions + danger.github.pr.deletions > BIG_PR_THRESHOLD) {
   warn(':exclamation: Big PR. Consider breaking this into smaller PRs if applicable');
 }
