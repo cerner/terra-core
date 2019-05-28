@@ -29,6 +29,6 @@ describe('Icon', () => {
   describe('AllIcons', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-all'));
 
-    Terra.should.validateElement();
+    Terra.it.validatesElement();
   });
 });
