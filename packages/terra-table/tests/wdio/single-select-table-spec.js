@@ -15,19 +15,19 @@ describe('Single-Select Table', () => {
         browser.click('[class*="row"]:nth-child(1)');
       });
 
-      Terra.should.matchScreenshot('first-row', { viewports });
+      Terra.it.matchesScreenshot('first-row', { viewports });
 
       it('selects the second row', () => {
         browser.click('[class*="row"]:nth-child(2)');
       });
 
-      Terra.should.matchScreenshot('second-row', { viewports });
+      Terra.it.matchesScreenshot('second-row', { viewports });
 
       it('selects the third row', () => {
         browser.click('[class*="row"]:nth-child(3)');
       });
 
-      Terra.should.matchScreenshot('third-row', { viewports });
+      Terra.it.matchesScreenshot('third-row', { viewports });
     });
 
     describe('Single-Select Table - Keyboard ENTER key', () => {
@@ -35,19 +35,19 @@ describe('Single-Select Table', () => {
         browser.keys(['Tab', 'Enter']);
       });
 
-      Terra.should.matchScreenshot('first-row', { viewports });
+      Terra.it.matchesScreenshot('first-row', { viewports });
 
       it('selects the second row', () => {
         browser.keys(['Tab', 'Enter']);
       });
 
-      Terra.should.matchScreenshot('second-row', { viewports });
+      Terra.it.matchesScreenshot('second-row', { viewports });
 
       it('selects the third row', () => {
         browser.keys(['Tab', 'Enter']);
       });
 
-      Terra.should.matchScreenshot('third-row', { viewports });
+      Terra.it.matchesScreenshot('third-row', { viewports });
     });
 
     describe('Single-Select Table - Keyboard SPACE key', () => {
@@ -55,19 +55,19 @@ describe('Single-Select Table', () => {
         browser.keys(['Tab', 'Space']);
       });
 
-      Terra.should.matchScreenshot('first-row', { viewports });
+      Terra.it.matchesScreenshot('first-row', { viewports });
 
       it('selects the second row', () => {
         browser.keys(['Tab', 'Space']);
       });
 
-      Terra.should.matchScreenshot('second-row', { viewports });
+      Terra.it.matchesScreenshot('second-row', { viewports });
 
       it('selects the third row', () => {
         browser.keys(['Tab', 'Space']);
       });
 
-      Terra.should.matchScreenshot('third-row', { viewports });
+      Terra.it.matchesScreenshot('third-row', { viewports });
     });
   });
 
@@ -81,30 +81,30 @@ describe('Single-Select Table', () => {
       browser.click('[class*="row"]:nth-child(1)');
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    Terra.it.matchesScreenshot('first-row', { viewports });
 
     it('selects the second row', () => {
       browser.click('[class*="row"]:nth-child(2)');
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row', { viewports });
 
     it('selects the third row', () => {
       browser.click('[class*="row"]:nth-child(3)');
     });
 
-    Terra.should.matchScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row', { viewports });
   });
 
   describe('Single-Select Table - Preselected', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/single-select-table/single-row-selectable-table-preselected'));
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Single-Select Table - No Rows', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/single-select-table/single-row-selectable-table-non-selectable'));
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 });

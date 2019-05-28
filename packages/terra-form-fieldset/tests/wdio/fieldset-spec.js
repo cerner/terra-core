@@ -4,8 +4,8 @@ describe('Fieldset', () => {
   describe('Populated', () => {
     before(() => browser.url('/#/raw/tests/terra-form-fieldset/form-fieldset/populated-fieldset'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {

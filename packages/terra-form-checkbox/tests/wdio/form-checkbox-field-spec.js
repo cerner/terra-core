@@ -6,8 +6,8 @@ describe('CheckboxField', () => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/controlled-checkbox-field');
     });
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -44,7 +44,7 @@ describe('CheckboxField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
   });
 
   describe('CheckboxField Interactions - Invalid State', () => {
@@ -54,7 +54,7 @@ describe('CheckboxField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
   });
 
   describe('CheckboxField Interactions - Valid State with hideRequired', () => {
@@ -65,7 +65,7 @@ describe('CheckboxField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
   });
 
   describe('CheckboxField Interactions - Invalid State with hideRequired', () => {
@@ -76,7 +76,7 @@ describe('CheckboxField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
   });
 
   describe('CheckboxField Optional', () => {
@@ -84,8 +84,8 @@ describe('CheckboxField', () => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/optional-checkbox-field');
     });
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
   });
 
   describe('CheckboxField Hidden Legend', () => {
@@ -93,7 +93,7 @@ describe('CheckboxField', () => {
       browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/hidden-legend');
     });
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
   });
 });

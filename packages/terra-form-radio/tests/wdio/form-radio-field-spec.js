@@ -6,8 +6,8 @@ describe('RadioField', () => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
     });
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -46,7 +46,7 @@ describe('RadioField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
   });
 
   describe('RadioField Interactions - Valid State with hideRequired', () => {
@@ -57,7 +57,7 @@ describe('RadioField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
   });
 
   describe('RadioField Interactions - Invalid State with hideRequired', () => {
@@ -70,7 +70,7 @@ describe('RadioField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.should.matchScreenshot({ viewports: [viewports[0]] });
+    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
   });
 
   describe('RadioField Optional', () => {
@@ -78,8 +78,8 @@ describe('RadioField', () => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/optional-radio-field');
     });
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
   });
 
   describe('RadioField Hidden Legend', () => {
@@ -87,7 +87,7 @@ describe('RadioField', () => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hidden-legend');
     });
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
   });
 });

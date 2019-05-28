@@ -3,8 +3,8 @@ const viewports = Terra.viewports('tiny', 'large');
 describe('Alert', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/default-alert'));
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -18,19 +18,19 @@ describe('Alert', () => {
 
   describe('Types', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-type'));
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
   });
 
   describe('Padding', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-padding'));
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Titles', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-title'));
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -62,8 +62,8 @@ describe('Alert', () => {
 
   describe('Custom', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/custom-alert'));
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -82,8 +82,8 @@ describe('Alert', () => {
         browser.url('/#/raw/tests/terra-alert/alert/alert-action-button');
       });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
@@ -108,8 +108,8 @@ describe('Alert', () => {
         browser.url('/#/raw/tests/terra-alert/alert/alert-dismissible');
       });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
 
       it('should dismiss', () => {
         browser.click('#dismissibleAlert button');

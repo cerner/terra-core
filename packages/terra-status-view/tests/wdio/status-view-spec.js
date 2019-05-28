@@ -4,8 +4,8 @@ describe('StatusView', () => {
   describe('Displays a default status view', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-default'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -20,8 +20,8 @@ describe('StatusView', () => {
   describe('Displays an error status view with all props given', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-error-all-props'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -46,8 +46,8 @@ describe('StatusView', () => {
   describe('Displays an error status view with the glyph being hidden', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-glyph-hidden'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -62,8 +62,8 @@ describe('StatusView', () => {
   describe('Displays an error status view with the glyph being hidden with too small of a height', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-height-too-small'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -88,8 +88,8 @@ describe('StatusView', () => {
   describe('Displays a no-data status view with the content centered in its container', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-center'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -104,8 +104,8 @@ describe('StatusView', () => {
   describe('Displays a no-matching-results status view with the content aligned at the top in its container', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-align-top'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -120,8 +120,8 @@ describe('StatusView', () => {
   describe('Displays a not-authorized status view', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-not-authorized'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -136,8 +136,8 @@ describe('StatusView', () => {
   describe('Displays a custom status view', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-custom'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -152,8 +152,8 @@ describe('StatusView', () => {
   describe('Displays an error status view that displays wrapping text', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-text-wrapping'));
 
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -180,7 +180,7 @@ describe('StatusView', () => {
       browser.url('/#/raw/tests/terra-status-view/status-view/status-view-thin-constraint');
     });
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 });

@@ -4,8 +4,8 @@ describe('Card', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-card/card/default-card'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -21,8 +21,8 @@ describe('Card', () => {
   describe('Raised', () => {
     before(() => browser.url('/#/raw/tests/terra-card/card/raised-card'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -34,22 +34,22 @@ describe('Card', () => {
   describe('Card Body Padding Horizontal', () => {
     before(() => browser.url('/#/raw/tests/terra-card/card/card-padding-horizontal'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Card Body Padding Vertical', () => {
     before(() => browser.url('/#/raw/tests/terra-card/card/card-padding-vertical'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Card Body Padded', () => {
     before(() => browser.url('/#/raw/tests/terra-card/card/card-padding'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -64,14 +64,14 @@ describe('Card', () => {
   describe('Card Body Centered', () => {
     before(() => browser.url('/#/raw/tests/terra-card/card/card-content-center'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Card Visually Hidden Text', () => {
     before(() => browser.url('/#/raw/tests/terra-card/card/card-visually-hidden-text'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 });

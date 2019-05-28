@@ -5,8 +5,8 @@ describe('Signature', () => {
   });
 
   describe('Default', () => {
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 
   describe('Right Click does not draw lines', () => {
@@ -17,8 +17,8 @@ describe('Signature', () => {
       browser.buttonUp(2);
     });
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 
   describe('Middle Click does not draw lines', () => {
@@ -29,8 +29,8 @@ describe('Signature', () => {
       browser.buttonUp(1);
     });
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 
   describe('Drawing Lines', () => {
@@ -41,7 +41,7 @@ describe('Signature', () => {
       browser.buttonUp(0);
     });
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 });

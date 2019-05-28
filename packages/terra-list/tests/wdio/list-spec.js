@@ -4,8 +4,8 @@ describe('List', () => {
   describe('List Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list'));
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -26,12 +26,12 @@ describe('List', () => {
   describe('ListItem Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-item'));
 
-    Terra.should.matchScreenshot('ListItem');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('ListItem');
+    Terra.it.isAccessible();
 
     it('Hover', () => browser.moveToObject('#selectable-item'));
 
-    Terra.should.matchScreenshot('ListItem-Hover');
+    Terra.it.matchesScreenshot('ListItem-Hover');
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -60,26 +60,26 @@ describe('List', () => {
   describe('ListSection Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-section'));
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 
   describe('ListSubsection Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-subsection'));
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 
   describe('ListSectionHeader Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-section-header'));
 
-    Terra.should.matchScreenshot('ListSectionHeader');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('ListSectionHeader');
+    Terra.it.isAccessible();
 
     it('Hover', () => browser.moveToObject('#test-header'));
 
-    Terra.should.matchScreenshot('ListSubsection-Hover');
+    Terra.it.matchesScreenshot('ListSubsection-Hover');
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -104,12 +104,12 @@ describe('List', () => {
   describe('ListSubsectionHeader Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-subsection-header'));
 
-    Terra.should.matchScreenshot('ListSubsection');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('ListSubsection');
+    Terra.it.isAccessible();
 
     it('Hover', () => browser.moveToObject('#test-header'));
 
-    Terra.should.matchScreenshot('ListSubsection-Hover');
+    Terra.it.matchesScreenshot('ListSubsection-Hover');
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {

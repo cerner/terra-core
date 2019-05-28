@@ -14,6 +14,6 @@ describe('Signature', () => {
       browser.buttonUp(0);
     });
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 });

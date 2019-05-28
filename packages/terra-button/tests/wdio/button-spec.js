@@ -7,8 +7,8 @@ describe('Button', () => {
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
 
-    Terra.should.beAccessible({ context: '#neutral' });
-    Terra.should.matchScreenshot({ selector: '#neutral' });
+    Terra.it.isAccessible({ context: '#neutral' });
+    Terra.it.matchesScreenshot({ selector: '#neutral' });
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -38,8 +38,8 @@ describe('Button', () => {
         browser.moveToObject('#neutralButton');
       });
 
-      Terra.should.beAccessible({ context: '#neutral' });
-      Terra.should.matchScreenshot({ selector: '#neutral' });
+      Terra.it.isAccessible({ context: '#neutral' });
+      Terra.it.matchesScreenshot({ selector: '#neutral' });
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -59,8 +59,8 @@ describe('Button', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.beAccessible({ context: '#neutral' });
-      Terra.should.matchScreenshot({ selector: '#neutral' });
+      Terra.it.isAccessible({ context: '#neutral' });
+      Terra.it.matchesScreenshot({ selector: '#neutral' });
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -76,8 +76,8 @@ describe('Button', () => {
     describe('Neutral-Active', () => {
       before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
-      Terra.should.matchScreenshot('active', { selector: '#neutralActive' });
-      Terra.should.matchScreenshot('active and focused', { selector: '#neutralActiveFocusSpan' });
+      Terra.it.matchesScreenshot('active', { selector: '#neutralActive' });
+      Terra.it.matchesScreenshot('active and focused', { selector: '#neutralActiveFocusSpan' });
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -96,14 +96,14 @@ describe('Button', () => {
   describe('Emphasis', () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/emphasis-button'));
 
-    Terra.should.beAccessible({ context: '#emphasis' });
-    Terra.should.matchScreenshot({ selector: '#emphasis' });
+    Terra.it.isAccessible({ context: '#emphasis' });
+    Terra.it.matchesScreenshot({ selector: '#emphasis' });
 
     describe('Emphasis-Hovered', () => {
       before(() => browser.moveToObject('#emphasisButton'));
 
-      Terra.should.beAccessible({ context: '#emphasis' });
-      Terra.should.matchScreenshot({ selector: '#emphasis' });
+      Terra.it.isAccessible({ context: '#emphasis' });
+      Terra.it.matchesScreenshot({ selector: '#emphasis' });
 
       after(() => browser.moveToObject('#root'));
     });
@@ -111,32 +111,32 @@ describe('Button', () => {
     describe('Emphasis-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
 
-      Terra.should.beAccessible({ context: '#emphasis' });
-      Terra.should.matchScreenshot({ selector: '#emphasis' });
+      Terra.it.isAccessible({ context: '#emphasis' });
+      Terra.it.matchesScreenshot({ selector: '#emphasis' });
     });
 
     describe('Emphasis-Active', () => {
       before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
-      Terra.should.beAccessible({ context: '#emphasisActive' });
-      Terra.should.matchScreenshot('active', { selector: '#emphasisActive' });
+      Terra.it.isAccessible({ context: '#emphasisActive' });
+      Terra.it.matchesScreenshot('active', { selector: '#emphasisActive' });
 
-      Terra.should.beAccessible({ context: '#emphasisActiveFocus' });
-      Terra.should.matchScreenshot('active and focused', { selector: '#emphasisActiveFocusSpan' });
+      Terra.it.isAccessible({ context: '#emphasisActiveFocus' });
+      Terra.it.matchesScreenshot('active and focused', { selector: '#emphasisActiveFocusSpan' });
     });
   });
 
   describe('Ghost', () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/ghost-button'));
 
-    Terra.should.beAccessible({ context: '#ghost' });
-    Terra.should.matchScreenshot({ selector: '#ghost' });
+    Terra.it.isAccessible({ context: '#ghost' });
+    Terra.it.matchesScreenshot({ selector: '#ghost' });
 
     describe('Ghost-Hovered', () => {
       before(() => browser.moveToObject('#ghostButton'));
 
-      Terra.should.beAccessible({ context: '#ghost' });
-      Terra.should.matchScreenshot({ selector: '#ghost' });
+      Terra.it.isAccessible({ context: '#ghost' });
+      Terra.it.matchesScreenshot({ selector: '#ghost' });
 
       after(() => browser.moveToObject('#root'));
     });
@@ -144,32 +144,32 @@ describe('Button', () => {
     describe('Ghost-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
 
-      Terra.should.beAccessible({ context: '#ghost' });
-      Terra.should.matchScreenshot({ selector: '#ghost' });
+      Terra.it.isAccessible({ context: '#ghost' });
+      Terra.it.matchesScreenshot({ selector: '#ghost' });
     });
 
     describe('Ghost-Active', () => {
       before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
-      Terra.should.beAccessible({ context: '#ghostActive' });
-      Terra.should.matchScreenshot('active', { selector: '#ghostActive' });
+      Terra.it.isAccessible({ context: '#ghostActive' });
+      Terra.it.matchesScreenshot('active', { selector: '#ghostActive' });
 
-      Terra.should.beAccessible({ context: '#ghostActiveFocus' });
-      Terra.should.matchScreenshot('active and focused', { selector: '#ghostActiveFocusSpan' });
+      Terra.it.isAccessible({ context: '#ghostActiveFocus' });
+      Terra.it.matchesScreenshot('active and focused', { selector: '#ghostActiveFocusSpan' });
     });
   });
 
   describe('De-emphasis', () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/deemphasis-button'));
 
-    Terra.should.beAccessible({ context: '#de-emphasis' });
-    Terra.should.matchScreenshot({ selector: '#de-emphasis' });
+    Terra.it.isAccessible({ context: '#de-emphasis' });
+    Terra.it.matchesScreenshot({ selector: '#de-emphasis' });
 
     describe('De-emphasis-Hovered', () => {
       before(() => browser.moveToObject('#de-emphasisButton'));
 
-      Terra.should.beAccessible({ context: '#de-emphasis' });
-      Terra.should.matchScreenshot({ selector: '#de-emphasis' });
+      Terra.it.isAccessible({ context: '#de-emphasis' });
+      Terra.it.matchesScreenshot({ selector: '#de-emphasis' });
 
       after(() => browser.moveToObject('#root'));
     });
@@ -177,23 +177,23 @@ describe('Button', () => {
     describe('De-emphasis-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
 
-      Terra.should.beAccessible({ context: '#de-emphasis' });
-      Terra.should.matchScreenshot({ selector: '#de-emphasis' });
+      Terra.it.isAccessible({ context: '#de-emphasis' });
+      Terra.it.matchesScreenshot({ selector: '#de-emphasis' });
     });
 
     describe('De-emphasis-Active', () => {
       before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
-      Terra.should.matchScreenshot('active', { selector: '#de-emphasisActive' });
-      Terra.should.matchScreenshot('active and focused', { selector: '#de-emphasisActiveFocusSpan' });
+      Terra.it.matchesScreenshot('active', { selector: '#de-emphasisActive' });
+      Terra.it.matchesScreenshot('active and focused', { selector: '#de-emphasisActiveFocusSpan' });
     });
   });
 
   describe('Action', () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/action-button'));
 
-    Terra.should.beAccessible({ context: '#action' });
-    Terra.should.matchScreenshot({ selector: '#action' });
+    Terra.it.isAccessible({ context: '#action' });
+    Terra.it.matchesScreenshot({ selector: '#action' });
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -206,8 +206,8 @@ describe('Button', () => {
     describe('Action-Hovered', () => {
       before(() => browser.moveToObject('#actionButton'));
 
-      Terra.should.beAccessible({ context: '#action' });
-      Terra.should.matchScreenshot({ selector: '#action' });
+      Terra.it.isAccessible({ context: '#action' });
+      Terra.it.matchesScreenshot({ selector: '#action' });
 
       after(() => browser.moveToObject('#root'));
     });
@@ -215,29 +215,29 @@ describe('Button', () => {
     describe('Action-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
 
-      Terra.should.beAccessible({ context: '#action' });
-      Terra.should.matchScreenshot({ selector: '#action' });
+      Terra.it.isAccessible({ context: '#action' });
+      Terra.it.matchesScreenshot({ selector: '#action' });
     });
 
     describe('Action-Active', () => {
       before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
-      Terra.should.matchScreenshot('active', { selector: '#actionActive' });
-      Terra.should.matchScreenshot('active and focused', { selector: '#actionActiveFocusSpan' });
+      Terra.it.matchesScreenshot('active', { selector: '#actionActive' });
+      Terra.it.matchesScreenshot('active and focused', { selector: '#actionActiveFocusSpan' });
     });
   });
 
   describe('Utility', () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/utility-button'));
 
-    Terra.should.beAccessible({ context: '#utility' });
-    Terra.should.matchScreenshot({ selector: '#utility' });
+    Terra.it.isAccessible({ context: '#utility' });
+    Terra.it.matchesScreenshot({ selector: '#utility' });
 
     describe('Utility-Hovered', () => {
       before(() => browser.moveToObject('#utilityButton'));
 
-      Terra.should.beAccessible({ context: '#utility' });
-      Terra.should.matchScreenshot({ selector: '#utility' });
+      Terra.it.isAccessible({ context: '#utility' });
+      Terra.it.matchesScreenshot({ selector: '#utility' });
 
       after(() => browser.moveToObject('#root'));
     });
@@ -245,8 +245,8 @@ describe('Button', () => {
     describe('Utility-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
 
-      Terra.should.beAccessible({ context: '#utility' });
-      Terra.should.matchScreenshot({ selector: '#utility' });
+      Terra.it.isAccessible({ context: '#utility' });
+      Terra.it.matchesScreenshot({ selector: '#utility' });
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -260,8 +260,8 @@ describe('Button', () => {
     describe('Utility-Active', () => {
       before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
 
-      Terra.should.matchScreenshot('active', { selector: '#utilityActive' });
-      Terra.should.matchScreenshot('active and focused', { selector: '#utilityActiveFocusSpan' });
+      Terra.it.matchesScreenshot('active', { selector: '#utilityActive' });
+      Terra.it.matchesScreenshot('active and focused', { selector: '#utilityActiveFocusSpan' });
     });
   });
 
@@ -271,8 +271,8 @@ describe('Button', () => {
       browser.moveToObject('#root');
     });
 
-    Terra.should.beAccessible({ context: '#long-text' });
-    Terra.should.matchScreenshot({ selector: '#long-text' });
+    Terra.it.isAccessible({ context: '#long-text' });
+    Terra.it.matchesScreenshot({ selector: '#long-text' });
   });
 
   describe('Block', () => {
@@ -281,8 +281,8 @@ describe('Button', () => {
       browser.moveToObject('#root');
     });
 
-    Terra.should.beAccessible({ context: '#long-text-block' });
-    Terra.should.matchScreenshot({ selector: '#long-text-block' });
+    Terra.it.isAccessible({ context: '#long-text-block' });
+    Terra.it.matchesScreenshot({ selector: '#long-text-block' });
   });
 
   describe('Button Types', () => {
@@ -291,18 +291,18 @@ describe('Button', () => {
       browser.moveToObject('#root');
     });
 
-    Terra.should.beAccessible();
+    Terra.it.isAccessible();
 
     describe('Type reset', () => {
-      Terra.should.matchScreenshot({ selector: '#buttonWithTypeReset' });
+      Terra.it.matchesScreenshot({ selector: '#buttonWithTypeReset' });
     });
 
     describe('Type submit', () => {
-      Terra.should.matchScreenshot({ selector: '#buttonWithTypeSubmit' });
+      Terra.it.matchesScreenshot({ selector: '#buttonWithTypeSubmit' });
     });
 
     describe('Type button', () => {
-      Terra.should.matchScreenshot({ selector: '#buttonWithTypeButton' });
+      Terra.it.matchesScreenshot({ selector: '#buttonWithTypeButton' });
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -321,10 +321,10 @@ describe('Button', () => {
       browser.moveToObject('#root');
     });
 
-    Terra.should.beAccessible();
+    Terra.it.isAccessible();
 
     describe('Icon and Text', () => {
-      Terra.should.matchScreenshot({ selector: '#iconNeutralButton' });
+      Terra.it.matchesScreenshot({ selector: '#iconNeutralButton' });
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -339,11 +339,11 @@ describe('Button', () => {
     });
 
     describe('Icon and Text Reversed', () => {
-      Terra.should.matchScreenshot({ selector: '#iconReversedButton' });
+      Terra.it.matchesScreenshot({ selector: '#iconReversedButton' });
     });
 
     describe('Icon only', () => {
-      Terra.should.matchScreenshot({ selector: '#iconOnlyButton' });
+      Terra.it.matchesScreenshot({ selector: '#iconOnlyButton' });
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -364,7 +364,7 @@ describe('Button', () => {
       browser.moveToObject('#root');
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot({ selector: '#compactButton' });
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot({ selector: '#compactButton' });
   });
 });

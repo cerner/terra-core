@@ -80,8 +80,8 @@ describe('Checkbox', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/default-checkbox'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: themingProperties,
@@ -92,8 +92,8 @@ describe('Checkbox', () => {
         browser.moveToObject('#default');
       });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: { ...themingProperties, ...hoverThemingProperties },
@@ -109,8 +109,8 @@ describe('Checkbox', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: { ...themingProperties, ...checkedThemingProperties, ...focusThemingProperties },
@@ -134,8 +134,8 @@ describe('Checkbox', () => {
         browser.click('#site');
       });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: { ...themingProperties, ...checkedThemingProperties },
@@ -146,8 +146,8 @@ describe('Checkbox', () => {
   describe('Disabled', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/disabled-checkbox'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: { ...themingProperties, ...checkedThemingProperties, ...disabledThemingProperties },
@@ -159,8 +159,8 @@ describe('Checkbox', () => {
         browser.moveToObject('#disabled');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: { ...themingProperties, ...checkedThemingProperties, ...disabledThemingProperties },
@@ -171,28 +171,28 @@ describe('Checkbox', () => {
   describe('Hidden Label', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/hidden-label-checkbox'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Populated', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/populated-checkbox'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Long Text', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/long-text-checkbox'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Three Checkboxes, First Defaulted to Checked', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/multiple-checkboxes'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 });

@@ -4,15 +4,15 @@ describe('Profile Image', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-profile-image/profile-image/profile-image-default'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Failed', () => {
     before(() => browser.url('/#/raw/tests/terra-profile-image/profile-image/profile-image-failed'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       /*
        * Below style is the equivalent of having

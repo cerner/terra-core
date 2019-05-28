@@ -9,8 +9,8 @@ describe('Hyperlink', () => {
       browser.moveToObject('#root', 0, 900); // move mouse to prevent hover styles
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Disabled', () => {
@@ -21,8 +21,8 @@ describe('Hyperlink', () => {
       'color-contrast': { enabled: false },
     };
 
-    Terra.should.beAccessible({ rules });
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible({ rules });
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -35,8 +35,8 @@ describe('Hyperlink', () => {
   describe('Audio', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/audio-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -48,8 +48,8 @@ describe('Hyperlink', () => {
   describe('Document', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/document-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -61,8 +61,8 @@ describe('Hyperlink', () => {
   describe('External', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/external-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -74,8 +74,8 @@ describe('Hyperlink', () => {
   describe('Image', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/image-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -87,8 +87,8 @@ describe('Hyperlink', () => {
   describe('Video', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/video-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -100,22 +100,22 @@ describe('Hyperlink', () => {
   describe('Icon Non Wrapping', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/icon-non-wrapping-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Scaled', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/scaled-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('States', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/states-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -138,7 +138,7 @@ describe('Hyperlink', () => {
   describe('Underline Hidden', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/underline-hidden-hyperlink'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 });

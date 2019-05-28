@@ -4,8 +4,8 @@ describe('Badge', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-default'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports, selector: '#default-badge' });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports, selector: '#default-badge' });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       selector: '#default-badge',
@@ -27,8 +27,8 @@ describe('Badge', () => {
   describe('Intent', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-intent'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -53,8 +53,8 @@ describe('Badge', () => {
   describe('Size', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-size'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -69,8 +69,8 @@ describe('Badge', () => {
 
   describe('Icons', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-icon'));
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -81,7 +81,7 @@ describe('Badge', () => {
 
   describe('Visually Hidden Text', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-visually-hidden-text'));
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 });

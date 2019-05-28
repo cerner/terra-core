@@ -93,8 +93,8 @@ describe('Radio', () => {
   describe('Default', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/default-radio'));
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: themingProperties,
@@ -106,8 +106,8 @@ describe('Radio', () => {
         browser.moveToObject('#default');
       });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: { ...themingProperties, ...hoverThemingProperties },
@@ -121,8 +121,8 @@ describe('Radio', () => {
         browser.click('#site');
       });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: { ...themingProperties, ...checkedThemingProperties },
@@ -135,8 +135,8 @@ describe('Radio', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: { ...themingProperties, ...checkedThemingProperties, ...focusThemingProperties },
@@ -159,8 +159,8 @@ describe('Radio', () => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/disabled-radio');
     });
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: { ...themingProperties, ...checkedThemingProperties, ...disabledThemingProperties },
@@ -170,8 +170,8 @@ describe('Radio', () => {
   describe('Hidden Label', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/hidden-radio'));
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: { ...themingProperties, ...checkedThemingProperties, ...labelIsHiddenThemingProperties },

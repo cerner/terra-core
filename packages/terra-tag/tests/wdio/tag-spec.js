@@ -7,8 +7,8 @@ describe('Tag', () => {
     describe('Default Tag', () => {
       before(() => browser.url('/#/raw/tests/terra-tag/tag/default-tag'));
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
@@ -36,20 +36,20 @@ describe('Tag', () => {
 
   describe('Default OnClick Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/default-on-click-tag'));
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Href Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/href-tag'));
-    Terra.should.matchScreenshot();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Icon and Text Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/icon-and-text-tag'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -64,21 +64,21 @@ describe('Tag', () => {
   describe('Icon and Text Long Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/long-text-tag'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Multiple Tags', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/multiple-tags'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('OnClick Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/on-click-tag'));
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -94,8 +94,8 @@ describe('Tag', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {
@@ -113,8 +113,8 @@ describe('Tag', () => {
         browser.moveToObject('button');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
         properties: {

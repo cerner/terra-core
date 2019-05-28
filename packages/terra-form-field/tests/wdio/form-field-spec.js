@@ -4,8 +4,8 @@ describe('Form-field', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/default-field'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -17,8 +17,8 @@ describe('Form-field', () => {
   describe('Label', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -33,8 +33,8 @@ describe('Form-field', () => {
   describe('Label Optional', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-optional'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -47,8 +47,8 @@ describe('Form-field', () => {
   describe('Label Required', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-required'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -61,8 +61,8 @@ describe('Form-field', () => {
   describe('Error Text', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-error-text'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -77,8 +77,8 @@ describe('Form-field', () => {
   describe('Help Text', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-help-text'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -93,29 +93,29 @@ describe('Form-field', () => {
   describe('Label Required Error Help Text', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-required-error-help-text'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Hidden Label', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-hidden-label'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Text Wrap', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-text-wrap'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Inline', () => {
     before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-inline'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {

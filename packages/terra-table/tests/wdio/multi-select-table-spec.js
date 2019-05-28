@@ -11,19 +11,19 @@ describe('Multi-Select Table', () => {
       browser.click('[class*="row"]:nth-child(1)');
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    Terra.it.matchesScreenshot('first-row', { viewports });
 
     it('selects the second row', () => {
       browser.click('[class*="row"]:nth-child(2)');
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row', { viewports });
 
     it('selects the third row', () => {
       browser.click('[class*="row"]:nth-child(3)');
     });
 
-    Terra.should.matchScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row', { viewports });
 
     after(() => {
       // deselect rows
@@ -45,19 +45,19 @@ describe('Multi-Select Table', () => {
       browser.keys(['Tab', 'Enter']);
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    Terra.it.matchesScreenshot('first-row', { viewports });
 
     it('selects the second row', () => {
       browser.keys(['Tab', 'Enter']);
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row', { viewports });
 
     it('selects the third row', () => {
       browser.keys(['Tab', 'Enter']);
     });
 
-    Terra.should.matchScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row', { viewports });
 
     after(() => {
       // deselect rows
@@ -79,19 +79,19 @@ describe('Multi-Select Table', () => {
       browser.keys(['Tab', 'Space']);
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    Terra.it.matchesScreenshot('first-row', { viewports });
 
     it('selects the second row', () => {
       browser.keys(['Tab', 'Space']);
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row', { viewports });
 
     it('selects the third row', () => {
       browser.keys(['Tab', 'Space']);
     });
 
-    Terra.should.matchScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row', { viewports });
 
     after(() => {
       // deselect rows
@@ -111,19 +111,19 @@ describe('Multi-Select Table', () => {
       browser.click('[class*="row"]:nth-child(1)');
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    Terra.it.matchesScreenshot('first-row', { viewports });
 
     it('selects the second row', () => {
       browser.click('[class*="row"]:nth-child(2)');
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row', { viewports });
 
     it('selects the third row', () => {
       browser.click('[class*="row"]:nth-child(3)');
     });
 
-    Terra.should.matchScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row', { viewports });
   });
 
   describe('Multi-Select Table - Preselected', () => {
@@ -132,7 +132,7 @@ describe('Multi-Select Table', () => {
       browser.waitForVisible('table');
     });
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Multi-Select Table - Non Selectable', () => {
@@ -141,7 +141,7 @@ describe('Multi-Select Table', () => {
       browser.waitForVisible('table');
     });
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Multi-Select Table - Max Selection (OnClick)', () => {
@@ -154,19 +154,19 @@ describe('Multi-Select Table', () => {
       browser.click('[class*="row"]:nth-child(1)');
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    Terra.it.matchesScreenshot('first-row', { viewports });
 
     it('selects the second row', () => {
       browser.click('[class*="row"]:nth-child(2)');
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row', { viewports });
 
     it('attempts to select the third row', () => {
       browser.click('[class*="row"]:nth-child(3)');
     });
 
-    Terra.should.matchScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row', { viewports });
 
     after(() => {
       // deselect the rows
@@ -187,19 +187,19 @@ describe('Multi-Select Table', () => {
       browser.keys(['Tab', 'Enter']);
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    Terra.it.matchesScreenshot('first-row', { viewports });
 
     it('selects the second row', () => {
       browser.keys(['Tab', 'Enter']);
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row', { viewports });
 
     it('attempts to select the third row', () => {
       browser.keys(['Tab', 'Enter']);
     });
 
-    Terra.should.matchScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row', { viewports });
 
     after(() => {
       // deselect the rows
@@ -220,19 +220,19 @@ describe('Multi-Select Table', () => {
       browser.keys(['Tab', 'Space']);
     });
 
-    Terra.should.matchScreenshot('first-row', { viewports });
+    Terra.it.matchesScreenshot('first-row', { viewports });
 
     it('selects the second row', () => {
       browser.keys(['Tab', 'Space']);
     });
 
-    Terra.should.matchScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row', { viewports });
 
     it('attempts to select the third row', () => {
       browser.keys(['Tab', 'Space']);
     });
 
-    Terra.should.matchScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row', { viewports });
 
     after(() => {
       // deselect the rows
@@ -248,7 +248,7 @@ describe('Multi-Select Table', () => {
       browser.click('[class*="row"]:nth-child(3)');
     });
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Multi-Select Table - Initial Max Selection (keypress)', () => {
@@ -260,7 +260,7 @@ describe('Multi-Select Table', () => {
       browser.click('[class*="row"]:nth-child(3)');
     });
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Multi-Select Table - Initial Max Exceeded (onClick)', () => {
@@ -270,7 +270,7 @@ describe('Multi-Select Table', () => {
       browser.click('[class*="row"]:nth-child(3)');
     });
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Multi-Select Table - Initial Max Exceeded (keypress)', () => {
@@ -282,6 +282,6 @@ describe('Multi-Select Table', () => {
       browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Enter']);
     });
 
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 });

@@ -4,8 +4,8 @@ describe('Divider', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-divider/divider/default-divider'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
@@ -19,8 +19,8 @@ describe('Divider', () => {
   describe('Custom Text', () => {
     before(() => browser.url('/#/raw/tests/terra-divider/divider/divider-with-text'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',

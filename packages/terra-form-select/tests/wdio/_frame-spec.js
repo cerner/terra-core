@@ -4,8 +4,8 @@ describe('Frame', () => {
   describe('should have a themeable disabled icon', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/disabled'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
 
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',

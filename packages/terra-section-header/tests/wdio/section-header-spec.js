@@ -2,8 +2,8 @@ describe('SectionHeader', () => {
   describe('Default Section Header', () => {
     before(() => browser.url('/#/raw/tests/terra-section-header/section-header/default-section-header'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -29,8 +29,8 @@ describe('SectionHeader', () => {
   describe('Long Title Default Section Header', () => {
     before(() => browser.url('/#/raw/tests/terra-section-header/section-header/long-title-section-header'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Long Title Accordion Section Header', () => {
@@ -39,8 +39,8 @@ describe('SectionHeader', () => {
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
     Terra.should.themeCombinationOfCustomProperties({
       testName: 'themed',
       properties: {
@@ -61,8 +61,8 @@ describe('SectionHeader', () => {
         browser.moveToObject('.accordionContent');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -85,8 +85,8 @@ describe('SectionHeader', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -109,8 +109,8 @@ describe('SectionHeader', () => {
         browser.buttonDown();
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -135,8 +135,8 @@ describe('SectionHeader', () => {
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Open Section Header', () => {
@@ -145,8 +145,8 @@ describe('SectionHeader', () => {
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('On Click Section Header', () => {
@@ -155,15 +155,15 @@ describe('SectionHeader', () => {
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Transparent Section Header', () => {
     before(() => browser.url('/#/raw/tests/terra-section-header/section-header/transparent-section-header'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Interactable Transparent Section Header', () => {
@@ -174,8 +174,8 @@ describe('SectionHeader', () => {
         browser.moveToObject('[data-id="section-header"]');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -197,8 +197,8 @@ describe('SectionHeader', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',
@@ -220,8 +220,8 @@ describe('SectionHeader', () => {
         browser.buttonDown();
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot();
 
       Terra.should.themeCombinationOfCustomProperties({
         testName: 'themed',

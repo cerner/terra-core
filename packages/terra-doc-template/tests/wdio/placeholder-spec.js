@@ -4,14 +4,14 @@ describe('Placeholder', () => {
   describe('Default Placeholder', () => {
     before(() => browser.url('/#/raw/tests/terra-doc-template/doc-template/default-placeholder'));
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 
   describe('Light Placeholder', () => {
     before(() => browser.url('/#/raw/tests/terra-doc-template/doc-template/light-placeholder'));
 
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot();
+    Terra.it.isAccessible();
   });
 });
