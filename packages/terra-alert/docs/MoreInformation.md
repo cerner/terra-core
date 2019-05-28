@@ -20,7 +20,7 @@ This image shows the layout of the elements of the Alert component.
 |action |element  |optional  |null  |An action element to be added to the action section of the alert.|
 |children  |node or string  |optional  |''  |Child Nodes providing the message content for the alert. Can contain text and HTML.|
 |customIcon  |element  |optional  |null  |The icon to be used for an alert of type custom. This will not be used for any other alert types.|
-|customColorClass |string  |optional  |''  |The status bar color to be used for an alert of type custom.|
+|customColorClass |string  |optional  |''  |Sets an author-defined class, to control the status bar color to be used for an alert of type custom.|
 |onDismiss |function  |optional  |null  |Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.|
 |title |string  |optional  |''  |The title for the alert which will be bolded.|
 |type  |string  |optional  |'alert' |The type of alert to be rendered. One of Alert.Opts.Types.ALERT, Alert.Opts.Types.ERROR, Alert.Opts.Types.WARNING, Alert.Opts.Types.ADVISORY, Alert.Opts.Types.INFO, Alert.Opts.Types.SUCCESS, Alert.Opts.Types.CUSTOM. Use the Alert.Opts.Types attribute of the Alert component for access to these type strings.|
