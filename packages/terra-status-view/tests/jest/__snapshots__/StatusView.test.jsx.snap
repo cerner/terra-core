@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a single child element 1`] = `
-<StatusView
+<InjectIntl(StatusView)
   intl={
     Object {
       "defaultFormats": Object {},
@@ -29,12 +29,8 @@ exports[`should render a single child element 1`] = `
       "timeZone": null,
     }
   }
-  isAlignedTop={false}
-  isGlyphHidden={false}
-  variant="error"
 >
-  <div
-    className="outer-view"
+  <StatusView
     intl={
       Object {
         "defaultFormats": Object {},
@@ -62,84 +58,85 @@ exports[`should render a single child element 1`] = `
         "timeZone": null,
       }
     }
+    isAlignedTop={false}
+    isGlyphHidden={false}
+    variant="error"
   >
     <div
-      className="inner-view"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
+      className="outer-view"
     >
       <div
-        className="glyph"
-      >
-        <svg
-          className="error"
-        />
-      </div>
-      <div
-        className="message-content-group"
+        className="inner-view"
       >
         <div
-          className="title"
+          className="glyph"
         >
-          Terra.status-view.error
+          <svg
+            className="error"
+          />
         </div>
         <div
-          className="divider"
+          className="message-content-group"
         >
-          <Divider>
-            <hr
-              aria-hidden="true"
-              className="divider"
-            />
-          </Divider>
-        </div>
-      </div>
-      <div
-        className="actions"
-      >
-        <Button
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={false}
-          isReversed={false}
-          key="1"
-          text="OK"
-          type="button"
-          variant="neutral"
-        >
-          <button
-            aria-disabled={false}
-            className="button neutral"
-            disabled={false}
-            onBlur={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            type="button"
+          <div
+            className="title"
           >
-            <span
-              className="button-label text-only"
+            Terra.status-view.error
+          </div>
+          <div
+            className="divider"
+          >
+            <Divider>
+              <hr
+                aria-hidden="true"
+                className="divider"
+              />
+            </Divider>
+          </div>
+        </div>
+        <div
+          className="actions"
+        >
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            key="1"
+            text="OK"
+            type="button"
+            variant="neutral"
+          >
+            <button
+              aria-disabled={false}
+              className="button neutral"
+              disabled={false}
+              onBlur={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              type="button"
             >
               <span
-                className=""
+                className="button-label text-only"
               >
-                OK
+                <span
+                  className=""
+                >
+                  OK
+                </span>
               </span>
-            </span>
-          </button>
-        </Button>
+            </button>
+          </Button>
+        </div>
       </div>
     </div>
-  </div>
-</StatusView>
+  </StatusView>
+</InjectIntl(StatusView)>
 `;
 
 exports[`should render an image with a custom status-view 1`] = `
-<StatusView
+<InjectIntl(StatusView)
   customGlyph={
     <IconDiamond
       viewBox="0 0 48 48"
@@ -173,12 +170,15 @@ exports[`should render an image with a custom status-view 1`] = `
       "timeZone": null,
     }
   }
-  isAlignedTop={false}
-  isGlyphHidden={false}
   variant="custom"
 >
-  <div
-    className="outer-view"
+  <StatusView
+    customGlyph={
+      <IconDiamond
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
     intl={
       Object {
         "defaultFormats": Object {},
@@ -206,65 +206,66 @@ exports[`should render an image with a custom status-view 1`] = `
         "timeZone": null,
       }
     }
+    isAlignedTop={false}
+    isGlyphHidden={false}
+    variant="custom"
   >
     <div
-      className="inner-view"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
+      className="outer-view"
     >
       <div
-        className="glyph"
+        className="inner-view"
       >
-        <IconDiamond
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="glyph"
         >
-          <IconBase
-            ariaLabel={null}
-            className="IconDiamond"
-            focusable="false"
-            height="1em"
-            isBidi={false}
-            isSpin={false}
+          <IconDiamond
             viewBox="0 0 48 48"
-            width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              aria-hidden="true"
-              className="tui-Icon icon IconDiamond"
+            <IconBase
+              ariaLabel={null}
+              className="IconDiamond"
               focusable="false"
               height="1em"
+              isBidi={false}
+              isSpin={false}
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M24.8 47.7l22.9-22.9c.4-.4.4-1.1 0-1.6L24.8.3c-.4-.4-1.1-.4-1.6 0L.3 23.2c-.4.4-.4 1.1 0 1.6l22.9 22.9c.4.4 1.2.4 1.6 0z"
-                fill="#78288C"
-              />
-            </svg>
-          </IconBase>
-        </IconDiamond>
-      </div>
-      <div
-        className="message-content-group"
-      >
+              <svg
+                aria-hidden="true"
+                className="tui-Icon icon IconDiamond"
+                focusable="false"
+                height="1em"
+                viewBox="0 0 48 48"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24.8 47.7l22.9-22.9c.4-.4.4-1.1 0-1.6L24.8.3c-.4-.4-1.1-.4-1.6 0L.3 23.2c-.4.4-.4 1.1 0 1.6l22.9 22.9c.4.4 1.2.4 1.6 0z"
+                  fill="#78288C"
+                />
+              </svg>
+            </IconBase>
+          </IconDiamond>
+        </div>
         <div
-          className="title"
-        />
+          className="message-content-group"
+        >
+          <div
+            className="title"
+          />
+        </div>
       </div>
     </div>
-  </div>
-</StatusView>
+  </StatusView>
+</InjectIntl(StatusView)>
 `;
 
 exports[`should render an image with a default status view 1`] = `
-<StatusView
+<InjectIntl(StatusView)
   intl={
     Object {
       "defaultFormats": Object {},
@@ -292,12 +293,8 @@ exports[`should render an image with a default status view 1`] = `
       "timeZone": null,
     }
   }
-  isAlignedTop={false}
-  isGlyphHidden={false}
-  variant="error"
 >
-  <div
-    className="outer-view"
+  <StatusView
     intl={
       Object {
         "defaultFormats": Object {},
@@ -325,39 +322,40 @@ exports[`should render an image with a default status view 1`] = `
         "timeZone": null,
       }
     }
+    isAlignedTop={false}
+    isGlyphHidden={false}
+    variant="error"
   >
     <div
-      className="inner-view"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
+      className="outer-view"
     >
       <div
-        className="glyph"
-      >
-        <svg
-          className="error"
-        />
-      </div>
-      <div
-        className="message-content-group"
+        className="inner-view"
       >
         <div
-          className="title"
+          className="glyph"
         >
-          Terra.status-view.error
+          <svg
+            className="error"
+          />
+        </div>
+        <div
+          className="message-content-group"
+        >
+          <div
+            className="title"
+          >
+            Terra.status-view.error
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</StatusView>
+  </StatusView>
+</InjectIntl(StatusView)>
 `;
 
 exports[`should render an image with a no-data status view that will hide the glyph from being shown 1`] = `
-<StatusView
+<InjectIntl(StatusView)
   intl={
     Object {
       "defaultFormats": Object {},
@@ -385,12 +383,10 @@ exports[`should render an image with a no-data status view that will hide the gl
       "timeZone": null,
     }
   }
-  isAlignedTop={false}
   isGlyphHidden={true}
   variant="no-data"
 >
-  <div
-    className="outer-view"
+  <StatusView
     intl={
       Object {
         "defaultFormats": Object {},
@@ -418,32 +414,33 @@ exports[`should render an image with a no-data status view that will hide the gl
         "timeZone": null,
       }
     }
+    isAlignedTop={false}
+    isGlyphHidden={true}
+    variant="no-data"
   >
     <div
-      className="inner-view"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
+      className="outer-view"
     >
       <div
-        className="message-content-group"
+        className="inner-view"
       >
         <div
-          className="title"
+          className="message-content-group"
         >
-          Terra.status-view.no-data
+          <div
+            className="title"
+          >
+            Terra.status-view.no-data
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</StatusView>
+  </StatusView>
+</InjectIntl(StatusView)>
 `;
 
 exports[`should render an image with a no-data status view with all message props given 1`] = `
-<StatusView
+<InjectIntl(StatusView)
   intl={
     Object {
       "defaultFormats": Object {},
@@ -471,14 +468,11 @@ exports[`should render an image with a no-data status view with all message prop
       "timeZone": null,
     }
   }
-  isAlignedTop={false}
-  isGlyphHidden={false}
   message="Test Message"
   title="Test Title"
   variant="no-data"
 >
-  <div
-    className="outer-view"
+  <StatusView
     intl={
       Object {
         "defaultFormats": Object {},
@@ -506,120 +500,123 @@ exports[`should render an image with a no-data status view with all message prop
         "timeZone": null,
       }
     }
+    isAlignedTop={false}
+    isGlyphHidden={false}
+    message="Test Message"
+    title="Test Title"
+    variant="no-data"
   >
     <div
-      className="inner-view"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
+      className="outer-view"
     >
       <div
-        className="glyph"
-      >
-        <svg
-          className="no-data"
-        />
-      </div>
-      <div
-        className="message-content-group"
+        className="inner-view"
       >
         <div
-          className="title"
+          className="glyph"
         >
-          Test Title
+          <svg
+            className="no-data"
+          />
         </div>
         <div
-          className="divider"
+          className="message-content-group"
         >
-          <Divider>
-            <hr
-              aria-hidden="true"
-              className="divider"
-            />
-          </Divider>
-        </div>
-        <div
-          className="message"
-        >
-          Test Message
-        </div>
-      </div>
-      <div
-        className="actions"
-      >
-        <Button
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={false}
-          isReversed={false}
-          key="1"
-          text="OK"
-          type="button"
-          variant="neutral"
-        >
-          <button
-            aria-disabled={false}
-            className="button neutral"
-            disabled={false}
-            onBlur={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            type="button"
+          <div
+            className="title"
           >
-            <span
-              className="button-label text-only"
+            Test Title
+          </div>
+          <div
+            className="divider"
+          >
+            <Divider>
+              <hr
+                aria-hidden="true"
+                className="divider"
+              />
+            </Divider>
+          </div>
+          <div
+            className="message"
+          >
+            Test Message
+          </div>
+        </div>
+        <div
+          className="actions"
+        >
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            key="1"
+            text="OK"
+            type="button"
+            variant="neutral"
+          >
+            <button
+              aria-disabled={false}
+              className="button neutral"
+              disabled={false}
+              onBlur={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              type="button"
             >
               <span
-                className=""
+                className="button-label text-only"
               >
-                OK
+                <span
+                  className=""
+                >
+                  OK
+                </span>
               </span>
-            </span>
-          </button>
-        </Button>
-        <Button
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={false}
-          isReversed={false}
-          key="2"
-          text="Cancel"
-          type="button"
-          variant="neutral"
-        >
-          <button
-            aria-disabled={false}
-            className="button neutral"
-            disabled={false}
-            onBlur={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
+            </button>
+          </Button>
+          <Button
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            key="2"
+            text="Cancel"
             type="button"
+            variant="neutral"
           >
-            <span
-              className="button-label text-only"
+            <button
+              aria-disabled={false}
+              className="button neutral"
+              disabled={false}
+              onBlur={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              type="button"
             >
               <span
-                className=""
+                className="button-label text-only"
               >
-                Cancel
+                <span
+                  className=""
+                >
+                  Cancel
+                </span>
               </span>
-            </span>
-          </button>
-        </Button>
+            </button>
+          </Button>
+        </div>
       </div>
     </div>
-  </div>
-</StatusView>
+  </StatusView>
+</InjectIntl(StatusView)>
 `;
 
 exports[`should render an image with a no-matching-results status-view that will force the content to align at the top 1`] = `
-<StatusView
+<InjectIntl(StatusView)
   intl={
     Object {
       "defaultFormats": Object {},
@@ -648,11 +645,9 @@ exports[`should render an image with a no-matching-results status-view that will
     }
   }
   isAlignedTop={true}
-  isGlyphHidden={false}
   variant="no-matching-results"
 >
-  <div
-    className="outer-view"
+  <StatusView
     intl={
       Object {
         "defaultFormats": Object {},
@@ -680,39 +675,40 @@ exports[`should render an image with a no-matching-results status-view that will
         "timeZone": null,
       }
     }
+    isAlignedTop={true}
+    isGlyphHidden={false}
+    variant="no-matching-results"
   >
     <div
-      className="inner-view"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
+      className="outer-view"
     >
       <div
-        className="glyph"
-      >
-        <svg
-          className="no-matching-results"
-        />
-      </div>
-      <div
-        className="message-content-group"
+        className="inner-view is-aligned-top"
       >
         <div
-          className="title"
+          className="glyph"
         >
-          Terra.status-view.no-matching-results
+          <svg
+            className="no-matching-results"
+          />
+        </div>
+        <div
+          className="message-content-group"
+        >
+          <div
+            className="title"
+          >
+            Terra.status-view.no-matching-results
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</StatusView>
+  </StatusView>
+</InjectIntl(StatusView)>
 `;
 
 exports[`should render an image with a not-authorized status-view 1`] = `
-<StatusView
+<InjectIntl(StatusView)
   intl={
     Object {
       "defaultFormats": Object {},
@@ -740,12 +736,9 @@ exports[`should render an image with a not-authorized status-view 1`] = `
       "timeZone": null,
     }
   }
-  isAlignedTop={false}
-  isGlyphHidden={false}
   variant="not-authorized"
 >
-  <div
-    className="outer-view"
+  <StatusView
     intl={
       Object {
         "defaultFormats": Object {},
@@ -773,39 +766,40 @@ exports[`should render an image with a not-authorized status-view 1`] = `
         "timeZone": null,
       }
     }
+    isAlignedTop={false}
+    isGlyphHidden={false}
+    variant="not-authorized"
   >
     <div
-      className="inner-view"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
+      className="outer-view"
     >
       <div
-        className="glyph"
-      >
-        <svg
-          className="not-authorized"
-        />
-      </div>
-      <div
-        className="message-content-group"
+        className="inner-view"
       >
         <div
-          className="title"
+          className="glyph"
         >
-          Terra.status-view.not-authorized
+          <svg
+            className="not-authorized"
+          />
+        </div>
+        <div
+          className="message-content-group"
+        >
+          <div
+            className="title"
+          >
+            Terra.status-view.not-authorized
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</StatusView>
+  </StatusView>
+</InjectIntl(StatusView)>
 `;
 
 exports[`should render an image with an error status-view 1`] = `
-<StatusView
+<InjectIntl(StatusView)
   intl={
     Object {
       "defaultFormats": Object {},
@@ -833,12 +827,9 @@ exports[`should render an image with an error status-view 1`] = `
       "timeZone": null,
     }
   }
-  isAlignedTop={false}
-  isGlyphHidden={false}
   variant="error"
 >
-  <div
-    className="outer-view"
+  <StatusView
     intl={
       Object {
         "defaultFormats": Object {},
@@ -866,33 +857,34 @@ exports[`should render an image with an error status-view 1`] = `
         "timeZone": null,
       }
     }
+    isAlignedTop={false}
+    isGlyphHidden={false}
+    variant="error"
   >
     <div
-      className="inner-view"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
+      className="outer-view"
     >
       <div
-        className="glyph"
-      >
-        <svg
-          className="error"
-        />
-      </div>
-      <div
-        className="message-content-group"
+        className="inner-view"
       >
         <div
-          className="title"
+          className="glyph"
         >
-          Terra.status-view.error
+          <svg
+            className="error"
+          />
+        </div>
+        <div
+          className="message-content-group"
+        >
+          <div
+            className="title"
+          >
+            Terra.status-view.error
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</StatusView>
+  </StatusView>
+</InjectIntl(StatusView)>
 `;
