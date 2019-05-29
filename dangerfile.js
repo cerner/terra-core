@@ -11,7 +11,7 @@ const changedPackages = new Set();
 
 changedFiles.forEach((file) => {
   // file isn't in a package so it has no changelog, skip further processing
-  if (!file.includes('packages')) {
+  if (file.substring(0, 9) !== 'packages/') {
     return;
   }
 
