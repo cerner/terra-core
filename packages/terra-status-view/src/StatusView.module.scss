@@ -96,10 +96,6 @@
     padding-top: var(--terra-status-view-actions-padding-top, 1.429rem);
     width: 100%;
 
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-    }
-
     > button {
       flex: var(--terra-status-view-actions-button-flex, 0 1 auto);
       flex-shrink: 1;
