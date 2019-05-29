@@ -11,9 +11,16 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    // max-width: 400px; // what do i set this to
+    overflow: auto;
+    padding-bottom: 30%;
+    padding-top: 20%;
     word-wrap: break-word;
+  }
+
+  .is-aligned-top {
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
   .glyph {

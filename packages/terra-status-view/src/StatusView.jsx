@@ -83,57 +83,61 @@ const StatusView = ({
   ...customProps
 }) => {
   let glyphSection;
+  let messageSection;
+  let actionSection;
+  let dividerSection;
+  let defaultTitle;
+
   if (!isGlyphHidden) {
     if (variant === StatusViewVariants.CUSTOM) {
       glyphSection = (
-        <div className={cx('glyph')} >
+        <div className={cx('glyph')}>
           {customGlyph}
         </div>
       );
     } else {
       glyphSection = (
-        <div className={cx('glyph')} >
+        <div className={cx('glyph')}>
           <svg className={cx(variant)} />
         </div>
       );
     }
   }
 
-  let messageSection;
   if (message) {
     messageSection = (
-      <div className={cx('message')} >
+      <div className={cx('message')}>
         {message}
       </div>
     );
   }
 
-  let actionSection;
   if (React.Children.count(children) > 0) {
     actionSection = (
-      <div className={cx('actions')} >
+      <div className={cx('actions')}>
         {children}
       </div>
     );
   }
 
-  let defaultTitle = title;
-  if (!defaultTitle) {
-    defaultTitle = (variant === StatusViewVariants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
-  }
-
-  let dividerSection;
   if (messageSection || actionSection) {
     dividerSection = (
-      <div className={cx('divider')} >
+      <div className={cx('divider')}>
         <Divider />
       </div>
     );
   }
 
+  if (variant === StatusViewVariants.CUSTOM) {
+    defaultTitle = '';
+  } else {
+    defaultTitle = intl.formatMessage({ id: `Terra.status-view.${variant}` });
+  }
+
+  // Custom title takes precedence
   const titleSection = (
-    <div className={cx('title')} >
-      {defaultTitle}
+    <div className={cx('title')}>
+      {title || defaultTitle}
     </div>
   );
 
@@ -143,13 +147,8 @@ const StatusView = ({
   ]);
 
   return (
-    <div
-      {...customProps}
-      className={statusViewClassNames}
-    >
-      <div
-        className={cx('inner-view')}
-      >
+    <div {...customProps} className={statusViewClassNames}>
+      <div className={cx(['inner-view', { 'is-aligned-top': isAlignedTop }])}>
         {glyphSection}
         <div className={cx('message-content-group')}>
           {titleSection}
@@ -160,12 +159,11 @@ const StatusView = ({
       </div>
     </div>
   );
-}
+};
 
 StatusView.Opts = {};
 StatusView.Opts.variants = StatusViewVariants;
 StatusView.propTypes = propTypes;
-StatusView.contextTypes = contextTypes;
 StatusView.defaultProps = defaultProps;
 export default injectIntl(StatusView);
 export { StatusViewVariants };
