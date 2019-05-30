@@ -141,28 +141,29 @@ const StatusView = ({
     </div>
   );
 
-  const statusViewClassNames = cx([
+  const outerViewClassNames = cx([
     'outer-view',
     customProps.className,
   ]);
 
+  const innerViewClassNames = cx([
+    'inner-view',
+    { 'is-aligned-top': isAlignedTop },
+  ]);
+
   return (
-    <div {...customProps} className={statusViewClassNames}>
-      <div className={cx(['inner-view', { 'is-aligned-top': isAlignedTop }])}>
+    <div {...customProps} className={outerViewClassNames}>
+      <div className={innerViewClassNames}>
         {glyphSection}
-        <div className={cx('message-content-group')}>
-          {titleSection}
-          {dividerSection}
-          {messageSection}
-        </div>
+        {titleSection}
+        {dividerSection}
+        {messageSection}
         {actionSection}
       </div>
     </div>
   );
 };
 
-StatusView.Opts = {};
-StatusView.Opts.variants = StatusViewVariants;
 StatusView.propTypes = propTypes;
 StatusView.defaultProps = defaultProps;
 export default injectIntl(StatusView);
