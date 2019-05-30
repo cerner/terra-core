@@ -1,7 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { danger, warn, fail } from 'danger';
+import { danger, fail } from 'danger';
 
-const BIG_PR_THRESHOLD = 1000;
 const CHANGELOG_PATTERN = /^packages\/terra-([a-z-])*\/CHANGELOG\.md/i;
 
 const changedFiles = danger.git.created_files.concat(danger.git.modified_files);
@@ -29,9 +28,4 @@ const missingChangelogs = [...changedPackages].filter(packageName => !changedCha
 // Fail if there are package changes without a CHANGELOG update
 if (missingChangelogs.length > 0) {
   fail(`Please include a CHANGELOG entry for each changed package this PR. Looks like a CHANGELOG is missing for: \n - ${missingChangelogs.join('\n - ')}`);
-}
-
-// Warn when there is a big PR
-if (danger.github.pr.additions + danger.github.pr.deletions > BIG_PR_THRESHOLD) {
-  warn(':exclamation: Big PR. Consider breaking this into smaller PRs if applicable');
 }
