@@ -12,7 +12,6 @@ const StatusViewVariants = {
   NOMATCHINGRESULTS: 'no-matching-results',
   NOTAUTHORIZED: 'not-authorized',
   ERROR: 'error',
-  CUSTOM: 'custom',
 };
 
 const propTypes = {
@@ -27,7 +26,7 @@ const propTypes = {
   customGlyph: PropTypes.node,
 
   /**
-   * The intl object to be injected for translations. Provided by the injectIntl function.
+   * @private The intl object to be injected for translations. Provided by the injectIntl function.
    */
   intl: intlShape.isRequired,
 
@@ -55,8 +54,7 @@ const propTypes = {
 
   /**
    * Determines the glyph to display, one of the following: `no-data`,
-   * `no-matching-results`, `not-authorized`,
-   * `error`, or `custom`.
+   * `no-matching-results`, `not-authorized`, or `error`
    */
   variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
 };
@@ -68,7 +66,7 @@ const defaultProps = {
   isGlyphHidden: false,
   message: undefined,
   title: undefined,
-  variant: StatusViewVariants.ERROR,
+  variant: undefined,
 };
 
 const StatusView = ({
@@ -89,7 +87,7 @@ const StatusView = ({
   let defaultTitle;
 
   if (!isGlyphHidden) {
-    if (variant === StatusViewVariants.CUSTOM) {
+    if (customGlyph) {
       glyphSection = (
         <div className={cx('glyph')}>
           {customGlyph}
