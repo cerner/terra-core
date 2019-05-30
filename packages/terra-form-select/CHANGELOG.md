@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Fixed
+* Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.
+
 5.15.0 - (May 1, 2019)
 ------------------
 ### Changed

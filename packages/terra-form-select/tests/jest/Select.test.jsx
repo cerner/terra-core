@@ -12,7 +12,7 @@ describe('Select', () => {
   });
 
   it('should render a combobox variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="tag" />);
+    const wrapper = shallowWithIntl(<Select variant="combobox" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -37,7 +37,7 @@ describe('Select', () => {
   });
 
   it('should render a combobox variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Select variant="tag" placeholder="Placeholder" />);
+    const wrapper = shallowWithIntl(<Select variant="combobox" placeholder="Placeholder" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -87,7 +87,7 @@ describe('Select', () => {
   });
 
   it('should render an invalid combobox variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="tag" isInvalid />);
+    const wrapper = shallowWithIntl(<Select variant="combobox" isInvalid />);
     expect(wrapper).toMatchSnapshot();
   });
 
