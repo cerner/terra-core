@@ -2,29 +2,32 @@
 
 :local {
   .outer-view {
+    display: grid;
+    grid-template-rows: [top-space] 1fr [content] auto [bottom-space] 2fr; // "Top Centers" the status view. Give 40% remaining space to top, 60% remaining space to bottom.
     height: 100%;
     padding-bottom: var(--terra-status-view-padding-bottom, 0.714rem);
     padding-top: var(--terra-status-view-padding-top, 0.714rem);
+    place-content: center;
+  }
+
+  .is-aligned-top {
+    align-content: start;
+    grid-template-rows: [top-space] 0 [content] auto [bottom-space] 0;
   }
 
   .inner-view {
     align-items: center;
     display: flex;
     flex-direction: column;
-    // max-width: 400px; // what do i set this to
+    flex-wrap: wrap;
+    grid-area: content;
     overflow: auto;
-    padding-bottom: 30%;
-    padding-top: 20%;
-    word-wrap: break-word;
-  }
-
-  .is-aligned-top {
-    padding-bottom: 0;
-    padding-top: 0;
+    overflow-wrap: break-word;
+    width: 100%;
+    word-break: break-word;
   }
 
   .glyph {
-    flex: 0 0 auto;
     padding-bottom: 0.714rem;
 
     > svg {
@@ -54,8 +57,6 @@
 
   .title {
     color: var(--terra-status-view-title-color, #868a8c);
-    flex: 0 0 auto;
-    flex-wrap: wrap;
     font-size: var(--terra-status-view-title-font-size, 1.714rem);
     text-align: center;
     width: 100%;
@@ -63,8 +64,6 @@
 
   .message {
     color: var(--terra-status-view-message-color, #1c1f21);
-    flex: 0 0 auto;
-    flex-wrap: wrap;
     font-size: var(--terra-status-view-message-font-size, 1rem);
     padding-top: var(--terra-status-view-message-padding-top, 0.714rem);
     text-align: center;
@@ -77,10 +76,11 @@
   }
 
   .actions {
-    display: flex;
-    flex: 0 0 auto;
+    // align-self: center;
+    // display: flex;
+    // flex: 0 0 auto;
     flex-direction: var(--terra-status-view-actions-small-width-flex-direction, row);
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
     padding-left: 0.357rem;
     padding-right: 0.357rem;
@@ -88,8 +88,8 @@
     width: 100%;
 
     > button {
-      flex: var(--terra-status-view-actions-button-flex, 0 1 auto);
-      flex-shrink: 1;
+      // flex: var(--terra-status-view-actions-button-flex, 0 1 auto);
+      // flex-shrink: 1;
       margin-left: var(--terra-status-view-actions-button-margin-left, 0.357rem);
       margin-right: var(--terra-status-view-actions-button-margin-right, 0.357rem);
       margin-top: var(--terra-status-view-actions-button-margin-top, 0);

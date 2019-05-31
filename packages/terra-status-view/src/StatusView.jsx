@@ -141,16 +141,17 @@ const StatusView = ({
 
   const outerViewClassNames = cx([
     'outer-view',
+    { 'is-aligned-top': isAlignedTop },
     customProps.className,
   ]);
 
   const innerViewClassNames = cx([
     'inner-view',
-    { 'is-aligned-top': isAlignedTop },
   ]);
 
   return (
     <div {...customProps} className={outerViewClassNames}>
+      {/* <div className={cx('top-space')} /> */}
       <div className={innerViewClassNames}>
         {glyphSection}
         {titleSection}
@@ -158,6 +159,7 @@ const StatusView = ({
         {messageSection}
         {actionSection}
       </div>
+      {/* <div className={cx('bottom-space')} /> */}
     </div>
   );
 };
