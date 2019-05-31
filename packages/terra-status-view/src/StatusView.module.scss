@@ -1,9 +1,22 @@
+/* autoprefixer grid: autoplace */
 @import '~terra-mixins/lib/Mixins';
 
 :local {
   .outer-view {
+    // display: -ms-grid;
     display: grid;
-    grid-template-rows: [top-space] 1fr [content] auto [bottom-space] 2fr; // "Top Centers" the status view. Give 40% remaining space to top, 60% remaining space to bottom.
+    // -ms-grid-row: 1fr auto 2fr;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto 2fr; // "Top Centers" the status view. Give 40% remaining space to top, 60% remaining space to bottom.
+    grid-template-areas:
+      "top-space"
+      "content"
+      "bottom-space";
+    // grid-template:
+    //   "top-space" 1fr
+    //   "content" auto
+    //   "bottom-space" 2fr /
+    //   auto;
     height: 100%;
     padding-bottom: var(--terra-status-view-padding-bottom, 0.714rem);
     padding-top: var(--terra-status-view-padding-top, 0.714rem);
@@ -12,7 +25,15 @@
 
   .is-aligned-top {
     align-content: start;
-    grid-template-rows: [top-space] 0 [content] auto [bottom-space] 0;
+    grid-template-rows: 0 auto 0;
+  }
+
+  .top-space {
+    grid-area: top-space;
+  }
+
+  .bottom-space {
+    grid-area: bottom-space;
   }
 
   .inner-view {
@@ -21,6 +42,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     grid-area: content;
+    // max-width:
     overflow: auto;
     overflow-wrap: break-word;
     width: 100%;
@@ -85,7 +107,6 @@
     padding-left: 0.357rem;
     padding-right: 0.357rem;
     padding-top: var(--terra-status-view-actions-padding-top, 1.429rem);
-    width: 100%;
 
     > button {
       // flex: var(--terra-status-view-actions-button-flex, 0 1 auto);

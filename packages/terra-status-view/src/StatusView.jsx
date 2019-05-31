@@ -151,7 +151,7 @@ const StatusView = ({
 
   return (
     <div {...customProps} className={outerViewClassNames}>
-      {/* <div className={cx('top-space')} /> */}
+      <div className={cx('top-space')} />
       <div className={innerViewClassNames}>
         {glyphSection}
         {titleSection}
@@ -159,7 +159,7 @@ const StatusView = ({
         {messageSection}
         {actionSection}
       </div>
-      {/* <div className={cx('bottom-space')} /> */}
+      <div className={cx('bottom-space')} />
     </div>
   );
 };
