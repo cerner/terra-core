@@ -1,5 +1,5 @@
 /* eslint-disable */
-import translationLoaders from 'translationsLoaders';
+const translationLoaders = require('translationsLoaders');
 
 const loadFallbackLocale = (localeContext, callback, scope) => {
   try {

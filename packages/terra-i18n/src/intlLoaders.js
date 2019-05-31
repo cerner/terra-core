@@ -1,5 +1,5 @@
 /* eslint-disable */
-import intlLoaders from 'intlLoaders';
+const intlLoaders = require('intlLoaders');
 
 const loadFallbackIntl = (localeContext) => {
   try {

@@ -1,5 +1,5 @@
-import I18nProvider from './I18nProvider';
-import i18nLoader from './i18nLoader';
+const I18nProvider = require('./I18nProvider');
+const i18nLoader = require('./i18nLoader');
 
 module.exports = {
   I18nProvider,

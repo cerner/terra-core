@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Changed imports to requires
 
 3.14.0 - (May 22, 2019)
 ------------------

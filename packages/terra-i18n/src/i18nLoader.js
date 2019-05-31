@@ -1,7 +1,7 @@
 /* eslint-disable */
-import Intl from './intl';
-import loadIntl from './intlLoaders';
-import loadTranslations from './translationsLoaders';
+const Intl = require('./intl');
+const loadIntl = require('./intlLoaders');
+const loadTranslations = require('./translationsLoaders');
 
 let hasIntl;
 try {
