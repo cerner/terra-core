@@ -1,0 +1,11 @@
+:local {
+  .header {
+    display: flex;
+    z-index: 1;
+
+    // stylelint-disable-next-line selector-max-compound-selectors
+    + tbody > tr:first-child {
+      border-top: 0;
+    }
+  }
+}

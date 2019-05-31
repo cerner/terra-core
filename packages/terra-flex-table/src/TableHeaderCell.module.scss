@@ -1,0 +1,120 @@
+@import '~terra-mixins';
+
+:local {
+  .tiny {
+    min-width: var(--terra-flex-table-header-cell-tiny-min-width, 3rem);
+  }
+
+  .small {
+    min-width: var(--terra-flex-table-header-cell-small-min-width, 4.25rem);
+  }
+
+  .medium {
+    min-width: var(--terra-flex-table-header-cell-medium-min-width, 5.75rem);
+  }
+
+  .large {
+    min-width: var(--terra-flex-table-header-cell-large-min-width, 8.5rem);
+  }
+
+  .huge {
+    min-width: var(--terra-flex-table-header-cell-huge-min-width, 10.5rem);
+  }
+
+  .sort-indicator-asc,
+  .sort-indicator-desc {
+    color: var(--terra-flex-table-sort-indicator-color, #1c1f21);
+    height: var(--terra-flex-table-sort-indicator-height, 0.6429rem);
+    padding: 0;
+    width: var(--terra-flex-table-sort-indicator-width, 0.6429rem);
+    flex: 0 0 auto;
+  }
+
+  .sort-indicator-asc {
+    background: var(--terra-flex-table-subsection-header-accordion-icon-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+  }
+
+  .sort-indicator-desc {
+    background: var(--terra-flex-table-subsection-header-accordion-icon-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M0 36l24-24 24 24H0z"/></svg>'));
+  }
+
+  .header-cell {
+    align-items: flex-end;
+    border: 0;
+    border-right: var(--terra-flex-table-header-cell-border-right, 1px solid #ccc);
+    color: var(--terra-flex-table-header-cell-color, #1c1f21);
+    flex: 1 1 0;
+    font-size: var(--terra-flex-table-header-cell-font-size, 1rem);
+    font-weight: var(--terra-flex-table-header-cell-font-weight, bold);
+    justify-content: space-between;
+    line-height: var(--terra-flex-table-header-cell-line-height, 1.143);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    vertical-align: bottom;
+    word-break: break-word;
+
+    &:last-of-type {
+      border-right: 0; // Hide last border
+    }
+  }
+
+  .is-sortable,
+  .is-selectable {
+    padding-top: calc(var(--terra-flex-table-sort-indicator-height, 0.6429rem) + var(--terra-flex-table-sort-indicator-top, 0.1429rem));
+  }
+
+  .is-selectable {
+    cursor: pointer;
+    outline: var(--terra-flex-table-header-cell-focus-outline, none);
+
+    &:hover {
+      background-color: var(--terra-flex-table-header-cell-hover-background-color, darken(#dedfe0, 5%));
+    }
+
+    &[data-header-show-focus='true']:focus {
+      background-color: var(--terra-flex-table-header-cell-focus-background-color, lighten(#dedfe0, 2%));
+      border-color: var(--terra-flex-table-header-cell-focus-border-color, #0092e0);
+      box-shadow: var(--terra-flex-table-header-cell-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
+      z-index: 1;
+    }
+  }
+
+  .cell-content {
+    align-items: center;
+    display: flex;
+    // stylelint-disable-next-line plugin/no-unsupported-browser-features
+    overflow-wrap: break-word; /* Modern browsers */
+    word-wrap: break-word;
+  }
+
+  [data-table-padding='standard'] .header-cell {
+    padding-bottom: var(--terra-flex-table-header-cell-standard-padding-bottom, 0.5em);
+    padding-left: var(--terra-flex-table-header-cell-standard-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-flex-table-header-cell-standard-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-flex-table-header-cell-standard-padding-top, 0.5em);
+  }
+
+  [data-table-padding='compact'] .header-cell {
+    padding-bottom: var(--terra-flex-table-header-cell-compact-padding-bottom, 0.35715em);
+    padding-left: var(--terra-flex-table-header-cell-compact-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-flex-table-header-cell-compact-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-flex-table-header-cell-compact-padding-top, 0.35715em);
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  [data-table-padding='standard'] {
+    .is-sortable,
+    .is-selectable {
+      .cell-content {
+        padding-top: var(--terra-flex-table-header-cell-compact-padding-top, 0.35715em);
+      }
+    }
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+
+  .cell-icon {
+    padding-right: var(--terra-flex-table-header-cell-icon-padding-right, 0.35715em);
+  }
+}
