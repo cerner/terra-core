@@ -6,29 +6,8 @@ describe('Form-Input', () => {
       browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
     });
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-form-input-background-color': 'red',
-        '--terra-form-input-background-image': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
-        '--terra-form-input-border-radius': '0.3rem',
-        '--terra-form-input-border': '2px dashed #4a4a41',
-        '--terra-form-input-box-shadow': 'inset 5em 1em gold',
-        '--terra-form-input-color': '#fff',
-        '--terra-form-input-font-size': '2.143rem',
-        '--terra-form-input-line-height': '2.143',
-        '--terra-form-input-padding-bottom': '1.571rem',
-        '--terra-form-input-padding-left': '1.357rem',
-        '--terra-form-input-padding-right': '1.357rem',
-        '--terra-form-input-padding-top': '1.571rem',
-        '--terra-form-input-transition-duration': '2s',
-        '--terra-form-input-transition-timing-function': 'ease-out',
-        '--terra-form-input-background-size': '20px 20px',
-        '--terra-form-input-height': '40px',
-      },
-    });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Invalid', () => {
@@ -36,15 +15,8 @@ describe('Form-Input', () => {
       browser.url('/#/raw/tests/terra-form-input/form-input/invalid-form-input');
     });
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-form-input-error-background-image': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
-        '--terra-form-input-error-border': '20rem dashed blue',
-      },
-    });
+    Terra.it.isAccessible({ viewports });
+    Terra.it.matchesScreenshot({ viewports });
   });
 
   describe('Enabled', () => {
@@ -53,8 +25,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Enabled Hovered', () => {
@@ -63,14 +35,8 @@ describe('Form-Input', () => {
         browser.moveToObject('input');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-hover-border': '20rem dashed blue',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Enabled Placeholder', () => {
@@ -78,15 +44,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/placeholder-form-input');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-placeholder-color': 'red',
-          '--terra-form-input-placeholder-font-style': 'italic',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Enabled Value', () => {
@@ -94,14 +53,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/value-form-input');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-color': 'red',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Enabled Keyboard-Focused', () => {
@@ -112,16 +65,8 @@ describe('Form-Input', () => {
         browser.execute('document.getElementById("form-input-default").style.caretColor = "transparent";');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-focus-background-color': 'red',
-          '--terra-form-input-focus-border': '20rem dashed red',
-          '--terra-form-input-focus-background-size': '20px 20px',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
   });
 
@@ -131,17 +76,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-disabled-background-color': 'red',
-          '--terra-form-input-disabled-border-width': '20rem dashed red',
-          '--terra-form-input-disabled-color': 'red',
-          '--terra-form-input-disabled-opacity': '0.5',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Disabled Placeholder', () => {
@@ -149,15 +85,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/disabled-placeholder-input');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-placeholder-disabled-color': 'red',
-          '--terra-form-input-placeholder-disabled-font-style': 'italic',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Disabled Value', () => {
@@ -165,14 +94,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/disabled-value-input');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-disabled-color': 'red',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Disabled Hovered', () => {
@@ -181,14 +104,8 @@ describe('Form-Input', () => {
         browser.moveToObject('input');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-hover-border': '20rem dashed red',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Disabled Keyboard-Focused', () => {
@@ -197,16 +114,8 @@ describe('Form-Input', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.themeCombinationOfCustomProperties({
-        testName: 'themed',
-        properties: {
-          '--terra-form-input-focus-background-color': 'red',
-          '--terra-form-input-focus-border': '20rem dashed red',
-          '--terra-form-input-error-focus-background-size': '20px 20px',
-        },
-      });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
   });
 
@@ -216,8 +125,8 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/input-field-width');
       });
 
-      Terra.should.beAccessible({ viewports });
-      Terra.should.matchScreenshot({ viewports });
+      Terra.it.isAccessible({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Valid InputField', () => {
@@ -225,7 +134,7 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
       });
 
-      Terra.should.matchScreenshot({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Invalid InputField', () => {
@@ -234,7 +143,7 @@ describe('Form-Input', () => {
         browser.click('#validity-toggle');
       });
 
-      Terra.should.matchScreenshot({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
 
     describe('Disabled InputField', () => {
@@ -242,7 +151,7 @@ describe('Form-Input', () => {
         browser.url('/#/raw/tests/terra-form-input/form-input/disabled-input-field');
       });
 
-      Terra.should.matchScreenshot({ viewports });
+      Terra.it.matchesScreenshot({ viewports });
     });
   });
 });
