@@ -4,10 +4,10 @@ describe('DocTemplate', () => {
   describe('Fully filled out doc', () => {
     before(() => browser.url('/#/raw/tests/terra-doc-template/doc-template/default-doc-template'));
 
-    Terra.should.matchScreenshot('Readme', { selector: '#DocTemplateContainer > div:first-child > div:first-child > div:nth-child(2)' });
-    Terra.should.matchScreenshot('Example 1', { selector: '#DocTemplateContainer > div > div:nth-child(3)' });
-    Terra.should.matchScreenshot('PropsTable 1', { selector: '#DocTemplateContainer > div > div:nth-child(5) > div:first-child', viewports: [{ width: 1000, height: 1000 }] });
-    Terra.should.beAccessible({ viewports: Terra.viewports('huge') });
+    Terra.it.matchesScreenshot('Readme', { selector: '#DocTemplateContainer > div:first-child > div:first-child > div:nth-child(2)' });
+    Terra.it.matchesScreenshot('Example 1', { selector: '#DocTemplateContainer > div > div:nth-child(3)' });
+    Terra.it.matchesScreenshot('PropsTable 1', { selector: '#DocTemplateContainer > div > div:nth-child(5) > div:first-child', viewports: [{ width: 1000, height: 1000 }] });
+    Terra.it.isAccessible({ viewports: Terra.viewports('huge') });
   });
 
   describe('Interactivity test', () => {

@@ -9,7 +9,7 @@ describe('I18n', () => {
       browser.waitForVisible('select');
     });
 
-    Terra.should.matchScreenshot();
+    Terra.it.matchesScreenshot();
   });
 
   testLocales.forEach((locale) => {
@@ -20,7 +20,7 @@ describe('I18n', () => {
         browser.element('select').selectByValue(locale);
       });
 
-      Terra.should.matchScreenshot();
+      Terra.it.matchesScreenshot();
     });
   });
 });

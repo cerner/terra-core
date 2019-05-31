@@ -3,14 +3,14 @@ describe('Content Container', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-content-container/content-container/default-content-container'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Fill', () => {
     before(() => browser.url('/#/raw/tests/terra-content-container/content-container/fill-content-container'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 });
