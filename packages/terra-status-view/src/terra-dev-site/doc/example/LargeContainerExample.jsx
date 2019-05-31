@@ -6,14 +6,12 @@ import StatusView from 'terra-status-view/lib/StatusView';
 
 const LargeContainerExample = (
   <StatusView
-    style={{ height: '500px', width: '500px' }}
-    variant="error"
-    message="An exception was thrown"
+    message="Custom Message"
     customGlyph={<IconDiamond />}
-    title="500"
+    title="Custom Title"
   >
-    <Button text="OK" key="1" size="medium" />
-    <Button text="Cancel" key="2" size="medium" />
+    <Button text="Action 1" key="1" size="medium" />
+    <Button text="Action 2" key="2" size="medium" />
   </StatusView>
 );
 

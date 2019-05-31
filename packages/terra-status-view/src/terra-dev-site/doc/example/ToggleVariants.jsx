@@ -6,7 +6,9 @@ class ToggleVariants extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { selected: 'error' };
+    this.state = {
+      selected: 'error',
+    };
     this.handleOnSelect = this.handleOnSelect.bind(this);
   }
 
@@ -18,12 +20,15 @@ class ToggleVariants extends React.Component {
     return (
       <div>
         <StatusView variant={this.state.selected} />
-        <select id="statusViewVariant" name="statusViewVariant" value={this.state.selected} onChange={this.handleOnSelect}>
-          <option value="no-data">No Data</option>
-          <option value="no-matching-results">No Matching Results</option>
-          <option value="not-authorized">Not Authorized</option>
-          <option value="error" selected>Error</option>
-        </select>
+        <fieldset>
+          <legend>Change Variant</legend>
+          <select id="statusViewVariant" name="statusViewVariant" value={this.state.selected} onChange={this.handleOnSelect}>
+            <option value="no-data">No Data</option>
+            <option value="no-matching-results">No Matching Results</option>
+            <option value="not-authorized">Not Authorized</option>
+            <option value="error" selected>Error</option>
+          </select>
+        </fieldset>
       </div>
     );
   }

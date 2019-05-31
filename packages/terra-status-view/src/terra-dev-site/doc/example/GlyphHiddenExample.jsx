@@ -1,19 +1,49 @@
 import React from 'react';
-import Button from 'terra-button';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import StatusView from 'terra-status-view/lib/StatusView';
 
-const GlyphHiddenExample = (
-  <StatusView
-    style={{ width: '500px' }}
-    variant="error"
-    message="An exception was thrown"
-    isGlyphHidden
-    title="500"
-  >
-    <Button text="OK" key="1" size="medium" />
-    <Button text="Cancel" key="2" size="medium" />
-  </StatusView>
-);
+class ToggleVariants extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default GlyphHiddenExample;
+    this.state = {
+      isAlignedTop: false,
+      isGlyphHidden: false,
+    };
+    this.handleOnAlignChange = this.handleOnAlignChange.bind(this);
+    this.handleOnGlyphChange = this.handleOnGlyphChange.bind(this);
+  }
+
+  handleOnAlignChange() {
+    this.setState(prevState => ({
+      isAlignedTop: !prevState.isAlignedTop,
+    }));
+  }
+
+  handleOnGlyphChange() {
+    this.setState(prevState => ({
+      isGlyphHidden: !prevState.isGlyphHidden,
+    }));
+  }
+
+  render() {
+    return (
+      <div>
+        <StatusView variant="error" isAlignedTop={this.state.isAlignedTop} isGlyphHidden={this.state.isGlyphHidden} />
+        <fieldset>
+          <legend>Toggle alignment and glyph</legend>
+          <div>
+            <input id="isAlignedTop" type="checkbox" onChange={this.handleOnAlignChange} />
+            <label htmlFor="isAlignedTop">isAlignedTop</label>
+          </div>
+          <div>
+            <input id="isGlyphHidden" type="checkbox" onChange={this.handleOnGlyphChange} />
+            <label htmlFor="isGlyphHidden">isGlyphHidden</label>
+          </div>
+        </fieldset>
+      </div>
+    );
+  }
+}
+
+export default ToggleVariants;
