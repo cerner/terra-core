@@ -1,5 +1,5 @@
 /* eslint-disable */
-const intlLoaders = require('intlLoaders');
+import intlLoaders from 'intlLoaders';
 
 const loadFallbackIntl = (localeContext) => {
   try {
@@ -34,4 +34,8 @@ const loadIntl = (locale) => {
   }
 };
 
-module.exports = loadIntl;
+export default loadIntl;
+
+export {
+  loadIntl
+};

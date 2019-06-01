@@ -1,5 +1,5 @@
 /* eslint-disable */
-const translationLoaders = require('translationsLoaders');
+import translationLoaders from 'translationsLoaders';
 
 const loadFallbackLocale = (localeContext, callback, scope) => {
   try {
@@ -34,4 +34,4 @@ const loadTranslations = (locale, callback, scope) => {
   }
 };
 
-module.exports = loadTranslations;
+export default loadTranslations;

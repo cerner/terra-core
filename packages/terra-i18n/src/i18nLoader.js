@@ -1,7 +1,7 @@
 /* eslint-disable */
-const Intl = require('./intl');
-const loadIntl = require('./intlLoaders');
-const loadTranslations = require('./translationsLoaders');
+import Intl from './intl';
+import loadIntl from './intlLoaders';
+import loadTranslations from './translationsLoaders';
 
 let hasIntl;
 try {
@@ -16,7 +16,7 @@ const permitParams = (callback) => {
   }
 }
 
-module.exports = (locale, callback, scope) => {
+export default (locale, callback, scope) => {
   permitParams(callback);
   if (!hasIntl) {
     loadIntl(locale);
