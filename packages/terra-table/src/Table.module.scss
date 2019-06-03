@@ -87,14 +87,6 @@
     }
   }
 
-  .subheader {
-    background-color: var(--terra-table-subheader-background-color, #c8cacb);
-    color: var(--terra-table-subheader-color, #1c1f21);
-    font-size: var(--terra-table-subheader-font-size, 1rem);
-    font-weight: var(--terra-table-subheader-font-weight, bold);
-    text-align: left;
-  }
-
   .sort-indicator {
     color: var(--terra-table-sort-indicator-color, #1c1f21);
     padding-left: 0.7142857143rem;
@@ -146,61 +138,6 @@
       &:nth-of-type(even) {
         background-color: var(--terra-table-row-striped-background-color, #f4f4f4);
       }
-
-      /* Qualifying type required for specificity */
-      /* stylelint-disable selector-no-qualifying-type */
-      &.is-selected {
-        background-color: var(--terra-table-row-striped-selected-background-color, darken(#ebf6fd, 7%)) !important;
-      }
-
-      &.is-selectable:hover {
-        background-color: var(--terra-table-row-striped-hover-background-color, darken(#ebf6fd, 2%)) !important;
-
-        &.is-selected {
-          background-color: var(--terra-table-row-striped-selected-hover-background-color, darken(#ebf6fd, 12%)) !important;
-        }
-      }
-
-      &.is-selectable:focus {
-        background-color: var(--terra-table-row-striped-focus-background-color, darken(#ebf6fd, 2%)) !important;
-
-        &.is-selected {
-          background-color: var(--terra-table-row-striped-selected-focus-background-color, darken(#ebf6fd, 12%)) !important;
-        }
-      }
-      /* stylelint-enable selector-no-qualifying-type */
-    }
-  }
-
-  .is-selected {
-    background-color: var(--terra-table-row-selected-background-color, darken(#ebf6fd, 2%));
-
-    &.row {
-      border-color: var(--terra-table-row-selected-border-color, #0092e0) !important;
-    }
-
-    + .row {
-      border-top-color: var(--terra-table-row-selected-border-top-color, #0092e0);
-    }
-  }
-
-  .is-selectable {
-    cursor: pointer;
-
-    &.row:focus {
-      background-color: var(--terra-table-row-focus-background-color, lighten(#ebf6fd, 2%)) !important;
-    }
-
-    &.row:hover {
-      background-color: var(--terra-table-row-hover-background-color, lighten(#ebf6fd, 2%)) !important;
-    }
-
-    &.is-selected:focus {
-      background-color: var(--terra-table-row-selected-focus-background-color, darken(#ebf6fd, 7%)) !important;
-    }
-
-    &.is-selected:hover {
-      background-color: var(--terra-table-row-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
   }
 

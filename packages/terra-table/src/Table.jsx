@@ -6,10 +6,6 @@ import TableHeaderCell from './TableHeaderCell';
 import TableRows from './TableRows';
 import TableRow from './TableRow';
 import TableCell from './TableCell';
-import SelectableTableRows from './SelectableTableRows';
-import TableSingleSelectableRows from './SingleSelectableRows';
-import TableMultiSelectableRows from './MultiSelectableRows';
-import TableSubheader from './TableSubheader';
 import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);
@@ -55,14 +51,10 @@ const Table = ({
 
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
-Table.Rows = TableRows;
+Table.Body = TableRows;
 Table.Header = TableHeader;
 Table.HeaderCell = TableHeaderCell;
 Table.Row = TableRow;
 Table.Cell = TableCell;
-Table.SelectableTableRows = SelectableTableRows;
-Table.SingleSelectableRows = TableSingleSelectableRows;
-Table.MultiSelectableRows = TableMultiSelectableRows;
-Table.Subheader = TableSubheader;
 
 export default Table;

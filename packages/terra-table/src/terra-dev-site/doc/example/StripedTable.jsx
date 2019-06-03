@@ -5,27 +5,27 @@ import Table from 'terra-table/lib/Table';
 const StripedTable = () => (
   <Table>
     <Table.Header>
-      <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
-      <Table.HeaderCell content="Address" key="ADDRESS" minWidth="medium" />
-      <Table.HeaderCell content="Phone Number" key="PHONE_NUMBER" minWidth="large" />
+      <Table.HeaderCell key="NAME" minWidth="small">Name</Table.HeaderCell>
+      <Table.HeaderCell key="ADDRESS" minWidth="medium">Address</Table.HeaderCell>
+      <Table.HeaderCell key="PHONE_NUMBER" minWidth="large">Phone Number</Table.HeaderCell>
     </Table.Header>
-    <Table.Rows>
+    <Table.Body>
       <Table.Row key="PERSON_0">
-        <Table.Cell content="John Smith" key="NAME" />
-        <Table.Cell content="123 Adams Drive" key="ADDRESS" />
-        <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
+        <Table.Cell key="NAME">John Smith</Table.Cell>
+        <Table.Cell key="ADDRESS">123 Adams Drive</Table.Cell>
+        <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
       </Table.Row>
       <Table.Row key="PERSON_1">
-        <Table.Cell content="Jane Smith" key="NAME" />
-        <Table.Cell content="321 Drive Street" key="ADDRESS" />
-        <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
+        <Table.Cell key="NAME">Jane Smith</Table.Cell>
+        <Table.Cell key="ADDRESS">321 Drive Street</Table.Cell>
+        <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
       </Table.Row>
       <Table.Row key="PERSON_2">
-        <Table.Cell content="Dave Smith" key="NAME" />
-        <Table.Cell content="213 Raymond Road" key="ADDRESS" />
-        <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
+        <Table.Cell key="NAME">Dave Smith</Table.Cell>
+        <Table.Cell key="ADDRESS">213 Raymond Road</Table.Cell>
+        <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
       </Table.Row>
-    </Table.Rows>
+    </Table.Body>
   </Table>
 );
 

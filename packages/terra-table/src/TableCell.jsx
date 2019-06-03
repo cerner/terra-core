@@ -5,19 +5,23 @@ const propTypes = {
   /**
    * Content to be displayed for the row cell
    */
-  // eslint-disable-next-line react/forbid-prop-types
-  content: PropTypes.any.isRequired,
+  children: PropTypes.node,
+};
+
+const defaultProps = {
+  children: [],
 };
 
 const TableCell = ({
-  content,
+  children,
   ...customProps
 }) => (
   <td {...customProps} data-terra-table-cell>
-    {content}
+    {children}
   </td>
 );
 
 TableCell.propTypes = propTypes;
+TableCell.defaultProps = defaultProps;
 
 export default TableCell;
