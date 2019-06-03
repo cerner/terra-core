@@ -4,38 +4,28 @@ describe('Progress Bar', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-default'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Size', () => {
     before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-size'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-progress-bar-tiny-height': '25px',
-        '--terra-progress-bar-small-height': '20px',
-        '--terra-progress-bar-medium-height': '17px',
-        '--terra-progress-bar-large-height': '14px',
-        '--terra-progress-bar-huge-height': '10px',
-      },
-    });
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Color', () => {
     before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-color'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Customized', () => {
     before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-customized-colors'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 });

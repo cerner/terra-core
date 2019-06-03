@@ -19,7 +19,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       ],
       "results": Array [
         Object {
-          "isThrow": false,
+          "type": "return",
           "value": undefined,
         },
       ],
@@ -114,7 +114,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
           ],
           "results": Array [
             Object {
-              "isThrow": false,
+              "type": "return",
               "value": undefined,
             },
           ],

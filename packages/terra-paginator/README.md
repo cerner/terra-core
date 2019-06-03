@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-paginator)](https://www.npmjs.org/package/terra-paginator)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.
 
