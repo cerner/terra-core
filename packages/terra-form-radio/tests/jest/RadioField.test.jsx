@@ -3,6 +3,8 @@ import React from 'react';
 import { shallowWithIntl } from 'terra-enzyme-intl';
 import RadioField from '../../src/RadioField';
 
+window.matchMedia = () => ({ matches: true });
+
 it('should render a default radio field', () => {
   const radioField = (<RadioField legend="Default RadioField" />);
   const wrapper = shallowWithIntl(radioField);

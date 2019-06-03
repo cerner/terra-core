@@ -4,35 +4,35 @@ describe('Status', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-status/status/status-default'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Arrange', () => {
     before(() => browser.url('/#/raw/tests/terra-status/status/status-arrange'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Icon', () => {
     before(() => browser.url('/#/raw/tests/terra-status/status/status-icon'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Image', () => {
     before(() => browser.url('/#/raw/tests/terra-status/status/status-image'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('No color', () => {
     before(() => browser.url('/#/raw/tests/terra-status/status/status-no-color'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 });
