@@ -56,6 +56,11 @@
       &:active {
         background-color: var(--terra-search-field-clear-active-background-color, transparent);
       }
+
+      &:focus {
+        border-color: var(--terra-search-field-button-focus-border-color, #26a2e5);
+        z-index: 1;
+      }
     }
 
     .clear-icon {

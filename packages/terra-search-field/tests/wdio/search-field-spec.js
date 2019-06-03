@@ -20,38 +20,8 @@ describe('Search Field', () => {
       browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
-<<<<<<< HEAD
-    Terra.should.matchScreenshot('scrolled text');
-    Terra.should.beAccessible();
-
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-search-field-max-width': '35rem',
-        '--terra-search-field-input-border-bottom-left-radius': '1em',
-        '--terra-search-field-input-border-top-left-radius': '1em',
-        '--terra-search-field-input-margin-bottom': '10px',
-        '--terra-search-field-input-margin-left': '10px',
-        '--terra-search-field-input-margin-right': '5px',
-        '--terra-search-field-input-margin-top': '10px',
-        '--terra-search-field-clear-right': '20px',
-        '--terra-search-field-clear-top': '10px',
-        '--terra-search-field-clear-icon-height': '10px',
-        '--terra-search-field-clear-icon-margin-top': '4px',
-        '--terra-search-field-clear-icon-width': '10px',
-        '--terra-search-field-button-border': '2px dotted red',
-        '--terra-search-field-button-border-bottom-right-radius': '1em',
-        '--terra-search-field-button-border-top-right-radius': '1em',
-        '--terra-search-field-button-margin-bottom': '10px',
-        '--terra-search-field-button-margin-left': '5px',
-        '--terra-search-field-button-margin-right': '10px',
-        '--terra-search-field-button-margin-top': '10px',
-      },
-    });
-=======
     Terra.it.matchesScreenshot('scrolled text');
     Terra.it.isAccessible();
->>>>>>> master
   });
 
   describe('Block', () => {
