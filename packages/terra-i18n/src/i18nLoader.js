@@ -16,7 +16,7 @@ const permitParams = (callback) => {
   }
 }
 
-module.exports = (locale, callback, scope) => {
+export default (locale, callback, scope) => {
   permitParams(callback);
   if (!hasIntl) {
     loadIntl(locale);
