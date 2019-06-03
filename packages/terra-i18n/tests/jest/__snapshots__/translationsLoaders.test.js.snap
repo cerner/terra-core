@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`translationsLoaders production environment still throws an error when the locale and en fallback are not provided 1`] = `"(0 , _translationsLoaders2.default) is not a function"`;
+exports[`translationsLoaders production environment still throws an error when the locale and en fallback are not provided 1`] = `"(0 , _translationsLoaders.default) is not a function"`;
 
-exports[`translationsLoaders production environment still throws an error when the regional locale and en fallback are not provided 1`] = `"(0 , _translationsLoaders2.default) is not a function"`;
+exports[`translationsLoaders production environment still throws an error when the regional locale and en fallback are not provided 1`] = `"(0 , _translationsLoaders.default) is not a function"`;
 
-exports[`translationsLoaders throws an error when the locale and en fallback are not provided 1`] = `"(0 , _translationsLoaders2.default) is not a function"`;
+exports[`translationsLoaders throws an error when the locale and en fallback are not provided 1`] = `"(0 , _translationsLoaders.default) is not a function"`;
 
-exports[`translationsLoaders throws an error when the regional locale and en fallback are not provided 1`] = `"(0 , _translationsLoaders2.default) is not a function"`;
+exports[`translationsLoaders throws an error when the regional locale and en fallback are not provided 1`] = `"(0 , _translationsLoaders.default) is not a function"`;

@@ -4,21 +4,21 @@ describe('Toggle', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle/toggle/default-toggle'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot('closed');
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot('closed');
 
     it('expands', () => {
       browser.click('#trigger-toggle'); // Open toggle
     });
 
-    Terra.should.matchScreenshot('opened');
+    Terra.it.matchesScreenshot('opened');
   });
 
   describe('Opened', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle/toggle/open-toggle'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Animated', () => {

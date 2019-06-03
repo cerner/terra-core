@@ -2,6 +2,8 @@
 import React from 'react';
 import Textarea from '../../src/Textarea';
 
+window.matchMedia = () => ({ matches: true });
+
 it('should render a default TextArea component', () => {
   const textarea = <Textarea />;
   const wrapper = render(textarea);

@@ -19,7 +19,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       ],
       "results": Array [
         Object {
-          "isThrow": false,
+          "type": "return",
           "value": undefined,
         },
       ],
@@ -88,8 +88,45 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       }
     }
   >
+<<<<<<< HEAD
     <div
       className="input-group"
+=======
+    <Input
+      aria-disabled={false}
+      aria-label="Terra.searchField.search"
+      className="input"
+      disabled={false}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      refCallback={
+        [MockFunction] {
+          "calls": Array [
+            Array [
+              <input
+                aria-disabled="false"
+                aria-label="Terra.searchField.search"
+                class="form-input input"
+                placeholder=""
+                type="search"
+                value=""
+              />,
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
+      required={false}
+      type="search"
+>>>>>>> master
     >
       <Input
         aria-disabled={false}
