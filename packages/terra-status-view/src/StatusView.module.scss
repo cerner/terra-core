@@ -3,9 +3,12 @@
 
 :local {
   .outer-view {
-    // display: -ms-grid;
+    // align-content: center;
+    align-items: center;
+    display: -ms-grid;
     display: grid;
-    // -ms-grid-row: 1fr auto 2fr;
+    -ms-grid-columns: 100%;
+    -ms-grid-rows: 1fr auto 2fr;
     grid-template-columns: auto;
     grid-template-rows: 1fr auto 2fr; // "Top Centers" the status view. Give 40% remaining space to top, 60% remaining space to bottom.
     grid-template-areas:
@@ -18,22 +21,31 @@
     //   "bottom-space" 2fr /
     //   auto;
     height: 100%;
+    justify-content: center;
+    justify-items: center;
     padding-bottom: var(--terra-status-view-padding-bottom, 0.714rem);
     padding-top: var(--terra-status-view-padding-top, 0.714rem);
     place-content: center;
+    // width: 100%
   }
 
   .is-aligned-top {
     align-content: start;
     grid-template-rows: 0 auto 0;
+    -ms-grid-columns: 100%;
+    -ms-grid-rows: 0 auto 0;
   }
 
   .top-space {
     grid-area: top-space;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
   }
 
   .bottom-space {
     grid-area: bottom-space;
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
   }
 
   .inner-view {
@@ -42,7 +54,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     grid-area: content;
-    // max-width:
+    // max-width: 100%;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
     overflow: auto;
     overflow-wrap: break-word;
     width: 100%;
@@ -111,6 +125,8 @@
     > button {
       // flex: var(--terra-status-view-actions-button-flex, 0 1 auto);
       // flex-shrink: 1;
+      word-break: break-word;
+      overflow-wrap: break-word;
       margin-left: var(--terra-status-view-actions-button-margin-left, 0.357rem);
       margin-right: var(--terra-status-view-actions-button-margin-right, 0.357rem);
       margin-top: var(--terra-status-view-actions-button-margin-top, 0);
