@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
 ### Fixed
 * Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.

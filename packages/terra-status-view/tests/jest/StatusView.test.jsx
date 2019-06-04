@@ -5,6 +5,11 @@ import { mountWithIntl } from 'terra-enzyme-intl';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import StatusView, { StatusViewVariants } from '../../src/StatusView';
 
+
+// Catch console warnings when visuallyHiddenText prop has not been included for accessibility.
+// This should be removed when visuallyHiddenText become required.
+global.console = { log: jest.fn(), warn: jest.fn() };
+
 // Snapshot Tests
 it('should render an image with a default status view', () => {
   const statusView = (<StatusView />);

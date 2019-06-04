@@ -6,155 +6,147 @@ describe('Show Hide', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide'));
 
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('collapsed');
+    Terra.it.isAccessible();
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.should.matchScreenshot('expanded');
-    Terra.should.beAccessible();
-  });
+    Terra.it.matchesScreenshot('expanded');
+    Terra.it.isAccessible();
 
-  describe('Hover', () => {
-    beforeEach(() => {
-      browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide');
-      browser.moveToObject('button');
+    it('should re-collapse the text', () => {
+      browser.click('button');
+      browser.click('#root');
     });
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
-  });
 
-  describe('Focus', () => {
-    beforeEach(() => {
-      browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide');
-      browser.keys(['Tab']);
-    });
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
-  });
+    describe('Hover', () => {
+      it('is hovered', () => {
+        browser.moveToObject('button');
+      });
 
-  describe('Active', () => {
-    beforeEach(() => {
-      browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide');
-      browser.moveToObject('button');
-      browser.buttonDown();
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
+
+      it('removes hover', () => {
+        browser.moveToObject('#root');
+      });
     });
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+
+    describe('Focus', () => {
+      it('has focus', () => {
+        browser.keys(['Tab']);
+        expect(browser.hasFocus('button')).to.be.true;
+      });
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
+
+      it('removes focus', () => {
+        browser.keys(['Tab']);
+        expect(browser.hasFocus('button')).to.be.false;
+      });
+    });
+
+    describe('Active', () => {
+      it('is active', () => {
+        browser.moveToObject('button');
+        browser.buttonDown();
+      });
+      Terra.it.matchesScreenshot();
+      Terra.it.isAccessible();
+
+      it('release button press', () => {
+        browser.buttonUp();
+        browser.moveToObject('#root');
+      });
+    });
   });
 
   describe('Custom button text', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/custom-button-text-show-hide'));
 
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('collapsed');
+    Terra.it.isAccessible();
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.should.matchScreenshot('expanded');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('expanded');
+    Terra.it.isAccessible();
   });
 
   describe('Initially open', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/initially-open-show-hide'));
 
-    Terra.should.matchScreenshot('expanded');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('expanded');
+    Terra.it.isAccessible();
   });
 
   describe('No preview', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/no-preview-show-hide'));
 
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('collapsed');
+    Terra.it.isAccessible();
   });
 
   describe('Button align start', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-start-show-hide'));
 
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('collapsed');
+    Terra.it.isAccessible();
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.should.matchScreenshot('expanded');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('expanded');
+    Terra.it.isAccessible();
   });
 
   describe('Button align center', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-center-show-hide'));
 
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('collapsed');
+    Terra.it.isAccessible();
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.should.matchScreenshot('expanded');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('expanded');
+    Terra.it.isAccessible();
   });
 
   describe('Button align end', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-end-show-hide'));
 
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('collapsed');
+    Terra.it.isAccessible();
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.should.matchScreenshot('expanded');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('expanded');
+    Terra.it.isAccessible();
   });
 
   describe('Long button text', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/long-button-text-show-hide'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-show-hide/show-hide/long-button-text-show-hide');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
 
-    Terra.should.matchScreenshot('collapsed');
-    Terra.should.beAccessible();
+    Terra.it.matchesScreenshot('collapsed');
+    Terra.it.isAccessible();
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.should.matchScreenshot('expanded');
-    Terra.should.beAccessible();
-  });
-
-  describe('Custom css properties', () => {
-    before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide'));//
-
-    Terra.should.beAccessible();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-show-hide-color': '#0059a8',
-        '--terra-show-hide-font-size': '1rem',
-        '--terra-show-hide-line-height': '1.429',
-        '--terra-show-hide-underline': 'none',
-        '--terra-show-hide-focus-background-color': 'transparent',
-        '--terra-show-hide-focus-border-radius': '0.2142rem',
-        '--terra-show-hide-focus-box-shadow': '0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25)',
-        '--terra-show-hide-focus-color': '#001f67',
-        '--terra-show-hide-focus-underline': 'underline',
-        '--terra-show-hide-hover-background-color': '',
-        '--terra-show-hide-hover-color': '#001f67',
-        '--terra-show-hide-active-color': '#001f67 ',
-        '--terra-show-hide-disabled-color': 'rgba(28, 31, 33, 0.2) ',
-        '--terra-show-hide-compact-padding-bottom': '0 ',
-        '--terra-show-hide-compact-padding-top': '0 ',
-        '--terra-show-hide-text-and-icon-margin-between': '0.3571rem ',
-        '--terra-show-hide-icon-height': '1rem',
-        '--terra-show-hide-icon-width': '1rem',
-      },
-    });
+    Terra.it.matchesScreenshot('expanded');
+    Terra.it.isAccessible();
   });
 });

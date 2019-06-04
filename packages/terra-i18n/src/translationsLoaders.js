@@ -34,4 +34,4 @@ const loadTranslations = (locale, callback, scope) => {
   }
 };
 
-module.exports = loadTranslations;
+export default loadTranslations;

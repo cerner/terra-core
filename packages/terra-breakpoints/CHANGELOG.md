@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
 2.8.0 - (May 9, 2019)
 ------------------
