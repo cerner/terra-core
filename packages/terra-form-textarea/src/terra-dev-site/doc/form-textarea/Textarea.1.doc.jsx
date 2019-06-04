@@ -37,10 +37,6 @@ const DocPage = () => (
     ]}
     examples={[
       {
-        example: <ResizableExample />,
-        source: ResizableExampleSrc,
-      },
-      {
         example: <FixedSmallSizeExample />,
         source: FixedSmallSizeExampleSrc,
       },
@@ -51,6 +47,10 @@ const DocPage = () => (
       {
         example: <FixedLargeSizeExample />,
         source: FixedLargeSizeExampleSrc,
+      },
+      {
+        example: <ResizableExample />,
+        source: ResizableExampleSrc,
       },
       {
         example: <FillContainerExample />,
