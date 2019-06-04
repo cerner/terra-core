@@ -4,6 +4,8 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
+* Reordered examples on documentation site
+* Clarified functionality of `isAutoResizable` and `size` props for TextArea
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
 3.12.0 - (May 1, 2019)
