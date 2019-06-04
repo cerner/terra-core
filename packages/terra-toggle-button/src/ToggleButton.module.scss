@@ -7,6 +7,10 @@
     display: inline-block;
     font-size: 0.8em;
     transform: rotate(0deg);
+
+    svg {
+      margin-top: 0.15em; // Style previously inherited from terra-button
+    }
   }
 
   .is-open .icon {

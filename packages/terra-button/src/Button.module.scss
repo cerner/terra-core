@@ -151,10 +151,6 @@
   .icon-svg {
     height: var(--terra-button-icon-height, 1rem);
     width: var(--terra-button-icon-width, 1rem);
-
-    svg {
-      margin-top: 0.15em; // Helps with vertical centering as Icon vertical-align styles aren't applied properly in flexbox container
-    }
   }
 
 }
