@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
+### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
 2.15.0 - (May 1, 2019)
