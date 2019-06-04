@@ -2,7 +2,7 @@ import React from 'react';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import classNames from 'classnames/bind';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Alert from 'terra-alert/lib/Alert';
+import Alert from 'terra-alert';
 import styles from './colors.module.scss';
 
 const cx = classNames.bind(styles);
@@ -11,7 +11,7 @@ const CustomExample = () => (
   <Alert type="custom" title="Help!" customColorClass={cx(['terra-alert-custom-blue-color'])} customIcon={<IconHelp />}>
     <span>
       This is a
-      <b>custom</b>
+      <b> custom</b>
       {' '}
       alert
     </span>

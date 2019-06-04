@@ -122,10 +122,10 @@
     box-shadow: var(--terra-alert-success-box-shadow, 2px 0 0 #78c346 inset);
   }
 
-  /* As per the W3C spec if the box-shadow does not have the color defined, 
-  it will use the prevailing color style */
   .custom {
     background-color: var(--terra-alert-custom-background-color, #f4f4f4);
+    /* As per the W3C spec if the box-shadow does not have the color defined, 
+    it will use the prevailing color style */
     box-shadow: var(--terra-alert-custom-box-shadow, 2px 0 0 inset);
   }
 
