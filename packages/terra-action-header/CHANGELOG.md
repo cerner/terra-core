@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Adjusted header-icon top styling
 
 2.14.0 - (May 22, 2019)
 ------------------

@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Adjusted close-icon size and margin styling
 
 2.12.0 - (May 1, 2019)
 ------------------
