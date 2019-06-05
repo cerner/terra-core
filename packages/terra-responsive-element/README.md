@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-responsive-element)](https://www.npmjs.org/package/terra-responsive-element)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The ResponsiveElement conditionally renders components based on viewport size.
 The viewport can be set to the immediate parent or window.

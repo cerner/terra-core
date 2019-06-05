@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Added `isInput` type on Input component to help with component identity
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+
 
 2.12.0 - (May 1, 2019)
 ------------------

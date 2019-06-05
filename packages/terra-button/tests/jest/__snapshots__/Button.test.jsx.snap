@@ -30,7 +30,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
       ],
       "results": Array [
         Object {
-          "isThrow": false,
+          "type": "return",
           "value": undefined,
         },
       ],

@@ -6,6 +6,7 @@ Unreleased
 ### Changed
 * Added `required` prop
 * Added `isSelect` type on Select component to help with component identity
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
 5.15.0 - (May 1, 2019)
 ------------------

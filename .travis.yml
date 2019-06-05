@@ -26,44 +26,37 @@ jobs:
       script:
         - sudo chown -R travis:travis $HOME/docker
         - 'rm -f $HOME/docker/*.tar.gz'
-        - 'wget -q -O docker-compose.yml https://raw.githubusercontent.com/cerner/terra-toolkit/v4.28.0/config/docker/ci-docker-compose.yml'
-        - travis_wait docker-compose build --build-arg TERRA_NODE_TAG=latest test-chrome
+        - travis_wait docker-compose build test-ci
         - travis_wait docker-compose --verbose pull standalone-chrome
         - >
           mkdir -p $HOME/docker && docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}} {{.ID}}'
           | xargs -n 2 -t sh -c 'test -e $HOME/docker/$1.tar.gz || docker save $0 | gzip -2 > $HOME/docker/$1.tar.gz'
     - stage: danger lint and jest
       script:
-        - 'wget -q -O docker-compose.yml https://raw.githubusercontent.com/cerner/terra-toolkit/v4.28.0/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e TRAVIS=$TRAVIS -e CI=$CI -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test-chrome bash -c 'npm run danger && npm run lint && npm run jest'"
+        - travis_wait docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test-ci bash -c 'npm run danger && npm run lint && npm run jest'
     - stage: wdio
       script:
-        - 'wget -q -O docker-compose.yml https://raw.githubusercontent.com/cerner/terra-toolkit/v4.28.0/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run -e TRAVIS=$TRAVIS -e CI=$CI test-chrome npm run wdio -- --suite suite1"
+        - travis_wait docker-compose run test-ci npm run wdio -- --suite suite1
     -
       script:
-        - 'wget -q -O docker-compose.yml https://raw.githubusercontent.com/cerner/terra-toolkit/v4.28.0/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run -e TRAVIS=$TRAVIS -e CI=$CI test-chrome npm run wdio -- --suite suite2"
+        - travis_wait docker-compose run test-ci npm run wdio -- --suite suite2
     -
       script:
-        - 'wget -q -O docker-compose.yml https://raw.githubusercontent.com/cerner/terra-toolkit/v4.28.0/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run -e TRAVIS=$TRAVIS -e CI=$CI test-chrome npm run wdio -- --suite suite3"
+        - travis_wait docker-compose run test-ci npm run wdio -- --suite suite3
     -
       script:
-        - 'wget -q -O docker-compose.yml https://raw.githubusercontent.com/cerner/terra-toolkit/v4.28.0/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run -e TRAVIS=$TRAVIS -e CI=$CI test-chrome npm run wdio -- --suite suite4"
+        - travis_wait docker-compose run test-ci npm run wdio -- --suite suite4
     - stage: deploy
       script: skip
       before_deploy:
         - sudo chown -R travis:travis $HOME/docker
         # Load cached docker images
         - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
-        - 'wget -q -O docker-compose.yml https://raw.githubusercontent.com/cerner/terra-toolkit/v4.28.0/config/docker/ci-docker-compose.yml'
-        - "travis_wait docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/opt/module/build -e TRAVIS=$TRAVIS -e CI=$CI -e TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' -e TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' test-chrome npm run compile:prod"
+        - "travis_wait docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/opt/module/build -e TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' -e TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' test-ci npm run compile:prod"
       deploy:
         provider: pages
         skip_cleanup: true
-        github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+        github_token: $GITHUB_TOKEN # Set in travis-ci.com dashboard
         local_dir: build
         on:
           branch: master

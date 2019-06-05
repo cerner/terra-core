@@ -3,60 +3,54 @@ describe('Markdown', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
 
-    Terra.should.validateElement({ selector: '#root' });
+    Terra.it.validatesElement({ selector: '#root' });
   });
 
   describe('css', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/css'));
 
-    Terra.should.validateElement();
+    Terra.it.validatesElement();
   });
 
   describe('diff', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/diff'));
 
-    Terra.should.validateElement();
+    Terra.it.validatesElement();
   });
 
   describe('html', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/html'));
 
-    Terra.should.validateElement();
+    Terra.it.validatesElement();
   });
 
   describe('javascript', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/javascript'));
 
-    Terra.should.validateElement();
+    Terra.it.validatesElement();
   });
 
   describe('jsx', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/jsx'));
 
-    Terra.should.validateElement();
+    Terra.it.validatesElement();
   });
 
   describe('noformat', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/noformat'));
 
-    Terra.should.validateElement();
+    Terra.it.validatesElement();
   });
 
   describe('scss', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/scss'));
 
-    Terra.should.validateElement();
+    Terra.it.validatesElement();
   });
 
   describe('Block Quote', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/blockquote'));
 
-    Terra.should.validateElement();
-    Terra.should.themeCombinationOfCustomProperties({
-      testName: 'themed',
-      properties: {
-        '--terra-markdown-blockquote-color': 'red',
-      },
-    });
+    Terra.it.validatesElement();
   });
 });
