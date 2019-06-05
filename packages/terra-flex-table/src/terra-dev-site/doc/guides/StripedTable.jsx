@@ -32,6 +32,7 @@ const StripedTable = () => (
       <HeaderCell key="cell-1">Column 0</HeaderCell>,
       <HeaderCell key="cell-2">Column 1</HeaderCell>,
       <HeaderCell key="cell-3">Column 2</HeaderCell>,
+      <HeaderCell key="cell-4">Column 3</HeaderCell>,
     ]}
   >
     {createTableRows(mockData)}

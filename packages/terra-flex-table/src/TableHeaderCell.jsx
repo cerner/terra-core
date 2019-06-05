@@ -138,7 +138,9 @@ const TableHeaderCell = ({
       role="columnheader"
     >
       {headerIcon}
-      {children}
+      <span className={cx('cell-content')}>
+        {children}
+      </span>
       {sortIndicator}
     </div>
   );
