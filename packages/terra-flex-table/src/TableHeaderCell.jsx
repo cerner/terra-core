@@ -131,7 +131,7 @@ const TableHeaderCell = ({
     <div
       {...customProps}
       {...attrSpread}
-      style={TableUtils.styleFromWidth(width)}
+      style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       data-terra-flex-table-header-cell
       className={contentClassName}
       ref={refCallback}

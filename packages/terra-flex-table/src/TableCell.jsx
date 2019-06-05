@@ -46,7 +46,7 @@ const TableCell = ({
   return (
     <div
       {...customProps}
-      style={TableUtils.styleFromWidth(width)}
+      style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cellClassNames}
       ref={refCallback}
       role="gridcell"
