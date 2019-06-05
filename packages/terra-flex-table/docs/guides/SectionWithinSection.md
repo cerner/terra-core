@@ -97,7 +97,7 @@ We can then implement the unpack of our data into our row cells.
 ```jsx
   const createCell = cell => (
     <Cell key={cell.key}>
-      <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+      {cell.title}
     </Cell>
   );
 
@@ -128,6 +128,7 @@ Then we can implement a method to loop through our data and create the section w
   render() {
     return (
       <Table
+        paddingStyle="standard"
         header={
           <Header>
             <HeaderCell>Column 0</HeaderCell>

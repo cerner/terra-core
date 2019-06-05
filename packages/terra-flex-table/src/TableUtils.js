@@ -80,7 +80,7 @@ const staticStyle = width => (
   }
 );
 
-const scalarStype = width => (
+const scalarStyle = width => (
   {
     msFlex: `${width} 1 0`,
     flex: `${width} 1 0`,
@@ -98,7 +98,7 @@ const styleFromWidth = (width) => {
     return staticStyle(`${width.percentage}%`);
   }
   if (width.scalar) {
-    return scalarStype(width.scalar);
+    return scalarStyle(width.scalar);
   }
   return null;
 };

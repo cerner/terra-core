@@ -6,13 +6,11 @@ import Table, {
   HeaderCell,
   Utils,
 } from 'terra-flex-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-
-import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-section';
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+    {cell.title}
   </Cell>
 );
 
@@ -47,7 +45,6 @@ class SectionTable extends React.Component {
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
-        colSpan={3}
       >
         {sectionData.childItems.map(childItem => createRow(childItem))}
       </Section>
@@ -63,9 +60,9 @@ class SectionTable extends React.Component {
       <Table
         paddingStyle="standard"
         headerCells={[
-          <HeaderCell>Column 0</HeaderCell>,
-          <HeaderCell>Column 1</HeaderCell>,
-          <HeaderCell>Column 2</HeaderCell>,
+          <HeaderCell key="cell-1">Column 0</HeaderCell>,
+          <HeaderCell key="cell-2">Column 1</HeaderCell>,
+          <HeaderCell key="cell-3">Column 2</HeaderCell>,
         ]}
       >
         {this.createSections(mockData)}

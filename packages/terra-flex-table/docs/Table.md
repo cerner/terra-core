@@ -1,6 +1,6 @@
 # Terra FlexTable
 
-The Terra Table is a structural component used to create standard html tables.
+The Terra FlexTable is a structural component used to create standard html tables.
 
 ## Getting Started
 
@@ -17,18 +17,18 @@ import Table, { Row, Cell } from 'terra-flex-table';
 <Table>
   <Row isSelectable key="row-0">
     <Cell key="row-0-cell-0">
-      <p>Table row text</p>
+      Table row text
     </Cell>
     <Cell key="row-0-cell-0">
-      <p>Table row text</p>
+      Table row text
     </Cell>
   </Row>
   <Row isSelectable key="row-1">
     <Cell key="row-1-cell-0">
-      <p>Table row text</p>
+      Table row text
     </Cell>
     <Cell key="row-1-cell-1">
-      <p>Table row text</p>
+      Table row text
     </Cell>
   </Row>
 </Table>

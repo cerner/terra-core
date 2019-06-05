@@ -11,7 +11,6 @@ import { SubsectionHeader } from 'terra-flex-table';
 <SubsectionHeader
   key="unique-react-key"
   title="Subsection Title"
-  colSpan={3}
 />
 ```
 

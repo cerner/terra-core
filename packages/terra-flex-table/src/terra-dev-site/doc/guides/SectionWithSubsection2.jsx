@@ -7,7 +7,6 @@ import Table, {
   HeaderCell,
   Utils,
 } from 'terra-flex-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions\
-import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-section-sub';
 
 const widths = [
@@ -18,7 +17,7 @@ const widths = [
 
 const createCell = (cell, index) => (
   <Cell key={cell.key} width={widths[index]}>
-    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+    {cell.title}
   </Cell>
 );
 

@@ -94,7 +94,7 @@ We can then implement the unpack of our data into our row cells.
 ```jsx
   const createCell = cell => (
     <Cell key={cell.key}>
-      <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+      {cell.title}
     </Cell>
   );
 
@@ -111,6 +111,7 @@ Ensuring that we add the appropriate aria label for multiple selections.
     return (
       <Table
         aria-multiselectable
+        paddingStyle="standard"
         header={
           <Header>
             <HeaderCell>Column 0</HeaderCell>

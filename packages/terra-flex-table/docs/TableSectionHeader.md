@@ -11,7 +11,6 @@ import { SectionHeader } from 'terra-flex-table';
 <SectionHeader
   key="unique-react-key"
   title="Section Title"
-  colSpan={3}
 />
 ```
 

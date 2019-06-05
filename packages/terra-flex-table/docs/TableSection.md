@@ -15,7 +15,6 @@ import { Row, Section } from 'terra-flex-table';
     isCollapsed
     metaData={{ myInfo: 'my-data' }}
     onSelect={this.handleSelection}
-    colSpan={3}
   >
     <Row />
     <Row />

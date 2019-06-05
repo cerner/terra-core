@@ -1,29 +1,48 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, { Row, Cell, Subsection } from 'terra-flex-table/lib/index';
-import Placeholder from 'terra-doc-template/lib/Placeholder';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableSubsectionExample = () => (
-  <Table>
-    <Subsection colSpan={1} title="Subsection Title">
+  <Table
+    paddingStyle="standard"
+  >
+    <Subsection title="Subsection Title">
       <Row>
-        <Cell>
-          <Placeholder title="Subsection Row" style={{ height: '50px' }} />
+        <Cell key="cell-0">
+          Lorem ipsum dolor
+        </Cell>
+        <Cell key="cell-1">
+          Lorem ipsum dolor
+        </Cell>
+        <Cell key="cell-2">
+          Lorem ipsum dolor
         </Cell>
       </Row>
     </Subsection>
-    <Subsection isCollapsible title="Collapsible Subsection" colSpan={1}>
+    <Subsection isCollapsible title="Collapsible Subsection">
       <Row>
-        <Cell>
-          <Placeholder title="Subsection Row" style={{ height: '50px' }} />
+        <Cell key="cell-0">
+          Lorem ipsum dolor
+        </Cell>
+        <Cell key="cell-1">
+          Lorem ipsum dolor
+        </Cell>
+        <Cell key="cell-2">
+          Lorem ipsum dolor
         </Cell>
       </Row>
     </Subsection>
-    <Subsection isCollapsible isCollapsed title="Collapsed Subsection" colSpan={1}>
+    <Subsection isCollapsible isCollapsed title="Collapsed Subsection">
       <Row>
-        <Cell>
-          <Placeholder title="Subsection Row" style={{ height: '50px' }} />
+        <Cell key="cell-0">
+          Lorem ipsum dolor
+        </Cell>
+        <Cell key="cell-1">
+          Lorem ipsum dolor
+        </Cell>
+        <Cell key="cell-2">
+          Lorem ipsum dolor
         </Cell>
       </Row>
     </Subsection>

@@ -128,7 +128,7 @@ const columns = ['column-0', 'column-1', 'column-2'];
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+    {cell.title}
   </Cell>
 );
 
@@ -146,6 +146,7 @@ Then we can implement a method to loop through our data and create the table row
   render() {
     return (
       <Table
+        paddingStyle="standard"
         header={(
           <Header>
             {this.createHeaderCell('column-0', 'Breakfast')}

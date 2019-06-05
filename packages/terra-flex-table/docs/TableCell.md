@@ -9,7 +9,7 @@ import React from 'react';
 import { Cell } from 'terra-flex-table';
 
 <Cell key="row-0-cell-0">
-  <p>Table row text</p>
+  Table row text
 </Cell>
 ```
 

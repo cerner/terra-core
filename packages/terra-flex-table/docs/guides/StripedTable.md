@@ -22,7 +22,7 @@ We can then implement our additional static methods to populate the cell data.
 ```jsx
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+    {cell.title}
   </Cell>
 );
 
@@ -32,6 +32,7 @@ And finally we call our create row creation method.
 ```jsx
 const StripedTable = () => (
   <Table
+    paddingStyle="standard"
     header={(
       <Header>
         <HeaderCell>Column 0</HeaderCell>

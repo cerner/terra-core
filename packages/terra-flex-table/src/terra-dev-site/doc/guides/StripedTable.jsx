@@ -2,12 +2,11 @@ import React from 'react';
 import Table, {
   Row, Cell, HeaderCell,
 } from 'terra-flex-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-select';
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+    {cell.title}
   </Cell>
 );
 

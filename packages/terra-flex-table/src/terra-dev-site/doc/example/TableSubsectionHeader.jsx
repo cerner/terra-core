@@ -5,7 +5,7 @@ import Table, { SubsectionHeader } from 'terra-flex-table/lib/index';
 
 const TableSubsectionHeaderExample = () => (
   <Table>
-    <SubsectionHeader colSpan={1} title="Default SubsectionHeader" key="default" />
+    <SubsectionHeader title="Default SubsectionHeader" key="default" />
   </Table>
 );
 

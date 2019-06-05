@@ -7,13 +7,11 @@ import Table, {
   HeaderCell,
   Utils,
 } from 'terra-flex-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-
-import Placeholder from 'terra-doc-template/lib/Placeholder';
 import mockData from './mock-data/mock-section-sub';
 
 const createCell = cell => (
   <Cell key={cell.key}>
-    <Placeholder title={cell.title} style={{ height: '50px', padding: '0' }} />
+    {cell.title}
   </Cell>
 );
 
@@ -29,7 +27,6 @@ const createSubsection = subsectionData => (
   <Subsection
     key={subsectionData.key}
     title={subsectionData.title}
-    colSpan={3}
   >
     {subsectionData.childItems.map(childItem => createRow(childItem))}
   </Subsection>
@@ -58,7 +55,6 @@ class SectionWithSubsection1 extends React.Component {
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
-        colSpan={3}
       >
         {sectionData.childItems.map(childItem => createSubsection(childItem))}
       </Section>

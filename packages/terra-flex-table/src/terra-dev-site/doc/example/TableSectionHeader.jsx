@@ -5,7 +5,7 @@ import Table, { SectionHeader } from 'terra-flex-table/lib/index';
 
 const TableSectionHeaderExample = () => (
   <Table>
-    <SectionHeader colSpan={1} title="Default SectionHeader" key="default" />
+    <SectionHeader title="Default SectionHeader" key="default" />
   </Table>
 );
 
