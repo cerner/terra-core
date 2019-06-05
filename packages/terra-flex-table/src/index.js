@@ -1,7 +1,6 @@
 import Table from './Table';
 import Row from './TableRow';
 import Cell from './TableCell';
-import Header from './TableHeader';
 import HeaderCell from './TableHeaderCell';
 import Section from './TableSection';
 import Subsection from './TableSubsection';
@@ -13,7 +12,6 @@ export default Table;
 export {
   Row,
   Cell,
-  Header,
   HeaderCell,
   Section,
   Subsection,

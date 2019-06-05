@@ -1,31 +1,38 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Table from 'terra-table/lib/Table';
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
+import Table, {
+  Header,
+  HeaderCell,
+  Body,
+  Cell,
+  Row,
+} from 'terra-table/lib/index';
+/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableWithSortingIndicator = () => (
   <Table isStriped={false}>
-    <Table.Header>
-      <Table.HeaderCell key="NAME" minWidth="small">Name</Table.HeaderCell>
-      <Table.HeaderCell key="ADDRESS" minWidth="medium" sort="asc">Address</Table.HeaderCell>
-      <Table.HeaderCell key="PHONE_NUMBER" minWidth="large">Phone Number</Table.HeaderCell>
-    </Table.Header>
-    <Table.Body>
-      <Table.Row key="PERSON_0">
-        <Table.Cell key="NAME">John Smith</Table.Cell>
-        <Table.Cell key="ADDRESS">123 Adams Drive</Table.Cell>
-        <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
-      </Table.Row>
-      <Table.Row key="PERSON_1">
-        <Table.Cell key="NAME">Jane Smith</Table.Cell>
-        <Table.Cell key="ADDRESS">321 Drive Street</Table.Cell>
-        <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
-      </Table.Row>
-      <Table.Row key="PERSON_2">
-        <Table.Cell key="NAME">Dave Smith</Table.Cell>
-        <Table.Cell key="ADDRESS">213 Raymond Road</Table.Cell>
-        <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
-      </Table.Row>
-    </Table.Body>
+    <Header>
+      <HeaderCell key="NAME" minWidth="small">Name</HeaderCell>
+      <HeaderCell key="ADDRESS" minWidth="medium" sort="asc">Address</HeaderCell>
+      <HeaderCell key="PHONE_NUMBER" minWidth="large">Phone Number</HeaderCell>
+    </Header>
+    <Body>
+      <Row key="PERSON_0">
+        <Cell key="NAME">John Smith</Cell>
+        <Cell key="ADDRESS">123 Adams Drive</Cell>
+        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
+      </Row>
+      <Row key="PERSON_1">
+        <Cell key="NAME">Jane Smith</Cell>
+        <Cell key="ADDRESS">321 Drive Street</Cell>
+        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
+      </Row>
+      <Row key="PERSON_2">
+        <Cell key="NAME">Dave Smith</Cell>
+        <Cell key="ADDRESS">213 Raymond Road</Cell>
+        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
+      </Row>
+    </Body>
   </Table>
 );
 

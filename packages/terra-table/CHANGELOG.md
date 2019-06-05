@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Breaking Changes
+* Removed Component `SingleSelectList` - No longer supported this uncontrolled variant of list.
+* Removed Component `MultiSelectList` - No longer supported this uncontrolled variant of list.
+* Removed Component `SelectableList` - Selection no longer supported.
+* Removed Utils `TableUtils` - Selection no longer supported..
+
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 

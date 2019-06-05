@@ -8,10 +8,6 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Number of columns the subsection header must span
-   */
-  colSpan: PropTypes.number.isRequired,
-  /**
    * @private Whether or not the subsection is collapsed.
    */
   isCollapsed: PropTypes.bool,

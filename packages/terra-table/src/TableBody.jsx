@@ -12,7 +12,7 @@ const defaultProps = {
   children: [],
 };
 
-const TableRows = ({
+const TableBody = ({
   children,
   ...customProps
 }) => (
@@ -21,7 +21,7 @@ const TableRows = ({
   </tbody>
 );
 
-TableRows.propTypes = propTypes;
-TableRows.defaultProps = defaultProps;
+TableBody.propTypes = propTypes;
+TableBody.defaultProps = defaultProps;
 
-export default TableRows;
+export default TableBody;

@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import TableHeader from './TableHeader';
-import TableHeaderCell from './TableHeaderCell';
-import TableRows from './TableRows';
-import TableRow from './TableRow';
-import TableCell from './TableCell';
 import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);
@@ -51,10 +46,5 @@ const Table = ({
 
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
-Table.Body = TableRows;
-Table.Header = TableHeader;
-Table.HeaderCell = TableHeaderCell;
-Table.Row = TableRow;
-Table.Cell = TableCell;
 
 export default Table;
