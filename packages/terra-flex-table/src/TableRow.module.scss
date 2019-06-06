@@ -5,6 +5,10 @@
     margin-bottom: 0;
     position: relative;
     flex: 1 1 auto;
+    
+    &:last-of-type {
+      border-bottom: var(--terra-flex-table-row-border-bottom, 1px solid #dedfe0);
+    }
   }
 
   .is-striped {
