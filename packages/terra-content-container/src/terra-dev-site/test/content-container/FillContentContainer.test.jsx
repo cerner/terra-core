@@ -1,12 +1,16 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 
 import ContentContainer from '../../../ContentContainer';
+import styles from './ContentContainerTestCommon.scss';
+
+const cx = classNames.bind(styles);
 
 const header = <header>header</header>;
-const content = <div style={{ height: '100%', backgroundColor: '#98fb98' }}>content</div>;
+const content = <div className={cx('content')}>content</div>;
 
 const container = () => (
-  <div style={{ height: '200px' }}>
+  <div className={cx('content-container-wrapper')}>
     <ContentContainer id="content-container" header={header} fill>
       {content}
     </ContentContainer>

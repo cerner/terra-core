@@ -1,13 +1,17 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 
 import ContentContainer from '../../../ContentContainer';
+import styles from './ContentContainerTestCommon.scss';
 
-const header = <header style={{ height: '100%', backgroundColor: '#f64747' }}>header</header>;
-const footer = <div style={{ height: '100%', backgroundColor: '#98fb98' }}>content</div>;
-const content = <footer style={{ height: '100%', backgroundColor: '#00bfff' }}>footer</footer>;
+const cx = classNames.bind(styles);
+
+const header = <header className={cx('header')}>header</header>;
+const content = <div className={cx('content')}>content</div>;
+const footer = <footer className={cx('footer')}>footer</footer>;
 
 const container = () => (
-  <div style={{ height: '200px' }}>
+  <div className={cx('content-container-wrapper')}>
     <ContentContainer id="content-container" header={header} footer={footer}>
       {content}
     </ContentContainer>
