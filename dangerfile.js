@@ -27,5 +27,5 @@ const missingChangelogs = [...changedPackages].filter(packageName => !changedCha
 
 // Fail if there are package changes without a CHANGELOG update
 if (missingChangelogs.length > 0) {
-  fail(`Please include a CHANGELOG entry for each changed package this PR. Looks like a CHANGELOG is missing for: \n - ${missingChangelogs.join('\n - ')}`);
+  fail(`Please include a CHANGELOG entry for each changed package this PR. Looks like a CHANGELOG is missing for: \n\n - ${missingChangelogs.join('\n - ')}`);
 }
