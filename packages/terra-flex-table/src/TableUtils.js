@@ -81,7 +81,7 @@ const staticStyle = width => (
 
 const scalarStyle = width => (
   {
-    msflex: `${width} ${width} 0px`,
+    msFlex: `${width} ${width} 0px`,
     flex: `${width} ${width} 0px`,
   }
 );
