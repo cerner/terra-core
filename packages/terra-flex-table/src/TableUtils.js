@@ -72,12 +72,10 @@ const wrappedEventCallback = (callback, newCallback) => {
 
 const staticStyle = width => (
   {
-    msFlex: '0 0 auto',
-    flex: '0 0 auto',
-    width,
+    msFlex: '0 0 0',
+    flex: '0 0 0',
     maxWidth: width,
     minWidth: width,
-    boxSizing: 'border-box',
   }
 );
 

@@ -2,7 +2,6 @@
   .cell {
     border: 0;
     border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
-    box-sizing: content-box;
     text-align: left;
     vertical-align: top;
     flex: 1 1 0;

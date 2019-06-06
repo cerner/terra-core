@@ -47,8 +47,6 @@
 
     &[data-row-show-focus='true']:focus {
       background-color: var(--terra-flex-table-row-focus-background-color, lighten(#ebf6fd, 2%));
-      // border-bottom: var(--terra-flex-table-row-focus-border-bottom, 1px solid);
-      border-color: var(--terra-flex-table-row-focus-border-color, #0092e0);
       box-shadow: var(--terra-flex-table-row-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       z-index: 1;
 
