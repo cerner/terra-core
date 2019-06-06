@@ -107,12 +107,12 @@ const TableHeaderCell = ({
 
   let sortIndicator;
   if (sort !== 'none') {
-    sortIndicator = <span className={cx(`sort-indicator-${sort}`)} key="sort" />;
+    sortIndicator = <div className={cx(`sort-indicator-${sort}`)} key="sort" />;
   }
 
   let headerIcon;
   if (icon) {
-    headerIcon = <span className={cx('cell-icon')} key="icon">{icon}</span>;
+    headerIcon = <div className={cx('cell-icon')} key="icon">{icon}</div>;
   }
 
   const attrSpread = { 'aria-sort': ariaSortMap[sort] };
@@ -127,9 +127,9 @@ const TableHeaderCell = ({
 
   let content = [
     headerIcon,
-    <span className={cx('cell-content')} key="content">
+    <div className={cx('cell-content')} key="content">
       {children}
-    </span>,
+    </div>,
     sortIndicator,
   ];
 

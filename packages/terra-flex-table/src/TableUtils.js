@@ -72,8 +72,8 @@ const wrappedEventCallback = (callback, newCallback) => {
 
 const staticStyle = width => (
   {
-    msFlex: '0 0 0',
-    flex: '0 0 0',
+    msFlex: '0 0 0px',
+    flex: '0 0 0px',
     maxWidth: width,
     minWidth: width,
   }
@@ -81,8 +81,8 @@ const staticStyle = width => (
 
 const scalarStyle = width => (
   {
-    msFlex: `${width} ${width} 0`,
-    flex: `${width} ${width} 0`,
+    msflex: `${width} ${width} 0px`,
+    flex: `${width} ${width} 0px`,
   }
 );
 

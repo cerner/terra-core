@@ -62,6 +62,7 @@
     flex: 1 1 auto;
     min-width: 0;
     // stylelint-disable-next-line plugin/no-unsupported-browser-features
+    overflow: hidden;
     overflow-wrap: break-word; /* Modern browsers */
     width: 100%;
     word-wrap: break-word;
@@ -88,6 +89,7 @@
   }
 
   .cell-icon {
+    flex: 0 0 auto;
     padding-right: var(--terra-flex-table-header-cell-icon-padding-right, 0.35715rem);
   }
 }
