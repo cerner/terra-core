@@ -22,6 +22,10 @@ const propTypes = {
    */
   icon: PropTypes.element,
   /**
+   * Whether or not the cell should adheader to the tables paddingStyle.
+   */
+  isPadded: PropTypes.bool,
+  /**
    * Whether or not header cell should appear as a selectable element.
    */
   isSelectable: PropTypes.bool,
@@ -30,10 +34,6 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
-  /**
-   * The minimum width for the column. One of `tiny`, `small`, `medium`, `large`, `huge`.
-   */
-  minWidth: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Function callback for when the appropriate click or key action is performed.
    * Callback contains the javascript evnt and prop metadata, e.g. onSelect(event, metaData)
@@ -79,16 +79,15 @@ const propTypes = {
 const defaultProps = {
   children: [],
   isSelectable: false,
-  minWidth: 'small',
   sort: 'none',
 };
 
 const TableHeaderCell = ({
   children,
   icon,
+  isPadded,
   isSelectable,
   metaData,
-  minWidth,
   onBlur,
   onClick,
   onKeyDown,
@@ -103,18 +102,17 @@ const TableHeaderCell = ({
     'header-cell',
     { 'is-selectable': isSelectable },
     { 'is-sortable': sort === 'asc' || sort === 'desc' },
-    minWidth,
     customProps.className,
   ]);
 
   let sortIndicator;
   if (sort !== 'none') {
-    sortIndicator = <span className={cx(`sort-indicator-${sort}`)} />;
+    sortIndicator = <span className={cx(`sort-indicator-${sort}`)} key="sort" />;
   }
 
   let headerIcon;
   if (icon) {
-    headerIcon = <span className={cx('cell-icon')}>{icon}</span>;
+    headerIcon = <span className={cx('cell-icon')} key="icon">{icon}</span>;
   }
 
   const attrSpread = { 'aria-sort': ariaSortMap[sort] };
@@ -127,6 +125,22 @@ const TableHeaderCell = ({
     attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
   }
 
+  let content = [
+    headerIcon,
+    <span className={cx('cell-content')} key="content">
+      {children}
+    </span>,
+    sortIndicator,
+  ];
+
+  if (isPadded) {
+    content = (
+      <div className={cx('container')}>
+        {content}
+      </div>
+    );
+  }
+
   return (
     <div
       {...customProps}
@@ -137,11 +151,7 @@ const TableHeaderCell = ({
       ref={refCallback}
       role="columnheader"
     >
-      {headerIcon}
-      <span className={cx('cell-content')}>
-        {children}
-      </span>
-      {sortIndicator}
+      {content}
     </div>
   );
 };

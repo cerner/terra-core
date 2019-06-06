@@ -9,39 +9,39 @@ const TableSubsectionExample = () => (
   >
     <Subsection title="Subsection Title">
       <Row>
-        <Cell key="cell-0">
+        <Cell isPadded key="cell-0">
           Lorem ipsum dolor
         </Cell>
-        <Cell key="cell-1">
+        <Cell isPadded key="cell-1">
           Lorem ipsum dolor
         </Cell>
-        <Cell key="cell-2">
+        <Cell isPadded key="cell-2">
           Lorem ipsum dolor
         </Cell>
       </Row>
     </Subsection>
     <Subsection isCollapsible title="Collapsible Subsection">
       <Row>
-        <Cell key="cell-0">
+        <Cell isPadded key="cell-0">
           Lorem ipsum dolor
         </Cell>
-        <Cell key="cell-1">
+        <Cell isPadded key="cell-1">
           Lorem ipsum dolor
         </Cell>
-        <Cell key="cell-2">
+        <Cell isPadded key="cell-2">
           Lorem ipsum dolor
         </Cell>
       </Row>
     </Subsection>
     <Subsection isCollapsible isCollapsed title="Collapsed Subsection">
       <Row>
-        <Cell key="cell-0">
+        <Cell isPadded key="cell-0">
           Lorem ipsum dolor
         </Cell>
-        <Cell key="cell-1">
+        <Cell isPadded key="cell-1">
           Lorem ipsum dolor
         </Cell>
-        <Cell key="cell-2">
+        <Cell isPadded key="cell-2">
           Lorem ipsum dolor
         </Cell>
       </Row>

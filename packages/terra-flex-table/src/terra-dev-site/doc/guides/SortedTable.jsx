@@ -7,7 +7,7 @@ import mockData from './mock-data/mock-sort';
 const columns = ['column-0', 'column-1', 'column-2'];
 
 const createCell = cell => (
-  <Cell key={cell.key}>
+  <Cell isPadded key={cell.key}>
     {cell.title}
   </Cell>
 );
@@ -73,6 +73,7 @@ class SortedTable extends React.Component {
         onSelect={this.handleSortClick}
         sort={sort}
         isSelectable
+        isPadded
       >
         {title}
       </HeaderCell>

@@ -16,7 +16,7 @@ const widths = [
 ];
 
 const createCell = (cell, index) => (
-  <Cell key={cell.key} width={widths[index]}>
+  <Cell isPadded key={cell.key} width={widths[index]}>
     {cell.title}
   </Cell>
 );
@@ -80,9 +80,9 @@ class SectionWithSubsection2 extends React.Component {
       <Table
         paddingStyle="standard"
         headerCells={[
-          <HeaderCell key="cell-0" width={widths[0]}>Fixed 0</HeaderCell>,
-          <HeaderCell key="cell-1" width={widths[1]}>Fixed 1</HeaderCell>,
-          <HeaderCell key="cell-2" width={widths[2]}>Fixed 2</HeaderCell>,
+          <HeaderCell isPadded key="cell-0" width={widths[0]}>Fixed 0</HeaderCell>,
+          <HeaderCell isPadded key="cell-1" width={widths[1]}>Fixed 1</HeaderCell>,
+          <HeaderCell isPadded key="cell-2" width={widths[2]}>Fixed 2</HeaderCell>,
         ]}
       >
         {this.createSections(mockData)}

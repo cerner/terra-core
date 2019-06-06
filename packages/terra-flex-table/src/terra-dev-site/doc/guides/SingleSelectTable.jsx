@@ -17,7 +17,7 @@ const widths = [
 // ];
 
 const createCell = (cell, index) => (
-  <Cell key={cell.key} width={widths[index]}>
+  <Cell isPadded key={cell.key} width={widths[index]}>
     {cell.title}
   </Cell>
 );
@@ -65,10 +65,10 @@ class SingleSelectTable extends React.Component {
         style={{ height: '200px' }}
         paddingStyle="standard"
         headerCells={[
-          <HeaderCell key="cell-1" width={widths[0]}>Fixed</HeaderCell>,
-          <HeaderCell key="cell-2" width={widths[1]}>Percentage</HeaderCell>,
-          <HeaderCell key="cell-3" width={widths[2]}>Scalar 2</HeaderCell>,
-          <HeaderCell key="cell-4">Default</HeaderCell>,
+          <HeaderCell isPadded key="cell-1" width={widths[0]}>Fixed</HeaderCell>,
+          <HeaderCell isPadded key="cell-2" width={widths[1]}>Percentage</HeaderCell>,
+          <HeaderCell isPadded key="cell-3" width={widths[2]}>Scalar 2</HeaderCell>,
+          <HeaderCell isPadded key="cell-4">Default</HeaderCell>,
         ]}
       >
         {this.createTableRows(mockData)}

@@ -5,7 +5,7 @@ import Table, {
 import mockData from './mock-data/mock-select';
 
 const createCell = cell => (
-  <Cell key={cell.key}>
+  <Cell isPadded key={cell.key}>
     {cell.title}
   </Cell>
 );
@@ -28,10 +28,10 @@ const StripedTable = () => (
   <Table
     paddingStyle="standard"
     headerCells={[
-      <HeaderCell key="cell-1">Column 0</HeaderCell>,
-      <HeaderCell key="cell-2">Column 1</HeaderCell>,
-      <HeaderCell key="cell-3">Column 2</HeaderCell>,
-      <HeaderCell key="cell-4">Column 3</HeaderCell>,
+      <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>,
+      <HeaderCell isPadded key="cell-2">Column 1</HeaderCell>,
+      <HeaderCell isPadded key="cell-3">Column 2</HeaderCell>,
+      <HeaderCell isPadded key="cell-4">Column 3</HeaderCell>,
     ]}
   >
     {createTableRows(mockData)}

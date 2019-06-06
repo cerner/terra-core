@@ -8,46 +8,46 @@ const TableRowExample = () => (
     paddingStyle="standard"
   >
     <Row key="default_row">
-      <Cell key="cell-0">
+      <Cell isPadded key="cell-0">
         Lorem ipsum dolor
       </Cell>
-      <Cell key="cell-1">
+      <Cell isPadded key="cell-1">
         Lorem ipsum dolor
       </Cell>
-      <Cell key="cell-2">
+      <Cell isPadded key="cell-2">
         Lorem ipsum dolor
       </Cell>
     </Row>
     <Row key="striped_row" isStriped>
-      <Cell key="cell-0">
+      <Cell isPadded key="cell-0">
         Lorem ipsum dolor
       </Cell>
-      <Cell key="cell-1">
+      <Cell isPadded key="cell-1">
         Lorem ipsum dolor
       </Cell>
-      <Cell key="cell-2">
+      <Cell isPadded key="cell-2">
         Lorem ipsum dolor
       </Cell>
     </Row>
     <Row isSelectable key="selectable_row">
-      <Cell key="cell-0">
+      <Cell isPadded key="cell-0">
         Lorem ipsum dolor
       </Cell>
-      <Cell key="cell-1">
+      <Cell isPadded key="cell-1">
         Lorem ipsum dolor
       </Cell>
-      <Cell key="cell-2">
+      <Cell isPadded key="cell-2">
         Lorem ipsum dolor
       </Cell>
     </Row>
     <Row isSelectable isSelected key="selected_row">
-      <Cell key="cell-0">
+      <Cell isPadded key="cell-0">
         Lorem ipsum dolor
       </Cell>
-      <Cell key="cell-1">
+      <Cell isPadded key="cell-1">
         Lorem ipsum dolor
       </Cell>
-      <Cell key="cell-2">
+      <Cell isPadded key="cell-2">
         Lorem ipsum dolor
       </Cell>
     </Row>

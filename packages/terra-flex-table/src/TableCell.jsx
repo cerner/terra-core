@@ -12,6 +12,10 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Whether or not the cell should adheader to the tables paddingStyle.
+   */
+  isPadded: PropTypes.bool,
+  /**
    * Function callback for the ref of the td.
    */
   refCallback: PropTypes.func,
@@ -34,6 +38,7 @@ const defaultProps = {
 
 const TableCell = ({
   children,
+  isPadded,
   refCallback,
   width,
   ...customProps
@@ -43,6 +48,15 @@ const TableCell = ({
     customProps.className,
   ]);
 
+  let content = children;
+  if (isPadded) {
+    content = (
+      <div className={cx('container')}>
+        {content}
+      </div>
+    );
+  }
+
   return (
     <div
       {...customProps}
@@ -51,7 +65,7 @@ const TableCell = ({
       ref={refCallback}
       role="gridcell"
     >
-      {children}
+      {content}
     </div>
   );
 };

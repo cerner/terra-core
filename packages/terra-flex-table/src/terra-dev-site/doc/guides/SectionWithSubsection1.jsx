@@ -10,7 +10,7 @@ import Table, {
 import mockData from './mock-data/mock-section-sub';
 
 const createCell = cell => (
-  <Cell key={cell.key}>
+  <Cell isPadded key={cell.key}>
     {cell.title}
   </Cell>
 );
@@ -72,9 +72,9 @@ class SectionWithSubsection1 extends React.Component {
         fill
         paddingStyle="standard"
         headerCells={[
-          <HeaderCell key="cell-1">Column 0Column 0Column 0Column 0Column 0</HeaderCell>,
-          <HeaderCell key="cell-2">Column 1Column 1Column 1Column 1Column 1</HeaderCell>,
-          <HeaderCell key="cell-3">Column 2Column 2Column 2Column 2Column 2</HeaderCell>,
+          <HeaderCell isPadded key="cell-1">Column 0Column 0Column 0Column 0Column 0</HeaderCell>,
+          <HeaderCell isPadded key="cell-2">Column 1Column 1Column 1Column 1Column 1</HeaderCell>,
+          <HeaderCell isPadded key="cell-3">Column 2Column 2Column 2Column 2Column 2</HeaderCell>,
         ]}
       >
         {this.createSections(mockData)}

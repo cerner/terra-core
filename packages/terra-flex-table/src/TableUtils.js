@@ -77,13 +77,14 @@ const staticStyle = width => (
     width,
     maxWidth: width,
     minWidth: width,
+    boxSizing: 'border-box',
   }
 );
 
 const scalarStyle = width => (
   {
-    msFlex: `${width} 1 0`,
-    flex: `${width} 1 0`,
+    msFlex: `${width} ${width} 0`,
+    flex: `${width} ${width} 0`,
   }
 );
 
