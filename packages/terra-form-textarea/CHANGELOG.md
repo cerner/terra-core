@@ -7,6 +7,8 @@ Unreleased
 * Removed vendor style rule added to fade placeholder text. Since Autoprefixer V9 resolves vendor prefix issue.
 
 ### Changed
+* Reordered examples on documentation site
+* Clarified functionality of `isAutoResizable` and `size` props for TextArea
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
 3.12.0 - (May 1, 2019)
