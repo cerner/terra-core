@@ -97,7 +97,7 @@ Finally we need to check if the section is collapsed. As we support IE10 & 11, w
 We can then implement the unpack of our data into our row cells.
 ```jsx
   const createCell = cell => (
-    <Cell key={cell.key}>
+    <Cell isPadded key={cell.key}>
       {cell.title}
     </Cell>
   );
@@ -122,9 +122,9 @@ Then we can implement a method to loop through our data and create the section w
         paddingStyle="standard"
         header={
           <Header>
-            <HeaderCell>Column 0</HeaderCell>
-            <HeaderCell>Column 1</HeaderCell>
-            <HeaderCell>Column 2</HeaderCell>
+            <HeaderCell isPadded>Column 0</HeaderCell>
+            <HeaderCell isPadded>Column 1</HeaderCell>
+            <HeaderCell isPadded>Column 2</HeaderCell>
           </Header> 
         }
       >

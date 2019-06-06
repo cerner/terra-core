@@ -21,7 +21,7 @@ const createTableRow = (itemData, index) => (
 We can then implement our additional static methods to populate the cell data.
 ```jsx
 const createCell = cell => (
-  <Cell key={cell.key}>
+  <Cell isPadded key={cell.key}>
     {cell.title}
   </Cell>
 );
@@ -35,9 +35,9 @@ const StripedTable = () => (
     paddingStyle="standard"
     header={(
       <Header>
-        <HeaderCell>Column 0</HeaderCell>
-        <HeaderCell>Column 1</HeaderCell>
-        <HeaderCell>Column 2</HeaderCell>
+        <HeaderCell isPadded>Column 0</HeaderCell>
+        <HeaderCell isPadded>Column 1</HeaderCell>
+        <HeaderCell isPadded>Column 2</HeaderCell>
       </Header>
     )}
   >

@@ -93,6 +93,7 @@ Finally we need to check if the header cell matches the sortColumn.key in state.
     return (
       <HeaderCell
         key={key}
+        isPadded
         isSelectable
         sort={sort}
         metaData={{ key }}
@@ -127,7 +128,7 @@ Next we fill in the static methods for the example table rows.
 const columns = ['column-0', 'column-1', 'column-2'];
 
 const createCell = cell => (
-  <Cell key={cell.key}>
+  <Cell isPadded key={cell.key}>
     {cell.title}
   </Cell>
 );

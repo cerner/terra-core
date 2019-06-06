@@ -114,9 +114,9 @@ Ensuring that we add the appropriate aria label for multiple selections.
         paddingStyle="standard"
         header={
           <Header>
-            <HeaderCell>Column 0</HeaderCell>
-            <HeaderCell>Column 1</HeaderCell>
-            <HeaderCell>Column 2</HeaderCell>
+            <HeaderCell isPadded>Column 0</HeaderCell>
+            <HeaderCell isPadded>Column 1</HeaderCell>
+            <HeaderCell isPadded>Column 2</HeaderCell>
           </Header> 
         }
       >
