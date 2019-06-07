@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Clear button added to search field for cross-browser compatibility
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
 3.13.0 - (May 14, 2019)
