@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
 ### Changed
 * Clear button added to search field for cross-browser compatibility
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
