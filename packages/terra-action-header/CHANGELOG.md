@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Updated
+* Updated misleading `children` documentation
+
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
