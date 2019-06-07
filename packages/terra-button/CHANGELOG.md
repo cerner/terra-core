@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
 ### Changed
 * Adjusted Button CSS to better line up icons with text
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
