@@ -1,6 +1,18 @@
+@import '~terra-mixins/lib/Mixins';
+
 :local {
-  .searchfield {
+  .search-field {
     display: inline-flex;
+    min-width: 0;
+    width: var(--terra-search-field-max-width, 16.5rem);
+
+    .input-group {
+      display: inline-flex;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
 
     .input {
       appearance: none;
@@ -14,11 +26,50 @@
       margin-right: var(--terra-search-field-input-margin-right, 0);
       margin-top: var(--terra-search-field-input-margin-top, 0);
       min-width: 0;
-      outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
+      outline-offset: -0.143em;  // Adjust the outline offset for search input in Safari.
+      padding-right: var(--terra-search-field-input-padding-right, 2.28571rem); // Match the padding to width of the clear button
+    }
+
+    .input::-ms-clear,
+    .input::-ms-reveal {
+      display: none;
+    }
+  
+    .input::-webkit-search-cancel-button {
+      // Remove webkit search clear functionality
+      display: none;
+    }
+  
+    .input::-webkit-search-decoration {
+      // Get rid of extra left-padding getting added in Safari for search fields
+      appearance: none;
+    }
+
+    .clear {
+      display: block;
+      flex: 0 0 auto;
+      margin: 0;
+      position: absolute;
+      right: var(-terra-search-field-clear-right, 0);
+      top: var(-terra-search-field-clear-top, 0);
+
+      &:active {
+        background-color: var(--terra-search-field-clear-active-background-color, transparent);
+      }
 
       &:focus {
+        border-color: var(--terra-search-field-button-focus-border-color, #26a2e5);
         z-index: 1;
       }
+    }
+
+    .clear-icon {
+      background-image: var(--terra-search-field-clear-icon-background-image, inline-svg("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='#909496' d='M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24S37.3 0 24 0zm13.9 33.8l-2.1 2.1-1.2 1.2-1 .9-9.6-9.7-9.6 9.7-2.2-2.1-1.1-1.1-1-1 9.7-9.8-9.7-9.8 1-1 1.1-1.1 2.2-2.1 9.6 9.7 9.6-9.7 1 .9 1.2 1.2 2.1 2.1-9.7 9.8 9.7 9.8z'/></svg>"));
+      display: inline-block;
+      height: var(--terra-search-field-clear-icon-height, 1.14286rem);
+      margin-top: var(--terra-search-field-clear-icon-margin-top, -0.214285rem);
+      vertical-align: middle;
+      width: var(--terra-search-field-clear-icon-width, 1.14286rem);
     }
 
     .button {
@@ -37,21 +88,17 @@
       margin-top: var(--terra-search-field-button-margin-top, 0);
 
       &:focus {
-        box-shadow: var(--terra-search-field-button-focus-box-shadow);
+        border-color: var(--terra-search-field-button-focus-border-color, #26a2e5);
+        box-shadow: var(--terra-search-field-button-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+        outline: none;
+        z-index: 1;
       }
     }
-  }
 
-  .block {
-    display: flex;
-  }
+    &.block {
+      display: flex;
+      width: 100%;
+    }
 
-  .input::-webkit-search-cancel-button {
-    appearance: searchfield-cancel-button;
-  }
-
-  .input::-webkit-search-decoration {
-    // Get rid of extra left-padding getting added in Safari for search fields
-    appearance: none;
   }
 }
