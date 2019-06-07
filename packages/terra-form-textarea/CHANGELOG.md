@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed 
+* Removed vendor style rule added to fade placeholder text. Since Autoprefixer V9 resolves vendor prefix issue.
+
 ### Changed
 * Reordered examples on documentation site
 * Clarified functionality of `isAutoResizable` and `size` props for TextArea
