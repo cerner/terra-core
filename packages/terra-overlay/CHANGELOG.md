@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Update overlay-spec and screenshots
 
 3.14.0 - (May 14, 2019)
 ------------------
