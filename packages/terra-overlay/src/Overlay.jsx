@@ -12,9 +12,7 @@ import Container from './OverlayContainer';
 // Importing WICG Inert polyfill causes Jest to crash
 // Issue logged to Jest repo: https://github.com/facebook/jest/issues/8373
 // This logic avoids importing the polyfill when running Jest tests
-// It also checks to make sure not to load the inert polyfill if it has already been defined
-// eslint-disable-next-line no-prototype-builtins
-if (process.env.NODE_ENV !== 'test' && !Element.prototype.hasOwnProperty('inert')) {
+if (process.env.NODE_ENV !== 'test') {
   // eslint-disable-next-line global-require
   require('wicg-inert');
 }
