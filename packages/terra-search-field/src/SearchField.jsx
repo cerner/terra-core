@@ -104,13 +104,15 @@ class SearchField extends React.Component {
   constructor(props) {
     super(props);
 
+    this.handleClear = this.handleClear.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.setInputRef = this.setInputRef.bind(this);
     this.updateSearchText = this.updateSearchText.bind(this);
 
     this.searchTimeout = null;
-    this.state = { searchText: this.props.defaultValue };
+    this.state = { searchText: this.props.defaultValue || this.props.value };
   }
 
   componentDidUpdate() {
@@ -120,6 +122,31 @@ class SearchField extends React.Component {
 
   componentWillUnmount() {
     this.clearSearchTimeout();
+  }
+
+  setInputRef(node) {
+    this.inputRef = node;
+    if (this.props.inputRefCallback) {
+      this.props.inputRefCallback(node);
+    }
+  }
+
+  handleClear(event) {
+    // Pass along changes to consuming components using associated props
+    if (this.props.onChange) {
+      this.props.onChange(event, '');
+    }
+
+    if (this.props.onInvalidSearch) {
+      this.props.onInvalidSearch('');
+    }
+    this.setState({ searchText: '' });
+
+    // Clear input field
+    if (this.inputRef) {
+      this.inputRef.value = '';
+      this.inputRef.focus();
+    }
   }
 
   handleTextChange(event) {
@@ -144,6 +171,9 @@ class SearchField extends React.Component {
   handleKeyDown(event) {
     if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
       this.handleSearch();
+    }
+    if (event.nativeEvent.keyCode === KeyCode.KEY_ESCAPE) {
+      this.handleClear();
     }
   }
 
@@ -183,36 +213,54 @@ class SearchField extends React.Component {
       inputAttributes,
       ...customProps
     } = this.props;
+
     const searchFieldClassNames = cx([
-      'searchfield',
+      'search-field',
       { block: isBlock },
       customProps.className,
     ]);
 
-    const valueTemp = {};
-    if (value !== undefined) {
-      valueTemp.value = value;
-    } else {
-      valueTemp.defaultValue = defaultValue;
-    }
-
     const inputText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
     const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
-    const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes, valueTemp);
+    const clearText = this.context.intl.formatMessage({ id: 'Terra.searchField.clear' });
+    const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
+    const clearIcon = <span className={cx('clear-icon')} />;
+
+    if (value !== undefined) {
+      additionalInputAttributes.value = value;
+    } else {
+      additionalInputAttributes.defaultValue = defaultValue;
+    }
+
+    const clearButton = this.state.searchText && !isDisabled
+      ? (
+        <Button
+          className={cx('clear')}
+          onClick={this.handleClear}
+          text={clearText}
+          variant="utility"
+          icon={clearIcon}
+          isIconOnly
+        />
+      )
+      : undefined;
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
-        <Input
-          className={cx('input')}
-          type="search"
-          placeholder={placeholder}
-          onChange={this.handleTextChange}
-          disabled={isDisabled}
-          aria-disabled={isDisabled}
-          onKeyDown={this.handleKeyDown}
-          refCallback={inputRefCallback}
-          {...additionalInputAttributes}
-        />
+        <div className={cx('input-group')}>
+          <Input
+            className={cx('input')}
+            type="search"
+            placeholder={placeholder}
+            onChange={this.handleTextChange}
+            disabled={isDisabled}
+            aria-disabled={isDisabled}
+            onKeyDown={this.handleKeyDown}
+            refCallback={this.setInputRef}
+            {...additionalInputAttributes}
+          />
+          {clearButton}
+        </div>
         <Button
           className={cx('button')}
           text={buttonText}

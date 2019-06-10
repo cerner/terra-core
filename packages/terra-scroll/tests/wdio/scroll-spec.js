@@ -3,12 +3,12 @@ describe('Scroll', () => {
     browser.url('/#/raw/tests/terra-scroll/scroll/default');
   });
 
-  Terra.should.beAccessible({ context: '#scroll-test' });
-  Terra.should.matchScreenshot('before-click', { selector: '#scroll-test' });
+  Terra.it.isAccessible();
+  Terra.it.matchesScreenshot('before-click', { selector: '#scroll-test' });
 
   it('scroll the view', () => {
     browser.click('#scroll');
   });
 
-  Terra.should.matchScreenshot('after-click', { selector: '#scroll-test' });
+  Terra.it.matchesScreenshot('after-click', { selector: '#scroll-test' });
 });
