@@ -4,7 +4,7 @@
 
 ### Props
 * **Removed** default behaviour of rendering an error view. Please provide props.
-* **Removed** the `custom` variant. Use first class props `title`, `message`, or `glyph` to render the respective sockets, or override a variant's sockets.
+* **Removed** the `custom` variant. Use first class props `title`, `message`, or `customGlyph` to render the respective sockets, or override a variant's sockets.
 
 ### Resizing
 * Use `isGlyphHidden` to show or hide the glyph. The `onComponentMount` logic to do this has been removed.

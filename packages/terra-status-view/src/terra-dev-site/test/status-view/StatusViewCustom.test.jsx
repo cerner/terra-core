@@ -4,6 +4,6 @@ import StatusView from '../../../StatusView';
 
 export default () => (
   <div>
-    <StatusView id="statusView" title="Custom" variant="custom" customGlyph={<IconDiamond />} />
+    <StatusView id="statusView" title="Custom" customGlyph={<IconDiamond />} />
   </div>
 );
