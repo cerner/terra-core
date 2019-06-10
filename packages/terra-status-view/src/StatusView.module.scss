@@ -1,13 +1,10 @@
 @import '~terra-mixins/lib/Mixins';
-/* autoprefixer grid: autoplace */
+/* autoprefixer grid: on */
 :local {
   .outer-view {
-    // align-content: center;
-    // align-items: center;
-    // display: -ms-grid;
+    align-content: center;
+    align-items: center;
     display: grid;
-    // -ms-grid-columns: 100%;
-    // -ms-grid-rows: 1fr auto 2fr;
     /* "Top Centers" the status view. Give 40% remaining space to top, 60% remaining space to bottom.*/
     grid-template:
       "top-space" 1fr
@@ -15,29 +12,23 @@
       "bottom-space" 2fr /
       100%;
     height: 100%;
-    // justify-content: center;
-    // justify-items: center;
+    justify-content: center;
+    justify-items: center;
     padding-bottom: var(--terra-status-view-padding-bottom, 0.714rem);
     padding-top: var(--terra-status-view-padding-top, 0.714rem);
-    // place-content: center;
   }
 
   .is-aligned-top {
     align-content: start;
     grid-template-rows: 0 auto 0;
-    // -ms-grid-rows: 0 auto 0;
   }
 
   .top-space {
     grid-area: top-space;
-    // -ms-grid-column: 1;
-    // -ms-grid-row: 1;
   }
 
   .bottom-space {
     grid-area: bottom-space;
-    // -ms-grid-column: 1;
-    // -ms-grid-row: 3;
   }
 
   .inner-view {
@@ -46,9 +37,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     grid-area: content;
-    // max-width: 100%;
-    // -ms-grid-column: 1;
-    // -ms-grid-row: 2;
+    // max-width: 100%; @TODO ask neil what value
     overflow: auto;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -87,6 +76,8 @@
     font-size: var(--terra-status-view-title-font-size, 1.73rem);
     text-align: center;
     width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .message {
@@ -95,6 +86,8 @@
     padding-top: var(--terra-status-view-message-padding-top, 0.714rem);
     text-align: center;
     width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .divider {
@@ -112,10 +105,11 @@
     padding-left: 0.357rem;
     padding-right: 0.357rem;
     padding-top: var(--terra-status-view-actions-padding-top, 1.429rem);
+    width: 100%;
 
     > button {
-      // flex: var(--terra-status-view-actions-button-flex, 0 1 auto);
-      // flex-shrink: 1;
+      flex: var(--terra-status-view-actions-button-flex, 0 1 auto);
+      flex-shrink: 1;
       word-break: break-word;
       overflow-wrap: break-word;
       margin-left: var(--terra-status-view-actions-button-margin-left, 0.357rem);
