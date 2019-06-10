@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed '-ms-overflow-style' CSS
 
 2.8.0 - (May 1, 2019)
 ------------------
