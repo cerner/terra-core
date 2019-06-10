@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
+### Removed 
+* Removed vendor style rule added to fade placeholder text. Since Autoprefixer V9 resolves vendor prefix issue.
+
 ### Changed
 * Added `isTextarea` type on Textarea component to help with component identity
 * Reordered examples on documentation site

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
 ### Changed
 * Enabled ability to mark RadioField as required
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
