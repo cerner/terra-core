@@ -9,7 +9,9 @@
     transform: rotate(0deg);
 
     svg {
-      margin-top: 0.15em; // Style previously inherited from terra-button
+      font-size: 0.8em;
+      position: relative;
+      top: -0.1em;
     }
   }
 
