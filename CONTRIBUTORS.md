@@ -78,6 +78,7 @@ Cerner Corporation
 - Younghwan Jang [@yfaney]
 - Naveen Kumar Ramamurthy [@nramamurth]
 - Pranav Agarwal [@pranav300]
+- Avinash Gupta [@avinashg1994]
 
 Community
 
@@ -183,3 +184,4 @@ Community
 [@nramamurth]: https://github.com/nramamurth
 [@PayalSawant]: https://github.com/PayalSawant
 [@pranav300]: https://github.com/pranav300
+[@avinashg1994]: https://github.com/avinashg1994
