@@ -25,8 +25,9 @@ Terra.describeViewports('Tag', ['tiny'], () => {
     Terra.it.validatesElement();
 
     it('tabs to tag', () => {
+      browser.click('#root');
       browser.keys('Tab');
-      browser.hasFocus('#on-click');
+      expect(browser.hasFocus('#on-click')).to.be.true;
       Terra.validates.element('focus');
     });
 
