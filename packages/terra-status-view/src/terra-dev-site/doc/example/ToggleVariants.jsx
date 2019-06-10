@@ -23,10 +23,10 @@ class ToggleVariants extends React.Component {
         <fieldset>
           <legend>Change Variant</legend>
           <select id="statusViewVariant" name="statusViewVariant" value={this.state.selected} onChange={this.handleOnSelect}>
+            <option value="error" selected>Error</option>
             <option value="no-data">No Data</option>
             <option value="no-matching-results">No Matching Results</option>
             <option value="not-authorized">Not Authorized</option>
-            <option value="error" selected>Error</option>
           </select>
         </fieldset>
       </div>

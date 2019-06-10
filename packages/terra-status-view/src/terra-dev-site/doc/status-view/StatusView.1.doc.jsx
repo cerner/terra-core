@@ -10,10 +10,10 @@ import StatusViewSrc from '!raw-loader!../../../../src/StatusView';
 // Example Files
 import ToggleVariants from '../example/ToggleVariants';
 import ToggleVariantsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ToggleVariants';
-import GlyphHiddenExample from '../example/GlyphHiddenExample';
-import GlyphHiddenExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GlyphHiddenExample';
-import LargeContainerExample from '../example/LargeContainerExample';
-import LargeContainerExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/LargeContainerExample';
+import ToggleAlignmentAndGlyph from '../example/ToggleAlignmentAndGlyph';
+import ToggleAlignmentAndGlyphSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ToggleAlignmentAndGlyph';
+import Custom from '../example/Custom';
+import CustomSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Custom';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -29,13 +29,13 @@ const DocPage = () => (
       },
       {
         title: 'Custom: Icon + message + buttons',
-        example: LargeContainerExample,
-        source: LargeContainerExampleSrc,
+        example: Custom,
+        source: CustomSrc,
       },
       {
-        title: 'Toggle Boolean Props',
-        example: <GlyphHiddenExample />,
-        source: GlyphHiddenExampleSrc,
+        title: 'Toggle Alignment and Glyph',
+        example: <ToggleAlignmentAndGlyph />,
+        source: ToggleAlignmentAndGlyphSrc,
       },
     ]}
     propsTables={[

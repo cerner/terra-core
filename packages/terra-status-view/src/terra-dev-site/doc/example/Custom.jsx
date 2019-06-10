@@ -4,7 +4,7 @@ import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import StatusView from 'terra-status-view/lib/StatusView';
 
-const LargeContainerExample = (
+const Custom = (
   <StatusView
     message="Custom Message"
     customGlyph={<IconDiamond />}
@@ -15,4 +15,4 @@ const LargeContainerExample = (
   </StatusView>
 );
 
-export default LargeContainerExample;
+export default Custom;

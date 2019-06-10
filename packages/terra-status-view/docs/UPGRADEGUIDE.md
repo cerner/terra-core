@@ -1,5 +1,15 @@
 # Terra Status View Upgrade Guide
 
+## Changes from version 3 to version 4
+
+### Props
+* **Removed** default behaviour of rendering an error view. Please provide props.
+* **Removed** the `custom` variant. Use first class props `title`, `message`, or `glyph` to render the respective sockets, or override a variant's sockets.
+
+### Resizing
+* Use `isGlyphHidden` to show or hide the glyph. The `onComponentMount` logic to do this has been removed.
+* Status view defaults to a "top centering", based on available size and remaining space. The top will contain `40%` of space, adn the remaining `60%` is delegated to the bottom. Use `setAlignTop` to remove this distribution and render the status view at the top of the page.
+
 ## Changes from version 2 to version 3
 
 ### Changes to CSS Custom Properties

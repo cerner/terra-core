@@ -2,7 +2,7 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import StatusView from 'terra-status-view/lib/StatusView';
 
-class ToggleVariants extends React.Component {
+class ToggleAlignmentAndGlyph extends React.Component {
   constructor(props) {
     super(props);
 
@@ -26,10 +26,13 @@ class ToggleVariants extends React.Component {
     }));
   }
 
+  /* eslint-disable react/forbid-dom-props */
   render() {
     return (
       <div>
-        <StatusView variant="error" isAlignedTop={this.state.isAlignedTop} isGlyphHidden={this.state.isGlyphHidden} />
+        <div style={{ height: '400px', border: '1px dashed black' }}>
+          <StatusView variant="error" isAlignedTop={this.state.isAlignedTop} isGlyphHidden={this.state.isGlyphHidden} />
+        </div>
         <fieldset>
           <legend>Toggle alignment and glyph</legend>
           <div>
@@ -46,4 +49,4 @@ class ToggleVariants extends React.Component {
   }
 }
 
-export default ToggleVariants;
+export default ToggleAlignmentAndGlyph;

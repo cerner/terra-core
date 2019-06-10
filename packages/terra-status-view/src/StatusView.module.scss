@@ -35,12 +35,11 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     grid-area: content;
+    max-height: 100%;
     // max-width: 100%; @TODO ask neil what value
     overflow: auto;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    // width: 100%;
   }
 
   .glyph {
@@ -110,8 +109,6 @@
     > button {
       flex: var(--terra-status-view-actions-button-flex, 0 1 auto);
       flex-shrink: 1;
-      word-break: break-word;
-      overflow-wrap: break-word;
       margin-left: var(--terra-status-view-actions-button-margin-left, 0.357rem);
       margin-right: var(--terra-status-view-actions-button-margin-right, 0.357rem);
       margin-top: var(--terra-status-view-actions-button-margin-top, 0);
