@@ -25,7 +25,7 @@ class CallbackSearchField extends React.Component {
   render() {
     return (
       <div>
-        <h3> Minimum Search Length is 3 </h3>
+        <div> Minimum Search Length is 3 </div>
         <SearchField
           id="searchfield"
           onSearch={this.handleSearch}

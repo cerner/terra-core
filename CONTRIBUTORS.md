@@ -79,6 +79,7 @@ Cerner Corporation
 - Naveen Kumar Ramamurthy [@nramamurth]
 - Pranav Agarwal [@pranav300]
 - Lokesh P [@lokesh-0813]
+- Avinash Gupta [@avinashg1994]
 
 Community
 
@@ -185,3 +186,4 @@ Community
 [@PayalSawant]: https://github.com/PayalSawant
 [@pranav300]: https://github.com/pranav300
 [@lokesh-0813]: https://github.com/lokesh-0813
+[@avinashg1994]: https://github.com/avinashg1994
