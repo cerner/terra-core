@@ -10,9 +10,13 @@ Unreleased
 * Removed node_modules from .npmignore
 
 ### Changed
+<<<<<<< HEAD
 * Updated misleading `children` documentation
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 * Adjusted header-icon top styling
+=======
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+>>>>>>> parent of cf1526d67... [terra-button] Align SVGs with Text in Buttons (#2378)
 
 2.14.0 - (May 22, 2019)
 ------------------
