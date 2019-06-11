@@ -3,9 +3,6 @@ Changelog
 
 Unreleased
 ----------
-### Added
-* Added missing wdio snapshot for reset button.
-
 ### Removed
 * Removed node_modules from .npmignore
 
