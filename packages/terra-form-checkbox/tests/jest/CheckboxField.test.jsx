@@ -3,6 +3,8 @@ import React from 'react';
 import { shallowWithIntl } from 'terra-enzyme-intl';
 import CheckboxField from '../../src/CheckboxField';
 
+window.matchMedia = () => ({ matches: true });
+
 it('should render a default checkbox field', () => {
   const checkBox = (<CheckboxField legend="Default CheckboxField" />);
   const wrapper = shallowWithIntl(checkBox);

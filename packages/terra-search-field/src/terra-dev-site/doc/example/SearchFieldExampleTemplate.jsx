@@ -10,7 +10,7 @@ const propTypes = {
   disableAutoSearch: PropTypes.bool,
 
   /**
-   * The mimimum search text length if provided. Used for the invalid search length message.
+   * The minimum search text length if provided. Used for the invalid search length message.
    */
   minimumSearchTextLength: PropTypes.number,
 };
@@ -40,6 +40,7 @@ class SearchFieldExampleTemplate extends React.Component {
 
   render() {
     const { disableAutoSearch } = this.props;
+
     return (
       <div>
         <p>

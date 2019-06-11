@@ -3,6 +3,24 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+
+3.14.0 - (May 22, 2019)
+------------------
+### Changed
+* Revert update to allow VoiceOver to read selectable table rows.
+* Revert update to allow row selection with Voice Over + space.
+
+3.13.0 - (May 21, 2019)
+------------------
+### Added
+* Added missing en-US and en-AU table translations
+* Updated to allow VoiceOver to read selectable table rows.
+* Updated to allow row selection with Voice Over + space.
 
 3.12.0 - (May 9, 2019)
 ------------------

@@ -3,6 +3,21 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+
+5.6.0 - (May 21, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.5.0 - (May 14, 2019)
+------------------
+### Removed
+* Removed custom props spread on I18nProvider. The I18nProvider does not accept custom props.
 
 5.4.0 - (May 1, 2019)
 ------------------

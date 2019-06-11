@@ -4,26 +4,26 @@ describe('Image', () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-image/image/image-default'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot();
   });
 
   describe('Non Fluid', () => {
     before(() => browser.url('/#/raw/tests/terra-image/image/image-non-fluid'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot('smaller than container', { selector: '#smaller' });
-    Terra.should.matchScreenshot('height smaller than container', { selector: '#height-smaller' });
-    Terra.should.matchScreenshot('width smaller than container', { selector: '#width-smaller' });
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot('smaller than container', { selector: '#smaller' });
+    Terra.it.matchesScreenshot('height smaller than container', { selector: '#height-smaller' });
+    Terra.it.matchesScreenshot('width smaller than container', { selector: '#width-smaller' });
   });
 
   describe('Fluid', () => {
     before(() => browser.url('/#/raw/tests/terra-image/image/image-fluid'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot('smaller than container', { selector: '#smaller' });
-    Terra.should.matchScreenshot('height smaller than container', { selector: '#height-smaller' });
-    Terra.should.matchScreenshot('width smaller than container', { selector: '#width-smaller' });
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot('smaller than container', { selector: '#smaller' });
+    Terra.it.matchesScreenshot('height smaller than container', { selector: '#height-smaller' });
+    Terra.it.matchesScreenshot('width smaller than container', { selector: '#width-smaller' });
   });
 
   describe('Loading', () => {
@@ -33,8 +33,8 @@ describe('Image', () => {
       browser.waitForExist('#errorImage');
     });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot('successful load', { selector: '#loadedImage' });
-    Terra.should.matchScreenshot('failed load', { selector: '#errorImage' });
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot('successful load', { selector: '#loadedImage' });
+    Terra.it.matchesScreenshot('failed load', { selector: '#errorImage' });
   });
 });

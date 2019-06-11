@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+
+3.10.0 - (May 21, 2019)
+------------------
+### Fixed
+* Fixing Jest tests related to react-animate-height update
 
 3.9.0 - (May 1, 2019)
 ------------------

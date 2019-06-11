@@ -25,7 +25,7 @@ The `I18nProvider` component configures the react-intl's `IntlProvider` and supp
 
 ### Supported Locales
 
-[You can view a list of locales supported by Terra UI here.](https://github.com/cerner/terra-toolkit/blob/master/scripts/aggregate-translations/i18nSupportedLocales.js)
+[You can view a list of locales supported by Terra UI here.](https://github.com/cerner/terra-aggregate-translations/blob/master/config/i18nSupportedLocales.js)
 
 ### Non-Supported Locales
 

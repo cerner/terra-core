@@ -24,4 +24,7 @@ module.exports = {
     'node_modules',
   ],
   testURL: 'http://localhost',
+  transform: {
+    '^.+\\.(js|jsx)$': './jestBabelTransform',
+  },
 };

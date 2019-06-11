@@ -1,7 +1,7 @@
 # Terra Scroll
 
 [![NPM version](https://badgen.net/npm/v/terra-scroll)](https://www.npmjs.org/package/terra-scroll)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback.
 

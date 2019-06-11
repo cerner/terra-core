@@ -3,6 +3,17 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+
+3.9.0 - (May 14, 2019)
+------------------
+### Changed
+* Changed `src` to be an optional prop.
+* When `src` is not provided it loads avatar image.
 
 3.8.0 - (May 1, 2019)
 ------------------

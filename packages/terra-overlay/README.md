@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-overlay)](https://www.npmjs.org/package/terra-overlay)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 The Terra Overlay component is a component that displays an overlay relative to the container that triggered the overlay. This component blocks interactions and fades out all elements of the triggering container.
 

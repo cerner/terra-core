@@ -2,7 +2,7 @@
 
 
 [![NPM version](https://badgen.net/npm/v/terra-form-fieldset)](https://www.npmjs.org/package/terra-form-fieldset)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.
 
