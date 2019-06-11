@@ -21,7 +21,7 @@ const propTypes = {
   children: PropTypes.node,
 
   /**
-   * The glyph that is to be displayed for the `custom` variant.
+   * Display a custom glyph. Overrides a variant's default glyph.
    */
   customGlyph: PropTypes.node,
 
@@ -31,17 +31,17 @@ const propTypes = {
   intl: intlShape.isRequired,
 
   /**
-   *  Determines if the content should be aligned vertically at the top of the container rather than in the middle.
+   *  Aligns the component at the top of the container rather than "top middle."
    */
   isAlignedTop: PropTypes.bool,
 
   /**
-   * Determines if the glyph should be displayed.
+   *  Determines if the glyph should be displayed.
    */
   isGlyphHidden: PropTypes.bool,
 
   /**
-   * The descriptive text to display.
+   * The descriptive text, displayed under the title.
    */
   message: PropTypes.string,
 
