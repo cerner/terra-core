@@ -46,14 +46,12 @@ const propTypes = {
   message: PropTypes.string,
 
   /**
-   * The status view's title to display. Status views with variants of type `no-data`,
-   * `no-matching-results`, `not-authorized`,
-   * `error` will have defaulted values unless overridden with this prop.
+   * The status view's title. Variants contain default titles that can be overriden by this prop.
    */
   title: PropTypes.string,
 
   /**
-   * Determines the glyph to display, one of the following: `no-data`,
+   * Sets the glyph and title of the specified variant. One of the following: `no-data`,
    * `no-matching-results`, `not-authorized`, or `error`
    */
   variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
@@ -69,6 +67,11 @@ const defaultProps = {
   variant: undefined,
 };
 
+const checkVariantExistence = (variant) => {
+  const variantArr = Object.values(StatusViewVariants);
+  return variantArr.includes(variant);
+};
+
 const StatusView = ({
   children,
   customGlyph,
@@ -81,11 +84,6 @@ const StatusView = ({
   ...customProps
 }) => {
   let glyphSection;
-  let messageSection;
-  let actionSection;
-  let dividerSection;
-  let defaultTitle;
-
   if (!isGlyphHidden) {
     if (customGlyph) {
       glyphSection = (
@@ -102,6 +100,7 @@ const StatusView = ({
     }
   }
 
+  let messageSection;
   if (message) {
     messageSection = (
       <div className={cx('message')}>
@@ -110,6 +109,7 @@ const StatusView = ({
     );
   }
 
+  let actionSection;
   if (React.Children.count(children) > 0) {
     actionSection = (
       <div className={cx('actions')}>
@@ -118,6 +118,7 @@ const StatusView = ({
     );
   }
 
+  let dividerSection;
   if (messageSection || actionSection) {
     dividerSection = (
       <div className={cx('divider')}>
@@ -126,10 +127,11 @@ const StatusView = ({
     );
   }
 
-  if (variant === StatusViewVariants.CUSTOM) {
-    defaultTitle = '';
-  } else {
+  let defaultTitle;
+  if (checkVariantExistence(variant)) {
     defaultTitle = intl.formatMessage({ id: `Terra.status-view.${variant}` });
+  } else {
+    defaultTitle = '';
   }
 
   // Custom title takes precedence
