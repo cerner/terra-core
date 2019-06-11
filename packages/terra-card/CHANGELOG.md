@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed node_modules from .npmignore
+
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 

@@ -3,7 +3,6 @@
     height: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar; // Ensures scrollbars do not affect width in IE10
     position: relative;
     width: 100%;
   }
