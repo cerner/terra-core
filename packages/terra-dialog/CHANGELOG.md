@@ -3,11 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.13.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 * Adjusted close-icon size and margin styling
 
 2.12.0 - (May 1, 2019)

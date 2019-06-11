@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.15.0 - (June 11, 2019)
+------------------
 ### Added
 * Added check to only load inert polyfill if it is not already defined on the Element prototype
 
@@ -10,7 +13,7 @@ Unreleased
 * Removed node_modules from .npmignore
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 * Update overlay-spec and screenshots
 
 3.14.0 - (May 14, 2019)
