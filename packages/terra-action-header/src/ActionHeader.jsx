@@ -47,7 +47,7 @@ const propTypes = {
    */
   onPrevious: PropTypes.func,
   /**
-   * Child element to be displayed on the right end of the header.
+   * Displays a single terra `Collapsible Menu View` child element on the right end of the header.
    */
   children: PropTypes.element,
 };

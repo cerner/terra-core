@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added check to only load inert polyfill if it is not already defined on the Element prototype
+
 ### Removed
 * Removed node_modules from .npmignore
 
