@@ -3,8 +3,8 @@
 ## Changes from version 3 to version 4
 
 ### Props
-* **Removed** children prop. This has been replaced by `buttonAttrs`. Please provide an array of objects that contain terra-button properties to `buttonAttrs`. Example:
-```
+* **Removed** children prop. This is **replaced** by `buttonAttrs`. This prop accepts an array of objects containing terra-button properties. Example:
+```jsx
 const StatusViewButtons = [
   {
     text: 'Action 1',

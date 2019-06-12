@@ -18,6 +18,7 @@ const StatusViewVariants = {
 const propTypes = {
   /**
    * An array of objects containg terra-button properties. Use these to render buttons in the bottom section.
+   * Example:`[{ text: 'Button 1', key: 1, size: 'medium', variant: 'action', onClick: onClickFunction}]`
    */
   buttonAttrs: PropTypes.arrayOf(PropTypes.object),
 
