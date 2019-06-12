@@ -3,14 +3,15 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.16.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
-
-### Removed 
 * Removed vendor style rule added to fade placeholder text. Since Autoprefixer V9 resolves vendor prefix issue.
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 5.15.0 - (May 1, 2019)
 ------------------

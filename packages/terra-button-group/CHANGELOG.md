@@ -3,11 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Reverted change to updates to wdio test screenshot
+
+3.13.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 * Updates wdio test screenshot
 
 3.12.0 - (May 1, 2019)

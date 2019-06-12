@@ -3,10 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
-
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 * Updated toggle tests to use Terra.defineViewports and to use Terra.validate element helpers
+
+2.11.0 - (June 11, 2019)
+------------------
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 ### Removed
 * Removed node_modules from .npmignore
