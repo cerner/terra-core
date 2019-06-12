@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Reverted change to adjust header-icon top styling
 
 2.15.0 - (June 11, 2019)
 ------------------

@@ -5,14 +5,8 @@
 
   .icon {
     display: inline-block;
-    line-height: 1rem;
+    font-size: 0.8em;
     transform: rotate(0deg);
-
-    svg {
-      font-size: 0.8em;
-      position: relative;
-      top: -0.1em;
-    }
   }
 
   .is-open .icon {
