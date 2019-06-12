@@ -6,14 +6,18 @@ Unreleased
 
 2.15.0 - (June 11, 2019)
 ------------------
+### Added
+* Added CSS background-image variables in .header-icon for back, close, maximize, minimize, previous, and next
+
 ### Removed
 * Removed node_modules from .npmignore
+* Removed CSS background variables in .header-icon for back, close, maximize, minimize, previous, and next
 
 ### Changed
 * Updated misleading `children` documentation
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 * Adjusted header-icon top styling
-* Changed header-icon css modifiers (back, minimize, etc) to use background-image
+
 
 2.14.0 - (May 22, 2019)
 ------------------
