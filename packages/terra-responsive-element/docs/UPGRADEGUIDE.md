@@ -4,14 +4,15 @@
 
 ### Breaking Changes
 
+* The `breakpoints.scss` file has been removed.
+* The `defaultElement` prop has been removed.
 * The breakpoint ranges have been changed to align with [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
-* As a result of the breakpoint changes the `defaultElement` prop has been removed.
 
 ### New Features
 
 * Added an `onChange` callback function that is invoked when a breakpoint range changes to enable creating controlled ResponsiveElements.
-* Added `children` as a prop to use in conjunction with `onChange` to create controlled components.
 * Added an `onResize` callback function that is invoked when the responsive target triggers a resize event.
+* Added `children` as a prop to use in conjunction with `onChange` to create controlled components.
 
 ### Breakpoint Changes
 
@@ -34,6 +35,8 @@ To upgrade, shift all declared breakpoint ranges by one range.
 * medium -> large
 * large -> huge
 * huge -> enormous
+
+The `breakpoints.scss` file has been removed. Any files previously referencing `breakpoints.scss` should import the new values provided by [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
 
 ### Examples
 
