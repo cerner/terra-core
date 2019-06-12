@@ -26,6 +26,9 @@ Unreleased
 
 2.15.0 - (June 11, 2019)
 ------------------
+### Removed	
+* Removed node_modules from .npmignore
+
 ### Changed
 * Updated misleading `children` documentation
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
