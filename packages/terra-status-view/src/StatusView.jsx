@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
+import Button from 'terra-button';
 import Divider from 'terra-divider';
 import styles from './StatusView.module.scss';
 
@@ -16,9 +17,9 @@ const StatusViewVariants = {
 
 const propTypes = {
   /**
-   * An array of actionable buttons to display.
+   * An array of objects containg terra-button properties. Use these to render buttons in the bottom section.
    */
-  children: PropTypes.node,
+  buttonAttrs: PropTypes.arrayOf(PropTypes.object),
 
   /**
    * Display a custom glyph. Overrides a variant's default glyph.
@@ -58,7 +59,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: [],
   customGlyph: undefined,
   isAlignedTop: false,
   isGlyphHidden: false,
@@ -72,8 +72,20 @@ const checkVariantExistence = (variant) => {
   return variantArr.includes(variant);
 };
 
+const generateButtons = (buttonAttrsArray) => {
+  if (!buttonAttrsArray) {
+    return undefined;
+  }
+
+  const generatedButtonsArray = [];
+  buttonAttrsArray.forEach(button => generatedButtonsArray.push(
+    <Button {...button} className={cx(['button', button.className])} />,
+  ));
+  return generatedButtonsArray;
+};
+
 const StatusView = ({
-  children,
+  buttonAttrs,
   customGlyph,
   intl,
   isAlignedTop,
@@ -109,14 +121,11 @@ const StatusView = ({
     );
   }
 
-  let actionSection;
-  if (React.Children.count(children) > 0) {
-    actionSection = (
-      <div className={cx('actions')}>
-        {children}
-      </div>
-    );
-  }
+  const actionSection = (
+    <div className={cx('actions')}>
+      {generateButtons(buttonAttrs)}
+    </div>
+  );
 
   let dividerSection;
   if (messageSection || actionSection) {

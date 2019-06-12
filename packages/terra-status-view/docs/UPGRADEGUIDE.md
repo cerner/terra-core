@@ -3,6 +3,7 @@
 ## Changes from version 3 to version 4
 
 ### Props
+* **Removed** children prop. This has been replaced by `buttonAttrs`. Please provide an array of objects that contain terra-button properties to `buttonAttrs`.
 * **Removed** default behaviour of rendering an error view. Please provide props.
 * **Removed** the `custom` variant. Use first class props `title`, `message`, or `customGlyph` to render the respective sockets, or override a variant's sockets.
 
