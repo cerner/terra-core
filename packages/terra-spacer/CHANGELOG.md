@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.11.1 - (June 12, 2019)
+------------------
+### Changed
+* Patch dependency version bump
+
 3.11.0 - (June 11, 2019)
 ------------------
 ### Removed
