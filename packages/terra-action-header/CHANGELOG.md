@@ -3,14 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-
-2.15.1 - (June 12, 2019)
-------------------
-### Changed
-* Reverted change to adjust header-icon top styling
-
-2.15.0 - (June 11, 2019)
-------------------
 ### Added
 * Added `--terra-action-header-back-background-image` variable in ActionHeader.module.scss
 * Added `--terra-action-header-close-background-image` variable in ActionHeader.module.scss
@@ -20,7 +12,6 @@ Unreleased
 * Added `--terra-action-header-next-background-image` variable in ActionHeader.module.scss
 
 ### Removed
-* Removed node_modules from .npmignore
 * Removed `--terra-action-header-back-background` variable in ActionHeader.module.scss
 * Removed `--terra-action-header-close-background` variable in ActionHeader.module.scss
 * Removed `--terra-action-header-maximize-background` variable in ActionHeader.module.scss
@@ -28,11 +19,17 @@ Unreleased
 * Removed `--terra-action-header-previous-background` variable in ActionHeader.module.scss
 * Removed `--terra-action-header-next-background` variable in ActionHeader.module.scss
 
+2.15.1 - (June 12, 2019)
+------------------
+### Changed
+* Reverted change to adjust header-icon top styling
+
+2.15.0 - (June 11, 2019)
+------------------
 ### Changed
 * Updated misleading `children` documentation
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 * Adjusted header-icon top styling
-
 
 2.14.0 - (May 22, 2019)
 ------------------
