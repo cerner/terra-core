@@ -10,13 +10,13 @@
 
 ### New Features
 
-* Added an `onChange` callback function that is invoked when a breakpoint range changes to enable creating controlled ResponsiveElements.
+* Added an `onChange` callback function that is invoked when a breakpoint range changes to enable creating controlled responsive elements.
 * Added an `onResize` callback function that is invoked when the responsive target triggers a resize event.
 * Added `children` as a prop to use in conjunction with `onChange` to create controlled components.
 
 ### Breakpoint Changes
 
-The breakpoint ranges have all shifted. This change was made to remove the ambiguous breakpoint range in-between 0 and tiny. Previously tiny started at 544px. The range from 0 to 543px had no associated breakpoint, it was considered the default size. Tiny now starts at 0.
+The breakpoint ranges have all shifted. This change was made to remove the ambiguous breakpoint range in-between 0 and tiny. Previously tiny started at 544px. The range from 0 to 543px had no associated breakpoint. It was considered the default size. Tiny now starts at 0.
 
 | Breakpoint | Previous | Updated |
 |---|---|---|
@@ -27,7 +27,7 @@ The breakpoint ranges have all shifted. This change was made to remove the ambig
 | huge | 1440 - ∞ | 1216 - 1439 |
 | enormous | -- | 1440 - ∞ |
 
-To upgrade, shift all declared breakpoint ranges by one range.
+To upgrade, shift all declared breakpoint props by one breakpoint. During this uplift it is recommended to consider implementing a controlled version of the responsive element using the `children` and `onChange` props that have been added. Examples can be found on the doc site.
 
 * defaultElement -> tiny
 * tiny -> small
@@ -40,7 +40,7 @@ The `breakpoints.scss` file has been removed. Any files previously referencing `
 
 This next section is only applicable if your project is utilizing terra-dev-site < 5.0.
 
-Due to aliasing, [terra-dev-site](https://engineering.cerner.com/terra-dev-site/#/getting-started/terra-dev-site/upgrade-guides/v-5-0-0) should also be uplifted to >= 5.0 when updating to terra-responsive-element 5.0. This change is because terra-dev-site will alias the top level responsive element dependency and search for the `breakpoints.scss` file that was removed.
+Due to aliasing, terra-dev-site should also be uplifted to >= 5.0. This change is because terra-dev-site will alias the top level responsive element dependency and search for the `breakpoints.scss` file that was removed. An upgrade guide is available [here](https://engineering.cerner.com/terra-dev-site/#/getting-started/terra-dev-site/upgrade-guides/v-5-0-0).
 
 ### Examples
 
