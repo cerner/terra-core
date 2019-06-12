@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.13.1 - (June 12, 2019)
+------------------
 ### Changed
 * Reverted change to updates to wdio test screenshot
 
