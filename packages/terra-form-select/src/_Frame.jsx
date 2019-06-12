@@ -201,8 +201,6 @@ class Frame extends React.Component {
       onFocus: this.handleInputFocus,
       onBlur: this.handleInputBlur,
       onMouseDown: this.handleInputMouseDown,
-      required,
-      'aria-required': required,
       'aria-label': this.ariaLabel(),
       'aria-describedby': (variant === Variants.TAG || variant === Variants.MULTIPLE) ? `${displayId} ${ariaDescribedBy}` : ariaDescribedBy,
       'aria-disabled': disabled,
@@ -210,6 +208,13 @@ class Frame extends React.Component {
       type: 'text',
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
+
+    const multipleInputAttrs = {
+      required: required && !display.length ? true : undefined,
+      'aria-required': required && !display.length ? 'required' : undefined,
+      ...inputAttrs,
+    };
+    const comboboxInputAttrs = { required, 'aria-required': required, ...inputAttrs };
 
     switch (variant) {
       case Variants.TAG:
@@ -229,13 +234,13 @@ class Frame extends React.Component {
               ) : null
             }
             <li className={cx('search-wrapper')}>
-              <input {...inputAttrs} value={searchValue} />
+              <input {...multipleInputAttrs} value={searchValue} />
             </li>
           </ul>
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <div className={cx('content')}><input {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
+        return <div className={cx('content')}><input {...comboboxInputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
       default:
         return display ? <span id={displayId}>{display}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
