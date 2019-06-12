@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Revert changes to updated wdio screenshots
 
 3.12.0 - (June 11, 2019)
 ------------------
