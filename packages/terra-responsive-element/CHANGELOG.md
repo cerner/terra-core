@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+### Breaking Changes
+
+* Removed `breakpoints.scss`
+* Removed the `defaultElement` prop
+* Changed the breakpoint pixel ranges to match terra-breakpoints
+
 4.8.0 - (June 11, 2019)
 ------------------
 ### Removed
