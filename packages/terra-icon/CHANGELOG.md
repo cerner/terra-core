@@ -1,5 +1,10 @@
 Changelog
 =========
+### Added
+* Added `--terra-icon-abnormal-low-light-path-1-fill` variable in IconAbnormalLowLight.module.scss
+
+### Changed
+* IconAbnormalLowLight inline style moved to scss file
 
 Unreleased
 ----------

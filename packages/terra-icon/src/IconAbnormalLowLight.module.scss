@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconAbnormalLowLight {
+    path {
+      fill: var(--terra-icon-abnormal-low-light-path-1-fill, #c8840e);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */
