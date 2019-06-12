@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated csvtojson devdependency to v2.0.8
+* Updated jsdom devdependency to v15.1.1
+* Updated svgo devdependecy to v1.2.2
 
 3.10.0 - (June 11, 2019)
 ------------------
