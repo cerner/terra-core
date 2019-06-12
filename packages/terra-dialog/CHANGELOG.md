@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.13.1 - (June 12, 2019)
+------------------
+### Changed
+* Revert changes to adjust close-icon size and margin styling
+
 2.13.0 - (June 11, 2019)
 ------------------
 ### Removed

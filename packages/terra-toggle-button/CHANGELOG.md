@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.12.1 - (June 12, 2019)
+------------------
+### Changed
+* Revert changes to updated wdio screenshots
+
 3.12.0 - (June 11, 2019)
 ------------------
 ### Removed
