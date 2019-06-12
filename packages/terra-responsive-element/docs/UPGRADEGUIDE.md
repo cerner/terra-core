@@ -38,6 +38,10 @@ To upgrade, shift all declared breakpoint ranges by one range.
 
 The `breakpoints.scss` file has been removed. Any files previously referencing `breakpoints.scss` should import the new values provided by [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
 
+This next section is only applicable if your project is utilizing terra-dev-site < 5.0.
+
+Due to aliasing, [terra-dev-site](https://engineering.cerner.com/terra-dev-site/#/getting-started/terra-dev-site/upgrade-guides/v-5-0-0) should also be uplifted to >= 5.0 when updating to terra-responsive-element 5.0. This change is because terra-dev-site will alias the top level responsive element dependency and search for the `breakpoints.scss` file that was removed.
+
 ### Examples
 
 ```diff
