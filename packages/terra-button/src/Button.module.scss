@@ -24,19 +24,16 @@
   // stylelint-enable selector-no-qualifying-type
 
   .button {
-    align-items: center;
     border-radius: var(--terra-button-border-radius, 0.2142rem);
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
-    display: inline-flex;
+    display: inline-block;
     font-family: inherit;
     font-size: var(--terra-button-font-size, 1rem);
-    justify-content: center;
     line-height: var(--terra-button-line-height, 1.429);
     margin: 0; /* Reset margin for Safari. Safari defaults to 2px. */
     max-width: 100%; /* Need to help with overflow-wrap */
-    min-height: 2.143rem;
     outline: none;
     overflow-wrap: break-word; /* Modern browsers */
     padding-bottom: var(--terra-button-padding-bottom, 0.286rem);
@@ -107,12 +104,11 @@
 
   // Button style modifiers
   .block {
-    display: flex;
+    display: block;
     width: 100%;
   }
 
   .compact {
-    min-height: 1.429rem;
     padding-bottom: var(--terra-button-compact-padding-bottom, 0);
     padding-top: var(--terra-button-compact-padding-top, 0);
   }
@@ -124,7 +120,6 @@
   }
 
   .icon-only {
-    line-height: 0;
     margin-left: var(--terra-button-icon-only-margin-left, 0.5rem);
     margin-right: var(--terra-button-icon-only-margin-right, 0.5rem);
   }
@@ -145,12 +140,10 @@
 
   .icon {
     display: inline-block;
-    line-height: 0;
   }
 
   .icon-svg {
     height: var(--terra-button-icon-height, 1rem);
     width: var(--terra-button-icon-width, 1rem);
   }
-
 }

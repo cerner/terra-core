@@ -3,12 +3,20 @@ Changelog
 
 Unreleased
 ----------
+
+3.13.1 - (June 12, 2019)
+------------------
+### Changed
+* Reverted change to adjust Button CSS to better line up icons with text
+
+3.13.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
 * Adjusted Button CSS to better line up icons with text
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 3.12.0 - (May 1, 2019)
 ------------------

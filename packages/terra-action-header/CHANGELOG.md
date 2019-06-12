@@ -3,15 +3,20 @@ ChangeLog
 
 Unreleased
 ----------
-### Updated
-* Updated misleading `children` documentation
 
+2.15.1 - (June 12, 2019)
+------------------
+### Changed
+* Reverted change to adjust header-icon top styling
+
+2.15.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
-
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Updated misleading `children` documentation
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 * Adjusted header-icon top styling
 
 2.14.0 - (May 22, 2019)
