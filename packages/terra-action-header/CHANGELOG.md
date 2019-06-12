@@ -7,11 +7,21 @@ Unreleased
 2.15.0 - (June 11, 2019)
 ------------------
 ### Added
-* Added CSS background-image variables in .header-icon for back, close, maximize, minimize, previous, and next
+* Added `--terra-action-header-back-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-close-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-maximize-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-minimize-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-previous-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-next-background-image` variable in ActionHeader.module.scss
 
 ### Removed
 * Removed node_modules from .npmignore
-* Removed CSS background variables in .header-icon for back, close, maximize, minimize, previous, and next
+* Removed `--terra-action-header-back-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-close-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-maximize-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-minimize-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-previous-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-next-background` variable in ActionHeader.module.scss
 
 ### Changed
 * Updated misleading `children` documentation
