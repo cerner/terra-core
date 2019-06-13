@@ -24,10 +24,6 @@ Unreleased - MVB
 ------------------
 ### Removed
 * Removed node_modules from .npmignore
-* Removed children prop. Replaced with buttonAttrs prop
-* Removed the default of rendering an error view
-* Removed the custom variant
-* Remove hide glyph logic based on available container space
 
 ### Changed
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
