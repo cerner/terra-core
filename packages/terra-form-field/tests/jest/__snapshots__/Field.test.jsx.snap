@@ -399,6 +399,411 @@ exports[`should render a field with a hidden label in error 1`] = `
 </div>
 `;
 
+exports[`should render a field with an Input 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Field Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <div
+    className="field"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <div
+      className="label-group"
+    >
+      <label
+        className="label"
+        htmlFor="test"
+      >
+        Field Label
+      </label>
+      <div
+        className="error-icon-hidden"
+      >
+        <IconError
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            ariaLabel={null}
+            className="IconError"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              aria-hidden="true"
+              className="tui-Icon icon IconError"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                fill="#E50000"
+              />
+              <path
+                d="M7 21.5h34v5H7v-5z"
+                fill="#FFF"
+              />
+            </svg>
+          </IconBase>
+        </IconError>
+      </div>
+    </div>
+    <Input
+      key=".0"
+    >
+      <input />
+    </Input>
+  </div>
+</Field>
+`;
+
+exports[`should render a field with an Select 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Field Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <div
+    className="field"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <div
+      className="label-group"
+    >
+      <label
+        className="label"
+        htmlFor="test"
+      >
+        Field Label
+      </label>
+      <div
+        className="error-icon-hidden"
+      >
+        <IconError
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            ariaLabel={null}
+            className="IconError"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              aria-hidden="true"
+              className="tui-Icon icon IconError"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                fill="#E50000"
+              />
+              <path
+                d="M7 21.5h34v5H7v-5z"
+                fill="#FFF"
+              />
+            </svg>
+          </IconBase>
+        </IconError>
+      </div>
+    </div>
+    <Select
+      key=".0"
+    >
+      <select />
+    </Select>
+  </div>
+</Field>
+`;
+
+exports[`should render a field with an Textarea 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Field Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <div
+    className="field"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <div
+      className="label-group"
+    >
+      <label
+        className="label"
+        htmlFor="test"
+      >
+        Field Label
+      </label>
+      <div
+        className="error-icon-hidden"
+      >
+        <IconError
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            ariaLabel={null}
+            className="IconError"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              aria-hidden="true"
+              className="tui-Icon icon IconError"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                fill="#E50000"
+              />
+              <path
+                d="M7 21.5h34v5H7v-5z"
+                fill="#FFF"
+              />
+            </svg>
+          </IconBase>
+        </IconError>
+      </div>
+    </div>
+    <Textarea
+      key=".0"
+    >
+      <textarea />
+    </Textarea>
+  </div>
+</Field>
+`;
+
 exports[`should render a required field in error 1`] = `
 <div
   className="field"
@@ -710,6 +1115,435 @@ exports[`should render a required field with a hidden label in error 1`] = `
     Help Text
   </div>
 </div>
+`;
+
+exports[`should render a required field with an Input 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Field Label"
+  labelAttrs={Object {}}
+  required={true}
+  showOptional={false}
+>
+  <div
+    className="field"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <div
+      className="label-group"
+    >
+      <label
+        className="label"
+        htmlFor="test"
+      >
+        <div
+          className="required"
+        >
+          *
+        </div>
+        Field Label
+      </label>
+      <div
+        className="error-icon-hidden"
+      >
+        <IconError
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            ariaLabel={null}
+            className="IconError"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              aria-hidden="true"
+              className="tui-Icon icon IconError"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                fill="#E50000"
+              />
+              <path
+                d="M7 21.5h34v5H7v-5z"
+                fill="#FFF"
+              />
+            </svg>
+          </IconBase>
+        </IconError>
+      </div>
+    </div>
+    <Input
+      key=".0"
+      required={true}
+    >
+      <input
+        required={true}
+      />
+    </Input>
+  </div>
+</Field>
+`;
+
+exports[`should render a required field with an Select 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Field Label"
+  labelAttrs={Object {}}
+  required={true}
+  showOptional={false}
+>
+  <div
+    className="field"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <div
+      className="label-group"
+    >
+      <label
+        className="label"
+        htmlFor="test"
+      >
+        <div
+          className="required"
+        >
+          *
+        </div>
+        Field Label
+      </label>
+      <div
+        className="error-icon-hidden"
+      >
+        <IconError
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            ariaLabel={null}
+            className="IconError"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              aria-hidden="true"
+              className="tui-Icon icon IconError"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                fill="#E50000"
+              />
+              <path
+                d="M7 21.5h34v5H7v-5z"
+                fill="#FFF"
+              />
+            </svg>
+          </IconBase>
+        </IconError>
+      </div>
+    </div>
+    <Select
+      key=".0"
+      required={true}
+    >
+      <select
+        required={true}
+      />
+    </Select>
+  </div>
+</Field>
+`;
+
+exports[`should render a required field with an Textarea 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Field Label"
+  labelAttrs={Object {}}
+  required={true}
+  showOptional={false}
+>
+  <div
+    className="field"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+  >
+    <div
+      className="label-group"
+    >
+      <label
+        className="label"
+        htmlFor="test"
+      >
+        <div
+          className="required"
+        >
+          *
+        </div>
+        Field Label
+      </label>
+      <div
+        className="error-icon-hidden"
+      >
+        <IconError
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            ariaLabel={null}
+            className="IconError"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              aria-hidden="true"
+              className="tui-Icon icon IconError"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                fill="#E50000"
+              />
+              <path
+                d="M7 21.5h34v5H7v-5z"
+                fill="#FFF"
+              />
+            </svg>
+          </IconBase>
+        </IconError>
+      </div>
+    </div>
+    <Textarea
+      key=".0"
+      required={true}
+    >
+      <textarea
+        required={true}
+      />
+    </Textarea>
+  </div>
+</Field>
 `;
 
 exports[`should render an inline field with most of the possible props are passed into it 1`] = `

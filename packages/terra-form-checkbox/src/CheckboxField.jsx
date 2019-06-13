@@ -117,7 +117,7 @@ const CheckboxField = (props, { intl }) => {
         {required && (isInvalid || !hideRequired) && (
           <React.Fragment>
             <div aria-hidden="true" className={cx('required')}>*</div>
-            <VisualyHiddenText text="{intl.formatMessage({ id: 'Terra.form.field.required' })} " />
+            <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
           </React.Fragment>
         )}
         {legend}
