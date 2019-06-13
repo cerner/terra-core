@@ -7,9 +7,11 @@ const StatusViewButtons = [
   {
     text: 'Action 1',
     size: 'medium',
+    key: 1,
   }, {
     text: 'Action 2',
     size: 'medium',
+    key: 2,
   },
 ];
 
