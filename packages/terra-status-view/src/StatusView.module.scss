@@ -5,7 +5,7 @@
     align-content: center;
     align-items: center;
     display: grid;
-    /* "Top Centers" the status view. Give 40% remaining space to top, 60% remaining space to bottom.*/
+    /* "Centers" the status view. Give 40% remaining space to top, 60% remaining space to bottom.*/
     grid-template:
       'top-space' 1fr
       'content' auto
@@ -37,7 +37,7 @@
     flex-direction: column;
     grid-area: content;
     max-height: 100%;
-    // max-width: 100%; @TODO ask neil what value
+    max-width: 100%;
     overflow: auto;
   }
 
@@ -76,6 +76,7 @@
     text-align: center;
     width: 100%;
     word-break: break-word;
+    word-wrap: break-word;
   }
 
   .message {
@@ -86,6 +87,7 @@
     text-align: center;
     width: 100%;
     word-break: break-word;
+    word-wrap: break-word;
   }
 
   .divider {

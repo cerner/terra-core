@@ -4,29 +4,31 @@
 
 ### Props
 * **Removed** children prop. This is **replaced** by `buttonAttrs`. This prop accepts an array of objects containing terra-button properties. Example:
+
 ```jsx
 const StatusViewButtons = [
   {
+    id: 'action1',
     text: 'Action 1',
-    key: 1,
     size: 'medium',
-    variant: 'action',
+    onClick: handleOnAction1,
   }, {
+    id: 'action2',
     text: 'Action 2',
-    key: 2,
     size: 'medium',
-    variant: 'action',
+    onClick: handeOnAction2,
   },
 ];
 
 <StatusView buttonAttrs={StatusViewButtons} />
 ```
+
 * **Removed** default behaviour of rendering an error view. Please provide props.
-* **Removed** the `custom` variant. Use first class props `title`, `message`, or `customGlyph` to render the respective sockets, or override a variant's sockets.
+* **Removed** the `custom` variant. Use first class props `title`, `message`, or `customGlyph` to render respective sections or override a variant's sections.
 
 ### Resizing
 * Use `isGlyphHidden` to show or hide the glyph. The `onComponentMount` logic to do this has been removed.
-* Status view defaults to a "top centering", based on available size and remaining space. The top will contain `40%` of space, while the remaining `60%` is delegated to the bottom. Use `setAlignTop` to remove this distribution and render the status view at the top of the page.
+* Status view defaults to a "centered" alignment, based on available size and remaining space. The top will contain `40%` of space, while the remaining `60%` is delegated to the bottom. Use `setAlignTop` to remove this distribution and render the status view at the top of the container.
 
 ## Changes from version 2 to version 3
 

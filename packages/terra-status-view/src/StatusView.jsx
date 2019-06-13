@@ -38,7 +38,7 @@ const propTypes = {
   isAlignedTop: PropTypes.bool,
 
   /**
-   *  Determines if the glyph should be displayed.
+   * Determines if the glyph should be displayed.
    */
   isGlyphHidden: PropTypes.bool,
 
