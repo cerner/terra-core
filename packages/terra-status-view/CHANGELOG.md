@@ -1,10 +1,27 @@
 Changelog
 =========
 
-Unreleased
+Unreleased - MVB
 ----------
-## Major Version Bump
+### Removed
+* Removed children prop. Replaced with buttonAttrs prop
+* Removed the default of rendering an error view
+* Removed the custom variant
+* Removed hide glyph logic based on available container space
+* Removed onComponentMount logic to calculate padding
+* Removed StatusView.Opts object and export
 
+### Changed
+* Use CSS grid to center component
+* Render divider if title and message/buttons exist
+
+3.15.1 - (June 12, 2019)
+------------------
+### Changed
+* Patch dependency version bump
+
+3.15.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 * Removed children prop. Replaced with buttonAttrs prop
@@ -13,8 +30,7 @@ Unreleased
 * Remove hide glyph logic based on available container space
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
-* Use css grid to center component
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 3.14.0 - (May 1, 2019)
 ------------------
