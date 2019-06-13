@@ -60,6 +60,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  buttonAttrs: [],
   customGlyph: undefined,
   isAlignedTop: false,
   isGlyphHidden: false,
