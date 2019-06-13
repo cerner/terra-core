@@ -1,6 +1,6 @@
 # Terra Status View
 
-The status view component provides a customizable icon, message, and buttons in a view.
+Renders an icon, title, message, and buttons.
 
 ## Getting Started
 
@@ -12,8 +12,23 @@ The status view component provides a customizable icon, message, and buttons in 
 
 ```jsx
 import React from 'react';
-import Button from 'terra-button';
 import StatusView from 'terra-status-view';
+
+const buttons = [
+  {
+    id: 'ok',
+    key: 1,
+    text: 'OK',
+    size: 'medium',
+    onClick: handleOnAction1,
+  }, {
+    id: 'cancel',
+    key: 2,
+    text: 'Cancel,
+    size: 'medium',
+    onClick: handeOnAction2,
+  },
+];
 
 <StatusView
   isAlignedTop={false}
@@ -21,10 +36,8 @@ import StatusView from 'terra-status-view';
   variant="error"
   title="A 500 error was thrown from the service."
   message=message="A null pointer exception was thrown."
->
-  <Button text="OK" key="1 />
-  <Button text="Cancel" key="2" />
-</StatusView>
+  buttonAttrs={buttons}
+/>
 ```
 
 ## Component Features

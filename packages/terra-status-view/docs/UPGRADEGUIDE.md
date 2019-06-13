@@ -6,7 +6,7 @@
 * **Removed** children prop. This is **replaced** by `buttonAttrs`. This prop accepts an array of objects containing terra-button properties. Example:
 
 ```jsx
-const StatusViewButtons = [
+const buttons = [
   {
     id: 'action1',
     key: 1,
@@ -22,7 +22,7 @@ const StatusViewButtons = [
   },
 ];
 
-<StatusView buttonAttrs={StatusViewButtons} />
+<StatusView buttonAttrs={buttons} />
 ```
 
 * **Removed** default behaviour of rendering an error view. Please provide props.
