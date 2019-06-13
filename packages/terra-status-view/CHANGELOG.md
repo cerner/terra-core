@@ -3,11 +3,18 @@ Changelog
 
 Unreleased
 ----------
+## Major Version Bump
+
 ### Removed
 * Removed node_modules from .npmignore
+* Removed children prop. Replaced with buttonAttrs prop
+* Removed the default of rendering an error view
+* Removed the custom variant
+* Remove hide glyph logic based on available container space
 
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Use css grid to center component
 
 3.14.0 - (May 1, 2019)
 ------------------
