@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Enabled ability to mark RadioField as required
 
+3.13.1 - (June 12, 2019)
+------------------
+### Changed
+* Patch dependency version bump
+
 3.13.0 - (June 11, 2019)
 ------------------
 ### Removed
