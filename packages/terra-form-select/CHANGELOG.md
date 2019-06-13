@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Additional null check added to private menu to prevent error from empty query
 
 5.16.0 - (June 11, 2019)
 ------------------
