@@ -33,6 +33,7 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
   variant="no-data"
 >
   <StatusView
+    buttonAttrs={Array []}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -78,6 +79,19 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
         >
           Terra.status-view.no-data
         </div>
+        <div
+          className="divider"
+        >
+          <Divider>
+            <hr
+              aria-hidden="true"
+              className="divider"
+            />
+          </Divider>
+        </div>
+        <div
+          className="actions"
+        />
       </div>
       <div
         className="bottom-space"
@@ -120,6 +134,7 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
   variant="no-matching-results"
 >
   <StatusView
+    buttonAttrs={Array []}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -172,6 +187,19 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
         >
           Terra.status-view.no-matching-results
         </div>
+        <div
+          className="divider"
+        >
+          <Divider>
+            <hr
+              aria-hidden="true"
+              className="divider"
+            />
+          </Divider>
+        </div>
+        <div
+          className="actions"
+        />
       </div>
       <div
         className="bottom-space"
@@ -213,6 +241,7 @@ exports[`should render a not-authorized status-view 1`] = `
   variant="not-authorized"
 >
   <StatusView
+    buttonAttrs={Array []}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -265,6 +294,19 @@ exports[`should render a not-authorized status-view 1`] = `
         >
           Terra.status-view.not-authorized
         </div>
+        <div
+          className="divider"
+        >
+          <Divider>
+            <hr
+              aria-hidden="true"
+              className="divider"
+            />
+          </Divider>
+        </div>
+        <div
+          className="actions"
+        />
       </div>
       <div
         className="bottom-space"
@@ -548,6 +590,7 @@ exports[`should render an error status-view 1`] = `
   variant="error"
 >
   <StatusView
+    buttonAttrs={Array []}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -600,6 +643,19 @@ exports[`should render an error status-view 1`] = `
         >
           Terra.status-view.error
         </div>
+        <div
+          className="divider"
+        >
+          <Divider>
+            <hr
+              aria-hidden="true"
+              className="divider"
+            />
+          </Divider>
+        </div>
+        <div
+          className="actions"
+        />
       </div>
       <div
         className="bottom-space"
