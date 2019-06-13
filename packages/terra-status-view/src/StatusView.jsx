@@ -33,7 +33,7 @@ const propTypes = {
   intl: intlShape.isRequired,
 
   /**
-   *  Aligns the component at the top of the container rather than "top middle."
+   *  Aligns the component at the top of the container rather than "centered"
    */
   isAlignedTop: PropTypes.bool,
 
@@ -48,12 +48,12 @@ const propTypes = {
   message: PropTypes.string,
 
   /**
-   * The status view's title. Variants contain default titles that can be overriden by this prop.
+   * The title displayed under the glyph. Variants contain default titles that can be overriden by this prop.
    */
   title: PropTypes.string,
 
   /**
-   * Sets the glyph and title of the specified variant. One of the following: `no-data`,
+   * Sets the glyph and title using a pre-baked variant. One of the following: `no-data`,
    * `no-matching-results`, `not-authorized`, or `error`
    */
   variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
