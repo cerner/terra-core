@@ -6,9 +6,6 @@ Unreleased
 ### Added
 * Added missing WDIO screenshots
 
-### Removed
-* Removed stale WDIO screenshots
-
 3.13.1 - (June 12, 2019)
 ------------------
 ### Changed
