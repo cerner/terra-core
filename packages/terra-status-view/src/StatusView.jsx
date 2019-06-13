@@ -113,6 +113,23 @@ const StatusView = ({
     }
   }
 
+  let defaultTitle;
+  if (checkVariantExistence(variant)) {
+    defaultTitle = intl.formatMessage({ id: `Terra.status-view.${variant}` });
+  } else {
+    defaultTitle = '';
+  }
+
+  // Custom title takes precedence
+  let titleSection;
+  if (title || defaultTitle) {
+    titleSection = (
+      <div className={cx('title')}>
+        {title || defaultTitle}
+      </div>
+    );
+  }
+
   let messageSection;
   if (message) {
     messageSection = (
@@ -122,34 +139,24 @@ const StatusView = ({
     );
   }
 
-  const actionSection = (
-    <div className={cx('actions')}>
-      {generateButtons(buttonAttrs)}
-    </div>
-  );
+  let actionSection;
+  const buttons = generateButtons(buttonAttrs);
+  if (buttons) {
+    actionSection = (
+      <div className={cx('actions')}>
+        {buttons}
+      </div>
+    );
+  }
 
   let dividerSection;
-  if (messageSection || actionSection) {
+  if (titleSection && (messageSection || actionSection)) {
     dividerSection = (
       <div className={cx('divider')}>
         <Divider />
       </div>
     );
   }
-
-  let defaultTitle;
-  if (checkVariantExistence(variant)) {
-    defaultTitle = intl.formatMessage({ id: `Terra.status-view.${variant}` });
-  } else {
-    defaultTitle = '';
-  }
-
-  // Custom title takes precedence
-  const titleSection = (
-    <div className={cx('title')}>
-      {title || defaultTitle}
-    </div>
-  );
 
   const outerViewClassNames = cx([
     'outer-view',

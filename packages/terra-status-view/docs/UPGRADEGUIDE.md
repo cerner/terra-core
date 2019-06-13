@@ -9,11 +9,13 @@
 const StatusViewButtons = [
   {
     id: 'action1',
+    key: 1,
     text: 'Action 1',
     size: 'medium',
     onClick: handleOnAction1,
   }, {
     id: 'action2',
+    key: 2,
     text: 'Action 2',
     size: 'medium',
     onClick: handeOnAction2,
