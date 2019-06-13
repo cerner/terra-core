@@ -200,7 +200,7 @@ of
   /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
 
   render() {
-    return <ResponsiveElement defaultElement={this.reducedProgressivePaginator()} tiny={this.defaultProgressivePaginator()} />;
+    return <ResponsiveElement tiny={this.reducedProgressivePaginator()} small={this.defaultProgressivePaginator()} />;
   }
 }
 
