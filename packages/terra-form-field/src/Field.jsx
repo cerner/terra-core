@@ -167,13 +167,10 @@ const Field = (props, { intl }) => {
   );
 
   const content = React.Children.map(children, (child) => {
-    if (required) {
-      if (child && (child.type.isInput || child.type.isTextarea || child.type.isTextarea)) {
-        return React.cloneElement(child, {
-          required: true,
-        });
-      }
-      return child;
+    if (required && child && (child.type.isInput || child.type.isTextarea || child.type.isTextarea)) {
+      return React.cloneElement(child, {
+        required: true,
+      });
     }
     return child;
   });
