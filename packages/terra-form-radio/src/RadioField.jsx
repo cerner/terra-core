@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
+import VisualyHiddenText from 'terra-visually-hidden-text';
 
 import styles from './RadioField.module.scss';
 
@@ -113,7 +114,12 @@ const RadioField = (props, { intl }) => {
     <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
       <div {...legendAttrs} className={legendClassNames}>
         {isInvalid && <span className={cx('error-icon')} />}
-        {required && (isInvalid || !hideRequired) && <span className={cx('required')}>*</span>}
+        {required && (isInvalid || !hideRequired) && (
+          <React.Fragment>
+            <div aria-hidden="true" className={cx('required')}>*</div>
+            <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
+          </React.Fragment>
+        )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
         {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
@@ -133,7 +139,7 @@ const RadioField = (props, { intl }) => {
   });
 
   return (
-    <fieldset {...customProps} className={radioFieldClasses}>
+    <fieldset {...customProps} aria-required={required} required={required} className={radioFieldClasses}>
       {legendGroup}
       {content}
       {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}
