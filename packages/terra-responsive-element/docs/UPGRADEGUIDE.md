@@ -38,10 +38,6 @@ To upgrade, shift all declared breakpoint props by one breakpoint. During this u
 
 The `breakpoints.scss` file has been removed. Any files previously referencing `breakpoints.scss` should import the new values provided by [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
 
-This next section is only applicable if your project is utilizing terra-dev-site < 5.0.
-
-Due to aliasing, terra-dev-site should also be uplifted to >= 5.0. This change is because terra-dev-site will alias the top level responsive element dependency and search for the `breakpoints.scss` file that was removed. An upgrade guide is available [here](https://engineering.cerner.com/terra-dev-site/#/getting-started/terra-dev-site/upgrade-guides/v-5-0-0).
-
 ### Examples
 
 ```diff
