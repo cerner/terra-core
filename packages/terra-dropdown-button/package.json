@@ -29,6 +29,7 @@
     "keycode-js":"^1.0.4",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^1.2.0",
+    "terra-mixins":"^1.30.0",
     "terra-popup":"^6.2.0"
   },
   "scripts": {

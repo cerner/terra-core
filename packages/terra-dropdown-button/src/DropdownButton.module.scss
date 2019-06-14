@@ -1,5 +1,83 @@
+@import '~terra-mixins/lib/Mixins';
+
+@import './variables';
+@import './mixins';
+
 :local {
-  .dropdown-button {
-    /* TODO: Add styles */
+  .dropdown-button.block {
+    display: flex;
+  }
+
+  // .outer-border-wrapper {
+  //   // stylelint-disable-next-line terra/custom-property-name
+  //   border-bottom-left-radius: var(--terra-dropdown-button-border-radius, 3px);
+  //   border-bottom-right-radius: 0;
+  //   // stylelint-disable-next-line terra/custom-property-name
+  //   border-top-left-radius: var(--terra-dropdown-button-border-radius, 3px);
+  //   border-top-right-radius: 0;
+  //   display: inline-block;
+
+  //   &.neutral {
+  //     border: var(--terra-dropdown-button-neutral-outer-border);
+  //   }
+
+  //   &.emphasis {
+  //     border: var(--terra-dropdown-button-emphasis-outer-border);
+  //   }
+  // }
+
+  .split-button-primary {
+    // stylelint-disable-next-line terra/custom-property-name
+    border-bottom-left-radius: var(--terra-dropdown-button-border-radius, 3px);
+    border-bottom-right-radius: 0;
+    border-style: solid;
+    // stylelint-disable-next-line terra/custom-property-name
+    border-top-left-radius: var(--terra-dropdown-button-border-radius, 3px);
+    border-top-right-radius: 0;
+    font-size: 1rem;
+    line-height: 1.4285714286;
+    outline: 0;
+    padding: 4px 10px;
+
+    &:focus {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .block .split-button-primary {
+    flex-grow: 1;
+  }
+
+  .split-button-chevron {
+    border-bottom-left-radius: 0;
+    // stylelint-disable-next-line terra/custom-property-name
+    border-bottom-right-radius: var(--terra-dropdown-button-border-radius, 3px);
+    border-style: solid;
+    border-top-left-radius: 0;
+    // stylelint-disable-next-line terra/custom-property-name
+    border-top-right-radius: var(--terra-dropdown-button-border-radius, 3px);
+    font-size: 1rem;
+    line-height: 1.4285714286;
+    outline: 0;
+    padding: 4px 7px;
+  }
+
+  .neutral {
+    @include terra-dropdown-button-variant-color($terra-dropdown-button-neutral-color-scheme);
+  }
+
+  .emphasis {
+    @include terra-dropdown-button-variant-color($terra-dropdown-button-emphasis-color-scheme);
+  }
+
+  .chevron-icon {
+    background: var(--terra-dropdown-button-chevron-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>'));
+    display: inline-block;
+    height: var(--terra-dropdown-button-chevron-height, 14px);
+    margin: auto 0;
+    position: relative;
+    top: var(--terra-dropdown-button-chevron-top, 0.1429rem);
+    width: var(--terra-dropdown-button-chevron-width, 14px);
   }
 }

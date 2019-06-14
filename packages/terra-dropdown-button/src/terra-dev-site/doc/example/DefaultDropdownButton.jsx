@@ -12,5 +12,7 @@ export default () => (
       { label: '3rd option', callback: () => { console.log('eyb'); } },
       { label: '4th option', callback: () => { console.log('ih'); } },
     ]}
+    defaultOption={{ label: 'Primary option', callback: () => { console.log('primary option'); } }}
+    width="500px"
   />
 );

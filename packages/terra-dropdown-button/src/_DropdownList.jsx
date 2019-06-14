@@ -90,7 +90,7 @@ class DropdownList extends React.Component {
         </div>
       </li>
     ));
-    return <ul className={cx('dropdown-list')}>{elements}</ul>;
+    return <ul role="listbox" className={cx('dropdown-list')}>{elements}</ul>;
   }
 }
 
