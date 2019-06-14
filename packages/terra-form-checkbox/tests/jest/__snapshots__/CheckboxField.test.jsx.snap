@@ -48,7 +48,7 @@ exports[`should display the required icon for fields with hideRequired, but have
         *
       </div>
       <VisuallyHiddenText
-        text="{intl.formatMessage({ id: 'Terra.form.field.required' })} "
+        text="Terra.form.field.required"
       />
       Hidden Required CheckboxField
     </div>
@@ -453,7 +453,7 @@ exports[`should render required checkbox field 1`] = `
         *
       </div>
       <VisuallyHiddenText
-        text="{intl.formatMessage({ id: 'Terra.form.field.required' })} "
+        text="Terra.form.field.required"
       />
       Required CheckboxField
       <span
