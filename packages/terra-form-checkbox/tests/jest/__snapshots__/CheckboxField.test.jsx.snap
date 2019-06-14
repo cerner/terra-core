@@ -41,11 +41,15 @@ exports[`should display the required icon for fields with hideRequired, but have
       <span
         className="error-icon"
       />
-      <span
+      <div
+        aria-hidden="true"
         className="required"
       >
         *
-      </span>
+      </div>
+      <VisuallyHiddenText
+        text="Terra.form.field.required"
+      />
       Hidden Required CheckboxField
     </div>
   </legend>
@@ -442,11 +446,15 @@ exports[`should render required checkbox field 1`] = `
     <div
       className="legend"
     >
-      <span
+      <div
+        aria-hidden="true"
         className="required"
       >
         *
-      </span>
+      </div>
+      <VisuallyHiddenText
+        text="Terra.form.field.required"
+      />
       Required CheckboxField
       <span
         className="error-icon-hidden"

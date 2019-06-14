@@ -137,5 +137,6 @@ class Input extends React.Component {
 
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;
+Input.isInput = true;
 
 export default Input;

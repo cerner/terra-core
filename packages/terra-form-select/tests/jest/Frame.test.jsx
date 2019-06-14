@@ -125,4 +125,14 @@ describe('Frame', () => {
     const wrapper = shallowWithIntl(<Frame clearOptionDisplay="-Select-" />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a required default variant', () => {
+    const wrapper = shallowWithIntl(<Frame required />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a required Frame', () => {
+    const wrapper = shallowWithIntl(<Frame required />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
