@@ -223,6 +223,7 @@ const SelectField = ({
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
         placeholder={placeholder}
+        required={required}
         value={value}
         variant={variant}
       >
