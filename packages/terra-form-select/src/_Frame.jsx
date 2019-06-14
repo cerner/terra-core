@@ -89,6 +89,10 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
+   * Whether the field is required.
+   */
+  required: PropTypes.bool,
+  /**
    * Total number of options.
    */
   totalOptions: PropTypes.number,
@@ -121,6 +125,7 @@ const defaultProps = {
   onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
+  required: false,
   totalOptions: undefined,
   value: undefined,
   variant: Variants.DEFAULT,
@@ -185,7 +190,7 @@ class Frame extends React.Component {
   getDisplay(displayId, placeholderId, ariaDescribedBy) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, variant,
+      disabled, display, placeholder, required, variant,
     } = this.props;
 
     const inputAttrs = {
@@ -203,6 +208,13 @@ class Frame extends React.Component {
       type: 'text',
       className: cx('search-input', { 'is-hidden': Util.shouldHideSearch(this.props, this.state) }),
     };
+
+    const multipleInputAttrs = {
+      required: required && !display.length ? true : undefined,
+      'aria-required': required && !display.length ? 'required' : undefined,
+      ...inputAttrs,
+    };
+    const comboboxInputAttrs = { required, 'aria-required': required, ...inputAttrs };
 
     switch (variant) {
       case Variants.TAG:
@@ -222,13 +234,13 @@ class Frame extends React.Component {
               ) : null
             }
             <li className={cx('search-wrapper')}>
-              <input {...inputAttrs} value={searchValue} />
+              <input {...multipleInputAttrs} value={searchValue} />
             </li>
           </ul>
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <div className={cx('content')}><input {...inputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
+        return <div className={cx('content')}><input {...comboboxInputAttrs} value={hasSearchChanged ? searchValue : display} /></div>;
       default:
         return display ? <span id={displayId}>{display}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
@@ -658,6 +670,7 @@ class Frame extends React.Component {
       onSelect,
       optionFilter,
       placeholder,
+      required,
       totalOptions,
       variant,
       value,
@@ -691,6 +704,7 @@ class Frame extends React.Component {
       <div
         {...customProps}
         role={this.role()}
+        aria-required={variant === Variants.DEFAULT ? required : null}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}
