@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed stale WDIO screenshots
 
 3.16.1 - (June 12, 2019)
 ------------------

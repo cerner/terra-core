@@ -73,3 +73,17 @@ it('should render a multiple SelectField component that limits the selection cou
 
   expect(shallowWithIntl(select)).toMatchSnapshot();
 });
+
+it('should render a required SelectField component', () => {
+  const select = (
+    <SelectField label="Label" defaultValue="blue" selectId="select-id" required>
+      <SelectField.Option value="blue" display="Blue" />
+      <SelectField.Option value="green" display="Green" />
+      <SelectField.Option value="purple" display="Purple" />
+      <SelectField.Option value="red" display="Red" />
+      <SelectField.Option value="violet" display="Violet" />
+    </SelectField>
+  );
+
+  expect(shallowWithIntl(select)).toMatchSnapshot();
+});
