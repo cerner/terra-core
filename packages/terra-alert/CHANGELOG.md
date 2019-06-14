@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed stale WDIO screenshots
 
 ### Changed
 * Updated to use the new responsive element breakpoints
