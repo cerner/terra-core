@@ -1,3 +1,4 @@
 {
-  "Terra.form.field.optional": "(valinnainen)"
+  "Terra.form.field.optional": "(valinnainen)",
+  "Terra.form.field.required": "Vaaditaan"
 }

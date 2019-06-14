@@ -3,11 +3,22 @@ ChangeLog
 
 Unreleased
 ----------
+
+### Changed
+* Updated to use the new responsive element breakpoints
+
+2.14.1 - (June 12, 2019)
+------------------
+### Changed
+* Patch dependency version bump
+
+2.14.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 2.13.0 - (May 1, 2019)
 ------------------

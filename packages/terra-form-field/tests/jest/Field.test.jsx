@@ -1,8 +1,11 @@
 /* eslint-disable react/jsx-boolean-value, import/no-extraneous-dependencies */
 import React from 'react';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 
+import Input from './mocks/Input';
+import Select from './mocks/Select';
+import Textarea from './mocks/Textarea';
 import Field from '../../src/Field';
 
 it('should render a field label', () => {
@@ -205,5 +208,86 @@ it('should render a field with a custom error icon', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a required field with an Input', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      required
+    >
+      <Input />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a required field with an Select', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      required
+    >
+      <Select />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a required field with an Textarea', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      required
+    >
+      <Textarea />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a field with an Input', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+    >
+      <Input />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a field with an Select', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+    >
+      <Select />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a field with an Textarea', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+    >
+      <Textarea />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
   expect(wrapper).toMatchSnapshot();
 });

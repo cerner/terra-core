@@ -4,10 +4,55 @@
 
 ### Breaking Changes
 
-The componentDidMount method handleResize Event call is now being changed to use the width of ResponsiveElement parent container. when responsiveTo prop is set as 'parent'.
 
--  this.handleResize(entries[0].contentRect.width);
-+  this.handleResize(entries[0].target.getBoundingClientRect().width);
+* The componentDidMount method handleResize Event call is now being changed to use the width of ResponsiveElement parent container. when responsiveTo prop is set as 'parent'.
+  -  this.handleResize(entries[0].contentRect.width);
+  +  this.handleResize(entries[0].target.getBoundingClientRect().width);
+* The `breakpoints.scss` file has been removed.
+* The `defaultElement` prop has been removed.
+* The breakpoint ranges have been changed to align with [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
+
+### New Features
+
+* Added an `onChange` callback function that is invoked when a breakpoint range changes to enable creating controlled responsive elements.
+* Added an `onResize` callback function that is invoked when the responsive target triggers a resize event.
+* Added `children` as a prop to use in conjunction with `onChange` to create controlled components.
+
+### Breakpoint Changes
+
+The breakpoint ranges have all shifted. This change was made to remove the ambiguous breakpoint range in-between 0 and tiny. Previously tiny started at 544px. The range from 0 to 543px had no associated breakpoint. It was considered the default size. Tiny now starts at 0.
+
+| Breakpoint | Previous | Updated |
+|---|---|---|
+| tiny | 544 - 767 | 0 - 543 |
+| small | 768 - 991 | 544 - 767 |
+| medium | 992 - 1215 | 768 - 991 |
+| large | 1216 - 1439 | 992 - 1215 |
+| huge | 1440 - ∞ | 1216 - 1439 |
+| enormous | -- | 1440 - ∞ |
+
+To upgrade, shift all declared breakpoint props by one breakpoint. During this uplift it is recommended to consider implementing a controlled version of the responsive element using the `children` and `onChange` props that have been added. Examples can be found on the doc site.
+
+* defaultElement -> tiny
+* tiny -> small
+* small -> medium
+* medium -> large
+* large -> huge
+* huge -> enormous
+
+The `breakpoints.scss` file has been removed. Any files previously referencing `breakpoints.scss` should import the new values provided by [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
+
+### Examples
+
+```diff
+- <ResponsiveElement defaultElement={<div />} large={<div />} />
++ <ResponsiveElement tiny={<div />} huge={<div />} />
+```
+
+```diff
+- <ResponsiveElement tiny={<div />} huge={<div />} />
++ <ResponsiveElement small={<div />} enormous={<div />} />
+```
 
 ## Changes from 3.0 to 4.0
 
