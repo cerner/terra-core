@@ -1,0 +1,19 @@
+:local {
+  .option {
+    padding-bottom: var(--terra-dropdown-button-menu-item-padding-bottom, 4px);
+    padding-left: var(--terra-dropdown-button-menu-item-padding-left, 10px);
+    padding-right: var(--terra-dropdown-button-menu-item-padding-right, 10px);
+    padding-top: var(--terra-dropdown-button-menu-item-padding-top, 4px);
+
+    &:focus {
+      background: var(--terra-dropdown-button-menu-item-focus-background, #ebf6fd);
+      box-shadow: 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35);
+      outline: 0;
+    }
+
+    &:hover {
+      background: var(--terra-dropdown-button-menu-item-hover-background, #ebf6fd);
+      outline: 0;
+    }
+  }
+}

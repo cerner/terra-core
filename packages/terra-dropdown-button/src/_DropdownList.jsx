@@ -7,12 +7,9 @@ import styles from './_DropdownList.module.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  children: PropTypes.node.isRequired,
   handleRequestClose: PropTypes.func.isRequired,
   itemSelectedCallback: PropTypes.func.isRequired,
-  options: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    callback: PropTypes.func.isRequired,
-  })).isRequired,
 };
 
 class DropdownList extends React.Component {
@@ -20,7 +17,6 @@ class DropdownList extends React.Component {
     super(props);
 
     this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.childRefs = [];
 
     const { options } = this.props;
 
@@ -64,33 +60,14 @@ class DropdownList extends React.Component {
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_TAB) {
-      // if (this.state.activeIndex !== -1) {
-      //   this.setState(prevState => ({ activeIndex: prevState.activeIndex + 1 }));
-      // }
       this.props.handleRequestClose();
       event.preventDefault();
     }
   }
 
   render() {
-    const { options, itemSelectedCallback } = this.props;
-    const elements = options.map((option, index) => (
-      <li
-        key={option.label}
-      >
-        <div
-          onClick={() => { itemSelectedCallback(option); }}
-          onKeyDown={event => this.handleKeyDown(event, option)}
-          ref={(ref) => { this.childRefs[index] = ref; }}
-          role="button"
-          tabIndex="0"
-          className={cx('dropdown-list-element')}
-        >
-          {option.label}
-        </div>
-      </li>
-    ));
-    return <ul role="listbox" className={cx('dropdown-list')}>{elements}</ul>;
+    const { children } = this.props;
+    return <ul role="listbox" className={cx('dropdown-list')}>{children}</ul>;
   }
 }
 

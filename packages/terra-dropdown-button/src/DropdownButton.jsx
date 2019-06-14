@@ -3,15 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Dropdown from './_Dropdown';
 import styles from './DropdownButton.module.scss';
+import Option from './_Option';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
   boundingRef: PropTypes.func,
-  options: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    callback: PropTypes.func.isRequired,
-  })).isRequired,
+  children: PropTypes.node.isRequired,
   isDisabled: PropTypes.bool,
   isBlock: PropTypes.bool,
   width: PropTypes.string,
@@ -46,7 +44,7 @@ class DropdownButton extends React.Component {
   render() {
     const {
       boundingRef,
-      options,
+      children,
       isDisabled,
       isBlock,
       defaultOption,
@@ -87,14 +85,17 @@ class DropdownButton extends React.Component {
           boundingRef={() => boundingRef}
           targetRef={() => this.buttonRef}
           isOpen={this.state.isOpen}
-          options={options}
           handleRequestClose={this.handleDropdownButtonClick}
           itemSelectedCallback={DropdownButton.itemSelectedCallback}
-        />
+        >
+          {children}
+        </Dropdown>
       </div>
     );
   }
 }
+
+DropdownButton.Option = Option;
 
 DropdownButton.propTypes = propTypes;
 DropdownButton.defaultProps = defaultProps;
