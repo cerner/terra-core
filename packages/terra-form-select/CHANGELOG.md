@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added aria roles for optgroups
 
 5.16.0 - (June 11, 2019)
 ------------------

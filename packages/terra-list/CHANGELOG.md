@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed accessibility issue in list item tests
 
 4.7.0 - (June 11, 2019)
 ------------------
