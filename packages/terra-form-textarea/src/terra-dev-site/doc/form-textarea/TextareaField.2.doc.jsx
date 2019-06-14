@@ -10,6 +10,8 @@ import TextareaFieldSrc from '!raw-loader!../../../../src/TextareaField';
 // Example Files
 import TextareaFieldExample from '../example/TextareaField';
 import TextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextareaField';
+import RequiredTextareaFieldExample from '../example/RequiredTextareaField';
+import RequiredTextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RequiredTextareaField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 const DocPage = () => (
   <DocTemplate
@@ -26,6 +28,10 @@ const DocPage = () => (
       {
         example: <TextareaFieldExample />,
         source: TextareaFieldExampleSrc,
+      },
+      {
+        example: <RequiredTextareaFieldExample />,
+        source: RequiredTextareaFieldExampleSrc,
       },
     ]}
   />
