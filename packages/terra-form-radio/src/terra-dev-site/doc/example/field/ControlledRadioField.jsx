@@ -32,7 +32,7 @@ export default class extends React.Component {
     let errorMessage = this.state.toggleInvalid ? 'All options are now invalid' : undefined;
     let isInvalid = false;
 
-    if (this.state.selectedAnswer === 'mcdonalds') {
+    if (this.state.selectedAnswer === 'monday') {
       errorMessage = 'Invalid option selected.';
       isInvalid = true;
     } else if (this.state.selectedAnswer === undefined) {
@@ -43,15 +43,19 @@ export default class extends React.Component {
       <div>
         <div>
           <RadioField
-            legend="Which Type of Meal are you looking for?"
+            legend="What is your favorite day of the week?"
             help="This cannot be changed when submitted"
             isInvalid={this.state.toggleInvalid || isInvalid}
             error={errorMessage}
             required
           >
-            <Radio id="chicken-meal" name="meal" labelText="Chicken" onChange={this.handleOnChange} value="chicken" />
-            <Radio id="salmon-meal" name="meal" labelText="Salmon" onChange={this.handleOnChange} value="salmon" />
-            <Radio id="mcdonalds-meal" name="meal" labelText="McDonalds (Not a valid choice)" onChange={this.handleOnChange} value="mcdonalds" />
+            <Radio id="sunday" name="weekday" labelText="Sunday" onChange={this.handleOnChange} value="sunday" />
+            <Radio id="monday" name="weekday" labelText="Monday (Not a valid choice)" onChange={this.handleOnChange} value="monday" />
+            <Radio id="tuesday" name="weekday" labelText="Tuesday" onChange={this.handleOnChange} value="tuesday" />
+            <Radio id="wednesday" name="weekday" labelText="Wednesday" onChange={this.handleOnChange} value="wednesday" />
+            <Radio id="thursday" name="weekday" labelText="Thursday" onChange={this.handleOnChange} value="thursday" />
+            <Radio id="friday" name="weekday" labelText="Friday" onChange={this.handleOnChange} value="friday" />
+            <Radio id="saturday" name="weekday" labelText="Saturday" onChange={this.handleOnChange} value="saturday" />
           </RadioField>
         </div>
         <hr />

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added `isInput` type on Input component to help with component identity
+
 ### Removed
 * Removed stale WDIO screenshots
 
