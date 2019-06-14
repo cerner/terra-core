@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Changed
+* Updated to use the new responsive element breakpoints
+
 2.14.1 - (June 12, 2019)
 ------------------
 ### Changed

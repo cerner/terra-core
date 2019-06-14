@@ -1,10 +1,15 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 import ResponsiveElementSrc from '!raw-loader!../../../../src/ResponsiveElement';
-import ResponsiveTableExample from '../example/ResponsiveTable';
-import ResponsiveTableExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ResponsiveTable';
+import BreakpointExample from '../example/BreakpointExample';
+import BreakpointExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BreakpointExample';
+import ResizeExample from '../example/ResizeExample';
+import ResizeExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ResizeExample';
+import UncontrolledBreakpointExample from '../example/UncontrolledBreakpointExample';
+import UncontrolledBreakpointExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/UncontrolledBreakpointExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -20,10 +25,22 @@ const DocPage = () => (
     ]}
     examples={[
       {
-        title: 'Responsive Table',
-        description: 'A table that will render as a list on small screen sizes.',
-        example: <ResponsiveTableExample />,
-        source: ResponsiveTableExampleSrc,
+        title: 'Responsive Breakpoints',
+        description: 'An example demonstrating the callback events during a breakpoint change.',
+        example: <BreakpointExample />,
+        source: BreakpointExampleSrc,
+      },
+      {
+        title: 'Responsive Resizing',
+        description: 'An example demonstrating the callback events during a resize.',
+        example: <ResizeExample />,
+        source: ResizeExampleSrc,
+      },
+      {
+        title: 'Uncontrolled Example',
+        description: 'An example of an uncontrolled implementation of the ResponsiveElement.',
+        example: <UncontrolledBreakpointExample />,
+        source: UncontrolledBreakpointExampleSrc,
       },
     ]}
   />
