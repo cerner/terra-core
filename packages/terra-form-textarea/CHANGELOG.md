@@ -3,16 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.13.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
-
-### Removed 
 * Removed vendor style rule added to fade placeholder text. Since Autoprefixer V9 resolves vendor prefix issue.
 
 ### Changed
+* Added `isTextarea` type on Textarea component to help with component identity
 * Reordered examples on documentation site
 * Clarified functionality of `isAutoResizable` and `size` props for TextArea
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
+
 
 3.12.0 - (May 1, 2019)
 ------------------

@@ -3,11 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added functionality to pass required prop on form-field down to terra-form-input, terra-form-select, or terra-form-textarea when rendered as children in terra-form-field.
+
+3.11.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 3.10.0 - (May 1, 2019)
 ------------------

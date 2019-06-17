@@ -2,7 +2,8 @@
 
 exports[`renders a banner that has basic information 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
     <_default
       age="24"
       applicationContent={null}
@@ -24,7 +25,6 @@ exports[`renders a banner that has basic information 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
     <_default
       age="24"
@@ -52,7 +52,8 @@ exports[`renders a banner that has basic information 1`] = `
 
 exports[`renders a blank banner properly 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
     <_default
       age="--"
       applicationContent={null}
@@ -74,7 +75,6 @@ exports[`renders a blank banner properly 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
     <_default
       age="--"
@@ -102,7 +102,8 @@ exports[`renders a blank banner properly 1`] = `
 
 exports[`renders gestational date with a default label when the label is not provided 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
     <_default
       age="--"
       applicationContent={null}
@@ -124,7 +125,6 @@ exports[`renders gestational date with a default label when the label is not pro
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
     <_default
       age="--"
@@ -152,7 +152,8 @@ exports[`renders gestational date with a default label when the label is not pro
 
 exports[`renders post menstrural date with a default label when the label is not provided 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
     <_default
       age="--"
       applicationContent={null}
@@ -174,7 +175,6 @@ exports[`renders post menstrural date with a default label when the label is not
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
     <_default
       age="--"
@@ -202,7 +202,8 @@ exports[`renders post menstrural date with a default label when the label is not
 
 exports[`renders the banner appropriately for a deceased person 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
     <_default
       age="24"
       applicationContent={null}
@@ -224,7 +225,6 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
     <_default
       age="24"
@@ -252,7 +252,8 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
 
 exports[`renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
     <_default
       age="25 Years"
       applicationContent={
@@ -303,7 +304,6 @@ exports[`renders the banner appropriately for a person with gestational and post
       preferredFirstName="John"
     />
   }
-  responsiveTo="parent"
   tiny={
     <_default
       age="25 Years"
@@ -360,7 +360,8 @@ exports[`renders the banner appropriately for a person with gestational and post
 
 exports[`renders the banner properly for a deceased person with additional application content 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
     <_default
       age="25 Years"
       applicationContent={
@@ -411,7 +412,6 @@ exports[`renders the banner properly for a deceased person with additional appli
       preferredFirstName="John"
     />
   }
-  responsiveTo="parent"
   tiny={
     <_default
       age="25 Years"
@@ -468,7 +468,8 @@ exports[`renders the banner properly for a deceased person with additional appli
 
 exports[`renders the banner that contains additional information 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
     <_default
       age="25 Years"
       applicationContent={
@@ -519,7 +520,6 @@ exports[`renders the banner that contains additional information 1`] = `
       preferredFirstName="John"
     />
   }
-  responsiveTo="parent"
   tiny={
     <_default
       age="25 Years"

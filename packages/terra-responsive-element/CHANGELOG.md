@@ -3,11 +3,26 @@ Changelog
 
 Unreleased
 ----------
+
+### Breaking Changes
+
+* Removed `breakpoints.scss`
+* Removed the `defaultElement` prop
+* Changed the breakpoint pixel ranges to match terra-breakpoints
+
+### Added
+
+* Added `onChange` callback function that is invoked when a breakpoint range changes
+* Added `onResize` callback function that is invoked when a resize event is triggered
+* Added `children` prop to use in conjunction with `onChange` to create controlled responsive elements
+
+4.8.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 4.7.0 - (May 1, 2019)
 ------------------
