@@ -2,7 +2,73 @@
 
 exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] = `
 <ResponsiveElement
-  defaultElement={
+  responsiveTo="parent"
+  small={
+    <div
+      aria-label="pagination"
+      className="paginator progressive"
+      role="navigation"
+    >
+      <div>
+        Page
+         
+        1
+         
+        of
+         
+        112
+      </div>
+      <div>
+        <a
+          aria-disabled={true}
+          aria-label="first"
+          className="nav-link is-disabled"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={null}
+        >
+          First
+        </a>
+        <a
+          aria-disabled={true}
+          aria-label="previous"
+          className="nav-link previous is-disabled"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={null}
+        >
+          <span
+            className="icon"
+          />
+          Previous
+        </a>
+        <a
+          aria-disabled={false}
+          aria-label="next"
+          className="nav-link next"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          tabIndex="0"
+        >
+          Next
+          <span
+            className="icon"
+          />
+        </a>
+        <a
+          aria-disabled={false}
+          aria-label="last"
+          className="nav-link"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          tabIndex="0"
+        >
+          Last
+        </a>
+      </div>
+    </div>
+  }
+  tiny={
     <div
       aria-label="pagination"
       className="paginator"
@@ -60,72 +126,6 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           >
             Next
           </span>
-          <span
-            className="icon"
-          />
-        </a>
-        <a
-          aria-disabled={false}
-          aria-label="last"
-          className="nav-link"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
-        >
-          Last
-        </a>
-      </div>
-    </div>
-  }
-  responsiveTo="parent"
-  tiny={
-    <div
-      aria-label="pagination"
-      className="paginator progressive"
-      role="navigation"
-    >
-      <div>
-        Page
-         
-        1
-         
-        of
-         
-        112
-      </div>
-      <div>
-        <a
-          aria-disabled={true}
-          aria-label="first"
-          className="nav-link is-disabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex={null}
-        >
-          First
-        </a>
-        <a
-          aria-disabled={true}
-          aria-label="previous"
-          className="nav-link previous is-disabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="icon"
-          />
-          Previous
-        </a>
-        <a
-          aria-disabled={false}
-          aria-label="next"
-          className="nav-link next"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
-        >
-          Next
           <span
             className="icon"
           />
