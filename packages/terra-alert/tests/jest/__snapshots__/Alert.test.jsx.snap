@@ -341,8 +341,7 @@ exports[`Alert of type custom with custom title and text content should render a
     responsiveTo="parent"
     small={
       <div
-        className="alert-base custom narrow terra-alert-custom-orange-color"
-        className="alert-base custom wide"
+        className="alert-base custom wide terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -398,7 +397,7 @@ exports[`Alert of type custom with custom title and text content should render a
     }
     tiny={
       <div
-        className="alert-base custom wide terra-alert-custom-orange-color"
+        className="alert-base custom narrow terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1653,7 +1652,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
     responsiveTo="parent"
     small={
       <div
-        className="alert-base custom narrow terra-alert-custom-orange-color"
+        className="alert-base custom wide terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1734,7 +1733,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
     }
     tiny={
       <div
-        className="alert-base custom wide terra-alert-custom-orange-color"
+        className="alert-base custom narrow terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
