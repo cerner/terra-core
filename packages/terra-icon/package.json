@@ -38,7 +38,7 @@
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
     "compilescripts:clean": "rm -rf scripts/lib",
-    "compilescripts:build": "babel scripts/src --out-dir scripts/lib --copy-files",
+    "compilescripts:build": "babel --root-mode upward scripts/src --out-dir scripts/lib --copy-files",
     "migrate-csv": "node scripts/lib/migrate-csv/index.js",
     "migrate-svg": "node scripts/lib/migrate-svg/index.js",
     "generate-json": "node scripts/lib/generate-json/index.js",
