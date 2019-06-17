@@ -105,9 +105,8 @@ const defaultProps = {
 
 const DemographicsBannerDisplay = props => (
   <ResponsiveElement
-    responsiveTo="parent"
-    defaultElement={<SmallDemographicsBannerDisplay {...props} />}
-    tiny={<LargeDemographicsBannerDisplay {...props} />}
+    tiny={<SmallDemographicsBannerDisplay {...props} />}
+    small={<LargeDemographicsBannerDisplay {...props} />}
   />
 );
 

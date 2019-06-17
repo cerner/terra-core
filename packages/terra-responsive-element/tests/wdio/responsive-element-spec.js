@@ -1,24 +1,26 @@
-const viewports = Terra.viewports('tiny', 'small', 'medium', 'large', 'huge');
+Terra.describeViewports('ResponsiveElement', ['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], () => {
+  describe('Controlled', () => {
+    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/controlled'));
 
-describe('Responsive Element', () => {
-  describe('should render the appropriate element at each viewport', () => {
-    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/all-breakpoints'));
-
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
-  describe('should render the the default element at tiny and small and medium above', () => {
-    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/default-and-medium'));
+  describe('Uncontrolled', () => {
+    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/uncontrolled'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
-  describe('should render the default element at all viewports if the parent remains the same width', () => {
-    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/all-breakpoints-small-parent'));
+  describe('Fixed Size', () => {
+    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/fixed-size'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports, selector: '#root' });
+    // A selector is required here because the test component overflows the viewport.
+    Terra.it.validatesElement({ selector: '#fixed-target' });
+  });
+
+  describe('Tiny and Medium', () => {
+    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/tiny-and-medium'));
+
+    Terra.it.validatesElement();
   });
 });
