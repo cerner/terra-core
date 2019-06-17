@@ -9,6 +9,12 @@ Unreleased
 ### Breaking Changes
 * Removed `customStatusColor` prop
 
+### Removed
+* Removed stale WDIO screenshots
+
+### Changed
+* Updated to use the new responsive element breakpoints
+
 3.16.1 - (June 12, 2019)
 ------------------
 ### Changed

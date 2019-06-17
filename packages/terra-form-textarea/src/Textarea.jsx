@@ -217,6 +217,7 @@ class Textarea extends React.Component {
 
 Textarea.propTypes = propTypes;
 Textarea.defaultProps = defaultProps;
+Textarea.isTextarea = true;
 
 export default Textarea;
 export { TextareaSize };
