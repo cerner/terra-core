@@ -1,0 +1,23 @@
+// stylelint-disable scss/at-mixin-pattern
+
+:local {
+  @mixin align-example-common() {
+    background-color: #000;
+    display: block;
+    height: 20px;
+    width: 40px;
+  }
+
+  .outlined-placeholder {
+    border: 2px solid #0079be;
+  }
+
+  .placeholder {
+    @include align-example-common();
+  }
+
+  .highlighted-placeholder {
+    @include align-example-common();
+    background-color: #0079be;
+  }
+}
