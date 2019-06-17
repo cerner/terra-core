@@ -1,29 +1,48 @@
+@import '~terra-mixins/lib/Mixins';
+
 //  Map Dropdown Button Variant's Color Schemes
 // ==========================
 
 @mixin terra-dropdown-button-variant-color($color-map) {
-  background-color: map-get($color-map, background-color);
-  border-color: map-get($color-map, border-color);
-  border-width: map-get($color-map, border-width);
-  box-shadow: map-get($color-map, box-shadow);
-  color: map-get($color-map, color);
+  .split-button-primary,
+  .split-button-chevron {
+    background-color: map-get($color-map, background-color);
+    border-color: map-get($color-map, border-color);
+    border-width: map-get($color-map, border-width);
+    box-shadow: map-get($color-map, box-shadow);
+    color: map-get($color-map, color);
 
-  &:focus,
-  &.is-focused {
-    background-color: map-get($color-map, focus-background-color);
-    border-color: map-get($color-map, focus-border-color);
-    box-shadow: map-get($color-map, focus-box-shadow);
+    &.is-focused {
+      background-color: map-get($color-map, focus-background-color);
+      border-color: map-get($color-map, focus-border-color);
+      box-shadow: map-get($color-map, focus-box-shadow);
+    }
+
+    &:hover {
+      background-color: map-get($color-map, hover-background-color);
+      color: map-get($color-map, hover-color);
+    }
+
+    &.is-active,
+    &:active {
+      background-color: map-get($color-map, active-background-color);
+      border-color: map-get($color-map, active-border-color);
+      color: map-get($color-map, active-color);
+    }
   }
 
-  &:hover {
-    background-color: map-get($color-map, hover-background-color);
-    color: map-get($color-map, hover-color);
+  .chevron-icon {
+    background: map-get($color-map, chevron-icon-background);
   }
 
-  &.is-active,
-  &:active {
-    background-color: map-get($color-map, active-background-color);
-    border-color: map-get($color-map, active-border-color);
-    color: map-get($color-map, active-color);
+  :active,
+  .is-active {
+    > .chevron-icon {
+      background: map-get($color-map, active-chevron-icon-background);
+    }
+  }
+
+  .disabled .chevron-icon {
+    background: map-get($color-map, disabled-chevron-icon-background);
   }
 }

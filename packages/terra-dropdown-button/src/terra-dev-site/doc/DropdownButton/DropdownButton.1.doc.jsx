@@ -10,6 +10,12 @@ import DropdownButtonSrc from '!raw-loader!../../../../src/DropdownButton';
 // Example Files
 import DefaultDropdownButton from '../example/DefaultDropdownButton';
 import DefaultDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultDropdownButton.jsx';
+import DisabledDropdownButton from '../example/DisabledDropdownButton';
+import DisabledDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledDropdownButton.jsx';
+import BoundedDropdownButton from '../example/BoundedDropdownButton';
+import BoundedDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BoundedDropdownButton.jsx';
+import EmphasisDropdownButton from '../example/EmphasisDropdownButton';
+import EmphasisDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/EmphasisDropdownButton.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -22,12 +28,27 @@ const DocPage = () => (
         example: <DefaultDropdownButton />,
         source: DefaultDropdownButtonSrc,
       },
+      {
+        title: 'Emphasis DropdownButton',
+        example: <EmphasisDropdownButton />,
+        source: EmphasisDropdownButtonSrc,
+      },
+      {
+        title: 'Bounded DropdownButton',
+        example: <BoundedDropdownButton />,
+        source: BoundedDropdownButtonSrc,
+      },
+      {
+        title: 'Disabled DropdownButton',
+        example: <DisabledDropdownButton />,
+        source: DisabledDropdownButtonSrc,
+      },
     ]}
     propsTables={[
-        {
-          componentName: 'DropdownButton',
-          componentSrc: DropdownButtonSrc,
-        },
+      {
+        componentName: 'DropdownButton',
+        componentSrc: DropdownButtonSrc,
+      },
     ]}
   />
 );

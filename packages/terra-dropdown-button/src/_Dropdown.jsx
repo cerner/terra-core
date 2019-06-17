@@ -8,15 +8,13 @@ const propTypes = {
   boundingRef: PropTypes.func,
   targetRef: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  options: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    callback: PropTypes.func.isRequired,
-  })).isRequired,
+  children: PropTypes.node.isRequired,
   itemSelectedCallback: PropTypes.func.isRequired,
+  width: PropTypes.string,
 };
 
 const Dropdown = ({
-  handleRequestClose, boundingRef, isOpen, targetRef, options, itemSelectedCallback,
+  handleRequestClose, boundingRef, isOpen, targetRef, children, itemSelectedCallback, width,
 }) => (
   <Popup
     boundingRef={boundingRef}
@@ -26,13 +24,15 @@ const Dropdown = ({
     isOpen={isOpen}
     onRequestClose={handleRequestClose}
     targetRef={targetRef}
-    isContentFocusDisabled
+    // isContentFocusDisabled
   >
     <DropdownList
-      options={options}
       handleRequestClose={handleRequestClose}
       itemSelectedCallback={itemSelectedCallback}
-    />
+      width={width}
+    >
+      {children}
+    </DropdownList>
   </Popup>
 );
 

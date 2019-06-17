@@ -11,23 +11,30 @@ const propTypes = {
   /**
    * @private
    */
-  itemSelectedCallback: PropTypes.func.isRequired,
+  isActive: PropTypes.bool,
+  /**
+   * @private
+   */
+  itemSelectedCallback: PropTypes.func,
 };
 
-const Option = ({ label, callback, itemSelectedCallback }) => {
-  return (
-    <li>
-      <div
-        onMouseUp={() => { itemSelectedCallback({ label, callback }); }}
-        role="button"
-        tabIndex="-1"
-        className={cx('option')}
-      >
-        {label}
-      </div>
-    </li>
-  );
-};
+const Option = ({
+  label, callback, isActive, itemSelectedCallback,
+}) => (
+  <li>
+    <div
+      onMouseUp={() => { itemSelectedCallback({ label, callback }); }}
+      role="button"
+      tabIndex="-1"
+      className={cx([
+        'option',
+        { focus: isActive },
+      ])}
+    >
+      {label}
+    </div>
+  </li>
+);
 
 Option.propTypes = propTypes;
 

@@ -4,8 +4,15 @@
 @import './mixins';
 
 :local {
-  .dropdown-button.block {
-    display: flex;
+  .dropdown-button {
+    &.disabled {
+      opacity: var(--terra-dropdown-button-disabled-opacity, 0.4);
+      pointer-events: none;
+    }
+
+    &.block {
+      display: flex;
+    }
   }
 
   // .outer-border-wrapper {
@@ -72,7 +79,6 @@
   }
 
   .chevron-icon {
-    background: var(--terra-dropdown-button-chevron-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>'));
     display: inline-block;
     height: var(--terra-dropdown-button-chevron-height, 14px);
     margin: auto 0;

@@ -10,18 +10,20 @@ const cx = classNames.bind(styles);
 const propTypes = {
   boundingRef: PropTypes.func,
   children: PropTypes.node.isRequired,
-  isDisabled: PropTypes.bool,
+  disabled: PropTypes.bool,
   isBlock: PropTypes.bool,
   width: PropTypes.string,
   defaultOption: PropTypes.shape({
     label: PropTypes.string.isRequired,
     callback: PropTypes.func.isRequired,
   }).isRequired,
+  variant: PropTypes.string,
 };
 
 const defaultProps = {
-  isDisabled: false,
+  disabled: false,
   isBlock: false,
+  variant: 'neutral',
 };
 
 class DropdownButton extends React.Component {
@@ -45,15 +47,18 @@ class DropdownButton extends React.Component {
     const {
       boundingRef,
       children,
-      isDisabled,
+      disabled,
       isBlock,
       defaultOption,
+      variant,
       width,
       ...customProps
     } = this.props;
     const DropdownButtonClassNames = cx([
       'dropdown-button',
+      variant,
       { block: isBlock || width },
+      { disabled },
       customProps.className,
     ]);
     if (width && !isBlock) {
@@ -68,8 +73,11 @@ class DropdownButton extends React.Component {
       >
         <button
           type="button"
-          className={cx('split-button-primary', 'neutral')}
+          className={cx('split-button-primary')}
           onClick={defaultOption.callback}
+          disabled={disabled}
+          tabIndex={disabled ? '-1' : undefined}
+          aria-disabled={disabled}
         >
           {defaultOption.label}
         </button>
@@ -77,16 +85,20 @@ class DropdownButton extends React.Component {
           ref={(buttonRef) => { this.buttonRef = buttonRef; }}
           type="button"
           onClick={this.handleDropdownButtonClick}
-          className={cx('split-button-chevron', 'neutral')}
+          className={cx('split-button-chevron', { 'is-active': this.state.isOpen })}
+          disabled={disabled}
+          tabIndex={disabled ? '-1' : undefined}
+          aria-disabled={disabled}
         >
           <span className={cx('chevron-icon')} />
         </button>
         <Dropdown
-          boundingRef={() => boundingRef}
+          boundingRef={boundingRef}
           targetRef={() => this.buttonRef}
           isOpen={this.state.isOpen}
           handleRequestClose={this.handleDropdownButtonClick}
           itemSelectedCallback={DropdownButton.itemSelectedCallback}
+          width={width}
         >
           {children}
         </Dropdown>
