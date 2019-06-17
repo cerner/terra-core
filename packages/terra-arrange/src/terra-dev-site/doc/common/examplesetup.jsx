@@ -6,14 +6,14 @@ const cx = classNames.bind(styles);
 
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 const simpleText = <div>{ipsum}</div>;
-const textWithBlueBorder = <div className={cx('text-with-blue-border')}>{ipsum}</div>;
+const textWithBlueBorder = <div className={cx('outlined-placeholder')}>{ipsum}</div>;
 
 const alignExampleDiv = (
-  <div className={cx('align-example-div')} />
+  <div className={cx('placeholder')} />
 );
 
 const alignExampleDivBlue = (
-  <div className={cx('align-example-div-blue')} />
+  <div className={cx('highlighted-placeholder')} />
 );
 
 export {

@@ -8,15 +8,15 @@
     width: 40px;
   }
 
-  .text-with-blue-border {
+  .outlined-placeholder {
     border: 2px solid #0079be;
   }
 
-  .align-example-div {
+  .placeholder {
     @include align-example-common();
   }
 
-  .align-example-div-blue {
+  .highlighted-placeholder {
     @include align-example-common();
     background-color: #0079be;
   }
