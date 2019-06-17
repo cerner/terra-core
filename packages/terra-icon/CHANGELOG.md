@@ -1,14 +1,13 @@
 Changelog
 =========
+
+Unreleased
+----------
 ### Added
 * Added `--terra-icon-abnormal-low-light-path-1-fill` variable in IconAbnormalLowLight.module.scss
 
 ### Changed
 * IconAbnormalLowLight inline style moved to scss file
-
-Unreleased
-----------
-### Changed
 * Updated csvtojson devdependency to v2.0.8
 * Updated jsdom devdependency to v15.1.1
 * Updated svgo devdependecy to v1.2.2
