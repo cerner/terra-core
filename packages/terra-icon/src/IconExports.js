@@ -67,6 +67,7 @@ import IconDischargeCompleteLowLight from './icon/IconDischargeCompleteLowLight'
 import IconDischargeOverDue from './icon/IconDischargeOverDue';
 import IconDischargeOverDueLowLight from './icon/IconDischargeOverDueLowLight';
 import IconDoNotDisturb from './icon/IconDoNotDisturb';
+import IconDocumentPlus from './icon/IconDocumentPlus';
 import IconDocuments from './icon/IconDocuments';
 import IconDoorOpen from './icon/IconDoorOpen';
 import IconDoubleChevronLeft from './icon/IconDoubleChevronLeft';
@@ -88,6 +89,7 @@ import IconExclamation from './icon/IconExclamation';
 import IconExpandLess from './icon/IconExpandLess';
 import IconExpandMore from './icon/IconExpandMore';
 import IconExpandRow from './icon/IconExpandRow';
+import IconExtensions from './icon/IconExtensions';
 import IconExternalLink from './icon/IconExternalLink';
 import IconFeatured from './icon/IconFeatured';
 import IconFeaturedOff from './icon/IconFeaturedOff';
@@ -162,6 +164,7 @@ import IconNoRiskLowLight from './icon/IconNoRiskLowLight';
 import IconNoSignal from './icon/IconNoSignal';
 import IconNotMet from './icon/IconNotMet';
 import IconNotification from './icon/IconNotification';
+import IconNotificationDisabled from './icon/IconNotificationDisabled';
 import IconNotificationOff from './icon/IconNotificationOff';
 import IconOutgoingCall from './icon/IconOutgoingCall';
 import IconOverDue from './icon/IconOverDue';
@@ -325,6 +328,7 @@ const Icons = {
   IconDischargeOverDue,
   IconDischargeOverDueLowLight,
   IconDoNotDisturb,
+  IconDocumentPlus,
   IconDocuments,
   IconDoorOpen,
   IconDoubleChevronLeft,
@@ -346,6 +350,7 @@ const Icons = {
   IconExpandLess,
   IconExpandMore,
   IconExpandRow,
+  IconExtensions,
   IconExternalLink,
   IconFeatured,
   IconFeaturedOff,
@@ -420,6 +425,7 @@ const Icons = {
   IconNoSignal,
   IconNotMet,
   IconNotification,
+  IconNotificationDisabled,
   IconNotificationOff,
   IconOutgoingCall,
   IconOverDue,
