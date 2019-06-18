@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added more information to upgrade guide around Jest testing
 
 4.6.0 - (June 18, 2019)
 ------------------

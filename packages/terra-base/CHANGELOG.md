@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Added missing upgrade guide for migrating from terra-base v4 to v5
 
 5.8.0 - (June 18, 2019)
 ------------------
