@@ -110,6 +110,7 @@ import IconLeftPane from 'terra-icon/lib/icon/IconLeftPane';
 import IconFlowsheet from 'terra-icon/lib/icon/IconFlowsheet';
 import IconNotificationOff from 'terra-icon/lib/icon/IconNotificationOff';
 import IconNotification from 'terra-icon/lib/icon/IconNotification';
+import IconNotificationDisabled from 'terra-icon/lib/icon/IconNotificationDisabled';
 import IconLast from 'terra-icon/lib/icon/IconLast';
 import IconDevice from 'terra-icon/lib/icon/IconDevice';
 import IconPaperPencil from 'terra-icon/lib/icon/IconPaperPencil';
@@ -165,6 +166,8 @@ import IconCollapseRow from 'terra-icon/lib/icon/IconCollapseRow';
 import IconExpandRow from 'terra-icon/lib/icon/IconExpandRow';
 import IconDoubleChevronLeft from 'terra-icon/lib/icon/IconDoubleChevronLeft';
 import IconDoubleChevronRight from 'terra-icon/lib/icon/IconDoubleChevronRight';
+import IconExtensions from 'terra-icon/lib/icon/IconExtensions';
+import IconDocumentPlus from 'terra-icon/lib/icon/IconDocumentPlus';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
 import IconPlusSymbol from 'terra-icon/lib/icon/IconPlusSymbol';
@@ -1175,6 +1178,15 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconNotificationDisabled height='2em' width='2em' /></td>
+        <td style={cellStyle}>notificationDisabled</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconNotificationDisabled from 'terra-icon/lib/icon/IconNotificationDisabled';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconLast height='2em' width='2em' /></td>
         <td style={cellStyle}>last</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
@@ -1666,6 +1678,24 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconDoubleChevronRight from 'terra-icon/lib/icon/IconDoubleChevronRight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconExtensions height='2em' width='2em' /></td>
+        <td style={cellStyle}>extensions</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconExtensions from 'terra-icon/lib/icon/IconExtensions';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconDocumentPlus height='2em' width='2em' /></td>
+        <td style={cellStyle}>documentPlus</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconDocumentPlus from 'terra-icon/lib/icon/IconDocumentPlus';
           </code>
         </td>
       </tr>

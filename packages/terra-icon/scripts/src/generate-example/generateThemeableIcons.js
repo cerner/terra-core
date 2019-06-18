@@ -46,7 +46,6 @@ const generateIconAll = iconObjs => new Promise((resolve) => {
   outputfile.write(');\n\n');
 
   outputfile.write('export default IconAll;\n');
-
   resolve(iconObjs);
 });
 
