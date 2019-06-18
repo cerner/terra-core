@@ -76,6 +76,7 @@ const IconAll = () => (
     <Icon.IconDischargeOverDue className={cx(['icon'])} />
     <Icon.IconDischargeOverDueLowLight className={cx(['icon'])} />
     <Icon.IconDoNotDisturb className={cx(['icon'])} />
+    <Icon.IconDocumentPlus className={cx(['icon'])} />
     <Icon.IconDocuments className={cx(['icon'])} />
     <Icon.IconDoorOpen className={cx(['icon'])} />
     <Icon.IconDoubleChevronLeft className={cx(['icon'])} />
@@ -97,6 +98,7 @@ const IconAll = () => (
     <Icon.IconExpandLess className={cx(['icon'])} />
     <Icon.IconExpandMore className={cx(['icon'])} />
     <Icon.IconExpandRow className={cx(['icon'])} />
+    <Icon.IconExtensions className={cx(['icon'])} />
     <Icon.IconExternalLink className={cx(['icon'])} />
     <Icon.IconFeatured className={cx(['icon'])} />
     <Icon.IconFeaturedOff className={cx(['icon'])} />
@@ -171,6 +173,7 @@ const IconAll = () => (
     <Icon.IconNoSignal className={cx(['icon'])} />
     <Icon.IconNotMet className={cx(['icon'])} />
     <Icon.IconNotification className={cx(['icon'])} />
+    <Icon.IconNotificationDisabled className={cx(['icon'])} />
     <Icon.IconNotificationOff className={cx(['icon'])} />
     <Icon.IconOutgoingCall className={cx(['icon'])} />
     <Icon.IconOverDue className={cx(['icon'])} />
