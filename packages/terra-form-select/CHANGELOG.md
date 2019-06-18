@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Additional null check added to private menu to prevent error from empty query
+
+### Changed
+* Added `required` prop
+* Added `isSelect` type on Select component to help with component identity
 
 5.16.0 - (June 11, 2019)
 ------------------

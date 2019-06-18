@@ -182,4 +182,9 @@ describe('Select', () => {
     const wrapper = shallowWithIntl(<Select allowClear />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a required select', () => {
+    const wrapper = shallowWithIntl(<Select required />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

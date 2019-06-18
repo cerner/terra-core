@@ -4,6 +4,22 @@ Changelog
 Unreleased
 ----------
 
+### Breaking Changes
+
+* Removed `breakpoints.scss`
+* Removed the `defaultElement` prop
+* Changed the breakpoint pixel ranges to match terra-breakpoints
+
+### Added
+
+* Added `onChange` callback function that is invoked when a breakpoint range changes
+* Added `onResize` callback function that is invoked when a resize event is triggered
+* Added `children` prop to use in conjunction with `onChange` to create controlled responsive elements
+
+### Fixed
+
+* Repetitive resizing when a scrollbar appears between two breakpoints
+
 4.8.0 - (June 11, 2019)
 ------------------
 ### Removed
