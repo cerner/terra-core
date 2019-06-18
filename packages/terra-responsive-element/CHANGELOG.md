@@ -16,6 +16,10 @@ Unreleased
 * Added `onResize` callback function that is invoked when a resize event is triggered
 * Added `children` prop to use in conjunction with `onChange` to create controlled responsive elements
 
+### Fixed
+
+* Repetitive resizing when a scrollbar appears between two breakpoints
+
 4.8.0 - (June 11, 2019)
 ------------------
 ### Removed
