@@ -54,7 +54,7 @@ class DropdownList extends React.Component {
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_TAB) {
       this.props.handleRequestClose();
-      event.preventDefault();
+      // event.preventDefault();
     }
   }
 

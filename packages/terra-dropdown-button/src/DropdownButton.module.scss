@@ -35,6 +35,19 @@
   //   }
   // }
 
+  .dropdown-button-type {
+    border-radius: var(--terra-dropdown-button-border-radius, 3px);
+    border-style: solid;
+    font-size: 1rem;
+    line-height: 1.4285714286;
+    outline: 0;
+    padding: 4px 7px 4px 10px;
+  }
+
+  .dropdown-button-type-text {
+    margin-right: 5px;
+  }
+
   .split-button-primary {
     // stylelint-disable-next-line terra/custom-property-name
     border-bottom-left-radius: var(--terra-dropdown-button-border-radius, 3px);

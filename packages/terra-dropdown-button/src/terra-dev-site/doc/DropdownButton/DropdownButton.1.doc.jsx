@@ -8,18 +8,22 @@ import { name } from '../../../../package.json';
 import DropdownButtonSrc from '!raw-loader!../../../../src/DropdownButton';
 
 // Example Files
+import DefaultSplitButton from '../example/DefaultSplitButton';
+import DefaultSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSplitButton.jsx';
+import DisabledSplitButton from '../example/DisabledSplitButton';
+import DisabledSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledSplitButton.jsx';
+import BoundedSplitButton from '../example/BoundedSplitButton';
+import BoundedSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BoundedSplitButton.jsx';
+import EmphasisSplitButton from '../example/EmphasisSplitButton';
+import EmphasisSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/EmphasisSplitButton.jsx';
+import SetWidthSplitButton from '../example/SetWidthSplitButton';
+import SetWidthSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SetWidthSplitButton.jsx';
+import BlockSplitButton from '../example/BlockSplitButton';
+import BlockSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BlockSplitButton.jsx';
 import DefaultDropdownButton from '../example/DefaultDropdownButton';
 import DefaultDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultDropdownButton.jsx';
-import DisabledDropdownButton from '../example/DisabledDropdownButton';
-import DisabledDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledDropdownButton.jsx';
-import BoundedDropdownButton from '../example/BoundedDropdownButton';
-import BoundedDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BoundedDropdownButton.jsx';
 import EmphasisDropdownButton from '../example/EmphasisDropdownButton';
 import EmphasisDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/EmphasisDropdownButton.jsx';
-import SetWidthDropdownButton from '../example/SetWidthDropdownButton';
-import SetWidthDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SetWidthDropdownButton.jsx';
-import BlockDropdownButton from '../example/BlockDropdownButton';
-import BlockDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BlockDropdownButton.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -28,39 +32,49 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Default DropdownButton',
+        title: 'Default Split Button',
+        example: <DefaultSplitButton />,
+        source: DefaultSplitButtonSrc,
+      },
+      {
+        title: 'Default Dropdown Button',
         example: <DefaultDropdownButton />,
         source: DefaultDropdownButtonSrc,
       },
       {
-        title: 'Emphasis DropdownButton',
+        title: 'Emphasis Split Button',
+        example: <EmphasisSplitButton />,
+        source: EmphasisSplitButtonSrc,
+      },
+      {
+        title: 'Emphasis Dropdown Button',
         example: <EmphasisDropdownButton />,
         source: EmphasisDropdownButtonSrc,
       },
       {
-        title: 'Bounded DropdownButton',
-        example: <BoundedDropdownButton />,
-        source: BoundedDropdownButtonSrc,
+        title: 'Bounded Split Button',
+        example: <BoundedSplitButton />,
+        source: BoundedSplitButtonSrc,
       },
       {
-        title: 'Disabled DropdownButton',
-        example: <DisabledDropdownButton />,
-        source: DisabledDropdownButtonSrc,
+        title: 'Disabled Split Button',
+        example: <DisabledSplitButton />,
+        source: DisabledSplitButtonSrc,
       },
       {
-        title: 'Set Width DropdownButton',
-        example: <SetWidthDropdownButton />,
-        source: SetWidthDropdownButtonSrc,
+        title: 'Set Width Split Button',
+        example: <SetWidthSplitButton />,
+        source: SetWidthSplitButtonSrc,
       },
       {
-        title: 'Block DropdownButton',
-        example: <BlockDropdownButton />,
-        source: BlockDropdownButtonSrc,
+        title: 'Block Split Button',
+        example: <BlockSplitButton />,
+        source: BlockSplitButtonSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'DropdownButton',
+        componentName: 'Dropdown Button',
         componentSrc: DropdownButtonSrc,
       },
     ]}

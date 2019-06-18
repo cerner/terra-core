@@ -5,14 +5,15 @@
 
 @mixin terra-dropdown-button-variant-color($color-map) {
   .split-button-primary,
-  .split-button-chevron {
+  .split-button-chevron,
+  .dropdown-button-type {
     background-color: map-get($color-map, background-color);
     border-color: map-get($color-map, border-color);
     border-width: map-get($color-map, border-width);
     box-shadow: map-get($color-map, box-shadow);
     color: map-get($color-map, color);
 
-    &.is-focused {
+    &:focus {
       background-color: map-get($color-map, focus-background-color);
       border-color: map-get($color-map, focus-border-color);
       box-shadow: map-get($color-map, focus-box-shadow);
@@ -28,6 +29,25 @@
       background-color: map-get($color-map, active-background-color);
       border-color: map-get($color-map, active-border-color);
       color: map-get($color-map, active-color);
+    }
+  }
+
+  .split-button-primary,
+  .split-button-chevron {
+    font-weight: map-get($color-map, split-font-weight);
+
+    &.is-active,
+    &:active {
+      font-weight: map-get($color-map, split-active-font-weight);
+    }
+  }
+
+  .dropdown-button-type {
+    font-weight: map-get($color-map, dropdown-font-weight);
+
+    &.is-active,
+    &:active {
+      font-weight: map-get($color-map, dropdown-active-font-weight);
     }
   }
 

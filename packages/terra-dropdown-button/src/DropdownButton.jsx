@@ -18,15 +18,17 @@ const propTypes = {
   width: PropTypes.string,
   defaultOption: PropTypes.shape({
     label: PropTypes.string.isRequired,
-    callback: PropTypes.func.isRequired,
+    callback: PropTypes.func,
   }).isRequired,
   variant: PropTypes.string,
+  type: PropTypes.string,
 };
 
 const defaultProps = {
   disabled: false,
   isBlock: false,
   variant: 'neutral',
+  type: 'dropdown',
 };
 
 class DropdownButton extends React.Component {
@@ -38,43 +40,22 @@ class DropdownButton extends React.Component {
     super(props);
 
     this.handleDropdownButtonClick = this.handleDropdownButtonClick.bind(this);
+    this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
 
     this.state = { isOpen: false };
   }
 
   handleDropdownButtonClick() {
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    this.setState({ isOpen: true });
   }
 
-  render() {
-    const {
-      boundingRef,
-      children,
-      disabled,
-      isBlock,
-      defaultOption,
-      variant,
-      width,
-      ...customProps
-    } = this.props;
-    const DropdownButtonClassNames = cx([
-      'dropdown-button',
-      variant,
-      { 'set-width': isBlock || width },
-      { disabled },
-      customProps.className,
-    ]);
-    if (width && !isBlock) {
-      customProps.style = customProps.style || {};
-      customProps.style.width = width;
-    }
+  handleDropdownRequestClose() {
+    this.setState({ isOpen: false });
+  }
 
+  renderSplitType(defaultOption, disabled) {
     return (
-      <div
-        {...customProps}
-        className={DropdownButtonClassNames}
-        ref={(ref) => { this.buttonWrapperRef = ref; }}
-      >
+      <React.Fragment>
         <button
           type="button"
           className={cx('split-button-primary')}
@@ -96,11 +77,64 @@ class DropdownButton extends React.Component {
         >
           <span className={cx('chevron-icon')} />
         </button>
+      </React.Fragment>
+    );
+  }
+
+  renderDropdownType(defaultOption, disabled) {
+    return (
+      <button
+        type="button"
+        className={cx('dropdown-button-type', { 'is-active': this.state.isOpen })}
+        onClick={this.handleDropdownButtonClick}
+        disabled={disabled}
+        tabIndex={disabled ? '-1' : undefined}
+        aria-disabled={disabled}
+      >
+        <span className={cx('dropdown-button-type-text')}>{defaultOption.label}</span>
+        <span className={cx('chevron-icon')} />
+      </button>
+    );
+  }
+
+  render() {
+    const {
+      boundingRef,
+      children,
+      disabled,
+      isBlock,
+      defaultOption,
+      variant,
+      width,
+      type,
+      ...customProps
+    } = this.props;
+    const DropdownButtonClassNames = cx([
+      'dropdown-button',
+      variant,
+      { 'set-width': isBlock || width },
+      { disabled },
+      customProps.className,
+    ]);
+    if (width && !isBlock) {
+      customProps.style = customProps.style || {};
+      customProps.style.width = width;
+    }
+
+    const isDropdownType = type === 'dropdown';
+
+    return (
+      <div
+        {...customProps}
+        className={DropdownButtonClassNames}
+        ref={(ref) => { this.buttonWrapperRef = ref; }}
+      >
+        {(isDropdownType && this.renderDropdownType(defaultOption, disabled)) || this.renderSplitType(defaultOption, disabled)}
         <Dropdown
           boundingRef={boundingRef}
           targetRef={() => this.buttonWrapperRef}
           isOpen={this.state.isOpen}
-          handleRequestClose={this.handleDropdownButtonClick}
+          handleRequestClose={this.handleDropdownRequestClose}
           itemSelectedCallback={DropdownButton.itemSelectedCallback}
           width={(this.buttonWrapperRef && isBlock) ? `${this.buttonWrapperRef.offsetWidth}px` : width}
         >

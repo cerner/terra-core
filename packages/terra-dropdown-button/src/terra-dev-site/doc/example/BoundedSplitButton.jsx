@@ -31,6 +31,7 @@ class BoundedDropdownButton extends React.Component {
           defaultOption={{ label: 'Primary', callback: () => { console.log('primary option'); } }}
           className={cx('top-left')}
           boundingRef={this.getContainerRef}
+          type="split"
         >
           <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
           <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
@@ -39,6 +40,7 @@ class BoundedDropdownButton extends React.Component {
           defaultOption={{ label: 'Primary', callback: () => { console.log('primary option'); } }}
           className={cx('top-right')}
           boundingRef={this.getContainerRef}
+          type="split"
         >
           <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
           <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
@@ -47,6 +49,7 @@ class BoundedDropdownButton extends React.Component {
           defaultOption={{ label: 'Primary', callback: () => { console.log('primary option'); } }}
           className={cx('bottom-left')}
           boundingRef={this.getContainerRef}
+          type="split"
         >
           <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
           <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
@@ -55,6 +58,7 @@ class BoundedDropdownButton extends React.Component {
           defaultOption={{ label: 'Primary', callback: () => { console.log('primary option'); } }}
           className={cx('bottom-right')}
           boundingRef={this.getContainerRef}
+          type="split"
         >
           <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
           <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
