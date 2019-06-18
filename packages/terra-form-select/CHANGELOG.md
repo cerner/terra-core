@@ -10,6 +10,7 @@ Unreleased
 * Additional null check added to private menu to prevent error from empty query
 
 ### Changed
+* Added aria roles for optgroups
 * Added `required` prop
 * Added `isSelect` type on Select component to help with component identity
 
