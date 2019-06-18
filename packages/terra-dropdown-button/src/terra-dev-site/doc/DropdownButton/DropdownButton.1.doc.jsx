@@ -16,6 +16,10 @@ import BoundedDropdownButton from '../example/BoundedDropdownButton';
 import BoundedDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BoundedDropdownButton.jsx';
 import EmphasisDropdownButton from '../example/EmphasisDropdownButton';
 import EmphasisDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/EmphasisDropdownButton.jsx';
+import SetWidthDropdownButton from '../example/SetWidthDropdownButton';
+import SetWidthDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SetWidthDropdownButton.jsx';
+import BlockDropdownButton from '../example/BlockDropdownButton';
+import BlockDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BlockDropdownButton.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -42,6 +46,16 @@ const DocPage = () => (
         title: 'Disabled DropdownButton',
         example: <DisabledDropdownButton />,
         source: DisabledDropdownButtonSrc,
+      },
+      {
+        title: 'Set Width DropdownButton',
+        example: <SetWidthDropdownButton />,
+        source: SetWidthDropdownButtonSrc,
+      },
+      {
+        title: 'Block DropdownButton',
+        example: <BlockDropdownButton />,
+        source: BlockDropdownButtonSrc,
       },
     ]}
     propsTables={[

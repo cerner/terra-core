@@ -5,12 +5,14 @@
 
 :local {
   .dropdown-button {
+    display: inline-block;
+
     &.disabled {
       opacity: var(--terra-dropdown-button-disabled-opacity, 0.4);
       pointer-events: none;
     }
 
-    &.block {
+    &.set-width {
       display: flex;
     }
   }
@@ -52,7 +54,7 @@
     }
   }
 
-  .block .split-button-primary {
+  .set-width .split-button-primary {
     flex-grow: 1;
   }
 

@@ -9,6 +9,9 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   boundingRef: PropTypes.func,
+  /**
+   * The options to display in the dropdown
+   */
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   isBlock: PropTypes.bool,
@@ -57,7 +60,7 @@ class DropdownButton extends React.Component {
     const DropdownButtonClassNames = cx([
       'dropdown-button',
       variant,
-      { block: isBlock || width },
+      { 'set-width': isBlock || width },
       { disabled },
       customProps.className,
     ]);
@@ -70,6 +73,7 @@ class DropdownButton extends React.Component {
       <div
         {...customProps}
         className={DropdownButtonClassNames}
+        ref={(ref) => { this.buttonWrapperRef = ref; }}
       >
         <button
           type="button"
@@ -82,23 +86,23 @@ class DropdownButton extends React.Component {
           {defaultOption.label}
         </button>
         <button
-          ref={(buttonRef) => { this.buttonRef = buttonRef; }}
           type="button"
           onClick={this.handleDropdownButtonClick}
           className={cx('split-button-chevron', { 'is-active': this.state.isOpen })}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
+          aria-label="More Options"
         >
           <span className={cx('chevron-icon')} />
         </button>
         <Dropdown
           boundingRef={boundingRef}
-          targetRef={() => this.buttonRef}
+          targetRef={() => this.buttonWrapperRef}
           isOpen={this.state.isOpen}
           handleRequestClose={this.handleDropdownButtonClick}
           itemSelectedCallback={DropdownButton.itemSelectedCallback}
-          width={width}
+          width={(this.buttonWrapperRef && isBlock) ? `${this.buttonWrapperRef.offsetWidth}px` : width}
         >
           {children}
         </Dropdown>

@@ -40,7 +40,7 @@ class BoundedDropdownButton extends React.Component {
           className={cx('top-right')}
           boundingRef={this.getContainerRef}
         >
-          <DropdownButton.Option label="1st Option" callback={() => { console.log('hi'); }} />
+          <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
           <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
         </DropdownButton>
         <DropdownButton
@@ -56,7 +56,7 @@ class BoundedDropdownButton extends React.Component {
           className={cx('bottom-right')}
           boundingRef={this.getContainerRef}
         >
-          <DropdownButton.Option label="1st Option" callback={() => { console.log('hi'); }} />
+          <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
           <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
         </DropdownButton>
       </div>

@@ -24,6 +24,7 @@ const Dropdown = ({
     isOpen={isOpen}
     onRequestClose={handleRequestClose}
     targetRef={targetRef}
+    contentAttachment="top left"
     // isContentFocusDisabled
   >
     <DropdownList

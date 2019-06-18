@@ -7,6 +7,7 @@ import DropdownButton from '../../../DropdownButton';
 export default () => (
   <DropdownButton
     defaultOption={{ label: 'Primary option', callback: () => { console.log('primary option'); } }}
+    isBlock
   >
     <DropdownButton.Option label="1st Option" callback={() => { console.log('hi'); }} />
     <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
