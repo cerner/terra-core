@@ -8,7 +8,7 @@ const optimizeSvg = csvObject => new Promise((resolve, reject) => {
   const config = optimizeConfig(objectCsv);
   const svgo = new SVGO(config);
 
-  svgo.optimize(objectCsv.svg, (result) => {
+  svgo.optimize(objectCsv.svg).then((result) => {
     if (result.error) {
       reject(result.error);
     } else {
@@ -16,7 +16,6 @@ const optimizeSvg = csvObject => new Promise((resolve, reject) => {
       resolve(objectCsv);
     }
   });
-  resolve(svgo);
 });
 
 export default optimizeSvg;

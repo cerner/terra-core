@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.15.0 - (June 18, 2019)
+------------------
 ### Removed
 * Removed stale WDIO screenshots
 
