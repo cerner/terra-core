@@ -6,6 +6,8 @@ The Responsive Element can be set to be responsive to the parent of the componen
 
 ## Additional Notes
 
+The ResponsiveElement observes the total width. Meaning padding, borders except the margins set on the parent are included in the calculation. Modifying box-sizing will impact how these properties are used in an elements width calculation. For more details see: https://css-tricks.com/almanac/properties/b/box-sizing/
+
 For consistency, breakpoint ranges are inherited from [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
 
 The Responsive Element observes the available width. Meaning padding, borders, and margins set on the parent are not included in the calculation. Modifying box-sizing will impact how these properties are used in an elements width calculation. For more details see: <https://css-tricks.com/almanac/properties/b/box-sizing/>
