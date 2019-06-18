@@ -4,6 +4,10 @@
 
 ### Breaking Changes
 
+
+* The componentDidMount method handleResize Event call is now being changed to use the width of ResponsiveElement parent container. when responsiveTo prop is set as 'parent'.
+  -  this.handleResize(entries[0].contentRect.width);
+  +  this.handleResize(entries[0].target.getBoundingClientRect().width);
 * The `breakpoints.scss` file has been removed.
 * The `defaultElement` prop has been removed.
 * The breakpoint ranges have been changed to align with [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).

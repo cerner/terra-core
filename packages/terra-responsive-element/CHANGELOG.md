@@ -24,6 +24,9 @@ Unreleased
 ### Changed
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
+### Fixed
+* Repititive Resizing when scrollbars appear between two breakpoints
+
 4.7.0 - (May 1, 2019)
 ------------------
 ### Changed
