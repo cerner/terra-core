@@ -22,6 +22,9 @@ Unreleased
 2.15.1 - (June 12, 2019)
 ------------------
 ### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
+### Changed
 * Reverted change to adjust header-icon top styling
 
 2.15.0 - (June 11, 2019)
