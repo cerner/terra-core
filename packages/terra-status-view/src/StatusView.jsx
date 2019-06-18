@@ -117,8 +117,6 @@ const StatusView = ({
   let defaultTitle;
   if (checkVariantExistence(variant)) {
     defaultTitle = intl.formatMessage({ id: `Terra.status-view.${variant}` });
-  } else {
-    defaultTitle = '';
   }
 
   // Custom title takes precedence
