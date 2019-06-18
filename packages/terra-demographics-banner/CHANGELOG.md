@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 
+3.13.0 - (June 18, 2019)
+------------------
 ### Changed
 * Updated to use the new responsive element breakpoints
 

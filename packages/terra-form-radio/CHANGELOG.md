@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.14.0 - (June 18, 2019)
+------------------
 ### Changed
 * Enabled ability to mark RadioField as required
 
