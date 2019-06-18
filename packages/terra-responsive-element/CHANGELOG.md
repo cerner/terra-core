@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 
+5.0.0 - (June 18, 2019)
+------------------
 ### Breaking Changes
 
 * Removed `breakpoints.scss`
@@ -15,6 +17,10 @@ Unreleased
 * Added `onChange` callback function that is invoked when a breakpoint range changes
 * Added `onResize` callback function that is invoked when a resize event is triggered
 * Added `children` prop to use in conjunction with `onChange` to create controlled responsive elements
+
+### Fixed
+
+* Repetitive resizing when a scrollbar appears between two breakpoints
 
 4.8.0 - (June 11, 2019)
 ------------------

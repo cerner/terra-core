@@ -1,29 +1,19 @@
 import React from 'react';
+import classNames from 'classnames/bind';
+import styles from './examplesetup.scss';
+
+const cx = classNames.bind(styles);
 
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 const simpleText = <div>{ipsum}</div>;
-const textWithBlueBorder = <div style={{ border: '2px solid #0079BE' }}>{ipsum}</div>;
+const textWithBlueBorder = <div className={cx('outlined-placeholder')}>{ipsum}</div>;
 
 const alignExampleDiv = (
-  <div
-    style={{
-      backgroundColor: '#000',
-      display: 'block',
-      height: '20px',
-      width: '40px',
-    }}
-  />
+  <div className={cx('placeholder')} />
 );
 
 const alignExampleDivBlue = (
-  <div
-    style={{
-      backgroundColor: '#0079BE',
-      display: 'block',
-      height: '20px',
-      width: '40px',
-    }}
-  />
+  <div className={cx('highlighted-placeholder')} />
 );
 
 export {

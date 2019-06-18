@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.12.0 - (June 18, 2019)
+------------------
 ### Changed
 * Enabled ability to mark CheckboxField as required
 

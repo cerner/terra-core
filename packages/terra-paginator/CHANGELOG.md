@@ -4,8 +4,13 @@ ChangeLog
 Unreleased
 ----------
 
+2.15.0 - (June 18, 2019)
+------------------
 ### Changed
 * Updated to use the new responsive element breakpoints
+
+### Fixed
+* Fixed pageSet logic to support total pages less than max allowed
 
 2.14.1 - (June 12, 2019)
 ------------------

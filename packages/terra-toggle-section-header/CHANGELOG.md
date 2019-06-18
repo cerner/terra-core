@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.12.0 - (June 18, 2019)
+------------------
 ### Changed
 * Updated toggle tests to use Terra.defineViewports and to use Terra.validate element helpers
 

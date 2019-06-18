@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Fixed accessibility issue in list item tests
 
+4.8.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
+
 4.7.0 - (June 11, 2019)
 ------------------
 ### Removed
