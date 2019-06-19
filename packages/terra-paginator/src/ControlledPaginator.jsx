@@ -244,7 +244,7 @@ Previous
   /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
 
   render() {
-    return <ResponsiveElement defaultElement={this.reducedPaginator()} small={this.defaultPaginator()} />;
+    return <ResponsiveElement tiny={this.reducedPaginator()} medium={this.defaultPaginator()} />;
   }
 }
 

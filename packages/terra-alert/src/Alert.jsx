@@ -171,8 +171,7 @@ const Alert = ({
 
   return (
     <ResponsiveElement
-      responsiveTo="parent"
-      defaultElement={(
+      tiny={(
         <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle}>
           <div className={bodyClassNameForNarrowParent}>
             {getAlertIcon(type, customIcon)}
@@ -181,7 +180,7 @@ const Alert = ({
           {actionsSection}
         </div>
 )}
-      tiny={(
+      small={(
         <div {...attributes} className={wideAlertClassNames} style={outerDivStyle}>
           <div className={cx(['body', 'body-std'])}>
             {getAlertIcon(type, customIcon)}

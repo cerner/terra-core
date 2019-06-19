@@ -3,6 +3,7 @@ describe('Search Field', () => {
 
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/default-search-field'));
+    browser.execute('document.querySelector("input").style.caretColor = "transparent";');
 
     Terra.it.matchesScreenshot('empty');
 
@@ -16,6 +17,7 @@ describe('Search Field', () => {
 
     it('should scroll text that is too long', () => {
       browser.addValue('input', ' is a correctly spelled word');
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.matchesScreenshot('scrolled text');
@@ -119,7 +121,7 @@ describe('Search Field', () => {
     Terra.it.matchesScreenshot('with too short text');
 
     it('should not search with the button', () => {
-      browser.click('button');
+      browser.keys('Enter');
       // Ensure button on hover styling is disabled
       browser.click('#search-callback-text');
     });
@@ -196,9 +198,7 @@ describe('Search Field', () => {
     Terra.it.matchesScreenshot('text before search');
 
     it('should search with the button', () => {
-      browser.click('button');
-      // Ensure button on hover styling is disabled
-      browser.click('h3');
+      browser.keys('Enter');
     });
 
     Terra.it.matchesScreenshot('searched text');

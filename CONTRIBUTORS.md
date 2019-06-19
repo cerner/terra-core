@@ -71,13 +71,16 @@ Cerner Corporation
 - Supreeth MR [@supreethmr]
 - Chandrakanth Dudela [@ChanduDudela]
 - Lauren Stephenson [@CompSciLauren]
-- Shetty Akarsh [@ShettyAkarsh]
+- Akarsh Shetty [@ShettyAkarsh]
 - Caleb Meyer [@calebmeyer]
 - Andrew Givens [@agivens96]
 - Anjali Roy [@anjaliroy19]
 - Younghwan Jang [@yfaney]
 - Naveen Kumar Ramamurthy [@nramamurth]
 - Pranav Agarwal [@pranav300]
+- Lokesh P [@lokesh-0813]
+- Avinash Gupta [@avinashg1994]
+- Philip Meznar [@prmeznar]
 
 Community
 
@@ -183,3 +186,6 @@ Community
 [@nramamurth]: https://github.com/nramamurth
 [@PayalSawant]: https://github.com/PayalSawant
 [@pranav300]: https://github.com/pranav300
+[@lokesh-0813]: https://github.com/lokesh-0813
+[@avinashg1994]: https://github.com/avinashg1994
+[@prmeznar]: https://github.com/prmeznar

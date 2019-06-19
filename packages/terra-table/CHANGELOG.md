@@ -12,6 +12,19 @@ Unreleased
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
+3.16.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
+
+3.15.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
+
 3.14.0 - (May 22, 2019)
 ------------------
 ### Changed

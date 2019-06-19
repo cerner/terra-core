@@ -3,8 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.8.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 3.7.0 - (May 1, 2019)
 ------------------

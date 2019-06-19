@@ -1,21 +1,7 @@
-const viewports = Terra.viewports('tiny', 'medium', 'large');
-
-describe('Tag', () => {
+Terra.describeViewports('Tag', ['tiny'], () => {
   describe('Default', () => {
-    before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
-
-    describe('Default Tag', () => {
-      before(() => browser.url('/#/raw/tests/terra-tag/tag/default-tag'));
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot();
-    });
-  });
-
-  describe('Default OnClick Tag', () => {
-    before(() => browser.url('/#/raw/tests/terra-tag/tag/default-on-click-tag'));
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    before(() => browser.url('/#/raw/tests/terra-tag/tag/default-tag'));
+    Terra.it.validatesElement();
   });
 
   describe('Href Tag', () => {
@@ -25,48 +11,34 @@ describe('Tag', () => {
 
   describe('Icon and Text Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/icon-and-text-tag'));
-
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Icon and Text Long Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/long-text-tag'));
-
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
-  });
-
-  describe('Multiple Tags', () => {
-    before(() => browser.url('/#/raw/tests/terra-tag/tag/multiple-tags'));
-
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('OnClick Tag', () => {
     before(() => browser.url('/#/raw/tests/terra-tag/tag/on-click-tag'));
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
 
-    describe('OnClick Tag - Keyboard focus', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-tag/tag/on-click-tag');
-        browser.keys('Tab');
-      });
+    Terra.it.validatesElement();
 
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot();
+    it('tabs to tag', () => {
+      browser.click('#root');
+      browser.keys('Tab');
+      expect(browser.hasFocus('#on-click')).to.be.true;
+      Terra.validates.element('focus');
     });
 
-    describe('OnClick Tag - Hover', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-tag/tag/on-click-tag');
-        browser.moveToObject('button');
-      });
-
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot();
+    it('hovers the tag', () => {
+      browser.moveToObject('button');
+      Terra.validates.element('hover');
     });
   });
+});
+
+Terra.describeViewports('Multiple Tags', ['tiny', 'medium', 'large'], () => {
+  before(() => browser.url('/#/raw/tests/terra-tag/tag/multiple-tags'));
+  Terra.it.validatesElement();
 });

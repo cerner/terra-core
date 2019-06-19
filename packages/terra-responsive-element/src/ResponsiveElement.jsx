@@ -1,20 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
-import breakpoints from './breakpoints.module.scss';
+import breakpoints, { activeBreakpointForSize } from 'terra-breakpoints';
 
 const DependentViewport = {
   WINDOW: 'window',
   PARENT: 'parent',
 };
 
-/* Disabled for the defaultElement which is used implicitly */
-/* eslint-disable react/no-unused-prop-types */
 const propTypes = {
   /**
-   * An element to be displayed at default breakpoints. ( Between 0 and tiny )
-  */
-  defaultElement: PropTypes.element,
+   * Child nodes.
+   */
+  children: PropTypes.node,
+  /**
+   * A callback function invoked when the breakpoint size changes. onChange(<string>breakpoint)
+   */
+  onChange: PropTypes.func,
+  /**
+   * A callback function invoked when the responsive target resizes. onResize(<number>width)
+   */
+  onResize: PropTypes.func,
   /**
    * An element to be displayed at tiny breakpoints.
    */
@@ -35,6 +41,10 @@ const propTypes = {
    * An element to be displayed at huge breakpoints.
    */
   huge: PropTypes.element,
+  /**
+   * An element to be displayed at enormous breakpoints.
+   */
+  enormous: PropTypes.element,
   /**
    * The viewport the element will be responsive to. One of `window` or `parent`.
    */
@@ -60,7 +70,7 @@ class ResponsiveElement extends React.Component {
       this.resizeObserver = new ResizeObserver((entries) => {
         this.animationFrameID = window.requestAnimationFrame(() => {
           this.animationFrameID = null;
-          this.handleResize(entries[0].contentRect.width);
+          this.handleResize(entries[0].target.getBoundingClientRect().width);
         });
       });
       this.resizeObserver.observe(this.container);
@@ -86,26 +96,48 @@ class ResponsiveElement extends React.Component {
   }
 
   handleResize(width) {
-    let element;
     const {
-      tiny, small, medium, large, huge,
-    } = breakpoints;
-    if (width >= huge && this.props.huge) {
-      element = 'huge';
-    } else if (width >= large && this.props.large) {
-      element = 'large';
-    } else if (width >= medium && this.props.medium) {
-      element = 'medium';
-    } else if (width >= small && this.props.small) {
-      element = 'small';
-    } else if (width >= tiny && this.props.tiny) {
-      element = 'tiny';
-    } else {
-      element = 'defaultElement';
+      onChange,
+      onResize,
+      tiny,
+      small,
+      medium,
+      large,
+      huge,
+      enormous,
+    } = this.props;
+
+    if (onResize) {
+      onResize(width);
     }
 
-    if (this.state.element !== element) {
-      this.setState({ element });
+    const activeBreakpoint = activeBreakpointForSize(width);
+    if (onChange && activeBreakpoint !== this.breakpoint) {
+      onChange(activeBreakpoint);
+    }
+
+    this.breakpoint = activeBreakpoint;
+
+    // Only update the state if an uncontrolled component exists.
+    if (tiny || small || medium || large || huge || enormous) {
+      let element;
+      if (width >= breakpoints.enormous && enormous) {
+        element = 'enormous';
+      } else if (width >= breakpoints.huge && huge) {
+        element = 'huge';
+      } else if (width >= breakpoints.large && large) {
+        element = 'large';
+      } else if (width >= breakpoints.medium && medium) {
+        element = 'medium';
+      } else if (width >= breakpoints.small && small) {
+        element = 'small';
+      } else {
+        element = 'tiny';
+      }
+
+      if (this.state.element !== element) {
+        this.setState({ element });
+      }
     }
   }
 
@@ -114,11 +146,18 @@ class ResponsiveElement extends React.Component {
   }
 
   render() {
+    const { children, responsiveTo } = this.props;
+
     if (this.state.element) {
       return this.props[this.state.element] || null;
     }
 
-    return <div ref={this.setContainer} />;
+    return (
+      <React.Fragment>
+        {responsiveTo === 'parent' && !this.container && <div ref={this.setContainer} />}
+        {children}
+      </React.Fragment>
+    );
   }
 }
 
