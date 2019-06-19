@@ -5,7 +5,10 @@
 
 :local {
   .dropdown-button {
+    border-radius: var(--terra-dropdown-button-border-radius, 3px);
+    box-shadow: var(--terra-dropdown-button-box-shadow);
     display: inline-block;
+    white-space: nowrap;
 
     &.disabled {
       opacity: var(--terra-dropdown-button-disabled-opacity, 0.4);
@@ -38,10 +41,14 @@
   .dropdown-button-type {
     border-radius: var(--terra-dropdown-button-border-radius, 3px);
     border-style: solid;
-    font-size: 1rem;
-    line-height: 1.4285714286;
+    font-size: var(--terra-dropdown-button-dropdown-type-font-size, 1rem);
+    line-height: var(--terra-dropdown-button-dropdown-type-line-height, 1.4285714286);
     outline: 0;
-    padding: 4px 7px 4px 10px;
+    padding-bottom: var(--terra-dropdown-button-dropdown-type-padding-bottom, 4px);
+    padding-left: var(--terra-dropdown-button-dropdown-type-padding-left, 10px);
+    padding-right: var(--terra-dropdown-button-dropdown-type-padding-right, 7px);
+    padding-top: var(--terra-dropdown-button-dropdown-type-padding-top, 4px);
+    white-space: normal;
   }
 
   .dropdown-button-type-text {
@@ -56,10 +63,14 @@
     // stylelint-disable-next-line terra/custom-property-name
     border-top-left-radius: var(--terra-dropdown-button-border-radius, 3px);
     border-top-right-radius: 0;
-    font-size: 1rem;
-    line-height: 1.4285714286;
+    font-size: var(--terra-dropdown-button-split-type-font-size, 1rem);
+    line-height: var(--terra-dropdown-button-split-type-line-height, 1.4285714286);
     outline: 0;
-    padding: 4px 10px;
+    padding-bottom: var(--terra-dropdown-button-split-type-primary-padding-bottom, 4px);
+    padding-left: var(--terra-dropdown-button-split-type-primary-padding-left, 10px);
+    padding-right: var(--terra-dropdown-button-split-type-primary-padding-right, 10px);
+    padding-top: var(--terra-dropdown-button-split-type-primary-padding-top, 4px);
+    white-space: normal;
 
     &:focus {
       position: relative;
@@ -79,10 +90,13 @@
     border-top-left-radius: 0;
     // stylelint-disable-next-line terra/custom-property-name
     border-top-right-radius: var(--terra-dropdown-button-border-radius, 3px);
-    font-size: 1rem;
-    line-height: 1.4285714286;
+    font-size: var(--terra-dropdown-button-split-type-font-size, 1rem);
+    line-height: var(--terra-dropdown-button-split-type-line-height, 1.4285714286);
     outline: 0;
-    padding: 4px 7px;
+    padding-bottom: var(--terra-dropdown-button-split-type-chevron-padding-bottom, 4px);
+    padding-left: var(--terra-dropdown-button-split-type-chevron-padding-left, 7px);
+    padding-right: var(--terra-dropdown-button-split-type-chevron-padding-right, 7px);
+    padding-top: var(--terra-dropdown-button-split-type-chevron-padding-top, 4px);
   }
 
   .neutral {

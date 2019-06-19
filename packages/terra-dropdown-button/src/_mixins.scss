@@ -9,7 +9,6 @@
   .dropdown-button-type {
     background-color: map-get($color-map, background-color);
     border-color: map-get($color-map, border-color);
-    border-width: map-get($color-map, border-width);
     box-shadow: map-get($color-map, box-shadow);
     color: map-get($color-map, color);
 
@@ -34,7 +33,12 @@
 
   .split-button-primary,
   .split-button-chevron {
+    border-width: map-get($color-map, split-border-width);
     font-weight: map-get($color-map, split-font-weight);
+
+    &:focus {
+      border-width: map-get($color-map, split-focus-border-width);
+    }
 
     &.is-active,
     &:active {
@@ -43,7 +47,12 @@
   }
 
   .dropdown-button-type {
+    border-width: map-get($color-map, dropdown-border-width);
     font-weight: map-get($color-map, dropdown-font-weight);
+
+    &:focus {
+      border-width: map-get($color-map, dropdown-focus-border-width);
+    }
 
     &.is-active,
     &:active {

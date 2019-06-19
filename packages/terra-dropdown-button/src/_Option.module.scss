@@ -1,17 +1,27 @@
 :local {
   .option {
+    color: var(--terra-dropdown-button-menu-item-color, #1c1f21);
+    font-size: var(--terra-dropdown-button-menu-item-font-size, 0.9285714286rem);
+    line-height: var(--terra-dropdown-button-menu-item-line-height, 1.2);
     outline: 0;
     padding-bottom: var(--terra-dropdown-button-menu-item-padding-bottom, 4px);
     padding-left: var(--terra-dropdown-button-menu-item-padding-left, 10px);
     padding-right: var(--terra-dropdown-button-menu-item-padding-right, 10px);
     padding-top: var(--terra-dropdown-button-menu-item-padding-top, 4px);
+    white-space: normal;
 
     &.focus {
       background: var(--terra-dropdown-button-menu-item-focus-background, #ebf6fd);
-      box-shadow: 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35);
+      box-shadow: var(--terra-dropdown-button-menu-item-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
       outline: 0;
       position: relative;
       z-index: 1;
+
+      &.active {
+        background-color: var(--terra-dropdown-button-menu-item-focus-active-background-color, #ebf6fd);
+        box-shadow: var(--terra-dropdown-button-menu-item-focus-active-box-shadow, none);
+        color: var(--terra-dropdown-button-menu-item-focus-active-color, #1c1f21);
+      }
     }
 
     &:hover {

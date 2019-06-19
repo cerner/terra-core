@@ -20,6 +20,9 @@ const propTypes = {
     label: PropTypes.string.isRequired,
     callback: PropTypes.func,
   }).isRequired,
+  /**
+   * 'emphasis' variant is only valid on the 'dropdown' type.
+   */
   variant: PropTypes.string,
   type: PropTypes.string,
 };
@@ -109,9 +112,12 @@ class DropdownButton extends React.Component {
       type,
       ...customProps
     } = this.props;
+
+    const isDropdownType = type === 'dropdown';
+
     const DropdownButtonClassNames = cx([
       'dropdown-button',
-      variant,
+      isDropdownType ? variant : 'neutral',
       { 'set-width': isBlock || width },
       { disabled },
       customProps.className,
@@ -120,8 +126,6 @@ class DropdownButton extends React.Component {
       customProps.style = customProps.style || {};
       customProps.style.width = width;
     }
-
-    const isDropdownType = type === 'dropdown';
 
     return (
       <div

@@ -15,11 +15,15 @@ const propTypes = {
   /**
    * @private
    */
+  isFocused: PropTypes.bool,
+  /**
+   * @private
+   */
   itemSelectedCallback: PropTypes.func,
 };
 
 const Option = ({
-  label, callback, isActive, itemSelectedCallback,
+  label, callback, isFocused, isActive, itemSelectedCallback,
 }) => (
   <li>
     <div
@@ -28,7 +32,8 @@ const Option = ({
       tabIndex="-1"
       className={cx([
         'option',
-        { focus: isActive },
+        { focus: isFocused },
+        { active: isActive },
       ])}
     >
       {label}

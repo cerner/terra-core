@@ -20,37 +20,41 @@ class DropdownList extends React.Component {
 
     this.cloneChildren = this.cloneChildren.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
 
-    const active = Util.findFirst(this);
-    this.state = { active };
+    const focused = Util.findFirst(this);
+    this.state = { focused, active: undefined };
   }
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('keyup', this.handleKeyUp);
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('keyup', this.handleKeyUp);
   }
 
   handleKeyDown(event) {
     const { keyCode } = event;
-    const { active } = this.state;
+    const { focused } = this.state;
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
-      const item = Util.findByValue(this, active);
+      const item = Util.findByValue(this, focused);
       this.props.itemSelectedCallback({ label: item.props.label, callback: item.props.callback });
+      this.setState({ active: item.props.label });
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
-      this.setState({ active: Util.findNext(this, active) });
+      this.setState({ focused: Util.findNext(this, focused) });
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_UP) {
-      this.setState({ active: Util.findPrevious(this, active) });
+      this.setState({ focused: Util.findPrevious(this, focused) });
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_HOME) {
-      this.setState({ active: Util.findFirst(this) });
+      this.setState({ focused: Util.findFirst(this) });
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_END) {
-      this.setState({ active: Util.findLast(this) });
+      this.setState({ focused: Util.findLast(this) });
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_TAB) {
       this.props.handleRequestClose();
@@ -58,8 +62,17 @@ class DropdownList extends React.Component {
     }
   }
 
+  handleKeyUp(event) {
+    const { keyCode } = event;
+    if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
+      this.setState({ active: undefined });
+      event.preventDefault();
+    }
+  }
+
   cloneChildren() {
     return React.Children.map(this.props.children, child => React.cloneElement(child, {
+      isFocused: child.props.label === this.state.focused,
       isActive: child.props.label === this.state.active,
       itemSelectedCallback: this.props.itemSelectedCallback,
     }));
