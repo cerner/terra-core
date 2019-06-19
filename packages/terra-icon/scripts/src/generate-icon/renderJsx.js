@@ -11,7 +11,7 @@ const themeIconTemplatePath = path.join(__dirname, './template.txt');
 
 // Generate list of static color icon names
 const staticIcons = iconData
-  .filter(icon => !icon.themeable)
+  .filter(icon => !icon.themeable && !icon.deprecated)
   .map(icon => icon.componentName);
 
 /**

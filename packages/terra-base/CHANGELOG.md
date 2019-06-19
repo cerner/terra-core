@@ -3,11 +3,21 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Added missing upgrade guide for migrating from terra-base v4 to v5
+
+5.8.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
+
+5.7.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 5.6.0 - (May 21, 2019)
 ------------------

@@ -25,11 +25,11 @@ const defaultProps = {
 };
 
 const OptGroup = ({ children, disabled, label }) => (
-  <li className={cx('opt-group', { 'is-disabled': disabled })}>
+  <li className={cx('opt-group', { 'is-disabled': disabled })} role="group">
     <div className={cx('label')}>
       {label}
     </div>
-    <ul className={cx('options')}>
+    <ul className={cx('options')} role="listbox">
       {React.Children.map(children, child => (
         React.cloneElement(child, { disabled: disabled || !!child.props.disabled })))}
     </ul>

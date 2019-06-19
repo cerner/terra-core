@@ -166,6 +166,15 @@ const Field = (props, { intl }) => {
       ) : null
   );
 
+  const content = React.Children.map(children, (child) => {
+    if (required && child && (child.type.isInput || child.type.isSelect || child.type.isTextarea)) {
+      return React.cloneElement(child, {
+        required: true,
+      });
+    }
+    return child;
+  });
+
   const labelGroup = (
     <div className={cx(['label-group', { 'label-group-hidden': isLabelHidden }])}>
       {isInvalid && <div className={cx('error-icon')}>{errorIcon}</div>}
@@ -185,7 +194,7 @@ const Field = (props, { intl }) => {
   return (
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
-      {children}
+      {content}
       {isInvalid && error && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
       {help && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
     </div>

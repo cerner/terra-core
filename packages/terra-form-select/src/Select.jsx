@@ -85,6 +85,10 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
+   * Whether the field is required.
+   */
+  required: PropTypes.bool,
+  /**
    * The selected value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -115,6 +119,7 @@ const defaultProps = {
   onSelect: undefined,
   optionFilter: undefined,
   placeholder: undefined,
+  required: false,
   value: undefined,
   variant: 'default',
 };
@@ -209,7 +214,7 @@ class Select extends React.Component {
   render() {
     const { intl } = this.context;
     const {
-      allowClear, children, defaultValue, onChange, placeholder, value, ...otherProps
+      allowClear, children, defaultValue, onChange, placeholder, required, value, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
@@ -233,6 +238,7 @@ class Select extends React.Component {
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
         placeholder={selectPlaceholder}
+        required={required}
         totalOptions={Util.getTotalNumberOfOptions(children)}
         clearOptionDisplay={clearOptionDisplay}
         dropdown={dropdownProps => (
@@ -251,5 +257,6 @@ Select.OptGroup = OptGroup;
 Select.propTypes = propTypes;
 Select.defaultProps = defaultProps;
 Select.contextTypes = contextTypes;
+Select.isSelect = true;
 
 export default Select;

@@ -1,3 +1,4 @@
 {
-  "Terra.form.field.optional": "(Optional)"
+  "Terra.form.field.optional": "(Optional)",
+  "Terra.form.field.required": "Pflichtfeld"
 }

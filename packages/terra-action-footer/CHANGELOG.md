@@ -3,11 +3,24 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.12.0 - (June 18, 2019)
+------------------
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
+2.11.1 - (June 12, 2019)
+------------------
+### Changed
+* Patch dependency version bump
+
+2.11.0 - (June 11, 2019)
+------------------
 ### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 2.10.0 - (May 1, 2019)
 ------------------
