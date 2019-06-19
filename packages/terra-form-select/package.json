@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "5.16.0",
+  "version": "5.17.0",
   "description": "Provides a drop down of selectable options.",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
     "terra-doc-template": "^2.10.0",
-    "terra-form-field": "^3.11.0",
+    "terra-form-field": "^3.12.0",
     "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.30.0"
   },

@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 
+5.0.0 - (June 18, 2019)
+------------------
 ### Breaking Changes
 
 * Removed `breakpoints.scss`
