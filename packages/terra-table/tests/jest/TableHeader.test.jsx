@@ -1,16 +1,16 @@
 import React from 'react';
-import Table from '../../src/Table';
+import { HeaderCell, Header } from '../../src/index';
 
 // Constants
 const clickHandler = e => e;
-const headerData1 = <Table.HeaderCell content="Name" key="NAME" onClick={clickHandler} />;
-const headerData2 = <Table.HeaderCell content="Address" key="ADDRESS" />;
-const headerData3 = <Table.HeaderCell content="Phone Number" key="PHONE_NUMBER" />;
+const headerData1 = <HeaderCell key="NAME" onClick={clickHandler}>Name</HeaderCell>;
+const headerData2 = <HeaderCell key="ADDRESS">Address</HeaderCell>;
+const headerData3 = <HeaderCell key="PHONE_NUMBER">Phone Number</HeaderCell>;
 const header = [headerData1, headerData2, headerData3];
 
 // Snapshot test
 it('should render table header tag', () => {
-  const defaultTableHeader = <Table.Header>{header}</Table.Header>;
+  const defaultTableHeader = <Header>{header}</Header>;
   const tableHeader = shallow(defaultTableHeader);
   expect(tableHeader).toMatchSnapshot();
 });

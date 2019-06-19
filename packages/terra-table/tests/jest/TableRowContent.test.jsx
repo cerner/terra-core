@@ -1,9 +1,9 @@
 import React from 'react';
-import Table from '../../src/Table';
+import { Cell } from '../../src/index';
 
 // Snapshot test
 it('should render a default table row content', () => {
-  const defaultTableRowContent = <Table.Cell content="Table Data" />;
+  const defaultTableRowContent = <Cell>Table Data</Cell>;
   const tableRowContent = shallow(defaultTableRowContent);
   expect(tableRowContent).toMatchSnapshot();
 });

@@ -22,7 +22,7 @@ const propTypes = {
    */
   icon: PropTypes.element,
   /**
-   * Whether or not the cell should adheader to the tables paddingStyle.
+   * Whether or not the cell should adhere to the tables paddingStyle.
    */
   isPadded: PropTypes.bool,
   /**
@@ -36,7 +36,7 @@ const propTypes = {
   metaData: PropTypes.object,
   /**
    * Function callback for when the appropriate click or key action is performed.
-   * Callback contains the javascript evnt and prop metadata, e.g. onSelect(event, metaData)
+   * Callback contains the javascript event and prop metadata, e.g. onSelect(event, metaData)
    */
   onSelect: PropTypes.func,
   /**
