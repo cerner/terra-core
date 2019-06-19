@@ -9,6 +9,8 @@ Unreleased
 ### Breaking Changes
 * Removed `customStatusColor` prop
 
+3.17.0 - (June 18, 2019)
+------------------
 ### Removed
 * Removed stale WDIO screenshots
 

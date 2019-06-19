@@ -71,7 +71,7 @@ Cerner Corporation
 - Supreeth MR [@supreethmr]
 - Chandrakanth Dudela [@ChanduDudela]
 - Lauren Stephenson [@CompSciLauren]
-- Shetty Akarsh [@ShettyAkarsh]
+- Akarsh Shetty [@ShettyAkarsh]
 - Caleb Meyer [@calebmeyer]
 - Andrew Givens [@agivens96]
 - Anjali Roy [@anjaliroy19]

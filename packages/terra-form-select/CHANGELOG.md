@@ -3,10 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.17.0 - (June 18, 2019)
+------------------
 ### Fixed
 * Additional null check added to private menu to prevent error from empty query
 
 ### Changed
+* Added aria roles for optgroups
 * Added `required` prop
 * Added `isSelect` type on Select component to help with component identity
 
