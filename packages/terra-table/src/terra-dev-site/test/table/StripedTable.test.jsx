@@ -5,7 +5,7 @@ import Table, {
   HeaderCell,
   Row,
   Cell,
-} from '../../../../index';
+} from '../../../index';
 
 const StripedTable = () => (
   <Table id="Table">

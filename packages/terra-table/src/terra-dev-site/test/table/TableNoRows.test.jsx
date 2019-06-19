@@ -3,7 +3,7 @@ import Table, {
   Body,
   Header,
   HeaderCell,
-} from '../../../../index';
+} from '../../../index';
 
 const SingleRowTable = () => (
   <Table isStriped={false}>

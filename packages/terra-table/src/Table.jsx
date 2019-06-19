@@ -17,28 +17,32 @@ const propTypes = {
   /**
    * Whether or not the table cells should be padded
    */
-  isPadded: PropTypes.bool,
+  paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
 };
 
 const defaultProps = {
   isStriped: true,
-  isPadded: true,
+  paddingStyle: 'none',
 };
 
 const Table = ({
   children,
   isStriped,
-  isPadded,
+  paddingStyle,
   ...customProps
 }) => {
   const tableClassNames = cx([
     'table',
     { striped: isStriped },
-    { padded: isPadded },
     customProps.className,
   ]);
+
+  const attrSpread = {};
+  if (paddingStyle !== 'none') {
+    attrSpread['data-table-padding'] = paddingStyle;
+  }
   return (
-    <table {...customProps} className={tableClassNames}>
+    <table {...customProps} {...attrSpread} className={tableClassNames}>
       {children}
     </table>
   );

@@ -116,21 +116,18 @@
     min-width: var(--terra-table-cell-huge-min-width, 10.5rem);
   }
 
-  .padded {
-    td {
-      padding-bottom: var(--terra-table-cell-padding-bottom, 0.5em);
-      padding-left: var(--terra-table-cell-padding-left, 0.75em);
-      padding-right: var(--terra-table-cell-padding-right, 0.75em);
-      padding-top: var(--terra-table-cell-padding-top, 0.5em);
-    }
+  [data-table-padding='standard'] td, th {
+    padding-bottom: var(--terra-table-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-cell-standard-padding-left, 0.75rem);
+    padding-right: var(--terra-table-cell-standard-padding-right, 0.75rem);
+    padding-top: var(--terra-table-cell-standard-padding-top, 0.5rem);
+  }
 
-    th {
-      height: var(--terra-table-header-cell-height);
-      padding-bottom: var(--terra-table-header-cell-padding-bottom, 0.5em);
-      padding-left: var(--terra-table-header-cell-padding-left, 0.75em);
-      padding-right: var(--terra-table-header-cell-padding-right, 0.75em);
-      padding-top: var(--terra-table-header-cell-padding-top, 0.5em);
-    }
+  [data-table-padding='compact'] td, th {
+    padding-bottom: var(--terra-table-cell-compact-padding-bottom, 0.25rem);
+    padding-left: var(--terra-table-cell-compact-padding-left, 0.75rem);
+    padding-right: var(--terra-table-cell-compact-padding-right, 0.75rem);
+    padding-top: var(--terra-table-cell-compact-padding-top, 0.25rem);
   }
 
   .striped {

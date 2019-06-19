@@ -6,7 +6,7 @@ import Table, {
   HeaderCell,
   Row,
   Cell,
-} from '../../../../index';
+} from '../../../index';
 
 const TableWithSortingIndicator = () => (
   <Table isStriped={false}>
