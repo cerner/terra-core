@@ -20,24 +20,6 @@
     }
   }
 
-  // .outer-border-wrapper {
-  //   // stylelint-disable-next-line terra/custom-property-name
-  //   border-bottom-left-radius: var(--terra-dropdown-button-border-radius, 3px);
-  //   border-bottom-right-radius: 0;
-  //   // stylelint-disable-next-line terra/custom-property-name
-  //   border-top-left-radius: var(--terra-dropdown-button-border-radius, 3px);
-  //   border-top-right-radius: 0;
-  //   display: inline-block;
-
-  //   &.neutral {
-  //     border: var(--terra-dropdown-button-neutral-outer-border);
-  //   }
-
-  //   &.emphasis {
-  //     border: var(--terra-dropdown-button-emphasis-outer-border);
-  //   }
-  // }
-
   .dropdown-button-type {
     border-radius: var(--terra-dropdown-button-border-radius, 3px);
     border-style: solid;
