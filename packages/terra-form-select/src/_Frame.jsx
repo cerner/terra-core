@@ -139,7 +139,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
-      activeValue: '',
+      activeOptionDisplay: '',
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -186,12 +186,13 @@ class Frame extends React.Component {
   }
 
   getDisplay(displayId, placeholderId, ariaDescribedBy) {
-    const { hasSearchChanged, searchValue, activeValue } = this.state;
+    const { hasSearchChanged, searchValue, activeOptionDisplay } = this.state;
     const {
       disabled, display, placeholder, variant,
     } = this.props;
 
     const searchDisplayValue = hasSearchChanged ? searchValue : display;
+    const defaultDisplayValue = activeOptionDisplay || display;
 
     const inputAttrs = {
       disabled,
@@ -227,15 +228,15 @@ class Frame extends React.Component {
               ) : null
             }
             <li className={cx('search-wrapper')}>
-              <input {...inputAttrs} value={this.shouldSearch ? searchValue : activeValue} />
+              <input {...inputAttrs} value={this.shouldSearch ? searchValue : activeOptionDisplay} />
             </li>
           </ul>
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <div className={cx('content')}><input {...inputAttrs} value={this.shouldSearch ? searchDisplayValue : activeValue} /></div>;
+        return <div className={cx('content')}><input {...inputAttrs} value={this.shouldSearch ? searchDisplayValue : activeOptionDisplay} /></div>;
       default:
-        return activeValue ? <span id={displayId}>{activeValue}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
+        return defaultDisplayValue ? <span id={displayId}>{defaultDisplayValue}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
   }
 
@@ -243,10 +244,10 @@ class Frame extends React.Component {
    * Closes the dropdown.
    */
   closeDropdown() {
-    let activeValue = '';
+    let activeOptionDisplay = '';
 
-    if (this.props.variant === Variants.SEARCH) {
-      activeValue = this.props.display;
+    if (this.props.variant === Variants.SEARCH || this.props.variant === Variants.COMBOBOX) {
+      activeOptionDisplay = this.props.display;
     }
 
     this.setState({
@@ -256,7 +257,7 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
-      activeValue,
+      activeOptionDisplay,
     });
 
     // Tags and Comboboxes will select the current search value when the component loses focus.
@@ -386,7 +387,7 @@ class Frame extends React.Component {
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown(event);
-    } else if (keyCode === KeyCode.KEY_BACK_SPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0) {
+    } else if (keyCode === KeyCode.KEY_BACK_SPACE && Util.allowsMultipleSelections(this.props) && !this.state.searchValue && value.length > 0 && !event.target.value) {
       this.props.onDeselect(value[value.length - 1]);
     } else if (keyCode === KeyCode.KEY_ESCAPE) {
       this.closeDropdown();
@@ -499,8 +500,20 @@ class Frame extends React.Component {
   handleActiveChange(option) {
     this.shouldSearch = false;
 
+    let activeOptionDisplay;
+
+    if (option.type.isAddOption) {
+      // Use the value as the active display in the select input since there is no option.props.display for the Add option.
+      activeOptionDisplay = option.props.value;
+    } else if (Util.allowsMultipleSelections(this.props) && Util.includeByDisplay(this.props, option.props.display)) {
+      // Clear the active display in the select input if the option is already selected.
+      activeOptionDisplay = '';
+    } else {
+      activeOptionDisplay = option.props.display;
+    }
+
     this.setState({
-      activeValue: option.type.isClearOption ? '' : option.props.display,
+      activeOptionDisplay,
     });
   }
 

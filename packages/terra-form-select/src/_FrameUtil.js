@@ -40,7 +40,7 @@ class FrameUtil {
 
   /**
    * Determines whether the variant allows multiple selections.
-   * @param {Object} variant - The component props.
+   * @param {Object} props - The component props.
    * @return {boolean} - True if the variant allows multiple selections.
    */
   static allowsMultipleSelections(props) {
@@ -58,6 +58,31 @@ class FrameUtil {
       return false;
     }
     return (props.value || []).indexOf(query) > -1;
+  }
+
+  /**
+   * Determines if the query is included in the component display.
+   * @param {Object} props - The component props.
+   * @param {string} query - The query display.
+   * @return {boolean} - True if the query is contained within the component display.
+   */
+  static includeByDisplay(props, query) {
+    if ((query && query.trim().length === 0) || props.display.length === 0) {
+      return false;
+    }
+
+    let match = false;
+    if (FrameUtil.allowsMultipleSelections(props)) {
+      props.display.forEach((tag) => {
+        if (tag.props.children === query) {
+          match = true;
+        }
+      });
+    } else if (props.display === query) {
+      match = true;
+    }
+
+    return match;
   }
 
   /**

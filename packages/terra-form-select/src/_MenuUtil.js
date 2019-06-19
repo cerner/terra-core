@@ -212,18 +212,11 @@ class MenuUtil {
     const { searchValue, value } = props;
     const options = MenuUtil.flatten(children, true);
 
-    // console.log('******active', active);
-    // console.log('******value', value);
-    // console.log('******searchValue', searchValue);
-    // console.log('******state.searchValue', state.searchValue);
-
     if (options.length === 0) {
-      // console.log('******1 options.length === 0');
       return null;
     }
 
     if (searchValue.length === 0 && value.length === 0 && !active && active !== '') {
-      // console.log('******2 searchValue.length === 0');
       return null;
     }
 
@@ -231,27 +224,18 @@ class MenuUtil {
       const selected = options.find(option => (
         Array.isArray(value) ? MenuUtil.includes(value, option.props.value) : MenuUtil.isEqual(value, option.props.value)
       ));
-      // console.log('******3 state.searchValue === undefined');
+
       return selected === undefined ? options[0].props.value : selected.props.value;
     }
 
     if (searchValue !== state.searchValue) {
-      // console.log('******4 searchValue !== state.searchValue');
       return options[0].props.value;
-
-      // if (searchValue.length > 0) {
-      //   return options[0].props.value;
-      // }
-
-      // return value;
     }
 
     if (active !== null && MenuUtil.findByValue(options, active)) {
-      // console.log('******5 active !== null');
       return active;
     }
 
-    // console.log('******6 last');
     return options[0].props.value;
   }
 

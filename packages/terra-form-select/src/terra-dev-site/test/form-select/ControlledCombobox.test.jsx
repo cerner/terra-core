@@ -1,8 +1,5 @@
 import React from 'react';
 import Select from '../../../Select';
-// `default`,
-// `search`, `multiple`,
-// `combobox`, `tag`
 
 class ControlledCombobox extends React.Component {
   constructor() {
