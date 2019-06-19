@@ -1,17 +1,15 @@
 Changelog
 =========
 
-Unreleased - MVB
+Unreleased 
 ----------
-### Removed
+### Breaking 
 * Removed children prop. Replaced with buttonAttrs prop
 * Removed the default of rendering an error view
 * Removed the custom variant
 * Removed hide glyph logic based on available container space
 * Removed onComponentMount logic to calculate padding
 * Removed StatusView.Opts object and export
-
-### Changed
 * Use CSS grid to center component
 * Render divider if title and message/buttons exist
 
