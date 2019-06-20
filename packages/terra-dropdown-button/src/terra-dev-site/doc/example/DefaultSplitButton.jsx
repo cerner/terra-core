@@ -9,9 +9,9 @@ export default () => (
     defaultOption={{ label: 'Primary option', callback: () => { console.log('primary option'); } }}
     type="split"
   >
-    <DropdownButton.Option label="1st Option" callback={() => { console.log('hi'); }} />
-    <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
-    <DropdownButton.Option label="3rd Option" callback={() => { console.log('eyb'); }} />
-    <DropdownButton.Option label="4th Option" callback={() => { console.log('ih'); }} />
+    <DropdownButton.Option label="Abacadabra" callback={() => { console.log('hi'); }} />
+    <DropdownButton.Option label="BAbacadabra" callback={() => { console.log('bye'); }} />
+    <DropdownButton.Option label="CAbacadabra" callback={() => { console.log('eyb'); }} />
+    <DropdownButton.Option label="DAbacadabra" callback={() => { console.log('ih'); }} />
   </DropdownButton>
 );

@@ -58,7 +58,7 @@ class DropdownListUtil {
    */
   static findWithStartString(object, string) {
     const option = object.props.children.find(opt => (
-      opt.props.display || '').toLowerCase().startsWith(string.toLowerCase()));
+      opt.props.label || '').toLowerCase().startsWith(string.toLowerCase()));
     return option ? option.props.label : null;
   }
 

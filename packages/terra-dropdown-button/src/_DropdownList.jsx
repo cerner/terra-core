@@ -21,9 +21,12 @@ class DropdownList extends React.Component {
     this.cloneChildren = this.cloneChildren.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.clearSearch = this.clearSearch.bind(this);
 
     const focused = Util.findFirst(this);
     this.state = { focused, active: undefined };
+
+    this.searchString = '';
   }
 
   componentDidMount() {
@@ -59,6 +62,11 @@ class DropdownList extends React.Component {
     } else if (keyCode === KeyCode.KEY_TAB) {
       this.props.handleRequestClose();
       // event.preventDefault();
+    } else if (keyCode >= 48 && keyCode <= 90) {
+      this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
+      clearTimeout(this.searchTimeout);
+      this.searchTimeout = setTimeout(this.clearSearch, 500);
+      this.setState(prevState => ({ focused: Util.findWithStartString(this, this.searchString) || prevState.focused }));
     }
   }
 
@@ -68,6 +76,15 @@ class DropdownList extends React.Component {
       this.setState({ active: undefined });
       event.preventDefault();
     }
+  }
+
+  /**
+   * Clears the default variant keyboard search.
+   */
+  clearSearch() {
+    this.searchString = '';
+    clearTimeout(this.searchTimeout);
+    this.searchTimeout = null;
   }
 
   cloneChildren() {
@@ -83,6 +100,7 @@ class DropdownList extends React.Component {
       <ul
         role="listbox"
         className={cx('dropdown-list')}
+        // eslint-disable-next-line react/forbid-dom-props
         style={{ width: this.props.width }}
       >
         {this.cloneChildren()}
