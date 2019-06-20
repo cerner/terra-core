@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Dialog from '../../../Dialog';
+import styles from './DefaultDialog.test.scss';
+
+const cx = classNames.bind(styles);
 
 const header = 'Header Stuff';
 
@@ -8,7 +12,7 @@ const body = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 const footer = <span>Footer Stuff</span>;
 
 export default () => (
-  <div id="dialog" style={{ height: '400px', width: '250px' }}>
+  <div id="dialog" className={cx('dialog-wrapper')}>
     <Dialog header={header} footer={footer}>
       {body}
     </Dialog>
