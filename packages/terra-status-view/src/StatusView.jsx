@@ -15,6 +15,7 @@ const StatusViewVariants = {
   ERROR: 'error',
 };
 
+/* eslint-disable react/forbid-foreign-prop-types */
 const propTypes = {
   /**
    * An array of objects containg terra-button properties. A key attribute is required for each object.
@@ -54,6 +55,7 @@ const propTypes = {
    */
   variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
 };
+/* eslint-enable react/forbid-foreign-prop-types */
 
 const defaultProps = {
   buttonAttrs: [],
