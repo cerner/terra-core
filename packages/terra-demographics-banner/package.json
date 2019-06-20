@@ -1,7 +1,7 @@
 {
   "name": "terra-demographics-banner",
   "main": "lib/DemographicsBanner.js",
-  "version": "3.12.0",
+  "version": "3.13.0",
   "description": "The demographics component is used to display demographic information about a person in a condensed, easy to read format.",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.10.0",
     "terra-image": "^3.9.0",
-    "terra-responsive-element": "^4.8.0",
+    "terra-responsive-element": "^5.0.0",
     "terra-visually-hidden-text": "^2.8.0"
   },
   "scripts": {

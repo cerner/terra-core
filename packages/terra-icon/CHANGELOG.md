@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.11.0 - (June 18, 2019)
+------------------
 ### Added
 * Added `--terra-icon-abnormal-low-light-path-1-fill` variable in IconAbnormalLowLight.module.scss
 * Added new icon `IconDocumentPlus`
