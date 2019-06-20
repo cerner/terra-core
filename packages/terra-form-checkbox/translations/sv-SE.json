@@ -1,3 +1,4 @@
 {
-  "Terra.form.field.optional": "(valfri)"
+  "Terra.form.field.optional": "(valfri)",
+  "Terra.form.field.required": "Obligatorisk"
 }

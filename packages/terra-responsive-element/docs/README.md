@@ -1,33 +1,25 @@
 # Terra Responsive Element
 
-The ResponsiveElement conditionally renders components based on viewport size.
-The viewport can be set to the immediate parent or window.
+The Responsive Element provides a way to conditionally render components during breakpoint or resize changes.
 
-## Additional Notes:
+The Responsive Element can be set to be responsive to the parent of the component or the window. By default, event listeners will be bound to the immediate parent of the component and invoke the onChange and onResize callback functions as a result of resize changes to the bound target.
 
-It is not necessary to set each breakpoint. If a breakpoint is not set the component will look at each successive smaller breakpoint until one is found.
+## Additional Notes
 
-The ResponsiveElement observes the available width. Meaning padding, borders, and margins set on the parent are not included in the calculation. Modifying box-sizing will impact how these properties are used in an elements width calculation. For more details see: https://css-tricks.com/almanac/properties/b/box-sizing/
+The Responsive Element observes the total width of the bound container. Padding and borders are included in the calculation to determine the available width. Margins are not included. For breakpoint accuracy it is not recommended to set padding on the parent container when responsiveTo is set to parent. For more details on how box-sizing affects the dom box model see: <https://css-tricks.com/almanac/properties/b/box-sizing/>
+
+For consistency, breakpoint ranges are inherited from [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
+
+For the uncontrolled version of this component it is not necessary to set each breakpoint. If a breakpoint is not set the component will look at each successive smaller breakpoint until one is found.
 
 ## Getting Started
 
-- Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-responsive-element`
-  - `yarn add terra-responsive-element`
-
-## Usage
-
-```jsx
-import React from 'react';
-import ResponsiveElement from 'terra-responsive-element';
-
-const defaultElement = <div>Default</div>;
-const large = <div>Large</div>;
-
-<ResponsiveElement defaultElement={defaultElement} large={large} />
-```
+* Install with [npmjs](https://www.npmjs.com):
+  * `npm install terra-responsive-element`
+  * `yarn add terra-responsive-element`
 
 ## Component Features
+
 * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
 * [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)

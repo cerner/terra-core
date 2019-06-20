@@ -3,8 +3,28 @@ Changelog
 
 Unreleased
 ----------
+
+3.16.0 - (June 18, 2019)
+------------------
+### Added
+* Added missing WDIO screenshots
+
+3.15.1 - (June 12, 2019)
+------------------
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Patch dependency version bump
+
+3.15.0 - (June 11, 2019)
+------------------
+### Added
+* Added check to only load inert polyfill if it is not already defined on the Element prototype
+
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
+* Update overlay-spec and screenshots
 
 3.14.0 - (May 14, 2019)
 ------------------

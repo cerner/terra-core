@@ -1,8 +1,11 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import ButtonGroup from '../../../ButtonGroup';
+import styles from './ButtonGroupIcon.test.scss';
 
-const iconStyle = { backgroundColor: 'black', height: '1em', width: '1em' };
-const icon = <span style={iconStyle} className="test"><svg width="1em" height="1em"><rect width="1em" height="1em" /></svg></span>;
+const cx = classNames.bind(styles);
+
+const icon = <span className={cx(['test', 'icon'])}><svg width="1em" height="1em"><rect width="1em" height="1em" /></svg></span>;
 
 const IconButtonGroup = () => (
   <ButtonGroup id="button-group-icon">

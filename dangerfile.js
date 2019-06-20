@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { danger, fail } from 'danger';
 
-const CHANGELOG_PATTERN = /^packages\/terra-([a-z-])*\/CHANGELOG\.md/i;
+const CHANGELOG_PATTERN = /^packages\/terra-([a-z-0-9])*\/CHANGELOG\.md/i;
 
 const changedFiles = danger.git.created_files.concat(danger.git.modified_files);
 
@@ -27,5 +27,5 @@ const missingChangelogs = [...changedPackages].filter(packageName => !changedCha
 
 // Fail if there are package changes without a CHANGELOG update
 if (missingChangelogs.length > 0) {
-  fail(`Please include a CHANGELOG entry for each changed package this PR. Looks like a CHANGELOG is missing for: \n - ${missingChangelogs.join('\n - ')}`);
+  fail(`Please include a CHANGELOG entry for each changed package this PR. Looks like a CHANGELOG is missing for: \n\n - ${missingChangelogs.join('\n - ')}`);
 }

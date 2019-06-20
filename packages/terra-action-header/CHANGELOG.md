@@ -3,8 +3,29 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.16.0 - (June 18, 2019)
+------------------
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Minor dependency bump
+
+2.15.1 - (June 12, 2019)
+------------------
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
+### Changed
+* Reverted change to adjust header-icon top styling
+
+2.15.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Updated misleading `children` documentation
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
+* Adjusted header-icon top styling
 
 2.14.0 - (May 22, 2019)
 ------------------

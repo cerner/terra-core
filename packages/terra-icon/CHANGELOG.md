@@ -3,8 +3,34 @@ Changelog
 
 Unreleased
 ----------
+
+3.11.0 - (June 18, 2019)
+------------------
+### Added
+* Added `--terra-icon-abnormal-low-light-path-1-fill` variable in IconAbnormalLowLight.module.scss
+* Added new icon `IconDocumentPlus`
+* Added new icon `IconExtensions`
+* Added new icon `IconNotificationDisabled`
+
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* IconAbnormalLowLight inline style moved to scss file
+* Updated csvtojson devdependency to v2.0.8
+* Updated jsdom devdependency to v15.1.1
+* Updated svgo devdependecy to v1.2.2
+* Updated one-cerner-style-icons devdependency to v1.23.0
+* Updated `compilescripts` syntax in package.json
+* Updated all icon test page to include new icons from one-cerner-style-icons uplift
+* `IconCritical` fill style updated in one-cerner-style-icons uplift
+* `IconDoNotDisturb` fill style updated in one-cerner-style-icons uplift
+* Updated `IconExports.js` to include new icons
+
+3.10.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 3.9.0 - (May 1, 2019)
 ------------------

@@ -13,6 +13,8 @@ import MaxSelectionExample from '../example/MaxSelection';
 import MaxSelectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MaxSelection';
 import SelectFieldExample from '../example/SelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SelectField';
+import RequiredSelectFieldExample from '../example/RequiredSelectField';
+import RequiredSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RequiredSelectField';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -28,6 +30,10 @@ const DocPage = () => (
       title: 'Select Field Example',
       example: <SelectFieldExample />,
       source: SelectFieldExampleSrc,
+    }, {
+      title: 'Required Select Field Example',
+      example: <RequiredSelectFieldExample />,
+      source: RequiredSelectFieldExampleSrc,
     }, {
       title: 'Maximum Selection (applies to only \'multiple\' and \'tag\')',
       description: 'A multiple selection variant that allows up to a set number of selections. (Not applicable to  \'default\', \'combobox\', and \'search\' variants)',

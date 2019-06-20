@@ -3,8 +3,25 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.17.0 - (June 18, 2019)
+------------------
+### Fixed
+* Additional null check added to private menu to prevent error from empty query
+
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Added aria roles for optgroups
+* Added `required` prop
+* Added `isSelect` type on Select component to help with component identity
+
+5.16.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+* Removed vendor style rule added to fade placeholder text. Since Autoprefixer V9 resolves vendor prefix issue.
+
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 5.15.0 - (May 1, 2019)
 ------------------

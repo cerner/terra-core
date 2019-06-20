@@ -3,8 +3,25 @@ Changelog
 
 Unreleased
 ----------
+
+3.15.0 - (June 18, 2019)
+------------------
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* Minor dependency bump
+
+3.14.1 - (June 12, 2019)
+------------------
+### Changed
+* Patch dependency version bump
+
+3.14.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Clear button added to search field for cross-browser compatibility
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 3.13.0 - (May 14, 2019)
 ------------------
