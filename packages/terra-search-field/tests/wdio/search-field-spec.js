@@ -2,10 +2,12 @@ describe('Search Field', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
 
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-search-field/search-field/default-search-field'));
-    browser.execute('document.querySelector("input").style.caretColor = "transparent";');
+    before(() => {
+      browser.url('/#/raw/tests/terra-search-field/search-field/default-search-field');
+      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
+    });
 
-    Terra.it.matchesScreenshot('empty');
+    Terra.it.matchesScreenshot('empty', { misMatchTolerance: 0.1 });
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lore');
@@ -13,14 +15,14 @@ describe('Search Field', () => {
       browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
-    Terra.it.matchesScreenshot('with text');
+    Terra.it.matchesScreenshot('with text', { misMatchTolerance: 0.1 });
 
     it('should scroll text that is too long', () => {
       browser.addValue('input', ' is a correctly spelled word');
       browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
-    Terra.it.matchesScreenshot('scrolled text');
+    Terra.it.matchesScreenshot('scrolled text', { misMatchTolerance: 0.1 });
     Terra.it.isAccessible();
   });
 
