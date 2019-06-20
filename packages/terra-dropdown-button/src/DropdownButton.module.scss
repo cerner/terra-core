@@ -7,16 +7,18 @@
   .dropdown-button {
     border-radius: var(--terra-dropdown-button-border-radius, 3px);
     box-shadow: var(--terra-dropdown-button-box-shadow);
-    display: inline-block;
-    white-space: nowrap;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
     &.disabled {
       opacity: var(--terra-dropdown-button-disabled-opacity, 0.4);
       pointer-events: none;
     }
 
-    &.set-width {
-      display: flex;
+    // Needed for IE 10 to linebreak things properly
+    > * {
+      flex: 0 1 auto;
     }
   }
 
@@ -34,6 +36,7 @@
   }
 
   .dropdown-button-type-text {
+    display: inline-block;
     margin-right: 5px;
   }
 
@@ -72,6 +75,8 @@
     border-top-left-radius: 0;
     // stylelint-disable-next-line terra/custom-property-name
     border-top-right-radius: var(--terra-dropdown-button-border-radius, 3px);
+    // If flex-shrink is set to 1 IE will give the button 0 width
+    flex: 0 0 auto;
     font-size: var(--terra-dropdown-button-split-type-font-size, 1rem);
     line-height: var(--terra-dropdown-button-split-type-line-height, 1.4285714286);
     outline: 0;
