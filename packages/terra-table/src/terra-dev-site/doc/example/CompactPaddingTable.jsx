@@ -9,8 +9,8 @@ import Table, {
 } from 'terra-table/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const NoPaddingTable = () => (
-  <Table isPadded={false}>
+const CompactPaddingTable = () => (
+  <Table paddingStyle="compact">
     <Header>
       <HeaderCell key="NAME" minWidth="small">Name</HeaderCell>
       <HeaderCell key="ADDRESS" minWidth="medium">Address</HeaderCell>
@@ -36,4 +36,4 @@ const NoPaddingTable = () => (
   </Table>
 );
 
-export default NoPaddingTable;
+export default CompactPaddingTable;

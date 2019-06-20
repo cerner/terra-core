@@ -20,6 +20,7 @@
     td {
       border: 0;
       border-left: var(--terra-table-cell-border-left, 0);
+      border-right: var(--terra-table-last-cell-border-right, 1px solid #c8cacb);
       display: table-cell;
       text-align: left;
       vertical-align: top;
@@ -27,15 +28,12 @@
       &:first-of-type {
         border-left: var(--terra-table-first-cell-border-left, 1px solid #c8cacb);
       }
-
-      &:last-of-type {
-        border-right: var(--terra-table-last-cell-border-right, 1px solid #c8cacb);
-      }
     }
 
     th {
       border: 0;
       border-left: var(--terra-table-header-cell-border-left, 0);
+      border-right: var(--terra-table-last-header-cell-border-right, 1px solid #ccc);
       display: table-cell;
       text-align: left;
       vertical-align: top;
@@ -50,7 +48,7 @@
     }
 
     thead {
-      background-color: var(--terra-table-thead-background-color, #dedfe0);
+      background-color: var(--terra-flex-table-header-background-color, #f4f4f4);
       display: table-header-group;
 
       tr {
@@ -87,15 +85,6 @@
     }
   }
 
-  .sort-indicator {
-    color: var(--terra-table-sort-indicator-color, #1c1f21);
-    padding-left: 0.7142857143rem;
-
-    > svg {
-      width: var(--terra-table-sort-indicator-width);
-    }
-  }
-
   .min-width-tiny {
     min-width: var(--terra-table-cell-tiny-min-width, 3rem);
   }
@@ -116,14 +105,16 @@
     min-width: var(--terra-table-cell-huge-min-width, 10.5rem);
   }
 
-  [data-table-padding='standard'] td, th {
+  [data-table-padding='standard'] th,
+  [data-table-padding='standard'] td {
     padding-bottom: var(--terra-table-cell-standard-padding-bottom, 0.5rem);
     padding-left: var(--terra-table-cell-standard-padding-left, 0.75rem);
     padding-right: var(--terra-table-cell-standard-padding-right, 0.75rem);
     padding-top: var(--terra-table-cell-standard-padding-top, 0.5rem);
   }
 
-  [data-table-padding='compact'] td, th {
+  [data-table-padding='compact'] th, 
+  [data-table-padding='compact'] td {
     padding-bottom: var(--terra-table-cell-compact-padding-bottom, 0.25rem);
     padding-left: var(--terra-table-cell-compact-padding-left, 0.75rem);
     padding-right: var(--terra-table-cell-compact-padding-right, 0.75rem);

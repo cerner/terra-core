@@ -9,11 +9,11 @@ import Table, {
 } from 'terra-table/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const TableWithSortingIndicator = () => (
-  <Table isStriped={false}>
+const StandardPaddingTable = () => (
+  <Table paddingStyle="standard">
     <Header>
       <HeaderCell key="NAME" minWidth="small">Name</HeaderCell>
-      <HeaderCell key="ADDRESS" minWidth="medium" sort="asc">Address</HeaderCell>
+      <HeaderCell key="ADDRESS" minWidth="medium">Address</HeaderCell>
       <HeaderCell key="PHONE_NUMBER" minWidth="large">Phone Number</HeaderCell>
     </Header>
     <Body>
@@ -36,4 +36,4 @@ const TableWithSortingIndicator = () => (
   </Table>
 );
 
-export default TableWithSortingIndicator;
+export default StandardPaddingTable;

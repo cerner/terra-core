@@ -13,12 +13,12 @@ import TableCellSrc from '!raw-loader!../../../../src/TableCell';
 
 import NoStripedTable from '../example/NoStripedTable';
 import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoStripedTable';
-import NoPaddingTable from '../example/NoPaddingTable';
-import NoPaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoPaddingTable';
+import CompactPaddingTable from '../example/CompactPaddingTable';
+import CompactPaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CompactPaddingTable';
+import StandardPaddingTable from '../example/StandardPaddingTable';
+import StandardPaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StandardPaddingTable';
 import StripedTable from '../example/StripedTable';
 import StripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StripedTable';
-import TableWithSortingIndicator from '../example/TableWithSortingIndicator';
-import TableWithSortingIndicatorSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithSortingIndicator';
 import TableWithLongContent from '../example/TableWithLongContent';
 import TableWithLongContentSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithLongContent';
 import TableWithCustomCells from '../example/TableWithCustomCells';
@@ -42,14 +42,14 @@ const DocPage = () => (
         source: StripedTableSrc,
       },
       {
-        title: 'Table without padding',
-        example: <NoPaddingTable />,
-        source: NoPaddingTableSrc,
+        title: 'Table with compact padding',
+        example: <CompactPaddingTable />,
+        source: CompactPaddingTableSrc,
       },
       {
-        title: 'Table with sorting indicator',
-        example: <TableWithSortingIndicator />,
-        source: TableWithSortingIndicatorSrc,
+        title: 'Table with standard padding',
+        example: <StandardPaddingTable />,
+        source: StandardPaddingTableSrc,
       },
       {
         title: 'Table with long content',
