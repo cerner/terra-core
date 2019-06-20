@@ -17,7 +17,8 @@ const StatusViewVariants = {
 
 const propTypes = {
   /**
-   * An array of objects containg terra-button properties. Use these to render buttons in the bottom section.
+   * An array of objects containg terra-button properties. A key attribute is required for each object.
+   * Use this array to render buttons in the bottom section.
    * Example:`[{ text: 'Button 1', key: 1, size: 'medium', variant: 'action', onClick: onClickFunction}]`
    */
   buttonAttrs: PropTypes.arrayOf(PropTypes.object),
@@ -79,11 +80,7 @@ const generateButtons = (buttonAttrsArray) => {
     return undefined;
   }
 
-  const generatedButtonsArray = [];
-  buttonAttrsArray.forEach(button => generatedButtonsArray.push(
-    <Button {...button} className={cx(['button', button.className])} />,
-  ));
-  return generatedButtonsArray;
+  return buttonAttrsArray.map(button => <Button {...button} className={cx(['button', button.className])} />);
 };
 
 const StatusView = ({
