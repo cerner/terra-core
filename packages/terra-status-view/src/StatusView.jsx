@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import { injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import Button from 'terra-button';
 import Divider from 'terra-divider';
 import styles from './StatusView.module.scss';
@@ -21,17 +21,12 @@ const propTypes = {
    * Use this array to render buttons in the bottom section.
    * Example:`[{ text: 'Button 1', key: 1, size: 'medium', variant: 'action', onClick: onClickFunction}]`
    */
-  buttonAttrs: PropTypes.arrayOf(PropTypes.object),
+  buttonAttrs: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)),
 
   /**
    * Display a custom glyph. Overrides a variant's default glyph.
    */
   customGlyph: PropTypes.node,
-
-  /**
-   * @private The intl object to be injected for translations. Provided by the injectIntl function.
-   */
-  intl: intlShape.isRequired,
 
   /**
    *  Aligns the component at the top of the container rather than "centered"
@@ -86,7 +81,6 @@ const generateButtons = (buttonAttrsArray) => {
 const StatusView = ({
   buttonAttrs,
   customGlyph,
-  intl,
   isAlignedTop,
   isGlyphHidden,
   message,
@@ -113,7 +107,7 @@ const StatusView = ({
 
   let defaultTitle;
   if (checkVariantExistence(variant)) {
-    defaultTitle = intl.formatMessage({ id: `Terra.status-view.${variant}` });
+    defaultTitle = <FormattedMessage id={`Terra.status-view.${variant}`} />;
   }
 
   // Custom title takes precedence
@@ -181,5 +175,5 @@ const StatusView = ({
 
 StatusView.propTypes = propTypes;
 StatusView.defaultProps = defaultProps;
-export default injectIntl(StatusView);
+export default StatusView;
 export { StatusViewVariants };
