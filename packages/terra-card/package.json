@@ -1,7 +1,7 @@
 {
   "name": "terra-card",
   "main": "lib/Card.js",
-  "version": "3.8.0",
+  "version": "3.9.0",
   "description": "Card is a basic container with some base styling to help seperate elements with different content",
   "repository": {
     "type": "git",
