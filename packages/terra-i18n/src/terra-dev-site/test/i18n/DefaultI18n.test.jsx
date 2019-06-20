@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
+import classNames from 'classnames/bind';
 
 import I18nProvider from '../../../I18nProvider';
 import i18nLoader from '../../../i18nLoader';
+import styles from './DefaultI18n.test.scss';
+
+const cx = classNames.bind(styles);
 
 // Add Portuguese-Guinea-Bissau, Zulu & Zulu-South African locales as test locales (supported by intl)
 const testLocales = ['en', 'en-GB', 'pt', 'pt-GW', 'zu', 'zu-ZA'];
@@ -44,13 +48,13 @@ class Base extends React.Component {
             {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
           </select>
           <p id="translated-message">
-            <span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
+            <span className={cx('weighted-text')}> Loaded locale message: </span>
             <FormattedMessage id="Terra.ajax.error" />
           </p>
           {(this.state.selectedLocale).includes('zu')
-            && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the en locale as fallback.</p>}
+            && <p className={cx('fallback-message')}>Using the en locale as fallback.</p>}
           {this.state.selectedLocale === 'pt-GW'
-            && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the pt locale as fallback.</p>}
+            && <p className={cx('fallback-message')}>Using the pt locale as fallback.</p>}
         </I18nProvider>
       </div>
     );

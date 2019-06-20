@@ -1,8 +1,12 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Hyperlink from '../../../Hyperlink';
+import styles from './HyperlinkTestCommon.scss';
+
+const cx = classNames.bind(styles);
 
 const HyperlinkStates = () => (
-  <div role="main" style={{ padding: '0 10px' }} id="link-example">
+  <div role="main" className={cx('hyperlink-states')} id="link-example">
     <Hyperlink href="https://my.cerner.com/?">hyperlink</Hyperlink>
     <br />
     <br />
