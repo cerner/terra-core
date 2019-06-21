@@ -2,29 +2,29 @@
 
 // Button variant's color schemes
 $terra-dropdown-button-neutral-color-scheme: (
-  active-background-color: var(--terra-button-active-background-color-neutral, #6f7477),
-  active-border-color: var(--terra-button-active-border-color-neutral, #4e5558),
-  active-color: var(--terra-button-active-color-neutral, #fff),
+  active-background-color: var(--terra-dropdown-button-active-background-color-neutral, #6f7477),
+  active-border-color: var(--terra-dropdown-button-active-border-color-neutral, #4e5558),
+  active-color: var(--terra-dropdown-button-active-color-neutral, #fff),
   dropdown-active-font-weight: var(--terra-dropdown-button-dropdown-active-font-weight-neutral, bold),
   split-active-font-weight: var(--terra-dropdown-button-split-active-font-weight-neutral, normal),
 
-  background-color: var(--terra-button-background-color-neutral, #dedfe0),
-  border-color: var(--terra-button-border-color-neutral, #c8cacb),
-  box-shadow: var(--terra-button-box-shadow-neutral, none),
-  color: var(--terra-button-color-neutral, #1c1f21),
+  background-color: var(--terra-dropdown-button-background-color-neutral, #dedfe0),
+  border-color: var(--terra-dropdown-button-border-color-neutral, #c8cacb),
+  box-shadow: var(--terra-dropdown-button-box-shadow-neutral, none),
+  color: var(--terra-dropdown-button-color-neutral, #1c1f21),
   dropdown-border-width: var(--terra-dropdown-button-dropdown-border-width-neutral, 1px),
   split-border-width: var(--terra-dropdown-button-split-border-width-neutral, 1px),
   dropdown-font-weight: var(--terra-dropdown-button-dropdown-font-weight-neutral, normal),
   split-font-weight: var(--terra-dropdown-button-split-font-weight-neutral, normal),
 
-  focus-background-color: var(--terra-button-focus-background-color-neutral, #dedfe0),
-  focus-border-color: var(--terra-button-focus-border-color-neutral, #c8cacb),
-  focus-box-shadow: var(--terra-button-focus-box-shadow-neutral, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  focus-background-color: var(--terra-dropdown-button-focus-background-color-neutral, #dedfe0),
+  focus-border-color: var(--terra-dropdown-button-focus-border-color-neutral, #c8cacb),
+  focus-box-shadow: var(--terra-dropdown-button-focus-box-shadow-neutral, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
   dropdown-focus-border-width: var(--terra-dropdown-button-dropdown-focus-border-width-neutral, 1px),
   split-focus-border-width: var(--terra-dropdown-button-split-border-focus-width-neutral, 1px),
   
-  hover-background-color: var(--terra-button-hover-background-color-neutral, #bcbfc0),
-  hover-color: var(--terra-button-hover-color-neutral, #1c1f21),
+  hover-background-color: var(--terra-dropdown-button-hover-background-color-neutral, #bcbfc0),
+  hover-color: var(--terra-dropdown-button-hover-color-neutral, #1c1f21),
 
   chevron-icon-background: var(--terra-dropdown-button-chevron-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>')),
   active-chevron-icon-background: var(--terra-dropdown-button-chevron-active-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>')),
@@ -32,26 +32,26 @@ $terra-dropdown-button-neutral-color-scheme: (
 );
 
 $terra-dropdown-button-emphasis-color-scheme: (
-  active-background-color: var(--terra-button-active-background-color-emphasis, #004c76),
-  active-border-color: var(--terra-button-active-border-color-emphasis, #0065a3),
-  active-color: var(--terra-button-active-color-emphasis, #fff),
+  active-background-color: var(--terra-dropdown-button-active-background-color-emphasis, #004c76),
+  active-border-color: var(--terra-dropdown-button-active-border-color-emphasis, #0065a3),
+  active-color: var(--terra-dropdown-button-active-color-emphasis, #fff),
   dropdown-active-font-weight: var(--terra-dropdown-button-dropdown-active-font-weight-emphasis, bold),
 
-  background-color: var(--terra-button-background-color-emphasis, #007cc3),
-  box-shadow: var(--terra-button-box-shadow-emphasis, none),
-  border-color: var(--terra-button-border-color-emphasis, #0065a3),
-  color: var(--terra-button-color-emphasis, #fff),
+  background-color: var(--terra-dropdown-button-background-color-emphasis, #007cc3),
+  box-shadow: var(--terra-dropdown-button-box-shadow-emphasis, none),
+  border-color: var(--terra-dropdown-button-border-color-emphasis, #0065a3),
+  color: var(--terra-dropdown-button-color-emphasis, #fff),
   dropdown-border-width: var(--terra-dropdown-button-dropdown-border-width-emphasis, 1px),
   dropdown-font-weight: var(--terra-dropdown-button-dropdown-font-weight-emphasis, bold),
 
 
-  focus-background-color: var(--terra-button-focus-background-color-emphasis, #007cc3),
-  focus-border-color: var(--terra-button-focus-border-color-emphasis, #0065a3),
-  focus-box-shadow: var(--terra-button-focus-box-shadow-emphasis, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
+  focus-background-color: var(--terra-dropdown-button-focus-background-color-emphasis, #007cc3),
+  focus-border-color: var(--terra-dropdown-button-focus-border-color-emphasis, #0065a3),
+  focus-box-shadow: var(--terra-dropdown-button-focus-box-shadow-emphasis, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
   dropdown-focus-border-width: var(--terra-dropdown-button-dropdown-focus-border-width-emphasis, 1px),
   
-  hover-background-color: var(--terra-button-hover-background-color-emphasis, #0065a3),
-  hover-color: var(--terra-button-hover-color-emphasis, #fff),
+  hover-background-color: var(--terra-dropdown-button-hover-background-color-emphasis, #0065a3),
+  hover-color: var(--terra-dropdown-button-hover-color-emphasis, #fff),
 
   chevron-icon-background: var(--terra-dropdown-button-chevron-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>')),
   active-chevron-icon-background: var(--terra-dropdown-button-chevron-active-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>')),
