@@ -1,29 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import ResponsiveElement from '../../../ResponsiveElement';
 
-class BreakpointExample extends Component {
-  constructor() {
-    super();
+const ResizeExample = () => {
+  const [width, setWidth] = useState('');
 
-    this.state = { width: '' };
-    this.handleResize = this.handleResize.bind(this);
-  }
+  return (
+    <ResponsiveElement onResize={value => setWidth(value)}>
+      <Placeholder title={width} />
+    </ResponsiveElement>
+  );
+};
 
-  handleResize(width) {
-    this.setState({ width: width.toString() });
-  }
-
-  render() {
-    const { width } = this.state;
-
-    return (
-      <ResponsiveElement onResize={this.handleResize}>
-        <Placeholder title={width} />
-      </ResponsiveElement>
-    );
-  }
-}
-
-export default BreakpointExample;
+export default ResizeExample;
