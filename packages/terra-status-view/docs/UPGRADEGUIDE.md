@@ -3,18 +3,16 @@
 ## Changes from version 3 to version 4
 
 ### Props
-* **Removed** children prop. This is **replaced** by `buttonAttrs`. This prop accepts an array of objects containing terra-button properties. Remember that React requires a unique id to be attached to each element in an array. Example:
+* **Removed** children prop. This is **replaced** by `buttonAttrs`. This prop accepts an array of objects containing terra-button properties. Remember that React requires a unique key to be attached to each element in an array. Example:
 
 ```jsx
 const buttons = [
   {
-    id: 'action1',
     key: 1,
     text: 'Action 1',
     size: 'medium',
     onClick: handleOnAction1,
   }, {
-    id: 'action2',
     key: 2,
     text: 'Action 2',
     size: 'medium',
