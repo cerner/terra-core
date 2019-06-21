@@ -7,24 +7,58 @@ import Option from './_Option';
 
 const cx = classNames.bind(styles);
 
+const Variants = {
+  NEUTRAL: 'neutral',
+  EMPHASIS: 'emphasis',
+};
+
+const Types = {
+  DROPDOWN: 'dropdown',
+  SPLIT: 'split',
+};
+
 const propTypes = {
+  /**
+   * Function that returns the ref of the element that defines the boundaries for the dropdown.
+   * If unset will defualt to being bound within the current window.
+   */
   boundingRef: PropTypes.func,
   /**
-   * The options to display in the dropdown
+   * The options to display in the dropdown. Should be of type `DropdownButton.Option`.
    */
   children: PropTypes.node.isRequired,
+  /**
+   * Determines whether the primary button and expanding the dropdown should be disabled.
+   */
   disabled: PropTypes.bool,
+  /**
+   * Determines whether the component should have block styles applied. The dropdown will match the component's width.
+   */
   isBlock: PropTypes.bool,
+  /**
+   * Sets the component to the specified width, unless `isBlock` is true. Must be in pixels and include 'px'.
+   * The dropdown will also be at the specified width. If unset the component and dropdown will automatically be sized according to their contents.
+   */
   width: PropTypes.string,
+  /**
+   * For 'dropdown' type sets what will be shown on the dropdown button. `callback` is ignored in the 'dropdown` type.
+   *
+   * For 'split' type sets what will be shown on the primary button and what pressing the primary button will do.
+   */
   defaultOption: PropTypes.shape({
     label: PropTypes.string.isRequired,
     callback: PropTypes.func,
   }).isRequired,
   /**
-   * 'emphasis' variant is only valid on the 'dropdown' type.
+   * Sets the styles of the component. 'emphasis' variant is only valid on the 'dropdown' type.
+   * Must be either 'neutral' or 'emphasis'.
    */
-  variant: PropTypes.string,
-  type: PropTypes.string,
+  variant: PropTypes.oneOf([Variants.NEUTRAL, Variants.EMPHASIS]),
+  /**
+   * Sets the component to have a primary action button displayed outside the dropdown ('split') or not ('dropdown').
+   * Must be either 'dropdown' or 'split'.
+   */
+  type: PropTypes.oneOf([Types.DROPDOWN, Types.SPLIT]),
 };
 
 const defaultProps = {
@@ -155,3 +189,4 @@ DropdownButton.propTypes = propTypes;
 DropdownButton.defaultProps = defaultProps;
 
 export default DropdownButton;
+export { Variants, Types };

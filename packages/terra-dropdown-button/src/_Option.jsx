@@ -6,7 +6,13 @@ import styles from './_Option.module.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * The text that is displayed on the option.
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * The function that is called when the option is clicked or enter/space is pressed with it focused.
+   */
   callback: PropTypes.func.isRequired,
   /**
    * @private
