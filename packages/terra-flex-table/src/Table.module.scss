@@ -71,8 +71,9 @@
 
   .body {
     background-color: var(--terra-flex-table-body-background-color);
-    min-height: 0;
     flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
   }
 }
 /* stylelint-enable selector-max-compound-selectors, max-nesting-depth */

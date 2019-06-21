@@ -25,7 +25,6 @@ const createTableRows = data => data.map(childItem => createTableRow(childItem))
 
 const SingleSelectTable = () => (
   <Table
-    fill
     paddingStyle="standard"
     headerCells={[
       <HeaderCell isPadded key="cell-0" width={widths[0]}>Scalar 2</HeaderCell>,
