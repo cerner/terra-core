@@ -16,15 +16,19 @@
       pointer-events: none;
     }
 
-    // Needed for IE 10 to linebreak things properly
-    > * {
-      flex: 0 1 auto;
+    &.set-width {
+      display: flex;
     }
   }
 
   .dropdown-button-type {
     border-radius: var(--terra-dropdown-button-border-radius, 3px);
     border-style: solid;
+    display: inline-flex;
+    // Needed for IE 10 to linebreak things properly
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
     font-size: var(--terra-dropdown-button-dropdown-type-font-size, 1rem);
     line-height: var(--terra-dropdown-button-dropdown-type-line-height, 1.4285714286);
     outline: 0;
@@ -37,6 +41,8 @@
 
   .dropdown-button-type-text {
     display: inline-block;
+    // Needed for IE 10 to linebreak things properly
+    flex: 0 1 auto;
     margin-right: 5px;
   }
 
@@ -48,6 +54,8 @@
     // stylelint-disable-next-line terra/custom-property-name
     border-top-left-radius: var(--terra-dropdown-button-border-radius, 3px);
     border-top-right-radius: 0;
+    // Needed for IE 10 to linebreak things properly
+    flex: 0 1 auto;
     font-size: var(--terra-dropdown-button-split-type-font-size, 1rem);
     line-height: var(--terra-dropdown-button-split-type-line-height, 1.4285714286);
     outline: 0;
@@ -96,6 +104,8 @@
 
   .chevron-icon {
     display: inline-block;
+    // If flex-shrink is set to 1 IE will give the button 0 width
+    flex: 0 0 auto;
     height: var(--terra-dropdown-button-chevron-height, 14px);
     margin: auto 0;
     position: relative;
