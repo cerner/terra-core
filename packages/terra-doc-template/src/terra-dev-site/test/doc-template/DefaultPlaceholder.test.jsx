@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Placeholder from '../../../Placeholder';
-import styles from './DocTemplateTestCommon.scss';
+import styles from './DocTemplateTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 

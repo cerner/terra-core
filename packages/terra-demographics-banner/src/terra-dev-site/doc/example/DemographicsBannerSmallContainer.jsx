@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import DemographicsBanner from 'terra-demographics-banner/lib/DemographicsBanner';
 import demographicsImage from '../assets/demographicsCat.jpg';
-import styles from './DemographicsBannerSmallContainer.scss';
+import styles from './DemographicsBannerSmallContainer.module.scss';
 
 const cx = classNames.bind(styles);
 

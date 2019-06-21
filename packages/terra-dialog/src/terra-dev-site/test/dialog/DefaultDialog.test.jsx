@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Dialog from '../../../Dialog';
-import styles from './DefaultDialog.test.scss';
+import styles from './DefaultDialog.module.scss';
 
 const cx = classNames.bind(styles);
 
