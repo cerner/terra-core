@@ -36,7 +36,7 @@
     "clean:install": "npm run clean && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:build": "lerna ls | cut -d ' ' -f1 | xargs -I {} babel packages/{}/src --out-dir packages/{}/lib --copy-files",
+    "compile:build": "lerna ls | cut -d ' ' -f1 | xargs -I {} babel 'packages/{}/src' --out-dir 'packages/{}/lib' --copy-files",
     "compile:clean": "rm -rf packages/**/lib",
     "compile:prod": "webpack --config webpack.config.js -p",
     "danger": "danger ci",
