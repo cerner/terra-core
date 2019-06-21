@@ -69,10 +69,6 @@ const defaultProps = {
 };
 
 class DropdownButton extends React.Component {
-  static itemSelectedCallback(option) {
-    option.callback();
-  }
-
   constructor(props) {
     super(props);
 
@@ -173,7 +169,6 @@ class DropdownButton extends React.Component {
           targetRef={() => this.buttonWrapperRef}
           isOpen={this.state.isOpen}
           handleRequestClose={this.handleDropdownRequestClose}
-          itemSelectedCallback={DropdownButton.itemSelectedCallback}
           width={(this.buttonWrapperRef && isBlock) ? `${this.buttonWrapperRef.offsetWidth}px` : width}
         >
           {children}

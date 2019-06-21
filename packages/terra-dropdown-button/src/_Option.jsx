@@ -22,18 +22,14 @@ const propTypes = {
    * @private
    */
   isFocused: PropTypes.bool,
-  /**
-   * @private
-   */
-  itemSelectedCallback: PropTypes.func,
 };
 
 const Option = ({
-  label, callback, isFocused, isActive, itemSelectedCallback,
+  label, callback, isFocused, isActive,
 }) => (
   <li>
     <div
-      onMouseUp={() => { itemSelectedCallback({ label, callback }); }}
+      onMouseUp={callback}
       role="button"
       tabIndex="-1"
       className={cx([

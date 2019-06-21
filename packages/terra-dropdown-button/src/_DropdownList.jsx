@@ -10,7 +10,6 @@ const cx = classNames.bind(styles);
 const propTypes = {
   children: PropTypes.node.isRequired,
   handleRequestClose: PropTypes.func.isRequired,
-  itemSelectedCallback: PropTypes.func.isRequired,
   width: PropTypes.string,
 };
 
@@ -44,7 +43,7 @@ class DropdownList extends React.Component {
     const { focused } = this.state;
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
       const item = Util.findByValue(this, focused);
-      this.props.itemSelectedCallback({ label: item.props.label, callback: item.props.callback });
+      item.props.callback();
       this.setState({ active: item.props.label });
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
@@ -91,7 +90,6 @@ class DropdownList extends React.Component {
     return React.Children.map(this.props.children, child => React.cloneElement(child, {
       isFocused: child.props.label === this.state.focused,
       isActive: child.props.label === this.state.active,
-      itemSelectedCallback: this.props.itemSelectedCallback,
     }));
   }
 

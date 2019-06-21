@@ -9,12 +9,11 @@ const propTypes = {
   targetRef: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  itemSelectedCallback: PropTypes.func.isRequired,
   width: PropTypes.string,
 };
 
 const Dropdown = ({
-  handleRequestClose, boundingRef, isOpen, targetRef, children, itemSelectedCallback, width,
+  handleRequestClose, boundingRef, isOpen, targetRef, children, width,
 }) => (
   <Popup
     boundingRef={boundingRef}
@@ -29,7 +28,6 @@ const Dropdown = ({
   >
     <DropdownList
       handleRequestClose={handleRequestClose}
-      itemSelectedCallback={itemSelectedCallback}
       width={width}
     >
       {children}
