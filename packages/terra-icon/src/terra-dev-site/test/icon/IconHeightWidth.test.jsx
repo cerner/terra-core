@@ -2,7 +2,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import IconAlert from '../../../icon/IconAlert';
-import styles from './IconHeightWidth.test.scss';
+import styles from './IconHeightWidth.module.scss';
 
 const cx = classNames.bind(styles);
 

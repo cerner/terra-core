@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import classNames from 'classnames/bind';
 import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
-import styles from './i18n.1.doc.scss';
+import styles from './i18n.1.module.scss';
 
 const cx = classNames.bind(styles);
 

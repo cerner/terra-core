@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Hyperlink from '../../../Hyperlink';
-import styles from './HyperlinkTestCommon.scss';
+import styles from './HyperlinkTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 

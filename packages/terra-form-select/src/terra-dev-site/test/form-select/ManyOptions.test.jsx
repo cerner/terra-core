@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Select from '../../../Select';
-import styles from './ManyOptions.test.scss';
+import styles from './ManyOptions.module.scss';
 
 const cx = classNames.bind(styles);
 
