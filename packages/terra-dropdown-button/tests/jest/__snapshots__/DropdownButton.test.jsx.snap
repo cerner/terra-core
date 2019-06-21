@@ -1,0 +1,397 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown Button should render a block dropdown type 1`] = `
+<div
+  className="dropdown-button neutral set-width"
+>
+  <button
+    aria-disabled={false}
+    className="dropdown-button-type"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="dropdown-button-type-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render a default dropdown type 1`] = `
+<div
+  className="dropdown-button neutral"
+>
+  <button
+    aria-disabled={false}
+    className="dropdown-button-type"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="dropdown-button-type-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render a default split type 1`] = `
+<div
+  className="dropdown-button neutral"
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-label="More Options"
+    className="split-button-chevron"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render a disabled dropdown type 1`] = `
+<div
+  className="dropdown-button neutral disabled"
+>
+  <button
+    aria-disabled={true}
+    className="dropdown-button-type"
+    disabled={true}
+    onClick={[Function]}
+    tabIndex="-1"
+    type="button"
+  >
+    <span
+      className="dropdown-button-type-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render a dropdown type with a bounding ref 1`] = `
+<div
+  className="dropdown-button neutral"
+>
+  <button
+    aria-disabled={false}
+    className="dropdown-button-type"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="dropdown-button-type-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    boundingRef={[Function]}
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render a dropdown type with a callback in the default option and ignore it 1`] = `
+<div
+  className="dropdown-button neutral"
+>
+  <button
+    aria-disabled={false}
+    className="dropdown-button-type"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="dropdown-button-type-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render a dropdown type with a set width 1`] = `
+<div
+  className="dropdown-button neutral set-width"
+  style={
+    Object {
+      "width": "500px",
+    }
+  }
+>
+  <button
+    aria-disabled={false}
+    className="dropdown-button-type"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="dropdown-button-type-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+    width="500px"
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render a split type with custom attributes 1`] = `
+<div
+  className="dropdown-button neutral"
+  other-custom-attribute="purple"
+  test-custom-attribute={true}
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-label="More Options"
+    className="split-button-chevron"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render a split type with multiple children 1`] = `
+<div
+  className="dropdown-button neutral"
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-label="More Options"
+    className="split-button-chevron"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+    <Option
+      callback={[Function]}
+      label="2nd Option"
+    />
+    <Option
+      callback={[Function]}
+      label="3rd Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
+<div
+  className="dropdown-button emphasis"
+>
+  <button
+    aria-disabled={false}
+    className="dropdown-button-type"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="dropdown-button-type-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={false}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button should render an open dropdown 1`] = `
+<div
+  className="dropdown-button neutral"
+>
+  <button
+    aria-disabled={false}
+    className="dropdown-button-type is-active"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="dropdown-button-type-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="chevron-icon"
+    />
+  </button>
+  <Dropdown
+    handleRequestClose={[Function]}
+    isOpen={true}
+    targetRef={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </Dropdown>
+</div>
+`;

@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown renders a default dropdown 1`] = `
+<Popup
+  attachmentBehavior="auto"
+  boundingRef={null}
+  classNameArrow={null}
+  classNameContent={null}
+  classNameOverlay={null}
+  contentAttachment="top left"
+  contentHeight="auto"
+  contentWidth="auto"
+  isArrowDisplayed={false}
+  isContentFocusDisabled={false}
+  isHeaderDisabled={true}
+  isOpen={false}
+  onRequestClose={[Function]}
+  targetRef={[Function]}
+>
+  <DropdownList
+    handleRequestClose={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </DropdownList>
+</Popup>
+`;
+
+exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
+<Popup
+  attachmentBehavior="auto"
+  boundingRef={[Function]}
+  classNameArrow={null}
+  classNameContent={null}
+  classNameOverlay={null}
+  contentAttachment="top left"
+  contentHeight="auto"
+  contentWidth="auto"
+  isArrowDisplayed={false}
+  isContentFocusDisabled={false}
+  isHeaderDisabled={true}
+  isOpen={false}
+  onRequestClose={[Function]}
+  targetRef={[Function]}
+>
+  <DropdownList
+    handleRequestClose={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </DropdownList>
+</Popup>
+`;
+
+exports[`Dropdown renders a dropdown with a set width 1`] = `
+<Popup
+  attachmentBehavior="auto"
+  boundingRef={null}
+  classNameArrow={null}
+  classNameContent={null}
+  classNameOverlay={null}
+  contentAttachment="top left"
+  contentHeight="auto"
+  contentWidth="auto"
+  isArrowDisplayed={false}
+  isContentFocusDisabled={false}
+  isHeaderDisabled={true}
+  isOpen={false}
+  onRequestClose={[Function]}
+  targetRef={[Function]}
+>
+  <DropdownList
+    handleRequestClose={[Function]}
+    width="470px"
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </DropdownList>
+</Popup>
+`;
+
+exports[`Dropdown renders a dropdown with multiple children 1`] = `
+<Popup
+  attachmentBehavior="auto"
+  boundingRef={null}
+  classNameArrow={null}
+  classNameContent={null}
+  classNameOverlay={null}
+  contentAttachment="top left"
+  contentHeight="auto"
+  contentWidth="auto"
+  isArrowDisplayed={false}
+  isContentFocusDisabled={false}
+  isHeaderDisabled={true}
+  isOpen={false}
+  onRequestClose={[Function]}
+  targetRef={[Function]}
+>
+  <DropdownList
+    handleRequestClose={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+    <Option
+      callback={[Function]}
+      label="2nd Option"
+    />
+    <Option
+      callback={[Function]}
+      label="3rd Option"
+    />
+  </DropdownList>
+</Popup>
+`;
+
+exports[`Dropdown renders an open dropdown 1`] = `
+<Popup
+  attachmentBehavior="auto"
+  boundingRef={null}
+  classNameArrow={null}
+  classNameContent={null}
+  classNameOverlay={null}
+  contentAttachment="top left"
+  contentHeight="auto"
+  contentWidth="auto"
+  isArrowDisplayed={false}
+  isContentFocusDisabled={false}
+  isHeaderDisabled={true}
+  isOpen={true}
+  onRequestClose={[Function]}
+  targetRef={[Function]}
+>
+  <DropdownList
+    handleRequestClose={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </DropdownList>
+</Popup>
+`;

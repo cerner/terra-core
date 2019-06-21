@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Option renders a default option 1`] = `
+<li>
+  <div
+    className="option"
+    onMouseUp={[Function]}
+    role="button"
+    tabIndex="-1"
+  >
+    1st Option
+  </div>
+</li>
+`;
+
+exports[`Option renders a focused option 1`] = `
+<li>
+  <div
+    className="option focus"
+    onMouseUp={[Function]}
+    role="button"
+    tabIndex="-1"
+  >
+    1st Option
+  </div>
+</li>
+`;
+
+exports[`Option renders an active and focused option 1`] = `
+<li>
+  <div
+    className="option focus active"
+    onMouseUp={[Function]}
+    role="button"
+    tabIndex="-1"
+  >
+    1st Option
+  </div>
+</li>
+`;
+
+exports[`Option renders an active option 1`] = `
+<li>
+  <div
+    className="option active"
+    onMouseUp={[Function]}
+    role="button"
+    tabIndex="-1"
+  >
+    1st Option
+  </div>
+</li>
+`;
