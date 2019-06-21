@@ -7,15 +7,6 @@
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-dropdown-button`
 
-## Usage
-
-```jsx
-import React from 'react';
-import DropdownButton from 'terra-dropdown-button';
-
-<DropdownButton {props...} />
-```
-
 ## Component Features
 
 <!-- Uncomment supported features.
