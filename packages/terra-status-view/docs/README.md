@@ -1,6 +1,6 @@
 # Terra Status View
 
-Renders an icon, title, message, and buttons.
+Presents an icon, title, message, and/or buttons based on a status type scenario. Scenarios include `no-data`, `no-matching-results`, `not-authorized`, `error`, or a custom scenario.
 
 ## Getting Started
 
