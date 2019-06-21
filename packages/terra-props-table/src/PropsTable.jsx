@@ -160,15 +160,15 @@ Props
             const customRequired = (prop.type.name === 'custom' && prop.type.raw.includes('isRequired'));
 
             return (
-              <tr className={tableRowClass} key={key} style={{ fontSize: '90%' }}>
-                <td style={{ fontWeight: 'bold' }}>{key}</td>
+              <tr className={tableRowClass} key={key}>
+                <td className={cx('props-table-data')}>{key}</td>
                 <td>{(prop.type ? type : '')}</td>
                 {(customRequired || prop.required
-                  ? <td style={{ color: '#d53700' }}>required</td>
-                  : <td style={{ color: '#444' }}>optional</td>)}
+                  ? <td className={cx('props-table-required-data')}>required</td>
+                  : <td className={cx('props-table-optiobal-data')}>optional</td>)}
                 {(prop.defaultValue
-                  ? <td style={{ fontWeight: 'bold' }}>{prop.defaultValue.value}</td>
-                  : <td style={{ color: '#444' }}>none</td>)}
+                  ? <td className={cx('props-table-data')}>{prop.defaultValue.value}</td>
+                  : <td className={cx('props-table-optional-data')}>none</td>)}
                 <td><Markdown src={prop.description} /></td>
               </tr>
             );
