@@ -1,10 +1,14 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import OverlayContainer from '../../../../OverlayContainer';
 import LoadingOverlay from '../../../../LoadingOverlay';
+import styles from '../Overlay/OverlayTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default () => (
   <OverlayContainer
-    style={{ height: '100px', width: '100%' }}
+    className={cx('overlay-container2')}
     overlay={<LoadingOverlay isOpen isRelativeToContainer id="terra-LoadingOverlay" />}
   />
 );
