@@ -3,7 +3,7 @@
 ## Changes from version 3 to version 4
 
 ### Props
-* **Removed** children prop. This is **replaced** by `buttonAttrs`. This prop accepts an array of objects containing terra-button properties. Example:
+* **Removed** children prop. This is **replaced** by `buttonAttrs`. This prop accepts an array of objects containing terra-button properties. Remember that React requires a unique id to be attached to each element in an array. Example:
 
 ```jsx
 const buttons = [
@@ -30,7 +30,7 @@ const buttons = [
 
 ### Resizing
 * Use `isGlyphHidden` to show or hide the glyph. The `onComponentMount` logic to do this has been removed.
-* Status view defaults to a "centered" alignment, based on available size and remaining space. The top will contain `40%` of space, while the remaining `60%` is delegated to the bottom. Use `isAlignedTop` to remove this distribution and render the status view at the top of the container.
+* Status view defaults to a "centered" alignment, based on available size and remaining space. The top will contain `40%` of space, while the remaining `60%` is delegated to the bottom. Use `setAlignTop` to remove this distribution and render the status view at the top of the container.
 
 ## Changes from version 2 to version 3
 
