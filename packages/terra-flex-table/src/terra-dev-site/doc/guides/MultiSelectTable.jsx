@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {
+  useState,
+} from 'react';
 import Table, {
   Row, Cell, HeaderCell, Utils,
 } from 'terra-flex-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
@@ -6,71 +8,46 @@ import mockData from './mock-data/mock-select';
 
 const maxSectionCount = 3;
 
-const widths = [
-  { static: { value: 60, unit: 'px' } },
-  { static: { value: 60, unit: 'px' } },
-  { static: { value: 60, unit: 'px' } },
-  { static: { value: 60, unit: 'px' } },
-];
+const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCell = (cell, index) => (
-  <Cell isPadded key={cell.key} width={widths[index]}>
-    {cell.title}
-  </Cell>
-);
+const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
+const MultiSelectTable = () => {
+  const [selectedKeys, setSelectedKeys] = useState([]);
 
-class MutliSelectTable extends React.Component {
-  constructor(props) {
-    super(props);
-    this.createTableRow = this.createTableRow.bind(this);
-    this.createTableRows = this.createTableRows.bind(this);
-    this.handleRowSelection = this.handleRowSelection.bind(this);
-    this.state = { selectedKeys: [] };
-  }
-
-  handleRowSelection(event, metaData) {
+  const handleRowSelection = (event, metaData) => {
     event.preventDefault();
-    this.setState(state => ({ selectedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
-  }
+    setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
+  };
 
-  createTableRow(rowData) {
-    return (
-      <Row
-        key={rowData.key}
-        isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, this.state.selectedKeys, rowData.key)}
-        isSelected={this.state.selectedKeys.indexOf(rowData.key) >= 0}
-        metaData={{ key: rowData.key }}
-        onSelect={this.handleRowSelection}
-      >
-        {createCellsForRow(rowData.cells)}
-      </Row>
-    );
-  }
+  const createTableRow = rowData => (
+    <Row
+      key={rowData.key}
+      isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key)}
+      isSelected={selectedKeys.indexOf(rowData.key) >= 0}
+      metaData={{ key: rowData.key }}
+      onSelect={handleRowSelection}
+    >
+      {createCellsForRow(rowData.cells)}
+    </Row>
+  );
 
-  createTableRows(data) {
-    return data.map(childItem => this.createTableRow(childItem));
-  }
+  const createTableRows = data => data.map(childItem => createTableRow(childItem));
 
-  render() {
-    return (
-      <Table
-        aria-multiselectable
-        paddingStyle="standard"
-        headerCells={[
-          <HeaderCell isPadded key="cell-0" width={widths[0]}>Fixed 0</HeaderCell>,
-          <HeaderCell isPadded key="cell-1" width={widths[1]}>Fixed 1</HeaderCell>,
-          <HeaderCell isPadded key="cell-2" width={widths[2]}>Fixed 2</HeaderCell>,
-          <HeaderCell isPadded key="cell-3" width={widths[3]}>Fixed 3</HeaderCell>,
-        ]}
-        fill
-        style={{ height: '200px' }}
-      >
-        {this.createTableRows(mockData)}
-      </Table>
-    );
-  }
-}
+  return (
+    <Table
+      aria-multiselectable
+      paddingStyle="standard"
+      headerCells={[
+        <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>,
+        <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>,
+        <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>,
+        <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>,
+      ]}
+    >
+      {createTableRows(mockData)}
+    </Table>
+  );
+};
 
-export default MutliSelectTable;
+export default MultiSelectTable;

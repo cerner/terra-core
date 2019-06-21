@@ -4,15 +4,11 @@ import Table, {
 } from 'terra-flex-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const createCell = cell => (
-  <Cell isPadded key={cell.key}>
-    {cell.title}
-  </Cell>
-);
+const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-const createTableRow = (itemData, index) => (
+const createRow = (itemData, index) => (
   <Row
     key={itemData.key}
     isStriped={index % 2 !== 0}
@@ -22,7 +18,7 @@ const createTableRow = (itemData, index) => (
   </Row>
 );
 
-const createTableRows = data => data.map((childItem, index) => createTableRow(childItem, index));
+const createTableRows = data => data.map((childItem, index) => createRow(childItem, index));
 
 const StripedTable = () => (
   <Table

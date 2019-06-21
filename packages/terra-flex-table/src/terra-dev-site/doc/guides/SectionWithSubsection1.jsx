@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {
+  useState,
+} from 'react';
 import Table, {
   Row,
   Cell,
@@ -9,19 +11,11 @@ import Table, {
 } from 'terra-flex-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-section-sub';
 
-const createCell = cell => (
-  <Cell isPadded key={cell.key}>
-    {cell.title}
-  </Cell>
-);
+const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-const createRow = itemData => (
-  <Row key={itemData.key}>
-    {createCellsForRow(itemData.cells)}
-  </Row>
-);
+const createRow = itemData => <Row key={itemData.key}>{createCellsForRow(itemData.cells)}</Row>;
 
 const createSubsection = subsectionData => (
   <Subsection
@@ -32,55 +26,41 @@ const createSubsection = subsectionData => (
   </Subsection>
 );
 
-class SectionWithSubsection1 extends React.Component {
-  constructor(props) {
-    super(props);
-    this.createSection = this.createSection.bind(this);
-    this.createSections = this.createSections.bind(this);
-    this.handleSectionSelection = this.handleSectionSelection.bind(this);
-    this.state = { collapsedKeys: [] };
-  }
+const SectionWithSubsection1 = () => {
+  const [collapsedKeys, setCollapsedKeys] = useState([]);
 
-  handleSectionSelection(event, metaData) {
+  const handleSectionSelection = (event, metaData) => {
     event.preventDefault();
-    this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.collapsedKeys, metaData.key) }));
-  }
+    setCollapsedKeys(Utils.updatedMultiSelectedKeys(collapsedKeys, metaData.key));
+  };
 
-  createSection(sectionData) {
-    return (
-      <Section
-        key={sectionData.key}
-        title={sectionData.title}
-        isCollapsed={this.state.collapsedKeys.indexOf(sectionData.key) >= 0}
-        isCollapsible
-        metaData={{ key: sectionData.key }}
-        onSelect={this.handleSectionSelection}
-      >
-        {sectionData.childItems.map(childItem => createSubsection(childItem))}
-      </Section>
-    );
-  }
+  const createSection = sectionData => (
+    <Section
+      key={sectionData.key}
+      title={sectionData.title}
+      isCollapsed={collapsedKeys.indexOf(sectionData.key) >= 0}
+      isCollapsible
+      metaData={{ key: sectionData.key }}
+      onSelect={handleSectionSelection}
+    >
+      {sectionData.childItems.map(childItem => createSubsection(childItem))}
+    </Section>
+  );
 
-  createSections(data) {
-    return data.map(section => this.createSection(section));
-  }
+  const createSections = data => data.map(section => createSection(section));
 
-  render() {
-    return (
-      <Table
-        style={{ height: '200px' }}
-        fill
-        paddingStyle="standard"
-        headerCells={[
-          <HeaderCell isPadded key="cell-1">Column 0Column 0Column 0Column 0Column 0</HeaderCell>,
-          <HeaderCell isPadded key="cell-2">Column 1Column 1Column 1Column 1Column 1</HeaderCell>,
-          <HeaderCell isPadded key="cell-3">Column 2Column 2Column 2Column 2Column 2</HeaderCell>,
-        ]}
-      >
-        {this.createSections(mockData)}
-      </Table>
-    );
-  }
-}
+  return (
+    <Table
+      paddingStyle="standard"
+      headerCells={[
+        <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>,
+        <HeaderCell isPadded key="cell-2">Column 1</HeaderCell>,
+        <HeaderCell isPadded key="cell-3">Column 2</HeaderCell>,
+      ]}
+    >
+      {createSections(mockData)}
+    </Table>
+  );
+};
 
 export default SectionWithSubsection1;

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {
+  useState,
+} from 'react';
 import Table, {
   Row, Cell, HeaderCell,
 } from 'terra-flex-table/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
@@ -6,15 +8,11 @@ import mockData from './mock-data/mock-sort';
 
 const columns = ['column-0', 'column-1', 'column-2'];
 
-const createCell = cell => (
-  <Cell isPadded key={cell.key}>
-    {cell.title}
-  </Cell>
-);
+const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-const createTableRow = itemData => <Row key={itemData.key}>{createCellsForRow(itemData.cells)}</Row>;
+const createRow = itemData => <Row key={itemData.key}>{createCellsForRow(itemData.cells)}</Row>;
 
 const sortData = (data, sortColumn) => {
   if (!sortColumn) {
@@ -33,44 +31,35 @@ const sortData = (data, sortColumn) => {
   return sortColumn.direction === 'asc' ? dataCopy : dataCopy.reverse();
 };
 
-class SortedTable extends React.Component {
-  constructor(props) {
-    super(props);
-    this.createTableRows = this.createTableRows.bind(this);
-    this.handleSortClick = this.handleSortClick.bind(this);
-    this.createHeaderCell = this.createHeaderCell.bind(this);
-    this.state = { sortColumn: null };
-  }
+const SortedTable = () => {
+  const [sortColumn, setSortColumn] = useState(null);
 
-  handleSortClick(event, metaData) {
+  const handleSortClick = (event, metaData) => {
     event.preventDefault();
-    if (!this.state.sortColumn || this.state.sortColumn.key !== metaData.key) {
-      this.setState({ sortColumn: { key: metaData.key, direction: 'asc' } });
+    if (!sortColumn || sortColumn.key !== metaData.key) {
+      setSortColumn({ key: metaData.key, direction: 'asc' });
+    } else if (sortColumn.direction === 'asc') {
+      setSortColumn({ key: metaData.key, direction: 'desc' });
     } else {
-      this.setState((prevState) => {
-        if (prevState.sortColumn.direction === 'asc') {
-          return { sortColumn: { key: metaData.key, direction: 'desc' } };
-        }
-        return { sortColumn: null };
-      });
+      setSortColumn(null);
     }
-  }
+  };
 
-  createTableRows(data) {
-    const sortedData = sortData(data, this.state.sortColumn);
-    return sortedData.map(childItem => createTableRow(childItem));
-  }
+  const createTableRows = (data) => {
+    const sortedData = sortData(data, sortColumn);
+    return sortedData.map(childItem => createRow(childItem));
+  };
 
-  createHeaderCell(key, title) {
+  const createHeaderCell = (key, title) => {
     let sort;
-    if (this.state.sortColumn && this.state.sortColumn.key === key) {
-      sort = this.state.sortColumn.direction;
+    if (sortColumn && sortColumn.key === key) {
+      sort = sortColumn.direction;
     }
     return (
       <HeaderCell
         key={key}
         metaData={{ key }}
-        onSelect={this.handleSortClick}
+        onSelect={handleSortClick}
         sort={sort}
         isSelectable
         isPadded
@@ -78,22 +67,20 @@ class SortedTable extends React.Component {
         {title}
       </HeaderCell>
     );
-  }
+  };
 
-  render() {
-    return (
-      <Table
-        paddingStyle="standard"
-        headerCells={[
-          this.createHeaderCell('column-0', 'Breakfast'),
-          this.createHeaderCell('column-1', 'Animals'),
-          this.createHeaderCell('column-2', 'Flatware'),
-        ]}
-      >
-        {this.createTableRows(mockData)}
-      </Table>
-    );
-  }
-}
+  return (
+    <Table
+      paddingStyle="standard"
+      headerCells={[
+        createHeaderCell('column-0', 'Breakfast'),
+        createHeaderCell('column-1', 'Animals'),
+        createHeaderCell('column-2', 'Flatware'),
+      ]}
+    >
+      {createTableRows(mockData)}
+    </Table>
+  );
+};
 
 export default SortedTable;
