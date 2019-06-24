@@ -113,7 +113,10 @@ class Overlay extends React.Component {
       }
     } else {
       const selector = this.props.rootSelector;
-      if (document.querySelector(selector)) document.querySelector(selector).setAttribute('inert', '');
+      if (document.querySelector(selector) && !document.querySelector(selector).hasAttribute('data-modal-open')) {
+        document.querySelector(selector).setAttribute('data-overlay-open', '');
+        document.querySelector(selector).setAttribute('inert', '');
+      }
       document.documentElement.style.overflow = 'hidden';
     }
   }
@@ -125,7 +128,10 @@ class Overlay extends React.Component {
       }
     } else {
       const selector = this.props.rootSelector;
-      if (document.querySelector(selector)) document.querySelector(selector).removeAttribute('inert');
+      if (document.querySelector(selector) && !document.querySelector(selector).hasAttribute('data-modal-open')) {
+        document.querySelector(selector).removeAttribute('data-overlay-open');
+        document.querySelector(selector).removeAttribute('inert');
+      }
       document.documentElement.style.overflow = this.overflow;
     }
   }

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Added `data-overlay-open` attribute to root document when overlay is opened
+* Added check for `data-modal-open` attribute on root document to prevent removal of `inert` attribute if a modal is also open
 
 3.16.0 - (June 18, 2019)
 ------------------
