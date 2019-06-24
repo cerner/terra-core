@@ -1,7 +1,7 @@
 # Terra Dropdown Button
 
-[![NPM version](https://badgen.net/npm/v/terra-dropdown-button)](https://www.npmjs.org/package/terra-dropdown-button)
-[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.org/cerner/terra-core)
+[![NPM version](https://badgen.net/npm/v/terra-dropdown-button)](https://www.npmjs.com/package/terra-dropdown-button)
+[![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 {insert description}
 

@@ -1,16 +1,9 @@
-/* global browser, Terra, before */
-Terra.viewports('tiny', 'medium', 'large').forEach((viewport) => {
-  describe('DropdownButton', () => {
-    before(() => {
-      browser.setViewportSize(viewport);
-    });
+Terra.describeViewports('Dropdown Button', ['tiny', 'medium', 'large'], () => {
+  describe('Default', () => {
+    before(() => browser.url('/#/raw/tests/terra-dropdown-button/default-dropdown-button'));
 
-    describe('Default', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-dropdown-button/default-dropdown-button');
-      });
-
-      Terra.should.validateElement();
+    it('validates the element', () => {
+      Terra.validates.element();
     });
   });
 });
