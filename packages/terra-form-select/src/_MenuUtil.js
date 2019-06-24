@@ -216,7 +216,7 @@ class MenuUtil {
       return null;
     }
 
-    if (searchValue && searchValue.length === 0 && value && value.length === 0 && !active && active !== '') {
+    if (searchValue !== undefined && searchValue !== null && searchValue.length === 0 && value !== undefined && value !== null && value.length === 0 && !active && active !== '') {
       return null;
     }
 
