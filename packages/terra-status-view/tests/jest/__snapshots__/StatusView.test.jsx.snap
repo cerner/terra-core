@@ -82,19 +82,6 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
           </span>
         </FormattedMessage>
       </div>
-      <div
-        className="divider"
-      >
-        <Divider>
-          <hr
-            aria-hidden="true"
-            className="divider"
-          />
-        </Divider>
-      </div>
-      <div
-        className="actions"
-      />
     </div>
     <div
       className="bottom-space"
@@ -192,19 +179,6 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
           </span>
         </FormattedMessage>
       </div>
-      <div
-        className="divider"
-      >
-        <Divider>
-          <hr
-            aria-hidden="true"
-            className="divider"
-          />
-        </Divider>
-      </div>
-      <div
-        className="actions"
-      />
     </div>
     <div
       className="bottom-space"
@@ -302,19 +276,6 @@ exports[`should render a not-authorized status-view 1`] = `
           </span>
         </FormattedMessage>
       </div>
-      <div
-        className="divider"
-      >
-        <Divider>
-          <hr
-            aria-hidden="true"
-            className="divider"
-          />
-        </Divider>
-      </div>
-      <div
-        className="actions"
-      />
     </div>
     <div
       className="bottom-space"
@@ -631,19 +592,6 @@ exports[`should render an error status-view 1`] = `
           </span>
         </FormattedMessage>
       </div>
-      <div
-        className="divider"
-      >
-        <Divider>
-          <hr
-            aria-hidden="true"
-            className="divider"
-          />
-        </Divider>
-      </div>
-      <div
-        className="actions"
-      />
     </div>
     <div
       className="bottom-space"

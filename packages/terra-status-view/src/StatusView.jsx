@@ -67,13 +67,8 @@ const defaultProps = {
   variant: undefined,
 };
 
-const checkVariantExistence = (variant) => {
-  const variantArr = Object.values(StatusViewVariants);
-  return variantArr.includes(variant);
-};
-
 const generateButtons = (buttonAttrsArray) => {
-  if (!buttonAttrsArray) {
+  if (!buttonAttrsArray.length) {
     return undefined;
   }
 
@@ -91,24 +86,22 @@ const StatusView = ({
   ...customProps
 }) => {
   let glyphSection;
-  if (!isGlyphHidden) {
-    if (customGlyph) {
-      glyphSection = (
-        <div className={cx('glyph')}>
-          {customGlyph}
-        </div>
-      );
-    } else {
-      glyphSection = (
-        <div className={cx('glyph')}>
-          <svg className={cx(variant)} />
-        </div>
-      );
-    }
+  if (customGlyph && !isGlyphHidden) {
+    glyphSection = (
+      <div className={cx('glyph')}>
+        {customGlyph}
+      </div>
+    );
+  } else if (variant && !isGlyphHidden) {
+    glyphSection = (
+      <div className={cx('glyph')}>
+        <svg className={cx(variant)} />
+      </div>
+    );
   }
 
   let defaultTitle;
-  if (checkVariantExistence(variant)) {
+  if (variant) {
     defaultTitle = <FormattedMessage id={`Terra.status-view.${variant}`} />;
   }
 
