@@ -2,10 +2,14 @@ import React from 'react';
 import Button from 'terra-button';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import StatusView from 'terra-status-view/lib/StatusView';
+import classNames from 'classnames/bind';
+import styles from './StatusViewDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const GlyphHiddenExample = (
   <StatusView
-    style={{ width: '500px' }}
+    className={cx('status-view-1')}
     variant="error"
     message="An exception was thrown"
     isGlyphHidden

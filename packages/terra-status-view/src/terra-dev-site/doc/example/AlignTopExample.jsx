@@ -3,10 +3,14 @@ import Button from 'terra-button';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import StatusView from 'terra-status-view/lib/StatusView';
+import classNames from 'classnames/bind';
+import styles from './StatusViewDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const AlignTopExample = (
   <StatusView
-    style={{ height: '500px', width: '500px' }}
+    className={cx('status-view-2')}
     isAlignedTop
     variant="error"
     message="An exception was thrown"

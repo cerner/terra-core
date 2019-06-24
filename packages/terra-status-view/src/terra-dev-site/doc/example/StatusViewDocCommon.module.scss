@@ -1,0 +1,16 @@
+:local {
+  .status-view-1,
+  .status-view-2,
+  .status-view-3 {
+    width: 500px;
+  }
+
+  .status-view-2 {
+    height: 500px;
+  }
+
+  .status-view-3 {
+    height: 220px;
+    overflow: auto;
+  }
+}
