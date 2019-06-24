@@ -3,6 +3,22 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added more information to upgrade guide around Jest testing
+
+4.6.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
+
+4.5.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
+* Changed modules to export
 
 4.4.0 - (May 21, 2019)
 ------------------

@@ -3,6 +3,22 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed accessibility issue in list item tests
+* Update mixin import to work better with codesandbox.io
+
+4.8.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
+
+4.7.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 4.6.0 - (May 1, 2019)
 ------------------

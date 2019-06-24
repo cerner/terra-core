@@ -3,6 +3,7 @@
 exports[`OptGroup should render a default Option 1`] = `
 <li
   className="opt-group"
+  role="group"
 >
   <div
     className="label"
@@ -11,6 +12,7 @@ exports[`OptGroup should render a default Option 1`] = `
   </div>
   <ul
     className="options"
+    role="listbox"
   />
 </li>
 `;

@@ -38,7 +38,7 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Whether the textarea can be auto-resized vertically.
+   * Whether the textarea can be auto-resized vertically. _(Will be ignored if size attribute is set to "full".)_
    */
   isAutoResizable: PropTypes.bool,
   /**
@@ -67,8 +67,7 @@ const propTypes = {
    */
   rows: PropTypes.number,
   /**
-   * The size of the textarea. Sizes the textarea by setting the rows attribute to the number corresponding
-   * to this value.
+   * The size of the textarea. _(Sizes the textarea by setting the rows attribute a corresponding preset value.)_
    */
   size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
   /**
@@ -218,6 +217,7 @@ class Textarea extends React.Component {
 
 Textarea.propTypes = propTypes;
 Textarea.defaultProps = defaultProps;
+Textarea.isTextarea = true;
 
 export default Textarea;
 export { TextareaSize };

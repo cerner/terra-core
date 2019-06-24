@@ -17,9 +17,10 @@ const svgs = fs.readdirSync(TerraIcon.svgDir)
 // // Resolve to absolute path
   .map(f => path.join(TerraIcon.svgDir, f));
 
-
+/* eslint-disable no-console */
 svgs.forEach((svg) => {
   parseSvg(svg)
     .then(renderJsx)
-    .then(writeIcon);
+    .then(writeIcon)
+    .catch(console.error);
 });

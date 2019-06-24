@@ -3,6 +3,8 @@ import IconHelp from 'terra-icon/lib/icon/IconHelp';
 
 import TextareaField from '../../src/TextareaField';
 
+window.matchMedia = () => ({ matches: true });
+
 it('should render a default TextareaField component', () => {
   const textarea = <TextareaField inputId="test-input" label="Label" />;
   const wrapper = shallow(textarea);

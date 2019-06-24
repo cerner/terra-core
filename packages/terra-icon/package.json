@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "3.9.0",
+  "version": "3.11.0",
   "description": "The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.",
   "repository": {
     "type": "git",
@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "csvtojson": "^1.1.4",
-    "jsdom": "^9.11.0",
-    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/1.21.1.tar.gz",
+    "csvtojson": "^2.0.8",
+    "jsdom": "^15.1.1",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/1.23.0.tar.gz",
     "shelljs": "^0.8.2",
-    "svgo": "^0.7.2"
+    "svgo": "^1.2.2"
   },
   "peerDependencies": {
     "react": "^16.8.5",
@@ -33,24 +33,23 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.9.0"
+    "terra-doc-template": "^2.10.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
     "compilescripts:clean": "rm -rf scripts/lib",
-    "compilescripts:build": "babel scripts/src --out-dir scripts/lib --copy-files",
+    "compilescripts:build": "babel --root-mode upward scripts/src --out-dir scripts/lib --copy-files",
     "migrate-csv": "node scripts/lib/migrate-csv/index.js",
     "migrate-svg": "node scripts/lib/migrate-svg/index.js",
     "generate-json": "node scripts/lib/generate-json/index.js",
     "generate-icon": "node scripts/lib/generate-icon/index.js",
     "generate-example": "node scripts/lib/generate-example/index.js",
     "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-json && npm run generate-icon && npm run generate-example",
-    "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
-    "compile:build": "babel src --out-dir lib --copy-files",
+    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
+    "precompile": "rm -rf lib",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest --config ../../jestconfig.js",
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"

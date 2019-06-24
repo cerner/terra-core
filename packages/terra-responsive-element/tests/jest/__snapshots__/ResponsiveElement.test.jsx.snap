@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a default component 1`] = `
+exports[`should render the component defined for tiny 1`] = `
 <div>
-  Default
+  Tiny
 </div>
 `;

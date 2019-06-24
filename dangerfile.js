@@ -1,31 +1,31 @@
-// eslint-disable-next-line import/no-extraneous-dependencies, no-unused-vars, object-curly-newline
-import { danger, warn, fail, message } from 'danger';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { danger, fail } from 'danger';
 
-const newChangelog = danger.git.created_files.filter((filePath) => {
-  const srcFilePattern = /^packages\/terra-([a-z-])*\/CHANGELOG.md/i;
-  return srcFilePattern.test(filePath);
+const CHANGELOG_PATTERN = /^packages\/terra-([a-z-0-9])*\/CHANGELOG\.md/i;
+
+const changedFiles = danger.git.created_files.concat(danger.git.modified_files);
+
+const changedChangelogs = new Set();
+const changedPackages = new Set();
+
+changedFiles.forEach((file) => {
+  // file isn't in a package so it has no changelog, skip further processing
+  if (file.substring(0, 9) !== 'packages/') {
+    return;
+  }
+
+  const packageName = file.split('packages/')[1].split('/')[0];
+
+  if (CHANGELOG_PATTERN.test(file)) {
+    changedChangelogs.add(packageName);
+  } else { // file is in a package and was changed - we need a changelog
+    changedPackages.add(packageName);
+  }
 });
 
-const modifiedChangelog = danger.git.modified_files.filter((filePath) => {
-  const srcFilePattern = /^packages\/terra-([a-z-])*\/CHANGELOG.md/i;
-  return srcFilePattern.test(filePath);
-});
+const missingChangelogs = [...changedPackages].filter(packageName => !changedChangelogs.has(packageName));
 
-const modifiedSrcFiles = danger.git.modified_files.filter((filePath) => {
-  const srcFilePattern = /^packages\/terra-([a-z-])*\/src/i;
-  return srcFilePattern.test(filePath);
-});
-
-const hasCHANGELOGChanges = modifiedChangelog.length > 0 || newChangelog.length > 0;
-const hasModifiedSrcFiles = modifiedSrcFiles.length > 0;
-
-// Fail if there are src code changes without a CHANGELOG update
-if (hasModifiedSrcFiles && !hasCHANGELOGChanges) {
-  fail('Please include a CHANGELOG entry with this PR.');
-}
-
-// Warn when there is a big PR
-const bigPRThreshold = 1000;
-if (danger.github.pr.additions + danger.github.pr.deletions > bigPRThreshold) {
-  warn(':exclamation: Big PR. Consider breaking this into smaller PRs if applicable');
+// Fail if there are package changes without a CHANGELOG update
+if (missingChangelogs.length > 0) {
+  fail(`Please include a CHANGELOG entry for each changed package this PR. Looks like a CHANGELOG is missing for: \n\n - ${missingChangelogs.join('\n - ')}`);
 }

@@ -4,6 +4,25 @@ Changelog
 Unreleased
 ----------
 
+3.13.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
+
+3.12.1 - (June 12, 2019)
+------------------
+### Changed
+* Revert changes to updated wdio screenshots
+
+3.12.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
+* Updated wdio screenshots
+
 3.11.0 - (May 21, 2019)
 ------------------
 ### Changed

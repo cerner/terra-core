@@ -3,6 +3,27 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Moved v2 Upgrade guide that existed in the wiki to the upgrade guide doc
+
+3.17.0 - (June 18, 2019)
+------------------
+### Added
+* Added missing WDIO screenshots
+
+3.13.1 - (June 12, 2019)
+------------------
+### Changed
+* Reverted change to adjust Button CSS to better line up icons with text
+
+3.13.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Adjusted Button CSS to better line up icons with text
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
 3.12.0 - (May 1, 2019)
 ------------------

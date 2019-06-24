@@ -4,6 +4,25 @@ ChangeLog
 Unreleased
 ----------
 
+2.14.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
+
+2.13.1 - (June 12, 2019)
+------------------
+### Changed
+* Revert changes to adjust close-icon size and margin styling
+
+2.13.0 - (June 11, 2019)
+------------------
+### Removed
+* Removed node_modules from .npmignore
+
+### Changed
+* Made required updates to consume terra-toolkit v5 and terra-dev-site v5
+* Adjusted close-icon size and margin styling
+
 2.12.0 - (May 1, 2019)
 ------------------
 ### Changed

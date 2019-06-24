@@ -5,7 +5,6 @@
     "publish": {
       "ignore": [
         "DEPENDENCIES.md",
-        "terra-i18n-plugin",
         "*.tgz"
       ]
     }

@@ -1,7 +1,7 @@
 /* globals spyOn */
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, no-console */
 import intlLoaders from 'intlLoaders';
-import loadIntl from '../../src/intlLoaders';
+import defaultLoadIntl from '../../src/intlLoaders';
 
 global.console = { warn: jest.fn() };
 
@@ -12,28 +12,28 @@ describe('intlLoaders', () => {
 
   it('logs a warning when the regional locale is not provided and locale fallback is used', () => {
     spyOn(intlLoaders, 'es').and.returnValue(() => ({ messages: {} }));
-    loadIntl('es-US');
+    defaultLoadIntl('es-US');
     expect(console.warn).toBeCalledWith('Locale data was not supplied for the es-US locale. Using es data as the fallback locale data.');
   });
 
   it('logs a warning when the locale is not provided and en fallback is used', () => {
     spyOn(intlLoaders, 'en').and.returnValue(() => ({ messages: {} }));
-    loadIntl('es');
+    defaultLoadIntl('es');
     expect(console.warn).toBeCalledWith('Locale data was not supplied for the es locale. Using en data as the fallback locale data.');
   });
 
   it('logs a warning when the regional locale and locale are not provided and en fallback is used', () => {
     spyOn(intlLoaders, 'en').and.returnValue(() => ({ messages: {} }));
-    loadIntl('es-US');
+    defaultLoadIntl('es-US');
     expect(console.warn).toBeCalledWith('Locale data was not supplied for the es-US or es locales. Using en data as the fallback locale data.');
   });
 
   it('throws an error when the locale and en fallback are not provided', () => {
-    expect(() => loadIntl('es')).toThrowErrorMatchingSnapshot();
+    expect(() => defaultLoadIntl('es')).toThrowErrorMatchingSnapshot();
   });
 
   it('throws an error when the regional locale and en fallback are not provided', () => {
-    expect(() => loadIntl('es-US')).toThrowErrorMatchingSnapshot();
+    expect(() => defaultLoadIntl('es-US')).toThrowErrorMatchingSnapshot();
   });
 
   describe('production environment', () => {
@@ -47,34 +47,34 @@ describe('intlLoaders', () => {
 
     it('only fallbacks when the regional locale is not provided and locale fallback is used', () => {
       spyOn(intlLoaders, 'es').and.returnValue(() => ({ messages: {} }));
-      loadIntl('es-US');
+      defaultLoadIntl('es-US');
       expect(console.warn).not.toHaveBeenCalled();
     });
 
     it('only fallbacks when the regional locale is not provided and locale fallback is used', () => {
       spyOn(intlLoaders, 'es').and.returnValue(() => ({ messages: {} }));
-      loadIntl('es-US');
+      defaultLoadIntl('es-US');
       expect(console.warn).not.toHaveBeenCalled();
     });
 
     it('only fallbacks when the locale is not provided and en fallback is used', () => {
       spyOn(intlLoaders, 'en').and.returnValue(() => ({ messages: {} }));
-      loadIntl('es');
+      defaultLoadIntl('es');
       expect(console.warn).not.toHaveBeenCalled();
     });
 
     it('only fallbacks when the regional locale and locale are not provided and en fallback is used', () => {
       spyOn(intlLoaders, 'en').and.returnValue(() => ({ messages: {} }));
-      loadIntl('es-US');
+      defaultLoadIntl('es-US');
       expect(console.warn).not.toHaveBeenCalled();
     });
 
     it('still throws an error when the locale and en fallback are not provided', () => {
-      expect(() => loadIntl('es')).toThrowErrorMatchingSnapshot();
+      expect(() => defaultLoadIntl('es')).toThrowErrorMatchingSnapshot();
     });
 
     it('still throws an error when the regional locale and en fallback are not provided', () => {
-      expect(() => loadIntl('es-US')).toThrowErrorMatchingSnapshot();
+      expect(() => defaultLoadIntl('es-US')).toThrowErrorMatchingSnapshot();
     });
   });
 });

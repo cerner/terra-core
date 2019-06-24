@@ -1,6 +1,8 @@
 import React from 'react';
 import Radio from '../../src/Radio';
 
+window.matchMedia = () => ({ matches: true });
+
 it('should render a radio', () => {
   const checkBox = (<Radio labelText="Radio" />);
   const wrapper = shallow(checkBox);

@@ -2,8 +2,9 @@
 
 exports[`renders a banner that has basic information 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <Unknown
+  responsiveTo="parent"
+  small={
+    <_default
       age="24"
       applicationContent={null}
       dateOfBirth="March 30, 2017"
@@ -24,9 +25,8 @@ exports[`renders a banner that has basic information 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
-    <Unknown
+    <_default
       age="24"
       applicationContent={null}
       dateOfBirth="March 30, 2017"
@@ -52,8 +52,9 @@ exports[`renders a banner that has basic information 1`] = `
 
 exports[`renders a blank banner properly 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <Unknown
+  responsiveTo="parent"
+  small={
+    <_default
       age="--"
       applicationContent={null}
       dateOfBirth="--"
@@ -74,9 +75,8 @@ exports[`renders a blank banner properly 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
-    <Unknown
+    <_default
       age="--"
       applicationContent={null}
       dateOfBirth="--"
@@ -102,8 +102,9 @@ exports[`renders a blank banner properly 1`] = `
 
 exports[`renders gestational date with a default label when the label is not provided 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <Unknown
+  responsiveTo="parent"
+  small={
+    <_default
       age="--"
       applicationContent={null}
       dateOfBirth="--"
@@ -124,9 +125,8 @@ exports[`renders gestational date with a default label when the label is not pro
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
-    <Unknown
+    <_default
       age="--"
       applicationContent={null}
       dateOfBirth="--"
@@ -152,8 +152,9 @@ exports[`renders gestational date with a default label when the label is not pro
 
 exports[`renders post menstrural date with a default label when the label is not provided 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <Unknown
+  responsiveTo="parent"
+  small={
+    <_default
       age="--"
       applicationContent={null}
       dateOfBirth="--"
@@ -174,9 +175,8 @@ exports[`renders post menstrural date with a default label when the label is not
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
-    <Unknown
+    <_default
       age="--"
       applicationContent={null}
       dateOfBirth="--"
@@ -202,8 +202,9 @@ exports[`renders post menstrural date with a default label when the label is not
 
 exports[`renders the banner appropriately for a deceased person 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <Unknown
+  responsiveTo="parent"
+  small={
+    <_default
       age="24"
       applicationContent={null}
       dateOfBirth="June 15, 2014"
@@ -224,9 +225,8 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       preferredFirstName={null}
     />
   }
-  responsiveTo="parent"
   tiny={
-    <Unknown
+    <_default
       age="24"
       applicationContent={null}
       dateOfBirth="June 15, 2014"
@@ -252,8 +252,9 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
 
 exports[`renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <Unknown
+  responsiveTo="parent"
+  small={
+    <_default
       age="25 Years"
       applicationContent={
         <span
@@ -303,9 +304,8 @@ exports[`renders the banner appropriately for a person with gestational and post
       preferredFirstName="John"
     />
   }
-  responsiveTo="parent"
   tiny={
-    <Unknown
+    <_default
       age="25 Years"
       applicationContent={
         <span
@@ -360,8 +360,9 @@ exports[`renders the banner appropriately for a person with gestational and post
 
 exports[`renders the banner properly for a deceased person with additional application content 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <Unknown
+  responsiveTo="parent"
+  small={
+    <_default
       age="25 Years"
       applicationContent={
         <span
@@ -411,9 +412,8 @@ exports[`renders the banner properly for a deceased person with additional appli
       preferredFirstName="John"
     />
   }
-  responsiveTo="parent"
   tiny={
-    <Unknown
+    <_default
       age="25 Years"
       applicationContent={
         <span
@@ -468,8 +468,9 @@ exports[`renders the banner properly for a deceased person with additional appli
 
 exports[`renders the banner that contains additional information 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <Unknown
+  responsiveTo="parent"
+  small={
+    <_default
       age="25 Years"
       applicationContent={
         <span
@@ -519,9 +520,8 @@ exports[`renders the banner that contains additional information 1`] = `
       preferredFirstName="John"
     />
   }
-  responsiveTo="parent"
   tiny={
-    <Unknown
+    <_default
       age="25 Years"
       applicationContent={
         <span

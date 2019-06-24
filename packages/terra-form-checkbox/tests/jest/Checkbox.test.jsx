@@ -1,6 +1,8 @@
 import React from 'react';
 import Checkbox from '../../src/Checkbox';
 
+window.matchMedia = () => ({ matches: true });
+
 it('should render a checkbox', () => {
   const checkBox = (<Checkbox labelText="Checkbox" />);
   const wrapper = shallow(checkBox);

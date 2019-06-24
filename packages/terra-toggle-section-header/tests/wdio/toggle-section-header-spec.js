@@ -1,22 +1,36 @@
-describe('ToggleSectionHeader', () => {
+Terra.describeViewports('ToggleSectionHeader', ['huge'], () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/default-toggle-section-header'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/default-toggle-section-header');
+      browser.moveToObject('#root'); // move to prevent hover styles
+    });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
-  });
+    Terra.it.validatesElement();
 
-  describe('Open', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/open-toggle-section-header'));
+    it('validates hover styles', () => {
+      browser.moveToObject('#root', 0, 0); // move to cause hover styles
+      Terra.validates.element('hover');
+    });
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    it('opens the toggle', () => {
+      browser.leftClick('#root', 0, 0);
+      Terra.validates.element('open');
+    });
   });
 
   describe('Transparent', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/transparent-toggle-section-header'));
 
-    Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.it.validatesElement();
+
+    it('validates hover styles', () => {
+      browser.moveToObject('#root', 0, 0); // move to cause hover styles
+      Terra.validates.element('hover');
+    });
+
+    it('opens the toggle', () => {
+      browser.leftClick('#root', 0, 0);
+      Terra.validates.element('open');
+    });
   });
 });

@@ -1,7 +1,7 @@
 {
   "name": "terra-legacy-theme",
   "main": "lib/index.js",
-  "version": "2.23.0",
+  "version": "2.24.0",
   "description": "terra-legacy-theme",
   "repository": {
     "type": "git",
@@ -21,12 +21,11 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
-    "compile:build": "babel src --out-dir lib --copy-files",
+    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
+    "precompile": "rm -rf lib",
     "test": "npm run test:wdio",
     "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
   },
@@ -35,6 +34,6 @@
     "react-dom": "^16.8.5"
   },
   "dependencies": {
-    "terra-mixins": "^1.29.0"
+    "terra-mixins": "^1.30.0"
   }
 }
