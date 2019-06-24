@@ -36,14 +36,13 @@
     padding-left: var(--terra-dropdown-button-dropdown-type-padding-left, 10px);
     padding-right: var(--terra-dropdown-button-dropdown-type-padding-right, 7px);
     padding-top: var(--terra-dropdown-button-dropdown-type-padding-top, 4px);
-    white-space: normal;
   }
 
   .dropdown-button-type-text {
     display: inline-block;
     // Needed for IE 10 to linebreak things properly
     flex: 0 1 auto;
-    margin-right: 5px;
+    margin-right: var(--terra-dropdown-button-dropdown-type-text-margin-right, 5px);
   }
 
   .split-button-primary {
@@ -63,7 +62,6 @@
     padding-left: var(--terra-dropdown-button-split-type-primary-padding-left, 10px);
     padding-right: var(--terra-dropdown-button-split-type-primary-padding-right, 10px);
     padding-top: var(--terra-dropdown-button-split-type-primary-padding-top, 4px);
-    white-space: normal;
 
     &:focus {
       position: relative;
