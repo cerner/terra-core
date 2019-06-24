@@ -13,7 +13,7 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
   <Option
     callback={[Function]}
     isActive={false}
-    isFocused={false}
+    isFocused={true}
     key=".0"
     label="1st Option"
   />
@@ -135,7 +135,7 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
   <Option
     callback={[Function]}
     isActive={false}
-    isFocused={false}
+    isFocused={true}
     key=".0"
     label="1st Option"
   />

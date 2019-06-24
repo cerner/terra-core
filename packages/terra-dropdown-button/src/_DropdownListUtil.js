@@ -1,3 +1,5 @@
+import React from 'react';
+
 class DropdownListUtil {
   /**
    * Compares the value of two strings to determine case insensitive equality.
@@ -12,6 +14,10 @@ class DropdownListUtil {
     return a.toString().toLowerCase() === b.toString().toLowerCase();
   }
 
+  static getChildArray(object) {
+    return React.Children.toArray(object.props.children);
+  }
+
   /**
    * Finds the option matching the requested label.
    * @param {ReactNode} object - The node being flattened.
@@ -19,7 +25,7 @@ class DropdownListUtil {
    * @return {ReactNode|undefined} - The option. Returns undefined if not found.
    */
   static findByValue(object, label) {
-    return object.props.children.find(({ props }) => DropdownListUtil.isEqual(props.label, label));
+    return DropdownListUtil.getChildArray(object).find(({ props }) => DropdownListUtil.isEqual(props.label, label));
   }
 
   /**
@@ -28,7 +34,7 @@ class DropdownListUtil {
    * @return {string|null} - The label of the first option. Null if not found.
    */
   static findFirst(object) {
-    const options = object.props.children;
+    const options = DropdownListUtil.getChildArray(object);
 
     if (options.length > 0) {
       return options[0].props.label;
@@ -42,7 +48,7 @@ class DropdownListUtil {
    * @return {string|null} - The label of the last option. Null if not found.
    */
   static findLast(object) {
-    const options = object.props.children;
+    const options = DropdownListUtil.getChildArray(object);
 
     if (options.length > 0) {
       return options[options.length - 1].props.label;
@@ -57,7 +63,7 @@ class DropdownListUtil {
    * @return {string|null} - The firt option that starts with the provided string.
    */
   static findWithStartString(object, string) {
-    const option = object.props.children.find(opt => (
+    const option = DropdownListUtil.getChildArray(object).find(opt => (
       opt.props.label || '').toLowerCase().startsWith(string.toLowerCase()));
     return option ? option.props.label : null;
   }
@@ -69,7 +75,7 @@ class DropdownListUtil {
    * @return {string|null} - The label of the next option. Returns null if not found.
    */
   static findNext(object, label) {
-    const options = object.props.children;
+    const options = DropdownListUtil.getChildArray(object);
     const index = options.findIndex(({ props }) => DropdownListUtil.isEqual(props.label, label));
     return index === -1 ? null : options[Math.min(index + 1, options.length - 1)].props.label;
   }
@@ -81,7 +87,7 @@ class DropdownListUtil {
    * @return {string|null} - The label of the previous option. Returns null if not found.
    */
   static findPrevious(object, label) {
-    const options = object.props.children;
+    const options = DropdownListUtil.getChildArray(object);
     const index = options.findIndex(({ props }) => DropdownListUtil.isEqual(props.label, label));
     return index === -1 ? null : options[Math.max(index - 1, 0)].props.label;
   }
