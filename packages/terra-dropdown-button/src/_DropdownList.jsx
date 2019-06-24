@@ -8,8 +8,18 @@ import styles from './_DropdownList.module.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * The Options that should be displayed in the dropdown
+   */
   children: PropTypes.node.isRequired,
+  /**
+   * Callback to tell the parent it should close the dropdown
+   */
   handleRequestClose: PropTypes.func.isRequired,
+  /**
+   * Sets the dropdown to the specified width. Must be in pixels and include 'px'.
+   * If unset the dropdown will be automatically sized.
+   */
   width: PropTypes.string,
 };
 
@@ -28,6 +38,9 @@ class DropdownList extends React.Component {
     this.searchString = '';
   }
 
+  /**
+   * Focus sits on the parent Popup frame so set document listeners to catch keyboard events anyway
+   */
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
     document.addEventListener('keyup', this.handleKeyUp);
@@ -86,6 +99,10 @@ class DropdownList extends React.Component {
     this.searchTimeout = null;
   }
 
+  /**
+   * Tells children whether or not they are active or focused
+   * @return {Array<React.ReactNode>} the array of children
+   */
   cloneChildren() {
     return React.Children.map(this.props.children, child => React.cloneElement(child, {
       isFocused: child.props.label === this.state.focused,

@@ -16,10 +16,12 @@ const propTypes = {
   callback: PropTypes.func.isRequired,
   /**
    * @private
+   * Whether or not the option should show active styles
    */
   isActive: PropTypes.bool,
   /**
    * @private
+   * Whether or not the option should show keyboard focus styles
    */
   isFocused: PropTypes.bool,
 };
