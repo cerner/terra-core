@@ -6,7 +6,7 @@ const NavigationSideMenuThemeExamples = () => (
   <div className="terra-legacy-theme legacy-theme-test">
     <div>
       <div className="legacy-nav-menu-list-padding-top">
-        <div className="legacy-nav-menu-list- data-padding-top" />
+        <div className="legacy-nav-menu-list-data-padding-top" />
       </div>
       <p>--terra-navigation-side-menu-list-padding-top: 0</p>
     </div>
