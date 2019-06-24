@@ -168,6 +168,7 @@ class Frame extends React.Component {
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
     this.shouldSearch = true;
+    this.activeOption = undefined;
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -262,7 +263,7 @@ class Frame extends React.Component {
 
     // Tags and Comboboxes will select the current search value when the component loses focus.
     if (Util.shouldAddOptionOnBlur(this.props, this.state)) {
-      this.props.onSelect(this.state.searchValue);
+      this.props.onSelect(this.activeOption ? this.activeOption.props.value : this.state.searchValue, this.activeOption);
     }
   }
 
@@ -496,25 +497,33 @@ class Frame extends React.Component {
   /**
    * Handles the request to when the active option changes.
    * @param {ReactNode} option - The option that becomes active.
+   * @param {boolean} isSearch - The option that becomes active.
    */
-  handleActiveChange(option) {
-    this.shouldSearch = false;
+  handleActiveChange(activeOption, isSearch) {
+    this.activeOption = activeOption;
 
-    let activeOptionDisplay;
-
-    if (option.type.isAddOption) {
-      // Use the value as the active display in the select input since there is no option.props.display for the Add option.
-      activeOptionDisplay = option.props.value;
-    } else if (Util.allowsMultipleSelections(this.props) && Util.includeByDisplay(this.props, option.props.display)) {
-      // Clear the active display in the select input if the option is already selected.
-      activeOptionDisplay = '';
-    } else {
-      activeOptionDisplay = option.props.display;
+    if (isSearch) {
+      return;
     }
 
-    this.setState({
-      activeOptionDisplay,
-    });
+    if (activeOption) {
+      this.shouldSearch = false;
+      let activeOptionDisplay;
+
+      if (activeOption.type.isAddOption) {
+        // Use the value as the active display in the select input since there is no activeOption.props.display for the Add option.
+        activeOptionDisplay = activeOption.props.value;
+      } else if (Util.allowsMultipleSelections(this.props) && Util.includeByDisplay(this.props, activeOption.props.display)) {
+        // Clear the active display in the select input if the option is already selected.
+        activeOptionDisplay = '';
+      } else {
+        activeOptionDisplay = activeOption.props.display;
+      }
+
+      this.setState({
+        activeOptionDisplay,
+      });
+    }
   }
 
   /**

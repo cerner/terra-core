@@ -376,7 +376,7 @@ class Menu extends React.Component {
       this.updateCurrentActiveScreenReader();
 
       if (this.props.onActiveChange && (activeValue || activeValue === '')) {
-        this.props.onActiveChange(Util.findByValue(children, activeValue));
+        this.props.onActiveChange(Util.findByValue(children, activeValue), false);
       }
     } else if (keyCode === KeyCode.KEY_DOWN) {
       this.clearScrollTimeout();
@@ -386,7 +386,7 @@ class Menu extends React.Component {
       this.updateCurrentActiveScreenReader();
 
       if (this.props.onActiveChange && (activeValue || activeValue === '')) {
-        this.props.onActiveChange(Util.findByValue(children, activeValue));
+        this.props.onActiveChange(Util.findByValue(children, activeValue), false);
       }
     } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB) && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
@@ -449,17 +449,15 @@ class Menu extends React.Component {
     } else if (keyCode === KeyCode.KEY_END) {
       event.preventDefault();
       this.setState({ active: Util.findLast(children) });
-    } else if (/* variant === Variants.DEFAULT && */keyCode >= 48 && keyCode <= 90) {
+    } else if (/* variant === Variants.DEFAULT && */ keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(this.clearSearch, 500);
       this.setState(prevState => ({ active: Util.findWithStartString(prevState.children, this.searchString) || active }));
 
-      if (variant === Variants.DEFAULT) {
-        const activeValue = Util.findWithStartString(children, this.searchString) || active;
-        if (this.props.onActiveChange && (activeValue || activeValue === '')) {
-          this.props.onActiveChange(Util.findByValue(children, activeValue));
-        }
+      const activeOption = Util.findByDisplay(children, this.props.input.value.concat(String.fromCharCode(keyCode)));
+      if (this.props.onActiveChange) {
+        this.props.onActiveChange(activeOption, true);
       }
     }
   }
