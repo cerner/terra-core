@@ -27,7 +27,7 @@ const propTypes = {
 };
 
 const Option = ({
-  label, callback, isFocused, isActive,
+  label, callback, isFocused, isActive, ...customProps
 }) => (
   <li>
     <div
@@ -39,6 +39,7 @@ const Option = ({
         { focus: isFocused },
         { active: isActive },
       ])}
+      {...customProps}
     >
       {label}
     </div>
