@@ -247,7 +247,7 @@ class Frame extends React.Component {
         );
       case Variants.SEARCH:
       case Variants.COMBOBOX:
-        return <div className={cx('content')}><input {...comboboxInputAttr} value={this.shouldSearch ? searchDisplayValue : activeOptionDisplay} /></div>;
+        return <div className={cx('content')}><input {...comboboxInputAttrs} value={this.shouldSearch ? searchDisplayValue : activeOptionDisplay} /></div>;
       default:
         return defaultDisplayValue ? <span id={displayId}>{defaultDisplayValue}</span> : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>;
     }
