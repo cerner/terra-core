@@ -305,7 +305,7 @@ describe('MenuUtil', () => {
       expect(MenuUtil.findNext(group, '5')).toEqual('5');
     });
 
-    it('should return null if there is no match', () => {
+    it('should return the first option if there is no match', () => {
       const options = [
         <Option key="1" value="1" display="1" />,
         <Option key="2" value="2" display="2" />,
@@ -319,7 +319,7 @@ describe('MenuUtil', () => {
         <OptGroup label="2">{options.slice(2, 5)}</OptGroup>,
       ];
 
-      expect(MenuUtil.findNext(group, '6')).toBeNull();
+      expect(MenuUtil.findNext(group, '6')).toEqual('1');
     });
   });
 
@@ -358,7 +358,7 @@ describe('MenuUtil', () => {
       expect(MenuUtil.findPrevious(group, '1')).toEqual('1');
     });
 
-    it('should return null if there is no match', () => {
+    it('should return the first options if there is no match', () => {
       const options = [
         <Option key="1" value="1" display="1" />,
         <Option key="2" value="2" display="2" />,
@@ -372,7 +372,7 @@ describe('MenuUtil', () => {
         <OptGroup label="2">{options.slice(2, 5)}</OptGroup>,
       ];
 
-      expect(MenuUtil.findPrevious(group, '6')).toBeNull();
+      expect(MenuUtil.findPrevious(group, '6')).toEqual('1');
     });
   });
 

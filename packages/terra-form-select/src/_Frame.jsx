@@ -277,6 +277,8 @@ class Frame extends React.Component {
     if (Util.shouldAddOptionOnBlur(this.props, this.state)) {
       this.props.onSelect(this.activeOption ? this.activeOption.props.value : this.state.searchValue, this.activeOption);
     }
+
+    this.activeOption = undefined;
   }
 
   /**

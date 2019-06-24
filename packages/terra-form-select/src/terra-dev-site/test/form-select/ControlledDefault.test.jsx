@@ -15,19 +15,13 @@ class ControlledDefault extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>
-          Selected Option:
-          <span id="selected-option">{this.state.value}</span>
-        </h3>
-        <Select placeholder="Select a color" onChange={this.handleChange} id="default" value={this.state.value}>
-          <Select.Option value="blue" display="Blue" />
-          <Select.Option value="green" display="Green" />
-          <Select.Option value="purple" display="Purple" />
-          <Select.Option value="red" display="Red" />
-          <Select.Option value="violet" display="Violet" />
-        </Select>
-      </div>
+      <Select placeholder="Select a color" onChange={this.handleChange} id="default" value={this.state.value}>
+        <Select.Option value="blue" display="Blue" />
+        <Select.Option value="green" display="Green" />
+        <Select.Option value="purple" display="Purple" />
+        <Select.Option value="red" display="Red" />
+        <Select.Option value="violet" display="Violet" />
+      </Select>
     );
   }
 }

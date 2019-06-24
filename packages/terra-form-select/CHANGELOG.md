@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Auto select active option.
+* Display active option in select input to guide selection.
 
 5.17.0 - (June 18, 2019)
 ------------------
