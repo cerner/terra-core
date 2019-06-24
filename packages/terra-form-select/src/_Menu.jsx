@@ -388,7 +388,7 @@ class Menu extends React.Component {
       if (this.props.onActiveChange && (activeValue || activeValue === '')) {
         this.props.onActiveChange(Util.findByValue(children, activeValue), false);
       }
-    } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB) && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
+    } else if (keyCode === KeyCode.KEY_RETURN && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
       this.setState({ closedViaKeyEvent: true });
       const option = Util.findByValue(children, active);
@@ -422,7 +422,7 @@ class Menu extends React.Component {
       const optionValue = option ? option.props.value : '';
 
       onSelect(optionValue, option || null);
-    } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB) && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
+    } else if (keyCode === KeyCode.KEY_RETURN && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       // Handles communicating the case where a regular option is Unselected to screen readers.
