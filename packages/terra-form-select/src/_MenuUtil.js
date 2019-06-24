@@ -185,7 +185,7 @@ class MenuUtil {
   static findNext(object, value) {
     const options = MenuUtil.flatten(object, true);
     const index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
-    return index === -1 ? null : options[Math.min(index + 1, options.length - 1)].props.value;
+    return index === -1 ? options[0].props.value : options[Math.min(index + 1, options.length - 1)].props.value;
   }
 
   /**
@@ -197,7 +197,7 @@ class MenuUtil {
   static findPrevious(object, value) {
     const options = MenuUtil.flatten(object, true);
     const index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
-    return index === -1 ? null : options[Math.max(index - 1, 0)].props.value;
+    return index === -1 ? options[0].props.value : options[Math.max(index - 1, 0)].props.value;
   }
 
   /**
@@ -214,16 +214,28 @@ class MenuUtil {
 
     if (options.length === 0) {
       return null;
-    } if (state.searchValue === undefined) {
+    }
+
+    if (searchValue.length === 0 && value.length === 0 && !active && active !== '') {
+      return null;
+    }
+
+    if (state.searchValue === undefined) {
       const selected = options.find(option => (
         Array.isArray(value) ? MenuUtil.includes(value, option.props.value) : MenuUtil.isEqual(value, option.props.value)
       ));
+
       return selected === undefined ? options[0].props.value : selected.props.value;
-    } if (searchValue !== state.searchValue) {
+    }
+
+    if (searchValue !== state.searchValue) {
       return options[0].props.value;
-    } if (active !== null && MenuUtil.findByValue(options, active)) {
+    }
+
+    if (active !== null && MenuUtil.findByValue(options, active)) {
       return active;
     }
+
     return options[0].props.value;
   }
 

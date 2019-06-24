@@ -15,19 +15,25 @@ class ControlledMultiple extends React.Component {
 
   render() {
     return (
-      <Select
-        id="multiple"
-        onChange={this.handleChange}
-        placeholder="Select a color"
-        value={this.state.value}
-        variant="multiple"
-      >
-        <Select.Option value="blue" display="Blue" />
-        <Select.Option value="green" display="Green" />
-        <Select.Option value="purple" display="Purple" />
-        <Select.Option value="red" display="Red" />
-        <Select.Option value="violet" display="Violet" />
-      </Select>
+      <div>
+        <h3>
+          Selected Option:
+          <span id="selected-option">{this.state.value}</span>
+        </h3>
+        <Select
+          id="multiple"
+          onChange={this.handleChange}
+          placeholder="Select a color"
+          value={this.state.value}
+          variant="multiple"
+        >
+          <Select.Option value="blue" display="Blue" />
+          <Select.Option value="green" display="Green" />
+          <Select.Option value="purple" display="Purple" />
+          <Select.Option value="red" display="Red" />
+          <Select.Option value="violet" display="Violet" />
+        </Select>
+      </div>
     );
   }
 }

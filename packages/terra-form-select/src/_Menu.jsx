@@ -45,6 +45,10 @@ const propTypes = {
    */
   maxSelectionCount: PropTypes.number,
   /**
+   * @private Callback function triggered when an option becomes active.
+   */
+  onActiveChange: PropTypes.func,
+  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
@@ -89,6 +93,7 @@ const defaultProps = {
   input: undefined,
   clearOptionDisplay: undefined,
   maxSelectionCount: undefined,
+  onActiveChange: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
   optionFilter: undefined,
@@ -146,7 +151,7 @@ class Menu extends React.Component {
       children = Util.updateSelectionState(children, props);
 
       if (Util.shouldAllowFreeText(props, children)) {
-        children.push(<AddOption value={searchValue} />);
+        children.unshift(<AddOption value={searchValue} />);
         hasAddOption = true;
       }
 
@@ -366,43 +371,58 @@ class Menu extends React.Component {
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: Util.findPrevious(children, active) });
+      const activeValue = Util.findPrevious(children, active);
+      this.setState({ active: activeValue });
       this.updateCurrentActiveScreenReader();
+
+      if (this.props.onActiveChange && (activeValue || activeValue === '')) {
+        this.props.onActiveChange(Util.findByValue(children, activeValue), false);
+      }
     } else if (keyCode === KeyCode.KEY_DOWN) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: Util.findNext(children, active) });
+      const activeValue = Util.findNext(children, active);
+      this.setState({ active: activeValue });
       this.updateCurrentActiveScreenReader();
-    } else if (keyCode === KeyCode.KEY_RETURN && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
+
+      if (this.props.onActiveChange && (activeValue || activeValue === '')) {
+        this.props.onActiveChange(Util.findByValue(children, activeValue), false);
+      }
+    } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB) && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
       this.setState({ closedViaKeyEvent: true });
       const option = Util.findByValue(children, active);
-      // Handles communicating the case where a clear option is selected to screen readers
-      if (this.props.clearOptionDisplay) {
-        const activeOption = this.menu.querySelector('[data-select-active]');
-        if (activeOption && activeOption.hasAttribute('data-terra-select-clear-option')) {
-          this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectCleared' });
+      if (option) {
+        // Handles communicating the case where a clear option is selected to screen readers
+        if (this.props.clearOptionDisplay) {
+          const activeOption = this.menu.querySelector('[data-select-active]');
+          if (activeOption && activeOption.hasAttribute('data-terra-select-clear-option')) {
+            this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectCleared' });
+          }
         }
-      }
-      // Handles communicating the case where a regular option is selected to screen readers.
-      /*
-        Detecting if browser is not Safari before updating aria-live as there is some odd behaivor
-        with VoiceOver on desktop, that causes the selected option to be read twice when this is
-        is added to aria-live container.
-        When we shift focus back to select, VoiceOver automatically reads the display text.
-        Using aria-hidden on the display does not prevent VO from reading the display text and so it
-        results in reading the display text followed by reading the aria-live message which is
-        the display text + 'selected'
-        */
-      if (SharedUtil.isSafari()) {
-        if (variant === Variants.MULTIPLE || variant === Variants.TAG) {
+        // Handles communicating the case where a regular option is selected to screen readers.
+        /*
+          Detecting if browser is not Safari before updating aria-live as there is some odd behaivor
+          with VoiceOver on desktop, that causes the selected option to be read twice when this is
+          is added to aria-live container.
+          When we shift focus back to select, VoiceOver automatically reads the display text.
+          Using aria-hidden on the display does not prevent VO from reading the display text and so it
+          results in reading the display text followed by reading the aria-live message which is
+          the display text + 'selected'
+          */
+        if (SharedUtil.isSafari()) {
+          if (variant === Variants.MULTIPLE || variant === Variants.TAG) {
+            this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
+          }
+        } else {
           this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
         }
-      } else {
-        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
       }
-      onSelect(option.props.value, option);
-    } else if (keyCode === KeyCode.KEY_RETURN && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
+
+      const optionValue = option ? option.props.value : '';
+
+      onSelect(optionValue, option || null);
+    } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_TAB) && active !== null && Util.allowsMultipleSelections(variant) && Util.includes(value, active)) {
       event.preventDefault();
       const option = Util.findByValue(children, active);
       // Handles communicating the case where a regular option is Unselected to screen readers.
@@ -429,11 +449,16 @@ class Menu extends React.Component {
     } else if (keyCode === KeyCode.KEY_END) {
       event.preventDefault();
       this.setState({ active: Util.findLast(children) });
-    } else if (variant === Variants.DEFAULT && keyCode >= 48 && keyCode <= 90) {
+    } else if (/* variant === Variants.DEFAULT && */ keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(this.clearSearch, 500);
       this.setState(prevState => ({ active: Util.findWithStartString(prevState.children, this.searchString) || active }));
+
+      const activeOption = Util.findByDisplay(children, this.props.input.value.concat(String.fromCharCode(keyCode)));
+      if (this.props.onActiveChange) {
+        this.props.onActiveChange(activeOption, true);
+      }
     }
   }
 

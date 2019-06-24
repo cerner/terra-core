@@ -31,5 +31,6 @@ const AddOption = ({ value, ...customProps }, context) => (
 AddOption.propTypes = propTypes;
 AddOption.contextTypes = contextTypes;
 AddOption.isOption = true;
+AddOption.isAddOption = true;
 
 export default AddOption;

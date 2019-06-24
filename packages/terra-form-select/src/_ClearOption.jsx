@@ -30,5 +30,6 @@ const ClearOption = ({ display, value, ...customProps }) => (
 
 ClearOption.propTypes = propTypes;
 ClearOption.isOption = true;
+ClearOption.isClearOption = true;
 
 export default ClearOption;
