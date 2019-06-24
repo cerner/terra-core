@@ -5,7 +5,7 @@ import UpgradeGuide from '../../../../docs/UPGRADEGUIDE.md';
 
 const DocPage = () => (
   <DocTemplate
-    packageName="terra-form-select"
+    packageName="terra-responsive-element"
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-responsive-element"
     readme={UpgradeGuide}
   />

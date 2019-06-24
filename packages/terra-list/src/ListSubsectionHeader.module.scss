@@ -1,4 +1,4 @@
-@import '~terra-mixins';
+@import '~terra-mixins/lib/Mixins';
 /* stylelint-disable selector-max-compound-selectors */
 
 // Subsection Header
@@ -41,7 +41,7 @@
       position: relative;
       z-index: 1;
     }
-  
+
     &.subsection-header:hover,
     &.subsection-header:active {
       background-color: var(--terra-list-subsection-header-hover-active-background-color, #d0d1d2);

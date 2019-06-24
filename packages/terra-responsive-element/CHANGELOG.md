@@ -4,6 +4,10 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+
+* Updated examples to use React Hooks
+
 5.0.0 - (June 18, 2019)
 ------------------
 ### Breaking Changes
