@@ -2,16 +2,16 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Scroll from 'terra-scroll/lib/Scroll';
 import classNames from 'classnames/bind';
-import styles from './ScrollHorizontal.module.scss';
+import styles from './ScrollCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
 export default () => (
   <div>
     <p>Overflow-X Container</p>
-    <div className={cx('overflow-x-wrapper')}>
+    <div className={cx('overflow-wrapper')}>
       <Scroll>
-        <p className={cx('paragraph-wrapper')}>
+        <p className={cx('paragraph-x-wrapper')}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
           eget facilisis nunc ornare in. Vestibulum ut posuere neque. Maecenas nibh lacus, euismod sit amet magna sit amet,
           porttitor sollicitudin sapien. Vivamus nec lacus vel tortor ultrices efficitur vitae sit amet ipsum.

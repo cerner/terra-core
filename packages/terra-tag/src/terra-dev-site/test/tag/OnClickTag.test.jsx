@@ -7,7 +7,7 @@ import styles from './TagTestCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const OnClickTag = () => (
-  <div className={cx('long-text-tag-wrapper')}>
+  <div className={cx('tag-wrapper')}>
     <Tag
       id="on-click"
       text="Clickable Tag"
