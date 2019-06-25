@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Select from '../../../Select';
+import styles from './ManyOptions.module.scss';
+
+const cx = classNames.bind(styles);
 
 const ManyOptionsExample = () => {
   const options = [];
@@ -9,7 +13,7 @@ const ManyOptionsExample = () => {
   }
 
   return (
-    <div style={{ width: '320px' }}>
+    <div className={cx('content-wrapper')}>
       <Select placeholder="Select a number" variant="combobox" maxHeight={200}>
         {options}
       </Select>

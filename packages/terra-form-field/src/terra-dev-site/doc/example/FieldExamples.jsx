@@ -1,6 +1,10 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Field from 'terra-form-field/lib/Field';
+import classNames from 'classnames/bind';
+import styles from './FieldExamples.module.scss';
+
+const cx = classNames.bind(styles);
 
 class FieldExamples extends React.Component {
   constructor(props) {
@@ -23,7 +27,7 @@ class FieldExamples extends React.Component {
           error="Error Message"
           isInvalid={this.state.isInvalid}
         >
-          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+          <div className={cx('field-content')}>Control Placeholder</div>
         </Field>
         <Field
           label="Field Label"
@@ -33,7 +37,7 @@ class FieldExamples extends React.Component {
           isInline
           showOptional
         >
-          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+          <div className={cx('field-content')}>Control Placeholder</div>
         </Field>
 
         <Field
@@ -44,7 +48,7 @@ class FieldExamples extends React.Component {
           isInline
           required
         >
-          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+          <div className={cx('field-content')}>Control Placeholder</div>
         </Field>
 
         <Field
@@ -56,7 +60,7 @@ class FieldExamples extends React.Component {
           required
           hideRequired
         >
-          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+          <div className={cx('field-content')}>Control Placeholder</div>
         </Field>
         <hr />
         <p>

@@ -1,9 +1,13 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Placeholder from '../../../Placeholder';
+import styles from './DocTemplateTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const placeholder = () => (
-  <div style={{ height: '200px', width: '100%' }}>
+  <div className={cx('placeholder-default')}>
     <Placeholder title="Default Placeholder" />
   </div>
 );

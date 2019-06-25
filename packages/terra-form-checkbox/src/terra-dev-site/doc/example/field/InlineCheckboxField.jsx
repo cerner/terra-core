@@ -4,7 +4,10 @@ import React from 'react';
 import Checkbox from 'terra-form-checkbox/lib/Checkbox';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import CheckboxField from 'terra-form-checkbox/lib/CheckboxField';
+import classNames from 'classnames/bind';
+import styles from './InlineCheckboxField.module.scss';
 
+const cx = classNames.bind(styles);
 export default class extends React.Component {
   constructor(props) {
     super(props);
@@ -48,8 +51,8 @@ export default class extends React.Component {
 
     return (
       <div>
-        <button style={{ marginBottom: '5px' }} id="inline" type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Inline</button>
-        <button style={{ marginBottom: '5px' }} id="invalid" type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Invalid Status</button>
+        <button className={cx('checkbox-button-wrapper')} id="inline" type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Inline</button>
+        <button className={cx('checkbox-button-wrapper')} id="invalid" type="button" aria-label="Toggle Inline" onClick={this.handleOnClick}>Toggle Invalid Status</button>
         <hr />
         <div>
           <CheckboxField
