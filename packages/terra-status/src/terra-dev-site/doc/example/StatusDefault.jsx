@@ -6,7 +6,7 @@ import styles from './colors.module.scss';
 
 const cx = classNames.bind(styles);
 
-const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
+const simpleText = <div className={cx('text-wrapper')}>Sample text</div>;
 
 const StatusDefault = () => (
   <div>

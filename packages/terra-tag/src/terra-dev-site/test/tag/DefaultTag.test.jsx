@@ -1,10 +1,12 @@
 import React from 'react';
 
+import classNames from 'classnames/bind';
 import Tag from '../../../Tag';
+import styles from './TagTestCommon.module.scss';
 
-const spacingStyle = { padding: '10px' };
+const cx = classNames.bind(styles);
 const DefaultTag = () => (
-  <div style={spacingStyle}>
+  <div className={cx('tag-wrapper')}>
     <Tag
       id="default"
       text="Default Tag"
