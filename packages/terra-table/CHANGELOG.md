@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added themeable variable --terra-table-subheader-border-bottom
+
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 
