@@ -7,7 +7,7 @@ import styles from './StatusViewDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const NoPropsExample = (
-  <StatusView className={cx('status-view-1')} />
+  <StatusView className={cx('status-view-width')} />
 );
 
 export default NoPropsExample;

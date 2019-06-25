@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const GlyphHiddenExample = (
   <StatusView
-    className={cx('status-view-1')}
+    className={cx('status-view-width')}
     variant="error"
     message="An exception was thrown"
     isGlyphHidden

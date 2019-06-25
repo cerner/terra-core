@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 const AllPropsExample = (
   <StatusView
-    className={cx('status-view-1')}
+    className={cx('status-view-width')}
     variant="no-data"
     title="500"
     message="An exception was thrown"

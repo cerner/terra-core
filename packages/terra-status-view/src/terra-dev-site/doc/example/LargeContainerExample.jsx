@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 const LargeContainerExample = (
   <StatusView
-    className={cx('status-view-2')}
+    className={cx('status-view-height')}
     variant="error"
     message="An exception was thrown"
     customGlyph={<IconDiamond />}

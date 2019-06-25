@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 const GlyphNotFitExample = (
   <StatusView
-    className={cx('status-view-3')}
+    className={cx('status-view-overflow')}
     variant="error"
     message="An exception was thrown"
     customGlyph={<IconDiamond />}

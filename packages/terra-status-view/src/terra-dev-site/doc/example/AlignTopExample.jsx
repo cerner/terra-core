@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 const AlignTopExample = (
   <StatusView
-    className={cx('status-view-2')}
+    className={cx('status-view-height')}
     isAlignedTop
     variant="error"
     message="An exception was thrown"
