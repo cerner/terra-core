@@ -1,17 +1,21 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Field from '../../../Field';
+import styles from './FormFieldTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const FieldExamples = () => (
-  <div style={{ width: '250px' }}>
+  <div className={cx('field-wrapper')}>
     <Field
       id="field"
-      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+      className={cx('form-field')}
       label="Field Label Field Label Field Label Field Label Field Label Field Label Field Label Field Label"
       help="Help Message Help Message Help Message Help Message Help Message Help Message Help Message Help Message"
       error="Error Message Error Message Error Message Error Message Error Message Error Message Error Message"
       isInvalid
     >
-      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+      <div className={cx('field-content')}>Control Placeholder</div>
     </Field>
   </div>
 );
