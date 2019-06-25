@@ -16,7 +16,7 @@
       pointer-events: none;
     }
 
-    &.set-width {
+    &.is-block {
       display: flex;
     }
   }
@@ -69,7 +69,7 @@
     }
   }
 
-  .set-width .split-button-primary {
+  .is-block .split-button-primary {
     flex-grow: 1;
   }
 

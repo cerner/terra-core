@@ -6,7 +6,7 @@ describe('Dropdown', () => {
   it('renders a default dropdown', () => {
     const wrapper = shallow(
       <Dropdown
-        handleRequestClose={() => {}}
+        requestClose={() => {}}
         targetRef={() => {}}
         isOpen={false}
       >
@@ -19,7 +19,7 @@ describe('Dropdown', () => {
   it('renders an open dropdown', () => {
     const wrapper = shallow(
       <Dropdown
-        handleRequestClose={() => {}}
+        requestClose={() => {}}
         targetRef={() => {}}
         isOpen
       >
@@ -32,7 +32,7 @@ describe('Dropdown', () => {
   it('renders a dropdown with a bounding ref', () => {
     const wrapper = shallow(
       <Dropdown
-        handleRequestClose={() => {}}
+        requestClose={() => {}}
         targetRef={() => {}}
         boundingRef={() => {}}
         isOpen={false}
@@ -46,7 +46,7 @@ describe('Dropdown', () => {
   it('renders a dropdown with a set width', () => {
     const wrapper = shallow(
       <Dropdown
-        handleRequestClose={() => {}}
+        requestClose={() => {}}
         targetRef={() => {}}
         isOpen={false}
         width="470px"
@@ -60,7 +60,7 @@ describe('Dropdown', () => {
   it('renders a dropdown with multiple children', () => {
     const wrapper = shallow(
       <Dropdown
-        handleRequestClose={() => {}}
+        requestClose={() => {}}
         targetRef={() => {}}
         isOpen={false}
       >

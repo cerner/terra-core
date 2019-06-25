@@ -37,7 +37,7 @@ $terra-dropdown-button-emphasis-color-scheme: (
   active-color: var(--terra-dropdown-button-active-color-emphasis, #fff),
   dropdown-active-font-weight: var(--terra-dropdown-button-dropdown-active-font-weight-emphasis, bold),
 
-  background-color: var(--terra-dropdown-button-background-color-emphasis, #007cc3),
+  background-color: var(--terra-dropdown-button-background-color-emphasis, #0079be),
   box-shadow: var(--terra-dropdown-button-box-shadow-emphasis, none),
   border-color: var(--terra-dropdown-button-border-color-emphasis, #0065a3),
   color: var(--terra-dropdown-button-color-emphasis, #fff),
@@ -45,7 +45,7 @@ $terra-dropdown-button-emphasis-color-scheme: (
   dropdown-font-weight: var(--terra-dropdown-button-dropdown-font-weight-emphasis, bold),
 
 
-  focus-background-color: var(--terra-dropdown-button-focus-background-color-emphasis, #007cc3),
+  focus-background-color: var(--terra-dropdown-button-focus-background-color-emphasis, #0079be),
   focus-border-color: var(--terra-dropdown-button-focus-border-color-emphasis, #0065a3),
   focus-box-shadow: var(--terra-dropdown-button-focus-box-shadow-emphasis, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
   dropdown-focus-border-width: var(--terra-dropdown-button-dropdown-focus-border-width-emphasis, 1px),

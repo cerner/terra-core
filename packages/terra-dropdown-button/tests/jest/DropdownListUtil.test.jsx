@@ -4,7 +4,7 @@ import Util from '../../src/_DropdownListUtil';
 import DropdownButton from '../../src/DropdownButton';
 
 const multipleChildren = (
-  <DropdownList handleRequestClose={() => {}}>
+  <DropdownList requestClose={() => {}}>
     <DropdownButton.Option label="1st" callback={() => {}} />
     <DropdownButton.Option label="1th" callback={() => {}} />
     <DropdownButton.Option label="1ta" callback={() => {}} />
@@ -16,7 +16,7 @@ const multipleChildren = (
 );
 
 const singleChild = (
-  <DropdownList handleRequestClose={() => {}}>
+  <DropdownList requestClose={() => {}}>
     <DropdownButton.Option label="1st" callback={() => {}} />
   </DropdownList>
 );

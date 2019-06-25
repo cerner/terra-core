@@ -24,14 +24,19 @@ const propTypes = {
    * Whether or not the option should show keyboard focus styles
    */
   isFocused: PropTypes.bool,
+  /**
+   * @private
+   * Callback to tell the parent it should close the dropdown
+   */
+  requestClose: PropTypes.func,
 };
 
 const Option = ({
-  label, callback, isFocused, isActive, ...customProps
+  label, callback, isFocused, isActive, requestClose, ...customProps
 }) => (
   <li>
     <div
-      onMouseUp={callback}
+      onMouseUp={() => { callback(); requestClose(); }}
       role="button"
       tabIndex="-1"
       className={cx([

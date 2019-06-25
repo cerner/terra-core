@@ -15,10 +15,10 @@ const propTypes = {
   /**
    * Callback to tell the parent it should close the dropdown
    */
-  handleRequestClose: PropTypes.func.isRequired,
+  requestClose: PropTypes.func.isRequired,
   /**
-   * Sets the dropdown to the specified width. Must be in pixels and include 'px'.
-   * If unset the dropdown will be automatically sized.
+   * @private
+   * Width to set the dropdown to. Used when `isBlock` is true. Unset means to autosize.
    */
   width: PropTypes.string,
 };
@@ -58,6 +58,7 @@ class DropdownList extends React.Component {
       const item = Util.findByValue(this, focused);
       item.props.callback();
       this.setState({ active: item.props.label });
+      this.props.requestClose();
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
       this.setState({ focused: Util.findNext(this, focused) });
@@ -72,8 +73,7 @@ class DropdownList extends React.Component {
       this.setState({ focused: Util.findLast(this) });
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_TAB) {
-      this.props.handleRequestClose();
-      // event.preventDefault();
+      this.props.requestClose();
     } else if (keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
@@ -107,13 +107,13 @@ class DropdownList extends React.Component {
     return React.Children.map(this.props.children, child => React.cloneElement(child, {
       isFocused: child.props.label === this.state.focused,
       isActive: child.props.label === this.state.active,
+      requestClose: this.props.requestClose,
     }));
   }
 
   render() {
     return (
       <ul
-        role="listbox"
         className={cx('dropdown-list')}
         // eslint-disable-next-line react/forbid-dom-props
         style={{ width: this.props.width }}

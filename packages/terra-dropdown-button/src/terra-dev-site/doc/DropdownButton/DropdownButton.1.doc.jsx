@@ -12,10 +12,6 @@ import DefaultSplitButton from '../example/DefaultSplitButton';
 import DefaultSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSplitButton.jsx';
 import DisabledSplitButton from '../example/DisabledSplitButton';
 import DisabledSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledSplitButton.jsx';
-import BoundedSplitButton from '../example/BoundedSplitButton';
-import BoundedSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BoundedSplitButton.jsx';
-import SetWidthSplitButton from '../example/SetWidthSplitButton';
-import SetWidthSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SetWidthSplitButton.jsx';
 import BlockSplitButton from '../example/BlockSplitButton';
 import BlockSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BlockSplitButton.jsx';
 import DefaultDropdownButton from '../example/DefaultDropdownButton';
@@ -45,19 +41,9 @@ const DocPage = () => (
         source: EmphasisDropdownButtonSrc,
       },
       {
-        title: 'Bounded Split Button',
-        example: <BoundedSplitButton />,
-        source: BoundedSplitButtonSrc,
-      },
-      {
         title: 'Disabled Split Button',
         example: <DisabledSplitButton />,
         source: DisabledSplitButtonSrc,
-      },
-      {
-        title: 'Set Width Split Button',
-        example: <SetWidthSplitButton />,
-        source: SetWidthSplitButtonSrc,
       },
       {
         title: 'Block Split Button',

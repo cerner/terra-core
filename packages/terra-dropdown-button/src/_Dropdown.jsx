@@ -7,11 +7,7 @@ const propTypes = {
   /**
    * Callback to tell the parent it should close the dropdown
    */
-  handleRequestClose: PropTypes.func.isRequired,
-  /**
-   * Ref to bound the dropdown within
-   */
-  boundingRef: PropTypes.func,
+  requestClose: PropTypes.func.isRequired,
   /**
    * Ref to attach the dropdown to
    */
@@ -25,28 +21,28 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Sets the dropdown to the specified width. Must be in pixels and include 'px'.
-   * If unset the dropdown will be automatically sized.
+   * @private
+   * Width to set the dropdown to. Used when `isBlock` is true. Unset means to autosize.
    */
   width: PropTypes.string,
 };
 
 const Dropdown = ({
-  handleRequestClose, boundingRef, isOpen, targetRef, children, width,
+  requestClose, isOpen, targetRef, children, width,
 }) => (
   <Popup
-    boundingRef={boundingRef}
     contentHeight="auto"
     contentWidth="auto"
     isHeaderDisabled
     isOpen={isOpen}
-    onRequestClose={handleRequestClose}
+    onRequestClose={requestClose}
     targetRef={targetRef}
     contentAttachment="top left"
+    attachmentBehavior="flip"
     // isContentFocusDisabled
   >
     <DropdownList
-      handleRequestClose={handleRequestClose}
+      requestClose={requestClose}
       width={width}
     >
       {children}
