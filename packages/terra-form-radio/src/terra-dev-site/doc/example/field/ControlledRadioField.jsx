@@ -4,6 +4,10 @@ import React from 'react';
 import Radio from 'terra-form-radio/lib/Radio';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import RadioField from 'terra-form-radio/lib/RadioField';
+import classNames from 'classnames/bind';
+import styles from './RadioFieldCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default class extends React.Component {
   constructor(props) {
@@ -59,7 +63,7 @@ export default class extends React.Component {
           </RadioField>
         </div>
         <hr />
-        <button style={{ marginBottom: '5px' }} type="button" aria-label="Toggle Invalid Status" onClick={this.handleOnClick}>Toggle Invalid Status</button>
+        <button className={cx('radio-button-wrapper')} type="button" aria-label="Toggle Invalid Status" onClick={this.handleOnClick}>Toggle Invalid Status</button>
       </div>
     );
   }
