@@ -1,0 +1,24 @@
+:local {
+  .status-view-1,
+  .status-view-2,
+  .status-view-wrapper-1,
+  .status-view-wrapper-2 {
+    border: 1px solid #000;
+  }
+
+  .status-view-1 {
+    height: 500px;
+  }
+
+  .status-view-2 {
+    height: 250px;
+  }
+
+  .status-view-wrapper-1 {
+    max-width: 500px;
+  }
+
+  .status-view-wrapper-2 {
+    width: 75px;
+  }
+}

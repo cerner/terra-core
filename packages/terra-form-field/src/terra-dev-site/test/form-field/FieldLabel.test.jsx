@@ -1,15 +1,19 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Field from '../../../Field';
+import styles from './FormFieldTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const FieldLabel = () => (
   <div>
     <h3>Field - Label</h3>
     <Field
       id="label"
-      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+      className={cx('form-field')}
       label="Field Label"
     >
-      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+      <div className={cx('field-content')}>Control Placeholder</div>
     </Field>
   </div>
 );
