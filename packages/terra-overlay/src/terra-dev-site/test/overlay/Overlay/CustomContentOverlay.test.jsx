@@ -1,7 +1,11 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 
 import Overlay from '../../../../Overlay';
 import OverlayContainer from '../../../../OverlayContainer';
+import styles from './OverlayTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 class OverlayExample extends React.Component {
   constructor() {
@@ -47,7 +51,7 @@ class OverlayExample extends React.Component {
   render() {
     return (
       <div id="custom-content-example">
-        <OverlayContainer style={{ height: '100px', width: '100%' }} overlay={this.addOverlay()}>
+        <OverlayContainer className={cx('overlay-container2')} overlay={this.addOverlay()}>
           <button type="button" id="trigger_fullscreen" onClick={this.handleTriggerFullScreenOverlay}>Trigger Fullscreen Overlay</button>
           <button type="button" id="trigger_container" onClick={this.handleTriggerOverlay}>Trigger Container Overlay</button>
         </OverlayContainer>
