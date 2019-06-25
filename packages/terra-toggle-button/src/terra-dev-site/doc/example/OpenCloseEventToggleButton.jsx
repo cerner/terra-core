@@ -1,6 +1,10 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import ToggleButton from 'terra-toggle-button/lib/ToggleButton';
+import classNames from 'classnames/bind';
+import styles from './OpenCloseEventToggleButton.module.scss';
+
+const cx = classNames.bind(styles);
 
 class OpenCloseEventToggleButton extends React.Component {
   constructor(props) {
@@ -28,11 +32,11 @@ class OpenCloseEventToggleButton extends React.Component {
         <div id="on-open-event">
           <p>
 Times Opened:
-            <span style={{ display: 'inline-block' }}>{this.state.timesOpened}</span>
+            <span className={cx('times-wrapper')}>{this.state.timesOpened}</span>
           </p>
           <p>
 Times Closed:
-            <span style={{ display: 'inline-block' }}>{this.state.timesClosed}</span>
+            <span className={cx('times-wrapper')}>{this.state.timesClosed}</span>
           </p>
         </div>
         <ToggleButton closedButtonText="ToggleButton" onOpen={this.handleOnOpen} onClose={this.handleOnClose}>

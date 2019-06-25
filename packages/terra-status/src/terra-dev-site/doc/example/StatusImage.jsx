@@ -8,7 +8,7 @@ import styles from './colors.module.scss';
 
 const cx = classNames.bind(styles);
 
-const image = <img style={{ display: 'block' }} height="150" width="150" src={placeholderPic150x150} alt="placeholder" />;
+const image = <img className={cx('image-wrapper')} height="150" width="150" src={placeholderPic150x150} alt="placeholder" />;
 
 const StatusImage = () => (
   <Status colorClass={cx(['attention'])} visuallyHiddenText="Status Attention">{image}</Status>

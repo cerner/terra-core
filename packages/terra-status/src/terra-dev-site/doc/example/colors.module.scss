@@ -16,4 +16,12 @@
   .info {
     border-left-color: var(--terra-status-info-border-left-color, rgb(0, 0, 255));
   }
+
+  .image-wrapper {
+    display: block;
+  }
+
+  .text-wrapper {
+    padding: 5px;
+  }
 }

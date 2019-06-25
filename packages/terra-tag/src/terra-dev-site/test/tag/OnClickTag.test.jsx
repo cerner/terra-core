@@ -1,11 +1,13 @@
 /* eslint-disable no-alert */
 import React from 'react';
-
+import classNames from 'classnames/bind';
 import Tag from '../../../Tag';
+import styles from './TagTestCommon.module.scss';
 
-const spacingStyle = { padding: '10px' };
+const cx = classNames.bind(styles);
+
 const OnClickTag = () => (
-  <div style={spacingStyle}>
+  <div className={cx('tag-wrapper')}>
     <Tag
       id="on-click"
       text="Clickable Tag"
