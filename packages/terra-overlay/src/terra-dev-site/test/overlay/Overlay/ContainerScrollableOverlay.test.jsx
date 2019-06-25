@@ -1,9 +1,13 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import OverlayContainer from '../../../../OverlayContainer';
 import Overlay from '../../../../Overlay';
+import styles from './OverlayTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const OverlayExample = () => (
-  <OverlayContainer style={{ height: '100px', width: '100%' }} id="overlay-container">
+  <OverlayContainer className={cx('overlay-container2')} id="overlay-container">
     <Overlay isOpen isRelativeToContainer isScrollable>
       <p>I</p>
       <p>am</p>
