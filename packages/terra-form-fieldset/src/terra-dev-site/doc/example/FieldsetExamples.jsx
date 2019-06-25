@@ -3,6 +3,10 @@ import Field from 'terra-form-field';
 import Input from 'terra-form-input';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Fieldset from 'terra-form-fieldset/lib/Fieldset';
+import classNames from 'classnames/bind';
+import styles from './FieldsetExamples.module.scss';
+
+const cx = classNames.bind(styles);
 
 class FieldsetExamples extends React.Component {
   constructor(props) {
@@ -54,7 +58,7 @@ class FieldsetExamples extends React.Component {
         <hr />
         <p>
 Full Name Provided:
-          <span style={{ display: 'inline-block' }}>
+          <span className={cx('fieldset-wrapper')}>
             {this.state.first}
             {' '}
             {this.state.middle}

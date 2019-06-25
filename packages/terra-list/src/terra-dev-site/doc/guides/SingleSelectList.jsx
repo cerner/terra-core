@@ -2,7 +2,11 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import List, { Item } from 'terra-list/lib/index';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
+import classNames from 'classnames/bind';
 import mockData from './mock-data/mock-select';
+import styles from '../example/ListDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 class SingleSelectList extends React.Component {
   constructor(props) {
@@ -28,7 +32,7 @@ class SingleSelectList extends React.Component {
         metaData={{ key: itemData.key }}
         onSelect={this.handleItemSelection}
       >
-        <Placeholder title={itemData.title} style={{ height: '50px' }} />
+        <Placeholder title={itemData.title} className={cx('placeholder')} />
       </Item>
     );
   }

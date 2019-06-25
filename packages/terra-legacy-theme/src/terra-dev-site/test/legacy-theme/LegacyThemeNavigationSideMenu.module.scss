@@ -11,9 +11,15 @@
 
 // List - Default
 .legacy-nav-menu-list-padding-top {
+  border: 1px dashed black;
   display: inline-block;
   padding: 10px;
   padding-top: var(--terra-navigation-side-menu-list-padding-top);
+}
+
+.legacy-nav-menu-list-data-padding-top {
+  border: 1px dashed black;
+  height: 100%
 }
 
 .legacy-nav-menu-list-background-color {
@@ -39,7 +45,9 @@
 
 .legacy-nav-menu-item-hover-color {
   background-color: var(--terra-navigation-side-menu-item-hover-color);
+  border: 1px dashed black;
 }
+
 
 
 // List - Selected
@@ -48,8 +56,11 @@
 }
 
 .legacy-nav-menu-item-selected-font-weight {
+  border: 1px dashed black;
   font-weight: var(--terra-navigation-side-menu-item-selected-font-weight);
+  padding: 5px;
 }
+
 
 .legacy-nav-menu-item-selected-background-color {
   background-color: var(--terra-navigation-side-menu-item-selected-background-color);
@@ -63,6 +74,7 @@
 // List - Selected + Hover
 .legacy-nav-menu-item-selected-hover-color {
   background-color: var(--terra-navigation-side-menu-item-selected-hover-color);
+  border: 1px dashed black;
 }
 
 // Action Header - Default

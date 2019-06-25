@@ -7,11 +7,15 @@ import List, {
 } from 'terra-list/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 
 import Placeholder from 'terra-doc-template/lib/Placeholder';
+import classNames from 'classnames/bind';
 import mockData from './mock-data/mock-section-sub';
+import styles from '../example/ListDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const createListItem = itemData => (
   <Item key={itemData.key}>
-    <Placeholder title={itemData.title} style={{ height: '50px' }} />
+    <Placeholder title={itemData.title} className={cx('placeholder')} />
   </Item>
 );
 
