@@ -1,9 +1,11 @@
 import React from 'react';
 import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
+import classNames from 'classnames/bind';
 
 import Button from '../../../Button';
+import styles from './ButtonTestCommon.module.scss';
 
-const spacingStyle = { padding: '20px' };
+const cx = classNames.bind(styles);
 
 const IconNeutralButton = () => <Button id="iconNeutralButton" text="Button with Icon" icon={<IconSquare />} />;
 const IconOnlyButton = () => <Button id="iconOnlyButton" text="iconOnlyButton" isIconOnly icon={<IconSquare />} />;
@@ -13,9 +15,9 @@ const IconReversedButton = () => <Button id="iconReversedButton" text="Button wi
 export default () => (
   <div>
     <IconNeutralButton />
-    <div style={spacingStyle} />
+    <div className={cx('spacing')} />
     <IconOnlyButton />
-    <div style={spacingStyle} />
+    <div className={cx('spacing')} />
     <IconReversedButton />
   </div>
 );

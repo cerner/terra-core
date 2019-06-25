@@ -1,6 +1,10 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import ContentContainer from 'terra-content-container/lib/ContentContainer';
+import classNames from 'classnames/bind';
+import styles from './ContentContainerDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const display1 = (
   <p key="1">
@@ -31,7 +35,7 @@ const contentheader = <h3>Display Header</h3>;
 const contentfooter = <h3>Display Footer</h3>;
 
 const container = () => (
-  <div style={{ border: '1px solid' }}>
+  <div className={cx('content-container-standard')}>
     <ContentContainer header={contentheader} footer={contentfooter}>
       <div key="1">
         {display1}
