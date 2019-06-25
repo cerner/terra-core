@@ -30,6 +30,12 @@ Terra.describeViewports('Split Type Dropdown Button', ['medium'], () => {
       browser.moveToObject('[class*=split-button-chevron]');
       Terra.validates.element('chevron hover');
     });
+
+    it('validates the open dropdown', () => {
+      browser.click('[class*=split-button-chevron]');
+      Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
+      Terra.validates.screenshot('chevron with dropdown open');
+    });
   });
 
   describe('Callback', () => {
@@ -41,12 +47,12 @@ Terra.describeViewports('Split Type Dropdown Button', ['medium'], () => {
 
     Terra.it.matchesScreenshot('initial');
 
-    it('calls primary button callback', () => {
+    it('calls primary split button callback', () => {
       browser.click('[class*=split-button-primary]');
       Terra.validates.screenshot('gray');
     });
 
-    it('opens dropdown', () => {
+    it('opens split button dropdown', () => {
       browser.click('[class*=split-button-chevron]');
       browser.waitForVisible('[class*=dropdown-list]');
     });
@@ -56,14 +62,29 @@ Terra.describeViewports('Split Type Dropdown Button', ['medium'], () => {
       Terra.validates.screenshot('red');
     });
 
+    it('opens split button dropdown', () => {
+      browser.click('[class*=split-button-chevron]');
+      browser.waitForVisible('[class*=dropdown-list]');
+    });
+
     it('keyboard navigates down and runs callback on space', () => {
       browser.keys(['ArrowDown', 'Space']);
       Terra.validates.screenshot('white');
     });
 
+    it('opens split button dropdown', () => {
+      browser.click('[class*=split-button-chevron]');
+      browser.waitForVisible('[class*=dropdown-list]');
+    });
+
     it('keyboard navigates up and runs callback on enter', () => {
-      browser.keys(['ArrowUp', 'Enter']);
+      browser.keys(['ArrowDown', 'ArrowUp', 'Enter']);
       Terra.validates.screenshot('red2');
+    });
+
+    it('opens split button dropdown', () => {
+      browser.click('[class*=split-button-chevron]');
+      browser.waitForVisible('[class*=dropdown-list]');
     });
 
     it('jumps to the last entry', () => {
@@ -71,14 +92,68 @@ Terra.describeViewports('Split Type Dropdown Button', ['medium'], () => {
       Terra.validates.screenshot('blue');
     });
 
+    it('opens split button dropdown', () => {
+      browser.click('[class*=split-button-chevron]');
+      browser.waitForVisible('[class*=dropdown-list]');
+    });
+
     it('jumps to the first entry', () => {
-      browser.keys(['Home', 'Enter']);
+      browser.keys(['ArrowDown', 'Home', 'Enter']);
       Terra.validates.screenshot('red3');
+    });
+
+    it('opens split button dropdown', () => {
+      browser.click('[class*=split-button-chevron]');
+      browser.waitForVisible('[class*=dropdown-list]');
     });
 
     it('jumps when typing', () => {
       browser.keys(['b', 'Enter']);
       Terra.validates.screenshot('blue2');
+    });
+  });
+
+  describe('Width', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/wide-split-button');
+      // avoid hover styles
+      browser.moveToObject('#root', 100, 100);
+    });
+
+    Terra.it.matchesScreenshot('Both closed');
+
+    it('opens the long label dropdown', () => {
+      browser.click('#wide-label [class*=split-button-chevron]');
+      Terra.validates.screenshot('Long label open');
+    });
+  });
+
+  describe('Bounded', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/bounded-split-button');
+    });
+
+    it('opens the top left dropdown', () => {
+      browser.click('#top-left [class*=split-button-chevron]');
+      Terra.validates.screenshot('Top left open');
+    });
+
+    it('opens the top right dropdown', () => {
+      browser.keys('Escape');
+      browser.click('#top-right [class*=split-button-chevron]');
+      Terra.validates.screenshot('Top right open');
+    });
+
+    it('opens the bottom left dropdown', () => {
+      browser.keys('Escape');
+      browser.click('#bottom-left [class*=split-button-chevron]');
+      Terra.validates.screenshot('Bottom left open');
+    });
+
+    it('opens the bottom right dropdown', () => {
+      browser.keys('Escape');
+      browser.click('#bottom-right [class*=split-button-chevron]');
+      Terra.validates.screenshot('Bottom right open');
     });
   });
 });
