@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import StatusView from '../../../StatusView';
+import styles from './StatusViewTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const ipsum = 'Lorem ipsum dolor';
 const StatusViewButtons = [
@@ -14,8 +18,9 @@ const StatusViewButtons = [
   },
 ];
 
+/* eslint-disable react/forbid-dom-props */
 export default () => (
-  <div style={{ width: '75px', border: '1px black solid' }}>
+  <div style={cx('status-view-wrapper-2')}>
     <StatusView id="statusView" variant="error" title={ipsum} message={ipsum} buttonAttrs={StatusViewButtons} />
   </div>
 );

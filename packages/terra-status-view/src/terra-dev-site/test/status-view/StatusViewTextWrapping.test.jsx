@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import StatusView from '../../../StatusView';
+import styles from './StatusViewTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. AnIncrediblyIncrediblyIncrediblyIncrediblyIncrediblyIncrediblyLongWord.';
 const StatusViewButtons = [
@@ -14,8 +18,9 @@ const StatusViewButtons = [
   },
 ];
 
+/* eslint-disable react/forbid-dom-props */
 export default () => (
-  <div style={{ maxWidth: '500px', border: '1px black solid' }}>
+  <div style={cx('status-view-wrapper-1')}>
     <StatusView id="statusView" variant="error" title={ipsum} message={ipsum} buttonAttrs={StatusViewButtons} />
   </div>
 );
