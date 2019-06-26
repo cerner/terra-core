@@ -1,11 +1,17 @@
-.spacing-demo {
-  overflow: hidden;
-}
+:local {
+  .spacing-demo {
+    overflow: hidden;
+  }
 
-.spacing-demo .spacer {
-  background: rgb(195, 207, 142);
-}
+  .spacing-demo .spacer {
+    background: rgb(195, 207, 142);
+  }
 
-.spacer-demo-margin {
-  background: rgb(248, 204, 161);
+  .spacer-demo-margin {
+    background: rgb(248, 204, 161);
+  }
+
+  .spacer-content-wrapper {
+    background: rgb(141, 182, 193);
+  }
 }

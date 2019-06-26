@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Table from 'terra-table/lib/Table';
+import classNames from 'classnames/bind';
+import styles from './TableWithCustomCells.module.scss';
+
+const cx = classNames.bind(styles);
 
 const CustomCell = props => (
   <div>
     <h3>{props.text}</h3>
-    {props.subtext ? <h4 style={{ color: '#656565' }}>{props.subtext}</h4> : null}
+    {props.subtext ? <h4 className={cx('custom-cell-header-wrapper')}>{props.subtext}</h4> : null}
   </div>
 );
 
