@@ -38,6 +38,14 @@ Terra.describeViewports('Split Type Dropdown Button', ['medium'], () => {
     });
   });
 
+  describe('Disabled', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/disabled-split-type');
+    });
+
+    Terra.it.validatesElement('disabled');
+  });
+
   describe('Callback', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/callback-split-type');
@@ -125,6 +133,12 @@ Terra.describeViewports('Split Type Dropdown Button', ['medium'], () => {
     it('opens the long label dropdown', () => {
       browser.click('#wide-label [class*=split-button-chevron]');
       Terra.validates.screenshot('Long label open');
+    });
+
+    it('opens the long option dropdown', () => {
+      browser.keys(['Escape']);
+      browser.click('#wide-option [class*=split-button-chevron]');
+      Terra.validates.screenshot('Long option open');
     });
   });
 
