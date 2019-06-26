@@ -3,7 +3,7 @@
 exports[`Button renders a default option 1`] = `
 <li>
   <div
-    className="option"
+    className="button"
     onMouseUp={[Function]}
     role="button"
     tabIndex="-1"
@@ -16,7 +16,7 @@ exports[`Button renders a default option 1`] = `
 exports[`Button renders a focused option 1`] = `
 <li>
   <div
-    className="option focus"
+    className="button focus"
     onMouseUp={[Function]}
     role="button"
     tabIndex="-1"
@@ -29,7 +29,7 @@ exports[`Button renders a focused option 1`] = `
 exports[`Button renders an active and focused option 1`] = `
 <li>
   <div
-    className="option focus active"
+    className="button focus active"
     onMouseUp={[Function]}
     role="button"
     tabIndex="-1"
@@ -42,7 +42,7 @@ exports[`Button renders an active and focused option 1`] = `
 exports[`Button renders an active option 1`] = `
 <li>
   <div
-    className="option active"
+    className="button active"
     onMouseUp={[Function]}
     role="button"
     tabIndex="-1"

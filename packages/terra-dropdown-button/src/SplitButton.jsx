@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import DropdownButtonBase, { Variants } from './_DropdownButtonBase';
-import styles from './DropdownButton.module.scss';
+import DropdownButtonBase from './_DropdownButtonBase';
+import styles from './SplitButton.module.scss';
 import Button from './_Button';
 
 const cx = classNames.bind(styles);
 
-const AcceptableVariants = Object.create(Variants);
-delete AcceptableVariants.EMPHASIS;
+const Variants = {
+  NEUTRAL: 'neutral',
+  GHOST: 'ghost',
+};
 
 const propTypes = {
   /**
@@ -38,7 +40,7 @@ const propTypes = {
    * Sets the styles of the component. 'emphasis' variant is only valid on the 'dropdown' type.
    * Must be either 'neutral' or 'emphasis'.
    */
-  variant: PropTypes.oneOf([AcceptableVariants.NEUTRAL, AcceptableVariants.GHOST]),
+  variant: PropTypes.oneOf(Object.values(Variants)),
 };
 
 const defaultProps = {
@@ -76,6 +78,8 @@ class SplitButton extends React.Component {
       ...customProps
     } = this.props;
 
+    const finalVariant = variant !== 'emphasis' ? variant : 'neutral';
+
     return (
       <DropdownButtonBase
         {...customProps}
@@ -84,11 +88,10 @@ class SplitButton extends React.Component {
         requestClose={this.handleDropdownRequestClose}
         disabled={disabled}
         isBlock={isBlock}
-        variant={variant !== 'emphasis' ? variant : 'neutral'}
       >
         <button
           type="button"
-          className={cx('split-button-primary')}
+          className={cx('split-button-primary', { 'is-block': isBlock }, finalVariant)}
           onClick={onClick}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
@@ -99,7 +102,7 @@ class SplitButton extends React.Component {
         <button
           type="button"
           onClick={this.handleDropdownButtonClick}
-          className={cx('split-button-chevron', { 'is-active': this.state.isOpen })}
+          className={cx('split-button-chevron', { 'is-active': this.state.isOpen }, finalVariant)}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
@@ -118,4 +121,4 @@ SplitButton.propTypes = propTypes;
 SplitButton.defaultProps = defaultProps;
 
 export default SplitButton;
-export { Button, AcceptableVariants as Variants };
+export { Button, Variants };

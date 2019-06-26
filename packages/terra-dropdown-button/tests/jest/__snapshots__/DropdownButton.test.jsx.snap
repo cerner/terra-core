@@ -12,12 +12,11 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
   isBlock={true}
   isOpen={false}
   requestClose={[Function]}
-  variant="neutral"
 >
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type"
+    className="dropdown-button-type neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -46,12 +45,11 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
   isBlock={false}
   isOpen={false}
   requestClose={[Function]}
-  variant="neutral"
 >
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type"
+    className="dropdown-button-type neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -80,11 +78,10 @@ exports[`Dropdown Button should render a default split type 1`] = `
   isBlock={false}
   isOpen={false}
   requestClose={[Function]}
-  variant="neutral"
 >
   <button
     aria-disabled={false}
-    className="split-button-primary"
+    className="split-button-primary neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -95,7 +92,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
     aria-disabled={false}
     aria-haspopup={true}
     aria-label="More Options"
-    className="split-button-chevron"
+    className="split-button-chevron neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -119,12 +116,11 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
   isBlock={false}
   isOpen={false}
   requestClose={[Function]}
-  variant="neutral"
 >
   <button
     aria-disabled={true}
     aria-haspopup={true}
-    className="dropdown-button-type"
+    className="dropdown-button-type neutral"
     disabled={true}
     onClick={[Function]}
     tabIndex="-1"
@@ -155,12 +151,11 @@ exports[`Dropdown Button should render a dropdown type with a bounding ref 1`] =
   isBlock={false}
   isOpen={false}
   requestClose={[Function]}
-  variant="neutral"
 >
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type"
+    className="dropdown-button-type neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -189,12 +184,11 @@ exports[`Dropdown Button should render a dropdown type with a onClick in the def
   isBlock={false}
   isOpen={false}
   requestClose={[Function]}
-  variant="neutral"
 >
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type"
+    className="dropdown-button-type neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -223,13 +217,12 @@ exports[`Dropdown Button should render a dropdown type with a set width 1`] = `
   isBlock={false}
   isOpen={false}
   requestClose={[Function]}
-  variant="neutral"
   width="500px"
 >
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type"
+    className="dropdown-button-type neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -260,11 +253,10 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
   other-custom-attribute="purple"
   requestClose={[Function]}
   test-custom-attribute={true}
-  variant="neutral"
 >
   <button
     aria-disabled={false}
-    className="split-button-primary"
+    className="split-button-primary neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -275,7 +267,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     aria-disabled={false}
     aria-haspopup={true}
     aria-label="More Options"
-    className="split-button-chevron"
+    className="split-button-chevron neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -309,11 +301,10 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
   isBlock={false}
   isOpen={false}
   requestClose={[Function]}
-  variant="neutral"
 >
   <button
     aria-disabled={false}
-    className="split-button-primary"
+    className="split-button-primary neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -324,7 +315,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     aria-disabled={false}
     aria-haspopup={true}
     aria-label="More Options"
-    className="split-button-chevron"
+    className="split-button-chevron neutral"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -348,12 +339,11 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
   isBlock={false}
   isOpen={false}
   requestClose={[Function]}
-  variant="emphasis"
 >
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type"
+    className="dropdown-button-type emphasis"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -382,13 +372,12 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
   isBlock={false}
   isOpen={true}
   requestClose={[Function]}
-  variant="neutral"
 >
   <button
     aria-disabled={false}
     aria-expanded={true}
     aria-haspopup={true}
-    className="dropdown-button-type is-active"
+    className="dropdown-button-type is-active neutral"
     disabled={false}
     onClick={[Function]}
     type="button"

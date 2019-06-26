@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './_Option.module.scss';
+import styles from './_Button.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -41,7 +41,7 @@ const Option = ({
       role="button"
       tabIndex="-1"
       className={cx([
-        'option',
+        'button',
         { focus: isFocused },
         { active: isActive },
       ])}

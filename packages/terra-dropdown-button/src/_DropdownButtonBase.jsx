@@ -2,15 +2,9 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Dropdown from './_Dropdown';
-import styles from './DropdownButton.module.scss';
+import styles from './DropdownButtonBase.module.scss';
 
 const cx = classNames.bind(styles);
-
-const Variants = {
-  NEUTRAL: 'neutral',
-  EMPHASIS: 'emphasis',
-  GHOST: 'ghost',
-};
 
 const propTypes = {
   /**
@@ -21,7 +15,13 @@ const propTypes = {
    * The options to display in the dropdown. Should be of type `Button`.
    */
   buttons: PropTypes.node.isRequired,
+  /**
+   * Whether or not the dropdown is open
+   */
   isOpen: PropTypes.bool.isRequired,
+  /**
+   * Callback to tell the parent it should close the dropdown
+   */
   requestClose: PropTypes.func.isRequired,
   /**
    * Determines whether the primary button and expanding the dropdown should be disabled.
@@ -31,17 +31,11 @@ const propTypes = {
    * Determines whether the component should have block styles applied. The dropdown will match the component's width.
    */
   isBlock: PropTypes.bool,
-  /**
-   * Sets the styles of the component.
-   * Must be either 'neutral' or 'emphasis'.
-   */
-  variant: PropTypes.oneOf(Object.values(Variants)),
 };
 
 const defaultProps = {
   disabled: false,
   isBlock: false,
-  variant: 'neutral',
 };
 
 const DropdownButtonBase = ({
@@ -51,14 +45,12 @@ const DropdownButtonBase = ({
   requestClose,
   disabled,
   isBlock,
-  variant,
   ...customProps
 }) => {
   const buttonWrapperRef = useRef(null);
 
   const DropdownButtonClassNames = cx([
     'dropdown-button',
-    variant,
     { 'is-block': isBlock },
     { disabled },
     customProps.className,
@@ -87,4 +79,3 @@ DropdownButtonBase.propTypes = propTypes;
 DropdownButtonBase.defaultProps = defaultProps;
 
 export default DropdownButtonBase;
-export { Variants };

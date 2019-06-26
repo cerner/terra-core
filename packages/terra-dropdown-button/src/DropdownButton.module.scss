@@ -4,29 +4,12 @@
 @import './mixins';
 
 :local {
-  .dropdown-button {
-    border-radius: var(--terra-dropdown-button-border-radius, 3px);
-    box-shadow: var(--terra-dropdown-button-box-shadow);
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-    &.disabled {
-      opacity: var(--terra-dropdown-button-disabled-opacity, 0.4);
-      pointer-events: none;
-    }
-
-    &.is-block {
-      display: flex;
-    }
-  }
-
   .dropdown-button-type {
     border-radius: var(--terra-dropdown-button-border-radius, 3px);
     border-style: solid;
     display: inline-flex;
     // Needed for IE 10 to linebreak things properly
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     flex-direction: row;
     flex-wrap: nowrap;
     font-size: var(--terra-dropdown-button-dropdown-type-font-size, 1rem);
@@ -36,6 +19,10 @@
     padding-left: var(--terra-dropdown-button-dropdown-type-padding-left, 10px);
     padding-right: var(--terra-dropdown-button-dropdown-type-padding-right, 7px);
     padding-top: var(--terra-dropdown-button-dropdown-type-padding-top, 4px);
+
+    &.is-block {
+      display: flex;
+    }
   }
 
   .dropdown-button-type-text {
@@ -45,51 +32,8 @@
     margin-right: var(--terra-dropdown-button-dropdown-type-text-margin-right, 5px);
   }
 
-  .split-button-primary {
-    // stylelint-disable-next-line terra/custom-property-name
-    border-bottom-left-radius: var(--terra-dropdown-button-border-radius, 3px);
-    border-bottom-right-radius: 0;
-    border-style: solid;
-    // stylelint-disable-next-line terra/custom-property-name
-    border-top-left-radius: var(--terra-dropdown-button-border-radius, 3px);
-    border-top-right-radius: 0;
-    // Needed for IE 10 to linebreak things properly
-    flex: 0 1 auto;
-    font-size: var(--terra-dropdown-button-split-type-font-size, 1rem);
-    line-height: var(--terra-dropdown-button-split-type-line-height, 1.4285714286);
-    outline: 0;
-    padding-bottom: var(--terra-dropdown-button-split-type-primary-padding-bottom, 4px);
-    padding-left: var(--terra-dropdown-button-split-type-primary-padding-left, 10px);
-    padding-right: var(--terra-dropdown-button-split-type-primary-padding-right, 10px);
-    padding-top: var(--terra-dropdown-button-split-type-primary-padding-top, 4px);
-
-    &:focus {
-      position: relative;
-      z-index: 1;
-    }
-  }
-
-  .is-block .split-button-primary {
+  .is-block > .dropdown-button-type-text {
     flex-grow: 1;
-  }
-
-  .split-button-chevron {
-    border-bottom-left-radius: 0;
-    // stylelint-disable-next-line terra/custom-property-name
-    border-bottom-right-radius: var(--terra-dropdown-button-border-radius, 3px);
-    border-style: solid;
-    border-top-left-radius: 0;
-    // stylelint-disable-next-line terra/custom-property-name
-    border-top-right-radius: var(--terra-dropdown-button-border-radius, 3px);
-    // If flex-shrink is set to 1 IE will give the button 0 width
-    flex: 0 0 auto;
-    font-size: var(--terra-dropdown-button-split-type-font-size, 1rem);
-    line-height: var(--terra-dropdown-button-split-type-line-height, 1.4285714286);
-    outline: 0;
-    padding-bottom: var(--terra-dropdown-button-split-type-chevron-padding-bottom, 4px);
-    padding-left: var(--terra-dropdown-button-split-type-chevron-padding-left, 7px);
-    padding-right: var(--terra-dropdown-button-split-type-chevron-padding-right, 7px);
-    padding-top: var(--terra-dropdown-button-split-type-chevron-padding-top, 4px);
   }
 
   .neutral {

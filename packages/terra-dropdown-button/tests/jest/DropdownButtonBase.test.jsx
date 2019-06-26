@@ -1,5 +1,5 @@
 import React from 'react';
-import DropdownButtonBase, { Variants } from '../../src/_DropdownButtonBase';
+import DropdownButtonBase from '../../src/_DropdownButtonBase';
 import { Button } from '../../src/DropdownButton';
 
 describe('Dropdown Button Base', () => {
@@ -11,38 +11,6 @@ describe('Dropdown Button Base', () => {
         }
         isOpen={false}
         requestClose={() => {}}
-      >
-        <div>test contents</div>
-      </DropdownButtonBase>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders an emphasis DropdownButtonBase', () => {
-    const wrapper = shallow(
-      <DropdownButtonBase
-        buttons={
-          <Button label="1st option" onClick={() => {}} />
-        }
-        isOpen={false}
-        requestClose={() => {}}
-        variant={Variants.EMPHASIS}
-      >
-        <div>test contents</div>
-      </DropdownButtonBase>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders a ghost DropdownButtonBase', () => {
-    const wrapper = shallow(
-      <DropdownButtonBase
-        buttons={
-          <Button label="1st option" onClick={() => {}} />
-        }
-        isOpen={false}
-        requestClose={() => {}}
-        variant={Variants.GHOST}
       >
         <div>test contents</div>
       </DropdownButtonBase>,

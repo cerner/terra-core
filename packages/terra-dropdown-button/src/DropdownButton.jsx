@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import DropdownButtonBase, { Variants } from './_DropdownButtonBase';
+import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
 import Button from './_Button';
 
 const cx = classNames.bind(styles);
+
+const Variants = {
+  NEUTRAL: 'neutral',
+  EMPHASIS: 'emphasis',
+  GHOST: 'ghost',
+};
 
 const propTypes = {
   /**
@@ -62,36 +68,6 @@ class DropdownButton extends React.Component {
     this.setState({ isOpen: false });
   }
 
-  renderSplitType(label, onClick, disabled) {
-    return (
-      <React.Fragment>
-        <button
-          type="button"
-          className={cx('split-button-primary')}
-          onClick={onClick}
-          disabled={disabled}
-          tabIndex={disabled ? '-1' : undefined}
-          aria-disabled={disabled}
-        >
-          {label}
-        </button>
-        <button
-          type="button"
-          onClick={this.handleDropdownButtonClick}
-          className={cx('split-button-chevron', { 'is-active': this.state.isOpen })}
-          disabled={disabled}
-          tabIndex={disabled ? '-1' : undefined}
-          aria-disabled={disabled}
-          aria-expanded={this.state.isOpen || undefined}
-          aria-haspopup
-          aria-label="More Options"
-        >
-          <span className={cx('chevron-icon')} />
-        </button>
-      </React.Fragment>
-    );
-  }
-
   render() {
     const {
       children,
@@ -111,11 +87,10 @@ class DropdownButton extends React.Component {
         requestClose={this.handleDropdownRequestClose}
         disabled={disabled}
         isBlock={isBlock}
-        variant={variant}
       >
         <button
           type="button"
-          className={cx('dropdown-button-type', { 'is-active': this.state.isOpen })}
+          className={cx('dropdown-button-type', { 'is-active': this.state.isOpen }, variant, { 'is-block': isBlock })}
           onClick={this.handleDropdownButtonClick}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
