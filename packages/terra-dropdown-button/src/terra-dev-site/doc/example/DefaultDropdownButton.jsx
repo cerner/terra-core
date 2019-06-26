@@ -6,7 +6,7 @@ import DropdownButton, { Button } from '../../../DropdownButton';
 
 export default () => (
   <DropdownButton
-    label="Primary option"
+    label="Dropdown"
   >
     <Button label="1st Option" onClick={() => { console.log('hi'); }} />
     <Button label="2nd Option" onClick={() => { console.log('bye'); }} />

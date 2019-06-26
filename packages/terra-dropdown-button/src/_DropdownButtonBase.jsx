@@ -56,6 +56,11 @@ const DropdownButtonBase = ({
     customProps.className,
   ]);
 
+  let calcWidth;
+  if (buttonWrapperRef.current && isBlock) {
+    calcWidth = `${buttonWrapperRef.current.getBoundingClientRect().width}px`;
+  }
+
   return (
     <div
       {...customProps}
@@ -67,7 +72,7 @@ const DropdownButtonBase = ({
         targetRef={() => buttonWrapperRef.current}
         isOpen={isOpen}
         requestClose={requestClose}
-        width={(buttonWrapperRef.current && isBlock) ? `${buttonWrapperRef.current.offsetWidth}px` : undefined}
+        width={calcWidth}
       >
         {buttons}
       </Dropdown>

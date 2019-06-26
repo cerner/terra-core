@@ -19,7 +19,7 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Determines whether the primary button and expanding the dropdown should be disabled.
+   * Determines whether the dropdown should be disabled.
    */
   disabled: PropTypes.bool,
   /**
@@ -27,19 +27,12 @@ const propTypes = {
    */
   isBlock: PropTypes.bool,
   /**
-   * For 'dropdown' type sets what will be shown on the dropdown button.
-   *
-   * For 'split' type sets what will be shown on the primary button.
+   * Sets the text that will be shown on the dropdown button.
    */
   label: PropTypes.string.isRequired,
   /**
-   * What will be called when the primary button is pressed on split types. Is required for split types.
-   * Will be ignored for dropdown types.
-   */
-  onClick: PropTypes.func,
-  /**
-   * Sets the styles of the component. 'emphasis' variant is only valid on the 'dropdown' type.
-   * Must be either 'neutral' or 'emphasis'.
+   * Sets the styles of the component.
+   * Must be one of 'neutral', 'emphasis', or 'ghost'.
    */
   variant: PropTypes.oneOf(Object.values(Variants)),
 };
@@ -74,7 +67,6 @@ class DropdownButton extends React.Component {
       disabled,
       isBlock,
       label,
-      onClick,
       variant,
       ...customProps
     } = this.props;

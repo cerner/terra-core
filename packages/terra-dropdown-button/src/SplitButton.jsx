@@ -26,19 +26,15 @@ const propTypes = {
    */
   isBlock: PropTypes.bool,
   /**
-   * For 'dropdown' type sets what will be shown on the dropdown button.
-   *
-   * For 'split' type sets what will be shown on the primary button.
+   * Sets the text that will be shown on the primary button which is outside the dropdown.
    */
   primaryOptionLabel: PropTypes.string.isRequired,
   /**
-   * What will be called when the primary button is pressed on split types. Is required for split types.
-   * Will be ignored for dropdown types.
+   * What will be called when the primary button is pressed.
    */
   onClick: PropTypes.func.isRequired,
   /**
-   * Sets the styles of the component. 'emphasis' variant is only valid on the 'dropdown' type.
-   * Must be either 'neutral' or 'emphasis'.
+   * Sets the styles of the component. Must be either 'neutral' or 'ghost'.
    */
   variant: PropTypes.oneOf(Object.values(Variants)),
 };

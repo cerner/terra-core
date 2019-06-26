@@ -2,11 +2,11 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import DropdownButton, { Button } from '../../../DropdownButton';
+import SplitButton, { Button } from '../../../SplitButton';
 
 export default () => (
-  <DropdownButton
-    label="Primary option"
+  <SplitButton
+    primaryOptionLabel="Primary option"
     onClick={() => { console.log('primary option'); }}
     isBlock
   >
@@ -14,5 +14,5 @@ export default () => (
     <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
     <Button label="3rd Option" onClick={() => { console.log('eyb'); }} />
     <Button label="4th Option" onClick={() => { console.log('ih'); }} />
-  </DropdownButton>
+  </SplitButton>
 );
