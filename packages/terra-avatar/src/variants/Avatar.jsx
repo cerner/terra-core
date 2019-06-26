@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import objectFitImages from 'object-fit-images'; // Adding polyfill for IE.
 import styles from '../common/Avatar.module.scss';
 import {
   AVATAR_VARIANTS, generateImagePlaceholder, generateImage, setColor,
@@ -58,7 +59,7 @@ const defaultProps = {
 class Avatar extends React.Component {
   constructor(props) {
     super(props);
-
+    objectFitImages();
     this.state = {
       fallback: false,
     };

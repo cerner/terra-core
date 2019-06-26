@@ -63,7 +63,9 @@
 
   .avatar > .image {
     border-radius: 50%;
+    font-family: 'object-fit: cover;';
     height: 100%;
+    object-fit: cover;
     width: 100%;
   }
 
