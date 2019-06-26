@@ -20,7 +20,7 @@ const StatusViewButtons = [
 
 /* eslint-disable react/forbid-dom-props */
 export default () => (
-  <div style={cx('status-view-wrapper-1')}>
+  <div className={cx('status-view-wrapper-1')}>
     <StatusView id="statusView" variant="error" title={ipsum} message={ipsum} buttonAttrs={StatusViewButtons} />
   </div>
 );
