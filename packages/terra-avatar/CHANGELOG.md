@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added Object-fit-images polyfill for IE.
+* Added `object-fit` property in css.
 
 2.17.0 - (June 18, 2019)
 ------------------
