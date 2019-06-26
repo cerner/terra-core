@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Scroll from '../../../Scroll';
+import styles from './DefaultTest.module.scss';
+
+const cx = classNames.bind(styles);
 
 class DefaultScroll extends React.Component {
   constructor(props) {
@@ -22,7 +26,7 @@ class DefaultScroll extends React.Component {
     return (
       <div>
         <button type="button" id="scroll" onClick={this.toggleScroll}>Scroll</button>
-        <div style={{ height: '300px', width: '400px', border: '1px dashed black' }}>
+        <div className={cx('scroll-wrapper')}>
           <Scroll id="scroll-test" refCallback={this.setNode}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
             eget facilisis nunc ornare in. Vestibulum ut posuere neque. Maecenas nibh lacus, euismod sit amet magna sit amet,

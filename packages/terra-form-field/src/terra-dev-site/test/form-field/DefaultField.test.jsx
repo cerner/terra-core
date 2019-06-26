@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Field from '../../../Field';
+import styles from './FormFieldTestCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const DefaultField = () => (
   <div>
@@ -9,14 +13,14 @@ const DefaultField = () => (
       help="This is a standard, non-required field."
       error="Error Message"
     >
-      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+      <div className={cx('field-content')}>Control Placeholder</div>
     </Field>
     <Field
       label="Field Label"
       help="This is a standard, non-required field."
       error="Error Message"
     >
-      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+      <div className={cx('field-content')}>Control Placeholder</div>
     </Field>
   </div>
 );

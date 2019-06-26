@@ -3,10 +3,14 @@ import Button from 'terra-button';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import StatusView from 'terra-status-view/lib/StatusView';
+import classNames from 'classnames/bind';
+import styles from './StatusViewDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const AllPropsExample = (
   <StatusView
-    style={{ width: '500px' }}
+    className={cx('status-view-width')}
     variant="no-data"
     title="500"
     message="An exception was thrown"

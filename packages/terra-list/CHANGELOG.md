@@ -6,6 +6,7 @@ Unreleased
 ### Changed
 * Fixed accessibility issue in list item tests
 * Update mixin import to work better with codesandbox.io
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
 
 4.8.0 - (June 18, 2019)
 ------------------

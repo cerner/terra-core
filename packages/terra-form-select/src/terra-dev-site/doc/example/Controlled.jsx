@@ -1,6 +1,10 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Select from 'terra-form-select/lib/Select';
+import classNames from 'classnames/bind';
+import styles from './FormSelectDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 class ControlledExample extends React.Component {
   constructor() {
@@ -16,7 +20,7 @@ class ControlledExample extends React.Component {
 
   render() {
     return (
-      <Select placeholder="Select a color" value={this.state.value} onChange={this.handleChange} style={{ maxWidth: '300px' }}>
+      <Select placeholder="Select a color" value={this.state.value} onChange={this.handleChange} className={cx('form-select')}>
         <Select.Option value="blue" display="Blue" />
         <Select.Option value="green" display="Green" />
         <Select.Option value="purple" display="Purple" />

@@ -3,6 +3,10 @@ import Dialog from 'terra-dialog';
 import Button from 'terra-button';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import ControlledProgressivePaginator from 'terra-paginator/lib/ControlledProgressivePaginator';
+import classNames from 'classnames/bind';
+import styles from './ControlledPaginatorCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const totalCount = 450;
 
@@ -47,7 +51,7 @@ class ProgressivePaginatorExample extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '500px' }}>
+      <div className={cx('paginator-wrapper')}>
         <Dialog
           header={(
             <h1>

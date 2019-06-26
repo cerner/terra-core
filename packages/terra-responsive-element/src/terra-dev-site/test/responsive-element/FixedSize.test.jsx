@@ -4,12 +4,15 @@
  */
 
 import React from 'react';
+import classNames from 'classnames/bind';
 import ResponsiveElement from '../../../ResponsiveElement';
+import styles from './FixedSize.module.scss';
+
+const cx = classNames.bind(styles);
 
 const FixedSize = () => (
   <div id="fixed-target">
-    {/* eslint-disable-next-line react/forbid-dom-props */}
-    <div style={{ width: '1000px' }}>
+    <div className={cx('responsive-element-wrapper')}>
       <ResponsiveElement
         tiny={<div>Tiny</div>}
         small={<div>Small</div>}

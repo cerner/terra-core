@@ -10,8 +10,8 @@ import styles from './colors.module.scss';
 const cx = classNames.bind(styles);
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const image = <img style={{ display: 'block' }} height="150" width="150" src={placeholderPic150x150} alt="placeholder" />;
-const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
+const image = <img className={cx('image-wrapper')} height="150" width="150" src={placeholderPic150x150} alt="placeholder" />;
+const simpleText = <div className={cx('text-wrapper')}>Sample text</div>;
 
 const StatusArrange = () => (
   <div>
