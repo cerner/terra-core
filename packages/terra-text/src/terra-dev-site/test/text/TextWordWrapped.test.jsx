@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 
 import Text from '../../../Text';
+import styles from './TextTestCommon.module.scss';
 
-export default () => (<div style={{ width: '150px' }}><Text id="text" isWordWrapped>https://engineering.cerner.com/terra-ui/#/components/terra-text/text/text</Text></div>);
+const cx = classNames.bind(styles);
+
+export default () => (<div className={cx('text-wrapper')}><Text id="text" isWordWrapped>https://engineering.cerner.com/terra-ui/#/components/terra-text/text/text</Text></div>);
