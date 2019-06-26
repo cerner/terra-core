@@ -6,6 +6,8 @@ Unreleased
 ### Fixed
 * Added `data-overlay-open` attribute to root document when overlay is opened
 * Added check for `data-modal-open` attribute on root document to prevent removal of `inert` attribute if a modal is also open
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
 
 3.16.0 - (June 18, 2019)
 ------------------

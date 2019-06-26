@@ -1,6 +1,10 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Signature from 'terra-signature/lib/Signature';
+import classNames from 'classnames/bind';
+import styles from './SignatureExample.module.scss';
+
+const cx = classNames.bind(styles);
 
 class SignatureExample extends React.Component {
   constructor() {
@@ -57,10 +61,7 @@ class SignatureExample extends React.Component {
   render() {
     return (
       <div>
-        <div style={{
-          height: '100px', width: '100%', padding: '5px', border: '1px solid black',
-        }}
-        >
+        <div className={cx('signature-wrapper')}>
           <Signature id="foo" lineWidth={this.state.lineWidth} lineSegments={this.state.lineSegments} />
         </div>
         <div>

@@ -3,10 +3,14 @@ import Button from 'terra-button';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import StatusView from 'terra-status-view/lib/StatusView';
+import classNames from 'classnames/bind';
+import styles from './StatusViewDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const GlyphNotFitExample = (
   <StatusView
-    style={{ height: '220px', width: '500px', overflow: 'auto' }}
+    className={cx('status-view-overflow')}
     variant="error"
     message="An exception was thrown"
     customGlyph={<IconDiamond />}
