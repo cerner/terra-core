@@ -630,7 +630,8 @@ describe('Select', () => {
     describe('combobox should select an option by alternative keyboard interaction', () => {
       it('combobox should select the first option', () => {
         browser.keys('Tab');
-        browser.keys('ArrowDown');
+        browser.keys('ArrowDown'); // Open dropdown
+        browser.keys('ArrowDown'); // First option
         browser.keys('Enter');
       });
 
@@ -650,8 +651,9 @@ describe('Select', () => {
     describe('combobox should select second option by keyboard interaction', () => {
       it('combobox should navigate to second option', () => {
         browser.keys('Tab');
-        browser.keys('ArrowDown');
-        browser.keys('ArrowDown');
+        browser.keys('ArrowDown'); // Open dropdown
+        browser.keys('ArrowDown'); // First option
+        browser.keys('ArrowDown'); // Second option
       });
 
       it('combobox input should be focused', async () => {
@@ -708,6 +710,7 @@ describe('Select', () => {
 
       it('combobox should open the dropdown by clicking the toggle', () => {
         browser.click('#combobox:last-child ');
+        browser.keys('ArrowDown');
       });
 
       Terra.it.isAccessible();

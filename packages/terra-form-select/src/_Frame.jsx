@@ -473,6 +473,7 @@ class Frame extends React.Component {
   handleSearch(event) {
     const searchValue = event.target.value;
     this.shouldSearch = true;
+    this.activeOption = undefined;
 
     this.setState({
       isOpen: true,
@@ -527,6 +528,8 @@ class Frame extends React.Component {
       if (activeOption.type.isAddOption) {
         // Use the value as the active display in the select input since there is no activeOption.props.display for the Add option.
         activeOptionDisplay = activeOption.props.value;
+      } else if (activeOption.type.isClearOption) {
+        activeOptionDisplay = '';
       } else if (Util.allowsMultipleSelections(this.props) && Util.includeByDisplay(this.props, activeOption.props.display)) {
         // Clear the active display in the select input if the option is already selected.
         activeOptionDisplay = '';
