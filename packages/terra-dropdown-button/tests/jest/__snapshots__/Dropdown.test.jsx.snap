@@ -2,7 +2,7 @@
 
 exports[`Dropdown renders a default dropdown 1`] = `
 <Popup
-  attachmentBehavior="auto"
+  attachmentBehavior="flip"
   boundingRef={null}
   classNameArrow={null}
   classNameContent={null}
@@ -18,7 +18,7 @@ exports[`Dropdown renders a default dropdown 1`] = `
   targetRef={[Function]}
 >
   <DropdownList
-    handleRequestClose={[Function]}
+    requestClose={[Function]}
   >
     <Option
       callback={[Function]}
@@ -30,35 +30,7 @@ exports[`Dropdown renders a default dropdown 1`] = `
 
 exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
 <Popup
-  attachmentBehavior="auto"
-  boundingRef={[Function]}
-  classNameArrow={null}
-  classNameContent={null}
-  classNameOverlay={null}
-  contentAttachment="top left"
-  contentHeight="auto"
-  contentWidth="auto"
-  isArrowDisplayed={false}
-  isContentFocusDisabled={false}
-  isHeaderDisabled={true}
-  isOpen={false}
-  onRequestClose={[Function]}
-  targetRef={[Function]}
->
-  <DropdownList
-    handleRequestClose={[Function]}
-  >
-    <Option
-      callback={[Function]}
-      label="1st Option"
-    />
-  </DropdownList>
-</Popup>
-`;
-
-exports[`Dropdown renders a dropdown with a set width 1`] = `
-<Popup
-  attachmentBehavior="auto"
+  attachmentBehavior="flip"
   boundingRef={null}
   classNameArrow={null}
   classNameContent={null}
@@ -74,7 +46,35 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
   targetRef={[Function]}
 >
   <DropdownList
-    handleRequestClose={[Function]}
+    requestClose={[Function]}
+  >
+    <Option
+      callback={[Function]}
+      label="1st Option"
+    />
+  </DropdownList>
+</Popup>
+`;
+
+exports[`Dropdown renders a dropdown with a set width 1`] = `
+<Popup
+  attachmentBehavior="flip"
+  boundingRef={null}
+  classNameArrow={null}
+  classNameContent={null}
+  classNameOverlay={null}
+  contentAttachment="top left"
+  contentHeight="auto"
+  contentWidth="auto"
+  isArrowDisplayed={false}
+  isContentFocusDisabled={false}
+  isHeaderDisabled={true}
+  isOpen={false}
+  onRequestClose={[Function]}
+  targetRef={[Function]}
+>
+  <DropdownList
+    requestClose={[Function]}
     width="470px"
   >
     <Option
@@ -87,7 +87,7 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
 
 exports[`Dropdown renders a dropdown with multiple children 1`] = `
 <Popup
-  attachmentBehavior="auto"
+  attachmentBehavior="flip"
   boundingRef={null}
   classNameArrow={null}
   classNameContent={null}
@@ -103,7 +103,7 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
   targetRef={[Function]}
 >
   <DropdownList
-    handleRequestClose={[Function]}
+    requestClose={[Function]}
   >
     <Option
       callback={[Function]}
@@ -123,7 +123,7 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
 
 exports[`Dropdown renders an open dropdown 1`] = `
 <Popup
-  attachmentBehavior="auto"
+  attachmentBehavior="flip"
   boundingRef={null}
   classNameArrow={null}
   classNameContent={null}
@@ -139,7 +139,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
   targetRef={[Function]}
 >
   <DropdownList
-    handleRequestClose={[Function]}
+    requestClose={[Function]}
   >
     <Option
       callback={[Function]}

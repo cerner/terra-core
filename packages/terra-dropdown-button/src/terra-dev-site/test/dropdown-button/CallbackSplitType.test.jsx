@@ -10,7 +10,7 @@ const CallbackDropdownButtons = () => {
 
   return (
     <div className={cx('background', color)}>
-      <DropdownButton defaultOption={{ label: 'Gray', callback: () => { setColor('gray'); } }} type={Types.SPLIT}>
+      <DropdownButton label="Gray" callback={() => { setColor('gray'); }} type={Types.SPLIT}>
         <DropdownButton.Option label="Red" callback={() => { setColor('red'); }} id="red" />
         <DropdownButton.Option label="White" callback={() => { setColor('white'); }} id="white" />
         <DropdownButton.Option label="Blue" callback={() => { setColor('blue'); }} id="blue" />

@@ -4,7 +4,7 @@ import DropdownButton, { Types } from '../../../DropdownButton';
 
 export default () => (
   <div>
-    <DropdownButton defaultOption={{ label: 'Split', callback: () => {} }} type={Types.SPLIT} id="split">
+    <DropdownButton label="Split" callback={() => {}} type={Types.SPLIT} id="split">
       <DropdownButton.Option label="1st" callback={() => {}} />
       <DropdownButton.Option label="2nd" callback={() => {}} />
       <DropdownButton.Option label="3rd" callback={() => {}} />

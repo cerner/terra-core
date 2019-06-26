@@ -11,7 +11,8 @@ const cx = classnames.bind(styles);
 export default () => (
   <div className={cx('container')}>
     <DropdownButton
-      defaultOption={{ label: 'Primary', callback: () => { console.log('primary option'); } }}
+      label="Primary"
+      callback={() => { console.log('primary option'); }}
       className={cx('top-left')}
       type="split"
       id="top-left"
@@ -20,7 +21,8 @@ export default () => (
       <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
     </DropdownButton>
     <DropdownButton
-      defaultOption={{ label: 'Primary', callback: () => { console.log('primary option'); } }}
+      label="Primary"
+      callback={() => { console.log('primary option'); }}
       className={cx('top-right')}
       type="split"
       id="top-right"
@@ -29,7 +31,8 @@ export default () => (
       <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
     </DropdownButton>
     <DropdownButton
-      defaultOption={{ label: 'Primary', callback: () => { console.log('primary option'); } }}
+      label="Primary"
+      callback={() => { console.log('primary option'); }}
       className={cx('bottom-left')}
       type="split"
       id="bottom-left"
@@ -38,7 +41,8 @@ export default () => (
       <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
     </DropdownButton>
     <DropdownButton
-      defaultOption={{ label: 'Primary', callback: () => { console.log('primary option'); } }}
+      label="Primary"
+      callback={() => { console.log('primary option'); }}
       className={cx('bottom-right')}
       type="split"
       id="bottom-right"

@@ -2,10 +2,11 @@
 
 exports[`Dropdown Button should render a block dropdown type 1`] = `
 <div
-  className="dropdown-button neutral set-width"
+  className="dropdown-button neutral is-block"
 >
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     className="dropdown-button-type"
     disabled={false}
     onClick={[Function]}
@@ -21,8 +22,8 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -39,6 +40,7 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     className="dropdown-button-type"
     disabled={false}
     onClick={[Function]}
@@ -54,8 +56,8 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -81,6 +83,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     aria-label="More Options"
     className="split-button-chevron"
     disabled={false}
@@ -92,8 +95,8 @@ exports[`Dropdown Button should render a default split type 1`] = `
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -110,6 +113,7 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 >
   <button
     aria-disabled={true}
+    aria-haspopup={true}
     className="dropdown-button-type"
     disabled={true}
     onClick={[Function]}
@@ -126,8 +130,8 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -140,10 +144,12 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 
 exports[`Dropdown Button should render a dropdown type with a bounding ref 1`] = `
 <div
+  boundingRef={[Function]}
   className="dropdown-button neutral"
 >
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     className="dropdown-button-type"
     disabled={false}
     onClick={[Function]}
@@ -159,9 +165,8 @@ exports[`Dropdown Button should render a dropdown type with a bounding ref 1`] =
     />
   </button>
   <Dropdown
-    boundingRef={[Function]}
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -178,6 +183,7 @@ exports[`Dropdown Button should render a dropdown type with a callback in the de
 >
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     className="dropdown-button-type"
     disabled={false}
     onClick={[Function]}
@@ -193,8 +199,8 @@ exports[`Dropdown Button should render a dropdown type with a callback in the de
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -207,15 +213,12 @@ exports[`Dropdown Button should render a dropdown type with a callback in the de
 
 exports[`Dropdown Button should render a dropdown type with a set width 1`] = `
 <div
-  className="dropdown-button neutral set-width"
-  style={
-    Object {
-      "width": "500px",
-    }
-  }
+  className="dropdown-button neutral"
+  width="500px"
 >
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     className="dropdown-button-type"
     disabled={false}
     onClick={[Function]}
@@ -231,10 +234,9 @@ exports[`Dropdown Button should render a dropdown type with a set width 1`] = `
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
-    width="500px"
   >
     <Option
       callback={[Function]}
@@ -261,6 +263,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
   </button>
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     aria-label="More Options"
     className="split-button-chevron"
     disabled={false}
@@ -272,8 +275,8 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -299,6 +302,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
   </button>
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     aria-label="More Options"
     className="split-button-chevron"
     disabled={false}
@@ -310,8 +314,8 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -336,6 +340,7 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-haspopup={true}
     className="dropdown-button-type"
     disabled={false}
     onClick={[Function]}
@@ -351,8 +356,8 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={false}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option
@@ -369,6 +374,8 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-expanded={true}
+    aria-haspopup={true}
     className="dropdown-button-type is-active"
     disabled={false}
     onClick={[Function]}
@@ -384,8 +391,8 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
     />
   </button>
   <Dropdown
-    handleRequestClose={[Function]}
     isOpen={true}
+    requestClose={[Function]}
     targetRef={[Function]}
   >
     <Option

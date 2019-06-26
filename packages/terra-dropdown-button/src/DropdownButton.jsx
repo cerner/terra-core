@@ -31,14 +31,16 @@ const propTypes = {
    */
   isBlock: PropTypes.bool,
   /**
-   * For 'dropdown' type sets what will be shown on the dropdown button. `callback` is ignored in the 'dropdown` type.
+   * For 'dropdown' type sets what will be shown on the dropdown button.
    *
-   * For 'split' type sets what will be shown on the primary button and what pressing the primary button will do.
+   * For 'split' type sets what will be shown on the primary button.
    */
-  defaultOption: PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    callback: PropTypes.func,
-  }).isRequired,
+  label: PropTypes.string.isRequired,
+  /**
+   * What will be called when the primary button is pressed on split types. Is required for split types.
+   * Will be ignored for dropdown types.
+   */
+  callback: PropTypes.func,
   /**
    * Sets the styles of the component. 'emphasis' variant is only valid on the 'dropdown' type.
    * Must be either 'neutral' or 'emphasis'.
@@ -62,6 +64,13 @@ class DropdownButton extends React.Component {
   constructor(props) {
     super(props);
 
+    if (!props.callback && props.type === Types.SPLIT) {
+      if (process.env !== 'production') {
+        // eslint-disable-next-line no-console
+        console.warn('Split type dropdowns require the callback prop to be set. The primary button will do nothing.');
+      }
+    }
+
     this.handleDropdownButtonClick = this.handleDropdownButtonClick.bind(this);
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
 
@@ -76,18 +85,18 @@ class DropdownButton extends React.Component {
     this.setState({ isOpen: false });
   }
 
-  renderSplitType(defaultOption, disabled) {
+  renderSplitType(label, callback, disabled) {
     return (
       <React.Fragment>
         <button
           type="button"
           className={cx('split-button-primary')}
-          onClick={defaultOption.callback}
+          onClick={callback}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
         >
-          {defaultOption.label}
+          {label}
         </button>
         <button
           type="button"
@@ -106,7 +115,7 @@ class DropdownButton extends React.Component {
     );
   }
 
-  renderDropdownType(defaultOption, disabled) {
+  renderDropdownType(label, disabled) {
     return (
       <button
         type="button"
@@ -118,7 +127,7 @@ class DropdownButton extends React.Component {
         aria-expanded={this.state.isOpen || undefined}
         aria-haspopup
       >
-        <span className={cx('dropdown-button-type-text')}>{defaultOption.label}</span>
+        <span className={cx('dropdown-button-type-text')}>{label}</span>
         <span className={cx('chevron-icon')} />
       </button>
     );
@@ -129,7 +138,8 @@ class DropdownButton extends React.Component {
       children,
       disabled,
       isBlock,
-      defaultOption,
+      label,
+      callback,
       variant,
       type,
       ...customProps
@@ -151,7 +161,7 @@ class DropdownButton extends React.Component {
         className={DropdownButtonClassNames}
         ref={(ref) => { this.buttonWrapperRef = ref; }}
       >
-        {(isDropdownType && this.renderDropdownType(defaultOption, disabled)) || this.renderSplitType(defaultOption, disabled)}
+        {(isDropdownType && this.renderDropdownType(label, disabled)) || this.renderSplitType(label, callback, disabled)}
         <Dropdown
           targetRef={() => this.buttonWrapperRef}
           isOpen={this.state.isOpen}
