@@ -13,7 +13,7 @@ const propTypes = {
   /**
    * The function that is called when the option is clicked or enter/space is pressed with it focused.
    */
-  callback: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   /**
    * @private
    * Whether or not the option should show active styles
@@ -32,11 +32,12 @@ const propTypes = {
 };
 
 const Option = ({
-  label, callback, isFocused, isActive, requestClose, ...customProps
+  label, onClick, isFocused, isActive, requestClose, ...customProps
 }) => (
   <li>
     <div
-      onMouseUp={() => { callback(); requestClose(); }}
+      {...customProps}
+      onMouseUp={() => { onClick(); requestClose(); }}
       role="button"
       tabIndex="-1"
       className={cx([
@@ -44,7 +45,6 @@ const Option = ({
         { focus: isFocused },
         { active: isActive },
       ])}
-      {...customProps}
     >
       {label}
     </div>

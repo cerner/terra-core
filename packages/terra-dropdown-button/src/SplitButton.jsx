@@ -7,6 +7,9 @@ import Button from './_Button';
 
 const cx = classNames.bind(styles);
 
+const AcceptableVariants = Object.create(Variants);
+delete AcceptableVariants.EMPHASIS;
+
 const propTypes = {
   /**
    * The options to display in the dropdown. Should be of type `Button`.
@@ -25,17 +28,17 @@ const propTypes = {
    *
    * For 'split' type sets what will be shown on the primary button.
    */
-  label: PropTypes.string.isRequired,
+  primaryOptionLabel: PropTypes.string.isRequired,
   /**
    * What will be called when the primary button is pressed on split types. Is required for split types.
    * Will be ignored for dropdown types.
    */
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   /**
    * Sets the styles of the component. 'emphasis' variant is only valid on the 'dropdown' type.
    * Must be either 'neutral' or 'emphasis'.
    */
-  variant: PropTypes.oneOf(Object.values(Variants)),
+  variant: PropTypes.oneOf([AcceptableVariants.NEUTRAL, AcceptableVariants.GHOST]),
 };
 
 const defaultProps = {
@@ -44,7 +47,7 @@ const defaultProps = {
   variant: 'neutral',
 };
 
-class DropdownButton extends React.Component {
+class SplitButton extends React.Component {
   constructor(props) {
     super(props);
 
@@ -62,9 +65,27 @@ class DropdownButton extends React.Component {
     this.setState({ isOpen: false });
   }
 
-  renderSplitType(label, onClick, disabled) {
+  render() {
+    const {
+      children,
+      disabled,
+      isBlock,
+      primaryOptionLabel,
+      onClick,
+      variant,
+      ...customProps
+    } = this.props;
+
     return (
-      <React.Fragment>
+      <DropdownButtonBase
+        {...customProps}
+        buttons={children}
+        isOpen={this.state.isOpen}
+        requestClose={this.handleDropdownRequestClose}
+        disabled={disabled}
+        isBlock={isBlock}
+        variant={variant !== 'emphasis' ? variant : 'neutral'}
+      >
         <button
           type="button"
           className={cx('split-button-primary')}
@@ -73,7 +94,7 @@ class DropdownButton extends React.Component {
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
         >
-          {label}
+          {primaryOptionLabel}
         </button>
         <button
           type="button"
@@ -88,51 +109,13 @@ class DropdownButton extends React.Component {
         >
           <span className={cx('chevron-icon')} />
         </button>
-      </React.Fragment>
-    );
-  }
-
-  render() {
-    const {
-      children,
-      disabled,
-      isBlock,
-      label,
-      onClick,
-      variant,
-      ...customProps
-    } = this.props;
-
-    return (
-      <DropdownButtonBase
-        {...customProps}
-        buttons={children}
-        isOpen={this.state.isOpen}
-        requestClose={this.handleDropdownRequestClose}
-        disabled={disabled}
-        isBlock={isBlock}
-        variant={variant}
-      >
-        <button
-          type="button"
-          className={cx('dropdown-button-type', { 'is-active': this.state.isOpen })}
-          onClick={this.handleDropdownButtonClick}
-          disabled={disabled}
-          tabIndex={disabled ? '-1' : undefined}
-          aria-disabled={disabled}
-          aria-expanded={this.state.isOpen || undefined}
-          aria-haspopup
-        >
-          <span className={cx('dropdown-button-type-text')}>{label}</span>
-          <span className={cx('chevron-icon')} />
-        </button>
       </DropdownButtonBase>
     );
   }
 }
 
-DropdownButton.propTypes = propTypes;
-DropdownButton.defaultProps = defaultProps;
+SplitButton.propTypes = propTypes;
+SplitButton.defaultProps = defaultProps;
 
-export default DropdownButton;
-export { Button, Variants };
+export default SplitButton;
+export { Button, AcceptableVariants as Variants };

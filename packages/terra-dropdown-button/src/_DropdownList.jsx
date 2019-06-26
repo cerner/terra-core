@@ -56,7 +56,7 @@ class DropdownList extends React.Component {
     const { focused } = this.state;
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
       const item = Util.findByValue(this, focused);
-      item.props.callback();
+      item.props.onClick();
       this.setState({ active: item.props.label });
       this.props.requestClose();
       event.preventDefault();

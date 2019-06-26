@@ -2,17 +2,17 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import DropdownButton from '../../../DropdownButton';
+import DropdownButton, { Button } from '../../../DropdownButton';
 
 export default () => (
   <DropdownButton
     label="Primary option"
-    callback={() => { console.log('primary option'); }}
+    onClick={() => { console.log('primary option'); }}
     variant="emphasis"
   >
-    <DropdownButton.Option label="1st Option" callback={() => { console.log('hi'); }} />
-    <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
-    <DropdownButton.Option label="3rd Option" callback={() => { console.log('eyb'); }} />
-    <DropdownButton.Option label="4th Option" callback={() => { console.log('ih'); }} />
+    <Button label="1st Option" onClick={() => { console.log('hi'); }} />
+    <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+    <Button label="3rd Option" onClick={() => { console.log('eyb'); }} />
+    <Button label="4th Option" onClick={() => { console.log('ih'); }} />
   </DropdownButton>
 );

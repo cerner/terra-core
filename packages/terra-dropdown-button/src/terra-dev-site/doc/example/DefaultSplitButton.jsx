@@ -2,17 +2,16 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import DropdownButton from '../../../DropdownButton';
+import SplitButton, { Button } from '../../../SplitButton';
 
 export default () => (
-  <DropdownButton
-    label="Primary option"
-    callback={() => { console.log('primary option'); }}
-    type="split"
+  <SplitButton
+    primaryOptionLabel="Primary option"
+    onClick={() => { console.log('primary option'); }}
   >
-    <DropdownButton.Option label="Abacadabra" callback={() => { console.log('hi'); }} />
-    <DropdownButton.Option label="BAbacadabra" callback={() => { console.log('bye'); }} />
-    <DropdownButton.Option label="CAbacadabra" callback={() => { console.log('eyb'); }} />
-    <DropdownButton.Option label="DAbacadabra" callback={() => { console.log('ih'); }} />
-  </DropdownButton>
+    <Button label="Abacadabra" onClick={() => { console.log('hi'); }} />
+    <Button label="BAbacadabra" onClick={() => { console.log('bye'); }} />
+    <Button label="CAbacadabra" onClick={() => { console.log('eyb'); }} />
+    <Button label="DAbacadabra" onClick={() => { console.log('ih'); }} />
+  </SplitButton>
 );

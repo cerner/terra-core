@@ -1,23 +1,23 @@
 import React from 'react';
 import DropdownList from '../../src/_DropdownList';
 import Util from '../../src/_DropdownListUtil';
-import DropdownButton from '../../src/DropdownButton';
+import { Button } from '../../src/DropdownButton';
 
 const multipleChildren = (
   <DropdownList requestClose={() => {}}>
-    <DropdownButton.Option label="1st" callback={() => {}} />
-    <DropdownButton.Option label="1th" callback={() => {}} />
-    <DropdownButton.Option label="1ta" callback={() => {}} />
-    <DropdownButton.Option label="2nd" callback={() => {}} />
-    <DropdownButton.Option label="3rd" callback={() => {}} />
-    <DropdownButton.Option label="4th" callback={() => {}} />
-    <DropdownButton.Option label="5th" callback={() => {}} />
+    <Button label="1st" onClick={() => {}} />
+    <Button label="1th" onClick={() => {}} />
+    <Button label="1ta" onClick={() => {}} />
+    <Button label="2nd" onClick={() => {}} />
+    <Button label="3rd" onClick={() => {}} />
+    <Button label="4th" onClick={() => {}} />
+    <Button label="5th" onClick={() => {}} />
   </DropdownList>
 );
 
 const singleChild = (
   <DropdownList requestClose={() => {}}>
-    <DropdownButton.Option label="1st" callback={() => {}} />
+    <Button label="1st" onClick={() => {}} />
   </DropdownList>
 );
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Option renders a default option 1`] = `
+exports[`Button renders a default option 1`] = `
 <li>
   <div
     className="option"
@@ -13,7 +13,7 @@ exports[`Option renders a default option 1`] = `
 </li>
 `;
 
-exports[`Option renders a focused option 1`] = `
+exports[`Button renders a focused option 1`] = `
 <li>
   <div
     className="option focus"
@@ -26,7 +26,7 @@ exports[`Option renders a focused option 1`] = `
 </li>
 `;
 
-exports[`Option renders an active and focused option 1`] = `
+exports[`Button renders an active and focused option 1`] = `
 <li>
   <div
     className="option focus active"
@@ -39,7 +39,7 @@ exports[`Option renders an active and focused option 1`] = `
 </li>
 `;
 
-exports[`Option renders an active option 1`] = `
+exports[`Button renders an active option 1`] = `
 <li>
   <div
     className="option active"

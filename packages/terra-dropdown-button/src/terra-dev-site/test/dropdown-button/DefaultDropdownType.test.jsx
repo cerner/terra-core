@@ -1,11 +1,11 @@
 import React from 'react';
 
-import DropdownButton from '../../../DropdownButton';
+import DropdownButton, { Button } from '../../../DropdownButton';
 
 export default () => (
   <div>
     <DropdownButton label="Dropdown" id="dropdown">
-      <DropdownButton.Option label="1st" callback={() => {}} />
+      <Button label="1st" onClick={() => {}} />
     </DropdownButton>
   </div>
 );

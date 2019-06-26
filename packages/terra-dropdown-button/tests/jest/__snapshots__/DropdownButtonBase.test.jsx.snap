@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button neutral is-block"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={false}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Option
+      label="1st option"
+      onClick={[Function]}
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button neutral"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={false}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Option
+      label="1st option"
+      onClick={[Function]}
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button neutral"
+  isDisabled={false}
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={false}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Option
+      label="1st option"
+      onClick={[Function]}
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button Base renders a ghost DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button ghost"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={false}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Option
+      label="1st option"
+      onClick={[Function]}
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button Base renders an emphasis DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button emphasis"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={false}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Option
+      label="1st option"
+      onClick={[Function]}
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button Base renders an open DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button neutral"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={true}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Option
+      label="1st option"
+      onClick={[Function]}
+    />
+  </Dropdown>
+</div>
+`;

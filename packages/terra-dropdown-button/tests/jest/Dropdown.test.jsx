@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropdown from '../../src/_Dropdown';
-import DropdownButton from '../../src/DropdownButton';
+import { Button } from '../../src/DropdownButton';
 
 describe('Dropdown', () => {
   it('renders a default dropdown', () => {
@@ -10,7 +10,7 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen={false}
       >
-        <DropdownButton.Option label="1st Option" callback={() => {}} />
+        <Button label="1st Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen
       >
-        <DropdownButton.Option label="1st Option" callback={() => {}} />
+        <Button label="1st Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('Dropdown', () => {
         boundingRef={() => {}}
         isOpen={false}
       >
-        <DropdownButton.Option label="1st Option" callback={() => {}} />
+        <Button label="1st Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('Dropdown', () => {
         isOpen={false}
         width="470px"
       >
-        <DropdownButton.Option label="1st Option" callback={() => {}} />
+        <Button label="1st Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -64,9 +64,9 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen={false}
       >
-        <DropdownButton.Option label="1st Option" callback={() => {}} />
-        <DropdownButton.Option label="2nd Option" callback={() => {}} />
-        <DropdownButton.Option label="3rd Option" callback={() => {}} />
+        <Button label="1st Option" onClick={() => {}} />
+        <Button label="2nd Option" onClick={() => {}} />
+        <Button label="3rd Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();

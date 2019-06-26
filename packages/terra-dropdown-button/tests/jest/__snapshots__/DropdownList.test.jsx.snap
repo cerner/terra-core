@@ -10,11 +10,11 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
   }
 >
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={true}
     key=".0"
     label="1st Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
 </ul>
@@ -30,27 +30,27 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
   }
 >
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={false}
     key=".0"
     label="1st Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={true}
     key=".1"
     label="2nd Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={false}
     key=".2"
     label="3rd Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
 </ul>
@@ -66,27 +66,27 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
   }
 >
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={false}
     key=".0"
     label="1st Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
   <Option
-    callback={[Function]}
     isActive={true}
     isFocused={true}
     key=".1"
     label="2nd Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={false}
     key=".2"
     label="3rd Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
 </ul>
@@ -102,27 +102,27 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
   }
 >
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={true}
     key=".0"
     label="1st Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={false}
     key=".1"
     label="2nd Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
   <Option
-    callback={[Function]}
     isActive={true}
     isFocused={false}
     key=".2"
     label="3rd Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
 </ul>
@@ -138,11 +138,11 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
   }
 >
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={true}
     key=".0"
     label="1st Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
 </ul>
@@ -158,27 +158,27 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
   }
 >
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={true}
     key=".0"
     label="1st Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={false}
     key=".1"
     label="2nd Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
   <Option
-    callback={[Function]}
     isActive={false}
     isFocused={false}
     key=".2"
     label="3rd Option"
+    onClick={[Function]}
     requestClose={[Function]}
   />
 </ul>

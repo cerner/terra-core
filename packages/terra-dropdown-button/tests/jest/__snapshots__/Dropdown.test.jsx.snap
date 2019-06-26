@@ -21,8 +21,8 @@ exports[`Dropdown renders a default dropdown 1`] = `
     requestClose={[Function]}
   >
     <Option
-      callback={[Function]}
       label="1st Option"
+      onClick={[Function]}
     />
   </DropdownList>
 </Popup>
@@ -49,8 +49,8 @@ exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
     requestClose={[Function]}
   >
     <Option
-      callback={[Function]}
       label="1st Option"
+      onClick={[Function]}
     />
   </DropdownList>
 </Popup>
@@ -78,8 +78,8 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
     width="470px"
   >
     <Option
-      callback={[Function]}
       label="1st Option"
+      onClick={[Function]}
     />
   </DropdownList>
 </Popup>
@@ -106,16 +106,16 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
     requestClose={[Function]}
   >
     <Option
-      callback={[Function]}
       label="1st Option"
+      onClick={[Function]}
     />
     <Option
-      callback={[Function]}
       label="2nd Option"
+      onClick={[Function]}
     />
     <Option
-      callback={[Function]}
       label="3rd Option"
+      onClick={[Function]}
     />
   </DropdownList>
 </Popup>
@@ -142,8 +142,8 @@ exports[`Dropdown renders an open dropdown 1`] = `
     requestClose={[Function]}
   >
     <Option
-      callback={[Function]}
       label="1st Option"
+      onClick={[Function]}
     />
   </DropdownList>
 </Popup>

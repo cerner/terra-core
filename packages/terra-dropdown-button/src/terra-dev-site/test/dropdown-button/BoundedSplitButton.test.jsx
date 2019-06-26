@@ -3,52 +3,48 @@ import React from 'react';
 import classnames from 'classnames/bind';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import DropdownButton from '../../../DropdownButton';
+import SplitButton, { Button } from '../../../SplitButton';
 import styles from './BoundedDropdownButton.scss';
 
 const cx = classnames.bind(styles);
 
 export default () => (
   <div className={cx('container')}>
-    <DropdownButton
-      label="Primary"
-      callback={() => { console.log('primary option'); }}
+    <SplitButton
+      primaryOptionLabel="Primary"
+      onClick={() => { console.log('primary option'); }}
       className={cx('top-left')}
-      type="split"
       id="top-left"
     >
-      <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
-      <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
-    </DropdownButton>
-    <DropdownButton
-      label="Primary"
-      callback={() => { console.log('primary option'); }}
+      <Button label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
+      <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+    </SplitButton>
+    <SplitButton
+      primaryOptionLabel="Primary"
+      onClick={() => { console.log('primary option'); }}
       className={cx('top-right')}
-      type="split"
       id="top-right"
     >
-      <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
-      <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
-    </DropdownButton>
-    <DropdownButton
-      label="Primary"
-      callback={() => { console.log('primary option'); }}
+      <Button label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
+      <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+    </SplitButton>
+    <SplitButton
+      primaryOptionLabel="Primary"
+      onClick={() => { console.log('primary option'); }}
       className={cx('bottom-left')}
-      type="split"
       id="bottom-left"
     >
-      <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
-      <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
-    </DropdownButton>
-    <DropdownButton
-      label="Primary"
-      callback={() => { console.log('primary option'); }}
+      <Button label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
+      <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+    </SplitButton>
+    <SplitButton
+      primaryOptionLabel="Primary"
+      onClick={() => { console.log('primary option'); }}
       className={cx('bottom-right')}
-      type="split"
       id="bottom-right"
     >
-      <DropdownButton.Option label="1st Option Lorem Ipsum Dolor" callback={() => { console.log('hi'); }} />
-      <DropdownButton.Option label="2nd Option" callback={() => { console.log('bye'); }} />
-    </DropdownButton>
+      <Button label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
+      <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+    </SplitButton>
   </div>
 );
