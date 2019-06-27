@@ -3,6 +3,21 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `--terra-action-header-back-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-close-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-maximize-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-minimize-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-previous-background-image` variable in ActionHeader.module.scss
+* Added `--terra-action-header-next-background-image` variable in ActionHeader.module.scss
+
+### Removed
+* Removed `--terra-action-header-back-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-close-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-maximize-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-minimize-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-previous-background` variable in ActionHeader.module.scss
+* Removed `--terra-action-header-next-background` variable in ActionHeader.module.scss
 
 2.16.0 - (June 18, 2019)
 ------------------
@@ -19,7 +34,7 @@ Unreleased
 
 2.15.0 - (June 11, 2019)
 ------------------
-### Removed
+### Removed	
 * Removed node_modules from .npmignore
 
 ### Changed
