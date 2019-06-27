@@ -112,6 +112,7 @@
   .button {
     flex: var(--terra-status-view-actions-button-flex, 0 1 auto);
     flex-shrink: 1;
+    margin-bottom: var(--terra-status-view-actions-button-margin-bottom, 0.71428rem);
     margin-left: var(--terra-status-view-actions-button-margin-left, 0.357rem);
     margin-right: var(--terra-status-view-actions-button-margin-right, 0.357rem);
     margin-top: var(--terra-status-view-actions-button-margin-top, 0);
