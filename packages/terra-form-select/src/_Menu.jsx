@@ -268,7 +268,7 @@ class Menu extends React.Component {
 
     const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
 
-    if (this.menu !== null) {
+    if (this.menu !== null && this.state.active !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
     }
 
@@ -334,7 +334,7 @@ class Menu extends React.Component {
       if (option.type.isOption) {
         return React.cloneElement(option, {
           id: `terra-select-option-${option.props.value}`,
-          isActive: option.props.value === this.state.active,
+          isActive: option.props.value === this.state.active && this.state.active !== null,
           isCheckable: Util.allowsMultipleSelections(this.props.variant),
           isSelected: Util.isSelected(this.props.value, option.props.value),
           variant: this.props.variant,
