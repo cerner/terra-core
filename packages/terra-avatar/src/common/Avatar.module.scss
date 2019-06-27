@@ -63,7 +63,7 @@
 
   .avatar > .image {
     border-radius: 50%;
-    font-family: 'object-fit: cover;';
+    font-family: 'object-fit: cover;'; //This is added to provide settings for object-fit-images polyfill
     height: 100%;
     object-fit: cover;
     width: 100%;

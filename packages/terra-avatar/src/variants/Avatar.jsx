@@ -59,12 +59,16 @@ const defaultProps = {
 class Avatar extends React.Component {
   constructor(props) {
     super(props);
-    objectFitImages();
+
     this.state = {
       fallback: false,
     };
 
     this.handleFallback = this.handleFallback.bind(this);
+  }
+
+  componentDidMount() {
+    objectFitImages();
   }
 
   handleFallback() {
