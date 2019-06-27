@@ -741,7 +741,14 @@ describe('Select', () => {
       Terra.it.matchesScreenshot('open-dropdown', { selector: '#root' });
 
       it('combobox should enter a free text entry', () => {
-        browser.keys(['T', 'a', 'g']);
+        browser.keys('T');
+      });
+
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot('add-option', { selector: '#root' });
+
+      it('combobox should enter a free text entry', () => {
+        browser.keys(['a', 'g']);
       });
 
       it('combobox should select the first option by pressing enter', () => {
@@ -1826,7 +1833,14 @@ describe('Select', () => {
       Terra.it.matchesScreenshot('open-dropdown', { selector: '#root' });
 
       it('tag should enter a free text entry', () => {
-        browser.keys(['T', 'a', 'g']);
+        browser.keys('T');
+      });
+
+      Terra.it.isAccessible();
+      Terra.it.matchesScreenshot('add-option', { selector: '#root' });
+
+      it('tag should enter a free text entry', () => {
+        browser.keys(['a', 'g']);
       });
 
       it('tag should select the first option by pressing enter', () => {
