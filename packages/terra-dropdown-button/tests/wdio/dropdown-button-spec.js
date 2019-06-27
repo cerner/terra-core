@@ -1,46 +1,36 @@
-Terra.describeViewports('Split Button', ['medium'], () => {
+Terra.describeViewports('Dropdown Button', ['medium'], () => {
   describe('Default', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/default-split-button');
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/default-dropdown-button');
       // avoid hover styles
       browser.moveToObject('#root', 100, 100);
     });
 
     Terra.it.validatesElement();
 
-    it('validates primary button focus styling', () => {
-      // Tab then Shift-Tab to get focus styles to appear on primary button
-      browser.keys(['Tab', 'Shift', 'Tab', 'Shift']);
-      Terra.validates.element('primary focus');
-    });
-
-    it('validates chevron button focus styling', () => {
+    it('validates focus styling', () => {
       browser.keys('Tab');
-      Terra.validates.element('chevron focus');
+      Terra.validates.element('focus');
       // tab away from the button so focus is not in later screenshots
       browser.keys('Tab');
     });
 
-    it('validates primary button hover styling', () => {
-      browser.moveToObject('[class*=split-button-primary]');
-      Terra.validates.element('primary hover');
-    });
-
-    it('validates chevron button hover styling', () => {
-      browser.moveToObject('[class*=split-button-chevron]');
-      Terra.validates.element('chevron hover');
+    it('validates hover styling', () => {
+      browser.moveToObject('[class*=dropdown-button-type]');
+      Terra.validates.element('hover');
     });
 
     it('validates the open dropdown', () => {
-      browser.click('[class*=split-button-chevron]');
-      Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
-      Terra.validates.screenshot('chevron with dropdown open');
+      browser.click('[class*=dropdown-button-type]');
     });
+
+    Terra.it.validatesElement('dropdown open', { selector: '[class*=dropdown-list]' });
+    Terra.it.matchesScreenshot('dropdown button with dropdown open');
   });
 
   describe('Disabled', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/disabled-split-button');
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/disabled-dropdown-button');
     });
 
     Terra.it.validatesElement();
@@ -48,22 +38,17 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Callback', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/callback-split-button');
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/callback-dropdown-button');
       // avoid hover styles
       browser.moveToObject('#root', 100, 100);
     });
 
     Terra.it.matchesScreenshot('initial');
 
-    it('calls primary split button callback', () => {
-      browser.click('[class*=split-button-primary]');
-      Terra.validates.screenshot('gray');
-    });
-
     describe('Callback in menu', () => {
       beforeEach(() => {
         // Open the menu
-        browser.click('[class*=split-button-chevron]');
+        browser.click('[class*=dropdown-button-type]');
         browser.waitForVisible('[class*=dropdown-list]');
       });
 
@@ -116,7 +101,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Width', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/wide-split-button');
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/wide-dropdown-button');
       // avoid hover styles
       browser.moveToObject('#root', 100, 100);
     });
@@ -124,20 +109,20 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     Terra.it.validatesElement('Both closed');
 
     it('opens the long label dropdown', () => {
-      browser.click('#wide-label [class*=split-button-chevron]');
+      browser.click('#wide-label');
       Terra.validates.element('Long label open');
     });
 
     it('opens the long option dropdown', () => {
       browser.keys(['Escape']);
-      browser.click('#wide-option [class*=split-button-chevron]');
+      browser.click('#wide-option');
       Terra.validates.element('Long option open');
     });
   });
 
   describe('Block', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/block-split-button');
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/block-dropdown-button');
     });
 
     Terra.it.validatesElement();
@@ -145,29 +130,29 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Bounded', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/bounded-split-button');
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/bounded-dropdown-button');
     });
 
     it('opens the top left dropdown', () => {
-      browser.click('#top-left [class*=split-button-chevron]');
+      browser.click('#top-left');
       Terra.validates.element('Top left open');
     });
 
     it('opens the top right dropdown', () => {
       browser.keys('Escape');
-      browser.click('#top-right [class*=split-button-chevron]');
+      browser.click('#top-right');
       Terra.validates.element('Top right open');
     });
 
     it('opens the bottom left dropdown', () => {
       browser.keys('Escape');
-      browser.click('#bottom-left [class*=split-button-chevron]');
+      browser.click('#bottom-left');
       Terra.validates.element('Bottom left open');
     });
 
     it('opens the bottom right dropdown', () => {
       browser.keys('Escape');
-      browser.click('#bottom-right [class*=split-button-chevron]');
+      browser.click('#bottom-right');
       Terra.validates.element('Bottom right open');
     });
   });
