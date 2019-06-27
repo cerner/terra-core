@@ -8,7 +8,7 @@ import styles from './colors.module.scss';
 const cx = classNames.bind(styles);
 
 const CustomExample = () => (
-  <Alert type="custom" title="Help!" customColorClass={cx(['terra-alert-custom-blue-color'])} customIcon={<IconHelp />}>
+  <Alert type="custom" title="Help!" customColorClass={cx(['my-app-alert-help-example'])} customIcon={<IconHelp />}>
     <span>
       This is a
       <b> custom</b>

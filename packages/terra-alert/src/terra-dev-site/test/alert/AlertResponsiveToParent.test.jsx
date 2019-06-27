@@ -1,6 +1,10 @@
 import React from 'react';
 import Button from 'terra-button';
+import classNames from 'classnames/bind';
 import Alert from '../../../Alert';
+import styles from './AlertTestCommon.scss';
+
+const cx = classNames.bind(styles);
 
 class AlertResponsiveToParent extends React.Component {
   constructor(props) {
@@ -32,7 +36,7 @@ class AlertResponsiveToParent extends React.Component {
       alertElem = <Alert id="dismissibleAlert" type="success" onDismiss={this.handleDismiss}>{alertText}</Alert>;
     }
     return (
-      <div style={{ width: '500px', border: '1px solid black', padding: '5px' }}>
+      <div className={cx('content-wrapper')}>
         <h3>
 Alerts with actions in a small container (500px wide) that will cause the action section of the alert
             to render below the message instead of beside it.
