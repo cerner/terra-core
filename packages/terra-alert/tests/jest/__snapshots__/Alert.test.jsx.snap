@@ -3,7 +3,7 @@
 exports[`Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -143,7 +143,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
 exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -460,7 +460,7 @@ exports[`Alert of type custom with custom title and text content should render a
 exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -616,7 +616,7 @@ exports[`Alert of type error with text content should render an Alert component 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -776,7 +776,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
 exports[`Alert of type info with text content should render an Alert component of type info 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -944,7 +944,7 @@ exports[`Alert of type success with an action button text content should render 
       variant="emphasis"
     />
   }
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -1130,7 +1130,7 @@ exports[`Alert of type success with an action button text content should render 
 exports[`Alert of type success with text content should render an Alert component of type success 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -1286,7 +1286,7 @@ exports[`Alert of type success with text content should render an Alert componen
 exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -1442,7 +1442,7 @@ exports[`Alert of type warning with text content should render an Alert componen
 exports[`Alert with no props should render a default component 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
@@ -1821,7 +1821,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
 exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
 <Alert
   action={null}
-  customColorClass="my-app-custom-default-color"
+  customColorClass="terra-alert-custom-default-color"
   customIcon={null}
   intl={
     Object {
