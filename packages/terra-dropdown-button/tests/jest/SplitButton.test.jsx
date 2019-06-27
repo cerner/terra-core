@@ -1,59 +1,50 @@
 import React from 'react';
-import DropdownButton, { Button, Variants } from '../../src/DropdownButton';
+import SplitButton, { Button } from '../../src/SplitButton';
 
 describe('Dropdown Button', () => {
-  it('should render a default dropdown type', () => {
+  it('should render a default split type', () => {
     const wrapper = shallow(
-      <DropdownButton label="Primary Option">
+      <SplitButton primaryOptionLabel="Primary Option" onClick={() => {}}>
         <Button label="1st Option" onClick={() => {}} />
-      </DropdownButton>,
+      </SplitButton>,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a split type with multiple children', () => {
     const wrapper = shallow(
-      <DropdownButton label="Primary Option" onClick={() => {}}>
+      <SplitButton primaryOptionLabel="Primary Option" onClick={() => {}}>
         <Button label="1st Option" onClick={() => {}} />
         <Button label="2nd Option" onClick={() => {}} />
         <Button label="3rd Option" onClick={() => {}} />
-      </DropdownButton>,
+      </SplitButton>,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render an emphasis dropdown type', () => {
+  it('should render a disabled split type', () => {
     const wrapper = shallow(
-      <DropdownButton label="Primary Option" variant={Variants.EMPHASIS}>
+      <SplitButton primaryOptionLabel="Primary Option" disabled onClick={() => {}}>
         <Button label="1st Option" onClick={() => {}} />
-      </DropdownButton>,
+      </SplitButton>,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a disabled dropdown type', () => {
+  it('should render a block split type', () => {
     const wrapper = shallow(
-      <DropdownButton label="Primary Option" disabled>
+      <SplitButton primaryOptionLabel="Primary Option" isBlock onClick={() => {}}>
         <Button label="1st Option" onClick={() => {}} />
-      </DropdownButton>,
+      </SplitButton>,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a block dropdown type', () => {
+  it('should render an open split type', () => {
     const wrapper = shallow(
-      <DropdownButton label="Primary Option" isBlock>
+      <SplitButton primaryOptionLabel="Primary Option" onClick={() => {}}>
         <Button label="1st Option" onClick={() => {}} />
-      </DropdownButton>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should render an open dropdown', () => {
-    const wrapper = shallow(
-      <DropdownButton label="Primary Option">
-        <Button label="1st Option" onClick={() => {}} />
-      </DropdownButton>,
+      </SplitButton>,
     );
     wrapper.setState({ isOpen: true });
 
@@ -62,9 +53,9 @@ describe('Dropdown Button', () => {
 
   it('should render a split type with custom attributes', () => {
     const wrapper = shallow(
-      <DropdownButton label="Primary Option" test-custom-attribute other-custom-attribute="purple">
+      <SplitButton primaryOptionLabel="Primary Option" test-custom-attribute other-custom-attribute="purple" onClick={() => {}}>
         <Button label="1st Option" onClick={() => {}} />
-      </DropdownButton>,
+      </SplitButton>,
     );
     expect(wrapper).toMatchSnapshot();
   });
