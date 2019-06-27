@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames/bind';
 import DropdownButton, { Button } from '../../../DropdownButton';
-import styles from './CallbackDropdownButtons.module.scss';
+import styles from './CallbackButtons.module.scss';
 
 const cx = classnames.bind(styles);
 

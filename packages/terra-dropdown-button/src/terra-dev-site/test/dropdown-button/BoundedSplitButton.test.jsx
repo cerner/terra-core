@@ -4,7 +4,7 @@ import classnames from 'classnames/bind';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import SplitButton, { Button } from '../../../SplitButton';
-import styles from './BoundedDropdownButton.scss';
+import styles from './BoundedButton.scss';
 
 const cx = classnames.bind(styles);
 

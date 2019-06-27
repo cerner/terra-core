@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames/bind';
 import SplitButton, { Button } from '../../../SplitButton';
-import styles from './CallbackDropdownButtons.module.scss';
+import styles from './CallbackButtons.module.scss';
 
 const cx = classnames.bind(styles);
 
