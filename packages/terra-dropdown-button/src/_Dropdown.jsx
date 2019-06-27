@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Popup from 'terra-popup';
+import Hookshot from 'terra-hookshot';
 import DropdownList from './_DropdownList';
 
 const propTypes = {
@@ -30,24 +30,26 @@ const propTypes = {
 const Dropdown = ({
   requestClose, isOpen, targetRef, children, width,
 }) => (
-  <Popup
-    contentHeight="auto"
-    contentWidth="auto"
-    isHeaderDisabled
+  <Hookshot
     isOpen={isOpen}
-    onRequestClose={requestClose}
+    isEnabled
     targetRef={targetRef}
-    contentAttachment="top left"
     attachmentBehavior="flip"
-    // isContentFocusDisabled
+    contentAttachment={{ vertical: 'top', horizontal: 'start' }}
+    targetAttachment={{ vertical: 'bottom', horizontal: 'start' }}
   >
-    <DropdownList
-      requestClose={requestClose}
-      width={width}
+    <Hookshot.Content
+      onEsc={requestClose}
+      onOutsideClick={requestClose}
     >
-      {children}
-    </DropdownList>
-  </Popup>
+      <DropdownList
+        requestClose={requestClose}
+        width={width}
+      >
+        {children}
+      </DropdownList>
+    </Hookshot.Content>
+  </Hookshot>
 );
 
 Dropdown.propTypes = propTypes;

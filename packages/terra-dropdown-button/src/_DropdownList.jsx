@@ -74,6 +74,7 @@ class DropdownList extends React.Component {
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_TAB) {
       this.props.requestClose();
+      event.preventDefault();
     } else if (keyCode >= 48 && keyCode <= 90) {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
