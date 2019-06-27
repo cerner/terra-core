@@ -2,7 +2,7 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SplitButton, { Button } from '../../../SplitButton';
+import { SplitButton, Button } from 'terra-dropdown-button/lib/DropdownButton';
 
 export default () => (
   <SplitButton

@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
 import Button from './_Button';
+import SplitButton, { Variants as SplitButtonVariants } from './SplitButton';
 
 const cx = classNames.bind(styles);
 
@@ -102,4 +103,6 @@ DropdownButton.propTypes = propTypes;
 DropdownButton.defaultProps = defaultProps;
 
 export default DropdownButton;
-export { Button, Variants };
+export {
+  Button, Variants, SplitButton, SplitButtonVariants,
+};

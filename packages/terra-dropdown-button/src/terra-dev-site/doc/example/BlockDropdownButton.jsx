@@ -2,7 +2,7 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import DropdownButton, { Button } from '../../../DropdownButton';
+import DropdownButton, { Button } from 'terra-dropdown-button/lib/DropdownButton';
 
 export default () => (
   <DropdownButton

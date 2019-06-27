@@ -1,7 +1,7 @@
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates, import/no-unresolved */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/README.md';
+import ReadMe from '../../../../docs/DropdownButton.md';
 import { name } from '../../../../package.json';
 
 // Component Source

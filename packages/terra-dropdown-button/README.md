@@ -3,7 +3,8 @@
 [![NPM version](https://badgen.net/npm/v/terra-dropdown-button)](https://www.npmjs.com/package/terra-dropdown-button)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-{insert description}
+The Terra Dropdown Button is a button that, when pressed, opens a dropdown with more buttons.
+Has the option to show a single button outside the dropdown as well with the `SplitButton`.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-dropdown-button/docs)
