@@ -1,12 +1,8 @@
 import React from 'react';
-import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import Toggle from 'terra-toggle';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Alert from 'terra-alert/lib/Alert';
-import styles from './LongTextExample.scss';
-
-const cx = classNames.bind(styles);
 
 class LongTextExample extends React.Component {
   constructor(props) {
@@ -32,7 +28,7 @@ class LongTextExample extends React.Component {
         <span>
           Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
           <Toggle isOpen={!this.state.allTextShown}>
-            <Button onClick={this.handleShowMore} text="Show More" className={cx('button')} />
+            <Button onClick={this.handleShowMore} text="Show More" />
           </Toggle>
           <Toggle isOpen={this.state.allTextShown}>
               Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
