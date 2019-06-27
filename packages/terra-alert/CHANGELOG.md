@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Added
-* Added `customColorClass` prop 
+* Added `customColorClass` prop and --terra-alert-custom-default-color themeable variable
 
 ### Breaking Changes
 * Removed `customStatusColor` prop

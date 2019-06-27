@@ -69,7 +69,7 @@ const defaultProps = {
   action: null,
   children: '',
   customIcon: null,
-  customColorClass: 'terra-alert-custom-default-color',
+  customColorClass: 'custom-default-color',
   onDismiss: null,
   title: '',
   type: AlertTypes.ALERT,
