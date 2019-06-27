@@ -1,0 +1,19 @@
+:root {
+  --terra-alert-attention-example-color: #fa0000;
+  --terra-alert-help-example-color: #b961cf;
+  --terra-alert-dismiss-example-color: #ffa500;
+}
+
+:local {
+  .my-app-alert-attention-example {
+    color: var(--terra-alert-attention-example-color, #fa0000);
+  }
+
+  .my-app-alert-help-example {
+    color: var(--terra-alert-help-example-color, #b961cf);
+  }
+
+  .my-app-alert-dismiss-example {
+    color: var(--terra-alert-dismiss-example-color, #ffa500);
+  }
+}

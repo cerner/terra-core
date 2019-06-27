@@ -1,7 +1,11 @@
 import React from 'react';
 import Button from 'terra-button';
+import classNames from 'classnames/bind';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Alert from 'terra-alert/lib/Alert';
+import styles from './colors.module.scss';
+
+const cx = classNames.bind(styles);
 
 class ActionAndDismissibleExample extends React.Component {
   constructor(props) {
@@ -31,7 +35,7 @@ class ActionAndDismissibleExample extends React.Component {
     let alertElem = '';
     if (!this.state.isDismissed) {
       alertElem = (
-        <Alert type="custom" onDismiss={this.handleDismiss} customStatusColor="orange" action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />}>
+        <Alert type="custom" onDismiss={this.handleDismiss} customColorClass={cx(['my-app-alert-dismiss-example'])} action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />}>
           {alertText}
         </Alert>
       );
