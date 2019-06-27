@@ -1,14 +1,24 @@
 import React from 'react';
-import classNames from 'classnames/bind';
-import OverlayContainer from '../../../../OverlayContainer';
 import LoadingOverlay from '../../../../LoadingOverlay';
-import styles from '../Overlay/OverlayTestCommon.module.scss';
 
-const cx = classNames.bind(styles);
+class CustomMessageLoadingOverlay extends React.Component {
+  constructor() {
+    super();
 
-export default () => (
-  <OverlayContainer
-    className={cx('overlay-container1')}
-    overlay={<LoadingOverlay isOpen message="Custom Loading Message" isRelativeToContainer id="terra-LoadingOverlay" />}
-  />
-);
+    this.state = { show: true };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ show: false });
+    }, 5000);
+  }
+
+  render() {
+    return (
+      <LoadingOverlay isOpen={this.state.show} message="Custom Loading Message (Overlay will close in 5 seconds)" id="terra-LoadingOverlay" />
+    );
+  }
+}
+
+export default CustomMessageLoadingOverlay;
