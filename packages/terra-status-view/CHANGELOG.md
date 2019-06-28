@@ -14,6 +14,7 @@ Unreleased
 * Render divider if title and message/buttons exist
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
+* Remove incorrect entry in upgrade guide that specifies new margin-bottom theme variable.
 
 3.16.0 - (June 18, 2019)
 ------------------
