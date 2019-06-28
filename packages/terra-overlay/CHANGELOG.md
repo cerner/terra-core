@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.17.0 - (June 28, 2019)
+------------------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 * Removed conditional logic required to import wicg-inert polyfill
