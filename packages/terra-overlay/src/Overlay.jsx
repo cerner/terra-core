@@ -125,13 +125,16 @@ class Overlay extends React.Component {
       }
     } else {
       const selector = this.props.rootSelector;
-      const inert = +document.querySelector(selector).dataset.overlayCount;
 
-      if (document.querySelector(selector) && inert === 1) {
-        document.querySelector(selector).removeAttribute('data-overlay-count');
-        document.querySelector(selector).removeAttribute('inert');
-      } else if (inert && inert > 1) {
-        document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
+      if (document.querySelector(selector)) { // Guard for Jest testing
+        const inert = +document.querySelector(selector).dataset.overlayCount;
+
+        if (inert === 1) {
+          document.querySelector(selector).removeAttribute('data-overlay-count');
+          document.querySelector(selector).removeAttribute('inert');
+        } else if (inert && inert > 1) {
+          document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
+        }
       }
       document.documentElement.style.overflow = this.overflow;
     }

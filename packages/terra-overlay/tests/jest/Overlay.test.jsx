@@ -3,7 +3,7 @@ import Overlay from '../../src/Overlay';
 
 describe('Overlay', () => {
   it('should render a null component when isOpen is not provided', () => {
-    const wrapper = shallow(<Overlay />);
+    const wrapper = mount(<Overlay />);
     expect(wrapper).toMatchSnapshot();
   });
 
