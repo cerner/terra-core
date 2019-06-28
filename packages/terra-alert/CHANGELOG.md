@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added `customColorClass` prop and --terra-alert-custom-default-color themeable variable
+
+### Breaking Changes
+* Removed `customStatusColor` prop
 
 3.17.0 - (June 18, 2019)
 ------------------
