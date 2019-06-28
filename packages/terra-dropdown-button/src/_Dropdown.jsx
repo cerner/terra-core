@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FocusTrap from 'focus-trap-react';
 import Hookshot from 'terra-hookshot';
 import DropdownList from './_DropdownList';
 
@@ -42,12 +43,16 @@ const Dropdown = ({
       onEsc={requestClose}
       onOutsideClick={requestClose}
     >
-      <DropdownList
-        requestClose={requestClose}
-        width={width}
-      >
-        {children}
-      </DropdownList>
+      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, clickOutsideDeactivates: true }}>
+        <div>
+          <DropdownList
+            requestClose={requestClose}
+            width={width}
+          >
+            {children}
+          </DropdownList>
+        </div>
+      </FocusTrap>
     </Hookshot.Content>
   </Hookshot>
 );

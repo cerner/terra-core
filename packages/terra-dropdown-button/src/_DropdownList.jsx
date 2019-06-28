@@ -36,29 +36,25 @@ class DropdownList extends React.Component {
     this.state = { focused, active: undefined };
 
     this.searchString = '';
-  }
-
-  /**
-   * Focus sits on the parent Popup frame so set document listeners to catch keyboard events anyway
-   */
-  componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyDown);
-    document.addEventListener('keyup', this.handleKeyUp);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyDown);
-    document.removeEventListener('keyup', this.handleKeyUp);
+    this.pressed = false;
   }
 
   handleKeyDown(event) {
     const { keyCode } = event;
     const { focused } = this.state;
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
-      const item = Util.findByValue(this, focused);
-      item.props.onClick();
-      this.setState({ active: item.props.label });
-      this.props.requestClose();
+      /*
+        Prevent the callback from being called repeatedly if key is held down
+        The close dropdown request had to be moved to handleKeyUp to fix a firefox bug
+        where chosing an item with spacebar if the dropdown chevron was focused when opening the dropdown
+        in firefox would cause the dropdown to reopen itself
+      */
+      if (!this.pressed) {
+        this.pressed = true;
+        const item = Util.findByValue(this, focused);
+        item.props.onClick();
+        this.setState({ active: item.props.label });
+      }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
       this.setState({ focused: Util.findNext(this, focused) });
@@ -88,6 +84,10 @@ class DropdownList extends React.Component {
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
       this.setState({ active: undefined });
       event.preventDefault();
+      if (this.pressed) {
+        this.props.requestClose();
+      }
+      this.pressed = false;
     }
   }
 
@@ -112,12 +112,17 @@ class DropdownList extends React.Component {
     }));
   }
 
+  /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+  /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
   render() {
     return (
       <ul
         className={cx('dropdown-list')}
         // eslint-disable-next-line react/forbid-dom-props
         style={{ width: this.props.width }}
+        tabIndex="0"
+        onKeyDown={this.handleKeyDown}
+        onKeyUp={this.handleKeyUp}
       >
         {this.cloneChildren()}
       </ul>
