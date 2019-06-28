@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
+* Lock down react-syntax-highlighter due to breaking change
 
 2.10.0 - (June 11, 2019)
 ------------------
