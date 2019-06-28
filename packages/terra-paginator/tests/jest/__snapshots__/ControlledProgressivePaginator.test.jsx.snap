@@ -19,52 +19,56 @@ exports[`Paginator should render a controlled progressive paginator 1`] = `
         112
       </div>
       <div>
-        <a
+        <button
           aria-disabled={true}
           aria-label="first"
           className="nav-link is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
+          type="button"
         >
           First
-        </a>
-        <a
+        </button>
+        <button
           aria-disabled={true}
           aria-label="previous"
           className="nav-link previous is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
+          type="button"
         >
           <span
             className="icon"
           />
           Previous
-        </a>
-        <a
+        </button>
+        <button
           aria-disabled={false}
           aria-label="next"
           className="nav-link next"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
+          type="button"
         >
           Next
           <span
             className="icon"
           />
-        </a>
-        <a
+        </button>
+        <button
           aria-disabled={false}
           aria-label="last"
           className="nav-link"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
+          type="button"
         >
           Last
-        </a>
+        </button>
       </div>
     </div>
   }
@@ -75,23 +79,25 @@ exports[`Paginator should render a controlled progressive paginator 1`] = `
       role="navigation"
     >
       <div>
-        <a
+        <button
           aria-disabled={true}
           aria-label="first"
           className="nav-link is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
+          type="button"
         >
           First
-        </a>
-        <a
+        </button>
+        <button
           aria-disabled={true}
           aria-label="previous"
           className="nav-link previous icon-only is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
+          type="button"
         >
           <span
             className="visually-hidden"
@@ -101,7 +107,7 @@ exports[`Paginator should render a controlled progressive paginator 1`] = `
           <span
             className="icon"
           />
-        </a>
+        </button>
       </div>
       <div>
         Page
@@ -113,13 +119,14 @@ exports[`Paginator should render a controlled progressive paginator 1`] = `
         112
       </div>
       <div>
-        <a
+        <button
           aria-disabled={false}
           aria-label="next"
           className="nav-link next icon-only"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
+          type="button"
         >
           <span
             className="visually-hidden"
@@ -129,17 +136,18 @@ exports[`Paginator should render a controlled progressive paginator 1`] = `
           <span
             className="icon"
           />
-        </a>
-        <a
+        </button>
+        <button
           aria-disabled={false}
           aria-label="last"
           className="nav-link"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
+          type="button"
         >
           Last
-        </a>
+        </button>
       </div>
     </div>
   }

@@ -75,8 +75,6 @@ class Paginator extends React.Component {
     };
   }
 
-  // TODO: Resolve lint issues - https://github.com/cerner/terra-core/issues/1689
-  /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
   buildPageButtons(totalPages, onClick) {
     const { totalCount, itemCountPerPage, selectedPage } = this.props;
     const pageSequence = pageSet(selectedPage, calculatePages(totalCount, itemCountPerPage));
@@ -92,7 +90,7 @@ class Paginator extends React.Component {
         return;
       }
       pageButtons.push((
-        <a
+        <button
           aria-label={`Page ${val}`}
           aria-current={val === selectedPage && 'page'}
           className={paginationLinkClassNames}
@@ -100,9 +98,10 @@ class Paginator extends React.Component {
           key={`pageButton_${val}`}
           onClick={onClick(val)}
           onKeyDown={this.handleOnKeyDown(val)}
+          type="button"
         >
           {val}
-        </a>));
+        </button>));
     });
 
     return pageButtons;
@@ -122,53 +121,57 @@ class Paginator extends React.Component {
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])}>
         {
           this.hasNavContext() && (
-          <a
+          <button
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handleOnKeyDown(1)}
+            type="button"
           >
             First
-          </a>
+          </button>
           )
         }
-        <a
+        <button
           aria-disabled={selectedPage === 1}
           aria-label="previous"
           className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
           tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handleOnKeyDown(previousPageIndex)}
+          type="button"
         >
           <span className={cx('icon')} />
-Previous
-        </a>
+          Previous
+        </button>
         {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
-        <a
+        <button
           aria-disabled={selectedPage === totalPages}
           aria-label="next"
           className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
           tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(nextPageIndex)}
           onKeyDown={this.handleOnKeyDown(nextPageIndex)}
+          type="button"
         >
           Next
           <span className={cx('icon')} />
-        </a>
+        </button>
         {
           this.hasNavContext() && (
-          <a
+          <button
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handleOnKeyDown(totalPages)}
+            type="button"
           >
             Last
-          </a>
+          </button>
           )
         }
       </div>
@@ -187,53 +190,57 @@ Previous
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])} role="navigation" aria-label="pagination">
         {
           this.hasNavContext() && (
-          <a
+          <button
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handleOnKeyDown(1)}
+            type="button"
           >
             First
-          </a>
+          </button>
           )
         }
-        <a
+        <button
           aria-disabled={selectedPage === 1}
           aria-label="previous"
           className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
           tabIndex={selectedPage === 1 ? null : '0'}
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handleOnKeyDown(previousPageIndex)}
+          type="button"
         >
           <span className={cx('visually-hidden')}>Previous</span>
           <span className={cx('icon')} />
-        </a>
+        </button>
         {this.hasNavContext() && `Page ${selectedPage}`}
-        <a
+        <button
           aria-disabled={selectedPage === totalPages}
           aria-label="next"
           className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
           tabIndex={selectedPage === totalPages ? null : '0'}
           onClick={this.handlePageChange(nextPageIndex)}
           onKeyDown={this.handleOnKeyDown(nextPageIndex)}
+          type="button"
         >
           <span className={cx('visually-hidden')}>Next</span>
           <span className={cx('icon')} />
-        </a>
+        </button>
         {
           this.hasNavContext() && (
-          <a
+          <button
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handleOnKeyDown(totalPages)}
+            type="button"
           >
             Last
-          </a>
+          </button>
           )
         }
       </div>
@@ -241,10 +248,9 @@ Previous
 
     return reducedView;
   }
-  /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
 
   render() {
-    return <ResponsiveElement tiny={this.reducedPaginator()} medium={this.defaultPaginator()} />;
+    return <ResponsiveElement tiny={this.reducedPaginator()} small={this.defaultPaginator()} />;
   }
 }
 

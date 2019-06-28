@@ -25,7 +25,7 @@
 | --terra-paginator-nav-link-icon-next | --terra-paginator-nav-link-icon-next-background |
 | --terra-paginator-nav-link-icon-next-disabled | --terra-paginator-nav-link-icon-next-disabled-background |
 
-#### Added
+#### Added 2.0.0
 * --terra-paginator-progressive-nav-link-previous-margin-left
 * --terra-paginator-progressive-nav-link-previous-margin-right
 * --terra-paginator-progressive-nav-link-next-margin-left
@@ -34,3 +34,14 @@
 * --terra-paginator-nav-link-icon-width
 * --terra-paginator-nav-link-icon-previous-margin-right
 * --terra-paginator-nav-link-icon-next-margin-left
+
+#### Added ~2.15.x
+* --terra-paginator-nav-link-font-size
+* --terra-paginator-nav-link-text-decoration
+* --terra-paginator-nav-link-hover-border
+* --terra-paginator-nav-link-active-border
+* --terra-paginator-nav-link-disabled-background
+* --terra-paginator-nav-link-disabled-border
+* --terra-paginator-nav-link-disabled-opacity
+* --terra-paginator-nav-link-previous-padding-left
+* --terra-paginator-nav-link-next-padding-right

@@ -74,8 +74,6 @@ class ProgressivePaginator extends React.Component {
     };
   }
 
-  // TODO: Resolve lint issues - https://github.com/cerner/terra-core/issues/1689
-  /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
   defaultProgressivePaginator() {
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
@@ -94,48 +92,52 @@ class ProgressivePaginator extends React.Component {
           {totalPages}
         </div>
         <div>
-          <a
+          <button
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handleOnKeyDown(1)}
+            type="button"
           >
             First
-          </a>
-          <a
+          </button>
+          <button
             aria-disabled={selectedPage === 1}
             aria-label="previous"
             className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(previousPageIndex)}
             onKeyDown={this.handleOnKeyDown(previousPageIndex)}
+            type="button"
           >
             <span className={cx('icon')} />
-Previous
-          </a>
-          <a
+            Previous
+          </button>
+          <button
             aria-disabled={selectedPage === totalPages}
             aria-label="next"
             className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(nextPageIndex)}
             onKeyDown={this.handleOnKeyDown(nextPageIndex)}
+            type="button"
           >
             Next
             <span className={cx('icon')} />
-          </a>
-          <a
+          </button>
+          <button
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handleOnKeyDown(totalPages)}
+            type="button"
           >
             Last
-          </a>
+          </button>
         </div>
       </div>
     );
@@ -150,30 +152,32 @@ Previous
     return (
       <div className={cx(['paginator'])} role="navigation" aria-label="pagination">
         <div>
-          <a
+          <button
             aria-disabled={selectedPage === 1}
             aria-label="first"
             className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handleOnKeyDown(1)}
+            type="button"
           >
             First
-          </a>
-          <a
+          </button>
+          <button
             aria-disabled={selectedPage === 1}
             aria-label="previous"
             className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(previousPageIndex)}
             onKeyDown={this.handleOnKeyDown(previousPageIndex)}
+            type="button"
           >
             <span className={cx('visually-hidden')}>Previous</span>
             <span className={cx('icon')} />
-          </a>
+          </button>
         </div>
         <div>
-          Page
+          Page
           {' '}
           {selectedPage}
           {' '}
@@ -182,32 +186,33 @@ Previous
           {totalPages}
         </div>
         <div>
-          <a
+          <button
             aria-disabled={selectedPage === totalPages}
             aria-label="next"
             className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(nextPageIndex)}
             onKeyDown={this.handleOnKeyDown(nextPageIndex)}
+            type="button"
           >
             <span className={cx('visually-hidden')}>Next</span>
             <span className={cx('icon')} />
-          </a>
-          <a
+          </button>
+          <button
             aria-disabled={selectedPage === totalPages}
             aria-label="last"
             className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handleOnKeyDown(totalPages)}
+            type="button"
           >
             Last
-          </a>
+          </button>
         </div>
       </div>
     );
   }
-  /* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/anchor-is-valid, jsx-a11y/no-noninteractive-tabindex */
 
   render() {
     return <ResponsiveElement tiny={this.reducedProgressivePaginator()} small={this.defaultProgressivePaginator()} />;
