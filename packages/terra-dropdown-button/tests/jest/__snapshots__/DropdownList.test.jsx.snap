@@ -3,11 +3,14 @@
 exports[`Dropdown List renders a default dropdown list 1`] = `
 <ul
   className="dropdown-list"
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   style={
     Object {
       "width": undefined,
     }
   }
+  tabIndex="0"
 >
   <Option
     isActive={false}
@@ -23,11 +26,14 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
 exports[`Dropdown List renders a dropdown list a non-default focused option 1`] = `
 <ul
   className="dropdown-list"
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   style={
     Object {
       "width": undefined,
     }
   }
+  tabIndex="0"
 >
   <Option
     isActive={false}
@@ -59,11 +65,14 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
 exports[`Dropdown List renders a dropdown list an active and focused option 1`] = `
 <ul
   className="dropdown-list"
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   style={
     Object {
       "width": undefined,
     }
   }
+  tabIndex="0"
 >
   <Option
     isActive={false}
@@ -95,11 +104,14 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
 exports[`Dropdown List renders a dropdown list an active option 1`] = `
 <ul
   className="dropdown-list"
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   style={
     Object {
       "width": undefined,
     }
   }
+  tabIndex="0"
 >
   <Option
     isActive={false}
@@ -131,11 +143,14 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
 exports[`Dropdown List renders a dropdown list with a set width 1`] = `
 <ul
   className="dropdown-list"
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   style={
     Object {
       "width": "440px",
     }
   }
+  tabIndex="0"
 >
   <Option
     isActive={false}
@@ -151,11 +166,14 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
 exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
 <ul
   className="dropdown-list"
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   style={
     Object {
       "width": undefined,
     }
   }
+  tabIndex="0"
 >
   <Option
     isActive={false}

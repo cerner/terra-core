@@ -1,150 +1,370 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown renders a default dropdown 1`] = `
-<Popup
+<Hookshot
   attachmentBehavior="flip"
-  boundingRef={null}
-  classNameArrow={null}
-  classNameContent={null}
-  classNameOverlay={null}
-  contentAttachment="top left"
-  contentHeight="auto"
-  contentWidth="auto"
-  isArrowDisplayed={false}
-  isContentFocusDisabled={false}
-  isHeaderDisabled={true}
+  attachmentMargin={0}
+  contentAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "top",
+    }
+  }
+  contentOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
+  isEnabled={true}
   isOpen={false}
-  onRequestClose={[Function]}
+  targetAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "bottom",
+    }
+  }
+  targetOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
   targetRef={[Function]}
 >
-  <DropdownList
-    requestClose={[Function]}
+  <OnClickOutside(HookshotContent)
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    onEsc={[Function]}
+    onOutsideClick={[Function]}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
   >
-    <Option
-      label="1st Option"
-      onClick={[Function]}
-    />
-  </DropdownList>
-</Popup>
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={true}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "returnFocusOnDeactivate": true,
+        }
+      }
+      paused={false}
+    >
+      <div>
+        <DropdownList
+          requestClose={[Function]}
+        >
+          <Option
+            label="1st Option"
+            onClick={[Function]}
+          />
+        </DropdownList>
+      </div>
+    </FocusTrap>
+  </OnClickOutside(HookshotContent)>
+</Hookshot>
 `;
 
 exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
-<Popup
+<Hookshot
   attachmentBehavior="flip"
-  boundingRef={null}
-  classNameArrow={null}
-  classNameContent={null}
-  classNameOverlay={null}
-  contentAttachment="top left"
-  contentHeight="auto"
-  contentWidth="auto"
-  isArrowDisplayed={false}
-  isContentFocusDisabled={false}
-  isHeaderDisabled={true}
+  attachmentMargin={0}
+  contentAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "top",
+    }
+  }
+  contentOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
+  isEnabled={true}
   isOpen={false}
-  onRequestClose={[Function]}
+  targetAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "bottom",
+    }
+  }
+  targetOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
   targetRef={[Function]}
 >
-  <DropdownList
-    requestClose={[Function]}
+  <OnClickOutside(HookshotContent)
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    onEsc={[Function]}
+    onOutsideClick={[Function]}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
   >
-    <Option
-      label="1st Option"
-      onClick={[Function]}
-    />
-  </DropdownList>
-</Popup>
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={true}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "returnFocusOnDeactivate": true,
+        }
+      }
+      paused={false}
+    >
+      <div>
+        <DropdownList
+          requestClose={[Function]}
+        >
+          <Option
+            label="1st Option"
+            onClick={[Function]}
+          />
+        </DropdownList>
+      </div>
+    </FocusTrap>
+  </OnClickOutside(HookshotContent)>
+</Hookshot>
 `;
 
 exports[`Dropdown renders a dropdown with a set width 1`] = `
-<Popup
+<Hookshot
   attachmentBehavior="flip"
-  boundingRef={null}
-  classNameArrow={null}
-  classNameContent={null}
-  classNameOverlay={null}
-  contentAttachment="top left"
-  contentHeight="auto"
-  contentWidth="auto"
-  isArrowDisplayed={false}
-  isContentFocusDisabled={false}
-  isHeaderDisabled={true}
+  attachmentMargin={0}
+  contentAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "top",
+    }
+  }
+  contentOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
+  isEnabled={true}
   isOpen={false}
-  onRequestClose={[Function]}
+  targetAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "bottom",
+    }
+  }
+  targetOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
   targetRef={[Function]}
 >
-  <DropdownList
-    requestClose={[Function]}
-    width="470px"
+  <OnClickOutside(HookshotContent)
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    onEsc={[Function]}
+    onOutsideClick={[Function]}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
   >
-    <Option
-      label="1st Option"
-      onClick={[Function]}
-    />
-  </DropdownList>
-</Popup>
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={true}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "returnFocusOnDeactivate": true,
+        }
+      }
+      paused={false}
+    >
+      <div>
+        <DropdownList
+          requestClose={[Function]}
+          width="470px"
+        >
+          <Option
+            label="1st Option"
+            onClick={[Function]}
+          />
+        </DropdownList>
+      </div>
+    </FocusTrap>
+  </OnClickOutside(HookshotContent)>
+</Hookshot>
 `;
 
 exports[`Dropdown renders a dropdown with multiple children 1`] = `
-<Popup
+<Hookshot
   attachmentBehavior="flip"
-  boundingRef={null}
-  classNameArrow={null}
-  classNameContent={null}
-  classNameOverlay={null}
-  contentAttachment="top left"
-  contentHeight="auto"
-  contentWidth="auto"
-  isArrowDisplayed={false}
-  isContentFocusDisabled={false}
-  isHeaderDisabled={true}
+  attachmentMargin={0}
+  contentAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "top",
+    }
+  }
+  contentOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
+  isEnabled={true}
   isOpen={false}
-  onRequestClose={[Function]}
+  targetAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "bottom",
+    }
+  }
+  targetOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
   targetRef={[Function]}
 >
-  <DropdownList
-    requestClose={[Function]}
+  <OnClickOutside(HookshotContent)
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    onEsc={[Function]}
+    onOutsideClick={[Function]}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
   >
-    <Option
-      label="1st Option"
-      onClick={[Function]}
-    />
-    <Option
-      label="2nd Option"
-      onClick={[Function]}
-    />
-    <Option
-      label="3rd Option"
-      onClick={[Function]}
-    />
-  </DropdownList>
-</Popup>
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={true}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "returnFocusOnDeactivate": true,
+        }
+      }
+      paused={false}
+    >
+      <div>
+        <DropdownList
+          requestClose={[Function]}
+        >
+          <Option
+            label="1st Option"
+            onClick={[Function]}
+          />
+          <Option
+            label="2nd Option"
+            onClick={[Function]}
+          />
+          <Option
+            label="3rd Option"
+            onClick={[Function]}
+          />
+        </DropdownList>
+      </div>
+    </FocusTrap>
+  </OnClickOutside(HookshotContent)>
+</Hookshot>
 `;
 
 exports[`Dropdown renders an open dropdown 1`] = `
-<Popup
+<Hookshot
   attachmentBehavior="flip"
-  boundingRef={null}
-  classNameArrow={null}
-  classNameContent={null}
-  classNameOverlay={null}
-  contentAttachment="top left"
-  contentHeight="auto"
-  contentWidth="auto"
-  isArrowDisplayed={false}
-  isContentFocusDisabled={false}
-  isHeaderDisabled={true}
+  attachmentMargin={0}
+  contentAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "top",
+    }
+  }
+  contentOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
+  isEnabled={true}
   isOpen={true}
-  onRequestClose={[Function]}
+  targetAttachment={
+    Object {
+      "horizontal": "start",
+      "vertical": "bottom",
+    }
+  }
+  targetOffset={
+    Object {
+      "horizontal": 0,
+      "vertical": 0,
+    }
+  }
   targetRef={[Function]}
 >
-  <DropdownList
-    requestClose={[Function]}
+  <OnClickOutside(HookshotContent)
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    onEsc={[Function]}
+    onOutsideClick={[Function]}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
   >
-    <Option
-      label="1st Option"
-      onClick={[Function]}
-    />
-  </DropdownList>
-</Popup>
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={true}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "returnFocusOnDeactivate": true,
+        }
+      }
+      paused={false}
+    >
+      <div>
+        <DropdownList
+          requestClose={[Function]}
+        >
+          <Option
+            label="1st Option"
+            onClick={[Function]}
+          />
+        </DropdownList>
+      </div>
+    </FocusTrap>
+  </OnClickOutside(HookshotContent)>
+</Hookshot>
 `;

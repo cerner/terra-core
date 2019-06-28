@@ -18,6 +18,8 @@ exports[`Dropdown Button should render a block split type 1`] = `
     className="split-button-primary is-block neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     Primary Option
@@ -29,6 +31,8 @@ exports[`Dropdown Button should render a block split type 1`] = `
     className="split-button-chevron neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -56,6 +60,8 @@ exports[`Dropdown Button should render a default split type 1`] = `
     className="split-button-primary neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     Primary Option
@@ -67,6 +73,8 @@ exports[`Dropdown Button should render a default split type 1`] = `
     className="split-button-chevron neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -94,6 +102,8 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
     className="split-button-primary neutral"
     disabled={true}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     tabIndex="-1"
     type="button"
   >
@@ -106,6 +116,8 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
     className="split-button-chevron neutral"
     disabled={true}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     tabIndex="-1"
     type="button"
   >
@@ -136,6 +148,8 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     className="split-button-primary neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     Primary Option
@@ -147,6 +161,8 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     className="split-button-chevron neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -184,6 +200,8 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     className="split-button-primary neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     Primary Option
@@ -195,6 +213,8 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     className="split-button-chevron neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -222,6 +242,8 @@ exports[`Dropdown Button should render an open split type 1`] = `
     className="split-button-primary neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     Primary Option
@@ -234,6 +256,8 @@ exports[`Dropdown Button should render an open split type 1`] = `
     className="split-button-chevron is-active neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span

@@ -19,6 +19,8 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
     className="dropdown-button-type neutral is-block"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -52,6 +54,8 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
     className="dropdown-button-type neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -85,6 +89,8 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
     className="dropdown-button-type neutral"
     disabled={true}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     tabIndex="-1"
     type="button"
   >
@@ -121,6 +127,8 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     className="dropdown-button-type neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -165,6 +173,8 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     className="dropdown-button-type neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -198,6 +208,8 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
     className="dropdown-button-type emphasis"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
@@ -232,6 +244,8 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
     className="dropdown-button-type is-active neutral"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     type="button"
   >
     <span
