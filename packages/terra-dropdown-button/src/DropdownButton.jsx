@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import KeyCode from 'keycode-js';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
 import Button from './_Button';
@@ -50,8 +51,10 @@ class DropdownButton extends React.Component {
 
     this.handleDropdownButtonClick = this.handleDropdownButtonClick.bind(this);
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
 
-    this.state = { isOpen: false };
+    this.state = { isOpen: false, active: false };
   }
 
   handleDropdownButtonClick() {
@@ -60,6 +63,21 @@ class DropdownButton extends React.Component {
 
   handleDropdownRequestClose() {
     this.setState({ isOpen: false });
+  }
+
+  /*
+    In FireFox active styles don't get applied on space
+   */
+  handleKeyDown(event) {
+    if (event.keyCode === KeyCode.KEY_SPACE) {
+      this.setState({ active: true });
+    }
+  }
+
+  handleKeyUp(event) {
+    if (event.keyCode === KeyCode.KEY_SPACE) {
+      this.setState({ active: false });
+    }
   }
 
   render() {
@@ -72,23 +90,30 @@ class DropdownButton extends React.Component {
       ...customProps
     } = this.props;
 
+    const {
+      isOpen,
+      active,
+    } = this.state;
+
     return (
       <DropdownButtonBase
         {...customProps}
         buttons={children}
-        isOpen={this.state.isOpen}
+        isOpen={isOpen}
         requestClose={this.handleDropdownRequestClose}
         disabled={disabled}
         isBlock={isBlock}
       >
         <button
           type="button"
-          className={cx('dropdown-button-type', { 'is-active': this.state.isOpen }, variant, { 'is-block': isBlock })}
+          className={cx('dropdown-button-type', { 'is-active': isOpen || active }, variant, { 'is-block': isBlock })}
           onClick={this.handleDropdownButtonClick}
+          onKeyDown={this.handleKeyDown}
+          onKeyUp={this.handleKeyUp}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
-          aria-expanded={this.state.isOpen || undefined}
+          aria-expanded={isOpen || undefined}
           aria-haspopup
         >
           <span className={cx('dropdown-button-type-text')}>{label}</span>

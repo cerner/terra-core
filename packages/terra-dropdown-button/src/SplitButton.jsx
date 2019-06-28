@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import KeyCode from 'keycode-js';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';
 import Button from './_Button';
@@ -51,8 +52,12 @@ class SplitButton extends React.Component {
 
     this.handleDropdownButtonClick = this.handleDropdownButtonClick.bind(this);
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
+    this.handlePrimaryKeyDown = this.handlePrimaryKeyDown.bind(this);
+    this.handlePrimaryKeyUp = this.handlePrimaryKeyUp.bind(this);
+    this.handleChevronKeyDown = this.handleChevronKeyDown.bind(this);
+    this.handleChevronKeyUp = this.handleChevronKeyUp.bind(this);
 
-    this.state = { isOpen: false };
+    this.state = { isOpen: false, chevronActive: false, primaryActive: false };
   }
 
   handleDropdownButtonClick() {
@@ -61,6 +66,33 @@ class SplitButton extends React.Component {
 
   handleDropdownRequestClose() {
     this.setState({ isOpen: false });
+  }
+
+  /*
+    In FireFox active styles don't get applied onKeyDown
+   */
+  handlePrimaryKeyDown(event) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode == KeyCode.KEY_RETURN) {
+      this.setState({ primaryActive: true });
+    }
+  }
+
+  handlePrimaryKeyUp(event) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode == KeyCode.KEY_RETURN) {
+      this.setState({ primaryActive: false });
+    }
+  }
+
+  handleChevronKeyDown(event) {
+    if (event.keyCode === KeyCode.KEY_SPACE) {
+      this.setState({ chevronActive: true });
+    }
+  }
+
+  handleChevronKeyUp(event) {
+    if (event.keyCode === KeyCode.KEY_SPACE) {
+      this.setState({ chevronActive: false });
+    }
   }
 
   render() {
@@ -74,21 +106,29 @@ class SplitButton extends React.Component {
       ...customProps
     } = this.props;
 
+    const {
+      isOpen,
+      primaryActive,
+      chevronActive
+    } = this.state;
+
     const finalVariant = variant !== 'emphasis' ? variant : 'neutral';
 
     return (
       <DropdownButtonBase
         {...customProps}
         buttons={children}
-        isOpen={this.state.isOpen}
+        isOpen={isOpen}
         requestClose={this.handleDropdownRequestClose}
         disabled={disabled}
         isBlock={isBlock}
       >
         <button
           type="button"
-          className={cx('split-button-primary', { 'is-block': isBlock }, finalVariant)}
+          className={cx('split-button-primary', { 'is-block': isBlock }, { 'is-active': primaryActive }, finalVariant)}
           onClick={onClick}
+          onKeyDown={this.handlePrimaryKeyDown}
+          onKeyUp={this.handlePrimaryKeyUp}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
@@ -98,11 +138,13 @@ class SplitButton extends React.Component {
         <button
           type="button"
           onClick={this.handleDropdownButtonClick}
-          className={cx('split-button-chevron', { 'is-active': this.state.isOpen }, finalVariant)}
+          onKeyDown={this.handleChevronKeyDown}
+          onKeyUp={this.handleChevronKeyUp}
+          className={cx('split-button-chevron', { 'is-active': isOpen || chevronActive }, finalVariant)}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
-          aria-expanded={this.state.isOpen || undefined}
+          aria-expanded={isOpen || undefined}
           aria-haspopup
           aria-label="More Options"
         >
