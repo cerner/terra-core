@@ -31,6 +31,7 @@
     "terra-button": "^3.14.0",
     "terra-doc-template": "^2.10.0",
     "terra-icon": "^3.11.0",
+    "terra-markdown": "2.27.0",
     "terra-responsive-element": "^5.0.0",
     "terra-toggle": "^3.12.0"
   },
