@@ -3,8 +3,18 @@ Changelog
 
 Unreleased
 ----------
+### Breaking
+* Removed children prop. Replaced with buttonAttrs prop
+* Removed the default of rendering an error view
+* Removed the custom variant
+* Removed hide glyph logic based on available container space
+* Removed onComponentMount logic to calculate padding
+* Removed StatusView.Opts object and export
+* Use CSS grid to center component
+* Render divider if title and message/buttons exist
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
+* Remove incorrect entry in upgrade guide that specifies new margin-bottom theme variable.
 
 3.16.0 - (June 18, 2019)
 ------------------
