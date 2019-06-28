@@ -1,15 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Overlay should render a null component when isOpen is not provided 1`] = `
-<Overlay
-  backgroundStyle="light"
-  isOpen={false}
-  isRelativeToContainer={false}
-  isScrollable={false}
-  rootSelector="#root"
-  zIndex="100"
-/>
-`;
+exports[`Overlay should render a null component when isOpen is not provided 1`] = `""`;
 
 exports[`Overlay when isOpen is provided -backgroundStyle- should render with the clear backgroundStyle 1`] = `
 <Portal>
