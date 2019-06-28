@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+* Removed conditional logic required to import wicg-inert polyfill
+
+3.16.0 - (June 18, 2019)
+------------------
+### Added
+* Added missing WDIO screenshots
 
 3.15.1 - (June 12, 2019)
 ------------------

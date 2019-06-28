@@ -15,11 +15,13 @@ const pageSet = (index, totalPages) => {
   }
 
   if (mutableIndex < numberShiftPoint) {
-    for (let i = 1; i <= maxPagesDisplayed; i += 1) {
+    const pagesDisplayed = totalPages < maxPagesDisplayed ? totalPages : maxPagesDisplayed;
+
+    for (let i = 1; i <= pagesDisplayed; i += 1) {
       sequence.push(i);
     }
   } else if (mutableIndex <= totalPages && mutableIndex > totalPages - maxPagesDisplayed && mutableIndex > totalPages - previousSequenceCount) {
-    for (let i = totalPages; i > totalPages - maxPagesDisplayed; i -= 1) {
+    for (let i = totalPages; i > totalPages - maxPagesDisplayed && i > 0; i -= 1) {
       sequence.push(i);
     }
   } else {

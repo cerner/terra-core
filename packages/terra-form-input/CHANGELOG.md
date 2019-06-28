@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+2.14.0 - (June 18, 2019)
+------------------
+### Changed
+* Added `isInput` type on Input component to help with component identity
+
+### Removed
+* Removed stale WDIO screenshots
+
 2.13.0 - (June 11, 2019)
 ------------------
 ### Removed

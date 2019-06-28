@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
+3.12.0 - (June 18, 2019)
+------------------
+### Changed
+* Added functionality to pass required prop on form-field down to terra-form-input, terra-form-select, or terra-form-textarea when rendered as children in terra-form-field.
 
 3.11.0 - (June 11, 2019)
 ------------------

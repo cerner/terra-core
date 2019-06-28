@@ -3,8 +3,8 @@
 exports[`Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -37,57 +37,8 @@ exports[`Alert of type advisory with text content should render an Alert compone
   type="advisory"
 >
   <ResponsiveElement
-    defaultElement={
-      <div
-        className="alert-base advisory narrow"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        style={Object {}}
-      >
-        <div
-          className="body body-std"
-        >
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.advisory
-            </strong>
-            This is an advisory alert.
-          </div>
-        </div>
-        
-      </div>
-    }
     responsiveTo="parent"
-    tiny={
+    small={
       <div
         className="alert-base advisory wide"
         intl={
@@ -117,7 +68,54 @@ exports[`Alert of type advisory with text content should render an Alert compone
             "timeZone": null,
           }
         }
-        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.advisory
+            </strong>
+            This is an advisory alert.
+          </div>
+        </div>
+        
+      </div>
+    }
+    tiny={
+      <div
+        className="alert-base advisory narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
       >
         <div
           className="body body-std"
@@ -145,8 +143,8 @@ exports[`Alert of type advisory with text content should render an Alert compone
 exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -179,65 +177,8 @@ exports[`Alert of type alert with text content should render an Alert component 
   type="alert"
 >
   <ResponsiveElement
-    defaultElement={
-      <div
-        className="alert-base alert narrow"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        style={Object {}}
-      >
-        <div
-          className="body body-std"
-        >
-          <span
-            className="icon"
-          >
-            <IconAlert
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.alert
-            </strong>
-            This is a test
-          </div>
-        </div>
-        
-      </div>
-    }
     responsiveTo="parent"
-    tiny={
+    small={
       <div
         className="alert-base alert wide"
         intl={
@@ -267,7 +208,62 @@ exports[`Alert of type alert with text content should render an Alert component 
             "timeZone": null,
           }
         }
-        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.alert
+            </strong>
+            This is a test
+          </div>
+        </div>
+        
+      </div>
+    }
+    tiny={
+      <div
+        className="alert-base alert narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
       >
         <div
           className="body body-std"
@@ -303,13 +299,13 @@ exports[`Alert of type alert with text content should render an Alert component 
 exports[`Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
 <Alert
   action={null}
+  customColorClass="terra-alert-custom-orange-color"
   customIcon={
     <IconHelp
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  customStatusColor="orange"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -342,9 +338,10 @@ exports[`Alert of type custom with custom title and text content should render a
   type="custom"
 >
   <ResponsiveElement
-    defaultElement={
+    responsiveTo="parent"
+    small={
       <div
-        className="alert-base custom narrow"
+        className="alert-base custom wide terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -370,11 +367,6 @@ exports[`Alert of type custom with custom title and text content should render a
             "onError": [Function],
             "textComponent": "span",
             "timeZone": null,
-          }
-        }
-        style={
-          Object {
-            "color": "orange",
           }
         }
       >
@@ -403,10 +395,9 @@ exports[`Alert of type custom with custom title and text content should render a
         
       </div>
     }
-    responsiveTo="parent"
     tiny={
       <div
-        className="alert-base custom wide"
+        className="alert-base custom narrow terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -432,11 +423,6 @@ exports[`Alert of type custom with custom title and text content should render a
             "onError": [Function],
             "textComponent": "span",
             "timeZone": null,
-          }
-        }
-        style={
-          Object {
-            "color": "orange",
           }
         }
       >
@@ -474,8 +460,8 @@ exports[`Alert of type custom with custom title and text content should render a
 exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -508,65 +494,8 @@ exports[`Alert of type error with text content should render an Alert component 
   type="error"
 >
   <ResponsiveElement
-    defaultElement={
-      <div
-        className="alert-base error narrow"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        style={Object {}}
-      >
-        <div
-          className="body body-std"
-        >
-          <span
-            className="icon"
-          >
-            <IconError
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.error
-            </strong>
-            This is an error.
-          </div>
-        </div>
-        
-      </div>
-    }
     responsiveTo="parent"
-    tiny={
+    small={
       <div
         className="alert-base error wide"
         intl={
@@ -596,7 +525,62 @@ exports[`Alert of type error with text content should render an Alert component 
             "timeZone": null,
           }
         }
-        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconError
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.error
+            </strong>
+            This is an error.
+          </div>
+        </div>
+        
+      </div>
+    }
+    tiny={
+      <div
+        className="alert-base error narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
       >
         <div
           className="body body-std"
@@ -632,8 +616,8 @@ exports[`Alert of type error with text content should render an Alert component 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -666,67 +650,8 @@ exports[`Alert of type info with custom title and HTML content should render an 
   type="info"
 >
   <ResponsiveElement
-    defaultElement={
-      <div
-        className="alert-base info narrow"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        style={Object {}}
-      >
-        <div
-          className="body body-std"
-        >
-          <span
-            className="icon"
-          >
-            <IconInformation
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Gettysburg Address
-            </strong>
-            <span>
-              Four score and seven years ago . . .
-            </span>
-          </div>
-        </div>
-        
-      </div>
-    }
     responsiveTo="parent"
-    tiny={
+    small={
       <div
         className="alert-base info wide"
         intl={
@@ -756,7 +681,64 @@ exports[`Alert of type info with custom title and HTML content should render an 
             "timeZone": null,
           }
         }
-        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconInformation
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Gettysburg Address
+            </strong>
+            <span>
+              Four score and seven years ago . . .
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    }
+    tiny={
+      <div
+        className="alert-base info narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
       >
         <div
           className="body body-std"
@@ -794,8 +776,8 @@ exports[`Alert of type info with custom title and HTML content should render an 
 exports[`Alert of type info with text content should render an Alert component of type info 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -828,65 +810,8 @@ exports[`Alert of type info with text content should render an Alert component o
   type="info"
 >
   <ResponsiveElement
-    defaultElement={
-      <div
-        className="alert-base info narrow"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        style={Object {}}
-      >
-        <div
-          className="body body-std"
-        >
-          <span
-            className="icon"
-          >
-            <IconInformation
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.info
-            </strong>
-            This is an information alert.
-          </div>
-        </div>
-        
-      </div>
-    }
     responsiveTo="parent"
-    tiny={
+    small={
       <div
         className="alert-base info wide"
         intl={
@@ -916,7 +841,62 @@ exports[`Alert of type info with text content should render an Alert component o
             "timeZone": null,
           }
         }
-        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconInformation
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.info
+            </strong>
+            This is an information alert.
+          </div>
+        </div>
+        
+      </div>
+    }
+    tiny={
+      <div
+        className="alert-base info narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
       >
         <div
           className="body body-std"
@@ -964,8 +944,8 @@ exports[`Alert of type success with an action button text content should render 
       variant="emphasis"
     />
   }
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -998,9 +978,10 @@ exports[`Alert of type success with an action button text content should render 
   type="success"
 >
   <ResponsiveElement
-    defaultElement={
+    responsiveTo="parent"
+    small={
       <div
-        className="alert-base success narrow"
+        className="alert-base success wide"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1028,10 +1009,9 @@ exports[`Alert of type success with an action button text content should render 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
-          className="body body-narrow"
+          className="body body-std"
         >
           <span
             className="icon"
@@ -1070,10 +1050,9 @@ exports[`Alert of type success with an action button text content should render 
         </div>
       </div>
     }
-    responsiveTo="parent"
     tiny={
       <div
-        className="alert-base success wide"
+        className="alert-base success narrow"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1101,10 +1080,9 @@ exports[`Alert of type success with an action button text content should render 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
-          className="body body-std"
+          className="body body-narrow"
         >
           <span
             className="icon"
@@ -1152,8 +1130,8 @@ exports[`Alert of type success with an action button text content should render 
 exports[`Alert of type success with text content should render an Alert component of type success 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1186,65 +1164,8 @@ exports[`Alert of type success with text content should render an Alert componen
   type="success"
 >
   <ResponsiveElement
-    defaultElement={
-      <div
-        className="alert-base success narrow"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        style={Object {}}
-      >
-        <div
-          className="body body-std"
-        >
-          <span
-            className="icon"
-          >
-            <IconSuccess
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.success
-            </strong>
-            This is a success alert.
-          </div>
-        </div>
-        
-      </div>
-    }
     responsiveTo="parent"
-    tiny={
+    small={
       <div
         className="alert-base success wide"
         intl={
@@ -1274,7 +1195,62 @@ exports[`Alert of type success with text content should render an Alert componen
             "timeZone": null,
           }
         }
-        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconSuccess
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.success
+            </strong>
+            This is a success alert.
+          </div>
+        </div>
+        
+      </div>
+    }
+    tiny={
+      <div
+        className="alert-base success narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
       >
         <div
           className="body body-std"
@@ -1310,8 +1286,8 @@ exports[`Alert of type success with text content should render an Alert componen
 exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1344,65 +1320,8 @@ exports[`Alert of type warning with text content should render an Alert componen
   type="warning"
 >
   <ResponsiveElement
-    defaultElement={
-      <div
-        className="alert-base warning narrow"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        style={Object {}}
-      >
-        <div
-          className="body body-std"
-        >
-          <span
-            className="icon"
-          >
-            <IconWarning
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.warning
-            </strong>
-            This is an warning.
-          </div>
-        </div>
-        
-      </div>
-    }
     responsiveTo="parent"
-    tiny={
+    small={
       <div
         className="alert-base warning wide"
         intl={
@@ -1432,7 +1351,62 @@ exports[`Alert of type warning with text content should render an Alert componen
             "timeZone": null,
           }
         }
-        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconWarning
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.warning
+            </strong>
+            This is an warning.
+          </div>
+        </div>
+        
+      </div>
+    }
+    tiny={
+      <div
+        className="alert-base warning narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
       >
         <div
           className="body body-std"
@@ -1468,8 +1442,8 @@ exports[`Alert of type warning with text content should render an Alert componen
 exports[`Alert with no props should render a default component 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1502,65 +1476,8 @@ exports[`Alert with no props should render a default component 1`] = `
   type="alert"
 >
   <ResponsiveElement
-    defaultElement={
-      <div
-        className="alert-base alert narrow"
-        intl={
-          Object {
-            "defaultFormats": Object {},
-            "defaultLocale": "en",
-            "formatDate": [Function],
-            "formatHTMLMessage": [Function],
-            "formatMessage": [Function],
-            "formatNumber": [Function],
-            "formatPlural": [Function],
-            "formatRelative": [Function],
-            "formatTime": [Function],
-            "formats": Object {},
-            "formatters": Object {
-              "getDateTimeFormat": [Function],
-              "getMessageFormat": [Function],
-              "getNumberFormat": [Function],
-              "getPluralFormat": [Function],
-              "getRelativeFormat": [Function],
-            },
-            "locale": "en",
-            "messages": null,
-            "now": [Function],
-            "onError": [Function],
-            "textComponent": "span",
-            "timeZone": null,
-          }
-        }
-        style={Object {}}
-      >
-        <div
-          className="body body-std"
-        >
-          <span
-            className="icon"
-          >
-            <IconAlert
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.alert
-            </strong>
-            
-          </div>
-        </div>
-        
-      </div>
-    }
     responsiveTo="parent"
-    tiny={
+    small={
       <div
         className="alert-base alert wide"
         intl={
@@ -1590,7 +1507,62 @@ exports[`Alert with no props should render a default component 1`] = `
             "timeZone": null,
           }
         }
-        style={Object {}}
+      >
+        <div
+          className="body body-std"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </span>
+          <div
+            className="section"
+          >
+            <strong
+              className="title"
+            >
+              Terra.alert.alert
+            </strong>
+            
+          </div>
+        </div>
+        
+      </div>
+    }
+    tiny={
+      <div
+        className="alert-base alert narrow"
+        intl={
+          Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": null,
+            "now": [Function],
+            "onError": [Function],
+            "textComponent": "span",
+            "timeZone": null,
+          }
+        }
       >
         <div
           className="body body-std"
@@ -1638,13 +1610,13 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
       variant="emphasis"
     />
   }
+  customColorClass="terra-alert-custom-orange-color"
   customIcon={
     <IconHelp
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  customStatusColor="orange"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1677,9 +1649,10 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
   type="custom"
 >
   <ResponsiveElement
-    defaultElement={
+    responsiveTo="parent"
+    small={
       <div
-        className="alert-base custom narrow"
+        className="alert-base custom wide terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1707,14 +1680,9 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             "timeZone": null,
           }
         }
-        style={
-          Object {
-            "color": "orange",
-          }
-        }
       >
         <div
-          className="body body-narrow"
+          className="body body-std"
         >
           <span
             className="icon"
@@ -1763,10 +1731,9 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
         </div>
       </div>
     }
-    responsiveTo="parent"
     tiny={
       <div
-        className="alert-base custom wide"
+        className="alert-base custom narrow terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1794,14 +1761,9 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             "timeZone": null,
           }
         }
-        style={
-          Object {
-            "color": "orange",
-          }
-        }
       >
         <div
-          className="body body-std"
+          className="body body-narrow"
         >
           <span
             className="icon"
@@ -1859,8 +1821,8 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
 exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1893,9 +1855,10 @@ exports[`Dismissible Alert that includes actions section should render an alert 
   type="alert"
 >
   <ResponsiveElement
-    defaultElement={
+    responsiveTo="parent"
+    small={
       <div
-        className="alert-base alert narrow"
+        className="alert-base alert wide"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1923,10 +1886,9 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
-          className="body body-narrow"
+          className="body body-std"
         >
           <span
             className="icon"
@@ -1964,10 +1926,9 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         </div>
       </div>
     }
-    responsiveTo="parent"
     tiny={
       <div
-        className="alert-base alert wide"
+        className="alert-base alert narrow"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1995,10 +1956,9 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
-          className="body body-std"
+          className="body body-narrow"
         >
           <span
             className="icon"

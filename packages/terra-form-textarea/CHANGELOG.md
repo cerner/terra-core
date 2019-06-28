@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
+3.14.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
 
 3.13.0 - (June 11, 2019)
 ------------------
@@ -11,9 +18,11 @@ Unreleased
 * Removed vendor style rule added to fade placeholder text. Since Autoprefixer V9 resolves vendor prefix issue.
 
 ### Changed
+* Added `isTextarea` type on Textarea component to help with component identity
 * Reordered examples on documentation site
 * Clarified functionality of `isAutoResizable` and `size` props for TextArea
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
+
 
 3.12.0 - (May 1, 2019)
 ------------------

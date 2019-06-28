@@ -3,6 +3,19 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added `customColorClass` prop and --terra-alert-custom-default-color themeable variable
+
+### Breaking Changes
+* Removed `customStatusColor` prop
+
+3.17.0 - (June 18, 2019)
+------------------
+### Removed
+* Removed stale WDIO screenshots
+
+### Changed
+* Updated to use the new responsive element breakpoints
 
 3.16.1 - (June 12, 2019)
 ------------------

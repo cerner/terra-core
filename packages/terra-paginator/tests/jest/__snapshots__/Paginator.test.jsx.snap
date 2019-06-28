@@ -2,71 +2,7 @@
 
 exports[`Paginator should render a default paginator 1`] = `
 <ResponsiveElement
-  defaultElement={
-    <div
-      aria-label="pagination"
-      className="paginator"
-      role="navigation"
-    >
-      <a
-        aria-disabled={true}
-        aria-label="first"
-        className="nav-link left-controls is-disabled"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={null}
-      >
-        First
-      </a>
-      <a
-        aria-disabled={true}
-        aria-label="previous"
-        className="nav-link left-controls previous icon-only is-disabled"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex={null}
-      >
-        <span
-          className="visually-hidden"
-        >
-          Previous
-        </span>
-        <span
-          className="icon"
-        />
-      </a>
-      Page 1
-      <a
-        aria-disabled={false}
-        aria-label="next"
-        className="nav-link right-controls next icon-only"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
-      >
-        <span
-          className="visually-hidden"
-        >
-          Next
-        </span>
-        <span
-          className="icon"
-        />
-      </a>
-      <a
-        aria-disabled={false}
-        aria-label="last"
-        className="nav-link right-controls"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
-      >
-        Last
-      </a>
-    </div>
-  }
-  responsiveTo="parent"
-  small={
+  medium={
     <div
       className="paginator"
     >
@@ -218,12 +154,109 @@ exports[`Paginator should render a default paginator 1`] = `
       </a>
     </div>
   }
+  responsiveTo="parent"
+  tiny={
+    <div
+      aria-label="pagination"
+      className="paginator"
+      role="navigation"
+    >
+      <a
+        aria-disabled={true}
+        aria-label="first"
+        className="nav-link left-controls is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+      >
+        First
+      </a>
+      <a
+        aria-disabled={true}
+        aria-label="previous"
+        className="nav-link left-controls previous icon-only is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+      >
+        <span
+          className="visually-hidden"
+        >
+          Previous
+        </span>
+        <span
+          className="icon"
+        />
+      </a>
+      Page 1
+      <a
+        aria-disabled={false}
+        aria-label="next"
+        className="nav-link right-controls next icon-only"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="visually-hidden"
+        >
+          Next
+        </span>
+        <span
+          className="icon"
+        />
+      </a>
+      <a
+        aria-disabled={false}
+        aria-label="last"
+        className="nav-link right-controls"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        Last
+      </a>
+    </div>
+  }
 />
 `;
 
 exports[`Paginator should render a paginator without page links 1`] = `
 <ResponsiveElement
-  defaultElement={
+  medium={
+    <div
+      className="paginator pageless"
+    >
+      <a
+        aria-disabled={false}
+        aria-label="previous"
+        className="nav-link left-controls previous"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="icon"
+        />
+        Previous
+      </a>
+      <a
+        aria-disabled={false}
+        aria-label="next"
+        className="nav-link right-controls next"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        Next
+        <span
+          className="icon"
+        />
+      </a>
+    </div>
+  }
+  responsiveTo="parent"
+  tiny={
     <div
       aria-label="pagination"
       className="paginator pageless"
@@ -259,39 +292,6 @@ exports[`Paginator should render a paginator without page links 1`] = `
         >
           Next
         </span>
-        <span
-          className="icon"
-        />
-      </a>
-    </div>
-  }
-  responsiveTo="parent"
-  small={
-    <div
-      className="paginator pageless"
-    >
-      <a
-        aria-disabled={false}
-        aria-label="previous"
-        className="nav-link left-controls previous"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
-      >
-        <span
-          className="icon"
-        />
-        Previous
-      </a>
-      <a
-        aria-disabled={false}
-        aria-label="next"
-        className="nav-link right-controls next"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
-      >
-        Next
         <span
           className="icon"
         />

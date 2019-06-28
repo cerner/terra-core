@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added themeable variable --terra-table-subheader-border-bottom
+
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
+3.16.0 - (June 18, 2019)
+------------------
+### Changed
+* Minor dependency bump
 
 3.15.0 - (June 11, 2019)
 ------------------

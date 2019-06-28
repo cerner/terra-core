@@ -1,4 +1,4 @@
-@import '~terra-mixins';
+@import '~terra-mixins/lib/Mixins';
 
 // Section Header
 // ========================================================
@@ -40,7 +40,7 @@
       position: relative;
       z-index: 1;
     }
-  
+
     &.section-header:hover,
     &.section-header:active {
       background-color: var(--terra-list-section-header-hover-active-background-color, #d0d1d2);

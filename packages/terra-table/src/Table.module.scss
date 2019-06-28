@@ -89,6 +89,7 @@
 
   .subheader {
     background-color: var(--terra-table-subheader-background-color, #c8cacb);
+    border-bottom: var(--terra-table-subheader-border-bottom);
     color: var(--terra-table-subheader-color, #1c1f21);
     font-size: var(--terra-table-subheader-font-size, 1rem);
     font-weight: var(--terra-table-subheader-font-weight, bold);

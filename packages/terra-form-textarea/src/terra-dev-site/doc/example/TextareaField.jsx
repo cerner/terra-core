@@ -3,12 +3,12 @@ import TextareaField from '../../../TextareaField';
 
 const DefaultTextAreaField = () => (
   <TextareaField
-    inputId="profile-description"
-    label="Profile Description"
-    help="Every Profile Needs a Description"
+    inputId="textarea"
+    label="Textarea"
+    help="Note: This is help text"
     inputAttrs={{
-      name: 'description',
-      placeholder: 'Enter a profile Description',
+      name: 'textarea',
+      placeholder: 'Textarea placeholder',
     }}
   />
 );

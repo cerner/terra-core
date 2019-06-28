@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
+3.13.0 - (June 18, 2019)
+------------------
+### Changed
+* Updated to use the new responsive element breakpoints
 
 3.12.0 - (June 11, 2019)
 ------------------

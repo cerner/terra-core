@@ -490,17 +490,17 @@ class Menu extends React.Component {
    * Options below the dropdown will be scrolled to the bottom of the menu.
    */
   scrollIntoView() {
-    if (!this.state.active) {
+    const activeOption = this.menu.querySelector('[data-select-active]');
+    if (!this.state.active || activeOption === null) {
       return;
     }
 
-    const activeOption = this.menu.querySelector('[data-select-active]');
     const dropdownRect = this.menu.parentNode.getBoundingClientRect();
     const optionRect = activeOption.getBoundingClientRect();
 
-    if (activeOption && optionRect.top < dropdownRect.top) {
+    if (optionRect.top < dropdownRect.top) {
       activeOption.scrollIntoView();
-    } else if (activeOption && optionRect.bottom > dropdownRect.bottom) {
+    } else if (optionRect.bottom > dropdownRect.bottom) {
       activeOption.scrollIntoView(false);
     }
   }
