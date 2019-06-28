@@ -12,7 +12,6 @@ Unreleased
 * Removed StatusView.Opts object and export
 * Use CSS grid to center component
 * Render divider if title and message/buttons exist
-* Add new theme variable --terra-status-view-actions-button-margin-bottom
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 
