@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.16.0 - (June 28, 2019)
+------------------
 ### Fixed
 * Update tolerance of search field tests to allow for slight differences in how the button icon is rendered
 

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+4.9.0 - (June 28, 2019)
+------------------
 ### Changed
 * Fixed accessibility issue in list item tests
 * Update mixin import to work better with codesandbox.io

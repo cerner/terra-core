@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.16.0 - (June 28, 2019)
+------------------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 * Updated anchors to buttons for accessibility
