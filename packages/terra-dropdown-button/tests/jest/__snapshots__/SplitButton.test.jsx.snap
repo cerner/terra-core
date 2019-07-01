@@ -15,7 +15,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
 >
   <button
     aria-disabled={false}
-    className="split-button-primary is-block neutral"
+    className="split-button-primary neutral is-block"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -253,7 +253,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
     aria-expanded={true}
     aria-haspopup={true}
     aria-label="More Options"
-    className="split-button-chevron is-active neutral"
+    className="split-button-chevron neutral is-active"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
