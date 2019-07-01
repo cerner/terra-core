@@ -5,10 +5,10 @@
 
 :local {
   .split-button-primary {
-    border-bottom-left-radius: var(--terra-dropdown-button-border-bottom-left-radius, 3px);
+    border-bottom-left-radius: var(--terra-dropdown-button-split-type-border-bottom-left-radius, 3px);
     border-bottom-right-radius: 0;
     border-style: solid;
-    border-top-left-radius: var(--terra-dropdown-button-border-top-left-radius, 3px);
+    border-top-left-radius: var(--terra-dropdown-button-split-type-border-top-left-radius, 3px);
     border-top-right-radius: 0;
     // Needed for IE 10 to linebreak things properly
     flex: 0 1 auto;
@@ -37,14 +37,14 @@
 
   .split-button-chevron {
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: var(--terra-dropdown-button-border-bottom-right-radius, 3px);
+    border-bottom-right-radius: var(--terra-dropdown-button-split-type-chevron-border-bottom-right-radius, 3px);
     border-style: solid;
     border-top-left-radius: 0;
-    border-top-right-radius: var(--terra-dropdown-button-border-top-right-radius, 3px);
+    border-top-right-radius: var(--terra-dropdown-button-split-type-chevron-border-top-right-radius, 3px);
     // If flex-shrink is set to 1 IE will give the button 0 width
     flex: 0 0 auto;
-    font-size: var(--terra-dropdown-button-split-type-font-size, 1rem);
-    line-height: var(--terra-dropdown-button-split-type-line-height, 1.4285714286);
+    font-size: var(--terra-dropdown-button-split-type-chevron-font-size, 1rem);
+    line-height: var(--terra-dropdown-button-split-type-chevron-line-height, 1.4285714286);
     outline: 0;
     padding-bottom: var(--terra-dropdown-button-split-type-chevron-padding-bottom, 4px);
     padding-left: var(--terra-dropdown-button-split-type-chevron-padding-left, 7px);
@@ -69,10 +69,10 @@
     display: inline-block;
     // If flex-shrink is set to 1 IE will give the button 0 width
     flex: 0 0 auto;
-    height: var(--terra-dropdown-button-chevron-height, 14px);
+    height: var(--terra-dropdown-button-split-type-chevron-height, 1rem);
     margin: auto 0;
     position: relative;
-    top: var(--terra-dropdown-button-chevron-top, 0.1429rem);
-    width: var(--terra-dropdown-button-chevron-width, 14px);
+    top: var(--terra-dropdown-button-split-type-chevron-top, 0.1429rem);
+    width: var(--terra-dropdown-button-split-type-chevron-width, 1rem);
   }
 }

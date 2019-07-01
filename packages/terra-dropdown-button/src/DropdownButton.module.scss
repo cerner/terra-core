@@ -5,7 +5,7 @@
 
 :local {
   .dropdown-button-type {
-    border-radius: var(--terra-dropdown-button-border-radius, 3px);
+    border-radius: var(--terra-dropdown-button-dropdown-type-border-radius, 3px);
     border-style: solid;
     display: inline-flex;
     // Needed for IE 10 to linebreak things properly
