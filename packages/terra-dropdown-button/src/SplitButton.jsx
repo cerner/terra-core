@@ -35,7 +35,7 @@ const propTypes = {
    */
   onClick: PropTypes.func.isRequired,
   /**
-   * Sets the styles of the component. Must be either 'neutral' or 'ghost'.
+   * Sets the styles of the component.  The default is 'neutral'. Must be either 'neutral' or 'ghost'.
    */
   variant: PropTypes.oneOf(Object.values(Variants)),
 };
@@ -72,13 +72,13 @@ class SplitButton extends React.Component {
     In FireFox active styles don't get applied onKeyDown
    */
   handlePrimaryKeyDown(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode == KeyCode.KEY_RETURN) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ primaryActive: true });
     }
   }
 
   handlePrimaryKeyUp(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode == KeyCode.KEY_RETURN) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ primaryActive: false });
     }
   }
@@ -109,10 +109,20 @@ class SplitButton extends React.Component {
     const {
       isOpen,
       primaryActive,
-      chevronActive
+      chevronActive,
     } = this.state;
 
-    const finalVariant = variant !== 'emphasis' ? variant : 'neutral';
+    const primaryClassnames = cx(
+      'split-button-primary',
+      variant,
+      { 'is-block': isBlock },
+      { 'is-active': primaryActive },
+    );
+    const chevronClassnames = cx(
+      'split-button-chevron',
+      variant,
+      { 'is-active': isOpen || chevronActive },
+    );
 
     return (
       <DropdownButtonBase
@@ -125,7 +135,7 @@ class SplitButton extends React.Component {
       >
         <button
           type="button"
-          className={cx('split-button-primary', { 'is-block': isBlock }, { 'is-active': primaryActive }, finalVariant)}
+          className={primaryClassnames}
           onClick={onClick}
           onKeyDown={this.handlePrimaryKeyDown}
           onKeyUp={this.handlePrimaryKeyUp}
@@ -140,7 +150,7 @@ class SplitButton extends React.Component {
           onClick={this.handleDropdownButtonClick}
           onKeyDown={this.handleChevronKeyDown}
           onKeyUp={this.handleChevronKeyUp}
-          className={cx('split-button-chevron', { 'is-active': isOpen || chevronActive }, finalVariant)}
+          className={chevronClassnames}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}

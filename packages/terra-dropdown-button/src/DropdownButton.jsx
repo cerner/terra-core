@@ -33,7 +33,7 @@ const propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   * Sets the styles of the component.
+   * Sets the styles of the component. The default is 'neutral'.
    * Must be one of 'neutral', 'emphasis', or 'ghost'.
    */
   variant: PropTypes.oneOf(Object.values(Variants)),
@@ -95,6 +95,13 @@ class DropdownButton extends React.Component {
       active,
     } = this.state;
 
+    const classnames = cx(
+      'dropdown-button-type',
+      variant,
+      { 'is-active': isOpen || active },
+      { 'is-block': isBlock },
+    );
+
     return (
       <DropdownButtonBase
         {...customProps}
@@ -106,7 +113,7 @@ class DropdownButton extends React.Component {
       >
         <button
           type="button"
-          className={cx('dropdown-button-type', { 'is-active': isOpen || active }, variant, { 'is-block': isBlock })}
+          className={classnames}
           onClick={this.handleDropdownButtonClick}
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}

@@ -1,6 +1,7 @@
 # Split Button
 
-The Split Button is two buttons put together. One is a primary option conveniently shown outside the dropdown and the other opens the dropdown for with more buttons inside.
+The Split Button is a Dropdown Button with an additional option outside the dropdown.
+It is intended to allow the user to choose a primary option or an option from a list of alternatives.
 
 ## Getting Started
 

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Dropdown from './_Dropdown';
@@ -38,47 +38,61 @@ const defaultProps = {
   isBlock: false,
 };
 
-const DropdownButtonBase = ({
-  children,
-  buttons,
-  isOpen,
-  requestClose,
-  disabled,
-  isBlock,
-  ...customProps
-}) => {
-  const buttonWrapperRef = useRef(null);
+class DropdownButtonBase extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const DropdownButtonClassNames = cx([
-    'dropdown-button',
-    { 'is-block': isBlock },
-    { disabled },
-    customProps.className,
-  ]);
+    this.setButtonWrapperRef = this.setButtonWrapperRef.bind(this);
 
-  let calcWidth;
-  if (buttonWrapperRef.current && isBlock) {
-    calcWidth = `${buttonWrapperRef.current.getBoundingClientRect().width}px`;
+    this.buttonWrapperRef = null;
   }
 
-  return (
-    <div
-      {...customProps}
-      className={DropdownButtonClassNames}
-      ref={buttonWrapperRef}
-    >
-      {children}
-      <Dropdown
-        targetRef={() => buttonWrapperRef.current}
-        isOpen={isOpen}
-        requestClose={requestClose}
-        width={calcWidth}
+  setButtonWrapperRef(ref) {
+    this.buttonWrapperRef = ref;
+  }
+
+  render() {
+    const {
+      children,
+      buttons,
+      isOpen,
+      requestClose,
+      disabled,
+      isBlock,
+      ...customProps
+    } = this.props;
+
+    const DropdownButtonClassNames = cx([
+      'dropdown-button',
+      { 'is-block': isBlock },
+      { disabled },
+      customProps.className,
+    ]);
+
+    let calcWidth;
+    if (this.buttonWrapperRef && isBlock) {
+      calcWidth = `${this.buttonWrapperRef.getBoundingClientRect().width}px`;
+    }
+
+    return (
+      <div
+        {...customProps}
+        className={DropdownButtonClassNames}
+        ref={this.setButtonWrapperRef}
       >
-        {buttons}
-      </Dropdown>
-    </div>
-  );
-};
+        {children}
+        <Dropdown
+          targetRef={() => this.buttonWrapperRef}
+          isOpen={isOpen}
+          requestClose={requestClose}
+          width={calcWidth}
+        >
+          {buttons}
+        </Dropdown>
+      </div>
+    );
+  }
+}
 
 DropdownButtonBase.propTypes = propTypes;
 DropdownButtonBase.defaultProps = defaultProps;

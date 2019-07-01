@@ -2,7 +2,7 @@
   "name": "terra-dropdown-button",
   "main": "lib/DropdownButton.js",
   "version": "0.0.0",
-  "description": "A button that, when pressed, opens a dropdown with more buttons",
+  "description": "Provides a dropdown button component and split button component for selecting a single option (action) from a list of options.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"

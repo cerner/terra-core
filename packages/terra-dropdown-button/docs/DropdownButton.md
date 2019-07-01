@@ -1,6 +1,7 @@
 # Terra Dropdown Button
 
 The Terra Dropdown Button is a button that, when pressed, opens a dropdown with more buttons.
+It is intended to allow the user to choose from a list of options with no special emphasis on any option.
 
 ## Getting Started
 
