@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import KeyCode from 'keycode-js';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';
-import Button from './_Button';
+import Button from './Button';
 
 const cx = classNames.bind(styles);
 

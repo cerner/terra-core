@@ -5,7 +5,7 @@ import ReadMe from '../../../../docs/Button.md';
 import { name } from '../../../../package.json';
 
 // Component Source
-import ButtonSrc from '!raw-loader!../../../../src/_Button';
+import ButtonSrc from '!raw-loader!../../../../src/Button';
 
 // Example Files
 import ButtonExamples from '../example/Button';

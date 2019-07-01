@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../src/_Button';
+import Button from '../../src/Button';
 
 describe('Button', () => {
   it('renders a default option', () => {

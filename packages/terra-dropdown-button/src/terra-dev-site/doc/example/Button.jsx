@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames/bind';
 
-import Button from '../../../_Button';
+import Button from '../../../Button';
 import styles from './Button.module.scss';
 
 const cx = classnames.bind(styles);
