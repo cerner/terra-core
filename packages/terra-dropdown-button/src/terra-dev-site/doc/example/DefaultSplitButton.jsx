@@ -1,17 +1,25 @@
-/* eslint-disable no-console */
-import React from 'react';
+import React, { useState } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import { SplitButton, Button } from 'terra-dropdown-button/lib/DropdownButton';
+import { Button, SplitButton } from 'terra-dropdown-button/lib/DropdownButton';
 
-export default () => (
-  <SplitButton
-    primaryOptionLabel="Primary option"
-    onClick={() => { console.log('primary option'); }}
-  >
-    <Button label="Abacadabra" onClick={() => { console.log('hi'); }} />
-    <Button label="BAbacadabra" onClick={() => { console.log('bye'); }} />
-    <Button label="CAbacadabra" onClick={() => { console.log('eyb'); }} />
-    <Button label="DAbacadabra" onClick={() => { console.log('ih'); }} />
-  </SplitButton>
-);
+const Example = () => {
+  const [message, setMessage] = useState('No option clicked');
+
+  return (
+    <React.Fragment>
+      <SplitButton
+        primaryOptionLabel="Dropdown"
+        onClick={() => setMessage('Primary option clicked')}
+      >
+        <Button label="1st Option" onClick={() => setMessage('1st option clicked')} />
+        <Button label="2nd Option" onClick={() => setMessage('2nd option clicked')} />
+        <Button label="3rd Option" onClick={() => setMessage('3rd option clicked')} />
+        <Button label="4th Option" onClick={() => setMessage('4th option clicked')} />
+      </SplitButton>
+      <p>{message}</p>
+    </React.Fragment>
+  );
+};
+
+export default Example;

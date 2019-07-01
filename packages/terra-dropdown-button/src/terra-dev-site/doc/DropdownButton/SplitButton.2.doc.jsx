@@ -6,6 +6,7 @@ import { name } from '../../../../package.json';
 
 // Component Source
 import SplitButtonSrc from '!raw-loader!../../../../src/SplitButton';
+import ButtonSrc from '!raw-loader!../../../../src/Button';
 
 // Example Files
 import DefaultSplitButton from '../example/DefaultSplitButton';
@@ -41,6 +42,10 @@ const DocPage = () => (
       {
         componentName: 'Split Button',
         componentSrc: SplitButtonSrc,
+      },
+      {
+        componentName: 'Button',
+        componentSrc: ButtonSrc,
       },
     ]}
   />
