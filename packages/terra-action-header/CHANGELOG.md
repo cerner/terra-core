@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.17.0 - (June 28, 2019)
+------------------
 ### Added
 * Added `--terra-action-header-back-background-image` variable in ActionHeader.module.scss
 * Added `--terra-action-header-close-background-image` variable in ActionHeader.module.scss
@@ -34,7 +37,7 @@ Unreleased
 
 2.15.0 - (June 11, 2019)
 ------------------
-### Removed	
+### Removed
 * Removed node_modules from .npmignore
 
 ### Changed

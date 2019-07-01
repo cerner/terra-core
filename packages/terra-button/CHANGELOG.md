@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.18.0 - (June 28, 2019)
+------------------
 ### Added
 * Moved v2 Upgrade guide that existed in the wiki to the upgrade guide doc
 
