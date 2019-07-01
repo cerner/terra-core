@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import KeyCode from 'keycode-js';
+import { injectIntl, intlShape } from 'react-intl';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';
 import Button from './Button';
@@ -38,12 +39,26 @@ const propTypes = {
    * Sets the styles of the component.  The default is 'neutral'. Must be either 'neutral' or 'ghost'.
    */
   variant: PropTypes.oneOf(Object.values(Variants)),
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: intlShape.isRequired,
 };
 
 const defaultProps = {
   disabled: false,
   isBlock: false,
   variant: 'neutral',
+};
+
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
 };
 
 class SplitButton extends React.Component {
@@ -103,6 +118,7 @@ class SplitButton extends React.Component {
       primaryOptionLabel,
       onClick,
       variant,
+      intl,
       ...customProps
     } = this.props;
 
@@ -111,6 +127,8 @@ class SplitButton extends React.Component {
       primaryActive,
       chevronActive,
     } = this.state;
+
+    const chevronLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
 
     const primaryClassnames = cx(
       'split-button-primary',
@@ -156,7 +174,7 @@ class SplitButton extends React.Component {
           aria-disabled={disabled}
           aria-expanded={isOpen || undefined}
           aria-haspopup
-          aria-label="More Options"
+          aria-label={chevronLabel}
         >
           <span className={cx('chevron-icon')} />
         </button>
@@ -167,6 +185,7 @@ class SplitButton extends React.Component {
 
 SplitButton.propTypes = propTypes;
 SplitButton.defaultProps = defaultProps;
+SplitButton.contextType = contextTypes;
 
-export default SplitButton;
+export default injectIntl(SplitButton);
 export { Button, Variants };
