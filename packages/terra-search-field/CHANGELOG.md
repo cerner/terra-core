@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Updated search field to pass event object to 'handleClear' from 'handleKeyDown'.
 
 3.16.0 - (June 28, 2019)
 ------------------
