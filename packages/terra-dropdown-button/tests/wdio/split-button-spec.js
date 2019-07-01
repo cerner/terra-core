@@ -44,6 +44,19 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     Terra.it.validatesElement();
+
+    it('tries to tab to the button', () => {
+      browser.keys(['Tab']);
+      Terra.validates.screenshot('tab attempted');
+    });
+
+    it('tries to click the primary button', () => {
+      expect(() => browser.click('[class*=split-button-primary]')).to.throw('is not clickable');
+    });
+
+    it('tries to click the chevron', () => {
+      expect(() => browser.click('[class*=split-button-chevron]')).to.throw('is not clickable');
+    });
   });
 
   describe('Callback', () => {
@@ -53,11 +66,11 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       browser.moveToObject('#root', 100, 100);
     });
 
-    Terra.it.matchesScreenshot('initial');
+    Terra.it.matchesScreenshot();
 
     it('calls primary split button callback', () => {
       browser.click('[class*=split-button-primary]');
-      Terra.validates.screenshot('gray');
+      Terra.validates.screenshot('primary button click');
     });
 
     describe('Callback in menu', () => {
@@ -67,54 +80,69 @@ Terra.describeViewports('Split Button', ['medium'], () => {
         browser.waitForVisible('[class*=dropdown-list]');
       });
 
-      it('runs callback on click', () => {
-        browser.click('#red');
-        Terra.validates.screenshot('red');
+      it('runs callback on space', () => {
+        browser.keys(['Space']);
+        Terra.validates.screenshot('space');
       });
 
       it('keyboard navigates down and runs callback on space', () => {
         browser.keys(['ArrowDown', 'Space']);
-        Terra.validates.screenshot('white');
+        Terra.validates.screenshot('down arrow');
+      });
+
+      it('runs callback on enter', () => {
+        browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
+        Terra.validates.screenshot('enter');
+      });
+
+      it('runs callback on click', () => {
+        browser.click('#red');
+        Terra.validates.screenshot('click');
       });
 
       it('will not keyboard navigates down past the last option', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
-        Terra.validates.screenshot('blue');
+        Terra.validates.screenshot('no down out of bounds');
       });
 
       it('keyboard navigates up and runs callback on enter', () => {
         browser.keys(['ArrowDown', 'ArrowUp', 'Enter']);
-        Terra.validates.screenshot('red2');
+        Terra.validates.screenshot('up arrow');
       });
 
       it('will not keyboard navigates up past the first option', () => {
         browser.keys(['ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
-        Terra.validates.screenshot('red3');
+        Terra.validates.screenshot('no up out of bounds');
       });
 
       it('jumps to the last entry', () => {
         browser.keys(['End', 'Enter']);
-        Terra.validates.screenshot('blue2');
+        Terra.validates.screenshot('end');
       });
 
       it('jumps to the first entry', () => {
         browser.keys(['ArrowDown', 'Home', 'Enter']);
-        Terra.validates.screenshot('red4');
+        Terra.validates.screenshot('home');
       });
 
       it('jumps when typing', () => {
         browser.keys(['b', 'Enter']);
-        Terra.validates.screenshot('blue3');
+        Terra.validates.screenshot('jumps when typing');
       });
 
       it('closes on tab without running a callback', () => {
         browser.keys(['Tab']);
-        Terra.validates.screenshot('blue4');
+        Terra.validates.screenshot('tab');
+      });
+
+      it('closes on escape without running a callback', () => {
+        browser.keys(['Escape']);
+        Terra.validates.screenshot('escape');
       });
     });
   });
 
-  describe('Width', () => {
+  describe('Wide Contents', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/wide-split-button');
       // avoid hover styles
