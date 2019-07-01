@@ -173,7 +173,7 @@ class SearchField extends React.Component {
       this.handleSearch();
     }
     if (event.nativeEvent.keyCode === KeyCode.KEY_ESCAPE) {
-      this.handleClear();
+      this.handleClear(event);
     }
   }
 
