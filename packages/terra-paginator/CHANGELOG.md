@@ -10,6 +10,7 @@ Unreleased
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 * Updated anchors to buttons for accessibility
 * Added new theme variables - see UPGRADEGUIDE.md
+* Added support for i18n and translations
 
 2.15.0 - (June 18, 2019)
 ------------------
