@@ -18,7 +18,7 @@ const StatusViewVariants = {
 /* eslint-disable react/forbid-foreign-prop-types */
 const propTypes = {
   /**
-   * An array of objects containg terra-button properties. A key attribute is required for each object.
+   * An array of objects containing terra-button properties. A key attribute is required for each object.
    * This array is used to render buttons in the bottom section.
    * Example:`[{ text: 'Button 1', key: 1, size: 'medium', variant: 'action', onClick: onClickFunction}]`
    */

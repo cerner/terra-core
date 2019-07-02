@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+4.0.0 - (June 28, 2019)
+------------------
 ### Breaking
 * Removed children prop. Replaced with buttonAttrs prop
 * Removed the default of rendering an error view
@@ -12,6 +15,7 @@ Unreleased
 * Removed StatusView.Opts object and export
 * Use CSS grid to center component
 * Render divider if title and message/buttons exist
+
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 * Remove incorrect entry in upgrade guide that specifies new margin-bottom theme variable.
