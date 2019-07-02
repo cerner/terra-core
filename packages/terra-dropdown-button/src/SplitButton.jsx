@@ -16,7 +16,7 @@ const Variants = {
 
 const propTypes = {
   /**
-   * The options to display in the dropdown. Should be of type `Button`.
+   * The options to display in the dropdown. Should be comprised of the subcomponent `Button`.
    */
   children: PropTypes.node.isRequired,
   /**
