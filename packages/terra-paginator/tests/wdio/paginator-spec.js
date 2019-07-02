@@ -37,13 +37,13 @@ describe('Paginator', () => {
     Terra.it.matchesScreenshot('1');
 
     it('should toggle the pages when the right arrow is clicked', () => {
-      browser.click('[aria-label="next"]');
+      browser.click('[class*="next"]');
     });
 
     Terra.it.matchesScreenshot('2');
 
     it('should toggle the pages when the left arrow is clicked', () => {
-      browser.click('[aria-label="previous"]');
+      browser.click('[class*="previous"]');
     });
 
     Terra.it.matchesScreenshot('3');
@@ -61,13 +61,13 @@ describe('Paginator', () => {
     Terra.it.matchesScreenshot('1');
 
     it('should toggle the pages when the right arrow is clicked', () => {
-      browser.click('[aria-label="next"]');
+      browser.click('[class*="next"]');
     });
 
     Terra.it.matchesScreenshot('2');
 
     it('should toggle the pages when the left arrow is clicked', () => {
-      browser.click('[aria-label="previous"]');
+      browser.click('[class*="previous"]');
     });
 
     Terra.it.matchesScreenshot('3');

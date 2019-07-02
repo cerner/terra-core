@@ -1,49 +1,31 @@
 @import '~terra-mixins/lib/Mixins';
 
 :local {
-  // html input[type='button'].terra-Button selector used to
-  // prevent a WebKit bug destroys native `audio` and `video` controls
-  // in Android 4. More info:
-  // https://github.com/necolas/normalize.css/issues/20
-  // https://code.google.com/p/android/issues/detail?id=34301
-  // appearance: button; set to correct the inability to style
-  // clickable types in iOS and Safari.
-  // Appearance needs to be applied only to button/input elements, as
-  // applying to anchor element will cause render issue.
-  // More info:
-  // https://github.com/necolas/normalize.css/issues/566
-  // https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
-  // stylelint-disable selector-no-qualifying-type
-  button.button,
-  html input[type='button'].button,
-  input[type='reset'].button,
-  input[type='submit'].button {
-    appearance: button;  // autoprefix fix into -webkit-appearance
-  }
-  // stylelint-enable selector-no-qualifying-type
-
   .paginator {
     align-items: center;
     display: flex;
     justify-content: center;
 
-    &.pageless {
-      justify-content: space-between;
+    // html input[type='button'].nav-link selector used to
+    // prevent a WebKit bug destroys native `audio` and `video` controls
+    // in Android 4. More info:
+    // https://github.com/necolas/normalize.css/issues/20
+    // https://code.google.com/p/android/issues/detail?id=34301
+    // appearance: button; set to correct the inability to style
+    // clickable types in iOS and Safari.
+    // Appearance needs to be applied only to button/input elements, as
+    // applying to anchor element will cause render issue.
+    // More info:
+    // https://github.com/necolas/normalize.css/issues/566
+    // https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
+    // stylelint-disable selector-no-qualifying-type
+    button.nav-link,
+    input[type='button'].nav-link,
+    input[type='reset'].nav-link,
+    input[type='submit'].nav-link {
+      appearance: button;  // autoprefix fix into -webkit-appearance
     }
-
-    &.progressive {
-      justify-content: space-between;
-
-      .nav-link.previous {
-        margin-left: var(--terra-paginator-progressive-nav-link-previous-margin-left, 0.14285rem);
-        margin-right: var(--terra-paginator-progressive-nav-link-previous-margin-right, 0.14285rem);
-      }
-
-      .nav-link.next {
-        margin-left: var(--terra-paginator-progressive-nav-link-next-margin-left, 0.14285rem);
-        margin-right: var(--terra-paginator-progressive-nav-link-next-margin-right, 0.14285rem);
-      }
-    }
+    // stylelint-enable selector-no-qualifying-type
 
     .nav-link {
       background: var(--terra-paginator-nav-link-background, none);
@@ -95,8 +77,8 @@
         background: var(--terra-paginator-nav-link-active-background, rgba(0, 0, 0, 0.07));
         border: var(--terra-paginator-nav-link-active-border, none);
         color: var(--terra-paginator-nav-link-active-color, #001f67);
-        -webkit-tap-highlight-color: transparent;
-        text-decoration: var(--terra-paginator-nav-link-active-text-decoration, underline);
+        //-webkit-tap-highlight-color: transparent; // TODO - add focus management
+        text-decoration: var(--terra-paginator-nav-link-active-text-decoration, none);
       }
     }
 
@@ -156,6 +138,24 @@
       margin-left: var(--terra-paginator-nav-link-right-controls-margin-left, 0.57143rem);
       margin-right: var(--terra-paginator-nav-link-right-controls-margin-right, 0.14286rem);
     }
+
+    &.pageless {
+      justify-content: space-between;
+    }
+
+    &.progressive {
+      justify-content: space-between;
+
+      .nav-link.previous {
+        margin-left: var(--terra-paginator-progressive-nav-link-previous-margin-left, 0.14285rem);
+        margin-right: var(--terra-paginator-progressive-nav-link-previous-margin-right, 0.14285rem);
+      }
+
+      .nav-link.next {
+        margin-left: var(--terra-paginator-progressive-nav-link-next-margin-left, 0.14285rem);
+        margin-right: var(--terra-paginator-progressive-nav-link-next-margin-right, 0.14285rem);
+      }
+    }    
   }
 
   .icon {
