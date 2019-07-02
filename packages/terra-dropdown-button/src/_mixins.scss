@@ -6,7 +6,7 @@
 @mixin terra-dropdown-button-variant-color($color-map) {
   &.split-button-primary,
   &.split-button-chevron,
-  &.dropdown-button-type {
+  &.dropdown-button {
     background-color: map-get($color-map, background-color);
     border-color: map-get($color-map, border-color);
     box-shadow: map-get($color-map, box-shadow);
@@ -46,7 +46,7 @@
     }
   }
 
-  &.dropdown-button-type {
+  &.dropdown-button {
     border-width: map-get($color-map, dropdown-border-width);
     font-weight: map-get($color-map, dropdown-font-weight);
 

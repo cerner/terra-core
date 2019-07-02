@@ -16,12 +16,12 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('validates hover styling', () => {
-      browser.moveToObject('[class*=dropdown-button-type]');
+      browser.moveToObject('[class*=dropdown-button]');
       Terra.validates.element('hover');
     });
 
     it('validates the open dropdown', () => {
-      browser.click('[class*=dropdown-button-type]');
+      browser.click('[class*=dropdown-button]');
     });
 
     Terra.it.validatesElement('dropdown open', { selector: '[class*=dropdown-list]' });
@@ -41,7 +41,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('tries to click the button', () => {
-      expect(() => browser.click('[class*=dropdown-button-type]')).to.throw('is not clickable');
+      expect(() => browser.click('[class*=dropdown-button]')).to.throw('is not clickable');
     });
   });
 
@@ -57,7 +57,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     describe('Callback in menu', () => {
       beforeEach(() => {
         // Open the menu
-        browser.click('[class*=dropdown-button-type]');
+        browser.click('[class*=dropdown-button]');
         browser.waitForVisible('[class*=dropdown-list]');
       });
 

@@ -16,7 +16,7 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type neutral is-block"
+    className="dropdown-button neutral is-block"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -24,7 +24,7 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
     type="button"
   >
     <span
-      className="dropdown-button-type-text"
+      className="dropdown-button-text"
     >
       Primary Option
     </span>
@@ -51,7 +51,7 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type neutral"
+    className="dropdown-button neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -59,7 +59,7 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
     type="button"
   >
     <span
-      className="dropdown-button-type-text"
+      className="dropdown-button-text"
     >
       Primary Option
     </span>
@@ -86,7 +86,7 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
   <button
     aria-disabled={true}
     aria-haspopup={true}
-    className="dropdown-button-type neutral"
+    className="dropdown-button neutral"
     disabled={true}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -95,7 +95,7 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
     type="button"
   >
     <span
-      className="dropdown-button-type-text"
+      className="dropdown-button-text"
     >
       Primary Option
     </span>
@@ -124,7 +124,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type neutral"
+    className="dropdown-button neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -132,7 +132,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     type="button"
   >
     <span
-      className="dropdown-button-type-text"
+      className="dropdown-button-text"
     >
       Primary Option
     </span>
@@ -170,7 +170,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type neutral"
+    className="dropdown-button neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -178,7 +178,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     type="button"
   >
     <span
-      className="dropdown-button-type-text"
+      className="dropdown-button-text"
     >
       Primary Option
     </span>
@@ -205,7 +205,7 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
   <button
     aria-disabled={false}
     aria-haspopup={true}
-    className="dropdown-button-type emphasis"
+    className="dropdown-button emphasis"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -213,7 +213,7 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
     type="button"
   >
     <span
-      className="dropdown-button-type-text"
+      className="dropdown-button-text"
     >
       Primary Option
     </span>
@@ -241,7 +241,7 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
     aria-disabled={false}
     aria-expanded={true}
     aria-haspopup={true}
-    className="dropdown-button-type neutral is-active"
+    className="dropdown-button neutral is-active"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -249,7 +249,7 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
     type="button"
   >
     <span
-      className="dropdown-button-type-text"
+      className="dropdown-button-text"
     >
       Primary Option
     </span>

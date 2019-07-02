@@ -43,12 +43,17 @@ class DropdownButtonBase extends React.Component {
     super(props);
 
     this.setButtonWrapperRef = this.setButtonWrapperRef.bind(this);
+    this.getButtonWrapperRef = this.getButtonWrapperRef.bind(this);
 
     this.buttonWrapperRef = null;
   }
 
   setButtonWrapperRef(ref) {
     this.buttonWrapperRef = ref;
+  }
+
+  getButtonWrapperRef() {
+    return this.buttonWrapperRef;
   }
 
   render() {
@@ -63,7 +68,7 @@ class DropdownButtonBase extends React.Component {
     } = this.props;
 
     const DropdownButtonClassNames = cx([
-      'dropdown-button',
+      'dropdown-button-base',
       { 'is-block': isBlock },
       { disabled },
       customProps.className,
@@ -82,7 +87,7 @@ class DropdownButtonBase extends React.Component {
       >
         {children}
         <Dropdown
-          targetRef={() => this.buttonWrapperRef}
+          targetRef={this.getButtonWrapperRef}
           isOpen={isOpen}
           requestClose={requestClose}
           width={calcWidth}

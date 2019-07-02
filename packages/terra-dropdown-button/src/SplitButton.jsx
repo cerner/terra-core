@@ -52,15 +52,6 @@ const defaultProps = {
   variant: 'neutral',
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
 class SplitButton extends React.Component {
   constructor(props) {
     super(props);
@@ -185,7 +176,6 @@ class SplitButton extends React.Component {
 
 SplitButton.propTypes = propTypes;
 SplitButton.defaultProps = defaultProps;
-SplitButton.contextType = contextTypes;
 
 export default injectIntl(SplitButton);
 export { Button, Variants };

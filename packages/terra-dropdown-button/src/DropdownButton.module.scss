@@ -4,7 +4,7 @@
 @import './mixins';
 
 :local {
-  .dropdown-button-type {
+  .dropdown-button {
     border-radius: var(--terra-dropdown-button-dropdown-type-border-radius, 3px);
     border-style: solid;
     display: inline-flex;
@@ -30,14 +30,14 @@
     }
   }
 
-  .dropdown-button-type-text {
+  .dropdown-button-text {
     display: inline-block;
     // Needed for IE 10 to linebreak things properly
     flex: 0 1 auto;
     margin-right: var(--terra-dropdown-button-dropdown-type-text-margin-right, 5px);
   }
 
-  .is-block > .dropdown-button-type-text {
+  .is-block > .dropdown-button-text {
     flex-grow: 1;
   }
 

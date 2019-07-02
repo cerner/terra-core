@@ -17,7 +17,7 @@ const Variants = {
 
 const propTypes = {
   /**
-   * The options to display in the dropdown. Should be of type `Button`.
+   * The options to display in the dropdown. Should be comprised of the subcomponent `Button`.
    */
   children: PropTypes.node.isRequired,
   /**
@@ -96,7 +96,7 @@ class DropdownButton extends React.Component {
     } = this.state;
 
     const classnames = cx(
-      'dropdown-button-type',
+      'dropdown-button',
       variant,
       { 'is-active': isOpen || active },
       { 'is-block': isBlock },
@@ -123,7 +123,7 @@ class DropdownButton extends React.Component {
           aria-expanded={isOpen || undefined}
           aria-haspopup
         >
-          <span className={cx('dropdown-button-type-text')}>{label}</span>
+          <span className={cx('dropdown-button-text')}>{label}</span>
           <span className={cx('chevron-icon')} />
         </button>
       </DropdownButtonBase>
