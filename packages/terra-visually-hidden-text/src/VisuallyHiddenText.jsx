@@ -7,6 +7,10 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Callback ref to pass into the dom element.
+   */
+  refCallback: PropTypes.func,
+  /**
    * Text to be read to the screen reader
    */
   text: PropTypes.string,
@@ -14,15 +18,16 @@ const propTypes = {
 
 const defaultProps = {
   text: undefined,
+  refCallback: undefined,
 };
 
-const VisuallyHiddenText = ({ text, ...customProps }) => {
+const VisuallyHiddenText = ({ refCallback, text, ...customProps }) => {
   const VisuallyHiddenTextClassNames = cx([
     'visually-hidden-text',
     customProps.className,
   ]);
 
-  return (<span {...customProps} className={VisuallyHiddenTextClassNames}>{text}</span>);
+  return (<span ref={refCallback} {...customProps} className={VisuallyHiddenTextClassNames}>{text}</span>);
 };
 
 VisuallyHiddenText.propTypes = propTypes;
