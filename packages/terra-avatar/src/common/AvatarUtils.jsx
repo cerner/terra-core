@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import TerraImage from 'terra-image';
+import TerraImage, { ImageFit } from 'terra-image';
 import styles from './Avatar.module.scss';
 
 const cx = classNames.bind(styles);
@@ -71,6 +71,9 @@ const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
  */
 const generateImage = (image, alt, isAriaHidden, variant, handleFallback) => {
   const icon = generateImagePlaceholder(alt, isAriaHidden, variant);
+  if (variant === 'user') {
+    return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} imageFit={ImageFit.COVER} />;
+  }
   return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} />;
 };
 

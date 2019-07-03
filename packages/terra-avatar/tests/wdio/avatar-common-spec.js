@@ -13,6 +13,20 @@ describe('Avatar', () => {
     Terra.it.matchesScreenshot({ selector: '#image-avatar' });
   });
 
+  describe('Image Avatar short and wide', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-avatar-short-and-wide'));
+
+    Terra.it.isAccessible({ selector: '#image-avatar' });
+    Terra.it.matchesScreenshot({ selector: '#image-avatar' });
+  });
+
+  describe('Image Avatar tall and narrow', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-avatar-tall-and-narrow'));
+
+    Terra.it.isAccessible({ selector: '#image-avatar' });
+    Terra.it.matchesScreenshot({ selector: '#image-avatar' });
+  });
+
   describe('Invalid Image Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/invalid-image-avatar'));
 

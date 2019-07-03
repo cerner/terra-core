@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added enum `ImageFit` from Terra-image to resolve issue for non-square images.
 
 2.18.0 - (June 28, 2019)
 ------------------
