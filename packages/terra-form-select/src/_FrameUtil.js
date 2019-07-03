@@ -100,7 +100,7 @@ class FrameUtil {
     const { hasSearchChanged, searchValue } = state;
 
     if ((variant === Variants.TAG || variant === Variants.COMBOBOX)
-        && (searchValue.trim().length > 0)
+        && (variant !== Variants.TAG || searchValue.trim().length > 0)
         && hasSearchChanged
         && onSelect
         && (variant !== Variants.TAG || !FrameUtil.includes(props, searchValue))
