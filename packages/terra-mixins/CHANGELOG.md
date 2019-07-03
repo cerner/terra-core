@@ -4,7 +4,12 @@ Changelog
 Unreleased
 ----------
 
-3.8.0 - (June 11, 2019)
+1.31.0 - (June 28, 2019)
+------------------
+### Changed
+* Updated changelog versions
+
+1.30.0 - (June 11, 2019)
 ------------------
 ### Removed
 * Removed node_modules from .npmignore
@@ -12,57 +17,57 @@ Unreleased
 ### Changed
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
-3.7.0 - (March 26, 2019)
+1.23.0 - (March 26, 2019)
 ------------------
 ### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
 
-3.6.0 - (February 26, 2019)
+1.22.0 - (February 26, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.35.0 - (February 5, 2019)
+1.21.0 - (February 5, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.34.0 - (January 22, 2019)
+1.20.0 - (January 22, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.33.0 - (January 8, 2019)
+1.19.0 - (January 8, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.32.0 - (January 2, 2019)
+1.18.0 - (January 2, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.30.0 - (November 19, 2018)
+1.17.0 - (November 19, 2018)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.29.0 - (November 13, 2018)
+1.16.0 - (November 13, 2018)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.28.0 - (November 9, 2018)
+1.15.0 - (November 9, 2018)
 ------------------
 ### Changed
 * Updated url-encode to include '{' and '}' to support the style tag in SVGs for IE
 
-2.27.0 - (October 30, 2018)
+1.14.0 - (October 30, 2018)
 ------------------
 ### Changed
 * Update doc on mixin import to be more explicit
 
-2.26.0 - (October 8, 2018)
+1.13.0 - (October 8, 2018)
 ------------------
 ### Changed
 * Updated links in docs on supported features
