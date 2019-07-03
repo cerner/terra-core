@@ -15,11 +15,11 @@ const ImageFluid = () => (
     </div>
     <p>Image width is larger than the container. Image height is smaller than the container.</p>
     <div id="height-smaller" className={cx('image-conatiner-reduced-width')}>
-      <Image src={placeholder150x150} alt="rounded" variant="rounded" isFluid />
+      <Image src={placeholder150x150} alt="rounded" variant="rounded" imageFit="cover" isFluid />
     </div>
     <p>Image width is smaller than the container. Image height is larger than the container.</p>
     <div id="width-smaller" className={cx('image-conatiner-reduced-height')}>
-      <Image src={placeholder150x150} alt="rounded" variant="rounded" isFluid />
+      <Image src={placeholder150x150} alt="rounded" variant="rounded" imageFit="cover" isFluid />
     </div>
   </div>
 );

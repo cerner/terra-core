@@ -36,4 +36,29 @@
   .hidden {
     display: none;
   }
+
+  .contain {
+    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: contain;';
+    object-fit: contain;
+  }
+
+  .cover {
+    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: cover;';
+    object-fit: cover;
+  }
+
+  .fill {
+    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: fill;';
+    object-fit: fill;
+  }
+
+  .scale-down {
+    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: scale-down;';
+    object-fit: scale-down;
+  }
+
+  .none {
+    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: none;';
+    object-fit: none;
+  }
 }

@@ -12,6 +12,7 @@ exports[`should render a circle image component with fluid behavior 1`] = `
 >
   <Image
     alt="circle"
+    imageFit="fill"
     isFluid={true}
     src=""
     variant="circle"
@@ -26,7 +27,7 @@ exports[`should render a hidden src image and a visible placeholder image 1`] = 
   >
     <img
       alt=" "
-      className="image default"
+      className="image fill default"
       height="75"
       onError={[Function]}
       onLoad={[Function]}
@@ -45,7 +46,7 @@ exports[`should render a hidden src image and a visible placeholder image 1`] = 
 exports[`should render a thumbail image component with fluid behavior 1`] = `
 <img
   alt="thumbnail image"
-  class="image thumbnail fluid"
+  class="image fill thumbnail fluid"
   src=""
 />
 `;
@@ -53,7 +54,7 @@ exports[`should render a thumbail image component with fluid behavior 1`] = `
 exports[`should render a thumbail image component with non-fluid behavior 1`] = `
 <img
   alt="thumbnail image"
-  class="image thumbnail"
+  class="image fill thumbnail"
   src=""
 />
 `;
@@ -67,7 +68,7 @@ exports[`should render the placeholder image 1`] = `
 exports[`should render the src image 1`] = `
 <img
   alt="profile"
-  className="image default"
+  className="image fill default"
   height="75"
   onError={[Function]}
   onLoad={[Function]}

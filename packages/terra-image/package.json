@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "object-fit-images": "^3.2.4",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.11.0"
   }
