@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Updated
+* updated jest snapshots
 
 3.14.0 - (June 28, 2019)
 ------------------
