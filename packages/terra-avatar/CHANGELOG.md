@@ -3,8 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
-### Added
-* Added enum `ImageFit` from Terra-image to resolve issue for non-square images.
+### Fixed
+* Fixed issue for avatar to allow non-square images by sending `imageFit` as `cover`.
 
 2.18.0 - (June 28, 2019)
 ------------------

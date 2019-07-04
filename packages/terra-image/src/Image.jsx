@@ -13,7 +13,7 @@ const ImageVariant = {
   THUMBNAIL: 'thumbnail',
 };
 
-const ImageFit = {
+const ImageFitTypes = {
   COVER: 'cover',
   SCALEDOWN: 'scale-down',
   FILL: 'fill',
@@ -176,4 +176,4 @@ Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;
 
 export default Image;
-export { ImageVariant, ImageFit };
+export { ImageVariant, ImageFitTypes };
