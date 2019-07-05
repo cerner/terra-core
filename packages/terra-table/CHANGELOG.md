@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.17.0 - (June 28, 2019)
+------------------
 ### Added
 * Added themeable variable --terra-table-subheader-border-bottom
 
