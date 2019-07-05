@@ -72,6 +72,7 @@ class DropdownButtonBase extends React.Component {
       { 'is-block': isBlock },
       { disabled },
       customProps.className,
+      'ignore-react-onclickoutside',
     ]);
 
     let calcWidth;

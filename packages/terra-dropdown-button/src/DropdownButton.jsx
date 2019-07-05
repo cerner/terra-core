@@ -58,7 +58,7 @@ class DropdownButton extends React.Component {
   }
 
   handleDropdownButtonClick() {
-    this.setState({ isOpen: true });
+    this.setState(p => ({ isOpen: !p.isOpen }));
   }
 
   handleDropdownRequestClose() {
