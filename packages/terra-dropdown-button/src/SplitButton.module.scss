@@ -10,6 +10,7 @@
     border-style: solid;
     border-top-left-radius: var(--terra-dropdown-button-split-type-border-top-left-radius, 3px);
     border-top-right-radius: 0;
+    cursor: pointer;
     // Needed for IE 10 to linebreak things properly
     flex: 0 1 auto;
     font-size: var(--terra-dropdown-button-split-type-font-size, 1rem);
@@ -42,6 +43,7 @@
     border-style: solid;
     border-top-left-radius: 0;
     border-top-right-radius: var(--terra-dropdown-button-split-type-chevron-border-top-right-radius, 3px);
+    cursor: pointer;
     // If flex-shrink is set to 1 IE will give the button 0 width
     flex: 0 0 auto;
     font-size: var(--terra-dropdown-button-split-type-chevron-font-size, 1rem);

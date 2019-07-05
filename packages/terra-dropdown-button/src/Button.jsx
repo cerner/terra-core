@@ -31,13 +31,15 @@ const propTypes = {
   requestClose: PropTypes.func,
 };
 
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+// Keyboard events are handled in _DropdownButton.jsx
 const Option = ({
   label, onClick, isFocused, isActive, requestClose, ...customProps
 }) => (
   <li>
     <div
       {...customProps}
-      onMouseUp={() => { onClick(); requestClose(); }}
+      onClick={() => { onClick(); requestClose(); }}
       role="button"
       tabIndex="-1"
       className={cx([

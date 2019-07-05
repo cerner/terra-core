@@ -25,7 +25,7 @@ class DropdownListUtil {
 
   /**
    * Finds the option matching the requested label.
-   * @param {React.ReactNode} object - The node being flattened.
+   * @param {React.ReactNode} object - The dropdown containing the options.
    * @param {string} label - The label of the target option.
    * @return {React.ReactNode|undefined} - The option. Returns undefined if not found.
    */
@@ -34,8 +34,8 @@ class DropdownListUtil {
   }
 
   /**
-   * Finds the first option in the menu.
-   * @param {React.ReactNode} object - The menu.
+   * Finds the first option in the dropdown.
+   * @param {React.ReactNode} object - The dropdown.
    * @return {string|null} - The label of the first option. Null if not found.
    */
   static findFirst(object) {
@@ -48,8 +48,8 @@ class DropdownListUtil {
   }
 
   /**
-   * Finds the first option in the menu.
-   * @param {React.ReactNode} object - The menu.
+   * Finds the first option in the dropdown.
+   * @param {React.ReactNode} object - The dropdown.
    * @return {string|null} - The label of the last option. Null if not found.
    */
   static findLast(object) {
@@ -62,8 +62,8 @@ class DropdownListUtil {
   }
 
   /**
-   * Finds the first option in the menu that starts with the string.
-   * @param {React.ReactNode} object - The menu.
+   * Finds the first option in the dropdown that starts with the string.
+   * @param {React.ReactNode} object - The dropdown.
    * @param {string} string - The start string.
    * @return {string|null} - The firt option that starts with the provided string.
    */
@@ -75,7 +75,7 @@ class DropdownListUtil {
 
   /**
    * Finds the option following the active option.
-   * @param {React.ReactNode} object - The node being flattened.
+   * @param {React.ReactNode} object - The dropdown containing the options.
    * @param {string} label - The label of the active option.
    * @return {string|null} - The label of the next option. Returns null if not found.
    */
@@ -87,7 +87,7 @@ class DropdownListUtil {
 
   /**
    * Finds the option preceding the active option.
-   * @param {React.ReactNode} object - The node being flattened.
+   * @param {React.ReactNode} object - The dropdown containing the options.
    * @param {string} label - The label of the active option.
    * @return {string|null} - The label of the previous option. Returns null if not found.
    */

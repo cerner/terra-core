@@ -9,13 +9,13 @@ const Example = () => {
   return (
     <React.Fragment>
       <SplitButton
-        primaryOptionLabel="Dropdown"
-        onClick={() => setMessage('Primary option clicked')}
+        primaryOptionLabel="Reply"
+        onClick={() => setMessage('Reply clicked')}
       >
-        <Button label="1st Option" onClick={() => setMessage('1st option clicked')} />
-        <Button label="2nd Option" onClick={() => setMessage('2nd option clicked')} />
-        <Button label="3rd Option" onClick={() => setMessage('3rd option clicked')} />
-        <Button label="4th Option" onClick={() => setMessage('4th option clicked')} />
+        <Button label="Reply All" onClick={() => setMessage('Reply All clicked')} />
+        <Button label="Forward" onClick={() => setMessage('Forward clicked')} />
+        <Button label="Reply in 10 minutes" onClick={() => setMessage('Reply in 10 minutes clicked')} />
+        <Button label="Selective Reply" onClick={() => setMessage('Selective Reply clicked')} />
       </SplitButton>
       <p>{message}</p>
     </React.Fragment>

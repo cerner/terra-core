@@ -9,12 +9,12 @@ const Example = () => {
   return (
     <React.Fragment>
       <DropdownButton
-        label="Dropdown"
+        label="Export"
       >
-        <Button label="1st Option" onClick={() => setMessage('1st option clicked')} />
-        <Button label="2nd Option" onClick={() => setMessage('2nd option clicked')} />
-        <Button label="3rd Option" onClick={() => setMessage('3rd option clicked')} />
-        <Button label="4th Option" onClick={() => setMessage('4th option clicked')} />
+        <Button label="Export as PDF" onClick={() => setMessage('Export as PDF clicked')} />
+        <Button label="Export as Plain Text" onClick={() => setMessage('Export as Plain Text clicked')} />
+        <Button label="Export as Web Page" onClick={() => setMessage('Export as Web Page clicked')} />
+        <Button label="Export as XML" onClick={() => setMessage('Export as XML clicked')} />
       </DropdownButton>
       <p>{message}</p>
     </React.Fragment>
