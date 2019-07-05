@@ -71,10 +71,8 @@ const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
  */
 const generateImage = (image, alt, isAriaHidden, variant, handleFallback) => {
   const icon = generateImagePlaceholder(alt, isAriaHidden, variant);
-  if (variant === 'user') {
-    return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} imageFit={ImageFitTypes.COVER} />;
-  }
-  return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} />;
+  const imageFit = (variant === 'user') ? ImageFitTypes.COVER : undefined;
+  return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} imageFit={imageFit} />;
 };
 
 

@@ -77,7 +77,7 @@ class Image extends React.Component {
   constructor(props) {
     super(props);
 
-    this.myRef = React.createRef();
+    this.ImageRef = React.createRef();
 
     this.state = {
       isLoading: true,
@@ -133,7 +133,7 @@ class Image extends React.Component {
         onLoad={this.handleOnLoad}
         onError={this.handleOnError}
         className={imageClasses}
-        ref={this.myRef}
+        ref={this.ImageRef}
       />
     );
   }
@@ -152,8 +152,7 @@ class Image extends React.Component {
     ]);
     delete customProps.className;
     if (!this.state.isLoading) {
-      const img = this.myRef.current;
-      objectFitImages(img);
+      objectFitImages(this.ImageRef.current);
     }
     if (placeholder) {
       if (this.state.isLoading) {

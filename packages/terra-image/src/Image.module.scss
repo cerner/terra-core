@@ -37,6 +37,9 @@
     display: none;
   }
 
+  /**
+   * Polyfill 'object-fit-images' for IE requires to use object-fit inside font-family.
+   */
   .contain {
     font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: contain;';
     object-fit: contain;
