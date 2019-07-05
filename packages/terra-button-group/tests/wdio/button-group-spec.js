@@ -1,31 +1,29 @@
-const viewports = Terra.viewports('tiny', 'huge');
-
-describe('Button Group', () => {
+Terra.describeViewports('Button Group', ['huge'], () => {
   describe('Text Button', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-button-group/button-group/button-group-text');
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot({ selector: '#button-group-text' });
+
+    Terra.it.validatesElement({ selector: '#button-group-text' });
   });
 
-  describe('Button Group Wrapping', () => {
+  Terra.describeViewports('Button Group Wrapping', ['tiny', 'huge'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-button-group/button-group/button-group-wrapping');
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+
+    Terra.it.validatesElement();
   });
 
-  describe('Button Group Block', () => {
+  Terra.describeViewports('Button Group Block', ['tiny', 'huge'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-button-group/button-group/button-group-is-block');
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+
+    Terra.it.validatesElement();
   });
 
   describe('Long Text Button', () => {
@@ -33,8 +31,8 @@ describe('Button Group', () => {
       browser.url('/#/raw/tests/terra-button-group/button-group/button-group-long-text');
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot({ selector: '#button-group-text' });
+
+    Terra.it.validatesElement({ selector: '#button-group-text' });
   });
 
   describe('Icon Button', () => {
@@ -42,20 +40,20 @@ describe('Button Group', () => {
       browser.url('/#/raw/tests/terra-button-group/button-group/button-group-icon');
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot({ selector: '#button-group-icon' });
+
+    Terra.it.validatesElement({ selector: '#button-group-icon' });
   });
 
   describe('Not Selectable', () => {
     before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-not-selectable'));
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot({ selector: '#button-group-not-selectable' });
+
+    Terra.it.validatesElement({ selector: '#button-group-not-selectable' });
   });
 
   describe('Disabled Buttons', () => {
     before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-disabled-buttons'));
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot({ selector: '#button-group-not-selectable' });
+
+    Terra.it.validatesElement({ selector: '#button-group-not-selectable' });
   });
 
   describe('Single-Select', () => {
@@ -66,8 +64,7 @@ describe('Button Group', () => {
       expect(browser.getText('#selected-key')).to.equal('1');
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('button1-selected');
+    Terra.it.validatesElement('button1-selected');
 
     it('should select the second button', () => {
       browser.keys('Tab');
@@ -75,8 +72,7 @@ describe('Button Group', () => {
       expect(browser.getText('#selected-key')).to.equal('2');
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('button2-selected');
+    Terra.it.validatesElement('button2-selected');
 
     it('should select the fourth button', () => {
       browser.keys('Tab');
@@ -85,8 +81,7 @@ describe('Button Group', () => {
       expect(browser.getText('#selected-key')).to.equal('4');
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('button4-selected');
+    Terra.it.validatesElement('button4-selected');
   });
 
   describe('Multi-Select', () => {
@@ -97,16 +92,14 @@ describe('Button Group', () => {
       expect(browser.getText('#selected-keys')).to.equal('1');
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('button1-selected');
+    Terra.it.validatesElement('button1-selected');
 
     it('should unselect the first button', () => {
       browser.keys('Space');
       expect(browser.getText('#selected-keys')).to.equal('');
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('button1-unselected');
+    Terra.it.validatesElement('button1-unselected');
 
     it('should select the second button', () => {
       browser.keys('Tab');
@@ -114,8 +107,7 @@ describe('Button Group', () => {
       expect(browser.getText('#selected-keys')).to.equal('2');
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('button2-selected');
+    Terra.it.validatesElement('button2-selected');
 
     it('should select the third button', () => {
       browser.keys('Tab');
@@ -123,15 +115,13 @@ describe('Button Group', () => {
       expect(browser.getText('#selected-keys')).to.equal('2, 3');
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('button3-selected');
+    Terra.it.validatesElement('button3-selected');
 
     it('should unselect the third button', () => {
       browser.keys('Space');
       expect(browser.getText('#selected-keys')).to.equal('2');
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('button3-unselected');
+    Terra.it.validatesElement('button3-unselected');
   });
 });
