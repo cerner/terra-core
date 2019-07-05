@@ -1,4 +1,4 @@
-describe('Avatar', () => {
+Terra.describeViewports('Avatar', ['huge'], () => {
   describe('Icon Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/user-avatar'));
 
