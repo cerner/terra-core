@@ -1,11 +1,8 @@
-describe('Radio', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
-
+Terra.describeViewports('Radio', ['medium'], () => {
   describe('Default', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/default-radio'));
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
 
     describe('Hover', () => {
       beforeEach(() => {
@@ -13,8 +10,7 @@ describe('Radio', () => {
         browser.moveToObject('#default');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
     });
 
     describe('Checked', () => {
@@ -24,8 +20,7 @@ describe('Radio', () => {
         browser.click('#site');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
     });
 
     describe('Focus', () => {
@@ -34,8 +29,7 @@ describe('Radio', () => {
         browser.keys('Tab');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
     });
   });
 
@@ -44,14 +38,12 @@ describe('Radio', () => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/disabled-radio');
     });
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Hidden Label', () => {
     beforeEach(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/hidden-radio'));
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 });
