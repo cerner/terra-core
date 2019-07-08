@@ -8,7 +8,7 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
   });
 
   describe('Invalid', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-input/form-input/invalid-form-input');
     });
 
@@ -25,7 +25,7 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
     });
 
     describe('Enabled Hovered', () => {
-      beforeEach(() => {
+      before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
         browser.moveToObject('input');
       });
