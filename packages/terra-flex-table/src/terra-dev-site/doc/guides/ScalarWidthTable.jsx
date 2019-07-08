@@ -23,7 +23,7 @@ const createTableRow = itemData => (
 
 const createTableRows = data => data.map(childItem => createTableRow(childItem));
 
-const SingleSelectTable = () => (
+const ScalarWidthTable = () => (
   <Table
     paddingStyle="standard"
     headerCells={[
@@ -37,4 +37,4 @@ const SingleSelectTable = () => (
   </Table>
 );
 
-export default SingleSelectTable;
+export default ScalarWidthTable;
