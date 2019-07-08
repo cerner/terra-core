@@ -16,7 +16,7 @@ it('should render a field label', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render an optional field label', () => {
@@ -28,7 +28,7 @@ it('should render an optional field label', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a required field label', () => {
@@ -40,7 +40,7 @@ it('should render a required field label', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a required field label with required hidden', () => {
@@ -53,7 +53,7 @@ it('should render a required field label with required hidden', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a field with a hidden label', () => {
@@ -65,7 +65,7 @@ it('should render a field with a hidden label', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a required field with a hidden label', () => {
@@ -78,7 +78,7 @@ it('should render a required field with a hidden label', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a field error message', () => {
@@ -91,7 +91,7 @@ it('should render a field error message', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a field help message', () => {
@@ -104,7 +104,7 @@ it('should render a field help message', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render an inline field with most of the possible props are passed into it', () => {
@@ -122,7 +122,7 @@ it('should render an inline field with most of the possible props are passed int
   );
 
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a field in error', () => {
@@ -136,7 +136,7 @@ it('should render a field in error', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render an optional field in error', () => {
@@ -151,7 +151,7 @@ it('should render an optional field in error', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a required field in error', () => {
@@ -166,7 +166,7 @@ it('should render a required field in error', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a field with a hidden label in error', () => {
@@ -180,7 +180,7 @@ it('should render a field with a hidden label in error', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a required field with a hidden label in error', () => {
@@ -196,7 +196,7 @@ it('should render a required field with a hidden label in error', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a field with a custom error icon', () => {
@@ -208,7 +208,7 @@ it('should render a field with a custom error icon', () => {
     />
   );
   const wrapper = shallowWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a required field with an Input', () => {
@@ -222,7 +222,8 @@ it('should render a required field with an Input', () => {
     </Field>
   );
   const wrapper = mountWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  const testComponent = wrapper.children();
+  expect(testComponent).toMatchSnapshot();
 });
 
 it('should render a required field with an Select', () => {
@@ -236,7 +237,8 @@ it('should render a required field with an Select', () => {
     </Field>
   );
   const wrapper = mountWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  const testComponent = wrapper.children();
+  expect(testComponent).toMatchSnapshot();
 });
 
 it('should render a required field with an Textarea', () => {
@@ -250,7 +252,8 @@ it('should render a required field with an Textarea', () => {
     </Field>
   );
   const wrapper = mountWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  const testComponent = wrapper.children();
+  expect(testComponent).toMatchSnapshot();
 });
 
 it('should render a field with an Input', () => {
@@ -263,7 +266,8 @@ it('should render a field with an Input', () => {
     </Field>
   );
   const wrapper = mountWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  const testComponent = wrapper.children();
+  expect(testComponent).toMatchSnapshot();
 });
 
 it('should render a field with an Select', () => {
@@ -276,7 +280,8 @@ it('should render a field with an Select', () => {
     </Field>
   );
   const wrapper = mountWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  const testComponent = wrapper.children();
+  expect(testComponent).toMatchSnapshot();
 });
 
 it('should render a field with an Textarea', () => {
@@ -289,5 +294,6 @@ it('should render a field with an Textarea', () => {
     </Field>
   );
   const wrapper = mountWithIntl(field);
-  expect(wrapper).toMatchSnapshot();
+  const testComponent = wrapper.children();
+  expect(testComponent).toMatchSnapshot();
 });
