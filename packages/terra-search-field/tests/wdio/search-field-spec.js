@@ -37,15 +37,13 @@ describe('Search Field', () => {
       browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
-    Terra.it.matchesScreenshot('with text');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('with text');
   });
 
   describe('Disabled', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-disabled'));
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
 
     it('should not accept keyboard input', () => {
       expect(browser.setValue.bind(browser, 'input', 'Lorem')).to.throw(Error);
@@ -59,8 +57,7 @@ describe('Search Field', () => {
   describe('With Placeholder', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-with-placeholder'));
 
-    Terra.it.matchesScreenshot('placeholder');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('placeholder');
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
@@ -74,8 +71,7 @@ describe('Search Field', () => {
   describe('With Default Value', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-default-value'));
 
-    Terra.it.matchesScreenshot('default value');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('default value');
 
     it('should enter a new search term', () => {
       browser.click('input');
@@ -94,8 +90,7 @@ describe('Search Field', () => {
   describe('With Value', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-with-value'));
 
-    Terra.it.matchesScreenshot('default value');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('default value');
 
     it('should try to enter a new search term', () => {
       browser.click('input');
@@ -225,7 +220,6 @@ describe('Search Field', () => {
       browser.click('#search-field-focus-button');
     });
 
-    Terra.it.matchesScreenshot('with focus');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('with focus');
   });
 });
