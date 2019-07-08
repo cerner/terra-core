@@ -2,8 +2,7 @@ Terra.describeViewports('Badge', ['tiny', 'medium'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-default'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot({ selector: '#default-badge' });
+    Terra.it.validatesElement({ selector: '#default-badge' });
   });
 
   describe('Intent', () => {

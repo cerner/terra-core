@@ -11,7 +11,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
 
   describe('Padding', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-padding'));
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Titles', () => {
