@@ -375,7 +375,10 @@ class Menu extends React.Component {
       this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCode.KEY_RETURN && active !== null && (!Util.allowsMultipleSelections(variant) || !Util.includes(value, active))) {
       event.preventDefault();
-      this.setState({ closedViaKeyEvent: true });
+
+      if (!Util.allowsMultipleSelections(variant)) {
+        this.setState({ closedViaKeyEvent: true });
+      }
       const option = Util.findByValue(children, active);
       // Handles communicating the case where a clear option is selected to screen readers
       if (this.props.clearOptionDisplay) {
