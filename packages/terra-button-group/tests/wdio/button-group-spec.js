@@ -8,24 +8,6 @@ Terra.describeViewports('Button Group', ['huge'], () => {
     Terra.it.validatesElement({ selector: '#button-group-text' });
   });
 
-  Terra.describeViewports('Button Group Wrapping', ['tiny', 'huge'], () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-wrapping');
-      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
-    });
-
-    Terra.it.validatesElement();
-  });
-
-  Terra.describeViewports('Button Group Block', ['tiny', 'huge'], () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-is-block');
-      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
-    });
-
-    Terra.it.validatesElement();
-  });
-
   describe('Long Text Button', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-button-group/button-group/button-group-long-text');
@@ -124,4 +106,22 @@ Terra.describeViewports('Button Group', ['huge'], () => {
 
     Terra.it.validatesElement('button3-unselected');
   });
+});
+
+Terra.describeViewports('Button Group Wrapping', ['tiny', 'huge'], () => {
+  before(() => {
+    browser.url('/#/raw/tests/terra-button-group/button-group/button-group-wrapping');
+    browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+  });
+
+  Terra.it.validatesElement();
+});
+
+Terra.describeViewports('Button Group Block', ['tiny', 'huge'], () => {
+  before(() => {
+    browser.url('/#/raw/tests/terra-button-group/button-group/button-group-is-block');
+    browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+  });
+
+  Terra.it.validatesElement();
 });
