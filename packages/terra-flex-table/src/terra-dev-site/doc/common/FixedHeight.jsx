@@ -5,10 +5,10 @@ import styles from './FixedHeight.module.scss';
 const cx = classNames.bind(styles);
 
 /* eslint-disable */
-const CommonIcon = ({ children }) => (
+const FixedHeight = ({ children }) => (
   <div className={cx('container')}>
     {children}
   </div>
 );
 
-export default CommonIcon;
+export default FixedHeight;

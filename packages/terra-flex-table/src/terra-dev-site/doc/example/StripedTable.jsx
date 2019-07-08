@@ -5,7 +5,7 @@ import Table, {
 } from 'terra-flex-table/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const NoStripedTable = () => (
+const StripedTable = () => (
   <Table
     id="Table"
     headerCells={[
@@ -32,4 +32,4 @@ const NoStripedTable = () => (
   </Table>
 );
 
-export default NoStripedTable;
+export default StripedTable;

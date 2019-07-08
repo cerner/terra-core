@@ -9,6 +9,8 @@ import TableSrc from '!raw-loader!../../../../src/Table';
 
 import DefaultTable from '../example/DefaultTable';
 import DefaultTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultTable';
+import FixedHeightTable from '../example/FixedHeightTable';
+import FixedHeightTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/FixedHeightTable';
 import StripedTable from '../example/StripedTable';
 import StripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StripedTable';
 import PaddingTable from '../example/PaddingTable';
@@ -40,6 +42,11 @@ const DocPage = () => (
         title: 'Table zebra stripes',
         example: <StripedTable />,
         source: StripedTableSrc,
+      },
+      {
+        title: 'Fill Style Table',
+        example: <FixedHeightTable />,
+        source: FixedHeightTableSrc,
       },
     ]}
     propsTables={[

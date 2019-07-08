@@ -1,7 +1,12 @@
 import React from 'react';
+import classNames from 'classnames/bind';
+import styles from './CommonIcon.module.scss';
 
+const cx = classNames.bind(styles);
+
+/* eslint-disable */
 const CommonIcon = () => (
-  <div style={{ border: '1px dotted black', height: '1em', width: '1em' }} /> // eslint-disable-line react/forbid-dom-props
+  <div className={cx('icon')} />
 );
 
 export default CommonIcon;
