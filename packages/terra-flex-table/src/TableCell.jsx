@@ -12,7 +12,7 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Whether or not the cell should adheader to the tables paddingStyle.
+   * Whether or not the cell should adhere to the tables paddingStyle.
    */
   isPadded: PropTypes.bool,
   /**

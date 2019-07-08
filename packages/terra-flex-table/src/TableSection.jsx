@@ -26,11 +26,11 @@ const propTypes = {
   metaData: PropTypes.object,
   /**
    * Function callback for when the appropriate click or key action is performed.
-   * Callback contains the javascript evnt and prop metadata, e.g. onSelect(event, metaData)
+   * Callback contains the javascript event and prop metadata, e.g. onSelect(event, metaData)
    */
   onSelect: PropTypes.func,
   /**
-   * Function callback passthrough for the ref of the section li.
+   * Function callback pass-through for the ref of the section li.
    */
   refCallback: PropTypes.func,
   /**
