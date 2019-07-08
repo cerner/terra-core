@@ -1,263 +1,267 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown Button should render a block split type 1`] = `
-<SplitButton
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
+<DropdownButtonBase
+  buttons={
+    <Option
+      label="1st Option"
+      onClick={[Function]}
+    />
   }
+  disabled={false}
   isBlock={true}
-  onClick={[Function]}
-  primaryOptionLabel="Primary Option"
-  variant="neutral"
+  isOpen={false}
+  requestClose={[Function]}
 >
-  <Option
-    label="1st Option"
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral is-block"
+    disabled={false}
     onClick={[Function]}
-  />
-</SplitButton>
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup={true}
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-chevron neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+</DropdownButtonBase>
 `;
 
 exports[`Dropdown Button should render a default split type 1`] = `
-<SplitButton
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
+<DropdownButtonBase
+  buttons={
+    <Option
+      label="1st Option"
+      onClick={[Function]}
+    />
   }
+  disabled={false}
   isBlock={false}
-  onClick={[Function]}
-  primaryOptionLabel="Primary Option"
-  variant="neutral"
+  isOpen={false}
+  requestClose={[Function]}
 >
-  <Option
-    label="1st Option"
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
     onClick={[Function]}
-  />
-</SplitButton>
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup={true}
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-chevron neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+</DropdownButtonBase>
 `;
 
 exports[`Dropdown Button should render a disabled split type 1`] = `
-<SplitButton
-  disabled={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
+<DropdownButtonBase
+  buttons={
+    <Option
+      label="1st Option"
+      onClick={[Function]}
+    />
   }
+  disabled={true}
   isBlock={false}
-  onClick={[Function]}
-  primaryOptionLabel="Primary Option"
-  variant="neutral"
+  isOpen={false}
+  requestClose={[Function]}
 >
-  <Option
-    label="1st Option"
+  <button
+    aria-disabled={true}
+    className="split-button-primary neutral"
+    disabled={true}
     onClick={[Function]}
-  />
-</SplitButton>
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    tabIndex="-1"
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={true}
+    aria-haspopup={true}
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-chevron neutral"
+    disabled={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    tabIndex="-1"
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+</DropdownButtonBase>
 `;
 
 exports[`Dropdown Button should render a split type with custom attributes 1`] = `
-<SplitButton
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
+<DropdownButtonBase
+  buttons={
+    <Option
+      label="1st Option"
+      onClick={[Function]}
+    />
   }
+  disabled={false}
   isBlock={false}
-  onClick={[Function]}
+  isOpen={false}
   other-custom-attribute="purple"
-  primaryOptionLabel="Primary Option"
+  requestClose={[Function]}
   test-custom-attribute={true}
-  variant="neutral"
 >
-  <Option
-    label="1st Option"
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
     onClick={[Function]}
-  />
-</SplitButton>
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup={true}
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-chevron neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+</DropdownButtonBase>
 `;
 
 exports[`Dropdown Button should render a split type with multiple children 1`] = `
-<SplitButton
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
+<DropdownButtonBase
+  buttons={
+    Array [
+      <Option
+        label="1st Option"
+        onClick={[Function]}
+      />,
+      <Option
+        label="2nd Option"
+        onClick={[Function]}
+      />,
+      <Option
+        label="3rd Option"
+        onClick={[Function]}
+      />,
+    ]
   }
+  disabled={false}
   isBlock={false}
-  onClick={[Function]}
-  primaryOptionLabel="Primary Option"
-  variant="neutral"
+  isOpen={false}
+  requestClose={[Function]}
 >
-  <Option
-    label="1st Option"
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
     onClick={[Function]}
-  />
-  <Option
-    label="2nd Option"
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup={true}
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-chevron neutral"
+    disabled={false}
     onClick={[Function]}
-  />
-  <Option
-    label="3rd Option"
-    onClick={[Function]}
-  />
-</SplitButton>
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+</DropdownButtonBase>
 `;
 
 exports[`Dropdown Button should render an open split type 1`] = `
-<SplitButton
-  disabled={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
+<DropdownButtonBase
+  buttons={
+    <Option
+      label="1st Option"
+      onClick={[Function]}
+    />
   }
+  disabled={false}
   isBlock={false}
-  onClick={[Function]}
-  primaryOptionLabel="Primary Option"
-  variant="neutral"
+  isOpen={false}
+  requestClose={[Function]}
 >
-  <Option
-    label="1st Option"
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
     onClick={[Function]}
-  />
-</SplitButton>
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup={true}
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-chevron neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="chevron-icon"
+    />
+  </button>
+</DropdownButtonBase>
 `;

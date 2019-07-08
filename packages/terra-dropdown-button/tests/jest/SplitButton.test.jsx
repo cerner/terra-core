@@ -10,7 +10,7 @@ describe('Dropdown Button', () => {
         <Button label="1st Option" onClick={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.dive()).toMatchSnapshot();
   });
 
   it('should render a split type with multiple children', () => {
@@ -21,7 +21,7 @@ describe('Dropdown Button', () => {
         <Button label="3rd Option" onClick={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.dive()).toMatchSnapshot();
   });
 
   it('should render a disabled split type', () => {
@@ -30,7 +30,7 @@ describe('Dropdown Button', () => {
         <Button label="1st Option" onClick={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.dive()).toMatchSnapshot();
   });
 
   it('should render a block split type', () => {
@@ -39,7 +39,7 @@ describe('Dropdown Button', () => {
         <Button label="1st Option" onClick={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.dive()).toMatchSnapshot();
   });
 
   it('should render an open split type', () => {
@@ -50,7 +50,7 @@ describe('Dropdown Button', () => {
     );
     wrapper.setState({ isOpen: true });
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.dive()).toMatchSnapshot();
   });
 
   it('should render a split type with custom attributes', () => {
@@ -59,6 +59,6 @@ describe('Dropdown Button', () => {
         <Button label="1st Option" onClick={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.dive()).toMatchSnapshot();
   });
 });
