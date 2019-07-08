@@ -1,6 +1,6 @@
 // Source: https://github.com/Financial-Times/polyfill-service/pull/183/files
 // Needed for IE11 and IE10
-if (!document.contains) {
+if (!Node.prototype.contains) {
   Node.prototype.contains = function contains(node) {
     /* eslint-disable-next-line prefer-rest-params */
     if (!(0 in arguments)) {
