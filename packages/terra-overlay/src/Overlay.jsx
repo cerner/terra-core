@@ -5,6 +5,7 @@ import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
 import KeyCode from 'keycode-js';
 import 'mutationobserver-shim';
+import './_contains-polyfill';
 import './_matches-polyfill';
 import 'wicg-inert';
 import styles from './Overlay.module.scss';
