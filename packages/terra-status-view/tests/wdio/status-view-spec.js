@@ -1,13 +1,6 @@
 const viewports = Terra.viewports('tiny', 'medium');
 
 describe('StatusView', () => {
-  describe('Displays a default status view', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-default'));
-
-    Terra.it.matchesScreenshot({ viewports });
-    Terra.it.isAccessible({ viewports });
-  });
-
   describe('Displays an error status view with all props given', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-error-all-props'));
 
@@ -17,13 +10,6 @@ describe('StatusView', () => {
 
   describe('Displays an error status view with the glyph being hidden', () => {
     before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-glyph-hidden'));
-
-    Terra.it.matchesScreenshot({ viewports });
-    Terra.it.isAccessible({ viewports });
-  });
-
-  describe('Displays an error status view with the glyph being hidden with too small of a height', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-height-too-small'));
 
     Terra.it.matchesScreenshot({ viewports });
     Terra.it.isAccessible({ viewports });

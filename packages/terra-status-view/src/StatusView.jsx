@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import { FormattedMessage } from 'react-intl';
+import Button from 'terra-button';
 import Divider from 'terra-divider';
 import styles from './StatusView.module.scss';
 
@@ -11,22 +13,24 @@ const StatusViewVariants = {
   NOMATCHINGRESULTS: 'no-matching-results',
   NOTAUTHORIZED: 'not-authorized',
   ERROR: 'error',
-  CUSTOM: 'custom',
 };
 
+/* eslint-disable react/forbid-foreign-prop-types */
 const propTypes = {
   /**
-   * An array of actionable buttons to display.
+   * An array of objects containing terra-button properties. A key attribute is required for each object.
+   * This array is used to render buttons in the bottom section.
+   * Example:`[{ text: 'Button 1', key: 1, size: 'medium', variant: 'action', onClick: onClickFunction}]`
    */
-  children: PropTypes.node,
+  buttonAttrs: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)),
 
   /**
-   * The glyph that is to be displayed for the `custom` variant.
+   * Display a custom glyph. Overrides a variant's default glyph.
    */
   customGlyph: PropTypes.node,
 
   /**
-   *  Determines if the content should be aligned vertically at the top of the container rather than in the middle.
+   *  Aligns the component at the top of the container rather than "centered"
    */
   isAlignedTop: PropTypes.bool,
 
@@ -36,223 +40,135 @@ const propTypes = {
   isGlyphHidden: PropTypes.bool,
 
   /**
-   * The descriptive text to display.
+   * The descriptive text, displayed under the title.
    */
   message: PropTypes.string,
 
   /**
-   * The status view's title to display. Status views with variants of type `no-data`,
-   * `no-matching-results`, `not-authorized`,
-   * `error` will have defaulted values unless overridden with this prop.
+   * The title displayed under the glyph. Variants contain default titles that can be overriden by this prop.
    */
   title: PropTypes.string,
 
   /**
-   * Determines the glyph to display, one of the following: `no-data`,
-   * `no-matching-results`, `not-authorized`,
-   * `error`, or `custom`.
+   * Sets the glyph and title using a pre-baked variant. One of the following: `no-data`,
+   * `no-matching-results`, `not-authorized`, or `error`
    */
   variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
 };
+/* eslint-enable react/forbid-foreign-prop-types */
 
 const defaultProps = {
-  children: [],
+  buttonAttrs: [],
   customGlyph: undefined,
   isAlignedTop: false,
   isGlyphHidden: false,
   message: undefined,
   title: undefined,
-  variant: StatusViewVariants.ERROR,
+  variant: undefined,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
+const generateButtons = (buttonAttrsArray) => {
+  if (!buttonAttrsArray.length) {
+    return undefined;
+  }
+
+  return buttonAttrsArray.map(button => <Button {...button} className={cx(['button', button.className])} />);
 };
 
-class StatusView extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      showGlyph: true,
-      paddingBottom: 0,
-      paddingTop: 0,
-    };
-    this.showAndCenterItems = this.showAndCenterItems.bind(this);
-  }
-
-  componentDidMount() {
-    // call after all items have rendered in the view to calculate which items
-    // can be shown and center the items inside the view appropriately
-    this.showAndCenterItems();
-  }
-
-  /**
-   * Will calculate which items inside the status view can appear based on fixed
-   * height of its container and will update the inner padding to center the items
-   * with 40% of the remaining space at the top with 60% on the bottom.
-   */
-  showAndCenterItems() {
-    let paddingTop = 0;
-    let paddingBottom = 0;
-    let showGlyph = false;
-    let newViewHeight = 0;
-    let contentHeight = 0;
-    let contentWithGlyphHeight = 0;
-
-    const viewHeight = this.innerNode.getBoundingClientRect().height;
-    newViewHeight = viewHeight;
-
-    // get the content heights of the nodes that are to be shown if have content and cannot be hidden
-    const titleNodeHeight = this.titleNode.getBoundingClientRect().height;
-    const actionNodeHeight = this.actionsNode ? this.actionsNode.getBoundingClientRect().height : 0;
-    const messageNodeHeight = this.messageNode ? this.messageNode.getBoundingClientRect().height : 0;
-    const dividerNodeHeight = this.dividerNode ? this.dividerNode.getBoundingClientRect().height : 0;
-    contentHeight = (titleNodeHeight + actionNodeHeight + messageNodeHeight + dividerNodeHeight);
-
-    contentWithGlyphHeight = contentHeight + (this.glyphNode ? this.glyphNode.getBoundingClientRect().height : 0);
-    // if inner view node height is lesser than the components along with glyph inside the inner view.
-    // and the height difference is very less (i.e 0.0001) then add that comparison value to the
-    // the inner view height.
-    if (contentWithGlyphHeight - viewHeight <= 0.0001) {
-      newViewHeight += 0.0001;
-    }
-
-    if (this.glyphNode && newViewHeight >= contentWithGlyphHeight && this.innerNode.offsetWidth >= this.glyphNode.offsetWidth) {
-      // if glyph exists and can fit inside the container's height and width, distribute remaining padding to center
-      showGlyph = true;
-      if (!this.props.isAlignedTop) {
-        const remainingHeight = (viewHeight > contentWithGlyphHeight) ? (viewHeight - contentWithGlyphHeight) : 0;
-        paddingTop = remainingHeight * 0.4;
-        paddingBottom = remainingHeight * 0.6;
-      }
-    } else if (!this.props.isAlignedTop) {
-      // glyph does not exist or does not fit, distribute remaining padding if any to center
-      const remainingHeight = viewHeight - contentHeight;
-      if (remainingHeight > 0) {
-        paddingTop = remainingHeight * 0.4;
-        paddingBottom = remainingHeight * 0.6;
-      }
-    }
-
-    // set which components can fit into the view
-    this.setState({
-      showGlyph,
-      paddingTop,
-      paddingBottom,
-    });
-  }
-
-  render() {
-    const {
-      children,
-      customGlyph,
-      isAlignedTop,
-      isGlyphHidden,
-      message,
-      title,
-      variant,
-      ...customProps
-    } = this.props;
-
-    const { intl } = this.context;
-
-    let glyphSection;
-    if (!isGlyphHidden && this.state.showGlyph) {
-      if (variant === StatusViewVariants.CUSTOM) {
-        glyphSection = (
-          <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
-            {customGlyph}
-          </div>
-        );
-      } else {
-        glyphSection = (
-          <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
-            <svg className={cx(variant)} />
-          </div>
-        );
-      }
-    }
-
-    let messageSection;
-    if (message) {
-      messageSection = (
-        <div className={cx('message')} ref={(element) => { this.messageNode = element; }}>
-          {message}
-        </div>
-      );
-    }
-
-    let actionSection;
-    if (React.Children.count(children) > 0) {
-      actionSection = (
-        <div className={cx('actions')} ref={(element) => { this.actionsNode = element; }}>
-          {children}
-        </div>
-      );
-    }
-
-    let defaultTitle = title;
-    if (!defaultTitle) {
-      defaultTitle = (variant === StatusViewVariants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
-    }
-
-    let dividerSection;
-    if (messageSection || actionSection) {
-      dividerSection = (
-        <div className={cx('divider')} ref={(element) => { this.dividerNode = element; }}>
-          <Divider />
-        </div>
-      );
-    }
-
-    const titleSection = (
-      <div className={cx('title')} ref={(element) => { this.titleNode = element; }}>
-        {defaultTitle}
+const StatusView = ({
+  buttonAttrs,
+  customGlyph,
+  isAlignedTop,
+  isGlyphHidden,
+  message,
+  title,
+  variant,
+  ...customProps
+}) => {
+  let glyphSection;
+  if (customGlyph && !isGlyphHidden) {
+    glyphSection = (
+      <div className={cx('glyph')}>
+        {customGlyph}
       </div>
     );
-
-    const statusViewClassNames = cx([
-      'outer-view',
-      customProps.className,
-    ]);
-
-    const statusViewInnerStyles = {
-      paddingTop: `${this.state.paddingTop}px`,
-      paddingBottom: `${this.state.paddingBottom}px`,
-    };
-
-    return (
-      <div
-        {...customProps}
-        className={statusViewClassNames}
-      >
-        <div
-          className={cx('inner-view')}
-          style={{ ...statusViewInnerStyles }}
-          ref={(element) => { this.innerNode = element; }}
-        >
-          {glyphSection}
-          <div className={cx('message-content-group')}>
-            {titleSection}
-            {dividerSection}
-            {messageSection}
-          </div>
-          {actionSection}
-        </div>
+  } else if (variant && !isGlyphHidden) {
+    glyphSection = (
+      <div className={cx('glyph')}>
+        <svg className={cx(variant)} />
       </div>
     );
   }
-}
 
-StatusView.Opts = {};
-StatusView.Opts.variants = StatusViewVariants;
+  let defaultTitle;
+  if (variant) {
+    defaultTitle = <FormattedMessage id={`Terra.status-view.${variant}`} />;
+  }
+
+  // Custom title takes precedence
+  let titleSection;
+  if (title || defaultTitle) {
+    titleSection = (
+      <div className={cx('title')}>
+        {title || defaultTitle}
+      </div>
+    );
+  }
+
+  let messageSection;
+  if (message) {
+    messageSection = (
+      <div className={cx('message')}>
+        {message}
+      </div>
+    );
+  }
+
+  let actionSection;
+  const buttons = generateButtons(buttonAttrs);
+  if (buttons) {
+    actionSection = (
+      <div className={cx('actions')}>
+        {buttons}
+      </div>
+    );
+  }
+
+  let dividerSection;
+  if (titleSection && (messageSection || actionSection)) {
+    dividerSection = (
+      <div className={cx('divider')}>
+        <Divider />
+      </div>
+    );
+  }
+
+  const outerViewClassNames = cx([
+    'outer-view',
+    { 'is-aligned-top': isAlignedTop },
+    customProps.className,
+  ]);
+
+  const innerViewClassNames = cx([
+    'inner-view',
+  ]);
+
+  return (
+    <div {...customProps} className={outerViewClassNames}>
+      <div className={cx('top-space')} />
+      <div className={innerViewClassNames}>
+        {glyphSection}
+        {titleSection}
+        {dividerSection}
+        {messageSection}
+        {actionSection}
+      </div>
+      <div className={cx('bottom-space')} />
+    </div>
+  );
+};
+
 StatusView.propTypes = propTypes;
-StatusView.contextTypes = contextTypes;
 StatusView.defaultProps = defaultProps;
 export default StatusView;
 export { StatusViewVariants };

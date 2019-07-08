@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports
+
+5.9.0 - (June 28, 2019)
+------------------
 ### Fixed
 * Added missing upgrade guide for migrating from terra-base v4 to v5
 

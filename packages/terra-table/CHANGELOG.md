@@ -12,6 +12,14 @@ Unreleased
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
+3.17.0 - (June 28, 2019)
+------------------
+### Added
+* Added themeable variable --terra-table-subheader-border-bottom
+
+### Changed
+* Removed all inline styles from Dev-site components and implemented the same styles using external css.
+
 3.16.0 - (June 18, 2019)
 ------------------
 ### Changed

@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports
+
+4.0.0 - (June 28, 2019)
+------------------
+### Breaking Changes
+* Removed `customStatusColor` prop
+
+### Added
+* Added `customColorClass` prop and --terra-alert-custom-default-color themeable variable
 
 3.17.0 - (June 18, 2019)
 ------------------

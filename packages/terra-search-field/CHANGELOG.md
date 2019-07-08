@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Fixed
+* Updated search field to pass event object to 'handleClear' from 'handleKeyDown'.
+
+3.16.0 - (June 28, 2019)
+------------------
+### Fixed
 * Update tolerance of search field tests to allow for slight differences in how the button icon is rendered
 
 3.15.0 - (June 18, 2019)
