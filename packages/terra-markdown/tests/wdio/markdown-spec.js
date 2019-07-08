@@ -1,9 +1,9 @@
-describe('Markdown', () => {
-  before(() => browser.setViewportSize({ width: 1000, height: 10000, name: 'large' }));
+Terra.describeViewports('Markdown', ['large'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
 
-    Terra.it.validatesElement({ selector: '#root' });
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot({ selector: '#root', viewports: [{ width: 1000, height: 10000, name: 'large' }] });
   });
 
   describe('css', () => {
@@ -45,7 +45,8 @@ describe('Markdown', () => {
   describe('scss', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/scss'));
 
-    Terra.it.validatesElement();
+    Terra.it.isAccessible();
+    Terra.it.matchesScreenshot({ viewports: [{ width: 1000, height: 10000, name: 'large' }] });
   });
 
   describe('Block Quote', () => {

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
 ### Fixed
 * Added `data-overlay-count` attribute to root document when overlay is opened
 * Added check for `data-modal-count` attribute on root document to track opening and closing of overlays and modals,

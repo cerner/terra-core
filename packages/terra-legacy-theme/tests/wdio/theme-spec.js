@@ -1,10 +1,8 @@
-describe('Legacy Theme', () => {
-  before(() => browser.setViewportSize(Terra.viewports('large')[0]));
-
+Terra.describeViewports('Legacy Theme', ['large'], () => {
   describe('Navigation Side Menu', () => {
     before(() => browser.url('/#/raw/tests/terra-legacy-theme/legacy-theme/legacy-theme-navigation-side-menu'));
 
-    Terra.it.matchesScreenshot('list-padding-top', { selector: '.legacy-nav-menu-list-padding-top' });
+    Terra.it.validatesElement('list-padding-top', { selector: '.legacy-nav-menu-list-padding-top' });
     Terra.it.matchesScreenshot('list-background-color', { selector: '.legacy-nav-menu-list-background-color' });
     Terra.it.matchesScreenshot('item-border-bottom', { selector: '.legacy-nav-menu-item-border-bottom' });
     Terra.it.matchesScreenshot('item-color', { selector: '.legacy-nav-menu-item-color' });
@@ -24,7 +22,7 @@ describe('Legacy Theme', () => {
   describe('Brand Footer', () => {
     before(() => browser.url('/#/raw/tests/terra-legacy-theme/legacy-theme/legacy-theme-brand-footer'));
 
-    Terra.it.matchesScreenshot('nav-background-color', { selector: '.legacy-terra-brand-footer-nav-background-color' });
+    Terra.it.validatesElement('nav-background-color', { selector: '.legacy-terra-brand-footer-nav-background-color' });
     Terra.it.matchesScreenshot('nav-color', { selector: '.legacy-terra-brand-footer-nav-color' });
     Terra.it.matchesScreenshot('nav-header-color', { selector: '.legacy-terra-brand-footer-nav-header-color' });
     Terra.it.matchesScreenshot('link-color', { selector: '.legacy-terra-brand-footer-link-color' });
