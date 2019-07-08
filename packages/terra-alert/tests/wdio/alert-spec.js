@@ -1,14 +1,12 @@
 Terra.describeViewports('Alert', ['tiny', 'large'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/default-alert'));
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Types', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-type'));
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Padding', () => {
@@ -18,14 +16,12 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
 
   describe('Titles', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-title'));
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Custom', () => {
     before(() => browser.url('/#/raw/tests/terra-alert/alert/custom-alert'));
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Action Button', () => {
@@ -33,8 +29,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-alert/alert/alert-action-button');
     });
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
 
     it('should be register actions', () => {
       expect(browser.getText('#actionButtonClickCount')).to.equal('0');
@@ -50,8 +45,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-alert/alert/alert-dismissible');
     });
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
 
     it('should dismiss', () => {
       browser.click('#dismissibleAlert button');
