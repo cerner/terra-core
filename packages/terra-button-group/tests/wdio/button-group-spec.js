@@ -108,20 +108,22 @@ Terra.describeViewports('Button Group', ['huge'], () => {
   });
 });
 
-Terra.describeViewports('Button Group Wrapping', ['tiny', 'huge'], () => {
-  before(() => {
-    browser.url('/#/raw/tests/terra-button-group/button-group/button-group-wrapping');
-    browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+Terra.describeViewports('Button Group', ['tiny', 'huge'], () => {
+  describe('Button Group Wrapping', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-wrapping');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
+
+    Terra.it.validatesElement();
   });
 
-  Terra.it.validatesElement();
-});
+  describe('Button Group Block', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-is-block');
+      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    });
 
-Terra.describeViewports('Button Group Block', ['tiny', 'huge'], () => {
-  before(() => {
-    browser.url('/#/raw/tests/terra-button-group/button-group/button-group-is-block');
-    browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+    Terra.it.validatesElement();
   });
-
-  Terra.it.validatesElement();
 });
