@@ -3,7 +3,7 @@
 exports[`Dropdown Button should render a block dropdown type 1`] = `
 <DropdownButtonBase
   buttons={
-    <Option
+    <Button
       label="1st Option"
       onClick={[Function]}
     />
@@ -38,7 +38,7 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
 exports[`Dropdown Button should render a default dropdown type 1`] = `
 <DropdownButtonBase
   buttons={
-    <Option
+    <Button
       label="1st Option"
       onClick={[Function]}
     />
@@ -73,7 +73,7 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
 exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 <DropdownButtonBase
   buttons={
-    <Option
+    <Button
       label="1st Option"
       onClick={[Function]}
     />
@@ -109,7 +109,7 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 exports[`Dropdown Button should render a split type with custom attributes 1`] = `
 <DropdownButtonBase
   buttons={
-    <Option
+    <Button
       label="1st Option"
       onClick={[Function]}
     />
@@ -147,15 +147,15 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
 <DropdownButtonBase
   buttons={
     Array [
-      <Option
+      <Button
         label="1st Option"
         onClick={[Function]}
       />,
-      <Option
+      <Button
         label="2nd Option"
         onClick={[Function]}
       />,
-      <Option
+      <Button
         label="3rd Option"
         onClick={[Function]}
       />,
@@ -192,7 +192,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
 exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 <DropdownButtonBase
   buttons={
-    <Option
+    <Button
       label="1st Option"
       onClick={[Function]}
     />
@@ -227,7 +227,7 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 exports[`Dropdown Button should render an open dropdown 1`] = `
 <DropdownButtonBase
   buttons={
-    <Option
+    <Button
       label="1st Option"
       onClick={[Function]}
     />

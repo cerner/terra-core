@@ -12,7 +12,7 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
   }
   tabIndex="0"
 >
-  <Option
+  <Button
     isActive={false}
     isFocused={true}
     key=".0"
@@ -35,7 +35,7 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
   }
   tabIndex="0"
 >
-  <Option
+  <Button
     isActive={false}
     isFocused={false}
     key=".0"
@@ -43,7 +43,7 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Option
+  <Button
     isActive={false}
     isFocused={true}
     key=".1"
@@ -51,7 +51,7 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Option
+  <Button
     isActive={false}
     isFocused={false}
     key=".2"
@@ -74,7 +74,7 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
   }
   tabIndex="0"
 >
-  <Option
+  <Button
     isActive={false}
     isFocused={false}
     key=".0"
@@ -82,7 +82,7 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Option
+  <Button
     isActive={true}
     isFocused={true}
     key=".1"
@@ -90,7 +90,7 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Option
+  <Button
     isActive={false}
     isFocused={false}
     key=".2"
@@ -113,7 +113,7 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
   }
   tabIndex="0"
 >
-  <Option
+  <Button
     isActive={false}
     isFocused={true}
     key=".0"
@@ -121,7 +121,7 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Option
+  <Button
     isActive={false}
     isFocused={false}
     key=".1"
@@ -129,7 +129,7 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Option
+  <Button
     isActive={true}
     isFocused={false}
     key=".2"
@@ -152,7 +152,7 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
   }
   tabIndex="0"
 >
-  <Option
+  <Button
     isActive={false}
     isFocused={true}
     key=".0"
@@ -175,7 +175,7 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
   }
   tabIndex="0"
 >
-  <Option
+  <Button
     isActive={false}
     isFocused={true}
     key=".0"
@@ -183,7 +183,7 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Option
+  <Button
     isActive={false}
     isFocused={false}
     key=".1"
@@ -191,7 +191,7 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Option
+  <Button
     isActive={false}
     isFocused={false}
     key=".2"

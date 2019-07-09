@@ -12,7 +12,7 @@ exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
     requestClose={[Function]}
     targetRef={[Function]}
   >
-    <Option
+    <Button
       label="1st option"
       onClick={[Function]}
     />
@@ -32,7 +32,7 @@ exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
     requestClose={[Function]}
     targetRef={[Function]}
   >
-    <Option
+    <Button
       label="1st option"
       onClick={[Function]}
     />
@@ -53,7 +53,7 @@ exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
     requestClose={[Function]}
     targetRef={[Function]}
   >
-    <Option
+    <Button
       label="1st option"
       onClick={[Function]}
     />
@@ -73,7 +73,7 @@ exports[`Dropdown Button Base renders an open DropdownButtonBase 1`] = `
     requestClose={[Function]}
     targetRef={[Function]}
   >
-    <Option
+    <Button
       label="1st option"
       onClick={[Function]}
     />
