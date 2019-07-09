@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
 ### Fixed
 * Updated search field to pass event object to 'handleClear' from 'handleKeyDown'.
 

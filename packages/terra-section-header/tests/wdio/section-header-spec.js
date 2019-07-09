@@ -1,4 +1,4 @@
-describe('SectionHeader', () => {
+Terra.describeViewports('SectionHeader', ['huge'], () => {
   describe('Default Section Header', () => {
     before(() => browser.url('/#/raw/tests/terra-section-header/section-header/default-section-header'));
 
@@ -21,7 +21,6 @@ describe('SectionHeader', () => {
 
     describe('Hovered - Long Title Accordion Section Header', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
         browser.moveToObject('.accordionContent');
       });
 
@@ -30,7 +29,6 @@ describe('SectionHeader', () => {
 
     describe('Keyboard Focus - Long Title Accordion Section Header', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
         browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
         browser.keys('Tab');
       });
@@ -40,7 +38,6 @@ describe('SectionHeader', () => {
 
     describe('Active - Long Title Accordion Section Header', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
         browser.moveToObject('.accordionContent');
         browser.buttonDown();
       });
