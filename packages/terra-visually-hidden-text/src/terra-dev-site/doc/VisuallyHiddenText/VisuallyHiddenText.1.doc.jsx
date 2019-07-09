@@ -10,6 +10,9 @@ import VisuallyHiddenTextSrc from '!raw-loader!../../../../src/VisuallyHiddenTex
 // Example Files
 import DefaultVisuallyHiddenText from '../example/DefaultVisuallyHiddenText';
 import DefaultVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultVisuallyHiddenText.jsx';
+import RefCallbackVisuallyHiddenText from '../example/RefCallbackVisuallyHiddenText';
+import RefCallbackVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RefCallbackVisuallyHiddenText.jsx';
+
 
 const DocPage = () => (
   <DocTemplate
@@ -21,6 +24,11 @@ const DocPage = () => (
         title: 'VisuallyHiddenText with empty string',
         example: <DefaultVisuallyHiddenText />,
         source: DefaultVisuallyHiddenTextSrc,
+      },
+      {
+        title: 'VisuallyHiddenText with ref Callback',
+        example: <RefCallbackVisuallyHiddenText />,
+        source: RefCallbackVisuallyHiddenTextSrc,
       },
     ]}
     propsTables={[

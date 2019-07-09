@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`VisuallyHiddenText should pass in refCallback as the ref prop of the input element 1`] = `
+<VisuallyHiddenText
+  refCallback={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          <span
+            class="visually-hidden-text"
+          />,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <span
+    className="visually-hidden-text"
+  />
+</VisuallyHiddenText>
+`;
+
 exports[`VisuallyHiddenText should render a default component 1`] = `
 <span
   className="visually-hidden-text"
