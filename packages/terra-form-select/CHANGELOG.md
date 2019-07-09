@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Fixed
+* Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.
+
 5.18.0 - (June 28, 2019)
 ------------------
 ### Changed
@@ -27,9 +30,6 @@ Unreleased
 
 ### Changed
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
-
-### Fixed
-* Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.
 
 5.15.0 - (May 1, 2019)
 ------------------
