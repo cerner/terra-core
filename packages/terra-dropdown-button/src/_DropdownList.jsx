@@ -57,16 +57,24 @@ class DropdownList extends React.Component {
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
-      this.setState({ focused: Util.findNext(this, focused) });
+      if (!this.pressed) {
+        this.setState({ focused: Util.findNext(this, focused) });
+      }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_UP) {
-      this.setState({ focused: Util.findPrevious(this, focused) });
+      if (!this.pressed) {
+        this.setState({ focused: Util.findPrevious(this, focused) });
+      }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_HOME) {
-      this.setState({ focused: Util.findFirst(this) });
+      if (!this.pressed) {
+        this.setState({ focused: Util.findFirst(this) });
+      }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_END) {
-      this.setState({ focused: Util.findLast(this) });
+      if (!this.pressed) {
+        this.setState({ focused: Util.findLast(this) });
+      }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_TAB) {
       this.props.requestClose();

@@ -1,7 +1,7 @@
 # Split Button
 
-The Split Button is a Dropdown Button with an additional option outside the dropdown.
-It provides the user with the ability to choose the primary action or an action from a listing of alternative actions.
+The Split Button provides the user with the ability to choose the primary action or an action from a listing of alternative actions.
+An example is to think of an email, the primary action is reply, but the user could also want to forward, reply all, etc. Reply would appear outside the dropdown and forward and reply all inside the dropdown.
 
 Children must be `Button` subcomponent for proper functionality and appearance.
 

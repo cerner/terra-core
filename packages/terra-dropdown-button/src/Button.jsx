@@ -33,7 +33,7 @@ const propTypes = {
 
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 // Keyboard events are handled in _DropdownButton.jsx
-const Option = ({
+const Button = ({
   label, onClick, isFocused, isActive, requestClose, ...customProps
 }) => (
   <li>
@@ -53,6 +53,6 @@ const Option = ({
   </li>
 );
 
-Option.propTypes = propTypes;
+Button.propTypes = propTypes;
 
-export default Option;
+export default Button;
