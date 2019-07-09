@@ -221,9 +221,8 @@ it('should render a required field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
-  const testComponent = wrapper.children();
-  expect(testComponent).toMatchSnapshot();
+  const wrapper = mountWithIntl(field).children();
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a required field with an Select', () => {
@@ -236,9 +235,8 @@ it('should render a required field with an Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
-  const testComponent = wrapper.children();
-  expect(testComponent).toMatchSnapshot();
+  const wrapper = mountWithIntl(field).children();
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a required field with an Textarea', () => {
@@ -251,9 +249,8 @@ it('should render a required field with an Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
-  const testComponent = wrapper.children();
-  expect(testComponent).toMatchSnapshot();
+  const wrapper = mountWithIntl(field).children();
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a field with an Input', () => {
@@ -265,9 +262,8 @@ it('should render a field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
-  const testComponent = wrapper.children();
-  expect(testComponent).toMatchSnapshot();
+  const wrapper = mountWithIntl(field).children();
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a field with an Select', () => {
@@ -279,9 +275,8 @@ it('should render a field with an Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
-  const testComponent = wrapper.children();
-  expect(testComponent).toMatchSnapshot();
+  const wrapper = mountWithIntl(field).children();
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a field with an Textarea', () => {
@@ -293,7 +288,6 @@ it('should render a field with an Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
-  const testComponent = wrapper.children();
-  expect(testComponent).toMatchSnapshot();
+  const wrapper = mountWithIntl(field).children();
+  expect(wrapper).toMatchSnapshot();
 });

@@ -9,107 +9,95 @@ import Alert from '../../src/Alert';
 describe('Alert with no props', () => {
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = mountWithIntl(<Alert />);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert />).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Dismissible Alert that includes actions section', () => {
   // Snapshot Tests
   it('should render an alert component with a dismiss button', () => {
-    const wrapper = mountWithIntl(<Alert onDismiss={() => { }}>This is a test</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert onDismiss={() => { }}>This is a test</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type alert with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type alert', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ALERT}>This is a test</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ALERT}>This is a test</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type error with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type error', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ERROR}>This is an error.</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ERROR}>This is an error.</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type warning with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type warning', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.WARNING}>This is an warning.</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.WARNING}>This is an warning.</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type advisory with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type advisory', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ADVISORY}>This is an advisory alert.</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ADVISORY}>This is an advisory alert.</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type info with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type info', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.INFO}>This is an information alert.</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.INFO}>This is an information alert.</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type success with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type success', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.SUCCESS}>This is a success alert.</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.SUCCESS}>This is a success alert.</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type custom with custom title and text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type custom', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color">This is a custom alert.</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color">This is a custom alert.</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type info with custom title and HTML content', () => {
   // Snapshot Tests
   it('should render an Alert component of type info with custom title and HTML content', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type success with an action button text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type success with an action button', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a success alert.</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a success alert.</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Dismissable Alert of type custom with action button, custom title and text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type custom with an action button', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>);
-    const testComponent = wrapper.children();
-    expect(testComponent).toMatchSnapshot();
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>).children();
+    expect(wrapper).toMatchSnapshot();
   });
 });
