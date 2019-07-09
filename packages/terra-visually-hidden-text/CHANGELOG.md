@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.10.0 - (July 9, 2019)
+------------------
 ### Added
 * Added refCallback prop. This is useful when using terra-visually-hidden-text as an aria-live container
 
