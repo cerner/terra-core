@@ -4,10 +4,6 @@ describe('Loading Overlay', () => {
 
     Terra.it.isAccessible({ selector: '#terra-LoadingOverlay' });
     Terra.it.matchesScreenshot({ selector: '#terra-LoadingOverlay' });
-
-    it('Expect default to have full screen', () => {
-      expect(browser.getAttribute('#terra-LoadingOverlay', 'class')).contains('fullscreen');
-    });
   });
 
   describe('Loading Overlay Container', () => {
@@ -22,6 +18,10 @@ describe('Loading Overlay', () => {
 
     Terra.it.isAccessible({ selector: '#terra-LoadingOverlay' });
     Terra.it.matchesScreenshot({ selector: '#terra-LoadingOverlay' });
+
+    it('Expect default to have full screen', () => {
+      expect(browser.getAttribute('#terra-LoadingOverlay', 'class')).contains('fullscreen');
+    });
   });
 
   describe('Animated', () => {
