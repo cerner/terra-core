@@ -6,7 +6,8 @@ import LoadingOverlay from '../../src/LoadingOverlay';
 describe('LoadingOverlay', () => {
   it('should not render markup when isOpen is not provided', () => {
     const wrapper = mountWithIntl(<LoadingOverlay />);
-    expect(wrapper).toMatchSnapshot();
+    const testComponent = wrapper.children();
+    expect(testComponent).toMatchSnapshot();
   });
 
   describe('when isOpen is provided', () => {
@@ -15,30 +16,23 @@ describe('LoadingOverlay', () => {
 
       it('should render a default component', () => {
         const wrapper = mountWithIntl(defaultRender);
-        expect(wrapper).toMatchSnapshot();
+        const testComponent = wrapper.children();
+        expect(testComponent).toMatchSnapshot();
       });
 
       it('should have the class loading-overlay', () => {
         const wrapper = mountWithIntl(defaultRender);
-        expect(wrapper.find('loading-overlay'));
+        const testComponent = wrapper.children();
+        expect(testComponent.find('loading-overlay'));
       });
     });
 
     it('should render with message prop', () => {
       const overlayRender = <LoadingOverlay isOpen message="Loading!" />;
       const wrapper = mountWithIntl(overlayRender);
-      expect(wrapper.find('.message').text()).toEqual('Loading!');
-      expect(wrapper).toMatchSnapshot();
+      const testComponent = wrapper.children();
+      expect(testComponent.find('.message').text()).toEqual('Loading!');
+      expect(testComponent).toMatchSnapshot();
     });
-  });
-
-  it('throws error on missing locale prop in Base', () => {
-    global.console = { error: jest.fn() };
-
-    expect(() => {
-      render(<LoadingOverlay />);
-    }).toThrowError();
-    // eslint-disable-next-line no-console
-    expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
   });
 });
