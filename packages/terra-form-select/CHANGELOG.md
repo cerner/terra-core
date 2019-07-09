@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Issue where input would remain focused after clicking away from select menu after enter had been used to select an item in `multiselect` and `tag` variants.
 
 5.18.0 - (June 28, 2019)
 ------------------
