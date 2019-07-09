@@ -31,7 +31,14 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       Terra.validates.element('caret hover');
     });
 
-    it('validates the open dropdown', () => {
+    it('validates primary button active styling', () => {
+      browser.moveToObject('[class*=split-button-primary]');
+      browser.buttonDown();
+      Terra.validates.element('primary active');
+      browser.buttonUp();
+    });
+
+    it('opens and validates dropdown with click', () => {
       browser.click('[class*=split-button-caret]');
       Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
       Terra.validates.screenshot('caret with dropdown open');
@@ -59,7 +66,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
   });
 
-  describe('Callback', () => {
+  describe('Interactions', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/callback-split-button');
       // avoid hover styles
@@ -67,6 +74,28 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     Terra.it.matchesScreenshot();
+
+    it('opens the dropdown with click', () => {
+      browser.click('[class*=split-button-caret]');
+      browser.waitForVisible('[class*=dropdown-list]');
+    });
+
+    it('closes dropdown on escape without running a callback', () => {
+      browser.keys(['Escape']);
+      Terra.validates.screenshot('escape');
+    });
+
+    it('opens the dropdown with enter', () => {
+      browser.keys(['Enter']);
+      browser.waitForVisible('[class*=dropdown-list]');
+    });
+
+    it('opens the dropdown with space', () => {
+      browser.keys(['Escape', 'Space']);
+      browser.waitForVisible('[class*=dropdown-list]');
+      // Cleanup the open dropdown, after hooks don't work on it blocks
+      browser.keys(['Escape']);
+    });
 
     it('calls primary split button callback', () => {
       browser.click('[class*=split-button-primary]');
@@ -135,10 +164,22 @@ Terra.describeViewports('Split Button', ['medium'], () => {
         Terra.validates.screenshot('tab');
       });
 
-      it('closes on escape without running a callback', () => {
-        browser.keys(['Escape']);
-        Terra.validates.screenshot('escape');
+      it('closes the dropdown when clicking the caret with the dropdown open', () => {
+        browser.click('[class*=split-button-caret]');
+        Terra.validates.screenshot('clicking caret closes dropdown');
       });
+    });
+
+    it('does not reopen the dropdown when open and closed with keyboard interactions', () => {
+      Terra.validates.screenshot('before');
+      browser.keys(['Tab', 'Enter']);
+      Terra.validates.screenshot('open');
+      browser.waitForVisible('[class*=dropdown-list]');
+
+      browser.keys(['Enter']);
+      // wait for invisible
+      Terra.validates.screenshot('closed');
+      browser.waitForVisible('[class*=dropdown-list]', undefined, true);
     });
   });
 
