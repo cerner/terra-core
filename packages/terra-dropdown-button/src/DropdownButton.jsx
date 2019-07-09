@@ -124,7 +124,7 @@ class DropdownButton extends React.Component {
           aria-haspopup
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
-          <span className={cx('chevron-icon')} />
+          <span className={cx('caret-icon')} />
         </button>
       </DropdownButtonBase>
     );

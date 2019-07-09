@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The button or buttons that are the primary option and chevron
+   * The button or buttons that are the primary option and caret
    */
   children: PropTypes.node.isRequired,
   /**

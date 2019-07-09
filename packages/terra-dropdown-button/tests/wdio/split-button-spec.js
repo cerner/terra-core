@@ -14,9 +14,9 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       Terra.validates.element('primary focus');
     });
 
-    it('validates chevron button focus styling', () => {
+    it('validates caret button focus styling', () => {
       browser.keys('Tab');
-      Terra.validates.element('chevron focus');
+      Terra.validates.element('caret focus');
       // tab away from the button so focus is not in later screenshots
       browser.keys('Tab');
     });
@@ -26,15 +26,15 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       Terra.validates.element('primary hover');
     });
 
-    it('validates chevron button hover styling', () => {
-      browser.moveToObject('[class*=split-button-chevron]');
-      Terra.validates.element('chevron hover');
+    it('validates caret button hover styling', () => {
+      browser.moveToObject('[class*=split-button-caret]');
+      Terra.validates.element('caret hover');
     });
 
     it('validates the open dropdown', () => {
-      browser.click('[class*=split-button-chevron]');
+      browser.click('[class*=split-button-caret]');
       Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
-      Terra.validates.screenshot('chevron with dropdown open');
+      Terra.validates.screenshot('caret with dropdown open');
     });
   });
 
@@ -54,8 +54,8 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       expect(() => browser.click('[class*=split-button-primary]')).to.throw('is not clickable');
     });
 
-    it('tries to click the chevron', () => {
-      expect(() => browser.click('[class*=split-button-chevron]')).to.throw('is not clickable');
+    it('tries to click the caret', () => {
+      expect(() => browser.click('[class*=split-button-caret]')).to.throw('is not clickable');
     });
   });
 
@@ -76,7 +76,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     describe('Callback in menu', () => {
       beforeEach(() => {
         // Open the menu
-        browser.click('[class*=split-button-chevron]');
+        browser.click('[class*=split-button-caret]');
         browser.waitForVisible('[class*=dropdown-list]');
       });
 
@@ -152,13 +152,13 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     Terra.it.validatesElement('Both closed');
 
     it('opens the long label dropdown', () => {
-      browser.click('#wide-label [class*=split-button-chevron]');
+      browser.click('#wide-label [class*=split-button-caret]');
       Terra.validates.element('Long label open');
     });
 
     it('opens the long option dropdown', () => {
       browser.keys(['Escape']);
-      browser.click('#wide-option [class*=split-button-chevron]');
+      browser.click('#wide-option [class*=split-button-caret]');
       Terra.validates.element('Long option open');
     });
   });
@@ -177,25 +177,25 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('opens the top left dropdown', () => {
-      browser.click('#top-left [class*=split-button-chevron]');
+      browser.click('#top-left [class*=split-button-caret]');
       Terra.validates.element('Top left open');
     });
 
     it('opens the top right dropdown', () => {
       browser.keys('Escape');
-      browser.click('#top-right [class*=split-button-chevron]');
+      browser.click('#top-right [class*=split-button-caret]');
       Terra.validates.element('Top right open');
     });
 
     it('opens the bottom left dropdown', () => {
       browser.keys('Escape');
-      browser.click('#bottom-left [class*=split-button-chevron]');
+      browser.click('#bottom-left [class*=split-button-caret]');
       Terra.validates.element('Bottom left open');
     });
 
     it('opens the bottom right dropdown', () => {
       browser.keys('Escape');
-      browser.click('#bottom-right [class*=split-button-chevron]');
+      browser.click('#bottom-right [class*=split-button-caret]');
       Terra.validates.element('Bottom right open');
     });
   });

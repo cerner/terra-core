@@ -28,7 +28,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
     aria-disabled={false}
     aria-haspopup={true}
     aria-label="Terra.dropdownButton.moreOptions"
-    className="split-button-chevron neutral"
+    className="split-button-caret neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -36,7 +36,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
     type="button"
   >
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -70,7 +70,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
     aria-disabled={false}
     aria-haspopup={true}
     aria-label="Terra.dropdownButton.moreOptions"
-    className="split-button-chevron neutral"
+    className="split-button-caret neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -78,7 +78,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
     type="button"
   >
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -113,7 +113,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
     aria-disabled={true}
     aria-haspopup={true}
     aria-label="Terra.dropdownButton.moreOptions"
-    className="split-button-chevron neutral"
+    className="split-button-caret neutral"
     disabled={true}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -122,7 +122,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
     type="button"
   >
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -158,7 +158,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     aria-disabled={false}
     aria-haspopup={true}
     aria-label="Terra.dropdownButton.moreOptions"
-    className="split-button-chevron neutral"
+    className="split-button-caret neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -166,7 +166,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     type="button"
   >
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -210,7 +210,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     aria-disabled={false}
     aria-haspopup={true}
     aria-label="Terra.dropdownButton.moreOptions"
-    className="split-button-chevron neutral"
+    className="split-button-caret neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -218,7 +218,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     type="button"
   >
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -252,7 +252,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
     aria-disabled={false}
     aria-haspopup={true}
     aria-label="Terra.dropdownButton.moreOptions"
-    className="split-button-chevron neutral"
+    className="split-button-caret neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -260,7 +260,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
     type="button"
   >
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>

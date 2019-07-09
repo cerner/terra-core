@@ -50,12 +50,12 @@
     @include terra-dropdown-button-variant-color($terra-dropdown-button-emphasis-color-scheme);
   }
 
-  .chevron-icon {
+  .caret-icon {
     display: inline-block;
     // If flex-shrink is set to 1 IE will give the button 0 width
     flex: 0 0 auto;
-    height: var(--terra-dropdown-button-dropdown-type-chevron-height, 1rem);
+    height: var(--terra-dropdown-button-dropdown-type-caret-height, 1rem);
     margin: auto 0;
-    width: var(--terra-dropdown-button-dropdown-type-chevron-width, 1rem);
+    width: var(--terra-dropdown-button-dropdown-type-caret-width, 1rem);
   }
 }

@@ -26,9 +26,9 @@ $terra-dropdown-button-neutral-color-scheme: (
   hover-background-color: var(--terra-dropdown-button-hover-background-color-neutral, #bcbfc0),
   hover-color: var(--terra-dropdown-button-hover-color-neutral, #1c1f21),
 
-  chevron-icon-background: var(--terra-dropdown-button-chevron-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>')),
-  active-chevron-icon-background: var(--terra-dropdown-button-chevron-active-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>')),
-  disabled-chevron-icon-background: var(--terra-dropdown-button-chevron-disabled-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>'))
+  caret-icon-background: var(--terra-dropdown-button-caret-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>')),
+  active-caret-icon-background: var(--terra-dropdown-button-caret-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
+  disabled-caret-icon-background: var(--terra-dropdown-button-caret-disabled-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'))
 );
 
 $terra-dropdown-button-emphasis-color-scheme: (
@@ -53,7 +53,7 @@ $terra-dropdown-button-emphasis-color-scheme: (
   hover-background-color: var(--terra-dropdown-button-hover-background-color-emphasis, #0065a3),
   hover-color: var(--terra-dropdown-button-hover-color-emphasis, #fff),
 
-  chevron-icon-background: var(--terra-dropdown-button-chevron-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>')),
-  active-chevron-icon-background: var(--terra-dropdown-button-chevron-active-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>')),
-  disabled-chevron-icon-background: var(--terra-dropdown-button-chevron-disabled-background, inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>'))
+  caret-icon-background: var(--terra-dropdown-button-caret-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
+  active-caret-icon-background: var(--terra-dropdown-button-caret-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
+  disabled-caret-icon-background: var(--terra-dropdown-button-caret-disabled-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>'))
 );

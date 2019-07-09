@@ -5,7 +5,7 @@
 
 @mixin terra-dropdown-button-variant-color($color-map) {
   &.split-button-primary,
-  &.split-button-chevron,
+  &.split-button-caret,
   &.dropdown-button {
     background-color: map-get($color-map, background-color);
     border-color: map-get($color-map, border-color);
@@ -32,7 +32,7 @@
   }
 
   &.split-button-primary,
-  &.split-button-chevron {
+  &.split-button-caret {
     border-width: map-get($color-map, split-border-width);
     font-weight: map-get($color-map, split-font-weight);
 
@@ -60,18 +60,18 @@
     }
   }
 
-  .chevron-icon {
-    background: map-get($color-map, chevron-icon-background);
+  .caret-icon {
+    background: map-get($color-map, caret-icon-background);
   }
 
   &:active,
   &.is-active {
-    > .chevron-icon {
-      background: map-get($color-map, active-chevron-icon-background);
+    > .caret-icon {
+      background: map-get($color-map, active-caret-icon-background);
     }
   }
 
-  &.disabled .chevron-icon {
-    background: map-get($color-map, disabled-chevron-icon-background);
+  &.disabled .caret-icon {
+    background: map-get($color-map, disabled-caret-icon-background);
   }
 }

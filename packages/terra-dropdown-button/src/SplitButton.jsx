@@ -60,10 +60,10 @@ class SplitButton extends React.Component {
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
     this.handlePrimaryKeyDown = this.handlePrimaryKeyDown.bind(this);
     this.handlePrimaryKeyUp = this.handlePrimaryKeyUp.bind(this);
-    this.handleChevronKeyDown = this.handleChevronKeyDown.bind(this);
-    this.handleChevronKeyUp = this.handleChevronKeyUp.bind(this);
+    this.handleCaretKeyDown = this.handleCaretKeyDown.bind(this);
+    this.handleCaretKeyUp = this.handleCaretKeyUp.bind(this);
 
-    this.state = { isOpen: false, chevronActive: false, primaryActive: false };
+    this.state = { isOpen: false, caretActive: false, primaryActive: false };
   }
 
   handleDropdownButtonClick() {
@@ -89,15 +89,15 @@ class SplitButton extends React.Component {
     }
   }
 
-  handleChevronKeyDown(event) {
+  handleCaretKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ chevronActive: true });
+      this.setState({ caretActive: true });
     }
   }
 
-  handleChevronKeyUp(event) {
+  handleCaretKeyUp(event) {
     if (event.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ chevronActive: false });
+      this.setState({ caretActive: false });
     }
   }
 
@@ -116,10 +116,10 @@ class SplitButton extends React.Component {
     const {
       isOpen,
       primaryActive,
-      chevronActive,
+      caretActive,
     } = this.state;
 
-    const chevronLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
+    const caretLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
 
     const primaryClassnames = cx(
       'split-button-primary',
@@ -127,10 +127,10 @@ class SplitButton extends React.Component {
       { 'is-block': isBlock },
       { 'is-active': primaryActive },
     );
-    const chevronClassnames = cx(
-      'split-button-chevron',
+    const caretClassnames = cx(
+      'split-button-caret',
       variant,
-      { 'is-active': isOpen || chevronActive },
+      { 'is-active': isOpen || caretActive },
     );
 
     return (
@@ -157,17 +157,17 @@ class SplitButton extends React.Component {
         <button
           type="button"
           onClick={this.handleDropdownButtonClick}
-          onKeyDown={this.handleChevronKeyDown}
-          onKeyUp={this.handleChevronKeyUp}
-          className={chevronClassnames}
+          onKeyDown={this.handleCaretKeyDown}
+          onKeyUp={this.handleCaretKeyUp}
+          className={caretClassnames}
           disabled={disabled}
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
           aria-expanded={isOpen || undefined}
           aria-haspopup
-          aria-label={chevronLabel}
+          aria-label={caretLabel}
         >
-          <span className={cx('chevron-icon')} />
+          <span className={cx('caret-icon')} />
         </button>
       </DropdownButtonBase>
     );

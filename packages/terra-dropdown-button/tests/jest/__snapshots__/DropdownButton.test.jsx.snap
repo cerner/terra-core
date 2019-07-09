@@ -29,7 +29,7 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
       Primary Option
     </span>
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -64,7 +64,7 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
       Primary Option
     </span>
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -100,7 +100,7 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
       Primary Option
     </span>
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -137,7 +137,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
       Primary Option
     </span>
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -183,7 +183,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
       Primary Option
     </span>
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -218,7 +218,7 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
       Primary Option
     </span>
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>
@@ -254,7 +254,7 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
       Primary Option
     </span>
     <span
-      className="chevron-icon"
+      className="caret-icon"
     />
   </button>
 </DropdownButtonBase>

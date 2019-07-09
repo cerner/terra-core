@@ -46,7 +46,7 @@ class DropdownList extends React.Component {
       /*
         Prevent the callback from being called repeatedly if key is held down
         The close dropdown request had to be moved to handleKeyUp to fix a firefox bug
-        where chosing an item with spacebar if the dropdown chevron was focused when opening the dropdown
+        where chosing an item with spacebar if the dropdown caret was focused when opening the dropdown
         in firefox would cause the dropdown to reopen itself
       */
       if (!this.pressed) {
