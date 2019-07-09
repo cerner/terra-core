@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated to interface with react-intl's `injectIntl` removing legacy `contextTypes`
+
 ### Fixed
 * Updated search field to pass event object to 'handleClear' from 'handleKeyDown'.
 

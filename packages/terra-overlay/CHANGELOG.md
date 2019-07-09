@@ -1,5 +1,7 @@
 Changelog
 =========
+### Changed
+* Updated to interface with react-intl's `injectIntl` removing legacy `contextTypes`
 
 Unreleased
 ----------

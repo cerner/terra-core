@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated to interface with react-intl's `injectIntl` removing legacy `contextTypes`
 
 3.14.0 - (June 28, 2019)
 ------------------
