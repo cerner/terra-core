@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/dist/prism-light';
-import jsx from 'react-syntax-highlighter/dist/languages/prism/jsx';
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import classNames from 'classnames/bind';
 import styles from './ExampleTemplate.module.scss';
 import theme from './syntax-highlighter-theme';
 
-registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const cx = classNames.bind(styles);
 
@@ -76,7 +76,7 @@ class ExampleTemplate extends React.Component {
 
     if (this.state.isBackgroundTransparent) {
       dynamicContentStyle = {
-        backgroundColor: 'rgba(0,0,0,0)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
       };
     }
 

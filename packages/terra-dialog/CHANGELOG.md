@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated to interface with react-intl's `injectIntl` removing legacy `contextTypes`
+* Update tests to use `Terra.describeViewports` for setting viewports
 
 2.15.0 - (June 28, 2019)
 ------------------
