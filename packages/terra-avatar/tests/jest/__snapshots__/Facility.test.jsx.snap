@@ -95,7 +95,7 @@ exports[`Facility should render fallback facility avatar when invalid image is p
     >
       <img
         alt="London"
-        class="image fill default image"
+        class="image cover default image"
         src="https://path/to/invalid_image.jpg"
       />
     </div>
@@ -122,7 +122,7 @@ exports[`Facility should render image facility avatar when image is passed in 1`
     >
       <img
         alt="London"
-        class="image fill default image"
+        class="image cover default image"
         src="test-file-stub"
       />
     </div>
