@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Increased subheader css specificity
 
 3.17.0 - (June 28, 2019)
 ------------------
