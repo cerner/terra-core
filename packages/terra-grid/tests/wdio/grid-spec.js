@@ -1,64 +1,49 @@
-describe('Grid', () => {
+Terra.describeViewports('Grid', ['medium'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-default'));
 
-    Terra.it.isAccessible(Terra.viewports('medium')[0]);
-    Terra.it.matchesScreenshot(Terra.viewports('medium')[0]);
+    Terra.it.validatesElement();
   });
 
   describe('Responsive', () => {
     before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-responsive'));
 
-    Terra.it.isAccessible(Terra.viewports('medium')[0]);
-    Terra.it.matchesScreenshot(Terra.viewports('medium')[0]);
+    Terra.it.validatesElement();
   });
 
   describe('Nested', () => {
     before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-nested'));
 
-    Terra.it.isAccessible(Terra.viewports('medium')[0]);
-    Terra.it.matchesScreenshot(Terra.viewports('medium')[0]);
+    Terra.it.validatesElement();
   });
+});
 
-  describe('Tiny', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-tiny'));
-    const viewports = Terra.viewports('tiny', 'huge');
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
-  });
+Terra.describeViewports('Tiny', ['tiny', 'huge'], () => {
+  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-tiny'));
+  Terra.it.validatesElement();
+});
 
-  describe('Small', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-small'));
-    const viewports = Terra.viewports('tiny', 'medium');
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
-  });
+Terra.describeViewports('Small', ['tiny', 'medium'], () => {
+  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-small'));
+  Terra.it.validatesElement();
+});
 
-  describe('Medium', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-medium'));
-    const viewports = Terra.viewports('small', 'large');
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
-  });
+Terra.describeViewports('Medium', ['small', 'large'], () => {
+  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-medium'));
+  Terra.it.validatesElement();
+});
 
-  describe('Large', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-large'));
-    const viewports = Terra.viewports('medium', 'huge');
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
-  });
+Terra.describeViewports('Large', ['medium', 'huge'], () => {
+  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-large'));
+  Terra.it.validatesElement();
+});
 
-  describe('Huge', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-huge'));
-    const viewports = Terra.viewports('large', 'enormous');
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
-  });
+Terra.describeViewports('Huge', ['large', 'enormous'], () => {
+  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-huge'));
+  Terra.it.validatesElement();
+});
 
-  describe('Enormous', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-enormous'));
-    const viewports = Terra.viewports('huge', 'enormous');
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
-  });
+Terra.describeViewports('Enormous', ['huge', 'enormous'], () => {
+  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-enormous'));
+  Terra.it.validatesElement();
 });
