@@ -1,12 +1,8 @@
-describe('Toggle Button', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
-
+Terra.describeViewports('Toggle Button', ['medium'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/default-toggle-button'));
 
-    Terra.it.matchesScreenshot('closed');
-    Terra.it.isAccessible();
-
+    Terra.it.validatesElement('closed');
 
     it('should open the button', () => {
       browser.click('button');
@@ -15,8 +11,7 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.it.matchesScreenshot('opened');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('opened');
   });
 
   describe('Icon Only', () => {
@@ -29,8 +24,7 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.it.matchesScreenshot('opened');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('opened');
   });
 
   describe('Custom Icon', () => {
@@ -43,8 +37,7 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.it.matchesScreenshot('opened');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('opened');
   });
 
   describe('Customized Button', () => {
@@ -57,15 +50,13 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.it.matchesScreenshot('opened');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('opened');
   });
 
   describe('Closed Button Text', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/closed-button-text'));
 
-    Terra.it.matchesScreenshot('closed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('closed');
   });
 
   describe('Opened Button Text', () => {
@@ -78,15 +69,13 @@ describe('Toggle Button', () => {
       browser.click('p*=Lorem');
     });
 
-    Terra.it.matchesScreenshot('opened');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('opened');
   });
 
   describe('Initially open', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/initially-open'));
 
-    Terra.it.matchesScreenshot('opened');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('opened');
   });
 
   describe('Animated', () => {
@@ -102,8 +91,7 @@ describe('Toggle Button', () => {
       browser.pause(100);
     });
 
-    Terra.it.matchesScreenshot('opened');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('opened');
   });
 
   describe('Icon Animated', () => {
@@ -119,8 +107,7 @@ describe('Toggle Button', () => {
       browser.pause(100);
     });
 
-    Terra.it.matchesScreenshot('opened');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('opened');
   });
 
   describe('On Close Toggle Button', () => {
@@ -133,7 +120,7 @@ describe('Toggle Button', () => {
       browser.click('div*=Times');
     });
 
-    Terra.it.matchesScreenshot('opened');
+    Terra.it.validatesElement('opened');
 
     it('should increment', () => {
       browser.click('button');
@@ -142,8 +129,7 @@ describe('Toggle Button', () => {
       browser.click('div*=Times');
     });
 
-    Terra.it.matchesScreenshot('closed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('closed');
   });
 
   describe('On Open Toggle Button', () => {
@@ -156,7 +142,7 @@ describe('Toggle Button', () => {
       browser.click('div*=Times');
     });
 
-    Terra.it.matchesScreenshot('opened');
+    Terra.it.validatesElement('opened');
 
     it('should not increment', () => {
       browser.click('button');
@@ -165,7 +151,6 @@ describe('Toggle Button', () => {
       browser.click('div*=Times');
     });
 
-    Terra.it.matchesScreenshot('closed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('closed');
   });
 });
