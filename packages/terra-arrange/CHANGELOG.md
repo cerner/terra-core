@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.13.0 - (July 9, 2019)
+------------------
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports
 
