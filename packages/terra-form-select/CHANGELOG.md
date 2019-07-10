@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added aria-label.
 
 5.19.0 - (July 9, 2019)
 ------------------
