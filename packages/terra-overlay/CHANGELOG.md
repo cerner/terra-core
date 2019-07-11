@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Fixed
+* Disabled document scroll if Overlay is not relative to the triggering container.
+
 3.18.0 - (July 9, 2019)
 ------------------
 ### Fixed
