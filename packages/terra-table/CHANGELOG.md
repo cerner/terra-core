@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.18.0  - (July 11, 2019)
+------------------
 ### Changed
 * Increased subheader css specificity
 
