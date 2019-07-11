@@ -7,6 +7,12 @@ Dialogs are temporary views that can be used in a myriad of ways. Dialogs have t
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-dialog`
 
+## Implementation Notes:
+
+The Dialog component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
+
+[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
+
 ## Usage
 
 ```jsx

@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
 
 ### Fixed
 * Disabled document scroll if Overlay is not relative to the triggering container.

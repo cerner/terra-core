@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
 ### Updated
 * Updated Upgrade Guide.
 
