@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
+5.19.0 - (July 9, 2019)
+------------------
 ### Fixed
 * Issue where input would remain focused after clicking away from select menu after enter had been used to select an item in `multiselect` and `tag` variants.
 

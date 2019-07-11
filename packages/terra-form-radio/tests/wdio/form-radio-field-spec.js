@@ -1,15 +1,30 @@
-const viewports = Terra.viewports('tiny', 'large');
-
-describe('RadioField', () => {
+Terra.describeViewports('RadioField', ['tiny', 'large'], () => {
   describe('RadioField Valid', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
     });
 
-    Terra.it.matchesScreenshot({ viewports });
-    Terra.it.isAccessible({ viewports });
+    Terra.it.validatesElement();
   });
 
+  describe('RadioField Optional', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/optional-radio-field');
+    });
+
+    Terra.it.validatesElement();
+  });
+
+  describe('RadioField Hidden Legend', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hidden-legend');
+    });
+
+    Terra.it.validatesElement();
+  });
+});
+
+Terra.describeViewports('RadioField Interactions', ['tiny'], () => {
   describe('RadioField Interactions - Valid State', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
@@ -20,7 +35,7 @@ describe('RadioField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
+    Terra.it.validatesElement();
   });
 
   describe('RadioField Interactions - Valid State with hideRequired', () => {
@@ -31,7 +46,7 @@ describe('RadioField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
+    Terra.it.validatesElement();
   });
 
   describe('RadioField Interactions - Invalid State with hideRequired', () => {
@@ -44,24 +59,6 @@ describe('RadioField', () => {
       browser.click('[for="ux-dept"]');
     });
 
-    Terra.it.matchesScreenshot({ viewports: [viewports[0]] });
-  });
-
-  describe('RadioField Optional', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/optional-radio-field');
-    });
-
-    Terra.it.matchesScreenshot({ viewports });
-    Terra.it.isAccessible({ viewports });
-  });
-
-  describe('RadioField Hidden Legend', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hidden-legend');
-    });
-
-    Terra.it.matchesScreenshot({ viewports });
-    Terra.it.isAccessible({ viewports });
+    Terra.it.validatesElement();
   });
 });
