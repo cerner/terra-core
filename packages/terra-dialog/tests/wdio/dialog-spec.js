@@ -1,9 +1,6 @@
-const viewports = Terra.viewports('tiny', 'large');
-
-describe('Dialog', () => {
+Terra.describeViewports('Dialog', ['tiny', 'large'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-dialog/dialog/default-dialog'));
-    Terra.it.matchesScreenshot({ viewports, selector: '#dialog' });
-    Terra.it.isAccessible({ viewports });
+    Terra.it.validatesElement({ selector: '#dialog' });
   });
 });
