@@ -9,7 +9,7 @@ The Terra Form Radio is a responsive input component rendered as a radio button 
 
 ## Implementation Notes:
 
-The Form-Radio component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default form-radio title when the application does not specify a title for the form-radio.
+The Form-Radio component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
 
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
 

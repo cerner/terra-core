@@ -8,7 +8,7 @@ The Form Field component handles the layout of the label, help text and error te
   - `npm install terra-form-field`
 
 ## Implementation Notes:
-The Form-Field component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default form-field title when the application does not specify a title for the form-field.
+The Form-Field component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
 
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
 

@@ -10,7 +10,7 @@ Presents an icon, title, message, and/or buttons based on a status type scenario
 
 ## Implementation Notes:
 
-The Status-View component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default status-view title when the application does not specify a title for the status-view.
+The Status-View component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
 
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
 

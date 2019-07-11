@@ -8,7 +8,7 @@ The terra-action-header component is a header bar containing a title and optiona
   - `npm install terra-action-header`
 
 ## Implementation Notes:
-The Action-Header component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default Action-Header title when the application does not specify a title for the Action-Header.
+The Action-Header component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
 
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
 
