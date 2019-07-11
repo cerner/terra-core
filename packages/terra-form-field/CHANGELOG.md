@@ -4,6 +4,12 @@ ChangeLog
 Unreleased
 ----------
 
+3.14.0  - (July 11, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
 3.13.0 - (June 28, 2019)
 ------------------
 ### Changed

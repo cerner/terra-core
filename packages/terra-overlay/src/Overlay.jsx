@@ -115,8 +115,8 @@ class Overlay extends React.Component {
         document.querySelector(selector).setAttribute('data-overlay-count', `${inert + 1}`);
         document.querySelector(selector).setAttribute('inert', '');
       }
+      document.documentElement.style.overflow = 'hidden';
     }
-    document.documentElement.style.overflow = 'hidden';
   }
 
   enableContainerChildrenFocus() {

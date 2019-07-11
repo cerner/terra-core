@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "5.18.0",
+  "version": "5.20.0",
   "description": "Provides a drop down of selectable options.",
   "repository": {
     "type": "git",
@@ -32,8 +32,8 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
-    "terra-doc-template": "^2.11.0",
-    "terra-form-field": "^3.13.0",
+    "terra-doc-template": "^2.12.0",
+    "terra-form-field": "^3.14.0",
     "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.31.0"
   },
