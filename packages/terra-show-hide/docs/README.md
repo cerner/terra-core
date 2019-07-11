@@ -7,6 +7,12 @@ Show Hide Component that will show a preview of content and then expand it with 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-show-hide`
 
+## Implementation Notes:
+
+The Show-Hide component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default show-hide title when the application does not specify a title for the show-hide.
+
+[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
+
 ## Usage
 
 ```jsx

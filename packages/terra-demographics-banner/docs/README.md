@@ -8,6 +8,12 @@ The demographics component is used to display demographic information about a pe
   - `npm install terra-demographics-banner`
   - `yarn add terra-demographics-banner`
 
+## Implementation Notes:
+
+The Demographics-Banner component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default Demographics-Banner title when the application does not specify a title for the Demographics-Banner.
+
+[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
+
 ## Usage
 
 ```jsx

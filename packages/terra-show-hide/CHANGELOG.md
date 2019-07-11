@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
 
 2.14.0 - (June 28, 2019)
 ------------------

@@ -7,6 +7,12 @@ The Select component provides a dropdown of selectable options.
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-form-select`
 
+## Implementation Notes:
+
+The Form-Select component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default form-select title when the application does not specify a title for the form-select.
+
+[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
+
 ## Component Features
 
  * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
