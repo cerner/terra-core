@@ -11,7 +11,7 @@ exports[`OptGroup should render a default Option 1`] = `
     label
   </div>
   <ul
-    aria-label="Terra.formselect.options"
+    aria-label="Terra.form.select.option"
     className="options"
     role="listbox"
   />

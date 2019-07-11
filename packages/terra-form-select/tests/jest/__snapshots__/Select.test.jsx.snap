@@ -691,7 +691,7 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
     </span>
   </div>
   <div
-    aria-label="Terra.formselect.display"
+    aria-label="Terra.form.select.display"
     class="display"
     role="textbox"
   >
@@ -749,7 +749,7 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
     </span>
   </div>
   <div
-    aria-label="Terra.formselect.display"
+    aria-label="Terra.form.select.display"
     class="display"
     role="textbox"
   >
@@ -807,7 +807,7 @@ exports[`Select should render a select with an option 1`] = `
     </span>
   </div>
   <div
-    aria-label="Terra.formselect.display"
+    aria-label="Terra.form.select.display"
     class="display"
     role="textbox"
   >
@@ -865,7 +865,7 @@ exports[`Select should render a select with multiple options 1`] = `
     </span>
   </div>
   <div
-    aria-label="Terra.formselect.display"
+    aria-label="Terra.form.select.display"
     class="display"
     role="textbox"
   >

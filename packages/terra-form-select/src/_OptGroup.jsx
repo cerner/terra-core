@@ -37,7 +37,7 @@ const OptGroup = ({
     <div className={cx('label')}>
       {label}
     </div>
-    <ul className={cx('options')} aria-label={intl.formatMessage({ id: 'Terra.formselect.options' })} role="listbox">
+    <ul className={cx('options')} aria-label={intl.formatMessage({ id: 'Terra.form.select.option' })} role="listbox">
       {React.Children.map(children, child => (
         React.cloneElement(child, { disabled: disabled || !!child.props.disabled })))}
     </ul>
