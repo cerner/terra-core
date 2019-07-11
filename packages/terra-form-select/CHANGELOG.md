@@ -4,7 +4,10 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added aria-label.
+* Added aria-label to resolve accessibility violation with axe-core v3.3.0.
+
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 
 5.19.0 - (July 9, 2019)
 ------------------
