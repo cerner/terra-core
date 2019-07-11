@@ -1,11 +1,8 @@
-const viewports = Terra.viewports('tiny', 'medium');
-
-describe('Fieldset', () => {
+Terra.describeViewports('Fieldset', ['tiny', 'medium'], () => {
   describe('Populated', () => {
     before(() => browser.url('/#/raw/tests/terra-form-fieldset/form-fieldset/populated-fieldset'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Fieldset Populated with Hidden Legend', () => {

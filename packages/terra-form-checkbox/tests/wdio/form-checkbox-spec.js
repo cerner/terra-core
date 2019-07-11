@@ -1,19 +1,15 @@
-describe('Checkbox', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
-
+Terra.describeViewports('Checkbox', ['medium'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/default-checkbox'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
 
     describe('Hover', () => {
       before(() => {
         browser.moveToObject('#default');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
 
       after(() => {
         browser.moveToObject('#root', 0, 0);
@@ -25,8 +21,7 @@ describe('Checkbox', () => {
         browser.keys('Tab');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
     });
 
     describe('Checked', () => {
@@ -36,53 +31,45 @@ describe('Checkbox', () => {
         browser.click('#site');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
     });
   });
 
   describe('Disabled', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/disabled-checkbox'));
+    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/disabled-checkbox'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
 
     describe('Disabled Hover', () => {
-      beforeEach(() => {
-        browser.waitForVisible('#disabled');
+      before(() => {
         browser.moveToObject('#disabled');
       });
 
-      Terra.it.isAccessible();
-      Terra.it.matchesScreenshot();
+      Terra.it.validatesElement();
     });
   });
 
   describe('Hidden Label', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/hidden-label-checkbox'));
+    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/hidden-label-checkbox'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Populated', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/populated-checkbox'));
+    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/populated-checkbox'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Long Text', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/long-text-checkbox'));
+    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/long-text-checkbox'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Three Checkboxes, First Defaulted to Checked', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/multiple-checkboxes'));
+    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/multiple-checkboxes'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 });
