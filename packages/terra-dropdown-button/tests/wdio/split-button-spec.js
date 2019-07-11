@@ -171,14 +171,11 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('does not reopen the dropdown when open and closed with keyboard interactions', () => {
-      Terra.validates.screenshot('before');
       browser.keys(['Tab', 'Enter']);
-      Terra.validates.screenshot('open');
       browser.waitForVisible('[class*=dropdown-list]');
 
       browser.keys(['Enter']);
       // wait for invisible
-      Terra.validates.screenshot('closed');
       browser.waitForVisible('[class*=dropdown-list]', undefined, true);
     });
   });
