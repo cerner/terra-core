@@ -21,30 +21,24 @@ const propTypes = {
   isActive: PropTypes.bool,
   /**
    * @private
-   * Whether or not the option should show keyboard focus styles
-   */
-  isFocused: PropTypes.bool,
-  /**
-   * @private
    * Callback to tell the parent it should close the dropdown
    */
   requestClose: PropTypes.func,
 };
 
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-// Keyboard events are handled in _DropdownButton.jsx
+// Keyboard events are handled in _DropdownList.jsx
 const Button = ({
-  label, onClick, isFocused, isActive, requestClose, ...customProps
+  label, onClick, isActive, requestClose, ...customProps
 }) => (
   <li>
     <div
       {...customProps}
       onClick={() => { onClick(); requestClose(); }}
       role="button"
-      tabIndex="-1"
+      tabIndex="0"
       className={cx([
         'button',
-        { focus: isFocused },
         { active: isActive },
       ])}
     >

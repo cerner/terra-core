@@ -36,37 +36,41 @@ describe('Dropdown List Util', () => {
     expect(Util.findByValue(singleChild, '1st').props.label).toEqual('1st');
   });
 
-  it('validates findFirst', () => {
-    expect(Util.findFirst(multipleChildren)).toEqual('1st');
-    expect(Util.findFirst(singleChild)).toEqual('1st');
+  it('validates findIndexByValue', () => {
+    expect(Util.findIndexByValue(multipleChildren, '2nd')).toEqual(3);
+    expect(Util.findIndexByValue(multipleChildren, '754th')).toBe(-1);
+    expect(Util.findIndexByValue(singleChild, '1st')).toEqual(0);
   });
 
-  it('validates findLast', () => {
-    expect(Util.findLast(multipleChildren)).toEqual('5th');
-    expect(Util.findLast(singleChild)).toEqual('1st');
+  it('validates findByIndex', () => {
+    expect(Util.findByIndex(multipleChildren, 3).props.label).toEqual('2nd');
+    expect(Util.findByIndex(multipleChildren, 754)).toBe(undefined);
+    expect(Util.findByIndex(singleChild, 0).props.label).toEqual('1st');
   });
 
   it('validates findWithStartString', () => {
-    expect(Util.findWithStartString(multipleChildren, '1')).toEqual('1st');
-    expect(Util.findWithStartString(multipleChildren, '1t')).toEqual('1th');
-    expect(Util.findWithStartString(multipleChildren, '3')).toEqual('3rd');
-    expect(Util.findWithStartString(multipleChildren, '7')).toBe(null);
-    expect(Util.findWithStartString(singleChild, '1')).toEqual('1st');
+    expect(Util.findWithStartString(multipleChildren, '1')).toEqual(0);
+    expect(Util.findWithStartString(multipleChildren, '1t')).toEqual(1);
+    expect(Util.findWithStartString(multipleChildren, '3')).toEqual(4);
+    expect(Util.findWithStartString(multipleChildren, '7')).toEqual(-1);
+    expect(Util.findWithStartString(singleChild, '1')).toEqual(0);
   });
 
   it('validates findNext', () => {
-    expect(Util.findNext(multipleChildren, '1st')).toEqual('1th');
-    expect(Util.findNext(multipleChildren, '2nd')).toEqual('3rd');
-    expect(Util.findNext(multipleChildren, '5th')).toEqual('5th');
-    expect(Util.findNext(multipleChildren, '327th')).toBe(null);
-    expect(Util.findNext(singleChild, '1st')).toEqual('1st');
+    expect(Util.findNext(multipleChildren, 0)).toEqual(1);
+    expect(Util.findNext(multipleChildren, 1)).toEqual(2);
+    expect(Util.findNext(multipleChildren, 6)).toEqual(6);
+    expect(Util.findNext(multipleChildren, 327)).toEqual(6);
+    expect(Util.findNext(multipleChildren, -3)).toEqual(0);
+    expect(Util.findNext(singleChild, 0)).toEqual(0);
   });
 
   it('validates findPrevious', () => {
-    expect(Util.findPrevious(multipleChildren, '2nd')).toEqual('1ta');
-    expect(Util.findPrevious(multipleChildren, '1th')).toEqual('1st');
-    expect(Util.findPrevious(multipleChildren, '1st')).toEqual('1st');
-    expect(Util.findPrevious(multipleChildren, '327th')).toBe(null);
-    expect(Util.findPrevious(singleChild, '1st')).toEqual('1st');
+    expect(Util.findPrevious(multipleChildren, 3)).toEqual(2);
+    expect(Util.findPrevious(multipleChildren, 1)).toEqual(0);
+    expect(Util.findPrevious(multipleChildren, 0)).toEqual(0);
+    expect(Util.findPrevious(multipleChildren, 327)).toEqual(6);
+    expect(Util.findPrevious(multipleChildren, -3)).toEqual(0);
+    expect(Util.findPrevious(singleChild, 0)).toEqual(0);
   });
 });

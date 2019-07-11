@@ -34,67 +34,52 @@ class DropdownListUtil {
   }
 
   /**
-   * Finds the first option in the dropdown.
-   * @param {React.ReactNode} object - The dropdown.
-   * @return {string|null} - The label of the first option. Null if not found.
+   * Finds the index of the option matching the requested label.
+   * @param {React.ReactNode} object - The dropdown containing the options.
+   * @param {string} label - The label of the target option.
+   * @return {number} - The index of the option
    */
-  static findFirst(object) {
-    const options = DropdownListUtil.getChildArray(object);
-
-    if (options.length > 0) {
-      return options[0].props.label;
-    }
-    return null;
+  static findIndexByValue(object, label) {
+    return DropdownListUtil.getChildArray(object).findIndex(({ props }) => DropdownListUtil.isEqual(props.label, label));
   }
 
-  /**
-   * Finds the first option in the dropdown.
-   * @param {React.ReactNode} object - The dropdown.
-   * @return {string|null} - The label of the last option. Null if not found.
-   */
-  static findLast(object) {
-    const options = DropdownListUtil.getChildArray(object);
-
-    if (options.length > 0) {
-      return options[options.length - 1].props.label;
-    }
-    return null;
+  static findByIndex(object, index) {
+    return DropdownListUtil.getChildArray(object)[index];
   }
 
   /**
    * Finds the first option in the dropdown that starts with the string.
    * @param {React.ReactNode} object - The dropdown.
    * @param {string} string - The start string.
-   * @return {string|null} - The firt option that starts with the provided string.
+   * @return {number} - The index of the first option that starts with the provided string.
    */
   static findWithStartString(object, string) {
-    const option = DropdownListUtil.getChildArray(object).find(opt => (
+    return DropdownListUtil.getChildArray(object).findIndex(opt => (
       opt.props.label || '').toLowerCase().startsWith(string.toLowerCase()));
-    return option ? option.props.label : null;
   }
 
   /**
-   * Finds the option following the active option.
+   * Finds the index of the option following the active option.
    * @param {React.ReactNode} object - The dropdown containing the options.
-   * @param {string} label - The label of the active option.
-   * @return {string|null} - The label of the next option. Returns null if not found.
+   * @param {number} index - The index of the active option.
+   * @return {number} - The index of the next option.
    */
-  static findNext(object, label) {
+  static findNext(object, index) {
     const options = DropdownListUtil.getChildArray(object);
-    const index = options.findIndex(({ props }) => DropdownListUtil.isEqual(props.label, label));
-    return index === -1 ? null : options[Math.min(index + 1, options.length - 1)].props.label;
+    const next = Math.min(index + 1, options.length - 1);
+    return Math.max(0, next);
   }
 
   /**
-   * Finds the option preceding the active option.
+   * Finds the index of the option preceding the active option.
    * @param {React.ReactNode} object - The dropdown containing the options.
-   * @param {string} label - The label of the active option.
-   * @return {string|null} - The label of the previous option. Returns null if not found.
+   * @param {number} index - The index of the active option.
+   * @return {number} - The index of the previous option.
    */
-  static findPrevious(object, label) {
+  static findPrevious(object, index) {
     const options = DropdownListUtil.getChildArray(object);
-    const index = options.findIndex(({ props }) => DropdownListUtil.isEqual(props.label, label));
-    return index === -1 ? null : options[Math.max(index - 1, 0)].props.label;
+    const previous = Math.max(index - 1, 0);
+    return Math.min(previous, options.length - 1);
   }
 }
 

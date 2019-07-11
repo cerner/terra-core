@@ -6,33 +6,7 @@ exports[`Button renders a default option 1`] = `
     className="button"
     onClick={[Function]}
     role="button"
-    tabIndex="-1"
-  >
-    1st Option
-  </div>
-</li>
-`;
-
-exports[`Button renders a focused option 1`] = `
-<li>
-  <div
-    className="button focus"
-    onClick={[Function]}
-    role="button"
-    tabIndex="-1"
-  >
-    1st Option
-  </div>
-</li>
-`;
-
-exports[`Button renders an active and focused option 1`] = `
-<li>
-  <div
-    className="button focus active"
-    onClick={[Function]}
-    role="button"
-    tabIndex="-1"
+    tabIndex="0"
   >
     1st Option
   </div>
@@ -45,7 +19,7 @@ exports[`Button renders an active option 1`] = `
     className="button active"
     onClick={[Function]}
     role="button"
-    tabIndex="-1"
+    tabIndex="0"
   >
     1st Option
   </div>

@@ -30,13 +30,22 @@ class DropdownList extends React.Component {
     this.cloneChildren = this.cloneChildren.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
     this.clearSearch = this.clearSearch.bind(this);
+    this.changeFocusState = this.changeFocusState.bind(this);
 
-    const focused = Util.findFirst(this);
-    this.state = { focused, active: undefined };
+    this.state = { focused: 0, active: -1 };
 
     this.searchString = '';
     this.pressed = false;
+    this.listRef = null;
+  }
+
+  changeFocusState(index) {
+    // the div inside the li is what is actually focusable so need to go 2 layers down
+    this.listRef.childNodes[index].childNodes[0].focus();
+
+    this.setState({ focused: index });
   }
 
   handleKeyDown(event) {
@@ -51,29 +60,29 @@ class DropdownList extends React.Component {
       */
       if (!this.pressed) {
         this.pressed = true;
-        const item = Util.findByValue(this, focused);
+        const item = Util.findByIndex(this, focused);
         item.props.onClick();
-        this.setState({ active: item.props.label });
+        this.setState({ active: focused });
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
       if (!this.pressed) {
-        this.setState({ focused: Util.findNext(this, focused) });
+        this.changeFocusState(Util.findNext(this, this.state.focused));
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_UP) {
       if (!this.pressed) {
-        this.setState({ focused: Util.findPrevious(this, focused) });
+        this.changeFocusState(Util.findPrevious(this, this.state.focused));
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_HOME) {
       if (!this.pressed) {
-        this.setState({ focused: Util.findFirst(this) });
+        this.changeFocusState(0);
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_END) {
       if (!this.pressed) {
-        this.setState({ focused: Util.findLast(this) });
+        this.changeFocusState(Util.getChildArray(this).length - 1);
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_TAB) {
@@ -83,7 +92,12 @@ class DropdownList extends React.Component {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(this.clearSearch, 500);
-      this.setState(prevState => ({ focused: Util.findWithStartString(this, this.searchString) || prevState.focused }));
+      let newFocused = Util.findWithStartString(this, this.searchString);
+
+      if (newFocused === -1) {
+        newFocused = this.state.focused;
+      }
+      this.changeFocusState(newFocused);
     }
   }
 
@@ -100,7 +114,20 @@ class DropdownList extends React.Component {
   }
 
   /**
-   * Clears the default variant keyboard search.
+   * Keeps internal state synced with what is focused on the page incase
+   * something such as a screen reader moves focus
+   * @param {React.FocusEvent} event the focus event
+   */
+  handleFocus(event) {
+    const index = Util.findIndexByValue(this, event.target.innerText);
+
+    if (index !== -1) {
+      this.setState({ focused: index });
+    }
+  }
+
+  /**
+   * Clears the keyboard search.
    */
   clearSearch() {
     this.searchString = '';
@@ -109,26 +136,25 @@ class DropdownList extends React.Component {
   }
 
   /**
-   * Tells children whether or not they are active or focused
+   * Tells children whether or not they are active and gives them a function to close the dropdown
    * @return {Array<React.ReactNode>} the array of children
    */
   cloneChildren() {
-    return React.Children.map(this.props.children, child => React.cloneElement(child, {
-      isFocused: child.props.label === this.state.focused,
-      isActive: child.props.label === this.state.active,
+    return React.Children.map(this.props.children, (child, index) => React.cloneElement(child, {
+      isActive: index === this.state.active,
       requestClose: this.props.requestClose,
     }));
   }
 
   /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-  /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
   render() {
     return (
       <ul
         className={cx('dropdown-list')}
         // eslint-disable-next-line react/forbid-dom-props
         style={{ width: this.props.width }}
-        tabIndex="0"
+        ref={(ref) => { this.listRef = ref; }}
+        onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
       >

@@ -7,18 +7,8 @@ describe('Button', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders a focused option', () => {
-    const wrapper = shallow(<Button label="1st Option" onClick={() => {}} isFocused />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('renders an active option', () => {
     const wrapper = shallow(<Button label="1st Option" onClick={() => {}} isActive />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders an active and focused option', () => {
-    const wrapper = shallow(<Button label="1st Option" onClick={() => {}} isActive isFocused />);
     expect(wrapper).toMatchSnapshot();
   });
 });
