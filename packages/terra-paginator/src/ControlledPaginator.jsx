@@ -119,9 +119,8 @@ class Paginator extends React.Component {
   }
 
   defaultPaginator() {
-    const { intl } = this.props;
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage } = this.props;
+    const { selectedPage, intl } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
@@ -189,9 +188,8 @@ class Paginator extends React.Component {
   }
 
   reducedPaginator() {
-    const { intl } = this.props;
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage } = this.props;
+    const { selectedPage, intl } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 

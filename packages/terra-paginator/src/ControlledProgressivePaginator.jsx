@@ -70,9 +70,8 @@ class ProgressivePaginator extends React.Component {
   }
 
   defaultProgressivePaginator() {
-    const { intl } = this.props;
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage } = this.props;
+    const { selectedPage, intl } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
@@ -134,9 +133,8 @@ class ProgressivePaginator extends React.Component {
   }
 
   reducedProgressivePaginator() {
-    const { intl } = this.props;
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage } = this.props;
+    const { selectedPage, intl } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
