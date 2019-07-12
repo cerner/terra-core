@@ -44,14 +44,12 @@ const Dropdown = ({
       onOutsideClick={requestClose}
     >
       <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, clickOutsideDeactivates: true }}>
-        <div>
-          <DropdownList
-            requestClose={requestClose}
-            width={width}
-          >
-            {children}
-          </DropdownList>
-        </div>
+        <DropdownList
+          requestClose={requestClose}
+          width={width}
+        >
+          {children}
+        </DropdownList>
       </FocusTrap>
     </Hookshot.Content>
   </Hookshot>
