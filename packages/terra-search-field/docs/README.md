@@ -7,6 +7,19 @@ A search component with a field that automatically performs a search callback af
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-search-field`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Implementation Notes:
 
 The Searach-Field component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.

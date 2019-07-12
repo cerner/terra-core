@@ -13,6 +13,19 @@ The status view component provides a customizable icon, message, and buttons in 
 
 - Install with [npm](https://www.npmjs.com): `npm install terra-status-view`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## LICENSE
 
 Copyright 2017 - 2019 Cerner Innovation, Inc.

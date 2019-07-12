@@ -10,6 +10,19 @@ Note: The progress bar displays fill with respect to percentage (value between 0
   - `npm install terra-progress-bar`
   - `yarn add terra-progress-bar`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| terra-markdown | ^2.20.0 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
 ```jsx

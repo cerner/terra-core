@@ -8,13 +8,25 @@ The terra-profile-image component displays an avatar image while the profile ima
   - `npm install terra-profile-image`
   - `yarn add terra-profile-image`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
 ```jsx
 import React from 'react';
 import ProfileImage from 'terra-profile-image';
 
-<ProfileImage 
-  src='https://path/to/image.jpg' width="75" height="75" />} 
+<ProfileImage
+  src='https://path/to/image.jpg' width="75" height="75" />}
 />
 ```

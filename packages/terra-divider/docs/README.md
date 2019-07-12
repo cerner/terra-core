@@ -8,6 +8,18 @@ The divider component is used to visually separate content on a layout.
   - `npm install terra-divider`
   - `yarn add terra-divider`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
 ```jsx

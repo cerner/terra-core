@@ -14,6 +14,19 @@ A search component with a field that automatically performs a search callback af
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-search-field`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## LICENSE
 
 Copyright 2017 - 2019 Cerner Innovation, Inc.

@@ -8,6 +8,18 @@ The Terra Table is a structural component to arrange content within a table.
   - `npm install terra-table`
   - `yarn add terra-table`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
 Terra-table provides several different components for building tables accessible through the Table component:

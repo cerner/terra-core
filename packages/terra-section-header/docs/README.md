@@ -7,6 +7,18 @@ Section Header presentational component that provides an onClick callback.
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-section-header`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
 ```jsx

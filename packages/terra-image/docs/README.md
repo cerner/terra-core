@@ -8,6 +8,18 @@ The terra-image component provides styling for visual imagery.
   - `npm install terra-image`
   - `yarn add terra-image`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
 ```jsx

@@ -14,6 +14,18 @@ React component to render a table view for the props metadata of another react c
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-props-table`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## CLI
 Props table is also a command utility used to generate markdown tables. The CLI accepts multiple files as input and has a single output directory.
 

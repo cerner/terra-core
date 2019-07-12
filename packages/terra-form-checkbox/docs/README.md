@@ -7,6 +7,18 @@ The Terra Form Checkbox is a responsive input component rendered as a box next t
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-form-checkbox`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app to properly function as designed.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Implementation Notes:
 The Form-Checkbox component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
 
