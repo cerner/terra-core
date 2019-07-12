@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added documentation on required peerDependencies
 
 2.17.0  - (July 11, 2019)
 ------------------
