@@ -118,6 +118,7 @@ import IconClipboard from 'terra-icon/lib/icon/IconClipboard';
 import IconZoomOut from 'terra-icon/lib/icon/IconZoomOut';
 import IconZoomIn from 'terra-icon/lib/icon/IconZoomIn';
 import IconEnvelope from 'terra-icon/lib/icon/IconEnvelope';
+import IconEnvelopeFill from 'terra-icon/lib/icon/IconEnvelopeFill';
 import IconAllergy from 'terra-icon/lib/icon/IconAllergy';
 import IconPhoneDown from 'terra-icon/lib/icon/IconPhoneDown';
 import IconPhone from 'terra-icon/lib/icon/IconPhone';
@@ -168,6 +169,7 @@ import IconDoubleChevronLeft from 'terra-icon/lib/icon/IconDoubleChevronLeft';
 import IconDoubleChevronRight from 'terra-icon/lib/icon/IconDoubleChevronRight';
 import IconExtensions from 'terra-icon/lib/icon/IconExtensions';
 import IconDocumentPlus from 'terra-icon/lib/icon/IconDocumentPlus';
+import IconRefusedSlot from 'terra-icon/lib/icon/IconRefusedSlot';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
 import IconPlusSymbol from 'terra-icon/lib/icon/IconPlusSymbol';
@@ -185,6 +187,8 @@ import IconCaution from 'terra-icon/lib/icon/IconCaution';
 import IconConsultInstructionsForUse from 'terra-icon/lib/icon/IconConsultInstructionsForUse';
 import IconDateOfManufacture from 'terra-icon/lib/icon/IconDateOfManufacture';
 import IconManufacturer from 'terra-icon/lib/icon/IconManufacturer';
+import IconCeMarking from 'terra-icon/lib/icon/IconCeMarking';
+import IconEcRep from 'terra-icon/lib/icon/IconEcRep';
 const cellStyle = { padding: '0.5rem' };
 const IconAll = () => (
   <div>  <table>
@@ -1250,6 +1254,15 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconEnvelopeFill height='2em' width='2em' /></td>
+        <td style={cellStyle}>envelopeFill</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconEnvelopeFill from 'terra-icon/lib/icon/IconEnvelopeFill';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconAllergy height='2em' width='2em' /></td>
         <td style={cellStyle}>allergy</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
@@ -1700,6 +1713,15 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconRefusedSlot height='2em' width='2em' /></td>
+        <td style={cellStyle}>refusedSlot</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconRefusedSlot from 'terra-icon/lib/icon/IconRefusedSlot';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconCircleSymbol height='2em' width='2em' /></td>
         <td style={cellStyle}>circle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
@@ -1849,6 +1871,24 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconManufacturer from 'terra-icon/lib/icon/IconManufacturer';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconCeMarking height='2em' width='2em' /></td>
+        <td style={cellStyle}>ceMarking</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconCeMarking from 'terra-icon/lib/icon/IconCeMarking';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconEcRep height='2em' width='2em' /></td>
+        <td style={cellStyle}>ecRep</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconEcRep from 'terra-icon/lib/icon/IconEcRep';
           </code>
         </td>
       </tr>
