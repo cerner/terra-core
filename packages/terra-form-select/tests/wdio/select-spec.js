@@ -983,9 +983,6 @@ describe('Select', () => {
       after(() => {
         browser.keys(['Backspace']); // remove selected option
         browser.click('#root');
-
-        // talk with Brett. Seems like a bug. even with escape
-        browser.click('#root');
       });
     });
 
@@ -1005,9 +1002,6 @@ describe('Select', () => {
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
-        browser.click('#root');
-
-        // talk with Brett. Seems like a bug. even with escape
         browser.click('#root');
       });
     });
@@ -1040,9 +1034,6 @@ describe('Select', () => {
       after(() => {
         browser.keys(['Backspace']); // remove selected option
         browser.click('#root');
-
-        // talk with Brett. Seems like a bug. even with escape
-        browser.click('#root');
       });
     });
 
@@ -1066,9 +1057,6 @@ describe('Select', () => {
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
-        browser.click('#root');
-
-        // talk with Brett. Seems like a bug.
         browser.click('#root');
       });
     });
@@ -1684,9 +1672,6 @@ describe('Select', () => {
       after(() => {
         browser.keys(['Backspace']); // remove selected option
         browser.click('#root');
-
-        // talk with Brett. Seems like a bug. even with escape
-        browser.click('#root');
       });
     });
 
@@ -1706,9 +1691,6 @@ describe('Select', () => {
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
-        browser.click('#root');
-
-        // talk with Brett. Seems like a bug. even with escape
         browser.click('#root');
       });
     });
@@ -1745,9 +1727,6 @@ describe('Select', () => {
       after(() => {
         browser.keys(['Backspace']); // remove selected option
         browser.click('#root');
-
-        // talk with Brett. Seems like a bug. even with escape
-        browser.click('#root');
       });
     });
 
@@ -1771,9 +1750,6 @@ describe('Select', () => {
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
-        browser.click('#root');
-
-        // talk with Brett. Seems like a bug. even with escape
         browser.click('#root');
       });
     });
@@ -1804,9 +1780,6 @@ describe('Select', () => {
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
-        browser.click('#root');
-
-        // talk with Brett. Seems like a bug. even with escape
         browser.click('#root');
       });
     });
