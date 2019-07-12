@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Consume one-cerner-style-icons v1.25
 
 3.13.0  - (July 11, 2019)
 ------------------
