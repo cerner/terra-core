@@ -7,6 +7,11 @@ The Terra Form Checkbox is a responsive input component rendered as a box next t
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-form-checkbox`
 
+## Implementation Notes:
+The Form-Checkbox component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
+
+[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
+
 ## Usage
 
 ```jsx
