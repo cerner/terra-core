@@ -82,8 +82,7 @@ class Paginator extends React.Component {
   }
 
   buildPageButtons(totalPages, onClick) {
-    const { intl } = this.props;
-    const { totalCount, itemCountPerPage, selectedPage } = this.props;
+    const { totalCount, itemCountPerPage, selectedPage, intl } = this.props;
     const pageSequence = pageSet(selectedPage, calculatePages(totalCount, itemCountPerPage));
     const pageButtons = [];
 
