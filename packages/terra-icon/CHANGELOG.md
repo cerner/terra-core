@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added new icon `IconCeMarking`
+* Added new icon `IconEcRep`
+* Added new icon `IconEnvelopeFill`
+* Added new icon `IconFeaturedOutlineYellow`
+* Added new icon `IconOutOfNetwork`
+
 ### Changed
 * Consume one-cerner-style-icons v1.25
 
