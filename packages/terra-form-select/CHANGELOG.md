@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Updated to interface with react-intl's `injectIntl` removing legacy `contextTypes`
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 
 5.19.0 - (July 9, 2019)

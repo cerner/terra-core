@@ -3,11 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 
 2.18.0 - (July 9, 2019)
 ------------------
 ### Changed
-* Updated to interface with react-intl's `injectIntl` removing `react's` legacy `contextTypes`.
 * Update tests to use `Terra.describeViewports` for setting viewports
 
 2.17.0 - (June 28, 2019)
