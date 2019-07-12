@@ -10,6 +10,24 @@ However, terra-i18n can be installed with [npmjs](https://www.npmjs.com):
 
 The terra-i18n package provides internationalization for React components by loading translations and locale data on demand and providing the translated messages to the component. It does this by utilizing the [`react-intl`](https://github.com/yahoo/react-intl) dependency to provide the formatted translation messages to the supplied React children. To enable this behavior, terra-i18n provides the `i18nLoader` and `I18nProvider` components.
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+<details>
+<summary>View information on this component's peer dependencies.</summary>
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
+
+
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## i18nLoader
 
 The `i18nLoader` component guarantees that the Intl polyfill, locale data and translation messages are loaded before the translation-needing component is rendered. _This loader should be utilized only once within an application, because all internationalization information is loaded into memory to remove the need to dynamically load locale data on the server._
