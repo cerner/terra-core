@@ -7,9 +7,26 @@
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-breakpoints`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+<details>
+<summary>View information on this component's peer dependencies.</summary>
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
-### Breakpoints 
+### Breakpoints
 
 An object containing the named breakpoint values is the default export of the `terra-breakpoints` package. These named breakpoints are defined as minimum values.
 
@@ -124,7 +141,7 @@ const ActiveBreakpointProviderExample = () => (
   @include terra-mq-small-up {
     color: red;
   }
-  
+
   @include terra-mq-medium-up {
     color: purple;
   }
