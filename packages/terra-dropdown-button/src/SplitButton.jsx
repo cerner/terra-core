@@ -63,7 +63,7 @@ class SplitButton extends React.Component {
     this.handleCaretKeyDown = this.handleCaretKeyDown.bind(this);
     this.handleCaretKeyUp = this.handleCaretKeyUp.bind(this);
 
-    this.state = { isOpen: false, caretActive: false, primaryActive: false };
+    this.state = { isOpen: false, caretIsActive: false, primaryIsActive: false };
   }
 
   handleDropdownButtonClick() {
