@@ -52,7 +52,7 @@ jobs:
         - sudo chown -R travis:travis $HOME/docker
         # Load cached docker images
         - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
-        - "travis_wait docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/opt/module/build -e TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' -e TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' test-ci npm run compile:prod"
+        - "travis_wait docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/opt/module/build -e TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' -e TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' -e TERRA_DEV_SITE_PUBLIC_PATH='/terra-core/' test-ci npm run compile:prod"
       deploy:
         provider: pages
         skip_cleanup: true
