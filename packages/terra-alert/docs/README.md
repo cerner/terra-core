@@ -10,7 +10,7 @@ The Terra Alert component is a notification banner that can be rendered in your 
   - `yarn add terra-alert`
 
 ## Implementation Notes:
-The Alert component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default alert title when the application does not specify a title for the alert.
+The Alert component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
 
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
 [2]: https://github.com/cerner/terra-core/blob/master/packages/terra-alert/docs/MoreInformation.md
