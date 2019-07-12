@@ -1,5 +1,5 @@
 :local {
-  .button {
+  .item {
     color: var(--terra-dropdown-button-menu-item-color, #1c1f21);
     cursor: pointer;
     font-size: var(--terra-dropdown-button-menu-item-font-size, 0.9285714286rem);
@@ -25,8 +25,7 @@
     }
 
     &:hover {
-      background: var(--terra-dropdown-button-menu-item-hover-background, #ebf6fd);
-      outline: 0;
+      background-color: var(--terra-dropdown-button-menu-item-hover-background-color, #ebf6fd);
     }
   }
 }

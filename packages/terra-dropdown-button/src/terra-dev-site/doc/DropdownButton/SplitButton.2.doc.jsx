@@ -6,7 +6,7 @@ import { name } from '../../../../package.json';
 
 // Component Source
 import SplitButtonSrc from '!raw-loader!../../../../src/SplitButton';
-import ButtonSrc from '!raw-loader!../../../../src/Button';
+import ItemSrc from '!raw-loader!../../../../src/Item';
 
 // Example Files
 import DefaultSplitButton from '../example/DefaultSplitButton';
@@ -15,6 +15,7 @@ import DisabledSplitButton from '../example/DisabledSplitButton';
 import DisabledSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledSplitButton.jsx';
 import BlockSplitButton from '../example/BlockSplitButton';
 import BlockSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BlockSplitButton.jsx';
+import Item from '../../../Item';
 
 const DocPage = () => (
   <DocTemplate
@@ -44,8 +45,8 @@ const DocPage = () => (
         componentSrc: SplitButtonSrc,
       },
       {
-        componentName: 'Button',
-        componentSrc: ButtonSrc,
+        componentName: 'Item',
+        componentSrc: ItemSrc,
       },
     ]}
   />

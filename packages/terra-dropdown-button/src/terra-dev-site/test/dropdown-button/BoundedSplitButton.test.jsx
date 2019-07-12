@@ -3,7 +3,7 @@ import React from 'react';
 import classnames from 'classnames/bind';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SplitButton, { Button } from '../../../SplitButton';
+import SplitButton, { Item } from '../../../SplitButton';
 import styles from './BoundedButton.scss';
 
 const cx = classnames.bind(styles);
@@ -16,8 +16,8 @@ export default () => (
       className={cx('top-left')}
       id="top-left"
     >
-      <Button label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
-      <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+      <Item label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
+      <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
     </SplitButton>
     <SplitButton
       primaryOptionLabel="Primary"
@@ -25,8 +25,8 @@ export default () => (
       className={cx('top-right')}
       id="top-right"
     >
-      <Button label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
-      <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+      <Item label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
+      <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
     </SplitButton>
     <SplitButton
       primaryOptionLabel="Primary"
@@ -34,8 +34,8 @@ export default () => (
       className={cx('bottom-left')}
       id="bottom-left"
     >
-      <Button label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
-      <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+      <Item label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
+      <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
     </SplitButton>
     <SplitButton
       primaryOptionLabel="Primary"
@@ -43,8 +43,8 @@ export default () => (
       className={cx('bottom-right')}
       id="bottom-right"
     >
-      <Button label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
-      <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
+      <Item label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
+      <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
     </SplitButton>
   </div>
 );

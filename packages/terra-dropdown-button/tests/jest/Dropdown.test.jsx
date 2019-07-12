@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropdown from '../../src/_Dropdown';
-import { Button } from '../../src/DropdownButton';
+import { Item } from '../../src/DropdownButton';
 
 describe('Dropdown', () => {
   it('renders a default dropdown', () => {
@@ -10,7 +10,7 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen={false}
       >
-        <Button label="1st Option" onClick={() => {}} />
+        <Item label="1st Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen
       >
-        <Button label="1st Option" onClick={() => {}} />
+        <Item label="1st Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('Dropdown', () => {
         boundingRef={() => {}}
         isOpen={false}
       >
-        <Button label="1st Option" onClick={() => {}} />
+        <Item label="1st Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('Dropdown', () => {
         isOpen={false}
         width="470px"
       >
-        <Button label="1st Option" onClick={() => {}} />
+        <Item label="1st Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -64,9 +64,9 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen={false}
       >
-        <Button label="1st Option" onClick={() => {}} />
-        <Button label="2nd Option" onClick={() => {}} />
-        <Button label="3rd Option" onClick={() => {}} />
+        <Item label="1st Option" onClick={() => {}} />
+        <Item label="2nd Option" onClick={() => {}} />
+        <Item label="3rd Option" onClick={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();

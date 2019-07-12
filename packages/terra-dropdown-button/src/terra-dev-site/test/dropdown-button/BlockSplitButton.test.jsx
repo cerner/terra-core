@@ -2,7 +2,7 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SplitButton, { Button } from '../../../SplitButton';
+import SplitButton, { Item } from '../../../SplitButton';
 
 export default () => (
   <SplitButton
@@ -10,9 +10,9 @@ export default () => (
     onClick={() => { console.log('primary option'); }}
     isBlock
   >
-    <Button label="1st Option" onClick={() => { console.log('hi'); }} />
-    <Button label="2nd Option" onClick={() => { console.log('bye'); }} />
-    <Button label="3rd Option" onClick={() => { console.log('eyb'); }} />
-    <Button label="4th Option" onClick={() => { console.log('ih'); }} />
+    <Item label="1st Option" onClick={() => { console.log('hi'); }} />
+    <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
+    <Item label="3rd Option" onClick={() => { console.log('eyb'); }} />
+    <Item label="4th Option" onClick={() => { console.log('ih'); }} />
   </SplitButton>
 );

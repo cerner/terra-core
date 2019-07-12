@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import DropdownButton, { Button } from 'terra-dropdown-button/lib/DropdownButton';
+import DropdownButton, { Item } from 'terra-dropdown-button/lib/DropdownButton';
 
 const Example = () => {
   const [message, setMessage] = useState('No option clicked');
@@ -12,10 +12,10 @@ const Example = () => {
         label="Dropdown"
         disabled
       >
-        <Button label="1st Option" onClick={() => setMessage('1st option clicked')} />
-        <Button label="2nd Option" onClick={() => setMessage('2nd option clicked')} />
-        <Button label="3rd Option" onClick={() => setMessage('3rd option clicked')} />
-        <Button label="4th Option" onClick={() => setMessage('4th option clicked')} />
+        <Item label="1st Option" onClick={() => setMessage('1st option clicked')} />
+        <Item label="2nd Option" onClick={() => setMessage('2nd option clicked')} />
+        <Item label="3rd Option" onClick={() => setMessage('3rd option clicked')} />
+        <Item label="4th Option" onClick={() => setMessage('4th option clicked')} />
       </DropdownButton>
       <p>{message}</p>
     </React.Fragment>

@@ -3,7 +3,7 @@
 The Terra Dropdown Button is a button that, when pressed, opens a dropdown with more buttons.
 It is intended to allow the user to choose from a list of options with no special emphasis on any option.
 
-Children must be `Button` subcomponent for proper functionality and appearance.
+Children must be `Item` subcomponent for proper functionality and appearance.
 
 ## Getting Started
 

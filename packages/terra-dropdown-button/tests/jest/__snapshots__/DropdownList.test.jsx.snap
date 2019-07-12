@@ -12,7 +12,7 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
     }
   }
 >
-  <Button
+  <Item
     isActive={false}
     key=".0"
     label="1st Option"
@@ -34,21 +34,21 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
     }
   }
 >
-  <Button
+  <Item
     isActive={false}
     key=".0"
     label="1st Option"
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Button
+  <Item
     isActive={false}
     key=".1"
     label="2nd Option"
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Button
+  <Item
     isActive={false}
     key=".2"
     label="3rd Option"
@@ -70,21 +70,21 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
     }
   }
 >
-  <Button
+  <Item
     isActive={false}
     key=".0"
     label="1st Option"
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Button
+  <Item
     isActive={false}
     key=".1"
     label="2nd Option"
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Button
+  <Item
     isActive={false}
     key=".2"
     label="3rd Option"
@@ -106,21 +106,21 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
     }
   }
 >
-  <Button
+  <Item
     isActive={false}
     key=".0"
     label="1st Option"
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Button
+  <Item
     isActive={false}
     key=".1"
     label="2nd Option"
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Button
+  <Item
     isActive={false}
     key=".2"
     label="3rd Option"
@@ -142,7 +142,7 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
     }
   }
 >
-  <Button
+  <Item
     isActive={false}
     key=".0"
     label="1st Option"
@@ -164,21 +164,21 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
     }
   }
 >
-  <Button
+  <Item
     isActive={false}
     key=".0"
     label="1st Option"
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Button
+  <Item
     isActive={false}
     key=".1"
     label="2nd Option"
     onClick={[Function]}
     requestClose={[Function]}
   />
-  <Button
+  <Item
     isActive={false}
     key=".2"
     label="3rd Option"

@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import KeyCode from 'keycode-js';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
-import Button from './Button';
+import Item from './Item';
 import SplitButton, { Variants as SplitButtonVariants } from './SplitButton';
 
 const cx = classNames.bind(styles);
@@ -17,7 +17,7 @@ const Variants = {
 
 const propTypes = {
   /**
-   * The options to display in the dropdown. Should be comprised of the subcomponent `Button`.
+   * The options to display in the dropdown. Should be comprised of the subcomponent `Item`.
    */
   children: PropTypes.node.isRequired,
   /**
@@ -54,7 +54,7 @@ class DropdownButton extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
 
-    this.state = { isOpen: false, active: false };
+    this.state = { isOpen: false, isActive: false };
   }
 
   handleDropdownButtonClick() {
@@ -70,13 +70,13 @@ class DropdownButton extends React.Component {
    */
   handleKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ active: true });
+      this.setState({ isActive: true });
     }
   }
 
   handleKeyUp(event) {
     if (event.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ active: false });
+      this.setState({ isActive: false });
     }
   }
 
@@ -90,15 +90,12 @@ class DropdownButton extends React.Component {
       ...customProps
     } = this.props;
 
-    const {
-      isOpen,
-      active,
-    } = this.state;
+    const { isOpen, isActive } = this.state;
 
     const classnames = cx(
       'dropdown-button',
       variant,
-      { 'is-active': isOpen || active },
+      { 'is-active': isOpen || isActive },
       { 'is-block': isBlock },
     );
 
@@ -136,5 +133,5 @@ DropdownButton.defaultProps = defaultProps;
 
 export default DropdownButton;
 export {
-  Button, Variants, SplitButton, SplitButtonVariants,
+  Item, Variants, SplitButton, SplitButtonVariants,
 };

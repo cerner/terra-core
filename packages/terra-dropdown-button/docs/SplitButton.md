@@ -1,9 +1,9 @@
 # Split Button
 
 The Split Button provides the user with the ability to choose the primary action or an action from a listing of alternative actions.
-An example is email. The primary action is _reply_, but the user can also _forward_, or _reply all_. _Reply_ would be the primary action, while _forward_ and _reply_ would be contained inside the dropdown.
+An example is email. The primary action is _reply_, but the user can also _forward_ or _reply all_. _Reply_ would be the primary action, while _forward_ and _reply all_ would be contained inside the dropdown.
 
-Children must be the `Button` subcomponent for proper functionality and appearance.
+Children must be the `Item` subcomponent for proper functionality and appearance.
 
 ## Getting Started
 

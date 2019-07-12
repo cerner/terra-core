@@ -6,7 +6,7 @@ import { name } from '../../../../package.json';
 
 // Component Source
 import DropdownButtonSrc from '!raw-loader!../../../../src/DropdownButton';
-import ButtonSrc from '!raw-loader!../../../../src/Button';
+import ItemSrc from '!raw-loader!../../../../src/Item';
 
 // Example Files
 import DefaultDropdownButton from '../example/DefaultDropdownButton';
@@ -51,8 +51,8 @@ const DocPage = () => (
         componentSrc: DropdownButtonSrc,
       },
       {
-        componentName: 'Button',
-        componentSrc: ButtonSrc,
+        componentName: 'Item',
+        componentSrc: ItemSrc,
       },
     ]}
   />

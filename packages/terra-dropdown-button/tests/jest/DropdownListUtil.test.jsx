@@ -1,23 +1,23 @@
 import React from 'react';
 import DropdownList from '../../src/_DropdownList';
 import Util from '../../src/_DropdownListUtil';
-import { Button } from '../../src/DropdownButton';
+import { Item } from '../../src/DropdownButton';
 
 const multipleChildren = (
   <DropdownList requestClose={() => {}}>
-    <Button label="1st" onClick={() => {}} />
-    <Button label="1th" onClick={() => {}} />
-    <Button label="1ta" onClick={() => {}} />
-    <Button label="2nd" onClick={() => {}} />
-    <Button label="3rd" onClick={() => {}} />
-    <Button label="4th" onClick={() => {}} />
-    <Button label="5th" onClick={() => {}} />
+    <Item label="1st" onClick={() => {}} />
+    <Item label="1th" onClick={() => {}} />
+    <Item label="1ta" onClick={() => {}} />
+    <Item label="2nd" onClick={() => {}} />
+    <Item label="3rd" onClick={() => {}} />
+    <Item label="4th" onClick={() => {}} />
+    <Item label="5th" onClick={() => {}} />
   </DropdownList>
 );
 
 const singleChild = (
   <DropdownList requestClose={() => {}}>
-    <Button label="1st" onClick={() => {}} />
+    <Item label="1st" onClick={() => {}} />
   </DropdownList>
 );
 

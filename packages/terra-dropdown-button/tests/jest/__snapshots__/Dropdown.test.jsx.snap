@@ -61,7 +61,7 @@ exports[`Dropdown renders a default dropdown 1`] = `
         <DropdownList
           requestClose={[Function]}
         >
-          <Button
+          <Item
             label="1st Option"
             onClick={[Function]}
           />
@@ -133,7 +133,7 @@ exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
         <DropdownList
           requestClose={[Function]}
         >
-          <Button
+          <Item
             label="1st Option"
             onClick={[Function]}
           />
@@ -206,7 +206,7 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
           requestClose={[Function]}
           width="470px"
         >
-          <Button
+          <Item
             label="1st Option"
             onClick={[Function]}
           />
@@ -278,15 +278,15 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
         <DropdownList
           requestClose={[Function]}
         >
-          <Button
+          <Item
             label="1st Option"
             onClick={[Function]}
           />
-          <Button
+          <Item
             label="2nd Option"
             onClick={[Function]}
           />
-          <Button
+          <Item
             label="3rd Option"
             onClick={[Function]}
           />
@@ -358,7 +358,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
         <DropdownList
           requestClose={[Function]}
         >
-          <Button
+          <Item
             label="1st Option"
             onClick={[Function]}
           />

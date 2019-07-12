@@ -5,7 +5,7 @@ import KeyCode from 'keycode-js';
 import { injectIntl, intlShape } from 'react-intl';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';
-import Button from './Button';
+import Item from './Item';
 
 const cx = classNames.bind(styles);
 
@@ -16,7 +16,7 @@ const Variants = {
 
 const propTypes = {
   /**
-   * The options to display in the dropdown. Should be comprised of the subcomponent `Button`.
+   * The options to display in the dropdown. Should be comprised of the subcomponent `Item`.
    */
   children: PropTypes.node.isRequired,
   /**
@@ -79,25 +79,25 @@ class SplitButton extends React.Component {
    */
   handlePrimaryKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ primaryActive: true });
+      this.setState({ primaryIsActive: true });
     }
   }
 
   handlePrimaryKeyUp(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ primaryActive: false });
+      this.setState({ primaryIsActive: false });
     }
   }
 
   handleCaretKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ caretActive: true });
+      this.setState({ caretIsActive: true });
     }
   }
 
   handleCaretKeyUp(event) {
     if (event.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ caretActive: false });
+      this.setState({ caretIsActive: false });
     }
   }
 
@@ -115,8 +115,8 @@ class SplitButton extends React.Component {
 
     const {
       isOpen,
-      primaryActive,
-      caretActive,
+      primaryIsActive,
+      caretIsActive,
     } = this.state;
 
     const caretLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
@@ -125,12 +125,12 @@ class SplitButton extends React.Component {
       'split-button-primary',
       variant,
       { 'is-block': isBlock },
-      { 'is-active': primaryActive },
+      { 'is-active': primaryIsActive },
     );
     const caretClassnames = cx(
       'split-button-caret',
       variant,
-      { 'is-active': isOpen || caretActive },
+      { 'is-active': isOpen || caretIsActive },
     );
 
     return (
@@ -178,4 +178,4 @@ SplitButton.propTypes = propTypes;
 SplitButton.defaultProps = defaultProps;
 
 export default injectIntl(SplitButton);
-export { Button, Variants };
+export { Item, Variants };

@@ -1,6 +1,6 @@
 :local {
   .dropdown-list {
-    background: var(--terra-dropdown-button-list-background, #fff);
+    background-color: var(--terra-dropdown-button-list-background-color, #fff);
     box-shadow: var(--terra-dropdown-button-list-box-shadow, 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5));
     list-style: none;
     margin: 0;

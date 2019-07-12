@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames/bind';
-import SplitButton, { Button } from '../../../SplitButton';
+import SplitButton, { Item } from '../../../SplitButton';
 import styles from './CallbackButtons.module.scss';
 
 const cx = classnames.bind(styles);
@@ -11,9 +11,9 @@ const CallbackDropdownButtons = () => {
   return (
     <div className={cx('background', color)}>
       <SplitButton primaryOptionLabel="Gray" onClick={() => { setColor('gray'); }}>
-        <Button label="Red" onClick={() => { setColor('red'); }} id="red" />
-        <Button label="White" onClick={() => { setColor('white'); }} id="white" />
-        <Button label="Blue" onClick={() => { setColor('blue'); }} id="blue" />
+        <Item label="Red" onClick={() => { setColor('red'); }} id="red" />
+        <Item label="White" onClick={() => { setColor('white'); }} id="white" />
+        <Item label="Blue" onClick={() => { setColor('blue'); }} id="blue" />
       </SplitButton>
     </div>
   );

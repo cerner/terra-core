@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './Button.module.scss';
+import styles from './Item.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -28,17 +28,17 @@ const propTypes = {
 
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 // Keyboard events are handled in _DropdownList.jsx
-const Button = ({
+const Item = ({
   label, onClick, isActive, requestClose, ...customProps
 }) => (
   <li>
     <div
       {...customProps}
-      onClick={() => { onClick(); requestClose(); }}
+      onClick={() => { requestClose(); onClick(); }}
       role="button"
       tabIndex="0"
       className={cx([
-        'button',
+        'item',
         { active: isActive },
       ])}
     >
@@ -47,6 +47,6 @@ const Button = ({
   </li>
 );
 
-Button.propTypes = propTypes;
+Item.propTypes = propTypes;
 
-export default Button;
+export default Item;

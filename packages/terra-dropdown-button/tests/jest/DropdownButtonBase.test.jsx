@@ -1,13 +1,13 @@
 import React from 'react';
 import DropdownButtonBase from '../../src/_DropdownButtonBase';
-import { Button } from '../../src/DropdownButton';
+import { Item } from '../../src/DropdownButton';
 
 describe('Dropdown Button Base', () => {
   it('renders a default DropdownButtonBase', () => {
     const wrapper = shallow(
       <DropdownButtonBase
         buttons={
-          <Button label="1st option" onClick={() => {}} />
+          <Item label="1st option" onClick={() => {}} />
         }
         isOpen={false}
         requestClose={() => {}}
@@ -22,7 +22,7 @@ describe('Dropdown Button Base', () => {
     const wrapper = shallow(
       <DropdownButtonBase
         buttons={
-          <Button label="1st option" onClick={() => {}} />
+          <Item label="1st option" onClick={() => {}} />
         }
         isOpen={false}
         requestClose={() => {}}
@@ -38,7 +38,7 @@ describe('Dropdown Button Base', () => {
     const wrapper = shallow(
       <DropdownButtonBase
         buttons={
-          <Button label="1st option" onClick={() => {}} />
+          <Item label="1st option" onClick={() => {}} />
         }
         isOpen={false}
         requestClose={() => {}}
@@ -54,7 +54,7 @@ describe('Dropdown Button Base', () => {
     const wrapper = shallow(
       <DropdownButtonBase
         buttons={
-          <Button label="1st option" onClick={() => {}} />
+          <Item label="1st option" onClick={() => {}} />
         }
         isOpen
         requestClose={() => {}}

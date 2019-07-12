@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders a default option 1`] = `
+exports[`Item renders a default item 1`] = `
 <li>
   <div
-    className="button"
+    className="item"
     onClick={[Function]}
     role="button"
     tabIndex="0"
@@ -13,10 +13,10 @@ exports[`Button renders a default option 1`] = `
 </li>
 `;
 
-exports[`Button renders an active option 1`] = `
+exports[`Item renders an active item 1`] = `
 <li>
   <div
-    className="button active"
+    className="item active"
     onClick={[Function]}
     role="button"
     tabIndex="0"

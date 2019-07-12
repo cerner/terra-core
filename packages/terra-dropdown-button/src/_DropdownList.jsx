@@ -60,8 +60,6 @@ class DropdownList extends React.Component {
       */
       if (!this.pressed) {
         this.pressed = true;
-        const item = Util.findByIndex(this, focused);
-        item.props.onClick();
         this.setState({ active: focused });
       }
       event.preventDefault();
@@ -108,6 +106,8 @@ class DropdownList extends React.Component {
       event.preventDefault();
       if (this.pressed) {
         this.props.requestClose();
+        const item = Util.findByIndex(this, this.state.focused);
+        item.props.onClick(this.props.deactivateFocusTrap);
       }
       this.pressed = false;
     }
