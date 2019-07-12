@@ -15,7 +15,7 @@ it('should render a default SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a disabled SelectField component', () => {
@@ -29,7 +29,7 @@ it('should render a disabled SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a disabled SelectField component via selectAttrs', () => {
@@ -43,7 +43,7 @@ it('should render a disabled SelectField component via selectAttrs', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a default SelectField component with attributes spread onto the select', () => {
@@ -57,7 +57,7 @@ it('should render a default SelectField component with attributes spread onto th
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a multiple SelectField component that limits the selection count', () => {
@@ -71,7 +71,7 @@ it('should render a multiple SelectField component that limits the selection cou
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
 
 it('should render a required SelectField component', () => {
@@ -85,5 +85,5 @@ it('should render a required SelectField component', () => {
     </SelectField>
   );
 
-  expect(shallowWithIntl(select).dive()).toMatchSnapshot();
+  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
 });
