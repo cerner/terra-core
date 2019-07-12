@@ -1,8 +1,8 @@
 {
-  "Terra.paginator.previous": "Previous",
-  "Terra.paginator.next": "Next",
-  "Terra.paginator.first": "First",
-  "Terra.paginator.last": "Last",
-  "Terra.paginator.pageIndex": "Page {pageNumber}",
-  "Terra.paginator.pageCount": "Page {pageNumber} of {pageNumberTotal}"
-} 
+  "Terra.paginator.previous": "Anterior",
+  "Terra.paginator.next": "Siguiente",
+  "Terra.paginator.first": "Primera",
+  "Terra.paginator.last": "Última",
+  "Terra.paginator.pageIndex": "Página {pageNumber}",
+  "Terra.paginator.pageCount": "Página {pageNumber} de {pageNumberTotal}"
+}

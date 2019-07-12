@@ -10,29 +10,23 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
       role="navigation"
     >
       <div>
-        Page
-         
-        1
-         
-        of
-         
-        112
+        Terra.paginator.pageCount
       </div>
       <div>
         <button
           aria-disabled={true}
-          aria-label="first"
+          aria-label="Terra.paginator.first"
           className="nav-link is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
           type="button"
         >
-          First
+          Terra.paginator.first
         </button>
         <button
           aria-disabled={true}
-          aria-label="previous"
+          aria-label="Terra.paginator.previous"
           className="nav-link previous is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -42,32 +36,32 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           <span
             className="icon"
           />
-          Previous
+          Terra.paginator.previous
         </button>
         <button
           aria-disabled={false}
-          aria-label="next"
+          aria-label="Terra.paginator.next"
           className="nav-link next"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
           type="button"
         >
-          Next
+          Terra.paginator.next
           <span
             className="icon"
           />
         </button>
         <button
           aria-disabled={false}
-          aria-label="last"
+          aria-label="Terra.paginator.last"
           className="nav-link"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
           type="button"
         >
-          Last
+          Terra.paginator.last
         </button>
       </div>
     </div>
@@ -81,18 +75,18 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
       <div>
         <button
           aria-disabled={true}
-          aria-label="first"
+          aria-label="Terra.paginator.first"
           className="nav-link is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
           type="button"
         >
-          First
+          Terra.paginator.first
         </button>
         <button
           aria-disabled={true}
-          aria-label="previous"
+          aria-label="Terra.paginator.previous"
           className="nav-link previous icon-only is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -102,7 +96,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           <span
             className="visually-hidden"
           >
-            Previous
+            Terra.paginator.previous
           </span>
           <span
             className="icon"
@@ -110,18 +104,12 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
         </button>
       </div>
       <div>
-        Page
-         
-        1
-         
-        of
-         
-        112
+        Terra.paginator.pageCount
       </div>
       <div>
         <button
           aria-disabled={false}
-          aria-label="next"
+          aria-label="Terra.paginator.next"
           className="nav-link next icon-only"
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -131,7 +119,7 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           <span
             className="visually-hidden"
           >
-            Next
+            Terra.paginator.next
           </span>
           <span
             className="icon"
@@ -139,14 +127,14 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
         </button>
         <button
           aria-disabled={false}
-          aria-label="last"
+          aria-label="Terra.paginator.last"
           className="nav-link"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
           type="button"
         >
-          Last
+          Terra.paginator.last
         </button>
       </div>
     </div>

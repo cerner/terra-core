@@ -8,18 +8,18 @@ exports[`Paginator should render a default paginator 1`] = `
     >
       <button
         aria-disabled={true}
-        aria-label="first"
+        aria-label="Terra.paginator.first"
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex={null}
         type="button"
       >
-        First
+        Terra.paginator.first
       </button>
       <button
         aria-disabled={true}
-        aria-label="previous"
+        aria-label="Terra.paginator.previous"
         className="nav-link left-controls previous is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -29,11 +29,11 @@ exports[`Paginator should render a default paginator 1`] = `
         <span
           className="icon"
         />
-        Previous
+        Terra.paginator.previous
       </button>
       <button
         aria-current="page"
-        aria-label="Page 1"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link is-selected"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -44,7 +44,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 2"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -55,7 +55,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 3"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -66,7 +66,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 4"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -77,7 +77,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 5"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -88,7 +88,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 6"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -99,7 +99,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 7"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -110,7 +110,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 8"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -121,7 +121,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 9"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -132,7 +132,7 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-current={false}
-        aria-label="Page 10"
+        aria-label="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -143,28 +143,28 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-disabled={false}
-        aria-label="next"
+        aria-label="Terra.paginator.next"
         className="nav-link right-controls next"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
         type="button"
       >
-        Next
+        Terra.paginator.next
         <span
           className="icon"
         />
       </button>
       <button
         aria-disabled={false}
-        aria-label="last"
+        aria-label="Terra.paginator.last"
         className="nav-link right-controls"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
         type="button"
       >
-        Last
+        Terra.paginator.last
       </button>
     </div>
   }
@@ -177,18 +177,18 @@ exports[`Paginator should render a default paginator 1`] = `
     >
       <button
         aria-disabled={true}
-        aria-label="first"
+        aria-label="Terra.paginator.first"
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex={null}
         type="button"
       >
-        First
+        Terra.paginator.first
       </button>
       <button
         aria-disabled={true}
-        aria-label="previous"
+        aria-label="Terra.paginator.previous"
         className="nav-link left-controls previous icon-only is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -198,16 +198,16 @@ exports[`Paginator should render a default paginator 1`] = `
         <span
           className="visually-hidden"
         >
-          Previous
+          Terra.paginator.previous
         </span>
         <span
           className="icon"
         />
       </button>
-      Page 1
+      Terra.paginator.pageIndex
       <button
         aria-disabled={false}
-        aria-label="next"
+        aria-label="Terra.paginator.next"
         className="nav-link right-controls next icon-only"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -217,7 +217,7 @@ exports[`Paginator should render a default paginator 1`] = `
         <span
           className="visually-hidden"
         >
-          Next
+          Terra.paginator.next
         </span>
         <span
           className="icon"
@@ -225,14 +225,14 @@ exports[`Paginator should render a default paginator 1`] = `
       </button>
       <button
         aria-disabled={false}
-        aria-label="last"
+        aria-label="Terra.paginator.last"
         className="nav-link right-controls"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
         type="button"
       >
-        Last
+        Terra.paginator.last
       </button>
     </div>
   }
@@ -247,7 +247,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
     >
       <button
         aria-disabled={false}
-        aria-label="previous"
+        aria-label="Terra.paginator.previous"
         className="nav-link left-controls previous"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -257,18 +257,18 @@ exports[`Paginator should render a paginator without page links 1`] = `
         <span
           className="icon"
         />
-        Previous
+        Terra.paginator.previous
       </button>
       <button
         aria-disabled={false}
-        aria-label="next"
+        aria-label="Terra.paginator.next"
         className="nav-link right-controls next"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
         type="button"
       >
-        Next
+        Terra.paginator.next
         <span
           className="icon"
         />
@@ -284,7 +284,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
     >
       <button
         aria-disabled={false}
-        aria-label="previous"
+        aria-label="Terra.paginator.previous"
         className="nav-link left-controls previous icon-only"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -294,7 +294,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
         <span
           className="visually-hidden"
         >
-          Previous
+          Terra.paginator.previous
         </span>
         <span
           className="icon"
@@ -302,7 +302,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
       </button>
       <button
         aria-disabled={false}
-        aria-label="next"
+        aria-label="Terra.paginator.next"
         className="nav-link right-controls next icon-only"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -312,7 +312,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
         <span
           className="visually-hidden"
         >
-          Next
+          Terra.paginator.next
         </span>
         <span
           className="icon"
