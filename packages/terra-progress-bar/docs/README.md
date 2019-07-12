@@ -13,7 +13,10 @@ Note: The progress bar displays fill with respect to percentage (value between 0
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
 
-This component requires the following peer dependencies be installed in your app to properly function as designed.
+<details>
+<summary>View information on this component's peer dependencies.</summary>
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
 
 | Peer Dependency | Version |
 |-|-|
@@ -21,6 +24,8 @@ This component requires the following peer dependencies be installed in your app
 | react-dom | ^16.8.5 |
 | terra-markdown | ^2.20.0 |
 
+
+</details>
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Usage

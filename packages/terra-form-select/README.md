@@ -17,7 +17,10 @@ The select component is a form input with a drop down list of options that allow
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
 
-This component requires the following peer dependencies be installed in your app to properly function as designed.
+<details>
+<summary>View information on this component's peer dependencies.</summary>
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
 
 | Peer Dependency | Version |
 |-|-|
@@ -25,6 +28,8 @@ This component requires the following peer dependencies be installed in your app
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
 
+
+</details>
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## LICENSE
