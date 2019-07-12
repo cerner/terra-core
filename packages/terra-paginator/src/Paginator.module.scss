@@ -6,23 +6,12 @@
     display: flex;
     justify-content: center;
 
-    // html input[type='button'].nav-link selector used to
-    // prevent a WebKit bug destroys native `audio` and `video` controls
-    // in Android 4. More info:
-    // https://github.com/necolas/normalize.css/issues/20
-    // https://code.google.com/p/android/issues/detail?id=34301
-    // appearance: button; set to correct the inability to style
-    // clickable types in iOS and Safari.
-    // Appearance needs to be applied only to button/input elements, as
-    // applying to anchor element will cause render issue.
+    // "appearance: button;" used to correct styling issues in iOS Safari   
     // More info:
     // https://github.com/necolas/normalize.css/issues/566
     // https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
     // stylelint-disable selector-no-qualifying-type
-    button.nav-link,
-    input[type='button'].nav-link,
-    input[type='reset'].nav-link,
-    input[type='submit'].nav-link {
+    button.nav-link {
       appearance: button;  // autoprefix fix into -webkit-appearance
     }
     // stylelint-enable selector-no-qualifying-type
