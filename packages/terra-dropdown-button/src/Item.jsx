@@ -34,7 +34,7 @@ const Item = ({
   <li>
     <div
       {...customProps}
-      onClick={() => { requestClose(); onClick(); }}
+      onClick={requestClose.bind(this, onClick)}
       role="button"
       tabIndex="0"
       className={cx([
