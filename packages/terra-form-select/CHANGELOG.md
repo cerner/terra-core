@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added aria-label to resolve accessibility violation with axe-core v3.3.0.
+* Added documentation on required peerDependencies
 
 5.20.0  - (July 11, 2019)
 ------------------
