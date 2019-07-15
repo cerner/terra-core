@@ -43,6 +43,7 @@
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
     "docs": "node markdown.config.js",
+    "docs:peerDependencies": "node scripts/peer-dependency-generator/index.js",
     "heroku-prebuild": "npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
     "jest": "jest --config jestconfig.js",
