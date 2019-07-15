@@ -170,6 +170,7 @@ import IconDoubleChevronRight from 'terra-icon/lib/icon/IconDoubleChevronRight';
 import IconExtensions from 'terra-icon/lib/icon/IconExtensions';
 import IconDocumentPlus from 'terra-icon/lib/icon/IconDocumentPlus';
 import IconRefusedSlot from 'terra-icon/lib/icon/IconRefusedSlot';
+import IconPharmacyVerification from 'terra-icon/lib/icon/IconPharmacyVerification';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
 import IconPlusSymbol from 'terra-icon/lib/icon/IconPlusSymbol';
@@ -1718,6 +1719,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconRefusedSlot from 'terra-icon/lib/icon/IconRefusedSlot';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconPharmacyVerification height='2em' width='2em' /></td>
+        <td style={cellStyle}>pharmacyVerification</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconPharmacyVerification from 'terra-icon/lib/icon/IconPharmacyVerification';
           </code>
         </td>
       </tr>
