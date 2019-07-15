@@ -1,20 +1,14 @@
-/* global before, browser, Terra */
-
-describe('Show Hide', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
-
+Terra.describeViewports('Show Hide', ['medium'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/default-show-hide'));
 
-    Terra.it.matchesScreenshot('collapsed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('collapsed');
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.it.matchesScreenshot('expanded');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('expanded');
 
     it('should re-collapse the text', () => {
       browser.click('button');
@@ -26,8 +20,7 @@ describe('Show Hide', () => {
         browser.moveToObject('button');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
 
       it('removes hover', () => {
         browser.moveToObject('#root');
@@ -39,8 +32,8 @@ describe('Show Hide', () => {
         browser.keys(['Tab']);
         expect(browser.hasFocus('button')).to.be.true;
       });
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+
+      Terra.it.validatesElement();
 
       it('removes focus', () => {
         browser.keys(['Tab']);
@@ -53,8 +46,8 @@ describe('Show Hide', () => {
         browser.moveToObject('button');
         browser.buttonDown();
       });
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+
+      Terra.it.validatesElement();
 
       it('release button press', () => {
         browser.buttonUp();
@@ -66,71 +59,61 @@ describe('Show Hide', () => {
   describe('Custom button text', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/custom-button-text-show-hide'));
 
-    Terra.it.matchesScreenshot('collapsed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('collapsed');
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.it.matchesScreenshot('expanded');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('expanded');
   });
 
   describe('Initially open', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/initially-open-show-hide'));
 
-    Terra.it.matchesScreenshot('expanded');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('expanded');
   });
 
   describe('No preview', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/no-preview-show-hide'));
 
-    Terra.it.matchesScreenshot('collapsed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('collapsed');
   });
 
   describe('Button align start', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-start-show-hide'));
 
-    Terra.it.matchesScreenshot('collapsed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('collapsed');
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.it.matchesScreenshot('expanded');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('expanded');
   });
 
   describe('Button align center', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-center-show-hide'));
 
-    Terra.it.matchesScreenshot('collapsed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('collapsed');
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.it.matchesScreenshot('expanded');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('expanded');
   });
 
   describe('Button align end', () => {
     before(() => browser.url('/#/raw/tests/terra-show-hide/show-hide/button-align-end-show-hide'));
 
-    Terra.it.matchesScreenshot('collapsed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('collapsed');
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.it.matchesScreenshot('expanded');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('expanded');
   });
 
   describe('Long button text', () => {
@@ -139,14 +122,12 @@ describe('Show Hide', () => {
       browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
     });
 
-    Terra.it.matchesScreenshot('collapsed');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('collapsed');
 
     it('should expand to full text', () => {
       browser.click('button');
     });
 
-    Terra.it.matchesScreenshot('expanded');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('expanded');
   });
 });

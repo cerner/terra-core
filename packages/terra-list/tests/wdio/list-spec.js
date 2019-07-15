@@ -1,18 +1,14 @@
-describe('List', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
-
+Terra.describeViewports('List', ['medium'], () => {
   describe('List Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list'));
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('ListItem Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-item'));
 
-    Terra.it.matchesScreenshot('ListItem');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('ListItem');
 
     it('Hover', () => browser.moveToObject('#selectable-item'));
 
@@ -22,22 +18,19 @@ describe('List', () => {
   describe('ListSection Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-section'));
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('ListSubsection Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-subsection'));
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('ListSectionHeader Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-section-header'));
 
-    Terra.it.matchesScreenshot('ListSectionHeader');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('ListSectionHeader');
 
     it('Hover', () => browser.moveToObject('#test-header'));
 
@@ -47,8 +40,7 @@ describe('List', () => {
   describe('ListSubsectionHeader Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-subsection-header'));
 
-    Terra.it.matchesScreenshot('ListSubsection');
-    Terra.it.isAccessible();
+    Terra.it.validatesElement('ListSubsection');
 
     it('Hover', () => browser.moveToObject('#test-header'));
 
