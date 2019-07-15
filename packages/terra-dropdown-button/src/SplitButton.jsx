@@ -34,7 +34,7 @@ const propTypes = {
   /**
    * What will be called when the primary button is pressed.
    */
-  onClick: PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired,
   /**
    * Sets the styles of the component.  The default is 'neutral'. Must be either 'neutral' or 'ghost'.
    */
@@ -107,7 +107,7 @@ class SplitButton extends React.Component {
       disabled,
       isBlock,
       primaryOptionLabel,
-      onClick,
+      onSelect,
       variant,
       intl,
       ...customProps
@@ -145,7 +145,7 @@ class SplitButton extends React.Component {
         <button
           type="button"
           className={primaryClassnames}
-          onClick={onClick}
+          onClick={onSelect}
           onKeyDown={this.handlePrimaryKeyDown}
           onKeyUp={this.handlePrimaryKeyUp}
           disabled={disabled}

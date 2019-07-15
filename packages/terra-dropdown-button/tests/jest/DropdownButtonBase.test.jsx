@@ -7,7 +7,7 @@ describe('Dropdown Button Base', () => {
     const wrapper = shallow(
       <DropdownButtonBase
         buttons={
-          <Item label="1st option" onClick={() => {}} />
+          <Item label="1st option" onSelect={() => {}} />
         }
         isOpen={false}
         requestClose={() => {}}
@@ -22,7 +22,7 @@ describe('Dropdown Button Base', () => {
     const wrapper = shallow(
       <DropdownButtonBase
         buttons={
-          <Item label="1st option" onClick={() => {}} />
+          <Item label="1st option" onSelect={() => {}} />
         }
         isOpen={false}
         requestClose={() => {}}
@@ -38,7 +38,7 @@ describe('Dropdown Button Base', () => {
     const wrapper = shallow(
       <DropdownButtonBase
         buttons={
-          <Item label="1st option" onClick={() => {}} />
+          <Item label="1st option" onSelect={() => {}} />
         }
         isOpen={false}
         requestClose={() => {}}
@@ -54,7 +54,7 @@ describe('Dropdown Button Base', () => {
     const wrapper = shallow(
       <DropdownButtonBase
         buttons={
-          <Item label="1st option" onClick={() => {}} />
+          <Item label="1st option" onSelect={() => {}} />
         }
         isOpen
         requestClose={() => {}}

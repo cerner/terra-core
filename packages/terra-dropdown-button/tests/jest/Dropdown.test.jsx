@@ -10,7 +10,7 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen={false}
       >
-        <Item label="1st Option" onClick={() => {}} />
+        <Item label="1st Option" onSelect={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen
       >
-        <Item label="1st Option" onClick={() => {}} />
+        <Item label="1st Option" onSelect={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('Dropdown', () => {
         boundingRef={() => {}}
         isOpen={false}
       >
-        <Item label="1st Option" onClick={() => {}} />
+        <Item label="1st Option" onSelect={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('Dropdown', () => {
         isOpen={false}
         width="470px"
       >
-        <Item label="1st Option" onClick={() => {}} />
+        <Item label="1st Option" onSelect={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -64,9 +64,9 @@ describe('Dropdown', () => {
         targetRef={() => {}}
         isOpen={false}
       >
-        <Item label="1st Option" onClick={() => {}} />
-        <Item label="2nd Option" onClick={() => {}} />
-        <Item label="3rd Option" onClick={() => {}} />
+        <Item label="1st Option" onSelect={() => {}} />
+        <Item label="2nd Option" onSelect={() => {}} />
+        <Item label="3rd Option" onSelect={() => {}} />
       </Dropdown>,
     );
     expect(wrapper).toMatchSnapshot();

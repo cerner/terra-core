@@ -11,9 +11,9 @@ const CallbackDropdownButtons = () => {
   return (
     <div className={cx('background', color)}>
       <DropdownButton label="Colors">
-        <Item label="Red" onClick={() => { setColor('red'); }} id="red" />
-        <Item label="White" onClick={() => { setColor('white'); }} id="white" />
-        <Item label="Blue" onClick={() => { setColor('blue'); }} id="blue" />
+        <Item label="Red" onSelect={() => { setColor('red'); }} id="red" />
+        <Item label="White" onSelect={() => { setColor('white'); }} id="white" />
+        <Item label="Blue" onSelect={() => { setColor('blue'); }} id="blue" />
       </DropdownButton>
     </div>
   );

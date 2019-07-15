@@ -5,7 +5,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
   buttons={
     <Item
       label="1st Option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   }
   disabled={false}
@@ -47,7 +47,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
   buttons={
     <Item
       label="1st Option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   }
   disabled={false}
@@ -89,7 +89,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
   buttons={
     <Item
       label="1st Option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   }
   disabled={true}
@@ -133,7 +133,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
   buttons={
     <Item
       label="1st Option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   }
   disabled={false}
@@ -178,15 +178,15 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     Array [
       <Item
         label="1st Option"
-        onClick={[Function]}
+        onSelect={[Function]}
       />,
       <Item
         label="2nd Option"
-        onClick={[Function]}
+        onSelect={[Function]}
       />,
       <Item
         label="3rd Option"
-        onClick={[Function]}
+        onSelect={[Function]}
       />,
     ]
   }
@@ -229,7 +229,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
   buttons={
     <Item
       label="1st Option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   }
   disabled={false}

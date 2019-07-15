@@ -8,13 +8,13 @@ const cx = classnames.bind(styles);
 
 export default () => (
   <div className={cx('container')}>
-    <SplitButton primaryOptionLabel={'Wide Label '.repeat(50)} onClick={() => {}} id="wide-label">
-      <Item label="1st" onClick={() => {}} />
-      <Item label="2nd" onClick={() => {}} />
+    <SplitButton primaryOptionLabel={'Wide Label '.repeat(50)} onSelect={() => {}} id="wide-label">
+      <Item label="1st" onSelect={() => {}} />
+      <Item label="2nd" onSelect={() => {}} />
     </SplitButton>
-    <SplitButton primaryOptionLabel="Wide option" onClick={() => {}} id="wide-option">
-      <Item label={'Wide option '.repeat(50)} onClick={() => {}} />
-      <Item label="Not very wide option" onClick={() => {}} />
+    <SplitButton primaryOptionLabel="Wide option" onSelect={() => {}} id="wide-option">
+      <Item label={'Wide option '.repeat(50)} onSelect={() => {}} />
+      <Item label="Not very wide option" onSelect={() => {}} />
     </SplitButton>
   </div>
 );

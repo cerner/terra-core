@@ -7,12 +7,12 @@ import SplitButton, { Item } from '../../../SplitButton';
 export default () => (
   <SplitButton
     primaryOptionLabel="Primary option"
-    onClick={() => { console.log('primary option'); }}
+    onSelect={() => { console.log('primary option'); }}
     isBlock
   >
-    <Item label="1st Option" onClick={() => { console.log('hi'); }} />
-    <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
-    <Item label="3rd Option" onClick={() => { console.log('eyb'); }} />
-    <Item label="4th Option" onClick={() => { console.log('ih'); }} />
+    <Item label="1st Option" onSelect={() => { console.log('hi'); }} />
+    <Item label="2nd Option" onSelect={() => { console.log('bye'); }} />
+    <Item label="3rd Option" onSelect={() => { console.log('eyb'); }} />
+    <Item label="4th Option" onSelect={() => { console.log('ih'); }} />
   </SplitButton>
 );

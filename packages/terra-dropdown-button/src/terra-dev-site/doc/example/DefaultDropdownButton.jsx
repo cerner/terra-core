@@ -11,10 +11,10 @@ const Example = () => {
       <DropdownButton
         label="Export"
       >
-        <Item label="Export as PDF" onClick={() => setMessage('Export as PDF clicked')} />
-        <Item label="Export as Plain Text" onClick={() => setMessage('Export as Plain Text clicked')} />
-        <Item label="Export as Web Page" onClick={() => setMessage('Export as Web Page clicked')} />
-        <Item label="Export as XML" onClick={() => setMessage('Export as XML clicked')} />
+        <Item label="Export as PDF" onSelect={() => setMessage('Export as PDF clicked')} />
+        <Item label="Export as Plain Text" onSelect={() => setMessage('Export as Plain Text clicked')} />
+        <Item label="Export as Web Page" onSelect={() => setMessage('Export as Web Page clicked')} />
+        <Item label="Export as XML" onSelect={() => setMessage('Export as XML clicked')} />
       </DropdownButton>
       <p>{message}</p>
     </React.Fragment>

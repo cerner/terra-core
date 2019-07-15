@@ -13,8 +13,8 @@ export default () => {
     <div className={cx('button-spacing-wrapper')}>
       <a href="/" ref={first} tabIndex="0">First</a>
       <a href="/" ref={second} tabIndex="0">Second</a>
-      <SplitButton primaryOptionLabel="First" onClick={() => first.current.focus()}>
-        <Item label="Second" onClick={() => second.current.focus()} id="second" />
+      <SplitButton primaryOptionLabel="First" onSelect={() => first.current.focus()}>
+        <Item label="Second" onSelect={() => second.current.focus()} id="second" />
       </SplitButton>
     </div>
   );

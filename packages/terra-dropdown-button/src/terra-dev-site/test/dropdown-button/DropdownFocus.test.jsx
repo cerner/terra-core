@@ -12,7 +12,7 @@ export default () => {
     <div className={cx('button-spacing-wrapper')}>
       <a href="/" ref={first} tabIndex="0">First</a>
       <DropdownButton label="Dropdown">
-        <Item label="First" onClick={() => first.current.focus()} id="first" />
+        <Item label="First" onSelect={() => first.current.focus()} id="first" />
       </DropdownButton>
     </div>
   );

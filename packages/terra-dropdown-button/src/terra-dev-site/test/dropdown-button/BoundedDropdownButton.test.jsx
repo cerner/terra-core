@@ -12,39 +12,39 @@ export default () => (
   <div className={cx('container')}>
     <DropdownButton
       label="Primary"
-      onClick={() => { console.log('primary option'); }}
+      onSelect={() => { console.log('primary option'); }}
       className={cx('top-left')}
       id="top-left"
     >
-      <Item label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
-      <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
+      <Item label="1st Option Lorem Ipsum Dolor" onSelect={() => { console.log('hi'); }} />
+      <Item label="2nd Option" onSelect={() => { console.log('bye'); }} />
     </DropdownButton>
     <DropdownButton
       label="Primary"
-      onClick={() => { console.log('primary option'); }}
+      onSelect={() => { console.log('primary option'); }}
       className={cx('top-right')}
       id="top-right"
     >
-      <Item label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
-      <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
+      <Item label="1st Option Lorem Ipsum Dolor" onSelect={() => { console.log('hi'); }} />
+      <Item label="2nd Option" onSelect={() => { console.log('bye'); }} />
     </DropdownButton>
     <DropdownButton
       label="Primary"
-      onClick={() => { console.log('primary option'); }}
+      onSelect={() => { console.log('primary option'); }}
       className={cx('bottom-left')}
       id="bottom-left"
     >
-      <Item label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
-      <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
+      <Item label="1st Option Lorem Ipsum Dolor" onSelect={() => { console.log('hi'); }} />
+      <Item label="2nd Option" onSelect={() => { console.log('bye'); }} />
     </DropdownButton>
     <DropdownButton
       label="Primary"
-      onClick={() => { console.log('primary option'); }}
+      onSelect={() => { console.log('primary option'); }}
       className={cx('bottom-right')}
       id="bottom-right"
     >
-      <Item label="1st Option Lorem Ipsum Dolor" onClick={() => { console.log('hi'); }} />
-      <Item label="2nd Option" onClick={() => { console.log('bye'); }} />
+      <Item label="1st Option Lorem Ipsum Dolor" onSelect={() => { console.log('hi'); }} />
+      <Item label="2nd Option" onSelect={() => { console.log('bye'); }} />
     </DropdownButton>
   </div>
 );

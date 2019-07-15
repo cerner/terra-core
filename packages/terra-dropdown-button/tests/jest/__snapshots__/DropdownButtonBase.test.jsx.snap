@@ -14,7 +14,7 @@ exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
   >
     <Item
       label="1st option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   </Dropdown>
 </div>
@@ -34,7 +34,7 @@ exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
   >
     <Item
       label="1st option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   </Dropdown>
 </div>
@@ -55,7 +55,7 @@ exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
   >
     <Item
       label="1st option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   </Dropdown>
 </div>
@@ -75,7 +75,7 @@ exports[`Dropdown Button Base renders an open DropdownButtonBase 1`] = `
   >
     <Item
       label="1st option"
-      onClick={[Function]}
+      onSelect={[Function]}
     />
   </Dropdown>
 </div>

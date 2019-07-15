@@ -10,10 +10,10 @@ const CallbackDropdownButtons = () => {
 
   return (
     <div className={cx('background', color)}>
-      <SplitButton primaryOptionLabel="Gray" onClick={() => { setColor('gray'); }}>
-        <Item label="Red" onClick={() => { setColor('red'); }} id="red" />
-        <Item label="White" onClick={() => { setColor('white'); }} id="white" />
-        <Item label="Blue" onClick={() => { setColor('blue'); }} id="blue" />
+      <SplitButton primaryOptionLabel="Gray" onSelect={() => { setColor('gray'); }}>
+        <Item label="Red" onSelect={() => { setColor('red'); }} id="red" />
+        <Item label="White" onSelect={() => { setColor('white'); }} id="white" />
+        <Item label="Blue" onSelect={() => { setColor('blue'); }} id="blue" />
       </SplitButton>
     </div>
   );

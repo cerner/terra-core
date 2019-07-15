@@ -13,7 +13,7 @@ const propTypes = {
   /**
    * The function that is called when the option is clicked or enter/space is pressed with it focused.
    */
-  onClick: PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired,
   /**
    * @private
    * Whether or not the option should show active styles
@@ -29,12 +29,12 @@ const propTypes = {
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 // Keyboard events are handled in _DropdownList.jsx
 const Item = ({
-  label, onClick, isActive, requestClose, ...customProps
+  label, onSelect, isActive, requestClose, ...customProps
 }) => (
   <li>
     <div
       {...customProps}
-      onClick={requestClose.bind(this, onClick)}
+      onClick={(event) => { requestClose(onSelect); event.stopPropagation(); }}
       role="button"
       tabIndex="0"
       className={cx([

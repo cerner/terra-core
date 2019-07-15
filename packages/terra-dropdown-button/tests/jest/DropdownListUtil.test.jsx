@@ -5,19 +5,19 @@ import { Item } from '../../src/DropdownButton';
 
 const multipleChildren = (
   <DropdownList requestClose={() => {}}>
-    <Item label="1st" onClick={() => {}} />
-    <Item label="1th" onClick={() => {}} />
-    <Item label="1ta" onClick={() => {}} />
-    <Item label="2nd" onClick={() => {}} />
-    <Item label="3rd" onClick={() => {}} />
-    <Item label="4th" onClick={() => {}} />
-    <Item label="5th" onClick={() => {}} />
+    <Item label="1st" onSelect={() => {}} />
+    <Item label="1th" onSelect={() => {}} />
+    <Item label="1ta" onSelect={() => {}} />
+    <Item label="2nd" onSelect={() => {}} />
+    <Item label="3rd" onSelect={() => {}} />
+    <Item label="4th" onSelect={() => {}} />
+    <Item label="5th" onSelect={() => {}} />
   </DropdownList>
 );
 
 const singleChild = (
   <DropdownList requestClose={() => {}}>
-    <Item label="1st" onClick={() => {}} />
+    <Item label="1st" onSelect={() => {}} />
   </DropdownList>
 );
 

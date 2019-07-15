@@ -97,6 +97,7 @@ class DropdownList extends React.Component {
       }
       this.changeFocusState(newFocused);
     }
+    event.stopPropagation();
   }
 
   handleKeyUp(event) {
@@ -106,7 +107,7 @@ class DropdownList extends React.Component {
       event.preventDefault();
       if (this.pressed) {
         const item = Util.findByIndex(this, this.state.focused);
-        this.props.requestClose(item.props.onClick);
+        this.props.requestClose(item.props.onSelect);
       }
       this.pressed = false;
     }

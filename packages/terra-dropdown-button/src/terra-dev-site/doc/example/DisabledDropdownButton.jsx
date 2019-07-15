@@ -12,10 +12,10 @@ const Example = () => {
         label="Dropdown"
         disabled
       >
-        <Item label="1st Option" onClick={() => setMessage('1st option clicked')} />
-        <Item label="2nd Option" onClick={() => setMessage('2nd option clicked')} />
-        <Item label="3rd Option" onClick={() => setMessage('3rd option clicked')} />
-        <Item label="4th Option" onClick={() => setMessage('4th option clicked')} />
+        <Item label="1st Option" onSelect={() => setMessage('1st option clicked')} />
+        <Item label="2nd Option" onSelect={() => setMessage('2nd option clicked')} />
+        <Item label="3rd Option" onSelect={() => setMessage('3rd option clicked')} />
+        <Item label="4th Option" onSelect={() => setMessage('4th option clicked')} />
       </DropdownButton>
       <p>{message}</p>
     </React.Fragment>
