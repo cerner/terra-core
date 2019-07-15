@@ -1,18 +1,14 @@
-describe('Profile Image', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
-
+Terra.describeViewports('Profile Image', ['medium'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-profile-image/profile-image/profile-image-default'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Failed', () => {
     before(() => browser.url('/#/raw/tests/terra-profile-image/profile-image/profile-image-failed'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Source Not Provided', () => {
