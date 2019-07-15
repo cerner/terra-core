@@ -68,7 +68,7 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       });
 
       it('Container Overlay- Background can scroll when Overlay relative to container is open', () => {
-        expect(browser.getAttribute('html', 'style')).contains('');
+        expect(browser.getAttribute('html', 'style')).to.not.contain('overflow: hidden');
       });
 
       Terra.it.validatesElement('open', { selector: '#terra-Overlay--container' });
