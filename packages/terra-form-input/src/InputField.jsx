@@ -95,7 +95,7 @@ const propTypes = {
     PropTypes.number,
   ]),
 };
-console.log("field props", Field);
+
 const defaultProps = {
   defaultValue: undefined,
   disabled: false,
@@ -116,7 +116,7 @@ const defaultProps = {
   type: undefined,
   value: undefined,
 };
-console.log("default props", defaultProps)
+
 const InputField = (props) => {
   const {
     defaultValue,
