@@ -14,6 +14,9 @@ The terra-mixins component supplies global mixins for use throughout the Terra e
 
 - Install with [npm](https://www.npmjs.com): `npm install terra-mixins`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## LICENSE
 
 Copyright 2017 - 2019 Cerner Innovation, Inc.

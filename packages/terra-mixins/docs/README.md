@@ -8,6 +8,9 @@ The terra-mixins component supplies global mixins for use throughout the Terra e
   - `npm install terra-mixins`
   - `yarn add terra-mixins`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
 SCSS
