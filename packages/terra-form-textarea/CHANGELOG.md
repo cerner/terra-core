@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+## Changed
+* Replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
+
 ### Added
 * Added documentation on required peerDependencies
 
