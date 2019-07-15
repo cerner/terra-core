@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added documentation on required peerDependencies
+
+3.19.0  - (July 11, 2019)
+------------------
+### Fixed
+* Disabled document scroll if Overlay is not relative to the triggering container.
+
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
 
 3.18.0 - (July 9, 2019)
 ------------------
