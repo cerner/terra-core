@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added documentation on required peerDependencies
+* Updated jest snapshots
 
 3.19.0  - (July 11, 2019)
 ------------------

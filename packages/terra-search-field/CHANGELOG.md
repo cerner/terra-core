@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Updated jest snapshots
 
 ### Added
 * Added documentation on required peerDependencies
