@@ -141,6 +141,13 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
         browser.click('[class*=dropdown-button]');
         Terra.validates.screenshot('clicking caret closes dropdown');
       });
+
+      it('closes the dropdown when clicking outside the dropdownbutton', () => {
+        browser.moveToObject('#root', 90, 90);
+        browser.buttonDown();
+        browser.buttonUp();
+        Terra.validates.screenshot('clicking outside closes dropdown');
+      });
     });
 
     it('does not reopen the dropdown when open and closed with keyboard interactions', () => {
@@ -208,6 +215,22 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       browser.keys('Escape');
       browser.click('#bottom-right');
       Terra.validates.element('Bottom right open');
+    });
+  });
+
+  describe('Focus in callback', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/dropdown-focus');
+    });
+
+    it('opens the dropdown', () => {
+      browser.click('[class*=dropdown-button]');
+      browser.waitForVisible('[class*=dropdown-list]');
+    });
+
+    it('runs callback in dropdown that focuses an element', () => {
+      browser.click('#first');
+      Terra.validates.screenshot('first button clicked');
     });
   });
 });

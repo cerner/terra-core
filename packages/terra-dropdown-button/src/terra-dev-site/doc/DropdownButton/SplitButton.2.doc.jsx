@@ -15,7 +15,6 @@ import DisabledSplitButton from '../example/DisabledSplitButton';
 import DisabledSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledSplitButton.jsx';
 import BlockSplitButton from '../example/BlockSplitButton';
 import BlockSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BlockSplitButton.jsx';
-import Item from '../../../Item';
 
 const DocPage = () => (
   <DocTemplate
