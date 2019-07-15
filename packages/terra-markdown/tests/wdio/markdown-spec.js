@@ -1,11 +1,4 @@
-describe('Markdown', () => {
-  before(() => browser.setViewportSize({ width: 1000, height: 10000, name: 'large' }));
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-markdown/markdown/markdown'));
-
-    Terra.it.validatesElement({ selector: '#root' });
-  });
-
+Terra.describeViewports('Markdown', ['large'], () => {
   describe('css', () => {
     before(() => browser.url('/#/raw/tests/terra-markdown/markdown/css'));
 
