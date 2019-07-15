@@ -9,6 +9,8 @@ Unreleased
 * Added new icon `IconEnvelopeFill`
 * Added new icon `IconFeaturedOutlineYellow`
 * Added new icon `IconOutOfNetwork`
+* Added new icon `IconPharmacyVerification`
+* Added new icon `IconRefusedSlot`
 
 ### Changed
 * Consume one-cerner-style-icons v1.25
