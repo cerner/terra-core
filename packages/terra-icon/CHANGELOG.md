@@ -13,7 +13,8 @@ Unreleased
 * Added new icon `IconRefusedSlot`
 
 ### Changed
-* Consume one-cerner-style-icons v1.25
+* Consume one-cerner-style-icons v1.26
+* Added documentation on required peerDependencies
 
 3.13.0  - (July 11, 2019)
 ------------------
