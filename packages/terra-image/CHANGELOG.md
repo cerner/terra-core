@@ -7,6 +7,7 @@ Unreleased
 * Added `Object-fit-images` polyfill for IE.
 * Added `object-fit` property in css.
 * Added prop imageFit.
+* Added documentation on required peerDependencies
 
 3.11.0  - (July 11, 2019)
 ------------------

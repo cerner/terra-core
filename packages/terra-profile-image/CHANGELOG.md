@@ -4,7 +4,10 @@ Changelog
 Unreleased
 ----------
 ### Updated
-* updated jest snapshots
+* updated jest snapshots.
+
+### Added
+* Added documentation on required peerDependencies
 
 3.12.0  - (July 11, 2019)
 ------------------
