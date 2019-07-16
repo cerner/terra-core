@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import KeyCode from 'keycode-js';
 import styles from './Paginator.module.scss';
 import { calculatePages } from './_paginationUtils';
@@ -161,7 +162,7 @@ class ProgressivePaginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(previousPageIndex)}
             type="button"
           >
-            <span className={cx('visually-hidden')}>{intl.formatMessage({ id: 'Terra.paginator.previous' })}</span>
+            <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.previous' })} />
             <span className={cx('icon')} />
           </button>
         </div>
@@ -178,7 +179,7 @@ class ProgressivePaginator extends React.Component {
             onKeyDown={this.handleOnKeyDown(nextPageIndex)}
             type="button"
           >
-            <span className={cx('visually-hidden')}>{intl.formatMessage({ id: 'Terra.paginator.next' })}</span>
+            <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.next' })} />
             <span className={cx('icon')} />
           </button>
           <button

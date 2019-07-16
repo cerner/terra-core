@@ -183,19 +183,4 @@
   .next.icon-only .icon {
     margin: 0;
   }
-
-  /**
-   * Used to hide the content visually, yet provide the content to screen readers,
-   * More info: http://a11yproject.com/posts/how-to-hide-content/
-   */
-  .visually-hidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
 }

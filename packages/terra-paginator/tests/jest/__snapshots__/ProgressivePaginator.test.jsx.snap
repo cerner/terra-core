@@ -93,11 +93,9 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           tabIndex={null}
           type="button"
         >
-          <span
-            className="visually-hidden"
-          >
-            Terra.paginator.previous
-          </span>
+          <VisuallyHiddenText
+            text="Terra.paginator.previous"
+          />
           <span
             className="icon"
           />
@@ -116,11 +114,9 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           tabIndex="0"
           type="button"
         >
-          <span
-            className="visually-hidden"
-          >
-            Terra.paginator.next
-          </span>
+          <VisuallyHiddenText
+            text="Terra.paginator.next"
+          />
           <span
             className="icon"
           />
