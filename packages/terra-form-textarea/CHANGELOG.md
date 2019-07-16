@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added documentation on required peerDependencies
+* Fix min-height inline style bug - Use componentDidUpdate update to apply min height
 
 3.16.0  - (July 11, 2019)
 ------------------
