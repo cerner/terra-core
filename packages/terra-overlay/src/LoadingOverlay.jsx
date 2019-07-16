@@ -16,6 +16,7 @@ const propTypes = {
    */
   backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear', BackgroundStyles]),
   /**
+   * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,

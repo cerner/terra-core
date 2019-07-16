@@ -35,6 +35,7 @@ const propTypes = {
   inputAttributes: PropTypes.object,
 
   /**
+   * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,

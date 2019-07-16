@@ -15,8 +15,9 @@ const propTypes = {
    */
   children: PropTypes.element,
   /**
-  * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-  */
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
   intl: intlShape.isRequired,
   /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=1`.

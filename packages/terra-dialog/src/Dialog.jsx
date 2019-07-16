@@ -23,6 +23,7 @@ const propTypes = {
    */
   header: PropTypes.node.isRequired,
   /**
+   * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,
