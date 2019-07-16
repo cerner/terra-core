@@ -19,8 +19,8 @@ exports[`renders large banner that contains all valid information 1`] = `
     className="profile-photo"
   >
     <Image
+      Fit="fill"
       alt="My Cat"
-      imageFit="fill"
       isFluid={false}
       src=""
       variant="default"

@@ -292,8 +292,8 @@ exports[`renders the banner appropriately for a person with gestational and post
       personName="Johnathon Doe"
       photo={
         <Image
+          Fit="fill"
           alt="My Cat"
-          imageFit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -344,8 +344,8 @@ exports[`renders the banner appropriately for a person with gestational and post
       personName="Johnathon Doe"
       photo={
         <Image
+          Fit="fill"
           alt="My Cat"
-          imageFit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -402,8 +402,8 @@ exports[`renders the banner properly for a deceased person with additional appli
       personName="Johnathon Doe"
       photo={
         <Image
+          Fit="fill"
           alt="My Cat"
-          imageFit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -454,8 +454,8 @@ exports[`renders the banner properly for a deceased person with additional appli
       personName="Johnathon Doe"
       photo={
         <Image
+          Fit="fill"
           alt="My Cat"
-          imageFit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -512,8 +512,8 @@ exports[`renders the banner that contains additional information 1`] = `
       personName="Johnathon Doe"
       photo={
         <Image
+          Fit="fill"
           alt="My Cat"
-          imageFit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -564,8 +564,8 @@ exports[`renders the banner that contains additional information 1`] = `
       personName="Johnathon Doe"
       photo={
         <Image
+          Fit="fill"
           alt="My Cat"
-          imageFit="fill"
           isFluid={false}
           src=""
           variant="default"

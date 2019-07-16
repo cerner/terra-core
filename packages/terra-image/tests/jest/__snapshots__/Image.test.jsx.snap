@@ -11,8 +11,8 @@ exports[`should render a circle image component with fluid behavior 1`] = `
   }
 >
   <Image
+    Fit="fill"
     alt="circle"
-    imageFit="fill"
     isFluid={true}
     src=""
     variant="circle"

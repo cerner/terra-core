@@ -3,9 +3,9 @@
 exports[`should render a Terra image with a placeholder prop 1`] = `
 <div>
   <Image
+    Fit="fill"
     alt="A profile image"
     height="75"
-    imageFit="fill"
     isFluid={false}
     placeholder={
       <span
