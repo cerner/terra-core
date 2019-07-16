@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Inline SVG aligned for IE and wdio screenshots Updated.
+
 ### Added
 * Added `--terra-action-header-back-background-image` variable in ActionHeader.module.scss
 * Added `--terra-action-header-close-background-image` variable in ActionHeader.module.scss

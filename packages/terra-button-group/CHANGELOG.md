@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Inline SVG aligned for IE and wdio screenshots Updated.
 
 3.14.0 - (June 18, 2019)
 ------------------

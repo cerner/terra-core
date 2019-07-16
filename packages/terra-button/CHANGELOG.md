@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Inline SVG aligned for IE and wdio screenshots Updated.
+
 ### Added
 * Moved v2 Upgrade guide that existed in the wiki to the upgrade guide doc
 
