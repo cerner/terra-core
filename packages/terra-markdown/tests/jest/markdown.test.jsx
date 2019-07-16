@@ -1,6 +1,6 @@
 import React from 'react';
 import Markdown from '../../src/Markdown';
-import MockREADME from '../../src/terra-dev-site/test/markdown/Markdown.md';
+import MockREADME from './Markdown.md';
 
 const headings = [
   '# H1',
