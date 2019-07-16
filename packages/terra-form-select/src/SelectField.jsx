@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Field from 'terra-form-field';
+import { injectIntl, intlShape } from 'react-intl';
 import Select from './Select';
 import Variants from './_constants';
 
@@ -38,6 +39,11 @@ const propTypes = {
    * Whether to hide the required indicator on the label.
    */
   hideRequired: PropTypes.bool,
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: intlShape.isRequired,
   /**
    * Whether the field is displayed inline. Displays block by default.
    */
@@ -129,16 +135,6 @@ const defaultProps = {
   variant: 'default',
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
-
 const SelectField = ({
   allowClear,
   children,
@@ -147,6 +143,7 @@ const SelectField = ({
   error,
   help,
   hideRequired,
+  intl,
   isInline,
   isInvalid,
   isLabelHidden,
@@ -163,17 +160,17 @@ const SelectField = ({
   value,
   variant,
   ...customProps
-}, context) => {
+}) => {
   let helpText = help;
   if (maxSelectionCount !== undefined && maxSelectionCount >= 2) {
-    const limitSelectionText = context.intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
+    const limitSelectionText = intl.formatMessage({ id: 'Terra.form.select.maxSelectionHelp' }, { text: maxSelectionCount });
 
     if (help) {
       helpText = (
         <span>
-          { limitSelectionText }
-          { ' ' }
-          { help }
+          {limitSelectionText}
+          {' '}
+          {help}
         </span>
       );
     } else {
@@ -235,9 +232,7 @@ const SelectField = ({
 
 SelectField.propTypes = propTypes;
 SelectField.defaultProps = defaultProps;
-SelectField.contextTypes = contextTypes;
-
 SelectField.Option = Select.Option;
 SelectField.OptGroup = Select.OptGroup;
 
-export default SelectField;
+export default injectIntl(SelectField);

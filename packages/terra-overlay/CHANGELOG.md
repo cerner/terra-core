@@ -1,5 +1,7 @@
 Changelog
 =========
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 
 Unreleased
 ----------

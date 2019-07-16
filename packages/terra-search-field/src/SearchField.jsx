@@ -5,6 +5,7 @@ import Button from 'terra-button';
 import KeyCode from 'keycode-js';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form-input';
+import { injectIntl, intlShape } from 'react-intl';
 import styles from './SearchField.module.scss';
 
 const cx = classNames.bind(styles);
@@ -23,6 +24,23 @@ const propTypes = {
   disableAutoSearch: PropTypes.bool,
 
   /**
+   * Callback ref to pass into the inner input component.
+   */
+  inputRefCallback: PropTypes.func,
+
+  /**
+   * Custom input attributes to apply to the input field such as aria-label.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  inputAttributes: PropTypes.object,
+
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: intlShape.isRequired,
+
+  /**
    * Whether or not the field should display as a block.
    */
   isBlock: PropTypes.bool,
@@ -36,11 +54,6 @@ const propTypes = {
    * The minimum number of characters to perform a search.
    */
   minimumSearchTextLength: PropTypes.number,
-
-  /**
-   * Placeholder text to show while the search field is empty.
-   */
-  placeholder: PropTypes.string,
 
   /**
    * Function to trigger when user changes the input value. Provide a function to create a controlled input.
@@ -58,6 +71,11 @@ const propTypes = {
   onSearch: PropTypes.func,
 
   /**
+   * Placeholder text to show while the search field is empty.
+   */
+  placeholder: PropTypes.string,
+
+  /**
    * How long the component should wait (in milliseconds) after input before performing an automatic search.
    */
   searchDelay: PropTypes.number,
@@ -67,16 +85,6 @@ const propTypes = {
    */
   value: PropTypes.string,
 
-  /**
-   * Callback ref to pass into the inner input component.
-   */
-  inputRefCallback: PropTypes.func,
-
-  /**
-   * Custom input attributes to apply to the input field such as aria-label.
-   */
-  // eslint-disable-next-line react/forbid-prop-types
-  inputAttributes: PropTypes.object,
 };
 
 const defaultProps = {
@@ -89,15 +97,6 @@ const defaultProps = {
   searchDelay: 250,
   value: undefined,
   inputAttributes: undefined,
-};
-
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
 };
 
 class SearchField extends React.Component {
@@ -200,17 +199,18 @@ class SearchField extends React.Component {
     const {
       defaultValue,
       disableAutoSearch,
+      inputRefCallback,
+      inputAttributes,
+      intl,
       isBlock,
       isDisabled,
       minimumSearchTextLength,
-      placeholder,
-      searchDelay,
       onChange,
       onInvalidSearch,
       onSearch,
+      placeholder,
+      searchDelay,
       value,
-      inputRefCallback,
-      inputAttributes,
       ...customProps
     } = this.props;
 
@@ -220,9 +220,9 @@ class SearchField extends React.Component {
       customProps.className,
     ]);
 
-    const inputText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
-    const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.submit-search' });
-    const clearText = this.context.intl.formatMessage({ id: 'Terra.searchField.clear' });
+    const inputText = intl.formatMessage({ id: 'Terra.searchField.search' });
+    const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
+    const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
     const clearIcon = <span className={cx('clear-icon')} />;
 
@@ -277,6 +277,5 @@ class SearchField extends React.Component {
 
 SearchField.propTypes = propTypes;
 SearchField.defaultProps = defaultProps;
-SearchField.contextTypes = contextTypes;
 
-export default SearchField;
+export default injectIntl(SearchField);

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+## Changed
+* Replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
 
 2.17.0 - (July 16, 2019)
 ------------------
