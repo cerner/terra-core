@@ -31,7 +31,7 @@ const propTypes = {
    * The expand button will not display if this is not set or on small viewports.
    * Only the expand button will be rendered if onMaximize and onMinimize are set.
    *
-   * *Note: If `onBack` is set the maximize button will not appear and must be provided as a child inside
+   * *Note: If `onBack` is set, the maximize button will not appear and must be provided as a child inside
    * a `Collapsible Menu View`. See examples for an example.*
    */
   onMaximize: PropTypes.func,
@@ -40,7 +40,7 @@ const propTypes = {
    * The minimize button will not display if this is not set or on small viewports.
    * Only the expand button will be rendered if both onMaximize and onMinimize are set.
    *
-   * *Note: If `onBack` is set the minimize button will not appear and must be provided as a child inside
+   * *Note: If `onBack` is set, the minimize button will not appear and must be provided as a child inside
    * a `Collapsible Menu View`. See examples for an example.*
    */
   onMinimize: PropTypes.func,
