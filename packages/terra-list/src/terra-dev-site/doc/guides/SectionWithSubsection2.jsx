@@ -1,10 +1,12 @@
 import React from 'react';
+/* eslint-disable import/no-extraneous-dependencies */
 import List, {
   Item,
   Section,
   Subsection,
   Utils,
-} from 'terra-list/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions\
+} from 'terra-list/lib/index';
+/* eslint-enable */
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import classNames from 'classnames/bind';
 import mockData from './mock-data/mock-section-sub';
