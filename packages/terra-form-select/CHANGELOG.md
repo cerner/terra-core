@@ -6,14 +6,14 @@ Unreleased
 ### Added
 * Added documentation on required peerDependencies
 
+### Fixed
+* Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.
+
 5.20.0  - (July 11, 2019)
 ------------------
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 * Updated Docs around the requirement of terra-base and aggregate-translations.
-
-### Fixed
-* Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.
 
 5.19.0 - (July 9, 2019)
 ------------------
