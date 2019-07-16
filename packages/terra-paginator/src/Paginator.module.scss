@@ -108,7 +108,8 @@
       padding-left: var(--terra-paginator-nav-link-previous-padding-left, 0.5rem);
 
       &.icon-only {
-        margin: 0;
+        margin-left: var(--terra-paginator-nav-link-previous-icon-only-margin-left, 0.14285rem);
+        margin-right: var(--terra-paginator-nav-link-previous-icon-only-margin-right, 0.14285rem);
         padding: var(--terra-paginator-nav-link-padding, 0.35714rem 0.5rem);          
       }
     }
@@ -117,7 +118,8 @@
       padding-right: var(--terra-paginator-nav-link-next-padding-right, 0.5rem);
       
       &.icon-only {
-        margin: 0;
+        margin-left: var(--terra-paginator-nav-link-next-icon-only-margin-left, 0.14285rem);
+        margin-right: var(--terra-paginator-nav-link-next-icon-only-margin-right, 0.14285rem);
         padding: var(--terra-paginator-nav-link-padding, 0.35714rem 0.5rem);   
       }
     }

@@ -35,7 +35,7 @@
 * --terra-paginator-nav-link-icon-previous-margin-right
 * --terra-paginator-nav-link-icon-next-margin-left
 
-#### Added 2.18.0
+#### Added ~2.17.x
 * --terra-paginator-nav-link-background-color
 * --terra-paginator-nav-link-box-shadow
 * --terra-paginator-nav-link-font-size
@@ -51,13 +51,17 @@
 * --terra-paginator-nav-link-disabled-border
 * --terra-paginator-nav-link-disabled-opacity
 * --terra-paginator-nav-link-previous-padding-left
+* --terra-paginator-nav-link-previous-icon-only-margin-left
+* --terra-paginator-nav-link-previous-icon-only-margin-right
 * --terra-paginator-nav-link-next-padding-right
+* --terra-paginator-nav-link-next-icon-only-margin-left
+* --terra-paginator-nav-link-next-icon-only-margin-right
 * --terra-paginator-nav-link-icon-previous-background-image
 * --terra-paginator-nav-link-icon-previous-disabled-background-image
 * --terra-paginator-nav-link-icon-next-background-image
 * --terra-paginator-nav-link-icon-next-disabled-background-image
 
-#### Removed 2.18.0
+#### Removed ~2.17.x
 * --terra-paginator-nav-link-background
 * --terra-paginator-nav-link-hover-background
 * --terra-paginator-nav-link-focus-background
