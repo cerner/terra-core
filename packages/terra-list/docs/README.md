@@ -2,7 +2,7 @@
 
 The Terra List is a structural component to vertically arrange content within list/list items.
 
-If a list implementation contains selectable list options the role prop should be set to "listbox" for accesibility. 
+If a list implementation contains selectable list options the role prop should be set to "listbox" for accesibility.
 
 Two padding variants are provide for list item content, standard and compact. If different padding is desired use the defaulted style of 'none' and set the padding on the list item's child content with your own css values, preferrably themeable variables.
 
@@ -11,6 +11,23 @@ Two padding variants are provide for list item content, standard and compact. If
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-list`
   - `yarn add terra-list`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+<details>
+<summary>View information on this component's peer dependencies.</summary>
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Usage
 

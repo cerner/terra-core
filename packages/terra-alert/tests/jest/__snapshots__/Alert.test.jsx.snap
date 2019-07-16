@@ -3,8 +3,8 @@
 exports[`Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -68,7 +68,6 @@ exports[`Alert of type advisory with text content should render an Alert compone
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -117,7 +116,6 @@ exports[`Alert of type advisory with text content should render an Alert compone
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -145,8 +143,8 @@ exports[`Alert of type advisory with text content should render an Alert compone
 exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -210,7 +208,6 @@ exports[`Alert of type alert with text content should render an Alert component 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -267,7 +264,6 @@ exports[`Alert of type alert with text content should render an Alert component 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -303,13 +299,13 @@ exports[`Alert of type alert with text content should render an Alert component 
 exports[`Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
 <Alert
   action={null}
+  customColorClass="terra-alert-custom-orange-color"
   customIcon={
     <IconHelp
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  customStatusColor="orange"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -345,7 +341,7 @@ exports[`Alert of type custom with custom title and text content should render a
     responsiveTo="parent"
     small={
       <div
-        className="alert-base custom wide"
+        className="alert-base custom wide terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -371,11 +367,6 @@ exports[`Alert of type custom with custom title and text content should render a
             "onError": [Function],
             "textComponent": "span",
             "timeZone": null,
-          }
-        }
-        style={
-          Object {
-            "color": "orange",
           }
         }
       >
@@ -406,7 +397,7 @@ exports[`Alert of type custom with custom title and text content should render a
     }
     tiny={
       <div
-        className="alert-base custom narrow"
+        className="alert-base custom narrow terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -432,11 +423,6 @@ exports[`Alert of type custom with custom title and text content should render a
             "onError": [Function],
             "textComponent": "span",
             "timeZone": null,
-          }
-        }
-        style={
-          Object {
-            "color": "orange",
           }
         }
       >
@@ -474,8 +460,8 @@ exports[`Alert of type custom with custom title and text content should render a
 exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -539,7 +525,6 @@ exports[`Alert of type error with text content should render an Alert component 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -596,7 +581,6 @@ exports[`Alert of type error with text content should render an Alert component 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -632,8 +616,8 @@ exports[`Alert of type error with text content should render an Alert component 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -697,7 +681,6 @@ exports[`Alert of type info with custom title and HTML content should render an 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -756,7 +739,6 @@ exports[`Alert of type info with custom title and HTML content should render an 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -794,8 +776,8 @@ exports[`Alert of type info with custom title and HTML content should render an 
 exports[`Alert of type info with text content should render an Alert component of type info 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -859,7 +841,6 @@ exports[`Alert of type info with text content should render an Alert component o
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -916,7 +897,6 @@ exports[`Alert of type info with text content should render an Alert component o
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -964,8 +944,8 @@ exports[`Alert of type success with an action button text content should render 
       variant="emphasis"
     />
   }
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1029,7 +1009,6 @@ exports[`Alert of type success with an action button text content should render 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -1101,7 +1080,6 @@ exports[`Alert of type success with an action button text content should render 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-narrow"
@@ -1152,8 +1130,8 @@ exports[`Alert of type success with an action button text content should render 
 exports[`Alert of type success with text content should render an Alert component of type success 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1217,7 +1195,6 @@ exports[`Alert of type success with text content should render an Alert componen
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -1274,7 +1251,6 @@ exports[`Alert of type success with text content should render an Alert componen
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -1310,8 +1286,8 @@ exports[`Alert of type success with text content should render an Alert componen
 exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1375,7 +1351,6 @@ exports[`Alert of type warning with text content should render an Alert componen
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -1432,7 +1407,6 @@ exports[`Alert of type warning with text content should render an Alert componen
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -1468,8 +1442,8 @@ exports[`Alert of type warning with text content should render an Alert componen
 exports[`Alert with no props should render a default component 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1533,7 +1507,6 @@ exports[`Alert with no props should render a default component 1`] = `
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -1590,7 +1563,6 @@ exports[`Alert with no props should render a default component 1`] = `
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -1638,13 +1610,13 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
       variant="emphasis"
     />
   }
+  customColorClass="terra-alert-custom-orange-color"
   customIcon={
     <IconHelp
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  customStatusColor="orange"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1680,7 +1652,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
     responsiveTo="parent"
     small={
       <div
-        className="alert-base custom wide"
+        className="alert-base custom wide terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1706,11 +1678,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             "onError": [Function],
             "textComponent": "span",
             "timeZone": null,
-          }
-        }
-        style={
-          Object {
-            "color": "orange",
           }
         }
       >
@@ -1766,7 +1733,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
     }
     tiny={
       <div
-        className="alert-base custom narrow"
+        className="alert-base custom narrow terra-alert-custom-orange-color"
         intl={
           Object {
             "defaultFormats": Object {},
@@ -1792,11 +1759,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             "onError": [Function],
             "textComponent": "span",
             "timeZone": null,
-          }
-        }
-        style={
-          Object {
-            "color": "orange",
           }
         }
       >
@@ -1859,8 +1821,8 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
 exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
 <Alert
   action={null}
+  customColorClass="custom-default-color"
   customIcon={null}
-  customStatusColor=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1924,7 +1886,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-std"
@@ -1995,7 +1956,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             "timeZone": null,
           }
         }
-        style={Object {}}
       >
         <div
           className="body body-narrow"

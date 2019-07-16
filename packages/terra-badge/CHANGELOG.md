@@ -3,6 +3,23 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added documentation on required peerDependencies
+
+3.16.0  - (July 11, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.15.0 - (July 9, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports
+
+3.14.0 - (June 28, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.13.0 - (June 18, 2019)
 ------------------

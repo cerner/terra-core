@@ -3,6 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added documentation on required peerDependencies
+
+2.11.0  - (July 11, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
+2.10.0 - (July 9, 2019)
+------------------
+### Added
+* Added refCallback prop. This is useful when using terra-visually-hidden-text as an aria-live container
+
+2.9.0 - (June 28, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.8.0 - (June 11, 2019)
 ------------------
