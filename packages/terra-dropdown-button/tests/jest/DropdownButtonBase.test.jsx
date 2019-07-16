@@ -6,7 +6,7 @@ describe('Dropdown Button Base', () => {
   it('renders a default DropdownButtonBase', () => {
     const wrapper = shallow(
       <DropdownButtonBase
-        buttons={
+        items={
           <Item label="1st option" onSelect={() => {}} />
         }
         isOpen={false}
@@ -21,7 +21,7 @@ describe('Dropdown Button Base', () => {
   it('renders a disabled DropdownButtonBase', () => {
     const wrapper = shallow(
       <DropdownButtonBase
-        buttons={
+        items={
           <Item label="1st option" onSelect={() => {}} />
         }
         isOpen={false}
@@ -37,7 +37,7 @@ describe('Dropdown Button Base', () => {
   it('renders a block DropdownButtonBase', () => {
     const wrapper = shallow(
       <DropdownButtonBase
-        buttons={
+        items={
           <Item label="1st option" onSelect={() => {}} />
         }
         isOpen={false}
@@ -53,7 +53,7 @@ describe('Dropdown Button Base', () => {
   it('renders an open DropdownButtonBase', () => {
     const wrapper = shallow(
       <DropdownButtonBase
-        buttons={
+        items={
           <Item label="1st option" onSelect={() => {}} />
         }
         isOpen

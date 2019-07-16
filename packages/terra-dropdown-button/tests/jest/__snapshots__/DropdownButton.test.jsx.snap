@@ -2,15 +2,15 @@
 
 exports[`Dropdown Button should render a block dropdown type 1`] = `
 <DropdownButtonBase
-  buttons={
+  disabled={false}
+  isBlock={true}
+  isOpen={false}
+  items={
     <Item
       label="1st Option"
       onSelect={[Function]}
     />
   }
-  disabled={false}
-  isBlock={true}
-  isOpen={false}
   requestClose={[Function]}
 >
   <button
@@ -37,15 +37,15 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
 
 exports[`Dropdown Button should render a default dropdown type 1`] = `
 <DropdownButtonBase
-  buttons={
+  disabled={false}
+  isBlock={false}
+  isOpen={false}
+  items={
     <Item
       label="1st Option"
       onSelect={[Function]}
     />
   }
-  disabled={false}
-  isBlock={false}
-  isOpen={false}
   requestClose={[Function]}
 >
   <button
@@ -72,15 +72,15 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
 
 exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 <DropdownButtonBase
-  buttons={
+  disabled={true}
+  isBlock={false}
+  isOpen={false}
+  items={
     <Item
       label="1st Option"
       onSelect={[Function]}
     />
   }
-  disabled={true}
-  isBlock={false}
-  isOpen={false}
   requestClose={[Function]}
 >
   <button
@@ -108,15 +108,15 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 
 exports[`Dropdown Button should render a split type with custom attributes 1`] = `
 <DropdownButtonBase
-  buttons={
+  disabled={false}
+  isBlock={false}
+  isOpen={false}
+  items={
     <Item
       label="1st Option"
       onSelect={[Function]}
     />
   }
-  disabled={false}
-  isBlock={false}
-  isOpen={false}
   other-custom-attribute="purple"
   requestClose={[Function]}
   test-custom-attribute={true}
@@ -145,7 +145,10 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
 
 exports[`Dropdown Button should render a split type with multiple children 1`] = `
 <DropdownButtonBase
-  buttons={
+  disabled={false}
+  isBlock={false}
+  isOpen={false}
+  items={
     Array [
       <Item
         label="1st Option"
@@ -161,9 +164,6 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
       />,
     ]
   }
-  disabled={false}
-  isBlock={false}
-  isOpen={false}
   onSelect={[Function]}
   requestClose={[Function]}
 >
@@ -191,15 +191,15 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
 
 exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 <DropdownButtonBase
-  buttons={
+  disabled={false}
+  isBlock={false}
+  isOpen={false}
+  items={
     <Item
       label="1st Option"
       onSelect={[Function]}
     />
   }
-  disabled={false}
-  isBlock={false}
-  isOpen={false}
   requestClose={[Function]}
 >
   <button
@@ -226,15 +226,15 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 
 exports[`Dropdown Button should render an open dropdown 1`] = `
 <DropdownButtonBase
-  buttons={
+  disabled={false}
+  isBlock={false}
+  isOpen={true}
+  items={
     <Item
       label="1st Option"
       onSelect={[Function]}
     />
   }
-  disabled={false}
-  isBlock={false}
-  isOpen={true}
   requestClose={[Function]}
 >
   <button

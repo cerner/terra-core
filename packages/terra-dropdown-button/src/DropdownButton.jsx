@@ -102,7 +102,7 @@ class DropdownButton extends React.Component {
     return (
       <DropdownButtonBase
         {...customProps}
-        buttons={children}
+        items={children}
         isOpen={isOpen}
         requestClose={this.handleDropdownRequestClose}
         disabled={disabled}

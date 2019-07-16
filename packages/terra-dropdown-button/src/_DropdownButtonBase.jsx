@@ -14,7 +14,7 @@ const propTypes = {
   /**
    * The options to display in the dropdown. Should be of type `Button`.
    */
-  buttons: PropTypes.node.isRequired,
+  items: PropTypes.node.isRequired,
   /**
    * Whether or not the dropdown is open
    */
@@ -59,7 +59,7 @@ class DropdownButtonBase extends React.Component {
   render() {
     const {
       children,
-      buttons,
+      items,
       isOpen,
       requestClose,
       disabled,
@@ -96,7 +96,7 @@ class DropdownButtonBase extends React.Component {
           requestClose={requestClose}
           width={calcWidth}
         >
-          {buttons}
+          {items}
         </Dropdown>
       </div>
     );
