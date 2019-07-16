@@ -1,8 +1,14 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Image from 'terra-image/lib/Image';
+import classNames from 'classnames/bind';
 import placeholderPic150x150 from '../../assets/150x150.jpg';
 import placeholderPic1000x200 from '../../assets/1000x200.png';
+import coverImage170X251 from '../../assets/170x251.jpg';
+
+import styles from './ImageDefault.module.scss';
+
+const cx = classNames.bind(styles);
 
 const ImageDefault = () => (
   <div>
@@ -27,6 +33,16 @@ const ImageDefault = () => (
     <Image src="/mock/failure/route" alt="invalid src attribute image" placeholder={<Image src={placeholderPic1000x200} alt="placeholder image" />} />
     <h3>Valid src prop (src will show)</h3>
     <Image src={placeholderPic150x150} alt="src image" placeholder={<Image src={placeholderPic1000x200} alt="placeholder image" />} />
+    <br />
+    <h2>Fit</h2>
+    <h3>Cover</h3>
+    <div className={cx('image-container')}>
+      <Image className={cx('image')} src={coverImage170X251} alt="invalid src attribute image" Fit="cover" variant="circle" />
+    </div>
+    <h3>None</h3>
+    <div className={cx('image-container')}>
+      <Image className={cx('image')} src={coverImage170X251} alt="invalid src attribute image" Fit="none" />
+    </div>
   </div>
 );
 

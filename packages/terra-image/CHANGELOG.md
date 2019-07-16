@@ -6,7 +6,8 @@ Unreleased
 ### Added
 * Added `Object-fit-images` polyfill for IE.
 * Added `object-fit` property in css.
-* Added prop imageFit.
+* Added prop Fit.
+* Added examples using Fit.
 
 3.11.0  - (July 11, 2019)
 ------------------
