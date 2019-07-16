@@ -9,27 +9,17 @@ describe('Dialog', () => {
   // Snapshot Test
   it('should render a default component', () => {
     const wrapper = shallowWithIntl(defaultRender);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.dive()).toMatchSnapshot();
   });
 
   // Structure Tests
   it('should have the class dialog', () => {
     const wrapper = shallowWithIntl(defaultRender);
-    expect(wrapper.prop('className')).toContain('dialog');
+    expect(wrapper.dive().prop('className')).toContain('dialog');
   });
 
   it('should render a Dialog with merged attributes', () => {
     const wrapper = shallowWithIntl(<Dialog header="Header Content" footer="Footer Content" className="TestClass">some body content</Dialog>);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.dive()).toMatchSnapshot();
   });
-});
-
-it('throws error on missing locale prop in Base', () => {
-  global.console = { error: jest.fn() };
-
-  expect(() => {
-    render(<Dialog header="Header Content" footer="Footer Content" />);
-  }).toThrowError();
-  // eslint-disable-next-line no-console
-  expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
 });

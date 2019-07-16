@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl, intlShape } from 'react-intl';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
@@ -25,6 +26,11 @@ const propTypes = {
    * Whether or not to hide the required indicator on the legend.
    */
   hideRequired: PropTypes.bool,
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: intlShape.isRequired,
   /**
    * Whether or not the field is an inline field.
    */
@@ -69,21 +75,13 @@ const defaultProps = {
   showOptional: false,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
-const RadioField = (props, { intl }) => {
+const RadioField = (props) => {
   const {
     children,
     error,
     help,
     hideRequired,
+    intl,
     isInvalid,
     isInline,
     isLegendHidden,
@@ -150,6 +148,5 @@ const RadioField = (props, { intl }) => {
 
 RadioField.propTypes = propTypes;
 RadioField.defaultProps = defaultProps;
-RadioField.contextTypes = contextTypes;
 
-export default RadioField;
+export default injectIntl(RadioField);
