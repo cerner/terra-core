@@ -726,7 +726,7 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.props.intl.formatMessage({ id: 'Terra.form.select.display' })} role={variant === Variants.DEFAULT ? 'textbox' : null}>
+        <div className={cx('display')} aria-label={this.ariaLabel()} role={variant === Variants.DEFAULT ? 'textbox' : null}>
           {this.getDisplay(displayId, placeholderId, ariaDescribedBy)}
         </div>
         {this.renderToggleButton()}
