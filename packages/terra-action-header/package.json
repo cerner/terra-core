@@ -27,11 +27,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.16.0",
-    "terra-button-group": "^3.16.0",
-    "terra-doc-template": "^2.12.0",
-    "terra-icon": "^3.13.0",
-    "terra-mixins": "^1.31.0"
     "terra-button": "^3.17.0",
     "terra-button-group": "^3.17.0",
     "terra-collapsible-menu-view": "^6.5.0",
