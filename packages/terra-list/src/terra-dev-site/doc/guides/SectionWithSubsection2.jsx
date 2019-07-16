@@ -6,7 +6,7 @@ import List, {
   Subsection,
   Utils,
 } from 'terra-list/lib/index';
-/* eslint-enable */
+/* eslint-enable import/no-extraneous-dependencies */
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import classNames from 'classnames/bind';
 import mockData from './mock-data/mock-section-sub';
