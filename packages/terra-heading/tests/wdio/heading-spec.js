@@ -1,59 +1,49 @@
-const viewports = Terra.viewports('medium');
-
-describe('Heading', () => {
+Terra.describeViewports('Heading', ['medium'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-heading/heading/default-heading'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Color', () => {
     before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-color'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Italics', () => {
     before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-italics'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Levels', () => {
     before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-levels'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Size', () => {
     before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-size'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Visually Hidden', () => {
     before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-visually-hidden'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Visual Props', () => {
     before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-visual-props'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Weight', () => {
     before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-weight'));
 
-    Terra.it.isAccessible({ viewports });
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/about.md';
+import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
 const DocPage = () => (

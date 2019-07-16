@@ -9,4 +9,11 @@ describe('VisuallyHiddenText', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should pass in refCallback as the ref prop of the input element', () => {
+    const refCallback = jest.fn();
+    const wrapper = mount(<VisuallyHiddenText refCallback={refCallback} />);
+    expect(refCallback).toBeCalled();
+    expect(wrapper).toMatchSnapshot();
+  });
 });

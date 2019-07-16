@@ -3,6 +3,18 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added documentation on required peerDependencies
+
+2.12.0  - (July 11, 2019)
+------------------
+### Changed
+* Updated version of react-syntax-highlighter
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Cleaned up tests
+
+2.11.0 - (June 28, 2019)
+------------------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 

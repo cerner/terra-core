@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
+### Added
+* Added documentation on required peerDependencies
+
+2.32.0 - (June 28, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.31.0 - (June 11, 2019)
 ------------------

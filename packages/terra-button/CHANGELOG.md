@@ -7,6 +7,16 @@ Unreleased
 * Inline SVG aligned for IE and wdio screenshots Updated.
 
 ### Added
+* Added documentation on required peerDependencies
+
+3.19.0  - (July 11, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports
+
+3.18.0 - (June 28, 2019)
+------------------
+### Added
 * Moved v2 Upgrade guide that existed in the wiki to the upgrade guide doc
 
 ### Changed

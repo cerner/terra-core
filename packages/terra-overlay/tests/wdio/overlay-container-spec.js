@@ -1,6 +1,5 @@
-describe('Overlay Container Default', () => {
+Terra.describeViewports('Overlay Container Default', ['huge'], () => {
   before(() => browser.url('/#/raw/tests/terra-overlay/overlay/overlay-container/default-overlay-container'));
 
-  Terra.it.isAccessible();
-  Terra.it.matchesScreenshot();
+  Terra.it.validatesElement();
 });

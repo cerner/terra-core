@@ -7,6 +7,21 @@ Unreleased
 * Inline SVG aligned for IE and wdio screenshots Updated.
 
 ### Added
+* Added documentation on required peerDependencies
+
+2.19.0  - (July 11, 2019)
+------------------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
+2.18.0 - (July 9, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports
+
+2.17.0 - (June 28, 2019)
+------------------
+### Added
 * Added `--terra-action-header-back-background-image` variable in ActionHeader.module.scss
 * Added `--terra-action-header-close-background-image` variable in ActionHeader.module.scss
 * Added `--terra-action-header-maximize-background-image` variable in ActionHeader.module.scss
@@ -37,7 +52,7 @@ Unreleased
 
 2.15.0 - (June 11, 2019)
 ------------------
-### Removed	
+### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
