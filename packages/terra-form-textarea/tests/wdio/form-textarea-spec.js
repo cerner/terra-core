@@ -171,6 +171,17 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
       Terra.it.matchesScreenshot('1');
     });
+
+    describe('Swapping two textareas with different size', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/swap-textarea');
+        // Removes the blinking cursor to prevent screenshot mismatches.
+        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
+      });
+
+      browser.click('#swap-button');
+      Terra.it.validatesElement('0', { rules: ignoredA11y });
+    })
   });
 
   describe('TextareaField', () => {
