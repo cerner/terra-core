@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.14.0 - (July 16, 2019)
+------------------
 ### Added
 * Added new icon `IconCeMarking`
 * Added new icon `IconEcRep`
