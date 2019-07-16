@@ -177,10 +177,10 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/swap-textarea');
         // Removes the blinking cursor to prevent screenshot mismatches.
         browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
+        browser.click('#swap-button');
       });
 
-      browser.click('#swap-button');
-      Terra.it.validatesElement('0', { rules: ignoredA11y });
+      Terra.it.validatesElement({ rules: ignoredA11y });
     })
   });
 
