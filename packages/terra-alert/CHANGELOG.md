@@ -5,6 +5,9 @@ Unreleased
 ----------
 ### Changed
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+4.3.0 - (July 16, 2019)
+------------------
 ### Added
 * Added documentation on required peerDependencies
 

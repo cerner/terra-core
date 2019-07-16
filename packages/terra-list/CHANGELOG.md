@@ -3,11 +3,15 @@ Changelog
 
 Unreleased
 ----------
+
+4.11.0 - (July 16, 2019)
+------------------
 ### Added
 * Added documentation on required peerDependencies
 
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Fixed linting errors in documentation
 
 4.10.0  - (July 11, 2019)
 ------------------

@@ -5,8 +5,12 @@ Changelog
 
 Unreleased
 ----------
+
+3.20.0 - (July 16, 2019)
+------------------
 ### Added
 * Added documentation on required peerDependencies
+* Updated jest snapshots
 
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`

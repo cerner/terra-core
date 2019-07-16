@@ -3,9 +3,9 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 const fs = require('fs');
 const path = require('path');
-const packagePaths = require('./getPackagePaths');
+const packagePaths = require('../common/getPackagePaths');
 const generatePeerDependenciesDoc = require('./generatePeerDependencyDoc');
-const findAndReplace = require('./findAndReplace');
+const findAndReplace = require('../common/findAndReplace');
 
 // Generate the markdown to display peerDependencies information for each package
 packagePaths.forEach((packagePath) => {
