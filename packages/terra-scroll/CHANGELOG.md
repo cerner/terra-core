@@ -3,20 +3,26 @@ Changelog
 
 Unreleased
 ----------
+
+2.11.0 - (July 16, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
 ### Added
 * Added documentation on required peerDependencies
 
-2.11.0  - (July 11, 2019)
+2.10.0  - (July 11, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.10.0 - (June 28, 2019)
+2.9.0 - (June 28, 2019)
 ------------------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 
-2.9.0 - (June 11, 2019)
+2.8.0 - (June 11, 2019)
 ------------------
 ### Removed
 * Removed node_modules from .npmignore
@@ -25,17 +31,17 @@ Unreleased
 ### Changed
 * Made required updates to consume terra-toolkit v5 and terra-dev-site v5
 
-2.8.0 - (May 1, 2019)
+2.7.0 - (May 1, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.7.0 - (April 16, 2019)
+2.6.0 - (April 16, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.6.0 - (March 26, 2019)
+2.5.0 - (March 26, 2019)
 ------------------
 ### Changed
 * Update react/react-dom peer-dependency to latest stable minor release
@@ -44,12 +50,12 @@ Unreleased
 * Removed peer dependency on terra-base
 * Removed baseStyles import from terra-base
 
-2.5.0 - (March 21, 2019)
+2.4.0 - (March 21, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
 
-2.4.0 - (February 26, 2019)
+2.3.0 - (February 26, 2019)
 ------------------
 ### Changed
 * Minor dependency version bump
