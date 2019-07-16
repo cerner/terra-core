@@ -4,11 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Added
+* Added documentation on required peerDependencies
 * Added `Object-fit-images` polyfill for IE.
 * Added `object-fit` property in css.
 * Added prop Fit.
 * Added examples using Fit.
-* Added documentation on required peerDependencies
 
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
