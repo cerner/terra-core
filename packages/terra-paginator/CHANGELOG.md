@@ -12,11 +12,9 @@ Unreleased
 * Added support for i18n and translations
 
 ### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 * Removed theme variables - see UPGRADEGUIDE.md
 * Updated to use terra-visually-hidden-text component
-
-### Changed
-* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 
 2.17.0  - (July 11, 2019)
 ------------------
