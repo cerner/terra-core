@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
 ### Added
 * Added documentation on required peerDependencies
 
