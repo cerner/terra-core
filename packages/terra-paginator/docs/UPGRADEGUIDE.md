@@ -36,7 +36,6 @@
 * --terra-paginator-nav-link-icon-next-margin-left
 
 #### Added 2.18.0
-// todo === finish editing ====
 * --terra-paginator-nav-link-background-color
 * --terra-paginator-nav-link-box-shadow
 * --terra-paginator-nav-link-font-size
