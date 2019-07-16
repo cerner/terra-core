@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 ### Added
+* Added new icon `IconCeMarking`
+* Added new icon `IconEcRep`
+* Added new icon `IconEnvelopeFill`
+* Added new icon `IconFeaturedOutlineYellow`
+* Added new icon `IconOutOfNetwork`
+* Added new icon `IconPharmacyVerification`
+* Added new icon `IconRefusedSlot`
+
+### Changed
+* Consume one-cerner-style-icons v1.26
 * Added documentation on required peerDependencies
 
 ### Changed
