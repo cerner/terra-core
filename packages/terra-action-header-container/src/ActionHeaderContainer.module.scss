@@ -1,0 +1,56 @@
+:local {
+  .flex-header {
+    align-items: flex-start;
+    background-color: var(--terra-action-header-background-color, #f4f4f4);
+    border-bottom: var(--terra-action-header-border-bottom, 1px solid #dedfe0);
+    border-left: var(--terra-action-header-border-left);
+    border-right: var(--terra-action-header-border-right);
+    border-top: var(--terra-action-header-border-top);
+    box-shadow: var(--terra-action-header-box-shadow);
+    display: flex;
+    justify-content: space-between;
+    min-height: var(--terra-action-header-min-height, 3.6428571429rem);
+    padding: var(--terra-action-header-padding, 0.714rem);
+    position: relative;
+    width: 100%;
+
+    .flex-collapse {
+      display: flex;
+      flex: 0 0 auto;
+      height: 100%;
+      max-width: 40%;
+      position: relative;
+    }
+  }
+
+  .flex-fill {
+    flex: 1 1 auto;
+    position: relative;
+    width: 100%;
+  }
+
+  .flex-end {
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+  }
+
+  .title-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .title {
+    color: var(--terra-action-header-color);
+    font-size: var(--terra-action-header-font-size, 1.286rem);
+    font-weight: normal;
+    hyphens: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow-wrap: break-word; /* Modern browsers */
+    padding: var(--terra-action-header-title-padding);
+    padding-top: var(--terra-action-header-title-padding-top, 0.2143rem);
+    width: 100%;
+    word-wrap: break-word; /* For IE 10 and IE 11 */
+  }
+}
