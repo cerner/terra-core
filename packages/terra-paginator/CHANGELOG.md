@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated test screenshot
 
 2.19.0 - (July 17, 2019)
 ------------------
