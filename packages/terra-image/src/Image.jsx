@@ -61,7 +61,7 @@ const propTypes = {
   /**
   * Sets the `object-fit` style of the image from the following values; `cover`, `contain`, `fill`, `scale-down`, `none`.
   */
-  Fit: PropTypes.oneOf(Object.values(FitTypes)),
+  fit: PropTypes.oneOf(Object.values(FitTypes)),
 };
 
 /* eslint-disable react/default-props-match-prop-types */
@@ -69,7 +69,7 @@ const defaultProps = {
   variant: 'default',
   isFluid: false,
   alt: ' ',
-  Fit: 'fill',
+  fit: 'fill',
 };
 /* eslint-enable react/default-props-match-prop-types */
 
@@ -140,12 +140,12 @@ class Image extends React.Component {
 
   render() {
     const {
-      src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, Fit, ...customProps
+      src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, fit, ...customProps
     } = this.props;
 
     const imageClasses = cx([
       'image',
-      Fit,
+      fit,
       variant,
       customProps.className,
       { fluid: isFluid },
