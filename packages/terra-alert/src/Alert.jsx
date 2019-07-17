@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
-import { injectIntl, intlShape } from 'react-intl';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
@@ -43,11 +42,6 @@ const propTypes = {
    * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
    */
   customColorClass: PropTypes.string,
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
   /**
    * Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.
    */
@@ -102,16 +96,26 @@ const getAlertIcon = (type, customIcon) => {
   }
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
 const Alert = ({
-  action,
+  type,
   children,
+  title,
   customIcon,
   customColorClass,
-  intl,
   onDismiss,
-  title,
-  type,
+  action,
   ...customProps
+}, {
+  intl,
 }) => {
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const attributes = Object.assign({}, customProps);
@@ -187,7 +191,8 @@ const Alert = ({
 };
 Alert.propTypes = propTypes;
 Alert.defaultProps = defaultProps;
+Alert.contextTypes = contextTypes;
 Alert.Opts = {};
 Alert.Opts.Types = AlertTypes;
 
-export default injectIntl(Alert);
+export default Alert;

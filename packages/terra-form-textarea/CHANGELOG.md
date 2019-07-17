@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+## Changed
+* Revert replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
 
 3.18.0 - (July 17, 2019)
 ------------------

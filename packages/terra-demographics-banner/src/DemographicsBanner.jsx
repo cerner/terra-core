@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from 'react-intl';
 import DemographicsBannerDisplay from './DemographicsBannerDisplay';
 
 const propTypes = {
@@ -34,11 +33,6 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
-  /**
    * Full Name of the person
    */
   personName: PropTypes.string,
@@ -70,13 +64,23 @@ const defaultProps = {
   preferredFirstName: null,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
 const DemographicsBanner = ({
   age,
   dateOfBirth,
   gender,
-  intl,
   personName,
   ...customProps
+}, {
+  intl,
 }) => {
   const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
@@ -100,5 +104,6 @@ const DemographicsBanner = ({
 
 DemographicsBanner.propTypes = propTypes;
 DemographicsBanner.defaultProps = defaultProps;
+DemographicsBanner.contextTypes = contextTypes;
 
-export default injectIntl(DemographicsBanner);
+export default DemographicsBanner;
