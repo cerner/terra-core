@@ -113,6 +113,7 @@ class Textarea extends React.Component {
       this.resizeTextarea();
     }
   }
+
   // Addresses https://github.com/cerner/terra-core/issues/2496.
   // min-height manipulation exists outside the virtual dom. React reconcilliation will fail to update this inline style, because it is not a prop.
   // This is apparent when swapping different sized TextArea components. To alleviate this, first reset the min-height.
