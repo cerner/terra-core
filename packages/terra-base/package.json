@@ -1,7 +1,7 @@
 {
   "name": "terra-base",
   "main": "lib/Base.js",
-  "version": "5.12.0",
+  "version": "5.13.0",
   "description": "The base component sets minimal global styles for an application.",
   "repository": {
     "type": "git",
