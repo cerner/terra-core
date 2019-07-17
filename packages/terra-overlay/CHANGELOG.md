@@ -1,18 +1,27 @@
 Changelog
 =========
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 
 Unreleased
 ----------
+
+3.20.0 - (July 16, 2019)
+------------------
 ### Added
 * Added documentation on required peerDependencies
+* Updated jest snapshots
+
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 
 3.19.0  - (July 11, 2019)
 ------------------
-### Fixed
-* Disabled document scroll if Overlay is not relative to the triggering container.
-
 ### Changed
 * Updated Docs around the requirement of terra-base and aggregate-translations.
+
+### Fixed
+* Disabled document scroll if Overlay is not relative to the triggering container.
 
 3.18.0 - (July 9, 2019)
 ------------------
