@@ -1,9 +1,9 @@
 {
-  "lerna": "2.1.2",
+  "lerna": "3.15.0",
   "version": "independent",
-  "commands": {
+  "command": {
     "publish": {
-      "ignore": [
+      "ignoreChanges": [
         "DEPENDENCIES.md",
         "*.tgz"
       ]
