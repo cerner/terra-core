@@ -238,4 +238,18 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
     Terra.it.validatesElement({ selector: '#compactButton' });
   });
+
+  describe('Programmatic Focus', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button/button/programmatic-focus');
+      browser.click('#button1');
+    });
+
+    Terra.it.matchesScreenshot('Button 2 focused programmatically');
+
+    it('focuses button 1', () => {
+      browser.keys(['Enter']);
+      Terra.validates.screenshot('Button 1 focused programmatically');
+    });
+  });
 });

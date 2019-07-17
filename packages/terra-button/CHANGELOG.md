@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed Button not showing focus styles when programmatically focused
 
 3.17.0 - (July 16, 2019)
 ------------------
