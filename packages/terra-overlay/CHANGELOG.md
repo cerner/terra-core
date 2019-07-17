@@ -1,10 +1,13 @@
 Changelog
 =========
-### Changed
-* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 
 Unreleased
 ----------
+### Fixed
+* Fixed issue in IE 10 when trying to pull value from data attribute
+
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 
 3.20.0 - (July 16, 2019)
 ------------------
