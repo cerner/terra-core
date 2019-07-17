@@ -3,10 +3,11 @@ Changelog
 
 Unreleased
 ----------
-
 ### Changed
 * Inline SVG aligned for IE and wdio screenshots Updated.
 
+3.17.0 - (July 16, 2019)
+------------------
 ### Added
 * Added documentation on required peerDependencies
 
