@@ -181,7 +181,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       });
 
       Terra.it.validatesElement({ rules: ignoredA11y });
-    })
+    });
   });
 
   describe('TextareaField', () => {
