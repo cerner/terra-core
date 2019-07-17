@@ -5,11 +5,11 @@ import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import ActionHeaderContainerSrc from '!raw-loader!../../../../src/ActionHeaderContainer';
+import HeaderSrc from '!raw-loader!../../../../src/Header';
 
 // Example Files
-import DefaultActionHeaderContainer from '../example/DefaultActionHeaderContainer';
-import DefaultActionHeaderContainerSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultActionHeaderContainer';
+import DefaultHeader from '../example/DefaultHeader';
+import DefaultHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultHeader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -19,14 +19,14 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        example: <DefaultActionHeaderContainer />,
-        source: DefaultActionHeaderContainerSrc,
+        example: <DefaultHeader />,
+        source: DefaultHeaderSrc,
       },
     ]}
     propsTables={[
       {
         componentName: 'Action Header Container',
-        componentSrc: ActionHeaderContainerSrc,
+        componentSrc: HeaderSrc,
       },
     ]}
   />

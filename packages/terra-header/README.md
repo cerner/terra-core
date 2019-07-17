@@ -1,18 +1,18 @@
-# Terra Action Header
+# Terra Header
 
 
-[![NPM version](https://badgen.net/npm/v/terra-action-header-container)](https://www.npmjs.org/package/terra-action-header-container)
+[![NPM version](https://badgen.net/npm/v/terra-header)](https://www.npmjs.org/package/terra-header)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The terra-action-header-container component is a TODO.
+The terra-header component is a styled layout of a header bar.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-action-header-container/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-header/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-action-header-container`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-header`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

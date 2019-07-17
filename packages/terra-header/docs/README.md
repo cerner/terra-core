@@ -1,11 +1,11 @@
-# Terra Action Header Container
-TODO
-The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.
+# Terra Header
+
+The terra-header component is a styled layout of a header bar.
 
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-action-header`
+  - `npm install terra-header`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
@@ -24,27 +24,23 @@ This component requires the following peer dependencies be installed in your app
 </details>
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## Implementation Notes:
-The Action-Header component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
-
-[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
-
 ## Usage
 
 ```jsx
 import React from 'react';
-import ActionHeader from 'terra-action-header';
+import Header from 'terra-header';
 import Button from 'terra-button';
 
-<ActionHeader
+<Header
   title="Back Close Action Header"
-  onBack={() => alert('You clicked back!')}
-  onClose={() => alert('You clicked close!')}
+  level={2}
+  startContent={<Button text="Back" onClick={() => alert('You clicked Back!')} />}
+  endContent={<Button text="Close" onClick={() => alert('You clicked Close!')} />}
 />
 
-<ActionHeader title="Custom Button Action Header" >
+<Header title="Custom Button Header" level={2}>
   <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
-</ActionHeader>
+</Header>
 ```
 
 ## Component Features

@@ -4,8 +4,8 @@ import ChangeLog from '../../../../CHANGELOG.md';
 
 const DocPage = () => (
   <DocTemplate
-    packageName="terra-action-header"
-    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-action-header-container"
+    packageName="terra-header"
+    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-header"
     readme={ChangeLog}
   />
 );

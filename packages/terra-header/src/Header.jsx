@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './ActionHeaderContainer.module.scss';
+import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -39,7 +39,7 @@ const defaultProps = {
   endContent: undefined,
 };
 
-const ActionHeaderContainer = ({
+const Header = ({
   children, title, startContent, endContent, level, ...customProps
 }) => {
   const HeaderElement = `h${level}`;
@@ -68,7 +68,7 @@ const ActionHeaderContainer = ({
   );
 };
 
-ActionHeaderContainer.propTypes = propTypes;
-ActionHeaderContainer.defaultProps = defaultProps;
+Header.propTypes = propTypes;
+Header.defaultProps = defaultProps;
 
-export default ActionHeaderContainer;
+export default Header;
