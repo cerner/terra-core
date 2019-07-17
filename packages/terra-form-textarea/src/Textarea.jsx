@@ -120,7 +120,7 @@ class Textarea extends React.Component {
   // This allows us to capture the correct scrollHeight, and use this correct value for min-height.
   componentDidUpdate(prevProps) {
     if (this.props.size !== prevProps.size || this.props.rows !== prevProps.rows) {
-      this.textarea.style.minHeight = '10px';
+      this.textarea.style.minHeight = '0px';
       this.textarea.style.minHeight = `${this.textarea.scrollHeight}px`;
     }
   }
