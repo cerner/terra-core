@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from 'react-intl';
 import Variants from './_constants';
 import DropdownMenu from './_Menu';
 import Frame from './_Frame';
@@ -32,11 +31,6 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
   /**
    * Whether the select is in an invalid state.
    */
@@ -130,6 +124,15 @@ const defaultProps = {
   variant: 'default',
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
+
 class Select extends React.Component {
   constructor(props) {
     super(props);
@@ -209,8 +212,9 @@ class Select extends React.Component {
   }
 
   render() {
+    const { intl } = this.context;
     const {
-      allowClear, children, defaultValue, intl, onChange, placeholder, required, value, ...otherProps
+      allowClear, children, defaultValue, onChange, placeholder, required, value, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
@@ -252,6 +256,7 @@ Select.Option = Option;
 Select.OptGroup = OptGroup;
 Select.propTypes = propTypes;
 Select.defaultProps = defaultProps;
+Select.contextTypes = contextTypes;
 Select.isSelect = true;
 
-export default injectIntl(Select);
+export default Select;
