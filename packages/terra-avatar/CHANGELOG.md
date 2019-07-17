@@ -6,6 +6,8 @@ Unreleased
 ### Fixed
 * Fixed issue for avatar to allow non-square images by sending `Fit` as `cover`.
 
+2.21.0 - (July 16, 2019)
+------------------
 ### Added
 * Added documentation on required peerDependencies
 

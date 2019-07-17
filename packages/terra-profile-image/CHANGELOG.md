@@ -6,6 +6,8 @@ Unreleased
 ### Updated
 * updated jest snapshots
 
+3.13.0 - (July 16, 2019)
+------------------
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 
