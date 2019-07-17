@@ -1,7 +1,7 @@
 {
   "name": "terra-dialog",
   "main": "lib/Dialog.js",
-  "version": "2.17.0",
+  "version": "2.18.0",
   "description": "Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user.",
   "repository": {
     "type": "git",
