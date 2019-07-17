@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added documentation that maximize/minimize buttons will not be shown with the back button
 
 2.21.0 - (July 17, 2019)
 ------------------
@@ -13,7 +15,6 @@ Unreleased
 ------------------
 ### Added
 * Added documentation on required peerDependencies
-* Added documentation that maximize/minimize buttons will not be shown with the back button
 
 2.19.0  - (July 11, 2019)
 ------------------
