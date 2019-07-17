@@ -5,7 +5,7 @@ function FitTypesWrapper(WrappedComponent) {
     constructor(props) {
       super(props);
       this.handleOnSelect = this.handleOnSelect.bind(this);
-      this.state = { FitType: 'fill', VariantType: 'square' };
+      this.state = { FitType: 'fill', VariantType: 'default' };
     }
 
     handleOnSelect(event) {
