@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.21.0 - (July 17, 2019)
+------------------
 ### Fixed
 * Fixed issue in IE 10 when trying to pull value from data attribute
 
