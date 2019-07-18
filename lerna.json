@@ -10,8 +10,5 @@
   "packages": [
     "packages/*"
   ],
-  "version": [
-    "independent",
-    "3.15.0"
-  ]
+  "version": "independent"
 }
