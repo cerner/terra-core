@@ -44,7 +44,7 @@
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
     "docs": "node markdown.config.js",
     "docs:peerDependencies": "node scripts/peer-dependency-generator/index.js",
-    "heroku-prebuild": "npm install -g lerna@3.15.0 && lerna init",
+    "heroku-prebuild": "npx lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
     "jest": "jest --config jestconfig.js",
     "jest:coverage": "jest --coverage --config jestconfig.js",
