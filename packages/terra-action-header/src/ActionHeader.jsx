@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Displays a single terra `Collapsible Menu View` child element on the right end of the header.
+   * Displays a single terra `Collapsible Menu View` (_Not provided by `Action Header`_) child element on the right end of the header.
    */
   children: PropTypes.element,
   /**
