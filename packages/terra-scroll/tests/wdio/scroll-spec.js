@@ -1,10 +1,9 @@
-describe('Scroll', () => {
+Terra.describeViewports('Scroll', ['huge'], () => {
   before(() => {
     browser.url('/#/raw/tests/terra-scroll/scroll/default');
   });
 
-  Terra.it.isAccessible();
-  Terra.it.matchesScreenshot('before-click', { selector: '#scroll-test' });
+  Terra.it.validatesElement('before-click', { selector: '#scroll-test' });
 
   it('scroll the view', () => {
     browser.click('#scroll');
