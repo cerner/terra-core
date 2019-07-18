@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.20.0 - (July 17, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.19.0 - (July 17, 2019)
 ------------------
 ### Changed
@@ -17,7 +22,6 @@ Unreleased
 3.17.0  - (July 11, 2019)
 ------------------
 ### Changed
-* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 * Updated Docs around the requirement of terra-base and aggregate-translations.
 
