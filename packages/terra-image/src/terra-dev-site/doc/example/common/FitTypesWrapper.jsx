@@ -1,7 +1,7 @@
 import React from 'react';
 
 function FitTypesWrapper(WrappedComponent) {
-  return class fitTypes extends React.Component {
+  return class FitTypes extends React.Component {
     constructor(props) {
       super(props);
       this.handleOnSelect = this.handleOnSelect.bind(this);
