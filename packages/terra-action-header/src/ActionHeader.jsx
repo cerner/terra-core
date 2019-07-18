@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import ButtonGroup from 'terra-button-group';
-import { injectIntl, intlShape } from 'react-intl';
 import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.module.scss';
 
@@ -15,10 +14,9 @@ const propTypes = {
    */
   children: PropTypes.element,
   /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   * Text to be displayed as the title in the header bar.
    */
-  intl: intlShape.isRequired,
+  title: PropTypes.string,
   /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=1`.
    */
@@ -58,10 +56,6 @@ const propTypes = {
    * Callback function for when the previous button is clicked. The previous-next button group will display if either this or onNext is set but the button for the one not set will be disabled.
    */
   onPrevious: PropTypes.func,
-  /**
-   * Text to be displayed as the title in the header bar.
-   */
-  title: PropTypes.string,
 };
 
 const defaultProps = {
@@ -76,6 +70,14 @@ const defaultProps = {
   children: undefined,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Component is internationalized, and must be wrapped in terra-base');
+    }
+  },
+};
 
 const ActionHeader = ({
   title,
@@ -87,8 +89,9 @@ const ActionHeader = ({
   onPrevious,
   onNext,
   children,
-  intl,
   ...customProps
+}, {
+  intl,
 }) => {
   const backText = intl.formatMessage({ id: 'Terra.actionHeader.back' });
   const closeText = intl.formatMessage({ id: 'Terra.actionHeader.close' });
@@ -157,5 +160,6 @@ const ActionHeader = ({
 
 ActionHeader.propTypes = propTypes;
 ActionHeader.defaultProps = defaultProps;
+ActionHeader.contextTypes = contextTypes;
 
-export default injectIntl(ActionHeader);
+export default ActionHeader;
