@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
 
 3.21.0 - (July 17, 2019)
 ------------------
