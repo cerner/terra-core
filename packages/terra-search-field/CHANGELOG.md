@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Autofocus prop added and feature enabled.
+* Jest Snapshots Updated.
 
 3.21.0 - (July 17, 2019)
 ------------------

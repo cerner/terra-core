@@ -3,6 +3,7 @@
 exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
 <SearchField
   disableAutoSearch={false}
+  enableAutoFocus={true}
   inputRefCallback={
     [MockFunction] {
       "calls": Array [
@@ -94,6 +95,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       <Input
         aria-disabled={false}
         aria-label="Terra.searchField.search"
+        autoFocus={true}
         className="input"
         disabled={false}
         isInvalid={false}
@@ -108,6 +110,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         <input
           aria-disabled={false}
           aria-label="Terra.searchField.search"
+          autoFocus={true}
           className="form-input input"
           disabled={false}
           name={null}
@@ -235,6 +238,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     <Input
       aria-disabled={false}
       aria-label="Terra.searchField.search"
+      autoFocus={true}
       className="input"
       disabled={false}
       isInvalid={false}
@@ -306,6 +310,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     <Input
       aria-disabled={true}
       aria-label="Terra.searchField.search"
+      autoFocus={true}
       className="input"
       disabled={true}
       isInvalid={false}
@@ -377,6 +382,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     <Input
       aria-disabled={false}
       aria-label="Terra.searchField.search"
+      autoFocus={true}
       className="input"
       disabled={false}
       isInvalid={false}
@@ -465,6 +471,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     <Input
       aria-disabled={false}
       aria-label="Terra.searchField.search"
+      autoFocus={true}
       className="input"
       defaultValue="Default"
       disabled={false}
@@ -554,6 +561,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     <Input
       aria-disabled={false}
       aria-label="Terra.searchField.search"
+      autoFocus={true}
       className="input"
       disabled={false}
       isInvalid={false}
@@ -625,6 +633,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     <Input
       aria-disabled={false}
       aria-label="Terra.searchField.search"
+      autoFocus={true}
       className="input"
       disabled={false}
       isInvalid={false}
@@ -714,6 +723,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     <Input
       aria-disabled={false}
       aria-label="Search Field"
+      autoFocus={true}
       className="input"
       disabled={false}
       isInvalid={false}

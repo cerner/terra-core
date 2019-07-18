@@ -77,6 +77,11 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   inputAttributes: PropTypes.object,
+
+  /**
+   * When true, will enable the auto-focus.
+   */
+  enableAutoFocus: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -89,6 +94,7 @@ const defaultProps = {
   searchDelay: 250,
   value: undefined,
   inputAttributes: undefined,
+  enableAutoFocus: true,
 };
 
 const contextTypes = {
@@ -211,6 +217,7 @@ class SearchField extends React.Component {
       value,
       inputRefCallback,
       inputAttributes,
+      enableAutoFocus,
       ...customProps
     } = this.props;
 
@@ -230,6 +237,10 @@ class SearchField extends React.Component {
       additionalInputAttributes.value = value;
     } else {
       additionalInputAttributes.defaultValue = defaultValue;
+    }
+    /* If block to set autoFocus based on prop value. */
+    if (enableAutoFocus === true) {
+      additionalInputAttributes.autoFocus = true;
     }
 
     const clearButton = this.state.searchText && !isDisabled
