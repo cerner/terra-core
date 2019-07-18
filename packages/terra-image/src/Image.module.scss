@@ -41,27 +41,27 @@
    * Polyfill 'object-fit-images' for IE requires to use object-fit inside font-family.
    */
   .contain {
-    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: contain;';
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'object-fit: contain;';
     object-fit: contain;
   }
 
   .cover {
-    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: cover;';
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'object-fit: cover;';
     object-fit: cover;
   }
 
   .fill {
-    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: fill;';
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'object-fit: fill;';
     object-fit: fill;
   }
 
   .scale-down {
-    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: scale-down;';
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'object-fit: scale-down;';
     object-fit: scale-down;
   }
 
   .none {
-    font-family: var(--terra-image-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif), 'object-fit: none;';
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'object-fit: none;';
     object-fit: none;
   }
 }
