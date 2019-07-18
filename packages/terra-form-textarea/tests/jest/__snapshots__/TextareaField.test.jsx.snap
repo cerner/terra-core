@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a TextareaField with props 1`] = `
-<InjectIntl(Field)
+<Field
   error="Text"
   errorIcon={
     <IconHelp
@@ -38,11 +38,11 @@ exports[`should render a TextareaField with props 1`] = `
     size="small"
     value="Value"
   />
-</InjectIntl(Field)>
+</Field>
 `;
 
 exports[`should render a default TextareaField component 1`] = `
-<InjectIntl(Field)
+<Field
   error={null}
   errorIcon={
     <IconError
@@ -71,11 +71,11 @@ exports[`should render a default TextareaField component 1`] = `
     rows={null}
     size="small"
   />
-</InjectIntl(Field)>
+</Field>
 `;
 
 exports[`should render a disabled TextareaField component 1`] = `
-<InjectIntl(Field)
+<Field
   error={null}
   errorIcon={
     <IconError
@@ -104,11 +104,11 @@ exports[`should render a disabled TextareaField component 1`] = `
     rows={null}
     size="small"
   />
-</InjectIntl(Field)>
+</Field>
 `;
 
 exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
-<InjectIntl(Field)
+<Field
   error={null}
   errorIcon={
     <IconError
@@ -137,11 +137,11 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
     rows={null}
     size="small"
   />
-</InjectIntl(Field)>
+</Field>
 `;
 
 exports[`should render a valid TextareaField with props 1`] = `
-<InjectIntl(Field)
+<Field
   error="Text"
   errorIcon={
     <IconHelp
@@ -179,5 +179,5 @@ exports[`should render a valid TextareaField with props 1`] = `
     type="number"
     value="Value"
   />
-</InjectIntl(Field)>
+</Field>
 `;
