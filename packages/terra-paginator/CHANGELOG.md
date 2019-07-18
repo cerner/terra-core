@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Updated test screenshot
 
+2.20.0 - (July 17, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.19.0 - (July 17, 2019)
 ------------------
 ### Changed
