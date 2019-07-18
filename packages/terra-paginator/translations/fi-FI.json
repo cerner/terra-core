@@ -1,0 +1,8 @@
+{
+  "Terra.paginator.previous": "Edellinen",
+  "Terra.paginator.next": "Seuraava",
+  "Terra.paginator.first": "Ensimmäinen",
+  "Terra.paginator.last": "Viimeinen",
+  "Terra.paginator.pageIndex": "Sivu {pageNumber}",
+  "Terra.paginator.pageCount": "Sivu {pageNumber} / {pageNumberTotal}"
+}
