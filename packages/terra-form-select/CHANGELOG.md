@@ -3,6 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.23.0 - (July 17, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.22.0 - (July 17, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.21.0 - (July 16, 2019)
+------------------
 ### Added
 * Added aria-label to resolve accessibility violation with axe-core v3.3.0.
 * Added documentation on required peerDependencies
