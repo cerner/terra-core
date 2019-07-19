@@ -3,8 +3,53 @@ Changelog
 
 Unreleased
 ----------
+
+3.22.0 - (July 17, 2019)
+------------------
+### Changed
+* Revert components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+3.21.0 - (July 17, 2019)
+------------------
+### Fixed
+* Fixed issue in IE 10 when trying to pull value from data attribute
+
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+3.20.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+* Updated jest snapshots
+
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
+3.19.0  - (July 11, 2019)
+------------------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
+### Fixed
+* Disabled document scroll if Overlay is not relative to the triggering container.
+
+3.18.0 - (July 9, 2019)
+------------------
+### Fixed
+* Added `data-overlay-count` attribute to root document when overlay is opened
+* Added check for `data-modal-count` attribute on root document to track opening and closing of overlays and modals,
+  to prevent the removal of the `inert` attribute from the root element if another overlay or abstract modal exists.
+* Added Node.contains polyfill to better support IE 10 / IE 11
+
+3.17.0 - (June 28, 2019)
+------------------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
+* Removed conditional logic required to import wicg-inert polyfill
+
+### Fixed
+* Fixed freezing of Loading Overlay test pages by wrapping them in Overlay Containers.
 
 3.16.0 - (June 18, 2019)
 ------------------

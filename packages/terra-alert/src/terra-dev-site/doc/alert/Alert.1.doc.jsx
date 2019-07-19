@@ -1,6 +1,9 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
+import Markdown from 'terra-markdown';
 import ReadMe from '../../../../docs/README.md';
+import CustomExampleDocs from '../../../../docs/custom-example.md';
+import ActionAndDismissableExampleDocs from '../../../../docs/action-and-dismissable-example.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
@@ -70,6 +73,7 @@ const DocPage = () => (
       },
       {
         title: 'Custom Alert',
+        description: <Markdown id="custom-example-docs" src={CustomExampleDocs} />,
         example: <CustomExample />,
         source: CustomExampleSrc,
       },
@@ -90,6 +94,7 @@ const DocPage = () => (
       },
       {
         title: 'Dismissible Alert with Actions',
+        description: <Markdown id="action-and-dismissable-example-docs" src={ActionAndDismissableExampleDocs} />,
         example: <ActionAndDismissibleExample />,
         source: ActionAndDismissibleExampleSrc,
       },

@@ -1,57 +1,46 @@
-describe('Radio', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
-
+Terra.describeViewports('Radio', ['medium'], () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/default-radio'));
+    before(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/default-radio'));
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
 
     describe('Hover', () => {
-      beforeEach(() => {
-        browser.waitForVisible('#default');
+      before(() => {
         browser.moveToObject('#default');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
     });
 
     describe('Checked', () => {
-      beforeEach(() => {
-        browser.waitForVisible('#default');
+      before(() => {
         browser.click('[for="default"]');
         browser.click('#site');
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
     });
 
     describe('Focus', () => {
-      beforeEach(() => {
-        browser.waitForVisible('#default');
-        browser.keys('Tab');
+      before(() => {
+        browser.keys(['Tab']);
       });
 
-      Terra.it.matchesScreenshot();
-      Terra.it.isAccessible();
+      Terra.it.validatesElement();
     });
   });
 
   describe('Disabled', () => {
-    beforeEach(() => {
+    before(() => {
       browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/disabled-radio');
     });
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Hidden Label', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/hidden-radio'));
+    before(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/hidden-radio'));
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 });

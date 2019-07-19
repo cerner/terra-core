@@ -3,6 +3,29 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.19.0 - (July 17, 2019)
+------------------
+## Changed
+* Revert replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
+
+3.18.0 - (July 17, 2019)
+------------------
+## Changed
+* Replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
+
+3.17.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+3.16.0  - (July 11, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
+3.15.0 - (June 28, 2019)
+------------------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 

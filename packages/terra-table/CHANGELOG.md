@@ -3,6 +3,19 @@ Changelog
 
 Unreleased
 ----------
+
+3.19.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+3.18.0  - (July 11, 2019)
+------------------
+### Changed
+* Increased subheader css specificity
+
+3.17.0 - (June 28, 2019)
+------------------
 ### Added
 * Added themeable variable --terra-table-subheader-border-bottom
 

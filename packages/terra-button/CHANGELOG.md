@@ -3,13 +3,26 @@ Changelog
 
 Unreleased
 ----------
+
+3.17.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+3.16.0  - (July 11, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports
+
+3.15.0 - (June 28, 2019)
+------------------
 ### Added
 * Moved v2 Upgrade guide that existed in the wiki to the upgrade guide doc
 
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 
-3.17.0 - (June 18, 2019)
+3.14.0 - (June 18, 2019)
 ------------------
 ### Added
 * Added missing WDIO screenshots

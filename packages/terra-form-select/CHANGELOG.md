@@ -3,6 +3,35 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.23.0 - (July 17, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.22.0 - (July 17, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.21.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+5.20.0  - (July 11, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
+5.19.0 - (July 9, 2019)
+------------------
+### Fixed
+* Issue where input would remain focused after clicking away from select menu after enter had been used to select an item in `multiselect` and `tag` variants.
+
+5.18.0 - (June 28, 2019)
+------------------
 ### Changed
 * Display active option in select input to guide selection.
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.

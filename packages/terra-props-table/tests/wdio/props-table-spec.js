@@ -1,13 +1,10 @@
-const viewports = Terra.viewports('medium', 'large');
-
-describe('Props Table', () => {
+Terra.describeViewports('Props Table', ['medium'], () => {
   describe('Default', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-props-table/props-table-test/mock-props-table');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
     });
 
-    Terra.it.matchesScreenshot('should display a string prop', { selector: '#PropsTable > tbody > tr:nth-child(1)' });
+    Terra.it.validatesElement('should display a string prop', { selector: '#PropsTable > tbody > tr:nth-child(1)' });
 
     Terra.it.matchesScreenshot('should display a number prop', { selector: '#PropsTable > tbody > tr:nth-child(2)' });
 
@@ -35,27 +32,21 @@ describe('Props Table', () => {
     Terra.it.matchesScreenshot('should display a oneOfType prop', { selector: '#PropsTable > tbody > tr:nth-child(9)' });
 
     Terra.it.matchesScreenshot('should display a shape prop', { selector: '#PropsTable > tbody > tr:nth-child(10)' });
-
-    Terra.it.isAccessible({ viewports });
   });
 
   describe('Private Props', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-props-table/props-table-test/mock-private-props-table');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
     });
 
-    Terra.it.matchesScreenshot('should not render private prop information', { selector: '#PrivatePropsTable' });
+    Terra.it.validatesElement('should not render private prop information', { selector: '#PrivatePropsTable' });
   });
 
   describe('With Title', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-props-table/props-table-test/mock-props-table-with-title');
-      browser.setViewportSize(Terra.viewports('medium')[0]);
     });
 
-    Terra.it.matchesScreenshot('should display the title', { selector: '[class*="props-table-markdown"] > h2' });
-
-    Terra.it.isAccessible({ viewports });
+    Terra.it.validatesElement('should display the title', { selector: '[class*="props-table-markdown"] > h2' });
   });
 });

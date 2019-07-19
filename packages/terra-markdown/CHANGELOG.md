@@ -3,6 +3,17 @@ Changelog
 
 Unreleased
 ----------
+
+2.29.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
+2.28.0 - (June 28, 2019)
+------------------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 

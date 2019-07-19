@@ -5,19 +5,11 @@ import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
 import KeyCode from 'keycode-js';
 import 'mutationobserver-shim';
+import './_contains-polyfill';
 import './_matches-polyfill';
+import 'wicg-inert';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
-
-// Importing WICG Inert polyfill causes Jest to crash
-// Issue logged to Jest repo: https://github.com/facebook/jest/issues/8373
-// This logic avoids importing the polyfill when running Jest tests
-// It also checks to make sure not to load the inert polyfill if it has already been defined
-// eslint-disable-next-line no-prototype-builtins
-if (process.env.NODE_ENV !== 'test' && !Element.prototype.hasOwnProperty('inert')) {
-  // eslint-disable-next-line global-require
-  require('wicg-inert');
-}
 
 const cx = classNames.bind(styles);
 
@@ -113,7 +105,16 @@ class Overlay extends React.Component {
       }
     } else {
       const selector = this.props.rootSelector;
-      if (document.querySelector(selector)) document.querySelector(selector).setAttribute('inert', '');
+
+      if (document.querySelector(selector) && !document.querySelector(selector).hasAttribute('data-overlay-count')) {
+        document.querySelector(selector).setAttribute('data-overlay-count', '1');
+        document.querySelector(selector).setAttribute('inert', '');
+      } else if (document.querySelector(selector) && document.querySelector(selector).hasAttribute('data-overlay-count')) {
+        const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
+
+        document.querySelector(selector).setAttribute('data-overlay-count', `${inert + 1}`);
+        document.querySelector(selector).setAttribute('inert', '');
+      }
       document.documentElement.style.overflow = 'hidden';
     }
   }
@@ -125,7 +126,17 @@ class Overlay extends React.Component {
       }
     } else {
       const selector = this.props.rootSelector;
-      if (document.querySelector(selector)) document.querySelector(selector).removeAttribute('inert');
+
+      if (document.querySelector(selector)) { // Guard for Jest testing
+        const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
+
+        if (inert === 1) {
+          document.querySelector(selector).removeAttribute('data-overlay-count');
+          document.querySelector(selector).removeAttribute('inert');
+        } else if (inert && inert > 1) {
+          document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
+        }
+      }
       document.documentElement.style.overflow = this.overflow;
     }
   }

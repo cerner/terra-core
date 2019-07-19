@@ -3,8 +3,32 @@ Changelog
 
 Unreleased
 ----------
+
+4.2.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+4.1.0  - (July 11, 2019)
+------------------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
+4.0.0 - (June 28, 2019)
+------------------
+### Breaking
+* Removed children prop. Replaced with buttonAttrs prop
+* Removed the default of rendering an error view
+* Removed the custom variant
+* Removed hide glyph logic based on available container space
+* Removed onComponentMount logic to calculate padding
+* Removed StatusView.Opts object and export
+* Use CSS grid to center component
+* Render divider if title and message/buttons exist
+
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
+* Remove incorrect entry in upgrade guide that specifies new margin-bottom theme variable.
 
 3.16.0 - (June 18, 2019)
 ------------------

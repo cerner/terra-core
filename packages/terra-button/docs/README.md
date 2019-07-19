@@ -12,6 +12,23 @@ The `action` variant is intended for specific solutions in which a non-inline fl
   - `npm install terra-button`
   - `yarn add terra-button`
 
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+<details>
+<summary>View information on this component's peer dependencies.</summary>
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Usage
 
 ```jsx

@@ -3,6 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.15.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+3.14.0  - (July 11, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.13.0 - (June 28, 2019)
+------------------
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 

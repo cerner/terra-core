@@ -1,8 +1,6 @@
 /* global $ */
 
-describe('Base', () => {
-  before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
-
+Terra.describeViewports('Base', ['tiny'], () => {
   describe('Switching Locales', () => {
     before(() => browser.url('/#/raw/tests/terra-base/base/switch-locale-base'));
     it('Displays a default en locale message', () => {

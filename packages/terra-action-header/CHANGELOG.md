@@ -3,6 +3,34 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.22.0 - (July 17, 2019)
+------------------
+### Changed
+* Revert components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+2.21.0 - (July 17, 2019)
+------------------
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+2.20.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+2.19.0  - (July 11, 2019)
+------------------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
+2.18.0 - (July 9, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports
+
+2.17.0 - (June 28, 2019)
+------------------
 ### Added
 * Added `--terra-action-header-back-background-image` variable in ActionHeader.module.scss
 * Added `--terra-action-header-close-background-image` variable in ActionHeader.module.scss
@@ -34,7 +62,7 @@ Unreleased
 
 2.15.0 - (June 11, 2019)
 ------------------
-### Removed	
+### Removed
 * Removed node_modules from .npmignore
 
 ### Changed
