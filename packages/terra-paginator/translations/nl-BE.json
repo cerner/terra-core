@@ -1,0 +1,8 @@
+{
+  "Terra.paginator.previous": "Vorige",
+  "Terra.paginator.next": "Volgende",
+  "Terra.paginator.first": "Eerste",
+  "Terra.paginator.last": "Laatste",
+  "Terra.paginator.pageIndex": "Pagina {pageNumber}",
+  "Terra.paginator.pageCount": "Pagina {pageNumber} van {pageNumberTotal}"
+}
