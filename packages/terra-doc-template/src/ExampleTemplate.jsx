@@ -71,7 +71,7 @@ class ExampleTemplate extends React.Component {
       description,
       ...customProps
     } = this.props;
-    
+
     const { isExpanded, isBackgroundTransparent } = this.state;
 
     let dynamicContentStyle = {};
