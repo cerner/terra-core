@@ -1,28 +1,26 @@
-const viewports = Terra.viewports('medium');
-
-describe('Selectable Table Rows', () => {
+Terra.describeViewports('Selectable Table Rows', ['medium'], () => {
   describe('Selectable Table Rows - Default', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/selectable-table/selectable-table-rows-default'));
 
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Selectable Table Rows - Subheaders', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/selectable-table/selectable-table-rows-and-subheaders'));
 
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Selectable Table Rows - Preselected', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/selectable-table/selectable-table-rows-preselected'));
 
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.validatesElement();
   });
 
   describe('Selectable Table Rows - Non Selectable', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/selectable-table/selectable-table-rows-non-selectable'));
 
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.matchesScreenshot();
   });
 
   describe('Selectable Table Rows - onChange', () => {
@@ -35,30 +33,30 @@ describe('Selectable Table Rows', () => {
       browser.click('[class*="row"]:nth-child(1)');
     });
 
-    Terra.it.matchesScreenshot('first-row', { viewports });
+    Terra.it.validatesElement('first-row');
 
     it('selects the second row', () => {
       browser.keys(['Tab', 'Enter']);
     });
 
-    Terra.it.matchesScreenshot('second-row', { viewports });
+    Terra.it.matchesScreenshot('second-row');
 
     it('selects the third row', () => {
       browser.keys(['Tab', 'Space']);
     });
 
-    Terra.it.matchesScreenshot('third-row', { viewports });
+    Terra.it.matchesScreenshot('third-row');
   });
 
   describe('Selectable Table Rows - One Row', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/selectable-table/selectable-table-rows-one-row'));
 
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.matchesScreenshot();
   });
 
   describe('Selectable Table Rows - No Rows', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/selectable-table/selectable-table-rows-no-rows'));
 
-    Terra.it.matchesScreenshot({ viewports });
+    Terra.it.matchesScreenshot();
   });
 });
