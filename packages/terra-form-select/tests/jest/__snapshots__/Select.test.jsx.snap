@@ -49,7 +49,7 @@ exports[`Select should render a combobox variant 1`] = `
 <InjectIntl(Frame)
   data-terra-select={true}
   disabled={false}
-  display={Array []}
+  display=""
   dropdown={[Function]}
   intl={
     Object {
@@ -84,8 +84,8 @@ exports[`Select should render a combobox variant 1`] = `
   placeholder="Terra.form.select.defaultDisplay"
   required={false}
   totalOptions={0}
-  value={Array []}
-  variant="tag"
+  value=""
+  variant="combobox"
 />
 `;
 
@@ -93,7 +93,7 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
 <InjectIntl(Frame)
   data-terra-select={true}
   disabled={false}
-  display={Array []}
+  display=""
   dropdown={[Function]}
   intl={
     Object {
@@ -128,8 +128,8 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
   placeholder="Placeholder"
   required={false}
   totalOptions={0}
-  value={Array []}
-  variant="tag"
+  value=""
+  variant="combobox"
 />
 `;
 
@@ -985,7 +985,7 @@ exports[`Select should render an invalid combobox variant 1`] = `
 <InjectIntl(Frame)
   data-terra-select={true}
   disabled={false}
-  display={Array []}
+  display=""
   dropdown={[Function]}
   intl={
     Object {
@@ -1020,8 +1020,8 @@ exports[`Select should render an invalid combobox variant 1`] = `
   placeholder="Terra.form.select.defaultDisplay"
   required={false}
   totalOptions={0}
-  value={Array []}
-  variant="tag"
+  value=""
+  variant="combobox"
 />
 `;
 

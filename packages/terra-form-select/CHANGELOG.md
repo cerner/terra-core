@@ -20,6 +20,9 @@ Unreleased
 * Added aria-label to resolve accessibility violation with axe-core v3.3.0.
 * Added documentation on required peerDependencies
 
+### Fixed
+* Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.
+
 5.20.0  - (July 11, 2019)
 ------------------
 ### Changed
