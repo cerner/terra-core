@@ -85,7 +85,7 @@
     "glob": "^7.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
-    "lerna": "^3.15.0",
+    "lerna": "^3.16.1",
     "link-parent-bin": "^1.0.0",
     "markdown-magic": "^0.1.25",
     "raf": "^3.4.1",
