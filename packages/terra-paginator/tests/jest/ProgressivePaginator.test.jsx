@@ -1,4 +1,6 @@
 import React from 'react';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { shallowWithIntl } from 'terra-enzyme-intl';
 import ProgressivePaginator from '../../src/ProgressivePaginator';
 
 describe('ProgressivePaginator', () => {
@@ -6,7 +8,7 @@ describe('ProgressivePaginator', () => {
 
   // Snapshot Tests
   it('should render a default ProgressivePaginator', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = shallowWithIntl(defaultRender).dive();
     expect(wrapper).toMatchSnapshot();
   });
 });
