@@ -19,6 +19,9 @@ Unreleased
 ### Added
 * Added documentation on required peerDependencies
 
+### Fixed
+* Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.
+
 5.20.0  - (July 11, 2019)
 ------------------
 ### Changed
