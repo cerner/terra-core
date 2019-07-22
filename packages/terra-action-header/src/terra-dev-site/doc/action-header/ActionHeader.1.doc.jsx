@@ -20,10 +20,6 @@ import MaximizeCloseActionHeader from '../example/MaximizeCloseActionHeader';
 import MaximizeCloseActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MaximizeCloseActionHeader';
 import MinimizeCustomButtonActionHeader from '../example/MinimizeCustomButtonActionHeader';
 import MinimizeCustomButtonActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MinimizeCustomButtonActionHeader';
-import BackMaximizeActionHeader from '../example/BackMaximizeActionHeader';
-import BackMaximizeActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BackMaximizeActionHeader';
-import BackMinimizeActionHeader from '../example/BackMinimizeActionHeader';
-import BackMinimizeActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BackMinimizeActionHeader';
 import BackPreviousNextCloseActionHeader from '../example/BackPreviousNextCloseActionHeader';
 import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BackPreviousNextCloseActionHeader';
 import LongWrappingTextHeader from '../example/LongWrappingTextHeader';
@@ -63,14 +59,6 @@ const DocPage = () => (
       {
         example: <MinimizeCustomButtonActionHeader />,
         source: MinimizeCustomButtonActionHeaderSrc,
-      },
-      {
-        example: <BackMaximizeActionHeader />,
-        source: BackMaximizeActionHeaderSrc,
-      },
-      {
-        example: <BackMinimizeActionHeader />,
-        source: BackMinimizeActionHeaderSrc,
       },
       {
         example: <LongWrappingTextHeader />,
