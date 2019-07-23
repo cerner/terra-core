@@ -259,9 +259,15 @@ class Frame extends React.Component {
       searchValue: '',
     });
 
-    // Tags and Comboboxes will select the current search value when the component loses focus.
+    // 'Tag' and 'Combobox' variants select the current search value when the component loses focus.
+    const { searchValue } = this.state;
     if (Util.shouldAddOptionOnBlur(this.props, this.state)) {
-      this.props.onSelect(this.state.searchValue);
+      // NOTE: Since 'Combobox' does not allow blank strings to be created within the options dropdown,
+      // a blank input string should be explicitly converted into an empty string. This ensures that
+      // on blur, Combobox updates the search field to be an empty string when the user inputs a blank string.
+      // Upon failing to do so, Combobox resets the search field back to a previously selected value.
+      const freeText = searchValue.trim().length === 0 ? '' : searchValue;
+      this.props.onSelect(freeText);
     }
   }
 
