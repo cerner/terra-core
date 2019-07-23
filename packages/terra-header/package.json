@@ -1,7 +1,7 @@
 {
   "name": "terra-header",
   "main": "lib/Header.js",
-  "version": "2.19.0",
+  "version": "1.0.0",
   "description": "The terra-header component is a styled layout of a header bar.",
   "repository": {
     "type": "git",

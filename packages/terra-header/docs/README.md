@@ -32,13 +32,15 @@ import Header from 'terra-header';
 import Button from 'terra-button';
 
 <Header
-  title="Back Close Action Header"
+  title="Default Header"
+/>
+
+<Header
+  title="Start, End, and Children Header"
   level={2}
   startContent={<Button text="Back" onClick={() => alert('You clicked Back!')} />}
   endContent={<Button text="Close" onClick={() => alert('You clicked Close!')} />}
-/>
-
-<Header title="Custom Button Header" level={2}>
+>
   <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
 </Header>
 ```

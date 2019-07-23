@@ -7,7 +7,6 @@ const HeaderExample = () => (
     <br />
     <Header
       title="Default Header"
-      level={2}
     />
     <br />
   </div>

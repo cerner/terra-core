@@ -7,7 +7,7 @@ const HeaderExample = () => (
   <div>
     <br />
     <Header
-      title="Default Header"
+      title="Start, End, and Children Header"
       level={2}
       startContent={<Button text="Back" onClick={() => alert('You clicked Back!')} />}
       endContent={<Button text="Close" onClick={() => alert('You clicked Close!')} />}
