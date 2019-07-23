@@ -1,4 +1,6 @@
 import React from 'react';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { shallowWithIntl } from 'terra-enzyme-intl';
 import Paginator from '../../src/Paginator';
 
 describe('Paginator', () => {
@@ -7,12 +9,12 @@ describe('Paginator', () => {
 
   // Snapshot Tests
   it('should render a default paginator', () => {
-    const wrapper = shallow(defaultRender);
+    const wrapper = shallowWithIntl(defaultRender).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a paginator without page links', () => {
-    const wrapper = shallow(noPagesRender);
+    const wrapper = shallowWithIntl(noPagesRender).dive();
     expect(wrapper).toMatchSnapshot();
   });
 });
