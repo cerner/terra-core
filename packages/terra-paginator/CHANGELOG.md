@@ -3,8 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Updated test screenshot
 
 2.20.0 - (July 17, 2019)
 ------------------
