@@ -30,13 +30,14 @@ const propTypes = {
   /**
    * Sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
    */
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
 
 const defaultProps = {
   title: undefined,
   startContent: undefined,
   endContent: undefined,
+  level: 1,
 };
 
 const Header = ({

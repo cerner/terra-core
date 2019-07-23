@@ -10,6 +10,8 @@ import HeaderSrc from '!raw-loader!../../../../src/Header';
 // Example Files
 import DefaultHeader from '../example/DefaultHeader';
 import DefaultHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultHeader';
+import StartAndEndHeader from '../example/StartAndEndHeader';
+import StartAndEndHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StartAndEndHeader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -21,6 +23,10 @@ const DocPage = () => (
       {
         example: <DefaultHeader />,
         source: DefaultHeaderSrc,
+      },
+      {
+        example: <StartAndEndHeader />,
+        source: StartAndEndHeaderSrc,
       },
     ]}
     propsTables={[

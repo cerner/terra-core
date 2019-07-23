@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render a default header 1`] = `
+<div
+  className="flex-header"
+>
+  <div
+    className="flex-fill"
+  />
+</div>
+`;
+
+exports[`Header should render a default header 2`] = `
+<div
+  className="flex-header"
+>
+  <div
+    className="flex-fill"
+  >
+    <div
+      className="title-container"
+    >
+      <h2
+        className="title"
+      >
+        title
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header should render a header with children 1`] = `
+<div
+  className="flex-header"
+>
+  <div
+    className="flex-fill"
+  />
+  <Button
+    className="flex-collapse"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    key=".0"
+    text="Button"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`Header should render a header with endContent 1`] = `
+<div
+  className="flex-header"
+>
+  <div
+    className="flex-fill"
+  />
+  <div
+    className="flex-end"
+  >
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      text="Button"
+      type="button"
+      variant="neutral"
+    />
+  </div>
+</div>
+`;
+
+exports[`Header should render a header with given title 1`] = `
+<div
+  className="flex-header"
+>
+  <div
+    className="flex-fill"
+  >
+    <div
+      className="title-container"
+    >
+      <h1
+        className="title"
+      >
+        title
+      </h1>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header should render a header with startContent 1`] = `
+<div
+  className="flex-header"
+>
+  <div
+    className="flex-end"
+  >
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      text="Button"
+      type="button"
+      variant="neutral"
+    />
+  </div>
+  <div
+    className="flex-fill"
+  />
+</div>
+`;

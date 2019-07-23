@@ -1,6 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Header from 'terra-header/lib/Header';
+import Button from 'terra-button';
 
 const HeaderExample = () => (
   <div>
@@ -8,7 +9,11 @@ const HeaderExample = () => (
     <Header
       title="Default Header"
       level={2}
-    />
+      startContent={<Button text="Back" onClick={() => alert('You clicked Back!')} />}
+      endContent={<Button text="Close" onClick={() => alert('You clicked Close!')} />}
+    >
+      <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
+    </Header>
     <br />
   </div>
 );
