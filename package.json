@@ -28,7 +28,10 @@
     "extends": "terra"
   },
   "stylelint": {
-    "extends": "stylelint-config-terra"
+    "extends": "stylelint-config-terra",
+    "rules": {
+      "scss/at-mixin-pattern": "^(terra-)[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+    }
   },
   "scripts": {
     "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
