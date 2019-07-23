@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update jest test snanpshot
 
 3.21.0 - (July 17, 2019)
 ------------------
