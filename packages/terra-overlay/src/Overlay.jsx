@@ -110,7 +110,7 @@ class Overlay extends React.Component {
         document.querySelector(selector).setAttribute('data-overlay-count', '1');
         document.querySelector(selector).setAttribute('inert', '');
       } else if (document.querySelector(selector) && document.querySelector(selector).hasAttribute('data-overlay-count')) {
-        const inert = +document.querySelector(selector).dataset.overlayCount;
+        const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
 
         document.querySelector(selector).setAttribute('data-overlay-count', `${inert + 1}`);
         document.querySelector(selector).setAttribute('inert', '');
@@ -128,7 +128,7 @@ class Overlay extends React.Component {
       const selector = this.props.rootSelector;
 
       if (document.querySelector(selector)) { // Guard for Jest testing
-        const inert = +document.querySelector(selector).dataset.overlayCount;
+        const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
 
         if (inert === 1) {
           document.querySelector(selector).removeAttribute('data-overlay-count');
