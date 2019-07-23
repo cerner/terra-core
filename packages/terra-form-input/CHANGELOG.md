@@ -5,6 +5,19 @@ Unreleased
 ----------
 ## Changed
 * Replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
+
+2.19.0 - (July 17, 2019)
+------------------
+## Changed
+* Revert replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
+
+2.18.0 - (July 17, 2019)
+------------------
+## Changed
+* Replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
+
+2.17.0 - (July 16, 2019)
+------------------
 ### Added
 * Added documentation on required peerDependencies
 

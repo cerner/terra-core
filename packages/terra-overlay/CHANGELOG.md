@@ -5,8 +5,25 @@ Changelog
 
 Unreleased
 ----------
+
+3.22.0 - (July 17, 2019)
+------------------
+### Changed
+* Revert components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+3.21.0 - (July 17, 2019)
+------------------
+### Fixed
+* Fixed issue in IE 10 when trying to pull value from data attribute
+
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+3.20.0 - (July 16, 2019)
+------------------
 ### Added
 * Added documentation on required peerDependencies
+* Updated jest snapshots
 
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
