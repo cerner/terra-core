@@ -26,7 +26,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
   </button>
   <button
     aria-disabled={false}
-    aria-haspopup={true}
+    aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
     disabled={false}
@@ -68,7 +68,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
   </button>
   <button
     aria-disabled={false}
-    aria-haspopup={true}
+    aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
     disabled={false}
@@ -111,7 +111,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
   </button>
   <button
     aria-disabled={true}
-    aria-haspopup={true}
+    aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
     disabled={true}
@@ -156,7 +156,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
   </button>
   <button
     aria-disabled={false}
-    aria-haspopup={true}
+    aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
     disabled={false}
@@ -208,7 +208,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
   </button>
   <button
     aria-disabled={false}
-    aria-haspopup={true}
+    aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
     disabled={false}
@@ -250,7 +250,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
   </button>
   <button
     aria-disabled={false}
-    aria-haspopup={true}
+    aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
     disabled={false}

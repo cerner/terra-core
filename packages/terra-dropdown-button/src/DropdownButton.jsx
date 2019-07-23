@@ -118,7 +118,7 @@ class DropdownButton extends React.Component {
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
           aria-expanded={isOpen || undefined}
-          aria-haspopup
+          aria-haspopup="menu"
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
           <span className={cx('caret-icon')} />

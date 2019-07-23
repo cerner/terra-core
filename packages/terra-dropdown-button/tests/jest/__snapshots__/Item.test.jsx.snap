@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Item renders a default item 1`] = `
-<li>
+<li
+  role="presentation"
+  tabIndex="-1"
+>
   <div
     className="item"
     onClick={[Function]}
-    role="button"
+    role="menuitem"
     tabIndex="0"
   >
     1st Option
@@ -14,11 +17,14 @@ exports[`Item renders a default item 1`] = `
 `;
 
 exports[`Item renders an active item 1`] = `
-<li>
+<li
+  role="presentation"
+  tabIndex="-1"
+>
   <div
     className="item active"
     onClick={[Function]}
-    role="button"
+    role="menuitem"
     tabIndex="0"
   >
     1st Option

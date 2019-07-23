@@ -31,11 +31,15 @@ const propTypes = {
 const Item = ({
   label, onSelect, isActive, requestClose, ...customProps
 }) => (
-  <li>
+  /*
+    Having the li element with tabIndex -1 is important for VoiceOver in Safari, without it pressing VO + left/right will
+    navigate outside the dropdown with the dropdown still open if nothing else is pressed after opening the menu.
+  */
+  <li tabIndex="-1" role="presentation">
     <div
       {...customProps}
       onClick={(event) => { requestClose(onSelect); event.stopPropagation(); }}
-      role="button"
+      role="menuitem"
       tabIndex="0"
       className={cx([
         'item',

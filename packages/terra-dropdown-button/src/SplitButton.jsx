@@ -164,7 +164,7 @@ class SplitButton extends React.Component {
           tabIndex={disabled ? '-1' : undefined}
           aria-disabled={disabled}
           aria-expanded={isOpen || undefined}
-          aria-haspopup
+          aria-haspopup="menu"
           aria-label={caretLabel}
         >
           <span className={cx('caret-icon')} />
