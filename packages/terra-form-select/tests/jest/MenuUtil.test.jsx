@@ -11,15 +11,15 @@ describe('MenuUtil', () => {
       expect(MenuUtil.contains(string, 'query')).toBeFalsy();
     });
 
-    it('should return false if the query is not conatained within the string', () => {
+    it('should return false if the query is not contained within the string', () => {
       expect(MenuUtil.contains('string', 'query')).toBeFalsy();
     });
 
-    it('should return true if the query is conatained within the string', () => {
+    it('should return true if the query is contained within the string', () => {
       expect(MenuUtil.contains('string query', 'query')).toBeTruthy();
     });
 
-    it('should return true if the query is conatained within the string with different case', () => {
+    it('should return true if the query is contained within the string with different case', () => {
       expect(MenuUtil.contains('string query', 'Query')).toBeTruthy();
     });
   });
@@ -29,7 +29,7 @@ describe('MenuUtil', () => {
       expect(MenuUtil.isEqual('', 'b')).toBeFalsy();
     });
 
-    it('should return false if the either prarameter is empty or null', () => {
+    it('should return false if the either parameter is empty or null', () => {
       expect(MenuUtil.isEqual('a', '')).toBeFalsy();
     });
 

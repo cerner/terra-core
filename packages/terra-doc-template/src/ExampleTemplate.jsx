@@ -72,9 +72,11 @@ class ExampleTemplate extends React.Component {
       ...customProps
     } = this.props;
 
+    const { isExpanded, isBackgroundTransparent } = this.state;
+
     let dynamicContentStyle = {};
 
-    if (this.state.isBackgroundTransparent) {
+    if (isBackgroundTransparent) {
       dynamicContentStyle = {
         backgroundColor: 'rgba(0, 0, 0, 0)',
       };
@@ -113,10 +115,12 @@ class ExampleTemplate extends React.Component {
                 <span className={cx('chevron-right')} />
               </button>
             </div>
-            <div className={cx('code', { 'is-expanded': this.state.isExpanded })} aria-hidden={!this.state.isExpanded}>
-              <SyntaxHighlighter language="jsx" style={theme} customStyle={{ margin: '0', borderRadius: '0' }}>
-                {exampleSrc}
-              </SyntaxHighlighter>
+            <div className={cx('code', { 'is-expanded': isExpanded })} aria-hidden={!isExpanded}>
+              {isExpanded ? (
+                <SyntaxHighlighter language="jsx" style={theme} customStyle={{ margin: '0', borderRadius: '0' }}>
+                  {exampleSrc}
+                </SyntaxHighlighter>
+              ) : undefined }
             </div>
           </div>
           )}
