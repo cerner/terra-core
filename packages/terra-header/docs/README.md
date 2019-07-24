@@ -24,27 +24,6 @@ This component requires the following peer dependencies be installed in your app
 </details>
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## Usage
-
-```jsx
-import React from 'react';
-import Header from 'terra-header';
-import Button from 'terra-button';
-
-<Header
-  title="Default Header"
-/>
-
-<Header
-  title="Start, End, and Children Header"
-  level={2}
-  startContent={<Button text="Back" onClick={() => alert('You clicked Back!')} />}
-  endContent={<Button text="Close" onClick={() => alert('You clicked Close!')} />}
->
-  <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
-</Header>
-```
-
 ## Component Features
 
  * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
