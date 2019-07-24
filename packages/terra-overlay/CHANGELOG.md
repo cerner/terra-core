@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Update tests for dev-site v6
+
 3.22.0 - (July 17, 2019)
 ------------------
 ### Changed
