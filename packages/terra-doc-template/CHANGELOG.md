@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+### Changed
+* Updated ExampleTemplate to not render example source markup until it is expanded
+
+2.13.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
 2.12.0  - (July 11, 2019)
 ------------------
 ### Changed

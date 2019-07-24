@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+3.15.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
 3.14.0  - (July 11, 2019)
 ------------------
 ### Changed

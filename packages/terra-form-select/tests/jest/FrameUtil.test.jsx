@@ -212,7 +212,7 @@ describe('FrameUtil', () => {
       expect(FrameUtil.shouldAddOptionOnBlur(props, state)).toBeTruthy();
     });
 
-    it('should return false for a combobox variant if the search value is empty', () => {
+    it('should return true for a combobox variant if the search value is empty', () => {
       const props = { variant: Variants.COMBOBOX, onSelect: 'Mock', value: ['Tag'] };
       const state = { hasSearchChanged: true, searchValue: '' };
       expect(FrameUtil.shouldAddOptionOnBlur(props, state)).toBeTruthy();

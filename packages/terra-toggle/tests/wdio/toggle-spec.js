@@ -1,11 +1,8 @@
-describe('Toggle', () => {
-  before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
-
+Terra.describeViewports('Toggle', ['medium'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-toggle/toggle/default-toggle'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot('closed');
+    Terra.it.validatesElement('closed');
 
     it('expands', () => {
       browser.click('#trigger-toggle'); // Open toggle
@@ -20,8 +17,7 @@ describe('Toggle', () => {
       browser.moveToObject('#root', 0, 0);
     });
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Animated', () => {

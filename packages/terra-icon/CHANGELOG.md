@@ -4,6 +4,24 @@ Changelog
 Unreleased
 ----------
 
+3.14.0 - (July 16, 2019)
+------------------
+### Added
+* Added new icon `IconCeMarking`
+* Added new icon `IconEcRep`
+* Added new icon `IconEnvelopeFill`
+* Added new icon `IconFeaturedOutlineYellow`
+* Added new icon `IconOutOfNetwork`
+* Added new icon `IconPharmacyVerification`
+* Added new icon `IconRefusedSlot`
+
+### Changed
+* Consume one-cerner-style-icons v1.26
+* Added documentation on required peerDependencies
+
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+
 3.13.0  - (July 11, 2019)
 ------------------
 ### Changed

@@ -1,24 +1,20 @@
-describe('Icon', () => {
-  before(() => browser.setViewportSize(Terra.viewports('large')[0]));
+Terra.describeViewports('Icon', ['large'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-default'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('HeightWidth', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-height-width'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('Bidi', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-bidi'));
 
-    Terra.it.isAccessible();
-    Terra.it.matchesScreenshot();
+    Terra.it.validatesElement();
   });
 
   describe('AriaLabel', () => {
@@ -26,6 +22,7 @@ describe('Icon', () => {
 
     Terra.it.isAccessible();
   });
+
   describe('AllIcons', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-all'));
 

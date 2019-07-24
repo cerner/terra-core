@@ -34,6 +34,7 @@ import IconErrorLowLight from 'terra-icon/lib/icon/IconErrorLowLight';
 import IconDoNotDisturb from 'terra-icon/lib/icon/IconDoNotDisturb';
 import IconIncompleteInverse from 'terra-icon/lib/icon/IconIncompleteInverse';
 import IconIncompleteInverseLowLight from 'terra-icon/lib/icon/IconIncompleteInverseLowLight';
+import IconFeaturedOutlineYellow from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import IconHelpLowLight from 'terra-icon/lib/icon/IconHelpLowLight';
 import IconHelpInverse from 'terra-icon/lib/icon/IconHelpInverse';
@@ -75,6 +76,7 @@ import IconDischargeOverDue from 'terra-icon/lib/icon/IconDischargeOverDue';
 import IconDischargeOverDueLowLight from 'terra-icon/lib/icon/IconDischargeOverDueLowLight';
 import IconDrugDrug from 'terra-icon/lib/icon/IconDrugDrug';
 import IconDrugDrugLowLight from 'terra-icon/lib/icon/IconDrugDrugLowLight';
+import IconOutOfNetwork from 'terra-icon/lib/icon/IconOutOfNetwork';
 const cellStyle = { padding: '0.5rem' };
 const IconAll = () => (
   <div>  <table>
@@ -380,6 +382,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconIncompleteInverseLowLight from 'terra-icon/lib/icon/IconIncompleteInverseLowLight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconFeaturedOutlineYellow height='2em' width='2em' /></td>
+        <td style={cellStyle}>featuredOutlineYellow</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconFeaturedOutlineYellow from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
           </code>
         </td>
       </tr>
@@ -749,6 +760,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconDrugDrugLowLight from 'terra-icon/lib/icon/IconDrugDrugLowLight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconOutOfNetwork height='2em' width='2em' /></td>
+        <td style={cellStyle}>outOfNetwork</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconOutOfNetwork from 'terra-icon/lib/icon/IconOutOfNetwork';
           </code>
         </td>
       </tr>
