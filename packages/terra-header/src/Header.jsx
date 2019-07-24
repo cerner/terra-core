@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const propTypes = {
   /**
    * Child element to be displayed on the right end of the header.
-   * The element passed as children will be decorated with flex attributes.
+   * The elements passed as children are expected to be and will be treated like a collapsible menu view element.
    */
   children: PropTypes.element,
 
