@@ -38,6 +38,13 @@ import Checkbox from 'terra-form-checkbox';
 <Checkbox id="checkbox" labelText="Default Checkbox" />
 ```
 
+## Jest Tests:
+* This component requires `window.matchMedia` to be mocked in Jest tests. To do so add the following to the top of your test file(s) that use this component:
+    ```
+    window.matchMedia = () => ({ matches: true });
+    ```
+
+
 ## Component Features
  * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
  * [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
