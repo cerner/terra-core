@@ -4,10 +4,16 @@ ChangeLog
 Unreleased
 ----------
 ### Added
+* Added Combobox and ComboboxField exports and doc site entries
+* Added DropdownSelect and DropdownSelectField exports and doc site entries
+* Added MultipleSelect and MultipleSelectField exports and doc site entries
+* Added SearchSelect and SearchSelectField exports and doc site entries
+* Added TagSelect and TagSelectField exports and doc site entries
 * Added aria-label to resolve accessibility violation with axe-core v3.3.0.
 * Updated translations.
 
 ### Changed
+* Split select implementation into individual variants
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * updated package.json test scripts
 * Update tests for dev-site v6
@@ -16,7 +22,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-
 
 5.24.0 - (July 24, 2019)
 ------------------

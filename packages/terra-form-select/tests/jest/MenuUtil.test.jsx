@@ -1,8 +1,8 @@
 import React from 'react';
-import MenuUtil from '../../src/_MenuUtil';
-import Variants from '../../src/_constants';
-import OptGroup from '../../src/_OptGroup';
-import Option from '../../src/_Option';
+import MenuUtil from '../../src/shared/_MenuUtil';
+import Variants from '../../src/shared/_variants';
+import OptGroup from '../../src/shared/_OptGroup';
+import Option from '../../src/shared/_Option';
 
 describe('MenuUtil', () => {
   describe('contains', () => {

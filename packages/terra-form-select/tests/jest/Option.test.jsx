@@ -1,5 +1,5 @@
 import React from 'react';
-import Option from '../../src/_Option';
+import Option from '../../src/shared/_Option';
 
 describe('Option', () => {
   it('should render a default Option', () => {
