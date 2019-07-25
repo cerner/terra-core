@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.23.0 - (July 24, 2019)
+------------------
+### Added
+* Added documentation that maximize/minimize buttons will not be shown with the back button
+
 2.22.0 - (July 17, 2019)
 ------------------
 ### Changed

@@ -1,13 +1,6 @@
 {
-  "lerna": "2.1.2",
-  "version": "independent",
-  "commands": {
-    "publish": {
-      "ignore": [
-        "DEPENDENCIES.md",
-        "*.tgz"
-      ]
-    }
-  },
-  "packages": ["packages/*"]
-  }
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent"
+}

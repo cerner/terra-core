@@ -6,6 +6,11 @@ Unreleased
 ### Updated
 * updated jest snapshots
 
+3.14.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.13.0 - (July 16, 2019)
 ------------------
 ### Changed
