@@ -10,10 +10,11 @@ exports[`OptGroup should render a default Option 1`] = `
   >
     label
   </div>
-  <ul
-    aria-label="Terra.form.select.option"
-    className="options"
-    role="listbox"
-  />
+  <FormattedMessage
+    id="Terra.form.select.option"
+    values={Object {}}
+  >
+    <Component />
+  </FormattedMessage>
 </li>
 `;
