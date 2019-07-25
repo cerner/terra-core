@@ -1,12 +1,10 @@
-describe('Signature', () => {
+Terra.describeViewports('Signature', ['medium'], () => {
   before(() => {
     browser.url('/#/raw/tests/terra-signature/signature/signature-default');
-    browser.setViewportSize(Terra.viewports('medium')[0]);
   });
 
   describe('Default', () => {
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Right Click does not draw lines', () => {
@@ -17,8 +15,7 @@ describe('Signature', () => {
       browser.buttonUp(2);
     });
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Middle Click does not draw lines', () => {
@@ -29,8 +26,7 @@ describe('Signature', () => {
       browser.buttonUp(1);
     });
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 
   describe('Drawing Lines', () => {
@@ -41,7 +37,6 @@ describe('Signature', () => {
       browser.buttonUp(0);
     });
 
-    Terra.it.matchesScreenshot();
-    Terra.it.isAccessible();
+    Terra.it.validatesElement();
   });
 });

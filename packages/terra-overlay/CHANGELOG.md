@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+3.23.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.22.0 - (July 17, 2019)
+------------------
+### Changed
+* Revert components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
 3.21.0 - (July 17, 2019)
 ------------------
 ### Fixed

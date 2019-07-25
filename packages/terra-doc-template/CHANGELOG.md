@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.14.0 - (July 24, 2019)
+------------------
+### Changed
+* Updated ExampleTemplate to not render example source markup until it is expanded
+
 2.13.0 - (July 16, 2019)
 ------------------
 ### Added
