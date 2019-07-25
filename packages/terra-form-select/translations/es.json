@@ -1,10 +1,10 @@
 ﻿{
   "Terra.form.select.add": "Agregar \"{text}\"",
-  "Terra.form.select.ariaLabel": "Buscar",
-  "Terra.form.select.defaultDisplay": "- Predeterminado -",
-  "Terra.form.select.maxSelectionHelp": "Límite de {text} elementos.",
-  "Terra.form.select.maxSelectionOption": "Número máximo de {text} elementos seleccionados",
+  "Terra.form.select.defaultDisplay": "- Seleccionar -",
   "Terra.form.select.noResults": "No se encontró ningún resultado que coincida para \"{text}\"",
+  "Terra.form.select.maxSelectionHelp": "Limite los elementos {text}.",
+  "Terra.form.select.maxSelectionOption": "Número máximo de elementos {text} seleccionados",
+  "Terra.form.select.ariaLabel": "Buscar",
   "Terra.form.select.selectedText": "Se seleccionó {text}.",
   "Terra.form.select.selected": "Seleccionado.",
   "Terra.form.select.unselected": "No seleccionado.",
@@ -17,7 +17,7 @@
   "Terra.form.select.multiSelectUsageGuidance": "Escriba texto o use las flechas arriba y abajo para desplazarse por las opciones. Presione entrar para seleccionar o deseleccionar una opción.",
   "Terra.form.select.searchUsageGuidance": "Escriba texto o use las flechas arriba y abajo para desplazarse por las opciones. Presione entrar para seleccionar una opción.",
   "Terra.form.select.clearSelect": "Borrar selección",
-  "Terra.form.select.selectCleared": "Se borró el valor seleccionado"
+  "Terra.form.select.selectCleared": "Se borró el valor seleccionado",
   "Terra.form.select.menu": "menú",
   "Terra.form.select.option": "opciones"
 }

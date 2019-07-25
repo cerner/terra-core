@@ -35,7 +35,7 @@
 * --terra-paginator-nav-link-icon-previous-margin-right
 * --terra-paginator-nav-link-icon-next-margin-left
 
-#### Added ~2.17.x
+#### Added ~2.21.x
 * --terra-paginator-nav-link-background-color
 * --terra-paginator-nav-link-box-shadow
 * --terra-paginator-nav-link-font-size
@@ -61,7 +61,7 @@
 * --terra-paginator-nav-link-icon-next-background-image
 * --terra-paginator-nav-link-icon-next-disabled-background-image
 
-#### Removed ~2.17.x
+#### Removed ~2.21.x
 * --terra-paginator-nav-link-background
 * --terra-paginator-nav-link-hover-background
 * --terra-paginator-nav-link-focus-background
