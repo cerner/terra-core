@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.24.0 - (July 24, 2019)
+------------------
 ### Changed
 * Update Spanish translations
 
