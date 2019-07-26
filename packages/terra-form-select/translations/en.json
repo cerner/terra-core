@@ -18,6 +18,6 @@
   "Terra.form.select.searchUsageGuidance": "Enter text or use up and down arrow keys to navigate through options. Press enter to select an option.",
   "Terra.form.select.clearSelect": "Clear select",
   "Terra.form.select.selectCleared": "Select value cleared",
-  "Terra.form.select.menu": "menu",
-  "Terra.form.select.option": "options"
+  "Terra.form.select.menu": "Menu",
+  "Terra.form.select.option": "Options"
 }

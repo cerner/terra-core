@@ -36,7 +36,7 @@ const OptGroup = ({
       {option => (
         <ul className={cx('options')} role="listbox" aria-label={option}>
           {React.Children.map(children, child => (
-            React.cloneElement(child, { disabled: disabled || !!child.props.disabled })))}
+            React.cloneElement(child, { disabled: disabled || child.props.disabled })))}
         </ul>
       )}
     </FormattedMessage>

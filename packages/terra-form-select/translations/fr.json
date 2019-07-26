@@ -1,4 +1,4 @@
-﻿{
+{
   "Terra.form.select.add": "Ajouter \"{text}\"",
   "Terra.form.select.ariaLabel": "Rechercher",
   "Terra.form.select.defaultDisplay": "Sélectionner",
@@ -18,6 +18,6 @@
   "Terra.form.select.searchUsageGuidance": "Saisissez du texte ou utilisez les touches fléchées haut et bas pour parcourir les options. Appuyez sur Entrée pour sélectionner une option.",
   "Terra.form.select.clearSelect": "Effacer la sélection",
   "Terra.form.select.selectCleared": "Valeur sélectionnée effacée.",
-  "Terra.form.select.menu": "menu",
-  "Terra.form.select.option": "options"
+  "Terra.form.select.menu": "Menu",
+  "Terra.form.select.option": "Options"
 }

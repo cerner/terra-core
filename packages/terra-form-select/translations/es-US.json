@@ -1,4 +1,4 @@
-﻿{
+{
   "Terra.form.select.add": "Agregar \"{text}\"",
   "Terra.form.select.defaultDisplay": "- Seleccionar -",
   "Terra.form.select.noResults": "No se encontró ningún resultado que coincida para \"{text}\"",
@@ -18,6 +18,6 @@
   "Terra.form.select.searchUsageGuidance": "Escriba texto o use las flechas arriba y abajo para desplazarse por las opciones. Presione entrar para seleccionar una opción.",
   "Terra.form.select.clearSelect": "Borrar selección",
   "Terra.form.select.selectCleared": "Se borró el valor seleccionado",
-  "Terra.form.select.menu": "menú",
-  "Terra.form.select.option": "opciones"
+  "Terra.form.select.menu": "Menú",
+  "Terra.form.select.option": "Opciones"
 }
