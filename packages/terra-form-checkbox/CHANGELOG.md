@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.20.0 - (July 25, 2019)
+------------------
+### Added
+* Added documentation to mock window.matchMedia for jest tests.
+
 3.19.0 - (July 24, 2019)
 ------------------
 ### Changed
