@@ -82,6 +82,7 @@ Cerner Corporation
 - Avinash Gupta [@avinashg1994]
 - Philip Meznar [@prmeznar]
 - Saket Bajaj [@saket2403]
+- Prachi Gotkhindikar [@prachigotkhindikar1]
 
 Community
 
