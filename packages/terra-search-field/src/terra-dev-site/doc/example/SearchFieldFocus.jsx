@@ -1,18 +1,16 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SearchFieldExampleTemplate from 'terra-search-field/lib/terra-dev-site/doc/example/SearchFieldExampleTemplate';
-import Button from 'terra-button/lib/Button';
+import SearchField from 'terra-search-field/lib/SearchField';
+import Button from 'terra-button';
 
 class SearchFieldFocus extends React.Component {
   constructor(props) {
     super(props);
-    this.onChange = this.onChange.bind(this);
+    this.invalidSearchMessage = 'The default minimum search length is 2.';
+    this.state = { searchText: '', message: this.invalidSearchMessage };
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleInvalidSearch = this.handleInvalidSearch.bind(this);
     this.handleButtonClick = this.handleButtonClick.bind(this);
-    this.state = { searchText: '' };
-  }
-
-  onChange(event, text) {
-    this.setState({ searchText: text });
   }
 
   handleButtonClick() {
@@ -21,16 +19,28 @@ class SearchFieldFocus extends React.Component {
     }
   }
 
+  handleSearch(searchText) {
+    this.setState({ searchText, message: 'Search Text: ' });
+  }
+
+  handleInvalidSearch() {
+    this.setState({ searchText: '', message: this.invalidSearchMessage });
+  }
+
   render() {
     return (
-      <React.Fragment>
+      <div>
         <Button text="Focus Me" onClick={this.handleButtonClick} id="search-field-focus-button" />
-        <SearchFieldExampleTemplate
-          onChange={this.onChange}
-          value={this.state.searchText}
+        <p>
+          {this.state.message}
+          {this.state.searchText}
+        </p>
+        <SearchField
+          onSearch={this.handleSearch}
+          onInvalidSearch={this.handleInvalidSearch}
           inputRefCallback={(inputRef) => { this.searchInput = inputRef; }}
         />
-      </React.Fragment>
+      </div>
     );
   }
 }

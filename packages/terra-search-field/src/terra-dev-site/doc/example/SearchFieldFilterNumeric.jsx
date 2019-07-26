@@ -1,28 +1,47 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SearchFieldExampleTemplate from 'terra-search-field/lib/terra-dev-site/doc/example/SearchFieldExampleTemplate';
+import SearchField from 'terra-search-field/lib/SearchField';
 
 class SearchFieldFilterNumeric extends React.Component {
   constructor(props) {
     super(props);
+    this.invalidSearchMessage = 'The default minimum search length is 2.';
+    this.state = { searchText: '', filteredText: '', message: this.invalidSearchMessage };
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleInvalidSearch = this.handleInvalidSearch.bind(this);
     this.onChange = this.onChange.bind(this);
-    this.state = { searchText: '' };
   }
 
   onChange(event, text) {
-    let searchText = text;
+    let filteredText = text;
     if (text && text.length > 0 && /\d/.test(text)) {
-      searchText = text.substring(0, text.length - 1);
+      filteredText = text.substring(0, text.length - 1);
     }
-    this.setState({ searchText });
+    this.setState({ filteredText });
+  }
+
+  handleInvalidSearch() {
+    this.setState({ searchText: '', message: this.invalidSearchMessage });
+  }
+
+  handleSearch(searchText) {
+    this.setState({ searchText, message: 'Search Text: ' });
   }
 
   render() {
     return (
-      <SearchFieldExampleTemplate
-        onChange={this.onChange}
-        value={this.state.searchText}
-      />
+      <div>
+        <p>
+          {this.state.message}
+          {this.state.searchText}
+        </p>
+        <SearchField
+          onSearch={this.handleSearch}
+          onInvalidSearch={this.handleInvalidSearch}
+          value={this.state.filteredText}
+          onChange={this.onChange}
+        />
+      </div>
     );
   }
 }

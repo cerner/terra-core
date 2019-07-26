@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated search-field example code to show more usage.
 
 3.22.0 - (July 24, 2019)
 ------------------
