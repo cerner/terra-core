@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
-import { injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
@@ -43,11 +43,6 @@ const propTypes = {
    * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
    */
   customColorClass: PropTypes.string,
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
   /**
    * Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.
    */
@@ -107,13 +102,12 @@ const Alert = ({
   children,
   customIcon,
   customColorClass,
-  intl,
   onDismiss,
   title,
   type,
   ...customProps
 }) => {
-  const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
+  const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
   const attributes = Object.assign({}, customProps);
   const narrowAlertClassNames = cx([
     'alert-base',
@@ -142,7 +136,13 @@ const Alert = ({
   }
 
   if (onDismiss) {
-    dismissButton = (<Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} onClick={onDismiss} />);
+    dismissButton = (
+      <FormattedMessage id="Terra.alert.dismiss">
+        {btnText => (
+          <Button text={btnText} onClick={onDismiss} />
+        )}
+      </FormattedMessage>
+    );
   }
   if (onDismiss || action) {
     bodyClassNameForNarrowParent = cx(['body', 'body-narrow']);
@@ -190,4 +190,4 @@ Alert.defaultProps = defaultProps;
 Alert.Opts = {};
 Alert.Opts.Types = AlertTypes;
 
-export default injectIntl(Alert);
+export default Alert;

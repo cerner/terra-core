@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
@@ -26,11 +26,6 @@ const propTypes = {
    * Whether or not to hide the required indicator on the legend.
    */
   hideRequired: PropTypes.bool,
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
   /**
    * Whether or not the field is an inline field.
    */
@@ -81,7 +76,6 @@ const RadioField = (props) => {
     error,
     help,
     hideRequired,
-    intl,
     isInvalid,
     isInline,
     isLegendHidden,
@@ -115,12 +109,24 @@ const RadioField = (props) => {
         {required && (isInvalid || !hideRequired) && (
           <React.Fragment>
             <div aria-hidden="true" className={cx('required')}>*</div>
-            <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
+            <FormattedMessage id="Terra.form.field.required">
+              {text => (
+                <VisualyHiddenText text={text} />
+              )}
+            </FormattedMessage>
           </React.Fragment>
         )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
-        {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
+        {showOptional && !required
+          && (
+            <FormattedMessage id="Terra.form.field.optional">
+              {optionalText => (
+                <span className={cx('optional')}>{optionalText}</span>
+              )}
+            </FormattedMessage>
+          )
+        }
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
     </legend>
@@ -149,4 +155,4 @@ const RadioField = (props) => {
 RadioField.propTypes = propTypes;
 RadioField.defaultProps = defaultProps;
 
-export default injectIntl(RadioField);
+export default RadioField;

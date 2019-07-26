@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import IconSpinner from 'terra-icon/lib/icon/IconSpinner';
-import { injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import Overlay from './Overlay';
 import styles from './Overlay.module.scss';
 
@@ -15,11 +15,6 @@ const propTypes = {
    * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear' or BackgroundStyles.LIGHT, BackgroundStyles.DARK, and BackgroundStyles.CLEAR.
    */
   backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear', BackgroundStyles]),
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
   /**
    * Indicates if the icon spinner should be animated.
    */
@@ -55,7 +50,6 @@ const defaultProps = {
 };
 
 const LoadingOverlay = ({
-  intl,
   isAnimated,
   message,
   rootSelector,
@@ -64,12 +58,18 @@ const LoadingOverlay = ({
   // eslint-disable-next-line no-param-reassign
   delete customProps.onRequestClose;
 
-  const loadingMessage = message !== undefined ? message : intl.formatMessage({ id: 'Terra.Overlay.loading' });
-
   return (
     <Overlay {...customProps} className={cx('loading-overlay', customProps.className)} rootSelector={rootSelector}>
       <IconSpinner className={cx('icon')} isSpin={isAnimated} height="36" width="36" />
-      <div className={cx('message')}>{loadingMessage}</div>
+      {message !== undefined
+        ? <div className={cx('message')}>{message}</div>
+        : (
+          <FormattedMessage id="Terra.Overlay.loading">
+            {loadingMessage => (
+              <div className={cx('message')}>{loadingMessage}</div>
+            )}
+          </FormattedMessage>)
+      }
     </Overlay>
   );
 };
@@ -78,4 +78,4 @@ LoadingOverlay.propTypes = propTypes;
 LoadingOverlay.defaultProps = defaultProps;
 LoadingOverlay.Opts = Overlay.Opts;
 
-export default injectIntl(LoadingOverlay);
+export default LoadingOverlay;

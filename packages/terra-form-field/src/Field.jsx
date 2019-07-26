@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames/bind';
 import IconError from 'terra-icon/lib/icon/IconError';
 import styles from './Field.module.scss';
@@ -32,11 +32,6 @@ const propTypes = {
    * The htmlFor attribute on the field label.
    */
   htmlFor: PropTypes.string,
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
   /**
    * Whether or not the field is invalid.
    */
@@ -107,7 +102,6 @@ const Field = (props) => {
     help,
     hideRequired,
     htmlFor,
-    intl,
     isInvalid,
     isInline,
     isLabelHidden,
@@ -181,7 +175,14 @@ const Field = (props) => {
           {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
           {label}
           {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
-          {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
+          {showOptional && !required
+            && (
+              <FormattedMessage id="Terra.form.field.optional">
+                {optionalText => (
+                  <div className={cx('optional')}>{optionalText}</div>
+                )}
+              </FormattedMessage>
+            )}
           {IEDescriptionText}
         </label>
       }
@@ -202,4 +203,4 @@ const Field = (props) => {
 Field.propTypes = propTypes;
 Field.defaultProps = defaultProps;
 
-export default injectIntl(Field);
+export default Field;

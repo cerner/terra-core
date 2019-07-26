@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
-import { injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import styles from './CheckboxField.module.scss';
 
 const cx = classNames.bind(styles);
@@ -25,11 +25,6 @@ const propTypes = {
    * Whether or not to hide the required indicator on the legend.
    */
   hideRequired: PropTypes.bool,
-  /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
   /**
    * Whether or not the field is an inline field.
    */
@@ -80,7 +75,6 @@ const CheckboxField = (props) => {
     error,
     help,
     hideRequired,
-    intl,
     isInvalid,
     isInline,
     isLegendHidden,
@@ -114,12 +108,22 @@ const CheckboxField = (props) => {
         {required && (isInvalid || !hideRequired) && (
           <React.Fragment>
             <div aria-hidden="true" className={cx('required')}>*</div>
-            <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
+            <FormattedMessage id="Terra.form.field.required">
+              {requiredText => (
+                <VisualyHiddenText text={requiredText} />
+              )}
+            </FormattedMessage>
           </React.Fragment>
         )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
-        {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
+        {showOptional && !required
+          && (
+            <FormattedMessage id="Terra.form.field.optional">
+              {optionalText => (
+                <span className={cx('optional')}>{optionalText}</span>
+              )}
+            </FormattedMessage>)}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
     </legend>
@@ -148,4 +152,4 @@ const CheckboxField = (props) => {
 CheckboxField.propTypes = propTypes;
 CheckboxField.defaultProps = defaultProps;
 
-export default injectIntl(CheckboxField);
+export default CheckboxField;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import ContentContainer from 'terra-content-container';
-import { injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import styles from './Dialog.module.scss';
 
 const cx = classNames.bind(styles);
@@ -23,11 +23,6 @@ const propTypes = {
    */
   header: PropTypes.node.isRequired,
   /**
-   * @private
-   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
-   */
-  intl: intlShape.isRequired,
-  /**
    * Callback function for when the close button is clicked. The close button will not display if this is not set.
    * On small viewports a back button will be displayed instead of a close button.
    */
@@ -40,15 +35,23 @@ const defaultProps = {
 };
 
 const Dialog = ({
-  children, footer, header, intl, onClose, ...customProps
+  children, footer, header, onClose, ...customProps
 }) => {
   const dialogClassNames = cx([
     'dialog',
     customProps.className,
   ]);
 
-  const closeText = intl.formatMessage({ id: 'Terra.dialog.close' });
-  const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button variant="utility" text={closeText} onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} /></div> : null;
+  const closeButton = onClose
+    ? (
+      <div className={cx('dialog-header-close')}>
+        <FormattedMessage id="Terra.dialog.close">
+          {closeText => (
+            <Button variant="utility" text={closeText} onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} />
+          )}
+        </FormattedMessage>
+      </div>)
+    : null;
 
   const dialogHeader = (
     <div className={cx('dialog-header')}>
@@ -69,4 +72,4 @@ const Dialog = ({
 Dialog.propTypes = propTypes;
 Dialog.defaultProps = defaultProps;
 
-export default injectIntl(Dialog);
+export default Dialog;
