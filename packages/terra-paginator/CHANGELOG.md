@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.21.2 - (July 24, 2019)
+------------------
+### Fix
+* Include missing lib directory that was not available in 2.21.1
+
 2.21.1 - (July 24, 2019)
 ------------------
 ### Changed
