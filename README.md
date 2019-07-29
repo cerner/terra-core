@@ -120,7 +120,6 @@ Components in beta stage may include breaking changes, new features, and bug fix
 
 | Terra Package      | Version | Status | Dependencies |
 |--------------------|---------|--------|--------------|
-| terra-application | [![NPM version](https://badgen.net/npm/v/terra-application)](https://www.npmjs.org/package/terra-application) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-application](https://badgen.net/badge/dependencies/n%2Fa/grey) |
 | terra-form | [![NPM version](https://badgen.net/npm/v/terra-form)](https://www.npmjs.org/package/terra-form) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-form](https://badgen.net/badge/dependencies/n%2Fa/grey) |
 | terra-i18n-plugin | [![NPM version](https://badgen.net/npm/v/terra-i18n-plugin)](https://www.npmjs.org/package/terra-i18n-plugin) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-i18n-plugin](https://badgen.net/badge/dependencies/n%2Fa/grey) |
 | terra-modal | [![NPM version](https://badgen.net/npm/v/terra-modal)](https://www.npmjs.org/package/terra-modal) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-application](https://badgen.net/badge/dependencies/n%2Fa/grey) |
