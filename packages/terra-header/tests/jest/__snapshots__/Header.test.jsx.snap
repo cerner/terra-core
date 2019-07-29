@@ -60,7 +60,7 @@ exports[`Header should render a header with endContent 1`] = `
     className="flex-fill"
   />
   <div
-    className="flex-end"
+    className="flex-end end-group"
   >
     <Button
       isBlock={false}
@@ -101,7 +101,7 @@ exports[`Header should render a header with startContent 1`] = `
   className="flex-header"
 >
   <div
-    className="flex-end"
+    className="flex-end start-group"
   >
     <Button
       isBlock={false}

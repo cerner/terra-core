@@ -59,12 +59,12 @@ const Header = ({
 
   return (
     <div {...customProps} className={cx(['flex-header', customProps.className])}>
-      {startContent && <div className={cx('flex-end')}>{startContent}</div>}
+      {startContent && <div className={cx(['flex-end', 'start-group'])}>{startContent}</div>}
       <div className={cx('flex-fill')}>
         {titleElement}
       </div>
       {content}
-      {endContent && <div className={cx('flex-end')}>{endContent}</div>}
+      {endContent && <div className={cx(['flex-end', 'end-group'])}>{endContent}</div>}
     </div>
   );
 };

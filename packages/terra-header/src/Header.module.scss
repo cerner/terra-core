@@ -35,6 +35,14 @@
     position: relative;
   }
 
+  .start-group > * {
+    margin-right: var(--terra-header-margin-right, 1.429rem);
+  }
+
+  .end-group > * {
+    margin-left: var(--terra-header-margin-left, 1.429rem);
+  }
+
   .title-container {
     position: relative;
     width: 100%;
