@@ -116,9 +116,11 @@
     color: #218336;
   }
 
-  .token.diff.important {
+  .token.diff.important,
+  .token.diff.bold {
     background: #ffebda;
     color: #b54d08;
+    font-weight: normal;
   }
 
   // All other markdown
