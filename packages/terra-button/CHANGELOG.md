@@ -4,8 +4,14 @@ Changelog
 Unreleased
 ----------
 
+
 ### Changed
 * Update tests for dev-site v6
+
+3.19.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.18.0 - (July 24, 2019)
 ------------------
