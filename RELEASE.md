@@ -16,7 +16,7 @@ Below is a guide for releasing packages:
   - `npm login` - CLI command to log into npm.
   - `npm whoami` - CLI command to confirm who you are logged in as.
 
-- Run the `npm run publish` script from the root directory.
+- Run the `npm run release` script from the root directory.
 
 When run, this command does the following:
 
