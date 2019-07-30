@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "marked": "0.6.2",
-    "prismjs": "~1.16.0",
+    "marked": "0.7.x",
+    "prismjs": "~1.17.1",
     "prop-types": "^15.5.8"
   },
   "scripts": {
