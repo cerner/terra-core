@@ -7,7 +7,7 @@ import styles from './ExtraSpacing.module.scss';
 const cx = classnames.bind(styles);
 
 export default () => (
-  <div className={cx('button-spacing-wrapper')}>
+  <div className={cx('container-spacing-wrapper')}>
     <SplitButton primaryOptionLabel="Split" onSelect={() => {}} id="split">
       <Item label="1st" onSelect={() => {}} />
       <Item label="2nd" onSelect={() => {}} />

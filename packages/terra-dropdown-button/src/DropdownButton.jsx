@@ -21,27 +21,31 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Determines whether the dropdown should be disabled.
-   */
-  disabled: PropTypes.bool,
-  /**
-   * Determines whether the component should have block styles applied. The dropdown will match the component's width.
+   * Determines whether the button should have block styling applied. The dropdown list will match the component's width.
    */
   isBlock: PropTypes.bool,
+  /**
+   * Whether or not the button has reduced padding for use in tables and single-row lists.
+   */
+  isCompact: PropTypes.bool,
+  /**
+   * Determines whether the button should be disabled.
+   */
+  isDisabled: PropTypes.bool,
   /**
    * Sets the text that will be shown on the dropdown button.
    */
   label: PropTypes.string.isRequired,
   /**
-   * Sets the styles of the component. The default is 'neutral'.
-   * Must be one of 'neutral', 'emphasis', or 'ghost'.
+   * Sets the styles of the component, one of `neutral`, `emphasis`, or `ghost`.
    */
   variant: PropTypes.oneOf(Object.values(Variants)),
 };
 
 const defaultProps = {
-  disabled: false,
   isBlock: false,
+  isCompact: false,
+  isDisabled: false,
   variant: 'neutral',
 };
 
@@ -83,8 +87,9 @@ class DropdownButton extends React.Component {
   render() {
     const {
       children,
-      disabled,
       isBlock,
+      isCompact,
+      isDisabled,
       label,
       variant,
       ...customProps
@@ -97,6 +102,7 @@ class DropdownButton extends React.Component {
       variant,
       { 'is-active': isOpen || isActive },
       { 'is-block': isBlock },
+      { 'is-compact': isCompact },
     );
 
     return (
@@ -104,9 +110,10 @@ class DropdownButton extends React.Component {
         {...customProps}
         items={children}
         isOpen={isOpen}
-        requestClose={this.handleDropdownRequestClose}
-        disabled={disabled}
         isBlock={isBlock}
+        isCompact={isCompact}
+        isDisabled={isDisabled}
+        requestClose={this.handleDropdownRequestClose}
       >
         <button
           type="button"
@@ -114,9 +121,9 @@ class DropdownButton extends React.Component {
           onClick={this.handleDropdownButtonClick}
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}
-          disabled={disabled}
-          tabIndex={disabled ? '-1' : undefined}
-          aria-disabled={disabled}
+          disabled={isDisabled}
+          tabIndex={isDisabled ? '-1' : undefined}
+          aria-disabled={isDisabled}
           aria-expanded={isOpen || undefined}
           aria-haspopup="menu"
         >

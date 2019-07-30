@@ -3,7 +3,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/default-split-button');
       // avoid hover styles
-      browser.moveToObject('#root', 100, 100);
+      browser.moveToObject('#root', 100, 1);
     });
 
     Terra.it.validatesElement();
@@ -70,7 +70,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/callback-split-button');
       // avoid hover styles
-      browser.moveToObject('#root', 100, 100);
+      browser.moveToObject('#root', 100, 1);
     });
 
     Terra.it.matchesScreenshot();
@@ -170,7 +170,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('closes the dropdown when clicking outside the dropdownbutton', () => {
-        browser.moveToObject('#root', 90, 90);
+        browser.moveToObject('#root', 200, 1);
         browser.buttonDown();
         browser.buttonUp();
         Terra.validates.screenshot('clicking outside closes dropdown');
@@ -191,7 +191,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/wide-split-button');
       // avoid hover styles
-      browser.moveToObject('#root', 100, 100);
+      browser.moveToObject('#root', 1, 300);
     });
 
     Terra.it.validatesElement('Both closed');
@@ -264,5 +264,14 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       browser.click('#second');
       Terra.validates.screenshot('second button clicked');
     });
+  });
+
+  describe('Variants', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/variant-split-buttons');
+      browser.moveToObject('#root', 1, 100);
+    });
+
+    Terra.it.validatesElement();
   });
 });

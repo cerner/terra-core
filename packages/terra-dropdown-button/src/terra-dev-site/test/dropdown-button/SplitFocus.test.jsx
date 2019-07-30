@@ -10,7 +10,7 @@ export default () => {
   const first = useRef(null);
   const second = useRef(null);
   return (
-    <div className={cx('button-spacing-wrapper')}>
+    <div className={cx('container-spacing-wrapper')}>
       <a href="/" ref={first} tabIndex="0">First</a>
       <a href="/" ref={second} tabIndex="0">Second</a>
       <SplitButton primaryOptionLabel="First" onSelect={() => first.current.focus()}>

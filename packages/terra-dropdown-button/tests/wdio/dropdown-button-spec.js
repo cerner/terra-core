@@ -3,7 +3,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/default-dropdown-button');
       // avoid hover styles
-      browser.moveToObject('#root', 100, 100);
+      browser.moveToObject('#root', 100, 1);
     });
 
     Terra.it.validatesElement();
@@ -48,7 +48,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/callback-dropdown-button');
       // avoid hover styles
-      browser.moveToObject('#root', 100, 100);
+      browser.moveToObject('#root', 100, 1);
     });
 
     Terra.it.matchesScreenshot();
@@ -143,7 +143,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       });
 
       it('closes the dropdown when clicking outside the dropdownbutton', () => {
-        browser.moveToObject('#root', 90, 90);
+        browser.moveToObject('#root', 200, 1);
         browser.buttonDown();
         browser.buttonUp();
         Terra.validates.screenshot('clicking outside closes dropdown');
@@ -164,7 +164,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/wide-dropdown-button');
       // avoid hover styles
-      browser.moveToObject('#root', 100, 100);
+      browser.moveToObject('#root', 1, 300);
     });
 
     Terra.it.validatesElement('Both closed');
@@ -179,6 +179,14 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       browser.click('#wide-option');
       Terra.validates.element('Long option open');
     });
+  });
+
+  describe('Block', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/block-dropdown-button');
+    });
+
+    Terra.it.validatesElement();
   });
 
   describe('Block', () => {
@@ -232,5 +240,14 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       browser.click('#first');
       Terra.validates.screenshot('first button clicked');
     });
+  });
+
+  describe('Variants', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/variant-dropdown-buttons');
+      browser.moveToObject('#root', 1, 100);
+    });
+
+    Terra.it.validatesElement();
   });
 });

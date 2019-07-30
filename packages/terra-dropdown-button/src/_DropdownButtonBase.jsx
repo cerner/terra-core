@@ -24,18 +24,23 @@ const propTypes = {
    */
   requestClose: PropTypes.func.isRequired,
   /**
-   * Determines whether the primary button and expanding the dropdown should be disabled.
-   */
-  disabled: PropTypes.bool,
-  /**
    * Determines whether the component should have block styles applied. The dropdown will match the component's width.
    */
   isBlock: PropTypes.bool,
+  /**
+   * Whether or not the button has reduced padding for use in tables and single-row lists.
+   */
+  isCompact: PropTypes.bool,
+  /**
+   * Determines whether the primary button and expanding the dropdown should be disabled.
+   */
+  isDisabled: PropTypes.bool,
 };
 
 const defaultProps = {
-  disabled: false,
   isBlock: false,
+  isCompact: false,
+  isDisabled: false,
 };
 
 class DropdownButtonBase extends React.Component {
@@ -62,15 +67,17 @@ class DropdownButtonBase extends React.Component {
       items,
       isOpen,
       requestClose,
-      disabled,
       isBlock,
+      isCompact,
+      isDisabled,
       ...customProps
     } = this.props;
 
     const DropdownButtonClassNames = cx([
       'dropdown-button-base',
       { 'is-block': isBlock },
-      { disabled },
+      { 'is-compact': isCompact },
+      { disabled: isDisabled },
       customProps.className,
       /* This needs to match terra-hookshot's react-onclickoutside ignore classname or clicking the caret with
         the dropdown open will cause the dropdown to close and reopen

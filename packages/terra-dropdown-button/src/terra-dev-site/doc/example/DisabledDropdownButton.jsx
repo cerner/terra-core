@@ -10,7 +10,7 @@ const Example = () => {
     <React.Fragment>
       <DropdownButton
         label="Dropdown"
-        disabled
+        isDisabled
       >
         <Item label="1st Option" onSelect={() => setMessage('1st option clicked')} />
         <Item label="2nd Option" onSelect={() => setMessage('2nd option clicked')} />

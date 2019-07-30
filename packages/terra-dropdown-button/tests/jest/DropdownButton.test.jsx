@@ -33,7 +33,7 @@ describe('Dropdown Button', () => {
 
   it('should render a disabled dropdown type', () => {
     const wrapper = shallow(
-      <DropdownButton label="Primary Option" disabled>
+      <DropdownButton label="Primary Option" isDisabled>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
     );
@@ -43,6 +43,15 @@ describe('Dropdown Button', () => {
   it('should render a block dropdown type', () => {
     const wrapper = shallow(
       <DropdownButton label="Primary Option" isBlock>
+        <Item label="1st Option" onSelect={() => {}} />
+      </DropdownButton>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a compact dropdown type', () => {
+    const wrapper = shallow(
+      <DropdownButton label="Primary Option" isCompact>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
     );

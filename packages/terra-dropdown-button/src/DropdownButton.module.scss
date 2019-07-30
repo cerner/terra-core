@@ -5,26 +5,32 @@
 
 :local {
   .dropdown-button {
-    border-radius: var(--terra-dropdown-button-dropdown-type-border-radius, 3px);
+    border-radius: inherit;
     border-style: solid;
+    border-width: 1px;
     cursor: pointer;
     display: inline-flex;
-    // Needed for IE 10 to linebreak things properly
-    flex: 1 1 auto;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    font-size: var(--terra-dropdown-button-dropdown-type-font-size, 1rem);
-    line-height: var(--terra-dropdown-button-dropdown-type-line-height, 1.4285714286);
+    flex: 1 1 auto; // Needed for IE 10 to linebreak things properly
+    //flex-direction: row;
+    //flex-wrap: nowrap;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
     outline: 0;
-    padding-bottom: var(--terra-dropdown-button-dropdown-type-padding-bottom, 4px);
-    padding-left: var(--terra-dropdown-button-dropdown-type-padding-left, 10px);
-    padding-right: var(--terra-dropdown-button-dropdown-type-padding-right, 7px);
-    padding-top: var(--terra-dropdown-button-dropdown-type-padding-top, 4px);
+    padding-bottom: var(--terra-dropdown-button-dropdown-type-padding-bottom, 0.28571rem);
+    padding-left: var(--terra-dropdown-button-dropdown-type-padding-left, 0.71428rem);
+    padding-right: var(--terra-dropdown-button-dropdown-type-padding-right, 0.5rem);
+    padding-top: var(--terra-dropdown-button-dropdown-type-padding-top, 0.28571rem);
 
     &.is-block {
       display: flex;
     }
     
+    &.is-compact {
+      padding-bottom: var(--terra-dropdown-button-dropdown-type-compact-padding-bottom, 0);
+      padding-top: var(--terra-dropdown-button-dropdown-type-compact-padding-top, 0);
+    }
+
     // Remove the inner border and padding in Firefox.
     &::-moz-focus-inner {
       border: 0;
@@ -33,9 +39,8 @@
 
   .dropdown-button-text {
     display: inline-block;
-    // Needed for IE 10 to linebreak things properly
-    flex: 0 1 auto;
-    margin-right: var(--terra-dropdown-button-dropdown-type-text-margin-right, 5px);
+    flex: 0 1 auto; // Needed for IE 10 to linebreak things properly
+    margin-right: var(--terra-dropdown-button-dropdown-type-text-margin-right, 0.35714rem);
   }
 
   .is-block > .dropdown-button-text {
@@ -50,12 +55,20 @@
     @include terra-dropdown-button-variant-color($terra-dropdown-button-emphasis-color-scheme);
   }
 
+  .ghost {
+    @include terra-dropdown-button-variant-color($terra-dropdown-button-ghost-color-scheme);
+  }
+
   .caret-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     display: inline-block;
-    // If flex-shrink is set to 1 IE will give the button 0 width
-    flex: 0 0 auto;
-    height: var(--terra-dropdown-button-dropdown-type-caret-height, 1rem);
+    flex: 0 0 auto; // If flex-shrink is set to 1 IE will give the button 0 width
+    height: var(--terra-dropdown-button-dropdown-type-caret-height, 0.715em);
     margin: auto 0;
-    width: var(--terra-dropdown-button-dropdown-type-caret-width, 1rem);
+    position: relative;
+    top: var(--terra-dropdown-button-dropdown-type-caret-top, 0.04em);
+    width: var(--terra-dropdown-button-dropdown-type-caret-width, 1em);
   }
 }

@@ -2,30 +2,35 @@
   .item {
     color: var(--terra-dropdown-button-menu-item-color, #1c1f21);
     cursor: pointer;
-    font-size: var(--terra-dropdown-button-menu-item-font-size, 0.9285714286rem);
-    line-height: var(--terra-dropdown-button-menu-item-line-height, 1.2);
+    font-size: var(--terra-dropdown-button-menu-item-font-size, 1rem);
+    line-height: var(--terra-dropdown-button-menu-item-line-height, 1.42857);
+    margin-bottom: var(--terra-dropdown-button-menu-item-margin-bottom, 0.28571rem);
     outline: 0;
-    padding-bottom: var(--terra-dropdown-button-menu-item-padding-bottom, 4px);
-    padding-left: var(--terra-dropdown-button-menu-item-padding-left, 10px);
-    padding-right: var(--terra-dropdown-button-menu-item-padding-right, 10px);
-    padding-top: var(--terra-dropdown-button-menu-item-padding-top, 4px);
+    padding-bottom: var(--terra-dropdown-button-menu-item-padding-bottom, 0.5rem);
+    padding-left: var(--terra-dropdown-button-menu-item-padding-left, 1.42857rem);
+    padding-right: var(--terra-dropdown-button-menu-item-padding-right, 2.14285rem);
+    padding-top: var(--terra-dropdown-button-menu-item-padding-top, 0.5rem);
 
     &:focus {
-      background-color: var(--terra-dropdown-button-menu-item-focus-background-color, #ebf6fd);
-      box-shadow: var(--terra-dropdown-button-menu-item-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-      outline: 0;
+      background-color: var(--terra-dropdown-button-menu-item-focus-background-color, #f4f4f4);
+      box-shadow: var(--terra-dropdown-button-menu-item-focus-box-shadow, none);
+      outline: var(--terra-dropdown-button-menu-item-focus-outline, none);
+      outline-offset: var(--terra-dropdown-button-menu-item-focus-outline-offset, 0);
       position: relative;
       z-index: 1;
-
-      &.active {
-        background-color: var(--terra-dropdown-button-menu-item-focus-active-background-color, #ebf6fd);
-        box-shadow: var(--terra-dropdown-button-menu-item-focus-active-box-shadow, none);
-        color: var(--terra-dropdown-button-menu-item-focus-active-color, #1c1f21);
-      }
     }
 
     &:hover {
-      background-color: var(--terra-dropdown-button-menu-item-hover-background-color, #ebf6fd);
+      background-color: var(--terra-dropdown-button-menu-item-hover-background-color, #f4fafe);
+      background-image: var(--terra-dropdown-button-menu-item-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
+      box-shadow: var(--terra-dropdown-button-menu-item-hover-box-shadow, inset 0 0 0 1px #e1f2fd);  
+    }
+
+    &:active {
+      background-color: var(--terra-dropdown-button-menu-item-focus-active-background-color, #e1f3fd);
+      background-image: var(--terra-dropdown-button-menu-item-focus-active-background-image, none);
+      box-shadow: var(--terra-dropdown-button-menu-item-focus-active-box-shadow, none);
+      color: var(--terra-dropdown-button-menu-item-focus-active-color, #1c1f21);
     }
   }
 }

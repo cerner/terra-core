@@ -43,7 +43,6 @@ exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
 exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
 <div
   className="dropdown-button-base ignore-react-onclickoutside"
-  isDisabled={false}
 >
   <div>
     test contents

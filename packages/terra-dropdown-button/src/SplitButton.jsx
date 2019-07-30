@@ -11,6 +11,7 @@ const cx = classNames.bind(styles);
 
 const Variants = {
   NEUTRAL: 'neutral',
+  // EMPHASIS: 'emphasis', // Wait to add in future enhancement
   GHOST: 'ghost',
 };
 
@@ -20,13 +21,17 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Determines whether the primary button and expanding the dropdown should be disabled.
-   */
-  disabled: PropTypes.bool,
-  /**
    * Determines whether the component should have block styles applied. The dropdown will match the component's width.
    */
   isBlock: PropTypes.bool,
+  /**
+   * Whether or not the button has reduced padding for use in tables and single-row lists.
+   */
+  isCompact: PropTypes.bool,
+  /**
+   * Determines whether the primary button and expanding the dropdown should be disabled.
+   */
+  isDisabled: PropTypes.bool,
   /**
    * Sets the text that will be shown on the primary button which is outside the dropdown.
    */
@@ -36,7 +41,7 @@ const propTypes = {
    */
   onSelect: PropTypes.func.isRequired,
   /**
-   * Sets the styles of the component.  The default is 'neutral'. Must be either 'neutral' or 'ghost'.
+   * Sets the styles of the component, one of `neutral`, or `ghost`.
    */
   variant: PropTypes.oneOf(Object.values(Variants)),
   /**
@@ -47,8 +52,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  disabled: false,
   isBlock: false,
+  isCompact: false,
+  isDisabled: false,
   variant: 'neutral',
 };
 
@@ -104,8 +110,9 @@ class SplitButton extends React.Component {
   render() {
     const {
       children,
-      disabled,
       isBlock,
+      isCompact,
+      isDisabled,
       primaryOptionLabel,
       onSelect,
       variant,
@@ -125,11 +132,13 @@ class SplitButton extends React.Component {
       'split-button-primary',
       variant,
       { 'is-block': isBlock },
+      { 'is-compact': isCompact },
       { 'is-active': primaryIsActive },
     );
     const caretClassnames = cx(
       'split-button-caret',
       variant,
+      { 'is-compact': isCompact },
       { 'is-active': isOpen || caretIsActive },
     );
 
@@ -139,8 +148,9 @@ class SplitButton extends React.Component {
         items={children}
         isOpen={isOpen}
         requestClose={this.handleDropdownRequestClose}
-        disabled={disabled}
         isBlock={isBlock}
+        isCompact={isCompact}
+        isDisabled={isDisabled}
       >
         <button
           type="button"
@@ -148,9 +158,9 @@ class SplitButton extends React.Component {
           onClick={onSelect}
           onKeyDown={this.handlePrimaryKeyDown}
           onKeyUp={this.handlePrimaryKeyUp}
-          disabled={disabled}
-          tabIndex={disabled ? '-1' : undefined}
-          aria-disabled={disabled}
+          disabled={isDisabled}
+          tabIndex={isDisabled ? '-1' : undefined}
+          aria-disabled={isDisabled}
         >
           {primaryOptionLabel}
         </button>
@@ -160,9 +170,9 @@ class SplitButton extends React.Component {
           onKeyDown={this.handleCaretKeyDown}
           onKeyUp={this.handleCaretKeyUp}
           className={caretClassnames}
-          disabled={disabled}
-          tabIndex={disabled ? '-1' : undefined}
-          aria-disabled={disabled}
+          disabled={isDisabled}
+          tabIndex={isDisabled ? '-1' : undefined}
+          aria-disabled={isDisabled}
           aria-expanded={isOpen || undefined}
           aria-haspopup="menu"
           aria-label={caretLabel}

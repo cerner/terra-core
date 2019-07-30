@@ -2,8 +2,9 @@
 
 exports[`Dropdown Button should render a block dropdown type 1`] = `
 <DropdownButtonBase
-  disabled={false}
   isBlock={true}
+  isCompact={false}
+  isDisabled={false}
   isOpen={false}
   items={
     <Item
@@ -35,10 +36,47 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
 </DropdownButtonBase>
 `;
 
+exports[`Dropdown Button should render a compact dropdown type 1`] = `
+<DropdownButtonBase
+  isBlock={false}
+  isCompact={true}
+  isDisabled={false}
+  isOpen={false}
+  items={
+    <Item
+      label="1st Option"
+      onSelect={[Function]}
+    />
+  }
+  requestClose={[Function]}
+>
+  <button
+    aria-disabled={false}
+    aria-haspopup="menu"
+    className="dropdown-button neutral is-compact"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="dropdown-button-text"
+    >
+      Primary Option
+    </span>
+    <span
+      className="caret-icon"
+    />
+  </button>
+</DropdownButtonBase>
+`;
+
 exports[`Dropdown Button should render a default dropdown type 1`] = `
 <DropdownButtonBase
-  disabled={false}
   isBlock={false}
+  isCompact={false}
+  isDisabled={false}
   isOpen={false}
   items={
     <Item
@@ -72,8 +110,9 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
 
 exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 <DropdownButtonBase
-  disabled={true}
   isBlock={false}
+  isCompact={false}
+  isDisabled={true}
   isOpen={false}
   items={
     <Item
@@ -108,8 +147,9 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 
 exports[`Dropdown Button should render a split type with custom attributes 1`] = `
 <DropdownButtonBase
-  disabled={false}
   isBlock={false}
+  isCompact={false}
+  isDisabled={false}
   isOpen={false}
   items={
     <Item
@@ -145,8 +185,9 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
 
 exports[`Dropdown Button should render a split type with multiple children 1`] = `
 <DropdownButtonBase
-  disabled={false}
   isBlock={false}
+  isCompact={false}
+  isDisabled={false}
   isOpen={false}
   items={
     Array [
@@ -191,8 +232,9 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
 
 exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 <DropdownButtonBase
-  disabled={false}
   isBlock={false}
+  isCompact={false}
+  isDisabled={false}
   isOpen={false}
   items={
     <Item
@@ -226,8 +268,9 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 
 exports[`Dropdown Button should render an open dropdown 1`] = `
 <DropdownButtonBase
-  disabled={false}
   isBlock={false}
+  isCompact={false}
+  isDisabled={false}
   isOpen={true}
   items={
     <Item

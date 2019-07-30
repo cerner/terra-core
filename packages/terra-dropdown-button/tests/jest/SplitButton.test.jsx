@@ -42,6 +42,15 @@ describe('Dropdown Button', () => {
     expect(wrapper.dive()).toMatchSnapshot();
   });
 
+  it('should render a compact split type', () => {
+    const wrapper = shallowWithIntl(
+      <SplitButton primaryOptionLabel="Primary Option" isCompact onSelect={() => {}}>
+        <Item label="1st Option" onSelect={() => {}} />
+      </SplitButton>,
+    );
+    expect(wrapper.dive()).toMatchSnapshot();
+  });
+
   it('should render an open split type', () => {
     const wrapper = shallowWithIntl(
       <SplitButton primaryOptionLabel="Primary Option" onSelect={() => {}}>

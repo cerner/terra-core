@@ -3,57 +3,90 @@
 // Button variant's color schemes
 $terra-dropdown-button-neutral-color-scheme: (
   active-background-color: var(--terra-dropdown-button-active-background-color-neutral, #6f7477),
-  active-border-color: var(--terra-dropdown-button-active-border-color-neutral, #4e5558),
+  active-border-color: var(--terra-dropdown-button-active-border-color-neutral, #52585b),
   active-color: var(--terra-dropdown-button-active-color-neutral, #fff),
-  dropdown-active-font-weight: var(--terra-dropdown-button-dropdown-active-font-weight-neutral, bold),
-  split-active-font-weight: var(--terra-dropdown-button-split-active-font-weight-neutral, normal),
-
+  active-dropdown-font-weight: var(--terra-dropdown-button-dropdown-type-active-font-weight-neutral, 400),
+  active-split-font-weight: var(--terra-dropdown-button-split-type-active-font-weight-neutral, 400),
+  active-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-active-box-shadow-neutral, none),
   background-color: var(--terra-dropdown-button-background-color-neutral, #dedfe0),
   border-color: var(--terra-dropdown-button-border-color-neutral, #c8cacb),
-  box-shadow: var(--terra-dropdown-button-box-shadow-neutral, none),
   color: var(--terra-dropdown-button-color-neutral, #1c1f21),
-  dropdown-border-width: var(--terra-dropdown-button-dropdown-border-width-neutral, 1px),
-  split-border-width: var(--terra-dropdown-button-split-border-width-neutral, 1px),
-  dropdown-font-weight: var(--terra-dropdown-button-dropdown-font-weight-neutral, normal),
-  split-font-weight: var(--terra-dropdown-button-split-font-weight-neutral, normal),
-
+  dropdown-box-shadow: var(--terra-dropdown-button-dropdown-type-box-shadow-neutral, none),
+  dropdown-font-weight: var(--terra-dropdown-button-dropdown-type-font-weight-neutral, 400),
+  split-box-shadow: var(--terra-dropdown-button-split-type-box-shadow-neutral, none),
+  split-font-weight: var(--terra-dropdown-button-split-type-font-weight-neutral, 400),
+  split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-box-shadow-neutral, inset 1px 0 0 0 rgba(255, 255, 255, 0.4)),
+  disabled-color: var(--terra-dropdown-button-disabled-color-neutral, #1c1f21),
   focus-background-color: var(--terra-dropdown-button-focus-background-color-neutral, #dedfe0),
   focus-border-color: var(--terra-dropdown-button-focus-border-color-neutral, #c8cacb),
-  focus-box-shadow: var(--terra-dropdown-button-focus-box-shadow-neutral, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
-  dropdown-focus-border-width: var(--terra-dropdown-button-dropdown-focus-border-width-neutral, 1px),
-  split-focus-border-width: var(--terra-dropdown-button-split-border-focus-width-neutral, 1px),
-  
-  hover-background-color: var(--terra-dropdown-button-hover-background-color-neutral, #bcbfc0),
-  hover-color: var(--terra-dropdown-button-hover-color-neutral, #1c1f21),
-
-  caret-icon-background: var(--terra-dropdown-button-caret-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>')),
-  active-caret-icon-background: var(--terra-dropdown-button-caret-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
-  disabled-caret-icon-background: var(--terra-dropdown-button-caret-disabled-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'))
+  focus-dropdown-box-shadow: var(--terra-dropdown-button-dropdown-type-focus-box-shadow-neutral, 0 0 0 1px rgba(76, 178, 233, 0.6), 0 0 0 3px rgba(76, 178, 233, 0.27)),
+  focus-split-box-shadow: var(--terra-dropdown-button-split-type-focus-box-shadow-neutral, 0 0 0 1px rgba(76, 178, 233, 0.6), 0 0 0 3px rgba(76, 178, 233, 0.27)),
+  focus-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-focus-box-shadow-neutral, 0 0 0 1px rgba(76, 178, 233, 0.6), 0 0 0 3px rgba(76, 178, 233, 0.27)),
+  hover-background-color: var(--terra-dropdown-button-hover-background-color-neutral, #b9bbbc),
+  hover-color: var(--terra-dropdown-button-hover-color-neutral, #000),
+  hover-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-hover-box-shadow-neutral, none),
+  /* Icons */
+  caret-icon-background-image: var(--terra-dropdown-button-caret-background-image-neutral, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#1c1f21" d="M48 12L24 36 0 12h48z"/></svg>')),
+  active-caret-icon-background-image: var(--terra-dropdown-button-caret-active-background-image-neutral, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
+  disabled-caret-icon-background-image: var(--terra-dropdown-button-caret-disabled-background-image-neutral, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#1c1f21" d="M48 12L24 36 0 12h48z"/></svg>'))
 );
 
 $terra-dropdown-button-emphasis-color-scheme: (
   active-background-color: var(--terra-dropdown-button-active-background-color-emphasis, #004c76),
   active-border-color: var(--terra-dropdown-button-active-border-color-emphasis, #0065a3),
   active-color: var(--terra-dropdown-button-active-color-emphasis, #fff),
-  dropdown-active-font-weight: var(--terra-dropdown-button-dropdown-active-font-weight-emphasis, bold),
-
+  active-dropdown-font-weight: var(--terra-dropdown-button-dropdown-type-active-font-weight-emphasis, 400),
+  //active-split-font-weight: var(--terra-dropdown-button-split-type-active-font-weight-emphasis, 400),
+  //active-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-active-box-shadow-emphasis, none),
   background-color: var(--terra-dropdown-button-background-color-emphasis, #0079be),
-  box-shadow: var(--terra-dropdown-button-box-shadow-emphasis, none),
   border-color: var(--terra-dropdown-button-border-color-emphasis, #0065a3),
   color: var(--terra-dropdown-button-color-emphasis, #fff),
-  dropdown-border-width: var(--terra-dropdown-button-dropdown-border-width-emphasis, 1px),
-  dropdown-font-weight: var(--terra-dropdown-button-dropdown-font-weight-emphasis, bold),
-
-
+  dropdown-box-shadow: var(--terra-dropdown-button-dropdown-type-box-shadow-emphasis, none),
+  dropdown-font-weight: var(--terra-dropdown-button-dropdown-type-font-weight-emphasis, 400),
+  //split-box-shadow: var(--terra-dropdown-button-split-type-box-shadow-emphasis, none),
+  //split-font-weight: var(--terra-dropdown-button-split-type-font-weight-emphasis, 400),
+  //split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-box-shadow-emphasis, inset 1px 0 0 0 rgba(255, 255, 255, 0.2)),
+  disabled-color: var(--terra-dropdown-button-disabled-color-emphasis, #fff),
   focus-background-color: var(--terra-dropdown-button-focus-background-color-emphasis, #0079be),
   focus-border-color: var(--terra-dropdown-button-focus-border-color-emphasis, #0065a3),
-  focus-box-shadow: var(--terra-dropdown-button-focus-box-shadow-emphasis, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
-  dropdown-focus-border-width: var(--terra-dropdown-button-dropdown-focus-border-width-emphasis, 1px),
-  
+  focus-dropdown-box-shadow: var(--terra-dropdown-button-dropdown-type-focus-box-shadow-emphasis, 0 0 0 1px rgba(76, 178, 233, 0.7), 0 0 0 3px rgba(76, 178, 233, 0.35)),
+  //focus-split-box-shadow: var(--terra-dropdown-button-split-type-focus-box-shadow-emphasis, 0 0 0 1px rgba(76, 178, 233, 0.7), 0 0 0 3px rgba(76, 178, 233, 0.35)),
+  //focus-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-focus-box-shadow-emphasis, 0 0 0 1px rgba(76, 178, 233, 0.7), 0 0 0 3px rgba(76, 178, 233, 0.35)),
   hover-background-color: var(--terra-dropdown-button-hover-background-color-emphasis, #0065a3),
   hover-color: var(--terra-dropdown-button-hover-color-emphasis, #fff),
+  //hover-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-hover-box-shadow-emphasis, none),
+  /* Icons */
+  caret-icon-background-image: var(--terra-dropdown-button-caret-background-image-emphasis, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
+  active-caret-icon-background-image: var(--terra-dropdown-button-caret-active-background-image-emphasis, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
+  disabled-caret-icon-background-image: var(--terra-dropdown-button-caret-disabled-background-image-emphasis, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>'))
+);
 
-  caret-icon-background: var(--terra-dropdown-button-caret-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
-  active-caret-icon-background: var(--terra-dropdown-button-caret-active-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>')),
-  disabled-caret-icon-background: var(--terra-dropdown-button-caret-disabled-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#fff" d="M48 12L24 36 0 12h48z"/></svg>'))
+$terra-dropdown-button-ghost-color-scheme: (
+  active-background-color: var(--terra-dropdown-button-active-background-color-ghost, rgba(0, 0, 0, 0.09)),
+  active-border-color: var(--terra-dropdown-button-active-border-color-ghost, #4a4a4a),
+  active-color: var(--terra-dropdown-button-active-color-ghost, #000),
+  active-dropdown-font-weight: var(--terra-dropdown-button-dropdown-type-active-font-weight-ghost, 400),
+  active-split-font-weight: var(--terra-dropdown-button-split-type-active-font-weight-ghost, 400),
+  active-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-active-box-shadow-ghost, none),
+  background-color: var(--terra-dropdown-button-background-color-ghost, transparent),
+  border-color: var(--terra-dropdown-button-border-color-ghost, rgba(28, 31, 33, 0.25)),
+  color: var(--terra-dropdown-button-color-ghost, #1c1f21),
+  dropdown-box-shadow: var(--terra-dropdown-button-dropdown-type-box-shadow-ghost, none),
+  dropdown-font-weight: var(--terra-dropdown-button-dropdown-type-font-weight-ghost, 400),
+  split-box-shadow: var(--terra-dropdown-button-split-type-box-shadow-ghost, none),
+  split-font-weight: var(--terra-dropdown-button-split-type-font-weight-ghost, 400),
+  split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-box-shadow-ghost, inset 1px 0 0 0 rgba(255, 255, 255, 0.4)),
+  disabled-color: var(--terra-dropdown-button-disabled-color-ghost, #1c1f21),
+  focus-background-color: var(--terra-dropdown-button-focus-background-color-ghost, transparent),
+  focus-border-color: var(--terra-dropdown-button-focus-border-color-ghost, rgba(28, 31, 33, 0.25)),
+  focus-dropdown-box-shadow: var(--terra-dropdown-button-dropdown-type-focus-box-shadow-ghost, 0 0 0 1px rgba(76, 178, 233, 0.6), 0 0 0 3px rgba(76, 178, 233, 0.27)),
+  focus-split-box-shadow: var(--terra-dropdown-button-split-type-focus-box-shadow-ghost, 0 0 0 1px rgba(76, 178, 233, 0.6), 0 0 0 3px rgba(76, 178, 233, 0.27)),
+  focus-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-focus-box-shadow-ghost, 0 0 0 1px rgba(76, 178, 233, 0.6), 0 0 0 3px rgba(76, 178, 233, 0.27)),
+  hover-background-color: var(--terra-dropdown-button-hover-background-color-ghost, rgba(0, 0, 0, 0.05)),
+  hover-color: var(--terra-dropdown-button-hover-color-ghost, #000),
+  hover-split-caret-box-shadow: var(--terra-dropdown-button-split-type-caret-hover-box-shadow-ghost, none),
+  /* Icons */
+  caret-icon-background-image: var(--terra-dropdown-button-caret-background-image-ghost, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#1c1f21" d="M48 12L24 36 0 12h48z"/></svg>')),
+  active-caret-icon-background-image: var(--terra-dropdown-button-caret-active-background-image-ghost, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M48 12L24 36 0 12h48z"/></svg>')),
+  disabled-caret-icon-background-image: var(--terra-dropdown-button-caret-disabled-background-image-ghost, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#1c1f21" d="M48 12L24 36 0 12h48z"/></svg>'))
 );

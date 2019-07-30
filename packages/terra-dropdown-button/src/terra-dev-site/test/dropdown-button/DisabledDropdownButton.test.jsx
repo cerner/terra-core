@@ -8,11 +8,11 @@ import styles from './ExtraSpacing.module.scss';
 const cx = classnames.bind(styles);
 
 export default () => (
-  <div className={cx('button-spacing-wrapper')}>
+  <div className={cx('container-spacing-wrapper')}>
     <DropdownButton
       label="Primary option"
       onSelect={() => { console.log('primary option'); }}
-      disabled
+      isDisabled
     >
       <Item label="1st Option" onSelect={() => { console.log('hi'); }} />
       <Item label="2nd Option" onSelect={() => { console.log('bye'); }} />

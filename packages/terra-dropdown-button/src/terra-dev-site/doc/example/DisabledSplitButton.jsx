@@ -11,7 +11,7 @@ const Example = () => {
       <SplitButton
         primaryOptionLabel="Dropdown"
         onSelect={() => setMessage('Primary option clicked')}
-        disabled
+        isDisabled
       >
         <Item label="1st Option" onSelect={() => setMessage('1st option clicked')} />
         <Item label="2nd Option" onSelect={() => setMessage('2nd option clicked')} />
