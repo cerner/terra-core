@@ -30,7 +30,7 @@
     "focus-trap-react": "^6.0.0",
     "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^1.2.0",
+    "terra-doc-template": "^2.15.0",
     "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.30.0"
   },
