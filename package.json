@@ -59,12 +59,12 @@
     "postinstall": "link-parent-bin && npm run compile && npm run bootstrap:hoist",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run docs && npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
-    "start": "tt-serve --config node_modules/terra-dev-site/config/webpack/webpack.config.js",
+    "start": "tt-serve",
     "start-heroku": "tt-serve-static --port $PORT --site './build'",
-    "start-prod": "tt-serve --config node_modules/terra-dev-site/config/webpack/webpack.config.js --env.disableHotReloading -p",
+    "start-prod": "tt-serve --env.disableHotReloading -p",
     "start-static": "tt-serve-static --site ./build",
     "test": "npm run jest && npm run wdio",
-    "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
@@ -99,7 +99,7 @@
     "stylelint": "^10.0.1",
     "stylelint-config-terra": "^3.0.0",
     "terra-aggregate-translations": "^1.0.0",
-    "terra-dev-site": "git+https://github.com/cerner/terra-dev-site.git#application-layout-updates",
+    "terra-dev-site": "^6.0.0",
     "terra-disclosure-manager": "^4.9.0",
     "terra-enzyme-intl": "^3.0.0",
     "terra-toolkit": "^5.0.0",

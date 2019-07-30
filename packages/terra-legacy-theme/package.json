@@ -27,7 +27,7 @@
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
     "test": "npm run test:wdio",
-    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-toolkit/config/wdio/wdio.conf.js"
   },
   "peerDependencies": {
     "react": "^16.8.5",
