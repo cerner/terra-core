@@ -12,6 +12,27 @@ Unreleased
 ### Changed
 * Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
 
+3.21.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.20.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.19.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+3.18.0  - (July 11, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Increased subheader css specificity
+
 3.17.0 - (June 28, 2019)
 ------------------
 ### Added

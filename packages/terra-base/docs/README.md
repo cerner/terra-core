@@ -6,7 +6,7 @@ This component is designed to manage loading locale information such as translat
 
 **Note:** _This component should be your root component and wrap all components in your app. This is to help ensure that the entire application is within the same configured i18n context provided by [react-intl's `<IntlProvider />`](https://github.com/yahoo/react-intl/wiki/Components#intlprovider)._
 
-The `terra-base` component requires the use of our [aggregate-translations pre-build tool](https://github.com/cerner/terra-toolkit/blob/master/docs/AggregateTranslations.md) to ensure translations and locale data files are generated accordingly for the app.
+The `terra-base` component requires the use of our [aggregate-translations pre-build tool](https://github.com/cerner/terra-aggregate-translations) to ensure translations and locale data files are generated accordingly for the app.
 
 You can read more about [setting up Internationalization in your Terra UI app here](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/internationalization/internationalization-intro).
 
@@ -16,6 +16,24 @@ The terra-base component also sets minimal global base styles for the applicatio
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-base`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+<details>
+<summary>View information on this component's peer dependencies.</summary>
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
+
+
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Usage
 

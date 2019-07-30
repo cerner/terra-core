@@ -3,6 +3,39 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.24.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.23.0 - (July 24, 2019)
+------------------
+### Added
+* Added documentation that maximize/minimize buttons will not be shown with the back button
+
+2.22.0 - (July 17, 2019)
+------------------
+### Changed
+* Revert components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+2.21.0 - (July 17, 2019)
+------------------
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+2.20.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+2.19.0  - (July 11, 2019)
+------------------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
+2.18.0 - (July 9, 2019)
+------------------
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports
 

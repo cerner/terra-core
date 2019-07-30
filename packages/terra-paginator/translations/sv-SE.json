@@ -1,0 +1,8 @@
+{
+  "Terra.paginator.previous": "Föregående",
+  "Terra.paginator.next": "Nästa",
+  "Terra.paginator.first": "Först",
+  "Terra.paginator.last": "Sist",
+  "Terra.paginator.pageIndex": "Sida {pageNumber}",
+  "Terra.paginator.pageCount": "Sida {pageNumber} av {pageNumberTotal}"
+}

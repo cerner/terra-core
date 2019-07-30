@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/dist/prism-light';
-import jsx from 'react-syntax-highlighter/dist/languages/prism/jsx';
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import classNames from 'classnames/bind';
 import styles from './ExampleTemplate.module.scss';
 import theme from './syntax-highlighter-theme';
 
-registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const cx = classNames.bind(styles);
 
@@ -72,11 +72,13 @@ class ExampleTemplate extends React.Component {
       ...customProps
     } = this.props;
 
+    const { isExpanded, isBackgroundTransparent } = this.state;
+
     let dynamicContentStyle = {};
 
-    if (this.state.isBackgroundTransparent) {
+    if (isBackgroundTransparent) {
       dynamicContentStyle = {
-        backgroundColor: 'rgba(0,0,0,0)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
       };
     }
 
@@ -113,10 +115,12 @@ class ExampleTemplate extends React.Component {
                 <span className={cx('chevron-right')} />
               </button>
             </div>
-            <div className={cx('code', { 'is-expanded': this.state.isExpanded })} aria-hidden={!this.state.isExpanded}>
-              <SyntaxHighlighter language="jsx" style={theme} customStyle={{ margin: '0', borderRadius: '0' }}>
-                {exampleSrc}
-              </SyntaxHighlighter>
+            <div className={cx('code', { 'is-expanded': isExpanded })} aria-hidden={!isExpanded}>
+              {isExpanded ? (
+                <SyntaxHighlighter language="jsx" style={theme} customStyle={{ margin: '0', borderRadius: '0' }}>
+                  {exampleSrc}
+                </SyntaxHighlighter>
+              ) : undefined }
             </div>
           </div>
           )}

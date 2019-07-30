@@ -3,6 +3,43 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.25.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.24.0 - (July 24, 2019)
+------------------
+### Changed
+* Update Spanish translations
+
+5.23.0 - (July 17, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.22.0 - (July 17, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.21.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+### Fixed
+* Issue with invalid options (options with only spaces) being added to the dropdown menu in combobox variant.
+
+5.20.0  - (July 11, 2019)
+------------------
+### Changed
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
+5.19.0 - (July 9, 2019)
+------------------
 ### Fixed
 * Issue where input would remain focused after clicking away from select menu after enter had been used to select an item in `multiselect` and `tag` variants.
 

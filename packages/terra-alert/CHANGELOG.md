@@ -3,6 +3,42 @@ Changelog
 
 Unreleased
 ----------
+
+4.7.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.6.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.5.0 - (July 17, 2019)
+------------------
+### Changed
+* Revert components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+4.4.0 - (July 17, 2019)
+------------------
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+
+4.3.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+4.2.0  - (July 11, 2019)
+------------------
+### Changed
+* Updated Docs around the requirement of terra-base and aggregate-translations.
+
+### Updated
+* Updated Upgrade Guide.
+
+4.1.0 - (July 9, 2019)
+------------------
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports
 

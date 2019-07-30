@@ -4,6 +4,28 @@ ChangeLog
 Unreleased
 ----------
 
+2.15.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.14.0 - (July 24, 2019)
+------------------
+### Changed
+* Updated ExampleTemplate to not render example source markup until it is expanded
+
+2.13.0 - (July 16, 2019)
+------------------
+### Added
+* Added documentation on required peerDependencies
+
+2.12.0  - (July 11, 2019)
+------------------
+### Changed
+* Updated version of react-syntax-highlighter
+* Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
+* Cleaned up tests
+
 2.11.0 - (June 28, 2019)
 ------------------
 ### Changed
