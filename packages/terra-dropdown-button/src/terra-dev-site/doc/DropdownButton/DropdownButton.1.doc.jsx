@@ -13,6 +13,8 @@ import DefaultDropdownButton from '../example/DefaultDropdownButton';
 import DefaultDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultDropdownButton.jsx';
 import EmphasisDropdownButton from '../example/EmphasisDropdownButton';
 import EmphasisDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/EmphasisDropdownButton.jsx';
+import GhostDropdownButton from '../example/GhostDropdownButton';
+import GhostDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GhostDropdownButton.jsx';
 import DisabledDropdownButton from '../example/DisabledDropdownButton';
 import DisabledDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledDropdownButton.jsx';
 import BlockDropdownButton from '../example/BlockDropdownButton';
@@ -33,6 +35,11 @@ const DocPage = () => (
         title: 'Emphasis Dropdown Button',
         example: <EmphasisDropdownButton />,
         source: EmphasisDropdownButtonSrc,
+      },
+      {
+        title: 'Ghost Dropdown Button',
+        example: <GhostDropdownButton />,
+        source: GhostDropdownButtonSrc,
       },
       {
         title: 'Disabled Dropdown Button',

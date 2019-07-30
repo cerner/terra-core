@@ -11,6 +11,8 @@ import ItemSrc from '!raw-loader!../../../../src/Item';
 // Example Files
 import DefaultSplitButton from '../example/DefaultSplitButton';
 import DefaultSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSplitButton.jsx';
+import GhostSplitButton from '../example/GhostSplitButton';
+import GhostSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GhostSplitButton.jsx';
 import DisabledSplitButton from '../example/DisabledSplitButton';
 import DisabledSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DisabledSplitButton.jsx';
 import BlockSplitButton from '../example/BlockSplitButton';
@@ -26,6 +28,11 @@ const DocPage = () => (
         title: 'Default Split Button',
         example: <DefaultSplitButton />,
         source: DefaultSplitButtonSrc,
+      },
+      {
+        title: 'Ghost Split Button',
+        example: <GhostSplitButton />,
+        source: GhostSplitButtonSrc,
       },
       {
         title: 'Disabled Split Button',
