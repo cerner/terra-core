@@ -1,39 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import SearchField from 'terra-search-field/lib/SearchField';
 
-class SearchFieldDefaultValue extends React.Component {
-  constructor(props) {
-    super(props);
-    this.invalidSearchMessage = 'The default minimum search length is 2.';
-    this.state = { searchText: '', message: this.invalidSearchMessage };
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleInvalidSearch = this.handleInvalidSearch.bind(this);
-  }
+const INVALID_MESSAGE = 'The default minimum search length is 2.';
 
-  handleSearch(searchText) {
-    this.setState({ searchText, message: 'Search Text: ' });
-  }
+const SearchFieldDefaultValue = () => {
+  const [searchText, setSearchText] = useState('');
 
-  handleInvalidSearch() {
-    this.setState({ searchText: '', message: this.invalidSearchMessage });
-  }
+  const message = searchText.length >= 2 ? `Search text: ${searchText}` : INVALID_MESSAGE;
 
-  render() {
-    return (
-      <div>
-        <p>
-          {this.state.message}
-          {this.state.searchText}
-        </p>
-        <SearchField
-          defaultValue="Default"
-          onSearch={this.handleSearch}
-          onInvalidSearch={this.handleInvalidSearch}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <p>{message}</p>
+      <SearchField defaultValue="Default" onSearch={setSearchText} onInvalidSearch={setSearchText} />
+    </div>
+  );
+};
 
 export default SearchFieldDefaultValue;

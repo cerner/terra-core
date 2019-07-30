@@ -1,49 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import SearchField from 'terra-search-field/lib/SearchField';
 
-class SearchFieldFilterNumeric extends React.Component {
-  constructor(props) {
-    super(props);
-    this.invalidSearchMessage = 'The default minimum search length is 2.';
-    this.state = { searchText: '', filteredText: '', message: this.invalidSearchMessage };
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleInvalidSearch = this.handleInvalidSearch.bind(this);
-    this.onChange = this.onChange.bind(this);
-  }
+const INVALID_MESSAGE = 'The default minimum search length is 2.';
 
-  onChange(event, text) {
-    let filteredText = text;
+const SearchFieldFilterNumeric = () => {
+  const [state, setSearchText] = useState({ searchText: '' });
+
+  const message = state.searchText && state.searchText.length >= 2 ? `Search text: ${state.searchText}` : INVALID_MESSAGE;
+
+  const handleChange = (event, text) => {
+    let inputText = text;
     if (text && text.length > 0 && /\d/.test(text)) {
-      filteredText = text.substring(0, text.length - 1);
+      inputText = text.substring(0, text.length - 1);
     }
-    this.setState({ filteredText });
-  }
+    setSearchText({ searchText: inputText });
+  };
 
-  handleInvalidSearch() {
-    this.setState({ searchText: '', message: this.invalidSearchMessage });
-  }
+  const handleSearchText = (text) => {
+    setSearchText({ searchText: text });
+  };
 
-  handleSearch(searchText) {
-    this.setState({ searchText, message: 'Search Text: ' });
-  }
-
-  render() {
-    return (
-      <div>
-        <p>
-          {this.state.message}
-          {this.state.searchText}
-        </p>
-        <SearchField
-          onSearch={this.handleSearch}
-          onInvalidSearch={this.handleInvalidSearch}
-          value={this.state.filteredText}
-          onChange={this.onChange}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <p>{message}</p>
+      <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} />
+    </div>
+  );
+};
 
 export default SearchFieldFilterNumeric;
