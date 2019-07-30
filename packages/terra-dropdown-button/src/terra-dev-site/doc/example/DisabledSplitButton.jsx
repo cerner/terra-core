@@ -9,7 +9,7 @@ const Example = () => {
   return (
     <React.Fragment>
       <SplitButton
-        primaryOptionLabel="Dropdown"
+        primaryOptionLabel="Primary Option"
         onSelect={() => setMessage('Primary option clicked')}
         isDisabled
       >
