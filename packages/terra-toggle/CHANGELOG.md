@@ -7,6 +7,11 @@ Unreleased
 ### Changed
 * Update tests for dev-site v6
 
+3.16.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.15.0 - (July 16, 2019)
 ------------------
 ### Added
