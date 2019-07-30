@@ -1,0 +1,109 @@
+@import '~terra-mixins/lib/Mixins';
+
+//  Map Dropdown Button Variant's Color Schemes
+// ==========================
+
+@mixin terra-dropdown-button-variant-color($color-map) {
+  &.dropdown-button,
+  &.split-button-primary,
+  &.split-button-caret {
+    background-color: map-get($color-map, background-color);
+    border-color: map-get($color-map, border-color);
+    color: map-get($color-map, color);
+
+    &:focus {
+      background-color: map-get($color-map, focus-background-color);
+      border-color: map-get($color-map, focus-border-color);
+    }
+
+    &:hover {
+      background-color: map-get($color-map, hover-background-color);
+      color: map-get($color-map, hover-color);
+    }
+
+    &.is-active,
+    &:active {
+      background-color: map-get($color-map, active-background-color);
+      border-color: map-get($color-map, active-border-color);
+      color: map-get($color-map, active-color);
+    }
+
+    &:disabled,
+    &.disabled {
+      color: map-get($color-map, disabled-color);
+    }
+  }
+
+  &.dropdown-button {
+    box-shadow: map-get($color-map, dropdown-box-shadow);
+    font-weight: map-get($color-map, dropdown-font-weight);
+
+    &:focus {
+      box-shadow: map-get($color-map, focus-dropdown-box-shadow);
+    }
+
+    &.is-active,
+    &:active {
+      font-weight: map-get($color-map, active-dropdown-font-weight);
+    }
+  }
+
+  &.split-button-primary {
+    border-right-color: transparent;
+    box-shadow: map-get($color-map, split-box-shadow);
+    font-weight: map-get($color-map, split-font-weight);
+
+    &:focus {
+      border-right-color: map-get($color-map, focus-border-color);
+      box-shadow: map-get($color-map, focus-split-box-shadow);
+    }
+
+    &.is-active,
+    &:active {
+      border-right-color: map-get($color-map, active-border-color);
+      font-weight: map-get($color-map, active-split-font-weight);
+    }
+    
+    &:hover {
+      border-right-color: map-get($color-map, border-color);
+    }
+
+    &:hover + .split-button-caret {
+      border-left-color: transparent;
+      box-shadow: map-get($color-map, hover-split-caret-box-shadow);
+    }
+  }
+
+  &.split-button-caret {
+    box-shadow: map-get($color-map, split-caret-box-shadow);
+
+    &:focus {
+      box-shadow: map-get($color-map, focus-split-caret-box-shadow);
+    }
+    
+    &:hover {
+      box-shadow: map-get($color-map, hover-split-caret-box-shadow);
+    }
+
+    &.is-active,
+    &:active {
+      box-shadow: map-get($color-map, active-split-caret-box-shadow);
+    }
+  }
+
+  .caret-icon {
+    background-image: map-get($color-map, caret-icon-background-image);
+  }
+
+  &:active,
+  &.is-active {
+    > .caret-icon {
+      background-image: map-get($color-map, active-caret-icon-background-image);
+    }
+  }
+
+  &:disabled .caret-icon,
+  &.disabled .caret-icon {
+    background-image: map-get($color-map, disabled-caret-icon-background-image);
+  }
+}
