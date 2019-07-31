@@ -12,7 +12,10 @@ Terra.describeViewports('Toggle', ['medium'], () => {
   });
 
   describe('Opened', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle/toggle/open-toggle'));
+    before(() => {
+      browser.url('/#/raw/tests/terra-toggle/toggle/open-toggle');
+      browser.moveToObject('#root', 0, 0);
+    });
 
     Terra.it.validatesElement();
   });
