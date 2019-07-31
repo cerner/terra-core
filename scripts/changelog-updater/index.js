@@ -6,13 +6,14 @@ const path = require('path');
 const { exec } = require('child_process');
 const findAndReplace = require('../common/findAndReplace');
 
-exec('lerna updated', (error, stdout) => {
+exec('npx lerna updated', (error, stdout) => {
   if (error) {
     console.error(`exec error: ${error}`);
     return;
   }
+
   // Clean up lerna updated output and convert to an array
-  const updatedPackages = stdout.split('\n').map(x => x.substring(2)).map(x => `packages/${x}`);
+  const updatedPackages = stdout.split('\n').map(x => `packages/${x}`);
   updatedPackages.pop(); // Remove last item as it is an empty string
 
   // Update release version in changelog files
@@ -63,7 +64,9 @@ exec('lerna updated', (error, stdout) => {
 ----------
 
 ${newVersion} - (${releaseDate})
-------------------`;
+------------------
+### Changed
+* Minor dependency version bump`;
           const regex = /Unreleased\n----------/g;
 
           // Update CHANGELOG.md

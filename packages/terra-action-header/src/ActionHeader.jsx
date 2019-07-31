@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Displays a single terra `Collapsible Menu View` child element on the right end of the header.
+   * Displays a single terra `Collapsible Menu View` (_Not provided by `Action Header`_) child element on the right end of the header.
    */
   children: PropTypes.element,
   /**
@@ -31,12 +31,18 @@ const propTypes = {
    * Callback function for when the expand button is clicked.
    * The expand button will not display if this is not set or on small viewports.
    * Only the expand button will be rendered if onMaximize and onMinimize are set.
+   *
+   * *Note: If `onBack` is set, the maximize button will not appear and a custom maximize button must be provided
+   * as a child inside a `Collapsible Menu View`.*
    */
   onMaximize: PropTypes.func,
   /**
    * Callback function for when the minimize button is clicked.
    * The minimize button will not display if this is not set or on small viewports.
    * Only the expand button will be rendered if both onMaximize and onMinimize are set.
+   *
+   * *Note: If `onBack` is set, the minimize button will not appear and a custom minimize button must be provided
+   * as a child inside a `Collapsible Menu View`.*
    */
   onMinimize: PropTypes.func,
   /**

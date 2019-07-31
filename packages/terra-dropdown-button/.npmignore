@@ -1,0 +1,8 @@
+*.log
+target
+reports
+tests/**/__snapshots__/
+aggregate_translations
+dev-site-config
+screenshots
+errorScreenshots

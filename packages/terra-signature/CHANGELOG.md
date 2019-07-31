@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+2.17.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.16.0 - (July 24, 2019)
+------------------
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 
