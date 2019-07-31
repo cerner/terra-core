@@ -5,6 +5,7 @@ Unreleased
 ----------
 ## Changed
 * Updated errorIcon default prop from `Field.defaultProps.errorIcon` with `<IconError>` component.
+* updated package.json test scripts
 
 2.20.0 - (July 24, 2019)
 ------------------

@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
 
 ### Changed
 * Update tests for dev-site v6

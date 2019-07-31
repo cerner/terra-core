@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
 
 2.16.0 - (July 24, 2019)
 ------------------
