@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown Button should render a block split type 1`] = `
+<DropdownButtonBase
+  isBlock={true}
+  isCompact={false}
+  isDisabled={false}
+  isOpen={false}
+  items={
+    <Item
+      label="1st Option"
+      onSelect={[Function]}
+    />
+  }
+  requestClose={[Function]}
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral is-block"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup="menu"
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-caret neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="caret-icon"
+    />
+  </button>
+</DropdownButtonBase>
+`;
+
+exports[`Dropdown Button should render a compact split type 1`] = `
+<DropdownButtonBase
+  isBlock={false}
+  isCompact={true}
+  isDisabled={false}
+  isOpen={false}
+  items={
+    <Item
+      label="1st Option"
+      onSelect={[Function]}
+    />
+  }
+  requestClose={[Function]}
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral is-compact"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup="menu"
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-caret neutral is-compact"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="caret-icon"
+    />
+  </button>
+</DropdownButtonBase>
+`;
+
+exports[`Dropdown Button should render a default split type 1`] = `
+<DropdownButtonBase
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isOpen={false}
+  items={
+    <Item
+      label="1st Option"
+      onSelect={[Function]}
+    />
+  }
+  requestClose={[Function]}
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup="menu"
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-caret neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="caret-icon"
+    />
+  </button>
+</DropdownButtonBase>
+`;
+
+exports[`Dropdown Button should render a disabled split type 1`] = `
+<DropdownButtonBase
+  disabled={true}
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isOpen={false}
+  items={
+    <Item
+      label="1st Option"
+      onSelect={[Function]}
+    />
+  }
+  requestClose={[Function]}
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup="menu"
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-caret neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="caret-icon"
+    />
+  </button>
+</DropdownButtonBase>
+`;
+
+exports[`Dropdown Button should render a split type with custom attributes 1`] = `
+<DropdownButtonBase
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isOpen={false}
+  items={
+    <Item
+      label="1st Option"
+      onSelect={[Function]}
+    />
+  }
+  other-custom-attribute="purple"
+  requestClose={[Function]}
+  test-custom-attribute={true}
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup="menu"
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-caret neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="caret-icon"
+    />
+  </button>
+</DropdownButtonBase>
+`;
+
+exports[`Dropdown Button should render a split type with multiple children 1`] = `
+<DropdownButtonBase
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isOpen={false}
+  items={
+    Array [
+      <Item
+        label="1st Option"
+        onSelect={[Function]}
+      />,
+      <Item
+        label="2nd Option"
+        onSelect={[Function]}
+      />,
+      <Item
+        label="3rd Option"
+        onSelect={[Function]}
+      />,
+    ]
+  }
+  requestClose={[Function]}
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup="menu"
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-caret neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="caret-icon"
+    />
+  </button>
+</DropdownButtonBase>
+`;
+
+exports[`Dropdown Button should render an open split type 1`] = `
+<DropdownButtonBase
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isOpen={false}
+  items={
+    <Item
+      label="1st Option"
+      onSelect={[Function]}
+    />
+  }
+  requestClose={[Function]}
+>
+  <button
+    aria-disabled={false}
+    className="split-button-primary neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    Primary Option
+  </button>
+  <button
+    aria-disabled={false}
+    aria-haspopup="menu"
+    aria-label="Terra.dropdownButton.moreOptions"
+    className="split-button-caret neutral"
+    disabled={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="caret-icon"
+    />
+  </button>
+</DropdownButtonBase>
+`;

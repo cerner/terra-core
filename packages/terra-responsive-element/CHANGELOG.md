@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * updated package.json test scripts
 
+5.5.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.4.0 - (July 24, 2019)
 ------------------
 ### Changed
