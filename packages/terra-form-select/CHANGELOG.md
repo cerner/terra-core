@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 
 5.25.0 - (July 30, 2019)
 ------------------

@@ -9,17 +9,17 @@ describe('Dialog', () => {
   // Snapshot Test
   it('should render a default component', () => {
     const wrapper = shallowWithIntl(defaultRender);
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   // Structure Tests
   it('should have the class dialog', () => {
     const wrapper = shallowWithIntl(defaultRender);
-    expect(wrapper.dive().prop('className')).toContain('dialog');
+    expect(wrapper.prop('className')).toContain('dialog');
   });
 
   it('should render a Dialog with merged attributes', () => {
     const wrapper = shallowWithIntl(<Dialog header="Header Content" footer="Footer Content" className="TestClass">some body content</Dialog>);
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

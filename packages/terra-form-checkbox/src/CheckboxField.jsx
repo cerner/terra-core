@@ -123,7 +123,8 @@ const CheckboxField = (props) => {
               {optionalText => (
                 <span className={cx('optional')}>{optionalText}</span>
               )}
-            </FormattedMessage>)}
+            </FormattedMessage>
+          )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
     </legend>

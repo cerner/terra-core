@@ -50,7 +50,8 @@ const Dialog = ({
             <Button variant="utility" text={closeText} onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} />
           )}
         </FormattedMessage>
-      </div>)
+      </div>
+    )
     : null;
 
   const dialogHeader = (

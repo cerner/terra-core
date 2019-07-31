@@ -38,6 +38,33 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
   <Overlay
     backgroundStyle="light"
     className="loading-overlay"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
     isOpen={false}
     isRelativeToContainer={false}
     isScrollable={false}
@@ -86,6 +113,33 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
   <Overlay
     backgroundStyle="light"
     className="loading-overlay"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
     isOpen={true}
     isRelativeToContainer={false}
     isScrollable={false}
@@ -106,6 +160,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
             <div>
               <div
                 class="overlay fullscreen light loading-overlay layer-100"
+                intl="[object Object]"
                 tabindex="0"
               >
                 <div
@@ -152,6 +207,33 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
           <div>
             <div
               className="overlay fullscreen light loading-overlay layer-100"
+              intl={
+                Object {
+                  "defaultFormats": Object {},
+                  "defaultLocale": "en",
+                  "formatDate": [Function],
+                  "formatHTMLMessage": [Function],
+                  "formatMessage": [Function],
+                  "formatNumber": [Function],
+                  "formatPlural": [Function],
+                  "formatRelative": [Function],
+                  "formatTime": [Function],
+                  "formats": Object {},
+                  "formatters": Object {
+                    "getDateTimeFormat": [Function],
+                    "getMessageFormat": [Function],
+                    "getNumberFormat": [Function],
+                    "getPluralFormat": [Function],
+                    "getRelativeFormat": [Function],
+                  },
+                  "locale": "en",
+                  "messages": null,
+                  "now": [Function],
+                  "onError": [Function],
+                  "textComponent": "span",
+                  "timeZone": null,
+                }
+              }
               onClick={[Function]}
               tabIndex="0"
             >
@@ -248,6 +330,33 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
   <Overlay
     backgroundStyle="light"
     className="loading-overlay"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
     isOpen={true}
     isRelativeToContainer={false}
     isScrollable={false}
@@ -268,6 +377,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
             <div>
               <div
                 class="overlay fullscreen light loading-overlay layer-100"
+                intl="[object Object]"
                 tabindex="0"
               >
                 <div
@@ -314,6 +424,33 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
           <div>
             <div
               className="overlay fullscreen light loading-overlay layer-100"
+              intl={
+                Object {
+                  "defaultFormats": Object {},
+                  "defaultLocale": "en",
+                  "formatDate": [Function],
+                  "formatHTMLMessage": [Function],
+                  "formatMessage": [Function],
+                  "formatNumber": [Function],
+                  "formatPlural": [Function],
+                  "formatRelative": [Function],
+                  "formatTime": [Function],
+                  "formats": Object {},
+                  "formatters": Object {
+                    "getDateTimeFormat": [Function],
+                    "getMessageFormat": [Function],
+                    "getNumberFormat": [Function],
+                    "getPluralFormat": [Function],
+                    "getRelativeFormat": [Function],
+                  },
+                  "locale": "en",
+                  "messages": null,
+                  "now": [Function],
+                  "onError": [Function],
+                  "textComponent": "span",
+                  "timeZone": null,
+                }
+              }
               onClick={[Function]}
               tabIndex="0"
             >
@@ -357,11 +494,16 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                     </svg>
                   </IconBase>
                 </IconSpinner>
-                <div
-                  className="message"
+                <FormattedMessage
+                  id="Terra.Overlay.loading"
+                  values={Object {}}
                 >
-                  Terra.Overlay.loading
-                </div>
+                  <div
+                    className="message"
+                  >
+                    Terra.Overlay.loading
+                  </div>
+                </FormattedMessage>
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+* Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
 
 4.7.0 - (July 30, 2019)
 ------------------

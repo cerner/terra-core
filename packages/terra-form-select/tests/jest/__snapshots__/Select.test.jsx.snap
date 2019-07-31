@@ -19,35 +19,76 @@ exports[`Select should render a clear option 1`] = `
 `;
 
 exports[`Select should render a combobox variant 1`] = `
-<InjectIntl(Frame)
-  data-terra-select={true}
+<Select
+  allowClear={false}
   disabled={false}
-  display=""
-  dropdown={[Function]}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   isInvalid={false}
-  onDeselect={[Function]}
-  onSelect={[Function]}
-  placeholder="Terra.form.select.defaultDisplay"
   required={false}
-  totalOptions={0}
-  value=""
   variant="combobox"
 />
 `;
 
 exports[`Select should render a combobox variant with a placeholder 1`] = `
-<InjectIntl(Frame)
-  data-terra-select={true}
+<Select
+  allowClear={false}
   disabled={false}
-  display=""
-  dropdown={[Function]}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   isInvalid={false}
-  onDeselect={[Function]}
-  onSelect={[Function]}
   placeholder="Placeholder"
   required={false}
-  totalOptions={0}
-  value=""
   variant="combobox"
 />
 `;
@@ -519,18 +560,38 @@ exports[`Select should render a tag variant with a placeholder 1`] = `
 `;
 
 exports[`Select should render an invalid combobox variant 1`] = `
-<InjectIntl(Frame)
-  data-terra-select={true}
+<Select
+  allowClear={false}
   disabled={false}
-  display=""
-  dropdown={[Function]}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   isInvalid={true}
-  onDeselect={[Function]}
-  onSelect={[Function]}
-  placeholder="Terra.form.select.defaultDisplay"
   required={false}
-  totalOptions={0}
-  value=""
   variant="combobox"
 />
 `;

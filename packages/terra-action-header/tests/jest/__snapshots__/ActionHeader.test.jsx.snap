@@ -3,6 +3,33 @@
 exports[`ActionHeader should render a default action header 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={null}
 />
@@ -14,47 +41,52 @@ exports[`ActionHeader should render an action header with back and close buttons
     <div
       className="right-buttons"
     >
-      <Button
-        className="header-close-button"
-        icon={
-          <span
-            className="header-icon close"
-          />
-        }
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={true}
-        isReversed={false}
-        onClick={[Function]}
-        text="Terra.actionHeader.close"
-        type="button"
-        variant="neutral"
-      />
+      <FormattedMessage
+        id="Terra.actionHeader.close"
+        values={Object {}}
+      >
+        [Function]
+      </FormattedMessage>
     </div>
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
   }
   level={1}
   startContent={
     <div
       className="left-buttons"
     >
-      <Button
-        className="header-back-button"
-        icon={
-          <span
-            className="header-icon back"
-          />
-        }
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={true}
-        isReversed={false}
-        onClick={[Function]}
-        text="Terra.actionHeader.back"
-        type="button"
-        variant="neutral"
-      />
+      <FormattedMessage
+        id="Terra.actionHeader.back"
+        values={Object {}}
+      >
+        [Function]
+      </FormattedMessage>
     </div>
   }
   title="Action Header"
@@ -64,28 +96,44 @@ exports[`ActionHeader should render an action header with back and close buttons
 exports[`ActionHeader should render an action header with back button and title 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={
     <div
       className="left-buttons"
     >
-      <Button
-        className="header-back-button"
-        icon={
-          <span
-            className="header-icon back"
-          />
-        }
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={true}
-        isReversed={false}
-        onClick={[Function]}
-        text="Terra.actionHeader.back"
-        type="button"
-        variant="neutral"
-      />
+      <FormattedMessage
+        id="Terra.actionHeader.back"
+        values={Object {}}
+      >
+        [Function]
+      </FormattedMessage>
     </div>
   }
   title="Action Header"
@@ -98,24 +146,40 @@ exports[`ActionHeader should render an action header with close button and title
     <div
       className="right-buttons"
     >
-      <Button
-        className="header-close-button"
-        icon={
-          <span
-            className="header-icon close"
-          />
-        }
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={true}
-        isReversed={false}
-        onClick={[Function]}
-        text="Terra.actionHeader.close"
-        type="button"
-        variant="neutral"
-      />
+      <FormattedMessage
+        id="Terra.actionHeader.close"
+        values={Object {}}
+      >
+        [Function]
+      </FormattedMessage>
     </div>
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
   }
   level={1}
   startContent={null}
@@ -126,6 +190,33 @@ exports[`ActionHeader should render an action header with close button and title
 exports[`ActionHeader should render an action header with custom button and title 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={null}
   title="Action Header"
@@ -147,6 +238,33 @@ exports[`ActionHeader should render an action header with custom button and titl
 exports[`ActionHeader should render an action header with level three header element and title 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={3}
   startContent={null}
   title="Action Header"
@@ -156,27 +274,44 @@ exports[`ActionHeader should render an action header with level three header ele
 exports[`ActionHeader should render an action header with maximize button and title 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={
     <div
       className="left-buttons"
     >
-      <Button
-        icon={
-          <span
-            className="header-icon maximize"
-          />
-        }
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={true}
-        isReversed={false}
-        onClick={[Function]}
-        text="Terra.actionHeader.maximize"
-        type="button"
-        variant="neutral"
-      />
+      <FormattedMessage
+        id="Terra.actionHeader.maximize"
+        values={Object {}}
+      >
+        [Function]
+      </FormattedMessage>
     </div>
   }
   title="Action Header"
@@ -186,27 +321,44 @@ exports[`ActionHeader should render an action header with maximize button and ti
 exports[`ActionHeader should render an action header with minimize button and title 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={
     <div
       className="left-buttons"
     >
-      <Button
-        icon={
-          <span
-            className="header-icon minimize"
-          />
-        }
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={true}
-        isReversed={false}
-        onClick={[Function]}
-        text="Terra.actionHeader.minimize"
-        type="button"
-        variant="neutral"
-      />
+      <FormattedMessage
+        id="Terra.actionHeader.minimize"
+        values={Object {}}
+      >
+        [Function]
+      </FormattedMessage>
     </div>
   }
   title="Action Header"
@@ -216,6 +368,33 @@ exports[`ActionHeader should render an action header with minimize button and ti
 exports[`ActionHeader should render an action header with multiple custom buttons and title 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={null}
   title="Action Header"
@@ -250,6 +429,33 @@ exports[`ActionHeader should render an action header with multiple custom button
 exports[`ActionHeader should render an action header with next and previous buttons and title 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={
     <div
@@ -259,26 +465,18 @@ exports[`ActionHeader should render an action header with next and previous butt
         isBlock={false}
         selectedKeys={Array []}
       >
-        <ButtonGroupButton
-          icon={
-            <span
-              className="header-icon previous"
-            />
-          }
-          isDisabled={false}
-          onClick={[Function]}
-          text="Terra.actionHeader.previous"
-        />
-        <ButtonGroupButton
-          icon={
-            <span
-              className="header-icon next"
-            />
-          }
-          isDisabled={false}
-          onClick={[Function]}
-          text="Terra.actionHeader.next"
-        />
+        <FormattedMessage
+          id="Terra.actionHeader.previous"
+          values={Object {}}
+        >
+          [Function]
+        </FormattedMessage>
+        <FormattedMessage
+          id="Terra.actionHeader.next"
+          values={Object {}}
+        >
+          [Function]
+        </FormattedMessage>
       </ButtonGroup>
     </div>
   }
@@ -289,6 +487,33 @@ exports[`ActionHeader should render an action header with next and previous butt
 exports[`ActionHeader should render an action header with title 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={null}
   title="Action Header"
@@ -298,6 +523,33 @@ exports[`ActionHeader should render an action header with title 1`] = `
 exports[`ActionHeader should render an action header with title, enabled next button, and disabled previous button 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={
     <div
@@ -307,25 +559,18 @@ exports[`ActionHeader should render an action header with title, enabled next bu
         isBlock={false}
         selectedKeys={Array []}
       >
-        <ButtonGroupButton
-          icon={
-            <span
-              className="header-icon previous"
-            />
-          }
-          isDisabled={true}
-          text="Terra.actionHeader.previous"
-        />
-        <ButtonGroupButton
-          icon={
-            <span
-              className="header-icon next"
-            />
-          }
-          isDisabled={false}
-          onClick={[Function]}
-          text="Terra.actionHeader.next"
-        />
+        <FormattedMessage
+          id="Terra.actionHeader.previous"
+          values={Object {}}
+        >
+          [Function]
+        </FormattedMessage>
+        <FormattedMessage
+          id="Terra.actionHeader.next"
+          values={Object {}}
+        >
+          [Function]
+        </FormattedMessage>
       </ButtonGroup>
     </div>
   }
@@ -336,6 +581,33 @@ exports[`ActionHeader should render an action header with title, enabled next bu
 exports[`ActionHeader should render an action header with title, enabled previous button, and disabled next button 1`] = `
 <ActionHeaderContainer
   endContent={null}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   level={1}
   startContent={
     <div
@@ -345,25 +617,18 @@ exports[`ActionHeader should render an action header with title, enabled previou
         isBlock={false}
         selectedKeys={Array []}
       >
-        <ButtonGroupButton
-          icon={
-            <span
-              className="header-icon previous"
-            />
-          }
-          isDisabled={false}
-          onClick={[Function]}
-          text="Terra.actionHeader.previous"
-        />
-        <ButtonGroupButton
-          icon={
-            <span
-              className="header-icon next"
-            />
-          }
-          isDisabled={true}
-          text="Terra.actionHeader.next"
-        />
+        <FormattedMessage
+          id="Terra.actionHeader.previous"
+          values={Object {}}
+        >
+          [Function]
+        </FormattedMessage>
+        <FormattedMessage
+          id="Terra.actionHeader.next"
+          values={Object {}}
+        >
+          [Function]
+        </FormattedMessage>
       </ButtonGroup>
     </div>
   }

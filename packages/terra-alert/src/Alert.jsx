@@ -138,8 +138,8 @@ const Alert = ({
   if (onDismiss) {
     dismissButton = (
       <FormattedMessage id="Terra.alert.dismiss">
-        {btnText => (
-          <Button text={btnText} onClick={onDismiss} />
+        {buttonText => (
+          <Button text={buttonText} onClick={onDismiss} />
         )}
       </FormattedMessage>
     );

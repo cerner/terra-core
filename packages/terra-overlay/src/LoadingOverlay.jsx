@@ -68,7 +68,8 @@ const LoadingOverlay = ({
             {loadingMessage => (
               <div className={cx('message')}>{loadingMessage}</div>
             )}
-          </FormattedMessage>)
+          </FormattedMessage>
+        )
       }
     </Overlay>
   );
