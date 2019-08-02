@@ -41,6 +41,9 @@
   } 
 
   .is-selectable {
+    > * {
+      border: 0 !important;
+    }
     cursor: pointer;
     outline: var(--terra-flex-table-row-focus-outline, none);
 
