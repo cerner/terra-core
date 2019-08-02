@@ -122,7 +122,7 @@ const CheckMarkCell = ({
         customProps.className,
       )}
       ref={refCallback}
-      role="gridcell"
+      role={isSelectable ? 'rowheader' : 'none'}
     >
       {content}
     </div>
