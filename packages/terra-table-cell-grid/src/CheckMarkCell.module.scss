@@ -13,18 +13,41 @@
   }
 
   .checkmark {
+    border: 1px solid transparent;
     color: pink;
     height: 1.143rem;
     margin-top: 2px;
+    position: relative;
     width: 1.143rem;
   }
 
-  .is-checked {
-    background-color: green;
+  .is-selected {
+    &::before {
+      background-color: black;
+      content: '';
+      position: absolute;
+      left: 2px;
+      height: 10px;
+      top: 2px;
+      width: 10px;
+    }
   }
 
-  .is-unchecked {
-    background-color: red;
+  .is-selectable {
+    background-color: #fff;
+    border: 1px solid #000;
+
+    // &.is-selected {
+    //   &::before {
+    //     background-color: black;
+    //     content: '';
+    //     position: absolute;
+    //     left: 20%;
+    //     height: 60%;
+    //     top: 20%;
+    //     width: 60%;
+    //   }
+    // }
   }
 
   [data-table-padding='standard'] .cell > .container {

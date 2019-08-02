@@ -7,7 +7,10 @@ import TableUtils from './TableUtils';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  checkMarkState: PropTypes.oneOf(['checked', 'unchecked', 'mixed']),
+  /**
+   * Whether or not a selected state should display as partially selected.
+   */
+  isIntermediate: PropTypes.bool,
   /**
    * Whether or not the cell should adhere to the tables paddingStyle.
    */
@@ -64,26 +67,14 @@ const propTypes = {
 };
 
 const defaultProps = {
+  isIntermediate: false,
   isPadded: false,
   isSelected: false,
   isSelectable: false,
-  checkMarkState: 'unchecked',
-};
-
-const classForState = {
-  checked: 'is-checked',
-  unchecked: 'is-unchecked',
-  mixed: 'is-mixed',
-};
-
-const ariaForState = {
-  checked: 'true',
-  unchecked: 'false',
-  mixed: 'mixed',
 };
 
 const HeaderCheckMarkCell = ({
-  checkMarkState,
+  isIntermediate,
   isPadded,
   isSelected,
   isSelectable,
@@ -110,19 +101,23 @@ const HeaderCheckMarkCell = ({
     attrSpread['data-header-show-focus'] = 'true';
     attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
     attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
+    attrSpread.role = 'checkbox';
+    if (isSelected) {
+      attrSpread['aria-checked'] = isIntermediate ? 'mixed' : true;
+    } else {
+      attrSpread['aria-checked'] = false;
+    }
   }
-
-  const checkClassNames = cx([
-    'checkmark',
-    classForState[checkMarkState],
-  ]);
 
   let content = (
     <div
-      className={checkClassNames}
-      disabled={isSelectable}
-      role="checkbox"
-      aria-checked={ariaForState[checkMarkState]}
+      {...attrSpread}
+      className={cx(
+        'checkmark',
+        { 'is-selectable': isSelectable },
+        { 'is-selected': isSelected },
+        { 'is-intermediate': isIntermediate },
+      )}
     />
   );
 

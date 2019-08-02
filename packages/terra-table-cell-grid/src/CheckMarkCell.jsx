@@ -7,19 +7,18 @@ import TableUtils from './TableUtils';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  checkMarkState: PropTypes.oneOf(['checked', 'unchecked']),
+  /**
+   * Whether or not the check should be it's own click target.
+   */
+  isSelectable: PropTypes.bool,
+  /**
+   * Whether or not the cell should display as selected with check mark.
+   */
+  isSelected: PropTypes.bool,
   /**
    * Whether or not the cell should adhere to the tables paddingStyle.
    */
   isPadded: PropTypes.bool,
-  /**
-   * Whether or not row is selected
-   */
-  isSelected: PropTypes.bool,
-  /**
-   * Whether or not row is selectable
-   */
-  isSelectable: PropTypes.bool,
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
@@ -64,24 +63,12 @@ const propTypes = {
 };
 
 const defaultProps = {
-  checkMarkState: 'unchecked',
   isPadded: false,
   isSelected: false,
   isSelectable: false,
 };
 
-const classForState = {
-  checked: 'is-checked',
-  unchecked: 'is-unchecked',
-};
-
-const ariaForState = {
-  checked: 'true',
-  unchecked: 'false',
-};
-
 const CheckMarkCell = ({
-  checkMarkState,
   isPadded,
   isSelected,
   isSelectable,
@@ -95,11 +82,6 @@ const CheckMarkCell = ({
   width,
   ...customProps
 }) => {
-  const cellClassNames = cx(
-    'cell',
-    customProps.className,
-  );
-
   const attrSpread = {};
   if (isSelectable) {
     attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
@@ -108,19 +90,18 @@ const CheckMarkCell = ({
     attrSpread['data-header-show-focus'] = 'true';
     attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
     attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
+    attrSpread.role = 'checkbox';
+    attrSpread['aria-checked'] = isSelected;
   }
-
-  const checkClassNames = cx(
-    'checkmark',
-    classForState[checkMarkState],
-  );
 
   let content = (
     <div
-      className={checkClassNames}
-      disabled={isSelectable}
-      role="checkbox"
-      aria-checked={ariaForState[checkMarkState]}
+      {...attrSpread}
+      className={cx(
+        'checkmark',
+        { 'is-selectable': isSelectable },
+        { 'is-selected': isSelected },
+      )}
     />
   );
 
@@ -136,7 +117,10 @@ const CheckMarkCell = ({
     <div
       {...customProps}
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={cellClassNames}
+      className={cx(
+        'cell',
+        customProps.className,
+      )}
       ref={refCallback}
       role="gridcell"
     >

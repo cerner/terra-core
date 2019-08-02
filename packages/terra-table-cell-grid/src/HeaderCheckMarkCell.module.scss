@@ -15,22 +15,33 @@
   .checkmark {
     color: pink;
     height: 1.143rem;
-    line-height: 1.143;
+    position: relative;
     width: 1.143rem;
   }
 
-  .is-checked {
-    background-color: green;
+  .is-selected {
+    &::before {
+      background-color: black;
+      content: '';
+      position: absolute;
+      left: 2px;
+      height: 10px;
+      top: 2px;
+      width: 10px;
+    }
   }
 
-  .is-unchecked {
-    background-color: red;
+  .is-intermediate {
+    &::before {
+      background-color: green;
+    }
   }
 
-  .is-mixed {
-    background-color: purple;
+  .is-selectable {
+    background-color: #fff;
+    border: 1px solid #000;
   }
-
+  
   [data-table-padding='standard'] .header-cell > .container {
     padding-bottom: var(--terra-flex-table-header-cell-standard-padding-bottom, 0.5rem);
     padding-left: var(--terra-flex-table-header-cell-standard-padding-left, 0.7142857143rem);
