@@ -171,17 +171,29 @@ import IconExtensions from 'terra-icon/lib/icon/IconExtensions';
 import IconDocumentPlus from 'terra-icon/lib/icon/IconDocumentPlus';
 import IconRefusedSlot from 'terra-icon/lib/icon/IconRefusedSlot';
 import IconPharmacyVerification from 'terra-icon/lib/icon/IconPharmacyVerification';
+import IconFitHeight from 'terra-icon/lib/icon/IconFitHeight';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
+import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
+import IconDiamondSymbolLight from 'terra-icon/lib/icon/IconDiamondSymbolLight';
 import IconPlusSymbol from 'terra-icon/lib/icon/IconPlusSymbol';
+import IconPlusSymbolLight from 'terra-icon/lib/icon/IconPlusSymbolLight';
 import IconRectangleSymbol from 'terra-icon/lib/icon/IconRectangleSymbol';
+import IconRectangleSymbolLight from 'terra-icon/lib/icon/IconRectangleSymbolLight';
 import IconSquareSymbol from 'terra-icon/lib/icon/IconSquareSymbol';
+import IconSquareSymbolLight from 'terra-icon/lib/icon/IconSquareSymbolLight';
 import IconTeardropSymbol from 'terra-icon/lib/icon/IconTeardropSymbol';
+import IconTeardropSymbolLight from 'terra-icon/lib/icon/IconTeardropSymbolLight';
 import IconTeardropUpSymbol from 'terra-icon/lib/icon/IconTeardropUpSymbol';
+import IconTeardropUpSymbolLight from 'terra-icon/lib/icon/IconTeardropUpSymbolLight';
 import IconThinDiamondSymbol from 'terra-icon/lib/icon/IconThinDiamondSymbol';
+import IconThinDiamondSymbolLight from 'terra-icon/lib/icon/IconThinDiamondSymbolLight';
 import IconTriangleSymbol from 'terra-icon/lib/icon/IconTriangleSymbol';
+import IconTriangleSymbolLight from 'terra-icon/lib/icon/IconTriangleSymbolLight';
 import IconTriangleDownSymbol from 'terra-icon/lib/icon/IconTriangleDownSymbol';
+import IconTriangleDownSymbolLight from 'terra-icon/lib/icon/IconTriangleDownSymbolLight';
 import IconXSymbol from 'terra-icon/lib/icon/IconXSymbol';
+import IconXSymbolLight from 'terra-icon/lib/icon/IconXSymbolLight';
 import IconCircleLinesSymbol from 'terra-icon/lib/icon/IconCircleLinesSymbol';
 import IconCatalogueNumber from 'terra-icon/lib/icon/IconCatalogueNumber';
 import IconCaution from 'terra-icon/lib/icon/IconCaution';
@@ -1732,11 +1744,29 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconFitHeight height='2em' width='2em' /></td>
+        <td style={cellStyle}>fitHeight</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconFitHeight from 'terra-icon/lib/icon/IconFitHeight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconCircleSymbol height='2em' width='2em' /></td>
         <td style={cellStyle}>circle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconCircleSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>circle_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
           </code>
         </td>
       </tr>
@@ -1750,11 +1780,29 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconDiamondSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>diamond_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconDiamondSymbolLight from 'terra-icon/lib/icon/IconDiamondSymbolLight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconPlusSymbol height='2em' width='2em' /></td>
         <td style={cellStyle}>plus_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconPlusSymbol from 'terra-icon/lib/icon/IconPlusSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconPlusSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>plus_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconPlusSymbolLight from 'terra-icon/lib/icon/IconPlusSymbolLight';
           </code>
         </td>
       </tr>
@@ -1768,11 +1816,29 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconRectangleSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>rectangle_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconRectangleSymbolLight from 'terra-icon/lib/icon/IconRectangleSymbolLight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconSquareSymbol height='2em' width='2em' /></td>
         <td style={cellStyle}>square_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconSquareSymbol from 'terra-icon/lib/icon/IconSquareSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconSquareSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>square_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconSquareSymbolLight from 'terra-icon/lib/icon/IconSquareSymbolLight';
           </code>
         </td>
       </tr>
@@ -1786,11 +1852,29 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconTeardropSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>teardrop_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconTeardropSymbolLight from 'terra-icon/lib/icon/IconTeardropSymbolLight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconTeardropUpSymbol height='2em' width='2em' /></td>
         <td style={cellStyle}>teardropUp_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconTeardropUpSymbol from 'terra-icon/lib/icon/IconTeardropUpSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconTeardropUpSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>teardropUp_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconTeardropUpSymbolLight from 'terra-icon/lib/icon/IconTeardropUpSymbolLight';
           </code>
         </td>
       </tr>
@@ -1804,11 +1888,29 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconThinDiamondSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>thinDiamond_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconThinDiamondSymbolLight from 'terra-icon/lib/icon/IconThinDiamondSymbolLight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconTriangleSymbol height='2em' width='2em' /></td>
         <td style={cellStyle}>triangle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconTriangleSymbol from 'terra-icon/lib/icon/IconTriangleSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconTriangleSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>triangle_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconTriangleSymbolLight from 'terra-icon/lib/icon/IconTriangleSymbolLight';
           </code>
         </td>
       </tr>
@@ -1822,11 +1924,29 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconTriangleDownSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>triangleDown_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconTriangleDownSymbolLight from 'terra-icon/lib/icon/IconTriangleDownSymbolLight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconXSymbol height='2em' width='2em' /></td>
         <td style={cellStyle}>x_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconXSymbol from 'terra-icon/lib/icon/IconXSymbol';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconXSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}>x_symbol_light</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconXSymbolLight from 'terra-icon/lib/icon/IconXSymbolLight';
           </code>
         </td>
       </tr>
