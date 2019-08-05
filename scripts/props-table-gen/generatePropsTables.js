@@ -43,7 +43,7 @@ const formatPropShape = (propShape) => {
     ? `An object shaped like:<br /><pre>${JSON.stringify(value.type.value, null, 1)}</pre>`
     : undefined;
 
-  // Construct props for use in constructing table rows.
+  // Construct props object for use in creating table rows.
   propShape.forEach(() => {
     props.name = name;
     props.type = shapeHandler || typeCheck;
