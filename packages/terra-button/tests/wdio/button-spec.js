@@ -20,7 +20,6 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
     describe('Neutral-Keyboard Focus', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-button/button/variants/neutral-button');
         browser.keys('Tab');
       });
 

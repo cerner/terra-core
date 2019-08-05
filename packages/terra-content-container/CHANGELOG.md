@@ -3,8 +3,17 @@ Changelog
 
 Unreleased
 ----------
+
 ### Added
 * Added an example and documentation around usage of scrollRefCallback prop.
+
+### Changed
+* updated package.json test scripts
+
+3.14.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.13.0 - (July 24, 2019)
 ------------------
