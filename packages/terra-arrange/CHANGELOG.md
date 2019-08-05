@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Added markdown version of props table to package
+
+### Changed
 * updated package.json test scripts
 * Updated Props description for alignFitEnd and alignFill.
 

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added markdown version of props table to package
+
 
 2.31.0 - (July 30, 2019)
 ------------------

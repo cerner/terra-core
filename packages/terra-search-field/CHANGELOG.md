@@ -6,6 +6,7 @@ Unreleased
 ### Changed
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update jest test snanpshot
+* Added markdown version of props table to package
 * updated package.json test scripts
 
 3.23.0 - (July 30, 2019)

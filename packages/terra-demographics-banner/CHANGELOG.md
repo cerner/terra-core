@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Added markdown version of props table to package
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * updated package.json test scripts
 

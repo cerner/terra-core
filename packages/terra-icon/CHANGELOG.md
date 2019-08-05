@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added markdown version of props table to package
+
 ### Added
 * Added new icon `IconCircleSymbolLight`
 * Added new icon `IconDiamondSymbolLight`

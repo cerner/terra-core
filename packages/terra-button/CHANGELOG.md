@@ -7,6 +7,9 @@ Unreleased
 * Fixed Button not showing focus styles when programmatically focused
 
 ### Changed
+* Added markdown version of props table to package
+
+### Changed
 * Update tests for dev-site v6
 * updated package.json test scripts
 
