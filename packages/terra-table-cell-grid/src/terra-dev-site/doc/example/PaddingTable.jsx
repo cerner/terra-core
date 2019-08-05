@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, {
-  HeaderCell, Row, Cell, CheckMarkCell, HeaderCheckMarkCell,
+  HeaderCell, Row, Cell, CheckMarkCell, HeaderCheckMarkCell, HeaderChevronCell, ChevronCell,
 } from 'terra-table-cell-grid/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
@@ -21,16 +21,18 @@ const NoPaddingTable = ({
       <HeaderCell isPadded key="NAME">Name</HeaderCell>,
       <HeaderCell isSelectable isPadded key="ADDRESS">Address</HeaderCell>,
       <HeaderCell isPadded key="PHONE_NUMBER">Phone Number</HeaderCell>,
+      <HeaderChevronCell isPadded key="CHEVRON" />,
     ]}
   >
-    <Row isSelectable key="PERSON_0">
-      <CheckMarkCell isPadded key="derp" />
+    <Row selectionStyle="checkmark" isSelectable key="PERSON_0">
+      {/* <CheckMarkCell isPadded key="derp" /> */}
       <Cell isPadded key="NAME">John Smith</Cell>
       <Cell isPadded key="ADDRESS">123 Adams Drive</Cell>
       <Cell isPadded key="PHONE_NUMBER">111-222-3333</Cell>
+      <ChevronCell isPadded key="CHEVRON" />
     </Row>
-    <Row isSelectable key="PERSON_1">
-      <CheckMarkCell isSelected isPadded key="derp" />
+    <Row selectionStyle="checkmark" isSelectable isSelected key="PERSON_1">
+      {/* <CheckMarkCell isSelected isPadded key="derp" /> */}
       <Cell isPadded key="NAME">Jane Smith</Cell>
       <Cell isPadded key="ADDRESS">321 Drive Street</Cell>
       <Cell isPadded key="PHONE_NUMBER">111-222-3333</Cell>

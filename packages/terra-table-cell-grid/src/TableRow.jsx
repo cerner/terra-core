@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './TableRow.module.scss';
 import TableUtils from './TableUtils';
+import CheckMarkCell from './CheckMarkCell';
 
 const cx = classNames.bind(styles);
 
@@ -37,6 +38,7 @@ const propTypes = {
    * Function callback for the ref of the tr.
    */
   refCallback: PropTypes.func,
+  selectionStyle: PropTypes.oneOf(['default', 'checkmark']),
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
@@ -60,6 +62,7 @@ const defaultProps = {
   isSelected: false,
   isSelectable: false,
   isStriped: false,
+  selectionStyle: 'default',
 };
 
 const TableRow = ({
@@ -74,10 +77,11 @@ const TableRow = ({
   onMouseDown,
   onSelect,
   refCallback,
+  selectionStyle,
   ...customProps
 }) => {
   const rowClassNames = cx([
-    { 'is-selected': isSelected && isSelectable },
+    { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
     { 'is-selectable': isSelectable },
     { 'is-striped': isStriped },
     'row',
@@ -95,8 +99,16 @@ const TableRow = ({
     attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
   }
 
+  let check;
+  if (selectionStyle === 'checkmark') {
+    check = (
+      <CheckMarkCell isPadded isSelected={isSelected} />
+    );
+  }
+
   return (
     <div {...customProps} {...attrSpread} className={rowClassNames} ref={refCallback} role="row">
+      {check}
       {children}
     </div>
   );

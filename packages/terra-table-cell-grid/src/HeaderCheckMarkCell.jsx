@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import IconCheckmark from 'terra-icon/lib/icon/IconCheckmark';
+import IconMinus from 'terra-icon/lib/icon/IconMinus';
 import styles from './HeaderCheckMarkCell.module.scss';
 import TableUtils from './TableUtils';
 
@@ -90,6 +92,7 @@ const HeaderCheckMarkCell = ({
 }) => {
   const cellClassNames = cx(
     'header-cell',
+    { derp: isSelectable },
     customProps.className,
   );
 
@@ -109,8 +112,10 @@ const HeaderCheckMarkCell = ({
     }
   }
 
+
+  const Component = isIntermediate ? IconMinus : IconCheckmark;
   let content = (
-    <div
+    <Component
       {...attrSpread}
       className={cx(
         'checkmark',

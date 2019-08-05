@@ -39,7 +39,7 @@ const SingleSelectTable = () => {
     <Table
       paddingStyle="standard"
       headerCells={[
-        <HeaderCheckMarkCell isPadded key="check-0" isSelectable />,
+        <HeaderCheckMarkCell isPadded key="check-0" />,
         <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>,
         <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>,
         <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>,

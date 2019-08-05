@@ -1,41 +1,46 @@
 :local {
   .header-cell {
     border: 0;
-    border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
-    text-align: left;
-    vertical-align: top;
     flex: 0 0 auto;
-    word-break: break-word;
+    position: relative;
   
+    &.derp {
+      border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
+    }
+
     &:last-of-type {
       border-right: 0;
     }
   }
 
   .checkmark {
-    color: pink;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
     height: 1.143rem;
+    padding: 1px;
     position: relative;
     width: 1.143rem;
   }
 
   .is-selected {
-    &::before {
-      background-color: black;
-      content: '';
-      position: absolute;
-      left: 2px;
-      height: 10px;
-      top: 2px;
-      width: 10px;
-    }
+    color: #000;
+    // &::before {
+    //   background-color: black;
+    //   content: '';
+    //   position: absolute;
+    //   left: 2px;
+    //   height: 10px;
+    //   top: 2px;
+    //   width: 10px;
+    // }
   }
 
-  .is-intermediate {
-    &::before {
-      background-color: green;
-    }
-  }
+  // .is-intermediate {
+  //   &::before {
+  //     background-color: green;
+  //   }
+  // }
 
   .is-selectable {
     background-color: #fff;

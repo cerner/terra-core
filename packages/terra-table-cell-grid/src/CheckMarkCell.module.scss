@@ -2,35 +2,50 @@
   .cell {
     border: 0;
     border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
-    text-align: left;
-    vertical-align: top;
+    position: relative;
     flex: 0 0 auto;
-    word-break: break-word;
   
     &:last-of-type {
       border-right: 0;
+    }
+
+    &:hover {
+      &::before {
+        background-color: red;
+        border-radius: 100%;
+        content: '';
+        position: absolute;
+        left: 50%;
+        height: 26px;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 26px;
+      }
     }
   }
 
   .checkmark {
     border: 1px solid transparent;
-    color: pink;
+    border-radius: 3px;
+    color: #fff;
     height: 1.143rem;
     margin-top: 2px;
+    padding: 1px;
     position: relative;
     width: 1.143rem;
   }
 
   .is-selected {
-    &::before {
-      background-color: black;
-      content: '';
-      position: absolute;
-      left: 2px;
-      height: 10px;
-      top: 2px;
-      width: 10px;
-    }
+    color: #000;
+    // &::before {
+    //   background-color: black;
+    //   content: '';
+    //   position: absolute;
+    //   left: 2px;
+    //   height: 10px;
+    //   top: 2px;
+    //   width: 10px;
+    // }
   }
 
   .is-selectable {
