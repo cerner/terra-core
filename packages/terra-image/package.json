@@ -1,7 +1,7 @@
 {
   "name": "terra-image",
   "main": "lib/Image.js",
-  "version": "3.13.0",
+  "version": "3.14.0",
   "description": "The terra-image component provides styling for visual imagery.",
   "repository": {
     "type": "git",
@@ -26,9 +26,9 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
-    "test": "npm run test:jest && npm run test:wdio",
-    "test:jest": "jest --config ../../jestconfig.js",
-    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "test": "npm run jest && npm run wdio",
+    "jest": "jest --config ../../jestconfig.js",
+    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
   },
   "peerDependencies": {
     "react": "^16.8.5",
@@ -38,6 +38,6 @@
     "classnames": "^2.2.5",
     "object-fit-images": "^3.2.4",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.14.0"
+    "terra-doc-template": "^2.15.0"
   }
 }

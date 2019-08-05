@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button-base is-block ignore-react-onclickoutside"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={false}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Item
+      label="1st option"
+      onSelect={[Function]}
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button-base ignore-react-onclickoutside"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={false}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Item
+      label="1st option"
+      onSelect={[Function]}
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button-base ignore-react-onclickoutside"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={false}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Item
+      label="1st option"
+      onSelect={[Function]}
+    />
+  </Dropdown>
+</div>
+`;
+
+exports[`Dropdown Button Base renders an open DropdownButtonBase 1`] = `
+<div
+  className="dropdown-button-base ignore-react-onclickoutside"
+>
+  <div>
+    test contents
+  </div>
+  <Dropdown
+    isOpen={true}
+    requestClose={[Function]}
+    targetRef={[Function]}
+  >
+    <Item
+      label="1st option"
+      onSelect={[Function]}
+    />
+  </Dropdown>
+</div>
+`;

@@ -3,9 +3,13 @@ Changelog
 
 Unreleased
 ----------
+
+2.31.0 - (July 30, 2019)
+------------------
 ### Changed
 * Updated marked to 0.7.x
 * Updated primsjs to ~1.17.1
+* updated package.json test scripts
 
 2.30.0 - (July 24, 2019)
 ------------------
