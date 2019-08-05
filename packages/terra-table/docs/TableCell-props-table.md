@@ -1,0 +1,1 @@
+<table><thead><tr><th>Prop Name</th><th>Type</th><th>Is Required</th><th>Default Value</th><th>Description</th></tr></thead><tbody><tr><td>content</td><td>any</td><td>optional</td><td>none</td><td>Content to be displayed for the row cell</td></tr></tbody><table>

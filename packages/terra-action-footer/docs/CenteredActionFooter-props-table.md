@@ -1,0 +1,1 @@
+<table><thead><tr><th>Prop Name</th><th>Type</th><th>Is Required</th><th>Default Value</th><th>Description</th></tr></thead><tbody><tr><td>center</td><td>node</td><td>optional</td><td>undefined</td><td>Actions to be displayed in the center socket</td></tr></tbody><table>
