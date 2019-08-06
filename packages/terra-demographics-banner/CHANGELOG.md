@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Updated
+* updated jest snapshots
+
 ### Changed
 * updated package.json test scripts
 
