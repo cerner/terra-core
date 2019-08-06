@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+
+
+### Changed
+* Update tests for dev-site v6
 
 4.11.0 - (July 30, 2019)
 ------------------

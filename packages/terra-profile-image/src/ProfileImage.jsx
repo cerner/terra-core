@@ -50,7 +50,7 @@ const ProfileImage = (props) => {
   );
 
   if (props.src) {
-    return (<div><TerraImage placeholder={placeholderImage} {...props} /></div>);
+    return (<div><TerraImage placeholder={placeholderImage} fit="cover" {...props} /></div>);
   }
   return placeholderImage;
 };

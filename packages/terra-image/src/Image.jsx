@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import objectFitImages from 'object-fit-images'; // Added polyfill for IE.
 import classNames from 'classnames/bind';
 import styles from './Image.module.scss';
 
@@ -10,6 +11,14 @@ const ImageVariant = {
   ROUNDED: 'rounded',
   CIRCLE: 'circle',
   THUMBNAIL: 'thumbnail',
+};
+
+const FitTypes = {
+  COVER: 'cover',
+  SCALEDOWN: 'scale-down',
+  FILL: 'fill',
+  CONTAIN: 'contain',
+  NONE: 'none',
 };
 
 const propTypes = {
@@ -49,6 +58,10 @@ const propTypes = {
    * Function to be executed when the image load errors.
    */
   onError: PropTypes.func,
+  /**
+  * Sets the `object-fit` style of the image from the following values; `cover`, `contain`, `fill`, `scale-down`, `none`.
+  */
+  fit: PropTypes.oneOf(Object.values(FitTypes)),
 };
 
 /* eslint-disable react/default-props-match-prop-types */
@@ -56,12 +69,15 @@ const defaultProps = {
   variant: 'default',
   isFluid: false,
   alt: ' ',
+  fit: 'fill',
 };
 /* eslint-enable react/default-props-match-prop-types */
 
 class Image extends React.Component {
   constructor(props) {
     super(props);
+
+    this.ImageRef = React.createRef();
 
     this.state = {
       isLoading: true,
@@ -117,23 +133,27 @@ class Image extends React.Component {
         onLoad={this.handleOnLoad}
         onError={this.handleOnError}
         className={imageClasses}
+        ref={this.ImageRef}
       />
     );
   }
 
   render() {
     const {
-      src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps
+      src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, fit, ...customProps
     } = this.props;
 
     const imageClasses = cx([
       'image',
+      fit,
       variant,
       customProps.className,
       { fluid: isFluid },
     ]);
     delete customProps.className;
-
+    if (!this.state.isLoading) {
+      objectFitImages(this.ImageRef.current);
+    }
     if (placeholder) {
       if (this.state.isLoading) {
         return (
@@ -155,4 +175,4 @@ Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;
 
 export default Image;
-export { ImageVariant };
+export { ImageVariant, FitTypes };

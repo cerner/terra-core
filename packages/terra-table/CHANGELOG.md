@@ -10,7 +10,7 @@ Unreleased
 * Removed Utils `TableUtils` - Selection no longer supported..
 
 ### Changed
-* Made required updates to consumer terra-toolkit v5 and terra-dev-site v5
+* updated package.json test scripts
 
 3.21.0 - (July 30, 2019)
 ------------------

@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed issue for avatar to allow non-square images by sending `Fit` as `cover`.
+
+### Changed
+* updated package.json test scripts
 
 2.23.0 - (July 30, 2019)
 ------------------

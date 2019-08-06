@@ -3,6 +3,22 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added new icon `IconCircleSymbolLight`
+* Added new icon `IconDiamondSymbolLight`
+* Added new icon `IconPlusSymbolLight`
+* Added new icon `IconRectangleSymbolLight`
+* Added new icon `IconSquareSymbolLight`
+* Added new icon `IconTeardropSymbolLight`
+* Added new icon `IconTeardropUpSymbolLight`
+* Added new icon `IconThinDiamondSymbolLight`
+* Added new icon `IconTriangleDownSymbolLight`
+* Added new icon `IconTriangleSymbolLight`
+* Added new icon `IconXSymbolLight`
+
+### Changed
+* updated package.json test scripts
+* Consume one-cerner-style-icons v1.27
 
 3.16.0 - (July 30, 2019)
 ------------------

@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown List renders a default dropdown list 1`] = `
+<ul
+  className="dropdown-list"
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  role="menu"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <Item
+    isActive={false}
+    key=".0"
+    label="1st Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+</ul>
+`;
+
+exports[`Dropdown List renders a dropdown list a non-default focused option 1`] = `
+<ul
+  className="dropdown-list"
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  role="menu"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <Item
+    isActive={false}
+    key=".0"
+    label="1st Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+  <Item
+    isActive={false}
+    key=".1"
+    label="2nd Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+  <Item
+    isActive={false}
+    key=".2"
+    label="3rd Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+</ul>
+`;
+
+exports[`Dropdown List renders a dropdown list an active and focused option 1`] = `
+<ul
+  className="dropdown-list"
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  role="menu"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <Item
+    isActive={false}
+    key=".0"
+    label="1st Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+  <Item
+    isActive={false}
+    key=".1"
+    label="2nd Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+  <Item
+    isActive={false}
+    key=".2"
+    label="3rd Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+</ul>
+`;
+
+exports[`Dropdown List renders a dropdown list an active option 1`] = `
+<ul
+  className="dropdown-list"
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  role="menu"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <Item
+    isActive={false}
+    key=".0"
+    label="1st Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+  <Item
+    isActive={false}
+    key=".1"
+    label="2nd Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+  <Item
+    isActive={false}
+    key=".2"
+    label="3rd Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+</ul>
+`;
+
+exports[`Dropdown List renders a dropdown list with a set width 1`] = `
+<ul
+  className="dropdown-list"
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  role="menu"
+  style={
+    Object {
+      "width": "440px",
+    }
+  }
+>
+  <Item
+    isActive={false}
+    key=".0"
+    label="1st Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+</ul>
+`;
+
+exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
+<ul
+  className="dropdown-list"
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  role="menu"
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <Item
+    isActive={false}
+    key=".0"
+    label="1st Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+  <Item
+    isActive={false}
+    key=".1"
+    label="2nd Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+  <Item
+    isActive={false}
+    key=".2"
+    label="3rd Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  />
+</ul>
+`;

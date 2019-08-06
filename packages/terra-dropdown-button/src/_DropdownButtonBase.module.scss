@@ -1,0 +1,22 @@
+:local {
+  .dropdown-button-base {
+    border-radius: var(--terra-dropdown-button-border-radius, 3px);
+    box-shadow: var(--terra-dropdown-button-box-shadow);
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-family: inherit;
+    font-size: var(--terra-dropdown-button-font-size, 1rem);
+    line-height: var(--terra-dropdown-button-line-height, 1.42857);
+
+    &:disabled,
+    &.disabled {
+      opacity: var(--terra-dropdown-button-disabled-opacity, 0.3);
+      pointer-events: none;
+    }
+
+    &.is-block {
+      display: flex;
+    }
+  }
+}
