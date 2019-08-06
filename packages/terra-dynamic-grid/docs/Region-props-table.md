@@ -24,7 +24,7 @@
   "description": "Additional CSS properties to apply to the region.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>tiny</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>tiny</td><td>An object shaped like:<br /><pre>{
  "grid-column-start": {
   "name": "number",
   "description": "The starting column line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start.",
@@ -50,7 +50,7 @@
   "description": "Additional CSS properties to apply to the region.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>small</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>small</td><td>An object shaped like:<br /><pre>{
  "grid-column-start": {
   "name": "number",
   "description": "The starting column line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start.",
@@ -76,7 +76,7 @@
   "description": "Additional CSS properties to apply to the region.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>medium</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>medium</td><td>An object shaped like:<br /><pre>{
  "grid-column-start": {
   "name": "number",
   "description": "The starting column line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start.",
@@ -102,7 +102,7 @@
   "description": "Additional CSS properties to apply to the region.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>large</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>large</td><td>An object shaped like:<br /><pre>{
  "grid-column-start": {
   "name": "number",
   "description": "The starting column line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start.",
@@ -128,7 +128,7 @@
   "description": "Additional CSS properties to apply to the region.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>huge</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>huge</td><td>An object shaped like:<br /><pre>{
  "grid-column-start": {
   "name": "number",
   "description": "The starting column line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start.",
@@ -154,4 +154,4 @@
   "description": "Additional CSS properties to apply to the region.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr></tbody><table>
+}</pre></td><td>optional</td><td>{}</td><td></td></tr></tbody><table>

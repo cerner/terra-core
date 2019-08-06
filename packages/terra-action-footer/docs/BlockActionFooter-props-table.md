@@ -1,1 +1,1 @@
-<table><thead><tr><th>Prop Name</th><th>Type</th><th>Is Required</th><th>Default Value</th><th>Description</th></tr></thead><tbody><tr><td>children</td><td>node</td><td>optional</td><td>undefined</td></tr></tbody><table>
+<table><thead><tr><th>Prop Name</th><th>Type</th><th>Is Required</th><th>Default Value</th><th>Description</th></tr></thead><tbody><tr><td>children</td><td>node</td><td>optional</td><td>undefined</td><td></td></tr></tbody><table>

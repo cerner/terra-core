@@ -17,9 +17,7 @@ const createTableRow = (propValues) => {
   let currentRow = '<tr>';
 
   rowValues.forEach((value) => {
-    if (value && value !== undefined) {
-      currentRow += `<td>${value}</td>`;
-    }
+    currentRow += `<td>${value}</td>`;
   });
   currentRow += '</tr>';
 

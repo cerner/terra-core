@@ -19,7 +19,7 @@
   "description": "Additional CSS properties to apply to the grid.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>tiny</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>tiny</td><td>An object shaped like:<br /><pre>{
  "grid-template-columns": {
   "name": "string",
   "description": "The column definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns.\nFor IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772246(v=vs.85).aspx.",
@@ -40,7 +40,7 @@
   "description": "Additional CSS properties to apply to the grid.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>small</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>small</td><td>An object shaped like:<br /><pre>{
  "grid-template-columns": {
   "name": "string",
   "description": "The column definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns.\nFor IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772246(v=vs.85).aspx.",
@@ -61,7 +61,7 @@
   "description": "Additional CSS properties to apply to the grid.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>medium</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>medium</td><td>An object shaped like:<br /><pre>{
  "grid-template-columns": {
   "name": "string",
   "description": "The column definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns.\nFor IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772246(v=vs.85).aspx.",
@@ -82,7 +82,7 @@
   "description": "Additional CSS properties to apply to the grid.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>large</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>large</td><td>An object shaped like:<br /><pre>{
  "grid-template-columns": {
   "name": "string",
   "description": "The column definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns.\nFor IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772246(v=vs.85).aspx.",
@@ -103,7 +103,7 @@
   "description": "Additional CSS properties to apply to the grid.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr><tr><td>huge</td><td>An object shaped like:<br /><pre>{
+}</pre></td><td>optional</td><td>{}</td><td></td></tr><tr><td>huge</td><td>An object shaped like:<br /><pre>{
  "grid-template-columns": {
   "name": "string",
   "description": "The column definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns.\nFor IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772246(v=vs.85).aspx.",
@@ -124,4 +124,4 @@
   "description": "Additional CSS properties to apply to the grid.",
   "required": false
  }
-}</pre></td><td>optional</td><td>{}</td></tr></tbody><table>
+}</pre></td><td>optional</td><td>{}</td><td></td></tr></tbody><table>
