@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+* updated package.json test scripts
+* Update tests for dev-site v6
 
 5.25.0 - (July 30, 2019)
 ------------------

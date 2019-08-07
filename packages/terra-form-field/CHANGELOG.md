@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Changed
 * Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
+* updated package.json test scripts
+
+### Fixed
+* Pass down `isInvalid` to children of Field
 
 3.19.0 - (July 30, 2019)
 ------------------

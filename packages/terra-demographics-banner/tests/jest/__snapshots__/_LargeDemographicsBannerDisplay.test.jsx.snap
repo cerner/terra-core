@@ -20,6 +20,7 @@ exports[`renders large banner that contains all valid information 1`] = `
   >
     <Image
       alt="My Cat"
+      fit="fill"
       isFluid={false}
       src=""
       variant="default"

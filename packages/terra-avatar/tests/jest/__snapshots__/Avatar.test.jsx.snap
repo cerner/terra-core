@@ -125,7 +125,7 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
     >
       <img
         alt="placeholder"
-        class="image default image"
+        class="image cover default image"
         src="https://path/to/invalid_image.jpg"
       />
     </div>
@@ -166,7 +166,7 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
     >
       <img
         alt="placeholder"
-        class="image default image"
+        class="image cover default image"
         src="test-file-stub"
       />
     </div>

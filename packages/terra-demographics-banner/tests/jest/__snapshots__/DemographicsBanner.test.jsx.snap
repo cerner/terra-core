@@ -63,6 +63,7 @@ exports[`renders the banner wrapper with all props 1`] = `
   photo={
     <Image
       alt="My Cat"
+      fit="fill"
       isFluid={false}
       src=""
       variant="default"

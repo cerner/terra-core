@@ -4,7 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Revert components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+* updated package.json test scripts
+
+### Updated
+* updated jest snapshots
 
 3.21.0 - (July 30, 2019)
 ------------------
