@@ -57,6 +57,14 @@
     }
   }
 
+  .is-selected {
+    background-color: lightgreen;
+
+    &:hover {
+      background-color: pink;
+    }
+  }
+
   .cell-content {
     align-items: center;
     flex: 1 1 auto;

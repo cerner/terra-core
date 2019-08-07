@@ -16,6 +16,10 @@ const propTypes = {
    */
   isPadded: PropTypes.bool,
   /**
+   * Whether or not the cell is selected
+   */
+  isSelected: PropTypes.bool,
+  /**
    * Whether or not header cell should appear as a selectable element.
    */
   isSelectable: PropTypes.bool,
@@ -70,6 +74,7 @@ const TableCell = ({
   children,
   isPadded,
   isSelectable,
+  isSelected,
   metaData,
   onBlur,
   onClick,
@@ -82,6 +87,8 @@ const TableCell = ({
 }) => {
   const cellClassNames = cx([
     'cell',
+    { 'is-selectable': isSelectable },
+    { 'is-selected': isSelected && isSelectable },
     customProps.className,
   ]);
 
@@ -93,6 +100,7 @@ const TableCell = ({
     attrSpread['data-header-show-focus'] = 'true';
     attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
     attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
+    attrSpread['aria-selected'] = isSelected;
   }
 
   let content = children;
