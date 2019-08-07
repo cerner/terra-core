@@ -1,4 +1,31 @@
 :local {
+  .badge {
+    color: #fff;
+    font-family: Verdana,DejaVu Sans,sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+  }
+
+  .badge-container {
+    margin-bottom: 0.4em;
+  }
+
+  .badge-name,
+  .badge-version {
+    padding: 3.25px 5px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .badge-name {
+    background-color: #555;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .badge-version {
+    background-color: #08c;
+    border-radius: 0 3px 3px 0;
+  }
+
   .examples-header {
     border-bottom: var(--terra-doc-template-examples-header-border-bottom, 1px solid #eaecef);
     color: var(--terra-doc-template-examples-header-color);

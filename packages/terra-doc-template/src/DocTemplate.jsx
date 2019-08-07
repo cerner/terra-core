@@ -18,6 +18,14 @@ const propTypes = {
    */
   packageName: PropTypes.string,
   /**
+   * The url for the provided package if not in npm. This will be ignored if packageVersion is not set.
+   */
+  packageUrl: PropTypes.string,
+  /**
+   * The given component's package version.
+   */
+  packageVersion: PropTypes.string,
+  /**
    * The given component's readme file imported to a string.
    */
   readme: PropTypes.string,
@@ -57,6 +65,8 @@ const propTypes = {
 
 const defaultProps = {
   packageName: '',
+  packageUrl: '',
+  packageVersion: '',
   readme: '',
   srcPath: '',
   examples: [],
@@ -64,7 +74,7 @@ const defaultProps = {
 };
 
 const DocTemplate = ({
-  packageName, readme, srcPath, examples, propsTables, children, ...customProps
+  packageName, packageUrl, packageVersion, readme, srcPath, examples, propsTables, children, ...customProps
 }) => {
   let id = 0;
   const localExamples = examples;
@@ -92,11 +102,24 @@ const DocTemplate = ({
     exampleHeader = <h1 className={cx('examples-header')}>{exampleHeaderText}</h1>;
   }
 
-  const badge = (
-    <a href={`https://www.npmjs.org/package/${packageName}`}>
-      <img src={`https://badgen.net/npm/v/${packageName}`} alt="NPM version" />
-    </a>
-  );
+  const badge = packageVersion
+    ? (
+      <div className={cx('badge-container')}>
+        <a className={cx('badge')} href={packageUrl || `https://www.npmjs.org/package/${packageName}/v/${packageVersion}`}>
+          <span className={cx('badge-name')}>
+            {packageUrl ? 'package' : 'npm'}
+          </span>
+          <span className={cx('badge-version')}>
+            {`v${packageVersion}`}
+          </span>
+        </a>
+      </div>
+    )
+    : (
+      <a href={`https://www.npmjs.org/package/${packageName}`}>
+        <img src={`https://badgen.net/npm/v/${packageName}`} alt="NPM version" />
+      </a>
+    );
 
   return (
     <div {...customProps} className={docTemplateClassNames}>
