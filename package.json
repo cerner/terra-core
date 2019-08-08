@@ -28,7 +28,10 @@
     "extends": "terra"
   },
   "stylelint": {
-    "extends": "stylelint-config-terra"
+    "extends": "stylelint-config-terra",
+    "rules": {
+      "scss/at-mixin-pattern": "^(terra-)[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+    }
   },
   "scripts": {
     "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
@@ -41,10 +44,9 @@
     "compile:prod": "webpack --config webpack.config.js -p",
     "danger": "danger ci",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
-    "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
-    "docs": "node markdown.config.js",
+    "docs": "node scripts/root-readme-updater/index.js",
     "docs:peerDependencies": "node scripts/peer-dependency-generator/index.js",
-    "heroku-prebuild": "npm install -g lerna@2.1.2 && lerna init",
+    "heroku-prebuild": "npx lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
     "jest": "jest --config jestconfig.js",
     "jest:coverage": "jest --coverage --config jestconfig.js",
@@ -54,21 +56,21 @@
     "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
     "pretest": "npm run lint",
     "postinstall": "link-parent-bin && npm run compile && npm run bootstrap:hoist",
-    "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
-    "postpublish": "npm run docs && npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
-    "start": "tt-serve --config node_modules/terra-dev-site/config/webpack/webpack.config.js",
+    "release": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
+    "postrelease": "npm run docs && git add --all && git commit -m 'Update README.md'",
+    "start": "tt-serve",
     "start-heroku": "tt-serve-static --port $PORT --site './build'",
-    "start-prod": "tt-serve --config node_modules/terra-dev-site/config/webpack/webpack.config.js --env.disableHotReloading -p",
+    "start-prod": "tt-serve --env.disableHotReloading -p",
     "start-static": "tt-serve-static --site ./build",
     "test": "npm run jest && npm run wdio",
-    "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "wdio": "cross-env NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.0",
     "@babel/plugin-transform-object-assign": "^7.2.0",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.8.0",
     "browserslist-config-terra": "^1.0.0",
@@ -85,9 +87,8 @@
     "glob": "^7.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
-    "lerna": "^2.1.2",
+    "lerna": "^3.16.1",
     "link-parent-bin": "^1.0.0",
-    "markdown-magic": "^0.1.25",
     "raf": "^3.4.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
@@ -96,7 +97,7 @@
     "stylelint": "^10.0.1",
     "stylelint-config-terra": "^3.0.0",
     "terra-aggregate-translations": "^1.0.0",
-    "terra-dev-site": "^5.0.0",
+    "terra-dev-site": "^6.0.0",
     "terra-disclosure-manager": "^4.9.0",
     "terra-enzyme-intl": "^3.0.0",
     "terra-toolkit": "^5.0.0",

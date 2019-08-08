@@ -1,0 +1,16 @@
+:local {
+  .dropdown-list {
+    background-color: var(--terra-dropdown-button-list-background-color, #fff);
+    border-radius: var(--terra-dropdown-button-list-border-radius, 3px);
+    box-shadow: var(--terra-dropdown-button-list-box-shadow, 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5));
+    list-style: none;
+    margin: 0;
+    min-width: var(--terra-dropdown-button-list-min-width, 10rem);
+    outline: none;
+    overflow: hidden;
+    padding-bottom: var(--terra-dropdown-button-list-padding-bottom, 0.142857rem);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: var(--terra-dropdown-button-list-padding-top, 0.42857rem);
+  }
+}

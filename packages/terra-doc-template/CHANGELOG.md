@@ -3,7 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
 
+2.15.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.14.0 - (July 24, 2019)
+------------------
 ### Changed
 * Updated ExampleTemplate to not render example source markup until it is expanded
 

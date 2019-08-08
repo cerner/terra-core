@@ -3,6 +3,22 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+
+
+### Changed
+* Update tests for dev-site v6
+
+5.25.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.24.0 - (July 24, 2019)
+------------------
+### Changed
+* Update Spanish translations
 
 5.23.0 - (July 17, 2019)
 ------------------

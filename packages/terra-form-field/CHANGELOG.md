@@ -3,6 +3,21 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+
+### Fixed
+* Pass down `isInvalid` to children of Field
+
+3.19.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.18.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.17.0 - (July 17, 2019)
 ------------------

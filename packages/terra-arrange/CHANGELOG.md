@@ -3,6 +3,19 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+* Updated Props description for alignFitEnd and alignFill.
+
+3.17.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.16.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.15.0 - (July 16, 2019)
 ------------------

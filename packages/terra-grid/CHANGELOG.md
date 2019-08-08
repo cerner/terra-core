@@ -3,6 +3,18 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+
+6.6.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+6.5.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 6.4.0 - (July 16, 2019)
 ------------------

@@ -3,6 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+
+3.23.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.22.0 - (July 25, 2019)
+------------------
+### Added
+* Added documentation to mock window.matchMedia for jest tests.
+
+3.21.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.20.0 - (July 17, 2019)
 ------------------

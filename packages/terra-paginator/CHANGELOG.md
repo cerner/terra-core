@@ -3,6 +3,36 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+
+2.22.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.21.2 - (July 24, 2019)
+------------------
+### Fix
+* Include missing lib directory that was not available in 2.21.1
+
+2.21.1 - (July 24, 2019)
+------------------
+### Changed
+* Update changelog
+
+2.21.0 - (July 24, 2019)
+------------------
+### Added
+* Added new theme variables - see UPGRADEGUIDE.md
+
+### Fixed
+* Updated anchors to buttons for accessibility
+* Added support for i18n and translations
+
+### Changed
+* Removed theme variables - see UPGRADEGUIDE.md
+* Updated to use terra-visually-hidden-text component
 
 2.20.0 - (July 17, 2019)
 ------------------

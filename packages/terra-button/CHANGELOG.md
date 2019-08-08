@@ -6,6 +6,15 @@ Unreleased
 ### Fixed
 * Fixed Button not showing focus styles when programmatically focused
 
+### Changed
+* Update tests for dev-site v6
+* updated package.json test scripts
+
+3.18.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.17.0 - (July 16, 2019)
 ------------------
 ### Added
