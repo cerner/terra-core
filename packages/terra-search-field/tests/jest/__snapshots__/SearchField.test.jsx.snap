@@ -145,8 +145,10 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
+        onMouseDown={[Function]}
         title="Terra.searchField.submit-search"
         type="button"
       >
