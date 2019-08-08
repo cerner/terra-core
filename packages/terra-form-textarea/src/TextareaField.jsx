@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IconError from 'terra-icon/lib/icon/IconError';
 import Field from 'terra-form-field';
+
 import Textarea from './Textarea';
 
 const propTypes = {
