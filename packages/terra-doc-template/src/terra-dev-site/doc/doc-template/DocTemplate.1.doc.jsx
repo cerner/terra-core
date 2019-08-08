@@ -25,7 +25,7 @@ const DocTemplateExamples = () => (
         example: (<p>This very page was generated using the DocTemplate. The template supports more than one Props Table and example, even though those were not featured here.</p>),
       },
       {
-        title: 'BadgeExamples',
+        title: 'Package Badge Examples',
         source: BadgeExamplesSrc,
         example: <BadgeExamples />,
       },

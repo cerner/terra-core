@@ -93,4 +93,23 @@ describe('DocTemplate', () => {
     />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render custom package badge when url and version props are set', () => {
+    const wrapper = shallow(<DocTemplate
+      packageName="terra-doc-template"
+      packageUrl="https://engineering.cerner.com/terra-ui/components/terra-doc-template/doc-template/doc-template"
+      packageVersion="2.15.0"
+      readme={readme}
+      srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
+      examples={[{
+        title: 'Test Example 1',
+        description: 'Describing the test',
+        example: exampleElement,
+        source: exampleSrc,
+      },
+      ]}
+      propsTables={[{ componentSrc: testComponentSrc, componentName: 'Test Component' }]}
+    />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -13,6 +13,66 @@ exports[`DocTemplate should render a default component with nothing 1`] = `
 </div>
 `;
 
+exports[`DocTemplate should render custom package badge when url and version props are set 1`] = `
+<div
+  className="doc-template"
+>
+  <div
+    className="doc-card"
+  >
+    <div
+      className="badge-container"
+    >
+      <a
+        className="badge"
+        href="https://engineering.cerner.com/terra-ui/components/terra-doc-template/doc-template/doc-template"
+      >
+        <span
+          className="badge-name"
+        >
+          package
+        </span>
+        <span
+          className="badge-version"
+        >
+          v2.15.0
+        </span>
+      </a>
+    </div>
+    <Markdown
+      src="test-file-stub"
+    />
+    <a
+      href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
+    >
+      View component source code
+    </a>
+  </div>
+  <h1
+    className="examples-header"
+  >
+    Example
+  </h1>
+  <ExampleTemplate
+    description="Describing the test"
+    example={<TestComponentExample />}
+    exampleSrc="test-file-stub"
+    key="0"
+    title="Test Example 1"
+  />
+  <div
+    className="doc-card"
+  >
+    <PropsTable
+      componentName="Test Component"
+      key="1"
+      propsResolution="default"
+      src="test-file-stub"
+    />
+  </div>
+</div>
+`;
+
 exports[`DocTemplate should show custom props tables 1`] = `
 <div
   class="doc-template"
