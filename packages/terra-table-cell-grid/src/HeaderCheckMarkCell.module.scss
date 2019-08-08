@@ -1,12 +1,8 @@
 :local {
   .header-cell {
-    border: 0;
+    border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
     flex: 0 0 auto;
     position: relative;
-  
-    &.derp {
-      border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
-    }
 
     &:last-of-type {
       border-right: 0;
@@ -16,7 +12,7 @@
   .checkmark {
     border: 1px solid transparent;
     border-radius: 3px;
-    color: #fff;
+    color: transparent;
     height: 1.143rem;
     padding: 1px;
     position: relative;

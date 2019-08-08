@@ -1,34 +1,67 @@
+
 import React, {
   useState,
 } from 'react';
 import Table, {
-  Row, Cell, HeaderCell, Utils, HeaderCheckMarkCell,
+  Row, Cell, HeaderCell, Utils, CheckMarkCell, HeaderCheckMarkCell,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const maxSectionCount = 3;
+const rowCount = 5;
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-const CheckMarkTable = () => {
+const MultiSelectTable = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);
+  const [selectedMarks, setSelectedMarks] = useState([]);
+  const [headerState, setHeaderState] = useState('none');
 
   const handleRowSelection = (event, metaData) => {
     event.preventDefault();
     setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
   };
 
+  const handleMarkSelection = (event, metaData) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const newSelection = Utils.updatedMultiSelectedKeys(selectedMarks, metaData.key);
+    if (newSelection.length === rowCount) {
+      setHeaderState('all');
+    } else if (newSelection.length > 0) {
+      setHeaderState('intermediate');
+    } else {
+      setHeaderState('none');
+    }
+    setSelectedMarks(Utils.updatedMultiSelectedKeys(selectedMarks, metaData.key));
+  };
+
+  const handleHeaderMarkSelection = () => {
+    if (headerState === 'none') {
+      setHeaderState('all');
+    } else {
+      setHeaderState('none');
+    }
+  };
+
   const createTableRow = rowData => (
     <Row
-      selectionStyle="checkmark"
       key={rowData.key}
-      isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key)}
+      isSelectable
       isSelected={selectedKeys.indexOf(rowData.key) >= 0}
       metaData={{ key: rowData.key }}
       onSelect={handleRowSelection}
     >
+      {(
+        <CheckMarkCell
+          isPadded
+          isSelectable
+          isSelected={headerState === 'none' ? false : headerState === 'all' || selectedMarks.indexOf(rowData.key) >= 0}
+          metaData={{ key: rowData.key }}
+          onSelect={handleMarkSelection}
+        />
+      )}
       {createCellsForRow(rowData.cells)}
     </Row>
   );
@@ -40,7 +73,7 @@ const CheckMarkTable = () => {
       aria-multiselectable
       paddingStyle="standard"
       headerCells={[
-        <HeaderCheckMarkCell isPadded key="derp" />,
+        <HeaderCheckMarkCell isSelected={headerState !== 'none'} isIntermediate={headerState === 'intermediate'} onSelect={handleHeaderMarkSelection} isPadded isSelectable key="derp" />,
         <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>,
         <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>,
         <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>,
@@ -52,4 +85,4 @@ const CheckMarkTable = () => {
   );
 };
 
-export default CheckMarkTable;
+export default MultiSelectTable;
