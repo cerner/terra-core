@@ -19,7 +19,10 @@ class ToggleDefault extends React.Component {
     const { isOpen } = this.state;
     return (
       <div>
-        <IconInformation onClick={this.handleOnClick} />
+        <IconInformation onClick={this.handleOnClick} aria-expanded={isOpen} />
+        {/**
+        * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
+        */}
         <Toggle isOpen={isOpen} isAnimated>
           <p>
 Lorem ipsum dolor sit amet,

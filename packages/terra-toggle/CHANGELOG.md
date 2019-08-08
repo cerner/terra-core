@@ -6,9 +6,11 @@ Unreleased
 ### Changed
 * updated package.json test scripts
 
-
 ### Changed
 * Update tests for dev-site v6
+
+### Added
+* Added aria-expanded state to docs, examples and tests.
 
 3.17.0 - (July 30, 2019)
 ------------------

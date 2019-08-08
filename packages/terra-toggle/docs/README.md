@@ -1,6 +1,6 @@
 # Terra Toggle
 
-Toggle component that transitions content in and out. For toggle button functionality, see [terra-toggle-button](https://engineering.cerner.com/terra-ui/#/components/terra-toggle-button/toggle-button/toggle-button).
+Toggle component that transitions content in and out. Use aria-expanded state on the triggering component. The objective of aria-expanded state is to indicate whether regions of the content are collapsible, and to expose whether a region is currently expanded or collapsed. For toggle button functionality, see [terra-toggle-button](https://engineering.cerner.com/terra-ui/#/components/terra-toggle-button/toggle-button/toggle-button).
 
 ## Getting Started
 
@@ -44,9 +44,10 @@ class ToggleDefault extends React.Component {
   }
 
   render() {
+    const { isOpen } = this.state;
     return (
       <div>
-        <IconInformation onClick={this.handleOnClick} />
+        <IconInformation onClick={this.handleOnClick} aria-expanded={isOpen} />
         <Toggle isOpen={this.state.isOpen} isAnimated>
           Hello World
         </Toggle>
