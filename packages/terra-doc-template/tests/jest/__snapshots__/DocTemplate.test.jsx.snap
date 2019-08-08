@@ -13,66 +13,6 @@ exports[`DocTemplate should render a default component with nothing 1`] = `
 </div>
 `;
 
-exports[`DocTemplate should render custom package badge when url and version props are set 1`] = `
-<div
-  className="doc-template"
->
-  <div
-    className="doc-card"
-  >
-    <div
-      className="badge-container"
-    >
-      <a
-        className="badge"
-        href="https://engineering.cerner.com/terra-ui/components/terra-doc-template/doc-template/doc-template"
-      >
-        <span
-          className="badge-name"
-        >
-          package
-        </span>
-        <span
-          className="badge-version"
-        >
-          v2.15.0
-        </span>
-      </a>
-    </div>
-    <Markdown
-      src="test-file-stub"
-    />
-    <a
-      href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
-    >
-      View component source code
-    </a>
-  </div>
-  <h1
-    className="examples-header"
-  >
-    Example
-  </h1>
-  <ExampleTemplate
-    description="Describing the test"
-    example={<TestComponentExample />}
-    exampleSrc="test-file-stub"
-    key="0"
-    title="Test Example 1"
-  />
-  <div
-    className="doc-card"
-  >
-    <PropsTable
-      componentName="Test Component"
-      key="1"
-      propsResolution="default"
-      src="test-file-stub"
-    />
-  </div>
-</div>
-`;
-
 exports[`DocTemplate should show custom props tables 1`] = `
 <div
   class="doc-template"
@@ -279,14 +219,11 @@ exports[`DocTemplate should show the version 1`] = `
   <div
     className="doc-card"
   >
-    <a
-      href="https://www.npmjs.org/package/terra-doc-template"
-    >
-      <img
-        alt="NPM version"
-        src="https://badgen.net/npm/v/terra-doc-template"
-      />
-    </a>
+    <NpmBadge
+      packageName="terra-doc-template"
+      packageUrl=""
+      packageVersion=""
+    />
   </div>
   <div
     className="doc-card"
@@ -301,14 +238,11 @@ exports[`DocTemplate should show the version and readme 1`] = `
   <div
     className="doc-card"
   >
-    <a
-      href="https://www.npmjs.org/package/terra-doc-template"
-    >
-      <img
-        alt="NPM version"
-        src="https://badgen.net/npm/v/terra-doc-template"
-      />
-    </a>
+    <NpmBadge
+      packageName="terra-doc-template"
+      packageUrl=""
+      packageVersion=""
+    />
     <Markdown
       src="test-file-stub"
     />
@@ -326,14 +260,11 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
   <div
     className="doc-card"
   >
-    <a
-      href="https://www.npmjs.org/package/terra-doc-template"
-    >
-      <img
-        alt="NPM version"
-        src="https://badgen.net/npm/v/terra-doc-template"
-      />
-    </a>
+    <NpmBadge
+      packageName="terra-doc-template"
+      packageUrl=""
+      packageVersion=""
+    />
     <Markdown
       src="test-file-stub"
     />

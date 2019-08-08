@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
+import NpmBadge from './NpmBadge';
 import IndexExampleTemplate from './ExampleTemplate';
 import styles from './DocTemplate.module.scss';
 
@@ -102,24 +103,13 @@ const DocTemplate = ({
     exampleHeader = <h1 className={cx('examples-header')}>{exampleHeaderText}</h1>;
   }
 
-  const badge = packageVersion
-    ? (
-      <div className={cx('badge-container')}>
-        <a className={cx('badge')} href={packageUrl || `https://www.npmjs.org/package/${packageName}/v/${packageVersion}`}>
-          <span className={cx('badge-name')}>
-            {packageUrl ? 'package' : 'npm'}
-          </span>
-          <span className={cx('badge-version')}>
-            {`v${packageVersion}`}
-          </span>
-        </a>
-      </div>
-    )
-    : (
-      <a href={`https://www.npmjs.org/package/${packageName}`}>
-        <img src={`https://badgen.net/npm/v/${packageName}`} alt="NPM version" />
-      </a>
-    );
+  const badge = (
+    <NpmBadge
+      packageName={packageName}
+      packageUrl={packageUrl}
+      packageVersion={packageVersion}
+    />
+  );
 
   return (
     <div {...customProps} className={docTemplateClassNames}>

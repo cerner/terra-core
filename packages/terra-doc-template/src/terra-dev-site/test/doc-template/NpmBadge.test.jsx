@@ -8,11 +8,10 @@ const packageVersion = '2.13.0';
 
 const BadgeExamples = () => (
   <div>
-    <p>Dynamically generated npm badge:</p>
+    <br />
     <NpmBadge packageName={name} />
-    <p>Custom Badge with packageVersion prop set:</p>
+    <br />
     <NpmBadge packageName={name} packageVersion={packageVersion} />
-    <p>Custom Badge with packageUrl and packageVersion props set:</p>
     <NpmBadge packageName={name} packageUrl={packageUrl} packageVersion={packageVersion} />
   </div>
 );
