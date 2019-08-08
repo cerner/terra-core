@@ -39,7 +39,7 @@ const CheckMarkTable = () => {
     event.preventDefault();
     if (event.getModifierState('Control') || event.getModifierState('Meta')) {
       setSelectedRows(Utils.updatedMultiSelectedKeys(selectedRows, metaData.index));
-    } else if (selectedColumns.length === 1 && selectedRows.indexOf(metaData.index) >= 0) {
+    } else if (selectedRows.length === 1 && selectedRows.indexOf(metaData.index) >= 0) {
       setSelectedRows([]);
     } else {
       setSelectedRows([metaData.index]);
