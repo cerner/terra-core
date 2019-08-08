@@ -3,6 +3,7 @@ ChangeLog
 
 Unreleased
 ----------
+
 2.21.0 - (July 30, 2019)
 ------------------
 ### Changed
