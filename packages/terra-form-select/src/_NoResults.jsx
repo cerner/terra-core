@@ -26,7 +26,7 @@ const contextTypes = {
 };
 
 const NoResults = ({ noResultContent, value }, context) => (
-  <div className={cx('no-results')}>
+  <div role="option" className={cx('no-results')} aria-selected="false">
     {noResultContent || context.intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: value })}
   </div>
 );
