@@ -1,7 +1,7 @@
 {
   "name": "terra-responsive-element",
   "main": "lib/ResponsiveElement.js",
-  "version": "5.4.0",
+  "version": "5.5.0",
   "description": "The terra-responsive-element conditionally renders components based on viewport size",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-breakpoints": "^2.13.0",
-    "terra-doc-template": "^2.14.0"
+    "terra-breakpoints": "^2.14.0",
+    "terra-doc-template": "^2.15.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -37,8 +37,8 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
-    "test": "npm run test:jest && npm run test:wdio",
-    "test:jest": "jest --config ../../jestconfig.js",
-    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "test": "npm run jest && npm run wdio",
+    "jest": "jest --config ../../jestconfig.js",
+    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
   }
 }

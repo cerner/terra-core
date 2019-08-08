@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Updated
+* updated jest snapshots
+
+### Changed
+* updated package.json test scripts
+
+3.21.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.20.0 - (July 24, 2019)
 ------------------

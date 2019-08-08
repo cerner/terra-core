@@ -33,11 +33,11 @@ const propTypes = {
    */
   alignFitStart: PropTypes.oneOf(['center', 'bottom', 'stretch']),
   /**
-   * The vertical orientation of fill. One of: `center`, `bottom`, `stretch`.
+   * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`.
    */
   alignFitEnd: PropTypes.oneOf(['center', 'bottom', 'stretch']),
   /**
-   * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`.
+   * The vertical orientation of fill. One of: `center`, `bottom`, `stretch`.
    */
   alignFill: PropTypes.oneOf(['center', 'bottom', 'stretch']),
   /**

@@ -5,6 +5,12 @@ Unreleased
 ----------
 ### Changed
 * Updated search-field example code to show more usage.
+* updated package.json test scripts
+
+3.23.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.22.0 - (July 24, 2019)
 ------------------

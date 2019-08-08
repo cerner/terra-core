@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+
+3.14.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.13.0 - (July 24, 2019)
 ------------------
@@ -13,6 +20,10 @@ Unreleased
 ------------------
 ### Added
 * Added documentation on required peerDependencies
+* Added `Object-fit-images` polyfill for IE.
+* Added `object-fit` property in css.
+* Added prop Fit.
+* Added examples using Fit.
 
 ### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
