@@ -7,6 +7,11 @@ Element for building out textareas in a form.
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-form-textarea`
 
+## Browser Resizability
+Note - for most browsers, dragging the gripper resizes the text area. Under the hood, the browser applies an inline width and height.
+
+To swap different `terra-form-textarea` components altered by this resize functionality, assign each component a unique key. Otherwise, React reconcilliation will not transfer these inline styles.
+
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
 

@@ -7,6 +7,7 @@ Unreleased
 * Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
 
 ### Changed
+* Updated search-field example code to show more usage.
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update jest test snanpshot
 * updated package.json test scripts
