@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+* Update jest test snanpshot
 * updated package.json test scripts
 
 3.23.0 - (July 30, 2019)
@@ -29,6 +31,7 @@ Unreleased
 3.19.0 - (July 16, 2019)
 ------------------
 ### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 * Updated jest snapshots
 

@@ -47,9 +47,12 @@ exports[`should display the required icon for fields with hideRequired, but have
       >
         *
       </div>
-      <VisuallyHiddenText
-        text="Terra.form.field.required"
-      />
+      <FormattedMessage
+        id="Terra.form.field.required"
+        values={Object {}}
+      >
+        <Component />
+      </FormattedMessage>
       Hidden Required CheckboxField
     </div>
   </legend>
@@ -395,11 +398,12 @@ exports[`should render an optional part on the label 1`] = `
       className="legend"
     >
       Optional CheckboxField
-      <span
-        className="optional"
+      <FormattedMessage
+        id="Terra.form.field.optional"
+        values={Object {}}
       >
-        Terra.form.field.optional
-      </span>
+        <Component />
+      </FormattedMessage>
       <span
         className="error-icon-hidden"
       />
@@ -452,9 +456,12 @@ exports[`should render required checkbox field 1`] = `
       >
         *
       </div>
-      <VisuallyHiddenText
-        text="Terra.form.field.required"
-      />
+      <FormattedMessage
+        id="Terra.form.field.required"
+        values={Object {}}
+      >
+        <Component />
+      </FormattedMessage>
       Required CheckboxField
       <span
         className="error-icon-hidden"

@@ -221,11 +221,11 @@ it('should render a required field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a required field with an Select', () => {
+it('should render a required field with a Select', () => {
   const field = (
     <Field
       label="Field Label"
@@ -235,15 +235,102 @@ it('should render a required field with an Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a required field with an Textarea', () => {
+it('should render a required field with a Textarea', () => {
   const field = (
     <Field
       label="Field Label"
       htmlFor="test"
+      required
+    >
+      <Textarea />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field).children();
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render an invalid field with an Input', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      isInvalid
+    >
+      <Input />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render an invalid field with a Select', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      isInvalid
+    >
+      <Select />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render an invalid field with an Textarea', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      isInvalid
+    >
+      <Textarea />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render an invalid and required field with an Input', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      isInvalid
+      required
+    >
+      <Input />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render an invalid and required field with a Select', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      isInvalid
+      required
+    >
+      <Select />
+    </Field>
+  );
+  const wrapper = mountWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render an invalid and required field with a Textarea', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      isInvalid
       required
     >
       <Textarea />
@@ -262,11 +349,11 @@ it('should render a field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a field with an Select', () => {
+it('should render a field with a Select', () => {
   const field = (
     <Field
       label="Field Label"
@@ -275,11 +362,11 @@ it('should render a field with an Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a field with an Textarea', () => {
+it('should render a field with a Textarea', () => {
   const field = (
     <Field
       label="Field Label"
@@ -288,6 +375,6 @@ it('should render a field with an Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });

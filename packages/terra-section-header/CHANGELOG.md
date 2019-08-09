@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * updated package.json test scripts
+* Remove react and react-dom as dependencies
 
 2.19.0 - (July 30, 2019)
 ------------------
