@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
+import { FormattedMessage } from 'react-intl';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
@@ -96,28 +97,17 @@ const getAlertIcon = (type, customIcon) => {
   }
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
 const Alert = ({
-  type,
+  action,
   children,
-  title,
   customIcon,
   customColorClass,
   onDismiss,
-  action,
+  title,
+  type,
   ...customProps
-}, {
-  intl,
 }) => {
-  const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
+  const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
   const attributes = Object.assign({}, customProps);
   const narrowAlertClassNames = cx([
     'alert-base',
@@ -146,7 +136,13 @@ const Alert = ({
   }
 
   if (onDismiss) {
-    dismissButton = (<Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} onClick={onDismiss} />);
+    dismissButton = (
+      <FormattedMessage id="Terra.alert.dismiss">
+        {buttonText => (
+          <Button text={buttonText} onClick={onDismiss} />
+        )}
+      </FormattedMessage>
+    );
   }
   if (onDismiss || action) {
     bodyClassNameForNarrowParent = cx(['body', 'body-narrow']);
@@ -191,7 +187,6 @@ const Alert = ({
 };
 Alert.propTypes = propTypes;
 Alert.defaultProps = defaultProps;
-Alert.contextTypes = contextTypes;
 Alert.Opts = {};
 Alert.Opts.Types = AlertTypes;
 

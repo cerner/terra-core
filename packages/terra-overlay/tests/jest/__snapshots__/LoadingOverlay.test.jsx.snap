@@ -494,11 +494,16 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                     </svg>
                   </IconBase>
                 </IconSpinner>
-                <div
-                  className="message"
+                <FormattedMessage
+                  id="Terra.Overlay.loading"
+                  values={Object {}}
                 >
-                  Terra.Overlay.loading
-                </div>
+                  <div
+                    className="message"
+                  >
+                    Terra.Overlay.loading
+                  </div>
+                </FormattedMessage>
               </div>
             </div>
           </div>
