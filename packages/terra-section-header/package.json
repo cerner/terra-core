@@ -28,8 +28,6 @@
     "classnames": "^2.2.5",
     "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
     "terra-arrange": "^3.17.0",
     "terra-doc-template": "^2.15.0",
     "terra-mixins": "^1.33.0"
