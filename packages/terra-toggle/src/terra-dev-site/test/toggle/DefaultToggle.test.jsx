@@ -17,7 +17,7 @@ class ToggleDefault extends React.Component {
     const { isOpen } = this.state;
     return (
       <div>
-        <button type="button" id="trigger-toggle" onClick={this.handleOnClick} aria-expanded={isOpen}>Default Toggle</button>
+        <button type="button" id="trigger-toggle" onClick={this.handleOnClick} aria-expanded={isOpen} aria-controls="toggle">Default Toggle</button>
         <Toggle id="toggle" isOpen={this.state.isOpen}>
           <p>
             Lorem ipsum dolor sit amet,

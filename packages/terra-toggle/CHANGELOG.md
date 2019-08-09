@@ -10,7 +10,7 @@ Unreleased
 * Update tests for dev-site v6
 
 ### Added
-* Added aria-expanded state to docs, examples and tests.
+* Added aria-expanded and aria-controls state to docs, examples and tests.
 
 3.17.0 - (July 30, 2019)
 ------------------
