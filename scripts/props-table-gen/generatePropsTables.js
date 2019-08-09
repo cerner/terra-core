@@ -6,6 +6,8 @@ const reactDocs = require('react-docgen');
 /* eslint-enable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 
+// Potentially adding to webpack
+
 const packagesDir = path.resolve(
   path.dirname(__dirname), '../packages',
 );
