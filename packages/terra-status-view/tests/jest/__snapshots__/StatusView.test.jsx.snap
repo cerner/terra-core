@@ -447,8 +447,10 @@ exports[`should render a status view with custom glyph, title, message, and two 
             className="button neutral button"
             disabled={false}
             onBlur={[Function]}
+            onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
+            onMouseDown={[Function]}
             type="button"
           >
             <span
@@ -479,8 +481,10 @@ exports[`should render a status view with custom glyph, title, message, and two 
             className="button neutral button"
             disabled={false}
             onBlur={[Function]}
+            onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
+            onMouseDown={[Function]}
             type="button"
           >
             <span

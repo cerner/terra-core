@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Update jest test snanpshot
 * updated package.json test scripts
 
 3.23.0 - (July 30, 2019)

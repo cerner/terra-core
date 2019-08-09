@@ -257,8 +257,10 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
+        onMouseDown={[Function]}
         type="button"
       >
         <span

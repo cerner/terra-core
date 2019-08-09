@@ -17,5 +17,7 @@
   "Terra.form.select.multiSelectUsageGuidance": "Ange text eller använd upp- och nedpilarna för att navigera genom alternativen. Tryck på Enter för att markera eller avmarkera ett alternativ.",
   "Terra.form.select.searchUsageGuidance": "Ange text eller använd upp- och nedpilarna för att navigera genom alternativen. Tryck på Enter för att välja ett alternativ.",
   "Terra.form.select.clearSelect": "Ta bort markering",
-  "Terra.form.select.selectCleared": "Välj omarkerat värde"
+  "Terra.form.select.selectCleared": "Välj omarkerat värde",
+  "Terra.form.select.menu": "Meny",
+  "Terra.form.select.option": "Alternativ"
 }
