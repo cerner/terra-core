@@ -53,6 +53,10 @@ const propTypes = {
    */
   isReversed: PropTypes.bool,
   /**
+   * Callback function triggered when mouse is pressed.
+   */
+  onMouseDown: PropTypes.func,
+  /**
    * Callback function triggered when clicked.
    */
   onClick: PropTypes.func,
@@ -115,6 +119,10 @@ class Button extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+
+    this.shouldShowFocus = true;
   }
 
   handleOnBlur(event) {
@@ -164,6 +172,27 @@ class Button extends React.Component {
     }
   }
 
+  handleFocus(event) {
+    if (this.shouldShowFocus) {
+      this.setState({ focused: true });
+    }
+
+    if (this.props.onFocus) {
+      this.props.onFocus(event);
+    }
+  }
+
+  handleMouseDown(event) {
+    // Prevent button from showing focus styles when clicked
+    this.shouldShowFocus = false;
+    // Wait until after onFocus has been triggered on browsers where it will get triggered for click
+    setTimeout(() => { this.shouldShowFocus = true; });
+
+    if (this.props.onMouseDown) {
+      this.props.onMouseDown(event);
+    }
+  }
+
   render() {
     const {
       icon,
@@ -177,6 +206,7 @@ class Button extends React.Component {
       variant,
       href,
       onClick,
+      onMouseDown,
       onBlur,
       onFocus,
       onKeyDown,
@@ -255,7 +285,8 @@ class Button extends React.Component {
         onBlur={this.handleOnBlur}
         title={buttonTitle}
         onClick={onClick}
-        onFocus={onFocus}
+        onMouseDown={this.handleMouseDown}
+        onFocus={this.handleFocus}
         href={href}
         ref={refCallback}
       >
