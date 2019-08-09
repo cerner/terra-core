@@ -21,7 +21,7 @@ import SearchFieldDefaultValueSrc from '!raw-loader!../../../../src/terra-dev-si
 import SearchFieldDisabled from '../example/SearchFieldDisabled';
 import SearchFieldDisabledSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldDisabled';
 import SearchFieldDisabledAutoFormatting from '../example/SearchFieldDisableAutoFormatAttrs';
-import SearchFieldDisabledAutoFormattingSrc from '../example/SearchFieldDisableAutoFormatAttrs';
+import SearchFieldDisabledAutoFormattingSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldDisableAutoFormatAttrs';
 import SearchFieldBlock from '../example/SearchFieldBlock';
 import SearchFieldBlockSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldBlock';
 import SearchFieldDisableAutoSearch from '../example/SearchFieldDisableAutoSearch';
