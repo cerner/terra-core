@@ -8,6 +8,7 @@
   color: map-get($color-map, color);
   font-weight: map-get($color-map, font-weight);
 
+  // Doesn't use &:focus so focus styles don't appear when clicked
   &.is-focused {
     background-color: map-get($color-map, focus-background-color);
     border-color: map-get($color-map, focus-border-color);
