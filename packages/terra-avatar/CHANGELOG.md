@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Updated
+- another test
+
 ### Fixed
 * Fixed issue for avatar to allow non-square images by sending `Fit` as `cover`.
 
