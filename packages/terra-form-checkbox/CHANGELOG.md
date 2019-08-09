@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Updated
+* test
+
 ### Changed
 * Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
 * updated package.json test scripts

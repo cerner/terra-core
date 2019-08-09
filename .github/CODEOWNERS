@@ -1,2 +1,10 @@
 # Set default code owners for all files in repo
 * @bjankord @mjhenkes @ryanthemanuel @tbiethman
+terra-avatar/*  @yuderekyu
+terra-form-checkbox/*  @yuderekyu
+terra-form-radio/*  @yuderekyu
+terra-form-select/*  @StephenEsser
+terra-list/* @dkasper-was-taken
+terra-responsive-element/*  @StephenEsser
+terra-status-view/*  @yuderekyu
+terra-table/* @dkasper-was-taken

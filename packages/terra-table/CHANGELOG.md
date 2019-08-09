@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Updated
+* test
+
 ### Changed
 * updated package.json test scripts
 
