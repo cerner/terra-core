@@ -1482,10 +1482,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('tag should open and close the dropdown by clicking on toggle icon', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
-      });
-
       it('tag should open the dropdown by clicking the select toggle icon', () => {
         browser.click('[data-terra-form-select-toggle]');
       });
@@ -1544,10 +1540,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('tag should select second option by keyboard interaction', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
-      });
-
       it('tag should navigate to second option', () => {
         browser.keys('Tab');
         browser.keys('ArrowDown');

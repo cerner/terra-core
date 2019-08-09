@@ -3,8 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.21.0 - (July 30, 2019)
+------------------
 ### Changed
+* Minor dependency version bump
 * Updated errorIcon default prop from `Field.defaultProps.errorIcon` with `<IconError>` component.
+* updated package.json test scripts
 
 ### Removed
 * Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
@@ -13,6 +18,9 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
+
+### Changed
+* Update tests for dev-site v6
 
 3.19.0 - (July 17, 2019)
 ------------------

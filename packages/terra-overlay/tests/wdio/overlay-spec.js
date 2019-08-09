@@ -29,6 +29,7 @@ Terra.describeViewports('Overlay', ['huge'], () => {
   describe('Overlay on Request-Close', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-overlay/overlay/overlay/on-request-close-overlay');
+      browser.moveToObject('#root', 0, 0);
     });
 
     describe('OnRequestClose-Full Screen Overlay', () => {

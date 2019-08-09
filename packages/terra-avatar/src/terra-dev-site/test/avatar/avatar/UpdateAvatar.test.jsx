@@ -1,10 +1,11 @@
 import React from 'react';
 import Avatar from '../../../../index';
 import exampleAvatarImage from '../../../assets/150x150.jpg';
-import exampleAvatarImage2 from '../../../assets/163x40.png';
+import exampleAvatarImage2 from '../../../assets/200x133.jpg';
+import exampleAvatarImage3 from '../../../assets/170x251.jpg';
 
 let initials = 'JD';
-let image = exampleAvatarImage2;
+let image = exampleAvatarImage;
 let alt = 'placeholder';
 const variant = 'user';
 const ariaLabel = 'user';
@@ -32,10 +33,12 @@ class UpdateAvatar extends React.Component {
   }
 
   imageButtonHandle() {
-    if (image === exampleAvatarImage2) {
-      image = exampleAvatarImage;
-    } else {
+    if (image === exampleAvatarImage) {
       image = exampleAvatarImage2;
+    } else if (image === exampleAvatarImage2) {
+      image = exampleAvatarImage3;
+    } else {
+      image = exampleAvatarImage;
     }
 
     this.forceUpdate();

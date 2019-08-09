@@ -79,6 +79,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Resizes when given several rows of input', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea');
+        browser.moveToObject('#root', 0, 0);
       });
 
       Terra.it.validatesElement('0', { rules: ignoredA11y });
@@ -107,6 +108,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when ontouch exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-on-touch-start');
+        browser.moveToObject('#root', 0, 0);
       });
 
       Terra.it.validatesElement('0', { rules: ignoredA11y });
@@ -121,6 +123,8 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when DocumentTouch exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-document-touch');
+
+        browser.moveToObject('#root', 0, 0);
       });
 
       Terra.it.validatesElement('0', { rules: ignoredA11y });
@@ -135,6 +139,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when maxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-max-touch-points');
+        browser.moveToObject('#root', 0, 0);
       });
 
       Terra.it.validatesElement('0', { rules: ignoredA11y });
@@ -149,6 +154,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when msMaxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-ms-max-touch-points');
+        browser.moveToObject('#root', 0, 0);
       });
 
       Terra.it.validatesElement('0', { rules: ignoredA11y });
@@ -165,6 +171,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Valid TextareaField', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+        browser.moveToObject('#root', 0, 0);
       });
 
       Terra.it.validatesElement();

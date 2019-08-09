@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update jest test snanpshot
+* updated package.json test scripts
+
+4.4.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 4.3.0 - (July 24, 2019)
 ------------------

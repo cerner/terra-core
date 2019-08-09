@@ -6,6 +6,20 @@ Unreleased
 ### Removed
 * Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
 
+### Added
+* Added aria-label to resolve accessibility violation with axe-core v3.3.0.
+* Updated translations.
+
+### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
+* updated package.json test scripts
+* Update tests for dev-site v6
+
+5.25.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.24.0 - (July 24, 2019)
 ------------------
 ### Changed
@@ -32,6 +46,7 @@ Unreleased
 5.20.0  - (July 11, 2019)
 ------------------
 ### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 * Updated Docs around the requirement of terra-base and aggregate-translations.
 

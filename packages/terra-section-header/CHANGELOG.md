@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* updated package.json test scripts
+* Remove react and react-dom as dependencies
+
+2.19.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.18.0 - (July 24, 2019)
 ------------------
