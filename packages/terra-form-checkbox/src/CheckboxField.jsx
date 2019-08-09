@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
-
+import { FormattedMessage } from 'react-intl';
 import styles from './CheckboxField.module.scss';
 
 const cx = classNames.bind(styles);
@@ -69,16 +69,7 @@ const defaultProps = {
   showOptional: false,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
-const CheckboxField = (props, { intl }) => {
+const CheckboxField = (props) => {
   const {
     children,
     error,
@@ -117,12 +108,23 @@ const CheckboxField = (props, { intl }) => {
         {required && (isInvalid || !hideRequired) && (
           <React.Fragment>
             <div aria-hidden="true" className={cx('required')}>*</div>
-            <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
+            <FormattedMessage id="Terra.form.field.required">
+              {requiredText => (
+                <VisualyHiddenText text={requiredText} />
+              )}
+            </FormattedMessage>
           </React.Fragment>
         )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
-        {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
+        {showOptional && !required
+          && (
+            <FormattedMessage id="Terra.form.field.optional">
+              {optionalText => (
+                <span className={cx('optional')}>{optionalText}</span>
+              )}
+            </FormattedMessage>
+          )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
     </legend>
@@ -150,6 +152,5 @@ const CheckboxField = (props, { intl }) => {
 
 CheckboxField.propTypes = propTypes;
 CheckboxField.defaultProps = defaultProps;
-CheckboxField.contextTypes = contextTypes;
 
 export default CheckboxField;
