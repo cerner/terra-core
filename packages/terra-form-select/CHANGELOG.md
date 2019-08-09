@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added aria-label to resolve accessibility violation with axe-core v3.3.0.
+* Updated translations.
+
 ### Changed
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * updated package.json test scripts
@@ -12,6 +16,7 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
+
 
 5.24.0 - (July 24, 2019)
 ------------------

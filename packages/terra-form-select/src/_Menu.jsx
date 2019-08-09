@@ -512,6 +512,7 @@ class Menu extends React.Component {
         id="terra-select-menu"
         role="listbox"
         className={cx('menu')}
+        aria-label={this.props.intl.formatMessage({ id: 'Terra.form.select.menu' })}
         ref={(menu) => { this.menu = menu; }}
         {...(this.state.active !== null ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
         tabIndex="0"

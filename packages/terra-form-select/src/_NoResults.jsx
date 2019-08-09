@@ -23,7 +23,7 @@ const propTypes = {
 };
 
 const NoResults = ({ intl, noResultContent, value }) => (
-  <div className={cx('no-results')}>
+  <div role="option" className={cx('no-results')} aria-selected="false">
     {noResultContent || intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: value })}
   </div>
 );
