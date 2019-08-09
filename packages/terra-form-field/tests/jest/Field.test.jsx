@@ -221,7 +221,7 @@ it('should render a required field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -235,7 +235,7 @@ it('should render a required field with a Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -249,7 +249,7 @@ it('should render a required field with a Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -349,7 +349,7 @@ it('should render a field with an Input', () => {
       <Input />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -362,7 +362,7 @@ it('should render a field with a Select', () => {
       <Select />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -375,6 +375,6 @@ it('should render a field with a Textarea', () => {
       <Textarea />
     </Field>
   );
-  const wrapper = mountWithIntl(field);
+  const wrapper = mountWithIntl(field).children();
   expect(wrapper).toMatchSnapshot();
 });

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames/bind';
 import IconError from 'terra-icon/lib/icon/IconError';
 import styles from './Field.module.scss';
@@ -88,21 +89,12 @@ const defaultProps = {
   showOptional: false,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
 const hasWhiteSpace = s => /\s/g.test(s);
 // Detect IE 10 or IE 11
 // TODO - Delete detection logic when we drop support for IE
 const isIE = () => (window.navigator.userAgent.indexOf('Trident/6.0') > -1 || window.navigator.userAgent.indexOf('Trident/7.0') > -1);
 
-const Field = (props, { intl }) => {
+const Field = (props) => {
   const {
     children,
     error,
@@ -184,7 +176,14 @@ const Field = (props, { intl }) => {
           {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
           {label}
           {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
-          {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
+          {showOptional && !required
+            && (
+              <FormattedMessage id="Terra.form.field.optional">
+                {optionalText => (
+                  <div className={cx('optional')}>{optionalText}</div>
+                )}
+              </FormattedMessage>
+            )}
           {IEDescriptionText}
         </label>
       }
@@ -204,6 +203,5 @@ const Field = (props, { intl }) => {
 
 Field.propTypes = propTypes;
 Field.defaultProps = defaultProps;
-Field.contextTypes = contextTypes;
 
 export default Field;
