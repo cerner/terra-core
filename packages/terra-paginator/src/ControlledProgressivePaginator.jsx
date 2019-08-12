@@ -57,7 +57,6 @@ class ProgressivePaginator extends React.Component {
       if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         event.preventDefault();
 
-        // eslint-disable-next-line compat/compat
         if (Number.isNaN(Number(index))) {
           this.props.onPageChange(event.target.text.trim().toLowerCase());
 

@@ -39,7 +39,7 @@ const propTypes = {
   /**
    * Sets the styles of the component, one of `neutral`, `emphasis`, or `ghost`.
    */
-  variant: PropTypes.oneOf(Object.values(Variants)), // eslint-disable-line compat/compat
+  variant: PropTypes.oneOf(Object.values(Variants)),
 };
 
 const defaultProps = {

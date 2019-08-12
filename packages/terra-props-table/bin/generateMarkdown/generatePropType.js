@@ -6,7 +6,6 @@ const generatePropType = (type) => {
   let typeName = type.name;
 
   if (type.name === 'enum') {
-    // eslint-disable-next-line compat/compat
     if (Number.isNaN(Number(type.value[0].value))) {
       typeName = typeof type.value[0].value;
     } else {

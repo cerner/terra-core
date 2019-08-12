@@ -59,7 +59,6 @@ class Paginator extends React.Component {
     return (event) => {
       event.preventDefault();
 
-      // eslint-disable-next-line compat/compat
       if (Number.isNaN(Number(index))) {
         this.props.onPageChange(event.currentTarget.attributes['aria-label'].value);
 
@@ -81,7 +80,6 @@ class Paginator extends React.Component {
       if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         event.preventDefault();
 
-        // eslint-disable-next-line compat/compat
         if (Number.isNaN(Number(index))) {
           this.props.onPageChange(event.currentTarget.attributes['aria-label'].value);
 

@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
   as defined. Currently, simply putting `Object.values(SpacerSizes)` causes all other `marginX` and `paddingX` props to be recognized as `undefined`
   in the PropsTable.
 */
-const arrayOfSpacerSizes = [...Object.values(SpacerSizes)]; // eslint-disable-line compat/compat
+const arrayOfSpacerSizes = [...Object.values(SpacerSizes)];
 
 const propTypes = {
   /**

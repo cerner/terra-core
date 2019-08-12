@@ -53,7 +53,7 @@ const propTypes = {
    * Sets the glyph and title using a pre-baked variant. One of the following: `no-data`,
    * `no-matching-results`, `not-authorized`, or `error`
    */
-  variant: PropTypes.oneOf(Object.values(StatusViewVariants)), // eslint-disable-line compat/compat
+  variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
 };
 /* eslint-enable react/forbid-foreign-prop-types */
 

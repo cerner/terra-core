@@ -20,7 +20,7 @@ const invalidShArgsLengthError = (
 const invalidShArgValuesError = (
   propName = '<SUPPLY SHORTHAND PROP NAME>',
   invalidShValues = [],
-  expectedValues = Object.values(SpacerSizes), // eslint-disable-line compat/compat
+  expectedValues = Object.values(SpacerSizes),
   componentName = 'Spacer',
 ) => new Error(`Expected ${propName} shorthand values to be one of ${expectedValues} but "${invalidShValues}" supplied to ${componentName}. Validation Failed.`);
 
@@ -86,7 +86,7 @@ export const shorthandValidator = (props = {}, propName = '') => {
   }
 
   const invalidShValues = (() => {
-    const sizes = Object.values(SpacerSizes); // eslint-disable-line compat/compat
+    const sizes = Object.values(SpacerSizes);
     const invalidValues = shValues.filter((val) => sizes.indexOf(val) === -1);
     return invalidValues.length > 0 ? invalidValues : null;
   })();

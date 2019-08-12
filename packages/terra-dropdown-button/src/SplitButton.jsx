@@ -43,7 +43,7 @@ const propTypes = {
   /**
    * Sets the styles of the component, one of `neutral`, or `ghost`.
    */
-  variant: PropTypes.oneOf(Object.values(Variants)), // eslint-disable-line compat/compat
+  variant: PropTypes.oneOf(Object.values(Variants)),
   /**
    * @private
    * The intl object to be injected for translations.
