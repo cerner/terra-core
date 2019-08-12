@@ -7,7 +7,6 @@ import styles from './ContentContainerDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const containerRef = React.createRef();
 const display1 = (
   <p key="1">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
@@ -33,8 +32,12 @@ pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
   </p>
 );
 
-const contentheader = <h3>Display Header</h3>;
-const contentfooter = <h3>Display Footer</h3>;
+const contentheader = <h3 >Display Header</h3>;
+const contentfooter = <h3 id="contentfooter">Children count is </h3>;
+
+const onContainerScroll = scrollRef => (
+  document.getElementById('contentfooter').append(` ${scrollRef.children.length}`)
+);
 
 const container = () => (
   <div className={cx('content-container-fill')}>
@@ -43,7 +46,7 @@ const container = () => (
        * ScrollRefCallback is used to refer to the scrollable area of the content container DOM element.
        */
     }
-    <ContentContainer header={contentheader} footer={contentfooter} fill scrollRefCallback={containerRef}>
+    <ContentContainer header={contentheader} footer={contentfooter} fill scrollRefCallback={onContainerScroll}>
       <div key="1">
         {display1}
       </div>
