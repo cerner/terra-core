@@ -29,6 +29,9 @@ Unreleased
 ## Changed
 * Replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
 
+### Fixed
+* Fix min-height inline style bug - Use componentDidUpdate update to apply min height
+
 3.17.0 - (July 16, 2019)
 ------------------
 ### Added
