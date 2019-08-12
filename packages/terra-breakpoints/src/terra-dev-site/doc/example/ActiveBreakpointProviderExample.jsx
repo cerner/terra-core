@@ -17,7 +17,7 @@ const ActiveBreakpointConsumer1 = withActiveBreakpoint(({ activeBreakpoint }) =>
 const ActiveBreakpointConsumer2 = () => (
   <ActiveBreakpointContext.Consumer>
     {
-      activeBreakpoint => (
+      (activeBreakpoint) => (
         <div>
           <p>This component interfaces with the ActiveBreakpointContext directly.</p>
           <p>

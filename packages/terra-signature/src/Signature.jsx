@@ -161,7 +161,7 @@ class Signature extends React.Component {
     }
 
     // Record new line segment
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       lineSegments: [...prevState.lineSegments, newSegment],
       lastLineSegments: [...prevState.lastLineSegments, newSegment],
     }));

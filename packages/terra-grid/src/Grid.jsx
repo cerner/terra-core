@@ -10,7 +10,7 @@ const propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const Grid = props => (<div {...props} />);
+const Grid = (props) => (<div {...props} />);
 
 Grid.propTypes = propTypes;
 Grid.Row = GridRow;

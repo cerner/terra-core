@@ -8,7 +8,7 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ListPaddedExample = () => (
-  <React.Fragment>
+  <>
     <List paddingStyle="standard">
       <Item key="123">
         <Placeholder title="Standard Padding Item 0" className={cx('placeholder')} />
@@ -32,7 +32,7 @@ const ListPaddedExample = () => (
         <Placeholder title="Compact Padding Item 2" className={cx('placeholder')} />
       </Item>
     </List>
-  </React.Fragment>
+  </>
 );
 
 export default ListPaddedExample;

@@ -5,9 +5,9 @@ import Textarea from '../../../Textarea';
 export default class textarea extends React.Component {
   constructor() {
     super();
-    if (!navigator.maxTouchPoints || navigator.maxTouchPoints === 0) {
+    if (!navigator.maxTouchPoints || navigator.maxTouchPoints === 0) { // eslint-disable-line compat/compat
       this.resetMaxTouchPoints = true;
-      this.previousMaxTouchPoints = navigator.maxTouchPoints;
+      this.previousMaxTouchPoints = navigator.maxTouchPoints; // eslint-disable-line compat/compat
 
       Object.defineProperty(
         navigator, 'maxTouchPoints',
@@ -20,9 +20,9 @@ export default class textarea extends React.Component {
   }
 
   componentDidUpdate() {
-    if (!navigator.maxTouchPoints || navigator.maxTouchPoints === 0) {
+    if (!navigator.maxTouchPoints || navigator.maxTouchPoints === 0) { // eslint-disable-line compat/compat
       this.resetMaxTouchPoints = true;
-      this.previousMaxTouchPoints = navigator.maxTouchPoints;
+      this.previousMaxTouchPoints = navigator.maxTouchPoints; // eslint-disable-line compat/compat
 
       Object.defineProperty(
         navigator, 'maxTouchPoints',

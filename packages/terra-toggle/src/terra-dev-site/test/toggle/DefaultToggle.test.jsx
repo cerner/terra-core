@@ -10,7 +10,7 @@ class ToggleDefault extends React.Component {
   }
 
   handleOnClick() {
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    this.setState((prevState) => ({ isOpen: !prevState.isOpen }));
   }
 
   render() {

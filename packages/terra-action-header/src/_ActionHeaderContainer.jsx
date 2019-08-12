@@ -44,7 +44,7 @@ const ActionHeaderContainer = ({
 }) => {
   const HeaderElement = `h${level}`;
 
-  const content = React.Children.map(children, child => (
+  const content = React.Children.map(children, (child) => (
     React.cloneElement(child, { className: cx(['flex-collapse', children.props.className]) })
   ));
 

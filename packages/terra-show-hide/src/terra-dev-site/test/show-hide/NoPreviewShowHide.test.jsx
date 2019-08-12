@@ -13,7 +13,7 @@ class NoPreviewShowHide extends React.Component {
   }
 
   toggleShowHide() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
   }

@@ -3,7 +3,7 @@ import Select from '../../../Select';
 import SelectField from '../../../SelectField';
 
 const CustomAriaLabel = () => (
-  <React.Fragment>
+  <>
     <Select ariaLabel="Custom label 1" placeholder="Select a color" id="default" defaultValue="green">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
@@ -19,7 +19,7 @@ const CustomAriaLabel = () => (
       <SelectField.Option value="large" display="Large" />
       <SelectField.Option value="xLarge" display="Extra Large" />
     </SelectField>
-  </React.Fragment>
+  </>
 );
 
 export default CustomAriaLabel;

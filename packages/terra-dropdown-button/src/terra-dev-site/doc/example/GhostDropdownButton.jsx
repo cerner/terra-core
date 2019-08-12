@@ -7,7 +7,7 @@ const GhostDropdownButton = () => {
   const [message, setMessage] = useState('No option clicked');
 
   return (
-    <React.Fragment>
+    <>
       <DropdownButton
         label="Dropdown"
         variant="ghost"
@@ -18,7 +18,7 @@ const GhostDropdownButton = () => {
         <Item label="4th Option" onSelect={() => setMessage('4th option clicked')} />
       </DropdownButton>
       <p>{message}</p>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import path from 'path';
 import Icon from './Icon';
 /* eslint-enable import/no-extraneous-dependencies */
 
-const parseSvg = filepath => new Promise((resolve) => {
+const parseSvg = (filepath) => new Promise((resolve) => {
   const source = fs.readFileSync(filepath, 'utf-8');
   const { name } = path.parse(filepath);
 

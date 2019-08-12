@@ -20,7 +20,7 @@ const propTypes = {
 };
 /* eslint-enable react/no-unused-prop-types */
 
-const MockComponent = props => (
+const MockComponent = (props) => (
   React.createElement('span', JSON.stringify({ props }))
 );
 

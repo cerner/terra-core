@@ -7,7 +7,7 @@ const Example = () => {
   const [message, setMessage] = useState('No option clicked');
 
   return (
-    <React.Fragment>
+    <>
       <DropdownButton
         label="Dropdown"
         isDisabled
@@ -18,7 +18,7 @@ const Example = () => {
         <Item label="4th Option" onSelect={() => setMessage('4th option clicked')} />
       </DropdownButton>
       <p>{message}</p>
-    </React.Fragment>
+    </>
   );
 };
 

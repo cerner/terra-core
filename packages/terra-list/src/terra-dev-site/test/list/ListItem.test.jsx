@@ -3,7 +3,7 @@ import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
 
 const ListItemTest = () => (
-  <React.Fragment>
+  <>
     <List>
       <Item
         key="default"
@@ -33,7 +33,7 @@ const ListItemTest = () => (
         <p>test selected</p>
       </Item>
     </List>
-  </React.Fragment>
+  </>
 );
 
 export default ListItemTest;

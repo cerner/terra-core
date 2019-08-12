@@ -25,7 +25,7 @@ const longText = (
 );
 const longWordText = <div>{longWord}</div>;
 
-const ArrangeWrapper = props => (
+const ArrangeWrapper = (props) => (
   <div className={cx('arrange-wrapper')}>
     {props.children}
   </div>

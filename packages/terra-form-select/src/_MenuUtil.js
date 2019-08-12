@@ -61,7 +61,7 @@ class MenuUtil {
       return false;
     }
 
-    return array.find(option => MenuUtil.isEqual(option, query)) !== undefined;
+    return array.find((option) => MenuUtil.isEqual(option, query)) !== undefined;
   }
 
   /**
@@ -171,7 +171,7 @@ class MenuUtil {
    * @return {string|null} - The firt option that starts with the provided string.
    */
   static findWithStartString(object, string) {
-    const option = MenuUtil.flatten(object, true).find(opt => (
+    const option = MenuUtil.flatten(object, true).find((opt) => (
       opt.props.display || '').toLowerCase().startsWith(string.toLowerCase()));
     return option ? option.props.value : null;
   }
@@ -215,7 +215,7 @@ class MenuUtil {
     if (options.length === 0) {
       return null;
     } if (state.searchValue === undefined) {
-      const selected = options.find(option => (
+      const selected = options.find((option) => (
         Array.isArray(value) ? MenuUtil.includes(value, option.props.value) : MenuUtil.isEqual(value, option.props.value)
       ));
       return selected === undefined ? options[0].props.value : selected.props.value;

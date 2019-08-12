@@ -14,7 +14,7 @@ class FieldExamples extends React.Component {
   }
 
   toggleIsInvalid() {
-    this.setState(prevState => ({ isInvalid: !prevState.isInvalid }));
+    this.setState((prevState) => ({ isInvalid: !prevState.isInvalid }));
   }
 
   render() {

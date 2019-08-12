@@ -7,7 +7,7 @@ import styles from './TableWithCustomCells.module.scss';
 
 const cx = classNames.bind(styles);
 
-const CustomCell = props => (
+const CustomCell = (props) => (
   <div>
     <h3>{props.text}</h3>
     {props.subtext ? <h4 className={cx('custom-cell-header-wrapper')}>{props.subtext}</h4> : null}

@@ -11,7 +11,7 @@ class AccordionSectionHeader extends React.Component {
   }
 
   handleClick() {
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    this.setState((prevState) => ({ isOpen: !prevState.isOpen }));
   }
 
   render() {

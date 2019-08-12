@@ -50,7 +50,7 @@ const gridLineEnd = (prop, region) => {
 };
 
 
-const gridGap = layout => (
+const gridGap = (layout) => (
   layout['grid-gap']
     ? { 'grid-gap': layout['grid-gap'] }
     : {}
@@ -69,7 +69,7 @@ const gridDisplay = (layout) => {
   };
 };
 
-const grid = template => ({
+const grid = (template) => ({
   ...gridDisplay(template),
   ...gridGap(template),
   ...gridTemplate('columns', template),
@@ -77,7 +77,7 @@ const grid = template => ({
   ...(template.style || {}),
 });
 
-const region = position => ({
+const region = (position) => ({
   ...gridLineStart('column', position),
   ...gridLineEnd('column', position),
   ...gridLineStart('row', position),

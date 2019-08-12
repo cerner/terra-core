@@ -45,7 +45,7 @@ class Base extends React.Component {
         >
           <label htmlFor="change-locale"> Current locale: </label>
           <select id="change-locale" onChange={this.handleLocaleChange} value={this.state.selectedLocale}>
-            {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
+            {testLocales.map((locale) => (<option key={locale} value={locale}>{locale}</option>))}
           </select>
           <p id="translated-message">
             <span className={cx('weighted-text')}> Loaded locale message: </span>

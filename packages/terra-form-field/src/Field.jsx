@@ -89,7 +89,7 @@ const defaultProps = {
   showOptional: false,
 };
 
-const hasWhiteSpace = s => /\s/g.test(s);
+const hasWhiteSpace = (s) => /\s/g.test(s);
 // Detect IE 10 or IE 11
 // TODO - Delete detection logic when we drop support for IE
 const isIE = () => (window.navigator.userAgent.indexOf('Trident/6.0') > -1 || window.navigator.userAgent.indexOf('Trident/7.0') > -1);
@@ -114,7 +114,7 @@ const Field = (props) => {
     ...customProps
   } = props;
 
-  const customStyles = maxWidth ? Object.assign({ maxWidth }, style) : style;
+  const customStyles = maxWidth ? ({ maxWidth, ...style }) : style;
 
   const fieldClasses = cx([
     'field',
@@ -179,7 +179,7 @@ const Field = (props) => {
           {showOptional && !required
             && (
               <FormattedMessage id="Terra.form.field.optional">
-                {optionalText => (
+                {(optionalText) => (
                   <div className={cx('optional')}>{optionalText}</div>
                 )}
               </FormattedMessage>

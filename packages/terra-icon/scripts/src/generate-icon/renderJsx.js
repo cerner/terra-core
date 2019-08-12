@@ -11,14 +11,14 @@ const themeIconTemplatePath = path.join(__dirname, './template.txt');
 
 // Generate list of static color icon names
 const staticIcons = iconData
-  .filter(icon => !icon.themeable && !icon.deprecated)
-  .map(icon => icon.componentName);
+  .filter((icon) => !icon.themeable && !icon.deprecated)
+  .map((icon) => icon.componentName);
 
 /**
  * generateJsx - Takes an Icon object as input and returns a React component
  * @param {object} icon Icon object that stores svg attributes, children, and name
  */
-const renderJsx = icon => new Promise((resolve, reject) => {
+const renderJsx = (icon) => new Promise((resolve, reject) => {
   if (staticIcons.includes(icon.name)) {
     fs.readFile(staticIconTemplatePath, 'utf-8', (error, text) => {
       if (error) {

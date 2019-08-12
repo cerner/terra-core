@@ -23,14 +23,14 @@ class SearchFieldFocus extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <Button text="Focus Me" onClick={this.handleButtonClick} id="search-field-focus-button" />
         <SearchField
           onChange={this.onChange}
           value={this.state.searchText}
           inputRefCallback={(inputRef) => { this.searchInput = inputRef; }}
         />
-      </React.Fragment>
+      </>
     );
   }
 }

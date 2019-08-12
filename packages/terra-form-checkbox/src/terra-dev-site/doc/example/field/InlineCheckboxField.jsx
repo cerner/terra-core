@@ -36,11 +36,11 @@ export default class extends React.Component {
 
   handleOnClick(e) {
     if (e.currentTarget.id === 'inline') {
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
         toggleInline: !prevState.toggleInline,
       }));
     } else {
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
         isInvalid: !prevState.isInvalid,
       }));
     }

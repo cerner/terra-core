@@ -7,7 +7,7 @@ const Example = () => {
   const [message, setMessage] = useState('No option clicked');
 
   return (
-    <React.Fragment>
+    <>
       <SplitButton
         primaryOptionLabel="Reply"
         onSelect={() => setMessage('Reply clicked')}
@@ -18,7 +18,7 @@ const Example = () => {
         <Item label="Selective Reply" onSelect={() => setMessage('Selective Reply clicked')} />
       </SplitButton>
       <p>{message}</p>
-    </React.Fragment>
+    </>
   );
 };
 

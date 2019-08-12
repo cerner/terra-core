@@ -14,7 +14,7 @@ import styles from '../example/ListDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const createListItem = itemData => (
+const createListItem = (itemData) => (
   <Item key={itemData.key}>
     <Placeholder title={itemData.title} className={cx('placeholder')} />
   </Item>
@@ -31,7 +31,7 @@ class SectionList extends React.Component {
 
   handleSectionSelection(event, metaData) {
     event.preventDefault();
-    this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.collapsedKeys, metaData.key) }));
+    this.setState((state) => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.collapsedKeys, metaData.key) }));
   }
 
   createSection(sectionData) {
@@ -44,13 +44,13 @@ class SectionList extends React.Component {
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => createListItem(childItem))}
+        {sectionData.childItems.map((childItem) => createListItem(childItem))}
       </Section>
     );
   }
 
   createSections(data) {
-    return data.map(section => this.createSection(section));
+    return data.map((section) => this.createSection(section));
   }
 
   render() {

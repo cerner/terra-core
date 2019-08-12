@@ -108,7 +108,7 @@ const Alert = ({
   ...customProps
 }) => {
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
   const narrowAlertClassNames = cx([
     'alert-base',
     type,
@@ -138,7 +138,7 @@ const Alert = ({
   if (onDismiss) {
     dismissButton = (
       <FormattedMessage id="Terra.alert.dismiss">
-        {buttonText => (
+        {(buttonText) => (
           <Button text={buttonText} onClick={onDismiss} />
         )}
       </FormattedMessage>

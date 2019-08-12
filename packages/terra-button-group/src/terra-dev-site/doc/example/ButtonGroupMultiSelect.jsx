@@ -11,7 +11,7 @@ class ButtonGroupMultiSelect extends React.Component {
 
   handleSelection(event, key) {
     event.preventDefault();
-    this.setState(prevState => ({ selectedKeys: ButtonGroup.Utils.handleMultiSelectedKeys(prevState.selectedKeys, key) }));
+    this.setState((prevState) => ({ selectedKeys: ButtonGroup.Utils.handleMultiSelectedKeys(prevState.selectedKeys, key) }));
   }
 
   render() {

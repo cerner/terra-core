@@ -37,7 +37,7 @@ const SingleSelectableRowsOnChangeAdditionalDetails = () => (
     </Table.Header>
     <Table.SingleSelectableRows onChange={onChange}>
       {
-        people.map(person => (
+        people.map((person) => (
           <Table.Row key={person.key}>
             <Table.Cell content={person.name} key="NAME" />
             <Table.Cell content={person.address} key="ADDRESS" />

@@ -21,9 +21,9 @@ const propTypes = {
 
 const I18nProvider = ({ children, locale, messages }) => (
   <IntlProvider locale={locale} key={locale} messages={messages}>
-    <React.Fragment>
+    <>
       {children}
-    </React.Fragment>
+    </>
   </IntlProvider>
 );
 

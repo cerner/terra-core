@@ -34,7 +34,7 @@ const propTypes = {
   onError: PropTypes.func,
 };
 
-const isOnlyNumbers = toTest => !(/\D/).test(toTest);
+const isOnlyNumbers = (toTest) => !(/\D/).test(toTest);
 
 const ProfileImage = (props) => {
   // img tags assume a height attribute of only numbers is in px but CSS does not

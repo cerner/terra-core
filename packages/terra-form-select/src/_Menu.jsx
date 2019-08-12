@@ -325,8 +325,8 @@ class Menu extends React.Component {
           isSelected: Util.isSelected(this.props.value, option.props.value),
           variant: this.props.variant,
           onMouseDown: () => { this.downOption = option; },
-          onMouseUp: event => this.handleOptionClick(event, option),
-          onMouseEnter: event => this.handleMouseEnter(event, option),
+          onMouseUp: (event) => this.handleOptionClick(event, option),
+          onMouseEnter: (event) => this.handleMouseEnter(event, option),
           ...(option.props.value === this.state.active) && { 'data-select-active': true },
         });
       } if (option.type.isOptGroup) {
@@ -427,7 +427,7 @@ class Menu extends React.Component {
       this.searchString = this.searchString.concat(String.fromCharCode(keyCode));
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(this.clearSearch, 500);
-      this.setState(prevState => ({ active: Util.findWithStartString(prevState.children, this.searchString) || active }));
+      this.setState((prevState) => ({ active: Util.findWithStartString(prevState.children, this.searchString) || active }));
     }
   }
 

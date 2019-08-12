@@ -8,7 +8,7 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ListDividedExample = () => (
-  <React.Fragment>
+  <>
     <List dividerStyle="standard">
       <Item key="123">
         <Placeholder title="Standard Divider Item 0" className={cx('placeholder')} />
@@ -32,7 +32,7 @@ const ListDividedExample = () => (
         <Placeholder title="Bottom Divider Item 2" className={cx('placeholder')} />
       </Item>
     </List>
-  </React.Fragment>
+  </>
 );
 
 export default ListDividedExample;

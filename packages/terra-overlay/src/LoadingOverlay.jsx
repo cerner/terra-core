@@ -65,12 +65,11 @@ const LoadingOverlay = ({
         ? <div className={cx('message')}>{message}</div>
         : (
           <FormattedMessage id="Terra.Overlay.loading">
-            {loadingMessage => (
+            {(loadingMessage) => (
               <div className={cx('message')}>{loadingMessage}</div>
             )}
           </FormattedMessage>
-        )
-      }
+        )}
     </Overlay>
   );
 };

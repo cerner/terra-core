@@ -3,8 +3,8 @@ import SVGO from 'svgo';
 import optimizeConfig from './optimizeConfig';
 /* eslint-enable import/no-extraneous-dependencies */
 
-const optimizeSvg = csvObject => new Promise((resolve, reject) => {
-  const objectCsv = Object.assign({}, csvObject);
+const optimizeSvg = (csvObject) => new Promise((resolve, reject) => {
+  const objectCsv = { ...csvObject };
   const config = optimizeConfig(objectCsv);
   const svgo = new SVGO(config);
 

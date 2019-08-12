@@ -54,7 +54,7 @@ class DropdownListUtil {
    * @return {number} - The index of the first option that starts with the provided string.
    */
   static findWithStartString(object, string) {
-    return DropdownListUtil.getChildArray(object).findIndex(opt => (
+    return DropdownListUtil.getChildArray(object).findIndex((opt) => (
       opt.props.label || '').toLowerCase().startsWith(string.toLowerCase()));
   }
 

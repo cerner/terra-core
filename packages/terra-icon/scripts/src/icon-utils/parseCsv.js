@@ -21,7 +21,7 @@ const parseCsv = () => new Promise((resolve) => {
       jsonObj.syntaxComponent = `<${jsonObj.componentName} height='2em' width='2em' />`;
       jsonObj.syntaxImport = `import ${jsonObj.componentName} from 'terra-icon/lib/icon/${jsonObj.componentName}';\n`;
       /* eslint-enable  no-param-reassign */
-    }).then(jsonObj => resolve(jsonObj));
+    }).then((jsonObj) => resolve(jsonObj));
 });
 
 export default parseCsv;

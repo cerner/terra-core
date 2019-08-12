@@ -46,7 +46,7 @@ const Dialog = ({
     ? (
       <div className={cx('dialog-header-close')}>
         <FormattedMessage id="Terra.dialog.close">
-          {closeText => (
+          {(closeText) => (
             <Button variant="utility" text={closeText} onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} />
           )}
         </FormattedMessage>

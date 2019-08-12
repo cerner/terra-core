@@ -61,7 +61,7 @@ const propTypes = {
   /**
   * Sets the `object-fit` style of the image from the following values; `cover`, `contain`, `fill`, `scale-down`, `none`.
   */
-  fit: PropTypes.oneOf(Object.values(FitTypes)),
+  fit: PropTypes.oneOf(Object.values(FitTypes)), // eslint-disable-line compat/compat
 };
 
 /* eslint-disable react/default-props-match-prop-types */

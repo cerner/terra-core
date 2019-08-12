@@ -107,26 +107,25 @@ const RadioField = (props) => {
       <div {...legendAttrs} className={legendClassNames}>
         {isInvalid && <span className={cx('error-icon')} />}
         {required && (isInvalid || !hideRequired) && (
-          <React.Fragment>
+          <>
             <div aria-hidden="true" className={cx('required')}>*</div>
             <FormattedMessage id="Terra.form.field.required">
-              {text => (
+              {(text) => (
                 <VisualyHiddenText text={text} />
               )}
             </FormattedMessage>
-          </React.Fragment>
+          </>
         )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
         {showOptional && !required
           && (
             <FormattedMessage id="Terra.form.field.optional">
-              {optionalText => (
+              {(optionalText) => (
                 <span className={cx('optional')}>{optionalText}</span>
               )}
             </FormattedMessage>
-          )
-        }
+          )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
     </legend>

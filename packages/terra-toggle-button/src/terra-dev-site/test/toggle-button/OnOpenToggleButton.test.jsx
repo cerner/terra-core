@@ -9,7 +9,7 @@ class OnOpenToggleButton extends React.Component {
   }
 
   handleOnOpen() {
-    this.setState(prevState => ({ timesOpened: prevState.timesOpened + 1 }));
+    this.setState((prevState) => ({ timesOpened: prevState.timesOpened + 1 }));
   }
 
   render() {

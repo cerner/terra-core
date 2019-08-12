@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable react/prop-types */
-const DividerTemplate = props => (
+const DividerTemplate = (props) => (
   <div>
     <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industrys standard

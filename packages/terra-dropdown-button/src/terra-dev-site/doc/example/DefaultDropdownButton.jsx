@@ -7,7 +7,7 @@ const Example = () => {
   const [message, setMessage] = useState('No option clicked');
 
   return (
-    <React.Fragment>
+    <>
       <DropdownButton
         label="Export"
       >
@@ -17,7 +17,7 @@ const Example = () => {
         <Item label="Export as XML" onSelect={() => setMessage('Export as XML clicked')} />
       </DropdownButton>
       <p>{message}</p>
-    </React.Fragment>
+    </>
   );
 };
 

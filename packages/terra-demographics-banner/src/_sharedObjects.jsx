@@ -79,7 +79,7 @@ const applicationIdentifiers = (props) => {
   const { identifiers } = props;
 
   if (identifiers) {
-    return Object.keys(identifiers).map(key => (
+    return Object.keys(identifiers).map((key) => (
       <DemographicsBannerValue
         key={`identifier-${key}`}
         label={key}

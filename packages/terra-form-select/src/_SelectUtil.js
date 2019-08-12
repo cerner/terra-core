@@ -28,7 +28,7 @@ class SelectUtil {
    * @return {array} - The value resulting from the removal of an option.
    */
   static deselect(props, state, value) {
-    return SelectUtil.value(props, state).filter(option => option !== value);
+    return SelectUtil.value(props, state).filter((option) => option !== value);
   }
 
   /**

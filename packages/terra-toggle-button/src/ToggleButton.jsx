@@ -84,7 +84,7 @@ class ToggleButton extends React.Component {
       this.props.onClose();
     }
 
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
   }

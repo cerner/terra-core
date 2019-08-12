@@ -38,7 +38,7 @@ class SingleSelectList extends React.Component {
   }
 
   createListItems(data) {
-    return data.map(childItem => this.createListItem(childItem));
+    return data.map((childItem) => this.createListItem(childItem));
   }
 
   render() {

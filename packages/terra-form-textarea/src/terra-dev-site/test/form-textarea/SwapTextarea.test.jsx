@@ -13,7 +13,7 @@ class textarea extends React.Component {
   }
 
   handleSwap() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       swap: !prevState.swap,
     }));
   }

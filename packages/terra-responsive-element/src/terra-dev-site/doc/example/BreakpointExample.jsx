@@ -7,7 +7,7 @@ const BreakpointExample = () => {
   const [breakpoint, setBreakpoint] = useState('');
 
   return (
-    <ResponsiveElement onChange={value => setBreakpoint(value)}>
+    <ResponsiveElement onChange={(value) => setBreakpoint(value)}>
       <Placeholder title={breakpoint} />
     </ResponsiveElement>
   );

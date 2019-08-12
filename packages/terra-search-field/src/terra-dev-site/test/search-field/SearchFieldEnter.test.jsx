@@ -16,11 +16,11 @@ class AutoSearchDisabledSearchField extends React.Component {
   }
 
   handleSearch(searchText) {
-    this.setState(prevState => ({ searchCount: prevState.searchCount + 1, searchText, message: 'Search Text: ' }));
+    this.setState((prevState) => ({ searchCount: prevState.searchCount + 1, searchText, message: 'Search Text: ' }));
   }
 
   handleInvalidSearch(searchText) {
-    this.setState(prevState => ({ searchCount: prevState.searchCount + 1, searchText, message: 'INVALID Search Text: ' }));
+    this.setState((prevState) => ({ searchCount: prevState.searchCount + 1, searchText, message: 'INVALID Search Text: ' }));
   }
 
   render() {

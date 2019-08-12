@@ -6,7 +6,7 @@ const generateProps = (props) => {
 
   return (
     `${tableHeader}${tableHeaderBottom}${
-      Object.keys(props).sort().map(propName => generatePropRow(propName, props[propName])).join('\n')}`
+      Object.keys(props).sort().map((propName) => generatePropRow(propName, props[propName])).join('\n')}`
   );
 };
 

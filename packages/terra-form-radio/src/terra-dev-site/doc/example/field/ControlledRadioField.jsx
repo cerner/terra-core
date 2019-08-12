@@ -27,7 +27,7 @@ export default class extends React.Component {
   }
 
   handleOnClick() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       toggleInvalid: !prevState.toggleInvalid,
     }));
   }

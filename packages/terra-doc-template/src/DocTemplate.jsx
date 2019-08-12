@@ -107,7 +107,7 @@ const DocTemplate = ({
       </div>
 
       {exampleHeader}
-      {localExamples.map(example => (
+      {localExamples.map((example) => (
         <IndexExampleTemplate
           title={example.title}
           example={example.example}
@@ -118,7 +118,7 @@ const DocTemplate = ({
       ))}
 
       <div className={cx('doc-card')}>
-        {localPropsTables.map(propsTable => (
+        {localPropsTables.map((propsTable) => (
           <PropsTable
             src={propsTable.componentSrc}
             componentName={propsTable.componentName}

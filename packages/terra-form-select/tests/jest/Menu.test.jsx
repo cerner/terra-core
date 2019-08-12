@@ -15,7 +15,7 @@ describe('Menu', () => {
 
   it('should render a Menu with no results and update the live region appropriately', () => {
     const liveRegion = { current: document.createElement('div') };
-    const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
+    const mockIntl = { formatMessage: (id) => (`No Results for ${id.id}`) };
 
     const menu = (
       <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} variant="default" value="value" searchValue="asdf">
@@ -35,7 +35,7 @@ describe('Menu', () => {
   });
 
   it('should not error when visuallyHiddenComponent is not provided', () => {
-    const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
+    const mockIntl = { formatMessage: (id) => (`No Results for ${id.id}`) };
 
     const menu = (
       <Menu onSelect={() => {}} intl={mockIntl} variant="default" value="value" searchValue="asdf">
@@ -55,7 +55,7 @@ describe('Menu', () => {
 
   it('should not error when visuallyHiddenComponent has null for current', () => {
     const liveRegion = { current: null };
-    const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
+    const mockIntl = { formatMessage: (id) => (`No Results for ${id.id}`) };
 
     const menu = (
       <Menu onSelect={() => {}} intl={mockIntl} visuallyHiddenComponent={liveRegion} variant="default" value="value" searchValue="asdf">

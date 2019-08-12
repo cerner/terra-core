@@ -9,7 +9,7 @@ class OnCloseToggleButton extends React.Component {
   }
 
   handleOnClose() {
-    this.setState(prevState => ({ timesClosed: prevState.timesClosed + 1 }));
+    this.setState((prevState) => ({ timesClosed: prevState.timesClosed + 1 }));
   }
 
   render() {

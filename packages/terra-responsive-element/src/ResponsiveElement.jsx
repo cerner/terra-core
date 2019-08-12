@@ -153,10 +153,10 @@ class ResponsiveElement extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <>
         {responsiveTo === 'parent' && !this.container && <div ref={this.setContainer} />}
         {children}
-      </React.Fragment>
+      </>
     );
   }
 }

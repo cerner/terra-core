@@ -19,11 +19,11 @@ class OpenCloseEventToggleButton extends React.Component {
   }
 
   handleOnOpen() {
-    this.setState(prevState => ({ timesOpened: prevState.timesOpened + 1 }));
+    this.setState((prevState) => ({ timesOpened: prevState.timesOpened + 1 }));
   }
 
   handleOnClose() {
-    this.setState(prevState => ({ timesClosed: prevState.timesClosed + 1 }));
+    this.setState((prevState) => ({ timesClosed: prevState.timesClosed + 1 }));
   }
 
   render() {

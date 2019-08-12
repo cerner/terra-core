@@ -11,12 +11,12 @@ export default () => (
     <ActionFooter
       start={<Hyperlink href="#">Start Action</Hyperlink>}
       end={(
-        <React.Fragment>
+        <>
           <Spacer isInlineBlock marginRight="medium">
             <Button text="Submit" variant={Button.Opts.Variants.EMPHASIS} />
           </Spacer>
           <Button text="Cancel" />
-        </React.Fragment>
+        </>
       )}
     />
   </ExampleTemplate>

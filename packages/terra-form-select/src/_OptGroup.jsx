@@ -33,9 +33,9 @@ const OptGroup = ({
       {label}
     </div>
     <FormattedMessage id="Terra.form.select.option">
-      {option => (
+      {(option) => (
         <ul className={cx('options')} role="listbox" aria-label={option}>
-          {React.Children.map(children, child => (
+          {React.Children.map(children, (child) => (
             React.cloneElement(child, { disabled: disabled || child.props.disabled })))}
         </ul>
       )}

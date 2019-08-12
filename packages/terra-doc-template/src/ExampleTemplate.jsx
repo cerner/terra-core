@@ -55,11 +55,11 @@ class ExampleTemplate extends React.Component {
   }
 
   handleBgToggle() {
-    this.setState(prevState => ({ isBackgroundTransparent: !prevState.isBackgroundTransparent }));
+    this.setState((prevState) => ({ isBackgroundTransparent: !prevState.isBackgroundTransparent }));
   }
 
   handleCodeToggle() {
-    this.setState(prevState => ({ isExpanded: !prevState.isExpanded }));
+    this.setState((prevState) => ({ isExpanded: !prevState.isExpanded }));
   }
 
   render() {

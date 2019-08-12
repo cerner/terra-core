@@ -104,8 +104,8 @@ const ListSubsectionHeader = ({
     attrSpread['aria-expanded'] = !isCollapsed;
     attrSpread['aria-level'] = 2;
     attrSpread['data-item-show-focus'] = 'true';
-    attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
-    attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
+    attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, (event) => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
+    attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, (event) => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
 
   return (

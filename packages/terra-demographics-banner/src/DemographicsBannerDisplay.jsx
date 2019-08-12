@@ -103,7 +103,7 @@ const defaultProps = {
   preferredFirstName: null,
 };
 
-const DemographicsBannerDisplay = props => (
+const DemographicsBannerDisplay = (props) => (
   <ResponsiveElement
     tiny={<SmallDemographicsBannerDisplay {...props} />}
     small={<LargeDemographicsBannerDisplay {...props} />}

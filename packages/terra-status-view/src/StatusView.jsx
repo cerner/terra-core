@@ -53,7 +53,7 @@ const propTypes = {
    * Sets the glyph and title using a pre-baked variant. One of the following: `no-data`,
    * `no-matching-results`, `not-authorized`, or `error`
    */
-  variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
+  variant: PropTypes.oneOf(Object.values(StatusViewVariants)), // eslint-disable-line compat/compat
 };
 /* eslint-enable react/forbid-foreign-prop-types */
 
@@ -72,7 +72,7 @@ const generateButtons = (buttonAttrsArray) => {
     return undefined;
   }
 
-  return buttonAttrsArray.map(button => <Button {...button} className={cx(['button', button.className])} />);
+  return buttonAttrsArray.map((button) => <Button {...button} className={cx(['button', button.className])} />);
 };
 
 const StatusView = ({

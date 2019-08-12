@@ -13,9 +13,9 @@ removeMakeDirectories();
 // get filepath for every svg
 const svgs = fs.readdirSync(TerraIcon.svgDir)
 // Only load svg files
-  .filter(f => path.extname(f) === '.svg')
+  .filter((f) => path.extname(f) === '.svg')
 // // Resolve to absolute path
-  .map(f => path.join(TerraIcon.svgDir, f));
+  .map((f) => path.join(TerraIcon.svgDir, f));
 
 /* eslint-disable no-console */
 svgs.forEach((svg) => {

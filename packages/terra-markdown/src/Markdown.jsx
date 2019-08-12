@@ -11,7 +11,7 @@ import styles from './Markdown.scss';
 const cx = classNames.bind(styles);
 
 // Create a list of loaded languages, remove functions that aren't actaully languages.
-const supportedLanguages = Object.keys(Prism.languages).filter(lang => !['extend', 'insertBefore', 'DFS'].includes(lang));
+const supportedLanguages = Object.keys(Prism.languages).filter((lang) => !['extend', 'insertBefore', 'DFS'].includes(lang));
 
 // If the supported language is requested, highlight it.
 const highlight = (code, lang) => {
@@ -61,7 +61,7 @@ const defaultProps = {
 };
 
 /* eslint react/no-danger:0 */
-const Markdown = props => (
+const Markdown = (props) => (
   <div
     dir="ltr"
     className={cx(['markdown'])}

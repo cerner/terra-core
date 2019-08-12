@@ -7,7 +7,7 @@ const ResizeExample = () => {
   const [width, setWidth] = useState('');
 
   return (
-    <ResponsiveElement onResize={value => setWidth(value)}>
+    <ResponsiveElement onResize={(value) => setWidth(value)}>
       <Placeholder title={width} />
     </ResponsiveElement>
   );

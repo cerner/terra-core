@@ -2,9 +2,9 @@ import React from 'react';
 import ActiveBreakpointContext from './ActiveBreakpointContext';
 
 const withActiveBreakpoint = (WrappedComponent) => {
-  const WithActiveBreakpointComp = props => (
+  const WithActiveBreakpointComp = (props) => (
     <ActiveBreakpointContext.Consumer>
-      {activeBreakpoint => <WrappedComponent {...props} activeBreakpoint={activeBreakpoint} />}
+      {(activeBreakpoint) => <WrappedComponent {...props} activeBreakpoint={activeBreakpoint} />}
     </ActiveBreakpointContext.Consumer>
   );
 

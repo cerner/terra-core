@@ -26,7 +26,7 @@ let filenames = commander.args.reduce((globbed, input) => {
 }, []);
 
 // verify filenames are unique
-filenames = [...new Set(filenames)];
+filenames = [...new Set(filenames)]; // eslint-disable-line compat/compat
 
 // check if filenames exist
 filenames.forEach((filename) => {

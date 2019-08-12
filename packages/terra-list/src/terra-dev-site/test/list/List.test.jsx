@@ -3,7 +3,7 @@ import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
 
 const ListTest = () => (
-  <React.Fragment>
+  <>
     <List>
       <Item key="0">
         <p>test 0</p>
@@ -37,7 +37,7 @@ const ListTest = () => (
         <p>divided test 2</p>
       </Item>
     </List>
-  </React.Fragment>
+  </>
 );
 
 export default ListTest;

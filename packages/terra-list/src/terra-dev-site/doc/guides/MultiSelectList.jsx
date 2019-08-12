@@ -20,7 +20,7 @@ class MutliSelectList extends React.Component {
 
   handleItemSelection(event, metaData) {
     event.preventDefault();
-    this.setState(state => ({ selectedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
+    this.setState((state) => ({ selectedKeys: Utils.updatedMultiSelectedKeys(state.selectedKeys, metaData.key) }));
   }
 
   createListItem(itemData) {
@@ -38,7 +38,7 @@ class MutliSelectList extends React.Component {
   }
 
   createListItems(data) {
-    return data.map(childItem => this.createListItem(childItem));
+    return data.map((childItem) => this.createListItem(childItem));
   }
 
   render() {

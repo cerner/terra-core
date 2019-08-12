@@ -13,7 +13,7 @@ class SelectFieldMessagesExample extends React.Component {
   }
 
   toggleInvalid() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isInvalid: !prevState.isInvalid,
     }));
   }

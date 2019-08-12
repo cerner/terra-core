@@ -87,7 +87,7 @@ const ActionHeader = ({
   const closeButton = onClose
     ? (
       <FormattedMessage id="Terra.actionHeader.close">
-        {closeText => (
+        {(closeText) => (
           <Button className={cx('header-close-button')} isIconOnly icon={<span className={cx(['header-icon', 'close'])} />} text={closeText} onClick={onClose} />
         )}
       </FormattedMessage>
@@ -96,7 +96,7 @@ const ActionHeader = ({
   const backButton = onBack
     ? (
       <FormattedMessage id="Terra.actionHeader.back">
-        {backText => (
+        {(backText) => (
           <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx(['header-icon', 'back'])} />} text={backText} onClick={onBack} />
         )}
       </FormattedMessage>
@@ -108,7 +108,7 @@ const ActionHeader = ({
     if (onMaximize) {
       expandButton = (
         <FormattedMessage id="Terra.actionHeader.maximize">
-          {maximizeText => (
+          {(maximizeText) => (
             <Button isIconOnly icon={<span className={cx(['header-icon', 'maximize'])} />} text={maximizeText} onClick={onMaximize} />
           )}
         </FormattedMessage>
@@ -116,7 +116,7 @@ const ActionHeader = ({
     } else if (onMinimize) {
       expandButton = (
         <FormattedMessage id="Terra.actionHeader.minimize">
-          {minimizeText => (
+          {(minimizeText) => (
             <Button isIconOnly icon={<span className={cx(['header-icon', 'minimize'])} />} text={minimizeText} onClick={onMinimize} />
           )}
         </FormattedMessage>
@@ -128,7 +128,7 @@ const ActionHeader = ({
     ? (
       <ButtonGroup>
         <FormattedMessage id="Terra.actionHeader.previous">
-          {previousText => (
+          {(previousText) => (
             <ButtonGroup.Button
               icon={<span className={cx(['header-icon', 'previous'])} />}
               text={previousText}
@@ -139,7 +139,7 @@ const ActionHeader = ({
           )}
         </FormattedMessage>
         <FormattedMessage id="Terra.actionHeader.next">
-          {nextText => (
+          {(nextText) => (
             <ButtonGroup.Button
               icon={<span className={cx(['header-icon', 'next'])} />}
               text={nextText}

@@ -58,10 +58,10 @@ const ListSection = ({
   }
 
   return (
-    <React.Fragment>
+    <>
       <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {sectionItems}
-    </React.Fragment>
+    </>
   );
 };
 

@@ -13,7 +13,7 @@ class SearchFieldOnChange extends React.Component {
     if (text && text.length > 0 && /\d/.test(text)) {
       searchText = text.substring(0, text.length - 1);
     }
-    this.setState(prevState => ({ searchText, callCount: prevState.callCount + 1 }));
+    this.setState((prevState) => ({ searchText, callCount: prevState.callCount + 1 }));
   }
 
   render() {

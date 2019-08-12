@@ -20,7 +20,7 @@ const invalidShArgsLengthError = (
 const invalidShArgValuesError = (
   propName = '<SUPPLY SHORTHAND PROP NAME>',
   invalidShValues = [],
-  expectedValues = Object.values(SpacerSizes),
+  expectedValues = Object.values(SpacerSizes), // eslint-disable-line compat/compat
   componentName = 'Spacer',
 ) => new Error(`Expected ${propName} shorthand values to be one of ${expectedValues} but "${invalidShValues}" supplied to ${componentName}. Validation Failed.`);
 
@@ -61,7 +61,7 @@ export const shorthandValidator = (props = {}, propName = '') => {
   }
 
   const conflictingPropName = (() => {
-    const propertyConflicts = dir => (props[`${propName}${dir}`] && (props[`${propName}${dir}`] !== SpacerSizes.NONE));
+    const propertyConflicts = (dir) => (props[`${propName}${dir}`] && (props[`${propName}${dir}`] !== SpacerSizes.NONE));
 
     const conflictProp = (
       (propertyConflicts('Top') ? `${propName}Top` : undefined)
@@ -78,7 +78,7 @@ export const shorthandValidator = (props = {}, propName = '') => {
   }
 
   const shValuesUnfiltered = propVal.split(SHORTHAND_DELIMITER);
-  const shValues = shValuesUnfiltered.filter(val => val); // Remove any falsey values (including empty strings)
+  const shValues = shValuesUnfiltered.filter((val) => val); // Remove any falsey values (including empty strings)
   const shValueCountValid = shValues.length >= shLengthBoundaries.min && shValues.length <= shLengthBoundaries.max;
 
   if (!shValueCountValid) {
@@ -86,8 +86,8 @@ export const shorthandValidator = (props = {}, propName = '') => {
   }
 
   const invalidShValues = (() => {
-    const sizes = Object.values(SpacerSizes);
-    const invalidValues = shValues.filter(val => sizes.indexOf(val) === -1);
+    const sizes = Object.values(SpacerSizes); // eslint-disable-line compat/compat
+    const invalidValues = shValues.filter((val) => sizes.indexOf(val) === -1);
     return invalidValues.length > 0 ? invalidValues : null;
   })();
 

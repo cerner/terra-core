@@ -154,7 +154,7 @@ class Select extends React.Component {
     switch (this.props.variant) {
       case Variants.TAG:
       case Variants.MULTIPLE:
-        return selectValue.map(tag => (
+        return selectValue.map((tag) => (
           <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
             {Util.valueDisplay(this.props, tag)}
           </Tag>
@@ -200,7 +200,7 @@ class Select extends React.Component {
 
     // Add new tags for uncontrolled components.
     if (this.props.value === undefined && !Util.findByValue(this.props, this.state, value)) {
-      this.setState(prevState => ({ tags: [...prevState.tags, <Option key={value} display={value} value={value} />] }));
+      this.setState((prevState) => ({ tags: [...prevState.tags, <Option key={value} display={value} value={value} />] }));
     }
 
     if (this.props.onSelect) {
@@ -237,7 +237,7 @@ class Select extends React.Component {
         required={required}
         totalOptions={Util.getTotalNumberOfOptions(children)}
         clearOptionDisplay={clearOptionDisplay}
-        dropdown={dropdownProps => (
+        dropdown={(dropdownProps) => (
           <DropdownMenu {...dropdownProps}>
             {this.state.tags}
             {children}

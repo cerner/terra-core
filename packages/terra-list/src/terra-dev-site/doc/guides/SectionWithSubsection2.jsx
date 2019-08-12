@@ -14,7 +14,7 @@ import styles from '../example/ListDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const createListItem = itemData => (
+const createListItem = (itemData) => (
   <Item key={itemData.key}>
     <Placeholder title={itemData.title} className={cx('placeholder')} />
   </Item>
@@ -33,7 +33,7 @@ class SectionWithSubsection2 extends React.Component {
   handleSectionSelection(event, metaData) {
     event.preventDefault();
 
-    this.setState(state => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.collapsedKeys, metaData.key) }));
+    this.setState((state) => ({ collapsedKeys: Utils.updatedMultiSelectedKeys(state.collapsedKeys, metaData.key) }));
   }
 
   createSubsection(subsectionData) {
@@ -47,7 +47,7 @@ class SectionWithSubsection2 extends React.Component {
         metaData={{ key: subsectionData.key }}
         onSelect={this.handleSectionSelection}
       >
-        {!isCollapsed && subsectionData.childItems.map(childItem => createListItem(childItem))}
+        {!isCollapsed && subsectionData.childItems.map((childItem) => createListItem(childItem))}
       </Subsection>
     );
   }
@@ -58,13 +58,13 @@ class SectionWithSubsection2 extends React.Component {
         key={sectionData.key}
         title={sectionData.title}
       >
-        {sectionData.childItems.map(childItem => this.createSubsection(childItem))}
+        {sectionData.childItems.map((childItem) => this.createSubsection(childItem))}
       </Section>
     );
   }
 
   createSections(data) {
-    return data.map(section => this.createSection(section));
+    return data.map((section) => this.createSection(section));
   }
 
   render() {

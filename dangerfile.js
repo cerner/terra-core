@@ -5,8 +5,8 @@ const CHANGELOG_PATTERN = /^packages\/terra-([a-z-0-9])*\/CHANGELOG\.md/i;
 
 const changedFiles = danger.git.created_files.concat(danger.git.modified_files);
 
-const changedChangelogs = new Set();
-const changedPackages = new Set();
+const changedChangelogs = new Set(); // eslint-disable-line compat/compat
+const changedPackages = new Set(); // eslint-disable-line compat/compat
 
 changedFiles.forEach((file) => {
   // file isn't in a package so it has no changelog, skip further processing
@@ -23,7 +23,7 @@ changedFiles.forEach((file) => {
   }
 });
 
-const missingChangelogs = [...changedPackages].filter(packageName => !changedChangelogs.has(packageName));
+const missingChangelogs = [...changedPackages].filter((packageName) => !changedChangelogs.has(packageName));
 
 // Fail if there are package changes without a CHANGELOG update
 if (missingChangelogs.length > 0) {

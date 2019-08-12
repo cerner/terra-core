@@ -43,7 +43,7 @@ const propTypes = {
   /**
    * Sets the styles of the component, one of `neutral`, or `ghost`.
    */
-  variant: PropTypes.oneOf(Object.values(Variants)),
+  variant: PropTypes.oneOf(Object.values(Variants)), // eslint-disable-line compat/compat
   /**
    * @private
    * The intl object to be injected for translations.
@@ -73,7 +73,7 @@ class SplitButton extends React.Component {
   }
 
   handleDropdownButtonClick() {
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    this.setState((prevState) => ({ isOpen: !prevState.isOpen }));
   }
 
   handleDropdownRequestClose(callback) {

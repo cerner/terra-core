@@ -13,7 +13,7 @@ exec('npx lerna updated', (error, stdout) => {
   }
 
   // Clean up lerna updated output and convert to an array
-  const updatedPackages = stdout.split('\n').map(x => `packages/${x}`);
+  const updatedPackages = stdout.split('\n').map((x) => `packages/${x}`);
   updatedPackages.pop(); // Remove last item as it is an empty string
 
   // Update release version in changelog files
