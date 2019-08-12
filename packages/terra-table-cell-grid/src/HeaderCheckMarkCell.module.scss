@@ -7,6 +7,20 @@
     &:last-of-type {
       border-right: 0;
     }
+
+    &.is-selectable:hover {
+      &::before {
+        background-color: red;
+        border-radius: 100%;
+        content: '';
+        position: absolute;
+        left: 50%;
+        height: 26px;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 26px;
+      }
+    }
   }
 
   .checkmark {
@@ -21,24 +35,9 @@
 
   .is-selected {
     color: #000;
-    // &::before {
-    //   background-color: black;
-    //   content: '';
-    //   position: absolute;
-    //   left: 2px;
-    //   height: 10px;
-    //   top: 2px;
-    //   width: 10px;
-    // }
   }
 
-  // .is-intermediate {
-  //   &::before {
-  //     background-color: green;
-  //   }
-  // }
-
-  .is-selectable {
+  .is-selectable .checkmark {
     background-color: #fff;
     border: 1px solid #000;
   }

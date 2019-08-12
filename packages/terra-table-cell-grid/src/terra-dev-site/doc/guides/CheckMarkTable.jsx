@@ -15,18 +15,12 @@ const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const MultiSelectTable = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);
-  const [selectedMarks, setSelectedMarks] = useState([]);
   const [headerState, setHeaderState] = useState('none');
-
-  const handleRowSelection = (event, metaData) => {
-    event.preventDefault();
-    setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
-  };
 
   const handleMarkSelection = (event, metaData) => {
     event.preventDefault();
     event.stopPropagation();
-    const newSelection = Utils.updatedMultiSelectedKeys(selectedMarks, metaData.key);
+    const newSelection = Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key);
     if (newSelection.length === rowCount) {
       setHeaderState('all');
     } else if (newSelection.length > 0) {
@@ -34,7 +28,7 @@ const MultiSelectTable = () => {
     } else {
       setHeaderState('none');
     }
-    setSelectedMarks(Utils.updatedMultiSelectedKeys(selectedMarks, metaData.key));
+    setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
   };
 
   const handleHeaderMarkSelection = () => {
@@ -49,15 +43,12 @@ const MultiSelectTable = () => {
     <Row
       key={rowData.key}
       isSelectable
-      isSelected={selectedKeys.indexOf(rowData.key) >= 0}
-      metaData={{ key: rowData.key }}
-      onSelect={handleRowSelection}
     >
       {(
         <CheckMarkCell
           isPadded
           isSelectable
-          isSelected={headerState === 'none' ? false : headerState === 'all' || selectedMarks.indexOf(rowData.key) >= 0}
+          isSelected={headerState === 'none' ? false : headerState === 'all' || selectedKeys.indexOf(rowData.key) >= 0}
           metaData={{ key: rowData.key }}
           onSelect={handleMarkSelection}
         />

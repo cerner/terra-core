@@ -26,10 +26,6 @@ const propTypes = {
    */
   isPadded: PropTypes.bool,
   /**
-   * Whether or not the cell is selected
-   */
-  isSelected: PropTypes.bool,
-  /**
    * Whether or not header cell should appear as a selectable element.
    */
   isSelectable: PropTypes.bool,
@@ -91,7 +87,6 @@ const TableHeaderCell = ({
   icon,
   isPadded,
   isSelectable,
-  isSelected,
   metaData,
   onBlur,
   onClick,
@@ -106,7 +101,6 @@ const TableHeaderCell = ({
   const contentClassName = cx([
     'header-cell',
     { 'is-selectable': isSelectable },
-    { 'is-selected': isSelected && isSelectable },
     { 'is-sortable': sort === 'asc' || sort === 'desc' },
     customProps.className,
   ]);
@@ -129,7 +123,7 @@ const TableHeaderCell = ({
     attrSpread['data-header-show-focus'] = 'true';
     attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
     attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
-    attrSpread['aria-selected'] = isSelected;
+    attrSpread['aria-selected'] = false;
   }
 
   let content = [

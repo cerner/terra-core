@@ -92,7 +92,7 @@ const HeaderCheckMarkCell = ({
 }) => {
   const cellClassNames = cx(
     'header-cell',
-    { derp: isSelectable },
+    { 'is-selectable': isSelectable },
     customProps.className,
   );
 
@@ -119,7 +119,6 @@ const HeaderCheckMarkCell = ({
       {...attrSpread}
       className={cx(
         'checkmark',
-        { 'is-selectable': isSelectable },
         { 'is-selected': isSelected },
         { 'is-intermediate': isIntermediate },
       )}

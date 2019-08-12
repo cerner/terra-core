@@ -14,13 +14,15 @@
       }
     }
 
-    &.divider-horizontal {
+    &.divider-horizontal,
+    &.divider-both  {
       > * {
         border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
       }
     }
   
-    &.divider-vertical {
+    &.divider-vertical,
+    &.divider-both  {
       border-top: var(--terra-flex-table-row-border-top, 1px solid #dedfe0);
   
       &:last-of-type {

@@ -1,7 +1,6 @@
 :local {
   .cell {
     border: 0;
-    border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
     position: relative;
     flex: 0 0 auto;
   
@@ -9,7 +8,7 @@
       border-right: 0;
     }
 
-    &:hover {
+    &.is-selectable:hover {
       &::before {
         background-color: red;
         border-radius: 100%;
@@ -37,32 +36,11 @@
 
   .is-selected {
     color: #000;
-    // &::before {
-    //   background-color: black;
-    //   content: '';
-    //   position: absolute;
-    //   left: 2px;
-    //   height: 10px;
-    //   top: 2px;
-    //   width: 10px;
-    // }
   }
 
-  .is-selectable {
+  .is-selectable .checkmark {
     background-color: #fff;
     border: 1px solid #000;
-
-    // &.is-selected {
-    //   &::before {
-    //     background-color: black;
-    //     content: '';
-    //     position: absolute;
-    //     left: 20%;
-    //     height: 60%;
-    //     top: 20%;
-    //     width: 60%;
-    //   }
-    // }
   }
 
   [data-table-padding='standard'] .cell > .container {

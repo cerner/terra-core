@@ -100,7 +100,6 @@ const CheckMarkCell = ({
       {...attrSpread}
       className={cx(
         'checkmark',
-        { 'is-selectable': isSelectable },
         { 'is-selected': isSelected },
       )}
     />
@@ -120,6 +119,7 @@ const CheckMarkCell = ({
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cx(
         'cell',
+        { 'is-selectable': isSelectable },
         customProps.className,
       )}
       ref={refCallback}

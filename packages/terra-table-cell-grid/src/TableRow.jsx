@@ -70,6 +70,7 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
+  dividerStyle: 'none',
   isSelected: false,
   isSelectable: false,
   isStriped: false,
@@ -78,6 +79,7 @@ const defaultProps = {
 
 const TableRow = ({
   children,
+  dividerStyle,
   isSelected,
   isSelectable,
   isStriped,
@@ -95,6 +97,7 @@ const TableRow = ({
     { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
     { 'is-selectable': isSelectable },
     { 'is-striped': isStriped },
+    `divider-${dividerStyle}`,
     'row',
     customProps.className,
   ]);
@@ -117,7 +120,7 @@ const TableRow = ({
       <CheckMarkCell isPadded isSelected={isSelected} />
     );
   } else if (selectionStyle === 'chevron') {
-    check = (
+    chevron = (
       <ChevronCell isPadded isVisible={isSelectable} />
     );
   }
