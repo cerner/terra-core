@@ -32,7 +32,7 @@ pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
   </p>
 );
 
-const contentheader = <h3 >Display Header</h3>;
+const contentheader = <h3>Display Header</h3>;
 const contentfooter = <h3 id="contentfooter">Children count is </h3>;
 
 const onContainerScroll = scrollRef => (
