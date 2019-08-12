@@ -1,14 +1,31 @@
 :local {
   .row {
-    border-top: var(--terra-flex-table-row-border-top, 1px solid #dedfe0);
     display: flex;
     margin-bottom: 0;
     overflow: hidden;
     position: relative;
     flex: 1 1 auto;
-    
-    &:last-of-type {
-      border-bottom: var(--terra-flex-table-row-border-bottom, 1px solid #dedfe0);
+
+    > * {
+      border-right: 1px solid transparent;
+
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+
+    &.divider-horizontal {
+      > * {
+        border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
+      }
+    }
+  
+    &.divider-vertical {
+      border-top: var(--terra-flex-table-row-border-top, 1px solid #dedfe0);
+  
+      &:last-of-type {
+        border-bottom: var(--terra-flex-table-row-border-bottom, 1px solid #dedfe0);
+      }
     }
   }
 
@@ -42,9 +59,6 @@
   } 
 
   .is-selectable {
-    > * {
-      border: 0 !important;
-    }
     cursor: pointer;
     outline: var(--terra-flex-table-row-focus-outline, none);
 

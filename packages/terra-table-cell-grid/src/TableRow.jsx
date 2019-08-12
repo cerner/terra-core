@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import styles from './TableRow.module.scss';
 import TableUtils from './TableUtils';
 import CheckMarkCell from './CheckMarkCell';
+import ChevronCell from './ChevronCell';
 
 const cx = classNames.bind(styles);
 
@@ -12,6 +13,12 @@ const propTypes = {
    * The children passed to the component
    */
   children: PropTypes.node,
+  /**
+   * The children passed to the component.
+   * * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
+   */
+  dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
+
   /**
    * Whether or not row is selected
    */
@@ -38,7 +45,11 @@ const propTypes = {
    * Function callback for the ref of the tr.
    */
   refCallback: PropTypes.func,
-  selectionStyle: PropTypes.oneOf(['default', 'checkmark']),
+  /**
+   * Style of selection for the row.
+   * One of `default`, `checkmark`, `chevron`.
+   */
+  selectionStyle: PropTypes.oneOf(['default', 'checkmark', 'chevron']),
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
@@ -100,9 +111,14 @@ const TableRow = ({
   }
 
   let check;
+  let chevron;
   if (selectionStyle === 'checkmark') {
     check = (
       <CheckMarkCell isPadded isSelected={isSelected} />
+    );
+  } else if (selectionStyle === 'chevron') {
+    check = (
+      <ChevronCell isPadded isVisible={isSelectable} />
     );
   }
 
@@ -110,6 +126,7 @@ const TableRow = ({
     <div {...customProps} {...attrSpread} className={rowClassNames} ref={refCallback} role="row">
       {check}
       {children}
+      {chevron}
     </div>
   );
 };

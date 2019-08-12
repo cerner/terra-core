@@ -2,7 +2,7 @@ import React, {
   useState,
 } from 'react';
 import Table, {
-  Row, Cell, HeaderCell, HeaderChevronCell, ChevronCell,
+  Row, Cell, HeaderCell, HeaderChevronCell,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -23,13 +23,13 @@ const SingleSelectTable = () => {
   const createTableRow = itemData => (
     <Row
       key={itemData.key}
+      selectionStyle="chevron"
       isSelectable
       isSelected={selectedKey === itemData.key}
       metaData={{ key: itemData.key }}
       onSelect={handleRowSelection}
     >
       {createCellsForRow(itemData.cells)}
-      {<ChevronCell isPadded key="chevron" />}
     </Row>
   );
 

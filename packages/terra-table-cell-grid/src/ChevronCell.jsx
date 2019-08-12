@@ -13,6 +13,10 @@ const propTypes = {
    */
   isPadded: PropTypes.bool,
   /**
+   * Whether or not the chevron is visible or a placeholder.
+   */
+  isVisible: PropTypes.bool,
+  /**
    * Function callback for the ref of the td.
    */
   width: PropTypes.shape({
@@ -27,15 +31,18 @@ const propTypes = {
 
 const defaultProps = {
   isPadded: false,
+  isVisible: false,
 };
 
 const ChevronCell = ({
   isPadded,
+  isVisible,
   width,
   ...customProps
 }) => {
+  const Component = isVisible ? IconChevronRight : 'div';
   let content = (
-    <IconChevronRight
+    <Component
       className={cx(
         'chevron',
       )}
