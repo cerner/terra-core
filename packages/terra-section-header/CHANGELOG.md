@@ -4,7 +4,8 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 * Remove react and react-dom as dependencies
 
 2.19.0 - (July 30, 2019)

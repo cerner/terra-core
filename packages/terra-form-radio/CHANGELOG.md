@@ -5,7 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 
 3.23.0 - (July 30, 2019)
 ------------------

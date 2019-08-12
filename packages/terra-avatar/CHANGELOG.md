@@ -7,7 +7,8 @@ Unreleased
 * Fixed issue for avatar to allow non-square images by sending `Fit` as `cover`.
 
 ### Changed
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 
 2.23.0 - (July 30, 2019)
 ------------------

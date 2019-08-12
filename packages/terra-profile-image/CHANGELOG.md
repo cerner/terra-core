@@ -8,7 +8,8 @@ Unreleased
 * updated to set `fit` to always be `cover` to handle non-square images.
 
 ### Changed
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 
 3.15.0 - (July 30, 2019)
 ------------------

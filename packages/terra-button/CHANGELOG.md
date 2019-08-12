@@ -8,7 +8,7 @@ Unreleased
 
 ### Changed
 * Update tests for dev-site v6
-* updated package.json test scripts
+* Updated package.json test scripts
 
 3.18.0 - (July 24, 2019)
 ------------------

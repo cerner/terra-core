@@ -4,7 +4,8 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 * Updated Props description for alignFitEnd and alignFill.
 
 3.17.0 - (July 30, 2019)

@@ -9,7 +9,8 @@ Unreleased
 ### Changed
 * Minor dependency version bump
 * Updated errorIcon default prop from `Field.defaultProps.errorIcon` with `<IconError>` component.
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 
 3.20.0 - (July 24, 2019)
 ------------------

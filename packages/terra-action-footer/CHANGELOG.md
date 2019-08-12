@@ -4,7 +4,9 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
+* Updated code to match new eslint rules
 
 2.18.0 - (July 30, 2019)
 ------------------

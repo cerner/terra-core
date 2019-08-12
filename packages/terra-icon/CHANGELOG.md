@@ -17,7 +17,8 @@ Unreleased
 * Added new icon `IconXSymbolLight`
 
 ### Changed
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 * Consume one-cerner-style-icons v1.27
 
 3.16.0 - (July 30, 2019)

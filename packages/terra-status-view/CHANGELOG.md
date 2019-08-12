@@ -5,7 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Update jest test snanpshot
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 
 4.4.0 - (July 30, 2019)
 ------------------

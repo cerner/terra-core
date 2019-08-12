@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* updated package.json test scripts
+* Updated package.json test scripts
 
 3.19.0 - (July 30, 2019)
 ------------------

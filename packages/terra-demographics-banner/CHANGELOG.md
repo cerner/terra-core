@@ -5,7 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated code to match new eslint rules
 
 ### Updated
 * updated jest snapshots
