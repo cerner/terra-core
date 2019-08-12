@@ -7,33 +7,6 @@ exports[`Select should render a clear option 1`] = `
   disabled={false}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -46,11 +19,9 @@ exports[`Select should render a clear option 1`] = `
 `;
 
 exports[`Select should render a combobox variant 1`] = `
-<InjectIntl(Frame)
-  data-terra-select={true}
+<Select
+  allowClear={false}
   disabled={false}
-  display=""
-  dropdown={[Function]}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -79,22 +50,15 @@ exports[`Select should render a combobox variant 1`] = `
     }
   }
   isInvalid={false}
-  onDeselect={[Function]}
-  onSelect={[Function]}
-  placeholder="Terra.form.select.defaultDisplay"
   required={false}
-  totalOptions={0}
-  value=""
   variant="combobox"
 />
 `;
 
 exports[`Select should render a combobox variant with a placeholder 1`] = `
-<InjectIntl(Frame)
-  data-terra-select={true}
+<Select
+  allowClear={false}
   disabled={false}
-  display=""
-  dropdown={[Function]}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -123,12 +87,8 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
     }
   }
   isInvalid={false}
-  onDeselect={[Function]}
-  onSelect={[Function]}
   placeholder="Placeholder"
   required={false}
-  totalOptions={0}
-  value=""
   variant="combobox"
 />
 `;
@@ -139,33 +99,6 @@ exports[`Select should render a default variant 1`] = `
   disabled={false}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -183,33 +116,6 @@ exports[`Select should render a default variant with a placeholder 1`] = `
   disabled={false}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -227,33 +133,6 @@ exports[`Select should render a disabled combobox variant 1`] = `
   disabled={true}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -271,33 +150,6 @@ exports[`Select should render a disabled default variant 1`] = `
   disabled={true}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -315,33 +167,6 @@ exports[`Select should render a disabled multiple variant 1`] = `
   disabled={true}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -359,33 +184,6 @@ exports[`Select should render a disabled search variant 1`] = `
   disabled={true}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -403,33 +201,6 @@ exports[`Select should render a disabled tag variant 1`] = `
   disabled={true}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -447,33 +218,6 @@ exports[`Select should render a multiple variant 1`] = `
   disabled={false}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -491,33 +235,6 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
   disabled={false}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -535,33 +252,6 @@ exports[`Select should render a required select 1`] = `
   disabled={false}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -579,33 +269,6 @@ exports[`Select should render a search variant 1`] = `
   disabled={false}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -623,33 +286,6 @@ exports[`Select should render a search variant with a placeholder 1`] = `
   disabled={false}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -691,6 +327,7 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
     </span>
   </div>
   <div
+    aria-label="Terra.form.select.ariaLabel"
     class="display"
     role="textbox"
   >
@@ -748,6 +385,7 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
     </span>
   </div>
   <div
+    aria-label="Terra.form.select.ariaLabel"
     class="display"
     role="textbox"
   >
@@ -805,6 +443,7 @@ exports[`Select should render a select with an option 1`] = `
     </span>
   </div>
   <div
+    aria-label="Terra.form.select.ariaLabel"
     class="display"
     role="textbox"
   >
@@ -862,6 +501,7 @@ exports[`Select should render a select with multiple options 1`] = `
     </span>
   </div>
   <div
+    aria-label="Terra.form.select.ariaLabel"
     class="display"
     role="textbox"
   >
@@ -895,33 +535,6 @@ exports[`Select should render a tag variant 1`] = `
   disabled={false}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -939,33 +552,6 @@ exports[`Select should render a tag variant with a placeholder 1`] = `
   disabled={false}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={false}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -978,11 +564,9 @@ exports[`Select should render a tag variant with a placeholder 1`] = `
 `;
 
 exports[`Select should render an invalid combobox variant 1`] = `
-<InjectIntl(Frame)
-  data-terra-select={true}
+<Select
+  allowClear={false}
   disabled={false}
-  display=""
-  dropdown={[Function]}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1011,12 +595,7 @@ exports[`Select should render an invalid combobox variant 1`] = `
     }
   }
   isInvalid={true}
-  onDeselect={[Function]}
-  onSelect={[Function]}
-  placeholder="Terra.form.select.defaultDisplay"
   required={false}
-  totalOptions={0}
-  value=""
   variant="combobox"
 />
 `;
@@ -1027,33 +606,6 @@ exports[`Select should render an invalid default variant 1`] = `
   disabled={false}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={true}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -1071,33 +623,6 @@ exports[`Select should render an invalid multiple variant 1`] = `
   disabled={false}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={true}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -1115,33 +640,6 @@ exports[`Select should render an invalid search variant 1`] = `
   disabled={false}
   display=""
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={true}
   onDeselect={[Function]}
   onSelect={[Function]}
@@ -1159,33 +657,6 @@ exports[`Select should render an invalid tag variant 1`] = `
   disabled={false}
   display={Array []}
   dropdown={[Function]}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInvalid={true}
   onDeselect={[Function]}
   onSelect={[Function]}

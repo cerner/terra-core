@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SearchFieldExampleTemplate from 'terra-search-field/lib/terra-dev-site/doc/example/SearchFieldExampleTemplate';
+import SearchField from 'terra-search-field/lib/SearchField';
 
-class SearchFieldFilterNumeric extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-    this.state = { searchText: '' };
-  }
+const INVALID_MESSAGE = 'The default minimum search length is 2.';
 
-  onChange(event, text) {
-    let searchText = text;
+const SearchFieldFilterNumeric = () => {
+  const [state, setSearchText] = useState({ searchText: '' });
+
+  const message = state.searchText && state.searchText.length >= 2 ? `Search text: ${state.searchText}` : INVALID_MESSAGE;
+
+  const handleChange = (event, text) => {
+    let inputText = text;
     if (text && text.length > 0 && /\d/.test(text)) {
-      searchText = text.substring(0, text.length - 1);
+      inputText = text.substring(0, text.length - 1);
     }
-    this.setState({ searchText });
-  }
+    setSearchText({ searchText: inputText });
+  };
 
-  render() {
-    return (
-      <SearchFieldExampleTemplate
-        onChange={this.onChange}
-        value={this.state.searchText}
-      />
-    );
-  }
-}
+  const handleSearchText = (text) => {
+    setSearchText({ searchText: text });
+  };
+
+  return (
+    <div>
+      <p>{message}</p>
+      <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} />
+    </div>
+  );
+};
 
 export default SearchFieldFilterNumeric;

@@ -293,6 +293,7 @@ exports[`renders the banner appropriately for a person with gestational and post
       photo={
         <Image
           alt="My Cat"
+          fit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -344,6 +345,7 @@ exports[`renders the banner appropriately for a person with gestational and post
       photo={
         <Image
           alt="My Cat"
+          fit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -401,6 +403,7 @@ exports[`renders the banner properly for a deceased person with additional appli
       photo={
         <Image
           alt="My Cat"
+          fit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -452,6 +455,7 @@ exports[`renders the banner properly for a deceased person with additional appli
       photo={
         <Image
           alt="My Cat"
+          fit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -509,6 +513,7 @@ exports[`renders the banner that contains additional information 1`] = `
       photo={
         <Image
           alt="My Cat"
+          fit="fill"
           isFluid={false}
           src=""
           variant="default"
@@ -560,6 +565,7 @@ exports[`renders the banner that contains additional information 1`] = `
       photo={
         <Image
           alt="My Cat"
+          fit="fill"
           isFluid={false}
           src=""
           variant="default"
