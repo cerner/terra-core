@@ -17,5 +17,7 @@
   "Terra.form.select.multiSelectUsageGuidance": "Saisissez du texte ou utilisez les touches fléchées haut et bas pour parcourir les options. Appuyez sur Entrée pour sélectionner ou désélectionner une option.",
   "Terra.form.select.searchUsageGuidance": "Saisissez du texte ou utilisez les touches fléchées haut et bas pour parcourir les options. Appuyez sur Entrée pour sélectionner une option.",
   "Terra.form.select.clearSelect": "Effacer la sélection",
-  "Terra.form.select.selectCleared": "Valeur sélectionnée effacée."
+  "Terra.form.select.selectCleared": "Valeur sélectionnée effacée.",
+  "Terra.form.select.menu": "Menu",
+  "Terra.form.select.option": "Options"
 }

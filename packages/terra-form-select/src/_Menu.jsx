@@ -98,15 +98,6 @@ const defaultProps = {
   value: undefined,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
 class Menu extends React.Component {
   constructor(props) {
     super(props);
@@ -521,6 +512,7 @@ class Menu extends React.Component {
         id="terra-select-menu"
         role="listbox"
         className={cx('menu')}
+        aria-label={this.props.intl.formatMessage({ id: 'Terra.form.select.menu' })}
         ref={(menu) => { this.menu = menu; }}
         {...(this.state.active !== null ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
         tabIndex="0"
@@ -533,7 +525,6 @@ class Menu extends React.Component {
 
 Menu.propTypes = propTypes;
 Menu.defaultProps = defaultProps;
-Menu.contextTypes = contextTypes;
 
 /**
  * This polyfill enables backwards compatibility of features added in React 16.3.0.

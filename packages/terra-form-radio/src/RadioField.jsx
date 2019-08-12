@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
@@ -69,16 +70,7 @@ const defaultProps = {
   showOptional: false,
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
-    }
-  },
-};
-
-const RadioField = (props, { intl }) => {
+const RadioField = (props) => {
   const {
     children,
     error,
@@ -117,12 +109,24 @@ const RadioField = (props, { intl }) => {
         {required && (isInvalid || !hideRequired) && (
           <React.Fragment>
             <div aria-hidden="true" className={cx('required')}>*</div>
-            <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
+            <FormattedMessage id="Terra.form.field.required">
+              {text => (
+                <VisualyHiddenText text={text} />
+              )}
+            </FormattedMessage>
           </React.Fragment>
         )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
-        {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
+        {showOptional && !required
+          && (
+            <FormattedMessage id="Terra.form.field.optional">
+              {optionalText => (
+                <span className={cx('optional')}>{optionalText}</span>
+              )}
+            </FormattedMessage>
+          )
+        }
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
     </legend>
@@ -150,6 +154,5 @@ const RadioField = (props, { intl }) => {
 
 RadioField.propTypes = propTypes;
 RadioField.defaultProps = defaultProps;
-RadioField.contextTypes = contextTypes;
 
 export default RadioField;

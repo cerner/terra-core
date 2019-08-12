@@ -12,15 +12,6 @@ describe('Alert with no props', () => {
     const wrapper = mountWithIntl(<Alert />);
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('throws error on missing locale prop in Base', () => {
-    global.console = { error: jest.fn() };
-
-    expect(() => {
-      render(<Alert />);
-    }).toThrowError();
-    expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
-  });
 });
 
 describe('Dismissible Alert that includes actions section', () => {
