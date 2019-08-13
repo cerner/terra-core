@@ -4,9 +4,6 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Added markdown version of props table to package
-
-### Changed
 * updated package.json test scripts
 
 3.15.0 - (July 30, 2019)

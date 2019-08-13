@@ -5,7 +5,6 @@ Unreleased
 ----------
 ### Changed
 * Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
-* Added markdown version of props table to package
 * updated package.json test scripts
 
 4.7.0 - (July 30, 2019)

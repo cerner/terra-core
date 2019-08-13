@@ -3,9 +3,6 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Added markdown version of props table to package
-
 ### Updated
 * updated jest snapshots
 * updated to set `fit` to always be `cover` to handle non-square images.
