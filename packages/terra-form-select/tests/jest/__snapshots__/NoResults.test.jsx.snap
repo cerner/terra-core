@@ -18,6 +18,13 @@ exports[`NoResults should render a default NoResults 1`] = `
   className="no-results"
   role="option"
 >
-  Terra.form.select.noResults
+  <FormattedMessage
+    id="Terra.form.select.noResults"
+    values={
+      Object {
+        "text": "value",
+      }
+    }
+  />
 </div>
 `;

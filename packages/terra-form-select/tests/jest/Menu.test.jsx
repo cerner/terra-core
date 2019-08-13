@@ -1,14 +1,15 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
-import Menu from '../../src/_Menu';
-import Option from '../../src/_Option';
+import Option from '../../src/shared/_Option';
+import ComboboxMenu from '../../src/combobox/Menu';
+import SingleSelectMenu from '../../src/single/Menu';
 
 describe('Menu', () => {
   it('should render a default Menu', () => {
     const liveRegion = { current: document.createElement('div') };
 
-    const menu = <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} variant="default" value="value" />;
+    const menu = <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" />;
     const wrapper = shallowWithIntl(menu);
     expect(wrapper).toMatchSnapshot();
   });
@@ -18,9 +19,9 @@ describe('Menu', () => {
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
 
     const menu = (
-      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} variant="default" value="value" searchValue="asdf">
+      <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} value="value" searchValue="asdf">
         <Option value="value" display="display" />
-      </Menu>
+      </SingleSelectMenu>
     );
 
     const wrapper = shallowWithIntl(menu);
@@ -38,9 +39,9 @@ describe('Menu', () => {
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
 
     const menu = (
-      <Menu onSelect={() => {}} intl={mockIntl} variant="default" value="value" searchValue="asdf">
+      <SingleSelectMenu onSelect={() => {}} intl={mockIntl} value="value" searchValue="asdf">
         <Option value="value" display="display" />
-      </Menu>
+      </SingleSelectMenu>
     );
 
     const wrapper = shallowWithIntl(menu);
@@ -58,9 +59,9 @@ describe('Menu', () => {
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
 
     const menu = (
-      <Menu onSelect={() => {}} intl={mockIntl} visuallyHiddenComponent={liveRegion} variant="default" value="value" searchValue="asdf">
+      <SingleSelectMenu onSelect={() => {}} intl={mockIntl} visuallyHiddenComponent={liveRegion} value="value" searchValue="asdf">
         <Option value="value" display="display" />
-      </Menu>
+      </SingleSelectMenu>
     );
 
     const wrapper = shallowWithIntl(menu);
@@ -79,9 +80,9 @@ describe('Menu', () => {
     jest.useFakeTimers();
 
     const menu = (
-      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} variant="combobox" clearOptionDisplay="-Select-" searchValue="">
+      <ComboboxMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} clearOptionDisplay="-Select-" searchValue="">
         <Option value="value" display="display" />
-      </Menu>
+      </ComboboxMenu>
     );
 
     jest.useFakeTimers();
