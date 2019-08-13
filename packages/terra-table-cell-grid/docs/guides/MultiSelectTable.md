@@ -1,4 +1,4 @@
-# Terra TableCellGrid - Implementing a Multi Select Table
+# Terra TableCellGrid - Implementing a Multi Select TableCellGrid
 
 The terra-flex-table implementation requires controlled state if selections are required. As a result selections are applied at child row generation from HOC state. The following guide show you how to implement that state within a multiple row selection variant of table, as well as implement the additional narrowing requirements of a max selection for rows.
 
