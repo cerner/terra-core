@@ -2,8 +2,8 @@
 import React, {
   useState,
 } from 'react';
-import Table, {
-  Row, Cell, HeaderCell, Utils, CheckMarkCell, HeaderCheckMarkCell,
+import TableCellGrid, {
+  CellGrid, Cell, HeaderCell, Utils, CheckMarkCell, HeaderCheckMarkCell,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -11,7 +11,7 @@ const rowCount = 5;
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
 const MultiSelectTable = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);
@@ -39,8 +39,8 @@ const MultiSelectTable = () => {
     }
   };
 
-  const createTableRow = rowData => (
-    <Row
+  const createCellGrid = rowData => (
+    <CellGrid
       key={rowData.key}
       isSelectable
     >
@@ -53,14 +53,14 @@ const MultiSelectTable = () => {
           onSelect={handleMarkSelection}
         />
       )}
-      {createCellsForRow(rowData.cells)}
-    </Row>
+      {createCellsForCellGrid(rowData.cells)}
+    </CellGrid>
   );
 
-  const createTableRows = data => data.map(childItem => createTableRow(childItem));
+  const createCellGrids = data => data.map(childItem => createCellGrid(childItem));
 
   return (
-    <Table
+    <TableCellGrid
       aria-multiselectable
       paddingStyle="standard"
       headerCells={[
@@ -71,8 +71,8 @@ const MultiSelectTable = () => {
         <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>,
       ]}
     >
-      {createTableRows(mockData)}
-    </Table>
+      {createCellGrids(mockData)}
+    </TableCellGrid>
   );
 };
 

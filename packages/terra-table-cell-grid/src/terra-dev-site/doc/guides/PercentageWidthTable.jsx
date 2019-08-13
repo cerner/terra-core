@@ -1,6 +1,6 @@
 import React from 'react';
-import Table, {
-  Row, Cell, HeaderCell,
+import TableCellGrid, {
+  CellGrid, Cell, HeaderCell,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -13,18 +13,18 @@ const widths = [
 
 const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[index]}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
+const createCellsForCellGrid = cells => cells.map((cell, index) => createCell(cell, index));
 
-const createTableRow = itemData => (
-  <Row key={itemData.key}>
-    {createCellsForRow(itemData.cells)}
-  </Row>
+const createCellGrid = itemData => (
+  <CellGrid key={itemData.key}>
+    {createCellsForCellGrid(itemData.cells)}
+  </CellGrid>
 );
 
-const createTableRows = data => data.map(childItem => createTableRow(childItem));
+const createCellGrids = data => data.map(childItem => createCellGrid(childItem));
 
 const PercentageWidthTable = () => (
-  <Table
+  <TableCellGrid
     paddingStyle="standard"
     headerCells={[
       <HeaderCell isPadded key="cell-0" width={widths[0]}>20%</HeaderCell>,
@@ -33,8 +33,8 @@ const PercentageWidthTable = () => (
       <HeaderCell isPadded key="cell-3" width={widths[3]}>30%</HeaderCell>,
     ]}
   >
-    {createTableRows(mockData)}
-  </Table>
+    {createCellGrids(mockData)}
+  </TableCellGrid>
 );
 
 export default PercentageWidthTable;

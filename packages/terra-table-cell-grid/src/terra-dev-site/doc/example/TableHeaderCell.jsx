@@ -1,11 +1,11 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, { HeaderCell } from 'terra-table-cell-grid/lib/index';
+import TableCellGrid, { HeaderCell } from 'terra-table-cell-grid/lib/index';
 import CommonIcon from '../common/CommonIcon';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableHeaderCellExample = () => (
-  <Table
+  <TableCellGrid
     headerCells={[
       <HeaderCell
         key="cell-0"

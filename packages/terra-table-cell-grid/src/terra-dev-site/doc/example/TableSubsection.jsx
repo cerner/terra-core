@@ -1,14 +1,14 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, { Row, Cell, Subsection } from 'terra-table-cell-grid/lib/index';
+import TableCellGrid, { CellGrid, Cell, Subsection } from 'terra-table-cell-grid/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableSubsectionExample = () => (
-  <Table
+  <TableCellGrid
     paddingStyle="standard"
   >
     <Subsection title="Subsection Title">
-      <Row>
+      <CellGrid>
         <Cell isPadded key="cell-0">
           Lorem ipsum dolor
         </Cell>
@@ -18,10 +18,10 @@ const TableSubsectionExample = () => (
         <Cell isPadded key="cell-2">
           Lorem ipsum dolor
         </Cell>
-      </Row>
+      </CellGrid>
     </Subsection>
     <Subsection isCollapsible title="Collapsible Subsection">
-      <Row>
+      <CellGrid>
         <Cell isPadded key="cell-0">
           Lorem ipsum dolor
         </Cell>
@@ -31,10 +31,10 @@ const TableSubsectionExample = () => (
         <Cell isPadded key="cell-2">
           Lorem ipsum dolor
         </Cell>
-      </Row>
+      </CellGrid>
     </Subsection>
     <Subsection isCollapsible isCollapsed title="Collapsed Subsection">
-      <Row>
+      <CellGrid>
         <Cell isPadded key="cell-0">
           Lorem ipsum dolor
         </Cell>
@@ -44,9 +44,9 @@ const TableSubsectionExample = () => (
         <Cell isPadded key="cell-2">
           Lorem ipsum dolor
         </Cell>
-      </Row>
+      </CellGrid>
     </Subsection>
-  </Table>
+  </TableCellGrid>
 );
 
 export default TableSubsectionExample;

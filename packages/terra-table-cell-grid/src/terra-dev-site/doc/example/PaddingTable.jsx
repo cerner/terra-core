@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, {
-  HeaderCell, Row, Cell, CheckMarkCell, HeaderCheckMarkCell, HeaderChevronCell, ChevronCell,
+import TableCellGrid, {
+  HeaderCell, CellGrid, Cell, CheckMarkCell, HeaderCheckMarkCell, HeaderChevronCell, ChevronCell,
 } from 'terra-table-cell-grid/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
@@ -13,7 +13,7 @@ const propTypes = {
 const NoPaddingTable = ({
   paddingStyle,
 }) => (
-  <Table
+  <TableCellGrid
     paddingStyle={paddingStyle}
     id="Table"
     headerCells={[
@@ -24,32 +24,32 @@ const NoPaddingTable = ({
       <HeaderChevronCell isPadded key="CHEVRON" />,
     ]}
   >
-    <Row selectionStyle="checkmark" isSelectable key="PERSON_0">
+    <CellGrid selectionStyle="checkmark" isSelectable key="PERSON_0">
       {/* <CheckMarkCell isPadded key="derp" /> */}
       <Cell isPadded key="NAME">John Smith</Cell>
       <Cell isPadded key="ADDRESS">123 Adams Drive</Cell>
       <Cell isPadded key="PHONE_NUMBER">111-222-3333</Cell>
       <ChevronCell isPadded key="CHEVRON" />
-    </Row>
-    <Row selectionStyle="checkmark" isSelectable isSelected key="PERSON_1">
+    </CellGrid>
+    <CellGrid selectionStyle="checkmark" isSelectable isSelected key="PERSON_1">
       {/* <CheckMarkCell isSelected isPadded key="derp" /> */}
       <Cell isPadded key="NAME">Jane Smith</Cell>
       <Cell isPadded key="ADDRESS">321 Drive Street</Cell>
       <Cell isPadded key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-    <Row isSelectable key="PERSON_2">
+    </CellGrid>
+    <CellGrid isSelectable key="PERSON_2">
       <CheckMarkCell isSelectable isPadded key="derp" />
       <Cell isPadded key="NAME">Dave Smith</Cell>
       <Cell isPadded key="ADDRESS">213 Raymond Road</Cell>
       <Cell isPadded key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-    <Row key="PERSON_3">
+    </CellGrid>
+    <CellGrid key="PERSON_3">
       <CheckMarkCell isSelectable isSelected isPadded key="derp" />
       <Cell isPadded isSelectable key="NAME">John Smith</Cell>
       <Cell isPadded isSelectable key="ADDRESS">123 Adams Drive</Cell>
       <Cell isPadded isSelectable key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-  </Table>
+    </CellGrid>
+  </TableCellGrid>
 );
 
 NoPaddingTable.propTypes = propTypes;

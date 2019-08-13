@@ -1,16 +1,16 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, { Row, Cell } from 'terra-table-cell-grid/lib/index';
+import TableCellGrid, { CellGrid, Cell } from 'terra-table-cell-grid/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableCellExample = () => (
-  <Table>
-    <Row>
+  <TableCellGrid>
+    <CellGrid>
       <Cell>
         Lorem ipsum dolor
       </Cell>
-    </Row>
-  </Table>
+    </CellGrid>
+  </TableCellGrid>
 );
 
 export default TableCellExample;

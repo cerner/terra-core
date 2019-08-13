@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import TableUtils from './TableUtils';
-import styles from './TableSectionHeader.module.scss';
+import styles from './SectionHeader.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -61,7 +61,7 @@ const defaultProps = {
   level: 2,
 };
 
-const TableSectionHeader = ({
+const SectionHeader = ({
   isCollapsed,
   isCollapsible,
   level,
@@ -117,7 +117,7 @@ const TableSectionHeader = ({
   );
 };
 
-TableSectionHeader.propTypes = propTypes;
-TableSectionHeader.defaultProps = defaultProps;
+SectionHeader.propTypes = propTypes;
+SectionHeader.defaultProps = defaultProps;
 
-export default TableSectionHeader;
+export default SectionHeader;

@@ -1,42 +1,42 @@
 import React, {
   useState,
 } from 'react';
-import Table, {
-  Row, Cell, HeaderCell, HeaderChevronCell,
+import TableCellGrid, {
+  CellGrid, Cell, HeaderCell, HeaderChevronCell,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
 const SingleSelectTable = () => {
   const [selectedKey, setSelectedKey] = useState([]);
 
-  const handleRowSelection = (event, metaData) => {
+  const handleCellGridSelection = (event, metaData) => {
     event.preventDefault();
     if (selectedKey !== metaData.key) {
       setSelectedKey(metaData.key);
     }
   };
 
-  const createTableRow = itemData => (
-    <Row
+  const createCellGrid = itemData => (
+    <CellGrid
       key={itemData.key}
       selectionStyle="chevron"
       isSelectable
       isSelected={selectedKey === itemData.key}
       metaData={{ key: itemData.key }}
-      onSelect={handleRowSelection}
+      onSelect={handleCellGridSelection}
     >
-      {createCellsForRow(itemData.cells)}
-    </Row>
+      {createCellsForCellGrid(itemData.cells)}
+    </CellGrid>
   );
 
-  const createTableRows = data => data.map(childItem => createTableRow(childItem));
+  const createCellGrids = data => data.map(childItem => createCellGrid(childItem));
 
   return (
-    <Table
+    <TableCellGrid
       paddingStyle="standard"
       headerCells={[
         <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>,
@@ -46,8 +46,8 @@ const SingleSelectTable = () => {
         <HeaderChevronCell isPadded key="chevron" />,
       ]}
     >
-      {createTableRows(mockData)}
-    </Table>
+      {createCellGrids(mockData)}
+    </TableCellGrid>
   );
 };
 

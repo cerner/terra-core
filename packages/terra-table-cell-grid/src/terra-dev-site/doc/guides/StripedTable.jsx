@@ -1,27 +1,27 @@
 import React from 'react';
-import Table, {
-  Row, Cell, HeaderCell,
+import TableCellGrid, {
+  CellGrid, Cell, HeaderCell,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
-const createRow = (itemData, index) => (
-  <Row
+const createCellGrid = (itemData, index) => (
+  <CellGrid
     key={itemData.key}
     isStriped={index % 2 !== 0}
     metaData={{ key: itemData.key }}
   >
-    {createCellsForRow(itemData.cells)}
-  </Row>
+    {createCellsForCellGrid(itemData.cells)}
+  </CellGrid>
 );
 
-const createTableRows = data => data.map((childItem, index) => createRow(childItem, index));
+const createCellGrids = data => data.map((childItem, index) => createCellGrid(childItem, index));
 
 const StripedTable = () => (
-  <Table
+  <TableCellGrid
     paddingStyle="standard"
     headerCells={[
       <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>,
@@ -30,8 +30,8 @@ const StripedTable = () => (
       <HeaderCell isPadded key="cell-4">Column 3</HeaderCell>,
     ]}
   >
-    {createTableRows(mockData)}
-  </Table>
+    {createCellGrids(mockData)}
+  </TableCellGrid>
 );
 
 export default StripedTable;

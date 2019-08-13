@@ -5,10 +5,10 @@ import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import TableRowSrc from '!raw-loader!../../../../src/TableRow';
+import CellGridSrc from '!raw-loader!../../../../src/CellGrid';
 
-import TableRowExample from '../example/TableRow';
-import TableRowExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableRow';
+import CellGridExample from '../example/TableRow';
+import CellGridExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CellGrid';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -18,14 +18,14 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        example: <TableRowExample />,
-        source: TableRowExampleSrc,
+        example: <CellGridExample />,
+        source: CellGridExampleSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'TableRow',
-        componentSrc: TableRowSrc,
+        componentName: 'CellGrid',
+        componentSrc: CellGridSrc,
       },
     ]}
   />

@@ -1,8 +1,8 @@
 import React, {
   useState,
 } from 'react';
-import Table, {
-  Row,
+import TableCellGrid, {
+  CellGrid,
   Cell,
   Section,
   Subsection,
@@ -13,9 +13,9 @@ import mockData from './mock-data/mock-section-sub';
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
-const createRow = itemData => <Row key={itemData.key}>{createCellsForRow(itemData.cells)}</Row>;
+const createCellGrid = itemData => <CellGrid key={itemData.key}>{createCellsForCellGrid(itemData.cells)}</CellGrid>;
 
 const SectionWithSubsection2 = () => {
   const [collapsedKeys, setCollapsedKeys] = useState([]);
@@ -34,7 +34,7 @@ const SectionWithSubsection2 = () => {
       metaData={{ key: subsectionData.key }}
       onSelect={handleSectionSelection}
     >
-      {subsectionData.childItems.map(childItem => createRow(childItem))}
+      {subsectionData.childItems.map(childItem => createCellGrid(childItem))}
     </Subsection>
   );
 
@@ -50,7 +50,7 @@ const SectionWithSubsection2 = () => {
   const createSections = data => data.map(section => createSection(section));
 
   return (
-    <Table
+    <TableCellGrid
       paddingStyle="standard"
       headerCells={[
         <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>,
@@ -59,7 +59,7 @@ const SectionWithSubsection2 = () => {
       ]}
     >
       {createSections(mockData)}
-    </Table>
+    </TableCellGrid>
   );
 };
 

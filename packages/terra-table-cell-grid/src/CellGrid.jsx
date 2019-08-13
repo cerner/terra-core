@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './TableRow.module.scss';
+import styles from './CellGrid.module.scss';
 import TableUtils from './TableUtils';
 import CheckMarkCell from './CheckMarkCell';
 import ChevronCell from './ChevronCell';
@@ -77,7 +77,7 @@ const defaultProps = {
   selectionStyle: 'default',
 };
 
-const TableRow = ({
+const CellGrid = ({
   children,
   dividerStyle,
   isSelected,
@@ -134,7 +134,7 @@ const TableRow = ({
   );
 };
 
-TableRow.propTypes = propTypes;
-TableRow.defaultProps = defaultProps;
+CellGrid.propTypes = propTypes;
+CellGrid.defaultProps = defaultProps;
 
-export default TableRow;
+export default CellGrid;

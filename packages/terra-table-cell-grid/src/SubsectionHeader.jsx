@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import TableUtils from './TableUtils';
-import styles from './TableSubsectionHeader.module.scss';
+import styles from './SubsectionHeader.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -61,7 +61,7 @@ const defaultProps = {
   level: 3,
 };
 
-const TableSubsectionHeader = ({
+const SubsectionHeader = ({
   isCollapsed,
   isCollapsible,
   level,
@@ -118,7 +118,7 @@ const TableSubsectionHeader = ({
   );
 };
 
-TableSubsectionHeader.propTypes = propTypes;
-TableSubsectionHeader.defaultProps = defaultProps;
+SubsectionHeader.propTypes = propTypes;
+SubsectionHeader.defaultProps = defaultProps;
 
-export default TableSubsectionHeader;
+export default SubsectionHeader;

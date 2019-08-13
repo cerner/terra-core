@@ -1,8 +1,8 @@
 import React, {
   useState,
 } from 'react';
-import Table, {
-  Row, Cell, HeaderCell, Utils, HeaderCheckMarkCell,
+import TableCellGrid, {
+  CellGrid, Cell, HeaderCell, Utils, HeaderCheckMarkCell,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -10,33 +10,33 @@ const maxSectionCount = 3;
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
 const CheckMarkTable = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);
 
-  const handleRowSelection = (event, metaData) => {
+  const handleCellGridSelection = (event, metaData) => {
     event.preventDefault();
     setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
   };
 
-  const createTableRow = rowData => (
-    <Row
+  const createCellGrid = rowData => (
+    <CellGrid
       selectionStyle="checkmark"
       key={rowData.key}
       isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key)}
       isSelected={selectedKeys.indexOf(rowData.key) >= 0}
       metaData={{ key: rowData.key }}
-      onSelect={handleRowSelection}
+      onSelect={handleCellGridSelection}
     >
-      {createCellsForRow(rowData.cells)}
-    </Row>
+      {createCellsForCellGrid(rowData.cells)}
+    </CellGrid>
   );
 
-  const createTableRows = data => data.map(childItem => createTableRow(childItem));
+  const createCellGrids = data => data.map(childItem => createCellGrid(childItem));
 
   return (
-    <Table
+    <TableCellGrid
       aria-multiselectable
       paddingStyle="standard"
       headerCells={[
@@ -47,8 +47,8 @@ const CheckMarkTable = () => {
         <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>,
       ]}
     >
-      {createTableRows(mockData)}
-    </Table>
+      {createCellGrids(mockData)}
+    </TableCellGrid>
   );
 };
 

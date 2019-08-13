@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SectionHeader from './TableSectionHeader';
+import SubsectionHeader from './SubsectionHeader';
 
 const propTypes = {
   /**
@@ -8,17 +8,17 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Whether or not the section is collapsed.
+   * Whether or not the subsection is collapsed.
    */
   isCollapsed: PropTypes.bool,
   /**
-   * Whether or not the section can be collapsed.
+   * Whether or not the subsection can be collapsed.
    */
   isCollapsible: PropTypes.bool,
   /**
-   * Optionally sets the heading level. One of `2`, `3`, `4`, `5`, `6`.
+   * Optionally sets the heading level. One of `3`, `4`, `5`, `6`.
    */
-  level: PropTypes.oneOf([2, 3, 4, 5, 6]),
+  level: PropTypes.oneOf([3, 4, 5, 6]),
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
@@ -34,7 +34,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Title text to be placed within the section header.
+   * Title text to be placed within the subsection header.
    */
   title: PropTypes.string.isRequired,
 };
@@ -43,10 +43,10 @@ const defaultProps = {
   children: [],
   isCollapsed: false,
   isCollapsible: false,
-  level: 2,
+  level: 3,
 };
 
-const TableSection = ({
+const Subsection = ({
   children,
   isCollapsed,
   isCollapsible,
@@ -59,13 +59,13 @@ const TableSection = ({
 
   return (
     <React.Fragment>
-      <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
+      <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {sectionItems}
     </React.Fragment>
   );
 };
 
-TableSection.propTypes = propTypes;
-TableSection.defaultProps = defaultProps;
+Subsection.propTypes = propTypes;
+Subsection.defaultProps = defaultProps;
 
-export default TableSection;
+export default Subsection;

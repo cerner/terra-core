@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './TableCell.module.scss';
+import styles from './Cell.module.scss';
 import TableUtils from './TableUtils';
 
 const cx = classNames.bind(styles);
@@ -36,7 +36,7 @@ const defaultProps = {
   children: [],
 };
 
-const TableCell = ({
+const Cell = ({
   children,
   isPadded,
   refCallback,
@@ -70,7 +70,7 @@ const TableCell = ({
   );
 };
 
-TableCell.propTypes = propTypes;
-TableCell.defaultProps = defaultProps;
+Cell.propTypes = propTypes;
+Cell.defaultProps = defaultProps;
 
-export default TableCell;
+export default Cell;

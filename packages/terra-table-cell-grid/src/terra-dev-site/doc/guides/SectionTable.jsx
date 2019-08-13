@@ -1,8 +1,8 @@
 import React, {
   useState,
 } from 'react';
-import Table, {
-  Row,
+import TableCellGrid, {
+  CellGrid,
   Cell,
   Section,
   HeaderCell,
@@ -12,9 +12,9 @@ import mockData from './mock-data/mock-section';
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
-const createRow = itemData => <Row key={itemData.key}>{createCellsForRow(itemData.cells)}</Row>;
+const createCellGrid = itemData => <CellGrid key={itemData.key}>{createCellsForCellGrid(itemData.cells)}</CellGrid>;
 
 const SectionTable = () => {
   const [collapsedKeys, setCollapsedKeys] = useState([]);
@@ -33,14 +33,14 @@ const SectionTable = () => {
       metaData={{ key: sectionData.key }}
       onSelect={handleSectionSelection}
     >
-      {sectionData.childItems.map(childItem => createRow(childItem))}
+      {sectionData.childItems.map(childItem => createCellGrid(childItem))}
     </Section>
   );
 
   const createSections = data => data.map(section => createSection(section));
 
   return (
-    <Table
+    <TableCellGrid
       paddingStyle="standard"
       headerCells={[
         <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>,
@@ -49,7 +49,7 @@ const SectionTable = () => {
       ]}
     >
       {createSections(mockData)}
-    </Table>
+    </TableCellGrid>
   );
 };
 

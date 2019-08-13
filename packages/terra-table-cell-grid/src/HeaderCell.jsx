@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './TableHeaderCell.module.scss';
+import styles from './HeaderCell.module.scss';
 import TableUtils from './TableUtils';
 
 const cx = classNames.bind(styles);
@@ -82,7 +82,7 @@ const defaultProps = {
   sort: 'none',
 };
 
-const TableHeaderCell = ({
+const HeaderCell = ({
   children,
   icon,
   isPadded,
@@ -156,7 +156,7 @@ const TableHeaderCell = ({
   );
 };
 
-TableHeaderCell.propTypes = propTypes;
-TableHeaderCell.defaultProps = defaultProps;
+HeaderCell.propTypes = propTypes;
+HeaderCell.defaultProps = defaultProps;
 
-export default TableHeaderCell;
+export default HeaderCell;

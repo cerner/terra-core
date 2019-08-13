@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import ContentContainer from 'terra-content-container';
 import styles from './TableCellGrid.module.scss';
 
 const cx = classNames.bind(styles);
@@ -40,7 +41,9 @@ const defaultProps = {
 const TableCellGrid = ({
   children,
   fill,
+  footerNode,
   headerCells,
+  headerNode,
   paddingStyle,
   scrollRefCallback,
   ...customProps
@@ -70,13 +73,27 @@ const TableCellGrid = ({
     customProps.className,
   ]);
 
-  return (
+  const cellGrid = (
     <div {...customProps} {...attrSpread} className={tableClassNames} role="grid">
       {header}
       <div className={cx(['body'])} role="rowgroup" ref={scrollRefCallback}>
         {children}
       </div>
     </div>
+  );
+
+  if (!headerNode || !footerNode) {
+    return cellGrid;
+  }
+
+  return (
+    <ContentContainer
+      fill={fill}
+      footer={footerNode}
+      header={headerNode}
+    >
+      {cellGrid}
+    </ContentContainer>
   );
 };
 

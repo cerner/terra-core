@@ -1,12 +1,12 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, { SectionHeader } from 'terra-table-cell-grid/lib/index';
+import TableCellGrid, { SectionHeader } from 'terra-table-cell-grid/lib/index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableSectionHeaderExample = () => (
-  <Table>
+  <TableCellGrid>
     <SectionHeader title="Default SectionHeader" key="default" />
-  </Table>
+  </TableCellGrid>
 );
 
 export default TableSectionHeaderExample;

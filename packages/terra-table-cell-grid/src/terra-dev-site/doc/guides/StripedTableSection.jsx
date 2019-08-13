@@ -1,21 +1,21 @@
 import React from 'react';
-import Table, {
-  Row, Cell, HeaderCell, Section,
+import TableCellGrid, {
+  CellGrid, Cell, HeaderCell, Section,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-section';
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
-const createRow = (itemData, index) => (
-  <Row
+const createCellGrid = (itemData, index) => (
+  <CellGrid
     key={itemData.key}
     isStriped={index % 2 !== 0}
     metaData={{ key: itemData.key }}
   >
-    {createCellsForRow(itemData.cells)}
-  </Row>
+    {createCellsForCellGrid(itemData.cells)}
+  </CellGrid>
 );
 
 const createSection = sectionData => (
@@ -23,14 +23,14 @@ const createSection = sectionData => (
     key={sectionData.key}
     title={sectionData.title}
   >
-    {sectionData.childItems.map((childItem, index) => createRow(childItem, index))}
+    {sectionData.childItems.map((childItem, index) => createCellGrid(childItem, index))}
   </Section>
 );
 
 const createSections = data => data.map(childItem => createSection(childItem));
 
 const StripedTableSection = () => (
-  <Table
+  <TableCellGrid
     paddingStyle="standard"
     headerCells={[
       <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>,
@@ -39,7 +39,7 @@ const StripedTableSection = () => (
     ]}
   >
     {createSections(mockData)}
-  </Table>
+  </TableCellGrid>
 );
 
 export default StripedTableSection;

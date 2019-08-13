@@ -1,20 +1,20 @@
-import Table from './TableCellGrid';
-import Row from './TableRow';
-import Cell from './TableCell';
+import TableCellGrid from './TableCellGrid';
+import CellGrid from './CellGrid';
+import Cell from './Cell';
 import ChevronCell from './ChevronCell';
 import CheckMarkCell from './CheckMarkCell';
-import HeaderCell from './TableHeaderCell';
+import HeaderCell from './HeaderCell';
 import HeaderChevronCell from './HeaderChevronCell';
 import HeaderCheckMarkCell from './HeaderCheckMarkCell';
-import Section from './TableSection';
-import Subsection from './TableSubsection';
-import SectionHeader from './TableSectionHeader';
-import SubsectionHeader from './TableSubsectionHeader';
+import Section from './Section';
+import Subsection from './Subsection';
+import SectionHeader from './SectionHeader';
+import SubsectionHeader from './SubsectionHeader';
 import Utils from './TableUtils';
 
-export default Table;
+export default TableCellGrid;
 export {
-  Row,
+  CellGrid,
   Cell,
   ChevronCell,
   CheckMarkCell,

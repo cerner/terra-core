@@ -1,8 +1,8 @@
 import React, {
   useState,
 } from 'react';
-import Table, {
-  Row, Cell, HeaderCell, Utils,
+import TableCellGrid, {
+  CellGrid, Cell, HeaderCell, Utils,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -10,32 +10,32 @@ const maxSectionCount = 3;
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
 const MultiSelectTable = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);
 
-  const handleRowSelection = (event, metaData) => {
+  const handleCellGridSelection = (event, metaData) => {
     event.preventDefault();
     setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
   };
 
-  const createTableRow = rowData => (
-    <Row
-      key={rowData.key}
-      isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key)}
-      isSelected={selectedKeys.indexOf(rowData.key) >= 0}
-      metaData={{ key: rowData.key }}
-      onSelect={handleRowSelection}
+  const createCellGrid = cellGridData => (
+    <CellGrid
+      key={cellGridData.key}
+      isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, cellGridData.key)}
+      isSelected={selectedKeys.indexOf(cellGridData.key) >= 0}
+      metaData={{ key: cellGridData.key }}
+      onSelect={handleCellGridSelection}
     >
-      {createCellsForRow(rowData.cells)}
-    </Row>
+      {createCellsForCellGrid(cellGridData.cells)}
+    </CellGrid>
   );
 
-  const createTableRows = data => data.map(childItem => createTableRow(childItem));
+  const createCellGrids = data => data.map(childItem => createCellGrid(childItem));
 
   return (
-    <Table
+    <TableCellGrid
       aria-multiselectable
       paddingStyle="standard"
       headerCells={[
@@ -45,8 +45,8 @@ const MultiSelectTable = () => {
         <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>,
       ]}
     >
-      {createTableRows(mockData)}
-    </Table>
+      {createCellGrids(mockData)}
+    </TableCellGrid>
   );
 };
 

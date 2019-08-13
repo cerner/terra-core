@@ -2,7 +2,7 @@ import React, {
   useState,
 } from 'react';
 import Table, {
-  Row, Cell, HeaderCell,
+  CellGrid, Cell, HeaderCell,
 } from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-sort';
 
@@ -10,9 +10,9 @@ const columns = ['column-0', 'column-1', 'column-2'];
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
-const createRow = itemData => <Row key={itemData.key}>{createCellsForRow(itemData.cells)}</Row>;
+const createCellGrid = itemData => <CellGrid key={itemData.key}>{createCellsForCellGrid(itemData.cells)}</CellGrid>;
 
 const sortData = (data, sortColumn) => {
   if (!sortColumn) {
@@ -45,9 +45,9 @@ const SortedTable = () => {
     }
   };
 
-  const createTableRows = (data) => {
+  const createCellGrids = (data) => {
     const sortedData = sortData(data, sortColumn);
-    return sortedData.map(childItem => createRow(childItem));
+    return sortedData.map(childItem => createCellGrid(childItem));
   };
 
   const createHeaderCell = (key, title) => {
@@ -78,7 +78,7 @@ const SortedTable = () => {
         createHeaderCell('column-2', 'Flatware'),
       ]}
     >
-      {createTableRows(mockData)}
+      {createCellGrids(mockData)}
     </Table>
   );
 };
