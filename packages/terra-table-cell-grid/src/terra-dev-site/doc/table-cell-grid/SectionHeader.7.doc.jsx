@@ -1,14 +1,14 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/TableSectionHeader.md';
+import ReadMe from '../../../../docs/SectionHeader.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import TableSectionHeaderSrc from '!raw-loader!../../../../src/TableSectionHeader';
+import SectionHeaderSrc from '!raw-loader!../../../../src/SectionHeader';
 
-import SectionHeaderExample from '../example/TableSectionHeader';
-import SectionHeaderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableSectionHeader';
+import SectionHeaderExample from '../example/SectionHeaderExample';
+import SectionHeaderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SectionHeaderExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -24,8 +24,8 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'TableSectionHeader',
-        componentSrc: TableSectionHeaderSrc,
+        componentName: 'SectionHeader',
+        componentSrc: SectionHeaderSrc,
       },
     ]}
   />

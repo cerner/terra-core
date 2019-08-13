@@ -1,20 +1,20 @@
 import React from 'react';
-import TableCell from '../../src/TableCell';
+import Cell from '../../src/Cell';
 
 // Snapshot test
 it('should render a default table cell', () => {
-  const tableCell = shallow(<TableCell />);
+  const tableCell = shallow(<Cell />);
   expect(tableCell).toMatchSnapshot();
 });
 
 it('should render a table cell with content', () => {
-  const tableCell = shallow(<TableCell>Content</TableCell>);
+  const tableCell = shallow(<Cell>Content</Cell>);
   expect(tableCell).toMatchSnapshot();
 });
 
 it('should render a table cell with refCallback', () => {
   const tableCell = shallow(
-    <TableCell refCallback={jest.fn()} />,
+    <Cell refCallback={jest.fn()} />,
   );
   expect(tableCell).toMatchSnapshot();
 });

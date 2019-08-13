@@ -1,13 +1,13 @@
 const viewports = Terra.viewports('medium');
 
 viewports.forEach((viewport) => {
-  describe('Table', () => {
+  describe('TableCellGrid', () => {
     before(() => {
       browser.setViewportSize(viewport);
     });
 
-    describe('Table Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-flex-table/table/default-table'));
+    describe('TableCellGrid Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/table-cell-grid'));
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
@@ -22,7 +22,7 @@ viewports.forEach((viewport) => {
     });
 
     describe('Padded Table', () => {
-      before(() => browser.url('/#/raw/tests/terra-flex-table/table/padding-table'));
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/padding-table'));
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
@@ -50,7 +50,7 @@ viewports.forEach((viewport) => {
     });
 
     describe('TableHeader Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-flex-table/table/table-header'));
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/table-header'));
 
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
@@ -77,8 +77,8 @@ viewports.forEach((viewport) => {
       });
     });
 
-    describe('TableRow Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-flex-table/table/table-row'));
+    describe('CellGrid Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/cell-grid'));
 
       Terra.should.matchScreenshot('TableRow');
       Terra.should.beAccessible();
@@ -113,7 +113,7 @@ viewports.forEach((viewport) => {
     });
 
     describe('TableSection Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-flex-table/table/table-section'));
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/section'));
 
       Terra.should.matchScreenshot('TableSection');
       Terra.should.beAccessible();
@@ -143,7 +143,7 @@ viewports.forEach((viewport) => {
     });
 
     describe('TableSubsection Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-flex-table/table/table-subsection'));
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/subsection'));
 
       Terra.should.matchScreenshot('TableSubsection');
       Terra.should.beAccessible();

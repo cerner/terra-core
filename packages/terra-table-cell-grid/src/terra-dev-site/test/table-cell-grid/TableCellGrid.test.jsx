@@ -1,22 +1,22 @@
 import React from 'react';
-import Table, {
-  Row, Cell,
+import TableCellGrid, {
+  CellGrid, Cell,
 } from '../../../index';
 
 const DefaultTableTest = () => (
-  <Table
+  <TableCellGrid
     id="Table"
   >
-    <Row key="ROW-0">
+    <CellGrid key="ROW-0">
       <Cell>Cell Content</Cell>
-    </Row>
-    <Row key="ROW-1">
+    </CellGrid>
+    <CellGrid key="ROW-1">
       <Cell>Cell Content</Cell>
-    </Row>
-    <Row key="ROW-2">
+    </CellGrid>
+    <CellGrid key="ROW-2">
       <Cell>Cell Content</Cell>
-    </Row>
-  </Table>
+    </CellGrid>
+  </TableCellGrid>
 );
 
 export default DefaultTableTest;

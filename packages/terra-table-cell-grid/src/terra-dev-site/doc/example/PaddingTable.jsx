@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import TableCellGrid, {
   HeaderCell, CellGrid, Cell, CheckMarkCell, HeaderCheckMarkCell, HeaderChevronCell, ChevronCell,
-} from 'terra-table-cell-grid/lib/index';
+} from 'terra-table-cell-grid';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const propTypes = {

@@ -1,14 +1,14 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/TableCell.md';
+import ReadMe from '../../../../docs/Cell.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import TableCellSrc from '!raw-loader!../../../../src/TableCell';
+import CellSrc from '!raw-loader!../../../../src/Cell';
 
-import DefaultTableCell from '../example/TableCell';
-import DefaultTableCellSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableCell';
+import DefaultCell from '../example/CellExample';
+import DefaultCellSrc from '../example/CellExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -19,14 +19,14 @@ const DocPage = () => (
     examples={[
       {
         title: 'Default Cell',
-        example: <DefaultTableCell />,
-        source: DefaultTableCellSrc,
+        example: <DefaultCell />,
+        source: DefaultCellSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'TableCell',
-        componentSrc: TableCellSrc,
+        componentName: 'Cell',
+        componentSrc: CellSrc,
       },
     ]}
   />

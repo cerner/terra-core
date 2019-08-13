@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import Table, {
   CellGrid, Cell, HeaderCell,
-} from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+} from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-sort';
 
 const columns = ['column-0', 'column-1', 'column-2'];

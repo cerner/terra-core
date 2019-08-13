@@ -1,30 +1,30 @@
 import React from 'react';
-import Table, { Row, Cell, Subsection } from '../../../index';
+import TableCellGrid, { CellGrid, Cell, Subsection } from '../../../index';
 
 const TableSubsectionTest = () => (
-  <Table>
+  <TableCellGrid>
     <Subsection title="Default Subsection" key="default-subsection">
-      <Row>
+      <CellGrid>
         <Cell>
           Cell Content
         </Cell>
-      </Row>
+      </CellGrid>
     </Subsection>
     <Subsection isCollapsible title="Collapsible Subsection" key="collapsible-subsection" id="test-header">
-      <Row>
+      <CellGrid>
         <Cell>
           Cell Content
         </Cell>
-      </Row>
+      </CellGrid>
     </Subsection>
     <Subsection isCollapsed isCollapsible title="Collapsed Subsection" key="collapsed-subsection">
-      <Row>
+      <CellGrid>
         <Cell>
           Cell Content
         </Cell>
-      </Row>
+      </CellGrid>
     </Subsection>
-  </Table>
+  </TableCellGrid>
 );
 
 export default TableSubsectionTest;

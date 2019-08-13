@@ -1,40 +1,40 @@
 import React from 'react';
-import Table, {
-  Row, Cell,
+import TableCellGrid, {
+  CellGrid, Cell,
 } from '../../../index';
 
 const PaddingTableTest = () => (
   <React.Fragment>
-    <Table
+    <TableCellGrid
       paddingStyle="standard"
       id="Table-Standard"
       key="table-1"
     >
-      <Row key="ROW-0">
+      <CellGrid key="ROW-0">
         <Cell>Cell Content</Cell>
-      </Row>
-      <Row key="ROW-1">
+      </CellGrid>
+      <CellGrid key="ROW-1">
         <Cell>Cell Content</Cell>
-      </Row>
-      <Row key="ROW-2">
+      </CellGrid>
+      <CellGrid key="ROW-2">
         <Cell>Cell Content</Cell>
-      </Row>
-    </Table>
-    <Table
+      </CellGrid>
+    </TableCellGrid>
+    <TableCellGrid
       paddingStyle="compact"
       id="Table-Compact"
       key="table-2"
     >
-      <Row key="ROW-0">
+      <CellGrid key="ROW-0">
         <Cell>Cell Content</Cell>
-      </Row>
-      <Row key="ROW-1">
+      </CellGrid>
+      <CellGrid key="ROW-1">
         <Cell>Cell Content</Cell>
-      </Row>
-      <Row key="ROW-2">
+      </CellGrid>
+      <CellGrid key="ROW-2">
         <Cell>Cell Content</Cell>
-      </Row>
-    </Table>
+      </CellGrid>
+    </TableCellGrid>
   </React.Fragment>
 );
 

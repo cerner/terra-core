@@ -1,6 +1,6 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import TableCellGrid, { HeaderCell } from 'terra-table-cell-grid/lib/index';
+import TableCellGrid, { HeaderCell } from 'terra-table-cell-grid';
 import CommonIcon from '../common/CommonIcon';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 

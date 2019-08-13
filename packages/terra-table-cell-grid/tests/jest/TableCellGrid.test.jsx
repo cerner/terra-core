@@ -1,24 +1,24 @@
 import React from 'react';
-import Table from '../../src/Table';
+import TableCellGrid from '../../src/TableCellGrid';
 
 // Snapshot test
 it('should render a default table', () => {
   const table = shallow(
-    <Table />,
+    <TableCellGrid />,
   );
   expect(table).toMatchSnapshot();
 });
 
 it('should render a table without padding', () => {
   const table = shallow(
-    <Table paddingStyle="none" />,
+    <TableCellGrid paddingStyle="none" />,
   );
   expect(table).toMatchSnapshot();
 });
 
 it('should render a table with refCallback', () => {
   const table = shallow(
-    <Table refCallback={jest.fn()} />,
+    <TableCellGrid refCallback={jest.fn()} />,
   );
   expect(table).toMatchSnapshot();
 });

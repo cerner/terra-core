@@ -1,10 +1,10 @@
 import React from 'react';
-import Table, {
+import TableCellGrid, {
   HeaderCell,
 } from '../../../index';
 
 const TableHeaderTest = () => (
-  <Table
+  <TableCellGrid
     id="Table"
     paddingStyle="standard"
     headerCells={[

@@ -1,14 +1,14 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/TableSubsectionHeader.md';
+import ReadMe from '../../../../docs/SubsectionHeader.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import TableSubsectionHeaderSrc from '!raw-loader!../../../../src/TableSubsectionHeader';
+import SubsectionHeaderSrc from '!raw-loader!../../../../src/SubsectionHeader';
 
-import SubsectionHeaderExample from '../example/TableSubsectionHeader';
-import SubsectionHeaderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableSubsectionHeader';
+import SubsectionHeaderExample from '../example/SubsectionHeaderExample';
+import SubsectionHeaderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SubsectionHeaderExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -24,8 +24,8 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'TableSubsectionHeader',
-        componentSrc: TableSubsectionHeaderSrc,
+        componentName: 'SubsectionHeader',
+        componentSrc: SubsectionHeaderSrc,
       },
     ]}
   />

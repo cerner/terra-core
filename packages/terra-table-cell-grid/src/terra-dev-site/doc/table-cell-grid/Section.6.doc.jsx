@@ -1,14 +1,14 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/TableSection.md';
+import ReadMe from '../../../../docs/Section.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import TableSectionSrc from '!raw-loader!../../../../src/TableSection';
+import SectionSrc from '!raw-loader!../../../../src/Section';
 
-import SectionExample from '../example/TableSection';
-import SectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableSection';
+import SectionExample from '../example/SectionExample';
+import SectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SectionExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -24,8 +24,8 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'TableSection',
-        componentSrc: TableSectionSrc,
+        componentName: 'Section',
+        componentSrc: SectionSrc,
       },
     ]}
   />

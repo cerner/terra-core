@@ -1,13 +1,13 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import TableCellGrid, { CellGrid, Cell, Subsection } from 'terra-table-cell-grid/lib/index';
+import TableCellGrid, { CellGrid, Cell, Section } from 'terra-table-cell-grid';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const TableSubsectionExample = () => (
+const TableSectionExample = () => (
   <TableCellGrid
     paddingStyle="standard"
   >
-    <Subsection title="Subsection Title">
+    <Section title="Default Section">
       <CellGrid>
         <Cell isPadded key="cell-0">
           Lorem ipsum dolor
@@ -19,8 +19,8 @@ const TableSubsectionExample = () => (
           Lorem ipsum dolor
         </Cell>
       </CellGrid>
-    </Subsection>
-    <Subsection isCollapsible title="Collapsible Subsection">
+    </Section>
+    <Section isCollapsible title="Collapsible Section">
       <CellGrid>
         <Cell isPadded key="cell-0">
           Lorem ipsum dolor
@@ -32,8 +32,8 @@ const TableSubsectionExample = () => (
           Lorem ipsum dolor
         </Cell>
       </CellGrid>
-    </Subsection>
-    <Subsection isCollapsible isCollapsed title="Collapsed Subsection">
+    </Section>
+    <Section isCollapsible isCollapsed title="Collapsed Section">
       <CellGrid>
         <Cell isPadded key="cell-0">
           Lorem ipsum dolor
@@ -45,8 +45,8 @@ const TableSubsectionExample = () => (
           Lorem ipsum dolor
         </Cell>
       </CellGrid>
-    </Subsection>
+    </Section>
   </TableCellGrid>
 );
 
-export default TableSubsectionExample;
+export default TableSectionExample;

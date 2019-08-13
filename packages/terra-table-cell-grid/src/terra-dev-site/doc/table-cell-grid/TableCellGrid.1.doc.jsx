@@ -1,14 +1,14 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/Table.md';
+import ReadMe from '../../../../docs/TableCellGrid.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import TableSrc from '!raw-loader!../../../../src/TableCellGrid';
+import TableCellGridSrc from '!raw-loader!../../../../src/TableCellGrid';
 
-import DefaultTable from '../example/DefaultTable';
-import DefaultTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultTable';
+import TableCellGridExample from '../example/TableCellGridExample';
+import TableCellGridExampleSrc from '../example/TableCellGridExample';
 import FixedHeightTable from '../example/FixedHeightTable';
 import FixedHeightTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/FixedHeightTable';
 import StripedTable from '../example/StripedTable';
@@ -25,8 +25,8 @@ const DocPage = () => (
     examples={[
       {
         title: 'Default Table',
-        example: <DefaultTable />,
-        source: DefaultTableSrc,
+        example: <TableCellGridExample />,
+        source: TableCellGridExampleSrc,
       },
       {
         title: 'Table with standard padding',
@@ -51,8 +51,8 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'Table',
-        componentSrc: TableSrc,
+        componentName: 'TableCellGrid',
+        componentSrc: TableCellGridSrc,
       },
     ]}
   />

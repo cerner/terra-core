@@ -1,14 +1,14 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/TableSubsection.md';
+import ReadMe from '../../../../docs/Subsection.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import TableSubsectionSrc from '!raw-loader!../../../../src/TableSubsection';
+import SubsectionSrc from '!raw-loader!../../../../src/Subsection';
 
-import TableSubsectionExample from '../example/TableSubsection';
-import TableSubsectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableSubsection';
+import SubsectionExample from '../example/SubsectionExample';
+import SubsectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SubsectionExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -18,14 +18,14 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        example: <TableSubsectionExample />,
-        source: TableSubsectionExampleSrc,
+        example: <SubsectionExample />,
+        source: SubsectionExampleSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'TableSubsection',
-        componentSrc: TableSubsectionSrc,
+        componentName: 'Subsection',
+        componentSrc: SubsectionSrc,
       },
     ]}
   />

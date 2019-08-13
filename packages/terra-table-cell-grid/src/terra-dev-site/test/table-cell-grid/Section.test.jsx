@@ -1,30 +1,30 @@
 import React from 'react';
-import Table, { Row, Cell, Section } from '../../../index';
+import TableCellGrid, { CellGrid, Cell, Section } from '../../../index';
 
 const TableSectionTest = () => (
-  <Table>
+  <TableCellGrid>
     <Section title="Default Section" key="default-section">
-      <Row>
+      <CellGrid>
         <Cell>
           Cell Content
         </Cell>
-      </Row>
+      </CellGrid>
     </Section>
     <Section isCollapsible title="Collapsible Section" key="collapsible-section" id="test-header">
-      <Row>
+      <CellGrid>
         <Cell>
           Cell Content
         </Cell>
-      </Row>
+      </CellGrid>
     </Section>
     <Section isCollapsed isCollapsible title="Collapsed Section" key="collapsed-section">
-      <Row>
+      <CellGrid>
         <Cell>
           Cell Content
         </Cell>
-      </Row>
+      </CellGrid>
     </Section>
-  </Table>
+  </TableCellGrid>
 );
 
 export default TableSectionTest;

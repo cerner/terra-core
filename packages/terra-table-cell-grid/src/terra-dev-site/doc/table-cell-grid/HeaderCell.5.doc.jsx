@@ -1,14 +1,14 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../docs/TableHeaderCell.md';
+import ReadMe from '../../../../docs/HeaderCell.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import TableHeaderCellSrc from '!raw-loader!../../../../src/TableHeaderCell';
+import HeaderCellSrc from '!raw-loader!../../../../src/HeaderCell';
 
-import HeaderCellExample from '../example/TableHeaderCell';
-import HeaderCellExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableHeaderCell';
+import HeaderCellExample from '../example/HeaderCellExample';
+import HeaderCellExampleSrc from '../example/HeaderCellExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -24,8 +24,8 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'TableHeaderCell',
-        componentSrc: TableHeaderCellSrc,
+        componentName: 'HeaderCell',
+        componentSrc: HeaderCellSrc,
       },
     ]}
   />

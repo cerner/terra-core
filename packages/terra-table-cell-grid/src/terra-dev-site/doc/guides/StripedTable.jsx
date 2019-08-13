@@ -1,7 +1,7 @@
 import React from 'react';
 import TableCellGrid, {
   CellGrid, Cell, HeaderCell,
-} from 'terra-table-cell-grid/lib/index'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+} from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
