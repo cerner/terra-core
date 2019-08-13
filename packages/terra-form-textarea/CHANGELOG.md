@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added `label` prop to resolve accessibility violations.
+
 3.21.0 - (July 30, 2019)
 ------------------
 ### Changed
