@@ -8,7 +8,7 @@ import { name } from '../../../../package.json';
 import HeaderCellSrc from '!raw-loader!../../../../src/HeaderCell';
 
 import HeaderCellExample from '../example/HeaderCellExample';
-import HeaderCellExampleSrc from '../example/HeaderCellExample';
+import HeaderCellExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeaderCellExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (

@@ -8,7 +8,7 @@ import { name } from '../../../../package.json';
 import CellGridSrc from '!raw-loader!../../../../src/CellGrid';
 
 import CellGridExample from '../example/CellGridExample';
-import CellGridExampleSrc from '../example/CellGridExample';
+import CellGridExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CellGridExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (

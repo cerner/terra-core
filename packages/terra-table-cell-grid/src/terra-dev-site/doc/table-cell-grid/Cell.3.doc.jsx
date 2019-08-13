@@ -8,7 +8,7 @@ import { name } from '../../../../package.json';
 import CellSrc from '!raw-loader!../../../../src/Cell';
 
 import DefaultCell from '../example/CellExample';
-import DefaultCellSrc from '../example/CellExample';
+import DefaultCellSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CellExample';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (

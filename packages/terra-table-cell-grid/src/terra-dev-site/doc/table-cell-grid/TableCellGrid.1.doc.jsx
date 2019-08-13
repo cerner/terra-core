@@ -8,7 +8,7 @@ import { name } from '../../../../package.json';
 import TableCellGridSrc from '!raw-loader!../../../../src/TableCellGrid';
 
 import TableCellGridExample from '../example/TableCellGridExample';
-import TableCellGridExampleSrc from '../example/TableCellGridExample';
+import TableCellGridExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableCellGridExample';
 import FixedHeightTable from '../example/FixedHeightTable';
 import FixedHeightTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/FixedHeightTable';
 import StripedTable from '../example/StripedTable';

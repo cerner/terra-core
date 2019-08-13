@@ -2,7 +2,7 @@ import React, {
   useState,
 } from 'react';
 import TableCellGrid, {
-  CellGrid, Cell, HeaderCell, HeaderCheckMarkCell,
+  CellGrid, Cell, HeaderCell,
 } from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -20,9 +20,8 @@ const SingleSelectTable = () => {
     }
   };
 
-  const createTableRow = itemData => (
+  const createCellGrid = itemData => (
     <CellGrid
-      selectionStyle="checkmark"
       key={itemData.key}
       isSelectable
       isSelected={selectedKey === itemData.key}
@@ -33,20 +32,19 @@ const SingleSelectTable = () => {
     </CellGrid>
   );
 
-  const createTableRows = data => data.map(childItem => createTableRow(childItem));
+  const createCellGrids = data => data.map(childItem => createCellGrid(childItem));
 
   return (
     <TableCellGrid
       paddingStyle="standard"
       headerCells={[
-        <HeaderCheckMarkCell isPadded key="check-0" />,
         <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>,
         <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>,
         <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>,
         <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>,
       ]}
     >
-      {createTableRows(mockData)}
+      {createCellGrids(mockData)}
     </TableCellGrid>
   );
 };
