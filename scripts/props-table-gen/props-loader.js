@@ -6,11 +6,11 @@ const reactDocs = require('react-docgen');
 /* eslint-enable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 
-// Potentially adding to webpack
+const packageDir = (componentName) => {
+  const getPath = glob.sync(componentName, { cwd: __dirname + '../../../packages', realpath: true });
 
-const packagesDir = path.resolve(
-  path.dirname(__dirname), '../packages',
-);
+  return `${getPath[0]}/src/`;
+};
 
 const tableHeaderTemplate = '<thead><tr><th>Prop Name</th><th>Type</th><th>Is Required</th><th>Default Value</th><th>Description</th></tr></thead>';
 
@@ -62,9 +62,13 @@ const generateTable = (rowArray) => {
 
 // Generate props table markdown files in each component's docs folder
 const generateMarkdownFile = (component, dir, formattedProps) => {
-  const componentPrefix = component.substring(0, component.length - 4);
-  const fileName = `${dir}../docs/${componentPrefix}-props-table.md`;
-  fs.writeFileSync(fileName, formattedProps);
+  const fileName = component.slice(0, -4);
+  const fileDir = `${path.resolve(dir, '..')}/docs/${fileName}-props-table.md`;
+
+  if (!fs.existsSync(fileDir)) {
+    fs.writeFileSync(fileDir, formattedProps);
+    console.log(`Generated Props Markdown File for ${fileName} Package.`);
+  }
 };
 
 const generateMarkdown = (component, dir, propTable) => {
@@ -98,12 +102,20 @@ const processFile = (dir, component) => {
 };
 
 // Uses fs and glob to traverse the directory tree looking for .jsx files.
-const processPackageList = () => fs.readdirSync(packagesDir).map(component => path.join(packagesDir, `${component}/src/`))
-  .forEach(dir => glob('*.jsx', { cwd: dir }, (err, files) => {
+const processPackageList = (packageName) => {
+  const componentDir = packageDir(packageName);
+  glob('*.jsx', { cwd: componentDir }, (err, files) => {
     if (err) console.log(err);
     if (files) {
-      files.forEach(file => processFile(dir, file));
+      files.forEach(file => processFile(componentDir, file));
     }
-  }));
+  });
+};
 
-processPackageList();
+module.exports = (packageJSON) => {
+  const packageName = JSON.parse(packageJSON).name;
+
+  processPackageList(packageName);
+
+  return packageJSON;
+};

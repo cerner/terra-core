@@ -1,1 +1,0 @@
-<table><thead><tr><th>Prop Name</th><th>Type</th><th>Is Required</th><th>Default Value</th><th>Description</th></tr></thead><tbody><tr><td>children</td><td>node</td><td>optional</td><td>none</td><td>The component(s) that will be wrapped by `<ActiveBreakpointContext.Provider />`.</td></tr></tbody><table>

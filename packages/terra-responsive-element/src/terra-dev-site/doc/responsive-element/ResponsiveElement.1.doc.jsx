@@ -1,6 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 import ResponsiveElementSrc from '!raw-loader!../../../../src/ResponsiveElement';
@@ -14,7 +15,7 @@ import UncontrolledBreakpointExampleSrc from '!raw-loader!../../../../src/terra-
 
 const DocPage = () => (
   <DocTemplate
-    packageName="terra-responsive-element"
+    packageName={name}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-responsive-element"
     propsTables={[

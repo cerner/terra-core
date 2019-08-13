@@ -1,1 +1,0 @@
-<table><thead><tr><th>Prop Name</th><th>Type</th><th>Is Required</th><th>Default Value</th><th>Description</th></tr></thead><tbody><tr><td>text</td><td>string</td><td>optional</td><td>none</td><td>String to be displayed inline with the divider.</td></tr></tbody><table>

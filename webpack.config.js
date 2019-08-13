@@ -8,6 +8,15 @@ const coreConfig = () => {
 
   const i18nAlias = path.resolve(path.join(rootPath, 'packages', 'terra-i18n'));
   return {
+    module: {
+      rules: [
+        {
+          test: /package\.json$/,
+          exclude: /node_modules/,
+          loader: path.resolve('scripts/props-table-gen/props-loader.js'),
+        },
+      ],
+    },
     resolve: {
       alias: {
         'terra-i18n': i18nAlias,
