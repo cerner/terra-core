@@ -168,6 +168,7 @@ const TextareaField = (props) => {
         id={inputId}
         onChange={onChange}
         value={value}
+        label={label}
         defaultValue={defaultValue}
         aria-describedby={ariaDescriptionIds}
       />

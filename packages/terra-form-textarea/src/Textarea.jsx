@@ -79,6 +79,10 @@ const propTypes = {
    * functionality such as managing focus, selection, or animations.
    */
   refCallback: PropTypes.func,
+  /**
+   * Value to set for the aria-label
+   */
+  label: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -182,6 +186,7 @@ class Textarea extends React.Component {
       defaultValue,
       rows,
       size,
+      label,
       refCallback,
       ...customProps
     } = this.props;
@@ -195,6 +200,8 @@ class Textarea extends React.Component {
       { resizable: isAutoResizable && !this.isMobileDevice },
       additionalTextareaProps.className,
     ]);
+
+    additionalTextareaProps['aria-label'] = label;
 
     if (required) {
       additionalTextareaProps['aria-required'] = 'true';

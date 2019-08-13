@@ -13,6 +13,7 @@ const FixedLargeSizeExample = () => (
       size="large"
       className={cx('textarea')}
       id="large"
+      label="text-area-label"
     />
   </Field>
 );

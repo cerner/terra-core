@@ -10,6 +10,7 @@ const DisabledExample = () => (
       size="small"
       value="I'm disabled."
       id="disabled"
+      label="text-area-label"
     />
   </Field>
 );

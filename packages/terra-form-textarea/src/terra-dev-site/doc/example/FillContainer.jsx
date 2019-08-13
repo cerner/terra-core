@@ -9,6 +9,7 @@ const FillContainerExample = () => (
       size="full"
       defaultValue="I am full container width and height, making me non-resizable."
       id="fill-container"
+      label="text-area-label"
     />
   </Field>
 );

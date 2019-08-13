@@ -1,14 +1,10 @@
-const ignoredA11y = {
-  label: { enabled: false },
-};
-
 Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('default', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/default-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('Props Populated', () => {
@@ -16,7 +12,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/populated-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('Invalid', () => {
@@ -24,7 +20,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/invalid-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('Small Textarea Height Resizing', () => {
@@ -32,7 +28,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/small-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('Medium Textarea Height Resizing', () => {
@@ -40,7 +36,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('Large Textarea Height Resizing', () => {
@@ -48,7 +44,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/large-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('Full Size Textarea Height Resizing', () => {
@@ -56,7 +52,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/full-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('Enabled Placeholder', () => {
@@ -64,7 +60,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/placeholder-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('Disabled Placeholder', () => {
@@ -72,7 +68,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-placeholder-textarea');
     });
 
-    Terra.it.validatesElement({ rules: ignoredA11y });
+    Terra.it.validatesElement();
   });
 
   describe('AutoResizable Textarea', () => {
@@ -84,7 +80,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
         browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
-      Terra.it.validatesElement('0', { rules: ignoredA11y });
+      Terra.it.validatesElement('0');
 
       it('should resize appropriately', () => {
         browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
@@ -100,7 +96,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
         browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
-      Terra.it.validatesElement('0', { rules: ignoredA11y });
+      Terra.it.validatesElement('0');
 
       it('should resize appropriately', () => {
         browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
@@ -117,7 +113,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
         browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
-      Terra.it.validatesElement('0', { rules: ignoredA11y });
+      Terra.it.validatesElement('0');
 
       it('should resize appropriately', () => {
         browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
@@ -134,7 +130,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
         browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
-      Terra.it.validatesElement('0', { rules: ignoredA11y });
+      Terra.it.validatesElement('0');
 
       it('should resize appropriately', () => {
         browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
@@ -151,7 +147,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
         browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
-      Terra.it.validatesElement('0', { rules: ignoredA11y });
+      Terra.it.validatesElement('0');
 
       it('should resize appropriately', () => {
         browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
@@ -168,7 +164,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
         browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
-      Terra.it.validatesElement('0', { rules: ignoredA11y });
+      Terra.it.validatesElement('0');
 
       it('should resize appropriately', () => {
         browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
@@ -185,7 +181,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
         browser.click('#swap-button');
       });
 
-      Terra.it.validatesElement({ rules: ignoredA11y });
+      Terra.it.validatesElement();
     });
   });
 

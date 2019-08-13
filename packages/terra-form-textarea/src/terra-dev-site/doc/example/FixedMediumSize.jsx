@@ -13,6 +13,7 @@ const FixedMediumSizeExample = () => (
       size="medium"
       className={cx('textarea')}
       id="medium"
+      label="text-area-label"
     />
   </Field>
 );

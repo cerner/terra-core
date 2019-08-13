@@ -2,6 +2,7 @@
 
 exports[`should not set the textarea to resizable when viewed on browser with DocumentTouch 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 />
@@ -9,6 +10,7 @@ exports[`should not set the textarea to resizable when viewed on browser with Do
 
 exports[`should not set the textarea to resizable when viewed on browser with maxTouchPoints 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 />
@@ -16,6 +18,7 @@ exports[`should not set the textarea to resizable when viewed on browser with ma
 
 exports[`should not set the textarea to resizable when viewed on browser with msMaxTouchPoints 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 />
@@ -23,6 +26,7 @@ exports[`should not set the textarea to resizable when viewed on browser with ms
 
 exports[`should not set the textarea to resizable when viewed on browser with ontouchstart 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 />
@@ -30,6 +34,7 @@ exports[`should not set the textarea to resizable when viewed on browser with on
 
 exports[`should render a TextArea when all the possible props are passed into it 1`] = `
 <textarea
+  aria-label="label"
   aria-required="true"
   class="textarea"
   name="description"
@@ -40,6 +45,7 @@ exports[`should render a TextArea when all the possible props are passed into it
 
 exports[`should render a default TextArea component 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 />
@@ -47,12 +53,14 @@ exports[`should render a default TextArea component 1`] = `
 
 exports[`should render a full size textbox appropriately 1`] = `
 <textarea
+  aria-label="label"
   class="textarea full-size"
 />
 `;
 
 exports[`should render a large textbox appropriately 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="10"
 />
@@ -60,6 +68,7 @@ exports[`should render a large textbox appropriately 1`] = `
 
 exports[`should render a medium textbox appropriately 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="5"
 />
@@ -67,6 +76,7 @@ exports[`should render a medium textbox appropriately 1`] = `
 
 exports[`should render a small textbox appropriately 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 />
@@ -74,6 +84,7 @@ exports[`should render a small textbox appropriately 1`] = `
 
 exports[`should render as controlled when just a default value is passed into the Textarea 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 >
@@ -83,6 +94,7 @@ exports[`should render as controlled when just a default value is passed into th
 
 exports[`should render as uncontrolled when just a default value is passed into the Textarea 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 >
@@ -92,6 +104,7 @@ exports[`should render as uncontrolled when just a default value is passed into 
 
 exports[`should set the onChange and onFocus functions appropriately when the textarea is autoResizable 1`] = `
 <textarea
+  aria-label="label"
   class="textarea resizable"
   rows="2"
 />
@@ -99,6 +112,7 @@ exports[`should set the onChange and onFocus functions appropriately when the te
 
 exports[`should set the rows attribute appropriate when it is passed into the textarea 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="7"
 />
@@ -106,6 +120,7 @@ exports[`should set the rows attribute appropriate when it is passed into the te
 
 exports[`should set the textarea as auto resizable when isAutoResizable is passed into the component 1`] = `
 <textarea
+  aria-label="label"
   class="textarea resizable"
   rows="2"
 />
@@ -113,6 +128,7 @@ exports[`should set the textarea as auto resizable when isAutoResizable is passe
 
 exports[`should set the textarea to disabled when passed into the component 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   disabled=""
   rows="2"
@@ -121,6 +137,7 @@ exports[`should set the textarea to disabled when passed into the component 1`] 
 
 exports[`should set the textarea to invalid when isInvalid is passed into the component 1`] = `
 <textarea
+  aria-label="label"
   class="textarea form-error"
   rows="2"
 />
@@ -128,6 +145,7 @@ exports[`should set the textarea to invalid when isInvalid is passed into the co
 
 exports[`should set the textarea to resizable when viewed on a large device 1`] = `
 <textarea
+  aria-label="label"
   class="textarea resizable"
   rows="2"
 />
