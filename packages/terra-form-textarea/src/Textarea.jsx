@@ -80,7 +80,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Value to set for the aria-label
+   * Value to set for the aria-label.
    */
   label: PropTypes.string.isRequired,
 };
