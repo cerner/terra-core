@@ -7,21 +7,23 @@ import { name } from '../../../../package.json';
 // Component Source
 import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
 import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
-import MultipleSelectSrc from '!raw-loader!../../../../src/MultipleSelect';
+import SingleSelectSrc from '!raw-loader!../../../../src/SingleSelect';
 
 // Example Files
-import MultipleExample from '../example/multiple/Multiple';
-import MultipleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Multiple';
-import ControlledExample from '../example/multiple/Controlled';
-import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Controlled';
-import DisabledExample from '../example/multiple/Disabled';
-import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Disabled';
-import InvalidExample from '../example/multiple/Invalid';
-import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Invalid';
-import MaxHeightExample from '../example/multiple/MaxHeight';
-import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/MaxHeight';
-import OptGroupExample from '../example/multiple/OptGroup';
-import OptGroupExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/OptGroup';
+import AllowClearExample from '../example/single/AllowClear';
+import AllowClearExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/AllowClear';
+import ControlledExample from '../example/single/Controlled';
+import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Controlled';
+import SingleSelectExample from '../example/single/SingleSelect';
+import SingleSelectExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/SingleSelect';
+import DisabledExample from '../example/single/Disabled';
+import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Disabled';
+import InvalidExample from '../example/single/Invalid';
+import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Invalid';
+import MaxHeightExample from '../example/single/MaxHeight';
+import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/MaxHeight';
+import OptGroupExample from '../example/single/OptGroup';
+import OptGroupExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/OptGroup';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const Index = () => (
@@ -30,8 +32,8 @@ const Index = () => (
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
     propsTables={[{
-      componentName: 'MultipleSelect',
-      componentSrc: MultipleSelectSrc,
+      componentName: 'SingleSelect',
+      componentSrc: SingleSelectSrc,
     }, {
       componentName: 'Option',
       componentSrc: OptionSrc,
@@ -40,10 +42,10 @@ const Index = () => (
       componentSrc: OptGroupSrc,
     }]}
     examples={[{
-      title: 'Multiple',
-      description: 'A Multiple Select allows searching and selecting multiple options.',
-      example: <MultipleExample />,
-      source: MultipleExampleSrc,
+      title: 'Single Select',
+      description: 'A Single Select allows selecting a single option.',
+      example: <SingleSelectExample />,
+      source: SingleSelectExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,
@@ -64,8 +66,13 @@ const Index = () => (
       example: <MaxHeightExample />,
       source: MaxHeightExampleSrc,
     }, {
-      title: 'Create a Controlled Multiple Select',
-      description: 'An example of implementing a controlled Multiple Select.',
+      title: 'Ability to Clear Selection',
+      description: 'An example with an option to clear the selected item.',
+      example: <AllowClearExample />,
+      source: AllowClearExampleSrc,
+    }, {
+      title: 'Create a Controlled Single Select',
+      description: 'An example of implementing a controlled Single Select.',
       example: <ControlledExample />,
       source: ControlledExampleSrc,
     }]}

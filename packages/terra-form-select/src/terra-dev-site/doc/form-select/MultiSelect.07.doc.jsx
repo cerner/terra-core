@@ -7,23 +7,21 @@ import { name } from '../../../../package.json';
 // Component Source
 import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
 import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
-import DropdownSelectSrc from '!raw-loader!../../../../src/DropdownSelect';
+import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelect';
 
 // Example Files
-import AllowClearExample from '../example/dropdown/AllowClear';
-import AllowClearExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/dropdown/AllowClear';
-import ControlledExample from '../example/dropdown/Controlled';
-import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/dropdown/Controlled';
-import DropdownExample from '../example/dropdown/Dropdown';
-import DropdownExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/dropdown/Dropdown';
-import DisabledExample from '../example/dropdown/Disabled';
-import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/dropdown/Disabled';
-import InvalidExample from '../example/dropdown/Invalid';
-import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/dropdown/Invalid';
-import MaxHeightExample from '../example/dropdown/MaxHeight';
-import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/dropdown/MaxHeight';
-import OptGroupExample from '../example/dropdown/OptGroup';
-import OptGroupExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/dropdown/OptGroup';
+import MultipleExample from '../example/multiple/MultiSelect';
+import MultipleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/MultiSelect';
+import ControlledExample from '../example/multiple/Controlled';
+import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Controlled';
+import DisabledExample from '../example/multiple/Disabled';
+import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Disabled';
+import InvalidExample from '../example/multiple/Invalid';
+import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Invalid';
+import MaxHeightExample from '../example/multiple/MaxHeight';
+import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/MaxHeight';
+import OptGroupExample from '../example/multiple/OptGroup';
+import OptGroupExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/OptGroup';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const Index = () => (
@@ -32,8 +30,8 @@ const Index = () => (
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
     propsTables={[{
-      componentName: 'DropdownSelect',
-      componentSrc: DropdownSelectSrc,
+      componentName: 'MultiSelect',
+      componentSrc: MultiSelectSrc,
     }, {
       componentName: 'Option',
       componentSrc: OptionSrc,
@@ -42,10 +40,10 @@ const Index = () => (
       componentSrc: OptGroupSrc,
     }]}
     examples={[{
-      title: 'Dropdown',
-      description: 'A Dropdown Select allows selecting a single option.',
-      example: <DropdownExample />,
-      source: DropdownExampleSrc,
+      title: 'MultiSelect',
+      description: 'A MultiSelect allows searching and selecting multiple options.',
+      example: <MultipleExample />,
+      source: MultipleExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,
@@ -66,13 +64,8 @@ const Index = () => (
       example: <MaxHeightExample />,
       source: MaxHeightExampleSrc,
     }, {
-      title: 'Ability to Clear Selection',
-      description: 'An example with an option to clear the selected item.',
-      example: <AllowClearExample />,
-      source: AllowClearExampleSrc,
-    }, {
-      title: 'Create a Controlled Dropdown Select',
-      description: 'An example of implementing a controlled Dropdown Select.',
+      title: 'Create a Controlled MultiSelect',
+      description: 'An example of implementing a controlled MultiSelect.',
       example: <ControlledExample />,
       source: ControlledExampleSrc,
     }]}

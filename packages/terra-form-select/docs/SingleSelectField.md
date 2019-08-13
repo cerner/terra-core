@@ -1,6 +1,6 @@
-# Terra Form Multiple Select Field
+# Terra Form Single Select Field
 
-A convenience wrapper assembling a [terra-form-select MultipleSelect](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/src/MultipleSelect.jsx) within a [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field).
+A convenience wrapper assembling a [terra-form-select SingleSelect](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/src/SingleSelect.jsx) within a [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field).
 
 ## Getting Started
 

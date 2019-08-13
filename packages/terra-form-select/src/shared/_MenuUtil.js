@@ -33,7 +33,7 @@ class MenuUtil {
    * @param {string} variant - The variant.
    * @return {boolean} - True if the variant allows multiple selections.
    */
-  static allowsMultipleSelections(variant) {
+  static allowsMultiSelections(variant) {
     return variant === Variants.MULTIPLE || variant === Variants.TAG;
   }
 
@@ -275,7 +275,7 @@ class MenuUtil {
   static isMaxSelectionReached(props) {
     const { maxSelectionCount, value, variant } = props;
 
-    if (maxSelectionCount !== undefined && MenuUtil.allowsMultipleSelections(variant) && Array.isArray(value) && value.length >= maxSelectionCount) {
+    if (maxSelectionCount !== undefined && MenuUtil.allowsMultiSelections(variant) && Array.isArray(value) && value.length >= maxSelectionCount) {
       return true;
     }
 

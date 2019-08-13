@@ -4,8 +4,8 @@ import Variants from './shared/_variants';
 import Option from './shared/_Option';
 import OptGroup from './shared/_OptGroup';
 import Combobox from './Combobox';
-import DropdownSelect from './DropdownSelect';
-import Multiple from './MultipleSelect';
+import SingleSelect from './SingleSelect';
+import MultiSelect from './MultiSelect';
 import Search from './SearchSelect';
 import Tag from './TagSelect';
 
@@ -135,7 +135,7 @@ function Select(props) {
     }
     case Variants.MULTIPLE: {
       const { allowClear, ...multipleProps } = otherProps;
-      return <Multiple {...multipleProps} />;
+      return <MultiSelect {...multipleProps} />;
     }
     case Variants.SEARCH: {
       const { maxSelectionCount, ...searchProps } = otherProps;
@@ -151,9 +151,9 @@ function Select(props) {
         maxSelectionCount,
         onSearch,
         optionFilter,
-        ...dropdownSelectProps
+        ...SingleSelectProps
       } = otherProps;
-      return <DropdownSelect {...dropdownSelectProps} />;
+      return <SingleSelect {...SingleSelectProps} />;
     }
   }
 }

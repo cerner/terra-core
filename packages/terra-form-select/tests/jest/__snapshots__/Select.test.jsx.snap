@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select should render a clear option 1`] = `
-<DropdownSelect
+<SingleSelect
   allowClear={true}
   disabled={false}
   intl={
@@ -110,7 +110,7 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
 `;
 
 exports[`Select should render a default variant 1`] = `
-<DropdownSelect
+<SingleSelect
   allowClear={false}
   disabled={false}
   intl={
@@ -146,7 +146,7 @@ exports[`Select should render a default variant 1`] = `
 `;
 
 exports[`Select should render a default variant with a placeholder 1`] = `
-<DropdownSelect
+<SingleSelect
   allowClear={false}
   disabled={false}
   intl={
@@ -218,7 +218,7 @@ exports[`Select should render a disabled combobox variant 1`] = `
 `;
 
 exports[`Select should render a disabled default variant 1`] = `
-<DropdownSelect
+<SingleSelect
   allowClear={false}
   disabled={true}
   intl={
@@ -254,7 +254,7 @@ exports[`Select should render a disabled default variant 1`] = `
 `;
 
 exports[`Select should render a disabled multiple variant 1`] = `
-<MultipleSelect
+<MultiSelect
   disabled={true}
   intl={
     Object {
@@ -360,7 +360,7 @@ exports[`Select should render a disabled tag variant 1`] = `
 `;
 
 exports[`Select should render a multiple variant 1`] = `
-<MultipleSelect
+<MultiSelect
   disabled={false}
   intl={
     Object {
@@ -395,7 +395,7 @@ exports[`Select should render a multiple variant 1`] = `
 `;
 
 exports[`Select should render a multiple variant with a placeholder 1`] = `
-<MultipleSelect
+<MultiSelect
   disabled={false}
   intl={
     Object {
@@ -431,7 +431,7 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
 `;
 
 exports[`Select should render a required select 1`] = `
-<DropdownSelect
+<SingleSelect
   allowClear={false}
   disabled={false}
   intl={
@@ -879,7 +879,7 @@ exports[`Select should render an invalid combobox variant 1`] = `
 `;
 
 exports[`Select should render an invalid default variant 1`] = `
-<DropdownSelect
+<SingleSelect
   allowClear={false}
   disabled={false}
   intl={
@@ -915,7 +915,7 @@ exports[`Select should render an invalid default variant 1`] = `
 `;
 
 exports[`Select should render an invalid multiple variant 1`] = `
-<MultipleSelect
+<MultiSelect
   disabled={false}
   intl={
     Object {

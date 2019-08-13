@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
-import Frame from './dropdown/Frame';
-import OptGroup from './shared/_OptGroup';
+import Frame from './multiple/Frame';
 import Option from './shared/_Option';
+import OptGroup from './shared/_OptGroup';
+import Tag from './shared/_Tag';
 import SelectUtil from './shared/_SelectUtil';
+import flatten from './shared/flatten';
 
 const propTypes = {
-  /**
-   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
-   */
-  allowClear: PropTypes.bool,
   /**
    * The dropdown menu options.
    */
@@ -18,7 +16,7 @@ const propTypes = {
   /**
    * The default selected value.
    */
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.arrayOf(PropTypes.string),
   /**
    * Whether the select is disabled.
    */
@@ -41,6 +39,10 @@ const propTypes = {
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
+  /**
+   * @private The maximum number of options that can be selected. A value less than 2 will be ignored.
+   */
+  maxSelectionCount: PropTypes.number,
   /**
    * Content to display when no results are found.
    */
@@ -66,9 +68,17 @@ const propTypes = {
    */
   onFocus: PropTypes.func,
   /**
+   * Callback function triggered when the search criteria changes. function(searchValue)
+   */
+  onSearch: PropTypes.func,
+  /**
    * Callback function triggered when an option is selected. function(value)
    */
   onSelect: PropTypes.func,
+  /**
+   * Callback function invoked for each option on search change. function(searchValue, option)
+   */
+  optionFilter: PropTypes.func,
   /**
    * Placeholder text.
    */
@@ -80,39 +90,41 @@ const propTypes = {
   /**
    * The selected value.
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  value: PropTypes.arrayOf(PropTypes.string),
 };
 
 const defaultProps = {
-  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
   isInvalid: false,
+  maxSelectionCount: undefined,
   noResultContent: undefined,
   onChange: undefined,
   onDeselect: undefined,
+  onSearch: undefined,
   onSelect: undefined,
+  optionFilter: undefined,
   placeholder: undefined,
   required: false,
   value: undefined,
 };
 
-class DropdownSelect extends React.Component {
-  static defaultValue(props) {
-    if (props.value !== undefined) {
+class MultiSelect extends React.Component {
+  static defaultValue({ value, defaultValue }) {
+    if (value !== undefined) {
       return null;
     }
 
-    return (props.defaultValue !== undefined && props.defaultValue !== null) ? props.defaultValue : '';
+    return flatten(defaultValue);
   }
 
   constructor(props) {
     super(props);
 
     this.state = {
-      value: DropdownSelect.defaultValue(props),
+      value: MultiSelect.defaultValue(props),
     };
 
     this.display = this.display.bind(this);
@@ -127,7 +139,11 @@ class DropdownSelect extends React.Component {
   display() {
     const selectValue = SelectUtil.value(this.props, this.state);
 
-    return SelectUtil.valueDisplay(this.props, selectValue);
+    return selectValue.map(tag => (
+      <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
+        {SelectUtil.valueDisplay(this.props, tag)}
+      </Tag>
+    ));
   }
 
   /**
@@ -162,7 +178,8 @@ class DropdownSelect extends React.Component {
    * @param {ReactNode} option - The selected option.
    */
   handleSelect(value, option) {
-    this.handleChange(SelectUtil.select(this.props, this.state, value));
+    const newValue = [...SelectUtil.value(this.props, this.state), value];
+    this.handleChange(newValue);
 
     if (this.props.onSelect) {
       this.props.onSelect(value, option);
@@ -171,28 +188,11 @@ class DropdownSelect extends React.Component {
 
   render() {
     const {
-      allowClear,
-      children,
-      defaultValue,
-      onChange,
-      placeholder,
-      required,
-      value,
-      intl,
-      ...otherProps
+      children, defaultValue, onChange, placeholder, required, value, intl, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
     const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
-    let clearOptionDisplay;
-
-    if (allowClear) {
-      if (selectPlaceholder.length === 0) {
-        clearOptionDisplay = defaultPlaceholder;
-      } else {
-        clearOptionDisplay = selectPlaceholder;
-      }
-    }
 
     return (
       <Frame
@@ -205,7 +205,6 @@ class DropdownSelect extends React.Component {
         placeholder={selectPlaceholder}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
-        clearOptionDisplay={clearOptionDisplay}
       >
         {children}
       </Frame>
@@ -213,10 +212,10 @@ class DropdownSelect extends React.Component {
   }
 }
 
-DropdownSelect.Option = Option;
-DropdownSelect.OptGroup = OptGroup;
-DropdownSelect.propTypes = propTypes;
-DropdownSelect.defaultProps = defaultProps;
-DropdownSelect.isSelect = true;
+MultiSelect.Option = Option;
+MultiSelect.OptGroup = OptGroup;
+MultiSelect.propTypes = propTypes;
+MultiSelect.defaultProps = defaultProps;
+MultiSelect.isSelect = true;
 
-export default injectIntl(DropdownSelect);
+export default injectIntl(MultiSelect);

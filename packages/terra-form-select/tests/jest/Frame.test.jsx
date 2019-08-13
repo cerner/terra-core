@@ -4,14 +4,14 @@ import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
 import ComboboxFrame from '../../src/combobox/Frame';
-import DropdownFrame from '../../src/dropdown/Frame';
+import SingleSelectFrame from '../../src/single/Frame';
 import MultipleFrame from '../../src/multiple/Frame';
 import SearchFrame from '../../src/search/Frame';
 import TagFrame from '../../src/tag/Frame';
 
 describe('Frame', () => {
   it('should render a default variant', () => {
-    const wrapper = shallowWithIntl(<DropdownFrame />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -36,7 +36,7 @@ describe('Frame', () => {
   });
 
   it('should render a default variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<DropdownFrame placeholder="Placeholder" />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame placeholder="Placeholder" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -61,7 +61,7 @@ describe('Frame', () => {
   });
 
   it('should render a disabled default variant', () => {
-    const wrapper = shallowWithIntl(<DropdownFrame disabled />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame disabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -86,7 +86,7 @@ describe('Frame', () => {
   });
 
   it('should render an invalid default variant', () => {
-    const wrapper = shallowWithIntl(<DropdownFrame isInvalid />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame isInvalid />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -117,7 +117,7 @@ describe('Frame', () => {
 
   it('should call a custom onBlur', () => {
     const mockBlur = jest.fn();
-    const wrapper = shallowWithIntl(<DropdownFrame onBlur={mockBlur} />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame onBlur={mockBlur} />);
 
     wrapper.simulate('focus');
     wrapper.simulate('blur');
@@ -126,17 +126,17 @@ describe('Frame', () => {
   });
 
   it('should render a clear option', () => {
-    const wrapper = shallowWithIntl(<DropdownFrame clearOptionDisplay="-Select-" />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame clearOptionDisplay="-Select-" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a required default variant', () => {
-    const wrapper = shallowWithIntl(<DropdownFrame required />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame required />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a required Frame', () => {
-    const wrapper = shallowWithIntl(<DropdownFrame required />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame required />);
     expect(wrapper).toMatchSnapshot();
   });
 });

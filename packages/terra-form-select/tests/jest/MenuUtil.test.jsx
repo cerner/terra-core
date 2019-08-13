@@ -46,25 +46,25 @@ describe('MenuUtil', () => {
     });
   });
 
-  describe('allowsMultipleSelections', () => {
+  describe('allowsMultiSelections', () => {
     it('should return false for a default variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.DEFAULT)).toBeFalsy();
+      expect(MenuUtil.allowsMultiSelections(Variants.DEFAULT)).toBeFalsy();
     });
 
     it('should return false for a combobox variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.COMBOBOX)).toBeFalsy();
+      expect(MenuUtil.allowsMultiSelections(Variants.COMBOBOX)).toBeFalsy();
     });
 
     it('should return true for a multiple variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.MULTIPLE)).toBeTruthy();
+      expect(MenuUtil.allowsMultiSelections(Variants.MULTIPLE)).toBeTruthy();
     });
 
     it('should return false for a search variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.SEARCH)).toBeFalsy();
+      expect(MenuUtil.allowsMultiSelections(Variants.SEARCH)).toBeFalsy();
     });
 
     it('should return true for a tag variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.TAG)).toBeTruthy();
+      expect(MenuUtil.allowsMultiSelections(Variants.TAG)).toBeTruthy();
     });
   });
 

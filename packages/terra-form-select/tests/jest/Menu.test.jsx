@@ -3,13 +3,13 @@ import React from 'react';
 import { shallowWithIntl } from 'terra-enzyme-intl';
 import Option from '../../src/shared/_Option';
 import ComboboxMenu from '../../src/combobox/Menu';
-import DropdownMenu from '../../src/dropdown/Menu';
+import SingleSelectMenu from '../../src/single/Menu';
 
 describe('Menu', () => {
   it('should render a default Menu', () => {
     const liveRegion = { current: document.createElement('div') };
 
-    const menu = <DropdownMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" />;
+    const menu = <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" />;
     const wrapper = shallowWithIntl(menu);
     expect(wrapper).toMatchSnapshot();
   });
@@ -19,9 +19,9 @@ describe('Menu', () => {
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
 
     const menu = (
-      <DropdownMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} value="value" searchValue="asdf">
+      <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={mockIntl} value="value" searchValue="asdf">
         <Option value="value" display="display" />
-      </DropdownMenu>
+      </SingleSelectMenu>
     );
 
     const wrapper = shallowWithIntl(menu);
@@ -39,9 +39,9 @@ describe('Menu', () => {
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
 
     const menu = (
-      <DropdownMenu onSelect={() => {}} intl={mockIntl} value="value" searchValue="asdf">
+      <SingleSelectMenu onSelect={() => {}} intl={mockIntl} value="value" searchValue="asdf">
         <Option value="value" display="display" />
-      </DropdownMenu>
+      </SingleSelectMenu>
     );
 
     const wrapper = shallowWithIntl(menu);
@@ -59,9 +59,9 @@ describe('Menu', () => {
     const mockIntl = { formatMessage: id => (`No Results for ${id.id}`) };
 
     const menu = (
-      <DropdownMenu onSelect={() => {}} intl={mockIntl} visuallyHiddenComponent={liveRegion} value="value" searchValue="asdf">
+      <SingleSelectMenu onSelect={() => {}} intl={mockIntl} visuallyHiddenComponent={liveRegion} value="value" searchValue="asdf">
         <Option value="value" display="display" />
-      </DropdownMenu>
+      </SingleSelectMenu>
     );
 
     const wrapper = shallowWithIntl(menu);

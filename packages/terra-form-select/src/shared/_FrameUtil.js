@@ -43,7 +43,7 @@ class FrameUtil {
    * @param {Object} variant - The component props.
    * @return {boolean} - True if the variant allows multiple selections.
    */
-  static allowsMultipleSelections(props) {
+  static allowsMultiSelections(props) {
     return props.variant === Variants.MULTIPLE || props.variant === Variants.TAG;
   }
 
@@ -67,7 +67,7 @@ class FrameUtil {
    * @return {Boolean} - True if the search input should be hidden.
    */
   static shouldHideSearch(props, state) {
-    if (FrameUtil.allowsMultipleSelections(props)) {
+    if (FrameUtil.allowsMultiSelections(props)) {
       return !state.isFocused && props.value && props.value.length > 0;
     }
     return false;

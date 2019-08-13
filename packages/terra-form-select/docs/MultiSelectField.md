@@ -1,6 +1,6 @@
-# Terra Form Dropdown Select Field
+# Terra Form MultiSelect Field
 
-A convenience wrapper assembling a [terra-form-select DropdownSelect](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/src/DropdownSelect.jsx) within a [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field).
+A convenience wrapper assembling a [terra-form-select MultiSelect](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/src/MultiSelect.jsx) within a [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field).
 
 ## Getting Started
 

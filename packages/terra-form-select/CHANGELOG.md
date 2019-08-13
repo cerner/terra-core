@@ -5,8 +5,8 @@ Unreleased
 ----------
 ### Added
 * Added Combobox and ComboboxField exports and doc site entries
-* Added DropdownSelect and DropdownSelectField exports and doc site entries
-* Added MultipleSelect and MultipleSelectField exports and doc site entries
+* Added SingleSelect and SingleSelectField exports and doc site entries
+* Added MultiSelect and MultiSelectField exports and doc site entries
 * Added SearchSelect and SearchSelectField exports and doc site entries
 * Added TagSelect and TagSelectField exports and doc site entries
 * Added aria-label to resolve accessibility violation with axe-core v3.3.0.
