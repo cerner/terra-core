@@ -1,5 +1,5 @@
-import FrameUtil from '../../src/_FrameUtil';
-import Variants from '../../src/_constants';
+import FrameUtil from '../../src/shared/_FrameUtil';
+import Variants from '../../src/shared/_variants';
 
 describe('FrameUtil', () => {
   describe('dropdownStyle', () => {
@@ -71,25 +71,25 @@ describe('FrameUtil', () => {
     });
   });
 
-  describe('allowsMultipleSelections', () => {
+  describe('allowsMultiSelections', () => {
     it('should return false for a default variant', () => {
-      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.DEFAULT })).toBeFalsy();
+      expect(FrameUtil.allowsMultiSelections({ variant: Variants.DEFAULT })).toBeFalsy();
     });
 
     it('should return false for a combobox variant', () => {
-      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.COMBOBOX })).toBeFalsy();
+      expect(FrameUtil.allowsMultiSelections({ variant: Variants.COMBOBOX })).toBeFalsy();
     });
 
     it('should return true for a multiple variant', () => {
-      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.MULTIPLE })).toBeTruthy();
+      expect(FrameUtil.allowsMultiSelections({ variant: Variants.MULTIPLE })).toBeTruthy();
     });
 
     it('should return false for a search variant', () => {
-      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.SEARCH })).toBeFalsy();
+      expect(FrameUtil.allowsMultiSelections({ variant: Variants.SEARCH })).toBeFalsy();
     });
 
     it('should return true for a tag variant', () => {
-      expect(FrameUtil.allowsMultipleSelections({ variant: Variants.TAG })).toBeTruthy();
+      expect(FrameUtil.allowsMultiSelections({ variant: Variants.TAG })).toBeTruthy();
     });
   });
 

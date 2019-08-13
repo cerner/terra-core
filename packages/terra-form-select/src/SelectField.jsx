@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Field from 'terra-form-field';
 import { injectIntl, intlShape } from 'react-intl';
+import Field from 'terra-form-field';
 import Select from './Select';
-import Variants from './_constants';
+import Variants from './shared/_variants';
 
 const propTypes = {
   /**
