@@ -2,8 +2,8 @@ import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, renderWithIntl } from 'terra-enzyme-intl';
 import Select from '../../src/Select';
-import Option from '../../src/_Option';
-import OptGroup from '../../src/_OptGroup';
+import Option from '../../src/shared/_Option';
+import OptGroup from '../../src/shared/_OptGroup';
 
 describe('Select', () => {
   it('should render a default variant', () => {

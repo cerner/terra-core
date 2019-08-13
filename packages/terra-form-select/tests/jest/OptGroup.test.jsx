@@ -1,9 +1,11 @@
 import React from 'react';
-import OptGroup from '../../src/_OptGroup';
+/* eslint-disable import/no-extraneous-dependencies */
+import { shallowWithIntl } from 'terra-enzyme-intl';
+import OptGroup from '../../src/shared/_OptGroup';
 
 describe('OptGroup', () => {
   it('should render a default Option', () => {
-    const wrapper = shallow(<OptGroup label="label" />);
+    const wrapper = shallowWithIntl(<OptGroup label="label" />);
     expect(wrapper).toMatchSnapshot();
   });
 
