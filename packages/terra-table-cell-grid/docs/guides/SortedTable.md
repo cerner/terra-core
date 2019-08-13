@@ -1,4 +1,4 @@
-# Terra Table - Implementing a Sorted Table
+# Terra TableCellGrid - Implementing a Sorted TableCellGrid
 
 As table cell content is dynamic and the types of sorting can vary, consumers need to handle the state of their own sorting. The following guide lays out an example of managing sorting and state within a table implementation. There are further optimizations that can be made given an individual implementation of a data set, but this should serve as a framework for that.
 

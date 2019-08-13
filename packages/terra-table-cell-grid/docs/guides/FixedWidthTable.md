@@ -1,4 +1,4 @@
-# Terra Flex Table - Fixed Width Table Columns
+# Terra TableCellGrid - Fixed Width Columns
 
 ## Define Width Array
 As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.

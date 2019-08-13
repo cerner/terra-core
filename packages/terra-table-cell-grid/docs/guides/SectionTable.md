@@ -1,4 +1,4 @@
-# Terra Table - Sections
+# Terra TableCellGrid - Sections
 
 Table sections are available in both static and collapsible varieties. A table section that is collapsed will be remove its children rows from the DOM. This improves performance and accessiblilty, but may remove potentional state assocaited to a mounted row. If your table row content has additional state, it needs to be stored externally and reapplied when thawed for the next render that shows its section open. Since this render occurs at the same time that a collapsible section state changes, for additional optimization, collapsed sections do not necessarily need to be provided with child rows.
 

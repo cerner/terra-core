@@ -1,12 +1,12 @@
-# Terra Table Section
+# Section
 
-The Terra Table Section is a sub component that creates a section header based on the given props and groups the child rows beneath it. The section has the ability to toggle the display of its child rows given the isCollapsible and isCollapsed props. For a section to be collapsed both isCollapsible and isCollapsed must be true. Each section handles its collapsible and collapsed state.
+The Terra TableCellGrid Section is a sub component that creates a section header based on the given props and groups the child rows beneath it. The section has the ability to toggle the display of its child cell grids given the isCollapsible and isCollapsed props. For a section to be collapsed both isCollapsible and isCollapsed must be true. Each section handles its collapsible and collapsed state.
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import { Row, Section } from 'terra-flex-table';
+import { CellGrid, Section } from 'terra-table-cell-grid';
 
   <Section
     key="unique-react-key"
@@ -16,9 +16,9 @@ import { Row, Section } from 'terra-flex-table';
     metaData={{ myInfo: 'my-data' }}
     onSelect={this.handleSelection}
   >
-    <Row />
-    <Row />
-    <Row />
+    <CellGrid />
+    <CellGrid />
+    <CellGrid />
   </Section>
 ```
 

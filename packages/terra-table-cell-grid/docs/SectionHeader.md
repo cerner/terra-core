@@ -1,12 +1,12 @@
-# Terra Table SectionHeader
+# Section Header
 
-The Terra Section Header is built upon a table row and can be placed similarly within a table, provided the number of columns are provided to the SectionHeader. The section header should only be placed within the table via children when the header is static, as the actual row collapse is handled by the section.
+The Terra TableCellGrid SectionHeader is built upon a cell grid and can be placed similarly within a table, provided the number of columns are provided to the SectionHeader. The section header should only be placed within the table via children when the header is static, as the actual row collapse is handled by the section.
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import { SectionHeader } from 'terra-flex-table';
+import { SectionHeader } from 'terra-table-cell-grid';
 
 <SectionHeader
   key="unique-react-key"

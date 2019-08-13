@@ -1,4 +1,4 @@
-# Terra Table - Implementing a Striped Table
+# Terra TableCellGrid - Implementing a Striped TableCellGrid
 
 In previous versions of the terra-flex-table the striped style was derived using a nth-of-type selector, however this striping pattern does not work using section and subsections, as they are sibling elements of the same type. So in this implementation the responsibility of striping is moved to the TableRow itself. The following guide shows how to cleanly implement a striped table.
 

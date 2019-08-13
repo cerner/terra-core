@@ -1,4 +1,4 @@
-# Terra Table - Sections with Subsections
+# Terra TableCellGrid - Sections with Subsections
 
 With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to only use collapsible sections or collapsible subsections in a table, but not both.
 

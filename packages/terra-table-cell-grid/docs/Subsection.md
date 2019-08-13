@@ -1,12 +1,12 @@
-# Terra Table Subsection
+# Subsection
 
-The Terra Table Subsection is a sub component that creates a subsection header based on the given props and groups the child rows beneath it. The subsection header has the ability to toggle the display of its child rows given the isCollapsible and isCollapsed props. For a subsection to be collapsed both isCollapsible and isCollapsed must be true. Each section handles its collapsible and collapsed state.
+The Terra TableCellGrid Subsection is a sub component that creates a subsection header based on the given props and groups the child cell grids beneath it. The subsection header has the ability to toggle the display of its child cell grids given the isCollapsible and isCollapsed props. For a subsection to be collapsed both isCollapsible and isCollapsed must be true. Each section handles its collapsible and collapsed state.
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import { Row, Subsection } from 'terra-flex-table';
+import { CellGrid, Subsection } from 'terra-table-cell-grid';
 
   <Subsection
     key="unique-react-key"
@@ -16,9 +16,9 @@ import { Row, Subsection } from 'terra-flex-table';
     metaData={{ myInfo: 'my-data' }}
     onSelect={this.handleRowSelection}
   >
-    <Row />
-    <Row />
-    <Row />
+    <CellGrid />
+    <CellGrid />
+    <CellGrid />
   </Subsection>
 ```
 

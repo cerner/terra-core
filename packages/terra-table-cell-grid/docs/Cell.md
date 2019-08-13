@@ -1,12 +1,12 @@
-# Terra Table Cell
+# Cell
 
-The Terra Table Cell is a sub component to be used inside a table row.
+The Cell is a sub component to be used inside a cell grid.
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import { Cell } from 'terra-flex-table';
+import { Cell } from 'terra-table-cell-grid';
 
 <Cell key="row-0-cell-0">
   Table row text

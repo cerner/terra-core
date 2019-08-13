@@ -1,12 +1,12 @@
-# Terra Table Subsection Header
+# Subsection Header
 
-The Terra Subsection Header is built upon a table row and can be placed similarly within a table, provided the number of columns are provided to the SubsectionHeader. The subsection header should only be placed within the table via children when the header is static, as the actual row collapse is handled by the section.
+The Terra Subsection Header is built upon a cell grid and can be placed similarly within a table, provided the number of columns are provided to the SubsectionHeader. The subsection header should only be placed within the table via children when the header is static, as the actual cell grid collapse is handled by the section.
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import { SubsectionHeader } from 'terra-flex-table';
+import { SubsectionHeader } from 'terra-table-cell-grid';
 
 <SubsectionHeader
   key="unique-react-key"

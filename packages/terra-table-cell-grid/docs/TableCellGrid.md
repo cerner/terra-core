@@ -12,25 +12,25 @@ The Terra TableCellGrid is a structural component used to create standard html t
 
 ```jsx
 import React from 'react';
-import Table, { Row, Cell } from 'terra-table-cell-grid';
+import Table, { CellGrid, Cell } from 'terra-table-cell-grid';
 
 <TableCellGrid>
-  <Row isSelectable key="row-0">
+  <CellGrid isSelectable key="row-0">
     <Cell key="row-0-cell-0">
       Table row text
     </Cell>
     <Cell key="row-0-cell-0">
       Table row text
     </Cell>
-  </Row>
-  <Row isSelectable key="row-1">
+  </CellGrid>
+  <CellGrid isSelectable key="row-1">
     <Cell key="row-1-cell-0">
       Table row text
     </Cell>
     <Cell key="row-1-cell-1">
       Table row text
     </Cell>
-  </Row>
+  </CellGrid>
 </TableCellGrid>
 ```
 
