@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+4.8.0 - (August 14, 2019)
+------------------
 ### Changed
 * Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
 * Updated package.json test scripts
