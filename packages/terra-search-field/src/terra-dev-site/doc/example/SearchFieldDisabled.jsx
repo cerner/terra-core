@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SearchField from 'terra-search-field/lib/SearchField';
+import SearchField from 'terra-search-field';
 
 const SearchFieldDisabled = () => (
   <SearchField isDisabled />

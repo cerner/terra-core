@@ -3,9 +3,8 @@
  * renders the correct component at every breakpoint.
  */
 
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import React from 'react';
-import ResponsiveElement from '../../../ResponsiveElement';
+import ResponsiveElement from 'terra-responsive-element';
 
 class Controlled extends React.Component {
   constructor() {

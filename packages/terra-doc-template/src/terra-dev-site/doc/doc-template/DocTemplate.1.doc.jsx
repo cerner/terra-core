@@ -1,6 +1,5 @@
 import React from 'react';
 import DocTemplate from '../../../../lib/DocTemplate';
-
 import readme from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 

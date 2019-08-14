@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Spacer from 'terra-spacer/lib/Spacer';
+import Spacer from 'terra-spacer';
 import 'terra-spacer/lib/terra-dev-site/doc/example/Spacer.module.scss';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 

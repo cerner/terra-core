@@ -7,7 +7,6 @@ import { name } from '../../../../../package.json';
 // Example Files
 import SectionWithSubsection1 from '../../guides/SectionWithSubsection1';
 import SectionWithSubsection1Src from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/SectionWithSubsection1';
-
 import SectionWithSubsection2 from '../../guides/SectionWithSubsection2';
 import SectionWithSubsection2Src from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/SectionWithSubsection2';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */

@@ -1,6 +1,5 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Overlay from 'terra-overlay/lib/Overlay';
+import Overlay from 'terra-overlay';
 import OverlayContainer from 'terra-overlay/lib/OverlayContainer';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Button from 'terra-button';

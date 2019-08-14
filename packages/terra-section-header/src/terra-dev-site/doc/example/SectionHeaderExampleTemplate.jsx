@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SectionHeader from 'terra-section-header/lib/SectionHeader';
+import SectionHeader from 'terra-section-header';
 
 const propTypes = {
   /**

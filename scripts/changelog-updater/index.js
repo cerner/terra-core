@@ -63,10 +63,10 @@ exec('npx lerna updated', (error, stdout) => {
           const changelogDoc = `Unreleased
 ----------
 
-${newVersion} - (${releaseDate})
+Unreleased
 ------------------
 ### Changed
-* Minor dependency version bump`;
+* Cleaned up imports in examples and test files`;
           const regex = /Unreleased\n----------/g;
 
           // Update CHANGELOG.md

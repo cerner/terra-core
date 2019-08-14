@@ -1,5 +1,4 @@
 import React from 'react';
-
 import DocTemplate from '../../src/DocTemplate';
 import TestComponentExample from '../../src/terra-dev-site/test/doc-template/common/TestComponentExample';
 import CustomPropsTable from '../../src/terra-dev-site/test/doc-template/common/CustomPropsTable';

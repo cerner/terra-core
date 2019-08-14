@@ -1,8 +1,7 @@
 import React from 'react';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Alert from 'terra-alert/lib/Alert';
+import Alert from 'terra-alert';
 import styles from './AlertTestCommon.scss';
 
 const cx = classNames.bind(styles);

@@ -25,7 +25,19 @@
     "extends browserslist-config-terra"
   ],
   "eslintConfig": {
-    "extends": "terra"
+    "extends": "terra",
+    "overrides": [
+      {
+        "files": [
+          "**/*/terra-dev-site/**/*.jsx"
+        ],
+        "rules": {
+          "import/no-extraneous-dependencies": "off",
+          "import/no-unresolved": "off",
+          "import/extensions": "off"
+        }
+      }
+    ]
   },
   "stylelint": {
     "extends": "stylelint-config-terra",

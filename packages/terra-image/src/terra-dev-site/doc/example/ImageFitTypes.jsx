@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Image from 'terra-image/lib/Image';
+import Image from 'terra-image';
 import FitTypesWrapper from 'terra-image/lib/terra-dev-site/doc/example/common/FitTypesWrapper';
 import styles from './ImageFitTypes.scss';
 import exampleImage from '../../assets/170x251.jpg';
