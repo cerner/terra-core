@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NpmBadge should render custom package badge when url and version props are set 1`] = `
+<div
+  className="badge-container"
+>
+  <a
+    className="badge"
+    href="https://engineering.cerner.com/terra-ui/components/terra-doc-template/doc-template/doc-template"
+  >
+    <span
+      className="badge-name"
+    >
+      package
+    </span>
+    <span
+      className="badge-version"
+    >
+      v2.13.0
+    </span>
+  </a>
+</div>
+`;

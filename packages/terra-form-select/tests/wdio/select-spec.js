@@ -372,8 +372,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Combobox Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-combobox');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     describe('combobox should be closed initially', () => {
@@ -696,8 +694,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     describe('combobox controlled should select an option by click', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/controlled-combobox');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement();
@@ -719,8 +715,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Multiple Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     describe('multiple should be closed initially', () => {
@@ -1006,8 +1000,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     describe('multiple controlled should select an option by click', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/controlled-multiple');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement();
@@ -1029,8 +1021,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Search Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     describe('search should be closed initially', () => {
@@ -1230,8 +1220,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => {
         browser.refresh(); // remove selected option
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
     });
 
@@ -1250,8 +1238,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => {
         browser.refresh(); // remove selected option
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
     });
 
@@ -1280,8 +1266,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => {
         browser.refresh(); // remove selected option
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
     });
 
@@ -1306,8 +1290,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => {
         browser.refresh(); // remove selected option
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
     });
 
@@ -1324,8 +1306,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => {
         browser.refresh(); // remove selected option
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
     });
 
@@ -1350,8 +1330,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     describe('search controlled should select an option by click', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/controlled-search');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement();
@@ -1374,8 +1352,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Tag Variant', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     describe('tag should be closed initially', () => {
@@ -1616,8 +1592,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     describe('tag should select an option by pressing enter', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement();
@@ -1665,8 +1639,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     describe('combobox should deselect the selected item when clicking on the clear option.', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/allow-clear');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement();
@@ -1699,8 +1671,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     describe('tag controlled should select an option by click', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-select/form-select/controlled-tag');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement();

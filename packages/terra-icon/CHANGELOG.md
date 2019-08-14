@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.17.0 - (August 14, 2019)
+------------------
 ### Added
 * Added new icon `IconCircleSymbolLight`
 * Added new icon `IconDiamondSymbolLight`

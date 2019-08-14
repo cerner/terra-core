@@ -3,8 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+4.5.0 - (August 14, 2019)
+------------------
 ### Changed
-* Update jest test snanpshot
+* Update jest test snapshot
 * updated package.json test scripts
 
 4.4.0 - (July 30, 2019)
