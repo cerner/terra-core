@@ -5,7 +5,7 @@ import Textarea from '../../src/Textarea';
 window.matchMedia = () => ({ matches: true });
 
 it('should render a default TextArea component', () => {
-  const textarea = <Textarea label="label" />;
+  const textarea = <Textarea ariaLabel="label" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -13,7 +13,7 @@ it('should render a default TextArea component', () => {
 it('should render a TextArea when all the possible props are passed into it', () => {
   const textarea = (
     <Textarea
-      label="label"
+      ariaLabel="label"
       name="description"
       rows={5}
       required
@@ -25,62 +25,62 @@ it('should render a TextArea when all the possible props are passed into it', ()
 });
 
 it('should render as uncontrolled when just a default value is passed into the Textarea', () => {
-  const textarea = <Textarea label="label" defaultValue="foo" />;
+  const textarea = <Textarea ariaLabel="label" defaultValue="foo" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as controlled when just a default value is passed into the Textarea', () => {
-  const textarea = <Textarea label="label" value="foo" onChange={() => {}} />;
+  const textarea = <Textarea ariaLabel="label" value="foo" onChange={() => {}} />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a small textbox appropriately', () => {
-  const textarea = <Textarea label="label" size="small" />;
+  const textarea = <Textarea ariaLabel="label" size="small" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a medium textbox appropriately', () => {
-  const textarea = <Textarea label="label" size="medium" />;
+  const textarea = <Textarea ariaLabel="label" size="medium" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a large textbox appropriately', () => {
-  const textarea = <Textarea label="label" size="large" />;
+  const textarea = <Textarea ariaLabel="label" size="large" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a full size textbox appropriately', () => {
-  const textarea = <Textarea label="label" size="full" />;
+  const textarea = <Textarea ariaLabel="label" size="full" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should set the rows attribute appropriate when it is passed into the textarea', () => {
-  const textarea = <Textarea label="label" size="small" rows={7} />;
+  const textarea = <Textarea ariaLabel="label" size="small" rows={7} />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should set the onChange and onFocus functions appropriately when the textarea is autoResizable', () => {
-  const textarea = <Textarea label="label" isAutoResizable onFocus={() => {}} onChange={() => {}} />;
+  const textarea = <Textarea ariaLabel="label" isAutoResizable onFocus={() => {}} onChange={() => {}} />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should set the textarea as auto resizable when isAutoResizable is passed into the component', () => {
-  const textarea = <Textarea label="label" isAutoResizable />;
+  const textarea = <Textarea ariaLabel="label" isAutoResizable />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should set the textarea to resizable when viewed on a large device', () => {
   spyOn(window, 'matchMedia').and.returnValue({ matches: false });
-  const textarea = <Textarea label="label" isAutoResizable />;
+  const textarea = <Textarea ariaLabel="label" isAutoResizable />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -89,7 +89,7 @@ it('should not set the textarea to resizable when viewed on browser with ontouch
   spyOn(window, 'matchMedia').and.returnValue({ matches: true });
   window.ontouchstart = 'true';
 
-  const textarea = <Textarea label="label" isAutoResizable />;
+  const textarea = <Textarea ariaLabel="label" isAutoResizable />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 
@@ -101,7 +101,7 @@ it('should not set the textarea to resizable when viewed on browser with Documen
   window.DocumentTouch = () => {};
   window.DocumentTouch.prototype = Document.prototype;
 
-  const textarea = <Textarea label="label" isAutoResizable />;
+  const textarea = <Textarea ariaLabel="label" isAutoResizable />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 
@@ -112,7 +112,7 @@ it('should not set the textarea to resizable when viewed on browser with maxTouc
   spyOn(window, 'matchMedia').and.returnValue({ matches: true });
   navigator.maxTouchPoints = 1;
 
-  const textarea = <Textarea label="label" isAutoResizable />;
+  const textarea = <Textarea ariaLabel="label" isAutoResizable />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 
@@ -123,7 +123,7 @@ it('should not set the textarea to resizable when viewed on browser with msMaxTo
   spyOn(window, 'matchMedia').and.returnValue({ matches: true });
   navigator.msMaxTouchPoints = 1;
 
-  const textarea = <Textarea label="label" isAutoResizable />;
+  const textarea = <Textarea ariaLabel="label" isAutoResizable />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 
@@ -131,13 +131,13 @@ it('should not set the textarea to resizable when viewed on browser with msMaxTo
 });
 
 it('should set the textarea to disabled when passed into the component', () => {
-  const textarea = <Textarea label="label" disabled />;
+  const textarea = <Textarea ariaLabel="label" disabled />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should set the textarea to invalid when isInvalid is passed into the component', () => {
-  const textarea = <Textarea label="label" isInvalid />;
+  const textarea = <Textarea ariaLabel="label" isInvalid />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -145,7 +145,7 @@ it('should set the textarea to invalid when isInvalid is passed into the compone
 it('should set the ref when refCallback is passed into the component', () => {
   const refCallback = jest.fn();
 
-  const textarea = <Textarea label="label" refCallback={refCallback} />;
+  const textarea = <Textarea ariaLabel="label" refCallback={refCallback} />;
   const wrapper = mount(textarea);
 
   expect(refCallback).toHaveBeenCalledWith(wrapper.find('textarea').instance());

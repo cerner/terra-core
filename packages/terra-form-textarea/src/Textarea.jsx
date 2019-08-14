@@ -80,9 +80,10 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Value to set for the aria-label.
-   */
-  label: PropTypes.string.isRequired,
+  * String that labels the current element. 'aria-label' must be present,
+  * for accessibility.
+  */
+  ariaLabel: PropTypes.string,
 };
 
 const defaultProps = {
@@ -186,7 +187,7 @@ class Textarea extends React.Component {
       defaultValue,
       rows,
       size,
-      label,
+      ariaLabel,
       refCallback,
       ...customProps
     } = this.props;
@@ -201,7 +202,7 @@ class Textarea extends React.Component {
       additionalTextareaProps.className,
     ]);
 
-    additionalTextareaProps['aria-label'] = label;
+    additionalTextareaProps['aria-label'] = ariaLabel;
 
     if (required) {
       additionalTextareaProps['aria-required'] = 'true';

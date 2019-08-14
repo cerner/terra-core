@@ -25,7 +25,7 @@ class InvalidExample extends Component {
           onChange={this.handleAreaChange}
           size="small"
           id="invalid"
-          label="text-area-label"
+          ariaLabel="text-area-label"
         />
       </Field>
     );
