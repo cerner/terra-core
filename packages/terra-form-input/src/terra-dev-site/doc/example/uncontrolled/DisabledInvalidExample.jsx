@@ -12,6 +12,7 @@ const DisabledInvalidExample = () => (
         name="disabled input"
         id="uncontrolled-disabled-invalid"
         isInvalid
+        ariaLabel="form-input-label"
       />
     </Field>
   </div>

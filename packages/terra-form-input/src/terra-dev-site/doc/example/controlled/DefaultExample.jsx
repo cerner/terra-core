@@ -25,6 +25,7 @@ class DefaultExample extends React.Component {
             id="default-controlled"
             value={this.state.input}
             onChange={this.handleChange}
+            ariaLabel="form-input-label"
           />
         </Field>
         <p>

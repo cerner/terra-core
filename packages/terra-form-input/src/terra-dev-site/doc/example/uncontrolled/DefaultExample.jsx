@@ -10,6 +10,7 @@ const DefaultExample = () => (
         name="default input"
         id="uncontrolled-default"
         defaultValue="Default Input – Uncontrolled"
+        ariaLabel="form-input-label"
       />
     </Field>
   </div>

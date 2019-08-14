@@ -26,6 +26,7 @@ class DisabledInvalidExample extends React.Component {
             id="controlled-disabled-invalid"
             onChange={this.handleChange}
             isInvalid
+            ariaLabel="form-input-label"
           />
         </Field>
         <p>
