@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
 5.26.0 - (August 14, 2019)
 ------------------
 ### Removed
