@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added `label` prop to resolve accessibility violations.
+* Added `ariaLabel` prop to improve accessibility.
 
 3.21.0 - (July 30, 2019)
 ------------------
