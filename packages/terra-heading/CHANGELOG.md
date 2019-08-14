@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+4.14.0 - (August 14, 2019)
+------------------
 ### Changed
 * updated package.json test scripts
 

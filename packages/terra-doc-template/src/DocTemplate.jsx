@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
+import NpmBadge from './NpmBadge';
 import IndexExampleTemplate from './ExampleTemplate';
 import styles from './DocTemplate.module.scss';
 
@@ -17,6 +18,14 @@ const propTypes = {
    * The given component's npm package name.
    */
   packageName: PropTypes.string,
+  /**
+   * The url for the provided package if not in npm. This will be ignored if packageVersion is not set.
+   */
+  packageUrl: PropTypes.string,
+  /**
+   * The given component's package version.
+   */
+  packageVersion: PropTypes.string,
   /**
    * The given component's readme file imported to a string.
    */
@@ -57,6 +66,8 @@ const propTypes = {
 
 const defaultProps = {
   packageName: '',
+  packageUrl: '',
+  packageVersion: '',
   readme: '',
   srcPath: '',
   examples: [],
@@ -64,7 +75,7 @@ const defaultProps = {
 };
 
 const DocTemplate = ({
-  packageName, readme, srcPath, examples, propsTables, children, ...customProps
+  packageName, packageUrl, packageVersion, readme, srcPath, examples, propsTables, children, ...customProps
 }) => {
   let id = 0;
   const localExamples = examples;
@@ -93,9 +104,11 @@ const DocTemplate = ({
   }
 
   const badge = (
-    <a href={`https://www.npmjs.org/package/${packageName}`}>
-      <img src={`https://badgen.net/npm/v/${packageName}`} alt="NPM version" />
-    </a>
+    <NpmBadge
+      packageName={packageName}
+      packageUrl={packageUrl}
+      packageVersion={packageVersion}
+    />
   );
 
   return (

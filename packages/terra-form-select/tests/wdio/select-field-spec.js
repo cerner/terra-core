@@ -47,8 +47,6 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   describe('should select the maximum number of items allowed.', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/max-selection');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.validatesElement();
@@ -102,8 +100,6 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   describe('should show the max selection option on search', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/max-selection');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.validatesElement();

@@ -1,7 +1,7 @@
 {
   "name": "terra-doc-template",
   "main": "lib/DocTemplate.js",
-  "version": "2.15.0",
+  "version": "2.16.0",
   "description": "Provides an adjustable template for documentation pages.",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-syntax-highlighter": "^11.0.0",
-    "terra-markdown": "^2.31.0",
-    "terra-props-table": "^2.37.0"
+    "terra-markdown": "^2.32.0",
+    "terra-props-table": "^2.38.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

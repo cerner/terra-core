@@ -10,6 +10,8 @@ Unreleased
 * Removed Component `SelectableList` - Selection no longer supported.
 * Removed Utils `TableUtils` - Selection no longer supported..
 
+3.22.0 - (August 14, 2019)
+------------------
 ### Changed
 * updated package.json test scripts
 
