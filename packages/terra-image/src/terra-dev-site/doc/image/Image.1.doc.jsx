@@ -1,6 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Image-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
@@ -31,12 +32,7 @@ const DocPage = () => (
         source: ImageFitSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Image',
-        componentSrc: ImageSrc,
-      },
-    ]}
+    propsTablesMarkdown={PropsTable}
   />
 );
 

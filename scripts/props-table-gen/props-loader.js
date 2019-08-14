@@ -6,20 +6,27 @@ const reactDocs = require('react-docgen');
 /* eslint-enable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 
+const tableStyling = 'style="color: inherit; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Helvetica, Arial, sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\'; font-size: 16px; line-height: 1.5; line-height: 1.5; list-style: disc outside none; margin-bottom: 1.25rem; text-size-adjust: 100%; word-wrap: break-word;"';
+
 const packageDir = (componentName) => {
   const getPath = glob.sync(componentName, { cwd: __dirname + '../../../packages', realpath: true });
 
   return `${getPath[0]}/src/`;
 };
 
-const tableHeaderTemplate = '<thead><tr><th>Prop Name</th><th>Type</th><th>Is Required</th><th>Default Value</th><th>Description</th></tr></thead>';
+const tableHeaderTemplate = '<thead><tr><th style="width: 10%">Prop Name</th><th style="width: 35%">Type</th><th style="width: 10%">Is Required</th><th style="width: 10%">Default Value</th><th style="width: 35%">Description</th></tr></thead>';
 
 const createTableRow = (propValues) => {
   const rowValues = Object.values(propValues);
-  let currentRow = '<tr>';
+  let currentRow = '<tr style="vertical-align: top">';
+  let styledRow;
+  const styles = {};
 
-  rowValues.forEach((value) => {
-    currentRow += `<td>${value}</td>`;
+  rowValues.forEach((value, index) => {
+    styles.color = (value === 'required') ? 'color: #d53700' : '';
+    styles.fontWeight = (index === 0 || index === 3) ? 'font-weight: bold' : '';
+    styledRow = (styles.color || styles.fontWeight) ? `<td style="${styles.fontWeight || styles.color}">${value}</td>` : `<td>${value}</td>`;
+    currentRow += styledRow;
   });
   currentRow += '</tr>';
 
@@ -32,6 +39,25 @@ const formatPropShape = (propShape) => {
   const customType = name === 'customMessages' ? 'custom' : name;
   const specialTypes = ['enum', 'union', 'arrayOf'];
 
+  const propDescription = Object.values(value.description).join('').replace(/\r?\n|\r/g, ' ');
+  /* eslint-disable react/jsx-filename-extension */
+  let count = 0;
+  let description = '';
+
+  [...propDescription].forEach((ch) => {
+    if (ch === '`') {
+      count += 1;
+      if (count % 2 === 0) {
+        description += '</code>';
+        count = 0;
+      } else {
+        description += '<code>';
+      }
+    } else {
+      description += ch;
+    }
+  });
+
   // Check for special prop types and handle them.
   const typeCheck = specialTypes.indexOf(Object.values(value.type)[0][0]) > -1
     || customType
@@ -40,22 +66,22 @@ const formatPropShape = (propShape) => {
 
   // Check if prop type is an object shape.
   const shapeHandler = value.type.name === 'shape'
-    ? `An object shaped like:<br /><pre>${JSON.stringify(value.type.value, null, 1)}</pre>`
+    ? `An object shaped like:<br /><pre style="white-space: pre-wrap">${JSON.stringify(value.type.value, null, 1)}</pre>`
     : undefined;
 
   // Construct props object for use in creating table rows.
   propShape.forEach(() => {
     props.name = name;
     props.type = shapeHandler || typeCheck;
-    props.required = Object.values(value.required) === true ? 'required' : 'optional';
+    props.required = value.required === true ? 'required' : 'optional';
     props.defaultValue = value.defaultValue ? Object.values(value.defaultValue)[0] : 'none';
-    props.description = Object.values(value.description).join('').replace(/\r?\n|\r/g, ' ');
+    props.description = description;
   });
   return props;
 };
 
 const generateTable = (rowArray) => {
-  const generatedTable = `<table>${tableHeaderTemplate}<tbody>${rowArray.join('')}</tbody><table>`;
+  const generatedTable = `<div style="line-height: 1.5; margin-bottom: 1.25rem;"><table>${tableHeaderTemplate}<tbody>${rowArray.join('')}</tbody></table></div>`;
 
   return generatedTable;
 };
@@ -115,7 +141,7 @@ const processPackageList = (packageName) => {
 module.exports = (packageJSON) => {
   const packageName = JSON.parse(packageJSON).name;
 
-  processPackageList(packageName);
+  if (packageName === 'terra-button') processPackageList(packageName);
 
   return packageJSON;
 };
