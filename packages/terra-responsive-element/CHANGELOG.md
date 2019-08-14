@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added package.json import to doc page
+
 ### Changed
 * updated package.json test scripts
 
