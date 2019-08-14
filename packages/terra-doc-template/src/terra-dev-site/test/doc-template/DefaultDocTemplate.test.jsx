@@ -6,6 +6,7 @@ import TestComponentExample from './common/TestComponentExample';
 import CustomPropsTable from './common/CustomPropsTable';
 import exampleSrc from '!raw-loader!../../../../src/terra-dev-site/test/doc-template/common/TestComponentExample';
 import testComponentSrc from '!raw-loader!../../../../src/terra-dev-site/test/doc-template/common/TestComponent';
+import { name } from '../../../../package.json';
 /* eslint-enisable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 
@@ -27,7 +28,7 @@ const Index = () => {
   return (
     <div id="DocTemplateContainer">
       <DocTemplate
-        packageName="test-package-name"
+        packageName={name}
         readme={readme}
         srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
         propsTables={propsTables}

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### fixed
+* Attempted to make wdio tests more reliable.
 
 2.16.0 - (August 14, 2019)
 ------------------
