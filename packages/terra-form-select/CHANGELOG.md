@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
+
 ### Added
 * Added Combobox and ComboboxField exports and doc site entries
 * Added SingleSelect and SingleSelectField exports and doc site entries
