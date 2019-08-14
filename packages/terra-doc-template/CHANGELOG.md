@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Conditional rendering added for package version badge to allow for customization
+* `packageVersion` prop added to set version on badge if package is not available on npm
+* `packageUrl` prop added to link version badge to custom package url
+
 ### Changed
 * updated package.json test scripts
 
