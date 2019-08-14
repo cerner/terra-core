@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `ariaLabel` prop to improve accessibility.
 
 2.21.0 - (July 30, 2019)
 ------------------

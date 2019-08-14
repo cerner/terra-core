@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * updated package.json test scripts
+* updated example and test files for changes in form-input
 
 2.22.0 - (July 30, 2019)
 ------------------

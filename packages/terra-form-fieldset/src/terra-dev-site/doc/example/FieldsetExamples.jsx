@@ -46,18 +46,18 @@ class FieldsetExamples extends React.Component {
           required
         >
           <Field label="First" isInline required htmlFor="first">
-            <Input id="first" type="text" name="first" defaultValue="" onChange={this.handleFirstChange} />
+            <Input id="first" type="text" name="first" defaultValue="" onChange={this.handleFirstChange} ariaLabel="first-label" />
           </Field>
           <Field label="Middle" isInline required htmlFor="middle">
-            <Input id="middle" type="text" name="middle" defaultValue="" onChange={this.handleMiddleChange} />
+            <Input id="middle" type="text" name="middle" defaultValue="" onChange={this.handleMiddleChange} ariaLabel="middle-label" />
           </Field>
           <Field label="Last" isInline required htmlFor="last">
-            <Input id="last" type="text" name="last" defaultValue="" onChange={this.handleLastChange} />
+            <Input id="last" type="text" name="last" defaultValue="" onChange={this.handleLastChange} ariaLabel="middle-label" />
           </Field>
         </Fieldset>
         <hr />
         <p>
-Full Name Provided:
+          Full Name Provided:
           <span className={cx('fieldset-wrapper')}>
             {this.state.first}
             {' '}
