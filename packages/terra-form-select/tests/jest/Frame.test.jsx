@@ -3,117 +3,121 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
-import Frame from '../../src/_Frame';
+import ComboboxFrame from '../../src/combobox/Frame';
+import SingleSelectFrame from '../../src/single/Frame';
+import MultipleFrame from '../../src/multiple/Frame';
+import SearchFrame from '../../src/search/Frame';
+import TagFrame from '../../src/tag/Frame';
 
 describe('Frame', () => {
   it('should render a default variant', () => {
-    const wrapper = shallowWithIntl(<Frame />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a combobox variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" />);
+    const wrapper = shallowWithIntl(<ComboboxFrame />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a multiple variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="multiple" />);
+    const wrapper = shallowWithIntl(<MultipleFrame />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a search variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="search" />);
+    const wrapper = shallowWithIntl(<SearchFrame />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a tag variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" />);
+    const wrapper = shallowWithIntl(<TagFrame />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a default variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Frame placeholder="Placeholder" />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame placeholder="Placeholder" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a combobox variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" placeholder="Placeholder" />);
+    const wrapper = shallowWithIntl(<ComboboxFrame placeholder="Placeholder" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a multiple variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Frame variant="multiple" placeholder="Placeholder" />);
+    const wrapper = shallowWithIntl(<MultipleFrame placeholder="Placeholder" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a search variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Frame variant="search" placeholder="Placeholder" />);
+    const wrapper = shallowWithIntl(<SearchFrame placeholder="Placeholder" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a tag variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" placeholder="Placeholder" />);
+    const wrapper = shallowWithIntl(<TagFrame placeholder="Placeholder" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled default variant', () => {
-    const wrapper = shallowWithIntl(<Frame disabled />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame disabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled combobox variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" disabled />);
+    const wrapper = shallowWithIntl(<ComboboxFrame disabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled multiple variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="multiple" disabled />);
+    const wrapper = shallowWithIntl(<MultipleFrame disabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled search variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="search" disabled />);
+    const wrapper = shallowWithIntl(<SearchFrame disabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled tag variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" disabled />);
+    const wrapper = shallowWithIntl(<TagFrame disabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid default variant', () => {
-    const wrapper = shallowWithIntl(<Frame isInvalid />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame isInvalid />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid combobox variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" isInvalid />);
+    const wrapper = shallowWithIntl(<ComboboxFrame isInvalid />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid multiple variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="multiple" isInvalid />);
+    const wrapper = shallowWithIntl(<MultipleFrame isInvalid />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid search variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="search" isInvalid />);
+    const wrapper = shallowWithIntl(<SearchFrame isInvalid />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid tag variant', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" isInvalid />);
+    const wrapper = shallowWithIntl(<TagFrame isInvalid />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a custom dropdown', () => {
-    const wrapper = shallowWithIntl(<Frame variant="tag" dropdown={() => <div>Custom</div>} />);
+    const wrapper = shallowWithIntl(<TagFrame dropdown={() => <div>Custom</div>} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should call a custom onBlur', () => {
     const mockBlur = jest.fn();
-    const wrapper = shallowWithIntl(<Frame onBlur={mockBlur} />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame onBlur={mockBlur} />);
 
     wrapper.simulate('focus');
     wrapper.simulate('blur');
@@ -122,17 +126,17 @@ describe('Frame', () => {
   });
 
   it('should render a clear option', () => {
-    const wrapper = shallowWithIntl(<Frame clearOptionDisplay="-Select-" />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame clearOptionDisplay="-Select-" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a required default variant', () => {
-    const wrapper = shallowWithIntl(<Frame required />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame required />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a required Frame', () => {
-    const wrapper = shallowWithIntl(<Frame required />);
+    const wrapper = shallowWithIntl(<SingleSelectFrame required />);
     expect(wrapper).toMatchSnapshot();
   });
 });
