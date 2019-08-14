@@ -34,15 +34,13 @@ const Table = ({
   const tableClassNames = cx([
     'table',
     { striped: isStriped },
+    { 'padding-standard': paddingStyle === 'standard' },
+    { 'padding-compact': paddingStyle === 'compact' },
     customProps.className,
   ]);
 
-  const attrSpread = {};
-  if (paddingStyle !== 'none') {
-    attrSpread['data-table-padding'] = paddingStyle;
-  }
   return (
-    <table {...customProps} {...attrSpread} className={tableClassNames}>
+    <table {...customProps} className={tableClassNames}>
       {children}
     </table>
   );

@@ -1,6 +1,6 @@
 # Terra Table
 
-The Terra Table is a structural component to arrange content within a table.
+The Terra Table structural component for creating semantic html tables.
 
 ## Getting Started
 
@@ -38,31 +38,31 @@ Terra-table provides several different components for building semantic tables:
 
 ```jsx
 import React from 'react';
-import Table from 'terra-table';
+import Table, { Body, Header, HeaderCell, Row, Cell } from 'terra-table';
 
 <Table isStriped={false}>
-  <Table.Header>
-    <Table.HeaderCell key="NAME" minWidth="small">Name</Table.HeaderCell>
-    <Table.HeaderCell key="ADDRESS" minWidth="medium" sort="asc">Address</Table.HeaderCell>
-    <Table.HeaderCell key="PHONE_NUMBER" minWidth="large">Phone Number</Table.HeaderCell>
-  </Table.Header>
-  <Table.Body>
-    <Table.Row key="PERSON_0">
-      <Table.Cell key="NAME">John Smith</Table.Cell>
-      <Table.Cell key="ADDRESS">123 Adams Drive</Table.Cell>
-      <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
-    </Table.Row>
-    <Table.Row key="PERSON_1">
-      <Table.Cell key="NAME">Jane Smith</Table.Cell>
-      <Table.Cell key="ADDRESS">321 Drive Street</Table.Cell>
-      <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
-    </Table.Row>
-    <Table.Row key="PERSON_2">
-      <Table.Cell key="NAME">Dave Smith</Table.Cell>
-      <Table.Cell key="ADDRESS">213 Raymond Road</Table.Cell>
-      <Table.Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
-    </Table.Row>
-  </Table.Body>
+  <Header>
+    <HeaderCell key="NAME" minWidth="small">Name</Table.HeaderCell>
+    <HeaderCell key="ADDRESS" minWidth="medium" sort="asc">Address</Table.HeaderCell>
+    <HeaderCell key="PHONE_NUMBER" minWidth="large">Phone Number</Table.HeaderCell>
+  </Header>
+  <Body>
+    <Row key="PERSON_0">
+      <Cell key="NAME">John Smith</Table.Cell>
+      <Cell key="ADDRESS">123 Adams Drive</Table.Cell>
+      <Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
+    </Row>
+    <Row key="PERSON_1">
+      <Cell key="NAME">Jane Smith</Table.Cell>
+      <Cell key="ADDRESS">321 Drive Street</Table.Cell>
+      <Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
+    </Row>
+    <Row key="PERSON_2">
+      <Cell key="NAME">Dave Smith</Table.Cell>
+      <Cell key="ADDRESS">213 Raymond Road</Table.Cell>
+      <Cell key="PHONE_NUMBER">111-222-3333</Table.Cell>
+    </Row>
+  </Body>
 </Table>
 ```
 

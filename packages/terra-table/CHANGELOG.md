@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Breaking Changes
+* terra-table is now a read-only structural html table.
 * Removed Component `SingleSelectList` - No longer supported this uncontrolled variant of list.
 * Removed Component `MultiSelectList` - No longer supported this uncontrolled variant of list.
 * Removed Component `SelectableList` - Selection no longer supported.
