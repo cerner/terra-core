@@ -9,6 +9,44 @@
 #### Added
 * `customColorClass` prop. This prop allows user to provide their own CSS and bind the className to that in CSS.
 
+### Changes to CSS Custom Properties
+
+#### Added
+* --terra-alert-custom-default-color
+
+### Steps to uplift to V4
+1. import `classNames/bind` and `CSS`. 
+2. Use `ClassNames.bind()` function to bind `CSS` to the `ClassName`.
+
+#### V3 Code
+```javascript
+import Alert from 'terra-alert';
+
+<Alert type="custom" customStatusColor="orange" />
+```
+
+#### V4 Code
+##### CSS
+```CSS
+:local {
+  .my-app-alert-attention-example {
+    color: var(--terra-alert-attention-example-color, #fa0000);
+  }
+```
+##### JavaScript
+```javascript
+import Alert from 'terra-alert';
+import classNames from 'ClassNames/bind';
+import styles from './CSS';
+
+const cx = classNames.bind(styles);
+
+<Alert type="custom" customColorClass={cx(['my-app-alert-attention-example'])} />
+
+```
+
+## Changes from version 2 to version 3
+
 
 ### Changes to CSS Custom Properties
 
@@ -49,35 +87,3 @@
 * --terra-alert-info-box-shadow
 * --terra-alert-success-box-shadow
 * --terra-alert-custom-box-shadow
-* --terra-alert-custom-default-color
-
-### Steps to uplift to V4
-1. import `classNames/bind` and `CSS`. 
-2. Use `ClassNames.bind()` function to bind `CSS` to the `ClassName`.
-
-#### V3 Code
-```javascript
-import Alert from 'terra-alert';
-
-<Alert type="custom" customStatusColor="orange" />
-```
-
-#### V4 Code
-##### CSS
-```CSS
-:local {
-  .my-app-alert-attention-example {
-    color: var(--terra-alert-attention-example-color, #fa0000);
-  }
-```
-##### JavaScript
-```javascript
-import Alert from 'terra-alert';
-import classNames from 'ClassNames/bind';
-import styles from './CSS';
-
-const cx = classNames.bind(styles);
-
-<Alert type="custom" customColorClass={cx(['my-app-alert-attention-example'])} />
-
-```

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.24.0 - (August 14, 2019)
+------------------
 ### Fixed
 * Fixed issue for avatar to allow non-square images by sending `Fit` as `cover`.
 

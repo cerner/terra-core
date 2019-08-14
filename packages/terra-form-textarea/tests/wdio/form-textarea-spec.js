@@ -76,8 +76,6 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea');
         browser.moveToObject('#root', 0, 0);
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement('0');
@@ -92,8 +90,6 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Does not resize textareas that are non-resizable', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement('0');
@@ -109,8 +105,6 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-on-touch-start');
         browser.moveToObject('#root', 0, 0);
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement('0');
@@ -125,9 +119,8 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when DocumentTouch exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-document-touch');
+
         browser.moveToObject('#root', 0, 0);
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement('0');
@@ -143,8 +136,6 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-max-touch-points');
         browser.moveToObject('#root', 0, 0);
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement('0');
@@ -160,8 +151,6 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-ms-max-touch-points');
         browser.moveToObject('#root', 0, 0);
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement('0');

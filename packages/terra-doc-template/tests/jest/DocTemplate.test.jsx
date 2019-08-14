@@ -8,6 +8,7 @@ import CustomPropsTable from '../../src/terra-dev-site/test/doc-template/common/
 const readme = 'test-file-stub';
 const exampleSrc = 'test-file-stub';
 const testComponentSrc = 'test-file-stub';
+const packageName = 'terra-doc-template';
 
 const exampleElement = <TestComponentExample />;
 
@@ -19,7 +20,7 @@ describe('DocTemplate', () => {
   });
 
   it('should show the version', () => {
-    const wrapper = shallow(<DocTemplate packageName="terra-doc-template" />);
+    const wrapper = shallow(<DocTemplate packageName={packageName} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -30,7 +31,7 @@ describe('DocTemplate', () => {
   });
 
   it('should show the version and readme', () => {
-    const wrapper = shallow(<DocTemplate packageName="terra-doc-template" readme={readme} />);
+    const wrapper = shallow(<DocTemplate packageName={packageName} readme={readme} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -79,7 +80,7 @@ describe('DocTemplate', () => {
 
   it('should show the version, readme, source link, examples, and props tables', () => {
     const wrapper = shallow(<DocTemplate
-      packageName="terra-doc-template"
+      packageName={packageName}
       readme={readme}
       srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
       examples={[{
