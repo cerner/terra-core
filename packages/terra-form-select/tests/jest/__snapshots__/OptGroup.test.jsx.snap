@@ -1,20 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OptGroup should render a default Option 1`] = `
-<li
-  className="opt-group"
-  role="group"
->
-  <div
-    className="label"
-  >
-    label
-  </div>
-  <FormattedMessage
-    id="Terra.form.select.option"
-    values={Object {}}
-  >
-    <Component />
-  </FormattedMessage>
-</li>
+<OptGroup
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  label="label"
+/>
 `;
