@@ -3,11 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.26.0 - (August 14, 2019)
+------------------
+### Removed
+* Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
+
 ### Added
+* Added Combobox and ComboboxField exports and doc site entries
+* Added SingleSelect and SingleSelectField exports and doc site entries
+* Added MultiSelect and MultiSelectField exports and doc site entries
+* Added SearchSelect and SearchSelectField exports and doc site entries
+* Added TagSelect and TagSelectField exports and doc site entries
 * Added aria-label to resolve accessibility violation with axe-core v3.3.0.
 * Updated translations.
 
 ### Changed
+* Split select implementation into individual variants
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * updated package.json test scripts
 * Update tests for dev-site v6
@@ -16,7 +28,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-
 
 5.24.0 - (July 24, 2019)
 ------------------

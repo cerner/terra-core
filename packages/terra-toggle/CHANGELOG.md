@@ -3,12 +3,15 @@ Changelog
 
 Unreleased
 ----------
+
+3.18.0 - (August 14, 2019)
+------------------
 ### Changed
 * updated package.json test scripts
-
-
-### Changed
 * Update tests for dev-site v6
+
+### Added
+* Added aria-expanded and aria-controls state to docs, examples and tests.
 
 3.17.0 - (July 30, 2019)
 ------------------

@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added package.json import to doc page
 
+
+5.6.0 - (August 14, 2019)
+------------------
 ### Changed
 * updated package.json test scripts
 

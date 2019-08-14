@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.16.0 - (August 14, 2019)
+------------------
+### Added
+* Conditional rendering added for package version badge to allow for customization
+* `packageVersion` prop added to set version on badge if package is not available on npm
+* `packageUrl` prop added to link version badge to custom package url
+
 ### Changed
 * Added markdown version of props table to package
 

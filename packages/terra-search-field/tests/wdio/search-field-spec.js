@@ -2,7 +2,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   describe('Default', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-search-field/search-field/default-search-field');
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.validatesElement('empty', { misMatchTolerance: 0.1 });
@@ -27,8 +26,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.matchesScreenshot('with text');
@@ -55,8 +52,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.matchesScreenshot('with text');
@@ -74,8 +69,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       }
 
       browser.addValue('input', 'Lorem');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.matchesScreenshot('with overwritten text');
@@ -93,8 +86,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       }
 
       browser.addValue('input', 'Lorem');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.matchesScreenshot('unchanged text');
@@ -105,8 +96,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should enter a short search term', () => {
       browser.setValue('input', 'Lore');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.validatesElement('with too short text');
@@ -133,8 +122,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should enter a short search term', () => {
       browser.setValue('input', 'Lo');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.matchesScreenshot('with too short text');
@@ -151,8 +138,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should enter a letter', () => {
       browser.setValue('input', 'L');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.validatesElement('updated once');
@@ -170,8 +155,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     it('should search with enter', () => {
       browser.click('input');
       browser.keys('Enter');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.validatesElement();
@@ -182,8 +165,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lore');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
     });
 
     Terra.it.validatesElement('text before search');
@@ -209,8 +190,6 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should click button to focus search field', () => {
       browser.waitForVisible('#search-field-focus-button');
-      // Removes the blinking cursor to prevent screenshot mismatches.
-      browser.execute('document.querySelector("input").style.caretColor = "transparent";');
       browser.click('#search-field-focus-button');
     });
 
