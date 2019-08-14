@@ -4,6 +4,13 @@ exports[`MaxSelection should render a default MaxSelection 1`] = `
 <div
   className="max-selection"
 >
-  Terra.form.select.maxSelectionOption
+  <FormattedMessage
+    id="Terra.form.select.maxSelectionOption"
+    values={
+      Object {
+        "text": "3",
+      }
+    }
+  />
 </div>
 `;
