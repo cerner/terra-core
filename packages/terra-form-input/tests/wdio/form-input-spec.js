@@ -53,8 +53,6 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
         browser.keys('Tab');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.getElementById("form-input-default").style.caretColor = "transparent";');
       });
 
       Terra.it.validatesElement();

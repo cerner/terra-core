@@ -219,14 +219,11 @@ exports[`DocTemplate should show the version 1`] = `
   <div
     className="doc-card"
   >
-    <a
-      href="https://www.npmjs.org/package/terra-doc-template"
-    >
-      <img
-        alt="NPM version"
-        src="https://badgen.net/npm/v/terra-doc-template"
-      />
-    </a>
+    <NpmBadge
+      packageName="terra-doc-template"
+      packageUrl=""
+      packageVersion=""
+    />
   </div>
   <div
     className="doc-card"
@@ -241,14 +238,11 @@ exports[`DocTemplate should show the version and readme 1`] = `
   <div
     className="doc-card"
   >
-    <a
-      href="https://www.npmjs.org/package/terra-doc-template"
-    >
-      <img
-        alt="NPM version"
-        src="https://badgen.net/npm/v/terra-doc-template"
-      />
-    </a>
+    <NpmBadge
+      packageName="terra-doc-template"
+      packageUrl=""
+      packageVersion=""
+    />
     <Markdown
       src="test-file-stub"
     />
@@ -266,14 +260,11 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
   <div
     className="doc-card"
   >
-    <a
-      href="https://www.npmjs.org/package/terra-doc-template"
-    >
-      <img
-        alt="NPM version"
-        src="https://badgen.net/npm/v/terra-doc-template"
-      />
-    </a>
+    <NpmBadge
+      packageName="terra-doc-template"
+      packageUrl=""
+      packageVersion=""
+    />
     <Markdown
       src="test-file-stub"
     />

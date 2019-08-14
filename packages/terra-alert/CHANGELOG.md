@@ -5,7 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
-* updated package.json test scripts
+* Updated package.json test scripts
+* Updated upgrade guide to better reflect 2 -> 3 and 3 -> 4
 
 4.7.0 - (July 30, 2019)
 ------------------
