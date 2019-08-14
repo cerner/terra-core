@@ -1,5 +1,5 @@
 import React from 'react';
-import Tag from '../../src/_Tag';
+import Tag from '../../src/shared/_Tag';
 
 describe('Tag', () => {
   it('should render a default Tag', () => {

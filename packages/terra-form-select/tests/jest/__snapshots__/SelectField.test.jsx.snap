@@ -22,7 +22,7 @@ exports[`should render a default SelectField component 1`] = `
       />
     </div>
   </div>
-  <InjectIntl(Select)
+  <Select
     allowClear={false}
     ariaLabel="Label"
     defaultValue="blue"
@@ -58,7 +58,7 @@ exports[`should render a default SelectField component 1`] = `
       display="Violet"
       value="violet"
     />
-  </InjectIntl(Select)>
+  </Select>
 </div>
 `;
 
@@ -84,7 +84,7 @@ exports[`should render a default SelectField component with attributes spread on
       />
     </div>
   </div>
-  <InjectIntl(Select)
+  <Select
     allowClear={false}
     ariaLabel="Label"
     defaultValue="blue"
@@ -121,7 +121,7 @@ exports[`should render a default SelectField component with attributes spread on
       display="Violet"
       value="violet"
     />
-  </InjectIntl(Select)>
+  </Select>
 </div>
 `;
 
@@ -147,7 +147,7 @@ exports[`should render a disabled SelectField component 1`] = `
       />
     </div>
   </div>
-  <InjectIntl(Select)
+  <Select
     allowClear={false}
     ariaLabel="Label"
     defaultValue="blue"
@@ -183,7 +183,7 @@ exports[`should render a disabled SelectField component 1`] = `
       display="Violet"
       value="violet"
     />
-  </InjectIntl(Select)>
+  </Select>
 </div>
 `;
 
@@ -209,7 +209,7 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
       />
     </div>
   </div>
-  <InjectIntl(Select)
+  <Select
     allowClear={false}
     ariaLabel="Label"
     defaultValue="blue"
@@ -245,7 +245,7 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
       display="Violet"
       value="violet"
     />
-  </InjectIntl(Select)>
+  </Select>
 </div>
 `;
 
@@ -271,7 +271,7 @@ exports[`should render a multiple SelectField component that limits the selectio
       />
     </div>
   </div>
-  <InjectIntl(Select)
+  <Select
     allowClear={false}
     aria-describedby="select-id-help"
     ariaLabel="Label"
@@ -310,7 +310,7 @@ exports[`should render a multiple SelectField component that limits the selectio
       display="Violet"
       value="violet"
     />
-  </InjectIntl(Select)>
+  </Select>
   <div
     className="help-text"
     id="select-id-help"
@@ -352,7 +352,7 @@ exports[`should render a required SelectField component 1`] = `
       />
     </div>
   </div>
-  <InjectIntl(Select)
+  <Select
     allowClear={false}
     ariaLabel="Label"
     defaultValue="blue"
@@ -388,6 +388,6 @@ exports[`should render a required SelectField component 1`] = `
       display="Violet"
       value="violet"
     />
-  </InjectIntl(Select)>
+  </Select>
 </div>
 `;
