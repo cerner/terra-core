@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
 
 3.24.0 - (August 14, 2019)
 ------------------
