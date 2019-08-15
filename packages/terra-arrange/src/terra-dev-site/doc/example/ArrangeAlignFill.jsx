@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-/* eslint-disable import/no-extraneous-dependencies */
 import Arrange from 'terra-arrange';
 import { alignExampleDiv, textWithBlueBorder } from '../common/examplesetup';
 import styles from './ArrangeExamples.module.scss';
