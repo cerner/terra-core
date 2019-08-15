@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.23.0 - (August 14, 2019)
+------------------
 ### Changed
 * updated package.json test scripts
 * updated example and test files for changes in form-input
