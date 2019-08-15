@@ -339,7 +339,10 @@ class Frame extends React.Component {
       const lastOptionValue = value[value.length - 1];
       const lastOption = React.Children.toArray(children).find(child => child.props.value === lastOptionValue);
       const lastOptionDisplay = lastOption ? lastOption.props.display : lastOptionValue;
-      this.visuallyHiddenComponent.current.innerText = `${lastOptionDisplay} ${unselectedTxt}`;
+
+      if (this.visuallyHiddenComponent && this.visuallyHiddenComponent.current) {
+        this.visuallyHiddenComponent.current.innerText = `${lastOptionDisplay} ${unselectedTxt}`;
+      }
 
       if (onDeselect) {
         onDeselect(lastOptionValue);
