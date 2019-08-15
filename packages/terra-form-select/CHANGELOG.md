@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added AT announcement for onClick and backspace in MultiSelect and TagSelect
 
 5.26.0 - (August 14, 2019)
 ------------------
