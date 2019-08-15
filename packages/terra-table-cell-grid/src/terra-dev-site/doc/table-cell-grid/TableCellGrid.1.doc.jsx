@@ -11,6 +11,8 @@ import TableCellGridExample from '../example/TableCellGridExample';
 import TableCellGridExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableCellGridExample';
 import FixedHeightTable from '../example/FixedHeightTable';
 import FixedHeightTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/FixedHeightTable';
+import HeaderFooterExample from '../example/HeaderFooterExample';
+import HeaderFooterExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeaderFooterExample';
 import StripedTable from '../example/StripedTable';
 import StripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StripedTable';
 import PaddingTable from '../example/PaddingTable';
@@ -24,24 +26,29 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Default Table',
+        title: 'Default TableCellGrid',
         example: <TableCellGridExample />,
         source: TableCellGridExampleSrc,
       },
       {
-        title: 'Table with standard padding',
+        title: 'TableCellGrid with standard padding',
         example: <PaddingTable paddingStyle="standard" />,
         source: PaddingTableSrc,
       },
       {
-        title: 'Table with compact padding',
+        title: 'TableCellGrid with compact padding',
         example: <PaddingTable paddingStyle="compact" />,
         source: PaddingTableSrc,
       },
       {
-        title: 'Table zebra stripes',
+        title: 'TableCellGrid with zebra stripes',
         example: <StripedTable />,
         source: StripedTableSrc,
+      },
+      {
+        title: 'TableCellGrid with Header/Footer',
+        example: <HeaderFooterExample />,
+        source: HeaderFooterExampleSrc,
       },
       {
         title: 'Fill Style Table',

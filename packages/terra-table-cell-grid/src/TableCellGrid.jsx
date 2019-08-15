@@ -66,10 +66,13 @@ const TableCellGrid = ({
     );
   }
 
+  const hasEndNodes = headerNode || footerNode;
+
   const tableClassNames = cx([
     'table',
     { fill },
     { 'is-inline': makeInline },
+    { rounded: !hasEndNodes },
     customProps.className,
   ]);
 
@@ -82,7 +85,7 @@ const TableCellGrid = ({
     </div>
   );
 
-  if (!headerNode || !footerNode) {
+  if (!hasEndNodes) {
     return cellGrid;
   }
 
@@ -91,6 +94,9 @@ const TableCellGrid = ({
       fill={fill}
       footer={footerNode}
       header={headerNode}
+      className={cx(
+        'rounded',
+      )}
     >
       {cellGrid}
     </ContentContainer>
