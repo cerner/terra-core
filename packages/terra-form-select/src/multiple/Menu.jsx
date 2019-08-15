@@ -395,10 +395,19 @@ class Menu extends React.Component {
     }
 
     const {
-      input, onDeselect, onSelect, value,
+      input, onDeselect, onSelect, value, intl, visuallyHiddenComponent,
     } = this.props;
 
-    if (MenuUtil.includes(value, option.props.value)) {
+    const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
+    const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
+    const shouldUnselectOption = MenuUtil.includes(value, option.props.value);
+    const optionATClickText = shouldUnselectOption ? unselectedTxt : selectedTxt;
+
+    if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
+      visuallyHiddenComponent.current.innerHTML = `${option.props.display} ${optionATClickText}`;
+    }
+
+    if (shouldUnselectOption) {
       onDeselect(option.props.value, option);
     } else {
       onSelect(option.props.value, option);

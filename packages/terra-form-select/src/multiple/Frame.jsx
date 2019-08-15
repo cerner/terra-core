@@ -322,7 +322,10 @@ class Frame extends React.Component {
    * @param {event} event - The onKeyDown event.
    */
   handleKeyDown(event) {
-    const { value } = this.props;
+    const {
+      children, intl, onDeselect, value,
+    } = this.props;
+
     const { keyCode, target } = event;
 
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
@@ -332,7 +335,15 @@ class Frame extends React.Component {
       event.preventDefault();
       this.openDropdown(event);
     } else if (keyCode === KeyCode.KEY_BACK_SPACE && !this.state.searchValue && value.length > 0) {
-      this.props.onDeselect(value[value.length - 1]);
+      const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
+      const lastOptionValue = value[value.length - 1];
+      const option = children.find(child => child.props.value === lastOptionValue);
+      const optionDisplay = option && option.props && option.props.display ? option.props.display : lastOptionValue;
+      this.visuallyHiddenComponent.current.innerText = `${optionDisplay} ${unselectedTxt}`;
+
+      if (onDeselect) {
+        onDeselect(lastOptionValue);
+      }
     } else if (keyCode === KeyCode.KEY_ESCAPE) {
       this.closeDropdown();
     }
