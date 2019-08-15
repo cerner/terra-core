@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+### Removed
+* NPM badge wdio test
 
 Unreleased
 ------------------
