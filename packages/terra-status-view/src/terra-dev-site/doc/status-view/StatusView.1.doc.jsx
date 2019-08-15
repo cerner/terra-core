@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/StatusView-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import StatusViewSrc from '!raw-loader!../../../../src/StatusView';
 
 // Example Files
 import ToggleVariants from '../example/ToggleVariants';
@@ -38,12 +37,7 @@ const DocPage = () => (
         source: ToggleAlignmentAndGlyphSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Status View',
-        componentSrc: StatusViewSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

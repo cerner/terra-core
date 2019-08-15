@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/Rows.md';
+import PropsTable from '../../../../docs/TableRows-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import TableRowsSrc from '!raw-loader!../../../../src/TableRows';
 
 import RowsOnClick from '../example/RowsOnClick';
 import RowsOnClickSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RowsOnClick';
@@ -31,12 +30,7 @@ const DocPage = () => (
         source: RowsOnKeyDownSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Table Rows',
-        componentSrc: TableRowsSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

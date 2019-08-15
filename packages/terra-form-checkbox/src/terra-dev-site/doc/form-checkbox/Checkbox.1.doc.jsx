@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Checkbox-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import CheckboxSrc from '!raw-loader!../../../../src/Checkbox';
 
 // Example Files
 import DefaultCheckbox from '../example/checkbox/DefaultCheckboxExample';
@@ -82,12 +81,7 @@ class DocPage extends React.Component {
             example: <MobileCheckbox onChange={this.onChange} />,
           },
         ]}
-        propsTables={[
-          {
-            componentName: 'Checkbox',
-            componentSrc: CheckboxSrc,
-          },
-        ]}
+        propsTablesMarkdown={[PropsTable]}
       />
     );
   }

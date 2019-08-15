@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/SectionHeader-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import SectionHeaderSrc from '!raw-loader!../../../../src/SectionHeader';
 
 // Example Files
 import DefaultSectionHeader from '../example/DefaultSectionHeader';
@@ -65,12 +64,7 @@ const DocPage = () => (
         source: TransparentSectionHeaderSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Section Header',
-        componentSrc: SectionHeaderSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

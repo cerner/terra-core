@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/ActionFooter-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ActionFooterSrc from '!raw-loader!../../../../src/ActionFooter';
 
 // Example Files
 import EmptyExample from '../example/standard/Empty';
@@ -45,12 +44,7 @@ const DocPage = () => (
         source: MultipleStartEndActionsExampleSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Action Footer',
-        componentSrc: ActionFooterSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

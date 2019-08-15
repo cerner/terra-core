@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Radio-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import RadioSrc from '!raw-loader!../../../../src/Radio';
 
 // Example Files
 import DefaultRadio from '../example/radio/DefaultRadioExample';
@@ -82,12 +81,7 @@ class DocPage extends React.Component {
             example: <MobileButton onChange={this.onChange} />,
           },
         ]}
-        propsTables={[
-          {
-            componentName: 'Radio',
-            componentSrc: RadioSrc,
-          },
-        ]}
+        propsTablesMarkdown={[PropsTable]}
       />
     );
   }

@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Scroll-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ScrollSrc from '!raw-loader!terra-scroll/src/Scroll';
 
 // Example Files
 import ScrollVertical from '../example/ScrollVertical';
@@ -29,12 +28,7 @@ const DocPage = () => (
         source: ScrollHorizontalSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Scroll',
-        componentSrc: ScrollSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

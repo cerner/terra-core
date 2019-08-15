@@ -1,16 +1,15 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import TablePropsTable from '../../../../docs/Table-props-table.md';
+import TableHeaderPropsTable from '../../../../docs/TableHeader-props-table.md';
+import TableHeaderCellPropsTable from '../../../../docs/TableHeaderCell-props-table.md';
+import TableRowPropsTable from '../../../../docs/TableRow-props-table.md';
+import TableCellPropsTable from '../../../../docs/TableCell-props-table.md';
+import TableSubheaderPropsTable from '../../../../docs/TableSubheader-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import TableSrc from '!raw-loader!../../../../src/Table';
-import TableHeaderSrc from '!raw-loader!../../../../src/TableHeader';
-import TableHeaderCellSrc from '!raw-loader!../../../../src/TableHeaderCell';
-import TableRowSrc from '!raw-loader!../../../../src/TableRow';
-import TableCellSrc from '!raw-loader!../../../../src/TableCell';
-import TableSubheaderSrc from '!raw-loader!../../../../src/TableSubheader';
 
 import NoStripedTable from '../example/NoStripedTable';
 import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoStripedTable';
@@ -84,32 +83,16 @@ const DocPage = () => (
         source: TableWithSubheadersSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Table',
-        componentSrc: TableSrc,
-      },
-      {
-        componentName: 'Table Header',
-        componentSrc: TableHeaderSrc,
-      },
-      {
-        componentName: 'Table Header Cell',
-        componentSrc: TableHeaderCellSrc,
-      },
-      {
-        componentName: 'Table Subheader',
-        componentSrc: TableSubheaderSrc,
-      },
-      {
-        componentName: 'Table Row',
-        componentSrc: TableRowSrc,
-      },
-      {
-        componentName: 'Table Cell',
-        componentSrc: TableCellSrc,
-      },
-    ]}
+    propsTablesMarkdown={
+      [
+        TablePropsTable,
+        TableHeaderPropsTable,
+        TableHeaderCellPropsTable,
+        TableRowPropsTable,
+        TableCellPropsTable,
+        TableSubheaderPropsTable,
+      ]
+    }
   />
 );
 

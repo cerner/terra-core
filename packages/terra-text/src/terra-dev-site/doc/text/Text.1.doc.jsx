@@ -8,11 +8,10 @@ import TextWeightDocs from '../../../../docs/text-weights.md';
 import TextVariationsDocs from '../../../../docs/text-variations.md';
 import TextVisuallyHiddenDocs from '../../../../docs/text-visually-hidden.md';
 import TextWordWrappedDocs from '../../../../docs/text-word-wrapped.md';
+import PropsTable from '../../../../docs/Text-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import TextSrc from '!raw-loader!../../../../src/Text';
 
 // Example Files
 import TextColors from '../example/TextColors';
@@ -79,12 +78,7 @@ const DocPage = () => (
         source: TextWordWrappedSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Text',
-        componentSrc: TextSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

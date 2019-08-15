@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/ToggleButton-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ToggleButtonSrc from '!raw-loader!../../../../src/ToggleButton';
 
 // Example Files
 import DefaultToggleButton from '../example/DefaultToggleButton';
@@ -66,12 +65,7 @@ const DocPage = () => (
         source: OpenCloseEventToggleButtonSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Toggle Button',
-        componentSrc: ToggleButtonSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

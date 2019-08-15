@@ -1,13 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import MultiSelectPropsTable from '../../../../docs/MultiSelect-props-table.md';
+import OptionPropsTable from '../../../../docs/Option-props-table.md';
+import OptGroupPropsTable from '../../../../docs/OptGroup-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
-import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
-import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelect';
 
 // Example Files
 import MultipleExample from '../example/multiple/MultiSelect';
@@ -29,16 +28,7 @@ const Index = () => (
     packageName={name}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
-    propsTables={[{
-      componentName: 'MultiSelect',
-      componentSrc: MultiSelectSrc,
-    }, {
-      componentName: 'Option',
-      componentSrc: OptionSrc,
-    }, {
-      componentName: 'OptGroup',
-      componentSrc: OptGroupSrc,
-    }]}
+    propsTablesMarkdown={[MultiSelectPropsTable, OptionPropsTable, OptGroupPropsTable]}
     examples={[{
       title: 'MultiSelect',
       description: 'A MultiSelect allows searching and selecting multiple options.',

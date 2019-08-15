@@ -1,13 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/DynamicGrid-props-table.md';
+import DynamicGridPropsTable from '../../../../docs/DynamicGrid-props-table.md';
+import RegionPropsTable from '../../../../docs/Region-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import DynamicGridSrc from '!raw-loader!../../../../src/DynamicGrid';
-import RegionSrc from '!raw-loader!../../../../src/Region';
 
 // Example Files
 import OneColumn from '../example/OneColumn';
@@ -55,7 +53,7 @@ const DocPage = () => (
         source: ResponsiveGridSrc,
       },
     ]}
-    propsTablesMarkdown={PropsTable}
+    propsTablesMarkdown={[DynamicGridPropsTable, RegionPropsTable]}
   />
 );
 

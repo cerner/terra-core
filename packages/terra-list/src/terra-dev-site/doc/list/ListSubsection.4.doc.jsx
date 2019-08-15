@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ListSubsection.md';
+import PropsTable from '../../../../docs/ListSubsection-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ListSubsectionSrc from '!raw-loader!../../../../src/ListSubsection';
 
 // Example Files
 import ListSubsectionExample from '../example/ListSubsection';
@@ -23,12 +22,7 @@ const DocPage = () => (
         source: ListSubsectionExamplesSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'List-Subsection',
-        componentSrc: ListSubsectionSrc,
-      },
-    ]}
+    propsTablesMarkdown={PropsTable}
   />
 );
 

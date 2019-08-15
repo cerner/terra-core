@@ -1,12 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import CardPropsTable from '../../../../docs/Card-props-table.md';
+import CardBodyPropsTable from '../../../../docs/CardBody-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import CardSrc from '!raw-loader!../../../../src/Card';
-import CardBodySrc from '!raw-loader!../../../../src/CardBody';
 
 // Example Files
 import CardDefault from '../example/CardDefault';
@@ -75,16 +74,7 @@ const DocPage = () => (
         source: CardVisuallyHiddenTextSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Card',
-        componentSrc: CardSrc,
-      },
-      {
-        componentName: 'Card Body',
-        componentSrc: CardBodySrc,
-      },
-    ]}
+    propsTablesMarkdown={[CardPropsTable, CardBodyPropsTable]}
   />
 );
 

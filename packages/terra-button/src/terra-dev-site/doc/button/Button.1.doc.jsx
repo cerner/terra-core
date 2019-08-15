@@ -5,8 +5,6 @@ import PropsTable from '../../../../docs/Button-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ButtonSrc from '!raw-loader!../../../../src/Button';
 
 // Example Files
 import ButtonBlock from '../example/ButtonBlock';
@@ -67,7 +65,7 @@ const DocPage = () => (
         source: ButtonIconSrc,
       },
     ]}
-    propsTablesMarkdown={PropsTable}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

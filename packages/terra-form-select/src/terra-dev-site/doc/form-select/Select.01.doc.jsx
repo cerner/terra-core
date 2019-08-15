@@ -1,13 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import SelectPropsTable from '../../../../docs/Select-props-table.md';
+import OptionPropsTable from '../../../../docs/Option-props-table.md';
+import OptGroupPropsTable from '../../../../docs/OptGroup-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
-import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
-import SelectSrc from '!raw-loader!../../../../src/Select';
 
 // Example Files
 import AllowClearExample from '../example/legacy/AllowClear';
@@ -39,16 +38,7 @@ const Index = () => (
     packageName={name}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
-    propsTables={[{
-      componentName: 'Select',
-      componentSrc: SelectSrc,
-    }, {
-      componentName: 'Option',
-      componentSrc: OptionSrc,
-    }, {
-      componentName: 'OptGroup',
-      componentSrc: OptGroupSrc,
-    }]}
+    propsTablesMarkdown={[SelectPropsTable, OptionPropsTable, OptGroupPropsTable]}
     examples={[{
       title: 'Default',
       description: 'A default variant allows selecting a single option.',

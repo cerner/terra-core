@@ -2,10 +2,8 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/ShowHide-props-table.md';
 import { name } from '../../../../package.json';
-
-// Component Source
-import ShowHideSrc from '!raw-loader!../../../../src/ShowHide';
 
 // Example Files
 import NoPreviewShowHide from '../example/NoPreviewShowHide';
@@ -58,12 +56,7 @@ const DocPage = () => (
         source: NoPreviewShowHideSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'ShowHide',
-        componentSrc: ShowHideSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

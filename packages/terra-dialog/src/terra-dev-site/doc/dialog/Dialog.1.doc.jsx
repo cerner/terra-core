@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Dialog-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import DialogSrc from '!raw-loader!../../../../src/Dialog';
 
 // Example Files
 import DialogDefault from '../example/DialogDefault';
@@ -38,12 +37,7 @@ const DocPage = () => (
         source: DialogNoCloseSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Dialog',
-        componentSrc: DialogSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

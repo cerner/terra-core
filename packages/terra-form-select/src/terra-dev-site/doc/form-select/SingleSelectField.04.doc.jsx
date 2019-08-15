@@ -2,11 +2,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SingleSelectField.md';
+import PropsTable from '../../../../docs/SingleSelectField-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import SingleSelectFieldSrc from '!raw-loader!../../../../src/SingleSelectField';
 
 // Example Files
 import SelectFieldExample from '../example/single/SingleSelectField';
@@ -20,10 +19,7 @@ const DocPage = () => (
     packageName={name}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    propsTables={[{
-      componentName: 'Single Select Field',
-      componentSrc: SingleSelectFieldSrc,
-    }]}
+    propsTablesMarkdown={[PropsTable]}
     examples={[{
       title: 'Single Select Field Example',
       example: <SelectFieldExample />,

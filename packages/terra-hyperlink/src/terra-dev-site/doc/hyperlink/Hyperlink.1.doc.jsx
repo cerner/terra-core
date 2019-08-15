@@ -2,10 +2,8 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Hyperlink-props-table.md';
 import { name } from '../../../../package.json';
-
-// Component Source
-import HyperlinkSrc from '!raw-loader!../../../../src/Hyperlink';
 
 // Example Files
 import DefaultHyperlink from '../example/DefaultHyperlink';
@@ -78,10 +76,7 @@ const DocPage = () => (
         source: UnderlineHiddenSrc,
       },
     ]}
-    propsTables={[{
-      componentName: 'Hyperlink',
-      componentSrc: HyperlinkSrc,
-    }]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

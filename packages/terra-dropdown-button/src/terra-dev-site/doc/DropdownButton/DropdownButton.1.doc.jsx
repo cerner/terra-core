@@ -2,11 +2,9 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import DropdownPropsTable from '../../../../docs/DropdownButton-props-table.md';
+import ItemPropsTable from '../../../../docs/Item-props-table.md';
 import { name } from '../../../../package.json';
-
-// Component Source
-import DropdownButtonSrc from '!raw-loader!../../../../src/DropdownButton';
-import ItemSrc from '!raw-loader!../../../../src/Item';
 
 // Example Files
 import DefaultDropdownButton from '../example/DefaultDropdownButton';
@@ -52,16 +50,7 @@ const DocPage = () => (
         source: BlockDropdownButtonSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Dropdown Button',
-        componentSrc: DropdownButtonSrc,
-      },
-      {
-        componentName: 'Item',
-        componentSrc: ItemSrc,
-      },
-    ]}
+    propsTablesMarkdown={[DropdownPropsTable, ItemPropsTable]}
   />
 );
 

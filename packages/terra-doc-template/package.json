@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "html-react-parser": "^0.9.1",
     "prop-types": "^15.5.8",
     "react-syntax-highlighter": "^11.0.0",
     "terra-markdown": "^2.32.0",

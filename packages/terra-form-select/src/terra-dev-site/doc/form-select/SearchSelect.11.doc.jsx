@@ -1,13 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import SearchSelectPropsTable from '../../../../docs/SearchSelect-props-table.md';
+import OptionPropsTable from '../../../../docs/Option-props-table.md';
+import OptGroupPropsTable from '../../../../docs/OptGroup-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
-import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
-import SearchSelectSrc from '!raw-loader!../../../../src/SearchSelect';
 
 // Example Files
 import AllowClearExample from '../example/search/AllowClear';
@@ -31,16 +30,7 @@ const Index = () => (
     packageName={name}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
-    propsTables={[{
-      componentName: 'SearchSelect',
-      componentSrc: SearchSelectSrc,
-    }, {
-      componentName: 'Option',
-      componentSrc: OptionSrc,
-    }, {
-      componentName: 'OptGroup',
-      componentSrc: OptGroupSrc,
-    }]}
+    propsTablesMarkdown={[SearchSelectPropsTable, OptionPropsTable, OptGroupPropsTable]}
     examples={[{
       title: 'Search',
       description: 'A Search Select allows selecting a single option.',

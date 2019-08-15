@@ -4,11 +4,10 @@ import Markdown from 'terra-markdown';
 import ReadMe from '../../../../docs/README.md';
 import CustomExampleDocs from '../../../../docs/custom-example.md';
 import ActionAndDismissableExampleDocs from '../../../../docs/action-and-dismissable-example.md';
+import PropsTable from '../../../../docs/Alert-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import AlertSrc from '!raw-loader!../../../../src/Alert';
 
 // Example Files
 import AlertExample from '../example/AlertExample';
@@ -99,12 +98,7 @@ const DocPage = () => (
         source: ActionAndDismissibleExampleSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Alert',
-        componentSrc: AlertSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

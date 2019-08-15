@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/CenteredActionFooter.md';
+import PropsTable from '../../../../docs/CenteredActionFooter-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import CenteredActionFooterSrc from '!raw-loader!../../../../src/CenteredActionFooter';
 
 // Example Files
 import EmptyExample from '../example/centered/Empty';
@@ -38,12 +37,7 @@ const DocPage = () => (
         source: MultipleActionsExampleSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Centered Action Footer',
-        componentSrc: CenteredActionFooterSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

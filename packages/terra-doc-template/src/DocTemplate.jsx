@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
+import parse from 'html-react-parser';
 import NpmBadge from './NpmBadge';
 import IndexExampleTemplate from './ExampleTemplate';
 import styles from './DocTemplate.module.scss';
@@ -62,7 +63,7 @@ const propTypes = {
     componentName: PropTypes.string,
     propsResolution: PropTypes.string,
   })),
-  propsTablesMarkdown: PropTypes.string,
+  propsTablesMarkdown: PropTypes.arrayOf(PropTypes.string),
 };
 
 const defaultProps = {
@@ -78,10 +79,8 @@ const defaultProps = {
 const DocTemplate = ({
   packageName, packageVersion, packageUrl, readme, srcPath, examples, propsTables, propsTablesMarkdown, children, ...customProps
 }) => {
-  const componentName = packageName
-    .replace(/(\b[a-z](?!\s))/g, upper => upper.toUpperCase())
-    .slice(6)
-    .replace('-', ' ');
+  const parsedTables = [];
+  if (propsTablesMarkdown) propsTablesMarkdown.forEach(table => parsedTables.push(parse(table)));
 
   let id = 0;
   const localExamples = examples;
@@ -143,12 +142,9 @@ const DocTemplate = ({
         {propsTablesMarkdown
           ? (
             <div className={cx('props-table-markdown')}>
-              <h2>
-                {componentName}
-                {' '}
-                Props
-              </h2>
-              <Markdown src={propsTablesMarkdown} />
+              <>
+                {React.Children.toArray(parsedTables)}
+              </>
             </div>
           )
           : localPropsTables.map(propsTable => (

@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Toggle-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ToggleSrc from '!raw-loader!../../../../src/Toggle';
 
 // Example Files
 import DefaultToggle from '../example/DefaultToggle';
@@ -31,12 +30,7 @@ const DocPage = () => (
         source: AnimatedToggleSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Toggle',
-        componentSrc: ToggleSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

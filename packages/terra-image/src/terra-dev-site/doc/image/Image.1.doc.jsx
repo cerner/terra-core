@@ -5,8 +5,6 @@ import PropsTable from '../../../../docs/Image-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ImageSrc from '!raw-loader!../../../../src/Image';
 
 // Example Files
 import ImageDefault from '../example/ImageDefault';
@@ -32,7 +30,7 @@ const DocPage = () => (
         source: ImageFitSrc,
       },
     ]}
-    propsTablesMarkdown={PropsTable}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

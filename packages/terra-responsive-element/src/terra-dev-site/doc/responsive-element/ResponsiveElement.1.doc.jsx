@@ -1,10 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/ResponsiveElement-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-import ResponsiveElementSrc from '!raw-loader!../../../../src/ResponsiveElement';
 import BreakpointExample from '../example/BreakpointExample';
 import BreakpointExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BreakpointExample';
 import ResizeExample from '../example/ResizeExample';
@@ -18,12 +18,7 @@ const DocPage = () => (
     packageName={name}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-responsive-element"
-    propsTables={[
-      {
-        componentName: 'Responsive Element',
-        componentSrc: ResponsiveElementSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
     examples={[
       {
         title: 'Responsive Breakpoints',

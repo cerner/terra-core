@@ -2,11 +2,9 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SplitButton.md';
+import SplitButtonPropsTable from '../../../../docs/SplitButton-props-table.md';
+import ItemPropsTable from '../../../../docs/Item-props-table.md';
 import { name } from '../../../../package.json';
-
-// Component Source
-import SplitButtonSrc from '!raw-loader!../../../../src/SplitButton';
-import ItemSrc from '!raw-loader!../../../../src/Item';
 
 // Example Files
 import DefaultSplitButton from '../example/DefaultSplitButton';
@@ -45,16 +43,7 @@ const DocPage = () => (
         source: BlockSplitButtonSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Split Button',
-        componentSrc: SplitButtonSrc,
-      },
-      {
-        componentName: 'Item',
-        componentSrc: ItemSrc,
-      },
-    ]}
+    propsTablesMarkdown={[SplitButtonPropsTable, ItemPropsTable]}
   />
 );
 

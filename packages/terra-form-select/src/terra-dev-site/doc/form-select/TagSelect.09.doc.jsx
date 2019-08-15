@@ -1,13 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import TagSelectPropsTable from '../../../../docs/TagSelect-props-table.md';
+import OptionPropsTable from '../../../../docs/Option-props-table.md';
+import OptGroupPropsTable from '../../../../docs/OptGroup-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
-import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
-import TagSelectSrc from '!raw-loader!../../../../src/TagSelect';
 
 // Example Files
 import TagExample from '../example/tag/Tag';
@@ -29,16 +28,7 @@ const Index = () => (
     packageName={name}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
-    propsTables={[{
-      componentName: 'TagSelect',
-      componentSrc: TagSelectSrc,
-    }, {
-      componentName: 'Option',
-      componentSrc: OptionSrc,
-    }, {
-      componentName: 'OptGroup',
-      componentSrc: OptGroupSrc,
-    }]}
+    propsTablesMarkdown={[TagSelectPropsTable, OptionPropsTable, OptGroupPropsTable]}
     examples={[{
       title: 'Tag',
       description: 'A Tag Select allows a user to enter multiple custom free text entries or select multiple options from the the dropdown.',

@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Paginator-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import PaginatorSrc from '!raw-loader!../../../../src/Paginator';
 
 // Example Files
 import PaginatorExample from '../example/PaginatorExample';
@@ -31,12 +30,7 @@ const DocPage = () => (
         source: PaginatorNoPagesExampleSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Paginator',
-        componentSrc: PaginatorSrc,
-      },
-    ]}
+    propsTablesMarkdown={PropsTable}
   />
 );
 

@@ -5,11 +5,10 @@ import ReadMe from '../../../../docs/README.md';
 import ProgressBarColorDocs from '../../../../docs/progress-bar-color.md';
 import ProgressBarTwoColorsDocs from '../../../../docs/progress-bar-two-colors.md';
 import ProgressBarCustomizedColorsDocs from '../../../../docs/progress-bar-customized-colors.md';
+import PropsTable from '../../../../docs/ProgressBar-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ProgressBarSrc from '!raw-loader!../../../../src/ProgressBar';
 
 // Example Files
 import ProgressBarDefault from '../example/ProgressBarDefault';
@@ -59,12 +58,7 @@ const DocPage = () => (
         source: ProgressBarCustomizedColorsSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Progress Bar',
-        componentSrc: ProgressBarSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

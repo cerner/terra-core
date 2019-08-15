@@ -2,14 +2,13 @@ import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import classNames from 'classnames/bind';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/I18nProvider-props-table.md';
 import { name } from '../../../../package.json';
 import styles from './i18n.1.module.scss';
 
 const cx = classNames.bind(styles);
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import I18nProvider from '!raw-loader!../../../../src/I18nProvider';
 
 // Example Files
 import I18nDemo from '../example/I18nDemo';
@@ -33,12 +32,7 @@ const DocPage = () => (
         example: <I18nDemo />,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'I18n Provider',
-        componentSrc: I18nProvider,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

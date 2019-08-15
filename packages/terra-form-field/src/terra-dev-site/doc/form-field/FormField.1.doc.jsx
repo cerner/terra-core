@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Field-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import FieldSrc from '!raw-loader!../../../../src/Field';
 
 // Example Files
 import FieldExamples from '../example/FieldExamples';
@@ -21,12 +20,7 @@ const DocPage = () => (
         example: <FieldExamples />,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Field',
-        componentSrc: FieldSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

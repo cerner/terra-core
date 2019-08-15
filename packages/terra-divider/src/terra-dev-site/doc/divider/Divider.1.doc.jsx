@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Divider-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import DividerSrc from '!raw-loader!../../../../src/Divider';
 
 // Example Files
 import DividerExample from '../example/DividerExample';
@@ -38,12 +37,7 @@ const DocPage = () => (
         source: DividerWithWrappingTextSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Divider',
-        componentSrc: DividerSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

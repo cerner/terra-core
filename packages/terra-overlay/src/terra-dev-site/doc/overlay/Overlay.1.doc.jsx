@@ -1,13 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import LoadingOverlayPropsTable from '../../../../docs/LoadingOverlay-props-table.md';
+import OverlayPropsTable from '../../../../docs/Overlay-props-table.md';
+import OverlayContainerPropsTable from '../../../../docs/OverlayContainer-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import OverlayContainerSrc from '!raw-loader!../../../../src/OverlayContainer';
-import OverlaySrc from '!raw-loader!../../../../src/Overlay';
-import LoadingOverlaySrc from '!raw-loader!../../../../src/LoadingOverlay';
 
 // Example Files
 import OverlayExample from '../example/OverlayExample';
@@ -33,20 +32,7 @@ const DocPage = () => (
         source: LoadingOverlayExampleSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Overlay Container',
-        componentSrc: OverlayContainerSrc,
-      },
-      {
-        componentName: 'Overlay',
-        componentSrc: OverlaySrc,
-      },
-      {
-        componentName: 'Loading Overlay',
-        componentSrc: LoadingOverlaySrc,
-      },
-    ]}
+    propsTablesMarkdown={[LoadingOverlayPropsTable, OverlayPropsTable, OverlayContainerPropsTable]}
   />
 );
 

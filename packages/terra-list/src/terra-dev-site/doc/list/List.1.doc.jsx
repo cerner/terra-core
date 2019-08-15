@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/List-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ListSrc from '!raw-loader!../../../../src/List.jsx';
 
 // Example File
 import ListExample from '../example/List';
@@ -38,12 +37,7 @@ const DocPage = () => (
         source: ListPaddedExampleSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'List',
-        componentSrc: ListSrc,
-      },
-    ]}
+    propsTablesMarkdown={PropsTable}
   />
 );
 

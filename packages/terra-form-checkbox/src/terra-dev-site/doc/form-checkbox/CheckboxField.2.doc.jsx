@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/CheckboxField.md';
+import PropsTable from '../../../../docs/CheckboxField-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import CheckboxFieldSrc from '!raw-loader!../../../../src/CheckboxField';
 
 // Examples
 import DefaultCheckboxField from '../example/field/DefaultCheckboxField';
@@ -45,12 +44,7 @@ const checkboxFieldExamples = () => (
         source: InlineCheckboxFieldSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'CheckboxField',
-        componentSrc: CheckboxFieldSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

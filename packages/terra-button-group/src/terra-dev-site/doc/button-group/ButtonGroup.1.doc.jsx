@@ -1,12 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import ButtonGroupPropsTable from '../../../../docs/ButtonGroup-props-table.md';
+import ButtonGroupButtonPropsTable from '../../../../docs/ButtonGroupButton-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ButtonGroupSrc from '!raw-loader!../../../../src/ButtonGroup.jsx';
-import ButtonGroupButtonSrc from '!raw-loader!../../../../src/ButtonGroupButton.jsx';
 
 // Examples
 import ButtonGroupWithIcons from '../example/ButtonGroupWithIcons';
@@ -53,16 +52,7 @@ const DocPage = () => (
         source: ButtonGroupIsBlockSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Button Group',
-        componentSrc: ButtonGroupSrc,
-      },
-      {
-        componentName: 'Button Group Button',
-        componentSrc: ButtonGroupButtonSrc,
-      },
-    ]}
+    propsTablesMarkdown={[ButtonGroupPropsTable, ButtonGroupButtonPropsTable]}
   />
 );
 

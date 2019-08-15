@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from '../../../DocTemplate';
 import ReadMe from '../../../../docs/PLACEHOLDER.md';
+import PropsTable from '../../../../docs/Placeholder-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import PlaceholderSrc from '!raw-loader!../../../../src/Placeholder.jsx';
 
 // Example Files
 import PlaceholderDefault from '../example/PlaceholderDefault';
@@ -31,12 +30,7 @@ const DocPage = () => (
         source: PlaceholderLightSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'PlaceholderSrc',
-        componentSrc: PlaceholderSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

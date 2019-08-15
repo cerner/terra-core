@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Arrange-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/no-unresolved, import/no-duplicates */
-// Component Source
-import ArrangeSrc from '!raw-loader!../../../../src/Arrange';
 
 // Example Files
 import ArrangeAlignAllContainers from '../example/ArrangeAlignAllContainers';
@@ -45,12 +44,7 @@ const DocPage = () => (
         source: ArrangeAlignAllContainersSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Arrange',
-        componentSrc: ArrangeSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/avatar.md';
+import PropsTable from '../../../../docs/Avatar-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import AvatarSrc from '!raw-loader!../../../../src/variants/Avatar.jsx';
 
 // Example Files
 import AvatarUser from '../example/avatar/AvatarUser';
@@ -66,12 +65,7 @@ const DocPage = () => (
         source: AvatarColorVariantsSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Avatar',
-        componentSrc: AvatarSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 

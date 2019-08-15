@@ -1,11 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+import PropsTable from '../../../../docs/Signature-props-table.md';
 import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Component Source
-import SignatureSrc from '!raw-loader!../../../../src/Signature';
 
 // Example Files
 import SignatureExample from '../example/SignatureExample';
@@ -24,12 +23,7 @@ const DocPage = () => (
         source: SignatureExampleSrc,
       },
     ]}
-    propsTables={[
-      {
-        componentName: 'Signature',
-        componentSrc: SignatureSrc,
-      },
-    ]}
+    propsTablesMarkdown={[PropsTable]}
   />
 );
 
