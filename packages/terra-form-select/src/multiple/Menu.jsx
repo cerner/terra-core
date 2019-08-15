@@ -398,6 +398,7 @@ class Menu extends React.Component {
       input, onDeselect, onSelect, value, intl, visuallyHiddenComponent,
     } = this.props;
 
+
     const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
     const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
     const shouldUnselectOption = MenuUtil.includes(value, option.props.value);
@@ -408,9 +409,13 @@ class Menu extends React.Component {
     }
 
     if (shouldUnselectOption) {
-      onDeselect(option.props.value, option);
+      if (onDeselect) {
+        onDeselect(option.props.value, option);
+      }
     } else {
-      onSelect(option.props.value, option);
+      if (onSelect) {
+        onSelect(option.props.value, option);
+      }
       if (input) {
         input.focus();
       }
