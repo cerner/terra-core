@@ -8,6 +8,7 @@ import Dropdown from '../shared/_Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
+import MenuUtil from '../shared/_MenuUtil';
 
 const cx = classNames.bind(styles);
 
@@ -359,7 +360,7 @@ class Frame extends React.Component {
     } else if (keyCode === KeyCode.KEY_BACK_SPACE && !this.state.searchValue && value.length > 0) {
       const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
       const lastOptionValue = value[value.length - 1];
-      const lastOption = React.Children.toArray(children).find(child => child.props.value === lastOptionValue);
+      const lastOption = MenuUtil.findByValue(children, lastOptionValue);
       const lastOptionDisplay = lastOption ? lastOption.props.display : lastOptionValue;
 
       if (this.visuallyHiddenComponent && this.visuallyHiddenComponent.current) {
