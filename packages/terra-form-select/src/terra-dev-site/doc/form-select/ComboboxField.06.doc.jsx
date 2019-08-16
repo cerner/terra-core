@@ -5,8 +5,6 @@ import ReadMe from '../../../../docs/ComboboxField.md';
 import PropsTable from '../../../../docs/ComboboxField-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import ComboboxFieldExample from '../example/combobox/ComboboxField';
 import ComboboxFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/ComboboxField';

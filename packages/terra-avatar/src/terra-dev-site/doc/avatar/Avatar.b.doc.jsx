@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/avatar.md';
 import PropsTable from '../../../../docs/Avatar-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import AvatarUser from '../example/avatar/AvatarUser';
 import AvatarUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarUser';

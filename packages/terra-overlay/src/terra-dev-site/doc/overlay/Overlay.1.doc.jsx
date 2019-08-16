@@ -6,8 +6,6 @@ import OverlayPropsTable from '../../../../docs/Overlay-props-table.md';
 import OverlayContainerPropsTable from '../../../../docs/OverlayContainer-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import OverlayExample from '../example/OverlayExample';
 import OverlayExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OverlayExample';

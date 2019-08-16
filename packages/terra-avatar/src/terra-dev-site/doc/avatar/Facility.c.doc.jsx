@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/facility.md';
 import PropsTable from '../../../../docs/Facility-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 import Facility from '../example/facility/Facility';
 import FacilityExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/Facility';
 import FacilityImage from '../example/facility/FacilityImage';

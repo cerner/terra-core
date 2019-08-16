@@ -8,8 +8,6 @@ import ProgressBarCustomizedColorsDocs from '../../../../docs/progress-bar-custo
 import PropsTable from '../../../../docs/ProgressBar-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import ProgressBarDefault from '../example/ProgressBarDefault';
 import ProgressBarDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ProgressBarDefault';

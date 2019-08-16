@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/README.md';
 import PropsTable from '../../../../docs/ToggleButton-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import DefaultToggleButton from '../example/DefaultToggleButton';
 import DefaultToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggleButton';

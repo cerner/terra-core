@@ -5,8 +5,6 @@ import ReadMe from '../../../../docs/TagSelectField.md';
 import PropsTable from '../../../../docs/TagSelectField-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import SelectFieldExample from '../example/tag/TagSelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/TagSelectField';

@@ -11,8 +11,6 @@ import TextWordWrappedDocs from '../../../../docs/text-word-wrapped.md';
 import PropsTable from '../../../../docs/Text-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import TextColors from '../example/TextColors';
 import TextColorsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextColors';

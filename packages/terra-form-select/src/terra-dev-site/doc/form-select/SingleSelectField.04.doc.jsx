@@ -5,8 +5,6 @@ import ReadMe from '../../../../docs/SingleSelectField.md';
 import PropsTable from '../../../../docs/SingleSelectField-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import SelectFieldExample from '../example/single/SingleSelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/SingleSelectField';

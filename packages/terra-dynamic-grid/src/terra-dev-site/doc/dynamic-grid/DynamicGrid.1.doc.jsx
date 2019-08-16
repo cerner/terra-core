@@ -5,8 +5,6 @@ import DynamicGridPropsTable from '../../../../docs/DynamicGrid-props-table.md';
 import RegionPropsTable from '../../../../docs/Region-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import OneColumn from '../example/OneColumn';
 import OneColumnSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OneColumn';

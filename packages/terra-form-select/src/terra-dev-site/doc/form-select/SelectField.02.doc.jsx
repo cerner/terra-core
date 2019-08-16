@@ -5,8 +5,6 @@ import ReadMe from '../../../../docs/SelectField.md';
 import PropsTable from '../../../../docs/SelectField-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import MaxSelectionExample from '../example/legacy/MaxSelection';
 import MaxSelectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/MaxSelection';

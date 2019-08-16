@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/README.md';
 import PropsTable from '../../../../docs/Scroll-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import ScrollVertical from '../example/ScrollVertical';
 import ScrollVerticalSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ScrollVertical';

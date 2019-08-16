@@ -5,8 +5,6 @@ import ButtonGroupPropsTable from '../../../../docs/ButtonGroup-props-table.md';
 import ButtonGroupButtonPropsTable from '../../../../docs/ButtonGroupButton-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Examples
 import ButtonGroupWithIcons from '../example/ButtonGroupWithIcons';
 import ButtonGroupWithIconsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonGroupWithIcons';

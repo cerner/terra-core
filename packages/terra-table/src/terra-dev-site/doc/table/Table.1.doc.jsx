@@ -9,8 +9,6 @@ import TableCellPropsTable from '../../../../docs/TableCell-props-table.md';
 import TableSubheaderPropsTable from '../../../../docs/TableSubheader-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 import NoStripedTable from '../example/NoStripedTable';
 import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoStripedTable';
 import NoPaddingTable from '../example/NoPaddingTable';

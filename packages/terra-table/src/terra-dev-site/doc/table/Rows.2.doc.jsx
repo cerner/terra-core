@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/Rows.md';
 import PropsTable from '../../../../docs/TableRows-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 import RowsOnClick from '../example/RowsOnClick';
 import RowsOnClickSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RowsOnClick';
 import RowsOnKeyDown from '../example/RowsOnKeyDown';

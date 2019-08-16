@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/PLACEHOLDER.md';
 import PropsTable from '../../../../docs/Placeholder-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import PlaceholderDefault from '../example/PlaceholderDefault';
 import PlaceholderDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/PlaceholderDefault';

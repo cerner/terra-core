@@ -8,8 +8,6 @@ import styles from './i18n.1.module.scss';
 
 const cx = classNames.bind(styles);
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import I18nDemo from '../example/I18nDemo';
 

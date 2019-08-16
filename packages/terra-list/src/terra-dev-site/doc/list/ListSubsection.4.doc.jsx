@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/ListSubsection.md';
 import PropsTable from '../../../../docs/ListSubsection-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import ListSubsectionExample from '../example/ListSubsection';
 import ListSubsectionExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListSubsection';

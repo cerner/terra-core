@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/shared-user.md';
 import PropsTable from '../../../../docs/SharedUser-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 import SharedUser from '../example/shared-user/SharedUser';
 import SharedUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/shared-user/SharedUser';
 import SharedUserSize from '../example/shared-user/SharedUserSize';

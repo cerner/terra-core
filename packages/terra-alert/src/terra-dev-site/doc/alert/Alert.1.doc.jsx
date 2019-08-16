@@ -7,8 +7,6 @@ import ActionAndDismissableExampleDocs from '../../../../docs/action-and-dismiss
 import PropsTable from '../../../../docs/Alert-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import AlertExample from '../example/AlertExample';
 import AlertExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AlertExample';

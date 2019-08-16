@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/BlockActionFooter.md';
 import PropsTable from '../../../../docs/BlockActionFooter-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import EmptyExample from '../example/block/Empty';
 import EmptyExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/block/Empty';

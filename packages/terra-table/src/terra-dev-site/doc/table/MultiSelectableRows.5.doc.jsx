@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/MultiSelectableRows.md';
 import PropsTable from '../../../../docs/MultiSelectableRows-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import MultipleRowSelectableTableExamples from '../example/MultiSelectableRows';
 import MultipleRowSelectableTableExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRows';

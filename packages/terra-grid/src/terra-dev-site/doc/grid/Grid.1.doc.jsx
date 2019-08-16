@@ -6,8 +6,6 @@ import GridColumnPropsTable from '../../../../docs/GridColumn-props-table.md';
 import GridRowPropsTable from '../../../../docs/GridRow-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import GridDefault from '../example/GridDefault';
 import GridDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GridDefault';

@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/CheckboxField.md';
 import PropsTable from '../../../../docs/CheckboxField-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-
 // Examples
 import DefaultCheckboxField from '../example/field/DefaultCheckboxField';
 import DefaultCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/DefaultCheckboxField';
