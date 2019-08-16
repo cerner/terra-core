@@ -1,8 +1,8 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SplitButton.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
 
 // Component Source
 import SplitButtonSrc from '!raw-loader!../../../../src/SplitButton';
@@ -21,6 +21,7 @@ import BlockSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/
 const DocPage = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[

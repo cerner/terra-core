@@ -1,5 +1,4 @@
 import React from 'react';
-
 import TextareaField from '../../../TextareaField';
 
 class TextareaFieldExample extends React.Component {

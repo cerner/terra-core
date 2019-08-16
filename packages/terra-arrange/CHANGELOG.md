@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+3.18.0 - (August 14, 2019)
+------------------
+### Changed
 * updated package.json test scripts
 * Updated Props description for alignFitEnd and alignFill.
 

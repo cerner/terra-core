@@ -1,7 +1,6 @@
 import React from 'react';
 import Arrange from 'terra-arrange';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Text from 'terra-text/lib/Text';
+import Text from 'terra-text';
 import classNames from 'classnames/bind';
 import styles from '../../../Text.module.scss';
 import styles2 from './colors.module.scss';

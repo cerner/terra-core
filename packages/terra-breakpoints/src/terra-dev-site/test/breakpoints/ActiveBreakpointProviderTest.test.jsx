@@ -1,6 +1,4 @@
 import React from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import { ActiveBreakpointProvider, withActiveBreakpoint } from '../../../index';
 
 const ActiveBreakpointConsumer = withActiveBreakpoint(({ activeBreakpoint }) => (

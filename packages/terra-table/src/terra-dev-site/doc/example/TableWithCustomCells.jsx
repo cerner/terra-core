@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Table from 'terra-table/lib/Table';
 import classNames from 'classnames/bind';
 import styles from './TableWithCustomCells.module.scss';

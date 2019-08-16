@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ContentContainer from 'terra-content-container/lib/ContentContainer';
+import ContentContainer from 'terra-content-container';
 import classNames from 'classnames/bind';
 import styles from './ContentContainerDocCommon.module.scss';
 

@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+2.38.0 - (August 14, 2019)
+------------------
 ### Changed
 * updated package.json test scripts
 

@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ButtonGroup from 'terra-button-group/lib/ButtonGroup';
+import ButtonGroup from 'terra-button-group';
 
 class ButtonGroupIsBlock extends React.Component {
   constructor(props) {

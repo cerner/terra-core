@@ -1,9 +1,9 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/no-duplicates */
 // Component Source
 import ArrangeSrc from '!raw-loader!../../../../src/Arrange';
 
@@ -16,11 +16,12 @@ import ArrangeAlignFitEnd from '../example/ArrangeAlignFitEnd';
 import ArrangeAlignFitEndSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ArrangeAlignFitEnd';
 import ArrangeAlignFitStart from '../example/ArrangeAlignFitStart';
 import ArrangeAlignFitStartSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ArrangeAlignFitStart';
-/* eslint-enable import/no-webpack-loader-syntax, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[

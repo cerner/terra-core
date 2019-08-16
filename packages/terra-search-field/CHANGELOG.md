@@ -4,6 +4,19 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+3.24.0 - (August 14, 2019)
+------------------
+### Removed
+* Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
+
+### Changed
 * Updated search-field example code to show more usage.
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update jest test snapshot

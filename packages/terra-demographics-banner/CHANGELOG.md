@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+3.22.0 - (August 14, 2019)
+------------------
+### Changed
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * updated package.json test scripts
 

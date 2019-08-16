@@ -4,10 +4,17 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* updated package.json test scripts
+* Import for package version from package.json added to doc page
 
-
+Unreleased
+------------------
 ### Changed
+* Cleaned up imports in examples and test files
+
+4.12.0 - (August 14, 2019)
+------------------
+### Changed
+* updated package.json test scripts
 * Update tests for dev-site v6
 
 4.11.0 - (July 30, 2019)

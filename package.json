@@ -25,7 +25,29 @@
     "extends browserslist-config-terra"
   ],
   "eslintConfig": {
-    "extends": "terra"
+    "extends": "terra",
+    "overrides": [
+      {
+        "files": [
+          "**/*/terra-dev-site/**/*.jsx"
+        ],
+        "rules": {
+          "import/no-extraneous-dependencies": "off",
+          "import/no-unresolved": "off",
+          "import/extensions": "off"
+        }
+      },
+      {
+        "files": [
+          "*.doc.jsx"
+        ],
+        "rules": {
+          "import/no-webpack-loader-syntax": "off",
+          "import/first": "off",
+          "import/no-duplicates": "off"
+        }
+      }
+    ]
   },
   "stylelint": {
     "extends": "stylelint-config-terra",
@@ -100,7 +122,7 @@
     "terra-dev-site": "^6.1.1",
     "terra-disclosure-manager": "^4.9.0",
     "terra-enzyme-intl": "^3.0.0",
-    "terra-toolkit": "^5.0.0",
+    "terra-toolkit": "^5.4.0",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1",

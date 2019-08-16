@@ -3,6 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+2.24.0 - (August 14, 2019)
+------------------
 ### Fixed
 * Fixed issue for avatar to allow non-square images by sending `Fit` as `cover`.
 

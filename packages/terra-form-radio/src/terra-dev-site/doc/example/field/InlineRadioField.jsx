@@ -1,8 +1,5 @@
 import React from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Radio from 'terra-form-radio/lib/Radio';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Radio from 'terra-form-radio';
 import RadioField from 'terra-form-radio/lib/RadioField';
 import classNames from 'classnames/bind';
 import styles from './RadioFieldCommon.module.scss';

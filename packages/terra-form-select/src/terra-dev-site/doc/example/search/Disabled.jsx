@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import SearchSelect from 'terra-form-select/lib/SearchSelect';
 import classNames from 'classnames/bind';
 import styles from '../FormSelectDocCommon.module.scss';

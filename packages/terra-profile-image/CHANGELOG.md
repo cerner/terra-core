@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+3.16.0 - (August 14, 2019)
+------------------
 ### Updated
 * updated jest snapshots
 * updated to set `fit` to always be `cover` to handle non-square images.

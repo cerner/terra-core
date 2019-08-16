@@ -3,6 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+5.26.0 - (August 14, 2019)
+------------------
+### Removed
+* Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
+
 ### Added
 * Added Combobox and ComboboxField exports and doc site entries
 * Added SingleSelect and SingleSelectField exports and doc site entries

@@ -1,7 +1,5 @@
 /* eslint-disable no-console */
 import React from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import DropdownButton, { Item } from '../../../DropdownButton';
 
 export default () => (
