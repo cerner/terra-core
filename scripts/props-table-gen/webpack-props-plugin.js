@@ -3,6 +3,7 @@ const fs = require('fs');
 /* eslint-disable import/no-extraneous-dependencies */
 const glob = require('glob');
 const reactDocs = require('react-docgen');
+const marked = require('marked');
 /* eslint-enable import/no-extraneous-dependencies */
 
 /* eslint-disable class-methods-use-this, no-console */
@@ -25,7 +26,7 @@ class WebpackPropsPlugin {
       return filteredName;
     };
 
-    const tableHeaderTemplate = '<thead><tr style="line-height: 1.5"><th style="width: 10%">Prop Name</th><th style="width: 35%">Type</th><th style="width: 10%">Is Required</th><th style="width: 10%">Default Value</th><th style="width: 35%">Description</th></tr></thead>';
+    const tableHeaderTemplate = '<thead><tr style="line-height: 1.5"><th style="width: 10%">Prop Name</th><th style="width: 25%">Type</th><th style="width: 10%">Is Required</th><th style="width: 10%">Default Value</th><th style="width: 45%">Description</th></tr></thead>';
 
     const createTableRow = (propValues) => {
       const rowValues = Object.values(propValues);
@@ -57,24 +58,6 @@ class WebpackPropsPlugin {
       const specialTypes = ['enum', 'union', 'arrayOf'];
 
       const propDescription = Object.values(value.description).join('').replace(/\r?\n|\r/g, ' ');
-      /* eslint-disable react/jsx-filename-extension */
-      let count = 0;
-      let description = '';
-
-      // Create markdown compatible description
-      [...propDescription].forEach((ch) => {
-        if (ch === '`') {
-          count += 1;
-          if (count % 2 === 0) {
-            description += '</code>';
-            count = 0;
-          } else {
-            description += '<code>';
-          }
-        } else {
-          description += ch;
-        }
-      });
 
       // Check for special prop types and handle them.
       const typeCheck = specialTypes.indexOf(Object.values(value.type)[0][0]) > -1
@@ -83,17 +66,24 @@ class WebpackPropsPlugin {
         : Object.values(value.type).join('');
 
       // Check if prop type is an object shape.
-      const shapeHandler = value.type.name === 'shape'
-        ? `An object shaped like:<br /><pre style="white-space: pre-wrap">${JSON.stringify(value.type.value, null, 1)}</pre>`
-        : undefined;
+      const shapeHandler = () => {
+        let type;
+        if (value.type.name === 'shape') {
+          type = `An object shaped like:<br /><pre style="white-space: pre-wrap">${JSON.stringify(value.type.value, null, 1)}</pre>`;
+        }
+        if (value.type.name === 'arrayOf') {
+          type = `An array of objects structured like:<br /><pre style="white-space: pre-wrap">${JSON.stringify(value.type.value, null, 1)}</pre>`;
+        }
+        return type;
+      };
 
       // Construct props object for use in creating table rows.
       propShape.forEach(() => {
         props.name = name;
-        props.type = shapeHandler || typeCheck;
+        props.type = shapeHandler() || typeCheck;
         props.required = value.required === true ? 'required' : 'optional';
         props.defaultValue = value.defaultValue ? Object.values(value.defaultValue)[0] : 'none';
-        props.description = description;
+        props.description = marked(propDescription);
       });
       return props;
     };
