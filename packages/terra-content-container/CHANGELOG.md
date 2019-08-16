@@ -5,9 +5,11 @@ Unreleased
 ------------------
 ### Added
 * Props table markdown file import added to doc site page
+* Added an example and documentation around usage of scrollRefCallback prop.
 
 ### Changed
 * Cleaned up imports in examples and test files
+* Import for package version from package.json added to doc page
 
 3.15.0 - (August 14, 2019)
 ------------------

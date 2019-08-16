@@ -11,6 +11,8 @@ import ContentContainerStandard from '../example/ContentContainerStandard';
 import ContentContainerStandardSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ContentContainerStandard';
 import ContentContainerFill from '../example/ContentContainerFill';
 import ContentContainerFillSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ContentContainerFill';
+import ContentContainerScrollRef from '../example/ContentContainerScrollRef';
+import ContentContainerScrollRefSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ContentContainerScrollRef';
 
 const DocPage = () => (
   <DocTemplate
@@ -28,6 +30,11 @@ const DocPage = () => (
         title: 'Fill Container',
         example: <ContentContainerFill />,
         source: ContentContainerFillSrc,
+      },
+      {
+        title: 'Scroll Ref Container',
+        example: <ContentContainerScrollRef />,
+        source: ContentContainerScrollRefSrc,
       },
     ]}
     propsTablesMarkdown={[PropsTable]}
