@@ -4,7 +4,7 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/first
 import BaseSrc from '!raw-loader!../../../../src/Base';
 
 const BaseExample = () => (

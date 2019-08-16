@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import SingleSelect from 'terra-form-select/lib/SingleSelect';
 import classNames from 'classnames/bind';
 import styles from '../FormSelectDocCommon.module.scss';

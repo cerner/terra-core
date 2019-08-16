@@ -5,7 +5,7 @@
 
 import React from 'react';
 import classNames from 'classnames/bind';
-import ResponsiveElement from '../../../ResponsiveElement';
+import ResponsiveElement from 'terra-responsive-element';
 import styles from './FixedSize.module.scss';
 
 const cx = classNames.bind(styles);

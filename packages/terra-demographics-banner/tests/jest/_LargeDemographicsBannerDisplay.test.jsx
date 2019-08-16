@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Image from '../../../terra-image/lib/Image';
 import LargeDemographicsBannerDisplay from '../../src/_LargeDemographicsBannerDisplay';
 

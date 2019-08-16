@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ToggleSectionHeader from '../../../ToggleSectionHeader';
 
 export default () => (

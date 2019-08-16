@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import { Item, SplitButton } from 'terra-dropdown-button/lib/DropdownButton';
+import { Item, SplitButton } from 'terra-dropdown-button';
 
 const Example = () => {
   const [message, setMessage] = useState('No option clicked');

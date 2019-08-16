@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-
 import ContentContainer from '../../../ContentContainer';
 import styles from './ContentContainerTestCommon.module.scss';
 

@@ -2,7 +2,6 @@
 import React from 'react';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
-
 import Input from './mocks/Input';
 import Select from './mocks/Select';
 import Textarea from './mocks/Textarea';

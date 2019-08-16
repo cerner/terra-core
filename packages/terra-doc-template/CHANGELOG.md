@@ -9,6 +9,11 @@ Unreleased
 ### Removed
 * NPM badge wdio test
 
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
 2.16.0 - (August 14, 2019)
 ------------------
 ### Added

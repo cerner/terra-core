@@ -6,7 +6,6 @@ import CustomExampleDocs from '../../../../docs/custom-example.md';
 import ActionAndDismissableExampleDocs from '../../../../docs/action-and-dismissable-example.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import AlertSrc from '!raw-loader!../../../../src/Alert';
 
@@ -33,7 +32,6 @@ import DismissibleExample from '../example/DismissibleExample';
 import DismissibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DismissibleExample';
 import ActionAndDismissibleExample from '../example/ActionAndDismissibleExample';
 import ActionAndDismissibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ActionAndDismissibleExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

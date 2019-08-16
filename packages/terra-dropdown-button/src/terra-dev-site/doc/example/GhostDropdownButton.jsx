@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import DropdownButton, { Item } from 'terra-dropdown-button/lib/DropdownButton';
+import DropdownButton, { Item } from 'terra-dropdown-button';
 
 const GhostDropdownButton = () => {
   const [message, setMessage] = useState('No option clicked');

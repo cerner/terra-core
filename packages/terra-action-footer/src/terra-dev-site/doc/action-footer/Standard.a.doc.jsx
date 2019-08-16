@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import ActionFooterSrc from '!raw-loader!../../../../src/ActionFooter';
 
@@ -16,7 +15,6 @@ import SingleEndActionExample from '../example/standard/SingleEndAction';
 import SingleEndActionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/standard/SingleEndAction';
 import MultipleStartEndActionsExample from '../example/standard/MultipleStartEndActions';
 import MultipleStartEndActionsExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/standard/MultipleStartEndActions';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

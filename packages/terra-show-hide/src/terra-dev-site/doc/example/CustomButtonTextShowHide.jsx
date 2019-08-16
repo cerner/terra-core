@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ShowHide from 'terra-show-hide/lib/ShowHide';
+import ShowHide from 'terra-show-hide';
 
 const sentences = [
   <p key="lorem1">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,

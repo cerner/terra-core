@@ -1,7 +1,6 @@
 import React from 'react';
 import Field from 'terra-form-field';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Textarea from 'terra-form-textarea/lib/Textarea';
+import Textarea from 'terra-form-textarea';
 
 const ResizableExample = () => (
   <Field label="Resizable Textarea" htmlFor="resizable">
