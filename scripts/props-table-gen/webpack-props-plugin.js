@@ -106,7 +106,6 @@ class WebpackPropsPlugin {
       const fileDir = `${path.resolve(__dirname, '../../packages', componentName)}/docs/${fileName}-props-table.md`;
 
       fs.writeFileSync(fileDir, formattedProps);
-      console.log(`Generated Props Markdown File for ${fileName} Package.`);
     };
 
     const generateMarkdown = (component, propTable) => {
@@ -144,12 +143,24 @@ class WebpackPropsPlugin {
       glob('**/*.jsx', { cwd: 'packages', ignore: ['**/terra-dev-site/**', '**/common/**', '**/tests/**'] }, (err, files) => {
         if (err) console.log(err);
         if (files) {
-          files.forEach(file => processFile(file));
+          files.forEach((file, index) => {
+            if (index === files.length - 1) {
+              processFile(file);
+              console.log('Generation of Props Table Markdown Files Complete.');
+            } else {
+              processFile(file);
+            }
+          })
         }
       });
     };
 
-    processPackageList();
+    const generatePropsTables = () => {
+      console.log('Generating Markdown Files for Props Tables.');
+      processPackageList();
+    }
+
+    generatePropsTables();
   }
 }
 
