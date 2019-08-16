@@ -1,14 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-<<<<<<< HEAD
 import GridPropsTable from '../../../../docs/Grid-props-table.md';
 import GridColumnPropsTable from '../../../../docs/GridColumn-props-table.md';
 import GridRowPropsTable from '../../../../docs/GridRow-props-table.md';
 import { name, version } from '../../../../package.json';
-=======
-import { name, version } from '../../../../package.json';
->>>>>>> master
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 

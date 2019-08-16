@@ -5,12 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import ProgressBarColorDocs from '../../../../docs/progress-bar-color.md';
 import ProgressBarTwoColorsDocs from '../../../../docs/progress-bar-two-colors.md';
 import ProgressBarCustomizedColorsDocs from '../../../../docs/progress-bar-customized-colors.md';
-<<<<<<< HEAD
 import PropsTable from '../../../../docs/ProgressBar-props-table.md';
 import { name, version } from '../../../../package.json';
-=======
-import { name, version } from '../../../../package.json';
->>>>>>> master
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 

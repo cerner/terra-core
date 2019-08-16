@@ -8,12 +8,8 @@ import HeadingColorDocs from '../../../../docs/heading-colors.md';
 import HeadingWeightDocs from '../../../../docs/heading-weights.md';
 import HeadingVisuallyHiddenDocs from '../../../../docs/heading-visually-hidden.md';
 import HeadingVariationDocs from '../../../../docs/heading-variations.md';
-<<<<<<< HEAD
 import PropsTable from '../../../../docs/Heading-props-table.md';
 import { name, version } from '../../../../package.json';
-=======
-import { name, version } from '../../../../package.json';
->>>>>>> master
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 

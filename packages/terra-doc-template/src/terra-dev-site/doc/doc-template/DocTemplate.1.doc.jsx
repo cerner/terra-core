@@ -2,12 +2,8 @@ import React from 'react';
 import DocTemplate from '../../../../lib/DocTemplate';
 
 import readme from '../../../../docs/README.md';
-<<<<<<< HEAD
 import PropsTable from '../../../../docs/DocTemplate-props-table.md';
 import { name, version } from '../../../../package.json';
-=======
-import { name, version } from '../../../../package.json';
->>>>>>> master
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 import BadgeExamples from '../example/BadgeExamples';
