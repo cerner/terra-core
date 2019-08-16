@@ -1,6 +1,5 @@
 import React from 'react';
 import Field from 'terra-form-field';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import Input from 'terra-form-input';
 
 class DefaultInvalidExample extends React.Component {

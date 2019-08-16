@@ -1,7 +1,6 @@
 import React from 'react';
 import Dialog from 'terra-dialog';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Paginator from 'terra-paginator/lib/Paginator';
+import Paginator from 'terra-paginator';
 import classNames from 'classnames/bind';
 import styles from './PaginatorExampleCommon.module.scss';
 

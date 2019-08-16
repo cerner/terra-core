@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-
 import Divider from '../../../Divider';
 import styles from './DividerTestCommon.module.scss';
 

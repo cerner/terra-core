@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import DividerSrc from '!raw-loader!../../../../src/Divider';
 
@@ -14,7 +13,6 @@ import DividerWithText from '../example/DividerWithText';
 import DividerWithTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DividerWithText';
 import DividerWithWrappingText from '../example/DividerWithWrappingText';
 import DividerWithWrappingTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DividerWithWrappingText';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

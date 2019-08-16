@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/MultiSelectableRows.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelectableRows';
 
@@ -16,7 +15,6 @@ import MultipleSelectableRowsWithSubheader from '../example/MultiSelectableRowsW
 import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsWithSubheader';
 import MultiSelectableRowsOnChange from '../example/MultiSelectableRowsOnChange';
 import MultiSelectableRowsOnChangeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsOnChange';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

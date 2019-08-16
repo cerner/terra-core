@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
-
 import ControlledProgressivePaginator from '../../../ControlledProgressivePaginator';
 import styles from './ControlledPaginatorTestCommon.module.scss';
 

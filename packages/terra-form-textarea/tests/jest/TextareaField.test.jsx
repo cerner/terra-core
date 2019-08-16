@@ -1,6 +1,5 @@
 import React from 'react';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
-
 import TextareaField from '../../src/TextareaField';
 
 window.matchMedia = () => ({ matches: true });

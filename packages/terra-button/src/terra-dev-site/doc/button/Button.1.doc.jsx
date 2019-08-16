@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import ButtonSrc from '!raw-loader!../../../../src/Button';
 
@@ -22,7 +21,6 @@ import ButtonIcon from '../example/ButtonIcon';
 import ButtonIconSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonIcon';
 import ButtonVariant from '../example/ButtonVariant';
 import ButtonVariantSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonVariant';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

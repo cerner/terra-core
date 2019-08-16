@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ToggleSectionHeader from 'terra-toggle-section-header/lib/ToggleSectionHeader';
+import ToggleSectionHeader from 'terra-toggle-section-header';
 
 const propTypes = {
   /**

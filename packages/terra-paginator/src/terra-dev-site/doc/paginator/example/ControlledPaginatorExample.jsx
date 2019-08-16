@@ -1,7 +1,6 @@
 import React from 'react';
 import Dialog from 'terra-dialog';
 import Button from 'terra-button';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import ControlledPaginator from 'terra-paginator/lib/ControlledPaginator';
 import classNames from 'classnames/bind';
 import styles from './ControlledPaginatorCommon.module.scss';
