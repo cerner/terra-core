@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Alert from 'terra-alert/lib/Alert';
+import Alert from 'terra-alert';
 
 class ActionExample extends React.Component {
   constructor(props) {

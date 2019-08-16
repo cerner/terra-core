@@ -15,7 +15,6 @@ import GridResponsive from '../example/GridResponsive';
 import GridResponsiveSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GridResponsive';
 import GridNested from '../example/GridNested';
 import GridNestedSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GridNested';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

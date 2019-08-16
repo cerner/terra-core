@@ -4,7 +4,6 @@ import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
-
 import styles from './RadioField.module.scss';
 
 const cx = classNames.bind(styles);

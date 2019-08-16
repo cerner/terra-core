@@ -1,7 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import DynamicGrid from 'terra-dynamic-grid/lib/DynamicGrid';
-
+import DynamicGrid from 'terra-dynamic-grid';
 import Card from './Card';
 
 const template = {

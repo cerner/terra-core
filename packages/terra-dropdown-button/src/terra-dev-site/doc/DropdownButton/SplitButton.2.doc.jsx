@@ -1,4 +1,4 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-duplicates, import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SplitButton.md';

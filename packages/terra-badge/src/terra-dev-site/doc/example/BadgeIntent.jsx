@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Badge from 'terra-badge/lib/Badge';
+import Badge from 'terra-badge';
 
 const BadgeIntent = () => (
   <div>

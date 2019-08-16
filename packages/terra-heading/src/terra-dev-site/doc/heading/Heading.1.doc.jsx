@@ -26,7 +26,6 @@ import HeadingWeights from '../example/HeadingWeights';
 import HeadingWeightsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingWeights';
 import HeadingVariations from '../example/HeadingVariations';
 import HeadingVariationsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingVariations';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

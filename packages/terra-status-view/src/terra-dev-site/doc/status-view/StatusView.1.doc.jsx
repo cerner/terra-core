@@ -13,7 +13,6 @@ import ToggleAlignmentAndGlyph from '../example/ToggleAlignmentAndGlyph';
 import ToggleAlignmentAndGlyphSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ToggleAlignmentAndGlyph';
 import Custom from '../example/Custom';
 import CustomSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Custom';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

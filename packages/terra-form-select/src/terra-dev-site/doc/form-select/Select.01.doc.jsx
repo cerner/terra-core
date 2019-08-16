@@ -31,7 +31,6 @@ import SearchExample from '../example/legacy/Search';
 import SearchExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Search';
 import TagExample from '../example/legacy/Tag'; // eslint-disable-line
 import TagExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Tag'; // eslint-disable-line
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const Index = () => (
   <DocTemplate

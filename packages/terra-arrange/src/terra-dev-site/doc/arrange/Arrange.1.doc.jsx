@@ -15,7 +15,7 @@ import ArrangeAlignFitEnd from '../example/ArrangeAlignFitEnd';
 import ArrangeAlignFitEndSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ArrangeAlignFitEnd';
 import ArrangeAlignFitStart from '../example/ArrangeAlignFitStart';
 import ArrangeAlignFitStartSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ArrangeAlignFitStart';
-/* eslint-enable import/no-webpack-loader-syntax, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

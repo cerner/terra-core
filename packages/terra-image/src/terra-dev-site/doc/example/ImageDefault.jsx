@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Image from 'terra-image/lib/Image';
+import Image from 'terra-image';
 import placeholderPic150x150 from '../../assets/150x150.jpg';
 import placeholderPic1000x200 from '../../assets/1000x200.png';
 

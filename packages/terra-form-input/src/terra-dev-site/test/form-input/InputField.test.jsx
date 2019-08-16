@@ -1,5 +1,4 @@
 import React from 'react';
-
 import InputField from '../../../InputField';
 
 class InputFieldExample extends React.Component {

@@ -12,7 +12,6 @@ const cx = classNames.bind(styles);
 
 // Example Files
 import I18nDemo from '../example/I18nDemo';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

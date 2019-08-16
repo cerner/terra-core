@@ -2,7 +2,6 @@
 import classNames from 'classnames/bind';
 import React from 'react';
 import styles from './DemographicsBanner.module.scss';
-
 import DemographicsBannerUtils from './_sharedObjects';
 
 const cx = classNames.bind(styles);

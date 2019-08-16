@@ -10,7 +10,6 @@ import SingleRowSelectableTable from '../example/SingleRowSelectableTable';
 import SingleRowSelectableTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleRowSelectableTable';
 import SelectableRowsDisableUnselectedRows from '../example/SelectableRowsDisableUnselectedRows';
 import SelectableRowsDisableUnselectedRowsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SelectableRowsDisableUnselectedRows';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

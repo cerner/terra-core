@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Markdown from 'terra-markdown/lib/Markdown';
+import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
 import ReadMe from '../../../../docs/README.md';
 import styles from './Markdown.module.scss';

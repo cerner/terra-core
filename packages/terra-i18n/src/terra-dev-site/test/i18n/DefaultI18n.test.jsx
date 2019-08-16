@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames/bind';
-
 import I18nProvider from '../../../I18nProvider';
 import i18nLoader from '../../../i18nLoader';
 import styles from './DefaultI18n.module.scss';

@@ -23,7 +23,6 @@ import BackPreviousNextCloseActionHeader from '../example/BackPreviousNextCloseA
 import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BackPreviousNextCloseActionHeader';
 import LongWrappingTextHeader from '../example/LongWrappingTextHeader';
 import LongWrappingTextHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/LongWrappingTextHeader';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

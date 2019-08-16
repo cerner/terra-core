@@ -21,7 +21,6 @@ import ProgressBarTwoColors from '../example/ProgressBarTwoColors';
 import ProgressBarTwoColorsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ProgressBarTwoColors';
 import ProgressBarCustomizedColors from '../example/ProgressBarCustomizedColors';
 import ProgressBarCustomizedColorsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ProgressBarCustomizedColors';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

@@ -8,7 +8,6 @@ import { name, version } from '../../../../package.json';
 
 // Example Files
 import FieldExamples from '../example/FieldExamples';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

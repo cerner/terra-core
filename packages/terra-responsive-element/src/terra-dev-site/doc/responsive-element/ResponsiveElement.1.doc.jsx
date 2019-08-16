@@ -11,7 +11,6 @@ import ResizeExample from '../example/ResizeExample';
 import ResizeExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ResizeExample';
 import UncontrolledBreakpointExample from '../example/UncontrolledBreakpointExample';
 import UncontrolledBreakpointExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/UncontrolledBreakpointExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

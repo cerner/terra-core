@@ -1,4 +1,4 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/first */
 import React from 'react';
 import DocTemplate from '../../../DocTemplate';
 import UpgradeGuide from '../../../../docs/UPGRADEGUIDE.md';

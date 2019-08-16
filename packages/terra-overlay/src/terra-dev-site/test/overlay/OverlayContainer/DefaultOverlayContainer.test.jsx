@@ -1,5 +1,4 @@
 import React from 'react';
-
 import OverlayContainer from '../../../../OverlayContainer';
 
 const ContainerExample = () => (
