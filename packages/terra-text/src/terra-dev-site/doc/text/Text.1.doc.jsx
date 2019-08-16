@@ -10,7 +10,6 @@ import TextVisuallyHiddenDocs from '../../../../docs/text-visually-hidden.md';
 import TextWordWrappedDocs from '../../../../docs/text-word-wrapped.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import TextSrc from '!raw-loader!../../../../src/Text';
 

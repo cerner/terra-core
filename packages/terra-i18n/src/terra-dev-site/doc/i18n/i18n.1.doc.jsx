@@ -7,7 +7,6 @@ import styles from './i18n.1.module.scss';
 
 const cx = classNames.bind(styles);
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import I18nProvider from '!raw-loader!../../../../src/I18nProvider';
 

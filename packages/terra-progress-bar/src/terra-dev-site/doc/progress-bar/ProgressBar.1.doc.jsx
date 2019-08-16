@@ -7,7 +7,6 @@ import ProgressBarTwoColorsDocs from '../../../../docs/progress-bar-two-colors.m
 import ProgressBarCustomizedColorsDocs from '../../../../docs/progress-bar-customized-colors.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import ProgressBarSrc from '!raw-loader!../../../../src/ProgressBar';
 

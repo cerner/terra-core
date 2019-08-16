@@ -4,7 +4,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SelectField.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import SelectFieldSrc from '!raw-loader!../../../../src/SelectField';
 

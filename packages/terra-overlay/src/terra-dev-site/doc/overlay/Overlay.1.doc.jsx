@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import OverlayContainerSrc from '!raw-loader!../../../../src/OverlayContainer';
 import OverlaySrc from '!raw-loader!../../../../src/Overlay';

@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/Rows.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import TableRowsSrc from '!raw-loader!../../../../src/TableRows';
 import RowsOnClick from '../example/RowsOnClick';

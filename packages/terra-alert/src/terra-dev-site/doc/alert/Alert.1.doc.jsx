@@ -6,7 +6,6 @@ import CustomExampleDocs from '../../../../docs/custom-example.md';
 import ActionAndDismissableExampleDocs from '../../../../docs/action-and-dismissable-example.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import AlertSrc from '!raw-loader!../../../../src/Alert';
 

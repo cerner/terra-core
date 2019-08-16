@@ -3,7 +3,6 @@ import DocTemplate from '../../../DocTemplate';
 import ReadMe from '../../../../docs/PLACEHOLDER.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import PlaceholderSrc from '!raw-loader!../../../../src/Placeholder.jsx';
 

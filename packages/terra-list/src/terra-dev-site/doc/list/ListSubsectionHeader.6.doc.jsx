@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ListSubsectionHeader.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import ListSubsectionHeaderSrc from '!raw-loader!../../../../src/ListSubsectionHeader';
 

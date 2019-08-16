@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/shared-user.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import src from '!raw-loader!../../../../src/variants/SharedUser.jsx';
 import SharedUser from '../example/shared-user/SharedUser';
