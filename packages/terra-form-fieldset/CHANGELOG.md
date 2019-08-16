@@ -2,12 +2,10 @@ ChangeLog
 =========
 
 Unreleased
-----------
-### Changed
-* Import for package version from package.json added to doc page
-
-Unreleased
 ------------------
+### Added
+* Props table markdown file import added to doc site page
+
 ### Changed
 * Cleaned up imports in examples and test files
 

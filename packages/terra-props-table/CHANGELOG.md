@@ -2,10 +2,10 @@ Changelog
 =========
 
 Unreleased
-----------
-
-Unreleased
 ------------------
+### Added
+* Props table markdown file import added to doc site page
+
 ### Changed
 * Cleaned up imports in examples and test files
 

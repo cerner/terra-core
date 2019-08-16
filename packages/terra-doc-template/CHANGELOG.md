@@ -2,17 +2,15 @@ ChangeLog
 =========
 
 Unreleased
-----------
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
 ### Changed
-* Import for package version from package.json added to doc page
+* Cleaned up imports in examples and test files
 
 ### Removed
 * NPM badge wdio test
-
-Unreleased
-------------------
-### Changed
-* Cleaned up imports in examples and test files
 
 2.16.0 - (August 14, 2019)
 ------------------
