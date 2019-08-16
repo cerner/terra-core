@@ -1,6 +1,6 @@
 import React from 'react';
 import NpmBadge from '../../../NpmBadge';
-import { name, version } from '../../../../package.json';
+import { name } from '../../../../package.json';
 
 const packageUrl = 'https://engineering.cerner.com/terra-ui/components/terra-doc-template/doc-template/doc-template';
 const packageVersion = '2.13.0';

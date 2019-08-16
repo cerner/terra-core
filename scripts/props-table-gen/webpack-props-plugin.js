@@ -4,14 +4,14 @@ const fs = require('fs');
 const glob = require('glob');
 const reactDocs = require('react-docgen');
 /* eslint-enable import/no-extraneous-dependencies */
-/* eslint-disable no-console */
 
-/* eslint-disable class-methods-use-this, no-plusplus */
+/* eslint-disable class-methods-use-this, no-console */
 class WebpackPropsPlugin {
   apply() {
     const packageName = (component) => {
       let filteredName;
 
+      // Filters extended path or underscored component names
       if (component.indexOf('/') > -1 && component.indexOf('_') > -1) {
         filteredName = component.substring(component.lastIndexOf('/') + 2, component.length - 4);
       } else if (component.indexOf('/') > -1) {
@@ -34,9 +34,15 @@ class WebpackPropsPlugin {
       const styles = {};
 
       rowValues.forEach((value, index) => {
-        styles.color = (value === 'required') ? 'color: #d53700' : '';
-        styles.fontWeight = (index === 0 || index === 3) ? 'font-weight: bold' : '';
-        styledRow = (styles.color || styles.fontWeight) ? `<td style="${styles.fontWeight || styles.color}; padding-bottom: 1.8rem">${value}</td>` : `<td style="padding-bottom: 1.8rem">${value}</td>`;
+        styles.color = (value === 'required')
+          ? 'color: #d53700'
+          : '';
+        styles.fontWeight = (index === 0 || index === 3)
+          ? 'font-weight: bold'
+          : '';
+        styledRow = (styles.color || styles.fontWeight)
+          ? `<td style="${styles.fontWeight || styles.color}; padding-bottom: 1.8rem">${value}</td>`
+          : `<td style="padding-bottom: 1.8rem">${value}</td>`;
         currentRow += styledRow;
       });
       currentRow += '</tr>';
@@ -55,6 +61,7 @@ class WebpackPropsPlugin {
       let count = 0;
       let description = '';
 
+      // Create markdown compatible description
       [...propDescription].forEach((ch) => {
         if (ch === '`') {
           count += 1;
@@ -92,17 +99,23 @@ class WebpackPropsPlugin {
     };
 
     const generateTable = (component, rowArray) => {
+      // Separates multi-word component names for prop table titles
       const formatName = packageName(component).replace(/([A-Z])/g, ' $1').trim();
-      const generatedTable = `<div><h2>${formatName} Props</h2><table>${tableHeaderTemplate}<tbody>${rowArray.join('')}</tbody></table></div>`;
+
+      const generatedTable = `<div>\
+      <h2>${formatName} Props</h2>\
+      <table>${tableHeaderTemplate}<tbody>${rowArray.join('')}</tbody></table>\
+      </div>`;
 
       return generatedTable;
     };
 
     // Generate props table markdown files in each component's docs folder
     const generateMarkdownFile = (component, formattedProps) => {
+      // Creates separate name based on path, e.g. 'terra-action-header'.
       const componentName = component.slice(0, component.indexOf('/'));
-      const fileName = packageName(component);
 
+      const fileName = packageName(component);
       const fileDir = `${path.resolve(__dirname, '../../packages', componentName)}/docs/${fileName}-props-table.md`;
 
       fs.writeFileSync(fileDir, formattedProps);
@@ -150,7 +163,7 @@ class WebpackPropsPlugin {
             } else {
               processFile(file);
             }
-          })
+          });
         }
       });
     };
@@ -158,7 +171,7 @@ class WebpackPropsPlugin {
     const generatePropsTables = () => {
       console.log('Generating Markdown Files for Props Tables.');
       processPackageList();
-    }
+    };
 
     generatePropsTables();
   }

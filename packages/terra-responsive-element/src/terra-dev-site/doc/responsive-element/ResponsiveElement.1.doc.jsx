@@ -15,6 +15,7 @@ import UncontrolledBreakpointExampleSrc from '!raw-loader!../../../../src/terra-
 const DocPage = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-responsive-element"
     propsTablesMarkdown={[PropsTable]}
