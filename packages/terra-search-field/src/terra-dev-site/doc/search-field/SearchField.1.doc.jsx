@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import SearchFieldSrc from '!raw-loader!../../../../src/SearchField';
 
@@ -30,7 +30,7 @@ import SearchFieldFilterNumeric from '../example/SearchFieldFilterNumeric';
 import SearchFieldFilterNumericSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFilterNumeric';
 import SearchFieldFocus from '../example/SearchFieldFocus';
 import SearchFieldFocusSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFocus';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

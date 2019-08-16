@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SingleSelectableRows.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import SingleSelectableRowsSrc from '!raw-loader!../../../../src/SingleSelectableRows';
 import SingleRowSelectableTable from '../example/SingleRowSelectableTable';
@@ -13,7 +13,7 @@ import TableWithNonSelectableRowSrc from '!raw-loader!../../../../src/terra-dev-
 import SingleSelectableRowsOnChange from '../example/SingleSelectableRowsOnChange';
 import SingleSelectableRowsOnChangeAdditionalDetails from '../example/SingleSelectableRowsOnChangeAdditionalDetails';
 import SingleSelectableRowsOnChangeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleSelectableRowsOnChange';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

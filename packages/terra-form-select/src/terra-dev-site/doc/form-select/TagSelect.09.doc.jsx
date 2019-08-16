@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
 import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
@@ -22,7 +22,7 @@ import MaxHeightExample from '../example/tag/MaxHeight';
 import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/MaxHeight';
 import OptGroupExample from '../example/tag/OptGroup';
 import OptGroupExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/OptGroup';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const Index = () => (
   <DocTemplate

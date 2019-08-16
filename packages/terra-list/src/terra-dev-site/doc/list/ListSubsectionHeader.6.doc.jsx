@@ -3,14 +3,14 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ListSubsectionHeader.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import ListSubsectionHeaderSrc from '!raw-loader!../../../../src/ListSubsectionHeader';
 
 // Example Files
 import ListSubsectionHeaderExample from '../example/ListSubsectionHeader';
 import ListSubsectionHeaderExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListSubsectionHeader';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

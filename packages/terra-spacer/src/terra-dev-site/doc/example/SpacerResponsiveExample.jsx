@@ -3,7 +3,6 @@ import Image from 'terra-image';
 import Spacer from 'terra-spacer';
 import placeholderPic150x150 from 'terra-spacer/lib/terra-dev-site/doc/example/assets/150x150.jpg';
 import placeholderPic1000x200 from 'terra-spacer/lib/terra-dev-site/doc/example/assets/1000x200.png';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const SpacerResponsiveExample = () => (
   <div>

@@ -2,12 +2,12 @@ import React from 'react';
 import DocTemplate from '../../../DocTemplate';
 import readme from './common/TestReadme.md';
 import { name, version } from '../../../../package.json';
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 import TestComponentExample from './common/TestComponentExample';
 import CustomPropsTable from './common/CustomPropsTable';
 import exampleSrc from '!raw-loader!../../../../src/terra-dev-site/test/doc-template/common/TestComponentExample';
 import testComponentSrc from '!raw-loader!../../../../src/terra-dev-site/test/doc-template/common/TestComponent';
-/* eslint-enisable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-enisable import/no-webpack-loader-syntax, import/first */
 
 
 const Index = () => {

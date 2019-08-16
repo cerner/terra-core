@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import ToggleSrc from '!raw-loader!../../../../src/Toggle';
 
@@ -12,7 +12,7 @@ import DefaultToggle from '../example/DefaultToggle';
 import DefaultToggleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggle';
 import AnimatedToggle from '../example/AnimatedToggle';
 import AnimatedToggleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AnimatedToggle';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

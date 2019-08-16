@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import ButtonGroupSrc from '!raw-loader!../../../../src/ButtonGroup.jsx';
 import ButtonGroupButtonSrc from '!raw-loader!../../../../src/ButtonGroupButton.jsx';
@@ -19,7 +19,7 @@ import ButtonGroupMultiSelect from '../example/ButtonGroupMultiSelect';
 import ButtonGroupMultiSelectSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonGroupMultiSelect';
 import ButtonGroupIsBlock from '../example/ButtonGroupIsBlock';
 import ButtonGroupIsBlockSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonGroupIsBlock';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

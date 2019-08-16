@@ -3,14 +3,14 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ManagedSelectableTable.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import SelectableTableRowsSrc from '!raw-loader!../../../../src/SelectableTableRows';
 import SingleRowSelectableTable from '../example/SingleRowSelectableTable';
 import SingleRowSelectableTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleRowSelectableTable';
 import SelectableRowsDisableUnselectedRows from '../example/SelectableRowsDisableUnselectedRows';
 import SelectableRowsDisableUnselectedRowsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SelectableRowsDisableUnselectedRows';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

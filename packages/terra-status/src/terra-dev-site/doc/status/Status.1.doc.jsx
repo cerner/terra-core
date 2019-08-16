@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import StatusSrc from '!raw-loader!../../../../src/Status';
 
@@ -16,7 +16,7 @@ import StatusIcon from '../example/StatusIcon';
 import StatusIconSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StatusIcon';
 import StatusArrange from '../example/StatusArrange';
 import StatusArrangeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StatusArrange';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

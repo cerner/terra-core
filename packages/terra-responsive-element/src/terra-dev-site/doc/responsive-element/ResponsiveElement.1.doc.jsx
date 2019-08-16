@@ -2,7 +2,7 @@ import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 import ResponsiveElementSrc from '!raw-loader!../../../../src/ResponsiveElement';
 import BreakpointExample from '../example/BreakpointExample';
 import BreakpointExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BreakpointExample';
@@ -10,7 +10,7 @@ import ResizeExample from '../example/ResizeExample';
 import ResizeExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ResizeExample';
 import UncontrolledBreakpointExample from '../example/UncontrolledBreakpointExample';
 import UncontrolledBreakpointExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/UncontrolledBreakpointExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

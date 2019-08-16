@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import FormInputSrc from '!raw-loader!../../../../src/Input';
 
@@ -30,7 +30,7 @@ import UncontrolledDefaultInvalidExample from '../example/uncontrolled/DefaultIn
 import UncontrolledDefaultInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DefaultInvalidExample';
 import UncontrolledDisabledInvalidExample from '../example/uncontrolled/DisabledInvalidExample';
 import UncontrolledDisabledInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DisabledInvalidExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

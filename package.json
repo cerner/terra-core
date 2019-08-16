@@ -36,6 +36,16 @@
           "import/no-unresolved": "off",
           "import/extensions": "off"
         }
+      },
+      {
+        "files": [
+          "*.doc.jsx"
+        ],
+        "rules": {
+          "import/no-webpack-loader-syntax": "off",
+          "import/first": "off",
+          "import/no-duplicates": "off"
+        }
       }
     ]
   },

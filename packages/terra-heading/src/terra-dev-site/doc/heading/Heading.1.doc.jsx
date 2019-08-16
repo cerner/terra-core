@@ -10,7 +10,7 @@ import HeadingVisuallyHiddenDocs from '../../../../docs/heading-visually-hidden.
 import HeadingVariationDocs from '../../../../docs/heading-variations.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import HeadingSrc from '!raw-loader!../../../../src/Heading';
 
@@ -27,7 +27,7 @@ import HeadingWeights from '../example/HeadingWeights';
 import HeadingWeightsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingWeights';
 import HeadingVariations from '../example/HeadingVariations';
 import HeadingVariationsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingVariations';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

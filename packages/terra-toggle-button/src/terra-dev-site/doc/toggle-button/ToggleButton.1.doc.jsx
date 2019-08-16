@@ -3,7 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 // Component Source
 import ToggleButtonSrc from '!raw-loader!../../../../src/ToggleButton';
 
@@ -22,7 +22,7 @@ import OpenCloseEventToggleButton from '../example/OpenCloseEventToggleButton';
 import OpenCloseEventToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OpenCloseEventToggleButton';
 import OpenCloseTextToggleButton from '../example/OpenCloseTextToggleButton';
 import OpenCloseTextToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OpenCloseTextToggleButton';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

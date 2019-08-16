@@ -2,7 +2,6 @@ import React from 'react';
 import Button from 'terra-button';
 import Spacer from 'terra-spacer';
 import 'terra-spacer/lib/terra-dev-site/doc/example/Spacer.module.scss';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const SpacerExample = () => (
   <div>

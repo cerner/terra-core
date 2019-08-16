@@ -1,7 +1,6 @@
 import React from 'react';
 import LoadingOverlay from 'terra-overlay/lib/LoadingOverlay';
 import OverlayContainer from 'terra-overlay/lib/OverlayContainer';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import styles from './OverlayDocCommon.module.scss';
