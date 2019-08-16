@@ -2,7 +2,7 @@ ChangeLog
 =========
 
 Unreleased
-------------------
+----------
 ### Added
 * Props table markdown file import added to doc site page
 * Added an example and documentation around usage of scrollRefCallback prop.
