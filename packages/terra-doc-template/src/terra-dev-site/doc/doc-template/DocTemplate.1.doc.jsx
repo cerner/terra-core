@@ -2,7 +2,7 @@ import React from 'react';
 import DocTemplate from '../../../../lib/DocTemplate';
 
 import readme from '../../../../docs/README.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 import BadgeExamples from '../example/BadgeExamples';
@@ -16,6 +16,7 @@ import SelfSrc from '!raw-loader!../../../../src/terra-dev-site/doc/doc-template
 const DocTemplateExamples = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={readme}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
     examples={[
