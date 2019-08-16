@@ -2,9 +2,13 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SplitButton.md';
+<<<<<<< HEAD
 import SplitButtonPropsTable from '../../../../docs/SplitButton-props-table.md';
 import ItemPropsTable from '../../../../docs/Item-props-table.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
+=======
+import { name, version } from '../../../../package.json';
+>>>>>>> master
 
 // Example Files
 import DefaultSplitButton from '../example/DefaultSplitButton';
@@ -19,6 +23,7 @@ import BlockSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/
 const DocPage = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[

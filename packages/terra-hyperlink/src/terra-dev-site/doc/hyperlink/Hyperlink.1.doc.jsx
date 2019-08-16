@@ -2,8 +2,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+<<<<<<< HEAD
 import PropsTable from '../../../../docs/Hyperlink-props-table.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
+=======
+import { name, version } from '../../../../package.json';
+>>>>>>> master
 
 // Example Files
 import DefaultHyperlink from '../example/DefaultHyperlink';
@@ -26,6 +30,7 @@ import VideoSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Vid
 const DocPage = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[

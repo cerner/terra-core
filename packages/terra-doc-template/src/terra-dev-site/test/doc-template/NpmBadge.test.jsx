@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import NpmBadge from '../../../NpmBadge';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
 
 const packageUrl = 'https://engineering.cerner.com/terra-ui/components/terra-doc-template/doc-template/doc-template';
 const packageVersion = '2.13.0';

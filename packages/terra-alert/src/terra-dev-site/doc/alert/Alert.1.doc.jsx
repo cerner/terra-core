@@ -4,8 +4,12 @@ import Markdown from 'terra-markdown';
 import ReadMe from '../../../../docs/README.md';
 import CustomExampleDocs from '../../../../docs/custom-example.md';
 import ActionAndDismissableExampleDocs from '../../../../docs/action-and-dismissable-example.md';
+<<<<<<< HEAD
 import PropsTable from '../../../../docs/Alert-props-table.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
+=======
+import { name, version } from '../../../../package.json';
+>>>>>>> master
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
@@ -37,6 +41,7 @@ import ActionAndDismissibleExampleSrc from '!raw-loader!../../../../src/terra-de
 const DocPage = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
