@@ -1,7 +1,6 @@
 import React from 'react';
 import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
 import classNames from 'classnames/bind';
-
 import Button from '../../../Button';
 import styles from './ButtonTestCommon.module.scss';
 

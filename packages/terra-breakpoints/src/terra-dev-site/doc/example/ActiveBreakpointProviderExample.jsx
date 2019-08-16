@@ -1,6 +1,4 @@
 import React from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import { ActiveBreakpointProvider, withActiveBreakpoint, ActiveBreakpointContext } from 'terra-breakpoints';
 
 const ActiveBreakpointConsumer1 = withActiveBreakpoint(({ activeBreakpoint }) => (

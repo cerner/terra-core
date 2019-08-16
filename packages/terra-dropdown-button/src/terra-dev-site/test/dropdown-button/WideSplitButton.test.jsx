@@ -1,6 +1,5 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-
 import SplitButton, { Item } from '../../../SplitButton';
 import styles from './ExtraSpacing.module.scss';
 

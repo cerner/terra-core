@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-
 import Spacer from '../../../Spacer';
 import styles from './SpacerTest.module.scss';
 

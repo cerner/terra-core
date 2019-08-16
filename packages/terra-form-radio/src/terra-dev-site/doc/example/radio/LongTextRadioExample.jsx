@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Radio from 'terra-form-radio/lib/Radio';
+import Radio from 'terra-form-radio';
 
 const hiddenLabelRadioExample = () => (
   <Radio

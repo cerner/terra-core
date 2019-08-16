@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ToggleButton from 'terra-toggle-button/lib/ToggleButton';
+import ToggleButton from 'terra-toggle-button';
 
 const ButtonAttrsToggleButton = () => (
   <ToggleButton

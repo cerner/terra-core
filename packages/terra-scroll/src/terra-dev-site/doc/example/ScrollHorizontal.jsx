@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Scroll from 'terra-scroll/lib/Scroll';
+import Scroll from 'terra-scroll';
 import classNames from 'classnames/bind';
 import styles from './ScrollCommon.module.scss';
 

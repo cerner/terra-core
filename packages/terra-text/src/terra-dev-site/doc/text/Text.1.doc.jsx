@@ -10,7 +10,6 @@ import TextVisuallyHiddenDocs from '../../../../docs/text-visually-hidden.md';
 import TextWordWrappedDocs from '../../../../docs/text-word-wrapped.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import TextSrc from '!raw-loader!../../../../src/Text';
 
@@ -29,7 +28,6 @@ import TextWeights from '../example/TextWeights';
 import TextWeightsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextWeights';
 import TextWordWrapped from '../example/TextWordWrapped';
 import TextWordWrappedSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextWordWrapped';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

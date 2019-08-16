@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import StatusView from 'terra-status-view/lib/StatusView';
+import StatusView from 'terra-status-view';
 
 const ToggleAlignmentAndGlyph = () => {
   const [isAlignedTop, setIsAlignedTop] = useState(false);

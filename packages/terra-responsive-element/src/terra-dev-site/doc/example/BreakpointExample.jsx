@@ -1,7 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import React, { useState } from 'react';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
-import ResponsiveElement from '../../../ResponsiveElement';
+import ResponsiveElement from 'terra-responsive-element';
 
 const BreakpointExample = () => {
   const [breakpoint, setBreakpoint] = useState('');

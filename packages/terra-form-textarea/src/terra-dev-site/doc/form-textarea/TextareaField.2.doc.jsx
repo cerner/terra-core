@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/TextareaField.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import TextareaFieldSrc from '!raw-loader!../../../../src/TextareaField';
 
@@ -12,7 +11,7 @@ import TextareaFieldExample from '../example/TextareaField';
 import TextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextareaField';
 import RequiredTextareaFieldExample from '../example/RequiredTextareaField';
 import RequiredTextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RequiredTextareaField';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+
 const DocPage = () => (
   <DocTemplate
     packageName={name}
