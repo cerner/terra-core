@@ -13,7 +13,7 @@ import RequiredInputFieldExample from '../example/RequiredInputField';
 import RequiredInputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RequiredInputField';
 import NumberInputFieldExample from '../example/NumberInputField';
 import NumberInputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NumberInputField';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
+
 const DocPage = () => (
   <DocTemplate
     packageName={name}

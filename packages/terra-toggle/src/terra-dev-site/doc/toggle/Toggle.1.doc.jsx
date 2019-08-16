@@ -11,7 +11,6 @@ import DefaultToggle from '../example/DefaultToggle';
 import DefaultToggleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggle';
 import AnimatedToggle from '../example/AnimatedToggle';
 import AnimatedToggleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AnimatedToggle';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

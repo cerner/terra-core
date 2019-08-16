@@ -11,7 +11,6 @@ import PlaceholderDefault from '../example/PlaceholderDefault';
 import PlaceholderDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/PlaceholderDefault';
 import PlaceholderLight from '../example/PlaceholderLight';
 import PlaceholderLightSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/PlaceholderLight';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

@@ -9,7 +9,6 @@ import PaginatorSrc from '!raw-loader!../../../../src/ControlledProgressivePagin
 // Example Files
 import ControlledProgressivePaginatorExample from './example/ControlledProgressivePaginatorExample';
 import ControlledProgressivePaginatorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/paginator/example/ControlledProgressivePaginatorExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

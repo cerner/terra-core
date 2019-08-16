@@ -29,7 +29,6 @@ import UncontrolledDefaultInvalidExample from '../example/uncontrolled/DefaultIn
 import UncontrolledDefaultInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DefaultInvalidExample';
 import UncontrolledDisabledInvalidExample from '../example/uncontrolled/DisabledInvalidExample';
 import UncontrolledDisabledInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DisabledInvalidExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

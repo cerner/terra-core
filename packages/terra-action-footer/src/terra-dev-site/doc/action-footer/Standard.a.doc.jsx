@@ -15,7 +15,6 @@ import SingleEndActionExample from '../example/standard/SingleEndAction';
 import SingleEndActionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/standard/SingleEndAction';
 import MultipleStartEndActionsExample from '../example/standard/MultipleStartEndActions';
 import MultipleStartEndActionsExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/standard/MultipleStartEndActions';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

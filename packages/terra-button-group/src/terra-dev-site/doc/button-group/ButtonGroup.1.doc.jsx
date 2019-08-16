@@ -18,7 +18,6 @@ import ButtonGroupMultiSelect from '../example/ButtonGroupMultiSelect';
 import ButtonGroupMultiSelectSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonGroupMultiSelect';
 import ButtonGroupIsBlock from '../example/ButtonGroupIsBlock';
 import ButtonGroupIsBlockSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonGroupIsBlock';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

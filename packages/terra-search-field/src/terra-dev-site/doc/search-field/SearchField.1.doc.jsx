@@ -29,7 +29,6 @@ import SearchFieldFilterNumeric from '../example/SearchFieldFilterNumeric';
 import SearchFieldFilterNumericSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFilterNumeric';
 import SearchFieldFocus from '../example/SearchFieldFocus';
 import SearchFieldFocusSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFocus';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

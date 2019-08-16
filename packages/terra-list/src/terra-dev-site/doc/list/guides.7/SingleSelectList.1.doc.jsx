@@ -7,7 +7,6 @@ import { name, version } from '../../../../../package.json';
 // Example Files
 import SingleSelectList from '../../guides/SingleSelectList';
 import SingleSelectListSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/SingleSelectList';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

@@ -28,7 +28,6 @@ import TableWithCustomCells from '../example/TableWithCustomCells';
 import TableWithCustomCellsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithCustomCells';
 import TableWithSubheaders from '../example/TableWithSubheaders';
 import TableWithSubheadersSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithSubheaders';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

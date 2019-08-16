@@ -12,7 +12,6 @@ import TableWithNonSelectableRowSrc from '!raw-loader!../../../../src/terra-dev-
 import SingleSelectableRowsOnChange from '../example/SingleSelectableRowsOnChange';
 import SingleSelectableRowsOnChangeAdditionalDetails from '../example/SingleSelectableRowsOnChangeAdditionalDetails';
 import SingleSelectableRowsOnChangeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleSelectableRowsOnChange';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

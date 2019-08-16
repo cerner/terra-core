@@ -32,7 +32,6 @@ import DismissibleExample from '../example/DismissibleExample';
 import DismissibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DismissibleExample';
 import ActionAndDismissibleExample from '../example/ActionAndDismissibleExample';
 import ActionAndDismissibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ActionAndDismissibleExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

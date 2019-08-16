@@ -9,7 +9,6 @@ import ImageSrc from '!raw-loader!../../../../src/ProfileImage';
 // Example Files
 import ProfileImageDefault from '../example/ProfileImageDefault';
 import ProfileImageDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ProfileImageDefault';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

@@ -15,7 +15,6 @@ import InlineCheckboxField from '../example/field/InlineCheckboxField';
 import InlineCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/InlineCheckboxField';
 import OptionalCheckboxField from '../example/field/OptionalCheckboxField';
 import OptionalCheckboxFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/OptionalCheckboxField';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const checkboxFieldExamples = () => (
   <DocTemplate

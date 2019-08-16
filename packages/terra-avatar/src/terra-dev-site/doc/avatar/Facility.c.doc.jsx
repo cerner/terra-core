@@ -13,7 +13,6 @@ import FacilitySize from '../example/facility/FacilitySize';
 import FacilitySizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/FacilitySize';
 import FacilityColorVariants from '../example/facility/FacilityColorVariants';
 import FacilityColorVariantsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/FacilityColorVariants';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

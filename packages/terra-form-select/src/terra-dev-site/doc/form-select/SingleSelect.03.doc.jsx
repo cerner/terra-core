@@ -23,7 +23,6 @@ import MaxHeightExample from '../example/single/MaxHeight';
 import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/MaxHeight';
 import OptGroupExample from '../example/single/OptGroup';
 import OptGroupExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/OptGroup';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const Index = () => (
   <DocTemplate

@@ -13,7 +13,6 @@ import SingleActionExample from '../example/block/SingleAction';
 import SingleActionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/block/SingleAction';
 import MultipleActionsExample from '../example/block/MultipleActions';
 import MultipleActionsExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/block/MultipleActions';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

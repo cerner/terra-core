@@ -9,7 +9,6 @@ import SpacerSrc from '!raw-loader!../../../../src/Spacer';
 // Example Files
 import Spacer from '../example/SpacerExample';
 import SpacerExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SpacerExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

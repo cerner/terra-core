@@ -7,7 +7,6 @@ import { name, version } from '../../../../../package.json';
 // Example Files
 import SectionList from '../../guides/SectionList';
 import SectionListSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/SectionList';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

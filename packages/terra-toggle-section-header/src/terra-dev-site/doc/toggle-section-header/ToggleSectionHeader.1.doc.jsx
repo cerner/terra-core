@@ -13,7 +13,6 @@ import AnimatedToggleSectionHeader from '../example/AnimatedToggleSectionHeader'
 import AnimatedToggleSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AnimatedToggleSectionHeader';
 import TransparentToggleSectionHeader from '../example/TransparentToggleSectionHeader';
 import TransparentToggleSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TransparentToggleSectionHeader';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

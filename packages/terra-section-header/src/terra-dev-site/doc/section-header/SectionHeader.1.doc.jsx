@@ -23,7 +23,6 @@ import AccordionSectionHeader from '../example/AccordionSectionHeader';
 import AccordionSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AccordionSectionHeader';
 import TransparentSectionHeader from '../example/TransparentSectionHeader';
 import TransparentSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TransparentSectionHeader';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

@@ -12,7 +12,6 @@ import SelectFieldExample from '../example/tag/TagSelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/TagSelectField';
 import RequiredTagSelectFieldExample from '../example/tag/RequiredTagSelectField';
 import RequiredTagSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/RequiredTagSelectField';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

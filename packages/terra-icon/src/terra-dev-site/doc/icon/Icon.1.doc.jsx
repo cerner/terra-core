@@ -5,7 +5,6 @@ import { name, version } from '../../../../package.json';
 
 // Component Source
 import IconSrc from '!raw-loader!../../../../src/IconBase';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

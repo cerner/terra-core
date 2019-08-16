@@ -11,7 +11,7 @@ import TextareaFieldExample from '../example/TextareaField';
 import TextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextareaField';
 import RequiredTextareaFieldExample from '../example/RequiredTextareaField';
 import RequiredTextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RequiredTextareaField';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
+
 const DocPage = () => (
   <DocTemplate
     packageName={name}

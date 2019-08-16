@@ -12,7 +12,6 @@ import I18nProvider from '!raw-loader!../../../../src/I18nProvider';
 
 // Example Files
 import I18nDemo from '../example/I18nDemo';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

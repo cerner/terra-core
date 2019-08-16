@@ -15,7 +15,6 @@ import MultipleSelectableRowsWithSubheader from '../example/MultiSelectableRowsW
 import MultipleSelectableRowsWithSubheaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsWithSubheader';
 import MultiSelectableRowsOnChange from '../example/MultiSelectableRowsOnChange';
 import MultiSelectableRowsOnChangeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRowsOnChange';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

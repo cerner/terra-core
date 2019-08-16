@@ -23,7 +23,6 @@ import MaxHeightExample from '../example/combobox/MaxHeight';
 import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/MaxHeight';
 import OptGroupExample from '../example/combobox/OptGroup';
 import OptGroupExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/OptGroup';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const Index = () => (
   <DocTemplate

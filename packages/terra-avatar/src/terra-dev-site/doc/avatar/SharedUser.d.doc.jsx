@@ -11,7 +11,6 @@ import SharedUserSize from '../example/shared-user/SharedUserSize';
 import SharedUserSizeSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/shared-user/SharedUserSize';
 import SharedUserColorVariants from '../example/shared-user/SharedUserColorVariants';
 import SharedUserColorVariantsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/shared-user/SharedUserColorVariants';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

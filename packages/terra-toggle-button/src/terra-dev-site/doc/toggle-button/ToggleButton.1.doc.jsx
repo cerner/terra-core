@@ -21,7 +21,6 @@ import OpenCloseEventToggleButton from '../example/OpenCloseEventToggleButton';
 import OpenCloseEventToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OpenCloseEventToggleButton';
 import OpenCloseTextToggleButton from '../example/OpenCloseTextToggleButton';
 import OpenCloseTextToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OpenCloseTextToggleButton';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

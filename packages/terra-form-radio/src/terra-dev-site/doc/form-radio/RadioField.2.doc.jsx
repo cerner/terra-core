@@ -15,7 +15,6 @@ import InlineRadioField from '../example/field/InlineRadioField';
 import InlineRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/InlineRadioField';
 import OptionalRadioField from '../example/field/OptionalRadioField';
 import OptionalRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/OptionalRadioField';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const RadioFieldExamples = () => (
   <DocTemplate

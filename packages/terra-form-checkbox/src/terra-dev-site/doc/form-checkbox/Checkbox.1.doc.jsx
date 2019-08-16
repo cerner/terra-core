@@ -20,7 +20,6 @@ import InlineCheckboxesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/
 import MultipleCheckboxes from '../example/checkbox/MultipleCheckboxesExample';
 import MultipleCheckboxesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/checkbox/MultipleCheckboxesExample';
 import MobileCheckbox from '../example/checkbox/MobileCheckboxExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 class DocPage extends React.Component {
   constructor() {

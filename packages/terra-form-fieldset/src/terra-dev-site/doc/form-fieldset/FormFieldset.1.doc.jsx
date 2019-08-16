@@ -8,7 +8,6 @@ import FieldsetSrc from '!raw-loader!../../../../src/Fieldset';
 
 // Example Files
 import FieldsetExamples from '../example/FieldsetExamples';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

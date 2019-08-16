@@ -9,7 +9,6 @@ import ListSubsectionHeaderSrc from '!raw-loader!../../../../src/ListSubsectionH
 // Example Files
 import ListSubsectionHeaderExample from '../example/ListSubsectionHeader';
 import ListSubsectionHeaderExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListSubsectionHeader';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

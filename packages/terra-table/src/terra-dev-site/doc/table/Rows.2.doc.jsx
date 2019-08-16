@@ -9,7 +9,6 @@ import RowsOnClick from '../example/RowsOnClick';
 import RowsOnClickSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RowsOnClick';
 import RowsOnKeyDown from '../example/RowsOnKeyDown';
 import RowsOnKeyDownSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RowsOnKeyDown';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

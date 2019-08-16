@@ -18,7 +18,6 @@ import Dashboard from '../example/Dashboard';
 import DashboardSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Dashboard';
 import ResponsiveGrid from '../example/ResponsiveGrid';
 import ResponsiveGridSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ResponsiveGrid';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

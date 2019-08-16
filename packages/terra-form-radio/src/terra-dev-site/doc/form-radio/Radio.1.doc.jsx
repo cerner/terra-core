@@ -20,7 +20,6 @@ import InlineRadiosSrc from '!raw-loader!../../../../src/terra-dev-site/doc/exam
 import MultipleRadios from '../example/radio/MultipleRadiosExample';
 import MultipleRadiosSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/radio/MultipleRadiosExample';
 import MobileButton from '../example/radio/MobileButton';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 class DocPage extends React.Component {
   constructor() {

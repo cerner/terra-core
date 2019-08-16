@@ -7,7 +7,6 @@ import { name, version } from '../../../../../package.json';
 // Example Files
 import MultiSelectList from '../../guides/MultiSelectList';
 import MultiSelectListSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/MultiSelectList';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

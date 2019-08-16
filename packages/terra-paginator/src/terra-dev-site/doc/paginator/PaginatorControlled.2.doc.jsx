@@ -9,7 +9,6 @@ import ControlledPaginatorSrc from '!raw-loader!../../../../src/ControlledPagina
 // Example Files
 import ControlledPaginatorExample from './example/ControlledPaginatorExample';
 import ControlledPaginatorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/paginator/example/ControlledPaginatorExample';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

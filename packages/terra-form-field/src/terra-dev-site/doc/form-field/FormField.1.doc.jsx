@@ -8,7 +8,6 @@ import FieldSrc from '!raw-loader!../../../../src/Field';
 
 // Example Files
 import FieldExamples from '../example/FieldExamples';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate
