@@ -104,7 +104,7 @@ class WebpackPropsPlugin {
 
       const generatedTable = `<div>\
       <h2>${formatName} Props</h2>\
-      <table>${tableHeaderTemplate}<tbody>${rowArray.join('')}</tbody></table>\
+      <table style="display: table">${tableHeaderTemplate}<tbody>${rowArray.join('')}</tbody></table>\
       </div>`;
 
       return generatedTable;
