@@ -30,6 +30,11 @@ const TEXTAREA_ROW_SIZES = {
 
 const propTypes = {
   /**
+  * String that labels the current element. 'aria-label' must be present,
+  * for accessibility.
+  */
+  ariaLabel: PropTypes.string,
+  /**
    * The defaultValue of the textarea. Use this to create an uncontrolled textarea.
    */
   defaultValue: PropTypes.string,
@@ -79,11 +84,6 @@ const propTypes = {
    * functionality such as managing focus, selection, or animations.
    */
   refCallback: PropTypes.func,
-  /**
-  * String that labels the current element. 'aria-label' must be present,
-  * for accessibility.
-  */
-  ariaLabel: PropTypes.string,
 };
 
 const defaultProps = {
