@@ -10,7 +10,7 @@ class Icon {
     this.children = transformChildren(node);
     this.attributes = classNamesToAttributes(Array.prototype.slice.call(node.attributes)
       .map(x => ({ name: htmlToReactAttributes(x.name), value: x.value }))
-      .reduce((attrs, x) => Object.assign({ [x.name]: x.value }, attrs), {}));
+      .reduce((attrs, x) => ({ [x.name]: x.value, ...attrs }), {}));
   }
 }
 

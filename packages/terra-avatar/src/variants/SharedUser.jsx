@@ -50,7 +50,7 @@ const SharedUser = ({
 }) => {
   const colorVariant = setColor(alt, color, hashValue);
   const attributes = { ...customProps };
-  const customStyles = size ? Object.assign({ fontSize: size }, attributes.style) : attributes.style;
+  const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;
   const multiUserClassNames = cx([
     'avatar',
     `${colorVariant}`,

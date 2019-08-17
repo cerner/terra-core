@@ -185,7 +185,7 @@ class Textarea extends React.Component {
       ...customProps
     } = this.props;
 
-    const additionalTextareaProps = Object.assign({}, customProps);
+    const additionalTextareaProps = { ...customProps };
 
     const textareaClasses = cx([
       'textarea',
