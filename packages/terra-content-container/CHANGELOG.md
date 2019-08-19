@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+
+### Added
+* Added an example and documentation around usage of scrollRefCallback prop.
+
 ### Changed
 * Import for package version from package.json added to doc page
 
