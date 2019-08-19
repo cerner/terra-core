@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-
 import Overlay from '../../../../Overlay';
 import OverlayContainer from '../../../../OverlayContainer';
 import styles from './OverlayTestCommon.module.scss';

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Spacer.module.scss';
-
 import { mapShorthandToObject, shorthandValidator } from './_spacerShorthandUtils';
 import { SpacerSizes, SpacerClassMappings } from './_spacerConstants';
 

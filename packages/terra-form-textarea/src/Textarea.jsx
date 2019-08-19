@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-
 import styles from './Textarea.module.scss';
 
 const cx = classNames.bind(styles);
@@ -114,6 +113,16 @@ class Textarea extends React.Component {
     }
   }
 
+  // Addresses https://github.com/cerner/terra-core/issues/2496.
+  // min-height manipulation exists outside the virtual dom. React reconcilliation will fail to update this inline style, because it is not a prop.
+  // This is apparent when swapping different sized TextArea components. To alleviate this, first reset the min-height.
+  // This allows us to capture the correct scrollHeight, and use this correct value for min-height.
+  componentDidUpdate(prevProps) {
+    if (this.props.size !== prevProps.size || this.props.rows !== prevProps.rows) {
+      this.setBaseHeights();
+    }
+  }
+
   onFocus(event) {
     if (this.props.isAutoResizable && !this.isMobileDevice) {
       const lineHeight = Math.ceil(parseInt(window.getComputedStyle(this.textarea).lineHeight, 0));
@@ -148,6 +157,7 @@ class Textarea extends React.Component {
 
     // For terra textareas, we want the gripper to not have the ability to resize the textarea to
     // be a tiny square. Setting the minHeight restricts the area the gripper can be shrunk too
+    this.textarea.style.minHeight = '0px';
     this.textarea.style.minHeight = `${this.textarea.scrollHeight}px`;
     this.textarea.value = savedValue;
   }

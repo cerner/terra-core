@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Toggle from 'terra-toggle/lib/Toggle';
+import Toggle from 'terra-toggle';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 
 class ToggleDefault extends React.Component {
@@ -19,8 +18,11 @@ class ToggleDefault extends React.Component {
     const { isOpen } = this.state;
     return (
       <div>
-        <IconInformation onClick={this.handleOnClick} />
-        <Toggle isOpen={isOpen}>
+        <IconInformation onClick={this.handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
+        {/**
+        * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
+        */}
+        <Toggle id="toggle" isOpen={isOpen}>
           <p>
 Lorem ipsum dolor sit amet,
             <a href="#test">consectetur</a>

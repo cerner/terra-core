@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Arrange from 'terra-arrange';
 import classNames from 'classnames/bind';

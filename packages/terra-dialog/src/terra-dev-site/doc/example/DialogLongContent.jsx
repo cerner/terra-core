@@ -1,7 +1,6 @@
 /* eslint-disable no-alert */
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Dialog from 'terra-dialog/lib/Dialog';
+import Dialog from 'terra-dialog';
 import classNames from 'classnames/bind';
 import styles from './DialogDocCommon.module.scss';
 

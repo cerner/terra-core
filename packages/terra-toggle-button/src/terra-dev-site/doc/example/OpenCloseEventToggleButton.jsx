@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ToggleButton from 'terra-toggle-button/lib/ToggleButton';
+import ToggleButton from 'terra-toggle-button';
 import classNames from 'classnames/bind';
 import styles from './OpenCloseEventToggleButton.module.scss';
 

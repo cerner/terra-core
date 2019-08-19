@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+2.28.0 - (August 14, 2019)
+------------------
+### Changed
+* updated package.json test scripts
+
+2.27.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.26.0 - (July 16, 2019)
 ------------------
 ### Added

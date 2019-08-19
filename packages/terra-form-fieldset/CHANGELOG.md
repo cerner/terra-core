@@ -3,6 +3,28 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+2.23.0 - (August 14, 2019)
+------------------
+### Changed
+* updated package.json test scripts
+
+2.22.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.21.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.20.0 - (July 17, 2019)
 ------------------

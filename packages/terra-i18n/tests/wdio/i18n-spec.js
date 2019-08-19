@@ -14,7 +14,6 @@ Terra.describeViewports('I18n', ['medium'], () => {
   testLocales.forEach((locale) => {
     describe(`${locale} Locale`, () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-i-18-n/i-18-n/default-i-18-n');
         browser.waitForVisible('select');
         browser.element('select').selectByValue(locale);
       });

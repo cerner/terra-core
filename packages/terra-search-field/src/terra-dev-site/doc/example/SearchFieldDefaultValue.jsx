@@ -1,11 +1,19 @@
-import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SearchFieldExampleTemplate from 'terra-search-field/lib/terra-dev-site/doc/example/SearchFieldExampleTemplate';
+import React, { useState } from 'react';
+import SearchField from 'terra-search-field';
 
-const SearchFieldExample = () => (
-  <SearchFieldExampleTemplate
-    defaultValue="Default"
-  />
-);
+const INVALID_MESSAGE = 'The default minimum search length is 2.';
 
-export default SearchFieldExample;
+const SearchFieldDefaultValue = () => {
+  const [searchText, setSearchText] = useState('');
+
+  const message = searchText.length >= 2 ? `Search text: ${searchText}` : INVALID_MESSAGE;
+
+  return (
+    <div>
+      <p>{message}</p>
+      <SearchField defaultValue="Default" onSearch={setSearchText} onInvalidSearch={setSearchText} />
+    </div>
+  );
+};
+
+export default SearchFieldDefaultValue;

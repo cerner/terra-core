@@ -1,0 +1,31 @@
+:local {
+  .container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .top-left {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .bottom-right {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+  }
+}

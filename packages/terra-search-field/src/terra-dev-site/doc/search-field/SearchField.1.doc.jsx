@@ -1,9 +1,8 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import SearchFieldSrc from '!raw-loader!../../../../src/SearchField';
 
@@ -21,7 +20,7 @@ import SearchFieldDefaultValueSrc from '!raw-loader!../../../../src/terra-dev-si
 import SearchFieldDisabled from '../example/SearchFieldDisabled';
 import SearchFieldDisabledSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldDisabled';
 import SearchFieldDisabledAutoFormatting from '../example/SearchFieldDisableAutoFormatAttrs';
-import SearchFieldDisabledAutoFormattingSrc from '../example/SearchFieldDisableAutoFormatAttrs';
+import SearchFieldDisabledAutoFormattingSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldDisableAutoFormatAttrs';
 import SearchFieldBlock from '../example/SearchFieldBlock';
 import SearchFieldBlockSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldBlock';
 import SearchFieldDisableAutoSearch from '../example/SearchFieldDisableAutoSearch';
@@ -30,11 +29,11 @@ import SearchFieldFilterNumeric from '../example/SearchFieldFilterNumeric';
 import SearchFieldFilterNumericSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFilterNumeric';
 import SearchFieldFocus from '../example/SearchFieldFocus';
 import SearchFieldFocusSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFocus';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[

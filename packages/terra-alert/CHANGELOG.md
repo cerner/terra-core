@@ -3,6 +3,30 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+4.8.0 - (August 14, 2019)
+------------------
+### Changed
+* Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
+* Updated package.json test scripts
+* Updated upgrade guide to better reflect 2 -> 3 and 3 -> 4
+
+4.7.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.6.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 4.5.0 - (July 17, 2019)
 ------------------

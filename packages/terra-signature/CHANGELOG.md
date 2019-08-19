@@ -4,6 +4,26 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+2.18.0 - (August 14, 2019)
+------------------
+### Changed
+* updated package.json test scripts
+
+2.17.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.16.0 - (July 24, 2019)
+------------------
+### Changed
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 
 2.15.0 - (July 16, 2019)

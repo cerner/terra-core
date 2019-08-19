@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "5.23.0",
+  "version": "5.26.0",
   "description": "Provides a drop down of selectable options.",
   "repository": {
     "type": "git",
@@ -32,10 +32,10 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
-    "terra-doc-template": "^2.13.0",
-    "terra-form-field": "^3.17.0",
+    "terra-doc-template": "^2.16.0",
+    "terra-form-field": "^3.20.0",
     "terra-hookshot": "^5.0.0",
-    "terra-mixins": "^1.32.0"
+    "terra-mixins": "^1.33.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -43,8 +43,8 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
-    "test": "npm run test:jest && npm run test:wdio",
-    "test:jest": "jest --config ../../jestconfig.js",
-    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "test": "npm run jest && npm run wdio",
+    "jest": "jest --config ../../jestconfig.js",
+    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
   }
 }

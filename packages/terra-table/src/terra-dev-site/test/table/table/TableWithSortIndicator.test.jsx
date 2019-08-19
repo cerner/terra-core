@@ -1,6 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import Table from '../../../../Table';
+import Table from 'terra-table';
 
 const TableWithSortingIndicator = () => (
   <Table isStriped={false}>

@@ -1,8 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import ActionHeader from 'terra-action-header/lib/ActionHeader';
+import ActionHeader from 'terra-action-header';
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import styles from './ActionHeaderDocCommon.scss';
 

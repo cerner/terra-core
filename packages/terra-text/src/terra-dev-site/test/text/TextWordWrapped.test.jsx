@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-
 import Text from '../../../Text';
 import styles from './TextTestCommon.module.scss';
 

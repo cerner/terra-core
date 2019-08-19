@@ -45,8 +45,10 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
     className="button neutral"
     disabled={false}
     onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    onMouseDown={[Function]}
     type="button"
   >
     <span
@@ -69,8 +71,10 @@ exports[`should render a Button with merged attributes 1`] = `
   data-mock="data"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   style={
     Object {
       "height": "100px",
@@ -96,8 +100,10 @@ exports[`should render a button with a title 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Custom Title"
   type="button"
 >
@@ -120,8 +126,10 @@ exports[`should render a button with accessible label 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -142,8 +150,10 @@ exports[`should render a button with type equal to button 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -164,8 +174,10 @@ exports[`should render a button with type equal to reset 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="reset"
 >
   <span
@@ -186,8 +198,10 @@ exports[`should render a button with type equal to submit 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="submit"
 >
   <span
@@ -208,8 +222,10 @@ exports[`should render a de-emphasis button 1`] = `
   className="button de-emphasis"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -230,8 +246,10 @@ exports[`should render a emphasis button 1`] = `
   className="button emphasis"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -252,8 +270,10 @@ exports[`should render a ghost button 1`] = `
   className="button ghost"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -274,8 +294,10 @@ exports[`should render a neutral button 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -297,8 +319,10 @@ exports[`should render a utility button 1`] = `
   className="button utility"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="utility"
   type="button"
 >
@@ -315,8 +339,10 @@ exports[`should render a utility button with a custom accessible label 1`] = `
   className="button utility"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Icon Only"
   type="button"
 >
@@ -333,8 +359,10 @@ exports[`should render a utility button with a custom title 1`] = `
   className="button utility"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Custom Title"
   type="button"
 >
@@ -351,8 +379,10 @@ exports[`should render a utility button with text as a fallback accessible label
   className="button utility"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Icon Only"
   type="button"
 >
@@ -369,8 +399,10 @@ exports[`should render a utility button with text as a fallback title 1`] = `
   className="button utility"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Icon Only"
   type="button"
 >
@@ -386,8 +418,10 @@ exports[`should render an action button 1`] = `
   className="button action"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -409,8 +443,10 @@ exports[`should render an icon 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="isIconOnly"
   type="button"
 >
@@ -435,8 +471,10 @@ exports[`should render an icon and a text 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -466,8 +504,10 @@ exports[`should render an icon only button with a custom accessible label 1`] = 
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Icon Only"
   type="button"
 >
@@ -484,8 +524,10 @@ exports[`should render an icon only button with a custom title 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Custom Title"
   type="button"
 >
@@ -502,8 +544,10 @@ exports[`should render an icon only button with text as a fallback accessible la
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Icon Only"
   type="button"
 >
@@ -520,8 +564,10 @@ exports[`should render an icon only button with text as a fallback title 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   title="Icon Only"
   type="button"
 >
@@ -538,8 +584,10 @@ exports[`should render as an anchor when provided an href 1`] = `
   disabled={false}
   href="MockHref"
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span
@@ -560,8 +608,10 @@ exports[`should render as disabled when set 1`] = `
   className="button neutral is-disabled"
   disabled={true}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   tabIndex="-1"
   type="button"
 >
@@ -583,8 +633,10 @@ exports[`should render text then an icon when reversed 1`] = `
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
+  onMouseDown={[Function]}
   type="button"
 >
   <span

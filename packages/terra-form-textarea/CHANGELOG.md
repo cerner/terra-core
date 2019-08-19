@@ -3,6 +3,36 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+3.22.0 - (August 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.21.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Updated errorIcon default prop from `Field.defaultProps.errorIcon` with `<IconError>` component.
+* updated package.json test scripts
+
+### Removed
+* Removed explicit calls to set `caret-color` to `transparent` in WDIO tests
+
+3.20.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Changed
+* Update tests for dev-site v6
 
 3.19.0 - (July 17, 2019)
 ------------------
@@ -13,6 +43,9 @@ Unreleased
 ------------------
 ## Changed
 * Replaced `Field.defaultProps.errorIcon` with `<IconError>` component.
+
+### Fixed
+* Fix min-height inline style bug - Use componentDidUpdate update to apply min height
 
 3.17.0 - (July 16, 2019)
 ------------------

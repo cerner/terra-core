@@ -3,6 +3,42 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+3.17.0 - (August 14, 2019)
+------------------
+### Added
+* Added new icon `IconCircleSymbolLight`
+* Added new icon `IconDiamondSymbolLight`
+* Added new icon `IconPlusSymbolLight`
+* Added new icon `IconRectangleSymbolLight`
+* Added new icon `IconSquareSymbolLight`
+* Added new icon `IconTeardropSymbolLight`
+* Added new icon `IconTeardropUpSymbolLight`
+* Added new icon `IconThinDiamondSymbolLight`
+* Added new icon `IconTriangleDownSymbolLight`
+* Added new icon `IconTriangleSymbolLight`
+* Added new icon `IconXSymbolLight`
+
+### Changed
+* updated package.json test scripts
+* Consume one-cerner-style-icons v1.27
+
+3.16.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.15.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.14.0 - (July 16, 2019)
 ------------------

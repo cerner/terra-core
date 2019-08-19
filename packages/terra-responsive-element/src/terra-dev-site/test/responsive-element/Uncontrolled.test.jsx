@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import ResponsiveElement from '../../../ResponsiveElement';
+import ResponsiveElement from 'terra-responsive-element';
 
 const Uncontrolled = () => (
   <ResponsiveElement

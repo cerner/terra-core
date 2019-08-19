@@ -1,4 +1,4 @@
-/* eslint-disable no-alert, import/no-extraneous-dependencies */
+/* eslint-disable no-alert */
 import React from 'react';
 import ActionHeader from '../../../ActionHeader';
 

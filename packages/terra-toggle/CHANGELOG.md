@@ -3,6 +3,32 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Import for package version from package.json added to doc page
+
+Unreleased
+------------------
+### Changed
+* Cleaned up imports in examples and test files
+
+3.18.0 - (August 14, 2019)
+------------------
+### Changed
+* updated package.json test scripts
+* Update tests for dev-site v6
+
+### Added
+* Added aria-expanded and aria-controls state to docs, examples and tests.
+
+3.17.0 - (July 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.16.0 - (July 24, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.15.0 - (July 16, 2019)
 ------------------

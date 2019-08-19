@@ -1,38 +1,33 @@
-import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SearchFieldExampleTemplate from 'terra-search-field/lib/terra-dev-site/doc/example/SearchFieldExampleTemplate';
-import Button from 'terra-button/lib/Button';
+import React, { useState, useRef } from 'react';
+import SearchField from 'terra-search-field';
+import Button from 'terra-button';
 
-class SearchFieldFocus extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-    this.handleButtonClick = this.handleButtonClick.bind(this);
-    this.state = { searchText: '' };
-  }
+const INVALID_MESSAGE = 'The default minimum search length is 2.';
 
-  onChange(event, text) {
-    this.setState({ searchText: text });
-  }
+const SearchFieldFocus = () => {
+  let searchElement = useRef(null);
+  const [searchText, setSearchText] = useState({ searchText: '' });
 
-  handleButtonClick() {
-    if (this.searchInput) {
-      this.searchInput.focus();
+  const message = searchText.length >= 2 ? `Search text: ${searchText}` : INVALID_MESSAGE;
+
+  const handleButtonClick = () => {
+    if (searchElement) {
+      searchElement.focus();
     }
-  }
+  };
 
-  render() {
-    return (
-      <React.Fragment>
-        <Button text="Focus Me" onClick={this.handleButtonClick} id="search-field-focus-button" />
-        <SearchFieldExampleTemplate
-          onChange={this.onChange}
-          value={this.state.searchText}
-          inputRefCallback={(inputRef) => { this.searchInput = inputRef; }}
-        />
-      </React.Fragment>
-    );
-  }
-}
+  return (
+    <div>
+      <Button text="Focus Me" onClick={handleButtonClick} id="search-field-focus-button" />
+      <p>{message}</p>
+      <SearchField
+        inputRefCallback={(inputRef) => { searchElement = inputRef; }}
+        onSearch={setSearchText}
+        onInvalidSearch={setSearchText}
+      />
+    </div>
+  );
+};
+
 
 export default SearchFieldFocus;

@@ -1,13 +1,12 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
-
 import Image from '../../../terra-image/lib/Image';
 import DemographicsBanner from '../../src/DemographicsBanner';
 
 it('renders a blank banner wrapper', () => {
   const banner = shallowWithIntl(<DemographicsBanner />);
-  expect(banner).toMatchSnapshot();
+  expect(banner.dive()).toMatchSnapshot();
 });
 
 it('renders the banner wrapper with all props', () => {
@@ -27,15 +26,5 @@ it('renders the banner wrapper with all props', () => {
     />
   ));
 
-  expect(banner).toMatchSnapshot();
-});
-
-it('throws error on missing locale prop in Base', () => {
-  global.console = { error: jest.fn() };
-
-  expect(() => {
-    render(<DemographicsBanner />);
-  }).toThrowError();
-  // eslint-disable-next-line no-console
-  expect(console.error).toBeCalledWith(expect.stringContaining('Component is internationalized, and must be wrapped in terra-base'));
+  expect(banner.dive()).toMatchSnapshot();
 });

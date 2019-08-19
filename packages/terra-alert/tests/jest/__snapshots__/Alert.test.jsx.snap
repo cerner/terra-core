@@ -78,7 +78,10 @@ exports[`Alert of type advisory with text content should render an Alert compone
             <strong
               className="title"
             >
-              Terra.alert.advisory
+              <FormattedMessage
+                id="Terra.alert.advisory"
+                values={Object {}}
+              />
             </strong>
             This is an advisory alert.
           </div>
@@ -126,7 +129,10 @@ exports[`Alert of type advisory with text content should render an Alert compone
             <strong
               className="title"
             >
-              Terra.alert.advisory
+              <FormattedMessage
+                id="Terra.alert.advisory"
+                values={Object {}}
+              />
             </strong>
             This is an advisory alert.
           </div>
@@ -226,7 +232,10 @@ exports[`Alert of type alert with text content should render an Alert component 
             <strong
               className="title"
             >
-              Terra.alert.alert
+              <FormattedMessage
+                id="Terra.alert.alert"
+                values={Object {}}
+              />
             </strong>
             This is a test
           </div>
@@ -282,7 +291,10 @@ exports[`Alert of type alert with text content should render an Alert component 
             <strong
               className="title"
             >
-              Terra.alert.alert
+              <FormattedMessage
+                id="Terra.alert.alert"
+                values={Object {}}
+              />
             </strong>
             This is a test
           </div>
@@ -543,7 +555,10 @@ exports[`Alert of type error with text content should render an Alert component 
             <strong
               className="title"
             >
-              Terra.alert.error
+              <FormattedMessage
+                id="Terra.alert.error"
+                values={Object {}}
+              />
             </strong>
             This is an error.
           </div>
@@ -599,7 +614,10 @@ exports[`Alert of type error with text content should render an Alert component 
             <strong
               className="title"
             >
-              Terra.alert.error
+              <FormattedMessage
+                id="Terra.alert.error"
+                values={Object {}}
+              />
             </strong>
             This is an error.
           </div>
@@ -859,7 +877,10 @@ exports[`Alert of type info with text content should render an Alert component o
             <strong
               className="title"
             >
-              Terra.alert.info
+              <FormattedMessage
+                id="Terra.alert.info"
+                values={Object {}}
+              />
             </strong>
             This is an information alert.
           </div>
@@ -915,7 +936,10 @@ exports[`Alert of type info with text content should render an Alert component o
             <strong
               className="title"
             >
-              Terra.alert.info
+              <FormattedMessage
+                id="Terra.alert.info"
+                values={Object {}}
+              />
             </strong>
             This is an information alert.
           </div>
@@ -1027,7 +1051,10 @@ exports[`Alert of type success with an action button text content should render 
             <strong
               className="title"
             >
-              Terra.alert.success
+              <FormattedMessage
+                id="Terra.alert.success"
+                values={Object {}}
+              />
             </strong>
             This is a success alert.
           </div>
@@ -1098,7 +1125,10 @@ exports[`Alert of type success with an action button text content should render 
             <strong
               className="title"
             >
-              Terra.alert.success
+              <FormattedMessage
+                id="Terra.alert.success"
+                values={Object {}}
+              />
             </strong>
             This is a success alert.
           </div>
@@ -1213,7 +1243,10 @@ exports[`Alert of type success with text content should render an Alert componen
             <strong
               className="title"
             >
-              Terra.alert.success
+              <FormattedMessage
+                id="Terra.alert.success"
+                values={Object {}}
+              />
             </strong>
             This is a success alert.
           </div>
@@ -1269,7 +1302,10 @@ exports[`Alert of type success with text content should render an Alert componen
             <strong
               className="title"
             >
-              Terra.alert.success
+              <FormattedMessage
+                id="Terra.alert.success"
+                values={Object {}}
+              />
             </strong>
             This is a success alert.
           </div>
@@ -1369,7 +1405,10 @@ exports[`Alert of type warning with text content should render an Alert componen
             <strong
               className="title"
             >
-              Terra.alert.warning
+              <FormattedMessage
+                id="Terra.alert.warning"
+                values={Object {}}
+              />
             </strong>
             This is an warning.
           </div>
@@ -1425,7 +1464,10 @@ exports[`Alert of type warning with text content should render an Alert componen
             <strong
               className="title"
             >
-              Terra.alert.warning
+              <FormattedMessage
+                id="Terra.alert.warning"
+                values={Object {}}
+              />
             </strong>
             This is an warning.
           </div>
@@ -1525,7 +1567,10 @@ exports[`Alert with no props should render a default component 1`] = `
             <strong
               className="title"
             >
-              Terra.alert.alert
+              <FormattedMessage
+                id="Terra.alert.alert"
+                values={Object {}}
+              />
             </strong>
             
           </div>
@@ -1581,7 +1626,10 @@ exports[`Alert with no props should render a default component 1`] = `
             <strong
               className="title"
             >
-              Terra.alert.alert
+              <FormattedMessage
+                id="Terra.alert.alert"
+                values={Object {}}
+              />
             </strong>
             
           </div>
@@ -1717,17 +1765,12 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             type="button"
             variant="emphasis"
           />
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
-            onClick={[Function]}
-            text="Terra.alert.dismiss"
-            type="button"
-            variant="neutral"
-          />
+          <FormattedMessage
+            id="Terra.alert.dismiss"
+            values={Object {}}
+          >
+            [Function]
+          </FormattedMessage>
         </div>
       </div>
     }
@@ -1798,17 +1841,12 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             type="button"
             variant="emphasis"
           />
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
-            onClick={[Function]}
-            text="Terra.alert.dismiss"
-            type="button"
-            variant="neutral"
-          />
+          <FormattedMessage
+            id="Terra.alert.dismiss"
+            values={Object {}}
+          >
+            [Function]
+          </FormattedMessage>
         </div>
       </div>
     }
@@ -1904,7 +1942,10 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             <strong
               className="title"
             >
-              Terra.alert.alert
+              <FormattedMessage
+                id="Terra.alert.alert"
+                values={Object {}}
+              />
             </strong>
             This is a test
           </div>
@@ -1912,17 +1953,12 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         <div
           className="actions"
         >
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
-            onClick={[Function]}
-            text="Terra.alert.dismiss"
-            type="button"
-            variant="neutral"
-          />
+          <FormattedMessage
+            id="Terra.alert.dismiss"
+            values={Object {}}
+          >
+            [Function]
+          </FormattedMessage>
         </div>
       </div>
     }
@@ -1974,7 +2010,10 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             <strong
               className="title"
             >
-              Terra.alert.alert
+              <FormattedMessage
+                id="Terra.alert.alert"
+                values={Object {}}
+              />
             </strong>
             This is a test
           </div>
@@ -1982,17 +2021,12 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         <div
           className="actions"
         >
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
-            onClick={[Function]}
-            text="Terra.alert.dismiss"
-            type="button"
-            variant="neutral"
-          />
+          <FormattedMessage
+            id="Terra.alert.dismiss"
+            values={Object {}}
+          >
+            [Function]
+          </FormattedMessage>
         </div>
       </div>
     }
