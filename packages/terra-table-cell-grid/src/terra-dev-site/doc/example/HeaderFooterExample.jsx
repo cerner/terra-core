@@ -1,7 +1,7 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import TableCellGrid, {
-  HeaderCell, CellGrid, Cell,
+  Header, HeaderCell, CellGrid, Cell,
 } from 'terra-table-cell-grid';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import FixedNode from '../common/FixedNode';
@@ -12,11 +12,13 @@ const HeaderFooterExample = () => (
     footerNode={<FixedNode title="Footer" />}
     paddingStyle="default"
     id="Table"
-    headerCells={[
-      <HeaderCell isPadded key="NAME">Name</HeaderCell>,
-      <HeaderCell isPadded key="ADDRESS">Address</HeaderCell>,
-      <HeaderCell isPadded key="PHONE_NUMBER">Phone Number</HeaderCell>,
-    ]}
+    header={(
+      <Header>
+        <HeaderCell key="NAME" isPadded>Name</HeaderCell>
+        <HeaderCell key="ADDRESS" isPadded>Address</HeaderCell>
+        <HeaderCell key="PHONE_NUMBER" isPadded>Phone Number</HeaderCell>
+      </Header>
+    )}
   >
     <CellGrid key="PERSON_0">
       <Cell isPadded key="NAME">John Smith</Cell>

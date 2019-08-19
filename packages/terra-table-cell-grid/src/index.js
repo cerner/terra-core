@@ -3,6 +3,7 @@ import CellGrid from './CellGrid';
 import Cell from './Cell';
 import ChevronCell from './ChevronCell';
 import CheckMarkCell from './CheckMarkCell';
+import Header from './Header';
 import HeaderCell from './HeaderCell';
 import HeaderChevronCell from './HeaderChevronCell';
 import HeaderCheckMarkCell from './HeaderCheckMarkCell';
@@ -18,6 +19,7 @@ export {
   Cell,
   ChevronCell,
   CheckMarkCell,
+  Header,
   HeaderCell,
   HeaderChevronCell,
   HeaderCheckMarkCell,

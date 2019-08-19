@@ -5,6 +5,7 @@ import TableCellGrid, {
   CellGrid,
   Cell,
   Section,
+  Header,
   HeaderCell,
   Utils,
 } from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
@@ -42,11 +43,13 @@ const SectionTable = () => {
   return (
     <TableCellGrid
       paddingStyle="standard"
-      headerCells={[
-        <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>,
-        <HeaderCell isPadded key="cell-2">Column 1</HeaderCell>,
-        <HeaderCell isPadded key="cell-3">Column 2</HeaderCell>,
-      ]}
+      header={(
+        <Header>
+          <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>
+          <HeaderCell isPadded key="cell-2">Column 1</HeaderCell>
+          <HeaderCell isPadded key="cell-3">Column 2</HeaderCell>
+        </Header>
+      )}
     >
       {createSections(mockData)}
     </TableCellGrid>

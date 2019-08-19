@@ -14,7 +14,7 @@ const propTypes = {
   /**
    * The header passed to the table
    */
-  headerCells: PropTypes.arrayOf(PropTypes.element),
+  header: PropTypes.element,
   /**
    * The padding styling to apply to the child list item content.
    * One of `'none'`, `'standard'`, `'compact'`.
@@ -33,7 +33,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  headerCells: [],
   paddingStyle: 'none',
   fill: false,
 };
@@ -42,7 +41,7 @@ const TableCellGrid = ({
   children,
   fill,
   footerNode,
-  headerCells,
+  header,
   headerNode,
   paddingStyle,
   scrollRefCallback,
@@ -53,19 +52,7 @@ const TableCellGrid = ({
     attrSpread['data-table-padding'] = paddingStyle;
   }
 
-  let header;
-  let makeInline = false;
-  if (headerCells.length) {
-    makeInline = headerCells.every(cell => (cell.props.width && cell.props.width.static));
-    header = (
-      <div className={cx(['header'])} role="rowgroup">
-        <div className={cx(['header-content'])} role="row">
-          {headerCells}
-        </div>
-      </div>
-    );
-  }
-
+  const makeInline = React.Children.toArray(header.props.children).every(cell => (cell.props.width && cell.props.width.static));
   const hasEndNodes = headerNode || footerNode;
 
   const tableClassNames = cx([

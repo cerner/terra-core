@@ -2,7 +2,7 @@ import React, {
   useState,
 } from 'react';
 import TableCellGrid, {
-  CellGrid, Cell, HeaderCell, HeaderChevronCell,
+  CellGrid, Cell, Header, HeaderCell,
 } from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -38,13 +38,14 @@ const SingleSelectTable = () => {
   return (
     <TableCellGrid
       paddingStyle="standard"
-      headerCells={[
-        <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>,
-        <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>,
-        <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>,
-        <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>,
-        <HeaderChevronCell isPadded key="chevron" />,
-      ]}
+      header={(
+        <Header selectionStyle="chevron">
+          <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>
+          <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>
+          <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>
+          <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>
+        </Header>
+      )}
     >
       {createCellGrids(mockData)}
     </TableCellGrid>

@@ -1,6 +1,6 @@
 import React from 'react';
 import TableCellGrid, {
-  CellGrid, Cell, HeaderCell,
+  CellGrid, Cell, Header, HeaderCell,
 } from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -26,12 +26,14 @@ const createCellGrids = data => data.map(childItem => createCellGrid(childItem))
 const FixedWidthTable = () => (
   <TableCellGrid
     paddingStyle="standard"
-    headerCells={[
-      <HeaderCell isPadded key="cell-0" width={widths[0]}>60px</HeaderCell>,
-      <HeaderCell isPadded key="cell-1" width={widths[1]}>45px</HeaderCell>,
-      <HeaderCell isPadded key="cell-2" width={widths[2]}>5rem</HeaderCell>,
-      <HeaderCell isPadded key="cell-3" width={widths[3]}>120px</HeaderCell>,
-    ]}
+    header={(
+      <Header>
+        <HeaderCell isPadded key="cell-0" width={widths[0]}>60px</HeaderCell>
+        <HeaderCell isPadded key="cell-1" width={widths[1]}>45px</HeaderCell>
+        <HeaderCell isPadded key="cell-2" width={widths[2]}>5rem</HeaderCell>
+        <HeaderCell isPadded key="cell-3" width={widths[3]}>120px</HeaderCell>
+      </Header>
+    )}
   >
     {createCellGrids(mockData)}
   </TableCellGrid>

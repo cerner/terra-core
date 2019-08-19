@@ -3,7 +3,7 @@ import React, {
   useState,
 } from 'react';
 import TableCellGrid, {
-  CellGrid, Cell, HeaderCell, Utils, CheckMarkCell, HeaderCheckMarkCell,
+  CellGrid, Cell, Header, HeaderCell, Utils, CheckMarkCell, HeaderCheckMarkCell,
 } from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -63,13 +63,15 @@ const MultiSelectTable = () => {
     <TableCellGrid
       aria-multiselectable
       paddingStyle="standard"
-      headerCells={[
-        <HeaderCheckMarkCell isSelected={headerState !== 'none'} isIntermediate={headerState === 'intermediate'} onSelect={handleHeaderMarkSelection} isPadded isSelectable key="derp" />,
-        <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>,
-        <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>,
-        <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>,
-        <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>,
-      ]}
+      header={(
+        <Header>
+          <HeaderCheckMarkCell isSelected={headerState !== 'none'} isIntermediate={headerState === 'intermediate'} onSelect={handleHeaderMarkSelection} isPadded isSelectable key="derp" />
+          <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>
+          <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>
+          <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>
+          <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>
+        </Header>
+      )}
     >
       {createCellGrids(mockData)}
     </TableCellGrid>

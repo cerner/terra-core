@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import TableCellGrid, {
-  HeaderCell, CellGrid, Cell,
+  Header, HeaderCell, CellGrid, Cell,
 } from 'terra-table-cell-grid';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
@@ -16,11 +16,13 @@ const NoPaddingTable = ({
   <TableCellGrid
     paddingStyle={paddingStyle}
     id="Table"
-    headerCells={[
-      <HeaderCell isPadded key="NAME">Name</HeaderCell>,
-      <HeaderCell isPadded key="ADDRESS">Address</HeaderCell>,
-      <HeaderCell isPadded key="PHONE_NUMBER">Phone Number</HeaderCell>,
-    ]}
+    header={(
+      <Header>
+        <HeaderCell key="NAME" isPadded>Name</HeaderCell>
+        <HeaderCell key="ADDRESS" isPadded>Address</HeaderCell>
+        <HeaderCell key="PHONE_NUMBER" isPadded>Phone Number</HeaderCell>
+      </Header>
+    )}
   >
     <CellGrid key="PERSON_0">
       <Cell isPadded key="NAME">John Smith</Cell>
