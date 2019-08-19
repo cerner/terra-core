@@ -1,7 +1,5 @@
 import React from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import VisuallyHiddenText from 'terra-visually-hidden-text/lib/VisuallyHiddenText';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 export default () => (
   <p>

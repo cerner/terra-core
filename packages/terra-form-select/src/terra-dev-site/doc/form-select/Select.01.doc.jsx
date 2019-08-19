@@ -1,9 +1,8 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
 import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
@@ -32,11 +31,11 @@ import SearchExample from '../example/legacy/Search';
 import SearchExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Search';
 import TagExample from '../example/legacy/Tag'; // eslint-disable-line
 import TagExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Tag'; // eslint-disable-line
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const Index = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
     propsTables={[{

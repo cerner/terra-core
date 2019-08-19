@@ -1,7 +1,6 @@
 import React from 'react';
 import Arrange from 'terra-arrange';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Heading from 'terra-heading/lib/Heading';
+import Heading from 'terra-heading';
 import classNames from 'classnames/bind';
 import styles from './HeadingDocCommon.module.scss';
 

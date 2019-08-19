@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Overlay from '../../../../Overlay';
 
 class OverlayExample extends React.Component {

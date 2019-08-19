@@ -6,7 +6,6 @@ import ResponsiveElement from 'terra-responsive-element';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import KeyCode from 'keycode-js';
 import styles from './Paginator.module.scss';
-
 import { calculatePages } from './_paginationUtils';
 
 const cx = classNames.bind(styles);

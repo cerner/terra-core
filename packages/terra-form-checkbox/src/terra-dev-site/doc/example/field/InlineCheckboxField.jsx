@@ -1,8 +1,5 @@
 import React from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Checkbox from 'terra-form-checkbox/lib/Checkbox';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Checkbox from 'terra-form-checkbox';
 import CheckboxField from 'terra-form-checkbox/lib/CheckboxField';
 import classNames from 'classnames/bind';
 import styles from './InlineCheckboxField.module.scss';

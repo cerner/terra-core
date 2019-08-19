@@ -8,9 +8,8 @@ import HeadingColorDocs from '../../../../docs/heading-colors.md';
 import HeadingWeightDocs from '../../../../docs/heading-weights.md';
 import HeadingVisuallyHiddenDocs from '../../../../docs/heading-visually-hidden.md';
 import HeadingVariationDocs from '../../../../docs/heading-variations.md';
-import { name } from '../../../../package.json';
+import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import HeadingSrc from '!raw-loader!../../../../src/Heading';
 
@@ -27,11 +26,11 @@ import HeadingWeights from '../example/HeadingWeights';
 import HeadingWeightsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingWeights';
 import HeadingVariations from '../example/HeadingVariations';
 import HeadingVariationsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingVariations';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate
     packageName={name}
+    packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[

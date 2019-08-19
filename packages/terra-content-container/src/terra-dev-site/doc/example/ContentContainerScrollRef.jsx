@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentContainer from 'terra-content-container';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import ContentContainer from 'terra-content-container/lib/ContentContainer';
 import classNames from 'classnames/bind';
+
 import styles from './ContentContainerDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
@@ -31,11 +33,20 @@ pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
 );
 
 const contentheader = <h3>Display Header</h3>;
-const contentfooter = <h3>Display Footer</h3>;
+const contentfooter = <h3 id="contentfooter">Children count is </h3>;
+
+const onContainerScroll = scrollRef => (
+  document.getElementById('contentfooter').append(` ${scrollRef.children.length}`)
+);
 
 const container = () => (
   <div className={cx('content-container-fill')}>
-    <ContentContainer header={contentheader} footer={contentfooter} fill>
+    {
+      /**
+       * ScrollRefCallback is used to refer to the scrollable area of the content container DOM element.
+       */
+    }
+    <ContentContainer header={contentheader} footer={contentfooter} fill scrollRefCallback={onContainerScroll}>
       <div key="1">
         {display1}
       </div>

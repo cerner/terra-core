@@ -1,8 +1,6 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import ProfileImage from 'terra-profile-image/lib/ProfileImage';
+import ProfileImage from 'terra-profile-image';
 import exampleProfileImage from 'terra-profile-image/lib/terra-dev-site/doc/example/150x150.jpg';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const ProfileImageDefault = () => (
   <div>

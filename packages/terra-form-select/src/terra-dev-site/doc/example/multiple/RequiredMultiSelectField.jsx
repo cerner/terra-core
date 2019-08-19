@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import MultiSelectField from 'terra-form-select/lib/MultiSelectField';
 import classNames from 'classnames/bind';
 import styles from '../FormSelectDocCommon.module.scss';

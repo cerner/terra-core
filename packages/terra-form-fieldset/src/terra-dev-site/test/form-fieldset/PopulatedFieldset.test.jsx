@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Fieldset from '../../../Fieldset';
 
 const fieldset = () => (

@@ -1,4 +1,4 @@
-/* eslint-disable no-alert, import/no-extraneous-dependencies */
+/* eslint-disable no-alert */
 import React from 'react';
 import Button from 'terra-button';
 import ActionHeader from '../../../ActionHeader';

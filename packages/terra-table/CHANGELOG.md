@@ -8,7 +8,11 @@ Unreleased
 * Removed Component `SingleSelectList` - No longer supported this uncontrolled variant of list.
 * Removed Component `MultiSelectList` - No longer supported this uncontrolled variant of list.
 * Removed Component `SelectableList` - Selection no longer supported.
-* Removed Utils `TableUtils` - Selection no longer supported..
+* Removed Utils `TableUtils` - Selection no longer supported.
+
+### Changed
+* Import for package version from package.json added to doc page
+* Cleaned up imports in examples and test files
 
 3.22.0 - (August 14, 2019)
 ------------------
