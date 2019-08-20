@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SectionHeader from '../../../SectionHeader';
 
 const TransparentOnClickSectionHeader = () => (

@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Field from 'terra-form-field/lib/Field';
+import Field from 'terra-form-field';
 import classNames from 'classnames/bind';
 import styles from './FieldExamples.module.scss';
 

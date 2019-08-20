@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Avatar from 'terra-avatar/lib/index';
+import Avatar from 'terra-avatar';
 
 const AvatarTwoInitials = () => (
   <Avatar alt="John Doe" initials="JD" />

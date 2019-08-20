@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import { Facility } from 'terra-avatar/lib/index';
+import { Facility } from 'terra-avatar';
 
 const AvatarFacility = () => (
   <Facility alt="South Surgical Center" />

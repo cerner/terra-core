@@ -1,12 +1,10 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 import List, {
   Item,
   Section,
   Subsection,
   Utils,
-} from 'terra-list/lib/index';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved */
+} from 'terra-list';
 
 import Placeholder from 'terra-doc-template/lib/Placeholder';
 import classNames from 'classnames/bind';

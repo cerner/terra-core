@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import ResponsiveElement from '../../../ResponsiveElement';
+import ResponsiveElement from 'terra-responsive-element';
 
 const TinyAndMedium = () => (
   <ResponsiveElement tiny={<div>Tiny - Small</div>} medium={<div>Medium - Enormous</div>} />

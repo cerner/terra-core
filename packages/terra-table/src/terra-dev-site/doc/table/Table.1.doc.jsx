@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import TableSrc from '!raw-loader!../../../../src/Table';
 import TableHeaderSrc from '!raw-loader!../../../../src/TableHeader';
@@ -11,7 +10,6 @@ import TableHeaderCellSrc from '!raw-loader!../../../../src/TableHeaderCell';
 import TableRowSrc from '!raw-loader!../../../../src/TableRow';
 import TableCellSrc from '!raw-loader!../../../../src/TableCell';
 import TableSubheaderSrc from '!raw-loader!../../../../src/TableSubheader';
-
 import NoStripedTable from '../example/NoStripedTable';
 import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoStripedTable';
 import NoPaddingTable from '../example/NoPaddingTable';
@@ -30,7 +28,6 @@ import TableWithCustomCells from '../example/TableWithCustomCells';
 import TableWithCustomCellsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithCustomCells';
 import TableWithSubheaders from '../example/TableWithSubheaders';
 import TableWithSubheadersSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithSubheaders';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

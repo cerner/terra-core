@@ -1,8 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import { I18nProvider, i18nLoader } from 'terra-i18n/lib/I18n';
+import { I18nProvider, i18nLoader } from 'terra-i18n';
 
 class Demo extends React.Component {
   constructor(props) {

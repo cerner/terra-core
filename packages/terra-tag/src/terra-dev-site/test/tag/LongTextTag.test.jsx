@@ -1,6 +1,5 @@
 /* eslint-disable no-alert */
 import React from 'react';
-
 import IconBookmark from 'terra-icon/lib/icon/IconTile';
 import classNames from 'classnames/bind';
 import Tag from '../../../Tag';

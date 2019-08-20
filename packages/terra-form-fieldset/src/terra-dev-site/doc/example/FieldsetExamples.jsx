@@ -1,8 +1,7 @@
 import React from 'react';
 import Field from 'terra-form-field';
 import Input from 'terra-form-input';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import Fieldset from 'terra-form-fieldset/lib/Fieldset';
+import Fieldset from 'terra-form-fieldset';
 import classNames from 'classnames/bind';
 import styles from './FieldsetExamples.module.scss';
 

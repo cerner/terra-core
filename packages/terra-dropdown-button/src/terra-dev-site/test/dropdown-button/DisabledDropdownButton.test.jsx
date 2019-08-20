@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
 import classnames from 'classnames/bind';
-
 import DropdownButton, { Item } from '../../../DropdownButton';
 import styles from './ExtraSpacing.module.scss';
 

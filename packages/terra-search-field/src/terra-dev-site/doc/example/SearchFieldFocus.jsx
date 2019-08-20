@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
-import SearchField from 'terra-search-field/lib/SearchField';
+import SearchField from 'terra-search-field';
 import Button from 'terra-button';
 
 const INVALID_MESSAGE = 'The default minimum search length is 2.';

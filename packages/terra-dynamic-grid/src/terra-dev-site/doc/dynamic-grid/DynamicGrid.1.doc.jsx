@@ -3,7 +3,6 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import DynamicGridSrc from '!raw-loader!../../../../src/DynamicGrid';
 import RegionSrc from '!raw-loader!../../../../src/Region';
@@ -19,7 +18,6 @@ import Dashboard from '../example/Dashboard';
 import DashboardSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Dashboard';
 import ResponsiveGrid from '../example/ResponsiveGrid';
 import ResponsiveGridSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ResponsiveGrid';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate
