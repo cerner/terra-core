@@ -63,7 +63,7 @@ const propTypes = {
     propsResolution: PropTypes.string,
   })),
   /**
-   * Prop tables generated automatically
+   * Prop table(s) from generated markdown files.
    */
   propsTablesMarkdown: PropTypes.arrayOf(PropTypes.string),
 };

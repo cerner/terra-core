@@ -139,9 +139,9 @@ class WebpackPropsPlugin {
       const formattedMarkdownRows = [];
       const propsArray = Object.entries(propTable);
 
-      // Push completely formatted table rows to an array.
+      // Push completely formatted table rows to an array, skipping private props.
       propsArray.forEach((propSet) => {
-        if (propSet.indexOf('intl') > -1) return;
+        if (propSet[1].description.includes('@private')) return;
         formattedMarkdownRows.push(createTableRow(formatPropShape(propSet)));
       });
 
