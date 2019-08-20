@@ -3,7 +3,7 @@ import TableCellGrid, {
   CellGrid, Cell,
 } from '../../../index';
 
-const TableRowTest = () => (
+const CellGridTest = () => (
   <TableCellGrid
     id="Table"
   >
@@ -25,4 +25,4 @@ const TableRowTest = () => (
   </TableCellGrid>
 );
 
-export default TableRowTest;
+export default CellGridTest;

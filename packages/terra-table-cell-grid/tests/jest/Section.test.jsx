@@ -4,59 +4,59 @@ import CellGrid from '../../src/CellGrid';
 
 // Snapshot test
 it('should render a default section', () => {
-  const section = shallow(
-    <Section colSpan={1} title="test" />,
+  const shallowComponent = shallow(
+    <Section title="test" />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a section with a row', () => {
-  const section = shallow(
-    <Section colSpan={1} title="test">
+  const shallowComponent = shallow(
+    <Section title="test">
       <CellGrid />
     </Section>,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a section with isCollpased', () => {
-  const section = shallow(
-    <Section colSpan={1} title="test" isCollapsed />,
+  const shallowComponent = shallow(
+    <Section title="test" isCollapsed />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a section with isCollapsible', () => {
-  const section = shallow(
-    <Section colSpan={1} title="test" isCollapsible />,
+  const shallowComponent = shallow(
+    <Section title="test" isCollapsible />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a section with level', () => {
-  const section = shallow(
-    <Section colSpan={1} title="test" level={3} />,
+  const shallowComponent = shallow(
+    <Section title="test" level={3} />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a section with metaData', () => {
-  const section = shallow(
-    <Section colSpan={1} title="test" metaData={{}} />,
+  const shallowComponent = shallow(
+    <Section title="test" metaData={{}} />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a section with onSelect', () => {
-  const section = shallow(
-    <Section colSpan={1} title="test" onSelect={jest.fn()} />,
+  const shallowComponent = shallow(
+    <Section title="test" onSelect={jest.fn()} />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a section with refCallback', () => {
-  const section = shallow(
-    <Section colSpan={1} title="test" refCallback={jest.fn()} />,
+  const shallowComponent = shallow(
+    <Section title="test" refCallback={jest.fn()} />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });

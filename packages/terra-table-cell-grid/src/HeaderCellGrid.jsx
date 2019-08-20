@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import HeaderCheckMarkCell from './HeaderCheckMarkCell';
 import HeaderChevronCell from './HeaderChevronCell';
 
-import styles from './Header.module.scss';
+import styles from './HeaderCellGrid.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -29,7 +29,7 @@ const defaultProps = {
   selectionStyle: 'default',
 };
 
-const Header = ({
+const HeaderCellGrid = ({
   children,
   refCallback,
   selectionStyle,
@@ -63,7 +63,7 @@ const Header = ({
   );
 };
 
-Header.propTypes = propTypes;
-Header.defaultProps = defaultProps;
+HeaderCellGrid.propTypes = propTypes;
+HeaderCellGrid.defaultProps = defaultProps;
 
-export default Header;
+export default HeaderCellGrid;

@@ -1,13 +1,13 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import TableCellGrid, { Header, HeaderCell } from 'terra-table-cell-grid';
+import TableCellGrid, { HeaderCellGrid, HeaderCell } from 'terra-table-cell-grid';
 import CommonIcon from '../common/CommonIcon';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableHeaderCellExample = () => (
   <TableCellGrid
-    header={(
-      <Header>
+    headerGrid={(
+      <HeaderCellGrid>
         <HeaderCell
           key="cell-0"
         >
@@ -40,7 +40,7 @@ const TableHeaderCellExample = () => (
           sort="asc"
           key="cell-4"
         />
-      </Header>
+      </HeaderCellGrid>
     )}
   />
 );

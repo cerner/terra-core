@@ -1,7 +1,7 @@
 import React from 'react';
 import TableCellGrid, { CellGrid, Cell, Subsection } from '../../../index';
 
-const TableSubsectionTest = () => (
+const SubsectionTest = () => (
   <TableCellGrid>
     <Subsection title="Default Subsection" key="default-subsection">
       <CellGrid>
@@ -27,4 +27,4 @@ const TableSubsectionTest = () => (
   </TableCellGrid>
 );
 
-export default TableSubsectionTest;
+export default SubsectionTest;

@@ -1,6 +1,6 @@
 import React from 'react';
 import TableCellGrid, {
-  CellGrid, Cell, Header, HeaderCell,
+  CellGrid, Cell, HeaderCellGrid, HeaderCell,
 } from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
@@ -26,13 +26,13 @@ const createCellGrids = data => data.map(childItem => createCellGrid(childItem))
 const PercentageWidthTable = () => (
   <TableCellGrid
     paddingStyle="standard"
-    header={(
-      <Header>
+    headerCellGrid={(
+      <HeaderCellGrid>
         <HeaderCell isPadded key="cell-0" width={widths[0]}>20%</HeaderCell>
         <HeaderCell isPadded key="cell-1" width={widths[1]}>40%</HeaderCell>
         <HeaderCell isPadded key="cell-2" width={widths[2]}>10%</HeaderCell>
         <HeaderCell isPadded key="cell-3" width={widths[3]}>30%</HeaderCell>
-      </Header>
+      </HeaderCellGrid>
     )}
   >
     {createCellGrids(mockData)}

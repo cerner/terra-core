@@ -2,7 +2,7 @@ import React, {
   useState,
 } from 'react';
 import Table, {
-  CellGrid, Cell, Header, HeaderCell,
+  CellGrid, Cell, HeaderCellGrid, HeaderCell,
 } from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-sort';
 
@@ -72,12 +72,12 @@ const SortedTable = () => {
   return (
     <Table
       paddingStyle="standard"
-      header={(
-        <Header>
+      headerCellGrid={(
+        <HeaderCellGrid>
           {createHeaderCell('column-0', 'Breakfast')}
           {createHeaderCell('column-1', 'Animals')}
           {createHeaderCell('column-2', 'Flatware')}
-        </Header>
+        </HeaderCellGrid>
       )}
     >
       {createCellGrids(mockData)}

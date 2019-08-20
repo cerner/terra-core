@@ -12,9 +12,21 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The header passed to the table
+   * The HeaderCellGrid passed to the table, should have widths aligned with the child CellGrids.
    */
-  header: PropTypes.element,
+  headerCellGrid: PropTypes.element,
+  /**
+   * Element to append to the top of the table cell grid. i.e. toolbars etc.
+   */
+  headerNode: PropTypes.node,
+  /**
+   * Whether or not the table should expanded to fill its parent element.
+   */
+  fill: PropTypes.bool,
+  /**
+   * Element to append to the bottom of the table cell grid. i.e. toolbars etc.
+   */
+  footerNode: PropTypes.node,
   /**
    * The padding styling to apply to the child list item content.
    * One of `'none'`, `'standard'`, `'compact'`.
@@ -24,12 +36,6 @@ const propTypes = {
    * Function callback for the ref of the table.
    */
   scrollRefCallback: PropTypes.func,
-  /**
-   * Whether or not the table should expanded to fill its parent element.
-   */
-  fill: PropTypes.bool,
-  headerNode: PropTypes.node,
-  footerNode: PropTypes.node,
 };
 
 const defaultProps = {
@@ -41,7 +47,7 @@ const TableCellGrid = ({
   children,
   fill,
   footerNode,
-  header,
+  headerCellGrid,
   headerNode,
   paddingStyle,
   scrollRefCallback,
@@ -52,7 +58,7 @@ const TableCellGrid = ({
     attrSpread['data-table-padding'] = paddingStyle;
   }
 
-  const makeInline = React.Children.toArray(header.props.children).every(cell => (cell.props.width && cell.props.width.static));
+  const makeInline = React.Children.toArray(headerCellGrid.props.children).every(cell => (cell.props.width && cell.props.width.static));
   const hasEndNodes = headerNode || footerNode;
 
   const tableClassNames = cx([
@@ -65,7 +71,7 @@ const TableCellGrid = ({
 
   const cellGrid = (
     <div {...customProps} {...attrSpread} className={tableClassNames} role="grid">
-      {header}
+      {headerCellGrid}
       <div className={cx(['body'])} role="rowgroup" ref={scrollRefCallback}>
         {children}
       </div>

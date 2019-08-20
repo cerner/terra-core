@@ -3,56 +3,56 @@ import SubsectionHeader from '../../src/SubsectionHeader';
 
 // Snapshot test
 it('should render a default subsection header', () => {
-  const section = shallow(
-    <SubsectionHeader colSpan={1} title="test" />,
+  const shallowComponent = shallow(
+    <SubsectionHeader title="test" />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a subsection header with isCollpased', () => {
-  const section = shallow(
-    <SubsectionHeader colSpan={1} title="test" isCollapsed />,
+  const shallowComponent = shallow(
+    <SubsectionHeader title="test" isCollapsed />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a subsection header with isCollapsible', () => {
-  const section = shallow(
-    <SubsectionHeader colSpan={1} title="test" isCollapsible />,
+  const shallowComponent = shallow(
+    <SubsectionHeader title="test" isCollapsible />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a subsection header with level', () => {
-  const section = shallow(
-    <SubsectionHeader colSpan={1} title="test" level={4} />,
+  const shallowComponent = shallow(
+    <SubsectionHeader title="test" level={4} />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a subsection header with metaData', () => {
-  const section = shallow(
-    <SubsectionHeader colSpan={1} title="test" metaData={{}} />,
+  const shallowComponent = shallow(
+    <SubsectionHeader title="test" metaData={{}} />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a subsection header with onSelect', () => {
   const mockCallBack = jest.fn();
 
-  const section = shallow(
-    <SubsectionHeader colSpan={1} title="test" isCollapsible onSelect={mockCallBack} />,
+  const shallowComponent = shallow(
+    <SubsectionHeader title="test" isCollapsible onSelect={mockCallBack} />,
   );
-  expect(section).toMatchSnapshot();
-  section.find('tr').simulate('click');
-  section.find('tr').simulate('keydown', { nativeEvent: { keyCode: 13 } });
-  section.find('tr').simulate('keydown', { nativeEvent: { keyCode: 32 } });
+  expect(shallowComponent).toMatchSnapshot();
+  shallowComponent.find('tr').simulate('click');
+  shallowComponent.find('tr').simulate('keydown', { nativeEvent: { keyCode: 13 } });
+  shallowComponent.find('tr').simulate('keydown', { nativeEvent: { keyCode: 32 } });
   expect(mockCallBack.mock.calls.length).toEqual(3);
 });
 
 it('should render a subsection header with refCallback', () => {
-  const section = shallow(
-    <SubsectionHeader colSpan={1} title="test" refCallback={jest.fn()} />,
+  const shallowComponent = shallow(
+    <SubsectionHeader title="test" refCallback={jest.fn()} />,
   );
-  expect(section).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });

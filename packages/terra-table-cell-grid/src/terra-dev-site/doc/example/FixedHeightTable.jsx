@@ -1,7 +1,7 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import TableCellGrid, {
-  HeaderCell, CellGrid, Cell, Header,
+  HeaderCell, CellGrid, Cell, HeaderCellGrid,
 } from 'terra-table-cell-grid';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import FixedHeight from '../common/FixedHeight';
@@ -12,12 +12,12 @@ const FixedHeightTable = () => (
       id="Table"
       fill
       paddingStyle="standard"
-      header={(
-        <Header>
+      headerGrid={(
+        <HeaderCellGrid>
           <HeaderCell key="NAME" isPadded>Name</HeaderCell>
           <HeaderCell key="ADDRESS" isPadded>Address</HeaderCell>
           <HeaderCell key="PHONE_NUMBER" isPadded>Phone Number</HeaderCell>
-        </Header>
+        </HeaderCellGrid>
       )}
     >
       <CellGrid key="PERSON_0">

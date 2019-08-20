@@ -1,10 +1,10 @@
 import TableCellGrid from './TableCellGrid';
-import CellGrid from './CellGrid';
 import Cell from './Cell';
+import CellGrid from './CellGrid';
 import ChevronCell from './ChevronCell';
 import CheckMarkCell from './CheckMarkCell';
-import Header from './Header';
 import HeaderCell from './HeaderCell';
+import HeaderCellGrid from './HeaderCellGrid';
 import HeaderChevronCell from './HeaderChevronCell';
 import HeaderCheckMarkCell from './HeaderCheckMarkCell';
 import Section from './Section';
@@ -15,12 +15,12 @@ import Utils from './TableUtils';
 
 export default TableCellGrid;
 export {
-  CellGrid,
   Cell,
+  CellGrid,
   ChevronCell,
   CheckMarkCell,
-  Header,
   HeaderCell,
+  HeaderCellGrid,
   HeaderChevronCell,
   HeaderCheckMarkCell,
   Section,
