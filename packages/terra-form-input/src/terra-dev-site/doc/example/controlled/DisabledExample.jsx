@@ -24,7 +24,6 @@ class DisabledExample extends React.Component {
             name="disabled input"
             id="controlled-disabled"
             onChange={this.handleChange}
-            ariaLabel="form-input-label"
           />
         </Field>
         <p>

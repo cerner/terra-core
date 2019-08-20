@@ -2,7 +2,6 @@
 
 exports[`Input should pass in refCallback as the ref prop of the input element 1`] = `
 <Input
-  ariaLabel="label"
   disabled={false}
   isInvalid={false}
   name={null}
@@ -11,7 +10,6 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
       "calls": Array [
         Array [
           <input
-            aria-label="label"
             class="form-input"
             value=""
           />,
@@ -28,7 +26,6 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
   required={false}
 >
   <input
-    aria-label="label"
     className="form-input"
     disabled={false}
     name={null}
@@ -49,7 +46,6 @@ exports[`Input should render a default component 1`] = `
 
 exports[`Input should render as controlled when just a default value and \`onChange()\` is passed into the Input 1`] = `
 <input
-  aria-label="label"
   className="form-input"
   disabled={false}
   name={null}
@@ -95,7 +91,6 @@ exports[`Input should render with a type of password and pattern prop value 1`] 
 
 exports[`Input should set the forminput to disabled when passed into the component 1`] = `
 <input
-  aria-label="label"
   className="form-input"
   disabled={true}
   name={null}
@@ -105,7 +100,6 @@ exports[`Input should set the forminput to disabled when passed into the compone
 
 exports[`Input should set the forminput to invalid when isInvalid is passed into the component 1`] = `
 <input
-  aria-label="label"
   className="form-input form-error"
   disabled={false}
   name={null}
@@ -115,7 +109,6 @@ exports[`Input should set the forminput to invalid when isInvalid is passed into
 
 exports[`Input should set the forminput to required when required is passed into the component 1`] = `
 <input
-  aria-label="label"
   aria-required="true"
   className="form-input"
   disabled={false}

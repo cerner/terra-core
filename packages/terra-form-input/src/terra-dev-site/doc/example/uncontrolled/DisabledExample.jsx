@@ -10,7 +10,6 @@ const DisabledExample = () => (
         defaultValue="Disabled Example input – Uncontrolled"
         name="disabled input"
         id="uncontrolled-disabled"
-        ariaLabel="form-input-label"
       />
     </Field>
   </div>

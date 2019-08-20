@@ -10,7 +10,6 @@ const DefaultInvalidExample = () => (
         id="uncontrolled-default-invalid"
         defaultValue="Default Error Input – Uncontrolled"
         isInvalid
-        ariaLabel="form-input-label"
       />
     </Field>
   </div>

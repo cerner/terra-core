@@ -24,7 +24,6 @@ class DefaultInvalidExample extends React.Component {
             value={this.state.input}
             onChange={this.handleChange}
             isInvalid
-            ariaLabel="form-input-label"
           />
         </Field>
         <p>

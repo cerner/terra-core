@@ -29,32 +29,32 @@ describe('Input', () => {
   });
 
   it('should render as controlled when just a default value and `onChange()` is passed into the Input', () => {
-    const input = <Input value="foo" onChange={() => { }} ariaLabel="label" />;
+    const input = <Input value="foo" onChange={() => { }} />;
     const wrapper = shallow(input);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should set the forminput to disabled when passed into the component', () => {
-    const input = <Input disabled ariaLabel="label" />;
+    const input = <Input disabled />;
     const wrapper = shallow(input);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should set the forminput to invalid when isInvalid is passed into the component', () => {
-    const input = <Input isInvalid ariaLabel="label" />;
+    const input = <Input isInvalid />;
     const wrapper = shallow(input);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should set the forminput to required when required is passed into the component', () => {
-    const input = <Input required ariaLabel="label" />;
+    const input = <Input required />;
     const wrapper = shallow(input);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should pass in refCallback as the ref prop of the input element', () => {
     const refCallback = jest.fn();
-    const wrapper = mount(<Input refCallback={refCallback} ariaLabel="label" />);
+    const wrapper = mount(<Input refCallback={refCallback} />);
     expect(refCallback).toBeCalled();
     expect(wrapper).toMatchSnapshot();
   });

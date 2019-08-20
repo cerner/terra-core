@@ -4,10 +4,9 @@ import Input from 'terra-form-input';
 
 const DefaultExample = () => (
   <div>
-    <Field label="Default" htmlFor="uncontrolled-default">
+    <Field label="Default">
       <Input
         name="default input"
-        id="uncontrolled-default"
         defaultValue="Default Input – Uncontrolled"
         ariaLabel="form-input-label"
       />
