@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Import for package version from package.json added to doc page
 
+### Fixed
+* Fixed bi-directionality when `isBidi` is explicitly set.
+
 Unreleased
 ------------------
 ### Changed
