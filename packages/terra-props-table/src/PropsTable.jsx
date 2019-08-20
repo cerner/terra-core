@@ -158,6 +158,7 @@ Props
             */
             const customRequired = (prop.type.name === 'custom' && prop.type.raw.includes('isRequired'));
 
+            /* eslint-disable react/forbid-dom-props */
             return (
               <tr className={tableRowClass} key={key} style={{ fontSize: '90%' }}>
                 <td style={{ fontWeight: 'bold' }}>{key}</td>
@@ -171,6 +172,7 @@ Props
                 <td><Markdown src={prop.description} /></td>
               </tr>
             );
+            /* eslint-enable react/forbid-dom-props */
           })}
         </tbody>
       </table>

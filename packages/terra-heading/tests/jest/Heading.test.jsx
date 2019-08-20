@@ -74,8 +74,10 @@ describe('Heading', () => {
   });
 
   it('should append styles passed in with attributes', () => {
+    /* eslint-disable react/forbid-component-props */
     const heading = shallow(<Heading level={1} style={{ height: '100px' }}>Test</Heading>);
     expect(heading.prop('style')).toEqual({ height: '100px' });
+    /* eslint-disable react/forbid-component-props */
   });
 
   // Error Handling Test

@@ -76,7 +76,7 @@ const defaultProps = {
 const Text = ({
   children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, colorClass, ...customProps
 }) => {
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
   const TextClassNames = cx([
     'text',
     { italic: isItalic },

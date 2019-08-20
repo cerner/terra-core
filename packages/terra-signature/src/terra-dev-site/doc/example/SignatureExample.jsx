@@ -44,12 +44,12 @@ class SignatureExample extends React.Component {
     }, {
       x1: 71, y1: 87, x2: 71, y2: 87,
     }];
-    const newState = Object.assign({}, this.state, { lineSegments: singleLine });
+    const newState = { ...this.state, lineSegments: singleLine };
     this.setState(newState);
   }
 
   handleClear() {
-    const newState = Object.assign({}, this.state, { lineSegments: [] });
+    const newState = { ...this.state, lineSegments: [] };
     this.setState(newState);
   }
 
