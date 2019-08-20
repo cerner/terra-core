@@ -12,7 +12,6 @@ const FixedSmallSizeExample = () => (
       size="small"
       className={cx('textarea')}
       id="small"
-      ariaLabel="text-area-label"
     />
   </Field>
 );

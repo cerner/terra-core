@@ -9,7 +9,6 @@ const ResizableExample = () => (
       size="small"
       defaultValue="I automatically resize as you type in more information (except in mobile)."
       id="resizable"
-      ariaLabel="text-area-label"
     />
   </Field>
 );

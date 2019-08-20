@@ -9,7 +9,6 @@ const DisabledExample = () => (
       size="small"
       value="I'm disabled."
       id="disabled"
-      ariaLabel="text-area-label"
     />
   </Field>
 );

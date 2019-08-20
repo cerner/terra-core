@@ -21,6 +21,9 @@ import InvalidExample from '../example/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Invalid';
 import DisabledExample from '../example/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Disabled';
+import TextareaExample from '../example/Textarea.jsx';
+import TextareaExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Textarea.jsx';
+
 
 const DocPage = () => (
   <DocTemplate
@@ -35,6 +38,10 @@ const DocPage = () => (
       },
     ]}
     examples={[
+      {
+        example: <TextareaExample />,
+        source: TextareaExampleSrc,
+      },
       {
         example: <FixedSmallSizeExample />,
         source: FixedSmallSizeExampleSrc,
