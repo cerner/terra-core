@@ -41,8 +41,10 @@ describe('Toggle', () => {
   });
 
   it('should append styles passed in with attributes', () => {
+    /* eslint-disable react/forbid-component-props */
     const toggle = shallow(<Toggle style={{ height: '100px' }}>Test</Toggle>);
     expect(toggle.prop('style')).toEqual({ height: '100px' });
+    /* eslint-disable react/forbid-component-props */
   });
 
   // Error Handling Test

@@ -28,7 +28,7 @@ const propTypes = {
    */
   image: PropTypes.string,
   /**
-   * Whether to hide avatar from the accessiblity tree.
+   * Whether to hide avatar from the accessibility tree.
    */
   isAriaHidden: PropTypes.bool,
   /**
@@ -88,11 +88,13 @@ class Facility extends React.Component {
       attributes.className,
     ]);
 
+    /* eslint-disable react/forbid-dom-props */
     return (
       <div {...attributes} className={facilityClassNames} style={customStyles}>
         {facilityContent}
       </div>
     );
+    /* eslint-enable react/forbid-dom-props */
   }
 }
 

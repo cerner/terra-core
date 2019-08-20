@@ -85,8 +85,10 @@ describe('Text', () => {
   });
 
   it('should append styles passed in with attributes', () => {
+    /* eslint-disable react/forbid-component-props */
     const text = shallow(<Text style={{ height: '100px' }}>Test</Text>);
     expect(text.prop('style')).toEqual({ height: '100px' });
+    /* eslint-disable react/forbid-component-props */
   });
 
   // Error Handling Test

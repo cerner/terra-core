@@ -32,7 +32,7 @@ const propTypes = {
    */
   initials: PropTypes.string,
   /**
-   * Whether to hide avatar from the accessiblity tree.
+   * Whether to hide avatar from the accessibility tree.
    */
   isAriaHidden: PropTypes.bool,
   /**
@@ -105,11 +105,13 @@ class Avatar extends React.Component {
       attributes.className,
     ]);
 
+    /* eslint-disable react/forbid-dom-props */
     return (
       <div {...attributes} className={avatarClassNames} style={customStyles}>
         {avatarContent}
       </div>
     );
+    /* eslint-enable react/forbid-dom-props */
   }
 }
 
