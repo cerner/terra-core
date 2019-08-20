@@ -1,9 +1,9 @@
-const path = require('path');
-const fs = require('fs');
 /* eslint-disable import/no-extraneous-dependencies */
+const fs = require('fs');
 const glob = require('glob');
-const reactDocs = require('react-docgen');
 const marked = require('marked');
+const path = require('path');
+const reactDocs = require('react-docgen');
 /* eslint-enable import/no-extraneous-dependencies */
 
 /* eslint-disable class-methods-use-this, no-console */
@@ -26,7 +26,18 @@ class WebpackPropsPlugin {
       return filteredName;
     };
 
-    const tableHeaderTemplate = '<thead><tr style="line-height: 1.5"><th style="width: 10%">Prop Name</th><th style="width: 25%">Type</th><th style="width: 10%">Is Required</th><th style="width: 10%">Default Value</th><th style="width: 45%">Description</th></tr></thead>';
+    /* eslint-disable quotes */
+    // Concatenation removes markdown file empty spacing
+    const tableHeaderTemplate = ``
+    + `<thead>`
+      + `<tr style="line-height: 1.5">`
+        + `<th style="width: 10%">Prop Name</th>`
+        + `<th style="width: 25%">Type</th>`
+        + `<th style="width: 10%">Is Required</th>`
+        + `<th style="width: 10%">Default Value</th>`
+        + `<th style="width: 45%">Description</th>`
+      + `</tr>`
+    + `</thead>`;
 
     const createTableRow = (propValues) => {
       const rowValues = Object.values(propValues);
@@ -34,6 +45,7 @@ class WebpackPropsPlugin {
       let styledRow;
       const styles = {};
 
+      // Apply cell and row specific styles.
       rowValues.forEach((value, index) => {
         styles.color = (value === 'required')
           ? 'color: #d53700'
@@ -75,6 +87,9 @@ class WebpackPropsPlugin {
         return type;
       };
 
+      // Suppress marked paragraph wrapping.
+      marked.Renderer.prototype.paragraph = text => text;
+
       // Construct props object for use in creating table rows.
       propShape.forEach(() => {
         props.name = name;
@@ -83,6 +98,14 @@ class WebpackPropsPlugin {
         props.defaultValue = value.defaultValue ? Object.values(value.defaultValue)[0] : 'none';
         props.description = marked(value.description);
       });
+
+      // Add text wrapping to description code blocks.
+      let styledDescription;
+      if (props.description.includes('<code>')) {
+        styledDescription = props.description.replace('<code>', '<code style="white-space: pre-wrap">');
+        props.description = styledDescription;
+      }
+
       return props;
     };
 
@@ -90,10 +113,13 @@ class WebpackPropsPlugin {
       // Separates multi-word component names for prop table titles
       const formatName = packageName(component).replace(/([A-Z])/g, ' $1').trim();
 
-      const generatedTable = `<div>\
-      <h2>${formatName} Props</h2>\
-      <table style="display: table">${tableHeaderTemplate}<tbody>${rowArray.join('')}</tbody></table>\
-      </div>`;
+      const generatedTable = ``
+      + `<div>`
+        + `<h2>${formatName} Props</h2>`
+        + `<table style="display: table">${tableHeaderTemplate}`
+          + `<tbody>${rowArray.join('')}</tbody>`
+        + `</table>`
+      + `</div>`;
 
       return generatedTable;
     };
@@ -164,5 +190,5 @@ class WebpackPropsPlugin {
     generatePropsTables();
   }
 }
-
+/* eslint-enable class-methods-use-this, no-console, enable-quotes */
 module.exports = WebpackPropsPlugin;
