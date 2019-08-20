@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added `ariaLabel` prop to improve accessibility.
+* Added example on documentation site
 
 ### Changed
 * Import for package version from package.json added to doc page

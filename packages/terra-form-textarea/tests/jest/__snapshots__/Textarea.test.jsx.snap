@@ -2,7 +2,6 @@
 
 exports[`should not set the textarea to resizable when viewed on browser with DocumentTouch 1`] = `
 <textarea
-  aria-label="label"
   class="textarea"
   rows="2"
 />

@@ -13,7 +13,6 @@ it('should render a default TextArea component', () => {
 it('should render a TextArea when all the possible props are passed into it', () => {
   const textarea = (
     <Textarea
-      ariaLabel="label"
       name="description"
       rows={5}
       required
