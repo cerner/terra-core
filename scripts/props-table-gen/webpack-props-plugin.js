@@ -57,15 +57,13 @@ class WebpackPropsPlugin {
       const customType = name === 'customMessages' ? 'custom' : name;
       const specialTypes = ['enum', 'union', 'arrayOf'];
 
-      const propDescription = Object.values(value.description).join('').replace(/\r?\n|\r/g, ' ');
-
       // Check for special prop types and handle them.
       const typeCheck = specialTypes.indexOf(Object.values(value.type)[0][0]) > -1
         || customType
         ? Object.values(value.type)[0]
         : Object.values(value.type).join('');
 
-      // Check if prop type is an object shape.
+      // Check if prop type is an object shape or arrayOf.
       const shapeHandler = () => {
         let type;
         if (value.type.name === 'shape') {
@@ -83,7 +81,7 @@ class WebpackPropsPlugin {
         props.type = shapeHandler() || typeCheck;
         props.required = value.required === true ? 'required' : 'optional';
         props.defaultValue = value.defaultValue ? Object.values(value.defaultValue)[0] : 'none';
-        props.description = marked(propDescription);
+        props.description = marked(value.description);
       });
       return props;
     };
