@@ -190,5 +190,5 @@ class WebpackPropsPlugin {
     generatePropsTables();
   }
 }
-/* eslint-enable class-methods-use-this, no-console, enable-quotes */
+/* eslint-enable class-methods-use-this, no-console, quotes */
 module.exports = WebpackPropsPlugin;

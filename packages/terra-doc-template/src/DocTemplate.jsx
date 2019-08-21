@@ -158,8 +158,7 @@ const DocTemplate = ({
               key={propsTable.id}
               propsResolution={propsTable.propsResolution}
             />
-          ))
-        }
+          ))}
       </div>
       {children && <div className={cx('doc-card')}>{children}</div>}
     </div>
