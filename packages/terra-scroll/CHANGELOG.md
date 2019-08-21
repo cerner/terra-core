@@ -3,12 +3,11 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+2.15.0 - (August 21, 2019)
 ------------------
 ### Changed
+* Import for package version from package.json added to doc page
 * Cleaned up imports in examples and test files
 
 2.14.0 - (August 14, 2019)

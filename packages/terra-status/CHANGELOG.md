@@ -2,7 +2,10 @@ Changelog
 =========
 
 Unreleased
-------------------
+----------
+
+4.15.0 - (August 21, 2019)
+--------------------------
 ### Changed
 * Cleaned up imports in examples and test files
 * Import for package version from package.json added to doc page
