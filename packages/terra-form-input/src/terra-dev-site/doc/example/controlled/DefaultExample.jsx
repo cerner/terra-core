@@ -22,7 +22,7 @@ class DefaultExample extends React.Component {
             name="default input"
             value={this.state.input}
             onChange={this.handleChange}
-            ariaLabel="form-input-label"
+            ariaLabel="Default"
           />
         </Field>
         <p>
