@@ -29,6 +29,11 @@ const TEXTAREA_ROW_SIZES = {
 
 const propTypes = {
   /**
+  * String that labels the current element. 'aria-label' must be present,
+  * for accessibility.
+  */
+  ariaLabel: PropTypes.string,
+  /**
    * The defaultValue of the textarea. Use this to create an uncontrolled textarea.
    */
   defaultValue: PropTypes.string,
@@ -181,6 +186,7 @@ class Textarea extends React.Component {
       defaultValue,
       rows,
       size,
+      ariaLabel,
       refCallback,
       ...customProps
     } = this.props;
@@ -194,6 +200,8 @@ class Textarea extends React.Component {
       { resizable: isAutoResizable && !this.isMobileDevice },
       additionalTextareaProps.className,
     ]);
+
+    additionalTextareaProps['aria-label'] = ariaLabel;
 
     if (required) {
       additionalTextareaProps['aria-required'] = 'true';
