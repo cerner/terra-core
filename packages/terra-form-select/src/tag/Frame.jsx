@@ -357,13 +357,12 @@ class Frame extends React.Component {
       event.preventDefault();
       this.openDropdown(event);
     } else if (keyCode === KeyCode.KEY_BACK_SPACE && !this.state.searchValue && value.length > 0) {
-      const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
       const lastOptionValue = value[value.length - 1];
       const lastOption = MenuUtil.findByValue(children, lastOptionValue);
       const lastOptionDisplay = lastOption ? lastOption.props.display : lastOptionValue;
 
       if (this.visuallyHiddenComponent && this.visuallyHiddenComponent.current) {
-        this.visuallyHiddenComponent.current.innerText = `${lastOptionDisplay} ${unselectedTxt}`;
+        this.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: lastOptionDisplay });
       }
 
       if (onDeselect) {

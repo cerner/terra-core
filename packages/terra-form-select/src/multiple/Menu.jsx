@@ -7,7 +7,6 @@ import KeyCode from 'keycode-js';
 import MaxSelection from '../shared/_MaxSelection';
 import NoResults from '../shared/_NoResults';
 import MenuUtil from '../shared/_MenuUtil';
-import SharedUtil from '../shared/_SharedUtil';
 import styles from '../shared/_Menu.module.scss';
 
 const cx = classNames.bind(styles);
