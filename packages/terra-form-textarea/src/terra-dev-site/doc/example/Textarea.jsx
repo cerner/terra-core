@@ -7,7 +7,7 @@ const DefaultTextArea = () => (
     <Textarea
       size="small"
       id="default"
-      ariaLabel="default label"
+      ariaLabel="Default Textarea"
     />
   </Field>
 );
