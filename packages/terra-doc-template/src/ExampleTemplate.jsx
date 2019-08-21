@@ -92,6 +92,7 @@ class ExampleTemplate extends React.Component {
             </h2>
           </div>
           )}
+        {/* eslint-disable react/forbid-dom-props */}
         <div className={cx('content')} style={dynamicContentStyle}>
           {description
             && (
@@ -102,6 +103,7 @@ class ExampleTemplate extends React.Component {
           {example}
           {children}
         </div>
+        {/* eslint-enable react/forbid-dom-props */}
         {exampleSrc
           && (
           <div className={cx('footer')}>
@@ -116,11 +118,13 @@ class ExampleTemplate extends React.Component {
               </button>
             </div>
             <div className={cx('code', { 'is-expanded': isExpanded })} aria-hidden={!isExpanded}>
+              {/* eslint-disable react/forbid-component-props */}
               {isExpanded ? (
                 <SyntaxHighlighter language="jsx" style={theme} customStyle={{ margin: '0', borderRadius: '0' }}>
                   {exampleSrc}
                 </SyntaxHighlighter>
               ) : undefined }
+              {/* eslint-enable react/forbid-component-props */}
             </div>
           </div>
           )}

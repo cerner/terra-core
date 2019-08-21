@@ -8,6 +8,8 @@ Unreleased
 
 ### Changed
 * Cleaned up imports in examples and test files
+* Import for package version from package.json added to doc page
+* Added comments for ESlint v6
 
 ### Removed
 * NPM badge wdio test

@@ -8,6 +8,7 @@ Unreleased
 
 ### Changed
 * Cleaned up imports in examples and test files
+* Added comments for ESlint v6
 
 2.38.0 - (August 14, 2019)
 ------------------

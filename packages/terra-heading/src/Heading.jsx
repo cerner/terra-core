@@ -74,7 +74,7 @@ const defaultProps = {
 const Heading = ({
   level, children, isVisuallyHidden, isItalic, size, weight, colorClass, ...customProps
 }) => {
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
   const TextClassNames = cx([
     'heading',
     { italic: isItalic },

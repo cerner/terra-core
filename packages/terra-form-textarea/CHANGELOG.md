@@ -5,8 +5,12 @@ Unreleased
 ----------
 ### Added
 * Props table markdown file import added to doc site page
+* Added `ariaLabel` prop to improve accessibility.
+* Added example on documentation site
 
 ### Changed
+* Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 * Cleaned up imports in examples and test files
 
 3.22.0 - (August 14, 2019)

@@ -7,6 +7,8 @@ Unreleased
 * Props table markdown file import added to doc site page
 
 ### Changed
+* Import for package version from package.json added to doc page
+* Added comments for ESlint v6
 * Cleaned up imports in examples and test files
 
 3.14.0 - (August 14, 2019)

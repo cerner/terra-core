@@ -114,7 +114,7 @@ const Field = (props) => {
     ...customProps
   } = props;
 
-  const customStyles = maxWidth ? Object.assign({ maxWidth }, style) : style;
+  const customStyles = maxWidth ? ({ maxWidth, ...style }) : style;
 
   const fieldClasses = cx([
     'field',
@@ -191,6 +191,7 @@ const Field = (props) => {
     </div>
   );
 
+  /* eslint-disable react/forbid-dom-props */
   return (
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
@@ -199,6 +200,7 @@ const Field = (props) => {
       {help && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
     </div>
   );
+  /* eslint-enable react/forbid-dom-props */
 };
 
 Field.propTypes = propTypes;

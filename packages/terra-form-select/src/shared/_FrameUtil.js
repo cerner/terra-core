@@ -9,7 +9,7 @@ class FrameUtil {
    */
   static dropdownStyle(props, state) {
     const { maxHeight, width } = state;
-    return Object.assign({}, Object.assign({}, props).style, { maxHeight, width });
+    return { ...({ ...props }).style, maxHeight, width };
   }
 
   /**
@@ -21,7 +21,7 @@ class FrameUtil {
    * @return {Object} - The calculated dropdown attributes.
    */
   static dropdownPosition(props, target, dropdown, maxHeight) {
-    const style = Object.assign({}, props).style || {};
+    const style = ({ ...props }).style || {};
     const { height } = dropdown.getBoundingClientRect();
     const { bottom, width, top } = target.getBoundingClientRect();
 
