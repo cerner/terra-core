@@ -8,7 +8,7 @@ const DefaultExample = () => (
       <Input
         name="default input"
         defaultValue="Default Input – Uncontrolled"
-        ariaLabel="form-input-label"
+        ariaLabel="Default"
       />
     </Field>
   </div>
