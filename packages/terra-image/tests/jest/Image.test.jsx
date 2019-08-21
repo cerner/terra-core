@@ -55,8 +55,10 @@ it('should render a thumbail image component with non-fluid behavior', () => {
 
 /* Image with fluid behavior having a parent container */
 it('should render a circle image component with fluid behavior', () => {
+  /* eslint-disable react/forbid-dom-props */
   const wrapper = shallow(<div style={imagecontainerStyle1}>{image}</div>);
   expect(wrapper).toMatchSnapshot();
+  /* eslint-enable react/forbid-dom-props */
 });
 
 /* Image with onLoad function */

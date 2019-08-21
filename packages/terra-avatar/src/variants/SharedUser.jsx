@@ -24,7 +24,7 @@ const propTypes = {
    */
   hashValue: PropTypes.string,
   /**
-   * Whether to hide avatar from the accessiblity tree.
+   * Whether to hide avatar from the accessibility tree.
    */
   isAriaHidden: PropTypes.bool,
   /**
@@ -50,7 +50,7 @@ const SharedUser = ({
 }) => {
   const colorVariant = setColor(alt, color, hashValue);
   const attributes = { ...customProps };
-  const customStyles = size ? Object.assign({ fontSize: size }, attributes.style) : attributes.style;
+  const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;
   const multiUserClassNames = cx([
     'avatar',
     `${colorVariant}`,
@@ -60,11 +60,13 @@ const SharedUser = ({
   const multiUserIconClassNames = cx(['icon', AVATAR_VARIANTS.SHARED_USER]);
   const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 
+  /* eslint-disable react/forbid-dom-props */
   return (
     <div {...attributes} className={multiUserClassNames} style={customStyles}>
       {multiUserContent}
     </div>
   );
+  /* eslint-enable react/forbid-dom-props */
 };
 
 SharedUser.propTypes = propTypes;

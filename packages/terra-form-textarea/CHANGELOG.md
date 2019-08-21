@@ -9,6 +9,7 @@ Unreleased
 
 ### Changed
 * Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 
 Unreleased
 ------------------

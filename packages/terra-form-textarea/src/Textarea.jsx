@@ -10,7 +10,7 @@ const isMobileDevice = () => window.matchMedia('(max-width: 1024px)').matches
     'ontouchstart' in window
     // eslint-disable-next-line no-undef
     || (window.DocumentTouch && document instanceof DocumentTouch)
-    || navigator.maxTouchPoints > 0
+    || navigator.maxTouchPoints > 0 // eslint-disable-line compat/compat
     || navigator.msMaxTouchPoints > 0
   );
 
@@ -191,7 +191,7 @@ class Textarea extends React.Component {
       ...customProps
     } = this.props;
 
-    const additionalTextareaProps = Object.assign({}, customProps);
+    const additionalTextareaProps = { ...customProps };
 
     const textareaClasses = cx([
       'textarea',
