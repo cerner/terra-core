@@ -11,6 +11,9 @@ Unreleased
 * Switch from Object.assign to Object spread syntax.
 * Cleaned up imports in examples and test files
 
+### Fixed
+* Fixed bi-directionality when `isBidi` is explicitly set.
+
 3.17.0 - (August 14, 2019)
 ------------------
 ### Added
