@@ -109,13 +109,13 @@ it('should not set the textarea to resizable when viewed on browser with Documen
 
 it('should not set the textarea to resizable when viewed on browser with maxTouchPoints', () => {
   spyOn(window, 'matchMedia').and.returnValue({ matches: true });
-  navigator.maxTouchPoints = 1;
+  navigator.maxTouchPoints = 1; // eslint-disable-line compat/compat
 
   const textarea = <Textarea isAutoResizable />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 
-  navigator.maxTouchPoints = 0;
+  navigator.maxTouchPoints = 0; // eslint-disable-line compat/compat
 });
 
 it('should not set the textarea to resizable when viewed on browser with msMaxTouchPoints', () => {

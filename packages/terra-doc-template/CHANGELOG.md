@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Import for package version from package.json added to doc page
+* Added comments for ESlint v6
 
 ### Removed
 * NPM badge wdio test

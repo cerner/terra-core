@@ -216,8 +216,7 @@ class Frame extends React.Component {
                 </li>
               </ul>
             </li>
-          ) : null
-        }
+          ) : null}
         <li className={cx('search-wrapper')}>
           <input {...inputAttrs} value={searchValue} />
         </li>
@@ -680,8 +679,7 @@ class Frame extends React.Component {
               {children}
             </Menu>
           </Dropdown>
-          )
-        }
+          )}
       </div>
     );
   }

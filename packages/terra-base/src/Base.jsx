@@ -79,7 +79,7 @@ class Base extends React.Component {
       translationsLoadingPlaceholder,
     } = this.props;
 
-    const messages = Object.assign({}, this.state.messages, customMessages);
+    const messages = { ...this.state.messages, ...customMessages };
     const renderChildren = strictMode ? (<React.StrictMode>{children}</React.StrictMode>) : children;
 
     if (!this.state.areTranslationsLoaded) return <div>{translationsLoadingPlaceholder}</div>;

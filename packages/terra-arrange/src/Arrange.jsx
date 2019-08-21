@@ -70,9 +70,9 @@ const Arrange = ({
   fitEndAttributes,
   ...customProps
 }) => {
-  const fitStartProps = Object.assign({}, fitStartAttributes);
-  const fillProps = Object.assign({}, fillAttributes);
-  const fitEndProps = Object.assign({}, fitEndAttributes);
+  const fitStartProps = { ...fitStartAttributes };
+  const fillProps = { ...fillAttributes };
+  const fitEndProps = { ...fitEndAttributes };
 
   return (
     <div {...customProps} className={cx('arrange', customProps.className)}>
