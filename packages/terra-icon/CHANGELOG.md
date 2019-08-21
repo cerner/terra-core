@@ -4,8 +4,8 @@ Changelog
 Unreleased
 ----------
 ### Added
-* Added Tooltip for IconConsultInstructionsForUse
-* Added Translations for IconConsultInstructionsForUse Tooltip text
+* Added ThemeIconTemplate to support tooltip for theme icons
+* Added Translations for IconConsultInstructionsForUse tooltip text
 
 ### Changed
 * Import for package version from package.json added to doc page
