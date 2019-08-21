@@ -104,7 +104,7 @@ class ToggleSectionHeader extends React.Component {
       ...customProps
     } = this.props;
 
-    const sectionHeaderProps = Object.assign({}, sectionHeaderAttrs);
+    const sectionHeaderProps = { ...sectionHeaderAttrs };
     sectionHeaderProps.onClick = this.wrapOnClick(sectionHeaderAttrs.onClick);
 
     return (

@@ -66,8 +66,10 @@ it('should render text then an icon when reversed', () => {
 });
 
 it('should render a Button with merged attributes', () => {
+  /* eslint-disable react/forbid-component-props */
   const button = shallow(<Button className="TestClass" data-mock="data" text="text" style={{ height: '100px' }} />);
   expect(button).toMatchSnapshot();
+  /* eslint-enable react/forbid-component-props */
 });
 
 it('should render as an anchor when provided an href', () => {
@@ -168,8 +170,10 @@ it('should append data passed in with attributes', () => {
 });
 
 it('should append styles passed in with attributes', () => {
+  /* eslint-disable react/forbid-component-props */
   const button = shallow(<Button style={{ height: '100px' }} text="text" />);
   expect(button.prop('style')).toEqual({ height: '100px' });
+  /* eslint-enable react/forbid-component-props */
 });
 
 it('should render an icon only button with text as a fallback title', () => {
@@ -221,3 +225,4 @@ it('should render a button with accessible label', () => {
   const button = shallow(<Button text="Button" aria-label="Custom Accessible Label" />);
   expect(button).toMatchSnapshot();
 });
+/* eslint-enable react/forbid-dom-props */

@@ -41,6 +41,7 @@ const ProfileImage = (props) => {
   const fixedHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
   const fixedWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
 
+  /* eslint-disable react/forbid-dom-props */
   const placeholderImage = (
     <span
       className={cx('placeholder-images')}
@@ -48,6 +49,7 @@ const ProfileImage = (props) => {
       style={{ height: fixedHeight, width: fixedWidth }}
     />
   );
+  /* eslint-enable react/forbid-dom-props */
 
   if (props.src) {
     return (<div><TerraImage placeholder={placeholderImage} fit="cover" {...props} /></div>);

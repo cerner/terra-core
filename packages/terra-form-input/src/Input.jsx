@@ -104,7 +104,7 @@ class Input extends React.Component {
       ...customProps
     } = this.props;
 
-    const attributes = Object.assign({}, customProps);
+    const attributes = { ...customProps };
     const formInputClassNames = cx([
       'form-input',
       { 'form-error': isInvalid },
