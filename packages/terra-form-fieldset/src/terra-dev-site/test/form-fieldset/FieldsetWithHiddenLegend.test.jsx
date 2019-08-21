@@ -11,13 +11,13 @@ const fieldsetwithhiddenlegend = () => (
     isLegendHidden
   >
     <Field label="First" isInline required htmlFor="first">
-      <Input id="first" type="text" name="first" defaultValue="" ariaLabel="first-label" />
+      <Input id="first" type="text" name="first" defaultValue="" />
     </Field>
     <Field label="Middle" isInline required htmlFor="middle">
-      <Input id="middle" type="text" name="middle" defaultValue="" ariaLabel="middle-label" />
+      <Input id="middle" type="text" name="middle" defaultValue="" />
     </Field>
     <Field label="Last" isInline required htmlFor="last">
-      <Input id="last" type="text" name="last" defaultValue="" ariaLabel="last-label" />
+      <Input id="last" type="text" name="last" defaultValue="" />
     </Field>
   </Fieldset>
 );
