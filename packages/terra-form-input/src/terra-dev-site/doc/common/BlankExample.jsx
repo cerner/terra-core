@@ -5,7 +5,7 @@ import Input from '../../../Input';
 const BlankExample = () => (
   <div>
     <Field label="Blank" htmlFor="blank">
-      <Input name="default blank input" id="blank" ariaLabel="form-input-label" />
+      <Input name="default blank input" id="blank" ariaLabel="Blank" />
     </Field>
   </div>
 );
