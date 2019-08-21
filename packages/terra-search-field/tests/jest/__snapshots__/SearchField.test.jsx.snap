@@ -9,7 +9,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         Array [
           <input
             aria-disabled="false"
-            aria-label="Terra.searchField.search"
             class="form-input input"
             placeholder=""
             type="search"
@@ -80,7 +79,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       >
         <input
           aria-disabled={false}
-          aria-label="Terra.searchField.search"
           className="form-input input"
           disabled={false}
           name={null}
