@@ -6,13 +6,11 @@ Unreleased
 ### Added
 * Added AT announcement for onClick and backspace in MultiSelect and TagSelect
 
+5.27.0 - (August 21, 2019)
+------------------
 ### Changed
 * Import for package version from package.json added to doc page
 * Switch from Object.assign to Object spread syntax.
-
-Unreleased
-------------------
-### Changed
 * Cleaned up imports in examples and test files
 
 5.26.0 - (August 14, 2019)
