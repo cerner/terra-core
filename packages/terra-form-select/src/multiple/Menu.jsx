@@ -321,10 +321,8 @@ class Menu extends React.Component {
       onSelect,
       onDeselect,
       value,
+      visuallyHiddenComponent,
     } = this.props;
-
-    const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
-    const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
 
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
@@ -341,40 +339,25 @@ class Menu extends React.Component {
 
       const option = MenuUtil.findByValue(children, active);
       // Handles communicating the case where a regular option is selected to screen readers.
-      /*
-        Detecting if browser is not Safari before updating aria-live as there is some odd behaivor
-        with VoiceOver on desktop, that causes the selected option to be read twice when this is
-        is added to aria-live container.
-        When we shift focus back to select, VoiceOver automatically reads the display text.
-        Using aria-hidden on the display does not prevent VO from reading the display text and so it
-        results in reading the display text followed by reading the aria-live message which is
-        the display text + 'selected'
-        */
-      if (SharedUtil.isSafari()) {
-        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
-      } else {
-        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
+      if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
+        visuallyHiddenComponent.current.innerHTML = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: option.props.display });
       }
-      onSelect(option.props.value, option);
+
+      if (onSelect) {
+        onSelect(option.props.value, option);
+      }
     } else if (keyCode === KeyCode.KEY_RETURN && active !== null && MenuUtil.includes(value, active)) {
       event.preventDefault();
+
       const option = MenuUtil.findByValue(children, active);
       // Handles communicating the case where a regular option is Unselected to screen readers.
-      /*
-        Detecting if browser is not Safari before updating aria-live as there is some odd behaivor
-        with VoiceOver on desktop, that causes the selected option to be read twice when this is
-        is added to aria-live container.
-        When we shift focus back to select, VoiceOver automatically reads the display text.
-        Using aria-hidden on the display does not prevent VO from reading the display text and so it
-        results in reading the display text followed by reading the aria-live message which is
-        the display text + 'Unselected'
-        */
-      if (SharedUtil.isSafari()) {
-        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${unselectedTxt}`;
-      } else {
-        this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${unselectedTxt}`;
+      if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
+        visuallyHiddenComponent.current.innerHTML = intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: option.props.display });
       }
-      onDeselect(option.props.value, option);
+
+      if (onDeselect) {
+        onDeselect(option.props.value, option);
+      }
     } else if (keyCode === KeyCode.KEY_HOME) {
       event.preventDefault();
       this.setState({ active: MenuUtil.findFirst(children) });
@@ -399,13 +382,14 @@ class Menu extends React.Component {
     } = this.props;
 
 
-    const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
-    const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
     const shouldUnselectOption = MenuUtil.includes(value, option.props.value);
-    const optionATClickText = shouldUnselectOption ? unselectedTxt : selectedTxt;
+    const optionATClickText = (shouldUnselectOption
+      ? intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: option.props.display })
+      : intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: option.props.display })
+    );
 
     if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
-      visuallyHiddenComponent.current.innerHTML = `${option.props.display} ${optionATClickText}`;
+      visuallyHiddenComponent.current.innerHTML = optionATClickText;
     }
 
     if (shouldUnselectOption) {
