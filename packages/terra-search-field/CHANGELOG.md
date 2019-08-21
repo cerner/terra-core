@@ -23,7 +23,6 @@ Unreleased
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update jest test snapshot
 * updated package.json test scripts
-* updated source and jest files for changes in form-input
 
 3.23.0 - (July 30, 2019)
 ------------------
