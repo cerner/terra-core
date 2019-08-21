@@ -3,17 +3,16 @@ Changelog
 
 Unreleased
 ----------
+
+3.18.0 - (August 21, 2019)
+------------------
 ### Changed
 * Import for package version from package.json added to doc page
 * Switch from Object.assign to Object spread syntax.
+* Cleaned up imports in examples and test files
 
 ### Fixed
 * Fixed bi-directionality when `isBidi` is explicitly set.
-
-Unreleased
-------------------
-### Changed
-* Cleaned up imports in examples and test files
 
 3.17.0 - (August 14, 2019)
 ------------------

@@ -3,9 +3,6 @@ Changelog
 
 Unreleased
 ----------
-
-Unreleased
-------------------
 ### Changed
 * Cleaned up imports in examples and test files
 

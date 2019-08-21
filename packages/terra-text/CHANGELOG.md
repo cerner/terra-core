@@ -3,13 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+4.15.0 - (August 21, 2019)
+------------------
 ### Changed
 * Import for package version from package.json added to doc page
 * Switch from Object.assign to Object spread syntax.
-
-Unreleased
-------------------
-### Changed
 * Cleaned up imports in examples and test files
 
 4.14.0 - (August 14, 2019)
