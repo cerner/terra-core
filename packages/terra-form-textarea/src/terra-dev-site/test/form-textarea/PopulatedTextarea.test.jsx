@@ -6,6 +6,7 @@ const textarea = () => (
     name="job_experience"
     defaultValue=""
     required
+    ariaLabel="label"
   />
 );
 

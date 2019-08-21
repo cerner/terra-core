@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Import for package version from package.json added to doc page
+* Update bracket positioning lint
 
 Unreleased
 ------------------

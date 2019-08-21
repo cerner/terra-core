@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 
 ### Fixed
 * Fixed bi-directionality when `isBidi` is explicitly set.

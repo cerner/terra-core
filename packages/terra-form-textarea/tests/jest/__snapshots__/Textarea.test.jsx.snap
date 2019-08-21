@@ -40,6 +40,7 @@ exports[`should render a TextArea when all the possible props are passed into it
 
 exports[`should render a default TextArea component 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 />
@@ -74,6 +75,7 @@ exports[`should render a small textbox appropriately 1`] = `
 
 exports[`should render as controlled when just a default value is passed into the Textarea 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 >
@@ -83,6 +85,7 @@ exports[`should render as controlled when just a default value is passed into th
 
 exports[`should render as uncontrolled when just a default value is passed into the Textarea 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 >

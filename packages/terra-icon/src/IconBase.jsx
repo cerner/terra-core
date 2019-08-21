@@ -59,7 +59,7 @@ const IconBase = ({
   focusable,
   ...customProps
 }) => {
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
 
   const addAnimationStyles = () => {
     if (isSpin) {

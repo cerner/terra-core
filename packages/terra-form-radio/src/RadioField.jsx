@@ -124,8 +124,7 @@ const RadioField = (props) => {
                 <span className={cx('optional')}>{optionalText}</span>
               )}
             </FormattedMessage>
-          )
-        }
+          )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
     </legend>
