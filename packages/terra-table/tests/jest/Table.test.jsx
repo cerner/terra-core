@@ -22,34 +22,31 @@ const header = [headerData1, headerData2, headerData3];
 
 // Snapshot test
 it('should render a default table', () => {
-  const defaultTable = (
+  const shallowComponent = shallow(
     <Table>
       <Header>{header}</Header>
       <Body>{rows}</Body>
-    </Table>
+    </Table>,
   );
-  const table = shallow(defaultTable);
-  expect(table).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a table without zebra stripes', () => {
-  const defaultTable = (
+  const shallowComponent = shallow(
     <Table isStriped={false}>
       <Header>{header}</Header>
       <Body>{rows}</Body>
-    </Table>
+    </Table>,
   );
-  const table = shallow(defaultTable);
-  expect(table).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a table without padding', () => {
-  const defaultTable = (
+  const shallowComponent = shallow(
     <Table isPadded={false}>
       <Header>{header}</Header>
       <Body>{rows}</Body>
-    </Table>
+    </Table>,
   );
-  const table = shallow(defaultTable);
-  expect(table).toMatchSnapshot();
+  expect(shallowComponent).toMatchSnapshot();
 });

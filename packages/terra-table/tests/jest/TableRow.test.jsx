@@ -9,7 +9,6 @@ const rowData = [cellData1, cellData2, cellData3];
 
 // Snapshot test
 it('should render a default table row', () => {
-  const defaultTableRow = <Row>{rowData}</Row>;
-  const tableRow = shallow(defaultTableRow);
-  expect(tableRow).toMatchSnapshot();
+  const shallowComponent = shallow(<Row>{rowData}</Row>);
+  expect(shallowComponent).toMatchSnapshot();
 });

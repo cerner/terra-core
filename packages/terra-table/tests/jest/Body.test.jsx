@@ -12,25 +12,21 @@ const rows = [row1, row2];
 
 // Snapshot test
 it('should render Body tag', () => {
-  const defaultTableRows = <Body>{rows}</Body>;
-  const tableRows = shallow(defaultTableRows);
-  expect(tableRows).toMatchSnapshot();
+  const shallowComponent = shallow(<Body>{rows}</Body>);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render Body with no rows', () => {
-  const defaultTableRows = <Body />;
-  const tableRows = shallow(defaultTableRows);
-  expect(tableRows).toMatchSnapshot();
+  const shallowComponent = shallow(<Body />);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render Body with one row', () => {
-  const defaultTableRows = <Body>{[row1]}</Body>;
-  const tableRows = shallow(defaultTableRows);
-  expect(tableRows).toMatchSnapshot();
+  const shallowComponent = shallow(<Body>{[row1]}</Body>);
+  expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render Body with multiple rows', () => {
-  const defaultTableRows = <Body>{rows}</Body>;
-  const tableRows = shallow(defaultTableRows);
-  expect(tableRows).toMatchSnapshot();
+  const shallowComponent = shallow(<Body>{rows}</Body>);
+  expect(shallowComponent).toMatchSnapshot();
 });

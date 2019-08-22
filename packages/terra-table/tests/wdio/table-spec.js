@@ -23,18 +23,6 @@ Terra.describeViewports('Table', ['medium'], () => {
     Terra.it.validatesElement();
   });
 
-  describe('Highlighted Rows', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-highlighted-rows'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Subheaders', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-subheaders'));
-
-    Terra.it.validatesElement();
-  });
-
   describe('Single Row', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/table/single-row-table'));
 
