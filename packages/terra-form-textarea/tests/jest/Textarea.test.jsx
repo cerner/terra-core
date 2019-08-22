@@ -5,7 +5,7 @@ import Textarea from '../../src/Textarea';
 window.matchMedia = () => ({ matches: true });
 
 it('should render a default TextArea component', () => {
-  const textarea = <Textarea />;
+  const textarea = <Textarea ariaLabel="label" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -24,13 +24,13 @@ it('should render a TextArea when all the possible props are passed into it', ()
 });
 
 it('should render as uncontrolled when just a default value is passed into the Textarea', () => {
-  const textarea = <Textarea defaultValue="foo" />;
+  const textarea = <Textarea ariaLabel="label" defaultValue="foo" />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as controlled when just a default value is passed into the Textarea', () => {
-  const textarea = <Textarea value="foo" onChange={() => {}} />;
+  const textarea = <Textarea ariaLabel="label" value="foo" onChange={() => {}} />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -66,7 +66,7 @@ it('should set the rows attribute appropriate when it is passed into the textare
 });
 
 it('should set the onChange and onFocus functions appropriately when the textarea is autoResizable', () => {
-  const textarea = <Textarea isAutoResizable onFocus={() => {}} onChange={() => {}} />;
+  const textarea = <Textarea isAutoResizable onFocus={() => { }} onChange={() => { }} />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -97,7 +97,7 @@ it('should not set the textarea to resizable when viewed on browser with ontouch
 
 it('should not set the textarea to resizable when viewed on browser with DocumentTouch', () => {
   spyOn(window, 'matchMedia').and.returnValue({ matches: true });
-  window.DocumentTouch = () => {};
+  window.DocumentTouch = () => { };
   window.DocumentTouch.prototype = Document.prototype;
 
   const textarea = <Textarea isAutoResizable />;
@@ -109,13 +109,13 @@ it('should not set the textarea to resizable when viewed on browser with Documen
 
 it('should not set the textarea to resizable when viewed on browser with maxTouchPoints', () => {
   spyOn(window, 'matchMedia').and.returnValue({ matches: true });
-  navigator.maxTouchPoints = 1;
+  navigator.maxTouchPoints = 1; // eslint-disable-line compat/compat
 
   const textarea = <Textarea isAutoResizable />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 
-  navigator.maxTouchPoints = 0;
+  navigator.maxTouchPoints = 0; // eslint-disable-line compat/compat
 });
 
 it('should not set the textarea to resizable when viewed on browser with msMaxTouchPoints', () => {

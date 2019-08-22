@@ -11,8 +11,10 @@ describe('DynamicGrid', () => {
   });
 
   it('should render a Grid with merged attributes', () => {
+    /* eslint-disable react/forbid-component-props */
     const region = shallow(<DynamicGrid.Region className="TestClass" data-mock="data" style={{ height: '100px' }} />);
     expect(region).toMatchSnapshot();
+    /* eslint-enable react/forbid-component-props */
   });
 
   // Attributes

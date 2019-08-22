@@ -19,8 +19,8 @@ class textarea extends React.Component {
   }
 
   render() {
-    const smallTextArea = <Textarea isAutoResizable size="small" />;
-    const largeTextArea = <Textarea isAutoResizable size="large" />;
+    const smallTextArea = <Textarea isAutoResizable size="small" ariaLabel="label" />;
+    const largeTextArea = <Textarea isAutoResizable size="large" ariaLabel="label" />;
     const button = <button id="swap-button" type="button" onClick={this.handleSwap}>Swap</button>;
 
     if (this.state.swap) {

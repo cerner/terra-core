@@ -47,7 +47,7 @@ export default class textarea extends React.Component {
 
   render() {
     return (
-      <Textarea id="auto-resizable" cols="2" isAutoResizable defaultValue="Default Value" />
+      <Textarea id="auto-resizable" cols="2" isAutoResizable defaultValue="Default Value" ariaLabel="label" />
     );
   }
 }
