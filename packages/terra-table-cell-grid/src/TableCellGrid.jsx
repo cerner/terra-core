@@ -58,7 +58,7 @@ const TableCellGrid = ({
     attrSpread['data-table-padding'] = paddingStyle;
   }
 
-  const makeInline = React.Children.toArray(headerCellGrid.props.children).every(cell => (cell.props.width && cell.props.width.static));
+  const makeInline = headerCellGrid ? React.Children.toArray(headerCellGrid.props.children).every(cell => (cell.props.width && cell.props.width.static)) : undefined;
   const hasEndNodes = headerNode || footerNode;
 
   const tableClassNames = cx([

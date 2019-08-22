@@ -11,21 +11,9 @@ const CellGridExample = () => (
       <Cell isPadded key="cell-0">
         Lorem ipsum dolor
       </Cell>
-      <Cell isPadded key="cell-1">
-        Lorem ipsum dolor
-      </Cell>
-      <Cell isPadded key="cell-2">
-        Lorem ipsum dolor
-      </Cell>
     </CellGrid>
     <CellGrid key="striped_row" isStriped>
       <Cell isPadded key="cell-0">
-        Lorem ipsum dolor
-      </Cell>
-      <Cell isPadded key="cell-1">
-        Lorem ipsum dolor
-      </Cell>
-      <Cell isPadded key="cell-2">
         Lorem ipsum dolor
       </Cell>
     </CellGrid>
@@ -33,32 +21,14 @@ const CellGridExample = () => (
       <Cell isPadded key="cell-0">
         Lorem ipsum dolor
       </Cell>
-      <Cell isPadded key="cell-1">
-        Lorem ipsum dolor
-      </Cell>
-      <Cell isPadded key="cell-2">
-        Lorem ipsum dolor
-      </Cell>
     </CellGrid>
     <CellGrid isSelectable isSelected key="selected_row">
       <Cell isPadded key="cell-0">
         Lorem ipsum dolor
       </Cell>
-      <Cell isPadded key="cell-1">
-        Lorem ipsum dolor
-      </Cell>
-      <Cell isPadded key="cell-2">
-        Lorem ipsum dolor
-      </Cell>
     </CellGrid>
     <CellGrid dividerStyle="none" key="divider_none">
       <Cell isPadded key="cell-0">
-        Lorem ipsum dolor
-      </Cell>
-      <Cell isPadded key="cell-1">
-        Lorem ipsum dolor
-      </Cell>
-      <Cell isPadded key="cell-2">
         Lorem ipsum dolor
       </Cell>
     </CellGrid>
@@ -94,6 +64,12 @@ const CellGridExample = () => (
       <Cell isPadded key="cell-2">
         Lorem ipsum dolor
       </Cell>
+    </CellGrid>
+    <CellGrid selectionStyle="checkmark" isSelectable isSelected key="selection-checkmark">
+      <Cell isPadded>Selection Style Checkmark</Cell>
+    </CellGrid>
+    <CellGrid selectionStyle="chevron" isSelectable key="selection-chevron">
+      <Cell isPadded>Selection Style Chevron</Cell>
     </CellGrid>
   </TableCellGrid>
 );

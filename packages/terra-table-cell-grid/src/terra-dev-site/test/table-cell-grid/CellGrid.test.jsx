@@ -20,6 +20,12 @@ const CellGridTest = () => (
     <CellGrid key="striped-selected-row" isSelectable isSelected isStriped>
       <Cell>Striped Selected Row</Cell>
     </CellGrid>
+    <CellGrid key="selection-checkmark">
+      <Cell>Selection Style Checkmark</Cell>
+    </CellGrid>
+    <CellGrid key="selection-chevron">
+      <Cell>Selection Style Chevron</Cell>
+    </CellGrid>
   </TableCellGrid>
 );
 

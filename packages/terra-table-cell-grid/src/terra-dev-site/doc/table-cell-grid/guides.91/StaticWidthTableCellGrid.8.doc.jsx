@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../../docs/guides/FixedWidthTable.md';
+import ReadMe from '../../../../../docs/guides/StaticWidthTable.md';
 import { name } from '../../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Example Files
-import FixedWidthTable from '../../guides/FixedWidthTable';
-import FixedWidthTableSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/FixedWidthTable';
+import StaticWidthTable from '../../guides/StaticWidthTable';
+import StaticWidthTableSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/StaticWidthTable';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 
 const DocPage = () => (
@@ -16,8 +16,8 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        example: <FixedWidthTable />,
-        source: FixedWidthTableSrc,
+        example: <StaticWidthTable />,
+        source: StaticWidthTableSrc,
       },
     ]}
   />

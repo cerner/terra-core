@@ -13,6 +13,12 @@
     width: 1.143rem;
   }
 
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+  }
+
   [data-table-padding='standard'] .cell > .container {
     padding-bottom: var(--terra-flex-table-cell-standard-padding-bottom, 0.5rem);
     padding-left: var(--terra-flex-table-cell-standard-padding-left, 0.7142857143rem);

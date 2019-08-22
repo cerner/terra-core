@@ -18,6 +18,10 @@
     &.divider-both  {
       > * {
         border-right: var(--terra-flex-table-cell-border-right, 1px solid #ccc);
+
+        &:last-of-type {
+          border-right: 0;
+        }
       }
     }
   
