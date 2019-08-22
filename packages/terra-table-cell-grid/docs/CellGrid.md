@@ -1,6 +1,6 @@
 # Cell Grid
 
-The CellGrid is a sub component that groups table cells passed through children. Each row handles it's own selection state through props. The onSelect function that can be passed to the cell grid will return the metaData associated to the cell grid. The metaData allows for greater control of state with the ability to associate any indicator or function with the cell grid.
+The CellGrid is a sub component that groups table cells passed through children. Each cell grid handles it's own selection state through props. The onSelect function that can be passed to the cell grid will return the metaData associated to the cell grid. The metaData allows for greater control of state with the ability to associate any indicator or function with the cell grid.
 
 ## Usage
 
