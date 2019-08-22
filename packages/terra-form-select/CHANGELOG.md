@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed `inherit` fallback for `--terra-form-select-hover-color` CSS custom property
 
 5.27.0 - (August 21, 2019)
 ------------------

@@ -60,7 +60,7 @@
 
     &:hover {
       border-color: var(--terra-form-select-hover-border-color, #dedfe0);
-      color: var(--terra-form-select-hover-color, inherit);
+      color: var(--terra-form-select-hover-color);
     }
 
     &.is-focused:hover {
@@ -249,7 +249,7 @@
 
       &:hover {
         border-color: var(--terra-form-select-hover-border-color, #dedfe0);
-        color: var(--terra-form-select-hover-color, inherit);
+        color: var(--terra-form-select-hover-color);
       }
     }
 

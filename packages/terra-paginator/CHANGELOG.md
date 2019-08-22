@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed `inherit` fallback for `--terra-paginator-nav-link-selected-color` CSS custom property
 
 2.24.0 - (August 21, 2019)
 ------------------
