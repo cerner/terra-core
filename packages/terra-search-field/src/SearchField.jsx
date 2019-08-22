@@ -220,8 +220,7 @@ class SearchField extends React.Component {
       customProps.className,
     ]);
 
-    // eslint-disable-next-line no-prototype-builtins
-    const inputText = inputAttributes && inputAttributes.hasOwnProperty('aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
+    const inputText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
 
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
