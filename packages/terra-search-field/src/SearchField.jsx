@@ -220,7 +220,8 @@ class SearchField extends React.Component {
       customProps.className,
     ]);
 
-    const inputText = intl.formatMessage({ id: 'Terra.searchField.search' });
+    const inputText = inputAttributes && inputAttributes.hasOwnProperty('aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
+
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = { ...inputAttributes };

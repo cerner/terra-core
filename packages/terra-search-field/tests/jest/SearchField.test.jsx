@@ -46,6 +46,11 @@ describe('Snapshots', () => {
   });
 
   it('renders a search field with an aria-label', () => {
+    const searchField = shallowWithIntl(<SearchField inputAttributes={{ 'aria-label': 'Search Field' }} />).dive();
+    expect(searchField).toMatchSnapshot();
+  });
+
+  it('renders a search field with an aria-label using prop', () => {
     const searchField = shallowWithIntl(<SearchField inputAttributes={{ ariaLabel: 'Search Field' }} />).dive();
     expect(searchField).toMatchSnapshot();
   });
