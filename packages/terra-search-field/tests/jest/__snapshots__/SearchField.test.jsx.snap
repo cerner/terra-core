@@ -66,7 +66,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
     >
       <Input
         aria-disabled={false}
-        aria-label="Terra.searchField.search"
+        ariaLabel="Terra.searchField.search"
         className="input"
         disabled={false}
         isInvalid={false}
@@ -182,7 +182,7 @@ exports[`Snapshots renders a basic search field 1`] = `
   >
     <Input
       aria-disabled={false}
-      aria-label="Terra.searchField.search"
+      ariaLabel="Terra.searchField.search"
       className="input"
       disabled={false}
       isInvalid={false}
@@ -226,7 +226,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
   >
     <Input
       aria-disabled={true}
-      aria-label="Terra.searchField.search"
+      ariaLabel="Terra.searchField.search"
       className="input"
       disabled={true}
       isInvalid={false}
@@ -270,7 +270,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
   >
     <Input
       aria-disabled={false}
-      aria-label="Terra.searchField.search"
+      ariaLabel="Terra.searchField.search"
       className="input"
       disabled={false}
       isInvalid={false}
@@ -331,7 +331,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
   >
     <Input
       aria-disabled={false}
-      aria-label="Terra.searchField.search"
+      ariaLabel="Terra.searchField.search"
       className="input"
       defaultValue="Default"
       disabled={false}
@@ -393,7 +393,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
   >
     <Input
       aria-disabled={false}
-      aria-label="Terra.searchField.search"
+      ariaLabel="Terra.searchField.search"
       className="input"
       disabled={false}
       isInvalid={false}
@@ -437,7 +437,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
   >
     <Input
       aria-disabled={false}
-      aria-label="Terra.searchField.search"
+      ariaLabel="Terra.searchField.search"
       className="input"
       disabled={false}
       isInvalid={false}
@@ -500,6 +500,51 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     <Input
       aria-disabled={false}
       aria-label="Search Field"
+      ariaLabel="Search Field"
+      className="input"
+      disabled={false}
+      isInvalid={false}
+      name={null}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      refCallback={[Function]}
+      required={false}
+      type="search"
+    />
+  </div>
+  <Button
+    className="button"
+    icon={
+      <IconSearch
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="Terra.searchField.submit-search"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
+exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
+<div
+  className="search-field"
+>
+  <div
+    className="input-group"
+  >
+    <Input
+      aria-disabled={false}
+      ariaLabel="Search Field"
       className="input"
       disabled={false}
       isInvalid={false}

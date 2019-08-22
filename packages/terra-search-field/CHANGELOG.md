@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Props table markdown file import added to doc site page
 
+### Changed
+* updated source and jest files for changes in form-input
 
 3.25.0 - (August 21, 2019)
 ------------------

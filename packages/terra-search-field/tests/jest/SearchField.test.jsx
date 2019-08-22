@@ -50,6 +50,11 @@ describe('Snapshots', () => {
     expect(searchField).toMatchSnapshot();
   });
 
+  it('renders a search field with an aria-label using prop', () => {
+    const searchField = shallowWithIntl(<SearchField inputAttributes={{ ariaLabel: 'Search Field' }} />).dive();
+    expect(searchField).toMatchSnapshot();
+  });
+
   it('clears form with clear method', () => {
     const searchField = shallowWithIntl(<SearchField />).dive();
     searchField.setState({ searchText: 'amp' });
