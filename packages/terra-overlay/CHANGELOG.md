@@ -3,12 +3,12 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+3.26.0 - (August 21, 2019)
 ------------------
 ### Changed
+* Import for package version from package.json added to doc page
+* Update bracket positioning lint
 * Cleaned up imports in examples and test files
 
 3.25.0 - (August 14, 2019)

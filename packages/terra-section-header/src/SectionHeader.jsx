@@ -92,7 +92,7 @@ class SectionHeader extends React.Component {
       console.warn('\'isOpen\' are intended to be used only when \'onClick\' is provided.');
     }
 
-    const attributes = Object.assign({}, customProps);
+    const attributes = { ...customProps };
 
     if (onClick) {
       attributes.tabIndex = '0';

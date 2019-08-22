@@ -626,8 +626,7 @@ class Frame extends React.Component {
               {children}
             </Menu>
           </Dropdown>
-          )
-        }
+          )}
       </div>
     );
   }

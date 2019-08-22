@@ -1,5 +1,5 @@
 const classNamesToAttributes = (attributes) => {
-  const iconAttributes = Object.assign({}, attributes);
+  const iconAttributes = { ...attributes };
 
   if (iconAttributes.className) {
     // remove is-bidi css class and add isBidi as an attribute
