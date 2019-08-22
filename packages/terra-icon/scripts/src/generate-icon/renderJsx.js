@@ -10,7 +10,7 @@ const staticIconTemplatePath = path.join(__dirname, './staticIcontemplate.txt');
 const themeIconTemplatePath = path.join(__dirname, './template.txt');
 // template path for Icons that supports Tooltip
 const themeIconWithTooltipTemplatePath = path.join(__dirname, './themeIconWithTooltipTemplate.txt');
-const iconsWithTooltip = ['IconConsultInstructionsForUse'];
+const themeIconsWithTooltip = ['IconConsultInstructionsForUse'];
 
 // Generate list of static color icon names
 const staticIcons = iconData
@@ -26,7 +26,7 @@ const renderJsx = icon => new Promise((resolve, reject) => {
   if (staticIcons.includes(icon.name)) {
     templatePath = staticIconTemplatePath;
   } else {
-    templatePath = (iconsWithTooltip.includes(icon.name)) ? themeIconWithTooltipTemplatePath : themeIconTemplatePath;
+    templatePath = (themeIconsWithTooltip.includes(icon.name)) ? themeIconWithTooltipTemplatePath : themeIconTemplatePath;
   }
 
   fs.readFile(templatePath, 'utf-8', (error, text) => {
