@@ -5,7 +5,7 @@ import Input from '../../../Input';
 const PlaceholderExample = () => (
   <div>
     <Field label="Placeholder Text" htmlFor="placeholder">
-      <Input name="default placeholder input" placeholder="Placeholder Text" id="placeholder" />
+      <Input name="default placeholder input" placeholder="Placeholder Text" id="placeholder" ariaLabel="Placeholder Text" />
     </Field>
   </div>
 );

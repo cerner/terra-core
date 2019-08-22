@@ -17,12 +17,12 @@ class DefaultExample extends React.Component {
   render() {
     return (
       <div>
-        <Field label="Default" htmlFor="default-controlled">
+        <Field label="Default">
           <Input
             name="default input"
-            id="default-controlled"
             value={this.state.input}
             onChange={this.handleChange}
+            ariaLabel="Default"
           />
         </Field>
         <p>

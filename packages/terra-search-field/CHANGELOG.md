@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* updated source and jest files for changes in form-input
 
 3.25.0 - (August 21, 2019)
 ------------------

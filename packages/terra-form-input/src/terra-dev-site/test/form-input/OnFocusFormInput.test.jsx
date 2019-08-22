@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from '../../../Input';
 
-const OnFocusInput = () => <Input aria-label="onFocus testable form input" onFocus={() => {}} id="form-input-onFocus" />;
+const OnFocusInput = () => <Input onFocus={() => { }} id="form-input-onFocus" ariaLabel="label" />;
 
 export default OnFocusInput;
