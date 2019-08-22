@@ -13,6 +13,13 @@ viewports.forEach((viewport) => {
       Terra.should.beAccessible();
     });
 
+    describe('HeaderFooter Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/header-footer'));
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+    });
+
     describe('Padding Test', () => {
       before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/padding'));
 
@@ -27,6 +34,13 @@ viewports.forEach((viewport) => {
       Terra.should.beAccessible();
     });
 
+    describe('HeaderCell Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/header-cell'));
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+    });
+
     describe('CellGrid Test', () => {
       before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/cell-grid'));
 
@@ -36,6 +50,13 @@ viewports.forEach((viewport) => {
       it('Hover', () => browser.moveToObject('#selectable-row'));
 
       Terra.should.matchScreenshot('TableRow-Hover');
+    });
+
+    describe('Cell Test', () => {
+      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/cell'));
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
     });
 
     describe('Section Test', () => {

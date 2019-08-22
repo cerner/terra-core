@@ -4,9 +4,7 @@ import TableCellGrid, {
 } from '../../../index';
 
 const CellGridTest = () => (
-  <TableCellGrid
-    id="Table"
-  >
+  <TableCellGrid>
     <CellGrid key="default-row">
       <Cell>Default Row</Cell>
     </CellGrid>

@@ -5,8 +5,6 @@ import TableCellGrid, {
 
 const HeaderFooterTest = () => (
   <TableCellGrid
-    id="Table"
-    paddingStyle="standard"
     headerCellGrid={(
       <HeaderCellGrid>
         <HeaderCell key="cell-0">Default Header Cell</HeaderCell>
