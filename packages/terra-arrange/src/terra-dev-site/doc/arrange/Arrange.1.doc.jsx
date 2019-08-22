@@ -4,8 +4,6 @@ import ReadMe from '../../../../docs/README.md';
 import PropsTable from '../../../../docs/Arrange-props-table.md';
 import { name, version } from '../../../../package.json';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/no-unresolved, import/no-duplicates */
-
 // Example Files
 import ArrangeAlignAllContainers from '../example/ArrangeAlignAllContainers';
 import ArrangeAlignAllContainersSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ArrangeAlignAllContainers';
@@ -15,7 +13,6 @@ import ArrangeAlignFitEnd from '../example/ArrangeAlignFitEnd';
 import ArrangeAlignFitEndSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ArrangeAlignFitEnd';
 import ArrangeAlignFitStart from '../example/ArrangeAlignFitStart';
 import ArrangeAlignFitStartSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ArrangeAlignFitStart';
-/* eslint-enable import/no-webpack-loader-syntax, import/no-duplicates */
 
 const DocPage = () => (
   <DocTemplate

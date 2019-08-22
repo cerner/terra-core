@@ -3,9 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-### Added
-* Props table markdown file import added to doc site page
-
 
 3.16.0 - (August 21, 2019)
 ------------------
@@ -16,7 +13,6 @@ Unreleased
 ### Changed
 * Import for package version from package.json added to doc page
 * Cleaned up imports in examples and test files
-* Import for package version from package.json added to doc page
 
 3.15.0 - (August 14, 2019)
 ------------------

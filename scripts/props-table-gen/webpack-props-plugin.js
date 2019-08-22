@@ -4,7 +4,6 @@ const glob = require('glob');
 const marked = require('marked');
 const path = require('path');
 const reactDocs = require('react-docgen');
-/* eslint-enable import/no-extraneous-dependencies */
 
 /* eslint-disable class-methods-use-this, no-console */
 class WebpackPropsPlugin {

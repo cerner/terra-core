@@ -5,15 +5,14 @@ Unreleased
 ----------
 ### Added
 * Props table markdown file import added to doc site page
+* Added markdown version of props table to package
 
 
 2.17.0 - (August 21, 2019)
 ------------------
 ### Changed
-* Cleaned up imports in examples and test files
 * Import for package version from package.json added to doc page
 * Added comments for ESlint v6
-* Cleaned up imports in examples and test files
 
 ### Removed
 * NPM badge wdio test
@@ -24,9 +23,6 @@ Unreleased
 * Conditional rendering added for package version badge to allow for customization
 * `packageVersion` prop added to set version on badge if package is not available on npm
 * `packageUrl` prop added to link version badge to custom package url
-
-### Changed
-* Added markdown version of props table to package
 
 ### Changed
 * updated package.json test scripts
