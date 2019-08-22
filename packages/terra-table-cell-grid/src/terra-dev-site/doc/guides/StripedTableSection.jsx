@@ -8,13 +8,13 @@ const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
-const createCellGrid = (itemData, index) => (
+const createCellGrid = (cellGridData, index) => (
   <CellGrid
-    key={itemData.key}
+    key={cellGridData.key}
     isStriped={index % 2 !== 0}
-    metaData={{ key: itemData.key }}
+    metaData={{ key: cellGridData.key }}
   >
-    {createCellsForCellGrid(itemData.cells)}
+    {createCellsForCellGrid(cellGridData.cells)}
   </CellGrid>
 );
 

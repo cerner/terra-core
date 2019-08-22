@@ -12,7 +12,7 @@ const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
-const createCellGrid = itemData => <CellGrid key={itemData.key}>{createCellsForCellGrid(itemData.cells)}</CellGrid>;
+const createCellGrid = cellGridData => <CellGrid key={cellGridData.key}>{createCellsForCellGrid(cellGridData.cells)}</CellGrid>;
 
 const sortData = (data, sortColumn) => {
   if (!sortColumn) {

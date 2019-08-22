@@ -20,16 +20,16 @@ const CheckMarkTable = () => {
     setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
   };
 
-  const createCellGrid = rowData => (
+  const createCellGrid = cellGridData => (
     <CellGrid
       selectionStyle="checkmark"
-      key={rowData.key}
-      isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key)}
-      isSelected={selectedKeys.indexOf(rowData.key) >= 0}
-      metaData={{ key: rowData.key }}
+      key={cellGridData.key}
+      isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, cellGridData.key)}
+      isSelected={selectedKeys.indexOf(cellGridData.key) >= 0}
+      metaData={{ key: cellGridData.key }}
       onSelect={handleCellGridSelection}
     >
-      {createCellsForCellGrid(rowData.cells)}
+      {createCellsForCellGrid(cellGridData.cells)}
     </CellGrid>
   );
 

@@ -20,16 +20,16 @@ const SingleSelectTable = () => {
     }
   };
 
-  const createCellGrid = itemData => (
+  const createCellGrid = cellGridData => (
     <CellGrid
-      key={itemData.key}
+      key={cellGridData.key}
       selectionStyle="chevron"
       isSelectable
-      isSelected={selectedKey === itemData.key}
-      metaData={{ key: itemData.key }}
+      isSelected={selectedKey === cellGridData.key}
+      metaData={{ key: cellGridData.key }}
       onSelect={handleCellGridSelection}
     >
-      {createCellsForCellGrid(itemData.cells)}
+      {createCellsForCellGrid(cellGridData.cells)}
     </CellGrid>
   );
 

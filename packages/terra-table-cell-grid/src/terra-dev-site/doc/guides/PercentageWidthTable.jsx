@@ -15,9 +15,9 @@ const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[
 
 const createCellsForCellGrid = cells => cells.map((cell, index) => createCell(cell, index));
 
-const createCellGrid = itemData => (
-  <CellGrid key={itemData.key}>
-    {createCellsForCellGrid(itemData.cells)}
+const createCellGrid = cellGridData => (
+  <CellGrid key={cellGridData.key}>
+    {createCellsForCellGrid(cellGridData.cells)}
   </CellGrid>
 );
 

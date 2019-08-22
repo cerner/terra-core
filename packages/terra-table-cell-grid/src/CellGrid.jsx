@@ -15,16 +15,15 @@ const propTypes = {
   children: PropTypes.node,
   /**
    * The children passed to the component.
-   * * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
+   * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
-
   /**
    * Whether or not row is selected
    */
   isSelected: PropTypes.bool,
   /**
-   * Whether or not row is selectable
+   * Whether or not cell grid is selectable
    */
   isSelectable: PropTypes.bool,
   /**

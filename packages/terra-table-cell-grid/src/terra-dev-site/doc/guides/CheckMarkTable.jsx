@@ -7,7 +7,7 @@ import TableCellGrid, {
 } from 'terra-table-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const rowCount = 5;
+const cellGridCount = 5;
 
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
@@ -21,7 +21,7 @@ const MultiSelectTable = () => {
     event.preventDefault();
     event.stopPropagation();
     const newSelection = Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key);
-    if (newSelection.length === rowCount) {
+    if (newSelection.length === cellGridCount) {
       setHeaderState('all');
     } else if (newSelection.length > 0) {
       setHeaderState('intermediate');
@@ -39,21 +39,21 @@ const MultiSelectTable = () => {
     }
   };
 
-  const createCellGrid = rowData => (
+  const createCellGrid = cellGridData => (
     <CellGrid
-      key={rowData.key}
+      key={cellGridData.key}
       isSelectable
     >
       {(
         <CheckMarkCell
           isPadded
           isSelectable
-          isSelected={headerState === 'none' ? false : headerState === 'all' || selectedKeys.indexOf(rowData.key) >= 0}
-          metaData={{ key: rowData.key }}
+          isSelected={headerState === 'none' ? false : headerState === 'all' || selectedKeys.indexOf(cellGridData.key) >= 0}
+          metaData={{ key: cellGridData.key }}
           onSelect={handleMarkSelection}
         />
       )}
-      {createCellsForCellGrid(rowData.cells)}
+      {createCellsForCellGrid(cellGridData.cells)}
     </CellGrid>
   );
 

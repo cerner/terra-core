@@ -1,49 +1,48 @@
 # Terra TableCellGrid - Implementing a Striped TableCellGrid
 
-In previous versions of the terra-flex-table the striped style was derived using a nth-of-type selector, however this striping pattern does not work using section and subsections, as they are sibling elements of the same type. So in this implementation the responsibility of striping is moved to the TableRow itself. The following guide shows how to cleanly implement a striped table.
+With the table cell grid the striping pattern for the implementation is responsibility of striping is on the CellGrid itself. The following guide shows how to cleanly implement a striped TableCellGrid.
 
 ## Standard Striped Function
-When striping the table rows the functionality is the same if you are yielding a flat list of items and a section's items.  When mapping your data to table rows capture the index of each row and pass it to your createTableRow method.
-```jsx
-const createTableRows = data => data.map((childItem, index) => createTableRow(childItem, index));
+When striping the table cell grids the functionality is the same if you are yielding a flat list of items and a section's items.  When mapping your data to table cell grids capture the index of each cell grid cell grid pass it to your createCellGrid method.
+```diff
++ const createCellGrids = data => data.map((childItem, index) => createCellGrid(childItem, index));
 ```
-Next within our newly created method for row creation we want to set the striping pattern by the UX approved pattern, on odd array indexed items. This pattern is true for both a flat list and within each section. To accomplish this we check whether or not index modulus 2 yields a non zero value, this will give us the odd values rows.
-```jsx
-const createTableRow = (itemData, index) => (
-  <Row
-    key={itemData.key}
-    isStriped={index % 2 !== 0}
-  >
-    {createCellsForRow(itemData.cells)}
-  </Row>
-);
+Next within our newly created method for cell grid creation we want to set the striping pattern by the UX approved pattern, on odd array indexed items. This pattern is true for both a flat list and within each section. To accomplish this we check whether or not index modulus 2 yields a non zero value, this will give us the odd values cell grids.
+```diff
++ const createCellGrid = (itemData, index) => (
++  <CellGrid
++    key={itemData.key}
++    isStriped={index % 2 !== 0}
++   >
++     {createCellsForCellGrid(itemData.cells)}
++   </CellGrid>
++ );
 ```
 We can then implement our additional static methods to populate the cell data.
-```jsx
-const createCell = cell => (
-  <Cell isPadded key={cell.key}>
-    {cell.title}
-  </Cell>
-);
+```diff
++ const createCell = cell => (
++   <Cell isPadded key={cell.key}>
++     {cell.title}
++   </Cell>
++ );
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
++ const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 ```
-And finally we call our create row creation method.
-```jsx
-const StripedTable = () => (
-  <Table
-    paddingStyle="standard"
-    header={(
-      <Header>
-        <HeaderCell isPadded>Column 0</HeaderCell>
-        <HeaderCell isPadded>Column 1</HeaderCell>
-        <HeaderCell isPadded>Column 2</HeaderCell>
-      </Header>
-    )}
-  >
-    {createTableRows(mockData)}
-  </Table>
-);
+And finally we call our create cell grid creation method.
+```diff
++ const StripedTable = () => (
++   <TableCellGrid
++     paddingStyle="standard"
++     headerCellGrid={(
++       <HeaderCellGrid>
++         <HeaderCell isPadded>Column 0</HeaderCell>
++         <HeaderCell isPadded>Column 1</HeaderCell>
++         <HeaderCell isPadded>Column 2</HeaderCell>
++       </HeaderCellGrid>
++     )}
++   >
++     {createCellGrids(mockData)}
++   </TableCellGrid>
++ );
 ```
-
 Using these steps we get the following example:

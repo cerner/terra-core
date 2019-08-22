@@ -1,129 +1,128 @@
 # Terra TableCellGrid - Implementing a Single Select TableCellGrid
 
-The terra-flex-table implementation requires controlled state if selections are required. As a result selections are applied at child row generation from HOC state. The following guide show you how to implement that state within a single row selection vairant of table.
+The terra-table-cell-grid implementation requires controlled state if selections are required. As a result selections are applied at child cell grid generation from HOC state. The following guide show you how to implement that state within a single cell grid selection variant of table.
 
 ## State Management
 The state of selection needs to be managed for the table in a High Order Component (HOC). In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
 
  First defaulting our state to a null value in the constructor. 
-```jsx
-  constructor(props) {
-    super(props);
+```diff
+   constructor(props) {
+     super(props);
 
-    this.state = { selectedKey: null };
-  }
++    this.state = { selectedKey: null };
+   }
 ```
-Next creating an event handler callback method to pass to the table row's "onSelect" prop. The "onSelect" will return the metaData prop passed it each row.
-```jsx
-  handleRowSelection(event, metaData) {
+Next creating an event handler callback method to pass to the table cell grid's "onSelect" prop. The "onSelect" will return the metaData prop passed it each cell grid.
+```diff
++  handleCellGridSelection(event, metaData) {
 
-  }
++  }
 ```
 As a precaution we can prevent default on the event, in case the table has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
-```jsx
-  handleRowSelection(event, metaData) {
-    event.preventDefault();
+```diff
+  handleCellGridSelection(event, metaData) {
++   event.preventDefault();
   }
 ```
 A single select table normally doesn't allow deselection, so we'll be using it in our example, but if deselection is desired we could adjust this method. So we compare the key to the current one in state, and if they aren't the same we set this as our state.
-```jsx
-  handleRowSelection(event, metaData) {
-    event.preventDefault();
-    if (this.state.selectedKey !== metaData.key) {
-      this.setState({ selectedKey: metaData.key });
-    }
-  }
+```diff
++  handleCellGridSelection(event, metaData) {
++    event.preventDefault();
++    if (this.state.selectedKey !== metaData.key) {
++      this.setState({ selectedKey: metaData.key });
++    }
++  }
 ```
-Setting state will trigger another render. So in the render method we need generate our table rows with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
+Setting state will trigger another render. So in the render method we need generate our table cell grids with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
 [React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
-```jsx
-  createTableRow(rowData) {
-    return (
-      <Row
-        key={itemData.key}
-      >
-        {createCellsForRow(rowData.cells)}
-      </Row>
-    );
-  }
+```diff
++  createCellGrid(cellGridData) {
++    return (
++      <CellGrid
++        key={cellGridData.key}
++      >
++        {createCellsForCellGrid(cellGridData.cells)}
++      </CellGrid>
++    );
++  }
 ```
 Next we need to set up our metaData object with our key value, and attach the "onSelect" to our handler.
-```jsx
-  createTableRow(rowData) {
+```diff
+  createCellGrid(cellGridData) {
     return (
-      <Row
+      <CellGrid
         key={itemData.key}
-        metaData={{ key: itemData.key }}
-        onSelect={this.handleRowSelection}
++       metaData={{ key: itemData.key }}
++       onSelect={this.handleCellGridSelection}
       >
-        {createCellsForRow(rowData.cells)}
-      </Row>
+        {createCellsForCellGrid(cellGridData.cells)}
+      </CellGrid>
     );
   }
 ```
 For the single select table we set "isSelectable" for all items.
-```jsx
-  createTableRow(rowData) {
+```diff
+  createCellGrid(cellGridData) {
     return (
-      <Row
-        key={itemData.key}
-        isSelectable
-        metaData={{ key: itemData.key }}
-        onSelect={this.handleRowSelection}
+      <CellGrid
+        key={cellGridData.key}
++       isSelectable
+        metaData={{ key: cellGridData.key }}
+        onSelect={this.handleCellGridSelection}
       >
-        {createCellsForRow(rowData.cells)}
-      </Row>
+        {createCellsForCellGrid(cellGridData.cells)}
+      </CellGrid>
     );
   }
 ```
 Next we need to check if the item matches the selectedKey in state.
-```jsx
-  createTableRow(rowData) {
+```diff
+  createCellGrid(cellGridData) {
     return (
-      <Row
-        key={itemData.key}
+      <CellGrid
+        key={cellGridData.key}
         isSelectable
-        isSelected={this.state.selectedKey === itemData.key}
-        metaData={{ key: itemData.key }}
-        onSelect={this.handleRowSelection}
++       isSelected={this.state.selectedKey === cellGridData.key}
+        metaData={{ key: cellGridData.key }}
+        onSelect={this.handleCellGridSelection}
       >
-        {createCellsForRow(rowData.cells)}
-      </Row>
+        {createCellsForCellGrid(cellGridData.cells)}
+      </CellGrid>
     );
   }
 ```
-We can then implement the unpack of our data into our row cells.
-```jsx
-  const createCell = cell => (
-    <Cell isPadded key={cell.key}>
-      {cell.title}
-    </Cell>
-  );
+We can then implement the unpack of our data into our cell grid cells.
+```diff
++  const createCell = cell => (
++    <Cell isPadded key={cell.key}>
++      {cell.title}
++    </Cell>
++  );
 
-  const createCellsForRow = cells => cells.map(cell => createCell(cell));
++  const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 ```
-Finally we can implement a method to loop through our data and create the table row with our methods and call it from our render method. 
-```jsx
-  createTableRows(data) {
-    return data.map(childItem => this.createTableRow(childItem));
-  }
+Finally we can implement a method to loop through our data and create the table cell grid with our methods and call it from our render method.
+```diff
++  createCellGrids(data) {
++    return data.map(childItem => this.createCellGrid(childItem));
++  }
 
-  render() {
-    return (
-      <Table
-        paddingStyle="standard"
-        header={
-          <Header>
-            <HeaderCell isPadded>Column 0</HeaderCell>
-            <HeaderCell isPadded>Column 1</HeaderCell>
-            <HeaderCell isPadded>Column 2</HeaderCell>
-          </Header> 
-        }
-      >
-        {this.createTableRows(mockData)}
-      </Table>
-    );
-  }
-}
-  ```
-  Using these steps we get the following example:
+   render() {
+     return (
++      <TableCellGrid
++        paddingStyle="standard"
++        headerCellGrid={(
++          <HeaderCellGrid>
++            <HeaderCell isPadded>Column 0</HeaderCell>
++            <HeaderCell isPadded>Column 1</HeaderCell>
++            <HeaderCell isPadded>Column 2</HeaderCell>
++          </HeaderCellGrid>
++        )}
++      >
++        {this.createCellGrids(mockData)}
++      </TableCellGrid>
+     );
+   }
+```
+Using these steps we get the following example:
