@@ -74,8 +74,10 @@ describe('ShowHide', () => {
   });
 
   it('should append styles passed in with attributes', () => {
+    /* eslint-disable react/forbid-component-props */
     const showHide = mountWithIntl(<ShowHide style={{ height: '100px' }} preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>);
     expect(showHide).toMatchSnapshot();
+    /* eslint-disable react/forbid-component-props */
   });
 
   // Error Handling Test

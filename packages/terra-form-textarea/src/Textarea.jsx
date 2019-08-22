@@ -10,7 +10,7 @@ const isMobileDevice = () => window.matchMedia('(max-width: 1024px)').matches
     'ontouchstart' in window
     // eslint-disable-next-line no-undef
     || (window.DocumentTouch && document instanceof DocumentTouch)
-    || navigator.maxTouchPoints > 0
+    || navigator.maxTouchPoints > 0 // eslint-disable-line compat/compat
     || navigator.msMaxTouchPoints > 0
   );
 
@@ -28,6 +28,11 @@ const TEXTAREA_ROW_SIZES = {
 };
 
 const propTypes = {
+  /**
+  * String that labels the current element. 'aria-label' must be present,
+  * for accessibility.
+  */
+  ariaLabel: PropTypes.string,
   /**
    * The defaultValue of the textarea. Use this to create an uncontrolled textarea.
    */
@@ -181,11 +186,12 @@ class Textarea extends React.Component {
       defaultValue,
       rows,
       size,
+      ariaLabel,
       refCallback,
       ...customProps
     } = this.props;
 
-    const additionalTextareaProps = Object.assign({}, customProps);
+    const additionalTextareaProps = { ...customProps };
 
     const textareaClasses = cx([
       'textarea',
@@ -194,6 +200,8 @@ class Textarea extends React.Component {
       { resizable: isAutoResizable && !this.isMobileDevice },
       additionalTextareaProps.className,
     ]);
+
+    additionalTextareaProps['aria-label'] = ariaLabel;
 
     if (required) {
       additionalTextareaProps['aria-required'] = 'true';

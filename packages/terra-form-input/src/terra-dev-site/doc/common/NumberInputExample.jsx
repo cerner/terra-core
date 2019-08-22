@@ -5,7 +5,7 @@ import Input from '../../../Input';
 const NumberInputExample = () => (
   <div>
     <Field label="Numeric Input" htmlFor="numeric">
-      <Input name="number input" placeholder="enter digits" id="numeric" type="number" />
+      <Input name="number input" placeholder="enter digits" id="numeric" type="number" ariaLabel="Numeric Input" />
     </Field>
   </div>
 );

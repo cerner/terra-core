@@ -4,11 +4,13 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Import for package version from package.json added to doc page
+* updated source and jest files for changes in form-input
 
-Unreleased
+3.25.0 - (August 21, 2019)
 ------------------
 ### Changed
+* Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 * Cleaned up imports in examples and test files
 
 3.24.0 - (August 14, 2019)

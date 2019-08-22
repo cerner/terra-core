@@ -63,6 +63,11 @@ const propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
+  /**
+  * String that labels the current element. 'aria-label' must be present,
+  * for accessibility.
+  */
+  ariaLabel: PropTypes.string,
 };
 
 const defaultProps = {
@@ -94,16 +99,19 @@ class Input extends React.Component {
       refCallback,
       required,
       type,
+      ariaLabel,
       value,
       ...customProps
     } = this.props;
 
-    const attributes = Object.assign({}, customProps);
+    const attributes = { ...customProps };
     const formInputClassNames = cx([
       'form-input',
       { 'form-error': isInvalid },
       attributes.className,
     ]);
+
+    attributes['aria-label'] = ariaLabel;
 
     if (required) {
       attributes['aria-required'] = 'true';
