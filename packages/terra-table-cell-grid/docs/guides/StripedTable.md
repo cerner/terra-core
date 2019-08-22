@@ -20,11 +20,7 @@ Next within our newly created method for cell grid creation we want to set the s
 ```
 We can then implement our additional static methods to populate the cell data.
 ```diff
-+ const createCell = cell => (
-+   <Cell isPadded key={cell.key}>
-+     {cell.title}
-+   </Cell>
-+ );
++ const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 + const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 ```

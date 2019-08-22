@@ -20,6 +20,7 @@ const MultiSelectTable = () => {
   const handleMarkSelection = (event, metaData) => {
     event.preventDefault();
     event.stopPropagation();
+
     const newSelection = Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key);
     if (newSelection.length === cellGridCount) {
       setHeaderState('all');
@@ -61,11 +62,17 @@ const MultiSelectTable = () => {
 
   return (
     <TableCellGrid
-      aria-multiselectable
       paddingStyle="standard"
       headerCellGrid={(
         <HeaderCellGrid>
-          <HeaderCheckMarkCell isSelected={headerState !== 'none'} isIntermediate={headerState === 'intermediate'} onSelect={handleHeaderMarkSelection} isPadded isSelectable key="derp" />
+          <HeaderCheckMarkCell
+            isSelected={headerState !== 'none'}
+            isIntermediate={headerState === 'intermediate'}
+            onSelect={handleHeaderMarkSelection}
+            isPadded
+            isSelectable
+            key="derp"
+          />
           <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>
           <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>
           <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>

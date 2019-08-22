@@ -26,18 +26,21 @@ const SectionWithSubsection2 = () => {
     setCollapsedKeys(Utils.updatedMultiSelectedKeys(collapsedKeys, metaData.key));
   };
 
-  const createSubsection = subsectionData => (
-    <Subsection
-      key={subsectionData.key}
-      title={subsectionData.title}
-      isCollapsed={collapsedKeys.indexOf(subsectionData.key) >= 0}
-      isCollapsible
-      metaData={{ key: subsectionData.key }}
-      onSelect={handleSectionSelection}
-    >
-      {subsectionData.childItems.map(childItem => createCellGrid(childItem))}
-    </Subsection>
-  );
+  const createSubsection = (subsectionData) => {
+    const isCollapsed = collapsedKeys.indexOf(subsectionData.key) >= 0;
+    return (
+      <Subsection
+        key={subsectionData.key}
+        title={subsectionData.title}
+        isCollapsed={isCollapsed}
+        isCollapsible
+        metaData={{ key: subsectionData.key }}
+        onSelect={handleSectionSelection}
+      >
+        {!isCollapsed && subsectionData.childItems.map(childItem => createCellGrid(childItem))}
+      </Subsection>
+    );
+  };
 
   const createSection = sectionData => (
     <Section

@@ -5,48 +5,42 @@ As table cell content is dynamic and the types of sorting can vary, consumers ne
 ## State Management
 The state of the sort column needs to be managed for the table in a HOC. In this example we are going to be an object containing a unique key for the column and current sort direction.
 
- First defaulting our state to null in the constructor. 
+ First defaulting our state to null with the useState hook.
 ```diff
-  constructor(props) {
-    super(props);
-
-+   this.state = { sortColumn: null };
-  }
++ const [sortColumn, setSortColumn] = useState(null);
 ```
 Next creating an event handler callback method to pass to the table cell grid's `onSelect` prop. The `onSelect` will return the metaData prop passed it each header cell.
 ```diff
-+  handleSortClick(event, metaData) {
++  const handleSortClick = (event, metaData) => {
 
 +  }
 ```
 As a precaution we can prevent default on the event, in case the table has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
 ```diff
-  handleSortClick(event, metaData) {
+  const handleSortClick = (event, metaData) => {
 +   event.preventDefault();
   }
 ```
 In this example only one column will be sorted upon, so we'll need to keep track of which column was selected and the current state of sorting for the column. 3 states of column state will be handled, unsorted, sort ascending, and sort descending. A key was sent with the metaData, but an index could have also been used in an implementation where there is no possibility of the columns being rearranged.
 ```diff
-+  handleSortClick(event, metaData) {
-+    event.preventDefault();
-+    if (!this.state.sortColumn || this.state.sortColumn.key !== metaData.key) {
-+      this.setState({ sortColumn: { key: metaData.key, direction: 'asc' } });
-+    } else {
-+      this.setState((prevState) => {
-+        if (prevState.sortColumn.direction === 'asc') {
-+          return { sortColumn: { key: metaData.key, direction: 'desc' } };
-+        }
-+        return { sortColumn: null };
-+      });
-+    }
-+  }
+  const handleSortClick = (event, metaData) => {
+    event.preventDefault();
++   if (!sortColumn || sortColumn.key !== metaData.key) {
++     setSortColumn({ key: metaData.key, direction: 'asc' });
++   } else if (sortColumn.direction === 'asc') {
++     setSortColumn({ key: metaData.key, direction: 'desc' });
++   } else {
++     setSortColumn(null);
++   }
+  };
 ```
 Settting state will trigger another render. So in the render method we need generate our head cells with the updated sort props. Each header cell while need a unique key.
 ```diff
-+  createHeaderCell(key, title) {
++  const createHeaderCell = (key, title) => {
 +    return (
 +      <HeaderCell
 +        key={itemData.key}
++        isPadded
 +      >
 +        {title}
 +      </HeaderCell>
@@ -55,54 +49,56 @@ Settting state will trigger another render. So in the render method we need gene
 ```
 Next we need to set up our metaData object with our key value, and attach the `onSelect` to our handler.
 ```diff
-  createHeaderCell(key, title) {
+  const createHeaderCell = (key, title) => {
     return (
       <HeaderCell
         key={key}
+        isPadded
 +       metaData={{ key }}
-+       onSelect={this.handleSortClick}
++       onSelect={handleSortClick}
       >
         {title}
       </HeaderCell>
     );
-  }
+  };
 ```
 For the ability to toggle sorting we set `isSelectable` for all header cells.
 ```diff
-  createHeaderCell(key, title) {
+  const createHeaderCell = (key, title) => {
     return (
       <HeaderCell
         key={key}
+        isPadded
 +       isSelectable
         metaData={{ key }}
-        onSelect={this.handleSortClick}
+        onSelect={handleSortClick}
       >
         {title}
       </HeaderCell>
     );
-  }
+  };
 ```
 Finally we need to check if the header cell matches the sortColumn.key in state. In the case the header cell isn't sorted no sort indicator value should be passed.
 ```diff
-+  createHeaderCell(key, title) {
+  const createHeaderCell = (key, title) => {
 +    let sort;
 +    if (this.state.sortColumn && this.state.sortColumn.key === key) {
 +      sort = this.state.sortColumn.direction;
 +    }
 +  
-+    return (
-+      <HeaderCell
-+        key={key}
-+        isPadded
-+        isSelectable
-+        sort={sort}
-+        metaData={{ key }}
-+        onSelect={this.handleSortClick}
-+      >
-+        {title}
-+      </HeaderCell>
-+    );
-+  }
+    return (
+      <HeaderCell
+        key={key}
+        isPadded
+        isSelectable
++       sort={sort}
+        metaData={{ key }}
+        onSelect={handleSortClick}
+      >
+         {title}
+      </HeaderCell>
+    );
+  };
 ```
 In this example a simple object sort is parses the data, followed by a check for reversal.
 ```diff
@@ -139,26 +135,24 @@ Next we fill in the static methods for the example table cell grids.
 ```
 Then we can implement a method to loop through our data and create the table cell grids with our methods and call it from our render method. 
 ```diff
-+ createCellGrids(data) {
-+   const sortedData = sortData(data, this.state.sortColumn);
++ const createCellGrids = (data) => {
++   const sortedData = sortData(data, sortColumn);
 +   return sortedData.map(childItem => createCellGrid(childItem));
-+ }
++ };
 
-  render() {
-    return (
-+     <TableCellGrid
-+       paddingStyle="standard"
-+       headerCellGrid={(
-+         <HeaderCellGrid>
-+           {this.createHeaderCell('column-0', 'Breakfast')}
-+           {this.createHeaderCell('column-1', 'Animals')}
-+           {this.createHeaderCell('column-2', 'Flatware')}
-+         </HeaderCellGrid>
-+       )}
-+     >
-+       {this.createCellGrids(mockData)}
-+     </TableCellGrid>
-    );
-  }
+  return (
++   <TableCellGrid
++     paddingStyle="standard"
++     headerCellGrid={(
++       <HeaderCellGrid>
++         {this.createHeaderCell('column-0', 'Breakfast')}
++         {this.createHeaderCell('column-1', 'Animals')}
++         {this.createHeaderCell('column-2', 'Flatware')}
++       </HeaderCellGrid>
++     )}
++   >
++     {this.createCellGrids(mockData)}
++   </TableCellGrid>
+  );
 ```
 Using these steps we get the following example:
