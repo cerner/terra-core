@@ -223,7 +223,7 @@ class SearchField extends React.Component {
     const inputText = intl.formatMessage({ id: 'Terra.searchField.search' });
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
-    const additionalInputAttributes = Object.assign({ 'aria-label': inputText }, inputAttributes);
+    const additionalInputAttributes = { 'aria-label': inputText, ...inputAttributes };
     const clearIcon = <span className={cx('clear-icon')} />;
 
     if (value !== undefined) {

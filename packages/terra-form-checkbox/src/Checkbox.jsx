@@ -100,7 +100,7 @@ const Checkbox = ({
   value,
   ...customProps
 }) => {
-  const controlInputAttrs = Object.assign({}, inputAttrs);
+  const controlInputAttrs = { ...inputAttrs };
 
   if (checked !== undefined) {
     controlInputAttrs.checked = checked;
