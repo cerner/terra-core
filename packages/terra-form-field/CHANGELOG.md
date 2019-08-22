@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added `outline: 0` to prevent focus outline when clicking on help or error text
 
 3.21.0 - (August 21, 2019)
 ------------------
