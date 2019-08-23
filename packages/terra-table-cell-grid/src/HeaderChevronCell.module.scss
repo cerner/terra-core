@@ -6,11 +6,11 @@
   }
 
   .chevron {
-    height: 1.143rem;
+    height: 1.143rem; // TODO: Need expected sizing
     margin-top: 2px;
     padding: 1px;
     position: relative;
-    width: 1.143rem;
+    width: 1.143rem; // TODO: Need expected sizing
   }
 
   .container {
@@ -19,17 +19,17 @@
     flex-direction: column; 
   }
 
-  [data-table-padding='standard'] .cell > .container {
-    padding-bottom: var(--terra-flex-table-cell-standard-padding-bottom, 0.5rem);
-    padding-left: var(--terra-flex-table-cell-standard-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-flex-table-cell-standard-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-flex-table-cell-standard-padding-top, 0.5rem);
+  [data-table-padding='standard'] .container {
+    padding-bottom: var(--terra-table-cell-grid-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-cell-grid-cell-standard-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-grid-cell-standard-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-cell-grid-cell-standard-padding-top, 0.5rem);
   }
 
-  [data-table-padding='compact'] .cell > .container {
-    padding-bottom: var(--terra-flex-table-cell-compact-padding-bottom, 0.25rem);
-    padding-left: var(--terra-flex-table-cell-compact-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-flex-table-cell-compact-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-flex-table-cell-compact-padding-top, 0.25rem);
+  [data-table-padding='compact'] .container {
+    padding-bottom: var(--terra-table-cell-grid-cell-compact-padding-bottom, 0.25rem);
+    padding-left: var(--terra-table-cell-grid-cell-compact-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-grid-cell-compact-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-cell-grid-cell-compact-padding-top, 0.25rem);
   }
 }

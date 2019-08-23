@@ -8,25 +8,25 @@
     z-index: 1;
 
     + div {
-      border-top-color: var(--terra-flex-table-section-header-next-border-top-color, #b2b5b6);
+      border-top-color: var(--terra-table-cell-grid-section-header-next-border-top-color, #b2b5b6);
     }
   }
 
   .section-content {
-    background-color: var(--terra-flex-table-section-header-background-color, #e8e9ea);
-    border-top: var(--terra-flex-table-section-header-border-top, 1px solid #dedfe0);
-    padding-bottom: var(--terra-flex-table-section-header-padding-bottom, 0.5rem);
-    padding-left: var(--terra-flex-table-section-header-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-flex-table-section-header-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-flex-table-section-header-padding-top, 0.5rem);
+    background-color: var(--terra-table-cell-grid-section-header-background-color, #e8e9ea);
+    border-top: var(--terra-table-cell-grid-section-header-border-top, 1px solid #dedfe0);
+    padding-bottom: var(--terra-table-cell-grid-section-header-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-cell-grid-section-header-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-grid-section-header-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-cell-grid-section-header-padding-top, 0.5rem);
     width: 100%;
   }
 
   .title {
-    color: var(--terra-flex-table-section-header-title-color, #1c1f21);
-    font-size: var(--terra-flex-table-section-header-title-font-size, 1rem);
-    font-weight: var(--terra-flex-table-section-header-title-font-weight, bold);
-    line-height: var(--terra-flex-table-section-header-title-line-height, 1.1428571429);
+    color: var(--terra-table-cell-grid-section-header-title-color, #1c1f21);
+    font-size: var(--terra-table-cell-grid-section-header-title-font-size, 1rem);
+    font-weight: var(--terra-table-cell-grid-section-header-title-font-weight, bold);
+    line-height: var(--terra-table-cell-grid-section-header-title-line-height, 1.1428571429);
     margin: 0;
     // stylelint-disable-next-line plugin/no-unsupported-browser-features
     overflow-wrap: break-word; /* Modern browsers */
@@ -40,21 +40,21 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    outline: var(--terra-flex-table-section-header-focus-outline, none);
-    padding-left: var(--terra-flex-table-section-header-collapsible-padding-left, 1rem);
+    outline: var(--terra-table-cell-grid-section-header-focus-outline, none);
+    padding-left: var(--terra-table-cell-grid-section-header-collapsible-padding-left, 1rem);
 
     &[data-row-show-focus='true']:focus {
-      background-color: var(--terra-flex-table-section-header-focus-background-color, #dedfe0);
-      border-bottom: var(--terra-flex-table-section-header-focus-border-bottom, 1px solid);
-      border-color: var(--terra-flex-table-section-header-focus-border-color, #0092e0);
-      box-shadow: var(--terra-flex-table-section-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
+      background-color: var(--terra-table-cell-grid-section-header-focus-background-color, #dedfe0);
+      border-bottom: var(--terra-table-cell-grid-section-header-focus-border-bottom, 1px solid);
+      border-color: var(--terra-table-cell-grid-section-header-focus-border-color, #0092e0);
+      box-shadow: var(--terra-table-cell-grid-section-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       position: relative;
       z-index: 1;
     }
   
     &:hover,
     &:active {
-      background-color: var(--terra-flex-table-section-header-hover-active-background-color, #d0d1d2);
+      background-color: var(--terra-table-cell-grid-section-header-hover-active-background-color, #d0d1d2);
     }
   }
 
@@ -66,11 +66,11 @@
 
   .start {
     flex: 0 0 auto;
-    padding-right: var(--terra-flex-table-section-header-start-padding-right, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-grid-section-header-start-padding-right, 0.7142857143rem);
   }
 
   .accordion-icon {
-    background: var(--terra-flex-table-section-header-accordion-icon-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
+    background: var(--terra-table-cell-grid-section-header-accordion-icon-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
     background-repeat: no-repeat;
     background-size: contain;
     display: block;

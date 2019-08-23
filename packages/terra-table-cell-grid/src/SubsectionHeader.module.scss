@@ -4,28 +4,28 @@
 // ========================================================
 :local {
   .subsection-header {
-    background-color: var(--terra-flex-table-subsection-header-background-color, #dedfe0);
-    border-top: var(--terra-flex-table-section-header-border-top, 1px solid #dedfe0);
+    background-color: var(--terra-table-cell-grid-subsection-header-background-color, #dedfe0);
+    border-top: var(--terra-table-cell-grid-section-header-border-top, 1px solid #dedfe0);
     width: 100%;
 
     + div {
-      border-top-color: var(--terra-flex-table-subsection-header-next-border-top-color, #b2b5b6);
+      border-top-color: var(--terra-table-cell-grid-subsection-header-next-border-top-color, #b2b5b6);
     }
   }
 
   .subsection-content {
-    padding-bottom: var(--terra-flex-table-subsection-header-padding-bottom, 0.3571428571rem);
-    padding-left: var(--terra-flex-table-subsection-header-padding-left, 1.2142857143rem);
-    padding-right: var(--terra-flex-table-subsection-header-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-flex-table-subsection-header-padding-top, 0.3571428571rem);
+    padding-bottom: var(--terra-table-cell-grid-subsection-header-padding-bottom, 0.3571428571rem);
+    padding-left: var(--terra-table-cell-grid-subsection-header-padding-left, 1.2142857143rem);
+    padding-right: var(--terra-table-cell-grid-subsection-header-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-cell-grid-subsection-header-padding-top, 0.3571428571rem);
     width: 100%;
   }
 
   .title {
-    color: var(--terra-flex-table-subsection-header-title-color, #1c1f21);
-    font-size: var(--terra-flex-table-subsection-header-title-font-size, 0.8571428571rem);
-    font-weight: var(--terra-flex-table-subsection-header-title-font-weight, bold);
-    line-height: var(--terra-flex-table-subsection-header-title-line-height, 1.1666666667);
+    color: var(--terra-table-cell-grid-subsection-header-title-color, #1c1f21);
+    font-size: var(--terra-table-cell-grid-subsection-header-title-font-size, 0.8571428571rem);
+    font-weight: var(--terra-table-cell-grid-subsection-header-title-font-weight, bold);
+    line-height: var(--terra-table-cell-grid-subsection-header-title-line-height, 1.1666666667);
     margin: 0;
     // stylelint-disable-next-line plugin/no-unsupported-browser-features
     overflow-wrap: break-word; /* Modern browsers */
@@ -36,8 +36,8 @@
 
   .is-collapsible {
     cursor: pointer;
-    outline: var(--terra-flex-table-subsection-header-focus-outline, none);
-    padding-left: var(--terra-flex-table-subsection-header-collapsible-padding-left, 1rem);
+    outline: var(--terra-table-cell-grid-subsection-header-focus-outline, none);
+    padding-left: var(--terra-table-cell-grid-subsection-header-collapsible-padding-left, 1rem);
 
     .subsection-content {
       align-items: center;
@@ -46,17 +46,17 @@
     }
 
     &[data-row-show-focus='true']:focus {
-      background-color: var(--terra-flex-table-subsection-header-focus-background-color, #dedfe0);
-      border-bottom: var(--terra-flex-table-subsection-header-focus-border-bottom, 1px solid);
-      border-color: var(--terra-flex-table-subsection-header-focus-border-color, #0092e0);
-      box-shadow: var(--terra-flex-table-subsection-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
+      background-color: var(--terra-table-cell-grid-subsection-header-focus-background-color, #dedfe0);
+      border-bottom: var(--terra-table-cell-grid-subsection-header-focus-border-bottom, 1px solid);
+      border-color: var(--terra-table-cell-grid-subsection-header-focus-border-color, #0092e0);
+      box-shadow: var(--terra-table-cell-grid-subsection-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       position: relative;
       z-index: 1;
     }
   
     &.subsection-header:hover,
     &.subsection-header:active {
-      background-color: var(--terra-flex-table-subsection-header-hover-active-background-color, #d0d1d2);
+      background-color: var(--terra-table-cell-grid-subsection-header-hover-active-background-color, #d0d1d2);
     }
   }
 
@@ -68,11 +68,11 @@
 
   .start {
     flex: 0 0 auto;
-    padding-right: var(--terra-flex-table-subsection-header-start-padding-right, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-grid-subsection-header-start-padding-right, 0.7142857143rem);
   }
 
   .accordion-icon {
-    background: var(--terra-flex-table-subsection-header-accordion-icon-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
+    background: var(--terra-table-cell-grid-subsection-header-accordion-icon-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
