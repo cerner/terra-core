@@ -20,16 +20,16 @@
   }
 
   [data-table-padding='standard'] .container {
-    padding-bottom: var(--terra-table-cell-grid-cell-standard-padding-bottom, 0.5rem);
-    padding-left: var(--terra-table-cell-grid-cell-standard-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-cell-grid-cell-standard-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-cell-grid-cell-standard-padding-top, 0.5rem);
+    padding-bottom: var(--terra-table-cell-grid-header-chevron-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-cell-grid-header-chevron-cell-standard-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-grid-header-chevron-cell-standard-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-cell-grid-header-chevron-cell-standard-padding-top, 0.5rem);
   }
 
   [data-table-padding='compact'] .container {
-    padding-bottom: var(--terra-table-cell-grid-cell-compact-padding-bottom, 0.25rem);
-    padding-left: var(--terra-table-cell-grid-cell-compact-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-cell-grid-cell-compact-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-cell-grid-cell-compact-padding-top, 0.25rem);
+    padding-bottom: var(--terra-table-cell-grid-header-chevron-cell-compact-padding-bottom, 0.25rem);
+    padding-left: var(--terra-table-cell-grid-header-chevron-cell-compact-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-grid-header-chevron-cell-compact-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-cell-grid-header-chevron-cell-compact-padding-top, 0.25rem);
   }
 }
