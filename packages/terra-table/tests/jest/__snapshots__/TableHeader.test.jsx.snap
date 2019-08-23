@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render table header tag 1`] = `
+<thead>
+  <tr>
+    <TableHeaderCell
+      key="NAME"
+      minWidth="small"
+      onClick={[MockFunction]}
+    >
+      Name
+    </TableHeaderCell>
+    <TableHeaderCell
+      key="ADDRESS"
+      minWidth="small"
+    >
+      Address
+    </TableHeaderCell>
+    <TableHeaderCell
+      key="PHONE_NUMBER"
+      minWidth="small"
+    >
+      Phone Number
+    </TableHeaderCell>
+  </tr>
+</thead>
+`;

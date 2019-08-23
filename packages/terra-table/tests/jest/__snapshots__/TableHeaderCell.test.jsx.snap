@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render default table header cell tag 1`] = `
+<th
+  className="min-width-small"
+  data-terra-table-header-cell={true}
+>
+  Column Heading
+</th>
+`;
+
+exports[`should render table header cell tag with ascending sort indicator 1`] = `
+<th
+  className="min-width-small"
+  data-terra-table-header-cell={true}
+  sort="asc"
+>
+  Column Heading
+</th>
+`;
+
+exports[`should render table header cell tag with descending sort indicator 1`] = `
+<th
+  className="min-width-small"
+  data-terra-table-header-cell={true}
+  sort="desc"
+>
+  Column Heading
+</th>
+`;

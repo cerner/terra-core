@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default table 1`] = `
+<table
+  className="table striped"
+>
+  <TableHeader>
+    <TableHeaderCell
+      key="NAME"
+      minWidth="small"
+    >
+      Name
+    </TableHeaderCell>
+    <TableHeaderCell
+      key="ADDRESS"
+      minWidth="small"
+    >
+      Address
+    </TableHeaderCell>
+    <TableHeaderCell
+      key="PHONE_NUMBER"
+      minWidth="small"
+    >
+      Phone Number
+    </TableHeaderCell>
+  </TableHeader>
+  <TableBody>
+    <TableRow
+      key="PERSON_0"
+    >
+      <TableCell
+        key="NAME"
+      >
+        John Smith
+      </TableCell>
+      <TableCell
+        key="ADDRESS"
+      >
+        123 Adams Drive
+      </TableCell>
+      <TableCell
+        key="PHONE_NUMBER"
+      >
+        111-222-3333
+      </TableCell>
+    </TableRow>
+    <TableRow
+      key="PERSON_1"
+    >
+      <TableCell
+        key="NAME"
+      >
+        John Smith
+      </TableCell>
+      <TableCell
+        key="ADDRESS"
+      >
+        123 Adams Drive
+      </TableCell>
+      <TableCell
+        key="PHONE_NUMBER"
+      >
+        111-222-3333
+      </TableCell>
+    </TableRow>
+  </TableBody>
+</table>
+`;
+
+exports[`should render a table without padding 1`] = `
+<table
+  className="table striped"
+  isPadded={false}
+>
+  <TableHeader>
+    <TableHeaderCell
+      key="NAME"
+      minWidth="small"
+    >
+      Name
+    </TableHeaderCell>
+    <TableHeaderCell
+      key="ADDRESS"
+      minWidth="small"
+    >
+      Address
+    </TableHeaderCell>
+    <TableHeaderCell
+      key="PHONE_NUMBER"
+      minWidth="small"
+    >
+      Phone Number
+    </TableHeaderCell>
+  </TableHeader>
+  <TableBody>
+    <TableRow
+      key="PERSON_0"
+    >
+      <TableCell
+        key="NAME"
+      >
+        John Smith
+      </TableCell>
+      <TableCell
+        key="ADDRESS"
+      >
+        123 Adams Drive
+      </TableCell>
+      <TableCell
+        key="PHONE_NUMBER"
+      >
+        111-222-3333
+      </TableCell>
+    </TableRow>
+    <TableRow
+      key="PERSON_1"
+    >
+      <TableCell
+        key="NAME"
+      >
+        John Smith
+      </TableCell>
+      <TableCell
+        key="ADDRESS"
+      >
+        123 Adams Drive
+      </TableCell>
+      <TableCell
+        key="PHONE_NUMBER"
+      >
+        111-222-3333
+      </TableCell>
+    </TableRow>
+  </TableBody>
+</table>
+`;
+
+exports[`should render a table without zebra stripes 1`] = `
+<table
+  className="table"
+>
+  <TableHeader>
+    <TableHeaderCell
+      key="NAME"
+      minWidth="small"
+    >
+      Name
+    </TableHeaderCell>
+    <TableHeaderCell
+      key="ADDRESS"
+      minWidth="small"
+    >
+      Address
+    </TableHeaderCell>
+    <TableHeaderCell
+      key="PHONE_NUMBER"
+      minWidth="small"
+    >
+      Phone Number
+    </TableHeaderCell>
+  </TableHeader>
+  <TableBody>
+    <TableRow
+      key="PERSON_0"
+    >
+      <TableCell
+        key="NAME"
+      >
+        John Smith
+      </TableCell>
+      <TableCell
+        key="ADDRESS"
+      >
+        123 Adams Drive
+      </TableCell>
+      <TableCell
+        key="PHONE_NUMBER"
+      >
+        111-222-3333
+      </TableCell>
+    </TableRow>
+    <TableRow
+      key="PERSON_1"
+    >
+      <TableCell
+        key="NAME"
+      >
+        John Smith
+      </TableCell>
+      <TableCell
+        key="ADDRESS"
+      >
+        123 Adams Drive
+      </TableCell>
+      <TableCell
+        key="PHONE_NUMBER"
+      >
+        111-222-3333
+      </TableCell>
+    </TableRow>
+  </TableBody>
+</table>
+`;
