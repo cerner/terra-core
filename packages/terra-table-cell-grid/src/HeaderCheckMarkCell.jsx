@@ -97,51 +97,43 @@ const HeaderCheckMarkCell = ({
   );
 
   const attrSpread = {};
+  const attrCheck = {};
   if (isSelectable) {
     attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '0';
-    attrSpread['data-header-show-focus'] = 'true';
-    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
-    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
-    attrSpread.role = 'checkbox';
+    attrSpread['data-cell-show-focus'] = 'true';
+    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
+    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
+
+    // attributes for checkbox
+    attrCheck.role = 'checkbox';
     if (isSelected) {
-      attrSpread['aria-checked'] = isIntermediate ? 'mixed' : true;
+      attrCheck['aria-checked'] = isIntermediate ? 'mixed' : true;
     } else {
-      attrSpread['aria-checked'] = false;
+      attrCheck['aria-checked'] = false;
     }
   }
 
-
   const Component = isIntermediate ? IconMinus : IconCheckmark;
-  let content = (
-    <Component
-      {...attrSpread}
-      className={cx(
-        'checkmark',
-        { 'is-selected': isSelected },
-        { 'is-intermediate': isIntermediate },
-      )}
-    />
-  );
-
-  if (isPadded) {
-    content = (
-      <div className={cx('container')}>
-        {content}
-      </div>
-    );
-  }
-
   return (
     <div
       {...customProps}
+      {...attrSpread}
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cellClassNames}
       ref={refCallback}
       role={isSelectable ? 'columnheader' : 'none'}
     >
-      {content}
+      <div {...attrCheck} className={cx('container')}>
+        <Component
+          className={cx(
+            'checkmark',
+            { 'is-selected': isSelected },
+            { 'is-intermediate': isIntermediate },
+          )}
+        />
+      </div>
     </div>
   );
 };

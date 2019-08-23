@@ -41,21 +41,6 @@ const ChevronCell = ({
   ...customProps
 }) => {
   const Component = isVisible ? IconChevronRight : 'div';
-  let content = (
-    <Component
-      className={cx(
-        'chevron',
-      )}
-    />
-  );
-
-  if (isPadded) {
-    content = (
-      <div className={cx('container')}>
-        {content}
-      </div>
-    );
-  }
 
   return (
     <div
@@ -67,7 +52,13 @@ const ChevronCell = ({
       )}
       role="none"
     >
-      {content}
+      <div className={cx('container')}>
+        <Component
+          className={cx(
+            'chevron',
+          )}
+        />
+      </div>
     </div>
   );
 };

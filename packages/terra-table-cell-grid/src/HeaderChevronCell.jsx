@@ -32,37 +32,25 @@ const HeaderChevronCell = ({
   isPadded,
   width,
   ...customProps
-}) => {
-  let content = (
-    <div
-      className={cx(
-        'chevron',
-      )}
-    />
-  );
-
-  if (isPadded) {
-    content = (
-      <div className={cx('container')}>
-        {content}
-      </div>
-    );
-  }
-
-  return (
-    <div
-      {...customProps}
-      style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={cx(
-        'cell',
-        customProps.className,
-      )}
-      role="none"
-    >
-      {content}
+}) => (
+  <div
+    {...customProps}
+    style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
+    className={cx(
+      'cell',
+      customProps.className,
+    )}
+    role="none"
+  >
+    <div className={cx('container')}>
+      <div
+        className={cx(
+          'chevron',
+        )}
+      />
     </div>
-  );
-};
+  </div>
+);
 
 HeaderChevronCell.propTypes = propTypes;
 HeaderChevronCell.defaultProps = defaultProps;

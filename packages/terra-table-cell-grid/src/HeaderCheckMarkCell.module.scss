@@ -2,24 +2,11 @@
   .header-cell {
     border-right: var(--terra-table-cell-grid-header-check-cell-border-right, 1px solid #ccc);
     flex: 0 0 auto;
+    outline: none;
     position: relative;
 
     &:last-of-type {
       border-right: 0;
-    }
-
-    &.is-selectable:hover {
-      &::before {
-        background-color: #c0bdbd; // TODO: Need hover styling
-        border-radius: 100%;
-        content: '';
-        height: 26px; // TODO: Need expected sizing
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate3d(-50%, -50%, 0);
-        width: 26px; // TODO: Need expected sizing
-      }
     }
   }
 
@@ -27,10 +14,8 @@
     border: 1px solid transparent;
     border-radius: 3px;  // TODO: Need expected sizing
     color: transparent;
-    height: 1.143rem; // TODO: Need expected sizing
     padding: 1px;
     position: relative;
-    width: 1.143rem; // TODO: Need expected sizing
   }
 
   .is-selected {
@@ -42,10 +27,39 @@
     border: 1px solid #000;
   }
   
-  .container {
-    align-items: center;
-    display: flex;
-    flex-direction: column; 
+  .is-selectable:hover,
+  .is-selectable:focus {
+    .container {
+      &::before {
+        background-color: #c0bdbd; // TODO: Need hover styling
+        border-radius: 100%;
+        content: '';
+        height: 24px; // TODO: Need expected sizing
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 24px; // TODO: Need expected sizing
+      }
+    }
+  }
+
+  .is-selectable[data-cell-show-focus='true']:focus {
+    &:hover {
+      /* stylelint-disable max-nesting-depth */
+      .container {
+        &::before {
+          background-color: #e75959; // TODO: Need hover styling
+        }
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
+    .container {
+      &::before {
+        background-color: #bbb2f0; // TODO: Need focus styling
+      }
+    }
   }
 
   [data-table-padding='standard'] .container {

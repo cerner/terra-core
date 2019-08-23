@@ -1,16 +1,16 @@
 :local {
   .cell {
+    align-items: center;
     border: 0;
+    display: flex;
     flex: 0 0 auto;
     word-break: break-word;
   }
 
   .chevron {
     color: #000;
-    height: 1.143rem; // TODO: Need expected sizing
     padding: 1px;
     position: relative;
-    width: 1.143rem; // TODO: Need expected sizing
   }
 
   .container {

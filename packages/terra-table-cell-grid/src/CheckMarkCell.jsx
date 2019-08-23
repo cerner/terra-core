@@ -84,38 +84,24 @@ const CheckMarkCell = ({
   ...customProps
 }) => {
   const attrSpread = {};
+  const attrCheck = {};
   if (isSelectable) {
     attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '0';
-    attrSpread['data-header-show-focus'] = 'true';
-    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
-    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
-    attrSpread.role = 'checkbox';
-    attrSpread['aria-checked'] = isSelected;
-  }
+    attrSpread['data-cell-show-focus'] = 'true';
+    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
+    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
 
-  let content = (
-    <IconCheckmark
-      {...attrSpread}
-      className={cx(
-        'checkmark',
-        { 'is-selected': isSelected },
-      )}
-    />
-  );
-
-  if (isPadded) {
-    content = (
-      <div className={cx('container')}>
-        {content}
-      </div>
-    );
+    // attributes for checkbox
+    attrCheck.role = 'checkbox';
+    attrCheck['aria-checked'] = isSelected;
   }
 
   return (
     <div
       {...customProps}
+      {...attrSpread}
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cx(
         'cell',
@@ -125,7 +111,14 @@ const CheckMarkCell = ({
       ref={refCallback}
       role={isSelectable ? 'rowheader' : 'none'}
     >
-      {content}
+      <div {...attrCheck} className={cx('container')}>
+        <IconCheckmark
+          className={cx(
+            'checkmark',
+            { 'is-selected': isSelected },
+          )}
+        />
+      </div>
     </div>
   );
 };
