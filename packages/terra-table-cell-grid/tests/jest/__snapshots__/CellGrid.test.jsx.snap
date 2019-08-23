@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a cell grid with a cell 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a cell grid with onSelect 1`] = `
+<div
+  aria-selected={false}
+  className="is-selectable divider-none row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+/>
+`;
+
+exports[`should render a cell grid with refCallback 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+/>
+`;
+
+exports[`should render a checkmark selectionStyle cell grid 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+>
+  <CheckMarkCell
+    isPadded={true}
+    isSelectable={false}
+    isSelected={false}
+  />
+</div>
+`;
+
+exports[`should render a chevron selectionStyle cell grid 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+>
+  <ChevronCell
+    isPadded={true}
+    isVisible={false}
+  />
+</div>
+`;
+
+exports[`should render a default cell grid 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+/>
+`;
+
+exports[`should render a selectable cell grid 1`] = `
+<div
+  aria-selected={false}
+  className="is-selectable divider-none row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+/>
+`;
+
+exports[`should render a selected cell grid 1`] = `
+<div
+  aria-selected={true}
+  className="is-selected is-selectable divider-none row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+/>
+`;
+
+exports[`should render a striped cell grid 1`] = `
+<div
+  className="is-striped divider-none row"
+  role="row"
+/>
+`;

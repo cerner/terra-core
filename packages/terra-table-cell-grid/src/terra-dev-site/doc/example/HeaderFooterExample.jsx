@@ -10,7 +10,7 @@ const HeaderFooterExample = () => (
   <TableCellGrid
     headerNode={<FixedNode title="Header" />}
     footerNode={<FixedNode title="Footer" />}
-    paddingStyle="default"
+    paddingStyle="standard"
     id="Table"
     headerCellGrid={(
       <HeaderCellGrid>

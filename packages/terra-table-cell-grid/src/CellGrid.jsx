@@ -12,7 +12,7 @@ const propTypes = {
   /**
    * The children passed to the component
    */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /**
    * The children passed to the component.
    * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
@@ -68,7 +68,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: [],
   dividerStyle: 'none',
   isSelected: false,
   isSelectable: false,

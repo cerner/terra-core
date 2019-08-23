@@ -45,9 +45,9 @@ it('should render a cell grid with onSelect', () => {
     <CellGrid isSelectable onSelect={mockCallBack} />,
   );
   expect(shallowComponent).toMatchSnapshot();
-  shallowComponent.find('tr').simulate('click');
-  shallowComponent.find('tr').simulate('keydown', { nativeEvent: { keyCode: 13 } });
-  shallowComponent.find('tr').simulate('keydown', { nativeEvent: { keyCode: 32 } });
+  shallowComponent.find('.row').simulate('click');
+  shallowComponent.find('.row').simulate('keydown', { nativeEvent: { keyCode: 13 } });
+  shallowComponent.find('.row').simulate('keydown', { nativeEvent: { keyCode: 32 } });
   expect(mockCallBack.mock.calls.length).toEqual(3);
 });
 

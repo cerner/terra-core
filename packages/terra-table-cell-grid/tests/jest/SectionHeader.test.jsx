@@ -44,9 +44,9 @@ it('should render a section header with onSelect', () => {
     <SectionHeader title="test" isCollapsible onSelect={mockCallBack} />,
   );
   expect(shallowComponent).toMatchSnapshot();
-  shallowComponent.find('tr').simulate('click');
-  shallowComponent.find('tr').simulate('keydown', { nativeEvent: { keyCode: 13 } });
-  shallowComponent.find('tr').simulate('keydown', { nativeEvent: { keyCode: 32 } });
+  shallowComponent.find('.section-content').simulate('click');
+  shallowComponent.find('.section-content').simulate('keydown', { nativeEvent: { keyCode: 13 } });
+  shallowComponent.find('.section-content').simulate('keydown', { nativeEvent: { keyCode: 32 } });
   expect(mockCallBack.mock.calls.length).toEqual(3);
 });
 

@@ -1,12 +1,17 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import TableCellGrid, { HeaderCellGrid, HeaderCell } from 'terra-table-cell-grid';
+import TableCellGrid, {
+  HeaderCellGrid,
+  HeaderCell,
+  CellGrid,
+  Cell,
+} from 'terra-table-cell-grid';
 import CommonIcon from '../common/CommonIcon';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableHeaderCellExample = () => (
   <TableCellGrid
-    headerGrid={(
+    headerCellGrid={(
       <HeaderCellGrid>
         <HeaderCell
           key="cell-0"
@@ -42,7 +47,11 @@ const TableHeaderCellExample = () => (
         />
       </HeaderCellGrid>
     )}
-  />
+  >
+    <CellGrid>
+      <Cell />
+    </CellGrid>
+  </TableCellGrid>
 );
 
 export default TableHeaderCellExample;

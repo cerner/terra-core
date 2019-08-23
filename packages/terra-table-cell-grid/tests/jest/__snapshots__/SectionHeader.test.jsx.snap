@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default section header 1`] = `
+<div
+  className="section-header"
+>
+  <div
+    className="section-content"
+  >
+    <h2
+      className="title"
+    >
+      test
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`should render a section header with isCollapsible 1`] = `
+<div
+  className="section-header"
+>
+  <div
+    aria-expanded={true}
+    aria-level={1}
+    className="section-content is-collapsible"
+    data-row-show-focus="true"
+    onBlur={[Function]}
+    onMouseDown={[Function]}
+    role="heading"
+    tabIndex="0"
+  >
+    <div
+      className="start"
+    >
+      <span
+        className="accordion-icon is-open"
+      />
+    </div>
+    <div
+      className="fill"
+    >
+      <h2
+        className="title"
+      >
+        test
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render a section header with isCollpased 1`] = `
+<div
+  className="section-header"
+>
+  <div
+    className="section-content"
+  >
+    <h2
+      className="title"
+    >
+      test
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`should render a section header with level 1`] = `
+<div
+  className="section-header"
+>
+  <div
+    className="section-content"
+  >
+    <h3
+      className="title"
+    >
+      test
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`should render a section header with metaData 1`] = `
+<div
+  className="section-header"
+>
+  <div
+    className="section-content"
+  >
+    <h2
+      className="title"
+    >
+      test
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`should render a section header with onSelect 1`] = `
+<div
+  className="section-header"
+>
+  <div
+    aria-expanded={true}
+    aria-level={1}
+    className="section-content is-collapsible"
+    data-row-show-focus="true"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="heading"
+    tabIndex="0"
+  >
+    <div
+      className="start"
+    >
+      <span
+        className="accordion-icon is-open"
+      />
+    </div>
+    <div
+      className="fill"
+    >
+      <h2
+        className="title"
+      >
+        test
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render a section header with refCallback 1`] = `
+<div
+  className="section-header"
+>
+  <div
+    className="section-content"
+  >
+    <h2
+      className="title"
+    >
+      test
+    </h2>
+  </div>
+</div>
+`;

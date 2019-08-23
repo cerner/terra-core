@@ -1,6 +1,6 @@
 import React from 'react';
 import TableCellGrid, {
-  HeaderCell, HeaderCellGrid,
+  HeaderCell, HeaderCellGrid, CellGrid, Cell,
 } from '../../../index';
 
 const HeaderCellTest = () => (
@@ -16,7 +16,11 @@ const HeaderCellTest = () => (
         <HeaderCell key="cell-7" width={{ percentage: 20 }}>20% Cell</HeaderCell>
       </HeaderCellGrid>
     )}
-  />
+  >
+    <CellGrid>
+      <Cell />
+    </CellGrid>
+  </TableCellGrid>
 );
 
 export default HeaderCellTest;

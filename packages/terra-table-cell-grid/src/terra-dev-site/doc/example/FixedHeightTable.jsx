@@ -12,7 +12,7 @@ const FixedHeightTable = () => (
       id="Table"
       fill
       paddingStyle="standard"
-      headerGrid={(
+      headerCellGrid={(
         <HeaderCellGrid>
           <HeaderCell key="NAME" isPadded>Name</HeaderCell>
           <HeaderCell key="ADDRESS" isPadded>Address</HeaderCell>

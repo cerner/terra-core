@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a cell with content 1`] = `
+<div
+  aria-sort="none"
+  className="header-cell"
+  role="columnheader"
+  style={null}
+>
+  <div
+    className="cell-content"
+    key="content"
+  >
+    Content
+  </div>
+</div>
+`;
+
+exports[`should render a cell with padding 1`] = `
+<div
+  aria-sort="none"
+  className="header-cell"
+  role="columnheader"
+  style={null}
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a cell with width percentage 1`] = `
+<div
+  aria-sort="none"
+  className="header-cell"
+  role="columnheader"
+  style={
+    Object {
+      "flex": "0 0 0px",
+      "maxWidth": "20%",
+      "minWidth": "20%",
+      "msFlex": "0 0 0px",
+    }
+  }
+>
+  <div
+    className="cell-content"
+    key="content"
+  />
+</div>
+`;
+
+exports[`should render a cell with width scalar 1`] = `
+<div
+  aria-sort="none"
+  className="header-cell"
+  role="columnheader"
+  style={
+    Object {
+      "flex": "2 2 0px",
+      "msFlex": "2 2 0px",
+    }
+  }
+>
+  <div
+    className="cell-content"
+    key="content"
+  />
+</div>
+`;
+
+exports[`should render a cell with width static 1`] = `
+<div
+  aria-sort="none"
+  className="header-cell"
+  role="columnheader"
+  style={
+    Object {
+      "flex": "0 0 0px",
+      "maxWidth": "40rem",
+      "minWidth": "40rem",
+      "msFlex": "0 0 0px",
+    }
+  }
+>
+  <div
+    className="cell-content"
+    key="content"
+  />
+</div>
+`;
+
+exports[`should render a default cell 1`] = `
+<div
+  aria-sort="none"
+  className="header-cell"
+  role="columnheader"
+  style={null}
+>
+  <div
+    className="cell-content"
+    key="content"
+  />
+</div>
+`;
+
+exports[`should render a header cell with refCallback 1`] = `
+<div
+  aria-sort="none"
+  className="header-cell"
+  role="columnheader"
+  style={null}
+>
+  <div
+    className="cell-content"
+    key="content"
+  />
+</div>
+`;

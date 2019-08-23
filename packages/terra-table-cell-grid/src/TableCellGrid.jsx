@@ -10,7 +10,7 @@ const propTypes = {
   /**
    * The children passed to the component
    */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /**
    * The HeaderCellGrid passed to the table, should have widths aligned with the child CellGrids.
    */

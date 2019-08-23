@@ -1,84 +1,58 @@
-const viewports = Terra.viewports('medium');
+Terra.describeViewports('TableCellGrid', ['medium'], () => {
+  describe('TableCellGrid Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/table-cell-grid'));
+    Terra.it.validatesElement();
+  });
 
-viewports.forEach((viewport) => {
-  describe('TableCellGrid', () => {
-    before(() => {
-      browser.setViewportSize(viewport);
-    });
+  describe('HeaderFooter Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/header-footer'));
+    Terra.it.validatesElement();
+  });
 
-    describe('TableCellGrid Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/table-cell-grid'));
+  describe('Padding Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/padding'));
+    Terra.it.validatesElement();
+  });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-    });
+  describe('HeaderCellGrid Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/header-cell-grid'));
+    Terra.it.validatesElement();
+  });
 
-    describe('HeaderFooter Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/header-footer'));
+  describe('HeaderCell Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/header-cell'));
+    Terra.it.validatesElement();
+  });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-    });
+  describe('CellGrid Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/cell-grid'));
+    Terra.it.validatesElement('CellGrid');
 
-    describe('Padding Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/padding'));
+    it('Hover', () => browser.moveToObject('#selectable-row'));
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-    });
+    Terra.it.validatesElement('CellGrid-Hover');
+  });
 
-    describe('HeaderCellGrid Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/header-cell-grid'));
+  describe('Cell Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/cell'));
+    Terra.it.validatesElement();
+  });
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-    });
+  describe('Section Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/section'));
+    Terra.it.validatesElement('TableSection');
 
-    describe('HeaderCell Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/header-cell'));
+    it('Hover', () => browser.moveToObject('#test-header'));
 
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-    });
+    Terra.it.validatesElement('TableSection-Hover');
+  });
 
-    describe('CellGrid Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/cell-grid'));
+  describe('Subsection Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/subsection'));
+    Terra.it.validatesElement('TableSubsection');
+    
+    it('Hover', () => browser.moveToObject('#test-header'));
 
-      Terra.should.matchScreenshot('TableRow');
-      Terra.should.beAccessible();
-
-      it('Hover', () => browser.moveToObject('#selectable-row'));
-
-      Terra.should.matchScreenshot('TableRow-Hover');
-    });
-
-    describe('Cell Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/cell'));
-
-      Terra.should.matchScreenshot();
-      Terra.should.beAccessible();
-    });
-
-    describe('Section Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/section'));
-
-      Terra.should.matchScreenshot('TableSection');
-      Terra.should.beAccessible();
-
-      it('Hover', () => browser.moveToObject('#test-header'));
-
-      Terra.should.matchScreenshot('TableSection-Hover');
-    });
-
-    describe('Subsection Test', () => {
-      before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/subsection'));
-
-      Terra.should.matchScreenshot('TableSubsection');
-      Terra.should.beAccessible();
-
-      it('Hover', () => browser.moveToObject('#test-header'));
-
-      Terra.should.matchScreenshot('TableSubsection-Hover');
-    });
+    Terra.it.validatesElement('TableSubsection-Hover');
   });
 });

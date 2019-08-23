@@ -4,9 +4,8 @@
 // ========================================================
 :local {
   .subsection-header {
-    background-color: var(--terra-table-cell-grid-subsection-header-background-color, #dedfe0);
-    border-top: var(--terra-table-cell-grid-section-header-border-top, 1px solid #dedfe0);
     width: 100%;
+    z-index: 1;
 
     + div {
       border-top-color: var(--terra-table-cell-grid-subsection-header-next-border-top-color, #b2b5b6);
@@ -14,6 +13,8 @@
   }
 
   .subsection-content {
+    background-color: var(--terra-table-cell-grid-subsection-header-background-color, #dedfe0);
+    border-top: var(--terra-table-cell-grid-section-header-border-top, 1px solid #dedfe0);
     padding-bottom: var(--terra-table-cell-grid-subsection-header-padding-bottom, 0.3571428571rem);
     padding-left: var(--terra-table-cell-grid-subsection-header-padding-left, 1.2142857143rem);
     padding-right: var(--terra-table-cell-grid-subsection-header-padding-right, 0.7142857143rem);
@@ -35,15 +36,12 @@
   }
 
   .is-collapsible {
+    align-items: center;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
     outline: var(--terra-table-cell-grid-subsection-header-focus-outline, none);
     padding-left: var(--terra-table-cell-grid-subsection-header-collapsible-padding-left, 1rem);
-
-    .subsection-content {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-    }
 
     &[data-row-show-focus='true']:focus {
       background-color: var(--terra-table-cell-grid-subsection-header-focus-background-color, #dedfe0);
@@ -54,8 +52,8 @@
       z-index: 1;
     }
   
-    &.subsection-header:hover,
-    &.subsection-header:active {
+    &:hover,
+    &:active {
       background-color: var(--terra-table-cell-grid-subsection-header-hover-active-background-color, #d0d1d2);
     }
   }

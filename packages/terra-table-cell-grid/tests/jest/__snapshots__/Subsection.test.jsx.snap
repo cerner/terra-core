@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default subsection 1`] = `
+<Fragment>
+  <SubsectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={3}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render a subsection with a cellgrid 1`] = `
+<Fragment>
+  <SubsectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={3}
+    title="test"
+  />
+  <CellGrid
+    dividerStyle="none"
+    isSelectable={false}
+    isSelected={false}
+    isStriped={false}
+    selectionStyle="default"
+  />
+</Fragment>
+`;
+
+exports[`should render a subsection with isCollapsible 1`] = `
+<Fragment>
+  <SubsectionHeader
+    isCollapsed={false}
+    isCollapsible={true}
+    level={3}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render a subsection with isCollpased 1`] = `
+<Fragment>
+  <SubsectionHeader
+    isCollapsed={true}
+    isCollapsible={false}
+    level={3}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render a subsection with level 1`] = `
+<Fragment>
+  <SubsectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={4}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render a subsection with metaData 1`] = `
+<Fragment>
+  <SubsectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={3}
+    metaData={Object {}}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render a subsection with onSelect 1`] = `
+<Fragment>
+  <SubsectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={3}
+    onSelect={[MockFunction]}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render a subsection with refCallback 1`] = `
+<Fragment>
+  <SubsectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={3}
+    refCallback={[MockFunction]}
+    title="test"
+  />
+</Fragment>
+`;
