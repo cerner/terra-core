@@ -4,37 +4,32 @@ import Cell from '../../src/Cell';
 
 // Snapshot test
 it('should render a default cell grid', () => {
-  const shallowComponent = shallow(<CellGrid />);
-  expect(shallowComponent).toMatchSnapshot();
-});
-
-it('should render a cell grid with a cell', () => {
   const shallowComponent = shallow(<CellGrid><Cell /></CellGrid>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a selectable cell grid', () => {
-  const shallowComponent = shallow(<CellGrid isSelectable />);
+  const shallowComponent = shallow(<CellGrid isSelectable><Cell /></CellGrid>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a selected cell grid', () => {
-  const shallowComponent = shallow(<CellGrid isSelectable isSelected />);
+  const shallowComponent = shallow(<CellGrid isSelectable isSelected><Cell /></CellGrid>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a striped cell grid', () => {
-  const shallowComponent = shallow(<CellGrid isStriped />);
+  const shallowComponent = shallow(<CellGrid isStriped><Cell /></CellGrid>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a checkmark selectionStyle cell grid', () => {
-  const shallowComponent = shallow(<CellGrid selectionStyle="checkmark" />);
+  const shallowComponent = shallow(<CellGrid selectionStyle="checkmark"><Cell /></CellGrid>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a chevron selectionStyle cell grid', () => {
-  const shallowComponent = shallow(<CellGrid selectionStyle="chevron" />);
+  const shallowComponent = shallow(<CellGrid selectionStyle="chevron"><Cell /></CellGrid>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -42,7 +37,7 @@ it('should render a cell grid with onSelect', () => {
   const mockCallBack = jest.fn();
 
   const shallowComponent = shallow(
-    <CellGrid isSelectable onSelect={mockCallBack} />,
+    <CellGrid isSelectable onSelect={mockCallBack}><Cell /></CellGrid>,
   );
   expect(shallowComponent).toMatchSnapshot();
   shallowComponent.find('.row').simulate('click');
@@ -53,7 +48,7 @@ it('should render a cell grid with onSelect', () => {
 
 it('should render a cell grid with refCallback', () => {
   const shallowComponent = shallow(
-    <CellGrid refCallback={jest.fn()} />,
+    <CellGrid refCallback={jest.fn()}><Cell /></CellGrid>,
   );
   expect(shallowComponent).toMatchSnapshot();
 });

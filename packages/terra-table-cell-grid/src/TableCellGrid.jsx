@@ -10,7 +10,7 @@ const propTypes = {
   /**
    * The children passed to the component
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * The HeaderCellGrid passed to the table, should have widths aligned with the child CellGrids.
    */
@@ -72,9 +72,11 @@ const TableCellGrid = ({
   const cellGrid = (
     <div {...customProps} {...attrSpread} className={tableClassNames} role="grid">
       {headerCellGrid}
-      <div className={cx(['body'])} role="rowgroup" ref={scrollRefCallback}>
-        {children}
-      </div>
+      {children ? (
+        <div className={cx(['body'])} role="rowgroup" ref={scrollRefCallback}>
+          {children}
+        </div>
+      ) : undefined}
     </div>
   );
 

@@ -4,15 +4,6 @@
 // ========================================================
 :local {
   .section-header {
-    width: 100%;
-    z-index: 1;
-
-    + div {
-      border-top-color: var(--terra-table-cell-grid-section-header-next-border-top-color, #b2b5b6);
-    }
-  }
-
-  .section-content {
     background-color: var(--terra-table-cell-grid-section-header-background-color, #e8e9ea);
     border-top: var(--terra-table-cell-grid-section-header-border-top, 1px solid #dedfe0);
     padding-bottom: var(--terra-table-cell-grid-section-header-padding-bottom, 0.5rem);
@@ -20,6 +11,11 @@
     padding-right: var(--terra-table-cell-grid-section-header-padding-right, 0.7142857143rem);
     padding-top: var(--terra-table-cell-grid-section-header-padding-top, 0.5rem);
     width: 100%;
+    z-index: 1;
+
+    + div {
+      border-top-color: var(--terra-table-cell-grid-section-header-next-border-top-color, #b2b5b6);
+    }
   }
 
   .title {
@@ -36,12 +32,15 @@
   }
 
   .is-collapsible {
-    align-items: center;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
     outline: var(--terra-table-cell-grid-section-header-focus-outline, none);
     padding-left: var(--terra-table-cell-grid-section-header-collapsible-padding-left, 1rem);
+
+    .section-content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
 
     &[data-row-show-focus='true']:focus {
       background-color: var(--terra-table-cell-grid-section-header-focus-background-color, #dedfe0);
@@ -52,10 +51,12 @@
       z-index: 1;
     }
   
+    // todo: rescope
     &:hover,
     &:active {
       background-color: var(--terra-table-cell-grid-section-header-hover-active-background-color, #d0d1d2);
     }
+    // todo: rescope
   }
 
   .fill {

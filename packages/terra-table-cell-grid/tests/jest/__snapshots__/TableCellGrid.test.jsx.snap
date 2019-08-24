@@ -4,12 +4,7 @@ exports[`should render a default table cell grid 1`] = `
 <div
   className="table rounded"
   role="grid"
->
-  <div
-    className="body"
-    role="rowgroup"
-  />
-</div>
+/>
 `;
 
 exports[`should render a table cell grid with compact padding 1`] = `
@@ -17,24 +12,14 @@ exports[`should render a table cell grid with compact padding 1`] = `
   className="table rounded"
   data-table-padding="compact"
   role="grid"
->
-  <div
-    className="body"
-    role="rowgroup"
-  />
-</div>
+/>
 `;
 
 exports[`should render a table cell grid with fill style 1`] = `
 <div
   className="table fill rounded"
   role="grid"
->
-  <div
-    className="body"
-    role="rowgroup"
-  />
-</div>
+/>
 `;
 
 exports[`should render a table cell grid with header/footer nodes 1`] = `
@@ -55,12 +40,7 @@ exports[`should render a table cell grid with header/footer nodes 1`] = `
   <div
     className="table"
     role="grid"
-  >
-    <div
-      className="body"
-      role="rowgroup"
-    />
-  </div>
+  />
 </ContentContainer>
 `;
 
@@ -69,12 +49,7 @@ exports[`should render a table cell grid with refCallback 1`] = `
   className="table rounded"
   refCallback={[MockFunction]}
   role="grid"
->
-  <div
-    className="body"
-    role="rowgroup"
-  />
-</div>
+/>
 `;
 
 exports[`should render a table cell grid with standard padding 1`] = `
@@ -82,10 +57,5 @@ exports[`should render a table cell grid with standard padding 1`] = `
   className="table rounded"
   data-table-padding="standard"
   role="grid"
->
-  <div
-    className="body"
-    role="rowgroup"
-  />
-</div>
+/>
 `;

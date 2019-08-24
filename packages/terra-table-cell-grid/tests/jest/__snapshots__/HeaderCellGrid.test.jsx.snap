@@ -75,15 +75,3 @@ exports[`should render a default header cell grid 1`] = `
   />
 </div>
 `;
-
-exports[`should render a selectable cell grid 1`] = `
-<div
-  className="header"
-  role="rowgroup"
->
-  <div
-    className="header-content"
-    role="row"
-  />
-</div>
-`;

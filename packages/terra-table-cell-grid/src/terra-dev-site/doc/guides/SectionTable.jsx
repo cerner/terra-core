@@ -15,36 +15,49 @@ const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
 
-const createCellGrid = cellGridData => <CellGrid key={cellGridData.key}>{createCellsForCellGrid(cellGridData.cells)}</CellGrid>;
-
 const SectionTable = () => {
   const [collapsedKeys, setCollapsedKeys] = useState([]);
+  let rowCount = 1;
 
   const handleSectionSelection = (event, metaData) => {
     event.preventDefault();
     setCollapsedKeys(Utils.updatedMultiSelectedKeys(collapsedKeys, metaData.key));
   };
 
+  const createCellGrid = (cellGridData) => {
+    rowCount += 1;
+    return (
+      <CellGrid
+        key={cellGridData.key}
+        aria-rowindex={rowCount}
+      >
+        {createCellsForCellGrid(cellGridData.cells)}
+      </CellGrid>
+    );
+  };
+
   const createSection = (sectionData) => {
-    const isCollapsed = collapsedKeys.indexOf(sectionData.key) >= 0;
+    rowCount += 1;
     return (
       <Section
         key={sectionData.key}
+        aria-rowindex={rowCount}
         title={sectionData.title}
-        isCollapsed={isCollapsed}
+        isCollapsed={collapsedKeys.indexOf(sectionData.key) >= 0}
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={handleSectionSelection}
       >
-        {!isCollapsed && sectionData.childItems.map(childItem => createCellGrid(childItem))}
+        {sectionData.childItems.map(childItem => createCellGrid(childItem))}
       </Section>
     );
   };
 
-  const createSections = data => data.map(section => createSection(section));
+  const sections = mockData.map(section => createSection(section));
 
   return (
     <TableCellGrid
+      aria-rowcount={rowCount}
       paddingStyle="standard"
       headerCellGrid={(
         <HeaderCellGrid>
@@ -54,7 +67,7 @@ const SectionTable = () => {
         </HeaderCellGrid>
       )}
     >
-      {createSections(mockData)}
+      {sections}
     </TableCellGrid>
   );
 };

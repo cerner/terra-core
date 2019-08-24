@@ -25,7 +25,9 @@ exports[`should render a section with a row 1`] = `
     isSelected={false}
     isStriped={false}
     selectionStyle="default"
-  />
+  >
+    <Cell />
+  </CellGrid>
 </Fragment>
 `;
 

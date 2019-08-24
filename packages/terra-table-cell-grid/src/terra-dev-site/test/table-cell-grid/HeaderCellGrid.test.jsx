@@ -1,6 +1,6 @@
 import React from 'react';
 import TableCellGrid, {
-  HeaderCell, HeaderCellGrid, CellGrid, Cell,
+  HeaderCell, HeaderCellGrid,
 } from '../../../index';
 
 const HeaderCellGridTest = () => (
@@ -14,11 +14,7 @@ const HeaderCellGridTest = () => (
           <HeaderCell key="cell-2">Cell 2</HeaderCell>
         </HeaderCellGrid>
       )}
-    >
-      <CellGrid>
-        <Cell />
-      </CellGrid>
-    </TableCellGrid>
+    />
     <TableCellGrid
       key="check"
       selectionStyle="checkmark"
@@ -29,11 +25,7 @@ const HeaderCellGridTest = () => (
           <HeaderCell key="cell-2">Cell 2</HeaderCell>
         </HeaderCellGrid>
       )}
-    >
-      <CellGrid>
-        <Cell />
-      </CellGrid>
-    </TableCellGrid>
+    />
     <TableCellGrid
       key="chevron"
       selectionStyle="chevron"
@@ -44,11 +36,7 @@ const HeaderCellGridTest = () => (
           <HeaderCell key="cell-2">Cell 2</HeaderCell>
         </HeaderCellGrid>
       )}
-    >
-      <CellGrid>
-        <Cell />
-      </CellGrid>
-    </TableCellGrid>
+    />
   </React.Fragment>
 );
 

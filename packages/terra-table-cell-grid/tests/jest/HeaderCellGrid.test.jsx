@@ -13,11 +13,6 @@ it('should render a cell grid with a cell', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render a selectable cell grid', () => {
-  const shallowComponent = shallow(<HeaderCellGrid isSelectable />);
-  expect(shallowComponent).toMatchSnapshot();
-});
-
 it('should render a checkmark selectionStyle cell grid', () => {
   const shallowComponent = shallow(<HeaderCellGrid selectionStyle="checkmark" />);
   expect(shallowComponent).toMatchSnapshot();

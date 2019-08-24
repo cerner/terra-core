@@ -77,6 +77,7 @@ const SubsectionHeader = ({
 }) => {
   const sectionHeaderClassNames = cx([
     'subsection-header',
+    { 'is-collapsible': isCollapsible },
     customProps.className,
   ]);
 
@@ -99,17 +100,15 @@ const SubsectionHeader = ({
     attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '0';
-    attrSpread.role = 'heading';
     attrSpread['aria-expanded'] = !isCollapsed;
-    attrSpread['aria-level'] = 2;
     attrSpread['data-row-show-focus'] = 'true';
     attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
     attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
   }
 
   return (
-    <div {...customProps} className={sectionHeaderClassNames} ref={refCallback}>
-      <div {...attrSpread} className={cx(['subsection-content', { 'is-collapsible': isCollapsible }])}>
+    <div {...attrSpread} {...customProps} className={sectionHeaderClassNames} ref={refCallback}>
+      <div role="heading" aria-level="2" className={cx('subsection-content')}>
         {accordionIcon}
         {titleElement}
       </div>

@@ -25,7 +25,9 @@ exports[`should render a subsection with a cellgrid 1`] = `
     isSelected={false}
     isStriped={false}
     selectionStyle="default"
-  />
+  >
+    <Cell />
+  </CellGrid>
 </Fragment>
 `;
 

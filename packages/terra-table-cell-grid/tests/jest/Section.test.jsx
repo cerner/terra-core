@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from '../../src/Section';
 import CellGrid from '../../src/CellGrid';
+import Cell from '../../src/Cell';
 
 // Snapshot test
 it('should render a default section', () => {
@@ -13,7 +14,9 @@ it('should render a default section', () => {
 it('should render a section with a row', () => {
   const shallowComponent = shallow(
     <Section title="test">
-      <CellGrid />
+      <CellGrid>
+        <Cell />
+      </CellGrid>
     </Section>,
   );
   expect(shallowComponent).toMatchSnapshot();

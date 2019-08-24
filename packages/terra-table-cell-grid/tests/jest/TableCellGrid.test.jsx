@@ -11,35 +11,46 @@ it('should render a default table cell grid', () => {
 
 it('should render a table cell grid with standard padding', () => {
   const shallowComponent = shallow(
-    <TableCellGrid paddingStyle="standard" />,
+    <TableCellGrid
+      paddingStyle="standard"
+    />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a table cell grid with compact padding', () => {
   const shallowComponent = shallow(
-    <TableCellGrid paddingStyle="compact" />,
+    <TableCellGrid
+      paddingStyle="compact"
+    />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a table cell grid with fill style', () => {
   const shallowComponent = shallow(
-    <TableCellGrid fill />,
+    <TableCellGrid
+      fill
+    />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a table cell grid with header/footer nodes', () => {
   const shallowComponent = shallow(
-    <TableCellGrid headerNode={<p>header</p>} footerNode={<p>footer</p>} />,
+    <TableCellGrid
+      headerNode={<p>header</p>}
+      footerNode={<p>footer</p>}
+    />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render a table cell grid with refCallback', () => {
   const shallowComponent = shallow(
-    <TableCellGrid refCallback={jest.fn()} />,
+    <TableCellGrid
+      refCallback={jest.fn()}
+    />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });

@@ -5,7 +5,9 @@ exports[`should render a default section header 1`] = `
   className="section-header"
 >
   <div
+    aria-level="1"
     className="section-content"
+    role="heading"
   >
     <h2
       className="title"
@@ -18,17 +20,17 @@ exports[`should render a default section header 1`] = `
 
 exports[`should render a section header with isCollapsible 1`] = `
 <div
-  className="section-header"
+  aria-expanded={true}
+  className="section-header is-collapsible"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  tabIndex="0"
 >
   <div
-    aria-expanded={true}
-    aria-level={1}
-    className="section-content is-collapsible"
-    data-row-show-focus="true"
-    onBlur={[Function]}
-    onMouseDown={[Function]}
+    aria-level="1"
+    className="section-content"
     role="heading"
-    tabIndex="0"
   >
     <div
       className="start"
@@ -55,7 +57,9 @@ exports[`should render a section header with isCollpased 1`] = `
   className="section-header"
 >
   <div
+    aria-level="1"
     className="section-content"
+    role="heading"
   >
     <h2
       className="title"
@@ -71,7 +75,9 @@ exports[`should render a section header with level 1`] = `
   className="section-header"
 >
   <div
+    aria-level="1"
     className="section-content"
+    role="heading"
   >
     <h3
       className="title"
@@ -87,7 +93,9 @@ exports[`should render a section header with metaData 1`] = `
   className="section-header"
 >
   <div
+    aria-level="1"
     className="section-content"
+    role="heading"
   >
     <h2
       className="title"
@@ -100,19 +108,19 @@ exports[`should render a section header with metaData 1`] = `
 
 exports[`should render a section header with onSelect 1`] = `
 <div
-  className="section-header"
+  aria-expanded={true}
+  className="section-header is-collapsible"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  tabIndex="0"
 >
   <div
-    aria-expanded={true}
-    aria-level={1}
-    className="section-content is-collapsible"
-    data-row-show-focus="true"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
+    aria-level="1"
+    className="section-content"
     role="heading"
-    tabIndex="0"
   >
     <div
       className="start"
@@ -139,7 +147,9 @@ exports[`should render a section header with refCallback 1`] = `
   className="section-header"
 >
   <div
+    aria-level="1"
     className="section-content"
+    role="heading"
   >
     <h2
       className="title"

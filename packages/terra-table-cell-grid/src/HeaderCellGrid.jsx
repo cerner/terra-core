@@ -54,7 +54,7 @@ const HeaderCellGrid = ({
 
   return (
     <div className={rowClassNames} role="rowgroup">
-      <div className={cx(['header-content'])} role="row">
+      <div {...customProps} className={cx(['header-content'])} role="row">
         {checkmark}
         {children}
         {chevron}
