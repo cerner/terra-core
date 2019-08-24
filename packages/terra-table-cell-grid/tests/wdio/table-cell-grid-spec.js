@@ -50,7 +50,7 @@ Terra.describeViewports('TableCellGrid', ['medium'], () => {
   describe('Subsection Test', () => {
     before(() => browser.url('/#/raw/tests/terra-table-cell-grid/table-cell-grid/subsection'));
     Terra.it.validatesElement('TableSubsection');
-    
+
     it('Hover', () => browser.moveToObject('#test-header'));
 
     Terra.it.validatesElement('TableSubsection-Hover');
