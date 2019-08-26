@@ -1,4 +1,4 @@
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 
 const shouldBeMultiSelectable = (maxSelectionCount, selectedKeys, key) => (maxSelectionCount < 0 || selectedKeys.indexOf(key) >= 0 || selectedKeys.length < maxSelectionCount);
 

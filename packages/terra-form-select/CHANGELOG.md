@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added AT announcement for onClick and backspace in MultiSelect and TagSelect
 
+### Changed
+* Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
+
 5.27.0 - (August 21, 2019)
 ------------------
 ### Changed
