@@ -28,7 +28,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "focus-trap-react": "^6.0.0",
-    "keycode-js": "^1.0.4",
+    "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.17.0",
     "terra-hookshot": "^5.0.0",

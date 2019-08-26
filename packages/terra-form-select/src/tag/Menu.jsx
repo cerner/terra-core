@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import { injectIntl, intlShape } from 'react-intl';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import AddOption from '../shared/_AddOption';
 import MaxSelection from '../shared/_MaxSelection';
 import MenuUtil from '../shared/_MenuUtil';

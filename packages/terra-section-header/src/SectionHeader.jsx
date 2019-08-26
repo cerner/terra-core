@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import Arrange from 'terra-arrange';
 import styles from './SectionHeader.module.scss';
 

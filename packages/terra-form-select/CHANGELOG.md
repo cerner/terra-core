@@ -6,6 +6,9 @@ Unreleased
 ### Removed
 * Removed `inherit` fallback for `--terra-form-select-hover-color` CSS custom property
 
+### Changed
+* Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
+
 5.27.0 - (August 21, 2019)
 ------------------
 ### Changed
