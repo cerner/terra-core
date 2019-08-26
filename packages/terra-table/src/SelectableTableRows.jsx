@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import TableRows from './TableRows';
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';
