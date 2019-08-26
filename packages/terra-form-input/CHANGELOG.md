@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `ariaLabel` prop to improve accessibility.
+
+### Changed
+* Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 
 2.23.0 - (August 21, 2019)
 ------------------
