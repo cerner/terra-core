@@ -8,6 +8,7 @@ Unreleased
 
 ### Changed
 * updated source and jest files for changes in form-input
+* Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
 
 3.25.0 - (August 21, 2019)
 ------------------
