@@ -1,10 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/ActionHeader-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import '!!terra-props-table-loader!../../../../src/ActionHeader';
 import DefaultActionHeader from '../example/DefaultActionHeader';
 import DefaultActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultActionHeader';
 import BackActionHeader from '../example/BackActionHeader';
@@ -21,6 +21,9 @@ import BackPreviousNextCloseActionHeader from '../example/BackPreviousNextCloseA
 import BackPreviousNextCloseActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BackPreviousNextCloseActionHeader';
 import LongWrappingTextHeader from '../example/LongWrappingTextHeader';
 import LongWrappingTextHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/LongWrappingTextHeader';
+
+// Props table markdown file
+import PropsTable from '../../../../docs/ActionHeader-props-table.md';
 
 const DocPage = () => (
   <DocTemplate
@@ -62,7 +65,13 @@ const DocPage = () => (
         source: LongWrappingTextHeaderSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Action Header',
+        componentSrc: DefaultActionHeaderSrc,
+        componentProps: PropsTable,
+      },
+    ]}
   />
 );
 

@@ -60,12 +60,10 @@ const propTypes = {
   propsTables: PropTypes.arrayOf(PropTypes.shape({
     componentSrc: PropTypes.string,
     componentName: PropTypes.string,
+    componentProps: PropTypes.string,
     propsResolution: PropTypes.string,
+    stuff: PropTypes.object,
   })),
-  /**
-   * Prop table(s) from generated markdown files.
-   */
-  propsTablesMarkdown: PropTypes.arrayOf(PropTypes.string),
 };
 
 const defaultProps = {
@@ -79,11 +77,8 @@ const defaultProps = {
 };
 
 const DocTemplate = ({
-  packageName, packageVersion, packageUrl, readme, srcPath, examples, propsTables, propsTablesMarkdown, children, ...customProps
+  packageName, packageVersion, packageUrl, readme, srcPath, examples, propsTables, children, ...customProps
 }) => {
-  const parsedTables = [];
-  if (propsTablesMarkdown) propsTablesMarkdown.forEach(table => parsedTables.push(table));
-
   let id = 0;
   const localExamples = examples;
   let localPropsTables;
@@ -141,13 +136,15 @@ const DocTemplate = ({
       ))}
 
       <div className={cx('doc-card')}>
-        {propsTablesMarkdown
+        {propsTables[0].componentProps
           ? (
             <div className={cx('props-table-markdown')}>
               <>
-                {parsedTables.map(propsTable => (
-                  <Markdown src={propsTable} />
-                ))}
+                <h2>
+                  {propsTables[0].componentName}
+                  Props
+                </h2>
+                <Markdown src={propsTables[0].componentProps} />
               </>
             </div>
           )

@@ -1,7 +1,6 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const defaultWebpackConfig = require('terra-dev-site/config/webpack/webpack.config');
-const WebpackPropsPlugin = require('./scripts/props-table-gen/webpack-props-plugin');
 
 const coreConfig = () => {
   const processPath = process.cwd();
@@ -9,9 +8,11 @@ const coreConfig = () => {
 
   const i18nAlias = path.resolve(path.join(rootPath, 'packages', 'terra-i18n'));
   return {
-    plugins: [
-      new WebpackPropsPlugin(),
-    ],
+    resolveLoader: {
+      alias: {
+        'terra-props-table-loader': path.join(__dirname, 'scripts/props-table-gen/terra-props-table-loader.js'),
+      },
+    },
     resolve: {
       alias: {
         'terra-i18n': i18nAlias,
