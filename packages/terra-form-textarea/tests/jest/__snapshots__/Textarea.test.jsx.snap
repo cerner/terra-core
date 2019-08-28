@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should honor aria-label passed to component 1`] = `
+<textarea
+  aria-label="label"
+  class="textarea"
+  rows="2"
+/>
+`;
+
 exports[`should not set the textarea to resizable when viewed on browser with DocumentTouch 1`] = `
 <textarea
   class="textarea"

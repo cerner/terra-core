@@ -10,6 +10,12 @@ it('should render a default TextArea component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should honor aria-label passed to component', () => {
+  const textarea = <Textarea aria-label="label" />;
+  const wrapper = render(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render a TextArea when all the possible props are passed into it', () => {
   const textarea = (
     <Textarea
