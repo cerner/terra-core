@@ -1,9 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import SearchSelectPropsTable from '../../../../docs/SearchSelect-props-table.md';
-import OptionPropsTable from '../../../../docs/Option-props-table.md';
-import OptGroupPropsTable from '../../../../docs/OptGroup-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files

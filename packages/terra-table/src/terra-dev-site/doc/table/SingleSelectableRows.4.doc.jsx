@@ -1,7 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SingleSelectableRows.md';
-import PropsTable from '../../../../docs/SingleSelectableRows-props-table.md';
 import { name, version } from '../../../../package.json';
 
 import SingleRowSelectableTable from '../example/SingleRowSelectableTable';
@@ -40,7 +39,13 @@ const DocPage = () => (
         source: SingleSelectableRowsOnChangeSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

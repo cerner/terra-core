@@ -5,7 +5,7 @@ import ReadMe from '../../../../docs/README.md';
 import ProgressBarColorDocs from '../../../../docs/progress-bar-color.md';
 import ProgressBarTwoColorsDocs from '../../../../docs/progress-bar-two-colors.md';
 import ProgressBarCustomizedColorsDocs from '../../../../docs/progress-bar-customized-colors.md';
-import PropsTable from '../../../../docs/ProgressBar-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -56,7 +56,13 @@ const DocPage = () => (
         source: ProgressBarCustomizedColorsSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

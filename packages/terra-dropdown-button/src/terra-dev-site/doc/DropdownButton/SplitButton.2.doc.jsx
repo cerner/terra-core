@@ -2,8 +2,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SplitButton.md';
-import SplitButtonPropsTable from '../../../../docs/SplitButton-props-table.md';
-import ItemPropsTable from '../../../../docs/Item-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files

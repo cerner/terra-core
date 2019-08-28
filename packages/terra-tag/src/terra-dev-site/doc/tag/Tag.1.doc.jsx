@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/Tag-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -36,7 +36,13 @@ const DocPage = () => (
         source: TagFallbacksSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

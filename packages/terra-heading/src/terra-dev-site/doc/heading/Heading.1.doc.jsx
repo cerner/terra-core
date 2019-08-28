@@ -8,7 +8,7 @@ import HeadingColorDocs from '../../../../docs/heading-colors.md';
 import HeadingWeightDocs from '../../../../docs/heading-weights.md';
 import HeadingVisuallyHiddenDocs from '../../../../docs/heading-visually-hidden.md';
 import HeadingVariationDocs from '../../../../docs/heading-variations.md';
-import PropsTable from '../../../../docs/Heading-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -63,7 +63,13 @@ const DocPage = () => (
         source: HeadingVariationsSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

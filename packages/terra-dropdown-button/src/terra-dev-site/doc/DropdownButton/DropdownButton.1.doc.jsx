@@ -2,8 +2,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import DropdownPropsTable from '../../../../docs/DropdownButton-props-table.md';
-import ItemPropsTable from '../../../../docs/Item-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files

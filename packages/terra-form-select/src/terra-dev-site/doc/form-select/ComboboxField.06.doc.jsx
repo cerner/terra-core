@@ -2,7 +2,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ComboboxField.md';
-import PropsTable from '../../../../docs/ComboboxField-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -17,7 +17,13 @@ const DocPage = () => (
     packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
     examples={[{
       title: 'Combobobx Field Example',
       example: <ComboboxFieldExample />,

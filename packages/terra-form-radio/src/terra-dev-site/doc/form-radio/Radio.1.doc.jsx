@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/Radio-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -79,7 +79,13 @@ class DocPage extends React.Component {
             example: <MobileButton onChange={this.onChange} />,
           },
         ]}
-        propsTablesMarkdown={[PropsTable]}
+        propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
       />
     );
   }

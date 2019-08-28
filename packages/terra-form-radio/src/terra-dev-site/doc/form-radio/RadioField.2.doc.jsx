@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/RadioField.md';
-import PropsTable from '../../../../docs/RadioField-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Examples
@@ -42,7 +42,13 @@ const RadioFieldExamples = () => (
         source: InlineRadioFieldSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

@@ -2,7 +2,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/VisuallyHiddenText-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -30,7 +29,13 @@ const DocPage = () => (
         source: RefCallbackVisuallyHiddenTextSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

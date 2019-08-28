@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from '../../../DocTemplate';
 import ReadMe from '../../../../docs/PLACEHOLDER.md';
-import PropsTable from '../../../../docs/Placeholder-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -28,7 +28,13 @@ const DocPage = () => (
         source: PlaceholderLightSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

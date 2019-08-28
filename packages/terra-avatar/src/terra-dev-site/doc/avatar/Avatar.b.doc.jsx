@@ -1,10 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/avatar.md';
-import PropsTable from '../../../../docs/Avatar-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import AvatarPropsTable from '!terra-props-table-loader!../../../../src/variants/Avatar';
+import AvatarSrc from '!raw-loader!../../../../src/variants/Avatar';
 import AvatarUser from '../example/avatar/AvatarUser';
 import AvatarUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarUser';
 import AvatarOneInitial from '../example/avatar/AvatarOneInitial';
@@ -63,7 +64,13 @@ const DocPage = () => (
         source: AvatarColorVariantsSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Avatar',
+        componentSrc: AvatarSrc,
+        componentProps: AvatarPropsTable,
+      },
+    ]}
   />
 );
 

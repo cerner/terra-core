@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/DemographicsBanner-props-table.md';
 import { name, version } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 import DemographicsBanner from '../../../DemographicsBanner';
 // Component Source
+import DemographicsBannerPropsTable from '!terra-props-table-loader!../../../../src/DemographicsBanner';
 import DemographicsBannerSrc from '!raw-loader!../../../../src/DemographicsBanner.jsx';
 
 // Example Source
@@ -59,7 +59,13 @@ const DocPage = () => (
         source: DemographicsBannerSmallContainerSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Demographics Banner',
+        componentSrc: DemographicsBannerSrc,
+        componentProps: DemographicsBannerPropsTable,
+      },
+    ]}
   />
 );
 

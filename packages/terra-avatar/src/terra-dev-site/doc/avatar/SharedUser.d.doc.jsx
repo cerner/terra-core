@@ -1,9 +1,9 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/shared-user.md';
-import PropsTable from '../../../../docs/SharedUser-props-table.md';
 import { name, version } from '../../../../package.json';
 
+import SharedUserPropsTable from '!terra-props-table-loader!../../../../src/variants/SharedUser';
 import SharedUser from '../example/shared-user/SharedUser';
 import SharedUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/shared-user/SharedUser';
 import SharedUserSize from '../example/shared-user/SharedUserSize';
@@ -34,7 +34,13 @@ const DocPage = () => (
         source: SharedUserColorVariantsSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Shared User',
+        componentSrc: SharedUserSrc,
+        componentProps: SharedUserPropsTable,
+      },
+    ]}
   />
 );
 

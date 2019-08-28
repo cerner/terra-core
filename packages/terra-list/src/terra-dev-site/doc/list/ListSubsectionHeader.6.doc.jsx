@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ListSubsectionHeader.md';
-import PropsTable from '../../../../docs/ListSubsectionHeader-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -20,7 +20,13 @@ const DocPage = () => (
         source: ListSubsectionHeaderExamplesSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

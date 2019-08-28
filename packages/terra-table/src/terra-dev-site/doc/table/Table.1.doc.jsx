@@ -1,12 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import TablePropsTable from '../../../../docs/Table-props-table.md';
-import TableHeaderPropsTable from '../../../../docs/TableHeader-props-table.md';
-import TableHeaderCellPropsTable from '../../../../docs/TableHeaderCell-props-table.md';
-import TableRowPropsTable from '../../../../docs/TableRow-props-table.md';
-import TableCellPropsTable from '../../../../docs/TableCell-props-table.md';
-import TableSubheaderPropsTable from '../../../../docs/TableSubheader-props-table.md';
 import { name, version } from '../../../../package.json';
 
 import NoStripedTable from '../example/NoStripedTable';

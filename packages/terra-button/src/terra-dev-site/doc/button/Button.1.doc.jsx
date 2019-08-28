@@ -1,10 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/Button-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import ButtonPropsTable from '!terra-props-table-loader!../../../../src/Button';
+import ButtonSrc from '!raw-loader!../../../../src/Button';
 import ButtonBlock from '../example/ButtonBlock';
 import ButtonBlockSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonBlock';
 import ButtonAnchor from '../example/ButtonAnchor';
@@ -63,7 +65,13 @@ const DocPage = () => (
         source: ButtonIconSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Button',
+        componentSrc: ButtonSrc,
+        componentProps: ButtonPropsTable,
+      },
+    ]}
   />
 );
 

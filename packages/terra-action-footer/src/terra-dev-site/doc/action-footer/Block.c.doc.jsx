@@ -1,10 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/BlockActionFooter.md';
-import PropsTable from '../../../../docs/BlockActionFooter-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import BlockActionFooterPropsTable from '!terra-props-table-loader!../../../../src/BlockActionFooter';
+import BlockActionFooterSrc from '!raw-loader!../../../../src/BlockActionFooter';
 import EmptyExample from '../example/block/Empty';
 import EmptyExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/block/Empty';
 import SingleActionExample from '../example/block/SingleAction';
@@ -35,7 +36,13 @@ const DocPage = () => (
         source: MultipleActionsExampleSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Block Action Footer',
+        componentSrc: BlockActionFooterSrc,
+        componentProps: BlockActionFooterPropsTable,
+      },
+    ]}
   />
 );
 

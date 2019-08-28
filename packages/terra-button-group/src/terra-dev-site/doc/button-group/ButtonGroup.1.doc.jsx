@@ -1,11 +1,13 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import ButtonGroupPropsTable from '../../../../docs/ButtonGroup-props-table.md';
-import ButtonGroupButtonPropsTable from '../../../../docs/ButtonGroupButton-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Examples
+import ButtonGroupPropsTable from '!terra-props-table-loader!../../../../src/ButtonGroup';
+import ButtonGroupSrc from '!raw-loader!../../../../src/ButtonGroup';
+import ButtonGroupButtonPropsTable from '!terra-props-table-loader!../../../../src/ButtonGroup';
+import ButtonGroupButtonSrc from '!raw-loader!../../../../src/ButtonGroup';
 import ButtonGroupWithIcons from '../example/ButtonGroupWithIcons';
 import ButtonGroupWithIconsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonGroupWithIcons';
 import ButtonGroupDisabledButtons from '../example/ButtonGroupDisabledButtons';
@@ -50,7 +52,18 @@ const DocPage = () => (
         source: ButtonGroupIsBlockSrc,
       },
     ]}
-    propsTablesMarkdown={[ButtonGroupPropsTable, ButtonGroupButtonPropsTable]}
+    propsTables={[
+      {
+        componentName: 'Button Group',
+        componentSrc: ButtonGroupSrc,
+        componentProps: ButtonGroupPropsTable,
+      },
+      {
+        componentName: 'Button Group Button',
+        componentSrc: ButtonGroupButtonSrc,
+        componentProps: ButtonGroupButtonPropsTable,
+      },
+    ]}
   />
 );
 

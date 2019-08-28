@@ -1,7 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ManagedSelectableTable.md';
-import PropsTable from '../../../../docs/SelectableTableRows-props-table.md';
 import { name, version } from '../../../../package.json';
 
 import SingleRowSelectableTable from '../example/SingleRowSelectableTable';
@@ -29,7 +28,13 @@ const DocPage = () => (
         source: SelectableRowsDisableUnselectedRowsSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

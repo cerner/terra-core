@@ -1,8 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import DynamicGridPropsTable from '../../../../docs/DynamicGrid-props-table.md';
-import RegionPropsTable from '../../../../docs/Region-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files

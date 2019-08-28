@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/CheckboxField.md';
-import PropsTable from '../../../../docs/CheckboxField-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Examples
@@ -42,7 +42,13 @@ const checkboxFieldExamples = () => (
         source: InlineCheckboxFieldSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

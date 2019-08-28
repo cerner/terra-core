@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ControlledREADME.md';
-import PropsTable from '../../../../docs/ControlledPaginator-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -21,7 +21,13 @@ const DocPage = () => (
         source: ControlledPaginatorExampleSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

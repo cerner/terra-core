@@ -8,7 +8,7 @@ import TextWeightDocs from '../../../../docs/text-weights.md';
 import TextVariationsDocs from '../../../../docs/text-variations.md';
 import TextVisuallyHiddenDocs from '../../../../docs/text-visually-hidden.md';
 import TextWordWrappedDocs from '../../../../docs/text-word-wrapped.md';
-import PropsTable from '../../../../docs/Text-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -76,7 +76,13 @@ const DocPage = () => (
         source: TextWordWrappedSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

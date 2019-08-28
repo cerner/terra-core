@@ -1,9 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import LoadingOverlayPropsTable from '../../../../docs/LoadingOverlay-props-table.md';
-import OverlayPropsTable from '../../../../docs/Overlay-props-table.md';
-import OverlayContainerPropsTable from '../../../../docs/OverlayContainer-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files

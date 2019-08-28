@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/Input-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -91,7 +91,13 @@ const DocPage = () => (
         source: UncontrolledDisabledInvalidExampleSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

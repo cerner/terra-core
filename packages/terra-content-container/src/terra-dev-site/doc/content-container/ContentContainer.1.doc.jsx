@@ -1,10 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/ContentContainer-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import ContentContainerPropsTable from '!terra-props-table-loader!../../../../src/ContentContainer';
+import ContentContainerSrc from '!raw-loader!../../../../src/ContentContainer';
 import ContentContainerStandard from '../example/ContentContainerStandard';
 import ContentContainerStandardSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ContentContainerStandard';
 import ContentContainerFill from '../example/ContentContainerFill';
@@ -35,7 +37,13 @@ const DocPage = () => (
         source: ContentContainerScrollRefSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Content Container',
+        componentSrc: ContentContainerSrc,
+        componentProps: ContentContainerPropsTable,
+      },
+    ]}
   />
 );
 

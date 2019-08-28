@@ -1,10 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/Badge-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import BadgePropsTable from '!terra-props-table-loader!../../../../src/Badge';
+import BadgeSrc from '!raw-loader!../../../../src/Badge';
 import BadgeIntent from '../example/BadgeIntent';
 import BadgeIntentSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BadgeIntent';
 import BadgeSize from '../example/BadgeSize';
@@ -42,7 +43,13 @@ const DocPage = () => (
         source: BadgeVisuallyHiddenTextSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Badge',
+        componentSrc: BadgeSrc,
+        componentProps: BadgePropsTable,
+      },
+    ]}
   />
 );
 

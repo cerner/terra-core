@@ -1,8 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/Base-props-table.md';
+
 import { name, version } from '../../../../package.json';
+import BasePropsTable from '!terra-props-table-loader!../../../../src/Base';
+import BaseSrc from '!raw-loader!../../../../src/Base';
 
 const BaseExample = () => (
   <div>
@@ -49,7 +51,13 @@ const DocPage = () => (
         example: <BaseExample />,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Base',
+        componentSrc: BaseSrc,
+        componentProps: BasePropsTable,
+      },
+    ]}
   />
 );
 

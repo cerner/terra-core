@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from '../../../../lib/DocTemplate';
 import readme from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/DocTemplate-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
@@ -29,7 +29,13 @@ const DocTemplateExamples = () => (
         example: <BadgeExamples />,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

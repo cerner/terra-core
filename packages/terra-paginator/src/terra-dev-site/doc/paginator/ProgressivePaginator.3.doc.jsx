@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ProgressiveREADME.md';
-import PropsTable from '../../../../docs/ProgressivePaginator-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 // Example Files
@@ -21,7 +21,13 @@ const DocPage = () => (
         source: ProgressivePaginatorExampleSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

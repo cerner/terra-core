@@ -1,10 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import PropsTable from '../../../../docs/ActionFooter-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import ActionFooterPropsTable from '!terra-props-table-loader!../../../../src/ActionFooter';
+import ActionFooterSrc from '!raw-loader!../../../../src/ActionFooter';
 import EmptyExample from '../example/standard/Empty';
 import EmptyExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/standard/Empty';
 import SingleStartActionExample from '../example/standard/SingleStartAction';
@@ -42,7 +43,13 @@ const DocPage = () => (
         source: MultipleStartEndActionsExampleSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: 'Action Footer',
+        componentSrc: ActionFooterSrc,
+        componentProps: ActionFooterPropsTable,
+      },
+    ]}
   />
 );
 

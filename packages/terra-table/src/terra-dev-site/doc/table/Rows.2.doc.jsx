@@ -1,7 +1,7 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/Rows.md';
-import PropsTable from '../../../../docs/TableRows-props-table.md';
+
 import { name, version } from '../../../../package.json';
 
 import RowsOnClick from '../example/RowsOnClick';
@@ -28,7 +28,13 @@ const DocPage = () => (
         source: RowsOnKeyDownSrc,
       },
     ]}
-    propsTablesMarkdown={[PropsTable]}
+    propsTables={[
+      {
+        componentName: '',
+        componentSrc: '',
+        componentProps: '',
+      },
+    ]}
   />
 );
 

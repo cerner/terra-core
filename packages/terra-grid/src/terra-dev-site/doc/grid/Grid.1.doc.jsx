@@ -1,9 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import GridPropsTable from '../../../../docs/Grid-props-table.md';
-import GridColumnPropsTable from '../../../../docs/GridColumn-props-table.md';
-import GridRowPropsTable from '../../../../docs/GridRow-props-table.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
