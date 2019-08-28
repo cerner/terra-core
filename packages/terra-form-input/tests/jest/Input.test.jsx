@@ -58,4 +58,16 @@ describe('Input', () => {
     expect(refCallback).toBeCalled();
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should honor aria-label passed to component', () => {
+    const input = <Input defaultValue="foo" aria-label="label" />;
+    const wrapper = shallow(input);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should favor ariaLabel prop over aria-label if both props passed to component', () => {
+    const input = <Input defaultValue="foo" ariaLabel="ariaLabel" aria-label="aria-label" />;
+    const wrapper = shallow(input);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
