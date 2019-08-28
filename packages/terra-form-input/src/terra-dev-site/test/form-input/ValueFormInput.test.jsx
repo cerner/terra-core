@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from '../../../Input';
 
-const ValueInput = () => <Input aria-label="value form input" id="form-input-value" value="value" />;
+const ValueInput = () => <Input id="form-input-value" value="value" ariaLabel="label" />;
 
 export default ValueInput;

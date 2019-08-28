@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form-input';
 import { injectIntl, intlShape } from 'react-intl';
@@ -220,10 +220,11 @@ class SearchField extends React.Component {
       customProps.className,
     ]);
 
-    const inputText = intl.formatMessage({ id: 'Terra.searchField.search' });
+    const inputText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
+
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
-    const additionalInputAttributes = { 'aria-label': inputText, ...inputAttributes };
+    const additionalInputAttributes = { ...inputAttributes };
     const clearIcon = <span className={cx('clear-icon')} />;
 
     if (value !== undefined) {
@@ -254,6 +255,7 @@ class SearchField extends React.Component {
             placeholder={placeholder}
             onChange={this.handleTextChange}
             disabled={isDisabled}
+            ariaLabel={inputText}
             aria-disabled={isDisabled}
             onKeyDown={this.handleKeyDown}
             refCallback={this.setInputRef}
