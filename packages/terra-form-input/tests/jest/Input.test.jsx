@@ -64,4 +64,10 @@ describe('Input', () => {
     const wrapper = shallow(input);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should favor ariaLabel prop over aria-label if both props passed to component', () => {
+    const input = <Input defaultValue="foo" ariaLabel="ariaLabel" aria-label="aria-label" />;
+    const wrapper = shallow(input);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

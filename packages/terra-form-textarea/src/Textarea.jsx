@@ -205,12 +205,9 @@ class Textarea extends React.Component {
 
     // Handle case of users setting aria-label as a custom prop
     if (additionalTextareaProps && Object.prototype.hasOwnProperty.call(additionalTextareaProps, 'aria-label')) {
-      // If they've set aria-label and ariaLabel, use the ariaLabel value
-      if (ariaLabel) {
-        ariaLabelText = ariaLabel;
-      }
-      // Otherwise, use the aria-label value they've set
-      ariaLabelText = additionalTextareaProps['aria-label'];
+      // If they've set aria-label and ariaLabel, use the ariaLabel value,
+      // otherwise, fallback to using the aria-label value passed in.
+      ariaLabelText = !ariaLabel ? additionalTextareaProps['aria-label'] : ariaLabel;
     } else if (ariaLabel) {
       // If users only set ariaLabel prop, use that value
       ariaLabelText = ariaLabel;

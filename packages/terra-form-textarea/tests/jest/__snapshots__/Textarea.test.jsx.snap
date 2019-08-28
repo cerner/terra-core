@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should favor ariaLabel prop over aria-label if both props passed to component 1`] = `
+<textarea
+  aria-label="ariaLabel"
+  class="textarea"
+  rows="2"
+/>
+`;
+
 exports[`should honor aria-label passed to component 1`] = `
 <textarea
   aria-label="label"

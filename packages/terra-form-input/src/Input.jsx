@@ -115,12 +115,9 @@ class Input extends React.Component {
 
     // Handle case of users setting aria-label as a custom prop
     if (attributes && Object.prototype.hasOwnProperty.call(attributes, 'aria-label')) {
-      // If they've set aria-label and ariaLabel, use the ariaLabel value
-      if (ariaLabel) {
-        ariaLabelText = ariaLabel;
-      }
-      // Otherwise, use the aria-label value they've set
-      ariaLabelText = attributes['aria-label'];
+      // If they've set aria-label and ariaLabel, use the ariaLabel value,
+      // otherwise, fallback to using the aria-label value passed in.
+      ariaLabelText = !ariaLabel ? attributes['aria-label'] : ariaLabel;
     } else if (ariaLabel) {
       // If users only set ariaLabel prop, use that value
       ariaLabelText = ariaLabel;
