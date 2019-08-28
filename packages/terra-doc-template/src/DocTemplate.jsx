@@ -80,6 +80,8 @@ const DocTemplate = ({
   packageName, packageVersion, packageUrl, readme, srcPath, examples, propsTables, children, ...customProps
 }) => {
   let id = 0;
+  let componentProps;
+  if (propsTables[0] && propsTables[0].componentProps) componentProps = propsTables[0].componentProps;
   const localExamples = examples;
   let localPropsTables;
   if (propsTables) localPropsTables = propsTables;
@@ -136,7 +138,7 @@ const DocTemplate = ({
       ))}
 
       <div className={cx('doc-card')}>
-        {propsTables[0].componentProps
+        {componentProps
           ? (
             <div className={cx('props-table-markdown')}>
               <>
