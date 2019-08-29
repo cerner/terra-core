@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const AVATAR_VARIANTS = {
   USER: 'user',
   FACILITY: 'facility',
-  SHARED_USER: 'shared-user',
+  GENERIC: 'generic',
 };
 
 const COLOR_VARIANTS = [

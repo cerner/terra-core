@@ -1,9 +1,8 @@
-# Shared User
+# Generic
 
-The `SharedUser` variant represents multiple users - it displays a shared user icon in a circular frame.
+The `Generic` variant represents multiple variants like `single-user`, `shared-user`, `provider` - it displays a specified variant user icon in a circular frame.
 
 ## Getting Started
-
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-avatar`
 
@@ -11,10 +10,10 @@ The `SharedUser` variant represents multiple users - it displays a shared user i
 
 ```jsx
 import React from 'react';
-import { SharedUser } from 'terra-avatar';
+import { Generic } from 'terra-avatar';
 
-<SharedUser
-  alt="shared users"
+<Generic
+  alt="Generic Users"
 />
 ```
 

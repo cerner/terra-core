@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Generic should render a default single-user generic avatar 1`] = `
+<div
+  class="avatar seven"
+>
+  <span
+    alt="single-user"
+    aria-hidden="false"
+    aria-label="single-user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a provider avatar with aria hidden 1`] = `
+<div
+  class="avatar six"
+>
+  <span
+    alt="provider"
+    aria-hidden="true"
+    aria-label="provider"
+    class="icon provider"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a provider avatar with color variant one 1`] = `
+<div
+  class="avatar one"
+>
+  <span
+    alt="provider"
+    aria-hidden="false"
+    aria-label="provider"
+    class="icon provider"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a provider avatar with custom props 1`] = `
+<div
+  class="avatar six"
+  id="custom props provider user"
+>
+  <span
+    alt="provider"
+    aria-hidden="false"
+    aria-label="provider"
+    class="icon provider"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a provider avatar with provided size 1`] = `
+<div
+  class="avatar six"
+  style="font-size:5em"
+>
+  <span
+    alt="provider"
+    aria-hidden="false"
+    aria-label="provider"
+    class="icon provider"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a provider with an automated color variant, based on a hashValue 1`] = `
+<div
+  class="avatar two"
+>
+  <span
+    alt="provider"
+    aria-hidden="false"
+    aria-label="provider"
+    class="icon provider"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a provider with color variant neutral 1`] = `
+<div
+  class="avatar neutral"
+>
+  <span
+    alt="provider"
+    aria-hidden="false"
+    aria-label="provider"
+    class="icon provider"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a shared-user avatar with aria hidden 1`] = `
+<div
+  class="avatar four"
+>
+  <span
+    alt="shared-user"
+    aria-hidden="true"
+    aria-label="shared-user"
+    class="icon shared-user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a shared-user avatar with color variant one 1`] = `
+<div
+  class="avatar one"
+>
+  <span
+    alt="shared-user"
+    aria-hidden="false"
+    aria-label="shared-user"
+    class="icon shared-user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a shared-user avatar with custom props 1`] = `
+<div
+  class="avatar four"
+  id="custom props shared user"
+>
+  <span
+    alt="shared-user"
+    aria-hidden="false"
+    aria-label="shared-user"
+    class="icon shared-user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a shared-user avatar with provided size 1`] = `
+<div
+  class="avatar four"
+  style="font-size:5em"
+>
+  <span
+    alt="shared-user"
+    aria-hidden="false"
+    aria-label="shared-user"
+    class="icon shared-user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a shared-user with an automated color variant, based on a hashValue 1`] = `
+<div
+  class="avatar two"
+>
+  <span
+    alt="shared-user"
+    aria-hidden="false"
+    aria-label="shared-user"
+    class="icon shared-user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a shared-user with color variant neutral 1`] = `
+<div
+  class="avatar neutral"
+>
+  <span
+    alt="shared-user"
+    aria-hidden="false"
+    aria-label="shared-user"
+    class="icon shared-user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a single-user generic avatar with aria hidden 1`] = `
+<div
+  class="avatar seven"
+>
+  <span
+    alt="single-user"
+    aria-hidden="true"
+    aria-label="single-user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a single-user generic avatar with color variant neutral 1`] = `
+<div
+  class="avatar neutral"
+  varaint="single-user"
+>
+  <span
+    alt="single-user"
+    aria-hidden="false"
+    aria-label="single-user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a single-user generic avatar with color variant one 1`] = `
+<div
+  class="avatar one"
+>
+  <span
+    alt="single-user"
+    aria-hidden="false"
+    aria-label="single-user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a single-user generic avatar with custom props 1`] = `
+<div
+  class="avatar seven"
+  id="custom props single user"
+  varaint="single-user"
+>
+  <span
+    alt="single-user"
+    aria-hidden="false"
+    aria-label="single-user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a single-user generic avatar with provided size 1`] = `
+<div
+  class="avatar seven"
+  style="font-size:5em"
+>
+  <span
+    alt="single-user"
+    aria-hidden="false"
+    aria-label="single-user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;
+
+exports[`Generic should render a single-user with an automated color variant, based on a hashValue 1`] = `
+<div
+  class="avatar two"
+  varaint="single-user"
+>
+  <span
+    alt="single-user"
+    aria-hidden="false"
+    aria-label="single-user"
+    class="icon user"
+    role="img"
+  />
+</div>
+`;

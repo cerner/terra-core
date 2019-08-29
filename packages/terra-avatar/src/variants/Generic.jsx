@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from '../common/Avatar.module.scss';
-import {
-  AVATAR_VARIANTS, setColor,
-} from '../common/AvatarUtils';
+import { setColor } from '../common/AvatarUtils';
 
 const cx = classNames.bind(styles);
+
+const GENERIC_VARIANTS = {
+  SINGLE_USER: 'single-user',
+  SHARED_USER: 'shared-user',
+  PROVIDER: 'provider',
+};
 
 const propTypes = {
   /**
@@ -31,6 +35,10 @@ const propTypes = {
    * Overrides the default size.
    */
   size: PropTypes.string,
+  /**
+   * Sets the Generic Avatar type to One of the following variants `single-user`, `shared-user`, or `provider`.
+   */
+  variant: PropTypes.oneOf([GENERIC_VARIANTS.SINGLE_USER, GENERIC_VARIANTS.SHARED_USER, GENERIC_VARIANTS.PROVIDER]),
 };
 
 const defaultProps = {
@@ -38,14 +46,16 @@ const defaultProps = {
   hashValue: undefined,
   isAriaHidden: false,
   size: undefined,
+  variant: GENERIC_VARIANTS.SINGLE_USER,
 };
 
-const SharedUser = ({
+const Generic = ({
   alt,
   color,
   hashValue,
   isAriaHidden,
   size,
+  variant,
   ...customProps
 }) => {
   const colorVariant = setColor(alt, color, hashValue);
@@ -57,19 +67,24 @@ const SharedUser = ({
     attributes.className,
   ]);
 
-  const multiUserIconClassNames = cx(['icon', AVATAR_VARIANTS.SHARED_USER]);
-  const multiUserContent = <span className={multiUserIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
+  let genericIconClassNames = cx(['icon', 'user']);
+
+  if (variant === GENERIC_VARIANTS.SHARED_USER) {
+    genericIconClassNames = cx(['icon', GENERIC_VARIANTS.SHARED_USER]);
+  } else if (variant === GENERIC_VARIANTS.PROVIDER) {
+    genericIconClassNames = cx(['icon', GENERIC_VARIANTS.PROVIDER]);
+  }
 
   /* eslint-disable react/forbid-dom-props */
   return (
     <div {...attributes} className={multiUserClassNames} style={customStyles}>
-      {multiUserContent}
+      <span className={genericIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />
     </div>
   );
   /* eslint-enable react/forbid-dom-props */
 };
 
-SharedUser.propTypes = propTypes;
-SharedUser.defaultProps = defaultProps;
+Generic.propTypes = propTypes;
+Generic.defaultProps = defaultProps;
 
-export default SharedUser;
+export default Generic;

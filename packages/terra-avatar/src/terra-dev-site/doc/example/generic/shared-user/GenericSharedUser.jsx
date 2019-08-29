@@ -1,8 +1,8 @@
 import React from 'react';
-import { SharedUser } from 'terra-avatar';
+import { Generic } from 'terra-avatar';
 
 const AvatarSharedUser = () => (
-  <SharedUser alt="Shared User" />
+  <Generic variant="shared-user" alt="Shared User" />
 );
 
 export default AvatarSharedUser;
