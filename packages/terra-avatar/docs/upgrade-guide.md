@@ -1,4 +1,36 @@
 # terra-avatar Upgrade Guide
+## Changes from version 2 to version 3
+
+### Removed
+* `Shared User` Variant From Avatar Variants
+
+### Added
+* `Generic` Variant with props same as `Shared User` and with `Variant` prop to support sub-variants like `single-user`, `shared-user` and `provider`.
+* `variant` prop. this will take values for sub-variants `single-user`, `shared-user` and `provider`.
+
+### Changes to CSS Custom Properties
+
+#### Added
+* --terra-avatar-icon-provider-background-image
+
+### Steps to uplift to V3
+1. Use a named export for Generic variant.
+2. Use variant prop of Generic to set sub-variant icons like `single-user`, `shared-user` and `provider` for Avatar.
+
+#### V2 Code
+```javascript
+import { SharedUser} from 'terra-avatar';
+
+<SharedUser alt="Patient 1" />
+```
+
+#### V3 Code
+```javascript
+import { Generic } from 'terra-avatar'
+
+<Generic variant="shared-user" alt="Location 1" />
+```
+
 ## Changes from version 1 to version 2
 
 ### Props
@@ -84,3 +116,4 @@ import Avatar, { Facility } from 'terra-avatar'
 <Avatar alt="Patient 1" initials="AA" />
 <Facility alt="Location 1" />
 ```
+

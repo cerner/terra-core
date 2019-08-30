@@ -61,7 +61,7 @@ const Generic = ({
   const colorVariant = setColor(alt, color, hashValue);
   const attributes = { ...customProps };
   const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;
-  const multiUserClassNames = cx([
+  const GenericUserClassNames = cx([
     'avatar',
     `${colorVariant}`,
     attributes.className,
@@ -77,7 +77,7 @@ const Generic = ({
 
   /* eslint-disable react/forbid-dom-props */
   return (
-    <div {...attributes} className={multiUserClassNames} style={customStyles}>
+    <div {...attributes} className={GenericUserClassNames} style={customStyles}>
       <span className={genericIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />
     </div>
   );

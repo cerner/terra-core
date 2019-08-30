@@ -3,8 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Changed shared user to generic variant with sub-variants single-user, shared-user and provider.
+### Breaking Changes
+* Removed Shared User Variant
+* Added Generic as new variant with sub-variants single-user, shared-user and provider.
 
 2.25.0 - (August 21, 2019)
 ------------------
