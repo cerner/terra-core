@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form-input';
 import { injectIntl, intlShape } from 'react-intl';

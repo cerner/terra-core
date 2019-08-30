@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "keycode-js": "^1.0.4",
+    "keycode-js": "^2.0.1",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",

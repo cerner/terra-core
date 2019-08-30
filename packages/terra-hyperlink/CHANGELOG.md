@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
 
 2.17.0 - (August 21, 2019)
 ------------------
