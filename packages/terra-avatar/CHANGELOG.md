@@ -4,8 +4,8 @@ ChangeLog
 Unreleased
 ----------
 ### Breaking Changes
-* Removed Shared User Variant
-* Added Generic as new variant with sub-variants single-user, shared-user and provider.
+* Removed Shared User subcomponent
+* Added Generic subcomponent with a new variant prop that can be `single-user`, `shared-user`, or `provider`.
 
 2.25.0 - (August 21, 2019)
 ------------------

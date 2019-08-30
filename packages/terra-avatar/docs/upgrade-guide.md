@@ -2,10 +2,10 @@
 ## Changes from version 2 to version 3
 
 ### Removed
-* `Shared User` Variant From Avatar Variants
+* `Shared User` subcomponent From Avatar
 
 ### Added
-* `Generic` Variant with props same as `Shared User` and with `Variant` prop to support sub-variants like `single-user`, `shared-user` and `provider`.
+* the `generic` subcomponent that replaces the `sharedUser` subcomponent with a new `variant` prop that can be `single-user`, `shared-user`, or `provider`.
 * `variant` prop. this will take values for sub-variants `single-user`, `shared-user` and `provider`.
 
 ### Changes to CSS Custom Properties
