@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added ThemeIconTemplate to support tooltip for theme icons
+* Added Translations for IconConsultInstructionsForUse tooltip text
+
+### Changed
+* Import for package version from package.json added to doc page
 
 3.18.0 - (August 21, 2019)
 ------------------
