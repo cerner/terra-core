@@ -88,3 +88,4 @@ Generic.propTypes = propTypes;
 Generic.defaultProps = defaultProps;
 
 export default Generic;
+export { GENERIC_VARIANTS };
