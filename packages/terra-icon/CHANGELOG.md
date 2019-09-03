@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.19.0 - (September 3, 2019)
+------------------
 ### Added
 * Added ThemeIconTemplate to support tooltip for theme icons
 * Added Translations for IconConsultInstructionsForUse tooltip text

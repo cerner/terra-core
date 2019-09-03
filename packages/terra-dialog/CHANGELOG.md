@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Updated `--terra-dialog-header-close-icon-margin-top` variable to only apply in Microsoft browsers
 
+2.24.0 - (September 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.23.0 - (August 21, 2019)
 ------------------
 ### Changed

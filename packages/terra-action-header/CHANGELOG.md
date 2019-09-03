@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Updated `--terra-action-header-icon-top` variable to only apply in Microsoft browsers.
 
+2.27.0 - (September 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.26.0 - (August 21, 2019)
 ------------------
 ### Changed
