@@ -6,7 +6,7 @@ This component is used to provide margin and/or padding space between two compon
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-spacer`
-  - `yarn add install terra-spacer`
+  - `yarn add terra-spacer`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

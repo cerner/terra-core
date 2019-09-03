@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed issue where using aria-label as a custom prop the `<Textarea />` component was not passing through correctly.
+
 ### Added
 * Props table markdown file import added to doc site page
 * Added `ariaLabel` prop to improve accessibility.
