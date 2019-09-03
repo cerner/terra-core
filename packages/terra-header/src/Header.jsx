@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const propTypes = {
   /**
    * Child element to be displayed on the right end of the header.
-   * The elements passed as children are expected to be and will be treated like a collapsible menu view element.
+   * The element passed as a child is expected to be and will be treated like a terra `Collapsible Menu View` element.
    */
   children: PropTypes.element,
 

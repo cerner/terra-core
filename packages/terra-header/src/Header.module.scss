@@ -1,8 +1,8 @@
 :local {
   .flex-header {
     align-items: flex-start;
-    background-color: var(--terra-header-background-color, #f4f4f4);
-    border-bottom: var(--terra-header-border-bottom, 1px solid #dedfe0);
+    background-color: var(--terra-header-background-color, #f9f9f9);
+    border-bottom: var(--terra-header-border-bottom, 1px solid #d3d4d5);
     border-left: var(--terra-header-border-left);
     border-right: var(--terra-header-border-right);
     border-top: var(--terra-header-border-top);
@@ -25,6 +25,7 @@
 
   .flex-fill {
     flex: 1 1 auto;
+    min-width: 0;
     position: relative;
     width: 100%;
   }

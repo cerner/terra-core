@@ -31,7 +31,7 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'Action Header Container',
+        componentName: 'Header',
         componentSrc: HeaderSrc,
       },
     ]}

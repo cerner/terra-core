@@ -7,7 +7,7 @@ const HeaderExample = () => (
   <div>
     <br />
     <Header
-      startContent={<Button text="Back" onClick={() => alert('You clicked Back!')} />}
+      startContent={<Button text="Button" onClick={() => alert('You clicked startContent button!')} />}
     />
     <br />
   </div>

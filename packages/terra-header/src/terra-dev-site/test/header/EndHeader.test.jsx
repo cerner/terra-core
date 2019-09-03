@@ -7,7 +7,7 @@ const HeaderExample = () => (
   <div>
     <br />
     <Header
-      endContent={<Button text="Close" onClick={() => alert('You clicked Close!')} />}
+      endContent={<Button text="Button" onClick={() => alert('You clicked endContent button!')} />}
     />
     <br />
   </div>
