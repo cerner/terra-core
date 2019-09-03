@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Variants from './_constants';
-import DropdownMenu from './_Menu';
-import Frame from './_Frame';
-import Option from './_Option';
-import OptGroup from './_OptGroup';
-import Tag from './_Tag';
-import Util from './_SelectUtil';
+import Variants from './shared/_variants';
+import Option from './shared/_Option';
+import OptGroup from './shared/_OptGroup';
+import Combobox from './Combobox';
+import SingleSelect from './SingleSelect';
+import MultiSelect from './MultiSelect';
+import Search from './SearchSelect';
+import Tag from './TagSelect';
 
 const propTypes = {
   /**
@@ -124,131 +125,36 @@ const defaultProps = {
   variant: 'default',
 };
 
-const contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Component is internationalized, and must be wrapped in terra-base');
+function Select(props) {
+  const { variant, ...otherProps } = props;
+
+  switch (variant) {
+    case Variants.COMBOBOX: {
+      const { maxSelectionCount, ...comboboxProps } = otherProps;
+      return <Combobox {...comboboxProps} />;
     }
-  },
-};
-
-class Select extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      tags: [],
-      value: Util.defaultValue(props),
-    };
-
-    this.display = this.display.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleDeselect = this.handleDeselect.bind(this);
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-
-  /**
-   * Returns the appropriate variant display
-   */
-  display() {
-    const selectValue = Util.value(this.props, this.state);
-
-    switch (this.props.variant) {
-      case Variants.TAG:
-      case Variants.MULTIPLE:
-        return selectValue.map(tag => (
-          <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
-            {Util.valueDisplay(this.props, tag)}
-          </Tag>
-        ));
-      default:
-        return Util.valueDisplay(this.props, selectValue);
+    case Variants.MULTIPLE: {
+      const { allowClear, ...multipleProps } = otherProps;
+      return <MultiSelect {...multipleProps} />;
     }
-  }
-
-  /**
-   * Communicates changes to the value.
-   * @param {array|number|string} value - The value resulting from a change.
-   */
-  handleChange(value) {
-    if (this.props.value === undefined) {
-      this.setState({ value });
+    case Variants.SEARCH: {
+      const { maxSelectionCount, ...searchProps } = otherProps;
+      return <Search {...searchProps} />;
     }
-
-    if (this.props.onChange) {
-      this.props.onChange(value);
+    case Variants.TAG: {
+      const { noResultContent, allowClear, ...tagProps } = otherProps;
+      return <Tag {...tagProps} />;
     }
-  }
-
-  /**
-   * Communicates the removal of a value from the selected options.
-   * @param {number|string} value - The value to be removed.
-   */
-  handleDeselect(value) {
-    this.handleChange(Util.deselect(this.props, this.state, value));
-
-    if (this.props.onDeselect) {
-      this.props.onDeselect(value);
+    case Variants.DEFAULT:
+    default: {
+      const {
+        maxSelectionCount,
+        onSearch,
+        optionFilter,
+        ...SingleSelectProps
+      } = otherProps;
+      return <SingleSelect {...SingleSelectProps} />;
     }
-  }
-
-  /**
-   * Communicates the selection of a value.
-   * @param {number|string} value - The value of the selected option.
-   * @param {ReactNode} option - The selected option.
-   */
-  handleSelect(value, option) {
-    this.handleChange(Util.select(this.props, this.state, value));
-
-    // Add new tags for uncontrolled components.
-    if (this.props.value === undefined && !Util.findByValue(this.props, this.state, value)) {
-      this.setState(prevState => ({ tags: [...prevState.tags, <Option key={value} display={value} value={value} />] }));
-    }
-
-    if (this.props.onSelect) {
-      this.props.onSelect(value, option);
-    }
-  }
-
-  render() {
-    const { intl } = this.context;
-    const {
-      allowClear, children, defaultValue, onChange, placeholder, required, value, ...otherProps
-    } = this.props;
-
-    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-    const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
-    let clearOptionDisplay;
-
-    if (allowClear) {
-      if (selectPlaceholder.length === 0) {
-        clearOptionDisplay = defaultPlaceholder;
-      } else {
-        clearOptionDisplay = selectPlaceholder;
-      }
-    }
-
-    return (
-      <Frame
-        {...otherProps}
-        data-terra-select
-        value={Util.value(this.props, this.state)}
-        display={this.display()}
-        onDeselect={this.handleDeselect}
-        onSelect={this.handleSelect}
-        placeholder={selectPlaceholder}
-        required={required}
-        totalOptions={Util.getTotalNumberOfOptions(children)}
-        clearOptionDisplay={clearOptionDisplay}
-        dropdown={dropdownProps => (
-          <DropdownMenu {...dropdownProps}>
-            {this.state.tags}
-            {children}
-          </DropdownMenu>
-        )}
-      />
-    );
   }
 }
 
@@ -256,7 +162,6 @@ Select.Option = Option;
 Select.OptGroup = OptGroup;
 Select.propTypes = propTypes;
 Select.defaultProps = defaultProps;
-Select.contextTypes = contextTypes;
 Select.isSelect = true;
 
 export default Select;

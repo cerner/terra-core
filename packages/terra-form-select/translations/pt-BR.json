@@ -17,5 +17,7 @@
   "Terra.form.select.multiSelectUsageGuidance": "Insira o texto ou use as teclas de seta para cima e para baixo para navegar pelas opções. Pressione Enter para selecionar ou cancelar a seleção de uma opção.",
   "Terra.form.select.searchUsageGuidance": "Insira o texto ou use as teclas de seta para cima e para baixo para navegar pelas opções. Pressione Enter para selecionar uma opção.",
   "Terra.form.select.clearSelect": "Limpar seleção",
-  "Terra.form.select.selectCleared": "Selecionar valor limpo"
+  "Terra.form.select.selectCleared": "Selecionar valor limpo",
+  "Terra.form.select.menu": "Menu",
+  "Terra.form.select.option": "Opções"
 }

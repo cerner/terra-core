@@ -3,8 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+3.18.0 - (August 14, 2019)
+------------------
 ### Changed
 * updated package.json test scripts
+* Updated Props description for alignFitEnd and alignFill.
 
 3.17.0 - (July 30, 2019)
 ------------------

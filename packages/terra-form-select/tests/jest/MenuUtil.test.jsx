@@ -1,8 +1,8 @@
 import React from 'react';
-import MenuUtil from '../../src/_MenuUtil';
-import Variants from '../../src/_constants';
-import OptGroup from '../../src/_OptGroup';
-import Option from '../../src/_Option';
+import MenuUtil from '../../src/shared/_MenuUtil';
+import Variants from '../../src/shared/_variants';
+import OptGroup from '../../src/shared/_OptGroup';
+import Option from '../../src/shared/_Option';
 
 describe('MenuUtil', () => {
   describe('contains', () => {
@@ -46,25 +46,25 @@ describe('MenuUtil', () => {
     });
   });
 
-  describe('allowsMultipleSelections', () => {
+  describe('allowsMultiSelections', () => {
     it('should return false for a default variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.DEFAULT)).toBeFalsy();
+      expect(MenuUtil.allowsMultiSelections(Variants.DEFAULT)).toBeFalsy();
     });
 
     it('should return false for a combobox variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.COMBOBOX)).toBeFalsy();
+      expect(MenuUtil.allowsMultiSelections(Variants.COMBOBOX)).toBeFalsy();
     });
 
     it('should return true for a multiple variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.MULTIPLE)).toBeTruthy();
+      expect(MenuUtil.allowsMultiSelections(Variants.MULTIPLE)).toBeTruthy();
     });
 
     it('should return false for a search variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.SEARCH)).toBeFalsy();
+      expect(MenuUtil.allowsMultiSelections(Variants.SEARCH)).toBeFalsy();
     });
 
     it('should return true for a tag variant', () => {
-      expect(MenuUtil.allowsMultipleSelections(Variants.TAG)).toBeTruthy();
+      expect(MenuUtil.allowsMultiSelections(Variants.TAG)).toBeTruthy();
     });
   });
 

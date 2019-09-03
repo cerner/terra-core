@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+
+3.16.0 - (August 14, 2019)
+------------------
+### Updated
+* updated jest snapshots
+* updated to set `fit` to always be `cover` to handle non-square images.
+
 ### Changed
 * updated package.json test scripts
 

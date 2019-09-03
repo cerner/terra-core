@@ -3,7 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.24.0 - (August 14, 2019)
+------------------
 ### Changed
+* Components updated to use `FormattedMessage` to interface with `react-intl's` `intl` context.
 * updated package.json test scripts
 
 3.23.0 - (July 30, 2019)
@@ -39,6 +43,7 @@ Unreleased
 3.17.0  - (July 11, 2019)
 ------------------
 ### Changed
+* Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 * Updated Docs around the requirement of terra-base and aggregate-translations.
 
