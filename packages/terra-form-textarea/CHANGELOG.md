@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.24.0 - (September 3, 2019)
+------------------
 ### Fixed
 * Fixed issue where using aria-label as a custom prop the `<Textarea />` component was not passing through correctly.
 
