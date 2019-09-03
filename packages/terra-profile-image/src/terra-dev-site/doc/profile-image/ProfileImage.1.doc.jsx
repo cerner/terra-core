@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import ProfileImagePropsTable from '!terra-props-table-loader!../../../../src/ProfileImage';
+import ProfileImageSrc from '!raw-loader!../../../../src/ProfileImage';
 import ProfileImageDefault from '../example/ProfileImageDefault';
 import ProfileImageDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ProfileImageDefault';
 
@@ -23,9 +25,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Profile Image',
+        componentSrc: ProfileImageSrc,
+        componentProps: ProfileImagePropsTable,
       },
     ]}
   />

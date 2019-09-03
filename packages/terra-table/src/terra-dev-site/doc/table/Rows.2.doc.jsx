@@ -4,6 +4,8 @@ import ReadMe from '../../../../docs/Rows.md';
 
 import { name, version } from '../../../../package.json';
 
+import TableRowsPropsTable from '!terra-props-table-loader!../../../../src/TableRows';
+import TableRowsSrc from '!raw-loader!../../../../src/TableRows';
 import RowsOnClick from '../example/RowsOnClick';
 import RowsOnClickSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RowsOnClick';
 import RowsOnKeyDown from '../example/RowsOnKeyDown';
@@ -30,9 +32,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Table Rows',
+        componentSrc: TableRowsSrc,
+        componentProps: TableRowsPropsTable,
       },
     ]}
   />

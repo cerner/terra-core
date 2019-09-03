@@ -4,6 +4,9 @@ import ReadMe from '../../../../docs/README.md';
 
 import { name, version } from '../../../../package.json';
 
+import IconBasePropsTable from '!terra-props-table-loader!../../../../src/IconBase';
+import IconBaseSrc from '!raw-loader!../../../../src/IconBase';
+
 const DocPage = () => (
   <DocTemplate
     packageName={name}
@@ -12,9 +15,9 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Icon',
+        componentSrc: IconBaseSrc,
+        componentProps: IconBasePropsTable,
       },
     ]}
   />

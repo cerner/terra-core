@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import FormFieldPropsTable from '!terra-props-table-loader!../../../../src/Field';
+import FormFieldSrc from '!raw-loader!../../../../src/Field';
 import FieldExamples from '../example/FieldExamples';
 
 const DocPage = () => (
@@ -20,9 +22,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Form Field',
+        componentSrc: FormFieldSrc,
+        componentProps: FormFieldPropsTable,
       },
     ]}
   />

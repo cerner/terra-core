@@ -4,6 +4,10 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import DynamicGridPropsTable from '!terra-props-table-loader!../../../../src/DynamicGrid';
+import DynamicGridSrc from '!raw-loader!../../../../src/DynamicGrid';
+import RegionPropsTable from '!terra-props-table-loader!../../../../src/Region';
+import RegionSrc from '!raw-loader!../../../../src/Region';
 import OneColumn from '../example/OneColumn';
 import OneColumnSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/OneColumn';
 import TwoColumn from '../example/TwoColumn';
@@ -49,7 +53,18 @@ const DocPage = () => (
         source: ResponsiveGridSrc,
       },
     ]}
-    propsTablesMarkdown={[DynamicGridPropsTable, RegionPropsTable]}
+    propsTables={[
+      {
+        componentName: 'Dynamic Grid',
+        componentSrc: DynamicGridSrc,
+        componentProps: DynamicGridPropsTable,
+      },
+      {
+        componentName: 'Region',
+        componentSrc: RegionSrc,
+        componentProps: RegionPropsTable,
+      },
+    ]}
   />
 );
 

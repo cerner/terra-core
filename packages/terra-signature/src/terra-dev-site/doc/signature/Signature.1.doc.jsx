@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import SignaturePropsTable from '!terra-props-table-loader!../../../../src/Signature';
+import SignatureSrc from '!raw-loader!../../../../src/Signature';
 import SignatureExample from '../example/SignatureExample';
 import SignatureExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SignatureExample';
 
@@ -23,9 +25,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Signature',
+        componentSrc: SignatureSrc,
+        componentProps: SignaturePropsTable,
       },
     ]}
   />

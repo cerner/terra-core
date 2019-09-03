@@ -3,6 +3,8 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
+import ResponsiveElementPropsTable from '!terra-props-table-loader!../../../../src/ResponsiveElement';
+import ResponsiveElementSrc from '!raw-loader!../../../../src/ResponsiveElement';
 import BreakpointExample from '../example/BreakpointExample';
 import BreakpointExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BreakpointExample';
 import ResizeExample from '../example/ResizeExample';
@@ -18,9 +20,9 @@ const DocPage = () => (
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-responsive-element"
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Responsive Element',
+        componentSrc: ResponsiveElementSrc,
+        componentProps: ResponsiveElementPropsTable,
       },
     ]}
     examples={[

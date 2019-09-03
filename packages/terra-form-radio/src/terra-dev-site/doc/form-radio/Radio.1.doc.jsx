@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import FormRadioPropsTable from '!terra-props-table-loader!../../../../src/Radio';
+import FormRadioSrc from '!raw-loader!../../../../src/Radio';
 import DefaultRadio from '../example/radio/DefaultRadioExample';
 import DefaultRadioSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/radio/DefaultRadioExample';
 import DisabledRadio from '../example/radio/DisabledRadioExample';
@@ -80,12 +82,12 @@ class DocPage extends React.Component {
           },
         ]}
         propsTables={[
-      {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
-      },
-    ]}
+          {
+            componentName: 'Form Radio',
+            componentSrc: FormRadioSrc,
+            componentProps: FormRadioPropsTable,
+          },
+        ]}
       />
     );
   }

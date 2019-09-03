@@ -3,6 +3,8 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ManagedSelectableTable.md';
 import { name, version } from '../../../../package.json';
 
+import SelectableTableRowsPropsTables from '!terra-props-table-loader!../../../../src/SelectableTableRows';
+import SelectableTableRowsSrc from '!raw-loader!../../../../src/SelectableTableRows';
 import SingleRowSelectableTable from '../example/SingleRowSelectableTable';
 import SingleRowSelectableTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleRowSelectableTable';
 import SelectableRowsDisableUnselectedRows from '../example/SelectableRowsDisableUnselectedRows';
@@ -30,9 +32,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Selectable Table Rows',
+        componentSrc: SelectableTableRowsSrc,
+        componentProps: SelectableTableRowsPropsTables,
       },
     ]}
   />

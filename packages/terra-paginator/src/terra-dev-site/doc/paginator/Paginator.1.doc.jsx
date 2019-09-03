@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import PaginatorPropsTable from '!terra-props-table-loader!../../../../src/Paginator';
+import PaginatorSrc from '!raw-loader!../../../../src/Paginator';
 import PaginatorExample from '../example/PaginatorExample';
 import PaginatorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/PaginatorExample';
 import PaginatorNoPagesExample from '../example/PaginatorNoPagesExample';
@@ -30,9 +32,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Paginator',
+        componentSrc: PaginatorSrc,
+        componentProps: PaginatorPropsTable,
       },
     ]}
   />

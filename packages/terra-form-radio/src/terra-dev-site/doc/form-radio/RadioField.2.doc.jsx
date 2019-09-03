@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/RadioField.md';
 import { name, version } from '../../../../package.json';
 
 // Examples
+import FormRadioFieldPropsTable from '!terra-props-table-loader!../../../../src/Radio';
+import FormRadioFieldSrc from '!raw-loader!../../../../src/Radio';
 import DefaultRadioField from '../example/field/DefaultRadioField';
 import DefaultRadioFieldSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/field/DefaultRadioField';
 import ControlledRadioField from '../example/field/ControlledRadioField';
@@ -44,9 +46,9 @@ const RadioFieldExamples = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Form Radio Field',
+        componentSrc: FormRadioFieldSrc,
+        componentProps: FormRadioFieldPropsTable,
       },
     ]}
   />

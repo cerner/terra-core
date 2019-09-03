@@ -9,6 +9,8 @@ import styles from './i18n.1.module.scss';
 const cx = classNames.bind(styles);
 
 // Example Files
+import I18nPropsTable from '!terra-props-table-loader!../../../../src/I18nProvider';
+import I18nSrc from '!raw-loader!../../../../src/I18nProvider';
 import I18nDemo from '../example/I18nDemo';
 
 const DocPage = () => (
@@ -32,9 +34,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'I18n Provider',
+        componentSrc: I18nSrc,
+        componentProps: I18nPropsTable,
       },
     ]}
   />

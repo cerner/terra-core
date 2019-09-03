@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import ToggleButtonPropsTable from '!terra-props-table-loader!../../../../src/ToggleButton';
+import ToggleButtonSrc from '!raw-loader!../../../../src/ToggleButton';
 import DefaultToggleButton from '../example/DefaultToggleButton';
 import DefaultToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggleButton';
 import AnimatedToggleButton from '../example/AnimatedToggleButton';
@@ -65,9 +67,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Toggle Button',
+        componentSrc: ToggleButtonSrc,
+        componentProps: ToggleButtonPropsTable,
       },
     ]}
   />

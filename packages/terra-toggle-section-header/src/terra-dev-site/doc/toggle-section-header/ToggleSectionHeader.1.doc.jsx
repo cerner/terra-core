@@ -4,6 +4,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import ToggleSectionHeaderPropsTable from '!terra-props-table-loader!../../../../src/ToggleSectionHeader';
+import ToggleSectionHeaderSrc from '!raw-loader!../../../../src/ToggleSectionHeader';
 import DefaultToggleSectionHeader from '../example/DefaultToggleSectionHeader';
 import DefaultToggleSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggleSectionHeader';
 import AnimatedToggleSectionHeader from '../example/AnimatedToggleSectionHeader';
@@ -36,9 +38,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Toggle Section Header',
+        componentSrc: ToggleSectionHeaderSrc,
+        componentProps: ToggleSectionHeaderPropsTable,
       },
     ]}
   />

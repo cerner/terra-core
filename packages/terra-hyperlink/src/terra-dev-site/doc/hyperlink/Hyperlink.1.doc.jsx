@@ -6,6 +6,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import HyperlinkPropsTable from '!terra-props-table-loader!../../../../src/Hyperlink';
+import HyperlinkSrc from '!raw-loader!../../../../src/Hyperlink';
 import DefaultHyperlink from '../example/DefaultHyperlink';
 import DefaultHyperlinkSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultHyperlink.jsx';
 import Audio from '../example/AudioHyperlink';
@@ -79,9 +81,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Hyperlink',
+        componentSrc: HyperlinkSrc,
+        componentProps: HyperlinkPropsTable,
       },
     ]}
   />

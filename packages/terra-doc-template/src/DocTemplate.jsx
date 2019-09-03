@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
 import NpmBadge from './NpmBadge';
@@ -78,16 +78,6 @@ const defaultProps = {
 const DocTemplate = ({
   packageName, packageVersion, packageUrl, readme, srcPath, examples, propsTables, children, ...customProps
 }) => {
-  let componentName;
-  let componentProps;
-  if (propsTables[0]) {
-    if (propsTables[0].componentProps) {
-      componentProps = propsTables[0].componentProps;
-    }
-    if (propsTables[0].componentName) {
-      componentName = propsTables[0].componentName;
-    }
-  }
   const localExamples = examples;
   let localPropsTables;
   if (propsTables) localPropsTables = propsTables;
@@ -145,18 +135,16 @@ const DocTemplate = ({
       ))}
 
       <div className={cx('doc-card')}>
-        {componentProps
-          ? (
-            <div className={cx('props-table-markdown')}>
-              <>
-                <h2>
-                  {componentName}
-                  Props
-                </h2>
-                <Markdown src={componentProps} />
-              </>
+        {propsTables[0] && propsTables[0].componentProps
+          ? localPropsTables.map(propsTable => (
+            <div className={cx('props-table-markdown')} key={propsTable.id}>
+              <h2>
+                {propsTable.componentName}
+                {' Props'}
+              </h2>
+              <Markdown src={propsTable.componentProps} />
             </div>
-          )
+          ))
           : localPropsTables.map(propsTable => (
             <PropsTable
               src={propsTable.componentSrc}

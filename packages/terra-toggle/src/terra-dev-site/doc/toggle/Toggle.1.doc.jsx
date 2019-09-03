@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import TogglePropsTable from '!terra-props-table-loader!../../../../src/Toggle';
+import ToggleSrc from '!raw-loader!../../../../src/Toggle';
 import DefaultToggle from '../example/DefaultToggle';
 import DefaultToggleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggle';
 import AnimatedToggle from '../example/AnimatedToggle';
@@ -30,9 +32,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Toggle',
+        componentSrc: ToggleSrc,
+        componentProps: TogglePropsTable,
       },
     ]}
   />

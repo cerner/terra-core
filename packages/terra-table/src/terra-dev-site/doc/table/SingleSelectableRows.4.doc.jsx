@@ -3,6 +3,8 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SingleSelectableRows.md';
 import { name, version } from '../../../../package.json';
 
+import SingleSelectableRowsPropsTable from '!terra-props-table-loader!../../../../src/SingleSelectableRows';
+import SingleSelectableRowsSrc from '!raw-loader!../../../../src/SingleSelectableRows';
 import SingleRowSelectableTable from '../example/SingleRowSelectableTable';
 import SingleRowSelectableTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SingleRowSelectableTable';
 import TableWithNonSelectableRow from '../example/TableWithNonSelectableRow';
@@ -41,9 +43,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Single Selectable Rows',
+        componentSrc: SingleSelectableRowsSrc,
+        componentProps: SingleSelectableRowsPropsTable,
       },
     ]}
   />

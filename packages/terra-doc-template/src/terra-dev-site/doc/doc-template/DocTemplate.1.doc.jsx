@@ -5,6 +5,8 @@ import readme from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
+import DocTemplatePropsTable from '!terra-props-table-loader!../../../../src/DocTemplate';
+import DocTemplateSrc from '!raw-loader!../../../../src/DocTemplate';
 import BadgeExamples from '../example/BadgeExamples';
 import BadgeExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BadgeExamples';
 
@@ -31,9 +33,9 @@ const DocTemplateExamples = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Doc Template',
+        componentSrc: DocTemplateSrc,
+        componentProps: DocTemplatePropsTable,
       },
     ]}
   />

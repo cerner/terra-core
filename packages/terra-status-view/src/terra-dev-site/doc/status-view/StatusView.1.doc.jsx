@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import StatusViewPropsTable from '!terra-props-table-loader!../../../../src/StatusView';
+import StatusViewSrc from '!raw-loader!../../../../src/StatusView';
 import ToggleVariants from '../example/ToggleVariants';
 import ToggleVariantsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ToggleVariants';
 import ToggleAlignmentAndGlyph from '../example/ToggleAlignmentAndGlyph';
@@ -37,9 +39,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Status View',
+        componentSrc: StatusViewSrc,
+        componentProps: StatusViewPropsTable,
       },
     ]}
   />

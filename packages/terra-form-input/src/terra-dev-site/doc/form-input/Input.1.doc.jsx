@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import FormInputPropsTable from '!terra-props-table-loader!../../../../src/Input';
+import FormInputSrc from '!raw-loader!../../../../src/Input';
 import BlankExample from '../common/BlankExample';
 import BlankExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/common/BlankExample';
 import PlaceholderExample from '../common/PlaceholderExample';
@@ -93,9 +95,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Form Input',
+        componentSrc: FormInputSrc,
+        componentProps: FormInputPropsTable,
       },
     ]}
   />

@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import FormFieldsetPropsTable from '!terra-props-table-loader!../../../../src/Fieldset';
+import FormFieldsetSrc from '!raw-loader!../../../../src/Fieldset';
 import FieldsetExamples from '../example/FieldsetExamples';
 
 const DocPage = () => (
@@ -20,9 +22,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Form Fieldset',
+        componentSrc: FormFieldsetSrc,
+        componentProps: FormFieldsetPropsTable,
       },
     ]}
   />

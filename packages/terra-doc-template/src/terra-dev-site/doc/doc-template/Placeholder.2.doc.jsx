@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/PLACEHOLDER.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import PlaceholderPropsTable from '!terra-props-table-loader!../../../../src/Placeholder';
+import PlaceholderSrc from '!raw-loader!../../../../src/Placeholder';
 import PlaceholderDefault from '../example/PlaceholderDefault';
 import PlaceholderDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/PlaceholderDefault';
 import PlaceholderLight from '../example/PlaceholderLight';
@@ -30,9 +32,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Placeholder',
+        componentSrc: PlaceholderSrc,
+        componentProps: PlaceholderPropsTable,
       },
     ]}
   />

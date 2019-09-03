@@ -4,6 +4,12 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import SingleSelectPropsTable from '!terra-props-table-loader!../../../../src/SingleSelect';
+import SingleSelectSrc from '!raw-loader!../../../../src/SingleSelect';
+import OptionPropsTable from '!terra-props-table-loader!../../../../src/shared/_Option';
+import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
+import OptGroupPropsTable from '!terra-props-table-loader!../../../../src/shared/_OptGroup';
+import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
 import AllowClearExample from '../example/single/AllowClear';
 import AllowClearExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/AllowClear';
 import ControlledExample from '../example/single/Controlled';
@@ -25,7 +31,23 @@ const Index = () => (
     packageVersion={version}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
-    propsTablesMarkdown={[SingleSelectPropsTable, OptionPropsTable, OptGroupPropsTable]}
+    propsTables={[
+      {
+        componentName: 'Single Select',
+        componentSrc: SingleSelectSrc,
+        componentProps: SingleSelectPropsTable,
+      },
+      {
+        componentName: 'Option',
+        componentSrc: OptionSrc,
+        componentProps: OptionPropsTable,
+      },
+      {
+        componentName: 'OptGroup',
+        componentSrc: OptGroupSrc,
+        componentProps: OptGroupPropsTable,
+      },
+    ]}
     examples={[{
       title: 'Single Select',
       description: 'A Single Select allows selecting a single option.',

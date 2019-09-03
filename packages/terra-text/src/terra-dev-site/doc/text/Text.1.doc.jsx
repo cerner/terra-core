@@ -12,6 +12,8 @@ import TextWordWrappedDocs from '../../../../docs/text-word-wrapped.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import TextPropsTable from '!terra-props-table-loader!../../../../src/Text';
+import TextSrc from '!raw-loader!../../../../src/Text';
 import TextColors from '../example/TextColors';
 import TextColorsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextColors';
 import TextDisplays from '../example/TextDisplays';
@@ -78,9 +80,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Text',
+        componentSrc: TextSrc,
+        componentProps: TextPropsTable,
       },
     ]}
   />

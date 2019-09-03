@@ -4,6 +4,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import DividerPropsTable from '!terra-props-table-loader!../../../../src/Divider';
+import DividerSrc from '!raw-loader!../../../../src/Divider';
 import DividerExample from '../example/DividerExample';
 import DividerExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DividerExample';
 import DividerWithText from '../example/DividerWithText';
@@ -36,9 +38,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Divider',
+        componentSrc: DividerSrc,
+        componentProps: DividerPropsTable,
       },
     ]}
   />

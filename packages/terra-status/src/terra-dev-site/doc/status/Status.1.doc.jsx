@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import StatusPropsTable from '!terra-props-table-loader!../../../../src/Status';
+import StatusSrc from '!raw-loader!../../../../src/Status';
 import StatusDefault from '../example/StatusDefault';
 import StatusDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StatusDefault';
 import StatusImage from '../example/StatusImage';
@@ -44,9 +46,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Status',
+        componentSrc: StatusSrc,
+        componentProps: StatusPropsTable,
       },
     ]}
   />

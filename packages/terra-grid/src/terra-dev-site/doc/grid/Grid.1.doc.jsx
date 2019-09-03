@@ -4,6 +4,12 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import GridPropsTable from '!terra-props-table-loader!../../../../src/Grid';
+import GridSrc from '!raw-loader!../../../../src/Grid';
+import GridColumnPropsTable from '!terra-props-table-loader!../../../../src/GridColumn';
+import GridColumnSrc from '!raw-loader!../../../../src/GridColumn';
+import GridRowPropsTable from '!terra-props-table-loader!../../../../src/GridRow';
+import GridRowSrc from '!raw-loader!../../../../src/GridRow';
 import GridDefault from '../example/GridDefault';
 import GridDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/GridDefault';
 import GridResponsive from '../example/GridResponsive';
@@ -34,7 +40,23 @@ const DocPage = () => (
         source: GridNestedSrc,
       },
     ]}
-    propsTablesMarkdown={[GridPropsTable, GridColumnPropsTable, GridRowPropsTable]}
+    propsTables={[
+      {
+        componentName: 'Grid',
+        componentSrc: GridSrc,
+        componentProps: GridPropsTable,
+      },
+      {
+        componentName: 'Grid Column',
+        componentSrc: GridColumnSrc,
+        componentProps: GridColumnPropsTable,
+      },
+      {
+        componentName: 'Grid Row',
+        componentSrc: GridRowSrc,
+        componentProps: GridRowPropsTable,
+      },
+    ]}
   />
 );
 

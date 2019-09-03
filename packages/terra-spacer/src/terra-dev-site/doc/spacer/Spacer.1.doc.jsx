@@ -5,6 +5,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import SpacerPropsTable from '!terra-props-table-loader!../../../../src/Spacer';
+import SpacerSrc from '!raw-loader!../../../../src/Spacer';
 import Spacer from '../example/SpacerExample';
 import SpacerExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SpacerExample';
 
@@ -24,9 +26,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Spacer',
+        componentSrc: SpacerSrc,
+        componentProps: SpacerPropsTable,
       },
     ]}
   />

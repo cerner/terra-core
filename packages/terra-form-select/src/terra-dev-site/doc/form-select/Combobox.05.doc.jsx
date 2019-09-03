@@ -4,6 +4,12 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import ComboboxPropsTable from '!terra-props-table-loader!../../../../src/Combobox';
+import ComboboxSrc from '!raw-loader!../../../../src/Combobox';
+import OptionPropsTable from '!terra-props-table-loader!../../../../src/shared/_Option';
+import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
+import OptGroupPropsTable from '!terra-props-table-loader!../../../../src/shared/_OptGroup';
+import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
 import AllowClearExample from '../example/combobox/AllowClear';
 import AllowClearExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/AllowClear';
 import ControlledExample from '../example/combobox/Controlled';
@@ -25,7 +31,23 @@ const Index = () => (
     packageVersion={version}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
-    propsTablesMarkdown={[ComboboxPropsTable, OptionPropsTable, OptGroupPropsTable]}
+    propsTables={[
+      {
+        componentName: 'Combobox',
+        componentSrc: ComboboxSrc,
+        componentProps: ComboboxPropsTable,
+      },
+      {
+        componentName: 'Option',
+        componentSrc: OptionSrc,
+        componentProps: OptionPropsTable,
+      },
+      {
+        componentName: 'OptGroup',
+        componentSrc: OptGroupSrc,
+        componentProps: OptGroupPropsTable,
+      },
+    ]}
     examples={[{
       title: 'Combobox',
       description: 'A Combobox allows a user to enter a single free text entry or select a single option from the the dropdown.',

@@ -90,7 +90,7 @@ module.exports = (source) => {
 
     const generateTable = (rowArray) => {
       const generatedTable = ``
-        + `<table style="display: table">${tableHeaderTemplate}`
+        + `<table style="display: table; margin-bottom: 1.25rem">${tableHeaderTemplate}`
           + `<tbody>${rowArray.join('')}</tbody>`
         + `</table>`;
 

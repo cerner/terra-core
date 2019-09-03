@@ -6,6 +6,8 @@ import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
 // Example Files
+import ShowHidePropsTable from '!terra-props-table-loader!../../../../src/ShowHide';
+import ShowHideSrc from '!raw-loader!../../../../src/ShowHide';
 import NoPreviewShowHide from '../example/NoPreviewShowHide';
 import NoPreviewShowHideSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoPreviewShowHide.jsx';
 import CustomButtonTextShowHide from '../example/CustomButtonTextShowHide';
@@ -59,9 +61,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: '',
-        componentSrc: '',
-        componentProps: '',
+        componentName: 'Show Hide',
+        componentSrc: ShowHideSrc,
+        componentProps: ShowHidePropsTable,
       },
     ]}
   />
