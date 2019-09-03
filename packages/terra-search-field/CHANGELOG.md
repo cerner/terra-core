@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.26.0 - (September 3, 2019)
+------------------
 ### Changed
 * updated source and jest files for changes in form-input
 * Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
