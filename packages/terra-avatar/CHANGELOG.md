@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed 
+* Changed generateImage function to Fallback to Initials if Provided.
 
 2.25.0 - (August 21, 2019)
 ------------------

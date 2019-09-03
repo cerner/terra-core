@@ -34,7 +34,13 @@ describe('Avatar', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render fallback user avatar when invalid image is passed in', () => {
+  it('should render fallback initials when invalid image is passed in with initials', () => {
+    const avatar = <Avatar image="https://path/to/invalid_image.jpg" initials="JD" alt="placeholder" />;
+    const wrapper = render(avatar);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render fallback user avatar when invalid image is passed in without initials', () => {
     const avatar = <Avatar image="https://path/to/invalid_image.jpg" alt="placeholder" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();

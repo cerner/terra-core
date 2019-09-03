@@ -60,17 +60,21 @@ const getColorVariant = (hashValue) => {
 /**
  * Render placeholder.
  */
-const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
-  const avatarIconClassNames = cx(['icon', variant]);
+const generateImagePlaceholder = (alt, isAriaHidden, variant, initials) => {
+  if (initials && initials.length <= 2) {
+    const avatarTextClassNames = cx('initials');
+    return <span className={avatarTextClassNames} alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
+  }
 
+  const avatarIconClassNames = cx(['icon', variant]);
   return <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
 };
 
 /**
  * Render image with placeholder.
  */
-const generateImage = (image, alt, isAriaHidden, variant, handleFallback) => {
-  const icon = generateImagePlaceholder(alt, isAriaHidden, variant);
+const generateImage = (image, alt, isAriaHidden, variant, handleFallback, initials) => {
+  const icon = generateImagePlaceholder(alt, isAriaHidden, variant, initials);
   return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} fit="cover" />;
 };
 
