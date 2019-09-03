@@ -36,7 +36,7 @@
     line-height: var(--terra-button-line-height, 1.429);
     margin: 0; /* Reset margin for Safari. Safari defaults to 2px. */
     max-width: 100%; /* Need to help with overflow-wrap */
-    min-height: 2rem;
+    min-height: 2.1428rem;
     outline: none;
     overflow-wrap: break-word; /* Modern browsers */
     padding-bottom: var(--terra-button-padding-bottom, 0.286rem);

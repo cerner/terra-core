@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Inline SVG aligned for IE and wdio screenshots Updated.
 
 3.20.0 - (August 21, 2019)
 --------------------------
@@ -39,9 +41,6 @@ Unreleased
 
 3.14.0 - (June 28, 2019)
 ------------------
-### Changed
-* Inline SVG aligned for IE and wdio screenshots Updated.
-
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated `--terra-dialog-header-close-icon-margin-top` variable to only apply in Microsoft browsers
 
 2.23.0 - (August 21, 2019)
 ------------------
@@ -50,9 +52,6 @@ Unreleased
 
 2.15.0 - (June 28, 2019)
 ------------------
-### Changed
-* Inline SVG aligned for IE.
-
 ### Changed
 * Removed all inline styles from Dev-site components and implemented the same styles using external css.
 

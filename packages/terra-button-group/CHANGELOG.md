@@ -6,7 +6,6 @@ Unreleased
 ### Changed
 
 * Inline SVG aligned for IE and wdio screenshots Updated.
-* Import for package version from package.json added to doc page
 * Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
 
 3.21.0 - (August 21, 2019)
@@ -44,7 +43,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-
 
 3.14.0 - (June 18, 2019)
 ------------------

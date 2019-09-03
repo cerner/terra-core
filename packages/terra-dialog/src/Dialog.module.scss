@@ -35,7 +35,7 @@
     vertical-align: middle;
     width: var(--terra-dialog-header-close-icon-width, 1.14286rem);
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      margin-top: var(--terra-dialog-header-close-icon-margin-top, 0.07rem);
+      margin-top: var(--terra-dialog-header-close-icon-ms-margin-top, 0.07rem);
     }
   }
 

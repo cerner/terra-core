@@ -15,7 +15,7 @@
     display: inline-block;
     position: relative;
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      top: var(--terra-action-header-icon-top, 0.1429rem);
+      top: var(--terra-action-header-icon-ms-top, 0.1429rem);
     }
     
 

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated `--terra-action-header-icon-top` variable to only apply in Microsoft browsers.
 
 2.26.0 - (August 21, 2019)
 ------------------
@@ -33,9 +35,6 @@ Unreleased
 
 2.21.0 - (July 17, 2019)
 ------------------
-### Changed
-* Inline SVG aligned for IE and wdio screenshots Updated.
-
 ### Changed
 * Components updated to use `injectIntl` to interface with `react-intl's` `intl` context.
 
