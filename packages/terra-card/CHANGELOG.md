@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Props table markdown file import added to doc site page
 
+### Removed
+* Removed `inherit` fallback for `--terra-card-color` CSS custom property
 
 3.17.0 - (August 21, 2019)
 ------------------
