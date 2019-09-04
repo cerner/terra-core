@@ -18,10 +18,6 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Start aligned icon of the header cell.
-   */
-  icon: PropTypes.element,
-  /**
    * Whether or not the cell should adhere to the tables paddingStyle.
    */
   isPadded: PropTypes.bool,
@@ -84,7 +80,6 @@ const defaultProps = {
 
 const HeaderCell = ({
   children,
-  icon,
   isPadded,
   isSelectable,
   metaData,
@@ -110,11 +105,6 @@ const HeaderCell = ({
     sortIndicator = <div className={cx(`sort-indicator-${sort}`)} key="sort" />;
   }
 
-  let headerIcon;
-  if (icon) {
-    headerIcon = <div className={cx('cell-icon')} key="icon">{icon}</div>;
-  }
-
   const attrSpread = { 'aria-sort': ariaSortMap[sort] };
   if (isSelectable) {
     attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
@@ -127,7 +117,6 @@ const HeaderCell = ({
   }
 
   let content = [
-    headerIcon,
     <div className={cx('cell-content')} key="content">
       {children}
     </div>,

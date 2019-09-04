@@ -12,13 +12,13 @@ import Table, {
 const TableWithLongContent = () => (
   <Table isStriped={false}>
     <Header>
-      <HeaderCell key="COL_0" minWidth="small">
+      <HeaderCell key="COL_0">
         Column Heading 1
       </HeaderCell>
-      <HeaderCell key="COL_1" minWidth="medium">
+      <HeaderCell key="COL_1">
         Very long table header Very long table header Very long table header Very long table header Very long table header Very long table header Very long table header Very long table header Very long table header Very long table header End Header
       </HeaderCell>
-      <HeaderCell key="COL_2" minWidth="large">
+      <HeaderCell key="COL_2">
         Column Heading 3
       </HeaderCell>
     </Header>

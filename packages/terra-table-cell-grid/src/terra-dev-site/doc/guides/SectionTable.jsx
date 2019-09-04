@@ -60,7 +60,7 @@ const SectionTable = () => {
       aria-rowcount={rowCount}
       paddingStyle="standard"
       headerCellGrid={(
-        <HeaderCellGrid>
+        <HeaderCellGrid aria-rowindex="1">
           <HeaderCell isPadded key="cell-1">Column 0</HeaderCell>
           <HeaderCell isPadded key="cell-2">Column 1</HeaderCell>
           <HeaderCell isPadded key="cell-3">Column 2</HeaderCell>

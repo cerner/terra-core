@@ -87,26 +87,6 @@
     }
   }
 
-  .min-width-tiny {
-    min-width: var(--terra-table-cell-tiny-min-width, 3rem);
-  }
-
-  .min-width-small {
-    min-width: var(--terra-table-cell-small-min-width, 4.25rem);
-  }
-
-  .min-width-medium {
-    min-width: var(--terra-table-cell-medium-min-width, 5.75rem);
-  }
-
-  .min-width-large {
-    min-width: var(--terra-table-cell-large-min-width, 8.5rem);
-  }
-
-  .min-width-huge {
-    min-width: var(--terra-table-cell-huge-min-width, 10.5rem);
-  }
-
   .padding-standard th,
   .padding-standard td {
     padding-bottom: var(--terra-table-cell-standard-padding-bottom, 0.5rem);

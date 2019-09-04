@@ -6,10 +6,10 @@ import styles from './FixedNode.module.scss';
 const cx = classNames.bind(styles);
 
 /* eslint-disable */
-const CommonIcon = ({ title }) => (
+const FixedNode = ({ title }) => (
   <div className={cx('node')}>
     <Placehodler title={title} />
   </div>
 );
 
-export default CommonIcon;
+export default FixedNode;

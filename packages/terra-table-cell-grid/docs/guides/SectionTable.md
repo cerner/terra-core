@@ -73,21 +73,21 @@ For rendering the collapsible section we set `isCollapsible` for all sections.
     );
   };
 ```
-Finally we need to check if the section is collapsed. As we support IE10 & 11, we cannot use `contains`, so we use `indexOf` to determine if the key is present in our state array. Here we can also avoid rendering collapsed child cell grids and subsections by avoiding the subsequent function calls. Short circuiting the render is not required, as the section can correctly managed the display of the child content, but this will avoid additional javascript cycles looping through and creating child objects. The performance impact of generating child cell grids is minimal, but with large tables it can add up.
+Finally we need to check if the section is collapsed. As we support IE10 & 11, we cannot use `contains`, so we use `indexOf` to determine if the key is present in our state array. As well as place entries for row index.
 ```diff
   const createSection = (sectionData) => {
-+   const isCollapsed = collapsedKeys.indexOf(sectionData.key) >= 0;
++   rowCount += 1;
     return (
       <Section
         key={sectionData.key}
++       aria-rowindex={rowCount}
         title={sectionData.title}
-+       isCollapsed={isCollapsed}
++       isCollapsed={collapsedKeys.indexOf(sectionData.key) >= 0}
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={handleSectionSelection}
       >
--       {sectionData.childItems.map(childItem => createCellGrid(childItem))}
-+       {!isCollapsed && sectionData.childItems.map(childItem => createCellGrid(childItem))}
+        {sectionData.childItems.map(childItem => createSubsection(childItem))}
       </Section>
     );
   };
@@ -97,11 +97,19 @@ We can then implement the unpack of our data into our cell grid cells.
 +  const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 +  const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
-
-+  const createCellGrid = itemData => <CellGrid key={itemData.key}>{createCellsForCellGrid(itemData.cells)}</CellGrid>;
 ```
 Then we can implement a method to loop through our data and create the section with our methods and call it from our render method.
 ```diff
++ const createCellGrid = (cellGridData) => {
++   return (
++     <CellGrid
++       key={cellGridData.key}
++     >
++       {createCellsForCellGrid(cellGridData.cells)}
++     </CellGrid>
++   );
++ };
+
 +  const createSections = data => data.map(section => createSection(section));
 
   return (
@@ -117,6 +125,57 @@ Then we can implement a method to loop through our data and create the section w
 +   >
 +     {createSections(mockData)}
 +   </TableCellGrid>
+  );
+```
+Finally add the total row count to the TableCellGrid.
+```diff
+  const [collapsedKeys, setCollapsedKeys] = useState([]);
++ let rowCount = 1;
+...
+  const createCellGrid = (cellGridData) => {
++   rowCount += 1;
+    return (
+      <CellGrid
+        key={cellGridData.key}
++       aria-rowindex={rowCount}
+      >
+        {createCellsForCellGrid(cellGridData.cells)}
+      </CellGrid>
+    );
+  };
+...
+  const createSection = (sectionData) => {
++   rowCount += 1;
+    return (
+      <Section
+        key={sectionData.key}
++       aria-rowindex={rowCount}
+        title={sectionData.title}
+        isCollapsed={collapsedKeys.indexOf(sectionData.key) >= 0}
+        isCollapsible
+        metaData={{ key: sectionData.key }}
+        onSelect={handleSectionSelection}
+      >
+        {sectionData.childItems.map(childItem => createSubsection(childItem))}
+      </Section>
+    );
+  };
+...
+  return (
+    <TableCellGrid
++     aria-rowcount={rowCount}
+      paddingStyle="standard"
+      headerCellGrid={(
+-       <HeaderCellGrid>
++       <HeaderCellGrid aria-rowindex="1">
+          <HeaderCell isPadded>Column 0</HeaderCell>
+          <HeaderCell isPadded>Column 1</HeaderCell>
+          <HeaderCell isPadded>Column 2</HeaderCell>
+        </HeaderCellGrid>
+      )}
+    >
+      {createSections(mockData)}
+    </TableCellGrid>
   );
 ```
 Using these steps we get the following example:

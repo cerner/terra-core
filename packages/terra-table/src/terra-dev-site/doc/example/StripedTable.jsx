@@ -12,9 +12,9 @@ import Table, {
 const StripedTable = () => (
   <Table>
     <Header>
-      <HeaderCell key="NAME" minWidth="small">Name</HeaderCell>
-      <HeaderCell key="ADDRESS" minWidth="medium">Address</HeaderCell>
-      <HeaderCell key="PHONE_NUMBER" minWidth="large">Phone Number</HeaderCell>
+      <HeaderCell key="NAME">Name</HeaderCell>
+      <HeaderCell key="ADDRESS">Address</HeaderCell>
+      <HeaderCell key="PHONE_NUMBER">Phone Number</HeaderCell>
     </Header>
     <Body>
       <Row key="PERSON_0">
