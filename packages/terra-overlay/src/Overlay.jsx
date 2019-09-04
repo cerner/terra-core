@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
-import * as KeyCode from 'keycode-js';
+import KeyCode from 'keycode-js';
 import 'mutationobserver-shim';
 import './_contains-polyfill';
 import './_matches-polyfill';
-import 'wicg-inert';
+// import 'wicg-inert';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
 
@@ -79,6 +79,11 @@ class Overlay extends React.Component {
   }
 
   componentDidMount() {
+    console.log(!Element.prototype.hasOwnProperty('inert'));
+    if (!Element.prototype.hasOwnProperty('inert')) {
+      console.log('loading wicg-inert');
+      require('wicg-inert');
+    }
     document.addEventListener('keydown', this.shouldHandleESCKeydown);
   }
 
