@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Props table markdown file import added to doc site page
+
 ### Removed
 * Removed `inherit` fallback for `--terra-form-select-hover-color` CSS custom property
 

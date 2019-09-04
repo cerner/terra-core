@@ -3,12 +3,13 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
-import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
-import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelect';
-
 // Example Files
+import MultiSelectPropsTable from '!terra-props-table-loader!../../../../src/MultiSelect';
+import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelect';
+import OptionPropsTable from '!terra-props-table-loader!../../../../src/shared/_Option';
+import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
+import OptGroupPropsTable from '!terra-props-table-loader!../../../../src/shared/_OptGroup';
+import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
 import MultipleExample from '../example/multiple/MultiSelect';
 import MultipleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/MultiSelect';
 import ControlledExample from '../example/multiple/Controlled';
@@ -28,16 +29,23 @@ const Index = () => (
     packageVersion={version}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
-    propsTables={[{
-      componentName: 'MultiSelect',
-      componentSrc: MultiSelectSrc,
-    }, {
-      componentName: 'Option',
-      componentSrc: OptionSrc,
-    }, {
-      componentName: 'OptGroup',
-      componentSrc: OptGroupSrc,
-    }]}
+    propsTables={[
+      {
+        componentName: 'Multi Select',
+        componentSrc: MultiSelectSrc,
+        componentProps: MultiSelectPropsTable,
+      },
+      {
+        componentName: 'Option',
+        componentSrc: OptionSrc,
+        componentProps: OptionPropsTable,
+      },
+      {
+        componentName: 'OptGroup',
+        componentSrc: OptGroupSrc,
+        componentProps: OptGroupPropsTable,
+      },
+    ]}
     examples={[{
       title: 'MultiSelect',
       description: 'A MultiSelect allows searching and selecting multiple options.',
