@@ -169,9 +169,9 @@ class Frame extends React.Component {
   }
 
   getDisplay(displayId, ariaDescribedBy) {
-    const { searchValue, isFocused, value } = this.state;
+    const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required,
+      disabled, display, placeholder, required, value
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
