@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import PaginatorSrc from '!raw-loader!../../../../src/Paginator';
-
 // Example Files
+import PaginatorPropsTable from '!terra-props-table-loader!../../../../src/Paginator';
+import PaginatorSrc from '!raw-loader!../../../../src/Paginator';
 import PaginatorExample from '../example/PaginatorExample';
 import PaginatorExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/PaginatorExample';
 import PaginatorNoPagesExample from '../example/PaginatorNoPagesExample';
@@ -34,6 +34,7 @@ const DocPage = () => (
       {
         componentName: 'Paginator',
         componentSrc: PaginatorSrc,
+        componentProps: PaginatorPropsTable,
       },
     ]}
   />

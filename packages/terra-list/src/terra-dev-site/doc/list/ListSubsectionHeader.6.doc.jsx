@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ListSubsectionHeader.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ListSubsectionHeaderSrc from '!raw-loader!../../../../src/ListSubsectionHeader';
-
 // Example Files
+import ListSubsectionHeaderPropsTable from '!terra-props-table-loader!../../../../src/ListSubsectionHeader';
+import ListSubsectionHeaderSrc from '!raw-loader!../../../../src/ListSubsectionHeader';
 import ListSubsectionHeaderExample from '../example/ListSubsectionHeader';
 import ListSubsectionHeaderExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListSubsectionHeader';
 
@@ -24,8 +24,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'List-Subsection-Header',
+        componentName: 'List Subsection Header',
         componentSrc: ListSubsectionHeaderSrc,
+        componentProps: ListSubsectionHeaderPropsTable,
       },
     ]}
   />

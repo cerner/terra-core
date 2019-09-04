@@ -12,6 +12,7 @@ Unreleased
 3.23.0 - (August 21, 2019)
 ------------------
 ### Added
+* Props table markdown file import added to doc site page
 * Added `ariaLabel` prop to improve accessibility.
 * Added example on documentation site
 

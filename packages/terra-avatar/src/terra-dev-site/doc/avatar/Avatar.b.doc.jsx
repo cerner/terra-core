@@ -3,10 +3,9 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/avatar.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import AvatarSrc from '!raw-loader!../../../../src/variants/Avatar.jsx';
-
 // Example Files
+import AvatarPropsTable from '!terra-props-table-loader!../../../../src/variants/Avatar';
+import AvatarSrc from '!raw-loader!../../../../src/variants/Avatar';
 import AvatarUser from '../example/avatar/AvatarUser';
 import AvatarUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/avatar/AvatarUser';
 import AvatarOneInitial from '../example/avatar/AvatarOneInitial';
@@ -69,6 +68,7 @@ const DocPage = () => (
       {
         componentName: 'Avatar',
         componentSrc: AvatarSrc,
+        componentProps: AvatarPropsTable,
       },
     ]}
   />

@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import SpacerSrc from '!raw-loader!../../../../src/Spacer';
-
 // Example Files
+import SpacerPropsTable from '!terra-props-table-loader!../../../../src/Spacer';
+import SpacerSrc from '!raw-loader!../../../../src/Spacer';
 import Spacer from '../example/SpacerExample';
 import SpacerExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SpacerExample';
 
@@ -28,6 +28,7 @@ const DocPage = () => (
       {
         componentName: 'Spacer',
         componentSrc: SpacerSrc,
+        componentProps: SpacerPropsTable,
       },
     ]}
   />

@@ -1,10 +1,11 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import IconSrc from '!raw-loader!../../../../src/IconBase';
+import IconBasePropsTable from '!terra-props-table-loader!../../../../src/IconBase';
+import IconBaseSrc from '!raw-loader!../../../../src/IconBase';
 
 const DocPage = () => (
   <DocTemplate
@@ -15,7 +16,8 @@ const DocPage = () => (
     propsTables={[
       {
         componentName: 'Icon',
-        componentSrc: IconSrc,
+        componentSrc: IconBaseSrc,
+        componentProps: IconBasePropsTable,
       },
     ]}
   />

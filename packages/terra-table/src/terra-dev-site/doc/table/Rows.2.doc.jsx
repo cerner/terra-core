@@ -1,9 +1,10 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/Rows.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
+import TableRowsPropsTable from '!terra-props-table-loader!../../../../src/TableRows';
 import TableRowsSrc from '!raw-loader!../../../../src/TableRows';
 import RowsOnClick from '../example/RowsOnClick';
 import RowsOnClickSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RowsOnClick';
@@ -33,6 +34,7 @@ const DocPage = () => (
       {
         componentName: 'Table Rows',
         componentSrc: TableRowsSrc,
+        componentProps: TableRowsPropsTable,
       },
     ]}
   />

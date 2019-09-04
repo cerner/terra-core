@@ -5,12 +5,12 @@ import ReadMe from '../../../../docs/README.md';
 import ProgressBarColorDocs from '../../../../docs/progress-bar-color.md';
 import ProgressBarTwoColorsDocs from '../../../../docs/progress-bar-two-colors.md';
 import ProgressBarCustomizedColorsDocs from '../../../../docs/progress-bar-customized-colors.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ProgressBarSrc from '!raw-loader!../../../../src/ProgressBar';
-
 // Example Files
+import ProgressBarPropsTable from '!terra-props-table-loader!../../../../src/ProgressBar';
+import ProgressBarSrc from '!raw-loader!../../../../src/ProgressBar';
 import ProgressBarDefault from '../example/ProgressBarDefault';
 import ProgressBarDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ProgressBarDefault';
 import ProgressBarSize from '../example/ProgressBarSize';
@@ -62,6 +62,7 @@ const DocPage = () => (
       {
         componentName: 'Progress Bar',
         componentSrc: ProgressBarSrc,
+        componentProps: ProgressBarPropsTable,
       },
     ]}
   />
