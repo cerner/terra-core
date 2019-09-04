@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import styles from './ButtonGroup.module.scss';
 
 const cx = classNames.bind(styles);

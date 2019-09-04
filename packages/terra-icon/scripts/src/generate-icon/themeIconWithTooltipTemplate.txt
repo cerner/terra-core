@@ -1,0 +1,26 @@
+/* eslint-disable */
+import React from 'react';
+import IconBase from '../IconBase';
+import { FormattedMessage } from 'react-intl';
+
+const SvgIcon = (customProps) => {
+  const attributes = Object.assign({}, customProps);
+
+  return (
+    <FormattedMessage id="Terra.icon.<%= icon.name %>.title">
+      {iconTitle => (
+        <span aria-label={iconTitle} title={iconTitle}>
+            <IconBase {...attributes}>
+                <%= icon.children %>
+            </IconBase>
+        </span>
+      )}
+    </FormattedMessage>
+  );
+};
+
+SvgIcon.displayName = <%= JSON.stringify(icon.name) %>;
+SvgIcon.defaultProps = <%= JSON.stringify(icon.attributes) %>;
+
+export default SvgIcon;
+/* eslint-enable */
