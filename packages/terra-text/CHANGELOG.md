@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Only apply `color: inherit` if no colorClass is provided
 
 4.16.0 - (September 3, 2019)
 ------------------
