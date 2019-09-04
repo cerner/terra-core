@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.22.0 - (September 3, 2019)
+------------------
+### Fixed
+* Fixed 'label hidden' accessibility error by using 'visually-hidden text styles' instead of 'display:none'.
+
 3.21.0 - (August 21, 2019)
 ------------------
 ### Changed
