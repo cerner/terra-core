@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ToggleSrc from '!raw-loader!../../../../src/Toggle';
-
 // Example Files
+import TogglePropsTable from '!terra-props-table-loader!../../../../src/Toggle';
+import ToggleSrc from '!raw-loader!../../../../src/Toggle';
 import DefaultToggle from '../example/DefaultToggle';
 import DefaultToggleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggle';
 import AnimatedToggle from '../example/AnimatedToggle';
@@ -34,6 +34,7 @@ const DocPage = () => (
       {
         componentName: 'Toggle',
         componentSrc: ToggleSrc,
+        componentProps: TogglePropsTable,
       },
     ]}
   />

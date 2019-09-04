@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ContentContainerSrc from '!raw-loader!../../../../src/ContentContainer.jsx';
-
 // Example Files
+import ContentContainerPropsTable from '!terra-props-table-loader!../../../../src/ContentContainer';
+import ContentContainerSrc from '!raw-loader!../../../../src/ContentContainer';
 import ContentContainerStandard from '../example/ContentContainerStandard';
 import ContentContainerStandardSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ContentContainerStandard';
 import ContentContainerFill from '../example/ContentContainerFill';
@@ -41,6 +41,7 @@ const DocPage = () => (
       {
         componentName: 'Content Container',
         componentSrc: ContentContainerSrc,
+        componentProps: ContentContainerPropsTable,
       },
     ]}
   />

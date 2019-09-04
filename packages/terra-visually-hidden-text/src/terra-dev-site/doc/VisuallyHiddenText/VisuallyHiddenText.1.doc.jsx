@@ -4,10 +4,9 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import VisuallyHiddenTextSrc from '!raw-loader!../../../../src/VisuallyHiddenText';
-
 // Example Files
+import VisuallyHiddenTextPropsTable from '!terra-props-table-loader!../../../../src/VisuallyHiddenText';
+import VisuallyHiddenTextSrc from '!raw-loader!../../../../src/VisuallyHiddenText';
 import DefaultVisuallyHiddenText from '../example/DefaultVisuallyHiddenText';
 import DefaultVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultVisuallyHiddenText.jsx';
 import RefCallbackVisuallyHiddenText from '../example/RefCallbackVisuallyHiddenText';
@@ -34,8 +33,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'VisuallyHiddenText',
+        componentName: 'Visually Hidden Text',
         componentSrc: VisuallyHiddenTextSrc,
+        componentProps: VisuallyHiddenTextPropsTable,
       },
     ]}
   />

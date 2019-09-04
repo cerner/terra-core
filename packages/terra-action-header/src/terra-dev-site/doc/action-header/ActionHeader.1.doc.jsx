@@ -3,10 +3,8 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ActionHeaderSrc from '!raw-loader!../../../../src/ActionHeader';
-
 // Example Files
+import ActionHeaderPropsTable from '!terra-props-table-loader!../../../../src/ActionHeader';
 import DefaultActionHeader from '../example/DefaultActionHeader';
 import DefaultActionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultActionHeader';
 import BackActionHeader from '../example/BackActionHeader';
@@ -67,7 +65,8 @@ const DocPage = () => (
     propsTables={[
       {
         componentName: 'Action Header',
-        componentSrc: ActionHeaderSrc,
+        componentSrc: DefaultActionHeaderSrc,
+        componentProps: ActionHeaderPropsTable,
       },
     ]}
   />

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Props table markdown file import added to doc site page
+
 ### Changed
 * Added `outline: 0` to prevent focus outline when clicking on help or error text
 

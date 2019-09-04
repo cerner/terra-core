@@ -4,11 +4,11 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SplitButton.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import SplitButtonSrc from '!raw-loader!../../../../src/SplitButton';
-import ItemSrc from '!raw-loader!../../../../src/Item';
-
 // Example Files
+import SplitButtonPropsTable from '!terra-props-table-loader!../../../../src/SplitButton';
+import SplitButtonSrc from '!raw-loader!../../../../src/SplitButton';
+import ItemPropsTable from '!terra-props-table-loader!../../../../src/Item';
+import ItemSrc from '!raw-loader!../../../../src/Item';
 import DefaultSplitButton from '../example/DefaultSplitButton';
 import DefaultSplitButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSplitButton.jsx';
 import GhostSplitButton from '../example/GhostSplitButton';
@@ -50,10 +50,12 @@ const DocPage = () => (
       {
         componentName: 'Split Button',
         componentSrc: SplitButtonSrc,
+        componentProps: SplitButtonPropsTable,
       },
       {
         componentName: 'Item',
         componentSrc: ItemSrc,
+        componentProps: ItemPropsTable,
       },
     ]}
   />
