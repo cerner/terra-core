@@ -6,6 +6,7 @@
   "Terra.form.select.maxSelectionOption": "Maximumaantal van {text} items geselecteerd",
   "Terra.form.select.noResults": "Geen resultaten gevonden voor \"{text}\"",
   "Terra.form.select.selectedText": "{text} geselecteerd",
+  "Terra.form.select.unselectedText": "{text} niet geselecteerd.",
   "Terra.form.select.selected": "Geselecteerd.",
   "Terra.form.select.unselected": "Gedeselecteerd.",
   "Terra.form.select.disabled": "Gedeactiveerd.",

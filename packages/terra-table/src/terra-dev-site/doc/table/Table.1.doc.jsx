@@ -3,12 +3,17 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
+import TablePropsTable from '!terra-props-table-loader!../../../../src/Table';
 import TableSrc from '!raw-loader!../../../../src/Table';
+import TableHeaderPropsTable from '!terra-props-table-loader!../../../../src/TableHeader';
 import TableHeaderSrc from '!raw-loader!../../../../src/TableHeader';
+import TableHeaderCellPropsTable from '!terra-props-table-loader!../../../../src/TableHeaderCell';
 import TableHeaderCellSrc from '!raw-loader!../../../../src/TableHeaderCell';
+import TableRowPropsTable from '!terra-props-table-loader!../../../../src/TableRow';
 import TableRowSrc from '!raw-loader!../../../../src/TableRow';
+import TableCellPropsTable from '!terra-props-table-loader!../../../../src/TableCell';
 import TableCellSrc from '!raw-loader!../../../../src/TableCell';
+import TableSubheaderPropsTable from '!terra-props-table-loader!../../../../src/TableSubheader';
 import TableSubheaderSrc from '!raw-loader!../../../../src/TableSubheader';
 import NoStripedTable from '../example/NoStripedTable';
 import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoStripedTable';
@@ -86,26 +91,32 @@ const DocPage = () => (
       {
         componentName: 'Table',
         componentSrc: TableSrc,
+        componentProps: TablePropsTable,
       },
       {
         componentName: 'Table Header',
         componentSrc: TableHeaderSrc,
+        componentProps: TableHeaderPropsTable,
       },
       {
         componentName: 'Table Header Cell',
         componentSrc: TableHeaderCellSrc,
-      },
-      {
-        componentName: 'Table Subheader',
-        componentSrc: TableSubheaderSrc,
+        componentProps: TableHeaderCellPropsTable,
       },
       {
         componentName: 'Table Row',
         componentSrc: TableRowSrc,
+        componentProps: TableRowPropsTable,
       },
       {
         componentName: 'Table Cell',
         componentSrc: TableCellSrc,
+        componentProps: TableCellPropsTable,
+      },
+      {
+        componentName: 'Table Subheader',
+        componentSrc: TableSubheaderSrc,
+        componentProps: TableSubheaderPropsTable,
       },
     ]}
   />

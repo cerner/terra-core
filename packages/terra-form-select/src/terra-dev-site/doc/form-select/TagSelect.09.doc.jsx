@@ -3,12 +3,13 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
-import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
-import TagSelectSrc from '!raw-loader!../../../../src/TagSelect';
-
 // Example Files
+import TagSelectPropsTable from '!terra-props-table-loader!../../../../src/TagSelect';
+import TagSelectSrc from '!raw-loader!../../../../src/TagSelect';
+import OptionPropsTable from '!terra-props-table-loader!../../../../src/shared/_Option';
+import OptionSrc from '!raw-loader!../../../../src/shared/_Option';
+import OptGroupPropsTable from '!terra-props-table-loader!../../../../src/shared/_OptGroup';
+import OptGroupSrc from '!raw-loader!../../../../src/shared/_OptGroup';
 import TagExample from '../example/tag/Tag';
 import TagExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Tag';
 import ControlledExample from '../example/tag/Controlled';
@@ -28,16 +29,23 @@ const Index = () => (
     packageVersion={version}
     readme={ReadMe}
     srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-form-select"
-    propsTables={[{
-      componentName: 'TagSelect',
-      componentSrc: TagSelectSrc,
-    }, {
-      componentName: 'Option',
-      componentSrc: OptionSrc,
-    }, {
-      componentName: 'OptGroup',
-      componentSrc: OptGroupSrc,
-    }]}
+    propsTables={[
+      {
+        componentName: 'Tag Select',
+        componentSrc: TagSelectSrc,
+        componentProps: TagSelectPropsTable,
+      },
+      {
+        componentName: 'Option',
+        componentSrc: OptionSrc,
+        componentProps: OptionPropsTable,
+      },
+      {
+        componentName: 'OptGroup',
+        componentSrc: OptGroupSrc,
+        componentProps: OptGroupPropsTable,
+      },
+    ]}
     examples={[{
       title: 'Tag',
       description: 'A Tag Select allows a user to enter multiple custom free text entries or select multiple options from the the dropdown.',

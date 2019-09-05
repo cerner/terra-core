@@ -3,8 +3,8 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/facility.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import FacilitySrc from '!raw-loader!../../../../src/variants/Facility.jsx';
+import FacilityPropsTable from '!terra-props-table-loader!../../../../src/variants/Facility';
+import FacilitySrc from '!raw-loader!../../../../src/variants/Facility';
 import Facility from '../example/facility/Facility';
 import FacilityExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/facility/Facility';
 import FacilityImage from '../example/facility/FacilityImage';
@@ -46,6 +46,7 @@ const DocPage = () => (
       {
         componentName: 'Facility',
         componentSrc: FacilitySrc,
+        componentProps: FacilityPropsTable,
       },
     ]}
   />

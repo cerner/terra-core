@@ -2,16 +2,24 @@
 
 exports[`Text should have all props including customProps set correctly 1`] = `
 <span
-  className="text italic word-wrap visually-hidden font-size-20 font-weight-200"
+  className="text inherit-color italic word-wrap visually-hidden font-size-20 font-weight-200"
   id="id"
 >
   All props and custom attrs
 </span>
 `;
 
+exports[`Text should not set inherit-color class is a colorClass is provided 1`] = `
+<span
+  className="text TestClass"
+>
+  Test
+</span>
+`;
+
 exports[`Text should render a text component 1`] = `
 <span
-  className="text"
+  className="text inherit-color"
 >
   Test
 </span>
@@ -27,7 +35,7 @@ exports[`Text should render a text component with colorClass prop set 1`] = `
 
 exports[`Text should render a text component with fontSize prop set 1`] = `
 <span
-  className="text font-size-24"
+  className="text inherit-color font-size-24"
 >
   Test
 </span>
@@ -35,7 +43,7 @@ exports[`Text should render a text component with fontSize prop set 1`] = `
 
 exports[`Text should render a text component with isItalic prop set 1`] = `
 <span
-  className="text italic"
+  className="text inherit-color italic"
 >
   Test
 </span>
@@ -43,7 +51,7 @@ exports[`Text should render a text component with isItalic prop set 1`] = `
 
 exports[`Text should render a text component with isVisuallyHidden prop set 1`] = `
 <span
-  className="text visually-hidden"
+  className="text inherit-color visually-hidden"
 >
   Test
 </span>
@@ -51,7 +59,7 @@ exports[`Text should render a text component with isVisuallyHidden prop set 1`] 
 
 exports[`Text should render a text component with isWordWrapped prop set 1`] = `
 <span
-  className="text word-wrap"
+  className="text inherit-color word-wrap"
 >
   Test
 </span>
@@ -59,7 +67,15 @@ exports[`Text should render a text component with isWordWrapped prop set 1`] = `
 
 exports[`Text should render a text component with weight prop set 1`] = `
 <span
-  className="text font-weight-200"
+  className="text inherit-color font-weight-200"
+>
+  Test
+</span>
+`;
+
+exports[`Text should set inherit-color class if no colorClass is provided 1`] = `
+<span
+  className="text inherit-color"
 >
   Test
 </span>
@@ -67,7 +83,7 @@ exports[`Text should render a text component with weight prop set 1`] = `
 
 exports[`Text should support rendering a string as children 1`] = `
 <span
-  className="text"
+  className="text inherit-color"
 >
   String
 </span>
@@ -75,7 +91,7 @@ exports[`Text should support rendering a string as children 1`] = `
 
 exports[`Text should support rendering an array of elements as a children 1`] = `
 <span
-  className="text"
+  className="text inherit-color"
 >
   <span>
     Element 1
@@ -91,7 +107,7 @@ exports[`Text should support rendering an array of elements as a children 1`] = 
 
 exports[`Text should support rendering an element as children 1`] = `
 <span
-  className="text"
+  className="text inherit-color"
 >
   <span>
     Element

@@ -1,5 +1,5 @@
 import React from 'react';
-import InputField from '../../../InputField';
+import InputField from 'terra-form-input/lib/InputField';
 
 const DefaultInputField = () => (
   <InputField

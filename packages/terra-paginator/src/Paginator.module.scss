@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
 
-    // "appearance: button;" used to correct styling issues in iOS Safari   
+    // "appearance: button;" used to correct styling issues in iOS Safari
     // More info:
     // https://github.com/necolas/normalize.css/issues/566
     // https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
@@ -41,7 +41,7 @@
       user-select: none; // Keeps user from highlighting and text selection
       white-space: normal;
       word-wrap: break-word; /* For IE 10 and IE 11 */
-  
+
       &:hover {
         background-color: var(--terra-paginator-nav-link-hover-background-color, transparent);
         border: var(--terra-paginator-nav-link-hover-border, none);
@@ -55,7 +55,7 @@
         border: 0;
         padding: 0;
       }
-  
+
       &:focus {
         background-color: var(--terra-paginator-nav-link-focus-background-color, transparent);
         border: var(--terra-paginator-nav-link-focus-border, none);
@@ -63,7 +63,7 @@
         color: var(--terra-paginator-nav-link-focus-color, #0059a8);
         outline: none;
       }
-  
+
       &:active {
         background-color: var(--terra-paginator-nav-link-active-background-color, rgba(0, 0, 0, 0.07));
         border: var(--terra-paginator-nav-link-active-border, none);
@@ -75,7 +75,7 @@
     }
 
     .nav-link.is-selected {
-      color: var(--terra-paginator-nav-link-selected-color, inherit);
+      color: var(--terra-paginator-nav-link-selected-color);
       cursor: auto;
       pointer-events: none;
 
@@ -87,7 +87,7 @@
         outline: none;
       }
     }
-    
+
     .nav-link:disabled,
     .nav-link.is-disabled {
       background-color: var(--terra-paginator-nav-link-disabled-background-color, transparent);
@@ -110,20 +110,20 @@
       &.icon-only {
         margin-left: var(--terra-paginator-nav-link-previous-icon-only-margin-left, 0.14285rem);
         margin-right: var(--terra-paginator-nav-link-previous-icon-only-margin-right, 0.14285rem);
-        padding: var(--terra-paginator-nav-link-padding, 0.35714rem 0.5rem);          
+        padding: var(--terra-paginator-nav-link-padding, 0.35714rem 0.5rem);
       }
     }
 
     .nav-link.next {
       padding-right: var(--terra-paginator-nav-link-next-padding-right, 0.5rem);
-      
+
       &.icon-only {
         margin-left: var(--terra-paginator-nav-link-next-icon-only-margin-left, 0.14285rem);
         margin-right: var(--terra-paginator-nav-link-next-icon-only-margin-right, 0.14285rem);
-        padding: var(--terra-paginator-nav-link-padding, 0.35714rem 0.5rem);   
+        padding: var(--terra-paginator-nav-link-padding, 0.35714rem 0.5rem);
       }
     }
-      
+
     .nav-link.left-controls {
       margin-left: var(--terra-paginator-nav-link-left-controls-margin-left, 0.14286rem);
       margin-right: var(--terra-paginator-nav-link-left-controls-margin-right, 0.57143rem);
@@ -150,7 +150,7 @@
         margin-left: var(--terra-paginator-progressive-nav-link-next-margin-left, 0.14285rem);
         margin-right: var(--terra-paginator-progressive-nav-link-next-margin-right, 0.14285rem);
       }
-    }    
+    }
   }
 
   .icon {

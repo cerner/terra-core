@@ -3,9 +3,15 @@ ChangeLog
 
 Unreleased
 ----------
+<<<<<<< HEAD
 ### Breaking Changes
 * Removed Shared User subcomponent
 * Added Generic subcomponent with a new variant prop that can be `single-user`, `shared-user`, or `provider`.
+=======
+### Added
+* Props table markdown file import added to doc site page
+
+>>>>>>> df2d3fce44612774810e3bc8f8b7cf68bafbf36a
 
 2.25.0 - (August 21, 2019)
 ------------------

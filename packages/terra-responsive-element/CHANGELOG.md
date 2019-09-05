@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Props table markdown file import added to doc site page
+* Added package.json import to doc page
 
 5.7.0 - (August 21, 2019)
 ------------------

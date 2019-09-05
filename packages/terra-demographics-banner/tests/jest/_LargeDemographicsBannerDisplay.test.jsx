@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../../terra-image/lib/Image';
+import Image from 'terra-image';
 import LargeDemographicsBannerDisplay from '../../src/_LargeDemographicsBannerDisplay';
 
 it('renders large banner that contains all valid information', () => {
