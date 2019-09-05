@@ -6,6 +6,10 @@ Unreleased
 ### Fixed
 * MultiSelect placeholder is no longer permanently visible
 
+### Added
+* Added AT announcement for onClick and backspace in MultiSelect and TagSelect
+* Props table markdown file import added to doc site page
+
 ### Removed
 * Removed `inherit` fallback for `--terra-form-select-hover-color` CSS custom property
 

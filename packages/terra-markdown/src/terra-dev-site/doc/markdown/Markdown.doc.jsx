@@ -3,6 +3,7 @@ import Markdown from 'terra-markdown';
 import classNames from 'classnames/bind';
 import ReadMe from '../../../../docs/README.md';
 import styles from './Markdown.module.scss';
+import '../../../../package.json';
 
 const cx = classNames.bind(styles);
 

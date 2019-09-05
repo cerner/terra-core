@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import SearchFieldSrc from '!raw-loader!../../../../src/SearchField';
-
 // Example Files
+import SearchFieldPropsTable from '!terra-props-table-loader!../../../../src/SearchField';
+import SearchFieldSrc from '!raw-loader!../../../../src/SearchField';
 import SearchFieldBasic from '../example/SearchFieldBasic';
 import SearchFieldBasicSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldBasic';
 import SearchFieldPlaceholder from '../example/SearchFieldPlaceholder';
@@ -97,6 +97,7 @@ const DocPage = () => (
       {
         componentName: 'Search Field',
         componentSrc: SearchFieldSrc,
+        componentProps: SearchFieldPropsTable,
       },
     ]}
   />

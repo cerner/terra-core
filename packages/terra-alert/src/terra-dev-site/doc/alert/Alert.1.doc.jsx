@@ -6,10 +6,9 @@ import CustomExampleDocs from '../../../../docs/custom-example.md';
 import ActionAndDismissableExampleDocs from '../../../../docs/action-and-dismissable-example.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import AlertSrc from '!raw-loader!../../../../src/Alert';
-
 // Example Files
+import AlertPropsTable from '!terra-props-table-loader!../../../../src/Alert';
+import AlertSrc from '!raw-loader!../../../../src/Alert';
 import AlertExample from '../example/AlertExample';
 import AlertExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/AlertExample';
 import ErrorExample from '../example/ErrorExample';
@@ -102,6 +101,7 @@ const DocPage = () => (
       {
         componentName: 'Alert',
         componentSrc: AlertSrc,
+        componentProps: AlertPropsTable,
       },
     ]}
   />
