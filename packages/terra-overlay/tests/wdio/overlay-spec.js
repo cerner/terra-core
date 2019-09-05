@@ -37,6 +37,8 @@ Terra.describeViewports('Overlay', ['huge'], () => {
 
       it('Clicks on the Full screen overlay button', () => {
         browser.click('#trigger_fullscreen');
+        expect(browser.getAttribute('#root', 'inert')).to.equal('true');
+        expect(browser.getAttribute('#root', 'aria-hidden')).to.equal('true');
       });
 
       it('Background does not scroll when a fullscreen Overlay is open', () => {
@@ -48,16 +50,22 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       it('closes overlay on escape keydown', () => {
         browser.keys('Escape');
         browser.waitForExist('#terra-Overlay--fullscreen', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
+        expect(browser.getAttribute('#root', 'inert')).to.equal('false');
+        expect(browser.getAttribute('#root', 'aria-hidden')).to.equal(null);
       });
 
       it('reopens the overlay', () => {
         browser.click('#trigger_fullscreen');
         browser.waitForExist('#terra-Overlay--fullscreen');
+        expect(browser.getAttribute('#root', 'inert')).to.equal('true');
+        expect(browser.getAttribute('#root', 'aria-hidden')).to.equal('true');
       });
 
       it('closes the overlay when clicking inside of the Overlay', () => {
         browser.click('#terra-Overlay--fullscreen');
         browser.waitForExist('#terra-Overlay--fullscreen', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
+        expect(browser.getAttribute('#root', 'inert')).to.equal('false');
+        expect(browser.getAttribute('#root', 'aria-hidden')).to.equal(null);
       });
     });
 
@@ -66,6 +74,8 @@ Terra.describeViewports('Overlay', ['huge'], () => {
 
       it('Clicks on Container Overlay', () => {
         browser.click('#trigger_container');
+        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
+        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
       });
 
       it('Container Overlay- Background can scroll when Overlay relative to container is open', () => {
@@ -77,16 +87,22 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       it('closes overlay on escape keydown', () => {
         browser.keys('Escape');
         browser.waitForExist('#terra-Overlay--container', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
+        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
+        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
       });
 
       it('reopens the overlay', () => {
         browser.click('#trigger_container');
         browser.waitForExist('#terra-Overlay--container');
+        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
+        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
       });
 
       it('closes the overlay when clicking inside of the Overlay', () => {
         browser.click('#terra-Overlay--container');
         browser.waitForExist('#terra-Overlay--container', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
+        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
+        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
       });
     });
   });
