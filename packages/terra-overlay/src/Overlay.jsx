@@ -7,7 +7,7 @@ import * as KeyCode from 'keycode-js';
 import 'mutationobserver-shim';
 import './_contains-polyfill';
 import './_matches-polyfill';
-import 'wicg-inert';
+import 'wicg-inert/dist/inert';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
 
