@@ -1052,7 +1052,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => {
         browser.refresh(); // remove selected option
-      })
+      });
     });
   });
 
