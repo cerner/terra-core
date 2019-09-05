@@ -1018,6 +1018,44 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Multiple Variant - placeholder', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/multi-select-placeholder');
+    });
+
+    describe('multiple placeholder should be shown initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => browser.click('#root'));
+    });
+
+    describe('multiple placeholder should disappear after selection and blur', () => {
+      it('multiple should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('Space');
+        browser.keys('Enter');
+      });
+
+      it('multiple input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      it('navigates to the next focusable element', () => {
+        browser.keys('Tab');
+      });
+
+      it('next focusable element should be focused', async () => {
+        (await browser.hasFocus('#focusable')).should.be.true;
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh(); // remove selected option
+      })
+    });
+  });
+
   describe('Search Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
@@ -1632,6 +1670,44 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('selected-option');
+    });
+  });
+
+  describe('Tag Variant - placeholder', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/tag-select-placeholder');
+    });
+
+    describe('tag placeholder should be shown initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => browser.click('#root'));
+    });
+
+    describe('tag placeholder should disappear after selection and blur', () => {
+      it('tag should select the first option', () => {
+        browser.keys('Tab');
+        browser.keys('Space');
+        browser.keys('Enter');
+      });
+
+      it('tag input should be focused', async () => {
+        (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
+      });
+
+      it('navigates to the next focusable element', () => {
+        browser.keys('Tab');
+      });
+
+      it('next focusable element should be focused', async () => {
+        (await browser.hasFocus('#focusable')).should.be.true;
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh(); // remove selected option
+      });
     });
   });
 
