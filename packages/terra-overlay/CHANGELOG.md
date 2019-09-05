@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Moved running the wicg-inert script to when 'terra-overlay' is mounted
 
 3.27.0 - (September 3, 2019)
 ------------------
