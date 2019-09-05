@@ -69,6 +69,7 @@
     font-weight: var(--terra-form-field-help-text-font-weight, normal);
     line-height: 1.25;
     margin-top: var(--terra-form-field-help-text-margin-top, 0.357em);
+    outline: 0;
     text-align: left;
   }
 
@@ -78,6 +79,7 @@
     font-weight: var(--terra-form-field-error-text-font-weight, normal);
     line-height: 1.25;
     margin-top: var(--terra-form-field-error-text-margin-top, 0.357em);
+    outline: 0;
     text-align: left;
   }
 

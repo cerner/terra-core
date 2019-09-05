@@ -6,6 +6,7 @@
   "Terra.form.select.maxSelectionOption": "Max antal poster {text} är valda",
   "Terra.form.select.noResults": "Inga matchande resultat för \"{text}\"",
   "Terra.form.select.selectedText": "{text} vald.",
+  "Terra.form.select.unselectedText": "{text} avmarkerad.",
   "Terra.form.select.selected": "Vald.",
   "Terra.form.select.unselected": "Omarkerad.",
   "Terra.form.select.disabled": "Inaktiverad.",

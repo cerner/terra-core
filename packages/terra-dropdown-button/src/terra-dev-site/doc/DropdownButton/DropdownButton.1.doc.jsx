@@ -4,11 +4,11 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import DropdownButtonSrc from '!raw-loader!../../../../src/DropdownButton';
-import ItemSrc from '!raw-loader!../../../../src/Item';
-
 // Example Files
+import DropdownButtonPropsTable from '!terra-props-table-loader!../../../../src/DropdownButton';
+import DropdownButtonSrc from '!raw-loader!../../../../src/DropdownButton';
+import ItemPropsTable from '!terra-props-table-loader!../../../../src/Item';
+import ItemSrc from '!raw-loader!../../../../src/Item';
 import DefaultDropdownButton from '../example/DefaultDropdownButton';
 import DefaultDropdownButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultDropdownButton.jsx';
 import EmphasisDropdownButton from '../example/EmphasisDropdownButton';
@@ -57,10 +57,12 @@ const DocPage = () => (
       {
         componentName: 'Dropdown Button',
         componentSrc: DropdownButtonSrc,
+        componentProps: DropdownButtonPropsTable,
       },
       {
         componentName: 'Item',
         componentSrc: ItemSrc,
+        componentProps: ItemPropsTable,
       },
     ]}
   />

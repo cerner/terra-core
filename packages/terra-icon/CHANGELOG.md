@@ -1,9 +1,13 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
+
+3.19.0 - (September 3, 2019)
+------------------
 ### Added
+* Props table markdown file import added to doc site page
 * Added ThemeIconTemplate to support tooltip for theme icons
 * Added Translations for IconConsultInstructionsForUse tooltip text
 

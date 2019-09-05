@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Props table markdown file import added to doc site page
+
+
+3.26.0 - (September 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.25.0 - (August 21, 2019)
 ------------------

@@ -3,13 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Props table markdown file import added to doc site page
+* Added markdown version of props table to package
+
 
 2.17.0 - (August 21, 2019)
 ------------------
 ### Changed
 * Import for package version from package.json added to doc page
 * Added comments for ESlint v6
-* Cleaned up imports in examples and test files
 
 ### Removed
 * NPM badge wdio test

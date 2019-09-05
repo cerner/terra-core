@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ListItem.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ListItemSrc from '!raw-loader!../../../../src/ListItem';
-
 // Example Files
+import ListItemPropsTable from '!terra-props-table-loader!../../../../src/ListItem';
+import ListItemSrc from '!raw-loader!../../../../src/ListItem';
 import ListItemExample from '../example/ListItem';
 import ListItemExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListItem';
 
@@ -24,8 +24,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'List-Item',
+        componentName: 'List Item',
         componentSrc: ListItemSrc,
+        componentProps: ListItemPropsTable,
       },
     ]}
   />

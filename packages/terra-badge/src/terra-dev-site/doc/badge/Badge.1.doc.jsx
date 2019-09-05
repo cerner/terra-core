@@ -3,10 +3,9 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import BadgeSrc from '!raw-loader!../../../../src/Badge';
-
 // Example Files
+import BadgePropsTable from '!terra-props-table-loader!../../../../src/Badge';
+import BadgeSrc from '!raw-loader!../../../../src/Badge';
 import BadgeIntent from '../example/BadgeIntent';
 import BadgeIntentSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BadgeIntent';
 import BadgeSize from '../example/BadgeSize';
@@ -48,6 +47,7 @@ const DocPage = () => (
       {
         componentName: 'Badge',
         componentSrc: BadgeSrc,
+        componentProps: BadgePropsTable,
       },
     ]}
   />

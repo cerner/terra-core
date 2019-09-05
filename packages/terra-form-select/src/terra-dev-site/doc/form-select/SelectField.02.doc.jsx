@@ -2,12 +2,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/SelectField.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import SelectFieldSrc from '!raw-loader!../../../../src/SelectField';
-
 // Example Files
+import SelectFieldPropsTable from '!terra-props-table-loader!../../../../src/SelectField';
+import SelectFieldSrc from '!raw-loader!../../../../src/SelectField';
 import MaxSelectionExample from '../example/legacy/MaxSelection';
 import MaxSelectionExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/MaxSelection';
 import SelectFieldExample from '../example/legacy/SelectField';
@@ -21,10 +21,13 @@ const DocPage = () => (
     packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    propsTables={[{
-      componentName: 'Select Field',
-      componentSrc: SelectFieldSrc,
-    }]}
+    propsTables={[
+      {
+        componentName: 'Select Field',
+        componentSrc: SelectFieldSrc,
+        componentProps: SelectFieldPropsTable,
+      },
+    ]}
     examples={[{
       title: 'Select Field Example',
       example: <SelectFieldExample />,

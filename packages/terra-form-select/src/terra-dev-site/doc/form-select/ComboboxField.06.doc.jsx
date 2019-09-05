@@ -2,12 +2,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ComboboxField.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ComboboxFieldSrc from '!raw-loader!../../../../src/ComboboxField';
-
 // Example Files
+import ComboboxFieldPropsTable from '!terra-props-table-loader!../../../../src/ComboboxField';
+import ComboboxFieldSrc from '!raw-loader!../../../../src/ComboboxField';
 import ComboboxFieldExample from '../example/combobox/ComboboxField';
 import ComboboxFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/ComboboxField';
 import RequiredComboboxFieldExample from '../example/combobox/RequiredComboboxField';
@@ -19,10 +19,13 @@ const DocPage = () => (
     packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    propsTables={[{
-      componentName: 'Combobox Field',
-      componentSrc: ComboboxFieldSrc,
-    }]}
+    propsTables={[
+      {
+        componentName: 'Combobox Field',
+        componentSrc: ComboboxFieldSrc,
+        componentProps: ComboboxFieldPropsTable,
+      },
+    ]}
     examples={[{
       title: 'Combobobx Field Example',
       example: <ComboboxFieldExample />,

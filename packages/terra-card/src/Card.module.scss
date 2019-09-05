@@ -3,7 +3,7 @@
     background-color: var(--terra-card-background-color, #fff);
     border: var(--terra-card-border, 1px solid #c8cacb);
     border-radius: var(--terra-card-border-radius, 3px);
-    color: var(--terra-card-color, inherit);
+    color: var(--terra-card-color);
     overflow: hidden;
   }
 
