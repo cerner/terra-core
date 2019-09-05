@@ -6,7 +6,7 @@
 
 ### Added
 * the `generic` subcomponent that replaces the `sharedUser` subcomponent with a new `variant` prop that can be `single-user`, `shared-user`, or `provider`.
-* `variant` prop. this will take values for sub-variants `single-user`, `shared-user` and `provider`.
+* `variant` prop this will take values for sub-variants `single-user`, `shared-user` and `provider`.
 
 ### Changes to CSS Custom Properties
 
@@ -28,7 +28,7 @@ import { SharedUser} from 'terra-avatar';
 ```javascript
 import { Generic } from 'terra-avatar'
 
-<Generic variant="shared-user" alt="Location 1" />
+<Generic variant="shared-user" alt="Patient 1" />
 ```
 
 ## Changes from version 1 to version 2
