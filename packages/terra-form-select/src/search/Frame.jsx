@@ -532,7 +532,7 @@ class Frame extends React.Component {
       dropdownAttrs,
       intl,
       isInvalid,
-      maxHeight,
+      maxHeight: _maxHeight,
       noResultContent,
       onDeselect,
       onSearch,
@@ -545,14 +545,22 @@ class Frame extends React.Component {
       ...customProps
     } = this.props;
 
+    const {
+      isAbove,
+      isFocused,
+      isOpen,
+      searchValue,
+      isPositioned,
+    } = this.state;
+
     const selectClasses = cx([
       'select',
       'search',
-      { 'is-above': this.state.isAbove },
+      { 'is-above': isAbove },
       { 'is-disabled': disabled },
-      { 'is-focused': this.state.isFocused },
+      { 'is-focused': isFocused },
       { 'is-invalid': isInvalid },
-      { 'is-open': this.state.isOpen },
+      { 'is-open': isOpen },
       customProps.className,
     ]);
 
@@ -560,6 +568,10 @@ class Frame extends React.Component {
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
+    const menuId = uniqueid('terra-select-menu-');
+    const computedAriaLabel = this.ariaLabel();
+
+    const { maxHeight, ...dropdownStyle } = FrameUtil.dropdownStyle(dropdownAttrs, this.state);
 
     const menuProps = {
       value,
@@ -569,10 +581,18 @@ class Frame extends React.Component {
       visuallyHiddenComponent: this.visuallyHiddenComponent,
       onSelect: this.handleSelect,
       onRequestClose: this.closeDropdown,
-      searchValue: this.state.searchValue,
+      searchValue,
       input: this.input,
       select: this.select,
       clearOptionDisplay,
+
+      // TODO: these are new..
+      maxHeight,
+      menuId,
+      isInvalid,
+      isAbove,
+      ariaLabel: computedAriaLabel,
+      ariaDescribedBy,
     };
 
     return (
@@ -580,12 +600,12 @@ class Frame extends React.Component {
         {...customProps}
         role={this.role()}
         data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-controls={!disabled && isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}
-        aria-expanded={!!disabled && !!this.state.isOpen}
+        aria-expanded={!!disabled && !!isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-owns={isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -610,17 +630,17 @@ class Frame extends React.Component {
           className={cx('visually-hidden-component')}
           ref={this.visuallyHiddenComponent}
         />
-        {this.state.isOpen
+        {isOpen
           && (
           <Dropdown
             {...dropdownAttrs}
-            id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+            id={isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
-            isAbove={this.state.isAbove}
-            isEnabled={this.state.isPositioned}
+            isAbove={isAbove}
+            isEnabled={isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}
-            style={FrameUtil.dropdownStyle(dropdownAttrs, this.state)} // eslint-disable-line react/forbid-component-props
+            style={dropdownStyle} // eslint-disable-line react/forbid-component-props
           >
             <Menu {...menuProps}>
               {children}

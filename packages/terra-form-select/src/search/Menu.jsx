@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import { polyfill } from 'react-lifecycles-compat';
 import { injectIntl, intlShape } from 'react-intl';
 import * as KeyCode from 'keycode-js';
+import uniqueId from 'lodash.uniqueid';
 import ClearOption from '../shared/_ClearOption';
 import NoResults from '../shared/_NoResults';
 import MenuUtil from '../shared/_MenuUtil';
@@ -64,6 +65,13 @@ const propTypes = {
    * @private Visually hidden component designed to feed screen reader text to read.
    */
   visuallyHiddenComponent: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+
+  // TODO: these are new
+  isAbove: PropTypes.bool,
+  isInvalid: PropTypes.bool,
+  maxHeight: PropTypes.number,
+  ariaLabel: PropTypes.string.isRequired,
+  ariaDescribedBy: PropTypes.string,
 };
 
 const defaultProps = {
@@ -77,6 +85,12 @@ const defaultProps = {
   select: undefined,
   visuallyHiddenComponent: undefined,
   value: undefined,
+
+  // TODO: these are new
+  isAbove: false,
+  isInvalid: false,
+  maxHeight: undefined,
+  ariaDescribedBy: undefined,
 };
 
 class Menu extends React.Component {
@@ -90,6 +104,7 @@ class Menu extends React.Component {
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.scrollIntoView = this.scrollIntoView.bind(this);
+    this.clone = this.clone.bind(this);
   }
 
   /**
@@ -381,25 +396,80 @@ class Menu extends React.Component {
   }
 
   render() {
+    // return (
+    //   /**
+    //    * Note: role="listbox" and aria-activedescendant needed for VoiceOver on iOS to properly
+    //    * shift the virtual indicator to this DOM element when dropdown is rendered. If you modify these
+    //    * attributes, you'll need to manually verify that the virtual indicator on iOS is still shifted
+    //    * to the dropdown / the selected item in the dropdown if an item is selected when the dropdown
+    //    * is opened.
+    //    */
+    //   <ul
+    //     id="terra-select-menu"
+    //     role="listbox"
+    //     className={cx('menu')}
+    //     aria-label={this.props.intl.formatMessage({ id: 'Terra.form.select.menu' })}
+    //     ref={(menu) => { this.menu = menu; }}
+    //     {...(this.state.active !== null ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
+    //     tabIndex="0"
+    //   >
+    //     {this.clone(this.state.children)}
+    //   </ul>
+    // );
+    const {
+      isAbove, isInvalid, intl, maxHeight, ariaLabel, ariaDescribedBy,
+    } = this.props;
+
+    const { active } = this.state;
+
+    const menuClasses = cx([
+      'menu',
+      { 'is-above': isAbove },
+      { 'is-focused': true }, // TODO: fixme
+      { 'is-invalid': isInvalid },
+    ]);
+
+    const menuId = 'terra-select-menu'; // TODO: make prop
+    const listboxId = uniqueId('terra-form-select-menu-listbox-');
+    const activeDescendant = active !== null ? `terra-select-option-${active}` : undefined;
+
+    /* eslint-disable react/forbid-dom-props */
     return (
-      /**
-       * Note: role="listbox" and aria-activedescendant needed for VoiceOver on iOS to properly
-       * shift the virtual indicator to this DOM element when dropdown is rendered. If you modify these
-       * attributes, you'll need to manually verify that the virtual indicator on iOS is still shifted
-       * to the dropdown / the selected item in the dropdown if an item is selected when the dropdown
-       * is opened.
-       */
-      <ul
-        id="terra-select-menu"
-        role="listbox"
-        className={cx('menu')}
-        aria-label={this.props.intl.formatMessage({ id: 'Terra.form.select.menu' })}
-        ref={(menu) => { this.menu = menu; }}
-        {...(this.state.active !== null ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
-        tabIndex="0"
-      >
-        {this.clone(this.state.children)}
-      </ul>
+      <div role="menu" id={menuId} className={menuClasses}>
+        <div
+          role="combobox"
+          className={cx('display')}
+          aria-controls={listboxId}
+          aria-expanded="true"
+          aria-owns={listboxId}
+          onKeyDown={this.handleKeyDown}
+          tabIndex="-1" // focusable, but not tabbable
+        >
+          <div className={cx('content')}>
+            <input
+              className={cx('search-input')}
+              role="searchbox"
+              type="text"
+              aria-controls={listboxId}
+              aria-label={ariaLabel}
+              aria-describedby={ariaDescribedBy}
+            />
+          </div>
+        </div>
+        {/* Max height on the list only */}
+        <ul
+          role="listbox"
+          className={cx('menu-list')}
+          id={listboxId}
+          style={{ maxHeight }}
+          aria-label={intl.formatMessage({ id: 'Terra.form.select.menu' })}
+          aria-activedescendant={activeDescendant}
+          tabIndex="0"
+          ref={(menu) => { this.menu = menu; }}
+        >
+          {this.clone(this.state.children)}
+        </ul>
+      </div>
     );
   }
 }
