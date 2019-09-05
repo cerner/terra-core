@@ -2,12 +2,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/TagSelectField.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import TagSelectFieldSrc from '!raw-loader!../../../../src/TagSelectField';
-
 // Example Files
+import TagSelectFieldPropsTable from '!terra-props-table-loader!../../../../src/TagSelectField';
+import TagSelectFieldSrc from '!raw-loader!../../../../src/TagSelectField';
 import SelectFieldExample from '../example/tag/TagSelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/TagSelectField';
 import RequiredTagSelectFieldExample from '../example/tag/RequiredTagSelectField';
@@ -19,10 +19,13 @@ const DocPage = () => (
     packageVersion={version}
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    propsTables={[{
-      componentName: 'Tag Select Field',
-      componentSrc: TagSelectFieldSrc,
-    }]}
+    propsTables={[
+      {
+        componentName: 'Tag Select Field',
+        componentSrc: TagSelectFieldSrc,
+        componentProps: TagSelectFieldPropsTable,
+      },
+    ]}
     examples={[{
       title: 'Tag Select Field Example',
       example: <SelectFieldExample />,

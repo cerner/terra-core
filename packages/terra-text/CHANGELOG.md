@@ -1,8 +1,13 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
+### Added
+* Props table markdown file import added to doc site page
+
+### Changed
+* Only apply `color: inherit` if no colorClass is provided
 
 4.16.0 - (September 3, 2019)
 ------------------

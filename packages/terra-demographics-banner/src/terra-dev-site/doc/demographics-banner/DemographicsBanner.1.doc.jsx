@@ -6,6 +6,7 @@ import { name, version } from '../../../../package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
 import DemographicsBanner from '../../../DemographicsBanner';
 // Component Source
+import DemographicsBannerPropsTable from '!terra-props-table-loader!../../../../src/DemographicsBanner';
 import DemographicsBannerSrc from '!raw-loader!../../../../src/DemographicsBanner.jsx';
 
 // Example Source
@@ -62,6 +63,7 @@ const DocPage = () => (
       {
         componentName: 'Demographics Banner',
         componentSrc: DemographicsBannerSrc,
+        componentProps: DemographicsBannerPropsTable,
       },
     ]}
   />

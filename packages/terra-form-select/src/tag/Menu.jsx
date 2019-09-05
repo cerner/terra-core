@@ -292,10 +292,8 @@ class Menu extends React.Component {
       onSelect,
       onDeselect,
       value,
+      visuallyHiddenComponent,
     } = this.props;
-
-    const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
-    const unselectedTxt = intl.formatMessage({ id: 'Terra.form.select.unselected' });
 
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
@@ -312,14 +310,25 @@ class Menu extends React.Component {
 
       const option = MenuUtil.findByValue(children, active);
       // Handles communicating the case where a regular option is selected to screen readers.
-      this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
-      onSelect(option.props.value, option);
+      if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
+        visuallyHiddenComponent.current.innerHTML = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: option.props.display });
+      }
+
+      if (onSelect) {
+        onSelect(option.props.value, option);
+      }
     } else if (keyCode === KeyCode.KEY_RETURN && active !== null && MenuUtil.includes(value, active)) {
       event.preventDefault();
+
       const option = MenuUtil.findByValue(children, active);
       // Handles communicating the case where a regular option is Unselected to screen readers.
-      this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${unselectedTxt}`;
-      onDeselect(option.props.value, option);
+      if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
+        visuallyHiddenComponent.current.innerHTML = intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: option.props.display });
+      }
+
+      if (onDeselect) {
+        onDeselect(option.props.value, option);
+      }
     } else if (keyCode === KeyCode.KEY_HOME) {
       event.preventDefault();
       this.setState({ active: MenuUtil.findFirst(children) });
@@ -340,13 +349,27 @@ class Menu extends React.Component {
     }
 
     const {
-      input, onDeselect, onSelect, value,
+      input, onDeselect, onSelect, value, intl, visuallyHiddenComponent,
     } = this.props;
 
-    if (MenuUtil.includes(value, option.props.value)) {
-      onDeselect(option.props.value, option);
+    const shouldUnselectOption = MenuUtil.includes(value, option.props.value);
+    const optionATClickText = (shouldUnselectOption
+      ? intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: option.props.display })
+      : intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: option.props.display })
+    );
+
+    if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
+      visuallyHiddenComponent.current.innerHTML = optionATClickText;
+    }
+
+    if (shouldUnselectOption) {
+      if (onDeselect) {
+        onDeselect(option.props.value, option);
+      }
     } else {
-      onSelect(option.props.value, option);
+      if (onSelect) {
+        onSelect(option.props.value, option);
+      }
       if (input) {
         input.focus();
       }

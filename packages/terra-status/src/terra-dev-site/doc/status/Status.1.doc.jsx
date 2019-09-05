@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import StatusSrc from '!raw-loader!../../../../src/Status';
-
 // Example Files
+import StatusPropsTable from '!terra-props-table-loader!../../../../src/Status';
+import StatusSrc from '!raw-loader!../../../../src/Status';
 import StatusDefault from '../example/StatusDefault';
 import StatusDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StatusDefault';
 import StatusImage from '../example/StatusImage';
@@ -48,6 +48,7 @@ const DocPage = () => (
       {
         componentName: 'Status',
         componentSrc: StatusSrc,
+        componentProps: StatusPropsTable,
       },
     ]}
   />

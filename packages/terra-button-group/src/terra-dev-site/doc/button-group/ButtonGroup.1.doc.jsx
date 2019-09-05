@@ -3,11 +3,11 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ButtonGroupSrc from '!raw-loader!../../../../src/ButtonGroup.jsx';
-import ButtonGroupButtonSrc from '!raw-loader!../../../../src/ButtonGroupButton.jsx';
-
 // Examples
+import ButtonGroupPropsTable from '!terra-props-table-loader!../../../../src/ButtonGroup';
+import ButtonGroupSrc from '!raw-loader!../../../../src/ButtonGroup';
+import ButtonGroupButtonPropsTable from '!terra-props-table-loader!../../../../src/ButtonGroup';
+import ButtonGroupButtonSrc from '!raw-loader!../../../../src/ButtonGroup';
 import ButtonGroupWithIcons from '../example/ButtonGroupWithIcons';
 import ButtonGroupWithIconsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ButtonGroupWithIcons';
 import ButtonGroupDisabledButtons from '../example/ButtonGroupDisabledButtons';
@@ -56,10 +56,12 @@ const DocPage = () => (
       {
         componentName: 'Button Group',
         componentSrc: ButtonGroupSrc,
+        componentProps: ButtonGroupPropsTable,
       },
       {
         componentName: 'Button Group Button',
         componentSrc: ButtonGroupButtonSrc,
+        componentProps: ButtonGroupButtonPropsTable,
       },
     ]}
   />

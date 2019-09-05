@@ -6,6 +6,7 @@
   "Terra.form.select.maxSelectionOption": "Maximum number of {text} items selected",
   "Terra.form.select.ariaLabel": "Search",
   "Terra.form.select.selectedText": "{text} Selected.",
+  "Terra.form.select.unselectedText": "{text} Unselected.",
   "Terra.form.select.selected": "Selected.",
   "Terra.form.select.unselected": "Unselected.",
   "Terra.form.select.disabled": "Disabled.",

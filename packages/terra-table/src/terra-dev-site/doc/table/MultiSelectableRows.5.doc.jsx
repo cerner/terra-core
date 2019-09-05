@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/MultiSelectableRows.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import MultiSelectSrc from '!raw-loader!../../../../src/MultiSelectableRows';
-
 // Example Files
+import MultiSelectableRowsPropsTable from '!terra-props-table-loader!../../../../src/MultiSelectableRows';
+import MultiSelectableRowsSrc from '!raw-loader!../../../../src/MultiSelectableRows';
 import MultipleRowSelectableTableExamples from '../example/MultiSelectableRows';
 import MultipleRowSelectableTableExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/MultiSelectableRows';
 import MultipleRowMaxSelectableExample from '../example/MultiSelectableRowsMaxSelectable';
@@ -46,8 +46,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'Multi Select Table',
-        componentSrc: MultiSelectSrc,
+        componentName: 'Multiple Selectable Rows',
+        componentSrc: MultiSelectableRowsSrc,
+        componentProps: MultiSelectableRowsPropsTable,
       },
     ]}
   />

@@ -1,10 +1,13 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
 ### Changed
 * Inline SVG aligned for IE and wdio screenshots Updated.
+
+### Added
+* Props table markdown file import added to doc site page
 
 3.21.0 - (September 3, 2019)
 ------------------
