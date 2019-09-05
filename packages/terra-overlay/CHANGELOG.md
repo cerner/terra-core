@@ -1,8 +1,11 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
+### Added
+* Props table markdown file import added to doc site page
+
 ### Changed
 * Moved running the wicg-inert script to when 'terra-overlay' is mounted
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ToggleButtonSrc from '!raw-loader!../../../../src/ToggleButton';
-
 // Example Files
+import ToggleButtonPropsTable from '!terra-props-table-loader!../../../../src/ToggleButton';
+import ToggleButtonSrc from '!raw-loader!../../../../src/ToggleButton';
 import DefaultToggleButton from '../example/DefaultToggleButton';
 import DefaultToggleButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultToggleButton';
 import AnimatedToggleButton from '../example/AnimatedToggleButton';
@@ -69,6 +69,7 @@ const DocPage = () => (
       {
         componentName: 'Toggle Button',
         componentSrc: ToggleButtonSrc,
+        componentProps: ToggleButtonPropsTable,
       },
     ]}
   />

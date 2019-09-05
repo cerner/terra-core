@@ -3,8 +3,7 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/shared-user.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import src from '!raw-loader!../../../../src/variants/SharedUser.jsx';
+import SharedUserPropsTable from '!terra-props-table-loader!../../../../src/variants/SharedUser';
 import SharedUser from '../example/shared-user/SharedUser';
 import SharedUserSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/shared-user/SharedUser';
 import SharedUserSize from '../example/shared-user/SharedUserSize';
@@ -38,7 +37,8 @@ const DocPage = () => (
     propsTables={[
       {
         componentName: 'Shared User',
-        componentSrc: src,
+        componentSrc: SharedUserSrc,
+        componentProps: SharedUserPropsTable,
       },
     ]}
   />

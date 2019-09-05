@@ -60,6 +60,7 @@ const propTypes = {
   propsTables: PropTypes.arrayOf(PropTypes.shape({
     componentSrc: PropTypes.string,
     componentName: PropTypes.string,
+    componentProps: PropTypes.string,
     propsResolution: PropTypes.string,
   })),
 };
@@ -75,21 +76,24 @@ const defaultProps = {
 };
 
 const DocTemplate = ({
-  packageName, packageUrl, packageVersion, readme, srcPath, examples, propsTables, children, ...customProps
+  packageName, packageVersion, packageUrl, readme, srcPath, examples, propsTables, children, ...customProps
 }) => {
-  let id = 0;
   const localExamples = examples;
-  const localPropsTables = propsTables;
+  let localPropsTables;
+  if (propsTables) localPropsTables = propsTables;
 
   // Assign unique identifiers to use as keys later
+  let id = 0;
   for (let i = 0; i < localExamples.length; i += 1) {
     localExamples[i].id = id;
     id += 1;
   }
 
-  for (let i = 0; i < localPropsTables.length; i += 1) {
-    localPropsTables[i].id = id;
-    id += 1;
+  if (localPropsTables) {
+    for (let i = 0; i < localPropsTables.length; i += 1) {
+      localPropsTables[i].id = id;
+      id += 1;
+    }
   }
 
   const docTemplateClassNames = cx([
@@ -131,14 +135,24 @@ const DocTemplate = ({
       ))}
 
       <div className={cx('doc-card')}>
-        {localPropsTables.map(propsTable => (
-          <PropsTable
-            src={propsTable.componentSrc}
-            componentName={propsTable.componentName}
-            key={propsTable.id}
-            propsResolution={propsTable.propsResolution}
-          />
-        ))}
+        {propsTables[0] && propsTables[0].componentProps
+          ? localPropsTables.map(propsTable => (
+            <div className={cx('props-table-markdown')} key={propsTable.id}>
+              <h2>
+                {propsTable.componentName}
+                {' Props'}
+              </h2>
+              <Markdown src={propsTable.componentProps} />
+            </div>
+          ))
+          : localPropsTables.map(propsTable => (
+            <PropsTable
+              src={propsTable.componentSrc}
+              componentName={propsTable.componentName}
+              key={propsTable.id}
+              propsResolution={propsTable.propsResolution}
+            />
+          ))}
       </div>
       {children && <div className={cx('doc-card')}>{children}</div>}
     </div>

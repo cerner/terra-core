@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import TagSrc from '!raw-loader!../../../../src/Tag';
-
 // Example Files
+import TagPropsTable from '!terra-props-table-loader!../../../../src/Tag';
+import TagSrc from '!raw-loader!../../../../src/Tag';
 import TagDefault from '../example/TagDefault';
 import TagDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TagDefault';
 import TagHref from '../example/HrefTag';
@@ -42,6 +42,7 @@ const DocPage = () => (
       {
         componentName: 'Tag',
         componentSrc: TagSrc,
+        componentProps: TagPropsTable,
       },
     ]}
   />

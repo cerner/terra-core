@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/InputField.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import InputFieldSrc from '!raw-loader!../../../../src/InputField';
-
 // Example Files
+import FormInputFieldPropsTable from '!terra-props-table-loader!../../../../src/InputField';
+import FormInputFieldSrc from '!raw-loader!../../../../src/InputField';
 import InputFieldExample from '../example/InputField';
 import InputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/InputField';
 import RequiredInputFieldExample from '../example/RequiredInputField';
@@ -22,8 +22,9 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     propsTables={[
       {
-        componentName: 'InputField',
-        componentSrc: InputFieldSrc,
+        componentName: 'Form Input Field',
+        componentSrc: FormInputFieldSrc,
+        componentProps: FormInputFieldPropsTable,
       },
     ]}
     examples={[

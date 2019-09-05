@@ -79,6 +79,7 @@ const Text = ({
   const attributes = { ...customProps };
   const TextClassNames = cx([
     'text',
+    { 'inherit-color': !colorClass }, // set `color: inherit` via class if colorClass is not provided
     { italic: isItalic },
     { 'word-wrap': isWordWrapped },
     { 'visually-hidden': isVisuallyHidden },

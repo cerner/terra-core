@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ListSection.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ListSectionSrc from '!raw-loader!../../../../src/ListSection';
-
 // Example Files
+import ListSectionPropsTable from '!terra-props-table-loader!../../../../src/ListSection';
+import ListSectionSrc from '!raw-loader!../../../../src/ListSection';
 import ListSectionExample from '../example/ListSection';
 import ListSectionExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListSection';
 
@@ -24,8 +24,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'List-Section',
+        componentName: 'List Section',
         componentSrc: ListSectionSrc,
+        componentProps: ListSectionPropsTable,
       },
     ]}
   />
