@@ -128,6 +128,8 @@ class Overlay extends React.Component {
     if (this.props.isRelativeToContainer) {
       if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
         this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
+        // Ensures aria-hidden is properly cleaned up
+        setTimeout(() => this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('aria-hidden'), 0);
       }
     } else {
       const selector = this.props.rootSelector;
@@ -138,6 +140,8 @@ class Overlay extends React.Component {
         if (inert === 1) {
           document.querySelector(selector).removeAttribute('data-overlay-count');
           document.querySelector(selector).removeAttribute('inert');
+          // Ensures aria-hidden is properly cleaned up
+          setTimeout(() => document.querySelector(selector).removeAttribute('aria-hidden'), 0);
         } else if (inert && inert > 1) {
           document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
         }
