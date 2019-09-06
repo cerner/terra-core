@@ -7,19 +7,16 @@ exports[`should render a default table 1`] = `
   <TableHeader>
     <TableHeaderCell
       key="NAME"
-      minWidth="small"
     >
       Name
     </TableHeaderCell>
     <TableHeaderCell
       key="ADDRESS"
-      minWidth="small"
     >
       Address
     </TableHeaderCell>
     <TableHeaderCell
       key="PHONE_NUMBER"
-      minWidth="small"
     >
       Phone Number
     </TableHeaderCell>
@@ -75,19 +72,16 @@ exports[`should render a table without padding 1`] = `
   <TableHeader>
     <TableHeaderCell
       key="NAME"
-      minWidth="small"
     >
       Name
     </TableHeaderCell>
     <TableHeaderCell
       key="ADDRESS"
-      minWidth="small"
     >
       Address
     </TableHeaderCell>
     <TableHeaderCell
       key="PHONE_NUMBER"
-      minWidth="small"
     >
       Phone Number
     </TableHeaderCell>
@@ -142,19 +136,16 @@ exports[`should render a table without zebra stripes 1`] = `
   <TableHeader>
     <TableHeaderCell
       key="NAME"
-      minWidth="small"
     >
       Name
     </TableHeaderCell>
     <TableHeaderCell
       key="ADDRESS"
-      minWidth="small"
     >
       Address
     </TableHeaderCell>
     <TableHeaderCell
       key="PHONE_NUMBER"
-      minWidth="small"
     >
       Phone Number
     </TableHeaderCell>

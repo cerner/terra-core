@@ -5,20 +5,17 @@ exports[`should render table header tag 1`] = `
   <tr>
     <TableHeaderCell
       key="NAME"
-      minWidth="small"
       onClick={[MockFunction]}
     >
       Name
     </TableHeaderCell>
     <TableHeaderCell
       key="ADDRESS"
-      minWidth="small"
     >
       Address
     </TableHeaderCell>
     <TableHeaderCell
       key="PHONE_NUMBER"
-      minWidth="small"
     >
       Phone Number
     </TableHeaderCell>
