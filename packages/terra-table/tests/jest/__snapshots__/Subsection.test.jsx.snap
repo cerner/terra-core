@@ -11,7 +11,7 @@ exports[`should render a default subsection 1`] = `
 </Fragment>
 `;
 
-exports[`should render a subsection with a cellgrid 1`] = `
+exports[`should render a subsection with a row 1`] = `
 <Fragment>
   <SubsectionHeader
     isCollapsed={false}
@@ -19,7 +19,7 @@ exports[`should render a subsection with a cellgrid 1`] = `
     level={3}
     title="test"
   />
-  <CellGrid
+  <Row
     dividerStyle="none"
     isSelectable={false}
     isSelected={false}
@@ -27,7 +27,7 @@ exports[`should render a subsection with a cellgrid 1`] = `
     selectionStyle="default"
   >
     <Cell />
-  </CellGrid>
+  </Row>
 </Fragment>
 `;
 

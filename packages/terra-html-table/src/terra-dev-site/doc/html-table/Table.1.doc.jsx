@@ -90,11 +90,6 @@ const DocPage = () => (
         componentSrc: TableCellSrc,
         componentProps: TableCellPropsTable,
       },
-      {
-        componentName: 'Table Subheader',
-        componentSrc: TableSubheaderSrc,
-        componentProps: TableSubheaderPropsTable,
-      },
     ]}
   />
 );

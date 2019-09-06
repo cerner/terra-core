@@ -6,6 +6,7 @@ import { name } from '../../../../package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import SubsectionHeaderSrc from '!raw-loader!../../../../src/SubsectionHeader';
+import SubsectionHeaderPropsTable from '!terra-props-table-loader!../../../../src/SubsectionHeader';
 
 import SubsectionHeaderExample from '../example/SubsectionHeaderExample';
 import SubsectionHeaderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SubsectionHeaderExample';
@@ -26,6 +27,7 @@ const DocPage = () => (
       {
         componentName: 'SubsectionHeader',
         componentSrc: SubsectionHeaderSrc,
+        componentProps: SubsectionHeaderPropsTable,
       },
     ]}
   />

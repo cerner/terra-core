@@ -19,7 +19,7 @@ exports[`should render a section with a row 1`] = `
     level={2}
     title="test"
   />
-  <CellGrid
+  <Row
     dividerStyle="none"
     isSelectable={false}
     isSelected={false}
@@ -27,7 +27,7 @@ exports[`should render a section with a row 1`] = `
     selectionStyle="default"
   >
     <Cell />
-  </CellGrid>
+  </Row>
 </Fragment>
 `;
 

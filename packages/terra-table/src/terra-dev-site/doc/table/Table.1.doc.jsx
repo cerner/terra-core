@@ -6,6 +6,7 @@ import { name } from '../../../../package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import TableSrc from '!raw-loader!../../../../src/Table';
+import TablePropsTable from '!terra-props-table-loader!../../../../src/Table';
 
 import TableExample from '../example/TableExample';
 import TableExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableExample';
@@ -60,6 +61,7 @@ const DocPage = () => (
       {
         componentName: 'Table',
         componentSrc: TableSrc,
+        componentProps: TablePropsTable,
       },
     ]}
   />

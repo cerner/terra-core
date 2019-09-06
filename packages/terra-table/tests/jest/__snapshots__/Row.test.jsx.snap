@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a checkmark selectionStyle row 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+>
+  <CheckMarkCell
+    isPadded={true}
+    isSelectable={false}
+    isSelected={false}
+  />
+  <Cell />
+</div>
+`;
+
+exports[`should render a chevron selectionStyle row 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+>
+  <Cell />
+  <ChevronCell
+    isPadded={true}
+    isVisible={false}
+  />
+</div>
+`;
+
+exports[`should render a default row 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a row with onSelect 1`] = `
+<div
+  aria-selected={false}
+  className="is-selectable divider-none row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a row with refCallback 1`] = `
+<div
+  className="divider-none row"
+  role="row"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a selectable row 1`] = `
+<div
+  aria-selected={false}
+  className="is-selectable divider-none row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a selected row 1`] = `
+<div
+  aria-selected={true}
+  className="is-selected is-selectable divider-none row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a striped row 1`] = `
+<div
+  className="is-striped divider-none row"
+  role="row"
+>
+  <Cell />
+</div>
+`;

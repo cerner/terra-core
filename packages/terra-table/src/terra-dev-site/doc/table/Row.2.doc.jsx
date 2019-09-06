@@ -6,6 +6,7 @@ import { name } from '../../../../package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import RowSrc from '!raw-loader!../../../../src/Row';
+import RowPropsTable from '!terra-props-table-loader!../../../../src/Row';
 
 import RowExample from '../example/RowExample';
 import RowExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RowExample';
@@ -26,6 +27,7 @@ const DocPage = () => (
       {
         componentName: 'Row',
         componentSrc: RowSrc,
+        componentProps: RowPropsTable,
       },
     ]}
   />

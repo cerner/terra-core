@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a default table cell grid 1`] = `
+exports[`should render a default table 1`] = `
 <div
   className="table rounded"
   role="grid"
 />
 `;
 
-exports[`should render a table cell grid with compact padding 1`] = `
+exports[`should render a table with compact padding 1`] = `
 <div
   className="table rounded"
   data-table-padding="compact"
@@ -15,14 +15,14 @@ exports[`should render a table cell grid with compact padding 1`] = `
 />
 `;
 
-exports[`should render a table cell grid with fill style 1`] = `
+exports[`should render a table with fill style 1`] = `
 <div
   className="table fill rounded"
   role="grid"
 />
 `;
 
-exports[`should render a table cell grid with header/footer nodes 1`] = `
+exports[`should render a table with header/footer nodes 1`] = `
 <ContentContainer
   className="rounded"
   fill={false}
@@ -44,7 +44,7 @@ exports[`should render a table cell grid with header/footer nodes 1`] = `
 </ContentContainer>
 `;
 
-exports[`should render a table cell grid with refCallback 1`] = `
+exports[`should render a table with refCallback 1`] = `
 <div
   className="table rounded"
   refCallback={[MockFunction]}
@@ -52,7 +52,7 @@ exports[`should render a table cell grid with refCallback 1`] = `
 />
 `;
 
-exports[`should render a table cell grid with standard padding 1`] = `
+exports[`should render a table with standard padding 1`] = `
 <div
   className="table rounded"
   data-table-padding="standard"

@@ -1,35 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a cell grid with a cell 1`] = `
-<div
-  className="header"
-  role="rowgroup"
->
-  <div
-    className="header-content"
-    role="row"
-  >
-    <HeaderCell
-      isSelectable={false}
-      sort="none"
-    />
-  </div>
-</div>
-`;
-
-exports[`should render a cell grid with refCallback 1`] = `
-<div
-  className="header"
-  role="rowgroup"
->
-  <div
-    className="header-content"
-    role="row"
-  />
-</div>
-`;
-
-exports[`should render a checkmark selectionStyle cell grid 1`] = `
+exports[`should render a checkmark selectionStyle row 1`] = `
 <div
   className="header"
   role="rowgroup"
@@ -48,7 +19,7 @@ exports[`should render a checkmark selectionStyle cell grid 1`] = `
 </div>
 `;
 
-exports[`should render a chevron selectionStyle cell grid 1`] = `
+exports[`should render a chevron selectionStyle row 1`] = `
 <div
   className="header"
   role="rowgroup"
@@ -64,7 +35,36 @@ exports[`should render a chevron selectionStyle cell grid 1`] = `
 </div>
 `;
 
-exports[`should render a default header cell grid 1`] = `
+exports[`should render a default header row 1`] = `
+<div
+  className="header"
+  role="rowgroup"
+>
+  <div
+    className="header-content"
+    role="row"
+  />
+</div>
+`;
+
+exports[`should render a row with a cell 1`] = `
+<div
+  className="header"
+  role="rowgroup"
+>
+  <div
+    className="header-content"
+    role="row"
+  >
+    <HeaderCell
+      isSelectable={false}
+      sort="none"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a row with refCallback 1`] = `
 <div
   className="header"
   role="rowgroup"

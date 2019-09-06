@@ -6,6 +6,7 @@ import { name } from '../../../../package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
 import CellSrc from '!raw-loader!../../../../src/Cell';
+import CellPropsTable from '!terra-props-table-loader!../../../../src/Cell';
 
 import DefaultCell from '../example/CellExample';
 import DefaultCellSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CellExample';
@@ -27,6 +28,7 @@ const DocPage = () => (
       {
         componentName: 'Cell',
         componentSrc: CellSrc,
+        componentProps: CellPropsTable,
       },
     ]}
   />
