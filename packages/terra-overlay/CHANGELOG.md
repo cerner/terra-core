@@ -7,6 +7,7 @@ Unreleased
 * Props table markdown file import added to doc site page
 
 ### Changed
+* Moved running the wicg-inert script to when 'terra-overlay' is mounted
 * Update wcig-inert path to import directly the ES5 version of the package
 
 3.27.0 - (September 3, 2019)
