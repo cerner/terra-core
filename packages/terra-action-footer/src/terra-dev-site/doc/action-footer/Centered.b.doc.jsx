@@ -3,10 +3,9 @@ import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/CenteredActionFooter.md';
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import CenteredActionFooterSrc from '!raw-loader!../../../../src/CenteredActionFooter';
-
 // Example Files
+import CenteredActionFooterPropsTable from '!terra-props-table-loader!../../../../src/CenteredActionFooter';
+import CenteredActionFooterSrc from '!raw-loader!../../../../src/CenteredActionFooter';
 import EmptyExample from '../example/centered/Empty';
 import EmptyExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/centered/Empty';
 import SingleActionExample from '../example/centered/SingleAction';
@@ -41,6 +40,7 @@ const DocPage = () => (
       {
         componentName: 'Centered Action Footer',
         componentSrc: CenteredActionFooterSrc,
+        componentProps: CenteredActionFooterPropsTable,
       },
     ]}
   />

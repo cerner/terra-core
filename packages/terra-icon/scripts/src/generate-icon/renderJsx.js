@@ -8,6 +8,9 @@ import iconData from '../../../src/icon-data.json';
 
 const staticIconTemplatePath = path.join(__dirname, './staticIcontemplate.txt');
 const themeIconTemplatePath = path.join(__dirname, './template.txt');
+// template path for Icons that supports Tooltip
+const themeIconWithTooltipTemplatePath = path.join(__dirname, './themeIconWithTooltipTemplate.txt');
+const themeIconsWithTooltip = ['IconConsultInstructionsForUse'];
 
 // Generate list of static color icon names
 const staticIcons = iconData
@@ -19,25 +22,21 @@ const staticIcons = iconData
  * @param {object} icon Icon object that stores svg attributes, children, and name
  */
 const renderJsx = icon => new Promise((resolve, reject) => {
+  let templatePath;
   if (staticIcons.includes(icon.name)) {
-    fs.readFile(staticIconTemplatePath, 'utf-8', (error, text) => {
-      if (error) {
-        reject(error);
-      } else {
-        const compiled = template(text);
-        resolve(new ReactIcon(icon.name, compiled({ icon })));
-      }
-    });
+    templatePath = staticIconTemplatePath;
   } else {
-    fs.readFile(themeIconTemplatePath, 'utf-8', (error, text) => {
-      if (error) {
-        reject(error);
-      } else {
-        const compiled = template(text);
-        resolve(new ReactIcon(icon.name, compiled({ icon })));
-      }
-    });
+    templatePath = (themeIconsWithTooltip.includes(icon.name)) ? themeIconWithTooltipTemplatePath : themeIconTemplatePath;
   }
+
+  fs.readFile(templatePath, 'utf-8', (error, text) => {
+    if (error) {
+      reject(error);
+    } else {
+      const compiled = template(text);
+      resolve(new ReactIcon(icon.name, compiled({ icon })));
+    }
+  });
 });
 
 export default renderJsx;

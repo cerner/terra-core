@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import Dropdown from '../shared/_Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
+import MenuUtil from '../shared/_MenuUtil';
 
 const cx = classNames.bind(styles);
 
@@ -343,7 +344,10 @@ class Frame extends React.Component {
    * @param {event} event - The onKeyDown event.
    */
   handleKeyDown(event) {
-    const { value } = this.props;
+    const {
+      children, intl, onDeselect, value,
+    } = this.props;
+
     const { keyCode, target } = event;
 
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
@@ -353,7 +357,17 @@ class Frame extends React.Component {
       event.preventDefault();
       this.openDropdown(event);
     } else if (keyCode === KeyCode.KEY_BACK_SPACE && !this.state.searchValue && value.length > 0) {
-      this.props.onDeselect(value[value.length - 1]);
+      const lastOptionValue = value[value.length - 1];
+      const lastOption = MenuUtil.findByValue(children, lastOptionValue);
+      const lastOptionDisplay = lastOption ? lastOption.props.display : lastOptionValue;
+
+      if (this.visuallyHiddenComponent && this.visuallyHiddenComponent.current) {
+        this.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: lastOptionDisplay });
+      }
+
+      if (onDeselect) {
+        onDeselect(lastOptionValue);
+      }
     } else if (keyCode === KeyCode.KEY_ESCAPE) {
       this.closeDropdown();
     }

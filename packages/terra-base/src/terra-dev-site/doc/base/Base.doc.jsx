@@ -1,10 +1,9 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-import { name, version } from '../../../../package.json';
 
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first
+import { name, version } from '../../../../package.json';
+import BasePropsTable from '!terra-props-table-loader!../../../../src/Base';
 import BaseSrc from '!raw-loader!../../../../src/Base';
 
 const BaseExample = () => (
@@ -56,6 +55,7 @@ const DocPage = () => (
       {
         componentName: 'Base',
         componentSrc: BaseSrc,
+        componentProps: BasePropsTable,
       },
     ]}
   />

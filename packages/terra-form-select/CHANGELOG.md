@@ -4,6 +4,23 @@ ChangeLog
 Unreleased
 ----------
 
+5.29.0 - (September 6, 2019)
+------------------
+### Fixed
+* MultiSelect placeholder is no longer permanently visible
+
+### Added
+* Added AT announcement for onClick and backspace in MultiSelect and TagSelect
+* Props table markdown file import added to doc site page
+
+### Removed
+* Removed `inherit` fallback for `--terra-form-select-hover-color` CSS custom property
+
+5.28.0 - (September 3, 2019)
+------------------
+### Changed
+* Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
+
 5.27.0 - (August 21, 2019)
 ------------------
 ### Changed

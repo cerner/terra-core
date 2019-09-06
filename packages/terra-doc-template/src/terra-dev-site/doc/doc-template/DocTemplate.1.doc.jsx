@@ -1,13 +1,15 @@
 import React from 'react';
 import DocTemplate from '../../../../lib/DocTemplate';
 import readme from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-duplicates */
+import DocTemplatePropsTable from '!terra-props-table-loader!../../../../src/DocTemplate';
+import DocTemplateSrc from '!raw-loader!../../../../src/DocTemplate';
 import BadgeExamples from '../example/BadgeExamples';
 import BadgeExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/BadgeExamples';
-// Component Source
-import DocTemplateSrc from '!raw-loader!../../../../src/DocTemplate';
+
 /* eslint-disable-next-line import/no-self-import */
 import SelfSrc from '!raw-loader!../../../../src/terra-dev-site/doc/doc-template/DocTemplate.1.doc';
 
@@ -31,8 +33,9 @@ const DocTemplateExamples = () => (
     ]}
     propsTables={[
       {
-        componentName: 'DocTemplate',
+        componentName: 'Doc Template',
         componentSrc: DocTemplateSrc,
+        componentProps: DocTemplatePropsTable,
       },
     ]}
   />

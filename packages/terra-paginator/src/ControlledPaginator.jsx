@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import styles from './Paginator.module.scss';
 import { calculatePages, pageSet } from './_paginationUtils';
 

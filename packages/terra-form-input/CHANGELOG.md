@@ -3,7 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.25.0 - (September 6, 2019)
+------------------
+### Changed
+* Updated examples to import from the expected package instead of relative paths
+
+2.24.0 - (September 3, 2019)
+------------------
+### Fixed
+* Fixed issue where using aria-label as a custom prop the `<Textarea />` component was not passing through correctly.
+
 ### Added
+* Props table markdown file import added to doc site page
 * Added `ariaLabel` prop to improve accessibility.
 
 ### Changed

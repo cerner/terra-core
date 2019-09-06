@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../../terra-image/lib/Image';
+import Image from 'terra-image';
 import DemographicsBannerDisplay from '../../src/DemographicsBannerDisplay';
 
 it('renders a blank banner properly', () => {

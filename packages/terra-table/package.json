@@ -1,8 +1,8 @@
 {
-  "name": "terra-table-cell-grid",
+  "name": "terra-table",
   "main": "lib/index.js",
-  "version": "0.0.0",
-  "description": "The terra-table-cell-grid component provides user a way to render selectable data in a tabular format",
+  "version": "3.23.0",
+  "description": "The terra-table component provides user a way to render selectable data in a tabular format",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -10,8 +10,8 @@
   "keywords": [
     "Cerner",
     "Terra",
-    "terra-table-cell-grid",
-    "TableCellGrid",
+    "terra-table",
+    "Table",
     "UI"
   ],
   "author": "Cerner Corporation",
@@ -26,12 +26,12 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "keycode-js": "^1.0.4",
+    "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
     "terra-cell-grid": "^0.0.0",
     "terra-content-container": "^3.14.0",
-    "terra-doc-template": "^2.9.0",
-    "terra-icon": "^3.16.0",
+    "terra-doc-template": "^2.18.0",
+    "terra-icon": "^3.20.0",
     "terra-mixins": "^1.27.0"
   },
   "scripts": {

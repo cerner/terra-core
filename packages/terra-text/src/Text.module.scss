@@ -1,8 +1,11 @@
 :local {
   .text {
-    color: inherit;
     display: inline-block;
     font-weight: inherit;
+  }
+
+  .inherit-color {
+    color: inherit;
   }
 
   // Text Italics

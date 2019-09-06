@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import SectionHeaderSrc from '!raw-loader!../../../../src/SectionHeader';
-
 // Example Files
+import SectionHeaderPropsTable from '!terra-props-table-loader!../../../../src/SectionHeader';
+import SectionHeaderSrc from '!raw-loader!../../../../src/SectionHeader';
 import DefaultSectionHeader from '../example/DefaultSectionHeader';
 import DefaultSectionHeaderSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSectionHeader';
 import LongTitleSectionHeader from '../example/LongTitleSectionHeader';
@@ -68,6 +68,7 @@ const DocPage = () => (
       {
         componentName: 'Section Header',
         componentSrc: SectionHeaderSrc,
+        componentProps: SectionHeaderPropsTable,
       },
     ]}
   />

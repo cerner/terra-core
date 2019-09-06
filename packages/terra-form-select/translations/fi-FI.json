@@ -6,6 +6,7 @@
   "Terra.form.select.maxSelectionOption": "Valittujen {text} kohtien enimmäismäärä",
   "Terra.form.select.noResults": "Ei ole vastaavia tuloksia \"{text}\"",
   "Terra.form.select.selectedText": "{text} Valittu.",
+  "Terra.form.select.unselectedText": "{text} Valitsematon.",
   "Terra.form.select.selected": "Valittu.",
   "Terra.form.select.unselected": "Valitsematon.",
   "Terra.form.select.disabled": "Liikuntarajoitteinen.",
