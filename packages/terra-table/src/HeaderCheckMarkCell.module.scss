@@ -1,6 +1,6 @@
 :local {
   .header-cell {
-    border-right: var(--terra-table-cell-grid-header-check-cell-border-right, 1px solid #ccc);
+    border-right: var(--terra-table-header-check-cell-border-right, 1px solid #ccc);
     flex: 0 0 auto;
     outline: none;
     position: relative;
@@ -63,16 +63,16 @@
   }
 
   [data-table-padding='standard'] .container {
-    padding-bottom: var(--terra-table-cell-grid-header-check-cell-standard-padding-bottom, 0.5rem);
-    padding-left: var(--terra-table-cell-grid-header-check-cell-standard-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-cell-grid-header-check-cell-standard-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-cell-grid-header-check-cell-standard-padding-top, 0.5rem);
+    padding-bottom: var(--terra-table-header-check-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-header-check-cell-standard-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-header-check-cell-standard-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-header-check-cell-standard-padding-top, 0.5rem);
   }
 
   [data-table-padding='compact'] .container {
-    padding-bottom: var(--terra-table-cell-grid-header-check-cell-compact-padding-bottom, 0.35715rem);
-    padding-left: var(--terra-table-cell-grid-header-check-cell-compact-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-cell-grid-header-check-cell-compact-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-cell-grid-header-check-cell-compact-padding-top, 0.35715rem);
+    padding-bottom: var(--terra-table-header-check-cell-compact-padding-bottom, 0.35715rem);
+    padding-left: var(--terra-table-header-check-cell-compact-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-header-check-cell-compact-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-header-check-cell-compact-padding-top, 0.35715rem);
   }
 }
