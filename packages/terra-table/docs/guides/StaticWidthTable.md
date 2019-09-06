@@ -1,4 +1,4 @@
-# Terra TableCellGrid - Static Width Columns
+# Terra Table - Static Width Columns
 
 ## Define Width Array
 The easiest method of synchronizing your Cells and HeaderCells is to first define width prop values by index.
@@ -12,56 +12,56 @@ The easiest method of synchronizing your Cells and HeaderCells is to first defin
 + ];
 ```
 
-## Create CellGrid and Cell Generation Functions
-Add CellGrids
+## Create Row and Cell Generation Functions
+Add Rows
 
 ```diff
-+ const createCellGrid = itemData => (
-+   <CellGrid key={itemData.key}>
-+     {createCellsForCellGrid(itemData.cells)}
-+   </CellGrid>
++ const createRow = itemData => (
++   <Row key={itemData.key}>
++     {createCellsForRow(itemData.cells)}
++   </Row>
 + );
 
-+ const createCellGrids = data => data.map(childItem => createCellGrid(childItem));
++ const createRows = data => data.map(childItem => createRow(childItem));
 ```
 Add Cells
 
 ```diff
 + const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[index]}>{cell.title}</Cell>;
 
-+ const createCellsForCellGrid = cells => cells.map((cell, index) => createCell(cell, index));
++ const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
 ```
 Define the functional component
 ```diff
 + const StaticWidthTable = () => (
-+   <TableCellGrid
++   <Table
 +     paddingStyle="standard"
-+     headerCellGrid={(
-+       <HeaderCellGrid>
++     headerRow={(
++       <HeaderRow>
 +         <HeaderCell isPadded key="cell-0" width={widths[0]}>60px</HeaderCell>
 +         <HeaderCell isPadded key="cell-1" width={widths[1]}>45px</HeaderCell>
 +         <HeaderCell isPadded key="cell-2" width={widths[2]}>5rem</HeaderCell>
 +         <HeaderCell isPadded key="cell-3" width={widths[3]}>120px</HeaderCell>
-+       </HeaderCellGrid>
++       </HeaderRow>
 +     )}
 +   >
-+     {createCellGrids(mockData)}
-+   </TableCellGrid>
++     {createRows(mockData)}
++   </Table>
 + );
 ```
-Set the widths of the header cells and CellGrid cells by applying the width array by index.
+Set the widths of the header cells and Row cells by applying the width array by index.
 ```diff
 - const createCell = (cell, index) => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 + const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[index]}>{cell.title}</Cell>;
 
-- const createCellsForCellGrid = cells => cells.map((cell, index) => createCell(cell, index));
-+ const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
+- const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
++ const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const StaticWidthTable = () => (
-  <TableCellGrid
+  <Table
     paddingStyle="standard"
-    headerCellGrid={(
-      <HeaderCellGrid>
+    headerRow={(
+      <HeaderRow>
 -       <HeaderCell isPadded key="cell-0">60px</HeaderCell>
 -       <HeaderCell isPadded key="cell-1">45px</HeaderCell>
 -       <HeaderCell isPadded key="cell-2">5rem</HeaderCell>
@@ -70,11 +70,11 @@ const StaticWidthTable = () => (
 +       <HeaderCell isPadded key="cell-1" width={widths[1]}>45px</HeaderCell>
 +       <HeaderCell isPadded key="cell-2" width={widths[2]}>5rem</HeaderCell>
 +       <HeaderCell isPadded key="cell-3" width={widths[3]}>120px</HeaderCell>
-      </HeaderCellGrid>
+      </HeaderRow>
     )}
   >
-    {createCellGrids(mockData)}
-  </TableCellGrid>
+    {createRows(mockData)}
+  </Table>
 );
 ```
 Using these steps we get the following example:

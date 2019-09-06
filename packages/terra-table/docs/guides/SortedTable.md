@@ -1,4 +1,4 @@
-# Terra TableCellGrid - Implementing a Sorted TableCellGrid
+# Terra Table - Implementing a Sorted Table
 
 As table cell content is dynamic and the types of sorting can vary, consumers need to handle the state of their own sorting. The following guide lays out an example of managing sorting and state within a table implementation. There are further optimizations that can be made given an individual implementation of a data set, but this should serve as a framework for that.
 
@@ -9,7 +9,7 @@ The state of the sort column needs to be managed for the table in a HOC. In this
 ```diff
 + const [sortColumn, setSortColumn] = useState(null);
 ```
-Next creating an event handler callback method to pass to the table cell grid's `onSelect` prop. The `onSelect` will return the metaData prop passed it each header cell.
+Next creating an event handler callback method to pass to the table row's `onSelect` prop. The `onSelect` will return the metaData prop passed it each header cell.
 ```diff
 +  const handleSortClick = (event, metaData) => {
 
@@ -39,7 +39,7 @@ Settting state will trigger another render. So in the render method we need gene
 +  const createHeaderCell = (key, title) => {
 +    return (
 +      <HeaderCell
-+        key={itemData.key}
++        key={rowData.key}
 +        isPadded
 +      >
 +        {title}
@@ -119,7 +119,7 @@ In this example a simple object sort is parses the data, followed by a check for
 +   return sortColumn.direction === 'asc' ? dataCopy : dataCopy.reverse();
 + };
 ```
-Next we fill in the static methods for the example table cell grids.
+Next we fill in the static methods for the example table rows.
 ```diff
 + const columns = ['column-0', 'column-1', 'column-2'];
 
@@ -129,30 +129,30 @@ Next we fill in the static methods for the example table cell grids.
 +   </Cell>
 + );
 
-+ const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
++ const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-+ const createCellGrid = itemData => <CellGrid key={itemData.key}>{createCellsForCellGrid(itemData.cells)}</CellGrid>;
++ const createRow = rowData => <Row key={rowData.key}>{createCellsForRow(rowData.cells)}</Row>;
 ```
-Then we can implement a method to loop through our data and create the table cell grids with our methods and call it from our render method. 
+Then we can implement a method to loop through our data and create the table rows with our methods and call it from our render method. 
 ```diff
-+ const createCellGrids = (data) => {
++ const createRows = (data) => {
 +   const sortedData = sortData(data, sortColumn);
-+   return sortedData.map(childItem => createCellGrid(childItem));
++   return sortedData.map(childItem => createRow(childItem));
 + };
 
   return (
-+   <TableCellGrid
++   <Table
 +     paddingStyle="standard"
-+     headerCellGrid={(
-+       <HeaderCellGrid>
++     headerRow={(
++       <HeaderRow>
 +         {this.createHeaderCell('column-0', 'Breakfast')}
 +         {this.createHeaderCell('column-1', 'Animals')}
 +         {this.createHeaderCell('column-2', 'Flatware')}
-+       </HeaderCellGrid>
++       </HeaderRow>
 +     )}
 +   >
-+     {this.createCellGrids(mockData)}
-+   </TableCellGrid>
++     {this.createRows(mockData)}
++   </Table>
   );
 ```
 Using these steps we get the following example:

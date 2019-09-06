@@ -1,5 +1,5 @@
 Terra.describeViewports('Table', ['medium'], () => {
-  describe('TableCellGrid Test', () => {
+  describe('Table Test', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/table'));
     Terra.it.validatesElement();
   });
@@ -26,7 +26,7 @@ Terra.describeViewports('Table', ['medium'], () => {
 
   describe('Row Test', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/row'));
-    Terra.it.validatesElement('CellGrid');
+    Terra.it.validatesElement('Table');
 
     it('Hover', () => browser.moveToObject('#selectable-row'));
 

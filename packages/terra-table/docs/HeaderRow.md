@@ -1,23 +1,23 @@
 # Header Row
 
-The HeaderCRow is a sub component that groups header cells passed through children. Each cell grid handles it's own selection state through props. Can be set to synchronize space with Rows using check mark or chevron style selection.
+The HeaderRow is a sub component that groups header cells passed through children. Can be set to synchronize space with Rows using check mark or chevron style selection.
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import { HeaderCellGrid, CellGrid } from 'terra-table-cell-grid';
+import { HeaderRow, HeaderCell } from 'terra-table';
 
-  <HeaderCellGrid
+  <HeaderRow
     key="unique-react-key"
   >
-    <CellGrid>
+    <HeaderCell>
       Cell Content
-    </CellGrid>
-    <CellGrid>
+    </HeaderCell>
+    <HeaderCell>
       Cell Content
-    </CellGrid>
-  </HeaderCellGrid>
+    </HeaderCell>
+  </HeaderRow>
 ```
 
 ## Component Features

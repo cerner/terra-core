@@ -1,6 +1,6 @@
 # Row
 
-The Row is a sub component that groups table cells passed through children. Each row handles it's own selection state through props. The onSelect function that can be passed to the row will return the metaData associated to the cell grid. The metaData allows for greater control of state with the ability to associate any indicator or function with the row.
+The Row is a sub component that groups table cells passed through children. Each row handles it's own selection state through props. The onSelect function that can be passed to the row will return the metaData associated to the row. The metaData allows for greater control of state with the ability to associate any indicator or function with the row.
 
 ## Usage
 

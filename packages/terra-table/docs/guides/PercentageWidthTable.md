@@ -1,4 +1,4 @@
-# Terra TableCellGrid - Percentage Width Columns
+# Terra Table - Percentage Width Columns
 
 ## Define Width Array
 The easiest method of synchronizing your Cells and HeaderCells is to first define width prop values by index.
@@ -12,56 +12,56 @@ The easiest method of synchronizing your Cells and HeaderCells is to first defin
 + ];
 ```
 
-## Create CellGrid and Cell Generation Functions
-Add CellGrids
+## Create ROW and Cell Generation Functions
+Add Rows
 
 ```diff
-+ const createCellGrid = itemData => (
-+   <CellGrid key={itemData.key}>
-+     {createCellsForCellGrid(itemData.cells)}
-+   </CellGrid>
++ const createRow = rowData => (
++   <Row key={rowData.key}>
++     {createCellsForRow(rowData.cells)}
++   </Row>
 + );
 
-+ const createCellGrids = data => data.map(childItem => createCellGrid(childItem));
++ const createRows = data => data.map(childItem => createRow(childItem));
 ```
 Add Cells
 
 ```diff
 + const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[index]}>{cell.title}</Cell>;
 
-+ const createCellsForCellGrid = cells => cells.map((cell, index) => createCell(cell, index));
++ const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
 ```
 Define the functional component
 ```diff
 + const PercentageWidthTable = () => (
-+   <TableCellGrid
++   <Table
 +     paddingStyle="standard"
-+     headerCellGrid={(
-+       <HeaderCellGrid>
++     headerRow={(
++       <HeaderRow>
 +         <HeaderCell isPadded key="cell-0">20%</HeaderCell>
 +         <HeaderCell isPadded key="cell-1">40%</HeaderCell>
 +         <HeaderCell isPadded key="cell-2">10%</HeaderCell>
 +         <HeaderCell isPadded key="cell-3">30%</HeaderCell>
-+       </HeaderCellGrid>
++       </HeaderRow>
 +     )}
 +   >
-+     {createCellGrids(mockData)}
-+   </TableCellGrid>
++     {createRows(mockData)}
++   </Table>
 + );
 ```
-Set the widths of the header cells and cell grid cells by applying the width array by index.
+Set the widths of the header cells and row cells by applying the width array by index.
 ```diff
 - const createCell = (cell, index) => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 + const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[index]}>{cell.title}</Cell>;
 
-- const createCellsForCellGrid = cells => cells.map((cell, index) => createCell(cell, index));
-+ const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
+- const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
++ const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const PercentageWidthTable = () => (
-  <TableCellGrid
+  <Table
     paddingStyle="standard"
-    headerCellGrid={(
-      <HeaderCellGrid>
+    headerRow={(
+      <HeaderRow>
 -       <HeaderCell isPadded key="cell-0">20%</HeaderCell>
 -       <HeaderCell isPadded key="cell-1">40%</HeaderCell>
 -       <HeaderCell isPadded key="cell-2">10%</HeaderCell>
@@ -70,11 +70,11 @@ const PercentageWidthTable = () => (
 +       <HeaderCell isPadded key="cell-1" width={widths[1]}>40%</HeaderCell>
 +       <HeaderCell isPadded key="cell-2" width={widths[2]}>10%</HeaderCell>
 +       <HeaderCell isPadded key="cell-3" width={widths[3]}>30%</HeaderCell>
-      </HeaderCellGrid>
+      </HeaderRow>
     )}
   >
-    {createCellGrids(mockData)}
-  </TableCellGrid>
+    {createRows(mockData)}
+  </Table>
 );
 ```
 Using these steps we get the following example:

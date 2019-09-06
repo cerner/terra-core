@@ -1,6 +1,6 @@
 import React from 'react';
 import Subsection from '../../src/Subsection';
-import CellGrid from '../../src/CellGrid';
+import Row from '../../src/Row';
 import Cell from '../../src/Cell';
 
 // Snapshot test
@@ -11,12 +11,12 @@ it('should render a default subsection', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render a subsection with a cellgrid', () => {
+it('should render a subsection with a row', () => {
   const shallowComponent = shallow(
     <Subsection title="test">
-      <CellGrid>
+      <Row>
         <Cell />
-      </CellGrid>
+      </Row>
     </Subsection>,
   );
   expect(shallowComponent).toMatchSnapshot();

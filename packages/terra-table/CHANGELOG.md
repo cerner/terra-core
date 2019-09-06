@@ -8,7 +8,7 @@ Unreleased
 * Removed Component `SingleSelectTableRows` - No longer supported this uncontrolled variant of table.
 * Removed Component `MultiSelectTableRows` - No longer supported this uncontrolled variant of table.
 * Removed Component `SelectableTableRows` - Selection by index is no longer provided.
-* Removed Utils `TableUtils` - Utils are now internal, and no longer exposed.
+* Removed Component `TableRows` - body element now provided by default within the table.
 
 3.25.0 - (September 6, 2019)
 ------------------

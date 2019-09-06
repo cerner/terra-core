@@ -1,4 +1,4 @@
-# Terra TableCellGrid - Sections with Subsections
+# Terra Table - Sections with Subsections
 
 With the inclusion of sections in the table, there are two recommended patterns for created nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to only use collapsible sections or collapsible subsections in a table, but not both.
 
@@ -91,20 +91,20 @@ Finally we need to check if the section is collapsed. As we support IE10 & 11, w
     );
   };
 ```
-We can then implement the unpack of our data into our cell grid cells.
+We can then implement the unpack of our data into our row cells.
 ```diff
 + const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
-+ const createCellsForCellGrid = cells => cells.map(cell => createCell(cell));
++ const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-+ const createCellGrid = cellGridData => <CellGrid key={cellGridData.key}>{createCellsForCellGrid(cellGridData.cells)}</CellGrid>;
++ const createRow = rowData => <Row key={rowData.key}>{createCellsForRow(rowData.cells)}</Row>;
 
 + const createSubsection = subsectionData => (
 +   <Subsection
 +     key={subsectionData.key}
 +     title={subsectionData.title}
 +   >
-+     {subsectionData.childItems.map(childItem => createCellGrid(childItem))}
++     {subsectionData.childItems.map(childItem => createRow(childItem))}
 +   </Subsection>
 + );
 ```
@@ -113,18 +113,18 @@ Then we can implement a method to loop through our data and create the section w
 +  const createSections = data => data.map(section => createSection(section));
 
   return (
-+   <TableCellGrid
++   <Table
 +     paddingStyle="standard"
-+     headerCellGrid={(
-+       <HeaderCellGrid>
++     headerRow={(
++       <HeaderRow>
 +         <HeaderCell isPadded>Column 0</HeaderCell>
 +         <HeaderCell isPadded>Column 1</HeaderCell>
 +         <HeaderCell isPadded>Column 2</HeaderCell>
-+        </HeaderCellGrid>
++        </HeaderRow>
 +      )}
 +    >
 +      {this.createSections(mockData)}
-+    </TableCellGrid>
++    </Table>
   );
 ```
 Using these steps we get the following example:

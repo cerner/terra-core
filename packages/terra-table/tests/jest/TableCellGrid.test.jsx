@@ -1,44 +1,44 @@
 import React from 'react';
-import TableCellGrid from '../../src/TableCellGrid';
+import Table from '../../src/Table';
 
 // Snapshot test
-it('should render a default table cell grid', () => {
+it('should render a default table', () => {
   const shallowComponent = shallow(
-    <TableCellGrid />,
+    <Table />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render a table cell grid with standard padding', () => {
+it('should render a table with standard padding', () => {
   const shallowComponent = shallow(
-    <TableCellGrid
+    <Table
       paddingStyle="standard"
     />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render a table cell grid with compact padding', () => {
+it('should render a table with compact padding', () => {
   const shallowComponent = shallow(
-    <TableCellGrid
+    <Table
       paddingStyle="compact"
     />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render a table cell grid with fill style', () => {
+it('should render a table with fill style', () => {
   const shallowComponent = shallow(
-    <TableCellGrid
+    <Table
       fill
     />,
   );
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render a table cell grid with header/footer nodes', () => {
+it('should render a table with header/footer nodes', () => {
   const shallowComponent = shallow(
-    <TableCellGrid
+    <Table
       headerNode={<p>header</p>}
       footerNode={<p>footer</p>}
     />,
@@ -46,9 +46,9 @@ it('should render a table cell grid with header/footer nodes', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render a table cell grid with refCallback', () => {
+it('should render a table with refCallback', () => {
   const shallowComponent = shallow(
-    <TableCellGrid
+    <Table
       refCallback={jest.fn()}
     />,
   );
