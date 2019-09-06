@@ -1,31 +1,58 @@
 Terra.describeViewports('Table', ['medium'], () => {
-  describe('Non Striped Table', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/no-striped-table'));
+  describe('TableCellGrid Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/table'));
     Terra.it.validatesElement();
   });
 
-  describe('Striped', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/striped-table'));
+  describe('HeaderFooter Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/header-footer'));
     Terra.it.validatesElement();
   });
 
-  describe('Non Padded Table', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/no-padding-table'));
+  describe('Padding Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/padding'));
     Terra.it.validatesElement();
   });
 
-  describe('Sort Indicator', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table-with-sort-indicator'));
+  describe('HeaderRow Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/header-row'));
     Terra.it.validatesElement();
   });
 
-  describe('Single Row', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/single-row-table'));
+  describe('HeaderCell Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/header-cell'));
     Terra.it.validatesElement();
   });
 
-  describe('No Rows', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table-no-rows'));
+  describe('Row Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/row'));
+    Terra.it.validatesElement('CellGrid');
+
+    it('Hover', () => browser.moveToObject('#selectable-row'));
+
+    Terra.it.validatesElement('Table-Hover');
+  });
+
+  describe('Cell Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/cell'));
     Terra.it.validatesElement();
+  });
+
+  describe('Section Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/section'));
+    Terra.it.validatesElement('TableSection');
+
+    it('Hover', () => browser.moveToObject('#test-header'));
+
+    Terra.it.validatesElement('TableSection-Hover');
+  });
+
+  describe('Subsection Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/subsection'));
+    Terra.it.validatesElement('TableSubsection');
+
+    it('Hover', () => browser.moveToObject('#test-header'));
+
+    Terra.it.validatesElement('TableSubsection-Hover');
   });
 });

@@ -1,35 +1,18 @@
-# Terra Table
+# Terra Table Cell Grid
 
 
-[![NPM version](https://badgen.net/npm/v/terra-table)](https://www.npmjs.org/package/terra-table)
+[![NPM version](https://badgen.net/npm/v/terra-flex-table)](https://www.npmjs.org/package/terra-table-cell-grid)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The Terra Table is a structural component to arrange content within table.
+The terra-table-cell-grid component provides user a way to render data in a tabular format.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-table-cell-grid/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-table`
-
-<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
-## Peer Dependencies
-
-<details>
-<summary>View information on this component's peer dependencies.</summary>
-
-This component requires the following peer dependencies be installed in your app for the component to properly function.
-
-| Peer Dependency | Version |
-|-|-|
-| react | ^16.8.5 |
-| react-dom | ^16.8.5 |
-
-
-</details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-table-cell-grid`
 
 ## LICENSE
 

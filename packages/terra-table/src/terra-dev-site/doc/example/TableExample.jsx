@@ -5,7 +5,7 @@ import Table, {
 } from 'terra-table';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const StripedTable = () => (
+const DefaultTable = () => (
   <Table
     id="Table"
     headerRow={(
@@ -21,7 +21,7 @@ const StripedTable = () => (
       <Cell key="ADDRESS">123 Adams Drive</Cell>
       <Cell key="PHONE_NUMBER">111-222-3333</Cell>
     </Row>
-    <Row key="PERSON_1" isStriped>
+    <Row key="PERSON_1">
       <Cell key="NAME">Jane Smith</Cell>
       <Cell key="ADDRESS">321 Drive Street</Cell>
       <Cell key="PHONE_NUMBER">111-222-3333</Cell>
@@ -34,4 +34,4 @@ const StripedTable = () => (
   </Table>
 );
 
-export default StripedTable;
+export default DefaultTable;

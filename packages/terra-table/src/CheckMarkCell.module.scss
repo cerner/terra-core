@@ -1,0 +1,78 @@
+:local {
+  .cell {
+    border: 0;
+    flex: 0 0 auto;
+    outline: none;
+    position: relative;
+    
+    &:last-of-type {
+      border-right: 0;
+    }
+  }
+
+  .checkmark {
+    border: 1px solid transparent;
+    border-radius: 3px; // TODO: Need expected sizing
+    color: transparent;
+    padding: 1px;
+    position: relative;
+  }
+
+  .is-selected {
+    color: #000;
+  }
+
+  .is-selectable .checkmark {
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+
+  .is-selectable:hover,
+  .is-selectable:focus {
+    .container {
+      &::before {
+        background-color: #c0bdbd; // TODO: Need hover styling
+        border-radius: 100%;
+        content: '';
+        height: 24px; // TODO: Need expected sizing
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 24px; // TODO: Need expected sizing
+      }
+    }
+  }
+
+  .is-selectable[data-cell-show-focus='true']:focus {
+    /* stylelint-disable max-nesting-depth */
+    &:hover {
+      .container {
+        &::before {
+          background-color: #e75959; // TODO: Need hover styling
+        }
+      }
+    }
+    /* stylelint-enable max-nesting-depth */
+
+    .container {
+      &::before {
+        background-color: #bbb2f0; // TODO: Need focus styling
+      }
+    }
+  }
+
+  [data-table-padding='standard'] .container {
+    padding-bottom: var(--terra-table-check-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-check-cell-standard-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-check-cell-standard-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-check-cell-standard-padding-top, 0.5rem);
+  }
+
+  [data-table-padding='compact'] .container {
+    padding-bottom: var(--terra-table-check-cell-compact-padding-bottom, 0.25rem);
+    padding-left: var(--terra-table-check-cell-compact-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-check-cell-compact-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-check-cell-compact-padding-top, 0.25rem);
+  }
+}

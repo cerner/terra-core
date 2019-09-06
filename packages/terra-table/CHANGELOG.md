@@ -4,11 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Breaking Changes
-* terra-table is now a read-only structural html table.
-* Removed Component `SingleSelectList` - No longer supported this uncontrolled variant of list.
-* Removed Component `MultiSelectList` - No longer supported this uncontrolled variant of list.
-* Removed Component `SelectableList` - Selection no longer supported.
-* Removed Utils `TableUtils` - Selection no longer supported.
+* terra-table now only provides controlled variants.
+* Removed Component `SingleSelectTableRows` - No longer supported this uncontrolled variant of table.
+* Removed Component `MultiSelectTableRows` - No longer supported this uncontrolled variant of table.
+* Removed Component `SelectableTableRows` - Selection by index is no longer provided.
+* Removed Utils `TableUtils` - Utils are now internal, and no longer exposed.
 
 3.23.0 - (August 21, 2019)
 ------------------

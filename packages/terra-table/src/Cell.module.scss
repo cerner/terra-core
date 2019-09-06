@@ -1,0 +1,27 @@
+:local {
+  .cell {
+    border: 0;
+    flex: 1 1 0;
+    text-align: left;
+    vertical-align: top;
+    word-break: break-word;
+  
+    &:last-of-type {
+      border-right: 0;
+    }
+  }
+
+  [data-table-padding='standard'] .container {
+    padding-bottom: var(--terra-table-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-cell-standard-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-standard-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-standard-padding-top, 0.5rem);
+  }
+
+  [data-table-padding='compact'] .container {
+    padding-bottom: var(--terra-table-cell-compact-padding-bottom, 0.25rem);
+    padding-left: var(--terra-table-cell-compact-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-cell-compact-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-cell-compact-padding-top, 0.25rem);
+  }
+}
