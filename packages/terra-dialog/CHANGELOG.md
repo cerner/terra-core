@@ -6,6 +6,8 @@ Unreleased
 ### Changed
 * Updated `--terra-dialog-header-close-icon-margin-top` variable to only apply in Microsoft browsers
 
+2.25.0 - (September 6, 2019)
+------------------
 ### Added
 * Props table markdown file import added to doc site page
 

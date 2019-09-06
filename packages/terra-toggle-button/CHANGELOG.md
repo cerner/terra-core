@@ -6,6 +6,8 @@ Unreleased
 ### Changed
 * Inline SVG aligned for IE and wdio screenshots Updated.
 
+3.22.0 - (September 6, 2019)
+------------------
 ### Added
 * Props table markdown file import added to doc site page
 
