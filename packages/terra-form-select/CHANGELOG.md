@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.29.0 - (September 6, 2019)
+------------------
 ### Fixed
 * MultiSelect placeholder is no longer permanently visible
 

@@ -3,9 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.18.0 - (September 6, 2019)
+------------------
 ### Added
 * Props table markdown file import added to doc site page
-
 
 4.17.0 - (September 3, 2019)
 ------------------
