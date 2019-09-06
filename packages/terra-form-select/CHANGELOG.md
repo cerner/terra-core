@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* MultiSelect placeholder is no longer permanently visible
+
 ### Added
 * Added AT announcement for onClick and backspace in MultiSelect and TagSelect
 * Props table markdown file import added to doc site page
