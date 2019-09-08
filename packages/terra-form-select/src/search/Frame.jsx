@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import * as KeyCode from 'keycode-js';
-import Dropdown from '../shared/_Dropdown';
+import Dropdown from './Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
@@ -180,7 +180,6 @@ class Frame extends React.Component {
       onChange: this.handleSearch,
       onFocus: this.handleInputFocus,
       onBlur: this.handleInputBlur,
-      onMouseDown: this.handleInputMouseDown,
       'aria-label': this.ariaLabel(),
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
@@ -234,23 +233,20 @@ class Frame extends React.Component {
 
       // Allows time for state update to render select menu DOM before shifting focus to it
       setTimeout(() => {
-        if (document.querySelector(this.selectMenu)) {
-          document.querySelector(this.selectMenu).focus();
+        const selectMenu = document.querySelector(this.selectMenu);
+        if (selectMenu) {
+          selectMenu.focus();
         }
       }, 10);
       return;
     }
 
-    if (this.input) {
-      this.input.focus();
-    } else {
-      // Allows time for state update to render select menu DOM before shifting focus to it
-      setTimeout(() => {
-        if (document.querySelector(this.selectMenu)) {
-          document.querySelector(this.selectMenu).focus();
-        }
-      }, 10);
-    }
+    // Allows time for state update to render select menu DOM before shifting focus to it
+    setTimeout(() => {
+      if (document.querySelector(this.selectMenu)) {
+        document.querySelector(this.selectMenu).focus();
+      }
+    }, 10);
 
     this.setState({ isOpen: true, isPositioned: false });
   }
@@ -273,17 +269,17 @@ class Frame extends React.Component {
    */
   handleBlur(event) {
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
-    if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
-      return;
-    }
+    // if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
+    //   return;
+    // }
 
-    this.setState({ isFocused: false });
+    // this.setState({ isFocused: false });
 
-    this.closeDropdown();
+    // this.closeDropdown();
 
-    if (this.props.onBlur) {
-      this.props.onBlur(event);
-    }
+    // if (this.props.onBlur) {
+    //   this.props.onBlur(event);
+    // }
   }
 
   /**
@@ -306,16 +302,12 @@ class Frame extends React.Component {
    * @param {event} event - The onKeyDown event.
    */
   handleKeyDown(event) {
-    const { keyCode, target } = event;
+    const { keyCode } = event;
 
-    if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
-      event.preventDefault();
-      this.openDropdown(event);
-    } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
-      event.preventDefault();
-      this.openDropdown(event);
-    } else if (keyCode === KeyCode.KEY_ESCAPE) {
+    if (keyCode === KeyCode.KEY_ESCAPE || keyCode === KeyCode.KEY_TAB) {
       this.closeDropdown();
+    } else {
+      this.openDropdown(event);
     }
   }
 
@@ -326,7 +318,7 @@ class Frame extends React.Component {
   handleMouseDown(event) {
     // Preventing default events stops the search input from losing focus.
     // The default variant has no search input therefore the mouse down gives the component focus.
-    event.preventDefault();
+    // event.preventDefault();
     this.openDropdown(event);
   }
 
@@ -368,9 +360,9 @@ class Frame extends React.Component {
   handleToggleButtonMouseDown() {
     if (this.state.isOpen) {
       this.closeDropdown();
-      if (this.input) {
-        this.input.focus();
-      }
+      // if (this.input) {
+      //   this.input.focus();
+      // }
     }
   }
 
@@ -379,6 +371,7 @@ class Frame extends React.Component {
    * @param {event} event - The input change event.
    */
   handleSearch(event) {
+    const { onSearch } = this.props;
     const searchValue = event.target.value;
 
     this.setState({
@@ -387,9 +380,11 @@ class Frame extends React.Component {
       searchValue,
     });
 
-    if (this.props.onSearch) {
-      this.props.onSearch(searchValue);
+    if (onSearch) {
+      onSearch(searchValue);
     }
+
+    // this.positionDropdown();
   }
 
   /**
@@ -398,6 +393,8 @@ class Frame extends React.Component {
    * @param {ReactNode} option - The option that was selected.
    */
   handleSelect(value, option) {
+    const { onSelect } = this.props;
+
     this.setState({
       searchValue: '',
       hasSearchChanged: false,
@@ -405,8 +402,8 @@ class Frame extends React.Component {
       isAbove: false,
     });
 
-    if (this.props.onSelect) {
-      this.props.onSelect(value, option);
+    if (onSelect) {
+      onSelect(value, option);
     }
   }
 
@@ -551,6 +548,7 @@ class Frame extends React.Component {
       isOpen,
       searchValue,
       isPositioned,
+      hasSearchChanged,
     } = this.state;
 
     const selectClasses = cx([
@@ -581,7 +579,6 @@ class Frame extends React.Component {
       visuallyHiddenComponent: this.visuallyHiddenComponent,
       onSelect: this.handleSelect,
       onRequestClose: this.closeDropdown,
-      searchValue,
       input: this.input,
       select: this.select,
       clearOptionDisplay,
@@ -593,12 +590,16 @@ class Frame extends React.Component {
       isAbove,
       ariaLabel: computedAriaLabel,
       ariaDescribedBy,
+      searchValue: hasSearchChanged ? searchValue : display,
+      onSearch: this.handleSearch,
+      required,
+      placeholder,
     };
 
     return (
       <div
         {...customProps}
-        role={this.role()}
+        role="combobox"
         data-terra-select-combobox
         aria-controls={!disabled && isOpen ? 'terra-select-menu' : undefined}
         aria-disabled={!!disabled}

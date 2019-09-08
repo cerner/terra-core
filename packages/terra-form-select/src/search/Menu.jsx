@@ -9,7 +9,7 @@ import ClearOption from '../shared/_ClearOption';
 import NoResults from '../shared/_NoResults';
 import MenuUtil from '../shared/_MenuUtil';
 import SharedUtil from '../shared/_SharedUtil';
-import styles from '../shared/_Menu.module.scss';
+import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -72,6 +72,9 @@ const propTypes = {
   maxHeight: PropTypes.number,
   ariaLabel: PropTypes.string.isRequired,
   ariaDescribedBy: PropTypes.string,
+  onSearch: PropTypes.func.isRequired,
+  required: PropTypes.bool,
+  placeholder: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -91,17 +94,19 @@ const defaultProps = {
   isInvalid: false,
   maxHeight: undefined,
   ariaDescribedBy: undefined,
+  required: false,
 };
 
 class Menu extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.menuInputRef = React.createRef(null);
 
     this.clearScrollTimeout = this.clearScrollTimeout.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleInputKeyDown = this.handleInputKeyDown.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.scrollIntoView = this.scrollIntoView.bind(this);
     this.clone = this.clone.bind(this);
@@ -147,7 +152,13 @@ class Menu extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyDown);
+    // document.addEventListener('keydown', this.handleKeyDown);
+
+    const { current: input } = this.menuInputRef;
+
+    if (input) {
+      input.focus();
+    }
     /**
      * Without this detection for ontouchstart and the early return, VoiceOver on iOS will read the
      * first option twice when the menu is opened. First due to aria-live update in componentDidMount
@@ -171,7 +182,7 @@ class Menu extends React.Component {
         this.props.input.focus();
       }
     }
-    document.removeEventListener('keydown', this.handleKeyDown);
+    // document.removeEventListener('keydown', this.handleKeyDown);
   }
 
   isActiveSelected() {
@@ -373,6 +384,15 @@ class Menu extends React.Component {
     }
   }
 
+  handleInputKeyDown(event) {
+    event.preventDefault();
+    const { current: input } = this.menuInputRef;
+
+    if (input) {
+      input.focus();
+    }
+  }
+
   /**
    * Scrolls the active option into view.
    * Options already in view will not scroll.
@@ -393,6 +413,25 @@ class Menu extends React.Component {
     } else if (optionRect.bottom > dropdownRect.bottom) {
       activeOption.scrollIntoView(false);
     }
+  }
+
+  handleSearch(event) {
+    event.preventDefault();
+    const { onSearch } = this.props;
+    const searchValue = event.target.value;
+
+    console.warn('menu search', { searchValue });
+    // this.setState({
+    //   isOpen: true,
+    //   hasSearchChanged: true,
+    //   searchValue,
+    // });
+
+    if (onSearch) {
+      onSearch(searchValue);
+    }
+
+    // this.positionDropdown();
   }
 
   render() {
@@ -417,7 +456,16 @@ class Menu extends React.Component {
     //   </ul>
     // );
     const {
-      isAbove, isInvalid, intl, maxHeight, ariaLabel, ariaDescribedBy,
+      isAbove,
+      isInvalid,
+      intl,
+      maxHeight,
+      ariaLabel,
+      ariaDescribedBy,
+      placeholder,
+      required,
+      searchValue,
+      onSearch,
     } = this.props;
 
     const { active } = this.state;
@@ -435,24 +483,30 @@ class Menu extends React.Component {
 
     /* eslint-disable react/forbid-dom-props */
     return (
-      <div role="menu" id={menuId} className={menuClasses}>
+      <div role="menu" tabIndex="-1" id={menuId} className={menuClasses} onKeyDown={this.handleKeyDown}>
         <div
-          role="combobox"
+          role="application"
           className={cx('display')}
           aria-controls={listboxId}
-          aria-expanded="true"
+          // aria-expanded="true"
           aria-owns={listboxId}
-          onKeyDown={this.handleKeyDown}
-          tabIndex="-1" // focusable, but not tabbable
+          // tabIndex="-1" // focusable, but not tabbable
         >
           <div className={cx('content')}>
             <input
+              ref={this.menuInputRef}
               className={cx('search-input')}
               role="searchbox"
               type="text"
+              onClick={this.handleInputKeyDown}
+              placeholder={placeholder}
               aria-controls={listboxId}
+              onChange={onSearch}
               aria-label={ariaLabel}
               aria-describedby={ariaDescribedBy}
+              required={required}
+              aria-required={required}
+              // value={searchValue}
             />
           </div>
         </div>
