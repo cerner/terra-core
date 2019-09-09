@@ -7,7 +7,6 @@ import * as KeyCode from 'keycode-js';
 import 'mutationobserver-shim';
 import './_contains-polyfill';
 import './_matches-polyfill';
-import 'wicg-inert';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
 
@@ -79,6 +78,12 @@ class Overlay extends React.Component {
   }
 
   componentDidMount() {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!Element.prototype.hasOwnProperty('inert')) {
+      // IE10 throws an error if wicg-inert is imported too early, as wicg-inert tries to set an observer on document.body which may not exist on import
+      // eslint-disable-next-line global-require
+      require('wicg-inert/dist/inert');
+    }
     document.addEventListener('keydown', this.shouldHandleESCKeydown);
   }
 
@@ -123,6 +128,8 @@ class Overlay extends React.Component {
     if (this.props.isRelativeToContainer) {
       if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
         this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
+        // Ensures aria-hidden is properly cleaned up
+        setTimeout(() => this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('aria-hidden'), 0);
       }
     } else {
       const selector = this.props.rootSelector;
@@ -133,6 +140,8 @@ class Overlay extends React.Component {
         if (inert === 1) {
           document.querySelector(selector).removeAttribute('data-overlay-count');
           document.querySelector(selector).removeAttribute('inert');
+          // Ensures aria-hidden is properly cleaned up
+          setTimeout(() => document.querySelector(selector).removeAttribute('aria-hidden'), 0);
         } else if (inert && inert > 1) {
           document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
         }

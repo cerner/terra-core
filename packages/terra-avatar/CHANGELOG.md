@@ -6,6 +6,8 @@ Unreleased
 ### Changed 
 * Changed generateImage function to Fallback to Initials if Provided.
 
+2.26.0 - (September 6, 2019)
+------------------
 ### Added
 * Props table markdown file import added to doc site page
 
