@@ -1,8 +1,8 @@
 /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
 :local {
   .table {
-    background-color: var(--terra-table-background-color, rgba(255, 255, 255, 0));
-    border: var(--terra-table-border, 0);
+    background-color: var(--terra-html-table-background-color, rgba(255, 255, 255, 0));
+    border: var(--terra-html-table-border, 0);
     border-collapse: collapse;
     border-spacing: 0;
     max-width: 100%;
@@ -19,69 +19,69 @@
 
     td {
       border: 0;
-      border-left: var(--terra-table-cell-border-left, 0);
+      border-left: var(--terra-html-table-cell-border-left, 0);
       display: table-cell;
       text-align: left;
       vertical-align: top;
 
       &:first-of-type {
-        border-left: var(--terra-table-first-cell-border-left, 1px solid #c8cacb);
+        border-left: var(--terra-html-table-first-cell-border-left, 1px solid #c8cacb);
       }
 
       &:last-of-type {
-        border-right: var(--terra-table-last-cell-border-right, 1px solid #c8cacb);
+        border-right: var(--terra-html-table-last-cell-border-right, 1px solid #c8cacb);
       }
     }
 
     th {
       border: 0;
-      border-left: var(--terra-table-header-cell-border-left, 0);
+      border-left: var(--terra-html-table-header-cell-border-left, 0);
       display: table-cell;
       text-align: left;
       vertical-align: top;
 
       &:first-of-type {
-        border-left: var(--terra-table-first-header-cell-border-left, 1px solid #c8cacb);
+        border-left: var(--terra-html-table-first-header-cell-border-left, 1px solid #c8cacb);
       }
 
       &:last-of-type {
-        border-right: var(--terra-table-last-header-cell-border-right, 1px solid #c8cacb);
+        border-right: var(--terra-html-table-last-header-cell-border-right, 1px solid #c8cacb);
       }
     }
 
     thead {
-      background-color: var(--terra-table-thead-background-color, #dedfe0);
+      background-color: var(--terra-html-table-thead-background-color, #dedfe0);
       display: table-header-group;
 
       tr {
-        border-bottom: var(--terra-table-thead-tr-border-bottom, 0);
-        border-top: var(--terra-table-thead-tr-border-top, 1px solid #c8cacb);
+        border-bottom: var(--terra-html-table-thead-tr-border-bottom, 0);
+        border-top: var(--terra-html-table-thead-tr-border-top, 1px solid #c8cacb);
       }
 
       th {
-        color: var(--terra-table-thead-th-color, #1c1f21);
-        font-size: var(--terra-table-thead-th-font-size, 1rem);
-        font-weight: var(--terra-table-thead-th-font-weight, bold);
+        color: var(--terra-html-table-thead-th-color, #1c1f21);
+        font-size: var(--terra-html-table-thead-th-font-size, 1rem);
+        font-weight: var(--terra-html-table-thead-th-font-weight, bold);
         vertical-align: bottom;
       }
     }
 
     tbody {
-      background-color: var(--terra-table-tbody-background-color);
+      background-color: var(--terra-html-table-tbody-background-color);
 
       tr {
-        border-top: var(--terra-table-row-border-top, 1px solid #c8cacb);
+        border-top: var(--terra-html-table-row-border-top, 1px solid #c8cacb);
 
         &:last-of-type {
-          border-bottom: var(--terra-table-last-row-border-bottom, 1px solid #c8cacb);
+          border-bottom: var(--terra-html-table-last-row-border-bottom, 1px solid #c8cacb);
         }
       }
     }
 
     tfoot {
       tr {
-        border-bottom: var(--terra-table-tfoot-tr-border-bottom, 1px solid #c8cacb);
-        border-top: var(--terra-table-tfoot-tr-border-top, 0);
+        border-bottom: var(--terra-html-table-tfoot-tr-border-bottom, 1px solid #c8cacb);
+        border-top: var(--terra-html-table-tfoot-tr-border-top, 0);
         text-align: left;
       }
     }
@@ -89,24 +89,24 @@
 
   .padding-standard th,
   .padding-standard td {
-    padding-bottom: var(--terra-table-cell-standard-padding-bottom, 0.5rem);
-    padding-left: var(--terra-table-cell-standard-padding-left, 0.75rem);
-    padding-right: var(--terra-table-cell-standard-padding-right, 0.75rem);
-    padding-top: var(--terra-table-cell-standard-padding-top, 0.5rem);
+    padding-bottom: var(--terra-html-table-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-html-table-cell-standard-padding-left, 0.75rem);
+    padding-right: var(--terra-html-table-cell-standard-padding-right, 0.75rem);
+    padding-top: var(--terra-html-table-cell-standard-padding-top, 0.5rem);
   }
 
   .padding-compact th,
   .padding-compact td {
-    padding-bottom: var(--terra-table-cell-compact-padding-bottom, 0.25rem);
-    padding-left: var(--terra-table-cell-compact-padding-left, 0.75rem);
-    padding-right: var(--terra-table-cell-compact-padding-right, 0.75rem);
-    padding-top: var(--terra-table-cell-compact-padding-top, 0.25rem);
+    padding-bottom: var(--terra-html-table-cell-compact-padding-bottom, 0.25rem);
+    padding-left: var(--terra-html-table-cell-compact-padding-left, 0.75rem);
+    padding-right: var(--terra-html-table-cell-compact-padding-right, 0.75rem);
+    padding-top: var(--terra-html-table-cell-compact-padding-top, 0.25rem);
   }
 
   .striped {
     tbody tr:not([data-terra-table-subheader-row]) {
       &:nth-of-type(even) {
-        background-color: var(--terra-table-row-striped-background-color, #f4f4f4);
+        background-color: var(--terra-html-table-row-striped-background-color, #f4f4f4);
       }
     }
   }
