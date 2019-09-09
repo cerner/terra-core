@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Removed --terra-dialog-header-close-icon-margin-top variable, added --terra-dialog-header-close-icon-ms-margin-top variable to only apply top styling in Microsoft browsers.
+* Removed `--terra-dialog-header-close-icon-margin-top` variable, added `--terra-dialog-header-close-icon-ms-margin-top` variable to only apply top styling in Microsoft browsers.
 
 2.25.0 - (September 6, 2019)
 ------------------
