@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Cell.module.scss';
-import CellGridUtils from './CellGridUtils';
+import CellGridUtils from './_CellGridUtils';
 
 const cx = classNames.bind(styles);
 

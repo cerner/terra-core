@@ -16,7 +16,7 @@ const TableCell = ({
   children,
   ...customProps
 }) => (
-  <td {...customProps} data-terra-table-cell>
+  <td {...customProps}>
     {children}
   </td>
 );

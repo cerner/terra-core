@@ -1,13 +1,13 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
-import { name, version } from '../../../../package.json';
 import ChangeLog from '../../../../CHANGELOG.md';
+import { name, version } from '../../../../package.json';
 
 const DocPage = () => (
   <DocTemplate
     packageName={name}
     packageVersion={version}
-    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-scroll"
     readme={ChangeLog}
   />
 );

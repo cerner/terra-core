@@ -16,9 +16,6 @@ const propTypes = {
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
   /**
-   * Whether or not row should display as a striped row.
-   */
-  isStriped: PropTypes.bool,
   /**
    * Function callback for the ref of the tr.
    */
@@ -27,18 +24,15 @@ const propTypes = {
 
 const defaultProps = {
   dividerStyle: 'none',
-  isStriped: false,
 };
 
 const CellGrid = ({
   children,
   dividerStyle,
-  isStriped,
   refCallback,
   ...customProps
 }) => {
   const cellGridClassNames = cx([
-    { 'is-striped': isStriped },
     `divider-${dividerStyle}`,
     'cell-grid',
     customProps.className,

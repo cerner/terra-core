@@ -16,7 +16,7 @@ const TableHeaderCell = ({
   children,
   ...customProps
 }) => (
-  <th {...customProps} data-terra-table-header-cell>
+  <th {...customProps}>
     {children}
   </th>
 );

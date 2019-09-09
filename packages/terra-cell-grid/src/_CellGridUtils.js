@@ -30,8 +30,8 @@ const styleFromWidth = (width) => {
   return null;
 };
 
-const TableUtils = {
+const CellGridUtils = {
   styleFromWidth,
 };
 
-export default TableUtils;
+export default CellGridUtils;

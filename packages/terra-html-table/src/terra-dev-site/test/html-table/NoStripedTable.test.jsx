@@ -6,7 +6,7 @@ import Table, {
   Body,
   Cell,
   Row,
-} from 'terra-table/lib/index';
+} from '../../../index';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const NoStripedTable = () => (
