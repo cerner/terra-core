@@ -1,8 +1,20 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
+
+3.28.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+### Changed
+* Moved running the wicg-inert script to when 'terra-overlay' is mounted to resolve issues in IE 10
+* Update wcig-inert path to import directly the ES5 version of the package
+
+3.27.0 - (September 3, 2019)
+------------------
 ### Changed
 * Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
 

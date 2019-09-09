@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.23.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+2.22.0 - (September 3, 2019)
+------------------
 ### Changed
 * Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
 

@@ -6,6 +6,7 @@
   "Terra.form.select.maxSelectionOption": "Número máximo de itens de {text} selecionado",
   "Terra.form.select.noResults": "Não há resultados para \"{text}\"",
   "Terra.form.select.selectedText": "{text} selecionado.",
+  "Terra.form.select.unselectedText": "{text} não selecionado.",
   "Terra.form.select.selected": "Selecionado.",
   "Terra.form.select.unselected": "Não selecionado.",
   "Terra.form.select.disabled": "Desativado.",

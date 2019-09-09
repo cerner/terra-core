@@ -8,12 +8,12 @@ import TextWeightDocs from '../../../../docs/text-weights.md';
 import TextVariationsDocs from '../../../../docs/text-variations.md';
 import TextVisuallyHiddenDocs from '../../../../docs/text-visually-hidden.md';
 import TextWordWrappedDocs from '../../../../docs/text-word-wrapped.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import TextSrc from '!raw-loader!../../../../src/Text';
-
 // Example Files
+import TextPropsTable from '!terra-props-table-loader!../../../../src/Text';
+import TextSrc from '!raw-loader!../../../../src/Text';
 import TextColors from '../example/TextColors';
 import TextColorsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextColors';
 import TextDisplays from '../example/TextDisplays';
@@ -82,6 +82,7 @@ const DocPage = () => (
       {
         componentName: 'Text',
         componentSrc: TextSrc,
+        componentProps: TextPropsTable,
       },
     ]}
   />

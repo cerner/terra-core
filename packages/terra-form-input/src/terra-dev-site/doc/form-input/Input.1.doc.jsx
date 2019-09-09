@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import FormInputSrc from '!raw-loader!../../../../src/Input';
-
 // Example Files
+import FormInputPropsTable from '!terra-props-table-loader!../../../../src/Input';
+import FormInputSrc from '!raw-loader!../../../../src/Input';
 import BlankExample from '../common/BlankExample';
 import BlankExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/common/BlankExample';
 import PlaceholderExample from '../common/PlaceholderExample';
@@ -97,6 +97,7 @@ const DocPage = () => (
       {
         componentName: 'Form Input',
         componentSrc: FormInputSrc,
+        componentProps: FormInputPropsTable,
       },
     ]}
   />

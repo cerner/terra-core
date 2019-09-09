@@ -6,6 +6,16 @@ Unreleased
 ### Changed
 * Removed --terra-action-header-icon-top variable, added --terra-action-header-icon-ms-top variable to only apply top styling in Microsoft browsers.
 
+2.28.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+2.27.0 - (September 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.26.0 - (August 21, 2019)
 ------------------
 ### Changed

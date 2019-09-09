@@ -3,6 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.23.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+### Changed
+* Added `outline: 0` to prevent focus outline when clicking on help or error text
+
+3.22.0 - (September 3, 2019)
+------------------
 ### Fixed
 * Fixed 'label hidden' accessibility error by using 'visually-hidden text styles' instead of 'display:none'.
 
