@@ -399,6 +399,10 @@ class Frame extends React.Component {
     if (onSearch) {
       onSearch(searchValue);
     }
+
+    // ensure the dropdown is properly positioned on input changes, since it can
+    // lead to different heights via option filtering
+    this.positionDropdown();
   }
 
   /**

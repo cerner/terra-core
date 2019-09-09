@@ -163,7 +163,7 @@ function Menu({
     }
   }, []);
 
-  const handleOptionClick = React.useCallback(option => (event) => {
+  const handleOptionClick = React.useCallback(option => () => {
     if (option.props.disabled) {
       return;
     }
@@ -312,7 +312,7 @@ function Menu({
         aria-label={intl.formatMessage({ id: 'Terra.form.select.menu' })}
         aria-activedescendant={activeDescendant}
         tabIndex="0"
-        ref={listboxRef} // TODO: may not need
+        ref={listboxRef}
       >
         {options}
       </ul>
