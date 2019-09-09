@@ -7,7 +7,7 @@ const DocPage = () => (
   <DocTemplate
     packageName={name}
     packageVersion={version}
-    srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-scroll"
+    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     readme={ChangeLog}
   />
 );

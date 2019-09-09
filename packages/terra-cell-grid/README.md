@@ -1,4 +1,4 @@
-# Terra Scroll
+# Terra Cell Grid
 
 [![NPM version](https://badgen.net/npm/v/terra-cell-grid)](https://www.npmjs.org/package/terra-cell-grid)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)

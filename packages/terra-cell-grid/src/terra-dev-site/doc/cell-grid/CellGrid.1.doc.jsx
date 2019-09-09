@@ -1,7 +1,6 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
-
 import { name, version } from '../../../../package.json';
 
 // Example Files
