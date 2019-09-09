@@ -117,11 +117,11 @@ Finally we need to check if the item matches the selectedKey in state to set `is
     );
   }
 ```
-Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` for the list, as it is required for accessibility with selectable list options.
+Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` and a string to `aria-label` for the list, as it is required for accessibility with selectable list options.
 ```diff
   render() {
     return (
-+      <List role="listbox">
++      <List role="listbox" aria-label="SingleSelectList-label">
 +        {data.map(childItem => this.createListItem(mockData))}
 +      </List>
     );
