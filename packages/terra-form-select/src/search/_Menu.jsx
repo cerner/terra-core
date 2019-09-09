@@ -10,6 +10,7 @@ import ClearOption from '../shared/_ClearOption';
 import MenuUtil from '../shared/_MenuUtil';
 import NoResults from '../shared/_NoResults';
 import useScrollToActiveOption from '../shared/useScrollToActiveOption';
+import useFocusOnMount from '../shared/useFocusOnMount';
 import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
@@ -67,6 +68,7 @@ const propTypes = {
 
   // TODO: make this req'd
   selectInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  selectRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
 const defaultProps = {
@@ -111,12 +113,14 @@ function Menu({
   maxHeight,
   required,
   selectInputRef,
+  selectRef,
   intl,
 }) {
   const [active, setActive] = React.useState(() => findActiveOption(children, { active: null, value }));
 
   const menuRef = React.useRef(null);
   const listboxRef = React.useRef(null);
+  const menuInputRef = React.useRef(null);
   const listboxId = React.useRef(uniqueId('terra-form-select-menu-listbox-'));
 
   const handleMouseEnterOption = React.useCallback(option => (event) => {
@@ -224,6 +228,8 @@ function Menu({
   const activeDescendant = active !== null ? `terra-select-option-${active}` : undefined;
   useScrollToActiveOption(menuRef, activeDescendant);
 
+  useFocusOnMount(menuInputRef);
+
   const menuClasses = cx([
     'menu',
     { 'is-above': isAbove },
@@ -239,6 +245,7 @@ function Menu({
           type="text"
           role="searchbox"
           className={cx('search-input')}
+          ref={menuInputRef}
           onChange={onSearch}
           value={searchValue}
           onKeyDown={handleInputKeyDown}
