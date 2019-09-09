@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.25.0 - (September 6, 2019)
+------------------
 ### Changed
 * Updated examples to import from the expected package instead of relative paths
 
