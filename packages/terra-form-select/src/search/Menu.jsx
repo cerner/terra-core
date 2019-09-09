@@ -16,91 +16,102 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * IDs that describe the search input
+   */
+  ariaDescribedBy: PropTypes.string.isRequired,
+  /**
+   * Used to define a string that labels the select component to screen readers.
+   */
+  ariaLabel: PropTypes.string.isRequired,
+  /**
+   * @private Visually hidden component designed to feed screen reader text to read.
+   */
+  ariaLiveRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
+  /**
    * The content of the menu.
    */
   children: PropTypes.node,
-  /**
-   * Callback function triggered when an option is selected.
-   */
-  onSelect: PropTypes.func.isRequired,
   /**
    * The value of the selected options.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
-   * The search value to filter the available options.
-   */
-  searchValue: PropTypes.string.isRequired,
-  /**
    * Callback function triggered when the search criteria changes.
    */
   onSearch: PropTypes.func.isRequired,
   /**
+   * Callback function triggered when an option is selected.
+   */
+  onSelect: PropTypes.func.isRequired,
+  /**
    * Text for the clear option.
    */
   clearOptionDisplay: PropTypes.string,
-
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: intlShape.isRequired,
+  /**
+   * Whether the menu list should be displayed above or not
+   */
+  isAbove: PropTypes.bool,
+  /**
+   * Whether the select is in an invalid state.
+   */
+  isInvalid: PropTypes.bool,
+  /**
+   * The max height of the dropdown.
+   */
+  maxHeight: PropTypes.number,
+  /**
+   * The id of this menu
+   */
+  menuId: PropTypes.string.isRequired,
+  /**
+   * Ref object of the parent select's input
+   */
+  menuInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
   /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
   /**
-   * Callback function triggered when an option is deselected.
+   * Callback function triggered when tab is pressed on the menu
    */
-  // onDeselect: PropTypes.func,
+  onTabDown: PropTypes.func.isRequired,
+  /**
+   * Whether the menu was opened from the toggle button or not
+   */
+  openedFromToggle: PropTypes.bool,
   /**
    * Callback function for option filtering. function(searchValue, option)
    */
   optionFilter: PropTypes.func,
   /**
-   * TODO: docme
-   */
-  isAbove: PropTypes.bool,
-  /**
-   * TODO: docme
-   */
-  isInvalid: PropTypes.bool,
-  /**
-   * TODO: docme
-   */
-  maxHeight: PropTypes.number,
-  /**
-   * TODO: docme
-   */
-  ariaLabel: PropTypes.string.isRequired,
-  /**
-   * TODO: docme
-   */
-  // ariaDescribedBy: PropTypes.string,
-  /**
-   * TODO: docme
-   */
-  required: PropTypes.bool,
-  /**
-   * TODO: docme
+   * Placeholder text.
    */
   placeholder: PropTypes.string.isRequired,
   /**
-   * TODO: docme
+   * Whether the field is required.
    */
-  intl: intlShape.isRequired,
-
-  openFromToggle: PropTypes.bool,
-
-  // TODO: make these req'd
-  onTabDown: PropTypes.func,
-  menuInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
-  selectInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
-  ariaLiveRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
-  selectRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  required: PropTypes.bool,
+  /**
+   * The search value to filter the available options.
+   */
+  searchValue: PropTypes.string.isRequired,
+  /**
+   * Ref object of the parent select
+   */
+  selectInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
 };
 
 const defaultProps = {
   isAbove: false,
   isInvalid: false,
   maxHeight: undefined,
+  openedFromToggle: false,
   required: false,
-  openFromToggle: false,
 };
 
 // TODO: moveme
@@ -126,6 +137,9 @@ function findActiveOption(children, { active = null, value = '' } = {}) {
 }
 
 function Menu({
+  ariaDescribedBy,
+  ariaLabel,
+  ariaLiveRef,
   children,
   onSelect,
   value,
@@ -140,12 +154,9 @@ function Menu({
   required,
   placeholder,
   selectInputRef,
-  selectRef,
   onTabDown,
   intl,
-  openFromToggle,
-  ariaLiveRef,
-  ariaLabel,
+  openedFromToggle,
 }) {
   const [active, setActive] = React.useState(() => findActiveOption(children, { active: null, value }));
 
@@ -269,7 +280,7 @@ function Menu({
   // Determine what we focus on onMount
   React.useEffect(() => {
     // opened from toggle button: focus on listbox
-    if (openFromToggle) {
+    if (openedFromToggle) {
       const { current: listbox } = listboxRef;
       listbox.focus();
       return;
@@ -280,7 +291,7 @@ function Menu({
     if (input) {
       input.focus();
     }
-  }, [openFromToggle]);
+  }, [openedFromToggle]);
 
   // update aria live declaratively
   React.useEffect(() => {
@@ -297,20 +308,24 @@ function Menu({
 
   /* eslint-disable react/forbid-dom-props */
   return (
-    <div ref={menuRef} className={menuClasses}>
+    // TODO: does this top level div also need 'aria-describedby'?
+    <div ref={menuRef} id={menuId} className={menuClasses}>
       <div className={cx('display')} aria-label={ariaLabel}>
         <div className={cx('content')}>
           <input
-            type="text"
-            role="searchbox"
-            className={cx('search-input')} // TODO: fix my styles
-            ref={menuInputRef}
-            placeholder={placeholder}
-            onChange={onSearch}
-            value={searchValue}
-            onKeyDown={handleInputKeyDown}
             aria-controls={listboxId.current}
+            aria-describedby={ariaDescribedBy}
             aria-label={ariaLabel}
+            aria-required={required}
+            className={cx('search-input')} // TODO: fix my styles
+            onChange={onSearch}
+            onKeyDown={handleInputKeyDown}
+            placeholder={placeholder}
+            ref={menuInputRef}
+            required={required}
+            role="searchbox"
+            type="text"
+            value={searchValue}
           />
         </div>
       </div>

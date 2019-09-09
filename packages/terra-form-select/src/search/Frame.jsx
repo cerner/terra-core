@@ -142,7 +142,7 @@ class Frame extends React.Component {
 
     this.labelId = Frame.createUniqueIdRef('terra-select-screen-reader-label-');
     this.descriptionId = Frame.createUniqueIdRef('terra-select-screen-reader-description-');
-    this.menuId = Frame.createUniqueIdRef('terra-select-menu-');
+    this.menuIdRef = Frame.createUniqueIdRef('terra-select-menu-');
 
     this.setDropdownRef = this.setDropdownRef.bind(this);
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -189,6 +189,8 @@ class Frame extends React.Component {
       disabled, display, placeholder, required,
     } = this.props;
 
+    const { current: menuId } = this.menuIdRef;
+
     const inputAttrs = {
       disabled,
       placeholder,
@@ -199,7 +201,7 @@ class Frame extends React.Component {
       'aria-label': this.ariaLabel(),
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
+      'aria-owns': this.state.isOpen ? menuId : undefined, // TODO: this may need to be removed..
       type: 'text',
       className: cx('search-input', { 'is-hidden': FrameUtil.shouldHideSearch(this.props, this.state) }),
       required,
@@ -237,7 +239,7 @@ class Frame extends React.Component {
       isAbove: false,
       isFocused: document.activeElement === selectInput || document.activeElement === select, // TODO: fixme
       isOpen: false,
-      openFromToggle: false,
+      openedFromToggle: false,
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
@@ -261,7 +263,7 @@ class Frame extends React.Component {
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
-      this.setState({ isOpen: true, isPositioned: false, openFromToggle: true });
+      this.setState({ isOpen: true, isPositioned: false, openedFromToggle: true });
       return;
     }
 
@@ -587,7 +589,7 @@ class Frame extends React.Component {
       searchValue,
       isPositioned,
       hasSearchChanged,
-      openFromToggle,
+      openedFromToggle,
     } = this.state;
 
     const selectClasses = cx([
@@ -607,35 +609,30 @@ class Frame extends React.Component {
     const computedAriaLabel = this.ariaLabel();
 
     const { maxHeight, ...dropdownStyle } = FrameUtil.dropdownStyle(dropdownAttrs, this.state);
-
-    const { current: menuId } = this.menuId;
+    const { current: menuId } = this.menuIdRef;
 
     const menuProps = {
-      value,
-      onDeselect,
-      optionFilter,
-      noResultContent,
-      onSelect: this.handleSelect,
-      onRequestClose: this.closeDropdown,
+      ariaDescribedBy,
+      ariaLabel: computedAriaLabel,
+      ariaLiveRef: this.ariaLiveRef,
       clearOptionDisplay,
-
-      // TODO: these are new..
+      isAbove,
+      isInvalid,
       maxHeight,
       menuId,
-      isInvalid,
-      isAbove,
-      ariaLabel: computedAriaLabel,
-      ariaDescribedBy,
-      searchValue: hasSearchChanged ? searchValue : display,
+      noResultContent,
+      onDeselect,
+      onRequestClose: this.closeDropdown,
       onSearch: this.handleSearch,
-      required,
-      placeholder,
-      menuInputRef: this.menuInputRef,
-      selectInputRef: this.selectInputRef,
-      selectRef: this.selectRef,
+      onSelect: this.handleSelect,
       onTabDown: this.handleMenuTabDown,
-      openFromToggle,
-      ariaLiveRef: this.ariaLiveRef,
+      openedFromToggle,
+      optionFilter,
+      placeholder,
+      required,
+      searchValue: hasSearchChanged ? searchValue : display,
+      selectInputRef: this.selectInputRef,
+      value,
     };
 
     return (
@@ -643,18 +640,18 @@ class Frame extends React.Component {
         {...customProps}
         role="combobox"
         data-terra-select-combobox
-        aria-controls={!disabled && isOpen ? 'terra-select-menu' : undefined}
+        aria-controls={!disabled && isOpen ? menuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={isOpen ? 'terra-select-menu' : undefined}
+        aria-owns={isOpen ? menuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}
-        tabIndex="-1"
+        tabIndex="-1" // focusable, but not tabbable
         ref={this.selectRef}
       >
         <div className={cx('visually-hidden-component')} hidden>
