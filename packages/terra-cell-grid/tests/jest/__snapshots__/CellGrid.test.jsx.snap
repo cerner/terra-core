@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a both divider cell grid 1`] = `
+<div
+  className="divider-both cell-grid"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a cell grid with refCallback 1`] = `
+<div
+  className="divider-none cell-grid"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a default cell grid 1`] = `
+<div
+  className="divider-none cell-grid"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a horizontal divider cell grid 1`] = `
+<div
+  className="divider-horizontal cell-grid"
+>
+  <Cell />
+</div>
+`;
+
+exports[`should render a vertical divider cell grid 1`] = `
+<div
+  className="divider-vertical cell-grid"
+>
+  <Cell />
+</div>
+`;
