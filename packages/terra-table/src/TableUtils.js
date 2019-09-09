@@ -1,4 +1,4 @@
-import KeyCode from 'keycode-js';
+import { KEY_RETURN, KEY_SPACE } from 'keycode-js';
 
 const shouldBeMultiSelectable = (maxSelectionCount, selectedKeys, key) => (maxSelectionCount < 0 || selectedKeys.indexOf(key) >= 0 || selectedKeys.length < maxSelectionCount);
 
@@ -44,7 +44,7 @@ const wrappedOnKeyDownForItem = (onKeyDown, onSelect, metaData) => {
     return onKeyDown;
   }
   return (event) => {
-    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
+    if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE) {
       onSelect(event, metaData);
     }
 
