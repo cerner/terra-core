@@ -621,7 +621,7 @@ class Frame extends React.Component {
       maxHeight,
       menuId,
       noResultContent,
-      onDeselect,
+      onRequestClose: this.closeDropdown,
       onSearch: this.handleSearch,
       onSelect: this.handleSelect,
       onTabDown: this.handleMenuTabDown,

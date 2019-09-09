@@ -16,7 +16,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * IDs that describe the search input
+   * IDs that describe the search input and menu
    */
   ariaDescribedBy: PropTypes.string.isRequired,
   /**
@@ -31,18 +31,6 @@ const propTypes = {
    * The content of the menu.
    */
   children: PropTypes.node,
-  /**
-   * The value of the selected options.
-   */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  /**
-   * Callback function triggered when the search criteria changes.
-   */
-  onSearch: PropTypes.func.isRequired,
-  /**
-   * Callback function triggered when an option is selected.
-   */
-  onSelect: PropTypes.func.isRequired,
   /**
    * Text for the clear option.
    */
@@ -77,6 +65,18 @@ const propTypes = {
    */
   noResultContent: PropTypes.node,
   /**
+   * Callback function triggered by the toggle button to close the menu
+   */
+  onRequestClose: PropTypes.func.isRequired,
+  /**
+   * Callback function triggered when the search criteria changes.
+   */
+  onSearch: PropTypes.func.isRequired,
+  /**
+   * Callback function triggered when an option is selected.
+   */
+  onSelect: PropTypes.func.isRequired,
+  /**
    * Callback function triggered when tab is pressed on the menu
    */
   onTabDown: PropTypes.func.isRequired,
@@ -104,14 +104,22 @@ const propTypes = {
    * Ref object of the parent select
    */
   selectInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
+  /**
+   * The value of the selected options.
+   */
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 const defaultProps = {
+  children: [],
+  clearOptionDisplay: undefined,
   isAbove: false,
   isInvalid: false,
   maxHeight: undefined,
   openedFromToggle: false,
+  optionFilter: undefined,
   required: false,
+  value: undefined,
 };
 
 // TODO: moveme
@@ -148,6 +156,7 @@ function Menu({
   maxHeight,
   menuId,
   noResultContent,
+  onRequestClose,
   onSearch,
   onSelect,
   onTabDown,
@@ -329,8 +338,19 @@ function Menu({
             value={searchValue}
           />
         </div>
+        {/* temp make the toggle button red til I figure out the icon.. */}
+        <div className={cx(['toggle', 'toggle-narrow'])} style={{ backgroundColor: '#f00' }}>
+          <button
+            type="button"
+            className={cx('toggle-btn')}
+          // aria-label={mobileButtonUsageGuidanceTxt} // TODO: addme
+            data-terra-form-select-toggle-button
+            onClick={onRequestClose}
+          >
+            <span className={cx('arrow-icon')} data-terra-form-select-toggle-button-icon />
+          </button>
+        </div>
       </div>
-      {/* TODO: add toggle button (just close the dropdown) */}
       <ul
         role="listbox"
         className={cx('menu-list')}
