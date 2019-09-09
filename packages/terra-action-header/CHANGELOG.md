@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Updated `--terra-action-header-icon-top` variable to only apply in Microsoft browsers.
+* Removed --terra-action-header-icon-top variable, added --terra-action-header-icon-ms-top variable to only apply top styling in Microsoft browsers.
 
 2.26.0 - (August 21, 2019)
 ------------------

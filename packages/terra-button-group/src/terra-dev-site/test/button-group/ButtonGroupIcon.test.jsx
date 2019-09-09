@@ -1,4 +1,4 @@
-d import React from 'react';
+import React from 'react';
 import ButtonGroup from '../../../ButtonGroup';
 
 const icon = <svg width="1em" height="1em"><rect width="1em" height="1em" fill="#000" /></svg>;
