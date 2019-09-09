@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Hookshot from 'terra-hookshot';
 import classNames from 'classnames/bind';
@@ -57,14 +57,6 @@ const Dropdown = ({
   refCallback,
   ...customProps
 }) => {
-  /**
-   * Prevents default events from removing the focus from the target.
-   * @param {event} event - The event invoking the callback.
-   */
-  const preventDefault = useCallback((event) => {
-    // event.preventDefault();
-  }, []);
-
   const dropdownClasses = cx([
     'dropdown',
     { 'is-above': isAbove },
@@ -87,7 +79,6 @@ const Dropdown = ({
         disableOnClickOutside
         className={dropdownClasses}
         onResize={onResize}
-        onMouseDown={preventDefault}
         refCallback={refCallback}
       >
         {children}
