@@ -7,14 +7,16 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ListSectionExample = () => (
-  <List role="listbox">
+  <List role="listbox" aria-label="example-label">
     <Item
       key="default"
+      role="option"
     >
       <Placeholder title="Default ListItem" className={cx('placeholder')} />
     </Item>
     <Item
       key="chevron"
+      role="option"
       hasChevron
     >
       <Placeholder title="Chevron ListItem" className={cx('placeholder')} />
