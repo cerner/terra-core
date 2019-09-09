@@ -5,7 +5,7 @@ import { injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import * as KeyCode from 'keycode-js';
 import Dropdown from './Dropdown';
-import Menu from './_Menu';
+import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
 
@@ -115,6 +115,13 @@ const defaultProps = {
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 class Frame extends React.Component {
+  static createUniqueIdRef(value) {
+    const ref = React.createRef();
+    ref.current = uniqueid(value);
+
+    return ref;
+  }
+
   constructor(props) {
     super(props);
 
@@ -131,6 +138,11 @@ class Frame extends React.Component {
     this.selectInputRef = React.createRef();
     this.menuInputRef = React.createRef();
     this.dropdownRef = React.createRef();
+    this.ariaLiveRef = React.createRef();
+
+    this.labelId = Frame.createUniqueIdRef('terra-select-screen-reader-label-');
+    this.descriptionId = Frame.createUniqueIdRef('terra-select-screen-reader-description-');
+    this.menuId = Frame.createUniqueIdRef('terra-select-menu-');
 
     this.setDropdownRef = this.setDropdownRef.bind(this);
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -153,9 +165,7 @@ class Frame extends React.Component {
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.role = this.role.bind(this);
-    this.onMenuTabDown = this.onMenuTabDown.bind(this);
-    this.visuallyHiddenComponent = React.createRef();
-    this.selectMenu = '#terra-select-menu';
+    this.handleMenuTabDown = this.handleMenuTabDown.bind(this);
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -167,15 +177,6 @@ class Frame extends React.Component {
 
   componentWillUnmount() {
     clearTimeout(this.debounceTimer);
-  }
-
-  onMenuTabDown(event) {
-    const { current: selectInput } = this.selectInputRef;
-
-    if (selectInput) {
-      selectInput.focus();
-      this.handleKeyDown(event);
-    }
   }
 
   setDropdownRef(ref) {
@@ -211,6 +212,18 @@ class Frame extends React.Component {
         <input {...inputAttrs} value={value} />
       </div>
     );
+  }
+
+  /**
+   * TODO: docme
+   */
+  handleMenuTabDown(event) {
+    const { current: selectInput } = this.selectInputRef;
+
+    if (selectInput) {
+      selectInput.focus();
+      this.handleKeyDown(event);
+    }
   }
 
   /**
@@ -588,21 +601,20 @@ class Frame extends React.Component {
       customProps.className,
     ]);
 
-    const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
-    const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
+    const { current: descriptionId } = this.descriptionId;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
-    const menuId = uniqueid('terra-select-menu-');
     const computedAriaLabel = this.ariaLabel();
 
     const { maxHeight, ...dropdownStyle } = FrameUtil.dropdownStyle(dropdownAttrs, this.state);
+
+    const { current: menuId } = this.menuId;
 
     const menuProps = {
       value,
       onDeselect,
       optionFilter,
       noResultContent,
-      visuallyHiddenComponent: this.visuallyHiddenComponent,
       onSelect: this.handleSelect,
       onRequestClose: this.closeDropdown,
       clearOptionDisplay,
@@ -621,8 +633,9 @@ class Frame extends React.Component {
       menuInputRef: this.menuInputRef,
       selectInputRef: this.selectInputRef,
       selectRef: this.selectRef,
-      onTabDown: this.onMenuTabDown,
+      onTabDown: this.handleMenuTabDown,
       openFromToggle,
+      ariaLiveRef: this.ariaLiveRef,
     };
 
     return (
@@ -646,8 +659,8 @@ class Frame extends React.Component {
       >
         <div className={cx('visually-hidden-component')} hidden>
           {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
-          <span id={labelId}>{this.ariaLabel()}</span>
-          <span id={descriptionId}>{this.renderDescriptionText()}</span>
+          <span id={this.labelId.current}>{this.ariaLabel()}</span>
+          <span id={this.descriptionId.current}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')} aria-label={this.ariaLabel()}>
           {this.getDisplay(ariaDescribedBy)}
@@ -658,7 +671,7 @@ class Frame extends React.Component {
           aria-live="assertive"
           aria-relevant="additions text"
           className={cx('visually-hidden-component')}
-          ref={this.visuallyHiddenComponent}
+          ref={this.ariaLiveRef}
         />
         {isOpen
           && (
