@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { intlShape, injectIntl } from 'react-intl';
 import {
-  KEY_UP, KEY_DOWN, KEY_RETURN, KEY_HOME, KEY_END,
+  KEY_UP, KEY_DOWN, KEY_RETURN, KEY_HOME, KEY_END, KEY_TAB,
 } from 'keycode-js';
 import uniqueId from 'lodash.uniqueid';
 import ClearOption from '../shared/_ClearOption';
 import MenuUtil from '../shared/_MenuUtil';
 import NoResults from '../shared/_NoResults';
 import useScrollToActiveOption from '../shared/useScrollToActiveOption';
-import useFocusOnMount from '../shared/useFocusOnMount';
 import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
@@ -49,25 +48,50 @@ const propTypes = {
    * Callback function triggered when an option is deselected.
    */
   // onDeselect: PropTypes.func,
-
   /**
    * Callback function for option filtering. function(searchValue, option)
    */
   optionFilter: PropTypes.func,
-
+  /**
+   * TODO: docme
+   */
   isAbove: PropTypes.bool,
-
+  /**
+   * TODO: docme
+   */
   isInvalid: PropTypes.bool,
+  /**
+   * TODO: docme
+   */
   maxHeight: PropTypes.number,
+  /**
+   * TODO: docme
+   */
   // ariaLabel: PropTypes.string.isRequired,
+  /**
+   * TODO: docme
+   */
   // ariaDescribedBy: PropTypes.string,
-  // onSearch: PropTypes.func.isRequired,
+  /**
+   * TODO: docme
+   */
   required: PropTypes.bool,
-  // placeholder: PropTypes.string.isRequired,
+  /**
+   * TODO: docme
+   */
+  placeholder: PropTypes.string.isRequired,
+  /**
+   * TODO: docme
+   */
   intl: intlShape.isRequired,
 
-  // TODO: make this req'd
+  openFromToggle: PropTypes.bool,
+
+  // TODO: make these req'd
+  onTabDown: PropTypes.func,
+  menuInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   selectInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+
   selectRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
@@ -76,8 +100,10 @@ const defaultProps = {
   isInvalid: false,
   maxHeight: undefined,
   required: false,
+  openFromToggle: false,
 };
 
+// TODO: moveme
 function findActiveOption(children, { active = null, value = '' } = {}) {
   const options = MenuUtil.flatten(children, true);
 
@@ -112,9 +138,13 @@ function Menu({
   isInvalid,
   maxHeight,
   required,
+  // menuInputRef,
+  placeholder,
   selectInputRef,
   selectRef,
+  onTabDown,
   intl,
+  openFromToggle,
 }) {
   const [active, setActive] = React.useState(() => findActiveOption(children, { active: null, value }));
 
@@ -211,13 +241,20 @@ function Menu({
       const lastOption = MenuUtil.findLast(options);
       setActive(lastOption);
 
+    /** close menu and pass event to select */
+    } else if (keyCode === KEY_TAB) {
+      // TODO: maybe rename this?
+      if (onTabDown) {
+        onTabDown(event);
+      }
+
     /** select active option, if present */
     } else if (keyCode === KEY_RETURN && active !== null) {
       event.preventDefault();
       const option = MenuUtil.findByValue(options, active);
       onSelect(option.props.value, option);
     }
-  }, [active, onSelect, options]);
+  }, [active, onSelect, onTabDown, options]);
 
   // Update active option
   React.useEffect(() => {
@@ -228,7 +265,21 @@ function Menu({
   const activeDescendant = active !== null ? `terra-select-option-${active}` : undefined;
   useScrollToActiveOption(menuRef, activeDescendant);
 
-  useFocusOnMount(menuInputRef);
+  // Determine what we focus on onMount
+  React.useEffect(() => {
+    // opened from toggle button: focus on listbox
+    if (openFromToggle) {
+      const { current: listbox } = listboxRef;
+      listbox.focus();
+      return;
+    }
+
+    // focus on the input
+    const { current: input } = menuInputRef;
+    if (input) {
+      input.focus();
+    }
+  }, [openFromToggle]);
 
   const menuClasses = cx([
     'menu',
@@ -244,12 +295,14 @@ function Menu({
         <input
           type="text"
           role="searchbox"
-          className={cx('search-input')}
+          className={cx('search-input')} // TODO: fix my styles
           ref={menuInputRef}
+          placeholder={placeholder}
           onChange={onSearch}
           value={searchValue}
           onKeyDown={handleInputKeyDown}
         />
+        {/* TODO: add toggle button (just close the dropdown) */}
       </div>
       <ul
         role="listbox"

@@ -2535,7 +2535,7 @@ const NewMenu = () => {
 
   return (
     <div>
-      <Menu maxHeight={40} onSelect={onSelect} value={value} searchValue={searchValue} onSearch={handleSearch}>
+      <Menu onSelect={onSelect} value={value} searchValue={searchValue} onSearch={handleSearch}>
         {shortData.map(({ value: v, display }) => <Option key={v} value={v} display={display} />)}
       </Menu>
 

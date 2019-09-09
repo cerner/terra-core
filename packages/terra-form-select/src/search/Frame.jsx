@@ -5,7 +5,7 @@ import { injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import * as KeyCode from 'keycode-js';
 import Dropdown from './Dropdown';
-import Menu from './Menu';
+import Menu from './_Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
 
@@ -127,8 +127,13 @@ class Frame extends React.Component {
       searchValue: '',
     };
 
+    this.selectRef = React.createRef();
+    this.selectInputRef = React.createRef();
+    this.menuInputRef = React.createRef();
+    this.dropdownRef = React.createRef();
+
+    this.setDropdownRef = this.setDropdownRef.bind(this);
     this.ariaLabel = this.ariaLabel.bind(this);
-    this.setInput = this.setInput.bind(this);
     this.getDisplay = this.getDisplay.bind(this);
     this.renderToggleButton = this.renderToggleButton.bind(this);
     this.renderDescriptionText = this.renderDescriptionText.bind(this);
@@ -148,12 +153,13 @@ class Frame extends React.Component {
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.role = this.role.bind(this);
+    this.onMenuTabDown = this.onMenuTabDown.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
   }
 
   componentDidUpdate(previousProps, previousState) {
-    if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
+    if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdownRef.current)) {
       clearTimeout(this.debounceTimer);
       this.debounceTimer = setTimeout(this.positionDropdown, !previousState.isOpen ? 0 : 100);
     }
@@ -163,8 +169,17 @@ class Frame extends React.Component {
     clearTimeout(this.debounceTimer);
   }
 
-  setInput(input) {
-    this.input = input;
+  onMenuTabDown(event) {
+    const { current: selectInput } = this.selectInputRef;
+
+    if (selectInput) {
+      selectInput.focus();
+      this.handleKeyDown(event);
+    }
+  }
+
+  setDropdownRef(ref) {
+    this.dropdownRef.current = ref;
   }
 
   getDisplay(ariaDescribedBy) {
@@ -176,7 +191,7 @@ class Frame extends React.Component {
     const inputAttrs = {
       disabled,
       placeholder,
-      ref: this.setInput,
+      ref: this.selectInputRef,
       onChange: this.handleSearch,
       onFocus: this.handleInputFocus,
       onBlur: this.handleInputBlur,
@@ -202,10 +217,14 @@ class Frame extends React.Component {
    * Closes the dropdown.
    */
   closeDropdown() {
+    const { current: selectInput } = this.selectInputRef;
+    const { current: select } = this.selectRef;
+
     this.setState({
       isAbove: false,
-      isFocused: document.activeElement === this.input || document.activeElement === this.select,
+      isFocused: document.activeElement === selectInput || document.activeElement === select, // TODO: fixme
       isOpen: false,
+      openFromToggle: false,
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
@@ -229,24 +248,9 @@ class Frame extends React.Component {
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
-      this.setState({ isOpen: true, isPositioned: false });
-
-      // Allows time for state update to render select menu DOM before shifting focus to it
-      setTimeout(() => {
-        const selectMenu = document.querySelector(this.selectMenu);
-        if (selectMenu) {
-          selectMenu.focus();
-        }
-      }, 10);
+      this.setState({ isOpen: true, isPositioned: false, openFromToggle: true });
       return;
     }
-
-    // Allows time for state update to render select menu DOM before shifting focus to it
-    setTimeout(() => {
-      if (document.querySelector(this.selectMenu)) {
-        document.querySelector(this.selectMenu).focus();
-      }
-    }, 10);
 
     this.setState({ isOpen: true, isPositioned: false });
   }
@@ -260,7 +264,10 @@ class Frame extends React.Component {
     }
 
     const { dropdownAttrs, maxHeight } = this.props;
-    const { select, dropdown } = this;
+    // const { dropdown } = this;
+    const { current: dropdown } = this.dropdownRef;
+    const { current: select } = this.selectRef;
+
     this.setState(FrameUtil.dropdownPosition(dropdownAttrs, select, dropdown, maxHeight));
   }
 
@@ -269,17 +276,24 @@ class Frame extends React.Component {
    */
   handleBlur(event) {
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
+    const { isOpen } = this.state;
+    const { onBlur } = this.props;
+
+    // TODO: fixme
+    if (isOpen) {
+      return;
+    }
     // if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
     //   return;
     // }
 
-    // this.setState({ isFocused: false });
+    this.setState({ isFocused: false });
 
-    // this.closeDropdown();
+    this.closeDropdown();
 
-    // if (this.props.onBlur) {
-    //   this.props.onBlur(event);
-    // }
+    if (onBlur) {
+      onBlur(event);
+    }
   }
 
   /**
@@ -327,7 +341,7 @@ class Frame extends React.Component {
    * @param {event} event - The mouse down event.
    */
   handleInputMouseDown(event) {
-    event.stopPropagation();
+    // event.stopPropagation();
     this.openDropdown(event);
   }
 
@@ -358,10 +372,12 @@ class Frame extends React.Component {
    * Handles the toggle button mouse down events.
    */
   handleToggleButtonMouseDown() {
+    // const { current: selectInput } = this.selectInputRef;
+
     if (this.state.isOpen) {
       this.closeDropdown();
-      // if (this.input) {
-      //   this.input.focus();
+      // if (selectInput) {
+      //   selectInput.focus();
       // }
     }
   }
@@ -383,8 +399,6 @@ class Frame extends React.Component {
     if (onSearch) {
       onSearch(searchValue);
     }
-
-    // this.positionDropdown();
   }
 
   /**
@@ -401,6 +415,13 @@ class Frame extends React.Component {
       isOpen: false,
       isAbove: false,
     });
+
+    // menu was open with focus on menu's input, manually shift focus back to
+    // the select input
+    const { current: selectInput } = this.selectInputRef;
+    if (selectInput) {
+      selectInput.focus();
+    }
 
     if (onSelect) {
       onSelect(value, option);
@@ -549,6 +570,7 @@ class Frame extends React.Component {
       searchValue,
       isPositioned,
       hasSearchChanged,
+      openFromToggle,
     } = this.state;
 
     const selectClasses = cx([
@@ -579,8 +601,6 @@ class Frame extends React.Component {
       visuallyHiddenComponent: this.visuallyHiddenComponent,
       onSelect: this.handleSelect,
       onRequestClose: this.closeDropdown,
-      input: this.input,
-      select: this.select,
       clearOptionDisplay,
 
       // TODO: these are new..
@@ -594,6 +614,11 @@ class Frame extends React.Component {
       onSearch: this.handleSearch,
       required,
       placeholder,
+      menuInputRef: this.menuInputRef,
+      selectInputRef: this.selectInputRef,
+      selectRef: this.selectRef,
+      onTabDown: this.onMenuTabDown,
+      openFromToggle,
     };
 
     return (
@@ -613,7 +638,7 @@ class Frame extends React.Component {
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}
         tabIndex="-1"
-        ref={(select) => { this.select = select; }}
+        ref={this.selectRef}
       >
         <div className={cx('visually-hidden-component')} hidden>
           {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
@@ -636,11 +661,11 @@ class Frame extends React.Component {
           <Dropdown
             {...dropdownAttrs}
             id={isOpen ? 'terra-select-dropdown' : undefined}
-            target={this.select}
+            target={this.selectRef.current}
             isAbove={isAbove}
             isEnabled={isPositioned}
             onResize={this.positionDropdown}
-            refCallback={(ref) => { this.dropdown = ref; }}
+            refCallback={this.setDropdownRef}
             style={dropdownStyle} // eslint-disable-line react/forbid-component-props
           >
             <Menu {...menuProps}>
