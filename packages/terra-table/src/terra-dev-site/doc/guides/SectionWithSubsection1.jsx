@@ -68,7 +68,7 @@ const SectionWithSubsection1 = () => {
     );
   };
 
-  const sectiions = mockData.map(section => createSection(section));
+  const sections = mockData.map(section => createSection(section));
 
   return (
     <Table
@@ -82,7 +82,7 @@ const SectionWithSubsection1 = () => {
         </HeaderRow>
       )}
     >
-      {sectiions}
+      {sections}
     </Table>
   );
 };

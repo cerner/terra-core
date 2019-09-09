@@ -76,11 +76,9 @@ For rendering the collapsible section we set `isCollapsible` for all sections.
 Finally we need to check if the section is collapsed. As we support IE10 & 11, we cannot use `contains`, so we use `indexOf` to determine if the key is present in our state array. As well as place entries for row index.
 ```diff
   const createSection = (sectionData) => {
-+   rowCount += 1;
     return (
       <Section
         key={sectionData.key}
-+       aria-rowindex={rowCount}
         title={sectionData.title}
 +       isCollapsed={collapsedKeys.indexOf(sectionData.key) >= 0}
         isCollapsible
@@ -127,7 +125,9 @@ Then we can implement a method to loop through our data and create the section w
 +   </Table>
   );
 ```
-Finally add the total row count to the Table.
+Finally we need to address the accessibility concerns of collapsible section row. In order to display to the user that a specific number of rows are being hidden, we need to set the index of each element (row, section, table, etc) and add the total row count to the Table.
+
+This step is only necessarily if you are using collapsible sections, if you are using section with `isCollapsible={false}` no indexes are needed as they are implied.
 ```diff
   const [collapsedKeys, setCollapsedKeys] = useState([]);
 + let rowCount = 1;

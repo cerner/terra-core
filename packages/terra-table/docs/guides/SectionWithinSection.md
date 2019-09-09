@@ -28,7 +28,7 @@ Terra Table comes with additional helpers to manage state, in this case we want 
 +   setCollapsedKeys(Utils.updatedMultiSelectedKeys(collapsedKeys, metaData.key));
   };
 ```
-Setting state will trigger another render. So in the render method we need to generate our sections with the updated isCollapsed and isCollapsible props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if items are placed within sections structurally.
+Setting state will trigger another render. So in the render method we need to generate our sections with the updated `isCollapsed` and `isCollapsible` props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if items are placed within sections structurally.
 [React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
 ```diff
 + const createSection = (sectionData) => {
@@ -42,7 +42,7 @@ Setting state will trigger another render. So in the render method we need to ge
 +   );
 + };
 ```
-Next we need to set up our metaData object with our key value, and attach the "onSelect" to our handler.
+Next we need to set up our metaData object with our key value, and attach the `onSelect` to our handler.
 ```diff
   const createSection = (sectionData) => {
     return (
@@ -57,7 +57,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
     );
   };
 ```
-For rendering the collapsible section we set "isCollapsible" for all sections.
+For rendering the collapsible section we set `isCollapsible` for all sections.
 ```diff
   const createSection = (sectionData) => {
     return (
@@ -73,23 +73,47 @@ For rendering the collapsible section we set "isCollapsible" for all sections.
     );
   };
 ```
-Finally we need to check if the section is collapsed. As we support IE10 & 11, we cannot use "contains", so we use "indexOf" to determine if the key is present in our state array.
+Following `isCollapsible` we need to check if the section is `isCollapsed` state. As we support IE10 & 11, we cannot use `contains`, so we use `indexOf` to determine if the key is present in our state array.
 ```diff
   const createSection = (sectionData) => {
-+   const isCollapsed = collapsedKeys.indexOf(sectionData.key) >= 0;
     return (
       <Section
         key={sectionData.key}
         title={sectionData.title}
-+       isCollapsed={isCollapsed}
++       isCollapsed={collapsedKeys.indexOf(sectionData.key) >= 0}
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={handleSectionSelection}
       >
-+       {!isCollapsed && sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {sectionData.childItems.map(childItem => createSubsection(childItem))}
       </Section>
     );
   };
+```
+After creating our section, we then implement our subsection.
+```diff
++ const createSubsection = subsectionData => {
++   return (
++     <Subsection
++       key={subsectionData.key}
++       title={subsectionData.title}
++     >
++       {subsectionData.childItems.map(childItem => createRow(childItem))}
++     </Subsection>
++   );
++ };
+```
+Now we need an entry for a row to unpack our cells into.
+```diff
++ const createRow = (rowData) => {
++   return (
++     <Row
++       key={rowData.key}
++     >
++       {createCellsForRow(rowData.cells)}
++     </Row>
++   );
++ };
 ```
 We can then implement the unpack of our data into our row cells.
 ```diff
@@ -98,19 +122,10 @@ We can then implement the unpack of our data into our row cells.
 + const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 + const createRow = rowData => <Row key={rowData.key}>{createCellsForRow(rowData.cells)}</Row>;
-
-+ const createSubsection = subsectionData => (
-+   <Subsection
-+     key={subsectionData.key}
-+     title={subsectionData.title}
-+   >
-+     {subsectionData.childItems.map(childItem => createRow(childItem))}
-+   </Subsection>
-+ );
 ```
 Then we can implement a method to loop through our data and create the section with our methods and call it from our render method.
 ```diff
-+  const createSections = data => data.map(section => createSection(section));
++  const sections = mockData.map(section => createSection(section));
 
   return (
 +   <Table
@@ -123,8 +138,74 @@ Then we can implement a method to loop through our data and create the section w
 +        </HeaderRow>
 +      )}
 +    >
-+      {this.createSections(mockData)}
++      {sections}
 +    </Table>
+  );
+```
+Finally we need to address the accessibility concerns of collapsible section row. In order to display to the user that a specific number of rows are being hidden, we need to set the index of each element (row, section, table, etc) and add the total row count to the Table.
+
+This step is only necessarily if you are using collapsible sections, if you are using section with `isCollapsible={false}` no indexes are needed as they are implied.
+```diff
+  const [collapsedKeys, setCollapsedKeys] = useState([]);
++ let rowCount = 1;
+...
+  const createRow = (rowData) => {
++   rowCount += 1;
+    return (
+      <Row
+        key={rowData.key}
++       aria-rowindex={rowCount}
+      >
+        {createCellsForRow(rowData.cells)}
+      </Row>
+    );
+  };
+...
+  const createSubsection = subsectionData => {
++   rowCount += 1;
+    return (
+      <Subsection
+        key={subsectionData.key}
++       aria-rowindex={rowCount}
+        title={subsectionData.title}
+      >
+        {subsectionData.childItems.map(childItem => createRow(childItem))}
+      </Subsection>
+    );
+  };
+...
+  const createSection = (sectionData) => {
++   rowCount += 1;
+    return (
+      <Section
+        key={sectionData.key}
++       aria-rowindex={rowCount}
+        title={sectionData.title}
+        isCollapsed={collapsedKeys.indexOf(sectionData.key) >= 0}
+        isCollapsible
+        metaData={{ key: sectionData.key }}
+        onSelect={handleSectionSelection}
+      >
+        {sectionData.childItems.map(childItem => createSubsection(childItem))}
+      </Section>
+    );
+  };
+...
+  return (
+    <Table
++     aria-rowcount={rowCount}
+      paddingStyle="standard"
+      headerRow={(
+-       <HeaderRow>
++       <HeaderRow aria-rowindex="1">
+          <HeaderCell isPadded>Column 0</HeaderCell>
+          <HeaderCell isPadded>Column 1</HeaderCell>
+          <HeaderCell isPadded>Column 2</HeaderCell>
+        </HeaderRow>
+      )}
+    >
+      {createSections(mockData)}
+    </Table>
   );
 ```
 Using these steps we get the following example:

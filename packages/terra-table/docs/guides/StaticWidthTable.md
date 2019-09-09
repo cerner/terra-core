@@ -16,9 +16,9 @@ The easiest method of synchronizing your Cells and HeaderCells is to first defin
 Add Rows
 
 ```diff
-+ const createRow = itemData => (
-+   <Row key={itemData.key}>
-+     {createCellsForRow(itemData.cells)}
++ const createRow = rowData => (
++   <Row key={rowData.key}>
++     {createCellsForRow(rowData.cells)}
 +   </Row>
 + );
 
