@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed 
-* Changed generateImage function to Fallback to Initials if Provided.
+* Changed the fallback behavior of Avatar. Such that if the image fails to load when initials are provided, the avatar falls back to the initials display instead of default user icon.
 
 2.26.0 - (September 6, 2019)
 ------------------

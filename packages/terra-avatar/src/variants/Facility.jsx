@@ -73,10 +73,18 @@ class Facility extends React.Component {
 
     let facilityContent;
 
+    const facilityParams = {
+      image,
+      alt,
+      isAriaHidden,
+      variant: AVATAR_VARIANTS.FACILITY,
+      handleFallback: this.handleFallback,
+    };
+
     if (image) {
-      facilityContent = generateImage(image, alt, isAriaHidden, AVATAR_VARIANTS.FACILITY, this.handleFallback);
+      facilityContent = generateImage(facilityParams);
     } else {
-      facilityContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.FACILITY);
+      facilityContent = generateImagePlaceholder(facilityParams);
     }
     const attributes = { ...customProps };
     const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;

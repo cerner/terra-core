@@ -60,22 +60,22 @@ const getColorVariant = (hashValue) => {
 /**
  * Render placeholder.
  */
-const generateImagePlaceholder = (alt, isAriaHidden, variant, initials) => {
-  if (initials && initials.length <= 2) {
+const generateImagePlaceholder = (avatarParams) => {
+  if (avatarParams.initials && avatarParams.initials.length <= 2) {
     const avatarTextClassNames = cx('initials');
-    return <span className={avatarTextClassNames} alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
+    return <span className={avatarTextClassNames} alt={avatarParams.alt} aria-label={avatarParams.alt} aria-hidden={avatarParams.isAriaHidden}>{avatarParams.initials.toUpperCase()}</span>;
   }
 
-  const avatarIconClassNames = cx(['icon', variant]);
-  return <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
+  const avatarIconClassNames = cx(['icon', avatarParams.variant]);
+  return <span className={avatarIconClassNames} role="img" aria-label={avatarParams.alt} alt={avatarParams.alt} aria-hidden={avatarParams.isAriaHidden} />;
 };
 
 /**
  * Render image with placeholder.
  */
-const generateImage = (image, alt, isAriaHidden, variant, handleFallback, initials) => {
-  const icon = generateImagePlaceholder(alt, isAriaHidden, variant, initials);
-  return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} fit="cover" />;
+const generateImage = (avatarParams) => {
+  const icon = generateImagePlaceholder(avatarParams);
+  return <TerraImage className={cx('image')} src={avatarParams.image} placeholder={icon} alt={avatarParams.alt} onError={avatarParams.handleFallback} fit="cover" />;
 };
 
 

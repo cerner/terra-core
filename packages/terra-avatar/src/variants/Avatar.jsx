@@ -85,13 +85,19 @@ class Avatar extends React.Component {
 
     let avatarContent;
 
+    const avatarParams = {
+      image,
+      alt,
+      isAriaHidden,
+      variant: AVATAR_VARIANTS.USER,
+      handleFallback: this.handleFallback,
+      initials,
+    };
+
     if (image) {
-      avatarContent = generateImage(image, alt, isAriaHidden, AVATAR_VARIANTS.USER, this.handleFallback, initials);
-    } else if (initials && initials.length <= 2) {
-      const avatarTextClassNames = cx('initials');
-      avatarContent = <span className={avatarTextClassNames} alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
+      avatarContent = generateImage(avatarParams);
     } else {
-      avatarContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.USER);
+      avatarContent = generateImagePlaceholder(avatarParams);
     }
 
     const attributes = { ...customProps };

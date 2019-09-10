@@ -1,6 +1,6 @@
 # Terra Avatar
 
-The `Avatar` variant represents a person - it displays an image or initials in a circular frame. If neither are provided, a fallback user icon displays. This is the default export of the `terra-avatar` package.
+The `Avatar` variant represents a person - it displays an image or initials in a circular frame. If valid image is not provided and initials is provided, then fallback initial displays. If neither are provided, a fallback user icon displays. This is the default export of the `terra-avatar` package.
 
 ## Getting Started
 
