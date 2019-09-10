@@ -57,15 +57,11 @@ const propTypes = {
    */
   menuId: PropTypes.string.isRequired,
   /**
-   * Ref object of the parent select's input
-   */
-  menuInputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
-  /**
    * Content to display when no results are found.
    */
   noResultContent: PropTypes.node,
   /**
-   * Callback function triggered by the toggle button to close the menu
+   * Callback function triggered by the toggle button or tab keypress to close the menu
    */
   onRequestClose: PropTypes.func.isRequired,
   /**
@@ -76,10 +72,6 @@ const propTypes = {
    * Callback function triggered when an option is selected.
    */
   onSelect: PropTypes.func.isRequired,
-  /**
-   * Callback function triggered when tab is pressed on the menu
-   */
-  onTabDown: PropTypes.func.isRequired,
   /**
    * Whether the menu was opened from the toggle button or not
    */
@@ -159,13 +151,11 @@ function Menu({
   onRequestClose,
   onSearch,
   onSelect,
-  onTabDown,
   openedFromToggle,
   optionFilter,
   placeholder,
   required,
   searchValue,
-  selectInputRef,
   value,
 }) {
   const [active, setActive] = React.useState(() => findActiveOption(children, { active: null, value }));
@@ -191,12 +181,7 @@ function Menu({
     }
 
     onSelect(option.props.value, option);
-
-    const { current: selectInput } = selectInputRef;
-    if (selectInput) {
-      selectInput.focus();
-    }
-  }, [onSelect, selectInputRef]);
+  }, [onSelect]);
 
   const decorateOptions = React.useCallback((object) => React.Children.map(object, (option) => {
     if (option.type.isOption) {
@@ -265,9 +250,8 @@ function Menu({
 
     /** close menu and pass event to select */
     } else if (keyCode === KEY_TAB) {
-      // TODO: maybe rename this?
-      if (onTabDown) {
-        onTabDown(event);
+      if (onRequestClose) {
+        onRequestClose(event);
       }
 
     /** select active option, if present */
@@ -276,7 +260,7 @@ function Menu({
       const option = MenuUtil.findByValue(options, active);
       onSelect(option.props.value, option);
     }
-  }, [active, onSelect, onTabDown, options]);
+  }, [active, onRequestClose, onSelect, options]);
 
   // Update active option
   React.useEffect(() => {
@@ -318,17 +302,17 @@ function Menu({
 
   /* eslint-disable react/forbid-dom-props */
   return (
-    // TODO: does this top level div also need 'aria-describedby'?
-    <div ref={menuRef} id={menuId} className={menuClasses}>
+    <div ref={menuRef} id={menuId} className={menuClasses} aria-describedby={ariaDescribedBy}>
       <div className={cx('menu-container')}>
         <div className={cx('display')} aria-label={ariaLabel}>
           <div className={cx('content')}>
             <input
+              data-terra-select-menu-input
               aria-controls={listboxId.current}
               aria-describedby={ariaDescribedBy}
               aria-label={ariaLabel}
               aria-required={required}
-              className={cx('search-input')} // TODO: fix my styles
+              className={cx('search-input')}
               onChange={onSearch}
               onKeyDown={handleInputKeyDown}
               placeholder={placeholder}
@@ -340,7 +324,6 @@ function Menu({
             />
           </div>
         </div>
-        {/* temp make the toggle button red til I figure out the icon.. */}
         <div className={cx(['toggle', 'toggle-narrow'])}>
           <button
             type="button"

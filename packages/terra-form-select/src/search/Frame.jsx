@@ -165,7 +165,7 @@ class Frame extends React.Component {
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.role = this.role.bind(this);
-    this.handleMenuTabDown = this.handleMenuTabDown.bind(this);
+    this.handleMenuRequestClose = this.handleMenuRequestClose.bind(this);
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -211,20 +211,26 @@ class Frame extends React.Component {
 
     return (
       <div className={cx('content')}>
-        <input {...inputAttrs} value={value} />
+        <input {...inputAttrs} value={value} data-terra-select-input />
       </div>
     );
   }
 
   /**
-   * TODO: docme
+   * Handle the menu onRequestClose event
    */
-  handleMenuTabDown(event) {
+  handleMenuRequestClose(event) {
+    // focus on the select input
     const { current: selectInput } = this.selectInputRef;
-
     if (selectInput) {
       selectInput.focus();
+    }
+
+    // if closed via keypress, handle the event, else close the dropdown
+    if (event.keyCode !== undefined) {
       this.handleKeyDown(event);
+    } else {
+      this.closeDropdown();
     }
   }
 
@@ -279,7 +285,6 @@ class Frame extends React.Component {
     }
 
     const { dropdownAttrs, maxHeight } = this.props;
-    // const { dropdown } = this;
     const { current: dropdown } = this.dropdownRef;
     const { current: select } = this.selectRef;
 
@@ -290,37 +295,49 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
-    // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
-    const { isOpen } = this.state;
-    const { onBlur } = this.props;
+    // React recycles synthetic event objects when the stack empties,
+    // persist this one so we can use it in the raf callback below
+    // see: https://reactjs.org/docs/events.html#event-pooling
+    event.persist();
 
-    // TODO: fixme
-    if (isOpen) {
-      return;
-    }
-    // if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
-    //   return;
-    // }
+    // allow the DOM to settle: queue a microtask to fire before next repaint
+    // we want to ensure that the document.activeElement has properly updated,
+    // especially after manual focus manipulation for the select and menu inputs
+    // this will run after the JS stack has run to completion, but before the
+    // next paint
+    requestAnimationFrame(() => {
+      const { onBlur } = this.props;
+      const { activeElement } = document;
 
-    this.setState({ isFocused: false });
+      // don't proceed to blur if either the menu's or select's input, or the
+      // toggle button is the document's active (focused) element
+      if (activeElement.hasAttribute('data-terra-select-menu-input') || activeElement.hasAttribute('data-terra-select-input') || activeElement.hasAttribute('data-terra-form-select-toggle-button')) {
+        return;
+      }
 
-    this.closeDropdown();
+      this.setState({ isFocused: false });
 
-    if (onBlur) {
-      onBlur(event);
-    }
+      this.closeDropdown();
+
+      if (onBlur) {
+        onBlur(event);
+      }
+    });
   }
 
   /**
    * Handles the focus event.
    */
   handleFocus(event) {
-    if (this.props.disabled) {
+    const { disabled, onFocus } = this.props;
+    const { isFocused } = this.state;
+
+    if (disabled) {
       return;
     }
 
-    if (this.props.onFocus && !this.state.isFocused) {
-      this.props.onFocus(event);
+    if (onFocus && !isFocused) {
+      onFocus(event);
     }
 
     this.setState({ isFocused: true });
@@ -434,6 +451,8 @@ class Frame extends React.Component {
       isOpen: false,
       isAbove: false,
     });
+
+    this.closeDropdown();
 
     // menu was open with focus on menu's input, manually shift focus back to
     // the select input
@@ -621,10 +640,9 @@ class Frame extends React.Component {
       maxHeight,
       menuId,
       noResultContent,
-      onRequestClose: this.closeDropdown,
+      onRequestClose: this.handleMenuRequestClose,
       onSearch: this.handleSearch,
       onSelect: this.handleSelect,
-      onTabDown: this.handleMenuTabDown,
       openedFromToggle,
       optionFilter,
       placeholder,
