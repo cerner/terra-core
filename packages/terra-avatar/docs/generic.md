@@ -1,6 +1,6 @@
 # Generic
 
-The `Generic` variant represents multiple variants like `single-user`, `shared-user`, `provider` - it displays a specified variant user icon in a circular frame.
+The `Generic` variant toggles between different, generic persons - `single-user`, `shared-user`, or `provider`.
 
 ## Getting Started
 - Install with [npmjs](https://www.npmjs.com):
