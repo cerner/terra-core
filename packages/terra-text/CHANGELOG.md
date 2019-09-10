@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Accept and forward ref to the `<span />` element.
 
 4.17.0 - (September 6, 2019)
 ------------------
