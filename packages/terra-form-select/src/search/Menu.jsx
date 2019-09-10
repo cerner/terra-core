@@ -320,30 +320,32 @@ function Menu({
   return (
     // TODO: does this top level div also need 'aria-describedby'?
     <div ref={menuRef} id={menuId} className={menuClasses}>
-      <div className={cx('display')} aria-label={ariaLabel}>
-        <div className={cx('content')}>
-          <input
-            aria-controls={listboxId.current}
-            aria-describedby={ariaDescribedBy}
-            aria-label={ariaLabel}
-            aria-required={required}
-            className={cx('search-input')} // TODO: fix my styles
-            onChange={onSearch}
-            onKeyDown={handleInputKeyDown}
-            placeholder={placeholder}
-            ref={menuInputRef}
-            required={required}
-            role="searchbox"
-            type="text"
-            value={searchValue}
-          />
+      <div className={cx('menu-container')}>
+        <div className={cx('display')} aria-label={ariaLabel}>
+          <div className={cx('content')}>
+            <input
+              aria-controls={listboxId.current}
+              aria-describedby={ariaDescribedBy}
+              aria-label={ariaLabel}
+              aria-required={required}
+              className={cx('search-input')} // TODO: fix my styles
+              onChange={onSearch}
+              onKeyDown={handleInputKeyDown}
+              placeholder={placeholder}
+              ref={menuInputRef}
+              required={required}
+              role="searchbox"
+              type="text"
+              value={searchValue}
+            />
+          </div>
         </div>
         {/* temp make the toggle button red til I figure out the icon.. */}
         <div className={cx(['toggle', 'toggle-narrow'])}>
           <button
             type="button"
             className={cx('toggle-btn')}
-          // aria-label={mobileButtonUsageGuidanceTxt} // TODO: addme
+            // aria-label={mobileButtonUsageGuidanceTxt} // TODO: addme
             data-terra-form-select-toggle-button
             onClick={onRequestClose}
           >
