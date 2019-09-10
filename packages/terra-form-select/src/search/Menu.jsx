@@ -339,7 +339,7 @@ function Menu({
           />
         </div>
         {/* temp make the toggle button red til I figure out the icon.. */}
-        <div className={cx(['toggle', 'toggle-narrow'])} style={{ backgroundColor: '#f00' }}>
+        <div className={cx(['toggle', 'toggle-narrow'])}>
           <button
             type="button"
             className={cx('toggle-btn')}
@@ -353,7 +353,7 @@ function Menu({
       </div>
       <ul
         role="listbox"
-        className={cx('menu-list')}
+        className={cx(['menu-list', { 'is-above': isAbove }])}
         id={listboxId.current}
         style={{ maxHeight }}
         aria-label={intl.formatMessage({ id: 'Terra.form.select.menu' })}
