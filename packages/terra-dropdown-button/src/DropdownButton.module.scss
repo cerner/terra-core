@@ -14,6 +14,7 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    margin: 0;/* Reset margin for Safari. Safari defaults to 2px. */
     outline: 0;
     padding-bottom: var(--terra-dropdown-button-dropdown-type-padding-bottom, 0.28571rem);
     padding-left: var(--terra-dropdown-button-dropdown-type-padding-left, 0.71428rem);
