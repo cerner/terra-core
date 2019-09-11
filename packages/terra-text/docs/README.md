@@ -6,6 +6,8 @@ In these cases, the text component may be helpful. Using terra-text, you can cre
 
 However, there are some drawbacks to be aware of with this component. The styles set with this component are not themable and will be static. If this is a concern, we recommend building a custom component that handles your font styles that need to differ from the base font styles so you can control the themability of them.
 
+> Note: The inner `<span />` can be accessed via the `ref` to a `<Text />`.
+
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
