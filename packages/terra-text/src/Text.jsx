@@ -73,9 +73,9 @@ const defaultProps = {
   isWordWrapped: false,
 };
 
-const Text = ({
+const Text = React.forwardRef(({
   children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, colorClass, ...customProps
-}) => {
+}, ref) => {
   const attributes = { ...customProps };
   const TextClassNames = cx([
     'text',
@@ -90,11 +90,11 @@ const Text = ({
   ]);
 
   return (
-    <span {...attributes} className={TextClassNames}>
+    <span {...attributes} className={TextClassNames} ref={ref}>
       {children}
     </span>
   );
-};
+});
 
 Text.propTypes = propTypes;
 Text.defaultProps = defaultProps;
