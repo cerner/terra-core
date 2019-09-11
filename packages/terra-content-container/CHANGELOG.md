@@ -1,14 +1,22 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+3.17.0 - (September 6, 2019)
 ------------------
 ### Changed
+* Minor dependency version bump
+
+3.16.0 - (August 21, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+* Added an example and documentation around usage of scrollRefCallback prop.
+
+### Changed
+* Import for package version from package.json added to doc page
 * Cleaned up imports in examples and test files
 
 3.15.0 - (August 14, 2019)

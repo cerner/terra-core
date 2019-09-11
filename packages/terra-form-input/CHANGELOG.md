@@ -3,12 +3,30 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+2.25.0 - (September 6, 2019)
 ------------------
 ### Changed
+* Updated examples to import from the expected package instead of relative paths
+
+2.24.0 - (September 3, 2019)
+------------------
+### Fixed
+* Fixed issue where using aria-label as a custom prop the `<Textarea />` component was not passing through correctly.
+
+### Added
+* Props table markdown file import added to doc site page
+* Added `ariaLabel` prop to improve accessibility.
+
+### Changed
+* Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
+
+2.23.0 - (August 21, 2019)
+------------------
+### Changed
+* Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 * Cleaned up imports in examples and test files
 
 2.22.0 - (August 14, 2019)

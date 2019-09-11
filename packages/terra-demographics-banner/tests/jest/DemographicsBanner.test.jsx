@@ -1,7 +1,7 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
-import Image from '../../../terra-image/lib/Image';
+import Image from 'terra-image';
 import DemographicsBanner from '../../src/DemographicsBanner';
 
 it('renders a blank banner wrapper', () => {

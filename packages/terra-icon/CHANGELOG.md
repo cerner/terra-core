@@ -1,15 +1,33 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
+
+3.20.0 - (September 6, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.19.0 - (September 3, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+* Added ThemeIconTemplate to support tooltip for theme icons
+* Added Translations for IconConsultInstructionsForUse tooltip text
+
 ### Changed
 * Import for package version from package.json added to doc page
 
-Unreleased
+3.18.0 - (August 21, 2019)
 ------------------
 ### Changed
+* Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 * Cleaned up imports in examples and test files
+
+### Fixed
+* Fixed bi-directionality when `isBidi` is explicitly set.
 
 3.17.0 - (August 14, 2019)
 ------------------

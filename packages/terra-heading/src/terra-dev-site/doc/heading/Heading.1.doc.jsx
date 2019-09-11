@@ -8,12 +8,12 @@ import HeadingColorDocs from '../../../../docs/heading-colors.md';
 import HeadingWeightDocs from '../../../../docs/heading-weights.md';
 import HeadingVisuallyHiddenDocs from '../../../../docs/heading-visually-hidden.md';
 import HeadingVariationDocs from '../../../../docs/heading-variations.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import HeadingSrc from '!raw-loader!../../../../src/Heading';
-
 // Example Files
+import HeadingPropsTable from '!terra-props-table-loader!../../../../src/Heading';
+import HeadingSrc from '!raw-loader!../../../../src/Heading';
 import HeadingColors from '../example/HeadingColors';
 import HeadingColorsSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/HeadingColors';
 import HeadingLevels from '../example/HeadingLevels';
@@ -69,6 +69,7 @@ const DocPage = () => (
       {
         componentName: 'Heading',
         componentSrc: HeadingSrc,
+        componentProps: HeadingPropsTable,
       },
     ]}
   />

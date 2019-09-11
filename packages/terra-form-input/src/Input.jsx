@@ -63,6 +63,11 @@ const propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
+  /**
+  * String that labels the current element. 'aria-label' must be present,
+  * for accessibility.
+  */
+  ariaLabel: PropTypes.string,
 };
 
 const defaultProps = {
@@ -94,16 +99,31 @@ class Input extends React.Component {
       refCallback,
       required,
       type,
+      ariaLabel,
       value,
       ...customProps
     } = this.props;
 
-    const attributes = Object.assign({}, customProps);
+    const attributes = { ...customProps };
     const formInputClassNames = cx([
       'form-input',
       { 'form-error': isInvalid },
       attributes.className,
     ]);
+
+    let ariaLabelText;
+
+    // Handle case of users setting aria-label as a custom prop
+    if (attributes && Object.prototype.hasOwnProperty.call(attributes, 'aria-label')) {
+      // If they've set aria-label and ariaLabel, use the ariaLabel value,
+      // otherwise, fallback to using the aria-label value passed in.
+      ariaLabelText = !ariaLabel ? attributes['aria-label'] : ariaLabel;
+    } else if (ariaLabel) {
+      // If users only set ariaLabel prop, use that value
+      ariaLabelText = ariaLabel;
+    }
+
+    attributes['aria-label'] = ariaLabelText;
 
     if (required) {
       attributes['aria-required'] = 'true';

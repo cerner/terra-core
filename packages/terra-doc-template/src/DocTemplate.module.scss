@@ -21,4 +21,21 @@
     padding-right: var(--terra-doc-template-doc-card-not-empty-padding-right);
     padding-top: var(--terra-doc-template-doc-card-not-empty-padding-top);
   }
+
+  .props-table-markdown {
+    color: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1rem;
+    line-height: 1.5;
+    list-style: disc outside none;
+    margin-bottom: 1.25rem;
+    text-size-adjust: 100%;
+    word-wrap: break-word;
+
+    h2 {
+      border-bottom: 1px solid #eaecef;
+      font-size: 1.5em;
+      padding-bottom: 0.3em;
+    }
+  }
 }

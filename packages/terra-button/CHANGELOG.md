@@ -1,14 +1,24 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+3.23.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+3.22.0 - (September 3, 2019)
 ------------------
 ### Changed
+* Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
+
+3.21.0 - (August 21, 2019)
+------------------
+### Changed
+* Import for package version from package.json added to doc page
+* Added comments for ESlint v6
 * Cleaned up imports in examples and test files
 
 3.20.0 - (August 14, 2019)

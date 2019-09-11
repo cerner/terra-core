@@ -76,9 +76,10 @@ const defaultProps = {
 const Text = ({
   children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, colorClass, ...customProps
 }) => {
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
   const TextClassNames = cx([
     'text',
+    { 'inherit-color': !colorClass }, // set `color: inherit` via class if colorClass is not provided
     { italic: isItalic },
     { 'word-wrap': isWordWrapped },
     { 'visually-hidden': isVisuallyHidden },

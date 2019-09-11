@@ -4,14 +4,16 @@ Changelog
 Unreleased
 ----------
 
-Unreleased
+2.40.0 - (September 6, 2019)
 ------------------
+### Added
+* Props table markdown file import added to doc site page
+
+2.39.0 - (August 21, 2019)
+--------------------------
 ### Changed
 * Cleaned up imports in examples and test files
-
-2.38.0 - (August 14, 2019)
-------------------
-### Changed
+* Added comments for ESlint v6
 * updated package.json test scripts
 
 2.37.0 - (July 30, 2019)

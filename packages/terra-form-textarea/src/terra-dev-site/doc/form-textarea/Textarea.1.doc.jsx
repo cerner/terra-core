@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import TextareaSrc from '!raw-loader!../../../../src/Textarea';
-
 // Example Files
+import FormTextareaPropsTable from '!terra-props-table-loader!../../../../src/Textarea';
+import FormTextareaSrc from '!raw-loader!../../../../src/Textarea';
 import ResizableExample from '../example/Resizable';
 import ResizableExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Resizable';
 import FixedSmallSizeExample from '../example/FixedSmallSize';
@@ -21,6 +21,8 @@ import InvalidExample from '../example/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Invalid';
 import DisabledExample from '../example/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Disabled';
+import TextareaExample from '../example/Textarea';
+import TextareaExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Textarea';
 
 const DocPage = () => (
   <DocTemplate
@@ -30,11 +32,16 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     propsTables={[
       {
-        componentName: 'Textarea',
-        componentSrc: TextareaSrc,
+        componentName: 'Form Textarea',
+        componentSrc: FormTextareaSrc,
+        componentProps: FormTextareaPropsTable,
       },
     ]}
     examples={[
+      {
+        example: <TextareaExample />,
+        source: TextareaExampleSrc,
+      },
       {
         example: <FixedSmallSizeExample />,
         source: FixedSmallSizeExampleSrc,

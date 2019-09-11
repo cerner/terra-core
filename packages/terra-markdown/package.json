@@ -1,7 +1,7 @@
 {
   "name": "terra-markdown",
   "main": "lib/Markdown.js",
-  "version": "2.32.0",
+  "version": "2.34.0",
   "description": "React component to display the content of markdown files.",
   "repository": {
     "type": "git",

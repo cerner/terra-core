@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should favor ariaLabel prop over aria-label if both props passed to component 1`] = `
+<textarea
+  aria-label="ariaLabel"
+  class="textarea"
+  rows="2"
+/>
+`;
+
+exports[`should honor aria-label passed to component 1`] = `
+<textarea
+  aria-label="label"
+  class="textarea"
+  rows="2"
+/>
+`;
+
 exports[`should not set the textarea to resizable when viewed on browser with DocumentTouch 1`] = `
 <textarea
   class="textarea"
@@ -40,6 +56,7 @@ exports[`should render a TextArea when all the possible props are passed into it
 
 exports[`should render a default TextArea component 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 />
@@ -74,6 +91,7 @@ exports[`should render a small textbox appropriately 1`] = `
 
 exports[`should render as controlled when just a default value is passed into the Textarea 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 >
@@ -83,6 +101,7 @@ exports[`should render as controlled when just a default value is passed into th
 
 exports[`should render as uncontrolled when just a default value is passed into the Textarea 1`] = `
 <textarea
+  aria-label="label"
   class="textarea"
   rows="2"
 >

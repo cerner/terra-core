@@ -3,12 +3,25 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+2.26.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+### Removed
+* Removed `inherit` fallback for `--terra-paginator-nav-link-selected-color` CSS custom property
+
+2.25.0 - (September 3, 2019)
 ------------------
 ### Changed
+* Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
+
+
+2.24.0 - (August 21, 2019)
+------------------
+### Changed
+* Import for package version from package.json added to doc page
 * Cleaned up imports in examples and test files
 
 2.23.0 - (August 14, 2019)

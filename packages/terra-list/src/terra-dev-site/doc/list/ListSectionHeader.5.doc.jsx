@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/ListSectionHeader.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ListSectionHeaderSrc from '!raw-loader!../../../../src/ListSectionHeader';
-
 // Example Files
+import ListSectionHeaderPropsTable from '!terra-props-table-loader!../../../../src/ListSectionHeader';
+import ListSectionHeaderSrc from '!raw-loader!../../../../src/ListSectionHeader';
 import ListSectionHeaderExample from '../example/ListSectionHeader';
 import ListSectionHeaderExamplesSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ListSectionHeader';
 
@@ -24,8 +24,9 @@ const DocPage = () => (
     ]}
     propsTables={[
       {
-        componentName: 'List-Section-Header',
+        componentName: 'List Section Header',
         componentSrc: ListSectionHeaderSrc,
+        componentProps: ListSectionHeaderPropsTable,
       },
     ]}
   />

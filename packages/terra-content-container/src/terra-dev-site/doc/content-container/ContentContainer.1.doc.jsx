@@ -1,16 +1,18 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import ContentContainerSrc from '!raw-loader!../../../../src/ContentContainer.jsx';
-
 // Example Files
+import ContentContainerPropsTable from '!terra-props-table-loader!../../../../src/ContentContainer';
+import ContentContainerSrc from '!raw-loader!../../../../src/ContentContainer';
 import ContentContainerStandard from '../example/ContentContainerStandard';
 import ContentContainerStandardSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ContentContainerStandard';
 import ContentContainerFill from '../example/ContentContainerFill';
 import ContentContainerFillSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ContentContainerFill';
+import ContentContainerScrollRef from '../example/ContentContainerScrollRef';
+import ContentContainerScrollRefSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ContentContainerScrollRef';
 
 const DocPage = () => (
   <DocTemplate
@@ -29,11 +31,17 @@ const DocPage = () => (
         example: <ContentContainerFill />,
         source: ContentContainerFillSrc,
       },
+      {
+        title: 'Scroll Ref Container',
+        example: <ContentContainerScrollRef />,
+        source: ContentContainerScrollRefSrc,
+      },
     ]}
     propsTables={[
       {
         componentName: 'Content Container',
         componentSrc: ContentContainerSrc,
+        componentProps: ContentContainerPropsTable,
       },
     ]}
   />

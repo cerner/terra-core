@@ -1,7 +1,7 @@
 {
   "name": "terra-dropdown-button",
   "main": "lib/DropdownButton.js",
-  "version": "1.1.0",
+  "version": "1.4.0",
   "description": "Provides a dropdown button component and split button component for selecting a single option (action) from a list of options.",
   "repository": {
     "type": "git",
@@ -28,9 +28,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "focus-trap-react": "^6.0.0",
-    "keycode-js": "^1.0.4",
+    "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.16.0",
+    "terra-doc-template": "^2.18.0",
     "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.30.0"
   },

@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Input should favor ariaLabel prop over aria-label if both props passed to component 1`] = `
+<input
+  aria-label="ariaLabel"
+  className="form-input"
+  defaultValue="foo"
+  disabled={false}
+  name={null}
+  required={false}
+/>
+`;
+
+exports[`Input should honor aria-label passed to component 1`] = `
+<input
+  aria-label="label"
+  className="form-input"
+  defaultValue="foo"
+  disabled={false}
+  name={null}
+  required={false}
+/>
+`;
+
 exports[`Input should pass in refCallback as the ref prop of the input element 1`] = `
 <Input
   disabled={false}
@@ -36,6 +58,7 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
 
 exports[`Input should render a default component 1`] = `
 <input
+  aria-label="label"
   className="form-input"
   disabled={false}
   name={null}
@@ -56,6 +79,7 @@ exports[`Input should render as controlled when just a default value and \`onCha
 
 exports[`Input should render as uncontrolled when just a default value is passed into the Input 1`] = `
 <input
+  aria-label="label"
   className="form-input"
   defaultValue="foo"
   disabled={false}
@@ -66,6 +90,7 @@ exports[`Input should render as uncontrolled when just a default value is passed
 
 exports[`Input should render w/ placeholder text when just a placeholder prop is passed into the Input 1`] = `
 <input
+  aria-label="label"
   className="form-input"
   disabled={false}
   name={null}
@@ -76,6 +101,7 @@ exports[`Input should render w/ placeholder text when just a placeholder prop is
 
 exports[`Input should render with a type of password and pattern prop value 1`] = `
 <input
+  aria-label="label"
   className="form-input"
   disabled={false}
   name={null}

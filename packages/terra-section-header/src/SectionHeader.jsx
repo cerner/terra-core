@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import KeyCode from 'keycode-js';
+import * as KeyCode from 'keycode-js';
 import Arrange from 'terra-arrange';
 import styles from './SectionHeader.module.scss';
 
@@ -92,7 +92,7 @@ class SectionHeader extends React.Component {
       console.warn('\'isOpen\' are intended to be used only when \'onClick\' is provided.');
     }
 
-    const attributes = Object.assign({}, customProps);
+    const attributes = { ...customProps };
 
     if (onClick) {
       attributes.tabIndex = '0';

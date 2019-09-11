@@ -48,6 +48,16 @@ describe('Text', () => {
     expect(text).toMatchSnapshot();
   });
 
+  it('should set inherit-color class if no colorClass is provided', () => {
+    const text = shallow(<Text>Test</Text>);
+    expect(text).toMatchSnapshot();
+  });
+
+  it('should not set inherit-color class is a colorClass is provided', () => {
+    const text = shallow(<Text colorClass="TestClass">Test</Text>);
+    expect(text).toMatchSnapshot();
+  });
+
   it('should support rendering an array of elements as a children', () => {
     /* eslint-disable comma-dangle */
     const text = shallow(
@@ -85,8 +95,10 @@ describe('Text', () => {
   });
 
   it('should append styles passed in with attributes', () => {
+    /* eslint-disable react/forbid-component-props */
     const text = shallow(<Text style={{ height: '100px' }}>Test</Text>);
     expect(text.prop('style')).toEqual({ height: '100px' });
+    /* eslint-disable react/forbid-component-props */
   });
 
   // Error Handling Test

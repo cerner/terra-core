@@ -1,15 +1,25 @@
-Changelog
+ChangeLog
 =========
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+3.21.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+3.20.0 - (September 3, 2019)
 ------------------
 ### Changed
+* Minor dependency version bump
+
+3.19.0 - (August 21, 2019)
+--------------------------
+### Changed
 * Cleaned up imports in examples and test files
+* Import for package version from package.json added to doc page
+* Added comments for ESlint v6
 
 3.18.0 - (August 14, 2019)
 ------------------

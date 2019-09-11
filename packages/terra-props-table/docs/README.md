@@ -29,7 +29,6 @@ This component requires the following peer dependencies be installed in your app
 
 ```jsx
 import React from 'react';
-import PropsTable from '../../terra-props-table/src/PropsTable';
 import ComponentSrc from '!raw-loader!../src/Component.jsx';
 
 <PropsTable id="props" src={ComponentSrc} />

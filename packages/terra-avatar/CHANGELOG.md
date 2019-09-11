@@ -3,12 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+2.26.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+2.25.0 - (August 21, 2019)
 ------------------
 ### Changed
+* Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 * Cleaned up imports in examples and test files
 
 2.24.0 - (August 14, 2019)

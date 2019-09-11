@@ -1,12 +1,12 @@
 import React from 'react';
 import DocTemplate from 'terra-doc-template';
 import ReadMe from '../../../../docs/README.md';
+
 import { name, version } from '../../../../package.json';
 
-// Component Source
-import CheckboxSrc from '!raw-loader!../../../../src/Checkbox';
-
 // Example Files
+import CheckboxPropsTable from '!terra-props-table-loader!../../../../src/Checkbox';
+import CheckboxSrc from '!raw-loader!../../../../src/Checkbox';
 import DefaultCheckbox from '../example/checkbox/DefaultCheckboxExample';
 import DefaultCheckboxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/checkbox/DefaultCheckboxExample';
 import DisabledCheckbox from '../example/checkbox/DisabledCheckboxExample';
@@ -85,6 +85,7 @@ class DocPage extends React.Component {
           {
             componentName: 'Checkbox',
             componentSrc: CheckboxSrc,
+            componentProps: CheckboxPropsTable,
           },
         ]}
       />

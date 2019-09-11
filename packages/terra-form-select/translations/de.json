@@ -6,6 +6,7 @@
   "Terra.form.select.maxSelectionOption": "Maximale Anzahl an ausgewählten {text} Elementen",
   "Terra.form.select.noResults": "Keine Übereinstimmungen für \"{text}\"",
   "Terra.form.select.selectedText": "Ausgewählt: {text}",
+  "Terra.form.select.unselectedText": "{text} nicht ausgewählt",
   "Terra.form.select.selected": "Ausgewählt",
   "Terra.form.select.unselected": "Nicht ausgewählt",
   "Terra.form.select.disabled": "Deaktiviert",

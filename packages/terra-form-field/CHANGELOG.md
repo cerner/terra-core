@@ -3,12 +3,25 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Import for package version from package.json added to doc page
 
-Unreleased
+3.23.0 - (September 6, 2019)
+------------------
+### Added
+* Props table markdown file import added to doc site page
+
+### Changed
+* Added `outline: 0` to prevent focus outline when clicking on help or error text
+
+3.22.0 - (September 3, 2019)
+------------------
+### Fixed
+* Fixed 'label hidden' accessibility error by using 'visually-hidden text styles' instead of 'display:none'.
+
+3.21.0 - (August 21, 2019)
 ------------------
 ### Changed
+* Import for package version from package.json added to doc page
+* Switch from Object.assign to Object spread syntax.
 * Cleaned up imports in examples and test files
 
 3.20.0 - (August 14, 2019)
