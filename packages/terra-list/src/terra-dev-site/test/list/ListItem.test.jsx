@@ -16,7 +16,7 @@ const ListItemTest = () => (
         <p>test chevron</p>
       </Item>
     </List>
-    <List role="listbox">
+    <List role="listbox" aria-label="test-label">
       <Item
         key="selectable"
         isSelectable
