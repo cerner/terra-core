@@ -19,7 +19,7 @@ import Table, { Row, Cell } from 'terra-table';
     <Cell key="row-0-cell-0">
       Table row text
     </Cell>
-    <Cell key="row-0-cell-0">
+    <Cell key="row-0-cell-1">
       Table row text
     </Cell>
   </Row>

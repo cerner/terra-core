@@ -10,6 +10,7 @@
   .body {
     background-color: var(--terra-table-body-background-color);
     flex: 1 1 auto;
+    margin-bottom: var(--terra-table-body-margin-bottom, -1px);
     min-height: 0;
     overflow: hidden;
   }
@@ -27,7 +28,7 @@
 
   .rounded {
     border: var(--terra-table-border, 1px solid #dedfe0);
-    border-radius: 5px; // TODO: Need expected sizing
+    border-radius: var(--terra-table-border-radius, 3px);
   }
 
   // Modifiers:
