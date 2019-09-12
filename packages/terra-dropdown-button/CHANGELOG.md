@@ -3,9 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Reset default margin in Safari.
+
+1.4.0 - (September 6, 2019)
+------------------
 ### Added
 * Props table markdown file import added to doc site page
-
 
 1.3.0 - (September 3, 2019)
 ------------------
