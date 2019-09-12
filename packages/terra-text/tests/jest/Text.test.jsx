@@ -109,10 +109,4 @@ describe('Text', () => {
       expect(e.message).toContain('The prop `children` is marked as required');
     }
   });
-
-  it('should forward ref to span', () => {
-    const ref = React.createRef();
-    mount(<React.Fragment><Text id="TestId" ref={ref}>Test</Text></React.Fragment>);
-    expect(ref.current.id).toEqual('TestId');
-  });
 });
