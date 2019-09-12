@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed the Finnish example since we don't officially support Finnish
 
 4.14.0 - (September 6, 2019)
 ------------------
