@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { intlShape, injectIntl } from 'react-intl';
 import {
-  KEY_UP, KEY_DOWN, KEY_RETURN, KEY_HOME, KEY_END, KEY_TAB,
+  KEY_UP, KEY_DOWN, KEY_RETURN, KEY_HOME, KEY_END, KEY_TAB, KEY_ESCAPE,
 } from 'keycode-js';
 import uniqueId from 'lodash.uniqueid';
 import ClearOption from '../shared/_ClearOption';
 import MenuUtil from '../shared/_MenuUtil';
 import NoResults from '../shared/_NoResults';
 import useScrollToActiveOption from '../shared/useScrollToActiveOption';
+import findActiveOption from '../shared/findActiveOption';
+import findNextActiveOption from '../shared/findNextActiveOption';
+import findPreviousActiveOption from '../shared/findPreviousActiveOption';
+import findFirstOption from '../shared/findFirstOption';
+import findLastOption from '../shared/findLastOption';
 import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
@@ -48,6 +53,10 @@ const propTypes = {
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
+  /**
+   * The menu's input value.
+   */
+  inputValue: PropTypes.string,
   /**
    * The max height of the dropdown.
    */
@@ -105,6 +114,7 @@ const propTypes = {
 const defaultProps = {
   children: [],
   clearOptionDisplay: undefined,
+  inputValue: '',
   isAbove: false,
   isInvalid: false,
   maxHeight: undefined,
@@ -114,27 +124,6 @@ const defaultProps = {
   value: undefined,
 };
 
-// TODO: moveme
-function findActiveOption(children, { active = null, value = '' } = {}) {
-  const options = MenuUtil.flatten(children, true);
-
-  // no options => no active
-  if (options.length === 0) {
-    return null;
-  }
-
-  // active exists and is in the given options list
-  if (active !== null && options.find(option => MenuUtil.isEqual(option.props.value, active))) {
-    return active;
-  }
-
-  // active should default to the selected value, if present
-  const selectedOption = options.find(option => (Array.isArray(value)
-    ? MenuUtil.includes(value, option.props.value)
-    : MenuUtil.isEqual(value, option.props.value)));
-
-  return selectedOption !== undefined ? selectedOption.props.value : options[0].props.value;
-}
 
 function Menu({
   ariaDescribedBy,
@@ -142,6 +131,7 @@ function Menu({
   ariaLiveRef,
   children,
   clearOptionDisplay,
+  inputValue,
   intl,
   isAbove,
   isInvalid,
@@ -158,16 +148,17 @@ function Menu({
   searchValue,
   value,
 }) {
-  const [active, setActive] = React.useState(() => findActiveOption(children, { active: null, value }));
+  const [activeOption, setActiveOption] = React.useState(() => findActiveOption(children, { activeOption: null, value }));
 
   const menuRef = React.useRef(null);
   const listboxRef = React.useRef(null);
   const menuInputRef = React.useRef(null);
+  const noResultsRef = React.useRef(false);
   const listboxId = React.useRef(uniqueId('terra-form-select-menu-listbox-'));
 
   const handleMouseEnterOption = React.useCallback(option => (event) => {
     if (!option.props.disabled) {
-      setActive(option.props.value);
+      setActiveOption(option);
     }
 
     if (option.props.onMouseEnter) {
@@ -185,7 +176,8 @@ function Menu({
 
   const decorateOptions = React.useCallback((object) => React.Children.map(object, (option) => {
     if (option.type.isOption) {
-      const isActive = option.props.value === active;
+      const activeValue = activeOption ? activeOption.props.value : undefined;
+      const isActive = MenuUtil.isEqual(option.props.value, activeValue);
 
       return React.cloneElement(option, {
         id: `terra-select-option-${option.props.value}`,
@@ -204,15 +196,17 @@ function Menu({
     }
 
     return option;
-  }), [active, handleMouseEnterOption, handleOptionClick, value]);
+  }), [activeOption, handleMouseEnterOption, handleOptionClick, value]);
 
   const options = React.useMemo(() => {
     const memoizedOptions = MenuUtil.filter(children, searchValue, optionFilter);
 
     if (memoizedOptions.length === 0) {
+      noResultsRef.current = true;
       return <NoResults noResultContent={noResultContent} value={searchValue} />;
     }
 
+    noResultsRef.current = false;
     const shouldShowClearOption = clearOptionDisplay && memoizedOptions.length > 0 && !searchValue;
     if (shouldShowClearOption) {
       memoizedOptions.unshift(<ClearOption display={clearOptionDisplay} value="" />);
@@ -223,52 +217,52 @@ function Menu({
 
   const handleInputKeyDown = React.useCallback((event) => {
     const { keyCode } = event;
+    const activeValue = activeOption ? activeOption.props.value : null;
 
     /** make previous option active */
     if (keyCode === KEY_UP) {
       event.preventDefault();
-      const previousOption = MenuUtil.findPrevious(options, active);
-      setActive(previousOption);
+      const previousOption = findPreviousActiveOption(options, activeValue);
+      setActiveOption(previousOption);
 
     /** make next option active */
     } else if (keyCode === KEY_DOWN) {
       event.preventDefault();
-      const nextOption = MenuUtil.findNext(options, active);
-      setActive(nextOption);
+      const nextOption = findNextActiveOption(options, activeValue);
+      setActiveOption(nextOption);
 
     /** make first option active */
     } else if (keyCode === KEY_HOME) {
       event.preventDefault();
-      const firstOption = MenuUtil.findFirst(options);
-      setActive(firstOption);
+      const firstOption = findFirstOption(options);
+      setActiveOption(firstOption);
 
     /** make last option active */
     } else if (keyCode === KEY_END) {
       event.preventDefault();
-      const lastOption = MenuUtil.findLast(options);
-      setActive(lastOption);
+      const lastOption = findLastOption(options);
+      setActiveOption(lastOption);
 
     /** close menu and pass event to select */
-    } else if (keyCode === KEY_TAB) {
+    } else if (keyCode === KEY_TAB || keyCode === KEY_ESCAPE) {
       if (onRequestClose) {
         onRequestClose(event);
       }
 
     /** select active option, if present */
-    } else if (keyCode === KEY_RETURN && active !== null) {
+    } else if (keyCode === KEY_RETURN && activeOption) {
       event.preventDefault();
-      const option = MenuUtil.findByValue(options, active);
-      onSelect(option.props.value, option);
+      onSelect(activeOption.props.value, activeOption);
     }
-  }, [active, onRequestClose, onSelect, options]);
+  }, [activeOption, onRequestClose, onSelect, options]);
 
   // Update active option
   React.useEffect(() => {
-    const activeOption = findActiveOption(options, { active, value });
-    setActive(activeOption);
-  }, [active, options, searchValue, value]);
+    const newActiveOption = findActiveOption(options, { activeOption, value });
+    setActiveOption(newActiveOption);
+  }, [activeOption, options, searchValue, value]);
 
-  const activeDescendant = active !== null ? `terra-select-option-${active}` : undefined;
+  const activeDescendant = activeOption ? `terra-select-option-${activeOption}` : undefined;
   useScrollToActiveOption(menuRef, activeDescendant);
 
   // Determine what we focus on onMount
@@ -290,8 +284,44 @@ function Menu({
   // update aria live declaratively
   React.useEffect(() => {
     const { current: ariaLive } = ariaLiveRef;
-    // TODO: add aria live manipulation
-  }, [ariaLiveRef]);
+    const { current: noResults } = noResultsRef;
+    const { current: listbox } = listboxRef;
+
+    /* without an aria-live component, we can't do anything */
+    if (!ariaLive) {
+      return;
+    }
+
+    /* no options to display */
+    if (noResults) {
+      ariaLive.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+      return;
+    }
+
+    // Detects if option is clear option and provides accessible text
+    if (clearOptionDisplay) {
+      const activeOptionElement = listbox.querySelector('[data-select-active]');
+      if (activeOptionElement && activeOptionElement.hasAttribute('data-terra-select-clear-option')) {
+        ariaLive.innerText = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
+        return;
+      }
+    }
+
+    if (activeOption) {
+      const isClearSelectOption = activeOption.props.display === '' && activeOption.props.value === '';
+      const activeSelected = MenuUtil.isEqual(value, activeOption.props.value);
+
+      if (isClearSelectOption) {
+        ariaLive.innerText = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
+      } else if (activeSelected) {
+        ariaLive.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: activeOption.props.display });
+      } else {
+        ariaLive.innerText = activeOption.props.display;
+      }
+    } else {
+      ariaLive.innerText = '';
+    }
+  });
 
   const menuClasses = cx([
     'menu',
@@ -320,7 +350,7 @@ function Menu({
               required={required}
               role="searchbox"
               type="text"
-              value={searchValue}
+              value={inputValue}
             />
           </div>
         </div>

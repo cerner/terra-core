@@ -201,7 +201,7 @@ class Frame extends React.Component {
       'aria-label': this.ariaLabel(),
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? menuId : undefined, // TODO: this may need to be removed..
+      'aria-owns': this.state.isOpen ? menuId : undefined,
       type: 'text',
       className: cx('search-input', { 'is-hidden': FrameUtil.shouldHideSearch(this.props, this.state) }),
       required,
@@ -220,15 +220,20 @@ class Frame extends React.Component {
    * Handle the menu onRequestClose event
    */
   handleMenuRequestClose(event) {
-    // focus on the select input
-    const { current: selectInput } = this.selectInputRef;
-    if (selectInput) {
-      selectInput.focus();
-    }
+    const { keyCode } = event;
 
-    // if closed via keypress, handle the event, else close the dropdown
-    if (event.keyCode !== undefined) {
+    /* if closed via keypress, focus on select input and then handle the event */
+    if (keyCode !== undefined) {
+      const { current: selectInput } = this.selectInputRef;
+
+      if (selectInput) {
+        selectInput.focus();
+      }
+
+      event.target = selectInput; // eslint-disable-line no-param-reassign
       this.handleKeyDown(event);
+
+    /* just close the dropdown */
     } else {
       this.closeDropdown();
     }
@@ -373,7 +378,6 @@ class Frame extends React.Component {
    * @param {event} event - The mouse down event.
    */
   handleInputMouseDown(event) {
-    // event.stopPropagation();
     this.openDropdown(event);
   }
 
@@ -404,13 +408,8 @@ class Frame extends React.Component {
    * Handles the toggle button mouse down events.
    */
   handleToggleButtonMouseDown() {
-    // const { current: selectInput } = this.selectInputRef;
-
     if (this.state.isOpen) {
       this.closeDropdown();
-      // if (selectInput) {
-      //   selectInput.focus();
-      // }
     }
   }
 
@@ -602,13 +601,13 @@ class Frame extends React.Component {
     } = this.props;
 
     const {
+      hasSearchChanged,
       isAbove,
       isFocused,
       isOpen,
-      searchValue,
       isPositioned,
-      hasSearchChanged,
       openedFromToggle,
+      searchValue,
     } = this.state;
 
     const selectClasses = cx([
@@ -635,6 +634,7 @@ class Frame extends React.Component {
       ariaLabel: computedAriaLabel,
       ariaLiveRef: this.ariaLiveRef,
       clearOptionDisplay,
+      inputValue: hasSearchChanged ? searchValue : display,
       isAbove,
       isInvalid,
       maxHeight,
@@ -647,7 +647,7 @@ class Frame extends React.Component {
       optionFilter,
       placeholder,
       required,
-      searchValue: hasSearchChanged ? searchValue : display,
+      searchValue,
       selectInputRef: this.selectInputRef,
       value,
     };
