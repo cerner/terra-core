@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* a11y: Moved input into the Menu, make menu options adjacent to the input
 
 5.29.0 - (September 6, 2019)
 ------------------
