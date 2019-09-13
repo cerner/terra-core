@@ -154,17 +154,7 @@ function Menu({
   const listboxRef = React.useRef(null);
   const menuInputRef = React.useRef(null);
   const noResultsRef = React.useRef(false);
-  const listboxId = React.useRef(uniqueId('terra-form-select-menu-listbox-'));
-
-  const handleMouseEnterOption = React.useCallback(option => (event) => {
-    if (!option.props.disabled) {
-      setActiveOption(option);
-    }
-
-    if (option.props.onMouseEnter) {
-      option.props.onMouseEnter(event);
-    }
-  }, []);
+  const { current: listboxId } = React.useRef(uniqueId('terra-form-select-menu-listbox-'));
 
   const handleOptionClick = React.useCallback(option => () => {
     if (option.props.disabled) {
@@ -174,19 +164,31 @@ function Menu({
     onSelect(option.props.value, option);
   }, [onSelect]);
 
-  const decorateOptions = React.useCallback((object) => React.Children.map(object, (option) => {
+  const handleMouseEnterOption = React.useCallback(option => event => {
+    if (!option.props.disabled) {
+      setActiveOption(option);
+    }
+
+    if (option.props.onMouseEnter) {
+      option.props.onMouseEnter(event);
+    }
+  }, []);
+
+  const decorateOptions = React.useCallback((node) => React.Children.map(node, (option) => {
     if (option.type.isOption) {
       const activeValue = activeOption ? activeOption.props.value : undefined;
       const isActive = MenuUtil.isEqual(option.props.value, activeValue);
 
+      // for option selection by click, use onMouseDown instead of onClick
+      // because the onBlur runs before the option's onClick
       return React.cloneElement(option, {
         id: `terra-select-option-${option.props.value}`,
         isActive,
         isCheckable: false,
         isSelected: MenuUtil.isSelected(value, option.props.value),
-        variant: 'search',
-        onClick: handleOptionClick(option),
+        onMouseDown: handleOptionClick(option),
         onMouseEnter: handleMouseEnterOption(option),
+        variant: 'search',
         ...isActive && { 'data-select-active': true },
       });
     }
@@ -338,7 +340,7 @@ function Menu({
           <div className={cx('content')}>
             <input
               data-terra-select-menu-input
-              aria-controls={listboxId.current}
+              aria-controls={listboxId}
               aria-describedby={ariaDescribedBy}
               aria-label={ariaLabel}
               aria-required={required}
@@ -369,7 +371,7 @@ function Menu({
       <ul
         role="listbox"
         className={cx(['menu-list', { 'is-above': isAbove }])}
-        id={listboxId.current}
+        id={listboxId}
         style={{ maxHeight }}
         aria-label={intl.formatMessage({ id: 'Terra.form.select.menu' })}
         aria-activedescendant={activeDescendant}

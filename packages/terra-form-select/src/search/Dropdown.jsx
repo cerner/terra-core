@@ -59,7 +59,6 @@ const Dropdown = ({
 }) => {
   const dropdownClasses = cx([
     'dropdown',
-    { 'is-above': isAbove },
     customProps.className,
   ]);
 
