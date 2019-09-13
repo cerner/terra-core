@@ -1,5 +1,6 @@
 {
   "Terra.form.select.add": "Lägg till \"{text}\"",
+  "Terra.form.select.close": "Stäng",
   "Terra.form.select.ariaLabel": "Sök",
   "Terra.form.select.defaultDisplay": "- Välj -",
   "Terra.form.select.maxSelectionHelp": "Begränsa {text} antal poster.",

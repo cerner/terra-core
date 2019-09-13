@@ -1,5 +1,6 @@
 {
   "Terra.form.select.add": "\"{text}\" toevoegen",
+  "Terra.form.select.close": "Sluiten",
   "Terra.form.select.ariaLabel": "Zoeken",
   "Terra.form.select.defaultDisplay": "- Selecteren -",
   "Terra.form.select.maxSelectionHelp": "Limiet: {text} items.",

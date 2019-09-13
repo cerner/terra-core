@@ -1,5 +1,6 @@
 {
   "Terra.form.select.add": "Adicionar \"{text}\"",
+  "Terra.form.select.close": "Fechar",
   "Terra.form.select.ariaLabel": "Pesquisar",
   "Terra.form.select.defaultDisplay": "- Selecione -",
   "Terra.form.select.maxSelectionHelp": "Limite de itens de {text}.",

@@ -358,7 +358,7 @@ function Menu({
           <button
             type="button"
             className={cx('toggle-btn')}
-            // aria-label={mobileButtonUsageGuidanceTxt} // TODO: addme
+            aria-label={intl.formatMessage({ id: 'Terra.form.select.close' })}
             data-terra-form-select-toggle-button
             onClick={onRequestClose}
           >

@@ -1,5 +1,6 @@
 {
   "Terra.form.select.add": "أضف \"{text}\".",
+  "Terra.form.select.close": "إغلاق",
   "Terra.form.select.ariaLabel": "بحث",
   "Terra.form.select.defaultDisplay": "– حدد –",
   "Terra.form.select.maxSelectionHelp": "حدد {text} عناصر.",
