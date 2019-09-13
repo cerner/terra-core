@@ -156,12 +156,12 @@ function Menu({
   const noResultsRef = React.useRef(false);
   const { current: listboxId } = React.useRef(uniqueId('terra-form-select-menu-listbox-'));
 
-  const handleOptionClick = React.useCallback(option => () => {
+  const handleOptionClick = React.useCallback(option => event => {
     if (option.props.disabled) {
       return;
     }
 
-    onSelect(option.props.value, option);
+    onSelect(event, option);
   }, [onSelect]);
 
   const handleMouseEnterOption = React.useCallback(option => event => {
@@ -254,7 +254,7 @@ function Menu({
     /** select active option, if present */
     } else if (keyCode === KEY_RETURN && activeOption) {
       event.preventDefault();
-      onSelect(activeOption.props.value, activeOption);
+      onSelect(event, activeOption);
     }
   }, [activeOption, onRequestClose, onSelect, options]);
 

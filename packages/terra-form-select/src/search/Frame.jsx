@@ -315,9 +315,13 @@ class Frame extends React.Component {
       const { onBlur } = this.props;
       const { activeElement } = document;
 
-      // don't proceed to blur if either the menu's or select's input, or the
-      // toggle button is the document's active (focused) element
-      if (activeElement.hasAttribute('data-terra-select-menu-input') || activeElement.hasAttribute('data-terra-select-input') || activeElement.hasAttribute('data-terra-form-select-toggle-button')) {
+      const menuInputIsActive = activeElement.hasAttribute('data-terra-select-menu-input');
+      const selectInputIsActive = activeElement.hasAttribute('data-terra-select-input');
+      const toggleButtonIsActive = activeElement.hasAttribute('data-terra-form-select-toggle-button');
+
+      // don't proceed with blurring if any of the following are the document's
+      // active (focused) element
+      if (menuInputIsActive || selectInputIsActive || toggleButtonIsActive) {
         return;
       }
 
@@ -442,27 +446,23 @@ class Frame extends React.Component {
    * @param {string|number} value - The value of the selected option.
    * @param {ReactNode} option - The option that was selected.
    */
-  handleSelect(value, option) {
+  handleSelect(event, option) {
     const { onSelect } = this.props;
+    const { current: selectInput } = this.selectInputRef;
 
-    this.setState({
-      searchValue: '',
-      hasSearchChanged: false,
-      isOpen: false,
-      isAbove: false,
-    });
-
-    this.closeDropdown();
+    // prevent selectInput from losing focus
+    event.preventDefault();
 
     // menu was open with focus on menu's input, manually shift focus back to
     // the select input
-    const { current: selectInput } = this.selectInputRef;
     if (selectInput) {
       selectInput.focus();
     }
 
+    this.closeDropdown();
+
     if (onSelect) {
-      onSelect(value, option);
+      onSelect(option.props.value, option);
     }
   }
 
