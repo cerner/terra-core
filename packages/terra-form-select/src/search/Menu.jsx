@@ -262,7 +262,7 @@ function Menu({
     setActiveOption(newActiveOption);
   }, [activeOption, options, searchValue, value]);
 
-  const activeDescendant = activeOption ? `terra-select-option-${activeOption}` : undefined;
+  const activeDescendant = activeOption ? `terra-select-option-${activeOption.props.value}` : undefined;
   useScrollToActiveOption(menuRef, activeDescendant);
 
   // Determine what we focus on onMount
