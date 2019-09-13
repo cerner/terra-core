@@ -125,7 +125,7 @@
     "terra-disclosure-manager": "^4.9.0",
     "terra-enzyme-intl": "^3.0.0",
     "terra-toolkit": "^5.4.0",
-    "webpack": "^4.30.0",
+    "webpack": "4.39.3",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^4.1.2"
