@@ -1,5 +1,9 @@
 :local {
   .dropdown {
     background-color: var(--terra-form-select-dropdown-background-color, #fff);
+    border-bottom-left-radius: var(--terra-form-select-dropdown-border-bottom-left-radius, 3px);
+    border-bottom-right-radius: var(--terra-form-select-dropdown-border-bottom-right-radius, 3px);
+    border-top-left-radius: var(--terra-form-select-dropdown-border-top-left-radius, 3px);
+    border-top-right-radius: var(--terra-form-select-dropdown-border-top-right-radius, 3px);
   }
 }
