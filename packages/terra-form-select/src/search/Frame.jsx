@@ -221,16 +221,17 @@ class Frame extends React.Component {
    */
   handleMenuRequestClose(event) {
     const { keyCode } = event;
+    const { current: selectInput } = this.selectInputRef;
 
-    /* if closed via keypress, focus on select input and then handle the event */
+    // first, focus on the select input to simulate direct event bubbling from
+    // the menu to the select, even though they're not connected via normal
+    // DOM flow
+    if (selectInput) {
+      selectInput.focus();
+    }
+
+    /* if closed via keypress handle the keyDown event */
     if (keyCode !== undefined) {
-      const { current: selectInput } = this.selectInputRef;
-
-      if (selectInput) {
-        selectInput.focus();
-      }
-
-      event.target = selectInput; // eslint-disable-line no-param-reassign
       this.handleKeyDown(event);
 
     /* just close the dropdown */
@@ -248,7 +249,7 @@ class Frame extends React.Component {
 
     this.setState({
       isAbove: false,
-      isFocused: document.activeElement === selectInput || document.activeElement === select, // TODO: fixme
+      isFocused: document.activeElement === selectInput || document.activeElement === select,
       isOpen: false,
       openedFromToggle: false,
       isPositioned: false,
