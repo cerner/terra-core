@@ -328,7 +328,7 @@ function Menu({
   const menuClasses = cx([
     'menu',
     { 'is-above': isAbove },
-    { 'is-focused': true }, // TODO: fixme
+    { 'is-focused': true },
     { 'is-invalid': isInvalid },
   ]);
 
