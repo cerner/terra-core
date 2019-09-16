@@ -6,6 +6,10 @@ Unreleased
 ### Changed
 * a11y: Moved input into the Menu, make menu options adjacent to the input
 
+### Added
+* Added new CSS custom property: `--terra-form-select-focus-border-bottom-left-radius`
+* Added new CSS custom property: `--terra-form-select-focus-border-bottom-right-radius`
+
 5.29.0 - (September 6, 2019)
 ------------------
 ### Fixed
