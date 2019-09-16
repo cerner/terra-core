@@ -373,8 +373,7 @@ class Frame extends React.Component {
    */
   handleMouseDown(event) {
     // Preventing default events stops the search input from losing focus.
-    // The default variant has no search input therefore the mouse down gives the component focus.
-    // event.preventDefault();
+    // The default variant has no search input therefore the mouse down gives the component focus.;
     this.openDropdown(event);
   }
 
