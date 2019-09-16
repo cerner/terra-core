@@ -6,7 +6,6 @@ import Option from './shared/_Option';
 import OptGroup from './shared/_OptGroup';
 import Tag from './shared/_Tag';
 import SelectUtil from './shared/_SelectUtil';
-import flatten from './shared/flatten';
 
 const propTypes = {
   /**
@@ -16,7 +15,7 @@ const propTypes = {
   /**
    * The default selected value.
    */
-  defaultValue: PropTypes.arrayOf(PropTypes.string),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the select is disabled.
    */
@@ -90,7 +89,7 @@ const propTypes = {
   /**
    * The selected value.
    */
-  value: PropTypes.arrayOf(PropTypes.string),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 const defaultProps = {
@@ -112,19 +111,13 @@ const defaultProps = {
 };
 
 class MultiSelect extends React.Component {
-  static defaultValue({ value, defaultValue }) {
-    if (value !== undefined) {
-      return null;
-    }
-
-    return flatten(defaultValue);
-  }
-
   constructor(props) {
     super(props);
 
+    const { value, defaultValue } = props;
+
     this.state = {
-      value: MultiSelect.defaultValue(props),
+      value: SelectUtil.defaultValue({ defaultValue, value, multiple: true }),
     };
 
     this.display = this.display.bind(this);

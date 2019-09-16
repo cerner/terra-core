@@ -18,7 +18,7 @@ const propTypes = {
   /**
    * The default value of the select.
    */
-  defaultValue: PropTypes.arrayOf(PropTypes.string),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the input is disabled.
    */
@@ -94,7 +94,7 @@ const propTypes = {
   /**
    * The value of the select.
    */
-  value: PropTypes.arrayOf(PropTypes.string),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 const defaultProps = {

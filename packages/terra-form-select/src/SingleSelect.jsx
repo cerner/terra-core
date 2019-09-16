@@ -18,7 +18,7 @@ const propTypes = {
   /**
    * The default selected value.
    */
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the select is disabled.
    */
@@ -100,19 +100,13 @@ const defaultProps = {
 };
 
 class SingleSelect extends React.Component {
-  static defaultValue(props) {
-    if (props.value !== undefined) {
-      return null;
-    }
-
-    return (props.defaultValue !== undefined && props.defaultValue !== null) ? props.defaultValue : '';
-  }
-
   constructor(props) {
     super(props);
 
+    const { defaultValue, value } = props;
+
     this.state = {
-      value: SingleSelect.defaultValue(props),
+      value: SelectUtil.defaultValue({ defaultValue, value }),
     };
 
     this.display = this.display.bind(this);

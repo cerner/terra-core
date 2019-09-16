@@ -1,6 +1,7 @@
 import React from 'react';
 import Variants from './_variants';
 import MenuUtil from './_MenuUtil';
+import flatten from './flatten';
 
 class SelectUtil {
   /**
@@ -8,19 +9,17 @@ class SelectUtil {
    * @param {Object} props - The component props.
    * @return {array|number|string|null} - The default value. Returns null for controlled components.
    */
-  static defaultValue(props) {
-    const { defaultValue, value } = props;
-
+  static defaultValue({ defaultValue, value, multiple }) {
     if (value !== undefined) {
       return null;
     }
 
-    if (SelectUtil.allowsMultiSelections(props)) {
+    if (multiple) {
       // Flatten allows converting a string default into an array.
-      return defaultValue ? [defaultValue].flatten() : [];
+      return defaultValue ? flatten([defaultValue]) : [];
     }
 
-    return (props.defaultValue !== undefined && props.defaultValue !== null) ? props.defaultValue : '';
+    return (defaultValue !== undefined && defaultValue !== null) ? defaultValue : '';
   }
 
   /**
