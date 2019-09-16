@@ -142,7 +142,7 @@ class Frame extends React.Component {
 
     this.labelId = Frame.createUniqueIdRef('terra-select-screen-reader-label-');
     this.descriptionId = Frame.createUniqueIdRef('terra-select-screen-reader-description-');
-    this.menuIdRef = Frame.createUniqueIdRef('terra-select-menu-');
+    this.menuId = 'terra-select-menu';
 
     this.setDropdownRef = this.setDropdownRef.bind(this);
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -189,8 +189,6 @@ class Frame extends React.Component {
       disabled, display, placeholder, required,
     } = this.props;
 
-    const { current: menuId } = this.menuIdRef;
-
     const inputAttrs = {
       disabled,
       placeholder,
@@ -201,7 +199,7 @@ class Frame extends React.Component {
       'aria-label': this.ariaLabel(),
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? menuId : undefined,
+      'aria-owns': this.state.isOpen ? this.menuId : undefined,
       type: 'text',
       className: cx('search-input', { 'is-hidden': FrameUtil.shouldHideSearch(this.props, this.state) }),
       required,
@@ -627,7 +625,6 @@ class Frame extends React.Component {
     const computedAriaLabel = this.ariaLabel();
 
     const { maxHeight, ...dropdownStyle } = FrameUtil.dropdownStyle(dropdownAttrs, this.state);
-    const { current: menuId } = this.menuIdRef;
 
     const menuProps = {
       ariaDescribedBy,
@@ -638,7 +635,7 @@ class Frame extends React.Component {
       isAbove,
       isInvalid,
       maxHeight,
-      menuId,
+      menuId: this.menuId,
       noResultContent,
       onRequestClose: this.handleMenuRequestClose,
       onSearch: this.handleSearch,
@@ -657,12 +654,12 @@ class Frame extends React.Component {
         {...customProps}
         role="combobox"
         data-terra-select-combobox
-        aria-controls={!disabled && isOpen ? menuId : undefined}
+        aria-controls={!disabled && isOpen ? this.menuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={isOpen ? menuId : undefined}
+        aria-owns={isOpen ? this.menuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
