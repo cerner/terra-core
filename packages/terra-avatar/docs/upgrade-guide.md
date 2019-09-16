@@ -1,4 +1,12 @@
 # terra-avatar Upgrade Guide
+## Changes from version 2 to version 3
+
+### Removed
+* Default `user` icon as fallback icon for Avatar
+
+### Added
+* the `initials` as fallback display for Avatar when image fails to load.
+
 ## Changes from version 1 to version 2
 
 ### Props

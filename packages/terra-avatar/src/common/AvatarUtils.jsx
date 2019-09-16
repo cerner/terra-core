@@ -61,21 +61,33 @@ const getColorVariant = (hashValue) => {
  * Render placeholder.
  */
 const generateImagePlaceholder = (avatarParams) => {
-  if (avatarParams.initials && avatarParams.initials.length <= 2) {
-    const avatarTextClassNames = cx('initials');
-    return <span className={avatarTextClassNames} alt={avatarParams.alt} aria-label={avatarParams.alt} aria-hidden={avatarParams.isAriaHidden}>{avatarParams.initials.toUpperCase()}</span>;
-  }
+  const {
+    alt, variant, isAriaHidden,
+  } = avatarParams;
+  const avatarIconClassNames = cx(['icon', variant]);
+  return <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
+};
 
-  const avatarIconClassNames = cx(['icon', avatarParams.variant]);
-  return <span className={avatarIconClassNames} role="img" aria-label={avatarParams.alt} alt={avatarParams.alt} aria-hidden={avatarParams.isAriaHidden} />;
+/**
+ * Render placeholder.
+ */
+const generateInitials = (avatarParams) => {
+  const {
+    alt, initials, isAriaHidden,
+  } = avatarParams;
+  const avatarTextClassNames = cx('initials');
+  return <span className={avatarTextClassNames} alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
 };
 
 /**
  * Render image with placeholder.
  */
 const generateImage = (avatarParams) => {
-  const icon = generateImagePlaceholder(avatarParams);
-  return <TerraImage className={cx('image')} src={avatarParams.image} placeholder={icon} alt={avatarParams.alt} onError={avatarParams.handleFallback} fit="cover" />;
+  const {
+    alt, image, variant, handleFallback,
+  } = avatarParams;
+  const icon = (variant === AVATAR_VARIANTS.USER) ? generateInitials(avatarParams) : generateImagePlaceholder(avatarParams);
+  return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} fit="cover" />;
 };
 
 
@@ -115,6 +127,7 @@ export {
   getColorVariant,
   generateImagePlaceholder,
   generateImage,
+  generateInitials,
   validateColor,
   setColor,
 };
