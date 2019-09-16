@@ -9,7 +9,7 @@ class SelectUtil {
    * @param {Object} props - The component props.
    * @return {array|number|string|null} - The default value. Returns null for controlled components.
    */
-  static defaultValue({ defaultValue, value, multiple }) {
+  static defaultValue({ defaultValue, value, multiple } = {}) {
     if (value !== undefined) {
       return null;
     }
