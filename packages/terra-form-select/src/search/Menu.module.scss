@@ -19,19 +19,15 @@
     border-top-left-radius: var(--terra-form-select-border-top-left-radius, 3px);
     cursor: text;
     display: flex;
-    // flex: none;
-    // flex: 1 1 auto; // IE 10
-    // overflow: hidden;
     padding-bottom: var(--terra-form-select-padding-bottom, 0);
     padding-left: var(--terra-form-select-padding-left, 0.42857rem);
     padding-right: var(--terra-form-select-padding-right, 0);
     padding-top: var(--terra-form-select-padding-top, 0);
-    // position: relative;
     width: 100%;
 
     &:hover {
       border-color: var(--terra-form-select-hover-border-color, #dedfe0);
-      color: var(--terra-form-select-hover-color, inherit);
+      color: var(--terra-form-select-hover-color);
     }
   }
 
