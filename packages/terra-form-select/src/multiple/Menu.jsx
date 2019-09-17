@@ -59,7 +59,7 @@ const propTypes = {
   /**
    * The value of the selected options.
    */
-  value: PropTypes.arrayOf(PropTypes.string),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * @private Visually hidden component designed to feed screen reader text to read.
    */
