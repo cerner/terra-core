@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * `aria-live="assertive"` added to announce dynamic error messages
 
+### Changed
+* Removed `details` tag from doc-site.
+
 3.23.0 - (September 6, 2019)
 ------------------
 ### Added
