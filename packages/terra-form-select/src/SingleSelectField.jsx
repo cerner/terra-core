@@ -19,9 +19,9 @@ const propTypes = {
    */
   label: PropTypes.node.isRequired,
   /**
-   * The default value of the select.
+   * The default value of the select. Can be a string, number, or array of strings/numbers.
    */
-  defaultValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the input is disabled.
    */
@@ -86,9 +86,9 @@ const propTypes = {
    */
   showOptional: PropTypes.bool,
   /**
-   * The value of the select.
+   * The value of the select. Can be a string, number, or array of strings/numbers.
    */
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 const defaultProps = {
