@@ -11,11 +11,12 @@
 
   .header-icon {
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     display: inline-block;
     position: relative;
+    top: var(--terra-action-header-icon-top, 0);
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      top: var(--terra-action-header-icon-ms-top, 0.1429rem);
+      top: var(--terra-action-header-icon-ms-top, 0.21428rem);
     }
     
 
