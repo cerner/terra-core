@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Removed `details` tag from doc-site.
 
+### Added
+* Introduce background-clip themeable variable.
+
 2.26.0 - (September 6, 2019)
 ------------------
 ### Added
