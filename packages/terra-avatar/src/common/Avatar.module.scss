@@ -4,7 +4,7 @@
   .avatar {
     align-items: center;
     // padding-box stops background color from bleeding through border on IE.
-    // border-box with will fix safari + flexbox bug if no border is present.
+    // border-box will fix safari + flexbox clip issue if no border is present.
     background-clip: var(--terra-avatar-background-clip, padding-box);
     border: var(--terra-avatar-border, solid 1px #fff);
     border-radius: 50%;
