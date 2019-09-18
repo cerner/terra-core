@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed `details` tag from doc-site.
 ### Fixed
 * Reset default margin in Safari.
 
