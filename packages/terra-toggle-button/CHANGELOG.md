@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Inline SVG aligned for IE and wdio screenshots Updated.
+* Removed `details` tag from doc-site.
 
 3.22.0 - (September 6, 2019)
 ------------------

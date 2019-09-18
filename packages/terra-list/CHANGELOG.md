@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated the example and test to have `aria-label`.
+* Updated docs and guides.
+* Removed `details` tag from doc-site.
 
 4.18.0 - (September 6, 2019)
 ------------------

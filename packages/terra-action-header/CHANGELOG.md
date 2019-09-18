@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated `--terra-action-header-icon-top` variable, added `--terra-action-header-icon-ms-top` variable to only apply top styling in Microsoft browsers.
+* Removed `details` tag from doc-site.
 
 2.28.0 - (September 6, 2019)
 ------------------

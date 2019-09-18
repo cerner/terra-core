@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed `details` tag from doc-site.
+### Fixed
+* Reset default margin in Safari.
 
 1.4.0 - (September 6, 2019)
 ------------------
