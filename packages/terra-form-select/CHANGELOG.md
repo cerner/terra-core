@@ -9,6 +9,9 @@ Unreleased
 ### Fixed
 * Restore passivity with prop-types for all variants
 
+### Added
+* Added en-CA translations.
+
 5.29.0 - (September 6, 2019)
 ------------------
 ### Fixed
