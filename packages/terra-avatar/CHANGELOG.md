@@ -6,6 +6,9 @@ Unreleased
 ### Breaking Changes
 * Changed the fallback behavior of Avatar. Such that if the image fails to load, the avatar falls back to the initials display instead of default user icon.
 
+### Changed
+* Removed `details` tag from doc-site.
+
 2.26.0 - (September 6, 2019)
 ------------------
 ### Added
