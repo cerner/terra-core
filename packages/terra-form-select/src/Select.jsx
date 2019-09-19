@@ -20,7 +20,7 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The default selected value.
+   * The default selected value. Can be a string, number, or array of strings/numbers.
    */
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
@@ -90,7 +90,7 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * The selected value.
+   * The selected value. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**

@@ -16,9 +16,9 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The default selected value.
+   * The default selected value. Can be a string, number, or array of strings/numbers.
    */
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the select is disabled.
    */
@@ -86,9 +86,9 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * The selected value.
+   * The selected value. Can be a string, number, or array of strings/numbers.
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 const defaultProps = {
@@ -110,19 +110,13 @@ const defaultProps = {
 };
 
 class SearchSelect extends React.Component {
-  static defaultValue(props) {
-    if (props.value !== undefined) {
-      return null;
-    }
-
-    return (props.defaultValue !== undefined && props.defaultValue !== null) ? props.defaultValue : '';
-  }
-
   constructor(props) {
     super(props);
 
+    const { defaultValue, value } = props;
+
     this.state = {
-      value: SearchSelect.defaultValue(props),
+      value: SelectUtil.defaultValue({ defaultValue, value }),
     };
 
     this.display = this.display.bind(this);

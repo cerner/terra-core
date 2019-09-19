@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Fixed
+* Restore passivity with prop-types for all variants
 
 5.29.0 - (September 6, 2019)
 ------------------
