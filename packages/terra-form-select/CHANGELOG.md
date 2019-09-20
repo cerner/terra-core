@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `isDropdownInline` prop for all variants for mobile accessibility
+  * When used, the dropdown menu is no longer portaled: it is rendered inline in the normal DOM flow
 
 5.30.0 - (September 19, 2019)
 ------------------
