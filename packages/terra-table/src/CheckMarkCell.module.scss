@@ -1,7 +1,10 @@
 :local {
   .cell {
     border: 0;
+    display: flex;
     flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
     outline: none;
     position: relative;
     
@@ -16,6 +19,10 @@
     color: transparent;
     padding: 1px;
     position: relative;
+  }
+
+  .is-top-align {
+    justify-content: flex-start;
   }
 
   .is-selected {

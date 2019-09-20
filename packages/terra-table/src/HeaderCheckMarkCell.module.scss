@@ -2,6 +2,8 @@
   .header-cell {
     border-right: var(--terra-table-header-check-cell-border-right, 1px solid #ccc);
     flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: flex-end;
     outline: none;
     position: relative;
 

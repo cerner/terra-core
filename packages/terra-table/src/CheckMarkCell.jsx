@@ -9,6 +9,12 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * The top padding to be used for the CheckMarkCell in rem(s).
+   * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
+   * The presence of this property will also change alignment to a fixed value, rather then centered.
+   */
+  alignmentPadding: PropTypes.number,
+  /**
    * Whether or not the check should be it's own click target.
    */
   isSelectable: PropTypes.bool,
@@ -70,6 +76,7 @@ const defaultProps = {
 };
 
 const CheckMarkCell = ({
+  alignmentPadding,
   isPadded,
   isSelected,
   isSelectable,
@@ -98,6 +105,10 @@ const CheckMarkCell = ({
     attrCheck['aria-checked'] = isSelected;
   }
 
+  if (alignmentPadding) {
+    attrCheck.style = { paddingTop: `${alignmentPadding}rem` };
+  }
+
   return (
     <div
       {...customProps}
@@ -106,6 +117,7 @@ const CheckMarkCell = ({
       className={cx(
         'cell',
         { 'is-selectable': isSelectable },
+        { 'is-top-align': !!attrCheck.style },
         customProps.className,
       )}
       ref={refCallback}

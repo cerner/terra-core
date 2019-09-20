@@ -10,6 +10,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * The bottom padding to be used for the HeaderCheckMarkCell in rem(s).
+   * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
+   */
+  alignmentPadding: PropTypes.number,
+  /**
    * Whether or not a selected state should display as partially selected.
    */
   isIntermediate: PropTypes.bool,
@@ -76,6 +81,7 @@ const defaultProps = {
 };
 
 const HeaderCheckMarkCell = ({
+  alignmentPadding,
   isIntermediate,
   isPadded,
   isSelected,
@@ -90,12 +96,6 @@ const HeaderCheckMarkCell = ({
   width,
   ...customProps
 }) => {
-  const cellClassNames = cx(
-    'header-cell',
-    { 'is-selectable': isSelectable },
-    customProps.className,
-  );
-
   const attrSpread = {};
   const attrCheck = {};
   if (isSelectable) {
@@ -115,13 +115,21 @@ const HeaderCheckMarkCell = ({
     }
   }
 
+  if (alignmentPadding) {
+    attrCheck.style = { paddingTop: `${alignmentPadding}rem` };
+  }
+
   const Component = isIntermediate ? IconMinus : IconCheckmark;
   return (
     <div
       {...customProps}
       {...attrSpread}
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={cellClassNames}
+      className={cx(
+        'header-cell',
+        { 'is-selectable': isSelectable },
+        customProps.className,
+      )}
       ref={refCallback}
       role={isSelectable ? 'columnheader' : 'none'}
     >
