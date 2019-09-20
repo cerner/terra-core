@@ -47,7 +47,7 @@ const propTypes = {
   /**
    * The value of the selected options.
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * @private Visually hidden component designed to feed screen reader text to read.
    */

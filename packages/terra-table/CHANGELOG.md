@@ -10,6 +10,11 @@ Unreleased
 * Removed Component `SelectableTableRows` - Selection by index is no longer provided.
 * Removed Component `TableRows` - body element now provided by default within the table.
 
+3.26.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
 3.25.0 - (September 6, 2019)
 ------------------
 ### Added
