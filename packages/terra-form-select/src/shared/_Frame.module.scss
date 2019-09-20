@@ -10,7 +10,7 @@
     line-height: var(--terra-form-select-line-height, 1.75);
   }
 
-  .combobox {
+  .combobox-container {
     display: flex;
   }
 
@@ -19,6 +19,7 @@
     border: var(--terra-form-select-border, 1px solid #dedfe0);
     border-radius: var(--terra-form-select-border-radius, 3px);
     cursor: pointer;
+    display: flex;
     padding-bottom: var(--terra-form-select-padding-bottom, 0);
     padding-left: var(--terra-form-select-padding-left, 0.42857rem);
     padding-right: var(--terra-form-select-padding-right, 0);
