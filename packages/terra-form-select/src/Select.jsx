@@ -33,6 +33,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
+   * Render dropdown menu inline. Renders in a portal by default.
+   */
+  isDropdownInline: PropTypes.bool,
+  /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
@@ -111,6 +115,7 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isDropdownInline: false,
   isInvalid: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,

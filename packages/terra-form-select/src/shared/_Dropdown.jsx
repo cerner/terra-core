@@ -16,6 +16,10 @@ const propTypes = {
    */
   isAbove: PropTypes.bool,
   /**
+   * Render dropdown menu inline. Renders in a portal by default.
+   */
+  isDropdownInline: PropTypes.bool.isRequired,
+  /**
    * Whether the dropdown is visible.
    */
   isEnabled: PropTypes.bool,
@@ -49,21 +53,40 @@ const BelowAttachment = {
 };
 
 const Dropdown = ({
-  children, isAbove, isEnabled, onResize, target, refCallback, ...customProps
+  children,
+  isAbove,
+  isDropdownInline,
+  isEnabled,
+  onResize,
+  target,
+  refCallback,
+  ...customProps
 }) => {
   /**
    * Prevents default events from removing the focus from the target.
    * @param {event} event - The event invoking the callback.
    */
-  const preventDefault = (event) => {
+  const preventDefault = React.useCallback((event) => {
     event.preventDefault();
-  };
+  }, []);
 
   const dropdownClasses = cx([
     'dropdown',
     { 'is-above': isAbove },
     customProps.className,
   ]);
+
+  if (isDropdownInline) {
+    return (
+      <div
+        {...customProps}
+        className={dropdownClasses}
+        ref={refCallback}
+      >
+        {children}
+      </div>
+    );
+  }
 
   return (
     <Hookshot

@@ -44,6 +44,10 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
+   * Render dropdown menu inline. Renders in a portal by default.
+   */
+  isDropdownInline: PropTypes.bool.isRequired,
+  /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
@@ -424,6 +428,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
+      isDropdownInline,
       isInvalid,
       maxHeight,
       noResultContent,
@@ -492,10 +497,12 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()} role="textbox">
-          {this.getDisplay(displayId, placeholderId)}
+        <div className={cx('combobox')}>
+          <div className={cx('display')} aria-label={this.ariaLabel()}>
+            {this.getDisplay(displayId, placeholderId)}
+          </div>
+          {this.renderToggleButton()}
         </div>
-        {this.renderToggleButton()}
         <span
           aria-atomic="true"
           aria-live="assertive"
@@ -509,6 +516,7 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
+            isDropdownInline={isDropdownInline}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}

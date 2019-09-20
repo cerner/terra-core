@@ -5,9 +5,13 @@
     background-color: var(--terra-form-select-background-color, #fff);
     border-radius: var(--terra-form-select-border-radius, 3px);
     color: var(--terra-form-select-color, #1c1f21);
-    display: flex;
+    display: block;
     font-size: var(--terra-form-select-font-size, 1.143rem);
     line-height: var(--terra-form-select-line-height, 1.75);
+  }
+
+  .combobox {
+    display: flex;
   }
 
   .default {

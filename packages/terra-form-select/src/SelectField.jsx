@@ -45,6 +45,10 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
+   * Render dropdown menu inline. Renders in a portal by default.
+   */
+  isDropdownInline: PropTypes.bool,
+  /**
    * Whether the field is displayed inline. Displays block by default.
    */
   isInline: PropTypes.bool,
@@ -120,6 +124,7 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isDropdownInline: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
