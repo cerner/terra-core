@@ -18,6 +18,8 @@ import SearchExample from '../example/search/Search';
 import SearchExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/Search';
 import DisabledExample from '../example/search/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/Disabled';
+import DropdownInlineExample from '../example/search/DropdownInline';
+import DropdownInlineExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/DropdownInline';
 import InvalidExample from '../example/search/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/Invalid';
 import MaxHeightExample from '../example/search/MaxHeight';
@@ -57,6 +59,10 @@ const Index = () => (
       title: 'Disabled',
       example: <DisabledExample />,
       source: DisabledExampleSrc,
+    }, {
+      title: 'Dropdown Inline',
+      example: <DropdownInlineExample />,
+      source: DropdownInlineExampleSrc,
     }, {
       title: 'Invalid',
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',

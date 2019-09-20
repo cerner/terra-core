@@ -18,6 +18,8 @@ import ComboboxExample from '../example/combobox/Combobox';
 import ComboboxExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Combobox';
 import DisabledExample from '../example/combobox/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Disabled';
+import DropdownInlineExample from '../example/combobox/DropdownInline';
+import DropdownInlineExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/DropdownInline';
 import InvalidExample from '../example/combobox/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Invalid';
 import MaxHeightExample from '../example/combobox/MaxHeight';
@@ -57,6 +59,10 @@ const Index = () => (
       title: 'Disabled',
       example: <DisabledExample />,
       source: DisabledExampleSrc,
+    }, {
+      title: 'Dropdown Inline',
+      example: <DropdownInlineExample />,
+      source: DropdownInlineExampleSrc,
     }, {
       title: 'Invalid',
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',
