@@ -4,6 +4,17 @@ ChangeLog
 Unreleased
 ----------
 
+5.30.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Fixed
+* Restore passivity with prop-types for all variants
+
+### Added
+* Added en-CA translations.
+
 5.29.0 - (September 6, 2019)
 ------------------
 ### Fixed
