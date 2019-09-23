@@ -7,8 +7,13 @@ Unreleased
 * `generic` subcomponent  replaces the `sharedUser` subcomponent
 * `generic` subcomponent contains a `variant` prop that toggles between `single-user`, `shared-user`, and `provider`.
 
+2.27.0 - (September 19, 2019)
+------------------
 ### Changed
 * Removed `details` tag from doc-site.
+
+### Added
+* Introduce background-clip themeable variable.
 
 2.26.0 - (September 6, 2019)
 ------------------
