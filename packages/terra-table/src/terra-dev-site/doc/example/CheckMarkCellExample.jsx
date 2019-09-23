@@ -7,6 +7,10 @@ const CheckMarkCellExample = () => (
   <Table>
     <Row>
       <CheckMarkCell />
+      <CheckMarkCell isSelectable alignmentPadding="2" />
+      <CheckMarkCell isSelectable />
+      <CheckMarkCell isSelectable isSelected />
+      <CheckMarkCell isPadded />
     </Row>
   </Table>
 );

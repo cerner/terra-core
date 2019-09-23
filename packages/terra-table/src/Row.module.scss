@@ -32,6 +32,7 @@
 
     &:last-of-type {
       border-bottom: var(--terra-table-row-border-bottom, 1px solid #dedfe0);
+      margin-bottom: var(--terra-table-row-margin-bottom, -1px);
     }
   }
 

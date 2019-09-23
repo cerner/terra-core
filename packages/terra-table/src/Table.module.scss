@@ -10,7 +10,6 @@
   .body {
     background-color: var(--terra-table-body-background-color);
     flex: 1 1 auto;
-    margin-bottom: var(--terra-table-body-margin-bottom, -1px);
     min-height: 0;
     overflow: hidden;
   }

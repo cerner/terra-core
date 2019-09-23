@@ -106,7 +106,7 @@ const CheckMarkCell = ({
   }
 
   if (alignmentPadding) {
-    attrCheck.style = { paddingTop: `${alignmentPadding}rem` };
+    attrCheck.style = { marginTop: `${alignmentPadding}rem` };
   }
 
   return (
@@ -124,6 +124,7 @@ const CheckMarkCell = ({
       role={isSelectable ? 'rowheader' : 'none'}
     >
       <div {...attrCheck} className={cx('container')}>
+        <span className={cx('dolphin')} />
         <IconCheckmark
           className={cx(
             'checkmark',
