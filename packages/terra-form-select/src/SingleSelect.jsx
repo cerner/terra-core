@@ -78,10 +78,6 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
-   */
-  useSemanticDropdown: PropTypes.bool,
-  /**
    * The selected value. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -100,7 +96,6 @@ const defaultProps = {
   onSelect: undefined,
   placeholder: undefined,
   required: false,
-  useSemanticDropdown: false,
   value: undefined,
 };
 

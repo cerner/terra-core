@@ -88,7 +88,7 @@ const Index = () => (
       example: <DisabledExample />,
       source: DisabledExampleSrc,
     }, {
-      title: 'Semantic Dropdown (applies to all)',
+      title: "Semantic Dropdown (applies to only 'combobox', 'multiple', 'tag', and 'search')",
       description: 'Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.',
       example: <SemanticDropdownExample />,
       source: SemanticDropdownExampleSrc,

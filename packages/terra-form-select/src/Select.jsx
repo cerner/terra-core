@@ -156,6 +156,7 @@ function Select(props) {
         maxSelectionCount,
         onSearch,
         optionFilter,
+        useSemanticDropdown,
         ...singleSelectProps
       } = otherProps;
       return <SingleSelect {...singleSelectProps} />;

@@ -84,10 +84,6 @@ const propTypes = {
    */
   totalOptions: PropTypes.number,
   /**
-   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
-   */
-  useSemanticDropdown: PropTypes.bool,
-  /**
    * The select value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -104,7 +100,6 @@ const defaultProps = {
   placeholder: undefined,
   required: false,
   totalOptions: undefined,
-  useSemanticDropdown: false,
   value: undefined,
 };
 
@@ -152,7 +147,6 @@ class Frame extends React.Component {
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
-    this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
@@ -236,9 +230,9 @@ class Frame extends React.Component {
       return;
     }
 
-    const { dropdownAttrs, maxHeight, useSemanticDropdown } = this.props;
+    const { dropdownAttrs, maxHeight } = this.props;
 
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, useSemanticDropdown));
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight));
   }
 
   /**
@@ -348,13 +342,6 @@ class Frame extends React.Component {
   }
 
   /**
-   * Handles the touch start events
-   */
-  handleTouchStart() {
-    this.setState({ focusedByTouch: true });
-  }
-
-  /**
    * Handles the request to select an option.
    * @param {string|number} value - The value of the selected option.
    * @param {ReactNode} option - The option that was selected.
@@ -450,7 +437,6 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
-      useSemanticDropdown,
       isInvalid,
       maxHeight,
       noResultContent,
@@ -536,7 +522,6 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
-            useSemanticDropdown={useSemanticDropdown}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}

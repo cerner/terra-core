@@ -35,11 +35,12 @@ const propTypes = {
   /**
    * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
    */
-  useSemanticDropdown: PropTypes.bool.isRequired,
+  useSemanticDropdown: PropTypes.bool,
 };
 
 const defaultProps = {
   isAbove: false,
+  useSemanticDropdown: false,
 };
 
 const AboveAttachment = {

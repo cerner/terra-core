@@ -33,7 +33,6 @@ exports[`Frame should render a clear option 1`] = `
   }
   isInvalid={false}
   required={false}
-  useSemanticDropdown={false}
 />
 `;
 
@@ -179,7 +178,6 @@ exports[`Frame should render a default variant 1`] = `
   }
   isInvalid={false}
   required={false}
-  useSemanticDropdown={false}
 />
 `;
 
@@ -216,7 +214,6 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
   isInvalid={false}
   placeholder="Placeholder"
   required={false}
-  useSemanticDropdown={false}
 />
 `;
 
@@ -288,7 +285,6 @@ exports[`Frame should render a disabled default variant 1`] = `
   }
   isInvalid={false}
   required={false}
-  useSemanticDropdown={false}
 />
 `;
 
@@ -505,7 +501,6 @@ exports[`Frame should render a required Frame 1`] = `
   }
   isInvalid={false}
   required={true}
-  useSemanticDropdown={false}
 />
 `;
 
@@ -541,7 +536,6 @@ exports[`Frame should render a required default variant 1`] = `
   }
   isInvalid={false}
   required={true}
-  useSemanticDropdown={false}
 />
 `;
 
@@ -759,7 +753,6 @@ exports[`Frame should render an invalid default variant 1`] = `
   }
   isInvalid={true}
   required={false}
-  useSemanticDropdown={false}
 />
 `;
 

@@ -18,8 +18,6 @@ import SingleSelectExample from '../example/single/SingleSelect';
 import SingleSelectExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/SingleSelect';
 import DisabledExample from '../example/single/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Disabled';
-import SemanticDropdownExample from '../example/single/SemanticDropdown';
-import SemanticDropdownExampleSrc from '../example/single/SemanticDropdown';
 import InvalidExample from '../example/single/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Invalid';
 import MaxHeightExample from '../example/single/MaxHeight';
@@ -55,11 +53,6 @@ const Index = () => (
       description: 'A Single Select allows selecting a single option.',
       example: <SingleSelectExample />,
       source: SingleSelectExampleSrc,
-    }, {
-      title: 'Semantic Dropdown',
-      description: 'Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.',
-      example: <SemanticDropdownExample />,
-      source: SemanticDropdownExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,

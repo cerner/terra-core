@@ -670,6 +670,7 @@ class Frame extends React.Component {
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}
+        onTouchStart={this.handleTouchStart}
         tabIndex="-1"
         ref={(select) => { this.select = select; }}
       >
