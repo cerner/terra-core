@@ -3,6 +3,7 @@
 exports[`should render a default SelectField component 1`] = `
 <div
   className="field"
+  useSemanticDropdown={false}
 >
   <div
     className="label-group"
@@ -31,6 +32,7 @@ exports[`should render a default SelectField component 1`] = `
     isInvalid={false}
     key=".0"
     required={false}
+    useSemanticDropdown={false}
     variant="default"
   >
     <Option
@@ -65,6 +67,7 @@ exports[`should render a default SelectField component 1`] = `
 exports[`should render a default SelectField component with attributes spread onto the select 1`] = `
 <div
   className="field"
+  useSemanticDropdown={false}
 >
   <div
     className="label-group"
@@ -94,6 +97,7 @@ exports[`should render a default SelectField component with attributes spread on
     key=".0"
     onClick={[Function]}
     required={false}
+    useSemanticDropdown={false}
     variant="default"
   >
     <Option
@@ -128,6 +132,7 @@ exports[`should render a default SelectField component with attributes spread on
 exports[`should render a disabled SelectField component 1`] = `
 <div
   className="field"
+  useSemanticDropdown={false}
 >
   <div
     className="label-group"
@@ -156,6 +161,7 @@ exports[`should render a disabled SelectField component 1`] = `
     isInvalid={false}
     key=".0"
     required={false}
+    useSemanticDropdown={false}
     variant="default"
   >
     <Option
@@ -190,6 +196,7 @@ exports[`should render a disabled SelectField component 1`] = `
 exports[`should render a disabled SelectField component via selectAttrs 1`] = `
 <div
   className="field"
+  useSemanticDropdown={false}
 >
   <div
     className="label-group"
@@ -218,6 +225,7 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
     isInvalid={false}
     key=".0"
     required={false}
+    useSemanticDropdown={false}
     variant="default"
   >
     <Option
@@ -252,6 +260,7 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
 exports[`should render a multiple SelectField component that limits the selection count 1`] = `
 <div
   className="field"
+  useSemanticDropdown={false}
 >
   <div
     className="label-group"
@@ -283,6 +292,7 @@ exports[`should render a multiple SelectField component that limits the selectio
     maxSelectionCount={2}
     onClick={[Function]}
     required={false}
+    useSemanticDropdown={false}
     variant="multiple"
   >
     <Option
@@ -328,6 +338,7 @@ exports[`should render a multiple SelectField component that limits the selectio
 exports[`should render a required SelectField component 1`] = `
 <div
   className="field"
+  useSemanticDropdown={false}
 >
   <div
     className="label-group"
@@ -361,6 +372,7 @@ exports[`should render a required SelectField component 1`] = `
     isInvalid={false}
     key=".0"
     required={true}
+    useSemanticDropdown={false}
     variant="default"
   >
     <Option

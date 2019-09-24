@@ -86,7 +86,7 @@ const propTypes = {
   /**
    * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
    */
-  useSemanticDropdown: PropTypes.bool.isRequired,
+  useSemanticDropdown: PropTypes.bool,
   /**
    * The select value.
    */
@@ -104,6 +104,7 @@ const defaultProps = {
   placeholder: undefined,
   required: false,
   totalOptions: undefined,
+  useSemanticDropdown: false,
   value: undefined,
 };
 
@@ -518,7 +519,7 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()}>
+        <div className={cx('display')} aria-label={this.ariaLabel()} role="textbox">
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}

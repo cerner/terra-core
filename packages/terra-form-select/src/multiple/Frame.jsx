@@ -95,7 +95,7 @@ const propTypes = {
   /**
    * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
    */
-  useSemanticDropdown: PropTypes.bool.isRequired,
+  useSemanticDropdown: PropTypes.bool,
   /**
    * The select value.
    */
@@ -115,6 +115,7 @@ const defaultProps = {
   placeholder: undefined,
   required: false,
   totalOptions: undefined,
+  useSemanticDropdown: false,
   value: undefined,
 };
 

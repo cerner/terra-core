@@ -156,9 +156,9 @@ function Select(props) {
         maxSelectionCount,
         onSearch,
         optionFilter,
-        ...SingleSelectProps
+        ...singleSelectProps
       } = otherProps;
-      return <SingleSelect {...SingleSelectProps} />;
+      return <SingleSelect {...singleSelectProps} />;
     }
   }
 }

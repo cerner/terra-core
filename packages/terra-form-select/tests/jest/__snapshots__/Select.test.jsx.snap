@@ -33,6 +33,7 @@ exports[`Select should render a clear option 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -69,6 +70,7 @@ exports[`Select should render a combobox variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -106,6 +108,7 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
   isInvalid={false}
   placeholder="Placeholder"
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -142,6 +145,7 @@ exports[`Select should render a default variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -179,6 +183,7 @@ exports[`Select should render a default variant with a placeholder 1`] = `
   isInvalid={false}
   placeholder="Placeholder"
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -214,6 +219,7 @@ exports[`Select should render a disabled combobox variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -250,6 +256,7 @@ exports[`Select should render a disabled default variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -285,6 +292,7 @@ exports[`Select should render a disabled multiple variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -321,6 +329,7 @@ exports[`Select should render a disabled search variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -356,6 +365,7 @@ exports[`Select should render a disabled tag variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -391,6 +401,7 @@ exports[`Select should render a multiple variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -427,6 +438,7 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
   isInvalid={false}
   placeholder="Placeholder"
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -463,6 +475,7 @@ exports[`Select should render a required select 1`] = `
   }
   isInvalid={false}
   required={true}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -499,6 +512,7 @@ exports[`Select should render a search variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -536,6 +550,7 @@ exports[`Select should render a search variant with a placeholder 1`] = `
   isInvalid={false}
   placeholder="Placeholder"
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -803,6 +818,7 @@ exports[`Select should render a tag variant 1`] = `
   }
   isInvalid={false}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -839,6 +855,7 @@ exports[`Select should render a tag variant with a placeholder 1`] = `
   isInvalid={false}
   placeholder="Placeholder"
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -875,6 +892,7 @@ exports[`Select should render an invalid combobox variant 1`] = `
   }
   isInvalid={true}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -911,6 +929,7 @@ exports[`Select should render an invalid default variant 1`] = `
   }
   isInvalid={true}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -946,6 +965,7 @@ exports[`Select should render an invalid multiple variant 1`] = `
   }
   isInvalid={true}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -982,6 +1002,7 @@ exports[`Select should render an invalid search variant 1`] = `
   }
   isInvalid={true}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
 
@@ -1017,5 +1038,6 @@ exports[`Select should render an invalid tag variant 1`] = `
   }
   isInvalid={true}
   required={false}
+  useSemanticDropdown={false}
 />
 `;
