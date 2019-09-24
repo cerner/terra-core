@@ -57,8 +57,19 @@ class DropdownButton extends React.Component {
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.setButtonNode = this.setButtonNode.bind(this);
+    this.getButtonNode = this.getButtonNode.bind(this);
 
-    this.state = { isOpen: false, isActive: false };
+
+    this.state = { isOpen: false, isActive: false, isKeyboardEvent: false };
+  }
+
+  setButtonNode(node) {
+    this.buttonNode = node;
+  }
+
+  getButtonNode() {
+    return this.buttonNode;
   }
 
   handleDropdownButtonClick() {
@@ -67,6 +78,7 @@ class DropdownButton extends React.Component {
 
   handleDropdownRequestClose(callback) {
     this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
+    this.setState({ isKeyboardEvent: false });
   }
 
   /*
@@ -75,6 +87,7 @@ class DropdownButton extends React.Component {
   handleKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ isActive: true });
+      this.setState({ isKeyboardEvent: true });
     }
   }
 
@@ -95,7 +108,7 @@ class DropdownButton extends React.Component {
       ...customProps
     } = this.props;
 
-    const { isOpen, isActive } = this.state;
+    const { isOpen, isActive, isKeyboardEvent } = this.state;
 
     const classnames = cx(
       'dropdown-button',
@@ -114,6 +127,8 @@ class DropdownButton extends React.Component {
         isCompact={isCompact}
         isDisabled={isDisabled}
         requestClose={this.handleDropdownRequestClose}
+        isKeyboardEvent={isKeyboardEvent}
+        buttonRef={this.getButtonNode}
       >
         <button
           type="button"
@@ -122,10 +137,11 @@ class DropdownButton extends React.Component {
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}
           disabled={isDisabled}
-          tabIndex={isDisabled ? '-1' : undefined}
+          tabIndex={isDisabled ? '-1' : '0'}
           aria-disabled={isDisabled}
-          aria-expanded={isOpen || undefined}
+          aria-expanded={isOpen}
           aria-haspopup="menu"
+          ref={this.setButtonNode}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
           <span className={cx('caret-icon')} />

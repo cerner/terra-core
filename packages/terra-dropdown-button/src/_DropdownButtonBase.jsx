@@ -35,12 +35,21 @@ const propTypes = {
    * Determines whether the primary button and expanding the dropdown should be disabled.
    */
   isDisabled: PropTypes.bool,
+  /**
+   * Whether or not dropdown is opened using keyboard.
+   */
+  isKeyboardEvent: PropTypes.bool,
+  /**
+   * Callback for reference of the dropdown button
+   */
+  buttonRef: PropTypes.func,
 };
 
 const defaultProps = {
   isBlock: false,
   isCompact: false,
   isDisabled: false,
+  isKeyboardEvent: false,
 };
 
 class DropdownButtonBase extends React.Component {
@@ -70,6 +79,8 @@ class DropdownButtonBase extends React.Component {
       isBlock,
       isCompact,
       isDisabled,
+      isKeyboardEvent,
+      buttonRef,
       ...customProps
     } = this.props;
 
@@ -102,6 +113,8 @@ class DropdownButtonBase extends React.Component {
           isOpen={isOpen}
           requestClose={requestClose}
           width={calcWidth}
+          isKeyboardEvent={isKeyboardEvent}
+          buttonRef={buttonRef}
         >
           {items}
         </Dropdown>

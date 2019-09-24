@@ -68,8 +68,20 @@ class SplitButton extends React.Component {
     this.handlePrimaryKeyUp = this.handlePrimaryKeyUp.bind(this);
     this.handleCaretKeyDown = this.handleCaretKeyDown.bind(this);
     this.handleCaretKeyUp = this.handleCaretKeyUp.bind(this);
+    this.setButtonNode = this.setButtonNode.bind(this);
+    this.getButtonNode = this.getButtonNode.bind(this);
 
-    this.state = { isOpen: false, caretIsActive: false, primaryIsActive: false };
+    this.state = {
+      isOpen: false, caretIsActive: false, primaryIsActive: false, isKeyboardEvent: false,
+    };
+  }
+
+  setButtonNode(node) {
+    this.buttonNode = node;
+  }
+
+  getButtonNode() {
+    return this.buttonNode;
   }
 
   handleDropdownButtonClick() {
@@ -78,6 +90,7 @@ class SplitButton extends React.Component {
 
   handleDropdownRequestClose(callback) {
     this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
+    this.setState({ isKeyboardEvent: false });
   }
 
   /*
@@ -98,6 +111,7 @@ class SplitButton extends React.Component {
   handleCaretKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ caretIsActive: true });
+      this.setState({ isKeyboardEvent: true });
     }
   }
 
@@ -124,6 +138,7 @@ class SplitButton extends React.Component {
       isOpen,
       primaryIsActive,
       caretIsActive,
+      isKeyboardEvent,
     } = this.state;
 
     const caretLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
@@ -151,6 +166,8 @@ class SplitButton extends React.Component {
         isBlock={isBlock}
         isCompact={isCompact}
         isDisabled={isDisabled}
+        isKeyboardEvent={isKeyboardEvent}
+        buttonRef={this.getButtonNode}
       >
         <button
           type="button"
@@ -173,9 +190,10 @@ class SplitButton extends React.Component {
           disabled={isDisabled}
           tabIndex={isDisabled ? '-1' : undefined}
           aria-disabled={isDisabled}
-          aria-expanded={isOpen || undefined}
+          aria-expanded={isOpen}
           aria-haspopup="menu"
           aria-label={caretLabel}
+          ref={this.setButtonNode}
         >
           <span className={cx('caret-icon')} />
         </button>

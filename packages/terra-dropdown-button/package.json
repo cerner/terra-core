@@ -42,6 +42,6 @@
     "precompile": "rm -rf lib",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest --config ../../jestconfig.js",
-    "test:wdio": "../../node_modules/.bin/wdio ../../node_modules/terra-dev-site/config/wdio/wdio.conf.js"
+    "test:wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
   }
 }

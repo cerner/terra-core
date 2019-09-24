@@ -26,10 +26,18 @@ const propTypes = {
    * Width to set the dropdown to. Used when `isBlock` is true. Unset means to autosize.
    */
   width: PropTypes.string,
+  /**
+   * Whether or not dropdown is opened using keyboard.
+   */
+  isKeyboardEvent: PropTypes.bool,
+  /**
+   * Callback for reference of the dropdown button
+   */
+  buttonRef: PropTypes.func,
 };
 
 const Dropdown = ({
-  requestClose, isOpen, targetRef, children, width,
+  requestClose, isOpen, targetRef, children, width, isKeyboardEvent, buttonRef,
 }) => (
   <Hookshot
     isOpen={isOpen}
@@ -43,7 +51,7 @@ const Dropdown = ({
       onEsc={requestClose}
       onOutsideClick={requestClose}
     >
-      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, clickOutsideDeactivates: true }}>
+      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, initialFocus: isKeyboardEvent ? '' : buttonRef, clickOutsideDeactivates: true }}>
         <DropdownList
           requestClose={requestClose}
           width={width}
