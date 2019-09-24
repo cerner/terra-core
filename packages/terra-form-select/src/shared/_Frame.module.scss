@@ -5,13 +5,10 @@
     background-color: var(--terra-form-select-background-color, #fff);
     border-radius: var(--terra-form-select-border-radius, 3px);
     color: var(--terra-form-select-color, #1c1f21);
-    display: block;
+    display: flex;
     font-size: var(--terra-form-select-font-size, 1.143rem);
     line-height: var(--terra-form-select-line-height, 1.75);
-  }
-
-  .combobox-container {
-    display: flex;
+    position: relative;
   }
 
   .default {
@@ -19,7 +16,6 @@
     border: var(--terra-form-select-border, 1px solid #dedfe0);
     border-radius: var(--terra-form-select-border-radius, 3px);
     cursor: pointer;
-    display: flex;
     padding-bottom: var(--terra-form-select-padding-bottom, 0);
     padding-left: var(--terra-form-select-padding-left, 0.42857rem);
     padding-right: var(--terra-form-select-padding-right, 0);

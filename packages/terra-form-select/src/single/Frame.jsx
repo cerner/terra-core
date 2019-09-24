@@ -497,12 +497,10 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('combobox-container')}>
-          <div className={cx('display')} aria-label={this.ariaLabel()}>
-            {this.getDisplay(displayId, placeholderId)}
-          </div>
-          {this.renderToggleButton()}
+        <div className={cx('display')} aria-label={this.ariaLabel()}>
+          {this.getDisplay(displayId, placeholderId)}
         </div>
+        {this.renderToggleButton()}
         <span
           aria-atomic="true"
           aria-live="assertive"

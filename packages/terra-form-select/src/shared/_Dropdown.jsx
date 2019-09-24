@@ -73,6 +73,7 @@ const Dropdown = ({
   const dropdownClasses = cx([
     'dropdown',
     { 'is-above': isAbove },
+    { semantic: useSemanticDropdown },
     customProps.className,
   ]);
 
