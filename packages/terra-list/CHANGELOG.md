@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.19.0 - (September 19, 2019)
+------------------
 ### Changed
 * Updated the example and test to have `aria-label`.
 * Updated docs and guides.

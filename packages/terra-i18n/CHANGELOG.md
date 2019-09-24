@@ -3,8 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed the Finnish example since we don't officially support Finnish
+
+4.15.0 - (September 19, 2019)
+------------------
 ### Changed
 * Removed `details` tag from doc-site.
+
+### Added
+* Added en-CA translations.
 
 4.14.0 - (September 6, 2019)
 ------------------

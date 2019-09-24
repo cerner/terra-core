@@ -47,7 +47,6 @@ Current locale:
           <option value="fr">fr</option>
           <option value="nl">nl</option>
           <option value="pt">pt</option>
-          <option value="fi-FI">fi-FI</option>
         </select>
       </I18nProvider>
     );
