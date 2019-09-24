@@ -712,6 +712,32 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Combobox Variant - useSemanticDropdown', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-combobox');
+    });
+
+    describe('combobox should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => browser.click('#root'));
+    });
+
+    describe('combobox should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('combobox input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
+  });
+
   describe('Multiple Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
@@ -1056,6 +1082,32 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Multiple Variant - useSemanticDropdown', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-multi-select');
+    });
+
+    describe('multiple should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => browser.click('#root'));
+    });
+
+    describe('multiple should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('multiple input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
+  });
+
   describe('Search Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
@@ -1387,6 +1439,32 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Search Variant - useSemanticDropdown', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-search-select');
+    });
+
+    describe('search should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => browser.click('#root'));
+    });
+
+    describe('search should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('search input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
+  });
+
   describe('Tag Variant', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
@@ -1708,6 +1786,32 @@ Terra.describeViewports('Select', ['tiny'], () => {
       after(() => {
         browser.refresh(); // remove selected option
       });
+    });
+  });
+
+  describe('Tag Variant - useSemanticDropdown', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-tag-select');
+    });
+
+    describe('tag should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => browser.click('#root'));
+    });
+
+    describe('tag should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('tag input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+
+      after(() => browser.click('#root'));
     });
   });
 
