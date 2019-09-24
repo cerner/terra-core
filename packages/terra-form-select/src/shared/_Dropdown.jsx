@@ -79,9 +79,10 @@ const Dropdown = ({
 
   if (useSemanticDropdown) {
     return (
-      <div
+      <div // eslint-disable-line jsx-a11y/no-static-element-interactions
         {...customProps}
         className={dropdownClasses}
+        onMouseDown={preventDefault}
         ref={refCallback}
       >
         {children}

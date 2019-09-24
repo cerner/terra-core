@@ -22,12 +22,8 @@
   }
 
   .semantic {
-    // 0 needs px unit for calc to work correctly
-    /* stylelint-disable length-zero-no-unit */
-    left: calc(0px - var(--terra-form-select-dropdown-left-offset-width, 1px));
     position: absolute;
-    /* stylelint-enable length-zero-no-unit */
-    top: calc(100% + var(--terra-form-select-dropdown-top-offset-width, 1px));
+    top: 100%;
     z-index: 9001; // use same z-index as hookshot
   }
 }
