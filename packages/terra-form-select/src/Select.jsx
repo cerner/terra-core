@@ -33,10 +33,6 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
-   * Render dropdown menu inline. Renders in a portal by default.
-   */
-  isDropdownInline: PropTypes.bool,
-  /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
@@ -94,6 +90,10 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
+   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
+   */
+  useSemanticDropdown: PropTypes.bool,
+  /**
    * The selected value. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -115,7 +115,6 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
-  isDropdownInline: false,
   isInvalid: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
@@ -126,6 +125,7 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   required: false,
+  useSemanticDropdown: false,
   value: undefined,
   variant: 'default',
 };

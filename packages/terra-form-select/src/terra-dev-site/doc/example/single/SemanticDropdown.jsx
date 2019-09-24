@@ -5,8 +5,8 @@ import styles from '../FormSelectDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const DropdownInlineExample = () => (
-  <SingleSelect placeholder="Select a color" className={cx('form-select')} isDropdownInline>
+const SemanticDropdownExample = () => (
+  <SingleSelect placeholder="Select a color" className={cx('form-select')} useSemanticDropdown>
     <SingleSelect.Option value="blue" display="Blue" />
     <SingleSelect.Option value="green" display="Green" />
     <SingleSelect.Option value="purple" display="Purple" />
@@ -15,4 +15,4 @@ const DropdownInlineExample = () => (
   </SingleSelect>
 );
 
-export default DropdownInlineExample;
+export default SemanticDropdownExample;

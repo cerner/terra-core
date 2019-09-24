@@ -18,8 +18,8 @@ import SingleSelectExample from '../example/single/SingleSelect';
 import SingleSelectExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/SingleSelect';
 import DisabledExample from '../example/single/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Disabled';
-import DropdownInlineExample from '../example/single/DropdownInline';
-import DropdownInlineExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/DropdownInline';
+import SemanticDropdownExample from '../example/single/SemanticDropdown';
+import SemanticDropdownExampleSrc from '../example/single/SemanticDropdown';
 import InvalidExample from '../example/single/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Invalid';
 import MaxHeightExample from '../example/single/MaxHeight';
@@ -56,13 +56,14 @@ const Index = () => (
       example: <SingleSelectExample />,
       source: SingleSelectExampleSrc,
     }, {
+      title: 'Semantic Dropdown',
+      description: 'Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.',
+      example: <SemanticDropdownExample />,
+      source: SemanticDropdownExampleSrc,
+    }, {
       title: 'Disabled',
       example: <DisabledExample />,
       source: DisabledExampleSrc,
-    }, {
-      title: 'Dropdown Inline',
-      example: <DropdownInlineExample />,
-      source: DropdownInlineExampleSrc,
     }, {
       title: 'Invalid',
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',

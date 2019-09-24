@@ -16,10 +16,6 @@ const propTypes = {
    */
   isAbove: PropTypes.bool,
   /**
-   * Render dropdown menu inline. Renders in a portal by default.
-   */
-  isDropdownInline: PropTypes.bool.isRequired,
-  /**
    * Whether the dropdown is visible.
    */
   isEnabled: PropTypes.bool,
@@ -36,6 +32,10 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   target: PropTypes.object.isRequired,
+  /**
+   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
+   */
+  useSemanticDropdown: PropTypes.bool.isRequired,
 };
 
 const defaultProps = {
@@ -55,11 +55,11 @@ const BelowAttachment = {
 const Dropdown = ({
   children,
   isAbove,
-  isDropdownInline,
   isEnabled,
   onResize,
-  target,
   refCallback,
+  target,
+  useSemanticDropdown,
   ...customProps
 }) => {
   /**
@@ -76,7 +76,7 @@ const Dropdown = ({
     customProps.className,
   ]);
 
-  if (isDropdownInline) {
+  if (useSemanticDropdown) {
     return (
       <div
         {...customProps}

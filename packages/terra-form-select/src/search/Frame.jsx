@@ -43,10 +43,6 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Render dropdown menu inline. Renders in a portal by default.
-   */
-  isDropdownInline: PropTypes.bool.isRequired,
-  /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
@@ -95,6 +91,10 @@ const propTypes = {
    */
   totalOptions: PropTypes.number,
   /**
+   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
+   */
+  useSemanticDropdown: PropTypes.bool.isRequired,
+  /**
    * The select value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -126,6 +126,7 @@ class Frame extends React.Component {
       isOpen: false,
       isFocused: false,
       isInputFocused: false,
+      focusedByTouch: false,
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
@@ -151,6 +152,7 @@ class Frame extends React.Component {
     this.handleInputBlur = this.handleInputBlur.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
+    this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
@@ -276,12 +278,20 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
+    const { relatedTarget } = event;
+    const { focusedByTouch } = this.state;
+
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
       return;
     }
 
-    this.setState({ isFocused: false });
+    // relatedTarget is only falsey when the user clicks the dismiss keyboard button
+    if (focusedByTouch && !relatedTarget) {
+      return;
+    }
+
+    this.setState({ isFocused: false, focusedByTouch: false });
 
     this.closeDropdown();
 
@@ -376,6 +386,13 @@ class Frame extends React.Component {
         this.input.focus();
       }
     }
+  }
+
+  /**
+   * TODO: docme
+   */
+  handleTouchStart() {
+    this.setState({ focusedByTouch: true });
   }
 
   /**
@@ -535,7 +552,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
-      isDropdownInline,
+      useSemanticDropdown,
       isInvalid,
       maxHeight,
       noResultContent,
@@ -596,6 +613,7 @@ class Frame extends React.Component {
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}
+        onTouchStart={this.handleTouchStart}
         tabIndex="-1"
         ref={(select) => { this.select = select; }}
       >
@@ -624,7 +642,7 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
-            isDropdownInline={isDropdownInline}
+            useSemanticDropdown={useSemanticDropdown}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}

@@ -20,8 +20,8 @@ import DefaultExample from '../example/legacy/Default';
 import DefaultExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Default';
 import DisabledExample from '../example/legacy/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Disabled';
-import DropdownInlineExample from '../example/legacy/DropdownInline';
-import DropdownInlineExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/DropdownInline';
+import SemanticDropdownExample from '../example/legacy/SemanticDropdown';
+import SemanticDropdownExampleSrc from '../example/legacy/SemanticDropdown';
 import InvalidExample from '../example/legacy/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Invalid';
 import MaxHeightExample from '../example/legacy/MaxHeight';
@@ -88,9 +88,10 @@ const Index = () => (
       example: <DisabledExample />,
       source: DisabledExampleSrc,
     }, {
-      title: 'Dropdown Inline (applies to all)',
-      example: <DropdownInlineExample />,
-      source: DropdownInlineExampleSrc,
+      title: 'Semantic Dropdown (applies to all)',
+      description: 'Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.',
+      example: <SemanticDropdownExample />,
+      source: SemanticDropdownExampleSrc,
     }, {
       title: 'Invalid (applies to all)',
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',

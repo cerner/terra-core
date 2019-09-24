@@ -40,10 +40,6 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Render dropdown menu inline. Renders in a portal by default.
-   */
-  isDropdownInline: PropTypes.bool.isRequired,
-  /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
@@ -92,6 +88,10 @@ const propTypes = {
    * Total number of options.
    */
   totalOptions: PropTypes.number,
+  /**
+   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
+   */
+  useSemanticDropdown: PropTypes.bool.isRequired,
   /**
    * The select value.
    */
@@ -587,7 +587,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
-      isDropdownInline,
+      useSemanticDropdown,
       isInvalid,
       maxHeight,
       maxSelectionCount,
@@ -676,7 +676,7 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
-            isDropdownInline={isDropdownInline}
+            useSemanticDropdown={useSemanticDropdown}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}

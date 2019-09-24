@@ -1,9 +1,9 @@
 import React from 'react';
 import Select from '../../../Select';
 
-const DropdownInlineTagSelect = () => (
+const SemanticDropdownSingleSelect = () => (
   <div>
-    <Select placeholder="Select a color" id="tag" variant="tag" isDropdownInline>
+    <Select placeholder="Select a color" id="default" defaultValue="green" useSemanticDropdown>
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />
@@ -14,4 +14,4 @@ const DropdownInlineTagSelect = () => (
   </div>
 );
 
-export default DropdownInlineTagSelect;
+export default SemanticDropdownSingleSelect;

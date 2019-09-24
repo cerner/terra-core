@@ -45,10 +45,6 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Render dropdown menu inline. Renders in a portal by default.
-   */
-  isDropdownInline: PropTypes.bool,
-  /**
    * Whether the field is displayed inline. Displays block by default.
    */
   isInline: PropTypes.bool,
@@ -101,6 +97,10 @@ const propTypes = {
    */
   showOptional: PropTypes.bool,
   /**
+   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
+   */
+  useSemanticDropdown: PropTypes.bool,
+  /**
    * The value of the select. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.string]),
@@ -124,7 +124,6 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
-  isDropdownInline: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
@@ -136,6 +135,7 @@ const defaultProps = {
   required: false,
   selectAttrs: {},
   showOptional: false,
+  useSemanticDropdown: false,
   value: undefined,
   variant: 'default',
 };
