@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Inline SVG aligned for IE and wdio screenshots Updated.
 
 3.24.0 - (September 19, 2019)
 ------------------
@@ -16,8 +18,6 @@ Unreleased
 
 3.22.0 - (September 3, 2019)
 ------------------
-### Changed
-* Inline SVG aligned for IE and wdio screenshots Updated.
 * Updated the 'keycode-js' version from '^1.0.4' to '^2.0.1'.
 
 3.21.0 - (August 21, 2019)
