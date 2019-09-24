@@ -123,10 +123,10 @@ class Frame extends React.Component {
     super(props);
 
     this.state = {
+      focusedByTouch: false,
       isOpen: false,
       isFocused: false,
       isInputFocused: false,
-      focusedByTouch: false,
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
@@ -286,7 +286,11 @@ class Frame extends React.Component {
       return;
     }
 
-    // relatedTarget is only falsey when the user clicks the dismiss keyboard button
+    // Don't blur if we dismissed the onscreen keyboard
+    // Determined by if we have have interacted with the frame via onTouchStart
+    // and if the relatedTarget is falsey. The relatedTarget will be null when
+    // dismissing the onscreen keyboard, else set to another element when
+    // tapping elsewhere on the page
     if (focusedByTouch && !relatedTarget) {
       return;
     }
@@ -389,7 +393,7 @@ class Frame extends React.Component {
   }
 
   /**
-   * TODO: docme
+   * Handles the touch start events
    */
   handleTouchStart() {
     this.setState({ focusedByTouch: true });

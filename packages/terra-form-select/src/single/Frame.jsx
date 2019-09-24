@@ -128,6 +128,7 @@ class Frame extends React.Component {
     super(props);
 
     this.state = {
+      focusedByTouch: false,
       isOpen: false,
       isFocused: false,
       isInputFocused: false,
@@ -150,6 +151,7 @@ class Frame extends React.Component {
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
+    this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
@@ -242,8 +244,20 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
+    const { relatedTarget } = event;
+    const { focusedByTouch } = this.state;
+
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
+      return;
+    }
+
+    // Don't blur if we dismissed the onscreen keyboard
+    // Determined by if we have have interacted with the frame via onTouchStart
+    // and if the relatedTarget is falsey. The relatedTarget will be null when
+    // dismissing the onscreen keyboard, else set to another element when
+    // tapping elsewhere on the page
+    if (focusedByTouch && !relatedTarget) {
       return;
     }
 
@@ -253,18 +267,18 @@ class Frame extends React.Component {
      * the select menu from being closed.
      */
     // event.relatedTarget returns null in IE 10 / IE 11
-    if (event.relatedTarget == null) {
+    if (relatedTarget == null) {
       // IE 11 sets document.activeElement to the next focused element before the blur event is called
       if (document.querySelector(this.selectMenu) === document.activeElement) {
         return;
       }
     // Modern browsers support event.relatedTarget
-    } else if (document.querySelector(this.selectMenu) === event.relatedTarget) {
+    } else if (document.querySelector(this.selectMenu) === relatedTarget) {
       return;
     }
 
 
-    this.setState({ isFocused: false });
+    this.setState({ isFocused: false, focusedByTouch: false });
 
     this.closeDropdown();
 
@@ -330,6 +344,13 @@ class Frame extends React.Component {
     if (this.state.isOpen) {
       this.closeDropdown();
     }
+  }
+
+  /**
+   * Handles the touch start events
+   */
+  handleTouchStart() {
+    this.setState({ focusedByTouch: true });
   }
 
   /**
