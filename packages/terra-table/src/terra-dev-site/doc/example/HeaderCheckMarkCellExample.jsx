@@ -8,6 +8,11 @@ const HeaderCheckMarkCellExample = () => (
     headerRow={(
       <HeaderRow>
         <HeaderCheckMarkCell />
+        <HeaderCheckMarkCell isSelectable alignmentPadding="2" />
+        <HeaderCheckMarkCell isSelectable />
+        <HeaderCheckMarkCell isSelectable isSelected />
+        <HeaderCheckMarkCell isSelectable isSelected isIntermediate />
+        <HeaderCheckMarkCell isPadded />
       </HeaderRow>
     )}
   />

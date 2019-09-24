@@ -43,7 +43,7 @@
 
   .is-selectable:hover,
   .is-selectable:focus {
-    .container > .dolphin {
+    .container > .highlight {
       background-color: #c0bdbd; // TODO: Need hover styling
       border-radius: 100%;
       height: 24px; // TODO: Need expected sizing
@@ -62,13 +62,13 @@
   .is-selectable[data-cell-show-focus='true']:focus {
     /* stylelint-disable max-nesting-depth */
     &:hover {
-      .container > .dolphin {
+      .container > .highlight {
         background-color: #e75959; // TODO: Need hover styling
       }
     }
     /* stylelint-enable max-nesting-depth */
 
-    .container > .dolphin {
+    .container > .highlight {
       background-color: #bbb2f0; // TODO: Need focus styling
     }
   }

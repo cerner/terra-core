@@ -116,7 +116,7 @@ const HeaderCheckMarkCell = ({
   }
 
   if (alignmentPadding) {
-    attrCheck.style = { paddingTop: `${alignmentPadding}rem` };
+    attrCheck.style = { marginBottom: `${alignmentPadding}rem` };
   }
 
   const Component = isIntermediate ? IconMinus : IconCheckmark;
@@ -134,6 +134,7 @@ const HeaderCheckMarkCell = ({
       role={isSelectable ? 'columnheader' : 'none'}
     >
       <div {...attrCheck} className={cx('container')}>
+        <span className={cx('highlight')} />
         <Component
           className={cx(
             'checkmark',
