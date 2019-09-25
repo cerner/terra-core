@@ -74,7 +74,7 @@ class Menu extends React.Component {
       return null;
     }
 
-    if (active && MenuUtil.findByValue(options, active)) {
+    if (active !== null && MenuUtil.findByValue(options, active)) {
       return active;
     }
 
@@ -297,7 +297,7 @@ class Menu extends React.Component {
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: MenuUtil.findNext(children, active) });
       this.updateCurrentActiveScreenReader();
-    } else if (keyCode === KeyCode.KEY_RETURN && active) {
+    } else if (keyCode === KeyCode.KEY_RETURN && active !== null) {
       event.preventDefault();
 
       this.setState({ closedViaKeyEvent: true });
