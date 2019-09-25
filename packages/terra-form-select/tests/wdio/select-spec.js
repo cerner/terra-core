@@ -1126,6 +1126,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.refresh();
       });
     });
+
+    describe('semantic dropdown multiple should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
   });
 
   describe('Search Variant - uncontrolled', () => {
@@ -1487,6 +1499,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.refresh();
       });
     });
+
+    describe('semantic dropdown search should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
   });
 
   describe('Tag Variant', () => {
@@ -1836,6 +1860,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('semantic dropdown tag should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
 
       after(() => {
         browser.refresh();
