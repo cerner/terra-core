@@ -7,6 +7,9 @@ Unreleased
 * Added `useSemanticDropdown` prop for all variants for mobile accessibility
   * When used, the dropdown menu is no longer portaled: it is rendered in the normal DOM flow with position absolute
 
+### Fixed
+* Fixed keyboard navigation when interacting with clear option on single and combobox variants
+
 5.30.0 - (September 19, 2019)
 ------------------
 ### Changed
