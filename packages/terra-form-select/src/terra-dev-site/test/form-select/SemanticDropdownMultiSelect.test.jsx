@@ -1,15 +1,15 @@
 import React from 'react';
-import Select from '../../../Select';
+import MultiSelect from '../../../MultiSelect';
 
 const SemanticDropdownMultiSelect = () => (
   <div>
-    <Select placeholder="Select a color" id="multiple" variant="multiple" useSemanticDropdown>
-      <Select.Option value="blue" display="Blue" />
-      <Select.Option value="green" display="Green" />
-      <Select.Option value="purple" display="Purple" />
-      <Select.Option value="red" display="Red" />
-      <Select.Option value="violet" display="Violet" />
-    </Select>
+    <MultiSelect placeholder="Select a color" id="multiple" useSemanticDropdown>
+      <MultiSelect.Option value="blue" display="Blue" />
+      <MultiSelect.Option value="green" display="Green" />
+      <MultiSelect.Option value="purple" display="Purple" />
+      <MultiSelect.Option value="red" display="Red" />
+      <MultiSelect.Option value="violet" display="Violet" />
+    </MultiSelect>
     <p>Anim ad nulla est ipsum mollit mollit cillum consectetur.</p>
   </div>
 );

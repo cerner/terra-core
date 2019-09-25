@@ -1,15 +1,15 @@
 import React from 'react';
-import Select from '../../../Select';
+import TagSelect from '../../../TagSelect';
 
 const SemanticDropdownTagSelect = () => (
   <div>
-    <Select placeholder="Select a color" id="tag" variant="tag" useSemanticDropdown>
-      <Select.Option value="blue" display="Blue" />
-      <Select.Option value="green" display="Green" />
-      <Select.Option value="purple" display="Purple" />
-      <Select.Option value="red" display="Red" />
-      <Select.Option value="violet" display="Violet" />
-    </Select>
+    <TagSelect placeholder="Select a color" id="tag" useSemanticDropdown>
+      <TagSelect.Option value="blue" display="Blue" />
+      <TagSelect.Option value="green" display="Green" />
+      <TagSelect.Option value="purple" display="Purple" />
+      <TagSelect.Option value="red" display="Red" />
+      <TagSelect.Option value="violet" display="Violet" />
+    </TagSelect>
     <p>Anim ad nulla est ipsum mollit mollit cillum consectetur.</p>
   </div>
 );

@@ -1,15 +1,15 @@
 import React from 'react';
-import Select from '../../../Select';
+import SearchSelect from '../../../SearchSelect';
 
 const SemanticDropdownSearchSelect = () => (
   <div>
-    <Select placeholder="Select a color" id="search" variant="search" useSemanticDropdown>
-      <Select.Option value="blue" display="Blue" />
-      <Select.Option value="green" display="Green" />
-      <Select.Option value="purple" display="Purple" />
-      <Select.Option value="red" display="Red" />
-      <Select.Option value="violet" display="Violet" />
-    </Select>
+    <SearchSelect placeholder="Select a color" id="search" useSemanticDropdown>
+      <SearchSelect.Option value="blue" display="Blue" />
+      <SearchSelect.Option value="green" display="Green" />
+      <SearchSelect.Option value="purple" display="Purple" />
+      <SearchSelect.Option value="red" display="Red" />
+      <SearchSelect.Option value="violet" display="Violet" />
+    </SearchSelect>
     <p>Anim ad nulla est ipsum mollit mollit cillum consectetur.</p>
   </div>
 );

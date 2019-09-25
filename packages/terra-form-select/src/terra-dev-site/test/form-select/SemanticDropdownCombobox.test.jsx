@@ -1,15 +1,15 @@
 import React from 'react';
-import Select from '../../../Select';
+import Combobox from '../../../Combobox';
 
 const SemanticDropdownCombobox = () => (
   <div>
-    <Select placeholder="Select a color" id="combobox" variant="combobox" useSemanticDropdown>
-      <Select.Option value="blue" display="Blue" />
-      <Select.Option value="green" display="Green" />
-      <Select.Option value="purple" display="Purple" />
-      <Select.Option value="red" display="Red" />
-      <Select.Option value="violet" display="Violet" />
-    </Select>
+    <Combobox placeholder="Select a color" id="combobox" useSemanticDropdown>
+      <Combobox.Option value="blue" display="Blue" />
+      <Combobox.Option value="green" display="Green" />
+      <Combobox.Option value="purple" display="Purple" />
+      <Combobox.Option value="red" display="Red" />
+      <Combobox.Option value="violet" display="Violet" />
+    </Combobox>
     <p>Anim ad nulla est ipsum mollit mollit cillum consectetur.</p>
   </div>
 );
