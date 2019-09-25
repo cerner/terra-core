@@ -717,7 +717,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-combobox');
     });
 
-    describe('Semantic dropdown combobox should be closed initially', () => {
+    describe('semantic dropdown combobox should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -735,6 +735,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('semantic dropdown combobox should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
 
       after(() => {
         browser.refresh();
@@ -1091,7 +1103,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-multi-select');
     });
 
-    describe('Semantic dropdown multiple should be closed initially', () => {
+    describe('semantic dropdown multiple should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -1452,7 +1464,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-search-select');
     });
 
-    describe('Semantic dropdown search should be closed initially', () => {
+    describe('semantic dropdown search should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -1806,7 +1818,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-tag-select');
     });
 
-    describe('Semantic dropdown tag should be closed initially', () => {
+    describe('semantic dropdown tag should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
