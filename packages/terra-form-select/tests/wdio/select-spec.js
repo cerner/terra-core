@@ -717,7 +717,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-combobox');
     });
 
-    describe('combobox should be closed initially', () => {
+    describe('Semantic dropdown combobox should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -734,7 +734,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+      Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
 
       after(() => {
         browser.refresh();
@@ -1091,7 +1091,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-multi-select');
     });
 
-    describe('multiple should be closed initially', () => {
+    describe('Semantic dropdown multiple should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -1108,7 +1108,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+      Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
 
       after(() => {
         browser.refresh();
@@ -1452,7 +1452,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-search-select');
     });
 
-    describe('search should be closed initially', () => {
+    describe('Semantic dropdown search should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -1469,7 +1469,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+      Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
 
       after(() => {
         browser.refresh();
@@ -1806,7 +1806,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-tag-select');
     });
 
-    describe('tag should be closed initially', () => {
+    describe('Semantic dropdown tag should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -1823,7 +1823,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+      Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
 
       after(() => {
         browser.refresh();
