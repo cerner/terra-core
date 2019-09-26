@@ -35,6 +35,12 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
@@ -87,10 +93,6 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
-   */
-  useSemanticDropdown: PropTypes.bool,
-  /**
    * The selected value. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -102,6 +104,7 @@ const defaultProps = {
   disabled: false,
   dropdownAttrs: undefined,
   isInvalid: false,
+  isTouchAccessible: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
   onChange: undefined,
@@ -111,7 +114,6 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   required: false,
-  useSemanticDropdown: false,
   value: undefined,
 };
 

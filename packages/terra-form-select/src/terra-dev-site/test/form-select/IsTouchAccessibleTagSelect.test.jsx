@@ -1,9 +1,9 @@
 import React from 'react';
 import TagSelect from '../../../TagSelect';
 
-const SemanticDropdownTagSelect = () => (
+const IsTouchAccessibleTagSelect = () => (
   <div>
-    <TagSelect placeholder="Select a color" id="tag" useSemanticDropdown>
+    <TagSelect placeholder="Select a color" id="tag" isTouchAccessible>
       <TagSelect.Option value="blue" display="Blue" />
       <TagSelect.Option value="green" display="Green" />
       <TagSelect.Option value="purple" display="Purple" />
@@ -14,4 +14,4 @@ const SemanticDropdownTagSelect = () => (
   </div>
 );
 
-export default SemanticDropdownTagSelect;
+export default IsTouchAccessibleTagSelect;

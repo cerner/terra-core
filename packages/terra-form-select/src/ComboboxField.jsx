@@ -51,6 +51,12 @@ const propTypes = {
    */
   isLabelHidden: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * Additional attributes to spread onto the label.
    */
   // eslint-disable-next-line react/forbid-prop-types
@@ -86,10 +92,6 @@ const propTypes = {
    */
   showOptional: PropTypes.bool,
   /**
-   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
-   */
-  useSemanticDropdown: PropTypes.bool,
-  /**
    * The value of the select. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -105,6 +107,7 @@ const defaultProps = {
   hideRequired: false,
   isInline: false,
   isInvalid: false,
+  isTouchAccessible: false,
   isLabelHidden: false,
   labelAttrs: {},
   maxWidth: undefined,
@@ -113,7 +116,6 @@ const defaultProps = {
   required: false,
   selectAttrs: {},
   showOptional: false,
-  useSemanticDropdown: false,
   value: undefined,
 };
 

@@ -44,6 +44,12 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
@@ -89,10 +95,6 @@ const propTypes = {
    */
   totalOptions: PropTypes.number,
   /**
-   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
-   */
-  useSemanticDropdown: PropTypes.bool,
-  /**
    * The select value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
@@ -102,6 +104,7 @@ const defaultProps = {
   disabled: false,
   dropdownAttrs: undefined,
   isInvalid: false,
+  isTouchAccessible: false,
   maxSelectionCount: undefined,
   onDeselect: undefined,
   onSearch: undefined,
@@ -110,7 +113,6 @@ const defaultProps = {
   placeholder: undefined,
   required: false,
   totalOptions: undefined,
-  useSemanticDropdown: false,
   value: undefined,
 };
 
@@ -308,9 +310,9 @@ class Frame extends React.Component {
       return;
     }
 
-    const { dropdownAttrs, maxHeight, useSemanticDropdown } = this.props;
+    const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
 
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, useSemanticDropdown));
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible));
   }
 
   /**
@@ -609,7 +611,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
-      useSemanticDropdown,
+      isTouchAccessible,
       isInvalid,
       maxHeight,
       maxSelectionCount,
@@ -697,7 +699,7 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
-            useSemanticDropdown={useSemanticDropdown}
+            isTouchAccessible={isTouchAccessible}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}

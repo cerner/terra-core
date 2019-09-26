@@ -5,8 +5,8 @@ import styles from '../FormSelectDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const SemanticDropdownExample = () => (
-  <SearchSelect placeholder="Select a color" className={cx('form-select')} useSemanticDropdown>
+const IsTouchAccessibleExample = () => (
+  <SearchSelect placeholder="Select a color" className={cx('form-select')} isTouchAccessible>
     <SearchSelect.Option value="blue" display="Blue" />
     <SearchSelect.Option value="green" display="Green" />
     <SearchSelect.Option value="purple" display="Purple" />
@@ -15,4 +15,4 @@ const SemanticDropdownExample = () => (
   </SearchSelect>
 );
 
-export default SemanticDropdownExample;
+export default IsTouchAccessibleExample;

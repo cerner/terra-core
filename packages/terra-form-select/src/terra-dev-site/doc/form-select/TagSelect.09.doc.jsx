@@ -16,8 +16,8 @@ import ControlledExample from '../example/tag/Controlled';
 import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Controlled';
 import DisabledExample from '../example/tag/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Disabled';
-import SemanticDropdownExample from '../example/tag/SemanticDropdown';
-import SemanticDropdownExampleSrc from '../example/tag/SemanticDropdown';
+import IsTouchAccessibleExample from '../example/tag/IsTouchAccessible';
+import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/IsTouchAccessible';
 import InvalidExample from '../example/tag/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Invalid';
 import MaxHeightExample from '../example/tag/MaxHeight';
@@ -54,10 +54,10 @@ const Index = () => (
       example: <TagExample />,
       source: TagExampleSrc,
     }, {
-      title: 'Semantic Dropdown',
-      description: 'Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.',
-      example: <SemanticDropdownExample />,
-      source: SemanticDropdownExampleSrc,
+      title: 'Is Touch Accessible',
+      description: 'Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices.',
+      example: <IsTouchAccessibleExample />,
+      source: IsTouchAccessibleExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,

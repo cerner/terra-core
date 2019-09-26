@@ -20,6 +20,12 @@ const propTypes = {
    */
   isEnabled: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * Callback function triggered when the dropdown resizes.
    */
   onResize: PropTypes.func.isRequired,
@@ -32,15 +38,11 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   target: PropTypes.object.isRequired,
-  /**
-   * Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.
-   */
-  useSemanticDropdown: PropTypes.bool,
 };
 
 const defaultProps = {
   isAbove: false,
-  useSemanticDropdown: false,
+  isTouchAccessible: false,
 };
 
 const AboveAttachment = {
@@ -57,10 +59,10 @@ const Dropdown = ({
   children,
   isAbove,
   isEnabled,
+  isTouchAccessible,
   onResize,
   refCallback,
   target,
-  useSemanticDropdown,
   ...customProps
 }) => {
   /**
@@ -74,11 +76,11 @@ const Dropdown = ({
   const dropdownClasses = cx([
     'dropdown',
     { 'is-above': isAbove },
-    { semantic: useSemanticDropdown },
+    { 'is-touch-accessible': isTouchAccessible },
     customProps.className,
   ]);
 
-  if (useSemanticDropdown) {
+  if (isTouchAccessible) {
     return (
       <div // eslint-disable-line jsx-a11y/no-static-element-interactions
         {...customProps}

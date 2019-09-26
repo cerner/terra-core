@@ -1,9 +1,9 @@
 import React from 'react';
 import MultiSelect from '../../../MultiSelect';
 
-const SemanticDropdownMultiSelect = () => (
+const IsTouchAccessibleMultiSelect = () => (
   <div>
-    <MultiSelect placeholder="Select a color" id="multiple" useSemanticDropdown>
+    <MultiSelect placeholder="Select a color" id="multiple" isTouchAccessible>
       <MultiSelect.Option value="blue" display="Blue" />
       <MultiSelect.Option value="green" display="Green" />
       <MultiSelect.Option value="purple" display="Purple" />
@@ -14,4 +14,4 @@ const SemanticDropdownMultiSelect = () => (
   </div>
 );
 
-export default SemanticDropdownMultiSelect;
+export default IsTouchAccessibleMultiSelect;

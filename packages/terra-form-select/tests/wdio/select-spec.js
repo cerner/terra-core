@@ -712,12 +712,12 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
-  describe('Combobox Variant - Use Semantic Dropdown', () => {
+  describe('Combobox Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-combobox');
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-combobox');
     });
 
-    describe('semantic dropdown combobox should be closed initially', () => {
+    describe('is touch accessible combobox should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -734,14 +734,14 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
 
       after(() => {
         browser.refresh();
       });
     });
 
-    describe('semantic dropdown combobox should open when clicking on it', () => {
+    describe('is touch accessible combobox should open when clicking on it', () => {
       it('should open on click', () => {
         browser.click('[data-terra-select]');
       });
@@ -1098,12 +1098,12 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
-  describe('Multiple Variant - Use Semantic Dropdown', () => {
+  describe('Multiple Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-multi-select');
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-multi-select');
     });
 
-    describe('semantic dropdown multiple should be closed initially', () => {
+    describe('is touch accessible multiple should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -1120,14 +1120,14 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
 
       after(() => {
         browser.refresh();
       });
     });
 
-    describe('semantic dropdown multiple should open when clicking on it', () => {
+    describe('is touch accessible multiple should open when clicking on it', () => {
       it('should open on click', () => {
         browser.click('[data-terra-select]');
       });
@@ -1471,12 +1471,12 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
-  describe('Search Variant - Use Semantic Dropdown', () => {
+  describe('Search Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-search-select');
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-search-select');
     });
 
-    describe('semantic dropdown search should be closed initially', () => {
+    describe('is touch accessible search should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -1493,14 +1493,14 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
 
       after(() => {
         browser.refresh();
       });
     });
 
-    describe('semantic dropdown search should open when clicking on it', () => {
+    describe('is touch accessible search should open when clicking on it', () => {
       it('should open on click', () => {
         browser.click('[data-terra-select]');
       });
@@ -1837,12 +1837,12 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
-  describe('Tag Variant - Use Semantic Dropdown', () => {
+  describe('Tag Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/semantic-dropdown-tag-select');
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-tag-select');
     });
 
-    describe('semantic dropdown tag should be closed initially', () => {
+    describe('is touch accessible tag should be closed initially', () => {
       Terra.it.validatesElement();
 
       after(() => {
@@ -1859,14 +1859,14 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('semantic-dropdown-tab-focus', { selector: '#root' });
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
 
       after(() => {
         browser.refresh();
       });
     });
 
-    describe('semantic dropdown tag should open when clicking on it', () => {
+    describe('is touch accessible tag should open when clicking on it', () => {
       it('should open on click', () => {
         browser.click('[data-terra-select]');
       });

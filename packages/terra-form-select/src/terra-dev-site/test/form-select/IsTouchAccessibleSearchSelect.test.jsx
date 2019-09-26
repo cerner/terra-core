@@ -1,9 +1,9 @@
 import React from 'react';
 import SearchSelect from '../../../SearchSelect';
 
-const SemanticDropdownSearchSelect = () => (
+const IsTouchAccessibleSearchSelect = () => (
   <div>
-    <SearchSelect placeholder="Select a color" id="search" useSemanticDropdown>
+    <SearchSelect placeholder="Select a color" id="search" isTouchAccessible>
       <SearchSelect.Option value="blue" display="Blue" />
       <SearchSelect.Option value="green" display="Green" />
       <SearchSelect.Option value="purple" display="Purple" />
@@ -14,4 +14,4 @@ const SemanticDropdownSearchSelect = () => (
   </div>
 );
 
-export default SemanticDropdownSearchSelect;
+export default IsTouchAccessibleSearchSelect;

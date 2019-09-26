@@ -18,8 +18,8 @@ import ComboboxExample from '../example/combobox/Combobox';
 import ComboboxExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Combobox';
 import DisabledExample from '../example/combobox/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Disabled';
-import SemanticDropdownExample from '../example/combobox/SemanticDropdown';
-import SemanticDropdownExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/SemanticDropdown';
+import IsTouchAccessibleExample from '../example/combobox/IsTouchAccessible';
+import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/IsTouchAccessible';
 import InvalidExample from '../example/combobox/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Invalid';
 import MaxHeightExample from '../example/combobox/MaxHeight';
@@ -56,10 +56,10 @@ const Index = () => (
       example: <ComboboxExample />,
       source: ComboboxExampleSrc,
     }, {
-      title: 'Semantic Dropdown',
-      description: 'Render dropdown menu in normal DOM flow with position absolute. Renders in a portal by default.',
-      example: <SemanticDropdownExample />,
-      source: SemanticDropdownExampleSrc,
+      title: 'Is Touch Accessible',
+      description: 'Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices.',
+      example: <IsTouchAccessibleExample />,
+      source: IsTouchAccessibleExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,
