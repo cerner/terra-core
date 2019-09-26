@@ -8,7 +8,7 @@ const propTypes = { color: PropTypes.string };
 const AvatarColorVariants = ({
   ...props
 }) => (
-  <Avatar alt="User" initials="JS" color={props.color} />
+  <Avatar alt="Joe Shane" initials="JS" color={props.color} />
 );
 
 AvatarColorVariants.propTypes = propTypes;

@@ -9,6 +9,7 @@ exports[`Avatar should render a default avatar 1`] = `
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JS
   </span>
@@ -24,6 +25,7 @@ exports[`Avatar should render an avatar with an automated color variant, based o
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JS
   </span>
@@ -39,6 +41,7 @@ exports[`Avatar should render an avatar with color variant netural 1`] = `
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JS
   </span>
@@ -54,6 +57,7 @@ exports[`Avatar should render an avatar with color variant one 1`] = `
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JS
   </span>
@@ -70,6 +74,7 @@ exports[`Avatar should render an avatar with custom props 1`] = `
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JS
   </span>
@@ -85,6 +90,7 @@ exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
     aria-hidden="true"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JJ
   </span>
@@ -101,6 +107,7 @@ exports[`Avatar should render an avatar with provided size 1`] = `
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JS
   </span>
@@ -116,6 +123,7 @@ exports[`Avatar should render an isDeceased avatar 1`] = `
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JS
   </span>
@@ -142,6 +150,7 @@ exports[`Avatar should render fallback initials when invalid image is passed in 
         aria-hidden="false"
         aria-label="placeholder"
         class="initials"
+        role="img"
       >
         JD
       </span>
@@ -170,6 +179,7 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
         aria-hidden="false"
         aria-label="placeholder"
         class="initials"
+        role="img"
       >
         JS
       </span>
@@ -198,6 +208,7 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
         aria-hidden="false"
         aria-label="placeholder"
         class="initials"
+        role="img"
       >
         JS
       </span>
@@ -215,6 +226,7 @@ exports[`Avatar should render one initial avatar when one initial is passed in 1
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     J
   </span>
@@ -230,6 +242,7 @@ exports[`Avatar should render two initials avatar when more than two initials ar
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JJ
   </span>
@@ -245,6 +258,7 @@ exports[`Avatar should render two initials avatar when two initials are passed i
     aria-hidden="false"
     aria-label="user"
     class="initials"
+    role="img"
   >
     JS
   </span>

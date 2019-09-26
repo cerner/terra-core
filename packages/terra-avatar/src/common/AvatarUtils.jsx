@@ -76,7 +76,7 @@ const generateInitials = (avatarParams) => {
     alt, initials, isAriaHidden,
   } = avatarParams;
   const avatarTextClassNames = cx('initials');
-  return <span className={avatarTextClassNames} alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
+  return <span className={avatarTextClassNames} role="img" alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
 };
 
 /**
