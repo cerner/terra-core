@@ -12,6 +12,8 @@ import SelectFieldExample from '../example/search/SearchSelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/SearchSelectField';
 import RequiredSearchSelectFieldExample from '../example/search/RequiredSearchSelectField';
 import RequiredSearchSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/RequiredSearchSelectField';
+import IncompleteSelectFieldExample from '../example/search/IncompleteSearchSelectField';
+import IncompleteSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/IncompleteSearchSelectField';
 
 const DocPage = () => (
   <DocTemplate
@@ -34,6 +36,10 @@ const DocPage = () => (
       title: 'Required Search Select Field Example',
       example: <RequiredSearchSelectFieldExample />,
       source: RequiredSearchSelectFieldExampleSrc,
+    }, {
+      title: 'Incomplete Search Select Field Example',
+      example: <IncompleteSelectFieldExample />,
+      source: IncompleteSelectFieldExampleSrc,
     }]}
   />
 );

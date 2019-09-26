@@ -12,6 +12,8 @@ import SelectFieldExample from '../example/tag/TagSelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/TagSelectField';
 import RequiredTagSelectFieldExample from '../example/tag/RequiredTagSelectField';
 import RequiredTagSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/RequiredTagSelectField';
+import IncompleteSelectFieldExample from '../example/tag/IncompleteTagSelectField';
+import IncompleteSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/IncompleteTagSelectField';
 
 const DocPage = () => (
   <DocTemplate
@@ -34,6 +36,10 @@ const DocPage = () => (
       title: 'Required Tag Select Field Example',
       example: <RequiredTagSelectFieldExample />,
       source: RequiredTagSelectFieldExampleSrc,
+    }, {
+      title: 'Incomplete Tag Select Field Example',
+      example: <IncompleteSelectFieldExample />,
+      source: IncompleteSelectFieldExampleSrc,
     }]}
   />
 );

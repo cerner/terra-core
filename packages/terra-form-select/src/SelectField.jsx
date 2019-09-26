@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import Field from 'terra-form-field';
 import Select from './Select';
 import Variants from './shared/_variants';
+import styles from './shared/_Frame.module.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -44,6 +48,10 @@ const propTypes = {
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,
+  /**
+   * Whether the field is incomplete.
+   */
+  isIncomplete: PropTypes.bool,
   /**
    * Whether the field is displayed inline. Displays block by default.
    */
@@ -120,6 +128,7 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
@@ -144,6 +153,7 @@ const SelectField = ({
   help,
   hideRequired,
   intl,
+  isIncomplete,
   isInline,
   isInvalid,
   isLabelHidden,
@@ -192,6 +202,10 @@ const SelectField = ({
     }
   }
 
+  const classes = cx([
+    { 'is-incomplete': isIncomplete && required },
+  ]);
+
   return (
     <Field
       {...customProps}
@@ -213,6 +227,7 @@ const SelectField = ({
         ariaLabel={label}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
+        className={classes}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
         isInvalid={isInvalid}

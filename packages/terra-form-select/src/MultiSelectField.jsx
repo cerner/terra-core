@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import Field from 'terra-form-field';
 import MultiSelect from './MultiSelect';
 import OptGroup from './shared/_OptGroup';
 import Option from './shared/_Option';
+import styles from './shared/_Frame.module.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -40,6 +44,10 @@ const propTypes = {
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,
+  /**
+   * Whether the field is incomplete.
+   */
+  isIncomplete: PropTypes.bool,
   /**
    * Whether the field is displayed inline. Displays block by default.
    */
@@ -104,6 +112,7 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
@@ -126,6 +135,7 @@ const MultiSelectField = ({
   help,
   hideRequired,
   intl,
+  isIncomplete,
   isInline,
   isInvalid,
   isLabelHidden,
@@ -173,6 +183,10 @@ const MultiSelectField = ({
     }
   }
 
+  const classes = cx([
+    { 'is-incomplete': isIncomplete && required },
+  ]);
+
   return (
     <Field
       {...customProps}
@@ -193,6 +207,7 @@ const MultiSelectField = ({
         {...selectAttrs}
         ariaLabel={label}
         aria-describedby={ariaDescriptionIds}
+        className={classes}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
         isInvalid={isInvalid}

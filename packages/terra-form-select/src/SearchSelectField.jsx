@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import Field from 'terra-form-field';
 import SearchSelect from './SearchSelect';
 import OptGroup from './shared/_OptGroup';
 import Option from './shared/_Option';
+import styles from './shared/_Frame.module.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -38,6 +42,10 @@ const propTypes = {
    * Whether to hide the required indicator on the label.
    */
   hideRequired: PropTypes.bool,
+  /**
+   * Whether the field is incomplete.
+   */
+  isIncomplete: PropTypes.bool,
   /**
    * Whether the field is displayed inline. Displays block by default.
    */
@@ -99,6 +107,7 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
@@ -120,6 +129,7 @@ const SearchSelectField = ({
   error,
   help,
   hideRequired,
+  isIncomplete,
   isInline,
   isInvalid,
   isLabelHidden,
@@ -149,6 +159,10 @@ const SearchSelectField = ({
     }
   }
 
+  const classes = cx([
+    { 'is-incomplete': isIncomplete && required },
+  ]);
+
   return (
     <Field
       {...customProps}
@@ -170,6 +184,7 @@ const SearchSelectField = ({
         ariaLabel={label}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
+        className={classes}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
         isInvalid={isInvalid}

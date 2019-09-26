@@ -12,6 +12,8 @@ import ComboboxFieldExample from '../example/combobox/ComboboxField';
 import ComboboxFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/ComboboxField';
 import RequiredComboboxFieldExample from '../example/combobox/RequiredComboboxField';
 import RequiredComboboxFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/RequiredComboboxField';
+import IncompleteComboboxFieldExample from '../example/combobox/IncompleteComboboxField';
+import IncompleteComboboxFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/IncompleteComboboxField';
 
 const DocPage = () => (
   <DocTemplate
@@ -27,13 +29,17 @@ const DocPage = () => (
       },
     ]}
     examples={[{
-      title: 'Combobobx Field Example',
+      title: 'Combobox Field Example',
       example: <ComboboxFieldExample />,
       source: ComboboxFieldExampleSrc,
     }, {
       title: 'Required Combobobx Field Example',
       example: <RequiredComboboxFieldExample />,
       source: RequiredComboboxFieldExampleSrc,
+    }, {
+      title: 'Incomplete Combobobx Field Example',
+      example: <IncompleteComboboxFieldExample />,
+      source: IncompleteComboboxFieldExampleSrc,
     }]}
   />
 );

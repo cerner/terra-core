@@ -12,6 +12,8 @@ import SelectFieldExample from '../example/multiple/MultiSelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/MultiSelectField';
 import RequiredMultiSelectFieldExample from '../example/multiple/RequiredMultiSelectField';
 import RequiredMultiSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/RequiredMultiSelectField';
+import IncompleteMultiSelectFieldExample from '../example/multiple/IncompleteMultiSelectField';
+import IncompleteMultiSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/IncompleteMultiSelectField';
 
 const DocPage = () => (
   <DocTemplate
@@ -34,6 +36,10 @@ const DocPage = () => (
       title: 'Required MultiSelect Field Example',
       example: <RequiredMultiSelectFieldExample />,
       source: RequiredMultiSelectFieldExampleSrc,
+    }, {
+      title: 'Incomplete MultiSelect Field Example',
+      example: <IncompleteMultiSelectFieldExample />,
+      source: IncompleteMultiSelectFieldExampleSrc,
     }]}
   />
 );
