@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.16.0 - (September 26, 2019)
+------------------
 ### Removed
 * Removed the Finnish example since we don't officially support Finnish
 
