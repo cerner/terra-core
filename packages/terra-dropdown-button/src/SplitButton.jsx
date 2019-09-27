@@ -76,8 +76,8 @@ class SplitButton extends React.Component {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 
-  handleDropdownRequestClose() {
-    this.setState({ isOpen: false });
+  handleDropdownRequestClose(callback) {
+    this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
   }
 
   /*

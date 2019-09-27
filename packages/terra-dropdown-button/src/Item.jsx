@@ -44,7 +44,12 @@ const Item = ({
   <li tabIndex="-1" role="presentation">
     <div
       {...customProps}
-      onClick={(event) => { requestClose(); onSelect(event, metaData); }}
+      onClick={(event) => {
+        requestClose(() => {
+          onSelect(event, metaData);
+        });
+        event.stopPropagation();
+      }}
       role="menuitem"
       tabIndex="0"
       className={cx([
