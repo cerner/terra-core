@@ -130,6 +130,7 @@ const SearchSelectField = ({
   isInline,
   isInvalid,
   isLabelHidden,
+  isTouchAccessible,
   label,
   labelAttrs,
   maxWidth,
@@ -180,6 +181,7 @@ const SearchSelectField = ({
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
         isInvalid={isInvalid}
+        isTouchAccessible={isTouchAccessible}
         defaultValue={defaultValue}
         onChange={onChange}
         placeholder={placeholder}

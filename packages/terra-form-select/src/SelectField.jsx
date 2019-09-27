@@ -155,6 +155,7 @@ const SelectField = ({
   isInline,
   isInvalid,
   isLabelHidden,
+  isTouchAccessible,
   label,
   labelAttrs,
   maxSelectionCount,
@@ -224,6 +225,7 @@ const SelectField = ({
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
         isInvalid={isInvalid}
+        isTouchAccessible={isTouchAccessible}
         defaultValue={defaultValue}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
