@@ -76,8 +76,8 @@ class SplitButton extends React.Component {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 
-  handleDropdownRequestClose(callback) {
-    this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
+  handleDropdownRequestClose() {
+    this.setState({ isOpen: false });
   }
 
   /*
@@ -140,6 +140,10 @@ class SplitButton extends React.Component {
       variant,
       { 'is-compact': isCompact },
       { 'is-active': isOpen || caretIsActive },
+      /* This needs to match terra-hookshot's react-onclickoutside ignore classname or clicking the caret with
+        the dropdown open will cause the dropdown to close and reopen
+      */
+      { 'ignore-react-onclickoutside': isOpen || caretIsActive },
     );
 
     return (
