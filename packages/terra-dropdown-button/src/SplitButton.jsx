@@ -143,7 +143,7 @@ class SplitButton extends React.Component {
       /* This needs to match terra-hookshot's react-onclickoutside ignore classname or clicking the caret with
         the dropdown open will cause the dropdown to close and reopen
       */
-      { 'ignore-react-onclickoutside': isOpen || caretIsActive },
+      { 'ignore-react-onclickoutside': isOpen },
     );
 
     return (
