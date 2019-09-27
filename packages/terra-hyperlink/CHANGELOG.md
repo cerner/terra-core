@@ -4,19 +4,18 @@ ChangeLog
 Unreleased
 ----------
 
-------------------
 ### Breaking Changes
 * Removed the following themeable variables:
-  * --terra-hyperlink-external-after-background-image
-  * --terra-hyperlink-external-disabled-after-background-image
-  * --terra-hyperlink-image-after-background-image
-  * --terra-hyperlink-image-disabled-after-background-image
-  * --terra-hyperlink-video-after-background-image
-  * --terra-hyperlink-video-disabled-after-background-image
-  * --terra-hyperlink-audio-after-background-image
-  * --terra-hyperlink-document-after-background-image
-  * --terra-hyperlink-audio-disabled-after-background-image
-  * --terra-hyperlink-document-disabled-after-background-image
+  * `--terra-hyperlink-external-after-background-image`
+  * `--terra-hyperlink-external-disabled-after-background-image`
+  * `--terra-hyperlink-image-after-background-image`
+  * `--terra-hyperlink-image-disabled-after-background-image`
+  * `--terra-hyperlink-video-after-background-image`
+  * `--terra-hyperlink-video-disabled-after-background-image`
+  * `--terra-hyperlink-audio-after-background-image`
+  * `--terra-hyperlink-document-after-background-image`
+  * `--terra-hyperlink-audio-disabled-after-background-image`
+  * `--terra-hyperlink-document-disabled-after-background-image`
 
 ### Added
 * Added `--terra-hyperlink-visited-focus-color` themeable variable.
