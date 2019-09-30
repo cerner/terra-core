@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* File input to show selection in edge.
 
 2.27.0 - (September 26, 2019)
 ------------------
