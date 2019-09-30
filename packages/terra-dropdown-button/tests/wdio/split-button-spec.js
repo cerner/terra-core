@@ -175,6 +175,11 @@ Terra.describeViewports('Split Button', ['medium'], () => {
         browser.buttonUp();
         Terra.validates.screenshot('clicking outside closes dropdown');
       });
+
+      it('closes the dropdown when clicking primary button', () => {
+        browser.click('[class*=split-button-primary]');
+        Terra.validates.screenshot('clicking primary closes dropdown');
+      });
     });
 
     it('does not reopen the dropdown when open and closed with keyboard interactions', () => {
