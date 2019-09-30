@@ -10,6 +10,7 @@
 
     &:visited {
       color: var(--terra-hyperlink-visited-color, #0059a8);
+
       &:focus {
         color: var(--terra-hyperlink-visited-focus-color, #001f67);
       }
