@@ -193,6 +193,15 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       Terra.it.validatesElement();
     });
 
+    describe('Incomplete TextareaField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+        browser.click('#incomplete-toggle');
+      });
+
+      Terra.it.validatesElement();
+    });
+
     describe('Disabled TextareaField', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-textarea-field');

@@ -7,9 +7,12 @@ class TextareaFieldExample extends React.Component {
 
     this.state = {
       isInvalid: false,
+      isIncomplete: false,
+      required: false,
     };
 
     this.toggleInvalid = this.toggleInvalid.bind(this);
+    this.toggleIncomplete = this.toggleIncomplete.bind(this);
   }
 
   toggleInvalid() {
@@ -18,10 +21,18 @@ class TextareaFieldExample extends React.Component {
     }));
   }
 
+  toggleIncomplete() {
+    this.setState(prevState => ({
+      isIncomplete: !prevState.isIncomplete,
+      required: !prevState.required,
+    }));
+  }
+
   render() {
     return (
       <div>
         <button type="button" id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
+        <button type="button" id="incomplete-toggle" onClick={this.toggleIncomplete}>Toggle Incomplete</button>
         <TextareaField
           defaultValue="Value"
           inputId="test-input"
@@ -32,6 +43,8 @@ class TextareaFieldExample extends React.Component {
             name: 'test',
           }}
           isInvalid={this.state.isInvalid}
+          isIncomplete={this.state.isIncomplete}
+          required={this.state.required}
           label="Label Text"
           labelAttrs={{
             className: 'label',

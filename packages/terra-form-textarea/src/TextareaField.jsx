@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import IconError from 'terra-icon/lib/icon/IconError';
 import Field from 'terra-form-field';
 import Textarea from './Textarea';
+import styles from './Textarea.module.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -45,6 +49,10 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
+  /**
+   * Whether the field is incomplete.
+   */
+  isIncomplete: PropTypes.bool,
   /**
    * Whether or not the field is an inline field.
    */
@@ -96,6 +104,7 @@ const defaultProps = {
   help: null,
   hideRequired: false,
   inputAttrs: {},
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
@@ -117,6 +126,7 @@ const TextareaField = (props) => {
     hideRequired,
     inputAttrs,
     inputId,
+    isIncomplete,
     isInline,
     isInvalid,
     isLabelHidden,
@@ -144,6 +154,10 @@ const TextareaField = (props) => {
     }
   }
 
+  const classes = cx([
+    { 'form-incomplete': isIncomplete && required },
+  ]);
+
   return (
     <Field
       {...customProps}
@@ -163,6 +177,7 @@ const TextareaField = (props) => {
     >
       <Textarea
         {...inputAttrs}
+        className={classes}
         disabled={inputAttrs.disabled || disabled}
         id={inputId}
         onChange={onChange}

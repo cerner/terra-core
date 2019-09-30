@@ -23,7 +23,7 @@
     width: 100%;
 
     &::placeholder {
-      color: var(--terra-form-input-placeholder-color, #70787c);
+      color: var(--terra-form-input-placeholder-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-input-placeholder-font-style);
     }
 
@@ -47,7 +47,7 @@
     }
 
     &[disabled]::placeholder {
-      color: var(--terra-form-input-placeholder-disabled-color, #70787c);
+      color: var(--terra-form-input-placeholder-disabled-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-input-placeholder-disabled-font-style);
     }
 
@@ -97,6 +97,25 @@
       [dir=rtl] & {
         box-shadow: var(--terra-form-input-error-focus-rtl-box-shadow);
       }
+    }
+  }
+
+  .form-incomplete:not(.form-error) {
+    background-color: #ffffcc;
+
+    &:hover {
+      background-color: #ffffcc;
+    }
+
+    &[disabled] {
+      background-color: #ffffcc;
+      border: 1px solid #85898b;
+      color: #1c1f21;
+      opacity: 0.25;
+    }
+
+    &:focus {
+      background-color: #ffffcc;
     }
   }
 }

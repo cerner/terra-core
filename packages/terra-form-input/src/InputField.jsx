@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import Field from 'terra-form-field';
 import IconError from 'terra-icon/lib/icon/IconError';
 import Input from './Input';
+import styles from './Input.module.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -45,6 +49,10 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
+  /**
+   * Whether the field is incomplete.
+   */
+  isIncomplete: PropTypes.bool,
   /**
    * Whether or not the field is an inline field.
    */
@@ -104,6 +112,7 @@ const defaultProps = {
   help: null,
   hideRequired: false,
   inputAttrs: {},
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
@@ -127,6 +136,7 @@ const InputField = (props) => {
     hideRequired,
     inputAttrs,
     inputId,
+    isIncomplete,
     isInline,
     isInvalid,
     isLabelHidden,
@@ -156,6 +166,10 @@ const InputField = (props) => {
     }
   }
 
+  const classes = cx([
+    { 'form-incomplete': isIncomplete && required },
+  ]);
+
   const inputType = type || inputAttrs.type;
   return (
     <Field
@@ -176,6 +190,7 @@ const InputField = (props) => {
     >
       <Input
         {...inputAttrs}
+        className={classes}
         disabled={inputAttrs.disabled || disabled}
         id={inputId}
         type={inputType}

@@ -133,4 +133,23 @@
       }
     }
   }
+
+  .form-incomplete:not(.form-error) {
+    background-color: #ffffcc;
+
+    &:hover {
+      background-color: #ffffcc;
+    }
+
+    &[disabled] {
+      background-color: #ffffcc;
+      border: 1px solid #85898b;
+      color: #1c1f21;
+      opacity: 0.25;
+    }
+
+    &:focus {
+      background-color: #ffffcc;
+    }
+  }
 }

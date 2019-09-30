@@ -11,6 +11,8 @@ import TextareaFieldExample from '../example/TextareaField';
 import TextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TextareaField';
 import RequiredTextareaFieldExample from '../example/RequiredTextareaField';
 import RequiredTextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RequiredTextareaField';
+import IncompleteTextareaFieldExample from '../example/IncompleteTextareaField';
+import IncompleteTextareaFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/IncompleteTextareaField';
 
 const DocPage = () => (
   <DocTemplate
@@ -33,6 +35,10 @@ const DocPage = () => (
       {
         example: <RequiredTextareaFieldExample />,
         source: RequiredTextareaFieldExampleSrc,
+      },
+      {
+        example: <IncompleteTextareaFieldExample />,
+        source: IncompleteTextareaFieldExampleSrc,
       },
     ]}
   />

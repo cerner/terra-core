@@ -129,6 +129,15 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
       Terra.it.validatesElement();
     });
 
+    describe('Incomplete InputField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
+        browser.click('#incomplete-toggle');
+      });
+
+      Terra.it.validatesElement();
+    });
+
     describe('Disabled InputField', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/disabled-input-field');
