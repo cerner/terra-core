@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `isIncomplete` prop to `InputField`.
 
 2.27.0 - (September 26, 2019)
 ------------------

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Updated test screenshots to deal with css change in `terra-form-input`.
 
 3.29.0 - (September 26, 2019)
 ------------------

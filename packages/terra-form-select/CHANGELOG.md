@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `isIncomplete` prop to all versions of `SelectField`.
 
 5.31.0 - (September 26, 2019)
 ------------------
