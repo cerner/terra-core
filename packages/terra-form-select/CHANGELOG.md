@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.31.0 - (September 26, 2019)
+------------------
 ### Fixed
 * Fixed keyboard navigation when interacting with clear option on single and combobox variants
 
