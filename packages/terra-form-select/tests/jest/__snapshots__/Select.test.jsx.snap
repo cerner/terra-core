@@ -68,6 +68,7 @@ exports[`Select should render a combobox variant 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -104,6 +105,7 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
 />
@@ -213,6 +215,7 @@ exports[`Select should render a disabled combobox variant 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -284,6 +287,7 @@ exports[`Select should render a disabled multiple variant 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -320,6 +324,7 @@ exports[`Select should render a disabled search variant 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -355,6 +360,7 @@ exports[`Select should render a disabled tag variant 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -390,6 +396,7 @@ exports[`Select should render a multiple variant 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -425,6 +432,7 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
 />
@@ -498,6 +506,7 @@ exports[`Select should render a search variant 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -534,6 +543,7 @@ exports[`Select should render a search variant with a placeholder 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
 />
@@ -802,6 +812,7 @@ exports[`Select should render a tag variant 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -837,6 +848,7 @@ exports[`Select should render a tag variant with a placeholder 1`] = `
     }
   }
   isInvalid={false}
+  isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
 />
@@ -874,6 +886,7 @@ exports[`Select should render an invalid combobox variant 1`] = `
     }
   }
   isInvalid={true}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -945,6 +958,7 @@ exports[`Select should render an invalid multiple variant 1`] = `
     }
   }
   isInvalid={true}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -981,6 +995,7 @@ exports[`Select should render an invalid search variant 1`] = `
     }
   }
   isInvalid={true}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -1016,6 +1031,7 @@ exports[`Select should render an invalid tag variant 1`] = `
     }
   }
   isInvalid={true}
+  isTouchAccessible={false}
   required={false}
 />
 `;
