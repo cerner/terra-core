@@ -43,7 +43,7 @@ const propTypes = {
    */
   hideRequired: PropTypes.bool,
   /**
-   * Whether the field is incomplete.
+   * Whether the field is incomplete. Field must also be required.
    */
   isIncomplete: PropTypes.bool,
   /**

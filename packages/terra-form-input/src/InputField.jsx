@@ -50,7 +50,7 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
   /**
-   * Whether the field is incomplete.
+   * Whether the field is incomplete. Field must also be required.
    */
   isIncomplete: PropTypes.bool,
   /**

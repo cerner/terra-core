@@ -45,7 +45,7 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the field is incomplete.
+   * Whether the field is incomplete. Field must also be required.
    */
   isIncomplete: PropTypes.bool,
   /**
