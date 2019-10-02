@@ -20,6 +20,8 @@ import DefaultExample from '../example/legacy/Default';
 import DefaultExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Default';
 import DisabledExample from '../example/legacy/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Disabled';
+import IsTouchAccessibleExample from '../example/legacy/IsTouchAccessible';
+import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/IsTouchAccessible';
 import InvalidExample from '../example/legacy/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Invalid';
 import IncompleteExample from '../example/legacy/Incomplete';
@@ -87,6 +89,11 @@ const Index = () => (
       title: 'Disabled (applies to all)',
       example: <DisabledExample />,
       source: DisabledExampleSrc,
+    }, {
+      title: "Is Touch Accessible (applies to only 'combobox', 'multiple', 'tag', and 'search')",
+      description: 'Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices.',
+      example: <IsTouchAccessibleExample />,
+      source: IsTouchAccessibleExampleSrc,
     }, {
       title: 'Invalid (applies to all)',
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',

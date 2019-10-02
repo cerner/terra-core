@@ -42,6 +42,12 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
@@ -111,6 +117,7 @@ const defaultProps = {
   optionFilter: undefined,
   placeholder: undefined,
   required: false,
+  isTouchAccessible: false,
   value: undefined,
 };
 

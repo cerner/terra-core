@@ -235,8 +235,8 @@ class Frame extends React.Component {
     }
 
     const { dropdownAttrs, maxHeight } = this.props;
-    const { select, dropdown } = this;
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, select, dropdown, maxHeight));
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight));
   }
 
   /**

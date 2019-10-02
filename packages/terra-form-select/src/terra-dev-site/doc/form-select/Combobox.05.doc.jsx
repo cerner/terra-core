@@ -18,6 +18,8 @@ import ComboboxExample from '../example/combobox/Combobox';
 import ComboboxExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Combobox';
 import DisabledExample from '../example/combobox/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Disabled';
+import IsTouchAccessibleExample from '../example/combobox/IsTouchAccessible';
+import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/IsTouchAccessible';
 import InvalidExample from '../example/combobox/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/Invalid';
 import IncompleteExample from '../example/combobox/Incomplete';
@@ -55,6 +57,11 @@ const Index = () => (
       description: 'A Combobox allows a user to enter a single free text entry or select a single option from the the dropdown.',
       example: <ComboboxExample />,
       source: ComboboxExampleSrc,
+    }, {
+      title: 'Is Touch Accessible',
+      description: 'Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices.',
+      example: <IsTouchAccessibleExample />,
+      source: IsTouchAccessibleExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,

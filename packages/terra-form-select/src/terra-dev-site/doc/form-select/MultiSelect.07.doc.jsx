@@ -16,6 +16,8 @@ import ControlledExample from '../example/multiple/Controlled';
 import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Controlled';
 import DisabledExample from '../example/multiple/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Disabled';
+import IsTouchAccessibleExample from '../example/multiple/IsTouchAccessible';
+import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/IsTouchAccessible';
 import InvalidExample from '../example/multiple/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Invalid';
 import IncompleteExample from '../example/multiple/Incomplete';
@@ -53,6 +55,11 @@ const Index = () => (
       description: 'A MultiSelect allows searching and selecting multiple options.',
       example: <MultipleExample />,
       source: MultipleExampleSrc,
+    }, {
+      title: 'Is Touch Accessible',
+      description: 'Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices.',
+      example: <IsTouchAccessibleExample />,
+      source: IsTouchAccessibleExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,

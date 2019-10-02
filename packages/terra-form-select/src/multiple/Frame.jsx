@@ -48,6 +48,12 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
@@ -107,6 +113,7 @@ const defaultProps = {
   dropdownAttrs: undefined,
   isIncomplete: false,
   isInvalid: false,
+  isTouchAccessible: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
   onDeselect: undefined,
@@ -126,6 +133,7 @@ class Frame extends React.Component {
     super(props);
 
     this.state = {
+      focusedByTouch: false,
       isOpen: false,
       isFocused: false,
       isInputFocused: false,
@@ -154,6 +162,7 @@ class Frame extends React.Component {
     this.handleInputBlur = this.handleInputBlur.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
+    this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
@@ -284,21 +293,33 @@ class Frame extends React.Component {
       return;
     }
 
-    const { dropdownAttrs, maxHeight } = this.props;
-    const { select, dropdown } = this;
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, select, dropdown, maxHeight));
+    const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible));
   }
 
   /**
    * Handles the blur event.
    */
   handleBlur(event) {
+    const { relatedTarget } = event;
+    const { focusedByTouch } = this.state;
+
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
       return;
     }
 
-    this.setState({ isFocused: false });
+    // Don't blur if we dismissed the onscreen keyboard
+    // Determined by if we have have interacted with the frame via onTouchStart
+    // and if the relatedTarget is falsey. The relatedTarget will be null when
+    // dismissing the onscreen keyboard, else set to another element when
+    // tapping elsewhere on the page
+    if (focusedByTouch && !relatedTarget) {
+      return;
+    }
+
+    this.setState({ isFocused: false, focusedByTouch: false });
 
     this.closeDropdown();
 
@@ -409,6 +430,13 @@ class Frame extends React.Component {
         this.input.focus();
       }
     }
+  }
+
+  /**
+   * Handles the touch start events
+   */
+  handleTouchStart() {
+    this.setState({ focusedByTouch: true });
   }
 
   /**
@@ -567,6 +595,7 @@ class Frame extends React.Component {
       dropdownAttrs,
       intl,
       isIncomplete,
+      isTouchAccessible,
       isInvalid,
       maxHeight,
       maxSelectionCount,
@@ -630,6 +659,7 @@ class Frame extends React.Component {
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}
+        onTouchStart={this.handleTouchStart}
         tabIndex="-1"
         ref={(select) => { this.select = select; }}
       >
@@ -656,6 +686,7 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
+            isTouchAccessible={isTouchAccessible}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}

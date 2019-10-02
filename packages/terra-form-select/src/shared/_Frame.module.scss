@@ -8,6 +8,7 @@
     display: flex;
     font-size: var(--terra-form-select-font-size, 1.143rem);
     line-height: var(--terra-form-select-line-height, 1.75);
+    position: relative;
   }
 
   .default {

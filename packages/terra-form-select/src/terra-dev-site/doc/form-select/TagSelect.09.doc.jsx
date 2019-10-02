@@ -16,6 +16,8 @@ import ControlledExample from '../example/tag/Controlled';
 import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Controlled';
 import DisabledExample from '../example/tag/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Disabled';
+import IsTouchAccessibleExample from '../example/tag/IsTouchAccessible';
+import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/IsTouchAccessible';
 import InvalidExample from '../example/tag/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Invalid';
 import IncompleteExample from '../example/tag/Incomplete';
@@ -53,6 +55,11 @@ const Index = () => (
       description: 'A Tag Select allows a user to enter multiple custom free text entries or select multiple options from the the dropdown.',
       example: <TagExample />,
       source: TagExampleSrc,
+    }, {
+      title: 'Is Touch Accessible',
+      description: 'Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices.',
+      example: <IsTouchAccessibleExample />,
+      source: IsTouchAccessibleExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,

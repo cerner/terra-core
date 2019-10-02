@@ -18,6 +18,8 @@ import SearchExample from '../example/search/Search';
 import SearchExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/Search';
 import DisabledExample from '../example/search/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/Disabled';
+import IsTouchAccessibleExample from '../example/search/IsTouchAccessible';
+import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/IsTouchAccessible';
 import InvalidExample from '../example/search/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/search/Invalid';
 import IncompleteExample from '../example/search/Incomplete';
@@ -55,6 +57,11 @@ const Index = () => (
       description: 'A Search Select allows selecting a single option.',
       example: <SearchExample />,
       source: SearchExampleSrc,
+    }, {
+      title: 'Is Touch Accessible',
+      description: 'Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices.',
+      example: <IsTouchAccessibleExample />,
+      source: IsTouchAccessibleExampleSrc,
     }, {
       title: 'Disabled',
       example: <DisabledExample />,
