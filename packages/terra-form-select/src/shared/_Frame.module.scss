@@ -87,16 +87,17 @@
     &.is-invalid {
       background-color: var(--terra-form-select-invalid-background-color, none);
       background-image: var(--terra-form-select-invalid-background-image, none);
-      border-color: var(--terra-form-select-invalid-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-border-color, #e50000);
+      box-shadow: 0 0 0 1px #e50000;
     }
 
     &.is-invalid.is-focused {
       background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-form-select-invalid-focus-border-color, #4cb2e9);
+      border-color: var(--terra-form-select-invalid-focus-border-color, #e50000);
     }
 
     &.is-invalid:hover {
-      border-color: var(--terra-form-select-invalid-hover-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-hover-border-color, #e50000);
     }
   }
 
@@ -342,17 +343,18 @@
     &.is-invalid > .display {
       background-color: var(--terra-form-select-invalid-background-color, none);
       background-image: var(--terra-form-select-invalid-background-image, none);
-      border-color: var(--terra-form-select-invalid-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-border-color, #e50000);
+      box-shadow: 0 0 0 1px #e50000;
     }
 
     &.is-invalid.is-focused > .display {
       background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-form-select-invalid-focus-border-color, #4cb2e9);
-      box-shadow: var(--terra-form-select-invalid-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+      border-color: var(--terra-form-select-invalid-focus-border-color, #e50000);
+      box-shadow: var(--terra-form-select-invalid-focus-box-shadow, 0 0 0 1px #e50000);
     }
 
     &.is-invalid:hover > .display {
-      border-color: var(--terra-form-select-invalid-hover-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-hover-border-color, #e50000);
     }
   }
 
