@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
 import Field from 'terra-form-field';
 import SearchSelect from './SearchSelect';
 import OptGroup from './shared/_OptGroup';
 import Option from './shared/_Option';
-import styles from './shared/_Frame.module.scss';
-
-const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -159,10 +155,6 @@ const SearchSelectField = ({
     }
   }
 
-  const classes = cx([
-    { 'is-incomplete': isIncomplete && required },
-  ]);
-
   return (
     <Field
       {...customProps}
@@ -184,9 +176,9 @@ const SearchSelectField = ({
         ariaLabel={label}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
-        className={classes}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
+        isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         defaultValue={defaultValue}
         onChange={onChange}

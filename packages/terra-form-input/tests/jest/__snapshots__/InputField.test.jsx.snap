@@ -29,6 +29,7 @@ exports[`should render a InputField with props 1`] = `
     defaultValue="Value"
     disabled={false}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name="test"
     onChange={[Function]}
@@ -69,6 +70,7 @@ exports[`should render a InputField with type specified by type attribute when b
     defaultValue="Value"
     disabled={false}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name="test"
     onChange={[Function]}
@@ -109,6 +111,7 @@ exports[`should render a InputField with type specified through InputAttributes 
     defaultValue="Value"
     disabled={false}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name="test"
     onChange={[Function]}
@@ -143,6 +146,7 @@ exports[`should render a default InputField component 1`] = `
   <Input
     disabled={false}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name={null}
     required={false}
@@ -173,6 +177,7 @@ exports[`should render a disabled InputField component 1`] = `
   <Input
     disabled={true}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name={null}
     required={false}
@@ -203,6 +208,7 @@ exports[`should render a disabled InputField component via inputAttrs 1`] = `
   <Input
     disabled={true}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name={null}
     required={false}
@@ -239,6 +245,7 @@ exports[`should render a valid InputField with props 1`] = `
     defaultValue="Value"
     disabled={false}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name="test"
     onChange={[Function]}

@@ -20,6 +20,8 @@ import DisabledExample from '../example/single/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Disabled';
 import InvalidExample from '../example/single/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Invalid';
+import IncompleteExample from '../example/single/Incomplete';
+import IncompleteExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/Incomplete';
 import MaxHeightExample from '../example/single/MaxHeight';
 import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/MaxHeight';
 import OptGroupExample from '../example/single/OptGroup';
@@ -62,6 +64,11 @@ const Index = () => (
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',
       example: <InvalidExample />,
       source: InvalidExampleSrc,
+    }, {
+      title: 'Incomplete',
+      description: 'Applies theme-specific styling for incomplete.',
+      example: <IncompleteExample />,
+      source: IncompleteExampleSrc,
     }, {
       title: 'Ability to add Option Groups',
       description: 'An OptGroup provides a way to group options together within the listbox.',

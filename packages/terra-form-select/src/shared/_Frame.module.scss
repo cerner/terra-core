@@ -68,19 +68,19 @@
     }
 
     &.is-incomplete:not(.is-invalid) {
-      background-color: #ffffcc; // var(--terra-form-select-incomplete-background-color, #ffffcc);
+      background-color: var(--terra-form-select-incomplete-background-color, #ffc);
     }
 
     &.is-incomplete.is-focused:not(.is-invalid) {
-      background-color: #ffffcc; // var(--terra-form-select-incomplete-focus-background-color, #ffffcc);
+      background-color: var(--terra-form-select-incomplete-focus-background-color, #ffc);
     }
 
     &.is-incomplete:hover:not(.is-invalid) {
-      background-color: #ffffcc; // var(--terra-form-select-incomplete-hover-background-color, #ffffcc);
+      background-color: var(--terra-form-select-incomplete-hover-background-color, #ffc);
     }
 
     &.is-incomplete.is-disabled:not(.is-invalid) {
-      background-color: #ffffcc; // var(--terra-form-select-incomplete-disabled-background-color, #ffffcc);
+      background-color: var(--terra-form-select-incomplete-disabled-background-color, #ffc);
     }
 
     &.is-invalid {
@@ -132,7 +132,7 @@
 
     .search-input::placeholder,
     .placeholder {
-      color: var(--terra-form-select-disabled-placeholder-color, #70787c);
+      color: var(--terra-form-select-disabled-placeholder-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-select-disabled-placeholder-font-style);
     }
   }
@@ -323,19 +323,19 @@
     }
 
     &.is-incomplete:not(.is-invalid) > .display {
-      background-color: #ffffcc; // var(--terra-form-select-incomplete-background-color, #ffffcc);
+      background-color: var(--terra-form-select-incomplete-background-color, #ffc);
     }
 
     &.is-incomplete.is-focused:not(.is-invalid) > .display {
-      background-color: #ffffcc; // var(--terra-form-select-incomplete-focus-background-color, #ffffcc);
+      background-color: var(--terra-form-select-incomplete-focus-background-color, #ffc);
     }
 
     &.is-incomplete:hover:not(.is-invalid) > .display {
-      background-color: #ffffcc; // var(--terra-form-select-incomplete-hover-background-color, #ffffcc);
+      background-color: var(--terra-form-select-incomplete-hover-background-color, #ffc);
     }
 
     &.is-incomplete.is-disabled:not(.is-invalid) > .display {
-      background-color: #ffffcc; // var(--terra-form-select-incomplete-disabled-background-color, #ffffcc);
+      background-color: var(--terra-form-select-incomplete-disabled-background-color, #ffc);
     }
 
     &.is-invalid > .display {

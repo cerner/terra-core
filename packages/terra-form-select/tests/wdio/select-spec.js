@@ -1784,4 +1784,34 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement('selected-option');
     });
   });
+
+  describe('Default variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-default'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Combobox variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-combobox'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Multiple variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-multiple'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Search variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-search'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Tag variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-tag'));
+
+    Terra.it.validatesElement();
+  });
 });

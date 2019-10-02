@@ -101,21 +101,18 @@
   }
 
   .form-incomplete:not(.form-error) {
-    background-color: #ffffcc;
+    background-color: var(--terra-form-input-incomplete-background-color, #ffc);
 
     &:hover {
-      background-color: #ffffcc;
+      background-color: var(--terra-form-input-incomplete-hover-background-color, #ffc);
     }
 
     &[disabled] {
-      background-color: #ffffcc;
-      border: 1px solid #85898b;
-      color: #1c1f21;
-      opacity: 0.25;
+      background-color: var(--terra-form-input-incomplete-disabled-background-color, #ffc);
     }
 
     &:focus {
-      background-color: #ffffcc;
+      background-color: var(--terra-form-input-incomplete-focus-background-color, #ffc);
     }
   }
 }

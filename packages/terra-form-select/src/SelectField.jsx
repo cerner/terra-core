@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import Field from 'terra-form-field';
 import Select from './Select';
 import Variants from './shared/_variants';
-import styles from './shared/_Frame.module.scss';
-
-const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -202,10 +198,6 @@ const SelectField = ({
     }
   }
 
-  const classes = cx([
-    { 'is-incomplete': isIncomplete && required },
-  ]);
-
   return (
     <Field
       {...customProps}
@@ -227,9 +219,9 @@ const SelectField = ({
         ariaLabel={label}
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
-        className={classes}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
+        isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         defaultValue={defaultValue}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}

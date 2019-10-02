@@ -23,6 +23,14 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     Terra.it.validatesElement();
   });
 
+  describe('Incomplete', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/incomplete-textarea');
+    });
+
+    Terra.it.validatesElement();
+  });
+
   describe('Small Textarea Height Resizing', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/small-textarea');

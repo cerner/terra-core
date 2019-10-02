@@ -34,7 +34,7 @@
     }
 
     &::placeholder {
-      color: var(--terra-form-textarea-placeholder-color, #70787c);
+      color: var(--terra-form-textarea-placeholder-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-textarea-placeholder-font-style);
     }
 
@@ -55,7 +55,7 @@
     }
 
     &[disabled]::placeholder {
-      color: var(--terra-form-textarea-placeholder-disabled-color, #70787c);
+      color: var(--terra-form-textarea-placeholder-disabled-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-textarea-placeholder-disabled-font-style);
     }
 
@@ -135,21 +135,18 @@
   }
 
   .form-incomplete:not(.form-error) {
-    background-color: #ffffcc;
+    background-color: var(--terra-form-textarea-incomplete-background-color, #ffc);
 
     &:hover {
-      background-color: #ffffcc;
+      background-color: var(--terra-form-textarea-incomplete-hover-background-color, #ffc);
     }
 
     &[disabled] {
-      background-color: #ffffcc;
-      border: 1px solid #85898b;
-      color: #1c1f21;
-      opacity: 0.25;
+      background-color: var(--terra-form-textarea-incomplete-disabled-background-color, #ffc);
     }
 
     &:focus {
-      background-color: #ffffcc;
+      background-color: var(--terra-form-textarea-incomplete-focus-background-color, #ffc);
     }
   }
 }

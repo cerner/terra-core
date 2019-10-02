@@ -40,6 +40,10 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
+   * Whether the field is incomplete. Field must also be required.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
@@ -101,6 +105,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
@@ -192,7 +197,7 @@ class Frame extends React.Component {
       type: 'text',
       className: cx('search-input', { 'is-hidden': isHidden }),
       required: required && !display.length ? true : undefined,
-      'aria-required': required && !display.length ? 'required' : undefined,
+      'aria-required': (required && !display.length),
     };
 
     return (
@@ -561,6 +566,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
+      isIncomplete,
       isInvalid,
       maxHeight,
       maxSelectionCount,
@@ -583,6 +589,7 @@ class Frame extends React.Component {
       { 'is-disabled': disabled },
       { 'is-focused': this.state.isFocused },
       { 'is-invalid': isInvalid },
+      { 'is-incomplete': (isIncomplete && required) },
       { 'is-open': this.state.isOpen },
       customProps.className,
     ]);
