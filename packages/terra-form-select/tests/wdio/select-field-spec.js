@@ -25,6 +25,14 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
     Terra.it.validatesElement();
   });
 
+  describe('invalid', () => {
+    it('should render an incomplete Select Field', () => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/invalid-select-field');
+    });
+
+    Terra.it.validatesElement();
+  });
+
   describe('incomplete', () => {
     it('should render an incomplete Select Field', () => {
       browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-select-field');

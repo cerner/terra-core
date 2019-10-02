@@ -736,6 +736,7 @@ exports[`Frame should render an incomplete combobox variant 1`] = `
   }
   isIncomplete={true}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -808,6 +809,7 @@ exports[`Frame should render an incomplete multiple variant 1`] = `
   }
   isIncomplete={true}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -844,6 +846,7 @@ exports[`Frame should render an incomplete search variant 1`] = `
   }
   isIncomplete={true}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -880,6 +883,7 @@ exports[`Frame should render an incomplete tag variant 1`] = `
   }
   isIncomplete={true}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;

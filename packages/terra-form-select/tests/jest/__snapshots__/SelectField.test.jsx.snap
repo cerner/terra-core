@@ -434,6 +434,7 @@ exports[`should render an incomplete SelectField component 1`] = `
     id="select-id"
     isIncomplete={true}
     isInvalid={false}
+    isTouchAccessible={false}
     key=".0"
     required={false}
     variant="default"
