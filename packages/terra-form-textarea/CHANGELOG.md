@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added `isIncomplete` prop to `TextareaField`.
+* Added `isIncomplete` prop to show incomplete stylings.
 
 3.27.0 - (September 26, 2019)
 ------------------

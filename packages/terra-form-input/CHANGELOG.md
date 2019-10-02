@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added `isIncomplete` prop to `InputField`.
+* Added `isIncomplete` prop to show incomplete stylings.
 
 2.27.0 - (September 26, 2019)
 ------------------
