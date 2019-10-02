@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed `overflow: hidden` from ExampleTemplate css
 
 2.19.0 - (September 19, 2019)
 ------------------
