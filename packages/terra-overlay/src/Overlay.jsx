@@ -126,27 +126,30 @@ class Overlay extends React.Component {
 
   enableContainerChildrenFocus() {
     if (this.props.isRelativeToContainer) {
-      if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
-        this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
-        // Ensures aria-hidden is properly cleaned up
-        setTimeout(() => this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('aria-hidden'), 0);
-      }
+      // Macrotask to ensure inert and aria-hidden attributes are properly cleaned up in the DOM after React renders to the DOM
+      setTimeout(() => {
+        if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
+          this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
+          this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('aria-hidden');
+        }
+      }, 0);
     } else {
       const selector = this.props.rootSelector;
+      // Macrotask to ensure inert and aria-hidden attributes are properly cleaned up in the DOM after React renders to the DOM
+      setTimeout(() => {
+        if (document.querySelector(selector)) { // Guard for Jest testing
+          const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
 
-      if (document.querySelector(selector)) { // Guard for Jest testing
-        const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
-
-        if (inert === 1) {
-          document.querySelector(selector).removeAttribute('data-overlay-count');
-          document.querySelector(selector).removeAttribute('inert');
-          // Ensures aria-hidden is properly cleaned up
-          setTimeout(() => document.querySelector(selector).removeAttribute('aria-hidden'), 0);
-        } else if (inert && inert > 1) {
-          document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
+          if (inert === 1) {
+            document.querySelector(selector).removeAttribute('data-overlay-count');
+            document.querySelector(selector).removeAttribute('inert');
+            document.querySelector(selector).removeAttribute('aria-hidden');
+          } else if (inert && inert > 1) {
+            document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
+          }
         }
-      }
-      document.documentElement.style.overflow = this.overflow;
+        document.documentElement.style.overflow = this.overflow;
+      }, 0);
     }
   }
 

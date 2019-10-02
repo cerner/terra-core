@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+Updated imperative macrotasks to encapsulate all imperative DOM conditionals and manipulation
 
 3.29.0 - (September 19, 2019)
 ------------------
