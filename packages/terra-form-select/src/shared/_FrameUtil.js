@@ -7,9 +7,16 @@ class FrameUtil {
    * @param {Object} state - The component state.
    * @return {Object} - The dropdown style.
    */
-  static dropdownStyle(props, state) {
-    const { maxHeight, width } = state;
-    return { ...({ ...props }).style, maxHeight, width };
+  static dropdownStyle(props = {}, state = {}) {
+    const { style } = props;
+    const { maxHeight, width, top } = state;
+
+    return {
+      ...style,
+      maxHeight,
+      width,
+      top,
+    };
   }
 
   /**
@@ -18,9 +25,10 @@ class FrameUtil {
    * @param {ReactNode} target - The select wrapper.
    * @param {ReactNode} dropdown - The dropdown.
    * @param {number} maxHeight - The maxHeight of the dropdown dropdown.
+   * @param {boolean} useSemanticDropdown - If the dropdown should be rendered semantically instead of in a portal
    * @return {Object} - The calculated dropdown attributes.
    */
-  static dropdownPosition(props, target, dropdown, maxHeight) {
+  static dropdownPosition(props, target, dropdown, maxHeight, useSemanticDropdown = false) {
     const style = ({ ...props }).style || {};
     const { height } = dropdown.getBoundingClientRect();
     const { bottom, width, top } = target.getBoundingClientRect();
@@ -30,11 +38,19 @@ class FrameUtil {
     const canFitBelow = maximumHeight < spaceBelow || height < spaceBelow || spaceBelow > top;
     const availableSpace = canFitBelow ? spaceBelow : top;
 
+    const availableMaxHeight = Math.min(maximumHeight, availableSpace - 10);
+    const isAbove = !canFitBelow;
+    const semanticTopWhenAbove = (useSemanticDropdown && isAbove
+      ? -1 * Math.min(availableMaxHeight, height)
+      : undefined
+    );
+
     return {
       width,
-      maxHeight: Math.min(maximumHeight, availableSpace - 10),
-      isAbove: !canFitBelow,
+      maxHeight: availableMaxHeight,
+      isAbove,
       isPositioned: true,
+      top: semanticTopWhenAbove,
     };
   }
 
