@@ -239,6 +239,7 @@ exports[`InputField should render a placeholder within the InputField component 
   <Input
     disabled={false}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name={null}
     placeholder="Placeholder"
@@ -270,6 +271,7 @@ exports[`InputField should render a placeholder within the InputField component 
   <Input
     disabled={false}
     id="test-input"
+    isIncomplete={false}
     isInvalid={false}
     name={null}
     placeholder="Placeholder"
