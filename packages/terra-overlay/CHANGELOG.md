@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-Updated imperative macrotasks to encapsulate all imperative DOM conditionals and manipulation
+Move imperative code for handling DOM manipulation for inert and aria-hidden attributes into componentDidUpdate
 
 3.29.0 - (September 19, 2019)
 ------------------

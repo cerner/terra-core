@@ -74,7 +74,6 @@ class Overlay extends React.Component {
     this.enableContainerChildrenFocus = this.enableContainerChildrenFocus.bind(this);
     this.shouldHandleESCKeydown = this.shouldHandleESCKeydown.bind(this);
     this.shouldHandleClick = this.shouldHandleClick.bind(this);
-    this.resetBeforeOverlay = this.resetBeforeOverlay.bind(this);
   }
 
   componentDidMount() {
@@ -87,9 +86,17 @@ class Overlay extends React.Component {
     document.addEventListener('keydown', this.shouldHandleESCKeydown);
   }
 
+  componentDidUpdate() {
+    if (this.props.isOpen) {
+      this.disableContainerChildrenFocus();
+    } else {
+      this.enableContainerChildrenFocus();
+    }
+  }
+
   componentWillUnmount() {
     document.removeEventListener('keydown', this.shouldHandleESCKeydown);
-    this.resetBeforeOverlay(this.props.rootSelector);
+    this.enableContainerChildrenFocus();
   }
 
   setContainer(node) {
@@ -100,7 +107,6 @@ class Overlay extends React.Component {
     } else {
       this.container = null;
     }
-    this.disableContainerChildrenFocus();
   }
 
   disableContainerChildrenFocus() {
@@ -126,30 +132,24 @@ class Overlay extends React.Component {
 
   enableContainerChildrenFocus() {
     if (this.props.isRelativeToContainer) {
-      // Macrotask to ensure inert and aria-hidden attributes are properly cleaned up in the DOM after React renders to the DOM
-      setTimeout(() => {
-        if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
-          this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
-          this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('aria-hidden');
-        }
-      }, 0);
+      if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
+        this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
+        this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('aria-hidden');
+      }
     } else {
       const selector = this.props.rootSelector;
-      // Macrotask to ensure inert and aria-hidden attributes are properly cleaned up in the DOM after React renders to the DOM
-      setTimeout(() => {
-        if (document.querySelector(selector)) { // Guard for Jest testing
-          const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
+      if (document.querySelector(selector)) { // Guard for Jest testing
+        const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
 
-          if (inert === 1) {
-            document.querySelector(selector).removeAttribute('data-overlay-count');
-            document.querySelector(selector).removeAttribute('inert');
-            document.querySelector(selector).removeAttribute('aria-hidden');
-          } else if (inert && inert > 1) {
-            document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
-          }
+        if (inert === 1) {
+          document.querySelector(selector).removeAttribute('data-overlay-count');
+          document.querySelector(selector).removeAttribute('inert');
+          document.querySelector(selector).removeAttribute('aria-hidden');
+        } else if (inert && inert > 1) {
+          document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
         }
-        document.documentElement.style.overflow = this.overflow;
-      }, 0);
+      }
+      document.documentElement.style.overflow = this.overflow;
     }
   }
 
@@ -172,10 +172,6 @@ class Overlay extends React.Component {
     }
   }
 
-  resetBeforeOverlay() {
-    this.enableContainerChildrenFocus();
-  }
-
   render() {
     const {
       children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, rootSelector, zIndex, ...customProps
@@ -183,7 +179,6 @@ class Overlay extends React.Component {
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
-      this.resetBeforeOverlay();
       return null;
     }
 
