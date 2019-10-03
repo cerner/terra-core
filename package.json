@@ -118,7 +118,7 @@
     "react-test-renderer": "^16.5.2",
     "regenerator-runtime": "^0.13.2",
     "stylelint": "^11.0.0",
-    "stylelint-config-terra": "cerner/stylelint-config-terra#update-deps",
+    "stylelint-config-terra": "^3.2.0",
     "terra-aggregate-translations": "^1.0.0",
     "terra-dev-site": "^6.1.1",
     "terra-disclosure-manager": "^4.9.0",
