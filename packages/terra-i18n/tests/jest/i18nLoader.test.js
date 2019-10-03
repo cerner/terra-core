@@ -1,7 +1,12 @@
 /* eslint-disable no-console, import/no-unresolved */
 import i18nLoader from '../../src/i18nLoader';
+import defaultLoadIntl from '../../src/intlLoaders';
+import loadTranslations from '../../src/translationsLoaders';
 
-global.console = { warn: jest.fn() };
+jest.mock('../../src/intlLoaders');
+jest.mock('../../src/translationsLoaders');
+
+global.console.warn = jest.fn();
 
 describe('i18nLoader', () => {
   beforeEach(() => {
@@ -16,25 +21,42 @@ describe('i18nLoader', () => {
     });
   });
 
-  describe('permitParams - prod environment', () => {
-    beforeEach(() => {
-      process.env.NODE_ENV = 'production';
+  describe('when intl is provided by browser', () => {
+    beforeAll(() => {
+      global.Intl = {};
+      i18nLoader('en', jest.fn());
+    });
+    afterAll(() => { global.Intl = undefined; });
+
+    it('it does not adds the intl polyfill ', () => {
+      expect(global.IntlPolyfill).not.toBeDefined();
     });
 
-    afterEach(() => {
-      delete process.env.NODE_ENV;
+    it('it does not load intl data', () => {
+      expect(defaultLoadIntl).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('when intl is not defined', () => {
+    beforeAll(() => {
+      global.Intl = undefined;
+      i18nLoader('en', jest.fn());
+    });
+    afterAll(() => { global.Intl = undefined; });
+
+    it('it adds the intl polyfill ', () => {
+      // expect('intl').toHaveBeenCalled();
+      expect(global.Intl).toBeDefined();
+      expect(global.IntlPolyfill).toBeDefined();
     });
 
-    it('does not log a warning message when locale is not supported', () => {
-      expect(() => i18nLoader('cy', jest.fn())).toThrowError();
-
-      expect(console.warn).not.toHaveBeenCalled();
+    it('it loads the locale data ', () => {
+      expect(defaultLoadIntl).toHaveBeenCalled();
     });
+  });
 
-    it('still throws error when callback is not function', () => {
-      const invalidCallback = () => i18nLoader('en');
-
-      expect(invalidCallback).toThrowErrorMatchingSnapshot();
-    });
+  it('loads translations', () => {
+    i18nLoader('en', jest.fn());
+    expect(loadTranslations).toHaveBeenCalled();
   });
 });
