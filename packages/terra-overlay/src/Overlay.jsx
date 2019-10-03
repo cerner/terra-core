@@ -84,6 +84,10 @@ class Overlay extends React.Component {
       require('wicg-inert/dist/inert');
     }
     document.addEventListener('keydown', this.shouldHandleESCKeydown);
+
+    if (this.props.isOpen) {
+      this.disableContainerChildrenFocus();
+    }
   }
 
   componentDidUpdate() {
