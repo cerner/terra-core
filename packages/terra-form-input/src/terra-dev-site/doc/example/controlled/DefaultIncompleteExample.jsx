@@ -6,12 +6,18 @@ class DefaultIncompleteExample extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { input: 'Default Incomplete Input' };
+    this.state = {
+      input: '',
+      isIncomplete: true,
+    };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
-    this.setState({ input: event.target.value });
+    this.setState({
+      input: event.target.value,
+      isIncomplete: event.target.value.length === 0,
+    });
   }
 
   render() {
@@ -24,7 +30,7 @@ class DefaultIncompleteExample extends React.Component {
             value={this.state.input}
             onChange={this.handleChange}
             required
-            isIncomplete
+            isIncomplete={this.state.isIncomplete}
           />
         </Field>
         <p>

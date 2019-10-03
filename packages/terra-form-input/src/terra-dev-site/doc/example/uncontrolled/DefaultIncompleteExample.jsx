@@ -8,9 +8,9 @@ const DefaultIncompleteExample = () => (
       <Input
         name="default incomplete input"
         id="uncontrolled-default-incomplete"
-        defaultValue="Default Incomplete Input – Uncontrolled"
         required
         isIncomplete
+        isInvalid
       />
     </Field>
   </div>

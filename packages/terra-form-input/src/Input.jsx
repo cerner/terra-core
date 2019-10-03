@@ -111,12 +111,14 @@ class Input extends React.Component {
     } = this.props;
 
     const attributes = { ...customProps };
+    console.log((isIncomplete && required && !isInvalid));
     const formInputClassNames = cx([
       'form-input',
       { 'form-error': isInvalid },
-      { 'form-incomplete': (isIncomplete && required) },
+      { 'form-incomplete': (isIncomplete && required && !isInvalid) },
       attributes.className,
     ]);
+    console.log(formInputClassNames);
 
     let ariaLabelText;
 

@@ -68,19 +68,19 @@
       border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
-    &.is-incomplete:not(.is-invalid) {
+    &.is-incomplete {
       background-color: var(--terra-form-select-incomplete-background-color, #ffc);
     }
 
-    &.is-incomplete.is-focused:not(.is-invalid) {
+    &.is-incomplete.is-focused {
       background-color: var(--terra-form-select-incomplete-focus-background-color, #ffc);
     }
 
-    &.is-incomplete:hover:not(.is-invalid) {
+    &.is-incomplete:hover {
       background-color: var(--terra-form-select-incomplete-hover-background-color, #ffc);
     }
 
-    &.is-incomplete.is-disabled:not(.is-invalid) {
+    &.is-incomplete.is-disabled {
       background-color: var(--terra-form-select-incomplete-disabled-background-color, #ffc);
     }
 
@@ -88,7 +88,7 @@
       background-color: var(--terra-form-select-invalid-background-color, none);
       background-image: var(--terra-form-select-invalid-background-image, none);
       border-color: var(--terra-form-select-invalid-border-color, #e50000);
-      box-shadow: 0 0 0 1px #e50000;
+      box-shadow: var(--terra-form-select-invalid-box-shadow, 0 0 0 1px #e50000);
     }
 
     &.is-invalid.is-focused {
@@ -324,19 +324,19 @@
       border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
-    &.is-incomplete:not(.is-invalid) > .display {
+    &.is-incomplete > .display {
       background-color: var(--terra-form-select-incomplete-background-color, #ffc);
     }
 
-    &.is-incomplete.is-focused:not(.is-invalid) > .display {
+    &.is-incomplete.is-focused > .display {
       background-color: var(--terra-form-select-incomplete-focus-background-color, #ffc);
     }
 
-    &.is-incomplete:hover:not(.is-invalid) > .display {
+    &.is-incomplete:hover > .display {
       background-color: var(--terra-form-select-incomplete-hover-background-color, #ffc);
     }
 
-    &.is-incomplete.is-disabled:not(.is-invalid) > .display {
+    &.is-incomplete.is-disabled > .display {
       background-color: var(--terra-form-select-incomplete-disabled-background-color, #ffc);
     }
 
@@ -344,7 +344,7 @@
       background-color: var(--terra-form-select-invalid-background-color, none);
       background-image: var(--terra-form-select-invalid-background-image, none);
       border-color: var(--terra-form-select-invalid-border-color, #e50000);
-      box-shadow: 0 0 0 1px #e50000;
+      box-shadow: var(--terra-form-select-invalid-box-shadow, 0 0 0 1px #e50000);
     }
 
     &.is-invalid.is-focused > .display {

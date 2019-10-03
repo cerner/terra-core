@@ -202,7 +202,7 @@ class Textarea extends React.Component {
     const textareaClasses = cx([
       'textarea',
       { 'form-error': isInvalid },
-      { 'form-incomplete': (isIncomplete && required) },
+      { 'form-incomplete': (isIncomplete && required && !isInvalid) },
       { 'full-size': size === 'full' },
       { resizable: isAutoResizable && !this.isMobileDevice },
       additionalTextareaProps.className,

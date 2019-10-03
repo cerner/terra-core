@@ -97,7 +97,7 @@
     border-color: var(--terra-form-textarea-error-border-color, #e50000);
     border-style: var(--terra-form-textarea-error-border-style, solid);
     border-width: var(--terra-form-textarea-error-border-width, 1px);
-    box-shadow: 0 0 0 1px #e50000;
+    box-shadow: var(--terra-form-textarea-error-box-shadow, 0 0 0 1px #e50000);
     opacity: var(--terra-form-textarea-error-opacity, 1);
 
     &:hover {
@@ -115,6 +115,10 @@
       border-width: var(--terra-form-textarea-error-disabled-border-width, 1px);
       color: var(--terra-form-textarea-error-disabled-color, #1c1f21);
       opacity: var(--terra-form-textarea-error-disabled-opacity, 0.25);
+    }
+
+    &[required] {
+      box-shadow: var(--terra-form-textarea-error-box-shadow, 0 0 0 1px #e50000);
     }
 
     &:focus {
@@ -137,7 +141,7 @@
     }
   }
 
-  .form-incomplete:not(.form-error) {
+  .form-incomplete {
     background-color: var(--terra-form-textarea-incomplete-background-color, #ffc);
 
     &:hover {

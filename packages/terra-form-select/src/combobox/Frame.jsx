@@ -610,7 +610,7 @@ class Frame extends React.Component {
       { 'is-disabled': disabled },
       { 'is-focused': this.state.isFocused },
       { 'is-invalid': isInvalid },
-      { 'is-incomplete': (isIncomplete && required) },
+      { 'is-incomplete': (isIncomplete && required && !isInvalid) },
       { 'is-open': this.state.isOpen },
       customProps.className,
     ]);
