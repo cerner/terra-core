@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `placeholder` as a first class property to `<Input />` and `<InputField />`
 
 2.27.0 - (September 26, 2019)
 ------------------
