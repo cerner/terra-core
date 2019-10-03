@@ -13,7 +13,7 @@ const OverlayComponent = () => (
 );
 
 const OverlayExample = () => (
-  <OverlayContainer className={cx('overlay-container1')} id="terra-OverlayContainer" overlay={OverlayComponent} />
+  <OverlayContainer className={cx('overlay-container1')} id="terra-OverlayContainer" overlay={<OverlayComponent />} />
 );
 
 export default OverlayExample;
