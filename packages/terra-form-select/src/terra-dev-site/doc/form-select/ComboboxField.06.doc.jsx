@@ -33,11 +33,11 @@ const DocPage = () => (
       example: <ComboboxFieldExample />,
       source: ComboboxFieldExampleSrc,
     }, {
-      title: 'Required Combobobx Field Example',
+      title: 'Required Combobox Field Example',
       example: <RequiredComboboxFieldExample />,
       source: RequiredComboboxFieldExampleSrc,
     }, {
-      title: 'Incomplete Combobobx Field Example',
+      title: 'Incomplete Combobox Field Example',
       example: <IncompleteComboboxFieldExample />,
       source: IncompleteComboboxFieldExampleSrc,
     }]}
