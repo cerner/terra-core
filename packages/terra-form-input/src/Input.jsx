@@ -49,6 +49,10 @@ const propTypes = {
    */
   pattern: PropTypes.string,
   /**
+   * Placeholder text.
+   */
+  placeholder: PropTypes.string,
+  /**
    * Callback ref to pass into the input dom element.
    */
   refCallback: PropTypes.func,
@@ -84,6 +88,7 @@ const defaultProps = {
   onFocus: undefined,
   name: null,
   pattern: undefined,
+  placeholder: undefined,
   required: false,
   refCallback: undefined,
   type: undefined,
@@ -102,6 +107,7 @@ class Input extends React.Component {
       onFocus,
       name,
       pattern,
+      placeholder,
       refCallback,
       required,
       type,
@@ -151,6 +157,7 @@ class Input extends React.Component {
         name={name}
         type={type}
         pattern={pattern}
+        placeholder={placeholder}
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
