@@ -187,7 +187,7 @@ const InputField = (props) => {
         id={inputId}
         type={inputType}
         onChange={onChange}
-        placeholder={inputAttrs.placeholder || placeholder}
+        placeholder={placeholder || inputAttrs.placeholder}
         value={value}
         defaultValue={defaultValue}
         refCallback={refCallback}
