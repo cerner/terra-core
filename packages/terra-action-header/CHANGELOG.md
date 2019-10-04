@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Updated `--terra-action-header-icon-top` variable, added `--terra-action-header-icon-ms-margin-top` variable to only apply top styling in Microsoft browsers.
 
+2.30.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.29.0 - (September 19, 2019)
 ------------------
 ### Changed
