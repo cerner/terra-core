@@ -152,7 +152,7 @@
     height: var(--terra-button-icon-height, 1rem);
     width: var(--terra-button-icon-width, 1rem);
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      margin-top: var(--terra-button-icon-ms-margin-top, 0.15em);
+      margin-top: var(--terra-button-icon-ms-margin-top, 0.1429em);
     }
   }
 }

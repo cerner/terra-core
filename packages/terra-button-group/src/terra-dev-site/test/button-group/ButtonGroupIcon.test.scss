@@ -1,0 +1,7 @@
+:local {
+  .icon {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      margin-top: 0;
+    }
+  }
+}
