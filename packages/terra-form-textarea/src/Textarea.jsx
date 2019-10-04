@@ -46,7 +46,7 @@ const propTypes = {
    */
   isAutoResizable: PropTypes.bool,
   /**
-   * Whether the field is incomplete. Field must also be required.
+   * Whether the form is incomplete. Form must also be required.
    */
   isIncomplete: PropTypes.bool,
   /**

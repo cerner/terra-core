@@ -33,7 +33,7 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
-   * Whether the field is incomplete. Field must also be required.
+   * Whether the select is incomplete. Select must also be required.
    */
   isIncomplete: PropTypes.bool,
   /**

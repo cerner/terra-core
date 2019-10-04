@@ -20,7 +20,7 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Whether the field is incomplete. Field must also be required.
+   * Whether the input is incomplete. Input must also be required.
    */
   isIncomplete: PropTypes.bool,
   /**
