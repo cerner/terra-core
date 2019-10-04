@@ -1,7 +1,7 @@
 {
   "name": "terra-visually-hidden-text",
   "main": "lib/VisuallyHiddenText.js",
-  "version": "2.18.0",
+  "version": "2.19.0",
   "description": "Text that is designed to only be read by a screen reader.",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.19.0"
+    "terra-doc-template": "^2.20.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
