@@ -28,11 +28,11 @@ describe('i18nLoader', () => {
     });
     afterAll(() => { global.Intl = undefined; });
 
-    it('it does not adds the intl polyfill ', () => {
+    it('does not adds the intl polyfill ', () => {
       expect(global.IntlPolyfill).not.toBeDefined();
     });
 
-    it('it does not load intl data', () => {
+    it('does not load intl data', () => {
       expect(defaultLoadIntl).not.toHaveBeenCalled();
     });
   });
@@ -44,13 +44,12 @@ describe('i18nLoader', () => {
     });
     afterAll(() => { global.Intl = undefined; });
 
-    it('it adds the intl polyfill ', () => {
-      // expect('intl').toHaveBeenCalled();
+    it('adds the intl polyfill ', () => {
       expect(global.Intl).toBeDefined();
       expect(global.IntlPolyfill).toBeDefined();
     });
 
-    it('it loads the locale data ', () => {
+    it('loads the locale data ', () => {
       expect(defaultLoadIntl).toHaveBeenCalled();
     });
   });
