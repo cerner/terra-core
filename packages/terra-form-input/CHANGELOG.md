@@ -6,6 +6,9 @@ Unreleased
 ### Fixed
 * File input to show selection in edge.
 
+### Added
+* File input example added.
+
 2.27.0 - (September 26, 2019)
 ------------------
 ### Changed
