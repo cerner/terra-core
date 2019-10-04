@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.17.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.16.0 - (September 26, 2019)
+------------------
 ### Removed
 * Removed the Finnish example since we don't officially support Finnish
 

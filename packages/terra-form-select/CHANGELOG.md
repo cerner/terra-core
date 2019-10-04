@@ -4,6 +4,17 @@ ChangeLog
 Unreleased
 ----------
 
+5.32.0 - (October 3, 2019)
+------------------
+### Added
+* Added `isTouchAccessible` prop for all variants that have an input (e.g. `combobox`, `multiple`, `search`, and `tag`) to improve mobile accessibility
+  * When used, the dropdown menu is no longer portaled: it is rendered in the normal DOM flow with `position: absolute` allowing easier navigation to the list options with the virtual cursor used in mobile screen readers
+
+5.31.0 - (September 26, 2019)
+------------------
+### Fixed
+* Fixed keyboard navigation when interacting with clear option on single and combobox variants
+
 5.30.0 - (September 19, 2019)
 ------------------
 ### Changed

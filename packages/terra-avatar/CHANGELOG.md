@@ -7,6 +7,16 @@ Unreleased
 * `generic` subcomponent  replaces the `sharedUser` subcomponent
 * `generic` subcomponent contains a `variant` prop that toggles between `single-user`, `shared-user`, and `provider`.
 
+2.29.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.28.0 - (September 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.27.0 - (September 19, 2019)
 ------------------
 ### Changed

@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+3.30.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.29.0 - (September 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.28.0 - (September 19, 2019)
 ------------------
 ### Changed
