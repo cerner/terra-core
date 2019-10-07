@@ -7,6 +7,7 @@ import VisuallyHiddenText from 'terra-visually-hidden-text';
 import * as KeyCode from 'keycode-js';
 import styles from './Paginator.module.scss';
 import { calculatePages, pageSet } from './_paginationUtils';
+import PaginatorButton from './_PaginatorButton';
 
 const cx = classNames.bind(styles);
 
@@ -113,7 +114,7 @@ class Paginator extends React.Component {
         return;
       }
       pageButtons.push((
-        <button
+        <PaginatorButton
           aria-label={intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: val })}
           aria-current={val === selectedPage && 'page'}
           className={paginationLinkClassNames}
@@ -124,7 +125,7 @@ class Paginator extends React.Component {
           type="button"
         >
           {val}
-        </button>
+        </PaginatorButton>
       ));
     });
 
@@ -146,7 +147,7 @@ class Paginator extends React.Component {
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])}>
         {
           this.hasNavContext() && (
-          <button
+          <PaginatorButton
             aria-disabled={selectedPage === 1}
             aria-label={intl.formatMessage({ id: 'Terra.paginator.first' })}
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
@@ -156,10 +157,10 @@ class Paginator extends React.Component {
             type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.first' })}
-          </button>
+          </PaginatorButton>
           )
         }
-        <button
+        <PaginatorButton
           aria-disabled={selectedPage === 1}
           aria-label={intl.formatMessage({ id: 'Terra.paginator.previous' })}
           className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
@@ -170,9 +171,9 @@ class Paginator extends React.Component {
         >
           <span className={cx('icon')} />
           {intl.formatMessage({ id: 'Terra.paginator.previous' })}
-        </button>
+        </PaginatorButton>
         {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
-        <button
+        <PaginatorButton
           aria-disabled={selectedPage === totalPages}
           aria-label={intl.formatMessage({ id: 'Terra.paginator.next' })}
           className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
@@ -183,10 +184,10 @@ class Paginator extends React.Component {
         >
           {intl.formatMessage({ id: 'Terra.paginator.next' })}
           <span className={cx('icon')} />
-        </button>
+        </PaginatorButton>
         {
           this.hasNavContext() && (
-          <button
+          <PaginatorButton
             aria-disabled={selectedPage === totalPages}
             aria-label={intl.formatMessage({ id: 'Terra.paginator.last' })}
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
@@ -196,7 +197,7 @@ class Paginator extends React.Component {
             type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.last' })}
-          </button>
+          </PaginatorButton>
           )
         }
       </div>
@@ -216,7 +217,7 @@ class Paginator extends React.Component {
       <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])} role="navigation" aria-label="pagination">
         {
           this.hasNavContext() && (
-          <button
+          <PaginatorButton
             aria-disabled={selectedPage === 1}
             aria-label={intl.formatMessage({ id: 'Terra.paginator.first' })}
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
@@ -226,10 +227,10 @@ class Paginator extends React.Component {
             type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.first' })}
-          </button>
+          </PaginatorButton>
           )
         }
-        <button
+        <PaginatorButton
           aria-disabled={selectedPage === 1}
           aria-label={intl.formatMessage({ id: 'Terra.paginator.previous' })}
           className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
@@ -240,9 +241,9 @@ class Paginator extends React.Component {
         >
           <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.previous' })} />
           <span className={cx('icon')} />
-        </button>
+        </PaginatorButton>
         {this.hasNavContext() && intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
-        <button
+        <PaginatorButton
           aria-disabled={selectedPage === totalPages}
           aria-label={intl.formatMessage({ id: 'Terra.paginator.next' })}
           className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
@@ -253,10 +254,10 @@ class Paginator extends React.Component {
         >
           <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.next' })} />
           <span className={cx('icon')} />
-        </button>
+        </PaginatorButton>
         {
           this.hasNavContext() && (
-          <button
+          <PaginatorButton
             aria-disabled={selectedPage === totalPages}
             aria-label={intl.formatMessage({ id: 'Terra.paginator.last' })}
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
@@ -266,7 +267,7 @@ class Paginator extends React.Component {
             type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.last' })}
-          </button>
+          </PaginatorButton>
           )
         }
       </div>

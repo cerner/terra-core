@@ -9,7 +9,7 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
       role="navigation"
     >
       <div>
-        <button
+        <PaginatorButton
           aria-disabled={true}
           aria-label="Terra.paginator.first"
           className="nav-link is-disabled"
@@ -19,8 +19,8 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
           type="button"
         >
           Terra.paginator.first
-        </button>
-        <button
+        </PaginatorButton>
+        <PaginatorButton
           aria-disabled={true}
           aria-label="Terra.paginator.previous"
           className="nav-link previous icon-only is-disabled"
@@ -35,13 +35,13 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
           <span
             className="icon"
           />
-        </button>
+        </PaginatorButton>
       </div>
       <div>
         Terra.paginator.pageCount
       </div>
       <div>
-        <button
+        <PaginatorButton
           aria-disabled={false}
           aria-label="Terra.paginator.next"
           className="nav-link next icon-only"
@@ -56,8 +56,8 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
           <span
             className="icon"
           />
-        </button>
-        <button
+        </PaginatorButton>
+        <PaginatorButton
           aria-disabled={false}
           aria-label="Terra.paginator.last"
           className="nav-link"
@@ -67,7 +67,7 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
           type="button"
         >
           Terra.paginator.last
-        </button>
+        </PaginatorButton>
       </div>
     </div>
   }
@@ -82,7 +82,7 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
         Terra.paginator.pageCount
       </div>
       <div>
-        <button
+        <PaginatorButton
           aria-disabled={true}
           aria-label="Terra.paginator.first"
           className="nav-link is-disabled"
@@ -92,8 +92,8 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
           type="button"
         >
           Terra.paginator.first
-        </button>
-        <button
+        </PaginatorButton>
+        <PaginatorButton
           aria-disabled={true}
           aria-label="Terra.paginator.previous"
           className="nav-link previous is-disabled"
@@ -106,8 +106,8 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
             className="icon"
           />
           Terra.paginator.previous
-        </button>
-        <button
+        </PaginatorButton>
+        <PaginatorButton
           aria-disabled={false}
           aria-label="Terra.paginator.next"
           className="nav-link next"
@@ -120,8 +120,8 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
           <span
             className="icon"
           />
-        </button>
-        <button
+        </PaginatorButton>
+        <PaginatorButton
           aria-disabled={false}
           aria-label="Terra.paginator.last"
           className="nav-link"
@@ -131,7 +131,7 @@ exports[`Paginator should render a Controlled ProgressivePaginator 1`] = `
           type="button"
         >
           Terra.paginator.last
-        </button>
+        </PaginatorButton>
       </div>
     </div>
   }

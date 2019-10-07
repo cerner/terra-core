@@ -6,7 +6,7 @@ exports[`Paginator should render a default paginator 1`] = `
     <div
       className="paginator"
     >
-      <button
+      <PaginatorButton
         aria-disabled={true}
         aria-label="Terra.paginator.first"
         className="nav-link left-controls is-disabled"
@@ -16,8 +16,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         Terra.paginator.first
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-disabled={true}
         aria-label="Terra.paginator.previous"
         className="nav-link left-controls previous is-disabled"
@@ -30,8 +30,8 @@ exports[`Paginator should render a default paginator 1`] = `
           className="icon"
         />
         Terra.paginator.previous
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current="page"
         aria-label="Terra.paginator.pageIndex"
         className="nav-link is-selected"
@@ -41,8 +41,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         1
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -52,8 +52,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         2
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -63,8 +63,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         3
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -74,8 +74,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         4
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -85,8 +85,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         5
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -96,8 +96,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         6
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -107,8 +107,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         7
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -118,8 +118,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         8
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -129,8 +129,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         9
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-current={false}
         aria-label="Terra.paginator.pageIndex"
         className="nav-link"
@@ -140,8 +140,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         10
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-disabled={false}
         aria-label="Terra.paginator.next"
         className="nav-link right-controls next"
@@ -154,8 +154,8 @@ exports[`Paginator should render a default paginator 1`] = `
         <span
           className="icon"
         />
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-disabled={false}
         aria-label="Terra.paginator.last"
         className="nav-link right-controls"
@@ -165,7 +165,7 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         Terra.paginator.last
-      </button>
+      </PaginatorButton>
     </div>
   }
   responsiveTo="parent"
@@ -175,7 +175,7 @@ exports[`Paginator should render a default paginator 1`] = `
       className="paginator"
       role="navigation"
     >
-      <button
+      <PaginatorButton
         aria-disabled={true}
         aria-label="Terra.paginator.first"
         className="nav-link left-controls is-disabled"
@@ -185,8 +185,8 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         Terra.paginator.first
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-disabled={true}
         aria-label="Terra.paginator.previous"
         className="nav-link left-controls previous icon-only is-disabled"
@@ -201,9 +201,9 @@ exports[`Paginator should render a default paginator 1`] = `
         <span
           className="icon"
         />
-      </button>
+      </PaginatorButton>
       Terra.paginator.pageIndex
-      <button
+      <PaginatorButton
         aria-disabled={false}
         aria-label="Terra.paginator.next"
         className="nav-link right-controls next icon-only"
@@ -218,8 +218,8 @@ exports[`Paginator should render a default paginator 1`] = `
         <span
           className="icon"
         />
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-disabled={false}
         aria-label="Terra.paginator.last"
         className="nav-link right-controls"
@@ -229,7 +229,7 @@ exports[`Paginator should render a default paginator 1`] = `
         type="button"
       >
         Terra.paginator.last
-      </button>
+      </PaginatorButton>
     </div>
   }
 />
@@ -241,7 +241,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
     <div
       className="paginator pageless"
     >
-      <button
+      <PaginatorButton
         aria-disabled={false}
         aria-label="Terra.paginator.previous"
         className="nav-link left-controls previous"
@@ -254,8 +254,8 @@ exports[`Paginator should render a paginator without page links 1`] = `
           className="icon"
         />
         Terra.paginator.previous
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-disabled={false}
         aria-label="Terra.paginator.next"
         className="nav-link right-controls next"
@@ -268,7 +268,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
         <span
           className="icon"
         />
-      </button>
+      </PaginatorButton>
     </div>
   }
   responsiveTo="parent"
@@ -278,7 +278,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
       className="paginator pageless"
       role="navigation"
     >
-      <button
+      <PaginatorButton
         aria-disabled={false}
         aria-label="Terra.paginator.previous"
         className="nav-link left-controls previous icon-only"
@@ -293,8 +293,8 @@ exports[`Paginator should render a paginator without page links 1`] = `
         <span
           className="icon"
         />
-      </button>
-      <button
+      </PaginatorButton>
+      <PaginatorButton
         aria-disabled={false}
         aria-label="Terra.paginator.next"
         className="nav-link right-controls next icon-only"
@@ -309,7 +309,7 @@ exports[`Paginator should render a paginator without page links 1`] = `
         <span
           className="icon"
         />
-      </button>
+      </PaginatorButton>
     </div>
   }
 />
