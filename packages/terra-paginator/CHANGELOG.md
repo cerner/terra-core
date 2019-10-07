@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Private PaginatorButton component added for controlling individual state
+
+### Changed
+* `focused` and `active` pseudo selectors migrated to classes applied via state
 
 2.29.0 - (October 3, 2019)
 ------------------
