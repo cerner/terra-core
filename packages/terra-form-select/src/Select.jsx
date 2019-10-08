@@ -37,6 +37,13 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices. Only applicable to variants
+   * that include an input (e.g. `combobox`, `multiple`, `search`, and `tag`).
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * The max height of the dropdown.
    */
   maxHeight: PropTypes.number,
@@ -112,6 +119,7 @@ const defaultProps = {
   disabled: false,
   dropdownAttrs: undefined,
   isInvalid: false,
+  isTouchAccessible: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
   onChange: undefined,
@@ -148,12 +156,13 @@ function Select(props) {
     case Variants.DEFAULT:
     default: {
       const {
+        isTouchAccessible,
         maxSelectionCount,
         onSearch,
         optionFilter,
-        ...SingleSelectProps
+        ...singleSelectProps
       } = otherProps;
-      return <SingleSelect {...SingleSelectProps} />;
+      return <SingleSelect {...singleSelectProps} />;
     }
   }
 }
