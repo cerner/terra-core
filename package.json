@@ -120,7 +120,7 @@
     "stylelint": "^10.0.1",
     "stylelint-config-terra": "^3.0.0",
     "terra-aggregate-translations": "^1.0.0",
-    "terra-dev-site": "cerner/terra-dev-site#mdx",
+    "terra-dev-site": "^6.5.0",
     "terra-disclosure-manager": "^4.9.0",
     "terra-enzyme-intl": "^3.0.0",
     "terra-toolkit": "^5.4.0",
