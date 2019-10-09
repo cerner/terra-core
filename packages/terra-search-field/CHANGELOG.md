@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Jest snapshot update due to changes in form input.
 
 3.30.0 - (October 3, 2019)
 ------------------
