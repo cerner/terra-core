@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+Move imperative code for handling DOM manipulation for inert and aria-hidden attributes into componentDidUpdate
+
+3.30.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.29.0 - (September 19, 2019)
 ------------------

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a InputField with props 1`] = `
+exports[`InputField should render a InputField with props 1`] = `
 <Field
   error="Text"
   errorIcon={
@@ -40,7 +40,7 @@ exports[`should render a InputField with props 1`] = `
 </Field>
 `;
 
-exports[`should render a InputField with type specified by type attribute when both type attribute and InputAttributes are given 1`] = `
+exports[`InputField should render a InputField with type specified by type attribute when both type attribute and InputAttributes are given 1`] = `
 <Field
   error="Text"
   errorIcon={
@@ -80,7 +80,7 @@ exports[`should render a InputField with type specified by type attribute when b
 </Field>
 `;
 
-exports[`should render a InputField with type specified through InputAttributes 1`] = `
+exports[`InputField should render a InputField with type specified through InputAttributes 1`] = `
 <Field
   error="Text"
   errorIcon={
@@ -120,7 +120,7 @@ exports[`should render a InputField with type specified through InputAttributes 
 </Field>
 `;
 
-exports[`should render a default InputField component 1`] = `
+exports[`InputField should render a default InputField component 1`] = `
 <Field
   error={null}
   errorIcon={
@@ -150,7 +150,7 @@ exports[`should render a default InputField component 1`] = `
 </Field>
 `;
 
-exports[`should render a disabled InputField component 1`] = `
+exports[`InputField should render a disabled InputField component 1`] = `
 <Field
   error={null}
   errorIcon={
@@ -180,7 +180,7 @@ exports[`should render a disabled InputField component 1`] = `
 </Field>
 `;
 
-exports[`should render a disabled InputField component via inputAttrs 1`] = `
+exports[`InputField should render a disabled InputField component via inputAttrs 1`] = `
 <Field
   error={null}
   errorIcon={
@@ -210,7 +210,69 @@ exports[`should render a disabled InputField component via inputAttrs 1`] = `
 </Field>
 `;
 
-exports[`should render a valid InputField with props 1`] = `
+exports[`InputField should render a placeholder within the InputField component 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Input
+    disabled={false}
+    id="test-input"
+    isInvalid={false}
+    name={null}
+    placeholder="Placeholder"
+    required={false}
+  />
+</Field>
+`;
+
+exports[`InputField should render a placeholder within the InputField component when passed as an input attribute 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Input
+    disabled={false}
+    id="test-input"
+    isInvalid={false}
+    name={null}
+    placeholder="Placeholder"
+    required={false}
+  />
+</Field>
+`;
+
+exports[`InputField should render a valid InputField with props 1`] = `
 <Field
   error="Text"
   errorIcon={

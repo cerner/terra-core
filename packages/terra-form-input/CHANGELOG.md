@@ -3,6 +3,21 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* File input to show selection in edge.
+
+### Added
+* File input example added.
+
+2.28.0 - (October 3, 2019)
+------------------
+### Added
+* Added `placeholder` as a first class property to `<Input />` and `<InputField />`
+
+2.27.0 - (September 26, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.26.0 - (September 19, 2019)
 ------------------

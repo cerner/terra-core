@@ -29,6 +29,8 @@ import UncontrolledDefaultInvalidExample from '../example/uncontrolled/DefaultIn
 import UncontrolledDefaultInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DefaultInvalidExample';
 import UncontrolledDisabledInvalidExample from '../example/uncontrolled/DisabledInvalidExample';
 import UncontrolledDisabledInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DisabledInvalidExample';
+import UncontrolledFileExample from '../example/uncontrolled/FileExample';
+import UncontrolledFileExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/FileExample';
 
 const DocPage = () => (
   <DocTemplate
@@ -91,6 +93,11 @@ const DocPage = () => (
         title: 'Uncontrolled Example - Invalid Disabled',
         example: <UncontrolledDisabledInvalidExample />,
         source: UncontrolledDisabledInvalidExampleSrc,
+      },
+      {
+        title: 'Uncontrolled Example - File Input',
+        example: <UncontrolledFileExample />,
+        source: UncontrolledFileExampleSrc,
       },
     ]}
     propsTables={[

@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.26.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.25.0 - (September 26, 2019)
+------------------
 ### Added
 * `aria-live="assertive"` added to announce dynamic error messages
 

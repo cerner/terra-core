@@ -712,6 +712,48 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Combobox Variant - Is Touch Accessible', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-combobox');
+    });
+
+    describe('is touch accessible combobox should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('combobox should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('combobox input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('is touch accessible combobox should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+  });
+
   describe('Multiple Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
@@ -1056,6 +1098,48 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Multiple Variant - Is Touch Accessible', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-multi-select');
+    });
+
+    describe('is touch accessible multiple should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('multiple should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('multiple input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('is touch accessible multiple should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+  });
+
   describe('Search Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
@@ -1387,6 +1471,48 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Search Variant - Is Touch Accessible', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-search-select');
+    });
+
+    describe('is touch accessible search should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('search should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('search input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('is touch accessible search should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+  });
+
   describe('Tag Variant', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
@@ -1707,6 +1833,48 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => {
         browser.refresh(); // remove selected option
+      });
+    });
+  });
+
+  describe('Tag Variant - Is Touch Accessible', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-tag-select');
+    });
+
+    describe('is touch accessible tag should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('tag should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('tag input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('is touch accessible tag should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
       });
     });
   });

@@ -53,6 +53,12 @@ const propTypes = {
    */
   isLabelHidden: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * Additional attributes to spread onto the label.
    */
   // eslint-disable-next-line react/forbid-prop-types
@@ -107,6 +113,7 @@ const defaultProps = {
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
+  isTouchAccessible: false,
   labelAttrs: {},
   maxSelectionCount: undefined,
   maxWidth: undefined,
@@ -129,6 +136,7 @@ const MultiSelectField = ({
   isInline,
   isInvalid,
   isLabelHidden,
+  isTouchAccessible,
   label,
   labelAttrs,
   maxSelectionCount,
@@ -196,6 +204,7 @@ const MultiSelectField = ({
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
         isInvalid={isInvalid}
+        isTouchAccessible={isTouchAccessible}
         defaultValue={defaultValue}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
