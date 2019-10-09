@@ -37,6 +37,7 @@
     border: 1px solid #000;
   }
   
+  /* stylelint-disable selector-max-compound-selectors */
   .is-selectable:hover,
   .is-selectable:focus {
     .container > .highlight {
@@ -51,6 +52,7 @@
       width: 24px; // TODO: Need expected sizing
       z-index: 1;
     }
+
     .container > .checkmark {
       z-index: 2;
     }
@@ -58,17 +60,16 @@
 
   .is-selectable[data-cell-show-focus='true']:focus {
     &:hover {
-      /* stylelint-disable max-nesting-depth */
       .container > .highlight {
         background-color: #e75959; // TODO: Need hover styling
       }
-      /* stylelint-enable max-nesting-depth */
     }
 
     .container > .highlight {
       background-color: #bbb2f0; // TODO: Need focus styling
     }
   }
+  /* stylelint-enable selector-max-compound-selectors */
 
   [data-table-padding='standard'] .container {
     padding-bottom: var(--terra-table-header-check-cell-standard-padding-bottom, 0.5rem);
