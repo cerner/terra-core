@@ -74,7 +74,6 @@ class Overlay extends React.Component {
     this.enableContainerChildrenFocus = this.enableContainerChildrenFocus.bind(this);
     this.shouldHandleESCKeydown = this.shouldHandleESCKeydown.bind(this);
     this.shouldHandleClick = this.shouldHandleClick.bind(this);
-    this.resetBeforeOverlay = this.resetBeforeOverlay.bind(this);
   }
 
   componentDidMount() {
@@ -85,11 +84,23 @@ class Overlay extends React.Component {
       require('wicg-inert/dist/inert');
     }
     document.addEventListener('keydown', this.shouldHandleESCKeydown);
+
+    if (this.props.isOpen) {
+      this.disableContainerChildrenFocus();
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.isOpen) {
+      this.disableContainerChildrenFocus();
+    } else {
+      this.enableContainerChildrenFocus();
+    }
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.shouldHandleESCKeydown);
-    this.resetBeforeOverlay(this.props.rootSelector);
+    this.enableContainerChildrenFocus();
   }
 
   setContainer(node) {
@@ -100,7 +111,6 @@ class Overlay extends React.Component {
     } else {
       this.container = null;
     }
-    this.disableContainerChildrenFocus();
   }
 
   disableContainerChildrenFocus() {
@@ -128,20 +138,17 @@ class Overlay extends React.Component {
     if (this.props.isRelativeToContainer) {
       if (this.container && this.container.querySelector('[data-terra-overlay-container-content]')) {
         this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('inert');
-        // Ensures aria-hidden is properly cleaned up
-        setTimeout(() => this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('aria-hidden'), 0);
+        this.container.querySelector('[data-terra-overlay-container-content]').removeAttribute('aria-hidden');
       }
     } else {
       const selector = this.props.rootSelector;
-
       if (document.querySelector(selector)) { // Guard for Jest testing
         const inert = +document.querySelector(selector).getAttribute('data-overlay-count');
 
         if (inert === 1) {
           document.querySelector(selector).removeAttribute('data-overlay-count');
           document.querySelector(selector).removeAttribute('inert');
-          // Ensures aria-hidden is properly cleaned up
-          setTimeout(() => document.querySelector(selector).removeAttribute('aria-hidden'), 0);
+          document.querySelector(selector).removeAttribute('aria-hidden');
         } else if (inert && inert > 1) {
           document.querySelector(selector).setAttribute('data-overlay-count', `${inert - 1}`);
         }
@@ -169,10 +176,6 @@ class Overlay extends React.Component {
     }
   }
 
-  resetBeforeOverlay() {
-    this.enableContainerChildrenFocus();
-  }
-
   render() {
     const {
       children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, rootSelector, zIndex, ...customProps
@@ -180,7 +183,6 @@ class Overlay extends React.Component {
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
-      this.resetBeforeOverlay();
       return null;
     }
 
