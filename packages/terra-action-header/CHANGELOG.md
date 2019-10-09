@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Updated `--terra-action-header-icon-top` variable, added `--terra-action-header-icon-ms-margin-top` variable to only apply top styling in Microsoft browsers.
+* Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg .
 
 2.30.0 - (October 3, 2019)
 ------------------

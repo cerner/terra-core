@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Removed `--terra-dialog-header-close-icon-margin-top` variable, added `--terra-dialog-header-close-icon-ms-margin-top` variable to only apply top styling in Microsoft browsers.
+* Added `vertical-align` to align inline-svg
 
 2.27.0 - (October 3, 2019)
 ------------------
