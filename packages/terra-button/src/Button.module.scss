@@ -25,9 +25,10 @@
 
   .button {
     align-items: center;
-    border-radius: var(--terra-button-border-radius, 0.2142rem);
+    border-radius: var(--terra-button-border-radius, 3px);
     border-style: solid;
     border-width: 1px;
+    box-sizing: border-box;
     cursor: pointer;
     display: inline-flex;
     font-family: inherit;
@@ -36,7 +37,7 @@
     line-height: var(--terra-button-line-height, 1.429);
     margin: 0; /* Reset margin for Safari. Safari defaults to 2px. */
     max-width: 100%; /* Need to help with overflow-wrap */
-    min-height: 2.1428rem;
+    min-height: var(--terra-button-min-height, 2.14285rem);
     outline: none;
     overflow-wrap: break-word; /* Modern browsers */
     padding-bottom: var(--terra-button-padding-bottom, 0.286rem);
@@ -48,6 +49,7 @@
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
+    vertical-align: middle;
     white-space: normal;
     word-wrap: break-word; /* For IE 10 and IE 11 */
 
@@ -76,6 +78,9 @@
 
   .button-label {
     display: inline-block;
+    left: 0; // For IE
+    position: relative; // For IE
+    top: 0; // For IE
   }
 
   // Button variant modifiers
@@ -112,7 +117,7 @@
   }
 
   .compact {
-    min-height: 1.429rem;
+    min-height: var(--terra-button-compact-min-height, 1.57142rem);
     padding-bottom: var(--terra-button-compact-padding-bottom, 0);
     padding-top: var(--terra-button-compact-padding-top, 0);
   }
@@ -124,7 +129,6 @@
   }
 
   .icon-only {
-    line-height: 0;
     margin-left: var(--terra-button-icon-only-margin-left, 0.5rem);
     margin-right: var(--terra-button-icon-only-margin-right, 0.5rem);
   }
@@ -145,14 +149,10 @@
 
   .icon {
     display: inline-block;
-    line-height: 0;
   }
 
   .icon-svg {
     height: var(--terra-button-icon-height, 1rem);
     width: var(--terra-button-icon-width, 1rem);
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      margin-top: var(--terra-button-icon-ms-margin-top, 0.1429em);
-    }
   }
 }
