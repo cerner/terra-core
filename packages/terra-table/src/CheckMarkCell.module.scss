@@ -41,12 +41,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
-    transform: rotate(0deg);
-
-    // flips the icon about its vertical axis, presenting it in its mirrored-image form
-    [dir=rtl] & {
-      transform: scaleX(-1);
-    }
   }
 
   .is-selectable .checkmark {
