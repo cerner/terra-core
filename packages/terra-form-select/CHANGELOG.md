@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed IE issue that required two clicks to open the dropdown menu after initial selection.
 
 5.32.0 - (October 3, 2019)
 ------------------
